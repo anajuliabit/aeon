@@ -19,6 +19,8 @@
 .pending-devto/
 .pending-farcaster/
 .tg_cache/
+.reppo-cache/
+.pending-reppo/
 
 # Skill provenance lock (per-repo, not committed)
 skills.lock
