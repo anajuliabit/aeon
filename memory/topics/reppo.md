@@ -14,3 +14,4 @@ the "Minted strategies" table to avoid re-minting; the digest appends to it.
 ## Run history
 | Date | Orchestrator | Minted | Voted | Failures |
 |------|--------------|--------|-------|----------|
+| 2026-05-21 | trading agent SKIP — tradinggymai datanet_id is still the placeholder; prefetch failed | 0 | 0 | 1 |

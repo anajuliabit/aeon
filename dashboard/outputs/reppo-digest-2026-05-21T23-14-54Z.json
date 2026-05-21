@@ -1,0 +1,189 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "2026-05-21"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "section_issue",
+        "sep2",
+        "section_metrics",
+        "sep3",
+        "section_context",
+        "sep4",
+        "section_fix"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "No productive run",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_issue",
+        "text_issue",
+        "heading_root_cause",
+        "text_root_cause"
+      ]
+    },
+    "heading_issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue",
+        "level": "h3"
+      }
+    },
+    "text_issue": {
+      "type": "Text",
+      "props": {
+        "text": "The digest step received no orchestrator/trading-agent output. The TradingGym AI prefetch cache is a PREFETCH_FAILED marker (\"datanet_id not configured\").",
+        "variant": "body"
+      }
+    },
+    "heading_root_cause": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause",
+        "level": "h3"
+      }
+    },
+    "text_root_cause": {
+      "type": "Text",
+      "props": {
+        "text": "configs/datanets/tradinggymai.md still carries the placeholder datanet_id, so the orchestrator skips the trading agent — nothing can be minted or voted.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_metrics",
+        "grid_metrics"
+      ]
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Swarm Metrics",
+        "level": "h3"
+      }
+    },
+    "grid_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_strategies",
+        "stat_votes"
+      ]
+    },
+    "stat_strategies": {
+      "type": "Stat",
+      "props": {
+        "label": "Strategies minted",
+        "value": "0"
+      }
+    },
+    "stat_votes": {
+      "type": "Stat",
+      "props": {
+        "label": "Votes cast",
+        "value": "0"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_context": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_context",
+        "text_context"
+      ]
+    },
+    "heading_context": {
+      "type": "Heading",
+      "props": {
+        "text": "Mainnet Catalog",
+        "level": "h3"
+      }
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "The mainnet catalog lists 15 active datanets, including TradingGym AI (id 9), none yet wired to an agent rubric.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_fix": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fix",
+        "text_fix",
+        "badge_issue"
+      ]
+    },
+    "heading_fix": {
+      "type": "Heading",
+      "props": {
+        "text": "Recommended Fix",
+        "level": "h3"
+      }
+    },
+    "text_fix": {
+      "type": "Text",
+      "props": {
+        "text": "Set the real TradingGym AI mainnet datanet_id in the rubric to activate the swarm.",
+        "variant": "body"
+      }
+    },
+    "badge_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-002",
+        "variant": "secondary"
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
 
 | ID | Title | Severity | Category | Detected | Affected Skills |
 |----|-------|----------|----------|----------|-----------------|
+| ISS-002 | reppo-swarm chain dormant — tradinggymai datanet_id is still a placeholder | high | config | 2026-05-21 | reppo-orchestrator, reppo-trading-agent, reppo-digest |
 
 ## Resolved
 
