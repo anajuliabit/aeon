@@ -9,3 +9,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-21,agent-buzz,claude-opus-4-7,3055,10578,1069106,73227
 2026-05-21,agent-buzz,claude-opus-4-7,23,12572,483977,36076
 2026-05-21,heartbeat,claude-opus-4-7,1330,5518,305828,55507
+2026-05-21,write-tweet,claude-opus-4-7,17,8531,316943,48960
