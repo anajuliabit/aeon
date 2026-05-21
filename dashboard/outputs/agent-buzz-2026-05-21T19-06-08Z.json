@@ -1,0 +1,111 @@
+{
+  "root": "agent-buzz-card",
+  "state": {},
+  "elements": {
+    "agent-buzz-card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-05-21",
+        "description": "Quiet builder day, no protocol drama. The signal split two ways: agents automating video editing, and new tooling to make agent-building easier."
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section1-heading",
+        "section1-items",
+        "separator1",
+        "section2-heading",
+        "section2-items"
+      ]
+    },
+    "section1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Agents automating video editing",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "section1-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item1",
+        "item2"
+      ]
+    },
+    "item1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MCP-callable clipper turns a YouTube URL into captioned Shorts/Reels cuts; the editing pipeline itself is now an agent tool.",
+        "href": "https://x.com/higgsfield/status/2057172304074043475",
+        "source": "higgsfield"
+      },
+      "children": []
+    },
+    "item2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Reports a single-prompt agent stack replacing 3-6h of manual YouTube editing with a finished MP4 and auto-upload.",
+        "href": "https://x.com/vibecodingth/status/2057249642472190098",
+        "source": "vibecodingth"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Lowering the agent-building barrier",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "section2-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item3",
+        "item4"
+      ]
+    },
+    "item3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Google shipped agent-targeted DevTools guidance and a Chrome Extensions skill so agents can author extension code directly.",
+        "href": "https://x.com/ChromiumDev/status/2057249740480475347",
+        "source": "ChromiumDev"
+      },
+      "children": []
+    },
+    "item4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Microsoft open-sourced its internal 15-lesson agent course (agentic RAG, multi-agent, production), now at 63.2k GitHub stars.",
+        "href": "https://x.com/gyro_ai/status/2057249273671229912",
+        "source": "gyro_ai"
+      },
+      "children": []
+    }
+  }
+}
