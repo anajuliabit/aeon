@@ -709,10 +709,18 @@ Append to `memory/topics/reppo.md`:
   vote count, failure count.
 
 ### 4. Log failures
-For each failure, append or update an issue file under `memory/issues/`
-following the structure in the project `CLAUDE.md` (frontmatter with id,
-title, status: open, severity, category, detected_by: reppo-digest,
-detected_at). If there were no failures, do nothing here.
+If there were no failures, skip this step. Otherwise, for each distinct
+failure, file an issue under `memory/issues/` following the project
+`CLAUDE.md` issue-tracker contract:
+- Allocate the next id: scan `memory/issues/ISS-*.md`, take the highest
+  `NNN`, add 1, zero-padded to 3 digits.
+- Write `memory/issues/ISS-NNN.md` with YAML frontmatter — `id`, `title`,
+  `status: open`, `severity`, `category`, `detected_by: reppo-digest`,
+  `detected_at`, `affected_skills`, `root_cause`, `fix_pr: null` — followed
+  by a `## What happened` section describing the failure.
+- Add a row to the Open table in `memory/issues/INDEX.md`.
+- Before filing, check `INDEX.md` for an existing open issue with the same
+  root cause; if found, update that issue instead of creating a duplicate.
 
 ### 5. Log the run
 Append one line to `memory/logs/${today}.md` under a `### reppo-digest`
