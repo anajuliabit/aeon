@@ -29,7 +29,6 @@ runs unattended reliably, the agent pattern is cloned for further agents
 
 ### Out of scope
 - Additional agents beyond `reppo-trading-agent`.
-- Mainnet writes (this slice writes to testnet only).
 - Dynamic runtime dispatch / auto-generated rubrics.
 - A standalone external orchestration service.
 
@@ -38,8 +37,8 @@ runs unattended reliably, the agent pattern is cloned for further agents
 | Decision | Choice | Rationale |
 |----------|--------|-----------|
 | Delegation model | Static Aeon chain + per-agent skip gates | Deterministic; uses Aeon's built-in chain engine. Runtime dispatch is the fragile part of openclaw/hermes. |
-| Network | Testnet writes, mainnet reads | No real value at risk while shaking out reliability bugs. The actionable catalog (validity, discovery, pods) is testnet — the slice can only mint/vote there; the mainnet catalog is read for reference only. |
-| Agent scope | Mint + vote, best-effort | Full loop; vote step no-ops gracefully if testnet has no other pods. |
+| Network | Mainnet only | Real datanets, real pods to vote on, real impact. Makes the reliability layer non-negotiable; mitigated by dry-run preflight, per-run caps, and a phased rollout (see Rollout). |
+| Agent scope | Mint + vote | Full loop; on mainnet real pods exist, so the vote step does useful work. |
 | Quality rubric | Operator-authored file per datanet | Version-controlled, tunable without touching skill code, generalizes to other datanets. |
 | Failure handling | Continue-on-error + one daily digest | One agent failing never halts the chain; a single daily heartbeat avoids per-failure ping fatigue. |
 | CLI execution | Prefetch reads / postprocess writes | Sandbox-safe; matches Aeon's documented `.pending-*` pattern. Idempotency keys make deferred execution safe. |
@@ -62,11 +61,10 @@ Relevant commands:
   `REPPO_API_KEY` secret required).
 
 Environment variables:
-- `REPPO_PRIVATE_KEY` — testnet EOA key for writes (funded with testnet
-  gas + REPPO).
+- `REPPO_PRIVATE_KEY` — mainnet EOA key for writes, funded with mainnet
+  gas + REPPO.
 - `REPPO_VOTER_PRIVATE_KEY` — optional separate voting key.
-- `REPPO_NETWORK` — set per-command invocation (`mainnet` for catalog
-  discovery, `testnet` for the working datanet, pods, and all writes).
+- `REPPO_NETWORK=mainnet` — all reads and writes run on mainnet.
 
 ## Architecture
 
@@ -125,8 +123,8 @@ Ephemeral, gitignored:
 **Job:** decide which agents run today. Pure routing — no scraping, no
 writes.
 
-- **Reads:** `.reppo-cache/datanets-testnet.json` (live actionable
-  catalog), every `configs/datanets/*.md` rubric, `memory/topics/reppo.md`.
+- **Reads:** `.reppo-cache/datanets.json` (live mainnet catalog), every
+  `configs/datanets/*.md` rubric, `memory/topics/reppo.md`.
 - **Logic:** for each rubric file -> resolve its datanet -> check
   validity in cache -> emit `RUN` or `SKIP` + reason. Skip when: datanet
   invalid/inactive, or memory shows a successful run already today
@@ -175,22 +173,19 @@ bounded by the rubric.
 ## Reppo Execution Scripts
 
 ### `scripts/prefetch-reppo.sh` (runs before Claude — full network + env)
-- `REPPO_NETWORK=testnet reppo list datanets --status ACTIVE --json`
-  -> `.reppo-cache/datanets-testnet.json` — the actionable catalog;
-  validity checks and new-datanet discovery run against this.
 - `REPPO_NETWORK=mainnet reppo list datanets --status ACTIVE --json`
-  -> `.reppo-cache/datanets-mainnet.json` — reference only (digest color,
-  future mainnet promotion).
+  -> `.reppo-cache/datanets.json` — the live catalog; validity checks
+  and new-datanet discovery run against this.
 - For each `configs/datanets/*.md`: resolve `datanet_id`, then
-  `REPPO_NETWORK=testnet reppo list pods --all --datanet <id> --json`
+  `REPPO_NETWORK=mainnet reppo list pods --all --datanet <id> --json`
   -> `.reppo-cache/pods-<name>.json`, and
-  `REPPO_NETWORK=testnet reppo query datanet <id> --json`.
+  `REPPO_NETWORK=mainnet reppo query datanet <id> --json`.
 - On any read failure: write an error-marker JSON instead of valid data;
   skills detect the marker and degrade gracefully.
 
 ### `scripts/postprocess-reppo.sh` (runs after Claude — full network + env)
 - For each `.pending-reppo/*.json`: run the CLI command with
-  `REPPO_NETWORK=testnet --idempotency-key <key> --dry-run` first; if the
+  `REPPO_NETWORK=mainnet --idempotency-key <key> --dry-run` first; if the
   simulation passes, run it for real; if it fails, skip and record the
   structured error.
 - Append a `## Execution Results` section to
@@ -202,10 +197,10 @@ bounded by the rubric.
 
 ```markdown
 ---
-datanet_id: "0x…"          # testnet datanet to mint into
+datanet_id: "0x…"          # mainnet datanet to mint into
 agent: reppo-trading-agent
-mint_cap: 3                # max pods minted per run
-vote_cap: 10               # max votes cast per run
+mint_cap: 1                # max pods minted per run (start low — see Rollout)
+vote_cap: 3                # max votes cast per run (start low — see Rollout)
 ---
 # TradingGymAI — Datanet Rubric
 
@@ -232,11 +227,11 @@ The operator edits this freely; tuning the agent never touches skill code.
 1. **Idempotency keys** on every write — retries and re-run workflows are
    no-ops; never double-mint or double-vote.
 2. **Dry-run preflight** in postprocess — bad writes fail cheap in
-   simulation, before gas is spent.
+   simulation, before gas is spent. Critical on mainnet.
 3. **`on_error: continue`** on the chain — one agent's failure never
    halts the chain.
 4. **Per-run caps** (`mint_cap`, `vote_cap`) from rubric frontmatter —
-   bound runaway spend even if the LLM misjudges.
+   bound blast radius and spend even if the LLM misjudges.
 5. **Single daily digest** = one heartbeat; failures additionally logged
    to `memory/issues/`.
 6. **`memory/topics/reppo.md`** — running ledger of minted strategy
@@ -247,6 +242,20 @@ The operator edits this freely; tuning the agent never touches skill code.
 8. **Prefetch error markers** — network blips degrade gracefully instead
    of crashing a run.
 
+## Rollout (phased — mainnet safety)
+
+Because writes are real, the soak ramps caps deliberately:
+
+1. **Phase 0 — dry-run only.** Set `REPPO_DRY_RUN_ONLY=true` (postprocess
+   runs the `--dry-run` simulation but skips the real write). Run the
+   full chain for 2–3 days; confirm the digest, prefetch, gate, and
+   intent files all behave. No on-chain writes, no spend.
+2. **Phase 1 — minimal live.** `mint_cap: 1`, `vote_cap: 3`. Run for
+   several days; review every minted pod and vote by hand against the
+   rubric.
+3. **Phase 2 — ramp.** Raise caps in the rubric file only once the digest
+   shows consistently rubric-aligned behavior with no manual correction.
+
 ## Error Handling
 
 | Failure | Behavior |
@@ -256,31 +265,33 @@ The operator edits this freely; tuning the agent never touches skill code.
 | Agent skill fails mid-run | Chain continues; partial `.pending-reppo/` intents still postprocessed; digest reports the failure; logged to `memory/issues/`. |
 | `mint-pod`/`vote` dry-run fails | Postprocess skips the real write, records the structured error code; digest surfaces it. |
 | Write retried after success | Idempotency key makes it a no-op. |
-| Testnet datanet has no other pods | Vote step no-ops cleanly; not an error. |
+| Datanet has no other pods to vote on | Vote step no-ops cleanly; not an error. |
+| Signing key out of gas/REPPO | Dry-run or real write fails with a structured error; postprocess records it; digest surfaces it as an actionable alert. |
 
 ## Testing Strategy
 
 - **Scripts** — `prefetch-reppo.sh` / `postprocess-reppo.sh` tested
-  standalone with `--dry-run` and against testnet, independent of Claude.
+  standalone with `--dry-run`, independent of Claude.
 - **Idempotency** — run the agent workflow twice on the same input;
   assert no duplicate pods/votes.
 - **Skip gate** — force a SKIP plan; assert the agent exits in seconds
   with no writes.
 - **Degradation** — inject a prefetch error marker; assert the run
   completes and the digest reports the gap.
-- **Soak** — run the chain unattended on testnet for several days;
-  success = no manual intervention, daily digest accurate.
+- **Dry-run-only soak** — Phase 0 above: full chain, no real writes.
+- **Soak** — Phases 1–2: run the chain unattended for an extended
+  period; success = no manual intervention, daily digest accurate.
 
 ## One-Time Setup (prerequisites)
 
-- GitHub Actions secrets: `REPPO_PRIVATE_KEY` (testnet, funded with gas +
+- GitHub Actions secrets: `REPPO_PRIVATE_KEY` (mainnet, funded with gas +
   REPPO); optional `REPPO_VOTER_PRIVATE_KEY`.
 - Run `reppo register-agent` once (uses the CLI default API key).
 - Author the first `configs/datanets/tradinggymai.md` rubric.
 
 ## Success Criteria
 
-The chain runs daily on testnet, unattended, for an extended period:
+The chain runs daily on mainnet, unattended, for an extended period:
 mints rubric-aligned strategy pods, votes on available pods, never
 double-acts, surfaces new datanets, and sends one accurate daily digest —
 with no manual debugging or intervention.
