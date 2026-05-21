@@ -12,6 +12,7 @@
 ## Recent Digests
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-05-21 | crypto | Japan stablecoins, Hyperliquid FDV, Strategy $2B BTC |
 
 ## Skills Built
 | Skill | Date | Notes |
