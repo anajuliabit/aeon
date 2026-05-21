@@ -1,0 +1,361 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi — 2026-05-21",
+        "description": "Mixed: TVL flat, DEX volume up 12%, stables barely moving"
+      },
+      "children": [
+        "stat_tvl",
+        "sep1",
+        "heading_chains",
+        "table_chains",
+        "sep2",
+        "heading_movers",
+        "stack_movers",
+        "sep3",
+        "heading_fees",
+        "table_fees",
+        "sep4",
+        "heading_fees_beating",
+        "stack_fees_beating",
+        "sep5",
+        "stack_dex",
+        "sep6",
+        "stack_stables",
+        "sep7",
+        "heading_real_yield",
+        "stack_real_yield",
+        "sep8",
+        "heading_incentive_yield",
+        "stack_incentive_yield",
+        "sep9",
+        "text_sources"
+      ]
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$83.1B",
+        "delta": "+0.4% (24h), +2.2% (7d)",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_chains": {
+      "type": "Heading",
+      "props": {
+        "text": "Top chains",
+        "level": "h3"
+      }
+    },
+    "table_chains": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Chain",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "Ethereum",
+            "$43.1B"
+          ],
+          [
+            "Solana",
+            "$6.0B"
+          ],
+          [
+            "BSC",
+            "$5.5B"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_movers": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers",
+        "level": "h3"
+      }
+    },
+    "stack_movers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mover1",
+        "mover2",
+        "mover3"
+      ]
+    },
+    "mover1": {
+      "type": "Text",
+      "props": {
+        "text": "↑ Hyperliquid L1 +9% ($1.57B → $1.71B) — HYPE liquid-staking surge; Kinetiq, stHYPE, HyperLend all climbing"
+      }
+    },
+    "mover2": {
+      "type": "Text",
+      "props": {
+        "text": "↑ Kinetiq kHYPE +20% ($0.89B → $1.06B) — Hyperliquid LST inflows, +48% on the week"
+      }
+    },
+    "mover3": {
+      "type": "Text",
+      "props": {
+        "text": "↓ Project 0 −28% ($150M → $110M) — sharp pullback after a +142% weekly run-up; no confirmed catalyst"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_fees": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "table_fees": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Protocol",
+          "Fees (24h)",
+          "vs 7d avg"
+        ],
+        "rows": [
+          [
+            "Tether",
+            "$16.4M",
+            "flat"
+          ],
+          [
+            "Circle USDC",
+            "$6.5M",
+            "flat"
+          ],
+          [
+            "Canton",
+            "$2.1M",
+            "flat"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_fees_beating": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees beating TVL",
+        "level": "h3"
+      }
+    },
+    "stack_fees_beating": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fees_beating1",
+        "fees_beating2"
+      ]
+    },
+    "fees_beating1": {
+      "type": "Text",
+      "props": {
+        "text": "Uniswap V4 — fees +119% / TVL +3% (7d) — swap demand outrunning deposits"
+      }
+    },
+    "fees_beating2": {
+      "type": "Text",
+      "props": {
+        "text": "Morpho Blue — fees +34% / TVL flat (7d) — lending demand outpacing capital"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_dex": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_dex",
+        "text_dex_top"
+      ]
+    },
+    "stat_dex": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX vol (24h)",
+        "value": "$5.7B",
+        "delta": "+12%",
+        "trend": "up"
+      }
+    },
+    "text_dex_top": {
+      "type": "Text",
+      "props": {
+        "text": "Top: Uniswap V4 $0.77B, Aerodrome Slipstream $0.53B, Uniswap V3 $0.46B"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_stables": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_stables",
+        "text_stables_note"
+      ]
+    },
+    "stat_stables": {
+      "type": "Stat",
+      "props": {
+        "label": "Stables",
+        "value": "$320.8B",
+        "delta": "+0.3%",
+        "trend": "up"
+      }
+    },
+    "text_stables_note": {
+      "type": "Text",
+      "props": {
+        "text": "No single-issuer move ≥1%",
+        "variant": "caption"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_real_yield": {
+      "type": "Heading",
+      "props": {
+        "text": "Real yield (sustainable, ≥$10M, filtered)",
+        "level": "h3"
+      }
+    },
+    "stack_real_yield": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "real_yield1",
+        "real_yield2",
+        "real_yield3"
+      ]
+    },
+    "real_yield1": {
+      "type": "Text",
+      "props": {
+        "text": "SHMON (shmonad, Monad) — 15.3% apyBase ($12M TVL)"
+      }
+    },
+    "real_yield2": {
+      "type": "Text",
+      "props": {
+        "text": "MUBOND (mu-digital, Ethereum) — 14.5% apyBase ($13M TVL)"
+      }
+    },
+    "real_yield3": {
+      "type": "Text",
+      "props": {
+        "text": "WBTC-USDC LP (Uniswap V4, ETH) — 14.0% apyBase ($11M TVL)"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_incentive_yield": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive yield (points / emissions, ≥$25M)",
+        "level": "h3"
+      }
+    },
+    "stack_incentive_yield": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "incentive_yield1",
+        "incentive_yield2"
+      ]
+    },
+    "incentive_yield1": {
+      "type": "Text",
+      "props": {
+        "text": "USDC-AERO LP (Aerodrome, Base) — 20.7% apy via AERO emissions ($27M TVL)"
+      }
+    },
+    "incentive_yield2": {
+      "type": "Text",
+      "props": {
+        "text": "sdCRV (Stake DAO, ETH) — 18.7% apy via CRV + SDT rewards ($28M TVL)"
+      }
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: llama_tvl=ok llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none",
+        "variant": "caption"
+      }
+    }
+  }
+}
