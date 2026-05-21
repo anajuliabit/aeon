@@ -1,2 +1,3 @@
 date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-21,defi-overview,claude-opus-4-7,57,27257,1382734,51514
+2026-05-21,competitor-launch-radar,claude-opus-4-7,11,2291,213788,25242
