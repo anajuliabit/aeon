@@ -1,42 +1,39 @@
 # Telegram Instant Mode
 
-Default polling checks for messages every 5 minutes. For ~1s response time, deploy this Cloudflare Worker as a Telegram webhook.
+Default polling checks for messages every 5 minutes. For ~1s response
+time, deploy the Cloudflare Worker in [`worker/`](../worker/) as a
+Telegram webhook.
 
-## Worker code
+## What it does
 
-```js
-export default {
-  async fetch(request, env) {
-    const { message } = await request.json();
-    if (!message?.text || String(message.chat.id) !== env.TELEGRAM_CHAT_ID)
-      return new Response("ignored");
-
-    // Advance offset so polling doesn't reprocess
-    await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/getUpdates?offset=${message.update_id + 1}`);
-
-    // Trigger GitHub Actions immediately
-    await fetch(`https://api.github.com/repos/${env.GITHUB_REPO}/dispatches`, {
-      method: "POST",
-      headers: { Authorization: `token ${env.GITHUB_TOKEN}`, Accept: "application/vnd.github.v3+json" },
-      body: JSON.stringify({ event_type: "telegram-message", client_payload: { message: message.text } }),
-    });
-
-    return new Response("ok");
-  },
-};
 ```
+Telegram message
+  → Cloudflare Worker (worker/src/index.js)
+    → GitHub repository_dispatch (event_type: telegram-message)
+      → .github/workflows/messages.yml runs immediately
+```
+
+The Worker also advances the bot's `getUpdates` offset so the 5-minute
+poller doesn't reprocess the same message.
 
 ## Setup
 
-1. Create a Cloudflare Worker and paste the code above
-2. Set environment variables in the Cloudflare dashboard:
-   - `TELEGRAM_BOT_TOKEN` — your bot token from @BotFather
-   - `TELEGRAM_CHAT_ID` — your chat ID
-   - `GITHUB_REPO` — `owner/repo` format (e.g. `aaronjmars/aeon`)
-   - `GITHUB_TOKEN` — a GitHub PAT with `repo` scope
-3. Point your bot's webhook at the Worker URL:
-   ```bash
-   curl "https://api.telegram.org/bot<YOUR_TOKEN>/setWebhook?url=https://your-worker.workers.dev"
-   ```
+The Worker is a Wrangler project. Full instructions are in
+[`worker/README.md`](../worker/README.md). In short:
+
+```bash
+cd worker
+npm install
+npx wrangler login
+npx wrangler deploy
+```
+
+Then set the secrets and register the webhook (see `worker/README.md`):
+
+- `TELEGRAM_BOT_TOKEN` — bot token from @BotFather
+- `TELEGRAM_CHAT_ID` — your chat ID
+- `GITHUB_REPO` — `owner/repo` format (e.g. `aaronjmars/aeon`)
+- `GITHUB_TOKEN` — a GitHub PAT with `repo` scope
+- `TELEGRAM_WEBHOOK_SECRET` — optional shared secret to reject forged requests
 
 Messages now arrive in ~1 second instead of up to 5 minutes.

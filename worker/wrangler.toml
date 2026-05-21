@@ -1,0 +1,10 @@
+name = "aeon-telegram-webhook"
+main = "src/index.js"
+compatibility_date = "2026-05-21"
+
+# Secrets are NOT stored here. Set them once with:
+#   wrangler secret put TELEGRAM_BOT_TOKEN
+#   wrangler secret put TELEGRAM_CHAT_ID
+#   wrangler secret put GITHUB_REPO
+#   wrangler secret put GITHUB_TOKEN
+#   wrangler secret put TELEGRAM_WEBHOOK_SECRET   # optional but recommended

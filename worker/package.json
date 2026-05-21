@@ -1,0 +1,13 @@
+{
+  "name": "aeon-telegram-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker: Telegram webhook -> GitHub Actions repository_dispatch for Aeon",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
