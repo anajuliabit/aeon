@@ -1,0 +1,276 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Last 30 Days — Bitcoin"
+      },
+      "children": [
+        "meta_group",
+        "verdict_group",
+        "narrative_group",
+        "sentiment_group",
+        "divergence_group",
+        "note_group",
+        "report_link"
+      ]
+    },
+    "meta_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "meta_text",
+        "status_badge",
+        "sources_stat"
+      ]
+    },
+    "meta_text": {
+      "type": "Text",
+      "props": {
+        "text": "30d across 3 platforms",
+        "variant": "muted"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LAST30_DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "sources_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Sources",
+        "value": "43"
+      }
+    },
+    "verdict_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sep1",
+        "verdict_heading",
+        "verdict_text"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "verdict_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Verdict",
+        "level": "h3"
+      }
+    },
+    "verdict_text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC sits near $77K only because Strategy + ETF flows absorb supply faster than miners mint — and the May 18 ETF outflow plus Trump Media killing its own ETF are the first cracks in that single-buyer story.",
+        "variant": "body"
+      }
+    },
+    "narrative_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sep2",
+        "narrative_heading",
+        "narrative_text1",
+        "narrative_stats",
+        "narrative_text2"
+      ]
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narrative_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top narrative",
+        "level": "h3"
+      }
+    },
+    "narrative_text1": {
+      "type": "Text",
+      "props": {
+        "text": "Bitcoin's price has become a Michael Saylor life-support machine (HN + Web).",
+        "variant": "body"
+      }
+    },
+    "narrative_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_strategy",
+        "stat_mined"
+      ]
+    },
+    "stat_strategy": {
+      "type": "Stat",
+      "props": {
+        "label": "Strategy bought YTD",
+        "value": "171,238 BTC"
+      }
+    },
+    "stat_mined": {
+      "type": "Stat",
+      "props": {
+        "label": "Network mined",
+        "value": "~62,000 BTC"
+      }
+    },
+    "narrative_text2": {
+      "type": "Text",
+      "props": {
+        "text": "HN openly calls it a Ponzi; bulls call it structural.",
+        "variant": "body"
+      }
+    },
+    "sentiment_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sep3",
+        "sentiment_heading",
+        "sentiment_text"
+      ]
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sentiment_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sentiment split",
+        "level": "h3"
+      }
+    },
+    "sentiment_text": {
+      "type": "Text",
+      "props": {
+        "text": "HN bearish/skeptical, Web mixed-bearish.",
+        "variant": "body"
+      }
+    },
+    "divergence_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sep4",
+        "divergence_heading",
+        "divergence_text",
+        "divergence_stats"
+      ]
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "divergence_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sharpest divergence",
+        "level": "h3"
+      }
+    },
+    "divergence_text": {
+      "type": "Text",
+      "props": {
+        "text": "Polymarket prices $150K-by-2026 at just 9.5% vs Standard Chartered's $150K target.",
+        "variant": "body"
+      }
+    },
+    "divergence_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_polymarket",
+        "stat_sc"
+      ]
+    },
+    "stat_polymarket": {
+      "type": "Stat",
+      "props": {
+        "label": "Polymarket: $150K by 2026",
+        "value": "9.5%",
+        "trend": "down"
+      }
+    },
+    "stat_sc": {
+      "type": "Stat",
+      "props": {
+        "label": "Standard Chartered target",
+        "value": "$150K"
+      }
+    },
+    "note_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note_heading",
+        "note_text"
+      ]
+    },
+    "note_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Data sources",
+        "level": "h3"
+      }
+    },
+    "note_text": {
+      "type": "Text",
+      "props": {
+        "text": "Reddit failed (IP blocked), X skipped (no prefetch). Built from HN + Web + Polymarket.",
+        "variant": "muted"
+      }
+    },
+    "report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Report",
+        "href": "articles/last30-bitcoin-2026-05-21.md",
+        "source": "Aeon"
+      }
+    }
+  }
+}
