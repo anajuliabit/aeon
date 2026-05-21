@@ -1,0 +1,143 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "2026-05-21"
+      },
+      "children": [
+        "alert-main",
+        "sep-1",
+        "reasons-section",
+        "sep-2",
+        "resolution-section"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "title": "All sources failed",
+        "message": "No digest today",
+        "type": "error"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "reasons-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reasons-heading",
+        "reason-1",
+        "reason-2",
+        "reason-3"
+      ]
+    },
+    "reasons-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Source failures",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "reason-1": {
+      "type": "Text",
+      "props": {
+        "text": "X.AI x_search curl is sandbox-blocked (env-var expansion / approval gate) and has no prefetch case",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "reason-2": {
+      "type": "Text",
+      "props": {
+        "text": "WebFetch can't issue an authed POST",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "reason-3": {
+      "type": "Text",
+      "props": {
+        "text": "WebSearch returned only news articles and undatable tweets with no engagement metrics, so signal scoring can't run",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "resolution-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue-line",
+        "fix-line"
+      ]
+    },
+    "issue-line": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "issue-label",
+        "issue-id-badge",
+        "issue-status-badge"
+      ]
+    },
+    "issue-label": {
+      "type": "Text",
+      "props": {
+        "text": "Tracked as",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "issue-id-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-001",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "issue-status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "open",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "fix-line": {
+      "type": "Text",
+      "props": {
+        "text": "Fix is an agent-buzz case in scripts/prefetch-xai.sh",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

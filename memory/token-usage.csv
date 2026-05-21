@@ -6,3 +6,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-21,token-pick,claude-opus-4-7,71,19509,1554418,70975
 2026-05-21,last30,claude-opus-4-7,3460,26082,1928448,93320
 2026-05-21,agent-buzz,claude-opus-4-7,1611,16149,1856459,79084
+2026-05-21,agent-buzz,claude-opus-4-7,3055,10578,1069106,73227
