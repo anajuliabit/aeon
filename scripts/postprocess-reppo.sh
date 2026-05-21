@@ -23,7 +23,17 @@ if [ -z "${REPPO_PRIVATE_KEY:-}" ]; then
 fi
 
 if ! command -v reppo >/dev/null 2>&1; then
-  npm i -g @reppo/cli >/dev/null 2>&1 || { echo "reppo-postprocess: CLI missing"; exit 0; }
+  npm i -g @reppo/cli >/dev/null 2>&1 || {
+    echo "reppo-postprocess: CLI missing"
+    mkdir -p .outputs
+    {
+      echo ""
+      echo "## Execution Results"
+      echo ""
+      echo "_postprocess-reppo.sh could not run: Reppo CLI unavailable. Pending intents were NOT executed._"
+    } >> ".outputs/reppo-trading-agent.md"
+    exit 0
+  }
 fi
 
 mkdir -p .outputs .reppo-cache
@@ -71,10 +81,12 @@ for intent in "$PENDING_DIR"/*.json; do
   key="$(jq -r '.idempotency_key // empty' "$intent")"
   if [ -z "$key" ]; then
     echo "- \`$base\` — **skipped**: missing idempotency_key" >> "$RESULTS_FILE"
+    rm -f "$intent"
     continue
   fi
   args="$(build_args "$intent")" || {
     echo "- \`$base\` — **skipped**: unknown command or invalid fields" >> "$RESULTS_FILE"
+    rm -f "$intent"
     continue
   }
 
@@ -84,11 +96,13 @@ for intent in "$PENDING_DIR"/*.json; do
        > ".reppo-cache/dryrun-$base" 2>&1; then
     code="$(jq -r '.code // "UNKNOWN"' ".reppo-cache/dryrun-$base" 2>/dev/null || echo UNKNOWN)"
     echo "- \`$base\` — **dry-run failed** (code: $code), real write skipped" >> "$RESULTS_FILE"
+    rm -f "$intent"
     continue
   fi
 
   if [ "$DRY_RUN_ONLY" = "true" ]; then
     echo "- \`$base\` — dry-run OK, real write skipped (REPPO_DRY_RUN_ONLY)" >> "$RESULTS_FILE"
+    rm -f "$intent"
     continue
   fi
 
@@ -102,6 +116,7 @@ for intent in "$PENDING_DIR"/*.json; do
     code="$(jq -r '.code // "UNKNOWN"' ".reppo-cache/result-$base" 2>/dev/null || echo UNKNOWN)"
     echo "- \`$base\` — **write failed** (code: $code)" >> "$RESULTS_FILE"
   fi
+  rm -f "$intent"
 done
 
 echo "reppo-postprocess: done"

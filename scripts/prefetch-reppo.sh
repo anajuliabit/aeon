@@ -11,15 +11,6 @@ CACHE_DIR=".reppo-cache"
 CONFIG_DIR="configs/datanets"
 mkdir -p "$CACHE_DIR"
 
-# Ensure the CLI is available.
-if ! command -v reppo >/dev/null 2>&1; then
-  echo "reppo-prefetch: installing @reppo/cli..."
-  npm i -g @reppo/cli >/dev/null 2>&1 || {
-    echo "reppo-prefetch: CLI install failed, skipping prefetch"
-    exit 0
-  }
-fi
-
 # Write an error marker to a cache file. Args: file, message.
 error_marker() {
   printf '{"error":%s,"code":"PREFETCH_FAILED"}\n' "$(printf '%s' "$2" | jq -R -s '.')" > "$1"
@@ -35,6 +26,24 @@ frontmatter() {
     }
   ' "$1"
 }
+
+# Ensure the CLI is available.
+if ! command -v reppo >/dev/null 2>&1; then
+  echo "reppo-prefetch: installing @reppo/cli..."
+  npm i -g @reppo/cli >/dev/null 2>&1 || {
+    echo "reppo-prefetch: CLI install failed, writing error markers"
+    error_marker "$CACHE_DIR/datanets.json" "reppo CLI unavailable"
+    if [ -d "$CONFIG_DIR" ]; then
+      for cfg in "$CONFIG_DIR"/*.md; do
+        [ -f "$cfg" ] || continue
+        name="$(basename "$cfg" .md)"
+        error_marker "$CACHE_DIR/datanet-$name.json" "reppo CLI unavailable"
+        error_marker "$CACHE_DIR/pods-$name.json" "reppo CLI unavailable"
+      done
+    fi
+    exit 0
+  }
+fi
 
 # 1. Live mainnet datanet catalog (validity checks + new-datanet discovery).
 echo "reppo-prefetch: fetching datanet catalog..."

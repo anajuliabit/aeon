@@ -17,6 +17,7 @@ chain. Find the fenced block that begins with the line `reppo-plan`, and
 within that block read the `reppo-trading-agent:` line.
 If it says `SKIP`, output one line — `Skipped: <reason from the plan>` —
 and stop. Do nothing else.
+If you cannot find a `reppo-plan` block or no `reppo-trading-agent:` line appears in it, also treat that as SKIP — output `Skipped: no orchestrator plan available` and stop.
 
 ## Step 2 — Read the rubric
 Read `configs/datanets/tradinggymai.md`. Note its `datanet_id`, `mint_cap`,
@@ -58,10 +59,10 @@ Read `.reppo-cache/pods-tradinggymai.json`. If it is an error marker
 skip voting — this is not an error.
 Otherwise, for each pod that is NOT one you just minted, apply the Vote
 YES/NO criteria. Cast at most `vote_cap` votes total. For each, write
-`.pending-reppo/vote-<podId>.json`:
+`.pending-reppo/vote-<podId>-<direction>.json`:
 ```json
 { "cmd": "vote", "pod": "<podId>", "direction": "like",
-  "votes": 1, "idempotency_key": "vote-<podId>",
+  "votes": 1, "idempotency_key": "vote-<podId>-<direction>",
   "reason": "<one-line reason>" }
 ```
 `<podId>` is the pod's on-chain hex id (the `0x...` value from the cache
