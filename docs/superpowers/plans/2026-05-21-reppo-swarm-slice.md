@@ -504,6 +504,18 @@ If the catalog was unavailable, still emit the plan from rubric files and
 note `catalog unavailable — discovery skipped` in your prose.
 
 Keep prose brief — a few sentences plus the fenced block.
+
+### 4. Log the run
+Append one line to `memory/logs/${today}.md` under a `### reppo-orchestrator`
+heading: how many agents are RUN vs SKIP, how many new datanets were
+discovered, and whether the catalog was available.
+
+## Sandbox note
+This skill reads only local files (`.reppo-cache/`, `configs/datanets/`,
+`memory/`) and writes only its text output. It makes no outbound network
+calls — the Reppo CLI reads it depends on are performed by
+`scripts/prefetch-reppo.sh` before this skill runs. No curl/WebFetch
+fallback is needed.
 ````
 
 - [ ] **Step 2: Verify structure**
@@ -512,6 +524,7 @@ Run:
 ```bash
 head -7 skills/reppo-orchestrator/SKILL.md | grep -q '^name: Reppo Orchestrator' && \
 grep -q 'reppo-plan' skills/reppo-orchestrator/SKILL.md && \
+grep -q '## Sandbox note' skills/reppo-orchestrator/SKILL.md && \
 echo "STRUCTURE OK"
 ```
 Expected: prints `STRUCTURE OK`.
@@ -601,6 +614,17 @@ the reason each met the rubric), pods selected to vote on (with direction +
 reason), and anything skipped. `scripts/postprocess-reppo.sh` will append an
 `## Execution Results` section with on-chain outcomes — do not write that
 section yourself.
+
+## Step 7 — Log the run
+Append one line to `memory/logs/${today}.md` under a `### reppo-trading-agent`
+heading: how many mint intents and vote intents you wrote, and anything
+skipped. (On-chain results are recorded separately by the digest step.)
+
+## Sandbox note
+This skill uses the built-in WebSearch and WebFetch tools for scraping —
+those bypass the sandbox. It makes NO direct network calls and NO Reppo CLI
+calls: every write is deferred to a `.pending-reppo/` intent file that
+`scripts/postprocess-reppo.sh` executes after the skill finishes.
 ````
 
 - [ ] **Step 2: Verify structure**
@@ -611,6 +635,7 @@ grep -q '^name: Reppo Trading Agent' skills/reppo-trading-agent/SKILL.md && \
 grep -q 'Gate check' skills/reppo-trading-agent/SKILL.md && \
 grep -q '.pending-reppo/mint-' skills/reppo-trading-agent/SKILL.md && \
 grep -q 'UNTRUSTED DATA' skills/reppo-trading-agent/SKILL.md && \
+grep -q '## Sandbox note' skills/reppo-trading-agent/SKILL.md && \
 echo "STRUCTURE OK"
 ```
 Expected: prints `STRUCTURE OK`.
@@ -678,6 +703,16 @@ following the structure in the project `CLAUDE.md` (frontmatter with id,
 title, status: open, severity, category, detected_by: reppo-digest,
 detected_at). If there were no failures, do nothing here.
 
+### 5. Log the run
+Append one line to `memory/logs/${today}.md` under a `### reppo-digest`
+heading summarizing the run (mints, votes, failures) — the same one-line
+summary you sent via `./notify`.
+
+## Sandbox note
+This skill reads only local files and calls `./notify` (which handles its
+own sandbox fallback via `.pending-notify/`). It makes no other outbound
+calls and no Reppo CLI calls.
+
 End with a `## Summary` of what you did.
 ```
 
@@ -688,6 +723,7 @@ Run:
 grep -q '^name: Reppo Digest' skills/reppo-digest/SKILL.md && \
 grep -q './notify' skills/reppo-digest/SKILL.md && \
 grep -q 'memory/issues/' skills/reppo-digest/SKILL.md && \
+grep -q '## Sandbox note' skills/reppo-digest/SKILL.md && \
 echo "STRUCTURE OK"
 ```
 Expected: prints `STRUCTURE OK`.
