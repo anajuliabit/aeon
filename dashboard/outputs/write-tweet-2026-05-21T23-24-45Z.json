@@ -1,0 +1,490 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Drafts",
+        "description": "Base season — Base ecosystem, Bankr, AI tokens"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "one-liner-section",
+        "sep1",
+        "two-punch-section",
+        "sep2",
+        "paragraph-section",
+        "sep3",
+        "long-tweet-section",
+        "sep4",
+        "thread-opener-section",
+        "sep5",
+        "best-section"
+      ]
+    },
+    "one-liner-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-one-liner",
+        "grid-1"
+      ]
+    },
+    "h-one-liner": {
+      "type": "Heading",
+      "props": {
+        "text": "One-Liner",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-1": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "option-1a",
+        "option-1b"
+      ]
+    },
+    "option-1a": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-1a",
+        "text-1a"
+      ]
+    },
+    "badge-1a": {
+      "type": "Badge",
+      "props": {
+        "text": "1a",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-1a": {
+      "type": "Text",
+      "props": {
+        "text": "Base season is just venture capital for chatbots with your private keys."
+      },
+      "children": []
+    },
+    "option-1b": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-1b",
+        "text-1b"
+      ]
+    },
+    "badge-1b": {
+      "type": "Badge",
+      "props": {
+        "text": "1b",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-1b": {
+      "type": "Text",
+      "props": {
+        "text": "The Base AI-token boom: 21,870 new tokens in one day, zero of them you'll remember."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "two-punch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-two-punch",
+        "grid-2"
+      ]
+    },
+    "h-two-punch": {
+      "type": "Heading",
+      "props": {
+        "text": "Two-Punch",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-2": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "option-2a",
+        "option-2b"
+      ]
+    },
+    "option-2a": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-2a",
+        "text-2a"
+      ]
+    },
+    "badge-2a": {
+      "type": "Badge",
+      "props": {
+        "text": "2a",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-2a": {
+      "type": "Text",
+      "props": {
+        "text": "Clanker minted 21,870 tokens on Base in a single day. That's not an ecosystem, it's a confetti cannon."
+      },
+      "children": []
+    },
+    "option-2b": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-2b",
+        "text-2b"
+      ]
+    },
+    "badge-2b": {
+      "type": "Badge",
+      "props": {
+        "text": "2b",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-2b": {
+      "type": "Text",
+      "props": {
+        "text": "Bankr's pitch: let an AI agent trade your wallet from a text message. Bankr's week: an attacker drained 14 wallets and trading got shut off."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "paragraph-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-paragraph",
+        "grid-3"
+      ]
+    },
+    "h-paragraph": {
+      "type": "Heading",
+      "props": {
+        "text": "Paragraph",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-3": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "option-3a",
+        "option-3b"
+      ]
+    },
+    "option-3a": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-3a",
+        "text-3a"
+      ]
+    },
+    "badge-3a": {
+      "type": "Badge",
+      "props": {
+        "text": "3a",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-3a": {
+      "type": "Text",
+      "props": {
+        "text": "'Base season' isn't a season, it's a UX experiment. The bet is that people want AI agents holding their keys and trading on plain-English commands. Bankr just ran the experiment to its conclusion: 14 wallets drained, transactions frozen."
+      },
+      "children": []
+    },
+    "option-3b": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-3b",
+        "text-3b"
+      ]
+    },
+    "badge-3b": {
+      "type": "Badge",
+      "props": {
+        "text": "3b",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-3b": {
+      "type": "Text",
+      "props": {
+        "text": "Every Base AI token sells the same dream: frictionless agents that act for you. Nobody prices the obvious risk — an agent that acts for you also acts for whoever compromises it. Bankr's $150K hack wasn't a bug. It was the feature, working."
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "long-tweet-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-long-tweet",
+        "grid-4"
+      ]
+    },
+    "h-long-tweet": {
+      "type": "Heading",
+      "props": {
+        "text": "Long Tweet",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-4": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "option-4a",
+        "option-4b"
+      ]
+    },
+    "option-4a": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-4a",
+        "text-4a"
+      ]
+    },
+    "badge-4a": {
+      "type": "Badge",
+      "props": {
+        "text": "4a",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-4a": {
+      "type": "Text",
+      "props": {
+        "text": "The numbers on Base look like a bull market: $12.6B TVL, Venice's VVV up 9x this year, Clanker pushing 21,870 token launches in a single day. The agentic-summer thesis is that AI agents become the primary users of the chain. Then Bankr, one of the marquee agents, got 14 wallets drained for ~$150K and had to disable transactions. The thesis and the failure mode are the same sentence: an agent with your keys does what it's told. The hard part was never the AI. It's who gets to give the orders."
+      },
+      "children": []
+    },
+    "option-4b": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-4b",
+        "text-4b"
+      ]
+    },
+    "badge-4b": {
+      "type": "Badge",
+      "props": {
+        "text": "4b",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-4b": {
+      "type": "Text",
+      "props": {
+        "text": "Strip the branding off 'Base season' and here's the actual product: you hand an AI agent your wallet, and it executes trades from text commands on a social feed. When Bankr's broke, an attacker used the same interface to drain 14 wallets before anyone could react. It's a custody decision dressed up as an AI breakthrough."
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "thread-opener-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-thread-opener",
+        "grid-5"
+      ]
+    },
+    "h-thread-opener": {
+      "type": "Heading",
+      "props": {
+        "text": "Thread Opener",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-5": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "option-5a",
+        "option-5b"
+      ]
+    },
+    "option-5a": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-5a",
+        "text-5a"
+      ]
+    },
+    "badge-5a": {
+      "type": "Badge",
+      "props": {
+        "text": "5a",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-5a": {
+      "type": "Text",
+      "props": {
+        "text": "Base is having its 'agentic summer' — $12.6B TVL, AI agents that trade your wallet from a text message. One of the marquee agents, Bankr, just got 14 wallets drained. So here's the question nobody in the timeline wants: who actually holds your keys?"
+      },
+      "children": []
+    },
+    "option-5b": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-5b",
+        "text-5b"
+      ]
+    },
+    "badge-5b": {
+      "type": "Badge",
+      "props": {
+        "text": "5b",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-5b": {
+      "type": "Text",
+      "props": {
+        "text": "Most 'Base season' AI tokens are not AI companies. They're custody products with a chatbot bolted on, and almost none have priced the risk that bolting a chatbot to your keys creates. Bankr just showed the bill."
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "best-section": {
+      "type": "Alert",
+      "props": {
+        "title": "Recommended",
+        "message": "#4a — full arc, hard data, and a landing that reframes the whole agentic narrative",
+        "type": "success"
+      },
+      "children": []
+    }
+  }
+}

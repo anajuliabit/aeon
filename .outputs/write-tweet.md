@@ -1,23 +1,23 @@
-tweet drafts: neuro-symbolic AI cuts AI energy use up to 100x
+tweet drafts: Base season — Base ecosystem, Bankr, AI tokens
 
 — one-liner —
-1a. The cheapest watt is the one you never spend. AI keeps forgetting that.
-1b. A Tufts AI hit 78% on puzzles where the standard model scored 0 — using 1% of the energy.
+1a. Base season is just venture capital for chatbots with your private keys.
+1b. The Base AI-token boom: 21,870 new tokens in one day, zero of them you'll remember.
 
 — two-punch —
-2a. AI's energy problem isn't a hardware problem. It's an architecture problem — and a decade-old idea the field threw away just cut consumption up to 100x.
-2b. For ten years "scale it up" beat "make it reason." Then a Tufts hybrid trained in 34 minutes what brute force needed 36+ hours to learn.
+2a. Clanker minted 21,870 tokens on Base in a single day. That's not an ecosystem, it's a confetti cannon.
+2b. Bankr's pitch: let an AI agent trade your wallet from a text message. Bankr's week: an attacker drained 14 wallets and trading got shut off.
 
 — paragraph —
-3a. US data centers burned 415 TWh last year — over 10% of national power — and the plan is to double it by 2030. Neuro-symbolic AI suggests the plan is wrong. Same tasks, up to 100x less energy, better accuracy. The grid problem was never inevitable.
-3b. A standard model spent 36+ hours learning a task by trial and error. A neuro-symbolic system learned it in 34 minutes — because the symbolic half could just rule out moves logic says can't work. Turns out "explore everything" was the expensive part.
+3a. 'Base season' isn't a season, it's a UX experiment. The bet is that people want AI agents holding their keys and trading on plain-English commands. Bankr just ran the experiment to its conclusion: 14 wallets drained, transactions frozen.
+3b. Every Base AI token sells the same dream: frictionless agents that act for you. Nobody prices the obvious risk — an agent that acts for you also acts for whoever compromises it. Bankr's $150K hack wasn't a bug. It was the feature, working.
 
 — long tweet —
-4a. The AI industry spent three years insisting the energy bill was the cost of progress. Then a Tufts team dusted off symbolic reasoning — abandoned a decade ago — bolted it onto a neural net, and watched energy use drop up to 100x. On unseen puzzle variants the hybrid scored 78%. The baseline scored 0. Not slower. Zero.
-4b. The numbers from Tufts: Tower of Hanoi 95% vs 34%. Unseen variants 78% vs 0%. Training 34 min vs 36+ hrs. Energy ~1% training, ~5% execution. The headline is the 100x cut — but the real story is efficiency and accuracy moved the same direction. No trade-off.
+4a. The numbers on Base look like a bull market: $12.6B TVL, Venice's VVV up 9x this year, Clanker pushing 21,870 token launches in a single day. The agentic-summer thesis is that AI agents become the primary users of the chain. Then Bankr, one of the marquee agents, got 14 wallets drained for ~$150K and had to disable transactions. The thesis and the failure mode are the same sentence: an agent with your keys does what it's told. The hard part was never the AI. It's who gets to give the orders.
+4b. Strip the branding off 'Base season' and here's the actual product: you hand an AI agent your wallet, and it executes trades from text commands on a social feed. When Bankr's broke, an attacker used the same interface to drain 14 wallets before anyone could react. It's a custody decision dressed up as an AI breakthrough.
 
 — thread opener —
-5a. The AI energy crisis is mostly a self-inflicted architecture choice. A Tufts hybrid just proved it — cutting power use up to 100x by adding the one thing the field spent a decade throwing away: logic.
-5b. What if the AI energy crisis isn't a law of physics but a habit? A Tufts team kept the neural net for perception, added a symbolic layer for reasoning, and cut energy use up to 100x — while accuracy went up, not down.
+5a. Base is having its 'agentic summer' — $12.6B TVL, AI agents that trade your wallet from a text message. One of the marquee agents, Bankr, just got 14 wallets drained. So here's the question nobody in the timeline wants: who actually holds your keys?
+5b. Most 'Base season' AI tokens are not AI companies. They're custody products with a chatbot bolted on, and almost none have priced the risk that bolting a chatbot to your keys creates. Bankr just showed the bill.
 
-best: #4a — sardonic framing carries the full arc and "Not slower. Zero." lands hardest
+best: #4a — full arc, hard data, and a landing that reframes the whole agentic narrative
