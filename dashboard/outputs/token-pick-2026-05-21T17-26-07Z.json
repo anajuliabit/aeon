@@ -1,0 +1,330 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-05-21"
+      },
+      "children": [
+        "token_section",
+        "sep1",
+        "market_section",
+        "sep2",
+        "footer_text"
+      ]
+    },
+    "token_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "token_title",
+        "signal_badge",
+        "price_stats",
+        "score_breakdown",
+        "catalyst_block",
+        "token_risk_block",
+        "recent_picks"
+      ]
+    },
+    "token_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Token: LIT",
+        "level": "h2"
+      }
+    },
+    "signal_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH signal 10/10",
+        "variant": "default"
+      }
+    },
+    "price_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "price_stat",
+        "mcap_stat",
+        "volume_stat",
+        "vol_ratio_stat"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$1.32",
+        "delta": "+8.0% 24h / +45.1% 7d",
+        "trend": "up"
+      }
+    },
+    "mcap_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$0.33B"
+      }
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$101M"
+      }
+    },
+    "vol_ratio_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol / MCap Ratio",
+        "value": "0.31"
+      }
+    },
+    "score_breakdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "score_progress",
+        "score_details"
+      ]
+    },
+    "score_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 10,
+        "max": 10,
+        "label": "Signal Score"
+      }
+    },
+    "score_details": {
+      "type": "Text",
+      "props": {
+        "text": "Components: trending +2, vol/mcap 0.31 +3, RS vs BTC&ETH +2, momentum 24h/7d/both>5% +4 (total 11, capped at 10/10)",
+        "variant": "caption"
+      }
+    },
+    "catalyst_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "catalyst_title",
+        "catalyst_text"
+      ]
+    },
+    "catalyst_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h4"
+      }
+    },
+    "catalyst_text": {
+      "type": "Text",
+      "props": {
+        "text": "Vitalik referenced Lighter at a May 18 fireside chat; the perp DEX also launched a synthetic SpaceX pre-IPO market and a Tealstreet integration — three speculation triggers in one week.",
+        "variant": "body"
+      }
+    },
+    "token_risk_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "token_risk_title",
+        "token_risk_text"
+      ]
+    },
+    "token_risk_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk (Token)",
+        "level": "h4"
+      }
+    },
+    "token_risk_text": {
+      "type": "Text",
+      "props": {
+        "text": "Rally is narrative-driven off a one-off Vitalik mention; +45% in 7d with the token still -84% from ATH means a sharp mean-reversion is likely once SpaceX-perp hype cools.",
+        "variant": "body"
+      }
+    },
+    "recent_picks": {
+      "type": "Text",
+      "props": {
+        "text": "Vs recent picks: first pick — no prior Token Pick history.",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "market_title",
+        "edge_badge",
+        "market_odds",
+        "market_stats",
+        "thesis_block",
+        "market_risk_block",
+        "sources"
+      ]
+    },
+    "market_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Market: MicroStrategy sells any Bitcoin by May 31, 2026?",
+        "level": "h2"
+      }
+    },
+    "edge_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM edge ~9pp",
+        "variant": "secondary"
+      }
+    },
+    "market_odds": {
+      "type": "Text",
+      "props": {
+        "text": "Current: YES 17c / NO 84c",
+        "variant": "lead"
+      }
+    },
+    "market_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "market_vol_stat",
+        "fair_yes_progress",
+        "resolve_date"
+      ]
+    },
+    "market_vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$209k"
+      }
+    },
+    "fair_yes_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 7,
+        "max": 100,
+        "label": "Fair YES Probability"
+      }
+    },
+    "resolve_date": {
+      "type": "Text",
+      "props": {
+        "text": "Resolves: ~Jun 1, 2026",
+        "variant": "caption"
+      }
+    },
+    "thesis_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "thesis_title",
+        "thesis_text",
+        "thesis_inputs"
+      ]
+    },
+    "thesis_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Thesis",
+        "level": "h4"
+      }
+    },
+    "thesis_text": {
+      "type": "Text",
+      "props": {
+        "text": "Headline rhetoric overprices an imminent disclosed sale; operationally they remain net buyers and the window is only 10 days — lean NO at 84c.",
+        "variant": "body"
+      }
+    },
+    "thesis_inputs": {
+      "type": "Text",
+      "props": {
+        "text": "Supporting: Saylor May 8 called sell-talk a tactic to \"jam short-sellers\"; May 11 called dividend-funding sales \"a big nothing burger\"; Strategy bought 535 BTC / $43M days after the comments.",
+        "variant": "caption"
+      }
+    },
+    "market_risk_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "market_risk_title",
+        "market_risk_text"
+      ]
+    },
+    "market_risk_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk (Market)",
+        "level": "h4"
+      }
+    },
+    "market_risk_text": {
+      "type": "Text",
+      "props": {
+        "text": "Saylor did say they will \"probably sell some bitcoin to pay a dividend\" — if an STRC preferred dividend date lands before May 31 and is funded by a disclosed sale, it resolves YES.",
+        "variant": "body"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: cg=ok, dex=ok, poly=ok",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "not financial advice — pattern-matching only",
+        "variant": "muted"
+      }
+    }
+  }
+}
