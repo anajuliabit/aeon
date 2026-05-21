@@ -1,5 +1,5 @@
 ---
-datanet_id: "REPLACE_WITH_MAINNET_TRADINGGYMAI_DATANET_ID"
+datanet_id: "9"
 agent: reppo-trading-agent
 mint_cap: 1
 vote_cap: 3

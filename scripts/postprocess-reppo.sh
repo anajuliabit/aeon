@@ -48,22 +48,23 @@ mkdir -p .outputs .reppo-cache
 # Build the CLI argument list for an intent file. Args: file. Echoes args.
 # Returns 1 if the command is unknown or any field is malformed. Validating
 # fields here keeps the later unquoted `$args` expansion safe (every word is
-# then a controlled flag, a 0x-hex string, or a positive integer — no spaces).
+# then a controlled flag, an id token, or a positive integer — no spaces).
+# `id` accepts Reppo's integer datanet/pod ids as well as hex/hyphenated ids.
 build_args() {
-  local f="$1" cmd hex='^0x[0-9a-fA-F]+$'
+  local f="$1" cmd id='^[A-Za-z0-9_-]+$'
   cmd="$(jq -r '.cmd' "$f")"
   case "$cmd" in
     mint-pod)
       local datanet
       datanet="$(jq -r '.datanet' "$f")"
-      [[ "$datanet" =~ $hex ]] || return 1
+      [[ "$datanet" =~ $id ]] || return 1
       printf 'mint-pod --datanet %s' "$datanet" ;;
     vote)
       local pod dir votes flag
       pod="$(jq -r '.pod' "$f")"
       dir="$(jq -r '.direction' "$f")"
       votes="$(jq -r '.votes // 1' "$f")"
-      [[ "$pod" =~ $hex ]] || return 1
+      [[ "$pod" =~ $id ]] || return 1
       [[ "$votes" =~ ^[1-9][0-9]*$ ]] || return 1
       case "$dir" in
         like) flag="--like" ;;

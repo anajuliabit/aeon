@@ -50,8 +50,8 @@ does not exist, then write `.pending-reppo/mint-<first16ofhash>.json`:
   "idempotency_key": "<full sha256 hash>",
   "strategy_summary": "<one-line description, with source URL>" }
 ```
-`<datanet_id>` is the rubric's `datanet_id` value verbatim — it must be a
-`0x`-prefixed hex address.
+`<datanet_id>` is the rubric's `datanet_id` value verbatim (as-is, whatever
+format it is — e.g. an integer id).
 
 ## Step 5 — Select pods to vote on
 Read `.reppo-cache/pods-tradinggymai.json`. If it is an error marker
@@ -65,8 +65,8 @@ YES/NO criteria. Cast at most `vote_cap` votes total. For each, write
   "votes": 1, "idempotency_key": "vote-<podId>-<direction>",
   "reason": "<one-line reason>" }
 ```
-`<podId>` is the pod's on-chain hex id (the `0x...` value from the cache
-file) — use it for both the filename and the `pod` field. Set `direction`
+`<podId>` is the pod's id exactly as it appears in the cache file (use it
+verbatim, whatever format) — for both the filename and the `pod` field. Set `direction`
 to exactly `like` (a YES vote) or exactly `dislike` (a NO vote) — no other
 value is accepted; anything else is silently rejected downstream.
 
