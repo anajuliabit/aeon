@@ -1,0 +1,23 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "article"
+      },
+      "children": [
+        "story_link"
+      ]
+    },
+    "story_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The 100x Fix: Why Neuro-Symbolic AI Could Defuse the Energy Crisis It Created",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/2026-05-21.md"
+      },
+      "children": []
+    }
+  }
+}

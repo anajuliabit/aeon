@@ -7,6 +7,7 @@
 ## Recent Articles
 | Date | Title | Topic |
 |------|-------|-------|
+| 2026-05-21 | The 100x Fix: Why Neuro-Symbolic AI Could Defuse the Energy Crisis It Created | AI / neuro-symbolic AI energy efficiency |
 
 ## Recent Digests
 | Date | Type | Key Topics |
