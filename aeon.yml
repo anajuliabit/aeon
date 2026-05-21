@@ -107,7 +107,7 @@ skills:
   create-skill: { enabled: false, schedule: "workflow_dispatch", var: "" } # one-shot skill creator — set var to a description prompt
 
   # --- X / social (5 PM UTC) ---
-  fetch-tweets: { enabled: false, schedule: "0 17 * * *" }
+  fetch-tweets: { enabled: false, schedule: "0 17 * * *", var: "@moonwell OR @reppo OR @sherwoodagent OR $WOOD OR mamo" }
   refresh-x: { enabled: false, schedule: "0 17 * * *" }
   list-digest: { enabled: false, schedule: "0 17 * * *" }
   write-tweet: { enabled: false, schedule: "0 17 * * *" }
