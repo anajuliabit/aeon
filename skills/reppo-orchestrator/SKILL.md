@@ -57,3 +57,15 @@ If the catalog was unavailable, still emit the plan from rubric files and
 note `catalog unavailable — discovery skipped` in your prose.
 
 Keep prose brief — a few sentences plus the fenced block.
+
+### 4. Log the run
+Append one line to `memory/logs/${today}.md` under a `### reppo-orchestrator`
+heading: how many agents are RUN vs SKIP, how many new datanets were
+discovered, and whether the catalog was available.
+
+## Sandbox note
+This skill reads only local files (`.reppo-cache/`, `configs/datanets/`,
+`memory/`) and writes only its text output. It makes no outbound network
+calls — the Reppo CLI reads it depends on are performed by
+`scripts/prefetch-reppo.sh` before this skill runs. No curl/WebFetch
+fallback is needed.
