@@ -2,16 +2,14 @@ HEARTBEAT_OK · STATUS_PAGE=OK
 
 ## Summary
 
-Ran the heartbeat ambient check — everything is green, no notification sent.
+Ran the heartbeat skill — all checks green, no notification needed.
 
-**Checks (all clear):**
-- **P0** — No failed or stuck skills. `cron-state.json` has 3 entries (article, defi-overview, competitor-launch-radar), all `last_status: success` with 0 consecutive failures. `article` shows 50% success rate but only 2 total runs (below the 5-run chronic-failure threshold), so no flag.
-- **P1** — No open PRs, no open issues.
-- **P2** — No flagged memory items needing follow-up.
-- **P3** — Only `heartbeat` is enabled in `aeon.yml`; its first dispatch is in progress (no state entry yet — expected).
+- **P0 (failed/stuck skills):** All 9 entries in `cron-state.json` show `last_status: success`, 0 consecutive failures. `article` has a 50% success rate but only 2 runs (<5), so no chronic flag. Heartbeat self-check OK.
+- **P1 (stalled PRs / urgent issues):** PR #2 ("feat: Reppo agent swarm") is only ~2.5h old — not stalled. No open issues.
+- **P2/P3:** No flagged memory items; only heartbeat is enabled and it has a recent successful run.
 
 **Files modified:**
-- `docs/status.md` — regenerated public status page: Overall 🟢 OK, 4-skill health table, Token pulse section omitted (no `token-report` article exists).
-- `memory/logs/2026-05-21.md` — appended heartbeat log entry.
+- `docs/status.md` — regenerated public status page (Overall: 🟢 OK, 9 skills in health table, Token pulse omitted — no `token-report-*.md` exists)
+- `memory/logs/2026-05-21.md` — appended heartbeat log entry
 
-**Follow-up:** None. The status page auto-commits to `main` via the workflow step.
+**Follow-up:** None required.
