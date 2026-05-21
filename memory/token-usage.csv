@@ -11,4 +11,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-21,heartbeat,claude-opus-4-7,1330,5518,305828,55507
 2026-05-21,write-tweet,claude-opus-4-7,17,8531,316943,48960
 2026-05-21,reppo-digest,claude-opus-4-7,33,11681,776002,40104
-2026-05-21,write-tweet,claude-opus-4-7,1777,15904,287918,68611
+2026-05-21,narrative-tracker,claude-opus-4-7,1226,9832,393085,65849

@@ -1,0 +1,573 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-05-21",
+        "description": "Baseline run — no prior tracker log to diff. Fresh metas + positioning."
+      },
+      "children": [
+        "stack_sections"
+      ]
+    },
+    "stack_sections": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_fresh_metas",
+        "sep_1",
+        "section_reflexivity",
+        "sep_2",
+        "section_positions",
+        "sep_3",
+        "section_map"
+      ]
+    },
+    "section_fresh_metas": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fresh_metas",
+        "item_fresh_1",
+        "item_fresh_2"
+      ]
+    },
+    "heading_fresh_metas": {
+      "type": "Heading",
+      "props": {
+        "text": "FRESH METAS",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item_fresh_1": {
+      "type": "Text",
+      "props": {
+        "text": "AI-agent payments went infra: AWS Bedrock AgentCore Payments shipped this week, Coinbase+Stripe supplying wallet rails. Narrative crossed from speculation to plumbing.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item_fresh_2": {
+      "type": "Text",
+      "props": {
+        "text": "Quantum-backed NFTs (Quip \"Quantum Echoes\") — fringe, single driver, watch-only.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_reflexivity": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_reflexivity",
+        "alert_reflexivity",
+        "item_refl_1",
+        "item_refl_2",
+        "item_refl_3"
+      ]
+    },
+    "heading_reflexivity": {
+      "type": "Heading",
+      "props": {
+        "text": "REFLEXIVITY ALERT",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "alert_reflexivity": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Market reflexivity detected: price IS the story, not fundamentals"
+      },
+      "children": []
+    },
+    "item_refl_1": {
+      "type": "Text",
+      "props": {
+        "text": "AI-agent tokens — PHALA +30.6% 1d / +102.9% 7d on the category narrative + a Musk AGI tweet, no fundamentals shift. The price IS the story.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item_refl_2": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid FDV surpassed Solana's — repricing on attention, not cash flows. \"Blue chips are dead\" takes are classic local-top energy.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item_refl_3": {
+      "type": "Text",
+      "props": {
+        "text": "Solana's own account is the top driver of its \"invisible underlayer / memecoin collectivism\" meta — project manufacturing its own narrative.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_positions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_positions",
+        "pos_1",
+        "pos_2",
+        "pos_3",
+        "pos_4",
+        "pos_5",
+        "pos_6"
+      ]
+    },
+    "heading_positions": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "pos_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_1_header",
+        "pos_1_text"
+      ]
+    },
+    "pos_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_ride_1",
+        "badge_bull_1"
+      ]
+    },
+    "badge_ride_1": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_bull_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Bull",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "pos_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "Agent-payment infra (mindshare 5 ↑↑) — AWS, Coinbase/@brian_armstrong, Stripe — bear: most \"agent\" volume is test txs, real flows unproven",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "pos_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_2_header",
+        "pos_2_text"
+      ]
+    },
+    "pos_2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_ride_2",
+        "badge_bull_2"
+      ]
+    },
+    "badge_ride_2": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_bull_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Bull",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "pos_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "Stablecoin payment rails (4 ↑) — Japan FSA recognizes foreign stablecoins Jun 1, @WatcherGuru — bear: legal recognition ≠ volume",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "pos_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_3_header",
+        "pos_3_text"
+      ]
+    },
+    "pos_3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_fade_1",
+        "badge_cope_1"
+      ]
+    },
+    "badge_fade_1": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_cope_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Cope",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "pos_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "AI-agent token basket (4 ↑↑) — PHALA et al — reflexive pump on narrative + Musk tweet, no flows",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "pos_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_4_header",
+        "pos_4_text"
+      ]
+    },
+    "pos_4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_fade_2",
+        "badge_cope_2"
+      ]
+    },
+    "badge_fade_2": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_cope_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Cope",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "pos_4_text": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid / perp-DEX outperformance (4 ↑) — @Kalshi_Crypto — +100% YTD, FDV now > SOL = late & reflexive",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "pos_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_5_header",
+        "pos_5_text"
+      ]
+    },
+    "pos_5_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_watch_1",
+        "badge_mixed_1"
+      ]
+    },
+    "badge_watch_1": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_mixed_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "pos_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "Institutional BTC treasuries (4 →) — SpaceX 18.7k BTC, Strategy — consensus, no contrarian edge",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "pos_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_6_header",
+        "pos_6_text"
+      ]
+    },
+    "pos_6_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_watch_2",
+        "badge_cope_3"
+      ]
+    },
+    "badge_watch_2": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_cope_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Cope",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "pos_6_text": {
+      "type": "Text",
+      "props": {
+        "text": "Solana underlayer/memecoin meta (3 →) — @solana self-promo, SOL underperforming",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_map": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_map",
+        "map_emerging",
+        "map_rising",
+        "map_peak",
+        "map_fading"
+      ]
+    },
+    "heading_map": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "map_emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "map_emerging_badge",
+        "map_emerging_text"
+      ]
+    },
+    "map_emerging_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Emerging",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "map_emerging_text": {
+      "type": "Text",
+      "props": {
+        "text": "quantum-NFTs",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "map_rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "map_rising_badge",
+        "map_rising_text"
+      ]
+    },
+    "map_rising_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Rising",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "map_rising_text": {
+      "type": "Text",
+      "props": {
+        "text": "agent-payment infra, stablecoin rails",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "map_peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "map_peak_badge",
+        "map_peak_text"
+      ]
+    },
+    "map_peak_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Peak",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "map_peak_text": {
+      "type": "Text",
+      "props": {
+        "text": "institutional BTC, Hyperliquid/perps, Solana underlayer",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "map_fading": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "map_fading_badge",
+        "map_fading_text"
+      ]
+    },
+    "map_fading_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Fading",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "map_fading_text": {
+      "type": "Text",
+      "props": {
+        "text": "—",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
