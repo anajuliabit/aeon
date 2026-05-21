@@ -40,9 +40,13 @@ curl -s -X POST "https://api.x.ai/v1/responses" \
 If `${var}` is set, also issue a second call constrained to that topic with the same return schema; merge results.
 
 **Fallback chain** (fire in order, stop at first success):
-1. curl to X.AI as above.
-2. WebFetch the same X.AI endpoint (bypasses sandbox env-var blocking for some requests).
-3. WebSearch with a forced-fresh query: `"AI agents twitter today ${today}"` — discard anything >48h old, expect degraded metadata.
+1. **Pre-fetched cache (preferred)** — if `.xai-cache/agent-buzz.json` exists and is non-empty, read candidates from it. `scripts/prefetch-xai.sh` populates this before the skill runs:
+   ```bash
+   cat .xai-cache/agent-buzz.json 2>/dev/null | jq -r '.output[] | select(.type == "message") | .content[] | select(.type == "output_text") | .text'
+   ```
+2. curl to X.AI as above.
+3. WebFetch the same X.AI endpoint (bypasses sandbox env-var blocking for some requests).
+4. WebSearch with a forced-fresh query: `"AI agents twitter today ${today}"` — discard anything >48h old, expect degraded metadata.
 
 Record which source succeeded — you will print it in the output footer.
 
