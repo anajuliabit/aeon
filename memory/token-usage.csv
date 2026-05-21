@@ -4,3 +4,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-21,competitor-launch-radar,claude-opus-4-7,81,47572,2604338,89957
 2026-05-21,heartbeat,claude-opus-4-7,17,6048,339229,51868
 2026-05-21,token-pick,claude-opus-4-7,71,19509,1554418,70975
+2026-05-21,fetch-tweets,claude-opus-4-7,13,3671,218775,21803
