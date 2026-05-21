@@ -1,16 +1,18 @@
-## Summary
+*Competitor Launch Radar — 2026-05-21*
 
-The skill aborted at step 1 (var parse). The supplied variable `var=sherwood.sh` is neither empty nor `dry-run` — the only two values the skill accepts. Per the skill's own rule, anything else triggers an immediate `BAD_VAR` exit.
+12 new agent-framework entrants this week (top 8 below):
 
-**Outcome:**
-- No Product Hunt / HN fetch
-- No article written
-- No state mutation (`memory/topics/competitor-launch-radar-state.json` untouched)
-- No notification sent
-- Log entry appended to `memory/logs/2026-05-21.md`
+• [product] Show HN: Forge — ★ 659 (HN) — https://news.ycombinator.com/item?id=48192383
+• [product] Agora-1: The Multi-Agent World Model — ★ 128 (HN) — https://news.ycombinator.com/item?id=48183748
+• [product] Open-Source Agentic QA Harness with Memory — ★ 17 (HN) — https://news.ycombinator.com/item?id=48205901
+• [product] Tycoon AI — ★ n/a (PH) — https://www.producthunt.com/products/tycoon-us
+• [product] Slideshot — ★ n/a (PH) — https://www.producthunt.com/products/slideshot
+• [product] InstaVM — ★ n/a (PH) — https://www.producthunt.com/products/instavm
+• [product] Google Antigravity 2.0 — ★ n/a (PH) — https://www.producthunt.com/products/google-antigravity
+• [product] Owlish — ★ n/a (PH) — https://www.producthunt.com/products/owlish
 
-**Files modified:** `memory/logs/2026-05-21.md` (one log block recording the aborted run)
+... and 4 more.
 
-**Follow-up:** Re-run with `var=` (empty, for a normal run) or `var=dry-run` (full run, no notify) to get an actual radar scan.
+Every entrant this week classified `product` — no new framework or MCP-server competitors cleared the filters.
 
-Status: COMPETITOR_LAUNCH_RADAR_BAD_VAR
+Full digest: articles/competitor-launch-radar-2026-05-21.md

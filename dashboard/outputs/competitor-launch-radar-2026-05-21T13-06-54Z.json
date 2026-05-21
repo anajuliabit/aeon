@@ -1,0 +1,169 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Competitor Launch Radar"
+      },
+      "children": [
+        "heading-date",
+        "text-intro",
+        "stack-products",
+        "text-more",
+        "separator-1",
+        "text-classification",
+        "separator-2",
+        "link-digest"
+      ]
+    },
+    "heading-date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-21",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "12 new agent-framework entrants this week (top 8 below):",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stack-products": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link-1",
+        "link-2",
+        "link-3",
+        "link-4",
+        "link-5",
+        "link-6",
+        "link-7",
+        "link-8"
+      ]
+    },
+    "link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Show HN: Forge",
+        "href": "https://news.ycombinator.com/item?id=48192383",
+        "source": "HN",
+        "score": "659"
+      },
+      "children": []
+    },
+    "link-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Agora-1: The Multi-Agent World Model",
+        "href": "https://news.ycombinator.com/item?id=48183748",
+        "source": "HN",
+        "score": "128"
+      },
+      "children": []
+    },
+    "link-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Open-Source Agentic QA Harness with Memory",
+        "href": "https://news.ycombinator.com/item?id=48205901",
+        "source": "HN",
+        "score": "17"
+      },
+      "children": []
+    },
+    "link-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Tycoon AI",
+        "href": "https://www.producthunt.com/products/tycoon-us",
+        "source": "PH"
+      },
+      "children": []
+    },
+    "link-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Slideshot",
+        "href": "https://www.producthunt.com/products/slideshot",
+        "source": "PH"
+      },
+      "children": []
+    },
+    "link-6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "InstaVM",
+        "href": "https://www.producthunt.com/products/instavm",
+        "source": "PH"
+      },
+      "children": []
+    },
+    "link-7": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Google Antigravity 2.0",
+        "href": "https://www.producthunt.com/products/google-antigravity",
+        "source": "PH"
+      },
+      "children": []
+    },
+    "link-8": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Owlish",
+        "href": "https://www.producthunt.com/products/owlish",
+        "source": "PH"
+      },
+      "children": []
+    },
+    "text-more": {
+      "type": "Text",
+      "props": {
+        "text": "... and 4 more.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-classification": {
+      "type": "Text",
+      "props": {
+        "text": "Every entrant this week classified `product` — no new framework or MCP-server competitors cleared the filters.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link-digest": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full digest",
+        "href": "articles/competitor-launch-radar-2026-05-21.md",
+        "source": "Local"
+      },
+      "children": []
+    }
+  }
+}

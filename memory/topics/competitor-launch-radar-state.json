@@ -1,0 +1,114 @@
+{
+  "last_run": "2026-05-21",
+  "last_status": "COMPETITOR_LAUNCH_RADAR_OK",
+  "announced": [
+    {
+      "id": "hn:48192383",
+      "name": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+      "url": "https://news.ycombinator.com/item?id=48192383",
+      "class": "product",
+      "score": 659,
+      "source": "hackernews",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "hn:48183748",
+      "name": "Agora-1: The Multi-Agent World Model",
+      "url": "https://news.ycombinator.com/item?id=48183748",
+      "class": "product",
+      "score": 128,
+      "source": "hackernews",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "hn:48205901",
+      "name": "Show HN: Open-Source Agentic QA Harness with Memory",
+      "url": "https://news.ycombinator.com/item?id=48205901",
+      "class": "product",
+      "score": 17,
+      "source": "hackernews",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "ph:tycoon-us",
+      "name": "Tycoon AI",
+      "url": "https://www.producthunt.com/products/tycoon-us",
+      "class": "product",
+      "score": null,
+      "source": "producthunt",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "ph:slideshot",
+      "name": "Slideshot",
+      "url": "https://www.producthunt.com/products/slideshot",
+      "class": "product",
+      "score": null,
+      "source": "producthunt",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "ph:instavm",
+      "name": "InstaVM",
+      "url": "https://www.producthunt.com/products/instavm",
+      "class": "product",
+      "score": null,
+      "source": "producthunt",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "ph:google-antigravity",
+      "name": "Google Antigravity 2.0",
+      "url": "https://www.producthunt.com/products/google-antigravity",
+      "class": "product",
+      "score": null,
+      "source": "producthunt",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "ph:owlish",
+      "name": "Owlish",
+      "url": "https://www.producthunt.com/products/owlish",
+      "class": "product",
+      "score": null,
+      "source": "producthunt",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "ph:viberia",
+      "name": "Viberia",
+      "url": "https://www.producthunt.com/products/viberia",
+      "class": "product",
+      "score": null,
+      "source": "producthunt",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "ph:odyssey-5",
+      "name": "Agora-1 by Odyssey",
+      "url": "https://www.producthunt.com/products/odyssey-5",
+      "class": "product",
+      "score": null,
+      "source": "producthunt",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "ph:cli-market",
+      "name": "CLI Market",
+      "url": "https://www.producthunt.com/products/cli-market",
+      "class": "product",
+      "score": null,
+      "source": "producthunt",
+      "announced_at": "2026-05-21"
+    },
+    {
+      "id": "ph:re_gent",
+      "name": "Re_gent",
+      "url": "https://www.producthunt.com/products/re_gent",
+      "class": "product",
+      "score": null,
+      "source": "producthunt",
+      "announced_at": "2026-05-21"
+    }
+  ]
+}
