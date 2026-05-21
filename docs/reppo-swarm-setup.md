@@ -34,3 +34,13 @@ mainnet TradingGymAI datanet id, and tune the Goal / criteria / caps.
   and vote by hand against the rubric.
 - **Phase 2 — ramp.** Raise the caps in `configs/datanets/tradinggymai.md`
   once the digest shows consistently rubric-aligned behavior.
+
+## Known limitations
+- The `memory/topics/reppo.md` ledger row for a mint is written by the
+  digest step. If the digest step fails after a mint already landed
+  on-chain, the ledger will miss that row and the trading agent may
+  re-select the same strategy on the next run. A duplicate on-chain mint
+  is still prevented — the mint idempotency key is derived from the
+  strategy content (`sha256(datanet_id + ":" + normalized_text)`), so the
+  Reppo CLI no-ops the repeat. Watch the digest for repeated mint attempts
+  of the same strategy as a signal that a prior digest run failed.

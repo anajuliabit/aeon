@@ -10,6 +10,13 @@
 
 **Design reference:** `docs/superpowers/specs/2026-05-21-reppo-swarm-slice-design.md`
 
+> **Note:** This plan was executed via subagent-driven development. Per-task
+> and a final whole-system code review surfaced fixes that were applied on
+> top of the task commits (intent-field validation, Sandbox-note/run-log
+> conventions, vote-key direction binding, intent-file cleanup, prefetch
+> error markers). The shipped code on branch `reppo-swarm-design` is
+> authoritative where it diverges from the verbatim blocks below.
+
 **Testing note:** Aeon has no automated test framework, and skill files are LLM prompts (not unit-testable). Verification in this plan is genuine but pragmatic: bash scripts are run against synthetic fixtures with output assertions; skill files are checked structurally (frontmatter + required sections) and validated end-to-end by the Phase 0 dry-run-only soak. Do not introduce a test framework — it would break the established codebase pattern.
 
 ---
