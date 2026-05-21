@@ -314,18 +314,31 @@ mkdir -p .outputs .reppo-cache
 } >> "$RESULTS_FILE"
 
 # Build the CLI argument list for an intent file. Args: file. Echoes args.
+# Returns 1 if the command is unknown or any field is malformed. Validating
+# fields here keeps the later unquoted `$args` expansion safe (every word is
+# then a controlled flag, a 0x-hex string, or a positive integer — no spaces).
 build_args() {
-  local f="$1" cmd
+  local f="$1" cmd hex='^0x[0-9a-fA-F]+$'
   cmd="$(jq -r '.cmd' "$f")"
   case "$cmd" in
     mint-pod)
-      printf 'mint-pod --datanet %s' "$(jq -r '.datanet' "$f")" ;;
+      local datanet
+      datanet="$(jq -r '.datanet' "$f")"
+      [[ "$datanet" =~ $hex ]] || return 1
+      printf 'mint-pod --datanet %s' "$datanet" ;;
     vote)
-      local dir flag
+      local pod dir votes flag
+      pod="$(jq -r '.pod' "$f")"
       dir="$(jq -r '.direction' "$f")"
-      [ "$dir" = "dislike" ] && flag="--dislike" || flag="--like"
-      printf 'vote --pod %s --votes %s %s' \
-        "$(jq -r '.pod' "$f")" "$(jq -r '.votes // 1' "$f")" "$flag" ;;
+      votes="$(jq -r '.votes // 1' "$f")"
+      [[ "$pod" =~ $hex ]] || return 1
+      [[ "$votes" =~ ^[1-9][0-9]*$ ]] || return 1
+      case "$dir" in
+        like) flag="--like" ;;
+        dislike) flag="--dislike" ;;
+        *) return 1 ;;
+      esac
+      printf 'vote --pod %s --votes %s %s' "$pod" "$votes" "$flag" ;;
     *) return 1 ;;
   esac
 }
@@ -339,7 +352,7 @@ for intent in "$PENDING_DIR"/*.json; do
     continue
   fi
   args="$(build_args "$intent")" || {
-    echo "- \`$base\` — **skipped**: unknown cmd" >> "$RESULTS_FILE"
+    echo "- \`$base\` — **skipped**: unknown command or invalid fields" >> "$RESULTS_FILE"
     continue
   }
 
@@ -392,15 +405,25 @@ Expected: prints `reppo-postprocess: REPPO_PRIVATE_KEY not set, skipping all wri
 
 - [ ] **Step 5: Verify build_args logic**
 
-Run:
+Run (valid vote intent — pod id must be a real `0x` hex string):
 ```bash
 bash -c '
   source <(sed -n "/^build_args()/,/^}/p" scripts/postprocess-reppo.sh)
-  echo "{\"cmd\":\"vote\",\"pod\":\"0xPOD\",\"direction\":\"dislike\",\"votes\":2}" > /tmp/i.json
+  echo "{\"cmd\":\"vote\",\"pod\":\"0xabc123\",\"direction\":\"dislike\",\"votes\":2}" > /tmp/i.json
   build_args /tmp/i.json
 '
 ```
-Expected output: `vote --pod 0xPOD --votes 2 --dislike`
+Expected output: `vote --pod 0xabc123 --votes 2 --dislike`
+
+Then verify an invalid `direction` is REJECTED (not silently coerced to `--like`):
+```bash
+bash -c '
+  source <(sed -n "/^build_args()/,/^}/p" scripts/postprocess-reppo.sh)
+  echo "{\"cmd\":\"vote\",\"pod\":\"0xabc123\",\"direction\":\"abstain\",\"votes\":1}" > /tmp/i.json
+  build_args /tmp/i.json && echo "FAIL: should have rejected" || echo "REJECTED OK"
+'
+```
+Expected output: `REJECTED OK`
 
 - [ ] **Step 6: Clean up fixtures and commit**
 
