@@ -1,0 +1,86 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-05-21"
+      },
+      "children": [
+        "alert_main",
+        "separator_1",
+        "stack_details"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "All sources failed",
+        "type": "error"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_xai",
+        "text_webfetch",
+        "text_websearch",
+        "separator_2",
+        "text_result",
+        "text_issue"
+      ]
+    },
+    "text_xai": {
+      "type": "Text",
+      "props": {
+        "text": "X.AI x_search blocked (sandbox can't run authed curl; no prefetch cache for this skill)",
+        "variant": "body"
+      }
+    },
+    "text_webfetch": {
+      "type": "Text",
+      "props": {
+        "text": "WebFetch can't issue an authenticated POST",
+        "variant": "body"
+      }
+    },
+    "text_websearch": {
+      "type": "Text",
+      "props": {
+        "text": "WebSearch fallback returned only news articles and stale (>48h) tweets — no fresh, datable AI-agent tweets with engagement metrics to curate",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_result": {
+      "type": "Text",
+      "props": {
+        "text": "No digest today",
+        "variant": "lead"
+      }
+    },
+    "text_issue": {
+      "type": "Text",
+      "props": {
+        "text": "Filed ISS-001 to add an agent-buzz prefetch case",
+        "variant": "muted"
+      }
+    }
+  }
+}
