@@ -1,0 +1,256 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo Swarm Digest"
+      },
+      "children": [
+        "heading_date",
+        "sep1",
+        "section_orchestrator",
+        "sep2",
+        "section_datanets",
+        "sep3",
+        "section_agent_queue",
+        "sep4",
+        "section_chain",
+        "sep5",
+        "section_onchain"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-05-22",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_orchestrator": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_orchestrator",
+        "text_orchestrator",
+        "badge_datanet9"
+      ]
+    },
+    "heading_orchestrator": {
+      "type": "Heading",
+      "props": {
+        "text": "Orchestrator Status",
+        "level": "h3"
+      }
+    },
+    "text_orchestrator": {
+      "type": "Text",
+      "props": {
+        "text": "Green-lit the trading agent for datanet 9"
+      }
+    },
+    "badge_datanet9": {
+      "type": "Badge",
+      "props": {
+        "text": "TradingGym AI — active & valid",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_datanets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_datanets",
+        "text_datanets"
+      ]
+    },
+    "heading_datanets": {
+      "type": "Heading",
+      "props": {
+        "text": "Unassigned Datanets",
+        "level": "h3"
+      }
+    },
+    "text_datanets": {
+      "type": "Text",
+      "props": {
+        "text": "14 unassigned datanets flagged with no rubric"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_agent_queue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_queue",
+        "text_queue_intro",
+        "mint_item",
+        "votes_item"
+      ]
+    },
+    "heading_queue": {
+      "type": "Heading",
+      "props": {
+        "text": "Trading Agent Queue",
+        "level": "h3"
+      }
+    },
+    "text_queue_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Queued intents waiting for chain submission:"
+      }
+    },
+    "mint_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_mint",
+        "text_mint"
+      ]
+    },
+    "badge_mint": {
+      "type": "Badge",
+      "props": {
+        "text": "1 mint",
+        "variant": "default"
+      }
+    },
+    "text_mint": {
+      "type": "Text",
+      "props": {
+        "text": "RSI(14) crossover, BTC/USDT 4h swing"
+      }
+    },
+    "votes_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_votes",
+        "text_votes"
+      ]
+    },
+    "badge_votes": {
+      "type": "Badge",
+      "props": {
+        "text": "3 votes",
+        "variant": "default"
+      }
+    },
+    "text_votes": {
+      "type": "Text",
+      "props": {
+        "text": "Like pod 257; dislike pods 300 & 46"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_chain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_chain",
+        "alert_chain"
+      ]
+    },
+    "heading_chain": {
+      "type": "Heading",
+      "props": {
+        "text": "Chain Submission Status",
+        "level": "h3"
+      }
+    },
+    "alert_chain": {
+      "type": "Alert",
+      "props": {
+        "title": "Nothing reached the chain",
+        "message": "Postprocess skipped all 4 intents because REPPO_PRIVATE_KEY is unset",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_onchain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_onchain",
+        "text_onchain_intro",
+        "stat_mints",
+        "stat_votes",
+        "stat_failures"
+      ]
+    },
+    "heading_onchain": {
+      "type": "Heading",
+      "props": {
+        "text": "On-Chain Confirmation",
+        "level": "h3"
+      }
+    },
+    "text_onchain_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Confirmed on-chain results:"
+      }
+    },
+    "stat_mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints",
+        "value": "0"
+      }
+    },
+    "stat_votes": {
+      "type": "Stat",
+      "props": {
+        "label": "Votes",
+        "value": "0"
+      }
+    },
+    "stat_failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Failures",
+        "value": "0"
+      }
+    }
+  }
+}
