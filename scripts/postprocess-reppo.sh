@@ -103,7 +103,10 @@ for intent in "$PENDING_DIR"/*.json; do
   if ! REPPO_NETWORK=mainnet reppo $args --idempotency-key "$key" --dry-run --json \
        > ".reppo-cache/dryrun-$base" 2>&1; then
     code="$(jq -r '.code // "UNKNOWN"' ".reppo-cache/dryrun-$base" 2>/dev/null || echo UNKNOWN)"
+    detail="$(tr -s '[:space:]' ' ' < ".reppo-cache/dryrun-$base" 2>/dev/null | cut -c1-300 || true)"
     echo "- \`$base\` — **dry-run failed** (code: $code), real write skipped" >> "$RESULTS_FILE"
+    echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
+    echo "reppo-postprocess: dry-run failed for $base: ${detail:-<empty>}" >&2
     rm -f "$intent"
     continue
   fi
@@ -122,7 +125,10 @@ for intent in "$PENDING_DIR"/*.json; do
     echo "- \`$base\` — **success** (tx: $tx)" >> "$RESULTS_FILE"
   else
     code="$(jq -r '.code // "UNKNOWN"' ".reppo-cache/result-$base" 2>/dev/null || echo UNKNOWN)"
+    detail="$(tr -s '[:space:]' ' ' < ".reppo-cache/result-$base" 2>/dev/null | cut -c1-300 || true)"
     echo "- \`$base\` — **write failed** (code: $code)" >> "$RESULTS_FILE"
+    echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
+    echo "reppo-postprocess: write failed for $base: ${detail:-<empty>}" >&2
   fi
   rm -f "$intent"
 done
