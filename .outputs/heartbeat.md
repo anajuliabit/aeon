@@ -1,15 +1,19 @@
-HEARTBEAT_OK · STATUS_PAGE=OK
-
 ## Summary
 
-Ran the heartbeat skill — all checks green, no notification needed.
+Ran the heartbeat ambient check for 2026-05-22 08:45 UTC.
 
-- **P0 (failed/stuck skills):** All 9 entries in `cron-state.json` show `last_status: success`, 0 consecutive failures. `article` has a 50% success rate but only 2 runs (<5), so no chronic flag. Heartbeat self-check OK.
-- **P1 (stalled PRs / urgent issues):** PR #2 ("feat: Reppo agent swarm") is only ~2.5h old — not stalled. No open issues.
-- **P2/P3:** No flagged memory items; only heartbeat is enabled and it has a recent successful run.
+**Findings:**
+- **P0** — `chain:reppo-swarm` failed at 07:42 UTC. This is the recurring **ISS-002** failure (placeholder `tradinggymai` datanet_id), already an open issue and already flagged by `morning-brief` in today's log. **Deduped — no notification sent.**
+- **P0 self-check** — heartbeat last succeeded ~12.6h ago; no stuck, degraded, or chronic-failure skills.
+- **P1** — 0 open PRs, 0 open GitHub issues. Clear.
+- **P3** — `github-trending`, `token-alert`, `search-skill` are enabled but have no cron-state entry; their scheduled times (09/12/14 UTC) haven't passed yet today, so not flagged.
 
-**Files modified:**
-- `docs/status.md` — regenerated public status page (Overall: 🟢 OK, 9 skills in health table, Token pulse omitted — no `token-report-*.md` exists)
-- `memory/logs/2026-05-21.md` — appended heartbeat log entry
+**Actions:**
+- Regenerated `docs/status.md` → verdict **🔴 DEGRADED** (P0 chain failure), 1 open issue, next run `github-trending` at 09:00 UTC.
+- Logged the run to `memory/logs/2026-05-22.md`.
 
-**Follow-up:** None required.
+**Files modified:** `docs/status.md`, `memory/logs/2026-05-22.md`
+
+No notification sent — the only finding (ISS-002) is already tracked and was flagged within the last 48h. `STATUS_PAGE=DEGRADED`.
+
+**Follow-up:** ISS-002 remains open and needs the real `tradinggymai` datanet_id wired in to stop the daily 07:00 chain failure.
