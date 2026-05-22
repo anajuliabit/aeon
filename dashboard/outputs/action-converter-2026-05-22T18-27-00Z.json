@@ -1,0 +1,358 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-05-22"
+      },
+      "children": [
+        "text_mode",
+        "sep1",
+        "action1",
+        "sep2",
+        "action2",
+        "sep3",
+        "action3",
+        "sep4",
+        "action4",
+        "sep5",
+        "action5",
+        "sep6",
+        "sources"
+      ]
+    },
+    "text_mode": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: Bootstrap mode: merge the postprocess fix, seed soul + memory, close the stale reppo issue.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act1_heading",
+        "act1_desc",
+        "act1_sep",
+        "act1_why",
+        "act1_done",
+        "act1_loop"
+      ]
+    },
+    "act1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Review and merge PR #8 (fix-postprocess-error-detail)",
+        "level": "h3"
+      }
+    },
+    "act1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "It surfaces the real dry-run error so ISS-003 stops reading code UNKNOWN."
+      }
+    },
+    "act1_sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "act1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: ISS-003 blocks every on-chain reppo write; PR #8 is the diagnosis path and was opened fresh today.",
+        "variant": "caption"
+      }
+    },
+    "act1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #8 merged to main.",
+        "variant": "caption"
+      }
+    },
+    "act1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-8",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act2_heading",
+        "act2_desc",
+        "act2_sep",
+        "act2_why",
+        "act2_done",
+        "act2_loop"
+      ]
+    },
+    "act2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Populate soul/SOUL.md with Identity, Worldview, and Interests sections",
+        "level": "h3"
+      }
+    },
+    "act2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "So content skills stop running in neutral voice."
+      }
+    },
+    "act2_sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "act2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: morning-brief flagged 6+ content skills today defaulting to neutral voice — empty soul is the single root cause.",
+        "variant": "caption"
+      }
+    },
+    "act2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: SOUL.md Identity, Worldview, Interests sections each have >=3 lines, no template comments.",
+        "variant": "caption"
+      }
+    },
+    "act2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: soul-empty",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act3_heading",
+        "act3_desc",
+        "act3_sep",
+        "act3_why",
+        "act3_done",
+        "act3_loop"
+      ]
+    },
+    "act3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Replace the two template lines in memory/MEMORY.md \"Next Priorities\" with the real open loops",
+        "level": "h3"
+      }
+    },
+    "act3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Replace with: ISS-003, soul files, PR #8"
+      }
+    },
+    "act3_sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "act3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: stale template priorities mis-feed every morning-brief; \"Configure notification channels\" is already done via Telegram.",
+        "variant": "caption"
+      }
+    },
+    "act3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Next Priorities has 0 template lines and >=3 real items.",
+        "variant": "caption"
+      }
+    },
+    "act3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: memory-stale",
+        "variant": "secondary"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act4_heading",
+        "act4_desc",
+        "act4_sep",
+        "act4_why",
+        "act4_done",
+        "act4_loop"
+      ]
+    },
+    "act4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Move ISS-002 to the Resolved table in memory/issues/INDEX.md",
+        "level": "h3"
+      }
+    },
+    "act4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Configs/datanets/tradinggymai.md now has datanet_id \"9\", not a placeholder."
+      }
+    },
+    "act4_sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "act4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: the config was fixed and the chain runs green since 14:03, but the issue still shows open and skews the status page.",
+        "variant": "caption"
+      }
+    },
+    "act4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: ISS-002 row in Resolved table with a resolved date.",
+        "variant": "caption"
+      }
+    },
+    "act4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-002",
+        "variant": "secondary"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act5_heading",
+        "act5_desc",
+        "act5_sep",
+        "act5_why",
+        "act5_done",
+        "act5_loop"
+      ]
+    },
+    "act5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Populate soul/STYLE.md with sentence-structure rules and an anti-pattern list",
+        "level": "h3"
+      }
+    },
+    "act5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "So write-tweet and article skills stop guessing tone."
+      }
+    },
+    "act5_sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "act5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: STYLE.md is still the unfilled template; every tweet draft this week noted \"neutral direct/opinionated style\" as a fallback.",
+        "variant": "caption"
+      }
+    },
+    "act5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: STYLE.md has a sentence-structure section and an anti-patterns list, no template comments.",
+        "variant": "caption"
+      }
+    },
+    "act5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: soul-empty",
+        "variant": "secondary"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_list"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_list": {
+      "type": "Text",
+      "props": {
+        "text": "memory=27 logs=3 topics=2 prs=1 cron_failing=0 mode=BOOTSTRAP",
+        "variant": "caption"
+      }
+    }
+  }
+}
