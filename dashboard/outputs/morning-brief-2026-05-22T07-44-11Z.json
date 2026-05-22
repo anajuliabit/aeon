@@ -1,0 +1,212 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief"
+      },
+      "children": [
+        "heading_date",
+        "separator_1",
+        "stack_focus",
+        "separator_2",
+        "stack_yesterday",
+        "separator_3",
+        "stack_watch",
+        "separator_4",
+        "stack_running"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-05-22",
+        "level": "h2"
+      }
+    },
+    "separator_1": {
+      "type": "Separator"
+    },
+    "stack_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "text_focus_1",
+        "text_focus_2",
+        "text_focus_3"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "text_focus_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. Fix ISS-002 — why now: reppo-swarm chain fails every 07:00 run on a placeholder datanet_id"
+      }
+    },
+    "text_focus_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. Fill empty soul files — why now: 6+ content skills today still write in default neutral voice"
+      }
+    },
+    "text_focus_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. Consolidate MEMORY.md — why now: dead priorities mis-feed every brief; reflect @18:00 can fix it"
+      }
+    },
+    "separator_2": {
+      "type": "Separator"
+    },
+    "stack_yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_yesterday",
+        "text_yesterday_1",
+        "text_yesterday_2",
+        "text_yesterday_3",
+        "text_yesterday_4"
+      ]
+    },
+    "heading_yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "text_yesterday_1": {
+      "type": "Text",
+      "props": {
+        "text": "Merged: PR #2 — reppo-swarm vertical slice (orchestrator + trading agent), 23:11 UTC"
+      }
+    },
+    "text_yesterday_2": {
+      "type": "Text",
+      "props": {
+        "text": "Resolved: ISS-001 — agent-buzz prefetch fixed (PR #3), first clean run"
+      }
+    },
+    "text_yesterday_3": {
+      "type": "Text",
+      "props": {
+        "text": "Stuck: ISS-002 — reppo chain dormant, blocked on operator supplying a real datanet_id"
+      }
+    },
+    "text_yesterday_4": {
+      "type": "Text",
+      "props": {
+        "text": "Redone: Base-summer tweet after operator flagged unreliable TVL/liquidity numbers"
+      }
+    },
+    "separator_3": {
+      "type": "Separator"
+    },
+    "stack_watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_watch",
+        "stat_hype",
+        "text_watch_note"
+      ]
+    },
+    "heading_watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "stat_hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "record high",
+        "delta": "+16.5%",
+        "trend": "up"
+      }
+    },
+    "text_watch_note": {
+      "type": "Text",
+      "props": {
+        "text": "24h change | token-alert @ 12:00 will likely fire on HYPER",
+        "variant": "caption"
+      }
+    },
+    "separator_4": {
+      "type": "Separator"
+    },
+    "stack_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_running",
+        "text_running_1",
+        "text_running_2",
+        "text_running_3",
+        "text_running_4",
+        "text_running_5"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "text_running_1": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm chain @ 07:00 (dormant — ISS-002)"
+      }
+    },
+    "text_running_2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness @ 08:00 · heartbeat @ 08/14/20:00 UTC"
+      }
+    },
+    "text_running_3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00 · token-alert + defi-overview @ 12:00"
+      }
+    },
+    "text_running_4": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill @ 14:00 · goal-tracker + skill-health + reflect + action-converter @ 18:00"
+      }
+    },
+    "text_running_5": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap @ 21:00"
+      }
+    }
+  }
+}
