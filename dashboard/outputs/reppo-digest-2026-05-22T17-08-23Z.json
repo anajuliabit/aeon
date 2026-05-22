@@ -1,0 +1,381 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo Digest",
+        "description": "Orchestrator activity, intent validation, and postprocess results"
+      },
+      "children": [
+        "orchestrator-section",
+        "sep-1",
+        "datanets-section",
+        "sep-2",
+        "intents-section",
+        "sep-3",
+        "pods-section",
+        "sep-4",
+        "postprocess-section",
+        "sep-5",
+        "tracking-section"
+      ]
+    },
+    "orchestrator-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "orch-heading",
+        "orch-content"
+      ]
+    },
+    "orch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Orchestrator Activity",
+        "level": "h2"
+      }
+    },
+    "orch-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "orch-datanet",
+        "orch-status",
+        "orch-gym"
+      ]
+    },
+    "orch-datanet": {
+      "type": "Text",
+      "props": {
+        "text": "Datanet 9",
+        "variant": "lead"
+      }
+    },
+    "orch-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACTIVE",
+        "variant": "default"
+      }
+    },
+    "orch-gym": {
+      "type": "Text",
+      "props": {
+        "text": "TradingGym AI",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "datanets-heading",
+        "datanets-stat"
+      ]
+    },
+    "datanets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Flagged Datanets",
+        "level": "h3"
+      }
+    },
+    "datanets-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Unassigned datanets",
+        "value": "14"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "intents-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "intents-heading",
+        "strategy-group",
+        "votes-group"
+      ]
+    },
+    "intents-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Intents Queued",
+        "level": "h3"
+      }
+    },
+    "strategy-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "strategy-label",
+        "strategy-stat",
+        "strategy-type"
+      ]
+    },
+    "strategy-label": {
+      "type": "Text",
+      "props": {
+        "text": "Strategy Intents",
+        "variant": "muted"
+      }
+    },
+    "strategy-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Minted",
+        "value": "1"
+      }
+    },
+    "strategy-type": {
+      "type": "Text",
+      "props": {
+        "text": "Type: Crypto perpetual funding-rate carry",
+        "variant": "caption"
+      }
+    },
+    "votes-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes-label",
+        "votes-stat",
+        "votes-sentiment"
+      ]
+    },
+    "votes-label": {
+      "type": "Text",
+      "props": {
+        "text": "Vote Intents",
+        "variant": "muted"
+      }
+    },
+    "votes-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Queued",
+        "value": "3"
+      }
+    },
+    "votes-sentiment": {
+      "type": "Badge",
+      "props": {
+        "text": "All dislike",
+        "variant": "outline"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pods-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pods-heading",
+        "pods-list"
+      ]
+    },
+    "pods-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Unvoted Pods",
+        "level": "h3"
+      }
+    },
+    "pods-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pod-299-item",
+        "pod-150-item"
+      ]
+    },
+    "pod-299-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pod-299-label",
+        "pod-299-error"
+      ]
+    },
+    "pod-299-label": {
+      "type": "Text",
+      "props": {
+        "text": "Pod 299",
+        "variant": "lead"
+      }
+    },
+    "pod-299-error": {
+      "type": "Badge",
+      "props": {
+        "text": "IPFS/gateway error",
+        "variant": "destructive"
+      }
+    },
+    "pod-150-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pod-150-label",
+        "pod-150-error"
+      ]
+    },
+    "pod-150-label": {
+      "type": "Text",
+      "props": {
+        "text": "Pod 150",
+        "variant": "lead"
+      }
+    },
+    "pod-150-error": {
+      "type": "Badge",
+      "props": {
+        "text": "IPFS/gateway error",
+        "variant": "destructive"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "postprocess-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "postprocess-heading",
+        "dry-run-mode",
+        "validation-alert",
+        "validation-stats"
+      ]
+    },
+    "postprocess-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Postprocess Results",
+        "level": "h3"
+      }
+    },
+    "dry-run-mode": {
+      "type": "Badge",
+      "props": {
+        "text": "Dry-run only",
+        "variant": "secondary"
+      }
+    },
+    "validation-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Validation Failed",
+        "message": "All 4 intents failed dry-run validation with code UNKNOWN",
+        "type": "error"
+      }
+    },
+    "validation-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "onchain-mints",
+        "onchain-votes"
+      ]
+    },
+    "onchain-mints": {
+      "type": "Stat",
+      "props": {
+        "label": "On-chain mints confirmed",
+        "value": "0"
+      }
+    },
+    "onchain-votes": {
+      "type": "Stat",
+      "props": {
+        "label": "On-chain votes confirmed",
+        "value": "0"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tracking-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tracking-heading",
+        "issue-ref"
+      ]
+    },
+    "tracking-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Tracking",
+        "level": "h3"
+      }
+    },
+    "issue-ref": {
+      "type": "Text",
+      "props": {
+        "text": "Recurring dry-run failure tracked as ISS-003",
+        "variant": "body"
+      }
+    }
+  }
+}
