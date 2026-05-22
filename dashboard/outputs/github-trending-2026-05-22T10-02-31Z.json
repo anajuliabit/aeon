@@ -1,0 +1,608 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-05-22"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-top-pick",
+        "sep-1",
+        "section-ai-ml",
+        "sep-2",
+        "section-devtools",
+        "sep-3",
+        "section-infra",
+        "sep-4",
+        "section-web-apps",
+        "sep-5",
+        "footer-text"
+      ]
+    },
+    "section-top-pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-top-pick",
+        "repo-codegraph-0"
+      ]
+    },
+    "heading-top-pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "repo-codegraph-0": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-codegraph-0",
+        "desc-codegraph-0"
+      ]
+    },
+    "link-codegraph-0": {
+      "type": "StoryLink",
+      "props": {
+        "title": "colbymchenry/codegraph",
+        "href": "https://github.com/colbymchenry/codegraph",
+        "score": "★ 4,294 today"
+      }
+    },
+    "desc-codegraph-0": {
+      "type": "Text",
+      "props": {
+        "text": "4,294 stars in a single day: every coding agent burns tokens grepping around blindly, and a pre-built local code graph is the obvious fix nobody had shipped well until now.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-ai-ml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-ai-ml",
+        "repo-superpowers",
+        "repo-multica",
+        "repo-oh-my-pi"
+      ]
+    },
+    "heading-ai-ml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "repo-superpowers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-superpowers",
+        "meta-superpowers",
+        "desc-superpowers"
+      ]
+    },
+    "link-superpowers": {
+      "type": "StoryLink",
+      "props": {
+        "title": "obra/superpowers",
+        "href": "https://github.com/obra/superpowers",
+        "score": "★ 1576 today (202k total)"
+      }
+    },
+    "meta-superpowers": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-shell",
+        "badge-accel-1"
+      ]
+    },
+    "badge-shell": {
+      "type": "Badge",
+      "props": {
+        "text": "Shell",
+        "variant": "outline"
+      }
+    },
+    "badge-accel-1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-superpowers": {
+      "type": "Text",
+      "props": {
+        "text": "Turns ad-hoc agent prompting into a versioned skills framework — a repeatable methodology instead of one-off CLAUDE.md tweaks.",
+        "variant": "body"
+      }
+    },
+    "repo-multica": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-multica",
+        "meta-multica",
+        "desc-multica"
+      ]
+    },
+    "link-multica": {
+      "type": "StoryLink",
+      "props": {
+        "title": "multica-ai/multica",
+        "href": "https://github.com/multica-ai/multica",
+        "score": "★ 534 today (31k total)"
+      }
+    },
+    "meta-multica": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-go",
+        "badge-accel-2"
+      ]
+    },
+    "badge-go": {
+      "type": "Badge",
+      "props": {
+        "text": "Go",
+        "variant": "outline"
+      }
+    },
+    "badge-accel-2": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-multica": {
+      "type": "Text",
+      "props": {
+        "text": "Runs coding agents as persistent managed teammates with assigned work, not one-shot CLI invocations.",
+        "variant": "body"
+      }
+    },
+    "repo-oh-my-pi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-oh-my-pi",
+        "meta-oh-my-pi",
+        "desc-oh-my-pi"
+      ]
+    },
+    "link-oh-my-pi": {
+      "type": "StoryLink",
+      "props": {
+        "title": "can1357/oh-my-pi",
+        "href": "https://github.com/can1357/oh-my-pi",
+        "score": "★ 500 today (6k total)"
+      }
+    },
+    "meta-oh-my-pi": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ts-1",
+        "badge-accel-3"
+      ]
+    },
+    "badge-ts-1": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      }
+    },
+    "badge-accel-3": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-oh-my-pi": {
+      "type": "Text",
+      "props": {
+        "text": "Terminal coding agent with hash-anchored edits — edits fail loudly if the file changed instead of silently corrupting it.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-devtools",
+        "repo-codegraph-1",
+        "repo-cli-anything",
+        "repo-chrome-devtools"
+      ]
+    },
+    "heading-devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "repo-codegraph-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-codegraph-1",
+        "meta-codegraph-1",
+        "desc-codegraph-1"
+      ]
+    },
+    "link-codegraph-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "colbymchenry/codegraph",
+        "href": "https://github.com/colbymchenry/codegraph",
+        "score": "★ 4294 today (15k total)"
+      }
+    },
+    "meta-codegraph-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ts-2",
+        "badge-accel-4"
+      ]
+    },
+    "badge-ts-2": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      }
+    },
+    "badge-accel-4": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-codegraph-1": {
+      "type": "Text",
+      "props": {
+        "text": "Indexes your repo into a graph up front so agents stop blind file-searching — fewer tokens, fewer tool calls, fully local.",
+        "variant": "body"
+      }
+    },
+    "repo-cli-anything": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-cli-anything",
+        "meta-cli-anything",
+        "desc-cli-anything"
+      ]
+    },
+    "link-cli-anything": {
+      "type": "StoryLink",
+      "props": {
+        "title": "HKUDS/CLI-Anything",
+        "href": "https://github.com/HKUDS/CLI-Anything",
+        "score": "★ 656 today (39k total)"
+      }
+    },
+    "meta-cli-anything": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-python",
+        "badge-accel-5"
+      ]
+    },
+    "badge-python": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      }
+    },
+    "badge-accel-5": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-cli-anything": {
+      "type": "Text",
+      "props": {
+        "text": "Wraps arbitrary CLIs so agents can drive any tool — bridges software that has no native agent interface.",
+        "variant": "body"
+      }
+    },
+    "repo-chrome-devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-chrome-devtools",
+        "meta-chrome-devtools",
+        "desc-chrome-devtools"
+      ]
+    },
+    "link-chrome-devtools": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ChromeDevTools/chrome-devtools-mcp",
+        "href": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "score": "★ 151 today (41k total)"
+      }
+    },
+    "meta-chrome-devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ts-3",
+        "badge-accel-6"
+      ]
+    },
+    "badge-ts-3": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      }
+    },
+    "badge-accel-6": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-chrome-devtools": {
+      "type": "Text",
+      "props": {
+        "text": "Exposes the Chrome DevTools protocol over MCP so agents can inspect, profile, and debug live pages.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-infra",
+        "repo-openwa"
+      ]
+    },
+    "heading-infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "repo-openwa": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-openwa",
+        "meta-openwa",
+        "desc-openwa"
+      ]
+    },
+    "link-openwa": {
+      "type": "StoryLink",
+      "props": {
+        "title": "rmyndharis/OpenWA",
+        "href": "https://github.com/rmyndharis/OpenWA",
+        "score": "★ 730 today (6k total)"
+      }
+    },
+    "meta-openwa": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ts-4",
+        "badge-accel-7"
+      ]
+    },
+    "badge-ts-4": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      }
+    },
+    "badge-accel-7": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-openwa": {
+      "type": "Text",
+      "props": {
+        "text": "Self-hosted WhatsApp HTTP gateway — own your messaging automation instead of renting a paid cloud API.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-web-apps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-web-apps",
+        "repo-streambert"
+      ]
+    },
+    "heading-web-apps": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      }
+    },
+    "repo-streambert": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-streambert",
+        "meta-streambert",
+        "desc-streambert"
+      ]
+    },
+    "link-streambert": {
+      "type": "StoryLink",
+      "props": {
+        "title": "truelockmc/streambert",
+        "href": "https://github.com/truelockmc/streambert",
+        "score": "★ 1094 today (4k total)"
+      }
+    },
+    "meta-streambert": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-javascript",
+        "badge-accel-8"
+      ]
+    },
+    "badge-javascript": {
+      "type": "Badge",
+      "props": {
+        "text": "JavaScript",
+        "variant": "outline"
+      }
+    },
+    "badge-accel-8": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-streambert": {
+      "type": "Text",
+      "props": {
+        "text": "Ad-free, tracker-free desktop streaming client — a Stremio-style app without the extension and account friction.",
+        "variant": "body"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 8/19",
+        "variant": "caption"
+      }
+    }
+  }
+}
