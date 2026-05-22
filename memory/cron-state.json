@@ -144,5 +144,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "github-trending": {
+    "last_dispatch": "2026-05-22T09:59:11Z",
+    "last_status": "dispatched"
   }
 }
