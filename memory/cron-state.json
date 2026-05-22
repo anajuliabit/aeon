@@ -100,5 +100,17 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "chain:reppo-swarm": {
+    "last_dispatch": "2026-05-22T07:41:23Z",
+    "last_status": "dispatched"
+  },
+  "morning-brief": {
+    "last_dispatch": "2026-05-22T07:41:23Z",
+    "last_status": "dispatched"
+  },
+  "reppo-swarm": {
+    "last_dispatch": "2026-05-22T07:41:23Z",
+    "last_status": "dispatched"
   }
 }
