@@ -1,37 +1,37 @@
-*DeFi — 2026-05-21* — Mixed: TVL flat, DEX volume up 12%, stables barely moving
+*DeFi — 2026-05-22* — Mixed: TVL flat-to-up, DEX volume +8%, weekly trend still red
 
-*TVL:* $83.1B (+0.4% 24h, +2.2% 7d)
+*TVL:* $83.4B (+0.8% 24h, -2.9% 7d)
 
 *Top chains*
-1. Ethereum — $43.1B
+1. Ethereum — $43.2B (+1.0%)
 2. Solana — $6.0B
 3. BSC — $5.5B
 
 *Movers*
-↑ Hyperliquid L1 +9% ($1.57B → $1.71B) — HYPE liquid-staking surge; Kinetiq, stHYPE, HyperLend all climbing
-↑ Kinetiq kHYPE +20% ($0.89B → $1.06B) — Hyperliquid LST inflows, +48% on the week
-↓ Project 0 −28% ($150M → $110M) — sharp pullback after a +142% weekly run-up; no confirmed catalyst
+↑ Spark Liquidity Layer +28% ($2.2B → $2.8B) — Sky-ecosystem capital allocator, 1d and 7d both up; sustained inflow, no single catalyst
+No chain cleared the ±5% bar (largest: Provenance +3.9%). Rocket Pool's +86% 1d reading looks like an accounting artifact — its 7d is -6%.
 
 *Fees leaders (24h)*
-1. Tether — $16.4M (flat vs 7d avg)
-2. Circle USDC — $6.5M (flat)
-3. Canton — $2.1M (flat)
+1. Tether — $16.3M (flat vs 7d avg)
+2. Circle — $6.4M (-1% vs 7d avg)
+3. Ethena USDe — $3.2M (+505% vs 7d avg — fee spike)
 
 *Fees beating TVL*
-• Uniswap V4 — fees +119% / TVL +3% (7d) — swap demand outrunning deposits
-• Morpho Blue — fees +34% / TVL flat (7d) — lending demand outpacing capital
+• Uniswap V4 — fees +128% / TVL -3% (7d) — swap demand outrunning liquidity
+• Hyperliquid Spot Orderbook — fees +67% / TVL +2% (7d) — orderbook volume scaling
 
-*DEX vol (24h):* $5.7B (+12%)  top: Uniswap V4 $0.77B, Aerodrome Slipstream $0.53B, Uniswap V3 $0.46B
+*DEX vol (24h):* $6.4B (+7.8%)  top: Uniswap V4 $725M (-10%), Aerodrome Slipstream $590M (+16%), Uniswap V3 $508M (+10%)
 
-*Stables:* $320.8B (+0.3%) — no single-issuer move ≥1%
+*Stables:* $321.6B (+0.4% 24h) — USD1 +1.9% to $4.8B, only notable single-issuer move
 
 *Real yield (sustainable, ≥$10M, filtered)*
-• SHMON (shmonad, Monad) — 15.3% apyBase ($12M TVL)
-• MUBOND (mu-digital, Ethereum) — 14.5% apyBase ($13M TVL)
-• WBTC-USDC LP (Uniswap V4, ETH) — 14.0% apyBase ($11M TVL)
+• APYUSD PT (Pendle, ETH) — 17.8% apyBase ($14.9M TVL)
+• USDC-WETH 0.05% (Uniswap V3, ETH) — 16.0% apyBase ($103M TVL)
+• SHMON (shMONAD, Monad) — 15.6% apyBase ($12.0M TVL)
+Yesterday's MUBOND (14.5%) slipped just out of the top 3; SHMON holds.
 
 *Incentive yield (points / emissions, ≥$25M)*
-• USDC-AERO LP (Aerodrome, Base) — 20.7% apy via AERO emissions ($27M TVL)
-• sdCRV (Stake DAO, ETH) — 18.7% apy via CRV + SDT rewards ($28M TVL)
+• USDC-AERO (Aerodrome, Base) — 21.7% apy via AERO rewards ($27.9M TVL)
+• sdCRV (Stake DAO, ETH) — 20.8% apy via CRV+SDT rewards ($29.1M TVL)
 
-_sources: llama_tvl=ok llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none_
+_sources: llama_tvl=ok  llama_dex=ok  llama_fees=ok  llama_stables=ok  llama_yields=ok  | var: none_

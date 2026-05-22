@@ -15,4 +15,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-22,reppo-swarm,claude-opus-4-7,174,19637,1224427,127935
 2026-05-22,skill-freshness,claude-sonnet-4-6,9,19287,287911,46005
 2026-05-22,github-trending,claude-opus-4-7,15,11040,227030,81123
-2026-05-22,token-alert,claude-opus-4-7,21,5112,383311,47791
+2026-05-22,defi-overview,claude-opus-4-7,93,30019,2353661,76786
