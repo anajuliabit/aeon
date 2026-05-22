@@ -1,7 +1,8 @@
-Orchestration plan computed. One rubric (`tradinggymai.md`, datanet_id `9`, agent `reppo-trading-agent`); the catalog and per-datanet caches are both valid.
+Orchestrator run complete. The catalog and per-datanet detail were both available.
 
-- **datanet 9 (TradingGym AI)** — ACTIVE in catalog, `valid:true` in `datanet-tradinggymai.json`. Not a placeholder → **RUN**. A run already happened today, but re-running is safe (content-hash dedup + idempotency keys).
-- **Discovery** — catalog has 15 datanets (ids 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17). Only id 9 has a rubric → 14 unassigned.
+**Plan:** The single rubric file `tradinggymai.md` maps `reppo-trading-agent` to datanet 9. `datanet-tradinggymai.json` shows datanet 9 is `valid:true` and the catalog lists "TradingGym AI" as `ACTIVE` — so RUN. Re-running today is safe (the trading agent dedups strategies by content hash and writes use idempotency keys).
+
+**Discovery:** The catalog holds 15 datanets; only id 9 has a rubric. The other 14 (ids 1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17) are unassigned — no rubric, no agent.
 
 ```
 reppo-plan
@@ -23,7 +24,7 @@ new-datanet: 17   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Read orchestrator inputs: catalog (`datanets.json`), `datanet-tradinggymai.json`, the single rubric `configs/datanets/tradinggymai.md`, and the ledger.
-- Decision: **1 RUN, 0 SKIP**; **14 unassigned datanets** discovered; catalog available.
-- Files modified: appended a `### reppo-orchestrator` entry to `memory/logs/2026-05-22.md`.
-- Follow-up: 14 datanets still have no rubric/agent — assigning rubrics would expand swarm coverage.
+- Built the RUN/SKIP plan from `configs/datanets/*.md`: 1 RUN (`reppo-trading-agent`, datanet 9), 0 SKIP.
+- Discovered 14 unassigned datanets from the live catalog.
+- Files modified: `memory/logs/2026-05-22.md` (appended `### reppo-orchestrator` entry).
+- Follow-up: 14 datanets remain agentless — they need rubric files if the swarm should cover them.
