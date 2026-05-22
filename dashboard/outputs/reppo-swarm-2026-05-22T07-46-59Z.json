@@ -1,0 +1,173 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo Swarm 2026-05-22"
+      },
+      "children": [
+        "heading_orch",
+        "sep_1",
+        "text_orch_info",
+        "stat_unassigned",
+        "sep_2",
+        "heading_strat",
+        "stat_minted",
+        "text_strat_desc",
+        "text_positions",
+        "text_entry",
+        "text_exits",
+        "sep_3",
+        "heading_votes",
+        "stat_votes",
+        "badge_yes",
+        "text_vote_257",
+        "badge_no",
+        "text_vote_332",
+        "text_vote_300",
+        "sep_4",
+        "heading_status",
+        "text_intents",
+        "badge_status"
+      ]
+    },
+    "heading_orch": {
+      "type": "Heading",
+      "props": {
+        "text": "Orchestrator",
+        "level": "h2"
+      }
+    },
+    "sep_1": {
+      "type": "Separator"
+    },
+    "text_orch_info": {
+      "type": "Text",
+      "props": {
+        "text": "Ran trading agent for Datanet 9: TradingGym AI (active & valid)"
+      }
+    },
+    "stat_unassigned": {
+      "type": "Stat",
+      "props": {
+        "label": "Unassigned Datanets (No Agent)",
+        "value": "14"
+      }
+    },
+    "sep_2": {
+      "type": "Separator"
+    },
+    "heading_strat": {
+      "type": "Heading",
+      "props": {
+        "text": "Strategy Pod",
+        "level": "h2"
+      }
+    },
+    "stat_minted": {
+      "type": "Stat",
+      "props": {
+        "label": "Strategy Pods Minted",
+        "value": "1"
+      }
+    },
+    "text_strat_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Delta-neutral BTC funding-rate arbitrage"
+      }
+    },
+    "text_positions": {
+      "type": "Text",
+      "props": {
+        "text": "Positions: long spot + short perp"
+      }
+    },
+    "text_entry": {
+      "type": "Text",
+      "props": {
+        "text": "Entry: funding > 0.01% per period"
+      }
+    },
+    "text_exits": {
+      "type": "Text",
+      "props": {
+        "text": "Exit: funding < 0.005% or negative, OR basis divergence > 3%"
+      }
+    },
+    "sep_3": {
+      "type": "Separator"
+    },
+    "heading_votes": {
+      "type": "Heading",
+      "props": {
+        "text": "Votes",
+        "level": "h2"
+      }
+    },
+    "stat_votes": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Votes Cast",
+        "value": "3"
+      }
+    },
+    "badge_yes": {
+      "type": "Badge",
+      "props": {
+        "text": "YES",
+        "variant": "secondary"
+      }
+    },
+    "text_vote_257": {
+      "type": "Text",
+      "props": {
+        "text": "Pod 257: concrete Ts24_2 strategy with full entry/exit/risk rules"
+      }
+    },
+    "badge_no": {
+      "type": "Badge",
+      "props": {
+        "text": "NO",
+        "variant": "destructive"
+      }
+    },
+    "text_vote_332": {
+      "type": "Text",
+      "props": {
+        "text": "Pod 332: raw signal log"
+      }
+    },
+    "text_vote_300": {
+      "type": "Text",
+      "props": {
+        "text": "Pod 300: pipeline framework, neither a testable strategy"
+      }
+    },
+    "sep_4": {
+      "type": "Separator"
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h2"
+      }
+    },
+    "text_intents": {
+      "type": "Text",
+      "props": {
+        "text": "Intents queued in .pending-reppo/ for on-chain execution by postprocess-reppo.sh"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ No failures",
+        "variant": "outline"
+      }
+    }
+  }
+}

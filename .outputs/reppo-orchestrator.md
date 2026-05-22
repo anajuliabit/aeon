@@ -3,6 +3,13 @@ Reppo orchestration plan for 2026-05-22.
 The `tradinggymai` rubric maps to datanet 9, which the cache confirms is active and `valid:true`. The Run history table's latest entry is dated 2026-05-21 — no successful run today — so the trading agent gets `RUN`.
 
 The catalog (`datanets.json`) is valid and lists 15 active datanets. Only datanet 9 has a rubric, so the other 14 are unassigned and have no agent.
+# Reppo Orchestrator — 2026-05-22
+
+One rubric file (`tradinggymai.md`, datanet 9) is configured. Datanet 9
+(TradingGym AI) is ACTIVE and valid per the prefetch cache, and the run
+history has no successful entry for today, so the trading agent runs.
+The mainnet catalog is available with 15 datanets; 14 have no rubric or
+assigned agent.
 
 ```
 reppo-plan
