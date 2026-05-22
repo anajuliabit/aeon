@@ -1,0 +1,212 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest 2026-05-22"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-orchestrator",
+        "stack-datanet",
+        "stat-flagged",
+        "separator-1",
+        "heading-trading",
+        "stat-mint",
+        "text-strategy",
+        "stat-votes",
+        "stack-votes",
+        "separator-2",
+        "heading-postprocess",
+        "alert-failure",
+        "stat-failed",
+        "stack-confirmed",
+        "separator-3",
+        "heading-issue",
+        "text-issue"
+      ]
+    },
+    "heading-orchestrator": {
+      "type": "Heading",
+      "props": {
+        "text": "Orchestrator",
+        "level": "h2"
+      }
+    },
+    "stack-datanet": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-datanet",
+        "badge-status"
+      ]
+    },
+    "text-datanet": {
+      "type": "Text",
+      "props": {
+        "text": "RUN emitted for datanet 9 (TradingGym AI)",
+        "variant": "body"
+      }
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACTIVE & valid",
+        "variant": "default"
+      }
+    },
+    "stat-flagged": {
+      "type": "Stat",
+      "props": {
+        "label": "datanets flagged (no agent assigned)",
+        "value": "14"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-trading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trading Agent Activity",
+        "level": "h2"
+      }
+    },
+    "stat-mint": {
+      "type": "Stat",
+      "props": {
+        "label": "strategy mint queued",
+        "value": "1"
+      }
+    },
+    "text-strategy": {
+      "type": "Text",
+      "props": {
+        "text": "BTC/USD 5m EMA-crossover momentum",
+        "variant": "body"
+      }
+    },
+    "stat-votes": {
+      "type": "Stat",
+      "props": {
+        "label": "votes queued",
+        "value": "3"
+      }
+    },
+    "stack-votes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-vote-1",
+        "text-vote-2"
+      ]
+    },
+    "text-vote-1": {
+      "type": "Text",
+      "props": {
+        "text": "pod 257: like",
+        "variant": "caption"
+      }
+    },
+    "text-vote-2": {
+      "type": "Text",
+      "props": {
+        "text": "pods 332 & 46: dislike",
+        "variant": "caption"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-postprocess": {
+      "type": "Heading",
+      "props": {
+        "text": "Postprocess Results",
+        "level": "h2"
+      }
+    },
+    "alert-failure": {
+      "type": "Alert",
+      "props": {
+        "title": "Dry-run failures",
+        "message": "Postprocess ran dry-run-only. All 4 intents failed with code UNKNOWN. Nothing reached the chain.",
+        "type": "error"
+      }
+    },
+    "stat-failed": {
+      "type": "Stat",
+      "props": {
+        "label": "intents failed",
+        "value": "4"
+      }
+    },
+    "stack-confirmed": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-mints-confirmed",
+        "stat-votes-confirmed"
+      ]
+    },
+    "stat-mints-confirmed": {
+      "type": "Stat",
+      "props": {
+        "label": "mints confirmed on-chain",
+        "value": "0"
+      }
+    },
+    "stat-votes-confirmed": {
+      "type": "Stat",
+      "props": {
+        "label": "votes confirmed on-chain",
+        "value": "0"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Tracking",
+        "level": "h2"
+      }
+    },
+    "text-issue": {
+      "type": "Text",
+      "props": {
+        "text": "Filed ISS-003 for dry-run failures",
+        "variant": "body"
+      }
+    }
+  }
+}
