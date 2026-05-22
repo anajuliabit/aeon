@@ -51,26 +51,30 @@ jobs:
             [ -n "$var" ] && args+=(-f var="$var")
             [ -n "$ctx_file" ] && args+=(-f chain_context_file="$ctx_file")
 
-            echo "  Dispatching: $skill"
+            echo "  Dispatching: $skill" >&2
             gh workflow run aeon.yml "${args[@]}"
 
-            # Poll for the run to appear (up to 60s)
+            # Poll for the run to appear (up to 60s).
+            # Match the run-name "skill: <skill>" exactly, or
+            # "skill: <skill> (<var>)" for var-bearing skills. A var-less
+            # skill has no "(" in its run-name, so a "(" -anchored match
+            # would never find it.
             local run_id=""
             for i in $(seq 1 12); do
               sleep 5
               run_id=$(gh run list --workflow=aeon.yml -L 10 \
                 --json databaseId,displayTitle,createdAt \
-                -q "[.[] | select(.displayTitle | test(\"skill: ${skill}(\"; \"i\")) | select(.createdAt >= \"${before_ts}\")] | .[0].databaseId" \
+                -q "[.[] | select((.displayTitle == \"skill: ${skill}\") or (.displayTitle | startswith(\"skill: ${skill} (\"))) | select(.createdAt >= \"${before_ts}\")] | .[0].databaseId" \
                 2>/dev/null || true)
               [ -n "$run_id" ] && [ "$run_id" != "null" ] && break
               run_id=""
             done
 
             if [ -z "$run_id" ]; then
-              echo "::error::Failed to discover run ID for skill: $skill"
+              echo "::error::Failed to discover run ID for skill: $skill" >&2
               return 1
             fi
-            echo "  Run ID: $run_id"
+            echo "  Run ID: $run_id" >&2
             echo "$run_id"
           }
 
@@ -238,8 +242,12 @@ jobs:
                 fi
               fi
 
-              RUN_ID=$(dispatch_skill "$skill" "$VAR" "$CTX_FILE")
-              DISPATCH_EXIT=$?
+              # Decouple from `set -e`: a failing command substitution in a
+              # bare assignment aborts the whole script. The `|| ...` keeps
+              # the failure non-fatal so the handling below actually runs.
+              RUN_ID=""
+              DISPATCH_EXIT=0
+              RUN_ID=$(dispatch_skill "$skill" "$VAR" "$CTX_FILE") || DISPATCH_EXIT=$?
               if [ $DISPATCH_EXIT -ne 0 ] || [ -z "$RUN_ID" ]; then
                 echo "::error::Failed to dispatch skill: $skill"
                 CHAIN_FAILED=true
