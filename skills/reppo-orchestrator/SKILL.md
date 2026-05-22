@@ -26,8 +26,9 @@ For each `configs/datanets/*.md` rubric file:
 - Read its `datanet_id` and `agent`.
 - Emit `SKIP` if: `datanet_id` is still the `REPLACE_WITH_...` placeholder;
   or `.reppo-cache/datanet-<name>.json` is an error marker or shows the
-  datanet invalid/inactive; or the Run history table in
-  `memory/topics/reppo.md` already has a successful entry dated today.
+  datanet invalid/inactive. Do NOT skip just because a run happened earlier
+  today — re-running is safe: the trading agent dedups strategies by content
+  hash and all writes use idempotency keys, so a `RUN` never double-mints.
 - Otherwise emit `RUN`.
 - Always include a short reason.
 
