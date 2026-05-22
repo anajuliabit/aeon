@@ -1,0 +1,113 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-05-22"
+      },
+      "children": [
+        "heading_vvv",
+        "stat_price",
+        "stat_volume",
+        "stat_marketcap",
+        "alert_trigger",
+        "separator_1",
+        "heading_other",
+        "table_tokens",
+        "text_anomalies",
+        "separator_2",
+        "text_skipped"
+      ]
+    },
+    "heading_vvv": {
+      "type": "Heading",
+      "props": {
+        "text": "VVV (Venice Token)",
+        "level": "h2"
+      }
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$19.00",
+        "delta": "+11.5%",
+        "trend": "up"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$97.9M"
+      }
+    },
+    "stat_marketcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market cap",
+        "value": "$867.5M"
+      }
+    },
+    "alert_trigger": {
+      "type": "Alert",
+      "props": {
+        "title": "Trigger",
+        "message": "24h price change exceeds 10% threshold",
+        "type": "warning"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other Tracked Tokens",
+        "level": "h2"
+      }
+    },
+    "table_tokens": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h Change"
+        ],
+        "rows": [
+          [
+            "HYPER",
+            "$0.1177",
+            "+1.5%"
+          ],
+          [
+            "REPPO",
+            "$0.0231",
+            "-4.5%"
+          ]
+        ]
+      }
+    },
+    "text_anomalies": {
+      "type": "Text",
+      "props": {
+        "text": "No anomalies detected"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_skipped": {
+      "type": "Text",
+      "props": {
+        "text": "Volume-spike check skipped: no historical baseline on first run",
+        "variant": "muted"
+      }
+    }
+  }
+}
