@@ -226,5 +226,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "evening-recap": {
+    "last_dispatch": "2026-05-22T21:33:41Z",
+    "last_status": "dispatched"
   }
 }
