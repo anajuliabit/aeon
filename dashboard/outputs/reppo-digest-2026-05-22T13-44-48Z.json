@@ -1,0 +1,277 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo swarm digest"
+      },
+      "children": [
+        "heading_date",
+        "sep1",
+        "alert_status",
+        "sep2",
+        "datanet_section",
+        "sep3",
+        "previous_run_section",
+        "sep4",
+        "current_stats",
+        "sep5",
+        "discovery_section"
+      ]
+    },
+    "heading_date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-22 (re-run)",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "message": "No new on-chain activity this cycle",
+        "type": "info"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "datanet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "datanet_heading",
+        "datanet_info",
+        "skip_reason"
+      ]
+    },
+    "datanet_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Datanet 9 (TradingGym AI)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "datanet_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_active",
+        "badge_valid"
+      ]
+    },
+    "badge_active": {
+      "type": "Badge",
+      "props": {
+        "text": "Active",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_valid": {
+      "type": "Badge",
+      "props": {
+        "text": "Valid",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skip_reason": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-trading-agent was SKIPPED to avoid re-minting (ledger shows successful run earlier today)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "previous_run_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "previous_heading",
+        "previous_grid"
+      ]
+    },
+    "previous_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Previous run (earlier today)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "previous_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_prev_minted",
+        "stat_prev_votes"
+      ]
+    },
+    "stat_prev_minted": {
+      "type": "Stat",
+      "props": {
+        "label": "Strategies minted",
+        "value": "1"
+      },
+      "children": []
+    },
+    "stat_prev_votes": {
+      "type": "Stat",
+      "props": {
+        "label": "Votes cast",
+        "value": "3"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "current_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_heading",
+        "stats_grid"
+      ]
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "This cycle",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_minted",
+        "stat_votes",
+        "stat_failures"
+      ]
+    },
+    "stat_minted": {
+      "type": "Stat",
+      "props": {
+        "label": "Strategies minted",
+        "value": "0"
+      },
+      "children": []
+    },
+    "stat_votes": {
+      "type": "Stat",
+      "props": {
+        "label": "Votes cast",
+        "value": "0"
+      },
+      "children": []
+    },
+    "stat_failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Failures",
+        "value": "0"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "discovery_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "discovery_heading",
+        "discovery_text",
+        "datanet_ids",
+        "future_work"
+      ]
+    },
+    "discovery_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Discovery",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "discovery_text": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets flagged in mainnet catalog with no rubric or agent assigned",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "datanet_ids": {
+      "type": "Text",
+      "props": {
+        "text": "Datanet IDs: 1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "future_work": {
+      "type": "Text",
+      "props": {
+        "text": "Assigning rubrics is optional future work",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

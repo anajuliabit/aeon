@@ -20,3 +20,4 @@ the "Minted strategies" table to avoid re-minting; the digest appends to it.
 |------|--------------|--------|-------|----------|
 | 2026-05-21 | trading agent SKIP — tradinggymai datanet_id is still the placeholder; prefetch failed | 0 | 0 | 1 |
 | 2026-05-22 | trading agent RUN — datanet 9 active & valid; 14 unassigned datanets discovered | 1 | 3 | 0 |
+| 2026-05-22 | trading agent SKIP (re-run) — datanet 9 already has a successful run today; 14 unassigned datanets discovered | 0 | 0 | 0 |
