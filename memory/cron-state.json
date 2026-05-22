@@ -103,7 +103,8 @@
   },
   "chain:reppo-swarm": {
     "last_dispatch": "2026-05-22T07:41:23Z",
-    "last_status": "dispatched"
+    "last_status": "failed",
+    "last_failed": "2026-05-22T07:42:43Z"
   },
   "morning-brief": {
     "last_dispatch": "2026-05-22T07:41:23Z",
