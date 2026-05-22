@@ -1,0 +1,14 @@
+{
+  "skill": "search-skill",
+  "last_analyzed": "2026-05-22T14:05:54Z",
+  "quality_score": 4,
+  "assessment": "Skill executed correctly with transparent gap-detection logic; silent behavior appropriate when no capability gaps found; good documentation.",
+  "flags": [],
+  "avg_score": 4,
+  "history": [
+    {
+      "date": "2026-05-22",
+      "score": 4
+    }
+  ]
+}
