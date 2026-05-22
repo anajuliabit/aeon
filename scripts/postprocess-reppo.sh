@@ -19,6 +19,13 @@ fi
 
 if [ -z "${REPPO_PRIVATE_KEY:-}" ]; then
   echo "reppo-postprocess: REPPO_PRIVATE_KEY not set, skipping all writes"
+  mkdir -p .outputs
+  {
+    echo ""
+    echo "## Execution Results"
+    echo ""
+    echo "_postprocess-reppo.sh skipped ALL writes: REPPO_PRIVATE_KEY is not set. No intents were executed on-chain._"
+  } >> ".outputs/reppo-trading-agent.md"
   exit 0
 fi
 

@@ -30,11 +30,18 @@ One concise paragraph (notifications are one paragraph max). Cover:
 Run: `./notify "<your digest text>"`
 
 ### 3. Update the ledger
+The `## Execution Results` section appended by `postprocess-reppo.sh` is the
+ONLY source of truth for on-chain activity. A queued intent is NOT a mint.
 Append to `memory/topics/reppo.md`:
-- A row per successful mint in "Minted strategies".
-- A row per successful vote in "Votes cast".
-- One row in "Run history": today's date, orchestrator summary, mint count,
-  vote count, failure count.
+- A "Minted strategies" row ONLY for a mint whose Execution Results line
+  reports a real on-chain success with a tx hash — never for a dry-run,
+  skipped, or failed intent.
+- A "Votes cast" row ONLY for a vote confirmed on-chain the same way.
+- One "Run history" row: today's date, orchestrator summary, and the counts
+  of mints/votes actually confirmed on-chain (0 if postprocess dry-ran or
+  skipped), plus the failure count.
+If the trading-agent output has no `## Execution Results` section, treat it
+as "nothing executed on-chain" — write no mint/vote rows.
 
 ### 4. Log failures
 If there were no failures, skip this step. Otherwise, for each distinct
