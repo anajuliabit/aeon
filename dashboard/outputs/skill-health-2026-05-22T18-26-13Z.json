@@ -1,0 +1,243 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-05-22"
+      },
+      "children": [
+        "status-stack",
+        "separator1",
+        "healthy-section",
+        "separator2",
+        "no-data-section",
+        "separator3",
+        "issues-section"
+      ]
+    },
+    "status-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "health-stat",
+        "critical-stat",
+        "degraded-stat",
+        "flapping-stat"
+      ]
+    },
+    "health-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Status",
+        "value": "OK"
+      }
+    },
+    "critical-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Critical",
+        "value": "0"
+      }
+    },
+    "degraded-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Degraded",
+        "value": "0"
+      }
+    },
+    "flapping-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Flapping",
+        "value": "0"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-stat",
+        "healthy-list"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled skills",
+        "value": "7"
+      }
+    },
+    "healthy-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill1",
+        "skill2",
+        "skill3",
+        "skill4",
+        "skill5",
+        "skill6",
+        "skill7"
+      ]
+    },
+    "skill1": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief"
+      }
+    },
+    "skill2": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending"
+      }
+    },
+    "skill3": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert"
+      }
+    },
+    "skill4": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-overview"
+      }
+    },
+    "skill5": {
+      "type": "Badge",
+      "props": {
+        "text": "search-skill"
+      }
+    },
+    "skill6": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-freshness"
+      }
+    },
+    "skill7": {
+      "type": "Badge",
+      "props": {
+        "text": "heartbeat"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-heading",
+        "no-data-stat",
+        "no-data-text"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA",
+        "level": "h3"
+      }
+    },
+    "no-data-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled but no cron-state",
+        "value": "14"
+      }
+    },
+    "no-data-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet recently bootstrapped; weekly/18:00 skills not yet due or running concurrently. No scheduler gap."
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues-heading",
+        "issues-stat",
+        "issue1",
+        "issue2",
+        "resolved-stat"
+      ]
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      }
+    },
+    "issues-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open",
+        "value": "2"
+      }
+    },
+    "issue1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-002: reppo datanet placeholder — fixing, PR #4"
+      }
+    },
+    "issue2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-003: reppo postprocess dry-run UNKNOWN — open"
+      }
+    },
+    "resolved-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}
