@@ -1,0 +1,246 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-05-22"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "summary-section",
+        "sep1",
+        "on-track-section",
+        "sep2",
+        "done-section",
+        "sep3",
+        "sources-section"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "summary-heading",
+        "summary-text",
+        "summary-badges",
+        "summary-note"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "2 goals total"
+      }
+    },
+    "summary-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-at-risk",
+        "badge-needs-attention",
+        "badge-on-track",
+        "badge-blocked",
+        "badge-done"
+      ]
+    },
+    "badge-at-risk": {
+      "type": "Badge",
+      "props": {
+        "text": "0 at risk",
+        "variant": "secondary"
+      }
+    },
+    "badge-needs-attention": {
+      "type": "Badge",
+      "props": {
+        "text": "0 needs attention",
+        "variant": "secondary"
+      }
+    },
+    "badge-on-track": {
+      "type": "Badge",
+      "props": {
+        "text": "1 on track",
+        "variant": "secondary"
+      }
+    },
+    "badge-blocked": {
+      "type": "Badge",
+      "props": {
+        "text": "0 blocked",
+        "variant": "secondary"
+      }
+    },
+    "badge-done": {
+      "type": "Badge",
+      "props": {
+        "text": "1 done",
+        "variant": "secondary"
+      }
+    },
+    "summary-note": {
+      "type": "Text",
+      "props": {
+        "text": "overall → flat, first run — baseline",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-text"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on-track-text": {
+      "type": "Text",
+      "props": {
+        "text": "Configure notification channels (Telegram, Discord, or Slack) — 0d idle, 8 activity/14d (new)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "done-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done-heading",
+        "done-text"
+      ]
+    },
+    "done-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h3"
+      }
+    },
+    "done-text": {
+      "type": "Text",
+      "props": {
+        "text": "Run first digest — completed 2026-05-21 (crypto digest sent via ./notify; logged in MEMORY.md Recent Digests)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-stack"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "source-logs",
+        "source-git",
+        "source-gh-pr",
+        "source-gh-issue",
+        "source-cron"
+      ]
+    },
+    "source-logs": {
+      "type": "Text",
+      "props": {
+        "text": "logs = ok",
+        "variant": "caption"
+      }
+    },
+    "source-git": {
+      "type": "Text",
+      "props": {
+        "text": "git = ok",
+        "variant": "caption"
+      }
+    },
+    "source-gh-pr": {
+      "type": "Text",
+      "props": {
+        "text": "gh_pr = ok",
+        "variant": "caption"
+      }
+    },
+    "source-gh-issue": {
+      "type": "Text",
+      "props": {
+        "text": "gh_issue = ok",
+        "variant": "caption"
+      }
+    },
+    "source-cron": {
+      "type": "Text",
+      "props": {
+        "text": "cron-state = ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

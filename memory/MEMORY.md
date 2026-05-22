@@ -31,3 +31,23 @@ cron; inbound messaging via Telegram (live). Fleet exited bootstrap on 2026-05-2
 | 2026-05-21 | The 100x Fix: Neuro-Symbolic AI & the AI Energy Crisis | AI / energy efficiency |
 | 2026-05-21 | competitor-launch-radar | competitive intel |
 | 2026-05-21 | last30 — bitcoin (30d) | crypto |
+| 2026-05-21 | The 100x Fix: Why Neuro-Symbolic AI Could Defuse the Energy Crisis It Created | AI / neuro-symbolic AI energy efficiency |
+
+## Recent Digests
+| Date | Type | Key Topics |
+|------|------|------------|
+| 2026-05-21 | crypto | Japan stablecoins, Hyperliquid FDV, Strategy $2B BTC |
+
+## Skills Built
+| Skill | Date | Notes |
+|-------|------|-------|
+
+## Lessons Learned
+- Digest format: Markdown with clickable links, under 4000 chars
+- Always save files AND commit before logging
+
+## Next Priorities
+- Configure notification channels (Telegram, Discord, or Slack)
+
+## Completed Goals
+- Run first digest — completed 2026-05-21
