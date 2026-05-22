@@ -1,0 +1,447 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-05-22"
+      },
+      "children": [
+        "tldr",
+        "sep1",
+        "headlines-h",
+        "headlines-group",
+        "sep2",
+        "notable-h",
+        "notable-group",
+        "sep3",
+        "decisions-h",
+        "decisions-group",
+        "sep4",
+        "footer"
+      ]
+    },
+    "tldr": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "ISS-003 filed and PR #8 open — reflect cleaned the house, but reppo is 0 on-chain all day until that PR merges"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "headlines-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headlines-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hl-1",
+        "hl-2",
+        "hl-3",
+        "hl-4"
+      ]
+    },
+    "hl-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-1-text",
+        "hl-1-link"
+      ]
+    },
+    "hl-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY.md rewritten, topic files created, ISS-002 reconciled"
+      }
+    },
+    "hl-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/MEMORY.md",
+        "href": "memory/MEMORY.md"
+      }
+    },
+    "hl-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-2-text",
+        "hl-2-link"
+      ]
+    },
+    "hl-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-digest — ISS-003 filed (postprocess code: UNKNOWN, recurred 2×)"
+      }
+    },
+    "hl-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/issues/ISS-003.md",
+        "href": "memory/issues/ISS-003.md"
+      }
+    },
+    "hl-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #8 opened — fix: surface real dry-run error in postprocess",
+        "href": "https://github.com/anajuliabit/aeon/pull/8",
+        "source": "GitHub"
+      }
+    },
+    "hl-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-4-text",
+        "hl-4-badge",
+        "hl-4-link"
+      ]
+    },
+    "hl-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness — 20 skills audited"
+      }
+    },
+    "hl-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FRESHNESS_OK",
+        "variant": "default"
+      }
+    },
+    "hl-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/skill-freshness-2026-05-22.md",
+        "href": "articles/skill-freshness-2026-05-22.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "notable-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n1-label",
+        "n1-badge",
+        "n1-stat"
+      ]
+    },
+    "n1-label": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief",
+        "variant": "lead"
+      }
+    },
+    "n1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-002/soul focus"
+      }
+    },
+    "n1-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "cron entries healthy at 07:00",
+        "value": "11"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n2-label",
+        "n2-stat",
+        "n2-badges"
+      ]
+    },
+    "n2-label": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending",
+        "variant": "lead"
+      }
+    },
+    "n2-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "repos picked",
+        "value": "8"
+      }
+    },
+    "n2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n2-badge1",
+        "n2-badge2"
+      ]
+    },
+    "n2-badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "codegraph TOP"
+      }
+    },
+    "n2-badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "3 ACCELERATING"
+      }
+    },
+    "notable-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n3-label",
+        "n3-stat",
+        "n3-badges"
+      ]
+    },
+    "n3-label": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — VVV",
+        "variant": "lead"
+      }
+    },
+    "n3-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "24h change",
+        "value": "+11.5%",
+        "trend": "up"
+      }
+    },
+    "n3-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n3-badge1",
+        "n3-badge2"
+      ]
+    },
+    "n3-badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "HYPER clean"
+      }
+    },
+    "n3-badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "REPPO clean"
+      }
+    },
+    "notable-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4-label",
+        "n4-tvl",
+        "n4-dex",
+        "n4-mover"
+      ]
+    },
+    "n4-label": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview",
+        "variant": "lead"
+      }
+    },
+    "n4-tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$83.4B",
+        "delta": "flat"
+      }
+    },
+    "n4-dex": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX volume",
+        "value": "+8%",
+        "trend": "up"
+      }
+    },
+    "n4-mover": {
+      "type": "Stat",
+      "props": {
+        "label": "Spark (top mover)",
+        "value": "+28%",
+        "trend": "up"
+      }
+    },
+    "notable-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n5-label",
+        "n5-queued",
+        "n5-confirmed",
+        "n5-alert"
+      ]
+    },
+    "n5-label": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm ×4",
+        "variant": "lead"
+      }
+    },
+    "n5-queued": {
+      "type": "Stat",
+      "props": {
+        "label": "intents queued",
+        "value": "4"
+      }
+    },
+    "n5-confirmed": {
+      "type": "Stat",
+      "props": {
+        "label": "confirmed on-chain",
+        "value": "0"
+      }
+    },
+    "n5-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "REPPO_PRIVATE_KEY unset + ISS-003 blocking"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "decisions-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dec-1",
+        "dec-2"
+      ]
+    },
+    "dec-1": {
+      "type": "Text",
+      "props": {
+        "text": "Merge PR #8 — unblocks all reppo on-chain writes; ISS-003 blocked every swarm run today",
+        "variant": "body"
+      }
+    },
+    "dec-2": {
+      "type": "Text",
+      "props": {
+        "text": "Fill soul/ files — all content skills ran in neutral voice all day; 0 progress since bootstrap",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-collapsed",
+        "footer-sources"
+      ]
+    },
+    "footer-collapsed": {
+      "type": "Text",
+      "props": {
+        "text": "+7 collapsed: heartbeat (×3), search-skill, skill-health, goal-tracker, action-converter",
+        "variant": "caption"
+      }
+    },
+    "footer-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: log=ok · cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
