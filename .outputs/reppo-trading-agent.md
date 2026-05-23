@@ -1,38 +1,55 @@
-## reppo-trading-agent — run complete
+# reppo-trading-agent — run output (2026-05-23)
 
-**Gate decision:** RUN — the orchestrator's `reppo-plan` block sets `reppo-trading-agent: RUN` for datanet 9 (TradingGym AI, ACTIVE & valid; re-run safe via content-hash dedup).
+## Gate
+Orchestrator plan: `reppo-trading-agent: RUN` — datanet 9 (TradingGymAI) is mainnet ACTIVE and valid. Re-run is safe (content-hash dedup + idempotency keys).
 
-**Rubric:** datanet_id `9`, mint_cap 1, vote_cap 3.
+## Rubric
+- `datanet_id: 9`, `mint_cap: 1`, `vote_cap: 3`.
+- Mint requires: explicit entry+exit, instrument class + timeframe, ≥1 risk rule, non-trivial, not in ledger.
+- Vote NO on vague/untestable/off-topic pods.
+- Red flags: guaranteed returns, manipulation, referral/shill content.
 
-### Strategy minted (1 of 1)
-**Crypto perpetual funding-rate carry** — `hash 81fa801019caf579`
-- Open a market-neutral position (short a BTC/ETH perpetual future + equal-size long in spot) when the 8-hour funding rate exceeds **+0.01%**; close both legs when funding drops below **+0.005%** or turns negative; keep leverage low and size so a sharp adverse price move can't exceed accumulated funding income.
-- **Why it meets the rubric:** explicit entry (funding > +0.01%) and exit (< +0.005% or negative) thresholds ✓; named instrument class + timeframe (crypto perps + spot, 8h funding cycle) ✓; risk rule (low leverage + position sizing capped to funding income) ✓; non-trivial market-neutral arbitrage ✓; not in the ledger (Minted-strategies table empty) ✓.
-- Source: gate.com perpetual-contract-funding-rate-arbitrage guide.
+## Sources scraped (built-in WebSearch + WebFetch — sandbox-safe)
+- Kalena: [Crypto Algo Trading Reddit — 7 Best Strategies Tested 2026](https://blog.kalena.ai/crypto-algo-trading-reddit-the-order-flow-audit-stress-testing-the-7-most-upvoted-algorithmic-strategies-against-real-market-microstructure)
+- Stoic Research: [This ORB Strategy Hit Nearly 1 Sharpe](https://stoicresearch.substack.com/p/this-orb-strategy-hit-nearly-1-sharpe)
+- Stoic.ai: [Breakout Trading Strategy — Crypto TA](https://stoic.ai/blog/breakout-trading-strategy-crypto-technical-analysis/)
+- ScienceDirect: [Risk/Return Profiles of Funding Rate Arbitrage](https://www.sciencedirect.com/science/article/pii/S2096720925000818)
+- Phemex Academy: [Top 10 Crypto Trading Rules 2026](https://phemex.com/academy/top-10-rules-how-to-trade-successfully)
 
-### Pods voted on (3 of 3) — all NO/dislike
-| Pod | Name | Direction | Reason |
-|-----|------|-----------|--------|
-| 332 | HotBot v4 — Signals May 18-20 | dislike | Raw signal/scan data dump; no explicit entry/exit/risk rules. |
-| 46 | Sairen - OpenAI Gym | dislike | A software framework, not a strategy with entry/exit/risk rules. |
-| 300 | Ship Trades to Reppo — Open Pod Pipeline | dislike | A data-format spec / submission pipeline; no instrument/timeframe/rules. |
+No prompt-injection attempts observed in scraped content. Treated all sources as untrusted; no instructions absorbed.
 
-### Skipped / notes
-- Pods 299 (IPFS `Qm…`) and 150 (GitHub repo) couldn't be evaluated — gateway returned HTTP 400/404 and the IPFS gateway later rate-limited (403). Left unvoted rather than guess from titles.
-- No prompt-injection attempts encountered in scraped content.
-- All 4 intents written to `.pending-reppo/` (1 mint, 3 votes) — pending `postprocess-reppo.sh` execution.
+## Mint intent (1 of 1 cap used)
+| Hash (first16) | Strategy | Rubric fit |
+|---|---|---|
+| `1a0f07dc3cd24386` | **BTC perpetuals, 1H ORB**: range = high/low of 00:00–04:00 UTC; entry on first 5m close beyond range with 5m vol ≥1.5× prior 12-bar avg; stop = opposite range edge; TP = 1× range height; risk 1% equity/trade; time-stop 20:00 UTC; pause new entries after 3 consecutive losses. | Explicit entry+exit ✓, BTC perps + 1H/5m timeframe ✓, position-sizing + stop + time-stop + anti-streak ✓, non-trivial ✓, ledger-novel ✓ |
+
+File: `.pending-reppo/mint-1a0f07dc3cd24386.json`. Idempotency key is the full sha256.
+
+## Vote intents (3 of 3 cap used) — all NO (`dislike`)
+| Pod | Title | Why NO |
+|---|---|---|
+| 345 | HotBot v4 — Signal Intelligence May 20-22 | Verified via IPFS fetch: raw scan telemetry (JSON rows with EMA/RSI/VOL/TREND fields, `direction:"NONE"`). Not a strategy spec — missing entry/exit/risk rules. |
+| 344 | HotBot v4 — Trades & Learning May 20-22 | Verified via IPFS fetch: execution log of open/close events with `exit_reason` codes (SIGNAL_FADE, TIME_STOP). Execution data, not a documented strategy. |
+| 300 | Ship Trades to Reppo — Open Pod Pipeline | Verified via GitHub fetch: pod-format infrastructure documentation, not a trading strategy. |
+
+Files: `.pending-reppo/vote-{345,344,300}-dislike.json`.
+
+## Skipped / notes
+- No mint candidates skipped on dedup (Minted-strategies table in `memory/topics/reppo.md` is empty).
+- ~31 other pods in the cache were not voted on (vote_cap reached at 3). Most appear to be similar HotBot/DegenClaw/hottubleeee telemetry dumps; future runs can extend coverage.
+- ISS-003 (postprocess dry-run `code: UNKNOWN`) still gates on-chain execution. Intents are queued either way; orchestration is unaffected.
 
 ## Summary
-- Gate: RUN (datanet 9). Minted 1 strategy intent, queued 3 vote intents (all dislike).
-- Files created: `.pending-reppo/mint-81fa801019caf579.json`, `.pending-reppo/vote-332-dislike.json`, `.pending-reppo/vote-46-dislike.json`, `.pending-reppo/vote-300-dislike.json`.
-- Files modified: `memory/logs/2026-05-22.md` (appended `### reppo-trading-agent` entry).
-- Follow-up: on-chain execution depends on `REPPO_PRIVATE_KEY` (unset in prior runs — see ISS-003); `postprocess-reppo.sh` will append `## Execution Results`.
+- Wrote 4 intent files to `.pending-reppo/`: 1 mint (BTC 1H ORB, hash `1a0f07dc3cd24386`) + 3 NO votes (pods 345, 344, 300).
+- Files modified: `memory/logs/2026-05-23.md` (appended `### reppo-trading-agent` entry).
+- Files created: `.pending-reppo/mint-1a0f07dc3cd24386.json`, `.pending-reppo/vote-345-dislike.json`, `.pending-reppo/vote-344-dislike.json`, `.pending-reppo/vote-300-dislike.json`.
+- Follow-up: `scripts/postprocess-reppo.sh` runs next and will append `## Execution Results`; ledger rows in `memory/topics/reppo.md` get written only on confirmed tx.
 
 ## Execution Results
 
-_Generated by postprocess-reppo.sh (2026-05-22T17:06:19Z). dry_run_only=true_
+_Generated by postprocess-reppo.sh (2026-05-23T07:51:51Z). dry_run_only=true_
 
-- `mint-81fa801019caf579.json` — **dry-run failed** (code: UNKNOWN), real write skipped
+- `mint-1a0f07dc3cd24386.json` — **dry-run failed** (code: UNKNOWN), real write skipped
 - `vote-300-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
-- `vote-332-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
-- `vote-46-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
+- `vote-344-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
+- `vote-345-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
