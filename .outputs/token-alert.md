@@ -1,7 +1,11 @@
-*Token Alert — 2026-05-22*
+*Token Alert — 2026-05-23*
 
-VVV (Venice Token): $19.00 (up 11.5% 24h)
-Volume: $97.9M | Market cap: $867.5M
-Trigger: 24h price change exceeds 10% threshold
+REPPO: $0.01937704 (down 16.2% 24h)
+Volume: $2.81M
+Trigger: 24h change exceeds 10% threshold
 
-Other tracked: HYPER $0.1177 (+1.5%), REPPO $0.0231 (-4.5%) — no anomalies. Volume-spike check skipped: no historical baseline on first run.
+HYPER: $0.10365 (down 11.9% 24h)
+Volume: $29.1M
+Trigger: 24h change exceeds 10% threshold
+
+VVV: $17.40 (down 8.9% 24h) — no alert, under threshold

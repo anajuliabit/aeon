@@ -1,0 +1,143 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-05-23"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stack-reppo",
+        "stack-hyper",
+        "stack-vvv"
+      ]
+    },
+    "stack-reppo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-reppo",
+        "stat-reppo",
+        "text-reppo-volume",
+        "badge-reppo"
+      ]
+    },
+    "heading-reppo": {
+      "type": "Heading",
+      "props": {
+        "text": "REPPO",
+        "level": "h3"
+      }
+    },
+    "stat-reppo": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.01937704",
+        "delta": "16.2%",
+        "trend": "down"
+      }
+    },
+    "text-reppo-volume": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: $2.81M"
+      }
+    },
+    "badge-reppo": {
+      "type": "Badge",
+      "props": {
+        "text": "Trigger: 24h change exceeds 10% threshold",
+        "variant": "destructive"
+      }
+    },
+    "stack-hyper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-hyper",
+        "stat-hyper",
+        "text-hyper-volume",
+        "badge-hyper"
+      ]
+    },
+    "heading-hyper": {
+      "type": "Heading",
+      "props": {
+        "text": "HYPER",
+        "level": "h3"
+      }
+    },
+    "stat-hyper": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.10365",
+        "delta": "11.9%",
+        "trend": "down"
+      }
+    },
+    "text-hyper-volume": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: $29.1M"
+      }
+    },
+    "badge-hyper": {
+      "type": "Badge",
+      "props": {
+        "text": "Trigger: 24h change exceeds 10% threshold",
+        "variant": "destructive"
+      }
+    },
+    "stack-vvv": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-vvv",
+        "stat-vvv",
+        "badge-vvv"
+      ]
+    },
+    "heading-vvv": {
+      "type": "Heading",
+      "props": {
+        "text": "VVV",
+        "level": "h3"
+      }
+    },
+    "stat-vvv": {
+      "type": "Stat",
+      "props": {
+        "value": "$17.40",
+        "delta": "8.9%",
+        "trend": "down"
+      }
+    },
+    "badge-vvv": {
+      "type": "Badge",
+      "props": {
+        "text": "no alert, under threshold",
+        "variant": "outline"
+      }
+    }
+  }
+}
