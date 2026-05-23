@@ -1,0 +1,42 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve",
+        "description": "Clarified token-alert step 2 rules"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "details",
+        "pr-link"
+      ]
+    },
+    "details": {
+      "type": "Text",
+      "props": {
+        "text": "volume-spike needs 5-pt baseline; threshold-cross uses new Price Floor/Ceiling cols",
+        "variant": "body"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #9",
+        "href": "https://github.com/anajuliabit/aeon/pull/9",
+        "source": "GitHub"
+      }
+    }
+  }
+}
