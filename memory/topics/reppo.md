@@ -21,3 +21,4 @@ intent is not a mint.
 | 2026-05-22 | trading agent RUN (datanet 9) — 1 mint + 3 vote intents queued; postprocess skipped all (REPPO_PRIVATE_KEY unset); 0 executed on-chain; 14 unassigned datanets | 0 | 0 | 0 |
 | 2026-05-22 | trading agent RUN (datanet 9) — 1 mint + 3 vote intents queued; postprocess ran dry-run-only, all 4 dry-runs failed (code UNKNOWN); 0 executed on-chain; 14 unassigned datanets | 0 | 0 | 4 |
 | 2026-05-22 | trading agent RUN (datanet 9) — 1 mint (funding-rate carry) + 3 vote intents queued; postprocess ran dry-run-only, all 4 dry-runs failed (code UNKNOWN); 0 executed on-chain; 14 unassigned datanets | 0 | 0 | 4 |
+| 2026-05-23 | trading agent RUN (datanet 9) — 1 mint (BTC 1H ORB, hash 1a0f07dc3cd24386) + 3 NO vote intents queued; postprocess ran dry-run-only, all 4 dry-runs failed (code UNKNOWN); 0 executed on-chain; 14 unassigned datanets | 0 | 0 | 4 |

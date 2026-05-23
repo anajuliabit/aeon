@@ -1,0 +1,249 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-swarm Orchestrator",
+        "description": "2026-05-23"
+      },
+      "children": [
+        "text_rundata",
+        "sep1",
+        "section_agent",
+        "sep2",
+        "section_votes",
+        "sep3",
+        "section_postprocess",
+        "sep4",
+        "section_issues",
+        "sep5",
+        "section_actions",
+        "sep6",
+        "section_datanets"
+      ]
+    },
+    "text_rundata": {
+      "type": "Text",
+      "props": {
+        "text": "Orchestrator RUN'd datanet 9 (TradingGymAI)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_agent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "agent_title",
+        "agent_queued",
+        "agent_strategy"
+      ]
+    },
+    "agent_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Trading Agent",
+        "level": "h3"
+      }
+    },
+    "agent_queued": {
+      "type": "Text",
+      "props": {
+        "text": "Queued: 1 mint"
+      }
+    },
+    "agent_strategy": {
+      "type": "Text",
+      "props": {
+        "text": "Strategy: BTC 1H ORB | Hash: 1a0f07dc3cd24386"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_votes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_title",
+        "votes_badge",
+        "votes_pods",
+        "votes_note"
+      ]
+    },
+    "votes_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Voting Results",
+        "level": "h3"
+      }
+    },
+    "votes_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "3 NO votes",
+        "variant": "destructive"
+      }
+    },
+    "votes_pods": {
+      "type": "Text",
+      "props": {
+        "text": "Pod IDs: 345, 344, 300"
+      }
+    },
+    "votes_note": {
+      "type": "Text",
+      "props": {
+        "text": "Raw telemetry / infra docs, not strategies per rubric",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_postprocess": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "postproc_title",
+        "postproc_mode",
+        "postproc_alert"
+      ]
+    },
+    "postproc_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Postprocess Results",
+        "level": "h3"
+      }
+    },
+    "postproc_mode": {
+      "type": "Badge",
+      "props": {
+        "text": "Dry-run only",
+        "variant": "outline"
+      }
+    },
+    "postproc_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Intent Failures",
+        "message": "All 4 intents failed with code UNKNOWN",
+        "type": "error"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issues_title",
+        "issue_iss003",
+        "issue_pr008"
+      ]
+    },
+    "issues_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h3"
+      }
+    },
+    "issue_iss003": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-003",
+        "message": "Still open",
+        "type": "warning"
+      }
+    },
+    "issue_pr008": {
+      "type": "Alert",
+      "props": {
+        "title": "PR #8",
+        "message": "Pending merge",
+        "type": "info"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "actions_title",
+        "actions_stat"
+      ]
+    },
+    "actions_title": {
+      "type": "Heading",
+      "props": {
+        "text": "On-Chain Actions",
+        "level": "h3"
+      }
+    },
+    "actions_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Executed",
+        "value": "0"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_datanets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "datanets_title",
+        "datanets_stat"
+      ]
+    },
+    "datanets_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Datanet Catalog",
+        "level": "h3"
+      }
+    },
+    "datanets_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Unassigned datanets remaining",
+        "value": "14"
+      }
+    }
+  }
+}
