@@ -1,0 +1,189 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Reflect"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "title",
+        "sep1",
+        "issue-closed",
+        "sep2",
+        "blockers-section",
+        "sep3",
+        "changes-section"
+      ]
+    },
+    "title": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory consolidated — 2026-05-23",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue-closed": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-iss003",
+        "text-iss003-closed",
+        "text-wrapper-gone"
+      ]
+    },
+    "badge-iss003": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-003"
+      }
+    },
+    "text-iss003-closed": {
+      "type": "Text",
+      "props": {
+        "text": "closed by PR #8;"
+      }
+    },
+    "text-wrapper-gone": {
+      "type": "Text",
+      "props": {
+        "text": "the UNKNOWN-code wrapper is gone"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blockers-heading",
+        "iss004-item",
+        "iss005-item"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Text",
+      "props": {
+        "text": "Real blockers:",
+        "variant": "lead"
+      }
+    },
+    "iss004-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-iss004",
+        "text-iss004"
+      ]
+    },
+    "badge-iss004": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-004"
+      }
+    },
+    "text-iss004": {
+      "type": "Text",
+      "props": {
+        "text": "publisher needs subnet grant"
+      }
+    },
+    "iss005-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-iss005",
+        "text-iss005"
+      ]
+    },
+    "badge-iss005": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-005"
+      }
+    },
+    "text-iss005": {
+      "type": "Text",
+      "props": {
+        "text": "vote pods not valid for current epoch"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "changes-heading",
+        "change-memory",
+        "change-fleet",
+        "change-index"
+      ]
+    },
+    "changes-heading": {
+      "type": "Text",
+      "props": {
+        "text": "Files updated:",
+        "variant": "lead"
+      }
+    },
+    "change-memory": {
+      "type": "Text",
+      "props": {
+        "text": "• MEMORY.md trimmed (stale bootstrap sections out)"
+      }
+    },
+    "change-fleet": {
+      "type": "Text",
+      "props": {
+        "text": "• topics/fleet.md updated"
+      }
+    },
+    "change-index": {
+      "type": "Text",
+      "props": {
+        "text": "• INDEX.md refreshed"
+      }
+    }
+  }
+}

@@ -1,1 +1,1 @@
-Memory consolidated — 2026-05-22
+Memory consolidated — 2026-05-23. ISS-003 closed by PR #8; the UNKNOWN-code wrapper is gone, and the real blockers now surface as ISS-004 (publisher needs subnet grant) and ISS-005 (vote pods not valid for current epoch). MEMORY.md trimmed (stale bootstrap sections out), topics/fleet.md updated, INDEX.md refreshed.
