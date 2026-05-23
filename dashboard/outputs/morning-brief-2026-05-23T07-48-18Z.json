@@ -1,0 +1,174 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-05-23"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3",
+        "sep_1",
+        "heading_since",
+        "bullet_1",
+        "bullet_2",
+        "bullet_3",
+        "bullet_4",
+        "bullet_5",
+        "sep_2",
+        "heading_running",
+        "task_1",
+        "task_2",
+        "task_3",
+        "task_4",
+        "task_5",
+        "task_6",
+        "task_7",
+        "task_8"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. Merge PR #8 (ISS-003 fix) — why now: every reppo-swarm run today returns 0 on-chain."
+      }
+    },
+    "focus_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. Populate soul/ files — why now: 5 content skills today still ship in neutral voice."
+      }
+    },
+    "focus_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. Assign agents to the 14 unassigned reppo datanets — why now: surfaced 4 runs in a row, untouched."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "bullet_1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-003 filed and PR #8 opened (17:22 UTC) — still no reviews, no checks, mergeable UNKNOWN."
+      }
+    },
+    "bullet_2": {
+      "type": "Text",
+      "props": {
+        "text": "reflect rewrote MEMORY.md from the stale template; ISS-002 closed (chain verified running)."
+      }
+    },
+    "bullet_3": {
+      "type": "Text",
+      "props": {
+        "text": "chain:reppo-swarm ran 4× — every postprocess dry-run failed with code UNKNOWN."
+      }
+    },
+    "bullet_4": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter ran BOOTSTRAP — 5 actions, anchored PR-8, soul, memory, ISS-002."
+      }
+    },
+    "bullet_5": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap delivered for 05-22: 4 headlines, 5 notable, 2 decisions queued."
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "task_1": {
+      "type": "Text",
+      "props": {
+        "text": "chain:reppo-swarm @ 07:00 UTC"
+      }
+    },
+    "task_2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness + heartbeat @ 08:00 UTC"
+      }
+    },
+    "task_3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00 UTC"
+      }
+    },
+    "task_4": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert + defi-overview @ 12:00 UTC"
+      }
+    },
+    "task_5": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill + heartbeat @ 14:00 UTC"
+      }
+    },
+    "task_6": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker / skill-health / reflect / action-converter / self-improve @ 18:00 UTC"
+      }
+    },
+    "task_7": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 20:00 UTC"
+      }
+    },
+    "task_8": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap @ 21:00 UTC"
+      }
+    }
+  }
+}
