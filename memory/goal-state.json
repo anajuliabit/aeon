@@ -1,15 +1,15 @@
 {
-  "run_at": "2026-05-22T18:25:22Z",
+  "run_at": "2026-05-23T18:05:00Z",
   "goals": {
-    "configure-notification-channels": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-05-22"
+    "keep-reppo-swarm-chain-producing-real-on-chain-output": {
+      "status": "BLOCKED",
+      "activity_count_14d": 24,
+      "last_activity_date": "2026-05-23"
     },
-    "run-first-digest": {
-      "status": "DONE",
-      "activity_count_14d": 6,
-      "last_activity_date": "2026-05-22"
+    "populate-soul-files": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 11,
+      "last_activity_date": "2026-05-23"
     }
   }
 }

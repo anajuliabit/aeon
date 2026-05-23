@@ -1,0 +1,292 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-05-23"
+      },
+      "children": [
+        "summary-section",
+        "sep1",
+        "blocked-section",
+        "sep2",
+        "on-track-section",
+        "sep3",
+        "sources-section"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "summary-text",
+        "summary-note"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "Summary: 2 goals — 0 at risk, 0 needs attention, 1 on track, 1 blocked, 0 done",
+        "variant": "lead"
+      }
+    },
+    "summary-note": {
+      "type": "Text",
+      "props": {
+        "text": "no prior snapshot for current goal set — first run after reflect rewrote goals",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-goal",
+        "blocked-status-1",
+        "blocked-status-2",
+        "blocked-action"
+      ]
+    },
+    "blocked-goal": {
+      "type": "Text",
+      "props": {
+        "text": "Keep the reppo-swarm chain producing real on-chain output",
+        "variant": "lead"
+      }
+    },
+    "blocked-status-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "status-1-text",
+        "iss-003-link"
+      ]
+    },
+    "status-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "blocked by",
+        "variant": "body"
+      }
+    },
+    "iss-003-link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-003",
+        "href": "https://github.com/reppo-swarm/aeon/blob/main/memory/issues/ISS-003.md"
+      }
+    },
+    "blocked-status-2": {
+      "type": "Text",
+      "props": {
+        "text": "since 2026-05-22; PR #8 merged today but 0 on-chain across every digest run; new blockers filed today:",
+        "variant": "body"
+      }
+    },
+    "blocked-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "iss-004-link",
+        "iss-004-text",
+        "iss-005-link",
+        "iss-005-text"
+      ]
+    },
+    "iss-004-link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-004",
+        "href": "https://github.com/reppo-swarm/aeon/blob/main/memory/issues/ISS-004.md"
+      }
+    },
+    "iss-004-text": {
+      "type": "Text",
+      "props": {
+        "text": "publisher subnet",
+        "variant": "caption"
+      }
+    },
+    "iss-005-link": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-005",
+        "href": "https://github.com/reppo-swarm/aeon/blob/main/memory/issues/ISS-005.md"
+      }
+    },
+    "iss-005-text": {
+      "type": "Text",
+      "props": {
+        "text": "invalid epoch pods",
+        "variant": "caption"
+      }
+    },
+    "blocked-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Resolve ISS-004 (publisher lacks subnet access) — now the primary on-chain blocker post PR #8",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-item"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on-track-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-goal",
+        "on-track-metrics",
+        "on-track-status"
+      ]
+    },
+    "on-track-goal": {
+      "type": "Text",
+      "props": {
+        "text": "Populate `soul/` files so content skills stop running in neutral voice",
+        "variant": "lead"
+      }
+    },
+    "on-track-metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 11 activity/14d (new)",
+        "variant": "body"
+      }
+    },
+    "on-track-status": {
+      "type": "Text",
+      "props": {
+        "text": "files still template — activity is \"neutral voice\" mentions, not progress",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-list"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "source-logs",
+        "source-git",
+        "source-gh-pr",
+        "source-gh-issue",
+        "source-cron-state"
+      ]
+    },
+    "source-logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs=ok",
+        "variant": "secondary"
+      }
+    },
+    "source-git": {
+      "type": "Badge",
+      "props": {
+        "text": "git=ok",
+        "variant": "secondary"
+      }
+    },
+    "source-gh-pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr=ok",
+        "variant": "secondary"
+      }
+    },
+    "source-gh-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue=ok",
+        "variant": "secondary"
+      }
+    },
+    "source-cron-state": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "secondary"
+      }
+    }
+  }
+}

@@ -42,4 +42,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-23,reppo-digest,claude-opus-4-7,21,11122,736431,35514
 2026-05-23,defi-overview,claude-opus-4-7,62,33452,4127922,84447
 2026-05-23,heartbeat,claude-opus-4-7,12,9324,382906,52331
-2026-05-23,skill-health,claude-opus-4-7,30,14414,979687,82418
+2026-05-23,goal-tracker,claude-opus-4-7,16,13396,600969,53168
