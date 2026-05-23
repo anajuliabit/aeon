@@ -1,27 +1,22 @@
 {
   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "last_notified_at": "2026-05-22T18:25:13Z",
-  "last_run_at": "2026-05-22T18:25:13Z",
+  "last_run_at": "2026-05-23T18:06:13Z",
   "classification": {
     "critical": [],
     "degraded": [],
     "flapping": [],
     "warning": [],
-    "healthy_count": 7,
+    "healthy_count": 12,
     "no_data": [
       "skill-security-scan",
       "autoresearch",
-      "goal-tracker",
-      "skill-health",
       "skill-analytics",
       "self-improve",
-      "reflect",
-      "action-converter",
-      "evening-recap",
       "cost-report",
-      "operator-scorecard",
       "skill-evals",
       "skill-update-check",
+      "operator-scorecard",
       "weekly-review"
     ]
   }
