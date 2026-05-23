@@ -1,0 +1,305 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-05-23"
+      },
+      "children": [
+        "shape",
+        "sep1",
+        "action1",
+        "sep2",
+        "action2",
+        "sep3",
+        "action3",
+        "sep4",
+        "action4",
+        "sep5",
+        "action5",
+        "sep6",
+        "sources"
+      ]
+    },
+    "shape": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape: Unblock reppo on-chain (subnet + epoch), seed soul, assign datanet, close ISS-003.",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1h",
+        "a1cmd",
+        "a1why",
+        "a1done",
+        "a1loop"
+      ]
+    },
+    "a1h": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Run reppo grant-access",
+        "level": "h3"
+      }
+    },
+    "a1cmd": {
+      "type": "Text",
+      "props": {
+        "text": "Run `reppo grant-access --subnet <datanet-9-subnet-id>` for the publisher in REPPO_PRIVATE_KEY — look up id with `reppo query datanet 9`.",
+        "variant": "lead"
+      }
+    },
+    "a1why": {
+      "type": "Text",
+      "props": {
+        "text": "why: Every mint dry-run today reverted with PUBLISHER_LACKS_SUBNET_ACCESS — until granted, ISS-004 keeps the chain at 0 mints.",
+        "variant": "body"
+      }
+    },
+    "a1done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Next reppo-swarm mint dry-run does NOT return PUBLISHER_LACKS_SUBNET_ACCESS.",
+        "variant": "body"
+      }
+    },
+    "a1loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-004-grant-subnet",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2h",
+        "a2cmd",
+        "a2why",
+        "a2done",
+        "a2loop"
+      ]
+    },
+    "a2h": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Patch prefetch-reppo.sh with epoch filtering",
+        "level": "h3"
+      }
+    },
+    "a2cmd": {
+      "type": "Text",
+      "props": {
+        "text": "Patch scripts/prefetch-reppo.sh to write valid_for_epoch per pod from `reppo query pod <id>`, and add a \"filter where valid_for_epoch=true\" rule to skills/reppo-trading-agent/SKILL.md.",
+        "variant": "lead"
+      }
+    },
+    "a2why": {
+      "type": "Text",
+      "props": {
+        "text": "why: All 3 vote dry-runs today failed POD_NOT_VALID_FOR_EPOCH; agent ignores epoch eligibility, wasting vote intents per ISS-005.",
+        "variant": "body"
+      }
+    },
+    "a2done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened touching both files; next run's votes pass dry-run.",
+        "variant": "body"
+      }
+    },
+    "a2loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-005-epoch-filter",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3h",
+        "a3cmd",
+        "a3why",
+        "a3done",
+        "a3loop"
+      ]
+    },
+    "a3h": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Draft soul/SOUL.md and soul/STYLE.md",
+        "level": "h3"
+      }
+    },
+    "a3cmd": {
+      "type": "Text",
+      "props": {
+        "text": "Draft soul/SOUL.md Identity + Worldview + Interests and soul/STYLE.md Tone + Anti-patterns from the 2026-05-21 Telegram thread (positive-base-summer redo, LIT CA question, unreliable-numbers feedback) — 3 bullets each, operator's phrasing.",
+        "variant": "lead"
+      }
+    },
+    "a3why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 5+ content skills today (morning-brief, github-trending, token-alert, defi-overview, reppo-digest) flagged Soul files still empty, neutral voice.",
+        "variant": "body"
+      }
+    },
+    "a3done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Both files have ≥3 filled bullets in named sections; commit pushed.",
+        "variant": "body"
+      }
+    },
+    "a3loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: soul-empty",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4h",
+        "a4cmd",
+        "a4why",
+        "a4done",
+        "a4loop"
+      ]
+    },
+    "a4h": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Inspect and assign unassigned reppo datanets",
+        "level": "h3"
+      }
+    },
+    "a4cmd": {
+      "type": "Text",
+      "props": {
+        "text": "Inspect 3 unassigned reppo datanets (pick from the 14: e.g. 1, 4, 7) by running `reppo query datanet <id>`, then write `configs/datanets/<name>.md` for one that fits trading-agent's strategy-spec rubric.",
+        "variant": "lead"
+      }
+    },
+    "a4why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 14 unassigned datanets surfaced for 4 consecutive runs with no agent — single-datanet throughput cap.",
+        "variant": "body"
+      }
+    },
+    "a4done": {
+      "type": "Text",
+      "props": {
+        "text": "done: 1 new configs/datanets/<name>.md committed with datanet_id and agent type.",
+        "variant": "body"
+      }
+    },
+    "a4loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: unassigned-datanets",
+        "variant": "outline"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5h",
+        "a5cmd",
+        "a5why",
+        "a5done",
+        "a5loop"
+      ]
+    },
+    "a5h": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Move ISS-003 to Resolved",
+        "level": "h3"
+      }
+    },
+    "a5cmd": {
+      "type": "Text",
+      "props": {
+        "text": "Move ISS-003 to Resolved in memory/issues/INDEX.md (fix_pr = PR #8) and set status: resolved in memory/issues/ISS-003.md.",
+        "variant": "lead"
+      }
+    },
+    "a5why": {
+      "type": "Text",
+      "props": {
+        "text": "why: PR #8 merged today; afternoon reppo-digest now surfaces real error codes (ISS-004/005) — UNKNOWN wrapping is dead.",
+        "variant": "body"
+      }
+    },
+    "a5done": {
+      "type": "Text",
+      "props": {
+        "text": "done: INDEX.md Open section no longer lists ISS-003.",
+        "variant": "body"
+      }
+    },
+    "a5loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-003-cleanup",
+        "variant": "outline"
+      }
+    },
+    "sep6": {
+      "type": "Separator"
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=53 logs=3 topics=4 prs=0 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
