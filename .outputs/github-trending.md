@@ -1,35 +1,20 @@
-*GitHub Trending — 2026-05-22*
+*GitHub Trending — 2026-05-23*
 
-*Top pick* — [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)
-4,294 stars in a single day: every coding agent burns tokens grepping around blindly, and a pre-built local code graph is the obvious fix nobody had shipped well until now.
-
-*AI/ML*
-• [obra/superpowers](https://github.com/obra/superpowers) — ★ 1576 today (202k total) · Shell · [ACCELERATING]
-Turns ad-hoc agent prompting into a versioned skills framework — a repeatable methodology instead of one-off CLAUDE.md tweaks.
-
-• [multica-ai/multica](https://github.com/multica-ai/multica) — ★ 534 today (31k total) · Go · [ACCELERATING]
-Runs coding agents as persistent managed teammates with assigned work, not one-shot CLI invocations.
-
-• [can1357/oh-my-pi](https://github.com/can1357/oh-my-pi) — ★ 500 today (6k total) · TypeScript · [ACCELERATING]
-Terminal coding agent with hash-anchored edits — edits fail loudly if the file changed instead of silently corrupting it.
+*Top pick* — [ruvnet/RuView](https://github.com/ruvnet/RuView)
+WiFi-as-radar in Rust: turn the router you already own into a presence and vital-signs sensor — no camera, no wearable, no extra hardware. Two releases shipped today.
 
 *Devtools*
-• [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) — ★ 4294 today (15k total) · TypeScript · [ACCELERATING]
-Indexes your repo into a graph up front so agents stop blind file-searching — fewer tokens, fewer tool calls, fully local.
+• [Lum1104/Understand-Anything](https://github.com/Lum1104/Understand-Anything) — ★ 1.4k today (19k total) · TypeScript · [ACCELERATING]
+Indexes a repo into a knowledge graph the AI agent can query across sessions — stops you from re-feeding the codebase on every prompt. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI.
 
-• [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) — ★ 656 today (39k total) · Python · [ACCELERATING]
-Wraps arbitrary CLIs so agents can drive any tool — bridges software that has no native agent interface.
+*Data*
+• [Fincept-Corporation/FinceptTerminal](https://github.com/Fincept-Corporation/FinceptTerminal) — ★ 367 today (23k total) · Python · [ACCELERATING]
+Bloomberg-style terminal in Python — fundamentals, markets, macro — for devs who want a quants workbench without the $24k/yr seat.
 
-• [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) — ★ 151 today (41k total) · TypeScript · [ACCELERATING]
-Exposes the Chrome DevTools protocol over MCP so agents can inspect, profile, and debug live pages.
-
-*Infra*
-• [rmyndharis/OpenWA](https://github.com/rmyndharis/OpenWA) — ★ 730 today (6k total) · TypeScript · [ACCELERATING]
-Self-hosted WhatsApp HTTP gateway — own your messaging automation instead of renting a paid cloud API.
-
-*Web/Apps*
-• [truelockmc/streambert](https://github.com/truelockmc/streambert) — ★ 1094 today (4k total) · JavaScript · [ACCELERATING]
-Ad-free, tracker-free desktop streaming client — a Stremio-style app without the extension and account friction.
+*Other*
+• [ruvnet/RuView](https://github.com/ruvnet/RuView) — ★ 978 today (64k total) · Rust · [ACCELERATING]
+Treats WiFi CSI as a sensor input — presence, breathing, heart rate — Rust crate, two releases today.
+(Bucket: not a model, not infra, not a dev tool — it's a sensing primitive that fits no named bucket.)
 
 ---
-sources: trending=ok · gh_api=ok · kept 8/19
+sources: trending=ok · gh_api=ok · kept 3/14

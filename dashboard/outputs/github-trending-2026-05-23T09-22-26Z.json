@@ -1,0 +1,306 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-05-23"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_pick",
+        "stack_ruvview_top",
+        "separator_1",
+        "heading_devtools",
+        "stack_understand",
+        "separator_2",
+        "heading_data",
+        "stack_finceptterminal",
+        "separator_3",
+        "heading_other",
+        "stack_ruvview_other",
+        "separator_4",
+        "sources_info"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h2"
+      }
+    },
+    "stack_ruvview_top": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ruvview_top_link",
+        "ruvview_top_desc"
+      ]
+    },
+    "ruvview_top_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ruvnet/RuView",
+        "href": "https://github.com/ruvnet/RuView"
+      }
+    },
+    "ruvview_top_desc": {
+      "type": "Text",
+      "props": {
+        "text": "WiFi-as-radar in Rust: turn the router you already own into a presence and vital-signs sensor — no camera, no wearable, no extra hardware. Two releases shipped today.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      }
+    },
+    "stack_understand": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "understand_link",
+        "understand_meta",
+        "understand_desc"
+      ]
+    },
+    "understand_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Lum1104/Understand-Anything",
+        "href": "https://github.com/Lum1104/Understand-Anything"
+      }
+    },
+    "understand_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "understand_stat",
+        "understand_lang",
+        "understand_accel"
+      ]
+    },
+    "understand_stat": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1.4k today (19k total)",
+        "variant": "caption"
+      }
+    },
+    "understand_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      }
+    },
+    "understand_accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "understand_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Indexes a repo into a knowledge graph the AI agent can query across sessions — stops you from re-feeding the codebase on every prompt. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_data": {
+      "type": "Heading",
+      "props": {
+        "text": "Data",
+        "level": "h2"
+      }
+    },
+    "stack_finceptterminal": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "finceptterminal_link",
+        "finceptterminal_meta",
+        "finceptterminal_desc"
+      ]
+    },
+    "finceptterminal_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Fincept-Corporation/FinceptTerminal",
+        "href": "https://github.com/Fincept-Corporation/FinceptTerminal"
+      }
+    },
+    "finceptterminal_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "finceptterminal_stat",
+        "finceptterminal_lang",
+        "finceptterminal_accel"
+      ]
+    },
+    "finceptterminal_stat": {
+      "type": "Text",
+      "props": {
+        "text": "★ 367 today (23k total)",
+        "variant": "caption"
+      }
+    },
+    "finceptterminal_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      }
+    },
+    "finceptterminal_accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "finceptterminal_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Bloomberg-style terminal in Python — fundamentals, markets, macro — for devs who want a quants workbench without the $24k/yr seat.",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other",
+        "level": "h2"
+      }
+    },
+    "stack_ruvview_other": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ruvview_other_link",
+        "ruvview_other_meta",
+        "ruvview_other_desc",
+        "ruvview_other_bucket"
+      ]
+    },
+    "ruvview_other_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ruvnet/RuView",
+        "href": "https://github.com/ruvnet/RuView"
+      }
+    },
+    "ruvview_other_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ruvview_other_stat",
+        "ruvview_other_lang",
+        "ruvview_other_accel"
+      ]
+    },
+    "ruvview_other_stat": {
+      "type": "Text",
+      "props": {
+        "text": "★ 978 today (64k total)",
+        "variant": "caption"
+      }
+    },
+    "ruvview_other_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "outline"
+      }
+    },
+    "ruvview_other_accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "ruvview_other_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Treats WiFi CSI as a sensor input — presence, breathing, heart rate — Rust crate, two releases today.",
+        "variant": "body"
+      }
+    },
+    "ruvview_other_bucket": {
+      "type": "Text",
+      "props": {
+        "text": "(Bucket: not a model, not infra, not a dev tool — it's a sensing primitive that fits no named bucket.)",
+        "variant": "caption"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_info": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/14",
+        "variant": "muted"
+      }
+    }
+  }
+}
