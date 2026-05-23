@@ -40,4 +40,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-23,reppo-orchestrator,claude-opus-4-7,15,2862,352906,21525
 2026-05-23,reppo-trading-agent,claude-opus-4-7,48,10772,1891734,67772
 2026-05-23,reppo-digest,claude-opus-4-7,21,11122,736431,35514
-2026-05-23,token-alert,claude-opus-4-7,1149,3947,245681,29179
+2026-05-23,defi-overview,claude-opus-4-7,62,33452,4127922,84447
