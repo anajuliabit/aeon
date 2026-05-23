@@ -1,12 +1,10 @@
-Orchestrator run complete. The catalog and per-datanet detail were both available.
+Catalog is available and datanet 9 is valid/active. One rubric (tradinggymai → reppo-trading-agent) maps to datanet 9; the catalog lists 15 datanets, so 14 are unassigned.
 
-**Plan:** The single rubric file `tradinggymai.md` maps `reppo-trading-agent` to datanet 9. `datanet-tradinggymai.json` shows datanet 9 is `valid:true` and the catalog lists "TradingGym AI" as `ACTIVE` — so RUN. Re-running today is safe (the trading agent dedups strategies by content hash and writes use idempotency keys).
-
-**Discovery:** The catalog holds 15 datanets; only id 9 has a rubric. The other 14 (ids 1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17) are unassigned — no rubric, no agent.
+reppo-trading-agent: RUN — datanet 9 (TradingGym AI) is mainnet ACTIVE and valid:true. Re-running today is safe (content-hash dedup + idempotency keys). 14 unassigned datanets exist in the catalog with no rubric.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 TradingGym AI ACTIVE & valid; re-run safe — dedups by content hash)
+reppo-trading-agent: RUN   (datanet 9 tradinggymai ACTIVE + valid; safe to re-run, dedup handled downstream)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -24,7 +22,7 @@ new-datanet: 17   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Built the RUN/SKIP plan from `configs/datanets/*.md`: 1 RUN (`reppo-trading-agent`, datanet 9), 0 SKIP.
-- Discovered 14 unassigned datanets from the live catalog.
-- Files modified: `memory/logs/2026-05-22.md` (appended `### reppo-orchestrator` entry).
-- Follow-up: 14 datanets remain agentless — they need rubric files if the swarm should cover them.
+- Decision: 1 RUN (reppo-trading-agent → datanet 9), 0 SKIP.
+- Catalog available; 14 unassigned datanets discovered (ids 1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17).
+- Files modified: `memory/logs/2026-05-23.md` (created with reppo-orchestrator log line).
+- Follow-up: downstream trading-agent step picks up the RUN. ISS-003 (postprocess dry-run failures) still blocks on-chain execution — orchestration is unaffected.
