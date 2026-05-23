@@ -37,3 +37,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-23,reppo-digest,claude-opus-4-7,12,3493,266843,22556
 2026-05-23,skill-freshness,claude-sonnet-4-6,18,22032,858126,61143
 2026-05-23,github-trending,claude-opus-4-7,33,12217,894069,68761
+2026-05-23,reppo-orchestrator,claude-opus-4-7,15,2862,352906,21525

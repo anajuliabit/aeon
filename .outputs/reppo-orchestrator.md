@@ -1,10 +1,12 @@
-Catalog is available and datanet 9 is valid/active. One rubric (tradinggymai → reppo-trading-agent) maps to datanet 9; the catalog lists 15 datanets, so 14 are unassigned.
+The reppo-orchestrator skill is short-running (one decision pass), so I'll skip task tracking and emit the plan.
 
-reppo-trading-agent: RUN — datanet 9 (TradingGym AI) is mainnet ACTIVE and valid:true. Re-running today is safe (content-hash dedup + idempotency keys). 14 unassigned datanets exist in the catalog with no rubric.
+---
+
+Datanet catalog is available (15 ACTIVE datanets on mainnet). Only one rubric file exists — `tradinggymai.md` mapping `reppo-trading-agent` to datanet 9, which is `valid: true` and ACTIVE in the catalog. No SKIPs warranted. The other 14 catalog datanets have no rubric assigned.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 tradinggymai ACTIVE + valid; safe to re-run, dedup handled downstream)
+reppo-trading-agent: RUN   (datanet 9 TradingGym AI valid+ACTIVE; re-runs are dedup-safe via strategy hash + idempotency keys)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -22,7 +24,7 @@ new-datanet: 17   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Decision: 1 RUN (reppo-trading-agent → datanet 9), 0 SKIP.
-- Catalog available; 14 unassigned datanets discovered (ids 1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17).
-- Files modified: `memory/logs/2026-05-23.md` (created with reppo-orchestrator log line).
-- Follow-up: downstream trading-agent step picks up the RUN. ISS-003 (postprocess dry-run failures) still blocks on-chain execution — orchestration is unaffected.
+- Read `.reppo-cache/datanets.json` (catalog of 15 ACTIVE datanets), `.reppo-cache/datanet-tradinggymai.json` (valid:true), and `configs/datanets/tradinggymai.md` (datanet_id "9" → reppo-trading-agent).
+- Emitted plan: 1 RUN (reppo-trading-agent on datanet 9), 0 SKIP, 14 unassigned datanets discovered.
+- Appended `### reppo-orchestrator` log entry to `memory/logs/2026-05-23.md`.
+- Follow-up: assign agents/rubrics to the 14 unassigned datanets (carried 4+ runs untouched per today's morning-brief).
