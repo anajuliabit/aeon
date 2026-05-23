@@ -11,15 +11,18 @@ If `${var}` is set, only check that token.
 
 ## Config
 
-This skill reads tracked tokens from a "Tracked Tokens" section in `memory/MEMORY.md`. If the section doesn't exist yet, add it to MEMORY.md or skip this skill.
+This skill reads tracked tokens from a "Tracked Tokens" section in `memory/MEMORY.md`. If the section doesn't exist AND `${var}` is empty, log `TOKEN_ALERT_NO_CONFIG` and exit silently — do not notify, do not invent tokens.
 
 ```markdown
 ## Tracked Tokens
-| Token | CoinGecko ID | Alert Threshold |
-|-------|-------------|-----------------|
-| ETH   | ethereum    | 10%             |
-| SOL   | solana      | 10%             |
+| Token | CoinGecko ID | 24h % Threshold | Price Floor | Price Ceiling |
+|-------|--------------|-----------------|-------------|---------------|
+| ETH   | ethereum     | 10%             | 2000        | 5000          |
+| SOL   | solana       | 10%             |             |               |
 ```
+
+- **24h % Threshold** — overrides the default 10% from step 2 for that token. Blank → use default.
+- **Price Floor / Price Ceiling** — optional absolute USD levels that drive the "threshold-cross" check in step 2. Blank → no cross check for that token.
 
 ---
 
@@ -39,10 +42,10 @@ Steps:
      fi
      ```
    - Compare against last logged price in memory/logs/
-2. Alert if any of these conditions are met:
-   - Price change > 10% in 24h
-   - Volume spike > 3x average
-   - Price crosses a threshold set in MEMORY.md
+2. Alert if any of these conditions are met (evaluate independently per token):
+   - **24h price change** — `|change_24h| >= threshold` (default 10%, or the token-specific override from the Tracked Tokens table).
+   - **Volume spike** — `current_volume_24h >= 3 * mean(volume_24h over the last 5 logged runs)`. **Skip this check if fewer than 5 historical points exist** in `memory/logs/` for the token — log `volume-spike: skipped (n=<count>, need 5)` and continue. Do not invent a baseline.
+   - **Threshold cross** — current price `<= Price Floor` or `>= Price Ceiling` from the Tracked Tokens table AND yesterday's logged price was on the other side of the level (i.e. an actual crossing this run, not a sustained breach). Skip with `threshold-cross: skipped (no Floor/Ceiling configured)` for any token without levels.
 3. If any alerts triggered, send via `./notify`:
    ```
    *Token Alert — ${today}*
