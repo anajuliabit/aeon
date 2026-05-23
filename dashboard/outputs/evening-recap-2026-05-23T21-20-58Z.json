@@ -1,0 +1,517 @@
+{
+  "root": "root-card",
+  "state": {},
+  "elements": {
+    "root-card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-05-23"
+      },
+      "children": [
+        "tldr-section",
+        "sep1",
+        "headlines-section",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "decisions-section",
+        "sep4",
+        "blockers-section",
+        "sep5",
+        "routines-section"
+      ]
+    },
+    "tldr-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tldr-label",
+        "tldr-text"
+      ]
+    },
+    "tldr-label": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h3"
+      }
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "productive audit day — self-improve PR #9 shipped, ISS-003 closed, ISS-004/005 pinned the remaining reppo blockers; on-chain output still zero.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-label",
+        "headlines-items"
+      ]
+    },
+    "headlines-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "headlines-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr9-link",
+        "pr8-link"
+      ]
+    },
+    "pr9-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — token-alert volume-spike rule tightened, PR opened",
+        "href": "https://github.com/anajuliabit/aeon/pull/9"
+      }
+    },
+    "pr8-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "reflect — ISS-003 closed (PR #8 merged); MEMORY.md + fleet.md refreshed",
+        "href": "https://github.com/anajuliabit/aeon/pull/8"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-label",
+        "notable-items"
+      ]
+    },
+    "notable-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reppo-digest-item",
+        "token-alert-item",
+        "skill-freshness-item",
+        "github-trending-item",
+        "defi-overview-item"
+      ]
+    },
+    "reppo-digest-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "reppo-digest-badge",
+        "reppo-digest-text"
+      ]
+    },
+    "reppo-digest-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reppo-digest ×2",
+        "variant": "outline"
+      }
+    },
+    "reppo-digest-text": {
+      "type": "Text",
+      "props": {
+        "text": "4 intents queued; mint blocked ISS-004, votes blocked ISS-005, 0 on-chain",
+        "variant": "body"
+      }
+    },
+    "token-alert-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "token-alert-badge",
+        "token-alert-stats"
+      ]
+    },
+    "token-alert-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "outline"
+      }
+    },
+    "token-alert-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "token-row",
+        "token-summary"
+      ]
+    },
+    "token-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "token-reppo-stat",
+        "token-hyper-stat"
+      ]
+    },
+    "token-reppo-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "REPPO",
+        "value": "-16.2%",
+        "trend": "down"
+      }
+    },
+    "token-hyper-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPER",
+        "value": "-11.9%",
+        "trend": "down"
+      }
+    },
+    "token-summary": {
+      "type": "Text",
+      "props": {
+        "text": "both breach 10% threshold; all 3 tracked tokens down",
+        "variant": "caption"
+      }
+    },
+    "skill-freshness-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-freshness-badge",
+        "skill-freshness-text",
+        "skill-freshness-link"
+      ]
+    },
+    "skill-freshness-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-freshness",
+        "variant": "outline"
+      }
+    },
+    "skill-freshness-text": {
+      "type": "Text",
+      "props": {
+        "text": "FRESHNESS_OK, 20 consumers audited, 0 flagged",
+        "variant": "body"
+      }
+    },
+    "skill-freshness-link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/skill-freshness-2026-05-23.md",
+        "href": "articles/skill-freshness-2026-05-23.md"
+      }
+    },
+    "github-trending-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "github-trending-badge",
+        "github-trending-text",
+        "github-trending-badges"
+      ]
+    },
+    "github-trending-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "outline"
+      }
+    },
+    "github-trending-text": {
+      "type": "Text",
+      "props": {
+        "text": "3 repos picked",
+        "variant": "body"
+      }
+    },
+    "github-trending-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ruview",
+        "badge-understand",
+        "badge-fincept"
+      ]
+    },
+    "badge-ruview": {
+      "type": "Badge",
+      "props": {
+        "text": "RuView",
+        "variant": "secondary"
+      }
+    },
+    "badge-understand": {
+      "type": "Badge",
+      "props": {
+        "text": "Understand-Anything",
+        "variant": "secondary"
+      }
+    },
+    "badge-fincept": {
+      "type": "Badge",
+      "props": {
+        "text": "FinceptTerminal",
+        "variant": "secondary"
+      }
+    },
+    "defi-overview-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "defi-overview-badge",
+        "defi-overview-stats",
+        "defi-overview-summary"
+      ]
+    },
+    "defi-overview-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-overview",
+        "variant": "outline"
+      }
+    },
+    "defi-overview-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "defi-tvl-stat",
+        "defi-solana-stat"
+      ]
+    },
+    "defi-tvl-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "-4.0%",
+        "trend": "down"
+      }
+    },
+    "defi-solana-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana",
+        "value": "-7.7%",
+        "trend": "down"
+      }
+    },
+    "defi-overview-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Uniswap V4 vol +15% standout",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-label",
+        "decisions-items"
+      ]
+    },
+    "decisions-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "decisions-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "Grant datanet 9 subnet access (ISS-004) — operator-only: reppo grant-access --subnet <id>",
+        "variant": "body"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-2-text",
+        "decision-2-link"
+      ]
+    },
+    "decision-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Merge PR #9 token-alert self-improve",
+        "variant": "body"
+      }
+    },
+    "decision-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/9",
+        "href": "https://github.com/anajuliabit/aeon/pull/9"
+      }
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "Assign agents to 14 unassigned reppo datanets or de-prioritize",
+        "variant": "body"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "Populate soul/ files — 5+ content skills still shipping in neutral voice",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-label",
+        "blockers-items"
+      ]
+    },
+    "blockers-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h3"
+      }
+    },
+    "blockers-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker-004",
+        "blocker-005"
+      ]
+    },
+    "blocker-004": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-004 — reppo mint",
+        "message": "PUBLISHER_LACKS_SUBNET_ACCESS (operator action)",
+        "type": "error"
+      }
+    },
+    "blocker-005": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-005 — reppo votes",
+        "message": "POD_NOT_VALID_FOR_EPOCH (needs prefetch + prompt fix)",
+        "type": "error"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "routines-section": {
+      "type": "Text",
+      "props": {
+        "text": "+12 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
