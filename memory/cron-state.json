@@ -103,14 +103,14 @@
     "success_rate": 1
   },
   "chain:reppo-swarm": {
-    "last_dispatch": "2026-05-22T07:41:23Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-23T07:45:20Z",
+    "last_status": "dispatched",
     "last_failed": "2026-05-22T07:42:43Z",
     "last_success": "2026-05-22T17:09:22Z"
   },
   "morning-brief": {
-    "last_dispatch": "2026-05-22T07:41:23Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-23T07:45:20Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-22T07:44:40Z",
     "total_runs": 1,
     "total_successes": 1,
@@ -119,8 +119,8 @@
     "success_rate": 1
   },
   "reppo-swarm": {
-    "last_dispatch": "2026-05-22T07:41:23Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-23T07:45:20Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-22T07:47:52Z",
     "total_runs": 1,
     "total_successes": 1,
