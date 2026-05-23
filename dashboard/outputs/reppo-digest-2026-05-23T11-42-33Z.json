@@ -1,0 +1,219 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-swarm 2026-05-23"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-orchestrator",
+        "sep-1",
+        "section-trading",
+        "sep-2",
+        "section-postprocess",
+        "sep-3",
+        "section-issues"
+      ]
+    },
+    "section-orchestrator": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-orchestrator",
+        "t-orchestrator"
+      ]
+    },
+    "h-orchestrator": {
+      "type": "Heading",
+      "props": {
+        "text": "Orchestrator",
+        "level": "h3"
+      }
+    },
+    "t-orchestrator": {
+      "type": "Text",
+      "props": {
+        "text": "RUN datanet 9 + 14 unassigned datanets"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "section-trading": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-trading",
+        "trading-mint-stack",
+        "t-trading-votes"
+      ]
+    },
+    "h-trading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trading Agent",
+        "level": "h3"
+      }
+    },
+    "trading-mint-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-queued-mint",
+        "badge-eth",
+        "badge-bollinger",
+        "text-hash"
+      ]
+    },
+    "text-queued-mint": {
+      "type": "Text",
+      "props": {
+        "text": "Queued 1 mint"
+      }
+    },
+    "badge-eth": {
+      "type": "Badge",
+      "props": {
+        "text": "ETH/USDT 4H"
+      }
+    },
+    "badge-bollinger": {
+      "type": "Badge",
+      "props": {
+        "text": "Bollinger mean-reversion"
+      }
+    },
+    "text-hash": {
+      "type": "Text",
+      "props": {
+        "text": "60ea32bedbaf0d21",
+        "variant": "caption"
+      }
+    },
+    "t-trading-votes": {
+      "type": "Text",
+      "props": {
+        "text": "3 NO votes on pods 46, 74, 150"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "section-postprocess": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-postprocess",
+        "t-dryrun-mode",
+        "alert-mint",
+        "alert-votes",
+        "stat-onchain"
+      ]
+    },
+    "h-postprocess": {
+      "type": "Heading",
+      "props": {
+        "text": "Postprocess Results",
+        "level": "h3"
+      }
+    },
+    "t-dryrun-mode": {
+      "type": "Text",
+      "props": {
+        "text": "dry-run-only",
+        "variant": "caption"
+      }
+    },
+    "alert-mint": {
+      "type": "Alert",
+      "props": {
+        "title": "Mint",
+        "message": "Failed: PUBLISHER_LACKS_SUBNET_ACCESS",
+        "type": "error"
+      }
+    },
+    "alert-votes": {
+      "type": "Alert",
+      "props": {
+        "title": "Votes (3)",
+        "message": "All failed: POD_NOT_VALID_FOR_EPOCH",
+        "type": "error"
+      }
+    },
+    "stat-onchain": {
+      "type": "Stat",
+      "props": {
+        "label": "On-chain transactions",
+        "value": "0"
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "section-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-issues",
+        "badge-iss-004",
+        "badge-iss-005",
+        "badge-iss-003"
+      ]
+    },
+    "h-issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      }
+    },
+    "badge-iss-004": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-004: mint subnet access (Filed)",
+        "variant": "destructive"
+      }
+    },
+    "badge-iss-005": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-005: vote pod epoch validity (Filed)",
+        "variant": "destructive"
+      }
+    },
+    "badge-iss-003": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-003: still open",
+        "variant": "outline"
+      }
+    }
+  }
+}
