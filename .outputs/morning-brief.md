@@ -1,23 +1,22 @@
-*Morning Brief — 2026-05-23*
+*Morning Brief — 2026-05-24*
 
 *Focus today*
-1. Merge PR #8 (ISS-003 fix) — why now: every reppo-swarm run today returns 0 on-chain.
-2. Populate soul/ files — why now: 5 content skills today still ship in neutral voice.
-3. Assign agents to the 14 unassigned reppo datanets — why now: surfaced 4 runs in a row, untouched.
+1. ISS-004 (operator subnet grant) — why now: every 07:00 reppo chain mints fail until granted
+2. ISS-005 (filter pods by epoch validity) — why now: every vote intent fails POD_NOT_VALID_FOR_EPOCH
+3. Populate soul/ — why now: 5+ content skills run neutral voice today (github-trending, token-alert, defi-overview, search-skill, evening-recap)
 
 *Since yesterday*
-- ISS-003 filed and PR #8 opened (17:22 UTC) — still no reviews, no checks, mergeable UNKNOWN.
-- reflect rewrote MEMORY.md from the stale template; ISS-002 closed (chain verified running).
-- chain:reppo-swarm ran 4× — every postprocess dry-run failed with code UNKNOWN.
-- action-converter ran BOOTSTRAP — 5 actions, anchored PR-8, soul, memory, ISS-002.
-- evening-recap delivered for 05-22: 4 headlines, 5 notable, 2 decisions queued.
+- Merged: PR #8 — ISS-003 closed (UNKNOWN-wrapper bug fixed); two underlying blockers now pinned as ISS-004/005
+- Opened: PR #9 — self-improve tightened token-alert step-2 rules (volume-spike n≥5, threshold-cross floor/ceiling columns)
+- Reflect rewrote MEMORY.md (dropped stale Next Priorities / Lessons dupes); fleet topic refreshed
+- skill-evals Sunday bootstrap: 12/29 coverage, flagged token-alert output_pattern mismatch in evals.json
 
 *Running today*
-- chain:reppo-swarm @ 07:00 UTC
-- skill-freshness + heartbeat @ 08:00 UTC
+- skill-freshness @ 08:00 UTC
+- heartbeat @ 08:00 / 14:00 / 20:00 UTC
 - github-trending @ 09:00 UTC
 - token-alert + defi-overview @ 12:00 UTC
-- search-skill + heartbeat @ 14:00 UTC
-- goal-tracker / skill-health / reflect / action-converter / self-improve @ 18:00 UTC
-- heartbeat @ 20:00 UTC
+- search-skill @ 14:00 UTC
+- goal-tracker / skill-health / reflect / action-converter @ 18:00 UTC
+- skill-update-check @ 19:00 UTC (Sunday)
 - evening-recap @ 21:00 UTC
