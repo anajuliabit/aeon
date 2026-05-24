@@ -1,12 +1,13 @@
-*Goal Tracker — 2026-05-23*
+*Goal Tracker — 2026-05-24*
 
-Summary: 2 goals — 0 at risk, 0 needs attention, 1 on track, 1 blocked, 0 done (no prior snapshot for current goal set — first run after reflect rewrote goals)
+Summary: 3 goals — 0 at risk, 0 needs attention, 2 on track, 1 blocked, 0 done (overall → flat)
 
 BLOCKED
-• Keep the reppo-swarm chain producing real on-chain output — blocked by ISS-003 since 2026-05-22; PR #8 merged today but 0 on-chain across every digest run (new blockers ISS-004 publisher subnet + ISS-005 invalid epoch pods filed today)
-  → Action: Resolve ISS-004 (publisher lacks subnet access) — now the primary on-chain blocker post PR #8
+• Unblock reppo-swarm on-chain output — 31 activity/14d, last today, blocked by ISS-004 (PUBLISHER_LACKS_SUBNET_ACCESS) + ISS-005 (POD_NOT_VALID_FOR_EPOCH, agent-side workaround in place) + ISS-006 (INSUFFICIENT_VOTING_POWER, filed this morning)
+  → Action: Operator runs `reppo grant-access --subnet <datanet-9-subnet>` to clear ISS-004 mint reverts.
 
 ON TRACK
-• Populate `soul/` files so content skills stop running in neutral voice — 0d idle, 11 activity/14d (new); files still template — activity is "neutral voice" mentions, not progress
+• Assign agents to the 14 unassigned reppo datanets — 9 activity/14d, 0d idle (new — all activity is "14 unassigned" mentions, no datanet assigned yet; rule-based pass)
+• Populate soul/ files — 17 activity/14d, 0d idle (was ON TRACK, +55% activity rise, but soul/SOUL.md + soul/STYLE.md still empty templates; activity is "neutral voice" mentions across content skills)
 
 Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok

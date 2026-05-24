@@ -1,15 +1,20 @@
 {
-  "run_at": "2026-05-23T18:05:00Z",
+  "run_at": "2026-05-24T18:35:00Z",
   "goals": {
-    "keep-reppo-swarm-chain-producing-real-on-chain-output": {
+    "unblock-reppo-swarm-on-chain-output": {
       "status": "BLOCKED",
-      "activity_count_14d": 24,
-      "last_activity_date": "2026-05-23"
+      "activity_count_14d": 31,
+      "last_activity_date": "2026-05-24"
+    },
+    "assign-agents-to-the-14-unassigned-reppo-datanets": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 9,
+      "last_activity_date": "2026-05-24"
     },
     "populate-soul-files": {
       "status": "ON_TRACK",
-      "activity_count_14d": 11,
-      "last_activity_date": "2026-05-23"
+      "activity_count_14d": 17,
+      "last_activity_date": "2026-05-24"
     }
   }
 }
