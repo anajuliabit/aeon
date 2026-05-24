@@ -1,0 +1,58 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date",
+        "status"
+      ]
+    },
+    "date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-24",
+        "variant": "muted"
+      }
+    },
+    "status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge",
+        "stat"
+      ]
+    },
+    "badge": {
+      "type": "Badge",
+      "props": {
+        "text": "OK",
+        "variant": "default"
+      }
+    },
+    "stat": {
+      "type": "Stat",
+      "props": {
+        "value": "14",
+        "label": "skills healthy"
+      }
+    }
+  }
+}
