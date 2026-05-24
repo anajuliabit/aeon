@@ -149,8 +149,8 @@
     "success_rate": 1
   },
   "github-trending": {
-    "last_dispatch": "2026-05-23T09:18:26Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-24T09:23:51Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-23T09:22:59Z",
     "total_runs": 2,
     "total_successes": 2,
