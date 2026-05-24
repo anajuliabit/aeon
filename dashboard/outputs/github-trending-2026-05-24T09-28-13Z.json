@@ -1,0 +1,349 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-05-24"
+      },
+      "children": [
+        "top-pick-section",
+        "sep1",
+        "devtools-section",
+        "sep2",
+        "ai-ml-section",
+        "sep3",
+        "web-apps-section",
+        "sep4",
+        "footer"
+      ]
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-pick-heading",
+        "top-pick-repo",
+        "top-pick-desc"
+      ]
+    },
+    "top-pick-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "top-pick-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "anthropics/claude-plugins-official",
+        "href": "https://github.com/anthropics/claude-plugins-official",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "top-pick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic just formalized the Claude Code plugin ecosystem with an official curated registry — the de facto package index for agent extensions.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "devtools-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools-heading",
+        "devtools-item-1"
+      ]
+    },
+    "devtools-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "devtools-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-1-repo",
+        "devtools-1-meta",
+        "devtools-1-desc"
+      ]
+    },
+    "devtools-1-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "anthropics/claude-plugins-official",
+        "href": "https://github.com/anthropics/claude-plugins-official",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "devtools-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-1-stars",
+        "devtools-1-lang",
+        "devtools-1-status"
+      ]
+    },
+    "devtools-1-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 2.2k today (27k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "devtools-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "devtools-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "devtools-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Official Anthropic-managed directory of vetted Claude Code plugins — ends the \"which random skill bundle do I trust\" question.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "ai-ml-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ai-ml-heading",
+        "ai-ml-item-1"
+      ]
+    },
+    "ai-ml-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "ai-ml-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai-ml-1-repo",
+        "ai-ml-1-meta",
+        "ai-ml-1-desc"
+      ]
+    },
+    "ai-ml-1-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NVlabs/LongLive",
+        "href": "https://github.com/NVlabs/LongLive",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "ai-ml-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ai-ml-1-stars",
+        "ai-ml-1-lang",
+        "ai-ml-1-status"
+      ]
+    },
+    "ai-ml-1-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 94 today (1.9k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "ai-ml-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "ai-ml-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "ai-ml-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "LongLive 2.0 ships NVFP4 4-bit quantization + sequence parallelism — 45.7 FPS long video gen, ~2× the BF16 baseline.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "web-apps-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "web-apps-heading",
+        "web-apps-item-1"
+      ]
+    },
+    "web-apps-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "web-apps-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "web-apps-1-repo",
+        "web-apps-1-meta",
+        "web-apps-1-desc"
+      ]
+    },
+    "web-apps-1-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "presenton/presenton",
+        "href": "https://github.com/presenton/presenton",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "web-apps-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "web-apps-1-stars",
+        "web-apps-1-lang",
+        "web-apps-1-status"
+      ]
+    },
+    "web-apps-1-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 241 today (6.6k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "web-apps-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "web-apps-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "web-apps-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Self-hostable AI slide generator with BYO-key for OpenAI/Gemini/Anthropic/Ollama — editable PPTX out, no vendor lock.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/16",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

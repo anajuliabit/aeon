@@ -1,20 +1,19 @@
-*GitHub Trending — 2026-05-23*
+*GitHub Trending — 2026-05-24*
 
-*Top pick* — [ruvnet/RuView](https://github.com/ruvnet/RuView)
-WiFi-as-radar in Rust: turn the router you already own into a presence and vital-signs sensor — no camera, no wearable, no extra hardware. Two releases shipped today.
+*Top pick* — [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
+Anthropic just formalized the Claude Code plugin ecosystem with an official curated registry — the de facto package index for agent extensions.
 
 *Devtools*
-• [Lum1104/Understand-Anything](https://github.com/Lum1104/Understand-Anything) — ★ 1.4k today (19k total) · TypeScript · [ACCELERATING]
-Indexes a repo into a knowledge graph the AI agent can query across sessions — stops you from re-feeding the codebase on every prompt. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI.
+• [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) — ★ 2.2k today (27k total) · Python · [ACCELERATING]
+Official Anthropic-managed directory of vetted Claude Code plugins — ends the "which random skill bundle do I trust" question.
 
-*Data*
-• [Fincept-Corporation/FinceptTerminal](https://github.com/Fincept-Corporation/FinceptTerminal) — ★ 367 today (23k total) · Python · [ACCELERATING]
-Bloomberg-style terminal in Python — fundamentals, markets, macro — for devs who want a quants workbench without the $24k/yr seat.
+*AI/ML*
+• [NVlabs/LongLive](https://github.com/NVlabs/LongLive) — ★ 94 today (1.9k total) · Python · [RETURNING]
+LongLive 2.0 ships NVFP4 4-bit quantization + sequence parallelism — 45.7 FPS long video gen, ~2× the BF16 baseline.
 
-*Other*
-• [ruvnet/RuView](https://github.com/ruvnet/RuView) — ★ 978 today (64k total) · Rust · [ACCELERATING]
-Treats WiFi CSI as a sensor input — presence, breathing, heart rate — Rust crate, two releases today.
-(Bucket: not a model, not infra, not a dev tool — it's a sensing primitive that fits no named bucket.)
+*Web/Apps*
+• [presenton/presenton](https://github.com/presenton/presenton) — ★ 241 today (6.6k total) · TypeScript · [RETURNING]
+Self-hostable AI slide generator with BYO-key for OpenAI/Gemini/Anthropic/Ollama — editable PPTX out, no vendor lock.
 
 ---
-sources: trending=ok · gh_api=ok · kept 3/14
+sources: trending=ok · gh_api=ok · kept 3/16
