@@ -1,0 +1,223 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Action Converter",
+        "description": "5 Actions — 2026-05-24"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_shape",
+        "text_shape",
+        "sep_1",
+        "action_1_heading",
+        "action_1_why",
+        "action_1_done",
+        "action_1_loop",
+        "sep_2",
+        "action_2_heading",
+        "action_2_why",
+        "action_2_done",
+        "action_2_loop",
+        "sep_3",
+        "action_3_heading",
+        "action_3_why",
+        "action_3_done",
+        "action_3_loop",
+        "sep_4",
+        "action_4_heading",
+        "action_4_why",
+        "action_4_done",
+        "action_4_loop",
+        "sep_5",
+        "action_5_heading",
+        "action_5_why",
+        "action_5_done",
+        "action_5_loop",
+        "sep_6",
+        "text_sources"
+      ]
+    },
+    "heading_shape": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape",
+        "level": "h3"
+      }
+    },
+    "text_shape": {
+      "type": "Text",
+      "props": {
+        "text": "Ship PR #9, open ISS-005 PR, bundle operator unblocks, draft soul, triage datanets."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Squash-merge PR #9 via `gh pr merge 9 --squash --delete-branch`, then add a `## Tracked Tokens` table to memory/MEMORY.md with REPPO/HYPER/VVV rows plus Price Floor / Price Ceiling columns.",
+        "level": "h2"
+      }
+    },
+    "action_1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: PR #9 is 24h+ stale; merging closes the silently-skipped token-alert rules already flagged in today's 12:00 log."
+      }
+    },
+    "action_1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #9 closed and `## Tracked Tokens` table exists in MEMORY.md with three rows and Floor/Ceiling columns."
+      }
+    },
+    "action_1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-9-token-alert"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Open a PR closing ISS-005 — patch scripts/prefetch-reppo.sh to record per-pod validityEpoch + currentEpoch, then patch skills/reppo-trading-agent/SKILL.md to drop pods where validityEpoch != currentEpoch before voting.",
+        "level": "h2"
+      }
+    },
+    "action_2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: ISS-005 is the only on-chain blocker not needing operator action — every vote dry-run today reverted POD_NOT_VALID_FOR_EPOCH."
+      }
+    },
+    "action_2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened touching both files; description references ISS-005; reppo-digest dry-run on the branch shows 0 vote reverts."
+      }
+    },
+    "action_2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-005-epoch-filter"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Bundle ISS-004 + ISS-006 operator unblocks: write exact `reppo grant-access --subnet <id from configs/datanets/tradinggymai.md>` and `reppo lock <amount> --duration <secs>` into memory/issues/ISS-004.md and ISS-006.md \"Operator action\" sections, then send one combined ./notify with both commands.",
+        "level": "h2"
+      }
+    },
+    "action_3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: Both issues are operator-only and both block reppo-trading-agent today — one ping beats two."
+      }
+    },
+    "action_3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: both ISS files have an \"Operator action\" section with a copy-pasteable CLI; one combined ./notify sent."
+      }
+    },
+    "action_3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-004-grant + iss-006-lock"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Draft soul/SOUL.draft.md from 14 days of logs (Telegram exchanges, write-tweet runs, the \"Yes redo\" correction on the Base summer thread) — fill all 5 sections (Identity, Worldview, Interests, Background, Boundaries) with at least 3 lines each, as `.draft.md` so operator approves before promoting.",
+        "level": "h2"
+      }
+    },
+    "action_4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 5+ content skills run neutral voice daily; a draft seeds operator review and could ship voice this week."
+      }
+    },
+    "action_4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: soul/SOUL.draft.md exists with all 5 sections populated (>=3 lines each)."
+      }
+    },
+    "action_4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: soul-empty"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Triage 14 unassigned reppo datanets into memory/topics/reppo.md — read configs/datanets/*.md, append `## Datanet triage 2026-05-24` section with top-3 highest-leverage datanets, each with a one-line scope and a proposed agent skill name.",
+        "level": "h2"
+      }
+    },
+    "action_5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: Orchestrator surfaces these every run, 7+ days untouched — triage gives the next agent a real queue."
+      }
+    },
+    "action_5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/topics/reppo.md has the new section with 3 named datanets + 3 proposed agent skill names."
+      }
+    },
+    "action_5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: unassigned-datanets"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=47 logs=4 topics=4 prs=1 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
