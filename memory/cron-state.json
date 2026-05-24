@@ -247,5 +247,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "skill-evals": {
+    "last_dispatch": "2026-05-24T06:22:58Z",
+    "last_status": "dispatched"
   }
 }
