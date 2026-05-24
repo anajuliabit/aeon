@@ -57,3 +57,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-24,skill-health,claude-opus-4-7,30,16293,1412217,57903
 2026-05-24,skill-update-check,claude-sonnet-4-6,10,1780,273115,24485
 2026-05-24,heartbeat,claude-opus-4-7,4079,9187,316454,59780
+2026-05-24,evening-recap,claude-sonnet-4-6,11,9281,352351,32466

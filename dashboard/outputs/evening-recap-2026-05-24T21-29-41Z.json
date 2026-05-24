@@ -1,0 +1,213 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-05-24",
+        "description": "Fleet all-green on cron, memory consolidated, ISS-006 filed — but reppo is 0 on-chain for day 3 and PR #9 stalled 26h."
+      },
+      "children": [
+        "heading-headlines",
+        "stack-headlines",
+        "separator-1",
+        "heading-notable",
+        "stack-notable",
+        "separator-2",
+        "heading-decisions",
+        "stack-decisions",
+        "separator-3",
+        "text-footer"
+      ]
+    },
+    "heading-headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "storylink-reppo-digest",
+        "storylink-reflect",
+        "storylink-skill-freshness"
+      ]
+    },
+    "storylink-reppo-digest": {
+      "type": "StoryLink",
+      "props": {
+        "title": "reppo-digest — ISS-006 filed (INSUFFICIENT_VOTING_POWER); 0 mints + 0 votes on-chain again",
+        "href": "memory/issues/ISS-006.md"
+      },
+      "children": []
+    },
+    "storylink-reflect": {
+      "type": "StoryLink",
+      "props": {
+        "title": "reflect — MEMORY.md + fleet/crypto topics consolidated",
+        "href": "memory/MEMORY.md"
+      },
+      "children": []
+    },
+    "storylink-skill-freshness": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness — audit clean, no regressions",
+        "href": "articles/skill-freshness-2026-05-24.md"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-token-alert",
+        "text-github-trending",
+        "text-defi-overview",
+        "text-action-converter",
+        "text-skill-evals"
+      ]
+    },
+    "text-token-alert": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — VVV +13.44% alert triggered; REPPO +9.1%, HYPER flat",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-github-trending": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — 3 picks: claude-plugins-official (ACCELERATING), NVlabs/LongLive, presenton",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-defi-overview": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview — TVL +2.7%, Hyperliquid L1 +7.0% top mover, V3↔V4 rotation noted",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-action-converter": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter — 5 actions queued: merge PR #9, ISS-005 patch, ops unblock, soul draft, datanet triage",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-skill-evals": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals — bootstrap 12/29 (41%), 0 failures; needs evals.json output_pattern patch",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "storylink-merge-pr9",
+        "text-operator-bundle",
+        "text-durable-iss005",
+        "text-populate-soul"
+      ]
+    },
+    "storylink-merge-pr9": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Merge PR #9 (token-alert step-2 fixes, 26h+ no review)",
+        "href": "https://github.com/anajuliabit/aeon/pull/9"
+      },
+      "children": []
+    },
+    "text-operator-bundle": {
+      "type": "Text",
+      "props": {
+        "text": "Operator: bundle ISS-004 + ISS-006 → `reppo grant-access` + `reppo lock`",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-durable-iss005": {
+      "type": "Text",
+      "props": {
+        "text": "Durable ISS-005 fix: prefetch-reppo.sh per-pod epoch validity + agent filter update",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-populate-soul": {
+      "type": "Text",
+      "props": {
+        "text": "Populate soul/ — content skills in neutral voice all week, files still empty templates",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "+8 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
