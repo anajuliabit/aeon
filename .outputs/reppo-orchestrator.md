@@ -1,30 +1,27 @@
-The reppo-orchestrator skill is short-running (one decision pass), so I'll skip task tracking and emit the plan.
-
----
-
-Datanet catalog is available (15 ACTIVE datanets on mainnet). Only one rubric file exists — `tradinggymai.md` mapping `reppo-trading-agent` to datanet 9, which is `valid: true` and ACTIVE in the catalog. No SKIPs warranted. The other 14 catalog datanets have no rubric assigned.
+Reppo-trading-agent runs against datanet 9 (TradingGym AI, valid mainnet). Catalog is live so 14 unassigned datanets surface for assignment.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 TradingGym AI valid+ACTIVE; re-runs are dedup-safe via strategy hash + idempotency keys)
-new-datanet: 1   (no rubric / no agent assigned)
-new-datanet: 2   (no rubric / no agent assigned)
-new-datanet: 4   (no rubric / no agent assigned)
-new-datanet: 5   (no rubric / no agent assigned)
-new-datanet: 6   (no rubric / no agent assigned)
-new-datanet: 7   (no rubric / no agent assigned)
-new-datanet: 8   (no rubric / no agent assigned)
-new-datanet: 10   (no rubric / no agent assigned)
-new-datanet: 11   (no rubric / no agent assigned)
-new-datanet: 13   (no rubric / no agent assigned)
-new-datanet: 14   (no rubric / no agent assigned)
-new-datanet: 15   (no rubric / no agent assigned)
-new-datanet: 16   (no rubric / no agent assigned)
-new-datanet: 17   (no rubric / no agent assigned)
+reppo-trading-agent: RUN   (datanet 9 tradinggymai valid on mainnet, re-running is idempotent — strategies dedup by content hash, votes by key)
+new-datanet: 1   (no rubric / no agent assigned — Root Datanet)
+new-datanet: 2   (no rubric / no agent assigned — Geopolitical Flashpoint and Misinfo Detection)
+new-datanet: 4   (no rubric / no agent assigned — Whoami.wiki)
+new-datanet: 5   (no rubric / no agent assigned — DSCLabs | Strike Robot)
+new-datanet: 6   (no rubric / no agent assigned — Spicenet)
+new-datanet: 7   (no rubric / no agent assigned — Oracle Of Preferences ZK)
+new-datanet: 8   (no rubric / no agent assigned — Adult Entertainment)
+new-datanet: 10   (no rubric / no agent assigned — Tokenomics Assessment Agent)
+new-datanet: 11   (no rubric / no agent assigned — Sports Signals)
+new-datanet: 13   (no rubric / no agent assigned — The Strategy Exchange)
+new-datanet: 14   (no rubric / no agent assigned — Venice AI A/B Response Preference Index)
+new-datanet: 15   (no rubric / no agent assigned — First-Person Demonstrations for Robot Training)
+new-datanet: 16   (no rubric / no agent assigned — ContractKings)
+new-datanet: 17   (no rubric / no agent assigned — Dom Pulse)
 ```
 
 ## Summary
-- Read `.reppo-cache/datanets.json` (catalog of 15 ACTIVE datanets), `.reppo-cache/datanet-tradinggymai.json` (valid:true), and `configs/datanets/tradinggymai.md` (datanet_id "9" → reppo-trading-agent).
-- Emitted plan: 1 RUN (reppo-trading-agent on datanet 9), 0 SKIP, 14 unassigned datanets discovered.
-- Appended `### reppo-orchestrator` log entry to `memory/logs/2026-05-23.md`.
-- Follow-up: assign agents/rubrics to the 14 unassigned datanets (carried 4+ runs untouched per today's morning-brief).
+- Built RUN/SKIP plan from rubric files: 1 RUN (reppo-trading-agent on datanet 9), 0 SKIP.
+- Discovered 14 unassigned datanets from live mainnet catalog (15 total − 1 assigned).
+- Catalog available; discovery completed.
+- Files modified: `memory/logs/2026-05-24.md` (appended `### reppo-orchestrator` log entry).
+- Follow-up: existing goal in MEMORY.md to assign agents to the 14 unassigned datanets is still pending — unchanged by this run.

@@ -47,4 +47,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-23,heartbeat,claude-opus-4-7,17,8862,596176,51983
 2026-05-23,evening-recap,claude-sonnet-4-6,9,7902,255042,28926
 2026-05-24,skill-evals,claude-sonnet-4-6,17,31726,756480,68620
-2026-05-24,reppo-swarm,claude-opus-4-7,8,562,105657,11434
+2026-05-24,reppo-orchestrator,claude-opus-4-7,11,3032,222645,20295
