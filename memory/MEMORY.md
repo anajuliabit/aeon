@@ -23,7 +23,10 @@ enabled on cron; inbound messaging via Telegram (live). Fleet exited bootstrap
 - ISS-004 (high, config) — reppo mint dry-run reverts PUBLISHER_LACKS_SUBNET_ACCESS;
   needs operator `reppo grant-access --subnet <id>` for datanet 9's subnet.
 - ISS-005 (high, prompt-bug) — vote pods fail POD_NOT_VALID_FOR_EPOCH; needs
-  prefetch to record per-pod epoch validity + agent prompt to filter.
+  prefetch to record per-pod epoch validity + agent prompt to filter. Agent-side
+  workaround in place (skip pods at epoch ≤ current-1) — durable fix still pending.
+- ISS-006 (high, config) — vote dry-runs revert INSUFFICIENT_VOTING_POWER;
+  publisher has 0 locked REPPO. Needs operator `reppo lock <amount> --duration <secs>`.
 
 ## Lessons Learned
 - Sandbox blocks Reddit (datacenter IP) and X.AI authed curl — use the prefetch pattern.

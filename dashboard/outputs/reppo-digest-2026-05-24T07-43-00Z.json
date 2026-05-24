@@ -1,0 +1,308 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "content_stack"
+      ]
+    },
+    "content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_date",
+        "separator1",
+        "info_stack",
+        "separator2",
+        "postprocess_stack"
+      ]
+    },
+    "heading_date": {
+      "type": "Text",
+      "props": {
+        "text": "Reppo-Swarm 2026-05-24",
+        "variant": "lead"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "info_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_orchestrator",
+        "text_datanet",
+        "text_unassigned",
+        "mint_section",
+        "votes_section",
+        "text_epoch"
+      ]
+    },
+    "text_orchestrator": {
+      "type": "Text",
+      "props": {
+        "text": "Orchestrator RUN: reppo-trading-agent"
+      }
+    },
+    "text_datanet": {
+      "type": "Text",
+      "props": {
+        "text": "On datanet 9 (TradingGym AI)"
+      }
+    },
+    "text_unassigned": {
+      "type": "Text",
+      "props": {
+        "text": "14 unassigned datanets still surfaced"
+      }
+    },
+    "mint_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_mint_label",
+        "text_mint_details"
+      ]
+    },
+    "text_mint_label": {
+      "type": "Text",
+      "props": {
+        "text": "Queued Mint:",
+        "variant": "lead"
+      }
+    },
+    "text_mint_details": {
+      "type": "Text",
+      "props": {
+        "text": "BTC perp 4H RSI/MACD/200EMA (hash: 9412768ec7f019b5)"
+      }
+    },
+    "votes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_votes_label",
+        "badge_vote_344",
+        "badge_vote_345"
+      ]
+    },
+    "text_votes_label": {
+      "type": "Text",
+      "props": {
+        "text": "Votes (2 of 3):",
+        "variant": "lead"
+      }
+    },
+    "badge_vote_344": {
+      "type": "Badge",
+      "props": {
+        "text": "LIKE pod 344 HotBot v4 Trades",
+        "variant": "secondary"
+      }
+    },
+    "badge_vote_345": {
+      "type": "Badge",
+      "props": {
+        "text": "DISLIKE pod 345 HotBot v4 Signals",
+        "variant": "secondary"
+      }
+    },
+    "text_epoch": {
+      "type": "Text",
+      "props": {
+        "text": "Only 2 pods qualified at epoch 95 (after ISS-005 filter)"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "postprocess_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_postprocess",
+        "badge_dryrun",
+        "alert_summary",
+        "failures_stack",
+        "results_stack"
+      ]
+    },
+    "heading_postprocess": {
+      "type": "Heading",
+      "props": {
+        "text": "Postprocess Results",
+        "level": "h3"
+      }
+    },
+    "badge_dryrun": {
+      "type": "Badge",
+      "props": {
+        "text": "Dry-Run Only",
+        "variant": "outline"
+      }
+    },
+    "alert_summary": {
+      "type": "Alert",
+      "props": {
+        "message": "3 failures, 0 executed on-chain",
+        "type": "error"
+      }
+    },
+    "failures_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "failure_mint",
+        "failure_vote344",
+        "failure_vote345"
+      ]
+    },
+    "failure_mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fail_mint_title",
+        "fail_mint_error",
+        "fail_mint_issue"
+      ]
+    },
+    "fail_mint_title": {
+      "type": "Text",
+      "props": {
+        "text": "Mint",
+        "variant": "lead"
+      }
+    },
+    "fail_mint_error": {
+      "type": "Text",
+      "props": {
+        "text": "Reverted: PUBLISHER_LACKS_SUBNET_ACCESS"
+      }
+    },
+    "fail_mint_issue": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-004 (still blocking)",
+        "href": "memory/issues/ISS-004.md"
+      }
+    },
+    "failure_vote344": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fail_vote344_title",
+        "fail_vote344_error",
+        "fail_vote344_detail",
+        "fail_vote344_issue"
+      ]
+    },
+    "fail_vote344_title": {
+      "type": "Text",
+      "props": {
+        "text": "Vote 344",
+        "variant": "lead"
+      }
+    },
+    "fail_vote344_error": {
+      "type": "Text",
+      "props": {
+        "text": "Reverted: INSUFFICIENT_VOTING_POWER"
+      }
+    },
+    "fail_vote344_detail": {
+      "type": "Text",
+      "props": {
+        "text": "0 locked REPPO"
+      }
+    },
+    "fail_vote344_issue": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-006 (new issue)",
+        "href": "memory/issues/ISS-006.md"
+      }
+    },
+    "failure_vote345": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fail_vote345_title",
+        "fail_vote345_error"
+      ]
+    },
+    "fail_vote345_title": {
+      "type": "Text",
+      "props": {
+        "text": "Vote 345",
+        "variant": "lead"
+      }
+    },
+    "fail_vote345_error": {
+      "type": "Text",
+      "props": {
+        "text": "Transient mainnet.base.org RPC error"
+      }
+    },
+    "results_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_executed",
+        "stat_failures"
+      ]
+    },
+    "stat_executed": {
+      "type": "Stat",
+      "props": {
+        "label": "Executed On-Chain",
+        "value": "0"
+      }
+    },
+    "stat_failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Failures",
+        "value": "3",
+        "trend": "down"
+      }
+    }
+  }
+}
