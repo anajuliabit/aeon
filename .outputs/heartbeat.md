@@ -1,14 +1,12 @@
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
+
 ## Summary
+Ran heartbeat for the 08:00 UTC slot (executed 08:30 UTC).
 
-**Heartbeat 20:00 UTC slot — HEARTBEAT_OK · STATUS_PAGE=WATCH**
+- **P0:** All 27 cron-state skills `last_status=success`, 0 consecutive failures, no stuck/dispatched skills. Self-check healthy (heartbeat last_success ~12.4h ago).
+- **P1:** PR #9 open 14.4h (not stalled). 0 open GitHub issues.
+- **P2:** 3 open issues (ISS-004, ISS-005, ISS-006) — all deduped against today's log; no notification.
+- **P3:** Remaining today's skills scheduled later (09:00–21:00); weekday-restricted skills N/A on Sunday.
+- **Status page:** Wrote `docs/status.md` → 🟡 WATCH (3 high-severity open issues). Token pulse omitted (no `articles/token-report-*.md` exists). Next run: github-trending @ 09:00 UTC.
 
-- **P0:** All 26 cron-state entries `last_status=success`, 0 consecutive failures, no stuck/dispatched skills. Heartbeat self-check healthy (last_success 14:29 UTC, ~5.6h ago).
-- **P1:** PR #9 (self-improve fix for token-alert) opened ~2h ago, not stalled. 0 urgent issues.
-- **P2:** ISS-004 + ISS-005 still open — both filed earlier today by reppo-digest and already in today's log → deduped, no notification.
-- **P3:** All scheduled-for-today skills have run; evening-recap @ 21:00 is the only remaining slot. Sunday-only (skill-evals, skill-update-check) due tomorrow.
-
-**Files modified:**
-- `docs/status.md` — regenerated, verdict 🟡 WATCH (2 open high-severity issues), Next run: evening-recap @ 21:00 UTC
-- `memory/logs/2026-05-23.md` — appended heartbeat run entry
-
-**Notification:** none sent (only findings are deduped).
+**Files modified:** `docs/status.md`, `memory/logs/2026-05-24.md`. **Follow-up:** none — all open issues already surfaced in today's morning-brief and reppo-digest logs.
