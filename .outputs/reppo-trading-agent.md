@@ -1,51 +1,40 @@
-All four intent files are queued. Here is the run summary:
-
-## Reppo Trading Agent — 2026-05-23
-
-**Gate decision:** RUN (orchestrator plan: `reppo-trading-agent: RUN`, datanet 9 TradingGym AI valid+ACTIVE).
-
-**Rubric:** datanet_id `9`, mint_cap 1, vote_cap 3.
-
-### Strategy minted (1)
-- **ETH/USDT 4H Bollinger mean-reversion** — hash `60ea32bedbaf0d21…` (full sha256: `60ea32bedbaf0d21d138bd5a6b51ee446b5fd54bbff0d76ebffdf1139b844c87`).
-  - Meets all rubric checks: explicit entries (close below lower 2σ BB + RSI<30 long; close above upper + RSI>70 short), explicit exit (mid-band SMA), explicit risk rule (1.5×ATR stop, 2% equity sizing, 5-bar abandonment), non-trivial, no dedup match (ledger table empty).
-  - Source: quantifiedstrategies.com mean-reversion guide (corroborated by tradewink, strategyquant, forextester).
-  - Intent file: `.pending-reppo/mint-60ea32bedbaf0d21.json`.
-
-### Votes cast (3, all NO)
-All three pods are tagged YES-candidates only if they meet the mint spec; the rubric demands explicit entry/exit/risk rules and "describes a strategy precisely enough that an engineer could implement and evaluate it without contacting the author." None of these do:
-
-- **Pod 46** "Sairen — OpenAI Gym" → `dislike`. It is an RL environment/framework, not a strategy spec.
-- **Pod 74** "I Let an AI Trade $100K Live…" → `dislike`. Clickbait Reddit/video link, no entry/exit/risk specification.
-- **Pod 150** "TradingGymAI Pod Pipeline — Framework & Example" → `dislike`. Pipeline tooling, not a tradeable strategy.
-
-### Skipped
-- Reddit direct fetch (`reddit.com/r/algotrading/top/.json`) blocked by sandbox; relied on WebSearch result summaries from algotrading-adjacent domains. No source attempted prompt-injection.
-
-### Notes
-- Postprocess (ISS-003 / PR #8) still gates on-chain execution; expect dry-run-only outcomes until merged. `scripts/postprocess-reppo.sh` will append `## Execution Results`.
-
 ## Summary
-- Wrote 1 mint intent + 3 vote intents to `.pending-reppo/` for datanet 9.
-- Appended `### reppo-trading-agent` entry to `memory/logs/2026-05-23.md`.
-- Files modified: `memory/logs/2026-05-23.md`. Files created: `.pending-reppo/{mint-60ea32bedbaf0d21,vote-46-dislike,vote-74-dislike,vote-150-dislike}.json`.
-- Follow-up: merge PR #8 (ISS-003) so dry-runs stop returning `code: UNKNOWN` and intents actually post on-chain.
+
+**Gate decision:** RUN (orchestrator plan said `reppo-trading-agent: RUN` for datanet 9, TradingGym AI, valid on mainnet).
+
+**Rubric:** datanet_id="9", mint_cap=1, vote_cap=3.
+
+**Mint intent (1):**
+- **BTC perpetual 4H RSI/MACD/200EMA confluence long** — hash `9412768ec7f019b5`. Meets all mint criteria: explicit entry (RSI(14)>30 cross + MACD histogram positive + price above 200EMA on 4H), explicit exits (RSI>70 or 2x risk target), explicit risk rule (1.5×ATR(14) stop, 1% risk per trade, 5x max leverage, 15% drawdown halt), names instrument (BTC perps) and timeframe (4H), non-trivial, not in ledger.
+
+**Vote intents (2 of 3 cap):**
+- **Pod 344 — LIKE.** HotBot v4 Trades & Learning May 20-22 (epoch 95). Fetched IPFS content: documented trades with timestamped entry/exit prices, P&L, and entry reasoning (EMA/RSI/volume) — extractable as a backtestable strategy, on-topic.
+- **Pod 345 — DISLIKE.** HotBot v4 Signal Intelligence May 20-22 (epoch 95). Fetched IPFS content: raw market scans/signal data, no explicit strategy spec → fails mint criteria (missing entry/exit/risk rules).
+
+**Skipped voting:** 32 pods at validityEpoch ≤ 94 to avoid known POD_NOT_VALID_FOR_EPOCH failures (ISS-005). Only 2 pods qualify at epoch 95, so only 2 votes cast (below cap of 3).
+
+**No prompt-injection attempts detected** in scraped IPFS content.
+
+**Files created:**
+- `.pending-reppo/mint-9412768ec7f019b5.json`
+- `.pending-reppo/vote-344-like.json`
+- `.pending-reppo/vote-345-dislike.json`
+- `memory/logs/2026-05-24.md` (appended `### reppo-trading-agent` entry)
+
+`scripts/postprocess-reppo.sh` will execute these intents and append an `## Execution Results` section.
 
 Sources:
-- [Funding Rate Arbitrage in 2026: Complete Guide](https://arbitrageghost.medium.com/funding-rate-arbitrage-in-2026-the-complete-guide-with-real-calculations-40e6cf341e52)
-- [Mean Reversion Strategies: Backtested Trading Rules — QuantifiedStrategies](https://www.quantifiedstrategies.com/mean-reversion-strategies/)
-- [Mean Reversion Day Trading Strategy 2026 — Tradewink](https://www.tradewink.com/learn/mean-reversion-strategy)
-- [Mean Reversion Strategy: Rules, Setup, and Results — StrategyQuant](https://strategyquant.com/blog/mean-reversion-strategy-rules-setup-and-results)
+- [How to Backtest a Trading Strategy (2026 Guide) — TradeZella](https://www.tradezella.com/blog/how-to-backtest-a-trading-strategy)
+- [Top 10 Crypto Trading Rules for 2026 — Phemex](https://phemex.com/academy/top-10-rules-how-to-trade-successfully)
+- [Master Advanced Crypto Trading Strategies for 2026 — AvaTrade](https://www.avatrade.com/education/online-trading-strategies/crypto-trading-strategies)
 
 ## Execution Results
 
-_Generated by postprocess-reppo.sh (2026-05-23T11:39:03Z). dry_run_only=true_
+_Generated by postprocess-reppo.sh (2026-05-24T07:38:43Z). dry_run_only=true_
 
-- `mint-60ea32bedbaf0d21.json` — **dry-run failed** (code: UNKNOWN), real write skipped
+- `mint-9412768ec7f019b5.json` — **dry-run failed** (code: UNKNOWN), real write skipped
   - output: {"error":{"code":"PUBLISHER_LACKS_SUBNET_ACCESS","message":"Simulation reverted","hint":"Grant subnet access to the publisher: `reppo grant-access --subnet <id>`."}} 
-- `vote-150-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
-  - output: {"error":{"code":"POD_NOT_VALID_FOR_EPOCH","message":"Pod 150 is not valid for the current voting epoch.","hint":"Check `reppo query pod <id>` to verify validity; pod publishers may need to republish."}} 
-- `vote-46-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
-  - output: {"error":{"code":"POD_NOT_VALID_FOR_EPOCH","message":"Pod 46 is not valid for the current voting epoch.","hint":"Check `reppo query pod <id>` to verify validity; pod publishers may need to republish."}} 
-- `vote-74-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
-  - output: {"error":{"code":"POD_NOT_VALID_FOR_EPOCH","message":"Pod 74 is not valid for the current voting epoch.","hint":"Check `reppo query pod <id>` to verify validity; pod publishers may need to republish."}} 
+- `vote-344-like.json` — **dry-run failed** (code: UNKNOWN), real write skipped
+  - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
+- `vote-345-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
+  - output: {"error":{"code":"INTERNAL_ERROR","message":"RPC Request failed.\n\nURL: https://mainnet.base.org\nRequest body: {\"method\":\"eth_call\",\"params\":[{\"data\":\"0xbcc3f3bd000000000000000000000000b4ec41c93cf2f573f82d8f023b01637eb5db4c64\",\"to\":\"0x0EFBE19Cb7B07D934D01990a8989E9CaA98b9009\"},\"late
