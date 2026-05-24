@@ -1,0 +1,152 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-05-24"
+      },
+      "children": [
+        "vvv-section",
+        "sep-1",
+        "reppo-section",
+        "sep-2",
+        "hyper-section"
+      ]
+    },
+    "vvv-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-vvv",
+        "stat-vvv-price",
+        "stat-vvv-vol",
+        "stat-vvv-mcap",
+        "text-vvv-trigger"
+      ]
+    },
+    "heading-vvv": {
+      "type": "Heading",
+      "props": {
+        "text": "VVV (venice-token)",
+        "level": "h3"
+      }
+    },
+    "stat-vvv-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$19.74",
+        "delta": "+13.4%",
+        "trend": "up"
+      }
+    },
+    "stat-vvv-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$94.4M"
+      }
+    },
+    "stat-vvv-mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$913.9M"
+      }
+    },
+    "text-vvv-trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger: 24h change exceeds 10% threshold (reverses yesterday's -8.9%)",
+        "variant": "caption"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reppo-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-reppo",
+        "stat-reppo-price",
+        "text-reppo-note"
+      ]
+    },
+    "heading-reppo": {
+      "type": "Heading",
+      "props": {
+        "text": "REPPO (reppo)",
+        "level": "h3"
+      }
+    },
+    "stat-reppo-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.02115",
+        "delta": "+9.1%",
+        "trend": "up"
+      }
+    },
+    "text-reppo-note": {
+      "type": "Text",
+      "props": {
+        "text": "under threshold, partial recovery from -16.2%",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hyper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-hyper",
+        "stat-hyper-price",
+        "text-hyper-note"
+      ]
+    },
+    "heading-hyper": {
+      "type": "Heading",
+      "props": {
+        "text": "HYPER (hyperlane)",
+        "level": "h3"
+      }
+    },
+    "stat-hyper-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.10412",
+        "delta": "-0.0%",
+        "trend": "neutral"
+      }
+    },
+    "text-hyper-note": {
+      "type": "Text",
+      "props": {
+        "text": "flat after yesterday's -11.9%",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,11 +1,8 @@
-*Token Alert — 2026-05-23*
+*Token Alert — 2026-05-24*
 
-REPPO: $0.01937704 (down 16.2% 24h)
-Volume: $2.81M
-Trigger: 24h change exceeds 10% threshold
+VVV (venice-token): $19.74 (+13.4% 24h)
+Volume: $94.4M | mcap $913.9M
+Trigger: 24h change exceeds 10% threshold (reverses yesterday's -8.9%)
 
-HYPER: $0.10365 (down 11.9% 24h)
-Volume: $29.1M
-Trigger: 24h change exceeds 10% threshold
-
-VVV: $17.40 (down 8.9% 24h) — no alert, under threshold
+REPPO (reppo): $0.02115 (+9.1% 24h) — under threshold, partial recovery from -16.2%
+HYPER (hyperlane): $0.10412 (-0.0% 24h) — flat after yesterday's -11.9%
