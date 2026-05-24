@@ -1,9 +1,9 @@
 {
-  "last_run_at": "2026-05-23T08:36:00Z",
+  "last_run_at": "2026-05-24T08:00:00Z",
   "last_verdict": "FRESHNESS_OK",
   "last_flagged_fingerprint": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-  "consumer_count": 20,
-  "dependency_count": 15,
+  "consumer_count": 21,
+  "dependency_count": 14,
   "flagged_count": 0,
   "first_seen_at": {}
 }
