@@ -1,15 +1,17 @@
 # Long-term Memory
-*Last consolidated: 2026-05-23*
+*Last consolidated: 2026-05-24*
 
 ## About This Repo
-Aeon — autonomous agent running on GitHub Actions via Claude Code. ~20 skills
+Aeon — autonomous agent running on GitHub Actions via Claude Code. ~21 skills
 enabled on cron; inbound messaging via Telegram (live). Fleet exited bootstrap
 2026-05-21.
 
 ## Current Goals
-- Unblock reppo-swarm on-chain output — now ISS-004 (operator subnet grant) and
-  ISS-005 (filter pods by epoch validity); ISS-003 closed by PR #8.
-- Assign agents to the 14 unassigned reppo datanets (surfaced every run, untouched).
+- Unblock reppo-swarm on-chain output — three operator/config actions outstanding:
+  ISS-004 (subnet grant), ISS-005 (per-pod epoch validity in prefetch + agent
+  filter — agent-side workaround already live), ISS-006 (lock REPPO for voting power).
+- Assign agents to the 14 unassigned reppo datanets (surfaced every run, untouched
+  all week).
 - Populate `soul/` so content skills (write-tweet, article, digest, etc.) stop
   running in neutral voice.
 
@@ -24,9 +26,13 @@ enabled on cron; inbound messaging via Telegram (live). Fleet exited bootstrap
   needs operator `reppo grant-access --subnet <id>` for datanet 9's subnet.
 - ISS-005 (high, prompt-bug) — vote pods fail POD_NOT_VALID_FOR_EPOCH; needs
   prefetch to record per-pod epoch validity + agent prompt to filter. Agent-side
-  workaround in place (skip pods at epoch ≤ current-1) — durable fix still pending.
+  workaround in place (skip pods at validityEpoch ≤ current-1) — durable fix still pending.
 - ISS-006 (high, config) — vote dry-runs revert INSUFFICIENT_VOTING_POWER;
   publisher has 0 locked REPPO. Needs operator `reppo lock <amount> --duration <secs>`.
+
+## Open PRs
+- PR #9 — self-improve tightening of token-alert step 2 (volume-spike sample-size
+  rule, threshold-cross config). Opened 2026-05-23, awaiting merge.
 
 ## Lessons Learned
 - Sandbox blocks Reddit (datacenter IP) and X.AI authed curl — use the prefetch pattern.
@@ -35,10 +41,17 @@ enabled on cron; inbound messaging via Telegram (live). Fleet exited bootstrap
 - Soul files empty → all content skills use neutral voice (known gap, not a per-run bug).
 - "code: UNKNOWN" was a wrapping bug in postprocess-reppo.sh (PR #8) — once the raw
   CLI error surfaces, the actual blockers are usually config or prompt issues.
+- Reppo on-chain blockers cascade: ISS-002 → ISS-003 → ISS-004/005 → ISS-006. Each
+  fix reveals the next one. Assume more remain even after ISS-004/005/006 close.
+- skill-evals's evals.json carries wrong `output_pattern` entries for skills that
+  write to `memory/logs/` (token-alert, skill-health) or have no skills/ directory
+  (hn-digest, polymarket) — see today's action queue.
 
 ## Recent Articles
 | Date | Title | Topic |
 |------|-------|-------|
+| 2026-05-24 | skill-evals bootstrap baseline | meta / fleet health |
+| 2026-05-24 | skill-freshness audit | meta / fleet health |
 | 2026-05-23 | skill-freshness audit | meta / fleet health |
 | 2026-05-22 | skill-freshness audit | meta / fleet health |
 | 2026-05-21 | The 100x Fix: Neuro-Symbolic AI & the AI Energy Crisis | AI / energy efficiency |
