@@ -684,6 +684,10 @@ jobs:
           done
           rm -rf .pending-notify
 
+      - name: Install Foundry (for postprocess auto-approve etc.)
+        if: steps.work.outputs.mode != '' && steps.run.outcome == 'success'
+        uses: foundry-rs/foundry-toolchain@v1
+
       - name: Run post-process scripts
         if: steps.work.outputs.mode != '' && steps.run.outcome == 'success'
         env:
