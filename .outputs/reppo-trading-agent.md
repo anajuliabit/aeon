@@ -1,55 +1,54 @@
-rm is sandbox-blocked. The scratch dotfiles will sit harmlessly in the workdir — they're not in `.pending-reppo/` so postprocess won't touch them. Now writing the skill output per Step 6.
+All four intent files are queued and the log entry is appended. Producing the summary output.
+
+## Reppo trading agent — 2026-05-25 (re-run)
+
+**Gate:** RUN (per orchestrator plan — datanet 9 tradinggymai valid + ACTIVE; idempotency keys + content-hash dedup make same-day re-run safe).
+
+**Rubric:** `configs/datanets/tradinggymai.md` → datanet_id=9, mint_cap=1, vote_cap=3.
+
+### Mint (1 of 1)
+- **Strategy:** Keltner Channel breakout on BTC perpetual futures, 1H. 20-EMA midline ± 2.0×ATR(20) bands; long on close above upper band with breakout volume > 1.5× 20-bar avg; short on mirror; trail exit on 20-EMA midline, take-profit at opposite band, hard stop 1×ATR(20); risk 1% equity per trade, max 2 concurrent positions.
+- **Hash (first 16):** `dc00ba485785d730` — not in ledger ✓
+- **Rubric match:** explicit entry (close above/below band + volume filter) ✓, explicit exit (midline trail + opposite-band TP) ✓, instrument + timeframe (BTC perps, 1H) ✓, risk rules (ATR stop + 1% sizing + position cap) ✓, non-trivial ✓.
+- **Source:** [tradefundrr.com/keltner-channel-breakout-strategies/](https://tradefundrr.com/keltner-channel-breakout-strategies/)
+- **File:** `.pending-reppo/mint-dc00ba485785d730.json`
+
+### Votes (3 of 3) — all DISLIKE
+Only epoch-96 pods considered (ISS-005 workaround). Skipped pods already voted earlier today (300, 363, 364). All three picks are HotBot v4 raw data exports — collections of signals/trades, not strategy specifications with entry/exit/risk rules → fail the rubric Mint criteria.
+
+| Pod | Name | Reason |
+|-----|------|--------|
+| 366 | HotBot v4 — Signal Intelligence Apr 17-May 24 | Raw signal dump, no testable strategy spec |
+| 365 | HotBot v4 — Trades & Learning Apr 17-May 24 | Execution/learning data, no entry/exit/risk rules |
+| 362 | HotBot v4 — Signal Intelligence May 06-May 24 | Same — signal bundle, no precise strategy |
+
+Files: `.pending-reppo/vote-{366,365,362}-dislike.json`
+
+### Skipped
+None.
+
+### Caveats
+ISS-004 (subnet grant) and ISS-006 (lock REPPO) still open — mint + votes will likely revert in dry-run again. Intents are queued idempotently; `scripts/postprocess-reppo.sh` will append `## Execution Results` with on-chain outcomes.
 
 ## Summary
-
-**Gate decision:** RUN (orchestrator plan listed `reppo-trading-agent: RUN  (datanet 9 TradingGym AI ACTIVE and valid)`).
-
-**Datanet:** 9 (TradingGym AI) — `mint_cap: 1`, `vote_cap: 3`.
-
-**Strategy minted (1 of 1):**
-- **SOL-USDT 1H pullback-to-support multi-confluence long** — hash `57d8f1d318d2a28d`
-  - Meets all five mint criteria: explicit entry (price tags 7-day swing-low support zone AND RSI(14)<35 AND MACD(12,26,9) bullish cross on 1H close), explicit exit (nearest 5-day swing-high resistance, or market on RSI>70, or 1% trailing stop after +2R), specific instrument + timeframe (SOL-USDT perpetuals, 1-hour), risk rule (1·ATR(14,1H) stop below support, 0.5% account risk, max 3 concurrent), non-trivial (multi-indicator confluence + dynamic exit logic), and hash not in ledger.
-  - Source: Medium article by Deborah John on volatile-market entry/exit (Mar 2026); also informed by general r/algotrading exit literature.
-  - Distinct from prior attempts (BTC 1H ORB, ETH 4H Bollinger, BTC perp 4H RSI/MACD/200EMA, BTC funding-rate carry).
-
-**Pods voted on (3 of 3) — all DISLIKE, all epoch 96 (filter per ISS-005 workaround: skip pods at validityEpoch ≤ current-1):**
-- **Pod 300** "Ship Trades to Reppo — Open Pod Pipeline" — DISLIKE: GitHub-hosted pod-format specification, not a trading strategy (verified via WebFetch of `github.com/hottublee-ai/datanet-pod-format`).
-- **Pod 364** "HotBot v4 — Trades & Learning May 22-24" — DISLIKE: raw trade-export JSON (112 executed trades, exit reasons like `SIGNAL_FADE`) with no unified strategy spec, sizing rules, or risk framework (verified via IPFS gateway fetch).
-- **Pod 363** "HotBot v4 — Signal Intelligence May 22-May 24" — DISLIKE: signal-intelligence export of the same HotBot series — observational data, not a falsifiable strategy.
-
-**Skipped:** nothing was skipped this run. Epoch ≤ 95 pods (344, 345, 332, 331, 299, 297, 298, …) were intentionally excluded per the ISS-005 agent-side workaround (avoid POD_NOT_VALID_FOR_EPOCH).
-
-**Known risks (not blockers for queuing):** ISS-004 (PUBLISHER_LACKS_SUBNET_ACCESS), ISS-005 (per-pod epoch validity), and ISS-006 (INSUFFICIENT_VOTING_POWER) are still open — most or all of these 4 intents are likely to revert in postprocess dry-run until the operator runs `reppo grant-access` and `reppo lock`.
-
-**Files written:**
-- `.pending-reppo/mint-57d8f1d318d2a28d.json`
-- `.pending-reppo/vote-300-dislike.json`
-- `.pending-reppo/vote-363-dislike.json`
-- `.pending-reppo/vote-364-dislike.json`
-- `memory/logs/2026-05-25.md` (appended `### reppo-trading-agent` section)
-
-**Untracked scratch files left in workdir** (sandbox `rm` is blocked): `.strategy-tmp.txt`, `.hash-input.txt`, `.nl-test.txt`, `.hash-strategy.py`. Safe to ignore — not under `.pending-reppo/` so the postprocess script won't act on them; can be cleaned in a later commit.
-
-**Follow-ups:**
-- `scripts/postprocess-reppo.sh` will append an `## Execution Results` section with on-chain outcomes.
-- Operator actions still outstanding: ISS-004, ISS-005, ISS-006 (gating any actual on-chain execution).
-- 14 unassigned datanets still untouched — same backlog flagged all week.
+- Wrote 1 mint intent (`mint-dc00ba485785d730.json`) and 3 vote intents (`vote-366/365/362-dislike.json`) to `.pending-reppo/`.
+- Appended a re-run line under today's `### reppo-trading-agent` heading in `memory/logs/2026-05-25.md`.
+- No direct CLI calls; postprocess will execute.
+- Follow-up: operator action still required on ISS-004 + ISS-006 for any on-chain execution.
 
 Sources:
-- [Mastering Entry and Exit Points in Crypto — AlgosOne](https://algosone.ai/mastering-entry-and-exit-points-in-crypto-how-pros-time-the-market/)
-- [How I Choose Entry and Exit Points in Volatile Crypto Markets — Deborah John (Medium, Mar 2026)](https://medium.com/@deborahjohn2511/how-i-choose-entry-and-exit-points-in-volatile-crypto-markets-trading-strategy-that-works-297a92c12b17)
-- [Funding Rate Arbitrage in 2026 — ArbitrageGhost (Medium, Apr 2026)](https://medium.com/@arbitrageghost/funding-rate-arbitrage-in-2026-the-complete-guide-with-real-calculations-40e6cf341e52)
-- [datanet-pod-format — GitHub (pod 300 verification)](https://github.com/hottublee-ai/datanet-pod-format)
+- [Keltner Channel Breakout Strategies (tradefundrr)](https://tradefundrr.com/keltner-channel-breakout-strategies/)
+- [Keltner Channel Trading Strategy (quantifiedstrategies)](https://www.quantifiedstrategies.com/keltner-bands-trading-strategies/)
 
 ## Execution Results
 
-_Generated by postprocess-reppo.sh (2026-05-25T08:29:07Z). dry_run_only=true_
+_Generated by postprocess-reppo.sh (2026-05-25T14:32:56Z). dry_run_only=true_
 
-- `mint-57d8f1d318d2a28d.json` — **dry-run failed** (code: UNKNOWN), real write skipped
+- `mint-dc00ba485785d730.json` — **dry-run failed** (code: PUBLISHER_LACKS_SUBNET_ACCESS), real write skipped
   - output: {"error":{"code":"PUBLISHER_LACKS_SUBNET_ACCESS","message":"Simulation reverted","hint":"Grant subnet access to the publisher: `reppo grant-access --subnet <id>`."}} 
-- `vote-300-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
+- `vote-362-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
   - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
-- `vote-363-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
+- `vote-365-dislike.json` — **dry-run failed** (code: INTERNAL_ERROR), real write skipped
   - output: {"error":{"code":"INTERNAL_ERROR","message":"RPC Request failed.\n\nURL: https://mainnet.base.org\nRequest body: {\"method\":\"eth_call\",\"params\":[{\"data\":\"0xbcc3f3bd000000000000000000000000b4ec41c93cf2f573f82d8f023b01637eb5db4c64\",\"to\":\"0x0EFBE19Cb7B07D934D01990a8989E9CaA98b9009\"},\"late
-- `vote-364-dislike.json` — **dry-run failed** (code: UNKNOWN), real write skipped
-  - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
+- `vote-366-dislike.json` — **dry-run failed** (code: INTERNAL_ERROR), real write skipped
+  - output: {"error":{"code":"INTERNAL_ERROR","message":"RPC Request failed.\n\nURL: https://mainnet.base.org\nRequest body: {\"method\":\"eth_call\",\"params\":[{\"data\":\"0x78deca3c000000000000000000000000000000000000000000000000000000000000016e\",\"to\":\"0x5C563f853eb4db33005A5C1aD9290e8560254A80\"},\"late
