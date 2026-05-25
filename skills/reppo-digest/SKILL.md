@@ -19,12 +19,51 @@ no Reppo CLI calls.
 ## Steps
 
 ### 1. Compose the digest
-One concise paragraph (notifications are one paragraph max). Cover:
-- Which agents ran or were skipped.
-- Strategies minted and their tx status (from Execution Results).
-- Votes cast and their tx status.
-- Any failures (dry-run failures, write failures, prefetch errors).
-- Any newly-discovered datanets with no agent assigned.
+A scannable, structured summary — NOT one wall-of-text paragraph.
+Telegram preserves newlines; use them. Follow this skeleton:
+
+```
+reppo-swarm · ${nth} run · datanet ${id} · ${N} on-chain
+
+queued
+  mint · {one-line strategy summary} · {first-16-of-hash}
+  votes · {direction} {pod1}, {pod2}, ... ({source/cluster if known})
+
+on-chain
+  mint {first-16-of-hash} — tx {txhash}
+  vote {pod} {direction} — tx {txhash}
+
+reverted
+  mint  · {CODE} ({ISS-N if filed})
+         action: {one concrete next step}
+  votes · {CODE} × {N} ({ISS-N if filed})
+         action: {one concrete next step}
+
+{M} datanets unassigned.
+```
+
+Rules for the output:
+- **All lowercase** (matches the operator's voice — see `soul/STYLE.md`).
+- **Section headers** (`queued`, `on-chain`, `reverted`) followed by a
+  2-space-indented body. **Drop empty sections entirely** — if nothing
+  reverted, no `reverted` block; if nothing executed on-chain, no
+  `on-chain` block (the header line already states `0 on-chain`).
+- **Header line carries the most important fact** — date isn't there
+  because Telegram timestamps it; the run-number, datanet, and on-chain
+  count are.
+- `·` (middle dot) as field separator in the header and `queued` lines.
+  `—` for tx hashes. `→` only for cause→effect chains in `reverted`
+  lines (e.g. `PUBLISHER_LACKS_SUBNET_ACCESS → auto-grant
+  INSUFFICIENT_ALLOWANCE`).
+- **Every `reverted` line has a one-line `action:`** on its own indented
+  line. If the chain self-heals next run (e.g. a transient RPC error that
+  postprocess already retries), say so — don't ask the operator to act
+  unnecessarily.
+- **No decorative emoji.** No marketing tone. No "exciting" or "great" or
+  "successfully."
+- **Discovered datanets** as a single trailing line — counts only, unless
+  a brand-new one appeared (then name its id).
+- Keep the body under 4000 chars (notify max).
 
 ### 2. Send it
 Run: `./notify "<your digest text>"`
