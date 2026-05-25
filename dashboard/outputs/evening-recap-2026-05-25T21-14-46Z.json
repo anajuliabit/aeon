@@ -1,0 +1,332 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-05-25",
+        "description": "heaviest ship day of the week — 5 PRs merged, 3 articles, soul live, 0 skill failures"
+      },
+      "children": [
+        "headlines_section",
+        "sep1",
+        "notable_section",
+        "sep2",
+        "decisions_section",
+        "sep3",
+        "footer"
+      ]
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_title",
+        "headline1",
+        "headline2",
+        "headline3",
+        "headline4",
+        "headline5"
+      ]
+    },
+    "headlines_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "5 PRs merged (#9–13) — token-alert fix, reppo unblock ×2, soul populate, RPC retry",
+        "href": "https://github.com/anajuliabit/aeon/pull/12",
+        "source": "GitHub"
+      }
+    },
+    "headline2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — scan.sh backtick pattern tightened (769→19 FP matches)",
+        "href": "https://github.com/anajuliabit/aeon/pull/14",
+        "source": "GitHub"
+      }
+    },
+    "headline3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-security-scan — bootstrap: 5 workflow-injection sites flagged",
+        "href": "articles/security-scan-2026-05-25.md"
+      }
+    },
+    "headline4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cost-report (first run) — $179.73 / 4 days, ~$770/mo projected",
+        "href": "articles/cost-report-2026-05-25.md"
+      }
+    },
+    "headline5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "weekly-review (first run) — week-1 baseline: 111 runs, 3 failures, 10 articles",
+        "href": "articles/weekly-review-2026-05-25.md"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "notable_title",
+        "reppo_subsection",
+        "token_subsection",
+        "defi_subsection",
+        "heartbeat_subsection",
+        "reflect_subsection"
+      ]
+    },
+    "notable_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "reppo_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reppo_heading",
+        "reppo_text"
+      ]
+    },
+    "reppo_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "reppo-digest ×2",
+        "level": "h3"
+      }
+    },
+    "reppo_text": {
+      "type": "Text",
+      "props": {
+        "text": "day 4, 0 on-chain output; ISS-004/006 fix PRs merged, on-chain verify pending"
+      }
+    },
+    "token_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "token_heading",
+        "token_grid"
+      ]
+    },
+    "token_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "token-alert",
+        "level": "h3"
+      }
+    },
+    "token_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "token_stat_reppo",
+        "token_stat_hyper",
+        "token_stat_vvv"
+      ]
+    },
+    "token_stat_reppo": {
+      "type": "Stat",
+      "props": {
+        "label": "REPPO",
+        "value": "+14.04%",
+        "trend": "up"
+      }
+    },
+    "token_stat_hyper": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPER",
+        "value": "flat",
+        "trend": "neutral"
+      }
+    },
+    "token_stat_vvv": {
+      "type": "Stat",
+      "props": {
+        "label": "VVV",
+        "value": "−5.49%",
+        "trend": "down"
+      }
+    },
+    "defi_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "defi_heading",
+        "defi_text"
+      ]
+    },
+    "defi_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "defi-overview",
+        "level": "h3"
+      }
+    },
+    "defi_text": {
+      "type": "Text",
+      "props": {
+        "text": "TVL flat, DEX vol −21%; V3→V4 rotation accelerating"
+      }
+    },
+    "heartbeat_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heartbeat_heading",
+        "heartbeat_text",
+        "heartbeat_status"
+      ]
+    },
+    "heartbeat_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "heartbeat ×3",
+        "level": "h3"
+      }
+    },
+    "heartbeat_text": {
+      "type": "Text",
+      "props": {
+        "text": "30/30 cron entries success"
+      }
+    },
+    "heartbeat_status": {
+      "type": "Badge",
+      "props": {
+        "text": "status WATCH (4 open issues)",
+        "variant": "outline"
+      }
+    },
+    "reflect_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reflect_heading",
+        "reflect_text"
+      ]
+    },
+    "reflect_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "reflect",
+        "level": "h3"
+      }
+    },
+    "reflect_text": {
+      "type": "Text",
+      "props": {
+        "text": "week-1 memory consolidated; MEMORY.md + 4 topic files updated"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_title",
+        "decision1",
+        "decision2",
+        "decision3",
+        "decision4",
+        "decision5"
+      ]
+    },
+    "decisions_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision1": {
+      "type": "Text",
+      "props": {
+        "text": "verify reppo on-chain after PR #10/#11 — close ISS-004 + ISS-006 if ≥1 mint + ≥1 vote land"
+      }
+    },
+    "decision2": {
+      "type": "Text",
+      "props": {
+        "text": "close ISS-007 in INDEX.md — PR #13 merged, confirm Base RPC stable"
+      }
+    },
+    "decision3": {
+      "type": "Text",
+      "props": {
+        "text": "ship ISS-005 durable prefetch fix — pod epoch validity prompt-bug still pending"
+      }
+    },
+    "decision4": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #14 — scan.sh pattern tighten, ready for review"
+      }
+    },
+    "decision5": {
+      "type": "Text",
+      "props": {
+        "text": "build rubric for 14 unassigned datanets — 5 days surfaced, untouched"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "+10 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
