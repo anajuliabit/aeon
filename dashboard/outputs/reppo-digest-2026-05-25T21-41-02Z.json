@@ -1,0 +1,327 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "status_section",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "postprocess_section",
+        "sep3",
+        "summary_section"
+      ]
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status_heading",
+        "status_text"
+      ]
+    },
+    "status_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      }
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm 4th today on datanet 9"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_heading",
+        "mint_item",
+        "votes_item"
+      ]
+    },
+    "queued_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued (4 items)",
+        "level": "h3"
+      }
+    },
+    "mint_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_badges",
+        "mint_desc"
+      ]
+    },
+    "mint_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_1mint",
+        "badge_hash"
+      ]
+    },
+    "badge_1mint": {
+      "type": "Badge",
+      "props": {
+        "text": "1 mint",
+        "variant": "default"
+      }
+    },
+    "badge_hash": {
+      "type": "Badge",
+      "props": {
+        "text": "hash: 57f34b45a8edb876",
+        "variant": "secondary"
+      }
+    },
+    "mint_desc": {
+      "type": "Text",
+      "props": {
+        "text": "BTC perps daily donchian breakout"
+      }
+    },
+    "votes_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_header",
+        "votes_type_line"
+      ]
+    },
+    "votes_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_3votes",
+        "badge_pods"
+      ]
+    },
+    "badge_3votes": {
+      "type": "Badge",
+      "props": {
+        "text": "3 dislike votes",
+        "variant": "default"
+      }
+    },
+    "badge_pods": {
+      "type": "Badge",
+      "props": {
+        "text": "pods 361/365/366",
+        "variant": "secondary"
+      }
+    },
+    "votes_type_line": {
+      "type": "Text",
+      "props": {
+        "text": "Type: hotbot v4 raw exports"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "postprocess_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "postprocess_heading",
+        "reverted_alert",
+        "mint_failure",
+        "grant_failure",
+        "votes_failure"
+      ]
+    },
+    "postprocess_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Postprocess",
+        "level": "h3"
+      }
+    },
+    "reverted_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "All 4 dry-runs reverted",
+        "type": "warning"
+      }
+    },
+    "mint_failure": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_fail_text",
+        "badge_iss004"
+      ]
+    },
+    "mint_fail_text": {
+      "type": "Text",
+      "props": {
+        "text": "Mint hit PUBLISHER_LACKS_SUBNET_ACCESS"
+      }
+    },
+    "badge_iss004": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-004",
+        "variant": "destructive"
+      }
+    },
+    "grant_failure": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "grant_fail_text",
+        "grant_alert"
+      ]
+    },
+    "grant_fail_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #10's auto-grant helper failed INSUFFICIENT_ALLOWANCE"
+      }
+    },
+    "grant_alert": {
+      "type": "Alert",
+      "props": {
+        "message": "Operator needs to approve SubnetManager for 50 REPPO before grant-access runs",
+        "type": "error"
+      }
+    },
+    "votes_failure": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_fail_text",
+        "votes_fail_badges"
+      ]
+    },
+    "votes_fail_text": {
+      "type": "Text",
+      "props": {
+        "text": "All 3 votes reverted INSUFFICIENT_VOTING_POWER"
+      }
+    },
+    "votes_fail_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss006",
+        "badge_0locked"
+      ]
+    },
+    "badge_iss006": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-006",
+        "variant": "destructive"
+      }
+    },
+    "badge_0locked": {
+      "type": "Badge",
+      "props": {
+        "text": "still 0 locked",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_heading",
+        "summary_stats"
+      ]
+    },
+    "summary_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_onchain",
+        "stat_unassigned"
+      ]
+    },
+    "stat_onchain": {
+      "type": "Stat",
+      "props": {
+        "label": "On-chain",
+        "value": "0"
+      }
+    },
+    "stat_unassigned": {
+      "type": "Stat",
+      "props": {
+        "label": "Datanets unassigned",
+        "value": "14"
+      }
+    }
+  }
+}
