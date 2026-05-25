@@ -1,0 +1,194 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo Digest",
+        "description": "Reppo Swarm run 5 today — datanet 9 queued operations and failure summary"
+      },
+      "children": [
+        "heading_run",
+        "separator_1",
+        "heading_datanet",
+        "stack_datanet",
+        "separator_2",
+        "heading_failures",
+        "stack_failures",
+        "separator_3",
+        "heading_summary",
+        "grid_summary",
+        "separator_4",
+        "heading_issues",
+        "text_issues_update"
+      ]
+    },
+    "heading_run": {
+      "type": "Heading",
+      "props": {
+        "text": "Reppo Swarm Run 5 (Today)",
+        "level": "h2"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_datanet": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued Operations: Datanet 9",
+        "level": "h3"
+      }
+    },
+    "stack_datanet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_mint_op",
+        "text_votes_op"
+      ]
+    },
+    "text_mint_op": {
+      "type": "Text",
+      "props": {
+        "text": "1 mint (BTC perp 15m VWAP fade, hash d206bd9a14741e8f)"
+      }
+    },
+    "text_votes_op": {
+      "type": "Text",
+      "props": {
+        "text": "3 dislike votes (pods 362/363/364, all hotbot v4 raw exports)"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_failures": {
+      "type": "Heading",
+      "props": {
+        "text": "Postprocess Status: Reverted",
+        "level": "h3"
+      }
+    },
+    "stack_failures": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_mint_fail",
+        "alert_approve_fail",
+        "alert_grant_fail",
+        "alert_votes_fail"
+      ]
+    },
+    "alert_mint_fail": {
+      "type": "Alert",
+      "props": {
+        "title": "Mint Failed",
+        "message": "publisher_lacks_subnet_access (iss-004)",
+        "type": "error"
+      }
+    },
+    "alert_approve_fail": {
+      "type": "Alert",
+      "props": {
+        "title": "Auto-Approve Aborted",
+        "message": "foundry/cast wouldn't install in sandbox",
+        "type": "error"
+      }
+    },
+    "alert_grant_fail": {
+      "type": "Alert",
+      "props": {
+        "title": "Auto-Grant Failed",
+        "message": "insufficient_allowance",
+        "type": "warning"
+      }
+    },
+    "alert_votes_fail": {
+      "type": "Alert",
+      "props": {
+        "title": "All 3 Votes Failed",
+        "message": "insufficient_voting_power (iss-006) — publisher has 0 locked repo",
+        "type": "error"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "grid_summary": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_onchain",
+        "stat_status",
+        "stat_unassigned"
+      ]
+    },
+    "stat_onchain": {
+      "type": "Stat",
+      "props": {
+        "label": "On-Chain",
+        "value": "0"
+      }
+    },
+    "stat_status": {
+      "type": "Stat",
+      "props": {
+        "label": "Status",
+        "value": "Day 5 Fully Blocked"
+      }
+    },
+    "stat_unassigned": {
+      "type": "Stat",
+      "props": {
+        "label": "Unassigned Datanets",
+        "value": "14"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Updates",
+        "level": "h3"
+      }
+    },
+    "text_issues_update": {
+      "type": "Text",
+      "props": {
+        "text": "iss-004 updated with new sandbox sub-blocker"
+      }
+    }
+  }
+}
