@@ -1,0 +1,58 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "desc_heading",
+        "stat_false_positives",
+        "sep",
+        "pr_link"
+      ]
+    },
+    "desc_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tightened skill-security-scan backtick HIGH pattern",
+        "level": "h3"
+      }
+    },
+    "stat_false_positives": {
+      "type": "Stat",
+      "props": {
+        "label": "Markdown false positives",
+        "value": "19",
+        "delta": "-97.5%",
+        "trend": "down"
+      }
+    },
+    "sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #14",
+        "href": "https://github.com/anajuliabit/aeon/pull/14",
+        "source": "GitHub"
+      }
+    }
+  }
+}
