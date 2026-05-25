@@ -21,11 +21,23 @@ REPPO_NETWORK=mainnet reppo register-agent \
 ```
 This uses the CLI's default API key — no `REPPO_API_KEY` needed.
 
-## 4. Configure the rubric
+## 4. Lock REPPO for voting power (one-time)
+The chain's vote step uses veREPPO weight; without a lockup, votes may carry
+zero weight or fail with insufficient-power errors. Lock the agent's full
+REPPO balance into veREPPO for 30 days using the helper:
+```bash
+./scripts/reppo-lock.sh
+```
+The script auto-detects the wallet's REPPO balance and locks all of it for
+30 days (`--duration 2592000`). Override with `--amount <n>` or
+`--duration <seconds>`; preview with `--dry-run`. When the lockup matures,
+re-run to refresh, or use `reppo extend-lock <id> --duration <seconds>`.
+
+## 5. Configure the rubric
 Edit `configs/datanets/tradinggymai.md`: replace `datanet_id` with the real
 mainnet TradingGymAI datanet id, and tune the Goal / criteria / caps.
 
-## 5. Phased rollout
+## 6. Phased rollout
 - **Phase 0 — dry-run only.** Add repo variable `REPPO_DRY_RUN_ONLY=true`.
   Run the chain 2–3 days; confirm the daily digest, prefetch, gate logic,
   and intent files all behave. No on-chain writes, no spend.
