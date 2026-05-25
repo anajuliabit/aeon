@@ -1,0 +1,270 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo swarm 2026-05-25 (re-run)"
+      },
+      "children": [
+        "status-badges",
+        "sep-1",
+        "trading-section",
+        "sep-2",
+        "postprocess-section",
+        "sep-3",
+        "onchain-section",
+        "sep-4",
+        "blocking-section"
+      ]
+    },
+    "status-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-run",
+        "badge-skip"
+      ]
+    },
+    "badge-run": {
+      "type": "Badge",
+      "props": {
+        "text": "1 RUN",
+        "variant": "default"
+      }
+    },
+    "badge-skip": {
+      "type": "Badge",
+      "props": {
+        "text": "0 SKIP",
+        "variant": "secondary"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trading-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trading-heading",
+        "mint-item",
+        "votes-item"
+      ]
+    },
+    "trading-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trading-agent Activity",
+        "level": "h3"
+      }
+    },
+    "mint-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint-label",
+        "mint-details"
+      ]
+    },
+    "mint-label": {
+      "type": "Text",
+      "props": {
+        "text": "1 mint queued",
+        "variant": "lead"
+      }
+    },
+    "mint-details": {
+      "type": "Text",
+      "props": {
+        "text": "Keltner Channel breakout, BTC perps 1H, hash dc00ba485785d730",
+        "variant": "body"
+      }
+    },
+    "votes-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes-label",
+        "votes-details"
+      ]
+    },
+    "votes-label": {
+      "type": "Text",
+      "props": {
+        "text": "3 DISLIKE votes",
+        "variant": "lead"
+      }
+    },
+    "votes-details": {
+      "type": "Text",
+      "props": {
+        "text": "Pods 362/365/366 on datanet 9 — HotBot v4 raw signal/trade exports",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "postprocess-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "postprocess-heading",
+        "postprocess-status",
+        "error-mint",
+        "error-362",
+        "error-365-366"
+      ]
+    },
+    "postprocess-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Postprocess Dry-run Results",
+        "level": "h3"
+      }
+    },
+    "postprocess-status": {
+      "type": "Badge",
+      "props": {
+        "text": "All 4 reverted",
+        "variant": "destructive"
+      }
+    },
+    "error-mint": {
+      "type": "Alert",
+      "props": {
+        "title": "Mint reverted",
+        "message": "PUBLISHER_LACKS_SUBNET_ACCESS (ISS-004)",
+        "type": "error"
+      }
+    },
+    "error-362": {
+      "type": "Alert",
+      "props": {
+        "title": "Pod 362 vote reverted",
+        "message": "INSUFFICIENT_VOTING_POWER (ISS-006)",
+        "type": "error"
+      }
+    },
+    "error-365-366": {
+      "type": "Alert",
+      "props": {
+        "title": "Pods 365 + 366 votes reverted",
+        "message": "Transient mainnet.base.org RPC INTERNAL_ERROR (ISS-007). Now 4 total occurrences, 2 in the same batch — escalating.",
+        "type": "error"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "onchain-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "onchain-heading",
+        "onchain-stats"
+      ]
+    },
+    "onchain-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain Results",
+        "level": "h3"
+      }
+    },
+    "onchain-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-mints",
+        "stat-votes"
+      ]
+    },
+    "stat-mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints",
+        "value": "0"
+      }
+    },
+    "stat-votes": {
+      "type": "Stat",
+      "props": {
+        "label": "Votes",
+        "value": "0"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocking-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocking-alert",
+        "pending-action",
+        "datanets-text"
+      ]
+    },
+    "blocking-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Fully blocked output",
+        "message": "Day 4 of fully-blocked output",
+        "type": "warning"
+      }
+    },
+    "pending-action": {
+      "type": "Text",
+      "props": {
+        "text": "Pending operator action on ISS-004 + ISS-006",
+        "variant": "lead"
+      }
+    },
+    "datanets-text": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets still unassigned",
+        "variant": "muted"
+      }
+    }
+  }
+}
