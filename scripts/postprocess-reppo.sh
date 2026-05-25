@@ -95,6 +95,32 @@ extract_detail() {
   tr -s '[:space:]' ' ' < "$1" 2>/dev/null | cut -c1-300 || true
 }
 
+# Helper: run a dry-run for the current intent. Retries up to 3 attempts on
+# transient RPC failures (INTERNAL_ERROR / TIMEOUT / RATE_LIMITED /
+# NETWORK_ERROR) with linear backoff. Relies on caller-scope $args / $key /
+# $base. Returns 0 on success, 1 on terminal failure (last attempt's code
+# remains in .reppo-cache/dryrun-$base for the caller to inspect).
+dryrun_with_retry() {
+  local attempt=1 code wait
+  while : ; do
+    if REPPO_NETWORK=mainnet reppo $args --idempotency-key "$key" --dry-run --json \
+         > ".reppo-cache/dryrun-$base" 2>&1; then
+      return 0
+    fi
+    code="$(extract_code ".reppo-cache/dryrun-$base")"
+    case "$code" in
+      INTERNAL_ERROR|TIMEOUT|RATE_LIMITED|NETWORK_ERROR)
+        if [ "$attempt" -ge 3 ]; then return 1; fi
+        wait=$((attempt * 5))
+        echo "reppo-postprocess: transient $code on $base, retry in ${wait}s (attempt $attempt/3)" >&2
+        sleep "$wait"
+        attempt=$((attempt + 1))
+        ;;
+      *) return 1 ;;
+    esac
+  done
+}
+
 for intent in "$PENDING_DIR"/*.json; do
   [ -f "$intent" ] || continue
   base="$(basename "$intent")"
@@ -114,8 +140,7 @@ for intent in "$PENDING_DIR"/*.json; do
   # auto-grant datanet access and retry once. Gated on DRY_RUN_ONLY because
   # grant-access costs a real fee — Phase 0 stays free, real mode self-heals.
   echo "reppo-postprocess: dry-run $base..."
-  if ! REPPO_NETWORK=mainnet reppo $args --idempotency-key "$key" --dry-run --json \
-       > ".reppo-cache/dryrun-$base" 2>&1; then
+  if ! dryrun_with_retry; then
     code="$(extract_code ".reppo-cache/dryrun-$base")"
     detail="$(extract_detail ".reppo-cache/dryrun-$base")"
     cmd_name="$(jq -r '.cmd' "$intent")"
@@ -128,8 +153,7 @@ for intent in "$PENDING_DIR"/*.json; do
         grant_tx="$(jq -r '.txHash // .transactionHash // "n/a"' ".reppo-cache/grant-$target.json" 2>/dev/null || echo n/a)"
         echo "  - auto-granted datanet $target access (tx: $grant_tx)" >> "$RESULTS_FILE"
         # Retry the dry-run now that access is granted.
-        if ! REPPO_NETWORK=mainnet reppo $args --idempotency-key "$key" --dry-run --json \
-             > ".reppo-cache/dryrun-$base" 2>&1; then
+        if ! dryrun_with_retry; then
           code="$(extract_code ".reppo-cache/dryrun-$base")"
           detail="$(extract_detail ".reppo-cache/dryrun-$base")"
           echo "- \`$base\` — **dry-run failed after grant** (code: $code), real write skipped" >> "$RESULTS_FILE"
