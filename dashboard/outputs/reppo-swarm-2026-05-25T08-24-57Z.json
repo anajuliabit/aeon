@@ -1,0 +1,93 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-swarm misfire",
+        "description": "2026-05-25"
+      },
+      "children": [
+        "main_alert",
+        "separator1",
+        "explanation",
+        "separator2",
+        "status",
+        "separator3",
+        "fix"
+      ]
+    },
+    "main_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Workflow dispatch error",
+        "message": "aeon.yml dispatched with skill=reppo-swarm but that's a chain, not a skill. No action taken."
+      }
+    },
+    "separator1": {
+      "type": "Separator"
+    },
+    "explanation": {
+      "type": "Text",
+      "props": {
+        "text": "Today's chain still fires via its normal cron path."
+      }
+    },
+    "separator2": {
+      "type": "Separator"
+    },
+    "status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status_label",
+        "status_time"
+      ]
+    },
+    "status_label": {
+      "type": "Text",
+      "props": {
+        "text": "Last successful run:",
+        "variant": "caption"
+      }
+    },
+    "status_time": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-24T07:44Z"
+      }
+    },
+    "separator3": {
+      "type": "Separator"
+    },
+    "fix": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fix_label",
+        "fix_code"
+      ]
+    },
+    "fix_label": {
+      "type": "Text",
+      "props": {
+        "text": "Correct invocation:",
+        "variant": "caption"
+      }
+    },
+    "fix_code": {
+      "type": "Text",
+      "props": {
+        "text": "gh workflow run chain-runner.yml -f chain=reppo-swarm"
+      }
+    }
+  }
+}
