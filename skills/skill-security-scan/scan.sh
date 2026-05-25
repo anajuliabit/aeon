@@ -84,7 +84,13 @@ HIGH_PATTERNS=(
   # Shell injection
   'eval[[:space:]]'
   'eval\('
-  '`[^`]*\$'
+  # Backtick command substitution containing $(...). The previous pattern
+  # ('`[^`]*\$') fired on every markdown inline `${var}` template reference
+  # (769 raw matches across the SKILL.md corpus, 2026-05-25). Requiring an
+  # actual $(...) inside the backticks isolates real command substitution
+  # while skipping documentation prose. Dangerous bare-variable forms like
+  # `curl $TOKEN` are already covered by the curl/wget/secret patterns below.
+  '`[^`]*\$\([^)]+\)'
   '\$\([^)]*\$'
   # Secret exfiltration — curl/wget piping secrets or env vars
   'curl.*\$[A-Z_]'
