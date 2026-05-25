@@ -1,0 +1,190 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-05-25"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_focus",
+        "sep1",
+        "section_since",
+        "sep2",
+        "section_running"
+      ]
+    },
+    "section_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_focus",
+        "text_focus1",
+        "text_focus2",
+        "text_focus3"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "text_focus1": {
+      "type": "Text",
+      "props": {
+        "text": "1. Operator: grant subnet + lock REPPO — why now: day 3 of 0 mints, 0 votes on-chain"
+      }
+    },
+    "text_focus2": {
+      "type": "Text",
+      "props": {
+        "text": "2. Merge PR #9 (token-alert) — why now: stalled 38h+; token-alert next runs 12:00"
+      }
+    },
+    "text_focus3": {
+      "type": "Text",
+      "props": {
+        "text": "3. Populate soul/ — why now: 6+ content skills today still ship neutral voice"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_since",
+        "text_since1",
+        "text_since2",
+        "text_since3",
+        "text_since4",
+        "text_since5"
+      ]
+    },
+    "heading_since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "text_since1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-006 filed: vote dry-runs revert INSUFFICIENT_VOTING_POWER (0 locked REPPO)"
+      }
+    },
+    "text_since2": {
+      "type": "Text",
+      "props": {
+        "text": "reflect consolidated 7-day window; reppo cascade lesson captured"
+      }
+    },
+    "text_since3": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert: VVV +13.4% alert; REPPO/HYPER recovering"
+      }
+    },
+    "text_since4": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview: Hyperliquid L1 +7% chain, V3↔V4 vol rotation"
+      }
+    },
+    "text_since5": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals bootstrap baseline filed; evals.json drift action queued"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_running",
+        "text_running1",
+        "text_running2",
+        "text_running3",
+        "text_running4",
+        "text_running5",
+        "text_running6"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "text_running1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report @ 07:00 (Monday — first weekly run)"
+      }
+    },
+    "text_running2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness @ 08:00 · heartbeat @ 08/14/20"
+      }
+    },
+    "text_running3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00 · token-alert + defi-overview @ 12:00"
+      }
+    },
+    "text_running4": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill @ 14:00 · skill-security-scan @ 16:00 (Monday)"
+      }
+    },
+    "text_running5": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker / skill-health / self-improve / reflect / action-converter @ 18:00"
+      }
+    },
+    "text_running6": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review @ 19:00 (Monday) · evening-recap @ 21:00"
+      }
+    }
+  }
+}

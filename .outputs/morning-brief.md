@@ -1,22 +1,21 @@
-*Morning Brief — 2026-05-24*
+*Morning Brief — 2026-05-25*
 
 *Focus today*
-1. ISS-004 (operator subnet grant) — why now: every 07:00 reppo chain mints fail until granted
-2. ISS-005 (filter pods by epoch validity) — why now: every vote intent fails POD_NOT_VALID_FOR_EPOCH
-3. Populate soul/ — why now: 5+ content skills run neutral voice today (github-trending, token-alert, defi-overview, search-skill, evening-recap)
+1. Operator: grant subnet + lock REPPO — why now: day 3 of 0 mints, 0 votes on-chain
+2. Merge PR #9 (token-alert) — why now: stalled 38h+; token-alert next runs 12:00
+3. Populate soul/ — why now: 6+ content skills today still ship neutral voice
 
 *Since yesterday*
-- Merged: PR #8 — ISS-003 closed (UNKNOWN-wrapper bug fixed); two underlying blockers now pinned as ISS-004/005
-- Opened: PR #9 — self-improve tightened token-alert step-2 rules (volume-spike n≥5, threshold-cross floor/ceiling columns)
-- Reflect rewrote MEMORY.md (dropped stale Next Priorities / Lessons dupes); fleet topic refreshed
-- skill-evals Sunday bootstrap: 12/29 coverage, flagged token-alert output_pattern mismatch in evals.json
+- ISS-006 filed: vote dry-runs revert INSUFFICIENT_VOTING_POWER (0 locked REPPO)
+- reflect consolidated 7-day window; reppo cascade lesson captured
+- token-alert: VVV +13.4% alert; REPPO/HYPER recovering
+- defi-overview: Hyperliquid L1 +7% chain, V3↔V4 vol rotation
+- skill-evals bootstrap baseline filed; evals.json drift action queued
 
 *Running today*
-- skill-freshness @ 08:00 UTC
-- heartbeat @ 08:00 / 14:00 / 20:00 UTC
-- github-trending @ 09:00 UTC
-- token-alert + defi-overview @ 12:00 UTC
-- search-skill @ 14:00 UTC
-- goal-tracker / skill-health / reflect / action-converter @ 18:00 UTC
-- skill-update-check @ 19:00 UTC (Sunday)
-- evening-recap @ 21:00 UTC
+- cost-report @ 07:00 (Monday — first weekly run)
+- skill-freshness @ 08:00 · heartbeat @ 08/14/20
+- github-trending @ 09:00 · token-alert + defi-overview @ 12:00
+- search-skill @ 14:00 · skill-security-scan @ 16:00 (Monday)
+- goal-tracker / skill-health / self-improve / reflect / action-converter @ 18:00
+- weekly-review @ 19:00 (Monday) · evening-recap @ 21:00
