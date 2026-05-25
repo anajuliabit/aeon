@@ -1,0 +1,367 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo swarm 2026-05-25",
+        "description": "Trading-agent status and operation queue"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "run_skip_row",
+        "sep_1",
+        "heading_queued",
+        "queued_stack",
+        "sep_2",
+        "heading_postprocess",
+        "postprocess_alert",
+        "errors_stack",
+        "sep_3",
+        "heading_onchain",
+        "onchain_row",
+        "sep_4",
+        "heading_blocking",
+        "blocking_alert",
+        "backlog_stat"
+      ]
+    },
+    "run_skip_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_run",
+        "stat_skip"
+      ]
+    },
+    "stat_run": {
+      "type": "Stat",
+      "props": {
+        "label": "RUN",
+        "value": "1"
+      }
+    },
+    "stat_skip": {
+      "type": "Stat",
+      "props": {
+        "label": "SKIP",
+        "value": "0"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_queued": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued Operations",
+        "level": "h3"
+      }
+    },
+    "queued_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint_section",
+        "votes_section"
+      ]
+    },
+    "mint_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_label",
+        "mint_pair",
+        "mint_hash"
+      ]
+    },
+    "mint_label": {
+      "type": "Text",
+      "props": {
+        "text": "1 mint",
+        "variant": "lead"
+      }
+    },
+    "mint_pair": {
+      "type": "Text",
+      "props": {
+        "text": "SOL-USDT 1H pullback-to-support"
+      }
+    },
+    "mint_hash": {
+      "type": "Text",
+      "props": {
+        "text": "hash: 57d8f1d318d2a28d",
+        "variant": "caption"
+      }
+    },
+    "votes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_label",
+        "pods_row",
+        "votes_meta"
+      ]
+    },
+    "votes_label": {
+      "type": "Text",
+      "props": {
+        "text": "3 DISLIKE votes",
+        "variant": "lead"
+      }
+    },
+    "pods_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "pod_300",
+        "pod_363",
+        "pod_364"
+      ]
+    },
+    "pod_300": {
+      "type": "Badge",
+      "props": {
+        "text": "pod 300",
+        "variant": "outline"
+      }
+    },
+    "pod_363": {
+      "type": "Badge",
+      "props": {
+        "text": "pod 363",
+        "variant": "outline"
+      }
+    },
+    "pod_364": {
+      "type": "Badge",
+      "props": {
+        "text": "pod 364",
+        "variant": "outline"
+      }
+    },
+    "votes_meta": {
+      "type": "Text",
+      "props": {
+        "text": "epoch 96, all judged non-strategy artifacts, datanet 9",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_postprocess": {
+      "type": "Heading",
+      "props": {
+        "text": "Postprocess Results (Dry-run-only)",
+        "level": "h3"
+      }
+    },
+    "postprocess_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "All 4 operations reverted",
+        "type": "error"
+      }
+    },
+    "errors_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "error_mint",
+        "error_votes_300_364",
+        "error_vote_363"
+      ]
+    },
+    "error_mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "error_mint_item",
+        "badge_mint_err",
+        "badge_iss004"
+      ]
+    },
+    "error_mint_item": {
+      "type": "Text",
+      "props": {
+        "text": "mint"
+      }
+    },
+    "badge_mint_err": {
+      "type": "Badge",
+      "props": {
+        "text": "PUBLISHER_LACKS_SUBNET_ACCESS",
+        "variant": "destructive"
+      }
+    },
+    "badge_iss004": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-004 (still open)",
+        "variant": "destructive"
+      }
+    },
+    "error_votes_300_364": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "error_votes_item",
+        "badge_votes_err",
+        "badge_iss006"
+      ]
+    },
+    "error_votes_item": {
+      "type": "Text",
+      "props": {
+        "text": "votes 300 / 364"
+      }
+    },
+    "badge_votes_err": {
+      "type": "Badge",
+      "props": {
+        "text": "INSUFFICIENT_VOTING_POWER",
+        "variant": "destructive"
+      }
+    },
+    "badge_iss006": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-006 (still open)",
+        "variant": "destructive"
+      }
+    },
+    "error_vote_363": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "error_vote363_item",
+        "badge_rpc_err",
+        "iss007_note"
+      ]
+    },
+    "error_vote363_item": {
+      "type": "Text",
+      "props": {
+        "text": "vote 363"
+      }
+    },
+    "badge_rpc_err": {
+      "type": "Badge",
+      "props": {
+        "text": "transient mainnet.base.org RPC",
+        "variant": "destructive"
+      }
+    },
+    "iss007_note": {
+      "type": "Text",
+      "props": {
+        "text": "2nd occurrence; filing ISS-007",
+        "variant": "caption"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_onchain": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain Results",
+        "level": "h3"
+      }
+    },
+    "onchain_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_onchain_mints",
+        "stat_onchain_votes"
+      ]
+    },
+    "stat_onchain_mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints on-chain",
+        "value": "0"
+      }
+    },
+    "stat_onchain_votes": {
+      "type": "Stat",
+      "props": {
+        "label": "Votes on-chain",
+        "value": "0"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_blocking": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocking Issues & Backlog",
+        "level": "h3"
+      }
+    },
+    "blocking_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Day 4 of fully-blocked output",
+        "message": "Pending operator action on ISS-004 + ISS-006",
+        "type": "warning"
+      }
+    },
+    "backlog_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Datanets unassigned",
+        "value": "14",
+        "delta": "same week-long backlog"
+      }
+    }
+  }
+}

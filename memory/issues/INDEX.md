@@ -7,6 +7,7 @@
 | ISS-004 | Reppo mint dry-run fails — publisher lacks subnet access | high | config | 2026-05-23 | reppo-trading-agent, reppo-digest |
 | ISS-005 | Reppo vote dry-runs fail — selected pods are not valid for the current epoch | high | prompt-bug | 2026-05-23 | reppo-trading-agent, reppo-digest |
 | ISS-006 | Reppo vote dry-run fails — publisher has 0 voting power | high | config | 2026-05-24 | reppo-trading-agent, reppo-digest |
+| ISS-007 | Reppo vote dry-run hits transient mainnet.base.org RPC failure | medium | timeout | 2026-05-25 | reppo-trading-agent, reppo-digest |
 
 ## Resolved
 
