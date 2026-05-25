@@ -121,6 +121,101 @@ dryrun_with_retry() {
   done
 }
 
+# Helper: ensure foundry's `cast` is available. Used by the auto-approve path
+# below (the Reppo CLI does not yet ship its own ERC20 approve helper). Installs
+# foundry on first use; cached for subsequent calls within the same runner.
+ensure_cast() {
+  command -v cast >/dev/null 2>&1 && return 0
+  echo "reppo-postprocess: installing foundry/cast..." >&2
+  curl -sL https://foundry.paradigm.xyz 2>/dev/null | bash >/dev/null 2>&1 || return 1
+  export PATH="$HOME/.foundry/bin:$PATH"
+  "$HOME/.foundry/bin/foundryup" >/dev/null 2>&1 || return 1
+  command -v cast >/dev/null 2>&1
+}
+
+# Helper: resolve the REPPO ERC20 token address. Prefers the operator-set
+# REPPO_TOKEN_ADDRESS env (cheapest, no on-chain call). Falls back to
+# discovering it from the SubnetManager via a few common ABI getters.
+# Echoes the address on success, empty on failure.
+resolve_reppo_token() {
+  local spender="$1" addr
+  if [ -n "${REPPO_TOKEN_ADDRESS:-}" ]; then
+    echo "$REPPO_TOKEN_ADDRESS"
+    return 0
+  fi
+  if command -v cast >/dev/null 2>&1 && [ -n "${REPPO_RPC_URL:-}" ]; then
+    for sig in "feeToken()(address)" "REPPO()(address)" "paymentToken()(address)" "token()(address)"; do
+      addr="$(cast call "$spender" "$sig" --rpc-url "$REPPO_RPC_URL" 2>/dev/null | head -1 || true)"
+      if [[ "$addr" =~ ^0x[0-9a-fA-F]{40}$ ]] && [ "$addr" != "0x0000000000000000000000000000000000000000" ]; then
+        echo "$addr"
+        return 0
+      fi
+    done
+  fi
+  echo ""
+  return 1
+}
+
+# Helper: try grant-access. On INSUFFICIENT_ALLOWANCE, auto-approve REPPO
+# spend to the SubnetManager (cast send approve(...)) and retry grant-access.
+# Returns 0 on grant success, 1 on terminal failure (final grant response
+# remains in .reppo-cache/grant-$target.json for the caller to inspect).
+auto_recover_grant() {
+  local target="$1" gcode spender reppo_token approve_tx adetail
+  if REPPO_NETWORK=mainnet reppo grant-access --datanet "$target" --json \
+       > ".reppo-cache/grant-$target.json" 2>&1; then
+    return 0
+  fi
+  gcode="$(extract_code ".reppo-cache/grant-$target.json")"
+  if [ "$gcode" != "INSUFFICIENT_ALLOWANCE" ]; then
+    return 1  # not a recoverable failure; caller reports it
+  fi
+
+  # Extract the spender (SubnetManager) from the error hint —
+  # "Approve the SubnetManager (0x...)".
+  spender="$(grep -oE 'SubnetManager \(0x[0-9a-fA-F]{40}\)' ".reppo-cache/grant-$target.json" \
+              | grep -oE '0x[0-9a-fA-F]{40}' | head -1)"
+  if [ -z "$spender" ]; then
+    echo "  - auto-approve aborted: SubnetManager address not found in grant error" >> "$RESULTS_FILE"
+    return 1
+  fi
+
+  if ! ensure_cast; then
+    echo "  - auto-approve aborted: foundry/cast install failed" >> "$RESULTS_FILE"
+    return 1
+  fi
+
+  reppo_token="$(resolve_reppo_token "$spender")"
+  if [ -z "$reppo_token" ]; then
+    echo "  - auto-approve aborted: REPPO token address unknown — set REPPO_TOKEN_ADDRESS or ensure SubnetManager exposes feeToken()/REPPO()/paymentToken()/token()" >> "$RESULTS_FILE"
+    return 1
+  fi
+
+  echo "reppo-postprocess: approving SubnetManager $spender for REPPO ($reppo_token)..." >&2
+  # MAX_UINT256 approval — one-time, never re-approve. The SubnetManager
+  # contract is the only counterparty that can move REPPO from this account
+  # via this allowance; operator trust in that contract is implicit anyway
+  # (they're already using it for grant-access).
+  if ! cast send "$reppo_token" "approve(address,uint256)" "$spender" \
+       0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff \
+       --rpc-url "${REPPO_RPC_URL:-https://mainnet.base.org}" \
+       --private-key "$REPPO_PRIVATE_KEY" --json \
+       > ".reppo-cache/approve-$target.json" 2>&1; then
+    adetail="$(extract_detail ".reppo-cache/approve-$target.json")"
+    echo "  - auto-approve FAILED: ${adetail:-<empty>}" >> "$RESULTS_FILE"
+    return 1
+  fi
+  approve_tx="$(jq -r '.transactionHash // .txHash // "n/a"' ".reppo-cache/approve-$target.json" 2>/dev/null || echo n/a)"
+  echo "  - auto-approved REPPO spend to SubnetManager $spender (tx: $approve_tx)" >> "$RESULTS_FILE"
+
+  # Retry grant-access now that allowance is set.
+  if REPPO_NETWORK=mainnet reppo grant-access --datanet "$target" --json \
+       > ".reppo-cache/grant-$target.json" 2>&1; then
+    return 0
+  fi
+  return 1
+}
+
 for intent in "$PENDING_DIR"/*.json; do
   [ -f "$intent" ] || continue
   base="$(basename "$intent")"
@@ -147,9 +242,8 @@ for intent in "$PENDING_DIR"/*.json; do
 
     if [ "$code" = "PUBLISHER_LACKS_SUBNET_ACCESS" ] && [ "$cmd_name" = "mint-pod" ] && [ "$DRY_RUN_ONLY" != "true" ]; then
       target="$(jq -r '.datanet' "$intent")"
-      echo "reppo-postprocess: $base needs datanet access; granting datanet $target..." >&2
-      if REPPO_NETWORK=mainnet reppo grant-access --datanet "$target" --json \
-           > ".reppo-cache/grant-$target.json" 2>&1; then
+      echo "reppo-postprocess: $base needs datanet access; auto-granting datanet $target..." >&2
+      if auto_recover_grant "$target"; then
         grant_tx="$(jq -r '.txHash // .transactionHash // "n/a"' ".reppo-cache/grant-$target.json" 2>/dev/null || echo n/a)"
         echo "  - auto-granted datanet $target access (tx: $grant_tx)" >> "$RESULTS_FILE"
         # Retry the dry-run now that access is granted.
