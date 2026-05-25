@@ -1,0 +1,162 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "mcp dominated — two theses on what it actually is, two server launches, two takes on what shipping agents into real environments costs."
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section1_heading",
+        "section1_stack",
+        "sep1",
+        "section2_heading",
+        "section2_stack",
+        "sep2",
+        "section3_heading",
+        "section3_stack",
+        "sep3",
+        "footer"
+      ]
+    },
+    "section1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp as architecture, not endpoints",
+        "level": "h3"
+      }
+    },
+    "section1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story1",
+        "story2"
+      ]
+    },
+    "story1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "argues mcp servers must expose actions+context+workflows+state+delegated reasoning, not one-endpoint-per-tool — the api-wrapper framing is wrong",
+        "href": "https://x.com/AI_Anamika/status/2058452587544768919",
+        "source": "@AI_Anamika"
+      }
+    },
+    "story2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "frames mcp as ai-native distribution stack; anthropic already indexing recommended connectors as inventory",
+        "href": "https://x.com/curious_vii/status/2058579617309409748",
+        "source": "@curious_vii"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp servers go GA",
+        "level": "h3"
+      }
+    },
+    "section2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story3",
+        "story4"
+      ]
+    },
+    "story3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aws mcp server hits ga: iam auth + full api coverage + sandboxed python — agents can call any aws service",
+        "href": "https://x.com/marcel_butucea/status/2058501654152958458",
+        "source": "@marcel_butucea"
+      }
+    },
+    "story4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "devonthink 4.3 ships in-app mcp server alongside expanded privacy controls — knowledge-base apps now expose to local agents",
+        "href": "https://x.com/AlternativeTo/status/2058699078243099025",
+        "source": "@AlternativeTo"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "agents at work — adoption vs scaffolding",
+        "level": "h3"
+      }
+    },
+    "section3_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story5",
+        "story6"
+      ]
+    },
+    "story5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mckinsey makes lilli-fluency a hiring gate after 10% staff cut; 25k internal agents — consultancy goes agent-first as labor reset",
+        "href": "https://x.com/thenextweb/status/2058698921514291202",
+        "source": "@thenextweb"
+      }
+    },
+    "story6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "codex/claude code/mcp without scoped credentials, permissions, audit, cost caps, rollbacks, evals first are fast paths to production incidents",
+        "href": "https://x.com/slashmsu/status/2058569387355853016",
+        "source": "@slashmsu"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "source: xai · candidates: 10 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

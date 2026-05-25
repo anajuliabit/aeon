@@ -1,16 +1,22 @@
-*Agent Buzz — 2026-05-21*
-_Quiet builder day, no protocol drama. The signal split two ways: agents automating video editing, and new tooling to make agent-building easier._
+*Agent Buzz — 2026-05-25*
+_mcp dominated — two theses on what it actually is, two server launches, two takes on what shipping agents into real environments costs._
 
-*Agents automating video editing*
-• @higgsfield — MCP-callable clipper turns a YouTube URL into captioned Shorts/Reels cuts; the editing pipeline itself is now an agent tool.
-  https://x.com/higgsfield/status/2057172304074043475
-• @vibecodingth — Reports a single-prompt agent stack replacing 3-6h of manual YouTube editing with a finished MP4 and auto-upload.
-  https://x.com/vibecodingth/status/2057249642472190098
+**mcp as architecture, not endpoints**
+• @AI_Anamika — argues mcp servers must expose actions+context+workflows+state+delegated reasoning, not one-endpoint-per-tool — the api-wrapper framing is wrong
+  https://x.com/AI_Anamika/status/2058452587544768919
+• @curious_vii — frames mcp as ai-native distribution stack; anthropic already indexing recommended connectors as inventory
+  https://x.com/curious_vii/status/2058579617309409748
 
-*Lowering the agent-building barrier*
-• @ChromiumDev — Google shipped agent-targeted DevTools guidance and a Chrome Extensions skill so agents can author extension code directly.
-  https://x.com/ChromiumDev/status/2057249740480475347
-• @gyro_ai — Microsoft open-sourced its internal 15-lesson agent course (agentic RAG, multi-agent, production), now at 63.2k GitHub stars.
-  https://x.com/gyro_ai/status/2057249273671229912
+**mcp servers go GA**
+• @marcel_butucea — aws mcp server hits ga: iam auth + full api coverage + sandboxed python — agents can call any aws service
+  https://x.com/marcel_butucea/status/2058501654152958458
+• @AlternativeTo — devonthink 4.3 ships in-app mcp server alongside expanded privacy controls — knowledge-base apps now expose to local agents
+  https://x.com/AlternativeTo/status/2058699078243099025
 
-<!-- _src: xai-cache · candidates: 8 → kept: 4_ -->
+**agents at work — adoption vs scaffolding**
+• @thenextweb — mckinsey makes lilli-fluency a hiring gate after 10% staff cut; 25k internal agents — consultancy goes agent-first as labor reset
+  https://x.com/thenextweb/status/2058698921514291202
+• @slashmsu — codex/claude code/mcp without scoped credentials, permissions, audit, cost caps, rollbacks, evals first are fast paths to production incidents
+  https://x.com/slashmsu/status/2058569387355853016
+
+<!-- _src: xai · candidates: 10 → kept: 6_ -->
