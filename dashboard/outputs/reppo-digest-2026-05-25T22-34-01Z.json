@@ -1,0 +1,215 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "reverted_section",
+        "sep3",
+        "footer"
+      ]
+    },
+    "header": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 6th run · datanet 9 · 0 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_heading",
+        "queued_mint",
+        "queued_votes"
+      ]
+    },
+    "queued_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "queued_mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "queued_mint_badge",
+        "queued_mint_desc",
+        "queued_mint_hash"
+      ]
+    },
+    "queued_mint_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "mint",
+        "variant": "default"
+      }
+    },
+    "queued_mint_desc": {
+      "type": "Text",
+      "props": {
+        "text": "BTC perp funding-rate arbitrage, delta-neutral spot+perp on 8h funding"
+      }
+    },
+    "queued_mint_hash": {
+      "type": "Text",
+      "props": {
+        "text": "29e026e7067c849d",
+        "variant": "caption"
+      }
+    },
+    "queued_votes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "queued_votes_badge",
+        "queued_votes_dislikes",
+        "queued_votes_epoch"
+      ]
+    },
+    "queued_votes_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "votes",
+        "variant": "default"
+      }
+    },
+    "queued_votes_dislikes": {
+      "type": "Text",
+      "props": {
+        "text": "dislike 300, 361, 366"
+      }
+    },
+    "queued_votes_epoch": {
+      "type": "Text",
+      "props": {
+        "text": "epoch 96 — pipeline doc + hotbot v4 raw exports",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "reverted_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reverted_heading",
+        "reverted_mint",
+        "reverted_votes"
+      ]
+    },
+    "reverted_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Reverted",
+        "level": "h3"
+      }
+    },
+    "reverted_mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reverted_mint_badge",
+        "reverted_mint_error",
+        "reverted_mint_action"
+      ]
+    },
+    "reverted_mint_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "mint",
+        "variant": "destructive"
+      }
+    },
+    "reverted_mint_error": {
+      "type": "Text",
+      "props": {
+        "text": "PUBLISHER_LACKS_SUBNET_ACCESS → auto-grant INSUFFICIENT_ALLOWANCE → auto-approve aborted, REPPO_TOKEN_ADDRESS unknown (ISS-004, 3rd distinct sub-blocker this week)"
+      }
+    },
+    "reverted_mint_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action required",
+        "message": "operator approve SubnetManager 0x2629…eE7A for ≥50 REPPO, or set REPPO_TOKEN_ADDRESS so auto-approve can fire",
+        "type": "warning"
+      }
+    },
+    "reverted_votes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reverted_votes_badge",
+        "reverted_votes_error",
+        "reverted_votes_action"
+      ]
+    },
+    "reverted_votes_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "votes",
+        "variant": "destructive"
+      }
+    },
+    "reverted_votes_error": {
+      "type": "Text",
+      "props": {
+        "text": "INSUFFICIENT_VOTING_POWER × 3 (ISS-006)"
+      }
+    },
+    "reverted_votes_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action required",
+        "message": "operator `reppo lock <amount> --duration <secs>` so publisher has voting power",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned",
+        "variant": "muted"
+      }
+    }
+  }
+}

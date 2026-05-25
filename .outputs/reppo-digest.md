@@ -1,1 +1,13 @@
-reppo-swarm 5th run today, same wall. datanet 9: 1 mint (btc perp 15m vwap fade, hash d206bd9a14741e8f) + 3 dislike votes (pods 362/363/364, all hotbot v4 raw exports) queued. postprocess reverted everything — mint = publisher_lacks_subnet_access (iss-004); auto-approve aborted because foundry/cast wouldn't install in the sandbox; auto-grant = insufficient_allowance; all 3 votes = insufficient_voting_power (iss-006, publisher still 0 locked repo). 0 on-chain, day 5 fully blocked. 14 datanets still unassigned. iss-004 updated with the new sandbox sub-blocker.
+reppo-swarm · 6th run · datanet 9 · 0 on-chain
+
+queued
+  mint  · btc perp funding-rate arbitrage, delta-neutral spot+perp on 8h funding · 29e026e7067c849d
+  votes · dislike 300, 361, 366 (epoch 96 — pipeline doc + hotbot v4 raw exports)
+
+reverted
+  mint  · PUBLISHER_LACKS_SUBNET_ACCESS → auto-grant INSUFFICIENT_ALLOWANCE → auto-approve aborted, REPPO_TOKEN_ADDRESS unknown (ISS-004, 3rd distinct sub-blocker this week)
+         action: operator approve SubnetManager 0x2629…eE7A for ≥50 REPPO, or set REPPO_TOKEN_ADDRESS so auto-approve can fire
+  votes · INSUFFICIENT_VOTING_POWER × 3 (ISS-006)
+         action: operator `reppo lock <amount> --duration <secs>` so publisher has voting power
+
+14 datanets unassigned.
