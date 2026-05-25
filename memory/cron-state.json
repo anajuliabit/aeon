@@ -279,5 +279,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "skill-security-scan": {
+    "last_dispatch": "2026-05-25T16:41:37Z",
+    "last_status": "dispatched"
   }
 }
