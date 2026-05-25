@@ -1,0 +1,501 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-05-25",
+        "description": "Close today's reppo issues, ship ISS-005 durable fix, patch security + evals, sweep MEMORY."
+      },
+      "children": [
+        "action1",
+        "sep1",
+        "action2",
+        "sep2",
+        "action3",
+        "sep3",
+        "action4",
+        "sep4",
+        "action5",
+        "sep5",
+        "sources"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_action1",
+        "desc1",
+        "why1",
+        "done1",
+        "loop1"
+      ]
+    },
+    "h_action1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Move ISS-004 / ISS-006 / ISS-007 to the resolved table",
+        "level": "h3"
+      }
+    },
+    "desc1": {
+      "type": "Text",
+      "props": {
+        "text": "Update memory/issues/INDEX.md and set status=resolved + fix_pr to PR #10 / #11 / #13 in each ISS-*.md file"
+      }
+    },
+    "why1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why1_label",
+        "why1_text"
+      ]
+    },
+    "why1_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "why1_text": {
+      "type": "Text",
+      "props": {
+        "text": "Today's 5-PR wave (#10 auto-grant, #11 reppo-lock helper, #13 RPC retry) shipped the fixes but tracker still flags them open",
+        "variant": "caption"
+      }
+    },
+    "done1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done1_label",
+        "done1_text"
+      ]
+    },
+    "done1_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "done1_text": {
+      "type": "Text",
+      "props": {
+        "text": "INDEX.md resolved table grew by 3 rows; ISS-004.md / ISS-006.md / ISS-007.md all carry status: resolved + fix_pr links",
+        "variant": "caption"
+      }
+    },
+    "loop1": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-bookkeeping",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_action2",
+        "desc2",
+        "why2",
+        "done2",
+        "loop2"
+      ]
+    },
+    "h_action2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Extend scripts/prefetch-reppo.sh to record per-pod validityEpoch",
+        "level": "h3"
+      }
+    },
+    "desc2": {
+      "type": "Text",
+      "props": {
+        "text": "Record per-pod validityEpoch in the pod cache and patch skills/reppo-trading-agent/SKILL.md to filter on validityEpoch >= currentEpoch — replaces the in-prompt <= current-1 workaround and resolves ISS-005"
+      }
+    },
+    "why2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why2_label",
+        "why2_text"
+      ]
+    },
+    "why2_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "why2_text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-005 is the last cascade blocker without a PR; the contract belongs in prefetch, not the prompt",
+        "variant": "caption"
+      }
+    },
+    "done2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done2_label",
+        "done2_text"
+      ]
+    },
+    "done2_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "done2_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR opened touching scripts/prefetch-reppo.sh + skills/reppo-trading-agent/SKILL.md; ISS-005.md gets fix_pr",
+        "variant": "caption"
+      }
+    },
+    "loop2": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-005-durable-prefetch",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_action3",
+        "desc3",
+        "why3",
+        "done3",
+        "loop3"
+      ]
+    },
+    "h_action3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Fix 5 workflow-injection sites",
+        "level": "h3"
+      }
+    },
+    "desc3": {
+      "type": "Text",
+      "props": {
+        "text": "Replace inline ${{ inputs.skill }} / ${{ github.event.action }} with env-var indirection per articles/workflow-security-audit-2026-04-11.md at .github/workflows/messages.yml:578, .github/workflows/aeon.yml:86/94/96/718"
+      }
+    },
+    "why3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why3_label",
+        "why3_text"
+      ]
+    },
+    "why3_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "why3_text": {
+      "type": "Text",
+      "props": {
+        "text": "Five HIGH findings match the 2026-04-11 incident class and the fix shape is already documented — preemptive close while the audit is fresh",
+        "variant": "caption"
+      }
+    },
+    "done3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done3_label",
+        "done3_text"
+      ]
+    },
+    "done3_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "done3_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR opened with env-var indirection at all 5 sites; next skill-security-scan delta drops these from the HIGH list",
+        "variant": "caption"
+      }
+    },
+    "loop3": {
+      "type": "Badge",
+      "props": {
+        "text": "security-scan-workflow-injection",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_action4",
+        "desc4",
+        "why4",
+        "done4",
+        "loop4"
+      ]
+    },
+    "h_action4": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Rewrite 4 spec-drift rows in skills/skill-evals/evals.json",
+        "level": "h3"
+      }
+    },
+    "desc4": {
+      "type": "Text",
+      "props": {
+        "text": "Change token-alert + skill-health output_pattern from articles/*.md to memory/logs/YYYY-MM-DD.md, and delete the orphaned hn-digest + polymarket entries (no matching skills/ directory)"
+      }
+    },
+    "why4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why4_label",
+        "why4_text"
+      ]
+    },
+    "why4_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "why4_text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals coverage stuck at 12/29 because evals.json carries stale paths — surfaced as action-queue head in 2026-05-24 skill-evals bootstrap and untouched 1d",
+        "variant": "caption"
+      }
+    },
+    "done4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done4_label",
+        "done4_text"
+      ]
+    },
+    "done4_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "done4_text": {
+      "type": "Text",
+      "props": {
+        "text": "evals.json has 4 fewer wrong rows; next skill-evals run reports ≥14/29 coverage and 0 NO_OUTPUT from these four",
+        "variant": "caption"
+      }
+    },
+    "loop4": {
+      "type": "Badge",
+      "props": {
+        "text": "evals-json-output-pattern-fix",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_action5",
+        "desc5",
+        "why5",
+        "done5",
+        "loop5"
+      ]
+    },
+    "h_action5": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Sweep memory/MEMORY.md and memory/topics/fleet.md",
+        "level": "h3"
+      }
+    },
+    "desc5": {
+      "type": "Text",
+      "props": {
+        "text": "Drop \"Populate soul/\" from Current Goals (PR #12 closed it), drop PR #9 from Open PRs (merged), add ISS-007 row to Open Issues, and append PRs #10/#11/#12/#13 rows to the fleet.md infrastructure table"
+      }
+    },
+    "why5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why5_label",
+        "why5_text"
+      ]
+    },
+    "why5_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Why",
+        "variant": "secondary"
+      }
+    },
+    "why5_text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md and fleet.md are the next morning-brief's primary read; stale entries push the brief toward already-shipped work",
+        "variant": "caption"
+      }
+    },
+    "done5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done5_label",
+        "done5_text"
+      ]
+    },
+    "done5_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "done5_text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md Current Goals = 2 bullets (soul gone); Open PRs reflects 0 open; fleet.md PR table has rows through #13",
+        "variant": "caption"
+      }
+    },
+    "loop5": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-fleet-md-sweep",
+        "variant": "outline"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "memory=59 | logs=5 | topics=4 | prs=0 | cron_failing=0 | mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

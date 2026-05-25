@@ -1,29 +1,29 @@
-*5 Actions — 2026-05-24*
-Shape: Ship PR #9, open ISS-005 PR, bundle operator unblocks, draft soul, triage datanets.
+*5 Actions — 2026-05-25*
+Shape: Close today's reppo issues, ship ISS-005 durable fix, patch security + evals, sweep MEMORY.
 
-1. Squash-merge PR #9 via `gh pr merge 9 --squash --delete-branch`, then add a `## Tracked Tokens` table to memory/MEMORY.md with REPPO/HYPER/VVV rows plus Price Floor / Price Ceiling columns.
-why: PR #9 is 24h+ stale; merging closes the silently-skipped token-alert rules already flagged in today's 12:00 log.
-done: PR #9 closed and `## Tracked Tokens` table exists in MEMORY.md with three rows and Floor/Ceiling columns.
-loop: pr-9-token-alert
+1. Move ISS-004 / ISS-006 / ISS-007 to the resolved table in memory/issues/INDEX.md and set status=resolved + fix_pr to PR #10 / #11 / #13 in each ISS-*.md file
+why: Today's 5-PR wave (#10 auto-grant, #11 reppo-lock helper, #13 RPC retry) shipped the fixes but tracker still flags them open
+done: INDEX.md resolved table grew by 3 rows; ISS-004.md / ISS-006.md / ISS-007.md all carry status: resolved + fix_pr links
+loop: iss-bookkeeping
 
-2. Open a PR closing ISS-005 — patch scripts/prefetch-reppo.sh to record per-pod validityEpoch + currentEpoch, then patch skills/reppo-trading-agent/SKILL.md to drop pods where validityEpoch != currentEpoch before voting.
-why: ISS-005 is the only on-chain blocker not needing operator action — every vote dry-run today reverted POD_NOT_VALID_FOR_EPOCH.
-done: PR opened touching both files; description references ISS-005; reppo-digest dry-run on the branch shows 0 vote reverts.
-loop: iss-005-epoch-filter
+2. Extend scripts/prefetch-reppo.sh to record per-pod validityEpoch in the pod cache and patch skills/reppo-trading-agent/SKILL.md to filter on validityEpoch >= currentEpoch — replaces the in-prompt <= current-1 workaround and resolves ISS-005
+why: ISS-005 is the last cascade blocker without a PR; the contract belongs in prefetch, not the prompt
+done: PR opened touching scripts/prefetch-reppo.sh + skills/reppo-trading-agent/SKILL.md; ISS-005.md gets fix_pr
+loop: iss-005-durable-prefetch
 
-3. Bundle ISS-004 + ISS-006 operator unblocks: write exact `reppo grant-access --subnet <id from configs/datanets/tradinggymai.md>` and `reppo lock <amount> --duration <secs>` into memory/issues/ISS-004.md and ISS-006.md "Operator action" sections, then send one combined ./notify with both commands.
-why: Both issues are operator-only and both block reppo-trading-agent today — one ping beats two.
-done: both ISS files have an "Operator action" section with a copy-pasteable CLI; one combined ./notify sent.
-loop: iss-004-grant + iss-006-lock
+3. Fix the 5 workflow-injection sites flagged in articles/security-scan-2026-05-25.md (.github/workflows/messages.yml:578, .github/workflows/aeon.yml:86/94/96/718) — replace inline \${{ inputs.skill }} / \${{ github.event.action }} with env-var indirection per articles/workflow-security-audit-2026-04-11.md
+why: Five HIGH findings match the 2026-04-11 incident class and the fix shape is already documented — preemptive close while the audit is fresh
+done: PR opened with env-var indirection at all 5 sites; next skill-security-scan delta drops these from the HIGH list
+loop: security-scan-workflow-injection
 
-4. Draft soul/SOUL.draft.md from 14 days of logs (Telegram exchanges, write-tweet runs, the "Yes redo" correction on the Base summer thread) — fill all 5 sections (Identity, Worldview, Interests, Background, Boundaries) with at least 3 lines each, as `.draft.md` so operator approves before promoting.
-why: 5+ content skills run neutral voice daily; a draft seeds operator review and could ship voice this week.
-done: soul/SOUL.draft.md exists with all 5 sections populated (>=3 lines each).
-loop: soul-empty
+4. Rewrite the 4 spec-drift rows in skills/skill-evals/evals.json — change token-alert + skill-health output_pattern from articles/*.md to memory/logs/YYYY-MM-DD.md, and delete the orphaned hn-digest + polymarket entries (no matching skills/ directory)
+why: skill-evals coverage stuck at 12/29 because evals.json carries stale paths — surfaced as action-queue head in 2026-05-24 skill-evals bootstrap and untouched 1d
+done: evals.json has 4 fewer wrong rows; next skill-evals run reports ≥14/29 coverage and 0 NO_OUTPUT from these four
+loop: evals-json-output-pattern-fix
 
-5. Triage 14 unassigned reppo datanets into memory/topics/reppo.md — read configs/datanets/*.md, append `## Datanet triage 2026-05-24` section with top-3 highest-leverage datanets, each with a one-line scope and a proposed agent skill name.
-why: Orchestrator surfaces these every run, 7+ days untouched — triage gives the next agent a real queue.
-done: memory/topics/reppo.md has the new section with 3 named datanets + 3 proposed agent skill names.
-loop: unassigned-datanets
+5. Sweep memory/MEMORY.md and memory/topics/fleet.md for today's 5-PR wave — drop "Populate soul/" from Current Goals (PR #12 closed it), drop PR #9 from Open PRs (merged), add ISS-007 row to Open Issues, and append PRs #10/#11/#12/#13 rows to the fleet.md infrastructure table
+why: MEMORY.md and fleet.md are the next morning-brief's primary read; stale entries push the brief toward already-shipped work
+done: MEMORY.md Current Goals = 2 bullets (soul gone); Open PRs reflects 0 open; fleet.md PR table has rows through #13
+loop: memory-fleet-md-sweep
 
-sources: memory=47 logs=4 topics=4 prs=1 cron_failing=0 mode=OK
+sources: memory=59 logs=5 topics=4 prs=0 cron_failing=0 mode=OK
