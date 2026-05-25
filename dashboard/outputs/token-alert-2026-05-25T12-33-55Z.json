@@ -1,0 +1,177 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-05-25"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-trigger",
+        "sep1",
+        "section-reppo",
+        "sep2",
+        "section-hyper",
+        "sep3",
+        "section-vvv"
+      ]
+    },
+    "alert-trigger": {
+      "type": "Alert",
+      "props": {
+        "title": "Trigger",
+        "message": "REPPO +14.0% exceeds 10% threshold",
+        "type": "info"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-reppo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-reppo",
+        "stat-reppo",
+        "text-reppo-vol-mcap",
+        "text-reppo-context"
+      ]
+    },
+    "badge-reppo": {
+      "type": "Badge",
+      "props": {
+        "text": "REPPO"
+      }
+    },
+    "stat-reppo": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.02457",
+        "delta": "+14.0%",
+        "trend": "up"
+      }
+    },
+    "text-reppo-vol-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "vol $3.40M, mcap $9.43M"
+      }
+    },
+    "text-reppo-context": {
+      "type": "Text",
+      "props": {
+        "text": "Day-over-day +16.2% vs 2026-05-24 ($0.02115) — momentum holding from yesterday's +9.1% recovery; back above 2026-05-22 baseline ($0.02313)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-hyper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-hyper",
+        "stat-hyper",
+        "text-hyper-vol-mcap",
+        "text-hyper-context"
+      ]
+    },
+    "badge-hyper": {
+      "type": "Badge",
+      "props": {
+        "text": "HYPER"
+      }
+    },
+    "stat-hyper": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.10368",
+        "delta": "+0.2%",
+        "trend": "up"
+      }
+    },
+    "text-hyper-vol-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "vol $18.04M, mcap $35.11M"
+      }
+    },
+    "text-hyper-context": {
+      "type": "Text",
+      "props": {
+        "text": "Flat day 2"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-vvv": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-vvv",
+        "stat-vvv",
+        "text-vvv-vol-mcap",
+        "text-vvv-context"
+      ]
+    },
+    "badge-vvv": {
+      "type": "Badge",
+      "props": {
+        "text": "VVV"
+      }
+    },
+    "stat-vvv": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$18.79",
+        "delta": "-5.5%",
+        "trend": "down"
+      }
+    },
+    "text-vvv-vol-mcap": {
+      "type": "Text",
+      "props": {
+        "text": "vol $72.52M, mcap $871.2M"
+      }
+    },
+    "text-vvv-context": {
+      "type": "Text",
+      "props": {
+        "text": "Reverses yesterday's +13.4% alert, now -4.8% DoD"
+      }
+    }
+  }
+}
