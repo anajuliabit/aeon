@@ -125,11 +125,26 @@ dryrun_with_retry() {
 # below (the Reppo CLI does not yet ship its own ERC20 approve helper). Installs
 # foundry on first use; cached for subsequent calls within the same runner.
 ensure_cast() {
+  # Fast path: in CI the workflow's "Install Foundry" step
+  # (foundry-rs/foundry-toolchain) puts cast on PATH before this runs.
   command -v cast >/dev/null 2>&1 && return 0
-  echo "reppo-postprocess: installing foundry/cast..." >&2
-  curl -sL https://foundry.paradigm.xyz 2>/dev/null | bash >/dev/null 2>&1 || return 1
+
+  # Fallback for ./aeon local runs or if the workflow step ever fails.
+  # Logs visibly so a future install failure is debuggable.
+  echo "reppo-postprocess: cast not on PATH; installing foundry inline..." >&2
+  local log=".reppo-cache/foundry-install.log"
+  : > "$log"
+  if ! curl -fsSL https://foundry.paradigm.xyz 2>>"$log" | bash >>"$log" 2>&1; then
+    echo "reppo-postprocess: foundry init script failed — log tail:" >&2
+    tail -5 "$log" 2>/dev/null >&2 || true
+    return 1
+  fi
   export PATH="$HOME/.foundry/bin:$PATH"
-  "$HOME/.foundry/bin/foundryup" >/dev/null 2>&1 || return 1
+  if ! "$HOME/.foundry/bin/foundryup" >>"$log" 2>&1; then
+    echo "reppo-postprocess: foundryup failed — log tail:" >&2
+    tail -5 "$log" 2>/dev/null >&2 || true
+    return 1
+  fi
   command -v cast >/dev/null 2>&1
 }
 
