@@ -1,0 +1,255 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Cost Report"
+      },
+      "children": [
+        "heading_main",
+        "separator_1",
+        "summary_section",
+        "separator_2",
+        "top3_section",
+        "separator_3",
+        "actions_section",
+        "separator_4",
+        "anomalies_section",
+        "separator_5",
+        "projection_section",
+        "separator_6",
+        "fullreport_link"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Cost Report — 2026-05-25 (last 7 days)",
+        "level": "h2"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "summary_text",
+        "summary_stats"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "Spent $179.73 across 61 runs (no prior-week baseline); 1 anomaly flagged, projected monthly burn ~$770.35."
+      }
+    },
+    "summary_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_spend",
+        "stat_runs",
+        "stat_anomalies",
+        "stat_monthly"
+      ]
+    },
+    "stat_spend": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Spend (7d)",
+        "value": "$179.73"
+      }
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "61"
+      }
+    },
+    "stat_anomalies": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies",
+        "value": "1"
+      }
+    },
+    "stat_monthly": {
+      "type": "Stat",
+      "props": {
+        "label": "Monthly Projection",
+        "value": "$770.35"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "top3_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top3_heading",
+        "top3_table"
+      ]
+    },
+    "top3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 by cost",
+        "level": "h3"
+      }
+    },
+    "top3_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Skill",
+          "Cost",
+          "Runs"
+        ],
+        "rows": [
+          [
+            "1",
+            "defi-overview",
+            "$32.79",
+            "4"
+          ],
+          [
+            "2",
+            "reppo-trading-agent",
+            "$24.60",
+            "7"
+          ],
+          [
+            "3",
+            "heartbeat",
+            "$19.06",
+            "8"
+          ]
+        ]
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "actions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions_heading",
+        "action_1",
+        "action_2"
+      ]
+    },
+    "actions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions this week",
+        "level": "h3"
+      }
+    },
+    "action_1": {
+      "type": "Text",
+      "props": {
+        "text": "No strict optimization levers triggered (cache underuse / model-downgrade filters don't fire for this cache-dominated workload)"
+      }
+    },
+    "action_2": {
+      "type": "Text",
+      "props": {
+        "text": "Manual review: defi-overview + heartbeat + reppo-digest on Opus account for 38% of spend; Sonnet override could cut ~$55–65/wk — operator call"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "anomalies_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "anomaly_1",
+        "anomaly_2"
+      ]
+    },
+    "anomaly_1": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Anomaly: reppo-digest cache_read spike",
+        "message": "reppo-digest 2026-05-24 — cache_read spiked to 1.51M (2–6× typical), cost $4.12 vs µ $2.03"
+      }
+    },
+    "anomaly_2": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Burn-rate watch",
+        "message": "$770/mo projection driven partly by heavy bootstrap day (2026-05-21); need another week to confirm trend"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "projection_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "projection_heading",
+        "projection_stat"
+      ]
+    },
+    "projection_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "30-day projection",
+        "level": "h3"
+      }
+    },
+    "projection_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Projected Monthly Burn",
+        "value": "$770.35"
+      }
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "fullreport_link": {
+      "type": "Link",
+      "props": {
+        "label": "Full Report",
+        "href": "articles/cost-report-2026-05-25.md"
+      }
+    }
+  }
+}
