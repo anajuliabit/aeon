@@ -1,0 +1,10 @@
+import hashlib, json, pathlib
+p = pathlib.Path('/home/runner/work/aeon/aeon/.strategy-tmp.txt')
+text = p.read_text()
+norm = ' '.join(text.lower().split()).strip()
+full = hashlib.sha256(f'9:{norm}'.encode()).hexdigest()
+print('NORMALIZED:')
+print(norm)
+print()
+print('FULL_HASH:', full)
+print('FIRST16:  ', full[:16])
