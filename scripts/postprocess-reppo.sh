@@ -83,6 +83,18 @@ build_args() {
   esac
 }
 
+# Helper: extract a structured error code from a reppo CLI JSON failure response.
+# Returns .error.code (Reppo's standard error shape), or .code (legacy), or "UNKNOWN".
+extract_code() {
+  jq -r '.error.code // .code // "UNKNOWN"' "$1" 2>/dev/null || echo UNKNOWN
+}
+
+# Helper: extract a single-line, <=300-char detail from a captured CLI output file.
+# Whitespace runs collapse to a single space so the result fits on one Markdown bullet.
+extract_detail() {
+  tr -s '[:space:]' ' ' < "$1" 2>/dev/null | cut -c1-300 || true
+}
+
 for intent in "$PENDING_DIR"/*.json; do
   [ -f "$intent" ] || continue
   base="$(basename "$intent")"
@@ -98,17 +110,50 @@ for intent in "$PENDING_DIR"/*.json; do
     continue
   }
 
-  # Dry-run preflight.
+  # Dry-run preflight. On a mint-pod failure with PUBLISHER_LACKS_SUBNET_ACCESS,
+  # auto-grant datanet access and retry once. Gated on DRY_RUN_ONLY because
+  # grant-access costs a real fee — Phase 0 stays free, real mode self-heals.
   echo "reppo-postprocess: dry-run $base..."
   if ! REPPO_NETWORK=mainnet reppo $args --idempotency-key "$key" --dry-run --json \
        > ".reppo-cache/dryrun-$base" 2>&1; then
-    code="$(jq -r '.code // "UNKNOWN"' ".reppo-cache/dryrun-$base" 2>/dev/null || echo UNKNOWN)"
-    detail="$(tr -s '[:space:]' ' ' < ".reppo-cache/dryrun-$base" 2>/dev/null | cut -c1-300 || true)"
-    echo "- \`$base\` — **dry-run failed** (code: $code), real write skipped" >> "$RESULTS_FILE"
-    echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
-    echo "reppo-postprocess: dry-run failed for $base: ${detail:-<empty>}" >&2
-    rm -f "$intent"
-    continue
+    code="$(extract_code ".reppo-cache/dryrun-$base")"
+    detail="$(extract_detail ".reppo-cache/dryrun-$base")"
+    cmd_name="$(jq -r '.cmd' "$intent")"
+
+    if [ "$code" = "PUBLISHER_LACKS_SUBNET_ACCESS" ] && [ "$cmd_name" = "mint-pod" ] && [ "$DRY_RUN_ONLY" != "true" ]; then
+      target="$(jq -r '.datanet' "$intent")"
+      echo "reppo-postprocess: $base needs datanet access; granting datanet $target..." >&2
+      if REPPO_NETWORK=mainnet reppo grant-access --datanet "$target" --json \
+           > ".reppo-cache/grant-$target.json" 2>&1; then
+        grant_tx="$(jq -r '.txHash // .transactionHash // "n/a"' ".reppo-cache/grant-$target.json" 2>/dev/null || echo n/a)"
+        echo "  - auto-granted datanet $target access (tx: $grant_tx)" >> "$RESULTS_FILE"
+        # Retry the dry-run now that access is granted.
+        if ! REPPO_NETWORK=mainnet reppo $args --idempotency-key "$key" --dry-run --json \
+             > ".reppo-cache/dryrun-$base" 2>&1; then
+          code="$(extract_code ".reppo-cache/dryrun-$base")"
+          detail="$(extract_detail ".reppo-cache/dryrun-$base")"
+          echo "- \`$base\` — **dry-run failed after grant** (code: $code), real write skipped" >> "$RESULTS_FILE"
+          echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
+          rm -f "$intent"
+          continue
+        fi
+        # Retry passed — fall through to the dry-run-OK / real-write logic below.
+      else
+        gcode="$(extract_code ".reppo-cache/grant-$target.json")"
+        gdetail="$(extract_detail ".reppo-cache/grant-$target.json")"
+        echo "- \`$base\` — **dry-run failed** (code: $code) and auto-grant for datanet $target failed (code: $gcode), real write skipped" >> "$RESULTS_FILE"
+        echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
+        echo "  - grant output: ${gdetail:-<empty>}" >> "$RESULTS_FILE"
+        rm -f "$intent"
+        continue
+      fi
+    else
+      echo "- \`$base\` — **dry-run failed** (code: $code), real write skipped" >> "$RESULTS_FILE"
+      echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
+      echo "reppo-postprocess: dry-run failed for $base: ${detail:-<empty>}" >&2
+      rm -f "$intent"
+      continue
+    fi
   fi
 
   if [ "$DRY_RUN_ONLY" = "true" ]; then
@@ -124,8 +169,8 @@ for intent in "$PENDING_DIR"/*.json; do
     tx="$(jq -r '.txHash // .transactionHash // "n/a"' ".reppo-cache/result-$base" 2>/dev/null || echo n/a)"
     echo "- \`$base\` — **success** (tx: $tx)" >> "$RESULTS_FILE"
   else
-    code="$(jq -r '.code // "UNKNOWN"' ".reppo-cache/result-$base" 2>/dev/null || echo UNKNOWN)"
-    detail="$(tr -s '[:space:]' ' ' < ".reppo-cache/result-$base" 2>/dev/null | cut -c1-300 || true)"
+    code="$(extract_code ".reppo-cache/result-$base")"
+    detail="$(extract_detail ".reppo-cache/result-$base")"
     echo "- \`$base\` — **write failed** (code: $code)" >> "$RESULTS_FILE"
     echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
     echo "reppo-postprocess: write failed for $base: ${detail:-<empty>}" >&2
