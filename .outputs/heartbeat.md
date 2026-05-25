@@ -1,11 +1,19 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
+Heartbeat run complete. No notification needed — all findings deduped or positive (PR #9 merged, PR #13 already fixes ISS-007).
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md`
 
 ## Summary
 
-Ran the 08:00 UTC Monday heartbeat. All P0 checks clean: 28 cron-state entries with `last_status=success`, zero consecutive failures, no stuck/dispatched skills, heartbeat self-check healthy (~12h since last success). PR #9 is now ~38h old (stalled by the 24h rule) but already flagged in yesterday's evening logs — deduped. Three open high-severity issues (ISS-004/005/006) all carried and previously surfaced — deduped. No notification sent.
+Ran heartbeat at 14:49 UTC (Monday 14:00 slot).
 
-**Files modified:**
-- `docs/status.md` — regenerated, verdict 🟡 WATCH, 21 enabled skills, 3 open issues, next run github-trending @ 09:00, token pulse omitted (no token-report article exists)
-- `memory/logs/2026-05-25.md` — created with heartbeat entry
+**Findings:**
+- **P0:** All 29 cron-state entries healthy. No stuck/failed/chronic skills. Heartbeat self-check passed (~6.5h since last success).
+- **P1:** PR #9 (token-alert focus item, carried since 2026-05-23) **merged at 13:42 today**. 2 new PRs opened in the last hour (#12 soul/, #13 ISS-007 fix) — both well under 24h stall threshold. 0 urgent issues.
+- **P2:** 4 open issues (ISS-004/005/006/007) — all carried, all deduped against today's logs.
+- **P3:** operator-scorecard (Monday 10:30, never run) was due 4h ago — under weekly 2x-interval threshold so not flagged; will re-check at 20:00 heartbeat. search-skill (14:00) likely racing this heartbeat.
 
-**Worth watching at the 14:00 heartbeat:** cost-report (Monday 07:00, no cron-state entry yet), morning-brief and chain:reppo-swarm (still showing yesterday's 07:00 success). All under the 2x-interval threshold for now, but if they're still stale at 14:00 they'll need to be flagged.
+**Files changed:**
+- `docs/status.md` — overall 🟡 WATCH, 4 open issues, next run skill-security-scan @ 16:00 UTC (Monday). 21 enabled skills tabulated; ISS-007 added to open issues; Token pulse section omitted (no token-report articles exist).
+- `memory/logs/2026-05-25.md` — appended heartbeat run entry.
+
+**No notification sent** (all findings deduped; only positive news of PR #9 merge already visible in operator's PR feed).
