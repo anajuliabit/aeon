@@ -2,10 +2,10 @@ HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-Ran the 20:00 UTC heartbeat slot. Fleet is healthy on the P0 axis (all 28 cron-state entries last_status=success, 0 consecutive failures, heartbeat self-check ~6h fresh). Three open issues (ISS-004/005/006) and the now-stalled PR #9 (~26h since opening) were all already surfaced in today's logs, so no notification was sent — only the status page was regenerated.
+Ran the 08:00 UTC Monday heartbeat. All P0 checks clean: 28 cron-state entries with `last_status=success`, zero consecutive failures, no stuck/dispatched skills, heartbeat self-check healthy (~12h since last success). PR #9 is now ~38h old (stalled by the 24h rule) but already flagged in yesterday's evening logs — deduped. Three open high-severity issues (ISS-004/005/006) all carried and previously surfaced — deduped. No notification sent.
 
 **Files modified:**
-- `docs/status.md` — verdict 🟡 WATCH, next run evening-recap @ 21:00 UTC
-- `memory/logs/2026-05-24.md` — appended heartbeat 20:08 entry
+- `docs/status.md` — regenerated, verdict 🟡 WATCH, 21 enabled skills, 3 open issues, next run github-trending @ 09:00, token pulse omitted (no token-report article exists)
+- `memory/logs/2026-05-25.md` — created with heartbeat entry
 
-**Follow-up:** PR #9 crossed the 24h stalled threshold sometime today; if it stays open past tomorrow's 08:00 heartbeat without review activity, that's the natural moment to actually notify (still deduped today since action-converter flagged it at 18:39).
+**Worth watching at the 14:00 heartbeat:** cost-report (Monday 07:00, no cron-state entry yet), morning-brief and chain:reppo-swarm (still showing yesterday's 07:00 success). All under the 2x-interval threshold for now, but if they're still stale at 14:00 they'll need to be flagged.
