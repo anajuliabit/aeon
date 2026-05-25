@@ -1,26 +1,16 @@
-Catalog available (15 datanets). One rubric (tradinggymai → datanet 9, `valid: true`, status ACTIVE) → RUN. 14 catalog datanets have no rubric assigned.
+## Summary
 
+Ran reppo-orchestrator for 2026-05-25 (catalog available, 15 active mainnet datanets).
+
+**Plan**
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 tradinggymai ACTIVE and valid; re-running is safe — strategy dedup by content hash + idempotency keys)
-new-datanet: 1   (no rubric / no agent assigned)
-new-datanet: 2   (no rubric / no agent assigned)
-new-datanet: 4   (no rubric / no agent assigned)
-new-datanet: 5   (no rubric / no agent assigned)
-new-datanet: 6   (no rubric / no agent assigned)
-new-datanet: 7   (no rubric / no agent assigned)
-new-datanet: 8   (no rubric / no agent assigned)
-new-datanet: 10   (no rubric / no agent assigned)
-new-datanet: 11   (no rubric / no agent assigned)
-new-datanet: 13   (no rubric / no agent assigned)
-new-datanet: 14   (no rubric / no agent assigned)
-new-datanet: 15   (no rubric / no agent assigned)
-new-datanet: 16   (no rubric / no agent assigned)
-new-datanet: 17   (no rubric / no agent assigned)
+reppo-trading-agent: RUN   (datanet 9 tradinggymai active, valid:true, accessFee 50 REPPO)
+new-datanet: 1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17   (14 datanets, no rubric / no agent assigned)
 ```
 
-## Summary
-- Plan: 1 RUN (reppo-trading-agent on datanet 9 / tradinggymai), 0 SKIP. 14 unassigned catalog datanets surfaced (unchanged from prior runs — the standing gap on `MEMORY.md` "Current Goals").
-- Catalog: available (`.reppo-cache/datanets.json`, 15 datanets).
-- Files modified: `memory/logs/2026-05-25.md` (appended third orchestrator entry under existing heading).
-- Follow-ups (carried, not new): ISS-004/005/006/007 still gating on-chain output; 14 datanets still need rubric authoring before they can be voted/minted on.
+- **1 RUN / 0 SKIP** — only assigned rubric (`tradinggymai.md` → datanet 9, agent `reppo-trading-agent`) is valid and active per cached detail.
+- **14 unassigned datanets** discovered — same set surfaced all week; still untouched (matches MEMORY.md current goal).
+- Modified: `memory/logs/2026-05-25.md` (appended re-run note under existing `### reppo-orchestrator` heading).
+- No outbound network used; only local files in `.reppo-cache/`, `configs/datanets/`, and `memory/` read or written.
+- Follow-up (not in skill scope): operator action on ISS-004 / ISS-006 still gates on-chain output; the 14 unassigned datanets remain an open assignment goal.
