@@ -8,12 +8,17 @@ enabled on cron; inbound messaging via Telegram (live). Fleet exited bootstrap
 
 ## Current Goals
 - Unblock reppo-swarm on-chain output — three operator/config actions outstanding:
-  ISS-004 (subnet grant), ISS-005 (per-pod epoch validity in prefetch + agent
-  filter — agent-side workaround already live), ISS-006 (lock REPPO for voting power).
+  ISS-004 (subnet grant — PR #10 merged 2026-05-25 adds auto-grant helper, awaits
+  on-chain verification), ISS-005 (per-pod epoch validity in prefetch + agent
+  filter — agent-side workaround already live), ISS-006 (lock REPPO for voting
+  power — PR #11 merged 2026-05-25 adds lock helper, awaits on-chain verification).
 - Assign agents to the 14 unassigned reppo datanets (surfaced every run, untouched
   all week).
-- Populate `soul/` so content skills (write-tweet, article, digest, etc.) stop
-  running in neutral voice.
+
+## Completed Goals
+- Populate `soul/` so content skills stop running in neutral voice — completed
+  2026-05-25 (PR #12 populated `soul/SOUL.md` 74L + `soul/STYLE.md` 96L from
+  `~/code/social`).
 
 ## Active Topics
 - [Fleet status & infrastructure](topics/fleet.md) — PRs, recurring blockers, skill health.

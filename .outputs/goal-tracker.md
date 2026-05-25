@@ -1,13 +1,15 @@
-*Goal Tracker — 2026-05-24*
+*Goal Tracker — 2026-05-25*
 
-Summary: 3 goals — 0 at risk, 0 needs attention, 2 on track, 1 blocked, 0 done (overall → flat)
+Summary: 3 goals — 1 done, 1 on track, 1 blocked, 0 at risk, 0 needs attention (overall ↑ improving)
 
 BLOCKED
-• Unblock reppo-swarm on-chain output — 31 activity/14d, last today, blocked by ISS-004 (PUBLISHER_LACKS_SUBNET_ACCESS) + ISS-005 (POD_NOT_VALID_FOR_EPOCH, agent-side workaround in place) + ISS-006 (INSUFFICIENT_VOTING_POWER, filed this morning)
-  → Action: Operator runs `reppo grant-access --subnet <datanet-9-subnet>` to clear ISS-004 mint reverts.
+• Unblock reppo-swarm on-chain output — ~38 activity/14d, last today, 0 mints / 0 votes on-chain (day 4). Blockers: ISS-004 (subnet grant — PR #10 merged today adds auto-grant helper, awaits verification), ISS-005 (epoch validity filter — agent-side workaround live), ISS-006 (REPPO lock — PR #11 merged today adds lock helper, awaits verification). Status flat (still BLOCKED) but inputs improving.
+  → Action: Re-run reppo-trading-agent to verify ISS-004 + ISS-006 close on-chain after PR #10/#11 merges.
 
 ON TRACK
-• Assign agents to the 14 unassigned reppo datanets — 9 activity/14d, 0d idle (new — all activity is "14 unassigned" mentions, no datanet assigned yet; rule-based pass)
-• Populate soul/ files — 17 activity/14d, 0d idle (was ON TRACK, +55% activity rise, but soul/SOUL.md + soul/STYLE.md still empty templates; activity is "neutral voice" mentions across content skills)
+• Assign agents to the 14 unassigned reppo datanets — ~12 activity/14d, last today (flat — all mentions surface "14 unassigned", no agent has actually been assigned).
 
-Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
+DONE
+• Populate soul/ files — completed 2026-05-25. PR #12 merged: soul/SOUL.md (74L identity + worldview + boundaries) + soul/STYLE.md (96L tone + sentence structure + anti-patterns) populated from ~/code/social. Content skills can stop running in neutral voice starting next run.
+
+Sources: logs=ok, git=ok (shallow), gh_pr=ok, gh_issue=ok, cron-state=ok

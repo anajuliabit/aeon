@@ -1,0 +1,376 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-05-25"
+      },
+      "children": [
+        "summary_section",
+        "sep1",
+        "blocked_section",
+        "sep2",
+        "ontrack_section",
+        "sep3",
+        "done_section",
+        "sep4",
+        "sources_section"
+      ]
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_text",
+        "summary_badge"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "3 goals — 1 done, 1 on track, 1 blocked, 0 at risk, 0 needs attention"
+      }
+    },
+    "summary_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ improving",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_status",
+        "blocked_goal",
+        "blocked_details"
+      ]
+    },
+    "blocked_status": {
+      "type": "Badge",
+      "props": {
+        "text": "BLOCKED",
+        "variant": "destructive"
+      }
+    },
+    "blocked_goal": {
+      "type": "Text",
+      "props": {
+        "text": "Unblock reppo-swarm on-chain output",
+        "variant": "lead"
+      }
+    },
+    "blocked_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_activity_metrics",
+        "blockers_section",
+        "blocked_status_text",
+        "blocked_action"
+      ]
+    },
+    "blocked_activity_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "~38 activity/14d, last today, 0 mints / 0 votes on-chain (day 4)"
+      }
+    },
+    "blockers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blockers_label",
+        "blocker_004",
+        "blocker_005",
+        "blocker_006"
+      ]
+    },
+    "blockers_label": {
+      "type": "Text",
+      "props": {
+        "text": "Blockers:",
+        "variant": "body"
+      }
+    },
+    "blocker_004": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-004 (subnet grant — PR #10 merged today adds auto-grant helper, awaits verification)"
+      }
+    },
+    "blocker_005": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-005 (epoch validity filter — agent-side workaround live)"
+      }
+    },
+    "blocker_006": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-006 (REPPO lock — PR #11 merged today adds lock helper, awaits verification)"
+      }
+    },
+    "blocked_status_text": {
+      "type": "Text",
+      "props": {
+        "text": "Status flat (still BLOCKED) but inputs improving",
+        "variant": "muted"
+      }
+    },
+    "blocked_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Re-run reppo-trading-agent to verify ISS-004 + ISS-006 close on-chain after PR #10/#11 merges",
+        "type": "info"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ontrack_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ontrack_status",
+        "ontrack_goal",
+        "ontrack_details"
+      ]
+    },
+    "ontrack_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ON TRACK",
+        "variant": "secondary"
+      }
+    },
+    "ontrack_goal": {
+      "type": "Text",
+      "props": {
+        "text": "Assign agents to the 14 unassigned reppo datanets",
+        "variant": "lead"
+      }
+    },
+    "ontrack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ontrack_activity",
+        "ontrack_note"
+      ]
+    },
+    "ontrack_activity": {
+      "type": "Text",
+      "props": {
+        "text": "~12 activity/14d, last today"
+      }
+    },
+    "ontrack_note": {
+      "type": "Text",
+      "props": {
+        "text": "Flat — all mentions surface \"14 unassigned\", no agent has actually been assigned",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done_status",
+        "done_goal",
+        "done_details"
+      ]
+    },
+    "done_status": {
+      "type": "Badge",
+      "props": {
+        "text": "DONE",
+        "variant": "secondary"
+      }
+    },
+    "done_goal": {
+      "type": "Text",
+      "props": {
+        "text": "Populate soul/ files",
+        "variant": "lead"
+      }
+    },
+    "done_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done_completion",
+        "done_pr",
+        "soul_files_content",
+        "done_followup"
+      ]
+    },
+    "done_completion": {
+      "type": "Text",
+      "props": {
+        "text": "completed 2026-05-25"
+      }
+    },
+    "done_pr": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #12 merged",
+        "variant": "secondary"
+      }
+    },
+    "soul_files_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_file_soul",
+        "soul_file_style",
+        "soul_source"
+      ]
+    },
+    "soul_file_soul": {
+      "type": "Text",
+      "props": {
+        "text": "soul/SOUL.md (74L identity + worldview + boundaries)"
+      }
+    },
+    "soul_file_style": {
+      "type": "Text",
+      "props": {
+        "text": "soul/STYLE.md (96L tone + sentence structure + anti-patterns)"
+      }
+    },
+    "soul_source": {
+      "type": "Text",
+      "props": {
+        "text": "populated from ~/code/social",
+        "variant": "muted"
+      }
+    },
+    "done_followup": {
+      "type": "Text",
+      "props": {
+        "text": "Content skills can stop running in neutral voice starting next run",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources_heading",
+        "sources_grid"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "source_logs",
+        "source_git",
+        "source_gh_pr",
+        "source_gh_issue",
+        "source_cron"
+      ]
+    },
+    "source_logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs=ok",
+        "variant": "secondary"
+      }
+    },
+    "source_git": {
+      "type": "Badge",
+      "props": {
+        "text": "git=ok (shallow)",
+        "variant": "secondary"
+      }
+    },
+    "source_gh_pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr=ok",
+        "variant": "secondary"
+      }
+    },
+    "source_gh_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue=ok",
+        "variant": "secondary"
+      }
+    },
+    "source_cron": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "secondary"
+      }
+    }
+  }
+}
