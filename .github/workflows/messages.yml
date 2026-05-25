@@ -572,10 +572,13 @@ jobs:
         env:
           _INPUT_MESSAGE: ${{ inputs.message }}
           _INPUT_SOURCE: ${{ inputs.source }}
+          _EVENT_NAME: ${{ github.event_name }}
+          _EVENT_ACTION: ${{ github.event.action }}
+          _PAYLOAD_MESSAGE: ${{ github.event.client_payload.message }}
         run: |
-          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
-            MESSAGE=$(echo '${{ toJson(github.event.client_payload.message) }}' | jq -r '.')
-            TYPE="${{ github.event.action }}"
+          if [ "$_EVENT_NAME" = "repository_dispatch" ]; then
+            MESSAGE="$_PAYLOAD_MESSAGE"
+            TYPE="$_EVENT_ACTION"
             SOURCE="webhook"
             case "$TYPE" in
               telegram-message) SOURCE="telegram" ;;
