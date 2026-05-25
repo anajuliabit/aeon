@@ -1,38 +1,66 @@
+All four intent files written. Now my output summary.
+
+---
+
+## Gate decision
+**RUN.** Orchestrator plan reads `reppo-trading-agent: RUN (datanet 9 tradinggymai ACTIVE, valid:true, access fee 50 REPPO)`.
+
+## Strategy minted (1 / mint_cap 1)
+
+**BTC perpetual funding-rate arbitrage (delta-neutral)** — hash `29e026e7067c849d` (full `29e026e7067c849d22b2fe3c12f23f6c0b4d2dc9a52c1bea2d9cee801fe0b9a2`)
+
+- **Instrument/timeframe:** BTC spot + BTC perpetual futures, 8-hour funding interval.
+- **Entry:** When 8h funding ≥ +0.01% (~11% APR), open delta-neutral position — long BTC spot, short BTC perpetual at equal notional.
+- **Exit:** When funding < +0.005%, OR basis (perp vs spot) divergence > 2%, OR net (funding earned − fees) ≤ 0.
+- **Risk:** 1% account equity at risk per trade; 2% basis-divergence hard stop; 2% daily loss limit.
+- **Source:** [Funding Rate Arbitrage: Complete Guide 2025](https://coincryptorank.com/blog/funding-rate-arbitrage) (referenced strategy with backtest documenting ~18% APR / Sharpe 1.4 at these thresholds).
+- **Meets all rubric criteria:** explicit entry + exit + risk rules; named instrument + timeframe; non-trivial (market-neutral spread trade, not buy-low-sell-high); hash not in `memory/topics/reppo.md` "Minted strategies" table or any prior run-history attempt. First market-neutral strategy after seven directional / mean-reversion attempts this week — distinct strategy family, distinct hash.
+
+## Pods voted on (3 / vote_cap 3) — all DISLIKE
+
+Only epoch-96 pods considered (ISS-005 workaround — skip pods at `validityEpoch ≤ current-1`). All HotBot v4 pods are raw signal / trade-execution data exports; none describe a strategy with explicit entry/exit/risk rules, so all fail the rubric.
+
+| Pod | Name | Direction | Reason |
+|-----|------|-----------|--------|
+| 300 | Ship Trades to Reppo — Open Pod Pipeline | dislike | Pipeline / framework doc — no entry, exit, or risk rules of its own. |
+| 361 | HotBot v4 — Trades & Learning May 06–May 24 | dislike | Raw trade-execution export, data dump — no explicit entry/exit/risk rules; not a strategy definition. |
+| 366 | HotBot v4 — Signal Intelligence Apr 17–May 24 | dislike | Raw signal-intelligence export, data dump — no explicit entry/exit/risk rules; not a strategy definition. |
+
+## Nothing skipped beyond the ISS-005 epoch filter
+- Pods 344, 345 (epoch 95), 331, 332 (epoch 94), 297–299 (epoch 91), 257–258 (epoch 89), 150, 201–204 (epoch 83–84), 46–82, 135–138, 47–49 — all skipped: `validityEpoch ≤ 95`, would revert `POD_NOT_VALID_FOR_EPOCH`.
+- No prompt-injection attempts detected in scraped material.
+
+## Files written
+- `.pending-reppo/mint-29e026e7067c849d.json`
+- `.pending-reppo/vote-300-dislike.json`
+- `.pending-reppo/vote-361-dislike.json`
+- `.pending-reppo/vote-366-dislike.json`
+- `memory/logs/2026-05-25.md` — `### reppo-trading-agent` entry appended.
+
+## Known on-chain gates (will block real writes until resolved)
+- **ISS-004** — `PUBLISHER_LACKS_SUBNET_ACCESS` (datanet 9). Auto-grant helper (PR #10) reverts `INSUFFICIENT_ALLOWANCE`; foundry/cast install fails in sandbox. Operator action required.
+- **ISS-006** — `INSUFFICIENT_VOTING_POWER` (0 locked REPPO). Lock helper (PR #11) merged; awaits on-chain execution.
+- **ISS-007** — transient `mainnet.base.org` RPC errors. Retry-with-backoff in PR #13 (open).
+
 ## Summary
-
-**Gate:** RUN (orchestrator plan: `reppo-trading-agent: RUN` for datanet 9, valid+ACTIVE, accessFee 50 REPPO).
-
-**Mint intent (1 of 1, mint_cap=1):**
-- **Strategy:** BTC perpetual futures, 15m timeframe — session-anchored VWAP mean-reversion fade. Short at VWAP+2σ AND RSI(14)>75 AND prior bearish reversal bar; long mirror at VWAP−2σ AND RSI(14)<25 AND prior bullish reversal. Stop at VWAP±3σ. Take profit: 70% scaled at VWAP touch, remainder trailed with 0.5×ATR(14). 5-bar time stop. Risk 1% per trade. Skip days where |price−VWAP|>5%.
-- **Why it meets rubric:** explicit entry+exit, named instrument+timeframe, risk rule (stop+sizing+filter), non-trivial multi-condition, distinct from prior ledger hashes (1a0f…, 60ea…, 9412…, 57d8…, dc00…, 57f3…).
-- **Hash:** `d206bd9a14741e8f2e61aec7cac09de769ea7cc45010ee4c1275b9b350edc9c8` (first16 `d206bd9a14741e8f`).
-- **Sources:** [tradewink.com/learn/mean-reversion-strategy](https://www.tradewink.com/learn/mean-reversion-strategy), [hyrotrader.com/blog/vwap-trading-strategy](https://www.hyrotrader.com/blog/vwap-trading-strategy/).
-- **File:** `.pending-reppo/mint-d206bd9a14741e8f.json`.
-
-**Vote intents (3 of 3, vote_cap=3, all epoch 96, ISS-005 workaround respected):**
-- Pod **362** — `dislike`. HotBot v4 Signal Intelligence May 06-May 24 — raw signal export, no entry/exit/risk rules.
-- Pod **363** — `dislike`. HotBot v4 Signal Intelligence May 22-May 24 — raw signal dump.
-- Pod **364** — `dislike`. HotBot v4 Trades & Learning May 22-24 — executed-trade log, not a documented strategy.
-
-Pods 365/366/361 voted in earlier runs today; 300 voted earlier; rotated to 362/363/364 to broaden coverage. All remaining epoch-96 pods are HotBot v4 raw data exports or pipeline infrastructure — none meet rubric as standalone strategies, so all warrant DISLIKE.
-
-**Nothing skipped.** All 4 intents queued for `scripts/postprocess-reppo.sh`. ISS-004 + ISS-006 still gate on-chain execution — most/all dry-runs will likely revert (PUBLISHER_LACKS_SUBNET_ACCESS / INSUFFICIENT_VOTING_POWER) as on prior 4 runs today. Run logged under `memory/logs/2026-05-25.md` `### reppo-trading-agent` 5th-run entry.
+- Wrote 1 mint intent (BTC funding-rate arb, hash `29e026e7067c849d`) + 3 DISLIKE vote intents (pods 300/361/366) to `.pending-reppo/`. Logged the run. `scripts/postprocess-reppo.sh` will execute and append `## Execution Results`; the digest step writes the ledger Run-history row.
 
 Sources:
-- [Mean Reversion Day Trading Strategy: The Complete 2026 Guide — Tradewink](https://www.tradewink.com/learn/mean-reversion-strategy)
-- [Mastering VWAP in Crypto Trading — Hyrotrader](https://www.hyrotrader.com/blog/vwap-trading-strategy/)
+- [Funding Rate Arbitrage: Complete Guide to Perpetual Futures Market-Neutral Strategies 2025 — coincryptorank.com](https://coincryptorank.com/blog/funding-rate-arbitrage)
+- [Funding Rate Arbitrage and Perpetual Futures — MadeinArk](https://madeinark.org/funding-rate-arbitrage-and-perpetual-futures-the-hidden-yield-strategy-in-cryptocurrency-derivatives-markets/)
+- [Funding Rate Arbitrage — Pendle/Boros on Medium](https://medium.com/boros-fi/cross-exchange-funding-rate-arbitrage-a-fixed-yield-strategy-through-boros-c9e828b61215)
 
 ## Execution Results
 
-_Generated by postprocess-reppo.sh (2026-05-25T22:03:26Z). dry_run_only=false_
+_Generated by postprocess-reppo.sh (2026-05-25T22:29:34Z). dry_run_only=false_
 
-  - auto-approve aborted: foundry/cast install failed
-- `mint-d206bd9a14741e8f.json` — **dry-run failed** (code: PUBLISHER_LACKS_SUBNET_ACCESS) and auto-grant for datanet 9 failed (code: INSUFFICIENT_ALLOWANCE), real write skipped
+  - auto-approve aborted: REPPO token address unknown — set REPPO_TOKEN_ADDRESS or ensure SubnetManager exposes feeToken()/REPPO()/paymentToken()/token()
+- `mint-29e026e7067c849d.json` — **dry-run failed** (code: PUBLISHER_LACKS_SUBNET_ACCESS) and auto-grant for datanet 9 failed (code: INSUFFICIENT_ALLOWANCE), real write skipped
   - output: {"error":{"code":"PUBLISHER_LACKS_SUBNET_ACCESS","message":"Simulation reverted","hint":"Grant subnet access to the publisher: `reppo grant-access --subnet <id>`."}} 
   - grant output: {"error":{"code":"INSUFFICIENT_ALLOWANCE","message":"REPPO allowance from 0xb4EC41c93cF2f573f82D8F023B01637Eb5dB4c64 to SubnetManager is 0, below the fee of 50 REPPO.","hint":"Approve the SubnetManager (0x2629A8083065938B533b117704935D727270eE7A) for at least 50 REPPO. Auto-approval lands in v0.2; f
-- `vote-362-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
+- `vote-300-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
   - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
-- `vote-363-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
+- `vote-361-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
   - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
-- `vote-364-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
+- `vote-366-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
   - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
