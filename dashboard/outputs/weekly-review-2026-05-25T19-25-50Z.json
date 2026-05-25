@@ -1,0 +1,141 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-date",
+        "sep-1",
+        "stack-action",
+        "sep-2",
+        "stack-health",
+        "sep-3",
+        "stack-review"
+      ]
+    },
+    "text-date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-25",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-action",
+        "text-action"
+      ]
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Action",
+        "level": "h3"
+      }
+    },
+    "text-action": {
+      "type": "Text",
+      "props": {
+        "text": "Verify ≥1 reppo mint + ≥1 vote on-chain after today's PR #10 + #11 merges; close ISS-004 + ISS-006 by 2026-05-28."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-health",
+        "stat-runs",
+        "stat-issues",
+        "stat-resolved"
+      ]
+    },
+    "heading-health": {
+      "type": "Heading",
+      "props": {
+        "text": "Health",
+        "level": "h3"
+      }
+    },
+    "stat-runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Skill Runs",
+        "value": "108/111"
+      }
+    },
+    "stat-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "New Issues",
+        "value": "7"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved",
+        "value": "3"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-review": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-review",
+        "link-review"
+      ]
+    },
+    "heading-review": {
+      "type": "Heading",
+      "props": {
+        "text": "Full Review",
+        "level": "h3"
+      }
+    },
+    "link-review": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Weekly Review 2026-05-25",
+        "href": "articles/weekly-review-2026-05-25.md",
+        "source": "Aeon"
+      }
+    }
+  }
+}
