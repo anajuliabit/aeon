@@ -1,0 +1,53 @@
+# Security scan baseline — human-reviewed suppressions.
+# Each entry suppresses a specific (file, line_range, pattern) match.
+# Format:
+#   - file: <path>
+#     pattern: <regex pattern from scan.sh HIGH_PATTERNS/MEDIUM_PATTERNS/LOW_PATTERNS>
+#     lines: "15-25"          # optional line range; omit to suppress across whole file
+#     reason: "documentation in threat model section"
+#     reviewed_by: "aaronjmars"
+#     reviewed_at: "2026-05-25"
+#
+# Bootstrapped 2026-05-25 by skill-security-scan with seed entries for known
+# self-documenting matches.
+suppressions:
+  - file: skills/skill-security-scan/SKILL.md
+    pattern: "[Ii]gnore[[:space:]]+(all[[:space:]]+)?previous[[:space:]]+instructions"
+    reason: "Prompt-override pattern documented in 'Threat categories' section — documentation, not payload."
+    reviewed_by: "aaronjmars"
+    reviewed_at: "2026-05-25"
+  - file: skills/skill-security-scan/SKILL.md
+    pattern: "[Ii]gnore[[:space:]]+(all[[:space:]]+)?prior[[:space:]]+instructions"
+    reason: "Prompt-override pattern documented in 'Threat categories' section — documentation, not payload."
+    reviewed_by: "aaronjmars"
+    reviewed_at: "2026-05-25"
+  - file: skills/skill-security-scan/SKILL.md
+    pattern: "[Yy]ou[[:space:]]+are[[:space:]]+now[[:space:]]+"
+    reason: "Prompt-override pattern documented in 'Threat categories' section — documentation, not payload."
+    reviewed_by: "aaronjmars"
+    reviewed_at: "2026-05-25"
+  - file: skills/skill-security-scan/SKILL.md
+    pattern: "[Ff]orget[[:space:]]+(all[[:space:]]+)?(your[[:space:]]+)?instructions"
+    reason: "Prompt-override pattern documented in 'Threat categories' section — documentation, not payload."
+    reviewed_by: "aaronjmars"
+    reviewed_at: "2026-05-25"
+  - file: skills/skill-security-scan/SKILL.md
+    pattern: "[Dd]isregard[[:space:]]+(all[[:space:]]+)?previous"
+    reason: "Prompt-override pattern documented in 'Threat categories' section — documentation, not payload."
+    reviewed_by: "aaronjmars"
+    reviewed_at: "2026-05-25"
+  - file: skills/skill-security-scan/SKILL.md
+    pattern: "[Oo]verride[[:space:]]+(all[[:space:]]+)?rules"
+    reason: "Prompt-override pattern documented in 'Threat categories' section — documentation, not payload."
+    reviewed_by: "aaronjmars"
+    reviewed_at: "2026-05-25"
+  - file: skills/security-digest/SKILL.md
+    pattern: "curl.*\\$[A-Z_]"
+    reason: "Example curl-with-secret pattern inside fenced code block, documentation of how to integrate, not a payload."
+    reviewed_by: "aaronjmars"
+    reviewed_at: "2026-05-25"
+  - file: skills/security-digest/SKILL.md
+    pattern: "curl.*\\$\\{"
+    reason: "Example curl-with-secret pattern inside fenced code block, documentation of how to integrate, not a payload."
+    reviewed_by: "aaronjmars"
+    reviewed_at: "2026-05-25"

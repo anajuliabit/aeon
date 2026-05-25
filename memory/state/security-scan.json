@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-05-25",
+  "scope": "full corpus",
+  "scanner_mode": "inline_grep_fallback",
+  "scanner_mode_reason": "scan.sh execution blocked by sandbox approval gate; ran scan.sh's HIGH/MEDIUM/LOW pattern library inline via Grep per SKILL.md sandbox fallback",
+  "exit_status": "SECURITY_SCAN_BOOTSTRAPPED",
+  "baseline_seed_entries": 8,
+  "counts": {
+    "high_pre_filter": 781,
+    "high_post_filter_post_codefence": 8,
+    "medium_post_filter": 14,
+    "low_post_filter": 4,
+    "files_scanned": 142,
+    "skills_scanned": 122,
+    "workflows_scanned": 4,
+    "scripts_scanned": 9
+  },
+  "note": "First run — all findings are baseline; delta computation begins next run. The 769 HIGH matches against the pattern `\\`[^\\`]*\\$` come almost entirely from markdown inline code referencing template paths like `\\`memory/logs/${today}.md\\`` and are not shell command substitution. They are NOT individually persisted here — only the structured per-file pattern-count summary is, so the next scan can detect a meaningful delta without a 1.5MB state file.",
+  "findings_summary_by_file": [
+    {"file": "scripts/postprocess-reppo.sh", "high": 9, "medium": 0, "low": 0, "real_risk": false, "note": "Pattern `\\`[^\\`]*\\$` matches escaped backticks in echo strings writing markdown into a results file. Not command substitution."},
+    {"file": "scripts/prefetch-xai.sh", "high": 2, "medium": 0, "low": 0, "real_risk": false, "note": "Legitimate Vercel API calls with env-var query params. Auth via header, not URL."},
+    {"file": "scripts/postprocess-admanage.sh", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Legitimate API POST with env-var URL prefix."},
+    {"file": "scripts/postprocess-admanage-create.sh", "high": 2, "medium": 0, "low": 0, "real_risk": false, "note": "Legitimate API POST with env-var URL prefix."},
+    {"file": "scripts/postprocess-replicate.sh", "high": 2, "medium": 0, "low": 0, "real_risk": false, "note": "Legitimate Replicate API calls with bearer token in header."},
+    {"file": "skills/skill-security-scan/scan.sh", "high": 9, "medium": 0, "low": 0, "real_risk": false, "note": "Scanner's own pattern definitions match themselves. Self-reference."},
+    {"file": ".github/workflows/messages.yml", "high": 9, "medium": 1, "low": 0, "real_risk_count": 1, "note": "Line 578: `${{ github.event.action }}` interpolated directly into `run:` block — same anti-pattern as 2026-04-11 fix. Lower risk because `action` values are constrained by dispatcher, but still bind via `env:` indirection. Other matches are legitimate curl-with-token API calls. Line 753 `git push --force-with-lease` matches `git push --force` MEDIUM pattern (acceptable usage)."},
+    {"file": ".github/workflows/aeon.yml", "high": 11, "medium": 1, "low": 0, "real_risk_count": 4, "note": "Lines 86, 94, 96, 718 interpolate `${{ inputs.skill }}` / `${{ steps.skill.outputs.name }}` / `${{ steps.work.outputs.label }}` into `run:` blocks. inputs.skill comes from workflow_dispatch (requires write auth) so low real exposure, but anti-pattern matches the 2026-04-11 incident class. Other matches are legitimate curl-with-token API calls. Line 725 `git push --force-with-lease` matches MEDIUM pattern (acceptable usage)."},
+    {"file": "skills/security-digest/SKILL.md", "high": 5, "medium": 0, "low": 0, "real_risk": false, "note": "curl-with-env-var matches inside fenced code blocks documenting API usage — code-fence downgrade applied. Seed-suppressed in baseline."},
+    {"file": "skills/skill-security-scan/SKILL.md", "high": 17, "medium": 0, "low": 0, "real_risk": false, "note": "Inline backtick references to template paths + 6 prompt-override patterns in Threat Categories section. Seed-suppressed in baseline."},
+    {"file": "skills/competitor-launch-radar/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Prompt-override phrase quoted in security-advice section telling Claude to ignore such phrases in fetched content."},
+    {"file": "skills/fork-release-tracker/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Prompt-override phrase quoted in security-advice section."},
+    {"file": "skills/research-brief/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Prompt-override phrase quoted in security-advice section."},
+    {"file": "skills/deep-research/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Prompt-override phrase quoted in security-advice section."},
+    {"file": "skills/last30/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Prompt-override phrase quoted in security-advice section."},
+    {"file": "skills/repo-actions/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Prompt-override phrase quoted in security-advice section."},
+    {"file": "skills/fork-skill-gap/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Contains `$(rm -rf /)` inside a quoted JSON example demonstrating that malicious manifest content is parsed as data, not executed. Documentation."},
+    {"file": "scripts/sync-upstream.sh", "high": 0, "medium": 1, "low": 0, "real_risk": false, "note": "base64 -d for legitimate gh-api content decoding."},
+    {"file": "notify", "high": 0, "medium": 1, "low": 0, "real_risk": false, "note": "base64 -d for chunked Telegram message reassembly."}
+  ],
+  "real_high_findings_after_filtering": [
+    {
+      "file": ".github/workflows/messages.yml",
+      "line": 578,
+      "pattern": "github.event.action interpolated directly into run: block (manual addition; scan.sh pattern library does not include this category)",
+      "severity": "high",
+      "fingerprint": "messages.yml:578:github.event.action",
+      "note": "Same anti-pattern as auto-fixed 2026-04-11 incident; lower risk because action values are constrained."
+    },
+    {
+      "file": ".github/workflows/aeon.yml",
+      "line": 86,
+      "pattern": "inputs.skill interpolated into run: block",
+      "severity": "high",
+      "fingerprint": "aeon.yml:86:inputs.skill",
+      "note": "Low real risk (workflow_dispatch requires write access) but anti-pattern."
+    },
+    {
+      "file": ".github/workflows/aeon.yml",
+      "line": 94,
+      "pattern": "steps.skill.outputs.name interpolated into run: block",
+      "severity": "high",
+      "fingerprint": "aeon.yml:94:steps.skill.outputs.name",
+      "note": "Derived from inputs.skill; same risk profile."
+    },
+    {
+      "file": ".github/workflows/aeon.yml",
+      "line": 96,
+      "pattern": "steps.skill.outputs.name interpolated into run: block",
+      "severity": "high",
+      "fingerprint": "aeon.yml:96:steps.skill.outputs.name",
+      "note": "Derived from inputs.skill; same risk profile."
+    },
+    {
+      "file": ".github/workflows/aeon.yml",
+      "line": 718,
+      "pattern": "steps.work.outputs.label interpolated into run: block",
+      "severity": "high",
+      "fingerprint": "aeon.yml:718:steps.work.outputs.label",
+      "note": "Derived from steps.skill.outputs.name → inputs.skill; same risk profile."
+    }
+  ]
+}
