@@ -696,6 +696,7 @@ jobs:
           REPPO_PRIVATE_KEY: ${{ secrets.REPPO_PRIVATE_KEY }}
           REPPO_VOTER_PRIVATE_KEY: ${{ secrets.REPPO_VOTER_PRIVATE_KEY }}
           REPPO_DRY_RUN_ONLY: ${{ vars.REPPO_DRY_RUN_ONLY }}
+          REPPO_RPC_URL: ${{ secrets.BASE_RPC_URL }}
         run: |
           # Run all scripts/postprocess-*.sh after Claude finishes.
           # Each script handles its own .pending-{service}/ directory

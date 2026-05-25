@@ -10,6 +10,11 @@ Create an EOA for the agent and fund it with mainnet gas + REPPO.
 Repo Settings → Secrets and variables → Actions:
 - `REPPO_PRIVATE_KEY` — the funded EOA private key (required).
 - `REPPO_VOTER_PRIVATE_KEY` — optional separate voting key.
+- `BASE_RPC_URL` — recommended. A reliable Base mainnet RPC URL (Alchemy,
+  QuickNode, Infura, etc.). The Reppo CLI defaults to
+  `https://mainnet.base.org`, which is flaky enough to cause intermittent
+  `INTERNAL_ERROR` dry-run failures under load (see ISS-007). The workflow
+  exposes this secret to the CLI as `REPPO_RPC_URL`.
 
 ## 3. Register the agent identity (once)
 Locally, with the CLI installed (`npm i -g @reppo/cli`) and
