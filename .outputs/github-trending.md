@@ -1,19 +1,18 @@
-*GitHub Trending — 2026-05-24*
+*GitHub Trending — 2026-05-25*
 
-*Top pick* — [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
-Anthropic just formalized the Claude Code plugin ecosystem with an official curated registry — the de facto package index for agent extensions.
-
-*Devtools*
-• [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) — ★ 2.2k today (27k total) · Python · [ACCELERATING]
-Official Anthropic-managed directory of vetted Claude Code plugins — ends the "which random skill bundle do I trust" question.
+*Top pick* — [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins)
+Anthropic's plugin registry for Claude Cowork — the knowledge-worker surface area, distinct from the dev-side claude-plugins-official featured 2026-05-24.
 
 *AI/ML*
-• [NVlabs/LongLive](https://github.com/NVlabs/LongLive) — ★ 94 today (1.9k total) · Python · [RETURNING]
-LongLive 2.0 ships NVFP4 4-bit quantization + sequence parallelism — 45.7 FPS long video gen, ~2× the BF16 baseline.
+• [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — ★ 550 today (14.5k total) · Python · [ACCELERATING]
+Official plugin registry for Claude Cowork (~119/day since Jan launch); split from the dev-tooling plugin repo.
 
-*Web/Apps*
-• [presenton/presenton](https://github.com/presenton/presenton) — ★ 241 today (6.6k total) · TypeScript · [RETURNING]
-Self-hostable AI slide generator with BYO-key for OpenAI/Gemini/Anthropic/Ollama — editable PPTX out, no vendor lock.
+• [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — ★ 106 today (25.9k total) · Python · [RETURNING]
+Time-series foundation model trained on OHLCV sequences — language-model framing applied to price action, no new release but back on the board.
+
+*Devtools*
+• [manaflow-ai/cmux](https://github.com/manaflow-ai/cmux) — ★ 696 today (19.3k total) · Swift · [ACCELERATING]
+Native macOS terminal built for parallel AI coding agents — vertical tabs plus per-tab notifications when each agent finishes a task.
 
 ---
-sources: trending=ok · gh_api=ok · kept 3/16
+sources: trending=ok · gh_api=ok · kept 3/17

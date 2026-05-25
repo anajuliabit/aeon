@@ -1,0 +1,303 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-05-25"
+      },
+      "children": [
+        "top-pick-heading",
+        "top-pick-repo",
+        "top-pick-desc",
+        "sep1",
+        "aiml-heading",
+        "aiml-stack",
+        "sep2",
+        "devtools-heading",
+        "devtools-stack",
+        "sep3",
+        "footer-text"
+      ]
+    },
+    "top-pick-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "top-pick-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "anthropics/knowledge-work-plugins",
+        "href": "https://github.com/anthropics/knowledge-work-plugins",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "top-pick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic's plugin registry for Claude Cowork — the knowledge-worker surface area, distinct from the dev-side claude-plugins-official featured 2026-05-24.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "aiml-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "aiml-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml-repo1-container",
+        "aiml-repo2-container"
+      ]
+    },
+    "aiml-repo1-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo1-link",
+        "aiml-repo1-meta",
+        "aiml-repo1-desc"
+      ]
+    },
+    "aiml-repo1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "anthropics/knowledge-work-plugins",
+        "href": "https://github.com/anthropics/knowledge-work-plugins",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "aiml-repo1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo1-stars",
+        "aiml-repo1-lang",
+        "aiml-repo1-trend"
+      ]
+    },
+    "aiml-repo1-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 550 today (14.5k total)"
+      },
+      "children": []
+    },
+    "aiml-repo1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml-repo1-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aiml-repo1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Official plugin registry for Claude Cowork (~119/day since Jan launch); split from the dev-tooling plugin repo.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "aiml-repo2-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo2-link",
+        "aiml-repo2-meta",
+        "aiml-repo2-desc"
+      ]
+    },
+    "aiml-repo2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "shiyu-coder/Kronos",
+        "href": "https://github.com/shiyu-coder/Kronos",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "aiml-repo2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo2-stars",
+        "aiml-repo2-lang",
+        "aiml-repo2-trend"
+      ]
+    },
+    "aiml-repo2-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 106 today (25.9k total)"
+      },
+      "children": []
+    },
+    "aiml-repo2-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml-repo2-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "aiml-repo2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Time-series foundation model trained on OHLCV sequences — language-model framing applied to price action, no new release but back on the board.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "devtools-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "devtools-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools-repo1-container"
+      ]
+    },
+    "devtools-repo1-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-repo1-link",
+        "devtools-repo1-meta",
+        "devtools-repo1-desc"
+      ]
+    },
+    "devtools-repo1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "manaflow-ai/cmux",
+        "href": "https://github.com/manaflow-ai/cmux",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "devtools-repo1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-repo1-stars",
+        "devtools-repo1-lang",
+        "devtools-repo1-trend"
+      ]
+    },
+    "devtools-repo1-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 696 today (19.3k total)"
+      },
+      "children": []
+    },
+    "devtools-repo1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Swift",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "devtools-repo1-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "devtools-repo1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Native macOS terminal built for parallel AI coding agents — vertical tabs plus per-tab notifications when each agent finishes a task.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/17",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
