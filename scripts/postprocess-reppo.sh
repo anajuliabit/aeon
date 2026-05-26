@@ -95,6 +95,39 @@ extract_detail() {
   tr -s '[:space:]' ' ' < "$1" 2>/dev/null | cut -c1-300 || true
 }
 
+# Helper: pin a dataset file to IPFS via Pinata. Returns 0 with the CID
+# echoed on stdout, 1 on failure (raw Pinata response captured in
+# $2 for caller diagnostics). Pinata URL:
+#   POST https://api.pinata.cloud/pinning/pinFileToIPFS
+#   Authorization: Bearer $PINATA_JWT
+#   multipart: file=@<path> + pinataMetadata
+# Response: {"IpfsHash":"Qm…","PinSize":<int>,"Timestamp":"…"}
+#
+# Caller is responsible for checking PINATA_JWT is set before calling.
+# The CID is a CIDv0 (Qm…) or CIDv1 (bafy…); we don't validate further,
+# the gateway will. Caller wires the CID into the platform POST as
+# https://ipfs.io/ipfs/<CID> — public-gateway URL, not Pinata's, so the
+# pin is verifiable from any IPFS gateway (Pinata's role here is just
+# pinning, not gating retrieval).
+pin_dataset_to_ipfs() {
+  local file="$1" capture="$2" name
+  name="$(basename "$file")"
+  if ! curl -fsS \
+       -X POST "https://api.pinata.cloud/pinning/pinFileToIPFS" \
+       -H "Authorization: Bearer ${PINATA_JWT}" \
+       -F "file=@${file}" \
+       -F "pinataMetadata={\"name\":\"${name}\"}" \
+       > "$capture" 2>&1; then
+    return 1
+  fi
+  local cid
+  cid="$(jq -r '.IpfsHash // empty' "$capture" 2>/dev/null)"
+  if [ -z "$cid" ] || [ "$cid" = "null" ]; then
+    return 1
+  fi
+  echo "$cid"
+}
+
 # Helper: run a dry-run for the current intent. Retries up to 3 attempts on
 # transient RPC failures (INTERNAL_ERROR / TIMEOUT / RATE_LIMITED /
 # NETWORK_ERROR) with linear backoff. Relies on caller-scope $args / $key /
@@ -429,6 +462,7 @@ for intent in "$PENDING_DIR"/*.json; do
         --arg name     "$(jq -r '.pod_name // .strategy_summary // "Aeon-generated pod"' "$intent")" \
         --arg desc     "$(jq -r '.pod_description // .strategy_summary // ""' "$intent")" \
         --arg url      "$(jq -r '.url // ""' "$intent")" \
+        --arg dpath    "$(jq -r '.dataset_path // ""' "$intent")" \
         '{txHash:$tx,
           subnetId:($subnet|tonumber),
           podName:$name,
@@ -440,7 +474,9 @@ for intent in "$PENDING_DIR"/*.json; do
           imageURL:"",
           thumbnailURL:"",
           pdfURL:"",
-          videoURL:""}' \
+          videoURL:"",
+          dataset_path:$dpath,
+          dataset_uri:""}' \
         > ".pending-reppo-register/${base}"
     fi
   else
@@ -489,19 +525,70 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
       [ -f "$register_intent" ] || continue
       rbase="$(basename "$register_intent")"
       rtx="$(jq -r '.txHash' "$register_intent" 2>/dev/null || echo n/a)"
+      dpath="$(jq -r '.dataset_path // ""' "$register_intent" 2>/dev/null || echo "")"
+      duri="$(jq -r '.dataset_uri // ""' "$register_intent" 2>/dev/null || echo "")"
+
+      # Step 2a: pin the dataset to IPFS (Pinata) if there is one, the
+      # CID isn't already recorded, and PINATA_JWT is configured. The
+      # CID gets persisted into the queue file so a later POST retry
+      # (after a transient platform-API failure) doesn't re-upload.
+      if [ -n "$dpath" ] && [ -z "$duri" ] && [ -n "${PINATA_JWT:-}" ] && [ -f "$dpath" ]; then
+        echo "reppo-postprocess: pinning $dpath to IPFS for $rbase..." >&2
+        if cid="$(pin_dataset_to_ipfs "$dpath" ".reppo-cache/pinata-$rbase.json")"; then
+          duri="https://ipfs.io/ipfs/${cid}"
+          # Atomic patch: rewrite the queue file with dataset_uri set.
+          tmp="$(mktemp)"
+          jq --arg uri "$duri" '.dataset_uri = $uri' "$register_intent" > "$tmp" \
+            && mv "$tmp" "$register_intent"
+          echo "  - dataset pinned: ipfs://${cid} (gateway: $duri)" >> "$RESULTS_FILE"
+        else
+          pdetail="$(extract_detail ".reppo-cache/pinata-$rbase.json")"
+          echo "- \`$rbase\` — **IPFS pin failed**: ${pdetail:-<empty>} (queue file retained for retry)" >> "$RESULTS_FILE"
+          echo "reppo-postprocess: pinata pin failed for $rbase: ${pdetail:-<empty>}" >&2
+          # Leave file for retry. Skip the POST this run.
+          continue
+        fi
+      elif [ -n "$dpath" ] && [ -z "$duri" ] && [ -z "${PINATA_JWT:-}" ]; then
+        # Dataset exists but PINATA_JWT not set — POST without dataset_uri.
+        # Operator can backfill the pin later by setting the secret.
+        echo "  - PINATA_JWT not set; POST proceeds without IPFS dataset link" >> "$RESULTS_FILE"
+      fi
+
+      # Step 2b: project queue body to the platform schema. Strip our
+      # internal fields (dataset_path, dataset_uri) and map dataset_uri
+      # into pdfURL — the platform schema's downloadable-file slot.
+      # This way the queue file carries our bookkeeping while the wire
+      # body only carries the platform's expected keys.
+      body_file=".reppo-cache/post-body-$rbase"
+      jq '{txHash, subnetId, podName, podDescription, url, platform,
+           category, agreeToTerms, imageURL, thumbnailURL,
+           pdfURL: (.dataset_uri // .pdfURL // ""),
+           videoURL}' \
+        "$register_intent" > "$body_file"
+
       echo "reppo-postprocess: registering metadata for $rbase (tx $rtx)..." >&2
       if curl -fsS -X POST "https://reppo.ai/api/v1/agents/${REPPO_AGENT_ID}/pods" \
            -H "Authorization: Bearer ${REPPO_AGENT_API_KEY}" \
            -H "Content-Type: application/json" \
-           --data @"$register_intent" \
+           --data @"$body_file" \
            > ".reppo-cache/register-$rbase" 2>&1; then
-        echo "- \`$rbase\` — **metadata registered** (tx: $rtx)" >> "$RESULTS_FILE"
+        if [ -n "$duri" ]; then
+          echo "- \`$rbase\` — **metadata registered** (tx: $rtx, dataset: $duri)" >> "$RESULTS_FILE"
+        else
+          echo "- \`$rbase\` — **metadata registered** (tx: $rtx)" >> "$RESULTS_FILE"
+        fi
         rm -f "$register_intent"
+        # The local dataset file is now durably pinned on IPFS (or
+        # there wasn't one). Drop it so it doesn't accumulate in the
+        # auto-commit and so a future run's hash-dedup is the only
+        # signal needed to skip re-minting.
+        [ -n "$dpath" ] && rm -f "$dpath"
       else
         rdetail="$(extract_detail ".reppo-cache/register-$rbase")"
         echo "- \`$rbase\` — **metadata registration failed**: ${rdetail:-<empty>}" >> "$RESULTS_FILE"
         echo "reppo-postprocess: register failed for $rbase: ${rdetail:-<empty>}" >&2
-        # Leave the file in place — next run retries.
+        # Leave queue + dataset files for retry. CID is already pinned
+        # and persisted into the queue file so retry won't re-upload.
       fi
     done
   fi

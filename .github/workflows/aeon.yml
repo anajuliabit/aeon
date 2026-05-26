@@ -699,6 +699,7 @@ jobs:
           REPPO_RPC_URL: ${{ secrets.BASE_RPC_URL }}
           REPPO_AGENT_ID: ${{ secrets.REPPO_AGENT_ID }}
           REPPO_AGENT_API_KEY: ${{ secrets.REPPO_AGENT_API_KEY }}
+          PINATA_JWT: ${{ secrets.PINATA_JWT }}
         run: |
           # Run all scripts/postprocess-*.sh after Claude finishes.
           # Each script handles its own .pending-{service}/ directory
