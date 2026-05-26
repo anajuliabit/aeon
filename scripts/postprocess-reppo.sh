@@ -156,11 +156,24 @@ auto_recover_grant() {
   approve_tx="$(jq -r '.transactionHash // .txHash // "n/a"' ".reppo-cache/approve-$target.json" 2>/dev/null || echo n/a)"
   echo "  - auto-approved REPPO spend to subnet-manager (tx: $approve_tx)" >> "$RESULTS_FILE"
 
-  # Retry grant-access now that allowance is set.
-  if REPPO_NETWORK=mainnet reppo grant-access --datanet "$target" --json \
-       > ".reppo-cache/grant-$target.json" 2>&1; then
-    return 0
-  fi
+  # Retry grant-access with linear backoff. `reppo approve` returns a tx
+  # hash but the allowance read by grant-access may lag — the tx is mined,
+  # but the RPC node grant-access hits may not have propagated the new
+  # block yet (eventual-consistency on load-balanced RPC pools, observed
+  # in the 15th reppo-swarm run: approve landed at tx 0xa7053dc4…,
+  # immediate grant-access still read 0 allowance). Total wait: 5+10+15
+  # = 30s (~15 Base blocks of headroom). Break early if a non-allowance
+  # error appears — that's not a propagation race.
+  local wait_attempt grant_code
+  for wait_attempt in 1 2 3; do
+    sleep "$((wait_attempt * 5))"
+    if REPPO_NETWORK=mainnet reppo grant-access --datanet "$target" --json \
+         > ".reppo-cache/grant-$target.json" 2>&1; then
+      return 0
+    fi
+    grant_code="$(extract_code ".reppo-cache/grant-$target.json")"
+    [ "$grant_code" = "INSUFFICIENT_ALLOWANCE" ] || break
+  done
   return 1
 }
 
