@@ -360,10 +360,27 @@ for intent in "$PENDING_DIR"/*.json; do
       # this branch never fires).
       echo "reppo-postprocess: $base hit INSUFFICIENT_VOTING_POWER; auto-locking 500 REPPO for 30d..." >&2
       if auto_recover_lock; then
-        if ! dryrun_with_retry; then
+        # Voting-power read can lag the lock tx receipt by 5-30s on
+        # the load-balanced public Base RPC pool (eventual
+        # consistency). Mirror auto_recover_grant's 5/10/15s = 30s
+        # backoff before giving up. Break early on non-voting-power
+        # errors (those aren't propagation races; extra waits won't
+        # help). Observed in run 19: vote-372 dry-run failed at the
+        # 5s post-lock mark from auto_recover_lock's internal sleep,
+        # but vote-373 (processed ~10s later by the next loop
+        # iteration) cleared on its first attempt — confirming
+        # propagation completes in the 10-30s window for this race.
+        local vote_wait vote_code dryrun_passed=false
+        for vote_wait in 1 2 3; do
+          sleep "$((vote_wait * 5))"
+          if dryrun_with_retry; then dryrun_passed=true; break; fi
+          vote_code="$(extract_code ".reppo-cache/dryrun-$base")"
+          [ "$vote_code" = "INSUFFICIENT_VOTING_POWER" ] || break
+        done
+        if [ "$dryrun_passed" != "true" ]; then
           code="$(extract_code ".reppo-cache/dryrun-$base")"
           detail="$(extract_detail ".reppo-cache/dryrun-$base")"
-          echo "- \`$base\` — **dry-run failed after lock** (code: $code), real write skipped" >> "$RESULTS_FILE"
+          echo "- \`$base\` — **dry-run failed after lock (3 attempts)** (code: $code), real write skipped" >> "$RESULTS_FILE"
           echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
           rm -f "$intent"
           continue
