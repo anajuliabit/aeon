@@ -1,0 +1,206 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 14th run · datanet 9 · 0 on-chain"
+      },
+      "children": [
+        "status-badges",
+        "sep1",
+        "queued-section",
+        "sep2",
+        "reverted-section",
+        "sep3",
+        "unassigned-stat"
+      ]
+    },
+    "status-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-swarm",
+        "badge-run",
+        "badge-datanet",
+        "badge-onchain"
+      ]
+    },
+    "badge-swarm": {
+      "type": "Badge",
+      "props": {
+        "text": "reppo-swarm"
+      }
+    },
+    "badge-run": {
+      "type": "Badge",
+      "props": {
+        "text": "14th run"
+      }
+    },
+    "badge-datanet": {
+      "type": "Badge",
+      "props": {
+        "text": "datanet 9"
+      }
+    },
+    "badge-onchain": {
+      "type": "Badge",
+      "props": {
+        "text": "0 on-chain"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "queued-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-heading",
+        "queued-items"
+      ]
+    },
+    "queued-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h2"
+      }
+    },
+    "queued-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-mint",
+        "queued-votes"
+      ]
+    },
+    "queued-mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint-label",
+        "mint-text",
+        "mint-commit"
+      ]
+    },
+    "mint-label": {
+      "type": "Badge",
+      "props": {
+        "text": "mint"
+      }
+    },
+    "mint-text": {
+      "type": "Text",
+      "props": {
+        "text": "eth/btc daily stat-arb on perps, z-score entry"
+      }
+    },
+    "mint-commit": {
+      "type": "Text",
+      "props": {
+        "text": "c358f6b5859e9024",
+        "variant": "caption"
+      }
+    },
+    "queued-votes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes-label",
+        "votes-text"
+      ]
+    },
+    "votes-label": {
+      "type": "Badge",
+      "props": {
+        "text": "votes"
+      }
+    },
+    "votes-text": {
+      "type": "Text",
+      "props": {
+        "text": "dislike 361, 364, 365 (hotbot v4 raw exports, epoch 96)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "reverted-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reverted-heading",
+        "reverted-items"
+      ]
+    },
+    "reverted-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Reverted",
+        "level": "h2"
+      }
+    },
+    "reverted-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reverted-mint-alert",
+        "reverted-votes-alert"
+      ]
+    },
+    "reverted-mint-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "mint",
+        "message": "PUBLISHER_LACKS_SUBNET_ACCESS → INSUFFICIENT_ALLOWANCE (ISS-004)\naction: set REPPO_TOKEN_ADDRESS env so auto-approve clears the 3rd sub-blocker"
+      }
+    },
+    "reverted-votes-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "votes",
+        "message": "INSUFFICIENT_VOTING_POWER × 3 (ISS-006)\naction: operator runs `reppo lock` — pr #11 helper merged, awaits funds"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "unassigned-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Datanets unassigned",
+        "value": "14"
+      }
+    }
+  }
+}

@@ -1,13 +1,13 @@
-reppo-swarm · 6th run · datanet 9 · 0 on-chain
+reppo-swarm · 14th run · datanet 9 · 0 on-chain
 
 queued
-  mint  · btc perp funding-rate arbitrage, delta-neutral spot+perp on 8h funding · 29e026e7067c849d
-  votes · dislike 300, 361, 366 (epoch 96 — pipeline doc + hotbot v4 raw exports)
+  mint · eth/btc daily stat-arb on perps, z-score entry · c358f6b5859e9024
+  votes · dislike 361, 364, 365 (hotbot v4 raw exports, epoch 96)
 
 reverted
-  mint  · PUBLISHER_LACKS_SUBNET_ACCESS → auto-grant INSUFFICIENT_ALLOWANCE → auto-approve aborted, REPPO_TOKEN_ADDRESS unknown (ISS-004, 3rd distinct sub-blocker this week)
-         action: operator approve SubnetManager 0x2629…eE7A for ≥50 REPPO, or set REPPO_TOKEN_ADDRESS so auto-approve can fire
+  mint  · PUBLISHER_LACKS_SUBNET_ACCESS → INSUFFICIENT_ALLOWANCE (ISS-004)
+         action: set REPPO_TOKEN_ADDRESS env so auto-approve clears the 3rd sub-blocker
   votes · INSUFFICIENT_VOTING_POWER × 3 (ISS-006)
-         action: operator `reppo lock <amount> --duration <secs>` so publisher has voting power
+         action: operator runs `reppo lock` — pr #11 helper merged, awaits funds
 
 14 datanets unassigned.
