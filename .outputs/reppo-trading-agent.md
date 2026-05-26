@@ -1,58 +1,64 @@
-Now writing the skill output summary.
+Right — my text output is the skill's output (the chain runner captures it). The file write was wrong. The skill is done; here is the summary.
 
-## Gate decision
-RUN — orchestrator's `reppo-plan` says `reppo-trading-agent: RUN` for datanet 9 (TradingGym AI, valid + active, 50 REPPO access fee).
+## reppo-trading-agent — 2026-05-26 (5th run)
 
-## Rubric loaded
-`configs/datanets/tradinggymai.md` — datanet_id `9`, mint_cap 1, vote_cap 3.
+**Gate**: RUN (orchestrator's `reppo-plan` block has `reppo-trading-agent: RUN` for datanet 9 / tradinggymai — active, `valid:true`, access fee 50 REPPO).
 
-## Mint queued (1 intent)
-**BTC perp 5m CVD-divergence long-squeeze reversal SHORT** — hash `c471e15adfb0a009`, intent `.pending-reppo/mint-c471e15adfb0a009.json`.
+**Rubric**: `configs/datanets/tradinggymai.md` — datanet_id=9, mint_cap=1, vote_cap=3. Goal: testable crypto strategies for backtesting / RL. Mint needs explicit entry+exit, named instrument/timeframe, and ≥1 risk rule.
 
-Why it meets the rubric:
-- **Explicit entry**: all four conditions must hold — (a) new 2h swing high in price, (b) 5m CVD lower-high vs prior swing CVD high (regular bearish divergence), (c) 8h funding ≥ +0.015% at signal candle, (d) open interest up ≥ 3% over trailing 2h.
-- **Explicit exit**: 50% off at 1R then trail with 1×ATR(14, 5m); final hard target 3R; 6h time stop.
-- **Instrument + timeframe**: BTC perpetuals, 5m signal candle (2h structural window).
-- **Risk rules**: 0.6×ATR(14, 5m) hard stop above rejected swing high; 1% account-equity risk per trade; regime filter skips when 5m ATR/price < 0.25%; setup filter requires absence of spot-CVD higher-high (spot-perp divergence gate).
-- **Non-trivial**: combines order-flow (CVD divergence) with derivatives positioning (funding + OI rising) as a squeeze trigger — first order-flow/CVD design in the ledger after 10 prior directional/mean-reversion/breakout/arb/SFP entries.
-- **Not in ledger**: `c471e15adfb0a009` not in `memory/topics/reppo.md` minted-strategies table.
+### Minted (1 of mint_cap=1)
 
-Source: synthesis of CryptoCred/Bookmap CVD-divergence rules + Phemex/TradeLink long-squeeze trigger (funding+OI). No injected instructions encountered in scraped content.
+- **ETH perp 1H Supertrend(10,3) + ADX(14)≥25 trend-following** — hash `8d47851b7762a319` (first 16 of sha256("9:" + normalized strategy text)). First trend-following design after 11 prior momentum/mean-rev/breakout/arb/SFP/CVD attempts this week.
+  - Entry (long): Supertrend(10,3) flips bullish AND ADX(14) ≥ 25 AND +DI > -DI AND close > 200-EMA(1H). Short mirrors.
+  - Exit: Supertrend flip in the opposite direction OR ADX falls below 20.
+  - Stop: closer of the Supertrend line (trail) or 1.5×ATR(14,1H) hard.
+  - Risk: 1% equity per trade, 48h time stop, skip entries when ATR(14)/price < 0.5% (low-vol regime filter).
+  - Non-trivial: 4-gate confluence (Supertrend + ADX strength + DI direction + 200-EMA regime) + ATR-scaled risk.
+  - Not in ledger: hash novel against all 11 prior Run-history hashes.
+  - Source: ADX + Supertrend persistent-entry strategy ([FMZQuant on Medium](https://medium.com/@FMZQuant/adx-and-supertrend-persistent-entry-strategy-fb8bfab04be5)); multi-TF variant on [TradingView](https://www.tradingview.com/script/FeoUBe91-Multi-TF-AI-SuperTrend-with-ADX-Strategy-PresentTrading/).
 
-## Votes queued (3 intents, all DISLIKE)
-All target current-epoch (96) pods — agent-side ISS-005 filter excludes anything ≤ epoch 95.
+### Voted (2 of vote_cap=3)
 
-- **Pod 300** (Ship Trades to Reppo — Open Pod Pipeline) → DISLIKE. Pipeline/framework doc, not a strategy; no entry/exit/risk rules; off-topic vs the TradingGymAI mint rubric.
-- **Pod 361** (HotBot v4 — Trades & Learning May 06-May 24) → DISLIKE. Raw trade-execution data export, not a self-contained strategy with explicit entry/exit/risk; fails the rubric's mint criteria.
-- **Pod 364** (HotBot v4 — Trades & Learning May 22-24) → DISLIKE. Same pattern — raw execution data, not a falsifiable strategy.
+Only 2 of the 42 cached pods sit at `validityEpoch=97` (the newest). The other 40 are at `validityEpoch ≤ 96` and would revert `POD_NOT_VALID_FOR_EPOCH` per the ISS-005 agent-side filter (`skip pods at validityEpoch ≤ current-1`). Eligible set is just pods 372 and 373 — so vote_cap=3 binds at 2.
 
-## Skipped
-Nothing. ISS-004 (PUBLISHER_LACKS_SUBNET_ACCESS) and ISS-006 (INSUFFICIENT_VOTING_POWER) will still gate on-chain landings until the operator stack clears — agent-side write is correct and `postprocess-reppo.sh` will surface the on-chain outcome in an `## Execution Results` section.
+- **pod 372 — DISLIKE** (HotBot v4 — Signal Intelligence Apr 17-May 26, epoch 97). Raw signal-export data dump from a live bot — no entry condition, no exit condition, no documented risk rule. Hits the rubric's Vote-NO "vague, untestable, missing entry/exit/risk rules" clause.
+- **pod 373 — DISLIKE** (HotBot v4 — Trades & Learning Apr 17-May 26, epoch 97). Raw trade-execution + post-hoc learning log. Same data-dump-not-strategy NO rationale as 372.
 
-Search sources:
-- [TrendRider — Best Crypto Day Trading Strategies for 2026](https://trendrider.net/blog/best-crypto-trading-strategies-2026)
-- [Bookmap — Cumulative Volume Delta Trading Strategy / CVD Divergence](https://bookmap.com/blog/how-cumulative-volume-delta-transform-your-trading-strategy)
-- [TradeLink — Funding Rate + Open Interest: How to Spot Liquidations](https://tradelink.pro/blog/funding-rate-open-interest/)
-- [Phemex — Ultimate Guide to Cumulative Volume Delta (CVD)](https://phemex.com/academy/what-is-cumulative-delta-cvd-indicator)
+### Skipped
+
+- 40 cached pods at `validityEpoch ≤ 96` skipped per the ISS-005 expired-pod filter — would revert `POD_NOT_VALID_FOR_EPOCH`. Not an error.
+- No mint candidates skipped — hash `8d47851b7762a319` is novel against the Run-history list.
+- No sources discarded for prompt-injection in this run.
+
+### Intents queued
+
+3 intents written to `.pending-reppo/`: `mint-8d47851b7762a319.json` + `vote-372-dislike.json` + `vote-373-dislike.json`. `scripts/postprocess-reppo.sh` will append `## Execution Results` after running.
+
+### Sandbox note
+
+Used built-in WebSearch — no direct curl, no Reppo CLI calls. All on-chain writes deferred to `scripts/postprocess-reppo.sh`.
+
+### Pre-flight context
+
+- ISS-004 (subnet access) cleared on-chain in the prior run (tx `0x1d6581a9b2a5a3c2b8080b1f1cf890e1abb280f1ec3d9a87fc79e571ba7a90dd`).
+- ISS-006 (0 locked REPPO → INSUFFICIENT_VOTING_POWER) and ISS-008 (UNKNOWN_REVERT_0x13be252b on `mintPodWithREPPO`) still gate real writes. The postprocess pod-manager auto-approve helper is the next preflight lever.
+
+Log entry appended to `memory/logs/2026-05-26.md` under `### reppo-trading-agent`.
 
 ## Summary
-- Read MEMORY.md + topics/reppo.md + tradinggymai.md rubric + orchestrator output + pods-tradinggymai.json cache.
-- Wrote 4 intent files to `.pending-reppo/`: 1 mint (`mint-c471e15adfb0a009.json`) + 3 votes (`vote-300-dislike.json`, `vote-361-dislike.json`, `vote-364-dislike.json`).
-- Appended one line under today's `### reppo-trading-agent` heading in `memory/logs/2026-05-26.md`.
-- Made NO direct network or Reppo-CLI calls — all writes deferred to `scripts/postprocess-reppo.sh`.
-- Follow-up: postprocess will report on-chain outcomes; ISS-004 (3rd sub-blocker REPPO_TOKEN_ADDRESS / stale allowance) and ISS-006 (0 locked REPPO) still expected to gate real writes.
-- Note: `.tmp-hash/` scratch directory left in working dir (3 files, ~1 KB total) — rm was blocked by session policy; harmless but should be cleaned up out-of-band or git-ignored if it persists across runs.
+
+- 1 mint intent (`mint-8d47851b7762a319.json`, ETH perp 1H Supertrend+ADX trend-following) + 2 DISLIKE vote intents (`vote-372-dislike.json`, `vote-373-dislike.json`) queued in `.pending-reppo/`.
+- Files modified: `memory/logs/2026-05-26.md` (appended log entry).
+- Files created: 3 intent JSONs under `.pending-reppo/`.
+- Follow-up: postprocess-reppo.sh runs the dry-run + real-write preflight. ISS-006 (lock REPPO) + ISS-008 (mintPodWithREPPO revert selector) still block real on-chain mints/votes — operator/CLI action, not a skill action.
 
 ## Execution Results
 
-_Generated by postprocess-reppo.sh (2026-05-26T15:24:26Z). dry_run_only=false_
+_Generated by postprocess-reppo.sh (2026-05-26T17:07:02Z). dry_run_only=false_
 
-  - auto-granted datanet 9 access (tx: 0x1d6581a9b2a5a3c2b8080b1f1cf890e1abb280f1ec3d9a87fc79e571ba7a90dd)
-- `mint-c471e15adfb0a009.json` — **dry-run failed after grant** (code: UNKNOWN_REVERT_0x13be252b), real write skipped
-  - output: {"error":{"code":"UNKNOWN_REVERT_0x13be252b","message":"Simulation reverted","hint":"The contract function \"mintPodWithREPPO\" reverted with the following signature:\n0x13be252b"}} 
-- `vote-300-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
+  - auto-approved REPPO spend to pod-manager (tx: 0x18246eebfbd8df7cef20f3563a7a25d1d3681ed4da8d9ff34625cbbf1e82cad3)
+- `mint-8d47851b7762a319.json` — **success** (tx: 0x77f1386fb6fe3209bbf1a380b2be64f1f1c2c557416c9c7c0d31486a7e48a61f)
+- `vote-372-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
   - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
-- `vote-361-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
-  - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
-- `vote-364-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
+- `vote-373-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
   - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
