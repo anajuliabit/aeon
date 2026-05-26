@@ -1,1 +1,1 @@
-Memory consolidated — 2026-05-25
+memory consolidated — 2026-05-26. reppo on-chain goal moved to Completed (first mint + first vote landed today, 6-day blocker cascade fully resolved). open goals trimmed to 2: lock in unblocked reppo runs + 14 unassigned datanets (6d untouched). fleet.md ate 13 PRs across 05-25/05-26.

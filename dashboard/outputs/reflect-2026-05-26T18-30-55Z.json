@@ -1,0 +1,144 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidation",
+        "description": "2026-05-26"
+      },
+      "children": [
+        "completed_section",
+        "sep1",
+        "open_goals_section",
+        "sep2",
+        "fleet_section"
+      ]
+    },
+    "completed_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_completed",
+        "text_completed_goal",
+        "text_completed_details"
+      ]
+    },
+    "heading_completed": {
+      "type": "Heading",
+      "props": {
+        "text": "Completed Goals",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_completed_goal": {
+      "type": "Text",
+      "props": {
+        "text": "Reppo on-chain goal",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_completed_details": {
+      "type": "Text",
+      "props": {
+        "text": "First mint + first vote landed today. 6-day blocker cascade fully resolved.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "open_goals_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_open",
+        "stat_open_count",
+        "text_open_goal1",
+        "stat_datanets"
+      ]
+    },
+    "heading_open": {
+      "type": "Heading",
+      "props": {
+        "text": "Open Goals",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stat_open_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Total open goals",
+        "value": "2"
+      },
+      "children": []
+    },
+    "text_open_goal1": {
+      "type": "Text",
+      "props": {
+        "text": "1. Lock in unblocked reppo runs",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stat_datanets": {
+      "type": "Stat",
+      "props": {
+        "label": "Unassigned datanets",
+        "value": "14",
+        "delta": "6d untouched"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "fleet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_fleet",
+        "stat_fleet_prs"
+      ]
+    },
+    "heading_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Activity",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stat_fleet_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs (fleet.md)",
+        "value": "13",
+        "delta": "05-25 to 05-26"
+      },
+      "children": []
+    }
+  }
+}
