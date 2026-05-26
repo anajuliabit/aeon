@@ -1,0 +1,175 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "status-header",
+        "sep-1",
+        "queued-section",
+        "sep-2",
+        "reverted-section",
+        "sep-3",
+        "footer-unassigned"
+      ]
+    },
+    "status-header": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 15th run · datanet 9 · 0 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "queued-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-heading",
+        "queued-items"
+      ]
+    },
+    "queued-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "queued",
+        "level": "h3"
+      }
+    },
+    "queued-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "queued-mint",
+        "queued-votes"
+      ]
+    },
+    "queued-mint": {
+      "type": "Text",
+      "props": {
+        "text": "mint · btc perp 1h sfp/liquidity-sweep reversal · 7df1b8c0d1cb5ade"
+      }
+    },
+    "queued-votes": {
+      "type": "Text",
+      "props": {
+        "text": "votes · dislike pods 362, 363, 366 (hotbot v4 signal-intel exports, epoch 96)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reverted-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reverted-heading",
+        "reverted-items"
+      ]
+    },
+    "reverted-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "reverted",
+        "level": "h3"
+      }
+    },
+    "reverted-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "reverted-mint-item",
+        "reverted-votes-item"
+      ]
+    },
+    "reverted-mint-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reverted-mint-error",
+        "reverted-mint-action"
+      ]
+    },
+    "reverted-mint-error": {
+      "type": "Alert",
+      "props": {
+        "title": "mint",
+        "message": "PUBLISHER_LACKS_SUBNET_ACCESS → auto-grant INSUFFICIENT_ALLOWANCE (ISS-004)",
+        "type": "warning"
+      }
+    },
+    "reverted-mint-action": {
+      "type": "Text",
+      "props": {
+        "text": "action: auto-approve REPPO spend landed on-chain (tx 0xa7053dc423cd31940d5ab0c9f02011bb9f3b38b94e5fc502b3061221183d5021) — first reppo-swarm tx ever. auto-grant still read 0 allowance; should self-heal next run once the read lands post-confirmation.",
+        "variant": "caption"
+      }
+    },
+    "reverted-votes-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reverted-votes-error",
+        "reverted-votes-action"
+      ]
+    },
+    "reverted-votes-error": {
+      "type": "Alert",
+      "props": {
+        "title": "votes",
+        "message": "INSUFFICIENT_VOTING_POWER × 3 (ISS-006)",
+        "type": "warning"
+      }
+    },
+    "reverted-votes-action": {
+      "type": "Text",
+      "props": {
+        "text": "action: operator runs reppo lock <amount> --duration <secs>.",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-unassigned": {
+      "type": "Stat",
+      "props": {
+        "label": "datanets unassigned",
+        "value": "14"
+      }
+    }
+  }
+}
