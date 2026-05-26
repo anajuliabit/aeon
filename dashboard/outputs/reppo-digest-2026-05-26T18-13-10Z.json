@@ -1,0 +1,237 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "onchain_section",
+        "sep3",
+        "reverted_section",
+        "sep4",
+        "footer"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "header_text",
+        "badge_first_vote"
+      ]
+    },
+    "header_text": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 19th run · datanet 9 · 2 on-chain",
+        "variant": "lead"
+      }
+    },
+    "badge_first_vote": {
+      "type": "Badge",
+      "props": {
+        "text": "first vote ever",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_queued",
+        "item_mint",
+        "item_votes"
+      ]
+    },
+    "heading_queued": {
+      "type": "Heading",
+      "props": {
+        "text": "queued",
+        "level": "h3"
+      }
+    },
+    "item_mint": {
+      "type": "Text",
+      "props": {
+        "text": "mint · ETH/USDT perp 4H Ichimoku cloud breakout · da7a36f4094a24f9"
+      }
+    },
+    "item_votes": {
+      "type": "Text",
+      "props": {
+        "text": "votes · dislike pods 372, 373 (HotBot v4 raw signal/trade exports, epoch 97)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "onchain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_onchain",
+        "tx_mint",
+        "tx_vote"
+      ]
+    },
+    "heading_onchain": {
+      "type": "Heading",
+      "props": {
+        "text": "on-chain",
+        "level": "h3"
+      }
+    },
+    "tx_mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tx_mint_label",
+        "tx_mint_link"
+      ]
+    },
+    "tx_mint_label": {
+      "type": "Text",
+      "props": {
+        "text": "mint da7a36f4094a24f9"
+      }
+    },
+    "tx_mint_link": {
+      "type": "Link",
+      "props": {
+        "label": "0x832db6832018891d3846997591ce127815e26e28ac51b1ac116265c036d91f21",
+        "href": "https://etherscan.io/tx/0x832db6832018891d3846997591ce127815e26e28ac51b1ac116265c036d91f21"
+      }
+    },
+    "tx_vote": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tx_vote_label",
+        "tx_vote_link"
+      ]
+    },
+    "tx_vote_label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 373 dislike"
+      }
+    },
+    "tx_vote_link": {
+      "type": "Link",
+      "props": {
+        "label": "0x937d9f3cc006e805bd2ace1b110e71e29fa659052c12b88a8ce3079c5136a455",
+        "href": "https://etherscan.io/tx/0x937d9f3cc006e805bd2ace1b110e71e29fa659052c12b88a8ce3079c5136a455"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reverted_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_reverted",
+        "reverted_votes_alert",
+        "action_section"
+      ]
+    },
+    "heading_reverted": {
+      "type": "Heading",
+      "props": {
+        "text": "reverted",
+        "level": "h3"
+      }
+    },
+    "reverted_votes_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "votes · INSUFFICIENT_VOTING_POWER",
+        "message": "× 1 (pod 372, ISS-006)",
+        "type": "warning"
+      }
+    },
+    "action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_label",
+        "action_tx_link",
+        "action_note"
+      ]
+    },
+    "action_label": {
+      "type": "Text",
+      "props": {
+        "text": "action: self-heals next run — auto-lock 500 REPPO/30d landed mid-run",
+        "variant": "body"
+      }
+    },
+    "action_tx_link": {
+      "type": "Link",
+      "props": {
+        "label": "0xc0e44c58a2888e1c5f91e214e3bae0d38ccc04dc22a390292c05d874e11c40d2",
+        "href": "https://etherscan.io/tx/0xc0e44c58a2888e1c5f91e214e3bae0d38ccc04dc22a390292c05d874e11c40d2"
+      }
+    },
+    "action_note": {
+      "type": "Text",
+      "props": {
+        "text": "vote-373 already cleared the same gate",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned.",
+        "variant": "muted"
+      }
+    }
+  }
+}

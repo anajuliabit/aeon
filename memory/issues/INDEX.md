@@ -5,7 +5,6 @@
 | ID | Title | Severity | Category | Detected | Affected Skills |
 |----|-------|----------|----------|----------|-----------------|
 | ISS-005 | Reppo vote dry-runs fail — selected pods are not valid for the current epoch | high | prompt-bug | 2026-05-23 | reppo-trading-agent, reppo-digest |
-| ISS-006 | Reppo vote dry-run fails — publisher has 0 voting power | high | config | 2026-05-24 | reppo-trading-agent, reppo-digest |
 | ISS-007 | Reppo vote dry-run hits transient mainnet.base.org RPC failure | medium | timeout | 2026-05-25 | reppo-trading-agent, reppo-digest |
 | ISS-009 | reppo-orchestrator drops the fenced reppo-plan block — LLM emits only `## Summary` | medium | prompt-bug | 2026-05-26 | reppo-orchestrator, reppo-trading-agent, reppo-digest |
 
@@ -18,3 +17,4 @@
 | ISS-003 | reppo postprocess dry-run fails with code UNKNOWN — intents never reach the chain | high | https://github.com/anajuliabit/aeon/pull/8 | 2026-05-23 |
 | ISS-004 | Reppo mint dry-run fails — publisher lacks subnet access | high | https://github.com/anajuliabit/aeon/pull/10 | 2026-05-26 |
 | ISS-008 | Reppo mint dry-run reverts with InsufficientAllowance — pod-manager spender, not subnet-manager | high | https://github.com/anajuliabit/aeon/pull/21 | 2026-05-26 |
+| ISS-006 | Reppo vote dry-run fails — publisher has 0 voting power | high | https://github.com/anajuliabit/aeon/pull/11 | 2026-05-26 |
