@@ -1,25 +1,20 @@
-*Evening Recap — 2026-05-25*
-_TL;DR: heaviest ship day of the week — 5 PRs merged, 3 articles, soul live, 0 skill failures_
+Done. Here's what was sent:
 
-*Headlines:*
-- 5 PRs merged (#9–13) — token-alert fix, reppo unblock ×2, soul populate, RPC retry · https://github.com/anajuliabit/aeon/pull/12
-- self-improve — scan.sh backtick pattern tightened (769→19 FP matches) · https://github.com/anajuliabit/aeon/pull/14
-- skill-security-scan — bootstrap: 5 workflow-injection sites flagged · articles/security-scan-2026-05-25.md
-- cost-report (first run) — $179.73 / 4 days, ~$770/mo projected · articles/cost-report-2026-05-25.md
-- weekly-review (first run) — week-1 baseline: 111 runs, 3 failures, 10 articles · articles/weekly-review-2026-05-25.md
+---
 
-*Notable:*
-- reppo-digest ×2 — day 4, 0 on-chain output; ISS-004/006 fix PRs merged, on-chain verify pending
-- token-alert — REPPO +14.04% alert; HYPER flat; VVV −5.49%
-- defi-overview — TVL flat, DEX vol −21%; V3→V4 rotation accelerating
-- heartbeat ×3 — 30/30 cron entries success; status WATCH (4 open issues)
-- reflect — week-1 memory consolidated; MEMORY.md + 4 topic files updated
+**Evening Recap — 2026-05-26** (staged to `.pending-notify/1779831551-evening-recap.md`)
 
-*Decisions for tomorrow:*
-- verify reppo on-chain after PR #10/#11 — close ISS-004 + ISS-006 if ≥1 mint + ≥1 vote land
-- close ISS-007 in INDEX.md — PR #13 merged, confirm Base RPC stable
-- ship ISS-005 durable prefetch fix — pod epoch validity prompt-bug still pending
-- merge PR #14 — scan.sh pattern tighten, ready for review
-- build rubric for 14 unassigned datanets — 5 days surfaced, untouched
+**TL;DR:** 2 mints + 1 vote landed on Base for the first time — 6 days of blockers cleared — but ISS-009 recurred at 50% post-fix and PR #27 is sitting unmerged.
 
-_+10 routine runs collapsed · sources: log=ok cron-state=ok_
+**3 Headlines:**
+- reppo-digest (run 17): first mint ever on Base (ETH Supertrend) · ISS-004 + ISS-008 closed · PR #21
+- reppo-digest (run 19): 2nd mint + first vote (pod-373) · ISS-006 closed · PR #23
+- ISS-009 re-escalated medium→high: 50% recurrence post-PR #24 · PR #27 filed
+
+**5 Notable:** goal-tracker DONE, defi-overview infra flake + recovery, token-alert REPPO -11.32%, reppo-orchestrator ×8 (14 unassigned datanets), reflect memory rewrite
+
+**3 Decisions for tomorrow:** merge PR #27, close ISS-007 in INDEX.md, pick 3 datanets
+
+**2 Blockers:** ISS-009 (50% recurrence), ISS-005 (vote_cap bottlenecked to 2 pods)
+
+Memory log appended to `memory/logs/2026-05-26.md`.
