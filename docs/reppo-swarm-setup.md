@@ -31,17 +31,29 @@ REPPO_NETWORK=mainnet reppo register-agent \
 ```
 This uses the CLI's default API key — no `REPPO_API_KEY` needed.
 
-## 4. Lock REPPO for voting power (one-time)
-The chain's vote step uses veREPPO weight; without a lockup, votes may carry
-zero weight or fail with insufficient-power errors. Lock the agent's full
-REPPO balance into veREPPO for 30 days using the helper:
+## 4. Lock REPPO for voting power (auto-handled)
+The chain's vote step uses veREPPO weight. `postprocess-reppo.sh`
+auto-locks 500 REPPO for 30 days the first time a vote intent dry-runs
+with `INSUFFICIENT_VOTING_POWER` (via the `auto_recover_lock` helper),
+mirroring the existing auto-grant / auto-approve recovery paths. The
+lock idempotency-key is date-stamped to the lock cycle (`year-month`),
+so attempts within the same 30-day window no-op but the lock refreshes
+monthly when needed.
+
+**Prereq:** the wallet must hold at least 500 REPPO when the first
+vote intent fires; auto-recovery surfaces a clean failure in the
+digest if it doesn't (`auto-lock FAILED: …`).
+
+**Manual override:** for a custom amount or duration (e.g. locking the
+full balance for longer), use the operator helper:
 ```bash
-./scripts/reppo-lock.sh
+./scripts/reppo-lock.sh                       # full balance, 30d
+./scripts/reppo-lock.sh --amount 1000         # explicit amount
+./scripts/reppo-lock.sh --duration 5184000    # 60d
 ```
-The script auto-detects the wallet's REPPO balance and locks all of it for
-30 days (`--duration 2592000`). Override with `--amount <n>` or
-`--duration <seconds>`; preview with `--dry-run`. When the lockup matures,
-re-run to refresh, or use `reppo extend-lock <id> --duration <seconds>`.
+Run this BEFORE the auto-recovery's first vote attempt to override
+the default 500/30d lockup. When a manual lockup matures, re-run, or
+use `reppo extend-lock <id> --duration <seconds>` to extend.
 
 ## 5. Configure the rubric
 Edit `configs/datanets/tradinggymai.md`: replace `datanet_id` with the real

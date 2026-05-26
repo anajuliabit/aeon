@@ -212,6 +212,67 @@ auto_recover_mint_allowance() {
   return 0
 }
 
+# Helper: auto-lock REPPO into veREPPO to give the publisher voting
+# power. Mirrors auto_recover_grant / auto_recover_mint_allowance for
+# the vote path — veREPPO.lock(amount, duration) is what `reppo lock`
+# wraps. A wallet with 0 locked REPPO has 0 voting power, so every
+# vote intent reverts with INSUFFICIENT_VOTING_POWER.
+#
+# Locks 500 REPPO for 30 days (~2592000s). Two CLI calls:
+#  1. Approve ve-reppo to spend REPPO (the CLI may auto-approve
+#     internally on `lock`, but doing it explicitly is cheaper than
+#     failing the lock tx and recovering). Idempotency-keyed once
+#     forever — no-ops on every subsequent invocation.
+#  2. `reppo lock 500 --duration 2592000`. Idempotency-key is
+#     date-stamped to the lock cycle (year-month), so attempts within
+#     the same 30-day window no-op (CLI rejects duplicate key), but a
+#     fresh month broadcasts a new lock — automatically refreshing
+#     voting power if a prior lockup has matured.
+#
+# Returns 0 on lock success, 1 on terminal failure (operator must
+# inspect: most likely cause is REPPO balance < 500).
+auto_recover_lock() {
+  local approve_tx lock_tx ldetail adetail amount=500 duration=2592000
+  local approve_key="aeon-approve-ve-reppo-reppo"
+  local lock_key="aeon-lock-$(date -u +%Y-%m)-${amount}-reppo-${duration}s"
+
+  echo "reppo-postprocess: ensuring REPPO allowance to ve-reppo..." >&2
+  if ! REPPO_NETWORK=mainnet reppo approve \
+         --spender ve-reppo \
+         --token reppo \
+         --amount max \
+         --idempotency-key "$approve_key" \
+         --json \
+       > ".reppo-cache/approve-ve-reppo.json" 2>&1; then
+    adetail="$(extract_detail ".reppo-cache/approve-ve-reppo.json")"
+    echo "  - auto-approve (ve-reppo) FAILED: ${adetail:-<empty>}" >> "$RESULTS_FILE"
+    return 1
+  fi
+  approve_tx="$(jq -r '.transactionHash // .txHash // "n/a"' ".reppo-cache/approve-ve-reppo.json" 2>/dev/null || echo n/a)"
+  if [ "$approve_tx" != "n/a" ]; then
+    echo "  - auto-approved REPPO spend to ve-reppo (tx: $approve_tx)" >> "$RESULTS_FILE"
+  fi
+
+  echo "reppo-postprocess: locking ${amount} REPPO into veREPPO for ${duration}s (~30d)..." >&2
+  if ! REPPO_NETWORK=mainnet reppo lock "$amount" \
+         --duration "$duration" \
+         --idempotency-key "$lock_key" \
+         --json \
+       > ".reppo-cache/lock.json" 2>&1; then
+    ldetail="$(extract_detail ".reppo-cache/lock.json")"
+    echo "  - auto-lock (${amount} REPPO, 30d) FAILED: ${ldetail:-<empty>}" >> "$RESULTS_FILE"
+    return 1
+  fi
+  lock_tx="$(jq -r '.transactionHash // .txHash // "n/a"' ".reppo-cache/lock.json" 2>/dev/null || echo n/a)"
+  echo "  - auto-locked ${amount} REPPO into veREPPO for 30d (tx: $lock_tx)" >> "$RESULTS_FILE"
+  # Voting-power read can lag the lock tx receipt — same propagation
+  # race as the allowance reads. dryrun_with_retry's backoff doesn't
+  # cover INSUFFICIENT_VOTING_POWER (not in its retriable code set),
+  # so absorb the lag with an explicit sleep before returning.
+  sleep 5
+  return 0
+}
+
 for intent in "$PENDING_DIR"/*.json; do
   [ -f "$intent" ] || continue
   base="$(basename "$intent")"
@@ -286,6 +347,30 @@ for intent in "$PENDING_DIR"/*.json; do
         # Retry passed — fall through to the dry-run-OK / real-write logic below.
       else
         echo "- \`$base\` — **dry-run failed** (code: $code) and auto-approve for pod-manager failed, real write skipped" >> "$RESULTS_FILE"
+        echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
+        rm -f "$intent"
+        continue
+      fi
+    elif [ "$cmd_name" = "vote" ] && [ "$code" = "INSUFFICIENT_VOTING_POWER" ] && [ "$DRY_RUN_ONLY" != "true" ]; then
+      # Vote dry-run reverted because the publisher has 0 (or insufficient)
+      # voting power on veREPPO. Auto-lock 500 REPPO for 30 days (the
+      # standard cycle), then retry the dry-run. The lock is durable on
+      # chain — subsequent runs within the 30-day window hit the
+      # steady-state path (vote dry-run succeeds on the first call;
+      # this branch never fires).
+      echo "reppo-postprocess: $base hit INSUFFICIENT_VOTING_POWER; auto-locking 500 REPPO for 30d..." >&2
+      if auto_recover_lock; then
+        if ! dryrun_with_retry; then
+          code="$(extract_code ".reppo-cache/dryrun-$base")"
+          detail="$(extract_detail ".reppo-cache/dryrun-$base")"
+          echo "- \`$base\` — **dry-run failed after lock** (code: $code), real write skipped" >> "$RESULTS_FILE"
+          echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
+          rm -f "$intent"
+          continue
+        fi
+        # Retry passed — fall through to the dry-run-OK / real-write logic below.
+      else
+        echo "- \`$base\` — **dry-run failed** (code: $code) and auto-lock failed, real write skipped" >> "$RESULTS_FILE"
         echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
         rm -f "$intent"
         continue
