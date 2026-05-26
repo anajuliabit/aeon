@@ -177,6 +177,41 @@ auto_recover_grant() {
   return 1
 }
 
+# Helper: auto-approve REPPO spend to the PodManager via `reppo approve`
+# (CLI v0.5+). Mirrors auto_recover_grant but for the mint-pod path —
+# PodManagerV2.mintPodWithREPPO does
+#   reppo.safeTransferFrom(msg.sender, address(this), publishingFee);
+# so the spender that needs allowance is PodManager (proxy
+# 0x5C563f853eb4db33005A5C1aD9290e8560254A80 on Base mainnet), NOT
+# SubnetManager. subnet-manager and pod-manager are independent
+# allowances — grant-access pulls REPPO via SubnetManager, mint-pod
+# pulls REPPO via PodManager. A chain that does both needs both set.
+# Returns 0 on approve success, 1 on terminal failure.
+auto_recover_mint_allowance() {
+  local adetail approve_tx
+  echo "reppo-postprocess: approving REPPO spend to pod-manager (max)..." >&2
+  if ! REPPO_NETWORK=mainnet reppo approve \
+         --spender pod-manager \
+         --token reppo \
+         --amount max \
+         --idempotency-key "aeon-approve-pod-manager-reppo" \
+         --json \
+       > ".reppo-cache/approve-pod-manager.json" 2>&1; then
+    adetail="$(extract_detail ".reppo-cache/approve-pod-manager.json")"
+    echo "  - auto-approve (pod-manager) FAILED: ${adetail:-<empty>}" >> "$RESULTS_FILE"
+    return 1
+  fi
+  approve_tx="$(jq -r '.transactionHash // .txHash // "n/a"' ".reppo-cache/approve-pod-manager.json" 2>/dev/null || echo n/a)"
+  echo "  - auto-approved REPPO spend to pod-manager (tx: $approve_tx)" >> "$RESULTS_FILE"
+  # Brief sleep so the next dry-run's eth_call lands on a node that's
+  # seen the receipt (same propagation race documented in
+  # auto_recover_grant). dryrun_with_retry already has its own backoff
+  # for INTERNAL_ERROR, but the allowance read can return stale 0 on
+  # the first attempt without surfacing as a retriable code.
+  sleep 5
+  return 0
+}
+
 for intent in "$PENDING_DIR"/*.json; do
   [ -f "$intent" ] || continue
   base="$(basename "$intent")"
@@ -223,6 +258,35 @@ for intent in "$PENDING_DIR"/*.json; do
         echo "- \`$base\` — **dry-run failed** (code: $code) and auto-grant for datanet $target failed (code: $gcode), real write skipped" >> "$RESULTS_FILE"
         echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
         echo "  - grant output: ${gdetail:-<empty>}" >> "$RESULTS_FILE"
+        rm -f "$intent"
+        continue
+      fi
+    elif [ "$cmd_name" = "mint-pod" ] && [ "$DRY_RUN_ONLY" != "true" ] \
+         && grep -qiE '0x13be252b|InsufficientAllowance' ".reppo-cache/dryrun-$base"; then
+      # Mint dry-run reverted with selector 0x13be252b (InsufficientAllowance,
+      # no args — a hand-rolled custom error from the REPPO token's
+      # transferFrom check). PodManagerV2.mintPodWithREPPO is the actual
+      # spender (it does safeTransferFrom from itself, not via
+      # SubnetManager), so subnet-manager allowance doesn't cover this —
+      # pod-manager needs its own allowance. Approve and retry the
+      # dry-run. The CLI surfaces this as code "UNKNOWN_REVERT_0x13be252b"
+      # plus the selector in the hint message; the grep matches both the
+      # selector and (defensively) the decoded name in case a future CLI
+      # decodes it.
+      echo "reppo-postprocess: $base hit InsufficientAllowance on PodManager; auto-approving pod-manager..." >&2
+      if auto_recover_mint_allowance; then
+        if ! dryrun_with_retry; then
+          code="$(extract_code ".reppo-cache/dryrun-$base")"
+          detail="$(extract_detail ".reppo-cache/dryrun-$base")"
+          echo "- \`$base\` — **dry-run failed after pod-manager approve** (code: $code), real write skipped" >> "$RESULTS_FILE"
+          echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
+          rm -f "$intent"
+          continue
+        fi
+        # Retry passed — fall through to the dry-run-OK / real-write logic below.
+      else
+        echo "- \`$base\` — **dry-run failed** (code: $code) and auto-approve for pod-manager failed, real write skipped" >> "$RESULTS_FILE"
+        echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
         rm -f "$intent"
         continue
       fi
