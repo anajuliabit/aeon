@@ -1,0 +1,204 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-swarm"
+      },
+      "children": [
+        "header-stack",
+        "sep-1",
+        "queued-section",
+        "sep-2",
+        "on-chain-section",
+        "sep-3",
+        "reverted-section",
+        "sep-4",
+        "notes-section"
+      ]
+    },
+    "header-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-17th-run",
+        "badge-datanet",
+        "badge-on-chain"
+      ]
+    },
+    "badge-17th-run": {
+      "type": "Badge",
+      "props": {
+        "text": "17th run",
+        "variant": "default"
+      }
+    },
+    "badge-datanet": {
+      "type": "Badge",
+      "props": {
+        "text": "datanet 9",
+        "variant": "default"
+      }
+    },
+    "badge-on-chain": {
+      "type": "Badge",
+      "props": {
+        "text": "1 on-chain",
+        "variant": "default"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "queued-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-queued",
+        "queued-item-1",
+        "queued-item-2"
+      ]
+    },
+    "heading-queued": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "queued-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "mint · eth perp 1h supertrend(10,3)+adx(14)≥25 trend-follow · 8d47851b7762a319",
+        "variant": "body"
+      }
+    },
+    "queued-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "votes · dislike 372, 373 (hotbot v4 raw signal/trade exports; only 2 pods at epoch 97)",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-chain-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-on-chain",
+        "on-chain-item-1",
+        "on-chain-item-2"
+      ]
+    },
+    "heading-on-chain": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h3"
+      }
+    },
+    "on-chain-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "preflight repo→pod-manager approve — tx 0x18246eebfbd8df7cef20f3563a7a25d1d3681ed4da8d9ff34625cbbf1e82cad3",
+        "variant": "body"
+      }
+    },
+    "on-chain-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "mint 8d47851b7762a319 — tx 0x77f1386fb6fe3209bbf1a380b2be64f1f1c2c557416c9c7c0d31486a7e48a61f",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reverted-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-reverted",
+        "reverted-item-1",
+        "reverted-item-2"
+      ]
+    },
+    "heading-reverted": {
+      "type": "Heading",
+      "props": {
+        "text": "Reverted",
+        "level": "h3"
+      }
+    },
+    "reverted-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "votes · INSUFFICIENT_VOTING_POWER × 2 (ISS-006)",
+        "variant": "body"
+      }
+    },
+    "reverted-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "action: operator runs the lock cli with an amount and duration to give the publisher voting power",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "note-1",
+        "note-2"
+      ]
+    },
+    "note-1": {
+      "type": "Text",
+      "props": {
+        "text": "first mint to land on-chain. pr #21's pod-manager auto-approve cleared ISS-008.",
+        "variant": "body"
+      }
+    },
+    "note-2": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned.",
+        "variant": "body"
+      }
+    }
+  }
+}
