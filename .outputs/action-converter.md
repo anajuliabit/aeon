@@ -1,29 +1,24 @@
-*5 Actions — 2026-05-25*
-Shape: Close today's reppo issues, ship ISS-005 durable fix, patch security + evals, sweep MEMORY.
+Arg-passing with `$(cat ...)` is blocked in this sandbox (matches the documented pattern). The notification stays staged at `.pending-notify/1779820184-action-converter.md` for the post-run delivery step.
 
-1. Move ISS-004 / ISS-006 / ISS-007 to the resolved table in memory/issues/INDEX.md and set status=resolved + fix_pr to PR #10 / #11 / #13 in each ISS-*.md file
-why: Today's 5-PR wave (#10 auto-grant, #11 reppo-lock helper, #13 RPC retry) shipped the fixes but tracker still flags them open
-done: INDEX.md resolved table grew by 3 rows; ISS-004.md / ISS-006.md / ISS-007.md all carry status: resolved + fix_pr links
-loop: iss-bookkeeping
+## Summary
 
-2. Extend scripts/prefetch-reppo.sh to record per-pod validityEpoch in the pod cache and patch skills/reppo-trading-agent/SKILL.md to filter on validityEpoch >= currentEpoch — replaces the in-prompt <= current-1 workaround and resolves ISS-005
-why: ISS-005 is the last cascade blocker without a PR; the contract belongs in prefetch, not the prompt
-done: PR opened touching scripts/prefetch-reppo.sh + skills/reppo-trading-agent/SKILL.md; ISS-005.md gets fix_pr
-loop: iss-005-durable-prefetch
+Ran **Action Converter** in `ACTION_CONVERTER_OK` mode for 2026-05-26.
 
-3. Fix the 5 workflow-injection sites flagged in articles/security-scan-2026-05-25.md (.github/workflows/messages.yml:578, .github/workflows/aeon.yml:86/94/96/718) — replace inline \${{ inputs.skill }} / \${{ github.event.action }} with env-var indirection per articles/workflow-security-audit-2026-04-11.md
-why: Five HIGH findings match the 2026-04-11 incident class and the fix shape is already documented — preemptive close while the audit is fresh
-done: PR opened with env-var indirection at all 5 sites; next skill-security-scan delta drops these from the HIGH list
-loop: security-scan-workflow-injection
+**Shape:** Broadcast first on-chain mints, durable-fix iss-005, sweep stale memory, pick 3 datanets.
 
-4. Rewrite the 4 spec-drift rows in skills/skill-evals/evals.json — change token-alert + skill-health output_pattern from articles/*.md to memory/logs/YYYY-MM-DD.md, and delete the orphaned hn-digest + polymarket entries (no matching skills/ directory)
-why: skill-evals coverage stuck at 12/29 because evals.json carries stale paths — surfaced as action-queue head in 2026-05-24 skill-evals bootstrap and untouched 1d
-done: evals.json has 4 fewer wrong rows; next skill-evals run reports ≥14/29 coverage and 0 NO_OUTPUT from these four
-loop: evals-json-output-pattern-fix
+**5 actions (quality avg 4.4/5)**, ranked by quality × urgency:
+1. Compose 300-450 char build-in-public X post naming today's 3 tx hashes (mint 0x77f1, mint 0x832d, vote 0x937d) — first on-chain output after 18 prior runs.
+2. Add `validityEpoch` to `scripts/prefetch-reppo.sh` cache schema; move filter from agent prompt to prefetch (durable fix for ISS-005).
+3. Rewrite `## Current Goals` + `## Open Issues` in `memory/MEMORY.md` (stale vs INDEX.md — lists ISS-004/006/008/009 as open but those resolved today).
+4. Move ISS-007 from open → resolved in `memory/issues/INDEX.md`, link PR #13.
+5. Pick 3 of the 14 unassigned datanet ids (1,2,4,5,6,7,8,10,11,13,14,15,16,17) and justify in `memory/topics/reppo.md`.
 
-5. Sweep memory/MEMORY.md and memory/topics/fleet.md for today's 5-PR wave — drop "Populate soul/" from Current Goals (PR #12 closed it), drop PR #9 from Open PRs (merged), add ISS-007 row to Open Issues, and append PRs #10/#11/#12/#13 rows to the fleet.md infrastructure table
-why: MEMORY.md and fleet.md are the next morning-brief's primary read; stale entries push the brief toward already-shipped work
-done: MEMORY.md Current Goals = 2 bullets (soul gone); Open PRs reflects 0 open; fleet.md PR table has rows through #13
-loop: memory-fleet-md-sweep
+**Loops anchored:** build-in-public-first-mints, iss-005-durable, memory-md-stale, iss-007-bookkeeping, datanet-rubric.
 
-sources: memory=59 logs=5 topics=4 prs=0 cron_failing=0 mode=OK
+**Loops carried over:** skill-evals-output-pattern (verb-noun overlap with yesterday's carry), defi-overview-foundry-pin (single occurrence, not yet urgent), cost-opus-sonnet-rotation (operator-call), operator-scorecard-never-ran (under threshold).
+
+**Files modified:**
+- `memory/logs/2026-05-26.md` — appended Action Converter section with loops, novelty notes, and carry-over list.
+- `.pending-notify/1779820184-action-converter.md` — Telegram-formatted notification staged for post-run delivery (sandbox blocks `$(cat ...)` arg-passing).
+
+**Follow-up:** None required from this run. Post-run notify step will deliver the message to all configured channels.
