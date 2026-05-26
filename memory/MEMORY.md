@@ -10,6 +10,10 @@ on-chain output (mint + vote) landed 2026-05-26 after 5 days of stacked blockers
 ## Current Goals
 - Assign agents to the 14 unassigned reppo datanets (surfaced every run, untouched
   all week).
+- Align reppo-trading-agent + datanet-9 rubric with the operator-shared canonical
+  contributor spec (Hyperliquid perp trade datasets with PnL/Sharpe/MDD/market
+  context/verification — not strategy descriptions). Spec preserved at
+  `memory/topics/tradinggymai-spec.md`. PR in flight.
 
 ## Completed Goals
 - Unblock reppo-swarm on-chain output — completed 2026-05-26. 1st mint
@@ -49,6 +53,7 @@ on-chain output (mint + vote) landed 2026-05-26 after 5 days of stacked blockers
 - [Crypto research](topics/crypto.md) — defi-overview, narratives, token signals.
 - [Bitcoin 30-day snapshot](topics/last30-bitcoin.md) — last30 baseline (stale, 05-21).
 - [Reppo swarm ledger](topics/reppo.md) — append-only on-chain audit trail.
+- [TradingGymAI (datanet 9) contributor spec](topics/tradinggymai-spec.md) — operator-shared 2026-05-26.
 
 ## Open Issues
 - ISS-005 (high, prompt-bug) — vote pods fail POD_NOT_VALID_FOR_EPOCH; agent-side
