@@ -1,42 +1,58 @@
-## reppo-trading-agent run — 2026-05-26
+Now writing the skill output summary.
 
-### Gate
-**RUN** per orchestrator plan (datanet 9 TradingGymAI ACTIVE, rubric populated). ISS-004 / ISS-006 still gate real on-chain writes; intents queue and dedupe safely.
+## Reppo Trading Agent — Run
 
-### Strategy minted (1 of 1)
-- **`mint-c358f6b5859e9024.json`** — ETH/BTC daily statistical-arbitrage pairs trade on perpetual futures. Refit hedge ratio β via OLS regression of log(ETH) on log(BTC) over trailing 60 daily bars; require Engle-Granger ADF p<0.05 before opening any new position. Spread `s_t = log(ETH_t) − β·log(BTC_t)`; rolling 30-day z-score. Entry: |z|≥2.0 (short the spread when z>+2, long when z<−2). Profit exit |z|≤0.25, hard stop |z|≥3.5, weekly ADF p>0.10 cointegration stop, 20-day time stop. Risk 1% equity per trade, one concurrent pair.
-  - Meets all five mint criteria: explicit entry/exit thresholds; instrument class (ETH-USD + BTC-USD perps) and 1D timeframe; multiple risk rules (% sizing, |z| hard stop, weekly cointegration re-test, time stop); non-trivial market-neutral relative-value method; hash `c358f6b5…` is novel vs the eight prior minted strategies in `memory/topics/reppo.md`.
-  - Source: [blog.amberdata.io — Crypto Pairs Trading: Why Cointegration Beats Correlation](https://blog.amberdata.io/crypto-pairs-trading-why-cointegration-beats-correlation)
+**Gate decision**: RUN (orchestrator plan says `reppo-trading-agent: RUN` on datanet 9 TradingGymAI; rubric loaded with `datanet_id: "9"`, `mint_cap: 1`, `vote_cap: 3`).
 
-### Pods voted on (3 of 3, all DISLIKE)
-Filtered cache to validityEpoch 96 (ISS-005 workaround). All epoch-96 pods are HotBot v4 raw exports or the pipeline doc — none specifies a falsifiable strategy with entry/exit/risk rules, so all draw DISLIKE per rubric:
-- **`vote-361-dislike.json`** — pod 361 "HotBot v4 — Trades & Learning May 06–May 24": raw trade-execution log, no documented strategy.
-- **`vote-364-dislike.json`** — pod 364 "HotBot v4 — Trades & Learning May 22-24": data dump, no entry/exit/risk specification.
-- **`vote-365-dislike.json`** — pod 365 "HotBot v4 — Trades & Learning Apr 17-May 24": bot trade export, not a falsifiable strategy.
+### Strategy selected to mint (1 / cap 1)
+
+**Ichimoku Cloud breakout — BTC perpetuals, 4-hour timeframe**
+- **Hash (first 16)**: `a091e0a9979330d9` — not in `memory/topics/reppo.md` ledger, fresh.
+- **Entry (long)**: ALL of (1) close above the cloud, (2) future kumo green (Senkou A > B 26 bars forward), (3) Tenkan crosses above Kijun within the last 3 bars, (4) Chikou span above price 26 bars back. Mirror for short.
+- **Stop**: further of the kumo's lower bound or 1.5×ATR(14) below entry (mirror for shorts).
+- **Exit**: opposite Tenkan/Kijun cross OR close back inside the kumo OR 1×ATR(14) trailing stop hit.
+- **Sizing / filter**: 1% account risk per trade; skip when 4h ATR(14)/price < 1.5%.
+- **Why it meets the rubric**: explicit four-condition entry, three exit triggers, ATR-based stop, position sizing rule, instrument + timeframe stated, ATR/price momentum filter — all mint criteria pass.
+- **Source**: synthesis of [3commas Ichimoku guide](https://3commas.io/blog/the-detailed-guide-to-using-ichimoku-cloud-strategy) and [BingX Ichimoku reference](https://bingx.com/en/learn/article/what-is-ichimoku-cloud-strategy-how-to-use-in-crypto-trading).
+- Intent written: `.pending-reppo/mint-a091e0a9979330d9.json`.
+
+### Pods selected to vote on (3 / cap 3, all DISLIKE)
+
+Filtered the cache to pods at validityEpoch ≥ current-1 (epoch 96) per the ISS-005 workaround. All seven epoch-96 pods are HotBot v4 raw data exports or a pipeline framework doc — none describe a falsifiable strategy with entry/exit/risk rules, so all fail the rubric's Mint criteria → all DISLIKE. Picked three not minted this run, biasing toward signal-intelligence dumps not voted on in today's earlier run:
+
+| Pod | Name | Direction | Reason |
+|-----|------|-----------|--------|
+| 362 | HotBot v4 — Signal Intelligence May 06-May 24 | dislike | raw signal-intel telemetry, not a strategy; no entry/exit/risk rules |
+| 363 | HotBot v4 — Signal Intelligence May 22-May 24 | dislike | bulk signal export, fails specificity + falsifiability checks |
+| 366 | HotBot v4 — Signal Intelligence Apr 17-May 24 | dislike | aggregate signal dump, no testable strategy spec |
+
+Intents written: `.pending-reppo/vote-362-dislike.json`, `.pending-reppo/vote-363-dislike.json`, `.pending-reppo/vote-366-dislike.json`.
 
 ### Skipped
-Nothing. No scraped sources attempted prompt injection. (`scripts/postprocess-reppo.sh` will append `## Execution Results` with on-chain outcomes.)
+- Pods at older epochs (≤95) — skipped per ISS-005 agent-side workaround (would revert POD_NOT_VALID_FOR_EPOCH).
+- No prompt-injection attempts in scraped sources this run.
 
-### Files
-- Created `.pending-reppo/mint-c358f6b5859e9024.json`, `.pending-reppo/vote-361-dislike.json`, `.pending-reppo/vote-364-dislike.json`, `.pending-reppo/vote-365-dislike.json`.
-- Appended `### reppo-trading-agent` entry to `memory/logs/2026-05-26.md`.
+### Sources
+- [3commas — Ichimoku Cloud strategy guide](https://3commas.io/blog/the-detailed-guide-to-using-ichimoku-cloud-strategy)
+- [BingX Academy — Ichimoku Cloud in crypto trading](https://bingx.com/en/learn/article/what-is-ichimoku-cloud-strategy-how-to-use-in-crypto-trading)
 
 ## Summary
-- Wrote 1 mint intent (novel ETH/BTC stat-arb pairs trade, hash `c358f6b5859e9024`) and 3 DISLIKE vote intents (pods 361, 364, 365 — all HotBot v4 raw exports at epoch 96) to `.pending-reppo/` for postprocess execution.
-- Logged the run to `memory/logs/2026-05-26.md`.
-- Follow-ups: ISS-004 (subnet grant + REPPO token discovery sub-blocker) and ISS-006 (lock REPPO for voting power) remain the gates to real on-chain writes; assigning agents to the 14 unassigned datanets is still on the MEMORY.md goal list.
+- 1 mint intent + 3 DISLIKE vote intents queued to `.pending-reppo/`. `scripts/postprocess-reppo.sh` will execute them and append `## Execution Results`.
+- Files created: `.pending-reppo/mint-a091e0a9979330d9.json`, `.pending-reppo/vote-{362,363,366}-dislike.json`.
+- Files modified: `memory/logs/2026-05-26.md` (re-run line appended under `### reppo-trading-agent`).
+- Follow-up: ISS-004 (PUBLISHER_LACKS_SUBNET_ACCESS, plus 3 stacked sub-blockers culminating in unknown REPPO token address) and ISS-006 (0 locked REPPO → INSUFFICIENT_VOTING_POWER) still gate on-chain execution. The ledger row in `memory/topics/reppo.md` is the digest skill's responsibility.
 
 ## Execution Results
 
-_Generated by postprocess-reppo.sh (2026-05-26T07:50:31Z). dry_run_only=false_
+_Generated by postprocess-reppo.sh (2026-05-26T14:36:24Z). dry_run_only=false_
 
   - auto-approve aborted: REPPO token address unknown — set REPPO_TOKEN_ADDRESS or ensure SubnetManager exposes feeToken()/REPPO()/paymentToken()/token()
-- `mint-c358f6b5859e9024.json` — **dry-run failed** (code: PUBLISHER_LACKS_SUBNET_ACCESS) and auto-grant for datanet 9 failed (code: INSUFFICIENT_ALLOWANCE), real write skipped
+- `mint-a091e0a9979330d9.json` — **dry-run failed** (code: PUBLISHER_LACKS_SUBNET_ACCESS) and auto-grant for datanet 9 failed (code: INSUFFICIENT_ALLOWANCE), real write skipped
   - output: {"error":{"code":"PUBLISHER_LACKS_SUBNET_ACCESS","message":"Simulation reverted","hint":"Grant subnet access to the publisher: `reppo grant-access --subnet <id>`."}} 
   - grant output: {"error":{"code":"INSUFFICIENT_ALLOWANCE","message":"REPPO allowance from 0xb4EC41c93cF2f573f82D8F023B01637Eb5dB4c64 to SubnetManager is 0, below the fee of 50 REPPO.","hint":"Approve the SubnetManager (0x2629A8083065938B533b117704935D727270eE7A) for at least 50 REPPO. Auto-approval lands in v0.2; f
-- `vote-361-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
+- `vote-362-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
   - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
-- `vote-364-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
+- `vote-363-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
   - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
-- `vote-365-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
+- `vote-366-dislike.json` — **dry-run failed** (code: INSUFFICIENT_VOTING_POWER), real write skipped
   - output: {"error":{"code":"INSUFFICIENT_VOTING_POWER","message":"Voter has 0 voting power but --votes is 1.","hint":"Lock more REPPO with `reppo lock <amount> --duration <seconds>` to increase voting power, or pass a smaller --votes."}} 
