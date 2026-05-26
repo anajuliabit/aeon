@@ -1,0 +1,190 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health",
+        "description": "2026-05-26"
+      },
+      "children": [
+        "heading-status",
+        "separator-1",
+        "stack-stats",
+        "separator-2",
+        "section-nodata",
+        "separator-3",
+        "section-issues",
+        "separator-4",
+        "alert-sandbox"
+      ]
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "HEALTH: OK",
+        "level": "h2"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-healthy",
+        "stat-critical"
+      ]
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Healthy",
+        "value": "18"
+      }
+    },
+    "stat-critical": {
+      "type": "Stat",
+      "props": {
+        "label": "Critical/Degraded/Flapping",
+        "value": "0"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-nodata",
+        "stack-nodata-items"
+      ]
+    },
+    "heading-nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "No-data (3 skills)",
+        "level": "h3"
+      }
+    },
+    "stack-nodata-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-nodata-1",
+        "text-nodata-2",
+        "text-nodata-3"
+      ]
+    },
+    "text-nodata-1": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch (dispatch-only)",
+        "variant": "body"
+      }
+    },
+    "text-nodata-2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics (wed)",
+        "variant": "body"
+      }
+    },
+    "text-nodata-3": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard (mon-weekly — missed yesterday's slot, first miss, under 2x threshold)",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-issues",
+        "stack-issue-badges",
+        "text-issues-note"
+      ]
+    },
+    "heading-issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Open Issues Carried (2)",
+        "level": "h3"
+      }
+    },
+    "stack-issue-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-iss005",
+        "badge-iss007"
+      ]
+    },
+    "badge-iss005": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-005",
+        "variant": "outline"
+      }
+    },
+    "badge-iss007": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-007",
+        "variant": "outline"
+      }
+    },
+    "text-issues-note": {
+      "type": "Text",
+      "props": {
+        "text": "Both reppo-digest filed, not in skill-health scope",
+        "variant": "caption"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-sandbox": {
+      "type": "Alert",
+      "props": {
+        "title": "Sandbox Limitation",
+        "message": "skill-runs script blocked in sandbox — partial run",
+        "type": "warning"
+      }
+    }
+  }
+}
