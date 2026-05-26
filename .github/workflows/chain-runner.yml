@@ -121,6 +121,44 @@ jobs:
             return 0
           }
 
+          # --- Helper: skill-specific post-completion validators ---
+          # Catches LLM drift from output formats that downstream skills
+          # depend on. The wait_for_runs check only verifies that the
+          # skill's workflow exited successfully — it doesn't verify the
+          # skill's output is well-formed. For chained skills where a
+          # downstream gate depends on a specific output shape, an LLM
+          # can produce a "successful" run that silently breaks the
+          # chain (see ISS-009 — reppo-orchestrator drifting away from
+          # the fenced reppo-plan block).
+          #
+          # Returns 0 if the skill's output is well-formed (or no
+          # validator is defined for this skill), 1 if a contract is
+          # broken and the chain should treat the step as failed.
+          validate_skill_output() {
+            local skill="$1"
+            local out=".outputs/${skill}.md"
+            case "$skill" in
+              reppo-orchestrator)
+                # reppo-trading-agent gates on a fenced code block
+                # whose first line is literally `reppo-plan`. The
+                # contract is documented in the top-section of
+                # skills/reppo-orchestrator/SKILL.md ("Output contract
+                # — NON-NEGOTIABLE"). If the marker line is absent,
+                # the LLM dropped the block; downstream will SKIP and
+                # the chain will silently produce 0 on-chain.
+                if [ ! -f "$out" ]; then
+                  echo "::error::reppo-orchestrator validator: output file $out missing"
+                  return 1
+                fi
+                if ! grep -qE '^reppo-plan$' "$out"; then
+                  echo "::error::reppo-orchestrator validator: .outputs/reppo-orchestrator.md is missing the fenced reppo-plan marker line (ISS-009 recurrence — orchestrator LLM drifted from the output contract). Failing the step loudly instead of letting trading-agent SKIP silently."
+                  return 1
+                fi
+                ;;
+            esac
+            return 0
+          }
+
           # --- Helper: build chain context file from consumed outputs ---
           build_context() {
             local target_skill="$1"
@@ -274,6 +312,22 @@ jobs:
               # Pull latest to get committed outputs from completed skills
               git pull --rebase origin main 2>/dev/null || true
               echo "  Pulled latest outputs"
+
+              # Run skill-specific output validators (LLM-output contracts).
+              # A successful skill workflow run doesn't guarantee a
+              # well-formed output for downstream consumers — the
+              # validator catches that gap. See validate_skill_output
+              # above. Each step's skills are validated in dispatch
+              # order; first failure marks the chain failed.
+              for skill in "${SKILL_LIST[@]}"; do
+                if ! validate_skill_output "$skill"; then
+                  CHAIN_FAILED=true
+                  if [ "$ON_ERROR" = "fail-fast" ]; then
+                    echo "Aborting chain (on_error=fail-fast)"
+                    break
+                  fi
+                fi
+              done
             fi
           done
 
