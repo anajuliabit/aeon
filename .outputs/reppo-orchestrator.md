@@ -1,12 +1,8 @@
-Log appended. Now emitting the orchestrator output.
-
----
-
-Catalog available. One rubric file (tradinggymai.md → datanet 9) — ACTIVE, valid:true. RUN. 14 datanets in the catalog have no rubric (same set as all week — no new datanets since last pass).
+Catalog is live and datanet 9 (TradingGymAI) is ACTIVE with a populated rubric, so the trading agent runs. Re-running today is safe — strategies dedup by content hash and writes use idempotency keys. The 14 catalog datanets without rubrics remain unassigned (same set, untouched all week — still an open goal in MEMORY.md).
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 tradinggymai ACTIVE, valid:true, access fee 50 REPPO)
+reppo-trading-agent: RUN   (datanet 9 TradingGymAI ACTIVE, valid, fee 50 REPPO; rubric populated; on-chain blockers ISS-004/006 still gate real writes but RUN is correct — intents queue and dedup safely)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -24,7 +20,7 @@ new-datanet: 17   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Built RUN/SKIP plan from `configs/datanets/` (1 rubric: tradinggymai → datanet 9) and `.reppo-cache/datanet-tradinggymai.json` (valid:true). Verdict: reppo-trading-agent RUN.
-- Discovered 14 unassigned datanets from `.reppo-cache/datanets.json` — same set as the prior week (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17). Still untouched.
-- Files modified: `memory/logs/2026-05-25.md` (appended `### reppo-orchestrator` entry).
-- Follow-up: ledger goal of assigning rubrics to the 14 unassigned datanets remains open (carried in MEMORY.md current-goals).
+- Read catalog + per-datanet validity from `.reppo-cache/`, read the single rubric `configs/datanets/tradinggymai.md` (datanet 9 → `reppo-trading-agent`).
+- Decision: 1 RUN, 0 SKIP. Discovered 14 unassigned datanets (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17) — unchanged from prior runs.
+- Files: created `memory/logs/2026-05-26.md` with the orchestrator log entry.
+- Follow-up: assigning agents to the 14 unassigned datanets is still in MEMORY.md's Current Goals — not an orchestrator action.
