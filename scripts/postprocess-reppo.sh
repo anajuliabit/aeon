@@ -408,11 +408,41 @@ for intent in "$PENDING_DIR"/*.json; do
   fi
 
   # Real write.
+  cmd_name="$(jq -r '.cmd' "$intent")"
   echo "reppo-postprocess: executing $base..."
   if REPPO_NETWORK=mainnet reppo $args --idempotency-key "$key" --json \
      > ".reppo-cache/result-$base" 2>&1; then
     tx="$(jq -r '.txHash // .transactionHash // "n/a"' ".reppo-cache/result-$base" 2>/dev/null || echo n/a)"
     echo "- \`$base\` — **success** (tx: $tx)" >> "$RESULTS_FILE"
+
+    # Phase-2 queue: for mint-pod, the on-chain tx creates the ERC-721
+    # token but the Reppo UI surfaces pods from a platform DB row
+    # populated by a separate authenticated POST. Queue the metadata
+    # for the phase-2 loop below to drain. Decoupled from the on-chain
+    # write so a failed POST never re-broadcasts the mint, and a
+    # crashed run leaves the queue file in place for the next run.
+    if [ "$cmd_name" = "mint-pod" ] && [ "$tx" != "n/a" ]; then
+      mkdir -p .pending-reppo-register
+      jq -n \
+        --arg tx       "$tx" \
+        --arg subnet   "$(jq -r '.datanet' "$intent")" \
+        --arg name     "$(jq -r '.pod_name // .strategy_summary // "Aeon-generated pod"' "$intent")" \
+        --arg desc     "$(jq -r '.pod_description // .strategy_summary // ""' "$intent")" \
+        --arg url      "$(jq -r '.url // ""' "$intent")" \
+        '{txHash:$tx,
+          subnetId:($subnet|tonumber),
+          podName:$name,
+          podDescription:$desc,
+          url:$url,
+          platform:"Aeon",
+          category:"Trading Strategy",
+          agreeToTerms:true,
+          imageURL:"",
+          thumbnailURL:"",
+          pdfURL:"",
+          videoURL:""}' \
+        > ".pending-reppo-register/${base}"
+    fi
   else
     code="$(extract_code ".reppo-cache/result-$base")"
     detail="$(extract_detail ".reppo-cache/result-$base")"
@@ -422,5 +452,59 @@ for intent in "$PENDING_DIR"/*.json; do
   fi
   rm -f "$intent"
 done
+
+# --- Phase 2: register pod metadata to the Reppo platform DB ---
+# The on-chain mintPodWithREPPO(to, subnetId) call creates the ERC-721
+# token but doesn't carry any text/URI. The Reppo UI populates pod
+# pages from a platform DB row created by:
+#
+#   POST https://reppo.ai/api/v1/agents/{AGENT_ID}/pods
+#   Authorization: Bearer {AGENT_API_KEY}
+#   { txHash, subnetId, podName, podDescription, url, platform,
+#     category, agreeToTerms, image/thumbnail/pdf/videoURL }
+#
+# Bootstrap (one-time, operator runs locally):
+#   REPPO_NETWORK=mainnet reppo register-agent --name "Aeon ..."
+#   → returns {agentId, apiKey}; set as GH secrets
+#     REPPO_AGENT_ID + REPPO_AGENT_API_KEY.
+#
+# Failure mode: if either secret is missing OR the curl fails, we
+# leave the queue file in place so the next chain run retries. The
+# on-chain tx is durable; only the platform metadata POST is at risk
+# of the transient.
+REGISTER_DIR=".pending-reppo-register"
+if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null || true)" ]; then
+  if [ -z "${REPPO_AGENT_ID:-}" ] || [ -z "${REPPO_AGENT_API_KEY:-}" ]; then
+    echo "reppo-postprocess: REPPO_AGENT_ID or REPPO_AGENT_API_KEY not set; phase-2 register skipped (queue files retained for next run)" >&2
+    {
+      echo ""
+      echo "_Phase 2 (Reppo platform metadata POST) skipped: REPPO_AGENT_ID / REPPO_AGENT_API_KEY missing. $(ls "$REGISTER_DIR" | wc -l | tr -d ' ') pending file(s) retained for next run._"
+    } >> "$RESULTS_FILE"
+  else
+    {
+      echo ""
+      echo "**Phase 2 — Reppo platform metadata POST:**"
+    } >> "$RESULTS_FILE"
+    for register_intent in "$REGISTER_DIR"/*.json; do
+      [ -f "$register_intent" ] || continue
+      rbase="$(basename "$register_intent")"
+      rtx="$(jq -r '.txHash' "$register_intent" 2>/dev/null || echo n/a)"
+      echo "reppo-postprocess: registering metadata for $rbase (tx $rtx)..." >&2
+      if curl -fsS -X POST "https://reppo.ai/api/v1/agents/${REPPO_AGENT_ID}/pods" \
+           -H "Authorization: Bearer ${REPPO_AGENT_API_KEY}" \
+           -H "Content-Type: application/json" \
+           --data @"$register_intent" \
+           > ".reppo-cache/register-$rbase" 2>&1; then
+        echo "- \`$rbase\` — **metadata registered** (tx: $rtx)" >> "$RESULTS_FILE"
+        rm -f "$register_intent"
+      else
+        rdetail="$(extract_detail ".reppo-cache/register-$rbase")"
+        echo "- \`$rbase\` — **metadata registration failed**: ${rdetail:-<empty>}" >> "$RESULTS_FILE"
+        echo "reppo-postprocess: register failed for $rbase: ${rdetail:-<empty>}" >&2
+        # Leave the file in place — next run retries.
+      fi
+    done
+  fi
+fi
 
 echo "reppo-postprocess: done"
