@@ -1,0 +1,54 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "failure_alert",
+        "separator1",
+        "details_stack"
+      ]
+    },
+    "failure_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 defi-overview failed 12:39z",
+        "message": "foundry-toolchain@v1 action 404 from codeload (gh actions infra flake, not a skill bug)"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "details_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cron_state_text",
+        "next_attempt_text"
+      ]
+    },
+    "cron_state_text": {
+      "type": "Text",
+      "props": {
+        "text": "cron-state stuck on \"dispatched\" because the state-update step never ran.",
+        "variant": "body"
+      }
+    },
+    "next_attempt_text": {
+      "type": "Text",
+      "props": {
+        "text": "Next attempt: 12:00 tomorrow",
+        "variant": "body"
+      }
+    }
+  }
+}
