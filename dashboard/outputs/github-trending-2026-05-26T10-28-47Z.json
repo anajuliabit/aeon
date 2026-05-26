@@ -1,0 +1,167 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "github trending — 2026-05-26"
+      },
+      "children": [
+        "summary-text",
+        "sep-1",
+        "section-devtools",
+        "sep-2",
+        "footer-text"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet day. 12 of 17 trending repos were claude code skill/CLAUDE.md bundles, dedupes from the last 3 days, or learn-X tutorials. one survived the filter.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-devtools",
+        "repo-entry"
+      ]
+    },
+    "heading-devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "devtools",
+        "level": "h2"
+      }
+    },
+    "repo-entry": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-link",
+        "repo-badges",
+        "repo-description",
+        "repo-details"
+      ]
+    },
+    "repo-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "colbymchenry/codegraph",
+        "href": "https://github.com/colbymchenry/codegraph",
+        "source": "GitHub"
+      }
+    },
+    "repo-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-stars",
+        "badge-lang",
+        "badge-status"
+      ]
+    },
+    "badge-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 3.2k today (27k total)",
+        "variant": "body"
+      }
+    },
+    "badge-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "default"
+      }
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "repo-description": {
+      "type": "Text",
+      "props": {
+        "text": "pre-indexed local code graph for claude code / cursor / codex / opencode — cuts tool-call round-trips by serving graph lookups locally.",
+        "variant": "body"
+      }
+    },
+    "repo-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "detail-version",
+        "detail-featured"
+      ]
+    },
+    "detail-version": {
+      "type": "Text",
+      "props": {
+        "text": "v0.9.5 shipped 08:00 UTC today",
+        "variant": "caption"
+      }
+    },
+    "detail-featured": {
+      "type": "Text",
+      "props": {
+        "text": "Last featured: 2026-05-22",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-sources",
+        "footer-stats"
+      ]
+    },
+    "footer-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok",
+        "variant": "muted"
+      }
+    },
+    "footer-stats": {
+      "type": "Text",
+      "props": {
+        "text": "kept 1/17 (3 deduped, 13 dropped — skill bundles dominant)",
+        "variant": "muted"
+      }
+    }
+  }
+}
