@@ -1,0 +1,114 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header_section",
+        "separator_1",
+        "skipped_heading",
+        "skipped_content",
+        "separator_2",
+        "unassigned_stat"
+      ]
+    },
+    "header_section": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 18th run · datanet 9 · 0 on-chain",
+        "variant": "lead"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skipped_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "skipped",
+        "level": "h3"
+      }
+    },
+    "skipped_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skipped_item"
+      ]
+    },
+    "skipped_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_header",
+        "item_action"
+      ]
+    },
+    "item_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "agent_name",
+        "status_badge",
+        "issue_badge"
+      ]
+    },
+    "agent_name": {
+      "type": "Text",
+      "props": {
+        "text": "trading-agent",
+        "variant": "body"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MISSING_ORCHESTRATOR_PLAN",
+        "variant": "destructive"
+      }
+    },
+    "issue_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-009",
+        "variant": "outline"
+      }
+    },
+    "item_action": {
+      "type": "Text",
+      "props": {
+        "text": "action: trace why orchestrator's fenced reppo-plan block dropped on this chain hand-off — present in the 17th run, gone now",
+        "variant": "caption"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "unassigned_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Datanets unassigned",
+        "value": "14"
+      }
+    }
+  }
+}
