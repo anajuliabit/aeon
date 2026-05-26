@@ -48,10 +48,31 @@ does not exist, then write `.pending-reppo/mint-<first16ofhash>.json`:
 ```json
 { "cmd": "mint-pod", "datanet": "<datanet_id>",
   "idempotency_key": "<full sha256 hash>",
-  "strategy_summary": "<one-line description, with source URL>" }
+  "strategy_summary": "<one-line description, with source URL>",
+  "pod_name": "<short title for the Reppo UI, ≤80 chars>",
+  "pod_description": "<the full strategy text — entry, exit, filters>",
+  "url": "<source URL if there is one; otherwise empty string>" }
 ```
 `<datanet_id>` is the rubric's `datanet_id` value verbatim (as-is, whatever
 format it is — e.g. an integer id).
+
+Field guidance:
+- `strategy_summary` — the one-liner that ends up in `memory/topics/reppo.md`'s
+  ledger. Keep it dense; it's for the operator scanning the digest.
+- `pod_name` — what the Reppo UI shows as the pod title. Short, scannable
+  ("ETH perp 1h Supertrend+ADX trend-follow"). Avoid leading articles.
+- `pod_description` — the full machine-readable strategy. Entry conditions,
+  exit conditions, indicator parameters, timeframes. The trader on the
+  other side reads this to evaluate the pod. Do not truncate.
+- `url` — empty string if no source. If the strategy came from a tweet,
+  paper, TradingView setup, or GitHub repo, link it.
+
+These metadata fields flow through `postprocess-reppo.sh`'s phase-2 step:
+after the on-chain mint lands, postprocess POSTs `{podName, podDescription,
+url, txHash, …}` to `https://reppo.ai/api/v1/agents/{REPPO_AGENT_ID}/pods`
+so the pod becomes visible in the Reppo UI. Missing or empty `pod_name` /
+`pod_description` means the pod will mint on chain but display as a
+blank row in the UI — both must be populated.
 
 ## Step 5 — Select pods to vote on
 Read `.reppo-cache/pods-tradinggymai.json`. If it is an error marker
