@@ -121,62 +121,13 @@ dryrun_with_retry() {
   done
 }
 
-# Helper: ensure foundry's `cast` is available. Used by the auto-approve path
-# below (the Reppo CLI does not yet ship its own ERC20 approve helper). Installs
-# foundry on first use; cached for subsequent calls within the same runner.
-ensure_cast() {
-  # Fast path: in CI the workflow's "Install Foundry" step
-  # (foundry-rs/foundry-toolchain) puts cast on PATH before this runs.
-  command -v cast >/dev/null 2>&1 && return 0
-
-  # Fallback for ./aeon local runs or if the workflow step ever fails.
-  # Logs visibly so a future install failure is debuggable.
-  echo "reppo-postprocess: cast not on PATH; installing foundry inline..." >&2
-  local log=".reppo-cache/foundry-install.log"
-  : > "$log"
-  if ! curl -fsSL https://foundry.paradigm.xyz 2>>"$log" | bash >>"$log" 2>&1; then
-    echo "reppo-postprocess: foundry init script failed — log tail:" >&2
-    tail -5 "$log" 2>/dev/null >&2 || true
-    return 1
-  fi
-  export PATH="$HOME/.foundry/bin:$PATH"
-  if ! "$HOME/.foundry/bin/foundryup" >>"$log" 2>&1; then
-    echo "reppo-postprocess: foundryup failed — log tail:" >&2
-    tail -5 "$log" 2>/dev/null >&2 || true
-    return 1
-  fi
-  command -v cast >/dev/null 2>&1
-}
-
-# Helper: resolve the REPPO ERC20 token address. Prefers the operator-set
-# REPPO_TOKEN_ADDRESS env (cheapest, no on-chain call). Falls back to
-# discovering it from the SubnetManager via a few common ABI getters.
-# Echoes the address on success, empty on failure.
-resolve_reppo_token() {
-  local spender="$1" addr
-  if [ -n "${REPPO_TOKEN_ADDRESS:-}" ]; then
-    echo "$REPPO_TOKEN_ADDRESS"
-    return 0
-  fi
-  if command -v cast >/dev/null 2>&1 && [ -n "${REPPO_RPC_URL:-}" ]; then
-    for sig in "feeToken()(address)" "REPPO()(address)" "paymentToken()(address)" "token()(address)"; do
-      addr="$(cast call "$spender" "$sig" --rpc-url "$REPPO_RPC_URL" 2>/dev/null | head -1 || true)"
-      if [[ "$addr" =~ ^0x[0-9a-fA-F]{40}$ ]] && [ "$addr" != "0x0000000000000000000000000000000000000000" ]; then
-        echo "$addr"
-        return 0
-      fi
-    done
-  fi
-  echo ""
-  return 1
-}
-
 # Helper: try grant-access. On INSUFFICIENT_ALLOWANCE, auto-approve REPPO
-# spend to the SubnetManager (cast send approve(...)) and retry grant-access.
-# Returns 0 on grant success, 1 on terminal failure (final grant response
-# remains in .reppo-cache/grant-$target.json for the caller to inspect).
+# spend to the SubnetManager via `reppo approve` (CLI v0.5+) and retry
+# grant-access. Returns 0 on grant success, 1 on terminal failure (final
+# grant response remains in .reppo-cache/grant-$target.json for the caller
+# to inspect).
 auto_recover_grant() {
-  local target="$1" gcode spender reppo_token approve_tx adetail
+  local target="$1" gcode adetail approve_tx
   if REPPO_NETWORK=mainnet reppo grant-access --datanet "$target" --json \
        > ".reppo-cache/grant-$target.json" 2>&1; then
     return 0
@@ -186,42 +137,24 @@ auto_recover_grant() {
     return 1  # not a recoverable failure; caller reports it
   fi
 
-  # Extract the spender (SubnetManager) from the error hint —
-  # "Approve the SubnetManager (0x...)".
-  spender="$(grep -oE 'SubnetManager \(0x[0-9a-fA-F]{40}\)' ".reppo-cache/grant-$target.json" \
-              | grep -oE '0x[0-9a-fA-F]{40}' | head -1)"
-  if [ -z "$spender" ]; then
-    echo "  - auto-approve aborted: SubnetManager address not found in grant error" >> "$RESULTS_FILE"
-    return 1
-  fi
-
-  if ! ensure_cast; then
-    echo "  - auto-approve aborted: foundry/cast install failed" >> "$RESULTS_FILE"
-    return 1
-  fi
-
-  reppo_token="$(resolve_reppo_token "$spender")"
-  if [ -z "$reppo_token" ]; then
-    echo "  - auto-approve aborted: REPPO token address unknown — set REPPO_TOKEN_ADDRESS or ensure SubnetManager exposes feeToken()/REPPO()/paymentToken()/token()" >> "$RESULTS_FILE"
-    return 1
-  fi
-
-  echo "reppo-postprocess: approving SubnetManager $spender for REPPO ($reppo_token)..." >&2
-  # MAX_UINT256 approval — one-time, never re-approve. The SubnetManager
-  # contract is the only counterparty that can move REPPO from this account
-  # via this allowance; operator trust in that contract is implicit anyway
-  # (they're already using it for grant-access).
-  if ! cast send "$reppo_token" "approve(address,uint256)" "$spender" \
-       0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff \
-       --rpc-url "${REPPO_RPC_URL:-https://mainnet.base.org}" \
-       --private-key "$REPPO_PRIVATE_KEY" --json \
+  # CLI v0.5+ ships `reppo approve` with built-in `subnet-manager` /
+  # `reppo` aliases — it resolves spender + token internally, so we don't
+  # need to know addresses, install foundry, or probe the SubnetManager ABI.
+  # `--amount max` issues a MAX_UINT256 allowance (one-time, never re-approve).
+  echo "reppo-postprocess: approving REPPO spend to subnet-manager (max)..." >&2
+  if ! REPPO_NETWORK=mainnet reppo approve \
+         --spender subnet-manager \
+         --token reppo \
+         --amount max \
+         --idempotency-key "aeon-approve-subnet-manager-reppo" \
+         --json \
        > ".reppo-cache/approve-$target.json" 2>&1; then
     adetail="$(extract_detail ".reppo-cache/approve-$target.json")"
     echo "  - auto-approve FAILED: ${adetail:-<empty>}" >> "$RESULTS_FILE"
     return 1
   fi
   approve_tx="$(jq -r '.transactionHash // .txHash // "n/a"' ".reppo-cache/approve-$target.json" 2>/dev/null || echo n/a)"
-  echo "  - auto-approved REPPO spend to SubnetManager $spender (tx: $approve_tx)" >> "$RESULTS_FILE"
+  echo "  - auto-approved REPPO spend to subnet-manager (tx: $approve_tx)" >> "$RESULTS_FILE"
 
   # Retry grant-access now that allowance is set.
   if REPPO_NETWORK=mainnet reppo grant-access --datanet "$target" --json \

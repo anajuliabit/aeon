@@ -16,13 +16,10 @@ Repo Settings → Secrets and variables → Actions:
   `INTERNAL_ERROR` dry-run failures under load (see ISS-007). The workflow
   exposes this secret to the CLI as `REPPO_RPC_URL`.
 
-And, under **Variables** (not secret — token addresses are public):
-- `REPPO_TOKEN_ADDRESS` — optional. The REPPO ERC20 token address on Base.
-  Lets `postprocess-reppo.sh` skip the SubnetManager ABI probe when it
-  auto-approves REPPO spend (the recovery on `INSUFFICIENT_ALLOWANCE` from
-  `grant-access`). If unset, postprocess tries `feeToken()` / `REPPO()` /
-  `paymentToken()` / `token()` getters on the SubnetManager — setting this
-  directly is just faster and more reliable.
+No public Variables are required — `postprocess-reppo.sh` auto-approves
+REPPO spend via `reppo approve --spender subnet-manager --token reppo`
+(CLI v0.5+), which resolves both the spender and token addresses
+internally.
 
 ## 3. Register the agent identity (once)
 Locally, with the CLI installed (`npm i -g @reppo/cli`) and
