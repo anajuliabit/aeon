@@ -231,8 +231,8 @@
     "success_rate": 1
   },
   "evening-recap": {
-    "last_dispatch": "2026-05-25T21:10:30Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-26T21:34:22Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-25T21:15:55Z",
     "total_runs": 4,
     "total_successes": 4,
