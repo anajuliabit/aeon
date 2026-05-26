@@ -1,0 +1,129 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "token alert",
+        "description": "2026-05-26"
+      },
+      "children": [
+        "alert-reppo",
+        "sep1",
+        "stack-context"
+      ]
+    },
+    "alert-reppo": {
+      "type": "Alert",
+      "props": {
+        "title": "REPPO -11.32% (24h) breaches 10% threshold",
+        "message": "Price: $0.02197 (was $0.02457). Volume: $3.21M. Market cap: $8.52M.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-context": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-context",
+        "section-checks"
+      ]
+    },
+    "section-context": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-context",
+        "text-all-red",
+        "stat-hyper",
+        "stat-vvv",
+        "text-reppo-recovery"
+      ]
+    },
+    "heading-context": {
+      "type": "Heading",
+      "props": {
+        "text": "Context",
+        "level": "h3"
+      }
+    },
+    "text-all-red": {
+      "type": "Text",
+      "props": {
+        "text": "All three tokens in red.",
+        "variant": "muted"
+      }
+    },
+    "stat-hyper": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPER (under threshold)",
+        "value": "$0.0959",
+        "delta": "-7.47%",
+        "trend": "down"
+      }
+    },
+    "stat-vvv": {
+      "type": "Stat",
+      "props": {
+        "label": "VVV (under threshold)",
+        "value": "$17.63",
+        "delta": "-5.91%",
+        "trend": "down"
+      }
+    },
+    "text-reppo-recovery": {
+      "type": "Text",
+      "props": {
+        "text": "REPPO erases two days of recovery, back below 2026-05-22 baseline.",
+        "variant": "body"
+      }
+    },
+    "section-checks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-checks",
+        "text-volume-skip",
+        "text-threshold-skip"
+      ]
+    },
+    "heading-checks": {
+      "type": "Heading",
+      "props": {
+        "text": "Checks Skipped",
+        "level": "h3"
+      }
+    },
+    "text-volume-skip": {
+      "type": "Text",
+      "props": {
+        "text": "volume-spike check skipped (n=4, need 5)",
+        "variant": "caption"
+      }
+    },
+    "text-threshold-skip": {
+      "type": "Text",
+      "props": {
+        "text": "threshold-cross check skipped (no Floor/Ceiling in MEMORY.md — PR #9's table never populated)",
+        "variant": "caption"
+      }
+    }
+  }
+}
