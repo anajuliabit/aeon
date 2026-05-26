@@ -684,10 +684,6 @@ jobs:
           done
           rm -rf .pending-notify
 
-      - name: Install Foundry (for postprocess auto-approve etc.)
-        if: steps.work.outputs.mode != '' && steps.run.outcome == 'success'
-        uses: foundry-rs/foundry-toolchain@v1
-
       - name: Run post-process scripts
         if: steps.work.outputs.mode != '' && steps.run.outcome == 'success'
         env:
@@ -701,7 +697,6 @@ jobs:
           REPPO_VOTER_PRIVATE_KEY: ${{ secrets.REPPO_VOTER_PRIVATE_KEY }}
           REPPO_DRY_RUN_ONLY: ${{ vars.REPPO_DRY_RUN_ONLY }}
           REPPO_RPC_URL: ${{ secrets.BASE_RPC_URL }}
-          REPPO_TOKEN_ADDRESS: ${{ vars.REPPO_TOKEN_ADDRESS }}
         run: |
           # Run all scripts/postprocess-*.sh after Claude finishes.
           # Each script handles its own .pending-{service}/ directory
