@@ -7,15 +7,19 @@ enabled on cron; inbound messaging via Telegram (live). Fleet exited bootstrap
 2026-05-21.
 
 ## Current Goals
-- Unblock reppo-swarm on-chain output — three operator/config actions outstanding:
-  ISS-004 (subnet grant — PR #10 merged 2026-05-25 adds auto-grant helper, awaits
-  on-chain verification), ISS-005 (per-pod epoch validity in prefetch + agent
-  filter — agent-side workaround already live), ISS-006 (lock REPPO for voting
-  power — PR #11 merged 2026-05-25 adds lock helper, awaits on-chain verification).
 - Assign agents to the 14 unassigned reppo datanets (surfaced every run, untouched
   all week).
 
 ## Completed Goals
+- Unblock reppo-swarm on-chain output — completed 2026-05-26. 1st mint
+  (tx 0x77f1386fb6fe3209bbf1a380b2be64f1f1c2c557416c9c7c0d31486a7e48a61f) + 1st
+  vote (tx 0x937d9f3cc006e805bd2ace1b110e71e29fa659052c12b88a8ce3079c5136a455)
+  both landed on-chain today; ISS-004 / ISS-006 / ISS-008 all resolved by
+  PRs #10 / #23 / #21. Originally tracked three operator/config actions:
+  ISS-004 (subnet grant — PR #10 merged 2026-05-25 adds auto-grant helper, awaits
+  on-chain verification), ISS-005 (per-pod epoch validity in prefetch + agent
+  filter — agent-side workaround already live), ISS-006 (lock REPPO for voting
+  power — PR #11 merged 2026-05-25 adds lock helper, awaits on-chain verification).
 - Populate `soul/` so content skills stop running in neutral voice — completed
   2026-05-25 (PR #12 populated `soul/SOUL.md` 74L + `soul/STYLE.md` 96L from
   `~/code/social`).
