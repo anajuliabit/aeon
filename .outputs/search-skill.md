@@ -1,16 +1,13 @@
 ## Summary
 
-Executed `skills/search-skill/SKILL.md` for 2026-05-25. Result: **SEARCH_SKILL_NO_GAP** — no concrete capability gap derivable from any of the four required sources, so no search, install, or notification was performed (per spec).
+Executed `skills/search-skill/SKILL.md`. Exited **SEARCH_SKILL_NO_GAP** — no notification, no search, log only (per skill rules).
 
-**Derivation (Step 1):**
-- (a) Cron-state: 0 skills meet failure criteria (`cf>=2` OR `sr<0.6` AND `runs>=3`).
-- (b) Open issues (ISS-004/005/006/007) are config/prompt-bug/timeout — none in the qualifying set.
-- (c) MEMORY.md goals are operator/config actions (reppo unblock, datanet assignment, soul/), not capability gaps.
-- (d) Log "missing" mentions trace to resolved prefetch infra, not capability gaps.
+**Why no gap:**
+- **(a)** No failing skills (no cf≥2 or sr<0.6 at ≥3 runs).
+- **(b)** All 4 open issues (ISS-004/005/006/007) are categories `config`/`prompt-bug`/`timeout` — outside the qualifying set `{missing-secret, api-change, permanent-limitation, quality-regression}`.
+- **(c)** MEMORY.md priorities (unblock reppo on-chain, assign 14 datanets) are operator/operational, not capability gaps.
+- **(d)** 7-day log grep hits reference resolved infra or already-shipped fixes.
 
-**Outcome:** Silent exit as designed (4th consecutive NO_GAP day; same as 2026-05-22/23/24).
+**Files modified:** `memory/logs/2026-05-26.md` — appended `## search-skill` block.
 
-**Files modified:**
-- `memory/logs/2026-05-25.md` — appended `## search-skill` log entry.
-
-**Follow-up actions:** None. The real path to a future capability gap is one of the open ISS items shifting category (e.g. if ISS-005's prompt-bug re-classifies as a missing-skill need) or a new failing skill emerging in cron-state.
+**Follow-up:** None. The blocker is operator-side (reppo grant/lock + REPPO_TOKEN_ADDRESS env), not a missing skill.
