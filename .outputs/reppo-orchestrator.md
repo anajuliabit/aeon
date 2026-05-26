@@ -1,8 +1,8 @@
-Catalog available (15 active datanets). Single rubric `tradinggymai.md` maps `reppo-trading-agent` → datanet 9, which the per-datanet cache confirms valid. The other 14 catalog ids have no rubric — same 14 carried all week, still unassigned.
+Catalog cache is fresh (mainnet, 15 active datanets). `tradinggymai.md` is the only rubric and its datanet 9 (TradingGym AI) shows `valid: true` with 50 REPPO access fee — the agent runs. The remaining 14 catalog ids have no rubric.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 tradinggymai valid:true, no SKIP conditions met — re-running safe; trading agent dedups by content hash, idempotency keys on writes)
+reppo-trading-agent: RUN   (datanet 9 TradingGym AI active and valid, 50 REPPO access fee; ISS-004/006 still gate real on-chain writes but re-running is safe — idempotency keys + content-hash dedup)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -20,8 +20,7 @@ new-datanet: 17   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- 1 RUN / 0 SKIP. `reppo-trading-agent` runs against datanet 9 — rubric is valid, cache confirms `valid:true`, mint/vote dedup makes re-runs safe.
-- 14 unassigned datanets discovered (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17) — same set carried all week, surfaced again for operator assignment.
-- Catalog available; no failures.
-- Files modified: `memory/logs/2026-05-26.md` (appended re-run line under `### reppo-orchestrator`).
-- Follow-up: operator action to draft rubrics for the 14 unassigned ids — already named as Focus 3 in this morning's brief.
+- Read rubrics + cache: 1 rubric (`configs/datanets/tradinggymai.md` → datanet 9), 15 datanets in catalog → 14 unassigned.
+- Emitted RUN for `reppo-trading-agent` (datanet 9 valid + active); no SKIPs.
+- Logged one line under today's `### reppo-orchestrator` heading in `memory/logs/2026-05-26.md` (1 RUN / 0 SKIP; 14 unassigned; catalog available).
+- No code or config files changed.
