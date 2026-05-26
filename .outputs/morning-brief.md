@@ -1,21 +1,25 @@
-*Morning Brief — 2026-05-25*
+*Morning Brief — 2026-05-26*
 
 *Focus today*
-1. Operator: grant subnet + lock REPPO — why now: day 3 of 0 mints, 0 votes on-chain
-2. Merge PR #9 (token-alert) — why now: stalled 38h+; token-alert next runs 12:00
-3. Populate soul/ — why now: 6+ content skills today still ship neutral voice
+1. unblock reppo on-chain — set REPPO_TOKEN_ADDRESS env (or operator approve+grant+lock). why now: day 6 of 0 mints / 0 votes, 4 helpers stacked, still blocked.
+2. reconcile INDEX.md — close ISS-007 (PR #13 retry merged), annotate ISS-004/006 with PR refs. why now: 8 PRs merged yesterday, issues still flagged open.
+3. propose datanet assignment rubric — score the 14 unassigned ids. why now: 6 days untouched, fleet ships to 1 of 15 datanets.
 
 *Since yesterday*
-- ISS-006 filed: vote dry-runs revert INSUFFICIENT_VOTING_POWER (0 locked REPPO)
-- reflect consolidated 7-day window; reppo cascade lesson captured
-- token-alert: VVV +13.4% alert; REPPO/HYPER recovering
-- defi-overview: Hyperliquid L1 +7% chain, V3↔V4 vol rotation
-- skill-evals bootstrap baseline filed; evals.json drift action queued
+- 8 PRs merged: #11 lock helper, #12 soul populate, #13 RPC retry, #14 scan pattern, #15 auto-approve, #16 messages quoting, #17 digest format, #18 foundry install.
+- reppo auto-grant now hits 3 stacked sub-blockers — 6th run aborted with "REPPO token address unknown".
+- soul/ live (SOUL.md 74L + STYLE.md 96L) — content skills back in voice; agent-buzz + telegram drafts already applying it.
+- 0 open PRs · 4 open issues (ISS-004/005/006/007).
+
+*Watch*
+- Anthropic splits Claude billing into a separate Agent SDK pool June 15 — re-baseline cost-report before next Monday's run.
 
 *Running today*
-- cost-report @ 07:00 (Monday — first weekly run)
-- skill-freshness @ 08:00 · heartbeat @ 08/14/20
-- github-trending @ 09:00 · token-alert + defi-overview @ 12:00
-- search-skill @ 14:00 · skill-security-scan @ 16:00 (Monday)
-- goal-tracker / skill-health / self-improve / reflect / action-converter @ 18:00
-- weekly-review @ 19:00 (Monday) · evening-recap @ 21:00
+- 07:00 chain:reppo-swarm (orchestrator → trading-agent → digest)
+- 08:00 skill-freshness · heartbeat
+- 09:00 github-trending
+- 12:00 token-alert · defi-overview
+- 14:00 search-skill · heartbeat
+- 18:00 goal-tracker · skill-health · reflect · action-converter
+- 20:00 heartbeat
+- 21:00 evening-recap

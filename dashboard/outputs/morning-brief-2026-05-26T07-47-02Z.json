@@ -1,0 +1,298 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-05-26"
+      },
+      "children": [
+        "stack_root"
+      ]
+    },
+    "stack_root": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "stack_focus",
+        "sep1",
+        "heading_since",
+        "stack_since",
+        "sep2",
+        "heading_watch",
+        "alert_billing",
+        "sep3",
+        "heading_running",
+        "stack_running"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "stack_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_1",
+        "focus_2",
+        "focus_3"
+      ]
+    },
+    "focus_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_1_title",
+        "focus_1_action",
+        "focus_1_why"
+      ]
+    },
+    "focus_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "1. unblock reppo on-chain",
+        "variant": "lead"
+      }
+    },
+    "focus_1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Set REPPO_TOKEN_ADDRESS env (or operator approve+grant+lock)."
+      }
+    },
+    "focus_1_why": {
+      "type": "Text",
+      "props": {
+        "text": "Day 6 of 0 mints / 0 votes, 4 helpers stacked, still blocked.",
+        "variant": "caption"
+      }
+    },
+    "focus_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_2_title",
+        "focus_2_action",
+        "focus_2_why"
+      ]
+    },
+    "focus_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "2. reconcile INDEX.md",
+        "variant": "lead"
+      }
+    },
+    "focus_2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Close ISS-007 (PR #13 retry merged), annotate ISS-004/006 with PR refs."
+      }
+    },
+    "focus_2_why": {
+      "type": "Text",
+      "props": {
+        "text": "8 PRs merged yesterday, issues still flagged open.",
+        "variant": "caption"
+      }
+    },
+    "focus_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_3_title",
+        "focus_3_action",
+        "focus_3_why"
+      ]
+    },
+    "focus_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "3. propose datanet assignment rubric",
+        "variant": "lead"
+      }
+    },
+    "focus_3_action": {
+      "type": "Text",
+      "props": {
+        "text": "Score the 14 unassigned ids."
+      }
+    },
+    "focus_3_why": {
+      "type": "Text",
+      "props": {
+        "text": "6 days untouched, fleet ships to 1 of 15 datanets.",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "stack_since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since_1",
+        "since_2",
+        "since_3",
+        "since_4"
+      ]
+    },
+    "since_1": {
+      "type": "Text",
+      "props": {
+        "text": "8 PRs merged: #11 lock helper, #12 soul populate, #13 RPC retry, #14 scan pattern, #15 auto-approve, #16 messages quoting, #17 digest format, #18 foundry install."
+      }
+    },
+    "since_2": {
+      "type": "Text",
+      "props": {
+        "text": "reppo auto-grant now hits 3 stacked sub-blockers — 6th run aborted with \"REPPO token address unknown\"."
+      }
+    },
+    "since_3": {
+      "type": "Text",
+      "props": {
+        "text": "soul/ live (SOUL.md 74L + STYLE.md 96L) — content skills back in voice; agent-buzz + telegram drafts already applying it."
+      }
+    },
+    "since_4": {
+      "type": "Text",
+      "props": {
+        "text": "0 open PRs · 4 open issues (ISS-004/005/006/007)."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "alert_billing": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Anthropic splits Claude billing into a separate Agent SDK pool June 15 — re-baseline cost-report before next Monday's run."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "stack_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "run_1",
+        "run_2",
+        "run_3",
+        "run_4",
+        "run_5",
+        "run_6",
+        "run_7",
+        "run_8"
+      ]
+    },
+    "run_1": {
+      "type": "Text",
+      "props": {
+        "text": "07:00 chain:reppo-swarm (orchestrator → trading-agent → digest)"
+      }
+    },
+    "run_2": {
+      "type": "Text",
+      "props": {
+        "text": "08:00 skill-freshness · heartbeat"
+      }
+    },
+    "run_3": {
+      "type": "Text",
+      "props": {
+        "text": "09:00 github-trending"
+      }
+    },
+    "run_4": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 token-alert · defi-overview"
+      }
+    },
+    "run_5": {
+      "type": "Text",
+      "props": {
+        "text": "14:00 search-skill · heartbeat"
+      }
+    },
+    "run_6": {
+      "type": "Text",
+      "props": {
+        "text": "18:00 goal-tracker · skill-health · reflect · action-converter"
+      }
+    },
+    "run_7": {
+      "type": "Text",
+      "props": {
+        "text": "20:00 heartbeat"
+      }
+    },
+    "run_8": {
+      "type": "Text",
+      "props": {
+        "text": "21:00 evening-recap"
+      }
+    }
+  }
+}
