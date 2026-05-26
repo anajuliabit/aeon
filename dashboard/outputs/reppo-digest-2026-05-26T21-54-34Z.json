@@ -1,0 +1,170 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "queued-section",
+        "sep2",
+        "on-chain-section",
+        "sep3",
+        "unassigned-note"
+      ]
+    },
+    "header": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 21st run · datanet 9 · 3 on-chain",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "queued-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-heading",
+        "queued-item-1",
+        "queued-item-2"
+      ]
+    },
+    "queued-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "queued-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "mint · eth/usdt 1h ttm squeeze long-only (bb-inside-kc compression, ≥6-bar squeeze) · 3abb43986aea32fd"
+      }
+    },
+    "queued-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "votes · dislike 372, 373 (hotbot v4 raw exports, off-rubric)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "on-chain-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-chain-heading",
+        "on-chain-item-1",
+        "on-chain-item-2",
+        "on-chain-item-3"
+      ]
+    },
+    "on-chain-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On-Chain",
+        "level": "h3"
+      }
+    },
+    "on-chain-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "on-chain-1-label",
+        "on-chain-1-tx"
+      ]
+    },
+    "on-chain-1-label": {
+      "type": "Text",
+      "props": {
+        "text": "mint 3abb43986aea32fd —"
+      }
+    },
+    "on-chain-1-tx": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0xc14426d294ee4a92bb5a4e3d2ba680a4727c5dee4335abdf6f8d49d309eae954",
+        "href": "https://etherscan.io/tx/0xc14426d294ee4a92bb5a4e3d2ba680a4727c5dee4335abdf6f8d49d309eae954"
+      }
+    },
+    "on-chain-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "on-chain-2-label",
+        "on-chain-2-tx"
+      ]
+    },
+    "on-chain-2-label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 372 dislike —"
+      }
+    },
+    "on-chain-2-tx": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0xfe836d4985d6b39319b0c650c2d20f3f2954ceacb962ef8b46278d18d0281260",
+        "href": "https://etherscan.io/tx/0xfe836d4985d6b39319b0c650c2d20f3f2954ceacb962ef8b46278d18d0281260"
+      }
+    },
+    "on-chain-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "on-chain-3-label",
+        "on-chain-3-tx"
+      ]
+    },
+    "on-chain-3-label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 373 dislike —"
+      }
+    },
+    "on-chain-3-tx": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0x3cea2fc3bc9239aa61066489d5ba9f3f0264a8817eb1a58cbb53ff1ccb7a642b",
+        "href": "https://etherscan.io/tx/0x3cea2fc3bc9239aa61066489d5ba9f3f0264a8817eb1a58cbb53ff1ccb7a642b"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "unassigned-note": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned.",
+        "variant": "caption"
+      }
+    }
+  }
+}
