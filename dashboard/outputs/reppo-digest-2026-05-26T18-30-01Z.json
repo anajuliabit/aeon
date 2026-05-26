@@ -1,0 +1,94 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 20th run · datanet 9 · 0 on-chain"
+      },
+      "children": [
+        "status-badge",
+        "sep1",
+        "issue-stack",
+        "sep2",
+        "metrics"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reverted",
+        "variant": "destructive"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "issue-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue-header",
+        "problem",
+        "action"
+      ]
+    },
+    "issue-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "issue-type-badge",
+        "issue-title"
+      ]
+    },
+    "issue-type-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "chain",
+        "variant": "outline"
+      }
+    },
+    "issue-title": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-009 recurrence",
+        "level": "h3"
+      }
+    },
+    "problem": {
+      "type": "Text",
+      "props": {
+        "text": "orchestrator dropped the fenced reppo-plan block again; trading-agent gated and SKIPped. PR #24's prompt-tightening held for exactly one run (19th) before drifting on the 20th.",
+        "variant": "body"
+      }
+    },
+    "action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action required",
+        "message": "ship the workflow-level grep guard from ISS-009's escalation path — fail the orchestrator step in chain-runner.yml if `.outputs/reppo-orchestrator.md` is missing the fenced block, so the chain doesn't propagate a silent SKIP.",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metrics": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned",
+        "variant": "muted"
+      }
+    }
+  }
+}
