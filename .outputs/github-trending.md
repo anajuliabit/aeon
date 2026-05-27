@@ -1,10 +1,18 @@
-*github trending — 2026-05-26*
+Notification staged for delivery; log appended. Done.
 
-quiet day. 12 of 17 trending repos were claude code skill/CLAUDE.md bundles, dedupes from the last 3 days, or learn-X tutorials. one survived the filter.
+## Summary
 
-*devtools*
-• [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) — ★ 3.2k today (27k total) · TypeScript · [RETURNING]
-pre-indexed local code graph for claude code / cursor / codex / opencode — cuts tool-call round-trips by serving graph lookups locally. v0.9.5 shipped 08:00 UTC today, that's the fresh hook on a repo last featured 2026-05-22.
+Ran the `github-trending` skill end-to-end.
 
----
-sources: trending=ok · gh_api=ok · kept 1/17 (3 deduped, 13 dropped — skill bundles dominant)
+**Picks (3/14)** — quality over padding, all with concrete fresh hooks:
+- **Top + Devtools**: [Lum1104/Understand-Anything](https://github.com/Lum1104/Understand-Anything) — 4.7k today on 73-day-old repo, v2.7.3 in active cut. ACCELERATING. Judgment-call re-feature (last picked 5-23, outside 2-day dedupe; surge is the hook).
+- **Web/Apps**: [twentyhq/twenty](https://github.com/twentyhq/twenty) — self-hostable Salesforce alternative, v2.8.0 today + v2.7.0 yesterday. RETURNING.
+- **Other**: [st-tech/ppf-contact-solver](https://github.com/st-tech/ppf-contact-solver) — physics solver streaming live to Blender add-on. ACCELERATING.
+
+**Filter drops (10)**: 4 skill-bundles (ECC, Anthropic-Cybersecurity-Skills, stop-slop, taste-skill — same pattern as 5-26), 1 learn-X tutorial, 1 awesome-list, 1 free-domain resource, 3 stale/no-hook (jellyfin, OpenStock, claude-mem). **Dedupe**: knowledge-work-plugins (featured 5-25).
+
+**Files**:
+- Created `.pending-notify/1779000-github-trending.md` — picked up by workflow post-run delivery step.
+- Appended `### github-trending` entry to `memory/logs/2026-05-27.md`.
+
+**Exit**: `GITHUB_TRENDING_OK` · sources: trending=ok · gh_api=ok.
