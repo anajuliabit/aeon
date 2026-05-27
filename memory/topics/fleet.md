@@ -32,10 +32,14 @@ cron. soul/ populated 2026-05-25. Reppo-swarm chain first on-chain output landed
 | #24 | 2026-05-26 | reppo-orchestrator: make fenced reppo-plan block non-negotiable (closed ISS-009) |
 | #25 | 2026-05-26 | INDEX bookkeeping — close ISS-009, fix ISS-006 fix_pr link |
 | #26 | 2026-05-26 | widen vote dry-run retry budget after auto_recover_lock to 5/10/15s |
+| #27 | 2026-05-26 | chain-runner workflow-level grep guard for fenced reppo-plan (ISS-009) |
+| #28 | 2026-05-26 | align tradinggymai rubric with operator-shared contributor spec |
+| #29 | 2026-05-26 | register pod metadata to platform DB for UI visibility |
+| #30 | 2026-05-26 (open) | rewrite reppo-trading-agent to construct pods from HL public data |
 
 ## Recurring blockers
 - **14 unassigned reppo datanets.** Orchestrator surfaces them every run; none
-  have ever been picked up. No agent skill covers them. 6 days untouched —
+  have ever been picked up. No agent skill covers them. 7 days untouched —
   needs an assignment rubric or operator pick.
 - **Sandbox network limits.** Two confirmed classes:
   - Reddit blocks the GitHub Actions datacenter IP — curl returns "Blocked" HTML and
@@ -63,6 +67,10 @@ cron. soul/ populated 2026-05-25. Reppo-swarm chain first on-chain output landed
   PR #11/#23) → ISS-007 (RPC flakes, PR #13/#26) → ISS-008 (pod-manager
   allowance, PR #21) → ISS-009 (orchestrator dropped fenced block, PR #24).
   Each fix exposed the next blocker; assume more surface as real writes scale.
+  ISS-009 recurred a 3rd time 2026-05-27 — PR #27's workflow-level grep guard
+  in chain-runner did NOT abort downstream dispatch (bash `continue` skips to
+  next loop iteration instead of breaking the chain); reopened with `continue→break`
+  escalation. ISS-009 reopened in the index.
 - **Soul files empty.** PR #12 populated 2026-05-25. Content skills now ship
   ana voice (lowercase, no marketing verbs, concrete numbers).
 - **scan.sh backtick-with-$ noise.** PR #14 tightened the HIGH pattern from
@@ -70,10 +78,11 @@ cron. soul/ populated 2026-05-25. Reppo-swarm chain first on-chain output landed
   on the SKILL.md corpus (~97.5% cut).
 
 ## Skill health
-- Last classification (2026-05-25, 18:04Z): 17 healthy, 0 critical/degraded/
-  flapping/warning, 4 no_data (autoresearch [workflow_dispatch],
-  skill-analytics [Wed-only], operator-scorecard [Mon 10:30, never run],
-  weekly-review [Mon 19:00]).
+- Last classification (2026-05-26, 18:27Z): 18 healthy, 0 critical/degraded/
+  flapping/warning, 3 no_data (autoresearch [workflow_dispatch],
+  skill-analytics [Wed-only — first Wed-fire was today 05-27],
+  operator-scorecard [Mon 10:30, never run since enabled, 2nd miss 05-25
+  under 2x weekly threshold]).
 - Per-skill quality records on disk: `search-skill` (4/5, 1 run) and
   `reppo-digest` (4/5, 2 runs 05-23 + 05-26). No flags. Trend stable.
 - `article` carries sr=0.5 in cron-state, but with only 2 runs — below the
@@ -85,10 +94,11 @@ cron. soul/ populated 2026-05-25. Reppo-swarm chain first on-chain output landed
   flagged (messages.yml:578, aeon.yml:86/94/96/718). All auth-gated, exposure
   low. Fix shape: env-var indirection per articles/workflow-security-audit-2026-04-11.md.
   PR #14 closed the scan.sh noise; the 5 workflow sites still need a follow-up PR.
-- Today's heartbeat caught defi-overview FAILED 12:39Z on
-  `foundry-rs/foundry-toolchain@v1` action download (HTTP 404, single attempt) —
-  transient GH Actions infra flake, not a skill bug. Manual re-run produced the
-  day's data.
+- 2026-05-26 12:39Z defi-overview FAILED on `foundry-rs/foundry-toolchain@v1`
+  action download (HTTP 404, single attempt) — transient GH Actions infra
+  flake, not a skill bug. Single occurrence; not pinned.
+- 2026-05-27 08:23Z chain:reppo-swarm FAILED — ISS-009 3rd occurrence
+  (trading-agent SKIP on missing fenced reppo-plan block).
 
 ## Cost profile (week 1, bootstrap-inflated)
 - Total: $179.73 across 61 runs, 4 days of actual data (fleet bootstrapped 2026-05-21).
@@ -111,4 +121,8 @@ cron. soul/ populated 2026-05-25. Reppo-swarm chain first on-chain output landed
 - ISS-007 open in INDEX (medium, timeout) — PR #13 retry shipped, PR #26 widened
   budget; action-converter has the close queued.
 - ISS-008 resolved 2026-05-26 (PR #21 — pod-manager allowance auto-recovery).
-- ISS-009 resolved 2026-05-26 (PR #24 — non-negotiable fenced reppo-plan block).
+- ISS-009 open (high, prompt-bug) — recurred 2026-05-27 as 3rd occurrence;
+  PR #24 prompt-tightening + PR #27 workflow-level grep guard both insufficient
+  because chain-runner's `on_error=fail-fast` branch uses bash `continue`
+  (skips to next loop iter) instead of `break` (aborts the chain). Trading-agent
+  still SKIPped today on missing fenced reppo-plan block.

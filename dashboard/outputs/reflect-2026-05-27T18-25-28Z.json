@@ -1,0 +1,79 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "heading_main",
+        "text_overview",
+        "sep1",
+        "alert_recurring_issue",
+        "text_root_cause",
+        "text_impact",
+        "sep2",
+        "text_pr30",
+        "text_datanets"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory Consolidated — 2026-05-27",
+        "level": "h2"
+      }
+    },
+    "text_overview": {
+      "type": "Text",
+      "props": {
+        "text": "reppo cascade closed last night"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_recurring_issue": {
+      "type": "Alert",
+      "props": {
+        "title": "iss-009 — 3rd occurrence today",
+        "type": "warning"
+      }
+    },
+    "text_root_cause": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: chain-runner's fail-fast uses bash continue instead of break"
+      }
+    },
+    "text_impact": {
+      "type": "Text",
+      "props": {
+        "text": "Impact: PR #27's grep guard merged without aborting downstream dispatch"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_pr30": {
+      "type": "Text",
+      "props": {
+        "text": "PR #30 (rewrite trading-agent → HL public data) — sitting overnight"
+      }
+    },
+    "text_datanets": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets day 7 untouched"
+      }
+    }
+  }
+}
