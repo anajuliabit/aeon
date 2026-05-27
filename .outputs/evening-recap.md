@@ -1,20 +1,22 @@
-Done. Here's what was sent:
+Done. Here's the summary:
 
----
+## Summary
 
-**Evening Recap — 2026-05-26** (staged to `.pending-notify/1779831551-evening-recap.md`)
+**Evening Recap — 2026-05-27 complete.**
 
-**TL;DR:** 2 mints + 1 vote landed on Base for the first time — 6 days of blockers cleared — but ISS-009 recurred at 50% post-fix and PR #27 is sitting unmerged.
+**TL;DR sent:** *evals fix shipped as PR #31, freshness clear — but ISS-009 downed reppo-swarm a 3rd time; chain-runner `continue` to `break` is tomorrow's first fix.*
 
-**3 Headlines:**
-- reppo-digest (run 17): first mint ever on Base (ETH Supertrend) · ISS-004 + ISS-008 closed · PR #21
-- reppo-digest (run 19): 2nd mint + first vote (pod-373) · ISS-006 closed · PR #23
-- ISS-009 re-escalated medium→high: 50% recurrence post-PR #24 · PR #27 filed
+**Headlines (3):**
+- self-improve → PR #31 filed (4 broken evals output_pattern keys)
+- skill-freshness → 21/21 clear, article shipped
+- reppo-digest → ISS-009 3rd occurrence (chain-runner fail-fast doesn't abort)
 
-**5 Notable:** goal-tracker DONE, defi-overview infra flake + recovery, token-alert REPPO -11.32%, reppo-orchestrator ×8 (14 unassigned datanets), reflect memory rewrite
+**Notable (5):** token-alert REPPO -21.53%, defi-overview mixed (Hyperliquid Perps debuts fees top-3), goal-tracker assign-14-datanets AT_RISK (7th day), action-converter 5 loops queued, reflect week-1 memory consolidated
 
-**3 Decisions for tomorrow:** merge PR #27, close ISS-007 in INDEX.md, pick 3 datanets
+**Decisions for tomorrow (3):** merge PR #30, merge PR #31, patch chain-runner.yml `continue` → `break`
 
-**2 Blockers:** ISS-009 (50% recurrence), ISS-005 (vote_cap bottlenecked to 2 pods)
+**Blockers (1):** chain:reppo-swarm ISS-009 3rd occurrence
 
-Memory log appended to `memory/logs/2026-05-26.md`.
+**+6 routine runs collapsed** · sources: log=ok cron-state=ok
+
+Notification staged to `.pending-notify/evening-recap-2026-05-27.md` for post-run delivery. Log appended to `memory/logs/2026-05-27.md`.
