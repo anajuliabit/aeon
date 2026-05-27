@@ -1,0 +1,159 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-05-27"
+      },
+      "children": [
+        "summary-text",
+        "sep1",
+        "at-risk-section",
+        "sep2",
+        "on-track-section",
+        "sep3",
+        "sources-section"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "2 goals — 1 at risk, 0 needs attention, 1 on track, 0 blocked, 0 done (overall ↓ degrading)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "at-risk-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "at-risk-heading",
+        "goal1-title",
+        "goal1-details",
+        "goal1-action"
+      ]
+    },
+    "at-risk-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "goal1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Assign agents to the 14 unassigned reppo datanets",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "goal1-details": {
+      "type": "Text",
+      "props": {
+        "text": "7d idle on actual assignments, surfaced every reppo-orchestrator run since 2026-05-21 (was ON TRACK ↓ — prior snapshot counted surfacing as progress; reality is zero assignments shipped, goal text itself reads 'untouched all week')",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "goal1-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Commit aeon.yml rows assigning fleet to 3 of {1,2,4,5,6,7,8,10,11,13,14,15,16,17}",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "goal2-title",
+        "goal2-details"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "goal2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Align reppo-trading-agent + datanet-9 rubric with operator-shared contributor spec",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "goal2-details": {
+      "type": "Text",
+      "props": {
+        "text": "1d idle, 4 activity/14d (new — PR #28 merged 2026-05-26 nailed the rubric half; PR #30 open ~19h for the agent-side HL public data pivot)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,14 +1,14 @@
 {
-  "run_at": "2026-05-26T18:30:00Z",
+  "run_at": "2026-05-27T18:20:00Z",
   "goals": {
-    "unblock-reppo-swarm-on-chain-output": {
-      "status": "DONE",
-      "activity_count_14d": 52,
-      "last_activity_date": "2026-05-26"
-    },
     "assign-agents-to-the-14-unassigned-reppo-datanets": {
+      "status": "AT_RISK",
+      "activity_count_14d": 1,
+      "last_activity_date": "2026-05-27"
+    },
+    "align-reppo-trading-agent-datanet-9-rubric": {
       "status": "ON_TRACK",
-      "activity_count_14d": 28,
+      "activity_count_14d": 4,
       "last_activity_date": "2026-05-26"
     }
   }
