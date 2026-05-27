@@ -1,0 +1,104 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_aligned",
+        "sep1",
+        "issues_heading",
+        "issues_stack",
+        "sep2",
+        "context_text",
+        "sep3",
+        "pr_link"
+      ]
+    },
+    "stat_aligned": {
+      "type": "Stat",
+      "props": {
+        "value": "4",
+        "label": "evals.json output_patterns aligned with actual log locations"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues Fixed",
+        "level": "h3"
+      }
+    },
+    "issues_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issue1",
+        "issue2"
+      ]
+    },
+    "issue1": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert + skill-health were enabled but scoring NO_OUTPUT every run",
+        "variant": "body"
+      }
+    },
+    "issue2": {
+      "type": "Text",
+      "props": {
+        "text": "hn-digest + polymarket were orphaned key names",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "context_text": {
+      "type": "Text",
+      "props": {
+        "text": "Carries the 3-day-old action-queue head from 2026-05-24 skill-evals",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #31",
+        "href": "https://github.com/anajuliabit/aeon/pull/31",
+        "source": "github.com/anajuliabit/aeon"
+      }
+    }
+  }
+}

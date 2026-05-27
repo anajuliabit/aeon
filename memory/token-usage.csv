@@ -118,4 +118,5 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-27,github-trending,claude-opus-4-7,30,16155,1271380,101183
 2026-05-27,defi-overview,claude-opus-4-7,46,28293,2367891,62627
 2026-05-27,heartbeat,claude-opus-4-7,12,13737,376169,64149
-2026-05-27,action-converter,claude-opus-4-7,41,16739,2641585,90084
+2026-05-27,goal-tracker,claude-opus-4-7,17,13396,638279,45021
+2026-05-27,self-improve,claude-opus-4-7,37,18029,2641668,88546

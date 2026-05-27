@@ -1,1 +1,1 @@
-self-improve: tightened skill-security-scan backtick HIGH pattern (769 → 19 markdown false positives, ~97.5% noise reduction) — PR: https://github.com/anajuliabit/aeon/pull/14
+self-improve: aligned 4 evals.json output_patterns with actual log locations (token-alert + skill-health were enabled but scoring NO_OUTPUT every run; hn-digest + polymarket were orphaned key names). Carries the 3-day-old action-queue head from 2026-05-24 skill-evals — PR: https://github.com/anajuliabit/aeon/pull/31
