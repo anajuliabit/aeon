@@ -308,5 +308,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "skill-analytics": {
+    "last_dispatch": "2026-05-27T19:12:14Z",
+    "last_status": "dispatched"
   }
 }
