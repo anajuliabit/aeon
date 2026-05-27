@@ -1,24 +1,21 @@
-Arg-passing with `$(cat ...)` is blocked in this sandbox (matches the documented pattern). The notification stays staged at `.pending-notify/1779820184-action-converter.md` for the post-run delivery step.
+Action Converter run complete.
 
 ## Summary
 
-Ran **Action Converter** in `ACTION_CONVERTER_OK` mode for 2026-05-26.
+Ran the action-converter skill — mode `OK` (7 distinct log dates, MEMORY.md consolidated yesterday, 1 open PR, ISS-009 recurrence today).
 
-**Shape:** Broadcast first on-chain mints, durable-fix iss-005, sweep stale memory, pick 3 datanets.
+**5 actions surfaced** (quality avg 4.4/5):
 
-**5 actions (quality avg 4.4/5)**, ranked by quality × urgency:
-1. Compose 300-450 char build-in-public X post naming today's 3 tx hashes (mint 0x77f1, mint 0x832d, vote 0x937d) — first on-chain output after 18 prior runs.
-2. Add `validityEpoch` to `scripts/prefetch-reppo.sh` cache schema; move filter from agent prompt to prefetch (durable fix for ISS-005).
-3. Rewrite `## Current Goals` + `## Open Issues` in `memory/MEMORY.md` (stale vs INDEX.md — lists ISS-004/006/008/009 as open but those resolved today).
-4. Move ISS-007 from open → resolved in `memory/issues/INDEX.md`, link PR #13.
-5. Pick 3 of the 14 unassigned datanet ids (1,2,4,5,6,7,8,10,11,13,14,15,16,17) and justify in `memory/topics/reppo.md`.
-
-**Loops anchored:** build-in-public-first-mints, iss-005-durable, memory-md-stale, iss-007-bookkeeping, datanet-rubric.
-
-**Loops carried over:** skill-evals-output-pattern (verb-noun overlap with yesterday's carry), defi-overview-foundry-pin (single occurrence, not yet urgent), cost-opus-sonnet-rotation (operator-call), operator-scorecard-never-ran (under threshold).
+1. **Self-review + merge PR #30** (rewrite reppo-trading-agent → HL public data) — overnight, every chain run mints off-rubric until merged
+2. **Patch `.github/workflows/chain-runner.yml` `continue` → `break`** — ISS-009's 3rd occurrence today; PR #27's guard didn't abort downstream
+3. **Lift ISS-005 validityEpoch filter into `scripts/prefetch-reppo.sh`** — durable fix; agent-side workaround live since 05-24
+4. **Correct `skills/skill-evals/evals.json` output_pattern paths** — token-alert/skill-health → memory/logs/; drop hn-digest+polymarket orphans
+5. **Fill MEMORY.md `## Tracked Tokens` table** — REPPO/HYPER/VVV rows with floor+ceiling per today's token-alert spots
 
 **Files modified:**
-- `memory/logs/2026-05-26.md` — appended Action Converter section with loops, novelty notes, and carry-over list.
-- `.pending-notify/1779820184-action-converter.md` — Telegram-formatted notification staged for post-run delivery (sandbox blocks `$(cat ...)` arg-passing).
+- `.pending-notify/1779892800-action-converter.md` (notification staged — sandbox blocked direct `./notify`, post-run delivers)
+- `memory/logs/2026-05-27.md` (Action Converter section appended)
 
-**Follow-up:** None required from this run. Post-run notify step will deliver the message to all configured channels.
+**Loops carried:** iss-007-bookkeeping, unassigned-datanets-14, vote-373-idempotency-investigation, defi-overview-foundry-pin, cost-opus-sonnet-rotation, operator-scorecard-never-ran.
+
+**Follow-up:** the post-run step will pick up the staged notification; if PR #30 lands before tomorrow's run, the datanet loop will be the next-highest priority since pod sourcing changes shape.
