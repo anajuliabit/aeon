@@ -1,16 +1,18 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md.
-
 ## Summary
 
-Ran the heartbeat skill at 08:13 UTC (Wed 2026-05-27, 08:00 slot).
+Heartbeat ran at 14:43 UTC (14:00 slot, Wednesday 2026-05-27).
 
-**Findings**
-- **P0:** clean — all 32 cron-state entries `last_status=success`, 0 consecutive failures, no stuck dispatches, heartbeat self-check healthy (~12h since last success).
-- **P1:** 1 open PR (#30 reppo-trading-agent rewrite, ~9h old — under 24h stalled rule); 0 urgent issues.
-- **P2:** 3 open issues carried — ISS-005, ISS-007, ISS-009 — all flagged ≤24h ago, deduped.
-- **P3:** morning-brief & skill-freshness ~1h past due but under 2x daily threshold (likely racing this heartbeat); operator-scorecard never-ran but under 14d weekly threshold.
+**Findings:**
+- **P0:** `chain:reppo-swarm` failed at 08:22:58Z today — but this is ISS-009's 3rd occurrence, already documented in today's reppo-digest log and carried by morning-brief. Deduped.
+- **P1:** PR #30 open ~16h (under 24h stalled threshold). 0 urgent issues. Deduped.
+- **P2:** ISS-005 / ISS-007 / ISS-009 open — all flagged ≤24h ago across 3+ log entries today. Deduped.
+- **P3:** search-skill @ 14:00 may be racing this run (cron lag); past-due ≈43min, under 2x daily threshold.
+- **Self-check:** heartbeat last_success 6.5h ago — healthy.
 
-**Actions**
-- Wrote `docs/status.md` (verdict 🟡 WATCH, 21 enabled skills, 3 open issues, token pulse omitted — no token-report article exists).
-- Appended log entry to `memory/logs/2026-05-27.md`.
-- No notification sent (all findings deduped).
+**Files modified:**
+- `docs/status.md` — regenerated, verdict 🔴 DEGRADED (chain:reppo-swarm failed = P0 trigger). 21 enabled skills, 3 open issues. Next run: goal-tracker @ 18:00 UTC.
+- `memory/logs/2026-05-27.md` — appended heartbeat entry.
+
+**Notification:** None sent — all findings deduped within the 48h window.
+
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
