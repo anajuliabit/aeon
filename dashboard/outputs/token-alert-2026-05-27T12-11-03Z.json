@@ -1,0 +1,145 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert",
+        "description": "2026-05-27"
+      },
+      "children": [
+        "alert",
+        "sep1",
+        "reppo_stack",
+        "sep2",
+        "other_tokens_stack",
+        "sep3",
+        "context_stack"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Alert Triggered",
+        "message": "24h change exceeds 10% threshold"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "reppo_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reppo_heading",
+        "reppo_price",
+        "reppo_volume"
+      ]
+    },
+    "reppo_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "REPPO",
+        "level": "h2"
+      }
+    },
+    "reppo_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.01712",
+        "delta": "-21.5%",
+        "trend": "down"
+      }
+    },
+    "reppo_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$2.42M",
+        "delta": "0.86x 5d avg"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "other_tokens_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "other_heading",
+        "other_note",
+        "hyper_stat",
+        "vvv_stat"
+      ]
+    },
+    "other_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Other Tokens",
+        "level": "h3"
+      }
+    },
+    "other_note": {
+      "type": "Text",
+      "props": {
+        "text": "Both under threshold",
+        "variant": "caption"
+      }
+    },
+    "hyper_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPER",
+        "value": "$0.0941",
+        "delta": "-1.7%",
+        "trend": "down"
+      }
+    },
+    "vvv_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "VVV",
+        "value": "$17.29",
+        "delta": "-1.7%",
+        "trend": "down"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "context_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context_line1",
+        "context_line2"
+      ]
+    },
+    "context_line1": {
+      "type": "Text",
+      "props": {
+        "text": "REPPO erases last week's recovery, back below 2026-05-22 baseline of $0.02313",
+        "variant": "body"
+      }
+    },
+    "context_line2": {
+      "type": "Badge",
+      "props": {
+        "text": "Status: Recovered losses erased",
+        "variant": "secondary"
+      }
+    }
+  }
+}
