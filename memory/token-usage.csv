@@ -116,4 +116,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-27,reppo-trading-agent,claude-opus-4-7,13,3896,394495,38603
 2026-05-27,reppo-digest,claude-opus-4-7,21,13257,877981,49923
 2026-05-27,github-trending,claude-opus-4-7,30,16155,1271380,101183
-2026-05-27,token-alert,claude-opus-4-7,14,5884,412924,38219
+2026-05-27,defi-overview,claude-opus-4-7,46,28293,2367891,62627
