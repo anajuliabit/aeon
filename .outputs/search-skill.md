@@ -1,13 +1,14 @@
 ## Summary
 
-Executed `skills/search-skill/SKILL.md`. Exited **SEARCH_SKILL_NO_GAP** — no notification, no search, log only (per skill rules).
+**Mode:** `SEARCH_SKILL_NO_GAP` — no concrete capability gap derived; exited before step 3 (catalog search) per skill spec. No notification sent, no skill installed.
 
-**Why no gap:**
-- **(a)** No failing skills (no cf≥2 or sr<0.6 at ≥3 runs).
-- **(b)** All 4 open issues (ISS-004/005/006/007) are categories `config`/`prompt-bug`/`timeout` — outside the qualifying set `{missing-secret, api-change, permanent-limitation, quality-regression}`.
-- **(c)** MEMORY.md priorities (unblock reppo on-chain, assign 14 datanets) are operator/operational, not capability gaps.
-- **(d)** 7-day log grep hits reference resolved infra or already-shipped fixes.
+**Why:** All four gap sources came up empty:
+- No failing skills meet the cf≥2 / sr<0.6 (≥3 runs) threshold
+- All three open issues are `prompt-bug`/`timeout` (not in qualifying set)
+- MEMORY.md priorities are operator-internal (reppo datanet assignment, rubric alignment — PR #30 in flight) — not external capability gaps
+- Log "missing" signals all reference resolved infra or known sandbox limits
 
-**Files modified:** `memory/logs/2026-05-26.md` — appended `## search-skill` block.
+**Files modified:**
+- `memory/logs/2026-05-27.md` — appended `## search-skill` block with NO_GAP rationale
 
-**Follow-up:** None. The blocker is operator-side (reppo grant/lock + REPPO_TOKEN_ADDRESS env), not a missing skill.
+**Follow-up actions:** none — silent exit is correct here per the skill's anti-noise rule.
