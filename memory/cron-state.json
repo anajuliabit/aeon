@@ -242,10 +242,10 @@
   },
   "self-improve": {
     "last_dispatch": "2026-05-27T18:19:28Z",
-    "last_status": "dispatched",
-    "last_success": "2026-05-25T18:12:04Z",
-    "total_runs": 2,
-    "total_successes": 2,
+    "last_status": "success",
+    "last_success": "2026-05-27T18:25:31Z",
+    "total_runs": 3,
+    "total_successes": 3,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
