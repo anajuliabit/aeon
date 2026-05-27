@@ -1,25 +1,21 @@
-*Morning Brief — 2026-05-26*
+*morning brief — 2026-05-27*
 
-*Focus today*
-1. unblock reppo on-chain — set REPPO_TOKEN_ADDRESS env (or operator approve+grant+lock). why now: day 6 of 0 mints / 0 votes, 4 helpers stacked, still blocked.
-2. reconcile INDEX.md — close ISS-007 (PR #13 retry merged), annotate ISS-004/006 with PR refs. why now: 8 PRs merged yesterday, issues still flagged open.
-3. propose datanet assignment rubric — score the 14 unassigned ids. why now: 6 days untouched, fleet ships to 1 of 15 datanets.
+*focus today*
+1. land PR #30 (rewrite reppo-trading-agent → HL public data) — why now: every reppo-swarm run open keeps minting off-rubric strategy text
+2. pick 3 of 14 unassigned datanets — why now: 7th day surfaced untouched, named picks unblock the backlog
+3. move ISS-005 validityEpoch filter into prefetch-reppo.sh — why now: vote_cap=3 bottlenecked to 2 epoch-97 pods until durable fix
 
-*Since yesterday*
-- 8 PRs merged: #11 lock helper, #12 soul populate, #13 RPC retry, #14 scan pattern, #15 auto-approve, #16 messages quoting, #17 digest format, #18 foundry install.
-- reppo auto-grant now hits 3 stacked sub-blockers — 6th run aborted with "REPPO token address unknown".
-- soul/ live (SOUL.md 74L + STYLE.md 96L) — content skills back in voice; agent-buzz + telegram drafts already applying it.
-- 0 open PRs · 4 open issues (ISS-004/005/006/007).
+*since yesterday*
+- 21st reppo-digest run shipped 3 on-chain (1 mint + 2 votes, 0 failures) — most productive run since chain launch
+- PR #27 merged (chain workflow-level grep guard for the reppo-plan fenced block, ISS-009 closed)
+- operator shared canonical tradinggymai contributor spec → PR #28 rewrote the rubric (data, not strategy specs); PR #30 opened to pivot the agent itself to HL leaderboard fills + IPFS pin + platform POST
+- stuck: 14 unassigned datanets (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17) — surfaced every orchestrator run since 2026-05-21
 
-*Watch*
-- Anthropic splits Claude billing into a separate Agent SDK pool June 15 — re-baseline cost-report before next Monday's run.
+*watch*
+- HYPE hit ATH $64.24 on 2026-05-24, hyperliquid added macro prediction markets 2026-05-26, coinbase/circle USDC integration redirects stablecoin yield to HYPE holders — implication for focus #1: PR #30 HL-data pivot lands as the wallet/fill surface widens, well-timed
 
-*Running today*
-- 07:00 chain:reppo-swarm (orchestrator → trading-agent → digest)
-- 08:00 skill-freshness · heartbeat
-- 09:00 github-trending
-- 12:00 token-alert · defi-overview
-- 14:00 search-skill · heartbeat
-- 18:00 goal-tracker · skill-health · reflect · action-converter
-- 20:00 heartbeat
-- 21:00 evening-recap
+*running today* (wed)
+- chain:reppo-swarm @ 07:00 · skill-freshness + heartbeat @ 08:00 · github-trending @ 09:00
+- token-alert + defi-overview @ 12:00 · search-skill + heartbeat @ 14:00
+- goal-tracker + skill-health + reflect + action-converter + self-improve @ 18:00 · skill-analytics @ 18:30 (wed only)
+- heartbeat @ 20:00 · evening-recap @ 21:00

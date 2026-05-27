@@ -1,0 +1,431 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "morning brief — 2026-05-27"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "focus_section",
+        "sep_1",
+        "since_section",
+        "sep_2",
+        "watch_section",
+        "sep_3",
+        "running_section"
+      ]
+    },
+    "focus_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_heading",
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "focus_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "focus today",
+        "level": "h3"
+      }
+    },
+    "focus_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "f1_title",
+        "f1_why"
+      ]
+    },
+    "f1_title": {
+      "type": "Text",
+      "props": {
+        "text": "1. land PR #30 (rewrite reppo-trading-agent → HL public data)",
+        "variant": "body"
+      }
+    },
+    "f1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: every reppo-swarm run open keeps minting off-rubric strategy text",
+        "variant": "caption"
+      }
+    },
+    "focus_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "f2_title",
+        "f2_why"
+      ]
+    },
+    "f2_title": {
+      "type": "Text",
+      "props": {
+        "text": "2. pick 3 of 14 unassigned datanets",
+        "variant": "body"
+      }
+    },
+    "f2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 7th day surfaced untouched, named picks unblock the backlog",
+        "variant": "caption"
+      }
+    },
+    "focus_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "f3_title",
+        "f3_why"
+      ]
+    },
+    "f3_title": {
+      "type": "Text",
+      "props": {
+        "text": "3. move ISS-005 validityEpoch filter into prefetch-reppo.sh",
+        "variant": "body"
+      }
+    },
+    "f3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: vote_cap=3 bottlenecked to 2 epoch-97 pods until durable fix",
+        "variant": "caption"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since_heading",
+        "since_item_1",
+        "since_item_2",
+        "since_item_3",
+        "since_item_4"
+      ]
+    },
+    "since_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "since yesterday",
+        "level": "h3"
+      }
+    },
+    "since_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "s1_main",
+        "s1_detail"
+      ]
+    },
+    "s1_main": {
+      "type": "Text",
+      "props": {
+        "text": "21st reppo-digest run shipped 3 on-chain (1 mint + 2 votes, 0 failures)",
+        "variant": "body"
+      }
+    },
+    "s1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "most productive run since chain launch",
+        "variant": "caption"
+      }
+    },
+    "since_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "s2_main",
+        "s2_detail"
+      ]
+    },
+    "s2_main": {
+      "type": "Text",
+      "props": {
+        "text": "PR #27 merged (chain workflow-level grep guard for the reppo-plan fenced block, ISS-009 closed)",
+        "variant": "body"
+      }
+    },
+    "s2_detail": {
+      "type": "Badge",
+      "props": {
+        "text": "merged",
+        "variant": "secondary"
+      }
+    },
+    "since_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "s3_main",
+        "s3_detail"
+      ]
+    },
+    "s3_main": {
+      "type": "Text",
+      "props": {
+        "text": "operator shared canonical tradinggymai contributor spec → PR #28 rewrote the rubric (data, not strategy specs); PR #30 opened to pivot the agent itself to HL leaderboard fills + IPFS pin + platform POST",
+        "variant": "body"
+      }
+    },
+    "s3_detail": {
+      "type": "Badge",
+      "props": {
+        "text": "PRs open",
+        "variant": "secondary"
+      }
+    },
+    "since_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "s4_main",
+        "s4_list",
+        "s4_detail"
+      ]
+    },
+    "s4_main": {
+      "type": "Text",
+      "props": {
+        "text": "stuck: 14 unassigned datanets",
+        "variant": "body"
+      }
+    },
+    "s4_list": {
+      "type": "Text",
+      "props": {
+        "text": "1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17",
+        "variant": "body"
+      }
+    },
+    "s4_detail": {
+      "type": "Text",
+      "props": {
+        "text": "surfaced every orchestrator run since 2026-05-21",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_heading",
+        "watch_item_1",
+        "watch_item_2",
+        "watch_item_3",
+        "watch_implication"
+      ]
+    },
+    "watch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "watch",
+        "level": "h3"
+      }
+    },
+    "watch_item_1": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE ATH",
+        "value": "$64.24",
+        "delta": "2026-05-24"
+      }
+    },
+    "watch_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "HyperLiquid added macro prediction markets on 2026-05-26",
+        "variant": "body"
+      }
+    },
+    "watch_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "Coinbase/Circle USDC integration redirects stablecoin yield to HYPE holders",
+        "variant": "body"
+      }
+    },
+    "watch_implication": {
+      "type": "Alert",
+      "props": {
+        "title": "Implication for focus #1",
+        "message": "PR #30 HL-data pivot lands as the wallet/fill surface widens, well-timed",
+        "type": "info"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running_heading",
+        "running_time_07",
+        "running_time_08",
+        "running_time_09",
+        "running_time_12",
+        "running_time_14",
+        "running_time_18",
+        "running_time_1830",
+        "running_time_20",
+        "running_time_21"
+      ]
+    },
+    "running_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "running today (wed)",
+        "level": "h3"
+      }
+    },
+    "running_time_07": {
+      "type": "Text",
+      "props": {
+        "text": "07:00 — chain:reppo-swarm",
+        "variant": "body"
+      }
+    },
+    "running_time_08": {
+      "type": "Text",
+      "props": {
+        "text": "08:00 — skill-freshness + heartbeat",
+        "variant": "body"
+      }
+    },
+    "running_time_09": {
+      "type": "Text",
+      "props": {
+        "text": "09:00 — github-trending",
+        "variant": "body"
+      }
+    },
+    "running_time_12": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 — token-alert + defi-overview",
+        "variant": "body"
+      }
+    },
+    "running_time_14": {
+      "type": "Text",
+      "props": {
+        "text": "14:00 — search-skill + heartbeat",
+        "variant": "body"
+      }
+    },
+    "running_time_18": {
+      "type": "Text",
+      "props": {
+        "text": "18:00 — goal-tracker + skill-health + reflect + action-converter + self-improve",
+        "variant": "body"
+      }
+    },
+    "running_time_1830": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "time_1830_text",
+        "time_1830_badge"
+      ]
+    },
+    "time_1830_text": {
+      "type": "Text",
+      "props": {
+        "text": "18:30 — skill-analytics",
+        "variant": "body"
+      }
+    },
+    "time_1830_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "wed only",
+        "variant": "secondary"
+      }
+    },
+    "running_time_20": {
+      "type": "Text",
+      "props": {
+        "text": "20:00 — heartbeat",
+        "variant": "body"
+      }
+    },
+    "running_time_21": {
+      "type": "Text",
+      "props": {
+        "text": "21:00 — evening-recap",
+        "variant": "body"
+      }
+    }
+  }
+}
