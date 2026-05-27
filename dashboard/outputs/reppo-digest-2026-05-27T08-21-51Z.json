@@ -1,0 +1,88 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo Digest"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_header",
+        "sep_1",
+        "stack_blocked",
+        "sep_2",
+        "stat_unassigned"
+      ]
+    },
+    "text_header": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 1st run · datanet 9 · 0 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_blocked": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_blocked",
+        "text_reason",
+        "text_action"
+      ]
+    },
+    "badge_blocked": {
+      "type": "Badge",
+      "props": {
+        "text": "Blocked",
+        "variant": "destructive"
+      }
+    },
+    "text_reason": {
+      "type": "Text",
+      "props": {
+        "text": "trading-agent skipped — orchestrator output had no fenced reppo-plan block (iss-009 3rd occurrence)",
+        "variant": "body"
+      }
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: pr #27's chain-runner validator merged last night but didn't fail this orchestrator step — check workflow run logs to see why the guard let a blockless output through",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat_unassigned": {
+      "type": "Stat",
+      "props": {
+        "label": "Datanets Unassigned",
+        "value": "14"
+      }
+    }
+  }
+}

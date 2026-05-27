@@ -6,7 +6,7 @@
 |----|-------|----------|----------|----------|-----------------|
 | ISS-005 | Reppo vote dry-runs fail — selected pods are not valid for the current epoch | high | prompt-bug | 2026-05-23 | reppo-trading-agent, reppo-digest |
 | ISS-007 | Reppo vote dry-run hits transient mainnet.base.org RPC failure | medium | timeout | 2026-05-25 | reppo-trading-agent, reppo-digest |
-| ISS-009 | reppo-orchestrator drops the fenced reppo-plan block — LLM emits only `## Summary` (recurred post-PR #24; prompt-fix insufficient — needs workflow-level grep guard) | high | prompt-bug | 2026-05-26 | reppo-orchestrator, reppo-trading-agent, reppo-digest |
+| ISS-009 | reppo-orchestrator drops the fenced reppo-plan block — LLM emits only `## Summary` (3rd occurrence; PR #27 workflow-level guard merged but did not catch 2026-05-27 run — chain-runner `continue` doesn't abort downstream dispatch) | high | prompt-bug | 2026-05-26 | reppo-orchestrator, reppo-trading-agent, reppo-digest, chain-runner |
 
 ## Resolved
 
