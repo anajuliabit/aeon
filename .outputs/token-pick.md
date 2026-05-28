@@ -1,17 +1,31 @@
-*Daily Pick — 2026-05-21*
+## Summary
 
-*Token: LIT*  [HIGH]  signal 10/10
-Price: $1.32 (+8.0% 24h / +45.1% 7d) | mcap $0.33B | vol $101M (vol/mcap 0.31)
-Score breakdown: [trending+2, vol/mcap 0.31+3, RS vs BTC&ETH+2, momentum 24h/7d/both>5%+4] = 11 → capped 10/10
-Catalyst: Vitalik referenced Lighter at a May 18 fireside chat; the perp DEX also launched a synthetic SpaceX pre-IPO market and a Tealstreet integration — three speculation triggers in one week.
-Risk: Rally is narrative-driven off a one-off Vitalik mention; +45% in 7d with the token still -84% from ATH means a sharp mean-reversion is likely once SpaceX-perp hype cools.
-Vs recent picks: first pick — no prior Token Pick history.
+Daily Token Pick complete.
 
-*Market: "MicroStrategy sells any Bitcoin by May 31, 2026?"*  [MEDIUM]  edge ~9pp
-Current: YES 17c / NO 84c | 24h vol $209k | resolves: ~Jun 1, 2026
-Fair YES: ~7% (inputs: Saylor May 8 called sell-talk a tactic to "jam short-sellers"; May 11 called dividend-funding sales "a big nothing burger"; Strategy bought 535 BTC / $43M days after the comments)
-Thesis: Headline rhetoric overprices an imminent disclosed sale; operationally they remain net buyers and the window is only 10 days — lean NO at 84c.
-Risk: Saylor did say they will "probably sell some bitcoin to pay a dividend" — if an STRC preferred dividend date lands before May 31 and is funded by a disclosed sale, it resolves YES.
+**Token: XLM (Stellar)** — HIGH conviction, signal 10/10
+- $0.1818 (+21.6% 24h / +26.6% 7d) vs BTC -5.1%/7d, ETH -6.2%/7d
+- mcap $6.09B, vol $1.13B (vmc 0.19)
+- Catalyst: DTCC + Stellar Development Foundation 2026-05-27 announcement to tokenize DTC-custodied assets (Russell 1000, ETFs, US Treasuries) on Stellar, H1 2027 rollout
+- Risk: institutional tokenization pilots routinely slip (JPM Onyx, DTCC Project Ion precedents); 7-month rollout = fade window
 
-sources: cg=ok, dex=ok, poly=ok
-not financial advice — pattern-matching only
+**Market: "Starmer out by June 30, 2026?"** — MEDIUM, edge ~7pp
+- YES 17.5¢, 24h vol $67k, resolves 2026-06-30
+- Fair YES ~10% (20% Labour-MP threshold is a procedural wall; Truss-precedent says 33-day windows favor PM survival)
+- Lean NO at 17.5¢; live variable is the resignation cascade
+
+**Dedup**: 7-day prior was LIT + MSTR/May-31 (2026-05-21). XLM is a different token. MSTR sub-family skipped — June 30 sub-market has a new deadline but identical thesis to the May 21 pick.
+
+**Files modified**:
+- `memory/logs/2026-05-28.md` — appended Token Pick entry + `TOKEN_PICK_DEDUP: XLM | "Starmer out by June 30, 2026?"`
+- `.pending-notify/1779970920-token-pick.md` — staged for post-run delivery (sandbox blocks direct `./notify "$(cat ...)"` arg-passing, same pattern as today's morning-brief / github-trending / defi-overview)
+
+**Follow-up**: untracked `token-pick-data/` and `.token-pick-tmp/` dirs remain (sandbox blocked `rm`) — operator-side cleanup if needed, otherwise inert.
+
+**Sources** (XLM catalyst):
+- [Why Is Stellar (XLM) Up Today While the Crypto Market Crashes?](https://www.cryptotimes.io/2026/05/28/why-is-stellar-xlm-up-today-while-the-crypto-market-crashes/)
+- [Stellar (XLM) Surges 14% as Landmark DTCC Tokenization Partnership Validates Enterprise Utility — FinanceFeeds](https://financefeeds.com/stellar-xlm-surges-14-as-landmark-dtcc-tokenization-partnership-validates-enterprise-utility/)
+
+**Sources** (Starmer crisis):
+- [2026 United Kingdom government crisis — Wikipedia](https://en.wikipedia.org/wiki/2026_United_Kingdom_government_crisis)
+- [Keir Starmer's party lost big in U.K. local elections — NPR](https://www.npr.org/2026/05/10/nx-s1-5817491/uk-elections-keir-starmer-resign-reform-green)
+- [Labour MP Starmer resignation tracker — LabourList](https://labourlist.org/2026/05/labourlist-labour-mp-starmer-resignation-tracker/)
