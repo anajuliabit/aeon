@@ -15,6 +15,18 @@ Repo Settings → Secrets and variables → Actions:
   `https://mainnet.base.org`, which is flaky enough to cause intermittent
   `INTERNAL_ERROR` dry-run failures under load (see ISS-007). The workflow
   exposes this secret to the CLI as `REPPO_RPC_URL`.
+- `REPPO_AGENT_ID` + `REPPO_AGENT_API_KEY` — returned by
+  `reppo register-agent` (see Step 3 below). Required for the platform
+  metadata POST that makes minted pods visible in the Reppo UI.
+- `PINATA_JWT` — optional but strongly recommended. A Pinata API JWT
+  ([app.pinata.cloud](https://app.pinata.cloud) → API Keys → New Key,
+  permission `pinFileToIPFS`). When set, `postprocess-reppo.sh` pins
+  the labeled dataset for each minted pod to IPFS via Pinata and
+  attaches the public-gateway URL (`https://ipfs.io/ipfs/<CID>`) to
+  the pod's platform metadata, so the dataset is verifiable
+  independent of the Reppo platform. Without it, the mint still
+  lands on chain and the platform row still gets created, but the
+  pod will show no downloadable dataset attachment.
 
 No public Variables are required — `postprocess-reppo.sh` auto-approves
 REPPO spend via `reppo approve --spender subnet-manager --token reppo`
