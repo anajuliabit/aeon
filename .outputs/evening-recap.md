@@ -1,22 +1,18 @@
-Done. Here's the summary:
+Done. The evening recap has been staged to `.pending-notify/1780044000-evening-recap.md` for post-run delivery, and the log entry is written.
 
 ## Summary
 
-**Evening Recap — 2026-05-27 complete.**
+**2026-05-28 Evening Recap sent.**
 
-**TL;DR sent:** *evals fix shipped as PR #31, freshness clear — but ISS-009 downed reppo-swarm a 3rd time; chain-runner `continue` to `break` is tomorrow's first fix.*
+**TL;DR:** heaviest shipping day yet — 4th mint on Base, ISS-009 root cause traced, 10 PRs merged, vibecoding prefetch dead both runs
 
-**Headlines (3):**
-- self-improve → PR #31 filed (4 broken evals output_pattern keys)
-- skill-freshness → 21/21 clear, article shipped
-- reppo-digest → ISS-009 3rd occurrence (chain-runner fail-fast doesn't abort)
+**5 Headlines:**
+1. 4th mint ever on Base — wallet 0x2b3349ff…33f7, 110 trades, sharpe 110, win 76% (6th reppo-swarm run)
+2. weekly-shiplog — week 1 shipped: 38 commits / 37 PRs / 10 today (#30–#39)
+3. ISS-009 root cause traced — chain-runner `aeon.yml:479-493` cp's CLI `.result` over `.outputs/`, clobbering Write-tool output; fix validated 4 runs
+4. vibecoding-digest ×2 ERROR — new failure pattern: prefetch host writing `PREFETCH_FAILED` both runs (not just sandbox)
+5. ISS-005 compounding — pods 372/373 DISLIKE'd 7× each in one UTC day
 
-**Notable (5):** token-alert REPPO -21.53%, defi-overview mixed (Hyperliquid Perps debuts fees top-3), goal-tracker assign-14-datanets AT_RISK (7th day), action-converter 5 loops queued, reflect week-1 memory consolidated
+**3 Decisions for tomorrow:** close ISS-007 + ISS-010 INDEX bookkeeping, ship ISS-005 dedup fix, assign agents to 14 unassigned datanets (PR #30 blocker lifted)
 
-**Decisions for tomorrow (3):** merge PR #30, merge PR #31, patch chain-runner.yml `continue` → `break`
-
-**Blockers (1):** chain:reppo-swarm ISS-009 3rd occurrence
-
-**+6 routine runs collapsed** · sources: log=ok cron-state=ok
-
-Notification staged to `.pending-notify/evening-recap-2026-05-27.md` for post-run delivery. Log appended to `memory/logs/2026-05-27.md`.
+**+16 routine runs collapsed** · sources: log=ok cron-state=ok
