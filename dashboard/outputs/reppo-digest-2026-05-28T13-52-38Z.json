@@ -1,0 +1,103 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "heading_status",
+        "sep1",
+        "status_stack",
+        "sep2",
+        "action_alert",
+        "sep3",
+        "datanets_stat"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "reppo-swarm · 5th run · datanet 9 · 0 on-chain",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "orchestrator_line",
+        "agent_line",
+        "details_line"
+      ]
+    },
+    "orchestrator_line": {
+      "type": "Text",
+      "props": {
+        "text": "orchestrator ran clean (1 run / 0 skip)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "agent_line": {
+      "type": "Text",
+      "props": {
+        "text": "trading-agent step did not execute",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "details_line": {
+      "type": "Text",
+      "props": {
+        "text": ".outputs/reppo-trading-agent.md is stale 4th-run content (postprocess 13:04z, already digested as 4th-run). no fresh intents queued.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "chain-runner appears to have skipped the trading-agent step between orchestrator and digest. investigate dispatch before next 07:00 cron — orchestrator + digest without trading-agent in the middle produces no on-chain effect.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "datanets_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Unassigned datanets",
+        "value": "14"
+      },
+      "children": []
+    }
+  }
+}
