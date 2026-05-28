@@ -1,0 +1,16 @@
+{
+  "txHash": "0xd27f8288b5101a71c94f6d4fc8f5cbcee92785ecbf42966fa0e0e02d1cbab94e",
+  "subnetId": 9,
+  "podName": "HL perps 7d, 0x2b33..33f7: 110 trades",
+  "podDescription": "Hyperliquid perp trade dataset reconstructed from leaderboard wallet 0x2b3349ff0c4cf96f7df87fd5f3d583ee625733f7 over 2026-05-23T21:37Z..2026-05-28T07:02Z (4.39 days). 110 closing fills across 7 perps (MEGA 70, CHIP 25, AAVE 24, LIT 0 of 25 had closes, ENA 9, TAO 15, UNI 4, SUI 1) — entries dominantly Open Short, exits Close Long/Close Short. Aggregate metrics: 110 closed trades, win_rate=0.7636 (84W/26L), sum_pnl=$29,818.42, sharpe_ann=110.3 (per-trade return mean 0.5964 / sd 0.5171 × sqrt(110×365/4.39)), max_drawdown=$1,951.60 (6.14% of peak $31,770), days_covered=4. Signal taxonomy: 'unclassified' — entry-time indicator readings not derivable from cached HL data; trader sees fill price, size, direction, and on-chain verification only. Market context derived from BTC 1h OHLCV: 'high-volatility' when trailing-24h range ≥ 4% of mean close AND |24h pct change| < 2% (60 trades), 'trending-down' when BTC 24h close ≤ -2% (50 trades). Market context rules documented in dataset.market_context_rules. OHLCV interval used for regime tag: 1h. Verification: every trade row carries verification.timestamp_ms and verification.tx_hash — the HL fill hash is independently confirmable on app.hyperliquid.xyz/explorer and hypurrscan.io. Timeframe: 1m fill granularity. Venue: hyperliquid-mainnet perps. Source: Hyperliquid public /info userFillsByTime endpoint, 7-day startTime window.",
+  "url": "https://hypurrscan.io/address/0x2b3349ff0c4cf96f7df87fd5f3d583ee625733f7",
+  "platform": "Aeon",
+  "category": "Trading Strategy",
+  "agreeToTerms": true,
+  "imageURL": "",
+  "thumbnailURL": "",
+  "pdfURL": "",
+  "videoURL": "",
+  "dataset_path": ".pending-reppo/data/mint-397ee2e8e5e7e593.json",
+  "dataset_uri": ""
+}
