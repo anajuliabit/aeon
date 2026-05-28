@@ -1,21 +1,17 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md
+Heartbeat run complete.
 
 ## Summary
 
-Ran the 08:00 heartbeat (fired ~1h32m late at 09:32 UTC).
+**HEARTBEAT_OK · STATUS_PAGE=DEGRADED**
 
-**P0:** `chain:reppo-swarm` last_status=failed at 08:07Z — **ISS-009 4th occurrence today**, already documented in today's `reppo-trading-agent` and `reppo-digest` log entries. Deduped, no new notification. All other 31 cron-state entries clean. Heartbeat self-check healthy (last_success 13h29m ago).
+- **P0**: `chain:reppo-swarm` last_status=failed at 13:53Z — 5th chain failure today, tied to open ISS-009 + the trading-agent-step-skip variant logged in today's reppo-digest 5th-run entry. Deduped.
+- **P1**: 0 open PRs (down from 3 at 09:32 heartbeat). PRs #30, #31, #32 all merged in a 5-minute window at 12:05–12:09 UTC. 0 urgent issues.
+- **P2**: 4 open issues — ISS-005, ISS-007, ISS-009 (5th occurrence today), ISS-010 (PR #32 merged at 12:09Z but INDEX.md still shows open — bookkeeping for action-converter). All ≤24h.
+- **P3**: No missing scheduled skills (search-skill @ 14:00 past-due ~54m, under 2x threshold).
+- **Notable**: PR #30 prefetch widening landed but 4th-run trading-agent confirmed HL cap is on the *response* not the *query window* — wallet-selection refinement needed.
+- **Status page**: wrote `docs/status.md` — verdict 🔴 DEGRADED, 29 enabled skills, 4 open issues, next run agent-buzz @ 17:30 UTC.
+- **No notification** sent — every flag deduped against earlier entries today.
 
-**P1:** 3 open PRs — #30 (~34h, crossed 24h stalled threshold but flagged in this morning's morning-brief as Focus 1 → deduped), #31 (~15h, fresh), **#32 (NEW, ~1h28m, fix(scheduler) for new ISS-010 phantom skill dispatch)**. 0 urgent issues.
-
-**P2:** 3 open issues (ISS-005, ISS-007, ISS-009) — all flagged ≤24h in today's logs. Noted that PR #32 references a new ISS-010 but `memory/issues/ISS-010.md` and INDEX.md aren't updated yet (likely landing with the PR).
-
-**P3:** Cron run-through clean — chain ran, morning-brief ran, skill-freshness past-due ~1h32m but under 48h threshold. Today is Thursday, day 28 even → self-improve does NOT fire today; skill-analytics is Wed-only → also NO.
-
-**Status page** regenerated: 🔴 DEGRADED (P0 chain failure), 21 enabled skills sorted by last-run desc, 3 open issues. Next scheduled run: token-alert @ 12:00 UTC. Token pulse omitted (no `articles/token-report-*.md`).
-
-**Files modified:**
-- `docs/status.md` — regenerated with current health
-- `memory/logs/2026-05-28.md` — appended heartbeat entry
-
-**No notification sent** (everything deduped within 48h window).
+**Files modified**:
+- `docs/status.md` (regenerated, auto-committed by workflow)
+- `memory/logs/2026-05-28.md` (heartbeat 14:00-slot entry appended)
