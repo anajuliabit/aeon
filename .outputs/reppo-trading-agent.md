@@ -1,9 +1,8 @@
 Skipped: no orchestrator plan available
 
 ## Summary
-- Step 1 gate failed: chain-passed `.outputs/reppo-orchestrator.md` contains only the `## Summary` section with no fenced ```reppo-plan``` block, so no `reppo-trading-agent:` line could be read.
-- The orchestrator's own summary asserts "fenced `reppo-plan` block emitted at the top with `^reppo-plan$` on its own line" but the chain output disagrees — this is ISS-009's 3rd occurrence (1st 2026-05-26 morning, 2nd 2026-05-26 evening, 3rd now). PR #24's prompt-tightening is insufficient; the workflow-level grep guard in `chain-runner.yml` on `.outputs/reppo-orchestrator.md` remains the escalation path.
-- 0 mint intents written, 0 vote intents written. No `.pending-reppo/` directory created. `## Execution Results` will be appended by `scripts/postprocess-reppo.sh` (will be empty since no intents exist).
-- Log entry appended to `memory/logs/2026-05-27.md` under `### reppo-trading-agent`.
-- Files modified: `memory/logs/2026-05-27.md`.
-- Follow-up: ISS-009 needs a durable fix (workflow-level fenced-block presence check in chain-runner.yml that fails the orchestrator step if the block is missing, forcing a retry rather than silently propagating a broken hand-off).
+- **Gate decision**: SKIP at Step 1. `.outputs/reppo-orchestrator.md` has only a narrative `## Summary` section — no fenced ```reppo-plan``` block.
+- **Strategies minted**: 0 (nothing queued to `.pending-reppo/`).
+- **Pods voted on**: 0.
+- **Files modified**: `memory/logs/2026-05-28.md` (appended `### reppo-trading-agent` SKIP entry).
+- **Follow-ups**: This is the **4th ISS-009 occurrence** and the 1st after the orchestrator's PR-#27 workaround (write fenced block directly via Write tool). The orchestrator's own narrative claims the block is "the very first content" of the file, but the file as captured/passed through the chain still lacks it — strongly suggests the truncation is happening in chain-runner's `.outputs/` capture step (or a downstream rewrite), not in the orchestrator's emission. Re-open ISS-009 with this evidence; the `continue` → `break` change to `chain-runner.yml`'s fail-fast branch is now the only escalation that hasn't been tried.
