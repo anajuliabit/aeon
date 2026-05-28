@@ -496,7 +496,9 @@ jobs:
             MAX_UPDATE_ID=""
 
             for ((i=0; i<COUNT; i++)); do
-              TEXT=$(echo "$RESPONSE" | jq -r ".result[$i].message.text // empty")
+              # Photo/document messages carry the caption instead of text — fall back so
+              # image-with-instruction messages aren't silently dropped.
+              TEXT=$(echo "$RESPONSE" | jq -r ".result[$i].message.text // .result[$i].message.caption // empty")
               CHAT=$(echo "$RESPONSE" | jq -r ".result[$i].message.chat.id // empty")
               UPDATE_ID=$(echo "$RESPONSE" | jq -r ".result[$i].update_id // empty")
 
