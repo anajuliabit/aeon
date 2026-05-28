@@ -30,28 +30,28 @@ Fields to keep per post: `id`, `title`, `selftext`, `score`, `num_comments`, `up
 
 ### 1. Fetch three sorts
 
+Read pre-fetched JSON from `.vc-cache/` (staged by `scripts/prefetch-vibecoding.sh` outside the sandbox, where Reddit isn't IP-blocked). Each file is either a Reddit `Listing` or an error-marker `{"error":"…","code":"PREFETCH_FAILED"}`.
+
 ```bash
 TIME_WINDOW="${var:-day}"
 case "$TIME_WINDOW" in day|week|month) ;; *) TIME_WINDOW="day" ;; esac
-UA="web:aeon-vibecoding-digest:1.0 (by /u/aeonbot)"
 
-mkdir -p /tmp/vc
 STATUS_TOP=fail STATUS_HOT=fail STATUS_RISING=fail
 
-curl -fsSL -H "User-Agent: $UA" \
-  "https://old.reddit.com/r/vibecoding/top.json?t=$TIME_WINDOW&limit=30" \
-  -o /tmp/vc/top.json && STATUS_TOP=ok
+# Treat a cache file as ok iff it exists, parses as JSON, and is a Reddit Listing
+# (not the prefetch error marker).
+ok() { [ -f "$1" ] && jq -e '.code != "PREFETCH_FAILED" and .kind == "Listing"' "$1" >/dev/null 2>&1; }
 
-curl -fsSL -H "User-Agent: $UA" \
-  "https://old.reddit.com/r/vibecoding/hot.json?limit=30" \
-  -o /tmp/vc/hot.json && STATUS_HOT=ok
-
-curl -fsSL -H "User-Agent: $UA" \
-  "https://old.reddit.com/r/vibecoding/rising.json?limit=15" \
-  -o /tmp/vc/rising.json && STATUS_RISING=ok
+ok .vc-cache/top.json    && STATUS_TOP=ok
+ok .vc-cache/hot.json    && STATUS_HOT=ok
+ok .vc-cache/rising.json && STATUS_RISING=ok
 ```
 
-If a curl fails, **fall back to WebFetch** on the same URL (the sandbox may block curl but not WebFetch). If all three endpoints fail after fallback, notify `VIBECODING_DIGEST_ERROR: all Reddit endpoints failed` and log to today's log; exit.
+Downstream steps read the same files at `.vc-cache/top.json` / `hot.json` / `rising.json`.
+
+If a cache file is missing or an error marker, **fall back to WebFetch** on the same Reddit URL (`https://old.reddit.com/r/vibecoding/{top|hot|rising}.json?…`). Save the JSON into the same `.vc-cache/` path on success and flip the matching `STATUS_*` to `ok`. If all three endpoints fail after fallback, notify `VIBECODING_DIGEST_ERROR: all Reddit endpoints failed` and log to today's log; exit.
+
+If `.vc-cache/meta.json` exists and its `window` doesn't match `$TIME_WINDOW`, treat `top.json` as missing and WebFetch it fresh — the prefetch was run for a different window.
 
 ### 2. Merge, dedupe, filter
 
@@ -191,7 +191,7 @@ If any post surfaces a take or insight relevant to topics tracked in `MEMORY.md`
 
 ## Sandbox note
 
-The sandbox may block outbound curl. If curl fails, use **WebFetch** on the same URL as a fallback — WebFetch bypasses the sandbox. If all three Reddit endpoints fail even via WebFetch, emit `VIBECODING_DIGEST_ERROR` to notify, log the failure, and exit. No auth is required, so no pre-fetch/post-process pattern is needed.
+Reddit blocks the GitHub Actions sandbox's datacenter IPs (403 on curl, intermittent failures on WebFetch). To work around this, `scripts/prefetch-vibecoding.sh` runs **before** Claude starts on the runner host (full network) and stages top/hot/rising JSON to `.vc-cache/`. The skill reads from `.vc-cache/` first and only falls back to WebFetch if a cache file is missing or contains the `{"code":"PREFETCH_FAILED"}` marker. If all three endpoints fail after fallback, emit `VIBECODING_DIGEST_ERROR`, log the failure, and exit.
 
 ## Output codes
 

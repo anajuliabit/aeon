@@ -21,6 +21,7 @@
 .tg_cache/
 .reppo-cache/
 .pending-reppo/
+.vc-cache/
 
 # Skill provenance lock (per-repo, not committed)
 skills.lock
