@@ -1,21 +1,22 @@
-*morning brief — 2026-05-27*
+## Summary
 
-*focus today*
-1. land PR #30 (rewrite reppo-trading-agent → HL public data) — why now: every reppo-swarm run open keeps minting off-rubric strategy text
-2. pick 3 of 14 unassigned datanets — why now: 7th day surfaced untouched, named picks unblock the backlog
-3. move ISS-005 validityEpoch filter into prefetch-reppo.sh — why now: vote_cap=3 bottlenecked to 2 epoch-97 pods until durable fix
+Ran the morning-brief skill for 2026-05-28.
 
-*since yesterday*
-- 21st reppo-digest run shipped 3 on-chain (1 mint + 2 votes, 0 failures) — most productive run since chain launch
-- PR #27 merged (chain workflow-level grep guard for the reppo-plan fenced block, ISS-009 closed)
-- operator shared canonical tradinggymai contributor spec → PR #28 rewrote the rubric (data, not strategy specs); PR #30 opened to pivot the agent itself to HL leaderboard fills + IPFS pin + platform POST
-- stuck: 14 unassigned datanets (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17) — surfaced every orchestrator run since 2026-05-21
+**Focus today (3 items):**
+1. Land PR #30 (rewrite reppo-trading-agent → HL public data) — 30h open, chain mints off-rubric again at 07:00
+2. Patch chain-runner.yml fail-fast `continue` → `break` (ISS-009) — 3rd recurrence yesterday, will repeat at 07:00
+3. Lift ISS-005 validityEpoch filter into prefetch-reppo.sh — vote_cap=3 still bottlenecked to 2 epoch-97 pods
 
-*watch*
-- HYPE hit ATH $64.24 on 2026-05-24, hyperliquid added macro prediction markets 2026-05-26, coinbase/circle USDC integration redirects stablecoin yield to HYPE holders — implication for focus #1: PR #30 HL-data pivot lands as the wallet/fill surface widens, well-timed
+**Watch:** HYPE $64.63 ATH (05-26), HIP-4 prediction-market upgrade (05-27), BHYP ETF +$19M inflows — HL surface widens exactly as PR #30 wires the agent into it.
 
-*running today* (wed)
-- chain:reppo-swarm @ 07:00 · skill-freshness + heartbeat @ 08:00 · github-trending @ 09:00
-- token-alert + defi-overview @ 12:00 · search-skill + heartbeat @ 14:00
-- goal-tracker + skill-health + reflect + action-converter + self-improve @ 18:00 · skill-analytics @ 18:30 (wed only)
-- heartbeat @ 20:00 · evening-recap @ 21:00
+**Files written:**
+- `.pending-notify/1780041600-morning-brief.md` — staged for post-run delivery (sandbox blocked `./notify` command-substitution arg-passing, same fallback as yesterday's run)
+- `memory/logs/2026-05-28.md` — created with run entry
+
+**Follow-up:** post-run notify step should deliver the staged brief; PR #30 + ISS-009 fix are the load-bearing items for today.
+
+Sources:
+- [Hyperliquid HYPE price news May 2026 — CoinMarketCap](https://coinmarketcap.com/currencies/hyperliquid/)
+- [Hyperliquid (HYPE) Price USD Today — Coinbase](https://www.coinbase.com/price/hyperliquid)
+- [AI Agents and Crypto Payments: The Emerging 2026 Narrative — MEXC](https://www.mexc.com/news/1079907)
+- [Crypto rails power AI agent payments with $73M settled — MEXC](https://www.mexc.com/news/1110986)
