@@ -172,5 +172,18 @@ Use Replicate's Nano Banana Pro (Gemini 3 Pro Image). It renders **text labels w
 
 The sandbox may block outbound curl. Use **WebFetch** as a fallback for any URL fetch. For the Replicate call (auth-required via env var), if the inline curl fails, write the request payload to `.pending-replicate/explainer-${today}.json` and rely on the post-process pattern documented in `CLAUDE.md` (`scripts/postprocess-replicate.sh` runs after Claude finishes with full env access). Continue down the no-image path so the article still ships.
 
+**Pending request file shape** — `scripts/postprocess-replicate.sh` reads flat top-level keys (NOT the nested `{"input": {...}}` shape used in the inline curl above). Write exactly:
+
+```json
+{
+  "prompt": "<your detailed image prompt>",
+  "aspect_ratio": "16:9",
+  "output_path": "images/explainer-${today}.jpg",
+  "model": "google/nano-banana-pro"
+}
+```
+
+`prompt` and `output_path` are required. `aspect_ratio` defaults to `16:9` and `model` defaults to `google/nano-banana-pro`. The post-processor wraps these into the Replicate `input` envelope itself — do not pre-nest.
+
 ## Environment Variables
 - `REPLICATE_API_TOKEN` — Replicate API key. Optional: explainer text works without it via the no-image path.
