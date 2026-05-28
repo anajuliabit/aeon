@@ -1,17 +1,9 @@
-Per the skill's pre-flight step 3, when the registry is empty I stop without notifying. No state file write needed (Health Check mode is not entered).
-
 ## Summary
 
-Executed `fleet-control` in default Health Check Mode.
+Ran `fleet-control` in default Health Check Mode (empty var). Pre-flight checks passed: gh auth OK (anajuliabit), rate limit 4955 remaining. Registry `memory/instances.json` is `{"instances": []}` — no managed instances.
 
-**Pre-flight results:**
-- `gh auth status` → OK (active account `anajuliabit`)
-- Rate limit: 4787 remaining (well above 50 threshold)
-- `memory/instances.json` → `{"instances": []}` (empty registry)
+Per the skill spec, this triggers `FLEET_EMPTY`: log and silent-stop, no notification. Appended a `## fleet-control (health check, 15:00 slot)` entry to `memory/logs/2026-05-28.md` noting it's the 2nd `FLEET_EMPTY` of the day (09:00 slot ran identically at 12:28Z).
 
-**Outcome:** `FLEET_EMPTY` — silent stop per skill spec. No notification sent (per `Stop. Do NOT notify.` for empty `.instances`).
-
-**Files modified:**
-- `memory/logs/2026-05-28.md` — appended fleet-control health-check log entry
-
-**Follow-up:** None until an instance is registered in `memory/instances.json`. The state file (`memory/state/fleet-control-state.json`) was intentionally not created because Health Check Mode was never entered — the spec only mandates state-file initialization once past the empty-registry stop gate (step 4).
+**Files modified:** `memory/logs/2026-05-28.md` (append-only log entry).
+**Files not created:** `memory/state/fleet-control-state.json` — deferred until first instance is registered, since there's no per-instance health snapshot to persist.
+**Follow-up:** none — operator must populate `memory/instances.json` to activate the skill's monitoring/dispatch paths.
