@@ -6,7 +6,21 @@
 #
 # Endpoints used (all public, no auth):
 #   - https://stats-data.hyperliquid.xyz/Mainnet/leaderboard
-#   - https://api.hyperliquid.xyz/info  (POST userFills / candleSnapshot)
+#   - https://api.hyperliquid.xyz/info  (POST userFillsByTime / candleSnapshot)
+#
+# Why userFillsByTime (not userFills): HL's /info endpoint caps every
+# `userFills` response at 2000 rows, returning the 2000 MOST RECENT
+# fills regardless of how long ago they happened. For top-leaderboard
+# wallets (often >2000 fills/day), this collapses the slice to <1 day
+# of span — below the rubric's ≥7-day floor, so every wallet gets
+# rejected at the gate. `userFillsByTime` accepts `startTime` (ms
+# epoch) and returns fills since that timestamp, ascending by time,
+# so a 7d startTime yields a full-window slice for wallets that
+# trade ≤2000 fills in 7d (the rubric's target — directional
+# traders, not market-makers). High-frequency MMs (>2000/7d) still
+# get capped, but the resulting <7d span correctly disqualifies
+# them from the rubric anyway. See reppo-swarm 2nd run digest
+# (2026-05-28) for the original diagnosis.
 #
 # On any read failure an error-marker JSON is written so the skill
 # detects the failure and degrades gracefully via its WebFetch fallback.
@@ -19,6 +33,7 @@ mkdir -p "$CACHE_DIR"
 # Tunable knobs (env-overridable so the workflow can dial them).
 HL_TOP_N="${HL_TOP_N:-10}"               # how many leaderboard wallets to pull fills for
 HL_WINDOW="${HL_WINDOW:-week}"           # leaderboard window: day|week|month|allTime
+HL_FILLS_DAYS="${HL_FILLS_DAYS:-7}"      # userFillsByTime window: matches rubric's ≥7-day floor
 HL_OHLCV_COINS="${HL_OHLCV_COINS:-BTC ETH SOL}"  # coins to snapshot
 HL_OHLCV_INTERVAL="${HL_OHLCV_INTERVAL:-1h}"
 HL_OHLCV_DAYS="${HL_OHLCV_DAYS:-30}"
@@ -56,16 +71,22 @@ if jq -e . "$CACHE_DIR/leaderboard.json" >/dev/null 2>&1 \
     ' "$CACHE_DIR/leaderboard.json" 2>/dev/null
   )
 
+  # Window start for userFillsByTime — same ms epoch shared across all
+  # wallet pulls so the slice is consistent within a single run.
+  fills_now_ms=$(($(date +%s) * 1000))
+  fills_start_ms=$((fills_now_ms - HL_FILLS_DAYS * 86400 * 1000))
+
   for addr in "${TOP_ADDRS[@]}"; do
     [ -n "$addr" ] || continue
-    echo "hl-prefetch: fetching userFills for $addr..."
-    body=$(printf '{"type":"userFills","user":"%s","aggregateByTime":false}' "$addr")
+    echo "hl-prefetch: fetching userFillsByTime for $addr (last ${HL_FILLS_DAYS}d)..."
+    body=$(printf '{"type":"userFillsByTime","user":"%s","startTime":%d,"aggregateByTime":false}' \
+                  "$addr" "$fills_start_ms")
     if ! curl -fsS --max-time 60 \
          -H 'Content-Type: application/json' \
          -d "$body" \
          "https://api.hyperliquid.xyz/info" \
          -o "$CACHE_DIR/user-fills-${addr}.json" 2>/dev/null; then
-      error_marker "$CACHE_DIR/user-fills-${addr}.json" "userFills $addr failed"
+      error_marker "$CACHE_DIR/user-fills-${addr}.json" "userFillsByTime $addr failed"
     fi
   done
 else
