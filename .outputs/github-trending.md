@@ -1,18 +1,14 @@
-Notification staged for delivery; log appended. Done.
+GITHUB_TRENDING_OK.
 
 ## Summary
-
-Ran the `github-trending` skill end-to-end.
-
-**Picks (3/14)** — quality over padding, all with concrete fresh hooks:
-- **Top + Devtools**: [Lum1104/Understand-Anything](https://github.com/Lum1104/Understand-Anything) — 4.7k today on 73-day-old repo, v2.7.3 in active cut. ACCELERATING. Judgment-call re-feature (last picked 5-23, outside 2-day dedupe; surge is the hook).
-- **Web/Apps**: [twentyhq/twenty](https://github.com/twentyhq/twenty) — self-hostable Salesforce alternative, v2.8.0 today + v2.7.0 yesterday. RETURNING.
-- **Other**: [st-tech/ppf-contact-solver](https://github.com/st-tech/ppf-contact-solver) — physics solver streaming live to Blender add-on. ACCELERATING.
-
-**Filter drops (10)**: 4 skill-bundles (ECC, Anthropic-Cybersecurity-Skills, stop-slop, taste-skill — same pattern as 5-26), 1 learn-X tutorial, 1 awesome-list, 1 free-domain resource, 3 stale/no-hook (jellyfin, OpenStock, claude-mem). **Dedupe**: knowledge-work-plugins (featured 5-25).
-
-**Files**:
-- Created `.pending-notify/1779000-github-trending.md` — picked up by workflow post-run delivery step.
-- Appended `### github-trending` entry to `memory/logs/2026-05-27.md`.
-
-**Exit**: `GITHUB_TRENDING_OK` · sources: trending=ok · gh_api=ok.
+- **Picked 3/17** from today's GitHub trending (var: none):
+  - **TOP** — `harry0703/MoneyPrinterTurbo` (ACCELERATING) — v1.2.8 today ends 8-week dormancy, 22x surge over baseline.
+  - `p-e-w/heretic` (ACCELERATING, judgment-call keep) — fully-automatic decensoring of open-weight LLMs via weight-transform-only approach.
+  - `iii-hq/iii` (ACCELERATING) — Rust service composition + observability, cutting 0.16.0-next prereleases on a same-day cadence, 11x velocity.
+- **Buckets**: AI/ML (2), Infra (1). No "Other" needed.
+- **Deduped 2** within strict 2-day window: `Lum1104/Understand-Anything`, `twentyhq/twenty` (both featured 2026-05-27).
+- **Filter drops 12** — 6 skill bundles (stop-slop, ECC, taste-skill, Anthropic-Cybersecurity-Skills, claude-code-harness, superpowers) persist as the noise floor for the 5th day; ECC + superpowers extreme totals don't beat the pattern. Other drops: free-* / awesome-* / learn-X, plus dedupe-window-outside repos with no fresh hook (Kronos 45-day stale push, airi flat baseline, knowledge-work-plugins no new release).
+- **Files**:
+  - Notification staged to `.pending-notify/1779960813-github-trending.md` (sandbox-blocked `./notify` arg-passing — same pattern as morning-brief + defi-overview; post-run delivery step picks it up).
+  - Log entry appended to `memory/logs/2026-05-28.md` under `### github-trending`.
+- **Exit**: `GITHUB_TRENDING_OK`. Sources: trending=ok · gh_api=ok · kept 3/17.
