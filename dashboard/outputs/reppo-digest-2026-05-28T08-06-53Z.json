@@ -1,0 +1,147 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header-badges",
+        "separator-1",
+        "skipped-section",
+        "separator-2",
+        "datanets-section"
+      ]
+    },
+    "header-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-1",
+        "badge-2",
+        "badge-3",
+        "badge-4"
+      ]
+    },
+    "badge-1": {
+      "type": "Badge",
+      "props": {
+        "text": "reppo-swarm",
+        "variant": "default"
+      }
+    },
+    "badge-2": {
+      "type": "Badge",
+      "props": {
+        "text": "1st run",
+        "variant": "secondary"
+      }
+    },
+    "badge-3": {
+      "type": "Badge",
+      "props": {
+        "text": "datanet 9",
+        "variant": "default"
+      }
+    },
+    "badge-4": {
+      "type": "Badge",
+      "props": {
+        "text": "0 on-chain",
+        "variant": "secondary"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skipped-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skipped-heading",
+        "trading-agent-block"
+      ]
+    },
+    "skipped-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "skipped",
+        "level": "h3"
+      }
+    },
+    "trading-agent-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trading-agent-name",
+        "issue-alert",
+        "action-block"
+      ]
+    },
+    "trading-agent-name": {
+      "type": "Text",
+      "props": {
+        "text": "trading-agent · MISSING_REPPO_PLAN_BLOCK"
+      }
+    },
+    "issue-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-009 — 4th occurrence",
+        "type": "warning"
+      }
+    },
+    "action-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-label",
+        "action-detail"
+      ]
+    },
+    "action-label": {
+      "type": "Text",
+      "props": {
+        "text": "action:",
+        "variant": "lead"
+      }
+    },
+    "action-detail": {
+      "type": "Text",
+      "props": {
+        "text": "chain-runner fail-fast `continue` → `break` in `.github/workflows/chain-runner.yml`. PR #24 prompt-tightening, PR #27 workflow grep guard, and the orchestrator Write-tool workaround all failed — the truncation point is downstream of orchestrator emission.",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets-section": {
+      "type": "Stat",
+      "props": {
+        "label": "datanets unassigned",
+        "value": "14"
+      }
+    }
+  }
+}

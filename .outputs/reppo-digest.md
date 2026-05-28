@@ -1,7 +1,7 @@
 reppo-swarm · 1st run · datanet 9 · 0 on-chain
 
-blocked
-  trading-agent skipped — orchestrator output had no fenced reppo-plan block (iss-009 3rd occurrence)
-         action: pr #27's chain-runner validator merged last night but didn't fail this orchestrator step — check workflow run logs to see why the guard let a blockless output through
+skipped
+  trading-agent · MISSING_REPPO_PLAN_BLOCK (ISS-009 — 4th occurrence)
+         action: chain-runner fail-fast `continue` → `break` in `.github/workflows/chain-runner.yml`. PR #24 prompt-tightening, PR #27 workflow grep guard, and the orchestrator Write-tool workaround all failed — the truncation point is downstream of orchestrator emission.
 
 14 datanets unassigned.
