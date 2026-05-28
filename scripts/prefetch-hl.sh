@@ -33,7 +33,8 @@ mkdir -p "$CACHE_DIR"
 # Tunable knobs (env-overridable so the workflow can dial them).
 HL_TOP_N="${HL_TOP_N:-10}"               # how many leaderboard wallets to pull fills for
 HL_WINDOW="${HL_WINDOW:-week}"           # leaderboard window: day|week|month|allTime
-HL_FILLS_DAYS="${HL_FILLS_DAYS:-7}"      # userFillsByTime window: matches rubric's ≥7-day floor
+HL_FILLS_DAYS="${HL_FILLS_DAYS:-7}"      # userFillsByTime startTime offset (still capped at 2000 fills/response)
+HL_MIN_VLM_USD="${HL_MIN_VLM_USD:-100000}"  # noise floor: skip wallets with <$100k vlm in HL_WINDOW
 HL_OHLCV_COINS="${HL_OHLCV_COINS:-BTC ETH SOL}"  # coins to snapshot
 HL_OHLCV_INTERVAL="${HL_OHLCV_INTERVAL:-1h}"
 HL_OHLCV_DAYS="${HL_OHLCV_DAYS:-30}"
@@ -50,22 +51,36 @@ if ! curl -fsS --max-time 60 \
   error_marker "$CACHE_DIR/leaderboard.json" "leaderboard fetch failed"
 fi
 
-# 2. Top-N wallets by chosen window PnL.
+# 2. Top-N wallets ranked by margin (pnl / vlm) — biases toward
+# directional alpha, away from high-frequency churn. Top-PnL alone
+# surfaces mostly HFT/MM wallets that hit the 2000-row response cap
+# in <1 day, so the rubric never sees the directional traders it's
+# meant to evaluate. A wallet with $400k pnl on $1M vlm (40% margin)
+# ranks above one with $400k pnl on $10M vlm (4% margin) — the
+# former is a more concentrated directional position, the latter is
+# high-turnover. HL_MIN_VLM_USD ($100k default) filters out the
+# noise floor (low-vlm wallets where a small absolute pnl looks like
+# extreme margin).
 if jq -e . "$CACHE_DIR/leaderboard.json" >/dev/null 2>&1 \
    && ! jq -e '.code == "PREFETCH_FAILED"' "$CACHE_DIR/leaderboard.json" >/dev/null 2>&1; then
 
-  # Extract addresses ranked by the chosen window's pnl (descending, numeric).
   mapfile -t TOP_ADDRS < <(
-    jq -r --arg w "$HL_WINDOW" --argjson n "$HL_TOP_N" '
+    jq -r --arg w "$HL_WINDOW" --argjson n "$HL_TOP_N" --argjson minvlm "$HL_MIN_VLM_USD" '
       .leaderboardRows
       | map({
           addr: .ethAddress,
           pnl: ((.windowPerformances // [])
                 | map(select(.[0] == $w))
                 | (.[0][1].pnl // "0")
+                | tonumber),
+          vlm: ((.windowPerformances // [])
+                | map(select(.[0] == $w))
+                | (.[0][1].vlm // "0")
                 | tonumber)
         })
-      | sort_by(-.pnl)
+      | map(select(.vlm >= $minvlm))
+      | map(. + { margin: (.pnl / .vlm) })
+      | sort_by(-.margin)
       | .[:$n]
       | .[].addr
     ' "$CACHE_DIR/leaderboard.json" 2>/dev/null

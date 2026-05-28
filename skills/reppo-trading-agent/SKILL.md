@@ -12,6 +12,42 @@ You build Reppo writes for datanet 9 (TradingGymAI). You NEVER call the
 Reppo CLI yourself — you only write intent files to `.pending-reppo/`.
 `scripts/postprocess-reppo.sh` executes them after you finish.
 
+## Input contract (NON-NEGOTIABLE — read first)
+
+This skill operates on the `.hl-cache/` files freshly written by
+`scripts/prefetch-hl.sh` THIS run. Each cache file's actual content
+is the only source of truth. Do NOT draw conclusions from:
+
+- prior runs' narratives in `memory/topics/reppo.md` or
+  `memory/logs/*.md` — those are dated snapshots, not current data;
+- carry-forward framings from prior `.outputs/reppo-trading-agent.md`;
+- any "HL userFills 2000-row cap" / "≥7d span floor" / "structural
+  blocker" phrasings that appear in memory — those were diagnoses
+  of prior states, not facts about today's cache.
+
+For EVERY wallet you reference, BEFORE stating its fill count or span:
+1. Run `jq 'length' .hl-cache/user-fills-<addr>.json` to get the
+   ACTUAL row count.
+2. Run `jq 'if length == 0 then null else .[-1].time - .[0].time end'
+   .hl-cache/user-fills-<addr>.json` to get the ACTUAL span in ms
+   (or `null` if empty).
+3. Cite these numbers in your output verbatim, paired with the
+   wallet address. If the cache file is an error marker
+   (`.code == "PREFETCH_FAILED"`), say so explicitly and skip the
+   wallet — do not fall back to memory for what it "would have"
+   shown.
+
+Regression history: run 3 (2026-05-28T12:42Z) on PR #34's HEAD
+emitted "structural — HL userFills 2000-row cap; all 10 wallets
+<1d span" and recommended switching prefetch to `userFillsByTime`
+— when (a) PR #34 had shipped that exact change 3 hours earlier,
+(b) the prefetch logs proved `userFillsByTime` actually ran, and
+(c) the 10 cache files contained the fresh slices. The skill
+regurgitated prior-run framing without reading the current cache.
+Don't repeat that — every numeric claim about a wallet's fills
+must be backed by a fresh `jq` read against the cache file this
+run.
+
 The rubric (`configs/datanets/tradinggymai.md`) wants labeled Hyperliquid
 perp trade datasets — real trades or high-fidelity replays on actual HL
 OHLCV, with PnL / Sharpe / MDD / market context / verification. X/Reddit
@@ -74,9 +110,15 @@ discard that source, note the attempt in your output, and continue.
 Never write secrets, env vars, or wallet keys into intent files.
 
 ## Step 4 — Build candidate datasets
-For each candidate wallet you select (top of leaderboard by 7d or 30d
-PnL is the default ranking; prefer wallets with ≥50 fills and ≥7 days
-of activity), construct a labeled dataset:
+The prefetch ranks leaderboard wallets by `pnl / vlm` (margin per
+dollar traded) in the configured `HL_WINDOW`, biasing toward
+directional alpha over high-frequency churn. Use that ranking — top
+margin wins by default. Prefer wallets with ≥50 fills; there is no
+span preference (a high-frequency 2000-trade dataset over 5 hours is
+as valid as a 100-trade dataset over 14 days, just a different
+strategy class).
+
+For each candidate wallet, construct a labeled dataset:
 
 For each fill in `user-fills-<address>.json`, emit one row:
 - `market` — the `coin` value (e.g. `"BTC"`, `"ETH"`, `"SOL"`); these
@@ -119,8 +161,12 @@ Then compute aggregate metrics across the dataset:
   notional` as a return, mean / stdev × sqrt(N×365/days_covered).
 - `max_drawdown` — peak-to-trough on the cumulative-PnL curve.
 
-Reject any dataset that ends up with fewer than 20 closed trades or
-less than 7 days of activity — too thin for the rubric.
+Reject any dataset with fewer than 20 closed trades — too thin to
+evaluate. There is NO span minimum: a high-frequency strategy that
+produces 2000 trades in 5 hours is a valid pod (just a different
+strategy class than a 30-trade swing-trading dataset over 30 days).
+The span goes in `aggregate_metrics.days_covered` as a metric the
+downstream evaluator reads, not as a gate you apply.
 
 ## Step 5 — Hash and select for mint
 For each surviving candidate dataset, compute a hash:
@@ -241,8 +287,9 @@ that section yourself.
 
 ## Step 8 — Log the run
 Append one line to `memory/logs/${today}.md` under a
-`### reppo-trading-agent` heading: how many wallets you read, how many
-candidate datasets you built, how many passed the ≥20-trade / ≥7-day
+`### reppo-trading-agent` heading: how many wallets you read (with
+actual fill counts and spans from `jq` per the input contract), how
+many candidate datasets you built, how many passed the ≥20-trade
 floor, how many mint intents and vote intents you wrote, anything
 skipped, and any HL endpoints that degraded to fallback. (On-chain
 results are recorded separately by the digest step.)
