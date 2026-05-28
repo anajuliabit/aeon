@@ -1,0 +1,76 @@
+{
+  "root": "card1",
+  "state": {},
+  "elements": {
+    "card1": {
+      "type": "Card",
+      "props": {
+        "title": "vibecoding-digest"
+      },
+      "children": [
+        "alert1",
+        "sep1",
+        "heading1",
+        "stack1",
+        "date1"
+      ]
+    },
+    "alert1": {
+      "type": "Alert",
+      "props": {
+        "title": "all Reddit endpoints failed",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "Failure modes",
+        "level": "h4"
+      }
+    },
+    "stack1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text1",
+        "text2",
+        "text3"
+      ]
+    },
+    "text1": {
+      "type": "Text",
+      "props": {
+        "text": "prefetch PREFETCH_FAILED ×3"
+      }
+    },
+    "text2": {
+      "type": "Text",
+      "props": {
+        "text": "WebFetch reddit.com blocked"
+      }
+    },
+    "text3": {
+      "type": "Text",
+      "props": {
+        "text": "curl 403 from sandbox IP"
+      }
+    },
+    "date1": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-28",
+        "variant": "caption"
+      }
+    }
+  }
+}

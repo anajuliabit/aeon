@@ -131,3 +131,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-28,token-alert,claude-opus-4-7,15,6359,429352,41053
 2026-05-28,vibecoding-digest,claude-opus-4-7,37,6596,1222193,63547
 2026-05-28,token-pick,claude-opus-4-7,1754,31126,3665860,137474
+2026-05-28,vibecoding-digest,claude-opus-4-7,31,7505,740871,58058
