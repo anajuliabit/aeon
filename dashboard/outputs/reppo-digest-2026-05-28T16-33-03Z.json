@@ -1,0 +1,256 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 6th run · datanet 9 · 3 on-chain"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-section",
+        "sep-1",
+        "onchain-section",
+        "sep-2",
+        "context-section"
+      ]
+    },
+    "queued-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-queued",
+        "mint-item",
+        "sep-mint-votes",
+        "votes-item"
+      ]
+    },
+    "heading-queued": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "mint-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-mint",
+        "mint-wallet-text",
+        "mint-stats-grid"
+      ]
+    },
+    "badge-mint": {
+      "type": "Badge",
+      "props": {
+        "text": "mint",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "mint-wallet-text": {
+      "type": "Text",
+      "props": {
+        "text": "wallet 0x2b33 · 397ee2e8e5e7e593"
+      },
+      "children": []
+    },
+    "mint-stats-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-trades",
+        "stat-period",
+        "stat-winrate",
+        "stat-sharpe"
+      ]
+    },
+    "stat-trades": {
+      "type": "Stat",
+      "props": {
+        "label": "closed trades",
+        "value": "110"
+      },
+      "children": []
+    },
+    "stat-period": {
+      "type": "Stat",
+      "props": {
+        "label": "period",
+        "value": "4.39d"
+      },
+      "children": []
+    },
+    "stat-winrate": {
+      "type": "Stat",
+      "props": {
+        "label": "win-rate",
+        "value": "0.76"
+      },
+      "children": []
+    },
+    "stat-sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "sharpe",
+        "value": "110"
+      },
+      "children": []
+    },
+    "sep-mint-votes": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "votes-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-votes",
+        "votes-pods-text",
+        "votes-details-text"
+      ]
+    },
+    "badge-votes": {
+      "type": "Badge",
+      "props": {
+        "text": "votes",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "votes-pods-text": {
+      "type": "Text",
+      "props": {
+        "text": "dislike pods 372, 373"
+      },
+      "children": []
+    },
+    "votes-details-text": {
+      "type": "Text",
+      "props": {
+        "text": "epoch-97 hotbot v4 raw exports — 7th time each, iss-005 duplicate-vote risk",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "onchain-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-onchain",
+        "tx-stack"
+      ]
+    },
+    "heading-onchain": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tx-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tx-1",
+        "tx-2",
+        "tx-3"
+      ]
+    },
+    "tx-1": {
+      "type": "Text",
+      "props": {
+        "text": "mint 397ee2e8e5e7e593 — tx 0xd27f8288b5101a71"
+      },
+      "children": []
+    },
+    "tx-2": {
+      "type": "Text",
+      "props": {
+        "text": "vote 372 dislike — tx 0x5c4b7d8359a9a076"
+      },
+      "children": []
+    },
+    "tx-3": {
+      "type": "Text",
+      "props": {
+        "text": "vote 373 dislike — tx 0xf13152ae9166e975"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "context-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context-text",
+        "unassigned-text"
+      ]
+    },
+    "context-text": {
+      "type": "Text",
+      "props": {
+        "text": "first mint today after 5 mintless runs — pr #30's userfillsbytime widening surfaced a wallet that cleared the rubric."
+      },
+      "children": []
+    },
+    "unassigned-text": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,7 +1,13 @@
-reppo-swarm · 5th run · datanet 9 · 0 on-chain
+reppo-swarm · 6th run · datanet 9 · 3 on-chain
 
-orchestrator ran clean (1 run / 0 skip), trading-agent step did not execute — .outputs/reppo-trading-agent.md is stale 4th-run content (postprocess 13:04z, already digested as 4th-run). no fresh intents queued.
+queued
+  mint · wallet 0x2b33, 110 closed trades over 4.39d, win-rate 0.76, sharpe 110 · 397ee2e8e5e7e593
+  votes · dislike pods 372, 373 (epoch-97 hotbot v4 raw exports — 7th time each, iss-005 duplicate-vote risk)
 
-action: chain-runner appears to have skipped the trading-agent step between orchestrator and digest. investigate dispatch before next 07:00 cron — orchestrator + digest without trading-agent in the middle produces no on-chain effect.
+on-chain
+  mint 397ee2e8e5e7e593 — tx 0xd27f8288b5101a71
+  vote 372 dislike — tx 0x5c4b7d8359a9a076
+  vote 373 dislike — tx 0xf13152ae9166e975
 
+first mint today after 5 mintless runs — pr #30's userfillsbytime widening surfaced a wallet that cleared the rubric.
 14 datanets unassigned.
