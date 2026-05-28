@@ -1,15 +1,15 @@
+Task is small and linear; skipping TaskCreate. Done.
+
 ## Summary
 
-Ran `skills/technical-explainer/SKILL.md` with var = the Reppo-swarm-on-Aeon explainer brief.
+Re-ran `skills/technical-explainer/SKILL.md` with the operator's var override (Reppo agent swarm + Aeon, Powerloom-style cyan/green system diagram with 4 labeled lanes).
 
-**Topic:** how the Reppo agent swarm runs on Aeon — data flow from on-chain Reppo state → orchestrator/trader/digest skill chain → mint/vote intent files → Base postprocess.
+**Files written/modified:**
+- `articles/explainer-2026-05-28.md` — overwritten in place. Same title + key idea, refined body (numbers refreshed to 3 mints + 7 votes after today's 3rd-run vote pair), new HTML image-prompt comment matching the Powerloom direction.
+- `.pending-replicate/explainer-2026-05-28.json` — new replicate request with the cyan #22d3ee / green #22c55e / near-black #0b1117 prompt, 4 stacked horizontal lanes (DATA INGESTION → VERIFICATION → REASONING → EXECUTION), central "AEON chain-runner" engine node fanning to each lane + output arrow to Base mainnet. Picked up by `scripts/postprocess-replicate.sh` if `$REPLICATE_API_TOKEN` is set; otherwise the article ships imageless per the skill's no-image path.
+- `memory/logs/2026-05-28.md` — appended a `## Technical Explainer (2nd run, operator var override)` block.
+- `.pending-notify/1779972500-technical-explainer.md` — notification staged for post-run delivery (sandbox blocks the inline `./notify "$(cat …)"` arg-passing pattern, per MEMORY.md).
 
-**Files created/modified:**
-- `articles/explainer-2026-05-28.md` — 600-word structured explainer (setup, intuition pump, 6-step walkthrough, anchor numbers with citations, falsifier, why-it-matters, sources). Voice: ana lowercase, no marketing verbs, em-dash sparingly, concrete refs (PR #s, tx hashes, file paths).
-- `.pending-replicate/explainer-2026-05-28.json` — Replicate request for the dark-mode 4-lane system diagram (DATA INGESTION → VERIFICATION → REASONING → EXECUTION with central "AEON chain-runner" engine node). Will be processed by `scripts/postprocess-replicate.sh` if `$REPLICATE_API_TOKEN` is set; otherwise hero image is skipped and text stands on its own.
-- `memory/logs/2026-05-28.md` — appended `## Technical Explainer` block with topic, title, key idea, image status, primary source, file, notification status.
-- `.pending-notify/1779972472-technical-explainer.md` — staged notification (sandbox-blocked `./notify "$(cat ...)"` pattern carried over from this morning's runs).
-
-**Research:** 3 WebSearches + WebFetch on `reppo-labs-xyz.gitbook.io/reppo-labs/foundations/how-reppo-works.md` confirmed 48h epoch, linear vote-power decay, 45/45/5/5 emission split, 20k REPPO datanet lockup.
-
-**Follow-up:** the article references `images/explainer-2026-05-28.jpg` — if `postprocess-replicate.sh` doesn't run with the token set, that path 404s in the rendered article. No other action needed.
+**Follow-up:**
+- If `REPLICATE_API_TOKEN` is unset at postprocess time, the article's `![hero]` line will 404 — text stands on its own.
+- ISS-009 root cause (chain-runner `.result` overwriting `.outputs/`) is now the load-bearing example in the "how it actually works" walkthrough — referenced as the seam where the bug *is* the seam.
