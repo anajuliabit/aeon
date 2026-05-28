@@ -7,7 +7,7 @@
 skills:
   # --- Morning aggregation (7 AM UTC) ---
   morning-brief: { enabled: true, schedule: "0 7 * * *" }
-  daily-routine: { enabled: false, schedule: "0 7 * * *" }
+  daily-routine: { enabled: true, schedule: "0 7 * * *" }
   rss-digest: { enabled: false, schedule: "0 7 * * *" }
   hacker-news-digest: { enabled: false, schedule: "0 7 * * *" } # top HN stories filtered by MEMORY.md interests
   paper-digest: { enabled: false, schedule: "0 7 * * *" }
@@ -44,7 +44,7 @@ skills:
   monitor-polymarket: { enabled: false, schedule: "30 12 * * *", model: "claude-sonnet-4-6" } # monitor specific markets for 24h price moves and volume changes
   monitor-kalshi: { enabled: false, schedule: "0 13 * * *", model: "claude-sonnet-4-6" } # monitor Kalshi prediction markets for 24h price moves and volume
   monitor-runners: { enabled: false, schedule: "0 12 * * *" }
-  token-pick: { enabled: false, schedule: "0 12 * * *" }
+  token-pick: { enabled: true, schedule: "0 12 * * *" }
   token-report: { enabled: false, schedule: "30 12 * * *", model: "claude-sonnet-4-6" } # daily token price/volume from GeckoTerminal
   price-threshold-alert:
     {
@@ -53,7 +53,7 @@ skills:
       model: "claude-sonnet-4-6",
       var: ""
     } # every 30 minutes — fire on tracked-token ATH, ±20% 1h move, or operator-set target crossing (var=target_price,target_price2,...). Silent on normal runs. Set var=dry-run to skip notify.
-  market-context-refresh: { enabled: false, schedule: "0 13 * * *", model: "claude-sonnet-4-6" } # fetch live crypto macro data, update memory
+  market-context-refresh: { enabled: true, schedule: "0 13 * * *", model: "claude-sonnet-4-6" } # fetch live crypto macro data, update memory
   narrative-tracker: { enabled: false, schedule: "30 13 * * *" } # track rising/peaking/fading narratives
   polymarket-comments: { enabled: false, schedule: "0 13 * * *" } # top comments from trending Polymarket markets
   unlock-monitor: { enabled: false, schedule: "0 10 * * 1" } # weekly token unlock/vesting tracker
@@ -107,16 +107,21 @@ skills:
   create-skill: { enabled: false, schedule: "workflow_dispatch", var: "" } # one-shot skill creator — set var to a description prompt
 
   # --- X / social (5 PM UTC) ---
-  fetch-tweets: { enabled: false, schedule: "0 17 * * *", var: "@moonwell OR @reppo OR @sherwoodagent OR $WOOD OR mamo" }
+  fetch-tweets:
+    {
+      enabled: false,
+      schedule: "0 17 * * *",
+      var: "@moonwell OR @reppo OR @sherwoodagent OR $WOOD OR mamo"
+    }
   refresh-x: { enabled: false, schedule: "0 17 * * *" }
   list-digest: { enabled: false, schedule: "0 17 * * *" }
   write-tweet: { enabled: false, schedule: "0 17 * * *" }
   reply-maker: { enabled: false, schedule: "0 17 * * *" }
   remix-tweets: { enabled: false, schedule: "30 17 * * *" } # 10 rephrased versions of random past tweets
   tweet-roundup: { enabled: false, schedule: "0 17 * * *", var: "" } # latest tweets on configurable topics
-  agent-buzz: { enabled: false, schedule: "30 17 * * *" } # top AI agent tweets by influence
+  agent-buzz: { enabled: true, schedule: "30 17 * * *" } # top AI agent tweets by influence
   farcaster-digest: { enabled: false, schedule: "0 17 * * *" } # trending Farcaster casts
-  vibecoding-digest: { enabled: false, schedule: "30 17 * * *" } # r/vibecoding trending posts
+  vibecoding-digest: { enabled: true, schedule: "30 17 * * *" } # r/vibecoding trending posts
   channel-recap: { enabled: false, schedule: "0 17 * * 0", var: "" } # weekly — recap from Telegram channel (set var to channel username)
 
   # --- Feed generation (5:30 PM UTC, after content skills) ---
@@ -201,9 +206,9 @@ skills:
   skill-evals: { enabled: true, schedule: "0 6 * * 0", model: "claude-sonnet-4-6" } # Sunday 6 AM UTC — output quality assertions across all tracked skills
   skill-update-check: { enabled: true, schedule: "0 19 * * 0", model: "claude-sonnet-4-6" } # Sunday 7 PM UTC — check imported skills for upstream changes and security regressions
   spawn-instance: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — var: "name: purpose"
-  fleet-control: { enabled: false, schedule: "0 9,15 * * *" } # fleet health checks twice daily, dispatch via var
+  fleet-control: { enabled: true, schedule: "0 9,15 * * *" } # fleet health checks twice daily, dispatch via var
   weekly-review: { enabled: true, schedule: "0 19 * * 1" }
-  weekly-shiplog: { enabled: false, schedule: "0 9 * * 1" } # Monday — narrative of everything shipped last week
+  weekly-shiplog: { enabled: true, schedule: "0 9 * * 1" } # Monday — narrative of everything shipped last week
   skill-leaderboard: { enabled: false, schedule: "0 17 * * 0", model: "claude-sonnet-4-6" } # Sunday — rank popular skills across forks
   fork-contributor-leaderboard: { enabled: false, schedule: "30 17 * * 0", model: "claude-sonnet-4-6" } # Sunday — rank community contributors across forks and upstream PRs
   contributor-reward:
@@ -229,7 +234,7 @@ skills:
       var: ""
     } # Sunday 21:00 UTC — per-fork table of upstream skills the fork hasn't adopted; gates on fork-cohort POWER+ACTIVE set when fresh, falls back to live API otherwise. Pass dry-run to skip notify, or owner/repo to override parent.
   workflow-security-audit: { enabled: false, schedule: "0 16 * * 0" } # Sunday — scan workflows for injection vectors
-  skill-graph: { enabled: false, schedule: "0 17 * * 0" } # Sunday — regenerate skill dependency map
+  skill-graph: { enabled: true, schedule: "0 17 * * 0" } # Sunday — regenerate skill dependency map
   skill-freshness: { enabled: true, schedule: "0 8 * * *", model: "claude-sonnet-4-6", var: "" } # daily 08:00 UTC — audit enabled skills' upstream file dependencies for staleness; pass dry-run to skip notify; per-class thresholds (articles 28h / .outputs 4h / topics 7d / state 30d); fingerprint-based dedup, 7d re-emit window
   smithery-manifest: { enabled: false, schedule: "0 6 1/7 * *", model: "claude-sonnet-4-6" } # weekly — refresh docs/smithery-manifest.json + smithery.yaml + smithery-submission.md from skills.json + aeon-mcp; PR + notify only on diff
   show-hn-draft: { enabled: false, schedule: "workflow_dispatch", var: "" } # one-shot — draft Show HN post + r/MachineLearning + r/selfhosted variants from live repo state, ready for the operator to paste at launch time. Set var to one of {show-hn, r/MachineLearning, r/selfhosted} to regenerate that single variant.
