@@ -128,6 +128,5 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-28,skill-freshness,claude-sonnet-4-6,14,12633,605534,52562
 2026-05-28,reppo-swarm,claude-opus-4-7,57,20055,2914428,62639
 2026-05-28,reppo-orchestrator,claude-opus-4-7,19,7141,693406,49408
-2026-05-28,token-alert,claude-opus-4-7,15,6359,429352,41053
-2026-05-28,vibecoding-digest,claude-opus-4-7,37,6596,1222193,63547
-2026-05-28,fleet-control,claude-opus-4-7,12,2453,269148,20651
+2026-05-28,defi-overview,claude-opus-4-7,54,32337,4216274,173405
+2026-05-28,weekly-shiplog,claude-opus-4-7,25,20037,1461647,81636
