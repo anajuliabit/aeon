@@ -1,0 +1,114 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header-info",
+        "separator1",
+        "queued-section",
+        "separator2",
+        "on-chain-section",
+        "separator3",
+        "datanets-note"
+      ]
+    },
+    "header-info": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 3rd run · datanet 9 · 2 on-chain",
+        "variant": "lead"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "queued-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-heading",
+        "mint-item",
+        "votes-item"
+      ]
+    },
+    "queued-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "queued",
+        "level": "h3"
+      }
+    },
+    "mint-item": {
+      "type": "Text",
+      "props": {
+        "text": "mint · 0 — hl userFills 2000-row cap, no wallet cleared ≥20 trades + ≥7d (pr #30 still open)"
+      }
+    },
+    "votes-item": {
+      "type": "Text",
+      "props": {
+        "text": "votes · dislike 372, 373 (epoch 97 hotbot v4 raw exports — 5th dup-pair today, iss-005)"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-chain-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-chain-heading",
+        "vote-372-item",
+        "vote-373-item"
+      ]
+    },
+    "on-chain-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "on-chain",
+        "level": "h3"
+      }
+    },
+    "vote-372-item": {
+      "type": "Text",
+      "props": {
+        "text": "vote 372 dislike — tx 0x8d3b0d148e4d291f05496b954af7828b8d3f36ed6cd2bf162f75bbd3b9575280"
+      }
+    },
+    "vote-373-item": {
+      "type": "Text",
+      "props": {
+        "text": "vote 373 dislike — tx 0x7563fe11658910536b403e3e06dc189d3ba3dbaf6696d37416e405cf2f71b8b3"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets-note": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned."
+      }
+    }
+  }
+}
