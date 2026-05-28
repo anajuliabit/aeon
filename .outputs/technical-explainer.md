@@ -1,20 +1,24 @@
 ## Summary
 
-4th run of `technical-explainer` for 2026-05-28 with operator var override (Reppo agent swarm + Aeon, Powerloom BDS aesthetic).
+5th run of `technical-explainer` with the operator-supplied var locked in across runs 2–5.
 
-**Files modified:**
-- `articles/explainer-2026-05-28.md` — in-place tighten on numbers row 5 only: bumped onchain receipts to `3 mints + 9 votes` and swapped latest vote-pair to today's 4th-run pair tx [`0xac2ec2…`](https://basescan.org/tx/0xac2ec23b2f623caa962f9aa5560bc589947ec9842a5fbf1e6dba2333075f5801) / tx [`0xf78cc2…`](https://basescan.org/tx/0xf78cc26af15e0b432de6f4a2bd60fc5a5851d5e69ac4f3c0106c3ced1f552dcb), with framing "6× DISLIKE on each of pods 372/373 in a single UTC day, the ISS-005 dedup gap as a live receipt."
-- `memory/logs/2026-05-28.md` — appended `## Technical Explainer (4th run, operator var override)` block.
+**Topic + visual direction** (unchanged from runs 2–4):
+- *how the Reppo agent swarm works with Aeon — data flow from on-chain Reppo datanet → Aeon's skill orchestration → swarm voting/minting on pods*
+- Dark-mode system diagram in the Powerloom BDS Agent Framework reference style (cyan #22d3ee + lime-green #22c55e on near-black #0b1117, 4 stacked lanes, central hexagonal `AEON chain-runner` engine node)
 
-**Files created:**
-- `.pending-replicate/explainer-2026-05-28.json` — re-staged (prior runs' `.pending-replicate/` was consumed by postprocess); cyan/green/near-black system diagram with central hexagonal AEON chain-runner engine + 4 lanes (DATA INGESTION → VERIFICATION → REASONING → EXECUTION) + output arrow to Base mainnet.
-- `.pending-notify/1779974604-technical-explainer.md` — Telegram message staged (sandbox blocks `./notify "$(cat ...)"` arg-passing per MEMORY.md pattern; post-run delivery picks it up).
+**What this run did:**
+- Article body untouched — 4th-run state already polished; no swarm chain ran between runs, so on-chain count holds at 3 mints + 9 votes with latest vote-pair tx `0xac2ec2…` / `0xf78cc2…` still the freshest anchor.
+- Re-staged `.pending-replicate/explainer-2026-05-28.json` (dir was empty — prior postprocess consumed the 4th-run file). Same prompt as the article's hero comment.
+- Verified line refs still correct: `aeon.yml:305` (`chains.reppo-swarm`), `aeon.yml:479-493` (chain-runner `.result` capture step, the seam where ISS-009 bit).
+- Staged notification to `.pending-notify/1779975183-technical-explainer.md` (sandbox blocks `./notify "$(cat ...)"` arg-passing — post-run delivery picks it up).
+- Appended 5th-run entry to `memory/logs/2026-05-28.md`.
 
-**Follow-up:**
-- Watch for `images/explainer-2026-05-28.jpg` to land if `$REPLICATE_API_TOKEN` is set when `scripts/postprocess-replicate.sh` runs; otherwise the article's hero will 404 and the no-image path is in effect.
-- The article's `what would break this` section now points to the live ISS-005 receipt (6× dup-pair votes today), which is honest and on-mechanism — no further action needed there.
+**Files touched:**
+- `articles/explainer-2026-05-28.md` — not modified (4th-run state)
+- `.pending-replicate/explainer-2026-05-28.json` — created (image request re-staged)
+- `.pending-notify/1779975183-technical-explainer.md` — created (notification staged)
+- `memory/logs/2026-05-28.md` — appended 5th-run log section
 
-Sources used:
-- [reppo labs docs (llms-full)](https://reppo-labs-xyz.gitbook.io/reppo-labs/llms-full.txt)
-- [REPPO on coinmarketcap](https://coinmarketcap.com/currencies/reppo/)
-- [reppo $20M raise (coindesk)](https://www.coindesk.com/press-release/2026/04/23/reppo-foundation-secures-usd20m-capital-commitment-to-solve-training-data-bottleneck-using-prediction-markets)
+**Follow-up needed:**
+- Post-step `scripts/postprocess-replicate.sh` will fire with `$REPLICATE_API_TOKEN` and either land `images/explainer-2026-05-28.jpg` or take the no-image path (hero will 404 silently; text stands on its own per skill spec).
+- Post-step notification delivery picks up the staged file.
