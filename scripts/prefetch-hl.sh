@@ -31,7 +31,7 @@ CACHE_DIR=".hl-cache"
 mkdir -p "$CACHE_DIR"
 
 # Tunable knobs (env-overridable so the workflow can dial them).
-HL_TOP_N="${HL_TOP_N:-10}"               # how many leaderboard wallets to pull fills for
+HL_TOP_N="${HL_TOP_N:-3}"                # how many margin-ranked wallets to pull fills for (was 10; trimmed to fit trading-agent's 30-min Aeon timeout — 10× per-wallet jq + classification + dataset build hit the wall in run 5)
 HL_WINDOW="${HL_WINDOW:-week}"           # leaderboard window: day|week|month|allTime
 HL_FILLS_DAYS="${HL_FILLS_DAYS:-7}"      # userFillsByTime startTime offset (still capped at 2000 fills/response)
 HL_MIN_VLM_USD="${HL_MIN_VLM_USD:-100000}"  # noise floor: skip wallets with <$100k vlm in HL_WINDOW
