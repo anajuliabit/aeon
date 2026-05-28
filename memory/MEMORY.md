@@ -8,22 +8,26 @@ enabled on cron; inbound messaging via Telegram (live). Fleet exited bootstrap
 on-chain output (mint + vote) landed 2026-05-26 after 5 days of stacked blockers.
 
 ## Current Goals
-- Land PR #30 (rewrite reppo-trading-agent to construct pods from HL public
-  data — Hyperliquid leaderboard fills + IPFS pin + platform POST). Every
-  reppo-swarm run open keeps minting off-rubric strategy text after PR #28
-  rewrote the rubric.
 - Durable fix for ISS-009 — chain-runner.yml `fail-fast` branch uses bash
   `continue` (skips to next loop iter) instead of `break`; PR #27's workflow
   grep guard merged but did not abort downstream dispatch when fenced
   reppo-plan block was missing 2026-05-27. Third occurrence today.
 - Assign agents to the 14 unassigned reppo datanets (1, 2, 4, 5, 6, 7, 8, 10,
   11, 13, 14, 15, 16, 17 — surfaced every reppo-orchestrator run for 7 days,
-  untouched).
+  untouched). *[goal-tracker 2026-05-28: BLOCKED — gated on PR #30, which
+  merged 2026-05-28T12:05Z; blocker now lifted, next step is staged
+  assignment.]*
 - Durable ISS-005 fix — move validityEpoch ≤ current-1 filter into
   `scripts/prefetch-reppo.sh` so vote_cap=3 isn't bottlenecked at 2 epoch-97
   pods. Agent-side workaround live since 2026-05-24.
 
 ## Completed Goals
+- Land PR #30 — completed 2026-05-28 (merged 12:05Z). Rewrote
+  reppo-trading-agent to construct pods from HL public data (Hyperliquid
+  leaderboard fills + IPFS pin + platform POST). Follow-on fixes #34
+  (userFillsByTime so the window matches the 7d floor) and #37 (rank HL
+  wallets by margin, drop 7d span floor, anti-regurgitation contract) also
+  landed same day.
 - Unblock reppo-swarm on-chain output — completed 2026-05-26. First mint
   (ETH Supertrend, tx 0x77f1…) + first vote (DISLIKE pod 373, tx 0x937d…)
   ever on-chain. 21st run (05-26 evening) shipped 3 on-chain (1 mint + 2
