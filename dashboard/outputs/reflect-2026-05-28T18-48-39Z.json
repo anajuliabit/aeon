@@ -1,0 +1,348 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidated",
+        "description": "2026-05-28"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "pr_section",
+        "sep1",
+        "mint_section",
+        "sep2",
+        "issue_section",
+        "sep3",
+        "status_section"
+      ]
+    },
+    "pr_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_prs",
+        "pr_stat"
+      ]
+    },
+    "heading_prs": {
+      "type": "Heading",
+      "props": {
+        "text": "Pull Requests",
+        "level": "h3"
+      }
+    },
+    "pr_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Merged Today",
+        "value": "10 (#30–#39)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "mint_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_mint",
+        "mint_context",
+        "mint_grid"
+      ]
+    },
+    "heading_mint": {
+      "type": "Heading",
+      "props": {
+        "text": "4th Mint Ever Landed",
+        "level": "h3"
+      }
+    },
+    "mint_context": {
+      "type": "Text",
+      "props": {
+        "text": "6th chain run after PR #37's margin-rank rubric correction",
+        "variant": "body"
+      }
+    },
+    "mint_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_wallet",
+        "stat_closes",
+        "stat_sharpe",
+        "stat_win"
+      ]
+    },
+    "stat_wallet": {
+      "type": "Stat",
+      "props": {
+        "label": "Wallet",
+        "value": "0x2b3349…33f7"
+      }
+    },
+    "stat_closes": {
+      "type": "Stat",
+      "props": {
+        "label": "Closes",
+        "value": "110"
+      }
+    },
+    "stat_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe Ratio",
+        "value": "110"
+      }
+    },
+    "stat_win": {
+      "type": "Stat",
+      "props": {
+        "label": "Win Rate",
+        "value": "0.76"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_issues",
+        "issue_iss009",
+        "issue_shipped",
+        "issue_open"
+      ]
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Tracking",
+        "level": "h3"
+      }
+    },
+    "issue_iss009": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iss009_label",
+        "iss009_root",
+        "iss009_solution"
+      ]
+    },
+    "iss009_label": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-009",
+        "variant": "lead"
+      }
+    },
+    "iss009_root": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause traced: chain-runner capture step overwrites write-tool output with cli .result",
+        "variant": "body"
+      }
+    },
+    "iss009_solution": {
+      "type": "Badge",
+      "props": {
+        "text": "Solution validated: emit-in-assistant-text",
+        "variant": "secondary"
+      }
+    },
+    "issue_shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "shipped_label",
+        "shipped_badges",
+        "shipped_note"
+      ]
+    },
+    "shipped_label": {
+      "type": "Text",
+      "props": {
+        "text": "Fix Shipped",
+        "variant": "lead"
+      }
+    },
+    "shipped_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss007_shipped",
+        "badge_iss010_shipped"
+      ]
+    },
+    "badge_iss007_shipped": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-007",
+        "variant": "secondary"
+      }
+    },
+    "badge_iss010_shipped": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-010",
+        "variant": "secondary"
+      }
+    },
+    "shipped_note": {
+      "type": "Text",
+      "props": {
+        "text": "Bookkeeping queued",
+        "variant": "caption"
+      }
+    },
+    "issue_open": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "open_label",
+        "open_badges"
+      ]
+    },
+    "open_label": {
+      "type": "Text",
+      "props": {
+        "text": "Open Issues",
+        "variant": "lead"
+      }
+    },
+    "open_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss005",
+        "badge_iss007",
+        "badge_iss009",
+        "badge_iss010"
+      ]
+    },
+    "badge_iss005": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-005",
+        "variant": "outline"
+      }
+    },
+    "badge_iss007": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-007",
+        "variant": "outline"
+      }
+    },
+    "badge_iss009": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-009",
+        "variant": "outline"
+      }
+    },
+    "badge_iss010": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-010",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_status",
+        "status_grid"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Current Status",
+        "level": "h3"
+      }
+    },
+    "status_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_prs_open",
+        "stat_issues_open"
+      ]
+    },
+    "stat_prs_open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Pull Requests",
+        "value": "0"
+      }
+    },
+    "stat_issues_open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "4"
+      }
+    }
+  }
+}
