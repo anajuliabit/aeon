@@ -147,3 +147,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-28,reppo-trading-agent,claude-opus-4-7,171,82740,15751769,220050
 2026-05-28,reppo-digest,claude-opus-4-7,19,9465,908537,71367
 2026-05-28,agent-buzz,claude-opus-4-7,27,18359,1281945,51895
+2026-05-28,skill-health,claude-opus-4-7,22,13489,933033,101585
