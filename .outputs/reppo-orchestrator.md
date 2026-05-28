@@ -1,8 +1,10 @@
-Catalog had 15 active mainnet datanets; one rubric (`tradinggymai` → datanet 9, `valid:true`, fee 50 REPPO). Plan: RUN, with 14 unassigned datanets discovered. Emitting the fenced block in this response per the corrected ISS-009 path (4th run today).
+Read complete. Datanet 9 is valid (`valid:true`, fee 50 REPPO), catalog lists 15 active datanets, and only `tradinggymai.md` has a rubric — 14 unassigned. Emitting the plan in this final assistant text per the corrected ISS-009 path (`.result` capture overwrites any Write-tool output).
+
+The reppo-trading-agent reads datanet 9 (TradingGymAI). Catalog available; 14 datanets have no rubric/agent assigned.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 TradingGymAI valid, fee 50 REPPO, rubric present)
+reppo-trading-agent: RUN   (datanet 9 TradingGymAI valid:true on mainnet, fee 50 REPPO; rubric and prefetch both clean — re-running is safe per content-hash dedup + idempotency keys)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -20,10 +22,9 @@ new-datanet: 17   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- 1 RUN / 0 SKIP — `reppo-trading-agent` cleared for datanet 9 (TradingGymAI, mainnet `valid:true`, fee 50 REPPO).
-- 14 unassigned datanets discovered (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17) — backlog unchanged for 8 days.
-- Catalog available (15 active mainnet datanets in `.reppo-cache/datanets.json`).
-- Fenced `reppo-plan` block emitted in this final assistant text response per the corrected ISS-009 diagnosis (Write-tool workaround failed earlier today — chain-runner's `.result` capture at `aeon.yml:479-493` overwrites Write output).
-- Logged to `memory/logs/2026-05-28.md` under `### reppo-orchestrator (4th run)`.
+- Read `.reppo-cache/datanets.json` (15 ACTIVE mainnet datanets), `.reppo-cache/datanet-tradinggymai.json` (`valid:true`, fee 50 REPPO), `configs/datanets/tradinggymai.md` (datanet_id 9 → reppo-trading-agent).
+- 1 RUN / 0 SKIP: reppo-trading-agent cleared for datanet 9. 14 unassigned datanets surfaced (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17 — unchanged for 8 days).
+- Fenced ```reppo-plan``` block above is emitted in the final assistant text (corrected ISS-009 path — chain-runner's `.result` capture at `aeon.yml:479-493` overwrites any Write-tool output, so the block must live in the LLM's final message to reach `.outputs/reppo-orchestrator.md`).
+- Logged this run as the 5th reppo-orchestrator entry in `memory/logs/2026-05-28.md`.
 - Files modified: `memory/logs/2026-05-28.md`.
-- Follow-ups: ISS-009 durable fix (chain-runner fail-fast `continue` → `break`); ISS-005 duplicate-vote risk; assign agents to the 14 unassigned datanets.
+- No follow-ups for the orchestrator itself; downstream items (PR #30 wallet-selection fix, ISS-005 vote dedup, 14 backlogged datanet rubrics) remain open per MEMORY.md.
