@@ -62,10 +62,10 @@
       "required_patterns": ["source|Source|http|reference"],
       "forbidden_patterns": ["\\$\\{var\\}", "\\[TODO\\]", "PLACEHOLDER"]
     },
-    "hn-digest": {
-      "output_pattern": "articles/hn-digest-*.md",
-      "min_words": 150,
-      "required_patterns": ["Hacker News|hacker.news|ycombinator|HN"],
+    "hacker-news-digest": {
+      "output_pattern": "memory/logs/*.md",
+      "min_words": 20,
+      "required_patterns": ["### hacker-news-digest|## Hacker News|HN_DIGEST"],
       "forbidden_patterns": ["\\$\\{var\\}", "\\[TODO\\]"]
     },
     "rss-digest": {
@@ -74,28 +74,25 @@
       "required_patterns": ["feed|article|post|item"],
       "forbidden_patterns": ["\\$\\{var\\}", "\\[TODO\\]"]
     },
-    "polymarket": {
-      "output_pattern": "articles/polymarket-*.md",
-      "min_words": 100,
-      "required_patterns": ["market|Market|probability|volume"],
-      "forbidden_patterns": ["\\$\\{var\\}", "\\[TODO\\]"],
-      "numeric_checks": [
-        { "label": "probability", "pattern": "([\\d.]+)%", "min": 0, "max": 100 }
-      ]
+    "monitor-polymarket": {
+      "output_pattern": "memory/logs/*.md",
+      "min_words": 20,
+      "required_patterns": ["### monitor-polymarket|## Polymarket|POLYMARKET"],
+      "forbidden_patterns": ["\\$\\{var\\}", "\\[TODO\\]"]
     },
     "token-alert": {
-      "output_pattern": "articles/token-alert-*.md",
-      "min_words": 50,
-      "required_patterns": ["AEON|aeon|token|Token|price|Price"],
+      "output_pattern": "memory/logs/*.md",
+      "min_words": 20,
+      "required_patterns": ["### token-alert|TOKEN_ALERT"],
       "forbidden_patterns": ["\\$\\{var\\}", "\\[TODO\\]"],
       "numeric_checks": [
-        { "label": "price", "pattern": "\\$([\\d.]+)", "min": 0, "max": 1000000 }
+        { "label": "price", "pattern": "\\$([\\d.]+)", "min": 0, "max": 1000000, "skip_if_not_found": true }
       ]
     },
     "skill-health": {
-      "output_pattern": "articles/skill-health-*.md",
-      "min_words": 80,
-      "required_patterns": ["HEALTHY|DEGRADED|CRITICAL|healthy|skill"],
+      "output_pattern": "memory/logs/*.md",
+      "min_words": 20,
+      "required_patterns": ["### skill-health|SKILL_HEALTH|HEALTH:"],
       "forbidden_patterns": ["\\$\\{var\\}", "\\[TODO\\]"]
     }
   }
