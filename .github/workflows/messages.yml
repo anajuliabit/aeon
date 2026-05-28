@@ -106,7 +106,19 @@ jobs:
           declare -A SKILL_ENABLED SKILL_SCHEDULE SKILL_VAR
           SKILL_ORDER=()
           CURRENT_SKILL=""
+          IN_SKILLS=false
           while IFS= read -r line; do
+            # Scope: only parse entries under the top-level skills: block.
+            # Without this, 2-space-indented keys in other top-level blocks
+            # (notably chains:) get matched as skills and dispatched against
+            # a non-existent skills/<chain>/SKILL.md.
+            if [[ "$line" =~ ^skills: ]]; then
+              IN_SKILLS=true
+              continue
+            fi
+            $IN_SKILLS && [[ "$line" =~ ^[a-z] ]] && IN_SKILLS=false
+            $IN_SKILLS || continue
+
             # Inline format: skill-name: { enabled: true, schedule: "..." }
             if [[ "$line" =~ ^\ \ ([a-zA-Z0-9_-]+):\ *\{(.+)\} ]]; then
               CURRENT_SKILL="${BASH_REMATCH[1]}"
