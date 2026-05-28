@@ -1,0 +1,156 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Phantom Skill Dispatch Caught"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-issue",
+        "separator1",
+        "section-diagnosis",
+        "separator2",
+        "section-fix",
+        "separator3",
+        "section-status"
+      ]
+    },
+    "section-issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-issue1",
+        "text-issue2"
+      ]
+    },
+    "text-issue1": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm fires daily against skills/reppo-swarm/SKILL.md — that file doesn't exist."
+      }
+    },
+    "text-issue2": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm is a chain."
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-diagnosis": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-diagnosis",
+        "text-root-cause"
+      ]
+    },
+    "heading-diagnosis": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause",
+        "level": "h3"
+      }
+    },
+    "text-root-cause": {
+      "type": "Text",
+      "props": {
+        "text": "the SKILL_ORDER parser in messages.yml leaked into the chains: block."
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-fix": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-fix",
+        "text-fix",
+        "stack-refs"
+      ]
+    },
+    "heading-fix": {
+      "type": "Heading",
+      "props": {
+        "text": "Fix",
+        "level": "h3"
+      }
+    },
+    "text-fix": {
+      "type": "Text",
+      "props": {
+        "text": "fix scoped to skills: section."
+      }
+    },
+    "stack-refs": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-pr",
+        "badge-issue"
+      ]
+    },
+    "badge-pr": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #32",
+        "variant": "outline"
+      }
+    },
+    "badge-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-010",
+        "variant": "outline"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-status"
+      ]
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "real chain:reppo-swarm dispatch unaffected."
+      }
+    }
+  }
+}
