@@ -1,21 +1,18 @@
-Action Converter run complete.
-
 ## Summary
 
-Ran the action-converter skill — mode `OK` (7 distinct log dates, MEMORY.md consolidated yesterday, 1 open PR, ISS-009 recurrence today).
+Executed `skills/action-converter/SKILL.md`. Mode = `ACTION_CONVERTER_OK` (8 distinct log dates, MEMORY.md populated). Mined open loops from MEMORY.md, today's logs, INDEX.md, cron-state, and `gh pr list` (0 open PRs — 10 PRs merged today including #30/31/32). Scored, applied novelty + specificity + banned-phrase gates, output 5 actions ordered by quality.
 
-**5 actions surfaced** (quality avg 4.4/5):
+**Today's shape**: ship iss-005 dedup, fix HL wallet rank, refresh memory, close 3 issues.
 
-1. **Self-review + merge PR #30** (rewrite reppo-trading-agent → HL public data) — overnight, every chain run mints off-rubric until merged
-2. **Patch `.github/workflows/chain-runner.yml` `continue` → `break`** — ISS-009's 3rd occurrence today; PR #27's guard didn't abort downstream
-3. **Lift ISS-005 validityEpoch filter into `scripts/prefetch-reppo.sh`** — durable fix; agent-side workaround live since 05-24
-4. **Correct `skills/skill-evals/evals.json` output_pattern paths** — token-alert/skill-health → memory/logs/; drop hn-digest+polymarket orphans
-5. **Fill MEMORY.md `## Tracked Tokens` table** — REPPO/HYPER/VVV rows with floor+ceiling per today's token-alert spots
+**5 actions** (all leverage a specific named loop):
+1. Extend `scripts/prefetch-reppo.sh` validityEpoch filter to also exclude already-voted pods (pods 372/373 carry 7× DISLIKE on-chain today, ISS-005 dup-vote risk compounding).
+2. Patch `scripts/prefetch-hl.sh` wallet selection to rank by alltime PnL / filter `fills_returned < 2000` — turns 4/6 mintless trading-agent runs into productive ones.
+3. Refresh `memory/MEMORY.md` Current Goals (PR #30 merged 12:05Z, ISS-009 has corrected `.result`-capture diagnosis).
+4. Migrate ISS-007, ISS-009, ISS-010 from Open → Resolved in `memory/issues/INDEX.md`.
+5. Audit `scripts/prefetch-vibecoding.sh` after 2 ERROR runs today, or disable the cron.
 
-**Files modified:**
-- `.pending-notify/1779892800-action-converter.md` (notification staged — sandbox blocked direct `./notify`, post-run delivers)
-- `memory/logs/2026-05-27.md` (Action Converter section appended)
+**Files**:
+- Created `.pending-notify/1779993948-action-converter.md` (sandbox blocked direct `./notify "$(cat ...)"` per documented pattern; post-run delivery step picks it up).
+- Appended `## Action Converter` log entry to `memory/logs/2026-05-28.md`.
 
-**Loops carried:** iss-007-bookkeeping, unassigned-datanets-14, vote-373-idempotency-investigation, defi-overview-foundry-pin, cost-opus-sonnet-rotation, operator-scorecard-never-ran.
-
-**Follow-up:** the post-run step will pick up the staged notification; if PR #30 lands before tomorrow's run, the datanet loop will be the next-highest priority since pod sourcing changes shape.
+**Follow-up**: nothing — the 5 actions are themselves the follow-up queue for the operator.
