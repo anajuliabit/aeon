@@ -1,15 +1,11 @@
-Task is small and linear; skipping TaskCreate. Done.
-
 ## Summary
 
-Re-ran `skills/technical-explainer/SKILL.md` with the operator's var override (Reppo agent swarm + Aeon, Powerloom-style cyan/green system diagram with 4 labeled lanes).
+Refined the technical explainer for `articles/explainer-2026-05-28.md` (3rd run today with the same operator var) — tightened the image prompt to match the Powerloom BDS reference more directly: central hexagonal **AEON chain-runner** engine node with cyan `#22d3ee` fan-out arrows + lime-green `#22c55e` inline annotations, 4 stacked lanes (DATA INGESTION → VERIFICATION → REASONING → EXECUTION), single thicker output arrow to a **Base mainnet** node. Body unchanged except for adding the latest vote-pair tx links (`0x8d3b0d…` / `0x7563fe…`) into the "numbers that anchor it" row.
 
-**Files written/modified:**
-- `articles/explainer-2026-05-28.md` — overwritten in place. Same title + key idea, refined body (numbers refreshed to 3 mints + 7 votes after today's 3rd-run vote pair), new HTML image-prompt comment matching the Powerloom direction.
-- `.pending-replicate/explainer-2026-05-28.json` — new replicate request with the cyan #22d3ee / green #22c55e / near-black #0b1117 prompt, 4 stacked horizontal lanes (DATA INGESTION → VERIFICATION → REASONING → EXECUTION), central "AEON chain-runner" engine node fanning to each lane + output arrow to Base mainnet. Picked up by `scripts/postprocess-replicate.sh` if `$REPLICATE_API_TOKEN` is set; otherwise the article ships imageless per the skill's no-image path.
-- `memory/logs/2026-05-28.md` — appended a `## Technical Explainer (2nd run, operator var override)` block.
-- `.pending-notify/1779972500-technical-explainer.md` — notification staged for post-run delivery (sandbox blocks the inline `./notify "$(cat …)"` arg-passing pattern, per MEMORY.md).
+**Files modified:**
+- `articles/explainer-2026-05-28.md` — sharpened image-prompt comment + updated vote-tx links
+- `.pending-replicate/explainer-2026-05-28.json` — re-staged Replicate request (overwrote prior 2nd-run payload)
+- `memory/logs/2026-05-28.md` — appended "Technical Explainer (3rd run, operator var override)" section
+- `.pending-notify/1779973765-technical-explainer.md` — staged notification
 
-**Follow-up:**
-- If `REPLICATE_API_TOKEN` is unset at postprocess time, the article's `![hero]` line will 404 — text stands on its own.
-- ISS-009 root cause (chain-runner `.result` overwriting `.outputs/`) is now the load-bearing example in the "how it actually works" walkthrough — referenced as the seam where the bug *is* the seam.
+**Follow-up:** image lands at `images/explainer-2026-05-28.jpg` if `scripts/postprocess-replicate.sh` runs with `REPLICATE_API_TOKEN` set; otherwise hero-image line in the article will 404 and the no-image path applies.
