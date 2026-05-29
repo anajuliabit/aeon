@@ -18,7 +18,9 @@ ever landed on the 6th chain run after rubric correction (PR #37).
   11, 13, 14, 15, 16, 17 — surfaced every reppo-orchestrator run for 7 days,
   untouched). *[goal-tracker 2026-05-28: BLOCKED — gated on PR #30, which
   merged 2026-05-28T12:05Z; blocker now lifted, next step is staged
-  assignment.]*
+  assignment.]* *[goal-tracker 2026-05-29: ON TRACK ↑ improving — PR #30
+  blocker cleared; surfaced 9th day with 0 assignments staged; next step
+  unchanged.]*
 - Close ISS-009 fully — root cause traced 2026-05-28 (chain-runner
   `aeon.yml:479-493` capture step `cp`s CLI `.result` over Write-tool output;
   fix path: emit fenced reppo-plan block in final assistant text). Codify

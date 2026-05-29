@@ -1,20 +1,17 @@
 ## Summary
 
-Ran the **goal-tracker** skill against `memory/MEMORY.md` and prior `memory/goal-state.json`.
+Ran `goal-tracker` for 2026-05-29 against the 6 goals in `memory/MEMORY.md` (2 are duplicates → 5 tracked goals).
 
-**Verdict:** 4 goals — 0 at risk, 0 needs attention, 2 on track, 1 blocked, 1 done (↑ improving).
+**Status:** 5 ON TRACK, 0 elsewhere. **Notable shift:** `assign-14-datanets` moved BLOCKED → ON TRACK (↑ improving) — PR #30 merged 24h ago lifted the gate, though 0 assignments staged yet (surfaced 9th day).
 
-| Goal | Status | Notes |
-|------|--------|-------|
-| Land PR #30 (HL public data rewrite) | **DONE** | Merged 2026-05-28T12:05Z; follow-ons #34, #37 also landed |
-| Durable fix for ISS-009 (chain-runner `continue` → `break`) | ON TRACK | 4th occurrence today; root-cause re-traced to capture-step overwrite; no fix PR yet |
-| Assign agents to 14 unassigned reppo datanets | **BLOCKED** | Morning-brief "Stuck: gated on PR #30" tripped the blocker rule; PR #30 merged same day so blocker just lifted — action queued |
-| Durable ISS-005 fix (lift validityEpoch filter into prefetch) | ON TRACK | Agent-side workaround live since 2026-05-24; prefetch fix still pending |
+**Files written:**
+- `memory/goal-state.json` — replaced yesterday's snapshot; 4 goals carried + 2 new (close-iss-009-fully, index-bookkeeping); `land-pr-30` dropped (already in Completed Goals).
+- `memory/MEMORY.md` — appended 2026-05-29 annotation to the datanets goal (status changed from yesterday → must write per spec).
+- `.pending-notify/1780063500-goal-tracker.md` — full report staged for post-run delivery (sandbox blocks `./notify "$(cat ...)"`).
+- `memory/logs/2026-05-29.md` — appended skill log entry.
 
-**Files modified:**
-- `memory/MEMORY.md` — moved "Land PR #30" to ## Completed Goals; inline-annotated the datanets goal with the BLOCKED → blocker-lifted note.
-- `memory/goal-state.json` — replaced with the 4 current-goal snapshot.
-- `memory/logs/2026-05-28.md` — appended goal-tracker entry.
-- `.pending-notify/1779993940-goal-tracker.md` — staged the full report (sandbox `./notify` arg-passing pattern; post-run delivery picks it up).
+**Sources:** logs=ok, git=ok (shallow — fell back to PR list), gh_pr=ok (42 in window), gh_issue=ok (empty — repo uses `memory/issues/`), cron-state=ok.
 
-**Follow-ups:** None blocking. Next run will see "14 unassigned datanets" with no fresh blocker phrase → should flip BLOCKED → ON_TRACK / NEEDS ATTENTION depending on whether the assignment work actually starts.
+**Honest caveat in the log:** the skill's strict rules count any mention as activity, so the datanets + INDEX-bookkeeping goals score ON_TRACK despite zero actual deliverable progress — flagged that distinction in the log entry rather than gaming the status.
+
+**Follow-up the report doesn't itself trigger** (since the spec says no actions on ON_TRACK): the two real "next moves" are still staging the first datanet assignment (morning-brief Focus 3) and closing ISS-007 + ISS-010 in `memory/issues/INDEX.md`.

@@ -1,25 +1,30 @@
 {
-  "run_at": "2026-05-28T18:45:40Z",
+  "run_at": "2026-05-29T17:55:00Z",
   "goals": {
-    "land-pr-30-rewrite-reppo-trading-agent": {
-      "status": "DONE",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-05-28"
-    },
     "durable-fix-for-iss-009": {
       "status": "ON_TRACK",
-      "activity_count_14d": 7,
-      "last_activity_date": "2026-05-28"
+      "activity_count_14d": 32,
+      "last_activity_date": "2026-05-29"
     },
     "assign-agents-to-the-14-unassigned-reppo-datanets": {
-      "status": "BLOCKED",
-      "activity_count_14d": 7,
-      "last_activity_date": "2026-05-28"
+      "status": "ON_TRACK",
+      "activity_count_14d": 18,
+      "last_activity_date": "2026-05-29"
+    },
+    "close-iss-009-fully": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 22,
+      "last_activity_date": "2026-05-29"
     },
     "durable-iss-005-fix": {
       "status": "ON_TRACK",
-      "activity_count_14d": 6,
-      "last_activity_date": "2026-05-28"
+      "activity_count_14d": 24,
+      "last_activity_date": "2026-05-29"
+    },
+    "index-bookkeeping-close-iss-007-iss-010": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 14,
+      "last_activity_date": "2026-05-29"
     }
   }
 }
