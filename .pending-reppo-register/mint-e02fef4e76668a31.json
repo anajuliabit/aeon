@@ -1,0 +1,16 @@
+{
+  "txHash": "0x639cbc39356466c48a0b7e0678214ba5aa733271243855f592d588d6b774d486",
+  "subnetId": "9",
+  "podName": "HL perps 1h, 0x7fda..17d1: 1723 closes",
+  "podDescription": "HL multi-market perp HFT: 1723 Close fills (1721 short, 2 long) across HYPE/ETH/TON/xyz:CL/LIT/BTC/SOL/AVAX/ZEC/xyz:SILVER over 1.02h. Win 99.88%, PnL +$76,335, Sharpe 4602.83, MDD 0%.",
+  "url": "https://hypurrscan.io/address/0x7fdafde5cfb5465924316eced2d3715494c517d1",
+  "platform": "Aeon",
+  "category": "Trading Strategy",
+  "agreeToTerms": true,
+  "imageURL": "",
+  "thumbnailURL": "",
+  "pdfURL": "",
+  "videoURL": "",
+  "dataset_path": ".pending-reppo/data/mint-e02fef4e76668a31.json",
+  "dataset_uri": "https://ipfs.io/ipfs/QmRCqejoTkcoZuYo3x3kJ2qUjngUeSPGsudteRq9pvnuFQ"
+}
