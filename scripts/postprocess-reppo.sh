@@ -110,19 +110,27 @@ extract_detail() {
 # pin is verifiable from any IPFS gateway (Pinata's role here is just
 # pinning, not gating retrieval).
 pin_dataset_to_ipfs() {
-  local file="$1" capture="$2" name
+  local file="$1" capture="$2" name http_code
   name="$(basename "$file")"
-  if ! curl -fsS \
+  # `-sS` (no `-f`) so the response body lands in $capture even on 4xx/5xx.
+  # `-f` suppresses the body on HTTP errors — that's how we lost Pinata's
+  # actual error JSON in run 7 ("curl: (22) error: 403" with no detail).
+  # -w writes the status code to stdout (captured into http_code) so we
+  # can surface it alongside the body when the post-curl `.IpfsHash`
+  # check fails. -o sends body to the capture file.
+  http_code=$(curl -sS \
        -X POST "https://api.pinata.cloud/pinning/pinFileToIPFS" \
        -H "Authorization: Bearer ${PINATA_JWT}" \
        -F "file=@${file}" \
        -F "pinataMetadata={\"name\":\"${name}\"}" \
-       > "$capture" 2>&1; then
-    return 1
-  fi
+       -w "%{http_code}" \
+       -o "$capture" 2>/dev/null || echo 000)
   local cid
   cid="$(jq -r '.IpfsHash // empty' "$capture" 2>/dev/null)"
   if [ -z "$cid" ] || [ "$cid" = "null" ]; then
+    # Append the HTTP code so extract_detail in the caller surfaces both
+    # the status code AND Pinata's error body in the digest's one-liner.
+    printf '\n[HTTP %s]\n' "$http_code" >> "$capture"
     return 1
   fi
   echo "$cid"
@@ -567,15 +575,22 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
         "$register_intent" > "$body_file"
 
       echo "reppo-postprocess: registering metadata for $rbase (tx $rtx)..." >&2
-      if curl -fsS -X POST "https://reppo.ai/api/v1/agents/${REPPO_AGENT_ID}/pods" \
+      # `-sS` (no `-f`) so the platform's 4xx/5xx error body lands in the
+      # capture file instead of being suppressed. -w captures the HTTP
+      # status code separately so we can branch on it. Otherwise curl
+      # would exit 0 even on a 400, sending us down the success path.
+      reg_http_code=$(curl -sS \
+           -X POST "https://reppo.ai/api/v1/agents/${REPPO_AGENT_ID}/pods" \
            -H "Authorization: Bearer ${REPPO_API_KEY}" \
            -H "Content-Type: application/json" \
            --data @"$body_file" \
-           > ".reppo-cache/register-$rbase" 2>&1; then
+           -w "%{http_code}" \
+           -o ".reppo-cache/register-$rbase" 2>/dev/null || echo 000)
+      if [ "${reg_http_code:0:1}" = "2" ]; then
         if [ -n "$duri" ]; then
-          echo "- \`$rbase\` — **metadata registered** (tx: $rtx, dataset: $duri)" >> "$RESULTS_FILE"
+          echo "- \`$rbase\` — **metadata registered** (HTTP $reg_http_code, tx: $rtx, dataset: $duri)" >> "$RESULTS_FILE"
         else
-          echo "- \`$rbase\` — **metadata registered** (tx: $rtx)" >> "$RESULTS_FILE"
+          echo "- \`$rbase\` — **metadata registered** (HTTP $reg_http_code, tx: $rtx)" >> "$RESULTS_FILE"
         fi
         rm -f "$register_intent"
         # The local dataset file is now durably pinned on IPFS (or
@@ -585,8 +600,8 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
         [ -n "$dpath" ] && rm -f "$dpath"
       else
         rdetail="$(extract_detail ".reppo-cache/register-$rbase")"
-        echo "- \`$rbase\` — **metadata registration failed**: ${rdetail:-<empty>}" >> "$RESULTS_FILE"
-        echo "reppo-postprocess: register failed for $rbase: ${rdetail:-<empty>}" >&2
+        echo "- \`$rbase\` — **metadata registration failed** (HTTP $reg_http_code): ${rdetail:-<empty>}" >> "$RESULTS_FILE"
+        echo "reppo-postprocess: register failed for $rbase (HTTP $reg_http_code): ${rdetail:-<empty>}" >&2
         # Leave queue + dataset files for retry. CID is already pinned
         # and persisted into the queue file so retry won't re-upload.
       fi
