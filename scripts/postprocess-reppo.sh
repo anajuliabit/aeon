@@ -570,17 +570,20 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
       # This way the queue file carries our bookkeeping while the wire
       # body only carries the platform's expected keys.
       body_file=".reppo-cache/post-body-$rbase"
-      # Reppo platform Zod schema:
-      # - `subnetId` must be a string. We cast defensively here because the
-      #   3 retained queue files from runs 6-8 were built with a numeric
-      #   subnetId (Phase 1 builder was fixed to write strings in this PR,
-      #   but already-on-disk queue files don't get rewritten).
-      # - `podName` capped at 200 chars (Zod `too_big`). LLM may write
-      #   longer titles; truncate at the wire to stay schema-valid.
+      # Reppo platform Zod schema (caps determined empirically from
+      # run 8 + run 9 platform 400 bodies, surfaced by PR #42's diagnostics):
+      # - `subnetId`     must be a string.
+      # - `podName`      max 50 chars (PR #44 assumed 200; run 9 narrowed
+      #                  to 50 — tightening here).
+      # - `podDescription` max 200 chars (run 9 evidence).
+      # The IPFS-pinned dataset JSON (referenced via pdfURL) still carries
+      # the LLM's full untruncated description; the platform metadata is a
+      # teaser/title for browsing. Anyone wanting the full evaluable content
+      # follows the gateway URL.
       jq '{txHash,
            subnetId: (.subnetId | tostring),
-           podName: (.podName | .[0:200]),
-           podDescription,
+           podName: (.podName | .[0:50]),
+           podDescription: (.podDescription | .[0:200]),
            url,
            platform,
            category,
