@@ -1,14 +1,15 @@
-GITHUB_TRENDING_OK.
-
 ## Summary
-- **Picked 3/17** from today's GitHub trending (var: none):
-  - **TOP** — `harry0703/MoneyPrinterTurbo` (ACCELERATING) — v1.2.8 today ends 8-week dormancy, 22x surge over baseline.
-  - `p-e-w/heretic` (ACCELERATING, judgment-call keep) — fully-automatic decensoring of open-weight LLMs via weight-transform-only approach.
-  - `iii-hq/iii` (ACCELERATING) — Rust service composition + observability, cutting 0.16.0-next prereleases on a same-day cadence, 11x velocity.
-- **Buckets**: AI/ML (2), Infra (1). No "Other" needed.
-- **Deduped 2** within strict 2-day window: `Lum1104/Understand-Anything`, `twentyhq/twenty` (both featured 2026-05-27).
-- **Filter drops 12** — 6 skill bundles (stop-slop, ECC, taste-skill, Anthropic-Cybersecurity-Skills, claude-code-harness, superpowers) persist as the noise floor for the 5th day; ECC + superpowers extreme totals don't beat the pattern. Other drops: free-* / awesome-* / learn-X, plus dedupe-window-outside repos with no fresh hook (Kronos 45-day stale push, airi flat baseline, knowledge-work-plugins no new release).
-- **Files**:
-  - Notification staged to `.pending-notify/1779960813-github-trending.md` (sandbox-blocked `./notify` arg-passing — same pattern as morning-brief + defi-overview; post-run delivery step picks it up).
-  - Log entry appended to `memory/logs/2026-05-28.md` under `### github-trending`.
-- **Exit**: `GITHUB_TRENDING_OK`. Sources: trending=ok · gh_api=ok · kept 3/17.
+
+Ran the github-trending skill for 2026-05-29.
+
+**Picked 2/16** (skill rule: <3 survivors → short note, no padding):
+- **microsoft/markitdown** (Devtools, ACCELERATING) — fresh v0.1.6 cut 2026-05-26 after 4-month silence; 1,410 today on 228/day baseline = 6.2x.
+- **OpenMOSS/MOSS-TTS** (AI/ML, ACCELERATING) — Fudan MOSS group's open-weight TTS family, pushed today, 3.2x baseline.
+
+**Dropped 14**: 7 skill/harness/plugin bundles (ECC, taste-skill, stop-slop, superpowers, harness, compound-engineering-plugin, anthropics/skills — page composition 44%, persistent noise floor 5 days running), 3 strict-window dedupes (MoneyPrinterTurbo, twenty, Understand-Anything), 1 free-* resource, 1 learn-X, 1 build-your-own-*, 1 no-fresh-hook (crawl4ai).
+
+**Files**:
+- Notification staged to `.pending-notify/1780047191-github-trending.md` (sandbox notify-arg pattern).
+- Log entry appended to `memory/logs/2026-05-29.md` under `### github-trending`.
+
+**Sources**: trending=ok · gh_api=ok · kept 2/16. Exit: `GITHUB_TRENDING_OK`.
