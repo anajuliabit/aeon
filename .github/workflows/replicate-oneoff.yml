@@ -1,0 +1,99 @@
+name: Replicate One-off Image
+run-name: "image: ${{ inputs.output_path }}"
+
+# Generate a single Replicate image without running a Claude skill.
+# Stages a .pending-replicate/*.json from the workflow inputs and runs
+# scripts/postprocess-replicate.sh. Reuse for one-off X posts, social
+# cards, or alt versions of an article hero.
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: 'Image prompt (full text)'
+        required: true
+        type: string
+      output_path:
+        description: 'Repo-relative output path (e.g. images/social-aeon-2026-05-28.jpg)'
+        required: true
+        type: string
+      aspect_ratio:
+        description: 'Aspect ratio'
+        required: false
+        type: choice
+        default: '16:9'
+        options:
+          - '16:9'
+          - '1:1'
+          - '4:5'
+          - '9:16'
+          - '3:2'
+      model:
+        description: 'Replicate model'
+        required: false
+        type: string
+        default: 'google/nano-banana-pro'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+
+      - name: Stage pending request
+        env:
+          PROMPT: ${{ inputs.prompt }}
+          OUTPUT_PATH: ${{ inputs.output_path }}
+          ASPECT: ${{ inputs.aspect_ratio }}
+          MODEL: ${{ inputs.model }}
+        run: |
+          mkdir -p .pending-replicate
+          NAME=$(basename "$OUTPUT_PATH" | sed 's|\.[^.]*$||')
+          jq -n \
+            --arg prompt "$PROMPT" \
+            --arg aspect "$ASPECT" \
+            --arg out "$OUTPUT_PATH" \
+            --arg model "$MODEL" \
+            '{prompt: $prompt, aspect_ratio: $aspect, output_path: $out, model: $model}' \
+            > ".pending-replicate/${NAME}.json"
+          echo "Staged .pending-replicate/${NAME}.json"
+          jq '.' ".pending-replicate/${NAME}.json"
+
+      - name: Run Replicate post-processor
+        env:
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+        run: |
+          chmod +x scripts/postprocess-replicate.sh
+          ./scripts/postprocess-replicate.sh
+
+      - name: Commit image
+        env:
+          OUTPUT_PATH: ${{ inputs.output_path }}
+        run: |
+          git config user.name "aeonframework"
+          git config user.email "aeonframework@proton.me"
+          if [ ! -f "$OUTPUT_PATH" ]; then
+            echo "::error::Image was not generated at $OUTPUT_PATH — check postprocess-replicate.sh logs above for the HTTP status and response body."
+            exit 1
+          fi
+          git add "$OUTPUT_PATH"
+          if git diff --staged --quiet; then
+            echo "::notice::No image change to commit (identical bytes)"
+            exit 0
+          fi
+          git commit -m "chore(image): generate $OUTPUT_PATH via replicate-oneoff"
+          # Retry push in case of concurrent auto-commits
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "push attempt $i failed, retrying..."
+            sleep $((i * 2))
+          done
+          echo "::error::Could not push image after 3 attempts"
+          exit 1
