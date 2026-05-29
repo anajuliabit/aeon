@@ -155,3 +155,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-29,reppo-digest,claude-opus-4-7,49,29074,3067044,127066
 2026-05-29,reppo-orchestrator,claude-opus-4-7,16,3232,640350,41425
 2026-05-29,reppo-trading-agent,claude-opus-4-7,93,84416,11770349,408613
+2026-05-29,reppo-digest,claude-opus-4-7,22,22581,1520994,94028

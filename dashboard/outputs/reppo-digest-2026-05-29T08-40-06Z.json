@@ -1,0 +1,228 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo Digest"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "onchain_section",
+        "sep3",
+        "reverted_section",
+        "sep4",
+        "footer"
+      ]
+    },
+    "header": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 2nd run · datanet 9 · 2 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_heading",
+        "mint_queued",
+        "vote_queued"
+      ]
+    },
+    "queued_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "mint_queued": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_mint",
+        "text_mint_details"
+      ]
+    },
+    "badge_mint": {
+      "type": "Badge",
+      "props": {
+        "text": "mint",
+        "variant": "secondary"
+      }
+    },
+    "text_mint_details": {
+      "type": "Text",
+      "props": {
+        "text": "brentoil perp 17min close-short lifecycle, sharpe 295k · 7029a48db1b4e5db"
+      }
+    },
+    "vote_queued": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_vote",
+        "text_vote_details"
+      ]
+    },
+    "badge_vote": {
+      "type": "Badge",
+      "props": {
+        "text": "vote",
+        "variant": "secondary"
+      }
+    },
+    "text_vote_details": {
+      "type": "Text",
+      "props": {
+        "text": "DISLIKE 391 (epoch 98 hotbot v4 raw, retry of yesterday's nonce-too-low REVERT)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "onchain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "onchain_heading",
+        "mint_onchain",
+        "vote_onchain"
+      ]
+    },
+    "onchain_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h3"
+      }
+    },
+    "mint_onchain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_mint_hash_label",
+        "text_mint_tx"
+      ]
+    },
+    "text_mint_hash_label": {
+      "type": "Text",
+      "props": {
+        "text": "mint 7029a48db1b4e5db"
+      }
+    },
+    "text_mint_tx": {
+      "type": "Text",
+      "props": {
+        "text": "tx 0xd661b488f12fb88dc850ba54d97c446c8c769c95d36b9e2410f4099382ea81bc"
+      }
+    },
+    "vote_onchain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_vote_hash_label",
+        "text_vote_tx"
+      ]
+    },
+    "text_vote_hash_label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 391 DISLIKE"
+      }
+    },
+    "text_vote_tx": {
+      "type": "Text",
+      "props": {
+        "text": "tx 0x9f4dc2a3f9890122af62100f1a3347f90ccb9b9f58bceeeb06fc513c24787756"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reverted_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reverted_heading",
+        "error_ipfs",
+        "error_metadata"
+      ]
+    },
+    "reverted_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Reverted",
+        "level": "h3"
+      }
+    },
+    "error_ipfs": {
+      "type": "Alert",
+      "props": {
+        "title": "phase 2 · IPFS_PIN_403 × 1",
+        "message": "7029a48d, ISS-013\nAction: set PINATA_JWT secret — queue retained, retries next run",
+        "type": "warning"
+      }
+    },
+    "error_metadata": {
+      "type": "Alert",
+      "props": {
+        "title": "phase 2 · METADATA_POST_400 × 2",
+        "message": "397ee2e8 + 9794ed80, ISS-012\nAction: PR #42 will surface response body — queue retained, retries next run",
+        "type": "warning"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned",
+        "variant": "muted"
+      }
+    }
+  }
+}

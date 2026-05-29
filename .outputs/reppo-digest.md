@@ -1,23 +1,17 @@
-## Summary
+reppo-swarm · 2nd run · datanet 9 · 2 on-chain
 
-Executed the **reppo-digest** skill for the 2026-05-29 1st run of the reppo-swarm chain.
+queued
+  mint · brentoil perp 17min close-short lifecycle, sharpe 295k · 7029a48db1b4e5db
+  vote · DISLIKE 391 (epoch 98 hotbot v4 raw, retry of yesterday's nonce-too-low REVERT)
 
-**Digest sent** — staged at `.pending-notify/1748477700.md` (sandbox blocks `./notify "$(cat …)"` arg-passing per the documented pattern; post-run step delivers). Header: `reppo-swarm · 1st run · datanet 9 · 4 on-chain`. Sections: `queued`, `on-chain`, `reverted` with one-line `action:` per revert, trailing `14 datanets unassigned.` All lowercase per `soul/STYLE.md`.
+on-chain
+  mint 7029a48db1b4e5db — tx 0xd661b488f12fb88dc850ba54d97c446c8c769c95d36b9e2410f4099382ea81bc
+  vote 391 DISLIKE — tx 0x9f4dc2a3f9890122af62100f1a3347f90ccb9b9f58bceeeb06fc513c24787756
 
-**Ledger updated** at `memory/topics/reppo.md`:
-- 1 mint row — hash `9794ed8044e6e7ea` (LIT perp, 2000 closes, sharpe 19515, tx `0xca4b0a63…`, 5th mint ever).
-- 2 vote rows — pod 332 dislike (tx `0xd0ec80b6…`), pod 390 dislike (tx `0x2d6cf782…`). vote-391 deliberately omitted (REVERT).
-- 1 run-history row — 1 mint / 2 votes / 3 failures, full narrative.
+reverted
+  phase 2 · IPFS_PIN_403 × 1 (7029a48d, ISS-013)
+         action: set PINATA_JWT secret — queue retained, retries next run
+  phase 2 · METADATA_POST_400 × 2 (397ee2e8 + 9794ed80, ISS-012)
+         action: PR #42 will surface response body — queue retained, retries next run
 
-**3 distinct failures filed** (checked INDEX.md, none matched existing open issues):
-- **ISS-011** (medium, unknown) — vote-391 REVERT nonce-too-low after siblings 332/390 landed in same batch.
-- **ISS-012** (medium, api-change) — Phase 2 metadata POST HTTP 400 for queued mint 397ee2e8.
-- **ISS-013** (medium, missing-secret) — Phase 2 IPFS pin HTTP 403 (Pinata JWT) for mint 9794ed80.
-
-Indexed all three in `memory/issues/INDEX.md` Open table.
-
-**Run logged** under `### reppo-digest` in `memory/logs/2026-05-29.md`.
-
-**Files modified**: `memory/topics/reppo.md`, `memory/issues/INDEX.md`, `memory/logs/2026-05-29.md`, `.pending-notify/1748477700.md`, `memory/issues/ISS-011.md` (new), `memory/issues/ISS-012.md` (new), `memory/issues/ISS-013.md` (new).
-
-**Follow-ups for the operator**: rotate or set `PINATA_JWT` (ISS-013, blocks every future mint's IPFS pin); diff `postprocess-reppo.sh` payload vs current Reppo `/pods` schema (ISS-012); watch next run for nonce-too-low recurrence to decide if ISS-011 needs a postprocess-side retry.
+14 datanets unassigned.
