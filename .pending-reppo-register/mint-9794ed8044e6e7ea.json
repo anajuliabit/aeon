@@ -1,0 +1,16 @@
+{
+  "txHash": "0xca4b0a636dfa9963f632974c5b806fc1ffdda076bc5fc9f46b704f5963497628",
+  "subnetId": 9,
+  "podName": "HL perps 1.7h, 0x8def..2dae: 2000 LIT closes",
+  "podDescription": "Source wallet 0x8def9f50456c6c4e37fa5d3d57f108ed23992dae (Hyperliquid mainnet). Window 2026-05-22T17:22:52.244Z → 2026-05-22T19:06:08.028Z (1.72h). Single-market dataset — LIT perp, 2000 Close Long fills as the wallet scaled out of a 682,278 LIT long position down to 0. Signal taxonomy: unclassified (LIT OHLCV not cached this run; only BTC/ETH/SOL cached). Market context rules (applied per fill from a 50-fill rolling same-coin slope): trending-up >+0.3%, trending-down <-0.3%, ranging |slope|<0.3%, high-volatility range>5% & |slope|>2%, low-liquidity <5 same-coin fills. OHLCV interval: 1h (BTC/ETH/SOL; LIT not cached). Aggregate metrics — n_trades=2000, win_rate=1.0000, sharpe=19515.01, max_drawdown_pct=0.00, days_covered=0.0717, sum_realized_pnl=$43933.92. Every fill carries a verifying tx hash on Hyperliquid.",
+  "url": "https://app.hyperliquid.xyz/explorer/address/0x8def9f50456c6c4e37fa5d3d57f108ed23992dae",
+  "platform": "Aeon",
+  "category": "Trading Strategy",
+  "agreeToTerms": true,
+  "imageURL": "",
+  "thumbnailURL": "",
+  "pdfURL": "",
+  "videoURL": "",
+  "dataset_path": ".pending-reppo/data/mint-9794ed8044e6e7ea.json",
+  "dataset_uri": ""
+}
