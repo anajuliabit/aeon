@@ -1,22 +1,22 @@
+Brief staged + logged. The skill is complete (single linear flow — no task tracking needed).
+
 ## Summary
 
-Ran the morning-brief skill for 2026-05-28.
+Executed `skills/morning-brief/SKILL.md` for 2026-05-29 (Friday).
 
-**Focus today (3 items):**
-1. Land PR #30 (rewrite reppo-trading-agent → HL public data) — 30h open, chain mints off-rubric again at 07:00
-2. Patch chain-runner.yml fail-fast `continue` → `break` (ISS-009) — 3rd recurrence yesterday, will repeat at 07:00
-3. Lift ISS-005 validityEpoch filter into prefetch-reppo.sh — vote_cap=3 still bottlenecked to 2 epoch-97 pods
+**Focus today (ranked by leverage × urgency):**
+1. Merge PR #42 (capture HTTP body on Pinata/platform errors) — unblocks ISS-012/013 diagnosis before the next chain run
+2. Rotate/verify `PINATA_JWT` (ISS-013, HTTP 403) — blocks IPFS pin on every future mint
+3. Stage 1st datanet assignment from the 14-backlog — PR #30 blocker lifted 24h ago, 9th day surfaced
 
-**Watch:** HYPE $64.63 ATH (05-26), HIP-4 prediction-market upgrade (05-27), BHYP ETF +$19M inflows — HL surface widens exactly as PR #30 wires the agent into it.
+**Since yesterday:** 5th mint ever overnight (LIT, hash `9794ed80`, tx `0xca4b0a63…`); chain pivoted off pods 372/373 → 391/390/332 (ISS-005 organic mitigation); 3 new Phase-2 platform issues (ISS-011/012/013); 2 new PRs (#41 replicate-oneoff, #42 capture HTTP body).
 
-**Files written:**
-- `.pending-notify/1780041600-morning-brief.md` — staged for post-run delivery (sandbox blocked `./notify` command-substitution arg-passing, same fallback as yesterday's run)
-- `memory/logs/2026-05-28.md` — created with run entry
+**Watch section omitted** — 2 WebSearches surfaced HYPE/Grayscale + Base MCP launch, neither moves the 3 focus items.
 
-**Follow-up:** post-run notify step should deliver the staged brief; PR #30 + ISS-009 fix are the load-bearing items for today.
+**Files touched:**
+- `.pending-notify/1780042266-morning-brief.md` — staged for post-run `./notify` delivery (sandbox arg-passing block)
+- `memory/logs/2026-05-29.md` — appended `### morning-brief` log entry for tomorrow's "since yesterday" input
 
 Sources:
-- [Hyperliquid HYPE price news May 2026 — CoinMarketCap](https://coinmarketcap.com/currencies/hyperliquid/)
-- [Hyperliquid (HYPE) Price USD Today — Coinbase](https://www.coinbase.com/price/hyperliquid)
-- [AI Agents and Crypto Payments: The Emerging 2026 Narrative — MEXC](https://www.mexc.com/news/1079907)
-- [Crypto rails power AI agent payments with $73M settled — MEXC](https://www.mexc.com/news/1110986)
+- [Bitwise bets Hyperliquid could power future finance as HYPE ETFs gain traction (CoinDesk)](https://www.coindesk.com/coindesk-news/2026/05/28/bitwise-bets-hyperliquid-could-power-future-finance-as-hype-etfs-gain-traction)
+- [Base launches Base MCP enabling AI agents to execute DeFi actions (BingX)](https://bingx.com/en/news/post/base-launches-base-mcp-on-may-enabling-ai-agents-to-execute-defi-actions)
