@@ -1,0 +1,393 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "header_info",
+        "separator_1",
+        "queued_section",
+        "separator_2",
+        "onchain_section",
+        "separator_3",
+        "reverted_section",
+        "separator_4",
+        "footer_info"
+      ]
+    },
+    "header_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_reppo_swarm",
+        "badge_3rd_run",
+        "badge_datanet9",
+        "badge_4_onchain"
+      ]
+    },
+    "badge_reppo_swarm": {
+      "type": "Badge",
+      "props": {
+        "text": "reppo-swarm"
+      }
+    },
+    "badge_3rd_run": {
+      "type": "Badge",
+      "props": {
+        "text": "3rd run"
+      }
+    },
+    "badge_datanet9": {
+      "type": "Badge",
+      "props": {
+        "text": "datanet 9"
+      }
+    },
+    "badge_4_onchain": {
+      "type": "Badge",
+      "props": {
+        "text": "4 on-chain"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_queued",
+        "queued_content"
+      ]
+    },
+    "heading_queued": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "queued_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint_item",
+        "votes_item"
+      ]
+    },
+    "mint_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_mint_title",
+        "mint_details_stack"
+      ]
+    },
+    "text_mint_title": {
+      "type": "Text",
+      "props": {
+        "text": "mint · 0x0ddf9bae eth perp",
+        "variant": "lead"
+      }
+    },
+    "mint_details_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_position",
+        "stat_time",
+        "stat_sharpe",
+        "stat_pnl",
+        "badge_tx_hash"
+      ]
+    },
+    "stat_position": {
+      "type": "Stat",
+      "props": {
+        "label": "Position",
+        "value": "2000 close-short"
+      }
+    },
+    "stat_time": {
+      "type": "Stat",
+      "props": {
+        "label": "Time",
+        "value": "4.61h"
+      }
+    },
+    "stat_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe",
+        "value": "13814"
+      }
+    },
+    "stat_pnl": {
+      "type": "Stat",
+      "props": {
+        "label": "PnL",
+        "value": "$855k"
+      }
+    },
+    "badge_tx_hash": {
+      "type": "Badge",
+      "props": {
+        "text": "086b715f7a1de343",
+        "variant": "outline"
+      }
+    },
+    "votes_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_votes_title",
+        "text_votes_votes",
+        "text_votes_context"
+      ]
+    },
+    "text_votes_title": {
+      "type": "Text",
+      "props": {
+        "text": "votes",
+        "variant": "lead"
+      }
+    },
+    "text_votes_votes": {
+      "type": "Text",
+      "props": {
+        "text": "dislike 345, 344, 331"
+      }
+    },
+    "text_votes_context": {
+      "type": "Text",
+      "props": {
+        "text": "off-rubric hotbot v4 raw exports, epoch 94/95 — steered off today's 332/390/391 and ISS-005's 372/373",
+        "variant": "caption"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "onchain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_onchain",
+        "onchain_items"
+      ]
+    },
+    "heading_onchain": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h3"
+      }
+    },
+    "onchain_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "onchain_mint",
+        "onchain_vote_1",
+        "onchain_vote_2",
+        "onchain_vote_3"
+      ]
+    },
+    "onchain_mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_onchain_mint_label",
+        "link_mint_tx"
+      ]
+    },
+    "text_onchain_mint_label": {
+      "type": "Text",
+      "props": {
+        "text": "mint 086b715f7a1de343 — tx"
+      }
+    },
+    "link_mint_tx": {
+      "type": "Link",
+      "props": {
+        "label": "0x51f4b8a6411eeada3684e663bcad2fd00dc88e1cca15a27d4fc6d8d997b9982a",
+        "href": "https://etherscan.io/tx/0x51f4b8a6411eeada3684e663bcad2fd00dc88e1cca15a27d4fc6d8d997b9982a"
+      }
+    },
+    "onchain_vote_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_vote_1_label",
+        "link_vote_1_tx"
+      ]
+    },
+    "text_vote_1_label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 331 dislike — tx"
+      }
+    },
+    "link_vote_1_tx": {
+      "type": "Link",
+      "props": {
+        "label": "0x169b8ccb14a0365a38b84a3686b5a68628ecfeae906fda76ab0cd65aeafc0b2a",
+        "href": "https://etherscan.io/tx/0x169b8ccb14a0365a38b84a3686b5a68628ecfeae906fda76ab0cd65aeafc0b2a"
+      }
+    },
+    "onchain_vote_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_vote_2_label",
+        "link_vote_2_tx"
+      ]
+    },
+    "text_vote_2_label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 344 dislike — tx"
+      }
+    },
+    "link_vote_2_tx": {
+      "type": "Link",
+      "props": {
+        "label": "0x0119e4d45368fea09c7a368e108d085d368e4a89d91074d242aaf19ec1f7b28b",
+        "href": "https://etherscan.io/tx/0x0119e4d45368fea09c7a368e108d085d368e4a89d91074d242aaf19ec1f7b28b"
+      }
+    },
+    "onchain_vote_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_vote_3_label",
+        "link_vote_3_tx"
+      ]
+    },
+    "text_vote_3_label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 345 dislike — tx"
+      }
+    },
+    "link_vote_3_tx": {
+      "type": "Link",
+      "props": {
+        "label": "0x04e61c08c1b28991884e1fb6b83206588136d1c053313eb49ca15cd1c772eeff",
+        "href": "https://etherscan.io/tx/0x04e61c08c1b28991884e1fb6b83206588136d1c053313eb49ca15cd1c772eeff"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "reverted_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_reverted",
+        "reverted_items"
+      ]
+    },
+    "heading_reverted": {
+      "type": "Heading",
+      "props": {
+        "text": "Reverted",
+        "level": "h3"
+      }
+    },
+    "reverted_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_ipfs",
+        "alert_platform"
+      ]
+    },
+    "alert_ipfs": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "ipfs pin · NO_SCOPES_FOUND (ISS-013, 3rd consecutive run failing — escalating to high)",
+        "message": "Action: rotate pinata jwt with pinFileToIPFS scope — operator-call"
+      }
+    },
+    "alert_platform": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "platform post · subnetId expected string, sent number × 3 (ISS-012 root-caused via PR #42 body capture)",
+        "message": "Action: cast subnetId to string in postprocess-reppo.sh payload; also podDescription >200 chars"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer_info": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned (9th day)",
+        "variant": "muted"
+      }
+    }
+  }
+}
