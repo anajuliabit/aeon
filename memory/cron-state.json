@@ -303,14 +303,14 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-29T09:30:19Z",
     "total_runs": 4,
     "total_successes": 4,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-29T09:28:20Z"
+    "last_dispatch": "2026-05-29T15:49:34Z"
   },
   "skill-analytics": {
     "last_dispatch": "2026-05-27T19:12:14Z",
