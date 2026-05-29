@@ -49,7 +49,10 @@ ok .vc-cache/rising.json && STATUS_RISING=ok
 
 Downstream steps read the same files at `.vc-cache/top.json` / `hot.json` / `rising.json`.
 
-If a cache file is missing or an error marker, **fall back to WebFetch** on the same Reddit URL (`https://old.reddit.com/r/vibecoding/{top|hot|rising}.json?…`). Save the JSON into the same `.vc-cache/` path on success and flip the matching `STATUS_*` to `ok`. If all three endpoints fail after fallback, notify `VIBECODING_DIGEST_ERROR: all Reddit endpoints failed` and log to today's log; exit.
+If a cache file is missing or an error marker, **fall back to WebFetch** on the same Reddit URL (`https://old.reddit.com/r/vibecoding/{top|hot|rising}.json?…`). Save the JSON into the same `.vc-cache/` path on success and flip the matching `STATUS_*` to `ok`. If all three endpoints fail after fallback:
+
+- Grep `memory/logs/${today}.md` for prior `VIBECODING_DIGEST_ERROR` entries. If at least one is already present (a prior same-day run already errored on the same Reddit-block surface), **suppress the notification** — append a one-line log entry noting "2nd same-day error, notification suppressed" and exit. This avoids dup-noise when the prefetch host is wedged and both daily slots fail identically.
+- Otherwise, notify `VIBECODING_DIGEST_ERROR: all Reddit endpoints failed`, log to today's log, exit.
 
 If `.vc-cache/meta.json` exists and its `window` doesn't match `$TIME_WINDOW`, treat `top.json` as missing and WebFetch it fresh — the prefetch was run for a different window.
 
