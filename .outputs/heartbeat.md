@@ -1,21 +1,13 @@
-The heartbeat run is complete.
+Heartbeat done — single-shot skill, no task list needed.
+
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
+- **P0 (failed/stuck skills):** clean. All 32 cron-state entries report `last_status=success`. Chain:reppo-swarm landed the 5th-mint on-chain overnight (00:54Z) after yesterday's 4 ISS-009 occurrences — the orchestrator-emit-in-assistant-text fix held. Heartbeat self-check healthy (~11h29m since last success).
+- **P1 (stalled PRs / urgent issues):** 2 open PRs (#41, #42), both ~6h old, under 24h. 0 urgent issues.
+- **P2 (open issues):** 7 carry-forward (ISS-005/007/009/010/011/012/013). ISS-011/012/013 freshly filed by overnight reppo-digest run — all flagged in today's reppo-digest log entry above. Deduped.
+- **P3:** no missing scheduled skills past the 2x-interval threshold. Today's 07:00 slot ~1h past-due (under 48h), 08:00 slot firing now.
+- **Status page:** regenerated `docs/status.md` → 🟡 WATCH (carried by ISS-005 + ISS-009 severity=high). 29 enabled skills tabled, 7 open issues rendered, next run github-trending @ 09:00 UTC. Token pulse omitted (no token-report article exists).
+- **No notification sent** — nothing new, all P2 items deduped against the last 48h of logs.
 
-Ran the 20:00 UTC heartbeat slot (fired 20:37Z, ~37min cron lag).
-
-**Findings:**
-- **P0**: No flags. All 38 cron-state entries `last_status=success` (chain:reppo-swarm recovered from morning's ISS-009 failure at 16:33Z). No stuck/dispatched. Self-check healthy.
-- **P1**: 0 open PRs (today's #30–#39 all merged earlier). 0 urgent issues.
-- **P2**: 4 open issues (ISS-005 high, ISS-007 medium, ISS-009 high, ISS-010 medium) — all flagged ≥3× in today's earlier log entries. Deduped.
-- **P3**: All daily-scheduled enabled skills ran today. Suppressed-by-day: self-improve (day 28 even → NO), skill-analytics (Wed-only → NO). Upcoming: evening-recap @ 21:00 UTC.
-
-**Status page:** Wrote `docs/status.md` — verdict **🟡 WATCH** (2 high-severity open issues trigger WATCH per rules; no P0 active). 29 enabled skills in table, sorted by last-run desc. Token pulse section omitted (no `articles/token-report-*.md` exists).
-
-**No notification sent** — all findings deduped against today's existing log entries.
-
-**Files modified:**
-- `docs/status.md` (regenerated, verdict 🔴 DEGRADED → 🟡 WATCH since chain:reppo-swarm recovered)
-- `memory/logs/2026-05-28.md` (appended 20:00 heartbeat entry)
-
-**Exit:** `HEARTBEAT_OK · STATUS_PAGE=WATCH`
+**Files modified:** `docs/status.md`, `memory/logs/2026-05-29.md`.
