@@ -1,12 +1,18 @@
 ## Summary
 
-Re-fired the **Token Pick** skill at ~13:39 UTC; today's morning pick (XLM tier HIGH + Starmer market tier MEDIUM) already shipped at ~12:00 UTC. Fresh data confirms XLM strengthened materially since the morning call — now $0.1978, **+32.7% 24h / +37.7% 7d**, vmc 0.21, signal score **11/10**, still trending #2 on CoinGecko. The DTCC × Stellar tokenization catalyst (2026-05-27) is unchanged, so the 7-day dedup gate cleanly applies.
+Ran the token-pick skill for 2026-05-29.
 
-**Decision: no new notification.** Best dedup-clean alternates (BILL score 9, BAT score 9, NEAR score 8) all lack a catalyst I can name in one sentence — shipping a 2nd-rate momentum pick as a 2nd-of-the-day call would weaken the feed. Polymarket: only MSTR ($0.49M) and Starmer ($0.15M) clear the $50k 24h liquidity gate, both 7-day-dedup blocked.
+**Picks**
+- **Token:** INJ — HIGH, score 9/10. $6.01 (+12.8% 24h / +11.8% 7d), vmc 0.33, outperforming BTC/ETH on 7d. Catalyst: record $3.57B daily on-chain tokenized-equity volume on 2026-05-27 + 21Shares (TINJ) and Canary staked-INJ ETF filings advancing. Risk: HYPE eating the perp-DEX narrative ($10B/day + 3 spot ETFs already live on NYSE Arca).
+- **Market:** "Will the Oklahoma City Thunder win the 2026 NBA Finals?" — HIGH, edge ~11pp. YES 43¢ vs fair ~54% (Vegas Game 7 ML -155 = 60.7% × ~88% conditional vs Knicks ≈ 53.4%). Polymarket is treating Game 7 as a coinflip while books have OKC -155.
 
-**Files modified:**
-- `memory/logs/2026-05-28.md` — appended re-fire entry with dedup outcome and `TOKEN_PICK_DEDUP_REFIRE` line.
+**Notable judgment call**
+LAB scored 10/10 (24h +30.5%, 7d +27.5%, vmc 0.21, on trending) but **skipped** — ZachXBT flagged 95% insider supply and 100M LAB ($480M) moved from Bitget to fresh wallets with active manipulation investigation. The score rubric doesn't capture active-fraud risk. Stepped down one rung to the cleanest dedup-clean candidate.
 
-**Follow-up:** scratch JSON cache left at `.token-pick-tmp/` — sandbox blocked the cleanup `rm`; safe to delete manually or via cron sweep.
+**Dedup**: INJ + Thunder-NBA both clean of the 7-day window (LIT 5-21, XLM 5-28, MSTR-May-31 5-21, Starmer 5-28).
 
-Sources: cg=ok, dex=ok, poly=ok.
+**Files**
+- `.pending-notify/1780056493-token-pick.md` — notification staged for post-run delivery
+- `memory/logs/2026-05-29.md` — appended Token Pick log + `TOKEN_PICK_DEDUP: INJ | "Will the Oklahoma City Thunder win the 2026 NBA Finals?"`
+
+**Sources**: cg=ok, dex=ok (search?q=trending returns name-match noise — no cross-confirm bonus applied), poly=ok.
