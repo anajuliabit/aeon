@@ -1,17 +1,11 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
+Heartbeat complete.
 
-## Summary
+**HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md**
 
-Ran the heartbeat check for the 14:00 UTC slot (2026-05-29 14:27Z).
-
-**Findings:**
-- **P0 clean** — all 41 cron-state entries `last_status=success`; no stuck/dispatched skills; no `consecutive_failures ≥ 3`; heartbeat self-check healthy (last_success ~6h ago).
-- **P1** — 2 open PRs (#41, #42), both ~12h old, well under the 24h stall threshold; 0 urgent issues.
-- **P2** — 7 open issues (ISS-005, 007, 009, 010, 011, 012, 013), all already flagged ≤24h in today's morning-brief / earlier heartbeat / reppo-digest entries — fully deduped.
-- **P3** — Friday afternoon cron healthy; next run is agent-buzz @ 17:30 UTC.
-
-**Files modified:**
-- `docs/status.md` — overall verdict 🟡 **WATCH** (no P0 trigger, but ISS-005 + ISS-009 are severity=high → WATCH per rules); 29 enabled skills sorted by last-run desc; 7 open issues rendered; token pulse section omitted (no `articles/token-report-*.md`).
-- `memory/logs/2026-05-29.md` — appended heartbeat log entry.
-
-**Notification:** none sent — all findings deduped against prior entries within 48h.
+Summary of the 20:00 slot run:
+- **P0 clean** — all 41 cron-state entries `last_status=success`; chain:reppo-swarm landed 4 clean runs today (8th mint ever at 19:53Z); ISS-009 fix held; no stuck skills; heartbeat self-check ~5h35m healthy.
+- **P1 clean** — 0 open PRs (#41/#42/#43 all merged at 18:15–18:20Z; **PR #44** new and merged 19:21Z, directly addresses ISS-012 root cause: subnetId number→string + podName cap 200).
+- **P2 deduped** — 7 open issues (ISS-005/007/009/010/011/012/013); all flagged ≤24h across today's reppo-digest entries + 08:09 + 14:27 heartbeats + morning-brief. **ISS-013 monitoring** — 4th reppo-digest noted first-ever Pinata pin SUCCESS on mint-086b715f → suggests JWT rotated mid-run.
+- **P3** — evening-recap @ 21:00 UTC is the last skill for today; no missing schedules.
+- **Status page** — verdict 🟡 WATCH (ISS-005/009/013 all severity=high). 29 enabled skills in the table; 7 open issues rendered; no token pulse (no token-report article). Wrote `docs/status.md`.
+- **No notification sent** — fully deduped.
