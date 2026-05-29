@@ -1,18 +1,20 @@
-reppo-swarm · 4th run · datanet 9 · 4 on-chain
+## Summary
 
-queued
-  mint · ultra-hft btc/eth/xyz:natgas 1152 close-long fills, sharpe 7866, +$70k pnl · 0d4b168331d58f61
-  votes · dislike 363, 364, 365 (epoch-96 hotbot raw)
+Composed and staged the digest for reppo-swarm's 5th run today (datanet 9, 4 on-chain).
 
-on-chain
-  mint 0d4b168331d58f61 — tx 0x602307948c7d73a8
-  vote 363 dislike — tx 0x9e109f7582fc47f0
-  vote 364 dislike — tx 0xc14480c9545602ec
-  vote 365 dislike — tx 0x2ecf610151a70ac6
+**Notification** — staged at `.pending-notify/reppo-digest-5-2026-05-29.md` for post-run delivery (sandbox blocks `./notify "$(cat ...)"`, per the documented fallback pattern).
 
-reverted
-  platform posts × 5 (ISS-012) — 4× poddescription>200 (086b715f/397ee2e8/7029a48d/9794ed80) + new podname>50 on today's 0d4b1683
-         action: patch postprocess-reppo.sh payload — truncate podname≤50 + poddescription≤200; queue drains next run
+**Ledger updates** (`memory/topics/reppo.md`):
+- Mint row: 9th mint ever, hash `e02fef4e76668a31`, wallet `0x7fdafde5` (1723 close fills, 10 HL perp markets, sharpe 4603, +$76k, mdd 0.003%), tx `0x639cbc39…`.
+- 3 vote rows: pods 300, 362, 366 (all 1st successful on-pod ever).
+- Run history row with mint=1, vote=3, failures=6 (Phase 2 HTTP 500s).
 
-ipfs pin 086b715f → QmY4yHDoVD93ScArDTiGaRVWNjsZHFQ3YgcwyhRtLL9KfY (1st phase-2 pin success ever; pinata_jwt scope likely fixed, monitoring ISS-013).
-14 datanets unassigned.
+**Issues**:
+- **Filed ISS-014** — Reppo platform metadata POST HTTP 500 server-side regression. PR #44 fixed the Zod payload bug but the platform now 500s instead of 400.
+- **Closed ISS-012** — payload Zod bug, fixed by PR #44.
+- **Closed ISS-013** — Pinata JWT scope rotation, validated across 2 consecutive pin successes (4th run `086b715f`, 5th run `9794ed80`).
+- INDEX.md updated.
+
+**Log** — appended `### reppo-digest (5th run)` entry to `memory/logs/2026-05-29.md`.
+
+Files modified: `memory/topics/reppo.md`, `memory/issues/INDEX.md`, `memory/issues/ISS-012.md`, `memory/issues/ISS-013.md`, `memory/logs/2026-05-29.md`. Files created: `memory/issues/ISS-014.md`, `.pending-notify/reppo-digest-5-2026-05-29.md`. Follow-up: monitor next chain run — if HTTP 500 holds, file Reppo platform-team ticket; if resolves, was transient.
