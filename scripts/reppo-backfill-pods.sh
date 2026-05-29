@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Backfill Reppo platform metadata for pods that were minted on chain
 # BEFORE the metadata-registration phase landed in postprocess-reppo.sh
-# (PR adding REPPO_AGENT_ID / REPPO_AGENT_API_KEY env vars and the
+# (PR adding REPPO_AGENT_ID / REPPO_API_KEY env vars and the
 # phase-2 register loop).
 #
 # Without metadata, a pod exists as a bare ERC-721 on chain but does
@@ -11,7 +11,7 @@
 # Run LOCALLY once (or any time you find an orphaned mint tx):
 #
 #   REPPO_AGENT_ID=cm...
-#   REPPO_AGENT_API_KEY=...
+#   REPPO_API_KEY=...
 #   ./scripts/reppo-backfill-pods.sh
 #
 # Both env vars are also available as GH Actions secrets — for a
@@ -19,8 +19,8 @@
 # secrets injected.
 set -euo pipefail
 
-if [ -z "${REPPO_AGENT_ID:-}" ] || [ -z "${REPPO_AGENT_API_KEY:-}" ]; then
-  echo "reppo-backfill: REPPO_AGENT_ID and REPPO_AGENT_API_KEY must be set" >&2
+if [ -z "${REPPO_AGENT_ID:-}" ] || [ -z "${REPPO_API_KEY:-}" ]; then
+  echo "reppo-backfill: REPPO_AGENT_ID and REPPO_API_KEY must be set" >&2
   echo "  set them in your shell or use \`gh secret set\` and dispatch the workflow" >&2
   exit 1
 fi
@@ -70,7 +70,7 @@ echo "$PODS_JSON" | jq -c '.[]' | while read -r pod; do
 
   cache=".reppo-cache/register-backfill-${tx:0:18}.json"
   if curl -fsS -X POST "$API" \
-       -H "Authorization: Bearer ${REPPO_AGENT_API_KEY}" \
+       -H "Authorization: Bearer ${REPPO_API_KEY}" \
        -H "Content-Type: application/json" \
        --data "$pod" \
        > "$cache" 2>&1; then
