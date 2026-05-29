@@ -1,21 +1,19 @@
-Skill-health audit complete.
-
 ## Summary
 
-Executed `skills/skill-health/SKILL.md` against current fleet state.
+Ran skill-health fleet sweep for 2026-05-29.
 
-**Classification (28 enabled cron skills):**
-- 🟢 HEALTHY: 27
-- ⚪ NO DATA: 1 — operator-scorecard (scheduled Mon 10:30, never run since enabled → DISPATCH-SKILL)
-- 🔴/🟡 CRITICAL/DEGRADED/FLAPPING/WARNING: 0
+**Classification:** 27 HEALTHY, 1 NO DATA (`operator-scorecard` — Mon-only, never run), 0 CRITICAL / DEGRADED / FLAPPING / WARNING across 28 enabled scheduled skills.
 
-**Hash:** unchanged (`e3b0c4…`, sha256 of empty critical+degraded+flapping list) vs prev_report. Last notify was 2026-05-26T18:27Z = ~48h ago → time-gate elapsed, notification fires per step 5.
+**Signature hash:** `e3b0c442…` (empty list — no failing skills). Matches `prev_report.hash` from 2026-05-28T18:44Z.
 
-**Issues reconciliation:** 4 open issues in INDEX.md (ISS-005, 007, 009, 010), but none are `detected_by: skill-health` — step 1 scoping skips them. Nothing filed, nothing resolved.
+**Notification gate:** `current_hash == prev_hash` AND `now − last_notified_at = 23h32m < 24h` → **SKILL_HEALTH_NOOP**, no notify sent.
 
-**Files written:**
-- `memory/skill-health/last-report.json` — updated hash, last_notified_at, classification (NO DATA list narrowed from 3 → 1; autoresearch + skill-analytics now have entries in cron-state)
-- `.pending-notify/1780036000-skill-health.md` — notification body (sandbox arg-passing pattern; post-run delivery picks it up)
-- `memory/logs/2026-05-28.md` — appended log entry with HEALTH: OK, the SKILL_HEALTH_PARTIAL note (`./scripts/skill-runs` permission denied), and a data-quality flag that vibecoding-digest's workflow exits success but the underlying skill is in VIBECODING_DIGEST_ERROR (Reddit blocked + prefetch failing) — worth surfacing to self-improve as a workflow-exit-vs-skill-outcome mismatch.
+**Issue reconciliation:** No-op. All 7 open issues in `memory/issues/INDEX.md` have `detected_by: reppo-digest / claude / agent-buzz`. None detected_by skill-health — outside this skill's reconciliation scope.
 
-**Follow-up:** dispatch operator-scorecard manually; the workflow-exit-vs-skill-outcome gap on vibecoding-digest is a classifier blind spot the spec doesn't currently cover.
+**Sandbox note:** `./scripts/skill-runs` required approval, so logged `SKILL_HEALTH_PARTIAL` and continued with `cron-state.json` + `memory/skill-health/*.json` per the SKILL.md fallback.
+
+**Files modified:**
+- `memory/skill-health/last-report.json` — refreshed `last_run_at`, hash + classification + `last_notified_at` preserved.
+- `memory/logs/2026-05-29.md` — appended `### skill-health` block with NOOP rationale.
+
+**Follow-ups:** None. Fleet is clean — daily cadence will re-arm tomorrow's 18:00 slot for the next health check (will notify on first OK if state still healthy, since the 24h reminder cadence will have elapsed).
