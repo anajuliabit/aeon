@@ -174,9 +174,9 @@
   },
   "reppo-trading-agent": {
     "last_status": "success",
-    "last_success": "2026-05-29T08:33:16Z",
-    "total_runs": 29,
-    "total_successes": 29,
+    "last_success": "2026-05-29T18:43:53Z",
+    "total_runs": 30,
+    "total_successes": 30,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
