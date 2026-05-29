@@ -170,3 +170,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-29,reppo-digest,claude-opus-4-7,25,24437,1824838,86366
 2026-05-29,heartbeat,claude-opus-4-7,21,13443,1350069,91252
 2026-05-29,evening-recap,claude-sonnet-4-6,11,10515,565523,56595
+2026-05-29,reppo-orchestrator,claude-opus-4-7,18,3837,857658,52190
