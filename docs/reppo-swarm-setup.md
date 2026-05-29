@@ -15,7 +15,7 @@ Repo Settings → Secrets and variables → Actions:
   `https://mainnet.base.org`, which is flaky enough to cause intermittent
   `INTERNAL_ERROR` dry-run failures under load (see ISS-007). The workflow
   exposes this secret to the CLI as `REPPO_RPC_URL`.
-- `REPPO_AGENT_ID` + `REPPO_AGENT_API_KEY` — returned by
+- `REPPO_AGENT_ID` + `REPPO_API_KEY` — returned by
   `reppo register-agent` (see Step 3 below). Required for the platform
   metadata POST that makes minted pods visible in the Reppo UI.
 - `PINATA_JWT` — optional but strongly recommended. A Pinata API JWT

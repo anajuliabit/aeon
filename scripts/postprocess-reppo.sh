@@ -502,7 +502,7 @@ done
 # Bootstrap (one-time, operator runs locally):
 #   REPPO_NETWORK=mainnet reppo register-agent --name "Aeon ..."
 #   → returns {agentId, apiKey}; set as GH secrets
-#     REPPO_AGENT_ID + REPPO_AGENT_API_KEY.
+#     REPPO_AGENT_ID + REPPO_API_KEY.
 #
 # Failure mode: if either secret is missing OR the curl fails, we
 # leave the queue file in place so the next chain run retries. The
@@ -510,11 +510,11 @@ done
 # of the transient.
 REGISTER_DIR=".pending-reppo-register"
 if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null || true)" ]; then
-  if [ -z "${REPPO_AGENT_ID:-}" ] || [ -z "${REPPO_AGENT_API_KEY:-}" ]; then
-    echo "reppo-postprocess: REPPO_AGENT_ID or REPPO_AGENT_API_KEY not set; phase-2 register skipped (queue files retained for next run)" >&2
+  if [ -z "${REPPO_AGENT_ID:-}" ] || [ -z "${REPPO_API_KEY:-}" ]; then
+    echo "reppo-postprocess: REPPO_AGENT_ID or REPPO_API_KEY not set; phase-2 register skipped (queue files retained for next run)" >&2
     {
       echo ""
-      echo "_Phase 2 (Reppo platform metadata POST) skipped: REPPO_AGENT_ID / REPPO_AGENT_API_KEY missing. $(ls "$REGISTER_DIR" | wc -l | tr -d ' ') pending file(s) retained for next run._"
+      echo "_Phase 2 (Reppo platform metadata POST) skipped: REPPO_AGENT_ID / REPPO_API_KEY missing. $(ls "$REGISTER_DIR" | wc -l | tr -d ' ') pending file(s) retained for next run._"
     } >> "$RESULTS_FILE"
   else
     {
@@ -568,7 +568,7 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
 
       echo "reppo-postprocess: registering metadata for $rbase (tx $rtx)..." >&2
       if curl -fsS -X POST "https://reppo.ai/api/v1/agents/${REPPO_AGENT_ID}/pods" \
-           -H "Authorization: Bearer ${REPPO_AGENT_API_KEY}" \
+           -H "Authorization: Bearer ${REPPO_API_KEY}" \
            -H "Content-Type: application/json" \
            --data @"$body_file" \
            > ".reppo-cache/register-$rbase" 2>&1; then
