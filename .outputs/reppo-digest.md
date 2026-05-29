@@ -1,19 +1,18 @@
-reppo-swarm · 3rd run · datanet 9 · 4 on-chain
+reppo-swarm · 4th run · datanet 9 · 4 on-chain
 
 queued
-  mint · 0x0ddf9bae eth perp · 2000 close-short / 4.61h / sharpe 13814 / $855k pnl · 086b715f7a1de343
-  votes · dislike 345, 344, 331 (off-rubric hotbot v4 raw exports, epoch 94/95 — steered off today's 332/390/391 and ISS-005's 372/373)
+  mint · ultra-hft btc/eth/xyz:natgas 1152 close-long fills, sharpe 7866, +$70k pnl · 0d4b168331d58f61
+  votes · dislike 363, 364, 365 (epoch-96 hotbot raw)
 
 on-chain
-  mint 086b715f7a1de343 — tx 0x51f4b8a6411eeada3684e663bcad2fd00dc88e1cca15a27d4fc6d8d997b9982a
-  vote 331 dislike — tx 0x169b8ccb14a0365a38b84a3686b5a68628ecfeae906fda76ab0cd65aeafc0b2a
-  vote 344 dislike — tx 0x0119e4d45368fea09c7a368e108d085d368e4a89d91074d242aaf19ec1f7b28b
-  vote 345 dislike — tx 0x04e61c08c1b28991884e1fb6b83206588136d1c053313eb49ca15cd1c772eeff
+  mint 0d4b168331d58f61 — tx 0x602307948c7d73a8
+  vote 363 dislike — tx 0x9e109f7582fc47f0
+  vote 364 dislike — tx 0xc14480c9545602ec
+  vote 365 dislike — tx 0x2ecf610151a70ac6
 
 reverted
-  ipfs pin · NO_SCOPES_FOUND (ISS-013, 3rd consecutive run failing — escalating to high)
-         action: rotate pinata jwt with pinFileToIPFS scope — operator-call
-  platform post · subnetId expected string, sent number × 3 (ISS-012 root-caused via PR #42 body capture)
-         action: cast subnetId to string in postprocess-reppo.sh payload; also podDescription >200 chars
+  platform posts × 5 (ISS-012) — 4× poddescription>200 (086b715f/397ee2e8/7029a48d/9794ed80) + new podname>50 on today's 0d4b1683
+         action: patch postprocess-reppo.sh payload — truncate podname≤50 + poddescription≤200; queue drains next run
 
-14 datanets unassigned (9th day).
+ipfs pin 086b715f → QmY4yHDoVD93ScArDTiGaRVWNjsZHFQ3YgcwyhRtLL9KfY (1st phase-2 pin success ever; pinata_jwt scope likely fixed, monitoring ISS-013).
+14 datanets unassigned.

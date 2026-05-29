@@ -1,0 +1,361 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "queued-section",
+        "sep2",
+        "onchain-section",
+        "sep3",
+        "reverted-section"
+      ]
+    },
+    "header": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 4th run · datanet 9 · 4 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "queued-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-heading",
+        "mint-item",
+        "votes-item"
+      ]
+    },
+    "queued-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "mint-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint-title",
+        "mint-stats",
+        "mint-hash"
+      ]
+    },
+    "mint-title": {
+      "type": "Text",
+      "props": {
+        "text": "mint · ultra-hft btc/eth/xyz:natgas"
+      }
+    },
+    "mint-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "sm"
+      },
+      "children": [
+        "stat-fills",
+        "stat-sharpe",
+        "stat-pnl"
+      ]
+    },
+    "stat-fills": {
+      "type": "Stat",
+      "props": {
+        "label": "close-long fills",
+        "value": "1152"
+      }
+    },
+    "stat-sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "sharpe",
+        "value": "7866"
+      }
+    },
+    "stat-pnl": {
+      "type": "Stat",
+      "props": {
+        "label": "PnL",
+        "value": "+$70k"
+      }
+    },
+    "mint-hash": {
+      "type": "Text",
+      "props": {
+        "text": "0d4b168331d58f61",
+        "variant": "caption"
+      }
+    },
+    "votes-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes-title",
+        "votes-list"
+      ]
+    },
+    "votes-title": {
+      "type": "Text",
+      "props": {
+        "text": "votes · dislike (epoch-96 hotbot raw)"
+      }
+    },
+    "votes-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "vote-363",
+        "vote-364",
+        "vote-365"
+      ]
+    },
+    "vote-363": {
+      "type": "Badge",
+      "props": {
+        "text": "363",
+        "variant": "outline"
+      }
+    },
+    "vote-364": {
+      "type": "Badge",
+      "props": {
+        "text": "364",
+        "variant": "outline"
+      }
+    },
+    "vote-365": {
+      "type": "Badge",
+      "props": {
+        "text": "365",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "onchain-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "onchain-heading",
+        "mint-tx",
+        "vote-txs"
+      ]
+    },
+    "onchain-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h3"
+      }
+    },
+    "mint-tx": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "mint-label",
+        "mint-txhash"
+      ]
+    },
+    "mint-label": {
+      "type": "Text",
+      "props": {
+        "text": "mint 0d4b168331d58f61"
+      }
+    },
+    "mint-txhash": {
+      "type": "Link",
+      "props": {
+        "label": "0x602307948c7d73a8",
+        "href": "https://etherscan.io/tx/0x602307948c7d73a8"
+      }
+    },
+    "vote-txs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vote-363-tx",
+        "vote-364-tx",
+        "vote-365-tx"
+      ]
+    },
+    "vote-363-tx": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "vote-363-label",
+        "vote-363-txhash"
+      ]
+    },
+    "vote-363-label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 363 dislike"
+      }
+    },
+    "vote-363-txhash": {
+      "type": "Link",
+      "props": {
+        "label": "0x9e109f7582fc47f0",
+        "href": "https://etherscan.io/tx/0x9e109f7582fc47f0"
+      }
+    },
+    "vote-364-tx": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "vote-364-label",
+        "vote-364-txhash"
+      ]
+    },
+    "vote-364-label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 364 dislike"
+      }
+    },
+    "vote-364-txhash": {
+      "type": "Link",
+      "props": {
+        "label": "0xc14480c9545602ec",
+        "href": "https://etherscan.io/tx/0xc14480c9545602ec"
+      }
+    },
+    "vote-365-tx": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "vote-365-label",
+        "vote-365-txhash"
+      ]
+    },
+    "vote-365-label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 365 dislike"
+      }
+    },
+    "vote-365-txhash": {
+      "type": "Link",
+      "props": {
+        "label": "0x2ecf610151a70ac6",
+        "href": "https://etherscan.io/tx/0x2ecf610151a70ac6"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "reverted-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reverted-heading",
+        "reverted-alert",
+        "ipfs-pin",
+        "datanets-info"
+      ]
+    },
+    "reverted-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Reverted",
+        "level": "h3"
+      }
+    },
+    "reverted-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Platform posts × 5 (ISS-012)",
+        "message": "4× poddescription>200 (086b715f/397ee2e8/7029a48d/9794ed80) + new podname>50 on today's 0d4b1683\nAction: patch postprocess-reppo.sh payload — truncate podname≤50 + poddescription≤200; queue drains next run",
+        "type": "warning"
+      }
+    },
+    "ipfs-pin": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ipfs-title",
+        "ipfs-hash",
+        "ipfs-note"
+      ]
+    },
+    "ipfs-title": {
+      "type": "Text",
+      "props": {
+        "text": "IPFS pin 086b715f"
+      }
+    },
+    "ipfs-hash": {
+      "type": "Link",
+      "props": {
+        "label": "QmY4yHDoVD93ScArDTiGaRVWNjsZHFQ3YgcwyhRtLL9KfY",
+        "href": "https://gateway.pinata.cloud/ipfs/QmY4yHDoVD93ScArDTiGaRVWNjsZHFQ3YgcwyhRtLL9KfY"
+      }
+    },
+    "ipfs-note": {
+      "type": "Text",
+      "props": {
+        "text": "1st phase-2 pin success ever; pinata_jwt scope likely fixed, monitoring ISS-013",
+        "variant": "caption"
+      }
+    },
+    "datanets-info": {
+      "type": "Stat",
+      "props": {
+        "label": "Datanets unassigned",
+        "value": "14"
+      }
+    }
+  }
+}

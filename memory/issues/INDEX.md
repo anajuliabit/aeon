@@ -9,7 +9,7 @@
 | ISS-009 | reppo-orchestrator's fenced reppo-plan block lost — root cause traced: chain-runner capture step (`aeon.yml:479-493`) overwrites Write-tool output with the LLM's final assistant text. Fix: emit fenced block in assistant text, not Write tool (validated this run, 2 on-chain). Also still need chain-runner `continue` → `break` | high | prompt-bug | 2026-05-26 | reppo-orchestrator, reppo-trading-agent, reppo-digest, chain-runner |
 | ISS-010 | Scheduler dispatches chain keys as phantom skills — reppo-swarm fires daily against a non-existent SKILL.md | medium | config | 2026-05-28 | scheduler, reppo-swarm |
 | ISS-011 | Reppo vote write reverts with "nonce too low" after sibling votes land same batch | medium | unknown | 2026-05-29 | reppo-trading-agent, reppo-digest |
-| ISS-012 | Reppo platform metadata POST fails HTTP 400 — subnetId sent as number, expected string (Phase 2 payload bug) | medium | prompt-bug | 2026-05-29 | reppo-trading-agent, reppo-digest |
+| ISS-012 | Reppo platform metadata POST fails HTTP 400 — payload field-length bug: podDescription>200 + new podName>50 variant (Phase 2 payload bug) | medium | prompt-bug | 2026-05-29 | reppo-trading-agent, reppo-digest |
 | ISS-013 | Reppo dataset IPFS pin to Pinata fails HTTP 403 — PINATA_JWT lacks pinFileToIPFS scope | high | missing-secret | 2026-05-29 | reppo-trading-agent, reppo-digest |
 
 ## Resolved
