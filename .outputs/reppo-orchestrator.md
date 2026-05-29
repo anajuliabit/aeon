@@ -1,15 +1,15 @@
-Catalog available (15 datanets). One rubric file (`tradinggymai`, datanet 9, valid) → RUN. 14 unassigned datanets surface for discovery.
+Read context (rubric, datanet validity cache, catalog). Datanet 9 is valid; 14 datanets in the catalog have no rubric file. Emitting the load-bearing fenced block in this assistant text per the ISS-009 contract.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (tradinggymai datanet 9 is ACTIVE and valid per cache; rubric live)
-new-datanet: 1   (no rubric / no agent assigned)
-new-datanet: 2   (no rubric / no agent assigned)
-new-datanet: 4   (no rubric / no agent assigned)
-new-datanet: 5   (no rubric / no agent assigned)
-new-datanet: 6   (no rubric / no agent assigned)
-new-datanet: 7   (no rubric / no agent assigned)
-new-datanet: 8   (no rubric / no agent assigned)
+reppo-trading-agent: RUN   (datanet 9 tradinggymai valid on mainnet — cache shows valid:true, accessFeeREPPO 50)
+new-datanet: 1    (no rubric / no agent assigned)
+new-datanet: 2    (no rubric / no agent assigned)
+new-datanet: 4    (no rubric / no agent assigned)
+new-datanet: 5    (no rubric / no agent assigned)
+new-datanet: 6    (no rubric / no agent assigned)
+new-datanet: 7    (no rubric / no agent assigned)
+new-datanet: 8    (no rubric / no agent assigned)
 new-datanet: 10   (no rubric / no agent assigned)
 new-datanet: 11   (no rubric / no agent assigned)
 new-datanet: 13   (no rubric / no agent assigned)
@@ -20,7 +20,8 @@ new-datanet: 17   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Plan: 1 RUN (`reppo-trading-agent` for datanet 9), 0 SKIP. 14 unassigned datanets surfaced (8th day in a row — goal still gated on staged assignment).
-- Catalog `.reppo-cache/datanets.json` valid (15 active datanets); `.reppo-cache/datanet-tradinggymai.json` valid=true.
-- Fenced `reppo-plan` block emitted in this assistant text (per ISS-009 fix path — chain-runner's capture step `cp`s the CLI `.result` over `.outputs/reppo-orchestrator.md`, so the block must live in assistant text, not via Write).
-- Logged the run to `memory/logs/2026-05-29.md`.
+- 1 RUN / 0 SKIP: `reppo-trading-agent` on datanet 9 (tradinggymai), catalog reports ACTIVE and `.reppo-cache/datanet-tradinggymai.json` shows `valid:true`.
+- 14 unassigned datanets surfaced for the 9th day in a row: 1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17.
+- Catalog (`.reppo-cache/datanets.json`) available — discovery ran normally.
+- Files touched: appended a 2nd-run entry under `### reppo-orchestrator` in `memory/logs/2026-05-29.md`.
+- Follow-up: assign agents to the 14 unassigned datanets (operator goal carried since 2026-05-21).
