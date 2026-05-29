@@ -46,6 +46,8 @@ state: what was built, recurring blockers, and health.
 | #37 | 2026-05-28 | reppo: rank HL wallets by margin (pnl/vlm), drop 7d span floor, add anti-regurgitation contract — unlocked 4th mint ever |
 | #38 | 2026-05-28 | replicate: pin pending-JSON contract + surface API errors |
 | #39 | 2026-05-28 | HL_TOP_N default 10 → 3 to fit Aeon's 30-min timeout |
+| #41 | 2026-05-29 | replicate-oneoff workflow (workflow_dispatch image gen) — open |
+| #42 | 2026-05-29 | capture HTTP status + response body on Pinata pin / platform POST failures (unblocks ISS-012/013 diagnosis) — open |
 
 ## Recurring blockers
 - **14 unassigned reppo datanets.** Orchestrator surfaces them every run (ids
@@ -54,8 +56,22 @@ state: what was built, recurring blockers, and health.
   pick for the other 14.
 - **ISS-005 durable fix still pending.** Agent-side filter (validityEpoch ≤
   current-1) is in place since 2026-05-24; durable prefetch fix still pending.
-  Compounding side-effect: pods 372/373 have been DISLIKE'd 7× each on-chain
-  on 2026-05-28 alone (1 per chain run, no CLI idempotency check).
+  Compounding side-effect: pods 372/373 were DISLIKE'd 7× each on-chain
+  2026-05-28 alone (1 per chain run, no CLI idempotency check). Today's runs
+  (2026-05-29) **deliberately steered off 372/373** to break the compounding
+  pattern — DISLIKE'd 332/390/391 instead, 1st vote on each. Organic
+  mitigation works but isn't durable.
+- **Phase 2 platform/IPFS surface untested until 2026-05-29.** The 5th mint
+  was the first to actually reach Phase 2; both today's mints (5th LIT
+  9794ed80 + 6th BRENTOIL 7029a48d) are stuck — IPFS pin to Pinata returns
+  HTTP 403 (ISS-013, missing-secret, operator-call for PINATA_JWT rotation)
+  and platform metadata POST returns HTTP 400 (ISS-012, api-change, PR #42
+  opens up the diagnostics). Both yesterday's 4th mint (397ee2e8) and
+  today's land their on-chain mintPodWithREPPO tx but never get a
+  dataset_uri or platform DB row.
+- **ISS-011 nonce-too-low REVERT.** Vote-391 1st run REVERTed (CLI provided
+  nonce below current chain nonce after sibling votes landed same batch).
+  2nd-run retry landed clean. Single occurrence so far; watch for recurrence.
 - **Sandbox `./notify "$(cat ...)"` arg-passing.** Now the dominant pattern —
   most content skills stage to `.pending-notify/` and let the post-run delivery
   step pick it up (today: morning-brief, github-trending, defi-overview,
@@ -100,13 +116,21 @@ state: what was built, recurring blockers, and health.
 - **HL wallet selection mintless ceiling.** PR #34 (`userFillsByTime`) +
   PR #37 (rank by margin, drop span floor) — 6th chain run on 2026-05-28
   landed 4th mint ever (hash 397ee2e8e5e7e593, wallet 0x2b3349ff…33f7,
-  110 closed trades, sharpe 110, win 0.76).
+  110 closed trades, sharpe 110, win 0.76). 2026-05-29 added the 5th
+  (LIT 9794ed80, wallet 0x8def9f50, sharpe 19515) and 6th (xyz:BRENTOIL
+  7029a48d, wallet 0xebe126ad, sharpe 295k — **first commodity-perp mint**).
 
 ## Skill health
-- Last classification (2026-05-26, 18:27Z): 18 healthy, 0 critical/degraded/
-  flapping/warning, 3 no_data (autoresearch [workflow_dispatch],
-  skill-analytics [Wed-only], operator-scorecard [Mon 10:30, never run]).
-  skill-health 2026-05-27 18:22Z run was a NOOP (state hash unchanged).
+- Last classification (2026-05-28, 18:44Z): 27 healthy, 0 critical/degraded/
+  flapping/warning, 1 no_data (operator-scorecard — never run since enabled,
+  scheduled Mon 10:30). Fleet expanded 21→29 enabled consumers; the prior
+  NO DATA list narrowed [autoresearch, skill-analytics, operator-scorecard]
+  → [operator-scorecard].
+- Data-quality gap: vibecoding-digest cron-state shows last_status=success
+  but log entries record VIBECODING_DIGEST_ERROR (Reddit endpoints blocked,
+  prefetch host failing too). Workflow exits 0 with a notification-only
+  error — classifier follows cron-state, so the skill is HEALTHY by the
+  rules. Surfaced to self-improve as a workflow-exit-vs-skill-outcome mismatch.
 - Per-skill quality records on disk: `reppo-digest` 4/5 (3 runs: 05-23, 05-26,
   05-28); `search-skill` 4/5 (1 run, 05-22). No flags.
 - `article` carries sr=0.5 in cron-state (2 runs only — under chronic-failure
@@ -137,10 +161,20 @@ state: what was built, recurring blockers, and health.
 ## Issues
 - ISS-001/002/003/004/006/008 resolved.
 - ISS-005 open (high, prompt-bug) — agent-side workaround live; durable
-  prefetch + ISS-005 dedup fix both pending.
+  prefetch + ISS-005 dedup fix both pending. Organic mitigation on 2026-05-29
+  steered off 372/373 (DISLIKE'd 332/390/391 instead).
 - ISS-007 open in INDEX (medium, timeout) — PR #13 retry + PR #26 widened
-  budget; INDEX close queued.
+  budget; INDEX close queued (4 days).
 - ISS-009 open (high, prompt-bug) — root cause traced + fix path validated
-  2026-05-28; need (a) orchestrator emit-in-assistant-text codified in the
-  skill prompt, (b) chain-runner `continue` → `break` in fail-fast branch.
+  2026-05-28; held across 4+ chain runs since. Two follow-ups: (a) codify
+  orchestrator emit-in-assistant-text in skill prompt, (b) chain-runner
+  `continue` → `break` in fail-fast branch.
 - ISS-010 open in INDEX (medium, config) — fix shipped in PR #32; close queued.
+- **ISS-011 open (medium, unknown, NEW 2026-05-29)** — vote nonce-too-low
+  REVERT after sibling votes land same batch. 1 occurrence; retry landed.
+- **ISS-012 open (medium, api-change, NEW 2026-05-29)** — Reppo platform
+  metadata POST HTTP 400. 3 occurrences. PR #42 (HTTP body capture)
+  unblocks diagnostics.
+- **ISS-013 open (medium, missing-secret, NEW 2026-05-29)** — IPFS pin to
+  Pinata HTTP 403. 2 occurrences (every Phase 2 IPFS pin so far). Operator
+  call for PINATA_JWT rotation/verification.

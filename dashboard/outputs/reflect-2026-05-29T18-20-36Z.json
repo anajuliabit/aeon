@@ -1,0 +1,229 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_main",
+        "stat_logs",
+        "sep_1",
+        "heading_topics",
+        "stack_topics",
+        "sep_2",
+        "heading_memory",
+        "text_memory",
+        "sep_3",
+        "heading_mints",
+        "stack_mints",
+        "sep_4",
+        "heading_issues",
+        "stack_issues",
+        "sep_5",
+        "heading_prs",
+        "stack_prs",
+        "sep_6",
+        "alert_recurring"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory consolidated — 2026-05-29",
+        "level": "h2"
+      }
+    },
+    "stat_logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs read",
+        "value": "7"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_topics": {
+      "type": "Heading",
+      "props": {
+        "text": "Topic files refreshed",
+        "level": "h3"
+      }
+    },
+    "stack_topics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_fleet",
+        "badge_crypto"
+      ]
+    },
+    "badge_fleet": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet"
+      }
+    },
+    "badge_crypto": {
+      "type": "Badge",
+      "props": {
+        "text": "crypto"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_memory": {
+      "type": "Heading",
+      "props": {
+        "text": "MEMORY.md",
+        "level": "h3"
+      }
+    },
+    "text_memory": {
+      "type": "Text",
+      "props": {
+        "text": "Bumped to 5th"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_mints": {
+      "type": "Heading",
+      "props": {
+        "text": "Mints landed today",
+        "level": "h3"
+      }
+    },
+    "stack_mints": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_lit",
+        "text_brentoil"
+      ]
+    },
+    "badge_lit": {
+      "type": "Badge",
+      "props": {
+        "text": "LIT"
+      }
+    },
+    "text_brentoil": {
+      "type": "Text",
+      "props": {
+        "text": "first commodity-perp BRENTOIL"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues added",
+        "level": "h3"
+      }
+    },
+    "stack_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss011",
+        "badge_iss012",
+        "badge_iss013"
+      ]
+    },
+    "badge_iss011": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-011"
+      }
+    },
+    "badge_iss012": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-012"
+      }
+    },
+    "badge_iss013": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-013"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_prs": {
+      "type": "Heading",
+      "props": {
+        "text": "PRs carried",
+        "level": "h3"
+      }
+    },
+    "stack_prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_pr41",
+        "badge_pr42"
+      ]
+    },
+    "badge_pr41": {
+      "type": "Badge",
+      "props": {
+        "text": "#41"
+      }
+    },
+    "badge_pr42": {
+      "type": "Badge",
+      "props": {
+        "text": "#42"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "alert_recurring": {
+      "type": "Alert",
+      "props": {
+        "title": "Recurring insight",
+        "message": "Each on-chain success reveals one more downstream blocker",
+        "type": "info"
+      }
+    }
+  }
+}
