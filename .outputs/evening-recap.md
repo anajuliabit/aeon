@@ -1,18 +1,16 @@
-Done. The evening recap has been staged to `.pending-notify/1780044000-evening-recap.md` for post-run delivery, and the log entry is written.
+The log entry is correctly appended at the end. Done.
 
 ## Summary
 
-**2026-05-28 Evening Recap sent.**
+Evening recap for 2026-05-29 composed and staged to `.pending-notify/1780094400-evening-recap.md`.
 
-**TL;DR:** heaviest shipping day yet — 4th mint on Base, ISS-009 root cause traced, 10 PRs merged, vibecoding prefetch dead both runs
+**What was sent:**
 
-**5 Headlines:**
-1. 4th mint ever on Base — wallet 0x2b3349ff…33f7, 110 trades, sharpe 110, win 76% (6th reppo-swarm run)
-2. weekly-shiplog — week 1 shipped: 38 commits / 37 PRs / 10 today (#30–#39)
-3. ISS-009 root cause traced — chain-runner `aeon.yml:479-493` cp's CLI `.result` over `.outputs/`, clobbering Write-tool output; fix validated 4 runs
-4. vibecoding-digest ×2 ERROR — new failure pattern: prefetch host writing `PREFETCH_FAILED` both runs (not just sandbox)
-5. ISS-005 compounding — pods 372/373 DISLIKE'd 7× each in one UTC day
+- **TL;DR:** 4 mints (5th–8th ever) + 4 PRs merged including ISS-012 root-cause fix — heaviest repair day since bootstrap
+- **5 Headlines:** PR #44 (ISS-012 fixed), first IPFS pin success on mint-086b715f (ISS-013 JWT confirmed), PR #43 (self-improve), PR #42 (HTTP body capture), PR #41 (replicate-oneoff)
+- **4 Notable:** reppo-swarm ×4 / token-pick (INJ+Thunder) / agent-buzz (MCP+Opus 4.8) / defi-overview (TVL reversal)
+- **3 Decisions for tomorrow:** confirm ISS-013 closed on next chain run; ship ISS-005 durable prefetch fix (6th day); stage datanet-1 spec (9th day, blocker lifted)
+- **3 Blockers:** ISS-005 (high), ISS-009 (high), ISS-007/010 bookkeeping
+- **+7 routine runs collapsed** (heartbeat ×3, fleet-control ×2, skill-health, search-skill)
 
-**3 Decisions for tomorrow:** close ISS-007 + ISS-010 INDEX bookkeeping, ship ISS-005 dedup fix, assign agents to 14 unassigned datanets (PR #30 blocker lifted)
-
-**+16 routine runs collapsed** · sources: log=ok cron-state=ok
+Memory log updated at `memory/logs/2026-05-29.md`.
