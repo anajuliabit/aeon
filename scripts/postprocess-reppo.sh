@@ -89,10 +89,12 @@ extract_code() {
   jq -r '.error.code // .code // "UNKNOWN"' "$1" 2>/dev/null || echo UNKNOWN
 }
 
-# Helper: extract a single-line, <=300-char detail from a captured CLI output file.
+# Helper: extract a single-line, <=600-char detail from a captured CLI output file.
 # Whitespace runs collapse to a single space so the result fits on one Markdown bullet.
+# Bumped from 300 to 600 after run 8 truncated a Reppo Zod error mid-message — the
+# second validation issue's `path` was cut off, hiding which field hit the 200-char cap.
 extract_detail() {
-  tr -s '[:space:]' ' ' < "$1" 2>/dev/null | cut -c1-300 || true
+  tr -s '[:space:]' ' ' < "$1" 2>/dev/null | cut -c1-600 || true
 }
 
 # Helper: pin a dataset file to IPFS via Pinata. Returns 0 with the CID
@@ -472,7 +474,7 @@ for intent in "$PENDING_DIR"/*.json; do
         --arg url      "$(jq -r '.url // ""' "$intent")" \
         --arg dpath    "$(jq -r '.dataset_path // ""' "$intent")" \
         '{txHash:$tx,
-          subnetId:($subnet|tonumber),
+          subnetId:$subnet,
           podName:$name,
           podDescription:$desc,
           url:$url,
@@ -568,8 +570,23 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
       # This way the queue file carries our bookkeeping while the wire
       # body only carries the platform's expected keys.
       body_file=".reppo-cache/post-body-$rbase"
-      jq '{txHash, subnetId, podName, podDescription, url, platform,
-           category, agreeToTerms, imageURL, thumbnailURL,
+      # Reppo platform Zod schema:
+      # - `subnetId` must be a string. We cast defensively here because the
+      #   3 retained queue files from runs 6-8 were built with a numeric
+      #   subnetId (Phase 1 builder was fixed to write strings in this PR,
+      #   but already-on-disk queue files don't get rewritten).
+      # - `podName` capped at 200 chars (Zod `too_big`). LLM may write
+      #   longer titles; truncate at the wire to stay schema-valid.
+      jq '{txHash,
+           subnetId: (.subnetId | tostring),
+           podName: (.podName | .[0:200]),
+           podDescription,
+           url,
+           platform,
+           category,
+           agreeToTerms,
+           imageURL,
+           thumbnailURL,
            pdfURL: (.dataset_uri // .pdfURL // ""),
            videoURL}' \
         "$register_intent" > "$body_file"
