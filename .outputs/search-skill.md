@@ -1,15 +1,22 @@
 ## Summary
 
-Ran the `search-skill` skill. Result: **SEARCH_SKILL_NO_GAP** (7th consecutive — silent exit per spec, no notification sent).
+Ran `skills/search-skill/SKILL.md` end-to-end.
 
-**Gap derivation (step 1) drew blanks on all four sources:**
+**Query derivation:** No failing skills met the threshold. Open issues in the qualifying category set are ISS-012 (api-change, Reppo `/pods` POST 400 — project-specific, skipped) and ISS-013 (missing-secret, Pinata HTTP 403). Used **"ipfs pin"** as the query, sourced from ISS-013.
 
-- **(a) Failing skills** — every skill in `memory/cron-state.json` with ≥3 runs has `success_rate` ≥ 0.88. `article` is 0.5 but only 2 runs (below the ≥3 threshold). `chain:reppo-swarm` last_status=failed but maps to ISS-009 (prompt-bug, chain-runner capture step), not a missing-skill gap.
-- **(b) Open issues** — ISS-005, ISS-007, ISS-009, ISS-010 are categorized as prompt-bug / timeout / config — none in the qualifying set {missing-secret, api-change, permanent-limitation, quality-regression}.
-- **(c) MEMORY.md priorities** — no "Next Priorities" section; the 4 Current Goals are internal fixes (PR #30, ISS-009, datanet assignments, ISS-005), not external-capability gaps.
-- **(d) Log signals (last 7d)** — capability-gap phrases only match prior search-skill entries quoting the spec (recursive false-positive); real "missing"/no-data lines point to prefetch/sandbox infra (Reddit IP block, XAI key) that has known fallback paths.
+**Catalog search:**
+- vercel-labs/agent-skills (13 skills) — 0 hits
+- anthropics/skills (17 skills) — 0 hits
+- BankrBot/skills (65 skills) — 0 hits
+- aaronjmars/aeon (this repo) — 0 hits (informational)
+- `npx skills find` — 2 IPFS-related candidates; skills.sh search page returned navigation-only HTML (marked fail)
 
-**Files modified:**
-- `memory/logs/2026-05-28.md` — appended `## search-skill` section with mode, source notes, and 7-run continuity context.
+**Hard gates applied:**
+- `alphaonedev/openclaw-graph@ipfs` — UNTRUSTED; fails Gate 1 (it's a generic IPFS *docs* summary, not a Pinata-alternative pin client) and Gate 2 (requires `ipfs` daemon + go-ipfs CLI not on GHA runners).
+- `besoeasy/open-skills@anonymous-file-upload` — UNTRUSTED; fails Gate 1 (third-party file-host wrapper, not a direct pin client) and Gate 2 (Docker required).
 
-**No PR opened, no skill installed, no notification sent** — correct per spec for NO_GAP.
+**Exit mode:** `SEARCH_SKILL_EMPTY`. Silent — no `./notify`, no install, no PR (per spec). Logged to `memory/logs/2026-05-29.md`.
+
+**Files modified:** `memory/logs/2026-05-29.md` (appended search-skill log entry).
+
+**Follow-up:** ISS-013 likely closes via JWT rotation (per the issue's own investigation paths) rather than an external skill swap.
