@@ -9,7 +9,6 @@
 | ISS-009 | reppo-orchestrator's fenced reppo-plan block lost — root cause traced: chain-runner capture step (`aeon.yml:479-493`) overwrites Write-tool output with the LLM's final assistant text. Fix: emit fenced block in assistant text, not Write tool (validated this run, 2 on-chain). Also still need chain-runner `continue` → `break` | high | prompt-bug | 2026-05-26 | reppo-orchestrator, reppo-trading-agent, reppo-digest, chain-runner |
 | ISS-010 | Scheduler dispatches chain keys as phantom skills — reppo-swarm fires daily against a non-existent SKILL.md | medium | config | 2026-05-28 | scheduler, reppo-swarm |
 | ISS-011 | Reppo vote write reverts with "nonce too low" after sibling votes land same batch | medium | unknown | 2026-05-29 | reppo-trading-agent, reppo-digest |
-| ISS-014 | Reppo platform metadata POST fails HTTP 500 Internal Server Error — server-side regression after PR #44 cleared payload Zod bug | medium | api-change | 2026-05-29 | reppo-trading-agent, reppo-digest |
 
 ## Resolved
 
@@ -23,3 +22,4 @@
 | ISS-006 | Reppo vote dry-run fails — publisher has 0 voting power | high | https://github.com/anajuliabit/aeon/pull/23 | 2026-05-26 |
 | ISS-012 | Reppo platform metadata POST fails HTTP 400 — payload Zod-validation bug (subnetId number→string, podDescription>200, podName>50) | medium | https://github.com/aeonframework/aeon/pull/44 | 2026-05-29 |
 | ISS-013 | Reppo dataset IPFS pin to Pinata fails HTTP 403 — PINATA_JWT lacks pinFileToIPFS scope | high | operator JWT rotation (no PR) | 2026-05-29 |
+| ISS-014 | Reppo platform metadata POST fails HTTP 500 Internal Server Error — transient platform-side fault | medium | platform self-healed (no PR) | 2026-05-30 |

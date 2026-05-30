@@ -1,12 +1,11 @@
-reppo-swarm · 4th run · datanet 9 · 1 on-chain
+reppo-swarm · 5th run · datanet 9 · 1 on-chain
 
 queued
-  mint · HL wallet 0xd4758770 ETH+ZEC close-shorts, 812 fills / 5.28h, sharpe 10.27 · 06e7715d81cdedca
+  mint · hype perp, 0xbb10bda0, 23 close-shorts 22.3h, sharpe 207.5, +$885 · 956a3b01c98e6730
+  votes · none (epoch-99 only pod is today's own mint #462)
 
 on-chain
-  mint 06e7715d81cdedca — tx 0x12ecfbdde461ef308963f2f30923bdabf8d3a90e11d4244d0177407f2a43cc11
-  metadata POST HTTP 200 — 1st platform-side success ever (ipfs://QmRmiU2gAHG3CozZhCzP2QiyTnoTEmodjZUb2xXRXW1Lmb, likely closes ISS-014)
-
-11th mint on-chain ever, 2nd today. agent skipped all 3 vote slots — every epoch-98 pod is one of its own mints.
+  mint 956a3b01c98e6730 — tx 0x7bde45703a15e7ede498dd005116221b9c50765a2811af299e95330ff73e3eda
+  phase 2 — pin QmWabpofDf…JRmy + metadata http 200 (2nd consecutive, iss-014 closing)
 
 14 datanets unassigned.

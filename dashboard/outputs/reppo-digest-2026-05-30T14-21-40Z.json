@@ -1,0 +1,222 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 5th run · datanet 9 · 1 on-chain"
+      },
+      "children": [
+        "status_badge",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "onchain_section",
+        "sep3",
+        "datanets_note"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "queued",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_heading",
+        "queued_items"
+      ]
+    },
+    "queued_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "queued_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint_item",
+        "votes_item"
+      ]
+    },
+    "mint_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_label",
+        "mint_details"
+      ]
+    },
+    "mint_label": {
+      "type": "Badge",
+      "props": {
+        "text": "mint",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "mint_details": {
+      "type": "Text",
+      "props": {
+        "text": "hype perp, 0xbb10bda0, 23 close-shorts 22.3h, sharpe 207.5, +$885 · 956a3b01c98e6730",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "votes_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_label",
+        "votes_details"
+      ]
+    },
+    "votes_label": {
+      "type": "Badge",
+      "props": {
+        "text": "votes",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "votes_details": {
+      "type": "Text",
+      "props": {
+        "text": "none (epoch-99 only pod is today's own mint #462)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "onchain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "onchain_heading",
+        "onchain_items"
+      ]
+    },
+    "onchain_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On-Chain",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "onchain_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint_tx_item",
+        "phase2_item"
+      ]
+    },
+    "mint_tx_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_tx_label",
+        "mint_tx_link"
+      ]
+    },
+    "mint_tx_label": {
+      "type": "Text",
+      "props": {
+        "text": "mint 956a3b01c98e6730",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "mint_tx_link": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0x7bde45703a15e7ede498dd005116221b9c50765a2811af299e95330ff73e3eda",
+        "href": "https://etherscan.io/tx/0x7bde45703a15e7ede498dd005116221b9c50765a2811af299e95330ff73e3eda"
+      },
+      "children": []
+    },
+    "phase2_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "phase2_label",
+        "phase2_details"
+      ]
+    },
+    "phase2_label": {
+      "type": "Badge",
+      "props": {
+        "text": "phase 2",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "phase2_details": {
+      "type": "Text",
+      "props": {
+        "text": "pin QmWabpofDf…JRmy + metadata http 200 (2nd consecutive, iss-014 closing)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "datanets_note": {
+      "type": "Alert",
+      "props": {
+        "title": "Datanets",
+        "message": "14 datanets unassigned",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}
