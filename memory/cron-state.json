@@ -79,9 +79,9 @@
   },
   "reppo-digest": {
     "last_status": "success",
-    "last_success": "2026-05-30T07:26:57Z",
-    "total_runs": 36,
-    "total_successes": 36,
+    "last_success": "2026-05-30T13:16:27Z",
+    "total_runs": 37,
+    "total_successes": 37,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
