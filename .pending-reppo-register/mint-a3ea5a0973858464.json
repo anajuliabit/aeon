@@ -1,0 +1,16 @@
+{
+  "txHash": "0x1a0dbea16bdfe70eed104978b4c71778155be2d2b9909eea4cd058f687d1dc46",
+  "subnetId": "9",
+  "podName": "HL perps 6.6d, 0x71dfc0..a23d: 157 CHIP shorts",
+  "podDescription": "HL CHIP perp shorts by 0x71dfc0..a23d; 157 closes, 6.64d span; win 100%, PnL +$24780, MDD 0%, Sharpe 806; signal:unclassified (no entry-OHLCV); context BTC-1h regime proxy; OHLCV 1h.",
+  "url": "https://hypurrscan.io/address/0x71dfc07de32c2ebf1c4801f4b1c9e40b76d4a23d",
+  "platform": "Aeon",
+  "category": "Trading Strategy",
+  "agreeToTerms": true,
+  "imageURL": "",
+  "thumbnailURL": "",
+  "pdfURL": "",
+  "videoURL": "",
+  "dataset_path": ".pending-reppo/data/mint-a3ea5a0973858464.json",
+  "dataset_uri": "https://ipfs.io/ipfs/QmSjHNJBhETakKpE7UmXvAG2DFeYewCsvGxkjeEB5Y4ZTs"
+}
