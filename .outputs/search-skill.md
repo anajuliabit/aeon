@@ -1,22 +1,12 @@
+Logged. Per the search-skill spec, NO_GAP exits are silent — no notify, no article, no PR. The skill stops here.
+
 ## Summary
 
-Ran `skills/search-skill/SKILL.md` end-to-end.
+Executed `skills/search-skill/SKILL.md`. Walked step 1's four query sources (failing skills, qualifying open issues, non-template priorities, recent log signals) and found no externalizable capability gap:
 
-**Query derivation:** No failing skills met the threshold. Open issues in the qualifying category set are ISS-012 (api-change, Reppo `/pods` POST 400 — project-specific, skipped) and ISS-013 (missing-secret, Pinata HTTP 403). Used **"ipfs pin"** as the query, sourced from ISS-013.
+- All cron-state skills meet health gates (no `consecutive_failures ≥ 2`, all `success_rate ≥ 0.89` above 0.6 floor with ≥3 runs).
+- The only open issue in a qualifying category — **ISS-014** (api-change, Reppo platform POST HTTP 500) — is the project's own platform API; no external skill could replace it. Today's 4th-run digest also reported the first-ever HTTP 200, so it's likely resolving anyway.
+- "Current Goals" in MEMORY.md are all internal Reppo work.
+- 7-day log grep for capability-gap phrases only surfaced noise (`missing-secret` tag, `missing fenced reppo-plan`, `missing dataset_uri`).
 
-**Catalog search:**
-- vercel-labs/agent-skills (13 skills) — 0 hits
-- anthropics/skills (17 skills) — 0 hits
-- BankrBot/skills (65 skills) — 0 hits
-- aaronjmars/aeon (this repo) — 0 hits (informational)
-- `npx skills find` — 2 IPFS-related candidates; skills.sh search page returned navigation-only HTML (marked fail)
-
-**Hard gates applied:**
-- `alphaonedev/openclaw-graph@ipfs` — UNTRUSTED; fails Gate 1 (it's a generic IPFS *docs* summary, not a Pinata-alternative pin client) and Gate 2 (requires `ipfs` daemon + go-ipfs CLI not on GHA runners).
-- `besoeasy/open-skills@anonymous-file-upload` — UNTRUSTED; fails Gate 1 (third-party file-host wrapper, not a direct pin client) and Gate 2 (Docker required).
-
-**Exit mode:** `SEARCH_SKILL_EMPTY`. Silent — no `./notify`, no install, no PR (per spec). Logged to `memory/logs/2026-05-29.md`.
-
-**Files modified:** `memory/logs/2026-05-29.md` (appended search-skill log entry).
-
-**Follow-up:** ISS-013 likely closes via JWT rotation (per the issue's own investigation paths) rather than an external skill swap.
+**Exit:** `SEARCH_SKILL_NO_GAP` — silent per spec, no notification sent, no catalog searched, no PR opened. Log entry appended to `memory/logs/2026-05-30.md` with the source-walk reasoning. No follow-up actions needed.
