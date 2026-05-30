@@ -1,0 +1,161 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "separator1",
+        "status",
+        "wallets-intro",
+        "wallets-table",
+        "vote-info",
+        "separator2",
+        "followup-section",
+        "unassigned"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "title",
+        "metadata"
+      ]
+    },
+    "title": {
+      "type": "Heading",
+      "props": {
+        "text": "reppo-swarm",
+        "level": "h2"
+      }
+    },
+    "metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-run",
+        "badge-datanet",
+        "badge-onchain"
+      ]
+    },
+    "badge-run": {
+      "type": "Badge",
+      "props": {
+        "text": "3rd run",
+        "variant": "secondary"
+      }
+    },
+    "badge-datanet": {
+      "type": "Badge",
+      "props": {
+        "text": "datanet 9",
+        "variant": "secondary"
+      }
+    },
+    "badge-onchain": {
+      "type": "Badge",
+      "props": {
+        "text": "0 on-chain",
+        "variant": "secondary"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status": {
+      "type": "Text",
+      "props": {
+        "text": "no intents queued",
+        "variant": "lead"
+      }
+    },
+    "wallets-intro": {
+      "type": "Text",
+      "props": {
+        "text": "top-3 hl margin wallets thin this week:",
+        "variant": "body"
+      }
+    },
+    "wallets-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Wallet",
+          "Status"
+        ],
+        "rows": [
+          [
+            "0xbdfa",
+            "2 closes"
+          ],
+          [
+            "0xa9b9",
+            "hl-spot only"
+          ],
+          [
+            "0x4e14",
+            "19 closes (just under 20-floor)"
+          ]
+        ]
+      }
+    },
+    "vote-info": {
+      "type": "Text",
+      "props": {
+        "text": "both epoch-98 vote-survivors (390, 391) already voted",
+        "variant": "caption"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "followup-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "followup-heading",
+        "followup-text"
+      ]
+    },
+    "followup-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "follow-up",
+        "level": "h4"
+      }
+    },
+    "followup-text": {
+      "type": "Text",
+      "props": {
+        "text": "hl_top_n 3 → 5–7 would reach ranks 4–10 (50–2000-fill directional perp wallets) — operator/pr call"
+      }
+    },
+    "unassigned": {
+      "type": "Stat",
+      "props": {
+        "label": "datanets unassigned",
+        "value": "14"
+      }
+    }
+  }
+}
