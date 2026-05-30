@@ -466,9 +466,29 @@ for intent in "$PENDING_DIR"/*.json; do
     # crashed run leaves the queue file in place for the next run.
     if [ "$cmd_name" = "mint-pod" ] && [ "$tx" != "n/a" ]; then
       mkdir -p .pending-reppo-register
+      # Look up the platform's subnet UUID from the matching rubric.
+      # The CLI mint call used the on-chain token id (datanet=9), but the
+      # Reppo platform's metadata API expects the platform subnet UUID
+      # (cuid like cmnhuowns000bic04e16t6735, visible in the UI URL).
+      # Sending the token id "9" passes Zod but blows up in the platform's
+      # downstream UUID lookup with HTTP 500. (ISS-014 root cause, run 11
+      # evidence.)
+      intent_datanet="$(jq -r '.datanet' "$intent")"
+      platform_subnet="$intent_datanet"  # fallback if no rubric match
+      for rubric in configs/datanets/*.md; do
+        [ -f "$rubric" ] || continue
+        rubric_datanet=$(awk '/^---[[:space:]]*$/{f++; next}
+                              f==1 && /^datanet_id:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
+        if [ "$rubric_datanet" = "$intent_datanet" ]; then
+          uuid=$(awk '/^---[[:space:]]*$/{f++; next}
+                      f==1 && /^platform_subnet_uuid:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
+          if [ -n "$uuid" ]; then platform_subnet="$uuid"; fi
+          break
+        fi
+      done
       jq -n \
         --arg tx       "$tx" \
-        --arg subnet   "$(jq -r '.datanet' "$intent")" \
+        --arg subnet   "$platform_subnet" \
         --arg name     "$(jq -r '.pod_name // .strategy_summary // "Aeon-generated pod"' "$intent")" \
         --arg desc     "$(jq -r '.pod_description // .strategy_summary // ""' "$intent")" \
         --arg url      "$(jq -r '.url // ""' "$intent")" \
@@ -537,6 +557,33 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
       rtx="$(jq -r '.txHash' "$register_intent" 2>/dev/null || echo n/a)"
       dpath="$(jq -r '.dataset_path // ""' "$register_intent" 2>/dev/null || echo "")"
       duri="$(jq -r '.dataset_uri // ""' "$register_intent" 2>/dev/null || echo "")"
+
+      # Step 2pre: retained queue files from runs 6-11 carry subnetId as
+      # the on-chain token id ("9") because the Phase 1 builder used to
+      # source from .datanet. Reppo's platform expects the platform
+      # subnet UUID (cuid). If the queue file's subnetId looks numeric,
+      # look up the UUID from the matching rubric and atomically rewrite.
+      # This ensures the 7 retained files POST with the correct subnetId
+      # on retry without manual intervention.
+      queue_subnet="$(jq -r '.subnetId' "$register_intent" 2>/dev/null || echo "")"
+      if [[ "$queue_subnet" =~ ^[0-9]+$ ]]; then
+        for rubric in configs/datanets/*.md; do
+          [ -f "$rubric" ] || continue
+          rubric_datanet=$(awk '/^---[[:space:]]*$/{f++; next}
+                                f==1 && /^datanet_id:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
+          if [ "$rubric_datanet" = "$queue_subnet" ]; then
+            uuid=$(awk '/^---[[:space:]]*$/{f++; next}
+                        f==1 && /^platform_subnet_uuid:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
+            if [ -n "$uuid" ]; then
+              tmp="$(mktemp)"
+              jq --arg s "$uuid" '.subnetId = $s' "$register_intent" > "$tmp" \
+                && mv "$tmp" "$register_intent"
+              echo "  - migrated $rbase subnetId $queue_subnet → $uuid (platform UUID)" >> "$RESULTS_FILE"
+            fi
+            break
+          fi
+        done
+      fi
 
       # Step 2a: pin the dataset to IPFS (Pinata) if there is one, the
       # CID isn't already recorded, and PINATA_JWT is configured. The

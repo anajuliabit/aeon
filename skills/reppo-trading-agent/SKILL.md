@@ -253,15 +253,42 @@ the pod will mint on chain but render as a blank row in the UI and
 fail the rubric's verifiability check. All three must be populated.
 
 ## Step 6 — Select pods to vote on
-Read `.reppo-cache/pods-tradinggymai.json`. If it is an error marker
-(`{"code":"PREFETCH_FAILED"}`), missing, or a JSON array with zero
-pods, skip voting — this is not an error.
+Read `.reppo-cache/pods-tradinggymai.json` and
+`.reppo-cache/vote-filter-tradinggymai.json`. If the pod cache is an
+error marker (`{"code":"PREFETCH_FAILED"}`), missing, or a JSON array
+with zero pods, skip voting — this is not an error.
 
-For each pod that is NOT one you just minted, apply the rubric's Vote
-YES/NO criteria. YES requires: HL perp trade dataset with all rubric
-fields and verifiable fills. NO covers: strategy descriptions without
-executed trades, missing required fields, unverifiable trades, non-HL
-markets, unlabeled raw dumps, spam.
+**Vote-filter pass (apply BEFORE the rubric):**
+
+`.reppo-cache/vote-filter-tradinggymai.json` carries:
+```json
+{ "current_epoch": "<integer-as-string>" | null,
+  "voted_pod_ids": ["<podId>", ...] }
+```
+
+For each pod in `pods-tradinggymai.json`, discard before rubric
+evaluation if EITHER:
+
+1. **Out-of-epoch:** `pod.validityEpoch != current_epoch` (when
+   `current_epoch` is non-null). Past-epoch votes always revert with
+   `POD_NOT_VALID_FOR_EPOCH`, wasting REPPO + the dry-run slot.
+2. **Already voted:** `pod.podId` is in `voted_pod_ids`. The Reppo
+   CLI does NOT enforce `--idempotency-key` reuse for `vote` — a
+   fresh tx lands every run, double-spending REPPO. This is ISS-005;
+   the filter is the only defense.
+
+If `vote-filter-tradinggymai.json` is missing or an error marker,
+skip the filter and proceed with the rubric — degrade gracefully,
+do not crash.
+
+**Then the rubric:**
+
+For each pod that passed both filters AND is NOT one you just minted,
+apply the rubric's Vote YES/NO criteria. YES requires: HL perp trade
+dataset with all rubric fields and verifiable fills. NO covers:
+strategy descriptions without executed trades, missing required
+fields, unverifiable trades, non-HL markets, unlabeled raw dumps,
+spam.
 
 Cast at most `vote_cap` votes total. For each, write
 `.pending-reppo/vote-<podId>-<direction>.json`:

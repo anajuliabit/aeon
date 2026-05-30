@@ -73,6 +73,36 @@ if [ -d "$CONFIG_DIR" ]; then
          > "$CACHE_DIR/pods-$name.json" 2>/dev/null; then
       error_marker "$CACHE_DIR/pods-$name.json" "list pods $datanet_id failed"
     fi
+
+    # Vote-filter state: derives `current_epoch` (max validityEpoch across
+    # all pods on this datanet — voting epochs roll forward on Reppo as
+    # new pods land) and `voted_pod_ids` (parsed from memory/topics/reppo.md's
+    # "Votes cast" table for THIS datanet). The trading-agent reads this
+    # to skip out-of-epoch pods (POD_NOT_VALID_FOR_EPOCH reverts) and
+    # already-voted pods (ISS-005 duplicate-vote risk — the CLI doesn't
+    # enforce idempotency-key reuse for vote, fresh tx lands each run
+    # spending REPPO).
+    current_epoch=$(jq -r 'if .code == "PREFETCH_FAILED" then ""
+                           else [.pods[]?.validityEpoch | tonumber? // empty] | if length > 0 then max | tostring else "" end
+                           end' "$CACHE_DIR/pods-$name.json" 2>/dev/null || echo "")
+    # Parse the markdown ledger. A successful vote row looks like:
+    #   | 2026-05-26 | 9 | 373 | DISLIKE | success — tx 0x… |
+    # We want podId from column 4, only when datanet (column 3) == this
+    # rubric's datanet AND status (column 5) contains "success". Skip
+    # failed/reverted rows so the filter doesn't permanently block re-tries
+    # of a pod where the tx itself failed.
+    voted_pod_ids="[]"
+    if [ -f memory/topics/reppo.md ]; then
+      voted_pod_ids=$(awk -F '|' -v dn="$datanet_id" '
+        /^\| [0-9]{4}-[0-9]{2}-[0-9]{2} +\|/ {
+          dnet=$3; pod=$4; status=$6
+          gsub(/^ +| +$/, "", dnet); gsub(/^ +| +$/, "", pod); gsub(/^ +| +$/, "", status)
+          if (dnet == dn && index(status, "success") > 0) print pod
+        }' memory/topics/reppo.md | sort -u | jq -R . | jq -s . 2>/dev/null || echo "[]")
+    fi
+    jq -n --arg epoch "$current_epoch" --argjson voted "$voted_pod_ids" \
+      '{current_epoch: (if $epoch == "" then null else $epoch end), voted_pod_ids: $voted}' \
+      > "$CACHE_DIR/vote-filter-$name.json"
   done
 fi
 
