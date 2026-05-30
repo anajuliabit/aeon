@@ -1,0 +1,174 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "code-health",
+        "description": "Code quality audit for aaronjmars/aeon at HEAD 011dee9"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metadata",
+        "sep1",
+        "metrics_heading",
+        "metrics_grid",
+        "sep2",
+        "todos_heading",
+        "todos_item",
+        "sep3",
+        "files_heading",
+        "files_item",
+        "sep4",
+        "alert_coverage",
+        "sep5",
+        "alert_scripts",
+        "sep6",
+        "report_link"
+      ]
+    },
+    "metadata": {
+      "type": "Text",
+      "props": {
+        "text": "Audited aaronjmars/aeon at HEAD 011dee9 on 2026-05-30",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h3"
+      }
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_todos",
+        "stat_files",
+        "stat_secrets"
+      ]
+    },
+    "stat_todos": {
+      "type": "Stat",
+      "props": {
+        "label": "Actionable TODOs",
+        "value": "1"
+      }
+    },
+    "stat_files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files over 500 lines",
+        "value": "1"
+      }
+    },
+    "stat_secrets": {
+      "type": "Stat",
+      "props": {
+        "label": "Hardcoded secrets",
+        "value": "0"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "todos_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Actionable TODOs",
+        "level": "h3"
+      }
+    },
+    "todos_item": {
+      "type": "Text",
+      "props": {
+        "text": "ZIZMOR_VERSION bump in workflow-security-audit"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "files_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Files Over 500 Lines",
+        "level": "h3"
+      }
+    },
+    "files_item": {
+      "type": "Text",
+      "props": {
+        "text": "a2a-server index.ts at 578 lines (borderline)"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_coverage": {
+      "type": "Alert",
+      "props": {
+        "title": "Test Coverage Gaps",
+        "message": "Missing test coverage on dashboard API routes (secrets/upload/auth) and a2a-server JSON-RPC",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_scripts": {
+      "type": "Alert",
+      "props": {
+        "title": "Test Script Configuration",
+        "message": "No npm test script wired anywhere. Even the one existing api-gate test isn't on CI rails.",
+        "type": "warning"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Code Health Report",
+        "href": "articles/code-health-2026-05-30.md",
+        "source": "code-health"
+      }
+    }
+  }
+}
