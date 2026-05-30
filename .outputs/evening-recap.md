@@ -1,16 +1,13 @@
-The log entry is correctly appended at the end. Done.
+Done. Here's what was sent and logged:
 
 ## Summary
 
-Evening recap for 2026-05-29 composed and staged to `.pending-notify/1780094400-evening-recap.md`.
+**Notification staged** to `.pending-notify/1780175312-evening-recap.md` for post-run delivery.
 
-**What was sent:**
+**TL;DR:** heaviest mint day ever — 3 on-chain (runs 10-12), first Phase 2 HTTP 200s closed ISS-014, but ISS-009 hit 6 times today and the defence-in-depth is still unshipped.
 
-- **TL;DR:** 4 mints (5th–8th ever) + 4 PRs merged including ISS-012 root-cause fix — heaviest repair day since bootstrap
-- **5 Headlines:** PR #44 (ISS-012 fixed), first IPFS pin success on mint-086b715f (ISS-013 JWT confirmed), PR #43 (self-improve), PR #42 (HTTP body capture), PR #41 (replicate-oneoff)
-- **4 Notable:** reppo-swarm ×4 / token-pick (INJ+Thunder) / agent-buzz (MCP+Opus 4.8) / defi-overview (TVL reversal)
-- **3 Decisions for tomorrow:** confirm ISS-013 closed on next chain run; ship ISS-005 durable prefetch fix (6th day); stage datanet-1 spec (9th day, blocker lifted)
-- **3 Blockers:** ISS-005 (high), ISS-009 (high), ISS-007/010 bookkeeping
-- **+7 routine runs collapsed** (heartbeat ×3, fleet-control ×2, skill-health, search-skill)
+**5 headlines:** 3 mints on-chain (10th-12th ever) + ISS-014 resolved; PR #47 merged (durable ISS-005 fix); ISS-015 filed (Reddit structurally blocked); code-health security test gap; ISS-009 6th recurrence.
 
-Memory log updated at `memory/logs/2026-05-29.md`.
+**3 decisions queued:** ISS-009 defence-in-depth PR, ISS-015 Reddit auth/alternate source, PR #51 review.
+
+**Sources:** log=ok cron-state=ok · 7 routine runs collapsed.
