@@ -193,8 +193,8 @@
     "last_quality_score": 4
   },
   "goal-tracker": {
-    "last_dispatch": "2026-05-29T18:14:02Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-30T18:07:26Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-29T18:18:37Z",
     "total_runs": 8,
     "total_successes": 8,
@@ -203,8 +203,8 @@
     "success_rate": 1
   },
   "skill-health": {
-    "last_dispatch": "2026-05-29T18:14:02Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-30T18:07:26Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-29T18:17:38Z",
     "total_runs": 8,
     "total_successes": 8,
@@ -213,8 +213,8 @@
     "success_rate": 1
   },
   "reflect": {
-    "last_dispatch": "2026-05-29T18:14:02Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-30T18:07:26Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-29T18:21:12Z",
     "total_runs": 8,
     "total_successes": 8,
@@ -223,8 +223,8 @@
     "success_rate": 1
   },
   "action-converter": {
-    "last_dispatch": "2026-05-29T18:14:02Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-30T18:07:26Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-29T18:19:34Z",
     "total_runs": 8,
     "total_successes": 8,
