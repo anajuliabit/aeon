@@ -1,0 +1,290 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_date",
+        "stack_stance",
+        "sep_1",
+        "stack_prices",
+        "stack_fg",
+        "sep_2",
+        "stack_metrics",
+        "sep_3",
+        "stack_narrative",
+        "sep_4",
+        "stack_hotmarket"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-05-30",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_stance": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_take",
+        "badge_rotation",
+        "badge_conviction"
+      ]
+    },
+    "text_take": {
+      "type": "Text",
+      "props": {
+        "text": "take:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "badge_rotation": {
+      "type": "Badge",
+      "props": {
+        "text": "rotation"
+      },
+      "children": []
+    },
+    "badge_conviction": {
+      "type": "Badge",
+      "props": {
+        "text": "conviction medium",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$73,621",
+        "delta": "+0.82%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$2,017",
+        "delta": "+1.16%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stack_fg": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_fg",
+        "badge_extreme_fear"
+      ]
+    },
+    "stat_fg": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "23"
+      },
+      "children": []
+    },
+    "badge_extreme_fear": {
+      "type": "Badge",
+      "props": {
+        "text": "Extreme Fear",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_breadth",
+        "text_dex",
+        "stat_dominance"
+      ]
+    },
+    "text_breadth": {
+      "type": "Text",
+      "props": {
+        "text": "breadth 16/20"
+      },
+      "children": []
+    },
+    "text_dex": {
+      "type": "Text",
+      "props": {
+        "text": "DEX vol $6.90B"
+      },
+      "children": []
+    },
+    "stat_dominance": {
+      "type": "Stat",
+      "props": {
+        "label": "dominance",
+        "value": "57.46%",
+        "delta": "-0.20 pp",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_narrative",
+        "text_narrative"
+      ]
+    },
+    "heading_narrative": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "RWA Tokenization / XLM (peak — Day 3, $0.25 resistance)"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_hotmarket": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_hotmarket",
+        "stack_market_item"
+      ]
+    },
+    "heading_hotmarket": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "stack_market_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stack_market_header",
+        "progress_market"
+      ]
+    },
+    "stack_market_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_market_question",
+        "badge_market_yes"
+      ]
+    },
+    "text_market_question": {
+      "type": "Text",
+      "props": {
+        "text": "US×Iran peace deal by May 31"
+      },
+      "children": []
+    },
+    "badge_market_yes": {
+      "type": "Badge",
+      "props": {
+        "text": "YES"
+      },
+      "children": []
+    },
+    "progress_market": {
+      "type": "Progress",
+      "props": {
+        "value": 3.2,
+        "max": 100,
+        "label": "3.2%"
+      },
+      "children": []
+    }
+  }
+}
