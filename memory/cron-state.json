@@ -323,10 +323,10 @@
     "success_rate": 1
   },
   "vibecoding-digest": {
-    "last_status": "dispatched",
-    "last_success": "2026-05-29T18:16:56Z",
-    "total_runs": 4,
-    "total_successes": 4,
+    "last_status": "success",
+    "last_success": "2026-05-30T17:43:08Z",
+    "total_runs": 5,
+    "total_successes": 5,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
