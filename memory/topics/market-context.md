@@ -1,71 +1,64 @@
-# Market Context (as of 2026-05-29)
+# Market Context (as of 2026-05-30)
 
-> **Take:** chop — BTC -0.19% 24h consolidating at $73K range, breadth jumped 4→11/20 green, but ETF outflows set a record 9-day streak ($2.8B withdrawn). Conviction: medium — breadth and DEX vol (+12%) signal short-term stabilization; 9-day institutional exit streak and F&G pinned at 23 say the risk-off trend isn't over.
+> **Take:** rotation — BTC +0.82% 24h while alts lead; 16/20 top-cap green, BNB +5.83%, XLM +21.57%, HYPE +9.39%; dominance -0.20 pp. Conviction: medium — breadth and falling dominance agree on alt rotation; F&G flat at 23 (Extreme Fear) is a structural headwind.
 
 ## Signal Snapshot
-- BTC $72,909 (-0.19% 24h, -5.81% 7d) · dominance 57.66% (-0.03 pp 24h)
-- ETH $1,992 (+0.39% 24h, -6.54% 7d) · ETH/BTC 0.02732
-- SOL $81.24 (+0.52% 24h, -6.79% 7d)
-- Total mcap $2.54T (+0.26% 24h) · DEX vol $7.01B 24h
-- Breadth: 11/20 green 24h · 3/20 green 7d
-- Fear & Greed: 23 (Extreme Fear) — yesterday 22
+- BTC $73,621 (+0.82% 24h, -1.36% 7d) · dominance 57.46% (-0.20 pp 24h)
+- ETH $2,017 (+1.16% 24h, -0.58% 7d) · ETH/BTC 0.02740
+- SOL $82.35 (+1.33% 24h, +0.03% 7d)
+- Total mcap $2.57T (+1.2% 24h) · DEX vol $6.90B 24h
+- Breadth: 16/20 green 24h · 12/20 green 7d
+- Fear & Greed: 23 (Extreme Fear) — yesterday 23
 
 ## What Changed Since Last Refresh
-- Breadth jumped 4→11/20 green 24h — sharpest single-day recovery in this risk-off window; BTC consolidating at $73K range after Wednesday's 6-week low touch.
-- BTC ETF outflow streak hit record 9th day: $2.8B total withdrawn since May 14; IBIT -$528M on May 28 (2nd largest single-day outflow since launch) — deepest institutional selling pressure since the January 2024 launch.
-- HYPE +9.6% 24h reclaims $62+ range (near 5-26 ATH $64.63); HL Perps fees $2.43M 24h (+14.2% vs 7d avg) — 3rd consecutive day as on-chain fee top-3.
-- RAIN entered top-20 mcap ($9.0B, +93% 7d): Rain Protocol V2 + $100M foundation liquidity + joined top-3 global prediction markets by TVL ahead of 2026 FIFA World Cup.
+- Regime shift: chop → rotation — breadth surged 11→16/20, strongest breadth reading in this risk-off window; alts broadly outperforming BTC for 2nd consecutive session.
+- XLM DTCC catalyst Day 3: +21.57% 24h, +76.32% 7d to $0.249; multiple outlets (cryptoticker, cryptotimes, coinpedia) flagging $0.25 resistance and pullback risk — narrative saturation signal.
+- BNB leads major-caps: +5.83% 24h, first session of clear outperformance this run; BSC chain TVL briefly reclaimed #2 from Solana ($5.59B vs $5.38B).
 
 ## Active Narratives
-- **Hyperliquid / DEX Infrastructure** — phase: rising. Evidence: HYPE +9.63% 24h trending #1, rank #11 by mcap ($13.8B); HL Perps fees $2.43M 24h (+14.2% vs 7d avg), kHYPE liquid staking TVL +16.38% to $1.10B — consistent outperformance 3+ days.
-- **RWA Tokenization** — phase: rising. Evidence: XLM +36.65% 7d (DTCC×Stellar); INJ +15.9% 24h on Injective record $3.57B tokenized-equity daily volume (2026-05-27); M by M0 RWA stablecoin DAY 5 growth streak ($332M→$362M) — multiple vectors firing simultaneously.
-- **Prediction Markets (RAIN)** — phase: rising. Evidence: RAIN +93.03% 7d, rank #14 by mcap ($9.0B, new entrant to top-20 this week); Rain Protocol V2 + $100M foundation liquidity deployment joining top-3 global prediction markets by TVL ahead of FIFA World Cup.
-- **AI Data Networks (ALLORA)** — phase: emerging. Evidence: ALLO trending at +176% 24h per CoinGecko, $103M 24h volume — decentralized AI model coordination network; no top-50 mcap position yet, single-token signal only.
-- **Privacy Coins** — phase: fading. Evidence: ZEC -16.91% 7d, XMR -6.24% 7d; small 24h bounce (+1.35%/+0.23%) not converting to sustained bid — 5th consecutive fading session.
+- **RWA Tokenization (XLM-led)** — phase: peak. Evidence: XLM +21.57% 24h / +76.32% 7d on DTCC×Stellar; 3rd consecutive day of follow-through; media saturated — cryptoticker, cryptotimes, coinpedia, and CMC all leading with this story; technical resistance at $0.25.
+- **Hyperliquid / DEX Infrastructure** — phase: rising. Evidence: HYPE +9.39% 24h / +23.42% 7d; Hyperliquid Bridge TVL $5.39B (+1.43% 7d); 4th consecutive session of outperformance vs BTC; Polymarket-adjacent: Hyperliquid still top-3 on-chain fee earner.
+- **Prediction Markets (RAIN)** — phase: rising. Evidence: RAIN +98.59% 7d in top-20 mcap at $9.0B; FIFA WC catalyst intact; Rain Protocol V2 + $100M foundation liquidity still deploying; no single-day reversal despite -0.96% 24h.
+- **BNB/BSC Recovery** — phase: emerging. Evidence: BNB +5.83% 24h / +4.88% 7d leading major-cap cohort; BSC chain TVL $5.59B just overtook Solana ($5.38B). Single session — no multi-day anchor confirmed yet.
 
 ## Top DeFi Protocols (TVL, 7d change)
-*Note: DeFiLlama /protocols includes CEX staking; on-chain DeFi leaders are Lido, Aave, WBTC.*
-- Lido: $17.8B (-5.40%)
-- SSV Network: $14.8B (-5.51%)
-- Aave V3: $13.1B (-4.33%)
-- WBTC: $8.4B (-4.84%)
-- Binance Staked ETH: $7.4B (-5.47%)
+- Lido: $17.92B (-0.60%)
+- SSV Network: $14.84B (-0.82%)
+- Aave V3: $13.28B (-0.28%)
+- Morpho Blue: $7.29B (+1.25%)
+- Sky Lending: $6.13B (+8.19%)
 
 ## Chain Flow (top 3 by TVL, snapshot d/d)
-*7d per-chain delta not available from API; snapshot d/d used.*
-- Ethereum: $41.95B (<+1% d/d, suppressed)
-- BSC: $5.46B (<+1% d/d, suppressed)
-- Solana: $5.24B (<+1% d/d, suppressed)
+*7d per-chain delta not available from API; snapshot used.*
+- Ethereum: $42.1B (dominant, ~65% of on-chain DeFi TVL)
+- BSC: $5.59B (reclaimed #2 from Solana today)
+- Solana: $5.38B
 
 ## Stablecoins
-Total: $319.0B (-0.25% 24h). USDT $188.65B · USDC $76.13B · USDS $8.84B · USD1 $4.75B · DAI $4.61B · USDe $4.49B · combined share of mcap ~12.6%.
+Total: ~$318.7B (flat vs prior $319.0B). USDT $188.2B · USDC $75.9B · USDS $8.8B · USD1 $4.7B · DAI $4.6B · USDe $4.5B · combined share of mcap ~12.4%.
 
-Notable flows: PYUSD -19% over 4 days ($3.7B→$3.03B — aggressive single-issuer unwind, most sustained in the cohort); M by M0 RWA stablecoin +5% 5-day streak ($332M→$362M); USDf -12% over 3 days ($1.68B→$1.50B).
-
-## Trending (CoinGecko)
-- HYPE — trending #1; +9.23% 24h, $13.8B mcap — HL perp infra near ATH range
-- SOL — trending #2; +0.49% 24h
-- BTC — trending #3; -0.24% 24h
-- XLM — trending; +3.79% 24h / +36.65% 7d — DTCC RWA catalyst holding
-- ALLO (Allora) — trending; +176% 24h — decentralized AI model coordination
-- SPACE ID — trending; +40.65% 24h — web3 domain name infra
-- LAB — trending; +30.76% 24h — **AVOID: ZachXBT active fraud investigation, 95% insider supply, $480M moved to fresh wallets**
+## Trending (CoinGecko top movers, top-20 by mcap)
+- XLM — DTCC×Stellar Day 3; +21.57% 24h / +76.32% 7d, $8.46B mcap — at resistance
+- HYPE — HL perp infra; +9.39% 24h / +23.42% 7d, $13.8B mcap, 4-day streak
+- BNB — alt rotation leader; +5.83% 24h / +4.88% 7d
+- RAIN — prediction markets / FIFA WC; -0.96% 24h but +98.59% 7d, $9.0B mcap
+- XMR — privacy recovery; +4.77% 24h / +1.67% 7d
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |
 |--------|------|---------|-----------|
-| US×Iran permanent peace deal by May 31, 2026 | 9.5% | $5.7M | $1.0M |
-| US×Iran permanent peace deal by June 7, 2026 | 19.5% | $1.3M | $0.2M |
-| US announces Iran agreement/ceasefire extension by May 31 | 26.0% | $1.0M | $0.05M |
+| US×Iran permanent peace deal by May 31, 2026 | 3.2% | $8.7M | $1.2M |
+| Trump announces Hormuz blockade lifted by May 31, 2026 | 12.5% | $2.4M | $0.06M |
+| Arsenal wins 2025-26 Champions League | 44.5% | $6.4M | $1.8M |
 
 ## Macro Catalysts (next 48h)
-- **BTC ETF outflow record streak (9 days, $2.8B):** IBIT -$528M May 28 (2nd largest single-day outflow since launch); total ETF AUM $106B, down from $109B 30d peak. Flows must reverse before institutional demand signal rebuilds.
-- **US-Iran tensions:** Polymarket pricing only 9.5% for a permanent peace deal by May 31 — no near-term resolution; geopolitical risk-off backdrop holding.
-- **DTCC×Stellar follow-through:** XLM holding 7d +36.65%; Injective tokenized-equity volumes ($3.57B daily May 27) showing the RWA narrative broadening beyond a single chain.
+- **Geopolitical risk-off holding:** Iran peace deal priced at 3.2% by May 31 (down from 9.5% yesterday) — market pricing no near-term resolution; Strait of Hormuz blockade lift also at 12.5% — both point to risk-off macro backdrop persisting.
+- **BTC ETF outflows:** 9+-day institutional exit streak likely extending (yesterday: $2.8B over 9 days, IBIT -$528M on May 28); no inflow signal in current data — ETF AUM pressure unchanged.
+- **XLM at $0.25 resistance:** 3 days post-DTCC announcement with media saturation converging on technical resistance — peak-phase transition risk for RWA narrative; pullback >5% would confirm.
 
 ## Implications for Downstream Skills
-- **token-pick:** INJ picked today at $6.01 (RWA + tokenized equity momentum). Next cycle: RAIN warrants a full research pass — $9B mcap top-20 entrant with FIFA WC catalyst and protocol TVL growing. Avoid LAB (active fraud flag). HYPE trending #1 but $13.8B mcap limits upside; monitor for pullback entry.
-- **narrative-tracker:** RWA tokenization broadening (XLM → INJ → M by M0 stable growth) — watch for rising→peak when 3rd distinct token joins. RAIN in early rising phase; watch for peak signals pre-FIFA WC (tournament starts ~June 2026). ALLORA emerging — needs a 2nd token in narrative to confirm phase.
+- **token-pick:** rotation favors HYPE (rising, 4-day momentum, bridge TVL growing) and RAIN (rising, FIFA WC catalyst intact); avoid XLM new entries (peak phase, $0.25 resistance); BNB emerging — wait for day-2 confirmation before entry.
+- **narrative-tracker:** RWA Tokenization approaching peak→fading transition — monitor XLM for >5% intraday pullback or shift from "catalyst" to "priced in" framing in media as trigger signal. BNB/BSC Recovery needs session-2 confirmation to move from emerging.
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
