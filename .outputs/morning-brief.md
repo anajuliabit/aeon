@@ -1,22 +1,17 @@
-Brief staged + logged. The skill is complete (single linear flow — no task tracking needed).
+Morning brief staged. Saturday is a quiet meta-day — no Sun/Mon/Wed-only skills firing and self-improve sits out (day 30 even). The three focus items center on landing PR #47, watching the next chain run for ISS-014 escalation, and finally staging a datanet assignment from the 10-day-stale 14-backlog.
 
 ## Summary
 
-Executed `skills/morning-brief/SKILL.md` for 2026-05-29 (Friday).
-
-**Focus today (ranked by leverage × urgency):**
-1. Merge PR #42 (capture HTTP body on Pinata/platform errors) — unblocks ISS-012/013 diagnosis before the next chain run
-2. Rotate/verify `PINATA_JWT` (ISS-013, HTTP 403) — blocks IPFS pin on every future mint
-3. Stage 1st datanet assignment from the 14-backlog — PR #30 blocker lifted 24h ago, 9th day surfaced
-
-**Since yesterday:** 5th mint ever overnight (LIT, hash `9794ed80`, tx `0xca4b0a63…`); chain pivoted off pods 372/373 → 391/390/332 (ISS-005 organic mitigation); 3 new Phase-2 platform issues (ISS-011/012/013); 2 new PRs (#41 replicate-oneoff, #42 capture HTTP body).
-
-**Watch section omitted** — 2 WebSearches surfaced HYPE/Grayscale + Base MCP launch, neither moves the 3 focus items.
-
-**Files touched:**
-- `.pending-notify/1780042266-morning-brief.md` — staged for post-run `./notify` delivery (sandbox arg-passing block)
-- `memory/logs/2026-05-29.md` — appended `### morning-brief` log entry for tomorrow's "since yesterday" input
+- Read `skills/morning-brief/SKILL.md`, `memory/MEMORY.md`, yesterday's full log (337 lines), today's overnight chain log, `memory/cron-state.json`, `memory/issues/INDEX.md`, `soul/STYLE.md`.
+- Pulled open repo state: 1 open PR (#47), 0 assigned issues, 6 open ISS (ISS-005/007/009/010/011/014).
+- Ran 2 `WebSearch` queries (crypto/HYPE + AI/Anthropic). Neither qualified for Watch under the "only-if-it-changes-focus" rule, so Watch section omitted.
+- Staged brief to `.pending-notify/1780125482-morning-brief.md` (per the sandbox `./notify` arg-passing pattern noted in MEMORY).
+- Appended `### morning-brief` entry to `memory/logs/2026-05-30.md` with the 3 focus items, headline count, cron-state status, open issues/PRs, and Saturday cron schedule.
+- Files modified: `memory/logs/2026-05-30.md`. Files created: `.pending-notify/1780125482-morning-brief.md`.
+- Follow-up: post-run delivery step picks up the staged notification.
 
 Sources:
-- [Bitwise bets Hyperliquid could power future finance as HYPE ETFs gain traction (CoinDesk)](https://www.coindesk.com/coindesk-news/2026/05/28/bitwise-bets-hyperliquid-could-power-future-finance-as-hype-etfs-gain-traction)
-- [Base launches Base MCP enabling AI agents to execute DeFi actions (BingX)](https://bingx.com/en/news/post/base-launches-base-mcp-on-may-enabling-ai-agents-to-execute-defi-actions)
+- [Coinbase Just Gave Hyperliquid Holders the Gift of a Lifetime](https://www.fool.com/investing/2026/05/28/coinbase-just-gave-hyperliquid-holders-the-gift-of/)
+- [Hyperliquid is emerging as a challenger to traditional exchanges and prediction markets, says FalconX](https://www.coindesk.com/markets/2026/05/25/hyperliquid-is-emerging-as-a-challenger-to-traditional-exchanges-and-prediction-markets-says-falconx)
+- [Anthropic upgrades Claude AI with Opus 4.8](https://www.business-standard.com/technology/tech-news/anthropic-upgrades-claude-ai-with-opus-4-8-what-s-new-in-flagship-model-126052900541_1.html)
+- [Anthropic releases Claude Opus 4.8](https://www.artificialintelligence-news.com/news/anthropic-releases-claude-opus-4-8-news/)
