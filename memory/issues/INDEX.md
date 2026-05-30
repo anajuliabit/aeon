@@ -9,6 +9,7 @@
 | ISS-009 | reppo-orchestrator's fenced reppo-plan block lost — root cause traced: chain-runner capture step (`aeon.yml:479-493`) overwrites Write-tool output with the LLM's final assistant text. Fix: emit fenced block in assistant text, not Write tool (validated this run, 2 on-chain). Also still need chain-runner `continue` → `break` | high | prompt-bug | 2026-05-26 | reppo-orchestrator, reppo-trading-agent, reppo-digest, chain-runner |
 | ISS-010 | Scheduler dispatches chain keys as phantom skills — reppo-swarm fires daily against a non-existent SKILL.md | medium | config | 2026-05-28 | scheduler, reppo-swarm |
 | ISS-011 | Reppo vote write reverts with "nonce too low" after sibling votes land same batch | medium | unknown | 2026-05-29 | reppo-trading-agent, reppo-digest |
+| ISS-015 | vibecoding-digest can't reach Reddit — prefetch + WebFetch both blocked, 3 consecutive days | high | sandbox-limitation | 2026-05-30 | vibecoding-digest |
 
 ## Resolved
 

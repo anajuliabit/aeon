@@ -103,6 +103,10 @@ the Phase 2 platform/IPFS layer that quietly never worked (ISS-012, ISS-013).
 - **ISS-013 (medium, missing-secret, NEW 2026-05-29)** — IPFS pin to Pinata
   HTTP 403. 2 occurrences (5th + 6th mints both stuck). Operator-call for
   PINATA_JWT rotation/verification.
+- **ISS-015 (high, sandbox-limitation, NEW 2026-05-30)** — vibecoding-digest
+  can't reach Reddit; prefetch (runner IP) + WebFetch (tool-layer block)
+  both dead, 3 consecutive days (5-28/5-29/5-30). No in-skill workaround
+  left. Needs authed Reddit API or alternative source.
 
 ## Open PRs
 - **#41** — replicate-oneoff workflow (workflow_dispatch image gen), opened
