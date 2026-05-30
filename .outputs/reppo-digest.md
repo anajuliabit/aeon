@@ -1,10 +1,12 @@
-reppo-swarm · 3rd run · datanet 9 · 0 on-chain
+reppo-swarm · 4th run · datanet 9 · 1 on-chain
 
-no intents queued — top-3 hl margin wallets thin this week:
-  0xbdfa 2 closes · 0xa9b9 hl-spot only · 0x4e14 19 closes (just under 20-floor)
-both epoch-98 vote-survivors (390, 391) already voted.
+queued
+  mint · HL wallet 0xd4758770 ETH+ZEC close-shorts, 812 fills / 5.28h, sharpe 10.27 · 06e7715d81cdedca
 
-follow-up
-  hl_top_n 3 → 5–7 would reach ranks 4–10 (50–2000-fill directional perp wallets) — operator/pr call.
+on-chain
+  mint 06e7715d81cdedca — tx 0x12ecfbdde461ef308963f2f30923bdabf8d3a90e11d4244d0177407f2a43cc11
+  metadata POST HTTP 200 — 1st platform-side success ever (ipfs://QmRmiU2gAHG3CozZhCzP2QiyTnoTEmodjZUb2xXRXW1Lmb, likely closes ISS-014)
+
+11th mint on-chain ever, 2nd today. agent skipped all 3 vote slots — every epoch-98 pod is one of its own mints.
 
 14 datanets unassigned.

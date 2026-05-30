@@ -1,0 +1,286 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header-info",
+        "stack-main"
+      ]
+    },
+    "header-info": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 4th run · datanet 9 · 1 on-chain",
+        "variant": "caption"
+      }
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-section",
+        "sep-1",
+        "on-chain-section",
+        "sep-2",
+        "summary-section"
+      ]
+    },
+    "queued-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-heading",
+        "queued-content"
+      ]
+    },
+    "queued-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "queued-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "queued-badges",
+        "queued-stats"
+      ]
+    },
+    "queued-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-mint",
+        "badge-wallet",
+        "badge-id"
+      ]
+    },
+    "badge-mint": {
+      "type": "Badge",
+      "props": {
+        "text": "mint",
+        "variant": "secondary"
+      }
+    },
+    "badge-wallet": {
+      "type": "Badge",
+      "props": {
+        "text": "HL wallet 0xd4758770",
+        "variant": "outline"
+      }
+    },
+    "badge-id": {
+      "type": "Badge",
+      "props": {
+        "text": "06e7715d81cdedca",
+        "variant": "outline"
+      }
+    },
+    "queued-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "queued-desc",
+        "stat-sharpe",
+        "stat-fills",
+        "stat-duration"
+      ]
+    },
+    "queued-desc": {
+      "type": "Text",
+      "props": {
+        "text": "ETH+ZEC close-shorts"
+      }
+    },
+    "stat-sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe Ratio",
+        "value": "10.27"
+      }
+    },
+    "stat-fills": {
+      "type": "Stat",
+      "props": {
+        "label": "Fills",
+        "value": "812"
+      }
+    },
+    "stat-duration": {
+      "type": "Stat",
+      "props": {
+        "label": "Duration",
+        "value": "5.28h"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-chain-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-chain-heading",
+        "tx-item",
+        "metadata-item"
+      ]
+    },
+    "on-chain-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On-Chain",
+        "level": "h3"
+      }
+    },
+    "tx-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tx-label",
+        "tx-link"
+      ]
+    },
+    "tx-label": {
+      "type": "Text",
+      "props": {
+        "text": "Mint 06e7715d81cdedca"
+      }
+    },
+    "tx-link": {
+      "type": "Link",
+      "props": {
+        "label": "0x12ecfbdde461ef308963f2f30923bdabf8d3a90e11d4244d0177407f2a43cc11",
+        "href": "https://etherscan.io/tx/0x12ecfbdde461ef308963f2f30923bdabf8d3a90e11d4244d0177407f2a43cc11"
+      }
+    },
+    "metadata-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "metadata-alert",
+        "metadata-ipfs",
+        "metadata-issue"
+      ]
+    },
+    "metadata-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "metadata POST HTTP 200",
+        "message": "1st platform-side success ever",
+        "type": "success"
+      }
+    },
+    "metadata-ipfs": {
+      "type": "Link",
+      "props": {
+        "label": "ipfs://QmRmiU2gAHG3CozZhCzP2QiyTnoTEmodjZUb2xXRXW1Lmb",
+        "href": "ipfs://QmRmiU2gAHG3CozZhCzP2QiyTnoTEmodjZUb2xXRXW1Lmb"
+      }
+    },
+    "metadata-issue": {
+      "type": "Text",
+      "props": {
+        "text": "likely closes ISS-014",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-heading",
+        "summary-content"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-lifetime-mints",
+        "stat-today-mints",
+        "summary-vote",
+        "stat-unassigned"
+      ]
+    },
+    "stat-lifetime-mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints On-Chain (Lifetime)",
+        "value": "11"
+      }
+    },
+    "stat-today-mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints Today",
+        "value": "2"
+      }
+    },
+    "summary-vote": {
+      "type": "Text",
+      "props": {
+        "text": "Agent skipped all 3 vote slots — every epoch-98 pod is one of its own mints"
+      }
+    },
+    "stat-unassigned": {
+      "type": "Stat",
+      "props": {
+        "label": "Datanets Unassigned",
+        "value": "14"
+      }
+    }
+  }
+}
