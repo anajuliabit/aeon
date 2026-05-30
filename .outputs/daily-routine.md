@@ -1,18 +1,17 @@
-Cache cleanup blocked by sandbox; harmless leftover in working dir.
-
 ## Summary
 
-Ran `daily-routine` standalone (no chain context), executing all 4 sub-skills inline plus tweet roundup.
+Ran `skills/daily-routine/SKILL.md` standalone (no chain context). Output staged for delivery via the standard pending-notify pattern.
 
-**Files modified:**
-- `.pending-notify/1780042370-daily-routine.md` (3,331 chars, under 4000 ceiling) — staged for post-run delivery
-- `memory/logs/2026-05-29.md` — appended daily-routine section
+**What ran:**
+- token-movers — CoinGecko top-250 + trending, 36/75 top-100 alts green / top-50 24h median flat. Winners led by LAB +36% (2nd straight green) / XLM +23% (7d +80% DTCC run). Losers led by GENIUS −22% (extends 5-29 collapse).
+- tweet-roundup — WebSearch fallback (XAI_API_KEY absent). 3 topics, dedup vs 5-29 — fresh items only (Paxos bank license, CFTC perp framework, OpenAI GPT-5.4, Mercury 2 diffusion LLM, Biome 56× ESLint speedup).
+- paper-pick — "When Cloud Agents Meet Device Agents" (↑7, arxiv 2605.30102), picked over higher-upvote off-domain papers for direct aeon hybrid-execution mapping.
+- github-issues — 0 new in `user:anajuliabit` since 2026-05-29T07:17:45Z. Silence per spec.
+- hn-digest — 5 picks from front-page (SQLite durable workflows, MCP is dead?, Liquid AI 8B MoE, Mistral summit, Yegge interview piece).
 
-**Findings:**
-- **Token pulse:** broad alt rotation, 59/100 top-100 green (reverses yesterday's 8/100 red tape). XLM extends DTCC/Stellar narrative — +25.9% / 7d +42% [BREAKOUT, TRENDING+UP]. HYPE back near 5-26 ATH at $62.88 +8.8%. BTC bounced from Wednesday's $73k 6-week low (US-Iran strikes), now $73.5k +0.35%. Notable reversals: DYDX flipped from yesterday's −13.8% loser to +11.7% winner; BILL/BEAT flipped winner→loser.
-- **Tweet roundup:** Claude Opus 4.8 shipped, Gemini Spark agent beta, Linux Rust stable, IBIT −$528M (2nd-largest outflow ever), Sui mainnet 5h55m outage.
-- **Paper:** Skill0.5 (arxiv 2605.28424, ↑14) — explicit skills as RL-internalizable agent units, direct aeon-architecture fit.
-- **GitHub issues:** 0 new across owned repos — silence per skill spec.
-- **HN:** 5 picked, Claude Opus 4.8 at #1 (1469pts/1154c).
+**Files:**
+- Notification: `.pending-notify/1780125710-daily-routine.md` (3,946 chars under 4000 ceiling)
+- Log: appended `### daily-routine (standalone)` section to `memory/logs/2026-05-30.md`
+- Scratch caches: `.daily-cache/cg-markets.json` / `cg-trending.json` / `hf-papers.json` / `hn.json` (not tracked, rm blocked by sandbox, will overwrite next run)
 
-Sandbox blocked direct `./notify` (command-substitution analyzer — same pattern as recent runs). Post-run delivery step will pick up the staged file.
+**Exit:** DAILY_ROUTINE_OK. Post-run delivery step picks up the staged notification.
