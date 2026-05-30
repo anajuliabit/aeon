@@ -1,17 +1,21 @@
+Sandbox blocked the command-substitution call (expected per MEMORY pattern); notification is staged at `.pending-notify/1780164000-goal-tracker.md` for the post-run delivery step.
+
 ## Summary
 
-Ran `goal-tracker` for 2026-05-29 against the 6 goals in `memory/MEMORY.md` (2 are duplicates → 5 tracked goals).
+Tracked **7 goals** across MEMORY.md `## Current Goals` (5 carry-over + 2 new — ISS-012, ISS-013).
 
-**Status:** 5 ON TRACK, 0 elsewhere. **Notable shift:** `assign-14-datanets` moved BLOCKED → ON TRACK (↑ improving) — PR #30 merged 24h ago lifted the gate, though 0 assignments staged yet (surfaced 9th day).
+**Status: 4 on track, 3 done, 0 at risk / needs attention / blocked.** Overall trend ↑ improving — three goals closed today.
 
-**Files written:**
-- `memory/goal-state.json` — replaced yesterday's snapshot; 4 goals carried + 2 new (close-iss-009-fully, index-bookkeeping); `land-pr-30` dropped (already in Completed Goals).
-- `memory/MEMORY.md` — appended 2026-05-29 annotation to the datanets goal (status changed from yesterday → must write per spec).
-- `.pending-notify/1780063500-goal-tracker.md` — full report staged for post-run delivery (sandbox blocks `./notify "$(cat ...)"`).
-- `memory/logs/2026-05-29.md` — appended skill log entry.
+- **Done (moved to `## Completed Goals` with 2026-05-30 stamp):**
+  - Durable ISS-005 fix — PR #47 merged (vote-dedup prefetch + subnetId UUID)
+  - ISS-013 PINATA_JWT — operator rotated, 3 consecutive pin successes
+  - ISS-012 platform POST 400 — PR #44 cleared via Zod schema fix (ISS-014 HTTP 500 is a new layer, tracked separately)
+- **On track (flat):** durable-fix-for-iss-009, close-iss-009-fully, assign-14-datanets (10th day surfaced, 0 staged), INDEX bookkeeping (PRs merged, INDEX.md still shows open).
 
-**Sources:** logs=ok, git=ok (shallow — fell back to PR list), gh_pr=ok (42 in window), gh_issue=ok (empty — repo uses `memory/issues/`), cron-state=ok.
+**Files touched**
+- `memory/MEMORY.md` — moved 3 DONE goals to `## Completed Goals`; removed both ISS-005 duplicate instances from Current Goals
+- `memory/goal-state.json` — written with 7 goals
+- `memory/logs/2026-05-30.md` — appended `### goal-tracker` entry
+- `.pending-notify/1780164000-goal-tracker.md` — notification staged for post-run delivery
 
-**Honest caveat in the log:** the skill's strict rules count any mention as activity, so the datanets + INDEX-bookkeeping goals score ON_TRACK despite zero actual deliverable progress — flagged that distinction in the log entry rather than gaming the status.
-
-**Follow-up the report doesn't itself trigger** (since the spec says no actions on ON_TRACK): the two real "next moves" are still staging the first datanet assignment (morning-brief Focus 3) and closing ISS-007 + ISS-010 in `memory/issues/INDEX.md`.
+**Follow-up:** goal-tracker continues to flag honest caveat that ON_TRACK for the 14-datanets + INDEX-bookkeeping goals means "active surfacing" not "active deliverable progress" — same as yesterday's tracker entry.

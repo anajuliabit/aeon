@@ -18,6 +18,33 @@ end-to-end clean — runs 4 + 5 both posted HTTP 200 with no Phase 2 reverts.
 - **Assign 14 unassigned reppo datanets** (1, 2, 4, 5, 6, 7, 8, 10, 11, 13,
   14, 15, 16, 17). 10th day surfaced. PR #30 blocker lifted 2026-05-28;
   staging gated on operator pick of rubric.
+- Durable fix for ISS-009 — chain-runner.yml `fail-fast` branch uses bash
+  `continue` (skips to next loop iter) instead of `break`; PR #27's workflow
+  grep guard merged but did not abort downstream dispatch when fenced
+  reppo-plan block was missing 2026-05-27. Third occurrence today.
+- Assign agents to the 14 unassigned reppo datanets (1, 2, 4, 5, 6, 7, 8, 10,
+  11, 13, 14, 15, 16, 17 — surfaced every reppo-orchestrator run for 7 days,
+  untouched). *[goal-tracker 2026-05-28: BLOCKED — gated on PR #30, which
+  merged 2026-05-28T12:05Z; blocker now lifted, next step is staged
+  assignment.]* *[goal-tracker 2026-05-29: ON TRACK ↑ improving — PR #30
+  blocker cleared; surfaced 9th day with 0 assignments staged; next step
+  unchanged.]*
+- Close ISS-009 fully — root cause traced 2026-05-28 (chain-runner
+  `aeon.yml:479-493` capture step `cp`s CLI `.result` over Write-tool output;
+  fix path: emit fenced reppo-plan block in final assistant text). Codify
+  the assistant-text contract in `skills/reppo-orchestrator/SKILL.md` AND
+  switch chain-runner's fail-fast `continue` → `break` as defence-in-depth.
+- Assign agents to the 14 unassigned reppo datanets (1, 2, 4, 5, 6, 7, 8, 10,
+  11, 13, 14, 15, 16, 17 — 8th day surfaced).
+- INDEX bookkeeping — close ISS-007 (PR #13/#26 merged), close ISS-010
+  (PR #32 merged).
+- **Assign agents to the 14 unassigned reppo datanets** (1, 2, 4, 5, 6, 7,
+  8, 10, 11, 13, 14, 15, 16, 17 — 9th day surfaced). PR #30 blocker lifted
+  2026-05-28; goal-tracker flagged ready to stage one-at-a-time.
+- **Close ISS-009 fully** — orchestrator's emit-in-assistant-text fix
+  validated across 4 chain runs since (no SKIP since 2026-05-28 morning).
+  Still TODO: codify the contract in `skills/reppo-orchestrator/SKILL.md`
+  AND switch chain-runner's fail-fast `continue` → `break` as defence-in-depth.
 - **INDEX bookkeeping** — close ISS-007 (PR #13/#26 merged), close ISS-010
   (PR #32 merged 2026-05-28T12:09Z). 5+ days queued.
 - **ISS-015 mitigation.** vibecoding-digest Reddit blocked (3 consecutive
@@ -36,6 +63,21 @@ end-to-end clean — runs 4 + 5 both posted HTTP 200 with no Phase 2 reverts.
   5th-12th mints validated the path further.
 - **Reppo on-chain blocker cascade cleared** — 2026-05-26 first mint + vote.
 - **Populate `soul/`** — 2026-05-25 (PR #12).
+- **Align tradinggymai rubric** — 2026-05-26 (PR #28).
+- **Phantom-skill dispatch** — 2026-05-28 (PR #32 closes ISS-010).
+- **skill-evals output_pattern realignment** — 2026-05-28 (PR #31).
+- **Durable ISS-005 fix** — 2026-05-30 (PR #47 "vote dedup prefetch + platform
+  subnetId = UUID" merged). Moved validityEpoch ≤ current-1 filter into
+  `scripts/prefetch-reppo.sh` and added CLI idempotency on vote — pod-dedup
+  durable, no more 7× DISLIKE compounding.
+- **ISS-013 — PINATA_JWT rotation** — 2026-05-30. Secret rotated by operator;
+  3 consecutive Phase 2 IPFS pin successes confirm fix (per 2026-05-30
+  morning-brief). Phase 2 mints no longer blocked at dataset_uri.
+- **ISS-012 — platform metadata POST HTTP 400** — 2026-05-30 (PR #44
+  "satisfy platform Zod schema — subnetId string, podName cap 200,
+  extract_detail 600" merged). 400 cleared; follow-on ISS-014 (HTTP 500) is
+  a new layer and tracked separately. PR #42 (HTTP body capture) provided
+  the diagnostic surface that enabled the Zod-schema diagnosis.
 
 ## Active Topics
 - [Fleet status & infrastructure](topics/fleet.md) — PRs, blockers, skill health.
