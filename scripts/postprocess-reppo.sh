@@ -619,39 +619,53 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
           continue
         fi
       elif [ -n "$dpath" ] && [ -z "$duri" ] && [ -z "${PINATA_JWT:-}" ]; then
-        # Dataset exists but PINATA_JWT not set — POST without dataset_uri.
-        # Operator can backfill the pin later by setting the secret.
-        echo "  - PINATA_JWT not set; POST proceeds without IPFS dataset link" >> "$RESULTS_FILE"
+        # Dataset exists but PINATA_JWT not set — skip the POST so we
+        # don't create a platform row that links to a wallet history
+        # page instead of the actual dataset. Operator sets the secret,
+        # next run retries the pin + POST.
+        echo "- \`$rbase\` — **POST skipped**: PINATA_JWT not set; queue file retained for next-run pin + POST" >> "$RESULTS_FILE"
+        continue
       fi
 
-      # Step 2b: project queue body to the platform schema. Strip our
-      # internal fields (dataset_path, dataset_uri) and map dataset_uri
-      # into pdfURL — the platform schema's downloadable-file slot.
-      # This way the queue file carries our bookkeeping while the wire
-      # body only carries the platform's expected keys.
+      # Hard gate before the POST: we don't register pods that lack an
+      # IPFS dataset URL. The pod's value is the verifiable labeled
+      # dataset; without it the platform row would only link to a wallet
+      # history page or basescan tx, neither of which satisfies the
+      # rubric. Two distinct skip cases:
+      #
+      #   (a) Queue file has dataset_path but pin failed earlier this
+      #       run (the dpath/duri/PINATA branch above already
+      #       `continue`d, so we don't hit this gate). If a future code
+      #       path leaves dataset_uri empty despite dataset_path set,
+      #       we still skip POST and retain for retry.
+      #
+      #   (b) Queue file has no dataset_path at all — legacy mint from
+      #       runs pre-PR-30 (strategy-text pods, not HL-data pods).
+      #       Those pods don't satisfy the rubric; the platform row
+      #       would be misleading. Remove the queue file so we don't
+      #       keep retrying forever.
+      if [ -z "$duri" ]; then
+        if [ -n "$dpath" ]; then
+          echo "- \`$rbase\` — **POST skipped**: no dataset_uri (pin not yet successful); queue retained for retry" >> "$RESULTS_FILE"
+        else
+          echo "- \`$rbase\` — **POST skipped**: legacy mint without dataset_path; removing queue (pod stays as bare ERC-721, no platform row)" >> "$RESULTS_FILE"
+          rm -f "$register_intent"
+        fi
+        continue
+      fi
+
+      # Step 2b: project queue body to the platform schema. With the
+      # gate above, dataset_uri is always set at this point — the IPFS
+      # gateway URL takes both `url` (UI primary view-content link) and
+      # `pdfURL` (downloadable-file slot). The LLM's url (hypurrscan
+      # profile) is intentionally dropped: it points to a wallet
+      # history, not the pod's content.
       body_file=".reppo-cache/post-body-$rbase"
-      # Reppo platform Zod schema (caps determined empirically from
-      # platform 400 bodies across runs 8/9/10, surfaced by PR #42's
-      # diagnostics):
-      # - `subnetId`       must be a string.
-      # - `podName`        max 50 chars.
-      # - `podDescription` max 200 chars.
-      # - `url`            REQUIRED, min 1 char, valid URL — empty string
-      #                    rejected. This is the platform UI's primary
-      #                    "view content" link. Precedence: dataset_uri
-      #                    (IPFS gateway, when there is one) → LLM-supplied
-      #                    url (hypurrscan profile or HL address page) →
-      #                    basescan tx link as last-resort fallback.
-      #                    Putting the IPFS URL here (when present) sends
-      #                    UI clickers straight to the verifiable labeled
-      #                    dataset rather than the wallet history page.
-      # - `pdfURL`         downloadable-file slot, also pointed at the
-      #                    IPFS dataset when available.
       jq '{txHash,
            subnetId: (.subnetId | tostring),
            podName: (.podName | .[0:50]),
            podDescription: (.podDescription | .[0:200]),
-           url: (.dataset_uri // (if (.url // "") == "" then ("https://basescan.org/tx/" + .txHash) else .url end)),
+           url: .dataset_uri,
            platform,
            category,
            agreeToTerms,
