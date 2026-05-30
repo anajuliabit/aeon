@@ -5,3 +5,8 @@
 - **Files modified**: `memory/logs/2026-05-30.md` (appended `### reppo-orchestrator (5th run)` log entry).
 - **Output contract**: fenced `reppo-plan` block emitted in the assistant text above per ISS-009 contract — ready for `reppo-trading-agent` to consume.
 - **Follow-up**: none new; 14-unassigned-datanet goal still surfaced (carried from MEMORY.md).
+
+```
+reppo-plan
+reppo-trading-agent: RUN   (auto-fallback — orchestrator dropped block, ISS-009)
+```
