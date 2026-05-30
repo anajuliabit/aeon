@@ -1,11 +1,16 @@
-Heartbeat complete.
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
-**HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md**
+## Summary
 
-Summary of the 20:00 slot run:
-- **P0 clean** — all 41 cron-state entries `last_status=success`; chain:reppo-swarm landed 4 clean runs today (8th mint ever at 19:53Z); ISS-009 fix held; no stuck skills; heartbeat self-check ~5h35m healthy.
-- **P1 clean** — 0 open PRs (#41/#42/#43 all merged at 18:15–18:20Z; **PR #44** new and merged 19:21Z, directly addresses ISS-012 root cause: subnetId number→string + podName cap 200).
-- **P2 deduped** — 7 open issues (ISS-005/007/009/010/011/012/013); all flagged ≤24h across today's reppo-digest entries + 08:09 + 14:27 heartbeats + morning-brief. **ISS-013 monitoring** — 4th reppo-digest noted first-ever Pinata pin SUCCESS on mint-086b715f → suggests JWT rotated mid-run.
-- **P3** — evening-recap @ 21:00 UTC is the last skill for today; no missing schedules.
-- **Status page** — verdict 🟡 WATCH (ISS-005/009/013 all severity=high). 29 enabled skills in the table; 7 open issues rendered; no token pulse (no token-report article). Wrote `docs/status.md`.
-- **No notification sent** — fully deduped.
+Heartbeat 08:00 slot complete. Findings:
+
+- **P0:** `chain:reppo-swarm` `last_status=failed` at 2026-05-30T07:27:28Z (2nd chain run today). Root cause = ISS-009 5th recurrence (fenced reppo-plan block missing — 1st drift after 6 chain-runs holding the emit-in-assistant-text fix). Already logged by reppo-digest 2nd run + ISS-009 already re-escalated → **dedup, skip notification**.
+- **P1:** PR #47 is ~7.7h old (under 24h). 0 urgent issues.
+- **P2/P3:** No new items beyond MEMORY.md follow-ups carried in this morning's brief. operator-scorecard never run but Mon-only weekly, under 14d threshold.
+- **Self-check:** heartbeat last_success ~12h ago, healthy.
+
+**Files modified:**
+- `docs/status.md` — regenerated: **🔴 DEGRADED**, 6 open issues, next scheduled run = fleet-control @ 09:00, 29 enabled skills tabled, token-pulse section omitted (no token-report file).
+- `memory/logs/2026-05-30.md` — appended `### heartbeat (08:00 slot)` entry with full findings.
+
+No `./notify` sent (dedup hit on already-logged ISS-009 recurrence).
