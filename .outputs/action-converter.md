@@ -1,19 +1,18 @@
-Task complete. Single-skill execution doesn't warrant the task tool here.
+Action Converter complete. Mode OK, 5 actions queued at avg 4.6/5 quality.
 
 ## Summary
 
-Executed `action-converter` for 2026-05-29. Mode `ACTION_CONVERTER_OK` (MEMORY.md 130 lines, 7 distinct log dates in last 7 days). Extracted 12 open loops from MEMORY.md goals, today's logs, fleet/reppo topics, and 1 open PR. Scored each on leverage × urgency × concreteness; 5 cleared all gates.
+**5 Actions — 2026-05-30** (shape: land ISS-009 break, stage datanet 2, durable ISS-005, merge PR #51, fix ISS-015) — staged via `./notify` pattern.
 
-**5 actions (quality avg 4.8/5), shape line: "merge PR #42, rotate PINATA_JWT, datanet 1 spec, ISS-009 defence-in-depth, ISS-005 durable prefetch"**:
+**Actions ranked:**
+1. Land ISS-009 defence-in-depth PR — chain-runner.yml `continue` → `break` (aeon.yml:479-493) + emit-in-assistant contract in skills/reppo-orchestrator/SKILL.md (5th recurrence today)
+2. Add datanet 2 to reppo-orchestrator dispatch list (10th day, 14 datanets untouched)
+3. Port ISS-005 validityEpoch filter into scripts/prefetch-reppo.sh + CLI vote-idempotency wrapper
+4. Approve and merge PR #51 (backfill 4 pre-PR-50 pods with platform IPFS url)
+5. Patch scripts/prefetch-vibecoding.sh for oauth.reddit.com (ISS-015, 3rd day)
 
-1. merge PR #42 (body capture for ISS-012/013 diagnostics)
-2. rotate PINATA_JWT (ISS-013 stuck last 2 mints)
-3. open PR: aeon.yml:479-493 `continue` → `break` + codify orchestrator assistant-text contract (closes ISS-009)
-4. pick datanet 1, write `memory/topics/datanet-1-spec.md` (breaks 9-day datanet carry-over)
-5. move ISS-005 validityEpoch filter into `scripts/prefetch-reppo.sh` + CLI vote-dedup
+**Files modified:**
+- `.pending-notify/1780164643-action-converter.md` — notification staged for post-run delivery
+- `memory/logs/2026-05-30.md` — appended Action Converter log entry with anchored + carried loops and novelty notes
 
-**Files written**:
-- `.pending-notify/1780078621-action-converter.md` (staged for post-run delivery per sandbox pattern)
-- `memory/logs/2026-05-29.md` (appended `## Action Converter` section with anchored loops, 6 carried-over loops, notification status)
-
-**Follow-up**: 6 high-score loops carried for tomorrow (widen HL_OHLCV_COINS, ISS-012 fix awaiting PR #42, INDEX bookkeeping, security-scan follow-up, vibecoding Reddit prefetch, operator-scorecard never-ran).
+**Follow-up:** None — post-run delivery step ships the notification.
