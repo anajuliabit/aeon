@@ -68,14 +68,14 @@
     "success_rate": 1
   },
   "agent-buzz": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-29T18:19:30Z",
     "total_runs": 7,
     "total_successes": 7,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-29T18:14:02Z"
+    "last_dispatch": "2026-05-30T17:38:59Z"
   },
   "reppo-digest": {
     "last_status": "success",
@@ -323,14 +323,14 @@
     "success_rate": 1
   },
   "vibecoding-digest": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-29T18:16:56Z",
     "total_runs": 4,
     "total_successes": 4,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-29T18:14:02Z"
+    "last_dispatch": "2026-05-30T17:38:59Z"
   },
   "thread-formatter": {
     "last_status": "success",
