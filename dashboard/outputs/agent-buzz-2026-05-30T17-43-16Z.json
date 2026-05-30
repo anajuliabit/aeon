@@ -1,0 +1,88 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-05-30"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-narrative",
+        "sep-1",
+        "stack-metrics",
+        "alert-degraded",
+        "text-source"
+      ]
+    },
+    "text-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet day — only 7 candidates returned, all 0-engagement clips from the last 2 minutes of yesterday. Nothing survived signal scoring.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-candidates",
+        "stat-kept"
+      ]
+    },
+    "stat-candidates": {
+      "type": "Stat",
+      "props": {
+        "label": "Candidates returned",
+        "value": "7"
+      },
+      "children": []
+    },
+    "stat-kept": {
+      "type": "Stat",
+      "props": {
+        "label": "Kept",
+        "value": "0"
+      },
+      "children": []
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "Degraded sample",
+        "message": "No real engagement detected",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "text-source": {
+      "type": "Text",
+      "props": {
+        "text": "Source: xai-cache",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
