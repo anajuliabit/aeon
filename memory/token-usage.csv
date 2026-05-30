@@ -181,3 +181,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-30,reppo-digest,claude-opus-4-7,21,16166,1345722,78642
 2026-05-30,skill-freshness,claude-sonnet-4-6,19,15418,1071001,69696
 2026-05-30,github-trending,claude-opus-4-7,25,14506,985276,102470
+2026-05-30,token-alert,claude-opus-4-7,17,5769,707805,44768
