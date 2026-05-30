@@ -31,7 +31,7 @@ CACHE_DIR=".hl-cache"
 mkdir -p "$CACHE_DIR"
 
 # Tunable knobs (env-overridable so the workflow can dial them).
-HL_TOP_N="${HL_TOP_N:-3}"                # how many margin-ranked wallets to pull fills for (was 10; trimmed to fit trading-agent's 30-min Aeon timeout — 10× per-wallet jq + classification + dataset build hit the wall in run 5)
+HL_TOP_N="${HL_TOP_N:-5}"                # how many margin-ranked wallets to pull fills for. History: 10 (initial, hit 30-min Aeon timeout in run 5) → 3 (PR #39) → 5 (this PR). 3 was too narrow once PR #37's input contract stabilized — the top-3 frequently miss the ≥20-trade rubric floor while ranks 4-10 are the 50-2000-fill directional perp wallets that qualify. 5 reaches rank-5, leaves budget headroom for further bumps.
 HL_WINDOW="${HL_WINDOW:-week}"           # leaderboard window: day|week|month|allTime
 HL_FILLS_DAYS="${HL_FILLS_DAYS:-7}"      # userFillsByTime startTime offset (still capped at 2000 fills/response)
 HL_MIN_VLM_USD="${HL_MIN_VLM_USD:-100000}"  # noise floor: skip wallets with <$100k vlm in HL_WINDOW

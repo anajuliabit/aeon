@@ -9,13 +9,26 @@
 set -euo pipefail
 
 PENDING_DIR=".pending-reppo"
+REGISTER_DIR=".pending-reppo-register"
 RESULTS_FILE=".outputs/reppo-trading-agent.md"
 DRY_RUN_ONLY="${REPPO_DRY_RUN_ONLY:-false}"
 
-if [ ! -d "$PENDING_DIR" ] || [ -z "$(ls -A "$PENDING_DIR"/*.json 2>/dev/null || true)" ]; then
-  echo "reppo-postprocess: no pending intents"
+# Exit only when BOTH the new-intent queue AND the retained register
+# queue are empty. The retained queue (.pending-reppo-register/) holds
+# Phase-2 mint metadata POSTs from prior runs that haven't succeeded
+# yet (committed to main via aeon.yml's auto-commit so they survive
+# across runs). Skipping Phase 2 because no NEW intents queued today
+# leaves those retained pods stuck on chain without UI surfacing —
+# the exact bug that kept 7 mints invisible from runs 6-11.
+HAS_NEW="false"
+HAS_RETAINED="false"
+[ -d "$PENDING_DIR" ] && ls -A "$PENDING_DIR"/*.json >/dev/null 2>&1 && HAS_NEW="true"
+[ -d "$REGISTER_DIR" ] && ls -A "$REGISTER_DIR"/*.json >/dev/null 2>&1 && HAS_RETAINED="true"
+if [ "$HAS_NEW" = "false" ] && [ "$HAS_RETAINED" = "false" ]; then
+  echo "reppo-postprocess: no pending intents and no retained register files"
   exit 0
 fi
+[ "$HAS_NEW" = "false" ] && echo "reppo-postprocess: no new intents this run; draining $(ls "$REGISTER_DIR"/*.json 2>/dev/null | wc -l | tr -d ' ') retained register file(s)"
 
 if [ -z "${REPPO_PRIVATE_KEY:-}" ]; then
   echo "reppo-postprocess: REPPO_PRIVATE_KEY not set, skipping all writes"
