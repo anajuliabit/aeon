@@ -214,10 +214,10 @@
   },
   "reflect": {
     "last_dispatch": "2026-05-30T18:07:26Z",
-    "last_status": "dispatched",
-    "last_success": "2026-05-29T18:21:12Z",
-    "total_runs": 8,
-    "total_successes": 8,
+    "last_status": "success",
+    "last_success": "2026-05-30T18:13:02Z",
+    "total_runs": 9,
+    "total_successes": 9,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
