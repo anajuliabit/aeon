@@ -1,0 +1,168 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "status_stack",
+        "sep2",
+        "chain_section",
+        "sep3",
+        "actions_section",
+        "sep4",
+        "datanets_stat"
+      ]
+    },
+    "header": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 2nd run · datanet 9 · 0 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "status_label",
+        "status_badge"
+      ]
+    },
+    "status_label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "body"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reverted",
+        "variant": "destructive"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "chain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "chain_heading",
+        "chain_issue",
+        "issue_badge",
+        "recurrence_detail",
+        "alert_box"
+      ]
+    },
+    "chain_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Chain Issue",
+        "level": "h3"
+      }
+    },
+    "chain_issue": {
+      "type": "Text",
+      "props": {
+        "text": "chain · trading-agent skipped on missing fenced reppo-plan block",
+        "variant": "body"
+      }
+    },
+    "issue_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-009",
+        "variant": "secondary"
+      }
+    },
+    "recurrence_detail": {
+      "type": "Text",
+      "props": {
+        "text": "5th recurrence, 1st post-fix-drift after 6 chain-runs holding the emit-in-assistant-text path",
+        "variant": "body"
+      }
+    },
+    "alert_box": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Missing fenced reppo-plan block"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "actions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions_heading",
+        "action1",
+        "action2",
+        "pending_badge"
+      ]
+    },
+    "actions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Actions",
+        "level": "h3"
+      }
+    },
+    "action1": {
+      "type": "Text",
+      "props": {
+        "text": "Codify emit-in-assistant-text contract in skills/reppo-orchestrator/SKILL.md",
+        "variant": "body"
+      }
+    },
+    "action2": {
+      "type": "Text",
+      "props": {
+        "text": "Switch chain-runner fail-fast continue→break",
+        "variant": "body"
+      }
+    },
+    "pending_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "both pending 4 days",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "datanets_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "14",
+        "label": "datanets unassigned"
+      }
+    }
+  }
+}
