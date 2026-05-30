@@ -636,21 +636,22 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
       # - `subnetId`       must be a string.
       # - `podName`        max 50 chars.
       # - `podDescription` max 200 chars.
-      # - `url`            REQUIRED, min 1 char, valid URL. Empty string is
-      #                    rejected. The LLM's url (e.g., hypurrscan profile
-      #                    or HL address page per SKILL.md guidance) wins
-      #                    when non-empty; we fall back to the mint tx's
-      #                    basescan link otherwise — always a valid URL,
-      #                    always meaningful (it's the on-chain receipt
-      #                    for the pod itself).
-      # The IPFS-pinned dataset JSON (referenced via pdfURL) still carries
-      # the LLM's full untruncated description; the platform metadata is a
-      # teaser/title for browsing.
+      # - `url`            REQUIRED, min 1 char, valid URL — empty string
+      #                    rejected. This is the platform UI's primary
+      #                    "view content" link. Precedence: dataset_uri
+      #                    (IPFS gateway, when there is one) → LLM-supplied
+      #                    url (hypurrscan profile or HL address page) →
+      #                    basescan tx link as last-resort fallback.
+      #                    Putting the IPFS URL here (when present) sends
+      #                    UI clickers straight to the verifiable labeled
+      #                    dataset rather than the wallet history page.
+      # - `pdfURL`         downloadable-file slot, also pointed at the
+      #                    IPFS dataset when available.
       jq '{txHash,
            subnetId: (.subnetId | tostring),
            podName: (.podName | .[0:50]),
            podDescription: (.podDescription | .[0:200]),
-           url: (if (.url // "") == "" then ("https://basescan.org/tx/" + .txHash) else .url end),
+           url: (.dataset_uri // (if (.url // "") == "" then ("https://basescan.org/tx/" + .txHash) else .url end)),
            platform,
            category,
            agreeToTerms,
