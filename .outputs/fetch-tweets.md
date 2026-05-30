@@ -1,15 +1,16 @@
 ## Summary
 
-Ran `skills/fetch-tweets/SKILL.md` with var override `sherwood WOOD reppo moonwell mamo`.
+**Skill:** `fetch-tweets` for `@moonwell OR @reppo OR @sherwoodagent OR WOOD OR mamo` (2026-05-30).
 
-**Result:** `FETCH_TWEETS_EMPTY` (source=cache). Path A cache (`.xai-cache/fetch-tweets.json`) was fresh — the query in the cache matched the var verbatim and covered 2026-05-24 → 2026-05-25. Grok exhausted three search modes (keyword AND, keyword OR, semantic search) and returned no relevant tweets, calling out that loose matches on "wood" were unrelated (guitars/trees).
+**Outcome:** `FETCH_TWEETS_EMPTY` — no notification sent.
 
-**Per skill step 4:** legitimate empty → log and stop, no notification sent.
+**What happened:**
+- Loaded prefetch cache `.xai-cache/fetch-tweets.json` (path A). Got 10 candidates.
+- All 10 were noise — Grok widened `WOOD` and `mamo` to generic-word matches (Japanese streamer, Brazilian Liverpool fan, Arkansas summer ball, golf clubs WITB, etc.). The Grok response itself noted no `@moonwell`/`@reppo`/`@sherwoodagent` results in the date window.
+- WebSearch fallback (path C) cross-check returned only older anchor tweets — none in the 48h window the skill prioritises.
+- 0 candidates passed the step-6 signal bar. Dedup vs. last 3 days of logs (12 URLs) and seen-file (absent) was a no-op.
 
 **Files modified:**
-- `memory/logs/2026-05-25.md` — appended `### fetch-tweets (sherwood WOOD reppo moonwell mamo)` entry with source path, empty status, and an observation about the var packing 5 distinct projects into one query.
+- `memory/logs/2026-05-30.md` — appended `fetch-tweets` entry recording the empty result, source path, why, and a next-run note to scope the var to specific handles (`@MoonwellDeFi OR @Mamo_agent OR @reppo`) so bare `WOOD`/`mamo` terms don't widen into generic-keyword noise.
 
-**Files not modified:**
-- `memory/fetch-tweets-seen.txt` — no new URLs to record.
-
-**Follow-up worth flagging:** the var crams 5 separate project names into one query, which Grok interprets as all-AND and rarely matches anything. If empty repeats, the operator may want per-project vars (split `sherwood`, `reppo`, `moonwell`, `mamo` into separate runs) — but that's a config change, not a per-run fix.
+**Follow-ups:** consider tightening the var in `aeon.yml` to use the actual handles (`@MoonwellDeFi`, `@Mamo_agent`) rather than bare token strings.
