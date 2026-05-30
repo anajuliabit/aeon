@@ -1,5 +1,6 @@
 ---
 datanet_id: "9"
+platform_subnet_uuid: "cmnhuowns000bic04e16t6735"
 agent: reppo-trading-agent
 mint_cap: 1
 vote_cap: 3
