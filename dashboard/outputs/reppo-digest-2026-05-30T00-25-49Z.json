@@ -1,0 +1,274 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "onchain_section",
+        "sep3",
+        "reverted_section",
+        "sep4",
+        "footer"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title",
+        "meta"
+      ]
+    },
+    "title": {
+      "type": "Heading",
+      "props": {
+        "text": "reppo-swarm",
+        "level": "h2"
+      }
+    },
+    "meta": {
+      "type": "Text",
+      "props": {
+        "text": "1st run · datanet 9 · 2 on-chain",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_heading",
+        "queued_mint_item",
+        "queued_votes_item"
+      ]
+    },
+    "queued_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "queued_mint_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_label",
+        "mint_wallet",
+        "mint_sharpe",
+        "mint_pnl",
+        "mint_id"
+      ]
+    },
+    "mint_label": {
+      "type": "Text",
+      "props": {
+        "text": "Mint: chip perp close-short",
+        "variant": "lead"
+      }
+    },
+    "mint_wallet": {
+      "type": "Text",
+      "props": {
+        "text": "Wallet: 0x71dfc07d"
+      }
+    },
+    "mint_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe",
+        "value": "805"
+      }
+    },
+    "mint_pnl": {
+      "type": "Stat",
+      "props": {
+        "label": "P&L",
+        "value": "+$24,780",
+        "delta": "6.64 days"
+      }
+    },
+    "mint_id": {
+      "type": "Text",
+      "props": {
+        "text": "ID: a3ea5a0973858464",
+        "variant": "caption"
+      }
+    },
+    "queued_votes_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_label",
+        "votes_pod361",
+        "votes_epoch91"
+      ]
+    },
+    "votes_label": {
+      "type": "Text",
+      "props": {
+        "text": "Votes: dislike pods",
+        "variant": "lead"
+      }
+    },
+    "votes_pod361": {
+      "type": "Text",
+      "props": {
+        "text": "Pod 361 (epoch 96)"
+      }
+    },
+    "votes_epoch91": {
+      "type": "Text",
+      "props": {
+        "text": "Pods 299 + 297 (epoch 91, deliberate boundary probe)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "onchain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "onchain_heading",
+        "onchain_mint_tx",
+        "onchain_vote_tx"
+      ]
+    },
+    "onchain_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h3"
+      }
+    },
+    "onchain_mint_tx": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_tx_label",
+        "mint_tx_hash"
+      ]
+    },
+    "mint_tx_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Mint confirmed",
+        "variant": "secondary"
+      }
+    },
+    "mint_tx_hash": {
+      "type": "Text",
+      "props": {
+        "text": "TX: 0x1a0dbea16bdfe70eed104978b4c71778155be2d2b9909eea4cd058f687d1dc46",
+        "variant": "caption"
+      }
+    },
+    "onchain_vote_tx": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vote_tx_label",
+        "vote_tx_hash"
+      ]
+    },
+    "vote_tx_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Vote 361 dislike confirmed",
+        "variant": "secondary"
+      }
+    },
+    "vote_tx_hash": {
+      "type": "Text",
+      "props": {
+        "text": "TX: 0x9e4357610c6b2144d360b11844b5b75b5d8cba6c755637554c99f75e6f9647bd",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "reverted_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reverted_heading",
+        "reverted_votes_error",
+        "reverted_platform_error"
+      ]
+    },
+    "reverted_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Reverted",
+        "level": "h3"
+      }
+    },
+    "reverted_votes_error": {
+      "type": "Alert",
+      "props": {
+        "title": "Votes: POD_NOT_VALID_FOR_EPOCH × 2",
+        "message": "Pods 297, 299 (ISS-005). Tracked — durable prefetch filter already queued. This was a deliberate epoch-91 probe.",
+        "type": "warning"
+      }
+    },
+    "reverted_platform_error": {
+      "type": "Alert",
+      "props": {
+        "title": "Platform: HTTP 500 × 7",
+        "message": "Queued mint backlog (ISS-014). Server-side fault upstream; no client action this run.",
+        "type": "warning"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned: 1, 2, 4-8, 10, 11, 13-17 — 10th day surfaced.",
+        "variant": "muted"
+      }
+    }
+  }
+}
