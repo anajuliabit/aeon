@@ -1,1 +1,1 @@
-memory consolidated — 2026-05-29. 7 logs read, 2 topic files refreshed (fleet, crypto), MEMORY.md bumped to 5th + 6th mints landed today (LIT + first commodity-perp BRENTOIL), ISS-011/012/013 added to open issues, PRs #41/#42 carried. recurring: each on-chain success reveals one more downstream blocker.
+Memory consolidated — 2026-05-30. MEMORY.md trimmed 166 → 95 lines. Status: ISS-012/013/014 resolved (Phase 2 cleared; 12th mint today, first end-to-end clean runs), ISS-015 new (vibecoding Reddit blocked 3rd day), ISS-009 5th recurrence. PRs #41/42/43/44/47 merged this week.

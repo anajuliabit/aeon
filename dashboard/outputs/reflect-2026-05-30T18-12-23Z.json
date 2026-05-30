@@ -1,0 +1,245 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidated",
+        "description": "2026-05-30"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-memory-stat",
+        "sep-1",
+        "heading-issues",
+        "stack-issues",
+        "sep-2",
+        "heading-prs",
+        "stack-prs"
+      ]
+    },
+    "text-memory-stat": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md trimmed 166 → 95 lines",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack-resolved",
+        "stack-new",
+        "stack-recurrence"
+      ]
+    },
+    "stack-resolved": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badges-resolved",
+        "text-resolved-detail"
+      ]
+    },
+    "badges-resolved": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-012",
+        "badge-013",
+        "badge-014"
+      ]
+    },
+    "badge-012": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-012",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-013": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-013",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-014": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-014",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text-resolved-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Resolved • Phase 2 cleared; 12th mint today; first end-to-end clean runs",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "stack-new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-015",
+        "text-015-detail"
+      ]
+    },
+    "badge-015": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-015",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-015-detail": {
+      "type": "Text",
+      "props": {
+        "text": "New • vibecoding Reddit blocked 3rd day",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "stack-recurrence": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-009",
+        "text-009-detail"
+      ]
+    },
+    "badge-009": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-009",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-009-detail": {
+      "type": "Text",
+      "props": {
+        "text": "5th recurrence",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-prs": {
+      "type": "Heading",
+      "props": {
+        "text": "Merged PRs",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-pr41",
+        "badge-pr42",
+        "badge-pr43",
+        "badge-pr44",
+        "badge-pr47"
+      ]
+    },
+    "badge-pr41": {
+      "type": "Badge",
+      "props": {
+        "text": "#41",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-pr42": {
+      "type": "Badge",
+      "props": {
+        "text": "#42",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-pr43": {
+      "type": "Badge",
+      "props": {
+        "text": "#43",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-pr44": {
+      "type": "Badge",
+      "props": {
+        "text": "#44",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-pr47": {
+      "type": "Badge",
+      "props": {
+        "text": "#47",
+        "variant": "outline"
+      },
+      "children": []
+    }
+  }
+}

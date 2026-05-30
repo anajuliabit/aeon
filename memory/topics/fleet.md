@@ -46,8 +46,11 @@ state: what was built, recurring blockers, and health.
 | #37 | 2026-05-28 | reppo: rank HL wallets by margin (pnl/vlm), drop 7d span floor, add anti-regurgitation contract — unlocked 4th mint ever |
 | #38 | 2026-05-28 | replicate: pin pending-JSON contract + surface API errors |
 | #39 | 2026-05-28 | HL_TOP_N default 10 → 3 to fit Aeon's 30-min timeout |
-| #41 | 2026-05-29 | replicate-oneoff workflow (workflow_dispatch image gen) — open |
-| #42 | 2026-05-29 | capture HTTP status + response body on Pinata pin / platform POST failures (unblocks ISS-012/013 diagnosis) — open |
+| #41 | 2026-05-29 | replicate-oneoff workflow (workflow_dispatch image gen) — merged |
+| #42 | 2026-05-29 | capture HTTP status + response body on Pinata pin / platform POST failures (root-caused ISS-012 + ISS-013) — merged |
+| #43 | 2026-05-29 | vibecoding-digest same-day dup-notify suppression — merged |
+| #44 | 2026-05-29 | platform metadata Zod schema fix (subnetId string, podName ≤50, podDescription ≤200, extract_detail ≤600) — closed ISS-012 — merged |
+| #47 | 2026-05-30 | move ISS-005 epoch filter into prefetch + cast subnetId UUID (durable ISS-005 + ISS-014 fixes) — merged 2026-05-30 ~08-14 UTC |
 
 ## Recurring blockers
 - **14 unassigned reppo datanets.** Orchestrator surfaces them every run (ids
@@ -61,17 +64,15 @@ state: what was built, recurring blockers, and health.
   (2026-05-29) **deliberately steered off 372/373** to break the compounding
   pattern — DISLIKE'd 332/390/391 instead, 1st vote on each. Organic
   mitigation works but isn't durable.
-- **Phase 2 platform/IPFS surface untested until 2026-05-29.** The 5th mint
-  was the first to actually reach Phase 2; both today's mints (5th LIT
-  9794ed80 + 6th BRENTOIL 7029a48d) are stuck — IPFS pin to Pinata returns
-  HTTP 403 (ISS-013, missing-secret, operator-call for PINATA_JWT rotation)
-  and platform metadata POST returns HTTP 400 (ISS-012, api-change, PR #42
-  opens up the diagnostics). Both yesterday's 4th mint (397ee2e8) and
-  today's land their on-chain mintPodWithREPPO tx but never get a
-  dataset_uri or platform DB row.
 - **ISS-011 nonce-too-low REVERT.** Vote-391 1st run REVERTed (CLI provided
   nonce below current chain nonce after sibling votes landed same batch).
   2nd-run retry landed clean. Single occurrence so far; watch for recurrence.
+- **ISS-015 Reddit blocked.** vibecoding-digest hits PREFETCH_FAILED on
+  runner IP (Reddit 403 on datacenter ASN) AND WebFetch refuses
+  `*.reddit.com` at the Claude Code tool layer. 3rd consecutive day
+  2026-05-28/29/30. No in-skill workaround — needs authed Reddit API
+  (`oauth.reddit.com` + `REDDIT_CLIENT_ID`/`REDDIT_CLIENT_SECRET`) or
+  alternate source (pushshift, HN /r/programming mirror). Operator call.
 - **Sandbox `./notify "$(cat ...)"` arg-passing.** Now the dominant pattern —
   most content skills stage to `.pending-notify/` and let the post-run delivery
   step pick it up (today: morning-brief, github-trending, defi-overview,
@@ -94,6 +95,13 @@ state: what was built, recurring blockers, and health.
   since fleet bootstrap. Under 2x interval threshold so heartbeat doesn't flag.
 
 ## Resolved blockers
+- **Phase 2 platform/IPFS cleared 2026-05-30.** ISS-013 (Pinata HTTP 403
+  NO_SCOPES_FOUND → operator rotated PINATA_JWT with `pinFileToIPFS` scope;
+  5 consecutive pin successes 2026-05-29 4th-run through 2026-05-30 5th-run).
+  ISS-012 (platform metadata POST HTTP 400 — payload Zod bug → PR #44 merged
+  2026-05-29T19:21Z). ISS-014 (post-PR-#44 HTTP 500 server-side fault →
+  self-healed; 1st HTTP 200 on 2026-05-30 4th-run, 2nd consecutive on
+  5th-run). First end-to-end clean mints in chain history.
 - **Reppo on-chain blocker cascade (CLEARED 2026-05-26).** Full sequence took
   6 days: ISS-002 (PR #4) → ISS-003 (PR #8) → ISS-004 (PR #10/#19/#20) →
   ISS-006 (PR #11/#23) → ISS-007 (PR #13/#26) → ISS-008 (PR #21) → ISS-009
@@ -159,22 +167,20 @@ state: what was built, recurring blockers, and health.
 - Week 2 baseline due at next cost-report (full Monday→Sunday).
 
 ## Issues
-- ISS-001/002/003/004/006/008 resolved.
-- ISS-005 open (high, prompt-bug) — agent-side workaround live; durable
-  prefetch + ISS-005 dedup fix both pending. Organic mitigation on 2026-05-29
-  steered off 372/373 (DISLIKE'd 332/390/391 instead).
+- ISS-001/002/003/004/006/008/012/013/014 resolved.
+- ISS-005 open (high, prompt-bug) — agent-side workaround live; PR #47
+  (durable prefetch fix + CLI vote-dedup) merged 2026-05-30 morning. Watch
+  next runs for compounding-pattern break.
 - ISS-007 open in INDEX (medium, timeout) — PR #13 retry + PR #26 widened
-  budget; INDEX close queued (4 days).
+  budget; INDEX close queued (5+ days).
 - ISS-009 open (high, prompt-bug) — root cause traced + fix path validated
-  2026-05-28; held across 4+ chain runs since. Two follow-ups: (a) codify
-  orchestrator emit-in-assistant-text in skill prompt, (b) chain-runner
-  `continue` → `break` in fail-fast branch.
+  2026-05-28; 5th recurrence 2026-05-30 2nd-run after 6 consecutive runs held.
+  Two follow-ups: (a) codify orchestrator emit-in-assistant-text in skill
+  prompt, (b) chain-runner `continue` → `break` in fail-fast branch.
 - ISS-010 open in INDEX (medium, config) — fix shipped in PR #32; close queued.
-- **ISS-011 open (medium, unknown, NEW 2026-05-29)** — vote nonce-too-low
-  REVERT after sibling votes land same batch. 1 occurrence; retry landed.
-- **ISS-012 open (medium, api-change, NEW 2026-05-29)** — Reppo platform
-  metadata POST HTTP 400. 3 occurrences. PR #42 (HTTP body capture)
-  unblocks diagnostics.
-- **ISS-013 open (medium, missing-secret, NEW 2026-05-29)** — IPFS pin to
-  Pinata HTTP 403. 2 occurrences (every Phase 2 IPFS pin so far). Operator
-  call for PINATA_JWT rotation/verification.
+- ISS-011 open (medium, unknown) — vote nonce-too-low REVERT after sibling
+  votes land same batch. 1 occurrence; retry landed; not recurring.
+- **ISS-015 open (high, sandbox-limitation, NEW 2026-05-30)** —
+  vibecoding-digest can't reach Reddit; prefetch (runner IP) + WebFetch
+  (tool layer) both dead, 3 consecutive days. No in-skill workaround —
+  needs authed Reddit API or alternate source.
