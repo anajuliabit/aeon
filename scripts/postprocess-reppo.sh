@@ -571,20 +571,26 @@ if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null ||
       # body only carries the platform's expected keys.
       body_file=".reppo-cache/post-body-$rbase"
       # Reppo platform Zod schema (caps determined empirically from
-      # run 8 + run 9 platform 400 bodies, surfaced by PR #42's diagnostics):
-      # - `subnetId`     must be a string.
-      # - `podName`      max 50 chars (PR #44 assumed 200; run 9 narrowed
-      #                  to 50 — tightening here).
-      # - `podDescription` max 200 chars (run 9 evidence).
+      # platform 400 bodies across runs 8/9/10, surfaced by PR #42's
+      # diagnostics):
+      # - `subnetId`       must be a string.
+      # - `podName`        max 50 chars.
+      # - `podDescription` max 200 chars.
+      # - `url`            REQUIRED, min 1 char, valid URL. Empty string is
+      #                    rejected. The LLM's url (e.g., hypurrscan profile
+      #                    or HL address page per SKILL.md guidance) wins
+      #                    when non-empty; we fall back to the mint tx's
+      #                    basescan link otherwise — always a valid URL,
+      #                    always meaningful (it's the on-chain receipt
+      #                    for the pod itself).
       # The IPFS-pinned dataset JSON (referenced via pdfURL) still carries
       # the LLM's full untruncated description; the platform metadata is a
-      # teaser/title for browsing. Anyone wanting the full evaluable content
-      # follows the gateway URL.
+      # teaser/title for browsing.
       jq '{txHash,
            subnetId: (.subnetId | tostring),
            podName: (.podName | .[0:50]),
            podDescription: (.podDescription | .[0:200]),
-           url,
+           url: (if (.url // "") == "" then ("https://basescan.org/tx/" + .txHash) else .url end),
            platform,
            category,
            agreeToTerms,
