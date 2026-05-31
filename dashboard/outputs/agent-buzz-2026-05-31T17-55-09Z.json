@@ -1,0 +1,168 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz"
+      },
+      "children": [
+        "text-date",
+        "text-summary",
+        "sep1",
+        "grid-stats",
+        "sep2",
+        "stack-findings",
+        "sep3",
+        "alert-conclusion"
+      ]
+    },
+    "text-date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-31",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet day on X — no survivors.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "grid-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-returned",
+        "stat-kept"
+      ]
+    },
+    "stat-returned": {
+      "type": "Stat",
+      "props": {
+        "label": "Candidates returned",
+        "value": "4"
+      },
+      "children": []
+    },
+    "stat-kept": {
+      "type": "Stat",
+      "props": {
+        "label": "Cleared curation bar",
+        "value": "0"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-findings": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-intro",
+        "text-quality",
+        "text-breakdown",
+        "stack-candidates"
+      ]
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "xAI returned 4 candidates total.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-quality": {
+      "type": "Text",
+      "props": {
+        "text": "All sub-510-follower accounts with 0–1 engagement.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "text-breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "Candidate breakdown:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stack-candidates": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-mcp",
+        "text-mcp-topics",
+        "badge-anthropic"
+      ]
+    },
+    "badge-mcp": {
+      "type": "Badge",
+      "props": {
+        "text": "3× MCP framing posts",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text-mcp-topics": {
+      "type": "Text",
+      "props": {
+        "text": "Topics: continuity vs. OpenAPI, shared-memory layer, server launch",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "badge-anthropic": {
+      "type": "Badge",
+      "props": {
+        "text": "1× Anthropic-SWE-automation thesis",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert-conclusion": {
+      "type": "Alert",
+      "props": {
+        "title": "Curation result",
+        "message": "None cleared the curation bar.",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}
