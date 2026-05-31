@@ -192,7 +192,6 @@ not exist and write
   "strategy_summary": "HL perp trades — <wallet short> — <n_trades> closed, Sharpe <s>, MDD <d>%, win <w>%, span <start>..<end>",
   "pod_name": "<UI title, ≤80 chars — e.g. 'HL perps 7d, 0xab12..ef34: 142 trades'>",
   "pod_description": "<full description: source wallet, time span, signal taxonomy, market context rules, OHLCV interval, aggregate metrics (n_trades, win_rate, sharpe, max_drawdown_pct, days_covered). The trader evaluating this pod reads this — do not truncate.>",
-  "url": "<verification link — hypurrscan.io profile for the wallet is the default; empty string if not applicable>",
   "dataset_path": ".pending-reppo/data/mint-<first16ofhash>.json" }
 ```
 And write the labeled dataset body to that `dataset_path`:
@@ -229,24 +228,23 @@ Field guidance:
   trader on the other side reads to evaluate the pod. Source wallet,
   time span, signal taxonomy with rules, market context rules, OHLCV
   interval, aggregate metrics block. Do not truncate.
-- `url` — hypurrscan.io profile or app.hyperliquid.xyz address page for
-  the wallet is the default. Empty string if no link applies.
 - `dataset_path` — relative path to the labeled dataset body
-  (above). `postprocess-reppo.sh` uploads this file to IPFS via
-  Pinata before the platform-metadata POST and includes the resulting
-  gateway URL alongside `url`.
+  (above). `postprocess-reppo.sh` passes this to `reppo mint-pod
+  --dataset <path>`; the CLI pins to IPFS and uses the resulting
+  gateway URL as the pod's view-content link. Do NOT emit a `url`
+  field — it's ignored. The CLI derives the canonical URL from the
+  IPFS pin so the dataset stays verifiable independent of any UI.
 
 How these fields flow downstream (`scripts/postprocess-reppo.sh`):
-1. Dry-run + on-chain mint via `reppo mint-pod --datanet …` — produces
-   the ERC-721 token on Base.
-2. Upload `dataset_path` to IPFS via Pinata (if `PINATA_JWT` is set),
-   capture the CID. On upload failure the file stays on disk; next
-   chain run retries.
-3. Phase-2 register POST to
-   `https://reppo.ai/api/v1/agents/{REPPO_AGENT_ID}/pods` with
-   `{podName, podDescription, url, dataset_uri: ipfs gateway URL or
-   ipfs://CID, txHash, …}` so the pod becomes visible in the Reppo UI
-   AND the dataset is publicly verifiable independent of the platform.
+1. Dry-run preflight via `reppo mint-pod … --dry-run`.
+2. Real call: `reppo mint-pod --datanet … --subnet-uuid …
+   --pod-name … --pod-description … --dataset … --category
+   "Trading Strategy" --platform Aeon --agree-to-terms
+   --idempotency-key …`. The CLI atomically performs on-chain mint,
+   IPFS pin, and platform metadata POST. A single success means the
+   pod is visible in the UI AND the dataset is pinned. Transient
+   Phase 2 failures cache the tx; operator retries with
+   `reppo return-confirmed --tx <hash>`.
 
 Missing/empty `pod_name`, `pod_description`, or `dataset_path` means
 the pod will mint on chain but render as a blank row in the UI and
