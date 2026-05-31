@@ -1,0 +1,106 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Evals"
+      },
+      "children": [
+        "status_badge",
+        "metrics_section",
+        "separator1",
+        "action_section",
+        "separator2",
+        "article_link"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SKILL_EVALS_RECOVERED",
+        "variant": "success"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "metric_fails",
+        "metric_fixed",
+        "metric_coverage"
+      ]
+    },
+    "metric_fails": {
+      "type": "Stat",
+      "props": {
+        "label": "New Fails",
+        "value": "0"
+      }
+    },
+    "metric_fixed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fixed",
+        "value": "3"
+      }
+    },
+    "metric_coverage": {
+      "type": "Stat",
+      "props": {
+        "label": "Coverage",
+        "value": "48%",
+        "delta": "+7pp",
+        "trend": "up"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_heading",
+        "action_text"
+      ]
+    },
+    "action_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Action",
+        "level": "h3"
+      }
+    },
+    "action_text": {
+      "type": "Text",
+      "props": {
+        "text": "Patch evals.json:hacker-news-digest — required_pattern never matches (disabled, runs inline in daily-routine)",
+        "variant": "body"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Skill Evals Report",
+        "href": "articles/skill-evals-2026-05-31.md"
+      }
+    }
+  }
+}
