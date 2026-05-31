@@ -10,6 +10,7 @@
 | ISS-010 | Scheduler dispatches chain keys as phantom skills — reppo-swarm fires daily against a non-existent SKILL.md | medium | config | 2026-05-28 | scheduler, reppo-swarm |
 | ISS-011 | Reppo vote write reverts with "nonce too low" after sibling votes land same batch | medium | unknown | 2026-05-29 | reppo-trading-agent, reppo-digest |
 | ISS-015 | vibecoding-digest can't reach Reddit — prefetch + WebFetch both blocked, 3 consecutive days | high | sandbox-limitation | 2026-05-30 | vibecoding-digest |
+| ISS-016 | Reppo vote dry-run fails CANNOT_VOTE_FOR_OWN_POD when trading-agent votes LIKE on its own mint | medium | prompt-bug | 2026-05-31 | reppo-trading-agent, reppo-digest |
 
 ## Resolved
 

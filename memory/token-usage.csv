@@ -201,3 +201,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-31,skill-evals,claude-sonnet-4-6,79,27198,760235,80789
 2026-05-31,reppo-orchestrator,claude-opus-4-7,13,2874,513728,55599
 2026-05-31,reppo-trading-agent,claude-opus-4-7,72,68611,7130905,191716
+2026-05-31,reppo-digest,claude-opus-4-7,31,18127,2282476,84446
