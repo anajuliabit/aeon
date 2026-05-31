@@ -1,0 +1,327 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidation",
+        "description": "2026-05-31"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-memory",
+        "sep1",
+        "section-dedup",
+        "sep2",
+        "section-prs",
+        "sep3",
+        "section-issues",
+        "sep4",
+        "section-files"
+      ]
+    },
+    "section-memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-memory",
+        "stat-memory"
+      ]
+    },
+    "heading-memory": {
+      "type": "Heading",
+      "props": {
+        "text": "MEMORY.md",
+        "level": "h3"
+      }
+    },
+    "stat-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines",
+        "value": "80",
+        "delta": "-65",
+        "trend": "down"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-dedup": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-dedup",
+        "dedup-list"
+      ]
+    },
+    "heading-dedup": {
+      "type": "Heading",
+      "props": {
+        "text": "Deduplicated",
+        "level": "h3"
+      }
+    },
+    "dedup-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dedup-item1",
+        "dedup-item2"
+      ]
+    },
+    "dedup-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-dedup1",
+        "text-dedup1"
+      ]
+    },
+    "badge-dedup1": {
+      "type": "Badge",
+      "props": {
+        "text": "4×",
+        "variant": "secondary"
+      }
+    },
+    "text-dedup1": {
+      "type": "Text",
+      "props": {
+        "text": "assign 14 datanets"
+      }
+    },
+    "dedup-item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-dedup2",
+        "text-dedup2"
+      ]
+    },
+    "badge-dedup2": {
+      "type": "Badge",
+      "props": {
+        "text": "3×",
+        "variant": "secondary"
+      }
+    },
+    "text-dedup2": {
+      "type": "Text",
+      "props": {
+        "text": "iss-009 codify drift"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-prs",
+        "text-prs-count",
+        "pr-list"
+      ]
+    },
+    "heading-prs": {
+      "type": "Heading",
+      "props": {
+        "text": "Pull Requests",
+        "level": "h3"
+      }
+    },
+    "text-prs-count": {
+      "type": "Text",
+      "props": {
+        "text": "5 open PRs refreshed"
+      }
+    },
+    "pr-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-54",
+        "pr-55",
+        "pr-56",
+        "pr-57",
+        "pr-58"
+      ]
+    },
+    "pr-54": {
+      "type": "Badge",
+      "props": {
+        "text": "#54",
+        "variant": "outline"
+      }
+    },
+    "pr-55": {
+      "type": "Badge",
+      "props": {
+        "text": "#55",
+        "variant": "outline"
+      }
+    },
+    "pr-56": {
+      "type": "Badge",
+      "props": {
+        "text": "#56",
+        "variant": "outline"
+      }
+    },
+    "pr-57": {
+      "type": "Badge",
+      "props": {
+        "text": "#57",
+        "variant": "outline"
+      }
+    },
+    "pr-58": {
+      "type": "Badge",
+      "props": {
+        "text": "#58",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-issues",
+        "issue-016",
+        "issues-013-014"
+      ]
+    },
+    "heading-issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Tracking",
+        "level": "h3"
+      }
+    },
+    "issue-016": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "badge-iss016",
+        "text-iss016"
+      ]
+    },
+    "badge-iss016": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-016",
+        "variant": "default"
+      }
+    },
+    "text-iss016": {
+      "type": "Text",
+      "props": {
+        "text": "indexed — own-mint LIKE empirically settled: contract-revert"
+      }
+    },
+    "issues-013-014": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "badge-iss013-014",
+        "text-iss013-014"
+      ]
+    },
+    "badge-iss013-014": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-013/014",
+        "variant": "success"
+      }
+    },
+    "text-iss013-014": {
+      "type": "Text",
+      "props": {
+        "text": "ready to flip resolved — 6 pin / 3 platform-200 consecutive"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-files": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-files",
+        "text-files"
+      ]
+    },
+    "heading-files": {
+      "type": "Heading",
+      "props": {
+        "text": "Files Updated",
+        "level": "h3"
+      }
+    },
+    "text-files": {
+      "type": "Text",
+      "props": {
+        "text": "topics/fleet.md — updated with today's PRs"
+      }
+    }
+  }
+}
