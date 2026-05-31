@@ -208,3 +208,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-31,search-skill,claude-opus-4-7,43,20571,2798871,132257
 2026-05-31,fleet-control,claude-opus-4-7,18,4083,723546,38423
 2026-05-31,reppo-orchestrator,claude-opus-4-7,13,2676,455543,35396
+2026-05-31,reppo-trading-agent,claude-opus-4-7,76,54716,6704474,218920
