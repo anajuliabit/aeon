@@ -212,3 +212,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-31,reppo-digest,claude-opus-4-7,15,10962,820318,89018
 2026-05-31,vibecoding-digest,claude-opus-4-7,1910,6181,803512,62350
 2026-05-31,action-converter,claude-opus-4-7,24,19396,1539606,76740
+2026-05-31,skill-update-check,claude-sonnet-4-6,7,1233,198546,34861
