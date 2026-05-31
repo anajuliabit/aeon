@@ -1,19 +1,20 @@
 ## Summary
 
-Skill executed: **fetch-tweets** with `var=@moonwell OR @reppo OR @sherwoodagent OR WOOD OR mamo`.
+Ran `fetch-tweets` skill with `var=@moonwell OR @reppo OR @sherwoodagent OR WOOD OR mamo`.
 
-**Result: `FETCH_TWEETS_EMPTY` — no notification sent.**
+**Outcome: `FETCH_TWEETS_EMPTY` (legitimate-empty, no notification sent)** — third consecutive day with the same result.
 
-- **Path A (cache)** at `.xai-cache/fetch-tweets.json` returned 8 tweets, all unrelated to query intent. Cache itself flagged: *"No direct mentions of @moonwell, @reppo, or @sherwoodagent appeared in the results."* Substring matches on `WOOD` hit golf clubs / baseball bats; `mamo` hit a Japanese livestream account (@MaMofigureroom).
-- 6 of 8 results had <5 engagement. The two higher-engagement tweets (MaMofigureroom 22, LABron077 38) were topically unrelated (livestream announcement, Brazilian basketball reply).
-- **Path C (WebSearch)** fallback on the specific handles returned only stale 2024-2025 tweets (snowflake IDs in the 18xx-19xx range) — nothing recent on @MoonwellDeFi, @Mamo_agent, or sherwood.
-- Per skill step 6 curation rules (drop <5 engagement unless unique angle, quality over quantity, do not pad) nothing passed the bar.
-- Per skill step 4 legitimate-empty branch: logged to `memory/logs/2026-05-30.md`, no notification sent, no new URLs to add to `memory/fetch-tweets-seen.txt`.
+**What happened:**
+- Path A (cache `.xai-cache/fetch-tweets.json`) returned 7 candidates from Grok's `x_keyword_search` over 2026-05-30 → 2026-05-31.
+- All 7 are substring-noise: "WOOD" matched hard-cider tradition / NBA "touching wood" / Japanese morning post / US-flag emoji; "mamo" matched Japanese Detective Conan and a no-engagement Mamo-handle link-only post.
+- Grok response itself stated: *"No posts directly referencing @moonwell, @reppo, or @sherwoodagent appeared."*
+- Applied step-6 curation bar (drop <5 engagement unless unique angle; topical relevance): 0/7 passed.
 
-**Files modified:** `memory/logs/2026-05-30.md` (appended fetch-tweets entry).
+**Files modified:**
+- `memory/logs/2026-05-31.md` — appended fetch-tweets log entry with per-candidate breakdown and structural carryover note.
 
-**Follow-up:** if these handles need ongoing tracking, the broad-keyword approach is too noisy — consider tightening the var to `from:MoonwellDeFi OR from:Mamo_agent OR from:reppo OR from:sherwoodagent` or similar handle-scoped operators so Grok queries authored posts directly rather than substring-matching the full firehose.
+**Files not modified:**
+- `memory/fetch-tweets-seen.txt` — remains absent (no new surfaced tweets to record, mirroring 5-30 behavior).
+- No `.pending-notify/` staged (legitimate-empty per skill step 4).
 
-Sources:
-- [Moonwell (@MoonwellDeFi) / X](https://x.com/moonwelldefi)
-- [Mamo (@Mamo_agent) / X](https://x.com/mamo_agent)
+**Follow-up (carried from 5-30, unchanged):** the bare keywords `WOOD` / `mamo` in the query map to generic-word noise in Grok x_search. Structural fix is an operator edit to `aeon.yml` to scope to `@MoonwellDeFi OR @Mamo_agent OR @reppo` — same recommendation 3 days running.
