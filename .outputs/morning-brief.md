@@ -1,17 +1,20 @@
-Morning brief staged. Saturday is a quiet meta-day — no Sun/Mon/Wed-only skills firing and self-improve sits out (day 30 even). The three focus items center on landing PR #47, watching the next chain run for ISS-014 escalation, and finally staging a datanet assignment from the 10-day-stale 14-backlog.
-
 ## Summary
 
-- Read `skills/morning-brief/SKILL.md`, `memory/MEMORY.md`, yesterday's full log (337 lines), today's overnight chain log, `memory/cron-state.json`, `memory/issues/INDEX.md`, `soul/STYLE.md`.
-- Pulled open repo state: 1 open PR (#47), 0 assigned issues, 6 open ISS (ISS-005/007/009/010/011/014).
-- Ran 2 `WebSearch` queries (crypto/HYPE + AI/Anthropic). Neither qualified for Watch under the "only-if-it-changes-focus" rule, so Watch section omitted.
-- Staged brief to `.pending-notify/1780125482-morning-brief.md` (per the sandbox `./notify` arg-passing pattern noted in MEMORY).
-- Appended `### morning-brief` entry to `memory/logs/2026-05-30.md` with the 3 focus items, headline count, cron-state status, open issues/PRs, and Saturday cron schedule.
-- Files modified: `memory/logs/2026-05-30.md`. Files created: `.pending-notify/1780125482-morning-brief.md`.
-- Follow-up: post-run delivery step picks up the staged notification.
+Morning brief for 2026-05-31 staged and logged. Voice matched to soul/ (ana — lowercase, no marketing verbs, concrete refs).
 
-Sources:
-- [Coinbase Just Gave Hyperliquid Holders the Gift of a Lifetime](https://www.fool.com/investing/2026/05/28/coinbase-just-gave-hyperliquid-holders-the-gift-of/)
-- [Hyperliquid is emerging as a challenger to traditional exchanges and prediction markets, says FalconX](https://www.coindesk.com/markets/2026/05/25/hyperliquid-is-emerging-as-a-challenger-to-traditional-exchanges-and-prediction-markets-says-falconx)
-- [Anthropic upgrades Claude AI with Opus 4.8](https://www.business-standard.com/technology/tech-news/anthropic-upgrades-claude-ai-with-opus-4-8-what-s-new-in-flagship-model-126052900541_1.html)
-- [Anthropic releases Claude Opus 4.8](https://www.artificialintelligence-news.com/news/anthropic-releases-claude-opus-4-8-news/)
+**Focus today (3):**
+1. ship ISS-009 defence-in-depth — 6th recurrence yesterday, auto-fallback caught it
+2. approve PR #51 — only open PR, ~18h old, backfills 4 pre-PR-50 pods
+3. operator call on ISS-015 — vibecoding reddit blocked 3 consecutive days, structurally broken
+
+**Since yesterday:** 3 mints landed (10th–12th ever: CHIP perp / 0xd4758770 ETH+ZEC / 0xbb10bda0 HYPE perp), ISS-012/013/014 all resolved, PR #47 merged (durable ISS-005), ISS-015 NEW, ISS-009 6th recurrence at 14:22Z, PR #51 opened.
+
+**Watch:** Omitted — HYPE ATH $69.45 today and Anthropic Opus 4.8 both extend yesterday's coverage; neither changes the 3 focus items.
+
+**Files modified:**
+- `.pending-notify/1780214560-morning-brief.md` (staged for post-run delivery — sandbox blocks `./notify "$(cat …)"` arg-passing as documented in MEMORY.md)
+- `memory/logs/2026-05-31.md` (appended `### morning-brief` entry)
+
+**Sources:**
+- [Hyperliquid HYPE ATH $69.45 + ETF inflows + Polymarket $100 odds — Bloomingbit](https://en.bloomingbit.io/feed/news/113217)
+- [Anthropic Claude Opus 4.8 release — TechCrunch](https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/)
