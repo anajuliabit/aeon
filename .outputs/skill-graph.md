@@ -1,0 +1,1 @@
+*Skill Graph updated* — NEW_ENABLED: 8 (agent-buzz, daily-routine, fleet-control, market-context-refresh, skill-graph, token-pick, vibecoding-digest, weekly-shiplog) · +33 edges / -10 edges. 124 skills · 29 enabled. PR: https://github.com/anajuliabit/aeon/pull/58
