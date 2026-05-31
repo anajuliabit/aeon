@@ -87,6 +87,22 @@ end-to-end clean — runs 4 + 5 both posted HTTP 200 with no Phase 2 reverts.
 - [TradingGymAI (datanet 9) contributor spec](topics/tradinggymai-spec.md) — operator-shared 2026-05-26.
 - [Bitcoin 30-day snapshot](topics/last30-bitcoin.md) — stale baseline (05-21).
 
+## Tracked Tokens
+Canonical watchlist for token-alert and other token-scoped skills. Format per `skills/token-alert/SKILL.md`.
+
+| Token   | CoinGecko ID       | 24h % Threshold | Price Floor | Price Ceiling |
+|---------|--------------------|-----------------|-------------|---------------|
+| WELL    | moonwell-artemis   | 10%             |             |               |
+| MAMO    | mamo               | 15%             |             |               |
+| REPPO   | reppo              | 15%             |             |               |
+| GITLAWB | gitlawb            | 15%             |             |               |
+
+Notes:
+- WELL = Moonwell governance token (Base).
+- MAMO, REPPO, GITLAWB are lower-cap; default 24h thresholds bumped to 15% to cut noise from ordinary volatility.
+- SURPLUS (Base `0xc52a…ba3`, "Surplus Intelligence") intentionally not listed yet — no CoinGecko ID; pending GeckoTerminal-fallback PR in token-alert.
+- PRISM intentionally skipped — the only CoinGecko PRISM is Solana-based and not the one to track.
+
 ## Open Issues
 - **ISS-005** (high, prompt-bug) — vote POD_NOT_VALID_FOR_EPOCH; agent-side
   filter live, durable prefetch fix + CLI vote-dedup pending. PR #47 (vote

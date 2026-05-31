@@ -33,7 +33,7 @@ skills:
     } # daily — curated trending HF models/datasets/spaces with "why notable" lines, momentum tags, and bucket clustering. Set var to one of {models, datasets, spaces} to scope.
 
   # --- Midday (12 PM UTC) ---
-  token-alert: { enabled: true, schedule: "0 12 * * *", var: "REPPO, HYPER, VVV" }
+  token-alert: { enabled: true, schedule: "0 12 * * *", var: "" } # reads watchlist from "Tracked Tokens" in memory/MEMORY.md
   token-movers: { enabled: false, schedule: "0 12 * * *" }
   on-chain-monitor: { enabled: false, schedule: "0 12 * * *" }
   defi-monitor: { enabled: false, schedule: "0 12 * * *" }
