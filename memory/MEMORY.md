@@ -99,7 +99,8 @@ end-to-end clean — runs 4 + 5 both posted HTTP 200 with no Phase 2 reverts.
 - **ISS-011** (medium, unknown) — vote nonce-too-low after sibling votes
   same batch. 1 occurrence; not recurring.
 - **ISS-015** (high, sandbox-limitation, NEW 2026-05-30) — vibecoding can't
-  reach Reddit (prefetch + WebFetch both dead, 3 consecutive days).
+  reach Reddit (prefetch + WebFetch both dead, 4 consecutive days as of
+  2026-05-31 17:30Z).
 
 ## Open PRs
 - *(0 open as of 14:00 UTC — #47 merged this morning.)*
