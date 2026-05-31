@@ -30,8 +30,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-05-30T20:12:29Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-31T09:14:59Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-30T20:16:38Z",
     "total_runs": 29,
     "total_successes": 29,
@@ -141,8 +141,8 @@
     "success_rate": 1
   },
   "skill-freshness": {
-    "last_dispatch": "2026-05-30T08:10:04Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-31T09:14:59Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-30T08:15:55Z",
     "total_runs": 9,
     "total_successes": 9,
@@ -151,8 +151,8 @@
     "success_rate": 1
   },
   "github-trending": {
-    "last_dispatch": "2026-05-30T09:03:55Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-31T09:14:59Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-30T09:08:42Z",
     "total_runs": 10,
     "total_successes": 9,
@@ -303,14 +303,14 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-30T15:14:58Z",
     "total_runs": 7,
     "total_successes": 7,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-30T15:13:13Z"
+    "last_dispatch": "2026-05-31T09:14:59Z"
   },
   "skill-analytics": {
     "last_dispatch": "2026-05-27T19:12:14Z",
