@@ -1,0 +1,338 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context"
+      },
+      "children": [
+        "heading_date",
+        "sep1",
+        "section_assessment",
+        "sep2",
+        "section_prices",
+        "sep3",
+        "section_indicators",
+        "sep4",
+        "section_narratives"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-05-31",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_assessment": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_take",
+        "stack_take_content"
+      ]
+    },
+    "heading_take": {
+      "type": "Heading",
+      "props": {
+        "text": "Take",
+        "level": "h3"
+      }
+    },
+    "stack_take_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_chop",
+        "badge_conviction"
+      ]
+    },
+    "badge_chop": {
+      "type": "Badge",
+      "props": {
+        "text": "chop",
+        "variant": "default"
+      }
+    },
+    "badge_conviction": {
+      "type": "Badge",
+      "props": {
+        "text": "conviction medium",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_prices",
+        "stack_btc_eth"
+      ]
+    },
+    "heading_prices": {
+      "type": "Heading",
+      "props": {
+        "text": "Prices",
+        "level": "h3"
+      }
+    },
+    "stack_btc_eth": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$73,846",
+        "delta": "+0.22%",
+        "trend": "up"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$2,021",
+        "delta": "+0.14%",
+        "trend": "up"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_indicators": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_indicators",
+        "stack_fear_greed",
+        "stack_breadth",
+        "stat_dex_vol"
+      ]
+    },
+    "heading_indicators": {
+      "type": "Heading",
+      "props": {
+        "text": "Indicators",
+        "level": "h3"
+      }
+    },
+    "stack_fear_greed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stack_fg_header",
+        "progress_fg"
+      ]
+    },
+    "stack_fg_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_fg_label",
+        "badge_fear",
+        "text_fg_delta"
+      ]
+    },
+    "text_fg_label": {
+      "type": "Text",
+      "props": {
+        "text": "Fear & Greed:",
+        "variant": "body"
+      }
+    },
+    "badge_fear": {
+      "type": "Badge",
+      "props": {
+        "text": "Fear",
+        "variant": "default"
+      }
+    },
+    "text_fg_delta": {
+      "type": "Text",
+      "props": {
+        "text": "+5 pts",
+        "variant": "muted"
+      }
+    },
+    "progress_fg": {
+      "type": "Progress",
+      "props": {
+        "value": 28,
+        "max": 100,
+        "label": "28/100"
+      }
+    },
+    "stack_breadth": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_breadth_label",
+        "progress_breadth"
+      ]
+    },
+    "text_breadth_label": {
+      "type": "Text",
+      "props": {
+        "text": "Breadth",
+        "variant": "body"
+      }
+    },
+    "progress_breadth": {
+      "type": "Progress",
+      "props": {
+        "value": 13,
+        "max": 20,
+        "label": "13/20"
+      }
+    },
+    "stat_dex_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume",
+        "value": "$4.63B",
+        "delta": "-33%",
+        "trend": "down"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_narratives": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_narratives",
+        "stack_top_narrative",
+        "stack_emerging"
+      ]
+    },
+    "heading_narratives": {
+      "type": "Heading",
+      "props": {
+        "text": "Narratives",
+        "level": "h3"
+      }
+    },
+    "stack_top_narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_top_label",
+        "stack_bnb_content"
+      ]
+    },
+    "text_top_label": {
+      "type": "Text",
+      "props": {
+        "text": "Top Narrative",
+        "variant": "lead"
+      }
+    },
+    "stack_bnb_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_bnb_bsc",
+        "badge_rising",
+        "text_vaneck_note"
+      ]
+    },
+    "text_bnb_bsc": {
+      "type": "Text",
+      "props": {
+        "text": "BNB/BSC Revival",
+        "variant": "body"
+      }
+    },
+    "badge_rising": {
+      "type": "Badge",
+      "props": {
+        "text": "rising",
+        "variant": "secondary"
+      }
+    },
+    "text_vaneck_note": {
+      "type": "Text",
+      "props": {
+        "text": "VanEck ETP live",
+        "variant": "muted"
+      }
+    },
+    "stack_emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_emerging_label",
+        "text_emerging_content"
+      ]
+    },
+    "text_emerging_label": {
+      "type": "Text",
+      "props": {
+        "text": "Emerging",
+        "variant": "lead"
+      }
+    },
+    "text_emerging_content": {
+      "type": "Text",
+      "props": {
+        "text": "ZEC on Grayscale ZCSH ETF filing",
+        "variant": "body"
+      }
+    }
+  }
+}
