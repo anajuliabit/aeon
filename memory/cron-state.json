@@ -264,10 +264,10 @@
   },
   "skill-update-check": {
     "last_dispatch": "2026-05-31T19:22:46Z",
-    "last_status": "dispatched",
-    "last_success": "2026-05-24T19:03:51Z",
-    "total_runs": 1,
-    "total_successes": 1,
+    "last_status": "success",
+    "last_success": "2026-05-31T19:24:14Z",
+    "total_runs": 2,
+    "total_successes": 2,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
