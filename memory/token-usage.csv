@@ -211,3 +211,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-31,reppo-trading-agent,claude-opus-4-7,76,54716,6704474,218920
 2026-05-31,reppo-digest,claude-opus-4-7,15,10962,820318,89018
 2026-05-31,vibecoding-digest,claude-opus-4-7,1910,6181,803512,62350
+2026-05-31,self-improve,claude-opus-4-7,16,3452,544663,26426
