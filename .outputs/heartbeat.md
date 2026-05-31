@@ -1,11 +1,21 @@
 HEARTBEAT_OK · STATUS_PAGE=WATCH
 
 ## Summary
-- **P0 clean** — all 29 enabled skills last_status=success; `chain:reppo-swarm` recovered (today's 07:00 chain landed mint #13). No stuck, no `consecutive_failures ≥ 3`, no degradation.
-- **P1 clean** — 1 open PR (#51 ~18h45m, under 24h threshold), 0 urgent issues.
-- **P2 carry-over** — 7 open issues, 3 high (ISS-005, ISS-009, ISS-015) — all already in today's morning-brief + reppo-digest logs. ISS-016 filed today by reppo-digest (CANNOT_VOTE_FOR_OWN_POD) — already indexed by the filing skill.
-- **Notify** — skipped per dedup (every item appears in last 48h logs).
-- **Status page** — wrote `docs/status.md` → **🟡 WATCH** (high-sev carry-overs lift verdict above OK; no P0 to trigger DEGRADED). Updated 2026-05-31 09:18 UTC, next run = token-alert @ 12:00 UTC. Token pulse omitted (no `articles/token-report-*.md` exists).
-- **Log** — appended heartbeat 08:00-slot entry to `memory/logs/2026-05-31.md`.
 
-Files modified: `docs/status.md`, `memory/logs/2026-05-31.md`.
+Ran heartbeat (14:00 slot, 2026-05-31).
+
+**P0 — clean.** All 40 cron-state entries `last_status=success`. `chain:reppo-swarm` healthy (mint #13 landed at 08:29 UTC). No stuck dispatches, no consecutive_failures ≥ 3, no chronic-failure flags. Self-check: heartbeat last_success ~4h50m ago.
+
+**P1.** 1 open PR (#54 `chore(skills): enable Tier 1 crypto-builder skills`, ~36min old — replaces PR #51 which merged this morning). 0 urgent issues.
+
+**P2.** 7 open issues carried, all already in today's morning-brief + reppo-digest + 08:00 heartbeat. No new items.
+
+**P3.** All skills within 2x schedule interval.
+
+**Notify:** skipped (dedup — nothing new vs 48h logs).
+
+**Files modified:**
+- `docs/status.md` — regenerated, 🟡 WATCH (driven by 3 high-severity carry-overs ISS-005/009/015). Next scheduled run = skill-graph @ 17:00 UTC.
+- `memory/logs/2026-05-31.md` — appended 14:00-slot heartbeat entry.
+
+Auto-commit step will land both on `main`.
