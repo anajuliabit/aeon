@@ -254,10 +254,10 @@
   },
   "skill-evals": {
     "last_dispatch": "2026-05-31T06:49:13Z",
-    "last_status": "dispatched",
-    "last_success": "2026-05-24T06:31:51Z",
-    "total_runs": 1,
-    "total_successes": 1,
+    "last_status": "success",
+    "last_success": "2026-05-31T06:57:46Z",
+    "total_runs": 2,
+    "total_successes": 2,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
