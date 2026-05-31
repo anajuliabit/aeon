@@ -1,28 +1,27 @@
-Cache stays (no rm allowed). The notification is staged and the log entry written.
+Tmp files left in `.tmp-token-pick/` (sandbox blocked cleanup). Notification is staged and log is appended.
 
 ## Summary
 
-**Token Pick (HIGH, score 10/10): HYPE (Hyperliquid) — $67.81 (+9.5% 24h / +22.3% 7d)**
+Ran `skills/token-pick/SKILL.md` for 2026-05-31. Both picks cleared MEDIUM+ conviction — no skip-day branch.
 
-- Catalyst: Coinbase × Circle USDC treasury-deployer deal sharing the vast majority of reserve yield on a $5.5B USDC balance with the HL protocol — broke prior $67.24 ATH (set 5-29) intraday today. Layered on Bitwise BHYP (NYSE 5-15) + 21Shares THYP (Nasdaq 5-12) spot ETFs + Grayscale breakout report 5-28.
-- Risk: ETF inflow chase can unwind on first pullback; HL leaderboard depth is what Aeon's reppo-trading-agent leans on.
-- Dedup: XLM (11/10, 5-28) and INJ (11/10, 5-29) both still in 7-day window on RWA-tokenization catalyst → blocked despite scoring higher. LAB (11/10) skipped on integrity grounds per 5-29 ZachXBT-flagged 95% insider supply. HYPE = first time ever picked.
+**Picks**
+- **Token: WLD (Worldcoin)** — HIGH, signal 9/10. $0.333 (+10.9% 24h / +10.6% 7d), mcap $1.12B, vol $347M, vmc 0.31. Catalyst: Oku Trade DeFi aggregator live inside World App + weekly swap-comp WLD rewards drove on-chain activity to 2026 highs. Risk: Santiment FOMO-flag + reward-pull-mechanic decays after comp cohort settles. First time picked.
+- **Market: "MicroStrategy sells any Bitcoin by June 30, 2026?"** — MEDIUM, edge ~6pp. YES 25.75¢, fair ~20%, lean NO. Saylor's "we'll probably sell to fund a dividend" is forward-only; 24,869 BTC bought week of 5-12 to 5-16; 10:1 net-buyer ratio; SEC disclosure lead time for extraordinary-dividend BTC sale points to Q2 earnings in August, not June.
 
-**Market Pick: SKIPPED** — no event cleared the 5pp edge gate today.
-- 2026 NBA Champion ($855k 24h vol) — efficiently priced post-Spurs-Game-6 vs sportsbook devig: Thunder 42.5¢ vs 41.6% fair, Knicks 31.7¢ vs 31.2%, Spurs 24.8¢ vs 27.2%. Family also dedup-blocked. Yesterday's pick had a conditional-prob math error (read -150 as 88% — correct is 60%); corrected fair Thunder = 36%, today's prices match sportsbook closely.
-- NHL Stanley Cup Carolina 58.5¢ vs sportsbook devig 57.6% = ~1pp.
-- World Cup top contenders all <5pp per 5-29 check; prices unchanged today.
-- MSTR + Starmer dedup-blocked.
+**Dedup notes**
+- Tokens XLM / INJ / HYPE all in 7-day window, none cleared fresh-catalyst gate. LAB skipped 3rd day on ZachXBT insider-supply flag. H (Humanity) tied WLD on score (9/10) but lost on June 25 unlock + late-stage +82% 7d blow-off-top read.
+- MSTR June 30 dedup-clean (5-21 MSTR May 31 pick now 10 days old, outside 7d window) AND fresh catalyst (Saylor's pivot vs his 5-21 walked-back stance).
 
-**Files modified:**
-- `.pending-notify/1780143418-token-pick.md` — 1566-char notification, token-only per skill section 6a (omit skip section when only one pick type qualifies)
-- `memory/logs/2026-05-30.md` — appended Token Pick log entry with full score/dedup/market-analysis breakdown
-- `.tp-cache/` — transient scratchpad (rm blocked by sandbox; not in .gitignore but won't auto-commit)
+**Files**
+- Staged notification: `.pending-notify/1780229408-token-pick.md` (1,463 chars; sandbox blocks direct `./notify "$(cat ...)"` — post-run delivery step picks it up)
+- Log appended: `memory/logs/2026-05-31.md` with `TOKEN_PICK_DEDUP: WLD | "MicroStrategy sells any Bitcoin by June 30, 2026?"`
 
-**Sources:** cg=ok (250 markets + trending), dex=ok (search?q=trending returns name-match noise — no cross-confirm bonus applied, same as 5-29), poly=ok (events + markets enumerated). Post-run delivery step will pick up the staged notification.
+**Sources**: cg=ok, dex=ok (junk meme-pair output, cross-source bonus skipped), poly=ok. All curl-direct hits, no WebFetch fallback needed.
 
-- [Hyperliquid (HYPE) Surges 20% on Coinbase USDC Deal, ETF Launch — CoinMarketCap](https://coinmarketcap.com/top-stories/6a0719eafde5ed1430b22022/)
-- [HYPE jumps as Coinbase and Circle back Hyperliquid's stablecoin model — CryptoSlate](https://cryptoslate.com/hype-jumps-as-coinbase-and-circle-back-hyperliquids-stablecoin-model/)
-- [The real Hyperliquid story isn't the ETF — crypto.news](https://crypto.news/the-real-hyperliquid-story-isnt-the-etf/)
-- [NBA championship and Finals MVP odds: Thunder remain title favorites heading into Game 7 vs. Spurs — ESPN](https://www.espn.com/espn/betting/story/_/id/45539787/2026-nba-finals-odds-mvp-2025-26-championship-betting)
-- [Stanley Cup odds: Carolina Hurricanes odds-on favorites over Vegas Golden Knights — ESPN](https://www.espn.com/espn/betting/story/_/id/44686270/2026-nhl-stanley-cup-playoffs-championship-odds)
+**Follow-up**: tmp data files left at `.tmp-token-pick/` (sandbox blocked rm).
+
+Sources:
+- [Worldcoin Surges 15% as On-Chain Activity Hits 2026 Highs Amid DeFi Integration](https://blockonomi.com/worldcoin-surges-15-as-on-chain-activity-hits-2026-highs-amid-defi-integration)
+- [Worldcoin's FOMO Rally Cracks After On-Chain Activity Explodes](https://www.cryptbull.net/2026/05/28/worldcoins-fomo-rally-cracks-after-on-chain-activity-explodes/)
+- [Strategy (MSTR) news: Company purchased more than $2 billion of BTC last week](https://www.coindesk.com/markets/2026/05/18/strategy-purchases-nearly-25-000-more-bitcoin-worth-more-than-usd2-billion)
+- [Is the MicroStrategy Bitcoin Binge Over? What Saylor's Pause Means](https://finance.yahoo.com/markets/crypto/articles/microstrategy-bitcoin-binge-over-saylor-191404021.html)
