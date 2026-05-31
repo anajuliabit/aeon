@@ -1,0 +1,153 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 2nd run · datanet 9 · 0 on-chain"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_queued",
+        "sep_1",
+        "section_alerts"
+      ]
+    },
+    "section_queued": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_queued",
+        "stack_mint",
+        "sep_2",
+        "stack_votes"
+      ]
+    },
+    "heading_queued": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h2"
+      }
+    },
+    "stack_mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_mint",
+        "text_mint_metrics",
+        "text_mint_details"
+      ]
+    },
+    "heading_mint": {
+      "type": "Heading",
+      "props": {
+        "text": "mint",
+        "level": "h3"
+      }
+    },
+    "text_mint_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0 · 16 cleared ≥20-close floor",
+        "variant": "lead"
+      }
+    },
+    "text_mint_details": {
+      "type": "Text",
+      "props": {
+        "text": "9 hash-dedup vs ledger, 1 drift skip (0x9a1500b4: 45 closes byte-identical to 1st-run mint dce17be3), 2 spot-mix, 2 neg-pnl, 2 floor<20",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_votes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_votes",
+        "text_votes_metrics",
+        "text_votes_details"
+      ]
+    },
+    "heading_votes": {
+      "type": "Heading",
+      "props": {
+        "text": "votes",
+        "level": "h3"
+      }
+    },
+    "text_votes_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0 · 5 epoch-99 survivors all blocked",
+        "variant": "lead"
+      }
+    },
+    "text_votes_details": {
+      "type": "Text",
+      "props": {
+        "text": "3 own mints (462/463/478), 2 already-voted today (466/467)",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_alerts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_vote_slot",
+        "alert_datanets"
+      ]
+    },
+    "alert_vote_slot": {
+      "type": "Alert",
+      "props": {
+        "title": "Vote slot monopolization",
+        "message": "2nd consecutive day monopolized by own-mint cadence; own_pod_ids prefetch returns count=0 despite 5 own pods on-chain.",
+        "type": "warning"
+      }
+    },
+    "alert_datanets": {
+      "type": "Alert",
+      "props": {
+        "title": "Unassigned datanets",
+        "message": "14 datanets unassigned (11th day surfaced).",
+        "type": "warning"
+      }
+    }
+  }
+}
