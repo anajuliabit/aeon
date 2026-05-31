@@ -272,10 +272,13 @@ evaluation if EITHER:
 1. **Out-of-epoch:** `pod.validityEpoch != current_epoch` (when
    `current_epoch` is non-null). Past-epoch votes always revert with
    `POD_NOT_VALID_FOR_EPOCH`, wasting REPPO + the dry-run slot.
-2. **Already voted:** `pod.podId` is in `voted_pod_ids`. The Reppo
-   CLI does NOT enforce `--idempotency-key` reuse for `vote` — a
-   fresh tx lands every run, double-spending REPPO. This is ISS-005;
-   the filter is the only defense.
+2. **Already interacted:** `pod.podId` is in `voted_pod_ids`. The list
+   is a union of (a) pods we've voted on successfully (the Reppo CLI
+   does NOT enforce `--idempotency-key` reuse for `vote` — a fresh tx
+   lands every run, double-spending REPPO; ISS-005) AND (b) pods THIS
+   wallet has minted (the contract reverts `CANNOT_VOTE_FOR_OWN_POD`
+   on any self-vote attempt regardless of direction; ISS-016). The
+   filter is the only defense for both.
 
 If `vote-filter-tradinggymai.json` is missing or an error marker,
 skip the filter and proceed with the rubric — degrade gracefully,

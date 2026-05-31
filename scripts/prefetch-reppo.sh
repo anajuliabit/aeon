@@ -76,12 +76,12 @@ if [ -d "$CONFIG_DIR" ]; then
 
     # Vote-filter state: derives `current_epoch` (max validityEpoch across
     # all pods on this datanet — voting epochs roll forward on Reppo as
-    # new pods land) and `voted_pod_ids` (parsed from memory/topics/reppo.md's
-    # "Votes cast" table for THIS datanet). The trading-agent reads this
-    # to skip out-of-epoch pods (POD_NOT_VALID_FOR_EPOCH reverts) and
-    # already-voted pods (ISS-005 duplicate-vote risk — the CLI doesn't
-    # enforce idempotency-key reuse for vote, fresh tx lands each run
-    # spending REPPO).
+    # new pods land) and `voted_pod_ids` (union of: pods we've voted on
+    # successfully per the ledger + pods THIS wallet has minted, since
+    # the contract reverts CANNOT_VOTE_FOR_OWN_POD on any self-vote
+    # attempt). The trading-agent reads this to skip out-of-epoch pods
+    # (POD_NOT_VALID_FOR_EPOCH reverts) and any pod it's already
+    # interacted with (ISS-005 + ISS-016).
     current_epoch=$(jq -r 'if .code == "PREFETCH_FAILED" then ""
                            else [.pods[]?.validityEpoch | tonumber? // empty] | if length > 0 then max | tostring else "" end
                            end' "$CACHE_DIR/pods-$name.json" 2>/dev/null || echo "")
@@ -100,8 +100,24 @@ if [ -d "$CONFIG_DIR" ]; then
           if (dnet == dn && index(status, "success") > 0) print pod
         }' memory/topics/reppo.md | sort -u | jq -R . | jq -s . 2>/dev/null || echo "[]")
     fi
-    jq -n --arg epoch "$current_epoch" --argjson voted "$voted_pod_ids" \
-      '{current_epoch: (if $epoch == "" then null else $epoch end), voted_pod_ids: $voted}' \
+    # Add THIS wallet's own pods (owner-scope, no --all) — the contract
+    # reverts on any self-vote attempt regardless of direction. Without
+    # this, trading-agent occasionally selects its own prior-day mint as
+    # a LIKE candidate (rubric-aligned HL perp dataset) and the vote
+    # fails CANNOT_VOTE_FOR_OWN_POD (ISS-016, surfaced 2026-05-31 on the
+    # 11th-mint pod 462). Requires REPPO_PRIVATE_KEY in prefetch env.
+    own_pod_ids="[]"
+    if [ -n "${REPPO_PRIVATE_KEY:-}" ]; then
+      if REPPO_NETWORK=mainnet reppo list pods --datanet "$datanet_id" --json \
+           > "$CACHE_DIR/own-pods-$name.json" 2>/dev/null; then
+        own_pod_ids=$(jq '[.pods[]?.podId]' "$CACHE_DIR/own-pods-$name.json" 2>/dev/null || echo "[]")
+      else
+        error_marker "$CACHE_DIR/own-pods-$name.json" "list own pods $datanet_id failed"
+      fi
+    fi
+    jq -n --arg epoch "$current_epoch" --argjson voted "$voted_pod_ids" --argjson own "$own_pod_ids" \
+      '{current_epoch: (if $epoch == "" then null else $epoch end),
+        voted_pod_ids: (($voted + $own) | unique)}' \
       > "$CACHE_DIR/vote-filter-$name.json"
   done
 fi
