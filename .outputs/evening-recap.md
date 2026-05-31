@@ -1,13 +1,25 @@
-Done. Here's what was sent and logged:
+*Evening Recap — 2026-05-31*
+_TL;DR: heavy ship day — 5 PRs opened, mint #13 landed, 0 cron failures_
 
-## Summary
+*Headlines:*
+- reppo-digest — mint #13 tx 0xccba0d07 + ISS-016 filed · memory/issues/ISS-016.md
+- PR #56 fix(vibecoding): reddit via oauth.reddit.com (ISS-015) · https://github.com/anajuliabit/aeon/pull/56
+- PR #57 refactor(reppo): @reppo/cli≥0.6.0 native Phase 2 · https://github.com/anajuliabit/aeon/pull/57
+- PR #54 chore(skills): enable Tier 1 crypto-builder skills · https://github.com/anajuliabit/aeon/pull/54
+- PR #58 docs(skill-graph): NEW_ENABLED 8 · https://github.com/anajuliabit/aeon/pull/58
 
-**Notification staged** to `.pending-notify/1780175312-evening-recap.md` for post-run delivery.
+*Notable:*
+- skill-evals — RECOVERED, 3 fixed, coverage 48% ↑ from 41%
+- token-alert — VVV +14.53% ALERT
+- PR #55 — watchlist WELL/MAMO/REPPO/GITLAWB · https://github.com/anajuliabit/aeon/pull/55
+- self-improve — skipped, 3 open improvement PRs hit gate
 
-**TL;DR:** heaviest mint day ever — 3 on-chain (runs 10-12), first Phase 2 HTTP 200s closed ISS-014, but ISS-009 hit 6 times today and the defence-in-depth is still unshipped.
+*Decisions for tomorrow:*
+- merge PR #56 + set REDDIT_CLIENT_ID/SECRET secrets (ISS-015, 4th day blocked)
+- land ISS-009 defence-in-depth (no PR, 4+ day carry — chain-runner break + orchestrator contract)
+- decide merge order for #54/#55/#57/#58 (self-improve gate stuck until 3 merge)
 
-**5 headlines:** 3 mints on-chain (10th-12th ever) + ISS-014 resolved; PR #47 merged (durable ISS-005 fix); ISS-015 filed (Reddit structurally blocked); code-health security test gap; ISS-009 6th recurrence.
+*Blockers:*
+- vibecoding-digest — ISS-015 day 4, all Reddit endpoints blocked
 
-**3 decisions queued:** ISS-009 defence-in-depth PR, ISS-015 Reddit auth/alternate source, PR #51 review.
-
-**Sources:** log=ok cron-state=ok · 7 routine runs collapsed.
+_+20 routine runs collapsed · sources: log=ok cron-state=ok_
