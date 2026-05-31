@@ -1,17 +1,18 @@
+Skill complete.
+
 ## Summary
 
-Ran `skills/daily-routine/SKILL.md` standalone (no chain context). Output staged for delivery via the standard pending-notify pattern.
+Ran daily-routine standalone (no chain context) and combined into a single 3,831-char notification.
 
-**What ran:**
-- token-movers — CoinGecko top-250 + trending, 36/75 top-100 alts green / top-50 24h median flat. Winners led by LAB +36% (2nd straight green) / XLM +23% (7d +80% DTCC run). Losers led by GENIUS −22% (extends 5-29 collapse).
-- tweet-roundup — WebSearch fallback (XAI_API_KEY absent). 3 topics, dedup vs 5-29 — fresh items only (Paxos bank license, CFTC perp framework, OpenAI GPT-5.4, Mercury 2 diffusion LLM, Biome 56× ESLint speedup).
-- paper-pick — "When Cloud Agents Meet Device Agents" (↑7, arxiv 2605.30102), picked over higher-upvote off-domain papers for direct aeon hybrid-execution mapping.
-- github-issues — 0 new in `user:anajuliabit` since 2026-05-29T07:17:45Z. Silence per spec.
-- hn-digest — 5 picks from front-page (SQLite durable workflows, MCP is dead?, Liquid AI 8B MoE, Mistral summit, Yegge interview piece).
+**Sub-skills run inline:**
+- **token-movers** — mixed-positive tape, 61/100 top alts green, top-50 median +0.25%. H Humanity led winners (+39.3% / 7d +87%, BREAKOUT), LAB extended day 3 (+27.6%, kept 5-29 insider-supply flag in-line). XLM reversed its 5-day DTCC run (−9.0% / 7d still +55%, TRENDING+DOWN). HYPE pushed past 5-30 ATH.
+- **tweet-roundup** — WebSearch fallback (no XAI_API_KEY). Fresh items only: XRPL flash-loans "structurally impossible" + FTX June 16 deadline + HL framed as TradFi-derivatives challenger (crypto); GPT-5.5 + Agentic AI Foundation at Linux Foundation + Amazon Trainium $20B run-rate + BMW $300M agentic fund (AI); Google A2Family + NVIDIA Nemotron 10T tokens + Gemma 4 + Zed weekly stable (dev).
+- **paper-pick** — "AgentDoG 1.5" (↑116, 2605.29801) — open-world agent safety alignment, maps directly to aeon's chain-runner shape. No dup with 5-30/5-29/5-28 picks.
+- **github-issues** — 0 new anajuliabit issues, 3rd silent day. Surfaced in message rather than suppressed.
+- **hn-digest** — 5 picks: Domain expertise moat (527pts), OpenRouter $113M Series B (412pts), Zig Build System Reworked (349pts), "Please Do Not Vibe Fuck Up This Software" (108pts, rsync), Openrsync (380pts).
 
-**Files:**
-- Notification: `.pending-notify/1780125710-daily-routine.md` (3,946 chars under 4000 ceiling)
-- Log: appended `### daily-routine (standalone)` section to `memory/logs/2026-05-30.md`
-- Scratch caches: `.daily-cache/cg-markets.json` / `cg-trending.json` / `hf-papers.json` / `hn.json` (not tracked, rm blocked by sandbox, will overwrite next run)
+**Files modified:**
+- `.pending-notify/1780214799-daily-routine.md` — staged notification (3,831 / 4,000 chars; post-run delivery picks it up since sandbox blocks `./notify "$(cat ...)"` arg-passing)
+- `memory/logs/2026-05-31.md` — full run log appended
 
-**Exit:** DAILY_ROUTINE_OK. Post-run delivery step picks up the staged notification.
+**Sources:** [Anthropic news](https://www.anthropic.com/news), [OpenRouter Series B](https://openrouter.ai/announcements/series-b), [Zig 2026 devlog](https://ziglang.org/devlog/2026/#2026-05-26), [rsync issue #929](https://github.com/RsyncProject/rsync/issues/929), [Domain expertise post](https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/), [AgentDoG 1.5 paper](https://huggingface.co/papers/2605.29801)
