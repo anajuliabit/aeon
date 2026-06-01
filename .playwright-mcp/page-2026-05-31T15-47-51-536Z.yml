@@ -1,0 +1,135 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e9]: R
+        - generic [ref=e10]:
+          - heading "Reppo Swarm" [level=1] [ref=e11]
+          - paragraph [ref=e12]: "datanet #9 · TradingGymAI · run 2026-05-31"
+      - generic [ref=e13]:
+        - generic [ref=e14]: ● LIVE
+        - generic [ref=e15]:
+          - generic [ref=e16]: 3 claude-opus skills
+          - generic [ref=e17]: via GitHub Actions
+    - generic [ref=e19]:
+      - button "▶ Auto" [ref=e20]
+      - generic [ref=e21]:
+        - button "Previous stage" [ref=e22]: ◀
+        - button "Next stage" [disabled] [ref=e23]: ▶
+      - generic [ref=e24]:
+        - 'button "Go to stage 1: Wake & plan" [ref=e25]'
+        - 'button "Go to stage 2: Rank leaderboard" [ref=e26]'
+        - 'button "Go to stage 3: Pull 7d fills" [ref=e27]'
+        - 'button "Go to stage 4: Label & score" [ref=e28]'
+        - 'button "Go to stage 5: Mint pod" [ref=e29]'
+        - 'button "Go to stage 6: Vote" [ref=e30]'
+      - generic [ref=e31]: 06 / 06 · Vote
+    - generic [ref=e32]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: Pipeline
+        - generic [ref=e36]: stateless chain · output → consume
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - generic [ref=e43]: Orchestrator
+              - generic [ref=e44]: reppo-orchestrator
+            - button "✓ Wake & plan Read datanet state, decide RUN/SKIP" [ref=e132]:
+              - generic [ref=e46]:
+                - generic [ref=e47]: ✓
+                - generic [ref=e48]: Wake & plan
+              - paragraph [ref=e49]: Read datanet state, decide RUN/SKIP
+          - generic [ref=e51]: →
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]: Trading Agent
+              - generic [ref=e56]: reppo-trading-agent
+            - button "✓ Rank leaderboard Sort by margin = pnl / vlm" [ref=e133]:
+              - generic [ref=e58]:
+                - generic [ref=e59]: ✓
+                - generic [ref=e60]: Rank leaderboard
+              - paragraph [ref=e61]: Sort by margin = pnl / vlm
+            - button "✓ Pull 7d fills Fetch the trader’s recent executions" [ref=e134]:
+              - generic [ref=e63]:
+                - generic [ref=e64]: ✓
+                - generic [ref=e65]: Pull 7d fills
+              - paragraph [ref=e66]: Fetch the trader’s recent executions
+            - button "✓ Label & score Join OHLCV → win-rate, Sharpe, MDD" [ref=e278]:
+              - generic [ref=e68]:
+                - generic [ref=e69]: ✓
+                - generic [ref=e70]: Label & score
+              - paragraph [ref=e71]: Join OHLCV → win-rate, Sharpe, MDD
+          - generic [ref=e73]: →
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]: Postprocess
+            - generic [ref=e78]: postprocess-reppo.sh
+          - button "✓ Mint pod ERC-721 on Base + pin to IPFS" [ref=e279]:
+            - generic [ref=e80]:
+              - generic [ref=e81]: ✓
+              - generic [ref=e82]: Mint pod
+            - paragraph [ref=e83]: ERC-721 on Base + pin to IPFS
+          - button "6 Vote Dislike off-rubric raw dumps" [active] [ref=e84]:
+            - generic [ref=e85]:
+              - generic [ref=e86]: "6"
+              - generic [ref=e87]: Vote
+            - paragraph [ref=e88]: Dislike off-rubric raw dumps
+    - generic [ref=e281]:
+      - generic [ref=e282]:
+        - generic [ref=e283]:
+          - generic [ref=e284]: Votes cast
+          - generic [ref=e285]: curating the datanet
+        - generic [ref=e286]:
+          - generic [ref=e287]:
+            - generic [ref=e288]:
+              - generic [ref=e289]:
+                - generic [ref=e290]: ▲ LIKE
+                - generic [ref=e291]: "pod #462"
+              - generic [ref=e292]: ✕ REVERTED
+            - paragraph [ref=e293]: rubric-compliant — but it is our own mint
+            - paragraph [ref=e294]: "contract: CANNOT_VOTE_FOR_OWN_POD — you can’t vote on your own pod"
+          - generic [ref=e295]:
+            - generic [ref=e296]:
+              - generic [ref=e297]:
+                - generic [ref=e298]: ▼ DISLIKE
+                - generic [ref=e299]: "pod #466"
+              - generic [ref=e300]: ✓ CONFIRMED
+            - paragraph [ref=e301]: HotBot v4 raw export — off-rubric, unlabeled dump
+            - link "0xf7f5c37c…1e081d" [ref=e302] [cursor=pointer]:
+              - /url: https://basescan.org/tx/0xf7f5c37c2e642315ebd0fc3a96966857ca4aa5bf76044c4d633608f0c91e081d
+          - generic [ref=e303]:
+            - generic [ref=e304]:
+              - generic [ref=e305]:
+                - generic [ref=e306]: ▼ DISLIKE
+                - generic [ref=e307]: "pod #467"
+              - generic [ref=e308]: ✓ CONFIRMED
+            - paragraph [ref=e309]: HotBot v4 raw export — off-rubric, unlabeled dump
+            - link "0x031510e9…a148b6" [ref=e310] [cursor=pointer]:
+              - /url: https://basescan.org/tx/0x031510e9749a3ca4a76f11909f92a8f575ee887eec94dbe9df9a8beddda148b6
+        - generic [ref=e311]: dislikes filter raw exports + unlabeled dumps off-rubric · self-vote reverts by design
+      - generic [ref=e312]:
+        - generic [ref=e313]:
+          - generic [ref=e314]: Pod minted
+          - generic [ref=e315]: ● ON-CHAIN
+        - generic [ref=e316]: HL perp trades — datanet 9
+        - generic [ref=e317]:
+          - generic [ref=e318]:
+            - generic [ref=e319]: datanet
+            - generic [ref=e320]: "#9 · TradingGymAI"
+          - generic [ref=e321]:
+            - generic [ref=e322]: chain
+            - generic [ref=e323]: Base · ERC-721
+          - generic [ref=e324]:
+            - generic [ref=e325]: mint tx
+            - link "0xccba0d07…4b6e4a" [ref=e326] [cursor=pointer]:
+              - /url: https://basescan.org/tx/0xccba0d07341811173d8e03ae1598e84d05878da67ae9d46a1bd28f7d134b6e4a
+          - generic [ref=e327]:
+            - generic [ref=e328]: ipfs pin
+            - link "Qme9oiYw…eoiRkx" [ref=e329] [cursor=pointer]:
+              - /url: https://ipfs.io/ipfs/Qme9oiYw8TvutJY1AWXkdyRg7V7m3FJmbku8AwRneoiRkx
+        - generic [ref=e330]: dataset pinned to IPFS via Pinata, then registered to the Reppo platform — verifiable without trusting the UI
+    - contentinfo [ref=e121]: built on aeon · orchestrator → trading-agent → postprocess · every datanet deserves its own swarm
+  - button "Open Next.js Dev Tools" [ref=e127] [cursor=pointer]:
+    - img [ref=e128]
+  - alert [ref=e131]

@@ -211,3 +211,10 @@ body {
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
 .stagger-5 { animation-delay: 0.5s; }
+
+/* Swarm demo — detail-panel swap on stage change */
+@keyframes swarm-fade {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.swarm-fade { animation: swarm-fade 0.4s ease-out; }
