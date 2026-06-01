@@ -1,19 +1,16 @@
 ## Summary
 
-Executed `skills/search-skill/SKILL.md`. Exit: **SEARCH_SKILL_OK_CANDIDATES**.
+Executed `skills/search-skill/SKILL.md` and exited **SEARCH_SKILL_NO_GAP** (silent / log-only per skill philosophy).
 
-**Query:** `"reddit"` derived from priorities (MEMORY.md ISS-015 mitigation — vibecoding-digest's 3-day Reddit blockage names "authed Reddit API / pushshift / alternate source" as the explicit options). Step (a) failing-skills clear, (b) no open issues match {missing-secret, api-change, permanent-limitation, quality-regression}.
+**Derivation walk:**
+- (a) failing skills clear — all 41 cron-state entries `last_status=success`, no `consecutive_failures ≥ 2`
+- (b) open issues clear — none of the 7 open issues fall into qualifying categories {`missing-secret`, `api-change`, `permanent-limitation`, `quality-regression`}
+- (c) priorities — Current Goals are internal fixes; the one capability-flavored item (iss-015 Reddit) has chosen fix path PR #56 (oauth.reddit.com + secrets) and yesterday's "reddit" search already exhausted the external landscape (2 UNTRUSTED weak candidates rejected)
+- (d) log signals — only iss-009/Phase-2/issue-tag noise, no capability words
 
-**Search:** 6 candidates from `npx skills find` (skills.sh-sourced). vercel-labs/agent-skills (8 skills), anthropics/skills (17), BankrBot/skills, aaronjmars/aeon all enumerated via `gh api` (because `./add-skill --list` requires per-call approval in sandbox; gh-api equivalent for read-only). skills.sh search page returned only nav, no parseable results — marked fail.
+**No query derived → no search ran → no install → no notify.**
 
-**Top 2 after hard gates (none install):**
-- `resciencelab/opc-skills@reddit` — sum 13/15, gap-fit 2/5, pushed today — same public-json path that's already sandbox-blocked. UNTRUSTED.
-- `lignertys/reddit-research-skill@reddapi` — sum 12/15, gap-fit 3/5, pushed 5-09 — third-party reddapi.dev backend, different host could bypass block but needs paid signup. UNTRUSTED.
+Files modified:
+- `memory/logs/2026-06-01.md` — appended `## search-skill` log entry with full derivation walk and rationale for silent-today-vs-notify-yesterday delta (iss-015 state moved from "open mitigation menu" to "PR #56 queued on operator secrets").
 
-**No install** — top gap-fit ≤3 AND both UNTRUSTED. Real ISS-015 fix remains the operator call on `oauth.reddit.com` OAuth or alt source.
-
-**Files changed:**
-- `.pending-notify/1780236709-search-skill.md` — notification staged (sandbox-blocks `./notify` arg-passing)
-- `memory/logs/2026-05-31.md` — appended `### search-skill` entry per step 8
-
-**Follow-up:** operator decision on ISS-015 source switch (authed Reddit vs pushshift vs alt). Neither candidate above solves the root cause.
+No follow-up actions needed.
