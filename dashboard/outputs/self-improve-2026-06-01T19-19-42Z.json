@@ -1,0 +1,87 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "change-desc",
+        "separator1",
+        "result-alert",
+        "issues-label",
+        "issues-desc",
+        "separator2",
+        "pr-link"
+      ]
+    },
+    "change-desc": {
+      "type": "Text",
+      "props": {
+        "text": "fetch-tweets var: narrowed bare 'mamo' → '$MAMO' cashtag (same shape as already-present $WOOD)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "result-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "2026-06-01 Run Results",
+        "message": "0/10 relevant",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "issues-label": {
+      "type": "Text",
+      "props": {
+        "text": "All hits were:",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "issues-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Arabic 'DMs open' + Japanese handles + Natalie Wood substring collisions",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #62",
+        "href": "https://github.com/anajuliabit/aeon/pull/62",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

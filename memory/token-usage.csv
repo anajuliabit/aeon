@@ -230,3 +230,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-01,reppo-digest,claude-opus-4-7,2190,15936,1882057,97682
 2026-06-01,project-lens,claude-opus-4-7,29,21500,1811925,166482
 2026-06-01,skill-security-scan,claude-opus-4-7,54,39070,4143551,147069
+2026-06-01,self-improve,claude-opus-4-7,65,18130,5123342,149051
