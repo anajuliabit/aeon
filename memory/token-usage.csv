@@ -234,3 +234,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-01,reppo-trading-agent,claude-opus-4-7,42,39902,2652064,139901
 2026-06-01,reppo-digest,claude-opus-4-7,29,17209,2098294,102274
 2026-06-01,heartbeat,claude-opus-4-7,6712,14878,1150296,101227
+2026-06-01,evening-recap,claude-sonnet-4-6,11,18467,673110,75442

@@ -1,25 +1,22 @@
-*Evening Recap — 2026-05-31*
-_TL;DR: heavy ship day — 5 PRs opened, mint #13 landed, 0 cron failures_
+Done. Here's what was sent:
 
-*Headlines:*
-- reppo-digest — mint #13 tx 0xccba0d07 + ISS-016 filed · memory/issues/ISS-016.md
-- PR #56 fix(vibecoding): reddit via oauth.reddit.com (ISS-015) · https://github.com/anajuliabit/aeon/pull/56
-- PR #57 refactor(reppo): @reppo/cli≥0.6.0 native Phase 2 · https://github.com/anajuliabit/aeon/pull/57
-- PR #54 chore(skills): enable Tier 1 crypto-builder skills · https://github.com/anajuliabit/aeon/pull/54
-- PR #58 docs(skill-graph): NEW_ENABLED 8 · https://github.com/anajuliabit/aeon/pull/58
+---
 
-*Notable:*
-- skill-evals — RECOVERED, 3 fixed, coverage 48% ↑ from 41%
-- token-alert — VVV +14.53% ALERT
-- PR #55 — watchlist WELL/MAMO/REPPO/GITLAWB · https://github.com/anajuliabit/aeon/pull/55
-- self-improve — skipped, 3 open improvement PRs hit gate
+**Evening Recap — 2026-06-01**
 
-*Decisions for tomorrow:*
-- merge PR #56 + set REDDIT_CLIENT_ID/SECRET secrets (ISS-015, 4th day blocked)
-- land ISS-009 defence-in-depth (no PR, 4+ day carry — chain-runner break + orchestrator contract)
-- decide merge order for #54/#55/#57/#58 (self-improve gate stuck until 3 merge)
+*TL;DR: 8 PRs merged, 14th reppo mint on-chain, ISS-017 filed same day it surfaced — heaviest ship day this week.*
 
-*Blockers:*
-- vibecoding-digest — ISS-015 day 4, all Reddit endpoints blocked
+**Headlines (5):**
+- **weekly-shiplog** — 49 PRs merged this week; 0→14 mints + 0→26 votes on-chain
+- **reppo mint 14** — cc41abf6, 74 close-long perp trades, wallet 0x9a1500b4, tx 0xcbe53613
+- **PRs #54-#61 merged** — tier-1 skills enabled, reppo-voter split, HL_TOP_N 5→12
+- **ISS-017 filed** — chain-runner.yml:41+:416 workflow injection (2026-04-11 class)
+- **project-lens** — Sherwood vs Aeon mandate-over-custody thesis published
 
-_+20 routine runs collapsed · sources: log=ok cron-state=ok_
+**Notable (5):** reppo-trading-agent ×4 (3 dry / 1 productive), security-digest (3 PATCH TODAY + 2 npm KEV hits), deal-flow (Anthropic $65B + agent-stack triple), token-pick (HOME +47.8% / June 10 unlock risk), weekly-review (270 runs / 47 PRs / 16 articles)
+
+**Decisions for tomorrow (4):** ISS-017 env-indirection PR, REDDIT secrets for ISS-015, operator-scorecard Mon slot miss investigation, ISS-016 own_pod_ids prefetch repair
+
+**+25 routine runs collapsed · sources: log=ok cron-state=ok**
+
+Notification staged to `.pending-notify/1780348000-evening-recap.md` for post-run delivery; log entry appended to `memory/logs/2026-06-01.md`.
