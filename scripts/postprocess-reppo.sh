@@ -3,32 +3,36 @@
 # Reads .pending-reppo/*.json, runs a --dry-run preflight, then the real write.
 # Appends results to .outputs/reppo-trading-agent.md for the digest step.
 #
+# After Reppo-Labs/reppo-cli PR #43 (@reppo/cli ≥0.6.0): `reppo mint-pod`
+# accepts all metadata flags (--pod-name, --subnet-uuid, --pod-description,
+# --dataset, --category, --platform, --agree-to-terms) and handles Phase 2
+# (IPFS pin + platform metadata POST) internally with idempotent retry via
+# the CLI's markConfirmed / return-confirmed path. The previous Phase 2
+# drain loop + IPFS pin helper + retained .pending-reppo-register queue
+# are gone — the CLI owns that surface now.
+#
 # Env:
 #   REPPO_PRIVATE_KEY     required for any write (script skips writes if unset)
+#   REPPO_API_KEY         used by the CLI for platform metadata POST
+#   REPPO_AGENT_ID        used by the CLI for platform metadata POST
+#   PINATA_JWT            used by the CLI for IPFS pinning (may be unused if
+#                         the CLI ships a Reppo-managed pinning path; safe
+#                         to leave set either way)
 #   REPPO_DRY_RUN_ONLY    if "true", run the dry-run preflight but skip real writes
 set -euo pipefail
 
 PENDING_DIR=".pending-reppo"
-REGISTER_DIR=".pending-reppo-register"
 RESULTS_FILE=".outputs/reppo-trading-agent.md"
 DRY_RUN_ONLY="${REPPO_DRY_RUN_ONLY:-false}"
 
-# Exit only when BOTH the new-intent queue AND the retained register
-# queue are empty. The retained queue (.pending-reppo-register/) holds
-# Phase-2 mint metadata POSTs from prior runs that haven't succeeded
-# yet (committed to main via aeon.yml's auto-commit so they survive
-# across runs). Skipping Phase 2 because no NEW intents queued today
-# leaves those retained pods stuck on chain without UI surfacing —
-# the exact bug that kept 7 mints invisible from runs 6-11.
-HAS_NEW="false"
-HAS_RETAINED="false"
-[ -d "$PENDING_DIR" ] && ls -A "$PENDING_DIR"/*.json >/dev/null 2>&1 && HAS_NEW="true"
-[ -d "$REGISTER_DIR" ] && ls -A "$REGISTER_DIR"/*.json >/dev/null 2>&1 && HAS_RETAINED="true"
-if [ "$HAS_NEW" = "false" ] && [ "$HAS_RETAINED" = "false" ]; then
-  echo "reppo-postprocess: no pending intents and no retained register files"
+# Exit if no pending intents — there's no retained register queue to drain
+# anymore. The CLI's own retry path (return-confirmed against cached
+# txHash) covers transient Phase 2 failures within a single mint
+# invocation; we don't need a cross-run queue.
+if [ ! -d "$PENDING_DIR" ] || ! ls -A "$PENDING_DIR"/*.json >/dev/null 2>&1; then
+  echo "reppo-postprocess: no pending intents"
   exit 0
 fi
-[ "$HAS_NEW" = "false" ] && echo "reppo-postprocess: no new intents this run; draining $(ls "$REGISTER_DIR"/*.json 2>/dev/null | wc -l | tr -d ' ') retained register file(s)"
 
 if [ -z "${REPPO_PRIVATE_KEY:-}" ]; then
   echo "reppo-postprocess: REPPO_PRIVATE_KEY not set, skipping all writes"
@@ -42,18 +46,22 @@ if [ -z "${REPPO_PRIVATE_KEY:-}" ]; then
   exit 0
 fi
 
-if ! command -v reppo >/dev/null 2>&1; then
-  npm i -g @reppo/cli >/dev/null 2>&1 || {
-    echo "reppo-postprocess: CLI missing"
-    mkdir -p .outputs
-    {
-      echo ""
-      echo "## Execution Results"
-      echo ""
-      echo "_postprocess-reppo.sh could not run: Reppo CLI unavailable. Pending intents were NOT executed._"
-    } >> ".outputs/reppo-trading-agent.md"
-    exit 0
-  }
+# Install/upgrade the CLI. Force latest so we pick up @reppo/cli ≥0.6.0
+# (Reppo-Labs/reppo-cli PR #43) with the new mint-pod metadata flags.
+# The old `command -v reppo` short-circuit would pin to whatever was on
+# the runner image; on a fresh runner this branch fires every time
+# anyway, but being explicit avoids stale-cache surprises.
+echo "reppo-postprocess: installing @reppo/cli@latest..."
+if ! npm i -g @reppo/cli@latest >/dev/null 2>&1; then
+  echo "reppo-postprocess: CLI install failed"
+  mkdir -p .outputs
+  {
+    echo ""
+    echo "## Execution Results"
+    echo ""
+    echo "_postprocess-reppo.sh could not run: Reppo CLI install failed. Pending intents were NOT executed._"
+  } >> ".outputs/reppo-trading-agent.md"
+  exit 0
 fi
 
 mkdir -p .outputs .reppo-cache
@@ -65,101 +73,115 @@ mkdir -p .outputs .reppo-cache
   echo ""
 } >> "$RESULTS_FILE"
 
-# Build the CLI argument list for an intent file. Args: file. Echoes args.
-# Returns 1 if the command is unknown or any field is malformed. Validating
-# fields here keeps the later unquoted `$args` expansion safe (every word is
-# then a controlled flag, an id token, or a positive integer — no spaces).
-# `id` accepts Reppo's integer datanet/pod ids as well as hex/hyphenated ids.
+# ── Helpers ───────────────────────────────────────────────────────────
+
+# Extract a structured error code from a reppo CLI JSON failure response.
+# Returns .error.code (Reppo's standard shape) or .code (legacy) or "UNKNOWN".
+extract_code() {
+  jq -r '.error.code // .code // "UNKNOWN"' "$1" 2>/dev/null || echo UNKNOWN
+}
+
+# Extract a single-line, <=600-char detail from a captured CLI output file.
+# Whitespace runs collapse to a single space so the result fits on one
+# Markdown bullet. 600 chars accommodates Reppo's Zod validation errors
+# without truncating mid-path.
+extract_detail() {
+  tr -s '[:space:]' ' ' < "$1" 2>/dev/null | cut -c1-600 || true
+}
+
+# Look up the platform subnet UUID for an on-chain datanet id by scanning
+# rubric frontmatter. Echoes the UUID on stdout, empty string if not found.
+# The CLI requires --subnet-uuid (a cuid like cmnhuowns000bic04e16t6735),
+# NOT the on-chain token id ("9"). Source of truth: configs/datanets/*.md's
+# `platform_subnet_uuid` field (populated per ISS-014 root cause).
+lookup_subnet_uuid() {
+  local datanet="$1" rubric rubric_datanet uuid
+  for rubric in configs/datanets/*.md; do
+    [ -f "$rubric" ] || continue
+    rubric_datanet=$(awk '/^---[[:space:]]*$/{f++; next}
+                          f==1 && /^datanet_id:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
+    if [ "$rubric_datanet" = "$datanet" ]; then
+      uuid=$(awk '/^---[[:space:]]*$/{f++; next}
+                  f==1 && /^platform_subnet_uuid:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
+      echo "$uuid"
+      return 0
+    fi
+  done
+  echo ""
+}
+
+# Build the CLI argument list for an intent file into the global ARGS array.
+# Returns 1 if the command is unknown or any field is malformed. We use a
+# bash array (not a single string) because mint-pod's --pod-name and
+# --pod-description carry user-facing text with spaces; unquoted string
+# expansion would split on whitespace and corrupt every flag downstream.
+#
+# Sets globals: ARGS (array of CLI flags + values).
 build_args() {
-  local f="$1" cmd id='^[A-Za-z0-9_-]+$'
+  local f="$1" cmd id_re='^[A-Za-z0-9_-]+$'
   cmd="$(jq -r '.cmd' "$f")"
+  ARGS=()
   case "$cmd" in
     mint-pod)
-      local datanet
+      local datanet subnet_uuid pod_name pod_desc dpath
       datanet="$(jq -r '.datanet' "$f")"
-      [[ "$datanet" =~ $id ]] || return 1
-      printf 'mint-pod --datanet %s' "$datanet" ;;
+      [[ "$datanet" =~ $id_re ]] || return 1
+
+      subnet_uuid="$(lookup_subnet_uuid "$datanet")"
+      if [ -z "$subnet_uuid" ]; then
+        echo "reppo-postprocess: no platform_subnet_uuid for datanet $datanet — add the field to configs/datanets/<rubric>.md" >&2
+        return 1
+      fi
+
+      pod_name="$(jq -r '.pod_name // .strategy_summary // "Aeon-generated pod"' "$f")"
+      pod_desc="$(jq -r '.pod_description // .strategy_summary // ""' "$f")"
+      dpath="$(jq -r '.dataset_path // ""' "$f")"
+
+      ARGS=(mint-pod
+        --datanet "$datanet"
+        --subnet-uuid "$subnet_uuid"
+        --pod-name "$pod_name"
+        --pod-description "$pod_desc"
+        --category "Trading Strategy"
+        --platform "Aeon"
+        --agree-to-terms)
+
+      # --dataset is a local file path; the CLI pins it to IPFS and uses
+      # the resulting gateway URL as the pod's view-content link.
+      # Omitting it produces a bare on-chain mint with no metadata — only
+      # acceptable for legacy intents that pre-date PR #43.
+      if [ -n "$dpath" ] && [ -f "$dpath" ]; then
+        ARGS+=(--dataset "$dpath")
+      fi
+      ;;
     vote)
       local pod dir votes flag
       pod="$(jq -r '.pod' "$f")"
       dir="$(jq -r '.direction' "$f")"
       votes="$(jq -r '.votes // 1' "$f")"
-      [[ "$pod" =~ $id ]] || return 1
+      [[ "$pod" =~ $id_re ]] || return 1
       [[ "$votes" =~ ^[1-9][0-9]*$ ]] || return 1
       case "$dir" in
         like) flag="--like" ;;
         dislike) flag="--dislike" ;;
         *) return 1 ;;
       esac
-      printf 'vote --pod %s --votes %s %s' "$pod" "$votes" "$flag" ;;
+      ARGS=(vote --pod "$pod" --votes "$votes" "$flag")
+      ;;
     *) return 1 ;;
   esac
+  return 0
 }
 
-# Helper: extract a structured error code from a reppo CLI JSON failure response.
-# Returns .error.code (Reppo's standard error shape), or .code (legacy), or "UNKNOWN".
-extract_code() {
-  jq -r '.error.code // .code // "UNKNOWN"' "$1" 2>/dev/null || echo UNKNOWN
-}
-
-# Helper: extract a single-line, <=600-char detail from a captured CLI output file.
-# Whitespace runs collapse to a single space so the result fits on one Markdown bullet.
-# Bumped from 300 to 600 after run 8 truncated a Reppo Zod error mid-message — the
-# second validation issue's `path` was cut off, hiding which field hit the 200-char cap.
-extract_detail() {
-  tr -s '[:space:]' ' ' < "$1" 2>/dev/null | cut -c1-600 || true
-}
-
-# Helper: pin a dataset file to IPFS via Pinata. Returns 0 with the CID
-# echoed on stdout, 1 on failure (raw Pinata response captured in
-# $2 for caller diagnostics). Pinata URL:
-#   POST https://api.pinata.cloud/pinning/pinFileToIPFS
-#   Authorization: Bearer $PINATA_JWT
-#   multipart: file=@<path> + pinataMetadata
-# Response: {"IpfsHash":"Qm…","PinSize":<int>,"Timestamp":"…"}
-#
-# Caller is responsible for checking PINATA_JWT is set before calling.
-# The CID is a CIDv0 (Qm…) or CIDv1 (bafy…); we don't validate further,
-# the gateway will. Caller wires the CID into the platform POST as
-# https://ipfs.io/ipfs/<CID> — public-gateway URL, not Pinata's, so the
-# pin is verifiable from any IPFS gateway (Pinata's role here is just
-# pinning, not gating retrieval).
-pin_dataset_to_ipfs() {
-  local file="$1" capture="$2" name http_code
-  name="$(basename "$file")"
-  # `-sS` (no `-f`) so the response body lands in $capture even on 4xx/5xx.
-  # `-f` suppresses the body on HTTP errors — that's how we lost Pinata's
-  # actual error JSON in run 7 ("curl: (22) error: 403" with no detail).
-  # -w writes the status code to stdout (captured into http_code) so we
-  # can surface it alongside the body when the post-curl `.IpfsHash`
-  # check fails. -o sends body to the capture file.
-  http_code=$(curl -sS \
-       -X POST "https://api.pinata.cloud/pinning/pinFileToIPFS" \
-       -H "Authorization: Bearer ${PINATA_JWT}" \
-       -F "file=@${file}" \
-       -F "pinataMetadata={\"name\":\"${name}\"}" \
-       -w "%{http_code}" \
-       -o "$capture" 2>/dev/null || echo 000)
-  local cid
-  cid="$(jq -r '.IpfsHash // empty' "$capture" 2>/dev/null)"
-  if [ -z "$cid" ] || [ "$cid" = "null" ]; then
-    # Append the HTTP code so extract_detail in the caller surfaces both
-    # the status code AND Pinata's error body in the digest's one-liner.
-    printf '\n[HTTP %s]\n' "$http_code" >> "$capture"
-    return 1
-  fi
-  echo "$cid"
-}
-
-# Helper: run a dry-run for the current intent. Retries up to 3 attempts on
-# transient RPC failures (INTERNAL_ERROR / TIMEOUT / RATE_LIMITED /
-# NETWORK_ERROR) with linear backoff. Relies on caller-scope $args / $key /
-# $base. Returns 0 on success, 1 on terminal failure (last attempt's code
-# remains in .reppo-cache/dryrun-$base for the caller to inspect).
+# Run a dry-run for the current intent. Retries up to 3 attempts on transient
+# RPC failures (INTERNAL_ERROR / TIMEOUT / RATE_LIMITED / NETWORK_ERROR) with
+# linear backoff. Relies on caller-scope ARGS / $key / $base. Returns 0 on
+# success, 1 on terminal failure (last attempt's code remains in
+# .reppo-cache/dryrun-$base for the caller to inspect).
 dryrun_with_retry() {
   local attempt=1 code wait
   while : ; do
-    if REPPO_NETWORK=mainnet reppo $args --idempotency-key "$key" --dry-run --json \
+    if REPPO_NETWORK=mainnet reppo "${ARGS[@]}" --idempotency-key "$key" --dry-run --json \
          > ".reppo-cache/dryrun-$base" 2>&1; then
       return 0
     fi
@@ -177,11 +199,9 @@ dryrun_with_retry() {
   done
 }
 
-# Helper: try grant-access. On INSUFFICIENT_ALLOWANCE, auto-approve REPPO
-# spend to the SubnetManager via `reppo approve` (CLI v0.5+) and retry
-# grant-access. Returns 0 on grant success, 1 on terminal failure (final
-# grant response remains in .reppo-cache/grant-$target.json for the caller
-# to inspect).
+# Try grant-access. On INSUFFICIENT_ALLOWANCE, auto-approve REPPO spend to
+# the SubnetManager via `reppo approve` and retry grant-access. Returns 0
+# on grant success, 1 on terminal failure.
 auto_recover_grant() {
   local target="$1" gcode adetail approve_tx
   if REPPO_NETWORK=mainnet reppo grant-access --datanet "$target" --json \
@@ -190,13 +210,9 @@ auto_recover_grant() {
   fi
   gcode="$(extract_code ".reppo-cache/grant-$target.json")"
   if [ "$gcode" != "INSUFFICIENT_ALLOWANCE" ]; then
-    return 1  # not a recoverable failure; caller reports it
+    return 1
   fi
 
-  # CLI v0.5+ ships `reppo approve` with built-in `subnet-manager` /
-  # `reppo` aliases — it resolves spender + token internally, so we don't
-  # need to know addresses, install foundry, or probe the SubnetManager ABI.
-  # `--amount max` issues a MAX_UINT256 allowance (one-time, never re-approve).
   echo "reppo-postprocess: approving REPPO spend to subnet-manager (max)..." >&2
   if ! REPPO_NETWORK=mainnet reppo approve \
          --spender subnet-manager \
@@ -213,13 +229,9 @@ auto_recover_grant() {
   echo "  - auto-approved REPPO spend to subnet-manager (tx: $approve_tx)" >> "$RESULTS_FILE"
 
   # Retry grant-access with linear backoff. `reppo approve` returns a tx
-  # hash but the allowance read by grant-access may lag — the tx is mined,
-  # but the RPC node grant-access hits may not have propagated the new
-  # block yet (eventual-consistency on load-balanced RPC pools, observed
-  # in the 15th reppo-swarm run: approve landed at tx 0xa7053dc4…,
-  # immediate grant-access still read 0 allowance). Total wait: 5+10+15
-  # = 30s (~15 Base blocks of headroom). Break early if a non-allowance
-  # error appears — that's not a propagation race.
+  # hash but the allowance read by grant-access may lag (eventual
+  # consistency on load-balanced RPC pools). Total wait: 5+10+15 = 30s
+  # (~15 Base blocks of headroom). Break early on non-allowance errors.
   local wait_attempt grant_code
   for wait_attempt in 1 2 3; do
     sleep "$((wait_attempt * 5))"
@@ -233,15 +245,10 @@ auto_recover_grant() {
   return 1
 }
 
-# Helper: auto-approve REPPO spend to the PodManager via `reppo approve`
-# (CLI v0.5+). Mirrors auto_recover_grant but for the mint-pod path —
+# Auto-approve REPPO spend to the PodManager via `reppo approve`.
 # PodManagerV2.mintPodWithREPPO does
 #   reppo.safeTransferFrom(msg.sender, address(this), publishingFee);
-# so the spender that needs allowance is PodManager (proxy
-# 0x5C563f853eb4db33005A5C1aD9290e8560254A80 on Base mainnet), NOT
-# SubnetManager. subnet-manager and pod-manager are independent
-# allowances — grant-access pulls REPPO via SubnetManager, mint-pod
-# pulls REPPO via PodManager. A chain that does both needs both set.
+# so the spender that needs allowance is PodManager, NOT SubnetManager.
 # Returns 0 on approve success, 1 on terminal failure.
 auto_recover_mint_allowance() {
   local adetail approve_tx
@@ -259,34 +266,13 @@ auto_recover_mint_allowance() {
   fi
   approve_tx="$(jq -r '.transactionHash // .txHash // "n/a"' ".reppo-cache/approve-pod-manager.json" 2>/dev/null || echo n/a)"
   echo "  - auto-approved REPPO spend to pod-manager (tx: $approve_tx)" >> "$RESULTS_FILE"
-  # Brief sleep so the next dry-run's eth_call lands on a node that's
-  # seen the receipt (same propagation race documented in
-  # auto_recover_grant). dryrun_with_retry already has its own backoff
-  # for INTERNAL_ERROR, but the allowance read can return stale 0 on
-  # the first attempt without surfacing as a retriable code.
   sleep 5
   return 0
 }
 
-# Helper: auto-lock REPPO into veREPPO to give the publisher voting
-# power. Mirrors auto_recover_grant / auto_recover_mint_allowance for
-# the vote path — veREPPO.lock(amount, duration) is what `reppo lock`
-# wraps. A wallet with 0 locked REPPO has 0 voting power, so every
-# vote intent reverts with INSUFFICIENT_VOTING_POWER.
-#
-# Locks 500 REPPO for 30 days (~2592000s). Two CLI calls:
-#  1. Approve ve-reppo to spend REPPO (the CLI may auto-approve
-#     internally on `lock`, but doing it explicitly is cheaper than
-#     failing the lock tx and recovering). Idempotency-keyed once
-#     forever — no-ops on every subsequent invocation.
-#  2. `reppo lock 500 --duration 2592000`. Idempotency-key is
-#     date-stamped to the lock cycle (year-month), so attempts within
-#     the same 30-day window no-op (CLI rejects duplicate key), but a
-#     fresh month broadcasts a new lock — automatically refreshing
-#     voting power if a prior lockup has matured.
-#
-# Returns 0 on lock success, 1 on terminal failure (operator must
-# inspect: most likely cause is REPPO balance < 500).
+# Auto-lock REPPO into veREPPO for voting power. Approve once forever,
+# lock once per 30-day cycle. Returns 0 on lock success, 1 on terminal
+# failure (most likely cause: REPPO balance < 500).
 auto_recover_lock() {
   local approve_tx lock_tx ldetail adetail amount=500 duration=2592000
   local approve_key="aeon-approve-ve-reppo-reppo"
@@ -321,13 +307,11 @@ auto_recover_lock() {
   fi
   lock_tx="$(jq -r '.transactionHash // .txHash // "n/a"' ".reppo-cache/lock.json" 2>/dev/null || echo n/a)"
   echo "  - auto-locked ${amount} REPPO into veREPPO for 30d (tx: $lock_tx)" >> "$RESULTS_FILE"
-  # Voting-power read can lag the lock tx receipt — same propagation
-  # race as the allowance reads. dryrun_with_retry's backoff doesn't
-  # cover INSUFFICIENT_VOTING_POWER (not in its retriable code set),
-  # so absorb the lag with an explicit sleep before returning.
   sleep 5
   return 0
 }
+
+# ── Main loop ─────────────────────────────────────────────────────────
 
 for intent in "$PENDING_DIR"/*.json; do
   [ -f "$intent" ] || continue
@@ -338,15 +322,17 @@ for intent in "$PENDING_DIR"/*.json; do
     rm -f "$intent"
     continue
   fi
-  args="$(build_args "$intent")" || {
+  if ! build_args "$intent"; then
     echo "- \`$base\` — **skipped**: unknown command or invalid fields" >> "$RESULTS_FILE"
     rm -f "$intent"
     continue
-  }
+  fi
 
-  # Dry-run preflight. On a mint-pod failure with PUBLISHER_LACKS_SUBNET_ACCESS,
-  # auto-grant datanet access and retry once. Gated on DRY_RUN_ONLY because
-  # grant-access costs a real fee — Phase 0 stays free, real mode self-heals.
+  # Dry-run preflight with auto-recovery for known on-chain prerequisites:
+  # (a) PUBLISHER_LACKS_SUBNET_ACCESS → grant-access (+ subnet-manager approve)
+  # (b) InsufficientAllowance (0x13be252b) on mint → pod-manager approve
+  # (c) INSUFFICIENT_VOTING_POWER on vote → lock 500 REPPO for 30d
+  # All gated on DRY_RUN_ONLY=false because each recovery costs a real tx.
   echo "reppo-postprocess: dry-run $base..."
   if ! dryrun_with_retry; then
     code="$(extract_code ".reppo-cache/dryrun-$base")"
@@ -359,7 +345,6 @@ for intent in "$PENDING_DIR"/*.json; do
       if auto_recover_grant "$target"; then
         grant_tx="$(jq -r '.txHash // .transactionHash // "n/a"' ".reppo-cache/grant-$target.json" 2>/dev/null || echo n/a)"
         echo "  - auto-granted datanet $target access (tx: $grant_tx)" >> "$RESULTS_FILE"
-        # Retry the dry-run now that access is granted.
         if ! dryrun_with_retry; then
           code="$(extract_code ".reppo-cache/dryrun-$base")"
           detail="$(extract_detail ".reppo-cache/dryrun-$base")"
@@ -368,7 +353,6 @@ for intent in "$PENDING_DIR"/*.json; do
           rm -f "$intent"
           continue
         fi
-        # Retry passed — fall through to the dry-run-OK / real-write logic below.
       else
         gcode="$(extract_code ".reppo-cache/grant-$target.json")"
         gdetail="$(extract_detail ".reppo-cache/grant-$target.json")"
@@ -380,16 +364,6 @@ for intent in "$PENDING_DIR"/*.json; do
       fi
     elif [ "$cmd_name" = "mint-pod" ] && [ "$DRY_RUN_ONLY" != "true" ] \
          && grep -qiE '0x13be252b|InsufficientAllowance' ".reppo-cache/dryrun-$base"; then
-      # Mint dry-run reverted with selector 0x13be252b (InsufficientAllowance,
-      # no args — a hand-rolled custom error from the REPPO token's
-      # transferFrom check). PodManagerV2.mintPodWithREPPO is the actual
-      # spender (it does safeTransferFrom from itself, not via
-      # SubnetManager), so subnet-manager allowance doesn't cover this —
-      # pod-manager needs its own allowance. Approve and retry the
-      # dry-run. The CLI surfaces this as code "UNKNOWN_REVERT_0x13be252b"
-      # plus the selector in the hint message; the grep matches both the
-      # selector and (defensively) the decoded name in case a future CLI
-      # decodes it.
       echo "reppo-postprocess: $base hit InsufficientAllowance on PodManager; auto-approving pod-manager..." >&2
       if auto_recover_mint_allowance; then
         if ! dryrun_with_retry; then
@@ -400,7 +374,6 @@ for intent in "$PENDING_DIR"/*.json; do
           rm -f "$intent"
           continue
         fi
-        # Retry passed — fall through to the dry-run-OK / real-write logic below.
       else
         echo "- \`$base\` — **dry-run failed** (code: $code) and auto-approve for pod-manager failed, real write skipped" >> "$RESULTS_FILE"
         echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
@@ -408,24 +381,11 @@ for intent in "$PENDING_DIR"/*.json; do
         continue
       fi
     elif [ "$cmd_name" = "vote" ] && [ "$code" = "INSUFFICIENT_VOTING_POWER" ] && [ "$DRY_RUN_ONLY" != "true" ]; then
-      # Vote dry-run reverted because the publisher has 0 (or insufficient)
-      # voting power on veREPPO. Auto-lock 500 REPPO for 30 days (the
-      # standard cycle), then retry the dry-run. The lock is durable on
-      # chain — subsequent runs within the 30-day window hit the
-      # steady-state path (vote dry-run succeeds on the first call;
-      # this branch never fires).
       echo "reppo-postprocess: $base hit INSUFFICIENT_VOTING_POWER; auto-locking 500 REPPO for 30d..." >&2
       if auto_recover_lock; then
-        # Voting-power read can lag the lock tx receipt by 5-30s on
-        # the load-balanced public Base RPC pool (eventual
-        # consistency). Mirror auto_recover_grant's 5/10/15s = 30s
-        # backoff before giving up. Break early on non-voting-power
-        # errors (those aren't propagation races; extra waits won't
-        # help). Observed in run 19: vote-372 dry-run failed at the
-        # 5s post-lock mark from auto_recover_lock's internal sleep,
-        # but vote-373 (processed ~10s later by the next loop
-        # iteration) cleared on its first attempt — confirming
-        # propagation completes in the 10-30s window for this race.
+        # Voting-power read can lag the lock tx receipt by 5-30s on the
+        # load-balanced public Base RPC pool. Mirror auto_recover_grant's
+        # 5/10/15s = 30s backoff before giving up.
         local vote_wait vote_code dryrun_passed=false
         for vote_wait in 1 2 3; do
           sleep "$((vote_wait * 5))"
@@ -441,7 +401,6 @@ for intent in "$PENDING_DIR"/*.json; do
           rm -f "$intent"
           continue
         fi
-        # Retry passed — fall through to the dry-run-OK / real-write logic below.
       else
         echo "- \`$base\` — **dry-run failed** (code: $code) and auto-lock failed, real write skipped" >> "$RESULTS_FILE"
         echo "  - output: ${detail:-<empty>}" >> "$RESULTS_FILE"
@@ -463,64 +422,29 @@ for intent in "$PENDING_DIR"/*.json; do
     continue
   fi
 
-  # Real write.
-  cmd_name="$(jq -r '.cmd' "$intent")"
+  # Real write. The CLI handles Phase 2 (IPFS pin + platform POST)
+  # internally for mint-pod when --dataset is passed, so a single
+  # success here means both on-chain mint AND platform UI surfacing
+  # are done. CLI's --json output includes a metadata block we surface
+  # to the digest if present.
   echo "reppo-postprocess: executing $base..."
-  if REPPO_NETWORK=mainnet reppo $args --idempotency-key "$key" --json \
+  if REPPO_NETWORK=mainnet reppo "${ARGS[@]}" --idempotency-key "$key" --json \
      > ".reppo-cache/result-$base" 2>&1; then
     tx="$(jq -r '.txHash // .transactionHash // "n/a"' ".reppo-cache/result-$base" 2>/dev/null || echo n/a)"
-    echo "- \`$base\` — **success** (tx: $tx)" >> "$RESULTS_FILE"
+    meta_url="$(jq -r '.metadata.url // .pod.url // ""' ".reppo-cache/result-$base" 2>/dev/null || echo "")"
+    meta_published="$(jq -r '.metadata.published // .pod.published // false' ".reppo-cache/result-$base" 2>/dev/null || echo false)"
+    cmd_name="$(jq -r '.cmd' "$intent")"
 
-    # Phase-2 queue: for mint-pod, the on-chain tx creates the ERC-721
-    # token but the Reppo UI surfaces pods from a platform DB row
-    # populated by a separate authenticated POST. Queue the metadata
-    # for the phase-2 loop below to drain. Decoupled from the on-chain
-    # write so a failed POST never re-broadcasts the mint, and a
-    # crashed run leaves the queue file in place for the next run.
-    if [ "$cmd_name" = "mint-pod" ] && [ "$tx" != "n/a" ]; then
-      mkdir -p .pending-reppo-register
-      # Look up the platform's subnet UUID from the matching rubric.
-      # The CLI mint call used the on-chain token id (datanet=9), but the
-      # Reppo platform's metadata API expects the platform subnet UUID
-      # (cuid like cmnhuowns000bic04e16t6735, visible in the UI URL).
-      # Sending the token id "9" passes Zod but blows up in the platform's
-      # downstream UUID lookup with HTTP 500. (ISS-014 root cause, run 11
-      # evidence.)
-      intent_datanet="$(jq -r '.datanet' "$intent")"
-      platform_subnet="$intent_datanet"  # fallback if no rubric match
-      for rubric in configs/datanets/*.md; do
-        [ -f "$rubric" ] || continue
-        rubric_datanet=$(awk '/^---[[:space:]]*$/{f++; next}
-                              f==1 && /^datanet_id:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
-        if [ "$rubric_datanet" = "$intent_datanet" ]; then
-          uuid=$(awk '/^---[[:space:]]*$/{f++; next}
-                      f==1 && /^platform_subnet_uuid:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
-          if [ -n "$uuid" ]; then platform_subnet="$uuid"; fi
-          break
-        fi
-      done
-      jq -n \
-        --arg tx       "$tx" \
-        --arg subnet   "$platform_subnet" \
-        --arg name     "$(jq -r '.pod_name // .strategy_summary // "Aeon-generated pod"' "$intent")" \
-        --arg desc     "$(jq -r '.pod_description // .strategy_summary // ""' "$intent")" \
-        --arg url      "$(jq -r '.url // ""' "$intent")" \
-        --arg dpath    "$(jq -r '.dataset_path // ""' "$intent")" \
-        '{txHash:$tx,
-          subnetId:$subnet,
-          podName:$name,
-          podDescription:$desc,
-          url:$url,
-          platform:"Aeon",
-          category:"Trading Strategy",
-          agreeToTerms:true,
-          imageURL:"",
-          thumbnailURL:"",
-          pdfURL:"",
-          videoURL:"",
-          dataset_path:$dpath,
-          dataset_uri:""}' \
-        > ".pending-reppo-register/${base}"
+    if [ "$cmd_name" = "mint-pod" ] && [ "$meta_published" = "true" ]; then
+      echo "- \`$base\` — **success** (tx: $tx, dataset: ${meta_url:-<unknown>})" >> "$RESULTS_FILE"
+    elif [ "$cmd_name" = "mint-pod" ]; then
+      # On-chain mint succeeded but the CLI's Phase 2 didn't publish (e.g.
+      # transient platform API hiccup). The CLI caches the tx and a
+      # future `reppo return-confirmed --tx <hash>` will retry the POST.
+      # We don't auto-retry from here this run — operator inspects.
+      echo "- \`$base\` — **on-chain success, metadata pending** (tx: $tx; CLI cached for return-confirmed retry)" >> "$RESULTS_FILE"
+    else
+      echo "- \`$base\` — **success** (tx: $tx)" >> "$RESULTS_FILE"
     fi
   else
     code="$(extract_code ".reppo-cache/result-$base")"
@@ -531,183 +455,5 @@ for intent in "$PENDING_DIR"/*.json; do
   fi
   rm -f "$intent"
 done
-
-# --- Phase 2: register pod metadata to the Reppo platform DB ---
-# The on-chain mintPodWithREPPO(to, subnetId) call creates the ERC-721
-# token but doesn't carry any text/URI. The Reppo UI populates pod
-# pages from a platform DB row created by:
-#
-#   POST https://reppo.ai/api/v1/agents/{AGENT_ID}/pods
-#   Authorization: Bearer {AGENT_API_KEY}
-#   { txHash, subnetId, podName, podDescription, url, platform,
-#     category, agreeToTerms, image/thumbnail/pdf/videoURL }
-#
-# Bootstrap (one-time, operator runs locally):
-#   REPPO_NETWORK=mainnet reppo register-agent --name "Aeon ..."
-#   → returns {agentId, apiKey}; set as GH secrets
-#     REPPO_AGENT_ID + REPPO_API_KEY.
-#
-# Failure mode: if either secret is missing OR the curl fails, we
-# leave the queue file in place so the next chain run retries. The
-# on-chain tx is durable; only the platform metadata POST is at risk
-# of the transient.
-REGISTER_DIR=".pending-reppo-register"
-if [ -d "$REGISTER_DIR" ] && [ -n "$(ls -A "$REGISTER_DIR"/*.json 2>/dev/null || true)" ]; then
-  if [ -z "${REPPO_AGENT_ID:-}" ] || [ -z "${REPPO_API_KEY:-}" ]; then
-    echo "reppo-postprocess: REPPO_AGENT_ID or REPPO_API_KEY not set; phase-2 register skipped (queue files retained for next run)" >&2
-    {
-      echo ""
-      echo "_Phase 2 (Reppo platform metadata POST) skipped: REPPO_AGENT_ID / REPPO_API_KEY missing. $(ls "$REGISTER_DIR" | wc -l | tr -d ' ') pending file(s) retained for next run._"
-    } >> "$RESULTS_FILE"
-  else
-    {
-      echo ""
-      echo "**Phase 2 — Reppo platform metadata POST:**"
-    } >> "$RESULTS_FILE"
-    for register_intent in "$REGISTER_DIR"/*.json; do
-      [ -f "$register_intent" ] || continue
-      rbase="$(basename "$register_intent")"
-      rtx="$(jq -r '.txHash' "$register_intent" 2>/dev/null || echo n/a)"
-      dpath="$(jq -r '.dataset_path // ""' "$register_intent" 2>/dev/null || echo "")"
-      duri="$(jq -r '.dataset_uri // ""' "$register_intent" 2>/dev/null || echo "")"
-
-      # Step 2pre: retained queue files from runs 6-11 carry subnetId as
-      # the on-chain token id ("9") because the Phase 1 builder used to
-      # source from .datanet. Reppo's platform expects the platform
-      # subnet UUID (cuid). If the queue file's subnetId looks numeric,
-      # look up the UUID from the matching rubric and atomically rewrite.
-      # This ensures the 7 retained files POST with the correct subnetId
-      # on retry without manual intervention.
-      queue_subnet="$(jq -r '.subnetId' "$register_intent" 2>/dev/null || echo "")"
-      if [[ "$queue_subnet" =~ ^[0-9]+$ ]]; then
-        for rubric in configs/datanets/*.md; do
-          [ -f "$rubric" ] || continue
-          rubric_datanet=$(awk '/^---[[:space:]]*$/{f++; next}
-                                f==1 && /^datanet_id:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
-          if [ "$rubric_datanet" = "$queue_subnet" ]; then
-            uuid=$(awk '/^---[[:space:]]*$/{f++; next}
-                        f==1 && /^platform_subnet_uuid:/ {sub(/^[^:]+:[[:space:]]*/, ""); gsub(/["'\'']/, ""); gsub(/[[:space:]]+$/, ""); print; exit}' "$rubric")
-            if [ -n "$uuid" ]; then
-              tmp="$(mktemp)"
-              jq --arg s "$uuid" '.subnetId = $s' "$register_intent" > "$tmp" \
-                && mv "$tmp" "$register_intent"
-              echo "  - migrated $rbase subnetId $queue_subnet → $uuid (platform UUID)" >> "$RESULTS_FILE"
-            fi
-            break
-          fi
-        done
-      fi
-
-      # Step 2a: pin the dataset to IPFS (Pinata) if there is one, the
-      # CID isn't already recorded, and PINATA_JWT is configured. The
-      # CID gets persisted into the queue file so a later POST retry
-      # (after a transient platform-API failure) doesn't re-upload.
-      if [ -n "$dpath" ] && [ -z "$duri" ] && [ -n "${PINATA_JWT:-}" ] && [ -f "$dpath" ]; then
-        echo "reppo-postprocess: pinning $dpath to IPFS for $rbase..." >&2
-        if cid="$(pin_dataset_to_ipfs "$dpath" ".reppo-cache/pinata-$rbase.json")"; then
-          duri="https://ipfs.io/ipfs/${cid}"
-          # Atomic patch: rewrite the queue file with dataset_uri set.
-          tmp="$(mktemp)"
-          jq --arg uri "$duri" '.dataset_uri = $uri' "$register_intent" > "$tmp" \
-            && mv "$tmp" "$register_intent"
-          echo "  - dataset pinned: ipfs://${cid} (gateway: $duri)" >> "$RESULTS_FILE"
-        else
-          pdetail="$(extract_detail ".reppo-cache/pinata-$rbase.json")"
-          echo "- \`$rbase\` — **IPFS pin failed**: ${pdetail:-<empty>} (queue file retained for retry)" >> "$RESULTS_FILE"
-          echo "reppo-postprocess: pinata pin failed for $rbase: ${pdetail:-<empty>}" >&2
-          # Leave file for retry. Skip the POST this run.
-          continue
-        fi
-      elif [ -n "$dpath" ] && [ -z "$duri" ] && [ -z "${PINATA_JWT:-}" ]; then
-        # Dataset exists but PINATA_JWT not set — skip the POST so we
-        # don't create a platform row that links to a wallet history
-        # page instead of the actual dataset. Operator sets the secret,
-        # next run retries the pin + POST.
-        echo "- \`$rbase\` — **POST skipped**: PINATA_JWT not set; queue file retained for next-run pin + POST" >> "$RESULTS_FILE"
-        continue
-      fi
-
-      # Hard gate before the POST: we don't register pods that lack an
-      # IPFS dataset URL. The pod's value is the verifiable labeled
-      # dataset; without it the platform row would only link to a wallet
-      # history page or basescan tx, neither of which satisfies the
-      # rubric. Two distinct skip cases:
-      #
-      #   (a) Queue file has dataset_path but pin failed earlier this
-      #       run (the dpath/duri/PINATA branch above already
-      #       `continue`d, so we don't hit this gate). If a future code
-      #       path leaves dataset_uri empty despite dataset_path set,
-      #       we still skip POST and retain for retry.
-      #
-      #   (b) Queue file has no dataset_path at all — legacy mint from
-      #       runs pre-PR-30 (strategy-text pods, not HL-data pods).
-      #       Those pods don't satisfy the rubric; the platform row
-      #       would be misleading. Remove the queue file so we don't
-      #       keep retrying forever.
-      if [ -z "$duri" ]; then
-        if [ -n "$dpath" ]; then
-          echo "- \`$rbase\` — **POST skipped**: no dataset_uri (pin not yet successful); queue retained for retry" >> "$RESULTS_FILE"
-        else
-          echo "- \`$rbase\` — **POST skipped**: legacy mint without dataset_path; removing queue (pod stays as bare ERC-721, no platform row)" >> "$RESULTS_FILE"
-          rm -f "$register_intent"
-        fi
-        continue
-      fi
-
-      # Step 2b: project queue body to the platform schema. With the
-      # gate above, dataset_uri is always set at this point — the IPFS
-      # gateway URL takes both `url` (UI primary view-content link) and
-      # `pdfURL` (downloadable-file slot). The LLM's url (hypurrscan
-      # profile) is intentionally dropped: it points to a wallet
-      # history, not the pod's content.
-      body_file=".reppo-cache/post-body-$rbase"
-      jq '{txHash,
-           subnetId: (.subnetId | tostring),
-           podName: (.podName | .[0:50]),
-           podDescription: (.podDescription | .[0:200]),
-           url: .dataset_uri,
-           platform,
-           category,
-           agreeToTerms,
-           imageURL,
-           thumbnailURL,
-           pdfURL: (.dataset_uri // .pdfURL // ""),
-           videoURL}' \
-        "$register_intent" > "$body_file"
-
-      echo "reppo-postprocess: registering metadata for $rbase (tx $rtx)..." >&2
-      # `-sS` (no `-f`) so the platform's 4xx/5xx error body lands in the
-      # capture file instead of being suppressed. -w captures the HTTP
-      # status code separately so we can branch on it. Otherwise curl
-      # would exit 0 even on a 400, sending us down the success path.
-      reg_http_code=$(curl -sS \
-           -X POST "https://reppo.ai/api/v1/agents/${REPPO_AGENT_ID}/pods" \
-           -H "Authorization: Bearer ${REPPO_API_KEY}" \
-           -H "Content-Type: application/json" \
-           --data @"$body_file" \
-           -w "%{http_code}" \
-           -o ".reppo-cache/register-$rbase" 2>/dev/null || echo 000)
-      if [ "${reg_http_code:0:1}" = "2" ]; then
-        if [ -n "$duri" ]; then
-          echo "- \`$rbase\` — **metadata registered** (HTTP $reg_http_code, tx: $rtx, dataset: $duri)" >> "$RESULTS_FILE"
-        else
-          echo "- \`$rbase\` — **metadata registered** (HTTP $reg_http_code, tx: $rtx)" >> "$RESULTS_FILE"
-        fi
-        rm -f "$register_intent"
-        # The local dataset file is now durably pinned on IPFS (or
-        # there wasn't one). Drop it so it doesn't accumulate in the
-        # auto-commit and so a future run's hash-dedup is the only
-        # signal needed to skip re-minting.
-        [ -n "$dpath" ] && rm -f "$dpath"
-      else
-        rdetail="$(extract_detail ".reppo-cache/register-$rbase")"
-        echo "- \`$rbase\` — **metadata registration failed** (HTTP $reg_http_code): ${rdetail:-<empty>}" >> "$RESULTS_FILE"
-        echo "reppo-postprocess: register failed for $rbase (HTTP $reg_http_code): ${rdetail:-<empty>}" >&2
-        # Leave queue + dataset files for retry. CID is already pinned
-        # and persisted into the queue file so retry won't re-upload.
-      fi
-    done
-  fi
-fi
 
 echo "reppo-postprocess: done"
