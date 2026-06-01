@@ -1,8 +1,8 @@
-Catalog is available; rubric for datanet 9 is the only one configured and passes both checks. Emitting the plan below in assistant text per the corrected ISS-009 path — the fenced block is the load-bearing artifact for the trading-agent's Step 1 gate.
+Plan emitted below for the trading-agent gate. Datanet 9 is the only assigned rubric, valid and active; 14 of 15 catalog entries remain unassigned (12th consecutive day).
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 valid + active; rubric datanet_id="9" not placeholder; cache shows valid=true)
+reppo-trading-agent: RUN   (datanet 9 valid:true, mainnet ACTIVE, rubric tradinggymai datanet_id="9" not placeholder)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -20,7 +20,9 @@ new-datanet: 17   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Plan: 1 RUN (reppo-trading-agent on datanet 9), 0 SKIP, 14 unassigned datanets surfaced (12th consecutive day).
-- Catalog `.reppo-cache/datanets.json` available (15 active datanets); `.reppo-cache/datanet-tradinggymai.json` shows `valid: true`.
-- Files written: `memory/logs/2026-06-01.md` (run log).
-- Follow-up: 14-datanet backfill remains unaddressed; ISS-009 defence-in-depth (SKILL.md emit-contract codification + chain-runner `continue` → `break`) still pending per MEMORY.md Current Goals.
+- Read 1 rubric (`configs/datanets/tradinggymai.md` → datanet_id 9, agent reppo-trading-agent) and validated against `.reppo-cache/datanet-tradinggymai.json` (`valid:true`, mainnet, caller has access).
+- Cross-referenced `.reppo-cache/datanets.json` (15 ACTIVE datanets in mainnet catalog) — 14 IDs lack a rubric file: 1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17.
+- Emitted the required `reppo-plan` fenced block in this assistant message (load-bearing artifact for the trading-agent chain step — emit-in-assistant-text path per ISS-009 contract).
+- Appended a 2nd-run entry to `memory/logs/2026-06-01.md` under `### reppo-orchestrator (2nd run)`.
+- Files modified: `memory/logs/2026-06-01.md` (one new heading + entry). No other writes.
+- Follow-up: operator assignment of the 14 unassigned datanets (12th day surfaced); orchestrator does not assign.
