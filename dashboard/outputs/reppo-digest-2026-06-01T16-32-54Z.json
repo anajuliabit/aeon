@@ -1,0 +1,148 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "final_stat"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "meta_swarm",
+        "meta_run",
+        "meta_datanet",
+        "meta_onchain"
+      ]
+    },
+    "meta_swarm": {
+      "type": "Badge",
+      "props": {
+        "text": "reppo-swarm",
+        "variant": "outline"
+      }
+    },
+    "meta_run": {
+      "type": "Badge",
+      "props": {
+        "text": "3rd run",
+        "variant": "outline"
+      }
+    },
+    "meta_datanet": {
+      "type": "Badge",
+      "props": {
+        "text": "datanet 9",
+        "variant": "outline"
+      }
+    },
+    "meta_onchain": {
+      "type": "Badge",
+      "props": {
+        "text": "0 on-chain",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "q_heading",
+        "mint_block",
+        "votes_block"
+      ]
+    },
+    "q_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "queued",
+        "level": "h3"
+      }
+    },
+    "mint_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_stat",
+        "mint_note"
+      ]
+    },
+    "mint_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "mint",
+        "value": "0"
+      }
+    },
+    "mint_note": {
+      "type": "Text",
+      "props": {
+        "text": "margin-top-12 fully skipped (3 empty, 4 floor<20, 4 spot-only, 1 drift-dup vs 14th-mint cc41abf6)",
+        "variant": "caption"
+      }
+    },
+    "votes_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_stat",
+        "votes_note"
+      ]
+    },
+    "votes_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "votes",
+        "value": "0"
+      }
+    },
+    "votes_note": {
+      "type": "Text",
+      "props": {
+        "text": "only epoch-100 pod is our own 492 (iss-016 own-pod gate)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "final_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "datanets unassigned",
+        "value": "14"
+      }
+    }
+  }
+}
