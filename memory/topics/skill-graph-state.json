@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-28",
-  "input_fingerprint": "f3045d4f3d0e3b16fe47c1ce3f2040deac20708d",
+  "generated_at": "2026-05-31",
+  "input_fingerprint": "c367f66b9a05804b54d38b28904c9ebca5d6dd9b",
   "skills_total": 124,
-  "enabled_count": 21,
+  "enabled_count": 29,
   "edges": {
     "depends_on": 4,
     "consume": 3,
     "reactive": 0,
-    "shared_state": 17
+    "shared_state": 47
   },
-  "node_list_sha": "34bd738072d8e52cf3f261c9d4a14f5e5ff8259b",
-  "edge_list_sha": "9e7ca782544ddf53390d3db17f92a2b8a7a207b6"
+  "node_list_sha": "917ea1e430764e75d66d51cbe24e9ff3af4c53aa",
+  "edge_list_sha": "8610117f838ecdec4144af8d49d09a4ee44a0efd"
 }

@@ -1,0 +1,190 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Graph updated"
+      },
+      "children": [
+        "section-enabled",
+        "separator-1",
+        "section-stats",
+        "separator-2",
+        "link-pr"
+      ]
+    },
+    "section-enabled": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-enabled",
+        "skills-grid"
+      ]
+    },
+    "heading-enabled": {
+      "type": "Heading",
+      "props": {
+        "text": "Newly Enabled (8)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "skills-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-agent-buzz",
+        "badge-daily-routine",
+        "badge-fleet-control",
+        "badge-market-context-refresh",
+        "badge-skill-graph",
+        "badge-token-pick",
+        "badge-vibecoding-digest",
+        "badge-weekly-shiplog"
+      ]
+    },
+    "badge-agent-buzz": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz"
+      },
+      "children": []
+    },
+    "badge-daily-routine": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine"
+      },
+      "children": []
+    },
+    "badge-fleet-control": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet-control"
+      },
+      "children": []
+    },
+    "badge-market-context-refresh": {
+      "type": "Badge",
+      "props": {
+        "text": "market-context-refresh"
+      },
+      "children": []
+    },
+    "badge-skill-graph": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-graph"
+      },
+      "children": []
+    },
+    "badge-token-pick": {
+      "type": "Badge",
+      "props": {
+        "text": "token-pick"
+      },
+      "children": []
+    },
+    "badge-vibecoding-digest": {
+      "type": "Badge",
+      "props": {
+        "text": "vibecoding-digest"
+      },
+      "children": []
+    },
+    "badge-weekly-shiplog": {
+      "type": "Badge",
+      "props": {
+        "text": "weekly-shiplog"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "grid-metrics"
+      ]
+    },
+    "grid-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-total-skills",
+        "stat-enabled-skills",
+        "stat-edges-added",
+        "stat-edges-removed"
+      ]
+    },
+    "stat-total-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Skills",
+        "value": "124"
+      },
+      "children": []
+    },
+    "stat-enabled-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled",
+        "value": "29"
+      },
+      "children": []
+    },
+    "stat-edges-added": {
+      "type": "Stat",
+      "props": {
+        "label": "Edges Added",
+        "value": "+33",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-edges-removed": {
+      "type": "Stat",
+      "props": {
+        "label": "Edges Removed",
+        "value": "-10",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link-pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #58",
+        "href": "https://github.com/anajuliabit/aeon/pull/58"
+      },
+      "children": []
+    }
+  }
+}
