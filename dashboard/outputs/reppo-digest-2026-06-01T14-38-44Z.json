@@ -1,0 +1,338 @@
+{
+  "root": "root",
+  "state": {},
+  "elements": {
+    "root": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "header",
+        "queued_section",
+        "onchain_section",
+        "footer"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_swarm",
+        "badge_run",
+        "badge_datanet",
+        "badge_onchain"
+      ]
+    },
+    "badge_swarm": {
+      "type": "Badge",
+      "props": {
+        "text": "reppo-swarm"
+      }
+    },
+    "badge_run": {
+      "type": "Badge",
+      "props": {
+        "text": "2nd run"
+      }
+    },
+    "badge_datanet": {
+      "type": "Badge",
+      "props": {
+        "text": "datanet 9"
+      }
+    },
+    "badge_onchain": {
+      "type": "Badge",
+      "props": {
+        "text": "1 on-chain"
+      }
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_title",
+        "mint_item",
+        "votes_item"
+      ]
+    },
+    "queued_title": {
+      "type": "Heading",
+      "props": {
+        "text": "queued",
+        "level": "h3"
+      }
+    },
+    "mint_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_header",
+        "mint_wallet_badge",
+        "mint_fills_text",
+        "mint_markets_badges",
+        "mint_metrics",
+        "mint_hash_badge"
+      ]
+    },
+    "mint_header": {
+      "type": "Text",
+      "props": {
+        "text": "mint",
+        "variant": "lead"
+      }
+    },
+    "mint_wallet_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "hl wallet 0x9a1500b4"
+      }
+    },
+    "mint_fills_text": {
+      "type": "Text",
+      "props": {
+        "text": "74 close-long perp fills across 7 markets"
+      }
+    },
+    "mint_markets_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "market_btc",
+        "market_hype",
+        "market_near",
+        "market_ondo",
+        "market_zec",
+        "market_para_avgo",
+        "market_xyz_spcx"
+      ]
+    },
+    "market_btc": {
+      "type": "Badge",
+      "props": {
+        "text": "btc",
+        "variant": "secondary"
+      }
+    },
+    "market_hype": {
+      "type": "Badge",
+      "props": {
+        "text": "hype",
+        "variant": "secondary"
+      }
+    },
+    "market_near": {
+      "type": "Badge",
+      "props": {
+        "text": "near",
+        "variant": "secondary"
+      }
+    },
+    "market_ondo": {
+      "type": "Badge",
+      "props": {
+        "text": "ondo",
+        "variant": "secondary"
+      }
+    },
+    "market_zec": {
+      "type": "Badge",
+      "props": {
+        "text": "zec",
+        "variant": "secondary"
+      }
+    },
+    "market_para_avgo": {
+      "type": "Badge",
+      "props": {
+        "text": "para:avgo",
+        "variant": "secondary"
+      }
+    },
+    "market_xyz_spcx": {
+      "type": "Badge",
+      "props": {
+        "text": "xyz:spcx",
+        "variant": "secondary"
+      }
+    },
+    "mint_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_sharpe",
+        "stat_mdd",
+        "mint_thin_badge"
+      ]
+    },
+    "stat_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "sharpe",
+        "value": "0.84"
+      }
+    },
+    "stat_mdd": {
+      "type": "Stat",
+      "props": {
+        "label": "mdd",
+        "value": "91%"
+      }
+    },
+    "mint_thin_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "thin",
+        "variant": "outline"
+      }
+    },
+    "mint_hash_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "cc41abf64326a29b",
+        "variant": "outline"
+      }
+    },
+    "votes_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_header",
+        "votes_queued_stat",
+        "votes_blocked_text",
+        "votes_issues_badges"
+      ]
+    },
+    "votes_header": {
+      "type": "Text",
+      "props": {
+        "text": "votes",
+        "variant": "lead"
+      }
+    },
+    "votes_queued_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "queued",
+        "value": "0"
+      }
+    },
+    "votes_blocked_text": {
+      "type": "Text",
+      "props": {
+        "text": "5 epoch-99 pods all blocked"
+      }
+    },
+    "votes_issues_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "issue_iss016",
+        "issue_iss005"
+      ]
+    },
+    "issue_iss016": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-016 (3 own mints)",
+        "variant": "destructive"
+      }
+    },
+    "issue_iss005": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-005 (2 dedup)",
+        "variant": "destructive"
+      }
+    },
+    "onchain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "onchain_title",
+        "tx_item"
+      ]
+    },
+    "onchain_title": {
+      "type": "Heading",
+      "props": {
+        "text": "on-chain",
+        "level": "h3"
+      }
+    },
+    "tx_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tx_mint_badge",
+        "tx_hash_badge",
+        "tx_note_badge"
+      ]
+    },
+    "tx_mint_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "mint cc41abf64326a29b"
+      }
+    },
+    "tx_hash_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "tx 0xcbe53613a6b6b9f0259c9857a0b87347276d612e60d040921edec86f473f41b5",
+        "variant": "outline"
+      }
+    },
+    "tx_note_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "14th mint on-chain ever",
+        "variant": "secondary"
+      }
+    },
+    "footer": {
+      "type": "Alert",
+      "props": {
+        "message": "14 datanets unassigned (12th day)",
+        "type": "info"
+      }
+    }
+  }
+}
