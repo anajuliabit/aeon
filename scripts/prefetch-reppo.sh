@@ -85,16 +85,27 @@ if [ -d "$CONFIG_DIR" ]; then
     current_epoch=$(jq -r 'if .code == "PREFETCH_FAILED" then ""
                            else [.pods[]?.validityEpoch | tonumber? // empty] | if length > 0 then max | tostring else "" end
                            end' "$CACHE_DIR/pods-$name.json" 2>/dev/null || echo "")
-    # Parse the markdown ledger. A successful vote row looks like:
+    # Parse the markdown ledger for successfully-voted podIds. A vote row
+    # looks like:
     #   | 2026-05-26 | 9 | 373 | DISLIKE | success — tx 0x… |
     # We want podId from column 4, only when datanet (column 3) == this
     # rubric's datanet AND status (column 5) contains "success". Skip
     # failed/reverted rows so the filter doesn't permanently block re-tries
     # of a pod where the tx itself failed.
+    #
+    # CRITICAL: scope to the "## Votes cast" section ONLY. The "## Minted
+    # strategies" table has the SAME row shape (| date | 9 | X | … | success |)
+    # but its column 4 is a sha256 strategy HASH, not a podId. Without the
+    # section guard the awk scooped mint hashes into voted_pod_ids — junk
+    # that never matches a numeric podId, silently weakening the own-mint
+    # vote guard (surfaced 2026-06-01: vote-filter held hashes like
+    # dce17be300855e07 instead of podIds 462/463/478).
     voted_pod_ids="[]"
     if [ -f memory/topics/reppo.md ]; then
       voted_pod_ids=$(awk -F '|' -v dn="$datanet_id" '
-        /^\| [0-9]{4}-[0-9]{2}-[0-9]{2} +\|/ {
+        /^## Votes cast/ { invotes=1; next }
+        /^## / { invotes=0 }
+        invotes && /^\| [0-9]{4}-[0-9]{2}-[0-9]{2} +\|/ {
           dnet=$3; pod=$4; status=$6
           gsub(/^ +| +$/, "", dnet); gsub(/^ +| +$/, "", pod); gsub(/^ +| +$/, "", status)
           if (dnet == dn && index(status, "success") > 0) print pod

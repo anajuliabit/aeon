@@ -1,6 +1,6 @@
 ---
 name: Reppo Trading Agent
-description: Constructs labeled Hyperliquid perp trade-dataset pods from public HL data (leaderboard wallets' userFills joined with HL OHLCV) and writes mint and vote intent files for the TradingGymAI datanet
+description: Constructs labeled Hyperliquid perp trade-dataset pods from public HL data (leaderboard wallets' userFills joined with HL OHLCV) and writes mint intent files for the TradingGymAI datanet. Mint-only — voting is handled independently by the reppo-voter skill.
 var: ""
 tags: [reppo, trading, hyperliquid]
 ---
@@ -66,9 +66,10 @@ plan available` and stop.
 
 ## Step 2 — Read the rubric
 Read `configs/datanets/tradinggymai.md`. Note its `datanet_id`, `mint_cap`,
-`vote_cap`, the Goal, the Mint criteria, Vote YES/NO criteria, and Red
-flags. If `datanet_id` is still the `REPLACE_WITH_...` placeholder, output
-`Skipped: datanet_id not configured` and stop.
+the Goal, the Mint criteria, and Red flags. (Vote criteria/`vote_cap` are
+the `reppo-voter` skill's concern — ignore them here.) If `datanet_id` is
+still the `REPLACE_WITH_...` placeholder, output `Skipped: datanet_id not
+configured` and stop.
 
 ## Step 3 — Source HL public data
 Primary source is the local cache written by `scripts/prefetch-hl.sh`
@@ -250,77 +251,30 @@ Missing/empty `pod_name`, `pod_description`, or `dataset_path` means
 the pod will mint on chain but render as a blank row in the UI and
 fail the rubric's verifiability check. All three must be populated.
 
-## Step 6 — Select pods to vote on
-Read `.reppo-cache/pods-tradinggymai.json` and
-`.reppo-cache/vote-filter-tradinggymai.json`. If the pod cache is an
-error marker (`{"code":"PREFETCH_FAILED"}`), missing, or a JSON array
-with zero pods, skip voting — this is not an error.
+> **Voting moved out.** This skill no longer votes. Pod curation
+> (pull pods → evaluate against the rubric → LIKE/DISLIKE) is owned by
+> the independent `reppo-voter` skill, which runs in parallel with this
+> one in the `reppo-swarm` chain. Do NOT write any `.pending-reppo/vote-*.json`
+> intents here — write only `mint-*.json`. This keeps minting and voting
+> decoupled: voting happens every trigger regardless of whether anything
+> mints.
 
-**Vote-filter pass (apply BEFORE the rubric):**
-
-`.reppo-cache/vote-filter-tradinggymai.json` carries:
-```json
-{ "current_epoch": "<integer-as-string>" | null,
-  "voted_pod_ids": ["<podId>", ...] }
-```
-
-For each pod in `pods-tradinggymai.json`, discard before rubric
-evaluation if EITHER:
-
-1. **Out-of-epoch:** `pod.validityEpoch != current_epoch` (when
-   `current_epoch` is non-null). Past-epoch votes always revert with
-   `POD_NOT_VALID_FOR_EPOCH`, wasting REPPO + the dry-run slot.
-2. **Already interacted:** `pod.podId` is in `voted_pod_ids`. The list
-   is a union of (a) pods we've voted on successfully (the Reppo CLI
-   does NOT enforce `--idempotency-key` reuse for `vote` — a fresh tx
-   lands every run, double-spending REPPO; ISS-005) AND (b) pods THIS
-   wallet has minted (the contract reverts `CANNOT_VOTE_FOR_OWN_POD`
-   on any self-vote attempt regardless of direction; ISS-016). The
-   filter is the only defense for both.
-
-If `vote-filter-tradinggymai.json` is missing or an error marker,
-skip the filter and proceed with the rubric — degrade gracefully,
-do not crash.
-
-**Then the rubric:**
-
-For each pod that passed both filters AND is NOT one you just minted,
-apply the rubric's Vote YES/NO criteria. YES requires: HL perp trade
-dataset with all rubric fields and verifiable fills. NO covers:
-strategy descriptions without executed trades, missing required
-fields, unverifiable trades, non-HL markets, unlabeled raw dumps,
-spam.
-
-Cast at most `vote_cap` votes total. For each, write
-`.pending-reppo/vote-<podId>-<direction>.json`:
-```json
-{ "cmd": "vote", "pod": "<podId>", "direction": "like",
-  "votes": 1, "idempotency_key": "vote-<podId>-<direction>",
-  "reason": "<one-line reason citing rubric>" }
-```
-`<podId>` is the pod's id exactly as it appears in the cache file
-(verbatim, whatever format) — for both the filename and the `pod`
-field. Set `direction` to exactly `like` (YES) or exactly `dislike`
-(NO) — no other value is accepted; anything else is silently rejected
-downstream.
-
-## Step 7 — Write your output
+## Step 6 — Write your output
 Summarize: gate decision, wallets pulled, datasets built and their
 aggregate metrics, datasets selected to mint with the canonical hash
-and reason, pods selected to vote on with direction + reason, and
-anything skipped (missing cache files, thin wallets, prompt-injection
-discards). `scripts/postprocess-reppo.sh` will append an
-`## Execution Results` section with on-chain outcomes — do not write
+and reason, and anything skipped (missing cache files, thin wallets,
+prompt-injection discards). `scripts/postprocess-reppo.sh` will append
+an `## Execution Results` section with on-chain outcomes — do not write
 that section yourself.
 
-## Step 8 — Log the run
+## Step 7 — Log the run
 Append one line to `memory/logs/${today}.md` under a
 `### reppo-trading-agent` heading: how many wallets you read (with
 actual fill counts and spans from `jq` per the input contract), how
 many candidate datasets you built, how many passed the ≥20-trade
-floor, how many mint intents and vote intents you wrote, anything
-skipped, and any HL endpoints that degraded to fallback. (On-chain
-results are recorded separately by the digest step.)
+floor, how many mint intents you wrote, anything skipped, and any HL
+endpoints that degraded to fallback. (Vote activity is logged
+separately by `reppo-voter`; on-chain results by the digest step.)
 
 ## Sandbox note
 Hyperliquid's public API (`https://api.hyperliquid.xyz/info` and

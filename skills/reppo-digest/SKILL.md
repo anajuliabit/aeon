@@ -11,10 +11,15 @@ Read `memory/MEMORY.md` and `memory/topics/reppo.md` for context. If
 You send ONE end-of-run notification for the reppo-swarm chain. You make
 no Reppo CLI calls.
 
-## Inputs (provided in your context via the chain)
+## Inputs (provided in your context via the chain; also on disk as `.outputs/<skill>.md`)
 - `reppo-orchestrator` output — the RUN/SKIP plan and discovered datanets.
-- `reppo-trading-agent` output — decisions plus an appended
-  `## Execution Results` section with on-chain tx outcomes.
+- `reppo-trading-agent` output — mint decisions plus an appended
+  `## Execution Results` section with on-chain mint tx outcomes.
+- `reppo-voter` output — vote decisions (LIKE/DISLIKE per pod) plus its own
+  appended `## Execution Results` section with on-chain vote tx outcomes.
+  This is now the source of all vote activity (the trading-agent no longer
+  votes). If `.outputs/reppo-voter.md` is missing, treat it as "no votes
+  this run."
 
 ## Steps
 
@@ -69,18 +74,20 @@ Rules for the output:
 Run: `./notify "<your digest text>"`
 
 ### 3. Update the ledger
-The `## Execution Results` section appended by `postprocess-reppo.sh` is the
-ONLY source of truth for on-chain activity. A queued intent is NOT a mint.
-Append to `memory/topics/reppo.md`:
+The `## Execution Results` sections appended by `postprocess-reppo.sh` are
+the ONLY source of truth for on-chain activity. A queued intent is NOT a
+mint or a vote. Read BOTH the trading-agent's Execution Results (mints) and
+the voter's Execution Results (votes). Append to `memory/topics/reppo.md`:
 - A "Minted strategies" row ONLY for a mint whose Execution Results line
-  reports a real on-chain success with a tx hash — never for a dry-run,
-  skipped, or failed intent.
-- A "Votes cast" row ONLY for a vote confirmed on-chain the same way.
+  (from `reppo-trading-agent`) reports a real on-chain success with a tx
+  hash — never for a dry-run, skipped, or failed intent.
+- A "Votes cast" row ONLY for a vote whose Execution Results line (from
+  `reppo-voter`) is confirmed on-chain the same way.
 - One "Run history" row: today's date, orchestrator summary, and the counts
   of mints/votes actually confirmed on-chain (0 if postprocess dry-ran or
   skipped), plus the failure count.
-If the trading-agent output has no `## Execution Results` section, treat it
-as "nothing executed on-chain" — write no mint/vote rows.
+If a skill's output has no `## Execution Results` section, treat that skill
+as "nothing executed on-chain" — write no rows for it.
 
 ### 4. Log failures
 If there were no failures, skip this step. Otherwise, for each distinct
