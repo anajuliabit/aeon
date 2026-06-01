@@ -11,14 +11,14 @@
     "last_success": "2026-05-21T12:33:53Z"
   },
   "defi-overview": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-31T12:10:59Z",
     "total_runs": 11,
     "total_successes": 11,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-31T12:03:22Z"
+    "last_dispatch": "2026-06-01T13:03:22Z"
   },
   "competitor-launch-radar": {
     "last_status": "success",
@@ -40,14 +40,14 @@
     "success_rate": 1
   },
   "token-pick": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-31T12:11:46Z",
     "total_runs": 6,
     "total_successes": 6,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-31T12:03:22Z"
+    "last_dispatch": "2026-06-01T13:03:22Z"
   },
   "fetch-tweets": {
     "last_status": "success",
@@ -163,8 +163,8 @@
     "last_error": "okens\":12,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.0005250000000000001,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-opus-4-7\":{\"inputTokens\":9"
   },
   "token-alert": {
-    "last_dispatch": "2026-05-31T12:03:22Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-01T13:03:22Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-31T12:06:01Z",
     "total_runs": 10,
     "total_successes": 10,
@@ -352,14 +352,14 @@
     "last_dispatch": "2026-06-01T09:12:23Z"
   },
   "market-context-refresh": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-31T13:27:58Z",
     "total_runs": 5,
     "total_successes": 5,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-31T13:19:31Z"
+    "last_dispatch": "2026-06-01T13:03:22Z"
   },
   "skill-graph": {
     "last_status": "success",
