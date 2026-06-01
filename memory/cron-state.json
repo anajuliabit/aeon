@@ -303,10 +303,10 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "dispatched",
-    "last_success": "2026-06-01T09:14:08Z",
-    "total_runs": 10,
-    "total_successes": 10,
+    "last_status": "success",
+    "last_success": "2026-06-01T15:21:23Z",
+    "total_runs": 11,
+    "total_successes": 11,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
