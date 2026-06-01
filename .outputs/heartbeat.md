@@ -1,10 +1,17 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote `docs/status.md`.
 
 ## Summary
-- **P0 clean.** All 41 cron-state entries `last_status=success`. `chain:reppo-swarm` 14:00 chain landed 14th-mint `cc41abf64326a29b` on tx `0xcbe53613` (wallet `0x9a1500b4`, fresh window vs prior 13th-mint `dce17be3`). No stuck/dispatched skills, no `consecutive_failures ≥ 3`. Heartbeat self-check ~6h05m, healthy.
-- **P1 clean.** 0 open PRs — 8 merged today (#54-#61: tier-1 enables, oauth.reddit.com for ISS-015, reppo-cli≥0.6.0, dashboard /swarm, HL_TOP_N 5→12, reppo-voter split). 0 urgent issues.
-- **P2.** 7 carry-over issues (ISS-005/007/009/010/011/015/016) — all already deduped in today's morning-brief + 09:13 heartbeat.
-- **P3.** PR #54 enabled 5 new tier-1 skills (deal-flow / reg-monitor / security-digest / unlock-monitor / vuln-scanner) — first-run-pending, within 2x schedule interval, not flagged per spec.
-- **Notify skipped** — all findings deduped against earlier today's logs.
-- **Status page written** → 🟡 WATCH (3 high-severity carry-overs anchor tier). 34 enabled skills tabled, next scheduled run = skill-security-scan @ 16:00 UTC.
-- **Files modified:** `docs/status.md`, `memory/logs/2026-06-01.md`.
+
+**Verdict:** HEARTBEAT_OK · STATUS_PAGE=WATCH
+
+**Checks:**
+- **P0 clean** — all 44 cron-state entries `last_status=success`; no stuck/dispatched; no consecutive_failures ≥ 3; heartbeat self-check ~5h fresh.
+- **P1** — 1 open PR (#62, ~1.4h old, under 24h threshold); 0 urgent issues.
+- **P2** — 8 carry-over issues (ISS-005/007/009/010/011/015/016 + new ISS-017 filed today by skill-security-scan). Four high-severity → triggers WATCH.
+- **P3** — all enabled skills within 2x interval; 5 not-yet-run (autoresearch / operator-scorecard / reg-monitor / unlock-monitor / vuln-scanner) per schedule.
+
+**Notify:** skipped — everything already in today's morning-brief + daily-routine + reppo + 09:13 + 15:25 heartbeat + skill-security-scan logs (full dedup).
+
+**Files changed:**
+- `docs/status.md` — overall 🟡 WATCH, 34 enabled skills tabled, ISS-017 added to open issues, next run = evening-recap @ 21:00 UTC.
+- `memory/logs/2026-06-01.md` — appended 20:00-slot heartbeat entry.
