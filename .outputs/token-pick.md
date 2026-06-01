@@ -1,27 +1,24 @@
-Tmp files left in `.tmp-token-pick/` (sandbox blocked cleanup). Notification is staged and log is appended.
-
 ## Summary
 
-Ran `skills/token-pick/SKILL.md` for 2026-05-31. Both picks cleared MEDIUM+ conviction — no skip-day branch.
+Ran the **token-pick** skill for 2026-06-01. Picked **HOME (defi.app)** for token side at signal 11/10 HIGH conviction. Market side **SKIPPED** — no Polymarket event cleared the 5pp edge gate after dedup blocks.
 
-**Picks**
-- **Token: WLD (Worldcoin)** — HIGH, signal 9/10. $0.333 (+10.9% 24h / +10.6% 7d), mcap $1.12B, vol $347M, vmc 0.31. Catalyst: Oku Trade DeFi aggregator live inside World App + weekly swap-comp WLD rewards drove on-chain activity to 2026 highs. Risk: Santiment FOMO-flag + reward-pull-mechanic decays after comp cohort settles. First time picked.
-- **Market: "MicroStrategy sells any Bitcoin by June 30, 2026?"** — MEDIUM, edge ~6pp. YES 25.75¢, fair ~20%, lean NO. Saylor's "we'll probably sell to fund a dividend" is forward-only; 24,869 BTC bought week of 5-12 to 5-16; 10:1 net-buyer ratio; SEC disclosure lead time for extraordinary-dividend BTC sale points to Q2 earnings in August, not June.
+**Token: HOME (defi.app)** — $0.0475 (+47.8% 24h / +98.5% 7d), mcap $184M, vmc 0.63
+- Score: trending+2, vmc≥0.20+3, RS vs BTC/ETH+2, both>5%+2, 24h+1, 7d+1 = **11/10**
+- Catalyst: V2 precision-bridging + Android launch driving 500k+ active users; 80% of protocol revenue → weekly $HOME buybacks
+- Risk: 882.34M token unlock on June 10 (8.82% of max supply, 9 days out) into already-concentrated supply (top address 69% per Nov 2025 report)
+- Dedup-cleared: XLM/INJ/HYPE/WLD all in 7-day window; LAB skipped on integrity (4th consecutive day, ZachXBT flag); H skipped on +180% 72h vertical blow-off-top
 
-**Dedup notes**
-- Tokens XLM / INJ / HYPE all in 7-day window, none cleared fresh-catalyst gate. LAB skipped 3rd day on ZachXBT insider-supply flag. H (Humanity) tied WLD on score (9/10) but lost on June 25 unlock + late-stage +82% 7d blow-off-top read.
-- MSTR June 30 dedup-clean (5-21 MSTR May 31 pick now 10 days old, outside 7d window) AND fresh catalyst (Saylor's pivot vs his 5-21 walked-back stance).
+**Market: SKIP** — World Cup sub-markets sit within ±1-2pp of bookmaker consensus (Spain 16.75¢ vs +475→17.4%; France 17.05¢ vs +500→16.7%; Germany 5.55¢ vs +1400→6.7%). US x Iran "permanent peace deal by June 7" edge only ~4pp, below 5pp gate. All other dedup-clean markets below $50k liquidity floor or past resolution.
 
-**Files**
-- Staged notification: `.pending-notify/1780229408-token-pick.md` (1,463 chars; sandbox blocks direct `./notify "$(cat ...)"` — post-run delivery step picks it up)
-- Log appended: `memory/logs/2026-05-31.md` with `TOKEN_PICK_DEDUP: WLD | "MicroStrategy sells any Bitcoin by June 30, 2026?"`
-
-**Sources**: cg=ok, dex=ok (junk meme-pair output, cross-source bonus skipped), poly=ok. All curl-direct hits, no WebFetch fallback needed.
-
-**Follow-up**: tmp data files left at `.tmp-token-pick/` (sandbox blocked rm).
+**Files**:
+- Notification staged: `.pending-notify/1780319517-token-pick.md` (post-run delivery, same MEMORY.md-noted sandbox pattern)
+- Log appended: `memory/logs/2026-06-01.md` (Token Pick section + `TOKEN_PICK_DEDUP: HOME | SKIP` grep marker)
+- Sources: cg=ok, dex=ok (low signal — DexScreener trending returned only scam "TREND" tokens, no cross-confirm value), poly=ok
 
 Sources:
-- [Worldcoin Surges 15% as On-Chain Activity Hits 2026 Highs Amid DeFi Integration](https://blockonomi.com/worldcoin-surges-15-as-on-chain-activity-hits-2026-highs-amid-defi-integration)
-- [Worldcoin's FOMO Rally Cracks After On-Chain Activity Explodes](https://www.cryptbull.net/2026/05/28/worldcoins-fomo-rally-cracks-after-on-chain-activity-explodes/)
-- [Strategy (MSTR) news: Company purchased more than $2 billion of BTC last week](https://www.coindesk.com/markets/2026/05/18/strategy-purchases-nearly-25-000-more-bitcoin-worth-more-than-usd2-billion)
-- [Is the MicroStrategy Bitcoin Binge Over? What Saylor's Pause Means](https://finance.yahoo.com/markets/crypto/articles/microstrategy-bitcoin-binge-over-saylor-191404021.html)
+- [DeFi.app price prediction (CoinMarketCap)](https://coinmarketcap.com/cmc-ai/defi-app/price-prediction/)
+- [DeFi.app token unlocks & vesting (CryptoRank)](https://cryptorank.io/price/defi-app/vesting)
+- [Humanity Protocol token unlock (KuCoin)](https://www.kucoin.com/news/articles/humanity-protocol-token-unlock-strategic-market-supply-dynamics-for-h-holders)
+- [Falcon Finance institutional fUSD launch (MEXC)](https://www.mexc.com/news/1019409)
+- [2026 World Cup odds (FOX Sports)](https://www.foxsports.com/stories/soccer/world-cup-2026-champion-odds)
+- [US-Iran tentative 60-day truce MOU (Axios)](https://www.axios.com/2026/05/28/iran-peace-deal-trump-approval)
