@@ -1,18 +1,22 @@
-Goal Tracker run complete.
+I executed the goal-tracker skill. Six goals parsed from `memory/MEMORY.md ## Current Goals`, evidence gathered from logs (last 30 days), `gh pr list` (61 PRs, all merged), `gh issue list` (empty), and `memory/cron-state.json` (41 entries, all success).
 
 ## Summary
 
-Tracked **5 distinct goals** in `memory/MEMORY.md` (after deduping 4 repeat entries that the consolidation didn't collapse). No status transitions since yesterday's run — `memory/MEMORY.md` left untouched per skill §7.
+**Status distribution: 1 AT_RISK, 5 ON_TRACK, 0 NEEDS_ATTENTION, 0 BLOCKED, 0 DONE** — overall ↑ improving.
 
-**Status breakdown:**
-- **AT RISK (1):** Cleanup chain-runner scratch — 0 evidence in logs/git/PRs; the 3 `.tmp-build-*` files are already gone from disk but `.candidates.json` remains. Action: `git rm .candidates.json` or add to `.gitignore`.
-- **ON TRACK (4):** Close ISS-009 fully (~30 activity/14d; 6th recurrence yesterday, defence-in-depth still pending), Assign 14 unassigned reppo datanets (11th day surfaced), INDEX bookkeeping (ISS-007 + ISS-010 close queued), ISS-015 mitigation (PR #56 open routing through `oauth.reddit.com`).
+Key signals:
+- **iss-015** PR #56 (oauth.reddit.com route) merged today 13:12Z — first test on tonight's 17:30Z vibecoding run
+- **iss-016** PR #52 (vote-filter expanded to own mints) merged 5-31 — issue still open in INDEX, prefetch own_pod_ids count:0 carries 5 runs under self-recognition workaround
+- **INDEX bookkeeping** 2/4 cleared (iss-013 + iss-014 flipped resolved in INDEX.md); iss-007 + iss-010 still queued
+- **iss-009 defence-in-depth** 34 activity/14d but specific deliverables (codify emit-in-assistant-text in reppo-orchestrator SKILL.md + chain-runner `continue`→`break`) still pending
+- **14 unassigned datanets** 12th consecutive day surfaced unchanged — no concrete pick
+- **cleanup-chain-runner-scratch** AT_RISK — `.candidates.json` + `.tmp_strategy_input.txt` still at repo root; action proposed: commit `rm` + `.gitignore` entries
+
+No DONE flips (conservatively held iss-015 + iss-016 at ON_TRACK ↑improving since INDEX rows still open and deliverables partially shipped — per skill constraint "prefer false negatives over false positives").
 
 **Files written:**
-- `memory/goal-state.json` — refreshed snapshot (7 slug entries to preserve continuity with the 5 dedup'd goals).
-- `memory/logs/2026-05-31.md` — appended `### goal-tracker` entry.
-- `.pending-notify/1780251600-goal-tracker.md` — staged report for post-run notify delivery (sandbox blocked `./notify "$(cat ...)"` arg-passing, same pattern as every other skill today).
+- `memory/goal-state.json` — 7-key prior collapsed to 6-key (3 iss-009 slugs merged; iss-016 added new)
+- `.pending-notify/1780342502-goal-tracker.md` — full report staged for post-run delivery
+- `memory/logs/2026-06-01.md` — appended `### goal-tracker` log entry
 
-**Sources:** logs=ok, git=shallow (1 commit in clone — PR list used as code-activity proxy), gh_pr=ok, gh_issue=ok (0 results — repo has no issues), cron-state=ok.
-
-Exit: GOAL_TRACKER_OK.
+**MEMORY.md not rewritten** — no status transitions vs prior snapshot.
