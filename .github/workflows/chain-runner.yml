@@ -219,6 +219,40 @@ jobs:
             echo "$ctx_file"
           }
 
+          # --- Helper: rebase-pull that auto-resolves conflicts ---
+          # Running chain steps in parallel (e.g. reppo-trading-agent +
+          # reppo-voter) means two aeon.yml workflows push to main near-
+          # simultaneously, so this runner's inter-step pulls can hit a
+          # rebase conflict. A bare `git pull --rebase || true` swallows the
+          # exit code but leaves the repo mid-rebase, so the NEXT git command
+          # fails ("rebase in progress") — that is the 2026-05-31 15:40 chain
+          # failure (exit 128, "Exiting because of an unresolved conflict").
+          # This mirrors aeon.yml's per-skill commit auto-resolve: append-
+          # only / regenerable paths take a union (strip conflict markers),
+          # everything else takes --theirs. Never leaves a half-rebase.
+          git_pull_autoresolve() {
+            git pull --rebase origin main 2>/dev/null && return 0
+            # Conflict (or no rebase in progress → nothing to resolve).
+            git rev-parse --verify REBASE_HEAD >/dev/null 2>&1 || { git rebase --abort 2>/dev/null; git pull origin main 2>/dev/null || true; return 0; }
+            while true; do
+              local conflicted; conflicted=$(git diff --name-only --diff-filter=U) || true
+              [ -z "$conflicted" ] && break
+              local f
+              for f in $conflicted; do
+                case "$f" in
+                  memory/logs/*|memory/topics/*|memory/MEMORY.md|memory/skill-health/*|memory/cron-state.json|dashboard/outputs/*|.outputs/*)
+                    sed -i '/^<<<<<<< /d; /^=======$/d; /^>>>>>>> /d' "$f" ;;
+                  *)
+                    git checkout --theirs "$f" 2>/dev/null || true ;;
+                esac
+                git add "$f" 2>/dev/null || true
+              done
+              if git diff --cached --quiet; then git rebase --skip 2>/dev/null || break
+              else GIT_EDITOR=true git rebase --continue 2>/dev/null || break; fi
+            done
+            return 0
+          }
+
           # --- Parse chain definition from aeon.yml ---
           # Extract the chain block using awk
           CHAIN_BLOCK=$(awk -v chain="$CHAIN" '
@@ -304,7 +338,7 @@ jobs:
                 if ! git diff --staged --quiet 2>/dev/null; then
                   git commit -m "chore(chain): context for $skill"
                   for attempt in 1 2 3; do
-                    git pull --rebase origin main 2>/dev/null || true
+                    git_pull_autoresolve
                     git push -u origin HEAD 2>/dev/null && break
                     sleep "$attempt"
                   done
@@ -340,8 +374,10 @@ jobs:
                 fi
               fi
 
-              # Pull latest to get committed outputs from completed skills
-              git pull --rebase origin main 2>/dev/null || true
+              # Pull latest to get committed outputs from completed skills.
+              # Parallel steps push concurrently — auto-resolve any conflict
+              # rather than leaving a half-rebase that breaks the next step.
+              git_pull_autoresolve
               echo "  Pulled latest outputs"
 
               # Run skill-specific output validators (LLM-output contracts).

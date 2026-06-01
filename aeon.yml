@@ -264,6 +264,7 @@ skills:
   # --- Reppo swarm (run via the reppo-swarm chain, not standalone) ---
   reppo-orchestrator: { enabled: false }
   reppo-trading-agent: { enabled: false }
+  reppo-voter: { enabled: false }
   reppo-digest: { enabled: false }
 
   # --- Fallback (must be last) ---
@@ -307,10 +308,12 @@ chains:
     on_error: continue
     steps:
       - skill: reppo-orchestrator
-      - skill: reppo-trading-agent
-        consume: [ reppo-orchestrator ]
+      # mint and vote are independent concerns — run concurrently so voting
+      # happens every trigger regardless of whether anything mints. Both read
+      # the orchestrator's committed .outputs/reppo-orchestrator.md from disk.
+      - parallel: [ reppo-trading-agent, reppo-voter ]
       - skill: reppo-digest
-        consume: [ reppo-orchestrator, reppo-trading-agent ]
+        consume: [ reppo-orchestrator, reppo-trading-agent, reppo-voter ]
 
 # Default model for all skills. Override per-run via workflow_dispatch.
 # Options: claude-opus-4-7, claude-sonnet-4-6, claude-haiku-4-5-20251001
