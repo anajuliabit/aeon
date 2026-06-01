@@ -222,3 +222,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-01,skill-freshness,claude-sonnet-4-6,191,26424,1185528,65263
 2026-06-01,token-pick,claude-opus-4-7,2354,30939,3182959,145359
 2026-06-01,reppo-orchestrator,claude-opus-4-7,12,3918,414121,63927
+2026-06-01,reppo-trading-agent,claude-opus-4-7,142,64671,14793791,191516
