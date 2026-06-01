@@ -215,3 +215,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-31,skill-update-check,claude-sonnet-4-6,7,1233,198546,34861
 2026-05-31,heartbeat,claude-opus-4-7,12,10604,582160,90881
 2026-05-31,evening-recap,claude-sonnet-4-6,11,13533,561443,55629
+2026-06-01,reppo-orchestrator,claude-opus-4-7,17,3926,774775,53427
