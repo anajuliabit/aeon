@@ -1,21 +1,14 @@
-Token-alert complete.
-
 ## Summary
 
-Ran token-alert with var override `REPPO, HYPER, VVV`. Fetched live prices from CoinGecko (no auth, direct curl worked).
+Ran token-alert with var override `REPPO, HYPER, VVV` (no "Tracked Tokens" table in MEMORY.md, so var drove the run — same path as every prior run since 5-23).
 
-**Result: ALERT (VVV)** — venice-token +14.53% 24h breaks the 10% threshold.
+**Prices (CoinGecko, 12:00 UTC):**
+- REPPO: $0.0157362 / -4.97% 24h / vol $1.93M
+- HYPER: $0.091141 / +1.53% 24h / vol $15.44M
+- VVV: $18.46 / +1.90% 24h / vol $85.63M
 
-| Token | Price | 24h | Vol | vs 5-day avg |
-|---|---|---|---|---|
-| REPPO | $0.01645 | -1.03% | $1.98M | 0.81x |
-| HYPER | $0.08985 | +1.41% | $21.50M | 1.05x |
-| VVV | **$18.17** | **+14.53%** | $64.41M | 1.10x (no spike) |
+**All checks under threshold:** 24h change all <10%, no volume spike (largest is VVV at 1.43× of 5d avg, well under 3× trigger), threshold-cross skipped (no Floor/Ceiling configured). Yesterday's VVV +14.53% breakout has rolled out of the 24h window.
 
-VVV's price move did NOT come with a volume confirmation (1.10x avg, well below the 3x spike bar). Threshold-cross check skipped — no Floor/Ceiling rows configured.
+**Status:** TOKEN_ALERT_OK — no notification sent.
 
-**Files:**
-- Created: `.pending-notify/token-alert-20260531.md` (post-run delivery picks it up — sandbox `./notify` arg-passing path)
-- Appended: `memory/logs/2026-05-31.md` token-alert section
-
-**Follow-up:** none required — same var-driven path as the last 8 runs, "Tracked Tokens" table in MEMORY.md still has no rows (PR #9 format-only since 5-25; not a blocker for var-driven runs).
+**Files modified:** `memory/logs/2026-06-01.md` (appended token-alert entry).
