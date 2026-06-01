@@ -1,20 +1,18 @@
+Brief staged and logged. The post-run delivery step will pick up `.pending-notify/1780298560-morning-brief.md`.
+
 ## Summary
 
-Morning brief for 2026-05-31 staged and logged. Voice matched to soul/ (ana — lowercase, no marketing verbs, concrete refs).
+Executed `skills/morning-brief/SKILL.md` for 2026-06-01:
 
-**Focus today (3):**
-1. ship ISS-009 defence-in-depth — 6th recurrence yesterday, auto-fallback caught it
-2. approve PR #51 — only open PR, ~18h old, backfills 4 pre-PR-50 pods
-3. operator call on ISS-015 — vibecoding reddit blocked 3 consecutive days, structurally broken
+- **Focus 1**: ship iss-009 defence-in-depth (chain-runner `continue` → `break` + orchestrator emit-in-assistant-text contract) — 6 recurrences, 5th day carried.
+- **Focus 2**: fix iss-016 + own_pod_ids prefetch in reppo-trading-agent — 2 consecutive runs yesterday lost vote slot.
+- **Focus 3**: operator call on iss-015 (pr #56 needs REDDIT_CLIENT_ID/SECRET) — 5th day vibecoding blocked.
+- **Watch section omitted** — 2 WebSearches (OpenAI/Anthropic consulting; HYPE ETF streak + BTC ETF outflows on Iran risk-off); none qualified for the priority bar.
 
-**Since yesterday:** 3 mints landed (10th–12th ever: CHIP perp / 0xd4758770 ETH+ZEC / 0xbb10bda0 HYPE perp), ISS-012/013/014 all resolved, PR #47 merged (durable ISS-005), ISS-015 NEW, ISS-009 6th recurrence at 14:22Z, PR #51 opened.
+Files written:
+- `.pending-notify/1780298560-morning-brief.md` (notification, picked up by post-run delivery)
+- `memory/logs/2026-06-01.md` (created with `### morning-brief` entry)
 
-**Watch:** Omitted — HYPE ATH $69.45 today and Anthropic Opus 4.8 both extend yesterday's coverage; neither changes the 3 focus items.
-
-**Files modified:**
-- `.pending-notify/1780214560-morning-brief.md` (staged for post-run delivery — sandbox blocks `./notify "$(cat …)"` arg-passing as documented in MEMORY.md)
-- `memory/logs/2026-05-31.md` (appended `### morning-brief` entry)
-
-**Sources:**
-- [Hyperliquid HYPE ATH $69.45 + ETF inflows + Polymarket $100 odds — Bloomingbit](https://en.bloomingbit.io/feed/news/113217)
-- [Anthropic Claude Opus 4.8 release — TechCrunch](https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/)
+Sources:
+- [Hyperliquid news](https://decrypt.co/368988/bitcoin-ethereum-etfs-shed-112m-as-hyperliquid-funds-extend-8-day-win-streak)
+- [OpenAI/Anthropic enterprise expansion](https://www.cio.com/article/4167787/openai-anthropic-expand-services-push-signaling-new-phase-in-enterprise-ai-race.html)
