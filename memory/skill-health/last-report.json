@@ -1,15 +1,18 @@
 {
   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "last_notified_at": "2026-05-31T18:21:00Z",
-  "last_run_at": "2026-05-31T18:21:00Z",
+  "last_notified_at": "2026-06-01T19:12:05Z",
+  "last_run_at": "2026-06-01T19:12:05Z",
   "classification": {
     "critical": [],
     "degraded": [],
     "flapping": [],
     "warning": [],
-    "healthy_count": 27,
+    "healthy_count": 29,
     "no_data": [
-      "operator-scorecard"
+      "operator-scorecard",
+      "unlock-monitor",
+      "reg-monitor",
+      "vuln-scanner"
     ]
   }
 }
