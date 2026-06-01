@@ -194,10 +194,10 @@
   },
   "goal-tracker": {
     "last_dispatch": "2026-06-01T19:11:07Z",
-    "last_status": "dispatched",
-    "last_success": "2026-05-31T18:24:16Z",
-    "total_runs": 10,
-    "total_successes": 10,
+    "last_status": "success",
+    "last_success": "2026-06-01T19:16:38Z",
+    "total_runs": 11,
+    "total_successes": 11,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
