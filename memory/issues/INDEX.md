@@ -11,6 +11,7 @@
 | ISS-011 | Reppo vote write reverts with "nonce too low" after sibling votes land same batch | medium | unknown | 2026-05-29 | reppo-trading-agent, reppo-digest |
 | ISS-015 | vibecoding-digest can't reach Reddit — prefetch + WebFetch both blocked, 3 consecutive days | high | sandbox-limitation | 2026-05-30 | vibecoding-digest |
 | ISS-016 | Reppo vote dry-run fails CANNOT_VOTE_FOR_OWN_POD when trading-agent votes LIKE on its own mint | medium | prompt-bug | 2026-05-31 | reppo-trading-agent, reppo-digest |
+| ISS-017 | chain-runner.yml interpolates `${{ inputs.chain }}` directly into `run:` shell blocks at lines 41 + 416 (2026-04-11 incident pattern class) | high | prompt-bug | 2026-06-01 | chain-runner |
 
 ## Resolved
 
