@@ -1,20 +1,17 @@
 ## Summary
 
-Ran `fetch-tweets` skill with `var=@moonwell OR @reppo OR @sherwoodagent OR WOOD OR mamo`.
+Ran `skills/fetch-tweets/SKILL.md` with `var=@moonwell OR @reppo OR @sherwoodagent OR WOOD OR mamo`.
 
-**Outcome: `FETCH_TWEETS_EMPTY` (legitimate-empty, no notification sent)** — third consecutive day with the same result.
+**Outcome: FETCH_TWEETS_EMPTY (curation-floor) — no notification sent.**
 
-**What happened:**
-- Path A (cache `.xai-cache/fetch-tweets.json`) returned 7 candidates from Grok's `x_keyword_search` over 2026-05-30 → 2026-05-31.
-- All 7 are substring-noise: "WOOD" matched hard-cider tradition / NBA "touching wood" / Japanese morning post / US-flag emoji; "mamo" matched Japanese Detective Conan and a no-engagement Mamo-handle link-only post.
-- Grok response itself stated: *"No posts directly referencing @moonwell, @reppo, or @sherwoodagent appeared."*
-- Applied step-6 curation bar (drop <5 engagement unless unique angle; topical relevance): 0/7 passed.
+- **Source path:** cache (`.xai-cache/fetch-tweets.json` was prefetched; no curl/WebSearch fallback needed).
+- **Candidates returned:** 10. Grok itself flagged at the top of the response: *"No highly relevant posts about @moonwell, @reppo, or @sherwoodagent appeared in the results."*
+- **Dedup vs SEEN_TWEETS:** 0 matches against recent `memory/logs/` — none of the candidates had ever been seen.
+- **Curation:** zero candidates pass the relevance bar. The bare tokens `WOOD` and `mamo` collided with Minecraft wood-types, a Coastal Football coach, Natalie Wood, "morning wood", and Japanese accounts. The two with ≥5 engagement (@popp4_ Minecraft, @mamo_fm Arabic "DMs open") still carry no @moonwell / @reppo / @sherwoodagent / $WOOD / $MAMO angle.
+- **No notification** (skill step 6c — "quality over quantity, do not pad").
 
-**Files modified:**
-- `memory/logs/2026-05-31.md` — appended fetch-tweets log entry with per-candidate breakdown and structural carryover note.
+**Files written:**
+- `memory/logs/2026-06-01.md` — appended `### fetch-tweets` log entry with candidates, collision breakdown, and rationale.
+- `memory/fetch-tweets-seen.txt` — created with the 10 candidate URLs so tomorrow's run doesn't re-curate the same noise.
 
-**Files not modified:**
-- `memory/fetch-tweets-seen.txt` — remains absent (no new surfaced tweets to record, mirroring 5-30 behavior).
-- No `.pending-notify/` staged (legitimate-empty per skill step 4).
-
-**Follow-up (carried from 5-30, unchanged):** the bare keywords `WOOD` / `mamo` in the query map to generic-word noise in Grok x_search. Structural fix is an operator edit to `aeon.yml` to scope to `@MoonwellDeFi OR @Mamo_agent OR @reppo` — same recommendation 3 days running.
+**Recommendation (not filed as ISS — works as designed):** narrow the var in `aeon.yml` to use cashtag form `$WOOD` / `$MAMO` instead of bare `WOOD` / `mamo` — the `$` prefix would filter out wood-types / Natalie-Wood / morning-wood / Japanese mamo handles at the search layer.
