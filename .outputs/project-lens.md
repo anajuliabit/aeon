@@ -20,3 +20,16 @@ Sources:
 - [Sherwood Protocol docs](https://docs.sherwood.sh/)
 - [Complete 2026 Guide to AI in Global Custody](https://www.globalcustody.pro/p/the-complete-2026-guide-to-ai-in-global-custody)
 - [aaronjmars/aeon — GitHub](https://github.com/aaronjmars/aeon)
+Executed the `project-lens` skill with operator override `var=sherwood.sh`. Wrote an industry-comparison article framing Aeon (cron + bash + git) and Sherwood (ERC-4626 vault + optimistic governance) as two stacks for the same agent-safety primitive: a seam between proposal and signed execution.
+
+**Files created:**
+- `articles/project-lens-2026-06-01.md` — 934 words, title "the seam between proposal and execution," 4 inline external citations, 8 specific Aeon references, all 10 Phase 6 self-edit gates passed first try
+- `memory/project-lens-angles.md` — first-run seed of the angle-history log (was absent)
+- `.pending-notify/1780334045-project-lens.md` — notification staged for post-run delivery (sandbox arg-passing pattern)
+
+**Files modified:**
+- `memory/logs/2026-06-01.md` — appended `## Project Lens` entry with full Phase-by-Phase trace
+
+**Thesis (28 words, falsifiable):** mandate-over-custody is a property of process separation, not cryptography — Sherwood and Aeon implement the same proposal/execution seam, one as a vault, one as a cron job, both work.
+
+**Follow-up:** none for this skill. The article makes a falsifiable forward claim ("the runtime camp will discover this in a postmortem") that's worth re-reading in ~6 months when the next round of agent-runtime postmortems lands.
