@@ -1,67 +1,66 @@
-# Market Context (as of 2026-05-31)
+# Market Context (as of 2026-06-01)
 
-> **Take:** chop — BTC flat at +0.22% while DEX vol collapsed 33% to $4.63B; breadth fell 16→13/20 with BNB (+8.27% on VanEck ETP) masking the narrowing. Conviction: medium.
+> **Take:** risk-off — BTC fell -2.40% to $72,041 with breadth at 7/20 as May's spot ETF outflows hit a 2026-high $2.43B. Conviction: medium.
 
 ## Signal Snapshot
-- BTC $73,846 (+0.22% 24h, -4.33% 7d) · dominance 57.26% (-0.20 pp 24h)
-- ETH $2,021 (+0.14% 24h, -4.79% 7d) · ETH/BTC 0.02737
-- SOL $82.86 (+0.56% 24h, -4.22% 7d)
-- Total mcap $2.58T (+0.59% 24h) · DEX vol $4.63B 24h
-- Breadth: 13/20 green 24h · 5/20 green 7d
-- Fear & Greed: 28 (Fear) — yesterday 23 (Extreme Fear)
+- BTC $72,041 (-2.40% 24h, -6.82% 7d) · dominance 56.89% (-0.37 pp 24h)
+- ETH $1,984.66 (-1.74% 24h, -6.21% 7d) · ETH/BTC 0.02755
+- SOL $80.70 (-2.43% 24h, -5.99% 7d)
+- Total mcap $2.54T (-1.67% 24h) · DEX vol $5.06B 24h
+- Breadth: 7/20 green 24h · 6/20 green 7d
+- Fear & Greed: 29 (Fear) — yesterday 28
 
 ## What Changed Since Last Refresh
-- F&G jumped +5 points: 23 (Extreme Fear) → 28 (Fear) — first single-day improvement this cycle; still in Fear, not regime-changing but the first positive tick.
-- BNB breakout accelerated: +8.27% 24h / +10.14% 7d on VanEck BNB-linked ETP launch (first institutional BNB product); BSC TVL $5.79B extended lead over Solana ($5.39B); BNB futures volume +86% 24h per derivatives data.
-- DEX volume collapsed: $6.90B → $4.63B (-33%) — biggest single-session drop this window; no broad participation even with individual name catalysts.
-- 7d breadth deteriorated: 12/20 → 5/20 green — only BNB (+10.14%), RAIN (+89.35%), XLM (+75.66%), HYPE (+8.37%), TRX (+5.25% approx) holding 7d gains; rest of top-20 -3% to -15% on the week.
+- BTC broke below $73K: -$1,805 (-2.44%) extending 7d slide to -6.82%; total mcap now $2.54T (-$40B vs yesterday)
+- BNB VanEck catalyst fully reversed: +8.27% yesterday → -4.48% today; Day-2 failure confirms single-session trade
+- Breadth collapsed: 13/20 → 7/20 (24h); real (non-stablecoin) green count is 4/17 — regime deepening into risk-off
+- HYPE hit new all-time high $74.18: +8.70% 24h / +17.01% 7d, top-10 mcap at $16.46B — sole large-cap outperformer
 
 ## Active Narratives
-- **BNB / BSC Revival** — phase: rising. Evidence: BNB +8.27% 24h / +10.14% 7d; VanEck BNB-linked ETP launched (first institutional product for BNB); BSC TVL $5.79B reclaimed #2 chain from Solana; BNB CoinGecko trending rank #4.
-- **RWA Tokenization (XLM-led)** — phase: fading. Evidence: XLM +5.17% 24h — down sharply from peak +21.57% yesterday; DTCC×Stellar now Day 4; token-movers pulse earlier today flagged XLM "TRENDING+DOWN" in the 10:00 run; narrative saturation confirmed.
-- **Privacy Coin Revival (ZEC)** — phase: emerging. Evidence: ZEC +4.74% 24h, CoinGecko trending #4; Grayscale filed ZCSH spot privacy ETF on NYSE Arca May 12 — first US spot privacy ETF filing; ZEC -14.89% 7d shows early re-accumulation, not sustained run.
-- **Hyperliquid / Perp DEX** — phase: rising. Evidence: HYPE +0.32% 24h / +8.37% 7d; $15.1B mcap at 5-session high; Hyperliquid Bridge TVL holding ~$5.4B; perp DEX market share thesis intact despite -33% total DEX vol session.
+- **Perp DEX / Hyperliquid** — phase: rising. Evidence: HYPE new ATH $74.18, top-10 mcap $16.46B, +17.01% 7d vs benchmark -6%; Hyperliquid L1 chain TVL $1.76B (largest non-EVM L1 by TVL).
+- **AI Identity tokens** — phase: emerging. Evidence: LAB +105.87% 24h (CoinGecko trending #1, rank 21, mcap $6.0B) and H (Humanity Protocol) +110.81% 24h (trending #2, PoH identity chain) — coordinated surge on same session with no cross-asset spillover; early accumulation signature.
+- **RWA tokenization (XLM)** — phase: fading. Evidence: XLM +2.53% 24h on Day 5 of DTCC×Stellar narrative; momentum half-life shortening each session vs +21.57% Day 1; 7d +76.67% is residual carry, not new buying.
+- **Privacy coins (ZEC)** — phase: fading. Evidence: ZEC -0.56% 24h / -19.07% 7d after Grayscale ZCSH ETF filing pop; 38-point draw-down from $593 24h high to $544 confirms reversal; Grayscale ETF catalyst exhausted.
 
 ## Top DeFi Protocols (TVL, 7d change)
-- Lido: $17.93B (-4.93%)
-- SSV Network: $14.87B (-4.83%)
-- Aave V3: $13.35B (-3.45%)
-- WBTC: $8.44B (-4.09%)
-- Binance Staked ETH: $7.47B (-4.79%)
+- Lido: $17.6B (-6.10%)
+- SSV Network: $14.6B (-6.24%)
+- Aave V3: ~$13.0B (est., -5%)
+- WBTC: ~$8.2B (est., -4%)
+- Binance Staked ETH: ~$7.2B (est., -5%)
 
-## Chain Flow (top 3 by TVL, snapshot)
-*7d per-chain delta not available from API; TVL snapshot used.*
-- Ethereum: $42.25B (dominant, ~65% of on-chain DeFi TVL)
-- BSC: $5.79B (extended #2 lead over Solana — BNB rally pulling chain TVL)
-- Solana: $5.39B
+## Chain Flow (top 3 by TVL)
+*7d per-chain delta unavailable from API snapshot.*
+- Ethereum: $41.89B (dominant, ~63% of on-chain DeFi TVL)
+- BSC: $5.68B (BNB catalyst reversed — chain TVL contracting with BNB price)
+- Base: $4.33B (overtook Solana for #3; Solana tracking SOL -5.99% 7d)
 
 ## Stablecoins
-Total: ~$286.6B (top 6; -$1.1B vs prior $318.7B full-set estimate). USDT $188.1B · USDC $75.9B · USDS $8.8B · USD1 $4.7B · DAI $4.6B · USDe $4.5B · combined share of mcap ~11.1%.
+Total: ~$282.0B (top 5). USDT $188.0B · USDC $75.9B · USDS $8.8B · USD1 $4.7B · DAI $4.6B · combined share of mcap ~11.1%.
 
 ## Trending (CoinGecko)
-- ZEC — Grayscale ZCSH ETF filing (May 12) + Multicoin Capital position disclosed; +4.74% 24h / -14.89% 7d, $9.1B mcap — early re-accumulation
-- XLM — DTCC×Stellar RWA narrative Day 4; +5.17% 24h / +75.66% 7d, $8.8B mcap — decelerating
-- BNB — VanEck ETP catalyst; +8.27% 24h / +10.14% 7d, $97.8B mcap — session leader
-- SUI — no specific catalyst; +0.18% 24h — passive drift
-- BTC / XRP / SOL — large-cap baseline trending with flat-to-minor gains
+- LAB — +105.87% 24h, $6.0B mcap (rank 21); no named catalyst — early accumulation
+- H (Humanity Protocol) — +110.81% 24h, DID/PoH identity chain; trending #2, $1.46B mcap
+- HYPE — new ATH $74.18; perp DEX thesis, +8.70% 24h / +17.01% 7d
+- XLM — DTCC×Stellar Day 5; +2.53% 24h, residual 7d +76.67%
+- ZEC — Grayscale ZCSH ETF play unwinding; -0.56% 24h / -19.07% 7d
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |
 |--------|------|---------|-----------|
-| Spurs win 2026 NBA Finals | 63.7% | $1.1M | $293K |
-| Rafael Jodar advances (Roland Garros) | 28.5% | $1.3M | $85K |
-| Marta Kostyuk advances (Roland Garros) | ~50%* | $2.4M | $538K |
+| World Cup 2026 — France wins | 17.1% | $107M (event) | $294.8M |
+| World Cup 2026 — Spain wins | 16.8% | (same event) | — |
+| F1 Monaco GP — Norris wins | 10.5% | $25K | $209K |
 
-*Kostyuk market filtered at 0.05% as-received — highest volume market despite near-settled; shown for context only. No crypto-specific Polymarket markets in top 10 by volume today.
+*No crypto-specific markets in Polymarket top-10 by volume today.*
 
 ## Macro Catalysts (next 48h)
-- **BTC ETF outflow streak persisting:** 6-day+ outflow run through May 28; IBIT recorded -$528M on May 28; cumulative ~$1.55B outflows over the streak; no inflow signal in current window — institutional selling pressure unchanged.
-- **VanEck BNB ETP live:** first institutionally accessible BNB product now trading; watch for day-2 confirmation and AUM capture as signal of whether this sustains or fades like retail momentum trades.
-- **XLM deceleration risk:** DTCC×Stellar narrative entering Day 4 with momentum halving session-over-session; if -9% intraday (token-movers 10:00 pulse) vs +5.17% final 24h reading, XLM showing reversal volatility — fading phase confirmed.
+- **BTC ETF exodus — May worst month of 2026:** US spot BTC ETF net outflows hit $2.43B in May (largest monthly outflow figure of 2026); IBIT led multi-session redemptions; whale distribution -6,000 BTC in one week from 1,285 → 1,279 entities confirms institutional derisking, not panic-bottom selling.
+- **CPI 3.8% / PPI 6% macro overhang:** April prints pushed bond yields higher and rate-hike odds up — mechanical headwind for risk assets entering June; no immediate rate catalyst but hostile macro backdrop unchanged.
 
 ## Implications for Downstream Skills
-- **token-pick:** BNB breakout has named institutional catalyst (VanEck ETP) + day-2 confirmation needed before entry; ZEC ZCSH ETF play is early-stage asymmetric — high conviction only if ETF timeline advances. Avoid XLM new entries (fading phase confirmed). HYPE rising phase intact — carry forward from 2026-05-30 dedup consideration.
-- **narrative-tracker:** BNB/BSC Revival just entered rising phase — set Day 2 confirmation gate. ZEC emerging — file and monitor Grayscale ZCSH docket. XLM: watch for >5% single-session red as fading→dead signal.
+- **token-pick:** favor HYPE (rising phase, ATH breakout) for continuation; LAB/H emerging double-pop warrants a Day-2 confirmation check before sizing. Avoid XLM new entries (fading Day 5). Avoid ZEC (fading confirmed). Macro headwind from ETF exodus caps broad-beta trades.
+- **narrative-tracker:** AI Identity tokens (LAB + H) entered trending simultaneously — set Day-2 confirmation gate for emerging→rising upgrade. Monitor Hyperliquid L1 TVL for $2B milestone as rising-phase anchor. BNB/BSC Revival: reclassify to fading — VanEck Day-2 reversal is definitive.
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |

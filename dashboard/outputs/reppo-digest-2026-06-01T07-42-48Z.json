@@ -1,0 +1,188 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "context_heading",
+        "separator_1",
+        "mint_section",
+        "separator_2",
+        "votes_section",
+        "separator_3",
+        "datanets_alert"
+      ]
+    },
+    "context_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "reppo-swarm · 1st run · datanet 9 · 0 on-chain",
+        "level": "h2"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "mint_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint_heading",
+        "mint_table",
+        "mint_note"
+      ]
+    },
+    "mint_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "mint",
+        "level": "h3"
+      }
+    },
+    "mint_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "metric",
+          "count"
+        ],
+        "rows": [
+          [
+            "fresh",
+            "0"
+          ],
+          [
+            "ledger-dedup",
+            "10"
+          ],
+          [
+            "spot-mix skip per 10th-mint precedent",
+            "1"
+          ],
+          [
+            "neg-pnl reject",
+            "2"
+          ],
+          [
+            "floor<20",
+            "4"
+          ],
+          [
+            "zero-close",
+            "4"
+          ],
+          [
+            "empty caches",
+            "6"
+          ]
+        ]
+      }
+    },
+    "mint_note": {
+      "type": "Text",
+      "props": {
+        "text": "margin-top-30 in week window fully exhausted vs ledger",
+        "variant": "muted"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "votes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "votes_heading",
+        "votes_stats"
+      ]
+    },
+    "votes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "votes",
+        "level": "h3"
+      }
+    },
+    "votes_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_fresh",
+        "votes_epoch_group"
+      ]
+    },
+    "votes_fresh": {
+      "type": "Stat",
+      "props": {
+        "label": "fresh",
+        "value": "0"
+      }
+    },
+    "votes_epoch_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_epoch_summary",
+        "votes_reason_1",
+        "votes_reason_2"
+      ]
+    },
+    "votes_epoch_summary": {
+      "type": "Text",
+      "props": {
+        "text": "epoch-99 survivors all blocked: 5",
+        "variant": "body"
+      }
+    },
+    "votes_reason_1": {
+      "type": "Text",
+      "props": {
+        "text": "3 own mints (462/463/478, iss-016)",
+        "variant": "caption"
+      }
+    },
+    "votes_reason_2": {
+      "type": "Text",
+      "props": {
+        "text": "2 already voted yesterday (466/467)",
+        "variant": "caption"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "14 datanets unassigned",
+        "message": "12th consecutive day surfaced",
+        "type": "warning"
+      }
+    }
+  }
+}

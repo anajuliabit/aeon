@@ -1,0 +1,56 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "vibecoding-digest"
+      },
+      "children": [
+        "alert_error",
+        "sep1",
+        "details_stack"
+      ]
+    },
+    "alert_error": {
+      "type": "Alert",
+      "props": {
+        "title": "VIBECODING_DIGEST_ERROR",
+        "message": "All 3 reddit endpoints failed (prefetch + webfetch)",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue_ref",
+        "action_required"
+      ]
+    },
+    "issue_ref": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-015 day 4",
+        "variant": "destructive"
+      }
+    },
+    "action_required": {
+      "type": "Text",
+      "props": {
+        "text": "Action required: Operator call on authed oauth.reddit.com or alt source",
+        "variant": "lead"
+      }
+    }
+  }
+}

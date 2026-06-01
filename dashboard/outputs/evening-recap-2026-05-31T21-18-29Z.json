@@ -1,0 +1,221 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-05-31",
+        "description": "heavy ship day — 5 PRs opened, mint #13 landed, 0 cron failures"
+      },
+      "children": [
+        "text-tldr",
+        "sep-1",
+        "heading-headlines",
+        "stack-headlines",
+        "sep-2",
+        "heading-notable",
+        "stack-notable",
+        "sep-3",
+        "heading-decisions",
+        "stack-decisions",
+        "sep-4",
+        "heading-blockers",
+        "alert-blockers",
+        "sep-5",
+        "text-footer"
+      ]
+    },
+    "text-tldr": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: heavy ship day — 5 PRs opened, mint #13 landed, 0 cron failures",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "stack-headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-headline-reppo",
+        "link-pr56",
+        "link-pr57",
+        "link-pr54",
+        "link-pr58"
+      ]
+    },
+    "text-headline-reppo": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-digest — mint #13 tx 0xccba0d07 + ISS-016 filed · memory/issues/ISS-016.md"
+      }
+    },
+    "link-pr56": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #56 fix(vibecoding): reddit via oauth.reddit.com (ISS-015)",
+        "href": "https://github.com/anajuliabit/aeon/pull/56"
+      }
+    },
+    "link-pr57": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #57 refactor(reppo): @reppo/cli≥0.6.0 native Phase 2",
+        "href": "https://github.com/anajuliabit/aeon/pull/57"
+      }
+    },
+    "link-pr54": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #54 chore(skills): enable Tier 1 crypto-builder skills",
+        "href": "https://github.com/anajuliabit/aeon/pull/54"
+      }
+    },
+    "link-pr58": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #58 docs(skill-graph): NEW_ENABLED 8",
+        "href": "https://github.com/anajuliabit/aeon/pull/58"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-skill-evals",
+        "alert-token",
+        "link-pr55",
+        "text-self-improve"
+      ]
+    },
+    "stat-skill-evals": {
+      "type": "Stat",
+      "props": {
+        "label": "skill-evals",
+        "value": "RECOVERED, 3 fixed",
+        "delta": "coverage 48% ↑ from 41%",
+        "trend": "up"
+      }
+    },
+    "alert-token": {
+      "type": "Alert",
+      "props": {
+        "title": "token-alert",
+        "message": "VVV +14.53%",
+        "type": "warning"
+      }
+    },
+    "link-pr55": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #55 — watchlist WELL/MAMO/REPPO/GITLAWB",
+        "href": "https://github.com/anajuliabit/aeon/pull/55"
+      }
+    },
+    "text-self-improve": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve — skipped, 3 open improvement PRs hit gate"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "stack-decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-decision-1",
+        "text-decision-2",
+        "text-decision-3"
+      ]
+    },
+    "text-decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #56 + set REDDIT_CLIENT_ID/SECRET secrets (ISS-015, 4th day blocked)"
+      }
+    },
+    "text-decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "land ISS-009 defence-in-depth (no PR, 4+ day carry — chain-runner break + orchestrator contract)"
+      }
+    },
+    "text-decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "decide merge order for #54/#55/#57/#58 (self-improve gate stuck until 3 merge)"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "alert-blockers": {
+      "type": "Alert",
+      "props": {
+        "title": "vibecoding-digest",
+        "message": "ISS-015 day 4, all Reddit endpoints blocked",
+        "type": "error"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "+20 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

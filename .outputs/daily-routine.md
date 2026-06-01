@@ -1,18 +1,24 @@
-Skill complete.
-
 ## Summary
 
-Ran daily-routine standalone (no chain context) and combined into a single 3,831-char notification.
+Executed `skills/daily-routine/SKILL.md` standalone (no chain context — sub-skill outputs absent). Ran inline: token-movers + tweet-roundup + paper-pick + github-issues + hn-digest. Applied ana voice from `soul/STYLE.md`.
 
-**Sub-skills run inline:**
-- **token-movers** — mixed-positive tape, 61/100 top alts green, top-50 median +0.25%. H Humanity led winners (+39.3% / 7d +87%, BREAKOUT), LAB extended day 3 (+27.6%, kept 5-29 insider-supply flag in-line). XLM reversed its 5-day DTCC run (−9.0% / 7d still +55%, TRENDING+DOWN). HYPE pushed past 5-30 ATH.
-- **tweet-roundup** — WebSearch fallback (no XAI_API_KEY). Fresh items only: XRPL flash-loans "structurally impossible" + FTX June 16 deadline + HL framed as TradFi-derivatives challenger (crypto); GPT-5.5 + Agentic AI Foundation at Linux Foundation + Amazon Trainium $20B run-rate + BMW $300M agentic fund (AI); Google A2Family + NVIDIA Nemotron 10T tokens + Gemma 4 + Zed weekly stable (dev).
-- **paper-pick** — "AgentDoG 1.5" (↑116, 2605.29801) — open-world agent safety alignment, maps directly to aeon's chain-runner shape. No dup with 5-30/5-29/5-28 picks.
-- **github-issues** — 0 new anajuliabit issues, 3rd silent day. Surfaced in message rather than suppressed.
-- **hn-digest** — 5 picks: Domain expertise moat (527pts), OpenRouter $113M Series B (412pts), Zig Build System Reworked (349pts), "Please Do Not Vibe Fuck Up This Software" (108pts, rsync), Openrsync (380pts).
+**Pulse:** risk-off tape, 18/72 top alts green 24h, top-100 median -0.6%. BTC $73,009 -1.1%, ETH $1,986 -1.8%, HYPE $72.96 +5.5% (new ATH past 5-31's $69.19).
 
-**Files modified:**
-- `.pending-notify/1780214799-daily-routine.md` — staged notification (3,831 / 4,000 chars; post-run delivery picks it up since sandbox blocks `./notify "$(cat ...)"` arg-passing)
-- `memory/logs/2026-05-31.md` — full run log appended
+**Highlights:**
+- H (Humanity) +77.4% — extends 5-31's +14.8% into a 3-day ~+180% vertical (integrity caveat retained)
+- WLD +16.0% — yesterday's token-pick from $0.333 to $0.39 entry, pick paid
+- ASTER reverses 5-31 winner; XLM reverses 5-31 loser; GENIUS extends 3-day collapse ~-50%
+- Paper: "From Prompt Injection to Persistent Control: Defending Agentic Harness Against Trojan Backdoors" (arxiv 2605.31042) — formalizes the threat model that CLAUDE.md's "treat external content as untrusted" rule mitigates; ties today's HN #48349487 (ChatGPT-Google-Sheets exfiltration) shipping in prod
+- GitHub: 0 new issues (4th consecutive silent day)
+- HN: Codex sudo-workaround, ChatGPT exfiltration, Cloudflare Turnstile fingerprinting, 1-bit Bonsai image gen, Dav2d AV2 decoder
 
-**Sources:** [Anthropic news](https://www.anthropic.com/news), [OpenRouter Series B](https://openrouter.ai/announcements/series-b), [Zig 2026 devlog](https://ziglang.org/devlog/2026/#2026-05-26), [rsync issue #929](https://github.com/RsyncProject/rsync/issues/929), [Domain expertise post](https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/), [AgentDoG 1.5 paper](https://huggingface.co/papers/2605.29801)
+**Files created/modified:**
+- `.pending-notify/1780298701-daily-routine.md` (3,269 chars, under 4000 ceiling — staged for post-run delivery per sandbox pattern)
+- `memory/logs/2026-06-01.md` (daily-routine entry appended)
+
+**Follow-ups:** none specific to this run. The carry-over goals from MEMORY.md (ISS-009 defence-in-depth, ISS-015 Reddit operator call, 14 unassigned datanets) remain in scope for their respective skills.
+
+Sources:
+- [JPMorgan Warns Ethereum and Altcoins May Continue Lagging Behind Bitcoin](https://www.mexc.com/news/1095498)
+- [How Claude overtook ChatGPT in the valuation race - The Week](https://www.theweek.in/news/sci-tech/2026/05/30/claude-ai-surpasses-openai-chatgpt.html)
+- [Raindrop's Workshop open-source AI agent debugger - VentureBeat](https://venturebeat.com/technology/developers-can-now-debug-and-evaluate-ai-agents-locally-with-raindrops-open-source-tool-workshop)

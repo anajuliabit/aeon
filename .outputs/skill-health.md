@@ -1,16 +1,17 @@
-I executed the skill-health audit. Summary follows.
-
 ## Summary
 
-**Verdict:** HEALTH: OK — 27 enabled skills healthy, 0 critical/degraded/flapping/warning, 1 NO DATA (operator-scorecard, Mon-only weekly, never fired). Notification gated through but fired anyway: hash unchanged from prev (empty `e3b0c442…`) but `last_notified_at` was 2026-05-28T18:44Z — ~47h elapsed exceeds the 24h reminder cadence.
+Skill Health audit (2026-05-31, 18:21Z):
 
-**Issue reconciliation (step 4):** No skill-health-detected open issues exist (all 6 open were filed by `reppo-digest` / `vibecoding-digest` / `claude`-manual), so no filing or auto-resolving on skill-health's part. `vibecoding-digest`'s cron-state shows success but the 17:30 run exited `VIBECODING_DIGEST_ERROR`; left ISS-015 alone since it was filed today by the skill itself and remains structurally broken.
+- **HEALTH: OK** — 27/28 enabled scheduled skills healthy, success_rate ≥ 0.8 across the board, 0 consecutive failures anywhere.
+- **NO DATA: 1** — operator-scorecard (Monday-only, first run tomorrow).
+- **No CRITICAL/DEGRADED/FLAPPING** — nothing to file.
+- **No skill-health-filed issues** — `grep detected_by:` confirms all 7 open issues (ISS-005/007/009/010/011/015/016) were filed by other skills; per SKILL.md scope, skill-health does not modify them.
+- **Notify gate fired** — current_hash matches prev empty-signature hash, but 24h 10m elapsed since prev notify (2026-05-30T18:10:49Z) → daily reminder cadence trigger.
+- **Sandbox note** — `./scripts/skill-runs` invocation rejected; logged `SKILL_HEALTH_PARTIAL` and continued with cron-state only per SKILL.md fallback.
 
-**Partial state:** `./scripts/skill-runs` required approval, so logged `SKILL_HEALTH_PARTIAL — skill-runs unavailable` and continued on cron-state alone per spec.
+Files written:
+- `.pending-notify/1780287660-skill-health.md` — staged notification body (sandbox arg-passing pattern; post-run delivery picks it up).
+- `memory/skill-health/last-report.json` — updated hash/last_notified_at/last_run_at.
+- `memory/logs/2026-05-31.md` — appended `### skill-health` log entry.
 
-**Files written:**
-- `memory/skill-health/last-report.json` — hash unchanged, `last_notified_at` bumped to 2026-05-30T18:10:49Z, classification snapshot.
-- `.pending-notify/1780164679-skill-health.md` — staged notification (sandbox blocks direct `./notify` with command-substitution; post-run delivery step picks it up — same MEMORY.md-noted pattern).
-- `memory/logs/2026-05-30.md` — appended `### skill-health` entry per spec format (HEALTH/filed/resolved/open/systemic + the partial flag).
-
-**Follow-ups:** ISS-015's open-but-cron-state-success mismatch is a known weakness in the auto-resolve rule; worth thinking about whether to gate the "healthy → drop from affected_skills" rule on the skill's own exit code rather than cron-state alone. Not filing an issue yet (1st observation).
+Follow-ups: none from this run; operator already aware of the 7 open issues via morning-brief + heartbeat carry-overs.

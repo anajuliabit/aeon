@@ -1,0 +1,167 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "market context",
+        "description": "2026-06-01"
+      },
+      "children": [
+        "risk_badge",
+        "price_stack",
+        "sep1",
+        "metrics_stack",
+        "sep2",
+        "narratives_stack"
+      ]
+    },
+    "risk_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "risk-off (medium conviction)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "price_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "btc_stat",
+        "eth_stat"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$72,041",
+        "delta": "-2.40%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "eth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,984",
+        "delta": "-1.74%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fg_progress",
+        "breadth_progress",
+        "dex_vol_text"
+      ]
+    },
+    "fg_progress": {
+      "type": "Progress",
+      "props": {
+        "label": "Fear & Greed: 29 (Fear)",
+        "value": 29,
+        "max": 100
+      },
+      "children": []
+    },
+    "breadth_progress": {
+      "type": "Progress",
+      "props": {
+        "label": "Breadth",
+        "value": 7,
+        "max": 20
+      },
+      "children": []
+    },
+    "dex_vol_text": {
+      "type": "Text",
+      "props": {
+        "text": "DEX volume (24h): $5.06B"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "narratives_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_narrative_text",
+        "hot_market_heading",
+        "hot_market_inner"
+      ]
+    },
+    "top_narrative_text": {
+      "type": "Text",
+      "props": {
+        "text": "Top narrative: HYPE new ATH $74.18, perp DEX rising (+17% 7d)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "hot_market_heading": {
+      "type": "Text",
+      "props": {
+        "text": "Hot market: World Cup 2026 Winner",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "hot_market_inner": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "france_progress",
+        "wc_volume_text"
+      ]
+    },
+    "france_progress": {
+      "type": "Progress",
+      "props": {
+        "label": "France YES",
+        "value": 17.1,
+        "max": 100
+      },
+      "children": []
+    },
+    "wc_volume_text": {
+      "type": "Text",
+      "props": {
+        "text": "$107M 24h vol",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,20 +1,21 @@
-All three outputs written. Here's the summary:
+Done. Here's the summary:
 
 ## Summary
 
-**skill-freshness** ran for 2026-05-31.
+**Status**: `FRESHNESS_OK` — no notification sent (silence is the signal).
 
-**Verdict: ✅ FRESHNESS_OK** — 29 enabled consumers, 2 dependencies checked, 0 flagged.
+**Audit results** (29 enabled skills, 2 dependencies checked, 0 flagged):
 
-**What was checked:**
-- `skill-security-scan` → `articles/workflow-security-audit-2026-04-11.md` (weekly producer, ~2 min old by on-disk mtime) → OK
-- `skill-security-scan` → `memory/state/security-scan.json` (state file, ~2 min old by on-disk mtime) → OK
+- Only `skill-security-scan` had trackable implicit dependencies: `articles/workflow-security-audit-2026-04-11.md` (weekly threshold 192h) and `memory/state/security-scan.json` (state threshold 720h). Both fresh — all files have a ~6-minute mtime from git checkout.
 
-**Status: FRESHNESS_NO_CHANGE** — fingerprint `da39a3ee` identical to prior run (2026-05-30T08:14:16Z, within 7-day dedup window). Notification suppressed.
+- 3 references filtered before scoring:
+  - `market-context-refresh → memory/topics/market-context.md` (self-ref: skill produces this file)
+  - `fleet-control → memory/state/fleet-control-state.json` (self-ref: prefix matches skill name exactly)
+  - `heartbeat → articles/token-report-2026-04-28.md` (inside a ` ```markdown ` example block; file also absent from disk — not a real runtime read)
 
-**Notable today:** `skill-evals-2026-05-31.md` appeared (Sunday 06:00 schedule ran as expected), but skill-evals only reads its own prior output (self-ref, filtered). Fleet composition unchanged at 29 enabled consumers. `workflow-security-audit` remains disabled; its 2026-04-11 artifact is the only file on disk for that producer — stale by filename date (50 days) but fresh by on-disk mtime (git checkout). The `memory/state/fleet-control-state.json` implicit dep is still missing (never written; skip per implicit-reference rule).
+- 0 explicit `chains: consume:` edges from enabled consumers (reppo-swarm's 3 steps are all `enabled: false`)
 
-**Files written:**
-- `articles/skill-freshness-2026-05-31.md` — audit report
-- `memory/topics/skill-freshness-state.json` — updated `last_run_at` to 2026-05-31T09:17:00Z
-- `memory/logs/2026-05-31.md` — log entry appended
+**Files written**:
+- `articles/skill-freshness-2026-06-01.md` — full report
+- `memory/topics/skill-freshness-state.json` — `last_run_at` updated to `2026-06-01T09:19:09Z`
+- `memory/logs/2026-06-01.md` — log block appended

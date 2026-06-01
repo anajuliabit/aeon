@@ -1,21 +1,18 @@
-Sandbox blocked the command-substitution call (expected per MEMORY pattern); notification is staged at `.pending-notify/1780164000-goal-tracker.md` for the post-run delivery step.
+Goal Tracker run complete.
 
 ## Summary
 
-Tracked **7 goals** across MEMORY.md `## Current Goals` (5 carry-over + 2 new — ISS-012, ISS-013).
+Tracked **5 distinct goals** in `memory/MEMORY.md` (after deduping 4 repeat entries that the consolidation didn't collapse). No status transitions since yesterday's run — `memory/MEMORY.md` left untouched per skill §7.
 
-**Status: 4 on track, 3 done, 0 at risk / needs attention / blocked.** Overall trend ↑ improving — three goals closed today.
+**Status breakdown:**
+- **AT RISK (1):** Cleanup chain-runner scratch — 0 evidence in logs/git/PRs; the 3 `.tmp-build-*` files are already gone from disk but `.candidates.json` remains. Action: `git rm .candidates.json` or add to `.gitignore`.
+- **ON TRACK (4):** Close ISS-009 fully (~30 activity/14d; 6th recurrence yesterday, defence-in-depth still pending), Assign 14 unassigned reppo datanets (11th day surfaced), INDEX bookkeeping (ISS-007 + ISS-010 close queued), ISS-015 mitigation (PR #56 open routing through `oauth.reddit.com`).
 
-- **Done (moved to `## Completed Goals` with 2026-05-30 stamp):**
-  - Durable ISS-005 fix — PR #47 merged (vote-dedup prefetch + subnetId UUID)
-  - ISS-013 PINATA_JWT — operator rotated, 3 consecutive pin successes
-  - ISS-012 platform POST 400 — PR #44 cleared via Zod schema fix (ISS-014 HTTP 500 is a new layer, tracked separately)
-- **On track (flat):** durable-fix-for-iss-009, close-iss-009-fully, assign-14-datanets (10th day surfaced, 0 staged), INDEX bookkeeping (PRs merged, INDEX.md still shows open).
+**Files written:**
+- `memory/goal-state.json` — refreshed snapshot (7 slug entries to preserve continuity with the 5 dedup'd goals).
+- `memory/logs/2026-05-31.md` — appended `### goal-tracker` entry.
+- `.pending-notify/1780251600-goal-tracker.md` — staged report for post-run notify delivery (sandbox blocked `./notify "$(cat ...)"` arg-passing, same pattern as every other skill today).
 
-**Files touched**
-- `memory/MEMORY.md` — moved 3 DONE goals to `## Completed Goals`; removed both ISS-005 duplicate instances from Current Goals
-- `memory/goal-state.json` — written with 7 goals
-- `memory/logs/2026-05-30.md` — appended `### goal-tracker` entry
-- `.pending-notify/1780164000-goal-tracker.md` — notification staged for post-run delivery
+**Sources:** logs=ok, git=shallow (1 commit in clone — PR list used as code-activity proxy), gh_pr=ok, gh_issue=ok (0 results — repo has no issues), cron-state=ok.
 
-**Follow-up:** goal-tracker continues to flag honest caveat that ON_TRACK for the 14-datanets + INDEX-bookkeeping goals means "active surfacing" not "active deliverable progress" — same as yesterday's tracker entry.
+Exit: GOAL_TRACKER_OK.

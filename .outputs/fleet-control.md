@@ -1,21 +1,14 @@
 ## Summary
 
-**Mode:** Health Check (no `var` supplied → default).
+Executed `skills/fleet-control/SKILL.md` in default Health Check Mode (var was empty).
 
-**Result:** `FLEET_EMPTY` — silent stop per skill spec.
+**Outcome:** `FLEET_EMPTY` — silent stop per the skill spec.
 
-**Pre-flight:**
-- `gh auth status` ✓ (anajuliabit, GH_TOKEN, scopes: repo+workflow)
-- `gh api rate_limit` → 4949 remaining (well above 50 floor)
-- `memory/instances.json` → `{"instances": []}` (still empty post-bootstrap; no managed children registered)
+- **Pre-flight passed:** `gh auth status` ok (account `anajuliabit`, `GH_TOKEN`); `rate_remaining=4973` (well above the 50 floor).
+- **Registry check:** `memory/instances.json` contains `{"instances": []}` — no managed instances to operate on.
+- **Per spec:** logged `FLEET_EMPTY: no managed instances` to `memory/logs/2026-06-01.md` and stopped without notifying. (The empty-registry path is explicitly silent so the operator isn't pinged for a no-op.)
+- **State file untouched:** `memory/state/fleet-control-state.json` left at its bootstrap value; `last_full_summary_date` only advances on runs that notify.
 
-**Actions taken:**
-- Created `memory/state/fleet-control-state.json` with empty bootstrap shape (was missing — directory already existed for `security-scan.json`).
-- Appended `### fleet-control (health check)` entry to `memory/logs/2026-05-31.md` recording `FLEET_EMPTY`, sizes, deltas (none), sources, and exit.
-- **No notification sent** — skill explicitly requires silent stop when registry is empty.
+**Files modified:** `memory/logs/2026-06-01.md` (appended fleet-control entry).
 
-**Files modified:**
-- `memory/logs/2026-05-31.md` (appended log block)
-- `memory/state/fleet-control-state.json` (created)
-
-**Follow-ups:** None from this run. The fleet has no managed instances to monitor — this matches every prior fleet-control invocation since the bootstrap exit on 2026-05-21 (per MEMORY.md). Operator action required if/when child instances are spawned: add registry entries to `memory/instances.json` with `name`, `repo`, `purpose`, `parent`, `created`, `skills_enabled`.
+**Follow-up:** None — the registry will stay empty until the operator manually adds child instances. The skill will continue to land FLEET_EMPTY (silently) on each scheduled run at 09:00/15:00 UTC until then.

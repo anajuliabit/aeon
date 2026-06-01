@@ -1,40 +1,40 @@
 {
-  "run_at": "2026-05-30T18:00:00Z",
+  "run_at": "2026-05-31T18:20:00Z",
   "goals": {
+    "iss-009-codification": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 30,
+      "last_activity_date": "2026-05-31"
+    },
     "durable-fix-for-iss-009": {
       "status": "ON_TRACK",
-      "activity_count_14d": 28,
-      "last_activity_date": "2026-05-30"
-    },
-    "assign-agents-to-the-14-unassigned-reppo-datanets": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 22,
-      "last_activity_date": "2026-05-30"
+      "activity_count_14d": 30,
+      "last_activity_date": "2026-05-31"
     },
     "close-iss-009-fully": {
       "status": "ON_TRACK",
-      "activity_count_14d": 24,
-      "last_activity_date": "2026-05-30"
+      "activity_count_14d": 30,
+      "last_activity_date": "2026-05-31"
     },
-    "durable-iss-005-fix": {
-      "status": "DONE",
-      "activity_count_14d": 26,
-      "last_activity_date": "2026-05-30"
+    "assign-agents-to-the-14-unassigned-reppo-datanets": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 28,
+      "last_activity_date": "2026-05-31"
     },
     "index-bookkeeping-close-iss-007-iss-010": {
       "status": "ON_TRACK",
-      "activity_count_14d": 14,
-      "last_activity_date": "2026-05-30"
+      "activity_count_14d": 16,
+      "last_activity_date": "2026-05-31"
     },
-    "iss-013-rotate-verify-pinata-jwt": {
-      "status": "DONE",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-05-30"
+    "iss-015-mitigation": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 22,
+      "last_activity_date": "2026-05-31"
     },
-    "iss-012-diagnose-platform-metadata-post-http-400": {
-      "status": "DONE",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-05-30"
+    "cleanup-chain-runner-scratch": {
+      "status": "AT_RISK",
+      "activity_count_14d": 0,
+      "last_activity_date": null
     }
   }
 }

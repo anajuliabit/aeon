@@ -51,6 +51,12 @@ state: what was built, recurring blockers, and health.
 | #43 | 2026-05-29 | vibecoding-digest same-day dup-notify suppression — merged |
 | #44 | 2026-05-29 | platform metadata Zod schema fix (subnetId string, podName ≤50, podDescription ≤200, extract_detail ≤600) — closed ISS-012 — merged |
 | #47 | 2026-05-30 | move ISS-005 epoch filter into prefetch + cast subnetId UUID (durable ISS-005 + ISS-014 fixes) — merged 2026-05-30 ~08-14 UTC |
+| #51 | 2026-05-30 | backfill 4 pre-PR-50 pod URLs — merged 2026-05-31 ~13Z |
+| #54 | 2026-05-31 | enable Tier 1 crypto-builder skills — open 13:32Z |
+| #55 | 2026-05-31 | canonical Tracked Tokens watchlist (WELL/MAMO/REPPO/GITLAWB) — open 15:01Z |
+| #56 | 2026-05-31 | route vibecoding Reddit through oauth.reddit.com (ISS-015 fix) — open 15:09Z |
+| #57 | 2026-05-31 | refactor reppo Phase 2 onto @reppo/cli≥0.6.0 native — open 15:39Z |
+| #58 | 2026-05-31 | skill-graph weekly digest (NEW_ENABLED 8 · NEW_DEPS 33 · REMOVED_DEPS 10) — open 17:41Z |
 
 ## Recurring blockers
 - **14 unassigned reppo datanets.** Orchestrator surfaces them every run (ids
@@ -69,10 +75,9 @@ state: what was built, recurring blockers, and health.
   2nd-run retry landed clean. Single occurrence so far; watch for recurrence.
 - **ISS-015 Reddit blocked.** vibecoding-digest hits PREFETCH_FAILED on
   runner IP (Reddit 403 on datacenter ASN) AND WebFetch refuses
-  `*.reddit.com` at the Claude Code tool layer. 3rd consecutive day
-  2026-05-28/29/30. No in-skill workaround — needs authed Reddit API
-  (`oauth.reddit.com` + `REDDIT_CLIENT_ID`/`REDDIT_CLIENT_SECRET`) or
-  alternate source (pushshift, HN /r/programming mirror). Operator call.
+  `*.reddit.com` at the Claude Code tool layer. 4 consecutive days
+  2026-05-28 → 05-31. PR #56 routes through `oauth.reddit.com` —
+  needs `REDDIT_CLIENT_ID/SECRET` provisioning.
 - **Sandbox `./notify "$(cat ...)"` arg-passing.** Now the dominant pattern —
   most content skills stage to `.pending-notify/` and let the post-run delivery
   step pick it up (today: morning-brief, github-trending, defi-overview,
@@ -180,7 +185,10 @@ state: what was built, recurring blockers, and health.
 - ISS-010 open in INDEX (medium, config) — fix shipped in PR #32; close queued.
 - ISS-011 open (medium, unknown) — vote nonce-too-low REVERT after sibling
   votes land same batch. 1 occurrence; retry landed; not recurring.
-- **ISS-015 open (high, sandbox-limitation, NEW 2026-05-30)** —
-  vibecoding-digest can't reach Reddit; prefetch (runner IP) + WebFetch
-  (tool layer) both dead, 3 consecutive days. No in-skill workaround —
-  needs authed Reddit API or alternate source.
+- **ISS-015 open (high, sandbox-limitation)** — vibecoding-digest Reddit
+  blocked 4 consecutive days. PR #56 (oauth.reddit.com route) open
+  2026-05-31 15:09Z — needs operator secrets.
+- **ISS-016 open (medium, prompt-bug, NEW 2026-05-31)** — vote LIKE on
+  agent's own pod reverts CANNOT_VOTE_FOR_OWN_POD. Fix: gate
+  trading-agent vote_filter on publisher==agent (drop regardless of
+  direction).

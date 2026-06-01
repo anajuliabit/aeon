@@ -1,0 +1,245 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve",
+        "description": "Skill update"
+      },
+      "children": [
+        "status-section",
+        "separator1",
+        "blocking-section",
+        "separator2",
+        "additional-section"
+      ]
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-alert",
+        "gate-reason"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Skipped today",
+        "message": "3 improvement PRs already open awaiting review",
+        "type": "info"
+      }
+    },
+    "gate-reason": {
+      "type": "Text",
+      "props": {
+        "text": "Skill gate prevents piling more unreviewed work",
+        "variant": "muted"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocking-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocking-heading",
+        "pr-list-1"
+      ]
+    },
+    "blocking-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocking PRs (awaiting review)",
+        "level": "h3"
+      }
+    },
+    "pr-list-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr54-row",
+        "pr55-row",
+        "pr56-row"
+      ]
+    },
+    "pr54-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge54",
+        "desc54"
+      ]
+    },
+    "badge54": {
+      "type": "Badge",
+      "props": {
+        "text": "#54",
+        "variant": "outline"
+      }
+    },
+    "desc54": {
+      "type": "Text",
+      "props": {
+        "text": "enable Tier 1 crypto-builder skills"
+      }
+    },
+    "pr55-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge55",
+        "desc55"
+      ]
+    },
+    "badge55": {
+      "type": "Badge",
+      "props": {
+        "text": "#55",
+        "variant": "outline"
+      }
+    },
+    "desc55": {
+      "type": "Text",
+      "props": {
+        "text": "canonical watchlist"
+      }
+    },
+    "pr56-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge56",
+        "desc56"
+      ]
+    },
+    "badge56": {
+      "type": "Badge",
+      "props": {
+        "text": "#56",
+        "variant": "outline"
+      }
+    },
+    "desc56": {
+      "type": "Text",
+      "props": {
+        "text": "vibecoding Reddit oauth"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "additional-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "additional-heading",
+        "pr-list-2",
+        "resume-message"
+      ]
+    },
+    "additional-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Additional open PRs",
+        "level": "h3"
+      }
+    },
+    "pr-list-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr57-row",
+        "pr58-row"
+      ]
+    },
+    "pr57-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge57",
+        "desc57"
+      ]
+    },
+    "badge57": {
+      "type": "Badge",
+      "props": {
+        "text": "#57",
+        "variant": "outline"
+      }
+    },
+    "desc57": {
+      "type": "Text",
+      "props": {
+        "text": "reppo CLI native Phase 2"
+      }
+    },
+    "pr58-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge58",
+        "desc58"
+      ]
+    },
+    "badge58": {
+      "type": "Badge",
+      "props": {
+        "text": "#58",
+        "variant": "outline"
+      }
+    },
+    "desc58": {
+      "type": "Text",
+      "props": {
+        "text": "skill-graph snapshot"
+      }
+    },
+    "resume-message": {
+      "type": "Text",
+      "props": {
+        "text": "Will resume once queue drains",
+        "variant": "lead"
+      }
+    }
+  }
+}
