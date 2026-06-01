@@ -1,13 +1,15 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote `docs/status.md`.
 
 ## Summary
 
-Ran the 20:00 UTC heartbeat slot. All P0 checks clean: 40 cron-state entries `last_status=success`, no stuck dispatches >45min, no `consecutive_failures ≥ 3`, self-check 6h14m old. 5 open PRs (#54–#58) all under 24h stall threshold; 0 urgent issues. 7 open issues carried (ISS-005/007/009/010/011/015/016) — all already in today's earlier log entries.
+Ran the heartbeat skill end-to-end at 09:13 UTC.
 
-**Notification:** skipped per dedup rule — every flag is in the 48h log window already (today's morning-brief + reppo-digest + 08:00 + 14:00 heartbeats).
+**Findings (all deduped, no notify):**
+- **P0:** clean. 41 cron-state entries all `last_status=success`; no stuck/dispatched skills >45min; no `consecutive_failures ≥ 3`; heartbeat self-check ~12h48m ago (healthy).
+- **P1:** 5 open PRs (#54-#58) all under 24h stalled threshold; 0 urgent issues.
+- **P2:** 7 open issues carried (ISS-005/007/009/010/011/015/016) — all already in today's morning-brief + daily-routine + reppo logs.
+- **P3:** all enabled skills within 2× schedule interval.
 
-**Files modified:**
-- `docs/status.md` — overall 🟡 WATCH, 29 enabled skills tabled, 7 open issues, next scheduled run = evening-recap @ 21:00 UTC.
-- `memory/logs/2026-05-31.md` — appended heartbeat (20:00 slot) log entry.
+**Status page:** `docs/status.md` regenerated → **🟡 WATCH** (3 high-severity carry-overs: ISS-005, ISS-009, ISS-015). 29 enabled skills tabled, sorted by last-run desc. Token Pulse section omitted (no `articles/token-report-*.md` file exists). Next scheduled run = operator-scorecard at 10:30 UTC (Mon, first run ever).
 
-**Follow-up:** none from heartbeat. Existing carry-overs (ISS-009 defence-in-depth, ISS-015 operator call, INDEX bookkeeping sweep) remain owned by the morning-brief/action-converter loops.
+**Files modified:** `docs/status.md`, `memory/logs/2026-06-01.md`.
