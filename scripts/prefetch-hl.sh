@@ -31,7 +31,7 @@ CACHE_DIR=".hl-cache"
 mkdir -p "$CACHE_DIR"
 
 # Tunable knobs (env-overridable so the workflow can dial them).
-HL_TOP_N="${HL_TOP_N:-5}"                # how many margin-ranked wallets to pull fills for. History: 10 (initial, hit 30-min Aeon timeout in run 5) → 3 (PR #39) → 5 (this PR). 3 was too narrow once PR #37's input contract stabilized — the top-3 frequently miss the ≥20-trade rubric floor while ranks 4-10 are the 50-2000-fill directional perp wallets that qualify. 5 reaches rank-5, leaves budget headroom for further bumps.
+HL_TOP_N="${HL_TOP_N:-12}"               # how many margin-ranked wallets to pull fills for. History: 10 (initial, hit 30-min Aeon timeout in run 5) → 3 (PR #39) → 5 → 12 (this PR). The week-window margin-top-5 saturated against the mint ledger (13th mint 2026-05-31, then 3 consecutive 0-mint runs — every top wallet was hash-DEDUPed, spot-only, or floor<20). 12 reaches the fresh perp wallets at week-ranks 8-12 (0x82b02bd4/0x9d140511/0x0320e278/0x807a2e2e) the top-5 cut never touched. Safe on processing: the trading-agent already evaluates ~30 accumulated .hl-cache/user-fills caches per run without timeout, so the run-5 timeout (heavier pre-PR#37 contract) no longer binds. Prefetch cost is N sequential ~1-2s API calls. Further headroom remains.
 HL_WINDOW="${HL_WINDOW:-week}"           # leaderboard window: day|week|month|allTime
 HL_FILLS_DAYS="${HL_FILLS_DAYS:-7}"      # userFillsByTime startTime offset (still capped at 2000 fills/response)
 HL_MIN_VLM_USD="${HL_MIN_VLM_USD:-100000}"  # noise floor: skip wallets with <$100k vlm in HL_WINDOW
