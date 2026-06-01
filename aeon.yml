@@ -111,7 +111,7 @@ skills:
     {
       enabled: false,
       schedule: "0 17 * * *",
-      var: "@moonwell OR @reppo OR @sherwoodagent OR $WOOD OR mamo"
+      var: "@moonwell OR @reppo OR @sherwoodagent OR $WOOD OR $MAMO"
     }
   refresh-x: { enabled: false, schedule: "0 17 * * *" }
   list-digest: { enabled: false, schedule: "0 17 * * *" }
