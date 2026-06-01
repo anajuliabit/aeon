@@ -56,7 +56,14 @@ state: what was built, recurring blockers, and health.
 | #55 | 2026-05-31 | canonical Tracked Tokens watchlist (WELL/MAMO/REPPO/GITLAWB) — open 15:01Z |
 | #56 | 2026-05-31 | route vibecoding Reddit through oauth.reddit.com (ISS-015 fix) — open 15:09Z |
 | #57 | 2026-05-31 | refactor reppo Phase 2 onto @reppo/cli≥0.6.0 native — open 15:39Z |
-| #58 | 2026-05-31 | skill-graph weekly digest (NEW_ENABLED 8 · NEW_DEPS 33 · REMOVED_DEPS 10) — open 17:41Z |
+| #58 | 2026-05-31 | skill-graph weekly digest (NEW_ENABLED 8 · NEW_DEPS 33 · REMOVED_DEPS 10) — merged 2026-06-01 13:17Z |
+| #54 | 2026-05-31 | enable Tier 1 crypto-builder skills (5 new: deal-flow Mon / reg-monitor Wed / security-digest daily / unlock-monitor Mon / vuln-scanner Sat) — merged 2026-06-01 13:12Z |
+| #55 | 2026-05-31 | canonical Tracked Tokens watchlist (WELL/MAMO/REPPO/GITLAWB) — merged 2026-06-01 13:12Z |
+| #56 | 2026-05-31 | route vibecoding Reddit through oauth.reddit.com (ISS-015 fix) — merged 2026-06-01 13:12Z |
+| #57 | 2026-05-31 | refactor reppo Phase 2 onto @reppo/cli≥0.6.0 native — merged 2026-06-01 13:12Z |
+| #59 | 2026-06-01 | dashboard Reppo swarm demo at /swarm — merged 13:13Z |
+| #60 | 2026-06-01 | bump HL_TOP_N 5→12 to clear mint-ledger saturation — merged 13:50Z |
+| #61 | 2026-06-01 | decouple voting from minting via new reppo-voter skill — merged 15:20Z |
 
 ## Recurring blockers
 - **14 unassigned reppo datanets.** Orchestrator surfaces them every run (ids
@@ -76,8 +83,15 @@ state: what was built, recurring blockers, and health.
 - **ISS-015 Reddit blocked.** vibecoding-digest hits PREFETCH_FAILED on
   runner IP (Reddit 403 on datacenter ASN) AND WebFetch refuses
   `*.reddit.com` at the Claude Code tool layer. 4 consecutive days
-  2026-05-28 → 05-31. PR #56 routes through `oauth.reddit.com` —
-  needs `REDDIT_CLIENT_ID/SECRET` provisioning.
+  2026-05-28 → 05-31. PR #56 merged 2026-06-01 13:12Z routes through
+  `oauth.reddit.com` — first effect visible on today's 17:30 vibecoding run;
+  requires `REDDIT_CLIENT_ID/SECRET` to be provisioned for the fix to load.
+- **ISS-017 chain-runner workflow injection.** Filed 2026-06-01 by
+  skill-security-scan. `${{ inputs.chain }}` interpolated directly into
+  `run:` shell blocks at `chain-runner.yml:41` + `:416`. Same 2026-04-11
+  incident pattern as the messages.yml fix (env: indirection). Exposure
+  low (only workflow_dispatch / write-auth gated), but anti-pattern of
+  record.
 - **Sandbox `./notify "$(cat ...)"` arg-passing.** Now the dominant pattern —
   most content skills stage to `.pending-notify/` and let the post-run delivery
   step pick it up (today: morning-brief, github-trending, defi-overview,
@@ -100,6 +114,10 @@ state: what was built, recurring blockers, and health.
   since fleet bootstrap. Under 2x interval threshold so heartbeat doesn't flag.
 
 ## Resolved blockers
+- **ISS-013 (Pinata IPFS pin HTTP 403) and ISS-014 (platform metadata
+  POST HTTP 500) durably resolved 2026-05-30 → 2026-06-01.** 7 consecutive
+  pin successes + 4 consecutive HTTP 200 POSTs through today's 14th-mint
+  cc41abf6 / tx 0xcbe53613. INDEX bookkeeping flip queued.
 - **Phase 2 platform/IPFS cleared 2026-05-30.** ISS-013 (Pinata HTTP 403
   NO_SCOPES_FOUND → operator rotated PINATA_JWT with `pinFileToIPFS` scope;
   5 consecutive pin successes 2026-05-29 4th-run through 2026-05-30 5th-run).
@@ -134,11 +152,21 @@ state: what was built, recurring blockers, and health.
   7029a48d, wallet 0xebe126ad, sharpe 295k — **first commodity-perp mint**).
 
 ## Skill health
-- Last classification (2026-05-28, 18:44Z): 27 healthy, 0 critical/degraded/
-  flapping/warning, 1 no_data (operator-scorecard — never run since enabled,
-  scheduled Mon 10:30). Fleet expanded 21→29 enabled consumers; the prior
-  NO DATA list narrowed [autoresearch, skill-analytics, operator-scorecard]
-  → [operator-scorecard].
+- Last classification (2026-05-31 18:21Z): 27 healthy, 0 critical/degraded/
+  flapping/warning, 1 no_data (operator-scorecard — Mon 10:30 weekly slot
+  remains never-run; today's 10:30 slot also passed without state entry).
+- **Fleet expanded 29 → 34 enabled skills 2026-06-01 13:12Z** via PR #54:
+  deal-flow (Mon), reg-monitor (Wed), security-digest (daily), unlock-monitor
+  (Mon), vuln-scanner (Sat). All 5 are tier-1 crypto-builder skills. First
+  runs today: deal-flow (DEAL_FLOW_OK, $65B Anthropic round headline),
+  security-digest (SECURITY_DIGEST_OK, 3 PATCH TODAY + 5 PATCH THIS WEEK,
+  flagged concurrent npm KEV adds: Nx Console + TanStack).
+- **reppo-voter introduced 2026-06-01 15:20Z (PR #61).** Voting decoupled
+  from minting — first voter run reported gate=RUN, current_epoch=100,
+  56 out-of-epoch + 17 already-voted + 1 own-pod (pod 492 = 14th-mint
+  cc41abf6 source wallet), eligible=0. own_pod_ids prefetch returned
+  count=0 (5th consecutive run gap), voter self-recognized via ledger
+  wallet shortcode cross-ref.
 - Data-quality gap: vibecoding-digest cron-state shows last_status=success
   but log entries record VIBECODING_DIGEST_ERROR (Reddit endpoints blocked,
   prefetch host failing too). Workflow exits 0 with a notification-only
@@ -191,4 +219,32 @@ state: what was built, recurring blockers, and health.
 - **ISS-016 open (medium, prompt-bug, NEW 2026-05-31)** — vote LIKE on
   agent's own pod reverts CANNOT_VOTE_FOR_OWN_POD. Fix: gate
   trading-agent vote_filter on publisher==agent (drop regardless of
-  direction).
+  direction). own_pod_ids prefetch returning count=0 since filed
+  (5 consecutive runs); voter self-recognizes via ledger.
+- **ISS-017 open (high, prompt-bug, NEW 2026-06-01)** — chain-runner.yml
+  interpolates `${{ inputs.chain }}` directly into `run:` shell at
+  lines 41 + 416. Same anti-pattern class as 2026-04-11 messages.yml
+  incident. Fix: env: indirection (lines 587-591 of messages.yml are
+  the canonical shape). Real exposure low (write-auth gated).
+
+## Today's PR sweep (2026-06-01)
+- 13:12-15:20Z: 8 PRs merged in a single window. #54 enabled 5 new
+  tier-1 skills. #55 canonical token watchlist. #56 closes ISS-015.
+  #57 reppo-cli≥0.6.0 native Phase 2 path. #58 skill-graph weekly
+  digest. #59 dashboard /swarm demo. #60 HL_TOP_N 5→12 (unblocked the
+  fresh wallet that landed today's 14th mint). #61 split reppo-voter
+  out of trading-agent.
+- 14th mint landed 14:40Z (wallet 0x9a1500b4, 74 Close-Long perp fills,
+  hash cc41abf6, tx 0xcbe53613) — same source wallet as 13th-mint
+  dce17be3 but fresh `(wallet, last_t, n_close)` triple proves
+  drift-skip dedup admits genuine new activity.
+- Thin/marginal mint: Sharpe 0.84, MDD 91% on the 14th vs 9.98/171%
+  on the 13th. Flagged in pod_description for downstream EVOF so
+  quality regression is visible upstream.
+
+## Project Lens & content skills
+- **project-lens first article published 2026-06-01** (`sherwood.sh`
+  operator-supplied lens). Industry-comparison angle vs Aeon's cron-as-
+  optimistic-governance shape; angle history file seeded.
+- 8 consecutive search-skill NO_GAP exits through 2026-06-01 — fleet
+  gap-free on external-skill axis.

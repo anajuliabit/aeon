@@ -3,21 +3,46 @@
 Consolidated from defi-overview, narrative-tracker, token-pick, token-alert,
 market-context-refresh, and digest runs. Latest data point wins.
 
-## Market context (latest: 2026-05-29 13:35Z)
-- Regime: chop (conviction medium)
-- BTC $72,909 (-0.19% 24h, -5.81% 7d) · dominance 57.66%
-- ETH $1,992 (+0.39% 24h, -6.54% 7d) · ETH/BTC 0.02732
-- SOL $81.24 (+0.52% 24h, -6.79% 7d)
-- Total mcap $2.54T (+0.26% 24h) · DEX vol $7.01B 24h
-- Breadth: 11/20 green 24h (vs 4/20 yesterday — sharpest single-day recovery
-  in this risk-off window) · 3/20 green 7d
-- Fear & Greed: 23 (Extreme Fear) — yesterday 22
-- Top narrative: RWA Tokenization (rising) — XLM +36.65% 7d + INJ record
-  $3.57B tokenized-equity daily volume + M by M0 RWA stable DAY 5 growth
-- BTC ETF outflow streak hit record 9th day: $2.8B total withdrawn since
-  May 14; IBIT -$528M May 28 (2nd-largest single-day outflow since launch).
+## Market context (latest: 2026-06-01 13:00Z — see [[market-context]])
+- Regime: risk-off (conviction medium)
+- BTC $72,041 (-2.40% 24h, -6.82% 7d) · dominance 56.89%
+- ETH $1,984.66 (-1.74% 24h, -6.21% 7d) · ETH/BTC 0.02755
+- SOL $80.70 (-2.43% 24h, -5.99% 7d)
+- Total mcap $2.54T (-1.67% 24h) · DEX vol $5.06B 24h
+- Breadth: 7/20 green 24h (4/17 non-stablecoins) · 6/20 green 7d
+- Fear & Greed: 29 (Fear)
+- Top narrative: Perp DEX / Hyperliquid (rising) — HYPE new ATH $74.18,
+  +17.01% 7d vs benchmark -6%, top-10 mcap $16.46B
+- May spot BTC ETF net outflows hit $2.43B (2026 monthly high). HYPE 8-day
+  ETF net-buy streak continues into June.
 
-## DeFi overview (latest: 2026-05-29 12:09Z)
+## DeFi overview (latest: 2026-06-01 12:15Z)
+- TVL $80.05B (-0.83% d/d snapshot fallback; /v2/chains change_1d/change_7d
+  null for **4th consecutive day** — API regression unresolved).
+- Top chains: Ethereum $41.97B, BSC $5.69B, Solana $5.31B.
+- Top mover up (protocol): **Hyperliquid Spot Orderbook +11.78%** ($149M
+  → $167M, dex category) — HYPE ATH $72.96 cascade.
+- Top mover down (protocol): **Rocket Pool -32.13%** ($774M → $525M,
+  Liquid Staking). c7d only -4.86% — single-day cliff with no obvious
+  catalyst; rETH single pool still shows $2.68B TVL normal. Possible
+  TVL recategorization, not a real LST outflow. Flagged but not invented.
+- Fees leaders: Tether $16.34M, Circle USDC $6.40M, Canton $1.99M. HL
+  Perps $1.55M (+38.89% c1d) reverses Sunday's -49% softness.
+- Fees beating TVL (7d): Morpho Blue (+33% fees / -2.3% TVL / $7.24B TVL),
+  Aerodrome Slipstream (+37% fees / -6.3% TVL / $186M TVL). 2 candidates
+  cleared noise floor today (yesterday 0).
+- DEX vol: $5.06B (+9.31% c1d, +6.17% c7d). Uniswap V4 $676M (+26%),
+  PancakeSwap V3 $626M, Aerodrome Slipstream $560M (+50% c1d recovers
+  -43% sharp drop).
+- Stables: $318.74B (+0.158%). U United Stables -6.54% to $999M (biggest
+  single-issuer ≥$100M outflow), FDUSD -4.23%, rwaUSDi +1.36% (day 9 of
+  RWA-cohort growth).
+- Real-yield top 3: APYUSD Pendle 20.47% (5 consecutive days), USDC-CBBTC
+  Uniswap V3 Base 17.98% NEW, MUBOND mu-digital 14.51%.
+- Incentive-yield top 2: CVXCRV Convex 21.86%, SDCRV Stake DAO 20.45%
+  (Curve flywheel cohort, day 2).
+
+## DeFi overview (prior snapshot: 2026-05-29 12:09Z)
 - TVL $79.85B raw chain snapshot (+0.35% vs 05-28 $79.57B — **first up-day
   after 2 consecutive drawdowns**). /v2/chains API change_1d/change_7d all
   null today (regression vs skill spec); used snapshot d/d as fallback.
@@ -94,6 +119,16 @@ market-context-refresh, and digest runs. Latest data point wins.
   mindshare leaderboard reference.
 
 ## Token signals
+- Token-pick **2026-06-01: HOME (defi.app)** $0.0475 (+47.8% 24h / +98.5%
+  7d), HIGH 11/10. Thesis: defi.app v2 precision-bridging + android launch
+  driving 500k+ active / 330k+ traders; 80% protocol revenue → weekly $HOME
+  buybacks. Risk: 882.34M token unlock 2026-06-10 (8.82% of max supply, top
+  address 69% concentration per Nov 2025 report) — pre-unlock distribution-
+  then-dump setup.
+- Token-pick **2026-05-31: WLD** $0.333 (paid out, +17% in 24h to $0.39).
+- LAB skipped 4 consecutive days (5-29 → 6-01) on ZachXBT 95%-insider-supply
+  flag despite 11/10 score.
+- H Humanity skipped 6-01 on +180% 72h vertical blow-off-top + 6-25 unlock.
 - Token-pick **2026-05-29: INJ** $6.01 (+12.8% 24h / +11.8% 7d), HIGH 9/10.
   Thesis: Injective record $3.57B daily on-chain tokenized-equity vol
   2026-05-27 + 21Shares (TINJ) and Canary staked-INJ ETF filings advancing
@@ -113,6 +148,10 @@ market-context-refresh, and digest runs. Latest data point wins.
   HIGH 10/10. Strengthened to $0.1978 by afternoon re-fire (suppressed
   by once-per-day rule).
 - Token-pick 2026-05-21: LIT (Lighter) $1.32 +45.1% 7d, HIGH 10/10.
+- Token-alert **2026-06-01**: REPPO $0.01574 (-4.97%, 5th straight red/
+  flat day in $0.0157-0.0166 band since 5-28); HYPER $0.09114 (+1.53%,
+  4th green day); VVV $18.46 (+1.90%, cooling after 5-31 +14.5% breakout).
+  No threshold cross, no volume spike.
 - Token-alert **2026-05-29**: REPPO $0.01824888 (+12.13%) — **alert
   triggered**, snaps 3-day red streak, claws back through 05-27 low
   $0.01712; HYPER $0.086631 (-2.91%, 7th straight red/flat, breaks $0.089
