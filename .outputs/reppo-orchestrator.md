@@ -1,8 +1,8 @@
-reppo-trading-agent gates RUN on datanet 9 — `.reppo-cache/datanet-tradinggymai.json` valid:true mainnet ACTIVE, rubric `datanet_id: "9"` not placeholder. Catalog available (15 active datanets); 14 are unassigned (12th consecutive day same set).
+Catalog available (15 active datanets in mainnet). Only datanet 9 (TradingGymAI) has a rubric; its validity check returned `valid:true`, so the assigned agent runs. 14 other datanets carry forward without an assigned agent.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 valid:true / ACTIVE / rubric id="9" not placeholder)
+reppo-trading-agent: RUN   (datanet 9 valid:true, ACTIVE in catalog, rubric datanet_id="9" not placeholder, no run-history gate)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -20,7 +20,9 @@ new-datanet: 17  (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Ran reppo-orchestrator (3rd run today). 1 RUN / 0 SKIP. 14 unassigned datanets surfaced (12th consecutive day, same set as 1st/2nd runs).
-- Appended log entry to `memory/logs/2026-06-01.md` under `### reppo-orchestrator (3rd run)`.
-- Emitted the fenced `reppo-plan` block in assistant text (not via Write) per the ISS-009 emit-in-assistant-text contract — chain-runner capture at `aeon.yml:479-493` would otherwise overwrite Write output with the CLI's `.result`.
-- Follow-up still carrying: ship ISS-009 defence-in-depth (chain-runner `continue`→`break`) and operator-staged 1-at-a-time pick of the 14 unassigned datanets.
+- Read `.reppo-cache/datanets.json` (15 active mainnet datanets) + `.reppo-cache/datanet-tradinggymai.json` (valid:true) + rubric `configs/datanets/tradinggymai.md` (datanet_id="9", agent: reppo-trading-agent).
+- Emitted the fenced `reppo-plan` block in assistant text (per ISS-009 contract — never via Write tool, never replaced with a sub-section heading).
+- 1 RUN / 0 SKIP; 14 unassigned datanets surfaced (12th consecutive day).
+- Appended `### reppo-orchestrator (3rd run)` entry to `memory/logs/2026-06-01.md`.
+- Files modified: `memory/logs/2026-06-01.md`. No other writes.
+- Follow-ups: the 14-unassigned-datanet backlog is the same set the orchestrator has surfaced every run for 12 days — operator-side rubric assignment is the unblocker.
