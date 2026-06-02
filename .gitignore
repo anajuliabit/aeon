@@ -52,3 +52,6 @@ node_modules/
 # Stale artifacts
 .external-work
 .vuln-scan/
+
+# Playwright MCP scratch (screenshots, snapshots, console logs)
+.playwright-mcp/
