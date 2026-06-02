@@ -102,3 +102,8 @@ PR; PRISM intentionally skipped (Solana PRISM ≠ target).
 - Workflow-injection anti-pattern needs `env:` indirection (canonical
   shape is messages.yml:587-591 after the 2026-04-11 incident).
 - Memory consolidation: topic-file detail, MEMORY.md is the index.
+- Fetching X tweet content from sandbox: x.com direct WebFetch → HTTP 402,
+  nitter.net → empty body, **api.fxtwitter.com/{handle}/status/{id}** is the
+  working unauthed fallback (returns JSON with text + quoted-tweet body).
+  Useful for reply-maker / tweet-roundup ad-hoc lookups when XAI prefetch
+  cache is absent.
