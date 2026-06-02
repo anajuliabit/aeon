@@ -1,35 +1,24 @@
-Skill complete. Now emitting the final assistant text per ISS-009 (chain-runner captures into `.outputs/reppo-voter.md`).
+Log entry appended. Now emitting the skill's output summary.
 
-## Reppo Voter — 2026-06-02 (3rd run)
+## Reppo Voter — 4th run today
 
-**Step 1 — Gate:** Orchestrator plan `reppo-plan` block shows `reppo-trading-agent: RUN   (auto-fallback — orchestrator dropped block, ISS-009)` for datanet 9. Proceeding.
+**Gate:** RUN (datanet 9 — orchestrator plan shows `reppo-trading-agent: RUN`, datanet valid=true / hasAccess=true on caller 0xb4EC41c9, rubric present at `configs/datanets/tradinggymai.md`).
 
-**Step 2 — Rubric:** `configs/datanets/tradinggymai.md` configured (`datanet_id: "9"`). Goal = labeled HL perp trade datasets w/ trade/signal/outcome/metrics/market-context/timeframe/verification. `vote_cap` ignored per SKILL.md.
-
-**Step 3 — Caches:** `pods-tradinggymai.json` (59 pods), `vote-filter-tradinggymai.json` (`current_epoch: "100"`, 19 voted_pod_ids), `own-pods-tradinggymai.json` (`count: 0` — ISS-016 7th consecutive degenerate run).
-
-**Step 4 — Filter to votable universe:**
-- Total pods seen: **59**
-- Out-of-epoch (`validityEpoch != "100"`): **56** discarded
-- Already-voted: **2** discarded — pods 498 + 499 (DISLIKEd 1st-run today, txs `0x4ad2ad9c…ea76` / `0x1ce42773…56c8`)
-- Own-pod (defensive ledger cross-ref): **1** discarded — `podId 492` "HL perps 6.3d, 0x9a15..37e6: 74 trades multi" matches our 14th mint `cc41abf64326a29b` on 2026-06-01 (wallet `0x9a1500b41519868039b1f95c447ba50b76d837e6`, 74 trades, 6.26d, multi-market — exact match). Own-pods prefetch `count:0` again (ISS-016 carry, 7th run); ledger cross-ref caught the self-vote risk.
+**Universe:**
+- `current_epoch` = **100**
+- Pods seen: **59**
+- Filtered: **out-of-epoch=56**, **already-voted=2** (pods 498, 499 — landed on-chain 1st-run today, txs 0x4ad2ad9c…ea76 / 0x1ce42773…56c8), **own-pod=1** (pod 492 "HL perps 6.3d, 0x9a15..37e6: 74 trades multi" → matches our 14th mint `cc41abf64326a29b` on 2026-06-01, wallet 0x9a1500b4, 74 trades multi-market — own_pods prefetch returned count=0 again, ledger cross-ref via `memory/topics/reppo.md` caught it; ISS-016 carry)
 - **Eligible: 0**
 
-**Step 5 — Evaluation + votes queued:**
+**Votes queued:** LIKE=0, DISLIKE=0. No `.pending-reppo/vote-*.json` files written (the directory does not need to exist when there are no intents).
 
-| Pod | Name | Direction | Reason |
-|-----|------|-----------|--------|
-| — | (no eligible pods) | — | — |
+**Notes:**
+- No prompt-injection attempts in pod metadata this run.
+- **ISS-005 all-DISLIKE guard does not apply** — eligible set is empty, not non-empty-all-DISLIKE.
+- **ISS-016** own_pods prefetch count=0 again — voter self-recognized pod 492 via the ledger's "Minted strategies" wallet-shortcode + trade-count + multi-market match against the 14th-mint row.
+- 4-for-4 today on the identical empty-eligible-set shape — only 3 pods exist in epoch 100, and the trio is (voted, voted, own). No new HotBot-v4 raw export or other-publisher pod has surfaced this cycle to give the voter anything to act on.
 
-No prompt-injection attempts detected.
-
-**ISS-005 all-DISLIKE guard:** Does NOT apply — eligible set is empty.
-
-**Intent files written to `.pending-reppo/`:** none. Directory not created. `scripts/postprocess-reppo.sh` will no-op.
+**Postprocess:** `scripts/postprocess-reppo.sh` will no-op since `.pending-reppo/` has no new vote files. No `## Execution Results` section to append.
 
 ## Summary
-- Wrote 0 vote intents at datanet 9, epoch 100 — eligible set empty (3 epoch-100 pods; 2 already voted on-chain earlier today, 1 is our 14th mint cc41abf6).
-- Skipped pod 492 as our own via ledger cross-ref — own_pods prefetch still returns `count:0` (ISS-016 7th-day carry).
-- 0 LIKE / 0 DISLIKE; no all-DISLIKE flag (guard scope is non-empty eligible sets).
-- Appended a 3rd `### reppo-voter` entry to `memory/logs/2026-06-02.md`.
-- Follow-up: ISS-016 own_pods prefetch still `count:0` for 7 consecutive runs — ledger cross-ref defence-in-depth remains the only thing standing between the voter and a `CANNOT_VOTE_FOR_OWN_POD` revert on pod 492.
+Ran reppo-voter (4th today). Gate RUN; epoch 100; 59 pods seen; 56 out-of-epoch + 2 already-voted + 1 own-pod = 0 eligible. Zero vote intents written. Log line appended to `memory/logs/2026-06-02.md` under `### reppo-voter`. Follow-ups (pre-existing, not new this run): ISS-016 own_pods prefetch still returning count=0 (8th-day carry); voter remains correct only because of the ledger-cross-ref defensive path in Step 4(3).
