@@ -1,18 +1,24 @@
-Scratch cleanup blocked — leaving `.tmp-*` files (already noted in MEMORY.md as a tracked cleanup item).
-
 ## Summary
 
-Executed `security-digest` skill. Pulled CISA KEV (5 new entries since 2026-05-25), GitHub Advisory Database (3 critical + 7 high since 2026-05-30), and FIRST EPSS scores. Ranked into actionable tiers and staged a notification.
+Executed `security-digest` skill for 2026-06-02.
 
-**Headline:** 2 npm supply-chain KEV adds in one week — Nx Console and TanStack (42 packages) — both ransomware-linked. First time tracked stack has had concurrent npm KEV entries.
+**Sources status:** kev=ok, gh=ok, epss=ok (all 3 live).
 
-**Output:**
-- **PATCH TODAY (3):** PAN-OS auth bypass (EPSS 0.415), Nx Console npm malware → ≥18.100.0, TanStack npm malware → @tanstack/react-router ≥1.169.9 + rotate npm tokens
-- **PATCH THIS WEEK (5):** vitest RCE → ≥4.1.0 (CVSS 9.8, public PoC confirmed), praisonai-platform → ≥0.1.4 (covers 5 IDOR CVEs), @vitest/browser → ≥4.1.6, dompurify → ≥3.4.5, nezha → ≥2.0.12
-- **MONITOR:** dropped (all remaining have fix versions; strict tier rule wasn't met)
+**Tier counts:** PATCH TODAY=3 · PATCH THIS WEEK=0 · MONITOR=0.
 
-**Files:**
-- Created `.pending-notify/1748736000-security-digest.md` (~2.4K chars, post-run delivery)
-- Appended `### security-digest` entry to `memory/logs/2026-06-01.md`
+**PATCH TODAY (sorted in-KEV→EPSS desc):**
+1. **CVE-2024-21182** — Oracle WebLogic — KEV added 2026-06-01 (NEW) · EPSS 0.896 · CVSS 7.5 → apply Oracle CPU Jul-2024 patch
+2. **CVE-2026-8398** — Daemon Tools Lite — KEV added 2026-05-27 · EPSS 0.155 → upgrade to ≥12.6.0.2445
+3. **CVE-2026-48172** — LiteSpeed cPanel Plugin — KEV added 2026-05-26 · EPSS 0.080 → upgrade WHM plugin to ≥5.3.1.0
 
-**Exit:** SECURITY_DIGEST_OK — all 3 sources ok (kev, gh, epss), tiers non-empty.
+**Notable:**
+- First time PATCH THIS WEEK is empty since skill went live yesterday — all 5 of yesterday's THIS-WEEK CVEs deduped by ID.
+- Zero new GH advisories at any severity in last ~24h.
+- Oracle WebLogic is a 2024-vintage CVE just added to KEV in 2026 — catch-up listing for still-exploited unauth T3/IIOP, due date 2026-06-04.
+- Zero tracked-stack (npm/pip/Go/crates.io/GHA) hits today — all 3 KEV pass-throughs.
+
+**Files modified:**
+- `.pending-notify/1780412957-security-digest.md` — 1292-char notification staged for post-run delivery
+- `memory/logs/2026-06-02.md` — appended `### security-digest` log entry
+
+**Exit:** SECURITY_DIGEST_OK.
