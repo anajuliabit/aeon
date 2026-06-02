@@ -242,3 +242,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-02,reppo-trading-agent,claude-opus-4-7,43,31056,2695158,185760
 2026-06-02,reppo-digest,claude-opus-4-7,18,13466,932806,67211
 2026-06-02,skill-freshness,claude-sonnet-4-6,12,18003,716625,64939
+2026-06-02,fleet-control,claude-opus-4-7,11,2470,334790,36563
