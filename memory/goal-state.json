@@ -1,35 +1,35 @@
 {
-  "run_at": "2026-06-01T19:15:02Z",
+  "run_at": "2026-06-02T18:00:00Z",
   "goals": {
     "close-iss-009-defence-in-depth": {
       "status": "ON_TRACK",
-      "activity_count_14d": 34,
-      "last_activity_date": "2026-06-01"
+      "activity_count_14d": 12,
+      "last_activity_date": "2026-06-02"
     },
-    "assign-14-unassigned-reppo-datanets": {
+    "close-iss-017-chain-runner-workflow-injection": {
       "status": "ON_TRACK",
-      "activity_count_14d": 30,
-      "last_activity_date": "2026-06-01"
+      "activity_count_14d": 2,
+      "last_activity_date": "2026-06-02"
     },
     "resolve-iss-016": {
       "status": "ON_TRACK",
-      "activity_count_14d": 9,
-      "last_activity_date": "2026-06-01"
+      "activity_count_14d": 4,
+      "last_activity_date": "2026-06-02"
     },
-    "operator-call-iss-015": {
+    "assign-14-unassigned-reppo-datanets": {
       "status": "ON_TRACK",
-      "activity_count_14d": 24,
-      "last_activity_date": "2026-06-01"
+      "activity_count_14d": 14,
+      "last_activity_date": "2026-06-02"
     },
     "index-bookkeeping": {
       "status": "ON_TRACK",
-      "activity_count_14d": 18,
-      "last_activity_date": "2026-06-01"
+      "activity_count_14d": 13,
+      "last_activity_date": "2026-06-02"
     },
     "cleanup-chain-runner-scratch": {
-      "status": "AT_RISK",
-      "activity_count_14d": 0,
-      "last_activity_date": null
+      "status": "ON_TRACK",
+      "activity_count_14d": 3,
+      "last_activity_date": "2026-06-02"
     }
   }
 }
