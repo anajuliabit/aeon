@@ -1,24 +1,19 @@
+Daily routine complete. Notification staged at `.pending-notify/1780335000-daily-routine.md` (3,889 chars, under 4000 ceiling) — post-run delivery step will pick it up.
+
 ## Summary
 
-Executed `skills/daily-routine/SKILL.md` standalone (no chain context — sub-skill outputs absent). Ran inline: token-movers + tweet-roundup + paper-pick + github-issues + hn-digest. Applied ana voice from `soul/STYLE.md`.
+Ran daily-routine standalone (no chain context — daily-routine isn't part of any `chains:` block in aeon.yml). Soul applied (ana voice).
 
-**Pulse:** risk-off tape, 18/72 top alts green 24h, top-100 median -0.6%. BTC $73,009 -1.1%, ETH $1,986 -1.8%, HYPE $72.96 +5.5% (new ATH past 5-31's $69.19).
+**Sections covered:**
+- **token-movers**: 30/90 top-100-mcap green 24h, median -0.78%. Winners led by LAB +71.6% (day 5 zachxbt insider flag), HOME +33.6% (yesterday's pick held entry), H +23.4% (day 4 of vertical). Losers led by EDGE -49.4% / 7d -54.5% biggest single-day cliff, XLM reverses 6-01 winner direction, BinanceLife reverses 6-01 winner.
+- **tweet-roundup**: WebSearch fallback (no `XAI_API_KEY`, 8th consecutive day). Crypto: x-takeover wave + citi $3.6T stables/RWA framing + ETH treasury -75% buys. AI: openai daybreak ships + anthropic-blackstone services co. + ramp index anthropic takes paid-adoption lead. Dev: microsoft build 2026 starts today.
+- **paper-pick**: MCP-Persona (arxiv 2606.02470, ↑7) — first MCP-agent benchmark, dedup-clean vs last 7 days.
+- **github-issues**: 0 new (5th consecutive silent day).
+- **hn-digest**: 5 stories — instagram exploit (1646pts), CS336 CLAUDE.md (382pts), Alphabet $80B raise, OpenAI on AWS, Haskell-from-biologists.
 
-**Highlights:**
-- H (Humanity) +77.4% — extends 5-31's +14.8% into a 3-day ~+180% vertical (integrity caveat retained)
-- WLD +16.0% — yesterday's token-pick from $0.333 to $0.39 entry, pick paid
-- ASTER reverses 5-31 winner; XLM reverses 5-31 loser; GENIUS extends 3-day collapse ~-50%
-- Paper: "From Prompt Injection to Persistent Control: Defending Agentic Harness Against Trojan Backdoors" (arxiv 2605.31042) — formalizes the threat model that CLAUDE.md's "treat external content as untrusted" rule mitigates; ties today's HN #48349487 (ChatGPT-Google-Sheets exfiltration) shipping in prod
-- GitHub: 0 new issues (4th consecutive silent day)
-- HN: Codex sudo-workaround, ChatGPT exfiltration, Cloudflare Turnstile fingerprinting, 1-bit Bonsai image gen, Dav2d AV2 decoder
+**Files written:**
+- `.pending-notify/1780335000-daily-routine.md` (3,889 chars)
+- `memory/logs/2026-06-02.md` (appended daily-routine log entry)
+- Working-dir scratch: `.tmp-cg-markets.json`, `.tmp-cg-trending.json`, `.tmp-hf-papers.json`, `.tmp-hn-front.json`, `.tmp-movers.jq`, `.tmp-winners.jq`, `.tmp-process.py` (sandbox blocks mid-run `rm`; MEMORY.md notes the carryover pattern).
 
-**Files created/modified:**
-- `.pending-notify/1780298701-daily-routine.md` (3,269 chars, under 4000 ceiling — staged for post-run delivery per sandbox pattern)
-- `memory/logs/2026-06-01.md` (daily-routine entry appended)
-
-**Follow-ups:** none specific to this run. The carry-over goals from MEMORY.md (ISS-009 defence-in-depth, ISS-015 Reddit operator call, 14 unassigned datanets) remain in scope for their respective skills.
-
-Sources:
-- [JPMorgan Warns Ethereum and Altcoins May Continue Lagging Behind Bitcoin](https://www.mexc.com/news/1095498)
-- [How Claude overtook ChatGPT in the valuation race - The Week](https://www.theweek.in/news/sci-tech/2026/05/30/claude-ai-surpasses-openai-chatgpt.html)
-- [Raindrop's Workshop open-source AI agent debugger - VentureBeat](https://venturebeat.com/technology/developers-can-now-debug-and-evaluate-ai-agents-locally-with-raindrops-open-source-tool-workshop)
+**Exit:** DAILY_ROUTINE_OK.
