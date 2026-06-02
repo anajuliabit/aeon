@@ -1,23 +1,19 @@
-Done. Action Converter run complete.
+Action Converter ran clean.
 
 ## Summary
 
-Ran the action-converter skill end-to-end in OK mode.
+Mode = ACTION_CONVERTER_OK (109-line MEMORY.md, 14 distinct log dates, 0 open PRs, 1 cron-failed entry confirmed to be a state-writer false positive). 5 actions scored to 4.4/5 avg, ordered by quality desc then urgency desc:
 
-**Mode:** OK (13 distinct log dates in last 14d, MEMORY.md consolidated 2026-05-31, 0 open PRs after 8 merges today, all 41 cron-state entries success).
+1. ship iss-017 PR — `env:` indirection at chain-runner.yml:41+:416 (template at messages.yml:587-591)
+2. set REDDIT_CLIENT_ID + REDDIT_CLIENT_SECRET in repo secrets (day 5 vibecoding-digest blocked)
+3. write configs/datanets/RUBRIC.md + datanet 13 first pass (weekly-review 6-05 deadline)
+4. diagnose chain:reppo-swarm state-flip — workflow #26818451669 succeeded but cron-state wrote failed
+5. debug scripts/prefetch-reppo.sh own_pod_ids query (count=0 7th consecutive run)
 
-**Shape:** harden chain-runner inputs, codify orchestrator contract, repair voter prefetch, stage datanet 13, reconcile INDEX.
+Carried forward: iss-009 sub-task (b), INDEX bookkeeping, iss-011, iss-005 watch, cost rotation, scratch cleanup, fetch-tweets $WOOD narrowing, 13 remaining unassigned datanets.
 
-**5 actions** (quality avg 4.6/5), anchored to real loops, novelty-checked vs 14d log bigrams, all passing specificity + banned-phrase + ≤2h + observable-done gates:
+Files modified:
+- `.pending-notify/1780424184-action-converter.md` — 2,179-char notification staged (post-run delivery picks it up)
+- `memory/logs/2026-06-02.md` — Action Converter log section appended
 
-1. **ISS-017** — PR for `env:` indirection at chain-runner.yml:41 + :416 (workflow injection, same class as messages.yml fix resolved today)
-2. **ISS-009 secondary** — codify emit-in-assistant-text contract in skills/reppo-orchestrator/SKILL.md (defence-in-depth sub-task (a), since (b) `continue`→`break` was 5-29's named action)
-3. **ISS-016** — repair own_pod_ids prefetch in scripts/prefetch-reppo.sh (count=0 for 5 consecutive runs)
-4. **Datanets unassigned** — stage datanet 13 The Strategy Exchange (closest sibling to current datanet 9, 12 days carried)
-5. **INDEX bookkeeping** — move ISS-007 + ISS-010 from Open → Resolved (5+ days carried)
-
-**Files modified:**
-- Wrote `.pending-notify/1780341340-action-converter.md` (Telegram-MD friendly, no leading spaces, post-run delivery picks it up)
-- Appended `## Action Converter` section to `memory/logs/2026-06-01.md` per skill spec (mode / focus / shape / actions / loops anchored + carried / notification status / note)
-
-**Loops carried over** for tomorrow's novelty window: iss-009-primary (`continue`→`break`), iss-015 (PR #56 waits on REDDIT_CLIENT_ID/SECRET + 17:30 test), iss-011, cost-opus-sonnet-rotation, scratch cleanup, 13 remaining unassigned datanets, fetch-tweets var narrowing.
+Follow-up: none — clean run. Notification will deliver via post-run `./notify` step.
