@@ -1,0 +1,97 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header_info",
+        "sep1",
+        "trading_agent_section",
+        "sep2",
+        "voter_section",
+        "sep3",
+        "unassigned"
+      ]
+    },
+    "header_info": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 4th run · datanet 9 · 0 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "trading_agent_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trading_header",
+        "trading_blocked"
+      ]
+    },
+    "trading_header": {
+      "type": "Heading",
+      "props": {
+        "text": "trading-agent · 0 mints",
+        "level": "h3"
+      }
+    },
+    "trading_blocked": {
+      "type": "Text",
+      "props": {
+        "text": "margin-top-12 fully blocked: 4 spot-dominant, 2 opens-only hft, 3 sub-floor closes, 3 empty caches. 4-for-4 dry today on identical structural shape.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "voter_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "voter_header",
+        "voter_details"
+      ]
+    },
+    "voter_header": {
+      "type": "Heading",
+      "props": {
+        "text": "voter · 0 votes",
+        "level": "h3"
+      }
+    },
+    "voter_details": {
+      "type": "Text",
+      "props": {
+        "text": "epoch 100 universe is (voted, voted, own). pods 498/499 already on-chain 1st-run today; pod 492 is own 14th-mint cc41abf6, caught via ledger cross-ref (iss-016 own_pods prefetch count=0 carry).",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "unassigned": {
+      "type": "Text",
+      "props": {
+        "text": "15 datanets unassigned.",
+        "variant": "body"
+      }
+    }
+  }
+}
