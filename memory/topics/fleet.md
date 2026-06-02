@@ -64,6 +64,7 @@ state: what was built, recurring blockers, and health.
 | #59 | 2026-06-01 | dashboard Reppo swarm demo at /swarm — merged 13:13Z |
 | #60 | 2026-06-01 | bump HL_TOP_N 5→12 to clear mint-ledger saturation — merged 13:50Z |
 | #61 | 2026-06-01 | decouple voting from minting via new reppo-voter skill — merged 15:20Z |
+| #62 | 2026-06-02 | self-improve: narrow bare `mamo` → `$MAMO` cashtag in fetch-tweets var — merged ~07:30Z |
 
 ## Recurring blockers
 - **14 unassigned reppo datanets.** Orchestrator surfaces them every run (ids
@@ -227,20 +228,52 @@ state: what was built, recurring blockers, and health.
   incident. Fix: env: indirection (lines 587-591 of messages.yml are
   the canonical shape). Real exposure low (write-auth gated).
 
-## Today's PR sweep (2026-06-01)
-- 13:12-15:20Z: 8 PRs merged in a single window. #54 enabled 5 new
-  tier-1 skills. #55 canonical token watchlist. #56 closes ISS-015.
-  #57 reppo-cli≥0.6.0 native Phase 2 path. #58 skill-graph weekly
-  digest. #59 dashboard /swarm demo. #60 HL_TOP_N 5→12 (unblocked the
-  fresh wallet that landed today's 14th mint). #61 split reppo-voter
+## PR sweep (2026-06-01 → 2026-06-02)
+- 2026-06-01 13:12-15:20Z: 8 PRs merged in a single window. #54 enabled 5
+  new tier-1 skills. #55 canonical token watchlist. #56 closes ISS-015
+  upstream. #57 reppo-cli≥0.6.0 native Phase 2 path. #58 skill-graph
+  weekly digest. #59 dashboard /swarm demo. #60 HL_TOP_N 5→12 (unblocked
+  the fresh wallet that landed the 14th mint). #61 split reppo-voter
   out of trading-agent.
-- 14th mint landed 14:40Z (wallet 0x9a1500b4, 74 Close-Long perp fills,
+- 2026-06-01 14:40Z 14th mint (wallet 0x9a1500b4, 74 Close-Long perp,
   hash cc41abf6, tx 0xcbe53613) — same source wallet as 13th-mint
   dce17be3 but fresh `(wallet, last_t, n_close)` triple proves
-  drift-skip dedup admits genuine new activity.
-- Thin/marginal mint: Sharpe 0.84, MDD 91% on the 14th vs 9.98/171%
-  on the 13th. Flagged in pod_description for downstream EVOF so
-  quality regression is visible upstream.
+  drift-skip dedup admits genuine new activity. Thin/marginal: Sharpe
+  0.84, MDD 91% vs 13th-mint's 9.98 / 171%.
+- 2026-06-02 ~07:30Z: PR #62 merged (self-improve: `mamo` → `$MAMO`
+  cashtag in fetch-tweets var). Open PR count drops to 0.
+- 2026-06-02 1st chain run (07:00) added 2 DISLIKE votes on epoch-100
+  HotBot v4 pods 498/499 — first reppo-voter-owned on-chain votes
+  post-PR #61 chain split. Ledger now 14 mints / 29 votes.
+
+## Today's anomalies (2026-06-02)
+- **Same-wallet quality regression on 0x9a1500b4** (14th-mint source).
+  Cache slid forward 24h: sum_pnl yesterday +$177.11 → today's 1st run
+  −$116.59 → today's 2nd run −$215.8k slice (different oid) → today's
+  3rd run −$161.81. 13 new fills added net −$338.92 including a −$378
+  worst trade. Rubric admitted a thin wallet at 14th-mint quality
+  (Sharpe 0.84 / MDD 91%) that immediately regressed to NEG-PnL — a
+  quality guard beyond drift-skip is the next loop. 3-for-3 dry
+  trading-agent runs today on the same blocker.
+- **chain:reppo-swarm state-flip**: 2026-06-02 12:23Z `cron-state.json`
+  flipped `last_status=failed` while `gh run view` confirmed workflow
+  exit `conclusion=success`. ~5s gap between in-chain state-writer and
+  final workflow exit; all 4 component skills logged success.
+  Investigating under ISS-010 scope (chain-key bookkeeping); not a
+  real chain failure but `docs/status.md` momentarily flipped DEGRADED
+  on the literal rule.
+- **ISS-016 own_pod_ids prefetch** count=0 for 8 consecutive runs;
+  voter self-recognizes via ledger cross-ref. Prefetch repair still
+  pending.
+
+## reply-maker ad-hoc (new pattern)
+- 2026-06-02 mid-day: operator forwarded an X URL via Telegram
+  (RG @rgvrmdya QT'd @reppo's Orquestra launch and dedicated it to
+  @anajuliabit). reply-maker drafted 2 reply options in ana voice,
+  staged to `.pending-notify/reply-drafts-rgvrmdya.md`. Tweet content
+  sourced via api.fxtwitter.com/{handle}/status/{id} after x.com
+  direct WebFetch returned HTTP 402 and nitter.net returned empty —
+  fxtwitter is the working sandbox-friendly fallback for X content.
 
 ## Project Lens & content skills
 - **project-lens first article published 2026-06-01** (`sherwood.sh`
