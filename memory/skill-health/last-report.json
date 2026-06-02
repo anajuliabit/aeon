@@ -1,12 +1,12 @@
 {
   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "last_notified_at": "2026-06-01T19:12:05Z",
-  "last_run_at": "2026-06-01T19:12:05Z",
+  "last_run_at": "2026-06-02T18:14:49Z",
   "classification": {
     "critical": [],
     "degraded": [],
     "flapping": [],
-    "warning": [],
+    "warning": ["chain:reppo-swarm"],
     "healthy_count": 29,
     "no_data": [
       "operator-scorecard",

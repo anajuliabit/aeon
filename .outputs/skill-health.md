@@ -1,23 +1,19 @@
-Skill-health audit complete.
+Skill executed. No notification sent.
 
 ## Summary
 
-Ran `skills/skill-health/SKILL.md` for 2026-06-01.
+**Verdict:** HEALTH: OK — gate suppressed notify (hash unchanged + 23h02m since last_notified_at, under 24h).
 
-**Classification (29 enabled cron-tracked skills, autoresearch excluded as workflow_dispatch-only):**
-- CRITICAL/DEGRADED/FLAPPING/WARNING: 0
+**Classification (33 enabled skills + 1 chain):**
+- CRITICAL / DEGRADED / FLAPPING: none
+- WARNING: `chain:reppo-swarm` (last_status=failed 12:23Z — known phantom-key state-writer artifact under ISS-010; gh confirms workflow conclusion=success per 15:08 heartbeat)
+- NO DATA: operator-scorecard, unlock-monitor, reg-monitor, vuln-scanner (all weekly, within 2x intervals)
 - HEALTHY: 29
-- NO DATA: 4 — `operator-scorecard` (missed mon 10:30), `unlock-monitor` (mon 10:00 pre-merge, pr #54 tier-1 enable @ 13:12Z), `reg-monitor` + `vuln-scanner` (wed/sat first slots not yet reached)
 
-**Notify gate:** current_hash = `e3b0c442…` (empty list) matches prev_report.hash, but `now − last_notified_at = 24h51m ≥ 24h` → daily reminder fires.
+**Issue reconciliation:** skipped — 0 of 8 open issues have `detected_by: skill-health` (all filed by reppo-digest / vibecoding-digest / skill-security-scan / manual). Per spec, this skill only resolves what it filed.
 
-**Issue reconciliation:** all 8 open issues have `detected_by ≠ skill-health` (mostly `reppo-digest`, one `skill-security-scan`, one `vibecoding-digest`, one manual) → step 4 no-op. No new issues filed, none resolved by this audit.
+**Files updated:**
+- `memory/skill-health/last-report.json` — last_run_at=2026-06-02T18:14:49Z, hash + last_notified_at preserved, warning entry recorded.
+- `memory/logs/2026-06-02.md` — appended `### skill-health` block with SKILL_HEALTH_NOOP + SKILL_HEALTH_PARTIAL (skill-runs unavailable in sandbox).
 
-**Sandbox note:** `scripts/skill-runs` blocked by approval prompt; logged `SKILL_HEALTH_PARTIAL` and proceeded on cron-state + skill-health/*.json + memory/logs/2026-06-01.md per SKILL.md sandbox fallback.
-
-**Files modified:**
-- `.pending-notify/1780340000-skill-health.md` (notify body staged for post-run delivery)
-- `memory/skill-health/last-report.json` (hash + classification + last_notified_at = 2026-06-01T19:12:05Z)
-- `memory/logs/2026-06-01.md` (appended `### skill-health` entry)
-
-**Follow-up:** operator-scorecard's missed 10:30 Mon slot is the only real scheduler gap — heartbeat already noted it at both 09:13 and 15:20, not re-escalated here per dedup.
+**Follow-up:** none — fleet stable. Chain:reppo-swarm warning is cosmetic (ISS-010 scope, not new signal). Next run will continue 24h heartbeat cadence; if hash matches again at >24h, an OK confirmation notify will fire.
