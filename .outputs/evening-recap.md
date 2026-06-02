@@ -1,22 +1,20 @@
-Done. Here's what was sent:
+Done. Notification staged to `.pending-notify/1780434000-evening-recap.md` and log entry appended to `memory/logs/2026-06-02.md`.
 
----
+## Summary
 
-**Evening Recap — 2026-06-01**
+**Ran:** evening-recap for 2026-06-02
 
-*TL;DR: 8 PRs merged, 14th reppo mint on-chain, ISS-017 filed same day it surfaced — heaviest ship day this week.*
+**TL;DR:** mostly cron — 3 artifacts shipped (reply-maker, skill-freshness, agent-buzz); ISS-015 hits day 6 without secrets
 
-**Headlines (5):**
-- **weekly-shiplog** — 49 PRs merged this week; 0→14 mints + 0→26 votes on-chain
-- **reppo mint 14** — cc41abf6, 74 close-long perp trades, wallet 0x9a1500b4, tx 0xcbe53613
-- **PRs #54-#61 merged** — tier-1 skills enabled, reppo-voter split, HL_TOP_N 5→12
-- **ISS-017 filed** — chain-runner.yml:41+:416 workflow injection (2026-04-11 class)
-- **project-lens** — Sherwood vs Aeon mandate-over-custody thesis published
+**Headlines (3):**
+- reply-maker — ad-hoc reply drafts for @rgvrmdya's Orquestra QT
+- skill-freshness — 34-skill audit clean with 5 new consumers
+- agent-buzz — first successful run since 5-31
 
-**Notable (5):** reppo-trading-agent ×4 (3 dry / 1 productive), security-digest (3 PATCH TODAY + 2 npm KEV hits), deal-flow (Anthropic $65B + agent-stack triple), token-pick (HOME +47.8% / June 10 unlock risk), weekly-review (270 runs / 47 PRs / 16 articles)
+**Notable (5):** reppo-swarm ×4 (2 DISLIKEs on-chain, 4-for-4 dry mints), token-pick JTO HIGH, PR #62 merged, defi-overview DEX vol +68%, heartbeat ×3 chain state-flip resolved
 
-**Decisions for tomorrow (4):** ISS-017 env-indirection PR, REDDIT secrets for ISS-015, operator-scorecard Mon slot miss investigation, ISS-016 own_pod_ids prefetch repair
+**Blockers (1):** vibecoding-digest ISS-015 day 6 — REDDIT secrets still unset
 
-**+25 routine runs collapsed · sources: log=ok cron-state=ok**
+**Decisions for tomorrow (3):** set REDDIT secrets, ship ISS-017 PR, debug ISS-016 prefetch
 
-Notification staged to `.pending-notify/1780348000-evening-recap.md` for post-run delivery; log entry appended to `memory/logs/2026-06-01.md`.
+**Files:** `.pending-notify/1780434000-evening-recap.md` (created), `memory/logs/2026-06-02.md` (log entry appended)
