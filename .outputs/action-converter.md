@@ -1,19 +1,23 @@
-Action Converter run complete.
+Done. Action Converter run complete.
 
 ## Summary
 
-**Mode:** OK — full memory + 11 days of logs + 6 topic files + 5 open PRs + 0 failing skills.
+Ran the action-converter skill end-to-end in OK mode.
 
-**5 Actions — 2026-05-31** (shape: close ISS-015 via PR #56, codify ISS-009 + ISS-016 contracts, repair prefetch, sweep INDEX) — quality avg 4.4/5.
+**Mode:** OK (13 distinct log dates in last 14d, MEMORY.md consolidated 2026-05-31, 0 open PRs after 8 merges today, all 41 cron-state entries success).
 
-1. **Close ISS-015** — review and squash-merge PR #56 (`oauth.reddit.com` route for vibecoding-digest, day 4 blocker)
-2. **Codify ISS-009 defence-in-depth** — emit-in-assistant contract in `skills/reppo-orchestrator/SKILL.md` + chain-runner `continue` → `break` (`aeon.yml:479-493`), one PR
-3. **Close ISS-016** — own-pod LIKE-vote skip rule in `skills/reppo-trading-agent/SKILL.md`
-4. **Repair own_pod_ids prefetch** — `scripts/prefetch-reppo.sh` returns `count: 0` despite 5 own pods registered
-5. **Sweep INDEX bookkeeping** — mark ISS-007 + ISS-010 resolved (PRs shipped 5+ days ago)
+**Shape:** harden chain-runner inputs, codify orchestrator contract, repair voter prefetch, stage datanet 13, reconcile INDEX.
 
-**Files written:**
-- `.pending-notify/1780251816-action-converter.md` — notification staged for post-run delivery
-- `memory/logs/2026-05-31.md` — appended Action Converter log entry with anchored loops, carry-over queue, and 14-day novelty notes
+**5 actions** (quality avg 4.6/5), anchored to real loops, novelty-checked vs 14d log bigrams, all passing specificity + banned-phrase + ≤2h + observable-done gates:
 
-**Carry-over loops:** 14-datanet assignment (operator-gated), PR #57 reppo cli refactor, PR #54/#55/#58, chain-runner scratch cleanup.
+1. **ISS-017** — PR for `env:` indirection at chain-runner.yml:41 + :416 (workflow injection, same class as messages.yml fix resolved today)
+2. **ISS-009 secondary** — codify emit-in-assistant-text contract in skills/reppo-orchestrator/SKILL.md (defence-in-depth sub-task (a), since (b) `continue`→`break` was 5-29's named action)
+3. **ISS-016** — repair own_pod_ids prefetch in scripts/prefetch-reppo.sh (count=0 for 5 consecutive runs)
+4. **Datanets unassigned** — stage datanet 13 The Strategy Exchange (closest sibling to current datanet 9, 12 days carried)
+5. **INDEX bookkeeping** — move ISS-007 + ISS-010 from Open → Resolved (5+ days carried)
+
+**Files modified:**
+- Wrote `.pending-notify/1780341340-action-converter.md` (Telegram-MD friendly, no leading spaces, post-run delivery picks it up)
+- Appended `## Action Converter` section to `memory/logs/2026-06-01.md` per skill spec (mode / focus / shape / actions / loops anchored + carried / notification status / note)
+
+**Loops carried over** for tomorrow's novelty window: iss-009-primary (`continue`→`break`), iss-015 (PR #56 waits on REDDIT_CLIENT_ID/SECRET + 17:30 test), iss-011, cost-opus-sonnet-rotation, scratch cleanup, 13 remaining unassigned datanets, fetch-tweets var narrowing.

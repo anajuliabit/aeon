@@ -1,0 +1,218 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "weekly review — 2026-06-01"
+      },
+      "children": [
+        "action-section",
+        "sep1",
+        "receipts-section",
+        "sep2",
+        "health-section",
+        "sep3",
+        "review-link"
+      ]
+    },
+    "action-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-heading",
+        "action-text"
+      ]
+    },
+    "action-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Action",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "action-text": {
+      "type": "Text",
+      "props": {
+        "text": "write configs/datanets/RUBRIC.md + map ≥3 of 14 unassigned datanets by 2026-06-05 (last week's slipped action, 12th day surfaced)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "receipts-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "receipts-heading",
+        "receipts-grid",
+        "issues-resolved-detail"
+      ]
+    },
+    "receipts-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Receipts",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "receipts-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-mints",
+        "stat-votes",
+        "stat-prs",
+        "stat-issues-resolved"
+      ]
+    },
+    "stat-mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints",
+        "value": "14",
+        "delta": "+14",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-votes": {
+      "type": "Stat",
+      "props": {
+        "label": "Votes on-chain",
+        "value": "26",
+        "delta": "+26",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs merged",
+        "value": "47"
+      },
+      "children": []
+    },
+    "stat-issues-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Issues resolved",
+        "value": "6"
+      },
+      "children": []
+    },
+    "issues-resolved-detail": {
+      "type": "Text",
+      "props": {
+        "text": "iss-004, iss-006, iss-008, iss-012, iss-013, iss-014 | (vs 0/0 last week)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "health-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health-heading",
+        "health-grid",
+        "health-detail"
+      ]
+    },
+    "health-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "health-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-skill-runs",
+        "stat-issues-new",
+        "stat-issues-open"
+      ]
+    },
+    "stat-skill-runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Skill runs OK",
+        "value": "267/270"
+      },
+      "children": []
+    },
+    "stat-issues-new": {
+      "type": "Stat",
+      "props": {
+        "label": "New issues opened",
+        "value": "10"
+      },
+      "children": []
+    },
+    "stat-issues-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Issues still open",
+        "value": "8"
+      },
+      "children": []
+    },
+    "health-detail": {
+      "type": "Text",
+      "props": {
+        "text": "1 failed, 2 cancelled | New: iss-008..017",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "review-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Weekly Review",
+        "href": "articles/weekly-review-2026-06-01.md"
+      },
+      "children": []
+    }
+  }
+}

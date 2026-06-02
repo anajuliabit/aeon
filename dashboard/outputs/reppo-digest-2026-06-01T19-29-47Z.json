@@ -1,0 +1,215 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "header_stack",
+        "sep1",
+        "trading_stack",
+        "sep2",
+        "regression_stack",
+        "sep3",
+        "voter_stack",
+        "sep4",
+        "datanets_alert"
+      ]
+    },
+    "header_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_swarm",
+        "badge_run",
+        "badge_datanet",
+        "badge_onchain"
+      ]
+    },
+    "badge_swarm": {
+      "type": "Badge",
+      "props": {
+        "text": "reppo-swarm",
+        "variant": "default"
+      }
+    },
+    "badge_run": {
+      "type": "Badge",
+      "props": {
+        "text": "4th run",
+        "variant": "default"
+      }
+    },
+    "badge_datanet": {
+      "type": "Badge",
+      "props": {
+        "text": "datanet 9",
+        "variant": "default"
+      }
+    },
+    "badge_onchain": {
+      "type": "Badge",
+      "props": {
+        "text": "0 on-chain",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trading_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_trading",
+        "text_trading_dry",
+        "text_floorpassers"
+      ]
+    },
+    "heading_trading": {
+      "type": "Heading",
+      "props": {
+        "text": "trading-agent",
+        "level": "h3"
+      }
+    },
+    "text_trading_dry": {
+      "type": "Text",
+      "props": {
+        "text": "dry",
+        "variant": "body"
+      }
+    },
+    "text_floorpassers": {
+      "type": "Text",
+      "props": {
+        "text": "13 floor-passers all dedup or neg-pnl",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "regression_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_regression",
+        "text_regression_context"
+      ]
+    },
+    "stat_regression": {
+      "type": "Stat",
+      "props": {
+        "label": "0x9a1500b4",
+        "value": "−$162",
+        "delta": "−$339",
+        "trend": "down"
+      }
+    },
+    "text_regression_context": {
+      "type": "Text",
+      "props": {
+        "text": "regressed +$177 → −$162 after 13 fresh closes on identical first_t",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "voter_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_voter",
+        "text_voter_eligible",
+        "text_voter_pod",
+        "badge_mintid",
+        "text_source_wallet"
+      ]
+    },
+    "heading_voter": {
+      "type": "Heading",
+      "props": {
+        "text": "voter",
+        "level": "h3"
+      }
+    },
+    "text_voter_eligible": {
+      "type": "Text",
+      "props": {
+        "text": "eligible=0",
+        "variant": "body"
+      }
+    },
+    "text_voter_pod": {
+      "type": "Text",
+      "props": {
+        "text": "only epoch-100 pod is 492 = 14th-mint",
+        "variant": "body"
+      }
+    },
+    "badge_mintid": {
+      "type": "Badge",
+      "props": {
+        "text": "cc41abf6",
+        "variant": "outline"
+      }
+    },
+    "text_source_wallet": {
+      "type": "Text",
+      "props": {
+        "text": "source-wallet: 0x9a15..37e6",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Datanets",
+        "message": "14 datanets unassigned",
+        "type": "warning"
+      }
+    }
+  }
+}

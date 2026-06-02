@@ -1,21 +1,19 @@
-Done. Here's the summary:
-
 ## Summary
 
-**Status**: `FRESHNESS_OK` — no notification sent (silence is the signal).
+**Skill-freshness run complete — 2026-06-02.**
 
-**Audit results** (29 enabled skills, 2 dependencies checked, 0 flagged):
+**Verdict: ✅ FRESHNESS_OK → status: FRESHNESS_NO_CHANGE**
 
-- Only `skill-security-scan` had trackable implicit dependencies: `articles/workflow-security-audit-2026-04-11.md` (weekly threshold 192h) and `memory/state/security-scan.json` (state threshold 720h). Both fresh — all files have a ~6-minute mtime from git checkout.
+Key numbers:
+- **34 enabled skills** audited (up from 29; +deal-flow, reg-monitor, security-digest, unlock-monitor, vuln-scanner from PR #54)
+- **3 dependencies tracked**, 0 flagged
+  - skill-security-scan → `articles/workflow-security-audit-2026-04-11.md` (weekly, 192h threshold, ~3m old ✅)
+  - skill-security-scan → `memory/state/security-scan.json` (state, 720h threshold, ~3m old ✅)
+  - vuln-scanner → `.outputs/github-trending.md` — **new** this run (outputs class, 4h threshold, ~3m old ✅)
+- **5 self-refs filtered** (reg-monitor-seen.md, unlock-monitor-seen.json + 3 carried from yesterday)
+- Fingerprint unchanged (`da39a3ee…` — SHA1 of empty flagged set), last run 23h 38m ago → notification suppressed
 
-- 3 references filtered before scoring:
-  - `market-context-refresh → memory/topics/market-context.md` (self-ref: skill produces this file)
-  - `fleet-control → memory/state/fleet-control-state.json` (self-ref: prefix matches skill name exactly)
-  - `heartbeat → articles/token-report-2026-04-28.md` (inside a ` ```markdown ` example block; file also absent from disk — not a real runtime read)
-
-- 0 explicit `chains: consume:` edges from enabled consumers (reppo-swarm's 3 steps are all `enabled: false`)
-
-**Files written**:
-- `articles/skill-freshness-2026-06-01.md` — full report
-- `memory/topics/skill-freshness-state.json` — `last_run_at` updated to `2026-06-01T09:19:09Z`
-- `memory/logs/2026-06-01.md` — log block appended
+**Files written:**
+- `articles/skill-freshness-2026-06-02.md`
+- `memory/topics/skill-freshness-state.json` (consumer_count 29→34, dependency_count 2→3)
+- `memory/logs/2026-06-02.md` (appended)

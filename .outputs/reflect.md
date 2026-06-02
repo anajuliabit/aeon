@@ -1,1 +1,1 @@
-Memory consolidated — 2026-05-31. MEMORY.md pruned 145→80 lines (deduped 4×'assign 14 datanets' + 3×'iss-009 codify' drift); 5 open PRs refreshed (#54-#58); iss-016 indexed (own-mint LIKE empirically settled: contract-revert); iss-013/014 ready to flip resolved (6 pin / 3 platform-200 consecutive). topics/fleet.md updated with today's prs.
+memory consolidated — 2026-06-01

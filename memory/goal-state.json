@@ -1,35 +1,30 @@
 {
-  "run_at": "2026-05-31T18:20:00Z",
+  "run_at": "2026-06-01T19:15:02Z",
   "goals": {
-    "iss-009-codification": {
+    "close-iss-009-defence-in-depth": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 34,
+      "last_activity_date": "2026-06-01"
+    },
+    "assign-14-unassigned-reppo-datanets": {
       "status": "ON_TRACK",
       "activity_count_14d": 30,
-      "last_activity_date": "2026-05-31"
+      "last_activity_date": "2026-06-01"
     },
-    "durable-fix-for-iss-009": {
+    "resolve-iss-016": {
       "status": "ON_TRACK",
-      "activity_count_14d": 30,
-      "last_activity_date": "2026-05-31"
+      "activity_count_14d": 9,
+      "last_activity_date": "2026-06-01"
     },
-    "close-iss-009-fully": {
+    "operator-call-iss-015": {
       "status": "ON_TRACK",
-      "activity_count_14d": 30,
-      "last_activity_date": "2026-05-31"
+      "activity_count_14d": 24,
+      "last_activity_date": "2026-06-01"
     },
-    "assign-agents-to-the-14-unassigned-reppo-datanets": {
+    "index-bookkeeping": {
       "status": "ON_TRACK",
-      "activity_count_14d": 28,
-      "last_activity_date": "2026-05-31"
-    },
-    "index-bookkeeping-close-iss-007-iss-010": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 16,
-      "last_activity_date": "2026-05-31"
-    },
-    "iss-015-mitigation": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 22,
-      "last_activity_date": "2026-05-31"
+      "activity_count_14d": 18,
+      "last_activity_date": "2026-06-01"
     },
     "cleanup-chain-runner-scratch": {
       "status": "AT_RISK",

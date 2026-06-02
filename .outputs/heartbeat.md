@@ -1,10 +1,16 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md.
 
 ## Summary
-- **P0 clean.** All 41 cron-state entries `last_status=success`. `chain:reppo-swarm` 14:00 chain landed 14th-mint `cc41abf64326a29b` on tx `0xcbe53613` (wallet `0x9a1500b4`, fresh window vs prior 13th-mint `dce17be3`). No stuck/dispatched skills, no `consecutive_failures ≥ 3`. Heartbeat self-check ~6h05m, healthy.
-- **P1 clean.** 0 open PRs — 8 merged today (#54-#61: tier-1 enables, oauth.reddit.com for ISS-015, reppo-cli≥0.6.0, dashboard /swarm, HL_TOP_N 5→12, reppo-voter split). 0 urgent issues.
-- **P2.** 7 carry-over issues (ISS-005/007/009/010/011/015/016) — all already deduped in today's morning-brief + 09:13 heartbeat.
-- **P3.** PR #54 enabled 5 new tier-1 skills (deal-flow / reg-monitor / security-digest / unlock-monitor / vuln-scanner) — first-run-pending, within 2x schedule interval, not flagged per spec.
-- **Notify skipped** — all findings deduped against earlier today's logs.
-- **Status page written** → 🟡 WATCH (3 high-severity carry-overs anchor tier). 34 enabled skills tabled, next scheduled run = skill-security-scan @ 16:00 UTC.
-- **Files modified:** `docs/status.md`, `memory/logs/2026-06-01.md`.
+
+**Heartbeat (08:55 UTC, Tue):** clean run, no notification needed.
+
+- **P0 (failures/stuck):** clean. All 45 cron-state entries `last_status=success`. No dispatched-but-stuck. No `consecutive_failures ≥ 3`. Self-check healthy (~12h since last heartbeat success).
+- **P1 (PRs/urgent issues):** PR #62 ~13.6h old (under 24h threshold). 0 urgent labels.
+- **P2 (memory items):** 8 carried issues — all in today's morning-brief.
+- **P3 (missed schedules):** 6-01 17:30Z slot ghost persists (agent-buzz + vibecoding-digest both frozen at 5-31T17:5x, ~39h ago, under 2x=48h daily tolerance). operator-scorecard still never-run after 6-01 10:30Z Mon-weekly slot.
+
+Dedup outcome: everything already surfaced in today's morning-brief / daily-routine / reppo logs → skip notify.
+
+**Status page:** wrote `docs/status.md` → **🟡 WATCH** (4 high-sev open issues: ISS-005, ISS-009, ISS-015, ISS-017). Next run = github-trending @ 09:00 UTC.
+
+Files modified: `docs/status.md`, `memory/logs/2026-06-02.md`.

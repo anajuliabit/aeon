@@ -1,17 +1,15 @@
+Skill complete — 3rd run today, 0 mint intents written.
+
 ## Summary
 
-Gate: **RUN** on datanet 9 (orchestrator 3rd-run plan). **0 mint intents queued.**
-
-Read all 12 top-margin-ranked HL_WINDOW=week wallets via fresh `jq` against the cache this run (per input contract):
-
-- **3 EMPTY:** ranks 2/3/11 (0xe7ec7fbf, 0x8196e064, 0x9d140511) — `[]` for 7d window
-- **4 FLOOR<20 closes:** ranks 1/4/6/9 (0xbdfa4f4 perp xyz:DRAM 1 close, 0x4e14fc11 19 opens, 0xb798aef7 46 opens, 0x82b02bd4 114 xyz:SPCX `Open Long` 0 closes)
-- **4 SPOT-ONLY SKIP** per 10th-mint precedent: ranks 5/7/8/12 (0x13c50dcd/0x2312b548/0xd507eeef/0x0320e278 — `dir=Sell` on `@`-prefix HL-spot indexed coins; perp-only rubric)
-- **1 DRIFT-DUP SKIP:** rank 10 0x9a1500b4 87 closed perp — canonical shares `first_t=1779774351060` IDENTICAL to yesterday's 14th-mint cc41abf6 (`…:1779774351060:1780315123942:74`); prefetch's fixed 7d lookback slid the tail forward ~4h08min +13 fills, **regressing quality strictly**: sum_pnl yesterday +$177.11 → today **−$161.81**, win_rate 0.243 → 0.207, the 13 new closes added net −$339 (worst −$378). Triple differs but spam-prevention spirit of (wallet,last_t,n_close) applies.
-
-Files written:
-- `.outputs/reppo-trading-agent.md` — full report with verbatim `jq` numbers
-- `memory/logs/2026-06-01.md` — appended `### reppo-trading-agent (3rd run)` block
-- `.pending-reppo/` — left untouched (no intents)
-
-No curl, no Reppo CLI calls, no WebFetch fallback (no `PREFETCH_FAILED` markers in cache). No vote intents (reppo-voter owns voting).
+- **Gate:** RUN on datanet 9 per the orchestrator's `reppo-plan` block (auto-fallback ISS-009 marker, plan still RUN).
+- **Cache reads (verbatim `jq` per input contract):** 12 freshly-prefetched margin-top wallets — 10 populated, 2 empty `[]` (`0xbf49647d`, `0x8196e064`), 0 `PREFETCH_FAILED`.
+- **Filter outcome:** 0 candidates passed the ≥20-closed-perp + non-NEG floor. Of the 4 perp-only wallets, one had only 1 directional close + 1 settlement, one was 19 ETH Close-Long slices at −$215,804, two were opens-only HFT bursts (114 + 46 opens, 0 closes), and one had only 2 fills. The other 6 were spot-only (`@<idx>` markets).
+- **Hash / dedupe:** N/A — no candidate reached the build stage.
+- **Mints emitted:** 0. `.pending-reppo/` created with empty `data/`; no `mint-*.json` files. Mint cap unused.
+- **Files modified:**
+  - `.outputs/reppo-trading-agent.md` — replaced with full 3rd-run report
+  - `memory/logs/2026-06-02.md` — appended `### reppo-trading-agent (3rd run)`
+  - `.pending-reppo/data/` — empty dir created
+  - `.tmp-scan.sh`, `.tmp-wallet-stats.sh` — sandbox-blocked exec scaffolding left in repo root (same MEMORY.md-noted scratch-cleanup pattern as prior days)
+- **Follow-up:** 3-for-3 today on the same blocker (spot dominance + opens-only HFT in margin-top-N). Operator may want to revisit HL prefetch ranking — adding a perp-only filter at the leaderboard step would surface directional perp traders the current margin metric is shadowing.

@@ -1,24 +1,20 @@
+`rm` blocked by sandbox — matches the documented `cleanup chain-runner scratch` pattern in MEMORY.md. Post-run delivery picks the notification up.
+
 ## Summary
 
-Ran the **token-pick** skill for 2026-06-01. Picked **HOME (defi.app)** for token side at signal 11/10 HIGH conviction. Market side **SKIPPED** — no Polymarket event cleared the 5pp edge gate after dedup blocks.
+Ran `skills/token-pick/SKILL.md`. **Picked JTO (Jito) HIGH @ score 9/10** — Q1 2026 report just landed (418M cumulative staked SOL, 56% validator growth, 9.7M JTO burned), JTX pro-retail terminal targeted July 2026 (spot first, then perps + prediction markets), Jito × Solana Company (Nasdaq: HSDT) APAC institutional-staking partnership from 5-6 still feeding flow. Price $0.62 (+14.0% 24h / +17.8% 7d), mcap $296M (rank 140), vol $142M, vmc 0.479. Score: 24h+1 / 7d+1 / both>+5%+2 / vmc 0.479≥0.20+3 / RS vs BTC -10.34%/ETH -7.00% 7d+2 = 9/10.
 
-**Token: HOME (defi.app)** — $0.0475 (+47.8% 24h / +98.5% 7d), mcap $184M, vmc 0.63
-- Score: trending+2, vmc≥0.20+3, RS vs BTC/ETH+2, both>5%+2, 24h+1, 7d+1 = **11/10**
-- Catalyst: V2 precision-bridging + Android launch driving 500k+ active users; 80% of protocol revenue → weekly $HOME buybacks
-- Risk: 882.34M token unlock on June 10 (8.82% of max supply, 9 days out) into already-concentrated supply (top address 69% per Nov 2025 report)
-- Dedup-cleared: XLM/INJ/HYPE/WLD all in 7-day window; LAB skipped on integrity (4th consecutive day, ZachXBT flag); H skipped on +180% 72h vertical blow-off-top
+**Market SKIPPED** — only dedup-clean event over $50k 24h-vol gate is World Cup Winner ($31M, down from $107M on 6-01); top contenders (France 17.05¢, Spain 16.35¢, England 11.15¢, Portugal 9.55¢, Argentina 8.75¢) sit within ±1-2pp of sportsbook devig — no defensible 5pp edge. MSTR/NBA-Thunder/Starmer all dedup-blocked. Same call as 5-29/5-30/6-01.
 
-**Market: SKIP** — World Cup sub-markets sit within ±1-2pp of bookmaker consensus (Spain 16.75¢ vs +475→17.4%; France 17.05¢ vs +500→16.7%; Germany 5.55¢ vs +1400→6.7%). US x Iran "permanent peace deal by June 7" edge only ~4pp, below 5pp gate. All other dedup-clean markets below $50k liquidity floor or past resolution.
+7d token dedup: XLM/INJ/HYPE/WLD/HOME blocked; LAB integrity-skipped 5th day (ZachXBT 95%-insider-supply flag); H late-parabola 4th day; BILL lost tiebreak (unlock overhang catalyst, not growth driver); FET/NEAR/PIEVERSE all 8/10 but weaker catalysts than JTO's named JTX ship date.
 
-**Files**:
-- Notification staged: `.pending-notify/1780319517-token-pick.md` (post-run delivery, same MEMORY.md-noted sandbox pattern)
-- Log appended: `memory/logs/2026-06-01.md` (Token Pick section + `TOKEN_PICK_DEDUP: HOME | SKIP` grep marker)
-- Sources: cg=ok, dex=ok (low signal — DexScreener trending returned only scam "TREND" tokens, no cross-confirm value), poly=ok
+**Files written:**
+- `.pending-notify/1780402155-token-pick.md` — token-only notification per spec 6a (HIGH token + SKIP market → omit market section, same shape as 6-01 HOME pick)
+- `memory/logs/2026-06-02.md` — appended `## Token Pick` entry with thesis + dedup notes + market analysis + `TOKEN_PICK_DEDUP: JTO | SKIP (no market cleared 5pp edge gate)` for next-day grep
 
-Sources:
-- [DeFi.app price prediction (CoinMarketCap)](https://coinmarketcap.com/cmc-ai/defi-app/price-prediction/)
-- [DeFi.app token unlocks & vesting (CryptoRank)](https://cryptorank.io/price/defi-app/vesting)
-- [Humanity Protocol token unlock (KuCoin)](https://www.kucoin.com/news/articles/humanity-protocol-token-unlock-strategic-market-supply-dynamics-for-h-holders)
-- [Falcon Finance institutional fUSD launch (MEXC)](https://www.mexc.com/news/1019409)
-- [2026 World Cup odds (FOX Sports)](https://www.foxsports.com/stories/soccer/world-cup-2026-champion-odds)
-- [US-Iran tentative 60-day truce MOU (Axios)](https://www.axios.com/2026/05/28/iran-peace-deal-trump-approval)
+**Sources:** cg=ok, dex=ok (junk meme name-match again — TREND/Trending/TRND, 4-day pattern, no +1 cross-confirm), poly=ok. Post-run cleanup step will sweep `.tmp-*.json` scratch (sandbox-blocked mid-run rm).
+
+Sources for catalyst research:
+- [Jito Q1 2026 metrics — JTO Price Jumps 32%](https://blockchainmagazine.net/jito-jto-surges-32-as-solana-mev-protocol-captures-market-attention/)
+- [Jito × Solana company APAC partnership](https://www.bitget.com/amp/news/detail/12560605401992)
+- [JTO unlock schedule and tokenomics](https://tokenomist.ai/jito-governance-token/unlock-events)

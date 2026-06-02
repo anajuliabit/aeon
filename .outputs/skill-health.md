@@ -1,17 +1,23 @@
+Skill-health audit complete.
+
 ## Summary
 
-Skill Health audit (2026-05-31, 18:21Z):
+Ran `skills/skill-health/SKILL.md` for 2026-06-01.
 
-- **HEALTH: OK** — 27/28 enabled scheduled skills healthy, success_rate ≥ 0.8 across the board, 0 consecutive failures anywhere.
-- **NO DATA: 1** — operator-scorecard (Monday-only, first run tomorrow).
-- **No CRITICAL/DEGRADED/FLAPPING** — nothing to file.
-- **No skill-health-filed issues** — `grep detected_by:` confirms all 7 open issues (ISS-005/007/009/010/011/015/016) were filed by other skills; per SKILL.md scope, skill-health does not modify them.
-- **Notify gate fired** — current_hash matches prev empty-signature hash, but 24h 10m elapsed since prev notify (2026-05-30T18:10:49Z) → daily reminder cadence trigger.
-- **Sandbox note** — `./scripts/skill-runs` invocation rejected; logged `SKILL_HEALTH_PARTIAL` and continued with cron-state only per SKILL.md fallback.
+**Classification (29 enabled cron-tracked skills, autoresearch excluded as workflow_dispatch-only):**
+- CRITICAL/DEGRADED/FLAPPING/WARNING: 0
+- HEALTHY: 29
+- NO DATA: 4 — `operator-scorecard` (missed mon 10:30), `unlock-monitor` (mon 10:00 pre-merge, pr #54 tier-1 enable @ 13:12Z), `reg-monitor` + `vuln-scanner` (wed/sat first slots not yet reached)
 
-Files written:
-- `.pending-notify/1780287660-skill-health.md` — staged notification body (sandbox arg-passing pattern; post-run delivery picks it up).
-- `memory/skill-health/last-report.json` — updated hash/last_notified_at/last_run_at.
-- `memory/logs/2026-05-31.md` — appended `### skill-health` log entry.
+**Notify gate:** current_hash = `e3b0c442…` (empty list) matches prev_report.hash, but `now − last_notified_at = 24h51m ≥ 24h` → daily reminder fires.
 
-Follow-ups: none from this run; operator already aware of the 7 open issues via morning-brief + heartbeat carry-overs.
+**Issue reconciliation:** all 8 open issues have `detected_by ≠ skill-health` (mostly `reppo-digest`, one `skill-security-scan`, one `vibecoding-digest`, one manual) → step 4 no-op. No new issues filed, none resolved by this audit.
+
+**Sandbox note:** `scripts/skill-runs` blocked by approval prompt; logged `SKILL_HEALTH_PARTIAL` and proceeded on cron-state + skill-health/*.json + memory/logs/2026-06-01.md per SKILL.md sandbox fallback.
+
+**Files modified:**
+- `.pending-notify/1780340000-skill-health.md` (notify body staged for post-run delivery)
+- `memory/skill-health/last-report.json` (hash + classification + last_notified_at = 2026-06-01T19:12:05Z)
+- `memory/logs/2026-06-01.md` (appended `### skill-health` entry)
+
+**Follow-up:** operator-scorecard's missed 10:30 Mon slot is the only real scheduler gap — heartbeat already noted it at both 09:13 and 15:20, not re-escalated here per dedup.
