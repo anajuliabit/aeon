@@ -1,21 +1,22 @@
 ## Summary
 
-Ran `github-trending` for 2026-06-01.
+Ran `github-trending` for 2026-06-02.
 
-**Picked 2/15** (sub-3 floor → short-note format, no top-pick header per 5-31 precedent):
-- **nesquena/hermes-webui** (AI/ML, ACCELERATING) — web/phone frontend for Hermes Agent, v0.51.195 cut 6h ago, daily-release cadence since March launch at 164/day baseline.
-- **supermemoryai/supermemory** (AI/ML, RETURNING) — Memory API for agents, 9.2x baseline today on 28.6/day floor, no release tag so surge is product- or post-driven.
+**Picked 3/17:**
+- *Top pick* TauricResearch/TradingAgents (RETURNING — 82k stars, multi-agent debate-loop, post-driven surge with v0.2.5 22-day stale)
+- p-e-w/heretic (ACCELERATING — alignment-removal via activation editing, 2.7x baseline)
+- can1357/oh-my-pi (ACCELERATING — claude-code-shape terminal agent, v15.7.6 14h ago daily cadence)
 
-**Deduped** (last 2 days, strict): MoneyPrinterTurbo (5-31), VoxCPM (5-31), claude-code (5-30) — all 3 inside window, residual surge.
+**Dedup (strict 2-day window 5-31/6-01):** 5 blocked — markitdown, hermes-webui, supermemory, MoneyPrinterTurbo, VoxCPM (all residual on prior hooks).
 
-**Filter drops 10**: 3 skill/extension bundles (compound-engineering, harness, pi-subagents), 1 Jupyter tutorial (train-llm-from-scratch), 1 prepper repo (project-nomad), 1 build-your-own-x, 1 curated-list (developer-portfolios), github/docs (sub-floor), Scrapling (judgment-call: no fresh catalyst writeable).
+**Filter drops:** 8 — compound-engineering-plugin / harness / impeccable (plugin-bundle pattern, page composition floor 24%), train-llm-from-scratch tutorial, build-your-own-x prefix, ML-for-trading book companion, godot low-signal, fff niche file-search.
 
-**markitdown drop call**: 5-29 TOP pick, outside strict 2-day window but same v0.1.6 hook from 5-26 still pulling 2,798 today (>5-31's 2,470, momentum building on same artifact) — dropped per Step 4 "no concrete why-notable" same as 5-30 and 5-31.
+**Judgment-call drop:** D4Vinci/Scrapling — 1,486 today / 15x baseline but identical v0.4.8 release from 5-11; same call as 6-01.
 
-**Page composition**: 7/15 = 47% non-code-tool (matches 7-day persistent floor).
+**Files:**
+- `.pending-notify/1780396722-github-trending.md` (1,265 chars, ≤4000 ceiling)
+- `memory/logs/2026-06-02.md` appended `### github-trending` section
 
-**Files**:
-- `.pending-notify/1780305319-github-trending.md` (notification staged for post-run delivery)
-- `memory/logs/2026-06-01.md` (logged under `### github-trending` heading)
+**Exit:** `GITHUB_TRENDING_OK` · sources: trending=ok · gh_api=ok · kept 3/17.
 
-**Exit**: `GITHUB_TRENDING_OK` · sources: trending=ok · gh_api=ok · kept 2/15.
+**Follow-up:** none — post-run delivery step will pick up the staged notification.
