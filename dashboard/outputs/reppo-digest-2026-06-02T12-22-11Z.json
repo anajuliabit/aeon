@@ -1,0 +1,264 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 3rd run · datanet 9 · 0 on-chain"
+      },
+      "children": [
+        "summary-stats",
+        "separator-1",
+        "mint-section",
+        "separator-2",
+        "vote-section",
+        "separator-3",
+        "reverts-section",
+        "separator-4",
+        "datanets-section",
+        "separator-5",
+        "ledger-section"
+      ]
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-mint-intents",
+        "stat-vote-intents",
+        "stat-reverts"
+      ]
+    },
+    "stat-mint-intents": {
+      "type": "Stat",
+      "props": {
+        "label": "Mint Intents",
+        "value": "0"
+      }
+    },
+    "stat-vote-intents": {
+      "type": "Stat",
+      "props": {
+        "label": "Vote Intents",
+        "value": "0"
+      }
+    },
+    "stat-reverts": {
+      "type": "Stat",
+      "props": {
+        "label": "Reverts",
+        "value": "0"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "mint-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint-heading",
+        "mint-blocked-badge",
+        "mint-breakdown-grid"
+      ]
+    },
+    "mint-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Mint Intents Blocking",
+        "level": "h3"
+      }
+    },
+    "mint-blocked-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Fully blocked",
+        "variant": "destructive"
+      }
+    },
+    "mint-breakdown-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint-line-categories",
+        "mint-line-failures",
+        "mint-line-eth-loss",
+        "mint-line-hft-opens"
+      ]
+    },
+    "mint-line-categories": {
+      "type": "Text",
+      "props": {
+        "text": "6 spot-only | 2 empty caches | 4 perp wallets failed ≥20-closed floor",
+        "variant": "body"
+      }
+    },
+    "mint-line-failures": {
+      "type": "Text",
+      "props": {
+        "text": "1 single-close failure",
+        "variant": "caption"
+      }
+    },
+    "mint-line-eth-loss": {
+      "type": "Text",
+      "props": {
+        "text": "1 at -$215.8k across 19 eth slices",
+        "variant": "caption"
+      }
+    },
+    "mint-line-hft-opens": {
+      "type": "Text",
+      "props": {
+        "text": "2 opens-only hft: 114+46 opens / 0 closes",
+        "variant": "caption"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "vote-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "vote-heading",
+        "vote-eligibility",
+        "vote-pod-status",
+        "vote-pod-492-issue"
+      ]
+    },
+    "vote-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Vote Intents",
+        "level": "h3"
+      }
+    },
+    "vote-eligibility": {
+      "type": "Text",
+      "props": {
+        "text": "Eligible = 0 at epoch 100",
+        "variant": "body"
+      }
+    },
+    "vote-pod-status": {
+      "type": "Text",
+      "props": {
+        "text": "Pods 498/499 voted 1st-run on-chain",
+        "variant": "body"
+      }
+    },
+    "vote-pod-492-issue": {
+      "type": "Alert",
+      "props": {
+        "title": "Pod 492 Anomaly",
+        "message": "Own 14th mint cc41abf6 caught via ledger cross-ref (iss-016 own_pods) — prefetch count=0, 7th consecutive run",
+        "type": "warning"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reverts-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-reverts",
+        "badge-issues"
+      ]
+    },
+    "badge-reverts": {
+      "type": "Badge",
+      "props": {
+        "text": "Reverts: 0",
+        "variant": "outline"
+      }
+    },
+    "badge-issues": {
+      "type": "Badge",
+      "props": {
+        "text": "Issues filed: 0",
+        "variant": "outline"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets-section": {
+      "type": "Alert",
+      "props": {
+        "title": "Datanets Unassigned",
+        "message": "15 unassigned (id 18 still surfacing, 2nd day)",
+        "type": "warning"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ledger-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "ledger-stat-mints",
+        "ledger-stat-votes",
+        "ledger-status"
+      ]
+    },
+    "ledger-stat-mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Ledger Mints",
+        "value": "14"
+      }
+    },
+    "ledger-stat-votes": {
+      "type": "Stat",
+      "props": {
+        "label": "Ledger Votes",
+        "value": "29"
+      }
+    },
+    "ledger-status": {
+      "type": "Badge",
+      "props": {
+        "text": "Unchanged",
+        "variant": "secondary"
+      }
+    }
+  }
+}

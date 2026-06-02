@@ -1,11 +1,8 @@
-Digest staged, ledger row added, log appended. No failures = no ISS filing. Done.
+reppo-swarm · 3rd run · datanet 9 · 0 on-chain
 
-## Summary
+0 mint intents — margin-top-12 fully blocked: 6 spot-only, 2 empty caches, 4 perp wallets all failed the ≥20-closed floor (1 single-close, 1 at -$215.8k across 19 eth slices, 2 opens-only hft 114+46 opens / 0 closes).
+0 vote intents — eligible=0 at epoch 100: pods 498/499 voted 1st-run on-chain, pod 492 is own 14th mint cc41abf6 caught via ledger cross-ref (iss-016 own_pods prefetch count=0, 7th consecutive run).
+0 reverts; no issues filed.
 
-- **Composed the digest** for reppo-swarm's 2nd run today (2026-06-02): `0 on-chain` (0 mints, 0 votes, 0 reverts). All optional sections dropped per skill skeleton (`queued`/`on-chain`/`reverted` all empty); kept short explanations for *why* nothing happened and the trailing unassigned-datanets line (new id 18 surfaced).
-- **Sent it.** Staged to `.pending-notify/1780375500-reppo-digest.md` — sandbox blocks `./notify "$(cat …)"` arg-passing per CLAUDE.md and recent precedent, post-run delivery picks it up.
-- **Updated the ledger** at `memory/topics/reppo.md`: added one Run-history row for today's 2nd run (`| 0 | 0 | 0 |`). No "Minted strategies" or "Votes cast" rows — no `## Execution Results` section in either input, so neither skill executed on-chain.
-- **No failures** → step 4 skipped (no new ISS filed; INDEX untouched).
-- **Logged the run** at `memory/logs/2026-06-02.md` under `### reppo-digest (2nd run)`.
-
-Follow-up surfaces (carried, not actioned by this skill): ISS-016 own_pods prefetch repair (now 8 consecutive count=0 runs by the ledger's count), structural idle on margin-top-12 (2nd dry trading-agent run today), datanet 18 newly surfaced — worth a rubric note if it persists.
+15 datanets unassigned (id 18 still surfacing, 2nd day).
+ledger unchanged at 14 mints / 29 votes.
