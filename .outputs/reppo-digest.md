@@ -1,12 +1,11 @@
-reppo-swarm · 1st run · datanet 9 · 2 on-chain
+Digest staged, ledger row added, log appended. No failures = no ISS filing. Done.
 
-queued
-  votes · dislike pods 498, 499 (epoch 100 hotbot v4 raw exports)
+## Summary
 
-on-chain
-  vote 498 dislike — tx 0x4ad2ad9cd7d2e03a9b47c17b064b73f409ce465c122e9b9766868383e546ea76
-  vote 499 dislike — tx 0x1ce4277343641fcc858c6dac13f1af6a59e2ee6fe90a8b412f649e2d46fd56c8
+- **Composed the digest** for reppo-swarm's 2nd run today (2026-06-02): `0 on-chain` (0 mints, 0 votes, 0 reverts). All optional sections dropped per skill skeleton (`queued`/`on-chain`/`reverted` all empty); kept short explanations for *why* nothing happened and the trailing unassigned-datanets line (new id 18 surfaced).
+- **Sent it.** Staged to `.pending-notify/1780375500-reppo-digest.md` — sandbox blocks `./notify "$(cat …)"` arg-passing per CLAUDE.md and recent precedent, post-run delivery picks it up.
+- **Updated the ledger** at `memory/topics/reppo.md`: added one Run-history row for today's 2nd run (`| 0 | 0 | 0 |`). No "Minted strategies" or "Votes cast" rows — no `## Execution Results` section in either input, so neither skill executed on-chain.
+- **No failures** → step 4 skipped (no new ISS filed; INDEX untouched).
+- **Logged the run** at `memory/logs/2026-06-02.md` under `### reppo-digest (2nd run)`.
 
-no mints — margin-top-12 fully blocked (6 spot/spot-mix, 2 empty caches, 1 floor<20, 2 opens-only, 1 neg-pnl). voter steered off own pod 492 (14th mint) via ledger cross-ref. all-dislike on non-empty eligible set — iss-005 watch.
-
-14 datanets unassigned.
+Follow-up surfaces (carried, not actioned by this skill): ISS-016 own_pods prefetch repair (now 8 consecutive count=0 runs by the ledger's count), structural idle on margin-top-12 (2nd dry trading-agent run today), datanet 18 newly surfaced — worth a rubric note if it persists.
