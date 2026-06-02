@@ -1,0 +1,235 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "market context — 2026-06-02"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_positioning",
+        "sep1",
+        "heading_prices",
+        "stack_prices",
+        "sep2",
+        "heading_health",
+        "stack_health",
+        "sep3",
+        "heading_narrative",
+        "text_narrative_topic",
+        "stack_narrative_tokens",
+        "text_narrative_hype",
+        "sep4",
+        "heading_hotmarkets",
+        "text_market_claim",
+        "progress_iran_deal"
+      ]
+    },
+    "stack_positioning": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_riskoff",
+        "badge_conviction"
+      ]
+    },
+    "badge_riskoff": {
+      "type": "Badge",
+      "props": {
+        "text": "risk-off deepening",
+        "variant": "destructive"
+      }
+    },
+    "badge_conviction": {
+      "type": "Badge",
+      "props": {
+        "text": "conviction high",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_prices": {
+      "type": "Heading",
+      "props": {
+        "text": "Asset Prices",
+        "level": "h3"
+      }
+    },
+    "stack_prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$68,843",
+        "delta": "-4.18%",
+        "trend": "down"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,977",
+        "delta": "-0.18%",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Health",
+        "level": "h3"
+      }
+    },
+    "stack_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_fear_greed",
+        "stat_breadth",
+        "stat_tvl"
+      ]
+    },
+    "stat_fear_greed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "23",
+        "delta": "extreme fear"
+      }
+    },
+    "stat_breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "6/20"
+      }
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$78.7B",
+        "delta": "-1.7%",
+        "trend": "down"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_narrative": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h3"
+      }
+    },
+    "text_narrative_topic": {
+      "type": "Text",
+      "props": {
+        "text": "AI-native L1s",
+        "variant": "lead"
+      }
+    },
+    "stack_narrative_tokens": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_lab",
+        "stat_near"
+      ]
+    },
+    "stat_lab": {
+      "type": "Stat",
+      "props": {
+        "label": "LAB",
+        "value": "+40%",
+        "trend": "up"
+      }
+    },
+    "stat_near": {
+      "type": "Stat",
+      "props": {
+        "label": "NEAR",
+        "value": "+13%",
+        "trend": "up"
+      }
+    },
+    "text_narrative_hype": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE ATH-hold rising"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_hotmarkets": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Markets",
+        "level": "h3"
+      }
+    },
+    "text_market_claim": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran permanent peace deal by Jun 15"
+      }
+    },
+    "progress_iran_deal": {
+      "type": "Progress",
+      "props": {
+        "value": 14.5,
+        "label": "YES probability"
+      }
+    }
+  }
+}
