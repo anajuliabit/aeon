@@ -1,1 +1,1 @@
-VIBECODING_DIGEST_ERROR — all 3 reddit endpoints failed (prefetch + webfetch). iss-015 day 4. operator call on authed oauth.reddit.com or alt source.
+VIBECODING_DIGEST_ERROR: all reddit endpoints failed — prefetch top/hot/rising = PREFETCH_FAILED, webfetch on old.reddit.com + www.reddit.com both rejected by sandbox. ISS-015 oauth.reddit.com path likely missing REDDIT_CLIENT_ID/SECRET on this runner. no digest sent.

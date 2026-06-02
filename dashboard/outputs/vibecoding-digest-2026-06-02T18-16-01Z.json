@@ -1,0 +1,65 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "vibecoding-digest",
+        "description": "Skill execution error"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "stack_failures"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "VIBECODING_DIGEST_ERROR",
+        "message": "All Reddit endpoints failed — no digest sent"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_failures": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_failure1",
+        "text_failure2",
+        "text_failure3"
+      ]
+    },
+    "text_failure1": {
+      "type": "Text",
+      "props": {
+        "text": "Prefetch top/hot/rising endpoints: PREFETCH_FAILED",
+        "variant": "body"
+      }
+    },
+    "text_failure2": {
+      "type": "Text",
+      "props": {
+        "text": "WebFetch on old.reddit.com + www.reddit.com: Both rejected by sandbox",
+        "variant": "body"
+      }
+    },
+    "text_failure3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-015: oauth.reddit.com path likely missing REDDIT_CLIENT_ID/SECRET on this runner",
+        "variant": "body"
+      }
+    }
+  }
+}
