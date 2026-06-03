@@ -1,22 +1,15 @@
 ## Summary
 
-Ran `github-trending` for 2026-06-02.
+Ran `github-trending` skill for 2026-06-03. GitHub trending page returned only 11 repos via WebFetch (lowest in 7-day window; second fetch confirmed page-render limit). Kept **2/11** after filter:
 
-**Picked 3/17:**
-- *Top pick* TauricResearch/TradingAgents (RETURNING — 82k stars, multi-agent debate-loop, post-driven surge with v0.2.5 22-day stale)
-- p-e-w/heretic (ACCELERATING — alignment-removal via activation editing, 2.7x baseline)
-- can1357/oh-my-pi (ACCELERATING — claude-code-shape terminal agent, v15.7.6 14h ago daily cadence)
+**Picks** (folded into single `ai/ml + devtools` bucket per sub-3-survivor rule, no top-pick header):
+- **chopratejas/headroom** — AI/ML, ACCELERATING (1.3k today / 24x baseline). LLM-context-compression middleware (lib + proxy + MCP), claims 60-95% token reduction, pushed today.
+- **reconurge/flowsint** — Devtools, RETURNING (124 today / 13x baseline). Graph-canvas OSINT platform for cybersec analysts, pushed today.
 
-**Dedup (strict 2-day window 5-31/6-01):** 5 blocked — markitdown, hermes-webui, supermemory, MoneyPrinterTurbo, VoxCPM (all residual on prior hooks).
+**Dropped 7** (markitdown day 9 of v0.1.6 — 5th consecutive same-call drop; scrapling 23d-stale release; voxcpm same hook outside dedup window; affaan-m/ECC matches the agent-harness-bundle pattern dropped 6-01/6-02 despite 204k stars / 31k forks magnitude; 1 book + 1 course + 1 hobby vtuber). **Dedup-blocked 2** (hermes-webui + supermemory inside strict 2-day window).
 
-**Filter drops:** 8 — compound-engineering-plugin / harness / impeccable (plugin-bundle pattern, page composition floor 24%), train-llm-from-scratch tutorial, build-your-own-x prefix, ML-for-trading book companion, godot low-signal, fff niche file-search.
+**Files modified:**
+- `.pending-notify/1780477527-github-trending.md` — notification staged for post-run delivery
+- `memory/logs/2026-06-03.md` — appended `### github-trending` entry
 
-**Judgment-call drop:** D4Vinci/Scrapling — 1,486 today / 15x baseline but identical v0.4.8 release from 5-11; same call as 6-01.
-
-**Files:**
-- `.pending-notify/1780396722-github-trending.md` (1,265 chars, ≤4000 ceiling)
-- `memory/logs/2026-06-02.md` appended `### github-trending` section
-
-**Exit:** `GITHUB_TRENDING_OK` · sources: trending=ok · gh_api=ok · kept 3/17.
-
-**Follow-up:** none — post-run delivery step will pick up the staged notification.
+**Exit:** `GITHUB_TRENDING_OK`. Sources: trending=ok · gh_api=ok · kept 2/11.
