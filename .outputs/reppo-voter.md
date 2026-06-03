@@ -1,24 +1,26 @@
-## reppo-voter — 2nd run 2026-06-03
+reppo-voter — 3rd run today.
 
-**Gate:** RUN (orchestrator's `reppo-plan` block lists `reppo-trading-agent: RUN` on datanet 9; cache fresh).
+**Gate:** RUN per orchestrator (datanet 9 valid+active, `tradinggymai.md` rubric resolved, datanet_id="9" configured).
 
-**Rubric:** `configs/datanets/tradinggymai.md` — datanet_id=9, vote YES for labeled HL-perp trade datasets with required fields + verifiable fills; vote NO for strategy-only / unlabeled / unverifiable / non-HL.
+**Epoch:** 100 (from `vote-filter-tradinggymai.json`).
 
-**Pod set:** `.reppo-cache/pods-tradinggymai.json` → 59 pods. `vote-filter` reports `current_epoch=100`, 19 already-interacted pod IDs.
+**Pods seen:** 59 (from `pods-tradinggymai.json`, scope=community/network=mainnet).
 
-**Filtering (Step 4):**
-- **Out-of-epoch (56):** every pod with `validityEpoch != 100` — i.e. all but 499 / 498 / 492. Past-epoch votes would revert `POD_NOT_VALID_FOR_EPOCH`.
-- **Already-voted (2):** 498 + 499 — voted on-chain earlier today (ledger rows 55-56, both DISLIKE, both `success`). Re-voting would compound ISS-005.
-- **Own-pod, defensive (1):** 492 "HL perps 6.3d, 0x9a15..37e6: 74 trades multi" matches our 14th-mint `cc41abf64326a29b` from 2026-06-01: wallet `0x9a1500b41519868039b1f95c447ba50b76d837e6` ↔ shortcode `0x9a15..37e6`, n_close=74, span 6.26d ↔ "6.3d". Self-voting would revert `CANNOT_VOTE_FOR_OWN_POD`. `own-pods-tradinggymai.json` still returns `count:0` (ISS-016 carry, 9th consecutive run) — caught by ledger cross-ref, not prefetch.
+**Filtered:**
+- 56 out-of-epoch (validityEpoch ≤ 99 — every pod except 498/499/492 is on a prior epoch and past-epoch votes always revert `POD_NOT_VALID_FOR_EPOCH`).
+- 2 already-voted at epoch 100: **498** + **499** (HotBot v4 — Trades & Learning / Signal Intelligence May 25-Jun 01 pair, DISLIKE'd on-chain in today's 1st run; both present in `voted_pod_ids` so re-voting would double-spend REPPO per ISS-005).
+- 1 own-pod defensive skip: **492** "HL perps 6.3d, 0x9a15..37e6: 74 trades multi" — title cross-refs the 14th-mint `cc41abf6` row in `memory/topics/reppo.md` (wallet 0x9a1500b41…37e6, 74 Close-Long fills, 7 markets, 6.26d span, minted 2026-06-01). `own-pods-tradinggymai.json` returned `count:0` again (ISS-016 carry — 10th consecutive run), so this catch is via ledger cross-ref, not prefetch.
 
-**Eligible: 0.** No vote intents written to `.pending-reppo/`.
+**Eligible:** 0.
 
-**ISS-005 / all-DISLIKE guard:** N/A — eligible set is empty, not a non-empty all-DISLIKE round.
+**Votes queued:** 0 — no `.pending-reppo/vote-*.json` written.
 
-**Prompt-injection discards:** none — every pod name is a routine HotBot/HL-perp summary.
+**ISS-005 / all-DISLIKE guard:** N/A — eligible set is empty, not the historical compounding pattern.
+
+**Prompt-injection discards:** none observed in any of the 59 pod names.
 
 ## Summary
-- Gate RUN, epoch 100, 59 pods seen → 56 out-of-epoch + 2 already-voted + 1 own-pod (492 = 14th mint cc41abf6) → 0 eligible → 0 vote intents queued.
-- Files modified: `memory/logs/2026-06-03.md` (appended `### reppo-voter (2nd run)` entry).
-- No `.pending-reppo/` writes this run; `scripts/postprocess-reppo.sh` will find nothing to execute and append no `## Execution Results` rows.
-- Follow-up: ISS-016 own-pods prefetch `count:0` persisting; ledger cross-ref continues to absorb the gap. Epoch 100 votable set will not grow until HotBot mints fresh pods or the epoch rolls over.
+- Read: `.outputs/reppo-orchestrator.md` (gate=RUN), `configs/datanets/tradinggymai.md` (datanet 9, rubric), `.reppo-cache/pods-tradinggymai.json` (59 pods), `.reppo-cache/vote-filter-tradinggymai.json` (epoch 100, 19 voted ids), `.reppo-cache/own-pods-tradinggymai.json` (count:0 — ISS-016), `memory/topics/reppo.md` (ledger for own-pod cross-ref).
+- Filter result: 56 out-of-epoch + 2 already-voted + 1 own-pod = 59; eligible 0.
+- Files modified: `memory/logs/2026-06-03.md` (appended `### reppo-voter (3rd run)` block).
+- Follow-up: none. ISS-016 own_pods prefetch carry continues (count=0 for 10 consecutive runs); ledger cross-ref workaround remains durable.
