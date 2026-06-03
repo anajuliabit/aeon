@@ -1,0 +1,226 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 1st run · datanet 9 · 0 on-chain"
+      },
+      "children": [
+        "mint_section",
+        "separator_1",
+        "votes_section",
+        "separator_2",
+        "datanets_section"
+      ]
+    },
+    "mint_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint_heading",
+        "mint_status_row",
+        "mint_failures_stack",
+        "mint_note"
+      ]
+    },
+    "mint_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "mint",
+        "level": "h3"
+      }
+    },
+    "mint_status_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_queued_badge",
+        "mint_fail_badge"
+      ]
+    },
+    "mint_queued_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "0 queued",
+        "variant": "default"
+      }
+    },
+    "mint_fail_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "all structural fails",
+        "variant": "destructive"
+      }
+    },
+    "mint_failures_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_fail_1",
+        "mint_fail_2",
+        "mint_fail_3",
+        "mint_fail_4",
+        "mint_fail_5",
+        "mint_fail_6"
+      ]
+    },
+    "mint_fail_1": {
+      "type": "Badge",
+      "props": {
+        "text": "6 spot-only",
+        "variant": "outline"
+      }
+    },
+    "mint_fail_2": {
+      "type": "Badge",
+      "props": {
+        "text": "2 perp-opens-only",
+        "variant": "outline"
+      }
+    },
+    "mint_fail_3": {
+      "type": "Badge",
+      "props": {
+        "text": "1 hft-19-closes under floor",
+        "variant": "outline"
+      }
+    },
+    "mint_fail_4": {
+      "type": "Badge",
+      "props": {
+        "text": "1 single-close mixed",
+        "variant": "outline"
+      }
+    },
+    "mint_fail_5": {
+      "type": "Badge",
+      "props": {
+        "text": "1 thin",
+        "variant": "outline"
+      }
+    },
+    "mint_fail_6": {
+      "type": "Badge",
+      "props": {
+        "text": "2 empty caches",
+        "variant": "outline"
+      }
+    },
+    "mint_note": {
+      "type": "Text",
+      "props": {
+        "text": "Same shape as yesterday's 4-for-4",
+        "variant": "muted"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "votes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "votes_heading",
+        "votes_status_row",
+        "votes_epoch",
+        "votes_stats_row",
+        "votes_ref"
+      ]
+    },
+    "votes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "votes",
+        "level": "h3"
+      }
+    },
+    "votes_status_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_queued_badge"
+      ]
+    },
+    "votes_queued_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "0 queued",
+        "variant": "default"
+      }
+    },
+    "votes_epoch": {
+      "type": "Stat",
+      "props": {
+        "label": "Eligible at epoch 100",
+        "value": "0"
+      }
+    },
+    "votes_stats_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_dislike",
+        "votes_own_pod"
+      ]
+    },
+    "votes_dislike": {
+      "type": "Badge",
+      "props": {
+        "text": "498/499 disliked yesterday",
+        "variant": "outline"
+      }
+    },
+    "votes_own_pod": {
+      "type": "Badge",
+      "props": {
+        "text": "492 own-pod via ledger",
+        "variant": "outline"
+      }
+    },
+    "votes_ref": {
+      "type": "Text",
+      "props": {
+        "text": "Cross-ref to 14th-mint cc41abf6",
+        "variant": "caption"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets_section": {
+      "type": "Alert",
+      "props": {
+        "title": "Datanets",
+        "message": "15 datanets unassigned",
+        "type": "warning"
+      }
+    }
+  }
+}

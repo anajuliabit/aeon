@@ -256,3 +256,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-02,evening-recap,claude-sonnet-4-6,8,15080,379710,67425
 2026-06-03,reppo-orchestrator,claude-opus-4-7,17,2919,737093,50426
 2026-06-03,reppo-trading-agent,claude-opus-4-7,32,26145,1646131,116434
+2026-06-03,reppo-digest,claude-opus-4-7,22,11772,1276973,71077
