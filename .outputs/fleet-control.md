@@ -1,14 +1,16 @@
 ## Summary
 
-**Mode:** Health Check (default — empty var)
-**Verdict:** `FLEET_EMPTY` — no managed instances, silent stop per spec
+**Skill:** `fleet-control` (Health Check mode — `var` empty)
 
-**Pre-flight:**
-- `gh auth status` → ok (anajuliabit / GH_TOKEN)
-- Rate limit → 4986 remaining (well above 50 floor)
+**Pre-flight**
+- `gh auth status` → ok (account `anajuliabit`, scopes `repo`+`workflow`)
+- `gh api rate_limit` → `core.remaining=4991` (above 50 floor)
 - Registry `memory/instances.json` → `{"instances": []}`
-- State file `memory/state/fleet-control-state.json` → already exists, untouched
 
-**Action taken:** Appended one log entry to `memory/logs/2026-06-02.md` documenting the FLEET_EMPTY outcome. No notification sent (spec explicitly suppresses notify on empty registry). No registry or state mutation needed.
+**Exit:** `FLEET_EMPTY: no managed instances` — silent stop per skill spec. No notification sent, no child repos to poll, no state mutation needed (state file already exists and is consistent with empty registry).
 
-**Follow-up (operator-driven, not automatic):** Until at least one child Aeon instance is registered in `memory/instances.json` (with `name` + `repo` + `purpose` fields), this skill will keep no-op'ing every 09:00/15:00 UTC tick. The skill never auto-discovers — operator adds entries by hand.
+**Files modified**
+- `memory/logs/2026-06-03.md` — appended `### fleet-control` entry recording the empty-registry stop.
+
+**Follow-ups**
+- None for this run. The registry stays empty until the operator registers a child instance; the skill will continue logging `FLEET_EMPTY` and staying silent on its 9 UTC / 15 UTC cron until then.
