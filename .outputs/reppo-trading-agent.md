@@ -1,57 +1,37 @@
-Now I'll emit the skill output. Per ISS-009 contract this must be in assistant text (not via Write).
+```
+reppo-trading-agent · datanet 9 · 2nd run · 0 mints queued
+```
 
-## reppo-trading-agent — 2026-06-03 1st run
+**Gate**: RUN (orchestrator 2nd-run plan emits `reppo-trading-agent: RUN`, datanet 9 valid+ACTIVE, cache fresh).
 
-**Gate**: RUN per orchestrator (datanet 9, `valid:true`, ACTIVE).
-**Rubric**: `configs/datanets/tradinggymai.md` — `datanet_id: "9"`, `mint_cap: 1`. Real HL perp trades / high-fidelity OHLCV replays with PnL+Sharpe+MDD+market context+verification.
-**Mints written**: **0**.
-**Reason**: structural — every wallet in this run's margin-top-12 fails the rubric.
+**Rubric**: `configs/datanets/tradinggymai.md` — `datanet_id=9`, `mint_cap=1`. Goal = labeled HL **perp** trade datasets with PnL/Sharpe/MDD/market-context/verification. Floor = ≥20 closed trades; perp-only (spot disqualifies); opens-only disqualifies (no closedPnl).
 
-### Wallet-by-wallet (margin-ranked from this run's `.hl-cache/leaderboard.json`, week window)
+**Margin-top-12 (week window, $100k vlm floor)** — per-wallet `jq` audit against `.hl-cache/user-fills-<addr>.json` written this run:
 
-Numbers below are taken straight from `jq` against the freshly-prefetched cache files, per the SKILL input contract (no carry-forward from prior runs).
+| # | addr | margin | n | markets | dirs | closes | verdict |
+|---|------|--------|---|---------|------|--------|---------|
+| 1 | 0xbdfa4f44 | 21.55 | 25 | #1100, xyz:DRAM | Buy/CloseLong/OpenLong/Settlement | 1 | REJECT FLOOR<20 |
+| 2 | 0x4e14fc11 | 17.83 | 19 | ETH | CloseLong | 19 | REJECT FLOOR<20 + liquidation cascade (274ms px=2000 sum −$215,804) |
+| 3 | 0x13c50dcd | 15.75 | 116 | @1/@107/@12/@14/@334 | Sell, Spot Dust Conversion | 0 | REJECT SPOT |
+| 4 | 0x36874c19 | 15.25 | 236 | @334, PURR/USDC | Buy, Spot Dust Conversion | 0 | REJECT SPOT (new entrant vs 1st run) |
+| 5 | 0xb798aef7 | 11.36 | 46 | ETH, SOL | Open Short | 0 | REJECT NO-CLOSES |
+| 6 | 0xa87a233e | 11.17 | 2 | FARTCOIN | Close Short | 2 | REJECT THIN |
+| 7 | 0x8196e064 | 9.90 | 0 | — | — | 0 | SKIP empty cache |
+| 8 | 0xd507eeef | 9.58 | 90 | PURR/USDC | Sell | 0 | REJECT SPOT |
+| 9 | 0xbb10bda0 | 7.74 | 24 | @107 | Sell | 0 | REJECT SPOT |
+| 10 | 0x82b02bd4 | 7.56 | 114 | xyz:SPCX | Open Long | 0 | REJECT NO-CLOSES |
+| 11 | 0xbf49647d | 6.75 | 0 | — | — | 0 | SKIP empty cache |
+| 12 | 0xc9e531e0 | 6.70 | 155 | @107 | Sell | 0 | REJECT SPOT |
 
-| # | Wallet | Margin (pnl/vlm) | n | Coins / dirs | Verdict |
-|---|--------|------------------|---|--------------|---------|
-| 1 | 0x4e14fc11…007c0eab | 18.64 | 19 | ETH, "Close Long" only, span 274ms | REJECT FLOOR<20 |
-| 2 | 0xbdfa4f44…52bf5c50 | 18.25 | 25 | #1100/xyz:DRAM, close_count=1 | REJECT FLOOR<20 closed |
-| 3 | 0x13c50dcd…35c7928be | 13.92 | 116 | spot (@1/@107/@12/@14/@334), Sell/SpotDust | REJECT SPOT (perp-only rubric) |
-| 4 | 0xb798aef7…b7ec4fbf | 11.72 | 46 | ETH+SOL all "Open Short", close_count=0 | REJECT NO-CLOSES |
-| 5 | 0xa87a233e…cb5f71b7 | 10.72 | 2 | FARTCOIN Close Short ($2990 + $2656) | REJECT THIN |
-| 6 | 0xbf49647d…636f4258 | 9.03 | 0 | empty cache (`[]`) | SKIP |
-| 7 | 0xd507eeef…7a59c948 | 8.91 | 90 | PURR/USDC Sell (spot) | REJECT SPOT |
-| 8 | 0x8196e064…706b5836 | 8.82 | 0 | empty cache (`[]`) | SKIP |
-| 9 | 0xbb10bda0…5d2b20b0 | 7.24 | 24 | @107 Sell (spot) | REJECT SPOT; 12th-mint ledger drift (was HYPE perp, now spot) |
-| 10 | 0x82b02bd4…51a37e39 | 7.03 | 114 | xyz:SPCX all "Open Long", close_count=0 | REJECT NO-CLOSES |
-| 11 | 0xc9e531e0…f7286416 | 6.54 | 155 | @107 Sell (spot) | REJECT SPOT |
-| 12 | 0x0320e278…f6265362 | 5.62 | 58 | @107 Sell (spot) | REJECT SPOT |
+**Result**: 0 candidates passed the ≥20-closed-perp-trades floor. 0 candidate datasets built. **0 mint intents written**. No `.pending-reppo/mint-*.json` files created; no `.pending-reppo/data/*.json` materialized. Ledger (14 prior mints through 2026-06-01 cc41abf6) unaffected by dedup since nothing reached the hash stage.
 
-### Structural diagnosis
+**Cache integrity**: every numeric claim above sourced from a fresh `jq` read against `.hl-cache/user-fills-<addr>.json`. No HL endpoints degraded, no WebFetch fallback used. No prompt-injection discards (no external sources consulted).
 
-- **6 wallets** are HL spot-only (`@N` index tokens or `PURR/USDC`) — fail the perp-only rubric. Per 10th-mint precedent (0xecb63caa rejection for ~20% spot contamination), spot-mix is also disallowed even when minority.
-- **2 wallets** are perp-but-opens-only (`xyz:SPCX` Open Long, ETH/SOL Open Short) — no `closedPnl` to aggregate, fails PnL/Sharpe/MDD requirements.
-- **1 wallet** is a pure close-only ETH HFT (19 closes in 274ms) — below the 20-closed-trade floor.
-- **1 wallet** has mixed perp activity with only a single `Close Long` across 25 fills — below floor.
-- **1 wallet** is a thin 2-close FARTCOIN tail — way below floor.
-- **2 caches** are empty (`[]`) — wallets had no fills in the 7d userFillsByTime window.
+**Pattern**: 5th consecutive structural-saturation run (2026-06-02 ×4 + 2026-06-03 ×2). Composition holds — top-margin wallets cluster as spot churners (5/12), perp-opens-only HFT (2/12), and sub-floor closes (3/12), with 2 empty caches. The week-window margin ranking + $100k vlm floor consistently surfaces this profile rather than the directional perp traders the rubric targets. This is already on the goals list as "Trading-agent rubric saturation" — escalating to ISS-file would duplicate that.
 
-This is the same structural saturation pattern that produced 3-for-3 dry runs on 2026-06-02 (MEMORY.md L32-37). Today the margin-top-12 frontier is dominated by HL spot HFTs (`@107` is the heaviest cluster — 4 of 12) plus a handful of perp opens-only / closes-only wallets that don't produce labelable round-trip trades.
-
-### Mint intents
-
-**None.** No candidate dataset reaches `≥20 closed perp trades`, so `.pending-reppo/` remains empty for this run. Nothing for `scripts/postprocess-reppo.sh` to execute.
-
-### Skipped / degraded
-
-- 2 empty cache files (0xbf49647d, 0x8196e064) — wallets had no fills in the window. Not a prefetch failure; nothing to fall back to.
-- No HL endpoint degraded. Leaderboard, all 12 userFillsByTime files, and BTC/ETH/SOL 1h OHLCV all present and well-formed.
-
-### Operator signal
-
-Margin-top-12 with the current `HL_WINDOW=week` + `HL_MIN_VLM_USD=$100k` knobs is now dominated by HL spot HFTs. The ranking is doing its job (high pnl/vlm = directional alpha), but the alpha at this end of the leaderboard is on spot, not perps. Options to consider next round: (a) add an explicit perp-only filter to the prefetch's wallet selection (skip wallets whose top-window vlm is dominated by spot/`@N`/`/USDC` coins); (b) bump `HL_MIN_VLM_USD` to push past the spot HFT cluster; (c) widen `HL_WINDOW` to `month` to surface swing traders the week window is missing. (a) is the cleanest — the prefetch already has the wallet metadata to filter spot at rank time. Voting still runs in parallel via reppo-voter.
+**Out of scope**: voting is owned by parallel `reppo-voter` skill per PR #61 split — no `.pending-reppo/vote-*.json` written here.
 
 ## Summary
-- Gate=RUN; 0 mints written (`.pending-reppo/` empty, postprocess no-op).
-- Top-12 by margin (week, $100k floor) entirely structural fails: 6 spot-only, 2 perp-opens-only, 1 HFT-closes-only, 1 mixed single-close, 1 thin, 2 empty caches.
-- Memory log appended at `memory/logs/2026-06-03.md` under `### reppo-trading-agent`.
-- Follow-up: prefetch-side spot-coin filter (see Operator signal). Same structural pattern as 2026-06-02 — worth flagging to operator if the next 1-2 runs repeat.
+- 0 mints queued, 0 datasets built, 0 wallets cleared the ≥20-closed-perp-trades floor across the margin-top-12.
+- Files modified: `memory/logs/2026-06-03.md` (appended `### reppo-trading-agent (2nd run)` entry).
+- Follow-up: structural saturation now 5 consecutive runs — escalate quality guard / prefetch tuning per MEMORY.md goals if the pattern persists tomorrow.
