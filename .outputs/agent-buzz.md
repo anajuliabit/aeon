@@ -1,21 +1,26 @@
-Done — agent-buzz ran and produced 5 curated tweets across 2 clusters from the prefetch cache.
+*Agent Buzz — 2026-06-03*
+_mostly protocol talk: what mcp doesn't cover (identity, safety), two attribution papers, three builder drops._
 
-## Summary
+**what mcp doesn't cover**
+• @diagridio — gateways solve routing; production agents still need identity, authz, proof
+  https://x.com/diagridio/status/2061825161255362863
+• @asteris_ai — SafeMCP frames regulation as a pre-toolcall constraint, not a post-incident review (arxiv 2606.01991)
+  https://x.com/asteris_ai/status/2061903176257933333
+• @ICPandaDAO — Agent Protocols: open, decentralized layer for agent identity, portable profiles, signed discourse rooms
+  https://x.com/ICPandaDAO/status/2061782856175874211
 
-**Status:** `AGENT_BUZZ_OK` — first successful run since 2026-05-31 (the 6-01 17:30Z slot was a ghost, paired with vibecoding under ISS-015).
+**attribution + benchmarks**
+• @ming_yu_lu — Agent Attribution preprint measures how much each agent in a multi-agent system actually contributes
+  https://x.com/ming_yu_lu/status/2061866148476710991
+• @AINativeF — MCP-Persona benchmark: SOTA agents still struggle at personalized tool use under simulated environments
+  https://x.com/AINativeF/status/2061960355610542153
 
-**Source:** `.xai-cache/agent-buzz.json` (prefetch, 15166 bytes, fresh 18:13Z).
+**builder pragma**
+• @tom_doerr — googleapis/mcp-toolbox: direct agent → enterprise database, no glue layer
+  https://x.com/tom_doerr/status/2061722753883893769
+• @Sophiainfra — upgraded RPC infra for agentic finance on Solana, claiming the layer beneath agent treasuries
+  https://x.com/Sophiainfra/status/2061960806321758236
+• @tfearn — a capability isn't done until an agent can call it; publish once via MCP, anything drives it
+  https://x.com/tfearn/status/2061859597892329824
 
-**Curation:** 8 candidates → 5 kept across 2 clusters.
-- Dropped: @sky_bolt20907 (pure hot-take, 0 signal), @PIN x2 (null-followers auto-tweeter posting arxiv title-only with no thesis framing).
-- 3-day dedup set was empty (5-30/5-31 both AGENT_BUZZ_EMPTY, 6-01 was a slot ghost).
-
-**Clusters:**
-- *agent infra positioning* — @prom_io (settlement layer), @Talaria_OS (token-burn from read loops), @Audel_Rouhi (Agent OS over MCP)
-- *research drops* — @HenryL_AI (A-Evolve self-improving agents), @cv_usk (GREPSEEK grep-based retrieval)
-
-**Files:**
-- `.pending-notify/1780424175-agent-buzz.md` — 1140 chars, well under 4000 ceiling
-- `memory/logs/2026-06-02.md` — appended `### agent-buzz` entry with selected URLs for tomorrow's dedup
-
-Post-run delivery step picks up the notification per the dominant sandbox pattern.
+<!-- _src: xai-cache · candidates: 10 → kept: 8_ -->

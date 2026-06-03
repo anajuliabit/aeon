@@ -1,0 +1,187 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "mostly protocol talk: what mcp doesn't cover (identity, safety), two attribution papers, three builder drops."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_section1",
+        "stack_section1",
+        "sep1",
+        "heading_section2",
+        "stack_section2",
+        "sep2",
+        "heading_section3",
+        "stack_section3",
+        "text_footer"
+      ]
+    },
+    "heading_section1": {
+      "type": "Heading",
+      "props": {
+        "text": "what mcp doesn't cover",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_1",
+        "tweet1_2",
+        "tweet1_3"
+      ]
+    },
+    "tweet1_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "diagridio",
+        "handle": "@diagridio",
+        "text": "gateways solve routing; production agents still need identity, authz, proof"
+      },
+      "children": []
+    },
+    "tweet1_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "asteris_ai",
+        "handle": "@asteris_ai",
+        "text": "SafeMCP frames regulation as a pre-toolcall constraint, not a post-incident review (arxiv 2606.01991)"
+      },
+      "children": []
+    },
+    "tweet1_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ICPandaDAO",
+        "handle": "@ICPandaDAO",
+        "text": "Agent Protocols: open, decentralized layer for agent identity, portable profiles, signed discourse rooms"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_section2": {
+      "type": "Heading",
+      "props": {
+        "text": "attribution + benchmarks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_1",
+        "tweet2_2"
+      ]
+    },
+    "tweet2_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ming_yu_lu",
+        "handle": "@ming_yu_lu",
+        "text": "Agent Attribution preprint measures how much each agent in a multi-agent system actually contributes"
+      },
+      "children": []
+    },
+    "tweet2_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AINativeF",
+        "handle": "@AINativeF",
+        "text": "MCP-Persona benchmark: SOTA agents still struggle at personalized tool use under simulated environments"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_section3": {
+      "type": "Heading",
+      "props": {
+        "text": "builder pragma",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3_1",
+        "tweet3_2",
+        "tweet3_3"
+      ]
+    },
+    "tweet3_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "tom_doerr",
+        "handle": "@tom_doerr",
+        "text": "googleapis/mcp-toolbox: direct agent → enterprise database, no glue layer"
+      },
+      "children": []
+    },
+    "tweet3_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Sophiainfra",
+        "handle": "@Sophiainfra",
+        "text": "upgraded RPC infra for agentic finance on Solana, claiming the layer beneath agent treasuries"
+      },
+      "children": []
+    },
+    "tweet3_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "tfearn",
+        "handle": "@tfearn",
+        "text": "a capability isn't done until an agent can call it; publish once via MCP, anything drives it"
+      },
+      "children": []
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai-cache · candidates: 10 → kept: 8_",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
