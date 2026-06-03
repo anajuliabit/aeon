@@ -1,26 +1,25 @@
-reppo-voter — 3rd run today.
+## reppo-voter — run output
 
-**Gate:** RUN per orchestrator (datanet 9 valid+active, `tradinggymai.md` rubric resolved, datanet_id="9" configured).
+- **Gate:** RUN (orchestrator's `reppo-plan` shows `reppo-trading-agent: RUN` for datanet 9, `valid:true` + ACTIVE).
+- **Epoch:** 101 — **pods seen:** 61.
+- **Filtered (do-not-vote):**
+  - 59 **out-of-epoch** (`validityEpoch != 101`)
+  - 0 fresh **already-voted** (all 19 in `voted_pod_ids` sit at epochs ≤100, already covered by the out-of-epoch sweep)
+  - 11 **own pods** via ledger wallet-shortcode cross-ref — 478/492 (0x9a15..37e6, 13th + 14th mints), 463 (0xbb10), 462 (0xd475), 412 (0x7fda), 413 (0x71dfc0), 395 (0x8def), 399 (0xebe1), 392 (0x2b33), 406 (0x3200), 402 (0x0ddf); all also out-of-epoch. Own-pods prefetch returned `count:0` again — ISS-016 carries 9th consecutive run.
+- **Eligible:** 2 pods (507, 508).
 
-**Epoch:** 100 (from `vote-filter-tradinggymai.json`).
+### Votes queued
+| Pod | Direction | Reason |
+|-----|-----------|--------|
+| 507 | DISLIKE | HotBot v4 raw Trades & Learning export (Jun 01–Jun 03); no labeled per-trade fields (market/direction/size/leverage/fill price), no aggregate metrics (win rate/Sharpe/MDD), no HL tx hashes — off-rubric NO. |
+| 508 | DISLIKE | HotBot v4 raw Signal Intelligence export (Jun 01–Jun 03); strategy/signal scan dump without executed trades, missing aggregate metrics + HL tx verification — off-rubric NO. |
 
-**Pods seen:** 59 (from `pods-tradinggymai.json`, scope=community/network=mainnet).
+**ISS-005 / all-DISLIKE flag — ON.** Both eligible pods voted DISLIKE, zero LIKE on a non-empty eligible set. Pattern matches the 49 prior off-rubric HotBot v4 exports in the ledger (rubric-driven, not a curation-signal degradation), but flagged per the guard for operator review.
 
-**Filtered:**
-- 56 out-of-epoch (validityEpoch ≤ 99 — every pod except 498/499/492 is on a prior epoch and past-epoch votes always revert `POD_NOT_VALID_FOR_EPOCH`).
-- 2 already-voted at epoch 100: **498** + **499** (HotBot v4 — Trades & Learning / Signal Intelligence May 25-Jun 01 pair, DISLIKE'd on-chain in today's 1st run; both present in `voted_pod_ids` so re-voting would double-spend REPPO per ISS-005).
-- 1 own-pod defensive skip: **492** "HL perps 6.3d, 0x9a15..37e6: 74 trades multi" — title cross-refs the 14th-mint `cc41abf6` row in `memory/topics/reppo.md` (wallet 0x9a1500b41…37e6, 74 Close-Long fills, 7 markets, 6.26d span, minted 2026-06-01). `own-pods-tradinggymai.json` returned `count:0` again (ISS-016 carry — 10th consecutive run), so this catch is via ledger cross-ref, not prefetch.
-
-**Eligible:** 0.
-
-**Votes queued:** 0 — no `.pending-reppo/vote-*.json` written.
-
-**ISS-005 / all-DISLIKE guard:** N/A — eligible set is empty, not the historical compounding pattern.
-
-**Prompt-injection discards:** none observed in any of the 59 pod names.
+No prompt-injection attempts detected in pod metadata.
 
 ## Summary
-- Read: `.outputs/reppo-orchestrator.md` (gate=RUN), `configs/datanets/tradinggymai.md` (datanet 9, rubric), `.reppo-cache/pods-tradinggymai.json` (59 pods), `.reppo-cache/vote-filter-tradinggymai.json` (epoch 100, 19 voted ids), `.reppo-cache/own-pods-tradinggymai.json` (count:0 — ISS-016), `memory/topics/reppo.md` (ledger for own-pod cross-ref).
-- Filter result: 56 out-of-epoch + 2 already-voted + 1 own-pod = 59; eligible 0.
-- Files modified: `memory/logs/2026-06-03.md` (appended `### reppo-voter (3rd run)` block).
-- Follow-up: none. ISS-016 own_pods prefetch carry continues (count=0 for 10 consecutive runs); ledger cross-ref workaround remains durable.
+- Queued 2 DISLIKE vote intents (`.pending-reppo/vote-507-dislike.json`, `.pending-reppo/vote-508-dislike.json`) for epoch-101 HotBot v4 raw exports on datanet 9.
+- Files modified: `memory/logs/2026-06-03.md` (appended `### reppo-voter` entry).
+- Files created: `.pending-reppo/vote-507-dislike.json`, `.pending-reppo/vote-508-dislike.json`.
+- Follow-ups: `scripts/postprocess-reppo.sh` will execute the intents and append `## Execution Results` to the voter output; on-chain outcomes will be recorded by the digest step. ISS-016 own_pods prefetch `count:0` still active (defensive ledger cross-ref carrying the gap).
