@@ -1,0 +1,91 @@
+{
+  "version": "1",
+  "generated_at": "2026-06-03T19:10:00Z",
+  "skill": "skill-analytics",
+  "title": "Skill Analytics — 2026-06-03",
+  "spec": {
+    "type": "Stack",
+    "props": {"direction": "vertical", "gap": "md"},
+    "children": [
+      {"type": "Alert", "props": {"variant": "destructive", "children": "11 anomaly flag(s) raised — see Anomalies section"}},
+      {"type": "Heading", "props": {"level": 2, "children": "Skill Analytics — 2026-06-03"}},
+      {"type": "Text", "props": {"variant": "muted", "children": "11 scheduled skill(s) didn't run this window — token-movers, on-chain-monitor, defi-monitor, and 8 more"}},
+      {"type": "Grid", "props": {"columns": 4, "gap": "sm"}, "children": [
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Total runs"}},
+          {"type": "Heading", "props": {"level": 3, "children": "299"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Active skills"}},
+          {"type": "Heading", "props": {"level": 3, "children": "41"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Success rate"}},
+          {"type": "Heading", "props": {"level": 3, "children": "100%"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Anomalies"}},
+          {"type": "Heading", "props": {"level": 3, "children": "11"}}
+        ]}}
+      ]},
+      {"type": "Heading", "props": {"level": 3, "children": "Anomalies (🔴 SILENT × 11)"}},
+      {"type": "Table", "props": {
+        "columns": [
+          {"key": "flag", "header": "Flag"},
+          {"key": "skill", "header": "Skill"},
+          {"key": "detail", "header": "Detail"}
+        ],
+        "rows": [
+          {"flag": "🔴 SILENT", "skill": "token-movers", "detail": "daily `10 12 * * *`, 0 runs, never ran"},
+          {"flag": "🔴 SILENT", "skill": "on-chain-monitor", "detail": "daily `20 12 * * *`, 0 runs, never ran"},
+          {"flag": "🔴 SILENT", "skill": "defi-monitor", "detail": "daily `40 12 * * *`, 0 runs, never ran"},
+          {"flag": "🔴 SILENT", "skill": "narrative-tracker", "detail": "daily `30 13 * * *`, 0 runs, last fired 2026-05-21"},
+          {"flag": "🔴 SILENT", "skill": "aixbt-pulse", "detail": "2×/day `0 9,21 * * *`, 0 runs, never ran"},
+          {"flag": "🔴 SILENT", "skill": "unlock-monitor", "detail": "Mon `0 10 * * 1`, 0 runs, Mon opp was 06-01"},
+          {"flag": "🔴 SILENT", "skill": "operator-scorecard", "detail": "Mon `30 10 * * 1`, 0 runs, Mon opp was 06-01"},
+          {"flag": "🔴 SILENT", "skill": "vuln-scanner", "detail": "Sat `0 16 * * 6`, 0 runs, next Sat 06-06"},
+          {"flag": "🔴 SILENT", "skill": "fork-cohort", "detail": "Sun `0 19 * * 0`, 0 runs, next Sun 06-07"},
+          {"flag": "🔴 SILENT", "skill": "fork-skill-digest", "detail": "Sun `30 18 * * 0`, 0 runs, next Sun 06-07"},
+          {"flag": "🔴 SILENT", "skill": "fork-skill-gap", "detail": "Sun `0 21 * * 0`, 0 runs, next Sun 06-07"}
+        ]
+      }},
+      {"type": "Heading", "props": {"level": 3, "children": "Top runners"}},
+      {"type": "Table", "props": {
+        "columns": [
+          {"key": "rank", "header": "#"},
+          {"key": "skill", "header": "Skill"},
+          {"key": "runs", "header": "Runs"},
+          {"key": "success", "header": "Success"},
+          {"key": "exit", "header": "Dominant exit"}
+        ],
+        "rows": [
+          {"rank": "1", "skill": "reppo-orchestrator", "runs": "31", "success": "100%", "exit": "uncategorized"},
+          {"rank": "2", "skill": "reppo-digest", "runs": "30", "success": "100%", "exit": "uncategorized"},
+          {"rank": "3", "skill": "reppo-trading-agent", "runs": "30", "success": "97%", "exit": "uncategorized"},
+          {"rank": "4", "skill": "heartbeat", "runs": "23", "success": "100%", "exit": "ok"},
+          {"rank": "5", "skill": "fleet-control", "runs": "14", "success": "100%", "exit": "uncategorized"},
+          {"rank": "6", "skill": "reppo-voter", "runs": "9", "success": "100%", "exit": "uncategorized"},
+          {"rank": "7", "skill": "defi-overview", "runs": "8", "success": "100%", "exit": "ok"},
+          {"rank": "8", "skill": "github-trending", "runs": "8", "success": "100%", "exit": "ok"},
+          {"rank": "9", "skill": "token-alert", "runs": "8", "success": "100%", "exit": "ok"},
+          {"rank": "10", "skill": "morning-brief", "runs": "8", "success": "100%", "exit": "uncategorized"}
+        ]
+      }},
+      {"type": "Heading", "props": {"level": 3, "children": "Exit taxonomy (best-effort, from daily logs)"}},
+      {"type": "Table", "props": {
+        "columns": [
+          {"key": "bucket", "header": "Bucket"},
+          {"key": "count", "header": "Count"},
+          {"key": "pct", "header": "%"}
+        ],
+        "rows": [
+          {"bucket": "uncategorized", "count": "~182", "pct": "~61%"},
+          {"bucket": "ok", "count": "~103", "pct": "~34%"},
+          {"bucket": "error", "count": "7", "pct": "2%"},
+          {"bucket": "partial", "count": "7", "pct": "2%"},
+          {"bucket": "quiet / skip / new_info", "count": "0", "pct": "0%"}
+        ]
+      }}
+    ]
+  }
+}
