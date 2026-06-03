@@ -11,7 +11,6 @@
 | ISS-011 | Reppo vote write reverts with "nonce too low" after sibling votes land same batch | medium | unknown | 2026-05-29 | reppo-trading-agent, reppo-digest |
 | ISS-015 | vibecoding-digest can't reach Reddit — prefetch + WebFetch both blocked, 3 consecutive days | high | sandbox-limitation | 2026-05-30 | vibecoding-digest |
 | ISS-016 | Reppo vote dry-run fails CANNOT_VOTE_FOR_OWN_POD when trading-agent votes LIKE on its own mint | medium | prompt-bug | 2026-05-31 | reppo-trading-agent, reppo-digest |
-| ISS-017 | chain-runner.yml interpolates `${{ inputs.chain }}` directly into `run:` shell blocks at lines 41 + 416 (2026-04-11 incident pattern class) | high | prompt-bug | 2026-06-01 | chain-runner |
 
 ## Resolved
 
@@ -26,3 +25,4 @@
 | ISS-012 | Reppo platform metadata POST fails HTTP 400 — payload Zod-validation bug (subnetId number→string, podDescription>200, podName>50) | medium | https://github.com/aeonframework/aeon/pull/44 | 2026-05-29 |
 | ISS-013 | Reppo dataset IPFS pin to Pinata fails HTTP 403 — PINATA_JWT lacks pinFileToIPFS scope | high | operator JWT rotation (no PR) | 2026-05-29 |
 | ISS-014 | Reppo platform metadata POST fails HTTP 500 Internal Server Error — transient platform-side fault | medium | platform self-healed (no PR) | 2026-05-30 |
+| ISS-017 | chain-runner.yml interpolates `${{ inputs.chain }}` directly into `run:` shell blocks at lines 41 + 416 (2026-04-11 incident pattern class) | high | env: indirection (focus/iss-017-chain-runner-env) | 2026-06-03 |

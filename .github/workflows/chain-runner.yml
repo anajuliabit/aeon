@@ -36,9 +36,12 @@ jobs:
       - name: Run chain
         env:
           GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+          # ISS-017: bind via env: indirection, not direct ${{ }} interpolation
+          # into the shell body (2026-04-11 messages.yml incident pattern class).
+          _CHAIN: ${{ inputs.chain }}
         run: |
           set -euo pipefail
-          CHAIN="${{ inputs.chain }}"
+          CHAIN="$_CHAIN"
           NOW_ISO=$(date -u +%FT%TZ)
           echo "Running chain: $CHAIN"
 
@@ -412,8 +415,10 @@ jobs:
         if: always()
         env:
           GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+          # ISS-017: env: indirection (see "Run chain" step above).
+          _CHAIN: ${{ inputs.chain }}
         run: |
-          CHAIN="${{ inputs.chain }}"
+          CHAIN="$_CHAIN"
           NOW_ISO=$(date -u +%FT%TZ)
           STATUS="${CHAIN_STATUS:-failed}"
           STATE_FILE="memory/cron-state.json"
