@@ -9,7 +9,6 @@
 | ISS-009 | reppo-orchestrator's fenced reppo-plan block lost — root cause traced: chain-runner capture step (`aeon.yml:479-493`) overwrites Write-tool output with the LLM's final assistant text. Fix: emit fenced block in assistant text, not Write tool (validated this run, 2 on-chain). Also still need chain-runner `continue` → `break` | high | prompt-bug | 2026-05-26 | reppo-orchestrator, reppo-trading-agent, reppo-digest, chain-runner |
 | ISS-010 | Scheduler dispatches chain keys as phantom skills — reppo-swarm fires daily against a non-existent SKILL.md | medium | config | 2026-05-28 | scheduler, reppo-swarm |
 | ISS-011 | Reppo vote write reverts with "nonce too low" after sibling votes land same batch | medium | unknown | 2026-05-29 | reppo-trading-agent, reppo-digest |
-| ISS-015 | vibecoding-digest can't reach Reddit — prefetch + WebFetch both blocked, 3 consecutive days | high | sandbox-limitation | 2026-05-30 | vibecoding-digest |
 | ISS-016 | Reppo vote dry-run fails CANNOT_VOTE_FOR_OWN_POD when trading-agent votes LIKE on its own mint | medium | prompt-bug | 2026-05-31 | reppo-trading-agent, reppo-digest |
 
 ## Resolved
@@ -26,3 +25,4 @@
 | ISS-013 | Reppo dataset IPFS pin to Pinata fails HTTP 403 — PINATA_JWT lacks pinFileToIPFS scope | high | operator JWT rotation (no PR) | 2026-05-29 |
 | ISS-014 | Reppo platform metadata POST fails HTTP 500 Internal Server Error — transient platform-side fault | medium | platform self-healed (no PR) | 2026-05-30 |
 | ISS-017 | chain-runner.yml interpolates `${{ inputs.chain }}` directly into `run:` shell blocks at lines 41 + 416 (2026-04-11 incident pattern class) | high | env: indirection (focus/iss-017-chain-runner-env) | 2026-06-03 |
+| ISS-015 | vibecoding-digest can't reach Reddit — prefetch + WebFetch both blocked | high | wontfix — vibecoding-digest + reddit-digest disabled (Reddit API unavailable to operator) | 2026-06-03 |

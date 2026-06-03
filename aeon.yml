@@ -12,7 +12,7 @@ skills:
   hacker-news-digest: { enabled: false, schedule: "0 7 * * *" } # top HN stories filtered by MEMORY.md interests
   paper-digest: { enabled: false, schedule: "0 7 * * *" }
 
-  reddit-digest: { enabled: false, schedule: "0 7 * * *" }
+  reddit-digest: { enabled: false, schedule: "0 7 * * *" } # keep disabled — depends on Reddit API, unavailable to operator (ISS-015)
   telegram-digest: { enabled: false, schedule: "30 7 * * *", model: "claude-sonnet-4-6" } # digest from tracked Telegram channels
 
   # --- Mid-morning (9 AM UTC) ---
@@ -121,7 +121,7 @@ skills:
   tweet-roundup: { enabled: false, schedule: "0 17 * * *", var: "" } # latest tweets on configurable topics
   agent-buzz: { enabled: true, schedule: "30 17 * * *" } # top AI agent tweets by influence
   farcaster-digest: { enabled: false, schedule: "0 17 * * *" } # trending Farcaster casts
-  vibecoding-digest: { enabled: true, schedule: "30 17 * * *" } # r/vibecoding trending posts
+  vibecoding-digest: { enabled: false, schedule: "30 17 * * *" } # disabled 2026-06-03 — depends on Reddit API (ISS-015); operator can't use the Reddit API. Re-enable only if Reddit access is restored.
   channel-recap: { enabled: false, schedule: "0 17 * * 0", var: "" } # weekly — recap from Telegram channel (set var to channel username)
 
   # --- Feed generation (5:30 PM UTC, after content skills) ---
