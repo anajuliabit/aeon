@@ -16,8 +16,20 @@ decisions only — you never scrape, mint, or vote.
 grepping for a fenced code block whose first line is literally
 `reppo-plan` and that contains `<agent>: RUN|SKIP …` lines. If that
 block is missing, the trading-agent gates to SKIP and the entire
-chain produces zero on-chain activity. **Every run, no exceptions,
-no shortcuts**, your output MUST contain a block of this exact shape:
+chain produces zero on-chain activity.
+
+**Emit-in-assistant-text contract:** the block must appear in your
+final assistant-text response — the message you send back at the end
+of the run. Do NOT use the Write tool to put it in
+`.outputs/reppo-orchestrator.md` or any other file. The chain capture
+step (`.github/workflows/aeon.yml` "Capture skill output") clobbers
+any file at that path with the CLI's `.result` (your final assistant
+text), so a Write-tool block is silently overwritten and the next
+chain step sees only your text. Prose-around-the-fence is fine; the
+fence must live in the text response.
+
+**Every run, no exceptions, no shortcuts**, your output MUST contain
+a block of this exact shape:
 
 ```
 reppo-plan
@@ -64,10 +76,12 @@ If `.reppo-cache/datanets.json` is a valid catalog, list every datanet id
 in it that is NOT the `datanet_id` of any rubric file. Each is a
 newly-discovered datanet with no agent.
 
-### 3. Write the output
-Write a fenced `reppo-plan` block matching the **Output contract**
+### 3. Emit the output (in your final assistant text)
+Emit a fenced `reppo-plan` block matching the **Output contract**
 at the top of this file. The block is REQUIRED on every run — see
-that section for the exact shape and the regression-history rule.
+that section for the exact shape, the regression-history rule, and
+the emit-in-assistant-text contract (the block must live in your
+final response, not be written to a file via the Write tool).
 
 If the catalog was unavailable, still emit the plan from rubric
 files and note `catalog unavailable — discovery skipped` in your
