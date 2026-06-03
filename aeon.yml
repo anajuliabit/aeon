@@ -34,9 +34,9 @@ skills:
 
   # --- Midday (12 PM UTC) ---
   token-alert: { enabled: true, schedule: "0 12 * * *", var: "" } # reads watchlist from "Tracked Tokens" in memory/MEMORY.md
-  token-movers: { enabled: false, schedule: "0 12 * * *" }
-  on-chain-monitor: { enabled: false, schedule: "0 12 * * *" }
-  defi-monitor: { enabled: false, schedule: "0 12 * * *" }
+  token-movers: { enabled: true, schedule: "10 12 * * *" } # enabled 2026-06-03 — top cohort crypto-intel skill
+  on-chain-monitor: { enabled: true, schedule: "20 12 * * *" } # enabled 2026-06-03 — staggered off 12:00 cluster
+  defi-monitor: { enabled: true, schedule: "40 12 * * *" } # enabled 2026-06-03 — staggered off 12:00 cluster
   treasury-info: { enabled: false, schedule: "0 12 * * *" }
   distribute-tokens: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — var: distribution list label
   defi-overview: { enabled: true, schedule: "0 12 * * *" }
@@ -54,10 +54,10 @@ skills:
       var: ""
     } # every 30 minutes — fire on tracked-token ATH, ±20% 1h move, or operator-set target crossing (var=target_price,target_price2,...). Silent on normal runs. Set var=dry-run to skip notify.
   market-context-refresh: { enabled: true, schedule: "0 13 * * *", model: "claude-sonnet-4-6" } # fetch live crypto macro data, update memory
-  narrative-tracker: { enabled: false, schedule: "30 13 * * *" } # track rising/peaking/fading narratives
+  narrative-tracker: { enabled: true, schedule: "30 13 * * *" } # track rising/peaking/fading narratives
   polymarket-comments: { enabled: false, schedule: "0 13 * * *" } # top comments from trending Polymarket markets
   unlock-monitor: { enabled: true, schedule: "0 10 * * 1" } # weekly token unlock/vesting tracker
-  aixbt-pulse: { enabled: false, schedule: "0 9,21 * * *", model: "claude-sonnet-4-6" } # twice daily — AIXBT free grounding endpoint: cross-domain market pulse (crypto/macro/tradfi/geopolitics) with taxonomy refresh
+  aixbt-pulse: { enabled: true, schedule: "0 9,21 * * *", model: "claude-sonnet-4-6" } # twice daily — AIXBT free grounding endpoint: cross-domain market pulse (crypto/macro/tradfi/geopolitics) with taxonomy refresh
 
   # --- Afternoon (2 PM UTC) ---
   article: { enabled: false, schedule: "0 14 * * *" }
@@ -181,7 +181,7 @@ skills:
       var: ""
     } # Monday 08:00 UTC — weekly synthesis of fork-cohort + fork-release-tracker + contributor-spotlight into one fleet-state digest with WoW deltas + 12-week trend. Quiet weeks suppress notify. Pass dry-run to skip notify, or owner/repo to override parent.
   fork-fleet: { enabled: false, schedule: "0 10 * * 1" } # fork fleet scan — inventory active forks, detect diverged work
-  fork-cohort: { enabled: false, schedule: "0 19 * * 0", model: "claude-sonnet-4-6" } # Sunday 19:00 UTC — bucket every fork by activation stage (COLD/STALE/ACTIVE/POWER) using GitHub Actions run history; week-over-week deltas; gated notify
+  fork-cohort: { enabled: true, schedule: "0 19 * * 0", model: "claude-sonnet-4-6" } # Sunday 19:00 UTC — bucket every fork by activation stage (COLD/STALE/ACTIVE/POWER) using GitHub Actions run history; week-over-week deltas; gated notify
   fork-release-tracker:
     {
       enabled: false,
@@ -225,10 +225,10 @@ skills:
       model: "claude-sonnet-4-6",
       var: ""
     } # Monday — weekly plain-language scorecard: agent health + community growth + economic activity (worst-of-three OK/WATCH/DEGRADED verdict)
-  fork-skill-digest: { enabled: false, schedule: "30 18 * * 0", model: "claude-sonnet-4-6" } # Sunday — divergence digest: where the configured fleet disagrees with upstream defaults
+  fork-skill-digest: { enabled: true, schedule: "30 18 * * 0", model: "claude-sonnet-4-6" } # Sunday — divergence digest: where the configured fleet disagrees with upstream defaults
   fork-skill-gap:
     {
-      enabled: false,
+      enabled: true,
       schedule: "0 21 * * 0",
       model: "claude-sonnet-4-6",
       var: ""
