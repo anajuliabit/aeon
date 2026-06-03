@@ -1,0 +1,393 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-03 21:00Z"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-crypto",
+        "sep-1",
+        "section-tradfi",
+        "sep-2",
+        "section-new",
+        "sep-3",
+        "section-bridge"
+      ]
+    },
+    "section-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-crypto",
+        "item-btc",
+        "item-hype"
+      ]
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "item-btc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-btc",
+        "text-btc-reasons",
+        "text-btc-watch"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "Below $65K",
+        "trend": "down"
+      }
+    },
+    "text-btc-reasons": {
+      "type": "Text",
+      "props": {
+        "text": "Strategy/STRC solvency fears + ETF outflows",
+        "variant": "muted"
+      }
+    },
+    "text-btc-watch": {
+      "type": "Text",
+      "props": {
+        "text": "Watch zone: $54K–$61K realized price",
+        "variant": "caption"
+      }
+    },
+    "item-hype": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-hype-price",
+        "text-hype-status",
+        "stat-hype-revenue"
+      ]
+    },
+    "stat-hype-price": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$74",
+        "trend": "up"
+      }
+    },
+    "text-hype-status": {
+      "type": "Text",
+      "props": {
+        "text": "Flipped SOL — only top-10 green in the rout",
+        "variant": "body"
+      }
+    },
+    "stat-hype-revenue": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Revenue",
+        "value": "$4M"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-tradfi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-tradfi",
+        "item-yields",
+        "item-equities",
+        "item-dollar",
+        "item-em"
+      ]
+    },
+    "heading-tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "item-yields": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-10y",
+        "text-yields"
+      ]
+    },
+    "badge-10y": {
+      "type": "Badge",
+      "props": {
+        "text": "10Y Yields",
+        "variant": "outline"
+      }
+    },
+    "text-yields": {
+      "type": "Text",
+      "props": {
+        "text": "Up as Hormuz risk reprices oil and inflation bets",
+        "variant": "body"
+      }
+    },
+    "item-equities": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-equities",
+        "text-equities"
+      ]
+    },
+    "badge-equities": {
+      "type": "Badge",
+      "props": {
+        "text": "Equities",
+        "variant": "outline"
+      }
+    },
+    "text-equities": {
+      "type": "Text",
+      "props": {
+        "text": "Rotating into energy/defensives",
+        "variant": "body"
+      }
+    },
+    "item-dollar": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-dollar",
+        "text-dollar"
+      ]
+    },
+    "badge-dollar": {
+      "type": "Badge",
+      "props": {
+        "text": "Dollar",
+        "variant": "outline"
+      }
+    },
+    "text-dollar": {
+      "type": "Text",
+      "props": {
+        "text": "Bid on safe-haven flows",
+        "variant": "body"
+      }
+    },
+    "item-em": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-em",
+        "text-em"
+      ]
+    },
+    "badge-em": {
+      "type": "Badge",
+      "props": {
+        "text": "EM Currencies",
+        "variant": "outline"
+      }
+    },
+    "text-em": {
+      "type": "Text",
+      "props": {
+        "text": "and carry trades taking the compression",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-new",
+        "item-hype-sol",
+        "item-ondo",
+        "item-iran"
+      ]
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "item-hype-sol": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-hype-flip",
+        "text-hype-narrative"
+      ]
+    },
+    "badge-hype-flip": {
+      "type": "Badge",
+      "props": {
+        "text": "HYPE/SOL flip",
+        "variant": "default"
+      }
+    },
+    "text-hype-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE emerging as the alt narrative anchor",
+        "variant": "body"
+      }
+    },
+    "item-ondo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-ondo",
+        "text-ondo"
+      ]
+    },
+    "stat-ondo": {
+      "type": "Stat",
+      "props": {
+        "label": "Ondo TVL (BNB Chain)",
+        "value": "$1B"
+      }
+    },
+    "text-ondo": {
+      "type": "Text",
+      "props": {
+        "text": "RWA traction outside Ethereum",
+        "variant": "muted"
+      }
+    },
+    "item-iran": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-iran",
+        "text-iran"
+      ]
+    },
+    "badge-iran": {
+      "type": "Badge",
+      "props": {
+        "text": "US-Iran Strikes",
+        "variant": "destructive"
+      }
+    },
+    "text-iran": {
+      "type": "Text",
+      "props": {
+        "text": "Lifting crude and credit spreads simultaneously",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-bridge": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-bridge",
+        "text-bridge-1",
+        "text-bridge-2",
+        "text-bridge-3"
+      ]
+    },
+    "heading-bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text-bridge-1": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz + oil → 10Y climb → dollar bid → risk-off. BTC absorbing macro compression AND Strategy/STRC solvency fears simultaneously. market reads it as BTC-specific. it's not — liquidity is tightening for real.",
+        "variant": "body"
+      }
+    },
+    "text-bridge-2": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE at $4M revenue while BTC bleeds = market pricing cash flows over store-of-value.",
+        "variant": "lead"
+      }
+    },
+    "text-bridge-3": {
+      "type": "Text",
+      "props": {
+        "text": "alt-BTC correlation break (ZEC/WLD/NEAR) is reflexive — AI/privacy narrative self-reinforcing as BTC dominance drops.",
+        "variant": "body"
+      }
+    }
+  }
+}
