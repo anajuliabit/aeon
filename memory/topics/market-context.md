@@ -1,68 +1,71 @@
-# Market Context (as of 2026-06-02)
+# Market Context (as of 2026-06-03)
 
-> **Take:** risk-off (deepening) — BTC broke $70K intraday (-4.18% 24h, -10.81% 7d) with breadth at 6/20 as US-Iran peace talks collapsed and F&G dropped to 23 (Extreme Fear). Conviction: high.
+> **Take:** risk-off — BTC -2.56% 24h ($66.7K, -10.88% 7d) with F&G cratering 12 points to 11 (Extreme Fear), the steepest single-session sentiment drop of this drawdown cycle, as ETF outflows extend into NFP week. Conviction: high.
 
 ## Signal Snapshot
-- BTC $68,843 (-4.18% 24h, -10.81% 7d) · dominance 55.98% (-0.91 pp 24h)
-- ETH $1,976.55 (-0.18% 24h, -6.80% 7d) · ETH/BTC 0.02870
-- SOL $78.99 (-1.64% 24h, -7.28% 7d)
-- Total mcap $2.464T (-2.22% 24h) · DEX vol $8.50B 24h
-- Breadth: 6/20 green 24h · 5/20 green 7d
-- Fear & Greed: 23 (Extreme Fear) — yesterday 29 (Fear)
+- BTC $66,754 (-2.56% 24h, -10.88% 7d) · dominance 55.9% (-0.08 pp 24h)
+- ETH $1,862 (-5.28% 24h, -9.57% 7d) · ETH/BTC 0.02790
+- SOL $74.26 (-5.49% 24h, -10.92% 7d)
+- Total mcap $2.392T (-2.96% 24h) · DEX vol $9.30B 24h
+- Breadth: 9/20 green 24h (incl. 3 stables) · 8/20 green 7d
+- Fear & Greed: 11 (Extreme Fear) — yesterday 23
 
 ## What Changed Since Last Refresh
-- BTC broke $70K intraday (low $69,691): -$3,198 (-4.44%) from yesterday's close; first sub-$70K print since April 7 — triggered by US-Iran ceasefire talks collapsing, Brent crude to $93/bbl
-- F&G dropped 6 points: 29 (Fear) → 23 (Extreme Fear); regime deepening, not bottoming
-- DEX volume surged to $8.50B (+68% vs yesterday's $5.06B) — broad liquidation spike, every top DEX up triple-digit; not bullish rotation
-- XLM -12.10% today: DTCC×Stellar narrative confirmed fading on Day 6 (large-block distribution at scale)
+- F&G cratered from 23 → 11 (Extreme Fear): single-session -12 point drop, deepest in the current drawdown cycle — macro fear is accelerating, not stabilizing
+- BTC fell another -$2,089 (-3.0%) from yesterday's $68,843 close; ETH -$114 (-5.8%) — regime deepening with no intraday recovery
+- TVL dropped -2.77% 24h to $76.54B — 3rd consecutive daily decline (from $80.72B on 5-31 = cumulative -5.18% in 3 days); multi-day capital exodus confirmed
+- US-Iran peace deal: Polymarket YES% fell 14.5% → 11.5% (-3pp 24h) ahead of June 15 deadline — no resolution catalyst priced ahead of NFP
 
 ## Active Narratives
-- **Perp DEX / Hyperliquid** — phase: rising. Evidence: HYPE +0.50% today while BTC -4.18%; +19.66% 7d vs BTC -10.81%; ATH-holder for 3rd consecutive session; $16B+ mcap. Supply headwind: $684M token unlock June 6 (4 days out).
-- **AI-native L1s (LAB + NEAR)** — phase: rising. Evidence: LAB +40.63% 24h / +353.72% 7d (Day 3 continuation, CoinGecko trending); NEAR +13.20% 24h in -4% BTC market ("AI-native platform," rank 32, new trending entry) — coordinated accumulation extending. ZachXBT 95%-insider-supply flag still active on LAB.
-- **RWA tokenization (XLM)** — phase: fading. Evidence: XLM -12.10% 24h on Day 6 of DTCC×Stellar narrative; 7d +53.91% is residual carry — large-block distribution confirmed today.
-- **Privacy coins (ZEC)** — phase: fading. Evidence: ZEC +6.54% 24h but -6.92% 7d; dead-cat bounce pattern after Grayscale ZCSH ETF pop exhausted; 7d still red on single-session bounce confirms fading.
+- **Perp DEX / Hyperliquid** — phase: rising. Evidence: HYPE -1.17% 24h vs BTC -2.56%; +19.11% 7d vs BTC -10.88% 7d; ATH territory held 4th consecutive session; Grayscale HYPG staking ETF went live today on US exchanges (morning-brief confirmed). June 6 unlock $684M is 3 days out — supply headwind building, approaching rising→peak transition zone.
+- **AI-native L1s (NEAR + LIT)** — phase: rising. Evidence: NEAR +12.64% 24h (trending, CoinGecko; AI-native platform rank 32, 2nd consecutive outperformance day); LIT +35.24% 24h (Lighter DEX, 2026-05-21 pick at $1.32 now $1.78 — +35% today alone, coordinated accumulation pattern).
+- **Privacy coins (ZEC)** — phase: rising. Evidence: ZEC +8.25% 24h / +7.66% 7d, trending 2nd consecutive session; 7d flipped positive from -6.92% yesterday as price window extends — Grayscale ZCSH ETF catalyst continuing to attract positioning.
+- **RWA tokenization (XLM)** — phase: fading. Evidence: XLM -1.75% 24h Day 7 of DTCC×Stellar narrative; -12.10% yesterday; 7d +50.79% is residual carry from initial spike — distribution ongoing, breadth collapsing.
+- **AI identity (LAB)** — phase: fading. Evidence: LAB -15.95% to -20.5% across 24h data reads, Day 6 of ZachXBT 95%-insider-supply flag; first red day after 5 consecutive green sessions — exhaustion confirmed, 7d +249% carry does not change the integrity read.
 
 ## Top DeFi Protocols (TVL, 7d change)
-- Lido: $17.6B (-6.71%)
-- SSV Network: $14.6B (-7.01%)
-- Aave V3: $13.0B (-6.16%)
-- WBTC: $7.9B (-10.78%)
-- Binance Staked ETH: $7.3B (-5.36%)
+- Lido: $16.64B (-9.66%)
+- SSV Network: $13.74B (-10.23%)
+- Aave V3: $12.53B (-8.35%)
+- Morpho Blue: $6.90B (-6.82%)
+- Sky Lending: $5.93B (-1.32%)
 
-## Chain Flow (top 5 by TVL)
-*7d per-chain delta unavailable from API snapshot.*
-- Ethereum: $41.40B (dominant, ~53% of on-chain DeFi TVL at $78.7B total)
-- BSC: $5.56B (BNB -2.09% 24h, chain TVL tracking BNB)
-- Solana: $5.23B (reclaimed #3; SOL -7.28% 7d)
-- Tron: $4.74B (TRX -9.47% 7d)
-- Bitcoin: $4.54B (WBTC -10.78% 7d drag)
+## Chain Flow (top 3 by TVL, 7d)
+*7d per-chain delta unavailable from API (regression day 6).*
+- Ethereum: $40.03B (-3.31% 24h from $41.40B)
+- BSC: $5.39B (-3.06% 24h)
+- Solana: $5.08B (-2.87% 24h)
 
 ## Stablecoins
-Total: ~$282B (top 5). USDT $187.8B · USDC $76.0B · USDS $8.8B · USD1 $4.7B · DAI $4.6B · combined share of mcap ~11.5%.
+Total: ~$281B. USDT $187.5B · USDC $76.1B · USDS $8.75B · USD1 $4.68B · DAI $4.59B · combined share ~11.8% of mcap. USDf -5.73% ($86M outflow) and U United Stables -5.16% ($50M, day 3 cliff, cumulative ~$230M out in 3 days) are the live stress points.
 
 ## Trending (CoinGecko)
-- LAB — +40.63% 24h / +353.72% 7d; Day 3 AI identity continuation; CG trending (integrity flag: ZachXBT 95%-insider-supply active)
-- NEAR — +13.20% 24h; AI-native L1 narrative; rank 32, new trending entry in down market
-- HYPE — +0.50% 24h / +19.66% 7d; perp DEX ATH-holder; June 6 unlock risk $684M
-- ZEC — +6.54% 24h; dead-cat bounce vs -6.92% 7d; Grayscale ZCSH play exhausted
-- XLM — -12.10% 24h; DTCC×Stellar Day 6; distribution confirmed
+- LIT — +35.24% 24h; Lighter DEX; 2026-05-21 pick continuing at $1.78 (+35% today)
+- WLD — +23.63% 24h; Worldcoin; 2026-05-31 pick at $0.333, now $0.52 (+56% from entry)
+- NEAR — +12.64% 24h; AI-native L1; rank 32; 2nd consecutive outperformance session
+- ZEC — +8.25% 24h / +7.66% 7d; privacy coin; trending 2nd session
+- VVV — +14.51% 24h; Venice Token; rebound after -9.8% yesterday
+- LAB — -15.95% to -20.5% 24h; AI identity; Day 6 crack; ZachXBT 95%-insider-supply flag confirmed
+- HYPE — -1.17% 24h; perp DEX ATH-holder; HYPG ETF live today; June 6 unlock $684M in 3 days
+- BTC / SOL — trending alongside broader tape; no unique signal
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |
 |--------|------|---------|-----------|
-| Roland Garros ATP: Jodar vs Zverev | 44.5% | $6.3M | $125K |
-| LoL: ThunderTalk vs LGD (BO5) | 43.0% | $1.8M | $30K |
-| US-Iran permanent peace deal by Jun 15 | 14.5% | $1.7M | $394K |
+| Roland Garros ATP: Auger-Aliassime vs Cobolli | 51.5% | $2.37M | $0.93M |
+| US×Iran permanent peace deal by Jun 15 | 11.5% | $2.33M | $0.54M |
+| Knicks vs Spurs (NBA Finals Game 1) | 36.5% | $1.27M | $2.48M |
 
-*No crypto-specific markets in Polymarket top-10 by volume today. US-Iran deal at 14.5% — market pricing near-zero resolution probability, consistent with BTC risk-off trigger.*
+*No crypto-specific markets in Polymarket top-10 by 24h vol. US-Iran deal YES% fell 14.5% → 11.5% (-3pp 24h) — market giving up on near-term resolution, consistent with risk-off deepening.*
 
 ## Macro Catalysts (next 48h)
-- **US-Iran ceasefire talks stalled:** negotiations broke down over the weekend → Brent crude $93/bbl → risk-off cascade; BTC touched $69,691 intraday — first sub-$70K since April 7; no resolution catalyst visible before NFP on June 5.
-- **Job data week:** ADP Employment + ISM Services PMI (June 3); Nonfarm Payrolls + Unemployment (June 5) — strong prints reduce rate-cut expectations, extend macro headwind for risk assets.
+- **NFP week:** ADP Employment + ISM Services PMI today (June 3); Nonfarm Payrolls + Unemployment June 5 — strong prints cut rate-cut expectations; 10-session Bitcoin ETF outflow streak drained $2.97B May 15–29 (IBIT AUM at ~$67B), fresh outflow day on June 3 per institutional flow data
+- **HYPE June 6 unlock:** $684M token unlock in 3 days — approaching supply event; monitor for Hyperliquid rising→peak phase transition
+- **US-Iran talks stalled:** Brent ~$93/bbl; Polymarket YES% 11.5% — no resolution catalyst before NFP
 
 ## Implications for Downstream Skills
-- **token-pick:** avoid new broad-beta entries; HYPE and LAB/NEAR remain the only confirmed outperformers — verify Day-4 hold for LAB/NEAR before sizing; HYPE June 6 unlock supply risk caps near-term upside. Cash/stable positioning appropriate until F&G recovers above 30 or BTC reclaims $71K.
-- **narrative-tracker:** AI-native L1s (LAB+NEAR) upgrade to rising phase — set Day-4 confirmation gate. HYPE rising confirmed (3rd consecutive ATH-hold). XLM fading confirmed. ZEC dead-cat = fading. Monitor HYPE June 6 unlock for rising→peak phase transition.
+- **token-pick:** cash/stable positioning appropriate until F&G recovers above 20 or BTC reclaims $68K; LIT and WLD are continuing to pay from prior picks; NEAR Day 3 outperformance confirms rising phase — watch Day 4; ENA (today's pick, Coinbase Ventures catalyst) adds a non-correlated alpha pocket; avoid broad-beta entries
+- **narrative-tracker:** ZEC upgraded to rising (7d turned positive, trending 2nd session); HYPE rising maintained — June 6 unlock is the next phase-gate; LAB downgraded to fading (Day 6 crack confirmed); XLM fading Day 7 confirmed; NEAR+LIT AI-native L1 rising holds
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
@@ -74,6 +77,7 @@ Total: ~$282B (top 5). USDT $187.8B · USDC $76.0B · USDS $8.8B · USD1 $4.7B �
 | 2026-05-31 | WLD | $0.333 | Oku Trade DeFi aggregator live in World App with weekly swap competitions paying $WLD rewards; on-chain activity (whale txns 64, active addresses 1,309) hit 2026 highs; vmc 0.31, score 9/10 |
 | 2026-06-01 | HOME | $0.0475 | defi.app v2 precision bridging + android launch driving 500k+ active/330k+ traders; 80% protocol revenue funds weekly $HOME buybacks; trending #9 CG; vmc 0.63, score 11/10; June 10 unlock risk 882M tokens |
 | 2026-06-02 | JTO | $0.62 | Jito Q1 2026 report: 418M cumulative staked SOL, 56% validator growth, 9.7M JTO burned; JTX pro-retail terminal July 2026; APAC institutional-staking partnership via Jito × HSDT; vmc 0.479, score 9/10 |
+| 2026-06-03 | ENA | $0.1023 | Coinbase Ventures open-market ENA buy + USDe/sUSDe distribution partnership to Coinbase 100M+ users; vol/mcap 0.54, CG trending, outperforming BTC & ETH on 7d; score 10/10 |
 
 ---
 *Sources — btc/eth: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch*
