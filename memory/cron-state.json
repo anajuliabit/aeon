@@ -106,14 +106,14 @@
     "success_rate": 1
   },
   "chain:reppo-swarm": {
-    "last_dispatch": "2026-06-03T01:26:23Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-03T07:17:59Z",
+    "last_status": "dispatched",
     "last_failed": "2026-06-02T12:23:02Z",
     "last_success": "2026-06-03T01:42:50Z"
   },
   "morning-brief": {
-    "last_dispatch": "2026-06-02T07:21:43Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-03T07:17:59Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-02T07:27:46Z",
     "total_runs": 12,
     "total_successes": 12,
@@ -372,14 +372,14 @@
     "last_dispatch": "2026-05-31T17:26:34Z"
   },
   "daily-routine": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-02T07:33:15Z",
     "total_runs": 6,
     "total_successes": 6,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-02T07:21:43Z"
+    "last_dispatch": "2026-06-03T07:17:59Z"
   },
   "technical-explainer": {
     "last_status": "success",
