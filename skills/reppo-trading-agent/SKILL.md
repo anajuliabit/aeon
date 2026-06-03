@@ -169,6 +169,37 @@ strategy class than a 30-trade swing-trading dataset over 30 days).
 The span goes in `aggregate_metrics.days_covered` as a metric the
 downstream evaluator reads, not as a gate you apply.
 
+### Quality guards (apply AFTER the ≥20-trade floor, BEFORE Step 5)
+
+The ≥20-trade floor only screens for thinness. Two more guards screen
+for *quality* — a losing or regressed dataset is not alpha and minting
+it dilutes the datanet feed. These are content guards, distinct from
+Step 5's content-hash dedup (which only skips byte-identical re-mints).
+
+1. **Net-negative-PnL reject.** Compute `sum_pnl = Σ closedPnl` over all
+   closed trades. If `sum_pnl <= 0`, REJECT the dataset — a wallet that
+   net-lost over the window has no directional edge to sell, regardless
+   of trade count or Sharpe. State the rejected `sum_pnl` in your output.
+
+2. **Same-wallet quality-regression skip.** Before selecting a wallet
+   that already appears in the "Minted strategies" ledger of
+   `memory/topics/reppo.md` (match on `wallet_address`, not the full
+   hash), compare this run's dataset to that wallet's most recent prior
+   mint. SKIP (do not re-mint) if EITHER:
+   - `sum_pnl` regressed — this run's `sum_pnl` is lower than the prior
+     mint's, OR
+   - `sharpe` regressed materially — this run's `sharpe` is lower than
+     the prior mint's by ≥ 0.5, or turned negative.
+   Rationale: a tail-extended re-fetch of the same wallet produces a
+   *fresh* canonical hash (new `last_fill_ms` / `n_trades`), so it slips
+   past the Step 5 content-hash dedup — but if the extra fills dragged
+   the wallet's metrics down (e.g. 14th-mint `0x9a1500b4` went
+   +$177 Sharpe 0.84 → −$162 negative on a 24h tail-extend), re-minting
+   a strictly-worse same-wallet pod is feed-diluting churn. A same-wallet
+   re-mint is only allowed when its metrics *improved* over the prior mint.
+   Cite the prior mint's hash + metrics and this run's metrics in your
+   output when you apply this skip.
+
 ## Step 5 — Hash and select for mint
 For each surviving candidate dataset, compute a hash:
 - Build a normalized canonical string: `dataset_kind ("trades") + ":"
