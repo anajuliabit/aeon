@@ -1,0 +1,158 @@
+{
+  "root": "main",
+  "state": {},
+  "elements": {
+    "main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "status_line",
+        "separator1",
+        "mint_content",
+        "separator2",
+        "votes_content",
+        "separator3",
+        "unassigned_content"
+      ]
+    },
+    "status_line": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 2nd run · datanet 9 · 0 on-chain",
+        "variant": "lead"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "mint_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint_heading",
+        "mint_details_group"
+      ]
+    },
+    "mint_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "mint",
+        "level": "h3"
+      }
+    },
+    "mint_details_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint_main",
+        "mint_breakdown"
+      ]
+    },
+    "mint_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "mint_queued_stat",
+        "mint_status_badge"
+      ]
+    },
+    "mint_queued_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Queued",
+        "value": "0"
+      }
+    },
+    "mint_status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "margin-top-12 saturated 5th run",
+        "variant": "secondary"
+      }
+    },
+    "mint_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "5 spot, 2 perp-opens, 1 hft liquidation, 1 single-close mixed, 1 thin, 2 empty; 0 cleared ≥20-closed-perp floor",
+        "variant": "caption"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "votes_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "votes_heading",
+        "votes_details_group"
+      ]
+    },
+    "votes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "votes",
+        "level": "h3"
+      }
+    },
+    "votes_details_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes_main",
+        "votes_breakdown"
+      ]
+    },
+    "votes_main": {
+      "type": "Stat",
+      "props": {
+        "label": "Eligible at epoch 100",
+        "value": "0"
+      }
+    },
+    "votes_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "56 out-of-epoch, 2 already-voted today 498/499, 1 own-pod 492 = 14th mint cc41abf6; iss-016 prefetch 9th run at count=0",
+        "variant": "caption"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "unassigned_content": {
+      "type": "Alert",
+      "props": {
+        "title": "Unassigned Datanets",
+        "message": "15 datanets unassigned",
+        "type": "info"
+      }
+    }
+  }
+}
