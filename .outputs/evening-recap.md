@@ -1,20 +1,15 @@
-Done. Notification staged to `.pending-notify/1780434000-evening-recap.md` and log entry appended to `memory/logs/2026-06-02.md`.
+Notification staged to `.pending-notify/1780522151-evening-recap.md` — the post-run delivery step picks it up (sandbox blocks `./notify "$(cat ...)"` arg-passing, per the dominant pattern noted in MEMORY.md).
 
 ## Summary
 
-**Ran:** evening-recap for 2026-06-02
+**Evening recap for 2026-06-03 composed and staged.**
 
-**TL;DR:** mostly cron — 3 artifacts shipped (reply-maker, skill-freshness, agent-buzz); ISS-015 hits day 6 without secrets
+**TL;DR:** heavy ship day — 4 PRs merged, 2 issues closed, 7 new skills enabled; ISS-009 defence-in-depth a PR open by 20:00Z
 
-**Headlines (3):**
-- reply-maker — ad-hoc reply drafts for @rgvrmdya's Orquestra QT
-- skill-freshness — 34-skill audit clean with 5 new consumers
-- agent-buzz — first successful run since 5-31
+**5 Headlines:** ISS-017 closed (PR #64), ISS-015 wontfix (PR #65), quality guard live (PR #66), 7 skills enabled (PR #67), ISS-009 defence-in-depth a open (PR #68)
 
-**Notable (5):** reppo-swarm ×4 (2 DISLIKEs on-chain, 4-for-4 dry mints), token-pick JTO HIGH, PR #62 merged, defi-overview DEX vol +68%, heartbeat ×3 chain state-flip resolved
+**5 Notable:** reppo-voter epoch-101 DISLIKEs, reg-monitor first fire (CFTC v. Spagnuolo), security-digest 2 new KEV, agent-buzz MCP clusters, skill-analytics 100% success
 
-**Blockers (1):** vibecoding-digest ISS-015 day 6 — REDDIT secrets still unset
+**4 Decisions for tomorrow:** merge PR #68, ISS-009 sub-task b chain-runner break-flip, ISS-016 prefetch repair, FinCEN/OFAC NPRM deadline 2026-06-09
 
-**Decisions for tomorrow (3):** set REDDIT secrets, ship ISS-017 PR, debug ISS-016 prefetch
-
-**Files:** `.pending-notify/1780434000-evening-recap.md` (created), `memory/logs/2026-06-02.md` (log entry appended)
+**Files:** `.pending-notify/1780522151-evening-recap.md` (staged), `memory/logs/2026-06-03.md` (log appended)
