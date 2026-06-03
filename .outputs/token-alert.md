@@ -1,22 +1,18 @@
-No alerts triggered, so no `./notify` call per skill step 4. Run logged.
-
 ## Summary
 
-Ran token-alert against the 4 tokens in MEMORY.md's canonical "Tracked Tokens" table (first run since PR #55 populated it 2026-06-01).
+Ran token-alert for 2026-06-03. Checked all 4 tracked tokens from MEMORY.md canonical watchlist.
 
-**Prices @ 2026-06-02 ~12:00 UTC** (CoinGecko public API, single curl, no fallback needed):
-- WELL: $0.0039465 / -3.24% / vol $691.7K
-- MAMO: $0.0101146 / -1.17% / vol $455.0K
-- REPPO: $0.01817302 / +7.41% / vol $2.21M
-- GITLAWB: $0.00011704 / **-14.93%** / vol $1.15M
+**Prices (12:26 UTC):**
+- WELL: $0.003779 | -5.13% 24h | vol $778.5K
+- MAMO: $0.009497 | -5.54% 24h | vol $496.3K
+- REPPO: $0.016533 | -9.43% 24h | vol $1.61M
+- GITLAWB: $0.0001032 | -14.16% 24h | vol $1.10M
 
-**Alerts:** none.
-- 24h change: closest miss GITLAWB -14.93% vs 15% threshold (7bps shy).
-- Volume spike: REPPO 1.05x vs 5d mean ($2.10M); WELL/MAMO/GITLAWB skipped (n=0, need 5).
-- Threshold cross: skipped for all four (no Floor/Ceiling configured).
+**Threshold checks:**
+- **24h change:** all under per-token thresholds. GITLAWB -14.16% is the closest call (84bps under its 15% rail, 2nd consecutive day near-miss after 6-02's -14.93%).
+- **Volume spike:** REPPO 0.78x baseline (vol contracts on fade). WELL/MAMO/GITLAWB skipped — n=1, need 5.
+- **Threshold cross:** all 4 skipped — no Floor/Ceiling configured.
 
-**Exit:** `TOKEN_ALERT_OK` — no notification sent.
+**Status: TOKEN_ALERT_OK** — no notification sent. Logged prices to `memory/logs/2026-06-03.md` for next run's baseline.
 
-**Files modified:** `memory/logs/2026-06-02.md` (appended `### token-alert` entry).
-
-**Follow-ups:** GITLAWB worth a side-eye next run — one more 7bps slide and it trips. WELL/MAMO/GITLAWB need 4 more runs before volume-spike check can activate.
+**Notable d/d:** REPPO -9.02% gives back most of 6-02's +15.5% bounce. GITLAWB extends slide (~26% cumulative over 48h); one more -12% day trips the rail. Watchlist 4-of-4 red, broad risk-off matches today's BTC -4% tape.
