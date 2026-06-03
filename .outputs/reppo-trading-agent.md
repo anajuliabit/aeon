@@ -1,25 +1,39 @@
-Log appended. Now I emit the skill output for chain capture (assistant text).
+Skill complete. Below is the in-context emission for chain capture.
 
-reppo-trading-agent — 3rd run today on datanet 9. Gate=RUN per orchestrator. Margin-top-12 wallets re-ranked from `.hl-cache/leaderboard.json` (week window, HL_TOP_N=12, HL_MIN_VLM_USD=$100k). For each wallet I read `.hl-cache/user-fills-<addr>.json` inline with `jq` (per input contract — no memory carry-forward):
+---
 
-| Rank | Wallet | Margin | n | Coins | Closes | sum_pnl | Verdict |
-|------|--------|--------|---|-------|--------|---------|---------|
-| 1 | 0xbdfa4f44 | 17.47 | 25 | #1100 spot + xyz:DRAM perp | 1 | $0.07 | REJECT FLOOR<20 closed |
-| 2 | 0x4e14fc11 | 15.69 | 19 | ETH perp | 19 Close Long | −$215,804 | REJECT FLOOR<20 + NEG-PnL liquidation cascade (274ms span all px=2000, 0 wins) |
-| 3 | 0x36874c19 | 14.36 | 236 | @334 + PURR/USDC spot | 0 | 0 | REJECT SPOT |
-| 4 | 0x13c50dcd | 11.91 | 115 | @1/@107/@12/@14/@334 spot | 0 | 0 | REJECT SPOT |
-| 5 | 0xb798aef7 | 11.86 | 46 | ETH + SOL perp | 0 (all Open Short) | 0 | REJECT NO-CLOSES |
-| 6 | 0xd507eeef | 10.91 | 90 | PURR/USDC spot | 0 | 0 | REJECT SPOT |
-| 7 | 0xa87a233e | 10.49 | 2 | FARTCOIN perp Close Short | 2 | +$5,646 | REJECT THIN (<20) |
-| 8 | 0x8196e064 | 8.56 | 0 | — | — | — | SKIP empty cache |
-| 9 | 0xbb10bda0 | 6.54 | 24 | @107 spot | 0 | 0 | REJECT SPOT (12th-mint drift: prior mint was HYPE perp; wallet flipped to spot market class) |
-| 10 | 0xc9e531e0 | 6.22 | 155 | @107 spot | 0 | 0 | REJECT SPOT |
-| 11 | 0x82b02bd4 | 6.06 | 114 | xyz:SPCX perp | 0 (all Open Long) | 0 | REJECT NO-CLOSES |
-| 12 | 0x2312b548 | 5.81 | 489 | @334 spot | 0 | 0 | REJECT SPOT |
+# reppo-trading-agent — 2026-06-03 (4th run)
 
-Structural saturation compounds — 6 SPOT-only, 2 PERP-OPENS-only, 1 close-only HFT NEG-PnL liquidation (19<20), 1 single-close mixed (<20), 1 thin perp (2 closes), 1 empty cache. 0 wallets cleared the ≥20-closed-perp-trades floor. 0 candidate datasets built, 0 mint intents written. 6th consecutive dry run (2026-06-02 × 4 + 2026-06-03 1st/2nd/3rd) on this exact pattern — tracked in MEMORY.md "Trading-agent rubric saturation" goal.
+**Gate:** RUN per orchestrator's `reppo-plan` (datanet 9 `valid:true` + ACTIVE, mint_cap 1).
 
-HL endpoints did NOT degrade — every cache file read inline. No `WebFetch` fallback needed. No prompt-injection content encountered. Voting handled by parallel `reppo-voter` skill (not this skill).
+**Wallets read (margin top-12, HL_WINDOW=week, MIN_VLM=$100k)** — every count + span paired with its wallet was read fresh via `jq` against this run's `.hl-cache/user-fills-<addr>.json`; no carry-forward from memory:
+
+| # | Wallet | Margin | Fills | Span ms | Activity class |
+|---|--------|--------|-------|---------|----------------|
+| 1 | `0x4e14fc11…0eab` | 19.72 | 19 | 380,456,861 (~4.4d) | ETH perp Close-Long only |
+| 2 | `0x36874c19…2067` | 19.33 | 222 | 442,764,106 (~5.12d) | `@334` Buy + Spot Dust (SPOT) |
+| 3 | `0x13c50dcd…28be` | 17.01 | 115 | 305,624,177 (~3.54d) | `@334` Sell + Spot Dust (SPOT) |
+| 4 | `0xbdfa4f44…5c50` | 15.59 | 63 | 516,533,614 (~5.98d) | 57 perp (xyz:COPPER+xyz:DRAM) + 5 Buy + 1 Settlement; 39 closed |
+| 5 | `0xa87a233e…71b7` | 12.98 | 2 | 43,824 (~12s) | FARTCOIN Close Short |
+| 6 | `0xb798aef7…4fbf` | 12.29 | 46 | 2,623,445 (~43.7min) | xyz:CBRS Open Short only |
+| 7 | `0xd507eeef…c948` | 11.64 | 90 | 272,763,416 (~3.16d) | `@107` Sell (SPOT) |
+| 8 | `0x8196e064…5836` | 10.79 | 0 | n/a | empty cache |
+| 9 | `0x82b02bd4…7e39` | 9.20 | 114 | 90,617 (~90.6s) | Open Long only |
+| 10 | `0xbb10bda0…20b0` | 8.56 | 24 | 5,064 (~5s) | `@107` Sell (SPOT); ledger 12th-mint wallet but spot this slice |
+| 11 | `0xc9e531e0…6416` | 8.47 | 155 | 728 (~0.7s) | `@107` Sell (SPOT) |
+| 12 | `0xe0ffc829…7610` | 8.39 | 11 | 274 (~0.3s) | xyz:CBRS Open Short only |
+
+**Candidates → quality guards:**
+- `0xbdfa4f44` (39 closed perp, clears ≥20 floor) → **Guard #1 REJECT** sum_pnl = **−$7,906.10** (1 win / 38 losses, xyz:COPPER+xyz:DRAM).
+- `0x4e14fc11` (19 closed perp on ETH, misses floor by 1) → also Guard #1 REJECT sum_pnl = **−$215,804** (0/19 wins; max single loss −$89,010).
+- All 10 others: 5 spot-only / 3 opens-only no-close / 1 empty / 2 thin (#1 and #5).
+- Guard #2 (same-wallet regression): N/A — ledger overlap `0xbb10bda0` has spot-only activity this slice.
+
+**Mint intents written:** **0**. `.pending-reppo/` not created.
+
+**Sandbox:** cache fresh, no `PREFETCH_FAILED` markers among the top-12, no WebFetch fallback used, no prompt-injection content encountered. No Reppo CLI calls (deferred to postprocess). No vote intents written (post-PR-#61 chain split — `reppo-voter` owns voting).
+
+**Structural note (4th consecutive dry run):** margin-top-12 surface dominated by HL spot traders (`@<id>`, `<TKN>/USDC`), opens-only HFT desks (no realized PnL), and the rare perp-with-closes wallets posting net-negative realized PnL. The quality guards correctly screen out the noise; whether prefetch should pre-filter for perp-bearing fills before margin-ranking is out-of-scope here — surfacing for orchestrator/operator triage.
 
 ## Summary
 - Gate: RUN (datanet 9 valid+active per orchestrator 3rd-run plan).
@@ -37,3 +51,7 @@ _Generated by postprocess-reppo.sh (2026-06-03T19:06:27Z). dry_run_only=false_
 
 - `vote-507-dislike.json` — **success** (tx: 0x962f513db478d3f6be2fe8521467f1db21c270c259d3766f5c50af71a0c07105)
 - `vote-508-dislike.json` — **success** (tx: 0x3daa45422a2ec608d1b7ffc7aa5a979ddc622cf26e7c3dde2c13c3d45054b74d)
+- Gate RUN; 12 wallets read with fresh `jq` per input contract. 1 cleared the ≥20-closed-perp floor (`0xbdfa4f44`, 39 closed, sum_pnl −$7,906 — REJECT); next-best (`0x4e14fc11`, 19 closed ETH, sum_pnl −$215,804) fails floor + REJECT.
+- Files modified: `memory/logs/2026-06-03.md` (appended `### reppo-trading-agent (4th run)`); `.outputs/reppo-trading-agent.md` (full output).
+- `.pending-reppo/` mint intents: **0**.
+- Follow-up: same structural margin-top-12 saturation MEMORY.md flagged 2026-06-02; `scripts/postprocess-reppo.sh` will append `## Execution Results` (will report no intents).
