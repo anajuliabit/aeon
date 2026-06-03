@@ -1,0 +1,277 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 3rd run · datanet 9 · 0 on-chain"
+      },
+      "children": [
+        "separator1",
+        "trading_agent_section",
+        "separator2",
+        "voter_section",
+        "separator3",
+        "datanets_section"
+      ]
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trading_agent_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trading_title",
+        "trading_alert",
+        "trading_details",
+        "trading_action"
+      ]
+    },
+    "trading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "trading-agent: margin-top-12 fully blocked",
+        "level": "h3"
+      }
+    },
+    "trading_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Fully Blocked",
+        "message": "6th consecutive dry run on the same structural saturation",
+        "type": "warning"
+      }
+    },
+    "trading_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trading_item1",
+        "trading_item2",
+        "trading_item3",
+        "trading_item4",
+        "trading_item5",
+        "trading_item6",
+        "trading_item7"
+      ]
+    },
+    "trading_item1": {
+      "type": "Text",
+      "props": {
+        "text": "6 spot-only (#1100/@334/@107/PURR-USDC clusters)"
+      }
+    },
+    "trading_item2": {
+      "type": "Text",
+      "props": {
+        "text": "2 opens-only hft (b798aef7 / 82b02bd4)"
+      }
+    },
+    "trading_item3": {
+      "type": "Text",
+      "props": {
+        "text": "1 close-only hft liquidation cascade (4e14fc11 19 ETH Close-Long span 274ms px=$2000 sum_pnl −$215,804)"
+      }
+    },
+    "trading_item4": {
+      "type": "Text",
+      "props": {
+        "text": "1 single-close mixed"
+      }
+    },
+    "trading_item5": {
+      "type": "Text",
+      "props": {
+        "text": "1 thin perp (a87a233e 2 FARTCOIN closes)"
+      }
+    },
+    "trading_item6": {
+      "type": "Text",
+      "props": {
+        "text": "1 empty cache"
+      }
+    },
+    "trading_item7": {
+      "type": "Text",
+      "props": {
+        "text": "0 wallets cleared the ≥20-closed-perp floor"
+      }
+    },
+    "trading_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "prefetch-side perp-only filter (drop wallets where top-window vlm is dominated by spot / @N / /USDC coins) or bump HL_MIN_VLM_USD past the spot hft cluster",
+        "type": "info"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "voter_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "voter_title",
+        "voter_alert",
+        "voter_stats",
+        "voter_details",
+        "voter_action"
+      ]
+    },
+    "voter_title": {
+      "type": "Heading",
+      "props": {
+        "text": "voter",
+        "level": "h3"
+      }
+    },
+    "voter_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "No Eligible Voters",
+        "message": "eligible=0",
+        "type": "warning"
+      }
+    },
+    "voter_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_out_of_epoch",
+        "stat_already_voted",
+        "stat_own_pod"
+      ]
+    },
+    "stat_out_of_epoch": {
+      "type": "Stat",
+      "props": {
+        "label": "out-of-epoch",
+        "value": "56"
+      }
+    },
+    "stat_already_voted": {
+      "type": "Stat",
+      "props": {
+        "label": "already-voted",
+        "value": "2"
+      }
+    },
+    "stat_own_pod": {
+      "type": "Stat",
+      "props": {
+        "label": "own-pod",
+        "value": "1"
+      }
+    },
+    "voter_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "voter_detail1",
+        "voter_detail2",
+        "voter_detail3"
+      ]
+    },
+    "voter_detail1": {
+      "type": "Text",
+      "props": {
+        "text": "498/499 from yesterday's 1st run"
+      }
+    },
+    "voter_detail2": {
+      "type": "Text",
+      "props": {
+        "text": "492 = 14th-mint cc41abf6"
+      }
+    },
+    "voter_detail3": {
+      "type": "Alert",
+      "props": {
+        "title": "own_pod_ids prefetch count=0 again",
+        "message": "10th run under ISS-016",
+        "type": "warning"
+      }
+    },
+    "voter_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "none, ledger cross-ref workaround durable",
+        "type": "info"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "datanets_title",
+        "datanets_content"
+      ]
+    },
+    "datanets_title": {
+      "type": "Heading",
+      "props": {
+        "text": "datanets",
+        "level": "h3"
+      }
+    },
+    "datanets_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "datanets_unassigned",
+        "datanets_detail"
+      ]
+    },
+    "datanets_unassigned": {
+      "type": "Stat",
+      "props": {
+        "label": "unassigned",
+        "value": "15"
+      }
+    },
+    "datanets_detail": {
+      "type": "Text",
+      "props": {
+        "text": "id 18 ArAIstotle surfacing 3rd day"
+      }
+    }
+  }
+}
