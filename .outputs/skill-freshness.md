@@ -1,19 +1,20 @@
+All three outputs written. Here's the summary:
+
 ## Summary
 
-**Skill-freshness run complete — 2026-06-02.**
+**Status**: `FRESHNESS_OK` — no notification sent.
 
-**Verdict: ✅ FRESHNESS_OK → status: FRESHNESS_NO_CHANGE**
+**What was audited**: 34 enabled skills across `aeon.yml`, checking 3 discovered implicit file dependencies:
 
-Key numbers:
-- **34 enabled skills** audited (up from 29; +deal-flow, reg-monitor, security-digest, unlock-monitor, vuln-scanner from PR #54)
-- **3 dependencies tracked**, 0 flagged
-  - skill-security-scan → `articles/workflow-security-audit-2026-04-11.md` (weekly, 192h threshold, ~3m old ✅)
-  - skill-security-scan → `memory/state/security-scan.json` (state, 720h threshold, ~3m old ✅)
-  - vuln-scanner → `.outputs/github-trending.md` — **new** this run (outputs class, 4h threshold, ~3m old ✅)
-- **5 self-refs filtered** (reg-monitor-seen.md, unlock-monitor-seen.json + 3 carried from yesterday)
-- Fingerprint unchanged (`da39a3ee…` — SHA1 of empty flagged set), last run 23h 38m ago → notification suppressed
+| Consumer | Dependency | Age | Verdict |
+|---|---|---|---|
+| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | ~1m | ✅ OK |
+| skill-security-scan | `memory/state/security-scan.json` | ~1m | ✅ OK |
+| vuln-scanner | `.outputs/github-trending.md` | ~1m | ✅ OK |
 
-**Files written:**
-- `articles/skill-freshness-2026-06-02.md`
-- `memory/topics/skill-freshness-state.json` (consumer_count 29→34, dependency_count 2→3)
-- `memory/logs/2026-06-02.md` (appended)
+All files present on disk with mtime from today's git checkout (~09:02 UTC), well within their per-class thresholds (192h / 720h / 4h respectively). Fingerprint identical to prior run (SHA1 of empty = zero flagged rows) — no new staleness detected.
+
+**Files written**:
+- `articles/skill-freshness-2026-06-03.md` — today's report
+- `memory/topics/skill-freshness-state.json` — `last_run_at` updated to `2026-06-03T09:03:54Z`
+- `memory/logs/2026-06-03.md` — log block appended
