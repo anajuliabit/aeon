@@ -65,6 +65,7 @@ state: what was built, recurring blockers, and health.
 | #60 | 2026-06-01 | bump HL_TOP_N 5→12 to clear mint-ledger saturation — merged 13:50Z |
 | #61 | 2026-06-01 | decouple voting from minting via new reppo-voter skill — merged 15:20Z |
 | #62 | 2026-06-02 | self-improve: narrow bare `mamo` → `$MAMO` cashtag in fetch-tweets var — merged ~07:30Z |
+| #64 | 2026-06-03 | chain-runner.yml `${{ inputs.chain }}` → `env:` indirection at lines 41 + 416 (closed ISS-017) — merged as commit 2a9ce1c |
 
 ## Recurring blockers
 - **14 unassigned reppo datanets.** Orchestrator surfaces them every run (ids
@@ -81,18 +82,15 @@ state: what was built, recurring blockers, and health.
 - **ISS-011 nonce-too-low REVERT.** Vote-391 1st run REVERTed (CLI provided
   nonce below current chain nonce after sibling votes landed same batch).
   2nd-run retry landed clean. Single occurrence so far; watch for recurrence.
-- **ISS-015 Reddit blocked.** vibecoding-digest hits PREFETCH_FAILED on
-  runner IP (Reddit 403 on datacenter ASN) AND WebFetch refuses
-  `*.reddit.com` at the Claude Code tool layer. 4 consecutive days
-  2026-05-28 → 05-31. PR #56 merged 2026-06-01 13:12Z routes through
-  `oauth.reddit.com` — first effect visible on today's 17:30 vibecoding run;
-  requires `REDDIT_CLIENT_ID/SECRET` to be provisioned for the fix to load.
-- **ISS-017 chain-runner workflow injection.** Filed 2026-06-01 by
-  skill-security-scan. `${{ inputs.chain }}` interpolated directly into
-  `run:` shell blocks at `chain-runner.yml:41` + `:416`. Same 2026-04-11
-  incident pattern as the messages.yml fix (env: indirection). Exposure
-  low (only workflow_dispatch / write-auth gated), but anti-pattern of
-  record.
+- **Trading-agent rubric saturation.** 6 consecutive dry runs through
+  2026-06-03 3rd-run (4 on 6-02 + 3 today): margin-top-12 collapses to
+  the same shape every cycle — 5-6 spot-only, 2 perp-opens-only, 1
+  close-only HFT NEG-PnL liquidation (19<20 floor), 1 single-close
+  mixed (<20), 1 thin FARTCOIN (2 closes), 1-2 empty caches. 0 clear
+  the ≥20-closed-perp floor. 14th-mint cc41abf6 source wallet
+  0x9a1500b4 flipped NEG-PnL on 6-02 and has stayed there; rubric
+  admitted a thin wallet that immediately regressed. Quality guard
+  beyond drift-skip is the next loop.
 - **Sandbox `./notify "$(cat ...)"` arg-passing.** Now the dominant pattern —
   most content skills stage to `.pending-notify/` and let the post-run delivery
   step pick it up (today: morning-brief, github-trending, defi-overview,
@@ -214,57 +212,64 @@ state: what was built, recurring blockers, and health.
 - ISS-010 open in INDEX (medium, config) — fix shipped in PR #32; close queued.
 - ISS-011 open (medium, unknown) — vote nonce-too-low REVERT after sibling
   votes land same batch. 1 occurrence; retry landed; not recurring.
-- **ISS-015 open (high, sandbox-limitation)** — vibecoding-digest Reddit
-  blocked 4 consecutive days. PR #56 (oauth.reddit.com route) open
-  2026-05-31 15:09Z — needs operator secrets.
+- **ISS-015 RESOLVED 2026-06-03** — wontfix: vibecoding-digest +
+  reddit-digest disabled. PR #56 oauth.reddit.com route merged
+  2026-06-01 but Reddit API access ungettable for this operator;
+  operator chose to disable rather than wait. Frees 1 cron slot,
+  removes 6+ days of daily noise.
 - **ISS-016 open (medium, prompt-bug, NEW 2026-05-31)** — vote LIKE on
   agent's own pod reverts CANNOT_VOTE_FOR_OWN_POD. Fix: gate
   trading-agent vote_filter on publisher==agent (drop regardless of
   direction). own_pod_ids prefetch returning count=0 since filed
-  (5 consecutive runs); voter self-recognizes via ledger.
-- **ISS-017 open (high, prompt-bug, NEW 2026-06-01)** — chain-runner.yml
-  interpolates `${{ inputs.chain }}` directly into `run:` shell at
-  lines 41 + 416. Same anti-pattern class as 2026-04-11 messages.yml
-  incident. Fix: env: indirection (lines 587-591 of messages.yml are
-  the canonical shape). Real exposure low (write-auth gated).
+  (**10 consecutive runs** through today's 3rd-run voter); voter
+  self-recognizes via ledger cross-ref — durable workaround.
+- **ISS-017 RESOLVED 2026-06-03** — chain-runner.yml `${{ inputs.chain }}`
+  shell interpolation at lines 41 + 416 fixed via env: indirection
+  (PR #64, commit 2a9ce1c). Day-3 carry → ship-in-morning ship cadence.
+  Anti-pattern of record now closed for the chain-runner family.
 
-## PR sweep (2026-06-01 → 2026-06-02)
+## PR sweep (2026-06-01 → 2026-06-03)
 - 2026-06-01 13:12-15:20Z: 8 PRs merged in a single window. #54 enabled 5
-  new tier-1 skills. #55 canonical token watchlist. #56 closes ISS-015
-  upstream. #57 reppo-cli≥0.6.0 native Phase 2 path. #58 skill-graph
-  weekly digest. #59 dashboard /swarm demo. #60 HL_TOP_N 5→12 (unblocked
-  the fresh wallet that landed the 14th mint). #61 split reppo-voter
-  out of trading-agent.
+  new tier-1 skills. #55 canonical token watchlist. #56 oauth.reddit.com
+  route (later moot — ISS-015 wontfix). #57 reppo-cli≥0.6.0 native Phase
+  2 path. #58 skill-graph weekly digest. #59 dashboard /swarm demo. #60
+  HL_TOP_N 5→12 (unblocked the fresh wallet that landed the 14th mint).
+  #61 split reppo-voter out of trading-agent.
 - 2026-06-01 14:40Z 14th mint (wallet 0x9a1500b4, 74 Close-Long perp,
   hash cc41abf6, tx 0xcbe53613) — same source wallet as 13th-mint
   dce17be3 but fresh `(wallet, last_t, n_close)` triple proves
   drift-skip dedup admits genuine new activity. Thin/marginal: Sharpe
-  0.84, MDD 91% vs 13th-mint's 9.98 / 171%.
+  0.84, MDD 91% vs 13th-mint's 9.98 / 171%. Wallet flipped NEG-PnL
+  the next day and has stayed there — quality-guard motivator.
 - 2026-06-02 ~07:30Z: PR #62 merged (self-improve: `mamo` → `$MAMO`
-  cashtag in fetch-tweets var). Open PR count drops to 0.
+  cashtag in fetch-tweets var).
 - 2026-06-02 1st chain run (07:00) added 2 DISLIKE votes on epoch-100
   HotBot v4 pods 498/499 — first reppo-voter-owned on-chain votes
-  post-PR #61 chain split. Ledger now 14 mints / 29 votes.
+  post-PR #61 chain split. Ledger 14 mints / 29 votes.
+- 2026-06-03: PR #64 (chain-runner env: indirection) merged as commit
+  2a9ce1c — closes ISS-017 (Day 3 carry → ship). ISS-015 resolved
+  wontfix same day (vibecoding-digest + reddit-digest disabled).
+  Open PR count back to 0. 4 high-sev opens → 3 (ISS-005, 009, 015 →
+  005, 009 carry; 017 closed).
 
-## Today's anomalies (2026-06-02)
-- **Same-wallet quality regression on 0x9a1500b4** (14th-mint source).
-  Cache slid forward 24h: sum_pnl yesterday +$177.11 → today's 1st run
-  −$116.59 → today's 2nd run −$215.8k slice (different oid) → today's
-  3rd run −$161.81. 13 new fills added net −$338.92 including a −$378
-  worst trade. Rubric admitted a thin wallet at 14th-mint quality
-  (Sharpe 0.84 / MDD 91%) that immediately regressed to NEG-PnL — a
-  quality guard beyond drift-skip is the next loop. 3-for-3 dry
-  trading-agent runs today on the same blocker.
+## Recent anomalies (through 2026-06-03)
+- **Trading-agent rubric saturation** — 6 consecutive dry runs through
+  6-03 3rd run. Same structural shape every cycle. Quality guard beyond
+  drift-skip is the next loop (see Recurring blockers).
 - **chain:reppo-swarm state-flip**: 2026-06-02 12:23Z `cron-state.json`
   flipped `last_status=failed` while `gh run view` confirmed workflow
   exit `conclusion=success`. ~5s gap between in-chain state-writer and
-  final workflow exit; all 4 component skills logged success.
-  Investigating under ISS-010 scope (chain-key bookkeeping); not a
-  real chain failure but `docs/status.md` momentarily flipped DEGRADED
-  on the literal rule.
-- **ISS-016 own_pod_ids prefetch** count=0 for 8 consecutive runs;
-  voter self-recognizes via ledger cross-ref. Prefetch repair still
-  pending.
+  final workflow exit; cleared on 18:12Z chain cycle. 3 successful chain
+  cycles on 6-03 (01:42Z, 07:31Z, 12:41Z). Investigating under ISS-010
+  scope. Not a real chain failure but flips `docs/status.md` momentarily
+  to DEGRADED on the literal rule.
+- **ISS-016 own_pod_ids prefetch** count=0 for **10 consecutive runs**
+  through today's 3rd-run voter; voter self-recognizes via ledger
+  cross-ref (durable workaround). Prefetch repair still pending.
+- **vibecoding-digest cron-state mismatch**: skill emits
+  VIBECODING_DIGEST_ERROR notification but workflow exits 0, so
+  cron-state records `last_status=success`. Workflow-exit-vs-skill-
+  outcome mismatch. Now moot — skill disabled with ISS-015 resolution.
 
 ## reply-maker ad-hoc (new pattern)
 - 2026-06-02 mid-day: operator forwarded an X URL via Telegram

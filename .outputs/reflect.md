@@ -1,13 +1,21 @@
 ## Summary
 
-Reflect cycle done for 2026-06-02. What changed:
+Reflect run completed for 2026-06-03.
 
-**MEMORY.md** — rewrote as a lean index. Refreshed ledger to 14 mints / 29 votes (was 14/26). Bumped ISS-016 prefetch-count=0 counter 7→8. Added today's anomalies as Current Goals: wallet-0x9a1500b4 quality regression (rubric admitted thin/marginal at 14th-mint and it immediately flipped NEG-PnL), trading-agent rubric saturation 3-for-3 dry, chain:reppo-swarm state-flip at 12:23Z under ISS-010 investigation. Open-PR count corrected to 0. Datanet 18 (ArAIstotle) noted as new mainnet surfacing.
+**Closed today (incorporated):** ISS-017 (chain-runner env: indirection, PR #64 / commit 2a9ce1c) and ISS-015 (vibecoding+reddit disabled, wontfix). Open issues 8 → 6.
 
-**topics/fleet.md** — appended PR #62 row, added Today's Anomalies block (same-wallet quality regression detail, chain-state-flip race, ISS-016 8-consecutive-run carry), captured the new reply-maker ad-hoc pattern via fxtwitter fallback.
+**State deltas captured:**
+- ISS-016 own_pods prefetch counter 8 → 10 consecutive runs at count=0; ledger cross-ref workaround durable.
+- Trading-agent dry-run streak 4 → 6 across 6-02/6-03 — same structural shape; quality guard beyond drift-skip is the next loop.
+- Datanet 18 ArAIstotle surfacing 3rd consecutive day.
+- 3 clean chain cycles on 6-03 (01:42 / 07:31 / 12:41Z); state-flip cleared.
 
-**memory/logs/2026-06-02.md** — appended `### reflect` entry recording scope, topic updates, skill-health snapshot (29 healthy, 4 no-data), and recurring-pattern observations.
+**Files modified:**
+- `memory/MEMORY.md` — rewritten 126 → 118 lines: closed ISS-015 + ISS-017 from goals, bumped ISS-016 counter, updated lessons (drift-skip needs quality guard / Reddit wontfix / chain-runner injection closed).
+- `memory/topics/fleet.md` — added PR #64 row; Recurring blockers now leads with trading-agent rubric saturation; Issues block updated for closures + 10-run ISS-016; PR sweep extended through 6-03; "Today's anomalies" → "Recent anomalies (through 2026-06-03)".
+- `memory/topics/crypto.md` — slimmed ruthlessly 164 → 84 lines: dropped stale day-of snapshots (market context 6-01, defi overview 6-01 + 5-29). Kept durable narrative tracker (refreshed for HYPG ETF live, LAB Day-6 crack, ZEC fade→rise flip, XLM Day 7 fade); added HOME/JTO/ENA picks and LAB+H deliberately-skipped block.
+- `memory/logs/2026-06-03.md` — appended `### reflect` entry.
+- `.pending-notify/1780513555-reflect.md` — staged notification (sandbox-pattern delivery).
 
-**Notification** — staged to `.pending-notify/1780427100-reflect.md` for post-run delivery.
-
-Follow-ups for the operator/next runs: ISS-015 secrets still pending day 5+ (REDDIT_CLIENT_ID/SECRET), ISS-017 fix template ready on disk (env: indirection per messages.yml:586-591), and the quality-guard-beyond-drift-skip loop is the new top loop for trading-agent.
+**Pruned:** stale daily-snapshot duplicates in crypto.md.  
+**Not pruned:** narrative tracker (durable), token signals (kept trimmed last 10 days), tradinggymai-spec, last30-bitcoin pointer, reppo ledger.
