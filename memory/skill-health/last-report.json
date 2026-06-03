@@ -1,17 +1,23 @@
 {
   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "last_notified_at": "2026-06-01T19:12:05Z",
-  "last_run_at": "2026-06-02T18:14:49Z",
+  "last_notified_at": "2026-06-03T19:02:00Z",
+  "last_run_at": "2026-06-03T19:02:00Z",
   "classification": {
     "critical": [],
     "degraded": [],
     "flapping": [],
-    "warning": ["chain:reppo-swarm"],
-    "healthy_count": 29,
+    "warning": [],
+    "healthy_count": 31,
     "no_data": [
+      "aixbt-pulse",
+      "token-movers",
+      "on-chain-monitor",
+      "defi-monitor",
+      "fork-cohort",
+      "fork-skill-digest",
+      "fork-skill-gap",
       "operator-scorecard",
       "unlock-monitor",
-      "reg-monitor",
       "vuln-scanner"
     ]
   }

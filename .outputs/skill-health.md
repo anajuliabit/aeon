@@ -1,19 +1,20 @@
-Skill executed. No notification sent.
+Skill executed. Report staged for delivery.
 
 ## Summary
 
-**Verdict:** HEALTH: OK — gate suppressed notify (hash unchanged + 23h02m since last_notified_at, under 24h).
+Ran `skills/skill-health/SKILL.md` for the full fleet (var empty).
 
-**Classification (33 enabled skills + 1 chain):**
-- CRITICAL / DEGRADED / FLAPPING: none
-- WARNING: `chain:reppo-swarm` (last_status=failed 12:23Z — known phantom-key state-writer artifact under ISS-010; gh confirms workflow conclusion=success per 15:08 heartbeat)
-- NO DATA: operator-scorecard, unlock-monitor, reg-monitor, vuln-scanner (all weekly, within 2x intervals)
-- HEALTHY: 29
+**Classification**: 0 CRITICAL · 0 DEGRADED · 0 FLAPPING · 0 WARNING · 31 HEALTHY · 10 NO DATA. Hash signature unchanged from prev report (empty critical/degraded/flapping set), but >47h since `last_notified_at=2026-06-01T19:12Z` → daily-cadence gate fires.
 
-**Issue reconciliation:** skipped — 0 of 8 open issues have `detected_by: skill-health` (all filed by reppo-digest / vibecoding-digest / skill-security-scan / manual). Per spec, this skill only resolves what it filed.
+**NO DATA delta**: +4 fresh today (aixbt-pulse 9 UTC missed; token-movers / on-chain-monitor / defi-monitor first-fire missed after being enabled today per PR pattern) · -1 reg-monitor (first-fired today 14 UTC, cleared) · 6 weekly skills awaiting their slot.
 
-**Files updated:**
-- `memory/skill-health/last-report.json` — last_run_at=2026-06-02T18:14:49Z, hash + last_notified_at preserved, warning entry recorded.
-- `memory/logs/2026-06-02.md` — appended `### skill-health` block with SKILL_HEALTH_NOOP + SKILL_HEALTH_PARTIAL (skill-runs unavailable in sandbox).
+**Issue reconciliation**: skipped — none of the 6 open issues (ISS-005/007/009/010/011/016) are `detected_by: skill-health`. They track failure modes (e.g. ISS-016 prefetch count=0) that don't map to cron-state success_rate, so auto-resolve would close incorrectly. ISS-017 closed earlier today via PR #64 outside skill-health scope.
 
-**Follow-up:** none — fleet stable. Chain:reppo-swarm warning is cosmetic (ISS-010 scope, not new signal). Next run will continue 24h heartbeat cadence; if hash matches again at >24h, an OK confirmation notify will fire.
+**Files written**:
+- `memory/skill-health/last-report.json` — updated hash, last_notified_at, classification
+- `.pending-notify/1780506120-skill-health.md` — report body for post-run delivery
+- `memory/logs/2026-06-03.md` — appended `### skill-health` entry with classification, hash, no_data delta, reconciliation note
+
+**Sandbox note**: `./scripts/skill-runs` gated by sandbox approval — logged SKILL_HEALTH_PARTIAL, proceeded with cron-state only per spec.
+
+**Follow-up**: 4 fresh DISPATCH-SKILL flags worth operator attention — aixbt-pulse / token-movers / on-chain-monitor / defi-monitor scheduled today and didn't write cron-state, suggesting a scheduler gap on the newly-enabled mid-day skills.
