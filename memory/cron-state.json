@@ -421,9 +421,9 @@
   },
   "reppo-voter": {
     "last_status": "success",
-    "last_success": "2026-06-03T07:24:18Z",
-    "total_runs": 8,
-    "total_successes": 8,
+    "last_success": "2026-06-03T12:31:38Z",
+    "total_runs": 9,
+    "total_successes": 9,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
