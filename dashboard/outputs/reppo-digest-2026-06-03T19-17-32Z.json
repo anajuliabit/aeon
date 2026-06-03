@@ -1,0 +1,122 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header_meta",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "onchain_section",
+        "sep3",
+        "info_section"
+      ]
+    },
+    "header_meta": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 4th run · datanet 9 · 2 on-chain",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_heading",
+        "queued_votes"
+      ]
+    },
+    "queued_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "queued",
+        "level": "h3"
+      }
+    },
+    "queued_votes": {
+      "type": "Text",
+      "props": {
+        "text": "votes · dislike 507, 508 (epoch 101 hotbot v4 raw exports)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "onchain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "onchain_heading",
+        "vote_507",
+        "vote_508"
+      ]
+    },
+    "onchain_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "on-chain",
+        "level": "h3"
+      }
+    },
+    "vote_507": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vote 507 dislike",
+        "href": "https://etherscan.io/tx/0x962f513db478d3f6be2fe8521467f1db21c270c259d3766f5c50af71a0c07105",
+        "source": "0x962f513db478d3f6be2fe8521467f1db21c270c259d3766f5c50af71a0c07105"
+      }
+    },
+    "vote_508": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vote 508 dislike",
+        "href": "https://etherscan.io/tx/0x3daa45422a2ec608d1b7ffc7aa5a979ddc622cf26e7c3dde2c13c3d45054b74d",
+        "source": "0x3daa45422a2ec608d1b7ffc7aa5a979ddc622cf26e7c3dde2c13c3d45054b74d"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "info_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mints_info",
+        "datanets_info"
+      ]
+    },
+    "mints_info": {
+      "type": "Text",
+      "props": {
+        "text": "mints 0 — margin-top-12 saturated 4th run today (spot + opens-only hft + sub-floor closes)."
+      }
+    },
+    "datanets_info": {
+      "type": "Text",
+      "props": {
+        "text": "15 datanets unassigned."
+      }
+    }
+  }
+}

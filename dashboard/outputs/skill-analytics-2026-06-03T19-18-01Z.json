@@ -1,0 +1,283 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Analytics — 2026-06-03"
+      },
+      "children": [
+        "alert_main",
+        "window_stats",
+        "sep1",
+        "critical_heading",
+        "critical_section",
+        "sep2",
+        "top_performers",
+        "full_report_link"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "11 scheduled skill(s) didn't run this window — token-movers, on-chain-monitor, defi-monitor, narrative-tracker, and 7 more"
+      }
+    },
+    "window_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_runs",
+        "stat_skills",
+        "stat_success",
+        "stat_anomalies"
+      ]
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs (last 7d)",
+        "value": "299"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "41"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "100%"
+      }
+    },
+    "stat_anomalies": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies",
+        "value": "11"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "critical_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Critical Issues",
+        "level": "h2"
+      }
+    },
+    "critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "group_silent_zero",
+        "group_silent_rarely",
+        "group_newly_enabled"
+      ]
+    },
+    "group_silent_zero": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_silent_zero",
+        "alert_token_movers",
+        "alert_on_chain",
+        "alert_defi"
+      ]
+    },
+    "label_silent_zero": {
+      "type": "Text",
+      "props": {
+        "text": "🔴 SILENT — enabled cron, zero runs:",
+        "variant": "lead"
+      }
+    },
+    "alert_token_movers": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "token-movers",
+        "message": "daily 10:12 UTC, never ran (not in cron-state)"
+      }
+    },
+    "alert_on_chain": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "on-chain-monitor",
+        "message": "daily 20:12 UTC, never ran (not in cron-state)"
+      }
+    },
+    "alert_defi": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "defi-monitor",
+        "message": "daily 40:12 UTC, never ran (not in cron-state)"
+      }
+    },
+    "group_silent_rarely": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_silent_rarely",
+        "alert_narrative",
+        "alert_aixbt",
+        "alert_unlock"
+      ]
+    },
+    "label_silent_rarely": {
+      "type": "Text",
+      "props": {
+        "text": "🔴 SILENT — rarely or never fired:",
+        "variant": "lead"
+      }
+    },
+    "alert_narrative": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "narrative-tracker",
+        "message": "daily 13:30 UTC, last ran 2026-05-21 (13 days ago)"
+      }
+    },
+    "alert_aixbt": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "aixbt-pulse",
+        "message": "2×/day 09:00/21:00 UTC, never ran"
+      }
+    },
+    "alert_unlock": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "unlock-monitor / operator-scorecard",
+        "message": "Mon weekly, 2026-06-01 opportunity missed"
+      }
+    },
+    "group_newly_enabled": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_newly_enabled",
+        "alert_vuln",
+        "alert_fork"
+      ]
+    },
+    "label_newly_enabled": {
+      "type": "Text",
+      "props": {
+        "text": "🔴 Note — newly-enabled, first window not yet elapsed:",
+        "variant": "lead"
+      }
+    },
+    "alert_vuln": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "vuln-scanner",
+        "message": "Sat — post-PR #54 enable, no missed window yet"
+      }
+    },
+    "alert_fork": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "fork-cohort / fork-skill-digest / fork-skill-gap",
+        "message": "Sun — post-PR #54 enable, no missed window yet"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top_performers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_heading",
+        "top_stats_grid"
+      ]
+    },
+    "top_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Performers by Runs",
+        "level": "h2"
+      }
+    },
+    "top_stats_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_reppo_orch",
+        "stat_reppo_digest",
+        "stat_reppo_trading"
+      ]
+    },
+    "stat_reppo_orch": {
+      "type": "Stat",
+      "props": {
+        "label": "reppo-orchestrator",
+        "value": "31"
+      }
+    },
+    "stat_reppo_digest": {
+      "type": "Stat",
+      "props": {
+        "label": "reppo-digest",
+        "value": "30"
+      }
+    },
+    "stat_reppo_trading": {
+      "type": "Stat",
+      "props": {
+        "label": "reppo-trading-agent",
+        "value": "30"
+      }
+    },
+    "full_report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "articles/skill-analytics-2026-06-03.md",
+        "source": "Aeon"
+      }
+    }
+  }
+}
