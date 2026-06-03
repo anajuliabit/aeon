@@ -1,35 +1,50 @@
 {
-  "run_at": "2026-06-02T18:00:00Z",
+  "run_at": "2026-06-03T19:00:19Z",
   "goals": {
     "close-iss-009-defence-in-depth": {
       "status": "ON_TRACK",
-      "activity_count_14d": 12,
-      "last_activity_date": "2026-06-02"
+      "activity_count_14d": 9,
+      "last_activity_date": "2026-06-03"
     },
     "close-iss-017-chain-runner-workflow-injection": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 2,
-      "last_activity_date": "2026-06-02"
+      "status": "DONE",
+      "activity_count_14d": 3,
+      "last_activity_date": "2026-06-03"
     },
-    "resolve-iss-016": {
+    "repair-iss-016-own-pod-ids-prefetch": {
       "status": "ON_TRACK",
       "activity_count_14d": 4,
-      "last_activity_date": "2026-06-02"
+      "last_activity_date": "2026-06-03"
+    },
+    "resolve-iss-015-secrets": {
+      "status": "DONE",
+      "activity_count_14d": 7,
+      "last_activity_date": "2026-06-03"
+    },
+    "trading-agent-rubric-saturation": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 14,
+      "last_activity_date": "2026-06-03"
     },
     "assign-14-unassigned-reppo-datanets": {
       "status": "ON_TRACK",
       "activity_count_14d": 14,
-      "last_activity_date": "2026-06-02"
+      "last_activity_date": "2026-06-03"
     },
-    "index-bookkeeping": {
+    "index-bookkeeping-flips-queued": {
       "status": "ON_TRACK",
       "activity_count_14d": 13,
-      "last_activity_date": "2026-06-02"
+      "last_activity_date": "2026-06-03"
     },
     "cleanup-chain-runner-scratch": {
       "status": "ON_TRACK",
+      "activity_count_14d": 4,
+      "last_activity_date": "2026-06-03"
+    },
+    "investigate-chain-state-flip-anomaly": {
+      "status": "ON_TRACK",
       "activity_count_14d": 3,
-      "last_activity_date": "2026-06-02"
+      "last_activity_date": "2026-06-03"
     }
   }
 }

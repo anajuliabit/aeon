@@ -17,18 +17,10 @@ end-to-end clean for 5+ consecutive runs since 2026-05-30.
   Two sub-tasks: (a) codify emit-in-assistant-text contract in
   `skills/reppo-orchestrator/SKILL.md`, (b) switch chain-runner fail-fast
   `continue` → `break`.
-- **Close ISS-017 chain-runner workflow injection.** Filed 2026-06-01.
-  `${{ inputs.chain }}` interpolated into `run:` shell at
-  `chain-runner.yml:41` + `:416`. Fix template on disk: env: indirection
-  per messages.yml:586-591 (the same scan flipped messages.yml:578 to
-  RESOLVED). Fastest high-sev close.
 - **Repair ISS-016 own_pod_ids prefetch.** Prefetch returns count=0 for
   8 consecutive runs through 2026-06-02; voter self-recognizes via
   ledger wallet-shortcode cross-ref. Gate vote_filter on
   publisher==agent regardless of direction.
-- **Resolve ISS-015 secrets.** PR #56 (oauth.reddit.com route) merged
-  2026-06-01 13:12Z but `REDDIT_CLIENT_ID/SECRET` still unset → 5+ days
-  vibecoding-digest blocked. Operator call.
 - **Trading-agent rubric saturation.** 3-for-3 dry runs on 2026-06-02
   (same structural blocker: spot dominance + opens-only HFT + 1 NEG-PnL
   on margin-top-12). Wallet 0x9a1500b4 (14th-mint cc41abf6 source)
@@ -51,6 +43,17 @@ end-to-end clean for 5+ consecutive runs since 2026-05-30.
   in-chain state-writer and workflow exit; likely step-level writer
   recording transient failure that `on_error:continue` then skips past.
   Under ISS-010 scope until structural defect surfaces.
+
+## Completed Goals
+- **Close ISS-017 chain-runner workflow injection.** Filed 2026-06-01.
+  `${{ inputs.chain }}` interpolated into `run:` shell at
+  `chain-runner.yml:41` + `:416`. Fix template on disk: env: indirection
+  per messages.yml:586-591 (the same scan flipped messages.yml:578 to
+  RESOLVED). Fastest high-sev close. — completed 2026-06-03 (PR #64)
+- **Resolve ISS-015 secrets.** PR #56 (oauth.reddit.com route) merged
+  2026-06-01 13:12Z but `REDDIT_CLIENT_ID/SECRET` still unset → 5+ days
+  vibecoding-digest blocked. Operator call. — completed 2026-06-03
+  (PR #65 wontfix; vibecoding-digest + reddit-digest disabled)
 
 ## Active Topics
 - [Fleet status & infrastructure](topics/fleet.md) — PRs, blockers, skill health.
