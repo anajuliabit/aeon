@@ -1,16 +1,12 @@
 ## Summary
 
-**Skill:** `fleet-control` (Health Check mode — `var` empty)
+Ran `fleet-control` in Health Check mode (var empty → default).
 
-**Pre-flight**
-- `gh auth status` → ok (account `anajuliabit`, scopes `repo`+`workflow`)
-- `gh api rate_limit` → `core.remaining=4991` (above 50 floor)
-- Registry `memory/instances.json` → `{"instances": []}`
+- **Pre-flight:** gh auth OK (anajuliabit/GH_TOKEN), rate_remaining=4938 (≫ 50 threshold).
+- **Registry:** `memory/instances.json` contains `{"instances": []}` — no managed children to monitor.
+- **Action taken:** Per skill spec, logged `FLEET_EMPTY: no managed instances` to `memory/logs/2026-06-03.md` and stopped silently. **No notification sent** (skill explicitly says don't notify on empty registry — keeps the channel quiet until the operator spawns at least one child instance).
+- **State file:** Untouched. `last_full_summary_date` stays empty because the skill only updates it when a notification fires.
 
-**Exit:** `FLEET_EMPTY: no managed instances` — silent stop per skill spec. No notification sent, no child repos to poll, no state mutation needed (state file already exists and is consistent with empty registry).
+Files modified: `memory/logs/2026-06-03.md` (appended health-check entry).
 
-**Files modified**
-- `memory/logs/2026-06-03.md` — appended `### fleet-control` entry recording the empty-registry stop.
-
-**Follow-ups**
-- None for this run. The registry stays empty until the operator registers a child instance; the skill will continue logging `FLEET_EMPTY` and staying silent on its 9 UTC / 15 UTC cron until then.
+No follow-up needed unless the operator wants child instances registered — at which point `memory/instances.json` should grow entries with `name`, `repo`, `purpose`, `parent`, `created`, and `skills_enabled` fields and the cron'd 09/15 UTC runs will start classifying them.
