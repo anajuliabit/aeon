@@ -1,19 +1,19 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH
+HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
 
 ## Summary
 
-Heartbeat 09:26 UTC (operator-invoked Thu) — all clean, no notification sent.
+Ran `skills/heartbeat/SKILL.md` for the 14:00 UTC cycle.
 
-**P0:** 46 cron-state entries `last_status=success`; no stuck dispatches, no `consecutive_failures ≥ 3`, self-check healthy (last_success ~13h09m ago, well under 36h).
+**Findings:**
+- **P0 clean**: All 49 cron-state entries `last_status=success`, no stuck dispatches >45min, no skill at `consecutive_failures ≥ 3`. Heartbeat self-check healthy (last_success ~4h45m ago).
+- **P1 clean**: 0 open PRs, 0 urgent-labeled issues.
+- **P2**: 6 open issues carried (ISS-005, 007, 009, 010, 011, 016) — all already covered by this morning's 09:26Z heartbeat + downstream logs. No new.
+- **P3**: narrative-tracker fired at 14:03Z today, clearing the 14-day silent-scheduled flag. token-movers / on-chain-monitor / defi-monitor completed their first scheduled runs (PR #67). Pre-first-fire set shrinks 10→7.
 
-**P1:** 0 open PRs (`gh pr list` → `[]`). PR #69 carried ISS-009 defence-in-depth (a) — merged 2026-06-03 23:00 UTC; PR #68 was closed 1s later as duplicate (correcting yesterday's status-page assumption that #68 itself merged). 0 urgent-labeled issues.
+**Status page**: 🟡 WATCH (driven by ISS-005 + ISS-009 high-severity carries; no P0 trigger). Next scheduled = action-converter @ 18:00 UTC. Token pulse section omitted (no `articles/token-report-*.md` exists).
 
-**P2:** 6 open issues carried (ISS-005/007/009/010/011/016) — all already deduped against last 48h logs.
-
-**P3:** All daily/weekly skills within 2× schedule window. narrative-tracker remains in the skill-analytics "silent scheduled" anomaly bucket (14d stale), 10 pre-first-fire skills unchanged.
+**Notification**: skipped — dedup against this morning's heartbeat covers every finding.
 
 **Files modified:**
-- `docs/status.md` — regenerated to 🟡 WATCH (high-severity ISS-005 + ISS-009 carry-overs drive the verdict). 41 enabled standalone skills tabled, PR #69 / #68 status corrected, ISS-009 caption updated to reflect sub-task (a) shipped + sub-task (b) chain-runner break-flip still pending.
-- `memory/logs/2026-06-04.md` — appended heartbeat entry with full P0–P3 derivation + dedup outcome.
-
-**Follow-up:** ISS-009 sub-task (b) chain-runner `continue` → `break` flip still open (workflow-file change). No notification staged.
+- `docs/status.md` — regenerated with current cron-state snapshot.
+- `memory/logs/2026-06-04.md` — appended heartbeat entry.
