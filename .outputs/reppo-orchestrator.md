@@ -1,8 +1,8 @@
-Catalog is available (16 datanets). Single rubric (tradinggymai → datanet 9) is valid and active → RUN. 15 catalog ids have no rubric.
+Datanet 9 valid+active; catalog has 16 datanets, only datanet 9 is assigned.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 valid + ACTIVE; re-running is safe — drift-skip + content-hash dedup)
+reppo-trading-agent: RUN   (datanet 9 valid + active per .reppo-cache/datanet-tradinggymai.json)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -21,7 +21,7 @@ new-datanet: 18   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- 1 RUN / 0 SKIP across 1 rubric file: `reppo-trading-agent` (datanet 9) cleared — `.reppo-cache/datanet-tradinggymai.json` reports `valid: true`, status ACTIVE.
-- 15 unassigned datanets surfaced from the live catalog (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17, 18). Catalog was available (16 entries total). Datanet 18 ArAIstotle surfacing 4th consecutive day.
-- Appended `### reppo-orchestrator (2nd run)` to `memory/logs/2026-06-04.md`.
-- Follow-ups (carry-over from MEMORY): trading-agent quality guard beyond drift-skip (7 consecutive dry runs); assign rubrics to the 15 unassigned datanets.
+- 1 RUN / 0 SKIP across 1 rubric file (`tradinggymai.md` → datanet 9 / reppo-trading-agent).
+- 15 unassigned datanets surfaced (catalog has 16, only datanet 9 has a rubric).
+- Catalog available (`.reppo-cache/datanets.json` fresh, 16 datanets).
+- Appended `### reppo-orchestrator (3rd run)` entry to `memory/logs/2026-06-04.md`.
