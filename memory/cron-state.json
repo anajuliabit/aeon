@@ -112,8 +112,8 @@
     "last_success": "2026-06-04T06:31:29Z"
   },
   "morning-brief": {
-    "last_dispatch": "2026-06-03T07:17:59Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-04T07:54:53Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-03T07:22:30Z",
     "total_runs": 13,
     "total_successes": 13,
@@ -372,14 +372,14 @@
     "last_dispatch": "2026-05-31T17:26:34Z"
   },
   "daily-routine": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-03T07:26:56Z",
     "total_runs": 7,
     "total_successes": 7,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-03T07:17:59Z"
+    "last_dispatch": "2026-06-04T07:54:53Z"
   },
   "technical-explainer": {
     "last_status": "success",
