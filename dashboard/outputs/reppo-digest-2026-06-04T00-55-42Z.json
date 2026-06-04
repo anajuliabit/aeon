@@ -1,0 +1,121 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reppo-swarm",
+        "sep1",
+        "trading-agent",
+        "sep2",
+        "voter",
+        "sep3",
+        "datanets"
+      ]
+    },
+    "reppo-swarm": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 1st run · datanet 9 · 0 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trading-agent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trading-header",
+        "trading-saturated",
+        "trading-action"
+      ]
+    },
+    "trading-header": {
+      "type": "Text",
+      "props": {
+        "text": "trading-agent · 7th straight dry run",
+        "variant": "lead"
+      }
+    },
+    "trading-saturated": {
+      "type": "Text",
+      "props": {
+        "text": "margin-top-12 saturated: 5 spot-only, 2 opens-only, 1 neg-pnl perp, 2 sub-floor, 2 empty caches",
+        "variant": "body"
+      }
+    },
+    "trading-action": {
+      "type": "Text",
+      "props": {
+        "text": "action: perp-only prefetch filter or bump HL_MIN_VLM_USD past spot hft cluster",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "voter": {
+      "type": "Text",
+      "props": {
+        "text": "voter · eligible=0. pods 507/508 already voted prior trigger",
+        "variant": "lead"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "datanets-line",
+        "araistotle-line"
+      ]
+    },
+    "datanets-line": {
+      "type": "Text",
+      "props": {
+        "text": "15 datanets unassigned (1, 2, 4–8, 10, 11, 13–18)",
+        "variant": "body"
+      }
+    },
+    "araistotle-line": {
+      "type": "Text",
+      "props": {
+        "text": "18 ArAIstotle 3rd day",
+        "variant": "body"
+      }
+    }
+  }
+}

@@ -1,11 +1,9 @@
-reppo-swarm · 4th run · datanet 9 · 2 on-chain
+reppo-swarm · 1st run · datanet 9 · 0 on-chain
 
-queued
-  votes · dislike 507, 508 (epoch 101 hotbot v4 raw exports)
+trading-agent · 7th straight dry run.
+  margin-top-12 saturated: 5 spot-only, 2 opens-only, 1 neg-pnl perp, 2 sub-floor, 2 empty caches.
+  action: perp-only prefetch filter or bump HL_MIN_VLM_USD past spot hft cluster.
 
-on-chain
-  vote 507 dislike — tx 0x962f513db478d3f6be2fe8521467f1db21c270c259d3766f5c50af71a0c07105
-  vote 508 dislike — tx 0x3daa45422a2ec608d1b7ffc7aa5a979ddc622cf26e7c3dde2c13c3d45054b74d
+voter · eligible=0. pods 507/508 already voted prior trigger.
 
-mints 0 — margin-top-12 saturated 4th run today (spot + opens-only hft + sub-floor closes).
-15 datanets unassigned.
+15 datanets unassigned (1, 2, 4–8, 10, 11, 13–18). 18 ArAIstotle 3rd day.
