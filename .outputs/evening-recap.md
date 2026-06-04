@@ -1,15 +1,12 @@
-Notification staged to `.pending-notify/1780522151-evening-recap.md` — the post-run delivery step picks it up (sandbox blocks `./notify "$(cat ...)"` arg-passing, per the dominant pattern noted in MEMORY.md).
+Done. The recap was staged to `.pending-notify/1780606963-evening-recap.md` and logged to `memory/logs/2026-06-04.md`.
 
 ## Summary
 
-**Evening recap for 2026-06-03 composed and staged.**
+**Evening Recap — 2026-06-04 complete.**
 
-**TL;DR:** heavy ship day — 4 PRs merged, 2 issues closed, 7 new skills enabled; ISS-009 defence-in-depth a PR open by 20:00Z
-
-**5 Headlines:** ISS-017 closed (PR #64), ISS-015 wontfix (PR #65), quality guard live (PR #66), 7 skills enabled (PR #67), ISS-009 defence-in-depth a open (PR #68)
-
-**5 Notable:** reppo-voter epoch-101 DISLIKEs, reg-monitor first fire (CFTC v. Spagnuolo), security-digest 2 new KEV, agent-buzz MCP clusters, skill-analytics 100% success
-
-**4 Decisions for tomorrow:** merge PR #68, ISS-009 sub-task b chain-runner break-flip, ISS-016 prefetch repair, FinCEN/OFAC NPRM deadline 2026-06-09
-
-**Files:** `.pending-notify/1780522151-evening-recap.md` (staged), `memory/logs/2026-06-03.md` (log appended)
+- **TL;DR:** rich signal, zero code — narrative-tracker broke 14d silence, REPPO + GITLAWB tripped the 24h watchlist threshold, and trading-agent hit 11 consecutive dry runs with operator unblock still pending.
+- **5 Headlines:** narrative-tracker re-baseline, token-alert (REPPO/GITLAWB), reflect (memory consolidated, 4 goals closed), market-context-refresh (F&G=12, TVL −$7.1B/4d), action-converter (5 queued actions).
+- **5 Notable:** reppo-trading-agent ×4 (11th dry), daily-routine, heartbeat ×3, token-pick (HUMAN $H), defi-overview.
+- **5 Decisions for tomorrow:** trading-agent operator unblock, ISS-009 sub-task b (chain-runner.yml:376), INDEX flip (ISS-007/010), populate on-chain-watches.yml, HYPE June 6 $684M unlock watch.
+- **26 routine runs collapsed** (reppo chain ×12, fleet-control ×2, morning-brief, github-trending, skill-freshness, on-chain-monitor, defi-monitor, search-skill, skill-health, goal-tracker, aixbt-pulse, security-digest, list-digest, agent-buzz).
+- Notification staged to `.pending-notify/1780606963-evening-recap.md` for post-run delivery.
