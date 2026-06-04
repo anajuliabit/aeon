@@ -1,0 +1,144 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidated",
+        "description": "2026-06-04"
+      },
+      "children": [
+        "consolidation_stats",
+        "separator_1",
+        "closed_goals_section",
+        "separator_2",
+        "carried_goals_section",
+        "separator_3",
+        "focus_section"
+      ]
+    },
+    "consolidation_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "memory_stat",
+        "changes_text"
+      ]
+    },
+    "memory_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "MEMORY.md trimmed",
+        "value": "90 lines",
+        "delta": "−52 lines",
+        "trend": "down"
+      }
+    },
+    "changes_text": {
+      "type": "Text",
+      "props": {
+        "text": "Lessons + issue detail moved to topics/fleet.md"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "closed_goals_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "closed_heading",
+        "closed_goals_table"
+      ]
+    },
+    "closed_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4 Goals Closed",
+        "level": "h3"
+      }
+    },
+    "closed_goals_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Goal",
+          "Status"
+        ],
+        "rows": [
+          [
+            "iss-017",
+            "PR #64"
+          ],
+          [
+            "iss-015",
+            "wontfix PR #65"
+          ],
+          [
+            "iss-009 sub-task a",
+            "PR #69"
+          ],
+          [
+            "trading-agent step-4.2",
+            "regression guard validated"
+          ]
+        ]
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "carried_goals_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "carried_heading",
+        "carried_stat"
+      ]
+    },
+    "carried_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Goals Carried Forward",
+        "level": "h3"
+      }
+    },
+    "carried_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "In progress",
+        "value": "8"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "focus_section": {
+      "type": "Alert",
+      "props": {
+        "title": "Current Hot Loop",
+        "message": "Operator-level trading-agent knob",
+        "type": "info"
+      }
+    }
+  }
+}
