@@ -1,0 +1,235 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 2nd run · datanet 9 · 0 on-chain"
+      },
+      "children": [
+        "trading_section",
+        "sep1",
+        "voter_section",
+        "sep2",
+        "datanets_section"
+      ]
+    },
+    "trading_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trading_heading",
+        "trading_status",
+        "disposition_stack"
+      ]
+    },
+    "trading_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "trading-agent",
+        "level": "h3"
+      }
+    },
+    "trading_status": {
+      "type": "Badge",
+      "props": {
+        "text": "8th straight dry",
+        "variant": "destructive"
+      }
+    },
+    "disposition_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "disp_item_1",
+        "disp_item_2",
+        "disp_item_3",
+        "disp_item_4",
+        "disp_item_5",
+        "disp_item_6",
+        "disp_item_7",
+        "quality_guard_alert"
+      ]
+    },
+    "disp_item_1": {
+      "type": "Stat",
+      "props": {
+        "label": "spot-only skip",
+        "value": "5"
+      }
+    },
+    "disp_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "1 spot-mix neg-perp reject (rank 4, 0xbdfa4f44) — perp sum_pnl −$12,990 masked by single +$40,991 #1100 settlement"
+      }
+    },
+    "disp_item_3": {
+      "type": "Stat",
+      "props": {
+        "label": "opens-only skip",
+        "value": "2"
+      }
+    },
+    "disp_item_4": {
+      "type": "Stat",
+      "props": {
+        "label": "sub-floor skip",
+        "value": "1"
+      }
+    },
+    "disp_item_5": {
+      "type": "Stat",
+      "props": {
+        "label": "floor+neg reject",
+        "value": "1"
+      }
+    },
+    "disp_item_6": {
+      "type": "Stat",
+      "props": {
+        "label": "empty cache",
+        "value": "1"
+      }
+    },
+    "disp_item_7": {
+      "type": "Text",
+      "props": {
+        "text": "1 neg+regression reject (rank 12, 0x9a1500b4) — same wallet as 13th-mint dce17be3 +$1,140 / sharpe 9.98 and 14th-mint cc41abf6 +$177 / sharpe 0.84, regressed to −$2,901"
+      }
+    },
+    "quality_guard_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Quality Guard",
+        "message": "In-skill step-4.2 quality guard fired correctly — quality guard beyond drift-skip goal achieved per MEMORY",
+        "type": "success"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "voter_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "voter_heading",
+        "voter_content"
+      ]
+    },
+    "voter_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "voter",
+        "level": "h3"
+      }
+    },
+    "voter_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "voter_eligible",
+        "voter_epoch",
+        "voter_pod_prefetch",
+        "voter_cross_ref"
+      ]
+    },
+    "voter_eligible": {
+      "type": "Stat",
+      "props": {
+        "label": "eligible",
+        "value": "0"
+      }
+    },
+    "voter_epoch": {
+      "type": "Text",
+      "props": {
+        "text": "epoch 101 still only has pods 507+508, both voted in a prior trigger"
+      }
+    },
+    "voter_pod_prefetch": {
+      "type": "Text",
+      "props": {
+        "text": "own-pod prefetch=0 (iss-016 carries 12 runs) — ledger wallet-shortcode cross-ref covered"
+      }
+    },
+    "voter_cross_ref": {
+      "type": "Badge",
+      "props": {
+        "text": "Ledger cross-ref covered",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "datanets_heading",
+        "datanets_content"
+      ]
+    },
+    "datanets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Datanets & Configuration",
+        "level": "h3"
+      }
+    },
+    "datanets_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "unassigned_stat",
+        "aristotle_status",
+        "operator_knob"
+      ]
+    },
+    "unassigned_stat": {
+      "type": "Text",
+      "props": {
+        "text": "15 datanets unassigned: 1, 2, 4–8, 10, 11, 13–18"
+      }
+    },
+    "aristotle_status": {
+      "type": "Text",
+      "props": {
+        "text": "18 ArAIstotle surfacing 4th day"
+      }
+    },
+    "operator_knob": {
+      "type": "Text",
+      "props": {
+        "text": "operator knob unchanged: prefetch perp-only filter or bump HL_MIN_VLM_USD past the spot HFT cluster"
+      }
+    }
+  }
+}
