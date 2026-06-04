@@ -1,23 +1,24 @@
 ## Summary
 
-**Gate:** RUN (datanet 9 ACTIVE + valid, rubric `datanet_id="9"`).
+**Gate:** RUN (datanet 9 valid + ACTIVE per `reppo-orchestrator.md`).
 
-**Rubric:** `configs/datanets/tradinggymai.md` — Hyperliquid perp datasets w/ labeled trades, signal, outcome, aggregate metrics, market context, timeframe, verifiable fills.
+**Rubric:** `configs/datanets/tradinggymai.md` — `datanet_id: 9`, Hyperliquid perp trade-lifecycle datasets with labeled fields + aggregate metrics + verifiable fills.
 
-**Filter accounting (current_epoch = 101):**
-- Total pods seen: **61**
-- Out-of-epoch (`validityEpoch != 101`): **59** — every HL perps pod that matches our ledger (392, 395, 399, 402, 406, 412, 413, 462, 463, 478, 492) sits at epoch 98–100 and is excluded here on epoch grounds before the own-pod check would fire
-- Already interacted (in `voted_pod_ids`): **2** — pods **507** ("HotBot v4 — Trades & Learning Jun 01-Jun 03") and **508** ("HotBot v4 — Signal Intelligence Jun 01-Jun 03"), the only two epoch-101 pods on the datanet
-- Own-pod filter triggered: **0** at this stage (none of the eligible-by-epoch pods are ours)
-- **Eligible: 0**
+**Cache state:**
+- `current_epoch`: **101**
+- `pods_seen`: **61**
+- `voted_pod_ids`: 21 entries (incl. 507, 508)
+- `own-pods-tradinggymai.json`: count=0 (ISS-016 known degradation — fell back to ledger cross-ref)
 
-**Votes queued: 0 LIKE / 0 DISLIKE.** No `.pending-reppo/vote-*.json` written this run — the votable universe is empty because the only pods this epoch were both already voted on a prior trigger today. Not an error; the prefetch + ISS-005 dedup are working as intended.
+**Filter pass:**
+- **Out-of-epoch** (validityEpoch ≠ 101): **59** pods (every pod with epoch ∈ {70…100}).
+- **In-epoch, already voted**: **2** — pod **507** (HotBot v4 Trades & Learning Jun 01-Jun 03) and pod **508** (HotBot v4 Signal Intelligence Jun 01-Jun 03). These are the only two pods at epoch 101 and both are already in `voted_pod_ids`.
+- **Own-pod (ledger cross-ref)**: 0 in-epoch matches (our 11 in-cache own pods — 392, 395, 399, 402, 406, 412, 413, 462, 463, 478, 492 — are all out-of-epoch already, so filter (1) catches them first).
 
-**Prompt-injection discards:** none observed.
+**Eligible: 0.** No prompt-injection attempts observed.
 
-**All-DISLIKE guard:** N/A — eligible set is empty (the guard only fires on a non-empty eligible set that comes out 100% DISLIKE).
+**Votes queued:** 0 LIKE / 0 DISLIKE. No `.pending-reppo/vote-*.json` files written. All-DISLIKE guard N/A (eligible set is empty, not non-empty-all-NO).
 
-**Files written:**
-- `memory/logs/2026-06-04.md` — appended `### reppo-voter` entry
+This is the **2nd run** of reppo-voter today; identical cache state to the 1st run (epoch 101 still has no fresh, un-voted pods). Logged under `### reppo-voter (2nd run)` in `memory/logs/2026-06-04.md`. `scripts/postprocess-reppo.sh` has nothing to execute this trigger; no Execution Results section to expect.
 
-No on-chain action will follow (postprocess will see an empty intent set).
+**Follow-ups:** None from this skill — eligible-empty is the expected steady state until new epoch-101 pods arrive or epoch ticks to 102. The standing operator items (ISS-016 own-pod prefetch repair, trading-agent quality guard) are unaffected.
