@@ -1,12 +1,12 @@
 ## Summary
 
-Ran `fleet-control` in Health Check mode (var empty → default).
+Ran `skills/fleet-control/SKILL.md` in default Health Check Mode (var empty).
 
-- **Pre-flight:** gh auth OK (anajuliabit/GH_TOKEN), rate_remaining=4938 (≫ 50 threshold).
-- **Registry:** `memory/instances.json` contains `{"instances": []}` — no managed children to monitor.
-- **Action taken:** Per skill spec, logged `FLEET_EMPTY: no managed instances` to `memory/logs/2026-06-03.md` and stopped silently. **No notification sent** (skill explicitly says don't notify on empty registry — keeps the channel quiet until the operator spawns at least one child instance).
-- **State file:** Untouched. `last_full_summary_date` stays empty because the skill only updates it when a notification fires.
+**Outcome:** `FLEET_EMPTY` — silent stop, no notification sent (per skill spec).
 
-Files modified: `memory/logs/2026-06-03.md` (appended health-check entry).
+- **Pre-flight:** gh auth ok (account `anajuliabit`), rate_remaining=4990.
+- **Registry:** `memory/instances.json` contains `{"instances": []}` — no managed instances to check.
+- **State:** `memory/state/fleet-control-state.json` left as-is (no per-instance data to update).
+- **Log:** appended `### fleet-control` block to `memory/logs/2026-06-04.md`.
 
-No follow-up needed unless the operator wants child instances registered — at which point `memory/instances.json` should grow entries with `name`, `repo`, `purpose`, `parent`, `created`, and `skills_enabled` fields and the cron'd 09/15 UTC runs will start classifying them.
+No follow-up. Aeon is operating without a child fleet; the skill will continue to no-op until instances are registered.
