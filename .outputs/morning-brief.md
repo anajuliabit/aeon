@@ -1,20 +1,20 @@
-Brief staged and logged. Quick recap:
+## Summary
 
-**Focus today (ana voice, ranked by leverage × urgency):**
-1. ship iss-017 env-indirection PR — day 3 carry, fix template on disk at `messages.yml:586-591`
-2. operator call on iss-015 reddit secrets — day 6 blocked, vibecoding hit first ERROR yesterday 18:13Z
-3. trading-agent quality guard beyond drift-skip — 5-for-5 dry runs, 14th-mint wallet `0x9a1500b4` flipped neg-pnl
+Ran morning-brief for 2026-06-04 (Thursday). Soul populated → ana voice applied.
 
-**Since yesterday (5 bullets):** chain:reppo-swarm 00 UTC clean (0/0), PR #62 merged + backlog empty, vibecoding-digest first ERROR, chain-state writer 12:23Z phantom flip cleared on 18:12Z cycle, reflect re-leaned MEMORY.md.
+**Focus today** (3):
+1. trading-agent operator knob — 8th dry run; in-skill step-4.2 quality guard now fires (today's 2nd-run rejected rank 12 0x9a1500b4 NEG-PnL −$2,901, validating yesterday's focus 3 ask) → only the operator-level knob (perp-only prefetch or `HL_MIN_VLM_USD` bump) remains
+2. iss-009 defence-in-depth — codify emit-in-assistant-text contract + chain-runner `continue` → `break` (6 clean days)
+3. background: INDEX bookkeeping flip iss-007/010/013/014 (4 resolved-not-closed)
 
-**Watch:** omitted — 2 WebSearch headlines surfaced (Grayscale HYPG ETF live today + Anthropic Opus upgrade) but neither changes focus 1/2/3 actions.
+**Since yesterday**: iss-017 closed (PR #64 merged), iss-015 closed wontfix (PR #65), chain:reppo-swarm 06 UTC clean, 0 open PRs.
 
-**Notify:** staged to `.pending-notify/1780471800-morning-brief.md` — direct `./notify "$(cat ...)"` blocked by sandbox per known pattern, post-run delivery handles it.
+**Watch**: omitted — HL 50.8% perp dominance + Opus 4.8 dynamic workflows neither change focus.
 
-**Log:** appended `### morning-brief` section to `memory/logs/2026-06-03.md`.
+**Files**:
+- staged `.pending-notify/1780559855-morning-brief.md` (sandbox blocks `./notify` arg-passing; post-run delivery step picks it up)
+- appended `### morning-brief` entry to `memory/logs/2026-06-04.md`
 
 Sources:
-- [Hyperliquid beating Ethereum on volume — CoinDesk](https://www.coindesk.com/markets/2026/06/02/hyperliquid-is-beating-ethereum-in-trading-volume-on-some-days-as-big-money-rotates-out-of-bitcoin-says-falconx)
-- [Grayscale Hyperliquid Staking ETF (HYPG) — CoinMarketCap](https://coinmarketcap.com/cmc-ai/hyperliquid/latest-updates/)
-- [Anthropic news](https://www.anthropic.com/news)
-- [Microsoft unveils new AI models — CNBC](https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html)
+- [Hyperliquid 50.8% perp volume dominance](https://www.cryptopolitan.com/hyperliquid-perp-volume-dominance/)
+- [Anthropic Opus 4.8 + dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8)
