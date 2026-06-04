@@ -486,6 +486,7 @@ jobs:
           DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           MESSAGES='[]'
 
@@ -501,6 +502,30 @@ jobs:
               TEXT=$(echo "$RESPONSE" | jq -r ".result[$i].message.text // .result[$i].message.caption // empty")
               CHAT=$(echo "$RESPONSE" | jq -r ".result[$i].message.chat.id // empty")
               UPDATE_ID=$(echo "$RESPONSE" | jq -r ".result[$i].update_id // empty")
+
+              # Voice messages — transcribe via OpenAI Whisper if OPENAI_API_KEY is set,
+              # then treat the transcript as if it were a text message. Silently skipped
+              # if no key is configured (the message remains acked by the offset bump).
+              VOICE_FILE_ID=$(echo "$RESPONSE" | jq -r ".result[$i].message.voice.file_id // .result[$i].message.audio.file_id // empty")
+              if [ -z "$TEXT" ] && [ -n "$VOICE_FILE_ID" ] && [ -n "${OPENAI_API_KEY:-}" ] && [ "$CHAT" = "$TELEGRAM_CHAT_ID" ]; then
+                FILE_PATH=$(curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getFile?file_id=${VOICE_FILE_ID}" | jq -r '.result.file_path // empty')
+                if [ -n "$FILE_PATH" ]; then
+                  TMP_AUDIO=$(mktemp --suffix=.ogg)
+                  if curl -sf -o "$TMP_AUDIO" "https://api.telegram.org/file/bot${TELEGRAM_BOT_TOKEN}/${FILE_PATH}"; then
+                    WHISPER=$(curl -sf -X POST https://api.openai.com/v1/audio/transcriptions \
+                      -H "Authorization: Bearer ${OPENAI_API_KEY}" \
+                      -F "file=@${TMP_AUDIO}" \
+                      -F "model=whisper-1" \
+                      -F "response_format=json" || echo '{}')
+                    TRANSCRIPT=$(echo "$WHISPER" | jq -r '.text // empty')
+                    if [ -n "$TRANSCRIPT" ]; then
+                      TEXT="$TRANSCRIPT"
+                      echo "Telegram voice → transcript: $TEXT"
+                    fi
+                  fi
+                  rm -f "$TMP_AUDIO"
+                fi
+              fi
 
               if [ -n "$TEXT" ] && [ "$CHAT" = "$TELEGRAM_CHAT_ID" ]; then
                 MESSAGES=$(echo "$MESSAGES" | jq --arg src "telegram" --arg txt "$TEXT" '. + [{source: $src, text: $txt}]')
