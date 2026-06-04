@@ -1,0 +1,240 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-04 21:00Z"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-heading",
+        "crypto-stack",
+        "sep-1",
+        "tradfi-heading",
+        "tradfi-stack",
+        "sep-2",
+        "new-heading",
+        "new-stack",
+        "sep-3",
+        "bridge-heading",
+        "bridge-stack"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h3"
+      }
+    },
+    "crypto-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-stat",
+        "etf-outflow-stat",
+        "saylor-text",
+        "hyperliquid-stat",
+        "hype-conviction-badge",
+        "pumpfun-text"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC from late-May highs",
+        "value": "$63K",
+        "delta": "−18%",
+        "trend": "down"
+      }
+    },
+    "etf-outflow-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETF outflows",
+        "value": "$3.45B",
+        "trend": "down"
+      }
+    },
+    "saylor-text": {
+      "type": "Text",
+      "props": {
+        "text": "Saylor partial sell debate still running"
+      }
+    },
+    "hyperliquid-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Hyperliquid OI ATH",
+        "value": "$3.1B",
+        "trend": "up"
+      }
+    },
+    "hype-conviction-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HYPE top conviction long"
+      }
+    },
+    "pumpfun-text": {
+      "type": "Text",
+      "props": {
+        "text": "PumpFun Go bounty marketplace live"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h3"
+      }
+    },
+    "tradfi-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sp500-stat",
+        "geopolitical-text",
+        "jobs-alert"
+      ]
+    },
+    "sp500-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "S&P 500 (snaps 9-session win streak)",
+        "value": "−0.7%",
+        "trend": "down"
+      }
+    },
+    "geopolitical-text": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran clashes → oil rally, Treasury yield spike, dollar strength"
+      }
+    },
+    "jobs-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "May jobs report tomorrow — trigger event",
+        "message": "Hot print → yield spike → crypto drawdown accelerates faster than equities",
+        "type": "warning"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h3"
+      }
+    },
+    "new-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-1",
+        "new-2",
+        "new-3",
+        "new-4"
+      ]
+    },
+    "new-1": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid OI $3.1B ATH + PumpFun Go marketplace (replaces Hayes dump story from 09:00 pull)"
+      }
+    },
+    "new-2": {
+      "type": "Text",
+      "props": {
+        "text": "ETH pERC20 privacy standard + Uniswap crosschain shipped"
+      }
+    },
+    "new-3": {
+      "type": "Text",
+      "props": {
+        "text": "Solana $2B tokenized equities on Raydium + Jupiter prediction market"
+      }
+    },
+    "new-4": {
+      "type": "Text",
+      "props": {
+        "text": "S&P 9-session streak snap"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h3"
+      }
+    },
+    "bridge-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bridge-1",
+        "bridge-2",
+        "bridge-3"
+      ]
+    },
+    "bridge-1": {
+      "type": "Text",
+      "props": {
+        "text": "Equities snap in one session. Crypto took 2 weeks and $3.45B in ETF exits."
+      }
+    },
+    "bridge-2": {
+      "type": "Text",
+      "props": {
+        "text": "When jobs print hot tomorrow, crypto leg moves faster — that's the transmission channel."
+      }
+    },
+    "bridge-3": {
+      "type": "Text",
+      "props": {
+        "text": "Solana trading $2B tokenized equities on-chain while TradFi sells off is the contradiction worth watching."
+      }
+    }
+  }
+}

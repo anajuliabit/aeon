@@ -1,35 +1,37 @@
-# AIXBT Grounding (as of 2026-06-04 09:00 UTC)
+# AIXBT Grounding (as of 2026-06-04 21:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-04T09:00:24.086Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-04T21:00:20.012Z
 
-Note: This pull returned sections: crypto, tradfi. Macro and geopolitics sections absent again — iterate dynamically if they appear in future pulls.
+Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again — iterate dynamically if they appear in future pulls.
 
 ## Crypto
-- BTC plunged to ~$61.5K amid $1.4B in ETF outflows since June 1, with Strategy's first BTC sale since 2022 fueling Saylor unwind fears and extreme fear (index at 12).
-- Arthur Hayes dumped all $HYPE and $NEAR positions days after publicly betting $100K on HYPE outperformance, triggering an 11% HYPE drawdown and credibility questions.
-- $HYPE remains a polarizing narrative leader—record 6.63% of global CEX perps volume in May, new ETF filings, and price parity with $SOL—even as SOL and ETH hit multi-month lows.
-- Capital rotates toward AI IPOs (SpaceX, Anthropic) and equities at ATHs while crypto bleeds; on-chain AI tokens ($THREE, $TAO, $VVV) and privacy plays ($ZEC, $XMR) draw niche flows.
+- BTC dropped ~18% from late-May highs to ~$63K, with Saylor's partial sell sparking fierce debate; capital rotating into AI equities as BTC ETFs saw $3.45B in outflows.
+- Hyperliquid OI hit a $3.1B ATH and HYPE remains a top conviction long among traders, while PumpFun's new bounty marketplace ("PumpFun Go") ignited memecoin speculation.
+- ETH value-accrual debate intensified as Bankless founder declared "no strong Ethereum without trillion-dollar ETH"; Uniswap shipped crosschain swaps and a new pERC20 privacy standard emerged.
+- Solana ecosystem momentum continued with $2B tokenized equities volume on Raydium, Jupiter announcing a native prediction market, and spot volume share gains despite broader drawdowns.
 
 ## TradFi
-- Renewed U.S.-Iran clashes push oil higher and elevate risk premia, transmitting caution into equities as traders rotate toward defensives and monitor energy cost spillovers.
-- Broadcom's post-earnings pullback despite beats flags AI valuation fragility, prompting selective profit-taking and potential rotation from mega-cap tech into broader or energy names.
-- year yields holding near 4.47% balance Fed pause views with global tightening odds, anchoring carry trades but capping aggressive duration extension amid volatility.
-- Asian risk controls tighten on geopolitics and tariff signals, driving selective flows into energy while pressuring high-beta growth and uneven equity breadth globally.
+- U.S.-Iran clashes spark oil rally and equity selloff, transmitting geopolitical risk into higher Treasury yields and dollar strength as safe-haven demand surges.
+- S&P 500 snaps its nine-session winning streak with a 0.7% decline, pressuring crowded long positions in AI-driven tech amid rising geopolitical vol.
+- Energy-driven inflation signals and yield increases anchor bets on unchanged Fed policy into the June FOMC, shifting positioning toward shorter duration and defensives.
+- Upcoming May jobs report tomorrow emerges as pivotal catalyst, with hotter-than-expected prints likely to amplify cross-asset volatility in rates, FX, and equities.
 
-## What's New (vs last pull)
-- (Crypto) Strategy's first BTC sale since 2022 named; BTC at $61.5K with extreme fear index at 12; $1.4B ETF outflows since June 1 quantified
-- (Crypto) Arthur Hayes dumped all $HYPE + $NEAR after $100K public bet on HYPE outperformance — entirely new story
-- (TradFi) Broadcom post-earnings pullback flags AI equity valuation fragility
-- (TradFi) Asian risk controls tightening on geopolitics + tariff signals
+## What's New (vs last pull 09:00 UTC)
+- (Crypto) Hyperliquid OI $3.1B ATH + PumpFun Go bounty marketplace — entirely new story, replaces Hayes dump narrative
+- (Crypto) ETH value-accrual debate: Bankless declaration + Uniswap crosschain swaps + pERC20 privacy standard — new story
+- (Crypto) Solana $2B tokenized equities on Raydium + Jupiter native prediction market — new detail
+- (Crypto) BTC ETF outflows now $3.45B (vs $1.4B since June 1 in morning pull) — numbers substantially upgraded
+- (TradFi) S&P 500 snaps 9-session winning streak, −0.7% — new
+- (TradFi) May jobs report tomorrow as pivotal cross-asset catalyst — new
 
 ## Persisting Stories
-- HYPE narrative leadership: record CEX perps dominance (6.63%), ETF filings, price parity with SOL (prior: flipped SOL, $4M/day revenue)
-- Alt-BTC correlation break + AI/privacy capital rotation: ZEC, XMR, TAO, THREE, VVV drawing niche flows (prior: HYPE, ZEC, NEAR, WLD)
-- US-Iran oil risk transmitting to equity defensives rotation (prior: Hormuz/crude; current: renewed clashes + Asian controls)
-- 10Y yields / Fed pause tension: yields at 4.47%, balancing pause vs global tightening odds (prior: yields climbing on oil spike)
+- BTC Saylor sell + ETF outflows: $3.45B cumulative, debate ongoing (prior: $1.4B since June 1 + extreme fear at 12)
+- HYPE narrative leadership: OI ATH $3.1B framing (prior: 6.63% CEX perp dominance + ETF filings + SOL parity)
+- US-Iran clashes transmitting into oil rally and equity risk premia (prior: oil higher, defensives rotation)
+- Fed pause / yield anchoring: energy inflation + FOMC unchanged bets (prior: 4.47% 10Y, carry trades anchored)
 
 ## Cross-Domain Bridges
-- BTC absorbs risk-off that equities aren't. extreme fear at 12 while US equities sit near ATHs — the "digital gold" decoupling thesis is running backwards. Strategy selling BTC while equities hold means crypto is where risk-off lands, not gold, not bonds. that's the transmission channel.
-- Capital exiting crypto AI tokens ($TAO/$VVV) into AI IPO pre-orders (SpaceX, Anthropic at ATHs) — the AI narrative is migrating to TradFi rails. on-chain AI tokens keep the true believers; the rest rotates to the IPO channel. Broadcom pulling back post-beat means even that rotation has valuation limits.
-- Hayes public bet was the trade. $100K on HYPE outperformance bids HYPE reflexively. dumping after = the position was the narrative manufacturing. not credibility loss — that's the model working as intended. $HYPE still holds 6.63% CEX perp dominance despite it.
+- S&P 500 snaps a 9-day win streak on the same day BTC is down 18% from highs. crypto is amplifying. equities took one session to wobble; crypto needed 2 weeks and $3.45B in ETF exits to get there. when the jobs report prints hot tomorrow, the crypto drawdown leg happens faster than the equity leg — that's the transmission channel to watch.
+- Solana's $2B tokenized equity volume on Raydium while TradFi equities sell off is a direct contradiction. on-chain tokenized equity volume surges as traditional equity sentiment breaks. Jupiter adding a native prediction market is the logical next move — if you're already trading tokenized equities on-chain, you want the prediction market on the same rails.
+- pERC20 privacy standard + Uniswap crosschain landing in the same 12h window as AI IPO pre-orders (SpaceX, Anthropic) absorb capital rotation. two bets on where sovereign value accrues next: privacy-preserving on-chain primitives vs. TradFi rails for AI exposure. the ETH value-accrual debate is the meta-narrative — "no strong ETH without trillion-dollar ETH" is the Bankless thesis that makes pERC20 relevant.

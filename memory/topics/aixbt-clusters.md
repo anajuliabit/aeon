@@ -1,6 +1,6 @@
 # AIXBT Clusters (as of 2026-06-04)
 
-Free tier returned 40 sub-community clusters (prior: 36; paid docs reference 46). Schema change vs prior pull: sentiment and ideology fields absent in current response — only id, name, description, universe. Existing 36 entries preserved; 4 new entries not resolvable from summarized WebFetch response. Used when filtering projects/intel/momentum endpoints (paid tier).
+36 sub-community clusters AIXBT tracks (free tier returns 36; paid docs reference 46). Schema: id, name, description, universe — sentiment and ideology fields absent in free-tier response. Used when filtering projects/intel/momentum endpoints (paid tier).
 
 | id | name | one-line vibe |
 |----|------|---------------|
