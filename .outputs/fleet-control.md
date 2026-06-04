@@ -1,12 +1,19 @@
 ## Summary
 
-Ran `skills/fleet-control/SKILL.md` in default Health Check Mode (var empty).
+Ran `fleet-control` in default Health Check mode (var empty, 15 UTC slot).
 
-**Outcome:** `FLEET_EMPTY` — silent stop, no notification sent (per skill spec).
+**Pre-flight**
+- gh auth: ok (account `anajuliabit`, GH_TOKEN)
+- Rate limit: 4990 remaining (well above 50 floor)
+- Registry: `memory/instances.json` = `{"instances": []}`
+- State: `memory/state/fleet-control-state.json` already at clean `{"instances": {}, "last_full_summary_date": ""}`
 
-- **Pre-flight:** gh auth ok (account `anajuliabit`), rate_remaining=4990.
-- **Registry:** `memory/instances.json` contains `{"instances": []}` — no managed instances to check.
-- **State:** `memory/state/fleet-control-state.json` left as-is (no per-instance data to update).
-- **Log:** appended `### fleet-control` block to `memory/logs/2026-06-04.md`.
+**Outcome**
+- `FLEET_EMPTY` — no managed instances registered. Per SKILL.md, this is a silent stop: no notification, no state mutation, no per-instance work.
+- 2nd fleet-control run today (this is the scheduled 15 UTC slot; 09 UTC ran earlier with identical result).
 
-No follow-up. Aeon is operating without a child fleet; the skill will continue to no-op until instances are registered.
+**Files modified**
+- `memory/logs/2026-06-04.md` — appended `### fleet-control (15 UTC run)` log entry.
+
+**Follow-up**
+None required. The skill is a no-op until the operator adds at least one entry to `memory/instances.json`.
