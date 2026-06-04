@@ -1,0 +1,365 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 4th run · datanet 9 · 0 on-chain"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trading_section",
+        "sep1",
+        "voter_section",
+        "sep2",
+        "datanets_section"
+      ]
+    },
+    "trading_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trading_heading",
+        "trading_status_row",
+        "trading_wallets_stat",
+        "trading_breakdown",
+        "trading_rank_row",
+        "trading_settlement_stat",
+        "trading_excluded",
+        "trading_dry_streak"
+      ]
+    },
+    "trading_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "trading-agent",
+        "level": "h3"
+      }
+    },
+    "trading_status_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "trading_dry_badge"
+      ]
+    },
+    "trading_dry_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "dry",
+        "variant": "destructive"
+      }
+    },
+    "trading_wallets_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Wallets",
+        "value": "12"
+      }
+    },
+    "trading_breakdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "trading_spot_only",
+        "trading_floor",
+        "trading_empty",
+        "trading_neg_pnl"
+      ]
+    },
+    "trading_spot_only": {
+      "type": "Badge",
+      "props": {
+        "text": "7 spot-only",
+        "variant": "outline"
+      }
+    },
+    "trading_floor": {
+      "type": "Badge",
+      "props": {
+        "text": "1 floor",
+        "variant": "outline"
+      }
+    },
+    "trading_empty": {
+      "type": "Badge",
+      "props": {
+        "text": "1 empty",
+        "variant": "outline"
+      }
+    },
+    "trading_neg_pnl": {
+      "type": "Badge",
+      "props": {
+        "text": "3 neg-pnl rejects",
+        "variant": "outline"
+      }
+    },
+    "trading_rank_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "trading_rank_badge",
+        "trading_address"
+      ]
+    },
+    "trading_rank_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "rank 6",
+        "variant": "secondary"
+      }
+    },
+    "trading_address": {
+      "type": "Text",
+      "props": {
+        "text": "0xbdfa4f44",
+        "variant": "caption"
+      }
+    },
+    "trading_settlement_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "trading-only after #1100 settlement event",
+        "value": "−$26,339",
+        "trend": "down"
+      }
+    },
+    "trading_excluded": {
+      "type": "Text",
+      "props": {
+        "text": "excluded from the directional taxonomy",
+        "variant": "muted"
+      }
+    },
+    "trading_dry_streak": {
+      "type": "Text",
+      "props": {
+        "text": "11th straight dry on the same structural saturation",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "voter_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "voter_heading",
+        "voter_status_row",
+        "voter_epoch_row",
+        "voter_eligible",
+        "voter_progress",
+        "voter_triggers",
+        "voter_pod_date"
+      ]
+    },
+    "voter_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "voter",
+        "level": "h3"
+      }
+    },
+    "voter_status_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "voter_dry_badge"
+      ]
+    },
+    "voter_dry_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "dry",
+        "variant": "destructive"
+      }
+    },
+    "voter_epoch_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "voter_epoch_badge"
+      ]
+    },
+    "voter_epoch_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "epoch 101",
+        "variant": "secondary"
+      }
+    },
+    "voter_eligible": {
+      "type": "Text",
+      "props": {
+        "text": "eligible=0",
+        "variant": "caption"
+      }
+    },
+    "voter_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 507,
+        "max": 508,
+        "label": "already-voted"
+      }
+    },
+    "voter_triggers": {
+      "type": "Text",
+      "props": {
+        "text": "4th trigger today",
+        "variant": "caption"
+      }
+    },
+    "voter_pod_date": {
+      "type": "Text",
+      "props": {
+        "text": "no new epoch-101 pod since 2026-06-03",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "datanets_heading",
+        "datanets_unassigned_stat",
+        "datanets_list",
+        "datanets_18_group",
+        "datanets_operator_group"
+      ]
+    },
+    "datanets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "datanets",
+        "level": "h3"
+      }
+    },
+    "datanets_unassigned_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Unassigned",
+        "value": "15"
+      }
+    },
+    "datanets_list": {
+      "type": "Text",
+      "props": {
+        "text": "1, 2, 4–8, 10, 11, 13–18",
+        "variant": "caption"
+      }
+    },
+    "datanets_18_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "datanets_18_label",
+        "datanets_18_status",
+        "datanets_18_day"
+      ]
+    },
+    "datanets_18_label": {
+      "type": "Text",
+      "props": {
+        "text": "datanet 18",
+        "variant": "body"
+      }
+    },
+    "datanets_18_status": {
+      "type": "Badge",
+      "props": {
+        "text": "araistotle",
+        "variant": "secondary"
+      }
+    },
+    "datanets_18_day": {
+      "type": "Text",
+      "props": {
+        "text": "4th day surfacing",
+        "variant": "caption"
+      }
+    },
+    "datanets_operator_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "datanets_operator_label",
+        "datanets_option1",
+        "datanets_option2"
+      ]
+    },
+    "datanets_operator_label": {
+      "type": "Text",
+      "props": {
+        "text": "operator knob unchanged",
+        "variant": "muted"
+      }
+    },
+    "datanets_option1": {
+      "type": "Text",
+      "props": {
+        "text": "perp-only prefetch filter",
+        "variant": "caption"
+      }
+    },
+    "datanets_option2": {
+      "type": "Text",
+      "props": {
+        "text": "bump hl_min_vlm_usd past the spot hft cluster",
+        "variant": "caption"
+      }
+    }
+  }
+}
