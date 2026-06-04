@@ -163,6 +163,26 @@ case "$SKILL" in
     fi
     ;;
 
+  list-digest)
+    if [ -z "$VAR" ]; then
+      echo "xai-prefetch: list-digest has no var, skipping (skill logs NO_CONFIG)"
+      exit 0
+    fi
+    # var shape: "ID1,ID2|topic filter" — keep only the comma-separated IDs part.
+    # Cache one file per list ID so the skill's Path A reads .xai-cache/list-digest-<ID>.json
+    IDS_PART="${VAR%%|*}"
+    for LIST_ID in $(echo "$IDS_PART" | tr ',' ' '); do
+      if echo "$LIST_ID" | grep -Eq '^[0-9]+$'; then
+        xai_search "list-digest-${LIST_ID}.json" \
+          "Look at X list https://x.com/i/lists/${LIST_ID}. Step 1: report the list name and a one-line description. Step 2: identify the most engaging tweets posted by members of this list between ${YESTERDAY} and ${TODAY} UTC. Return the top 12 tweets ranked by engagement (likes, retweets, replies). For EACH tweet you MUST return: (a) @handle, (b) the full tweet text (not a paraphrase), (c) explicit engagement counts as separate fields — likes:N, retweets:N, replies:N, views:N if available, (d) the direct permalink in the form https://x.com/<handle>/status/<id>, (e) media type (image|video|none), (f) one-line context if it's a reply or quote tweet (who/what). Skip retweets of accounts NOT on this list. If a tweet has an image and you can analyze it, include a one-line image description." \
+          "$YESTERDAY" "$TODAY" \
+          "\"enable_image_understanding\": true"
+      else
+        echo "xai-prefetch: list-digest skipping non-numeric id '$LIST_ID'"
+      fi
+    done
+    ;;
+
   article)
     if [ -n "$VAR" ]; then
       xai_search "article-x.json" \
