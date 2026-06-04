@@ -1,6 +1,6 @@
-# AIXBT Clusters (as of 2026-06-03)
+# AIXBT Clusters (as of 2026-06-04)
 
-36 sub-community clusters AIXBT tracks (free tier returned 36; paid docs reference 46). Each cluster has a description, member archetype, sentiment, and ideology. Used when filtering projects/intel/momentum endpoints (paid tier).
+Free tier returned 40 sub-community clusters (prior: 36; paid docs reference 46). Schema change vs prior pull: sentiment and ideology fields absent in current response — only id, name, description, universe. Existing 36 entries preserved; 4 new entries not resolvable from summarized WebFetch response. Used when filtering projects/intel/momentum endpoints (paid tier).
 
 | id | name | one-line vibe |
 |----|------|---------------|

@@ -1,29 +1,35 @@
-# AIXBT Grounding (as of 2026-06-03 21:00 UTC)
+# AIXBT Grounding (as of 2026-06-04 09:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-03T21:00:19.730Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-04T09:00:24.086Z
 
-Note: This pull returned sections: crypto, tradfi. Macro and geopolitics sections absent from this response — iterate dynamically if they appear in future pulls.
+Note: This pull returned sections: crypto, tradfi. Macro and geopolitics sections absent again — iterate dynamically if they appear in future pulls.
 
 ## Crypto
-- BTC broke below $65K amid peak bearish sentiment, Strategy/STRC solvency fears, and ETF outflows, with traders eyeing $54K-$61K realized price zone.
-- HYPE flipped SOL in price and staking market cap, hit $74 with record $4M daily revenue, emerging as the sole top-10 green asset in a broad crypto rout.
-- Alt-BTC correlation is breaking down as capital rotates into HYPE, ZEC, NEAR, WLD, and privacy/AI narratives while BTC dominance falls alongside price.
-- TCG/collectibles meta gains traction on Solana with rising volumes compared to 2021 NFTs, while RWA tokenization and Ondo TVL cross $1B on BNB Chain.
+- BTC plunged to ~$61.5K amid $1.4B in ETF outflows since June 1, with Strategy's first BTC sale since 2022 fueling Saylor unwind fears and extreme fear (index at 12).
+- Arthur Hayes dumped all $HYPE and $NEAR positions days after publicly betting $100K on HYPE outperformance, triggering an 11% HYPE drawdown and credibility questions.
+- $HYPE remains a polarizing narrative leader—record 6.63% of global CEX perps volume in May, new ETF filings, and price parity with $SOL—even as SOL and ETH hit multi-month lows.
+- Capital rotates toward AI IPOs (SpaceX, Anthropic) and equities at ATHs while crypto bleeds; on-chain AI tokens ($THREE, $TAO, $VVV) and privacy plays ($ZEC, $XMR) draw niche flows.
 
 ## TradFi
-- US 10-year yields climb as oil spikes on Middle East escalation reprice inflation bets, pressuring duration positioning and equity multiples via higher funding costs.
-- Equities retreat from record highs with profit-taking flows rotating into energy and defensives amid geopolitical vol transmission into broader risk assets.
-- US-Iran strikes and Hormuz risks lift crude benchmarks, boosting energy sector betas while elevating credit spreads and equity risk premiums across markets.
-- Dollar firms on safe-haven flows as conflict escalation pressures EM currencies and carry trades, transmitting geopolitical shocks into global liquidity conditions.
+- Renewed U.S.-Iran clashes push oil higher and elevate risk premia, transmitting caution into equities as traders rotate toward defensives and monitor energy cost spillovers.
+- Broadcom's post-earnings pullback despite beats flags AI valuation fragility, prompting selective profit-taking and potential rotation from mega-cap tech into broader or energy names.
+- year yields holding near 4.47% balance Fed pause views with global tightening odds, anchoring carry trades but capping aggressive duration extension amid volatility.
+- Asian risk controls tighten on geopolitics and tariff signals, driving selective flows into energy while pressuring high-beta growth and uneven equity breadth globally.
 
 ## What's New (vs last pull)
-- All items (first pull — no prior snapshot to diff against).
+- (Crypto) Strategy's first BTC sale since 2022 named; BTC at $61.5K with extreme fear index at 12; $1.4B ETF outflows since June 1 quantified
+- (Crypto) Arthur Hayes dumped all $HYPE + $NEAR after $100K public bet on HYPE outperformance — entirely new story
+- (TradFi) Broadcom post-earnings pullback flags AI equity valuation fragility
+- (TradFi) Asian risk controls tightening on geopolitics + tariff signals
 
 ## Persisting Stories
-- None (first pull).
+- HYPE narrative leadership: record CEX perps dominance (6.63%), ETF filings, price parity with SOL (prior: flipped SOL, $4M/day revenue)
+- Alt-BTC correlation break + AI/privacy capital rotation: ZEC, XMR, TAO, THREE, VVV drawing niche flows (prior: HYPE, ZEC, NEAR, WLD)
+- US-Iran oil risk transmitting to equity defensives rotation (prior: Hormuz/crude; current: renewed clashes + Asian controls)
+- 10Y yields / Fed pause tension: yields at 4.47%, balancing pause vs global tightening odds (prior: yields climbing on oil spike)
 
 ## Cross-Domain Bridges
-- Hormuz + oil spike → 10Y yield climb → dollar bid → EM compression → risk-off. BTC isn't cracking on its own solvency fears (Strategy/STRC) alone — it's absorbing a full macro transmission. the market reads it as BTC-specific. it's not — liquidity is genuinely tightening.
-- HYPE at $4M daily revenue while everything else bleeds: the market is starting to price cash flows, not narratives. $HYPE isn't decorrelated from macro; it's collecting capital fleeing BTC into something with a P&L. that rotation pattern is worth tracking — risk-on within crypto, not flight to fiat.
-- Alt-BTC correlation break is reflexive: ZEC/WLD/NEAR get bid → AI/privacy narratives strengthen → more capital follows → BTC dominance compresses further. the narrative is manufacturing its own momentum.
+- BTC absorbs risk-off that equities aren't. extreme fear at 12 while US equities sit near ATHs — the "digital gold" decoupling thesis is running backwards. Strategy selling BTC while equities hold means crypto is where risk-off lands, not gold, not bonds. that's the transmission channel.
+- Capital exiting crypto AI tokens ($TAO/$VVV) into AI IPO pre-orders (SpaceX, Anthropic at ATHs) — the AI narrative is migrating to TradFi rails. on-chain AI tokens keep the true believers; the rest rotates to the IPO channel. Broadcom pulling back post-beat means even that rotation has valuation limits.
+- Hayes public bet was the trade. $100K on HYPE outperformance bids HYPE reflexively. dumping after = the position was the narrative manufacturing. not credibility loss — that's the model working as intended. $HYPE still holds 6.63% CEX perp dominance despite it.

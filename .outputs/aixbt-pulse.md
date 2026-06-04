@@ -1,17 +1,17 @@
-*AIXBT Pulse — 2026-06-03 21:00Z*
+*AIXBT Pulse — 2026-06-04 09:00Z*
 
 CRYPTO
-- BTC below $65K. Strategy/STRC solvency fears + ETF outflows. $54K-$61K realized price zone is the next watch.
-- HYPE flipped SOL, hit $74, $4M daily revenue — only top-10 green in the rout.
+- BTC $61.5K. extreme fear index 12. Strategy first BTC sale since 2022 — Saylor proxy unwinds from the top.
+- Arthur Hayes dumped all $HYPE + $NEAR after publicly betting $100K on HYPE outperformance. the $100K was the trade, not the conviction.
 
 TRADFI
-- 10Y yields up as Hormuz risk reprices oil and inflation bets. Equities rotating into energy/defensives.
-- Dollar bid on safe-haven flows. EM currencies and carry trades taking the compression.
+- Broadcom beat, pulled back — AI equity multiples are fragile at these levels.
+- yields at 4.47%, oil higher on renewed US-Iran clashes. defensives + energy taking flow.
 
 NEW THIS PULL
-- HYPE/SOL flip — HYPE emerging as the alt narrative anchor
-- Ondo TVL crosses $1B on BNB Chain — RWA traction outside Ethereum
-- US-Iran strikes lifting crude and credit spreads simultaneously
+- Strategy first BTC sale since 2022 ($1.4B ETF outflows since June 1, saylor unwind fears)
+- Hayes $HYPE + $NEAR dump after $100K public bet
+- Broadcom AI valuation fragility flagged post-earnings
 
 BRIDGE
-- Hormuz + oil → 10Y climb → dollar bid → risk-off. BTC absorbing macro compression AND Strategy/STRC solvency fears simultaneously. market reads it as BTC-specific. it's not — liquidity is tightening for real. HYPE at $4M revenue while BTC bleeds = market pricing cash flows over store-of-value. alt-BTC correlation break (ZEC/WLD/NEAR) is reflexive — AI/privacy narrative self-reinforcing as BTC dominance drops.
+- crypto is absorbing the risk-off that equities are not. BTC bleeds to fear-12 while US equities sit near ATHs — digital gold decoupling thesis running backwards. capital exiting crypto AI tokens ($TAO/$VVV) into AI IPO pre-orders (SpaceX, Anthropic at ATHs). the AI narrative is migrating to TradFi rails.

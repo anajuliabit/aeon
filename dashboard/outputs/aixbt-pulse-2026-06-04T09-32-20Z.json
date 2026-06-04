@@ -1,0 +1,194 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-04 09:00Z"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-crypto",
+        "stat-btc",
+        "stat-fear",
+        "text-saylor",
+        "text-hayes",
+        "sep-1",
+        "heading-tradfi",
+        "text-broadcom",
+        "stat-yields",
+        "text-oil",
+        "sep-2",
+        "heading-new",
+        "stack-new-items",
+        "sep-3",
+        "heading-bridge",
+        "text-bridge"
+      ]
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$61.5K"
+      },
+      "children": []
+    },
+    "stat-fear": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear Index",
+        "value": "12",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "text-saylor": {
+      "type": "Text",
+      "props": {
+        "text": "Strategy first BTC sale since 2022 — Saylor proxy unwinds from the top.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-hayes": {
+      "type": "Text",
+      "props": {
+        "text": "Arthur Hayes dumped all $HYPE + $NEAR after publicly betting $100K on HYPE outperformance. the $100K was the trade, not the conviction.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text-broadcom": {
+      "type": "Text",
+      "props": {
+        "text": "Broadcom beat, pulled back — AI equity multiples are fragile at these levels.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stat-yields": {
+      "type": "Stat",
+      "props": {
+        "label": "Yields",
+        "value": "4.47%"
+      },
+      "children": []
+    },
+    "text-oil": {
+      "type": "Text",
+      "props": {
+        "text": "Oil higher on renewed US-Iran clashes. Defensives + energy taking flow.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-new-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-new-1",
+        "item-new-2",
+        "item-new-3"
+      ]
+    },
+    "item-new-1": {
+      "type": "Text",
+      "props": {
+        "text": "Strategy first BTC sale since 2022 ($1.4B ETF outflows since June 1, saylor unwind fears)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item-new-2": {
+      "type": "Text",
+      "props": {
+        "text": "Hayes $HYPE + $NEAR dump after $100K public bet",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item-new-3": {
+      "type": "Text",
+      "props": {
+        "text": "Broadcom AI valuation fragility flagged post-earnings",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text-bridge": {
+      "type": "Text",
+      "props": {
+        "text": "Crypto is absorbing the risk-off that equities are not. BTC bleeds to fear-12 while US equities sit near ATHs — digital gold decoupling thesis running backwards. Capital exiting crypto AI tokens ($TAO/$VVV) into AI IPO pre-orders (SpaceX, Anthropic at ATHs). The AI narrative is migrating to TradFi rails.",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
