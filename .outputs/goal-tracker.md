@@ -1,19 +1,18 @@
-Goal-tracker run complete. Here's the rundown:
-
-**9 goals tracked — 7 on track, 2 done, 0 at risk / blocked / needs attention. Overall trend: ↑ improving.**
-
-DONE today:
-- **ISS-017 chain-runner workflow injection** — PR #64 env: indirection merged, INDEX.md flipped resolved
-- **ISS-015 secrets** — PR #65 wontfix (vibecoding-digest + reddit-digest disabled), INDEX.md flipped resolved
-
-ON TRACK (all 7): ISS-009 defence-in-depth (5d clean), ISS-016 own_pod_ids prefetch, trading-agent rubric saturation (PR #66 quality guards shipped today), 14 unassigned datanets (operator-gated), INDEX bookkeeping (ISS-013/014/015/017 flipped; ISS-007 + ISS-010 still pending), cleanup chain-runner scratch, investigate chain-state-flip anomaly.
+All artifacts are in place. Here's what the goal-tracker run produced:
 
 ## Summary
 
-Files modified:
-- `memory/MEMORY.md` — moved ISS-017 and ISS-015 goals into a new `## Completed Goals` section (text preserved verbatim per skill spec)
-- `memory/goal-state.json` — refreshed snapshot, 9 goals at `run_at=2026-06-03T19:00:19Z`
-- `memory/logs/2026-06-03.md` — appended `### goal-tracker` log entry
-- `.pending-notify/1780592419-goal-tracker.md` — staged full report for post-run delivery (sandbox blocks `./notify "$(cat …)"` arg-passing per the MEMORY.md lesson-learned pattern)
+Ran `skills/goal-tracker/SKILL.md` for 2026-06-04. Tracked **9 goals** from `## Current Goals` in MEMORY.md against last-30-day evidence (today's log + 24 PRs via `gh` + cron-state). Status: **9 ON TRACK, 0 at risk / needs attention / blocked / done** this cycle (ISS-017 and ISS-015 were already moved to `## Completed Goals` in the prior cycle).
 
-Follow-ups: no per-goal actions emitted (every non-DONE goal is ON TRACK; skill spec says skip action lines for those). ISS-007 + ISS-010 INDEX flips remain queued under the INDEX-bookkeeping goal.
+**Trend vs prior snapshot:** 7 flat carries, 2 NEW (`trading-agent-quality-guard-beyond-drift-skip` — PR #66 in-skill step-4.2 guard now firing on rank-12 0x9a1500b4; `assign-15-unassigned-reppo-datanets` — catalog grew with datanet 18 ArAIstotle, supersedes the 14-version). No downgrades.
+
+**Files written/modified:**
+- `memory/goal-state.json` — rewritten with 9-goal ON_TRACK snapshot at 2026-06-04T18:35:00Z (closed goals dropped from state per Completed-Goals migration)
+- `memory/logs/2026-06-04.md` — appended `### goal-tracker` entry at end
+- `.pending-notify/1780598100-goal-tracker.md` — staged formatted report for post-run delivery
+
+**MEMORY.md left untouched** — no status changes since prior snapshot, so per spec "Only write MEMORY.md if at least one goal's status changed."
+
+**No actions proposed** — all goals ON TRACK and the spec mandates omitting action lines for ON TRACK goals. Sub-task carries (iss-009 sub-task b, INDEX bookkeeping flips, trading-agent operator knob) noted informationally in the log entry but not framed as actions per spec.
+
+**Sources:** logs=ok, git=ok (1 commit in window — fresh clone, gh_pr is canonical), gh_pr=ok (24 PRs), gh_issue=ok (empty), cron-state=ok (49 entries).
