@@ -78,6 +78,7 @@ Total: ~$281B. USDT $187.5B · USDC $76.1B · USDS $8.75B · USD1 $4.68B · DAI 
 | 2026-06-01 | HOME | $0.0475 | defi.app v2 precision bridging + android launch driving 500k+ active/330k+ traders; 80% protocol revenue funds weekly $HOME buybacks; trending #9 CG; vmc 0.63, score 11/10; June 10 unlock risk 882M tokens |
 | 2026-06-02 | JTO | $0.62 | Jito Q1 2026 report: 418M cumulative staked SOL, 56% validator growth, 9.7M JTO burned; JTX pro-retail terminal July 2026; APAC institutional-staking partnership via Jito × HSDT; vmc 0.479, score 9/10 |
 | 2026-06-03 | ENA | $0.1023 | Coinbase Ventures open-market ENA buy + USDe/sUSDe distribution partnership to Coinbase 100M+ users; vol/mcap 0.54, CG trending, outperforming BTC & ETH on 7d; score 10/10 |
+| 2026-06-04 | HUMAN | $0.59 | Altcoin rotation into AI/decentralized-identity; ATH $0.85 on 06-02 (+80% intraday) on OpenAI/Anthropic/SpaceX IPO narrative + 8M+ Human IDs; vmc 0.17, outperforming BTC -13% / ETH -11% on 7d; score 6/10 MEDIUM. Risk: 70%-haircut tokens unlock 2026-06-25. Market SKIPPED — only Starmer family clears $50k vol gate, dedup-blocked. SIREN (raw 8/10) + LAB integrity-rejected. |
 
 ---
 *Sources — btc/eth: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch*

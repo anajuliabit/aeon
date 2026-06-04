@@ -1,27 +1,17 @@
 ## Summary
 
-**Token: ENA (Ethena)** — HIGH, signal 10/10 (raw 11).
-$0.1023 (+18.3% 24h / +7.0% 7d), mcap $923M, vol/mcap 0.54, on CG trending, outperforming BTC (-11.6% 7d) and ETH (-10.0% 7d).
-Catalyst: Coinbase Ventures' first ENA position (open-market buy) + USDe/sUSDe distribution partnership across Coinbase's 100M+ users.
-Risk: fee switch still inactive; FDV $1.32B vs $0.92B mcap leaves unlock headroom.
+**Token: HUMAN ($H, Humanity Protocol)** — MEDIUM, signal 6/10. $0.59 (+0.03% 24h / +130.5% 7d), mcap $1.1B, vmc 0.17. Only three top-100 names printed dual-positive in a deep risk-off tape (BTC -13% 7d). Catalyst: altcoin rotation into AI/decentralized-identity, ATH $0.85 on 06-02 on OpenAI/Anthropic/SpaceX IPO narrative + 8M+ Human IDs. Risk: 70%-haircut tokens unlock 2026-06-25 (21 days out) — supply overhang post-parabola, already -30% off 06-02 ATH.
 
-**Market: "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?"** — MEDIUM, edge ~5pp.
-YES 58.7¢, 24h vol $144k (clears $50k floor), resolves by 2026-06-30.
-Fair YES ~64% — Vegas won Game 1 5-4 on the road in Raleigh (CBS Sports), historical SCF Game-1 road winners convert 65-70%, Carolina was the higher seed pre-series. Market only priced a ~7pp bump, light vs base rate.
-Risk: Game 1 was a 1-goal margin; Carolina holds 3 of remaining 6 home dates in 2-2-1-1-1 format.
+**Market: SKIPPED** — only the Starmer family cleared the $50k 24h-vol gate. June-30 sub-market picked 2026-05-28 (dedup blocked); Dec-31 sub-market blocked under dedup-spirit (same political-mechanics thesis). Everything else sub-$5k 24h vol.
 
-**Considered alts dropped:** LIT (already +30% since 2026-05-21 prior pick), NEAR (+90% on month, late), VVV/ZEC (no fresh catalyst), NBA Spurs/Knicks (Game 1 hadn't tipped at fetch time).
+**Integrity overrides applied:**
+- SIREN raw 8/10 (BSC AI-agent) — REJECTED on insider-trading/pump-dump press flags, matching the LAB precedent (5-29).
+- LAB raw 6/10 — REJECTED standing call (ZachXBT 95%-insider-supply flag).
 
-Files:
-- Created `.pending-notify/1780489993.md` for post-run delivery
-- Appended Token Pick entry + `TOKEN_PICK_DEDUP` line to `memory/logs/2026-06-03.md`
+**Files:**
+- Staged `.pending-notify/1780577745.md` for post-run notify delivery (sandbox blocked live `./notify`).
+- Wrote `.outputs/token-pick.md` Summary block.
+- Appended Token Pick + `TOKEN_PICK_DEDUP: HUMAN | SKIP` to `memory/logs/2026-06-04.md`.
+- Appended HUMAN row to Token Picks Made table in `memory/topics/market-context.md`.
 
-Follow-up: `.tmp-parse.py` and `.tmp-events.py` scratch files remain at repo root — sandbox `rm` blocked (same constraint MEMORY.md notes for chain-runner scratch).
-
-Sources: cg=ok, dex=ok, poly=ok.
-
-Sources:
-- [Hyperliquid Beta Play Ignites: LIT Token Spikes](https://www.cryptotimes.io/2026/06/03/hyperliquid-beta-play-ignites-lit-token-spikes-20-as-traders-see-potential-in-lighter/)
-- [Coinbase Announcement Fuels 10% Surge for Ethena (ENA)](https://beincrypto.com/coinbase-ethena-ena-price/)
-- [NEAR Protocol golden cross](https://www.banklesstimes.com/articles/2026/06/02/near-protocol-price-just-formed-a-golden-cross-heres-why-it-may-surge-further/)
-- [Stanley Cup Final Game 1: VGK 5-4 CAR](https://www.cbssports.com/nhl/news/2026-stanley-cup-final-hurricanes-vs-golden-knights-live-updates-score/live/)
+**Sources:** cg=ok, dex=ok (data returned but cross-confirm noise — pumpfun ghost-tokens named "Trending"), poly=ok. **Follow-up:** none.
