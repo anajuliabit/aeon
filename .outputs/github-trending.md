@@ -1,15 +1,17 @@
+Notification staged and log entry written.
+
 ## Summary
 
-Ran `github-trending` skill for 2026-06-03. GitHub trending page returned only 11 repos via WebFetch (lowest in 7-day window; second fetch confirmed page-render limit). Kept **2/11** after filter:
+Ran the **github-trending** skill for 2026-06-04.
 
-**Picks** (folded into single `ai/ml + devtools` bucket per sub-3-survivor rule, no top-pick header):
-- **chopratejas/headroom** — AI/ML, ACCELERATING (1.3k today / 24x baseline). LLM-context-compression middleware (lib + proxy + MCP), claims 60-95% token reduction, pushed today.
-- **reconurge/flowsint** — Devtools, RETURNING (124 today / 13x baseline). Graph-canvas OSINT platform for cybersec analysts, pushed today.
-
-**Dropped 7** (markitdown day 9 of v0.1.6 — 5th consecutive same-call drop; scrapling 23d-stale release; voxcpm same hook outside dedup window; affaan-m/ECC matches the agent-harness-bundle pattern dropped 6-01/6-02 despite 204k stars / 31k forks magnitude; 1 book + 1 course + 1 hobby vtuber). **Dedup-blocked 2** (hermes-webui + supermemory inside strict 2-day window).
-
-**Files modified:**
-- `.pending-notify/1780477527-github-trending.md` — notification staged for post-run delivery
-- `memory/logs/2026-06-03.md` — appended `### github-trending` entry
-
-**Exit:** `GITHUB_TRENDING_OK`. Sources: trending=ok · gh_api=ok · kept 2/11.
+- **Fetched:** trending?since=daily via WebFetch → 14 repos (middle of recent 7-day range).
+- **Enriched:** 4 real candidates via `gh api` (created_at / stars / forks / pushed_at).
+- **Kept 2/14**, single combined "ai/ml" bucket, sub-3-survivor framing (no top-pick header):
+  - [opendataloader-project/opendataloader-pdf](https://github.com/opendataloader-project/opendataloader-pdf) — 570 today / 24k total · Java · **ACCELERATING** (60/day baseline × 9.4x, pushed today). Why: Java PDF parser that keeps tables + layout intact for retrieval pipelines.
+  - [lyogavin/airllm](https://github.com/lyogavin/airllm) — 208 today / 19k total · Jupyter · **RETURNING** (17.6/day baseline × 11.8x, push 86d stale → post-driven surge). Why: 70B inference on a single 4GB GPU via layered weight offload.
+- **Dropped 12:** 2 dedup (chopratejas/headroom, affaan-m/ECC carrying from 6-03), 5 dedup-residuals (hermes-webui / markitdown / Scrapling / supermemory / Open-LLM-VTuber), 1 learn-X (coding-interview-university), 2 below-floor stable (trivy, odoo), 2 **suspicious-magnitude page-composition guards**: NousResearch/hermes-agent (17.1% forks/stars ratio matching ECC precedent + vague "agent that grows with you" tagline), HKUDS/Vibe-Trading (19.7% forks/stars ratio + only 1.2x baseline = manufactured velocity).
+- **Files written:**
+  - `.pending-notify/1780565261-github-trending.md` (715 chars, well under 4000 ceiling — post-run delivery step picks it up).
+  - `memory/logs/2026-06-04.md` (appended `### github-trending` log entry).
+- **Sources:** trending=ok · gh_api=ok · kept 2/14
+- **Exit:** `GITHUB_TRENDING_OK`
