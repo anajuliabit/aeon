@@ -1,24 +1,10 @@
 ## Summary
 
-Executed the Reppo Trading Agent skill — 3rd run on 2026-06-04, datanet 9.
+Executed the `reppo-trading-agent` skill end-to-end against this run's `.hl-cache/`.
 
-**Gate**: RUN (orchestrator's `reppo-plan` block in chain output specified `reppo-trading-agent: RUN`).
-
-**Margin-top-12 audit** (per input-contract, every count + span jq'd against this-run `.hl-cache/`):
-
-- 6 SPOT-only SKIP (ranks 2/4/5/10/11/12 — `@N` / `PURR/USDC`)
-- 1 NEG-PnL REJECT (rank 7 `0xbdfa4f44`, 74 closed perp, **sum_pnl −$23,028.79**)
-- 1 OPENS-only SKIP (rank 8 `0x82b02bd4`, 114 xyz:SPCX Open Long, 0 closed)
-- 2 EMPTY caches (ranks 3 `0xb798aef7`, 9 `0x8196e064`)
-- 1 FLOOR<20 + NEG REJECT (rank 1 `0x4e14fc11`, 19 ETH closes, sum_pnl −$215,804)
-- 1 FLOOR<20 SKIP (rank 6 `0xa87a233e`, 2 FARTCOIN)
-
-**Mint intents**: 0 written; `.pending-reppo/` untouched. **9th consecutive dry trading-agent run** on identical structural saturation. Step-4.2 regression guard not invoked this run (0x9a1500b4 dropped out of margin-top-12 to rank 16).
-
-**Files written**:
-- `.outputs/reppo-trading-agent.md` (overwrites 2nd-run output for the chain)
-- `memory/logs/2026-06-04.md` — appended `### reppo-trading-agent (3rd run)` entry
-
-**Scratch left**: `.tmp-rank.py` at repo root (sandbox blocks `rm` mid-run; cleanup pattern noted in MEMORY).
-
-Operator follow-ups carried unchanged: prefetch-layer perp-only filter (drop `coin =~ /^@\d+$|\/USDC$|^#\d+$/`), `HL_MIN_VLM_USD` bump past the spot HFT cluster, or `HL_WINDOW` switch — needed to break the saturation since the in-skill quality guards have exhausted the current rubric population.
+- **Gate**: RUN (orchestrator's `reppo-plan` cleared the trading-agent for datanet 9).
+- **Audit** (every count + span backed by fresh `jq`, per input contract): 12 wallets, 7 SPOT-only SKIPs, 1 FLOOR<20 SKIP, 1 EMPTY SKIP, 3 NEG-PnL REJECTs.
+- **One edge case**: `0xbdfa4f44` is multi-market perp (MEGA + xyz:COPPER/HOOD/DRAM/QNT + #1100) with raw sum_pnl +$14,652.58 — but 75 of 77 closes are losing Close Longs (−$26,339); the only material positive is a `#1100` Settlement event (token-distribution, not a trade). Settlement falls outside the skill's `Open/Close Long/Short` direction taxonomy, so excluding it drops trading-only sum_pnl to **−$26,339.12** → NEG-PnL REJECT.
+- **Mints written**: 0. `.pending-reppo/` not created. Same-wallet regression guard not triggered (14th-mint wallet `0x9a1500b4` not in top-12; ledger wallet `0xbb10bda0` resurfaced but only as spot in this slice).
+- **Files**: `.outputs/reppo-trading-agent.md` written; `memory/logs/2026-06-04.md` appended with the `### reppo-trading-agent` entry. No code changes, no notifications, no Reppo CLI calls (deferred to `postprocess-reppo.sh`, which has nothing to execute this run).
+- **Saturation pattern** noted in MEMORY.md continues: operator follow-ups (perp-only prefetch filter, `HL_MIN_VLM_USD` bump, or `HL_WINDOW` switch) needed to break the dry streak.
