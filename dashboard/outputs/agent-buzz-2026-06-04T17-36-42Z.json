@@ -1,0 +1,54 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-06-04",
+        "description": "quiet research day — two papers arguing structured decomposition beats one bigger agent."
+      },
+      "children": [
+        "heading_section",
+        "items_stack"
+      ]
+    },
+    "heading_section": {
+      "type": "Heading",
+      "props": {
+        "text": "decompose, don't scale",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "items_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item1",
+        "item2"
+      ]
+    },
+    "item1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@rsalakhu — MACU paper: manager agent decomposes tasks into dynamic DAGs with parallel subagents, +4.7–25.5% on long-horizon CUA where single agents fail.",
+        "href": "https://x.com/rsalakhu/status/2062194674794668066",
+        "source": "rsalakhu"
+      },
+      "children": []
+    },
+    "item2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@joobid — paper: compile agentic workflows into small fine-tuned weights — near-frontier quality at ~100× lower token cost vs injecting logic into frontier-per-turn.",
+        "href": "https://x.com/joobid/status/2062068389640643034",
+        "source": "joobid"
+      },
+      "children": []
+    }
+  }
+}
