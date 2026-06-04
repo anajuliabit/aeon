@@ -279,4 +279,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-04,reppo-trading-agent,claude-opus-4-7,66,45048,5113915,190505
 2026-06-04,reppo-digest,claude-opus-4-7,22,13504,1232392,68386
 2026-06-04,daily-routine,claude-opus-4-7,1298,28862,2294181,143708
-2026-06-04,aixbt-pulse,claude-sonnet-4-6,1129,17195,1139831,47879
+2026-06-04,skill-freshness,claude-sonnet-4-6,22,31403,1408613,78837

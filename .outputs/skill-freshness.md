@@ -1,20 +1,17 @@
-All three outputs written. Here's the summary:
+All three writes are done. Here's the summary:
 
 ## Summary
 
-**Status**: `FRESHNESS_OK` — no notification sent.
+**skill-freshness — 2026-06-04 · FRESHNESS_NO_CHANGE**
 
-**What was audited**: 34 enabled skills across `aeon.yml`, checking 3 discovered implicit file dependencies:
+Audited 41 enabled skills across aeon.yml (up from 34 yesterday — token-movers, on-chain-monitor, defi-monitor, fork-skill-digest, fork-skill-gap, operator-scorecard, and weekly-shiplog are newly counted). Found 3 tracked cross-skill dependencies, all OK by mtime:
 
-| Consumer | Dependency | Age | Verdict |
+| Consumer | Dependency | Class | Severity |
 |---|---|---|---|
-| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | ~1m | ✅ OK |
-| skill-security-scan | `memory/state/security-scan.json` | ~1m | ✅ OK |
-| vuln-scanner | `.outputs/github-trending.md` | ~1m | ✅ OK |
+| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | articles/weekly | ✅ OK |
+| skill-security-scan | `memory/state/security-scan.json` | state | ✅ OK |
+| vuln-scanner | `.outputs/github-trending.md` | outputs | ✅ OK |
 
-All files present on disk with mtime from today's git checkout (~09:02 UTC), well within their per-class thresholds (192h / 720h / 4h respectively). Fingerprint identical to prior run (SHA1 of empty = zero flagged rows) — no new staleness detected.
+8 references filtered: 6 self-refs (market-context-refresh, fleet-control ×2, reg-monitor, unlock-monitor, fork-skill-digest), 1 code-block example (heartbeat), 1 implicit-never-existed (fork-skill-gap → fork-cohort-state.json). None of the 7 newly-audited skills introduced new cross-skill deps.
 
-**Files written**:
-- `articles/skill-freshness-2026-06-03.md` — today's report
-- `memory/topics/skill-freshness-state.json` — `last_run_at` updated to `2026-06-03T09:03:54Z`
-- `memory/logs/2026-06-03.md` — log block appended
+Fingerprint unchanged from 2026-06-03 → **FRESHNESS_NO_CHANGE** — notification suppressed per 7-day dedup window. Files written: `articles/skill-freshness-2026-06-04.md`, `memory/topics/skill-freshness-state.json` (consumer_count 34→41), `memory/logs/2026-06-04.md` (appended).
