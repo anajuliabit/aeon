@@ -114,7 +114,7 @@ skills:
       var: "@moonwell OR @reppo OR @sherwoodagent OR $WOOD OR $MAMO"
     }
   refresh-x: { enabled: false, schedule: "0 17 * * *" }
-  list-digest: { enabled: false, schedule: "0 17 * * *" }
+  list-digest: { enabled: true, schedule: "0 17 * * *", var: "1642770456720683008" } # X lists to digest — comma-separate IDs, optional |topic filter
   write-tweet: { enabled: false, schedule: "0 17 * * *" }
   reply-maker: { enabled: false, schedule: "0 17 * * *" }
   remix-tweets: { enabled: false, schedule: "30 17 * * *" } # 10 rephrased versions of random past tweets
