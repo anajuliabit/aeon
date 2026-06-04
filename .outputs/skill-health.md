@@ -1,20 +1,20 @@
-Skill executed. Report staged for delivery.
+skill-health complete.
 
 ## Summary
 
-Ran `skills/skill-health/SKILL.md` for the full fleet (var empty).
+**Status**: SKILL_HEALTH_NOOP — state unchanged, gate suppressed notification.
 
-**Classification**: 0 CRITICAL · 0 DEGRADED · 0 FLAPPING · 0 WARNING · 31 HEALTHY · 10 NO DATA. Hash signature unchanged from prev report (empty critical/degraded/flapping set), but >47h since `last_notified_at=2026-06-01T19:12Z` → daily-cadence gate fires.
+**Classification** (42 enabled skills):
+- 🟢 35 HEALTHY (all in cron-state with sr ≥ 0.8, consecutive_failures = 0)
+- ⚪ 7 NO DATA (autoresearch workflow_dispatch-only + 6 pre-first-fire weeklies enabled via PR #67)
+- 0 CRITICAL / DEGRADED / FLAPPING / WARNING
 
-**NO DATA delta**: +4 fresh today (aixbt-pulse 9 UTC missed; token-movers / on-chain-monitor / defi-monitor first-fire missed after being enabled today per PR pattern) · -1 reg-monitor (first-fired today 14 UTC, cleared) · 6 weekly skills awaiting their slot.
+**Gate decision**: current_hash `e3b0c442…` matches prev_report; 23h27min since last notify (2026-06-03T19:02:00Z) is under the 24h reminder threshold → **skip notify**.
 
-**Issue reconciliation**: skipped — none of the 6 open issues (ISS-005/007/009/010/011/016) are `detected_by: skill-health`. They track failure modes (e.g. ISS-016 prefetch count=0) that don't map to cron-state success_rate, so auto-resolve would close incorrectly. ISS-017 closed earlier today via PR #64 outside skill-health scope.
+**Issue reconciliation**: skipped — 0 of 6 open issues have `detected_by: skill-health` (5 detected by reppo-digest, 1 by claude). skill-health only manages its own issues.
 
 **Files written**:
-- `memory/skill-health/last-report.json` — updated hash, last_notified_at, classification
-- `.pending-notify/1780506120-skill-health.md` — report body for post-run delivery
-- `memory/logs/2026-06-03.md` — appended `### skill-health` entry with classification, hash, no_data delta, reconciliation note
+- `memory/skill-health/last-report.json` — same hash, `last_run_at` bumped to 2026-06-04T18:29:34Z, `last_notified_at` preserved
+- `memory/logs/2026-06-04.md` — appended `### skill-health` NOOP entry
 
-**Sandbox note**: `./scripts/skill-runs` gated by sandbox approval — logged SKILL_HEALTH_PARTIAL, proceeded with cron-state only per spec.
-
-**Follow-up**: 4 fresh DISPATCH-SKILL flags worth operator attention — aixbt-pulse / token-movers / on-chain-monitor / defi-monitor scheduled today and didn't write cron-state, suggesting a scheduler gap on the newly-enabled mid-day skills.
+**Follow-ups**: none — fleet remains gap-free; next opportunity to break the silence is either (a) a real CRITICAL/DEGRADED/FLAPPING transition, or (b) the 24h reminder cadence next time the skill fires after 2026-06-04T19:02:00Z.

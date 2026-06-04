@@ -1,18 +1,15 @@
 {
   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "last_notified_at": "2026-06-03T19:02:00Z",
-  "last_run_at": "2026-06-03T19:02:00Z",
+  "last_run_at": "2026-06-04T18:29:34Z",
   "classification": {
     "critical": [],
     "degraded": [],
     "flapping": [],
     "warning": [],
-    "healthy_count": 31,
+    "healthy_count": 35,
     "no_data": [
-      "aixbt-pulse",
-      "token-movers",
-      "on-chain-monitor",
-      "defi-monitor",
+      "autoresearch",
       "fork-cohort",
       "fork-skill-digest",
       "fork-skill-gap",
