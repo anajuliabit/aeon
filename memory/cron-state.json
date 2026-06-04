@@ -30,8 +30,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-06-04T09:25:19Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-04T15:11:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-04T09:31:13Z",
     "total_runs": 42,
     "total_successes": 42,
@@ -183,8 +183,8 @@
     "success_rate": 1
   },
   "search-skill": {
-    "last_dispatch": "2026-06-03T14:10:47Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-04T15:11:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-03T14:14:43Z",
     "total_runs": 13,
     "total_successes": 13,
@@ -304,14 +304,14 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-04T09:27:14Z",
     "total_runs": 16,
     "total_successes": 16,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-04T09:25:19Z"
+    "last_dispatch": "2026-06-04T15:11:56Z"
   },
   "skill-analytics": {
     "last_dispatch": "2026-06-03T18:59:23Z",
@@ -401,8 +401,8 @@
     "success_rate": 1
   },
   "security-digest": {
-    "last_dispatch": "2026-06-03T14:10:47Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-04T15:11:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-03T14:18:16Z",
     "total_runs": 3,
     "total_successes": 3,
