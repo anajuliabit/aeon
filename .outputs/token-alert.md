@@ -1,18 +1,23 @@
+Notification staged. Done.
+
 ## Summary
 
-Ran token-alert for 2026-06-03. Checked all 4 tracked tokens from MEMORY.md canonical watchlist.
+**TOKEN_ALERT_TRIPPED** — 2 of 4 watchlist tokens breached their 24h thresholds on 2026-06-04.
 
-**Prices (12:26 UTC):**
-- WELL: $0.003779 | -5.13% 24h | vol $778.5K
-- MAMO: $0.009497 | -5.54% 24h | vol $496.3K
-- REPPO: $0.016533 | -9.43% 24h | vol $1.61M
-- GITLAWB: $0.0001032 | -14.16% 24h | vol $1.10M
+| Token | Price | 24h % | Threshold | Trigger |
+|-------|-------|-------|-----------|---------|
+| WELL | $0.003685 | −5.16% | 10% | — (under) |
+| MAMO | $0.008815 | −7.01% | 15% | — (under) |
+| REPPO | $0.013477 | **−17.93%** | 15% | ✔ alert |
+| GITLAWB | $0.00007716 | **−26.25%** | 15% | ✔ alert |
 
-**Threshold checks:**
-- **24h change:** all under per-token thresholds. GITLAWB -14.16% is the closest call (84bps under its 15% rail, 2nd consecutive day near-miss after 6-02's -14.93%).
-- **Volume spike:** REPPO 0.78x baseline (vol contracts on fade). WELL/MAMO/GITLAWB skipped — n=1, need 5.
-- **Threshold cross:** all 4 skipped — no Floor/Ceiling configured.
+- **REPPO**: completes round-trip of 6-02's +15.5% bounce — 2-day cumulative −18.5%. Volume $633.8K = 0.32× mean (under spike).
+- **GITLAWB**: breaks 2-day near-miss streak (−14.93% / −14.16%) with largest single-day move since watchlist logging began; cumulative −34% off 6-01.
+- Volume-spike check **skipped** for WELL/MAMO/GITLAWB (n=3, need 5 — 2 more runs); REPPO at 0.32×, under 3× trip.
+- Threshold-cross **skipped** for all (no Floor/Ceiling configured).
 
-**Status: TOKEN_ALERT_OK** — no notification sent. Logged prices to `memory/logs/2026-06-03.md` for next run's baseline.
+**Files**:
+- Staged `.pending-notify/1780577489-token-alert.md` (post-run delivery step picks it up — sandbox `./notify "$(cat ...)"` lesson).
+- Appended `memory/logs/2026-06-04.md` with prices + trigger walk + new baseline for next run's d/d.
 
-**Notable d/d:** REPPO -9.02% gives back most of 6-02's +15.5% bounce. GITLAWB extends slide (~26% cumulative over 48h); one more -12% day trips the rail. Watchlist 4-of-4 red, broad risk-off matches today's BTC -4% tape.
+**Follow-up**: none — operator-facing alert already in the queue.
