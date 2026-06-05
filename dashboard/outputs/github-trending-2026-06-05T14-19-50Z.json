@@ -1,0 +1,22 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "github-trending"
+      },
+      "children": [
+        "text_status"
+      ]
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "staged"
+      },
+      "children": []
+    }
+  }
+}
