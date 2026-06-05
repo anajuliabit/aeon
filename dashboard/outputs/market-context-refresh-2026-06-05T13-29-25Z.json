@@ -1,0 +1,255 @@
+{
+  "root": "card-market",
+  "state": {},
+  "elements": {
+    "card-market": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context — 2026-06-05"
+      },
+      "children": [
+        "header-sentiment",
+        "sep1",
+        "price-section",
+        "sep2",
+        "sentiment-section",
+        "sep3",
+        "breadth-section",
+        "sep4",
+        "tvl-section",
+        "sep5",
+        "narrative-section",
+        "sep6",
+        "hotmarkets-section"
+      ]
+    },
+    "header-sentiment": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-riskoff",
+        "text-conviction"
+      ]
+    },
+    "badge-riskoff": {
+      "type": "Badge",
+      "props": {
+        "text": "risk-off",
+        "variant": "secondary"
+      }
+    },
+    "text-conviction": {
+      "type": "Text",
+      "props": {
+        "text": "conviction high",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62.2K",
+        "delta": "-1.64%",
+        "trend": "down"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,670",
+        "delta": "-5.19%",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sentiment-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-fg",
+        "progress-fg"
+      ]
+    },
+    "stat-fg": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "12"
+      }
+    },
+    "progress-fg": {
+      "type": "Progress",
+      "props": {
+        "value": 12,
+        "max": 100,
+        "label": "Extreme Fear"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "breadth-section": {
+      "type": "Progress",
+      "props": {
+        "value": 3,
+        "max": 20,
+        "label": "Breadth"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tvl-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-tvl",
+        "text-tvl-detail"
+      ]
+    },
+    "stat-tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "~$71.9B",
+        "delta": "-11%",
+        "trend": "down"
+      }
+    },
+    "text-tvl-detail": {
+      "type": "Text",
+      "props": {
+        "text": "7-day decline; -2.4% in last 24h",
+        "variant": "caption"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narrative-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-narrative",
+        "stack-babylon"
+      ]
+    },
+    "heading-narrative": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h3"
+      }
+    },
+    "stack-babylon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-babylon",
+        "stat-baby",
+        "text-babylon-status"
+      ]
+    },
+    "text-babylon": {
+      "type": "Text",
+      "props": {
+        "text": "Bitcoin staking / Babylon",
+        "variant": "body"
+      }
+    },
+    "stat-baby": {
+      "type": "Stat",
+      "props": {
+        "label": "BABY",
+        "value": "+53.34%",
+        "trend": "up"
+      }
+    },
+    "text-babylon-status": {
+      "type": "Text",
+      "props": {
+        "text": "emerging, day 1",
+        "variant": "caption"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hotmarkets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-hotmarkets",
+        "text-polymarket"
+      ]
+    },
+    "heading-hotmarkets": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Markets",
+        "level": "h3"
+      }
+    },
+    "text-polymarket": {
+      "type": "Text",
+      "props": {
+        "text": "FIFA World Cup dominates Polymarket; no crypto signal in top-10",
+        "variant": "body"
+      }
+    }
+  }
+}

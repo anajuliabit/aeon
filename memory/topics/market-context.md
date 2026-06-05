@@ -1,68 +1,69 @@
-# Market Context (as of 2026-06-04)
+# Market Context (as of 2026-06-05)
 
-> **Take:** risk-off — BTC -4.49% 24h ($63.8K, -13.1% 7d) with only 3/20 top-cap assets green and BTC ETF outflows on record 11th consecutive day ($1.67B this week, $4.21B in 3 weeks). Conviction: high.
+> **Take:** risk-off — BTC -1.64% 24h ($62.2K, -15.1% 7d) on 5th consecutive declining session; 3/20 top-cap assets green and BTC ETF outflows $3.4B this week (record since ETF launch Jan 2024), while alts capitulate: ZEC -38.6%, LAB -38.7%, ADA -13.3% in 24h. Conviction: high.
 
 ## Signal Snapshot
-- BTC $63,786 (-4.49% 24h, -13.10% 7d) · dominance 55.63% (-0.27 pp 24h)
-- ETH $1,778 (-4.66% 24h, -10.52% 7d) · ETH/BTC 0.02787
-- SOL $69.93 (-6.20% 24h, -13.65% 7d)
-- Total mcap $2.296T (-4.01% 24h) · DEX vol $10.11B 24h (+8.7% vs yesterday — sell-side flush)
-- Breadth: 3/20 green 24h (USDT, USDS, RAIN) · 6/20 green 7d
-- Fear & Greed: 12 (Extreme Fear) — yesterday 11
+- BTC $62,181 (-1.64% 24h, -15.10% 7d) · dominance 55.93% (+0.30 pp 24h)
+- ETH $1,670 (-5.19% 24h, -16.41% 7d) · ETH/BTC 0.02688
+- SOL $66.35 (-4.14% 24h, -18.46% 7d)
+- Total mcap $2.223T (-3.50% 24h) · DEX vol $12.33B 24h (+21.9% vs yesterday — sell-side accelerating)
+- Breadth: 3/20 green 24h (USDT, USDC, FIGR_HELOC) · 3/20 green 7d
+- Fear & Greed: 12 (Extreme Fear) — yesterday 12
 
 ## What Changed Since Last Refresh
-- BTC broke below $65K to $63.8K (-$2,968 / -4.45% from $66,754 yesterday) — 4th consecutive declining session; breadth collapsed to 3/20 green (vs 9/20 yesterday), the most risk-off reading this correction cycle
-- BTC ETF outflows extended to record 11th consecutive day: $1.67B this week, $4.21B in 3 weeks — largest 3-week outflow of 2026; institutional hand still actively offloading
-- ZEC violent reversal: +8.25% yesterday → -16.18% today (-24pp swing in 24h) — Grayscale ZCSH ETF catalyst exhausted; privacy-coin rising phase confirmed fading
-- NEAR gave back 2-day AI-L1 rally: +12.64% yesterday → -20.84% today — sector gaining reversed faster than market; phase downgrade to fading
-- Estimated TVL ~$73.8B, 4th consecutive day of decline (vs $76.54B yesterday ≈ -3.6%); stablecoins +$1.8B to $319.8B — capital visibly rotating into stables
+- BTC slid from $63.8K to $62.2K (-$1.6K / -2.5%) — 5th consecutive declining session; ETH hit $1,638 intraday low, now $1,670 (-5.19%); both setting new multi-month lows
+- BTC ETF outflows $3.4B this week — record since ETF launch Jan 2024; BlackRock IBIT alone bled $448M in a single session; Citi: ETF flows explain ~45% of BTC weekly moves
+- BABY (Babylon) +53.34% 24h — Bitcoin staking protocol surged to #2 CoinGecko trending (rank 332, first appearance); first emerging positive signal in 5 days of risk-off tape
+- LAB -38.71% 24h — integrity-flagged AI identity token (95%-insider-supply flag from prior session) crashes; flag validated as supply pressure materializes
+- ZEC day-2 collapse -38.59% (cumulative -42% over 2 sessions from $550 high to $316); Grayscale ZCSH catalyst fully exhausted
 
 ## Active Narratives
-- **Bitcoin DeFi / Stacks (ZEST)** — phase: emerging. Evidence: ZEST +42.29% 24h entering CoinGecko trending (rank 642) for first time; Zest Protocol = Stacks-native lending on Bitcoin; no mcap leader yet, early accumulation, single data point — watch Day 2.
-- **Perp DEX / Hyperliquid (HYPE)** — phase: peak. Evidence: HYPE -8.57% 24h, underperforming BTC (-4.49%) by 4.1pp; $684M June 6 unlock now 2 days away — pre-unlock supply pressure materializing; 7d still +16.18% but daily momentum reversing hard.
-- **AI-native L1s (NEAR / LIT)** — phase: fading. Evidence: NEAR -20.84% 24h (trending on downside, 2-day +30% rally fully reversed); LIT -14.58% 24h (2026-05-21 pick at $1.32, hit $1.78 peak on 6-03, now $1.50 — -15.7% from peak in one session); AI-L1 sector lost ground faster than broad market.
-- **Privacy coins (ZEC)** — phase: fading. Evidence: ZEC -16.18% 24h, 7d -1.42% (flipped negative from +7.66% yesterday); now in top-20 mcap under heavy selling; Grayscale ZCSH ETF catalyst appears spent after a 2-session run.
+- **Bitcoin staking (Babylon)** — phase: emerging. Evidence: BABY +53.34% 24h, trending #2 CoinGecko (rank 332, first appearance); Babylon is the leading BTC staking protocol (Cosmos-based); no mcap sector leader yet — single data point, watch Day 2.
+- **Perp DEX / Hyperliquid (HYPE)** — phase: peak. Evidence: HYPE -5.66% 24h at $62.50; ATH $75.48 set June 2 → now -17.2% from ATH; $684M unlock June 6 tomorrow — pre-unlock selling already underway; 7d barely positive (+0.94%).
+- **Worldcoin (WLD)** — phase: rising. Evidence: WLD +9.69% 24h at $0.530, trending #3; holding green in a 3/20 green tape; 5-31 entry at $0.333 → +59% unrealized — relative strength signal in risk-off.
+- **Privacy coins (ZEC)** — phase: fading. Evidence: ZEC -38.59% 24h on day-2 of collapse ($550 → $316, -42% cumulative); 7d -40.72%; Grayscale ZCSH catalyst spent; XMR -5.78% 24h in sympathy.
 
 ## Top DeFi Protocols (TVL, 7d change)
-- Lido: $15.53B (-11.85%)
-- SSV Network: $12.87B (-11.96%)
-- Aave V3: $11.89B (-9.45%)
-- Morpho Blue: $6.90B (6-03 snapshot; not in API top-10 response today)
-- Sky Lending: $5.93B (6-03 snapshot; not in API top-10 response today)
+- Lido: $14.89B (-16.54%)
+- SSV Network: $12.33B (-16.68%)
+- Aave V3: $11.70B (-11.20%)
+- Morpho Blue: $6.46B (-10.67%)
+- Sky Lending: $5.86B (-4.76%)
 
 ## Chain Flow (top 3 by TVL, 7d)
-*7d per-chain delta unavailable from API (regression day 7).*
-- Ethereum: $38.61B (-3.55% 24h from $40.03B)
-- BSC: $5.17B (-4.08% 24h)
-- Solana: $4.89B (-3.74% 24h)
+*7d per-chain delta unavailable from API (regression day 8).*
+- Ethereum: $37.34B (-3.3% 24h from $38.61B)
+- BSC: $5.15B (~flat 24h)
+- Base: $3.90B
 
 ## Stablecoins
-Total: ~$319.8B (+0.56% vs $318.03B yesterday — stables gaining share as crypto falls). USDT $187.0B · USDC $76.0B · USDS $8.83B · USD1 $4.66B · DAI $4.51B · USDe $4.51B · combined top-6 share ~12.4% of total mcap.
+Total: ~$316B (est. -1% 7d — slight decline as crypto falls but at slower rate than risk assets). USDT $187.1B (-0.86% 7d) · USDC $75.7B (-0.76% 7d) · USDS $8.65B (-1.78% 7d) · USD1 $4.65B (-2.42% 7d) · DAI $4.55B · USDe $4.51B (+0.31% 7d) · combined top-6 $285B.
 
 ## Trending (CoinGecko)
-- ZEST — +42.29% 24h; Zest Protocol (Stacks/Bitcoin lending); rank 642; first trending appearance — emerging signal
-- HYPE — -8.57% 24h; rank 10; Hyperliquid perp DEX; $684M unlock 2 days out, pre-unlock selling
-- NEAR — -20.84% 24h; rank 33; AI-native L1; 2-day rally reversing, trending on down momentum
-- WLD — -3.61% 24h; rank 50; Worldcoin; 2026-05-31 pick at $0.333 → ~$0.50 today (+50% from entry)
-- LAB — +6.64% 24h; rank 21; AI identity; bounce after Day-6 crack; integrity flag (95%-insider-supply) still stands
-- LIT — -14.58% 24h; rank 124; Lighter DEX; $1.78 peak on 6-03 → $1.50 today; 2026-05-21 pick still +$0.18 from $1.32 entry
+- BABY — +53.34% 24h; Babylon (BTC staking, Cosmos); rank 332; first trending appearance — emerging Bitcoin staking signal
+- ZEC — -38.59% 24h; rank 20; Zcash; day-2 post-Grayscale collapse from $550; catalysts spent
+- WLD — +9.69% 24h; rank 45; Worldcoin; Oku DeFi integration live; green in risk-off tape
+- HYPE — -5.66% 24h; rank 10; Hyperliquid; ATH $75.48 (6-02) → $62.50; $684M unlock tomorrow
+- LAB — -38.71% 24h; rank 30; AI identity; integrity-flagged (95%-insider-supply) token collapsing
+- ADA — -13.91% 24h; rank 17; alt capitulation leader; -29.6% 7d
 
 ## Prediction Markets (Polymarket, top by 24h vol)
+FIFA World Cup group-stage markets dominate top-10 by 24h volume ($49M+ on June 5); all individual-nation YES prices ≤15%, filtered per spec. No crypto-specific markets in top-10. Only actionable non-FIFA market found:
+
 | Market | Probability | 24h Vol | Liquidity |
 |--------|-------------|---------|-----------|
-| Roland Garros WTA: Andreeva vs Kostyuk | Andreeva 81.5% | $2.10M | $0.14M |
-| NY Knicks win 2026 NBA Finals | YES 53.5% | $1.43M | $0.30M |
+| Will Donald Trump visit Italy in 2026? | YES 36% | $0.006M | $999M |
 
-*FIFA World Cup markets dominate top-10 by volume ($25M+ across 5 markets ahead of June 11 start) but all nations <3% YES — skip per spec. Israel–Lebanon ceasefire extension by June 7: YES 99.85% ($1.67M vol) — essentially settled, one geopolitical risk factor priced away. No crypto-specific markets in top-10.*
+*Deep-book, near-zero daily trading — not an active signal.*
 
 ## Macro Catalysts (next 48h)
-- **NFP (June 5):** Nonfarm Payrolls + Unemployment tomorrow — strong print cuts rate-cut expectations and extends BTC ETF outflow pressure; Powell term expired May 2026, Fed policy transition risk adds uncertainty layer
-- **HYPE June 6 unlock:** $684M token unlock in 2 days — watch HYPE for peak→fading phase transition; already -8.57% today on pre-unlock selling
-- **Israel-Lebanon ceasefire by June 7:** Polymarket 99.85% YES — one risk-off factor priced away, but US-Iran stalled ($93/bbl Brent) remains a headwind
+- **NFP today (June 5):** Nonfarm Payrolls data released today — strong print = rate-cut expectations pushed further out = BTC ETF outflow pressure extends; miss = potential relief rally signal
+- **HYPE June 6 unlock:** $684M token unlock tomorrow — pre-unlock selling active today; phase gate peak→fading triggers at unlock
+- **BTC ETF outflow record:** $3.4B weekly, $448M IBIT single day — ETF flow inversion (first positive day) is the primary catalyst to watch for regime shift; absent that, institutional hand stays off
 
 ## Implications for Downstream Skills
-- **token-pick:** cash/stable bias; avoid broad beta; ZEC and NEAR confirmed fading — no new entries; HYPE pre-unlock headwind through June 6; WLD (+50% from entry) and LIT (+$0.18 from entry) continue to carry; ZEST emerging — watch Day 2 for confirmation before entry
-- **narrative-tracker:** ZEC and AI-L1 (NEAR/LIT) downgraded rising→fading; HYPE advancing to peak (phase gate: June 6 unlock); ZEST emerging on Bitcoin DeFi/Stacks — one data point, needs Day 2; FIFA World Cup prediction markets approaching rising (pre-tournament volume surge, June 11 start)
+- **token-pick:** cash/stable bias maintained; ZEC and LAB confirmed fading/capitulating — no new entries; HYPE avoid through June 6 unlock; WLD (+59% from entry) and LIT carry; BABY (Babylon) emerging — watch Day 2 for sector confirmation before entry; BTC ETF flows need first positive day before broad beta exposure warranted
+- **narrative-tracker:** Bitcoin staking (BABY) emerging — single data point; HYPE peak→fading gate at June 6 unlock; ZEC capitulating within fading phase; LAB integrity-flag validated; WLD confirmed rising with relative price strength in risk-off tape
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
@@ -79,4 +80,4 @@ Total: ~$319.8B (+0.56% vs $318.03B yesterday — stables gaining share as crypt
 
 ---
 *Sources — btc/eth: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch*
-*Source status: coingecko=ok defillama=ok fng=ok polymarket=ok websearch=ok*
+*Source status: coingecko=ok defillama=ok(chains-7d-unavail-day8) fng=ok polymarket=ok websearch=ok*
