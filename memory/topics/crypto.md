@@ -75,6 +75,8 @@ narrative-and-pick layer.
 | 2026-06-01 | HOME | $0.0475 | HIGH 11 | defi.app v2 + android driving 500k+ active; 80% revenue → buybacks; **6-10 unlock risk 882M tokens** |
 | 2026-06-02 | JTO | $0.62 | HIGH 9 | Jito Q1 2026: 418M cum staked SOL, 56% validator growth, 9.7M JTO burned; APAC institutional partnership |
 | 2026-06-03 | ENA | $0.1023 | HIGH 10 | Coinbase Ventures open-market ENA buy + USDe/sUSDe distribution to Coinbase 100M+ users |
+| 2026-06-04 | HUMAN | (pick 6-04, see daily log) | (tier per log) | Carried in 7-day dedup window 6-05 |
+| 2026-06-05 | DEXE | $20.15 | MEDIUM 6 | BingX DEXE-USDT perp listing 5-25 broke $16 resistance held since Apr 2025; TVL tripled to ~$1.7B Q2 + validator voting layer push staking APR ~102%; risk: 48% supply circ, FDV $424M ~2x mcap, Q4 2026 unlock cliff. Market SKIPPED — no event cleared 5pp gate post-dedup |
 
 ## Picks deliberately skipped (rubric validated post-hoc)
 - **LAB** (5-29 → 6-02) — scored 10-11/10 five days running but skipped
@@ -94,6 +96,17 @@ narrative-and-pick layer.
   bounce); GITLAWB $0.00010324 (-14.16%, 2nd day under threshold);
   WELL/MAMO/REPPO/GITLAWB watchlist median 24h -7.49% (4-of-4 red,
   matches broad risk-off).
+- 2026-06-04: **REPPO -17.93% TRIPPED + GITLAWB -26.25% TRIPPED**
+  (first 24h trips since canonical watchlist landed PR #55).
+  GITLAWB 3-day cumulative -34% off 6-01 baseline (vertical capitulation
+  break). Median 24h -12.5%, 4-of-4 deep red.
+- 2026-06-05: REPPO $0.01281 (-6.75%, fade eases from -18.46% d/d
+  prior day, 3rd consecutive red); GITLAWB $0.00007214 (-0.25%, full
+  cooldown post-capitulation, slide has not reversed — still -6.50% d/d);
+  MAMO $0.007969 (-9.60% d/d, 3rd consecutive accelerating: -6.11/-7.16/-9.60%
+  6-03→6-05, 1bp closer to 15% rail daily — watch trip 6-06 if pattern
+  continues); WELL $0.00344 (-6.67%). Watchlist median 24h -6.71%
+  (4-of-4 red, median tightening from yesterday's -12.5%).
 
 ## Bitcoin
 See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline

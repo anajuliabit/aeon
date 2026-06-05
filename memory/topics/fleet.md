@@ -73,7 +73,7 @@ state: what was built, recurring blockers, and health.
 ## Recurring blockers
 - **15 unassigned reppo datanets.** Orchestrator surfaces them every run (ids
   1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17, 18 — id 18 ArAIstotle
-  surfacing 4 consecutive days through 2026-06-04). 15+ days untouched.
+  surfacing 5 consecutive days through 2026-06-05). 16+ days untouched.
   PR #30/#34/#37 unblock pod sourcing on datanet 9; still need an assignment
   rubric or operator pick for the other 15.
 - **ISS-005 durable fix still pending.** Agent-side filter (validityEpoch ≤
@@ -86,17 +86,24 @@ state: what was built, recurring blockers, and health.
 - **ISS-011 nonce-too-low REVERT.** Vote-391 1st run REVERTed (CLI provided
   nonce below current chain nonce after sibling votes landed same batch).
   2nd-run retry landed clean. Single occurrence so far; watch for recurrence.
-- **Trading-agent rubric saturation.** 10 consecutive dry runs through
-  2026-06-04 3rd-run (4 on 6-02 + 3 on 6-03 + 3 on 6-04): margin-top-12
-  collapses to the same shape every cycle — 5-6 spot-only, 1-2 perp-opens-only,
-  1 close-only HFT NEG-PnL liquidation (19<20 floor), 1 single-close mixed
-  (<20), 1 thin FARTCOIN (2 closes), 1-2 empty caches, 1 neg+regression.
-  0 clear the ≥20-closed-perp floor. 14th-mint cc41abf6 source wallet
-  0x9a1500b4 flipped NEG-PnL on 6-02 and stayed there; in-skill Step 4.2
-  regression guard codified and validated 2026-06-04 2nd-run (rejected
-  rank-12 0x9a1500b4 −$2,901 cleanly). In-skill rubric is exhausted —
-  unblock now requires operator config: prefetch perp-only filter,
-  `HL_MIN_VLM_USD` bump past spot HFT cluster, or `HL_WINDOW` switch.
+- **Trading-agent dry streak ENDED 2026-06-05** after 11 consecutive dry
+  runs through 6-04 4th-run. Three mints landed same day — new single-day
+  record. 15th-mint **4a9a582a** (0xecb63caa 821 HFT closes 14.69 min,
+  70 markets, perp-only filter retained 1768/1999 = 11.55% spot excluded,
+  +$7,500 Sharpe 1351 tx 0xdb5b7bbc), 16th-mint **16671d6f** (0x944b5f7d
+  29 SOL+BTC closes in 9.548s cluster, +$8,410 **Sharpe 48,523** = 2nd
+  highest in ledger ever tx 0xef7ce963), 17th-mint **e2e925b2** (0x781e95fd
+  201 LINK Close-Short over 2.88h, +$9,605 Sharpe 3782 tx 0xa86b8dca).
+  Two operator follow-ups emerged from the unlock: (a) formalize spot_pct
+  threshold in Step 4.2 alongside NEG/regression guards (15th-mint admitted
+  at 11.55% vs 10th-mint precedent rejected 0xecb63caa at ~20%); (b)
+  formalize Sharpe-vs-pnl selection criterion in Step 4 (17th-mint
+  Sharpe-tiebreak picked LINK 3782 over runner-up AAVE 3421 +$14,615 — an
+  alternate "max absolute pnl" rule would have selected AAVE). Margin-top-12
+  cohort had rotated wholly by 6-05 vs 6-04's saturated structure — likely
+  HL_WINDOW=week refresh rolled out the spot HFT cluster, not an in-skill
+  knob. Operator config asks (perp-only prefetch / HL_MIN_VLM_USD bump /
+  HL_WINDOW switch) NO LONGER on critical path.
 - **Sandbox `./notify "$(cat ...)"` arg-passing.** Now the dominant pattern —
   most content skills stage to `.pending-notify/` and let the post-run delivery
   step pick it up (today: morning-brief, github-trending, defi-overview,
@@ -227,8 +234,13 @@ state: what was built, recurring blockers, and health.
   agent's own pod reverts CANNOT_VOTE_FOR_OWN_POD. Fix: gate
   trading-agent vote_filter on publisher==agent (drop regardless of
   direction). own_pod_ids prefetch returning count=0 since filed
-  (**13 consecutive voter runs** through 2026-06-04 3rd-run); voter
-  self-recognizes via ledger cross-ref — durable workaround.
+  (**15 consecutive voter runs** through 2026-06-05 3rd-run); voter
+  self-recognizes via ledger cross-ref — durable workaround. 2026-06-05
+  re-run was 1st time the ledger workaround actually FIRED on the active
+  epoch (pod 583 = today's 15th-mint 4a9a582a self-filtered); 3rd-run
+  filtered BOTH own-mints on the active epoch (pod 583 + pod 585 = today's
+  15th + 16th mints in the same defensive pass). Workaround now demonstrated
+  durable under load, not just theoretical — prefetch repair priority drops.
 - **ISS-017 RESOLVED 2026-06-03** — chain-runner.yml `${{ inputs.chain }}`
   shell interpolation at lines 41 + 416 fixed via env: indirection
   (PR #64, commit 2a9ce1c). Day-3 carry → ship-in-morning ship cadence.
@@ -295,30 +307,41 @@ state: what was built, recurring blockers, and health.
   Open PR count back to 0. 4 high-sev opens → 3 (ISS-005, 009, 015 →
   005, 009 carry; 017 closed).
 
-## Recent anomalies (through 2026-06-04)
-- **Trading-agent rubric saturation** — 10 consecutive dry runs through
-  6-04 3rd run. Same structural shape every cycle. In-skill Step 4.2
-  regression guard now codified + validated; next unblock at operator
-  layer (see Recurring blockers).
+## Recent anomalies (through 2026-06-05)
+- **2026-06-05 trading-agent triple-mint** — 11-run dry streak ended;
+  3 mints landed same day (15th 4a9a582a HFT 821 closes, 16th 16671d6f
+  Sharpe 48,523 SOL+BTC 9.548s cluster, 17th e2e925b2 LINK 201 single-mkt).
+  New single-day record (surpasses 3-mint days 5-29 + 5-30). Two new
+  operator follow-ups emerged: spot_pct threshold in Step 4.2 and
+  Sharpe-vs-pnl tiebreak in Step 4. See Recurring blockers for detail.
+- **ISS-016 ledger workaround fired live 2026-06-05** for the first time
+  on the active epoch — re-run filtered pod 583 (own 15th-mint); 3rd-run
+  filtered pods 583 + 585 (own 15th + 16th mints) in the same pass.
+  15 consecutive voter runs at prefetch count=0 — workaround durable.
+- **Watchlist twin trip 2026-06-04** — REPPO −17.93% + GITLAWB −26.25%
+  both crossed 24h thresholds (first trips since canonical watchlist
+  landed PR #55). 2026-06-05 cooldown: REPPO −6.75%, GITLAWB −0.25%;
+  GITLAWB 3-day cumulative still −34% off 6-01 baseline. MAMO accelerating
+  d/d 3 consecutive days (-6.11/-7.16/-9.60% 6-03→6-05) toward 15% rail.
+- **narrative-tracker 2026-06-05 transitions** (Day 2 after re-baseline):
+  3 NEW (capital rotation crypto→AI equities, ETH leadership crisis,
+  proof-of-energy meta), 2 PROMOTED (BTC cycle-break Rising→Peak, RWA
+  Rising→Peak), 3 DEMOTED (Hyperliquid Peak→Fading per HYPE −8.65%,
+  privacy coins Rising→Fading per ZEC −43.66%, institutional BTC Peak→
+  softening), 2 DEAD (LAB Fading→DEAD, altseason rotation Rising→DEAD).
+  6-04 contrarian-FADE on BTC cycle-break was wrong; consensus bear played
+  out. Reflexivity flagged 3 (Hyperliquid unlock, ZEC AI-assisted exploit,
+  capital rotation self-fulfilling).
 - **chain:reppo-swarm state-flip**: 2026-06-02 12:23Z `cron-state.json`
   flipped `last_status=failed` while `gh run view` confirmed workflow
   exit `conclusion=success`. ~5s gap between in-chain state-writer and
-  final workflow exit; cleared on 18:12Z chain cycle. 5 successful chain
-  cycles since (6-03 × 3, 6-04 × 2). Investigating under ISS-010 scope.
-  Not a real chain failure but flips `docs/status.md` momentarily to
-  DEGRADED on the literal rule.
-- **ISS-016 own_pod_ids prefetch** count=0 for **13 consecutive voter
-  runs** through 6-04 3rd-run; voter self-recognizes via ledger
-  cross-ref (durable workaround). Prefetch repair still pending.
-- **narrative-tracker re-baselined 2026-06-04** after 14-day silent gap
-  (skill disabled most of window, re-enabled via PR #67 cohort-proven
-  cluster). 16 narratives scored against 5-21 baseline + crypto.md
-  state; 6 NEW, 2 PROMOTED, 1 DEMOTED, 2 DEAD. Reflexivity flagged on
-  3 (BTC cycle-break consensus, HYPE stacked catalysts, AI x Crypto
-  infra VC concentration).
-- **on-chain-monitor + defi-monitor first-fired 2026-06-04** at
-  NO_CONFIG. Both gated behind `memory/on-chain-watches.yml` which is
-  absent; skills exit cleanly without notification. Operator-populate
+  final workflow exit; cleared on 18:12Z chain cycle. **7 successful chain
+  cycles since** (6-03 × 3, 6-04 × 2, 6-05 × 2). Investigating under
+  ISS-010 scope. Not a real chain failure but flips `docs/status.md`
+  momentarily to DEGRADED on the literal rule.
+- **on-chain-monitor + defi-monitor 2nd-consecutive NO_CONFIG 2026-06-05**
+  (1st was 6-04 first-fire). Both gated behind `memory/on-chain-watches.yml`
+  which is absent; skills exit cleanly without notification. Operator-populate
   required before either produces signal.
 - **vibecoding-digest cron-state mismatch**: skill emits
   VIBECODING_DIGEST_ERROR notification but workflow exits 0, so

@@ -1,1 +1,1 @@
-memory consolidated — 2026-06-04. trimmed MEMORY.md 142→90 lines, lessons + issue detail moved to topics/fleet.md. 4 goals closed since last reflect (iss-017 PR #64, iss-015 wontfix PR #65, iss-009 sub-task a PR #69, trading-agent step-4.2 regression guard validated). 8 carried — operator-level trading-agent knob now the hot loop.
+Memory consolidated — 2026-06-05
