@@ -2,16 +2,22 @@ All three writes are done. Here's the summary:
 
 ## Summary
 
-**skill-freshness — 2026-06-04 · FRESHNESS_NO_CHANGE**
+**skill-freshness** — 2026-06-05 run complete.
 
-Audited 41 enabled skills across aeon.yml (up from 34 yesterday — token-movers, on-chain-monitor, defi-monitor, fork-skill-digest, fork-skill-gap, operator-scorecard, and weekly-shiplog are newly counted). Found 3 tracked cross-skill dependencies, all OK by mtime:
+**Verdict:** ✅ FRESHNESS_OK / FRESHNESS_NO_CHANGE
 
-| Consumer | Dependency | Class | Severity |
-|---|---|---|---|
-| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | articles/weekly | ✅ OK |
-| skill-security-scan | `memory/state/security-scan.json` | state | ✅ OK |
-| vuln-scanner | `.outputs/github-trending.md` | outputs | ✅ OK |
+**What was audited:**
+- 42 enabled consumers across `aeon.yml`
+- 3 cross-skill file dependencies tracked (same set as yesterday):
+  1. `skill-security-scan` → `articles/workflow-security-audit-2026-04-11.md` (weekly producer, 192h threshold, 0m old — OK)
+  2. `skill-security-scan` → `memory/state/security-scan.json` (state, 720h threshold, 0m old — OK)
+  3. `vuln-scanner` → `.outputs/github-trending.md` (outputs, 4h threshold, 0m old — OK)
+- 8 references filtered (6 self-refs, 1 code-block example, 1 implicit-never-existed)
+- 0 flagged
 
-8 references filtered: 6 self-refs (market-context-refresh, fleet-control ×2, reg-monitor, unlock-monitor, fork-skill-digest), 1 code-block example (heartbeat), 1 implicit-never-existed (fork-skill-gap → fork-cohort-state.json). None of the 7 newly-audited skills introduced new cross-skill deps.
+**Dedup verdict:** FRESHNESS_NO_CHANGE — fingerprint (SHA1 of empty flagged set) and verdict are identical to the 2026-06-04 run; notification suppressed, 7-day re-emit window active.
 
-Fingerprint unchanged from 2026-06-03 → **FRESHNESS_NO_CHANGE** — notification suppressed per 7-day dedup window. Files written: `articles/skill-freshness-2026-06-04.md`, `memory/topics/skill-freshness-state.json` (consumer_count 34→41), `memory/logs/2026-06-04.md` (appended).
+**Files written:**
+- `articles/skill-freshness-2026-06-05.md` — today's report
+- `memory/topics/skill-freshness-state.json` — updated last_run_at + consumer_count (41→42)
+- `memory/logs/2026-06-05.md` — log block appended
