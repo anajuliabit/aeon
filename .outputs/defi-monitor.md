@@ -1,8 +1,12 @@
 ## Summary
 
-Ran `skills/defi-monitor/SKILL.md` — `memory/on-chain-watches.yml` does not exist, so per the skill's terminal instruction (`If no DeFi positions configured, log "DEFI_MONITOR_OK" and end`), no queries ran and no notification was sent.
+**defi-monitor** — `DEFI_MONITOR_OK` no-op.
 
-**Files modified:**
-- `memory/logs/2026-06-04.md` — appended `### defi-monitor` entry with `DEFI_MONITOR_OK` status and config pointer.
+- `memory/on-chain-watches.yml` absent → no DeFi positions configured.
+- No queries run, no notification sent (per SKILL.md end-state).
+- 2nd consecutive no-op since the skill was enabled via PR #67; 1st was 2026-06-04 with the same state.
+- Operator follow-up unchanged from open MEMORY goal: populate `memory/on-chain-watches.yml` with `type: pool` or `type: position` entries (schema in SKILL.md:14-31) before this skill produces signal.
 
-**Follow-up:** Skill stays a no-op until operator populates `memory/on-chain-watches.yml` with `type: pool` / `type: position` entries (schema at SKILL.md:14-31).
+**Files modified:** `memory/logs/2026-06-05.md` (defi-monitor log entry inserted before reppo-digest 3rd-run entry).
+
+**No notifications, no PRs, no commits, no issues filed.**
