@@ -1,17 +1,15 @@
 ## Summary
 
-**Gate:** RUN per `reppo-orchestrator` (datanet 9 valid, rubric tradinggymai).
+Executed `skills/reppo-voter/SKILL.md` against the freshly prefetched cache.
 
-**Universe:** 61 pods on datanet 9. `current_epoch=101` per `vote-filter-tradinggymai.json` (prefetch authoritative; orchestrator output reported epoch 97, treating the vote-filter as truth since it's the artifact this skill is contractually told to read).
-
-**Filter results:**
-- Out-of-epoch (validityEpoch ≤ 100): **59 pods**
-- Already-voted at epoch 101: **2 pods** (508 + 507 — the only two epoch-101 pods exist in `voted_pod_ids`)
-- Additional defensive own-pod skips: **0** (the 11 ledger-matched own mints — 392/395/399/402/406/412/413/462/463/478/492 — were all already cut by the out-of-epoch filter)
-
-**Eligible: 0.** No vote intents written. `.pending-reppo/` not created — nothing to queue. ISS-005 all-DISLIKE guard does not apply (empty eligible set, not a curation signal). No prompt-injection attempts seen in pod metadata.
+- **Gate:** RUN (datanet 9 valid, per `reppo-orchestrator` plan).
+- **Universe:** 62 pods on datanet 9, `current_epoch=101`.
+- **Filtered:** 59 out-of-epoch, 2 already-voted (508 + 507), 1 own-pod (583 — exact ledger match to today's 15th-mint wallet `0xecb63caa..2b00`, 821 trades, content hash `4a9a582aaf538d40`).
+- **Eligible:** 0 → no vote intents written. `.pending-reppo/` not created.
+- **Notable:** 1st run where the ISS-016 own-pod defensive filter actually fired on the active epoch — prior 13 voter runs all self-filtered via the out-of-epoch cut. ISS-016 own-pods prefetch repair remains the standing carry.
 
 **Files modified:**
-- `memory/logs/2026-06-05.md` — appended `### reppo-voter` log entry.
+- `.outputs/reppo-voter.md` — overwritten with current run's summary.
+- `memory/logs/2026-06-05.md` — appended `### reppo-voter (re-run)` entry.
 
-**Follow-ups:** None from this run. Next epoch-101 pod that lands fresh would be the first eligible candidate; until then voter naturally idles.
+**Follow-ups:** None. Voter will idle until a non-own epoch-101 pod surfaces or epoch rolls to 102.
