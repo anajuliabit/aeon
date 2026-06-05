@@ -6,14 +6,12 @@ daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
 ## Narrative tracker
-- **RIDE: Perp DEX / Hyperliquid.** HYPE rank #11 ($13.8B mcap region),
-  HL Perps fees holding #3 multi-day, Grayscale HYPG staking ETF live
-  2026-06-03, June 6 unlock $684M = next phase gate. Adjacent infra:
-  Coinbase × Circle made Coinbase official USDC treasury deployer on
-  HL (sharing reserve yield on $5.5B balance, 2026-05-30 catalyst);
-  Bitwise BHYP + 21Shares THYP spot ETFs live; OpenSea perps via HL
-  builder codes 2026-06-03. Watch for rising→peak transition around
-  the unlock.
+- **FADE: Perp DEX / Hyperliquid.** Demoted Peak→Fading 2026-06-05.
+  HYPE −8.65% intraday on 6-05, 7d green-hold finally broke (was
+  −1.15% at the close). 06-06 $684M unlock priced in — HYPG staking
+  ETF (6-03) + Coinbase USDC treasury deployer (5-30) + OpenSea perps
+  (6-03) + Bitwise BHYP / 21Shares THYP spot ETFs all spent ahead of
+  the unlock. Reflexivity flag from 6-04 validated.
 - **RIDE: Stablecoin payment rails / x402.** 169M machine-native
   payments, $73M settled May 2025–Apr 2026, USDC 98.6% share. AWS
   Bedrock AgentCore Payments + Coinbase + Stripe rails. Base shipped
@@ -34,15 +32,33 @@ narrative-and-pick layer.
 - **WATCH: AI Data Networks (ALLORA).** ALLO trending +176% on filing,
   no top-50 yet — single-token signal.
 - **WATCH: Institutional BTC / corporate treasuries.**
-- **FADE: Privacy Coins.** ZEC +8.25% 24h 2026-06-03 broke from prior
-  fading-day call (multi-day red streak ended; Grayscale ZCSH ETF
-  catalyst). 7d turned positive — promoted to rising in
-  [[market-context]] 2026-06-03.
-- **FADE: AI-agent token basket.** PHALA-style pumps without product.
-- **FADE: AI identity (LAB).** Day 6 crack confirmed 2026-06-03
-  (−15% to −20% 24h, ZachXBT 95%-insider-supply flag finally cracked
-  the price; token-pick skipped 5 straight days — rubric validated
-  post-hoc).
+- **FADE: Privacy Coins.** Demoted Rising→Fading 2026-06-05 after
+  ZEC −43.66% capitulation on Orchard infinite-mint exploit
+  (AI-assisted attack vector per aixbt). Structural thesis break —
+  the 6-03 Grayscale ZCSH ETF bounce reversed in 48h.
+- **FADE/DEAD: AI-agent token basket.** PHALA-style pumps without
+  product. No fresh signal 6-05; approaching DEAD.
+- **DEAD: AI identity (LAB).** LAB −36.82% 6-05 capitulation, day 6
+  since ZachXBT 95%-insider-supply flag finally cracked it (6-03
+  −15% to −20%). Token-pick skipped 5 straight days pre-crack —
+  rubric validated post-hoc.
+- **NEW (6-05): Capital rotation crypto → AI equities.** NVDA +
+  Broadcom ATH while BTC dropped <$62k and ETH to $1,625 (−8%,
+  lowest since apr 2025). Fund-flow chart confirming the "AI eats
+  crypto liquidity" thesis is itself reflexive. WATCH.
+- **NEW (6-05): ETH leadership crisis.** $1,625, lowest since apr
+  2025; privacy coins leading losses with it. Bear: staking yield
+  + L2 fee compression eating value. WATCH.
+- **NEW (6-05): Proof-of-Energy meta** (@solarious_us). Consensus =
+  real-world renewable production framing. Bear: renewable-crypto
+  bridge has churned a decade with no adoption. WATCH.
+- **PROMOTED Rising→Peak (6-05): BTC cycle-break confirmed.** 6-04
+  contrarian-FADE call was wrong; consensus bear played out (Fear &
+  Greed at 11, ETF outflows continued). WATCH.
+- **PROMOTED Rising→Peak (6-05): RWA tokenization.** Listed #2 in
+  today's xai cache (@Jef_web3X top-5 dominant narratives).
+- **DEAD (6-05): Altseason rotation.** Yesterday's ↑↑/Rising/Mixed
+  killed by today's ETH crisis.
 - Reflexivity flagged: AI-agent tokens, Hyperliquid FDV, Solana
   "underlayer".
 - Note: Kaito Yaps/Yapper leaderboards shut Jan 15 2026 — no live
