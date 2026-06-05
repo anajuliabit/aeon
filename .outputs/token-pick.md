@@ -1,17 +1,15 @@
+Sandbox blocks `rm` — known limitation (MEMORY.md "Cleanup chain-runner scratch" goal). Leaving `.tmp-token-pick/` for post-run cleanup.
+
 ## Summary
 
-**Token: HUMAN ($H, Humanity Protocol)** — MEDIUM, signal 6/10. $0.59 (+0.03% 24h / +130.5% 7d), mcap $1.1B, vmc 0.17. Only three top-100 names printed dual-positive in a deep risk-off tape (BTC -13% 7d). Catalyst: altcoin rotation into AI/decentralized-identity, ATH $0.85 on 06-02 on OpenAI/Anthropic/SpaceX IPO narrative + 8M+ Human IDs. Risk: 70%-haircut tokens unlock 2026-06-25 (21 days out) — supply overhang post-parabola, already -30% off 06-02 ATH.
+**Token Pick — 2026-06-05** delivered. DEXE picked at MEDIUM 6/10 — first time picked, clean +8/+8 grind into a -16% BTC / -17.6% ETH 7d tape. Catalyst: BingX perp listing 2026-05-25 broke long-held ~$16 resistance + DeXe protocol TVL tripled to $1.7B + 102% staking APR locking float. Risk: 48% supply circulating, FDV ~2x mcap, Q4 2026 unlock cliff.
 
-**Market: SKIPPED** — only the Starmer family cleared the $50k 24h-vol gate. June-30 sub-market picked 2026-05-28 (dedup blocked); Dec-31 sub-market blocked under dedup-spirit (same political-mechanics thesis). Everything else sub-$5k 24h vol.
+**Market: SKIPPED.** Only 4 events cleared $50k vol gate; all dedup-blocked or fail 5pp edge (Knicks ~1.65pp). NHL Carolina dedup-spirit blocked under 6-04 precedent (same series as 6-03 Vegas pick, just inverted).
 
-**Integrity overrides applied:**
-- SIREN raw 8/10 (BSC AI-agent) — REJECTED on insider-trading/pump-dump press flags, matching the LAB precedent (5-29).
-- LAB raw 6/10 — REJECTED standing call (ZachXBT 95%-insider-supply flag).
+Three high-scoring candidates rejected on research: **QAIT** (raw 8/10, 8-day-old World Premiere listing with parent stock voting no-confidence -10.5%), **LIT** (raw 7/10, no catalyst + Dec 2026 50% insider cliff + losing perp-DEX share to HYPE), **BEAT** (raw 6/10, 15%-float unlock + Arkham-flagged wallet clustering = insider distribution shape).
 
-**Files:**
-- Staged `.pending-notify/1780577745.md` for post-run notify delivery (sandbox blocked live `./notify`).
-- Wrote `.outputs/token-pick.md` Summary block.
-- Appended Token Pick + `TOKEN_PICK_DEDUP: HUMAN | SKIP` to `memory/logs/2026-06-04.md`.
-- Appended HUMAN row to Token Picks Made table in `memory/topics/market-context.md`.
+Files modified:
+- `.pending-notify/token-pick-2026-06-05.md` — notification staged for post-run delivery
+- `memory/logs/2026-06-05.md` — log entry appended with dedup grep line `TOKEN_PICK_DEDUP: DEXE | SKIP`
 
-**Sources:** cg=ok, dex=ok (data returned but cross-confirm noise — pumpfun ghost-tokens named "Trending"), poly=ok. **Follow-up:** none.
+Follow-up: `.tmp-token-pick/` scratch left behind (sandbox blocks `rm` mid-run — known issue under MEMORY.md "Cleanup chain-runner scratch" goal).
