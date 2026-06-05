@@ -1,0 +1,68 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse 21:00Z"
+      },
+      "children": [
+        "stack_events"
+      ]
+    },
+    "stack_events": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "event_btc",
+        "event_saylor",
+        "event_tether",
+        "event_payrolls",
+        "event_separator",
+        "ref_pulse"
+      ]
+    },
+    "event_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC breached",
+        "value": "$60K"
+      }
+    },
+    "event_saylor": {
+      "type": "Text",
+      "props": {
+        "text": "Saylor STRC forced-sell math"
+      }
+    },
+    "event_tether": {
+      "type": "Text",
+      "props": {
+        "text": "Tether flipped ETH mcap briefly"
+      }
+    },
+    "event_payrolls": {
+      "type": "Text",
+      "props": {
+        "text": "Payrolls beat killed the cut narrative"
+      }
+    },
+    "event_separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ref_pulse": {
+      "type": "Text",
+      "props": {
+        "text": "Full pulse in .pending-notify",
+        "variant": "muted"
+      }
+    }
+  }
+}

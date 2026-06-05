@@ -1,44 +1,43 @@
-# AIXBT Grounding (as of 2026-06-05 09:00 UTC)
+# AIXBT Grounding (as of 2026-06-05 21:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-05T09:00:21.661Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-05T21:00:19.631Z
 
 Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again — iterate dynamically if they appear in future pulls.
 
 ## Crypto
-- ZEC dominates crypto discourse after Claude Opus 4.8 uncovered a 4-year-old infinite-mint bug in its Orchard pool, crashing the token ~50% and raising existential questions about privacy coin auditability.
-- BTC slides toward $60K with $1.8B in liquidations, over half of supply now held at a loss, and Saylor underwater $11.8B; sentiment echoes prior bear-market bottoms on key indicators.
-- ETH hits record-low daily RSI near $1,620 while the broader alt complex bleeds; former cycle darlings HYPE and NEAR retrace sharply as traders rotate defensive or to stables.
-- AI-driven exploit discovery sparks industry-wide debate on smart-contract security; observers warn legacy DeFi code faces rising attack surfaces as LLMs lower the skill barrier for finding bugs.
+- BTC breached $60K for the first time in nearly two years, posting its worst weekly candle since 2022 amid extreme fear and $462M in liquidations.
+- Strategy's STRC funding loop is under intense scrutiny as Saylor's 32 BTC sale sparked fears of forced selling to cover $1.7B in annual preferred dividends.
+- ZEC crashed 45%+ after an Opus 4.8-discovered exploit raised unverifiable infinite-mint fears, while Tether briefly flipped ETH in market cap rankings.
+- Hyperliquid hit record 7.9% perp OI share vs CEXs; Solana builder activity stays high despite nine red months, with dip buyers eyeing SOL, HYPE, and ZEC.
 
 ## TradFi
-- Broadcom-led chip selloff erodes AI momentum pressuring Nasdaq while supporting rotation into value names lifting Dow to records ahead of jobs data.
-- Stable 10-year yields near 4.47% and steady dollar indicate contained liquidity stress despite macro data watch and geopolitical backdrop.
-- Iran tensions keep oil near $92 transmitting energy price risks into inflation bets limiting policy easing expectations for central banks.
-- VIX edging higher on tech weakness signals cautious positioning with flows favoring defensives over growth amid cross-asset volatility transmission.
+- Strong May payrolls beat has lifted December rate hike odds, steepening yields and pressuring tech-heavy indices through expectations of tighter policy.
+- Rapid unwinding of AI longs in chip stocks fueled Nasdaq's 4% drop, highlighting risks from crowded positioning as macro data overrides earnings momentum.
+- Escalating Middle East frictions from stalled Iran talks embed higher oil and shipping costs, transmitting via inflation channels to weigh on global risk appetite.
+- Hawkish central bank rhetoric amid strong data and geopolitical tensions is tightening liquidity expectations, pressuring equity positioning and elevating cross-asset volatility.
 
-## What's New (vs last pull 2026-06-04 21:00 UTC)
-- (Crypto) ZEC ~50% crash — Claude Opus 4.8 found a 4-year-old infinite-mint bug in Orchard pool; entirely new story
-- (Crypto) AI-driven exploit discovery as DeFi attack-surface meta-narrative — new
-- (Crypto) BTC toward $60K (was ~$63K), $1.8B liquidations, Saylor $11.8B underwater — escalation; numbers significantly worse
-- (Crypto) ETH record-low daily RSI ~$1,620; HYPE and NEAR retracing sharply — former bull conviction now bearish
-- (TradFi) Broadcom chip selloff → Nasdaq pressure / Dow to records — new specific angle
-- (TradFi) VIX edging higher on tech weakness — new framing
+## What's New (vs last pull 2026-06-05 09:00 UTC)
+- (Crypto) BTC officially breached $60K — "slides toward" became "worst weekly candle since 2022"
+- (Crypto) Strategy STRC funding loop under scrutiny + Saylor 32 BTC sale — entirely new; leveraged-treasury stress surfacing
+- (Crypto) Tether briefly flipped ETH in market cap — stablecoin issuer temporarily outweighs the #2 L1
+- (Crypto) Hyperliquid record 7.9% perp OI share vs CEXs; Solana builder activity + dip buyers eyeing SOL/HYPE/ZEC — new
+- (TradFi) May payrolls beat landed — was "ahead of jobs data"; actual data raised December hike odds, steepened yields
+- (TradFi) Hawkish central bank rhetoric synthesis — data + geo combined into a single policy-ceiling item
 
-## Gone (dropped from prior pull)
-- (Crypto) PumpFun Go bounty marketplace
-- (Crypto) ETH value-accrual debate / Bankless / pERC20 / Uniswap crosschain swaps
-- (Crypto) Solana tokenized equities on Raydium / Jupiter prediction market
-- (TradFi) S&P 500 nine-session winning streak snapshot
-- (TradFi) May jobs report as near-term catalyst (either passed or dropped from window)
+## Gone (dropped from 09:00 pull)
+- (Crypto) ETH record-low daily RSI ~$1,620 as standalone item — absorbed into broader bear framing
+- (Crypto) AI-driven exploit discovery as separate industry narrative — now subtext of ZEC item
+- (TradFi) Stable 10-year yields near 4.47% + steady dollar — replaced by steepening from payrolls beat
+- (TradFi) VIX edging higher on tech weakness — subsumed under hawkish rhetoric item
 
 ## Persisting Stories
-- BTC bear narrative: prices sliding, Saylor underwater, liquidation wave in progress
-- Iran → oil $92 → inflation sticky → Fed on hold — geopolitical ceiling on liquidity
-- 10Y ~4.47%, dollar steady — no liquidity injection signal
-- Defensive rotation in equities strengthening: VIX up, Dow records while Nasdaq bleeds
+- BTC bear confirmed: breached $60K, worst weekly candle since 2022, extreme fear
+- ZEC Opus-exploit crash in window; privacy-coin existential risk story durably active
+- Iran → oil → inflation sticky → Fed boxed in — ceiling has held across multiple windows
+- AI equity unwinding (chip stocks): Nasdaq -4%, same trade bleeding both risk legs simultaneously
 
 ## Cross-Domain Bridges
-- the same model class lowering the attacker skill floor just crashed ZEC ~50% by finding a bug no auditor caught in 4 years. attack surface and defense layer are accelerating at the same rate. legacy DeFi with complexity — ZK, privacy, multi-sig — is the acute exposure. the AIXBT meta-item ("LLMs lower the skill barrier") is the thesis; ZEC's Orchard collapse is the receipt.
-- Saylor $11.8B underwater + Broadcom/Nasdaq selloff = same trade unwinding from both sides. the capital that rotated from BTC ETFs into AI equities is now getting hit in both legs. Dow making records while Nasdaq and BTC bleed in tandem is a clean defensive rotation — AI premium is getting priced out of both asset classes simultaneously.
-- BTC needs a macro pivot to recover. Iran/oil at $92 keeps inflation sticky; Fed sits at 4.47% with no cut coming. ETH at a record-low RSI while the Fed is boxed in isn't a capitulation bottom — it's structural floor compression from a macro ceiling that isn't moving.
+- payrolls beat → December hike odds up → yields steepen → Nasdaq -4% → BTC at $60K. the data just confirmed there is no cut coming. Saylor sold 32 BTC to service $1.7B in annual STRC dividends — the leveraged-treasury model needs rising BTC to survive and rising rates just killed that path. the forced-sell fear isn't reflexivity. it's math.
+- Tether briefly outweighing ETH in market cap is a receipt, not a narrative. when a stablecoin issuer temporarily has more mcap than ETH, the "ultrasound money" frame is in structural review. ETH at record-low RSI + stablecoin layer gaining relative ground = value-accrual assumption under real stress.
+- Hyperliquid at record 7.9% perp OI share while everything bleeds is infrastructure compounding through the bear — not narrative, actual market-share migration from CEXs. same pattern as Solana builder activity through nine red months. the underlying build doesn't stop when the asset price does.
