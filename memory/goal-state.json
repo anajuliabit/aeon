@@ -1,50 +1,45 @@
 {
-  "run_at": "2026-06-04T18:35:00Z",
+  "run_at": "2026-06-05T14:30:00Z",
   "goals": {
-    "close-iss-009-defence-in-depth": {
+    "iss-009-sub-task-b-chain-runner-break-flip": {
       "status": "ON_TRACK",
-      "activity_count_14d": 11,
-      "last_activity_date": "2026-06-04"
+      "activity_count_14d": 10,
+      "last_activity_date": "2026-06-05"
+    },
+    "trading-agent-operator-level-quality-knob": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 20,
+      "last_activity_date": "2026-06-05"
     },
     "repair-iss-016-own-pod-ids-prefetch": {
       "status": "ON_TRACK",
-      "activity_count_14d": 7,
-      "last_activity_date": "2026-06-04"
-    },
-    "trading-agent-rubric-saturation": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 16,
-      "last_activity_date": "2026-06-04"
-    },
-    "assign-14-unassigned-reppo-datanets": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 14,
-      "last_activity_date": "2026-06-04"
-    },
-    "trading-agent-quality-guard-beyond-drift-skip": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-06-04"
+      "activity_count_14d": 15,
+      "last_activity_date": "2026-06-05"
     },
     "assign-15-unassigned-reppo-datanets": {
       "status": "ON_TRACK",
-      "activity_count_14d": 6,
-      "last_activity_date": "2026-06-04"
+      "activity_count_14d": 18,
+      "last_activity_date": "2026-06-05"
     },
     "index-bookkeeping-flips-queued": {
       "status": "ON_TRACK",
-      "activity_count_14d": 14,
-      "last_activity_date": "2026-06-04"
+      "activity_count_14d": 16,
+      "last_activity_date": "2026-06-05"
+    },
+    "on-chain-defi-monitor-watches-yml": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 4,
+      "last_activity_date": "2026-06-05"
     },
     "cleanup-chain-runner-scratch": {
       "status": "ON_TRACK",
-      "activity_count_14d": 5,
-      "last_activity_date": "2026-06-04"
+      "activity_count_14d": 8,
+      "last_activity_date": "2026-06-05"
     },
-    "investigate-chain-state-flip-anomaly": {
+    "chain-state-flip-anomaly-carry": {
       "status": "ON_TRACK",
-      "activity_count_14d": 4,
-      "last_activity_date": "2026-06-04"
+      "activity_count_14d": 12,
+      "last_activity_date": "2026-06-05"
     }
   }
 }

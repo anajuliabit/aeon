@@ -1,0 +1,159 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-06-05"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-grid",
+        "trend-badge",
+        "sep1",
+        "achievements-stack",
+        "sep2",
+        "pending-stack"
+      ]
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-on-track",
+        "stat-done",
+        "stat-risk"
+      ]
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "8"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "4"
+      }
+    },
+    "stat-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "trend-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ Improving",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "achievements-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "achievement-heading",
+        "achievement-text"
+      ]
+    },
+    "achievement-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Progress",
+        "level": "h3"
+      }
+    },
+    "achievement-text": {
+      "type": "Text",
+      "props": {
+        "text": "2 mints today end 11-run dry streak",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pending-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pending-heading",
+        "pending-items-stack"
+      ]
+    },
+    "pending-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Pending (awaiting operator)",
+        "level": "h3"
+      }
+    },
+    "pending-items-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pending-item-1",
+        "pending-item-2",
+        "pending-item-3"
+      ]
+    },
+    "pending-item-1": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-009 (b)",
+        "variant": "outline"
+      }
+    },
+    "pending-item-2": {
+      "type": "Badge",
+      "props": {
+        "text": "watches.yml",
+        "variant": "outline"
+      }
+    },
+    "pending-item-3": {
+      "type": "Badge",
+      "props": {
+        "text": "INDEX flips",
+        "variant": "outline"
+      }
+    }
+  }
+}
