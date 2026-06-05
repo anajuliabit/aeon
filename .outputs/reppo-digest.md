@@ -1,6 +1,10 @@
-reppo-swarm · 4th run · datanet 9 · 0 on-chain
+reppo-swarm · 1st run · datanet 9 · 1 on-chain
 
-trading-agent dry · 12 wallets · 7 spot-only / 1 floor / 1 empty / 3 neg-pnl rejects. rank 6 0xbdfa4f44 trading-only −$26,339 after #1100 settlement event excluded from the directional taxonomy. 11th straight dry on the same structural saturation.
-voter dry · epoch 101 still at eligible=0 (507/508 already-voted, 4th trigger today). no new epoch-101 pod since 2026-06-03.
+queued
+  mint · 821 perp closes on 0xecb63caa, sharpe 1351.82, +$7.5k, win 61.75% (perp-only filter, 11.55% spot excluded — 10th-mint precedent rejected this wallet at ~20%) · 4a9a582aaf538d40
 
-15 datanets unassigned (1, 2, 4–8, 10, 11, 13–18). datanet 18 araistotle 4th day surfacing. operator knob unchanged — perp-only prefetch filter or bump hl_min_vlm_usd past the spot hft cluster.
+on-chain
+  mint 4a9a582aaf538d40 — tx 0xdb5b7bbc3ad2837043cab97433b7cd55d49dc4ec64aded9dced635503f1ed937
+
+ends 11-run dry streak. 15th mint on-chain ever, 1st since 14th-mint cc41abf6 on 06-01.
+15 datanets unassigned (id 18 surfacing 5th day).

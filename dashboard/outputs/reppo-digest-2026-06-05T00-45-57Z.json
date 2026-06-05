@@ -1,0 +1,203 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 1st run · datanet 9 · 1 on-chain"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_queued",
+        "separator1",
+        "section_onchain",
+        "separator2",
+        "section_summary"
+      ]
+    },
+    "section_queued": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_queued",
+        "mint_description",
+        "stats_grid",
+        "filter_details",
+        "mint_id"
+      ]
+    },
+    "heading_queued": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "mint_description": {
+      "type": "Text",
+      "props": {
+        "text": "821 perp closes on 0xecb63caa"
+      },
+      "children": []
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_sharpe",
+        "stat_profit",
+        "stat_win"
+      ]
+    },
+    "stat_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe Ratio",
+        "value": "1351.82"
+      },
+      "children": []
+    },
+    "stat_profit": {
+      "type": "Stat",
+      "props": {
+        "label": "Profit",
+        "value": "+$7.5k",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_win": {
+      "type": "Stat",
+      "props": {
+        "label": "Win Rate",
+        "value": "61.75%"
+      },
+      "children": []
+    },
+    "filter_details": {
+      "type": "Text",
+      "props": {
+        "text": "perp-only filter, 11.55% spot excluded — 10th-mint precedent rejected this wallet at ~20%",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "mint_id": {
+      "type": "Text",
+      "props": {
+        "text": "ID: 4a9a582aaf538d40",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_onchain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_onchain",
+        "onchain_mint",
+        "onchain_tx"
+      ]
+    },
+    "heading_onchain": {
+      "type": "Heading",
+      "props": {
+        "text": "On-Chain",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "onchain_mint": {
+      "type": "Text",
+      "props": {
+        "text": "mint 4a9a582aaf538d40"
+      },
+      "children": []
+    },
+    "onchain_tx": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0xdb5b7bbc3ad2837043cab97433b7cd55d49dc4ec64aded9dced635503f1ed937",
+        "href": "https://etherscan.io/tx/0xdb5b7bbc3ad2837043cab97433b7cd55d49dc4ec64aded9dced635503f1ed937"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_summary",
+        "summary_streak",
+        "summary_milestone",
+        "summary_datanets"
+      ]
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "summary_streak": {
+      "type": "Text",
+      "props": {
+        "text": "Ends 11-run dry streak"
+      },
+      "children": []
+    },
+    "summary_milestone": {
+      "type": "Text",
+      "props": {
+        "text": "15th mint on-chain ever, 1st since 14th-mint cc41abf6 on 06-01"
+      },
+      "children": []
+    },
+    "summary_datanets": {
+      "type": "Text",
+      "props": {
+        "text": "15 datanets unassigned (id 18 surfacing 5th day)"
+      },
+      "children": []
+    }
+  }
+}
