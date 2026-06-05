@@ -1,0 +1,22 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter"
+      },
+      "children": [
+        "stat_actions"
+      ]
+    },
+    "stat_actions": {
+      "type": "Stat",
+      "props": {
+        "label": "Actions staged",
+        "value": "5"
+      }
+    }
+  }
+}
