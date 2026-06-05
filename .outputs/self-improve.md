@@ -1,1 +1,1 @@
-self-improve: narrowed fetch-tweets var bare 'mamo' → '$MAMO' cashtag (same shape as already-present $WOOD). 2026-06-01 run was 0/10 relevant — all hits were Arabic 'DMs open' + Japanese handles + Natalie Wood substring collisions. PR: https://github.com/anajuliabit/aeon/pull/62
+self-improve: codified supply-chain compromise as PATCH TODAY in security-digest (type=malware fetch + KEV-equivalent passthrough + keyword fallback). closes today's ad-hoc analog-to-KEV elevation pattern. — PR: https://github.com/anajuliabit/aeon/pull/72

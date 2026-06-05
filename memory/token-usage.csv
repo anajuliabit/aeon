@@ -306,3 +306,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-05,security-digest,claude-opus-4-7,37,21282,1901369,122746
 2026-06-05,fleet-control,claude-opus-4-7,55,4020,498988,47333
 2026-06-05,list-digest,claude-opus-4-7,37,13189,1572495,76630
+2026-06-05,self-improve,claude-opus-4-7,27,14979,1832012,73068

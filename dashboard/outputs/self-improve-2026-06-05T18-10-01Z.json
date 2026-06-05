@@ -1,0 +1,64 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-description",
+        "text-technical",
+        "text-result",
+        "separator-main",
+        "link-pr"
+      ]
+    },
+    "text-description": {
+      "type": "Text",
+      "props": {
+        "text": "Codified supply-chain compromise as PATCH TODAY in security-digest",
+        "variant": "lead"
+      }
+    },
+    "text-technical": {
+      "type": "Text",
+      "props": {
+        "text": "Type: malware fetch + KEV-equivalent passthrough + keyword fallback",
+        "variant": "body"
+      }
+    },
+    "text-result": {
+      "type": "Text",
+      "props": {
+        "text": "Closes today's ad-hoc analog-to-KEV elevation pattern",
+        "variant": "body"
+      }
+    },
+    "separator-main": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #72",
+        "href": "https://github.com/anajuliabit/aeon/pull/72",
+        "source": "GitHub"
+      }
+    }
+  }
+}
