@@ -114,10 +114,10 @@
   },
   "morning-brief": {
     "last_dispatch": "2026-06-05T08:19:16Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-04T07:58:57Z",
-    "total_runs": 14,
-    "total_successes": 14,
+    "last_status": "success",
+    "last_success": "2026-06-05T08:24:24Z",
+    "total_runs": 15,
+    "total_successes": 15,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
