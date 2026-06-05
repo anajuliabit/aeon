@@ -299,5 +299,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-05,reppo-digest,claude-opus-4-7,260,17066,1397284,74578
 2026-06-05,skill-freshness,claude-sonnet-4-6,32,39408,2575101,98675
 2026-06-05,aixbt-pulse,claude-sonnet-4-6,20,18994,823869,50518
-2026-06-05,token-alert,claude-opus-4-7,15,5477,560040,46072
-2026-06-05,reppo-voter,claude-opus-4-7,22,7429,1158016,71982
+2026-06-05,defi-overview,claude-opus-4-7,30,29581,2161784,88162
