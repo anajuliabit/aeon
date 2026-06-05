@@ -1,19 +1,19 @@
-Notification staged, seen-file written, log entry appended.
-
 ## Summary
 
-Ran `list-digest` skill with var=`1642770456720683008` (single list override).
+Executed `skills/list-digest/SKILL.md` for list ID `1642770456720683008`.
 
-**Source:** Used the pre-fetched cache `.xai-cache/list-digest-1642770456720683008.json` (grok-4-1-fast, completed 17:33Z, response_id db7b3eee). 3 tweets returned in the 2026-06-03 → 2026-06-04 window — above the 3-tweet "ok" threshold.
+**Outcome:** `LIST_DIGEST_OK` — quiet day, 1 list × 7 raw candidates → 3 reportable items after scoring + filtering.
 
-**Output:** Single-list digest (no cross-list narratives possible with N=1 list). Verdict line + 3 scored items, ana voice applied:
-- @Hercules_Defi — RWA weekly velocity print (DTCC+Stellar tokenization, Securitize→TRON, Bitget Stocks 2.0, SoFiUSD, Kalshi CFTC perp nod). Score 10.65.
-- @arndxt_xo — HYPE long thesis with Hyperliquid 14x P/E vs Coinbase 44x / Robinhood 37x / CME 24x exchange-comp framing, pre-HYPG launch. Score 8.32.
-- @WinterSoldierxz — meme "hold till next bull run" 10-coin portfolio. Score 9.84 (placed last in send — insight-discipline override).
+**Top items:**
+1. **@cyrilXBT** long-form X article — 353♥ / 197K views (score 18.20, sole post breaking through, ~9× next tweet's reach)
+2. **@Flowslikeosmo** $LMTS DD — 22♥ (score 8.78, $4.24M monthly rev, 0.26x P/S, Phase-2 buyback silence)
+3. **@Louround_** pre-IPO mechanics piece — 10♥ (score 4.83, quoting @a1research__)
 
-**Files written:**
-- `.pending-notify/1780594491-list-digest.md` — notification staged (~1.2k chars, post-run delivery step picks it up per sandbox pattern).
-- `memory/list-digest-seen.txt` — created with 3 reported URLs.
-- `memory/logs/2026-06-04.md` — appended `### list-digest` entry with full scoring breakdown, dedup state, and source classification.
+**Dropped (low-signal):** cyrilXBT TG-promo (pure-link penalty), Louround_ livestream quote (2.43), IamZeroIka one-word reply (replied-to off-list), Hercules_Defi (0/0/0). No cross-list narratives section (only 1 list tracked, requires ≥2).
 
-**Exit:** `LIST_DIGEST_OK`. No follow-ups — first run on this list ID, dedup baseline now established.
+**Files:**
+- Wrote `.pending-notify/1780680047-list-digest.md` (1,241 chars — post-run delivery step picks it up; sandbox blocks `./notify "$(cat ...)"` arg-passing)
+- Appended 3 URLs to `memory/list-digest-seen.txt` (now 6 lines)
+- Appended run entry to `memory/logs/2026-06-05.md`
+
+**Cache reuse:** `.xai-cache/list-digest-1642770456720683008.json` from 17:18Z prefetch — no live X.AI call this run.
