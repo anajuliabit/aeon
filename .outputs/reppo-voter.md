@@ -1,14 +1,15 @@
-Skill execution complete. Single-pass, no task tracking needed.
+Skill execution complete.
 
 ## Summary
 
-Ran `skills/reppo-voter/SKILL.md` — 3rd voter run today on the freshly re-prefetched cache.
+Ran `skills/reppo-voter/SKILL.md` — 4th voter run today.
 
-- **Gate:** RUN (datanet 9 valid per orchestrator plan).
-- **63 pods seen** on datanet 9, `current_epoch=101`.
-- **Filtered:** 59 out-of-epoch + 2 already-voted (507, 508) + **2 defensive own-pod skips** — pod 585 (16th-mint `16671d6fca89e858`, wallet `0x944b5f7d..f123`) and pod 583 (15th-mint `4a9a582aaf538d40`, wallet `0xecb63caa..2b00`), both ledger-matched by shortcode + trade count + duration.
-- **Eligible: 0.** No `.pending-reppo/vote-*.json` intents written; directory not created. No prompt-injection attempts in pod metadata.
-- **Notable:** 1st voter run where both active-epoch own-mints had to be filtered in the same pass (the prior re-run only had pod 583 to skip; pod 585 was added to the on-chain pod set after the 2nd trading-agent run minted it). ISS-016 own-pods prefetch still `count:0` — ledger cross-ref workaround durable 15 voter runs.
-- **ISS-005 / all-DISLIKE guard:** N/A (empty eligible set, no LIKE/DISLIKE issued).
+- **Gate:** RUN (orchestrator plan = RUN for datanet 9).
+- **current_epoch:** 102 (rolled from 101 since the 3rd run; orchestrator's snapshot `currentEpoch=98` was stale — vote-filter prefetch is authoritative).
+- **66 pods seen.** Filtered: 64 out-of-epoch + 21 already-voted (subset) + 0 own-pod hits in epoch-102 set.
+- **Eligible: 2** — pods **640** ("HotBot v4 — Signal Intelligence Jun 03-Jun 05") and **639** ("HotBot v4 — Trades & Learning Jun 03-Jun 05"), both fresh epoch-102 mints.
+- **Votes queued: 0 LIKE / 2 DISLIKE.** Wrote `.pending-reppo/vote-640-dislike.json` + `.pending-reppo/vote-639-dislike.json`. Both DISLIKEs are rubric-justified — HotBot v4 product exports match the off-rubric pattern of 10+ prior siblings in the ledger (every HotBot v4 Signal Intelligence + Trades & Learning pod since epoch 94 has been DISLIKED, including same-format sibling pair 508/507 last epoch).
+- **ISS-005 all-DISLIKE guard tripped** and called out explicitly per spec — but consistent with prior curation signal, not a degradation: no HL-perp wallet-trade pods (YES-eligible format) appeared at epoch 102 this run.
+- No prompt-injection attempts; ISS-016 own-pods prefetch still `count:0` (ledger cross-ref workaround durable 16 runs).
 
-**Files modified:** `.outputs/reppo-voter.md` (overwritten with this run's summary), `memory/logs/2026-06-05.md` (appended `### reppo-voter (3rd run)`). **Follow-ups:** none — voter idles until a non-own epoch-101 pod surfaces or epoch rolls to 102.
+**Files modified:** `.outputs/reppo-voter.md` (overwritten with 4th-run summary), `memory/logs/2026-06-05.md` (appended `### reppo-voter (4th run)`); created `.pending-reppo/` with 2 vote intents. **Follow-ups:** `scripts/postprocess-reppo.sh` will execute the two votes and append `## Execution Results` to the voter output with on-chain tx hashes.
