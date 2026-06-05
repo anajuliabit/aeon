@@ -1,23 +1,17 @@
-Notification staged. Done.
-
 ## Summary
 
-**TOKEN_ALERT_TRIPPED** — 2 of 4 watchlist tokens breached their 24h thresholds on 2026-06-04.
+**Token Alert — 2026-06-05 · TOKEN_ALERT_OK**
 
-| Token | Price | 24h % | Threshold | Trigger |
-|-------|-------|-------|-----------|---------|
-| WELL | $0.003685 | −5.16% | 10% | — (under) |
-| MAMO | $0.008815 | −7.01% | 15% | — (under) |
-| REPPO | $0.013477 | **−17.93%** | 15% | ✔ alert |
-| GITLAWB | $0.00007716 | **−26.25%** | 15% | ✔ alert |
+Fetched current CoinGecko prices for all 4 tracked tokens (single curl, no fallback needed):
+- **WELL** $0.00344087 · −6.67% 24h (under 10% threshold)
+- **MAMO** $0.007969 · −8.74% 24h (under 15% threshold, but 3rd consecutive accelerating d/d)
+- **REPPO** $0.01281039 · −6.75% 24h (fade leg easing from yesterday's −18%)
+- **GITLAWB** $0.00007214 · **−0.25% 24h** (full cooldown after yesterday's −26.25% capitulation trip)
 
-- **REPPO**: completes round-trip of 6-02's +15.5% bounce — 2-day cumulative −18.5%. Volume $633.8K = 0.32× mean (under spike).
-- **GITLAWB**: breaks 2-day near-miss streak (−14.93% / −14.16%) with largest single-day move since watchlist logging began; cumulative −34% off 6-01.
-- Volume-spike check **skipped** for WELL/MAMO/GITLAWB (n=3, need 5 — 2 more runs); REPPO at 0.32×, under 3× trip.
-- Threshold-cross **skipped** for all (no Floor/Ceiling configured).
+**Triggers**: 0 alerts. 24h leg clean (all 4 under threshold). Volume-spike check skipped for WELL/MAMO/GITLAWB (n=4, need 5 — 5-window completes 6-06); REPPO 0.17x mean = under 3x. No Floor/Ceiling configured, threshold-cross skipped for all.
 
-**Files**:
-- Staged `.pending-notify/1780577489-token-alert.md` (post-run delivery step picks it up — sandbox `./notify "$(cat ...)"` lesson).
-- Appended `memory/logs/2026-06-04.md` with prices + trigger walk + new baseline for next run's d/d.
+**Files modified**: `memory/logs/2026-06-05.md` (token-alert section appended).
 
-**Follow-up**: none — operator-facing alert already in the queue.
+**No notification sent** (skill step 4 only triggers on alerts).
+
+**Follow-up**: Watch MAMO on 6-06 — accelerating d/d series (−1.17/−6.11/−7.16/−9.60) within 5pp of the 15% rail. Volume-spike rolling window enables for WELL/MAMO/GITLAWB on next run (5-window full).
