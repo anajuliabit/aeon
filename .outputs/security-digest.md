@@ -1,19 +1,16 @@
-Notification staged. Summary:
-
 ## Summary
 
-Ran security-digest for 2026-06-04. Lead with KEV-confirmed exploitation, enriched with EPSS, filtered GH Advisories to the tracked stack (npm, pip, Go, crates.io, GitHub Actions).
+Ran `skills/security-digest/SKILL.md` for 2026-06-05. KEV had **0 new entries since yesterday** (all 5 in-window adds already deduped from 6-03/6-04 logs — first zero-new-KEV day since digest went live).
 
-**Tier counts: 2 / 4 / 1.**
+**Tier output:**
+- **PATCH TODAY (1):** `@cap-js/openapi` (npm) supply chain compromise — v1.4.1 shipped credential-harvesting + self-propagation code on 2026-05-19. CVSS 9.6, fix 1.4.2. Elevated by analogy to KEV (confirmed in-wild credential theft, though formally outside strict ≥9.8+PoC TODAY rule). **First supply-chain PATCH TODAY since digest went live.**
+- **PATCH THIS WEEK (1):** `stata-mcp` (pip) CVE-2026-47708 — critical command injection via `log_file_name`, public PoC in advisory, fix 1.17.3.
+- **MONITOR (1):** `browserstack-runner` (npm) CVE-2026-49144 — unauth path traversal, no patch yet (≤0.9.5). Sibling to yesterday's 49143 RCE in same package.
 
-- **PATCH TODAY:** CVE-2026-45247 (mirasvit fpc warmer, fresh KEV add 2026-06-03, EPSS 0.061 pct 0.91, fix ≥1.11.12); CVE-2026-44180 (jupyter_enterprise_gateway pip, CVSS 9.8, public PoC, siblings 44181/44182, fix ≥3.3.0).
-- **PATCH THIS WEEK:** docling-core ≥2.74.1; nuclio ≥v0.0.0-20260513101907-1915cd26d514; docling ≥2.91.0; react-router ≥7.15.0.
-- **MONITOR:** browserstack-runner CVE-2026-49143 (CVSS 8.8, public PoC, no patch yet — vulnerable ≤0.9.5).
+**Files modified:**
+- `.pending-notify/1780669255-security-digest.md` (1,272 chars, staged for post-run delivery per sandbox pattern — `./notify "$(cat ...)"` arg-passing blocked)
+- `memory/logs/2026-06-05.md` (appended `### security-digest` entry with full tier-counts, IDs, dedup audit, ranking decisions, WebFetch patch details, EPSS results, sources status)
 
-**Sources:** kev=ok, gh=ok, epss=ok (most new CVEs not yet scored).
+**Follow-up flagged for next reflect:** Skill's strict `CVSS ≥9.8 AND public PoC` PATCH TODAY rule didn't catch CVSS 9.6 supply-chain-compromise — applied KEV-analog elevation this run, may want to codify a "confirmed-malicious-package-published" supply-chain rule alongside KEV in step 5.
 
-**Files:**
-- Staged: `.pending-notify/1780586227-security-digest.md` (2,301 chars).
-- Appended `### security-digest` entry to `memory/logs/2026-06-04.md`.
-
-**Follow-up:** axios npm 4-CVE cluster (CVE-2026-44496/44488/44487/44486, all CVSS 7.5, fix 1.16.0) failed the ≥8.0 gate but is a dependency-graph hub worth flagging at next operator review. Sandbox blocked deletion of `kev.json` scratch file — same pattern as MEMORY-noted cleanup-chain-runner-scratch goal; needs the postprocess cleanup step.
+**Status:** SECURITY_DIGEST_OK · sources kev=ok gh=ok epss=ok.
