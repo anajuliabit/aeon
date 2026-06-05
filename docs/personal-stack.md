@@ -37,12 +37,13 @@ either acted on or archived instead of rotting.
 
 ## What this PR adds
 
-### 1. `memory/priorities.md`
+### 1. `vault/priorities.md`
 
-The operator-owned anchor file. One entry per priority, ordered by
-weight, each with "what winning looks like" + non-negotiables. A
-**Current focus** section the operator edits weekly. An **Out of scope**
-section so the agent stops surfacing topics that are intentionally cold.
+The operator-owned anchor file (lives in the Obsidian `vault/`). One entry
+per priority, ordered by weight, each with "what winning looks like" +
+non-negotiables. A **Current focus** section the operator edits weekly. An
+**Out of scope** section so the agent stops surfacing topics that are
+intentionally cold.
 
 This file is read-only to the agent. Edits are operator-owned.
 
@@ -50,11 +51,11 @@ This file is read-only to the agent. Edits are operator-owned.
 
 Scheduled 2x/day (07:00 + 21:00 UTC) via `aeon.yml`. Reads:
 
-- `memory/priorities.md` (required)
+- `vault/priorities.md` (required)
 - `memory/MEMORY.md` (context)
 - `soul/SOUL.md` + `soul/STYLE.md` (notification voice)
-- recent `### Idea Captured` blocks in `memory/logs/` over the lookback
-  window (default 24h, configurable via `var:`)
+- recent `### Idea Captured` blocks in `memory/logs/` **and** new notes in
+  `vault/inbox/` over the lookback window (default 24h, configurable via `var:`)
 
 Scores each capture as Aligned / Drift / Noise against priorities.
 Writes a `### Thought Review` block back to today's log and notifies via
@@ -100,11 +101,15 @@ overlaps — repeated noise is itself signal.
 - **No auto-edits to `priorities.md`.** Drift detection surfaces in
   the notification — the operator decides whether to update the
   priorities file or ignore the drift.
-- **No vault sync to actual Obsidian.** `memory/` *is* the vault.
-  Obsidian's value here is the markdown-first storage and the file
-  watcher pattern; Aeon already has both. If the operator wants to
-  *also* open `memory/` in Obsidian locally, that works out of the box —
-  no integration needed.
+- **Obsidian vault sync — now shipped separately.** This PR's follow-on
+  adds a real two-way bridge: a curated `vault/` folder (your
+  `priorities.md`, `inbox/`, `notes/`, `reviews/`) synced to a local
+  Obsidian vault via git + the Obsidian Git plugin, with Aeon's
+  operational files hidden from the graph. `priorities.md` now lives at
+  `vault/priorities.md` and `thought-review` writes reviews to
+  `vault/reviews/`. See `docs/obsidian-vault.md` for setup and
+  `docs/superpowers/specs/2026-06-04-aeon-obsidian-vault-design.md` for
+  the design.
 
 ## Required secrets
 
