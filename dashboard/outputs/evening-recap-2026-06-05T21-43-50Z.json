@@ -1,0 +1,67 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap"
+      },
+      "children": [
+        "date_status",
+        "separator",
+        "stats_stack"
+      ]
+    },
+    "date_status": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-05 staged"
+      },
+      "children": []
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_mints",
+        "stat_prs",
+        "stat_failures"
+      ]
+    },
+    "stat_mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints",
+        "value": "4"
+      },
+      "children": []
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "1"
+      },
+      "children": []
+    },
+    "stat_failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Failures",
+        "value": "0"
+      },
+      "children": []
+    }
+  }
+}
