@@ -1,0 +1,193 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo Digest"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "onchain_section",
+        "sep3",
+        "unassigned_note"
+      ]
+    },
+    "header": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 2nd run · datanet 9 · 1 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_heading",
+        "queued_details"
+      ]
+    },
+    "queued_heading": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "queued_title",
+        "queued_badge"
+      ]
+    },
+    "queued_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h2"
+      }
+    },
+    "queued_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "queued",
+        "variant": "secondary"
+      }
+    },
+    "queued_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "queued_mint",
+        "queued_params",
+        "queued_id"
+      ]
+    },
+    "queued_mint": {
+      "type": "Text",
+      "props": {
+        "text": "mint · 0x944b5f7d",
+        "variant": "body"
+      }
+    },
+    "queued_params": {
+      "type": "Text",
+      "props": {
+        "text": "29 close-shorts · sol+btc perp · 9.5s cluster · +$8,410 sharpe 48k",
+        "variant": "body"
+      }
+    },
+    "queued_id": {
+      "type": "Text",
+      "props": {
+        "text": "ID: 16671d6fca89e858",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "onchain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "onchain_heading",
+        "onchain_details"
+      ]
+    },
+    "onchain_heading": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "onchain_title",
+        "onchain_badge"
+      ]
+    },
+    "onchain_title": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h2"
+      }
+    },
+    "onchain_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "on-chain",
+        "variant": "secondary"
+      }
+    },
+    "onchain_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "onchain_mint",
+        "onchain_tx"
+      ]
+    },
+    "onchain_mint": {
+      "type": "Text",
+      "props": {
+        "text": "mint 16671d6fca89e858",
+        "variant": "body"
+      }
+    },
+    "onchain_tx": {
+      "type": "Text",
+      "props": {
+        "text": "tx 0xef7ce9639585ddbade56d618399e3eb981397065f55c7f30cf8735b8b7ffe6cd",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "unassigned_note": {
+      "type": "Alert",
+      "props": {
+        "message": "15 datanets unassigned",
+        "type": "info"
+      }
+    }
+  }
+}
