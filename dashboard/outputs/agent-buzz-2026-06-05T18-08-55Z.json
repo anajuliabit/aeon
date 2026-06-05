@@ -1,0 +1,40 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "agent-buzz"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date_text",
+        "status_badge"
+      ]
+    },
+    "date_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-05",
+        "variant": "muted"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "secondary"
+      }
+    }
+  }
+}
