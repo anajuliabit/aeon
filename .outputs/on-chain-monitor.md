@@ -1,9 +1,10 @@
 ## Summary
 
-Ran `on-chain-monitor`. The skill exited at the config-check gate.
+Ran `skills/on-chain-monitor/SKILL.md`. Verdict: **ON_CHAIN_NO_CONFIG**.
 
-- **Status**: `ON_CHAIN_NO_CONFIG`
-- **Reason**: `memory/on-chain-watches.yml` does not exist. Per SKILL.md, an absent or empty config is not an error — log + exit cleanly, no notification.
-- **Files modified**: appended log entry to `memory/logs/2026-06-04.md`.
-- **APIs called**: none (Alchemy / Etherscan / CoinGecko all gated behind config presence).
-- **Follow-up for operator**: populate `memory/on-chain-watches.yml` with at least one watch (label, address, chain, type, threshold_usd) before the next scheduled fire — until then this skill will continue to no-op silently each cycle. This skill was enabled yesterday via PR #67 with first scheduled slot today @ 12:20 UTC; the absence of a config file is the structural blocker.
+- `memory/on-chain-watches.yml` absent → empty-config end-state per Step 8.
+- Exit clean, no notification sent (empty config is not an error).
+- 2nd consecutive day at NO_CONFIG (1st-fire was 2026-06-04 per MEMORY.md goal).
+- Operator action required: populate `memory/on-chain-watches.yml` with `label`/`address`/`chain`/`type`/`threshold_usd` entries before the skill produces signal.
+
+Files modified: `memory/logs/2026-06-05.md` (appended on-chain-monitor entry). No state file written, no config files created, no notification sent.

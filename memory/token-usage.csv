@@ -302,4 +302,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-05,reppo-orchestrator,claude-opus-4-7,14,3438,515120,37067
 2026-06-05,reppo-trading-agent,claude-opus-4-7,111,51530,11890108,202572
 2026-06-05,reppo-digest,claude-opus-4-7,28,12669,1517303,149956
-2026-06-05,defi-monitor,claude-opus-4-7,9,1730,281969,64683
+2026-06-05,on-chain-monitor,claude-opus-4-7,9,2781,220059,43468
