@@ -1,8 +1,8 @@
-Catalog is available (16 datanets). Datanet 9 cache shows `valid:true` + `status:ACTIVE`, so the trading-agent runs. 15 unassigned datanets surface again.
+Catalog available (16 datanets, mainnet). Single rubric `tradinggymai.md` → datanet 9 valid (epoch 97), so RUN. 15 unassigned ids surface for operator triage.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 valid+ACTIVE per cache; no rubric-blocking conditions)
+reppo-trading-agent: RUN   (datanet 9 valid, epoch 97, rubric tradinggymai)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -21,6 +21,7 @@ new-datanet: 18  (no rubric / no agent assigned)
 ```
 
 ## Summary
-- 1 RUN / 0 SKIP. Trading-agent cleared to run against datanet 9 (TradingGym AI, valid + ACTIVE).
-- 15 unassigned datanets surfaced — same backlog as yesterday; datanet 18 (ArAIstotle) surfacing 3rd consecutive day.
-- Appended `### reppo-orchestrator` entry to `memory/logs/2026-06-04.md`.
+- Plan emitted in assistant text per the Output contract (fenced `reppo-plan` block, not written to file).
+- 1 RUN (reppo-trading-agent → datanet 9), 0 SKIP. Catalog available; 15 unassigned datanets surfaced for operator triage (1, 2, 4–8, 10, 11, 13–18).
+- Logged run to `memory/logs/2026-06-05.md` under `### reppo-orchestrator`.
+- No follow-up actions from this skill. Operator-side: still owes assignment rubrics / pick decisions on the 15 unassigned datanets (16+ days surfaced).
