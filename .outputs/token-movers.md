@@ -1,20 +1,21 @@
+Skill complete. Notification staged for delivery and the log entry is in.
+
 ## Summary
 
-**Skill executed**: `skills/token-movers/SKILL.md` — produced the daily movers/losers/trending report with signal enrichment.
+**Token-movers run for 2026-06-05** — fetched live CoinGecko data (250 coins + 15-name trending), filtered to 193 after dropping stables/wrapped/sub-$1M volume, ranked, enriched with signal+risk tags, and deduped against 6-04.
 
-**Data fetched** (live curl, no key needed): CoinGecko `/coins/markets` (250 coins, 245kB) + `/search/trending` (15 coins). No WebFetch fallback triggered.
+**Headline:** broad risk-off — 12 of 78 top-100 (filtered) green, median 24h −4.7%. LAB and ZEC both shed ~39% the same day.
 
-**Market pulse**: deep risk-off — 15/100 top-100 mcap green, median 24h −4.8% (vs −0.75% yesterday). BTC −4.8% / 7d −13%, HYPE finally cracks at −7.8% after holding green-only-major status yesterday.
+**Material moves vs yesterday:**
+- **LAB −38.9%** — the 6-day vertical (+303% 7d on the ZachXBT 95%-insider-supply flag) finally broke; the token-pick skip rubric paid off after 6 days
+- **ZEC −38.6%** — top-20 capitulation on $2.58B volume, full unwind of the privacy/Hayes narrative
+- **WLD +10.5% / 7d +81%** — only real top-100 breakout in a red tape, TRENDING+UP
+- **TRAC and HOME both round-tripped** vs yesterday (winner→loser, loser→winner)
+- **QAIT/SEALCOIN +52% (#228)** and **KOGE (#163, $1.1M vol, vmc 0.005)** — surfaced with pump-risk and thin-vol disclosures
 
-**Key signals tagged**:
-- **REVERSALS dominate**: yesterday's winners PIEVERSE, NEAR, VVV, LIT all flipped to today's losers; SKYAI flipped from −48% loser to +19% winner (dead-cat relief).
-- **NEAR**: TRENDING+DOWN + CAPITULATION (−18.3% on vol/mcap 0.46) — aligns with this morning's aixbt-pulse Hayes-dump callout.
-- **LAB**: day-6 vertical still holds (7d +303%), only green name trending — ZachXBT insider-supply flag carried.
-- **HOME**: 6-02 token-pick at $0.0475 entry now $0.0369 — lost the 24h entry-window cushion 6 days before june-10 unlock.
+**Files:**
+- Created: `.pending-notify/1780666061-token-movers.md` (3,037 chars, under 4000 cap)
+- Modified: `memory/logs/2026-06-05.md` (appended `### token-movers` entry)
+- Left in working dir: `.tmp-cg-markets.json`, `.tmp-cg-trending.json` (sandbox blocks `rm` — known cleanup-chain-runner-scratch backlog)
 
-**Files created/modified**:
-- `.pending-notify/1780577611-token-movers.md` (3,122 chars, under 4000 cap) — post-run delivery step will fan out to Telegram/Discord/Slack
-- `memory/logs/2026-06-04.md` — appended `### token-movers` entry per skill step 8
-- `.tmp-cg-markets.json`, `.tmp-cg-trending.json` — scratch (sandbox blocks `rm` mid-run; tracked under MEMORY.md cleanup goal)
-
-**Follow-up**: none specific to this skill. Watchlist tokens didn't screen top-20 either side; token-alert covers those directly.
+**Follow-up:** post-run notify delivery step will pick up the staged file. No action required.
