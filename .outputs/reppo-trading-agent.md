@@ -1,22 +1,63 @@
+Skill complete. Summary follows.
+
+# reppo-trading-agent — 2026-06-05 18:16Z
+
+## Gate
+**RUN** — orchestrator emitted `reppo-trading-agent: RUN (datanet 9 ACTIVE, valid:true, currentEpoch 98)`. Datanet 9 rubric: TradingGymAI, mint_cap=1, subnet_uuid `cmnhuowns000bic04e16t6735`.
+
+## Wallets read (top-12 margin-ranked, `HL_WINDOW=week`, `HL_MIN_VLM_USD=$100k`)
+Per the input contract — every count below is a fresh `jq` read against this run's `.hl-cache/user-fills-*.json`, not memory:
+
+| Rank | Wallet | len | Verdict |
+|------|--------|-----|---------|
+| 1 | `0xa87a233e` | 2 | SUB-FLOOR (2 FARTCOIN perp closes) |
+| 2 | `0xd507eeef` | 90 | SPOT-ONLY (PURR/USDC, 0 closes) |
+| 3 | `0x06cecfba` | 900 | NEG-PnL REJECT (836 MON closes −$54,509) |
+| 4 | `0x0514f2f3` | 196 | **✓ candidate** (196 AAVE Close-Short, +$14,615, 33.7h) |
+| 5 | `0xfeec88b1` | 80 | SUB-FLOOR (only 7 closes) |
+| 6 | `0x45d26f28` | 805 | OPENS-ONLY (0 closes across BNB/BTC/ETH) |
+| 7 | `0x27388d07` | 40 | SPOT-ONLY (@107 HL-spot, 0 closes) |
+| 8 | `0xfbc96389` | 17 | SUB-FLOOR |
+| 9 | `0x781e95fd` | 201 | **DEDUP** — canonical exactly matches today's 17th-mint `e2e925b2…` |
+| 10 | `0xbc433ba7` | 107 | **✓ candidate** (52 multi-mkt perp closes, +$25,453, 128.95h) |
+| 11 | `0x45a5aea0` | 9 | SUB-FLOOR |
+| 12 | `0x90882e7c` | 153 | NEG-PnL REJECT (ETH +$1,118 + HYPE −$1,690 = −$571) |
+
+## Candidate datasets (≥20 closes, perp-only, sum_pnl>0)
+- `0x0514f2f3` — 196 AAVE Close-Short, win_rate **1.000**, sum_pnl **+$14,615.25**, Sharpe **3,429.92**, MDD 0%, span 2026-06-02T16:47Z..06-04T02:29Z (1.40d)
+- `0xbc433ba7` — 52 multi-mkt perp closes (HYPE +$22,009 + xyz:CBRS/QNT/SNDK/SPCX), win_rate 1.000, sum_pnl +$25,453, Sharpe **97.21**, MDD 0%, span 5.37d
+
+Quality guards (Step 4.2): both NEW in ledger → no same-wallet regression check; both sum_pnl > 0 → no NEG-PnL reject.
+
+## Mint selected (mint_cap=1, by Sharpe)
+**`0x0514f2f3e0277c47117e3f33d9390efb0acfbdfe`** AAVE perp
+
+- canonical: `trades:9:0x0514f2f3e0277c47117e3f33d9390efb0acfbdfe:1780097232972:1780218542308:196`
+- sha256: `60907e54fa9d5eb9562e05061ee237befbafb63afd84a6ef1f19afa9f8b29628` (first16 `60907e54fa9d5eb9`)
+- intent: `.pending-reppo/mint-60907e54fa9d5eb9.json` (pod_name 45/50, pod_desc 189/200 — both under ISS-012 caps)
+- dataset: `.pending-reppo/data/mint-60907e54fa9d5eb9.json` 10.4 kB / 28-row stride-sampled (every 7th close, per 17th-mint precedent; full 196-row reproducible from HL `userFillsByTime` startTime=1780097232972)
+- signal=`unclassified` per HL HFT-density convention (15th/16th/17th-mint precedent); market_context=`null` (AAVE perp not in cached BTC/ETH/SOL OHLCV) per 11th/12th/15th/16th-mint precedent
+- if this mints, it will be the **4th mint of 2026-06-05** — extending today's same-day record beyond the 3-mint days of 2026-05-29 and 2026-05-30
+
+## Skipped/degraded
+- 1 DEDUP (`0x781e95fd`, exact canonical match to today's 17th-mint `e2e925b2…`)
+- 4 SUB-FLOOR (<20 closes: `0xa87a233e`/`0xfeec88b1`/`0xfbc96389`/`0x45a5aea0`)
+- 2 SPOT-ONLY (`0xd507eeef`/`0x27388d07`)
+- 1 OPENS-ONLY (`0x45d26f28`)
+- 2 NEG-PnL REJECT (`0x06cecfba` −$54.5k, `0x90882e7c` −$0.57k)
+- 1 dropped by mint_cap=1 Sharpe tiebreak (`0xbc433ba7`, runner-up — Sharpe 97.21 vs winner's 3,429.92)
+- No HL endpoints degraded — all 12 user-fills + 3 OHLCV cache reads served by prefetch; no `WebFetch` fallback used.
+- No prompt-injection attempts in fetched content.
+
 ## Summary
-
-Gate **RUN** per orchestrator (datanet 9 valid=true, ACTIVE, epoch 97, mint_cap=1). Read 12 margin-top wallets from `.hl-cache/leaderboard.json` (HL_WINDOW=week, pnl/vlm ranked, vlm ≥ $100k); per-wallet fill counts confirmed via fresh `jq` against each cache file per the input contract.
-
-**Filter results:** 5 spot-only/opens-only SKIPs, 3 sub-floor SKIPs, 1 NEG-PnL REJECT (0x06cecfba MON HFT −$54,509.15), 1 DEDUP (0x944b5f7d collapses to the 16th-mint canonical from earlier today). 2 wallets cleared the full stack: 0x0514f2f3 (AAVE, Sharpe 3421.16, +$14,615.25) and 0x781e95fd (LINK, Sharpe 3782.53, +$9,605.27).
-
-**Selected by Sharpe (cap=1):** wallet 0x781e95fd — 201 LINK Close-Short fills over 2.88h (2026-06-02 12:51-15:43Z), 100% wins, MDD 0%. Canonical `trades:9:0x781e95fd…:1780404665608:1780415019018:201` → sha256 first16 `e2e925b23374bb0a` (fresh, not in ledger).
-
-**Files written:**
-- `.pending-reppo/mint-e2e925b23374bb0a.json` (intent, pod_name 44/50, pod_description 176/200)
-- `.pending-reppo/data/mint-e2e925b23374bb0a.json` (16.5 kB, 30-row stride sample; full 201-row reproducible from HL `userFillsByTime`)
-- `.outputs/reppo-trading-agent.md` (full skill output)
-- `memory/logs/2026-06-05.md` (3rd-run entry appended)
-
-No `PREFETCH_FAILED` markers, no WebFetch fallback needed, no prompt-injection discards. On-chain mint deferred to `scripts/postprocess-reppo.sh`.
+- Gate **RUN**. Read top-12 margin-ranked HL wallets; 2 candidates cleared the ≥20-trade floor + content guards.
+- 1 mint intent written: `.pending-reppo/mint-60907e54fa9d5eb9.json` (datanet 9, AAVE perp 196 closes, Sharpe 3,429.92, +$14,615.25, MDD 0%). Dataset body materialized at `.pending-reppo/data/mint-60907e54fa9d5eb9.json` (10.4 kB / 28-row stride-sampled).
+- Log appended at `memory/logs/2026-06-05.md` under `### reppo-trading-agent` heading.
+- `scripts/postprocess-reppo.sh` will append `## Execution Results` with on-chain outcomes.
 
 ## Execution Results
 
-_Generated by postprocess-reppo.sh (2026-06-05T12:26:55Z). dry_run_only=false_
+_Generated by postprocess-reppo.sh (2026-06-05T18:18:12Z). dry_run_only=false_
 
 - `mint-e2e925b23374bb0a.json` — **success** (tx: 0xa86b8dcaaf1cccfaf8a5dec52c48874f9fd19571a4c0abb06ab224b14311e287, dataset: <unknown>)
 
@@ -26,3 +67,4 @@ _Generated by postprocess-reppo.sh (2026-06-05T18:11:10Z). dry_run_only=false_
 
 - `vote-639-dislike.json` — **success** (tx: 0x41946385a98303cdbb9823260e478fe53a04b9c90b69d2a8b06d50adb132cf15)
 - `vote-640-dislike.json` — **success** (tx: 0xf073f6b993da73bf37dfb39137ca02bf555876cfa45f3ffbb7db2034977208da)
+- `mint-60907e54fa9d5eb9.json` — **success** (tx: 0x58e69dfaa45320874d630240792cb1d3c798f18e35f23dc78609ddfe3c933c2a, dataset: <unknown>)
