@@ -1,0 +1,48 @@
+{
+  "root": "card_daily_routine",
+  "state": {},
+  "elements": {
+    "card_daily_routine": {
+      "type": "Card",
+      "props": {
+        "title": "daily-routine"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_staged",
+        "text_date",
+        "text_note"
+      ]
+    },
+    "badge_staged": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "secondary"
+      }
+    },
+    "text_date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-06",
+        "variant": "body"
+      }
+    },
+    "text_note": {
+      "type": "Text",
+      "props": {
+        "text": "post-run delivery picks up",
+        "variant": "caption"
+      }
+    }
+  }
+}
