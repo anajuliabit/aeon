@@ -52,8 +52,7 @@ LATAM time, screens off 30m before bed.
 **Non-negotiable:** sleep before 00:30 LATAM ≥5 nights/week.
 
 ### 5. Brazil / LATAM crypto presence
-Show up where it counts — Sherwood is built in Brazil, that's part of
-the thesis. One visible-in-LATAM artifact per month (talk, post,
+Show up where it counts. One visible-in-LATAM artifact per month (post,
 collab, OSS PR).
 
 ---
@@ -72,6 +71,5 @@ collab, OSS PR).
 Edit this section freely — `thought-review` weights captures matching
 this section higher than the standing priorities.
 
-- Sherwood: depositor-flow contract pass
-- Reppo: voter-prefetch ISS-016 root-cause attempt
+- Reppo: orquestra working
 - Aeon: ship the personal-stack PR (this one)
