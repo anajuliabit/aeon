@@ -153,6 +153,7 @@ skills:
   tool-builder: { enabled: false, schedule: "reactive", var: "" } # reactive — build automation scripts from recurring tasks
   skill-repair: { enabled: false, schedule: "reactive", var: "" } # reactive — auto-fix failing skills
   evening-recap: { enabled: true, schedule: "0 21 * * *", model: "claude-sonnet-4-6" } # end-of-day ops summary
+  thought-review: { enabled: true, schedule: "0 7,21 * * *", var: "24" } # 2x/day — read recent captures (vault/inbox + logs) vs vault/priorities.md, write review to vault/reviews/
   vercel-projects:
     {
       enabled: false,
