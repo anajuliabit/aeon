@@ -722,6 +722,7 @@ jobs:
           Read memory/MEMORY.md for context. Look at the available skills in skills/ to understand what you can do.
 
           Interpret what the user wants and act on it:
+          - If the message is a thought, idea, reminder, or note to save — or it starts with \"note:\", \"idea:\", or \"capture:\" — save it to the Obsidian vault instead of just replying. Create a file vault/inbox/<YYYY-MM-DD-HHMM>-<slug>.md (use date -u for the timestamp; slug = a short lowercase-hyphenated phrase from the note, letters/digits/hyphens only, NO slashes or path separators). Put YAML frontmatter at the top (captured: <ISO8601 UTC>, source: ${SOURCE}, topic: <1-3 word hyphenated tag>), then a \"# <restatement in <=20 words>\" heading, then the original message text verbatim. mkdir -p vault/inbox first. Then ./notify a one-line confirmation echoing the restatement. (This is the user's capture inbox; thought-review reads it and syncs to Obsidian.)
           - If they want you to run a skill (e.g. \"write an article about X\", \"send me a digest\"), read that skill file and execute it.
           - If they want information or have a question, research it and respond.
           - If they want you to remember something, update memory/MEMORY.md.
