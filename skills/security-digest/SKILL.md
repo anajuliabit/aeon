@@ -26,7 +26,7 @@ CVSS measures theoretical severity. Most critical CVEs are never exploited. A se
    ```
    If curl fails, **WebFetch** `https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json` and extract vulnerabilities with `dateAdded` within the last 7 days. KEV entries are the top priority — confirmed exploitation in the wild.
 
-2. **Fetch GitHub Advisory Database (last 48h, critical + high).**
+2. **Fetch GitHub Advisory Database (last 48h, critical + high + malware).**
    ```bash
    SINCE48=$(date -u -d '2 days ago' '+%Y-%m-%dT%H:%M:%SZ' 2>/dev/null || date -u -v-2d '+%Y-%m-%dT%H:%M:%SZ')
    for SEV in critical high; do
@@ -34,10 +34,14 @@ CVSS measures theoretical severity. Most critical CVEs are never exploited. A se
        -H "Accept: application/vnd.github+json" \
        ${GITHUB_TOKEN:+-H "Authorization: Bearer $GITHUB_TOKEN"}
    done > advisories.json
+   curl -sf --max-time 20 "https://api.github.com/advisories?type=malware&published=${SINCE48}.." \
+     -H "Accept: application/vnd.github+json" \
+     ${GITHUB_TOKEN:+-H "Authorization: Bearer $GITHUB_TOKEN"} \
+     > advisories_malware.json || echo "[]" > advisories_malware.json
    ```
-   If curl fails or rate-limits, use `gh api "/advisories?type=reviewed&severity=critical&published=${SINCE48}.."` instead (gh handles auth internally). Extract: `ghsa_id`, `cve_id`, `summary`, `severity`, `cvss.score`, `vulnerabilities[].package.{ecosystem,name}`, `vulnerabilities[].patched_versions`, `vulnerabilities[].vulnerable_version_range`, `html_url`, `published_at`.
+   If curl fails or rate-limits, use `gh api "/advisories?type=reviewed&severity=critical&published=${SINCE48}.."` and `gh api "/advisories?type=malware&published=${SINCE48}.."` instead (gh handles auth internally). Extract: `ghsa_id`, `cve_id`, `summary`, `severity`, `cvss.score`, `type` (`reviewed` vs `malware`), `vulnerabilities[].package.{ecosystem,name}`, `vulnerabilities[].patched_versions`, `vulnerabilities[].vulnerable_version_range`, `html_url`, `published_at`. `type=malware` advisories are GitHub's classification of confirmed-malicious published packages (credential stealers, backdoors, supply-chain compromises) — they are real-world exploitation, not theoretical severity.
 
-3. **Filter GH advisories to the tracked stack.** Parse `${var}` (or the tracked-ecosystems default from memory). Keep only advisories whose `vulnerabilities[].package.ecosystem` is in the tracked set — **except** advisories whose CVE is in KEV, which always pass through (real-world exploitation overrides stack filter).
+3. **Filter GH advisories to the tracked stack.** Parse `${var}` (or the tracked-ecosystems default from memory). Keep only advisories whose `vulnerabilities[].package.ecosystem` is in the tracked set — **except** advisories whose CVE is in KEV OR whose `type` is `malware`, which always pass through (real-world exploitation overrides stack filter; a malicious package in an untracked ecosystem still matters as a signal).
 
 4. **Enrich every candidate with EPSS** (FIRST.org's 30-day exploitation probability):
    ```bash
@@ -51,11 +55,13 @@ CVSS measures theoretical severity. Most critical CVEs are never exploited. A se
 
    | Tier | Rule | Action template |
    |------|------|-----------------|
-   | **PATCH TODAY** | In KEV added this week, OR EPSS ≥ 0.5, OR (CVSS ≥ 9.8 AND public PoC referenced in summary) | `upgrade <pkg> to ≥<fix> and redeploy` |
+   | **PATCH TODAY** | In KEV added this week, OR `type=malware` advisory (confirmed supply-chain compromise: credential stealer, backdoor, malicious version published), OR EPSS ≥ 0.5, OR (CVSS ≥ 9.8 AND public PoC referenced in summary) | `upgrade <pkg> to ≥<fix> and redeploy` (for malware: also `rotate any credentials exposed to <pkg>@<bad-version>`) |
    | **PATCH THIS WEEK** | CVSS ≥ 8.0 in tracked ecosystem, OR EPSS 0.1–0.5 | `schedule upgrade: <pkg> → ≥<fix>` |
    | **MONITOR** | Remaining critical/high in tracked ecosystems with no fix available | `track <ghsa>; no patch yet` |
 
-   Cap: 3 / 5 / 3. Sort inside each tier by (in-KEV desc, EPSS desc, CVSS desc).
+   Cap: 3 / 5 / 3. Sort inside each tier by (in-KEV desc, `type=malware` desc, EPSS desc, CVSS desc) — malware advisories rank just below KEV because the package itself is the exploit; CVSS for malware is often missing or arbitrarily assigned.
+
+   Fallback heuristic for advisories without `type=malware` but clearly describing supply-chain compromise: if the `summary` or `description` contains markers like "malicious code", "credential stealer", "supply chain", "backdoor", "compromised version", or "rotate credentials" — treat as PATCH TODAY under the same rule. This catches `type=reviewed` advisories that document a supply-chain incident before GitHub re-categorizes them.
 
 6. **For each item in PATCH TODAY / PATCH THIS WEEK, fetch patch detail** via **WebFetch** on the advisory `html_url` — extract the exact patched version if not already clear from the JSON, and note whether a public exploit/PoC exists. Skip this step for MONITOR tier (not worth the extra calls).
 
