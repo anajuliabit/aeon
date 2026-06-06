@@ -1,12 +1,13 @@
-reppo-swarm · 4th run · datanet 9 · 3 on-chain
+reppo-swarm · 1st run · datanet 9 · 2 on-chain
 
 queued
-  mint · 0x0514f2f3 aave perp 196 close-shorts 33.7h, sharpe 3,430, +$14,615 · 60907e54fa9d5eb9
-  votes · dislike pods 640 + 639 (hotbot v4 signal + trades exports, epoch 102)
+  mint · 0xbc433ba7 52 HYPE/CBRS/QNT/SPCX/SNDK closes 5.37d +$25,453 sharpe 97 · cfd710ae960d1784
+  vote · dislike pod 643 (zcash bug oracle, off-rubric / not HL perps)
 
 on-chain
-  mint 60907e54fa9d5eb9 — tx 0x58e69dfaa45320874d630240792cb1d3c798f18e35f23dc78609ddfe3c933c2a
-  vote 640 dislike — tx 0xf073f6b993da73bf37dfb39137ca02bf555876cfa45f3ffbb7db2034977208da
-  vote 639 dislike — tx 0x41946385a98303cdbb9823260e478fe53a04b9c90b69d2a8b06d50adb132cf15
+  mint cfd710ae960d1784 — tx 0xd9fb03bdcd7c3aba9968b042cdbeee05c2b15477a7c543ce98f248844a99d8ff
+  vote 643 dislike — tx 0x868e95b6faa3c78bc0dd9d7aee94f00acf4209fbf94d10a5ca0f30c4d6deddf9
 
-18th mint ever, 4th today — extends today's same-day record to 4. 15 datanets unassigned.
+19th mint overall. 0xbc433ba7 was yesterday's sharpe-tiebreak runner-up to 0x0514f2f3 — fresh and clean today after the aave winner regressed out.
+
+15 datanets unassigned.

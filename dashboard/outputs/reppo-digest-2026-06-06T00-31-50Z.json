@@ -1,0 +1,284 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 1st run · datanet 9 · 2 on-chain"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_queued",
+        "separator_1",
+        "section_onchain",
+        "separator_2",
+        "section_summary"
+      ]
+    },
+    "section_queued": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_queued",
+        "item_mint",
+        "item_vote"
+      ]
+    },
+    "heading_queued": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item_mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_mint",
+        "grid_mint_stats"
+      ]
+    },
+    "label_mint": {
+      "type": "Badge",
+      "props": {
+        "text": "mint",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "grid_mint_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "sm"
+      },
+      "children": [
+        "stat_mint_addr",
+        "stat_mint_count",
+        "stat_mint_tokens",
+        "stat_mint_closes",
+        "stat_mint_amount",
+        "stat_mint_sharpe",
+        "stat_mint_id"
+      ]
+    },
+    "stat_mint_addr": {
+      "type": "Stat",
+      "props": {
+        "label": "Address",
+        "value": "0xbc433ba7"
+      },
+      "children": []
+    },
+    "stat_mint_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Count",
+        "value": "52"
+      },
+      "children": []
+    },
+    "stat_mint_tokens": {
+      "type": "Stat",
+      "props": {
+        "label": "Tokens",
+        "value": "HYPE/CBRS/QNT/SPCX/SNDK"
+      },
+      "children": []
+    },
+    "stat_mint_closes": {
+      "type": "Stat",
+      "props": {
+        "label": "Closes",
+        "value": "5.37d"
+      },
+      "children": []
+    },
+    "stat_mint_amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Amount",
+        "value": "+$25,453",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_mint_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe",
+        "value": "97"
+      },
+      "children": []
+    },
+    "stat_mint_id": {
+      "type": "Stat",
+      "props": {
+        "label": "ID",
+        "value": "cfd710ae960d1784"
+      },
+      "children": []
+    },
+    "item_vote": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_vote",
+        "text_vote_content"
+      ]
+    },
+    "label_vote": {
+      "type": "Badge",
+      "props": {
+        "text": "vote",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text_vote_content": {
+      "type": "Text",
+      "props": {
+        "text": "dislike pod 643 (zcash bug oracle, off-rubric / not HL perps)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_onchain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_onchain",
+        "item_onchain_mint",
+        "item_onchain_vote"
+      ]
+    },
+    "heading_onchain": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item_onchain_mint": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_onchain_mint_label",
+        "text_onchain_mint_tx"
+      ]
+    },
+    "text_onchain_mint_label": {
+      "type": "Text",
+      "props": {
+        "text": "mint cfd710ae960d1784",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_onchain_mint_tx": {
+      "type": "Text",
+      "props": {
+        "text": "tx 0xd9fb03bdcd7c3aba9968b042cdbeee05c2b15477a7c543ce98f248844a99d8ff",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "item_onchain_vote": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_onchain_vote_label",
+        "text_onchain_vote_tx"
+      ]
+    },
+    "text_onchain_vote_label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 643 dislike",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_onchain_vote_tx": {
+      "type": "Text",
+      "props": {
+        "text": "tx 0x868e95b6faa3c78bc0dd9d7aee94f00acf4209fbf94d10a5ca0f30c4d6deddf9",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_summary_context",
+        "text_summary_pending"
+      ]
+    },
+    "text_summary_context": {
+      "type": "Text",
+      "props": {
+        "text": "19th mint overall. 0xbc433ba7 was yesterday's sharpe-tiebreak runner-up to 0x0514f2f3 — fresh and clean today after the aave winner regressed out.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_summary_pending": {
+      "type": "Text",
+      "props": {
+        "text": "15 datanets unassigned.",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
