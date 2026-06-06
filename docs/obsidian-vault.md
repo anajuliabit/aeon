@@ -3,17 +3,23 @@
 Two-way bridge between Aeon's cloud-written `memory/` and a local Obsidian vault
 on your Mac. Design rationale: `docs/superpowers/specs/2026-06-04-aeon-obsidian-vault-design.md`.
 
-## What you see vs. what's hidden
+## What you see
 
-The repo is the vault, but Obsidian's view is curated by one allow-list filter
-(`.obsidian/app.json` → `userIgnoreFilters`). **Visible:**
+The vault root is the **`vault/` subfolder** of the repo clone — not the repo
+root. Obsidian only shows what's physically inside `vault/`, so the explorer and
+graph are clean by construction (no filter, no dimming). **Visible:**
 
-- `vault/` — your stuff: `priorities.md`, `inbox/`, `notes/`, `reviews/`, `Home.md`
-- `memory/topics/` — Aeon's research notes (read-only reading)
+- `priorities.md`, `inbox/`, `notes/`, `reviews/`, `Home.md` — your stuff
+- `topics/` — a symlink to `../memory/topics` (Aeon's research notes, read-only)
 
-**Hidden:** everything else — `skills/`, `docs/`, `memory/logs/`, `memory/issues/`,
-`memory/MEMORY.md`, all `*.json` state, CSVs. New Aeon directories are auto-hidden
-(the filter is a negative lookahead, not an exclude list).
+Everything else in the repo (`skills/`, `docs/`, `memory/logs/`,
+`memory/issues/`, `MEMORY.md`, JSON state, CSVs) lives *above* the vault root, so
+Obsidian never sees it. New Aeon directories can never leak in.
+
+> Why not the repo root + an "Excluded files" filter? Because Obsidian's
+> excluded-files setting only *de-emphasizes* files — it does **not** hide them
+> from the explorer or graph. Rooting the vault at `vault/` is the only reliable
+> way to get a truly clean view.
 
 ## One-time setup
 
@@ -21,13 +27,15 @@ The repo is the vault, but Obsidian's view is curated by one allow-list filter
    ```bash
    git clone https://github.com/anajuliabit/aeon.git ~/obsidian/aeon-vault
    ```
-2. **Open it in Obsidian:** Obsidian → *Open folder as vault* → pick the clone.
+2. **Open the `vault/` subfolder in Obsidian:** *Open folder as vault* →
+   `~/obsidian/aeon-vault/vault` (the subfolder — **not** the repo root).
 3. **Trust + enable community plugins:** Settings → Community plugins → *Turn on*.
 4. **Install Obsidian Git:** Browse → search "Obsidian Git" (by Vinzent03) →
-   Install → Enable. The committed `.obsidian/plugins/obsidian-git/data.json`
-   already holds the sync settings, so it starts auto-syncing immediately.
-5. **Reload Obsidian.** The graph and file explorer now show only `vault/` and
-   `memory/topics/`. New notes default to `vault/inbox/`.
+   Install → Enable. The committed `vault/.obsidian/plugins/obsidian-git/data.json`
+   sets `basePath: ".."` so the plugin operates on the parent repo even though the
+   vault is a subfolder — it starts auto-syncing immediately.
+5. **Reload Obsidian.** The graph and file explorer show only your notes +
+   `topics/`. New notes default to `inbox/`.
 
 ## How sync behaves
 
@@ -64,10 +72,10 @@ hit one.
 
 ## Don't commit `workspace.json`
 
-`.obsidian/workspace.json` (and `workspace-mobile.json`) record your per-machine
-pane layout and change constantly. They're in `.gitignore` — leave them there, or
-you'll get cross-machine conflict churn. All other `.obsidian/` files are shared
-config and are committed intentionally.
+`vault/.obsidian/workspace.json` (and `workspace-mobile.json`) record your
+per-machine pane layout and change constantly. They're in `.gitignore` — leave
+them there, or you'll get cross-machine conflict churn. All other
+`vault/.obsidian/` files are shared config and are committed intentionally.
 
 ## Out of scope
 

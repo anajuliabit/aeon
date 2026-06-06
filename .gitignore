@@ -57,7 +57,7 @@ node_modules/
 .playwright-mcp/
 
 # Obsidian per-machine UI state — never commit (cross-machine conflict churn).
-# All other .obsidian/ files are shared vault config and ARE committed.
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/workspace.json.bak
+# All other vault/.obsidian/ files are shared vault config and ARE committed.
+vault/.obsidian/workspace.json
+vault/.obsidian/workspace-mobile.json
+vault/.obsidian/workspace.json.bak

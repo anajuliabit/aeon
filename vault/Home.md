@@ -22,8 +22,8 @@ docs, state) are hidden from this vault by design.
 
 ## Reading (Aeon-curated)
 
-- `memory/topics/` — Aeon's research notes (crypto, research, projects).
-  Read-only reading material, surfaced here on purpose.
+- `topics/` — Aeon's research notes (crypto, research, projects), symlinked in
+  from `memory/topics/`. Read-only reading material, surfaced here on purpose.
 
 ## How sync works
 

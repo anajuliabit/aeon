@@ -1,4 +1,5 @@
 {
+  "basePath": "..",
   "commitMessage": "vault: {{date}}",
   "autoCommitMessage": "vault: {{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
