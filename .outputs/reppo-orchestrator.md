@@ -1,8 +1,8 @@
-Catalog and per-datanet caches both healthy; datanet 9 reports `valid:true`/ACTIVE on epoch 98. Plan below.
+Catalog available (16 datanets); the only assigned rubric is `tradinggymai.md` (datanet 9) routed to `reppo-trading-agent`, and its cache is `valid:true`, ACTIVE — so RUN. 15 datanets in the catalog have no rubric assigned.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 tradinggymai valid:true ACTIVE, epoch 98, rubric live)
+reppo-trading-agent: RUN   (datanet 9 valid:true, ACTIVE, epoch 98; idempotency-keyed re-run is safe)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -21,6 +21,8 @@ new-datanet: 18  (no rubric / no agent assigned)
 ```
 
 ## Summary
-- 1 RUN / 0 SKIP across rubric files (`reppo-trading-agent` on datanet 9).
-- 15 unassigned datanets surfaced (1, 2, 4–8, 10, 11, 13–18) — same set as 16+ consecutive days.
-- Logged to `memory/logs/2026-06-06.md`.
+- 1 RUN / 0 SKIP across rubric files (datanet 9 → `reppo-trading-agent`).
+- 15 unassigned datanets surfaced for operator pickup: 1, 2, 4–8, 10, 11, 13–18.
+- Catalog available; datanet-9 cache `valid:true`, ACTIVE, epoch 98.
+- Appended re-run note to `memory/logs/2026-06-06.md` under existing `### reppo-orchestrator` heading.
+- Follow-ups (no action by orchestrator): operator to assign rubrics for the 15 surfaced datanets; datanet 18 (ArAIstotle) on 6th consecutive surfacing day per MEMORY.md.
