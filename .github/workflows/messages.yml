@@ -664,6 +664,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -729,11 +730,36 @@ jobs:
           - For anything else, do your best and explain what you did.
 
           Always send your response back via ./notify so the user sees it."
-          if ! CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
+          CLAUDE_OK=true
+          CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
             --model "$MODEL" --allowedTools "$ALLOWED" \
-            --output-format json 2>&1); then
-            echo "::error::Claude CLI failed. Output: $CLAUDE_OUTPUT"
-            exit 1
+            --output-format json 2>&1) || CLAUDE_OK=false
+          # Also treat in-band API errors (e.g. 429 weekly-limit) as failure.
+          if [ "$CLAUDE_OK" = true ] && echo "$CLAUDE_OUTPUT" | jq -e '.is_error == true' >/dev/null 2>&1; then
+            CLAUDE_OK=false
+          fi
+
+          if [ "$CLAUDE_OK" = false ]; then
+            echo "::warning::Claude unavailable (limit/error) — trying Virtuals/Kimi text fallback. Detail: $(echo "$CLAUDE_OUTPUT" | head -c 200)"
+            if [ -n "${VIRTUALS_API_KEY:-}" ]; then
+              FB_PROMPT="You are Aeon, an autonomous assistant replying to your operator on ${SOURCE}. You are in a degraded text-only fallback (no file or tool access) because the primary model hit its usage limit. Reply helpfully and concisely in one short paragraph. If the request needs running a skill, editing files, or saving a note, say you will handle it once full capacity is restored.
+
+          Operator message:
+          \"$MESSAGE\""
+              if FB_REPLY=$(printf '%s' "$FB_PROMPT" | bash scripts/llm.sh); then
+                ./notify "$FB_REPLY"
+                echo "::notice::Replied via Virtuals/Kimi fallback."
+                exit 0
+              else
+                echo "::error::Virtuals fallback also failed (see llm.sh stderr above)."
+                ./notify "⚠️ Aeon is at its model usage limit and the fallback also failed; I'll catch up when capacity resets." || true
+                exit 1
+              fi
+            else
+              echo "::error::Claude failed and VIRTUALS_API_KEY not set — no fallback configured."
+              ./notify "⚠️ Aeon hit its model usage limit and no fallback is configured." || true
+              exit 1
+            fi
           fi
 
           echo "$CLAUDE_OUTPUT" | jq -r '.result // empty'
