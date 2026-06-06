@@ -498,5 +498,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "vuln-scanner": {
+    "last_dispatch": "2026-06-06T16:04:08Z",
+    "last_status": "dispatched"
   }
 }
