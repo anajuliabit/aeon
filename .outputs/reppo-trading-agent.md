@@ -1,63 +1,28 @@
-Skill complete. Summary follows.
-
-# reppo-trading-agent — 2026-06-05 18:16Z
-
-## Gate
-**RUN** — orchestrator emitted `reppo-trading-agent: RUN (datanet 9 ACTIVE, valid:true, currentEpoch 98)`. Datanet 9 rubric: TradingGymAI, mint_cap=1, subnet_uuid `cmnhuowns000bic04e16t6735`.
-
-## Wallets read (top-12 margin-ranked, `HL_WINDOW=week`, `HL_MIN_VLM_USD=$100k`)
-Per the input contract — every count below is a fresh `jq` read against this run's `.hl-cache/user-fills-*.json`, not memory:
-
-| Rank | Wallet | len | Verdict |
-|------|--------|-----|---------|
-| 1 | `0xa87a233e` | 2 | SUB-FLOOR (2 FARTCOIN perp closes) |
-| 2 | `0xd507eeef` | 90 | SPOT-ONLY (PURR/USDC, 0 closes) |
-| 3 | `0x06cecfba` | 900 | NEG-PnL REJECT (836 MON closes −$54,509) |
-| 4 | `0x0514f2f3` | 196 | **✓ candidate** (196 AAVE Close-Short, +$14,615, 33.7h) |
-| 5 | `0xfeec88b1` | 80 | SUB-FLOOR (only 7 closes) |
-| 6 | `0x45d26f28` | 805 | OPENS-ONLY (0 closes across BNB/BTC/ETH) |
-| 7 | `0x27388d07` | 40 | SPOT-ONLY (@107 HL-spot, 0 closes) |
-| 8 | `0xfbc96389` | 17 | SUB-FLOOR |
-| 9 | `0x781e95fd` | 201 | **DEDUP** — canonical exactly matches today's 17th-mint `e2e925b2…` |
-| 10 | `0xbc433ba7` | 107 | **✓ candidate** (52 multi-mkt perp closes, +$25,453, 128.95h) |
-| 11 | `0x45a5aea0` | 9 | SUB-FLOOR |
-| 12 | `0x90882e7c` | 153 | NEG-PnL REJECT (ETH +$1,118 + HYPE −$1,690 = −$571) |
-
-## Candidate datasets (≥20 closes, perp-only, sum_pnl>0)
-- `0x0514f2f3` — 196 AAVE Close-Short, win_rate **1.000**, sum_pnl **+$14,615.25**, Sharpe **3,429.92**, MDD 0%, span 2026-06-02T16:47Z..06-04T02:29Z (1.40d)
-- `0xbc433ba7` — 52 multi-mkt perp closes (HYPE +$22,009 + xyz:CBRS/QNT/SNDK/SPCX), win_rate 1.000, sum_pnl +$25,453, Sharpe **97.21**, MDD 0%, span 5.37d
-
-Quality guards (Step 4.2): both NEW in ledger → no same-wallet regression check; both sum_pnl > 0 → no NEG-PnL reject.
-
-## Mint selected (mint_cap=1, by Sharpe)
-**`0x0514f2f3e0277c47117e3f33d9390efb0acfbdfe`** AAVE perp
-
-- canonical: `trades:9:0x0514f2f3e0277c47117e3f33d9390efb0acfbdfe:1780097232972:1780218542308:196`
-- sha256: `60907e54fa9d5eb9562e05061ee237befbafb63afd84a6ef1f19afa9f8b29628` (first16 `60907e54fa9d5eb9`)
-- intent: `.pending-reppo/mint-60907e54fa9d5eb9.json` (pod_name 45/50, pod_desc 189/200 — both under ISS-012 caps)
-- dataset: `.pending-reppo/data/mint-60907e54fa9d5eb9.json` 10.4 kB / 28-row stride-sampled (every 7th close, per 17th-mint precedent; full 196-row reproducible from HL `userFillsByTime` startTime=1780097232972)
-- signal=`unclassified` per HL HFT-density convention (15th/16th/17th-mint precedent); market_context=`null` (AAVE perp not in cached BTC/ETH/SOL OHLCV) per 11th/12th/15th/16th-mint precedent
-- if this mints, it will be the **4th mint of 2026-06-05** — extending today's same-day record beyond the 3-mint days of 2026-05-29 and 2026-05-30
-
-## Skipped/degraded
-- 1 DEDUP (`0x781e95fd`, exact canonical match to today's 17th-mint `e2e925b2…`)
-- 4 SUB-FLOOR (<20 closes: `0xa87a233e`/`0xfeec88b1`/`0xfbc96389`/`0x45a5aea0`)
-- 2 SPOT-ONLY (`0xd507eeef`/`0x27388d07`)
-- 1 OPENS-ONLY (`0x45d26f28`)
-- 2 NEG-PnL REJECT (`0x06cecfba` −$54.5k, `0x90882e7c` −$0.57k)
-- 1 dropped by mint_cap=1 Sharpe tiebreak (`0xbc433ba7`, runner-up — Sharpe 97.21 vs winner's 3,429.92)
-- No HL endpoints degraded — all 12 user-fills + 3 OHLCV cache reads served by prefetch; no `WebFetch` fallback used.
-- No prompt-injection attempts in fetched content.
+All deliverables in place. End-of-skill output below.
 
 ## Summary
-- Gate **RUN**. Read top-12 margin-ranked HL wallets; 2 candidates cleared the ≥20-trade floor + content guards.
-- 1 mint intent written: `.pending-reppo/mint-60907e54fa9d5eb9.json` (datanet 9, AAVE perp 196 closes, Sharpe 3,429.92, +$14,615.25, MDD 0%). Dataset body materialized at `.pending-reppo/data/mint-60907e54fa9d5eb9.json` (10.4 kB / 28-row stride-sampled).
-- Log appended at `memory/logs/2026-06-05.md` under `### reppo-trading-agent` heading.
-- `scripts/postprocess-reppo.sh` will append `## Execution Results` with on-chain outcomes.
+
+**Gate:** RUN (datanet 9 valid/ACTIVE, epoch 98).
+
+**Read:** 64 user-fills caches via fresh per-wallet reads (12 empty, 52 with fills) + leaderboard (37,954 rows) + BTC/ETH/SOL 1h OHLCV. No PREFETCH_FAILED markers.
+
+**Filter trace:** 13 candidates passed perp-only + ≥20-closed floor. Of those — 8 byte-identical DEDUPs vs ledger (mints 5/6/7/8/9/10/15/17), 7 NEG-PnL REJECTs ($59,518 → $12 losses), 3 Step-4.2 regressions (0x944b5f7d Sharpe 48,523→408; 0x0514f2f3 PnL $14,615→$5,855; 0x2b3349ff PnL $29,818→$272), plus sub-floor / opens-only / spot-only / spot-mix batches.
+
+**Winner (Sharpe-rank, mint_cap=1):** `0xbc433ba7c34752448c5361e5ed3038628a1753b0` — 52 closes over 5.37d across HYPE/xyz:CBRS/xyz:QNT/xyz:SPCX/xyz:SNDK, +$25,453.06, Sharpe 97.21, MDD 0%, win 100%. Same wallet that was 18th-mint's dropped runner-up on 2026-06-05 4th-run — re-surfaces today as the sole fresh fully-passing candidate now that 0x0514f2f3 (the 18th-mint winner) regressed out.
+
+**Files written:**
+- `.pending-reppo/mint-cfd710ae960d1784.json` (596 B intent)
+- `.pending-reppo/data/mint-cfd710ae960d1784.json` (26.7 kB / 52-row labeled dataset)
+- `memory/logs/2026-06-06.md` (### reppo-trading-agent entry appended)
+- `.outputs/reppo-trading-agent.md` (skill output)
+
+**Caps:** pod_name 36/50, pod_description 184/200, canonical `trades:9:0xbc433ba7…:1780205921679:1780670139222:52`, hash `cfd710ae960d1784`.
+
+**Follow-ups:** `scripts/postprocess-reppo.sh` will execute the intent and append `## Execution Results`. Scratch files `.tmp-scan.sh/.js`, `.tmp-dataset.js`, `.tmp-build-mint.js` remain at repo root (sandbox blocked the `rm` per the open MEMORY.md cleanup goal — needs the queued postprocess cleanup step). 0 vote intents (decoupled to reppo-voter).
 
 ## Execution Results
 
-_Generated by postprocess-reppo.sh (2026-06-05T18:18:12Z). dry_run_only=false_
+_Generated by postprocess-reppo.sh (2026-06-06T00:24:42Z). dry_run_only=false_
 
 - `mint-e2e925b23374bb0a.json` — **success** (tx: 0xa86b8dcaaf1cccfaf8a5dec52c48874f9fd19571a4c0abb06ab224b14311e287, dataset: <unknown>)
 
@@ -74,3 +39,4 @@ _Generated by postprocess-reppo.sh (2026-06-05T18:11:10Z). dry_run_only=false_
 _Generated by postprocess-reppo.sh (2026-06-06T00:18:55Z). dry_run_only=false_
 
 - `vote-643-dislike.json` — **success** (tx: 0x868e95b6faa3c78bc0dd9d7aee94f00acf4209fbf94d10a5ca0f30c4d6deddf9)
+- `mint-cfd710ae960d1784.json` — **success** (tx: 0xd9fb03bdcd7c3aba9968b042cdbeee05c2b15477a7c543ce98f248844a99d8ff, dataset: <unknown>)
