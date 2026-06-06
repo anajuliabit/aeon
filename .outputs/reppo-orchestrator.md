@@ -1,8 +1,8 @@
-Catalog available (16 entries, datanet 9 valid). Only rubric file is `tradinggymai.md` → RUN. Unassigned: 15 datanets.
+Catalog and per-datanet caches both healthy; datanet 9 reports `valid:true`/ACTIVE on epoch 98. Plan below.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 ACTIVE, valid:true, currentEpoch 98)
+reppo-trading-agent: RUN   (datanet 9 tradinggymai valid:true ACTIVE, epoch 98, rubric live)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -21,6 +21,6 @@ new-datanet: 18  (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Catalog available; datanet 9 (TradingGym AI) is ACTIVE with `valid:true` at currentEpoch 98 → `reppo-trading-agent` plan = RUN.
-- 15 unassigned datanets surfaced for operator (1, 2, 4–8, 10, 11, 13–18) — unchanged from prior runs.
-- Logged 4th run entry in `memory/logs/2026-06-05.md`.
+- 1 RUN / 0 SKIP across rubric files (`reppo-trading-agent` on datanet 9).
+- 15 unassigned datanets surfaced (1, 2, 4–8, 10, 11, 13–18) — same set as 16+ consecutive days.
+- Logged to `memory/logs/2026-06-06.md`.
