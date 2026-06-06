@@ -61,3 +61,11 @@ node_modules/
 vault/.obsidian/workspace.json
 vault/.obsidian/workspace-mobile.json
 vault/.obsidian/workspace.json.bak
+
+# Obsidian community-plugin binaries — reinstall per vault; don't bloat the repo.
+# We keep data.json (our shared config) but ignore the plugin code itself.
+vault/.obsidian/plugins/*/main.js
+vault/.obsidian/plugins/*/manifest.json
+vault/.obsidian/plugins/*/styles.css
+vault/.obsidian/plugins/*/*.map
+vault/.obsidian/appearance.json
