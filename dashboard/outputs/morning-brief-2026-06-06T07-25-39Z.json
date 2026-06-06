@@ -1,0 +1,210 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-06"
+      },
+      "children": [
+        "status_row",
+        "separator_1",
+        "focus_section",
+        "separator_2",
+        "mint_section",
+        "separator_3",
+        "scheduled_section"
+      ]
+    },
+    "status_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "status_badge"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "default"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "focus_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_heading",
+        "pr71_alert",
+        "spot_pct_item",
+        "watches_item"
+      ]
+    },
+    "focus_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus",
+        "level": "h3"
+      }
+    },
+    "pr71_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "PR #71 Stalled",
+        "message": "32 hours without progress",
+        "type": "warning"
+      }
+    },
+    "spot_pct_item": {
+      "type": "Text",
+      "props": {
+        "text": "spot_pct codify"
+      }
+    },
+    "watches_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "watches_text",
+        "watches_day3_badge"
+      ]
+    },
+    "watches_text": {
+      "type": "Text",
+      "props": {
+        "text": "watches.yml no_config"
+      }
+    },
+    "watches_day3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "day 3",
+        "variant": "secondary"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "mint_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint_heading",
+        "mint_contract",
+        "mint_timestamp",
+        "mint_tx",
+        "mint_record_stat"
+      ]
+    },
+    "mint_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "19th Mint",
+        "level": "h3"
+      }
+    },
+    "mint_contract": {
+      "type": "Text",
+      "props": {
+        "text": "Contract: cfd710ae"
+      }
+    },
+    "mint_timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "Landed: 06utc"
+      }
+    },
+    "mint_tx": {
+      "type": "Text",
+      "props": {
+        "text": "TX: 0xd9fb03bd"
+      }
+    },
+    "mint_record_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Friday Mints Record",
+        "value": "4"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "scheduled_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "scheduled_heading",
+        "vuln_scanner_row"
+      ]
+    },
+    "scheduled_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scheduled",
+        "level": "h3"
+      }
+    },
+    "vuln_scanner_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "vuln_name",
+        "vuln_schedule",
+        "vuln_firstfire"
+      ]
+    },
+    "vuln_name": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner"
+      }
+    },
+    "vuln_schedule": {
+      "type": "Badge",
+      "props": {
+        "text": "sat-weekly",
+        "variant": "outline"
+      }
+    },
+    "vuln_firstfire": {
+      "type": "Badge",
+      "props": {
+        "text": "first-fire 16utc",
+        "variant": "default"
+      }
+    }
+  }
+}

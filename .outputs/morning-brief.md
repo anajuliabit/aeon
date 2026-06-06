@@ -1,1 +1,1 @@
-morning brief 2026-06-05 staged at .pending-notify/1780647752-morning-brief.md
+morning-brief 2026-06-06 staged — focus pr #71 stall (32h) + spot_pct codify + watches.yml no_config day 3 — 19th mint cfd710ae landed 06utc tx 0xd9fb03bd, 4 fri mints record, vuln-scanner sat-weekly first-fire 16utc
