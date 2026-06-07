@@ -432,23 +432,35 @@ jobs:
           fi
 
           if [ "$CLAUDE_OK" = false ]; then
-            # Digest-only Virtuals fallback. ONLY for fetch-then-summarize skills
-            # whose data is prefetched and whose deliverable is a notification.
-            # NEVER agentic/on-chain/stateful skills — a one-shot model would fabricate.
-            FALLBACK_DIGEST_SKILLS=" defi-overview token-movers token-pick token-alert market-context-refresh github-trending aixbt-pulse morning-brief daily-routine "
-            if [ -n "${VIRTUALS_API_KEY:-}" ] && printf '%s' "$FALLBACK_DIGEST_SKILLS" | grep -q " ${SKILL_NAME} "; then
-              echo "::warning::Claude limited — running ${SKILL_NAME} via Virtuals digest fallback (${VIRTUALS_MODEL:-deepseek-v4-pro})."
+            # Fresh-fetch Virtuals fallback for CoinGecko price digests ONLY.
+            # These skills fetch CoinGecko in-skill, so we RE-FETCH fresh data here
+            # (bash, full env) and let a cheap model summarize it. Agentic / on-chain /
+            # multi-source skills are excluded — they wait for the Claude reset.
+            FALLBACK_CG_SKILLS=" defi-overview token-movers token-pick token-alert market-context-refresh "
+            if [ -n "${VIRTUALS_API_KEY:-}" ] && printf '%s' "$FALLBACK_CG_SKILLS" | grep -q " ${SKILL_NAME} "; then
+              echo "::warning::Claude limited — ${SKILL_NAME} via Virtuals fresh-fetch fallback (${VIRTUALS_MODEL:-deepseek-v4-pro})."
+              CG="https://api.coingecko.com/api/v3"
               CTX=$(mktemp)
               {
                 echo "### SKILL DEFINITION (skills/${SKILL_NAME}/SKILL.md)"
-                cat "skills/${SKILL_NAME}/SKILL.md" 2>/dev/null
-                echo ""
-                echo "### PRE-FETCHED DATA (use ONLY this; do not invent anything)"
-                for f in ".xai-cache/${SKILL_NAME}.json" .cg-markets.json .cg-trending.json .hf-papers.json .hn-top.json .hn-algolia.json .aixbt-grounding.json; do
-                  [ -f "$f" ] && { echo "--- $f ---"; head -c 12000 "$f"; echo ""; }
-                done
+                cat "skills/${SKILL_NAME}/SKILL.md" 2>/dev/null; echo ""
+                echo "### MEMORY context (tracked tokens / watchlist / current focus)"
+                sed -n '1,140p' memory/MEMORY.md 2>/dev/null; echo ""
+                echo "### FRESH CoinGecko data fetched $(date -u +%FT%TZ) — use ONLY this, do not invent"
+                echo "--- /coins/markets top 250 (1h,24h,7d %) ---"
+                curl -s --max-time 40 "${CG}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=1h,24h,7d" \
+                  ${COINGECKO_API_KEY:+-H "x-cg-pro-api-key: $COINGECKO_API_KEY"} \
+                  | jq -c '[.[] | {sym:.symbol,name:.name,price:.current_price,h1:.price_change_percentage_1h_in_currency,d24:.price_change_percentage_24h,d7:.price_change_percentage_7d_in_currency,mcap:.market_cap,vol:.total_volume,rank:.market_cap_rank}]' 2>/dev/null | head -c 60000; echo ""
+                echo "--- /search/trending ---"
+                curl -s --max-time 30 "${CG}/search/trending" \
+                  ${COINGECKO_API_KEY:+-H "x-cg-pro-api-key: $COINGECKO_API_KEY"} \
+                  | jq -c '[.coins[].item | {sym:.symbol,name:.name,rank:.market_cap_rank}]' 2>/dev/null | head -c 6000; echo ""
+                echo "--- /global ---"
+                curl -s --max-time 30 "${CG}/global" \
+                  ${COINGECKO_API_KEY:+-H "x-cg-pro-api-key: $COINGECKO_API_KEY"} \
+                  | jq -c '.data | {mcap_usd:.total_market_cap.usd,vol_usd:.total_volume.usd,btc_dom:.market_cap_percentage.btc,eth_dom:.market_cap_percentage.eth,mcap_chg_24h:.market_cap_change_percentage_24h_usd}' 2>/dev/null; echo ""
               } > "$CTX"
-              FB_PROMPT="Today is ${TODAY}. You are Aeon running the \"${SKILL_NAME}\" skill in a DEGRADED TEXT-ONLY FALLBACK: no tools, you cannot read files or run commands. Below is the skill definition and the data already pre-fetched for you. Output ONLY the final notification text the skill would send (follow its notification format). Use ONLY the data provided — omit any section whose data is missing. NEVER invent numbers, prices, links, or facts. Be concise.
+              FB_PROMPT="Today is ${TODAY}. You are Aeon running \"${SKILL_NAME}\" in a TEXT-ONLY fallback (no tools). Below is the skill definition, memory context, and FRESH CoinGecko data just fetched for you. Output ONLY the final notification text in the skill's format and voice. Use ONLY the data provided — omit anything not present. NEVER invent numbers, prices, or links. Be concise.
 
           $(cat "$CTX")"
               if FB_REPLY=$(printf '%s' "$FB_PROMPT" | bash scripts/llm.sh); then
@@ -456,10 +468,10 @@ jobs:
                 ./notify "$FB_REPLY" || true
                 printf '%s' "$FB_REPLY" > /tmp/skill-result.txt
                 for k in INPUT OUTPUT CACHE_READ CACHE_CREATION TOTAL; do echo "SKILL_${k}_TOKENS=0" >> "$GITHUB_OUTPUT"; done
-                echo "::notice::${SKILL_NAME} completed via Virtuals digest fallback."
+                echo "::notice::${SKILL_NAME} completed via Virtuals fresh-fetch fallback."
                 exit 0
               fi
-              echo "::error::Virtuals digest fallback failed for ${SKILL_NAME}."
+              echo "::error::Virtuals fresh-fetch fallback failed for ${SKILL_NAME}."
             fi
             echo "::error::Claude CLI failed. Output: $CLAUDE_OUTPUT"
             # Save error signature for quality tracking (cron-state step reads this)
