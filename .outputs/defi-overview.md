@@ -1,1 +1,1 @@
-DeFi overview 2026-05-23 — see full message
+Total market cap: $2.23T (+3.23% 24h). BTC dominance: 56.12%, ETH dominance: 8.83%. Notable movers (24h): SIREN +60.9%, LAB +40.8%, H (Humanity) +25.4%, BEAT +25.2%, ZEC +16.5%. Broad market bounce; SIREN and LAB extend parabolic streaks, while Zcash rallies on privacy narrative.
