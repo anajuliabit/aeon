@@ -1,21 +1,19 @@
-Skill complete. Notification staged for delivery and the log entry is in.
+**Top 6 Gainers (24h):**
 
-## Summary
+1. **Siren (SIREN)** — $1.31 | +59.11% (24h) | +158.94% (7d)  
+2. **LAB (LAB)** — $12.99 | +41.45% (24h) | +77.77% (7d)  
+3. **Audiera (BEAT)** — $2.66 | +26.12% (24h) | +124.39% (7d)  
+4. **Humanity (H)** — $0.7637 | +25.00% (24h) | +104.67% (7d)  
+5. **BinanceLife (币安人生)** — $0.8624 | +18.99% (24h) | +58.41% (7d)  
+6. **Zcash (ZEC)** — $415.44 | +17.06% (24h) | -23.90% (7d)  
 
-**Token-movers run for 2026-06-05** — fetched live CoinGecko data (250 coins + 15-name trending), filtered to 193 after dropping stables/wrapped/sub-$1M volume, ranked, enriched with signal+risk tags, and deduped against 6-04.
+**Top 6 Losers (24h):**
 
-**Headline:** broad risk-off — 12 of 78 top-100 (filtered) green, median 24h −4.7%. LAB and ZEC both shed ~39% the same day.
+1. **Ethena (ENA)** — $0.08955 | -3.56% (24h) | -0.87% (7d)  
+2. **JUST (JST)** — $0.07970 | -2.61% (24h) | -14.13% (7d)  
+3. **Hyperliquid (HYPE)** — $57.77 | -1.69% (24h) | -15.25% (7d)  
+4. **Litecoin (LTC)** — $42.04 | -1.58% (24h) | -19.63% (7d)  
+5. **Avalanche (AVAX)** — $6.65 | -1.50% (24h) | -26.21% (7d)  
+6. **DeXe (DEXE)** — $19.64 | -1.19% (24h) | +4.03% (7d)  
 
-**Material moves vs yesterday:**
-- **LAB −38.9%** — the 6-day vertical (+303% 7d on the ZachXBT 95%-insider-supply flag) finally broke; the token-pick skip rubric paid off after 6 days
-- **ZEC −38.6%** — top-20 capitulation on $2.58B volume, full unwind of the privacy/Hayes narrative
-- **WLD +10.5% / 7d +81%** — only real top-100 breakout in a red tape, TRENDING+UP
-- **TRAC and HOME both round-tripped** vs yesterday (winner→loser, loser→winner)
-- **QAIT/SEALCOIN +52% (#228)** and **KOGE (#163, $1.1M vol, vmc 0.005)** — surfaced with pump-risk and thin-vol disclosures
-
-**Files:**
-- Created: `.pending-notify/1780666061-token-movers.md` (3,037 chars, under 4000 cap)
-- Modified: `memory/logs/2026-06-05.md` (appended `### token-movers` entry)
-- Left in working dir: `.tmp-cg-markets.json`, `.tmp-cg-trending.json` (sandbox blocks `rm` — known cleanup-chain-runner-scratch backlog)
-
-**Follow-up:** post-run notify delivery step will pick up the staged file. No action required.
+**Market Read:** Total crypto cap up 3.23% to $2.23T on $79B volume. BTC (+1.58%) and ETH (+3.95%) both climb but remain deep in weekly red (-16.3% and -19.9%). SIREN, LAB, and BEAT explode with triple-digit weekly gains, while losers see only modest 24h declines — a broad, cautious recovery after the recent sell-off.
