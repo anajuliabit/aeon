@@ -440,29 +440,27 @@ jobs:
             if [ -n "${VIRTUALS_API_KEY:-}" ] && printf '%s' "$FALLBACK_CG_SKILLS" | grep -q " ${SKILL_NAME} "; then
               echo "::warning::Claude limited — ${SKILL_NAME} via Virtuals fresh-fetch fallback (${VIRTUALS_MODEL:-deepseek-v4-flash})."
               CG="https://api.coingecko.com/api/v3"
-              CTX=$(mktemp)
-              {
-                echo "### SKILL DEFINITION (skills/${SKILL_NAME}/SKILL.md)"
-                cat "skills/${SKILL_NAME}/SKILL.md" 2>/dev/null; echo ""
-                echo "### MEMORY context (tracked tokens / watchlist / current focus)"
-                sed -n '1,140p' memory/MEMORY.md 2>/dev/null; echo ""
-                echo "### FRESH CoinGecko data fetched $(date -u +%FT%TZ) — use ONLY this, do not invent"
-                echo "--- /coins/markets top 250 (1h,24h,7d %) ---"
-                curl -s --max-time 40 "${CG}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h,24h,7d" \
-                  ${COINGECKO_API_KEY:+-H "x-cg-pro-api-key: $COINGECKO_API_KEY"} \
-                  | jq -c '[.[] | {sym:.symbol,name:.name,price:.current_price,h1:.price_change_percentage_1h_in_currency,d24:.price_change_percentage_24h,d7:.price_change_percentage_7d_in_currency,mcap:.market_cap,vol:.total_volume,rank:.market_cap_rank}]' 2>/dev/null | head -c 60000; echo ""
-                echo "--- /search/trending ---"
-                curl -s --max-time 30 "${CG}/search/trending" \
-                  ${COINGECKO_API_KEY:+-H "x-cg-pro-api-key: $COINGECKO_API_KEY"} \
-                  | jq -c '[.coins[].item | {sym:.symbol,name:.name,rank:.market_cap_rank}]' 2>/dev/null | head -c 6000; echo ""
-                echo "--- /global ---"
-                curl -s --max-time 30 "${CG}/global" \
-                  ${COINGECKO_API_KEY:+-H "x-cg-pro-api-key: $COINGECKO_API_KEY"} \
-                  | jq -c '.data | {mcap_usd:.total_market_cap.usd,vol_usd:.total_volume.usd,btc_dom:.market_cap_percentage.btc,eth_dom:.market_cap_percentage.eth,mcap_chg_24h:.market_cap_change_percentage_24h_usd}' 2>/dev/null; echo ""
-              } > "$CTX"
-              FB_PROMPT="Today is ${TODAY}. You are Aeon running \"${SKILL_NAME}\" in a TEXT-ONLY fallback (no tools). Below is the skill definition, memory context, and FRESH CoinGecko data just fetched for you. Output ONLY the final notification text in the skill's format and voice. Use ONLY the data provided — omit anything not present. NEVER invent numbers, prices, or links. Be concise.
-
-          $(cat "$CTX")"
+              CGH=(); [ -n "${COINGECKO_API_KEY:-}" ] && CGH=(-H "x-cg-pro-api-key: ${COINGECKO_API_KEY}")
+              # Short per-skill instruction (NOT the full SKILL.md — that drives a huge,
+              # slow generation that 504s the gateway). Output is capped for speed.
+              case "$SKILL_NAME" in
+                token-movers) INSTR="Crypto market-movers digest: the 6 biggest 24h gainers and 6 biggest losers (symbol, price, 24h%, 7d%), then a 1-2 line market read." ;;
+                token-pick) INSTR="Pick the 2-3 most interesting tokens (momentum/volume/trend) with a one-line rationale each, grounded only in the numbers shown." ;;
+                defi-overview) INSTR="Crypto market overview: total market cap + 24h change + BTC/ETH dominance (from GLOBAL), plus 4-5 notable movers and a 1-2 line read." ;;
+                token-alert) INSTR="From the operator's tracked tokens/watchlist below, report each that appears in the market data with price and 24h move; flag any move beyond +/-10%. If none are present, say so plainly." ;;
+                market-context-refresh) INSTR="Macro crypto snapshot: BTC/ETH/SOL prices and 24h moves, total market cap + 24h change, BTC/ETH dominance, and a one-line risk-on/off read." ;;
+                *) INSTR="Concise crypto market digest from the data." ;;
+              esac
+              WATCH=""
+              [ "$SKILL_NAME" = "token-alert" ] && WATCH="$(grep -iA6 'tracked tokens\|watchlist' memory/MEMORY.md 2>/dev/null | head -c 1200)"
+              MKT=$(curl -s --max-time 40 "${CG}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h,24h,7d" "${CGH[@]}" | jq -c '[.[]|{s:.symbol,n:.name,p:.current_price,d24:.price_change_percentage_24h,d7:.price_change_percentage_7d_in_currency,r:.market_cap_rank}]' 2>/dev/null)
+              TRD=$(curl -s --max-time 30 "${CG}/search/trending" "${CGH[@]}" | jq -c '[.coins[].item|{s:.symbol,r:.market_cap_rank}]' 2>/dev/null)
+              GLB=$(curl -s --max-time 30 "${CG}/global" "${CGH[@]}" | jq -c '.data|{mcap:.total_market_cap.usd,vol:.total_volume.usd,btc_dom:.market_cap_percentage.btc,eth_dom:.market_cap_percentage.eth,chg24:.market_cap_change_percentage_24h_usd}' 2>/dev/null)
+              FB_PROMPT="Today is ${TODAY}. You are Aeon running ${SKILL_NAME} in a text-only fallback (no tools). ${INSTR} Use ONLY the fresh CoinGecko data below (fetched $(date -u +%FT%TZ)); never invent numbers or links. Plain text, under 1400 chars, no preamble.
+          ${WATCH:+TRACKED: ${WATCH}
+          }GLOBAL: ${GLB}
+          TRENDING: ${TRD}
+          MARKETS(top100): ${MKT}"
               if FB_REPLY=$(printf '%s' "$FB_PROMPT" | bash scripts/llm.sh); then
                 FB_REPLY="${FB_REPLY:0:3500}"
                 ./notify "$FB_REPLY" || true
