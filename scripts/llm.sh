@@ -10,7 +10,7 @@
 # detect and handle it.
 #
 # Override defaults via env:
-#   VIRTUALS_MODEL    (default moonshotai/kimi-k2-0905)
+#   VIRTUALS_MODEL    (default claude-opus-4-8; see GET /v1/models for options)
 #   VIRTUALS_ENDPOINT (default https://compute.virtuals.io/v1/chat/completions)
 #
 # Sandbox note: this calls curl with VIRTUALS_API_KEY in the header, so it must
@@ -19,7 +19,7 @@
 # sandbox's env-var-in-header block — use the prefetch pattern there instead.
 set -euo pipefail
 
-MODEL="${VIRTUALS_MODEL:-moonshotai/kimi-k2-0905}"
+MODEL="${VIRTUALS_MODEL:-claude-opus-4-8}"
 ENDPOINT="${VIRTUALS_ENDPOINT:-https://compute.virtuals.io/v1/chat/completions}"
 
 if [ -z "${VIRTUALS_API_KEY:-}" ]; then
@@ -47,8 +47,9 @@ RESP=$(curl -sS --max-time 120 -X POST "$ENDPOINT" \
   -H "Content-Type: application/json" \
   -d "$BODY") || { echo "llm.sh: curl to $ENDPOINT failed" >&2; exit 1; }
 
-# Surface API-level errors (OpenAI-style {"error": {"message": ...}}).
-ERR=$(printf '%s' "$RESP" | jq -r '.error.message // empty' 2>/dev/null || true)
+# Surface API-level errors. Handles both OpenAI-style {"error":{"message":...}}
+# and Virtuals-style {"message":...,"error":"...","statusCode":N}.
+ERR=$(printf '%s' "$RESP" | jq -r '.error.message? // .message? // empty' 2>/dev/null || true)
 if [ -n "$ERR" ]; then
   echo "llm.sh: API error: $ERR" >&2
   exit 1
