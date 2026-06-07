@@ -188,6 +188,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
+          VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-pro' }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
           GITHUB_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
@@ -421,9 +423,44 @@ jobs:
           Use this variable (override the default in the skill file):
           var=$VAR"
           fi
-          if ! CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
+          CLAUDE_OK=true
+          CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
             --model "$MODEL" --allowedTools "$ALLOWED" \
-            --output-format json 2>&1); then
+            --output-format json 2>&1) || CLAUDE_OK=false
+          if [ "$CLAUDE_OK" = true ] && echo "$CLAUDE_OUTPUT" | jq -e '.is_error == true' >/dev/null 2>&1; then
+            CLAUDE_OK=false
+          fi
+
+          if [ "$CLAUDE_OK" = false ]; then
+            # Digest-only Virtuals fallback. ONLY for fetch-then-summarize skills
+            # whose data is prefetched and whose deliverable is a notification.
+            # NEVER agentic/on-chain/stateful skills — a one-shot model would fabricate.
+            FALLBACK_DIGEST_SKILLS=" defi-overview token-movers token-pick token-alert market-context-refresh github-trending aixbt-pulse morning-brief daily-routine "
+            if [ -n "${VIRTUALS_API_KEY:-}" ] && printf '%s' "$FALLBACK_DIGEST_SKILLS" | grep -q " ${SKILL_NAME} "; then
+              echo "::warning::Claude limited — running ${SKILL_NAME} via Virtuals digest fallback (${VIRTUALS_MODEL:-deepseek-v4-pro})."
+              CTX=$(mktemp)
+              {
+                echo "### SKILL DEFINITION (skills/${SKILL_NAME}/SKILL.md)"
+                cat "skills/${SKILL_NAME}/SKILL.md" 2>/dev/null
+                echo ""
+                echo "### PRE-FETCHED DATA (use ONLY this; do not invent anything)"
+                for f in ".xai-cache/${SKILL_NAME}.json" .cg-markets.json .cg-trending.json .hf-papers.json .hn-top.json .hn-algolia.json .aixbt-grounding.json; do
+                  [ -f "$f" ] && { echo "--- $f ---"; head -c 12000 "$f"; echo ""; }
+                done
+              } > "$CTX"
+              FB_PROMPT="Today is ${TODAY}. You are Aeon running the \"${SKILL_NAME}\" skill in a DEGRADED TEXT-ONLY FALLBACK: no tools, you cannot read files or run commands. Below is the skill definition and the data already pre-fetched for you. Output ONLY the final notification text the skill would send (follow its notification format). Use ONLY the data provided — omit any section whose data is missing. NEVER invent numbers, prices, links, or facts. Be concise.
+
+          $(cat "$CTX")"
+              if FB_REPLY=$(printf '%s' "$FB_PROMPT" | bash scripts/llm.sh); then
+                FB_REPLY="${FB_REPLY:0:3500}"
+                ./notify "$FB_REPLY" || true
+                printf '%s' "$FB_REPLY" > /tmp/skill-result.txt
+                for k in INPUT OUTPUT CACHE_READ CACHE_CREATION TOTAL; do echo "SKILL_${k}_TOKENS=0" >> "$GITHUB_OUTPUT"; done
+                echo "::notice::${SKILL_NAME} completed via Virtuals digest fallback."
+                exit 0
+              fi
+              echo "::error::Virtuals digest fallback failed for ${SKILL_NAME}."
+            fi
             echo "::error::Claude CLI failed. Output: $CLAUDE_OUTPUT"
             # Save error signature for quality tracking (cron-state step reads this)
             echo "$CLAUDE_OUTPUT" | tail -c 500 | tr '\n' ' ' | cut -c1-200 > /tmp/skill-error.txt
@@ -501,6 +538,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
+          VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-pro' }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
         run: |
           SKILL="${{ steps.skill.outputs.name }}"
@@ -602,6 +641,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
+          VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-pro' }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
         run: |
           if [ "${{ steps.run.outputs.GATEWAY }}" = "bankr" ] && [ -n "${BANKR_LLM_KEY:-}" ]; then
