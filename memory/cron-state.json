@@ -18,7 +18,7 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-06T12:33:37Z"
+    "last_dispatch": "2026-06-07T12:23:36Z"
   },
   "competitor-launch-radar": {
     "last_status": "success",
@@ -47,7 +47,7 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-06T12:33:37Z"
+    "last_dispatch": "2026-06-07T12:23:36Z"
   },
   "fetch-tweets": {
     "last_status": "success",
@@ -107,8 +107,8 @@
     "last_dispatch": "2026-06-06T13:44:39Z"
   },
   "chain:reppo-swarm": {
-    "last_dispatch": "2026-06-07T06:47:37Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-07T12:23:36Z",
+    "last_status": "dispatched",
     "last_failed": "2026-06-07T06:51:33Z",
     "last_success": "2026-06-06T06:26:01Z"
   },
@@ -164,7 +164,7 @@
     "last_error": "okens\":12,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.0005250000000000001,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-opus-4-7\":{\"inputTokens\":9"
   },
   "token-alert": {
-    "last_dispatch": "2026-06-06T12:33:37Z",
+    "last_dispatch": "2026-06-07T12:23:36Z",
     "last_status": "dispatched",
     "last_success": "2026-06-05T12:10:02Z",
     "total_runs": 15,
@@ -460,7 +460,7 @@
     "success_rate": 1
   },
   "token-movers": {
-    "last_dispatch": "2026-06-06T12:33:37Z",
+    "last_dispatch": "2026-06-07T12:23:36Z",
     "last_status": "dispatched",
     "last_success": "2026-06-05T13:30:41Z",
     "total_runs": 2,
@@ -470,7 +470,7 @@
     "success_rate": 1
   },
   "on-chain-monitor": {
-    "last_dispatch": "2026-06-06T12:33:37Z",
+    "last_dispatch": "2026-06-07T12:23:36Z",
     "last_status": "dispatched",
     "last_success": "2026-06-05T13:23:44Z",
     "total_runs": 2,
