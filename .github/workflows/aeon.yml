@@ -189,7 +189,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
-          VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-pro' }}
+          VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-flash' }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
           GITHUB_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
@@ -438,7 +438,7 @@ jobs:
             # multi-source skills are excluded — they wait for the Claude reset.
             FALLBACK_CG_SKILLS=" defi-overview token-movers token-pick token-alert market-context-refresh "
             if [ -n "${VIRTUALS_API_KEY:-}" ] && printf '%s' "$FALLBACK_CG_SKILLS" | grep -q " ${SKILL_NAME} "; then
-              echo "::warning::Claude limited — ${SKILL_NAME} via Virtuals fresh-fetch fallback (${VIRTUALS_MODEL:-deepseek-v4-pro})."
+              echo "::warning::Claude limited — ${SKILL_NAME} via Virtuals fresh-fetch fallback (${VIRTUALS_MODEL:-deepseek-v4-flash})."
               CG="https://api.coingecko.com/api/v3"
               CTX=$(mktemp)
               {
@@ -448,7 +448,7 @@ jobs:
                 sed -n '1,140p' memory/MEMORY.md 2>/dev/null; echo ""
                 echo "### FRESH CoinGecko data fetched $(date -u +%FT%TZ) — use ONLY this, do not invent"
                 echo "--- /coins/markets top 250 (1h,24h,7d %) ---"
-                curl -s --max-time 40 "${CG}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=1h,24h,7d" \
+                curl -s --max-time 40 "${CG}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h,24h,7d" \
                   ${COINGECKO_API_KEY:+-H "x-cg-pro-api-key: $COINGECKO_API_KEY"} \
                   | jq -c '[.[] | {sym:.symbol,name:.name,price:.current_price,h1:.price_change_percentage_1h_in_currency,d24:.price_change_percentage_24h,d7:.price_change_percentage_7d_in_currency,mcap:.market_cap,vol:.total_volume,rank:.market_cap_rank}]' 2>/dev/null | head -c 60000; echo ""
                 echo "--- /search/trending ---"
@@ -551,7 +551,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
-          VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-pro' }}
+          VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-flash' }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
         run: |
           SKILL="${{ steps.skill.outputs.name }}"
@@ -654,7 +654,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
-          VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-pro' }}
+          VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-flash' }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
         run: |
           if [ "${{ steps.run.outputs.GATEWAY }}" = "bankr" ] && [ -n "${BANKR_LLM_KEY:-}" ]; then
