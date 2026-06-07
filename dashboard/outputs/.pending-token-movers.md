@@ -1,19 +1,17 @@
-**Top 6 Gainers (24h):**
+**6 Biggest 24h Gainers**
+1. Siren (SIREN) – $1.31 (+61.1%, +161.0% 7d)
+2. LAB (LAB) – $12.93 (+41.0%, +75.9% 7d)
+3. Audiera (BEAT) – $2.64 (+25.5%, +123.3% 7d)
+4. Humanity (H) – $0.7651 (+25.3%, +105.0% 7d)
+5. BinanceLife (幣安人生) – $0.8582 (+20.4%, +57.6% 7d)
+6. Zcash (ZEC) – $414.99 (+16.2%, -24.5% 7d)
 
-1. **Siren (SIREN)** — $1.31 | +59.11% (24h) | +158.94% (7d)  
-2. **LAB (LAB)** — $12.99 | +41.45% (24h) | +77.77% (7d)  
-3. **Audiera (BEAT)** — $2.66 | +26.12% (24h) | +124.39% (7d)  
-4. **Humanity (H)** — $0.7637 | +25.00% (24h) | +104.67% (7d)  
-5. **BinanceLife (币安人生)** — $0.8624 | +18.99% (24h) | +58.41% (7d)  
-6. **Zcash (ZEC)** — $415.44 | +17.06% (24h) | -23.90% (7d)  
+**6 Biggest 24h Losers**
+1. Ethena (ENA) – $0.0896 (-3.97%, -0.73% 7d)
+2. JUST (JST) – $0.0797 (-2.58%, -15.3% 7d)
+3. Avalanche (AVAX) – $6.66 (-1.74%, -26.0% 7d)
+4. Litecoin (LTC) – $42.05 (-1.57%, -19.6% 7d)
+5. Sky (SKY) – $0.0557 (-1.41%, -16.0% 7d)
+6. Hyperliquid (HYPE) – $57.90 (-1.39%, -15.0% 7d)
 
-**Top 6 Losers (24h):**
-
-1. **Ethena (ENA)** — $0.08955 | -3.56% (24h) | -0.87% (7d)  
-2. **JUST (JST)** — $0.07970 | -2.61% (24h) | -14.13% (7d)  
-3. **Hyperliquid (HYPE)** — $57.77 | -1.69% (24h) | -15.25% (7d)  
-4. **Litecoin (LTC)** — $42.04 | -1.58% (24h) | -19.63% (7d)  
-5. **Avalanche (AVAX)** — $6.65 | -1.50% (24h) | -26.21% (7d)  
-6. **DeXe (DEXE)** — $19.64 | -1.19% (24h) | +4.03% (7d)  
-
-**Market Read:** Total crypto cap up 3.23% to $2.23T on $79B volume. BTC (+1.58%) and ETH (+3.95%) both climb but remain deep in weekly red (-16.3% and -19.9%). SIREN, LAB, and BEAT explode with triple-digit weekly gains, while losers see only modest 24h declines — a broad, cautious recovery after the recent sell-off.
+**Market Read:** Global crypto market cap rises 3.2% to $2.23T on $79B volume. BTC +1.4% at $61.7K, ETH +3.7% at $1,617. Despite today's green, most majors remain deeply red on the week (BTC -16.4%, ETH -19.9%), suggesting a technical bounce within a broader downtrend. Trending names: LAB, PENGU, ZEC, NEAR, WLD.
