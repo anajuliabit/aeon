@@ -19,6 +19,11 @@ export VIRTUALS_MODEL=claude-opus-4-8   # NEVER deepseek; free + hallucination-s
 
 BASE="${INVESTIMENTS_BASE_URL:-https://investiments-production.up.railway.app}"
 DATE=$(date -u +%Y-%m-%d)
+
+# Build the Basic-auth token at runtime from the dashboard creds (avoids
+# pre-encoding mistakes). DASHBOARD_USER defaults to "admin" (investiments default).
+DASHBOARD_USER="${DASHBOARD_USER:-admin}"
+AUTH=$(printf '%s:%s' "$DASHBOARD_USER" "${DASHBOARD_PASSWORD:-}" | base64 | tr -d '\n')
 NOW_ISO=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 DRY="${ADVISOR_DRY_RUN:-0}"
 
@@ -97,7 +102,7 @@ post() {
   local path="$1" body="$2"
   if [ "$DRY" = "1" ]; then return 0; fi
   curl -fsS --max-time 30 -X POST "$BASE$path" \
-    -H "Authorization: Basic ${INVESTIMENTS_BASIC_AUTH:-}" \
+    -H "Authorization: Basic ${AUTH}" \
     -H "Content-Type: application/json" \
     -d "$body" >/dev/null 2>&1 || echo "::warning::advisor: POST $path failed"
 }
