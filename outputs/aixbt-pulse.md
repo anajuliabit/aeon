@@ -1,9 +1,11 @@
-# AIXBT Grounding (as of 2026-06-08 21:00 UTC)
+# AIXBT Pulse — 2026-06-08 21:00Z
+
+**TL;DR:** Fear & Greed at 8 with KOSPI -8% and Iran-Israel missiles overnight — this is a coordinated de-risking event, not a crypto-specific flush. RWA rails (Ondo, Spiko $174M) and regulatory clarity (CFTC BTC perps, Crypto Clarity Act) are being built into maximum fear. The "generational buy" contrarian call needs the Fed path to be already priced; the overnight missile exchange just moved the oil/inflation tail out.
+
+---
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
 Window: 12h rolling. Last AIXBT generatedAt: 2026-06-08T21:00:21.596Z
-
-Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again — iterate dynamically if they appear in future pulls.
 
 ## Crypto
 - Bear market sentiment dominates as BTC Fear & Greed hits 8; cycle analysts eye $37K-$53K realized-price targets while contrarians call the dip a generational buy.
@@ -18,20 +20,13 @@ Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent
 - US chip stocks rebounded on bargain hunting with Nasdaq gaining 0.9% but sustained Middle East tensions and macro tightening keep cross-asset risk elevated.
 
 ## What's New (vs last pull 2026-06-05 21:00 UTC)
-- (Crypto) Fear & Greed index = 8 — specific index reading plus $37K–$53K cycle-analyst realized-price targets; prior had "worst weekly candle since 2022" framing
+- (Crypto) Fear & Greed index = 8 — specific index reading plus $37K–$53K cycle-analyst realized-price targets
 - (Crypto) ETH value-accrual debate: Hoffman questioning price mechanism, SOL at $60, DOT fresh attention — entirely new
 - (Crypto) RWA tokenization surge: Ondo tokenizes SpaceX, Spiko $174M on Polygon, CFTC BTC perps greenlight, Crypto Clarity Act — entirely new theme
-- (Crypto) Hyperliquid specifics upgraded: $5B USDC on HyperEVM + ~$2M daily fees + Coinbase perps listing (prior was "7.9% OI share")
-- (TradFi) KOSPI -8%+ in Asia + chipmakers Asia risk-off ahead of US open — Asian market dimension is new
-- (TradFi) Iran-Israel actual overnight missile exchanges — escalation from "stalled Iran talks"; material change
-- (TradFi) Nasdaq partial recovery +0.9% on bargain hunting — new reversal data point
-
-## Gone (dropped from 2026-06-05 21:00 pull)
-- (Crypto) Strategy STRC funding loop scrutiny + Saylor 32 BTC sale — attention moved
-- (Crypto) ZEC 45%+ crash from exploit — dropped
-- (Crypto) Tether briefly flipping ETH in market cap — dropped
-- (TradFi) Hawkish central bank rhetoric synthesis item — replaced by more specific items
-- (TradFi) VIX edges higher framing — dropped
+- (Crypto) Hyperliquid specifics upgraded: $5B USDC on HyperEVM + ~$2M daily fees + Coinbase perps listing
+- (TradFi) KOSPI -8%+ in Asia + chipmakers Asia risk-off — Asian market dimension new
+- (TradFi) Iran-Israel actual overnight missile exchanges — escalation from "stalled Iran talks"
+- (TradFi) Nasdaq partial recovery +0.9% on bargain hunting
 
 ## Persisting Stories
 - BTC bear + extreme fear: evolved from "worst weekly candle since 2022" to Fear & Greed=8 + $37K–$53K cycle targets
@@ -44,4 +39,4 @@ Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent
 - Iran-Israel overnight missile exchange → oil spike → inflation floor stays elevated → Fed stays higher longer → BTC realized-price range $37K-$53K is the math, not the vibe. the escalation from "stalled talks" to actual exchange is a tail-risk flip for oil. the "generational buy" contrarian call needs the Fed path to be already priced; this just moved that timeline out.
 - KOSPI -8% (Asia tech/chip risk-off) + BTC Fear & Greed at 8 are the same de-risking event wearing different labels. when chips lead risk-off in Asia and crypto sentiment bottoms at 8 in the same window, there is no uncorrelated safe haven in the portfolio. calling the bottom on either leg requires calling the bottom on both.
 - RWA rails being built at maximum fear: CFTC greenlights BTC perps + Crypto Clarity Act near + Ondo tokenizes SpaceX + Spiko $174M on Polygon. this is the 2022-2023 playbook — regulated capital builds infrastructure when prices are down and attention is elsewhere. $174M on Polygon is a receipt. the retail panic at Fear & Greed=8 is not the signal; the institutional rail-laying is.
-- ETH value-accrual debate intensifies exactly as RWA TVL is cited as its defense, while SOL hits $60 and DOT draws fresh attention. the reflexivity: if the price-mechanism narrative weakens during maximum fear, TVL-based defenses carry less weight in market pricing even if the fundamentals are real. the rotation signal within L1s at the bottom is worth watching.
+- ETH value-accrual debate intensifies exactly as RWA TVL is cited as its defense, while SOL hits $60 and DOT draws fresh attention. the reflexivity: if the price-mechanism narrative weakens during maximum fear, TVL-based defenses carry less weight in market pricing even if the fundamentals are real.

@@ -1,0 +1,316 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse"
+      },
+      "children": [
+        "heading-timestamp",
+        "separator-1",
+        "section-crypto",
+        "separator-2",
+        "section-tradfi",
+        "separator-3",
+        "section-new",
+        "separator-4",
+        "section-bridge"
+      ]
+    },
+    "heading-timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-08 21:00Z",
+        "variant": "caption"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-crypto",
+        "crypto-btc-container",
+        "crypto-hyperliquid",
+        "crypto-rwa"
+      ]
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "crypto-btc-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-btc-fg",
+        "crypto-btc-text"
+      ]
+    },
+    "stat-btc-fg": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC Fear & Greed",
+        "value": "8"
+      }
+    },
+    "crypto-btc-text": {
+      "type": "Text",
+      "props": {
+        "text": "Cycle analysts target $37K–$53K realized price"
+      }
+    },
+    "crypto-hyperliquid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-hyperliquid-intro",
+        "crypto-hyperliquid-stats"
+      ]
+    },
+    "crypto-hyperliquid-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid: Coinbase perps listing"
+      }
+    },
+    "crypto-hyperliquid-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-hyperliquid-usdc",
+        "stat-hyperliquid-fees"
+      ]
+    },
+    "stat-hyperliquid-usdc": {
+      "type": "Stat",
+      "props": {
+        "label": "USDC on HyperEVM",
+        "value": "$5B"
+      }
+    },
+    "stat-hyperliquid-fees": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily fees",
+        "value": "~$2M"
+      }
+    },
+    "crypto-rwa": {
+      "type": "Text",
+      "props": {
+        "text": "RWA surge: Ondo tokenizes SpaceX, Spiko $174M on Polygon, CFTC greenlights BTC perps, Crypto Clarity Act near passage"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-tradfi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-tradfi",
+        "tradfi-kospi",
+        "tradfi-iran",
+        "tradfi-nasdaq"
+      ]
+    },
+    "heading-tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "tradfi-kospi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-kospi",
+        "tradfi-kospi-text"
+      ]
+    },
+    "stat-kospi": {
+      "type": "Stat",
+      "props": {
+        "label": "KOSPI",
+        "value": "-8%",
+        "trend": "down"
+      }
+    },
+    "tradfi-kospi-text": {
+      "type": "Text",
+      "props": {
+        "text": "In Asia; chipmakers led risk-off ahead of US open"
+      }
+    },
+    "tradfi-iran": {
+      "type": "Text",
+      "props": {
+        "text": "Iran-Israel overnight missile exchanges spiked oil before partial halt"
+      }
+    },
+    "tradfi-nasdaq": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-nasdaq",
+        "tradfi-nasdaq-text"
+      ]
+    },
+    "stat-nasdaq": {
+      "type": "Stat",
+      "props": {
+        "label": "Nasdaq",
+        "value": "+0.9%",
+        "trend": "up"
+      }
+    },
+    "tradfi-nasdaq-text": {
+      "type": "Text",
+      "props": {
+        "text": "Partial recovery on bargain hunting; macro tightening persists"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-new",
+        "new-eth",
+        "new-iran",
+        "new-rwa"
+      ]
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new-eth": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-eth-text",
+        "stat-sol"
+      ]
+    },
+    "new-eth-text": {
+      "type": "Text",
+      "props": {
+        "text": "ETH value-accrual debate: Hoffman questions the price mechanism; DOT draws fresh attention"
+      }
+    },
+    "stat-sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$60"
+      }
+    },
+    "new-iran": {
+      "type": "Text",
+      "props": {
+        "text": "Iran-Israel actual exchange (was: stalled talks) — material geo escalation"
+      }
+    },
+    "new-rwa": {
+      "type": "Text",
+      "props": {
+        "text": "RWA tokenization as a standalone theme — didn't exist last pull"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-bridge": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-bridge",
+        "bridge-item-1",
+        "bridge-item-2",
+        "bridge-item-3"
+      ]
+    },
+    "heading-bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "Iran-Israel overnight missiles → oil tail stays elevated → Fed can't cut → $37K–$53K is the math. the contrarian generational-buy call needs the rate path to be already priced; it isn't."
+      }
+    },
+    "bridge-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "KOSPI -8% + Fear & Greed=8 are the same de-risking event in two tickers. calling the bottom on either requires calling both."
+      }
+    },
+    "bridge-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "RWA rails built at maximum fear: Spiko $174M on Polygon, Ondo tokenizes SpaceX, CFTC clears BTC perps. the 2022–23 institutional-rail playbook — regulated capital lays infrastructure when retail panics. receipts exist this time."
+      }
+    }
+  }
+}
