@@ -518,5 +518,9 @@
   "unlock-monitor": {
     "last_dispatch": "2026-06-08T10:42:38Z",
     "last_status": "dispatched"
+  },
+  "chain:investment-advisor": {
+    "last_status": "failed",
+    "last_failed": "2026-06-08T17:04:46Z"
   }
 }
