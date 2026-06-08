@@ -69,3 +69,13 @@ vault/.obsidian/plugins/*/manifest.json
 vault/.obsidian/plugins/*/styles.css
 vault/.obsidian/plugins/*/*.map
 vault/.obsidian/appearance.json
+
+# Git worktrees
+.worktrees/
+
+# Investment advisor (private — never commit financials to public main)
+.investiments-cache/
+.pending-advisor/
+reports/advisor/
+.outputs/portfolio-snapshot.md
+.outputs/advisor-*.md

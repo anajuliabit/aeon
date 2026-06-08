@@ -166,6 +166,8 @@ jobs:
           REPPO_PRIVATE_KEY: ${{ secrets.REPPO_PRIVATE_KEY }}
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          INVESTIMENTS_BASIC_AUTH: ${{ secrets.INVESTIMENTS_BASIC_AUTH }}
+          INVESTIMENTS_BASE_URL: ${{ vars.INVESTIMENTS_BASE_URL }}
           SKILL_VAR: ${{ inputs.var }}
         run: |
           # Run all scripts/prefetch-*.sh before Claude starts (outside sandbox).
@@ -754,6 +756,10 @@ jobs:
           REPPO_AGENT_ID: ${{ secrets.REPPO_AGENT_ID }}
           REPPO_API_KEY: ${{ secrets.REPPO_API_KEY }}
           PINATA_JWT: ${{ secrets.PINATA_JWT }}
+          INVESTIMENTS_BASIC_AUTH: ${{ secrets.INVESTIMENTS_BASIC_AUTH }}
+          INVESTIMENTS_BASE_URL: ${{ vars.INVESTIMENTS_BASE_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           # Run all scripts/postprocess-*.sh after Claude finishes.
           # Each script handles its own .pending-{service}/ directory
