@@ -1,0 +1,230 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "System health status"
+      },
+      "children": [
+        "alert-status",
+        "separator-1",
+        "stack-failures",
+        "separator-2",
+        "stack-self",
+        "separator-3",
+        "stack-context"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "message": "🔴 DEGRADED",
+        "type": "error"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-failures": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "failure-reppo-swarm",
+        "failure-investment-advisor",
+        "failure-cycle-wave"
+      ]
+    },
+    "failure-reppo-swarm": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-reppo",
+        "t-reppo-failed",
+        "t-reppo-streak",
+        "t-reppo-lastgreen"
+      ]
+    },
+    "h-reppo": {
+      "type": "Heading",
+      "props": {
+        "text": "chain:reppo-swarm",
+        "level": "h3"
+      }
+    },
+    "t-reppo-failed": {
+      "type": "Text",
+      "props": {
+        "text": "Failed at 18:37z"
+      }
+    },
+    "t-reppo-streak": {
+      "type": "Text",
+      "props": {
+        "text": "8+ day clean streak broken"
+      }
+    },
+    "t-reppo-lastgreen": {
+      "type": "Text",
+      "props": {
+        "text": "Last green: 6-06t06:26z"
+      }
+    },
+    "failure-investment-advisor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-advisor",
+        "t-advisor-failed",
+        "t-advisor-history"
+      ]
+    },
+    "h-advisor": {
+      "type": "Heading",
+      "props": {
+        "text": "chain:investment-advisor",
+        "level": "h3"
+      }
+    },
+    "t-advisor-failed": {
+      "type": "Text",
+      "props": {
+        "text": "Failed at 17:04z"
+      }
+    },
+    "t-advisor-history": {
+      "type": "Text",
+      "props": {
+        "text": "Chain has zero successes ever",
+        "variant": "muted"
+      }
+    },
+    "failure-cycle-wave": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-cycle",
+        "t-cycle-failed",
+        "t-cycle-items"
+      ]
+    },
+    "h-cycle": {
+      "type": "Heading",
+      "props": {
+        "text": "18:33z Cycle Wave",
+        "level": "h3"
+      }
+    },
+    "t-cycle-failed": {
+      "type": "Text",
+      "props": {
+        "text": "Failed at 18:33z"
+      }
+    },
+    "t-cycle-items": {
+      "type": "Text",
+      "props": {
+        "text": "Failed items: action-converter, reflect, goal-tracker, skill-health, reppo-orchestrator"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-self": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-self",
+        "t-self-lastsuccess",
+        "t-self-stale",
+        "t-self-recovery"
+      ]
+    },
+    "h-self": {
+      "type": "Heading",
+      "props": {
+        "text": "heartbeat self",
+        "level": "h3"
+      }
+    },
+    "t-self-lastsuccess": {
+      "type": "Text",
+      "props": {
+        "text": "Last success: 6-05t20:20z"
+      }
+    },
+    "t-self-stale": {
+      "type": "Text",
+      "props": {
+        "text": "Status: 67h stale"
+      }
+    },
+    "t-self-recovery": {
+      "type": "Text",
+      "props": {
+        "text": "This is the recovery run",
+        "variant": "lead"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-context": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-context",
+        "t-context-review",
+        "t-context-ratelimit"
+      ]
+    },
+    "h-context": {
+      "type": "Heading",
+      "props": {
+        "text": "Context",
+        "level": "h3"
+      }
+    },
+    "t-context-review": {
+      "type": "Text",
+      "props": {
+        "text": "All consistent with today's weekly-review"
+      }
+    },
+    "t-context-ratelimit": {
+      "type": "Text",
+      "props": {
+        "text": "140-failure rate-limit cluster detected"
+      }
+    }
+  }
+}
