@@ -353,10 +353,10 @@
     "last_dispatch": "2026-06-08T10:42:38Z"
   },
   "market-context-refresh": {
-    "last_status": "dispatched",
-    "last_success": "2026-06-07T14:04:23Z",
-    "total_runs": 11,
-    "total_successes": 11,
+    "last_status": "success",
+    "last_success": "2026-06-08T13:52:02Z",
+    "total_runs": 12,
+    "total_successes": 12,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
