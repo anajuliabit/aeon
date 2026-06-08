@@ -1,0 +1,334 @@
+{
+  "root": "root_card",
+  "state": {},
+  "elements": {
+    "root_card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-08"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_tldr",
+        "sep1",
+        "heading_headlines",
+        "stack_headlines",
+        "sep2",
+        "heading_notable",
+        "stack_notable",
+        "sep3",
+        "heading_decisions",
+        "stack_decisions",
+        "sep4",
+        "heading_blockers",
+        "stack_blockers",
+        "sep5",
+        "footer_text"
+      ]
+    },
+    "alert_tldr": {
+      "type": "Alert",
+      "props": {
+        "title": "TL;DR",
+        "message": "claude 429 rate-limit knocked 18+ skills offline and broke the 8-day reppo-swarm streak — heaviest degradation of the month, two chains down, fallback extension is tomorrow's P0",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "stack_headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline_1",
+        "headline_2",
+        "headline_3"
+      ]
+    },
+    "headline_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1_title",
+        "h1_stats",
+        "h1_action",
+        "h1_link"
+      ]
+    },
+    "h1_title": {
+      "type": "Badge",
+      "props": {
+        "text": "weekly-review",
+        "variant": "default"
+      }
+    },
+    "h1_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "h1_stat_runs",
+        "h1_stat_articles",
+        "h1_stat_mints",
+        "h1_stat_prs"
+      ]
+    },
+    "h1_stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "runs",
+        "value": "369"
+      }
+    },
+    "h1_stat_articles": {
+      "type": "Stat",
+      "props": {
+        "label": "articles",
+        "value": "5"
+      }
+    },
+    "h1_stat_mints": {
+      "type": "Stat",
+      "props": {
+        "label": "mints",
+        "value": "5"
+      }
+    },
+    "h1_stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "17"
+      }
+    },
+    "h1_action": {
+      "type": "Text",
+      "props": {
+        "text": "top action: extend 429 fallback to reppo chain (priority 25)",
+        "variant": "body"
+      }
+    },
+    "h1_link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/weekly-review-2026-06-08.md",
+        "href": "articles/weekly-review-2026-06-08.md"
+      }
+    },
+    "headline_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2_title",
+        "h2_status",
+        "h2_details",
+        "h2_link"
+      ]
+    },
+    "h2_title": {
+      "type": "Badge",
+      "props": {
+        "text": "heartbeat",
+        "variant": "destructive"
+      }
+    },
+    "h2_status": {
+      "type": "Badge",
+      "props": {
+        "text": "DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "h2_details": {
+      "type": "Text",
+      "props": {
+        "text": "18 skills stuck on 429 weekly rate-limit (140 failures 6-06→6-08); reppo-swarm 8+d streak broken",
+        "variant": "body"
+      }
+    },
+    "h2_link": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "headline_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #82 opened — investment-advisor → standalone Virtuals workflow, supersedes #80",
+        "href": "https://github.com/anajuliabit/aeon/pull/82",
+        "source": "GitHub"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_text"
+      ]
+    },
+    "notable_text": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert / token-pick / defi-overview / market-context-refresh — midday cohort ran clean under 429 quota",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      }
+    },
+    "stack_decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decision_1",
+        "decision_2",
+        "decision_3"
+      ]
+    },
+    "decision_1": {
+      "type": "Text",
+      "props": {
+        "text": "extend FALLBACK_*_SKILLS to cover reppo chain (orchestrator + trading-agent + voter + digest) — aeon.yml, due 2026-06-11",
+        "variant": "body"
+      }
+    },
+    "decision_2": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #82 (investment-advisor standalone workflow)",
+        "variant": "body"
+      }
+    },
+    "decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-009 sub-task (b): chain-runner continue→break flip now load-bearing under 429 failure mode",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "stack_blockers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocker_1",
+        "blocker_2",
+        "blocker_3"
+      ]
+    },
+    "blocker_1": {
+      "type": "Alert",
+      "props": {
+        "title": "chain:reppo-swarm",
+        "message": "failed 18:37Z; 8+d clean streak gone",
+        "type": "error"
+      }
+    },
+    "blocker_2": {
+      "type": "Alert",
+      "props": {
+        "title": "chain:investment-advisor",
+        "message": "failed 17:04Z; zero successes since enable",
+        "type": "error"
+      }
+    },
+    "blocker_3": {
+      "type": "Alert",
+      "props": {
+        "title": "18 skills stuck",
+        "message": "429 weekly rate-limit (morning-brief, reflect, goal-tracker + 15 more)",
+        "type": "error"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "+4 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
