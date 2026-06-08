@@ -30,7 +30,7 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-06-07T20:07:35Z",
+    "last_dispatch": "2026-06-08T08:55:40Z",
     "last_status": "dispatched",
     "last_success": "2026-06-05T20:20:44Z",
     "total_runs": 47,
@@ -142,7 +142,7 @@
     "success_rate": 1
   },
   "skill-freshness": {
-    "last_dispatch": "2026-06-07T08:06:34Z",
+    "last_dispatch": "2026-06-08T08:55:40Z",
     "last_status": "dispatched",
     "last_success": "2026-06-05T08:32:16Z",
     "total_runs": 15,
