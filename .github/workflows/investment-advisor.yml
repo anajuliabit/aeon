@@ -1,0 +1,25 @@
+name: Investment Advisor
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # daily 13:00 UTC
+  workflow_dispatch:
+
+jobs:
+  advisor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Prefetch + run advisor (Virtuals)
+        env:
+          VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
+          INVESTIMENTS_BASIC_AUTH: ${{ secrets.INVESTIMENTS_BASIC_AUTH }}
+          INVESTIMENTS_BASE_URL: ${{ vars.INVESTIMENTS_BASE_URL }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/llm.sh
+          ./scripts/advisor/prefetch-data.sh
+          ./scripts/advisor/run.sh
