@@ -15,7 +15,7 @@ jobs:
         env:
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
           INVESTIMENTS_BASIC_AUTH: ${{ secrets.INVESTIMENTS_BASIC_AUTH }}
-          INVESTIMENTS_BASE_URL: ${{ vars.INVESTIMENTS_BASE_URL }}
+          INVESTIMENTS_BASE_URL: ${{ secrets.INVESTIMENTS_BASE_URL }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

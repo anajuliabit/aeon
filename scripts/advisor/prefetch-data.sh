@@ -23,12 +23,15 @@ get() {
 
 # --- Portfolio snapshot (Basic auth) ---
 if [ -n "${INVESTIMENTS_BASIC_AUTH:-}" ]; then
-  if curl -fsS --max-time 30 \
+  code=$(curl -sS --max-time 30 \
       -H "Authorization: Basic ${INVESTIMENTS_BASIC_AUTH}" \
-      "$BASE/api/snapshot" -o "$D/snapshot.json"; then
+      "$BASE/api/snapshot" -o "$D/snapshot.json" -w "%{http_code}" 2>/dev/null || echo "000")
+  if [ "$code" = "200" ]; then
     echo "ok snapshot.json"
   else
-    echo "::warning::advisor-prefetch: snapshot fetch failed"
+    # Non-200: don't leave an error page where a snapshot is expected.
+    rm -f "$D/snapshot.json"
+    echo "::warning::advisor-prefetch: snapshot fetch failed (HTTP $code at $BASE/api/snapshot)"
   fi
 else
   echo "::warning::advisor-prefetch: INVESTIMENTS_BASIC_AUTH not set, skipping snapshot"
