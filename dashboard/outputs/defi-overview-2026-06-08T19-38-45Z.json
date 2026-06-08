@@ -1,0 +1,138 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi Overview"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack-metrics",
+        "separator-1",
+        "heading-movers",
+        "table-movers",
+        "separator-2",
+        "text-sentiment"
+      ]
+    },
+    "stack-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-marketcap",
+        "grid-dominance"
+      ]
+    },
+    "stat-marketcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Market Cap",
+        "value": "$2.24T",
+        "delta": "+1.27%",
+        "trend": "up"
+      }
+    },
+    "grid-dominance": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC Dominance",
+        "value": "56.17%"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH Dominance",
+        "value": "8.97%"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-movers": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable Movers (Top 100)",
+        "level": "h3"
+      }
+    },
+    "table-movers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "24h Change",
+          "Details"
+        ],
+        "rows": [
+          [
+            "BEAT",
+            "+73.9%",
+            "Audiera surging on volume; up 307% over 7 days"
+          ],
+          [
+            "NEAR",
+            "+12.4%",
+            "NEAR Protocol leading large-cap gains"
+          ],
+          [
+            "DEXE",
+            "+15.6%",
+            "DeXe continues its strong weekly run (+24.7% 7d)"
+          ],
+          [
+            "WLD",
+            "+8.0%",
+            "Worldcoin extending its 7-day rally (+24.1%)"
+          ],
+          [
+            "CANTON",
+            "-7.4%",
+            "Canton Communications the worst performer among top 100 majors"
+          ]
+        ]
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-sentiment": {
+      "type": "Text",
+      "props": {
+        "text": "Market read: A modest green bounce after a rough week, with altcoins like BEAT and NEAR leading the recovery. BTC holds $62.9K, ETH reclaims $1,671, but overall sentiment remains cautious with most assets still deep in 7-day red.",
+        "variant": "body"
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "weekly-review"
+      },
+      "children": [
+        "heading-date",
+        "sep1",
+        "top-action-alert",
+        "sep2",
+        "health-heading",
+        "health-stack",
+        "sep3",
+        "full-review-link"
+      ]
+    },
+    "heading-date": {
+      "type": "Heading",
+      "props": {
+        "text": "Weekly Review — 2026-06-08",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "top-action-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Top Action",
+        "message": "Extend virtuals fallback to reppo chain (orchestrator/trading-agent/voter/digest) in aeon.yml:441 by 2026-06-11",
+        "type": "info"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "health-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health Status",
+        "level": "h3"
+      }
+    },
+    "health-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skill-runs-stat",
+        "failures-alert",
+        "mints-stat",
+        "issues-stat"
+      ]
+    },
+    "skill-runs-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skill runs ok",
+        "value": "230/369"
+      }
+    },
+    "failures-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Failures",
+        "message": "136 failures clustered 6-06→6-08, all api_error_status:429 (weekly-limit)",
+        "type": "warning"
+      }
+    },
+    "mints-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints",
+        "value": "5",
+        "delta": "-9",
+        "trend": "down"
+      }
+    },
+    "issues-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "New issues",
+        "value": "0"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "full-review-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Review",
+        "href": "articles/weekly-review-2026-06-08.md"
+      }
+    }
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "token-pick"
+      },
+      "children": [
+        "beat-section",
+        "sep-1",
+        "wld-section",
+        "sep-2",
+        "kas-section"
+      ]
+    },
+    "beat-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "beat-heading",
+        "beat-metrics",
+        "beat-desc"
+      ]
+    },
+    "beat-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BEAT",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "beat-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "beat-24h",
+        "beat-7d",
+        "beat-trend"
+      ]
+    },
+    "beat-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "73.9%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "beat-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "307.6%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "beat-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "Trending #62",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "beat-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Explosive volume-fueled breakout with sustained seven-day momentum far outpacing the market.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "wld-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "wld-heading",
+        "wld-metrics",
+        "wld-desc"
+      ]
+    },
+    "wld-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "WLD",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "wld-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "wld-24h",
+        "wld-7d",
+        "wld-rank"
+      ]
+    },
+    "wld-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "8.0%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "wld-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "24.1%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "wld-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "Rank #51",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "wld-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Strongest seven-day gain among top-100 non-stablecoins, defying the broad market's weekly drawdown.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "kas-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "kas-heading",
+        "kas-metrics",
+        "kas-desc"
+      ]
+    },
+    "kas-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "KAS",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "kas-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "kas-24h",
+        "kas-7d",
+        "kas-rank"
+      ]
+    },
+    "kas-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "7.1%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "kas-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "9.7%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "kas-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "Rank #74",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "kas-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Healthy daily and weekly uptrend with no retracement; momentum aligns with rising volume interest despite global BTC dominance weakness.",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

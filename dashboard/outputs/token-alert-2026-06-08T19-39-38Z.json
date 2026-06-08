@@ -1,0 +1,133 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "token-alert"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-status",
+        "separator-1",
+        "stack-tokens"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "title": "Tokens not found in CoinGecko top-100",
+        "message": "None of the tracked tokens appear in the provided CoinGecko top-100 market data.",
+        "type": "info"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-tokens": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-tokens",
+        "token-1",
+        "token-2",
+        "token-3"
+      ]
+    },
+    "heading-tokens": {
+      "type": "Heading",
+      "props": {
+        "text": "Tracked tokens",
+        "level": "h4"
+      }
+    },
+    "token-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-well",
+        "text-well-id"
+      ]
+    },
+    "badge-well": {
+      "type": "Badge",
+      "props": {
+        "text": "WELL"
+      }
+    },
+    "text-well-id": {
+      "type": "Text",
+      "props": {
+        "text": "moonwell-artemis",
+        "variant": "muted"
+      }
+    },
+    "token-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-mamo",
+        "text-mamo-id"
+      ]
+    },
+    "badge-mamo": {
+      "type": "Badge",
+      "props": {
+        "text": "MAMO"
+      }
+    },
+    "text-mamo-id": {
+      "type": "Text",
+      "props": {
+        "text": "mamo",
+        "variant": "muted"
+      }
+    },
+    "token-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-reppo",
+        "text-reppo-id"
+      ]
+    },
+    "badge-reppo": {
+      "type": "Badge",
+      "props": {
+        "text": "REPPO"
+      }
+    },
+    "text-reppo-id": {
+      "type": "Text",
+      "props": {
+        "text": "reppo",
+        "variant": "muted"
+      }
+    }
+  }
+}

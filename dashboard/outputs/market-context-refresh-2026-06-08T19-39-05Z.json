@@ -1,0 +1,272 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context Refresh"
+      },
+      "children": [
+        "prices_stack",
+        "separator1",
+        "market_metrics",
+        "separator2",
+        "dominance",
+        "separator3",
+        "trending_section",
+        "separator4",
+        "risk_assessment"
+      ]
+    },
+    "prices_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth",
+        "stat_sol"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$63,509",
+        "delta": "+2.85%",
+        "trend": "up"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,681.49",
+        "delta": "+3.92%",
+        "trend": "up"
+      }
+    },
+    "stat_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$66.59",
+        "delta": "+3.61%",
+        "trend": "up"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_marketcap",
+        "stat_volume"
+      ]
+    },
+    "stat_marketcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Total market cap",
+        "value": "$2.26T",
+        "delta": "+2.43%",
+        "trend": "up"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "24h volume",
+        "value": "$91.7B"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "dominance": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "prog_btc_dom",
+        "prog_eth_dom"
+      ]
+    },
+    "prog_btc_dom": {
+      "type": "Progress",
+      "props": {
+        "label": "BTC dominance",
+        "value": 56.22,
+        "max": 100
+      }
+    },
+    "prog_eth_dom": {
+      "type": "Progress",
+      "props": {
+        "label": "ETH dominance",
+        "value": 8.97,
+        "max": 100
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_trending",
+        "table_trending"
+      ]
+    },
+    "heading_trending": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h3"
+      }
+    },
+    "table_trending": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Change",
+          "Rank"
+        ],
+        "rows": [
+          [
+            "BEAT",
+            "+63.9%",
+            "61"
+          ],
+          [
+            "ZEC",
+            "+4.6%",
+            "15"
+          ],
+          [
+            "HYPE",
+            "+11.6%",
+            "10"
+          ],
+          [
+            "VVV",
+            "+6.8%",
+            "82"
+          ]
+        ]
+      }
+    },
+    "separator4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "risk_assessment": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_riskon",
+        "weekly_section"
+      ]
+    },
+    "alert_riskon": {
+      "type": "Alert",
+      "props": {
+        "title": "Risk-on today",
+        "message": "Broad green, cap up 2.4%",
+        "type": "success"
+      }
+    },
+    "weekly_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_weekly",
+        "alert_weekly",
+        "weekly_changes"
+      ]
+    },
+    "heading_weekly": {
+      "type": "Heading",
+      "props": {
+        "text": "Weekly (Bearish)",
+        "level": "h4"
+      }
+    },
+    "alert_weekly": {
+      "type": "Alert",
+      "props": {
+        "title": "Warning",
+        "message": "Weekly trend remains bearish",
+        "type": "warning"
+      }
+    },
+    "weekly_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc_weekly",
+        "stat_eth_weekly",
+        "stat_sol_weekly"
+      ]
+    },
+    "stat_btc_weekly": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC (7d)",
+        "value": "-12.3%",
+        "trend": "down"
+      }
+    },
+    "stat_eth_weekly": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH (7d)",
+        "value": "-15.1%",
+        "trend": "down"
+      }
+    },
+    "stat_sol_weekly": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL (7d)",
+        "value": "-17.6%",
+        "trend": "down"
+      }
+    }
+  }
+}
