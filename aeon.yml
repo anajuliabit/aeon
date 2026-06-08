@@ -268,6 +268,16 @@ skills:
   reppo-voter: { enabled: false }
   reppo-digest: { enabled: false }
 
+  # --- Investment advisor swarm (driven by the investment-advisor chain) ---
+  portfolio-snapshot: { enabled: true, schedule: "workflow_dispatch", model: "claude-sonnet-4-6" }
+  advisor-risk-leverage: { enabled: true, schedule: "workflow_dispatch", model: "claude-sonnet-4-6" }
+  advisor-yield-allocation: { enabled: true, schedule: "workflow_dispatch", model: "claude-sonnet-4-6" }
+  advisor-market-macro: { enabled: true, schedule: "workflow_dispatch", model: "claude-sonnet-4-6" }
+  advisor-fundamentals: { enabled: true, schedule: "workflow_dispatch", model: "claude-sonnet-4-6" }
+  advisor-news-social: { enabled: true, schedule: "workflow_dispatch", model: "claude-sonnet-4-6" }
+  advisor-debate: { enabled: true, schedule: "workflow_dispatch", model: "claude-sonnet-4-6" }
+  advisor-portfolio-manager: { enabled: true, schedule: "workflow_dispatch", model: "claude-opus-4-8" }
+
   # --- Fallback (must be last) ---
   heartbeat: { enabled: true, schedule: "0 8,14,20 * * *" }
 
@@ -315,6 +325,16 @@ chains:
       - parallel: [ reppo-trading-agent, reppo-voter ]
       - skill: reppo-digest
         consume: [ reppo-orchestrator, reppo-trading-agent, reppo-voter ]
+
+  investment-advisor:
+    schedule: "0 13 * * *"          # daily 13:00 UTC
+    on_error: continue
+    steps:
+      - skill: portfolio-snapshot
+      - parallel: [advisor-risk-leverage, advisor-yield-allocation, advisor-market-macro,
+                   advisor-fundamentals, advisor-news-social]
+      - skill: advisor-debate
+      - skill: advisor-portfolio-manager
 
 # Default model for all skills. Override per-run via workflow_dispatch.
 # Options: claude-opus-4-7, claude-sonnet-4-6, claude-haiku-4-5-20251001
