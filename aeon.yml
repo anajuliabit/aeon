@@ -331,8 +331,7 @@ chains:
     on_error: continue
     steps:
       - skill: portfolio-snapshot
-      - parallel: [advisor-risk-leverage, advisor-yield-allocation, advisor-market-macro,
-                   advisor-fundamentals, advisor-news-social]
+      - parallel: [advisor-risk-leverage, advisor-yield-allocation, advisor-market-macro, advisor-fundamentals, advisor-news-social]
       - skill: advisor-debate
       - skill: advisor-portfolio-manager
 
