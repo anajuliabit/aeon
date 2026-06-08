@@ -1,8 +1,1 @@
-Token-alert report for 2026-06-07T14:04:00Z:
-
-Tracked tokens checked against fresh CoinGecko top-100 data:
-- WELL (moonwell-artemis) — NOT in data
-- MAMO (mamo) — NOT in data
-- REPPO (reppo) — NOT in data
-
-None of the tracked tokens appear in the current market snapshot. No prices or 24h moves to report. No thresholds to evaluate.
+None of the tracked tokens (WELL, MAMO, REPPO) appear in the provided CoinGecko top‑100 market data. Their CoinGecko IDs (moonwell‑artemis, mamo, reppo) are not present in the list.
