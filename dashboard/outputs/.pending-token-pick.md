@@ -1,5 +1,5 @@
-SIREN – +60.85% 24h / +160.63% 7d; highest raw 24h and 7d gain in the top 100, extreme breakout.
+**BEAT** (+73.9% 24h, +307.6% 7d, trending #62) — Explosive volume-fueled breakout with sustained seven-day momentum far outpacing the market.
 
-LAB – +40.78% 24h / +75.59% 7d; #28 trending, strong sustained volume and price surge.
+**WLD** (+8.0% 24h, +24.1% 7d, rank #51) — Strongest seven-day gain among top-100 non-stablecoins, defying the broad market's weekly drawdown.
 
-beat – +25.20% 24h / +122.75% 7d; deep momentum with a 7d gain second only to SIREN, lower rank suggests catch-up potential.
+**KAS** (+7.1% 24h, +9.7% 7d, rank #74) — Healthy daily and weekly uptrend with no retracement; momentum aligns with rising volume interest despite global BTC dominance weakness.
