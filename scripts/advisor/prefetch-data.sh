@@ -22,9 +22,13 @@ get() {
 }
 
 # --- Portfolio snapshot (Basic auth) ---
-if [ -n "${INVESTIMENTS_BASIC_AUTH:-}" ]; then
+# Build the Basic-auth token at runtime from the dashboard creds (avoids
+# pre-encoding mistakes). DASHBOARD_USER defaults to "admin" (investiments default).
+DASHBOARD_USER="${DASHBOARD_USER:-admin}"
+if [ -n "${DASHBOARD_PASSWORD:-}" ]; then
+  AUTH=$(printf '%s:%s' "$DASHBOARD_USER" "$DASHBOARD_PASSWORD" | base64 | tr -d '\n')
   code=$(curl -sS --max-time 30 \
-      -H "Authorization: Basic ${INVESTIMENTS_BASIC_AUTH}" \
+      -H "Authorization: Basic ${AUTH}" \
       "$BASE/api/snapshot" -o "$D/snapshot.json" -w "%{http_code}" 2>/dev/null || echo "000")
   if [ "$code" = "200" ]; then
     echo "ok snapshot.json"
@@ -34,7 +38,7 @@ if [ -n "${INVESTIMENTS_BASIC_AUTH:-}" ]; then
     echo "::warning::advisor-prefetch: snapshot fetch failed (HTTP $code at $BASE/api/snapshot)"
   fi
 else
-  echo "::warning::advisor-prefetch: INVESTIMENTS_BASIC_AUTH not set, skipping snapshot"
+  echo "::warning::advisor-prefetch: DASHBOARD_PASSWORD not set, skipping snapshot"
 fi
 
 # --- Keyless market/DeFi feeds ---
