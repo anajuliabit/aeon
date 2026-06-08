@@ -1,242 +1,236 @@
-# Investment Advisor Swarm (aeon-native) — Design
+# Investment Advisor Swarm — Design (two-repo, privacy-safe multi-skill)
 
 **Date:** 2026-06-08
-**Status:** Approved — ready for implementation plan
+**Status:** Approved — ready for implementation plans
 **Hand-off note:** `docs/superpowers/specs/2026-06-07-investment-advisor-handoff.md`
 **Upstream reference design:** `~/code/investiments/docs/superpowers/specs/2026-06-07-investment-advisor-swarm-design.md`
-(reference for the analyst roster, debate, safety posture, and data sources — *superseded* on
-host-repo and LLM-runtime choices, which this spec settles for aeon.)
+(reference for the analyst roster, debate, safety posture, and data sources.)
 
 ## Goal
 
 An **advisory-only** LLM swarm (TradingAgents-style) that reads the operator's crypto/DeFi
 portfolio + market data and produces written recommendations — an "investment manager." It
-**never holds keys, never signs, never moves funds.** Decision (2026-06-07): build it in
-**aeon** (already a multi-agent platform with the data skills, scheduler, notifications, and
-LLM gateway), **consuming** the portfolio snapshot from the separate `investiments` dashboard.
+**never holds keys, never signs, never moves funds.** Built as **aeon skills** (a multi-agent
+swarm), **consuming** the portfolio snapshot from the separate **private** `investiments`
+dashboard. Runs daily + on-demand; the finished report lands in the investiments dashboard and a
+summary goes straight to Telegram.
 
-Runs daily and on-demand; delivers a concise notification + a saved markdown report.
+## The governing constraint: aeon is PUBLIC, investiments is PRIVATE
 
-## Why aeon hosts it
+- `anajuliabit/aeon` is a **PUBLIC** repo. Its skill workflow (`aeon.yml`) auto-commits the
+  whole working tree (`git add -A`) to `main`, including `.outputs/*` and `dashboard/outputs/*`.
+- `anajuliabit/investiments` is a **PRIVATE** Bun/TS server (already hosts the portfolio
+  snapshot behind HTTP Basic auth) with a browser dashboard.
 
-aeon already has almost every input as a working skill (`market-context-refresh`,
-`defi-overview`, `narrative-tracker`/`fetch-tweets`, `aixbt-pulse`, plus
-CoinGecko/DeFiLlama/GeckoTerminal/Fear&Greed clients), a cron scheduler (`aeon.yml`),
-notifications (`./notify`), and an LLM gateway. The only missing input — **Morpho liquidation
-price + health factor + per-position snapshot** — is exactly what `investiments` computes and
-serves over HTTP.
+Therefore **no real financial data may ever touch the aeon working tree at commit time**, and
+**cross-skill data must not pass through committed files.** Both rules are satisfied by routing
+all sensitive data through the **private investiments API** and keeping every aeon-side
+financial artifact **gitignored**.
 
-## Key aeon-native reframings (vs. the upstream TS design)
+This reverses two earlier ideas (a public chain passing data via committed `.outputs/`, and a
+single mega-skill): the swarm stays multi-skill, but the message bus is the private API, not git.
 
-The upstream spec was written for a standalone Bun/TS process where "an agent" is a function
-making one `completeJSON` LLM call. In aeon the unit of composition is different, and three
-things change accordingly:
-
-1. **A skill *is* an LLM call.** Each aeon skill is a full Claude Code run inside a GitHub
-   Actions job. So the swarm is a **chain of skill-jobs**, not parallel function calls in one
-   process. The upstream "OpenAI-compatible provider layer + `completeJSON`" collapses to
-   aeon's existing per-skill `model:` override and the Virtuals gateway/fallback already wired
-   into `aeon.yml`.
-2. **"Structured output" = a documented block format**, not a TS schema/validator. Each skill
-   writes a fenced, clearly-delimited block to `.outputs/<skill>.md`; the next stage consumes
-   it via the chain `consume:` mechanism.
-3. **Failure isolation = chain `on_error: continue` + "note the gap" prompting**, not
-   try/catch around function calls.
-
-## Architecture — a chain mirroring `reppo-swarm`
-
-A new `investment-advisor` chain in `aeon.yml`, four sequential stages (8 skill-jobs/run):
+## Architecture (two sub-projects)
 
 ```
-Stage 1  portfolio-snapshot                     fetch Railway /api/snapshot (Basic auth) → snapshot block
-Stage 2  parallel:                              5 portfolio-aware analysts; each consumes the
-           advisor-risk-leverage                  snapshot, emits a structured AnalystFinding
-           advisor-yield-allocation
-           advisor-market-macro
-           advisor-fundamentals
-           advisor-news-social
-Stage 3  parallel:                              consume snapshot + all 5 findings → DebateTurn
-           advisor-bull
-           advisor-bear
-Stage 4  advisor-portfolio-manager              consume findings + debate → ranked
-                                                  Recommendation[] + summary; ./notify + write report
+        aeon (PUBLIC, skills run on GitHub Actions)            investiments (PRIVATE, Bun server)
+        ───────────────────────────────────────────           ─────────────────────────────────
+ prefetch-advisor.sh  ──GET /api/snapshot───────────────────▶  Basic-auth guarded routes
+   (before Claude)     ──GET /api/advisor/run?date=──────────▶  advisor-store.ts (per-day run doc)
+        │                                                          ▲   │
+        ▼ writes gitignored .investiments-cache/*.json             │   ▼
+   ┌─ portfolio-snapshot (gate)                                    │  public/ Advisor panel
+   ├─ advisor-risk-leverage     ┐                                  │
+   ├─ advisor-yield-allocation  │ 5 analysts (parallel)            │
+   ├─ advisor-market-macro      │ read snapshot cache, fetch feeds │
+   ├─ advisor-fundamentals      │ write finding JSON to            │
+   ├─ advisor-news-social       ┘ .pending-advisor/                │
+   ├─ advisor-debate    (reads run doc, writes debate JSON)        │
+   └─ advisor-portfolio-manager (reads run doc, writes report+TG)  │
+        │                                                          │
+        ▼ after Claude:                                            │
+ postprocess-advisor.sh ──POST /api/advisor/{finding,debate,report}┘
+   (after Claude)        ──Telegram sendMessage (summary, direct curl)
 ```
 
-`chains:` definition (final form pinned by the implementation plan):
+Ordering is provided by aeon's **chain-runner** (it dispatches each stage and *waits* for it to
+finish before the next — `wait_for_runs` barrier). We use the chain-runner **only for ordering**;
+we do **not** use its `consume:` mechanism (that commits context to public main). Data flows
+exclusively through the private API via prefetch (GET, before Claude) and postprocess (POST,
+after Claude) — aeon's sanctioned way to reach an authed API from a sandboxed skill.
+
+### Why this works on CI (each skill = a separate Actions job)
+
+Separate jobs share no disk, so data must pass via an external store. The private investiments
+API is that store. The two sandbox-safe hooks carry it:
+
+| Need | Hook | When | Effect |
+|---|---|---|---|
+| Read snapshot | `scripts/prefetch-advisor.sh` | before Claude (full env) | GET snapshot → gitignored `.investiments-cache/snapshot.json` (every advisor job) |
+| Read prior findings | `scripts/prefetch-advisor.sh` | before Claude | for `advisor-debate`/`advisor-portfolio-manager`: GET `/api/advisor/run?date=today` → `.investiments-cache/advisor-run.json` |
+| Write finding/debate/report + Telegram | `scripts/postprocess-advisor.sh` | after Claude (full env) | POST `.pending-advisor/*.json` to investiments; send `.pending-advisor/telegram.txt` to Telegram |
+
+**Run correlation = the UTC date** (daily run): investiments upserts a per-day run document;
+analysts POST findings into today's run; debate/PM read today's run; PM posts the report and
+flags it `latest`. `workflow_dispatch` reuses the same day key (latest-wins per role).
+
+## aeon chain definition (`aeon.yml`)
 
 ```yaml
 chains:
   investment-advisor:
-    schedule: "0 13 * * *"          # daily 13:00 UTC, after market-context-refresh warms memory
-    on_error: continue              # per-agent failure isolation
+    schedule: "0 13 * * *"          # daily 13:00 UTC, after market-context-refresh
+    on_error: continue              # a failed analyst → noted gap; run still completes
     steps:
       - skill: portfolio-snapshot
       - parallel: [advisor-risk-leverage, advisor-yield-allocation, advisor-market-macro,
                    advisor-fundamentals, advisor-news-social]
-        consume: [portfolio-snapshot]
-      - parallel: [advisor-bull, advisor-bear]
-        consume: [portfolio-snapshot, advisor-risk-leverage, advisor-yield-allocation,
-                  advisor-market-macro, advisor-fundamentals, advisor-news-social]
+      - skill: advisor-debate
       - skill: advisor-portfolio-manager
-        consume: [advisor-risk-leverage, advisor-yield-allocation, advisor-market-macro,
-                  advisor-fundamentals, advisor-news-social, advisor-bull, advisor-bear]
 ```
 
-> **Implementation-plan verification:** confirm `chain-runner.yml` supports (a) a `parallel:`
-> step that also carries `consume:`, and (b) running `scripts/prefetch-*.sh` before Claude
-> (the main `aeon.yml` workflow does this; the chain runner must too). If either is missing,
-> the plan adds it. Fallback for (a): if parallel-with-consume is unsupported, each analyst
-> reads the cached snapshot file directly instead of relying on `consume:`.
+`workflow_dispatch` runs it on demand (Chain Runner workflow, `chain=investment-advisor`).
+No `consume:` keys — intermediates ride the private API, not committed `.outputs/`.
 
-Also add `workflow_dispatch` for manual runs.
+## Skills (aeon side)
 
-## The data seam — `portfolio-snapshot` skill + credential
+Each is a normal aeon skill (`skills/<name>/SKILL.md`). Analysts are **portfolio-aware** (scoped
+to real holdings + liquidation data from the snapshot cache) and **reuse the proven data-fetch
+recipes** from existing skills (`defi-overview`, `market-context-refresh`, `narrative-tracker`,
+`aixbt-pulse`) — reuse the plumbing, not the standalone notifying output.
 
-The one genuinely-new capability: an authenticated GET to
-`https://investiments-production.up.railway.app/api/snapshot`.
+| Skill | Role | Data | Writes |
+|---|---|---|---|
+| `portfolio-snapshot` | gate: validate cache freshness | `.investiments-cache/snapshot.json` | `.pending-advisor/run.json` (init today's run) |
+| `advisor-risk-leverage` | liquidation distance, HF, what-if BTC drop, deleverage, vesting liquidity | snapshot `analytics.btc` + positions + vesting | `.pending-advisor/finding-risk_leverage.json` |
+| `advisor-yield-allocation` | idle stables, rate moves, buffer vs target | DefiLlama + Morpho | `.pending-advisor/finding-yield_allocation.json` |
+| `advisor-market-macro` | BTC technicals, momentum, macro pulse | CoinGecko + GeckoTerminal + AIXBT + `/global` | `.pending-advisor/finding-market_macro.json` |
+| `advisor-fundamentals` | TVL/revenue, mcap/FDV/supply for held symbols | DefiLlama + CoinGecko | `.pending-advisor/finding-fundamentals.json` |
+| `advisor-news-social` | headlines, Fear&Greed, X sentiment | crypto RSS + Fear&Greed + Grok `x_search` | `.pending-advisor/finding-news_social.json` |
+| `advisor-debate` | bull + bear over combined findings (1 round) | run doc (cache) | `.pending-advisor/debate.json` |
+| `advisor-portfolio-manager` | ranked recommendations + summary | run doc (cache) | `.pending-advisor/report.json` + `.pending-advisor/telegram.txt` |
 
-- **Sandbox constraint:** GitHub Actions blocks `curl` with an env-var expanded into an auth
-  header, and `WebFetch` cannot do HTTP Basic auth. So this uses aeon's **prefetch pattern**:
-  `scripts/prefetch-portfolio-snapshot.sh` runs *before* Claude with full env, curls the URL
-  with the secret, and writes `.investiments-cache/snapshot.json`. The skill reads the cache.
-- **Secret:** a single var `INVESTIMENTS_BASIC_AUTH` = `base64("admin:<password>")`, stored as
-  a GitHub Actions secret and in the local `.env`. Never logged, never committed. `<password>`
-  comes from the Railway service vars / the operator.
-- `.investiments-cache/` is added to `.gitignore`.
-- The skill emits a compact, structured snapshot block to `.outputs/portfolio-snapshot.md`:
-  `totalUsd`, `updatedAt`, per-position rows, and the **`analytics.btc`** block (qty, loanUsd,
-  netBtcValueUsd, currentBtcPriceUsd, **liquidationPriceUsd, healthFactor, dropToLiqPct,
-  lltv**), allocation (stable/other), assets, vesting.
-- If the fetch fails / cache is empty → the chain **hard-stops** at the PM step with a failure
-  notification (no portfolio = no advice; never invent positions).
+Skills **never call `./notify`** (it writes committed `dashboard/outputs/`). The PM's Telegram
+summary is queued for `postprocess-advisor.sh` to send directly.
 
-### Snapshot response shape (advisor input)
+## Structured payloads (JSON, posted to the private API)
 
 ```jsonc
-{
-  "totalUsd": 340533.86,
-  "updatedAt": "<ISO>",
-  "wallets": [{ "address", "totalUsd", "error" }],
-  "positions": [{ "wallet","chain","protocol","type","symbol","name","quantity","price","valueUsd" }],
-  "analytics": {
-    "btc": { "btcQty","btcValueUsd","loanUsd","netBtcValueUsd","netBtcQty",
-             "currentBtcPriceUsd","liquidationPriceUsd","healthFactor","dropToLiqPct","lltv" },
-    "allocation": { "stableUsd","otherUsd" },
-    "assets": [{ "symbol","quantity","valueUsd","isStable" }],
-    "vesting": [{ "protocol","lockedUsd" }]
-  }
-}
+// finding-<role>.json
+{ "role": "risk_leverage", "thesis": "...", "signals": ["..."], "concerns": ["..."],
+  "suggestedActions": [{ "action": "...", "rationale": "...", "confidence": 0.0 }],
+  "error": null }
+
+// debate.json
+{ "turns": [ { "side": "bull", "points": ["..."], "rebuttals": ["..."] },
+             { "side": "bear", "points": ["..."], "rebuttals": ["..."] } ] }
+
+// report.json (PM output → /api/advisor/report, served to the dashboard)
+{ "generatedAt": "<ISO>", "summary": "...",
+  "recommendations": [ { "title": "...", "action": "Repay ~$10k USDC on Morpho to lift HF to ~2.4",
+                         "rationale": "...", "urgency": "high", "confidence": 0.0,
+                         "supportingRoles": ["risk_leverage"] } ],
+  "findings": [ /* AnalystFinding[] */ ], "debate": { /* turns */ },
+  "modelInfo": { "analysts": "claude-sonnet-4-6", "pm": "claude-opus-4-8" },
+  "dataSources": { "used": ["..."], "unavailable": ["..."] },
+  "gaps": ["news_social"], "disclaimer": "Not financial advice. ..." }
 ```
 
-## Analyst roster → data-source mapping
+## investiments side (private) — new endpoints + store + panel
 
-Five **new** analyst skills. They are portfolio-aware (scoped to the operator's holdings +
-liquidation data) and emit structured findings — but they **reuse the proven data-fetch
-recipes** (endpoints + parsing) from the existing standalone skills rather than rebuilding
-them. "Reuse" = reuse the plumbing, not the standalone notifying output.
+All routes already sit behind `checkBasicAuth` (`auth.ts`), so the advisor routes inherit auth
+using the same `DASHBOARD_PASSWORD` the snapshot uses.
 
-| Skill | Role | Sources (reused recipes) | Key |
-|---|---|---|---|
-| `advisor-risk-leverage` | Liquidation distance, HF, what-if BTC drop, deleverage, vesting/unlock liquidity | snapshot `analytics.btc` + positions + vesting | — |
-| `advisor-yield-allocation` | Idle stables, rate moves, stablecoin buffer vs target | DefiLlama + Morpho (`defi-overview` recipe) | keyless |
-| `advisor-market-macro` | BTC technicals, momentum/runners, macro pulse | CoinGecko + GeckoTerminal + AIXBT + CoinGecko `/global` (`market-context-refresh` + `aixbt-pulse`) | keyless |
-| `advisor-fundamentals` | TVL/revenue + mcap/FDV/supply for held symbols | DefiLlama + CoinGecko | keyless |
-| `advisor-news-social` | Headlines, Fear & Greed, X sentiment | crypto RSS + Fear & Greed + Grok `x_search` | `XAI_API_KEY` (in `.env`) |
-
-Then **`advisor-bull`** + **`advisor-bear`** debate the combined findings (1 round), and
-**`advisor-portfolio-manager`** produces the ranked `Recommendation[]` + plain-English summary.
-
-## Structured block formats (between stages)
-
-Documented, fenced blocks in each skill's `.outputs/<skill>.md` (mirrors the upstream types,
-expressed as markdown the next stage parses):
-
-- **AnalystFinding:** `role`, `thesis`, `signals[]`, `concerns[]`,
-  `suggestedActions[{action, rationale, confidence 0..1}]`, optional `error` (noted gap).
-- **DebateTurn:** `side` (bull|bear), `points[]`, `rebuttals[]`.
-- **Recommendation:** `title`, `action` (advisory, e.g. "Repay ~$10k USDC on Morpho to lift HF
-  to ~2.4"), `rationale`, `urgency` (low|medium|high), `confidence 0..1`, `supportingRoles[]`.
-- **AdvisorReport** (PM output): `generatedAt`, `summary`, `recommendations[]`, `findings[]`,
-  `debate[]`, `modelInfo`, `dataSources{used, unavailable}`, `gaps[]`, `disclaimer`.
+- **`advisor-store.ts`** (mirrors `cache-store.ts`: atomic temp-then-rename, dir-injectable for
+  tests): `readRun(date)`, `upsertFinding(date, role, finding)`, `setDebate(date, debate)`,
+  `setReport(date, report)` (also writes `latest.json`), `readLatest()`. Per-day file
+  `advisor/runs/<date>.json`; `advisor/latest.json` for the panel. `advisor/` is gitignored.
+- **`server.ts`** new routes (all auth-guarded):
+  - `POST /api/advisor/run` `{date}` → ensure today's run doc exists.
+  - `POST /api/advisor/finding` `{date, role, finding}` → `upsertFinding`.
+  - `POST /api/advisor/debate` `{date, debate}` → `setDebate`.
+  - `POST /api/advisor/report` `{date, report}` → `setReport` (+ `latest.json`).
+  - `GET /api/advisor/run?date=YYYY-MM-DD` (default today) → run doc (findings + debate + report).
+  - `GET /api/advisor` → `latest.json` or `{ empty: true }` (dashboard panel reads this).
+- **`public/`** — an "ADVISOR" panel: latest summary, ranked recommendations (urgency/confidence),
+  last-run time, data-sources used/unavailable, gaps, and the disclaimer.
+- **`types.ts`** — add `AnalystFinding`, `DebateTurn`, `Recommendation`, `AdvisorReport`,
+  `AdvisorRun` interfaces (shapes above).
 
 ## Model strategy (evidence-based)
 
-From 2026 finance benchmarks scoped to models aeon's gateway can route to:
+2026 finance benchmarks, scoped to aeon-routable models. **Hallucination resistance is the
+governing metric** for real-money advice: Gemini 3.1 Pro (≈45/100) and Qwen 3.6 (≈32/100)
+*confidently fabricate* financial figures → **disqualified for any reasoning step**. Claude
+(Opus 4.6 ≈78) and Kimi K2.5 (≈71) are the disciplined options. Claude Opus 4.8 is also #1 on
+finance reasoning accuracy (89.1%) and cheapest at the top tier.
 
-- **Hallucination resistance is the governing metric** for real-money advice. Gemini 3.1 Pro
-  (45/100) and Qwen 3.6 (32/100) **confidently fabricate** primary financial metrics and are
-  **disqualified** for any reasoning step. Claude (Opus 4.6 ≈ 78) and Kimi K2.5 (≈ 71) are the
-  disciplined options; GPT-5.4 (≈ 92) leads but isn't the aeon native default.
-- **Finance reasoning accuracy:** Claude Opus 4.8 (89.1%) is top *and* cheapest at the top tier;
-  Claude Sonnet 4.6 (83.6%) is strong for scoped summarization.
-
-Assignment:
-
-- **Analysts + `advisor-bull`/`advisor-bear` → `claude-sonnet-4-6`** (accurate enough for
-  scoped data-summarization, Claude-family discipline, cheap across 7 jobs).
-- **`advisor-portfolio-manager` → `claude-opus-4-8`** (top finance accuracy + 2nd-best
-  hallucination resistance + cheapest at the top tier; the high-judgment synthesis step).
+- **`portfolio-snapshot`, 5 analysts, `advisor-debate` → `claude-sonnet-4-6`** (per-skill
+  `model:` override in `aeon.yml`).
+- **`advisor-portfolio-manager` → `claude-opus-4-8`** (the high-judgment synthesis).
 - **Fallback (only if added later) → Kimi K2.5**; **never** Gemini/Qwen/DeepSeek for reasoning.
-
-> **Verification:** `aeon.yml`'s comment lists `claude-opus-4-7` as a model option. The plan
-> confirms the workflow's model passthrough accepts `claude-opus-4-8` for the PM step.
 
 Sources: [aimultiple 38-LLM finance benchmark](https://aimultiple.com/finance-llm),
 [JurisTech hallucination report](https://juristech.net/best-llm-tools-for-financial-analysis-2026/),
 [Finance LLM Leaderboard](https://awesomeagents.ai/leaderboards/finance-llm-leaderboard/).
 
-## Error handling — failure isolation
+> **Verification:** `aeon.yml`'s model resolver greps the per-skill `model:` free-form and passes
+> it to `claude --model`, so `claude-opus-4-8` works even though the dispatch dropdown only lists
+> `4-7`. The plan confirms a live run accepts it.
 
-- **Per-feed:** any dead data source → the analyst marks that section "unavailable" and reasons
-  around it; never aborts the run.
-- **Per-agent:** a failed analyst job → its `.outputs/` is missing/`error`; the PM is instructed
-  to synthesize from whatever findings exist and list the gap in `report.gaps`. Chain uses
-  `on_error: continue`.
-- **Hard stop only** if the snapshot can't be fetched (empty/missing cache) → the PM step
-  notifies the failure instead of inventing data.
-
-## Safety (non-negotiable)
+## Privacy & safety (non-negotiable)
 
 - **Advisory-only** — no skill signs, drafts, or submits a transaction, ever. Primary control.
-- **Untrusted external text** (RSS, X posts via Grok, AIXBT/GeckoTerminal text) is delimited and
-  models are instructed to ignore embedded instructions (per aeon `CLAUDE.md` security section).
-- **Data-guarding** on every analyst: "use only the provided/fetched data; if a figure is
-  missing, say so — never invent." Reinforced by the hallucination research. Claude-only models
-  for reasoning.
-- **Reports hold real financials** → written to a **gitignored** `reports/advisor/` directory;
-  every report and notification carries a clear **"not financial advice"** disclaimer.
-- **No secret leakage** — `INVESTIMENTS_BASIC_AUTH` (and any other secret) never appears in
-  outputs, logs, or committed files.
+- **No financials on public main.** All sensitive aeon-side artifacts are **gitignored**:
+  `.investiments-cache/`, `.pending-advisor/`, `reports/advisor/`, plus
+  `.outputs/portfolio-snapshot.md` and `.outputs/advisor-*.md`. The private API is the only
+  cross-skill bus. Skills must not call `./notify`/`./notify-jsonrender`.
+- **Secrets never expand in the sandbox.** `INVESTIMENTS_BASIC_AUTH` and Telegram tokens are used
+  only inside prefetch/postprocess scripts (full-env, outside Claude). Never logged or committed.
+- **Untrusted external text** (RSS, X via Grok, AIXBT/GeckoTerminal) is delimited; models are told
+  to ignore embedded instructions (aeon `CLAUDE.md` security section).
+- **Data-guarding** on every analyst: "use only provided/fetched data; if a figure is missing,
+  say so — never invent." Claude-only models for reasoning.
+- Every report + Telegram summary carries a **"not financial advice"** disclaimer.
 
-## Schedule + output
+## Error handling — failure isolation
 
-- **Daily** `0 13 * * *` UTC + **`workflow_dispatch`** for on-demand runs.
-- The PM step calls **`./notify`** with a concise summary (top recommendations + urgency, one
-  paragraph) and writes the full report to **`reports/advisor/<ISO>.md`**.
+- **Per-feed:** a dead source → analyst marks that section "unavailable" and reasons around it.
+- **Per-agent:** a failed analyst job → no finding posted for that role; the run doc simply lacks
+  it; PM synthesizes from present findings and lists the gap. Chain `on_error: continue`.
+- **Hard stop** only if the snapshot cache is empty/missing → `portfolio-snapshot` records the
+  failure and downstream analysts emit an `error` finding; PM, finding no usable data, posts a
+  failure report + Telegram "advisor run aborted: no snapshot" instead of inventing positions.
 
-## Verification (aeon skills are Claude runs, not unit-tested code)
+## Secrets / config
 
-1. `scripts/prefetch-portfolio-snapshot.sh` fetches and caches the snapshot against the live
-   Railway URL with the real `INVESTIMENTS_BASIC_AUTH` secret (and fails cleanly without it).
-2. A manual `workflow_dispatch` chain run produces all 8 stage outputs, delivers a notification,
-   and writes a report file.
-3. **Failure isolation:** induce one feed failure and one analyst failure → the report still
-   generates with the gaps noted (`unavailable` / `gaps` populated).
-4. **No secret leak:** grep run logs and `.outputs/` / report for the credential — must be absent.
-5. Confirm `claude-opus-4-8` is accepted by the workflow for the PM step.
+- **aeon (GH Actions secrets + local `.env`):** `INVESTIMENTS_BASIC_AUTH` = `base64("admin:<DASHBOARD_PASSWORD>")`
+  (pull `<DASHBOARD_PASSWORD>` from the investiments Railway vars). `XAI_API_KEY` already present.
+  `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` already present. Add `INVESTIMENTS_BASIC_AUTH` to the
+  prefetch env block and `INVESTIMENTS_BASIC_AUTH`+Telegram to the postprocess env block in `aeon.yml`.
+- **investiments:** no new secret — advisor routes reuse `DASHBOARD_PASSWORD`. `INVESTIMENTS_BASE_URL`
+  (aeon side) = `https://investiments-production.up.railway.app`.
 
-## Build order (sequenced, each step independently checkable)
+## Verification
 
-1. Add `INVESTIMENTS_BASIC_AUTH` to `.env` / GH secrets; `.gitignore` for `.investiments-cache/`
-   and `reports/advisor/`.
-2. `scripts/prefetch-portfolio-snapshot.sh` + `portfolio-snapshot` skill (reads cache, emits
-   snapshot block). Verify against live Railway.
-3. `chain-runner.yml` capability check (parallel-with-consume + prefetch); patch if needed.
-4. Five analyst skills (`advisor-*`) — prompts, data-fetch recipes, structured `AnalystFinding`.
-5. `advisor-bull` + `advisor-bear` debate skills.
-6. `advisor-portfolio-manager` — synthesis, ranked recommendations, `./notify`, report write.
-7. Wire the `investment-advisor` chain + `workflow_dispatch` into `aeon.yml`; set per-skill models.
-8. Full verification: live dispatch run, failure-isolation test, secret-leak grep.
+- **investiments:** `bun test` covers `advisor-store.ts` (read/write/upsert/atomic) and the new
+  route handlers (auth required; finding/debate/report round-trip; GET latest). Manual: panel
+  renders a posted report.
+- **aeon:** `prefetch-advisor.sh` caches snapshot + run doc against live Railway with the real
+  secret (and exits 0 cleanly without it / for non-advisor skills). `postprocess-advisor.sh` POSTs
+  queued payloads + sends Telegram. A manual `workflow_dispatch` chain run produces a report in the
+  dashboard + a Telegram summary. Failure-isolation: induce one analyst failure → report still
+  posts with the gap noted. **Leak check:** after a run, `git log -p origin/main` shows no
+  financial data and no secret in any committed file.
+
+## Build order
+
+**Plan A — investiments endpoints (build first; gives aeon a target to POST to):**
+store → types → routes → panel → tests.
+
+**Plan B — aeon skills (build second):** gitignore + secrets/env wiring → `prefetch-advisor.sh`
+→ `postprocess-advisor.sh` → `portfolio-snapshot` → 5 analyst skills → `advisor-debate` →
+`advisor-portfolio-manager` → chain in `aeon.yml` → live verification + leak check.
 
 ## Out of scope (YAGNI / later)
 
@@ -244,5 +238,5 @@ Sources: [aimultiple 38-LLM finance benchmark](https://aimultiple.com/finance-ll
 - Iterative multi-round debate / convergence loops (single round in v1).
 - A hierarchical risk-manager veto gate.
 - Backtesting or performance tracking of past recommendations.
-- An aeon dashboard (json-render) panel for the advisor — notification + report only in v1.
 - FRED macro augmentation (optional `FRED_API_KEY`) — keyless macro feeds suffice for v1.
+- An aeon-side dashboard (json-render) panel — the report lives in the investiments dashboard.
