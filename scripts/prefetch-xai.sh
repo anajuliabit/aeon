@@ -242,6 +242,12 @@ case "$SKILL" in
     fi
     ;;
 
+  advisor-news-social)
+    xai_search ".xai-cache/advisor-news-social.json" \
+      "Summarize the most market-moving crypto/DeFi news and X sentiment in the last 24h. Neutral, factual, cite handles." \
+      "$YESTERDAY" "$TODAY"
+    ;;
+
   *)
     echo "xai-prefetch: no prefetch defined for skill '$SKILL'"
     ;;
