@@ -51,6 +51,24 @@ get cg-btc.json     "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart
 get fng.json        "https://api.alternative.me/fng/?limit=1"
 get cg-markets.json "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1"
 
+# --- Held-token fundamentals (fixes the top-100-only gap) ---
+# One keyless call resolves the HELD tickers (from the snapshot) to their
+# canonical CoinGecko coins (the `symbols` filter returns the highest-mcap match
+# per symbol — e.g. cbbtc -> coinbase-wrapped-btc, not a same-ticker vault token),
+# so held small-caps that aren't top-100 (e.g. MAMO, REPPO) get real mcap/FDV/
+# supply instead of being punted to manual review. Held symbols never touch git
+# (the snapshot and this cache are gitignored); only the ticker list is queried.
+if [ -f "$D/snapshot.json" ]; then
+  HELD_SYMS=$(jq -r '[.positions[]?.symbol, .analytics.assets[]?.symbol]
+                     | map(select(. != null) | ascii_downcase) | unique | join(",")' \
+                   "$D/snapshot.json" 2>/dev/null)
+  if [ -n "$HELD_SYMS" ]; then
+    curl -fsS --max-time 30 "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&symbols=$HELD_SYMS" \
+      -o "$D/cg-held.json" && echo "ok cg-held.json ($HELD_SYMS)" \
+      || echo "::warning::advisor-prefetch: cg-held fetch failed"
+  fi
+fi
+
 # --- X sentiment (optional; reuses the proven Grok x_search shape from scripts/prefetch-xai.sh) ---
 if [ -n "${XAI_API_KEY:-}" ]; then
   TODAY=$(date -u +%Y-%m-%d)
