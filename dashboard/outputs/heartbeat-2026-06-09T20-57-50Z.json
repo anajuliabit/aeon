@@ -1,0 +1,297 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat — Chain Failure",
+        "description": "🔴 chain:reppo-swarm re-failed 18:39 UTC"
+      },
+      "children": [
+        "alert_main",
+        "sep_1",
+        "stack_timeline",
+        "sep_2",
+        "stack_components",
+        "sep_3",
+        "stack_cluster",
+        "sep_4",
+        "stack_tx_data",
+        "sep_5",
+        "stack_final_status"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "Chain Re-Failed",
+        "message": "Broke clean-streak day-1 after morning 06:24 UTC cycle landed. Chain fell ~80s after trading-agent on digest step.",
+        "type": "error"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_timeline": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_failure_time",
+        "stat_last_success",
+        "stat_cycle_start"
+      ]
+    },
+    "stat_failure_time": {
+      "type": "Stat",
+      "props": {
+        "label": "Failed At",
+        "value": "18:39 UTC"
+      }
+    },
+    "stat_last_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last Success",
+        "value": "14:34 UTC"
+      }
+    },
+    "stat_cycle_start": {
+      "type": "Stat",
+      "props": {
+        "label": "Previous Cycle",
+        "value": "06:24 UTC"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_components": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_components",
+        "text_timeline",
+        "badges_container"
+      ]
+    },
+    "heading_components": {
+      "type": "Heading",
+      "props": {
+        "text": "Component Status",
+        "level": "h3"
+      }
+    },
+    "text_timeline": {
+      "type": "Text",
+      "props": {
+        "text": "All components succeeded individually (18:22–18:38 UTC)",
+        "variant": "body"
+      }
+    },
+    "badges_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_orchestrator",
+        "badge_voter",
+        "badge_trading"
+      ]
+    },
+    "badge_orchestrator": {
+      "type": "Badge",
+      "props": {
+        "text": "orchestrator ✓",
+        "variant": "secondary"
+      }
+    },
+    "badge_voter": {
+      "type": "Badge",
+      "props": {
+        "text": "voter ✓",
+        "variant": "secondary"
+      }
+    },
+    "badge_trading": {
+      "type": "Badge",
+      "props": {
+        "text": "trading-agent ✓",
+        "variant": "secondary"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_cluster": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_cluster",
+        "text_digest_reverts",
+        "text_pod_ids",
+        "text_issue_wallet",
+        "text_cluster_drain"
+      ]
+    },
+    "heading_cluster": {
+      "type": "Heading",
+      "props": {
+        "text": "Cluster & Revert Issues",
+        "level": "h3"
+      }
+    },
+    "text_digest_reverts": {
+      "type": "Text",
+      "props": {
+        "text": "4th-run digest had 5 own-pod reverts",
+        "variant": "body"
+      }
+    },
+    "text_pod_ids": {
+      "type": "Text",
+      "props": {
+        "text": "Affected pods: 764, 824, 825, 828, 832",
+        "variant": "muted"
+      }
+    },
+    "text_issue_wallet": {
+      "type": "Text",
+      "props": {
+        "text": "iss-016 pre-ledger cluster — same wallet 0x3dd4..7a81",
+        "variant": "muted"
+      }
+    },
+    "text_cluster_drain": {
+      "type": "Text",
+      "props": {
+        "text": "Stuck cluster drained from 20→11 entries since 14:00 UTC heartbeat. No new entries today.",
+        "variant": "muted"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_tx_data": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_tx",
+        "grid_tx_stats"
+      ]
+    },
+    "heading_tx": {
+      "type": "Heading",
+      "props": {
+        "text": "Transaction Details",
+        "level": "h3"
+      }
+    },
+    "grid_tx_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_mint",
+        "stat_address",
+        "stat_aave",
+        "stat_closes",
+        "stat_sharpe",
+        "stat_streak"
+      ]
+    },
+    "stat_mint": {
+      "type": "Stat",
+      "props": {
+        "label": "Mint",
+        "value": "20"
+      }
+    },
+    "stat_address": {
+      "type": "Stat",
+      "props": {
+        "label": "Address",
+        "value": "0x06cecfba"
+      }
+    },
+    "stat_aave": {
+      "type": "Stat",
+      "props": {
+        "label": "AAVE",
+        "value": "250"
+      }
+    },
+    "stat_closes": {
+      "type": "Stat",
+      "props": {
+        "label": "Closes",
+        "value": "+$85,196",
+        "delta": "+$85,196",
+        "trend": "up"
+      }
+    },
+    "stat_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe Ratio",
+        "value": "8458"
+      }
+    },
+    "stat_streak": {
+      "type": "Stat",
+      "props": {
+        "label": "Clean Streak Duration",
+        "value": "1 day"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_final_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_self_check",
+        "badge_status_page"
+      ]
+    },
+    "badge_self_check": {
+      "type": "Badge",
+      "props": {
+        "text": "self-check: OK",
+        "variant": "secondary"
+      }
+    },
+    "badge_status_page": {
+      "type": "Badge",
+      "props": {
+        "text": "status_page: DEGRADED",
+        "variant": "destructive"
+      }
+    }
+  }
+}
