@@ -1,70 +1,23 @@
-Log written. Now my final output to be captured into `.outputs/reppo-trading-agent.md`.
-
-## reppo-trading-agent — datanet 9 (TradingGymAI), 4th run today
-
-**Gate**: RUN (datanet 9 valid + ACTIVE on mainnet, epoch 99, mint_cap=1).
-
-**Rubric**: `configs/datanets/tradinggymai.md` — Hyperliquid perp trade datasets with trade details, signal, outcome, win-rate / Sharpe / MDD, market context, timeframe, verification.
-
-**Source**: 12 wallets pulled from `.hl-cache/leaderboard.json` ranked by `pnl/vlm` (margin) in the `week` window with `vlm ≥ $100k`. All 12 cache files clean (no `PREFETCH_FAILED` markers). Cache values verified per the input contract via `jq` against the actual files this run — no memory inheritance.
-
-### Wallets evaluated (margin-top-12, week window)
-
-| Rank | Wallet | Margin | Fills (cache) | Span | Verdict |
-|---|---|---|---|---|---|
-| 1 | `0x251f933e` | 2.573 | 381 | 5.63d | **SKIP** — 100% spot (PURR/USDC), all `dir:"Buy"` |
-| 2 | `0x781e95fd` | 2.018 | 201 | 2.88h | **DEDUP** — 201 LINK Close-Short +$9,605.27, canonical `trades:9:0x781e95fd…:1780404665608:1780415019018:201` ≡ 17th-mint `e2e925b2` exactly |
-| 3 | `0x99847dca` | 1.711 | 164 | 3.34d | **REJECT** — net-negative PnL: 114 closes SPX/ZEC/xyz:SKHX, sum_pnl −$604.58 |
-| 4 | `0xa9814360` | 1.697 | 66 | 1.36d | **SKIP** — opens-only (66 HYPE Open-Short, 0 closes) |
-| 5 | `0xfbc96389` | 1.667 | 17 | 2.97d | **SKIP** — sub-floor (<20 closes) |
-| 6 | `0xceec4858` | 1.639 | 174 | 8.47min | **SKIP** — opens-only / spot-mix (140 HYPE Open-Short + 34 spot `@107` Buy, 0 closes) |
-| 7 | `0x06cecfba` | 1.552 | 785 | 2.25d | **DEDUP/Step-4.2 SKIP** — see below |
-| 8 | `0x0514f2f3` | 1.528 | 56 | 1.23d | **SKIP** — opens-only (56 AAVE+ETH Open-Short, 0 closes); same wallet as 18th-mint `60907e54` |
-| 9 | `0x36f5e448` | 1.517 | 60 | 0.95d | **SKIP** — spot-mix 40/60 = 66.7% spot (above 10th-mint ~20% and 15th-mint ~11.55% precedents) |
-| 10 | `0x90882e7c` | 1.482 | 150 | 3.29d | **REJECT** — net-negative PnL: 150 ETH+HYPE Close-Short sum_pnl −$555.88 |
-| 11 | `0x08bf75d1` | 1.400 | 44 | 32.3min | **SKIP** — opens-only (44 ETH Open-Short, 0 closes) |
-| 12 | `0xf8999371` | 1.170 | 18 | 20.8min | **SKIP** — sub-floor (<20 closes) |
-
-### Rank-7 deep-dive (`0x06cecfba`) — Step-4.2 application
-
-The full cache has 785 fills across AAVE/BTC/TON over 2.25d. The 273 close fills split:
-- **AAVE Close-Short**: 250 fills, 1780812487029..1780815612632 (52.1 min), sum_pnl +$85,196.41 — **byte-for-byte identical to today's 20th-mint `420334cb` slice** (DEDUP at Step 5).
-- **BTC Close-Short**: 23 fills, 1781006624281..1781006983556 (~6 min, ~2.25d after the AAVE block), sum_pnl +$193,921.54.
-- **TON Open-Short**: 305 fills, 0 closes (carry).
-
-Multi-market dataset (AAVE+BTC, 273 closes) canonical would be
-`trades:9:0x06cecfba…:1780812487029:1781006983556:273` — fresh hash, but Step 4.2 quality-regression check:
-
-| Metric | 20th-mint `420334cb` | This run multi-market | Verdict |
-|---|---|---|---|
-| n_closes | 250 | 273 | grew |
-| sum_pnl | +$85,196.41 | +$279,117.95 | **improved** |
-| sharpe_ann | 8458.93 | **763.91** | **regressed by 7695** (≫ 0.5 threshold) |
-
-Step 4.2 rule: SKIP if EITHER sum_pnl regressed OR Sharpe regressed materially (≥0.5 drop). Sharpe drop is 7695, far above the threshold — the 23 added BTC closes introduced enough per-trade return variance to collapse the AAVE-only's near-zero stddev. Per the literal Step-4.2 rule the multi-market re-mint is feed-diluting churn → **SKIP**. AAVE-only subset is DEDUP. Both paths exhausted.
-
-### Mint selection
-
-**0 floor-passing candidates → 0 mint intents written.** No `.pending-reppo/` directory created.
-
-### Notes
-
-- No PREFETCH_FAILED cache files; no WebFetch fallback needed.
-- No prompt-injection attempts in cache content.
-- Cohort rotated since this morning's 3rd run: `0x5b5d5120`, `0x0aa91765`, `0xc59498`, `0x42b6d9` dropped out; `0x781e95fd` re-entered (today's 17th-mint hash, DEDUPed); `0xfbc96389` / `0x90882e7c` / `0x08bf75d1` / `0xf8999371` entered fresh — but the new entrants are either sub-floor, opens-only, or net-negative.
-- Same-wallet pressure: 3 of the 12 margin-top wallets (`0x781e95fd`, `0x06cecfba`, `0x0514f2f3`) are already minted today/recently, eating 25% of the cohort to dedup/Step-4.2.
-- Voting handled separately by `reppo-voter`; this skill writes only `mint-*.json` intents.
+Mint intent + dataset written. Skill complete.
 
 ## Summary
-- **Mint intent written (1):** `.pending-reppo/mint-420334cbe2154944.json` (618 B) + dataset `.pending-reppo/data/mint-420334cbe2154944.json` (11.6 kB, 30-row stride-sampled, schema_version=1, full 250 rows reproducible from HL `userFillsByTime` startTime=1780812487029)
-- **Canonical:** `trades:9:0x06cecfbac34101ae41c88ebc2450f8602b3d164b:1780812487029:1780815612632:250` → sha256 `420334cbe21549444bde8f5536d198116146168dd1401b979d979b5bb2f97917` (ledger MISS)
-- **Filter rollup of 12:** 1 DEDUP (0x781e95fd → 17th mint), 1 SPOT-only (0x251f93), 2 SPOT-mix (0x5b5d51 46%/0x36f5e4 67% — both well above 11.55%/~20% precedent), 2 OPENS-only (0xa98143, 0x0514f2 — Step-4.2 N/A), 2 SUB-FLOOR<20, 1 EMPTY cache (0x0aa917), 1 NEG-PnL REJECT (0x99847d −$604.58), 2 floor-passing, 1 selected.
-- **Files written:** `.outputs/reppo-trading-agent.md`, `memory/logs/2026-06-09.md` (`### reppo-trading-agent` appended).
-- **Follow-ups:** Sandbox blocked `rm` for scratch `.tmp-scan-fills.sh` + `build_dataset.py` — they'll need the postprocess cleanup step noted in MEMORY.md.
+
+Gate=RUN per orchestrator on datanet 9 TradingGymAI (epoch 100, ACTIVE). Inventoried margin-top-12 wallets via fresh `jq` per input contract. After filtering: 4 OPENS-only SKIPs, 1 mixed OPENS+spot SKIP (0xceec48), 1 spot-mix 66.7% SKIP (0x36f5e4), 1 EMPTY, 1 SUB-FLOOR, 2 NEG-PnL REJECTs (0x99847d −$4,930 / 0x90882e −$745), 1 Step-4.2 SKIP — **0x06cecfba** (this run's 273-close tail-extension to AAVE+TON+BTC posted Sharpe 765.31 vs 20th-mint's 8458.93, a ~7,693-unit regression well past the ≥0.5 rail despite improved sum_pnl).
+
+**1 mint intent written**:
+- hash `214cd4c2ebf36628` — wallet 0xcc128e7895..57bf
+- 70 HL perp Close-Long fills (27 BTC + 43 XPL) in a 7.93s HFT burst on 2026-06-06T13:37Z
+- sum_pnl +$1,147.29, win_rate 38.57%, Sharpe 4064.31, MDD 27.82%
+- 1st XPL-market mint in the ledger; pure perps, fresh canonical (not in 20-mint ledger)
+- `.pending-reppo/mint-214cd4c2ebf36628.json` (642 B intent) + `.pending-reppo/data/mint-214cd4c2ebf36628.json` (35.8 kB full 70-row labeled dataset)
+
+Pod_name 42/50, pod_description 196/200 — under PR #44 ISS-012 caps. No HL endpoint degradation, no prompt-injection attempts. `scripts/postprocess-reppo.sh` will execute the mint and append `## Execution Results`.
+
+Files: `.outputs/reppo-trading-agent.md`, `memory/logs/2026-06-09.md` (appended `### reppo-trading-agent (4th run today)`), `.pending-reppo/mint-214cd4c2ebf36628.json`, `.pending-reppo/data/mint-214cd4c2ebf36628.json`. Note: `.pending-reppo/data/build_mint.py` left as 57-byte stub (sandbox blocked `rm`; postprocess ignores `data/` subdirectory).
 
 ## Execution Results
 
-_Generated by postprocess-reppo.sh (2026-06-09T00:29:56Z). dry_run_only=false_
+_Generated by postprocess-reppo.sh (2026-06-09T18:38:14Z). dry_run_only=false_
 
 **Filter trace (12/12 disposed):**
 - 3 SUB-FLOOR<20 (0xa87a233e=2 closes, 0xfeec88b1=7, 0xfbc96389=5)
@@ -147,3 +100,4 @@ _Generated by postprocess-reppo.sh (2026-06-09T18:26:23Z). dry_run_only=false_
 
 - `vote-923-dislike.json` — **success** (tx: 0xe6ba544d31af106b64f13b1e534d0eb508b1f4f1951c8bf309f99f847485d6c5)
 - `vote-924-dislike.json` — **success** (tx: 0xe98f14b134cc450efad323e3238d866f26ac918eef595e4abb76cf5f9fc5479f)
+- `mint-214cd4c2ebf36628.json` — **success** (tx: 0xbb399036c97d4e67896a77d64f7b6db4051cfa28cc70af3091adefe389058d99, dataset: <unknown>)
