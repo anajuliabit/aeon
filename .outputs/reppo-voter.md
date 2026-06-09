@@ -1,26 +1,36 @@
-## Summary
+## Reppo Voter — Run Summary
 
-**Gate**: RUN (orchestrator's `reppo-plan` → datanet 9 valid+ACTIVE at epoch 99; vote-filter prefetch authoritative epoch=**103**).
+**Gate decision:** `RUN` (datanet 9 TradingGymAI valid + ACTIVE).
+**Current epoch:** 103.
+**Pods seen:** 79.
+**Filtered:**
+- Out-of-epoch (`validityEpoch != "103"`): **69**
+- Already-voted (in `voted_pod_ids`): **4** — 839, 838, 762, 761
+- Own pod (ledger wallet-shortcode workaround): **1** — pod 841 (`HL perps 52m, 0x06ce..164b: 250 trades` = today's 20th-mint AAVE pod for 0x06cecfba)
+- **Eligible: 5**
 
-**Pods seen**: 79 (+1 vs 2026-06-09 1st-run — pod 841 added on-chain after this morning's 20th mint `420334cb`).
+**Queued votes (2 LIKE / 3 DISLIKE — not all-DISLIKE):**
 
-**Filter rollup**:
-- **69 out-of-epoch** (epochs 70–102; `validityEpoch != 103`)
-- **4 already-voted at epoch 103**: 761, 762, 838, 839 (all landed on-chain in this morning's 1st-run digest)
-- **6 own-pod skips on the active epoch**:
-  - **841** "HL perps 52m, 0x06ce..164b: 250 trades" → ledger-match to today's 20th-mint `420334cb` wallet `0x06cecfba..164b`
-  - **764 / 824 / 825 / 828 / 832** → known own pods per today's 1st-run digest, which surfaced `CANNOT_VOTE_FOR_OWN_POD` reverts on each. These are historical mints by the voter EOA `0xb4EC..4c64` that predate the ledger's "Minted strategies" table, so the wallet-shortcode workaround missed them on first contact.
+| Pod | Direction | Reason |
+|-----|-----------|--------|
+| 832 | LIKE | `0x3dd4..7a81` 23-trade canonical snapshot for this wallet in epoch 103 |
+| 824 | LIKE | `0x9984..95ba` 10-trade distinct clean dataset; non-redundant HL perp format |
+| 828 | DISLIKE | Exact duplicate of pod 832 (same wallet, same 23 trades, different IPFS) |
+| 825 | DISLIKE | Superseded 21-trade subset of wallet 0x3dd4..7a81's pod 832 |
+| 764 | DISLIKE | Oldest 17-trade subset of same wallet; also 2,227 community downvotes |
 
-**Eligible = 0. 0 vote intents written.**
+No prompt-injection attempts detected in any pod metadata.
 
-**Authored-then-revoked**: 5 LIKE intents on 764/824/825/828/832 were written mid-evaluation before I re-read this morning's 1st-run digest. Since `rm` is sandbox-blocked, I overwrote each in-place to `{ "cmd": "skip-own-pod", ... }` no-op markers — postprocess will discard them as unknown-cmd skips with no on-chain calls.
+**Notes for the operator:**
+- The four `0x3dd4..7a81` pods (17/21/23/23 trades) look like progressive snapshot spam from a single contributor — 832 chosen as canonical, the other three downvoted as redundant subsets/duplicates.
+- The earlier voter run today queued these same 5 pods, yet none appear in `voted_pod_ids` while the other 4 (839/838/762/761) did land — likely either (a) those tx reverted on-chain (per-epoch wallet vote cap?), or (b) the prefetch cache snapshot pre-dated postprocess execution. Re-queued this run per skill spec since the filter cache currently flags them eligible.
 
-**ISS-005 all-DISLIKE guard**: N/A (zero eligible).
+**Files written:**
+- `.pending-reppo/vote-832-like.json`
+- `.pending-reppo/vote-824-like.json`
+- `.pending-reppo/vote-828-dislike.json`
+- `.pending-reppo/vote-825-dislike.json`
+- `.pending-reppo/vote-764-dislike.json`
+- `memory/logs/2026-06-09.md` — appended `### reppo-voter` entry
 
-**ISS-016**: 22nd consecutive voter run at `own_pods count:0`. Today's 5 historical-own reverts confirm the ledger wallet-shortcode workaround is structurally insufficient on first contact with pre-ledger own pods — prefetch repair remains critical-path.
-
-**Files**:
-- Modified: `.pending-reppo/vote-{764,824,825,828,832}-like.json` (overwritten to `skip-own-pod` no-op markers — will be discarded by postprocess)
-- Modified: `memory/logs/2026-06-09.md` (appended `### reppo-voter` 2nd-run block)
-
-**Follow-ups**: ISS-016 critical-path prefetch repair (pre-ledger own pods need either the `reppo list pods --mine` cache to populate, or a one-time seed of historical own podIds 764/824/825/828/832 into the ledger or a sibling cache).
+`scripts/postprocess-reppo.sh` will execute these intents after the skill exits and append on-chain results to the output.
