@@ -1,0 +1,273 @@
+{
+  "root": "main",
+  "state": {},
+  "elements": {
+    "main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "queued",
+        "sep2",
+        "onchan",
+        "sep3",
+        "reverted",
+        "sep4",
+        "footer"
+      ]
+    },
+    "header": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 1st run · datanet 9 · 5 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "queued": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-h",
+        "mint-item",
+        "votes-item"
+      ]
+    },
+    "queued-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "mint-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mint-badge",
+        "mint-text"
+      ]
+    },
+    "mint-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "mint",
+        "variant": "outline"
+      }
+    },
+    "mint-text": {
+      "type": "Text",
+      "props": {
+        "text": "250 aave close-short, +$85k sharpe 8458 (0x06cecfba) · 420334cbe2154944"
+      }
+    },
+    "votes-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "votes-badge",
+        "dislike-text",
+        "like-text"
+      ]
+    },
+    "votes-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "votes",
+        "variant": "outline"
+      }
+    },
+    "dislike-text": {
+      "type": "Text",
+      "props": {
+        "text": "7 dislike (761/762/764/825/828/838/839)"
+      }
+    },
+    "like-text": {
+      "type": "Text",
+      "props": {
+        "text": "2 like (824/832)"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "onchan": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "onchan-h",
+        "tx1",
+        "tx2",
+        "tx3",
+        "tx4",
+        "tx5"
+      ]
+    },
+    "onchan-h": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h3"
+      }
+    },
+    "tx1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "tx1-label",
+        "tx1-link"
+      ]
+    },
+    "tx1-label": {
+      "type": "Text",
+      "props": {
+        "text": "mint 420334cbe2154944 —"
+      }
+    },
+    "tx1-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0x244b2ef645",
+        "href": "https://etherscan.io/tx/0x244b2ef645"
+      }
+    },
+    "tx2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "tx2-label",
+        "tx2-link"
+      ]
+    },
+    "tx2-label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 761 dislike —"
+      }
+    },
+    "tx2-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0xc266d17341",
+        "href": "https://etherscan.io/tx/0xc266d17341"
+      }
+    },
+    "tx3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "tx3-label",
+        "tx3-link"
+      ]
+    },
+    "tx3-label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 762 dislike —"
+      }
+    },
+    "tx3-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0x6367e90211",
+        "href": "https://etherscan.io/tx/0x6367e90211"
+      }
+    },
+    "tx4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "tx4-label",
+        "tx4-link"
+      ]
+    },
+    "tx4-label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 838 dislike —"
+      }
+    },
+    "tx4-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0xa28d838a73",
+        "href": "https://etherscan.io/tx/0xa28d838a73"
+      }
+    },
+    "tx5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "tx5-label",
+        "tx5-link"
+      ]
+    },
+    "tx5-label": {
+      "type": "Text",
+      "props": {
+        "text": "vote 839 dislike —"
+      }
+    },
+    "tx5-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx 0x55383afeb5",
+        "href": "https://etherscan.io/tx/0x55383afeb5"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "reverted": {
+      "type": "Alert",
+      "props": {
+        "title": "Reverted",
+        "message": "CANNOT_VOTE_FOR_OWN_POD × 5 (ISS-016)\nAction: ledger wallet-shortcode workaround missed pods 764/824/825/828/832 — own-pods prefetch repair still pending",
+        "type": "warning"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned.",
+        "variant": "muted"
+      }
+    }
+  }
+}

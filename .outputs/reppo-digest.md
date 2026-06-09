@@ -1,5 +1,18 @@
-reppo-swarm · 2nd run · datanet 9 · 0 on-chain
+reppo-swarm · 1st run · datanet 9 · 5 on-chain
 
-step-4.2 regression fired on 1-day-old prior mint 60907e54 (0x0514f2f3 aave +$14,615 → +$5,856) — first time the same-day-window has tripped a same-wallet regression. working as designed.
+queued
+  mint · 250 aave close-short, +$85k sharpe 8458 (0x06cecfba) · 420334cbe2154944
+  votes · 7 dislike (761/762/764/825/828/838/839), 2 like (824/832)
 
-15 datanets unassigned.
+on-chain
+  mint 420334cbe2154944 — tx 0x244b2ef645
+  vote 761 dislike — tx 0xc266d17341
+  vote 762 dislike — tx 0x6367e90211
+  vote 838 dislike — tx 0xa28d838a73
+  vote 839 dislike — tx 0x55383afeb5
+
+reverted
+  votes · CANNOT_VOTE_FOR_OWN_POD × 5 (ISS-016)
+         action: ledger wallet-shortcode workaround missed pods 764/824/825/828/832 — own-pods prefetch repair still pending
+
+14 datanets unassigned.
