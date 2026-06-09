@@ -1,0 +1,208 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "market context — 2026-06-09"
+      },
+      "children": [
+        "take_section",
+        "sep1",
+        "metrics_section",
+        "sep2",
+        "narrative_section",
+        "sep3",
+        "market_section"
+      ]
+    },
+    "take_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "take_label",
+        "take_badge"
+      ]
+    },
+    "take_label": {
+      "type": "Text",
+      "props": {
+        "text": "Take:",
+        "variant": "lead"
+      }
+    },
+    "take_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "chop (conviction medium)",
+        "variant": "default"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "prices_group",
+        "other_metrics"
+      ]
+    },
+    "prices_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc_stat",
+        "eth_stat",
+        "fear_stat"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62,326",
+        "delta": "-1.59%",
+        "trend": "down"
+      }
+    },
+    "eth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,670",
+        "delta": "-0.66%",
+        "trend": "down"
+      }
+    },
+    "fear_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "10",
+        "delta": "extreme fear"
+      }
+    },
+    "other_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "breadth_stat",
+        "dex_vol_stat"
+      ]
+    },
+    "breadth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "7/20"
+      }
+    },
+    "dex_vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume",
+        "value": "$7.19B",
+        "delta": "-41.7% vs June 5",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narrative_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "narrative_heading",
+        "narrative_text"
+      ]
+    },
+    "narrative_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h3"
+      }
+    },
+    "narrative_text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC ETF outflow streak — 13 days, $4.4B total"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "market_heading",
+        "odds_container"
+      ]
+    },
+    "market_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h3"
+      }
+    },
+    "odds_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "odds_title",
+        "odds_progress"
+      ]
+    },
+    "odds_title": {
+      "type": "Text",
+      "props": {
+        "text": "US x Iran peace deal by Dec 31 — YES",
+        "variant": "lead"
+      }
+    },
+    "odds_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 68.5,
+        "max": 100,
+        "label": "68.5%"
+      }
+    }
+  }
+}
