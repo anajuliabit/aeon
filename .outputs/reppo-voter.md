@@ -1,36 +1,31 @@
-## Reppo Voter — Run Summary
+Step 6 — write the output summary.
 
-**Gate decision:** `RUN` (datanet 9 TradingGymAI valid + ACTIVE).
-**Current epoch:** 103.
-**Pods seen:** 79.
-**Filtered:**
-- Out-of-epoch (`validityEpoch != "103"`): **69**
-- Already-voted (in `voted_pod_ids`): **4** — 839, 838, 762, 761
-- Own pod (ledger wallet-shortcode workaround): **1** — pod 841 (`HL perps 52m, 0x06ce..164b: 250 trades` = today's 20th-mint AAVE pod for 0x06cecfba)
-- **Eligible: 5**
+## reppo-voter — 2026-06-09
 
-**Queued votes (2 LIKE / 3 DISLIKE — not all-DISLIKE):**
+**Gate:** RUN per `.outputs/reppo-orchestrator.md` reppo-plan (datanet 9 TradingGymAI valid+ACTIVE).
+
+**Epoch:** 104 (from `.reppo-cache/vote-filter-tradinggymai.json`; advanced from epoch 103 of earlier same-day run).
+
+**Filtering:**
+- Pods seen: **81**
+- Filtered — out-of-epoch (`validityEpoch != 104`): **79**
+- Filtered — already-voted (in `voted_pod_ids`): **0**
+- Filtered — defensive own-pod (ledger cross-ref): **0** (own-pods prefetch count=0, ISS-016 carry; no epoch-104 pod matches any of our HL perps mints — both eligible pods are HotBot v4 raw exports, not our format)
+- **Eligible: 2**
+
+**Votes queued (both DISLIKE — write-only intents to `.pending-reppo/`):**
 
 | Pod | Direction | Reason |
 |-----|-----------|--------|
-| 832 | LIKE | `0x3dd4..7a81` 23-trade canonical snapshot for this wallet in epoch 103 |
-| 824 | LIKE | `0x9984..95ba` 10-trade distinct clean dataset; non-redundant HL perp format |
-| 828 | DISLIKE | Exact duplicate of pod 832 (same wallet, same 23 trades, different IPFS) |
-| 825 | DISLIKE | Superseded 21-trade subset of wallet 0x3dd4..7a81's pod 832 |
-| 764 | DISLIKE | Oldest 17-trade subset of same wallet; also 2,227 community downvotes |
+| 924 | DISLIKE | "HotBot v4 — Signal Intelligence Jun 07-Jun 09" raw scan dump — no executed trades, no aggregate metrics, no HL tx hashes; off-rubric per rubric §"Vote NO if" (strategy/signal scan without executed trades). Matches 54 prior identical-format HotBot v4 DISLIKE precedents. |
+| 923 | DISLIKE | "HotBot v4 — Trades & Learning Jun 07-Jun 09" raw export — no labeled per-trade fields, no aggregate Sharpe/win-rate/MDD, no HL tx hashes per rubric §"Vote NO if" (required fields missing). Follows same publisher's 54 prior DISLIKE precedents. |
 
-No prompt-injection attempts detected in any pod metadata.
+**ISS-005 all-DISLIKE guard:** TRIPPED — 2/2 eligible voted DISLIKE on a non-empty eligible set. Cause is **structural, not reflexive**: only HotBot v4 raw exports appeared at epoch 104. Same publisher format as same-format siblings 761/762 (epoch 103) and 639/640 (epoch 102), both already DISLIKEd on-chain. No HL-perp wallet-trade pods appeared this epoch.
 
-**Notes for the operator:**
-- The four `0x3dd4..7a81` pods (17/21/23/23 trades) look like progressive snapshot spam from a single contributor — 832 chosen as canonical, the other three downvoted as redundant subsets/duplicates.
-- The earlier voter run today queued these same 5 pods, yet none appear in `voted_pod_ids` while the other 4 (839/838/762/761) did land — likely either (a) those tx reverted on-chain (per-epoch wallet vote cap?), or (b) the prefetch cache snapshot pre-dated postprocess execution. Re-queued this run per skill spec since the filter cache currently flags them eligible.
+**Prompt-injection scan:** clean — no embedded instructions detected in pod names.
 
-**Files written:**
-- `.pending-reppo/vote-832-like.json`
-- `.pending-reppo/vote-824-like.json`
-- `.pending-reppo/vote-828-dislike.json`
-- `.pending-reppo/vote-825-dislike.json`
-- `.pending-reppo/vote-764-dislike.json`
-- `memory/logs/2026-06-09.md` — appended `### reppo-voter` entry
-
-`scripts/postprocess-reppo.sh` will execute these intents after the skill exits and append on-chain results to the output.
+## Summary
+- Wrote 2 vote intents (`.pending-reppo/vote-924-dislike.json`, `.pending-reppo/vote-923-dislike.json`) — both DISLIKE on HotBot v4 raw exports at epoch 104.
+- Appended `### reppo-voter` log entry to `memory/logs/2026-06-09.md`.
+- `scripts/postprocess-reppo.sh` will execute the intents and append `## Execution Results` with on-chain tx outcomes after this skill exits.
+- Follow-up: none. ISS-005 trip flagged but cause is structural; if epoch 104 brings only HotBot v4 exports across the trigger cycle, the 55th + 56th off-rubric HotBot v4 DISLIKE will land on-chain.
