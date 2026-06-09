@@ -74,7 +74,15 @@ of the following hold:
    - the pod's name/description matches one of our own mints in the
      "Minted strategies" table of `memory/topics/reppo.md` (e.g. an
      `HL perps …, 0x<short>: N trades` title whose wallet shortcode +
-     trade count matches a ledger row we minted).
+     trade count matches a ledger row we minted), OR
+   - the pod's id appears in a `CANNOT_VOTE_FOR_OWN_POD` revert in any
+     `### reppo-digest` block of today's `memory/logs/${today}.md` (or
+     yesterday's, if today's log has no prior digest yet). Pre-ledger own
+     pods are publisher-EOA-owned but absent from the ledger shortcode
+     table; one revert tx is sufficient proof of ownership. Without this
+     cross-ref the next intraday run replays the same revert against the
+     same pods (e.g. 2026-06-09 4th run replayed 1st run's 5 reverts on
+     764/824/825/828/832).
    When in doubt that a pod is ours, skip it — a wrong self-vote always
    reverts and burns a slot.
 
