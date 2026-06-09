@@ -90,6 +90,12 @@ else
   echo "advisor-prefetch: XAI_API_KEY not set, skipping x_search (optional)"
 fi
 
+# NOTE (spec phase-2): DefiLlama emissions/unlocks (unlocks.json) is intentionally
+# NOT fetched — api.llama.fi/emissions moved behind the paid plan (verified
+# 2026-06-09: "Upgrade to the paid API plan"). Vesting for HELD tokens is already
+# covered by the snapshot's analytics.vesting (Sablier). Revisit if a free
+# unlock source appears.
+
 # --- Micro-cap DEX liquidity + volume (GeckoTerminal, keyless) ---
 # For held tokens outside the majors/stables, fetch top Base pools so trim
 # recommendations can be sized against real daily volume. Symbols come from the

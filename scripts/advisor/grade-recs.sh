@@ -72,8 +72,11 @@ while [ "$d" -le "$LOOKBACK_DAYS" ]; do
     [ "$MATURE_S" -gt "$TODAY_S" ] && continue # not matured yet
 
     TITLE=$(printf '%s' "$REC" | jq -r '.title // "untitled"')
-    SYMBOL=$(printf '%s' "$REC" | jq -r '.symbol // empty' | tr '[:upper:]' '[:lower:]')
+    # Sanitize LLM-sourced fields before any further use: symbol to [a-z0-9],
+    # direction to the closed enum (anything else grades as "hold").
+    SYMBOL=$(printf '%s' "$REC" | jq -r '.symbol // empty' | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9')
     DIRECTION=$(printf '%s' "$REC" | jq -r '.direction // "hold"')
+    case "$DIRECTION" in increase|decrease|hold|hedge) ;; *) DIRECTION="hold" ;; esac
     ANALYSTS=$(printf '%s' "$REC" | jq -c '.supportingRoles // []')
     RESULT="neutral"; DETAIL=""
 
@@ -91,14 +94,18 @@ while [ "$d" -le "$LOOKBACK_DAYS" ]; do
             decrease|hedge) RESULT=$(python3 -c "m=$MOVE; print('hit' if m<=-5 else 'miss' if m>=5 else 'neutral')") ;;
             hold) RESULT=$(python3 -c "m=$MOVE; print('miss' if m<=-25 else 'neutral')") ;;
           esac
-          DETAIL=$(python3 -c "print('$SYMBOL %+.1f%% over ${HORIZON}d vs \"$DIRECTION\"' % $MOVE)")
+          DETAIL=$(printf '%s %+.1f%% over %sd vs "%s"' "$SYMBOL" "$MOVE" "$HORIZON" "$DIRECTION")
         else
           DETAIL="price data unavailable for $CGID"
         fi
       fi
     else
       # Portfolio-level: totalUsd growth over the horizon vs trajectory growth.
-      T0=$(printf '%s' "$HISTORY" | jq --arg d0 "$DATE" -r '[.[] | select(.date >= $d0)] | first.totalUsd // empty' 2>/dev/null || true)
+      # The T0 entry must be within 3 days of the rec date (a far-later first
+      # entry would grade the rec against the wrong baseline).
+      T0LIMIT=$(date -u -d "@$(( DATE_S + 3*86400 ))" +%Y-%m-%d 2>/dev/null || date -u -r "$(( DATE_S + 3*86400 ))" +%Y-%m-%d)
+      T0=$(printf '%s' "$HISTORY" | jq --arg d0 "$DATE" --arg lim "$T0LIMIT" -r \
+        '[.[] | select(.date >= $d0 and .date <= $lim)] | first.totalUsd // empty' 2>/dev/null || true)
       MATURE_DATE=$(date -u -d "@$MATURE_S" +%Y-%m-%d 2>/dev/null || date -u -r "$MATURE_S" +%Y-%m-%d)
       T1=$(printf '%s' "$HISTORY" | jq --arg d1 "$MATURE_DATE" -r '[.[] | select(.date >= $d1)] | first.totalUsd // empty' 2>/dev/null || true)
       if [ -n "$T0" ] && [ -n "$T1" ]; then
@@ -109,7 +116,8 @@ actual = $T1/$T0 - 1
 needed = 2 ** ($HORIZON/568) - 1
 print('hit' if actual >= needed else 'miss' if actual < needed - 0.05 else 'neutral')")
         RESULT="$VERDICT"
-        DETAIL=$(python3 -c "print('portfolio %+.1f%% over ${HORIZON}d vs pace' % (($T1/$T0 - 1)*100))")
+        PCT=$(python3 -c "print(($T1/$T0 - 1)*100)")
+        DETAIL=$(printf 'portfolio %+.1f%% over %sd vs pace' "$PCT" "$HORIZON")
       else
         DETAIL="insufficient history to grade portfolio-level rec"
       fi

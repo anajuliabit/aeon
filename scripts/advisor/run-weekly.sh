@@ -78,15 +78,19 @@ validate() { # report-json -> prints violation list (empty = valid)
 
 extract_json() {
   python3 -c '
-import json, re, sys
+import json, sys
 raw = sys.stdin.read()
-m = re.search(r"\{.*\}", raw, re.DOTALL)
-if m:
+dec = json.JSONDecoder()
+i = raw.find("{")
+while i != -1:
     try:
-        obj = json.loads(m.group(0))
-        print(json.dumps(obj))
-    except Exception:
+        obj, _ = dec.raw_decode(raw, i)
+        if isinstance(obj, dict):
+            print(json.dumps(obj))
+            break
+    except ValueError:
         pass
+    i = raw.find("{", i + 1)
 '
 }
 
