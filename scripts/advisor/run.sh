@@ -17,7 +17,8 @@ set -uo pipefail
 
 export VIRTUALS_MODEL=claude-opus-4-8   # NEVER deepseek; free + hallucination-safe on Virtuals.
 
-BASE="${INVESTIMENTS_BASE_URL:-https://investiments-production.up.railway.app}"
+# Pinned production URL (canonical Railway domain — reaches the app; auth-guarded).
+BASE="https://investiments-production.up.railway.app"
 DATE=$(date -u +%Y-%m-%d)
 
 # Build the Basic-auth token at runtime from the dashboard creds (avoids

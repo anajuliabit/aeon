@@ -8,7 +8,8 @@
 # so env-var-in-header auth is fine here.
 set -uo pipefail
 
-BASE="${INVESTIMENTS_BASE_URL:-https://investiments-production.up.railway.app}"
+# Pinned production URL (canonical Railway domain — reaches the app; auth-guarded).
+BASE="https://investiments-production.up.railway.app"
 D=.investiments-cache/advisor
 mkdir -p "$D"
 
