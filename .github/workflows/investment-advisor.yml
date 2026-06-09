@@ -11,8 +11,11 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
-      - name: Prefetch + run advisor (Virtuals)
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Prefetch + run advisor (claude-fable-5, Virtuals fallback)
         env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
           DASHBOARD_USER: ${{ secrets.DASHBOARD_USER }}
           DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
@@ -20,6 +23,6 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/llm.sh
+          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/llm.sh scripts/llm-claude.sh
           ./scripts/advisor/prefetch-data.sh
           ./scripts/advisor/run.sh

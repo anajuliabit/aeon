@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-# scripts/advisor/run.sh — Virtuals single-shot advisory orchestrator.
+# scripts/advisor/run.sh — single-shot advisory orchestrator.
 #
-# Pipeline (all inference via scripts/llm.sh on Virtuals, model claude-opus-4-8):
+# Pipeline (inference via scripts/llm-claude.sh, claude-fable-5 on the Claude
+# subscription when CLAUDE_CODE_OAUTH_TOKEN is set; otherwise scripts/llm.sh on
+# Virtuals, claude-opus-4-8):
 #   prefetch already ran -> .investiments-cache/advisor/*.json
 #   per analyst: prompt(template + relevant datablocks) | llm.sh -> JSON finding -> POST /finding
 #   debate: debate.md + findings -> JSON -> POST /debate
@@ -15,7 +17,7 @@
 # Runs OUTSIDE the Claude sandbox (workflow step with full env).
 set -uo pipefail
 
-export VIRTUALS_MODEL=claude-opus-4-8   # NEVER deepseek; free + hallucination-safe on Virtuals.
+export VIRTUALS_MODEL=claude-opus-4-8   # fallback backend; NEVER deepseek — hallucination-safe on Virtuals.
 
 # Pinned production URL (canonical Railway domain — reaches the app; auth-guarded).
 BASE="https://investiments-production.up.railway.app"
@@ -29,7 +31,16 @@ NOW_ISO=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 DRY="${ADVISOR_DRY_RUN:-0}"
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-LLM="$ROOT/scripts/llm.sh"
+# Backend: Claude subscription (claude-fable-5 via Claude Code CLI) when the
+# OAuth token is present; Virtuals otherwise. llm-claude.sh itself falls back
+# to llm.sh if the CLI call fails, so MODEL_LABEL reflects the primary backend.
+if [ -n "${CLAUDE_CODE_OAUTH_TOKEN:-}" ] || [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+  LLM="$ROOT/scripts/llm-claude.sh"
+  MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)"
+else
+  LLM="$ROOT/scripts/llm.sh"
+  MODEL_LABEL="$VIRTUALS_MODEL (Virtuals)"
+fi
 PROMPTS="$ROOT/advisor/prompts"
 
 # Shared accounting note injected into every agent prompt so the gross-vs-net
@@ -135,13 +146,13 @@ held_symbols() {
 # ---------------------------------------------------------------------------
 if [ ! -f "$D/snapshot.json" ] || ! jq -e '.totalUsd' "$D/snapshot.json" >/dev/null 2>&1; then
   echo "advisor: no portfolio snapshot — aborting analysts"
-  REPORT=$(jq -n --arg ts "$NOW_ISO" '{
+  REPORT=$(jq -n --arg ts "$NOW_ISO" --arg mi "$MODEL_LABEL" '{
     generatedAt: $ts,
     summary: "Run aborted: portfolio snapshot unavailable.",
     recommendations: [],
     findings: [],
     debate: {turns: []},
-    modelInfo: {analysts: "claude-opus-4-8 (Virtuals)", pm: "claude-opus-4-8 (Virtuals)"},
+    modelInfo: {analysts: $mi, pm: $mi},
     dataSources: {used: [], unavailable: ["snapshot"]},
     gaps: ["snapshot"],
     disclaimer: "Not financial advice. For informational purposes only."
@@ -282,10 +293,10 @@ $PM_DEBATE
 REPORT="$(complete "$pm_prompt")" || true
 if [ -z "$REPORT" ] || ! printf '%s' "$REPORT" | jq -e '.summary' >/dev/null 2>&1; then
   echo "advisor: PM gap — synthesizing minimal report"
-  REPORT=$(jq -n --arg ts "$NOW_ISO" '{
+  REPORT=$(jq -n --arg ts "$NOW_ISO" --arg mi "$MODEL_LABEL" '{
     generatedAt: $ts, summary: "Report generation incomplete; see findings.",
     recommendations: [], findings: [], debate: {turns: []},
-    modelInfo: {analysts: "claude-opus-4-8 (Virtuals)", pm: "claude-opus-4-8 (Virtuals)"},
+    modelInfo: {analysts: $mi, pm: $mi},
     dataSources: {used: [], unavailable: []}, gaps: [],
     disclaimer: "Not financial advice. For informational purposes only."
   }')
@@ -300,6 +311,7 @@ REPORT="$(jq -n \
   --argjson used "$USED_JSON" \
   --argjson unavail "${UNAVAIL_JSON:-[]}" \
   --argjson gaps "${GAPS_JSON:-[]}" \
+  --arg mi "$MODEL_LABEL" \
   '$rpt
    | .findings = (if (.findings // [] | length) > 0 then .findings else $findings end)
    | .debate = (if (.debate.turns // [] | length) > 0 then .debate else $debate end)
@@ -307,14 +319,14 @@ REPORT="$(jq -n \
    | .dataSources.used = (if (.dataSources.used // [] | length) > 0 then .dataSources.used else $used end)
    | .dataSources.unavailable = (if (.dataSources.unavailable // [] | length) > 0 then .dataSources.unavailable else $unavail end)
    | .gaps = (if (.gaps // [] | length) > 0 then .gaps else $gaps end)
-   | .modelInfo = {analysts: "claude-opus-4-8 (Virtuals)", pm: "claude-opus-4-8 (Virtuals)"}
+   | .modelInfo = {analysts: $mi, pm: $mi}
    | .disclaimer = (.disclaimer // "Not financial advice. For informational purposes only.")')"
 
 echo "advisor: report assembled"
 
 if [ "$DRY" = "1" ]; then
   echo "----- REPORT -----"; printf '%s\n' "$REPORT" | jq .
-  echo "advisor: DRY_RUN — no POST/Telegram fired (model=$VIRTUALS_MODEL)"
+  echo "advisor: DRY_RUN — no POST/Telegram fired (model=$MODEL_LABEL)"
   exit 0
 fi
 
