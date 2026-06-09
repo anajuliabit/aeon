@@ -1,0 +1,132 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-09",
+        "description": "1 list, 2 signal tweets. arndxt's variational PT bump ($100 → $185/point) is the only real argument on the timeline; everything else is ≤3 likes."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_list",
+        "tweet_1_wrapper",
+        "tweet_2_wrapper",
+        "sep_1",
+        "footer_section"
+      ]
+    },
+    "heading_list": {
+      "type": "Heading",
+      "props": {
+        "text": "List (crypto/defi research)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet_1_wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "link_tweet_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "arndxt_xo",
+        "handle": "arndxt_xo",
+        "text": "moves variational target from $100 to $185/point. thesis: RFQ liquidity + $3m on-chain treasury earmarked for ≥30% buybacks creates a TGE bid airdrop dumpers haven't priced.",
+        "likes": 71,
+        "retweets": 4
+      },
+      "children": []
+    },
+    "link_tweet_1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/arndxt_xo/status/2064019439184703904"
+      },
+      "children": []
+    },
+    "tweet_2_wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "link_tweet_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "engagement spike (164 likes) on an x.com/i/article link; article body not in cache so can't insight-grade.",
+        "likes": 164,
+        "retweets": 26
+      },
+      "children": []
+    },
+    "link_tweet_2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2064036299825160400"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_text_sources",
+        "footer_text_status"
+      ]
+    },
+    "footer_text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1642770…3008=ok(2)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "footer_text_status": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
