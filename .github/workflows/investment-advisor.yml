@@ -16,7 +16,6 @@ jobs:
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
           DASHBOARD_USER: ${{ secrets.DASHBOARD_USER }}
           DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
-          INVESTIMENTS_BASE_URL: ${{ secrets.INVESTIMENTS_BASE_URL }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
