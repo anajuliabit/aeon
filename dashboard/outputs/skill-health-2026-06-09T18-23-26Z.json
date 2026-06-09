@@ -1,0 +1,196 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health"
+      },
+      "children": [
+        "heading_title",
+        "stack_status",
+        "separator_1",
+        "heading_nodata",
+        "text_nodata_desc",
+        "stack_nodata_skills",
+        "separator_2",
+        "stack_metrics",
+        "alert_cronstateonly"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "skill health — 2026-06-09",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_health_ok",
+        "stat_healthy_skills"
+      ]
+    },
+    "stat_health_ok": {
+      "type": "Stat",
+      "props": {
+        "label": "Health",
+        "value": "OK"
+      },
+      "children": []
+    },
+    "stat_healthy_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Healthy",
+        "value": "37"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data (7)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_nodata_desc": {
+      "type": "Text",
+      "props": {
+        "text": "All weekly/dispatch-only, never reported success",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "stack_nodata_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_autoresearch",
+        "badge_fork_cohort",
+        "badge_fork_skill_digest",
+        "badge_fork_skill_gap",
+        "badge_operator_scorecard",
+        "badge_unlock_monitor",
+        "badge_vuln_scanner"
+      ]
+    },
+    "badge_autoresearch": {
+      "type": "Badge",
+      "props": {
+        "text": "autoresearch",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_fork_cohort": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_fork_skill_digest": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-digest",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_fork_skill_gap": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_operator_scorecard": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_unlock_monitor": {
+      "type": "Badge",
+      "props": {
+        "text": "unlock-monitor",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_vuln_scanner": {
+      "type": "Badge",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_open_issues",
+        "stat_resolved_issues"
+      ]
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "6"
+      },
+      "children": []
+    },
+    "stat_resolved_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      },
+      "children": []
+    },
+    "alert_cronstateonly": {
+      "type": "Alert",
+      "props": {
+        "title": "Note",
+        "message": "skill-runs unavailable this run — cron-state only",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}
