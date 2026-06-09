@@ -1,0 +1,103 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz"
+      },
+      "children": [
+        "subtitle",
+        "sep1",
+        "section1-heading",
+        "section1-stack",
+        "sep2",
+        "section2-heading",
+        "section2-stack",
+        "footer"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-09 — quiet builder day — two mcp integration drops, one harness-vs-vendor take, no drama.",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp as default plumbing",
+        "level": "h2"
+      }
+    },
+    "section1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story1",
+        "story2"
+      ]
+    },
+    "story1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "first open-source @base agent terminal — base accounts + base mcp as primitives, no proprietary glue",
+        "href": "https://x.com/officialbunnyos/status/2064135030272839689",
+        "source": "X (@officialbunnyos)"
+      }
+    },
+    "story2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "figma mcp into xcode pulls real design tokens — argues against generating ui from screenshots",
+        "href": "https://x.com/chiefkittenme/status/2064134906695819659",
+        "source": "X (@chiefkittenme)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "own the harness",
+        "level": "h2"
+      }
+    },
+    "section2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story3"
+      ]
+    },
+    "story3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "argues against vendor agents — the harness around the model is the product, not the agent",
+        "href": "https://x.com/preshai/status/2064135209755267481",
+        "source": "X (@preshai)"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · 5 candidates → 3 kept",
+        "variant": "caption"
+      }
+    }
+  }
+}
