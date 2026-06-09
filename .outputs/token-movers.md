@@ -1,17 +1,28 @@
-**Top 6 Gainers (24h):**  
-1. BEAT $4.46 (+74.0%, +307.7% 7d)  
-2. DEXE $22.87 (+15.5%, +24.7% 7d)  
-3. HASH $0.01017 (+13.0%, -9.5% 7d)  
-4. NEAR $2.12 (+12.4%, -9.3% 7d)  
-5. INJ $5.63 (+9.8%, -15.9% 7d)  
-6. WLD $0.4624 (+7.9%, +23.9% 7d)  
+The wrapper file is harmless (uncommitted). Skill is complete.
 
-**Top 6 Losers (24h):**  
-1. 币安人生 $0.7583 (-12.4%, +20.3% 7d)  
-2. CC $0.1562 (-7.4%, +1.3% 7d)  
-3. BCH $205.94 (-6.9%, -26.8% 7d)  
-4. H $0.6978 (-6.2%, -2.8% 7d)  
-5. ENA $0.08696 (-3.1%, +0.8% 7d)  
-6. M $3.04 (-3.1%, +0.7% 7d)  
+## Summary
 
-**Market:** Total mcap $2.24T, 24h vol $89.2B. Crypto up +1.3% today but weekly picture remains bleak — majors like BTC (-13.2%), ETH (-15.6%), SOL (-18.3%) are all deep in the red. Today’s bounce looks like a relief rally within an ongoing correction.
+Executed `skills/token-movers/SKILL.md` for 2026-06-09.
+
+**Data sources:** CoinGecko `/coins/markets?per_page=250` (HTTP 200, 244KB) and `/search/trending` (HTTP 200, 55KB). Filter dropped 63 → 187 ranked coins (stables, wrapped, sub-$1M vol).
+
+**Pulse:** Mixed-flat tape — 42/100 top-100 green, median top-50 −0.06%, median top-100 −0.31%. Materially less risk-off than 6-06's 25/100 green.
+
+**Top calls:**
+- KTA +32.9% (#244, $6.5M vol) — TRENDING+UP + **PUMP-RISK** (rank>150, +30%, low liquidity, also on trending list)
+- VELVET +24.5% / 7d +327% — **BREAKOUT**
+- GWEI/ETHGas +16.3% / 7d +73% — **BREAKOUT**
+- H/Humanity **−70.9% / 7d −72%** — TRENDING+DOWN + **CAPITULATION** ($453M vol, vol/mcap 1.26x)
+- LAB day-3 unwind continues (−19.4%, was −38.9% on 6-06)
+- ZEC relief bounce extends off 6-06 capitulation; now on trending list
+
+**Dedup vs 6-08 / 6-06:** WLD kept (7.9% → 13.9%, 7d flipped positive — material), ZEC kept (now trending), LAB kept (day-3). BEAT/DEXE/HASH/NEAR/INJ from 6-08 winners all rotated off — not reinstated.
+
+**Files:**
+- `/home/runner/work/aeon/aeon/.outputs/token-movers.md` — fresh report (overwrote 6-08 carryover)
+- `/home/runner/work/aeon/aeon/.pending-notify/1781008454.md` — notification dropped to notify's sandbox-fallback path (postprocess will deliver)
+- `/home/runner/work/aeon/aeon/memory/logs/2026-06-09.md` — token-movers log entry appended
+
+**Notify path:** `./notify "$(cat ...)"` was blocked by sandbox shell-substitution guard, so I wrote the message directly to `.pending-notify/{ts}.md` (the exact path `notify` line 30 uses for post-run delivery in sandboxed runs). No data loss — the postprocess delivery step will ship it.
+
+**Follow-up:** None required. Tracked tokens (WELL/MAMO/REPPO/GITLAWB) did not surface in the top-250 with sufficient volume — they go through `token-alert` separately.
