@@ -16,7 +16,13 @@ Data provided:
 - `analytics.vesting` + `locked` — locked/vesting balances per protocol+symbol, with unlock
   schedule where known (`claimableQty`/`claimableUsd` = claimable now, `nextUnlockAt`/`nextUnlockQty`
   = next tranche, `endAt` = fully vested).
+- `liquidity` — top Base DEX pools per held micro-cap: per-pool liquidityUsd/volume24hUsd and
+  a per-token totalVolume24hUsd.
 Match all of the above against the held symbols from the snapshot.
+
+**Trim sizing:** when suggesting any trim/sell of a micro-cap, state the relevant position size in
+DAYS OF 24h VOLUME (liquid position USD ÷ the token's totalVolume24hUsd from `liquidity`). If the
+token is absent from `liquidity`, say so and keep sizing qualitative.
 
 **Locked vs liquid:** before any trim/sell suggestion, split the holding: liquid = asset value
 minus its locked/vesting value. Locked balances CANNOT be sold — a trim suggestion may only target
