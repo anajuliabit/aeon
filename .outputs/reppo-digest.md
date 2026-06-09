@@ -1,18 +1,10 @@
-reppo-swarm · 1st run · datanet 9 · 5 on-chain
+reppo-swarm · 3rd run · datanet 9 · 0 on-chain
 
-queued
-  mint · 250 aave close-short, +$85k sharpe 8458 (0x06cecfba) · 420334cbe2154944
-  votes · 7 dislike (761/762/764/825/828/838/839), 2 like (824/832)
+trading
+  12 filtered · 1 dedup (own 20th-mint 420334cb), 1 neg-pnl, 2 spot-mix, 3 opens-only, 3 sub-floor, 1 empty, 1 spot-only · cohort rotated since this morning's mint, no fresh perp-closing alpha
 
-on-chain
-  mint 420334cbe2154944 — tx 0x244b2ef645
-  vote 761 dislike — tx 0xc266d17341
-  vote 762 dislike — tx 0x6367e90211
-  vote 838 dislike — tx 0xa28d838a73
-  vote 839 dislike — tx 0x55383afeb5
-
-reverted
-  votes · CANNOT_VOTE_FOR_OWN_POD × 5 (ISS-016)
-         action: ledger wallet-shortcode workaround missed pods 764/824/825/828/832 — own-pods prefetch repair still pending
+voter
+  0/78 eligible @ epoch 103 · 69 out-of-epoch, 4 already-voted (761/762/838/839 landed in 1st run), 6 own-pod skips
+       action: iss-016 prefetch repair still critical-path — ledger workaround alone misses pre-ledger own pods (764/824/825/828/832) on first contact
 
 14 datanets unassigned.

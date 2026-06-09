@@ -1,0 +1,172 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "header",
+        "sep-1",
+        "trading-section",
+        "sep-2",
+        "voter-section",
+        "sep-3",
+        "datanets"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "h-name",
+        "h-run",
+        "h-datanet",
+        "h-onchain"
+      ]
+    },
+    "h-name": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm",
+        "variant": "lead"
+      }
+    },
+    "h-run": {
+      "type": "Badge",
+      "props": {
+        "text": "3rd run",
+        "variant": "secondary"
+      }
+    },
+    "h-datanet": {
+      "type": "Badge",
+      "props": {
+        "text": "datanet 9",
+        "variant": "default"
+      }
+    },
+    "h-onchain": {
+      "type": "Badge",
+      "props": {
+        "text": "0 on-chain",
+        "variant": "outline"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trading-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trading-heading",
+        "trading-summary",
+        "trading-notes"
+      ]
+    },
+    "trading-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "trading",
+        "level": "h3"
+      }
+    },
+    "trading-summary": {
+      "type": "Text",
+      "props": {
+        "text": "12 filtered · 1 dedup (own 20th-mint 420334cb), 1 neg-pnl, 2 spot-mix, 3 opens-only, 3 sub-floor, 1 empty, 1 spot-only",
+        "variant": "body"
+      }
+    },
+    "trading-notes": {
+      "type": "Text",
+      "props": {
+        "text": "Cohort rotated since this morning's mint, no fresh perp-closing alpha",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "voter-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "voter-heading",
+        "voter-eligible",
+        "voter-breakdown",
+        "voter-action"
+      ]
+    },
+    "voter-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "voter",
+        "level": "h3"
+      }
+    },
+    "voter-eligible": {
+      "type": "Stat",
+      "props": {
+        "label": "Eligible @ epoch 103",
+        "value": "0/78"
+      }
+    },
+    "voter-breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "69 out-of-epoch, 4 already-voted (761/762/838/839 landed in 1st run), 6 own-pod skips",
+        "variant": "body"
+      }
+    },
+    "voter-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action: iss-016 prefetch repair",
+        "message": "Still critical-path — ledger workaround alone misses pre-ledger own pods (764/824/825/828/832) on first contact",
+        "type": "warning"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets": {
+      "type": "Stat",
+      "props": {
+        "label": "Datanets Unassigned",
+        "value": "14"
+      }
+    }
+  }
+}
