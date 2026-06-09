@@ -338,4 +338,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-09,on-chain-monitor,claude-opus-4-7,13,3047,434339,34849
 2026-06-09,reppo-trading-agent,claude-opus-4-7,41,33011,2455917,181878
 2026-06-09,reppo-digest,claude-opus-4-7,27,19909,1643016,138808
-2026-06-09,defi-monitor,claude-opus-4-7,10,1962,274323,39886
+2026-06-09,narrative-tracker,claude-opus-4-7,5160,25791,1787575,162144

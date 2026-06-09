@@ -1,0 +1,286 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "narrative tracker 2026-06-09 staged"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_narratives",
+        "separator_1",
+        "section_sentiment",
+        "separator_2",
+        "section_cooling",
+        "separator_3",
+        "section_failed_call"
+      ]
+    },
+    "section_narratives": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_narratives",
+        "stack_narrative_items"
+      ]
+    },
+    "heading_narratives": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW Narratives",
+        "level": "h2"
+      }
+    },
+    "stack_narrative_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "narrative_zec",
+        "narrative_dex",
+        "narrative_metamask"
+      ]
+    },
+    "narrative_zec": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "header_zec",
+        "stat_zec"
+      ]
+    },
+    "header_zec": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_new_1",
+        "text_zec_name"
+      ]
+    },
+    "badge_new_1": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text_zec_name": {
+      "type": "Text",
+      "props": {
+        "text": "quantum-resistance",
+        "variant": "lead"
+      }
+    },
+    "stat_zec": {
+      "type": "Stat",
+      "props": {
+        "label": "ZEC off 6-05 low",
+        "value": "+80%",
+        "trend": "up"
+      }
+    },
+    "narrative_dex": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "header_dex",
+        "stat_dex"
+      ]
+    },
+    "header_dex": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_new_2",
+        "text_dex_name"
+      ]
+    },
+    "badge_new_2": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text_dex_name": {
+      "type": "Text",
+      "props": {
+        "text": "DEX migration",
+        "variant": "lead"
+      }
+    },
+    "stat_dex": {
+      "type": "Stat",
+      "props": {
+        "label": "Uniswap V4 fees",
+        "value": "+1124%",
+        "trend": "up"
+      }
+    },
+    "narrative_metamask": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "header_metamask",
+        "text_metamask_info"
+      ]
+    },
+    "header_metamask": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_new_3",
+        "text_metamask_name"
+      ]
+    },
+    "badge_new_3": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text_metamask_name": {
+      "type": "Text",
+      "props": {
+        "text": "MetaMask Agent Wallet",
+        "variant": "lead"
+      }
+    },
+    "text_metamask_info": {
+      "type": "Text",
+      "props": {
+        "text": "6-08 launch",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_sentiment": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_sentiment",
+        "text_sentiment"
+      ]
+    },
+    "heading_sentiment": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Sentiment",
+        "level": "h2"
+      }
+    },
+    "text_sentiment": {
+      "type": "Text",
+      "props": {
+        "text": "prediction markets + capital rotation Rising→Peak",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_cooling": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_cooling",
+        "text_cooling"
+      ]
+    },
+    "heading_cooling": {
+      "type": "Heading",
+      "props": {
+        "text": "Cooling Factors",
+        "level": "h2"
+      }
+    },
+    "text_cooling": {
+      "type": "Text",
+      "props": {
+        "text": "hyperliquid + ETH crisis + BTC capitulation cooling",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_failed_call": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_failed_call",
+        "alert_burned_call"
+      ]
+    },
+    "heading_failed_call": {
+      "type": "Heading",
+      "props": {
+        "text": "Failed Prediction",
+        "level": "h2"
+      }
+    },
+    "alert_burned_call": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "6-05 ZEC FADE call",
+        "message": "Burned — story rewrote outcomes in 4 days"
+      }
+    }
+  }
+}

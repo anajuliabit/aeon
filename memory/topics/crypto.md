@@ -64,6 +64,50 @@ narrative-and-pick layer.
 - Note: Kaito Yaps/Yapper leaderboards shut Jan 15 2026 — no live
   mindshare leaderboard reference.
 
+### 2026-06-09 — post-gap re-baseline (4-day gap, 6-06/6-07/6-08 stuck)
+- **NEW: Quantum-resistance (ZEC vehicle).** Carved out of dead privacy-
+  coins frame. Orchard exploit fixed in <72h; ZEC +80% off 6-05 low w/
+  Ironwood upgrade; NIST 2035 + Vitalik 2030 deadlines hardening thesis.
+  **6-05 ZEC FADE call burned** — second consecutive contrarian-FADE on
+  capitulation day that underperformed (after 6-04 BTC FADE error). Pattern
+  flagged. Position FRONT-RUN, window narrowing.
+- **NEW: DEX migration / Uniswap V4.** Fees +1,124.83% c1d at $7.54M >
+  prior 7d total $6.77M; V4 vol $1.12B (+9.5% c7d). Hook architecture
+  moving real vol. UNI flat suggests V3→V4 internal share shift risk.
+  Position FRONT-RUN.
+- **NEW catalyst inside AI×crypto agent infra: MetaMask Agent Wallet
+  shipped 6-08** — CLI-first scoped self-custodial signing across 9 EVM
+  chains w/ Blockaid + MEV protection. The agent-economic-actor stack
+  gets a credible custody layer — Sherwood/Reppo-class. AI×crypto agent
+  infra promoted m4→m5 ↑↑ Peak Bull. Plus Pavel Durov Cocoon + $OAI on
+  Solana. Reflexivity: infra launch lifts the meme cohort that has no
+  product (#21 PHALA/$OAI basket).
+- **PROMOTED: prediction markets Rising→Peak.** Kaito×Polymarket Attention
+  Markets live; @ripper0x explicit next-bull-forerunner flag. Polymarket
+  carries today's market-pick.
+- **PROMOTED: capital rotation crypto→AI equities Rising→Peak.** CNBC
+  ugliest-week framing + ETF outflow streak + NVDA/Broadcom ATH carry.
+  Bear, WATCH (macro headwind, not crypto-trade).
+- **DEMOTED: Hyperliquid Fading→WATCH.** 06-06 $684M unlock fully absorbed;
+  HYPE +4% 24h relief; HL Perps fees -24% c7d. 6-05 FADE thesis spent —
+  reset possible.
+- **DEMOTED: ETH leadership crisis Rising→Fading.** ETH +7.7% to $1,690
+  off sunday sub-$1,625 flush. Bitmine +127k ETH buying the dip validates
+  not-capitulation.
+- **DEMOTED: BTC capitulation Peak→cooling.** Relief bounce to $63K from
+  sub-$60K. Strategy +1,550 BTC + Bitmine accumulation. Fear&Greed at 8.
+- **DEAD (new): H/Humanity DePIN identity** — -70.9% today + $36M multisig
+  exploit. 6-04 token-pick cratered.
+- **RWA Peak holding.** Centrifuge +18.14% / CFG +12% / BUIDL +2.23% /
+  USYC +2.94% / USDS Sky Dollar +$247M biggest stable inflow same day on
+  deSPXA tokenized S&P 500 (Janus Henderson) + $653M AAA CLO on Centrifuge
+  + Base expansion. Reflexive but receipts-backed.
+- **NEW emerging: Privacy "led by Monero"** (@ripper0x XAI flag) — distinct
+  carve-out from quantum-resistance. WATCH.
+- Reflexivity flagged (today): ZEC narrative V-flip; MetaMask Agent Wallet
+  → meme cohort reflexive legitimacy; RWA same-day cohort reflate on
+  institutional receipts.
+
 ## Token picks (last 10 days)
 | Date | Token | Price at pick | Tier | Thesis (one line) |
 |------|-------|---------------|------|-------------------|
