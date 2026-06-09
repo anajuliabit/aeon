@@ -1,10 +1,10 @@
-reppo-swarm · 3rd run · datanet 9 · 0 on-chain
+reppo-swarm · 4th run · datanet 9 · 0 on-chain
 
-trading
-  12 filtered · 1 dedup (own 20th-mint 420334cb), 1 neg-pnl, 2 spot-mix, 3 opens-only, 3 sub-floor, 1 empty, 1 spot-only · cohort rotated since this morning's mint, no fresh perp-closing alpha
+queued
+  votes · 2 like / 3 dislike (832/824 like; 828/825/764 dislike)
 
-voter
-  0/78 eligible @ epoch 103 · 69 out-of-epoch, 4 already-voted (761/762/838/839 landed in 1st run), 6 own-pod skips
-       action: iss-016 prefetch repair still critical-path — ledger workaround alone misses pre-ledger own pods (764/824/825/828/832) on first contact
+reverted
+  votes · CANNOT_VOTE_FOR_OWN_POD × 5 (pods 764/824/825/828/832; ISS-016)
+         action: 3rd-run defensive skip pattern regressed — voter dropped the 1st-run digest cross-ref. own_pod_ids prefetch repair under ISS-016 still critical-path.
 
 14 datanets unassigned.

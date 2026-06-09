@@ -1,0 +1,149 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reppo Digest"
+      },
+      "children": [
+        "meta",
+        "sep1",
+        "queued_section",
+        "sep2",
+        "reverted_section",
+        "sep3",
+        "datanets_section"
+      ]
+    },
+    "meta": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm · 4th run · datanet 9 · 0 on-chain",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "queued_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_heading",
+        "queued_votes_display",
+        "queued_breakdown_text"
+      ]
+    },
+    "queued_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "queued_votes_display": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "like_stat",
+        "dislike_stat"
+      ]
+    },
+    "like_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Likes",
+        "value": "2"
+      }
+    },
+    "dislike_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Dislikes",
+        "value": "3"
+      }
+    },
+    "queued_breakdown_text": {
+      "type": "Text",
+      "props": {
+        "text": "Like breakdown: 832/824 · Dislike breakdown: 828/825/764",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "reverted_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reverted_heading",
+        "reverted_votes_alert",
+        "reverted_cause",
+        "reverted_action"
+      ]
+    },
+    "reverted_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Reverted",
+        "level": "h3"
+      }
+    },
+    "reverted_votes_alert": {
+      "type": "Alert",
+      "props": {
+        "message": "CANNOT_VOTE_FOR_OWN_POD × 5 (pods 764/824/825/828/832; ISS-016)",
+        "type": "error"
+      }
+    },
+    "reverted_cause": {
+      "type": "Text",
+      "props": {
+        "text": "3rd-run defensive skip pattern regressed — voter dropped the 1st-run digest cross-ref.",
+        "variant": "body"
+      }
+    },
+    "reverted_action": {
+      "type": "Text",
+      "props": {
+        "text": "own_pod_ids prefetch repair under ISS-016 still critical-path.",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "datanets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "datanets_stat"
+      ]
+    },
+    "datanets_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Datanets unassigned",
+        "value": "14"
+      }
+    }
+  }
+}
