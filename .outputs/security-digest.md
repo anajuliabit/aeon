@@ -1,16 +1,22 @@
 ## Summary
 
-Ran `skills/security-digest/SKILL.md` for 2026-06-05. KEV had **0 new entries since yesterday** (all 5 in-window adds already deduped from 6-03/6-04 logs — first zero-new-KEV day since digest went live).
+Ran security-digest for 2026-06-09. First successful run since 2026-06-05 (6-06/6-07/6-08 lost to Claude weekly rate-limit cluster).
 
-**Tier output:**
-- **PATCH TODAY (1):** `@cap-js/openapi` (npm) supply chain compromise — v1.4.1 shipped credential-harvesting + self-propagation code on 2026-05-19. CVSS 9.6, fix 1.4.2. Elevated by analogy to KEV (confirmed in-wild credential theft, though formally outside strict ≥9.8+PoC TODAY rule). **First supply-chain PATCH TODAY since digest went live.**
-- **PATCH THIS WEEK (1):** `stata-mcp` (pip) CVE-2026-47708 — critical command injection via `log_file_name`, public PoC in advisory, fix 1.17.3.
-- **MONITOR (1):** `browserstack-runner` (npm) CVE-2026-49144 — unauth path traversal, no patch yet (≤0.9.5). Sibling to yesterday's 49143 RCE in same package.
+**Tier counts:** today=3, this-week=5, monitor=1
+
+**PATCH TODAY (all NEW KEV since last digest):**
+- CVE-2026-42271 BerriAI litellm — KEV 6-08, EPSS 0.61, fix 1.83.7
+- CVE-2026-50751 Check Point Sec Gateway IKEv1 — KEV 6-08, due 6-11
+- CVE-2026-28318 SolarWinds Serv-U DoS — KEV 6-05
+
+**PATCH THIS WEEK:** `@doaction/*` 15-pkg npm supply-chain swarm (coordinated to 2s), 14 misc npm malware, nebula-mesh Go privesc (CVSS 9.9), anyquery Go plugin RCE (CVSS 9.0), shell-quote npm 8.1.
+
+**MONITOR:** fuxa-server npm SSRF (no fix).
+
+**Sources:** kev=ok, gh=ok, epss=ok. Carry-watch: Linux cgroups v1 CVE-2022-0492 EPSS climbed to 0.34.
 
 **Files modified:**
-- `.pending-notify/1780669255-security-digest.md` (1,272 chars, staged for post-run delivery per sandbox pattern — `./notify "$(cat ...)"` arg-passing blocked)
-- `memory/logs/2026-06-05.md` (appended `### security-digest` entry with full tier-counts, IDs, dedup audit, ranking decisions, WebFetch patch details, EPSS results, sources status)
+- `.pending-notify/1781015858-security-digest.md` (3025 chars, staged for delivery)
+- `memory/logs/2026-06-09.md` (security-digest section appended)
 
-**Follow-up flagged for next reflect:** Skill's strict `CVSS ≥9.8 AND public PoC` PATCH TODAY rule didn't catch CVSS 9.6 supply-chain-compromise — applied KEV-analog elevation this run, may want to codify a "confirmed-malicious-package-published" supply-chain rule alongside KEV in step 5.
-
-**Status:** SECURITY_DIGEST_OK · sources kev=ok gh=ok epss=ok.
+**Follow-up:** scratch file `.tmp-kev.json` blocked by sandbox `rm` — postprocess cleanup step will sweep it.
