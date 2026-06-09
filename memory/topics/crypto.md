@@ -121,6 +121,7 @@ narrative-and-pick layer.
 | 2026-06-03 | ENA | $0.1023 | HIGH 10 | Coinbase Ventures open-market ENA buy + USDe/sUSDe distribution to Coinbase 100M+ users |
 | 2026-06-04 | HUMAN | (pick 6-04, see daily log) | (tier per log) | Carried in 7-day dedup window 6-05 |
 | 2026-06-05 | DEXE | $20.15 | MEDIUM 6 | BingX DEXE-USDT perp listing 5-25 broke $16 resistance held since Apr 2025; TVL tripled to ~$1.7B Q2 + validator voting layer push staking APR ~102%; risk: 48% supply circ, FDV $424M ~2x mcap, Q4 2026 unlock cliff. Market SKIPPED — no event cleared 5pp gate post-dedup |
+| 2026-06-09 | WLD | $0.48 | HIGH 11 | OpenAI confidential S-1 + July unlock-reduction (43% cut to daily emissions); 9-day re-entry vs 5-31 ($0.333) clean by dedup + fresh catalyst stack; market pair NYK Finals YES 62.35¢ MEDIUM edge 5.6pp |
 
 ## Picks deliberately skipped (rubric validated post-hoc)
 - **LAB** (5-29 → 6-02) — scored 10-11/10 five days running but skipped
@@ -151,6 +152,18 @@ narrative-and-pick layer.
   6-03→6-05, 1bp closer to 15% rail daily — watch trip 6-06 if pattern
   continues); WELL $0.00344 (-6.67%). Watchlist median 24h -6.71%
   (4-of-4 red, median tightening from yesterday's -12.5%).
+- 2026-06-06 → 2026-06-08: **NO RUNS** — claude weekly rate-limit cluster
+  knocked token-alert offline for 3 days (140 failures fleet-wide). 4-day
+  gap to next reading 6-09.
+- 2026-06-09: **GITLAWB +18.74% TRIPPED** (first up-trip on PR #55
+  watchlist) — mean-reversion squeeze off -38% 6-05 low; vol $458K on the
+  up-day vs -26% break day $1.15M = light-tape, not breakout. 4d cumulative
+  +42.40% reverses the 6-04 capitulation. Cumulative trajectory: 6-01
+  baseline ~$0.000117 → 6-04 $0.00007716 (-34%) → 6-05 $0.00007214 (-38%)
+  → 6-09 $0.00010273 (-12.2% from baseline). MAMO -0.03% (breaks
+  3-consecutive-red accelerating sequence — 15% rail trip averted); REPPO
+  -5.34% (4d +9.31% snaps 3-day red); WELL -1.05%. Watchlist 4-day:
+  WELL +5.80%, MAMO +4.81%, REPPO +9.31%, GITLAWB +42.40%.
 
 ## Bitcoin
 See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline

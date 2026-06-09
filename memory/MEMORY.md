@@ -1,77 +1,73 @@
 # Long-term Memory
-*Last consolidated: 2026-06-05*
+*Last consolidated: 2026-06-09*
 
 ## About This Repo
-Aeon — autonomous agent on GitHub Actions via Claude Code. 41 enabled
-standalone skills + chains. Inbound messaging via Telegram. soul/
-populated 2026-05-25 (ana voice). Reppo-swarm ledger: **17 mints + 32
-votes** on-chain through 2026-06-05 (3-mint single-day record set 6-05).
-Phase 2 (Pinata pin + platform POST) end-to-end clean **8+ consecutive
-days** since 2026-05-30.
+Aeon — autonomous agent on GitHub Actions via Claude Code. 43 enabled
+standalone skills + chains (PR #67 +6, PR #80 +8 advisor cohort). Inbound
+messaging via Telegram. soul/ populated 2026-05-25 (ana voice). Reppo-swarm
+ledger: **20 mints + 39 votes** on-chain through 2026-06-09 (20th-mint
+420334cb 0x06cecfba 250 AAVE +$85,196 Sharpe 8458 = 2nd-highest pnl ever).
 
 ## Current Goals
-- **ISS-009 sub-task (b): chain-runner `continue` → `break` flip.**
-  Sub-task (a) shipped PR #69 2026-06-03 23:00Z. Workflow-level abort
-  at `aeon.yml:479-493` fail-fast branch still pending. **8 days clean**
-  since 2026-05-30. Codify before contributor reintroduces Write-tool
-  overwrite anti-pattern.
+- **TOP — Extend FALLBACK_*_SKILLS to cover reppo chain by 2026-06-11.**
+  Claude weekly rate-limit 6-06 12:37Z → 140 failures 6-06/6-07/6-08, 0
+  mints last 2 days, 0 log entries written 6-07 + 6-08. PRs #77/#78/#79
+  Virtuals + deepseek-v4-flash fallback covers 5 CG-price skills only
+  (`FALLBACK_CG_SKILLS` at `aeon.yml:441`); reppo-orchestrator /
+  reppo-trading-agent / reppo-voter / reppo-digest fall through to `exit 1`.
+  Mirror PR #79 pattern with `FALLBACK_REPPO_SKILLS` constant. Source:
+  [[fleet]] weekly-review priority 25, top action.
+- **File ISS-018 weekly-limit incident by 2026-06-09.** 140 failures over
+  3 days with no issue file. Pattern is recurring (weekly cycle), detection
+  clean (`api_error_status:429 "weekly limit"`), fix locus `aeon.yml:441`.
+  Per weekly-review next-action #2.
+- **INDEX bookkeeping flips for ISS-007/009/010/016 by 2026-06-10.**
+  Carry from 2 weekly reviews. All have code shipped or workarounds
+  durable: ISS-009 PR #69 + `chain-runner.yml:360 break`, ISS-010 PR #32,
+  ISS-016 ledger workaround 22+ consecutive voter runs. Real-open after
+  flip = 2 (ISS-005 + ISS-011 + any new ISS-018 = 3).
+- **Datanet RUBRIC.md + 1 datanet config by 2026-06-12.** 3rd consecutive
+  weekly slip. Bar lowered ≥3 → ≥1 to unstick. 14 unassigned datanets (1,
+  2, 4–8, 10, 11, 13, 14, 16, 17, 18) surfacing every orchestrator run.
 - **Trading-agent: codify spot_pct threshold + Sharpe-vs-pnl tiebreak.**
-  Two follow-ups surfaced from 2026-06-05's 3-mint day. (a) 15th-mint
-  4a9a582a admitted 0xecb63caa at 11.55% spot via perp-only filter
-  vs 10th-mint precedent which had rejected the same wallet at ~20%
-  spot — formalize threshold in `skills/reppo-trading-agent/SKILL.md`
-  Step 4.2. (b) 17th-mint e2e925b2 tiebreak picked LINK (Sharpe 3782,
-  +$9,605) over runner-up AAVE (Sharpe 3421, +$14,615) under cap=1; an
-  alternate "max absolute pnl" rule would have selected AAVE — formalize
-  selection criterion in Step 4. Both are operator decisions.
-- **ISS-016 own_pod_ids prefetch repair.** Prefetch count=0 for 15
-  consecutive voter runs. Ledger wallet-shortcode workaround **fired live
-  on the active epoch** for the first time 2026-06-05 (re-run filtered
-  pod 583; 3rd-run filtered pods 583 + 585 in same pass). Workaround
-  durability proven under load — prefetch repair priority drops.
-- **15 unassigned reppo datanets** (1, 2, 4–8, 10, 11, 13–18).
-  Orchestrator surfaces every run for 16+ days. Datanet 18 ArAIstotle
-  surfacing 5 consecutive days. Needs operator assignment rubric or pick.
-- **INDEX bookkeeping flips queued.** ISS-007 (PR #13/#26 merged),
-  ISS-010 (PR #32 merged), ISS-013 (8+ consecutive pin successes),
-  ISS-014 (8+ consecutive HTTP 200 incl. today's 3 mints). 4
-  resolved-not-closed entries clutter open-issue counter (real open = 4,
-  INDEX shows 6).
-- **on-chain-monitor / defi-monitor watches.yml.** Both at NO_CONFIG
-  2 consecutive days (6-04 + 6-05); operator to populate
-  `memory/on-chain-watches.yml` with label/address/chain/type/threshold
-  entries before either skill produces signal.
-- **Cleanup chain-runner scratch.** `.tmp-*`, `.candidates.json`,
-  `build_dataset.{js,py,jq}` stubs at repo root. Sandbox blocks `rm`
-  mid-run — needs a postprocess cleanup step.
-- **Chain-state-flip anomaly carry.** 2026-06-02 12:23Z `chain:reppo-swarm`
-  flipped `last_status=failed` while `gh run view` confirmed workflow
-  success. **7 clean chain cycles since** (6-03 × 3, 6-04 × 2, 6-05 × 2).
-  Likely step-level writer recording transient failure that
-  `on_error:continue` skips past. Under ISS-010 scope.
+  No progress since 6-05. Operator-decision-gated; rules fire correctly
+  in practice (15th-mint 11.55% spot admit, 17th-mint Sharpe pick over
+  pnl runner-up, 19th-mint runner-up-becomes-winner-next-day pattern).
+- **on-chain-monitor / defi-monitor watches.yml.** 4 consecutive
+  NO_CONFIG days. Operator-gated — populate label/address/chain/type/
+  threshold entries in `memory/on-chain-watches.yml`.
+- **Stuck-skills cluster from 6-06/6-08 rate-limit.** 20 entries remain in
+  `last_status=dispatched` (heartbeat 14:00). Down from 26 at 08:56. Clears
+  as each skill next-fires successfully. Tracked but not actionable —
+  resolves itself unless rate-limit re-hits.
 
-## Completed Goals (since last reflect 2026-06-04)
-- **Trading-agent 11-run dry streak ENDED 2026-06-05.** Three mints in
-  one day — 15th 4a9a582a (0xecb63caa 821 HFT closes 14.69 min, 70
-  markets, +$7,500 Sharpe 1351 tx 0xdb5b7bbc), 16th 16671d6f (0x944b5f7d
-  29 SOL+BTC 9.548s cluster, +$8,410 **Sharpe 48,523** = 2nd-highest
-  ever tx 0xef7ce963), 17th e2e925b2 (0x781e95fd 201 LINK 2.88h, +$9,605
-  Sharpe 3782 tx 0xa86b8dca). New single-day record (surpasses 3-mint
-  days 5-29 and 5-30). Operator-knob blocker (perp-only prefetch /
-  HL_MIN_VLM_USD / HL_WINDOW) no longer on critical path — margin-top-12
-  cohort had rotated wholly vs 6-04's saturated shape.
-- **ISS-016 ledger workaround proven durable on active epoch 2026-06-05.**
-  Re-run defensively filtered pod 583 (own 15th-mint); 3rd-run filtered
-  pods 583 + 585 (own 15th + 16th) in same pass.
+## Completed Goals (since 2026-06-05 reflect)
+- **ISS-009 sub-task (b) chain-runner `continue` → `break` SHIPPED.**
+  `chain-runner.yml:360` reads `[ "$ON_ERROR" = "fail-fast" ] && break`.
+  INDEX flip still pending (covered by Current Goals).
+- **19th + 20th mints landed.** 19th cfd710ae 6-06 (0xbc433ba7 52 multi-mkt
+  closes +$25,453 Sharpe 97 tx 0xd9fb03bd — yesterday's tiebreak runner-up
+  surfaces clean after 0x0514f2f3 regressed under Step-4.2). 20th 420334cb
+  6-09 06utc (0x06cecfba 250 AAVE 52.1min +$85,196 Sharpe 8458 MDD 0% win
+  100% tx — 2nd-highest pnl in ledger ever, ends 2-day mintless streak
+  caused by rate-limit cluster).
+- **17 PRs merged 2026-06-02 → 2026-06-08** per weekly-review (#62, #63,
+  #64, #65, #66, #67, #69, #70, #71, #73, #74, #75, #76, #77, #78, #79, #80).
+  PR #80 shipped investment-advisor swarm (8 skills + chain) same day as
+  rate-limit; PR #82 supersedes with standalone Virtuals workflow (open).
 
 ## Active Topics
 - [Fleet status & infrastructure](topics/fleet.md) — PRs, blockers,
-  open issues, lessons, skill health.
+  open issues, lessons, skill health, weekly-review history.
 - [Reppo swarm ledger](topics/reppo.md) — append-only on-chain audit
-  (17 mints, 32 votes).
-- [Crypto research](topics/crypto.md) — narratives, picks, tracked-token alerts.
-- [Market context](topics/market-context.md) — refreshed each market-context-refresh cycle.
-- [TradingGymAI (datanet 9) contributor spec](topics/tradinggymai-spec.md) — operator-shared 2026-05-26.
+  (20 mints + 39 votes).
+- [Crypto research](topics/crypto.md) — narratives, picks, tracked-token
+  alerts. 6-09 re-baseline added 3 NEW (quantum-resistance, DEX V4 migration,
+  MetaMask Agent Wallet inside AI×crypto infra).
+- [Market context](topics/market-context.md) — refreshed each
+  market-context-refresh cycle (6-09: BTC $62k F&G=10 chop regime).
+- [TradingGymAI (datanet 9) contributor spec](topics/tradinggymai-spec.md) —
+  operator-shared 2026-05-26.
 - [Bitcoin 30-day snapshot](topics/last30-bitcoin.md) — stale baseline (05-21).
 
 ## Tracked Tokens
@@ -84,9 +80,9 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 | REPPO   | reppo              | 15%             |             |               |
 | GITLAWB | gitlawb            | 15%             |             |               |
 
-**2026-06-05 watchlist state:** REPPO −6.75% (3rd consecutive red, fade
-eases from prior day's −18.46% d/d), GITLAWB −0.25% (cooldown post
-−26% trip, 3-day cumulative still −34% off 6-01), MAMO **−9.60% d/d 3rd
-consecutive accelerating** (-6.11/-7.16/-9.60% 6-03→6-05, watch 15%
-rail trip 6-06), WELL −6.67%. Detail + 6-04 twin-trip history in
-[crypto.md](topics/crypto.md).
+**2026-06-09 watchlist state:** GITLAWB **+18.74% 24h TRIPPED** (first
+up-trip on PR #55 watchlist; mean-reversion squeeze off −38% 6-05 low,
+light-tape vol $458K vs −26% break day's $1.15M, 5-day downtrend ends).
+WELL −1.05%, MAMO −0.03% (breaks 3-consecutive-red sequence), REPPO
+−5.34% (4d cumulative +9.31% snaps 3-day red streak). 4d gap since 6-05
+(6-06/6-07/6-08 lost to rate-limit cluster). Detail in [crypto.md](topics/crypto.md).

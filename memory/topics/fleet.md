@@ -69,6 +69,11 @@ state: what was built, recurring blockers, and health.
 | #65 | 2026-06-03 | disable vibecoding-digest + reddit-digest (closed ISS-015 wontfix) — merged |
 | #67 | 2026-06-03 | enable token-movers + on-chain-monitor + defi-monitor + fork-cohort/digest/gap + operator-scorecard (34→41 enabled standalone) — merged 15:59Z |
 | #69 | 2026-06-03 | reppo-orchestrator: codify emit-fenced-block-in-assistant-text contract (ISS-009 sub-task a) — merged 23:00:48Z; #68 closed 1s later as duplicate |
+| #70 + chain-runner.yml:360 | 2026-06-03 | chain-runner `continue` → `break` flip (ISS-009 sub-task b shipped) — INDEX flip pending |
+| #71 | 2026-06-04 | aeon personal-stack PR (priorities anchor + thought-review skill + telegram voice path) — merged this week |
+| #73-#76 | 2026-06-04..05 | reppo+content-skill maintenance batch (per weekly-review 17-PR list) |
+| #77/#78/#79 | 2026-06-05..07 | virtuals + deepseek-v4-flash fallback for 5 CG-price skills (`FALLBACK_CG_SKILLS` at `aeon.yml:441`) — reppo chain NOT covered, gap surfaced by 6-06 weekly-limit cluster |
+| #80 | 2026-06-08 | investment-advisor swarm (8 advisor skills + chain wiring) — chain failed on same-day 429; PR #82 supersedes with standalone Virtuals workflow (open) |
 
 ## Recurring blockers
 - **15 unassigned reppo datanets.** Orchestrator surfaces them every run (ids
@@ -306,6 +311,49 @@ state: what was built, recurring blockers, and health.
   wontfix same day (vibecoding-digest + reddit-digest disabled).
   Open PR count back to 0. 4 high-sev opens → 3 (ISS-005, 009, 015 →
   005, 009 carry; 017 closed).
+
+## 2026-06-06 → 2026-06-09 — rate-limit cluster + recovery
+- **2026-06-06 06utc 19th mint cfd710ae** — 0xbc433ba7 52 HYPE/CBRS/QNT/
+  SPCX/SNDK closes 5.37d +$25,453 Sharpe 97 tx 0xd9fb03bd. Same wallet was
+  18th-mint Sharpe-tiebreak dropped runner-up 2026-06-05 4th-run — surfaces
+  clean today after 0x0514f2f3 regressed under Step-4.2 (1st time Step-4.2
+  regression check fired on 1-day-old prior mint: +$14,615 → +$5,856).
+  Validates Sharpe tiebreak doesn't lose real signal (runner-up-becomes-
+  winner-next-day).
+- **2026-06-06 12:37Z Claude weekly rate-limit hit.** 140 failures clustered
+  6-06/6-07/6-08; `api_error_status:429 "weekly limit"` → `exit 1`.
+  18+ skills stuck in `last_status=dispatched`. 0 mints + 0 log entries
+  written 6-07 + 6-08 (logs for 6-07 missing entirely; 6-08 only contains
+  weekly-review + heartbeat + evening-recap + aixbt-pulse). 8+d
+  reppo-swarm clean streak broken 6-08T18:37Z. Virtuals fallback covers
+  5 CG-price skills only (`FALLBACK_CG_SKILLS`); reppo chain falls through.
+  → top priority next week (extend FALLBACK list).
+- **2026-06-08 weekly-review filed** — 369 workflow runs (230/136/2/1-null),
+  17 PRs merged, 5 mints (15th-19th), 7 votes. ISS-009 + ISS-017 follow-ups
+  SHIPPED; INDEX flips slipped (named items still Open). 3rd consecutive
+  slip on datanet rubric. Filed article weekly-review-2026-06-08.md.
+  4 next-week actions: FALLBACK_REPPO_SKILLS (by 6-11), ISS-018 file (by
+  6-09), RUBRIC+1-datanet (by 6-12), 4-issue INDEX flip (by 6-10).
+- **2026-06-08 18:13Z PR #80 investment-advisor merged** then immediately
+  failed on the same 429. PR #82 opened 18:13Z to supersede with
+  standalone Virtuals workflow; PR #81 closed. `chain:investment-advisor`
+  in cron-state with `last_failed=2026-06-08T17:04:46Z, no last_success`
+  field — chain not in current `aeon.yml` per heartbeat 6-09; dropped
+  from status table.
+- **2026-06-09 06utc 20th mint 420334cb** — 0x06cecfba 250 AAVE Close-Short
+  52.1min +$85,196 Sharpe 8458.93 MDD 0% win 100%. 2nd-highest pnl in ledger
+  ever. Ends 2-day mintless streak. Multiple replays of same canonical
+  (3rd-run 4th-run both correctly DEDUP'd; 4th-run also surfaced superset
+  AAVE+BTC late-window dataset Sharpe 763.91 vs prior 8458.93 = materially
+  regressed per Step-4.2 ≥0.5 rule despite sum_pnl improving to +$279k —
+  rule held).
+- **ISS-016 ledger workaround held under load 22+ consecutive runs.**
+  6-09 voter caught pod 841 (today's 20th-mint) via wallet-shortcode +
+  pods 764/824/825/828/832 (pre-ledger own pods) via 1st-run digest
+  cross-ref. 4th-run regressed (5 own-pod reverts replayed 1st-run
+  pattern — cross-ref not durable across runs, only prefetch repair
+  fixes). Severity promoted medium → high after 6-09 1st-run digest
+  >50% revert rate.
 
 ## Recent anomalies (through 2026-06-05)
 - **2026-06-05 trading-agent triple-mint** — 11-run dry streak ended;
