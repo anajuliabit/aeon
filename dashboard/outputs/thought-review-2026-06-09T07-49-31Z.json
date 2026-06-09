@@ -1,0 +1,40 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_period",
+        "text_status"
+      ]
+    },
+    "text_period": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h",
+        "variant": "caption"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "0 captures, nothing to surface.",
+        "variant": "muted"
+      }
+    }
+  }
+}
