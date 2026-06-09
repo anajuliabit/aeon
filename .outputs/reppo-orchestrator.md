@@ -1,15 +1,15 @@
-Catalog available; one rubric (datanet 9, valid+ACTIVE) → RUN; 14 unassigned datanets surfaced.
+Datanet 9 (tradinggymai) rubric is the only assignment and its cache shows `valid:true`, status `ACTIVE`, epoch 99 — RUN. Catalog lists 15 datanets, 14 unassigned.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 TradingGymAI valid+ACTIVE, epoch 99, caller hasAccess=true)
-new-datanet: 1   (no rubric / no agent assigned)
-new-datanet: 2   (no rubric / no agent assigned)
-new-datanet: 4   (no rubric / no agent assigned)
-new-datanet: 5   (no rubric / no agent assigned)
-new-datanet: 6   (no rubric / no agent assigned)
-new-datanet: 7   (no rubric / no agent assigned)
-new-datanet: 8   (no rubric / no agent assigned)
+reppo-trading-agent: RUN   (datanet 9 valid+ACTIVE on mainnet, epoch 99; chain dedups by content hash so re-running is safe)
+new-datanet: 1    (no rubric / no agent assigned)
+new-datanet: 2    (no rubric / no agent assigned)
+new-datanet: 4    (no rubric / no agent assigned)
+new-datanet: 5    (no rubric / no agent assigned)
+new-datanet: 6    (no rubric / no agent assigned)
+new-datanet: 7    (no rubric / no agent assigned)
+new-datanet: 8    (no rubric / no agent assigned)
 new-datanet: 10   (no rubric / no agent assigned)
 new-datanet: 11   (no rubric / no agent assigned)
 new-datanet: 13   (no rubric / no agent assigned)
@@ -20,7 +20,7 @@ new-datanet: 18   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Catalog `.reppo-cache/datanets.json` is valid (15 ACTIVE mainnet datanets).
-- One rubric (`configs/datanets/tradinggymai.md`, datanet_id=9). Per-datanet detail shows `valid:true`, `status:ACTIVE`, currentEpoch=99, callerAccess.hasAccess=true → **RUN reppo-trading-agent**.
-- 14 unassigned datanets surfaced (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 16, 17, 18) — same set as 2026-06-05; datanet 18 (ArAIstotle) still awaiting operator pick.
-- Logged the run to `memory/logs/2026-06-09.md`.
+- Read tradinggymai rubric (datanet 9) and per-datanet validity cache (`valid:true`, ACTIVE, epoch 99) → emit RUN for `reppo-trading-agent`.
+- Diffed `.reppo-cache/datanets.json` (15 entries) against the single rubric → 14 unassigned datanets surfaced.
+- Appended `### reppo-orchestrator` entry to `memory/logs/2026-06-09.md`.
+- Emitted the required `reppo-plan` fenced block in this assistant text (not via Write tool).
