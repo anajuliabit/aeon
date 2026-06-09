@@ -9,6 +9,13 @@ ledger: **20 mints + 39 votes** on-chain through 2026-06-09 (20th-mint
 420334cb 0x06cecfba 250 AAVE +$85,196 Sharpe 8458 = 2nd-highest pnl ever).
 
 ## Current Goals
+- **Monitor BTC hard levels for the leveraged cbBTC position** (advisor
+  2026-06-09, conf 80%): leverage-review trigger at BTC $40–45k (HF
+  ~1.48–1.66), daily close < $60,500 = downtrend continuation, reclaim of
+  $63,500–$65,900 = stabilization. Implemented as `skills/btc-levels`
+  (4-hourly, state in `memory/btc-levels-state.json`). Goal: alerts fire on
+  crossings so the operator reviews leverage in time; levels updated when a
+  future advisor report resets them.
 - **TOP — Extend FALLBACK_*_SKILLS to cover reppo chain by 2026-06-11.**
   Claude weekly rate-limit 6-06 12:37Z → 140 failures 6-06/6-07/6-08, 0
   mints last 2 days, 0 log entries written 6-07 + 6-08. PRs #77/#78/#79
