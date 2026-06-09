@@ -186,7 +186,9 @@ role_data() {
       datablock snapshot snapshot.json '{totalUsd, positions, analytics}'
       ;;
     yield_allocation)
-      datablock snapshot snapshot.json '{totalUsd, analytics:{allocation:.analytics.allocation, assets:.analytics.assets, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
+      # Include per-position protocol/type so deployed stables (e.g. USDC in a
+      # Morpho vault) are distinguishable from idle wallet balances.
+      datablock snapshot snapshot.json '{totalUsd, positions: [.positions[]? | {protocol, type, chain, symbol, valueUsd}], analytics:{allocation:.analytics.allocation, assets:.analytics.assets, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
       datablock yields yields.json '[.data[]? | select(.stablecoin == true) | {project,symbol,chain,tvlUsd,apyBase,apyReward,apy}] | sort_by(-(.tvlUsd // 0)) | .[0:40]'
       datablock fees fees.json '{total24h: .total24h, protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:30]}'
       ;;
