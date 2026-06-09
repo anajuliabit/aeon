@@ -54,6 +54,7 @@ skills:
       var: ""
     } # every 30 minutes — fire on tracked-token ATH, ±20% 1h move, or operator-set target crossing (var=target_price,target_price2,...). Silent on normal runs. Set var=dry-run to skip notify.
   market-context-refresh: { enabled: true, schedule: "0 13 * * *", model: "claude-sonnet-4-6" } # fetch live crypto macro data, update memory
+  btc-levels: { enabled: true, schedule: "15 */4 * * *", model: "claude-sonnet-4-6" } # BTC vs 2026-06-09 advisor hard levels for leveraged cbBTC (40-45k review band, <60.5k daily close, 63.5k/65.9k reclaim); alerts on crossings only, silent otherwise
   narrative-tracker: { enabled: true, schedule: "30 13 * * *" } # track rising/peaking/fading narratives
   polymarket-comments: { enabled: false, schedule: "0 13 * * *" } # top comments from trending Polymarket markets
   unlock-monitor: { enabled: true, schedule: "0 10 * * 1" } # weekly token unlock/vesting tracker
