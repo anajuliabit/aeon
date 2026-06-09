@@ -1,10 +1,10 @@
 ## Summary
 
-Ran `skills/on-chain-monitor/SKILL.md`. Verdict: **ON_CHAIN_NO_CONFIG**.
+Ran `on-chain-monitor` against an empty config — exited cleanly per spec.
 
-- `memory/on-chain-watches.yml` absent → empty-config end-state per Step 8.
-- Exit clean, no notification sent (empty config is not an error).
-- 2nd consecutive day at NO_CONFIG (1st-fire was 2026-06-04 per MEMORY.md goal).
-- Operator action required: populate `memory/on-chain-watches.yml` with `label`/`address`/`chain`/`type`/`threshold_usd` entries before the skill produces signal.
-
-Files modified: `memory/logs/2026-06-05.md` (appended on-chain-monitor entry). No state file written, no config files created, no notification sent.
+- **Verdict**: `ON_CHAIN_NO_CONFIG` (n_watches=0)
+- **Config**: `memory/on-chain-watches.yml` is missing — nothing to fetch.
+- **State**: `memory/on-chain-state.json` left untouched (not yet created).
+- **Notification**: none — empty config is not an error.
+- **Files modified**: appended an `### on-chain-monitor` entry to `memory/logs/2026-06-09.md`.
+- **Follow-up**: this is the 4th day at NO_CONFIG. `MEMORY.md` already carries the operator ask to populate `memory/on-chain-watches.yml` with `label`/`address`/`chain`/`type`/`threshold` entries — no new memory write needed.
