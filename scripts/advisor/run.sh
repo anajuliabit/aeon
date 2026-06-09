@@ -31,6 +31,10 @@ DRY="${ADVISOR_DRY_RUN:-0}"
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 LLM="$ROOT/scripts/llm.sh"
 PROMPTS="$ROOT/advisor/prompts"
+
+# Shared accounting note injected into every agent prompt so the gross-vs-net
+# difference isn't mistaken for a data discrepancy (see investiments reconcile()).
+ACCOUNTING_NOTE='PORTFOLIO ACCOUNTING (do NOT report as a discrepancy): snapshot.totalUsd is NET worth = analytics.grossAssetsUsd minus analytics.totalLiabilitiesUsd. analytics.assets and allocation are GROSS (positive holdings only; loans excluded), so they sum to MORE than totalUsd by exactly analytics.totalLiabilitiesUsd (your debt). This gap is expected and already reconciled — never flag it as unresolved.'
 D="$ROOT/.investiments-cache/advisor"
 WORK="$D/work"
 mkdir -p "$WORK"
@@ -171,7 +175,7 @@ role_data() {
       datablock snapshot snapshot.json '{totalUsd, positions, analytics}'
       ;;
     yield_allocation)
-      datablock snapshot snapshot.json '{totalUsd, analytics:{allocation:.analytics.allocation, assets:.analytics.assets}}'
+      datablock snapshot snapshot.json '{totalUsd, analytics:{allocation:.analytics.allocation, assets:.analytics.assets, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
       datablock yields yields.json '[.data[]? | select(.stablecoin == true) | {project,symbol,chain,tvlUsd,apyBase,apyReward,apy}] | sort_by(-(.tvlUsd // 0)) | .[0:40]'
       datablock fees fees.json '{total24h: .total24h, protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:30]}'
       ;;
@@ -182,7 +186,7 @@ role_data() {
       datablock x_search x-search.json '.'
       ;;
     fundamentals)
-      datablock snapshot snapshot.json '{analytics:{assets:.analytics.assets}}'
+      datablock snapshot snapshot.json '{totalUsd, analytics:{assets:.analytics.assets, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
       datablock protocols protocols.json '[.[]? | {name, symbol, tvl, change_1d, change_7d}] | sort_by(-(.tvl // 0)) | .[0:60]'
       datablock fees fees.json '{protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:40]}'
       datablock cg_markets cg-markets.json '[.[]? | {symbol, name, market_cap, fully_diluted_valuation, circulating_supply, total_supply, price_change_percentage_24h}] | .[0:60]'
@@ -204,6 +208,7 @@ for role in $ANALYSTS; do
     echo "advisor: $role gap (no template)"; GAPS+=("$role"); continue
   fi
   prompt="$(cat "$tmpl")
+$ACCOUNTING_NOTE
 HELD SYMBOLS (from snapshot): ${HELD:-unknown}
 
 $(role_data "$role")"
@@ -263,6 +268,7 @@ PM_FINDINGS="$(printf '%s' "$FINDINGS_JSON" | jq -c '[.[] | {role, thesis, sugge
 PM_DEBATE="$(printf '%s' "$DEBATE" | jq -c '{turns: [.turns[]? | {side, points}]}')"
 
 pm_prompt="$(cat "$PROMPTS/portfolio_manager.md")
+$ACCOUNTING_NOTE
 Use generatedAt = \"$NOW_ISO\".
 
 <<<DATA findings>>>
