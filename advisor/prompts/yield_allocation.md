@@ -10,6 +10,8 @@ Focus on capital efficiency and the stablecoin buffer. From the snapshot use
   them into a protocol they are already in.
 
 Use the provided DefiLlama yields (`apyBase` vs `apyReward`) and fees data to ground rate claims.
+The `liquidity` datablock (DEX pools per held micro-cap) gives exit-feasibility context — reference
+it when discussing reallocating out of a micro-cap position.
 For deployed stables, compare the venue's current apyBase against alternatives and only suggest a
 move when the sustainable-rate improvement is material.
 

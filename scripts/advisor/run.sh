@@ -186,6 +186,8 @@ role_data() {
   case "$1" in
     risk_leverage)
       datablock snapshot snapshot.json '{totalUsd, positions, analytics}'
+      datablock funding hl-funding.json '.'
+      datablock macro macro-upcoming.json '.'
       ;;
     yield_allocation)
       # Include per-position protocol/type so deployed stables (e.g. USDC in a
@@ -193,12 +195,15 @@ role_data() {
       datablock snapshot snapshot.json '{totalUsd, positions: [.positions[]? | {protocol, type, chain, symbol, valueUsd}], analytics:{allocation:.analytics.allocation, assets:.analytics.assets, vesting:.analytics.vesting, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
       datablock yields yields.json '[.data[]? | select(.stablecoin == true) | {project,symbol,chain,tvlUsd,apyBase,apyReward,apy}] | sort_by(-(.tvlUsd // 0)) | .[0:40]'
       datablock fees fees.json '{total24h: .total24h, protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:30]}'
+      datablock liquidity gt-liquidity.json '.'
       ;;
     market_macro)
       datablock cg_global cg-global.json '{total_market_cap_usd: .data.total_market_cap.usd, market_cap_pct: .data.market_cap_percentage, market_cap_change_24h: .data.market_cap_change_percentage_24h_usd}'
       datablock cg_btc cg-btc.json '{daily_closes_usd: ([.prices[]? | .[1]] | [range(0; length; 24) as $i | .[$i]]), latest_usd: (.prices[-1][1]? // null)}'
       datablock fng fng.json '.'
       datablock x_search x-search.json '.'
+      datablock funding hl-funding.json '.'
+      datablock macro macro-upcoming.json '.'
       ;;
     fundamentals)
       # vesting + locked slice so micro-cap recommendations (e.g. MAMO/REPPO)
@@ -208,6 +213,7 @@ role_data() {
       datablock fees fees.json '{protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:40]}'
       datablock cg_held cg-held.json '[.[]?] | group_by(.symbol) | map(max_by(.market_cap // 0) | {symbol, name, market_cap, fully_diluted_valuation, circulating_supply, total_supply, price_change_percentage_24h})'
       datablock cg_markets cg-markets.json '[.[]? | {symbol, name, market_cap, fully_diluted_valuation, circulating_supply, total_supply, price_change_percentage_24h}] | .[0:60]'
+      datablock liquidity gt-liquidity.json '.'
       ;;
     news_social)
       datablock fng fng.json '.'

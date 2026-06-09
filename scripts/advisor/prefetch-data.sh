@@ -90,5 +90,60 @@ else
   echo "advisor-prefetch: XAI_API_KEY not set, skipping x_search (optional)"
 fi
 
+# --- Micro-cap DEX liquidity + volume (GeckoTerminal, keyless) ---
+# For held tokens outside the majors/stables, fetch top Base pools so trim
+# recommendations can be sized against real daily volume. Symbols come from the
+# gitignored snapshot cache — never committed.
+if [ -f "$D/snapshot.json" ]; then
+  MAJORS='["btc","wbtc","cbbtc","tbtc","eth","weth","wsteth","usdc","usdt","dai","usds","susds","usde","gho"]'
+  MICRO_SYMS=$(jq -r --argjson majors "$MAJORS" '
+    [.analytics.assets[]? | select(.isStable | not) | .symbol | ascii_downcase]
+    | unique | map(select(. as $s | $majors | index($s) | not)) | .[0:4] | join(" ")' \
+    "$D/snapshot.json" 2>/dev/null)
+  : > "$D/gt-liquidity.tmp"
+  for TOK in $MICRO_SYMS; do
+    curl -fsS --max-time 20 "https://api.geckoterminal.com/api/v2/search/pools?query=${TOK}&network=base&page=1" \
+      -H "Accept: application/json" \
+      | jq --arg t "$TOK" '{token: $t, pools: [.data[]? | {name: .attributes.name,
+          liquidityUsd: (.attributes.reserve_in_usd | tonumber? // 0),
+          volume24hUsd: (.attributes.volume_usd.h24 | tonumber? // 0)}]
+          | sort_by(-.liquidityUsd) | .[0:5],
+          totalVolume24hUsd: ([.data[]? | (.attributes.volume_usd.h24 | tonumber? // 0)] | add // 0)}' \
+      >> "$D/gt-liquidity.tmp" 2>/dev/null || echo "::warning::advisor-prefetch: geckoterminal $TOK failed"
+    sleep 2 # GeckoTerminal free tier: 30 calls/min
+  done
+  if [ -s "$D/gt-liquidity.tmp" ]; then
+    jq -s '.' "$D/gt-liquidity.tmp" > "$D/gt-liquidity.json" && echo "ok gt-liquidity.json ($MICRO_SYMS)"
+  fi
+  rm -f "$D/gt-liquidity.tmp"
+fi
+
+# --- Hyperliquid perp funding (BTC/ETH, keyless) ---
+if curl -fsS --max-time 20 -X POST "https://api.hyperliquid.xyz/info" \
+    -H "Content-Type: application/json" -d '{"type":"metaAndAssetCtxs"}' \
+    | jq '. as [$meta, $ctxs] | [range($meta.universe | length)
+          | select($meta.universe[.].name == "BTC" or $meta.universe[.].name == "ETH")
+          | {coin: $meta.universe[.].name,
+             fundingHourly: ($ctxs[.].funding | tonumber? // null),
+             openInterest: ($ctxs[.].openInterest | tonumber? // null),
+             markPx: ($ctxs[.].markPx | tonumber? // null)}]' \
+    > "$D/hl-funding.json" 2>/dev/null; then
+  echo "ok hl-funding.json"
+else
+  echo "::warning::advisor-prefetch: hyperliquid funding failed"
+fi
+
+# --- Upcoming macro events (next 14 days, from the curated calendar) ---
+ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+TODAY=$(date -u +%Y-%m-%d)
+UNTIL=$(date -u -d '+14 days' +%Y-%m-%d 2>/dev/null || date -u -v+14d +%Y-%m-%d)
+if jq --arg today "$TODAY" --arg until "$UNTIL" \
+    '{updated, coverage, events: [.events[] | select(.date >= $today and .date <= $until)]}' \
+    "$ROOT/advisor/data/macro-calendar.json" > "$D/macro-upcoming.json" 2>/dev/null; then
+  echo "ok macro-upcoming.json"
+else
+  echo "::warning::advisor-prefetch: macro calendar filter failed"
+fi
+
 echo "advisor-prefetch: done"
 ls -1 "$D" 2>/dev/null || true
