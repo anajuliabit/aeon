@@ -1,0 +1,18 @@
+{
+  "_comment": "symbol (lowercase) -> CoinGecko coin id, used by grade-recs.sh for historical prices. IDs verified against /api/v3/search 2026-06-09.",
+  "btc": "bitcoin",
+  "wbtc": "wrapped-bitcoin",
+  "cbbtc": "coinbase-wrapped-btc",
+  "eth": "ethereum",
+  "weth": "weth",
+  "usdc": "usd-coin",
+  "usdt": "tether",
+  "dai": "dai",
+  "mamo": "mamo",
+  "reppo": "reppo",
+  "well": "moonwell-artemis",
+  "virtual": "virtual-protocol",
+  "sol": "solana",
+  "aave": "aave",
+  "link": "chainlink"
+}
