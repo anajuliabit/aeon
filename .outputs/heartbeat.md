@@ -1,11 +1,13 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md
+Heartbeat done. Status page regenerated, log appended.
 
 ## Summary
-- **Heartbeat run**: 2026-06-09 ~08:56 UTC (08:00 cron slot). Self-check now OK (~12h since last success, clears yesterday's 67h self-stale flag).
-- **P0**: All known — `chain:investment-advisor` failed (dropped from table since not in current aeon.yml); 26 stuck dispatches from yesterday's 6-08 rate-limit cluster; no new consecutive_failures or chronic. All dedup against 6-08 heartbeat log.
-- **P1**: 0 open PRs, 0 urgent-labeled issues.
-- **P2/P3**: ISS-009 sub-task (b) carry (dedup); 3 enabled-but-never-run skills (autoresearch / fork-skill-gap / operator-scorecard).
-- **Recovery signals (already in today's morning-brief log)**: `chain:reppo-swarm` 06:24 cycle clean — mint 20 0x06cecfba AAVE +$85,196 landed. morning-brief / daily-routine / thought-review all ✅ this morning.
-- **Notification**: None sent (every finding appears in last 48h logs).
-- **Status page**: Regenerated `docs/status.md` — Overall 🔴 DEGRADED, 6 open issues, next run aixbt-pulse 09:00 UTC, 44 rows in the skill table. Token pulse section omitted (no `articles/token-report-*.md` file exists).
-- **Files modified**: `docs/status.md`, `memory/logs/2026-06-09.md` (heartbeat entry appended).
+
+**HEARTBEAT_OK · STATUS_PAGE=DEGRADED**
+
+- **P0 — Failed/stuck:** 20 skills still `last_status=dispatched` from yesterday's claude weekly rate-limit cluster (down from 26 in 6-08 heartbeat). 7 recovered since this morning's 08:56 heartbeat (`aixbt-pulse`, `fleet-control`, `github-trending`, `on-chain-monitor`, `defi-monitor`, `narrative-tracker`, `market-context-refresh`) plus full reppo + token midday cohort clean. `chain:investment-advisor` still never-succeeded — already reported 6-08.
+- **P1:** 0 open PRs, 0 urgent issues.
+- **P2:** ISS-009 sub-task (b) carry — already in 6-08 + morning logs.
+- **P3:** Same 3 never-run entries (`autoresearch`, `fork-skill-gap`, `operator-scorecard`).
+- **Notification:** none sent — every finding dedup'd against last 48h logs.
+- **Status page:** `docs/status.md` regenerated — Overall 🔴 DEGRADED (20 stuck rows), 44 skill rows, Open issues 6, next scheduled run `list-digest` at 17:00 UTC.
+- **Files modified:** `docs/status.md`, `memory/logs/2026-06-09.md`.
