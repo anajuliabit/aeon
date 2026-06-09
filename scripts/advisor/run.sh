@@ -189,6 +189,7 @@ role_data() {
       datablock snapshot snapshot.json '{totalUsd, analytics:{assets:.analytics.assets, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
       datablock protocols protocols.json '[.[]? | {name, symbol, tvl, change_1d, change_7d}] | sort_by(-(.tvl // 0)) | .[0:60]'
       datablock fees fees.json '{protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:40]}'
+      datablock cg_held cg-held.json '[.[]?] | group_by(.symbol) | map(max_by(.market_cap // 0) | {symbol, name, market_cap, fully_diluted_valuation, circulating_supply, total_supply, price_change_percentage_24h})'
       datablock cg_markets cg-markets.json '[.[]? | {symbol, name, market_cap, fully_diluted_valuation, circulating_supply, total_supply, price_change_percentage_24h}] | .[0:60]'
       ;;
     news_social)
@@ -255,7 +256,7 @@ fi
 # ---------------------------------------------------------------------------
 USED=()
 UNAVAIL=()
-for f in snapshot yields fees protocols cg-global cg-btc fng cg-markets x-search; do
+for f in snapshot yields fees protocols cg-global cg-btc fng cg-held cg-markets x-search; do
   if [ -f "$D/$f.json" ]; then USED+=("$f"); else UNAVAIL+=("$f"); fi
 done
 USED_JSON="$(printf '%s\n' "${USED[@]}" | jq -R . | jq -cs .)"
