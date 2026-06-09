@@ -1,0 +1,41 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review",
+        "description": "Last 24h"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat",
+        "text"
+      ]
+    },
+    "stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "text": {
+      "type": "Text",
+      "props": {
+        "text": "No actionable items across memory/logs and vault/inbox.",
+        "variant": "muted"
+      }
+    }
+  }
+}
