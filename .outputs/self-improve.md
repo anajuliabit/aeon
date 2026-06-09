@@ -1,1 +1,1 @@
-self-improve: narrowed fetch-tweets var bare 'mamo' → '$MAMO' cashtag (same shape as already-present $WOOD). 2026-06-01 run was 0/10 relevant — all hits were Arabic 'DMs open' + Japanese handles + Natalie Wood substring collisions. PR: https://github.com/anajuliabit/aeon/pull/62
+self-improve: reppo-voter step 4.3 — cross-ref today's prior digest CANNOT_VOTE_FOR_OWN_POD reverts to stop intraday re-burns of pre-ledger own pods (4th-run replayed 1st-run's 5 reverts 6-09). PR: https://github.com/anajuliabit/aeon/pull/90

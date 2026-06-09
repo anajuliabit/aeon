@@ -1,0 +1,52 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_step",
+        "text_description",
+        "link_pr"
+      ]
+    },
+    "heading_step": {
+      "type": "Heading",
+      "props": {
+        "text": "reppo-voter step 4.3",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_description": {
+      "type": "Text",
+      "props": {
+        "text": "cross-ref today's prior digest CANNOT_VOTE_FOR_OWN_POD reverts to stop intraday re-burns of pre-ledger own pods (4th-run replayed 1st-run's 5 reverts 6-09)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #90",
+        "href": "https://github.com/anajuliabit/aeon/pull/90",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
