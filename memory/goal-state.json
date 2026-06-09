@@ -1,45 +1,45 @@
 {
-  "run_at": "2026-06-05T14:30:00Z",
+  "run_at": "2026-06-09T18:30:00Z",
   "goals": {
     "iss-009-sub-task-b-chain-runner-break-flip": {
       "status": "ON_TRACK",
-      "activity_count_14d": 10,
-      "last_activity_date": "2026-06-05"
+      "activity_count_14d": 12,
+      "last_activity_date": "2026-06-09"
     },
-    "trading-agent-operator-level-quality-knob": {
+    "trading-agent-codify-spot-pct-and-sharpe-tiebreak": {
       "status": "ON_TRACK",
-      "activity_count_14d": 20,
-      "last_activity_date": "2026-06-05"
+      "activity_count_14d": 14,
+      "last_activity_date": "2026-06-09"
     },
-    "repair-iss-016-own-pod-ids-prefetch": {
+    "iss-016-own-pod-ids-prefetch-repair": {
       "status": "ON_TRACK",
-      "activity_count_14d": 15,
-      "last_activity_date": "2026-06-05"
+      "activity_count_14d": 8,
+      "last_activity_date": "2026-06-09"
     },
     "assign-15-unassigned-reppo-datanets": {
       "status": "ON_TRACK",
-      "activity_count_14d": 18,
-      "last_activity_date": "2026-06-05"
+      "activity_count_14d": 13,
+      "last_activity_date": "2026-06-09"
     },
     "index-bookkeeping-flips-queued": {
       "status": "ON_TRACK",
-      "activity_count_14d": 16,
-      "last_activity_date": "2026-06-05"
+      "activity_count_14d": 11,
+      "last_activity_date": "2026-06-09"
     },
     "on-chain-defi-monitor-watches-yml": {
       "status": "ON_TRACK",
-      "activity_count_14d": 4,
-      "last_activity_date": "2026-06-05"
+      "activity_count_14d": 6,
+      "last_activity_date": "2026-06-09"
     },
     "cleanup-chain-runner-scratch": {
       "status": "ON_TRACK",
       "activity_count_14d": 8,
-      "last_activity_date": "2026-06-05"
+      "last_activity_date": "2026-06-09"
     },
     "chain-state-flip-anomaly-carry": {
       "status": "ON_TRACK",
       "activity_count_14d": 12,
-      "last_activity_date": "2026-06-05"
+      "last_activity_date": "2026-06-09"
     }
   }
 }

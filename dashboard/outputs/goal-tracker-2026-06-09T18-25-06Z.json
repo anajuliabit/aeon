@@ -1,0 +1,288 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker 2026-06-09"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_section",
+        "separator1",
+        "status_section",
+        "separator2",
+        "pending_section",
+        "separator3",
+        "note_section",
+        "separator4",
+        "report_section"
+      ]
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_goals",
+        "badge_status",
+        "badge_trend",
+        "text_activity_rule",
+        "text_last_activity"
+      ]
+    },
+    "stat_goals": {
+      "type": "Stat",
+      "props": {
+        "label": "Goals Tracked",
+        "value": "8"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "All ON TRACK",
+        "variant": "default"
+      }
+    },
+    "badge_trend": {
+      "type": "Badge",
+      "props": {
+        "text": "Trend: Flat",
+        "variant": "outline"
+      }
+    },
+    "text_activity_rule": {
+      "type": "Text",
+      "props": {
+        "text": "Activity rule: every goal has activity in 14 days",
+        "variant": "body"
+      }
+    },
+    "text_last_activity": {
+      "type": "Text",
+      "props": {
+        "text": "Last activity: today",
+        "variant": "caption"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_status",
+        "grid_status"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Breakdown",
+        "level": "h3"
+      }
+    },
+    "grid_status": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_at_risk",
+        "stat_attention",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_at_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "0"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_pending",
+        "text_iss009",
+        "text_iss016",
+        "text_index_bookkeeping",
+        "text_watches",
+        "text_trading_agent",
+        "text_datanets",
+        "text_chain_reppo"
+      ]
+    },
+    "heading_pending": {
+      "type": "Heading",
+      "props": {
+        "text": "Pending Items",
+        "level": "h3"
+      }
+    },
+    "text_iss009": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-009 sub-b workflow-abort still pending",
+        "variant": "body"
+      }
+    },
+    "text_iss016": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-016 prefetch promoted high",
+        "variant": "body"
+      }
+    },
+    "text_index_bookkeeping": {
+      "type": "Text",
+      "props": {
+        "text": "INDEX bookkeeping 2-of-4 flips pending on ISS-007/010",
+        "variant": "body"
+      }
+    },
+    "text_watches": {
+      "type": "Text",
+      "props": {
+        "text": "watches.yml NO_CONFIG day 4",
+        "variant": "body"
+      }
+    },
+    "text_trading_agent": {
+      "type": "Text",
+      "props": {
+        "text": "trading-agent codification still un-shipped",
+        "variant": "body"
+      }
+    },
+    "text_datanets": {
+      "type": "Text",
+      "props": {
+        "text": "14 datanets unassigned",
+        "variant": "body"
+      }
+    },
+    "text_chain_reppo": {
+      "type": "Text",
+      "props": {
+        "text": "chain:reppo-swarm 06utc clean after 6-08 break",
+        "variant": "body"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "note_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_note",
+        "text_note"
+      ]
+    },
+    "heading_note": {
+      "type": "Heading",
+      "props": {
+        "text": "Velocity Signal Note",
+        "level": "h3"
+      }
+    },
+    "text_note": {
+      "type": "Text",
+      "props": {
+        "text": "Status rules pass each goal because surfacing counts as activity even when no operator action lands — the velocity signal isn't catching stuck-on-operator carries.",
+        "variant": "muted"
+      }
+    },
+    "separator4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "report_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_report",
+        "text_report"
+      ]
+    },
+    "heading_report": {
+      "type": "Heading",
+      "props": {
+        "text": "Report Location",
+        "level": "h3"
+      }
+    },
+    "text_report": {
+      "type": "Text",
+      "props": {
+        "text": "Report staged at .pending-notify/1781029800-goal-tracker.md with per-goal breakdown",
+        "variant": "caption"
+      }
+    }
+  }
+}
