@@ -45,7 +45,9 @@ PROMPTS="$ROOT/advisor/prompts"
 
 # Shared accounting note injected into every agent prompt so the gross-vs-net
 # difference isn't mistaken for a data discrepancy (see investiments reconcile()).
-ACCOUNTING_NOTE='PORTFOLIO ACCOUNTING (do NOT report as a discrepancy): snapshot.totalUsd is NET worth = analytics.grossAssetsUsd minus analytics.totalLiabilitiesUsd. analytics.assets and allocation are GROSS (positive holdings only; loans excluded), so they sum to MORE than totalUsd by exactly analytics.totalLiabilitiesUsd (your debt). This gap is expected and already reconciled — never flag it as unresolved.'
+ACCOUNTING_NOTE='PORTFOLIO ACCOUNTING (do NOT report as a discrepancy): snapshot.totalUsd is NET worth = analytics.grossAssetsUsd minus analytics.totalLiabilitiesUsd. analytics.assets and allocation are GROSS (positive holdings only; loans excluded), so they sum to MORE than totalUsd by exactly analytics.totalLiabilitiesUsd (your debt). This gap is expected and already reconciled — never flag it as unresolved.
+
+VESTING / LOCKED BALANCES: positions with type "locked" and the analytics.vesting entries are NON-TRANSFERABLE until they unlock — they CANNOT be sold, trimmed, rebalanced, or deployed now. Any sell/trim/reallocate recommendation must apply ONLY to the liquid (non-locked) portion of a token, and must state the liquid amount it applies to. analytics.vesting carries the schedule where known (claimableQty/claimableUsd = unlocked and claimable right now; nextUnlockAt/nextUnlockQty = next tranche; endAt = fully vested). Use unlock dates for forward planning (e.g. "on the next unlock, consider...") instead of recommending sales of locked balances.'
 D="$ROOT/.investiments-cache/advisor"
 WORK="$D/work"
 mkdir -p "$WORK"
@@ -188,7 +190,7 @@ role_data() {
     yield_allocation)
       # Include per-position protocol/type so deployed stables (e.g. USDC in a
       # Morpho vault) are distinguishable from idle wallet balances.
-      datablock snapshot snapshot.json '{totalUsd, positions: [.positions[]? | {protocol, type, chain, symbol, valueUsd}], analytics:{allocation:.analytics.allocation, assets:.analytics.assets, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
+      datablock snapshot snapshot.json '{totalUsd, positions: [.positions[]? | {protocol, type, chain, symbol, valueUsd}], analytics:{allocation:.analytics.allocation, assets:.analytics.assets, vesting:.analytics.vesting, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
       datablock yields yields.json '[.data[]? | select(.stablecoin == true) | {project,symbol,chain,tvlUsd,apyBase,apyReward,apy}] | sort_by(-(.tvlUsd // 0)) | .[0:40]'
       datablock fees fees.json '{total24h: .total24h, protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:30]}'
       ;;
@@ -199,7 +201,9 @@ role_data() {
       datablock x_search x-search.json '.'
       ;;
     fundamentals)
-      datablock snapshot snapshot.json '{totalUsd, analytics:{assets:.analytics.assets, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
+      # vesting + locked slice so micro-cap recommendations (e.g. MAMO/REPPO)
+      # distinguish locked balances (with unlock dates) from liquid ones.
+      datablock snapshot snapshot.json '{totalUsd, analytics:{assets:.analytics.assets, vesting:.analytics.vesting, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}, locked: [.positions[]? | select(.type == "locked") | {protocol, symbol, valueUsd}]}'
       datablock protocols protocols.json '[.[]? | {name, symbol, tvl, change_1d, change_7d}] | sort_by(-(.tvl // 0)) | .[0:60]'
       datablock fees fees.json '{protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:40]}'
       datablock cg_held cg-held.json '[.[]?] | group_by(.symbol) | map(max_by(.market_cap // 0) | {symbol, name, market_cap, fully_diluted_valuation, circulating_supply, total_supply, price_change_percentage_24h})'
