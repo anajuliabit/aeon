@@ -1,47 +1,45 @@
-# AIXBT Grounding (as of 2026-06-08 21:00 UTC)
+# AIXBT Grounding (as of 2026-06-09 10:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-08T21:00:21.596Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-09T10:00:42.875Z
 
 Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again — iterate dynamically if they appear in future pulls.
 
 ## Crypto
-- Bear market sentiment dominates as BTC Fear & Greed hits 8; cycle analysts eye $37K-$53K realized-price targets while contrarians call the dip a generational buy.
-- Hyperliquid momentum surges with $5B USDC on HyperEVM, ~$2M daily fees fueling HYPE buybacks, a Coinbase perps listing, and growing perp DEX market-share conviction.
-- ETH value-accrual debate intensifies—Hoffman questions the missing price mechanism, defenders cite DeFi TVL and RWA dominance—while SOL slips to $60 and DOT draws fresh attention.
-- RWA tokenization and regulatory clarity themes strengthen: Ondo tokenizes SpaceX, Spiko hits $174M on Polygon, CFTC greenlights BTC perps, and the Crypto Clarity Act nears passage.
+- Humanity Protocol's $H crashed ~90% after a $36M exploit via compromised multisig keys; $SAHARA dumped 60% on suspected insider selling, deepening retail trust concerns.
+- Anticipation around Anthropic's Mythos AI launch dominates chatter, with traders revoking DeFi approvals and bracing for AI-driven exploit scanning of legacy protocols.
+- BTC sits near $63K at "Extreme Fear" (index 10) with ETF outflows of $91M; long-term holders accumulate aggressively while smart money stays net short on perps.
+- Zcash rallies 80% off lows as Ironwood upgrade targets July activation; Hyperliquid gains momentum via buybacks, perp integrations, and equity market expansion.
 
 ## TradFi
-- Strong May jobs data has firmed Fed hike odds, lifting yields and tightening financial conditions with direct pressure on equity multiples and rate-sensitive sectors.
-- AI/tech long positioning unwound sharply in Asia as KOSPI cratered over 8% and chipmakers led risk-off flows into defensives ahead of US open.
-- Overnight Iran-Israel missile exchanges spiked oil and geopolitical risk premia before partial halt, transmitting energy inflation directly into yields and vol.
-- US chip stocks rebounded on bargain hunting with Nasdaq gaining 0.9% but sustained Middle East tensions and macro tightening keep cross-asset risk elevated.
+- Bank Indonesia's surprise 25bp rate hike to defend the rupiah tightens EM liquidity, pressuring regional bond yields and prompting outflows from Asian credit into safer assets.
+- Chip stock rebound lifting Nasdaq futures and Kospi signals renewed AI positioning, with dip-buying flows likely to compress vol and transmit risk-on sentiment across equities.
+- Trump's comments on an imminent Iran deal are tempering oil volatility and geopolitical risk premia, reducing energy cost transmission into inflation and supporting broader risk assets.
+- Mixed 10yr yields with stable inflation expectations amid equity recovery point to cautious duration positioning, with cross-asset implications for dollar strength and funding flows.
 
-## What's New (vs last pull 2026-06-05 21:00 UTC)
-- (Crypto) Fear & Greed index = 8 — specific index reading plus $37K–$53K cycle-analyst realized-price targets; prior had "worst weekly candle since 2022" framing
-- (Crypto) ETH value-accrual debate: Hoffman questioning price mechanism, SOL at $60, DOT fresh attention — entirely new
-- (Crypto) RWA tokenization surge: Ondo tokenizes SpaceX, Spiko $174M on Polygon, CFTC BTC perps greenlight, Crypto Clarity Act — entirely new theme
-- (Crypto) Hyperliquid specifics upgraded: $5B USDC on HyperEVM + ~$2M daily fees + Coinbase perps listing (prior was "7.9% OI share")
-- (TradFi) KOSPI -8%+ in Asia + chipmakers Asia risk-off ahead of US open — Asian market dimension is new
-- (TradFi) Iran-Israel actual overnight missile exchanges — escalation from "stalled Iran talks"; material change
-- (TradFi) Nasdaq partial recovery +0.9% on bargain hunting — new reversal data point
+## What's New (vs last pull 2026-06-08 21:00 UTC)
+- (Crypto) $H ~90% crash from $36M compromised multisig exploit + $SAHARA 60% dump on suspected insider selling — NEW
+- (Crypto) Anthropic Mythos AI launch anticipation: traders revoking DeFi approvals, bracing for AI-driven exploit scanning of legacy protocols — NEW
+- (Crypto) Zcash 80% rally off lows + Ironwood upgrade targeting July — NEW (prior had ZEC as an exploit victim; now a recovery + upgrade story)
+- (TradFi) Bank Indonesia surprise 25bp hike to defend rupiah — EM liquidity tightening — NEW
+- (TradFi) Trump Iran deal comments tempering oil vol — notable shift from prior "overnight missile exchanges" escalation framing
 
-## Gone (dropped from 2026-06-05 21:00 pull)
-- (Crypto) Strategy STRC funding loop scrutiny + Saylor 32 BTC sale — attention moved
-- (Crypto) ZEC 45%+ crash from exploit — dropped
-- (Crypto) Tether briefly flipping ETH in market cap — dropped
-- (TradFi) Hawkish central bank rhetoric synthesis item — replaced by more specific items
-- (TradFi) VIX edges higher framing — dropped
+## Gone (dropped from 2026-06-08 21:00 pull)
+- (Crypto) ETH value-accrual debate (Hoffman price-mechanism question, SOL $60, DOT fresh attention) — dropped
+- (Crypto) RWA tokenization surge (Ondo tokenizes SpaceX, Spiko $174M on Polygon, CFTC BTC perps, Crypto Clarity Act) — dropped
+- (Crypto) Hyperliquid $5B HyperEVM + ~$2M daily fees + Coinbase perps specifics — merged into briefer Hyperliquid mention
+- (TradFi) May jobs data + Fed hike odds specific framing — dropped
+- (TradFi) KOSPI -8% crash / Asia chip unwind as risk-off (now reversed: recovery signal)
+- (TradFi) Iran-Israel missile exchanges + oil spike (replaced by Iran deal wind-down)
 
 ## Persisting Stories
-- BTC bear + extreme fear: evolved from "worst weekly candle since 2022" to Fear & Greed=8 + $37K–$53K cycle targets
-- May jobs data → Fed hike odds → yield steepening — same macro thesis, third consecutive window
-- AI/tech chip unwind: Nasdaq -4% (prior) → KOSPI -8% + Nasdaq partial +0.9% recovery
-- Middle East tensions → oil → inflation → yields: stalled Iran talks → actual overnight missile exchange
-- Hyperliquid market-share conviction: 7.9% OI → $5B HyperEVM + $2M daily fees
+- BTC Extreme Fear: Fear & Greed 8 → 10 (slight uptick but still extreme); cycle-target framing replaced by $63K price + $91M ETF outflows + long-term holder accumulation vs smart money net short perps
+- Middle East → oil → macro: stalled talks → overnight missile exchanges → Trump Iran deal comments; tension is de-escalating in this window
+- Chip/AI tech rebound: Nasdaq +0.9% bargain hunting (prior) → Kospi + Nasdaq futures both recovering on AI repositioning; same underlying story strengthening
+- Hyperliquid momentum: $5B HyperEVM specifics → ongoing buybacks + perp integrations + equity market expansion
 
 ## Cross-Domain Bridges
-- Iran-Israel overnight missile exchange → oil spike → inflation floor stays elevated → Fed stays higher longer → BTC realized-price range $37K-$53K is the math, not the vibe. the escalation from "stalled talks" to actual exchange is a tail-risk flip for oil. the "generational buy" contrarian call needs the Fed path to be already priced; this just moved that timeline out.
-- KOSPI -8% (Asia tech/chip risk-off) + BTC Fear & Greed at 8 are the same de-risking event wearing different labels. when chips lead risk-off in Asia and crypto sentiment bottoms at 8 in the same window, there is no uncorrelated safe haven in the portfolio. calling the bottom on either leg requires calling the bottom on both.
-- RWA rails being built at maximum fear: CFTC greenlights BTC perps + Crypto Clarity Act near + Ondo tokenizes SpaceX + Spiko $174M on Polygon. this is the 2022-2023 playbook — regulated capital builds infrastructure when prices are down and attention is elsewhere. $174M on Polygon is a receipt. the retail panic at Fear & Greed=8 is not the signal; the institutional rail-laying is.
-- ETH value-accrual debate intensifies exactly as RWA TVL is cited as its defense, while SOL hits $60 and DOT draws fresh attention. the reflexivity: if the price-mechanism narrative weakens during maximum fear, TVL-based defenses carry less weight in market pricing even if the fundamentals are real. the rotation signal within L1s at the bottom is worth watching.
+- the $36M $H multisig exploit and the Anthropic Mythos AI exploit-scanner narrative landed in the same 12h window. traders revoking DeFi approvals before Mythos ships are already repricing legacy protocol risk — the narrative is doing work before the tool exists. that's the reflexivity. the $H incident is the demo deck the Mythos narrative needed; whether the product ships or not, approval hygiene is now a live concern.
+- Trump Iran deal comments → oil vol tightens → energy inflation floor softens → BTC at $63K makes mechanical sense. the market is pricing a comment, not a signed deal. one bad headline reverses the oil leg and the BTC relief trade with it. the smart-money net-short-perps position is a hedge against exactly that reversion.
+- Bank Indonesia 25bp emergency hike (rupiah defense) + BTC ETF outflows at $91M are the same dollar-strength / EM-liquidity-tightening signal in two asset classes. on-chain long-term holders absorbing while institutional paper-BTC exits — two separate timelines, two separate bets. the EM macro compression is a headwind; the on-chain supply squeeze is structural. they don't resolve at the same time.
+- chip stock rebound + Kospi recovery on AI repositioning is the equities leg of the same narrative Mythos is running in crypto. $SAHARA dumped 60% on insider selling in this same window. not all AI-adjacent tokens are one trade. the separation of real AI infra from AI-themed speculation is happening live — the Mythos narrative lifts the real infra case; the $SAHARA dump is what the other side of that trade looks like.

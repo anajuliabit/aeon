@@ -334,4 +334,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-09,reppo-digest,claude-opus-4-7,120,27082,2020781,110693
 2026-06-09,daily-routine,claude-opus-4-7,1520,22895,7419837,103547
 2026-06-09,skill-freshness,claude-sonnet-4-6,22,27815,1496570,89475
-2026-06-09,fleet-control,claude-opus-4-7,12,1813,335733,28710
+2026-06-09,aixbt-pulse,claude-sonnet-4-6,1452,12103,663313,43961

@@ -1,0 +1,168 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse"
+      },
+      "children": [
+        "text_date",
+        "separator_1",
+        "heading_crypto",
+        "stack_crypto_items",
+        "separator_2",
+        "heading_tradfi",
+        "stack_tradfi_items",
+        "separator_3",
+        "heading_new",
+        "stack_new_items",
+        "separator_4",
+        "heading_bridge",
+        "text_bridge"
+      ]
+    },
+    "text_date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-09 10:00Z",
+        "variant": "muted"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "stack_crypto_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_crypto_1",
+        "text_crypto_2"
+      ]
+    },
+    "text_crypto_1": {
+      "type": "Text",
+      "props": {
+        "text": "• $H crashed ~90% ($36M multisig exploit) + $SAHARA -60% on insider selling — retail trust cracking"
+      }
+    },
+    "text_crypto_2": {
+      "type": "Text",
+      "props": {
+        "text": "• Anthropic Mythos AI launch anticipation: traders revoking DeFi approvals, bracing for AI-driven exploit scanning"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "stack_tradfi_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_tradfi_1",
+        "text_tradfi_2"
+      ]
+    },
+    "text_tradfi_1": {
+      "type": "Text",
+      "props": {
+        "text": "• Bank Indonesia surprise 25bp hike to defend rupiah — EM liquidity squeezing"
+      }
+    },
+    "text_tradfi_2": {
+      "type": "Text",
+      "props": {
+        "text": "• Trump Iran deal comments tempering oil vol; chip rebound lifting Kospi + Nasdaq futures"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "stack_new_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_new_1",
+        "text_new_2",
+        "text_new_3"
+      ]
+    },
+    "text_new_1": {
+      "type": "Text",
+      "props": {
+        "text": "• $H/$SAHARA dual exploit window (security + insider selling same session)"
+      }
+    },
+    "text_new_2": {
+      "type": "Text",
+      "props": {
+        "text": "• Anthropic Mythos narrative manufacturing its own behavior (DeFi approval revocations pre-launch)"
+      }
+    },
+    "text_new_3": {
+      "type": "Text",
+      "props": {
+        "text": "• Bank Indonesia EM rate hike"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text_bridge": {
+      "type": "Text",
+      "props": {
+        "text": "the $36M $H exploit and the AI-exploit-scanner narrative landed in the same 12h window. traders revoking approvals before Mythos ships are pricing reflexivity correctly. the $H incident is the demo deck. whether the tool ships or not, approval hygiene is now a live concern."
+      }
+    }
+  }
+}
