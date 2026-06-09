@@ -1,1 +1,1 @@
-morning-brief 2026-06-06 staged — focus pr #71 stall (32h) + spot_pct codify + watches.yml no_config day 3 — 19th mint cfd710ae landed 06utc tx 0xd9fb03bd, 4 fri mints record, vuln-scanner sat-weekly first-fire 16utc
+morning brief 2026-06-09 — 3 focus: fallback-skills extension (2d to deadline), iss-016 prefetch repair (promoted high after 6 own-pod reverts), iss-009 chain-runner break flip (rate-limit fail-fast). 20th mint 420334cb landed 06utc — 0x06cecfba 250 AAVE +$85k Sharpe 8458, ends 2-day mintless streak. full brief staged.

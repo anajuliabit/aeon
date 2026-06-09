@@ -1,0 +1,163 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-09"
+      },
+      "children": [
+        "section1_head",
+        "stack1",
+        "sep1",
+        "section2_head",
+        "stack2",
+        "sep2",
+        "footer"
+      ]
+    },
+    "section1_head": {
+      "type": "Heading",
+      "props": {
+        "text": "3 Focus Areas",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus1",
+        "focus2",
+        "focus3"
+      ]
+    },
+    "focus1": {
+      "type": "Text",
+      "props": {
+        "text": "fallback-skills extension (2d to deadline)"
+      },
+      "children": []
+    },
+    "focus2": {
+      "type": "Text",
+      "props": {
+        "text": "iss-016 prefetch repair (promoted high after 6 own-pod reverts)"
+      },
+      "children": []
+    },
+    "focus3": {
+      "type": "Text",
+      "props": {
+        "text": "iss-009 chain-runner break flip (rate-limit fail-fast)"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section2_head": {
+      "type": "Heading",
+      "props": {
+        "text": "20th Mint Event",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mint_header",
+        "mint_stats",
+        "mint_streak"
+      ]
+    },
+    "mint_header": {
+      "type": "Text",
+      "props": {
+        "text": "420334cb landed 06utc"
+      },
+      "children": []
+    },
+    "mint_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_addr",
+        "stat_amount",
+        "stat_value",
+        "stat_sharpe"
+      ]
+    },
+    "stat_addr": {
+      "type": "Stat",
+      "props": {
+        "label": "Address",
+        "value": "0x06cecfba"
+      },
+      "children": []
+    },
+    "stat_amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Amount",
+        "value": "250 AEVE"
+      },
+      "children": []
+    },
+    "stat_value": {
+      "type": "Stat",
+      "props": {
+        "label": "Value",
+        "value": "+$85k",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe",
+        "value": "8458"
+      },
+      "children": []
+    },
+    "mint_streak": {
+      "type": "Text",
+      "props": {
+        "text": "Ends 2-day mintless streak"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "full brief staged"
+      },
+      "children": []
+    }
+  }
+}
