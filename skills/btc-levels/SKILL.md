@@ -1,6 +1,9 @@
 ---
 name: BTC Levels Monitor
 description: Watch BTC price against hard monitoring levels for the leveraged cbBTC position and alert on level crossings
+commits: true
+permissions:
+  - contents:write
 var: ""
 tags: [crypto]
 ---
@@ -13,13 +16,19 @@ for the leveraged cbBTC position:
 
 | Level | Meaning | Alert |
 |---|---|---|
-| BTC $40,000–$45,000 (spot) | Leverage-review trigger — cbBTC borrow health factor ≈ 1.48–1.66 in this band | 🚨 urgent, every run while inside the band |
-| Daily close < $60,500 (UTC) | Downtrend continuation signal | ⚠️ once per close-below streak |
-| Spot reclaims $63,500 | First stabilization signal | ✅ once per reclaim |
-| Spot reclaims $65,900 | Stabilization confirmed | ✅ once per reclaim |
+| BTC spot ≤ $45,000 | Leverage-review trigger. Inside $40,000–$45,000 the cbBTC borrow health factor ≈ 1.48–1.66; below $40,000 it is WORSE than ~1.48 — say which case applies | 🚨 urgent, every run while spot ≤ $45,000 (fires on the baseline run too) |
+| Daily close < $60,500 (UTC) | Downtrend continuation signal | ⚠️ once per qualifying daily close (max 1/day) |
+| Spot reclaims $63,500 | First stabilization signal | ✅ once per reclaim cycle |
+| Spot reclaims $65,900 | Stabilization confirmed | ✅ once per reclaim cycle |
 
 Advisory only — never instruct execution. Alerts state levels and context; the
 operator decides.
+
+**Known limitation:** this skill samples every 4 hours; transient intra-window
+spikes/dips between runs are not seen. That is acceptable for these decision
+levels (daily-close and regime semantics). If the operator wants tighter
+intraday granularity, enable the existing `price-threshold-alert` skill
+(30-minute cadence) with explicit targets alongside this one.
 
 ## State
 
@@ -38,8 +47,14 @@ State lives in `memory/btc-levels-state.json` (commit it after each run):
 }
 ```
 
-If the file does not exist, initialize it from the current fetch with all alert
-flags false/null and send no alerts on the first run (baseline run).
+**First run (no state file):** initialize from the current fetch. The
+leverage-review trigger (spot ≤ $45,000) STILL fires on this baseline run — it
+is the position-risk alarm and must never be suppressed. The breakdown and
+reclaim alerts are informational regime signals and are NOT fired on the
+baseline run: record the current situation in state (set
+`breakdownAlertedForClose` to the current close date if that close is already
+< $60,500; set the reclaim flags to true if spot is already above the level) so
+only future crossings alert.
 
 ## Steps
 
@@ -47,18 +62,27 @@ flags false/null and send no alerts on the first run (baseline run).
    ```bash
    curl -s --max-time 20 "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=2&interval=daily"
    ```
-   - Spot = last entry of `.prices`; previous UTC daily close = the entry for the
-     most recent completed UTC day.
+   - `.prices` contains daily snapshots taken at 00:00 UTC plus one final
+     current-price point. Parse deterministically:
+     - **Spot** = `.prices[-1][1]` (the current-price point).
+     - **Previous completed UTC daily close** = `.prices[-2][1]` (the snapshot
+       timestamped at today's 00:00 UTC). Its **close date** =
+       the calendar day BEFORE that timestamp's date (a 00:00 UTC snapshot is
+       the close of the prior day). Derive it from `.prices[-2][0]`.
    - **Sandbox note:** if curl fails, use WebFetch on the same URL. If both fail,
      log the gap to `memory/logs/` and exit without changing state — never invent
      prices.
 
 2. **Evaluate levels against state** (all comparisons in USD):
-   - **Leverage-review band:** spot ≤ 45,000 → alert EVERY run while in band
-     (this is the position-risk trigger; repetition is intentional). Set
-     `inLeverageReviewBand: true`; reset to false when spot > 45,000.
+   - **Leverage-review trigger:** spot ≤ 45,000 → alert EVERY run while it
+     holds, including the baseline run (repetition is intentional — this is the
+     position-risk alarm). In the message distinguish: 40,000 ≤ spot ≤ 45,000 →
+     "review band, HF ≈ 1.48–1.66"; spot < 40,000 → "BELOW review band, HF
+     worse than ~1.48 — urgent". Set `inLeverageReviewBand: true`; reset to
+     false when spot > 45,000.
    - **Breakdown:** previous UTC daily close < 60,500 AND
-     `breakdownAlertedForClose != lastDailyCloseDate` → alert once, then set
+     `breakdownAlertedForClose != <that close date>` → alert once for that
+     close (so consecutive red closes each alert once — max 1/day), then set
      `breakdownAlertedForClose` to that close date. A later close ≥ 60,500
      clears the flag (set null).
    - **Reclaim 63,500:** spot ≥ 63,500 AND `reclaim63500Alerted == false` →
@@ -71,7 +95,8 @@ flags false/null and send no alerts on the first run (baseline run).
    ```
    ₿ BTC levels: spot $61,2k. ⚠️ Daily close $60,1k < $60,500 — downtrend
    continuation signal per 2026-06-09 advisor levels. Leveraged cbBTC position:
-   review levels at $40–45k (HF ~1.48–1.66). Not financial advice.
+   review trigger at ≤$45k (HF ~1.48–1.66 in the 40–45k band). Not financial
+   advice.
    ```
    No alert fired → no notification (quiet runs are the norm).
 
@@ -82,7 +107,8 @@ flags false/null and send no alerts on the first run (baseline run).
 
 ## Notes
 
-- Health-factor figures in alerts are the advisor's estimates for the band, not
-  live reads; do not present them as current values.
+- Health-factor figures in alerts are the advisor's estimates for the
+  $40–45k band, not live reads; below $40k state only that HF is worse than
+  ~1.48 — do not extrapolate a number.
 - Levels are owned by the advisor reports. If a future advisor report sets new
   levels, update this table and the state semantics in the same PR.
