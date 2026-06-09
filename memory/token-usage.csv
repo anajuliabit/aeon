@@ -340,3 +340,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-09,reppo-digest,claude-opus-4-7,27,19909,1643016,138808
 2026-06-09,market-context-refresh,claude-sonnet-4-6,337,27719,2204043,81216
 2026-06-09,security-digest,claude-opus-4-7,236,36378,4278813,122774
+2026-06-09,fleet-control,claude-opus-4-7,11,3886,349632,42406
