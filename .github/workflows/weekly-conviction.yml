@@ -1,0 +1,30 @@
+name: Weekly Conviction
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"   # Mondays 12:00 UTC (before the daily advisor at 13:00)
+  workflow_dispatch:
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Grade matured recs + weekly conviction report (claude-fable-5)
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
+          DASHBOARD_USER: ${{ secrets.DASHBOARD_USER }}
+          DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/grade-recs.sh \
+                   scripts/advisor/run-weekly.sh scripts/llm.sh scripts/llm-claude.sh
+          ./scripts/advisor/prefetch-data.sh
+          ./scripts/advisor/grade-recs.sh
+          ./scripts/advisor/run-weekly.sh

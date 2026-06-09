@@ -9,6 +9,15 @@ ledger: **20 mints + 39 votes** on-chain through 2026-06-09 (20th-mint
 420334cb 0x06cecfba 250 AAVE +$85,196 Sharpe 8458 = 2nd-highest pnl ever).
 
 ## Current Goals
+- **CAPITAL-2× PROGRAM (north star): double net worth by 2027-12-31.**
+  Asymmetric envelope: protected core (stables reserve, cbBTC structure,
+  locked vesting) + risk sleeve capped at 15–20% of net. Infrastructure:
+  daily history ledger + pace gauge on the dashboard (/api/performance),
+  decision-grade market data in the daily advisor (liquidity, funding,
+  FOMC/CPI calendar), recommendation scorecard (grade-recs.sh, Mondays),
+  weekly conviction report (weekly-conviction.yml, Mondays 12:00 UTC,
+  max 3 actions with entry/exit/invalidate levels). Spec:
+  docs/superpowers/specs/2026-06-09-capital-2x-program-design.md
 - **Monitor BTC hard levels for the leveraged cbBTC position** (advisor
   2026-06-09, conf 80%): leverage-review trigger at BTC $40–45k (HF
   ~1.48–1.66), daily close < $60,500 = downtrend continuation, reclaim of
