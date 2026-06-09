@@ -1,0 +1,99 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "token alert",
+        "description": "2026-06-09"
+      },
+      "children": [
+        "stat_gitlawb",
+        "text_volume",
+        "text_trigger",
+        "sep_1",
+        "heading_watchlist",
+        "stack_watchlist",
+        "text_observation"
+      ]
+    },
+    "stat_gitlawb": {
+      "type": "Stat",
+      "props": {
+        "label": "gitlawb",
+        "value": "$0.00010273",
+        "delta": "+18.74%",
+        "trend": "up"
+      }
+    },
+    "text_volume": {
+      "type": "Text",
+      "props": {
+        "text": "volume: $458k (vol-spike check skipped, n=4 logged points, need 5 — 6-06/6-07/6-08 token-alert didn't fire under the claude weekly rate-limit cluster)",
+        "variant": "body"
+      }
+    },
+    "text_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "trigger: 24h leg trips 15% threshold — first up-trip on the pr #55 watchlist. mean-reversion squeeze day 1 off the 6-05 post-capitulation low ($0.00007214 → $0.00010273 = +42.4% over 4 logged days, fully reverses the 6-04 -26.25% vertical break + 5-day downtrend that cumulated -38% off 6-01 baseline ~$0.000117).",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_watchlist": {
+      "type": "Heading",
+      "props": {
+        "text": "Rest of watchlist",
+        "level": "h3"
+      }
+    },
+    "stack_watchlist": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_well",
+        "stat_mamo",
+        "stat_reppo"
+      ]
+    },
+    "stat_well": {
+      "type": "Stat",
+      "props": {
+        "label": "well",
+        "value": "-1.05%",
+        "trend": "down"
+      }
+    },
+    "stat_mamo": {
+      "type": "Stat",
+      "props": {
+        "label": "mamo",
+        "value": "-0.03%",
+        "trend": "down"
+      }
+    },
+    "stat_reppo": {
+      "type": "Stat",
+      "props": {
+        "label": "reppo",
+        "value": "-5.34%",
+        "trend": "down"
+      }
+    },
+    "text_observation": {
+      "type": "Text",
+      "props": {
+        "text": "3-of-4 close to zero, gitlawb the lone breakout. opposite shape from 6-04's 4-of-4 red capitulation.",
+        "variant": "muted"
+      }
+    }
+  }
+}
