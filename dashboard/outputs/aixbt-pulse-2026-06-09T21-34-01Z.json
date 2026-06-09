@@ -1,0 +1,329 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse",
+        "description": "2026-06-09 21:00Z"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-section",
+        "sep1",
+        "macro-section",
+        "sep2",
+        "geo-section",
+        "sep3",
+        "tradfi-section",
+        "sep4",
+        "new-pull-section",
+        "sep5",
+        "bridge-section"
+      ]
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-heading",
+        "crypto-content"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "crypto-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-stat",
+        "fear-greed-stat",
+        "grayscale-text",
+        "fable5-text"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Bitcoin",
+        "value": "$61K"
+      }
+    },
+    "fear-greed-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "10"
+      }
+    },
+    "grayscale-text": {
+      "type": "Text",
+      "props": {
+        "text": "Grayscale calling undervaluation, traders watching $50–53K realized price as cycle floor. CLARITY Act is the new narrative hook."
+      }
+    },
+    "fable5-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fable 5 (Mythos) confirmed — AI-driven DeFi exploit scanner still dominant mindshare. Starknet ships STRK20 privacy framework same window."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "macro-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "macro-heading",
+        "macro-content"
+      ]
+    },
+    "macro-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO",
+        "level": "h2"
+      }
+    },
+    "macro-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cpi-stat",
+        "rate-hike-text"
+      ]
+    },
+    "cpi-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "CPI (y/y, expected tomorrow)",
+        "value": "4.2%"
+      }
+    },
+    "rate-hike-text": {
+      "type": "Text",
+      "props": {
+        "text": "Rate-hike bets shifting higher"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "geo-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "geo-heading",
+        "geo-content"
+      ]
+    },
+    "geo-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GEO",
+        "level": "h2"
+      }
+    },
+    "geo-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iran-deescal-text",
+        "iran-escalation-text",
+        "ceasefire-alert"
+      ]
+    },
+    "iran-deescal-text": {
+      "type": "Text",
+      "props": {
+        "text": "Iran de-escalation from the 10:00 pull lasted 11 hours"
+      }
+    },
+    "iran-escalation-text": {
+      "type": "Text",
+      "props": {
+        "text": "Renewed missile exchanges + US helicopter near Hormuz"
+      }
+    },
+    "ceasefire-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "Ceasefire under strain, oil rising",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tradfi-heading",
+        "tradfi-content"
+      ]
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "tradfi-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nasdaq-stat",
+        "energy-text"
+      ]
+    },
+    "nasdaq-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Nasdaq (on chip/AI dip-buying)",
+        "value": "+0.9%",
+        "trend": "up"
+      }
+    },
+    "energy-text": {
+      "type": "Text",
+      "props": {
+        "text": "Energy shocks transmitting into CPI — energy is the live inflation driver"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-pull-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-pull-heading",
+        "new-pull-content"
+      ]
+    },
+    "new-pull-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new-pull-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tokenized-eq-text",
+        "iran-deal-text",
+        "cpi-tomorrow-text"
+      ]
+    },
+    "tokenized-eq-text": {
+      "type": "Text",
+      "props": {
+        "text": "Tokenized equities on CEXes: OKX, Bitget, Backpack list stock products; Base posts $4T monthly stablecoin vol"
+      }
+    },
+    "iran-deal-text": {
+      "type": "Text",
+      "props": {
+        "text": "Iran deal narrative fully reversed in 12h — Trump comment ≠ deal"
+      }
+    },
+    "cpi-tomorrow-text": {
+      "type": "Text",
+      "props": {
+        "text": "CPI 4.2% tomorrow + rate-hike bets shifting"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bridge-heading",
+        "bridge-content"
+      ]
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge-content": {
+      "type": "Text",
+      "props": {
+        "text": "The 10:00 bridge call said the market priced a comment, not a deal. It printed. BTC went $63K → $61K, oil lifted, the relief trade unwound. Now CPI 4.2% tomorrow with rate-hike bets moving while Grayscale calls cycle floor and Morpho raises $175M into extreme fear. Monetary tightening + institutional accumulation clearing in the same session — they don't resolve on the same timeline. One of them is early."
+      }
+    }
+  }
+}
