@@ -1,1 +1,1 @@
-action-converter: 5 actions staged
+Action Converter — 5 actions for 2026-06-09 staged. Shape: extend reppo fallback before 6-11 deadline, switch on_error to fail-fast at aeon.yml:309, ship iss-016 own-pods prefetch script, codify trading-agent step 4/4.2, populate on-chain-watches.yml. Quality avg 4.4/5 across 5 named PR/file targets. Full breakdown in .pending-notify/1781040000-action-converter.md for post-run delivery.

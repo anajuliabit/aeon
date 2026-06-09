@@ -1,0 +1,192 @@
+{
+  "root": "root-card",
+  "state": {},
+  "elements": {
+    "root-card": {
+      "type": "Card",
+      "props": {
+        "title": "Action Converter",
+        "description": "5 actions for 2026-06-09"
+      },
+      "children": [
+        "meta-info",
+        "separator-1",
+        "actions-section",
+        "separator-2",
+        "quality-section",
+        "separator-3",
+        "breakdown-section"
+      ]
+    },
+    "meta-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "date-badge",
+        "status-badge",
+        "count-badge"
+      ]
+    },
+    "date-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-06-09",
+        "variant": "secondary"
+      }
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "default"
+      }
+    },
+    "count-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "5 actions",
+        "variant": "outline"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "actions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions-heading",
+        "actions-list"
+      ]
+    },
+    "actions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions",
+        "level": "h3"
+      }
+    },
+    "actions-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Text",
+      "props": {
+        "text": "Extend reppo fallback before 6-11 deadline"
+      }
+    },
+    "action-2": {
+      "type": "Text",
+      "props": {
+        "text": "Switch on_error to fail-fast at aeon.yml:309"
+      }
+    },
+    "action-3": {
+      "type": "Text",
+      "props": {
+        "text": "Ship iss-016 own-pods prefetch script"
+      }
+    },
+    "action-4": {
+      "type": "Text",
+      "props": {
+        "text": "Codify trading-agent step 4/4.2"
+      }
+    },
+    "action-5": {
+      "type": "Text",
+      "props": {
+        "text": "Populate on-chain-watches.yml"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "quality-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "quality-label",
+        "quality-stat"
+      ]
+    },
+    "quality-label": {
+      "type": "Text",
+      "props": {
+        "text": "Quality across 5 named PR/file targets",
+        "variant": "caption"
+      }
+    },
+    "quality-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "4.4/5"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "breakdown-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "breakdown-label",
+        "breakdown-link",
+        "delivery-note"
+      ]
+    },
+    "breakdown-label": {
+      "type": "Text",
+      "props": {
+        "text": "Full breakdown:",
+        "variant": "caption"
+      }
+    },
+    "breakdown-link": {
+      "type": "Link",
+      "props": {
+        "label": ".pending-notify/1781040000-action-converter.md",
+        "href": ".pending-notify/1781040000-action-converter.md"
+      }
+    },
+    "delivery-note": {
+      "type": "Text",
+      "props": {
+        "text": "For post-run delivery",
+        "variant": "muted"
+      }
+    }
+  }
+}
