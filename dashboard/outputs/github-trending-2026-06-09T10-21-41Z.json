@@ -1,0 +1,707 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-06-09"
+      },
+      "children": [
+        "top_pick_section",
+        "sep1",
+        "ai_section",
+        "sep2",
+        "infra_section",
+        "sep3",
+        "data_section",
+        "sep4",
+        "footer"
+      ]
+    },
+    "top_pick_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_pick_label",
+        "top_pick_intro",
+        "top_pick_repo"
+      ]
+    },
+    "top_pick_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "top_pick_intro": {
+      "type": "Text",
+      "props": {
+        "text": "one agent skill at +3,558 stars in a day — research-across-the-internet is the pattern minting attention this week, not another model release.",
+        "variant": "body"
+      }
+    },
+    "top_pick_repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top_pick_title",
+        "top_pick_stats",
+        "top_pick_meta",
+        "top_pick_desc"
+      ]
+    },
+    "top_pick_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mvanhorn/last30days-skill",
+        "href": "https://github.com/mvanhorn/last30days-skill"
+      }
+    },
+    "top_pick_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "top_pick_stars_today",
+        "top_pick_stars_total"
+      ]
+    },
+    "top_pick_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "+3,558"
+      }
+    },
+    "top_pick_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "35.9k"
+      }
+    },
+    "top_pick_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "top_pick_lang",
+        "top_pick_status"
+      ]
+    },
+    "top_pick_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "top_pick_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "top_pick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "researches any topic across reddit / x / youtube / hn / polymarket / web, then synthesizes a grounded summary — one skill, six sources.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ai_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ai_label",
+        "ai_repos"
+      ]
+    },
+    "ai_label": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "ai_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "ai_repo1",
+        "ai_repo2",
+        "ai_repo3",
+        "ai_repo4"
+      ]
+    },
+    "ai_repo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_repo1_title",
+        "ai_repo1_stats",
+        "ai_repo1_meta",
+        "ai_repo1_desc"
+      ]
+    },
+    "ai_repo1_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mvanhorn/last30days-skill",
+        "href": "https://github.com/mvanhorn/last30days-skill"
+      }
+    },
+    "ai_repo1_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ai_repo1_stars_today",
+        "ai_repo1_stars_total"
+      ]
+    },
+    "ai_repo1_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "+3.5k"
+      }
+    },
+    "ai_repo1_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "35.9k"
+      }
+    },
+    "ai_repo1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_repo1_lang",
+        "ai_repo1_status"
+      ]
+    },
+    "ai_repo1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "ai_repo1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "ai_repo1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "researches any topic across reddit / x / youtube / hn / polymarket / web, then synthesizes a grounded summary — one skill, six sources.",
+        "variant": "body"
+      }
+    },
+    "ai_repo2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_repo2_title",
+        "ai_repo2_stats",
+        "ai_repo2_meta",
+        "ai_repo2_desc"
+      ]
+    },
+    "ai_repo2_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MemPalace/mempalace",
+        "href": "https://github.com/MemPalace/mempalace"
+      }
+    },
+    "ai_repo2_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ai_repo2_stars_today",
+        "ai_repo2_stars_total"
+      ]
+    },
+    "ai_repo2_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "+170"
+      }
+    },
+    "ai_repo2_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "55.1k"
+      }
+    },
+    "ai_repo2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_repo2_lang",
+        "ai_repo2_status"
+      ]
+    },
+    "ai_repo2_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "ai_repo2_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "ai_repo2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "open-source AI memory topping the public benchmark sweep — 55k stars in 65 days, no paid tier.",
+        "variant": "body"
+      }
+    },
+    "ai_repo3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_repo3_title",
+        "ai_repo3_stats",
+        "ai_repo3_meta",
+        "ai_repo3_desc"
+      ]
+    },
+    "ai_repo3_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Panniantong/Agent-Reach",
+        "href": "https://github.com/Panniantong/Agent-Reach"
+      }
+    },
+    "ai_repo3_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ai_repo3_stars_today",
+        "ai_repo3_stars_total"
+      ]
+    },
+    "ai_repo3_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "+679"
+      }
+    },
+    "ai_repo3_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "25.0k"
+      }
+    },
+    "ai_repo3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_repo3_lang",
+        "ai_repo3_status"
+      ]
+    },
+    "ai_repo3_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "ai_repo3_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "ai_repo3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "one CLI reads twitter, reddit, youtube, github, bilibili, xiaohongshu — no API keys, no per-call fees.",
+        "variant": "body"
+      }
+    },
+    "ai_repo4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_repo4_title",
+        "ai_repo4_stats",
+        "ai_repo4_meta",
+        "ai_repo4_desc"
+      ]
+    },
+    "ai_repo4_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "santifer/career-ops",
+        "href": "https://github.com/santifer/career-ops"
+      }
+    },
+    "ai_repo4_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ai_repo4_stars_today",
+        "ai_repo4_stars_total"
+      ]
+    },
+    "ai_repo4_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "+308"
+      }
+    },
+    "ai_repo4_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "51.0k"
+      }
+    },
+    "ai_repo4_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_repo4_lang",
+        "ai_repo4_status"
+      ]
+    },
+    "ai_repo4_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "JavaScript",
+        "variant": "secondary"
+      }
+    },
+    "ai_repo4_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "ai_repo4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "claude code skill pack built for job hunting — 14 skill modes, go dashboard, batched PDF resumes.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "infra_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "infra_label",
+        "infra_repos"
+      ]
+    },
+    "infra_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "infra_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "infra_repo1"
+      ]
+    },
+    "infra_repo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "infra_repo1_title",
+        "infra_repo1_stats",
+        "infra_repo1_meta",
+        "infra_repo1_desc"
+      ]
+    },
+    "infra_repo1_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "RyanCodrai/turbovec",
+        "href": "https://github.com/RyanCodrai/turbovec"
+      }
+    },
+    "infra_repo1_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "infra_repo1_stars_today",
+        "infra_repo1_stars_total"
+      ]
+    },
+    "infra_repo1_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "+1.7k"
+      }
+    },
+    "infra_repo1_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "9.6k"
+      }
+    },
+    "infra_repo1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "infra_repo1_lang",
+        "infra_repo1_status"
+      ]
+    },
+    "infra_repo1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust+Python",
+        "variant": "secondary"
+      }
+    },
+    "infra_repo1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "infra_repo1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "first production vector index built on the turboquant quantization paper — rust core, python bindings.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "data_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "data_label",
+        "data_repos"
+      ]
+    },
+    "data_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Data",
+        "level": "h3"
+      }
+    },
+    "data_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "data_repo1"
+      ]
+    },
+    "data_repo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "data_repo1_title",
+        "data_repo1_stats",
+        "data_repo1_meta",
+        "data_repo1_desc"
+      ]
+    },
+    "data_repo1_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "roboflow/supervision",
+        "href": "https://github.com/roboflow/supervision"
+      }
+    },
+    "data_repo1_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "data_repo1_stars_today",
+        "data_repo1_stars_total"
+      ]
+    },
+    "data_repo1_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "+1.3k"
+      }
+    },
+    "data_repo1_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "42.6k"
+      }
+    },
+    "data_repo1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "data_repo1_lang",
+        "data_repo1_status"
+      ]
+    },
+    "data_repo1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "data_repo1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      }
+    },
+    "data_repo1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "established CV toolbox back on the board after 3+ years — release-driven, not a new launch.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 6/16",
+        "variant": "caption"
+      }
+    }
+  }
+}
