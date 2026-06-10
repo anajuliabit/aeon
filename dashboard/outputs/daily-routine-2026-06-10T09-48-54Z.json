@@ -1,0 +1,100 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "daily-routine",
+        "description": "2026-06-10"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_status",
+        "sep1",
+        "stack_items",
+        "sep2",
+        "text_message"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "queued",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_top_movers",
+        "item_paper",
+        "item_github",
+        "item_hn",
+        "item_tweets"
+      ]
+    },
+    "item_top_movers": {
+      "type": "Text",
+      "props": {
+        "text": "top movers"
+      }
+    },
+    "item_paper": {
+      "type": "Text",
+      "props": {
+        "text": "paper BAGEN 2606.00198"
+      }
+    },
+    "item_github": {
+      "type": "Text",
+      "props": {
+        "text": "11th silent github day"
+      }
+    },
+    "item_hn": {
+      "type": "Text",
+      "props": {
+        "text": "hn fable 5 cluster"
+      }
+    },
+    "item_tweets": {
+      "type": "Text",
+      "props": {
+        "text": "tweet roundup"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_message": {
+      "type": "Text",
+      "props": {
+        "text": "message at .pending-notify/daily-routine-2026-06-10.md (2398 chars)",
+        "variant": "muted"
+      }
+    }
+  }
+}
