@@ -12,6 +12,10 @@ week's marching orders — few, high-conviction, fully specified.
   after your actions must stay **between 0 and 20% of net worth** (target band 15–20% when
   conviction is high, less when not).
 - Advisory only — never instruct execution. The operator trades manually, roughly weekly.
+- **Sizing discipline:** the `sizing` datablock derives a quarter-Kelly ceiling from your
+  measured hit rate. When `gradedSample >= 20`, cap total sleeve exposure at
+  min(quarterKellyPctOfNet, 20)% and say you did; with a smaller sample, stay in the default
+  band and note the sample is still too small for Kelly sizing.
 
 ### What to produce
 1. **paceVerdict** — from the `performance` data: on/off the 2× trajectory, by how much, the

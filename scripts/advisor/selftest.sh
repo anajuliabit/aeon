@@ -76,4 +76,19 @@ CAL='{"updated":"2026-06-09","coverage":{},"events":[{"date":"2026-06-10","type"
 GOT=$(printf '%s' "$CAL" | jq -c --arg today "2026-06-09" --arg until "2026-06-23" '{updated, coverage, events: [.events[] | select(.date >= $today and .date <= $until)]} | .events | length')
 check "macro filter keeps only in-window events" "$GOT" "1"
 
+# --- notify-drawdown band logic ---
+ddband() { local out=0 b; for b in 10 15 20 30; do if python3 -c "exit(0 if $1 >= $b else 1)"; then out=$b; fi; done; echo "$out"; }
+check "dd 15.45 -> band 15" "$(ddband 15.45)" "15"
+check "dd 9.9 -> band 0" "$(ddband 9.9)" "0"
+check "dd 31 -> band 30" "$(ddband 31)" "30"
+
+# --- run-weekly quarter-Kelly sizing jq ---
+KSC='{"grades":[]}'
+for i in $(seq 1 15); do KSC=$(printf '%s' "$KSC" | jq '.grades += [{"result":"hit"}]'); done
+for i in $(seq 1 10); do KSC=$(printf '%s' "$KSC" | jq '.grades += [{"result":"miss"}]'); done
+KOUT=$(printf '%s' "$KSC" | jq -c '([.grades[]? | select(.result == "hit")] | length) as $h | ([.grades[]? | select(.result == "miss")] | length) as $m | ($h + $m) as $n | if $n >= 20 then ($h / $n) as $p | {gradedSample: $n, quarterKellyPctOfNet: ((([(2 * $p - 1), 0] | max) / 4) * 100 | round)} else {gradedSample: $n} end')
+check "kelly 60% hit rate -> 5% quarter-kelly" "$(printf '%s' "$KOUT" | jq -r '.quarterKellyPctOfNet')" "5"
+KSMALL=$(printf '{"grades":[{"result":"hit"},{"result":"miss"}]}' | jq -c '([.grades[]? | select(.result == "hit")] | length) as $h | ([.grades[]? | select(.result == "miss")] | length) as $m | ($h + $m) as $n | if $n >= 20 then {kelly: true} else {gradedSample: $n} end')
+check "kelly small sample gated" "$(printf '%s' "$KSMALL" | jq -r 'has("kelly") | tostring')" "false"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }

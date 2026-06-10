@@ -43,6 +43,21 @@ filecache() { # label, file, jq-filter
 PERFORMANCE=$(api /api/performance | jq -c '.' 2>/dev/null || true)
 SCORECARD=$(api /api/advisor/scorecard | jq -c '{accuracy, recent: (.grades | sort_by(.gradedAt) | reverse | .[0:15])}' 2>/dev/null || true)
 
+# Quarter-Kelly sleeve ceiling from the measured hit rate (hits vs misses;
+# neutrals excluded). Only meaningful once >= 20 graded directional calls.
+SIZING=$(api /api/advisor/scorecard | jq -c '
+  ([.grades[]? | select(.result == "hit")] | length) as $h
+  | ([.grades[]? | select(.result == "miss")] | length) as $m
+  | ($h + $m) as $n
+  | if $n >= 20 then
+      ($h / $n) as $p
+      | {gradedSample: $n, hitRate: ($p * 100 | round / 100),
+         quarterKellyPctOfNet: ((([(2 * $p - 1), 0] | max) / 4) * 100 | round),
+         rule: "cap sleevePctOfNet at min(quarterKellyPctOfNet, 20)"}
+    else
+      {gradedSample: $n, rule: "insufficient graded sample (<20) — default 15-20% band applies"}
+    end' 2>/dev/null || true)
+
 WEEK_FINDINGS="[]"
 for d in 0 1 2 3 4 5 6; do
   DAY=$(date -u -d "-${d} days" +%Y-%m-%d 2>/dev/null || date -u -v-${d}d +%Y-%m-%d)
@@ -58,6 +73,7 @@ done
 PROMPT="$(cat "$PROMPTS/weekly_conviction.md")
 $(datablock performance "$PERFORMANCE")
 $(datablock scorecard "$SCORECARD")
+$(datablock sizing "$SIZING")
 $(datablock week_reports "$WEEK_FINDINGS")
 $(filecache snapshot snapshot.json '{totalUsd, analytics:{allocation:.analytics.allocation, assets:.analytics.assets, vesting:.analytics.vesting, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}')
 $(filecache liquidity gt-liquidity.json '.')

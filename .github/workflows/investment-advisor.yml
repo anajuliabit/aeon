@@ -23,7 +23,9 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/advisor/notify-vesting.sh scripts/llm.sh scripts/llm-claude.sh
+          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/advisor/notify-vesting.sh scripts/advisor/notify-drawdown.sh scripts/advisor/notify-yield-delta.sh scripts/llm.sh scripts/llm-claude.sh
           ./scripts/advisor/prefetch-data.sh
           ./scripts/advisor/run.sh
           ./scripts/advisor/notify-vesting.sh
+          ./scripts/advisor/notify-drawdown.sh
+          ./scripts/advisor/notify-yield-delta.sh
