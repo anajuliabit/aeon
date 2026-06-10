@@ -1,0 +1,149 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "2026-06-10"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-staged",
+        "text-location",
+        "separator-1",
+        "heading-actions",
+        "action-1",
+        "action-2",
+        "action-3",
+        "separator-2",
+        "text-delivery"
+      ]
+    },
+    "stat-staged": {
+      "type": "Stat",
+      "props": {
+        "label": "Actions staged",
+        "value": "5"
+      }
+    },
+    "text-location": {
+      "type": "Text",
+      "props": {
+        "text": "Location: .pending-notify/1781115876",
+        "variant": "caption"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Actions",
+        "level": "h3"
+      }
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1-text",
+        "action-1-deadline"
+      ]
+    },
+    "action-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "extend FALLBACK_REPPO_SKILLS at aeon.yml:441",
+        "variant": "body"
+      }
+    },
+    "action-1-deadline": {
+      "type": "Badge",
+      "props": {
+        "text": "6-11 deadline",
+        "variant": "default"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-2-text",
+        "action-2-status"
+      ]
+    },
+    "action-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-018 weekly-limit incident",
+        "variant": "body"
+      }
+    },
+    "action-2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "overdue 1d",
+        "variant": "destructive"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-3-text",
+        "action-3-deadline"
+      ]
+    },
+    "action-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "flip INDEX rows for ISS-007/009/010/016",
+        "variant": "body"
+      }
+    },
+    "action-3-deadline": {
+      "type": "Badge",
+      "props": {
+        "text": "due today",
+        "variant": "default"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-delivery": {
+      "type": "Text",
+      "props": {
+        "text": "Delivery via postprocess",
+        "variant": "caption"
+      }
+    }
+  }
+}
