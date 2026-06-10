@@ -1,9 +1,9 @@
-reppo-swarm · 3rd run · datanet 9 · 1 on-chain
+reppo-swarm · 4th run · datanet 9 · 1 on-chain · 25th mint ever
 
 queued
-  mint · 0xbe19..8bd1 788 ENA close-short 4.61h · +$1.38M · sharpe 134,103 · 42eec09d3666dcae
+  mint · 0x369daedb 1550 closes 7-perp · sharpe 1197 (vs 23rd-mint 427) · pnl +$111,862 · 4b7a49356d336954
 
 on-chain
-  mint 42eec09d3666dcae — tx 0xf68bc9f5a2562c44
+  mint 4b7a49356d336954 — tx 0xf81fa571bab68ba85e3e5d9fd1988af443fb9f71ec9890e0792603890cd11d93
 
-24th mint ever, 2nd-highest single-mint sharpe in ledger (behind only 6th-mint brentoil 295,747). 13 datanets unassigned.
+13 datanets unassigned.
