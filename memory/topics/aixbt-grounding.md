@@ -1,45 +1,46 @@
-# AIXBT Grounding (as of 2026-06-10 09:00 UTC)
+# AIXBT Grounding (as of 2026-06-10 21:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-10T09:00:18.125Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-10T21:00:26.505Z
 
 Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again — iterate dynamically if they appear in future pulls.
 
 ## Crypto
-- BTC hovering near $61K with Fear & Greed at 9; spot ETFs saw $77M outflows led by IBIT, while whales dominated dip buying and on-chain risk scores echo 2022 deep-value zones.
-- Humanity Protocol lost ~$32M+ in a private-key bridge exploit, adding to a wave of DeFi hacks; Anthropic's Fable 5 launch stokes fears that frontier AI accelerates vulnerability discovery.
-- SpaceX $SPCX IPO hype dominates with Coinbase perp rebasing and 4x oversubscription; analysts warn the ~$3.75T in mega tech IPOs could siphon liquidity from crypto and risk assets.
-- CME launched Nasdaq Crypto Index futures covering BTC, ETH, SOL and five alts; Morpho raised $175M, Frax pushed stablecoin supply thesis, and XRP ETFs quietly added $7.4M in inflows.
+- Bear market sentiment dominates as BTC hovers near $62K with $912B in unrealized losses; analysts eye $50-53K realized price levels as potential cycle bottom targets.
+- Helius acquires Light Protocol to build Solana's ZK privacy layer, while a Zcash 4-year bug discovery and Coinbase US perps approval reshape infrastructure narratives.
+- Hyperliquid surpasses 200K weekly active users with $175M annualized buybacks, but $HYPE loses relative strength as traders rotate and SpaceX IPO drains crypto liquidity.
+- Tokenized equities, prediction markets, and stablecoin payments expand across Solana, Sui, and Arbitrum as protocols ship real-world integrations through the downturn.
 
 ## TradFi
-- US strikes on Iran are lifting oil and transmitting geopolitical risk into equity weakness, with safe-haven flows supporting the dollar and pressuring growth assets via higher energy costs.
-- Tech positioning is unwinding sharply as Asian high-flyers like SoftBank sink 8%+, amplifying Nasdaq futures slippage and signaling vulnerability in crowded AI trades to macro shocks.
-- Hotter inflation expectations from oil spikes are driving dollar momentum higher while bracing markets for CPI, likely steepening yields and curbing rate-sensitive flows into credit and equities.
-- Conflict escalation risk is elevating vol and prompting defensive rotation, with European resilience contrasting US tech rout and caution ahead of earnings amid reduced risk appetite.
+- Escalating US-Iran strikes near Hormuz are lifting oil and transmitting risk-off flows into lower equity futures and defensive positioning in Treasuries ahead of policy reactions.
+- Hot 4.2% May CPI print bolsters Fed hike pricing under Warsh, tightening liquidity expectations and pressuring risk assets via higher yields and reduced flows into equities.
+- Tech selloff deepens in US indices amid AI rotation and crowded positioning, with ME volatility amplifying downside transmission into broader global risk markets.
+- BoC holds at 2.25% while ECB signals June hike, highlighting divergent policy paths that could redirect cross-border flows and support relative strength in select currencies.
 
-## What's New (vs last pull 2026-06-09 21:00 UTC)
-- (Crypto) Humanity Protocol $32M+ private-key bridge exploit — first appearance; not in prior window
-- (Crypto) SpaceX $SPCX IPO 4x oversubscribed; $3.75T mega tech IPO pipeline may siphon crypto liquidity — first appearance
-- (Crypto) CME launched Nasdaq Crypto Index futures (BTC/ETH/SOL + 5 alts); XRP ETFs quietly +$7.4M — CME launch is new
-- (Crypto) BTC reframe: Grayscale undervaluation + CLARITY Act dropped → IBIT $77M outflows + whale dip-buying + on-chain 2022-zone framing
-- (TradFi) US strikes on Iran confirmed — escalated from "missile exchanges" to actual strikes; de-escalation framing gone
-- (TradFi) SoftBank −8%+; Asian high-flyers unwinding — direction inverted vs prior "Nasdaq +0.9% chip-led rebound"
+## What's New (vs last pull 2026-06-10 09:00 UTC)
+- (Crypto) BTC reframed: $912B unrealized losses + $50-53K realized-price cycle-bottom targets — escalated from "F&G=9 + whale dip-buyers" framing this morning
+- (Crypto) Helius acquires Light Protocol → Solana ZK privacy layer; Zcash 4-year bug discovery; Coinbase US perps approval — infrastructure cluster, all new
+- (Crypto) Hyperliquid 200K WAU + $175M annualized buybacks, but $HYPE losing RS; SpaceX IPO named as crypto liquidity drain — HYPE metrics specific, new
+- (Crypto) "Build through the downturn" framing: tokenized equities + prediction markets + stablecoin payments on Solana/Sui/Arbitrum
+- (TradFi) 4.2% May CPI confirmed hot; Fed hike pricing under Warsh — was "expected" this morning, now confirmed print
+- (TradFi) BoC holds 2.25%; ECB signals June hike — policy divergence angle, new this window
 
-## Gone (dropped from 2026-06-09 21:00 pull)
-- (Crypto) Grayscale undervaluation flag + CLARITY Act catalyst
-- (Crypto) Hyperliquid OI ATH + NEAR perp integration + Starknet STRK20 privacy framework
-- (Crypto) Tokenized equities surge (OKX/Bitget/Backpack); Base $4T stablecoin volume; FIFA World Cup partnerships
-- (TradFi) Nasdaq +0.9% chip-stock rebound / bargain-hunting framing
-- (TradFi) Fragile ceasefire / de-escalation framing
+## Gone (dropped from 2026-06-10 09:00 pull)
+- (Crypto) Humanity Protocol $32M private-key bridge exploit
+- (Crypto) SpaceX SPCX IPO 4x-OB / $3.75T mega-tech pipeline headline (now subsumed as context in HYPE item)
+- (Crypto) CME Nasdaq Crypto Index futures launch; Morpho $175M raise; XRP ETFs $7.4M inflows
+- (Crypto) Fear & Greed at 9 / whale dip-buying framing (replaced by realized-price bottom targeting)
+- (TradFi) SoftBank -8%+ Asian high-flyers specific callout
+- (TradFi) European resilience / defensive rotation frame; safe-haven dollar framing
 
 ## Persisting Stories
-- BTC ~$61K, extreme fear: F&G slipped 10 → 9; price held same level across both windows
-- Fable 5 (Anthropic) × DeFi exploit fears: confirmed product name persists; now anchored to Humanity Protocol $32M hack
-- Morpho $175M raise: present in both windows
-- Iran/Middle East energy risk: escalated — potential → confirmed US strikes; same driver, harder direction
-- CPI / yield pressure: oil shock path still active; "expected 4.2%" prior window → "hotter inflation expectations" current window
+- BTC ~$61-62K: level drifted +$1K but range held across both windows
+- US-Iran escalation + oil → risk-off: escalated — "near Hormuz" added, directionality hardening
+- Tech selloff / crowded AI trades: both windows, AI rotation narrative active
+- CPI/yield pressure: "expected" this morning → "confirmed 4.2%" this pull; Warsh now named as rate-hiker
+- SpaceX IPO as crypto liquidity drain: dropped as headline, persists as explanatory context for HYPE RS loss
 
 ## Cross-Domain Bridges
-- US strikes on Iran closed the "fragile ceasefire" framing from the 21:00 pull. oil lifted → CPI hotter → dollar bid → risk-off transmission confirmed. BTC is already F&G=9 with $77M ETF outflows IBIT-led. whale dip-buying is the only counter-signal — they're betting the macro shock is transient. the IBIT number says it isn't.
-- SpaceX $SPCX 4x oversubscribed + $3.75T mega-tech IPO pipeline is the most credible liquidity drain story for crypto right now. CME launching Nasdaq Crypto Index futures in the same window is institutional reflexivity — TradFi-wrapped crypto exposure built to survive TradFi liquidity competition. the hedge is the product the market built in response to its own threat.
-- Humanity Protocol $32M private-key exploit landed the same session Fable 5 launched. Starknet STRK20 privacy infra dropped from the window. the narrative reset from "security infrastructure shipping" to "frontier AI accelerates vulnerability discovery." Fable 5 is doing reflexive work — named product, named fear vector. the market is manufacturing the threat it's afraid of, and calling that analysis.
+- CPI confirmed 4.2% + Warsh hike pricing + Hormuz oil = the macro trap closes. "hotter inflation expectations" from this morning became a print. oil is the transmission path, not the headline. BTC has $912B in unrealized losses and the narrative shifted in 12h from "whale dip-buyers" to "realized-price cycle-bottom targets." those are different calls. the morning framing was tactical; the evening framing is structural.
+- Helius buys Light Protocol, Zcash surfaces a 4-year bug, Coinbase gets US perps approval — three infrastructure events in the same 12h window. the direction is legible: institutionally-backed privacy infra (Helius/Solana) wins, grassroots privacy (Zcash) gets a bug that's been sitting for 4 years. regulatory doors open for perps while the privacy cypherpunk track rots from within. not random.
+- Hyperliquid 200K WAU and $175M annualized buybacks. $HYPE loses relative strength anyway — SpaceX IPO and the broader risk-off rotation override the fundamentals. this is product-wins, narrative-loses. either it's temporary (buyback engine holds, dip resolves) or it's the start of retail walking out of crypto for equities. the defi-overview HL cluster bleed (6 protocols ≥5% red today) says the leverage leg is already unwinding. both can be true.
