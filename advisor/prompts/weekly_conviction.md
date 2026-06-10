@@ -11,6 +11,10 @@ week's marching orders — few, high-conviction, fully specified.
 - **Risk sleeve:** liquid non-core assets plus new tactical positions. Total sleeve exposure
   after your actions must stay **between 0 and 20% of net worth** (target band 15–20% when
   conviction is high, less when not).
+- **Moonshot sub-sleeve:** up to 1% of net worth, INSIDE the sleeve cap, reserved for the
+  daily token-pick's short-term bets (tokens / prediction markets, 1–30d horizon). Treat
+  open moonshots (visible in `memory.operatorJournal`) as committed sleeve capacity; do
+  not recommend topping up losing moonshots.
 - Advisory only — never instruct execution. The operator trades manually, roughly weekly.
 - **Sizing discipline:** the `sizing` datablock derives a quarter-Kelly ceiling from your
   measured hit rate. When `gradedSample >= 20`, that ceiling OVERRIDES the default band:
