@@ -102,9 +102,14 @@ fi
 # gitignored snapshot cache — never committed.
 if [ -f "$D/snapshot.json" ]; then
   MAJORS='["btc","wbtc","cbbtc","tbtc","eth","weth","wsteth","usdc","usdt","dai","usds","susds","usde","gho"]'
+  # Top 4 BY POSITION VALUE (assets are one row per symbol already): `unique`
+  # would sort alphabetically and let dust symbols crowd out the holdings that
+  # actually need liquidity sizing (e.g. MAMO/REPPO).
   MICRO_SYMS=$(jq -r --argjson majors "$MAJORS" '
-    [.analytics.assets[]? | select(.isStable | not) | .symbol | ascii_downcase]
-    | unique | map(select(. as $s | $majors | index($s) | not)) | .[0:4] | join(" ")' \
+    [.analytics.assets[]? | select(.isStable | not)]
+    | sort_by(-.valueUsd)
+    | map(.symbol | ascii_downcase)
+    | map(select(. as $s | $majors | index($s) | not)) | .[0:4] | join(" ")' \
     "$D/snapshot.json" 2>/dev/null)
   : > "$D/gt-liquidity.tmp"
   for TOK in $MICRO_SYMS; do
