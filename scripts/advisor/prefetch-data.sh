@@ -90,6 +90,28 @@ else
   echo "advisor-prefetch: XAI_API_KEY not set, skipping x_search (optional)"
 fi
 
+# --- Advisor memory: last 7 daily reports + scorecard accuracy ---
+# The advisor's own past output, distilled (summaries + structured recs), so the
+# PM can hold a consistent line day-to-day instead of reasoning from scratch.
+if [ -n "${DASHBOARD_PASSWORD:-}" ]; then
+  MEM_REPORTS="[]"
+  md=1
+  while [ "$md" -le 7 ]; do
+    MDAY=$(date -u -d "-${md} days" +%Y-%m-%d 2>/dev/null || date -u -v-${md}d +%Y-%m-%d)
+    md=$((md + 1))
+    MRUN=$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}"       "$BASE/api/advisor/run?date=$MDAY" 2>/dev/null || true)
+    MSLIM=$(printf '%s' "$MRUN" | jq -c 'select(.report != null) | {date,
+      summary: .report.summary,
+      recommendations: [(.report.recommendations // [])[]
+        | {title, action, urgency, confidence, symbol, direction, level, invalidateLevel, horizonDays}]}'       2>/dev/null || true)
+    [ -n "$MSLIM" ] && MEM_REPORTS=$(printf '%s' "$MEM_REPORTS" | jq -c --argjson r "$MSLIM" '. + [$r]')
+  done
+  MACC=$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}"     "$BASE/api/advisor/scorecard" 2>/dev/null | jq -c '.accuracy // {}' 2>/dev/null || echo '{}')
+  jq -n --argjson reports "$MEM_REPORTS" --argjson acc "$MACC"     '{pastReports: $reports, scorecardAccuracy: $acc}' > "$D/advisor-memory.json"     && echo "ok advisor-memory.json ($(printf '%s' "$MEM_REPORTS" | jq 'length') past reports)"
+else
+  echo "advisor-prefetch: no DASHBOARD_PASSWORD, skipping advisor-memory"
+fi
+
 # NOTE (spec phase-2): DefiLlama emissions/unlocks (unlocks.json) is intentionally
 # NOT fetched — api.llama.fi/emissions moved behind the paid plan (verified
 # 2026-06-09: "Upgrade to the paid API plan"). Vesting for HELD tokens is already

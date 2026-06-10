@@ -300,7 +300,8 @@ $PM_FINDINGS
 <<<END>>>
 <<<DATA debate>>>
 $PM_DEBATE
-<<<END>>>"
+<<<END>>>
+$(datablock memory advisor-memory.json '.')"
 
 REPORT="$(complete "$pm_prompt")" || true
 if [ -z "$REPORT" ] || ! printf '%s' "$REPORT" | jq -e '.summary' >/dev/null 2>&1; then
