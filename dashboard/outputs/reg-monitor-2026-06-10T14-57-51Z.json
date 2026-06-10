@@ -1,0 +1,135 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "reg-monitor",
+        "description": "2026-06-10"
+      },
+      "children": [
+        "stats_row",
+        "sep1",
+        "active_updates",
+        "sep2",
+        "digest_status"
+      ]
+    },
+    "stats_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_active",
+        "stat_watch",
+        "stat_context"
+      ]
+    },
+    "stat_active": {
+      "type": "Stat",
+      "props": {
+        "label": "Active",
+        "value": "4"
+      }
+    },
+    "stat_watch": {
+      "type": "Stat",
+      "props": {
+        "label": "Watch",
+        "value": "3"
+      }
+    },
+    "stat_context": {
+      "type": "Stat",
+      "props": {
+        "label": "Context",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "active_updates": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_active",
+        "item1",
+        "item2",
+        "item3",
+        "item4"
+      ]
+    },
+    "heading_active": {
+      "type": "Heading",
+      "props": {
+        "text": "Active Items",
+        "level": "h3"
+      }
+    },
+    "item1": {
+      "type": "Text",
+      "props": {
+        "text": "CFTC owned the window with the BTC-perp DCM authorization"
+      }
+    },
+    "item2": {
+      "type": "Text",
+      "props": {
+        "text": "Event-contracts NPRM"
+      }
+    },
+    "item3": {
+      "type": "Text",
+      "props": {
+        "text": "Polymarket joined the CFTC+Kalshi Minnesota suit"
+      }
+    },
+    "item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "mica_text",
+        "mica_badge"
+      ]
+    },
+    "mica_text": {
+      "type": "Text",
+      "props": {
+        "text": "MiCA transition clock:"
+      }
+    },
+    "mica_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "T-21d",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "digest_status": {
+      "type": "Alert",
+      "props": {
+        "message": "Full digest staged",
+        "type": "info"
+      }
+    }
+  }
+}
