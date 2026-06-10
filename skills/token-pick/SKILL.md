@@ -65,6 +65,15 @@ WebFetch fallback on failure. Track `poly=ok|fail`.
 
 Before scoring, gather tactical candidates beyond the price screens:
 
+0. **X trade scan (primary)**: read `.xai-cache/token-pick-x.json` if it exists — a
+   pre-fetched Grok x_search of short-term opportunities from credible accounts
+   (catalyst-dated token calls, flow callouts, prediction-market mispricings).
+   Shill filter before considering ANY candidate: it must carry a NAMED catalyst
+   with a date or a quantifiable claim, and must not come from an anon account
+   with <1k followers making its only claim. Cross-check every surviving token
+   candidate against the CoinGecko/DexScreener data from step 1 (price, mcap,
+   volume) before it enters scoring — never score a token on tweet text alone.
+   If the cache file is missing, skip silently (the XAI prefetch was unavailable).
 1. **WebSearch** 2–3 queries like "crypto catalyst this week", "token unlock listing
    announcement <today's month>", "Polymarket mispriced market news" — collect any
    named, dated catalysts (listings, unlocks, votes, launches, court rulings, FOMC/CPI).
@@ -141,7 +150,7 @@ Thesis: [one sentence — why the market is wrong, action implied]
 Risk: [one sentence — what could make your fair-value estimate wrong]
 Stake: ≤0.5% of net worth (HIGH) / ≤0.25% (MEDIUM) — moonshot sleeve, 1% total cap
 
-sources: cg=ok|fail, dex=ok|fail, poly=ok|fail
+sources: cg=ok|fail, dex=ok|fail, poly=ok|fail, x=ok|fail|absent
 if you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it
 not financial advice — pattern-matching only
 ```
@@ -157,7 +166,7 @@ Token signals weak today (best: SYMBOL @ score 3/10).
 Markets either thin liquidity or no defensible edge ≥ 5pp (best: "Question?" edge 2pp).
 
 Tomorrow.
-sources: cg=ok|fail, dex=ok|fail, poly=ok|fail
+sources: cg=ok|fail, dex=ok|fail, poly=ok|fail, x=ok|fail|absent
 ```
 
 If all sources failed, send `TOKEN_PICK_NO_DATA` with the source-status line — do not invent picks from cached intuition.
