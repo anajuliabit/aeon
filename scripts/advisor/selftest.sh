@@ -99,8 +99,12 @@ YFIX='{"data":[
  {"stablecoin":false,"symbol":"WETH","project":"lido","chain":"Ethereum","tvlUsd":900000000,"apyBase":3.0}]}'
 YOURS=$(printf '%s' "$YFIX" | jq -r '[.data[]? | select(.stablecoin == true and (.symbol // "" | ascii_downcase | test("usdc")) and (.project // "" | ascii_downcase | test("morpho")) and (.chain // "" | ascii_downcase == "base") and ((.tvlUsd // 0) >= 1000000))] | max_by(.apyBase // 0) | select(. != null) | .apyBase')
 check "yield-delta venue proxy finds morpho/base/usdc" "$YOURS" "4.0"
-YBEST=$(printf '%s' "$YFIX" | jq -r --argjson mintvl 20000000 '[.data[]? | select(.stablecoin == true and ((.tvlUsd // 0) >= $mintvl) and ((.apyBase // 0) > 0))] | max_by(.apyBase) | select(. != null) | .apyBase')
+YALLOW='["aave-v3","aave-v2","morpho","morpho-blue","morpho-v1","compound-v3","spark","sparklend","maple","fluid-lending","euler-v2"]'
+YBEST=$(printf '%s' "$YFIX" | jq -r --argjson mintvl 20000000 --argjson allow "$YALLOW" '[.data[]? | select(.stablecoin == true and ((.tvlUsd // 0) >= $mintvl) and ((.apyBase // 0) > 0) and ((.project // "" | ascii_downcase) as $p | $allow | any(. == $p)))] | max_by(.apyBase) | select(. != null) | .apyBase')
 check "yield-delta best excludes dust-TVL farm" "$YBEST" "6.2"
+YFIX2=$(printf '%s' "$YFIX" | jq -c '.data += [{"stablecoin":true,"symbol":"USDT0","project":"altura","chain":"Hyperliquid L1","tvlUsd":34000000,"apyBase":17.5}]')
+YBEST2=$(printf '%s' "$YFIX2" | jq -r --argjson mintvl 20000000 --argjson allow "$YALLOW" '[.data[]? | select(.stablecoin == true and ((.tvlUsd // 0) >= $mintvl) and ((.apyBase // 0) > 0) and ((.project // "" | ascii_downcase) as $p | $allow | any(. == $p)))] | max_by(.apyBase) | select(. != null) | .apyBase')
+check "yield-delta excludes managed vaults (altura)" "$YBEST2" "6.2"
 
 # --- notify-drawdown zero-peak resilience ---
 ZH='[{"date":"2026-06-01","totalUsd":0},{"date":"2026-06-02","totalUsd":100},{"date":"2026-06-03","totalUsd":80}]'
