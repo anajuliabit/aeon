@@ -1,0 +1,23 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review",
+        "description": "last 24h"
+      },
+      "children": [
+        "status"
+      ]
+    },
+    "status": {
+      "type": "Text",
+      "props": {
+        "text": "0 captures across memory/logs and vault/inbox. Nothing to surface.",
+        "variant": "muted"
+      }
+    }
+  }
+}
