@@ -1,0 +1,322 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-10 09:00Z"
+      },
+      "children": [
+        "crypto-section",
+        "sep1",
+        "tradfi-section",
+        "sep2",
+        "new-section",
+        "sep3",
+        "bridge-section"
+      ]
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-heading",
+        "btc-stack",
+        "humanity-heading",
+        "humanity-details"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "btc-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-stat",
+        "fg-stat",
+        "ibit-stat",
+        "whale-activity-text"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Bitcoin Price",
+        "value": "$61K"
+      }
+    },
+    "fg-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "9"
+      }
+    },
+    "ibit-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "IBIT ETF Outflows",
+        "value": "$77M"
+      }
+    },
+    "whale-activity-text": {
+      "type": "Text",
+      "props": {
+        "text": "Whales dip-buying into on-chain 2022 deep-value zone",
+        "variant": "body"
+      }
+    },
+    "humanity-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Humanity Protocol Breach",
+        "level": "h3"
+      }
+    },
+    "humanity-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "humanity-alert",
+        "humanity-impact",
+        "fable-badge"
+      ]
+    },
+    "humanity-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Humanity Protocol Exploit",
+        "message": "$32M+ private-key bridge exploit",
+        "type": "error"
+      }
+    },
+    "humanity-impact": {
+      "type": "Text",
+      "props": {
+        "text": "Wave of DeFi hacks; Fable 5 launch stoking frontier AI accelerates vulnerability discovery.",
+        "variant": "body"
+      }
+    },
+    "fable-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Fable 5 Launch",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi-heading",
+        "iran-strikes",
+        "market-impacts"
+      ]
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "iran-strikes": {
+      "type": "Alert",
+      "props": {
+        "title": "US Strikes on Iran",
+        "message": "Confirmed — ceasefire window closed",
+        "type": "warning"
+      }
+    },
+    "market-impacts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "oil-impact",
+        "dollar-impact",
+        "softbank-stat",
+        "nasdaq-impact"
+      ]
+    },
+    "oil-impact": {
+      "type": "Text",
+      "props": {
+        "text": "Oil up",
+        "variant": "body"
+      }
+    },
+    "dollar-impact": {
+      "type": "Text",
+      "props": {
+        "text": "Dollar bid; Risk-off",
+        "variant": "body"
+      }
+    },
+    "softbank-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "SoftBank",
+        "value": "-8%+",
+        "trend": "down"
+      }
+    },
+    "nasdaq-impact": {
+      "type": "Text",
+      "props": {
+        "text": "Asian high-flyers unwinding; Nasdaq futures slipping",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-heading",
+        "new-items"
+      ]
+    },
+    "new-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "humanity-new",
+        "spacex-alert",
+        "cme-alert"
+      ]
+    },
+    "humanity-new": {
+      "type": "Badge",
+      "props": {
+        "text": "Humanity Protocol $32M exploit (first appearance)",
+        "variant": "destructive"
+      }
+    },
+    "spacex-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "SpaceX $SPCX IPO",
+        "message": "4x oversubscribed; $3.75T mega-tech IPO pipeline = credible crypto liquidity drain",
+        "type": "info"
+      }
+    },
+    "cme-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "CME Nasdaq Crypto Index Futures",
+        "message": "Launched: BTC/ETH/SOL + 5 alts",
+        "type": "info"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-heading",
+        "bridge-narrative"
+      ]
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge-narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bridge-flow",
+        "whale-counter",
+        "ibit-signal",
+        "hedge-timing"
+      ]
+    },
+    "bridge-flow": {
+      "type": "Text",
+      "props": {
+        "text": "US strikes on Iran closed the ceasefire window. Oil → CPI → dollar → risk-off running now.",
+        "variant": "lead"
+      }
+    },
+    "whale-counter": {
+      "type": "Text",
+      "props": {
+        "text": "Whale dip-buying is the only counter-signal — they're betting it's transient.",
+        "variant": "body"
+      }
+    },
+    "ibit-signal": {
+      "type": "Text",
+      "props": {
+        "text": "The IBIT number says it isn't.",
+        "variant": "body"
+      }
+    },
+    "hedge-timing": {
+      "type": "Text",
+      "props": {
+        "text": "SpaceX $SPCX + CME crypto futures launched same session — the hedge was built the same day as the drain.",
+        "variant": "muted"
+      }
+    }
+  }
+}
