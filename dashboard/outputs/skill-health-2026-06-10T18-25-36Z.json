@@ -1,0 +1,23 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health",
+        "description": "HEALTH: OK"
+      },
+      "children": [
+        "stat_healthy_skills"
+      ]
+    },
+    "stat_healthy_skills": {
+      "type": "Stat",
+      "props": {
+        "value": "37",
+        "label": "skills healthy"
+      }
+    }
+  }
+}
