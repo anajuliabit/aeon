@@ -441,10 +441,10 @@
   },
   "reg-monitor": {
     "last_dispatch": "2026-06-10T14:45:15Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-03T14:18:20Z",
-    "total_runs": 1,
-    "total_successes": 1,
+    "last_status": "success",
+    "last_success": "2026-06-10T14:58:16Z",
+    "total_runs": 2,
+    "total_successes": 2,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
