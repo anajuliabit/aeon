@@ -1,0 +1,171 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "System health and skill status monitoring"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "section_stuck",
+        "sep2",
+        "section_carryovers",
+        "sep3",
+        "section_self_check"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 DEGRADED — 3 New Stuck Skills",
+        "message": "Skill dispatch hangs detected since 14 UTC. 11 additional carry-overs from rate-limit cluster still pending."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_stuck": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stuck",
+        "text_stuck_intro",
+        "table_stuck"
+      ]
+    },
+    "heading_stuck": {
+      "type": "Heading",
+      "props": {
+        "text": "3 Daily-Skill Hangs (since 14 UTC)",
+        "level": "h2"
+      }
+    },
+    "text_stuck_intro": {
+      "type": "Text",
+      "props": {
+        "text": "All show last_status=dispatched with last_success same-day.",
+        "variant": "muted"
+      }
+    },
+    "table_stuck": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Dispatch Time",
+          "Slot",
+          "Status"
+        ],
+        "rows": [
+          [
+            "list-digest",
+            "17:24",
+            "17 UTC",
+            "dispatched"
+          ],
+          [
+            "btc-levels",
+            "17:24",
+            "16:15 slot",
+            "dispatched"
+          ],
+          [
+            "fleet-control",
+            "16:10",
+            "15 UTC",
+            "dispatched"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_carryovers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_carryovers",
+        "stat_carryover_count",
+        "text_carryover_detail"
+      ]
+    },
+    "heading_carryovers": {
+      "type": "Heading",
+      "props": {
+        "text": "Weekly Carry-Overs",
+        "level": "h2"
+      }
+    },
+    "stat_carryover_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Pending from rate-limit cluster",
+        "value": "11"
+      }
+    },
+    "text_carryover_detail": {
+      "type": "Text",
+      "props": {
+        "text": "From 2026-06-06, 06-07, 06-08 (Sun/Mon/Sat slots). Expected to self-resolve on next tick.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_self_check": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_self_check",
+        "badge_self_check",
+        "stat_heartbeat_time"
+      ]
+    },
+    "heading_self_check": {
+      "type": "Heading",
+      "props": {
+        "text": "Heartbeat Self-Check",
+        "level": "h3"
+      }
+    },
+    "badge_self_check": {
+      "type": "Badge",
+      "props": {
+        "text": "OK",
+        "variant": "default"
+      }
+    },
+    "stat_heartbeat_time": {
+      "type": "Stat",
+      "props": {
+        "label": "Last successful run",
+        "value": "14:53 UTC"
+      }
+    }
+  }
+}
