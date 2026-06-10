@@ -1,0 +1,389 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-10"
+      },
+      "children": [
+        "header",
+        "price_stats",
+        "score",
+        "catalyst",
+        "risk",
+        "stake",
+        "exit",
+        "notes",
+        "sources",
+        "log",
+        "disclaimer"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "token_name",
+        "high_badge",
+        "signal"
+      ]
+    },
+    "token_name": {
+      "type": "Heading",
+      "props": {
+        "text": "MORPHO",
+        "level": "h2"
+      }
+    },
+    "high_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "signal": {
+      "type": "Badge",
+      "props": {
+        "text": "signal 8/10",
+        "variant": "default"
+      }
+    },
+    "price_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_current",
+        "price_changes",
+        "mcap",
+        "volume_info"
+      ]
+    },
+    "price_current": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$2.03"
+      }
+    },
+    "price_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "change_24h",
+        "change_7d"
+      ]
+    },
+    "change_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+6.11%",
+        "trend": "up"
+      }
+    },
+    "change_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+7.65%",
+        "trend": "up"
+      }
+    },
+    "mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$1.32B"
+      }
+    },
+    "volume_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "volume_stat",
+        "volume_ratio"
+      ]
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$31M"
+      }
+    },
+    "volume_ratio": {
+      "type": "Text",
+      "props": {
+        "text": "vol/mcap: 0.024",
+        "variant": "caption"
+      }
+    },
+    "score": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "score_heading",
+        "score_breakdown"
+      ]
+    },
+    "score_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Score: 8/10",
+        "level": "h3"
+      }
+    },
+    "score_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "24h+1, 7d+1, both>5%+2, trending+2, RS vs BTC/ETH 7d+2 = 8/10",
+        "variant": "caption"
+      }
+    },
+    "catalyst": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "catalyst_heading",
+        "catalyst_text"
+      ]
+    },
+    "catalyst_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      }
+    },
+    "catalyst_text": {
+      "type": "Text",
+      "props": {
+        "text": "$175M raise 2026-06-09 co-led by paradigm + a16z crypto + ribbit capital at $2B val (apollo, circle ventures, vaneck, wintermute also in); 4th institutional round. $11B deposits, lender to coinbase/kraken/binance/galaxy/anchorage/bitwise. price surged 10%+ on the news, holding green through broad risk-off = bid is real not just headline pop.",
+        "variant": "body"
+      }
+    },
+    "risk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "risk_heading",
+        "risk_text"
+      ]
+    },
+    "risk_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "risk_text": {
+      "type": "Text",
+      "props": {
+        "text": "35.4% non-circ float (646M of 1B circ), ath $4.17 -51% overhead = vesting supply cliff into thin tape.",
+        "variant": "body"
+      }
+    },
+    "stake": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stake_heading",
+        "stake_text"
+      ]
+    },
+    "stake_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake",
+        "level": "h3"
+      }
+    },
+    "stake_text": {
+      "type": "Text",
+      "props": {
+        "text": "≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap",
+        "variant": "body"
+      }
+    },
+    "exit": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "exit_heading",
+        "exit_text"
+      ]
+    },
+    "exit_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit",
+        "level": "h3"
+      }
+    },
+    "exit_text": {
+      "type": "Text",
+      "props": {
+        "text": "target $2.45 swing-high reclaim / invalidate close < $1.80 (today intraday low) / time-stop 14d",
+        "variant": "body"
+      }
+    },
+    "notes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notes_heading",
+        "vs_recent",
+        "market_omitted"
+      ]
+    },
+    "notes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notes",
+        "level": "h3"
+      }
+    },
+    "vs_recent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vs_recent_heading",
+        "vs_recent_text"
+      ]
+    },
+    "vs_recent_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "vs recent picks",
+        "level": "h4"
+      }
+    },
+    "vs_recent_text": {
+      "type": "Text",
+      "props": {
+        "text": "first-time pick. dedup-clean HIGH flagged in 6-10 afternoon re-fire (suppressed under once-daily discipline); fires now per operator re-invocation. morning SENT pick dead (-16% intraday).",
+        "variant": "body"
+      }
+    },
+    "market_omitted": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "market_heading",
+        "market_text"
+      ]
+    },
+    "market_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "market section omitted",
+        "level": "h4"
+      }
+    },
+    "market_text": {
+      "type": "Text",
+      "props": {
+        "text": "every event clearing $50k vol gate (world cup $91.6M, nba champ $416K, nhl $165K, starmer-out $58.7K, us x russia $56K) dedup-blocked. best dedup-clean alt = xi out 2027 fair ~3% vs current 7.65¢ = edge 4.65pp on NO, fails 5pp gate by 0.35pp.",
+        "variant": "body"
+      }
+    },
+    "sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "cg=ok, dex=ok (thin), poly=ok, x=ok",
+        "variant": "caption"
+      }
+    },
+    "log": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "log_heading",
+        "log_text"
+      ]
+    },
+    "log_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dashboard Journal",
+        "level": "h3"
+      }
+    },
+    "log_text": {
+      "type": "Text",
+      "props": {
+        "text": "if you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it",
+        "variant": "body"
+      }
+    },
+    "disclaimer": {
+      "type": "Alert",
+      "props": {
+        "title": "Disclaimer",
+        "message": "not financial advice — pattern-matching only",
+        "type": "info"
+      }
+    }
+  }
+}

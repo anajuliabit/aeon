@@ -1,19 +1,16 @@
-Scratch files in `.tmp-pick/` are dotted and harmless; leaving them. Task complete.
+*Daily Pick — 2026-06-10*
 
-## Summary
+*Token: MORPHO*  [HIGH]  signal 8/10
+Price: $2.03 (+6.11% 24h / +7.65% 7d) | mcap $1.32B | vol $31M (vol/mcap 0.024)
+Score: 24h+1, 7d+1, both>5%+2, trending+2, RS vs BTC/ETH 7d+2 = 8/10
+Catalyst: $175M raise 2026-06-09 co-led by paradigm + a16z crypto + ribbit capital at $2B val (apollo, circle ventures, vaneck, wintermute also in); 4th institutional round. $11B deposits, lender to coinbase/kraken/binance/galaxy/anchorage/bitwise. price surged 10%+ on the news, holding green through broad risk-off = bid is real not just headline pop.
+Risk: 35.4% non-circ float (646M of 1B circ), ath $4.17 -51% overhead = vesting supply cliff into thin tape.
+Stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap
+Exit: target $2.45 swing-high reclaim / invalidate close < $1.80 (today intraday low) / time-stop 14d
+Vs recent picks: first-time pick. dedup-clean HIGH flagged in 6-10 afternoon re-fire (suppressed under once-daily discipline); fires now per operator re-invocation. morning SENT pick dead (-16% intraday).
 
-Re-ran `skills/token-pick/SKILL.md`. Five sources fetched fresh (cg=ok, dex=ok ghost, poly=ok). Morning pick **SENT broke down intraday** (−16.31% 24h, $0.01508→$0.01489) — Upbit-listing residual exhausted. A dedup-clean HIGH-tier alternate surfaced: **MORPHO** (+8.98% 24h / +6.54% 7d, score 8/10) on the 2026-06-09 $175M Paradigm + a16z + Ribbit raise at $2B valuation. Other top scorers (VELVET 9, BTW 9, BEAT 8) standing integrity-rejected on parabolic-into-listing/ATH distribution pattern. Market section still SKIP — best dedup-clean is Xi-out-before-2027 at YES 7.65¢, fair ~3%, edge 4.65pp on NO — fails 5pp gate by 0.35pp.
+market section omitted: every event clearing $50k vol gate (world cup $91.6M, nba champ $416K, nhl $165K, starmer-out $58.7K, us x russia $56K) dedup-blocked. best dedup-clean alt = xi out 2027 fair ~3% vs current 7.65¢ = edge 4.65pp on NO, fails 5pp gate by 0.35pp.
 
-**Decision:** SUPPRESSED per once-daily discipline (2026-05-28 re-fire precedent). MORPHO's institutional catalyst is durable (≥24h) and carries to tomorrow's run with full HIGH eligibility.
-
-**Files modified:**
-- `memory/logs/2026-06-10.md` — appended `### Token Pick (re-fire, ~16:00 UTC, manual re-run)` subsection with full re-score + `TOKEN_PICK_DEDUP_REFIRE` line
-
-**Notification sent:** no (suppressed re-fire).
-
-Sources:
-- [Morpho raises $175M — Paradigm, a16z crypto, Ribbit Capital (Fortune)](https://fortune.com/2026/06/09/morpho-fundraise-a16z-crypto-paradigm-ribbit-capital-175-million/)
-- [Morpho Volatility: $175M Funding Round and Profit Taking (CoinMarketCap)](https://coinmarketcap.com/top-stories/6a282c0c96fdc00d47e7ccfe/)
-- [Crypto Lending Protocol Morpho Raises $175 Million (Yahoo Finance)](https://finance.yahoo.com/markets/crypto/articles/crypto-lending-protocol-morpho-raises-153933987.html)
-- [VELVET Price Explodes 300% — Trade.xyz integration (Coinpedia)](https://coinpedia.org/price-analysis/velvet-price-explodes-300-in-days-as-trade-integration-fuels-demand-surge/)
-- [Bitway BTW +233% on Binance + Gate.io perp listings (Invezz)](https://invezz.com/news/2026/06/05/heres-why-the-bitway-token-just-exploded-233/)
+sources: cg=ok, dex=ok (thin), poly=ok, x=ok
+if you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it
+not financial advice — pattern-matching only
