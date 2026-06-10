@@ -491,8 +491,8 @@
     "success_rate": 1
   },
   "list-digest": {
-    "last_dispatch": "2026-06-09T17:29:38Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-10T17:24:44Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-09T17:34:05Z",
     "total_runs": 3,
     "total_successes": 3,
@@ -531,8 +531,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-06-10T12:21:58Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-10T17:24:44Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-10T12:24:53Z",
     "total_runs": 5,
     "total_successes": 5,
