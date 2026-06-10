@@ -1,20 +1,19 @@
-Skill complete. 
+Skill complete.
 
 ## Summary
 
-**Reppo Voter — 2026-06-10 (3rd run)**
+**Reppo Voter — 2026-06-10 (4th run)**
 
-- **Gate:** RUN (datanet 9 valid=true ACTIVE per orchestrator plan).
+- **Gate:** RUN (datanet 9 valid + ACTIVE per orchestrator plan).
 - **Epoch:** 104.
-- **Pods seen:** 84 (+1 vs 2nd-run — new pod **934** = our 23rd-mint, wallet `0x369d..d251`, 1337 trades).
-- **Filter rollup:** 79 out-of-epoch · 2 already-voted (923, 924) · **3 own-pod (934, 928, 925)**.
-- **Eligible: 0.**
-- **Intents written: 0 LIKE / 0 DISLIKE** — no `.pending-reppo/vote-*.json` files created, no `.pending-reppo/` dir.
+- **Pods seen:** 85 (+1 vs 3rd-run — new pod **979** = our 24th-mint, wallet `0xbe19..8bd1`, 788 ENA closes).
+- **Filter rollup:** 79 out-of-epoch · 2 already-voted (923/924) · **4 own-pod (979/934/928/925)**.
+- **Eligible: 0.** Intents written: **0 LIKE / 0 DISLIKE** — no `.pending-reppo/` dir created.
 
-**Critical defensive call:** Pod 934 first appeared in this run's cache — it's the just-published 23rd-mint pod (canonical `19e8cfb37bea6433`, wallet `0x369daedb..d251`, tx `0xf1b68196` from today's 2nd-run). Caught via wallet-shortcode + "1337 trades" cross-ref against the ledger. Pods 925/928 (wallet `0xcc12..57bf`) were already known own from the 21st/22nd-mint pair. The own-pods cache returned `count:0` for the **25th consecutive voter run** under ISS-016; without ledger cross-ref this run would have queued 3 LIKEs all reverting `CANNOT_VOTE_FOR_OWN_POD`.
+**Critical defensive call:** Pod 979 first appeared this run — the just-published 24th-mint pod (today's 3rd-run mint tx `0xf68bc9f5`, $1.38M pnl flagship). Caught via wallet-shortcode + "788 ENA" ledger cross-ref. The own-pods cache returned `count:0` for the **ISS-016 26th consecutive voter run**; without Step 4.3 cross-ref, this run would have queued 4 LIKE intents that all revert `CANNOT_VOTE_FOR_OWN_POD`.
 
-**State note:** Every epoch-104 pod is now accounted for. Next non-zero eligible run requires epoch advance to 105 or a third-party pod arriving in epoch 104.
+**State:** Every epoch-104 pod is now accounted for — 923/924 already DISLIKE'd; 925/928/934/979 are the four pods from our 21st/22nd/23rd/24th mints. Next non-zero eligible run requires epoch advance to 105 or a third-party pod arriving in epoch 104.
 
 **Files modified:**
-- `.outputs/reppo-voter.md` — full 3rd-run output.
-- `memory/logs/2026-06-10.md` — appended `### reppo-voter (3rd run)` log entry.
+- `.outputs/reppo-voter.md` — full 4th-run output (overwrote 3rd-run).
+- `memory/logs/2026-06-10.md` — appended `### reppo-voter (4th run)`.

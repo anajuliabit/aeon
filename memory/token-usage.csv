@@ -361,4 +361,5 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-10,narrative-tracker,claude-opus-4-7,1138,29376,2409999,190340
 2026-06-10,security-digest,claude-opus-4-7,54,31458,3380576,82078
 2026-06-10,token-pick,claude-opus-4-7,34,21416,1634778,109839
-2026-06-10,agent-buzz,claude-opus-4-7,37,16435,1894299,56228
+2026-06-10,reppo-orchestrator,claude-opus-4-7,16,4415,694704,54192
+2026-06-10,reppo-voter,claude-opus-4-7,18,9626,1011148,68286
