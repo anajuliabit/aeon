@@ -1,0 +1,111 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap 2026-06-10"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_mints",
+        "sep1",
+        "ena_group",
+        "sep2",
+        "stat_admin",
+        "sep3",
+        "stat_skills"
+      ]
+    },
+    "stat_mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints (ties same-day record)",
+        "value": "5"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ena_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ena_title",
+        "stat_pnl",
+        "stat_sharpe",
+        "badge_largest"
+      ]
+    },
+    "ena_title": {
+      "type": "Heading",
+      "props": {
+        "text": "24th-mint ENA",
+        "level": "h3"
+      }
+    },
+    "stat_pnl": {
+      "type": "Stat",
+      "props": {
+        "label": "PnL",
+        "value": "1.38M"
+      }
+    },
+    "stat_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe",
+        "value": "134103"
+      }
+    },
+    "badge_largest": {
+      "type": "Badge",
+      "props": {
+        "text": "Largest ever",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat_admin": {
+      "type": "Stat",
+      "props": {
+        "label": "Admin tasks overdue",
+        "value": "4"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills stuck",
+        "value": "14"
+      }
+    }
+  }
+}
