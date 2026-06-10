@@ -1,0 +1,283 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest",
+        "description": "reppo-swarm · 2nd run · datanet 9 · 1 on-chain"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued-section",
+        "sep-1",
+        "onchain-section",
+        "sep-2",
+        "voter-section",
+        "sep-3",
+        "datanets-section"
+      ]
+    },
+    "queued-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "queued-heading",
+        "queued-mint",
+        "queued-perps",
+        "queued-stats"
+      ]
+    },
+    "queued-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "queued-mint": {
+      "type": "Text",
+      "props": {
+        "text": "mint · sharpe-rank 0x369daedb"
+      }
+    },
+    "queued-perps": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "perps-label",
+        "badge-nil",
+        "badge-dydx",
+        "badge-syrup",
+        "badge-rez",
+        "badge-gmt",
+        "badge-arb",
+        "badge-zro"
+      ]
+    },
+    "perps-label": {
+      "type": "Text",
+      "props": {
+        "text": "7 perps:",
+        "variant": "caption"
+      }
+    },
+    "badge-nil": {
+      "type": "Badge",
+      "props": {
+        "text": "nil"
+      }
+    },
+    "badge-dydx": {
+      "type": "Badge",
+      "props": {
+        "text": "dydx"
+      }
+    },
+    "badge-syrup": {
+      "type": "Badge",
+      "props": {
+        "text": "syrup"
+      }
+    },
+    "badge-rez": {
+      "type": "Badge",
+      "props": {
+        "text": "rez"
+      }
+    },
+    "badge-gmt": {
+      "type": "Badge",
+      "props": {
+        "text": "gmt"
+      }
+    },
+    "badge-arb": {
+      "type": "Badge",
+      "props": {
+        "text": "arb"
+      }
+    },
+    "badge-zro": {
+      "type": "Badge",
+      "props": {
+        "text": "zro"
+      }
+    },
+    "queued-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-closes",
+        "stat-sum",
+        "stat-sharpe",
+        "stat-hash"
+      ]
+    },
+    "stat-closes": {
+      "type": "Stat",
+      "props": {
+        "label": "Closes",
+        "value": "1337"
+      }
+    },
+    "stat-sum": {
+      "type": "Stat",
+      "props": {
+        "label": "Sum",
+        "value": "+$104,013"
+      }
+    },
+    "stat-sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe",
+        "value": "427.45"
+      }
+    },
+    "stat-hash": {
+      "type": "Stat",
+      "props": {
+        "label": "Hash",
+        "value": "19e8cfb37bea6433"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "onchain-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "onchain-heading",
+        "onchain-content"
+      ]
+    },
+    "onchain-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain",
+        "level": "h3"
+      }
+    },
+    "onchain-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "onchain-mint",
+        "onchain-tx"
+      ]
+    },
+    "onchain-mint": {
+      "type": "Text",
+      "props": {
+        "text": "mint 19e8cfb37bea6433"
+      }
+    },
+    "onchain-tx": {
+      "type": "Text",
+      "props": {
+        "text": "tx 0xf1b68196456b999460d9236c8b01f5d464d4e3ddebe4187d43dae76f01f2f6a2",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "voter-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "voter-heading",
+        "voter-stat",
+        "voter-details"
+      ]
+    },
+    "voter-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Voter Clean",
+        "level": "h3"
+      }
+    },
+    "voter-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Eligible at epoch 104",
+        "value": "0"
+      }
+    },
+    "voter-details": {
+      "type": "Text",
+      "props": {
+        "text": "2 already-voted, 2 own-pod 0xcc12..57bf = 21st/22nd-mint pair",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "datanets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "datanets-heading",
+        "datanets-stat"
+      ]
+    },
+    "datanets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Datanets",
+        "level": "h3"
+      }
+    },
+    "datanets-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Unassigned",
+        "value": "13"
+      }
+    }
+  }
+}
