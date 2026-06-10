@@ -15,6 +15,10 @@ ledger: **20 mints + 39 votes** on-chain through 2026-06-09 (20th-mint
   scenarios + equity curve + risk metrics + unlock calendar on the
   dashboard, drawdown band alerts, quarter-Kelly sleeve sizing
   (validator-enforced once >=20 graded calls), yield-delta alerts.
+  Moonshot sub-sleeve (2026-06-10): up to 1% of net worth inside the
+  risk sleeve for the daily token-pick's short-term bets — per pick
+  <=0.5% (HIGH) / <=0.25% (MEDIUM), max 2 open, never top up losers,
+  taken picks logged in the dashboard journal.
   Asymmetric envelope: protected core (stables reserve, cbBTC structure,
   locked vesting) + risk sleeve capped at 15–20% of net. Infrastructure:
   daily history ledger + pace gauge on the dashboard (/api/performance),
