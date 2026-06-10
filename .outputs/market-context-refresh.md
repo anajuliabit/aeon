@@ -1,7 +1,7 @@
-market context — 2026-06-09
+market context — 2026-06-10
 
 take: chop (conviction medium)
-BTC $62,326 (-1.59%) / ETH $1,670 (-0.66%) · F&G 10 (extreme fear)
-breadth 7/20 · DEX vol $7.19B (-41.7% vs June 5)
-top narrative: BTC ETF outflow streak — 13 days, $4.4B total
-hot market: "US x Iran peace deal by Dec 31" YES 68.5%
+BTC $62,107 (-0.45%) / ETH $1,658 (-0.78%) · F&G 9 (Extreme Fear)
+breadth 9/20 · TVL $76.84B (protos -8–14% 7d)
+top narrative: BTC CPI binary (peak) — CPI today is the regime-flip trigger
+hot market: "Germany win 2026 FIFA WC" YES 5.25%

@@ -1,71 +1,70 @@
-# Market Context (as of 2026-06-09)
+# Market Context (as of 2026-06-10)
 
-> **Take:** chop — BTC flat 4 days at $62.3K (+0.23% vs June 5) while DEX vol halved to $7.19B and BTC ETF outflows hit 13 consecutive sessions ($4.4B total since May 15); breadth ticked to 7/20 on stables + ZEC/Canton micro-bounces, not risk-on rotation. Conviction: medium.
+> **Take:** chop — BTC flat at $62.1K (-0.45% 24h) with F&G 9/100 (Extreme Fear deepening) while DEX vol $6.79B is 24% below 7d avg ($8.97B); CPI print today is the binary that could end the chop. Conviction: medium.
 
 ## Signal Snapshot
-- BTC $62,326 (-1.59% 24h, -10.19% 7d) · dominance 55.90% (-0.03 pp 24h)
-- ETH $1,670 (-0.66% 24h, -15.50% 7d) · ETH/BTC 0.02680
-- SOL $65.72 (-1.41% 24h, -16.78% 7d)
-- Total mcap $2.233T (-1.51% 24h) · DEX vol $7.19B 24h
-- Breadth: 7/20 green 24h · 2/20 green 7d
-- Fear & Greed: 10 (Extreme Fear) — yesterday 8
+- BTC $62,107 (-0.45% 24h, -7.33% 7d) · dominance 55.99% (+0.09 pp 24h)
+- ETH $1,658 (-0.78% 24h, -11.58% 7d) · ETH/BTC 0.02670
+- SOL $64.89 (-1.22% 24h, -13.45% 7d)
+- Total mcap $2.221T (-0.70% 24h) · DEX vol $6.79B 24h (7d avg $8.97B)
+- Breadth: 9/20 green 24h · 5/20 green 7d
+- Fear & Greed: 9 (Extreme Fear) — yesterday 10
 
 ## What Changed Since Last Refresh
-- DEX vol halved: $12.33B (June 5) → $7.19B today (-41.7%) — liquidity withdrawal, not panic selling; sell-side accelerating on June 5 has since stalled into thin tape
-- BTC ETF outflow streak extended to 13 consecutive days; $4.4B total since May 15; IBIT -$3.3B (75% of total); flows structurally decoupled from equities, now tracking HYG/TLT
-- HYPE post-$684M unlock (June 6): $75.48 ATH (June 2) → $60.81 today (-19.4%); fading phase confirmed post-unlock
-- ZEC recovery: $316 collapse-low (June 5) → $465 today (+47% from low); 7d still -18.05% — oversold bounce, not reversal
-- WLD resumed strength: Arthur Hayes capitulation dump June 7 absorbed; +11.20% 24h today on OpenAI S-1 filing + July unlock-reduction announcement; token-pick re-entered June 9 at $0.48
+- ZEC bounce fully reversed: +7.69% 24h (June 9) → -6.93% 24h today ($465 → $437); oversold bounce exhausted in 24h, no accumulator at these levels
+- HYPE accelerating decline: $60.81 → $56.97 (-6.3% session); -22.04% 7d, now -24.5% from $75.48 ATH (June 2); 6th consecutive declining session from ATH
+- WLD broke bounce: -6.46% 24h today; 5-session outperformance thesis stalling post-OpenAI S-1 catalyst absorption
+- DEX vol continued declining: $7.19B (June 9) → $6.79B (-5.6%); now 24% below 7d average — sustained liquidity withdrawal
+- BTC ETF outflows extended to 4 consecutive weeks: $5.4B total, BlackRock IBIT -$1.34B for week ending June 6
+- CPI report today — new binary catalyst; sub-4.0% = relief rally trigger, ≥4.2% = bearish confirmation
 
 ## Active Narratives
-- **BTC ETF outflow streak** — phase: peak. Evidence: 13th consecutive session, $4.4B total since May 15; IBIT alone -$3.3B; BTC/ETH ETF flows now track HYG/TLT (macro-liquidity signal), not tech equities — structural regime shift in institutional positioning.
-- **Hyperliquid/Perp DEX (HYPE)** — phase: fading. Evidence: HYPE $60.81, -4.99% 24h, -16.52% 7d; $684M June 6 unlock has passed — post-unlock selling confirmed; -19.4% from $75.48 ATH (June 2); still trending #3 on CoinGecko.
-- **Worldcoin (WLD)** — phase: rising. Evidence: +11.20% 24h, $0.48 today; OpenAI confidential S-1 filing + 43% reduction in daily WLD unlocks queued for July; Hayes dump absorbed June 7-8; 5th consecutive session of relative strength vs flat/red tape.
-- **Privacy coin recovery (ZEC)** — phase: recovery. Evidence: ZEC +7.69% 24h to $465 from $316 June 5 collapse low (+47% from low); trending #4; 7d still -18.05% — oversold bounce magnitude suggests exhausted sellers, not new catalyst.
+- **BTC CPI binary** — phase: peak. Evidence: BTC pinned $60-63K for 4 days awaiting CPI; F&G 9/100; every feed covers the sub-4.0% threshold; 4-week ETF outflow streak = structural positioning risk-off.
+- **Hyperliquid/HYPE post-unlock fade** — phase: fading (accelerating). Evidence: HYPE $56.97 (-6.74% 24h, -22.04% 7d); -24.5% from ATH $75.48 (June 2); 6th consecutive down session; $684M unlock still pressuring float.
+- **WhiteBIT Exchange Token (WBT) surge** — phase: emerging. Evidence: WBT +14.99% 24h to $51.15 (rank 19); +4.42% 7d; lone outlier in broad red tape at $8.3B mcap — exchange token dynamics, catalyst unconfirmed.
+- **ZEC oversold bounce exhausted** — phase: fading. Evidence: ZEC $436.58 (-6.93% 24h) fully reversed the +7.69% June 9 bounce; 7d -29.07%; no new catalyst to support continuation from $316 base.
 
 ## Top DeFi Protocols (TVL, 7d change)
-- Lido: $14.9B (-15.18%)
-- SSV Network: ~$12.3B (est., prior -16.7% 7d trend)
-- Aave V3: ~$11.7B (est., prior -11.2% 7d trend)
-- Morpho Blue: ~$6.5B (est., prior -10.7% 7d trend)
-- Sky Lending: ~$5.9B (est., prior -4.8% 7d trend)
+- Lido: $14.52B (-13.29%)
+- SSV Network: $11.93B (-13.57%)
+- Aave V3: $11.44B (-8.76%)
+- LayerZero V2: $7.47B (-1.15%)
+- WBTC: $7.04B (-7.11%)
 
 ## Chain Flow (top 3 by TVL, 7d)
 *7d per-chain delta unavailable from API.*
-- Ethereum: $37.49B (+$150M vs June 5)
-- BSC: $5.19B (~flat vs June 5)
-- Solana: ~$4.88B
+- Ethereum: $36.58B (-$0.91B vs June 9, -2.4% session)
+- BSC: $5.13B (~flat vs June 9)
+- Solana: $4.51B (-$0.37B vs June 9, -7.6% session)
 
 ## Stablecoins
-Total: $343B (7d ~flat; USDT/USDC individually -0.1% to +0.4%). USDT $186.8B · USDC $76.0B · USDS $8.5B · USD1 $4.6B · combined share of mcap ~15%.
+Total: ~$343B (7d ~flat). USDT $186.8B · USDC $75.0B · USDS $10.6B · USDe $4.5B · combined share of mcap ~15%.
 
 ## Trending (CoinGecko)
-- WLD — +11.20% 24h; rank 45; Worldcoin; OpenAI S-1 + July unlock-reduction; 5th session of outperformance
-- ZEC — +7.69% 24h; rank 15; Zcash; recovery bounce from June 5 $316 collapse low; 7d still -18%
-- HYPE — -4.05% 24h; rank 10; Hyperliquid; post-$684M unlock fading; -19.4% from ATH
-- NEAR — -0.84% 24h; rank 34; NEAR Protocol; slight relative strength vs SOL -1.71%
-- MORPHO — +1.65% 24h; rank 62; Morpho; green in red tape; 4th-largest DeFi TVL protocol
-- BTC — -1.59% 24h; rank 1; trending on 13-day ETF outflow streak watch + $62K floor test
-- SOL — -1.41% 24h; rank 7; Solana; trending alongside BTC; -16.78% 7d
+- WBT — +14.99% 24h; rank 19; WhiteBIT exchange token surge; largest top-20 mover today; catalyst unconfirmed
+- HYPE — -6.74% 24h; rank 11; Hyperliquid; 6th session from ATH; -22% 7d post-unlock
+- ZEC — -6.93% 24h; rank 15; Zcash; bounce fully reversed in 24h; 7d -29.07%
+- CC (Canton) — +0.26% 24h; rank 16; +10.24% 7d; enterprise DLT relative strength vs broad red tape
+- BTC — -0.45% 24h; rank 1; trending on CPI catalyst watch + 4-week ETF outflow streak
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |
 |--------|------|---------|-----------|
-| Will Roberto Sánchez Palomino win 2026 Peruvian presidential election? | 5.1% | $5.5M | $0.4M |
-| Will Keiko Fujimori win 2026 Peruvian presidential election? | 94.5% | $4.6M | $0.4M |
-| US × Iran permanent peace deal by Dec 31, 2026? | 68.5% | $2.1M | $0.5M |
+| Germany win 2026 FIFA World Cup? | 5.25% | $3.31M | $1.74M |
+| Sánchez Palomino win 2026 Peru election? | 5.15% | $3.30M | $0.42M |
+| US × Iran permanent peace deal by June 15? | 4.75% | $3.27M | $0.76M |
 
-*FIFA World Cup country markets dominate by volume but all <3% YES — filtered per spec. Peruvian election dominant in prediction markets: Fujimori ~95% to win.*
+*FIFA World Cup country markets dominate 24h volume. US × Iran June 15 deadline at 4.75% YES (vs Dec 31 yearly market at 68.5% prior) — short-dated resolution, geopolitical situation still fluid.*
 
 ## Macro Catalysts (next 48h)
-- **Fed Chair Warsh dot plot + Fed meeting next week** — rate hold expected; hawkish surprise = deeper ETF outflow pressure extends; soft CPI (pending) = relief signal; markets pricing in no cut before Q4
-- **BTC ETF outflow reversal** — 13 consecutive days is the longest streak in 2026; first net positive session = primary trigger for chop→risk-on regime flip; absent that, institutional allocation stays off
-- **CLARITY Act (US Congress)** — crypto regulatory clarity bill; passage = structural positive re-rating for sector; no vote date confirmed yet
-- **Iran-Israel tail risk** — overnight missile exchange June 8 (per AIXBT); oil tail → Fed stays higher → BTC pressure extends; US × Iran peace at 68.5% on Polymarket
+- **US CPI report (today, June 10)** — sub-4.0% = primary relief rally trigger; ≥4.2% = deepens bearish macro thesis, extends ETF outflow pressure; 10x Research flags this as the single most important input for BTC's next 10% move
+- **BTC ETF outflow reversal** — 4 consecutive weeks, $5.4B total; IBIT -$1.34B week of June 6; first net positive session = chop→risk-on flip signal; absent reversal, institutional allocation stays structurally reduced
+- **Iran-US military situation** — escalating strikes; Polymarket June 15 peace at 4.75% → oil tail → Fed stays higher → BTC pressure extends; geopolitical risk-off intact
+- **Strategy (MicroStrategy) accumulation** — 1,550 BTC purchased at current lows despite share price weakness; counter-signal to institutional selling (demand-side anchor)
 
 ## Implications for Downstream Skills
-- **token-pick:** cash/stable bias maintained; WLD rising flag persists (5 sessions, fresh catalyst stack, re-entered June 9 at $0.48); ZEC bounce not an entry (7d -18%, no new catalyst beyond oversold); HYPE avoid post-unlock through consolidation; no new broad beta until ETF flows flip positive or breadth breaks 10/20
-- **narrative-tracker:** HYPE peak→fading confirmed post-unlock; WLD rising confirmed 5th session with new catalyst (OpenAI S-1 + unlock-reduction); BTC ETF outflow streak at 13 days — first positive day is the regime-shift signal; ZEC in recovery/oversold-bounce phase, watch Day 2-3 for fade-or-hold signal
+- **token-pick:** SENT (Sentient) picked today at $0.01508 (score 7/10); WLD broke bounce (-6.46% 24h), avoid re-entry until catalyst stack resets; WBT +15% is exchange-token idiosyncratic, not broad signal; cash/stable bias maintained until CPI <4.0% confirmed + ETF flows flip positive
+- **narrative-tracker:** HYPE fading confirmed and accelerating (6th session from ATH); ZEC bounce exhausted — watch for retest of $316 June 5 low; WBT emerging but unconfirmed catalyst; WLD stalling after 5 sessions of strength — phase may shift rising→fading
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
@@ -81,7 +80,8 @@ Total: $343B (7d ~flat; USDT/USDC individually -0.1% to +0.4%). USDT $186.8B · 
 | 2026-06-04 | HUMAN | $0.59 | Altcoin rotation into AI/decentralized-identity; ATH $0.85 on 06-02 (+80% intraday) on OpenAI/Anthropic/SpaceX IPO narrative + 8M+ Human IDs; vmc 0.17, outperforming BTC -13% / ETH -11% on 7d; score 6/10 MEDIUM. Risk: 70%-haircut tokens unlock 2026-06-25. Market SKIPPED — only Starmer family clears $50k vol gate, dedup-blocked. SIREN (raw 8/10) + LAB integrity-rejected. |
 | 2026-06-05 | DEXE | $20.15 | BingX Futures DEXE-USDT perp listing 2026-05-25 broke ~$16 resistance; DeXe Protocol TVL tripled to ~$1.7B Q2 + new validator voting layer at ~102% staking APR; vmc 0.031, score 6/10 MEDIUM |
 | 2026-06-09 | WLD | $0.48 | OpenAI confidential S-1 filing + 43% reduction in daily WLD unlocks queued for July; Hayes capitulation dump June 7 absorbed — held above $0.47; vmc 0.506, score 11/10 HIGH |
+| 2026-06-10 | SENT | $0.01508 | open-AGI "GRID" protocol; Upbit-listing residual + pending Coinbase roadmap addition; +5.04% 7d vs BTC -7.33%/ETH -11.58% broad red tape; vmc 0.55, score 7/10 HIGH |
 
 ---
 *Sources — btc/eth: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch*
-*Source status: coingecko=ok defillama=ok(protocols-mixed-cex; dfi-protocols-2nd-5th estimated from prior) fng=ok polymarket=ok websearch=ok*
+*Source status: coingecko=ok defillama=ok(chain 7d-delta n/a from API) fng=ok polymarket=ok websearch=ok*

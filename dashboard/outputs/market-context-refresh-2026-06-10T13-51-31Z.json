@@ -1,0 +1,202 @@
+{
+  "root": "card-market",
+  "state": {},
+  "elements": {
+    "card-market": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context — 2026-06-10"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack-take",
+        "separator-1",
+        "stack-prices",
+        "separator-2",
+        "stack-metrics",
+        "separator-3",
+        "stack-narratives"
+      ]
+    },
+    "stack-take": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-take",
+        "badge-chop",
+        "badge-conviction"
+      ]
+    },
+    "text-take": {
+      "type": "Text",
+      "props": {
+        "text": "Take:",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "badge-chop": {
+      "type": "Badge",
+      "props": {
+        "text": "chop",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-conviction": {
+      "type": "Badge",
+      "props": {
+        "text": "conviction medium",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth",
+        "stat-fg"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62,107",
+        "delta": "-0.45%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,658",
+        "delta": "-0.78%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-fg": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "9 (Extreme Fear)"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-breadth",
+        "stat-tvl"
+      ]
+    },
+    "stat-breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "9/20"
+      },
+      "children": []
+    },
+    "stat-tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$76.84B",
+        "delta": "-8–14% (protocols, 7d)"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-narratives": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-narrative",
+        "text-narrative",
+        "heading-hotmarket",
+        "progress-germany"
+      ]
+    },
+    "heading-narrative": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "text-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "BTC CPI binary (peak) — CPI today is the regime-flip trigger",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "heading-hotmarket": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "progress-germany": {
+      "type": "Progress",
+      "props": {
+        "label": "Germany win 2026 FIFA WC (YES)",
+        "value": 5.25,
+        "max": 100
+      },
+      "children": []
+    }
+  }
+}
