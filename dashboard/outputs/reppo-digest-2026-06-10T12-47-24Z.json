@@ -1,0 +1,213 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reppo-digest"
+      },
+      "children": [
+        "header",
+        "separator_1",
+        "section_queued",
+        "separator_2",
+        "section_onchain",
+        "separator_3",
+        "section_summary"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_main",
+        "text_subheader"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "reppo-swarm",
+        "level": "h2"
+      }
+    },
+    "text_subheader": {
+      "type": "Text",
+      "props": {
+        "text": "3rd run · datanet 9 · 1 on-chain"
+      }
+    },
+    "separator_1": {
+      "type": "Separator"
+    },
+    "section_queued": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_queued",
+        "queued_item"
+      ]
+    },
+    "heading_queued": {
+      "type": "Heading",
+      "props": {
+        "text": "Queued",
+        "level": "h3"
+      }
+    },
+    "queued_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "queued_labels",
+        "queued_metrics",
+        "queued_id"
+      ]
+    },
+    "queued_labels": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_mint",
+        "badge_address",
+        "stat_ena",
+        "badge_action",
+        "text_duration"
+      ]
+    },
+    "badge_mint": {
+      "type": "Badge",
+      "props": {
+        "text": "mint"
+      }
+    },
+    "badge_address": {
+      "type": "Badge",
+      "props": {
+        "text": "0xbe19..8bd1",
+        "variant": "outline"
+      }
+    },
+    "stat_ena": {
+      "type": "Stat",
+      "props": {
+        "label": "ENA",
+        "value": "788"
+      }
+    },
+    "badge_action": {
+      "type": "Badge",
+      "props": {
+        "text": "close-short",
+        "variant": "secondary"
+      }
+    },
+    "text_duration": {
+      "type": "Text",
+      "props": {
+        "text": "4.61h",
+        "variant": "muted"
+      }
+    },
+    "queued_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_profit",
+        "stat_sharpe"
+      ]
+    },
+    "stat_profit": {
+      "type": "Stat",
+      "props": {
+        "label": "Profit",
+        "value": "+$1.38M",
+        "trend": "up"
+      }
+    },
+    "stat_sharpe": {
+      "type": "Stat",
+      "props": {
+        "label": "Sharpe",
+        "value": "134,103"
+      }
+    },
+    "queued_id": {
+      "type": "Text",
+      "props": {
+        "text": "42eec09d3666dcae",
+        "variant": "caption"
+      }
+    },
+    "separator_2": {
+      "type": "Separator"
+    },
+    "section_onchain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_onchain",
+        "onchain_content"
+      ]
+    },
+    "heading_onchain": {
+      "type": "Heading",
+      "props": {
+        "text": "On-Chain",
+        "level": "h3"
+      }
+    },
+    "onchain_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_onchain_mint",
+        "text_onchain_tx"
+      ]
+    },
+    "text_onchain_mint": {
+      "type": "Text",
+      "props": {
+        "text": "mint 42eec09d3666dcae"
+      }
+    },
+    "text_onchain_tx": {
+      "type": "Badge",
+      "props": {
+        "text": "tx 0xf68bc9f5a2562c44",
+        "variant": "outline"
+      }
+    },
+    "separator_3": {
+      "type": "Separator"
+    },
+    "section_summary": {
+      "type": "Text",
+      "props": {
+        "text": "24th mint ever, 2nd-highest single-mint sharpe in ledger (behind only 6th-mint brentoil 295,747). 13 datanets unassigned."
+      }
+    }
+  }
+}
