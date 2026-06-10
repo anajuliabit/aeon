@@ -1,0 +1,454 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-10"
+      },
+      "children": [
+        "header_section",
+        "sep_1",
+        "price_section",
+        "sep_2",
+        "score_section",
+        "sep_3",
+        "catalyst_section",
+        "sep_4",
+        "risk_section",
+        "sep_5",
+        "comparison_section",
+        "sep_6",
+        "sources_section"
+      ]
+    },
+    "header_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "token_name",
+        "signal_badge"
+      ]
+    },
+    "token_name": {
+      "type": "Heading",
+      "props": {
+        "text": "Token: SENT",
+        "level": "h2"
+      }
+    },
+    "signal_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "[HIGH] signal 7/10",
+        "variant": "destructive"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "price_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "price_changes",
+        "market_data"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.01508",
+        "label": "Price"
+      }
+    },
+    "price_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "change_24h",
+        "change_7d"
+      ]
+    },
+    "change_24h": {
+      "type": "Stat",
+      "props": {
+        "value": "+2.79%",
+        "label": "24h",
+        "trend": "up"
+      }
+    },
+    "change_7d": {
+      "type": "Stat",
+      "props": {
+        "value": "+5.04%",
+        "label": "7d",
+        "trend": "up"
+      }
+    },
+    "market_data": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "mcap",
+        "volume",
+        "vol_ratio"
+      ]
+    },
+    "mcap": {
+      "type": "Stat",
+      "props": {
+        "value": "$109M",
+        "label": "Market Cap"
+      }
+    },
+    "volume": {
+      "type": "Stat",
+      "props": {
+        "value": "$60M",
+        "label": "Volume"
+      }
+    },
+    "vol_ratio": {
+      "type": "Stat",
+      "props": {
+        "value": "0.55",
+        "label": "Vol/Mcap"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "score_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "score_progress",
+        "score_breakdown_heading",
+        "breakdown_items"
+      ]
+    },
+    "score_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 7,
+        "max": 10,
+        "label": "Signal Score"
+      }
+    },
+    "score_breakdown_heading": {
+      "type": "Text",
+      "props": {
+        "text": "Breakdown: vmc≥0.20 (+3) | RS vs BTC/ETH 7d (+2) | 24h (+1) | 7d (+1)",
+        "variant": "caption"
+      }
+    },
+    "breakdown_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "bd_1",
+        "bd_2",
+        "bd_3",
+        "bd_4"
+      ]
+    },
+    "bd_1": {
+      "type": "Badge",
+      "props": {
+        "text": "vmc≥0.20 +3",
+        "variant": "secondary"
+      }
+    },
+    "bd_2": {
+      "type": "Badge",
+      "props": {
+        "text": "RS vs BTC/ETH +2",
+        "variant": "secondary"
+      }
+    },
+    "bd_3": {
+      "type": "Badge",
+      "props": {
+        "text": "24h +1",
+        "variant": "secondary"
+      }
+    },
+    "bd_4": {
+      "type": "Badge",
+      "props": {
+        "text": "7d +1",
+        "variant": "secondary"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "catalyst_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "catalyst_heading",
+        "catalyst_items"
+      ]
+    },
+    "catalyst_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      }
+    },
+    "catalyst_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "catalyst_1",
+        "catalyst_2",
+        "catalyst_3"
+      ]
+    },
+    "catalyst_1": {
+      "type": "Text",
+      "props": {
+        "text": "sentient (open-AGI \"GRID\" protocol) holds green on Upbit listing momentum + pending Coinbase roadmap addition",
+        "variant": "body"
+      }
+    },
+    "catalyst_2": {
+      "type": "Text",
+      "props": {
+        "text": "+5% 7d while BTC -8.87% / ETH -13.58% / tape broadly red",
+        "variant": "body"
+      }
+    },
+    "catalyst_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Outperforming during market downturn",
+        "variant": "secondary"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "risk_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "risk_heading",
+        "risk_items"
+      ]
+    },
+    "risk_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "risk_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "risk_1",
+        "risk_2",
+        "risk_3"
+      ]
+    },
+    "risk_1": {
+      "type": "Stat",
+      "props": {
+        "value": "21%",
+        "label": "Float (7.24B / 34.36B total)"
+      }
+    },
+    "risk_2": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Supply Cliff Risk",
+        "message": "FDV $518M vs mcap $109M = 4.75× dilution ratio"
+      }
+    },
+    "risk_3": {
+      "type": "Text",
+      "props": {
+        "text": "-68.7% off May ATH means seller stack still active",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "comparison_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "comparison_heading",
+        "comparison_items"
+      ]
+    },
+    "comparison_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "vs Recent Picks",
+        "level": "h3"
+      }
+    },
+    "comparison_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "comparison_status",
+        "comparison_list"
+      ]
+    },
+    "comparison_status": {
+      "type": "Text",
+      "props": {
+        "text": "First time in daily pick",
+        "variant": "lead"
+      }
+    },
+    "comparison_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "comp_1",
+        "comp_2",
+        "comp_3",
+        "comp_4"
+      ]
+    },
+    "comp_1": {
+      "type": "Badge",
+      "props": {
+        "text": "ENA (6-03) — dedup-blocked",
+        "variant": "outline"
+      }
+    },
+    "comp_2": {
+      "type": "Badge",
+      "props": {
+        "text": "HUMAN (6-04) — dedup-blocked",
+        "variant": "outline"
+      }
+    },
+    "comp_3": {
+      "type": "Badge",
+      "props": {
+        "text": "DEXE (6-05) — dedup-blocked",
+        "variant": "outline"
+      }
+    },
+    "comp_4": {
+      "type": "Badge",
+      "props": {
+        "text": "WLD (6-09) — dedup-blocked",
+        "variant": "outline"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources_badges",
+        "disclaimer"
+      ]
+    },
+    "sources_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "source_cg",
+        "source_dex",
+        "source_poly"
+      ]
+    },
+    "source_cg": {
+      "type": "Badge",
+      "props": {
+        "text": "CoinGecko ✓",
+        "variant": "secondary"
+      }
+    },
+    "source_dex": {
+      "type": "Badge",
+      "props": {
+        "text": "DEX ✓",
+        "variant": "secondary"
+      }
+    },
+    "source_poly": {
+      "type": "Badge",
+      "props": {
+        "text": "Polygon ✓",
+        "variant": "secondary"
+      }
+    },
+    "disclaimer": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Not financial advice — pattern-matching only"
+      }
+    }
+  }
+}
