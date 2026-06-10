@@ -1,0 +1,283 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "skill-analytics",
+        "description": "2026-06-10"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "anomalies_stat",
+        "sep1",
+        "fleet_stats",
+        "sep2",
+        "rate_limit_section",
+        "sep3",
+        "silent_section",
+        "sep4",
+        "low_success_section",
+        "sep5",
+        "fleet_control_section"
+      ]
+    },
+    "anomalies_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies Detected",
+        "value": "32"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleet_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_runs",
+        "stat_skills",
+        "stat_success"
+      ]
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "395"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "48"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "65%"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "rate_limit_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "rate_limit_heading",
+        "rate_limit_detail",
+        "rate_limit_failures",
+        "rate_limit_status"
+      ]
+    },
+    "rate_limit_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Claude API Rate-Limit Cluster",
+        "level": "h3"
+      }
+    },
+    "rate_limit_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Cluster 06-06 → 06-08 caused ~140 failures fleet-wide"
+      }
+    },
+    "rate_limit_failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Failures (resolved)",
+        "value": "~140"
+      }
+    },
+    "rate_limit_status": {
+      "type": "Alert",
+      "props": {
+        "title": "Recovery Status",
+        "message": "All recovered, consecutive_failures=0",
+        "type": "success"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "silent_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "silent_heading",
+        "fork_skill_gap",
+        "operator_scorecard",
+        "silent_alert"
+      ]
+    },
+    "silent_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2 Silent Skills",
+        "level": "h3"
+      }
+    },
+    "fork_skill_gap": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "fork_skill_badge",
+        "fork_skill_text"
+      ]
+    },
+    "fork_skill_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "destructive"
+      }
+    },
+    "fork_skill_text": {
+      "type": "Text",
+      "props": {
+        "text": "missed Sun 06-07"
+      }
+    },
+    "operator_scorecard": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "operator_scorecard_badge",
+        "operator_scorecard_text"
+      ]
+    },
+    "operator_scorecard_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "destructive"
+      }
+    },
+    "operator_scorecard_text": {
+      "type": "Text",
+      "props": {
+        "text": "missed Mon 06-08"
+      }
+    },
+    "silent_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Root Cause",
+        "message": "Cron windows landed in the dead zone, 2nd consecutive miss",
+        "type": "warning"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "low_success_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "low_success_heading",
+        "low_success_alert"
+      ]
+    },
+    "low_success_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "30 LOW_SUCCESS Skills",
+        "level": "h3"
+      }
+    },
+    "low_success_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Status",
+        "message": "All clean",
+        "type": "success"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleet_control_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleet_control_heading",
+        "fleet_control_stat",
+        "fleet_control_alert"
+      ]
+    },
+    "fleet_control_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "fleet-control",
+        "level": "h3"
+      }
+    },
+    "fleet_control_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "56.3%"
+      }
+    },
+    "fleet_control_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Last Run",
+        "message": "Failure — manual check warranted",
+        "type": "warning"
+      }
+    }
+  }
+}
