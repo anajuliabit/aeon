@@ -1,0 +1,215 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "narrative-tracker",
+        "description": "2026-06-10"
+      },
+      "children": [
+        "heading-zec",
+        "stat-zec-burn",
+        "badge-zec-status",
+        "badge-zec-action",
+        "separator-1",
+        "heading-dex",
+        "stat-dex-fees",
+        "text-dex-note",
+        "separator-2",
+        "heading-hyperliquid",
+        "badge-hyperliquid-status",
+        "separator-3",
+        "badge-solana-new",
+        "heading-solana",
+        "stat-solana-chain",
+        "stat-solana-kamino",
+        "separator-4",
+        "heading-reflexivity",
+        "stat-fable-hn",
+        "text-btc-retest",
+        "text-ai-thesis",
+        "separator-5",
+        "heading-home",
+        "stat-home-pop",
+        "text-home-cohort"
+      ]
+    },
+    "heading-zec": {
+      "type": "Heading",
+      "props": {
+        "text": "ZEC Front-Run Call",
+        "level": "h3"
+      }
+    },
+    "stat-zec-burn": {
+      "type": "Stat",
+      "props": {
+        "label": "Burn",
+        "value": "-12.7%",
+        "trend": "down"
+      }
+    },
+    "badge-zec-status": {
+      "type": "Badge",
+      "props": {
+        "text": "3rd consecutive contrarian-on-capitulation failure",
+        "variant": "destructive"
+      }
+    },
+    "badge-zec-action": {
+      "type": "Badge",
+      "props": {
+        "text": "pattern stop",
+        "variant": "secondary"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-dex": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX v4",
+        "level": "h3"
+      }
+    },
+    "stat-dex-fees": {
+      "type": "Stat",
+      "props": {
+        "label": "Fees",
+        "value": "+1124%",
+        "trend": "up"
+      }
+    },
+    "text-dex-note": {
+      "type": "Text",
+      "props": {
+        "text": "Step-change absorbed. Rolled off c7d.",
+        "variant": "caption"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-hyperliquid": {
+      "type": "Heading",
+      "props": {
+        "text": "Hyperliquid",
+        "level": "h3"
+      }
+    },
+    "badge-hyperliquid-status": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE on 6-protocol cluster bleed",
+        "variant": "destructive"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "badge-solana-new": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "heading-solana": {
+      "type": "Heading",
+      "props": {
+        "text": "Solana Unwind",
+        "level": "h3"
+      }
+    },
+    "stat-solana-chain": {
+      "type": "Stat",
+      "props": {
+        "label": "Chain",
+        "value": "-7.58%",
+        "trend": "down"
+      }
+    },
+    "stat-solana-kamino": {
+      "type": "Stat",
+      "props": {
+        "label": "Kamino",
+        "value": "-20.87%",
+        "trend": "down"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-reflexivity": {
+      "type": "Heading",
+      "props": {
+        "text": "Reflexivity",
+        "level": "h3"
+      }
+    },
+    "stat-fable-hn": {
+      "type": "Stat",
+      "props": {
+        "label": "Fable 5 HN Dominance",
+        "value": "5 of 15"
+      }
+    },
+    "text-btc-retest": {
+      "type": "Text",
+      "props": {
+        "text": "BTC retests sub-61k",
+        "variant": "body"
+      }
+    },
+    "text-ai-thesis": {
+      "type": "Text",
+      "props": {
+        "text": "ai-eats-crypto thesis self-fulfills",
+        "variant": "lead"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-home": {
+      "type": "Heading",
+      "props": {
+        "text": "Home Pre-Unlock",
+        "level": "h3"
+      }
+    },
+    "stat-home-pop": {
+      "type": "Stat",
+      "props": {
+        "label": "Pop",
+        "value": "+12.5%",
+        "trend": "up"
+      }
+    },
+    "text-home-cohort": {
+      "type": "Text",
+      "props": {
+        "text": "Inside week-2 $634M cohort",
+        "variant": "caption"
+      }
+    }
+  }
+}
