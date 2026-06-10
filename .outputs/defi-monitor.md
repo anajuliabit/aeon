@@ -1,8 +1,8 @@
-`DEFI_MONITOR_OK` — no positions configured.
-
 ## Summary
-- **Skill**: `skills/defi-monitor/SKILL.md` — checks DeFi pool health, positions, and yield rates from `memory/on-chain-watches.yml`.
-- **Verdict**: `DEFI_MONITOR_OK` (n_positions=0). `memory/on-chain-watches.yml` does not exist — same NO_CONFIG state as `on-chain-monitor` logged earlier today.
-- **Actions**: no RPC calls issued, no eth_call queries, no notifications sent (per skill spec: silent end on empty config).
-- **Files modified**: `memory/logs/2026-06-09.md` — appended `### defi-monitor` entry.
-- **Follow-up**: operator needs to populate `memory/on-chain-watches.yml` with `label/address/chain/rpc_url/type/threshold` entries before this skill produces signal. Already tracked in MEMORY.md current-goals (4th consecutive day at NO_CONFIG: 6-04, 6-05, 6-08 stuck, 6-09).
+
+Ran `skills/defi-monitor/SKILL.md`.
+
+- **Config check**: `memory/on-chain-watches.yml` does not exist — 5th consecutive NO_CONFIG day (operator-gated per MEMORY.md current goals; mirrors today's `on-chain-monitor` entry).
+- **Action**: Per skill spec ("If no DeFi positions configured, log 'DEFI_MONITOR_OK' and end"), no eth_call, no comparison, no notification.
+- **Files modified**: `memory/logs/2026-06-10.md` — appended `### defi-monitor` entry with `DEFI_MONITOR_OK` status.
+- **Follow-up**: Operator needs to populate `memory/on-chain-watches.yml` with `type: pool` / `type: position` entries (address/chain/rpc_url/label/threshold) to activate both `defi-monitor` and `on-chain-monitor`.

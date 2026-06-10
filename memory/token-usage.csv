@@ -358,3 +358,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-10,btc-levels,claude-sonnet-4-6,13,4074,431117,28851
 2026-06-10,reppo-trading-agent,claude-opus-4-7,52,51411,4310604,244163
 2026-06-10,reppo-digest,claude-opus-4-7,1924,24849,3304895,112537
+2026-06-10,defi-monitor,claude-opus-4-7,9,2558,211983,42016
