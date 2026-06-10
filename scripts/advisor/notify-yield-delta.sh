@@ -33,8 +33,13 @@ if [ -z "$OUR_APY" ]; then
   echo "notify-yield-delta: could not locate our venue proxy (morpho/usdc/base) — skipping"; exit 0
 fi
 
-BEST=$(jq -r --argjson mintvl "$MIN_TVL" '
-  [.data[]? | select(.stablecoin == true and ((.tvlUsd // 0) >= $mintvl) and ((.apyBase // 0) > 0))]
+# Candidates restricted to battle-tested lending/savings protocols: buffer
+# capital must never be benchmarked against managed "yield vaults" (opaque
+# strategies, anon teams) — that comparison class is wrong by design.
+LENDING_PROJECTS='["aave-v3","aave-v2","morpho","morpho-blue","morpho-v1","compound-v3","spark","sparklend","maple","fluid-lending","euler-v2"]'
+BEST=$(jq -r --argjson mintvl "$MIN_TVL" --argjson allow "$LENDING_PROJECTS" '
+  [.data[]? | select(.stablecoin == true and ((.tvlUsd // 0) >= $mintvl) and ((.apyBase // 0) > 0)
+    and ((.project // "" | ascii_downcase) as $p | $allow | any(. == $p)))]
   | max_by(.apyBase) | select(. != null) | {project, symbol, chain, tvlUsd, apyBase}' "$D/yields.json" 2>/dev/null || true)
 BEST_APY=$(printf '%s' "$BEST" | jq -r '.apyBase // empty' 2>/dev/null || true)
 if [ -z "$BEST_APY" ]; then
@@ -45,7 +50,7 @@ DELTA=$(python3 -c "print($BEST_APY - $OUR_APY)")
 echo "notify-yield-delta: ours $(printf '%.2f' "$OUR_APY")% vs best $(printf '%.2f' "$BEST_APY")% (delta $(printf '%.2f' "$DELTA")pp)"
 if python3 -c "exit(0 if $DELTA >= $DELTA_MIN_PP else 1)"; then
   BEST_DESC=$(printf '%s' "$BEST" | jq -r '"\(.project) \(.symbol) on \(.chain) (\(.apyBase * 100 | floor / 100)% base, TVL $\(.tvlUsd / 1000000 | floor)m)"')
-  MSG=$(printf '💧 Yield gap: best deep-TVL stable rate is %s vs ~%.1f%% at the current Morpho/Base venue (>=%.1fpp better). Sustainable apyBase only, TVL >= $%dm. Venue proxy is approximate — verify before moving. Not financial advice.' \
+  MSG=$(printf '💧 Yield gap: best deep-TVL stable rate is %s vs ~%.1f%% at the current Morpho/Base venue (>=%.1fpp better). Sustainable apyBase only, established lending venues, TVL >= $%dm. Venue proxy is approximate — verify before moving. Not financial advice.' \
     "$BEST_DESC" "$OUR_APY" "$DELTA_MIN_PP" "$(python3 -c "print(int($MIN_TVL/1000000))")")
   curl -fsS --max-time 20 "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
     --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
