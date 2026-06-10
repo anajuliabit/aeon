@@ -1,8 +1,8 @@
-Catalog available, datanet 9 valid/ACTIVE → reppo-trading-agent RUNs. 13 unassigned datanets surfaced for the rubric backlog.
+Orchestrator decision: rubric `tradinggymai.md` covers datanet 9, which the cache reports `valid: true / ACTIVE` — `reppo-trading-agent` runs. Catalog is healthy with 14 datanets; 13 remain unassigned (no `16` in catalog, matches MEMORY note about ID drift).
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 valid=true ACTIVE in cache; safe to re-run — trading-agent dedups by content hash and writes use idempotency keys)
+reppo-trading-agent: RUN   (datanet 9 valid=true status=ACTIVE; rubric `tradinggymai.md` configs/datanets)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -19,7 +19,7 @@ new-datanet: 18   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Plan emitted in assistant text as required by the output contract.
-- 1 RUN (reppo-trading-agent / datanet 9), 0 SKIP. Catalog available; 13 unassigned datanets discovered.
-- Logged 3rd run of the day to `memory/logs/2026-06-10.md`.
-- Follow-up: drain rubric backlog per MEMORY goal (≥1 datanet config by 2026-06-12).
+- 1 RUN / 0 SKIP across rubric files (`reppo-trading-agent` on datanet 9, cache reports valid + ACTIVE).
+- 13 unassigned datanets discovered from catalog (1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 17, 18) — datanet 16 not in current catalog, so today's count is 13, not the historical 14 in MEMORY.md.
+- Catalog `.reppo-cache/datanets.json` available; no PREFETCH_FAILED markers.
+- Appended 4th-run line under `### reppo-orchestrator` in `memory/logs/2026-06-10.md`.
