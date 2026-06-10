@@ -1,8 +1,8 @@
-Catalog available (14 datanets, ACTIVE). One rubric file (`tradinggymai.md`, datanet 9, agent `reppo-trading-agent`); cache shows `valid:true`/`status:ACTIVE` → RUN. 13 catalog ids have no rubric.
+Catalog available, datanet 9 valid/ACTIVE → reppo-trading-agent RUNs. 13 unassigned datanets surfaced for the rubric backlog.
 
 ```
 reppo-plan
-reppo-trading-agent: RUN   (datanet 9 valid=true ACTIVE; no placeholder; re-run safe — content-hash + idempotency-key dedup)
+reppo-trading-agent: RUN   (datanet 9 valid=true ACTIVE in cache; safe to re-run — trading-agent dedups by content hash and writes use idempotency keys)
 new-datanet: 1   (no rubric / no agent assigned)
 new-datanet: 2   (no rubric / no agent assigned)
 new-datanet: 4   (no rubric / no agent assigned)
@@ -19,6 +19,7 @@ new-datanet: 18   (no rubric / no agent assigned)
 ```
 
 ## Summary
-- Emitted the required `reppo-plan` fenced block in assistant text for the chain hand-off.
-- 1 RUN (reppo-trading-agent on datanet 9), 0 SKIP; 13 unassigned datanets discovered.
-- Appended a 2nd-run line to `memory/logs/2026-06-10.md` under `### reppo-orchestrator`.
+- Plan emitted in assistant text as required by the output contract.
+- 1 RUN (reppo-trading-agent / datanet 9), 0 SKIP. Catalog available; 13 unassigned datanets discovered.
+- Logged 3rd run of the day to `memory/logs/2026-06-10.md`.
+- Follow-up: drain rubric backlog per MEMORY goal (≥1 datanet config by 2026-06-12).
