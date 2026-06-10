@@ -106,8 +106,9 @@ if [ -n "${DASHBOARD_PASSWORD:-}" ]; then
         | {title, action, urgency, confidence, symbol, direction, level, invalidateLevel, horizonDays}]}'       2>/dev/null || true)
     [ -n "$MSLIM" ] && MEM_REPORTS=$(printf '%s' "$MEM_REPORTS" | jq -c --argjson r "$MSLIM" '. + [$r]')
   done
-  MACC=$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}"     "$BASE/api/advisor/scorecard" 2>/dev/null | jq -c '.accuracy // {}' 2>/dev/null || echo '{}')
-  jq -n --argjson reports "$MEM_REPORTS" --argjson acc "$MACC"     '{pastReports: $reports, scorecardAccuracy: $acc}' > "$D/advisor-memory.json"     && echo "ok advisor-memory.json ($(printf '%s' "$MEM_REPORTS" | jq 'length') past reports)"
+  MACC=$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}" "$BASE/api/advisor/scorecard" 2>/dev/null | jq -c '.accuracy // {}' 2>/dev/null || echo '{}')
+  MJOURNAL=$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}" "$BASE/api/journal?days=14" 2>/dev/null | jq -c '[.[]? | {ts, kind, text, symbol}]' 2>/dev/null || echo '[]')
+  jq -n --argjson reports "$MEM_REPORTS" --argjson acc "$MACC" --argjson journal "$MJOURNAL" '{pastReports: $reports, scorecardAccuracy: $acc, operatorJournal: $journal}' > "$D/advisor-memory.json" && echo "ok advisor-memory.json ($(printf '%s' "$MEM_REPORTS" | jq 'length') past reports, $(printf '%s' "$MJOURNAL" | jq 'length') journal entries)"
 else
   echo "advisor-prefetch: no DASHBOARD_PASSWORD, skipping advisor-memory"
 fi

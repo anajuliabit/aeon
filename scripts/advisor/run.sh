@@ -192,7 +192,7 @@ role_data() {
     yield_allocation)
       # Include per-position protocol/type so deployed stables (e.g. USDC in a
       # Morpho vault) are distinguishable from idle wallet balances.
-      datablock snapshot snapshot.json '{totalUsd, positions: [.positions[]? | {protocol, type, chain, symbol, valueUsd}], analytics:{allocation:.analytics.allocation, assets:.analytics.assets, vesting:.analytics.vesting, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
+      datablock snapshot snapshot.json '{totalUsd, positions: [.positions[]? | {protocol, type, chain, symbol, valueUsd}], analytics:{allocation:.analytics.allocation, assets:.analytics.assets, vesting:[.analytics.vesting[]? | del(.upcoming)], grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}'
       datablock yields yields.json '[.data[]? | select(.stablecoin == true) | {project,symbol,chain,tvlUsd,apyBase,apyReward,apy}] | sort_by(-(.tvlUsd // 0)) | .[0:40]'
       datablock fees fees.json '{total24h: .total24h, protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:30]}'
       datablock liquidity gt-liquidity.json '.'
@@ -208,7 +208,7 @@ role_data() {
     fundamentals)
       # vesting + locked slice so micro-cap recommendations (e.g. MAMO/REPPO)
       # distinguish locked balances (with unlock dates) from liquid ones.
-      datablock snapshot snapshot.json '{totalUsd, analytics:{assets:.analytics.assets, vesting:.analytics.vesting, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}, locked: [.positions[]? | select(.type == "locked") | {protocol, symbol, valueUsd}]}'
+      datablock snapshot snapshot.json '{totalUsd, analytics:{assets:.analytics.assets, vesting:[.analytics.vesting[]? | del(.upcoming)], grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}, locked: [.positions[]? | select(.type == "locked") | {protocol, symbol, valueUsd}]}'
       datablock protocols protocols.json '[.[]? | {name, symbol, tvl, change_1d, change_7d}] | sort_by(-(.tvl // 0)) | .[0:60]'
       datablock fees fees.json '{protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:40]}'
       datablock cg_held cg-held.json '[.[]?] | group_by(.symbol) | map(max_by(.market_cap // 0) | {symbol, name, market_cap, fully_diluted_valuation, circulating_supply, total_supply, price_change_percentage_24h})'

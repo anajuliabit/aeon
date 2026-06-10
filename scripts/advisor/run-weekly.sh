@@ -41,7 +41,23 @@ filecache() { # label, file, jq-filter
 
 # --- Gather context ---
 PERFORMANCE=$(api /api/performance | jq -c '.' 2>/dev/null || true)
-SCORECARD=$(api /api/advisor/scorecard | jq -c '{accuracy, recent: (.grades | sort_by(.gradedAt) | reverse | .[0:15])}' 2>/dev/null || true)
+SCORECARD_RAW=$(api /api/advisor/scorecard)
+SCORECARD=$(printf '%s' "$SCORECARD_RAW" | jq -c '{accuracy, recent: (.grades | sort_by(.gradedAt) | reverse | .[0:15])}' 2>/dev/null || true)
+
+# Quarter-Kelly sleeve ceiling from the measured hit rate (hits vs misses;
+# neutrals excluded). Only meaningful once >= 20 graded directional calls.
+SIZING=$(printf '%s' "$SCORECARD_RAW" | jq -c '
+  ([.grades[]? | select(.result == "hit")] | length) as $h
+  | ([.grades[]? | select(.result == "miss")] | length) as $m
+  | ($h + $m) as $n
+  | if $n >= 20 then
+      ($h / $n) as $p
+      | {gradedSample: $n, hitRate: ($p * 100 | round / 100),
+         quarterKellyPctOfNet: ((([(2 * $p - 1), 0] | max) / 4) * 100 | round),
+         rule: "cap sleevePctOfNet at min(quarterKellyPctOfNet, 20)"}
+    else
+      {gradedSample: $n, rule: "insufficient graded sample (<20) — default 15-20% band applies"}
+    end' 2>/dev/null || true)
 
 WEEK_FINDINGS="[]"
 for d in 0 1 2 3 4 5 6; do
@@ -58,20 +74,26 @@ done
 PROMPT="$(cat "$PROMPTS/weekly_conviction.md")
 $(datablock performance "$PERFORMANCE")
 $(datablock scorecard "$SCORECARD")
+$(datablock sizing "$SIZING")
 $(datablock week_reports "$WEEK_FINDINGS")
-$(filecache snapshot snapshot.json '{totalUsd, analytics:{allocation:.analytics.allocation, assets:.analytics.assets, vesting:.analytics.vesting, grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}')
+$(filecache snapshot snapshot.json '{totalUsd, analytics:{allocation:.analytics.allocation, assets:.analytics.assets, vesting:[.analytics.vesting[]? | del(.upcoming)], grossAssetsUsd:.analytics.grossAssetsUsd, totalLiabilitiesUsd:.analytics.totalLiabilitiesUsd}}')
 $(filecache liquidity gt-liquidity.json '.')
 $(filecache funding hl-funding.json '.')
 $(filecache macro macro-upcoming.json '.')"
 
 # --- Validation gate ---
+# Sleeve cap: 20% by default, tightened to the quarter-Kelly ceiling once the
+# graded sample is large enough (mirrors the prompt's sizing rule — enforced
+# here so a model that ignores it cannot ship an oversized action).
+SLEEVE_CAP=$(printf '%s' "$SIZING" | jq -r 'if .quarterKellyPctOfNet != null then ([.quarterKellyPctOfNet, 20] | min) else 20 end' 2>/dev/null || echo 20)
+case "$SLEEVE_CAP" in (*[!0-9.]*|"") SLEEVE_CAP=20 ;; esac
 validate() { # report-json -> prints violation list (empty = valid)
-  printf '%s' "$1" | jq -r '
+  printf '%s' "$1" | jq -r --argjson cap "$SLEEVE_CAP" '
     [ (if (.actions | length) > 3 then "more than 3 actions" else empty end),
       (.actions[]? | select(.entry == null or .exit == null or .invalidate == null)
         | "action \"\(.thesis[0:40])\" missing numeric entry/exit/invalidate"),
-      (.actions[]? | select((.sleevePctAfter // 99) > 20)
-        | "action \"\(.thesis[0:40])\" exceeds 20% sleeve cap"),
+      (.actions[]? | select((.sleevePctAfter // 99) > $cap)
+        | "action \"\(.thesis[0:40])\" exceeds the \($cap)% sleeve cap"),
       (if (.paceVerdict.comment // "") == "" then "missing paceVerdict.comment" else empty end)
     ] | join("; ")' 2>/dev/null || echo "unparseable report"
 }

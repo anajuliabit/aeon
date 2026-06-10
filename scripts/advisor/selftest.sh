@@ -76,4 +76,35 @@ CAL='{"updated":"2026-06-09","coverage":{},"events":[{"date":"2026-06-10","type"
 GOT=$(printf '%s' "$CAL" | jq -c --arg today "2026-06-09" --arg until "2026-06-23" '{updated, coverage, events: [.events[] | select(.date >= $today and .date <= $until)]} | .events | length')
 check "macro filter keeps only in-window events" "$GOT" "1"
 
+# --- notify-drawdown band logic ---
+ddband() { local out=0 b; for b in 10 15 20 30; do if python3 -c "exit(0 if $1 >= $b else 1)"; then out=$b; fi; done; echo "$out"; }
+check "dd 15.45 -> band 15" "$(ddband 15.45)" "15"
+check "dd 9.9 -> band 0" "$(ddband 9.9)" "0"
+check "dd 31 -> band 30" "$(ddband 31)" "30"
+
+# --- run-weekly quarter-Kelly sizing jq ---
+KSC='{"grades":[]}'
+for i in $(seq 1 15); do KSC=$(printf '%s' "$KSC" | jq '.grades += [{"result":"hit"}]'); done
+for i in $(seq 1 10); do KSC=$(printf '%s' "$KSC" | jq '.grades += [{"result":"miss"}]'); done
+KOUT=$(printf '%s' "$KSC" | jq -c '([.grades[]? | select(.result == "hit")] | length) as $h | ([.grades[]? | select(.result == "miss")] | length) as $m | ($h + $m) as $n | if $n >= 20 then ($h / $n) as $p | {gradedSample: $n, quarterKellyPctOfNet: ((([(2 * $p - 1), 0] | max) / 4) * 100 | round)} else {gradedSample: $n} end')
+check "kelly 60% hit rate -> 5% quarter-kelly" "$(printf '%s' "$KOUT" | jq -r '.quarterKellyPctOfNet')" "5"
+KSMALL=$(printf '{"grades":[{"result":"hit"},{"result":"miss"}]}' | jq -c '([.grades[]? | select(.result == "hit")] | length) as $h | ([.grades[]? | select(.result == "miss")] | length) as $m | ($h + $m) as $n | if $n >= 20 then {kelly: true} else {gradedSample: $n} end')
+check "kelly small sample gated" "$(printf '%s' "$KSMALL" | jq -r 'has("kelly") | tostring')" "false"
+
+# --- notify-yield-delta jq selection ---
+YFIX='{"data":[
+ {"stablecoin":true,"symbol":"USDC","project":"morpho-blue","chain":"Base","tvlUsd":50000000,"apyBase":4.0},
+ {"stablecoin":true,"symbol":"USDC","project":"maple","chain":"Ethereum","tvlUsd":80000000,"apyBase":6.2},
+ {"stablecoin":true,"symbol":"USDT","project":"degenfarm","chain":"Base","tvlUsd":500000,"apyBase":40},
+ {"stablecoin":false,"symbol":"WETH","project":"lido","chain":"Ethereum","tvlUsd":900000000,"apyBase":3.0}]}'
+YOURS=$(printf '%s' "$YFIX" | jq -r '[.data[]? | select(.stablecoin == true and (.symbol // "" | ascii_downcase | test("usdc")) and (.project // "" | ascii_downcase | test("morpho")) and (.chain // "" | ascii_downcase == "base") and ((.tvlUsd // 0) >= 1000000))] | max_by(.apyBase // 0) | select(. != null) | .apyBase')
+check "yield-delta venue proxy finds morpho/base/usdc" "$YOURS" "4"
+YBEST=$(printf '%s' "$YFIX" | jq -r --argjson mintvl 20000000 '[.data[]? | select(.stablecoin == true and ((.tvlUsd // 0) >= $mintvl) and ((.apyBase // 0) > 0))] | max_by(.apyBase) | select(. != null) | .apyBase')
+check "yield-delta best excludes dust-TVL farm" "$YBEST" "6.2"
+
+# --- notify-drawdown zero-peak resilience ---
+ZH='[{"date":"2026-06-01","totalUsd":0},{"date":"2026-06-02","totalUsd":100},{"date":"2026-06-03","totalUsd":80}]'
+ZDD=$(printf '%s' "$ZH" | jq '[.[] | select((.totalUsd // 0) > 0)] as $h | if ($h | length) < 2 then {today: null} else [range($h | length) as $i | {dd: ((([$h[range(0; $i + 1)].totalUsd] | max) as $peak | if $peak > 0 then ($peak - $h[$i].totalUsd) / $peak * 100 else 0 end))}] | {today: .[-1].dd} end' -c)
+check "drawdown skips zero-total entries" "$(printf '%s' "$ZDD" | jq -r '.today')" "20"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
