@@ -26,6 +26,6 @@ jobs:
           chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/advisor/notify-vesting.sh scripts/advisor/notify-drawdown.sh scripts/advisor/notify-yield-delta.sh scripts/llm.sh scripts/llm-claude.sh
           ./scripts/advisor/prefetch-data.sh
           ./scripts/advisor/run.sh
-          ./scripts/advisor/notify-vesting.sh
-          ./scripts/advisor/notify-drawdown.sh
-          ./scripts/advisor/notify-yield-delta.sh
+          ./scripts/advisor/notify-vesting.sh || echo "::warning::notify-vesting failed"
+          ./scripts/advisor/notify-drawdown.sh || echo "::warning::notify-drawdown failed"
+          ./scripts/advisor/notify-yield-delta.sh || echo "::warning::notify-yield-delta failed"

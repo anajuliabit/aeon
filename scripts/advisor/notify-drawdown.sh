@@ -27,11 +27,14 @@ fi
 
 # Drawdown (pct from running peak) at the latest entry and at the previous one.
 DD=$(printf '%s' "$HISTORY" | jq '
-  def dds: . as $h | [range(length) as $i |
-    {date: $h[$i].date,
-     dd: ((([$h[range(0; $i + 1)].totalUsd] | max) - $h[$i].totalUsd)
-          / ([$h[range(0; $i + 1)].totalUsd] | max) * 100)}];
-  dds | {today: .[-1], prev: .[-2]}' 2>/dev/null || true)
+  [.[] | select((.totalUsd // 0) > 0)] as $h
+  | if ($h | length) < 2 then {today: null, prev: null} else
+      [range($h | length) as $i |
+        {date: $h[$i].date,
+         dd: ((([$h[range(0; $i + 1)].totalUsd] | max) as $peak
+              | if $peak > 0 then ($peak - $h[$i].totalUsd) / $peak * 100 else 0 end))}]
+      | {today: .[-1], prev: .[-2]}
+    end' 2>/dev/null || true)
 TODAY_DD=$(printf '%s' "$DD" | jq -r '.today.dd // empty')
 PREV_DD=$(printf '%s' "$DD" | jq -r '.prev.dd // empty')
 if [ -z "$TODAY_DD" ] || [ -z "$PREV_DD" ]; then
@@ -53,7 +56,8 @@ if [ "$TODAY_BAND" -le "$PREV_BAND" ] || [ "$TODAY_BAND" -eq 0 ]; then
   echo "notify-drawdown: no new band crossed"; exit 0
 fi
 
-TOTAL=$(printf '%s' "$HISTORY" | jq -r '.[-1].totalUsd')
+TOTAL=$(printf '%s' "$HISTORY" | jq -r '.[-1].totalUsd // empty')
+case "$TOTAL" in (*[!0-9.]*|"") TOTAL=0 ;; esac
 MSG=$(printf '📉 Portfolio drawdown alert: −%.1f%% from the ledger peak (crossed the %s%% band). Net worth ~$%.0fk. Review the risk sleeve and the cbBTC structure per the 2× program rules. Not financial advice.' \
   "$TODAY_DD" "$TODAY_BAND" "$(python3 -c "print($TOTAL/1000)")")
 curl -fsS --max-time 20 "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
