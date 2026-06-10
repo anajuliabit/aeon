@@ -1,0 +1,210 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-06-10"
+      },
+      "children": [
+        "overview_heading",
+        "sep_1",
+        "stats_grid",
+        "sep_2",
+        "action_heading",
+        "action_queue",
+        "sep_3",
+        "report_note"
+      ]
+    },
+    "overview_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Goals Overview",
+        "level": "h3"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_total",
+        "stat_attention",
+        "stat_track",
+        "stat_blocked"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "9"
+      }
+    },
+    "stat_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "5"
+      }
+    },
+    "stat_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "3"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "1"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Queue",
+        "level": "h3"
+      }
+    },
+    "action_queue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_1",
+        "action_2",
+        "action_3",
+        "action_4"
+      ]
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "action_1_text",
+        "action_1_badge"
+      ]
+    },
+    "action_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-018",
+        "variant": "body"
+      }
+    },
+    "action_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "past due 1d",
+        "variant": "destructive"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "action_2_text",
+        "action_2_badge"
+      ]
+    },
+    "action_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "flip INDEX ISS-007/009/010/016",
+        "variant": "body"
+      }
+    },
+    "action_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "due today",
+        "variant": "destructive"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "action_3_text",
+        "action_3_badge"
+      ]
+    },
+    "action_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "ship FALLBACK_REPPO_SKILLS PR",
+        "variant": "body"
+      }
+    },
+    "action_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "due 6-11",
+        "variant": "outline"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "action_4_text",
+        "action_4_badge"
+      ]
+    },
+    "action_4_text": {
+      "type": "Text",
+      "props": {
+        "text": "author datanet RUBRIC.md",
+        "variant": "body"
+      }
+    },
+    "action_4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "due 6-12",
+        "variant": "outline"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "report_note": {
+      "type": "Text",
+      "props": {
+        "text": "Full report staged at .pending-notify/1781116200-goal-tracker.md",
+        "variant": "caption"
+      }
+    }
+  }
+}

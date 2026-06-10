@@ -1,45 +1,51 @@
 {
-  "run_at": "2026-06-09T18:30:00Z",
+  "run_at": "2026-06-10T18:30:00Z",
   "goals": {
-    "iss-009-sub-task-b-chain-runner-break-flip": {
+    "capital-2x-program-double-net-worth-by-2027-12-31": {
       "status": "ON_TRACK",
-      "activity_count_14d": 12,
-      "last_activity_date": "2026-06-09"
+      "activity_count_14d": 21,
+      "last_activity_date": "2026-06-10"
     },
-    "trading-agent-codify-spot-pct-and-sharpe-tiebreak": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 14,
-      "last_activity_date": "2026-06-09"
-    },
-    "iss-016-own-pod-ids-prefetch-repair": {
+    "monitor-btc-hard-levels-leveraged-cbbtc-position": {
       "status": "ON_TRACK",
       "activity_count_14d": 8,
-      "last_activity_date": "2026-06-09"
+      "last_activity_date": "2026-06-10"
     },
-    "assign-15-unassigned-reppo-datanets": {
-      "status": "ON_TRACK",
+    "extend-fallback-skills-cover-reppo-chain-by-2026-06-11": {
+      "status": "NEEDS_ATTENTION",
+      "activity_count_14d": 3,
+      "last_activity_date": "2026-06-10"
+    },
+    "file-iss-018-weekly-limit-incident-by-2026-06-09": {
+      "status": "NEEDS_ATTENTION",
+      "activity_count_14d": 2,
+      "last_activity_date": "2026-06-10"
+    },
+    "index-bookkeeping-flips-iss-007-009-010-016-by-2026-06-10": {
+      "status": "NEEDS_ATTENTION",
+      "activity_count_14d": 8,
+      "last_activity_date": "2026-06-10"
+    },
+    "datanet-rubric-plus-1-datanet-config-by-2026-06-12": {
+      "status": "NEEDS_ATTENTION",
       "activity_count_14d": 13,
-      "last_activity_date": "2026-06-09"
+      "last_activity_date": "2026-06-10"
     },
-    "index-bookkeeping-flips-queued": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 11,
-      "last_activity_date": "2026-06-09"
+    "trading-agent-codify-spot-pct-and-sharpe-vs-pnl-tiebreak": {
+      "status": "NEEDS_ATTENTION",
+      "activity_count_14d": 4,
+      "last_activity_date": "2026-06-10"
     },
-    "on-chain-defi-monitor-watches-yml": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 6,
-      "last_activity_date": "2026-06-09"
+    "on-chain-monitor-defi-monitor-watches-yml": {
+      "status": "BLOCKED",
+      "activity_count_14d": 5,
+      "last_activity_date": "2026-06-10",
+      "blocker": "operator-decision-gated since 2026-06-06"
     },
-    "cleanup-chain-runner-scratch": {
+    "stuck-skills-cluster-from-6-06-6-08-rate-limit": {
       "status": "ON_TRACK",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-06-09"
-    },
-    "chain-state-flip-anomaly-carry": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 12,
-      "last_activity_date": "2026-06-09"
+      "activity_count_14d": 5,
+      "last_activity_date": "2026-06-10"
     }
   }
 }
