@@ -10,6 +10,11 @@ Sharpe 134,103 **+$1,376,882 = largest single-mint pnl ever**, 2nd-highest
 Sharpe behind only 6th-mint BRENTOIL 295,747).
 
 ## Current Goals
+- **Reppo swarm MIGRATED to Docker (2026-06-10).** The reppo-swarm chain
+  is disabled in aeon.yml (commented out) — orchestrator/trading-agent/
+  voter/digest now run self-hosted. Health skills: do NOT file issues
+  about reppo-swarm not running on CI; the on-chain ledger continues
+  off-CI.
 - **CAPITAL-2× PROGRAM (north star): double net worth by 2027-12-31.**
   See [capital-2x-program.md](topics/capital-2x-program.md). Risk sleeve
   ≤15-20% net + moonshot sub-sleeve ≤1% for token-picks. BTC hard-level

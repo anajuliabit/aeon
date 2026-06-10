@@ -305,17 +305,17 @@ reactive:
 #         - parallel: [skill-a, skill-b]
 #         - skill: skill-c, consume: [skill-a, skill-b]
 chains:
-  reppo-swarm:
-    schedule: "0 */6 * * *"   # every 6 hours (00, 06, 12, 18 UTC)
-    on_error: continue
-    steps:
-      - skill: reppo-orchestrator
-      # mint and vote are independent concerns — run concurrently so voting
-      # happens every trigger regardless of whether anything mints. Both read
-      # the orchestrator's committed .outputs/reppo-orchestrator.md from disk.
-      - parallel: [ reppo-trading-agent, reppo-voter ]
-      - skill: reppo-digest
-        consume: [ reppo-orchestrator, reppo-trading-agent, reppo-voter ]
+  # reppo-swarm DISABLED 2026-06-10: the swarm now runs self-hosted on Docker
+  # (operator-managed), not on GitHub Actions. Keeping the definition commented
+  # for reference / one-off manual dispatch via chain-runner if ever needed.
+  # reppo-swarm:
+  #   schedule: "0 */6 * * *"   # every 6 hours (00, 06, 12, 18 UTC)
+  #   on_error: continue
+  #   steps:
+  #     - skill: reppo-orchestrator
+  #     - parallel: [ reppo-trading-agent, reppo-voter ]
+  #     - skill: reppo-digest
+  #       consume: [ reppo-orchestrator, reppo-trading-agent, reppo-voter ]
 
 # Default model for all skills. Override per-run via workflow_dispatch.
 # Options: claude-opus-4-7, claude-sonnet-4-6, claude-haiku-4-5-20251001
