@@ -210,6 +210,16 @@ case "$SKILL" in
     xai_search "agent-buzz.json" "$PROMPT"
     ;;
 
+  token-pick)
+    # Short-term trade/token opportunity sweep for the daily pick (moonshot
+    # sleeve). Candidates still go through the skill's own scoring gates.
+    PROMPT="Search X from ${YESTERDAY} to ${TODAY} for SHORT-TERM crypto trading opportunities being discussed by credible traders, builders, and researchers: (a) tokens with a NAMED near-term catalyst — exchange listing, token unlock, mainnet/product launch, governance vote, airdrop snapshot, partnership with a date; (b) unusual volume / on-chain flow callouts with numbers; (c) prediction-market mispricings (Polymarket/Kalshi) with a stated fair-value argument. Return up to 20 candidates. For EACH: ticker_or_market, one-line thesis (the actual claim, not a paraphrase), catalyst + date if named, @handle, follower_count (int or null), role_guess (trader|builder|founder|researcher|anon), likes (int), retweets (int), posted_at (ISO), direct_link (https://x.com/username/status/ID). EXCLUDE: giveaway/engagement-farming posts, paid shill threads, no-catalyst moonboy calls, anything older than 48h."
+    if [ -n "$VAR" ]; then
+      PROMPT="${PROMPT} Prioritize: ${VAR}."
+    fi
+    xai_search "token-pick-x.json" "$PROMPT"
+    ;;
+
   vercel-projects)
     # Pre-fetch Vercel API data (requires auth — can't be done in sandbox)
     if [ -z "${VERCEL_TOKEN:-}" ]; then
