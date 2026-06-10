@@ -1,0 +1,357 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief 6-10"
+      },
+      "children": [
+        "heading_main",
+        "sep_1",
+        "section_focus",
+        "sep_2",
+        "section_deadlines",
+        "sep_3",
+        "section_mints",
+        "sep_4",
+        "section_system"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Morning Brief 6-10",
+        "level": "h1"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "focus_content"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "focus_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss016",
+        "text_focus_variant",
+        "text_focus_detail"
+      ]
+    },
+    "badge_iss016": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-016",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "text_focus_variant": {
+      "type": "Text",
+      "props": {
+        "text": "Concurrent-same-run variant",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_focus_detail": {
+      "type": "Text",
+      "props": {
+        "text": "22nd-mint canonical 214cd4c2 duplicated 21st today",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_deadlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_deadlines",
+        "deadline_item_1",
+        "deadline_item_2"
+      ]
+    },
+    "heading_deadlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Deadlines",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "deadline_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_fallback",
+        "text_deadline_1"
+      ]
+    },
+    "badge_fallback": {
+      "type": "Badge",
+      "props": {
+        "text": "FALLBACK_REPPO_SKILLS",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text_deadline_1": {
+      "type": "Text",
+      "props": {
+        "text": "1d to 6-11 deadline",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "deadline_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss018",
+        "text_deadline_2"
+      ]
+    },
+    "badge_iss018": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-018",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text_deadline_2": {
+      "type": "Text",
+      "props": {
+        "text": "INDEX flips + file due today",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_mints": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_mints",
+        "text_mints_intro",
+        "mint_1",
+        "mint_2",
+        "mint_3"
+      ]
+    },
+    "heading_mints": {
+      "type": "Heading",
+      "props": {
+        "text": "Recent Activity",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_mints_intro": {
+      "type": "Text",
+      "props": {
+        "text": "3 mints since 6-09",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "mint_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_mint_21",
+        "text_mint_1_detail"
+      ]
+    },
+    "badge_mint_21": {
+      "type": "Badge",
+      "props": {
+        "text": "6-21 • cc128e78",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text_mint_1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "BTC+XPL Sharpe 4064",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "mint_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_mint_22",
+        "text_mint_2_detail"
+      ]
+    },
+    "badge_mint_22": {
+      "type": "Badge",
+      "props": {
+        "text": "6-22 • canonical-dup",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text_mint_2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Duplicate variant",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "mint_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_mint_23",
+        "text_mint_3_detail",
+        "stat_mint_3_gains"
+      ]
+    },
+    "badge_mint_23": {
+      "type": "Badge",
+      "props": {
+        "text": "6-23 • 0x369daedb",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text_mint_3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "1337 closes Sharpe 427",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stat_mint_3_gains": {
+      "type": "Stat",
+      "props": {
+        "label": "Gain",
+        "value": "+$104k",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_system": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_system",
+        "alert_investment_advisor",
+        "alert_gitlawb",
+        "alert_rate_limit"
+      ]
+    },
+    "heading_system": {
+      "type": "Heading",
+      "props": {
+        "text": "System Status",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "alert_investment_advisor": {
+      "type": "Alert",
+      "props": {
+        "title": "chain:investment-advisor",
+        "message": "Down since 6-08",
+        "type": "error"
+      },
+      "children": []
+    },
+    "alert_gitlawb": {
+      "type": "Alert",
+      "props": {
+        "title": "GITLAWB Alert",
+        "message": "+18.74% tripped threshold",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "alert_rate_limit": {
+      "type": "Alert",
+      "props": {
+        "title": "Rate Limit Cluster",
+        "message": "11 skills dispatched-stuck",
+        "type": "warning"
+      },
+      "children": []
+    }
+  }
+}
