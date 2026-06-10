@@ -10,6 +10,11 @@ ledger: **20 mints + 39 votes** on-chain through 2026-06-09 (20th-mint
 
 ## Current Goals
 - **CAPITAL-2× PROGRAM (north star): double net worth by 2027-12-31.**
+  Expanded 2026-06-10 with the product-lens batch: decision journal
+  (operator actions feed advisor memory via /api/journal), stress-test
+  scenarios + equity curve + risk metrics + unlock calendar on the
+  dashboard, drawdown band alerts, quarter-Kelly sleeve sizing
+  (validator-enforced once >=20 graded calls), yield-delta alerts.
   Asymmetric envelope: protected core (stables reserve, cbBTC structure,
   locked vesting) + risk sleeve capped at 15–20% of net. Infrastructure:
   daily history ledger + pace gauge on the dashboard (/api/performance),

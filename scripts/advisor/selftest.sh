@@ -98,7 +98,7 @@ YFIX='{"data":[
  {"stablecoin":true,"symbol":"USDT","project":"degenfarm","chain":"Base","tvlUsd":500000,"apyBase":40},
  {"stablecoin":false,"symbol":"WETH","project":"lido","chain":"Ethereum","tvlUsd":900000000,"apyBase":3.0}]}'
 YOURS=$(printf '%s' "$YFIX" | jq -r '[.data[]? | select(.stablecoin == true and (.symbol // "" | ascii_downcase | test("usdc")) and (.project // "" | ascii_downcase | test("morpho")) and (.chain // "" | ascii_downcase == "base") and ((.tvlUsd // 0) >= 1000000))] | max_by(.apyBase // 0) | select(. != null) | .apyBase')
-check "yield-delta venue proxy finds morpho/base/usdc" "$YOURS" "4"
+check "yield-delta venue proxy finds morpho/base/usdc" "$YOURS" "4.0"
 YBEST=$(printf '%s' "$YFIX" | jq -r --argjson mintvl 20000000 '[.data[]? | select(.stablecoin == true and ((.tvlUsd // 0) >= $mintvl) and ((.apyBase // 0) > 0))] | max_by(.apyBase) | select(. != null) | .apyBase')
 check "yield-delta best excludes dust-TVL farm" "$YBEST" "6.2"
 
