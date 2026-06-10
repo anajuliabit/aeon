@@ -1,16 +1,19 @@
+Done. Quiet run — no alerts fired.
+
+**Data fetched:** spot $61,074 | prev daily close $61,658 (2026-06-09)
+
+**Level check:**
+- Leverage-review (≤$45k): clear
+- Breakdown (daily close < $60,500): clear — $61,658 above threshold
+- Reclaim $63,500: not triggered — spot $61,074 still below
+- Reclaim $65,900: not triggered
+
+No notification sent. State and log committed (`b7b0d21`).
+
 ## Summary
 
-**BTC Levels Monitor — 2026-06-10 08:25 UTC**
-
-| Metric | Value |
-|---|---|
-| Spot | $61,554 |
-| Daily close (2026-06-09) | $61,658 |
-
-**Level checks:**
-- Leverage-review trigger (≤ $45k): clear
-- Breakdown signal (close < $60,500): clear — close was $61,658
-- Reclaim $63,500: not reached
-- Reclaim $65,900: not reached
-
-No alerts fired. State written to `memory/btc-levels-state.json`, log appended to `memory/logs/2026-06-10.md`, both committed.
+- Fetched BTC price via CoinGecko (curl succeeded)
+- Evaluated all 4 monitoring levels — none crossed
+- Updated `memory/btc-levels-state.json` (spot $61,074, 12:23 UTC)
+- Appended entry to `memory/logs/2026-06-10.md`
+- Committed both files: `chore(btc-levels): 12:23 UTC run — spot $61,074 no alerts`
