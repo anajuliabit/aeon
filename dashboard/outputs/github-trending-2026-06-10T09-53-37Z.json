@@ -1,0 +1,129 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "github-trending",
+        "description": "4 picks queued — 2026-06-10"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item1",
+        "item2",
+        "item3",
+        "item4"
+      ]
+    },
+    "item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "item1-title",
+        "item1-badge"
+      ]
+    },
+    "item1-title": {
+      "type": "Text",
+      "props": {
+        "text": "tolaria top",
+        "variant": "lead"
+      }
+    },
+    "item1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "git-first markdown KB",
+        "variant": "outline"
+      }
+    },
+    "item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "item2-title",
+        "item2-badge"
+      ]
+    },
+    "item2-title": {
+      "type": "Text",
+      "props": {
+        "text": "whichllm",
+        "variant": "lead"
+      }
+    },
+    "item2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "AI/ML",
+        "variant": "outline"
+      }
+    },
+    "item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "item3-title",
+        "item3-badge"
+      ]
+    },
+    "item3-title": {
+      "type": "Text",
+      "props": {
+        "text": "openmed",
+        "variant": "lead"
+      }
+    },
+    "item3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "AI/ML",
+        "variant": "outline"
+      }
+    },
+    "item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "item4-title",
+        "item4-badge"
+      ]
+    },
+    "item4-title": {
+      "type": "Text",
+      "props": {
+        "text": "espectre",
+        "variant": "lead"
+      }
+    },
+    "item4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "wifi CSI motion",
+        "variant": "outline"
+      }
+    }
+  }
+}
