@@ -1,0 +1,49 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review",
+        "description": "last 24h"
+      },
+      "children": [
+        "content"
+      ]
+    },
+    "content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "captures",
+        "scope",
+        "note"
+      ]
+    },
+    "captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "scope": {
+      "type": "Text",
+      "props": {
+        "text": "across memory/logs and vault/inbox",
+        "variant": "caption"
+      }
+    },
+    "note": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "muted"
+      }
+    }
+  }
+}
