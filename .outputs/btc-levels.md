@@ -1,12 +1,12 @@
 ## Summary
 
-**Run:** 2026-06-11 ~09:01 UTC (3rd run today)
+Quiet run. No alerts fired.
 
-| | Value | Threshold | Alert |
-|---|---|---|---|
-| Spot | $62,874 | ≤ $45,000 leverage band | — |
-| June 10 daily close | $61,493 | < $60,500 breakdown | — |
-| Spot vs reclaim $63,500 | $62,874 | ≥ $63,500 | — |
-| Spot vs reclaim $65,900 | $62,874 | ≥ $65,900 | — |
+- **Spot**: $62,737 — well above all trigger levels
+- **June 10 daily close**: $61,493 — above the $60,500 breakdown threshold
+- **Leverage-review trigger** (≤$45k): not active
+- **Breakdown signal** (<$60,500 close): not triggered
+- **Reclaim $63,500**: not yet (spot $136 below)
+- **Reclaim $65,900**: not yet
 
-No alerts fired. Quiet run — BTC holding above all advisory thresholds. State and log committed.
+State and log committed (`1771d54`). No notification sent.
