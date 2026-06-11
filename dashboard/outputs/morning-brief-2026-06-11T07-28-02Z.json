@@ -1,0 +1,164 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "morning-brief 2026-06-11"
+      },
+      "children": [
+        "badge-status",
+        "sep-1",
+        "stack-focus",
+        "sep-2",
+        "stack-activity",
+        "sep-3",
+        "stack-watch"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "secondary"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "text-focus-1",
+        "text-focus-2",
+        "text-focus-3"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus",
+        "level": "h3"
+      }
+    },
+    "text-focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "FALLBACK_REPPO_SKILLS PR due today"
+      }
+    },
+    "text-focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-018 + flip 4 INDEX rows"
+      }
+    },
+    "text-focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "datanet RUBRIC by 6-12"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-activity": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-activity",
+        "stat-mints",
+        "text-detail-1",
+        "text-detail-2",
+        "text-detail-3"
+      ]
+    },
+    "heading-activity": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h3"
+      }
+    },
+    "stat-mints": {
+      "type": "Stat",
+      "props": {
+        "label": "Mints",
+        "value": "5"
+      }
+    },
+    "text-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "21→25 ties record",
+        "variant": "body"
+      }
+    },
+    "text-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "24th +$1.38M largest ever",
+        "variant": "body"
+      }
+    },
+    "text-detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "25th first Step-4.2 PASS re-mint",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-watch",
+        "text-watch-1",
+        "text-watch-2"
+      ]
+    },
+    "heading-watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h3"
+      }
+    },
+    "text-watch-1": {
+      "type": "Text",
+      "props": {
+        "text": "F&G 9"
+      }
+    },
+    "text-watch-2": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $50-53K cycle-bottom reframe"
+      }
+    }
+  }
+}
