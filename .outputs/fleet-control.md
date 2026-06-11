@@ -1,16 +1,16 @@
 ## Summary
 
-Ran fleet-control skill in default Health Check Mode (var empty).
+Ran `skills/fleet-control/SKILL.md` in Health Check Mode (default — no `var` passed).
+
+**Outcome: FLEET_EMPTY** — registry has no managed instances, so per spec the skill stops silently without notifying.
 
 **Pre-flight:**
-- `gh auth`: OK (`anajuliabit`, scopes `repo`/`workflow`)
-- Rate limit: 4993 remaining (well above 50 floor)
-- Registry: `memory/instances.json` = `{"instances": []}` — empty
-- State file: `memory/state/fleet-control-state.json` present with empty instances map
+- `gh auth status` → ok (account `anajuliabit`, scopes `repo`, `workflow`)
+- `memory/instances.json` → `{"instances": []}` (bootstrap state)
 
-**Action:** Per skill spec, empty registry → log `FLEET_EMPTY: no managed instances` and **stop silently** (no notification, no state mutation, no Status/Dispatch work since no instances to check).
+**Actions taken:**
+- Appended `### fleet-control (health check, 09:00 UTC)` entry to `memory/logs/2026-06-11.md` with verdict, pre-flight, and exit code.
+- **No notification sent** (skill spec: empty registry is a silent stop — the operator hasn't registered any child instances yet).
+- No registry or state-file writes needed — nothing to update.
 
-**Files modified:**
-- `memory/logs/2026-06-10.md` — appended `## fleet-control (health check)` block with `FLEET_EMPTY` verdict
-
-**Follow-up:** None automatic. To activate fleet management, the operator populates `memory/instances.json` with managed Aeon instances (the skill never auto-discovers — registration is operator-gated).
+**Follow-up (operator action, not mine):** if children should be tracked, populate `memory/instances.json` with entries (`name`, `repo`, `purpose`, `created`, etc.) — until then this skill will keep no-op'ing on each 9/15 UTC tick.
