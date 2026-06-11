@@ -1,0 +1,422 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-11"
+      },
+      "children": [
+        "content_stack"
+      ]
+    },
+    "content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_pick_section",
+        "separator1",
+        "devtools_section",
+        "separator2",
+        "infra_section",
+        "separator3",
+        "footer_section"
+      ]
+    },
+    "top_pick_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_top_pick",
+        "apple_container_top"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "apple_container_top": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story_apple_top",
+        "desc_apple_top"
+      ]
+    },
+    "story_apple_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "apple/container",
+        "href": "https://github.com/apple/container"
+      },
+      "children": []
+    },
+    "desc_apple_top": {
+      "type": "Text",
+      "props": {
+        "text": "apple ships a first-party linux container runtime for mac, written in swift and tuned for apple silicon — the kind of thing that quietly rewires every local dev stack.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "devtools_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_devtools",
+        "devtools_stack"
+      ]
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "devtools_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo_apple_devtools",
+        "repo_maigret"
+      ]
+    },
+    "repo_apple_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "header_apple",
+        "apple_meta",
+        "apple_desc"
+      ]
+    },
+    "header_apple": {
+      "type": "StoryLink",
+      "props": {
+        "title": "apple/container",
+        "href": "https://github.com/apple/container"
+      },
+      "children": []
+    },
+    "apple_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_apple_stars",
+        "badge_apple_lang",
+        "badge_apple_status"
+      ]
+    },
+    "text_apple_stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1.6k today (30k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "badge_apple_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Swift"
+      },
+      "children": []
+    },
+    "badge_apple_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "apple_desc": {
+      "type": "Text",
+      "props": {
+        "text": "one linux vm per container, no docker desktop license, apple-silicon-native — apple's answer to colima and lima.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo_maigret": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "header_maigret",
+        "maigret_meta",
+        "maigret_desc"
+      ]
+    },
+    "header_maigret": {
+      "type": "StoryLink",
+      "props": {
+        "title": "soxoj/maigret",
+        "href": "https://github.com/soxoj/maigret"
+      },
+      "children": []
+    },
+    "maigret_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_maigret_stars",
+        "badge_maigret_lang",
+        "badge_maigret_status"
+      ]
+    },
+    "text_maigret_stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 318 today (32k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "badge_maigret_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      },
+      "children": []
+    },
+    "badge_maigret_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "maigret_desc": {
+      "type": "Text",
+      "props": {
+        "text": "3000+ site dossier by username; six-year osint staple pushed fresh today (06-11) for the recon and abuse-research crowd.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "infra_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_infra",
+        "infra_stack"
+      ]
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "infra_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo_ruview",
+        "repo_masterdns"
+      ]
+    },
+    "repo_ruview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "header_ruview",
+        "ruview_meta",
+        "ruview_desc"
+      ]
+    },
+    "header_ruview": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ruvnet/RuView",
+        "href": "https://github.com/ruvnet/RuView"
+      },
+      "children": []
+    },
+    "ruview_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_ruview_stars",
+        "badge_ruview_lang",
+        "badge_ruview_status"
+      ]
+    },
+    "text_ruview_stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 420 today (73k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "badge_ruview_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust"
+      },
+      "children": []
+    },
+    "badge_ruview_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "ruview_desc": {
+      "type": "Text",
+      "props": {
+        "text": "commodity wifi as passive radar — vital signs, presence detection, no camera; lifetime pace 198 stars/day.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo_masterdns": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "header_masterdns",
+        "masterdns_meta",
+        "masterdns_desc"
+      ]
+    },
+    "header_masterdns": {
+      "type": "StoryLink",
+      "props": {
+        "title": "masterking32/MasterDnsVPN",
+        "href": "https://github.com/masterking32/MasterDnsVPN"
+      },
+      "children": []
+    },
+    "masterdns_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_masterdns_stars",
+        "badge_masterdns_lang",
+        "badge_masterdns_status"
+      ]
+    },
+    "text_masterdns_stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 354 today (5k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "badge_masterdns_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Go"
+      },
+      "children": []
+    },
+    "badge_masterdns_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "masterdns_desc": {
+      "type": "Text",
+      "props": {
+        "text": "dns tunneling vpn tuned for high packet-loss links — picks up where dnstt and slipstream left off, with low-overhead arq and resolver load-balancing.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "footer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_text"
+      ]
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/17",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
