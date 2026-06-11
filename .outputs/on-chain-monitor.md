@@ -1,12 +1,6 @@
 ## Summary
-
-`on-chain-monitor` exited `ON_CHAIN_NO_CONFIG` per skill spec — `memory/on-chain-watches.yml` is absent. No notification sent (empty config is not an error).
-
-**Files modified:**
-- `memory/logs/2026-06-10.md` — appended log entry
-
-**State:**
-- 5th consecutive NO_CONFIG day. Already tracked in MEMORY.md current goals as operator-gated: "on-chain-monitor / defi-monitor watches.yml. 4 consecutive NO_CONFIG days."
-- No state files exist yet (`on-chain-state.json`, `known-addresses.yml`) — will be initialized when the operator populates the first watch entry.
-
-**Follow-up:** operator action — populate `memory/on-chain-watches.yml` with at least one entry (`label`, `address`, `chain`, `type`, `threshold_usd`) to activate the skill.
+- Read `skills/on-chain-monitor/SKILL.md` + `memory/MEMORY.md` + today's log for context.
+- Checked for config: `memory/on-chain-watches.yml`, `memory/on-chain-state.json`, and `memory/known-addresses.yml` are all absent.
+- Per skill spec, logged **ON_CHAIN_NO_CONFIG** and exited cleanly — no notification (empty config is not an error). 6th consecutive NO_CONFIG day; operator-gated per MEMORY.md.
+- Files modified: `memory/logs/2026-06-11.md` (appended skill log entry).
+- No follow-up actions needed from the skill side; the gating decision is the operator's.
