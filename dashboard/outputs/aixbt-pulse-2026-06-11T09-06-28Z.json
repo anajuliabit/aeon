@@ -1,0 +1,216 @@
+{
+  "root": "card_aixbt",
+  "state": {},
+  "elements": {
+    "card_aixbt": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse",
+        "description": "2026-06-11 09:00Z"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_crypto",
+        "sep1",
+        "section_tradfi",
+        "sep2",
+        "section_new",
+        "sep3",
+        "section_bridge"
+      ]
+    },
+    "section_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_crypto",
+        "stat_btc",
+        "stat_fg",
+        "stat_outflows",
+        "stat_underwater",
+        "stat_solana",
+        "text_solana_context"
+      ]
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "Bitcoin",
+        "value": "$62K"
+      }
+    },
+    "stat_fg": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "12"
+      }
+    },
+    "stat_outflows": {
+      "type": "Stat",
+      "props": {
+        "label": "ETF Outflows (IBIT)",
+        "value": "$214M",
+        "delta": "-214M",
+        "trend": "down"
+      }
+    },
+    "stat_underwater": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply Underwater near $53.6K realized-price floor",
+        "value": "50%+"
+      }
+    },
+    "stat_solana": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana Blockchain Transaction Share",
+        "value": "54%"
+      }
+    },
+    "text_solana_context": {
+      "type": "Text",
+      "props": {
+        "text": "Gaming (Kintara), WSOP, privacy tooling shipping through the drawdown",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_tradfi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_tradfi",
+        "text_tradfi1",
+        "text_tradfi2"
+      ]
+    },
+    "heading_tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "text_tradfi1": {
+      "type": "Text",
+      "props": {
+        "text": "ECB 25bp hike pricing likely today; Hormuz/renewed Iran strikes lifting oil; China tech at bear market territory, HK/CSI 300 heavy selloff",
+        "variant": "body"
+      }
+    },
+    "text_tradfi2": {
+      "type": "Text",
+      "props": {
+        "text": "EM de-risking accelerating; oil inventories depleting = commodity floor bid with equity cap",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_new",
+        "text_new1",
+        "text_new2",
+        "text_new3"
+      ]
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "text_new1": {
+      "type": "Text",
+      "props": {
+        "text": "Japan's top-3 banks planning a joint stablecoin (TradFi building on the rails)",
+        "variant": "body"
+      }
+    },
+    "text_new2": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid pre-IPO SPCX perps sparking contract design debate — SpaceX liquidity drain now a mechanism, not context",
+        "variant": "body"
+      }
+    },
+    "text_new3": {
+      "type": "Text",
+      "props": {
+        "text": "ECB hike escalated: signals → markets price likely today",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_bridge": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_bridge",
+        "text_bridge"
+      ]
+    },
+    "heading_bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text_bridge": {
+      "type": "Text",
+      "props": {
+        "text": "three vectors hit simultaneously: ECB hike today, Hormuz oil floor, China/EM cracking. BTC 50%+ supply underwater, -$214M outflows — the EM leg landed this window. infrastructure build keeps going (Japan banks + Arb $7.8B stables) regardless. Hyperliquid's own pre-IPO product is cannibalizing its token's RS — not market conditions, the product working as designed.",
+        "variant": "body"
+      }
+    }
+  }
+}

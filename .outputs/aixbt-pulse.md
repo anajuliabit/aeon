@@ -1,16 +1,17 @@
-## Summary
+*AIXBT Pulse — 2026-06-11 09:00Z*
 
-**AIXBT Pulse — 2026-06-10 21:00Z complete.**
+CRYPTO
+- BTC $62K, F&G 12, -$214M ETF outflows (IBIT), 50%+ supply underwater near $53.6K realized-price floor
+- Solana 54% of all blockchain txns — gaming (Kintara), WSOP, privacy tooling shipping through the drawdown
 
-- **createdAt:** 2026-06-10T21:00:26.505Z, windowHours: 12
-- **Sections returned:** crypto + tradfi (macro/geopolitics absent again)
-- **NEW items (6 vs 09:00 pull):**
-  - BTC reframed from "whale dip-buyers" → "$912B unrealized losses + $50-53K realized-price cycle-bottom targets" — structural escalation in 12h
-  - Helius acquires Light Protocol → Solana ZK privacy layer; Zcash 4-year bug discovered; Coinbase US perps approved — infrastructure triple
-  - CPI 4.2% May confirmed hot (was "expected" this morning); BoC/ECB policy divergence
-- **GONE (6):** Humanity $32M exploit, SpaceX IPO headline, CME futures launch, Morpho $175M, XRP ETFs, SoftBank callout
-- **Clusters:** unchanged (36 clusters, identical to 2026-06-04) — write skipped
-- **Chains:** unchanged (173 slugs, identical to 2026-06-08) — write skipped
-- **Bridge call:** CPI 4.2% + Warsh hike pricing + Hormuz oil = macro trap closes. BTC reframe is the tell — tactical → structural. Hyperliquid 200K WAU + $175M buybacks but $HYPE loses RS; product wins, narrative loses; HL cluster bleed (6 protocols ≥5% red) says leverage leg already unwinding.
-- **Files updated:** `memory/topics/aixbt-grounding.md`, `.outputs/aixbt-pulse.md`, `memory/logs/2026-06-10.md`
-- **Notification:** staged to `.pending-notify/1781128800-aixbt-pulse.md` for post-run delivery (direct `./notify` invocation blocked by sandbox shell-expansion guard — same pattern as all other 2026-06-10 skill notifications)
+TRADFI
+- ECB 25bp hike pricing likely today; Hormuz/renewed Iran strikes lifting oil; China tech at bear market territory, HK/CSI 300 heavy selloff
+- EM de-risking accelerating; oil inventories depleting = commodity floor bid with equity cap
+
+NEW THIS PULL
+- Japan's top-3 banks planning a joint stablecoin (TradFi building on the rails)
+- Hyperliquid pre-IPO SPCX perps sparking contract design debate — SpaceX liquidity drain now a mechanism, not context
+- ECB hike escalated: signals → markets price likely today
+
+BRIDGE
+- three vectors hit simultaneously: ECB hike today, Hormuz oil floor, China/EM cracking. BTC 50%+ supply underwater, -$214M outflows — the EM leg landed this window. infrastructure build keeps going (Japan banks + Arb $7.8B stables) regardless. Hyperliquid's own pre-IPO product is cannibalizing its token's RS — not market conditions, the product working as designed.
