@@ -1,15 +1,14 @@
-Notification staged. The workflow's post-run delivery step (aeon.yml:686-741) will pick it up.
-
 ## Summary
 
-Ran `security-digest`. Three new KEV adds today (all 2026-06-09), led by Arista EOS tunnel-decap (EPSS 0.22, exploited), Chromium V8 OOB (CVSS 8.8, RCE in renderer sandbox), and Cisco Catalyst SD-WAN Manager auth'd-RCE. PATCH THIS WEEK led with a fresh 2026-06-10 web3 npm supply-chain torrent (~18 packages — truffle/web3/solc/ethers typo-squats + new `@validator-sdk` / `@solana-launchpad` scopes) — high direct relevance to aeon's crypto trading stack. Plus a misc-malware bundle (~17 pkgs incl. auth0 + builder.io + "-tony" React typo-squats) and three Go advisories (go-base hardcoded JWT "random" CVSS 9.1 + PoC, Dex token-exchange bypass, Nezha CSRF).
+Ran security-digest for 2026-06-11. **3rd consecutive successful run** (rate-limit gap fully closed after 6-09 recovery).
 
-**Tier counts:** today=3 · this-week=5 · monitor=0 (dropped per spec)
-**Sources:** kev=ok · gh=ok · epss=ok (10/14 returned, missing→0)
-**Notable:** 2nd consecutive successful digest (4-day rate-limit gap closed 6-09). Two coordinated crypto-targeting npm campaigns in 24h (6-09 `@doaction/*` swarm + 6-10 web3 torrent) — possibly same operator iterating.
+- **0 fresh KEV** — all 6 active-exploit CVEs in this week's window literal-deduped against 6-09/6-10 logs (Arista, Chromium V8, Cisco Catalyst SD-WAN, LiteLLM, Check Point IKEv1, SolarWinds Serv-U). Check Point's dueDate=TODAY note dropped per strict 2-day dedup rule.
+- **PATCH TODAY**: 3 npm malware clusters — crypto-wallet stealer cluster (~10 pkgs incl. polymarket-clob-api), corporate-org dependency-confusion swarm (~22 pkgs in one 1-second push at 13:54Z, scattershot pattern is new), Tailwind/utility typo-squat batch (~16 pkgs). ~65 individual malware advisories bundled to fit 4000-char cap.
+- **PATCH THIS WEEK**: 5 advisories led by **CVE-2026-48039 meta-ads-mcp** (pip, CVSS 9.1, **public PoC**, unauth MCP RCE leaking `META_ACCESS_TOKEN` — first MCP-RCE advisory this digest has ever surfaced, direct read-across to aeon's `npx @json-render/mcp` stack). Plus @openzeppelin/wizard, litestar, traefik (PoC), opentelemetry-operator.
+- **MONITOR**: 2 no-patch-yet — PDM (+ sibling) and anyquery path traversal.
 
-**Files modified:**
-- `.pending-notify/1781103372-security-digest.md` (3656 chars, staged for post-run delivery)
-- `memory/logs/2026-06-10.md` (security-digest log entry appended)
+Files:
+- `.pending-notify/1781190500-security-digest.md` (3850 chars, under 4000)
+- `memory/logs/2026-06-11.md` — appended `### security-digest` block
 
-**Follow-up:** workflow re-delivery step will send to Telegram/Discord/Slack at end of run. No memory updates needed — items rotate weekly.
+Follow-up: post-run delivery hook will fan out via `./notify` to configured channels (Telegram/Discord/Slack).
