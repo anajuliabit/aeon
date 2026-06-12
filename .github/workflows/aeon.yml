@@ -444,27 +444,49 @@ jobs:
           fi
 
           # Layer-1 fallback: when the failure is an Anthropic rate/usage limit
-          # (OAuth weekly cap, 429), retry the SAME agentic run through the
-          # Virtuals gateway — it exposes an Anthropic-style /v1/messages, so
-          # tools keep working on Virtuals credits. Skipped when the gateway is
-          # already virtuals (no point retrying the same lane). The direct
-          # OAuth lane recovers automatically after the Anthropic reset.
+          # (OAuth weekly cap, 429), retry the SAME agentic run on Virtuals
+          # credits. Virtuals is OpenAI-compatible only — its /v1/messages and
+          # /v1/responses both return 501 — so the Anthropic-speaking claude
+          # CLI is bridged through a local LiteLLM proxy that translates
+          # /v1/messages <-> chat/completions (tools included; verified e2e on
+          # run 27420209891). use_chat_completions_url_for_anthropic_messages
+          # stops litellm routing via the (unimplemented) Responses API and
+          # drop_params drops the 'thinking' param openai-compat rejects.
+          # Skipped when the gateway is already virtuals. The direct OAuth
+          # lane recovers automatically after the Anthropic reset.
           if [ "$CLAUDE_OK" = false ] && [ "$GATEWAY" != "virtuals" ] && [ -n "${VIRTUALS_API_KEY:-}" ] && \
              printf '%s' "$CLAUDE_OUTPUT" | grep -qiE '"api_error_status": *429|hit your (weekly|session|usage) limit|rate.?limit'; then
-            echo "::warning::Claude rate-limited — retrying ${SKILL_NAME} through Virtuals gateway (${VIRTUALS_MODEL:-claude-opus-4-8})."
-            CLAUDE_OK=true
-            CLAUDE_OUTPUT=$(echo "$PROMPT" | env -u ANTHROPIC_API_KEY -u CLAUDE_CODE_OAUTH_TOKEN \
-              ANTHROPIC_BASE_URL="https://compute.virtuals.io" \
-              ANTHROPIC_AUTH_TOKEN="$VIRTUALS_API_KEY" \
-              claude -p - --model "${VIRTUALS_MODEL:-claude-opus-4-8}" --allowedTools "$ALLOWED" \
-              --output-format json 2>&1) || CLAUDE_OK=false
-            if [ "$CLAUDE_OK" = true ] && echo "$CLAUDE_OUTPUT" | jq -e '.is_error == true' >/dev/null 2>&1; then
-              CLAUDE_OK=false
-            fi
-            if [ "$CLAUDE_OK" = true ]; then
-              echo "::notice::${SKILL_NAME} completed via Virtuals gateway."
+            echo "::warning::Claude rate-limited — retrying ${SKILL_NAME} via Virtuals (LiteLLM shim, ${VIRTUALS_MODEL:-claude-opus-4-8})."
+            python3 -m pip install --quiet 'litellm[proxy]' >/dev/null 2>&1 || true
+            printf 'model_list:\n  - model_name: "%s"\n    litellm_params:\n      model: "openai/%s"\n      api_base: https://compute.virtuals.io/v1\n      api_key: os.environ/VIRTUALS_API_KEY\nlitellm_settings:\n  use_chat_completions_url_for_anthropic_messages: true\n  drop_params: true\n' "${VIRTUALS_MODEL:-claude-opus-4-8}" "${VIRTUALS_MODEL:-claude-opus-4-8}" > /tmp/litellm-virtuals.yaml
+            litellm --config /tmp/litellm-virtuals.yaml --port 4000 >/tmp/litellm.log 2>&1 &
+            LITELLM_PID=$!
+            LITELLM_UP=false
+            for _ in $(seq 1 30); do
+              if curl -s -o /dev/null --max-time 3 http://127.0.0.1:4000/health/liveliness; then LITELLM_UP=true; break; fi
+              sleep 2
+            done
+            if [ "$LITELLM_UP" = true ]; then
+              CLAUDE_OK=true
+              CLAUDE_OUTPUT=$(echo "$PROMPT" | env -u ANTHROPIC_API_KEY -u CLAUDE_CODE_OAUTH_TOKEN \
+                ANTHROPIC_BASE_URL="http://127.0.0.1:4000" \
+                ANTHROPIC_AUTH_TOKEN="virtuals-shim" \
+                claude -p - --model "${VIRTUALS_MODEL:-claude-opus-4-8}" --allowedTools "$ALLOWED" \
+                --output-format json 2>&1) || CLAUDE_OK=false
+              if [ "$CLAUDE_OK" = true ] && echo "$CLAUDE_OUTPUT" | jq -e '.is_error == true' >/dev/null 2>&1; then
+                CLAUDE_OK=false
+              fi
             else
-              echo "::warning::Virtuals gateway retry failed too — falling through to text-only fallback."
+              echo "::warning::LiteLLM shim failed to start."
+              tail -c 400 /tmp/litellm.log 2>/dev/null || true
+            fi
+            kill "$LITELLM_PID" 2>/dev/null || true
+            if [ "$CLAUDE_OK" = true ]; then
+              echo "::notice::${SKILL_NAME} completed via Virtuals (LiteLLM shim)."
+            else
+              echo "::warning::Virtuals retry failed — falling through to text-only fallback."
+              printf '%s\n' "$CLAUDE_OUTPUT" | tail -c 500
+              tail -c 500 /tmp/litellm.log 2>/dev/null || true
             fi
           fi
 
