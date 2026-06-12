@@ -17,6 +17,11 @@ off-CI (Docker), ledger only advances on self-hosted runs.
   trading-agent/voter/digest now run self-hosted. Health skills: do NOT
   file issues about reppo-swarm not running on CI; the on-chain ledger
   continues off-CI.
+> **Health-skill directive (still load-bearing):** reppo-swarm chain is
+> disabled in aeon.yml (`reppo-orchestrator/trading-agent/voter/digest`
+> = `enabled: false`, lines 267–270) — runs self-hosted on Docker. Do NOT
+> file issues about reppo-swarm not running on CI; the on-chain ledger
+> continues off-CI.
 - **CAPITAL-2× PROGRAM (north star): double net worth by 2027-12-31.**
   See [capital-2x-program.md](topics/capital-2x-program.md). Risk sleeve
   ≤15-20% net + moonshot sub-sleeve ≤1% for token-picks. BTC hard-level
@@ -56,6 +61,30 @@ off-CI (Docker), ledger only advances on self-hosted runs.
   critical/degraded/flapping, 7 no_data (never-run weeklies: autoresearch,
   fork-cohort, fork-skill-digest, fork-skill-gap, operator-scorecard,
   unlock-monitor, vuln-scanner).
+  Operator-decision-gated; rules fire correctly in practice. *[BLOCKED:
+  awaiting operator decision on thresholds.]*
+- **on-chain-monitor / defi-monitor watches.yml.** 7 consecutive
+  NO_CONFIG days (through 6-11). Operator-gated. *[BLOCKED: awaiting
+  operator to seed memory/on-chain-watches.yml.]*
+
+## Completed Goals (since 2026-06-09 reflect)
+- **Reppo swarm MIGRATED to Docker — completed 2026-06-10** (PR #103 merged
+  18:34Z, "chore: stop reppo-swarm chain on CI"). Chain disabled in aeon.yml;
+  orchestrator/trading-agent/voter/digest now self-hosted off-CI. Directive
+  kept at top of Current Goals so health skills don't misfire.
+- **4 new mints landed 2026-06-10 (21st → 24th)** — biggest single day ever
+  by pnl, ends 2-day mintless streak: 21st cc128e78 BTC+XPL HFT 70 closes
+  Sharpe 4064 +$1,147 tx 0x74ced26d; 22nd canonical re-mint 214cd4c2 (after
+  ledger backfill gap); 23rd 19e8cfb3 0x369daedb 1337 closes 7 perps Sharpe
+  427 +$104,013 tx 0xf1b68196; **24th 42eec09d 0xbe195419 788 ENA close-short
+  Sharpe 134,103 +$1,376,882 tx 0xf68bc9f5 — largest pnl in ledger ever**.
+- **ISS-016 new "concurrent-same-run variant" filed 2026-06-10** + new fix
+  path: voter consumes trading-agent's queued mint intents from
+  `.pending-reppo/`. Ledger workaround now **25 consecutive voter runs**
+  with cache count=0 — defensive cross-ref durable, 1 same-day own-pod
+  catch (pod 934 minted earlier this UTC day).
+- **Stuck-skills cluster drained 20 → 11.** All 11 remaining are weekly
+  slots (Sun/Mon/Sat) that won't fire until next cron tick. Self-resolves.
 
 ## Active Topics
 - [Capital-2× program](topics/capital-2x-program.md) — north-star spec
