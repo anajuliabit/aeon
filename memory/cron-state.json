@@ -152,8 +152,8 @@
     "success_rate": 1
   },
   "github-trending": {
-    "last_dispatch": "2026-06-11T09:00:02Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-12T10:13:25Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-11T09:05:57Z",
     "total_runs": 19,
     "total_successes": 18,
@@ -304,14 +304,14 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-11T15:03:42Z",
     "total_runs": 24,
     "total_successes": 24,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-11T15:01:11Z"
+    "last_dispatch": "2026-06-12T10:13:25Z"
   },
   "skill-analytics": {
     "last_dispatch": "2026-06-10T19:19:36Z",
@@ -451,7 +451,7 @@
     "success_rate": 1
   },
   "aixbt-pulse": {
-    "last_dispatch": "2026-06-11T21:31:16Z",
+    "last_dispatch": "2026-06-12T10:13:25Z",
     "last_status": "dispatched",
     "last_success": "2026-06-11T09:07:17Z",
     "total_runs": 11,
