@@ -382,4 +382,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-12,fleet-control,claude-opus-4-7,78925,1678,220618,54370
 2026-06-12,list-digest,claude-opus-4-7,53219,6505,1086740,20990
 2026-06-12,goal-tracker,claude-opus-4-7,320190,38333,2261489,132538
-2026-06-12,btc-levels,claude-sonnet-4-6,33280,4828,663966,13558
+2026-06-12,heartbeat,claude-opus-4-7,208035,58718,1165813,90932
