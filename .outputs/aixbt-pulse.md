@@ -1,39 +1,22 @@
-# AIXBT Pulse — 2026-06-12 21:00 UTC
+Committed. The skill ran on `main` directly per its `commits: true` config (this is an autonomous data-refresh skill, not a code change — the CLAUDE.md branch-for-code-changes rule doesn't apply to memory/artifact writes).
 
-**TL;DR:** The macro tape reversed 180° in one window — yesterday's "US strikes Iran → oil up → risk-off → China bear market" is today's "US-Iran agreement prospects → oil down → global risk-on rally." Same variable, opposite sign, one headline deep — a deal that isn't signed yet is being priced as if it is. Meanwhile crypto is *not* participating in its own risk-on: BTC ticked to $63.5K but Fear & Greed is still pinned at 12. The dominant crypto story is the SpaceX $SPCX IPO actually printing (+10%), tokenized day-one on Solana/Base/BNB via Ondo/Backpack/Dinari while CEXs couldn't even source shares — and Hyperliquid clearing $7.65B in SPCX perps for a Fortune #1 ranking. The tokenization thesis cleared in real time; the token prices are a separate question.
+## Summary
 
-Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-12T21:00:22.103Z
-Sections this pull: crypto, tradfi (geo folded into tradfi).
+**AIXBT Pulse — 2026-06-12 21:00 UTC** executed successfully. This run recovered the 10:13Z slot that hung in today's claude weekly-limit wave (per heartbeat log).
 
-## Crypto
-- SpaceX $SPCX IPO dominated crypto feeds as tokenized shares launched day-one on Solana, Base, and BNB Chain via Ondo, Backpack, and Dinari while CEX rivals failed to source shares.
-- Hyperliquid cemented its dominance with $7.65B in SPCX perp volume, CNBC citations for pre-IPO pricing, and a Fortune #1 ranking—drawing comparisons above Coinbase and Robinhood.
-- BTC trades near $63.5K amid extreme fear (index at 12); USDT dominance at highs and bearish macro signals clash with calls that the $59-60K double bottom marks a cycle low.
-- RWA tokenization accelerated broadly: Ethena allocated $250M to Securitize's CLO on Solana, Circle minted ~$750M USDC, and Ondo/Uniswap integration brought tokenized stocks to DeFi rails.
+- **createdAt:** 2026-06-12T21:00:22.103Z · **windowHours:** 12
+- **Sections returned:** crypto, tradfi (macro/geo absent again — geo folded into tradfi; rendered dynamically)
+- **Fetch:** all 3 free endpoints clean via curl — no WebFetch fallback needed
+- **NEW count:** 6 items
+- **Bridge call:** The macro tape reversed 180° on one US-Iran headline — yesterday "strikes → oil up → risk-off → China bear market," today "deal prospects → oil down → global risk-on rally." Same variable, opposite sign, one headline deep — a deal that isn't signed priced as if it is. Fade the certainty, not the direction. Meanwhile BTC at $63.5K with Fear & Greed pinned at 12 is *not* joining its own risk-on — divergence this wide resolves one way hard. And SpaceX $SPCX printed its IPO, tokenized day-one on Solana/Base/BNB while CEXs couldn't source shares; Hyperliquid cleared $7.65B in SPCX perps for a Fortune #1 ranking — the tokenization thesis cleared in real time.
 
-## TradFi
-- Prospects for a US-Iran agreement are slashing geopolitical premiums, sending oil sharply lower and fueling risk-on positioning in equities and commodities.
-- SpaceX's record IPO with shares jumping over 10% is channeling retail and institutional flows into tech and space-related sectors, lifting broader indices.
-- Falling oil prices amid Middle East thaw are alleviating inflation risks, potentially anchoring yields lower and encouraging carry trades in credit markets.
-- Global equities are rallying with Asian benchmarks surging and US indices higher as reduced vol and improved sentiment transmit across asset classes.
+**Files updated:**
+- `memory/topics/aixbt-grounding.md` — full grounding snapshot (overwritten)
+- `.outputs/aixbt-pulse.md` — chain-consumer artifact with TL;DR (for morning-brief / narrative-tracker / market-context-refresh)
+- `memory/logs/2026-06-12.md` — log entry appended
+- **Skipped** `aixbt-clusters.md` (36 clusters, byte-identical) and `aixbt-chains.md` (203 chains, byte-identical) per the "don't rewrite unchanged reference data" guideline
+- Committed to `main`: `0aeb0b7`
 
-## What's New (vs last pull 2026-06-11 09:00 UTC)
-- (TradFi) **REGIME FLIP** — "renewed US strikes on Iran" → "prospects for a US-Iran agreement." Oil reversed from sharply higher to sharply lower in one window. The entire risk-off complex inverted.
-- (TradFi) Global equities now *rallying*, Asian benchmarks *surging* — directly reverses last pull's "China tech near bear market, HK/CSI 300 heavy selloffs."
-- (TradFi) Yields now anchoring *lower* on disinflation — reverses last pull's "ECB 25bp hike today, higher yields into global credit."
-- (Crypto) SPCX is no longer a pre-IPO perp debate — **the IPO printed.** Shares +10%, tokenized day-one; CEXs couldn't source shares.
-- (Crypto) Hyperliquid SPCX perp volume quantified at $7.65B + Fortune #1 ranking, above Coinbase/Robinhood.
-- (Crypto) RWA leg got specific: Ethena $250M into Securitize CLO on Solana, Circle ~$750M USDC mint, Ondo/Uniswap tokenized stocks on DeFi rails.
+**Notification:** Queued to `.pending-notify/1781299083.md` for post-run delivery — the sandbox static analyzer blocked direct `./notify "$(...)"` command-substitution (documented fallback; the workflow's post-run step globs `.pending-notify/*.md`).
 
-## Persisting Stories
-- BTC stuck in extreme fear (F&G 12 both windows) even as price ticked $62K → $63.5K. Sentiment is not following price.
-- SpaceX the dominant crypto storyline — pre-IPO perp drain → IPO-printed, tokenized day-one, Hyperliquid venue of record.
-- Hyperliquid the structurally winning venue — pre-IPO price discovery, now $7.65B realized SPCX volume + Fortune #1.
-- RWA / tokenization infrastructure build — broad last pull, specific this pull (Ethena CLO, Circle mint, Ondo/Uniswap).
-- US-Iran / oil the master macro variable — same axis both windows, sign flipped.
-
-## Cross-Domain Bridges
-- the whole macro tape reversed on one headline. yesterday: strikes on iran, oil up, china in a bear market, risk-off everywhere. today: agreement prospects, oil down, asia surging, risk-on. same variable, same transmission path, opposite sign. this is the old regime's mirror image, one headline deep. a deal that isn't signed is priced as if it is. fade the certainty, not the direction.
-- BTC at $63.5K with fear pinned at 12 while equities rip on the risk-on flip. crypto is not participating in its own risk-on. either BTC is the slow leg and catches up, or "double bottom = cycle low" is copium and the tell is that risk assets rallied and bitcoin didn't. divergence this wide resolves one way hard.
-- SpaceX printed the IPO and tokenized shares went live day-one on solana/base/bnb while CEXs couldn't source the underlying. DeFi rails settled a tier-1 IPO faster than the incumbents could list it. Hyperliquid did $7.65B in perps on it and ranked Fortune #1. the venue and the rails won the same day. token prices are a separate question; the infrastructure already cleared.
+**Follow-up:** None for this skill. Scratch files (`.aixbt-*.json`, `.notify-aixbt.txt`) remain untracked in the workspace — sandbox blocked their `rm`, but they're not committed and don't affect the repo.
