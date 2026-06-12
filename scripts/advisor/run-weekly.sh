@@ -152,10 +152,16 @@ if curl -fsS --max-time 30 -X POST "$BASE/api/advisor/report" \
   # the same track record as token-pick. Actions without a mappable symbol
   # (portfolio-level advice) are skipped — grade-recs.sh covers those.
   REFS="$ROOT/advisor/token-refs.json"
-  printf '%s' "$REPORT" | jq -c '.actions[]? | select(.symbol != null and .entry != null)' |
+  # Only directional calls become picks: increase = long, hedge = short.
+  # decrease (reduce-a-long) and hold are de-risking moves, not bets —
+  # mislabeling them as shorts would distort the track record.
+  printf '%s' "$REPORT" | jq -c '.actions[]?
+    | select(.symbol != null and .entry != null)
+    | select(.direction == "increase" or .direction == "hedge")' |
   while read -r action; do
     SYM=$(printf '%s' "$action" | jq -r '.symbol')
-    CG_ID=$(jq -r --arg s "$SYM" '.[$s] // empty' "$REFS" 2>/dev/null)
+    SYM_KEY=$(printf '%s' "$SYM" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9')
+    CG_ID=$(jq -r --arg s "$SYM_KEY" '.[$s] // empty' "$REFS" 2>/dev/null)
     if [ -z "$CG_ID" ]; then
       echo "run-weekly: no coingecko id for $SYM — action not tracked as pick"
       continue
@@ -165,7 +171,7 @@ if curl -fsS --max-time 30 -X POST "$BASE/api/advisor/report" \
       source: "advisor",
       symbol: .symbol,
       coingeckoId: $cg,
-      side: (if .direction == "decrease" or .direction == "hedge" then "short" else "long" end),
+      side: (if .direction == "hedge" then "short" else "long" end),
       entryPriceUsd: .entry,
       targetPriceUsd: .exit,
       invalidationPriceUsd: .invalidate,

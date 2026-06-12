@@ -7,6 +7,9 @@
 # next run.
 set -euo pipefail
 
+resp_file=""
+trap '[ -n "$resp_file" ] && rm -f "$resp_file"' EXIT
+
 PENDING_DIR=".pending-picks"
 BASE="${INVESTIMENTS_BASE_URL:-https://investiments-production.up.railway.app}"
 
@@ -32,7 +35,7 @@ for payload in "$PENDING_DIR"/*.json; do
     -H "Authorization: Basic ${INVESTIMENTS_BASIC_AUTH}" \
     -H "Content-Type: application/json" \
     -d @"$payload") || http_code="000"
-  if [ "$http_code" = "200" ]; then
+  if [ "$http_code" = "200" ] || [ "$http_code" = "201" ]; then
     echo "postprocess-picks: posted $(basename "$payload") → id=$(jq -r '.id // "?"' "$resp_file")"
     rm -f "$payload"
   elif [ "$http_code" = "400" ]; then
