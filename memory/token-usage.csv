@@ -381,4 +381,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-12,token-movers,claude-opus-4-7,142132,30150,2344985,66907
 2026-06-12,fleet-control,claude-opus-4-7,78925,1678,220618,54370
 2026-06-12,list-digest,claude-opus-4-7,53219,6505,1086740,20990
-2026-06-12,skill-health,claude-opus-4-7,96746,16985,1017683,34354
+2026-06-12,agent-buzz,claude-opus-4-7,61037,16201,935040,20843
