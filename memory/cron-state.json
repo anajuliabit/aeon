@@ -11,14 +11,14 @@
     "last_success": "2026-05-21T12:33:53Z"
   },
   "defi-overview": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-11T12:22:50Z",
     "total_runs": 21,
     "total_successes": 21,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-11T12:10:58Z"
+    "last_dispatch": "2026-06-12T12:42:19Z"
   },
   "competitor-launch-radar": {
     "last_status": "success",
@@ -40,14 +40,14 @@
     "success_rate": 1
   },
   "token-pick": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-11T12:23:45Z",
     "total_runs": 18,
     "total_successes": 18,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-11T12:10:58Z"
+    "last_dispatch": "2026-06-12T12:42:19Z"
   },
   "fetch-tweets": {
     "last_status": "success",
@@ -164,8 +164,8 @@
     "last_error": "okens\":12,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.0005250000000000001,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-opus-4-7\":{\"inputTokens\":9"
   },
   "token-alert": {
-    "last_dispatch": "2026-06-11T12:10:58Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-12T12:42:19Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-11T12:13:48Z",
     "total_runs": 20,
     "total_successes": 20,
@@ -461,8 +461,8 @@
     "success_rate": 1
   },
   "token-movers": {
-    "last_dispatch": "2026-06-11T12:10:58Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-12T12:42:19Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-11T12:22:03Z",
     "total_runs": 7,
     "total_successes": 7,
@@ -471,8 +471,8 @@
     "success_rate": 1
   },
   "on-chain-monitor": {
-    "last_dispatch": "2026-06-11T13:42:19Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-12T12:42:19Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-11T13:44:25Z",
     "total_runs": 5,
     "total_successes": 5,
@@ -481,8 +481,8 @@
     "success_rate": 1
   },
   "defi-monitor": {
-    "last_dispatch": "2026-06-11T13:42:19Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-12T12:42:19Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-11T13:45:02Z",
     "total_runs": 5,
     "total_successes": 5,
@@ -531,7 +531,7 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-06-12T08:41:49Z",
+    "last_dispatch": "2026-06-12T12:42:19Z",
     "last_status": "dispatched",
     "last_success": "2026-06-11T13:46:38Z",
     "total_runs": 10,
