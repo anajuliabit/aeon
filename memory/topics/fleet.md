@@ -72,7 +72,7 @@ state: what was built, recurring blockers, and health.
 | #70 + chain-runner.yml:360 | 2026-06-03 | chain-runner `continue` → `break` flip (ISS-009 sub-task b shipped) — INDEX flip pending |
 | #71 | 2026-06-04 | aeon personal-stack PR (priorities anchor + thought-review skill + telegram voice path) — merged this week |
 | #73-#76 | 2026-06-04..05 | reppo+content-skill maintenance batch (per weekly-review 17-PR list) |
-| #77/#78/#79 | 2026-06-05..07 | virtuals + deepseek-v4-flash fallback for 5 CG-price skills (`FALLBACK_CG_SKILLS` at `aeon.yml:441`) — reppo chain NOT covered, gap surfaced by 6-06 weekly-limit cluster |
+| #77/#78/#79 | 2026-06-05..07 | virtuals + deepseek-v4-flash fallback for 5 CG-price skills (`FALLBACK_CG_SKILLS` at **`.github/workflows/aeon.yml:498`** — defi-overview / token-movers / token-pick / token-alert / market-context-refresh) — reppo chain NOT covered, but reppo is off-CI post-Docker (2026-06-10) so FALLBACK_REPPO_SKILLS is moot |
 | #80 | 2026-06-08 | investment-advisor swarm (8 advisor skills + chain wiring) — chain failed on same-day 429; PR #82 supersedes with standalone Virtuals workflow (open) |
 
 ## Recurring blockers
@@ -169,7 +169,16 @@ state: what was built, recurring blockers, and health.
   7029a48d, wallet 0xebe126ad, sharpe 295k — **first commodity-perp mint**).
 
 ## Skill health
-- Last classification (2026-05-31 18:21Z): 27 healthy, 0 critical/degraded/
+- **Latest classification (2026-06-10 18:24Z): 37 healthy, 0 critical/
+  degraded/flapping/warning, 7 no_data** (never-run weeklies: autoresearch,
+  fork-cohort, fork-skill-digest, fork-skill-gap, operator-scorecard,
+  unlock-monitor, vuln-scanner). Clean — no declining scores or persistent
+  flags. `article` still carries sr=0.5 in cron-state (2 runs only, under
+  chronic threshold — known noise, not a real regression). Through 6-11,
+  heartbeat reports 0 skills at consecutive_failures≥2 and the only
+  dispatched-stuck rows are the 11 weekly-rate-limit carry-overs draining
+  on their own cron ticks (Sun/Mon/Sat).
+- Earlier classification (2026-05-31 18:21Z): 27 healthy, 0 critical/degraded/
   flapping/warning, 1 no_data (operator-scorecard — Mon 10:30 weekly slot
   remains never-run; today's 10:30 slot also passed without state entry).
 - **Fleet expanded 29 → 34 enabled skills 2026-06-01 13:12Z** via PR #54:
@@ -326,14 +335,19 @@ state: what was built, recurring blockers, and health.
   written 6-07 + 6-08 (logs for 6-07 missing entirely; 6-08 only contains
   weekly-review + heartbeat + evening-recap + aixbt-pulse). 8+d
   reppo-swarm clean streak broken 6-08T18:37Z. Virtuals fallback covers
-  5 CG-price skills only (`FALLBACK_CG_SKILLS`); reppo chain falls through.
-  → top priority next week (extend FALLBACK list).
+  5 CG-price skills only (`FALLBACK_CG_SKILLS` at
+  `.github/workflows/aeon.yml:498`); reppo chain fell through at the time.
+  → "extend FALLBACK to reppo" action SUPERSEDED 2026-06-10 by the Docker
+  migration: reppo skills are now `enabled: false` in aeon.yml and run
+  self-hosted, so CI weekly limits can't touch them. Residual gap is only
+  non-reppo CI skills outside FALLBACK_CG_SKILLS (still `exit 1` on limit).
 - **2026-06-08 weekly-review filed** — 369 workflow runs (230/136/2/1-null),
   17 PRs merged, 5 mints (15th-19th), 7 votes. ISS-009 + ISS-017 follow-ups
   SHIPPED; INDEX flips slipped (named items still Open). 3rd consecutive
   slip on datanet rubric. Filed article weekly-review-2026-06-08.md.
-  4 next-week actions: FALLBACK_REPPO_SKILLS (by 6-11), ISS-018 file (by
-  6-09), RUBRIC+1-datanet (by 6-12), 4-issue INDEX flip (by 6-10).
+  4 next-week actions: FALLBACK_REPPO_SKILLS (by 6-11 — **VOIDED 6-10 by
+  Docker migration, reppo off-CI**), ISS-018 file (by 6-09, still overdue),
+  RUBRIC+1-datanet (by 6-12), 4-issue INDEX flip (by 6-10, still overdue).
 - **2026-06-08 18:13Z PR #80 investment-advisor merged** then immediately
   failed on the same 429. PR #82 opened 18:13Z to supersede with
   standalone Virtuals workflow; PR #81 closed. `chain:investment-advisor`
