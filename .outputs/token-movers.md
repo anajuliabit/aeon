@@ -1,18 +1,18 @@
-GAINERS (24h)
-1. VELVET $1.65 | +107.26% | 7d +1374.94%
-2. LAB $9.94 | +18.77% | 7d -6.99%
-3. VVV $14.70 | +9.49% | 7d -6.80%
-4. XMR $380.75 | +8.73% | 7d +12.62%
-5. FLR $0.007519 | +8.10% | 7d +9.34%
-6. ENA $0.081272 | +7.84% | 7d -4.94%
+TOP GAINERS (24h)
+VELVET $1.69 +110.58% | 7d +1394.43%
+VVV $14.71 +9.55% | 7d -7.70%
+XMR $381.37 +9.44% | 7d +16.90%
+LAB $9.87 +9.36% | 7d -7.71%
+ENA $0.0821 +9.03% | 7d -4.82%
+FLR $0.00754 +8.23% | 7d +9.78%
 
-LOSERS (24h)
-1. HASH $0.009556 | -9.17% | 7d -2.93%
-2. 币安人生 $0.657927 | -7.74% | 7d -3.28%
-3. JST $0.073239 | -4.62% | 7d -7.45%
-4. WLD $0.477818 | -4.60% | 7d -10.03%
-5. TRX $0.312002 | -3.08% | 7d -4.13%
-6. HTX $0.00000166 | -2.85% | 7d -5.60%
+TOP LOSERS (24h)
+BinanceLife $0.662 -7.09% | 7d -1.47%
+JST $0.0735 -4.23% | 7d -7.73%
+BEAT $8.48 -3.85% | 7d +428.03%
+WLD $0.479 -3.82% | 7d -9.78%
+TRX $0.312 -3.04% | 7d -3.98%
+MORPHO $1.95 -2.79% | 7d +15.40%
 
 MARKET READ
-Broadly green tape: total mcap $2.26T (+0.89%/24h), BTC dom 56.3%. Majors grind higher (BTC $63.4K, ETH $1664) while VELVET's parabolic run and privacy coin XMR steal the spotlight; weakness isolated to small caps.
+Quiet-green tape: total mcap +0.72%, BTC steady at $63.4k with 56.3% dominance. Privacy (XMR) and select alts lead while VELVET's parabolic run dominates the board; TRX and worldcoin lag.
