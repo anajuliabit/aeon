@@ -1,21 +1,16 @@
 {
   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "last_notified_at": "2026-06-10T18:24:18Z",
-  "last_run_at": "2026-06-10T18:24:18Z",
+  "last_notified_at": "2026-06-12T18:09:01Z",
+  "last_run_at": "2026-06-12T18:09:01Z",
   "classification": {
     "critical": [],
     "degraded": [],
     "flapping": [],
     "warning": [],
-    "healthy_count": 37,
+    "healthy_count": 41,
     "no_data": [
-      "autoresearch",
-      "fork-cohort",
-      "fork-skill-digest",
-      "fork-skill-gap",
       "operator-scorecard",
-      "unlock-monitor",
-      "vuln-scanner"
+      "fork-skill-gap"
     ]
   }
 }
