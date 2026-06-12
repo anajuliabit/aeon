@@ -1,11 +1,19 @@
-*List Digest — 2026-06-09*
+## Summary
 
-1 list, 2 signal tweets. arndxt's variational PT bump ($100 → $185/point) is the only real argument on the timeline; everything else is ≤3 likes.
+Executed the **list-digest** skill for X list `1642770456720683008` (a DeFi/crypto-research list).
 
-*List (crypto/defi research)*
-- x.com/arndxt_xo — moves variational target from $100 to $185/point. thesis: RFQ liquidity + $3m on-chain treasury earmarked for ≥30% buybacks creates a TGE bid airdrop dumpers haven't priced. (♥ 71, ↻ 4) — [View](https://x.com/arndxt_xo/status/2064019439184703904)
-- x.com/cyrilXBT — engagement spike (164 likes) on an x.com/i/article link; article body not in cache so can't insight-grade. (♥ 164, ↻ 26) — [View](https://x.com/cyrilXBT/status/2064036299825160400)
+**What I did:**
+- Read the pre-fetched cache (`.xai-cache/list-digest-1642770456720683008.json`, fresh — created today 17:17 UTC). Grok returned 10 tweets, all dated 06-11 UTC.
+- Deduplicated against `list-digest-seen.txt` and recent logs — no overlap.
+- Scored all candidates: only 2 cleared the score ≥2.0 threshold (@0xTindorr ♥88, @Louround_ ♥35); the other 8 were low-engagement replies/one-liners (≤1 like) and were dropped per the quiet-list rule.
+- No cross-list narratives possible — single list, so no resonance section.
+- Composed a verdict-led digest with one-line "so-what" insights per item.
 
----
-sources: list1642770…3008=ok(2)
-status: LIST_DIGEST_OK
+**Status:** `LIST_DIGEST_OK`
+
+**Files modified:**
+- `.pending-notify/1781285000.md` — digest queued for delivery
+- `memory/list-digest-seen.txt` — appended 2 reported URLs
+- `memory/logs/2026-06-12.md` — added list-digest log entry
+
+**Follow-up:** The `./notify` call was blocked by the sandbox static analyzer (command substitution on `$(cat ...)`), so I wrote the message directly to `.pending-notify/` — the workflow's post-run delivery step (`aeon.yml:743`) will send it to Telegram/Discord/Slack after Claude exits. Same fallback token-movers used earlier today.
