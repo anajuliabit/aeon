@@ -1,12 +1,1 @@
-## Summary
-
-Quiet run. No alerts fired.
-
-- **Spot**: $62,737 — well above all trigger levels
-- **June 10 daily close**: $61,493 — above the $60,500 breakdown threshold
-- **Leverage-review trigger** (≤$45k): not active
-- **Breakdown signal** (<$60,500 close): not triggered
-- **Reclaim $63,500**: not yet (spot $136 below)
-- **Reclaim $65,900**: not yet
-
-State and log committed (`1771d54`). No notification sent.
+₿ btc levels: spot $63.8k, reclaimed $63,500 — first stabilization signal per the 2026-06-09 advisor levels. prior utc close $63.6k (6-11) also back above $60,500, so no downtrend continuation. leveraged cbBTC position sits well clear of the $45k leverage-review trigger. next marker: $65,900 confirms stabilization. not financial advice.
