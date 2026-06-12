@@ -140,7 +140,7 @@ Score breakdown: [trending+2, vol/mcap+3, RS vs BTC/ETH+2, narrative+1] = 8/10
 Catalyst: [one sentence — what's driving this right now, named source/event]
 Risk: [one sentence — concrete risk, not generic "could go down"]
 Stake: ≤0.5% of net worth (HIGH) / ≤0.25% (MEDIUM) — moonshot sleeve, 1% total cap
-Exit: [target / invalidation / time-stop within 30d]
+Exit: target $X.XX / invalidate $X.XX / time-stop Nd
 Vs recent picks: [first time / repeat with new catalyst: ...]
 
 *Market: "Question?"*  [HIGH | MEDIUM]  edge Xpp
@@ -171,6 +171,49 @@ sources: cg=ok|fail, dex=ok|fail, poly=ok|fail, x=ok|fail|absent
 
 If all sources failed, send `TOKEN_PICK_NO_DATA` with the source-status line — do not invent picks from cached intuition.
 
+### 6c. Stage the pick for the track record (ALWAYS — normal AND skip days)
+
+Write exactly one file `.pending-picks/${today}-token-pick.json` (create the
+directory if needed). After the run, `scripts/postprocess-picks.sh` POSTs it
+to the investiments dashboard, which paper-trades it at $1k notional and
+grades it hourly against target/invalidation/time-stop. This is the agent's
+public track record — never skip this step.
+
+Normal day (token pick made):
+
+```json
+{
+  "source": "token-pick",
+  "symbol": "SYMBOL",
+  "coingeckoId": "id-from-coins-markets-response",
+  "side": "long",
+  "entryPriceUsd": 1.23,
+  "targetPriceUsd": 1.6,
+  "invalidationPriceUsd": 1.05,
+  "horizonDays": 14,
+  "conviction": "HIGH (8/10)",
+  "thesis": "2-3 sentences: catalyst + named risk, ending with: wrong if <specific invalidation reason>"
+}
+```
+
+- `coingeckoId` is the `id` field of the picked token in the CoinGecko
+  `/coins/markets` response from step 1 — required, the grader prices with it.
+- `targetPriceUsd`/`invalidationPriceUsd`/`horizonDays` MUST equal the Exit
+  line in the notification (6a). State them there first, then copy here.
+- `conviction` must start with `HIGH` or `MEDIUM` (calibration depends on it).
+
+Skip day:
+
+```json
+{
+  "source": "token-pick",
+  "status": "skipped",
+  "thesis": "one line: why no pick today (best candidate symbol + score)"
+}
+```
+
+Prediction-market picks are NOT staged (the track record grades tokens only).
+
 ### 7. Log to `memory/logs/${today}.md`
 
 ```
@@ -181,6 +224,7 @@ If all sources failed, send `TOKEN_PICK_NO_DATA` with the source-status line —
 - **Market thesis:** [one line, including fair-value estimate]
 - **Sources:** cg=ok|fail, dex=ok|fail, poly=ok|fail
 - **Notification sent:** yes (normal | skip | no-data)
+- **Pick staged:** .pending-picks/${today}-token-pick.json (normal | skip)
 ```
 
 Append symbol + market question on a single line for easy grep next-day dedup, e.g.:
