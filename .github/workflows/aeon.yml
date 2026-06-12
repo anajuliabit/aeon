@@ -252,6 +252,16 @@ jobs:
             unset ANTHROPIC_API_KEY
             unset CLAUDE_CODE_OAUTH_TOKEN
             echo "::notice::Routing through Bankr Gateway (https://llm.bankr.bot)"
+          elif [ "$GATEWAY" = "virtuals" ]; then
+            if [ -z "${VIRTUALS_API_KEY:-}" ]; then
+              echo "::error::gateway.provider=virtuals but VIRTUALS_API_KEY secret is not set"
+              exit 1
+            fi
+            export ANTHROPIC_BASE_URL="https://compute.virtuals.io"
+            export ANTHROPIC_AUTH_TOKEN="$VIRTUALS_API_KEY"
+            unset ANTHROPIC_API_KEY
+            unset CLAUDE_CODE_OAUTH_TOKEN
+            echo "::notice::Routing through Virtuals Gateway (https://compute.virtuals.io)"
           else
             echo "::notice::Using direct Anthropic API"
           fi
@@ -431,6 +441,31 @@ jobs:
             --output-format json 2>&1) || CLAUDE_OK=false
           if [ "$CLAUDE_OK" = true ] && echo "$CLAUDE_OUTPUT" | jq -e '.is_error == true' >/dev/null 2>&1; then
             CLAUDE_OK=false
+          fi
+
+          # Layer-1 fallback: when the failure is an Anthropic rate/usage limit
+          # (OAuth weekly cap, 429), retry the SAME agentic run through the
+          # Virtuals gateway — it exposes an Anthropic-style /v1/messages, so
+          # tools keep working on Virtuals credits. Skipped when the gateway is
+          # already virtuals (no point retrying the same lane). The direct
+          # OAuth lane recovers automatically after the Anthropic reset.
+          if [ "$CLAUDE_OK" = false ] && [ "$GATEWAY" != "virtuals" ] && [ -n "${VIRTUALS_API_KEY:-}" ] && \
+             printf '%s' "$CLAUDE_OUTPUT" | grep -qiE '"api_error_status": *429|hit your (weekly|session|usage) limit|rate.?limit'; then
+            echo "::warning::Claude rate-limited — retrying ${SKILL_NAME} through Virtuals gateway (${VIRTUALS_MODEL:-claude-opus-4-8})."
+            CLAUDE_OK=true
+            CLAUDE_OUTPUT=$(echo "$PROMPT" | env -u ANTHROPIC_API_KEY -u CLAUDE_CODE_OAUTH_TOKEN \
+              ANTHROPIC_BASE_URL="https://compute.virtuals.io" \
+              ANTHROPIC_AUTH_TOKEN="$VIRTUALS_API_KEY" \
+              claude -p - --model "${VIRTUALS_MODEL:-claude-opus-4-8}" --allowedTools "$ALLOWED" \
+              --output-format json 2>&1) || CLAUDE_OK=false
+            if [ "$CLAUDE_OK" = true ] && echo "$CLAUDE_OUTPUT" | jq -e '.is_error == true' >/dev/null 2>&1; then
+              CLAUDE_OK=false
+            fi
+            if [ "$CLAUDE_OK" = true ]; then
+              echo "::notice::${SKILL_NAME} completed via Virtuals gateway."
+            else
+              echo "::warning::Virtuals gateway retry failed too — falling through to text-only fallback."
+            fi
           fi
 
           if [ "$CLAUDE_OK" = false ]; then
