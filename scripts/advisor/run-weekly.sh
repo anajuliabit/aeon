@@ -148,6 +148,37 @@ if curl -fsS --max-time 30 -X POST "$BASE/api/advisor/report" \
     -H "Authorization: Basic ${AUTH}" -H "Content-Type: application/json" \
     -d "$(jq -n --arg d "$DATE" --argjson r "$REPORT" '{date: $d, type: "weekly", report: $r}')" >/dev/null 2>&1; then
   echo "run-weekly: weekly report posted"
+  # Track each numeric action as a pick so weekly conviction calls land in
+  # the same track record as token-pick. Actions without a mappable symbol
+  # (portfolio-level advice) are skipped — grade-recs.sh covers those.
+  REFS="$ROOT/advisor/token-refs.json"
+  printf '%s' "$REPORT" | jq -c '.actions[]? | select(.symbol != null and .entry != null)' |
+  while read -r action; do
+    SYM=$(printf '%s' "$action" | jq -r '.symbol')
+    CG_ID=$(jq -r --arg s "$SYM" '.[$s] // empty' "$REFS" 2>/dev/null)
+    if [ -z "$CG_ID" ]; then
+      echo "run-weekly: no coingecko id for $SYM — action not tracked as pick"
+      continue
+    fi
+    PICK=$(printf '%s' "$action" | jq -c --arg d "$DATE" --arg cg "$CG_ID" '{
+      id: ($d + "-advisor-" + (.symbol | ascii_downcase)),
+      source: "advisor",
+      symbol: .symbol,
+      coingeckoId: $cg,
+      side: (if .direction == "decrease" or .direction == "hedge" then "short" else "long" end),
+      entryPriceUsd: .entry,
+      targetPriceUsd: .exit,
+      invalidationPriceUsd: .invalidate,
+      horizonDays: (.horizonDays // 30),
+      conviction: "UNSTATED",
+      thesis: (.thesis + " | wrong if: " + (.wrongIf // "unstated"))
+    }')
+    curl -fsS --max-time 30 -X POST "$BASE/api/picks" \
+      -H "Authorization: Basic ${AUTH}" \
+      -H "Content-Type: application/json" \
+      -d "$PICK" >/dev/null 2>&1 \
+      || echo "::warning::run-weekly: pick POST failed for $SYM"
+  done
 else
   echo "::warning::run-weekly: report POST failed"
 fi
