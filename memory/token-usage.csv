@@ -399,3 +399,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-13,reflect,claude-opus-4-7,47,18080,3680937,204516
 2026-06-13,heartbeat,claude-opus-4-7,20,16782,1304361,98620
 2026-06-13,btc-levels,claude-sonnet-4-6,10,5106,414439,51838
+2026-06-13,thought-review,claude-opus-4-7,18,4867,661581,29574
