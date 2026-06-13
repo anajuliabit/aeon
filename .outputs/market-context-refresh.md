@@ -1,8 +1,17 @@
-BTC $63,149 (+0.02% 24h) | ETH $1,656.33 (-0.03% 24h) | SOL $66.62 (+1.64% 24h)
+Done. Here's a summary of what ran:
 
-Total mkt cap: $2.25T (+0.40% 24h) | 24h vol: $76.9B
-Dominance: BTC 56.28% | ETH 8.89%
+## Summary
 
-Movers: TON +5.05%, DOGE +2.37%, XMR +3.69%, HYPE +4.05%; TRX -2.72% lagging. Velvet ripping (+104% 24h, +1346% 7d).
+**Files modified:**
+- `memory/topics/market-context.md` — full overwrite with 2026-06-13 data
+- `memory/logs/2026-06-13.md` — log entry appended
+- `.pending-notify/market-context-refresh-msg.md` — notification queued (sandbox blocks direct `./notify`, documented fallback)
 
-Read: Neutral-to-mildly risk-on. BTC/ETH pinned flat while SOL and select large-cap alts (TON, DOGE, HYPE, XMR) lead; rising BTC dominance plus muted majors signals cautious, rotation-driven tape rather than broad conviction.
+**Market take:** chop (conviction medium) — BTC +1.09% to $64K with 14/20 breadth, but F&G 13 (Extreme Fear, essentially unchanged) and underlying DEX vol -10.7% clean keep the regime unresolved.
+
+**Key signals incorporated:**
+- **BTC ETF inflows $85.9M** — first positive day in the 13-day $4.4B outflow streak (from AIXBT pulse June 13 log)
+- **Decentralized AI bid rising** — Anthropic Fable 5 export-control order drove TAO +17.4% ($255M vol, TRENDING+UP) and VVV +16.2%; TAO was today's token-pick (10/10 HIGH at $248.76), added to Token Picks Made table
+- **XMR spike fully reversed** — -12.2% 24h today after June 11's +12.9%; ZEC -4.9% alongside; idiosyncratic noise confirmed
+- **Iran peace YES: 3.2% → 24.15%** — geopolitical tail compressed, June 15 deadline now 36h out
+- **HL Perps fees worsened** — -33.8% → -67.77% c7d; June 11 bottom call invalid; HYPE ecosystem narrative remains fading

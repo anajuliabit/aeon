@@ -1,66 +1,67 @@
-# Market Context (as of 2026-06-11)
+# Market Context (as of 2026-06-13)
 
-> **Take:** chop — BTC +3.1% to $63K with majority of top-100 assets green by midday, but F&G 12 (Extreme Fear) and 13-day ETF outflow streak keep the structural regime unresolved. Conviction: medium.
+> **Take:** chop — BTC +1.09% to $64K with 14/20 breadth and BTC ETF inflows turning positive ($85.9M, first in 13 days), but F&G 13 (Extreme Fear, unchanged) and underlying DEX vol -10.7% (ex-Polymarket-US artifact) keep the structural recovery unconfirmed. Conviction: medium.
 
 ## Signal Snapshot
-- BTC $63,031 (+3.09% 24h, +0.93% 7d) · dominance 56.31% (+0.32pp 24h)
-- ETH $1,659 (+2.29% 24h, -5.08% 7d) · ETH/BTC 0.02632
-- SOL $65.65 (+3.50% 24h, -4.79% 7d)
-- Total mcap $2.233T (+0.53% 24h) · DEX vol $6.71B 24h
-- Breadth: 6/20 green 24h at morning fetch; tape flipped to ~14/20 by 12:00 UTC (57/79 top-100 green, token-movers 12:12 UTC) · 8/20 green 7d
-- Fear & Greed: 12 (Extreme Fear) — yesterday 9
+- BTC $64,058 (+1.09% 24h, +5.42% 7d) · dominance 56.45% (+0.14pp 24h)
+- ETH $1,678 (+0.84% 24h, +7.72% 7d) · ETH/BTC 0.02620
+- SOL $67.88 (+1.81% 24h, +8.46% 7d)
+- Total mcap $2.274T (+0.74% 24h) · DEX vol $6.96B raw 24h ($5.99B ex-Polymarket-US launch artifact)
+- Breadth: 14/20 green 24h · ~11/20 green 7d
+- Fear & Greed: 13 (Extreme Fear) — yesterday 12
 
 ## What Changed Since Last Refresh
-- BTC recovered to $63K (+1.5% from $62.1K yesterday) — CPI absorbed without a bearish break; relief rally reversed yesterday's 22/100 red tape to 57/79 green in 24h
-- ETH/BTC ratio fell to 0.02632 (from 0.02670 yesterday, -1.4%) — ETH -5.1% 7d vs BTC +0.9% 7d; 6pp divergence widening; alts still underperforming BTC on the 7d band
-- XMR +12.9% 24h to ~$350 (rank 16 MAJOR) — lone large-cap top-20 outlier; no confirmed catalyst; idiosyncratic privacy-coin bid forming without a narrative anchor
+- BTC ETF inflows $85.9M today — first positive print in the 13-day, $4.4B outflow streak; ETH ETFs still bleeding (day 4 divergence); single data point, not confirmed trend
+- XMR June 11 spike (+12.9%) fully reversed: -12.2% 24h to $335, ZEC -4.9% 24h alongside — confirms idiosyncratic noise, no structural anchor; privacy-coin cluster flush complete
+- US-Iran June 15 peace deal YES 3.2% → 24.15% (Polymarket, +754% in 2 days) — geopolitical risk tail materially compressed; June 15 hard deadline is the binary
 
 ## Active Narratives
-- **Monero (XMR) privacy breakout** — phase: emerging. Evidence: XMR +12.9% 24h to $348 (rank 16), +3.44% 7d; lone large-cap top-20 gainer >+10% on a fear tape; trending in CG token-movers for 2nd consecutive session; no confirmed catalyst — idiosyncratic bid.
-- **VELVET/micro-cap speculation** — phase: peak. Evidence: VELVET +126% 24h / +618% 7d (rank 126, trending #1 CG); 3rd direction flip in 3 days (6-09: +24.5%, 6-10: -17.7%, 6-11: +126%); BEAT +61% / +532% 7d (rank 38, trending #2); parabolic extension, no named catalyst on either.
-- **Hyperliquid/HYPE ecosystem fade** — phase: fading. Evidence: HYPE -2.3% 24h ($56.30), -15.8% 7d; -25.5% from ATH $75.48 (June 2); HL cluster 6-protocol bleed ≥5% per defi-overview (HyperLend, stHYPE, Kinetiq, HL Spot, HL HLP, Derive V2); HL Perps fees c7d -33.8% (improving from -40% yesterday — may be bottoming).
-- **Monad (MON) L1 recovery** — phase: emerging. Evidence: MON +5.48% 24h / +17.29% 7d; token-pick score 10/10; named catalysts: Mu Digital Asian-credit tokenization (monad+pendle, 6-02), governance consensus vote (6-06), FalconX+TownSquare $100M USD1 (May); CG trending rank 14 at 12:xx UTC; +34% off 2026 ATL.
-- **RWA tokenization** — phase: rising. Evidence: USYC 3-day cumulative inflow +$220M (c1d +1.20% to $3.01B); Grove Finance fees +33.9% c7d / TVL -1.10% at $2.45B scale (real-yield demand vs deposit signal); OpenEden TBILL +29.71% c1d to $218M carry from yesterday.
+- **Decentralized AI bid** — phase: rising. Evidence: Anthropic Fable 5 + Mythos 5 US export-control order (June 13) → TAO +17.4% / $255M vol (TRENDING+UP/BREAKOUT), VVV +16.2% (trending); token-pick TAO scored 10/10 today; narrative = centralized AI restrictions → decentralized alternatives bid.
+- **Iran geopolitical repricing** — phase: emerging. Evidence: US-Iran June 15 peace YES at 24.15% on Polymarket (was 3.2% June 11); if deal closes, removes the macro risk-off tail; position likely near full at 24%; June 15 deadline within 36h.
+- **DeFi TVL recovery** — phase: rising. Evidence: Lido +8.31% 7d ($14.91B), Aave V3 +5.26% 7d ($11.83B), WBTC +5.38% 7d ($7.28B); total DeFi TVL $72.28B continuing reclaim from 6-10 flush (+1.47% c1d); fee metrics still lagging (HL Perps -67.77% c7d, Aave fees -85.47% c7d) — TVL recovery not yet confirmed in revenue.
+- **Hyperliquid/HYPE ecosystem bleed deepening** — phase: fading. Evidence: HYPE -1.75% 24h ($59.20), -21.7% from $75.48 ATH June 2; HL Perps fees c7d worsened -33.8% → -67.77% (6-11 bottom call INVALID); Canton displaced HL Perps at fees #3 ($2.32M c7d +28.08% vs HL Perps $2.04M). Bottom not confirmed.
+- **RWA tokenization** — phase: rising. Evidence: Steakhouse Financial DEBUTS on fees-beating-TVL at $2.06B scale (+41.48% fees c7d / +1.51% TVL c7d); Apollo Diversified Credit Securitize Fund new entry (+30.7% fees c7d); Polymarket US $969M first-day DEX vol (CFTC-approved onshore launch — real institutional-grade prediction market product).
 
 ## Top DeFi Protocols (TVL, 7d change)
-- Lido: $14.8B (-5.07%)
-- SSV Network: $12.2B (-5.35%)
-- Aave V3: $11.6B (-2.21%)
-- LayerZero V2: $7.5B (-0.33%)
-- WBTC: $7.2B (+0.76%)
+- Lido: $14.91B (+8.31%)
+- SSV Network: $12.31B (+5.81%)
+- Aave V3: $11.83B (+5.26%)
+- LayerZero V2: $7.55B (+0.69%)
+- WBTC: $7.28B (+5.38%)
 
 ## Chain Flow (top 3 by TVL, 7d)
-*7d per-chain delta unavailable (API regression, day 14). Session deltas vs 2026-06-10 in parens.*
-- Ethereum: $37.25B (+1.92% vs yesterday)
-- BSC: $5.21B (+1.62% vs yesterday)
-- Solana: $4.59B (+1.80% vs yesterday)
+*7d per-chain delta unavailable (API regression, day 15). Session deltas vs 2026-06-11 in parens.*
+- Ethereum: $37.83B (+1.61% vs June 11)
+- BSC: $5.24B (+0.58% vs June 11)
+- Solana: $4.72B (+3.05% vs June 11)
 
 ## Stablecoins
-Total: ~$314.7B (+0.22% c1d, 7d ~flat). USDT $186.7B · USDC $75.0B · USDS $8.4B · USDe $4.5B · combined share of mcap ~14%. Notable: USD1 WLF 3-day cumulative bleed -$351M (accelerating); USYC 3-day +$220M (RWA inflow); USDGO 3-day +59% from $283M to $450M (single-issuer event, no confirmed protocol catalyst — worth watching).
+Total: ~$314.25B (+0.14% c1d). USDT $186.4B · USDC $74.9B · USDS $8.49B (+$91M today) · USDe $4.48B · DAI $4.41B · combined share of mcap ~13.8%. Notable: USDTB Ethena −9.42% (−$100M to $963M, twin signal with protocol TVL −9.78%); USD1 bleed STOPPED (+$5M today after 3-day −$351M streak).
 
 ## Trending (CoinGecko)
-- VELVET — +161% 24h; rank 126; trending #1; 3rd direction flip in 3 days; PUMP-RISK
-- BEAT (Audiera) — +65.7% 24h; rank 38; +532% 7d; cleanest large-cap momentum signal but parabolic shape
-- AXION — +78.7% 24h; rank 965; micro-cap speculation; no clear project context
-- BTC — +1.2% 24h (at CG trending fetch); rank 1; $63K reclaim on CPI aftermath
-- HYPE — -1.2% 24h; rank 11; post-ATH fade; 6-protocol HL ecosystem cluster bleeding
+- SIREN — -75.2% 24h; rank 284; trending #1; 2nd consecutive capitulation session (−16.9% June 12, −75.2% June 13); full unwind
+- TAO (Bittensor) — +17.4% 24h; rank ~42; TRENDING+UP/BREAKOUT; $255M vol; Anthropic export-control narrative; today's token-pick (10/10)
+- VELVET — -76.2% 24h; TRENDING+DOWN; $113M vol; +722% week collapses to unwind; CAPITULATION confirmed
+- VVV — +16.2% 24h; TRENDING+UP; decentralized AI bid alongside TAO on export-control news
+- SOL — +1.5% 24h; rank 7; stable within the broad-green tape
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |
 |--------|------|---------|-----------|
-| US × Iran permanent peace deal by June 15, 2026? | 3.2% | $4.19M | $0.85M |
+| US × Iran permanent peace deal by June 15, 2026? | 24.15% | $4.68M | $431K |
+| Will France win the 2026 FIFA World Cup? | 16.05% | $2.35M | $6.40M |
+| Will Xi Jinping leave power before 2027? | 7.25% | $60K | ~$100K |
 
-*FIFA World Cup country-winner markets dominate top-10 by 24h volume; all individual-country YES prices <3% and filtered per specification. US × Iran June 15 deadline at 3.2% YES — geopolitical risk-off tail still active.*
+*FIFA World Cup winner markets dominate overall 24h volume; all individual-country YES prices <3% filtered. Iran June 15 peace at 24.15% YES (was 3.2% June 11, +754%) — highest-signal active crypto-adjacent market. Xi Jinping market traded by token-pick skill today (token-pick sold YES / bought NO at 92.75¢, edge ~5.5pp).*
 
 ## Macro Catalysts (next 48h)
-- **CPI aftermath (resolved June 10)** — BTC +3.1% post-print signals no bearish surprise; $63K reclaimed; watch whether relief extends to $64-65K or fades at resistance
-- **BTC ETF outflow reversal** — 13-day streak, $4.4B total; hedge funds -31,400 BTC, Morgan Stanley closed 8,300 BTC position entirely; first net positive inflow day = chop→risk-on flip trigger
-- **US-Iran military situation** — Polymarket June 15 peace at 3.2% YES; geopolitical risk-off tail active; oil → Fed → BTC pressure channel
-- **Token unlock pressure** — June 2026 >$634.89M unlocks incl. HOME (882M tokens), HumidiFi, Magic Eden
+- **Iran peace deal June 15 deadline** — YES already at 24.15%; deal = risk-off tail removed (mild crypto-positive); failure = neutral to slight risk-off; position likely near full, tail upside small
+- **BTC ETF inflow confirmation** — first +$85.9M after 13-day outflow streak; if tomorrow confirms, regime shifts from outflow-driven drag to inflow-driven support; ETH bleed (day 4) divergence is the institutional bifurcation watch
+- **Anthropic Fable 5 / Mythos 5 export-control** — US gov suspension order (national security / jailbreak); near-term bid on decentralized AI (TAO/VVV/MOR); watch for reversal on appeal or second-order regulatory scope expansion
 
 ## Implications for Downstream Skills
-- **token-pick:** MON picked today (HIGH 10/10, named ecosystem catalysts); MORPHO dedup-clean HIGH 8/10 ($175M Paradigm/a16z raise) eligible tomorrow; avoid VELVET/BEAT on parabolic-pump-risk shape; XMR breakout interesting but lacks named catalyst — confirmation needed before sizing
-- **narrative-tracker:** XMR privacy breakout needs catalyst verification (idiosyncratic vs structural); HL ecosystem cluster bleed may be bottoming (HyperLend +4.35% c1d, HL Perps fees c7d -40%→-33.8% improving); VELVET × 3 direction flips in 3 days = reflexive noise, not trend; MON L1 narrative emerging with named-catalyst anchor
+- **token-pick:** TAO picked today (10/10 HIGH, decentralized AI / export-control catalyst, $248.76); favor decentralized AI names with named catalysts (VVV, MOR next); HYPE deferred (fees deepening, bottom not confirmed); VELVET/SIREN full capitulation — no thesis remains; MON (June 11 pick) still at emerging-phase recovery posture
+- **narrative-tracker:** decentralized AI bid needs catalyst durability check — export-control order on appeal timeline; Iran peace June 15 binary within 36h; HL ecosystem c7d fee acceleration (-33.8%→-67.77%) invalidates the prior bottom call — monitor for stabilization day
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
@@ -78,7 +79,8 @@ Total: ~$314.7B (+0.22% c1d, 7d ~flat). USDT $186.7B · USDC $75.0B · USDS $8.4
 | 2026-06-09 | WLD | $0.48 | OpenAI confidential S-1 filing + 43% reduction in daily WLD unlocks queued for July; Hayes capitulation dump June 7 absorbed — held above $0.47; vmc 0.506, score 11/10 HIGH |
 | 2026-06-10 | SENT | $0.01508 | open-AGI "GRID" protocol; Upbit-listing residual + pending Coinbase roadmap addition; +5.04% 7d vs BTC -7.33%/ETH -11.58% broad red tape; vmc 0.55, score 7/10 HIGH |
 | 2026-06-11 | MON | $0.0220 | Mu Digital Asian-credit tokenization on monad+pendle (6-02), governance consensus vote (6-06), FalconX tokenized-credit + TownSquare $100M USD1 (May); 55% off Nov-2025 ATH / +34% off 2026 ATL — recovery posture; vmc 0.15; score 10/10 HIGH |
+| 2026-06-13 | TAO | $248.76 | Bittensor on CG trending; subnet capacity 128→256 expansion live, Grayscale + Bitwise spot-TAO ETF SEC decisions due ~Aug 2026, December 2025 halving cut daily emissions 7,200 → 3,600 with >70% supply staked; Anthropic Fable 5 export-control → decentralized AI bid; vmc 0.106, score 10/10 HIGH |
 
 ---
-*Sources — btc/eth: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch*
-*Source status: coingecko=ok defillama=ok(chain 7d-delta n/a from API, day 14) fng=ok polymarket=ok websearch=ok*
+*Sources — btc/eth: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch + AIXBT*
+*Source status: coingecko=ok defillama=ok(chain 7d-delta n/a from API, day 15) fng=ok polymarket=ok websearch=ok*
