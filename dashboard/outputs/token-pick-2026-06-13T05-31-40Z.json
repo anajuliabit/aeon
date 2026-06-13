@@ -1,0 +1,327 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "token-pick"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-velvet",
+        "sep1",
+        "section-beat",
+        "sep2",
+        "section-zec",
+        "sep3",
+        "section-honorable"
+      ]
+    },
+    "section-velvet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-velvet",
+        "stats-velvet",
+        "text-velvet"
+      ]
+    },
+    "heading-velvet": {
+      "type": "Heading",
+      "props": {
+        "text": "VELVET",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-velvet": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-velvet-24h",
+        "stat-velvet-7d",
+        "stat-velvet-rank"
+      ]
+    },
+    "stat-velvet-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+107%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-velvet-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+1375%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-velvet-rank": {
+      "type": "Stat",
+      "props": {
+        "label": "Rank",
+        "value": "83"
+      },
+      "children": []
+    },
+    "text-velvet": {
+      "type": "Text",
+      "props": {
+        "text": "explosive parabolic move and trending, but vertical gains like this scream blow-off risk.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-beat": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-beat",
+        "stats-beat",
+        "text-beat"
+      ]
+    },
+    "heading-beat": {
+      "type": "Heading",
+      "props": {
+        "text": "BEAT (Audiera)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-beat": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-beat-24h",
+        "stat-beat-7d",
+        "stat-beat-rank"
+      ]
+    },
+    "stat-beat-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "-5.5%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-beat-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+423%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-beat-rank": {
+      "type": "Stat",
+      "props": {
+        "label": "Rank",
+        "value": "41"
+      },
+      "children": []
+    },
+    "text-beat": {
+      "type": "Text",
+      "props": {
+        "text": "massive weekly run now stalling, classic momentum cooldown to watch for continuation or rollover.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-zec": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-zec",
+        "stats-zec",
+        "text-zec"
+      ]
+    },
+    "heading-zec": {
+      "type": "Heading",
+      "props": {
+        "text": "ZEC (Zcash)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-zec": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-zec-24h",
+        "stat-zec-7d",
+        "stat-zec-rank"
+      ]
+    },
+    "stat-zec-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+1.8%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-zec-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+33%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-zec-rank": {
+      "type": "Stat",
+      "props": {
+        "label": "Rank",
+        "value": "15"
+      },
+      "children": []
+    },
+    "text-zec": {
+      "type": "Text",
+      "props": {
+        "text": "strongest sustained trend among large caps, privacy-coin strength holding firmer than the meme rockets.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-honorable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-honorable",
+        "grid-honorable",
+        "text-honorable-note"
+      ]
+    },
+    "heading-honorable": {
+      "type": "Heading",
+      "props": {
+        "text": "Honorable mention",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "grid-honorable": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-xmr-24h",
+        "stat-xmr-7d",
+        "stat-vvv-24h",
+        "stat-hype-24h"
+      ]
+    },
+    "stat-xmr-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "XMR 24h",
+        "value": "+8.7%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-xmr-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "XMR 7d",
+        "value": "+12.6%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-vvv-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "VVV 24h",
+        "value": "+9.5%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-hype-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE 24h",
+        "value": "+7.4%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "text-honorable-note": {
+      "type": "Text",
+      "props": {
+        "text": "XMR confirms the privacy theme; VVV and HYPE lead the trending-list 24h pops.",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

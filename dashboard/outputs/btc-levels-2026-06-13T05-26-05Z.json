@@ -1,0 +1,134 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC Levels"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_spot",
+        "stat_reclaimed",
+        "badge_signal",
+        "text_signal",
+        "separator_1",
+        "heading_levels",
+        "stat_prior_close",
+        "stat_support",
+        "text_trend",
+        "stat_leverage",
+        "text_leverage",
+        "stat_next_marker",
+        "separator_2",
+        "alert_disclaimer"
+      ]
+    },
+    "stat_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Spot",
+        "value": "$63.8k"
+      }
+    },
+    "stat_reclaimed": {
+      "type": "Stat",
+      "props": {
+        "label": "Reclaimed Level",
+        "value": "$63,500"
+      }
+    },
+    "badge_signal": {
+      "type": "Badge",
+      "props": {
+        "text": "Stabilization Signal",
+        "variant": "default"
+      }
+    },
+    "text_signal": {
+      "type": "Text",
+      "props": {
+        "text": "First stabilization signal per the 2026-06-09 advisor levels.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_levels": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Levels",
+        "level": "h3"
+      }
+    },
+    "stat_prior_close": {
+      "type": "Stat",
+      "props": {
+        "label": "Prior UTC Close (2026-06-11)",
+        "value": "$63.6k"
+      }
+    },
+    "stat_support": {
+      "type": "Stat",
+      "props": {
+        "label": "Support Level",
+        "value": "$60,500"
+      }
+    },
+    "text_trend": {
+      "type": "Text",
+      "props": {
+        "text": "Back above support — no downtrend continuation.",
+        "variant": "caption"
+      }
+    },
+    "stat_leverage": {
+      "type": "Stat",
+      "props": {
+        "label": "cbBTC Leverage Trigger",
+        "value": "$45k"
+      }
+    },
+    "text_leverage": {
+      "type": "Text",
+      "props": {
+        "text": "Leveraged position sits well clear of trigger.",
+        "variant": "caption"
+      }
+    },
+    "stat_next_marker": {
+      "type": "Stat",
+      "props": {
+        "label": "Next Confirmation Level",
+        "value": "$65,900"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_disclaimer": {
+      "type": "Alert",
+      "props": {
+        "message": "Not financial advice.",
+        "type": "info"
+      }
+    }
+  }
+}

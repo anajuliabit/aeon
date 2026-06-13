@@ -1,0 +1,148 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "goal-tracker"
+      },
+      "children": [
+        "heading",
+        "stats-stack",
+        "sep1",
+        "rubric-alert",
+        "overdue-alert",
+        "sep2",
+        "completed-section"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "6-12 · 9 goals",
+        "level": "h2"
+      }
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-needs-attention",
+        "stat-on-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-needs-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "4"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "2"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "1"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "rubric-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "datanet RUBRIC",
+        "message": "Due today — still unwritten",
+        "type": "error"
+      }
+    },
+    "overdue-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-018 + INDEX flips",
+        "message": "Overdue",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "completed-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "completed-heading",
+        "reppo-docker-item"
+      ]
+    },
+    "completed-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Completed",
+        "level": "h3"
+      }
+    },
+    "reppo-docker-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "reppo-docker-text",
+        "status-badge",
+        "pr-badge"
+      ]
+    },
+    "reppo-docker-text": {
+      "type": "Text",
+      "props": {
+        "text": "reppo → docker",
+        "variant": "body"
+      }
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Done",
+        "variant": "secondary"
+      }
+    },
+    "pr-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #103",
+        "variant": "outline"
+      }
+    }
+  }
+}

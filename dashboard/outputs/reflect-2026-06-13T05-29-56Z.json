@@ -1,0 +1,119 @@
+{
+  "root": "card_reflect",
+  "state": {},
+  "elements": {
+    "card_reflect": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "heading_date",
+        "sep1",
+        "stack_memory",
+        "sep2",
+        "stack_health"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-06-12",
+        "level": "h3"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_memory",
+        "text_reppo",
+        "text_path",
+        "text_ledger"
+      ]
+    },
+    "heading_memory": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory Consolidated",
+        "level": "h4"
+      }
+    },
+    "text_reppo": {
+      "type": "Text",
+      "props": {
+        "text": "Pruned dead FALLBACK_REPPO_SKILLS goal (reppo off-CI post-docker, can't hit ci rate limit)"
+      }
+    },
+    "text_path": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed stale path: FALLBACK_CG_SKILLS lives at .github/workflows/aeon.yml:498 not :441"
+      }
+    },
+    "text_ledger": {
+      "type": "Text",
+      "props": {
+        "text": "Ledger corrected to 25 mints + 45 votes"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_health",
+        "grid_stats"
+      ]
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Health",
+        "level": "h4"
+      }
+    },
+    "grid_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_healthy",
+        "stat_flagged"
+      ]
+    },
+    "stat_healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "37"
+      }
+    },
+    "stat_flagged": {
+      "type": "Stat",
+      "props": {
+        "label": "Flagged",
+        "value": "0"
+      }
+    }
+  }
+}

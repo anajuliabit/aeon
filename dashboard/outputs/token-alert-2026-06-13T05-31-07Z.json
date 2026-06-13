@@ -1,0 +1,139 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "token-alert"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-notfound",
+        "sep-1",
+        "stack-tokens",
+        "sep-2",
+        "stack-status",
+        "sep-3",
+        "stat-found"
+      ]
+    },
+    "alert-notfound": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "No Tokens Found",
+        "message": "None of the tracked tokens appear in the provided CoinGecko market data (top 100 only)"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-tokens": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-tokens",
+        "stack-token-list"
+      ]
+    },
+    "heading-tokens": {
+      "type": "Heading",
+      "props": {
+        "text": "Tracked Tokens",
+        "level": "h3"
+      }
+    },
+    "stack-token-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-well",
+        "badge-mamo",
+        "badge-reppo"
+      ]
+    },
+    "badge-well": {
+      "type": "Badge",
+      "props": {
+        "text": "WELL/moonwell-artemis",
+        "variant": "outline"
+      }
+    },
+    "badge-mamo": {
+      "type": "Badge",
+      "props": {
+        "text": "MAMO/mamo",
+        "variant": "outline"
+      }
+    },
+    "badge-reppo": {
+      "type": "Badge",
+      "props": {
+        "text": "REPPO/reppo",
+        "variant": "outline"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-status",
+        "text-explanation"
+      ]
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      }
+    },
+    "text-explanation": {
+      "type": "Text",
+      "props": {
+        "text": "No prices or 24h moves available for these tokens in this dataset, so no alerts can be evaluated."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat-found": {
+      "type": "Stat",
+      "props": {
+        "label": "Tokens Found",
+        "value": "0 / 3"
+      }
+    }
+  }
+}

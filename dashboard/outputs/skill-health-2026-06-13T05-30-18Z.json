@@ -1,0 +1,140 @@
+{
+  "root": "card_health",
+  "state": {},
+  "elements": {
+    "card_health": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-06-12"
+      },
+      "children": [
+        "stack_status",
+        "separator_1",
+        "stack_nodata",
+        "separator_2",
+        "stack_issues"
+      ]
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_health",
+        "text_healthy"
+      ]
+    },
+    "badge_health": {
+      "type": "Badge",
+      "props": {
+        "text": "HEALTH: OK",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "text_healthy": {
+      "type": "Text",
+      "props": {
+        "text": "41 skills healthy"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_nodata",
+        "text_skills_nodata",
+        "text_reason_nodata"
+      ]
+    },
+    "heading_nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_skills_nodata": {
+      "type": "Text",
+      "props": {
+        "text": "2 skills: operator-scorecard, fork-skill-gap"
+      },
+      "children": []
+    },
+    "text_reason_nodata": {
+      "type": "Text",
+      "props": {
+        "text": "Awaiting first scheduled run (weekly Mon/Sun)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_issues",
+        "stat_open",
+        "stat_resolved",
+        "text_issue_context"
+      ]
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stat_open": {
+      "type": "Stat",
+      "props": {
+        "value": "6",
+        "label": "open issues"
+      },
+      "children": []
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "resolved this run"
+      },
+      "children": []
+    },
+    "text_issue_context": {
+      "type": "Text",
+      "props": {
+        "text": "All from reppo-swarm, off-CI per Docker migration",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

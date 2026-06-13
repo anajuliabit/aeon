@@ -1,0 +1,208 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "CRYPTO MARKET OVERVIEW"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-timestamp",
+        "stack-metrics",
+        "separator-1",
+        "heading-movers",
+        "table-movers",
+        "separator-2",
+        "text-analysis"
+      ]
+    },
+    "text-timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-12 12:43 UTC",
+        "variant": "caption"
+      }
+    },
+    "stack-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-mcap",
+        "stat-vol",
+        "stack-dominance",
+        "stat-btc",
+        "stat-eth"
+      ]
+    },
+    "stat-mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Market Cap",
+        "value": "$2.26T",
+        "delta": "+0.89%",
+        "trend": "up"
+      }
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$77.7B"
+      }
+    },
+    "stack-dominance": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text-dom-label",
+        "badge-btc",
+        "badge-eth"
+      ]
+    },
+    "text-dom-label": {
+      "type": "Text",
+      "props": {
+        "text": "Dominance:",
+        "variant": "caption"
+      }
+    },
+    "badge-btc": {
+      "type": "Badge",
+      "props": {
+        "text": "BTC 56.31%",
+        "variant": "default"
+      }
+    },
+    "badge-eth": {
+      "type": "Badge",
+      "props": {
+        "text": "ETH 8.91%",
+        "variant": "default"
+      }
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "Bitcoin",
+        "value": "$63,370",
+        "delta": "+1.0%",
+        "trend": "up"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "Ethereum",
+        "value": "$1,664",
+        "delta": "+1.06%",
+        "trend": "up"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-movers": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable Movers (24h)",
+        "level": "h3"
+      }
+    },
+    "table-movers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "Velvet (VELVET)",
+            "$1.65",
+            "+107%",
+            "+1375%",
+            "parabolic"
+          ],
+          [
+            "LAB",
+            "$9.94",
+            "+18.8%",
+            "—",
+            ""
+          ],
+          [
+            "Venice Token (VVV)",
+            "$14.70",
+            "+9.5%",
+            "−6.8%",
+            ""
+          ],
+          [
+            "Monero (XMR)",
+            "$380.75",
+            "+8.7%",
+            "+12.6%",
+            ""
+          ],
+          [
+            "Hyperliquid (HYPE)",
+            "$60.36",
+            "+7.4%",
+            "—",
+            ""
+          ],
+          [
+            "Provenance (HASH)",
+            "—",
+            "−9.2%",
+            "—",
+            "laggard"
+          ],
+          [
+            "TRON",
+            "—",
+            "−3.1%",
+            "—",
+            "laggard"
+          ]
+        ]
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-analysis": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet broad-based green tape with majors ticking up modestly; risk appetite is rotating into alts and privacy/L1 names (XMR, HYPE, ENA, FLR all +7–8%) while BTC holds steady near $63k. Velvet's blow-off move is the outlier — treat with caution.",
+        "variant": "body"
+      }
+    }
+  }
+}

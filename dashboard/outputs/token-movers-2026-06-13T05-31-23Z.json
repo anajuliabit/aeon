@@ -1,0 +1,170 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_gainers",
+        "table_gainers",
+        "sep1",
+        "heading_losers",
+        "table_losers",
+        "sep2",
+        "heading_market",
+        "text_market"
+      ]
+    },
+    "heading_gainers": {
+      "type": "Heading",
+      "props": {
+        "text": "TOP GAINERS (24h)",
+        "level": "h2"
+      }
+    },
+    "table_gainers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h Change",
+          "7d Change"
+        ],
+        "rows": [
+          [
+            "VELVET",
+            "$1.69",
+            "+110.58%",
+            "+1394.43%"
+          ],
+          [
+            "VVV",
+            "$14.71",
+            "+9.55%",
+            "-7.70%"
+          ],
+          [
+            "XMR",
+            "$381.37",
+            "+9.44%",
+            "+16.90%"
+          ],
+          [
+            "LAB",
+            "$9.87",
+            "+9.36%",
+            "-7.71%"
+          ],
+          [
+            "ENA",
+            "$0.0821",
+            "+9.03%",
+            "-4.82%"
+          ],
+          [
+            "FLR",
+            "$0.00754",
+            "+8.23%",
+            "+9.78%"
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "TOP LOSERS (24h)",
+        "level": "h2"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h Change",
+          "7d Change"
+        ],
+        "rows": [
+          [
+            "BinanceLife",
+            "$0.662",
+            "-7.09%",
+            "-1.47%"
+          ],
+          [
+            "JST",
+            "$0.0735",
+            "-4.23%",
+            "-7.73%"
+          ],
+          [
+            "BEAT",
+            "$8.48",
+            "-3.85%",
+            "+428.03%"
+          ],
+          [
+            "WLD",
+            "$0.479",
+            "-3.82%",
+            "-9.78%"
+          ],
+          [
+            "TRX",
+            "$0.312",
+            "-3.04%",
+            "-3.98%"
+          ],
+          [
+            "MORPHO",
+            "$1.95",
+            "-2.79%",
+            "+15.40%"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_market": {
+      "type": "Heading",
+      "props": {
+        "text": "MARKET READ",
+        "level": "h2"
+      }
+    },
+    "text_market": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet-green tape: total mcap +0.72%, BTC steady at $63.4k with 56.3% dominance. Privacy (XMR) and select alts lead while VELVET's parabolic run dominates the board; TRX and worldcoin lag.",
+        "variant": "body"
+      }
+    }
+  }
+}
