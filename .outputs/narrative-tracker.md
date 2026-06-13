@@ -1,1 +1,1 @@
-narrative tracker 2026-06-11 staged — see .pending-notify/1781185633-narrative-tracker.md
+narrative-tracker 2026-06-13 staged via .pending-notify (sandbox arg-passing fallback); see file for full 25-narrative scoring and transitions.

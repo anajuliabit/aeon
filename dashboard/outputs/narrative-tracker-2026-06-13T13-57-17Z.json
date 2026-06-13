@@ -1,0 +1,43 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "narrative-tracker",
+        "description": "2026-06-13"
+      },
+      "children": [
+        "content"
+      ]
+    },
+    "content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status",
+        "note"
+      ]
+    },
+    "status": {
+      "type": "Text",
+      "props": {
+        "text": "Staged via .pending-notify (sandbox arg-passing fallback)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "note": {
+      "type": "Text",
+      "props": {
+        "text": "See file for full 25-narrative scoring and transitions",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
