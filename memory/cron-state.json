@@ -104,7 +104,7 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-12T13:51:05Z"
+    "last_dispatch": "2026-06-13T13:47:17Z"
   },
   "chain:reppo-swarm": {
     "last_dispatch": "2026-06-10T18:20:53Z",
