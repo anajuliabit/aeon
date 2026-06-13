@@ -1,12 +1,14 @@
-Heartbeat run complete.
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
-**HEARTBEAT_OK · STATUS_PAGE=DEGRADED**
+## Summary
 
-- P0 — 21 stuck (10 daily-slot carryovers from 6-12 wave incl. today's missed 07:00/08:00 re-dispatches, `self-improve` 6-11, 11 weekly carryovers). 0 failed (active), 0 chronic. Heartbeat self-check OK.
-- P1 — 0 open PRs, 0 urgent issues.
-- P2 — ISS-018 / INDEX flips / datanet RUBRIC all carried in MEMORY.md.
-- P3 — 3 weeklies never-run (await first tick).
-- Recovery noted vs 6-12 20:30: `evening-recap`/`thought-review`/`aixbt-pulse` 21:00 cluster cleared; `btc-levels` 05:32Z today.
-- Dedup: all findings in last 48h logs — no notification sent.
-- Regenerated `docs/status.md` (Overall 🔴 DEGRADED, 44 skill rows, Next: aixbt-pulse 09:00 UTC).
-- Files modified: `docs/status.md`, `memory/logs/2026-06-13.md`.
+**Heartbeat (14:38 UTC) — no notify, status page regenerated.**
+
+- **P0:** 3 daily skills still stuck from 6-12 wave (`search-skill`/`security-digest` 6-12 14:57Z; `self-improve` 6-11 18:51Z) + 11 weekly carryovers. `chain:investment-advisor` failed but off current chains. **Major recovery since 08:04Z heartbeat:** 12:00 UTC cluster fully drained (8 successful skill runs: on-chain-monitor, btc-levels, token-alert, token-pick, defi-overview, token-movers, defi-monitor, market-context-refresh, narrative-tracker). Daily fleet ~92% drained.
+- **P1:** 0 open PRs, 0 urgent issues.
+- **P2:** ISS-018 (4d), INDEX flips (3d), datanet RUBRIC (1d) all overdue but tracked in MEMORY Current Goals.
+- **P3:** 3 never-run weeklies (autoresearch/operator-scorecard/fork-skill-gap) awaiting first tick.
+- **Dedup:** every finding already in 6-11/6-12/6-13-08:04 logs → **no notification sent**.
+- **Status page:** `docs/status.md` rewritten — Overall 🔴 DEGRADED, Updated 2026-06-13 14:38 UTC, 44 skill rows, Next scheduled fleet-control 15:00 UTC, Token pulse omitted (no `articles/token-report-*.md`).
+
+**Files modified:** `docs/status.md`, `memory/logs/2026-06-13.md`.
