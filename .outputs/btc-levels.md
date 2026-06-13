@@ -1,13 +1,13 @@
 ## Summary
 
-**btc-levels run — 2026-06-13 ~09:17Z**
+**btc-levels run — 2026-06-13T12:26Z**
 
-- Spot: **$63,773** (up $238 from last run at 05:25Z)
-- Prev UTC daily close: **$63,537** (2026-06-12)
-- No alerts fired — all levels clear:
-  - Leverage-review band (≤$45k): not in band
-  - Breakdown (<$60,500 daily close): close well above
-  - Reclaim $63,500: already alerted (armed, waiting for re-arm below $60,500)
-  - Reclaim $65,900: not yet reached
-
-Files committed: `memory/btc-levels-state.json`, `memory/logs/2026-06-13.md`
+- Spot: $63,912 (+$138 vs prior run at 09:17Z)
+- Daily close (2026-06-12): $63,537.74
+- No alerts fired — all levels quiet:
+  - $45k leverage-review: not triggered (spot well above)
+  - $60,500 breakdown: not triggered (close above)
+  - $63,500 reclaim: already alerted prior cycle, not re-armed
+  - $65,900 reclaim: not yet reached
+- No notification sent (quiet run)
+- State and log committed
