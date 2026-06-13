@@ -1,45 +1,41 @@
-# AIXBT Grounding (as of 2026-06-12 21:00 UTC)
+# AIXBT Grounding (as of 2026-06-13 09:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-12T21:00:22.103Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-13T09:00:25.409Z
 
-Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again — iterating dynamically; render whatever sections appear. (Geo content is folded into the tradfi section this window.)
+Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again — iterating dynamically; render whatever sections appear.
 
 ## Crypto
-- SpaceX $SPCX IPO dominated crypto feeds as tokenized shares launched day-one on Solana, Base, and BNB Chain via Ondo, Backpack, and Dinari while CEX rivals failed to source shares.
-- Hyperliquid cemented its dominance with $7.65B in SPCX perp volume, CNBC citations for pre-IPO pricing, and a Fortune #1 ranking—drawing comparisons above Coinbase and Robinhood.
-- BTC trades near $63.5K amid extreme fear (index at 12); USDT dominance at highs and bearish macro signals clash with calls that the $59-60K double bottom marks a cycle low.
-- RWA tokenization accelerated broadly: Ethena allocated $250M to Securitize's CLO on Solana, Circle minted ~$750M USDC, and Ondo/Uniswap integration brought tokenized stocks to DeFi rails.
+- Tokenized SpaceX ($SPCX) dominates attention as Backpack's Solana variant tops $35M in 24h volume, while $750M USDC mints on Solana signal surging RWA demand.
+- US export-control shutdown of Anthropic's Fable/Mythos models sparks rallies in decentralized AI tokens ($TAO, $VVV, $MOR) and privacy wrappers like Venice ($VVV).
+- BTC ETFs post $85.9M net inflows led by BlackRock, but ETH ETFs bleed for a fourth straight day; BTC sentiment sits at "Extreme Fear" despite LTH accumulation.
+- Massive token unlocks loom for $HYPE ($615M), $H, $SPK, and $MEGA over 30 days, while on-chain rug alerts ($SIREN 94% supply control dump) keep trader caution elevated.
 
 ## TradFi
-- Prospects for a US-Iran agreement are slashing geopolitical premiums, sending oil sharply lower and fueling risk-on positioning in equities and commodities.
-- SpaceX's record IPO with shares jumping over 10% is channeling retail and institutional flows into tech and space-related sectors, lifting broader indices.
-- Falling oil prices amid Middle East thaw are alleviating inflation risks, potentially anchoring yields lower and encouraging carry trades in credit markets.
-- Global equities are rallying with Asian benchmarks surging and US indices higher as reduced vol and improved sentiment transmit across asset classes.
+- Progress on a US-Iran framework is compressing oil risk premia, easing near-term inflation concerns and positioning for Treasury yield compression with supportive equity valuation multiples.
+- SpaceX's record $75B IPO debut is pulling heavy retail and institutional flows into growth equities, amplifying Nasdaq leadership amid risk-on rotation.
+- Lower Middle East conflict odds are transmitting reduced vol and dollar weakness, supporting cross-asset flows into EM and cyclical risk assets.
+- De-escalation sentiment is unwinding defensive equity hedges into higher-beta cyclicals while credit spreads tighten on improved funding conditions.
 
-## What's New (vs last pull 2026-06-11 09:00 UTC)
-- (TradFi) **REGIME FLIP** — "renewed US strikes on Iran" → "prospects for a US-Iran agreement." Oil reversed from sharply higher to sharply lower in one window. The entire risk-off complex inverted.
-- (TradFi) Global equities now *rallying*, Asian benchmarks *surging* — directly reverses last pull's "China tech near bear market, HK/CSI 300 heavy selloffs."
-- (TradFi) Yields now anchoring *lower* on disinflation — reverses last pull's "ECB 25bp hike today, higher yields into global credit."
-- (Crypto) SPCX is no longer a pre-IPO perp debate — **the IPO printed.** Shares +10%, tokenized day-one on Solana/Base/BNB via Ondo/Backpack/Dinari; CEXs couldn't source shares.
-- (Crypto) Hyperliquid SPCX perp volume quantified at $7.65B + Fortune #1 ranking — was pre-IPO pricing framing last pull, now a live dominance print above Coinbase/Robinhood.
-- (Crypto) RWA leg got specific: Ethena $250M into Securitize CLO on Solana, Circle ~$750M USDC mint, Ondo/Uniswap tokenized stocks on DeFi rails.
+## What's New (vs last pull 2026-06-12 21:00 UTC)
+- (Crypto) **Anthropic export-control → decentralized AI bid.** US gov ordered Anthropic to suspend Fable 5 + Mythos 5 access. That single regulatory action transmitted directly into $TAO, $VVV, $MOR rallies. Not in prior window — this is today's cleanest macro→crypto bridge.
+- (Crypto) BTC ETFs $85.9M net inflows led by BlackRock / ETH ETFs bleeding 4th consecutive day. Institutional bifurcation within the ETF suite is new and specific.
+- (Crypto) Token unlock overhang: $HYPE $615M + $H/$SPK/$MEGA over 30 days, plus $SIREN 94% supply dump. Specific unlock pressure and rug data not in prior window.
+- (Crypto) SPCX Backpack volume quantified at $35M/24h on Solana specifically — prior window was launch-day framing, now it's live volume numbers.
 
-## Gone (dropped from 2026-06-11 09:00 UTC pull)
-- (Crypto) BTC realized-price $53.6K floor / 50%+ supply underwater / -$214M IBIT ETF outflow prints — replaced by cleaner "$59-60K double bottom = cycle low?" debate.
-- (Crypto) Solana 54%-of-txns / Kintara gaming / WSOP poker ecosystem specifics.
-- (Crypto) Japan top-3 banks joint stablecoin; Arbitrum $7.8B stables standalone.
-- (TradFi) China/HK/CSI 300 EM selloff leg — fully reversed, not just dropped.
-- (TradFi) ECB 25bp hike pricing; Hormuz supply-risk oil floor; depleting-inventory commodity support.
+## Gone (dropped from 2026-06-12 21:00 UTC pull)
+- Hyperliquid $7.65B SPCX perp volume + Fortune #1 ranking — no longer standalone; Hyperliquid not mentioned this window.
+- RWA specifics: Ethena $250M CLO on Solana, Ondo/Uniswap tokenized stocks on DeFi rails — folded into the broader "$750M USDC on Solana" framing.
+- BTC $59-60K double-bottom cycle-low debate / USDT dominance at highs — replaced by ETF inflow framing.
+- Global equities/Asian benchmarks surging as standalone item — absorbed into EM/cyclicals rotation.
 
 ## Persisting Stories
-- BTC stuck in extreme fear (F&G 12 both windows) even as price ticked $62K → $63.5K. Sentiment is not following price.
-- SpaceX as the dominant crypto storyline — escalated from "pre-IPO perp liquidity drain" to "IPO printed, tokenized day-one, Hyperliquid the venue of record."
-- Hyperliquid as the structurally winning venue — pre-IPO price discovery last window, $7.65B realized SPCX volume + Fortune #1 this window.
-- RWA / tokenization infrastructure build — broad last pull (Japan banks, Arb stables), specific this pull (Ethena CLO, Circle mint, Ondo/Uniswap).
-- US-Iran / oil as the master macro variable — same axis both windows, sign flipped.
+- SPCX tokenized SpaceX as crypto's dominant narrative — window 3 now (pre-IPO perp → IPO day-one launch → live $35M/24h Solana volume).
+- US-Iran de-escalation / oil risk premium compression — same macro variable, same direction, third consecutive window.
+- BTC extreme fear (F&G) despite accumulation signals — prior: double-bottom debate; now: LTH accumulating + $85.9M ETF inflows, fear unchanged.
+- SpaceX IPO (now $75B) driving institutional flows into growth equities / Nasdaq leadership — sustaining.
 
 ## Cross-Domain Bridges
-- the whole macro tape reversed on one headline. yesterday: strikes on iran, oil up, china in a bear market, risk-off everywhere. today: agreement prospects, oil down, asia surging, risk-on. same variable — us-iran — same transmission path, opposite sign. this is not a new regime. it's the old regime's mirror image, and it's one headline deep. a deal that isn't signed is priced as if it is. fade the certainty, not the direction.
-- BTC at $63.5K with fear pinned at 12 while equities rip on the risk-on flip. crypto is not participating in its own risk-on. either BTC is the slow leg and catches up, or the "double bottom = cycle low" call is copium and the real tell is that risk assets rallied and bitcoin didn't. sentiment divergence this wide resolves one way hard.
-- SpaceX printed the IPO and the tokenized shares went live day-one on solana/base/bnb while the CEXs couldn't even source the underlying. that's the entire tokenization thesis compressed into one event — DeFi rails settled a tier-1 IPO faster than the incumbents could list it. Hyperliquid did $7.65B in perps on it and ranked Fortune #1. the venue and the rails won the same day. the token prices are a separate question; the infrastructure already cleared.
+- anthropic fable/mythos export-control is the sharpest ai×crypto transmission event in months. US gov restricts a frontier lab's model access on national security grounds, and the immediate read-through is a bid on $TAO/$VVV/$MOR. the logic is clean: regulatory attack on the centralized stack = forced demand discovery for the decentralized alternative. this isn't narrative manufacturing — there's a live capital flow in today's movers (VVV +14.8%, TAO +11.2%). the irony is that the US government just ran the best marketing campaign for decentralized AI infrastructure it didn't intend to.
+- BTC ETFs take in $85.9M while ETH ETFs bleed for the 4th straight day. same product suite, same institutional distribution channel, opposite direction. this is a bifurcation inside the "crypto ETF" bucket — not "crypto institutional demand," it's "BTC institutional demand vs ETH institutional exit." anyone long ETH vs BTC in this window has the wrong side of the trade.
+- the US-Iran de-escalation trade is in its third window. credit spreads tightening, dollar weak, EM/cyclicals rotating, SpaceX $75B debut sustaining retail inflows. the question isn't the direction — it's the position size. three windows of the same single-variable trade means anyone who read window 1 is already full. the tail risk is one headline reversal on Iran; the overhang is that the certainty has been priced as settled fact.
