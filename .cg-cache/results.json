@@ -1,0 +1,322 @@
+{
+  "pulse": {
+    "green100": 75,
+    "median_top50": 0.76817
+  },
+  "winners": [
+    {
+      "symbol": "BDX",
+      "name": "Beldex",
+      "id": "beldex",
+      "price": "$0.0779",
+      "p24": 18.17138,
+      "p7d": -1.1078423416731162,
+      "p1h": 0.054352276669078756,
+      "vol": "$8M",
+      "rank": 91,
+      "tags": []
+    },
+    {
+      "symbol": "TAO",
+      "name": "Bittensor",
+      "id": "bittensor",
+      "price": "$250.64",
+      "p24": 17.39344,
+      "p7d": 30.742553696599046,
+      "p1h": 1.7633117931644322,
+      "vol": "$255M",
+      "rank": 41,
+      "tags": [
+        "TRENDING+UP",
+        "BREAKOUT"
+      ]
+    },
+    {
+      "symbol": "VVV",
+      "name": "Venice Token",
+      "id": "venice-token",
+      "price": "$17.14",
+      "p24": 15.82158,
+      "p7d": 8.729471658822776,
+      "p1h": -2.145738916577331,
+      "vol": "$118M",
+      "rank": 79,
+      "tags": [
+        "TRENDING+UP"
+      ]
+    },
+    {
+      "symbol": "EDGE",
+      "name": "edgeX",
+      "id": "edgex",
+      "price": "$0.4236",
+      "p24": 15.09876,
+      "p7d": -13.559855578301091,
+      "p1h": 0.8349035915761577,
+      "vol": "$19M",
+      "rank": 211,
+      "tags": []
+    },
+    {
+      "symbol": "H",
+      "name": "Humanity",
+      "id": "humanity",
+      "price": "$0.2240",
+      "p24": 14.53066,
+      "p7d": -62.165012970866975,
+      "p1h": 1.3952241633434377,
+      "vol": "$58M",
+      "rank": 117,
+      "tags": []
+    },
+    {
+      "symbol": "CHEEMS",
+      "name": "Cheems Token",
+      "id": "cheems-token",
+      "price": "$0.00000061",
+      "p24": 11.05455,
+      "p7d": 29.978597848247528,
+      "p1h": -0.40703386036998945,
+      "vol": "$2M",
+      "rank": 230,
+      "tags": []
+    },
+    {
+      "symbol": "GWEI",
+      "name": "ETHGas",
+      "id": "ethgas-2",
+      "price": "$0.1926",
+      "p24": 9.99339,
+      "p7d": 80.02877525163731,
+      "p1h": -9.312857554247717,
+      "vol": "$13M",
+      "rank": 122,
+      "tags": []
+    },
+    {
+      "symbol": "GNO",
+      "name": "Gnosis",
+      "id": "gnosis",
+      "price": "$106.30",
+      "p24": 9.24078,
+      "p7d": 19.126067217045488,
+      "p1h": 0.1503503243906348,
+      "vol": "$5M",
+      "rank": 138,
+      "tags": []
+    },
+    {
+      "symbol": "SKYAI",
+      "name": "SkyAI",
+      "id": "skyai",
+      "price": "$0.3483",
+      "p24": 8.30818,
+      "p7d": 66.88412872861768,
+      "p1h": -4.401918537719189,
+      "vol": "$50M",
+      "rank": 127,
+      "tags": []
+    },
+    {
+      "symbol": "ZK",
+      "name": "ZKsync",
+      "id": "zksync",
+      "price": "$0.0120",
+      "p24": 8.0617,
+      "p7d": 17.416320239132993,
+      "p1h": -0.7828707409996882,
+      "vol": "$18M",
+      "rank": 246,
+      "tags": []
+    }
+  ],
+  "losers": [
+    {
+      "symbol": "VELVET",
+      "name": "Velvet",
+      "id": "velvet",
+      "price": "$0.3793",
+      "p24": -76.91174,
+      "p7d": 110.81411054986813,
+      "p1h": -3.416773779553528,
+      "vol": "$113M",
+      "rank": 200,
+      "tags": [
+        "TRENDING+DOWN",
+        "CAPITULATION"
+      ]
+    },
+    {
+      "symbol": "DEXE",
+      "name": "DeXe",
+      "id": "dexe",
+      "price": "$17.52",
+      "p24": -17.34206,
+      "p7d": -10.74247577788018,
+      "p1h": -2.695604360706334,
+      "vol": "$79M",
+      "rank": 78,
+      "tags": []
+    },
+    {
+      "symbol": "XMR",
+      "name": "Monero",
+      "id": "monero",
+      "price": "$336.37",
+      "p24": -12.1631,
+      "p7d": 11.971302136856183,
+      "p1h": -0.4996101056715634,
+      "vol": "$168M",
+      "rank": 19,
+      "tags": [
+        "TRENDING+DOWN",
+        "MAJOR"
+      ]
+    },
+    {
+      "symbol": "BTW",
+      "name": "Bitway",
+      "id": "bitway",
+      "price": "$0.0732",
+      "p24": -6.97542,
+      "p7d": 72.72630984361754,
+      "p1h": 1.9762374032731769,
+      "vol": "$13M",
+      "rank": 198,
+      "tags": []
+    },
+    {
+      "symbol": "LAB",
+      "name": "LAB",
+      "id": "lab",
+      "price": "$9.34",
+      "p24": -6.66389,
+      "p7d": 0.7398497807603942,
+      "p1h": -9.394479050256228,
+      "vol": "$24M",
+      "rank": 33,
+      "tags": []
+    },
+    {
+      "symbol": "GENIUS",
+      "name": "Genius",
+      "id": "genius-3",
+      "price": "$0.4428",
+      "p24": -5.51264,
+      "p7d": 5.563579930739236,
+      "p1h": -1.7922793782401292,
+      "vol": "$18M",
+      "rank": 210,
+      "tags": []
+    },
+    {
+      "symbol": "CHZ",
+      "name": "Chiliz",
+      "id": "chiliz",
+      "price": "$0.0258",
+      "p24": -5.23538,
+      "p7d": 5.65698831835965,
+      "p1h": -0.2402020420435691,
+      "vol": "$56M",
+      "rank": 139,
+      "tags": []
+    },
+    {
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "id": "zcash",
+      "price": "$414.71",
+      "p24": -4.89442,
+      "p7d": 12.527754115437642,
+      "p1h": 0.1436629104082747,
+      "vol": "$462M",
+      "rank": 15,
+      "tags": [
+        "TRENDING+DOWN",
+        "MAJOR"
+      ]
+    },
+    {
+      "symbol": "TEL",
+      "name": "Telcoin",
+      "id": "telcoin",
+      "price": "$0.002376",
+      "p24": -4.87869,
+      "p7d": -1.2187006816824226,
+      "p1h": -0.17668041875273166,
+      "vol": "$1M",
+      "rank": 162,
+      "tags": []
+    },
+    {
+      "symbol": "BILL",
+      "name": "Billions Network",
+      "id": "billions-network",
+      "price": "$0.0696",
+      "p24": -4.32248,
+      "p7d": -3.0405528601476766,
+      "p1h": -0.8204566423053424,
+      "vol": "$76M",
+      "rank": 189,
+      "tags": []
+    }
+  ],
+  "trending": [
+    {
+      "symbol": "SIREN",
+      "name": "Siren",
+      "id": "siren-2",
+      "rank": 281,
+      "price": "$0.1261",
+      "change_24h": -75.20453916433414
+    },
+    {
+      "symbol": "TAO",
+      "name": "Bittensor",
+      "id": "bittensor",
+      "rank": 42,
+      "price": "$247.92",
+      "change_24h": 16.163362238411654
+    },
+    {
+      "symbol": "VELVET",
+      "name": "Velvet",
+      "id": "velvet",
+      "rank": 199,
+      "price": "$0.3797",
+      "change_24h": -76.15658779411804
+    },
+    {
+      "symbol": "SPCXX",
+      "name": "SpaceX xStock",
+      "id": "spacex-xstocks",
+      "rank": 725,
+      "price": "$165.46",
+      "change_24h": 1.421288703486321
+    },
+    {
+      "symbol": "PENGU",
+      "name": "Pudgy Penguins",
+      "id": "pudgy-penguins",
+      "rank": 115,
+      "price": "$0.006812",
+      "change_24h": 0.7478722750660646
+    },
+    {
+      "symbol": "VVV",
+      "name": "Venice Token",
+      "id": "venice-token",
+      "rank": 79,
+      "price": "$17.01",
+      "change_24h": 16.187514979842994
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "id": "solana",
+      "rank": 7,
+      "price": "$67.83",
+      "change_24h": 1.5186496111924173
+    }
+  ]
+}
