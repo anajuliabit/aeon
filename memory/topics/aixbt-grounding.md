@@ -1,41 +1,46 @@
-# AIXBT Grounding (as of 2026-06-13 09:00 UTC)
+# AIXBT Grounding (as of 2026-06-13 21:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-13T09:00:25.409Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-13T21:00:35.374Z
 
 Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again — iterating dynamically; render whatever sections appear.
 
 ## Crypto
-- Tokenized SpaceX ($SPCX) dominates attention as Backpack's Solana variant tops $35M in 24h volume, while $750M USDC mints on Solana signal surging RWA demand.
-- US export-control shutdown of Anthropic's Fable/Mythos models sparks rallies in decentralized AI tokens ($TAO, $VVV, $MOR) and privacy wrappers like Venice ($VVV).
-- BTC ETFs post $85.9M net inflows led by BlackRock, but ETH ETFs bleed for a fourth straight day; BTC sentiment sits at "Extreme Fear" despite LTH accumulation.
-- Massive token unlocks loom for $HYPE ($615M), $H, $SPK, and $MEGA over 30 days, while on-chain rug alerts ($SIREN 94% supply control dump) keep trader caution elevated.
+- US ban on Anthropic's Fable 5 ignited a decentralized-AI rally, with $TAO surging 20%+ and privacy/permissionless tokens like $VVV and $ZEC catching strong bid flow.
+- Hyperliquid and Solana dominated mindshare as SpaceX tokenized stock hit $50M on-chain volume in 24hrs and HIP-3 share of HL volume reached a new ATH near 50%.
+- BTC consolidates near $64K with bulls eyeing $67K-$70K on potential peace-deal catalyst, but BOJ rate hike risk and collapsing BTC treasury-stock volumes inject caution.
+- FIFA World Cup fuels prediction-market activity across Polymarket, Limitless, and Solana-native platforms, while onchain TCG and gaming metas continue gaining traction.
 
 ## TradFi
-- Progress on a US-Iran framework is compressing oil risk premia, easing near-term inflation concerns and positioning for Treasury yield compression with supportive equity valuation multiples.
-- SpaceX's record $75B IPO debut is pulling heavy retail and institutional flows into growth equities, amplifying Nasdaq leadership amid risk-on rotation.
-- Lower Middle East conflict odds are transmitting reduced vol and dollar weakness, supporting cross-asset flows into EM and cyclical risk assets.
-- De-escalation sentiment is unwinding defensive equity hedges into higher-beta cyclicals while credit spreads tighten on improved funding conditions.
+- Progress on a US-Iran peace deal is prompting bullish equity positioning as reduced conflict risk eases oil and shipping pressures, boosting global growth and liquidity outlooks.
+- The SpaceX IPO debut surging 19% is driving flows into tech and AI-related assets, lifting broader indices and signaling renewed risk appetite in growth sectors.
+- Hopes for Strait of Hormuz reopening via the deal are transmitting to lower energy costs and improved cross-border liquidity, pressuring the dollar and supporting risk assets.
+- Volatility compression with VIX falling sharply reflects unwinding geopolitical hedges, facilitating rotation from defensives into cyclicals amid de-escalation.
 
-## What's New (vs last pull 2026-06-12 21:00 UTC)
-- (Crypto) **Anthropic export-control → decentralized AI bid.** US gov ordered Anthropic to suspend Fable 5 + Mythos 5 access. That single regulatory action transmitted directly into $TAO, $VVV, $MOR rallies. Not in prior window — this is today's cleanest macro→crypto bridge.
-- (Crypto) BTC ETFs $85.9M net inflows led by BlackRock / ETH ETFs bleeding 4th consecutive day. Institutional bifurcation within the ETF suite is new and specific.
-- (Crypto) Token unlock overhang: $HYPE $615M + $H/$SPK/$MEGA over 30 days, plus $SIREN 94% supply dump. Specific unlock pressure and rug data not in prior window.
-- (Crypto) SPCX Backpack volume quantified at $35M/24h on Solana specifically — prior window was launch-day framing, now it's live volume numbers.
+## What's New (vs last pull 2026-06-13 09:00 UTC)
+- (Crypto) **$ZEC enters the decentralized AI bid.** $MOR dropped; $ZEC now alongside $TAO/$VVV. Privacy/censorship-resistance basket broadening beyond AI infra proper. $TAO upgraded to +20%+ (was +11.2% at 09:00).
+- (Crypto) **HIP-3 share of HL volume at new ATH ~50%.** Hyperliquid protocol-native flywheel metric; not in prior window. First explicit quantification of how much HL's own mechanisms are cannibalizing/driving its own order flow.
+- (Crypto) **SPCX volume $35M → $50M in 12h.** Same narrative, updated number. Story now in its 4th consecutive window.
+- (Crypto) **BOJ rate hike risk flagged as BTC headwind.** New tail; absent from 09:00 pull. First explicit bear signal in the tape alongside the bullish peace-deal catalyst.
+- (Crypto) **BTC treasury-stock volumes "collapsing."** New bear signal; not in 09:00 window. Enters just as BTC ETF inflows were the main bull signal this morning.
+- (Crypto) **FIFA World Cup prediction-market activity.** Polymarket, Limitless, Solana-native platforms all named. Entirely new item — first time sports-event flows surface explicitly in this feed.
+- (Crypto) **Onchain TCG and gaming metas continuing.** New item; gaming narrative gaining traction alongside prediction markets.
 
-## Gone (dropped from 2026-06-12 21:00 UTC pull)
-- Hyperliquid $7.65B SPCX perp volume + Fortune #1 ranking — no longer standalone; Hyperliquid not mentioned this window.
-- RWA specifics: Ethena $250M CLO on Solana, Ondo/Uniswap tokenized stocks on DeFi rails — folded into the broader "$750M USDC on Solana" framing.
-- BTC $59-60K double-bottom cycle-low debate / USDT dominance at highs — replaced by ETF inflow framing.
-- Global equities/Asian benchmarks surging as standalone item — absorbed into EM/cyclicals rotation.
+## Gone (dropped from 2026-06-13 09:00 UTC pull)
+- BTC ETF $85.9M net inflows / ETH ETF 4th consecutive day bleeding — replaced by BTC consolidation framing
+- Token unlock overhang ($HYPE $615M, $H, $SPK, $MEGA over 30 days) — dropped
+- $SIREN 94% supply control dump — dropped
+- $MOR in decentralized AI bid — replaced by $ZEC
+- $750M USDC mints on Solana as standalone signal — absorbed
 
 ## Persisting Stories
-- SPCX tokenized SpaceX as crypto's dominant narrative — window 3 now (pre-IPO perp → IPO day-one launch → live $35M/24h Solana volume).
-- US-Iran de-escalation / oil risk premium compression — same macro variable, same direction, third consecutive window.
-- BTC extreme fear (F&G) despite accumulation signals — prior: double-bottom debate; now: LTH accumulating + $85.9M ETF inflows, fear unchanged.
-- SpaceX IPO (now $75B) driving institutional flows into growth equities / Nasdaq leadership — sustaining.
+- **Anthropic export-control → decentralized AI bid** — 2nd consecutive AIXBT window; strengthening ($TAO +20%+ vs +11.2% at 09:00). Narrative holding and broadening.
+- **SPCX tokenized SpaceX on-chain volume** — 4th consecutive window (pre-IPO perp → IPO launch → $35M/24h → $50M/24h). Volume printing higher each window.
+- **US-Iran de-escalation / oil risk premium compression** — 4th consecutive window. Same macro variable, same direction. Position likely full; tail risk is one headline reversal.
+- **SpaceX IPO driving equity/growth flows** — sustaining across all windows; now "up 19%" framing vs prior "$75B debut."
+- **VIX falling / rotation to cyclicals** — same TradFi read as 09:00, tightening further.
 
 ## Cross-Domain Bridges
-- anthropic fable/mythos export-control is the sharpest ai×crypto transmission event in months. US gov restricts a frontier lab's model access on national security grounds, and the immediate read-through is a bid on $TAO/$VVV/$MOR. the logic is clean: regulatory attack on the centralized stack = forced demand discovery for the decentralized alternative. this isn't narrative manufacturing — there's a live capital flow in today's movers (VVV +14.8%, TAO +11.2%). the irony is that the US government just ran the best marketing campaign for decentralized AI infrastructure it didn't intend to.
-- BTC ETFs take in $85.9M while ETH ETFs bleed for the 4th straight day. same product suite, same institutional distribution channel, opposite direction. this is a bifurcation inside the "crypto ETF" bucket — not "crypto institutional demand," it's "BTC institutional demand vs ETH institutional exit." anyone long ETH vs BTC in this window has the wrong side of the trade.
-- the US-Iran de-escalation trade is in its third window. credit spreads tightening, dollar weak, EM/cyclicals rotating, SpaceX $75B debut sustaining retail inflows. the question isn't the direction — it's the position size. three windows of the same single-variable trade means anyone who read window 1 is already full. the tail risk is one headline reversal on Iran; the overhang is that the certainty has been priced as settled fact.
+- BOJ is the uninvited guest at the risk-on party. four windows of US-Iran de-escalation, clean direction — oil compressing, VIX collapsing, SpaceX +19%, EM/cyclicals rotating. the bull case is coherent and widely held. but BOJ rate hike risk enters this window as the first explicit bear signal AIXBT has surfaced in days. BOJ tightening is global liquidity — it doesn't care what happens at the Strait of Hormuz. the same risk-on trade built on Iran de-escalation gets unwound by yen carry unwind. both catalysts are live simultaneously.
+- $ZEC catching the decentralized AI bid alongside $TAO/$VVV is narrative spray. ZEC is a privacy coin — no subnets, no decentralized AI infrastructure, no direct Anthropic read-across. its bid in the same session as the export-control directive tells you the market is running a "censorship-resistant everything" basket, not a targeted AI-infra trade. $TAO/$VVV have real exposure. $ZEC is catching the basket bid until the basket unwinds.
+- FIFA World Cup + Polymarket US domestic rail = first real-world stress test. prediction-market thesis (narrative #5 in tracker) has been driven by news-event flow. the World Cup is the first massive global sports event running through a CFTC-approved domestic Polymarket. if it captures even 5% of the sports betting handle that traditional books capture, the prediction market narrative gets a receipt. the structural primitive (QCEX acquisition path, CFTC approval) just found its first killer use-case test.

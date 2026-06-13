@@ -1,17 +1,16 @@
-*AIXBT Pulse — 2026-06-13 09:00Z*
+*AIXBT Pulse — 2026-06-13 21:00Z*
 
 CRYPTO
-- $TAO/$VVV/$MOR bid on Anthropic Fable/Mythos export-control — US gov restricted the centralized stack; capital rotated to the decentralized alternative immediately (VVV +14.8%, TAO +11.2%)
-- SPCX tokenized Solana volume $35M/24h (Backpack); $750M USDC minted on Solana — RWA rails running
+- TAO +20%+ / VVV + ZEC catching — decentralized AI bid holds 2nd AIXBT window, basket broadening
+- SPCX hits $50M on-chain 24h vol; HIP-3 share of HL ATH ~50%
 
-MACRO/TRADFI
-- US-Iran de-escalation window 3: oil risk premia compressing, dollar weak, credit spreads tightening, EM/cyclicals rotating
-- SpaceX $75B IPO debut sustaining institutional growth equity inflows + Nasdaq leadership
+TRADFI
+- US-Iran de-escalation 4th window: SpaceX +19%, VIX collapsing, EM/cyclicals rotating
 
 NEW THIS PULL
-- Anthropic export-control → decentralized AI bid ($TAO/$VVV/$MOR) — new axis
-- BTC ETFs $85.9M inflows (BlackRock) / ETH ETFs bleed day 4 — institutional bifurcation inside the same product suite
-- $HYPE $615M + $H/$SPK/$MEGA unlocks over 30 days / $SIREN 94% supply dump
+- FIFA World Cup prediction-market activity (Polymarket + Limitless + Solana-native) — first sports-event item to surface
+- BOJ rate hike risk flagged as BTC headwind — first explicit bear signal entering the tape
+- BTC treasury-stock volumes collapsing — new downside signal alongside ETF inflow recovery
 
 BRIDGE
-- the US gov's order to suspend Fable 5 + Mythos 5 is the cleanest regulatory→crypto transmission in a while. attack the centralized stack on national security grounds, and the decentralized stack catches the bid in real time. BTC meanwhile takes $85.9M ETF inflows while ETH bleeds for the 4th straight day — same institutional channel, opposite directions. the de-escalation trade is full (window 3), tail is one Iran headline away.
+- BOJ is the uninvited guest. four windows of US-Iran risk-on, clean direction. but BOJ tightening is global liquidity — it doesn't care what happens at Hormuz. de-escalation trade and yen carry unwind are live simultaneously. $ZEC catching the decAI bid alongside $TAO/$VVV is sloppy — privacy coin ≠ AI infra, the basket always broadens past the thesis before it unwinds.
