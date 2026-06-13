@@ -1,1 +1,1 @@
-memory consolidated — 2026-06-12. pruned dead FALLBACK_REPPO_SKILLS goal (reppo off-CI post-docker, can't hit ci rate limit). fixed stale path: FALLBACK_CG_SKILLS lives at .github/workflows/aeon.yml:498 not :441. ledger corrected to 25 mints + 45 votes. skill health clean — 37 healthy, 0 flagged.
+Memory consolidated — 2026-06-13

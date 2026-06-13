@@ -1,0 +1,71 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-status",
+        "stat-count",
+        "text-date",
+        "progress-quality",
+        "badge-mode",
+        "link-ref"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "Staged"
+      }
+    },
+    "stat-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Actions",
+        "value": "5"
+      }
+    },
+    "text-date": {
+      "type": "Text",
+      "props": {
+        "text": "Date: 2026-06-13"
+      }
+    },
+    "progress-quality": {
+      "type": "Progress",
+      "props": {
+        "label": "Quality average",
+        "value": 4.4,
+        "max": 5
+      }
+    },
+    "badge-mode": {
+      "type": "Badge",
+      "props": {
+        "text": "OK",
+        "variant": "secondary"
+      }
+    },
+    "link-ref": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Pending notifications",
+        "href": ".pending-notify/1781375400-action-converter.md"
+      }
+    }
+  }
+}

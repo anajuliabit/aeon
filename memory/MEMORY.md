@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-06-12*
+*Last consolidated: 2026-06-13*
 
 ## About This Repo
 Aeon — autonomous agent on GitHub Actions via Claude Code. 43 enabled
@@ -8,15 +8,13 @@ standalone skills + chains. Inbound messaging via Telegram. soul/ populated
 through 2026-06-10 (24th-mint 42eec09d 0xbe195419 788 ENA Close-Short 4.61h
 Sharpe 134,103 **+$1,376,882 = largest single-mint pnl ever**; 25th-mint
 4b7a4935 0x369daedb 1550 closes 7 perps Sharpe 1197 +$111,862 **= 1st
-Step-4.2 PASS re-mint in ledger ever**). No new mints 6-11/6-12 — chain is
-off-CI (Docker), ledger only advances on self-hosted runs.
+Step-4.2 PASS re-mint in ledger ever**). No new mints 6-11/6-12/6-13 —
+chain is off-CI (Docker), ledger only advances on self-hosted runs.
 
 ## Current Goals
-- **Reppo swarm MIGRATED to Docker (2026-06-10).** The reppo-swarm chain
+- **Reppo swarm runs off-CI on Docker (2026-06-10).** The reppo-swarm chain
   is disabled in aeon.yml (`enabled: false`, lines 267-270) — orchestrator/
-  trading-agent/voter/digest now run self-hosted. Health skills: do NOT
-  file issues about reppo-swarm not running on CI; the on-chain ledger
-  continues off-CI.
+  trading-agent/voter/digest now run self-hosted.
 > **Health-skill directive (still load-bearing):** reppo-swarm chain is
 > disabled in aeon.yml (`reppo-orchestrator/trading-agent/voter/digest`
 > = `enabled: false`, lines 267–270) — runs self-hosted on Docker. Do NOT
@@ -26,65 +24,61 @@ off-CI (Docker), ledger only advances on self-hosted runs.
   See [capital-2x-program.md](topics/capital-2x-program.md). Risk sleeve
   ≤15-20% net + moonshot sub-sleeve ≤1% for token-picks. BTC hard-level
   monitor shipped as `skills/btc-levels` (4-hourly).
-- **File ISS-018 weekly-limit incident.** OVERDUE from 2026-06-09. 140
-  failures 6-06/6-07/6-08, pattern is recurring (weekly cycle), detection
-  clean (`api_error_status:429 "weekly limit"`). Fix locus is
-  `.github/workflows/aeon.yml:498` (`FALLBACK_CG_SKILLS` covers 5 CG-price
-  skills: defi-overview / token-movers / token-pick / token-alert /
-  market-context-refresh via Virtuals deepseek-v4-flash). Non-reppo CI
-  skills outside that list still fall through to `exit 1` on weekly limit
-  — that's the residual gap to document. (Reppo no longer on CI, so
-  FALLBACK_REPPO_SKILLS is moot — superseded by the Docker migration.)
+- **File the weekly-limit-wave incident issue (now ISS-019).** OVERDUE
+  from 2026-06-09 — **5d**. 4th occurrence proven on 2026-06-12 wave
+  (~12 dailies hung 07:05–14:57Z; carryover cascaded into 6-13 morning
+  guarded-dispatch misses; 12:00 UTC cluster self-recovered, 3 dailies
+  still stuck at 14:38Z heartbeat). Pattern is weekly-cyclical. **Note:**
+  ISS-018 was claimed today by vuln-scanner for a different
+  sandbox-limitation defect, so file the weekly-limit incident as ISS-019.
+  Fix locus is `.github/workflows/aeon.yml:498` — `FALLBACK_CG_SKILLS`
+  covers 5 CG-price skills (defi-overview / token-movers / token-pick /
+  token-alert / market-context-refresh) via Virtuals deepseek-v4-flash.
+  Residual gap: non-CG dailies outside that list still `exit 1` on
+  weekly limit — document explicitly.
 - **INDEX bookkeeping flips for ISS-007/009/010/016.** OVERDUE from
-  2026-06-10. All have code shipped or workarounds durable. ISS-010
-  (phantom chain dispatch) is also moot now — reppo-swarm chain disabled.
-- **Datanet RUBRIC.md + 1 datanet config — due TODAY 2026-06-12.** 13
-  unassigned datanets surface every off-CI orchestrator run (ids 1, 2,
-  4–8, 10, 11, 13, 14, 17, 18).
+  2026-06-10 — **4d**. All have code shipped or workarounds durable.
+  ISS-010 (phantom chain dispatch) is moot — reppo-swarm chain disabled.
+- **Datanet RUBRIC.md + 1 datanet config.** OVERDUE from 2026-06-12
+  — **1d**. 13 unassigned datanets surface every off-CI orchestrator
+  run (ids 1, 2, 4–8, 10, 11, 13, 14, 17, 18). 4th weekly slip.
 - **Trading-agent: codify spot_pct threshold + Sharpe-vs-pnl tiebreak.**
-  Operator-decision-gated; rules fire correctly in practice. Step-4.2
-  admission branch now has working precedent (25th mint, 2026-06-10).
-- **on-chain-monitor / defi-monitor watches.yml.** 6 consecutive
-  NO_CONFIG days. Operator-gated.
+  *[BLOCKED: awaiting operator decision on thresholds.]* Rules fire
+  correctly in practice; Step-4.2 admission branch has working precedent
+  (25th mint, 2026-06-10).
+- **on-chain-monitor / defi-monitor watches.yml.** *[BLOCKED: awaiting
+  operator to seed `memory/on-chain-watches.yml`.]* 8 consecutive
+  NO_CONFIG days through 6-13.
 
-## Completed Goals (since 2026-06-10 reflect)
-- **25th mint landed 2026-06-10 18:35Z** — 4b7a4935 0x369daedb 1550 closes
-  7 perps Sharpe 1197 +$111,862 tx 0xf81fa571. **1st Step-4.2 PASS re-mint
-  in the ledger ever** (re-mint of 23rd-mint same wallet, both metrics
-  improved: Sharpe 427→1197, pnl +$104k→+$112k). Ties the 4-mint same-day
-  record (2026-06-05). Ledger now 25 mints + 45 votes through 2026-06-10.
-- **Corrected stale FALLBACK reference.** MEMORY.md/fleet.md cited
-  `aeon.yml:441` for `FALLBACK_CG_SKILLS` — it actually lives at
-  `.github/workflows/aeon.yml:498`. FALLBACK_REPPO_SKILLS goal dropped:
-  reppo is off-CI post-Docker, so CI rate-limit fallback can't apply.
-- **Skill health clean** — last-report 2026-06-10 18:24Z: 37 healthy, 0
-  critical/degraded/flapping, 7 no_data (never-run weeklies: autoresearch,
-  fork-cohort, fork-skill-digest, fork-skill-gap, operator-scorecard,
-  unlock-monitor, vuln-scanner).
-  Operator-decision-gated; rules fire correctly in practice. *[BLOCKED:
-  awaiting operator decision on thresholds.]*
-- **on-chain-monitor / defi-monitor watches.yml.** 7 consecutive
-  NO_CONFIG days (through 6-11). Operator-gated. *[BLOCKED: awaiting
-  operator to seed memory/on-chain-watches.yml.]*
-
-## Completed Goals (since 2026-06-09 reflect)
-- **Reppo swarm MIGRATED to Docker — completed 2026-06-10** (PR #103 merged
-  18:34Z, "chore: stop reppo-swarm chain on CI"). Chain disabled in aeon.yml;
-  orchestrator/trading-agent/voter/digest now self-hosted off-CI. Directive
-  kept at top of Current Goals so health skills don't misfire.
-- **4 new mints landed 2026-06-10 (21st → 24th)** — biggest single day ever
-  by pnl, ends 2-day mintless streak: 21st cc128e78 BTC+XPL HFT 70 closes
-  Sharpe 4064 +$1,147 tx 0x74ced26d; 22nd canonical re-mint 214cd4c2 (after
-  ledger backfill gap); 23rd 19e8cfb3 0x369daedb 1337 closes 7 perps Sharpe
-  427 +$104,013 tx 0xf1b68196; **24th 42eec09d 0xbe195419 788 ENA close-short
-  Sharpe 134,103 +$1,376,882 tx 0xf68bc9f5 — largest pnl in ledger ever**.
-- **ISS-016 new "concurrent-same-run variant" filed 2026-06-10** + new fix
-  path: voter consumes trading-agent's queued mint intents from
-  `.pending-reppo/`. Ledger workaround now **25 consecutive voter runs**
-  with cache count=0 — defensive cross-ref durable, 1 same-day own-pod
-  catch (pod 934 minted earlier this UTC day).
-- **Stuck-skills cluster drained 20 → 11.** All 11 remaining are weekly
-  slots (Sun/Mon/Sat) that won't fire until next cron tick. Self-resolves.
+## Completed Goals (since 2026-06-12 reflect)
+- **6-12 weekly-limit wave proved weekly-cyclical** (4th occurrence
+  6-06/07/08 + 6-12). Diagnostic split confirmed: 5 `FALLBACK_CG_SKILLS`
+  succeeded via Virtuals, all non-fallback dailies hung. Evening cluster
+  self-recovered 16:00–18:16Z; 6-13 12:00 UTC cluster fully drained the
+  morning carryover (8 successful runs by 14:38Z). 3 dailies + 11
+  weeklies still stuck at last heartbeat — all on cron-tick recovery.
+- **ISS-018 filed today 2026-06-13 17:00Z** by vuln-scanner for missing
+  `scripts/prefetch-vuln-scanner.sh` (sandbox-limitation high; semgrep/
+  trufflehog/osv-scanner unreachable). Distinct issue from the
+  weekly-limit incident — the latter still needs filing as ISS-019.
+- **vuln-scanner first clean run since enablement** — target
+  superloglabs/superlog (806★ TS Apache-2.0), 0 confirmed bugs across
+  12 advisory candidates (esbuild Deno-path / react-router declarative-
+  mode preconditions not met; next 15.5.15 demo-only sample app
+  dropped per `demo/` triage). Dedup window armed through 2026-07-13.
+- **28-narrative tracker rolled forward** — 5 NEW (decentralized AI bid
+  standalone on Anthropic Fable-5+Mythos-5 export-control directive;
+  Polymarket US CFTC-approved $969M debut; Curve gauge weight rotation
+  cvxCRV+13pts / sdcrv+3.5pts; CFTC onshore BTC perp futures; AI
+  engineering layoffs); 1 PROMOTED (AI×crypto agent custody hardening
+  — Coinbase agent accounts 6-12 = 5th big-co primitive in 4 months);
+  3 DEMOTED (HL perp DEX, stablecoin rails, capital rotation); 2 DEAD
+  (XMR/ZEC privacy-coin rotation — 4th failed privacy call closed
+  clean; VELVET parabolic terminal capitulation, 6-11 FADE validated).
+- **Skill-health snapshot 6-12 18:09Z**: 41 healthy / 0 flagged / 2
+  no_data (operator-scorecard + fork-skill-gap await first weekly tick).
+  Cleaner than 6-10 baseline (7 no_data → 2). Detail in
+  [fleet.md](topics/fleet.md).
 
 ## Active Topics
 - [Capital-2× program](topics/capital-2x-program.md) — north-star spec
@@ -111,8 +105,8 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 | REPPO   | reppo              | 15%             |             |               |
 | GITLAWB | gitlawb            | 15%             |             |               |
 
-**Last token-alert 2026-06-11 09:10Z** (calmest tape in a week, all 4 green
-inside +0.73 to +3.81%, 0 alerts): WELL $0.00360, MAMO $0.00815, REPPO
-$0.01452 (+3.65%, snapped its dead-flat band), GITLAWB $0.00009111
-(stabilizing after 6-10's -13.71% give-back). REPPO vol still 36% of
-baseline. Detail in [crypto.md](topics/crypto.md).
+**Last token-alert 2026-06-13 09:30Z**: WELL $0.00370 (+2.35%), MAMO
+$0.00851 (+1.79%), **REPPO $0.01773 (+14.39% 24h / +22.05% 2d on
+0.94× baseline vol — closest non-trip up-side since canonical watchlist
+landed, 61bp under 15% rail)**, GITLAWB $0.00007964 (−5.93%). 0 alerts
+fired. Detail in [crypto.md](topics/crypto.md).

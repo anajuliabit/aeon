@@ -1,0 +1,48 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_captures",
+        "text_scope",
+        "badge_status"
+      ]
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures (last 24h)",
+        "value": "0"
+      }
+    },
+    "text_scope": {
+      "type": "Text",
+      "props": {
+        "text": "memory/logs and vault/inbox",
+        "variant": "caption"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "secondary"
+      }
+    }
+  }
+}

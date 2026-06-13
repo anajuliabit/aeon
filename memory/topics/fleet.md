@@ -169,15 +169,16 @@ state: what was built, recurring blockers, and health.
   7029a48d, wallet 0xebe126ad, sharpe 295k — **first commodity-perp mint**).
 
 ## Skill health
-- **Latest classification (2026-06-10 18:24Z): 37 healthy, 0 critical/
-  degraded/flapping/warning, 7 no_data** (never-run weeklies: autoresearch,
-  fork-cohort, fork-skill-digest, fork-skill-gap, operator-scorecard,
-  unlock-monitor, vuln-scanner). Clean — no declining scores or persistent
-  flags. `article` still carries sr=0.5 in cron-state (2 runs only, under
-  chronic threshold — known noise, not a real regression). Through 6-11,
-  heartbeat reports 0 skills at consecutive_failures≥2 and the only
-  dispatched-stuck rows are the 11 weekly-rate-limit carry-overs draining
-  on their own cron ticks (Sun/Mon/Sat).
+- **Latest classification (2026-06-12 18:09Z): 41 healthy, 0 critical/
+  degraded/flapping/warning, 2 no_data** (operator-scorecard +
+  fork-skill-gap awaiting first weekly tick). Cleaner than the
+  2026-06-10 baseline (7 no_data → 2) as autoresearch, fork-cohort,
+  fork-skill-digest, unlock-monitor and vuln-scanner all acquired
+  first-run data over the week. `article` still carries sr=0.5 in
+  cron-state (2 runs only, under chronic threshold — known noise).
+  Through 6-13, heartbeat reports 0 skills at consecutive_failures≥2
+  and the only dispatched-stuck rows are 3 daily carryovers from the
+  6-12 weekly-limit wave + 11 weekly carryovers draining on Sun/Mon/Sat ticks.
 - Earlier classification (2026-05-31 18:21Z): 27 healthy, 0 critical/degraded/
   flapping/warning, 1 no_data (operator-scorecard — Mon 10:30 weekly slot
   remains never-run; today's 10:30 slot also passed without state entry).
@@ -425,3 +426,69 @@ state: what was built, recurring blockers, and health.
   optimistic-governance shape; angle history file seeded.
 - 8 consecutive search-skill NO_GAP exits through 2026-06-01 — fleet
   gap-free on external-skill axis.
+
+## 2026-06-12 → 2026-06-13 — 4th weekly-limit wave + ISS-018 collision
+- **2026-06-12 weekly-limit wave (4th occurrence of the ISS-018 pattern).**
+  ~12 daily skills hung 07:05–14:57Z with `last_status=dispatched`
+  (morning-brief / daily-routine / thought-review / skill-freshness /
+  github-trending / aixbt-pulse / on-chain-monitor / defi-monitor /
+  narrative-tracker / security-digest / search-skill + the 08:00 + 14:00
+  heartbeats themselves). **Diagnostic split confirmed**: the 5
+  `FALLBACK_CG_SKILLS` (defi-overview / token-movers / token-pick /
+  token-alert / market-context-refresh at
+  `.github/workflows/aeon.yml:498`) SUCCEEDED via the Virtuals fresh-fetch
+  fallback; every non-fallback skill dispatched in the same window HUNG.
+  Confirms cause = claude weekly limit (not external API). Evening cluster
+  16:00–18:16Z self-recovered. Pattern is now provably weekly-cyclical.
+  Residual gap remains undocumented: non-reppo CI dailies outside
+  `FALLBACK_CG_SKILLS` still `exit 1` on weekly limit.
+- **2026-06-13 carryover cascade.** 10 daily-slot carryovers from the 6-12
+  wave were still stuck at 08:04Z heartbeat (today's 07:00 + 08:00 slots
+  guarded on stuck-state, did NOT re-dispatch). By 14:38Z, ~92% of daily
+  fleet drained — 12:00 UTC cluster fully recovered (on-chain-monitor,
+  btc-levels, token-alert, token-pick, defi-overview, token-movers,
+  defi-monitor, market-context-refresh, narrative-tracker all ran SUCCESS).
+  Residual: 3 dailies still stuck (search-skill / security-digest 6-12T14:57Z,
+  self-improve 6-11T18:51Z); 11 weekly carryovers pending next tick.
+- **ISS-018 number collision (NOT the weekly-limit issue).** vuln-scanner
+  ran 17:00Z and filed `ISS-018` for `scripts/prefetch-vuln-scanner.sh`
+  missing (sandbox blocks semgrep/trufflehog/osv-scanner installs/runs on
+  every invocation). The intended "weekly-limit incident" issue —
+  overdue from 2026-06-09 across 4 occurrences (6-06/07/08 + 6-12 wave) —
+  remains UNFILED and should be `ISS-019` if filed. MEMORY.md goal
+  renamed to reflect.
+- **vuln-scanner 6-13 17:00Z**: target superloglabs/superlog (806★ TS
+  Apache-2.0). 12 packages with recent high/critical advisories triaged;
+  0 confirmed. esbuild Deno-only path, react-router Declarative Mode,
+  next 15.5.15 demo-only `apps/sample/` → dropped per `demo/` triage
+  rule. Channels: 0 PVR, 0 public PR. Dedup window armed through
+  2026-07-13. Report at `articles/vuln-scan-2026-06-13.md`.
+- **Skill-health 2026-06-12 18:09Z snapshot.** 41 healthy, 0
+  critical/degraded/flapping/warning, 2 no_data (operator-scorecard +
+  fork-skill-gap — await first weekly tick). Clean. Previous 6-10
+  snapshot had 7 no_data; the 5-skill drop reflects autoresearch +
+  fork-cohort + fork-skill-digest + unlock-monitor + vuln-scanner all
+  acquiring first-run data during the week (vuln-scanner's today, others
+  on their tick). `article` carries sr=0.5 (2 runs, under chronic
+  threshold).
+- **28-narrative tracker 6-13.** 5 NEW (#1 decentralized AI bid standalone
+  on Anthropic Fable-5 + Mythos-5 US-gov export-control directive — TAO
+  +17.4% TRENDING+UP+BREAKOUT + VVV +16.2% + MOR bid; #24 Polymarket US
+  $969M CFTC-approved debut; #25 Curve gauge weight rotation on
+  cvxCRV +13pts / sdcrv +3.5pts twin signal; #26 CFTC onshore BTC perp
+  futures; #28 AI engineering layoffs as macro-tech context). 1 PROMOTED
+  (#2 AI×crypto agent custody stack structural hardening — Coinbase
+  agent accounts 6-12 = 5th big-co primitive in 4 months). 3 DEMOTED
+  (#3 HL perp DEX Fading deepens, #6 stablecoin rails Peak softening,
+  #8 capital rotation Bear-for-crypto → Mixed after anthropic
+  export-control splits the call). 2 DEAD (#13 XMR/ZEC privacy-coin
+  rotation one-session kill — 4th consecutive failed privacy-coin call,
+  pattern stop holds; #15 VELVET parabolic terminal capitulation,
+  6-11 FADE validated).
+- **Token-alert 6-13 09:30Z.** REPPO +14.39% 24h / +22.05% 2d on baseline
+  vol (0.94× rolling mean) — 61bp under the 15% rail. Closest non-trip
+  on the up-side since canonical watchlist landed. No alerts fired
+  (thin participation). Prior up-trip was GITLAWB +18.74% on 6-09.
+- **No new mints 6-11/6-12/6-13.** Chain is `enabled: false` per Docker
+  migration; ledger only advances off-CI. Still 25 mints + 45 votes
+  through 2026-06-10.

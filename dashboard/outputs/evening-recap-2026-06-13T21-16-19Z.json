@@ -1,0 +1,37 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "evening-recap"
+      },
+      "children": [
+        "heading_1",
+        "text_1",
+        "link_1"
+      ]
+    },
+    "heading_1": {
+      "type": "Heading",
+      "props": {
+        "text": "Evening Recap",
+        "level": "h2"
+      }
+    },
+    "text_1": {
+      "type": "Text",
+      "props": {
+        "text": "Evening Recap — 2026-06-13 sent"
+      }
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": ".pending-notify/evening-recap-msg.md",
+        "href": ".pending-notify/evening-recap-msg.md"
+      }
+    }
+  }
+}

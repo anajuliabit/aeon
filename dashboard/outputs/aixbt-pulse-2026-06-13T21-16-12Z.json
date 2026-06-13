@@ -1,0 +1,315 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-13 21:00Z"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-section",
+        "sep-1",
+        "tradfi-section",
+        "sep-2",
+        "new-section",
+        "sep-3",
+        "bridge-section"
+      ]
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-h",
+        "crypto-item-1",
+        "crypto-item-2"
+      ]
+    },
+    "crypto-h": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "crypto-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-text-1",
+        "crypto-badges-1"
+      ]
+    },
+    "crypto-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Decentralized AI bid holds 2nd AIXBT window, basket broadening"
+      },
+      "children": []
+    },
+    "crypto-badges-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-tao",
+        "badge-vvv",
+        "badge-zec"
+      ]
+    },
+    "badge-tao": {
+      "type": "Badge",
+      "props": {
+        "text": "TAO +20%+",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-vvv": {
+      "type": "Badge",
+      "props": {
+        "text": "VVV catching",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-zec": {
+      "type": "Badge",
+      "props": {
+        "text": "ZEC catching",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "crypto-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-stats-2"
+      ]
+    },
+    "crypto-stats-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-spcx",
+        "stat-hip3"
+      ]
+    },
+    "stat-spcx": {
+      "type": "Stat",
+      "props": {
+        "label": "SPCX 24h on-chain volume",
+        "value": "$50M"
+      },
+      "children": []
+    },
+    "stat-hip3": {
+      "type": "Stat",
+      "props": {
+        "label": "HIP-3 share of HL ATH",
+        "value": "~50%"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi-h",
+        "tradfi-item"
+      ]
+    },
+    "tradfi-h": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tradfi-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tradfi-text",
+        "tradfi-stats"
+      ]
+    },
+    "tradfi-text": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran de-escalation 4th window"
+      },
+      "children": []
+    },
+    "tradfi-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-spacex",
+        "badge-vix",
+        "badge-em"
+      ]
+    },
+    "stat-spacex": {
+      "type": "Stat",
+      "props": {
+        "label": "SpaceX",
+        "value": "+19%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "badge-vix": {
+      "type": "Badge",
+      "props": {
+        "text": "VIX collapsing",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-em": {
+      "type": "Badge",
+      "props": {
+        "text": "EM/cyclicals rotating",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "new-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-h",
+        "new-items"
+      ]
+    },
+    "new-h": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "new-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-1",
+        "new-2",
+        "new-3"
+      ]
+    },
+    "new-1": {
+      "type": "Text",
+      "props": {
+        "text": "FIFA World Cup prediction-market activity (Polymarket + Limitless + Solana-native) — first sports-event item to surface"
+      },
+      "children": []
+    },
+    "new-2": {
+      "type": "Text",
+      "props": {
+        "text": "BOJ rate hike risk flagged as BTC headwind — first explicit bear signal entering the tape"
+      },
+      "children": []
+    },
+    "new-3": {
+      "type": "Text",
+      "props": {
+        "text": "BTC treasury-stock volumes collapsing — new downside signal alongside ETF inflow recovery"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-h",
+        "bridge-text"
+      ]
+    },
+    "bridge-h": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "bridge-text": {
+      "type": "Text",
+      "props": {
+        "text": "BOJ is the uninvited guest. Four windows of US-Iran risk-on, clean direction. But BOJ tightening is global liquidity — it doesn't care what happens at Hormuz. De-escalation trade and yen carry unwind are live simultaneously. $ZEC catching the decAI bid alongside $TAO/$VVV is sloppy — privacy coin ≠ AI infra, the basket always broadens past the thesis before it unwinds."
+      },
+      "children": []
+    }
+  }
+}
