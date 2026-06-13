@@ -1,0 +1,112 @@
+{
+  "root": "agent-buzz-card",
+  "state": {},
+  "elements": {
+    "agent-buzz-card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-06-13",
+        "description": "mostly on-chain ecosystem chatter — base, reppo, akmena — alongside a quieter thread on coding-agent token costs and adversarial review."
+      },
+      "children": [
+        "ecosystem-section",
+        "separator1",
+        "coding-section"
+      ]
+    },
+    "ecosystem-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ecosystem-heading",
+        "story1",
+        "story2",
+        "story3"
+      ]
+    },
+    "ecosystem-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "on-chain agent ecosystems",
+        "level": "h3"
+      }
+    },
+    "story1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@AIonBase_ — 48h on base: coinbase agents, virtuals erc-8126 on-chain verification, travel mcp, agent legion os.",
+        "href": "https://x.com/AIonBase_/status/2065556473502183525",
+        "source": "X"
+      }
+    },
+    "story2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@StevieNumeroUno — reppo at $6.5m mc pitched as post-training-intelligence marketplace, not a single-purpose data dao.",
+        "href": "https://x.com/StevieNumeroUno/status/2065578395967398070",
+        "source": "X"
+      }
+    },
+    "story3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@Element115___ — akmena v2 lite paper: on-chain agent protocol with zk jobs, memory anchors, atomic escrow.",
+        "href": "https://x.com/Element115___/status/2065565302566646220",
+        "source": "X"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "coding-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "coding-heading",
+        "story4",
+        "story5",
+        "story6"
+      ]
+    },
+    "coding-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "coding agents: cost & rigor",
+        "level": "h3"
+      }
+    },
+    "story4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@vitobotta — moonshot 'code' claims 30% fewer tokens for better bench scores — coding-loop token bill is the new target.",
+        "href": "https://x.com/vitobotta/status/2065583720484987037",
+        "source": "X"
+      }
+    },
+    "story5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@togethercompute — 31% more tps than next-fastest oss engine on blackwell via custom tensor core kernels.",
+        "href": "https://x.com/togethercompute/status/2065581001565470734",
+        "source": "X"
+      }
+    },
+    "story6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@komodoman — vyper protocol fully written by claude fable; multi-agent adversarial review caught 3 real bugs pre-deploy.",
+        "href": "https://x.com/komodoman/status/2065583350111195213",
+        "source": "X"
+      }
+    }
+  }
+}
