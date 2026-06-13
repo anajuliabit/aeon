@@ -1,0 +1,252 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse",
+        "description": "2026-06-13 09:00Z"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_crypto",
+        "sep1",
+        "section_macro",
+        "sep2",
+        "section_new",
+        "sep3",
+        "section_bridge"
+      ]
+    },
+    "section_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_crypto",
+        "stack_crypto_items"
+      ]
+    },
+    "h_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "stack_crypto_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_crypto_1",
+        "stat_vvv",
+        "stat_tao",
+        "text_crypto_2",
+        "stat_spcx_vol",
+        "stat_usdc_minted"
+      ]
+    },
+    "text_crypto_1": {
+      "type": "Text",
+      "props": {
+        "text": "$TAO/$VVV/$MOR bid on Anthropic Fable/Mythos export-control — US gov restricted the centralized stack; capital rotated to the decentralized alternative immediately",
+        "variant": "body"
+      }
+    },
+    "stat_vvv": {
+      "type": "Stat",
+      "props": {
+        "label": "VVV",
+        "value": "+14.8%",
+        "trend": "up"
+      }
+    },
+    "stat_tao": {
+      "type": "Stat",
+      "props": {
+        "label": "TAO",
+        "value": "+11.2%",
+        "trend": "up"
+      }
+    },
+    "text_crypto_2": {
+      "type": "Text",
+      "props": {
+        "text": "SPCX tokenized Solana volume $35M/24h (Backpack); $750M USDC minted on Solana — RWA rails running",
+        "variant": "body"
+      }
+    },
+    "stat_spcx_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "SPCX Solana Volume (24h)",
+        "value": "$35M"
+      }
+    },
+    "stat_usdc_minted": {
+      "type": "Stat",
+      "props": {
+        "label": "USDC Minted on Solana",
+        "value": "$750M"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_macro": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_macro",
+        "text_macro_1",
+        "text_macro_2",
+        "stat_spacex"
+      ]
+    },
+    "h_macro": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO/TRADFI",
+        "level": "h2"
+      }
+    },
+    "text_macro_1": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran de-escalation window 3: oil risk premia compressing, dollar weak, credit spreads tightening, EM/cyclicals rotating",
+        "variant": "body"
+      }
+    },
+    "text_macro_2": {
+      "type": "Text",
+      "props": {
+        "text": "SpaceX $75B IPO debut sustaining institutional growth equity inflows + Nasdaq leadership",
+        "variant": "body"
+      }
+    },
+    "stat_spacex": {
+      "type": "Stat",
+      "props": {
+        "label": "SpaceX IPO",
+        "value": "$75B"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_new",
+        "stack_new_items"
+      ]
+    },
+    "h_new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "stack_new_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_new_1",
+        "text_new_2",
+        "stat_btc_etf",
+        "text_new_3"
+      ]
+    },
+    "text_new_1": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic export-control → decentralized AI bid ($TAO/$VVV/$MOR) — new axis",
+        "variant": "body"
+      }
+    },
+    "text_new_2": {
+      "type": "Text",
+      "props": {
+        "text": "BTC ETFs $85.9M inflows (BlackRock) / ETH ETFs bleed day 4 — institutional bifurcation inside the same product suite",
+        "variant": "body"
+      }
+    },
+    "stat_btc_etf": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC ETF Inflows (BlackRock)",
+        "value": "$85.9M"
+      }
+    },
+    "text_new_3": {
+      "type": "Text",
+      "props": {
+        "text": "$HYPE $615M + $H/$SPK/$MEGA unlocks over 30 days / $SIREN 94% supply dump",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_bridge": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_bridge",
+        "text_bridge"
+      ]
+    },
+    "h_bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text_bridge": {
+      "type": "Text",
+      "props": {
+        "text": "The US gov's order to suspend Fable 5 + Mythos 5 is the cleanest regulatory→crypto transmission in a while. Attack the centralized stack on national security grounds, and the decentralized stack catches the bid in real time. BTC meanwhile takes $85.9M ETF inflows while ETH bleeds for the 4th straight day — same institutional channel, opposite directions. The de-escalation trade is full (window 3), tail is one Iran headline away.",
+        "variant": "lead"
+      }
+    }
+  }
+}
