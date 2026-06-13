@@ -1,0 +1,16 @@
+[
+  {
+    "repo": "superloglabs/superlog",
+    "scanned_at": "2026-06-13T17:00:00Z",
+    "findings": 0,
+    "channel": "partial-skip-no-channel",
+    "scanner_status": {
+      "semgrep": "fail",
+      "trufflehog": "fail",
+      "osv-binary": "fail",
+      "osv-api": "ok",
+      "slither": "n/a"
+    },
+    "notes": "dep-CVE-only audit; code-flaw + secrets scans blocked by sandbox; next 15.5.15 surfaced 7 high CVEs only in apps/sample (private demo) — dropped per demo/ triage rule"
+  }
+]
