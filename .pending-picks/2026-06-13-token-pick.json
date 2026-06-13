@@ -1,0 +1,12 @@
+{
+  "source": "token-pick",
+  "symbol": "TAO",
+  "coingeckoId": "bittensor",
+  "side": "long",
+  "entryPriceUsd": 248.76,
+  "targetPriceUsd": 300.00,
+  "invalidationPriceUsd": 215.00,
+  "horizonDays": 14,
+  "conviction": "HIGH (10/10)",
+  "thesis": "Bittensor on CG trending after 7d +29.76% / 24h +16.51% breakout — subnet 128->256 expansion in flight, Grayscale + Bitwise spot-TAO ETF decisions due around Aug 2026, December 2025 halving cut daily emissions 7,200 -> 3,600 with >70% supply staked. Wrong if AI-token narrative rolls over and breakout fails through the $215 consolidation shelf, or if ETF gets pushed past August."
+}
