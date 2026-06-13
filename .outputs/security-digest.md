@@ -1,14 +1,14 @@
+The scratch dir lives under the project root and only holds ephemeral fetch JSON — leaving it. Done.
+
 ## Summary
 
-Ran security-digest for 2026-06-11. **3rd consecutive successful run** (rate-limit gap fully closed after 6-09 recovery).
+**Security Digest — 2026-06-13** executed end-to-end.
 
-- **0 fresh KEV** — all 6 active-exploit CVEs in this week's window literal-deduped against 6-09/6-10 logs (Arista, Chromium V8, Cisco Catalyst SD-WAN, LiteLLM, Check Point IKEv1, SolarWinds Serv-U). Check Point's dueDate=TODAY note dropped per strict 2-day dedup rule.
-- **PATCH TODAY**: 3 npm malware clusters — crypto-wallet stealer cluster (~10 pkgs incl. polymarket-clob-api), corporate-org dependency-confusion swarm (~22 pkgs in one 1-second push at 13:54Z, scattershot pattern is new), Tailwind/utility typo-squat batch (~16 pkgs). ~65 individual malware advisories bundled to fit 4000-char cap.
-- **PATCH THIS WEEK**: 5 advisories led by **CVE-2026-48039 meta-ads-mcp** (pip, CVSS 9.1, **public PoC**, unauth MCP RCE leaking `META_ACCESS_TOKEN` — first MCP-RCE advisory this digest has ever surfaced, direct read-across to aeon's `npx @json-render/mcp` stack). Plus @openzeppelin/wizard, litestar, traefik (PoC), opentelemetry-operator.
-- **MONITOR**: 2 no-patch-yet — PDM (+ sibling) and anyquery path traversal.
+- **PATCH TODAY (3)**: CVE-2026-10520 (Ivanti Sentry KEV, unauth root RCE, EPSS 0.43, CISA due 6-14); CVE-2026-35273 (Oracle PeopleSoft KEV, **known ransomware use**, CVSS 9.8, CISA due 6-15); npm malware burst — 20 GHSAs in 3 clusters (11-pkg ecto-* CTF/exfil single-second push, 5-pkg forge-jsx + ioredis typo-squats, 4-pkg credential-stealer mix incl. chai-web3-testkit wallet-adjacent).
+- **PATCH THIS WEEK (4)**: CVE-2026-48150 @budibase/server priv-esc 9.0 → ≥3.39.0; CVE-2026-48152 @budibase/server REST-cred exfil 8.1 → ≥3.39.0; GHSA-gv7w-rqvm-qjhr esbuild RCE 8.1 → ≥0.28.1; CVE-2026-11401 aws-advanced-go-wrapper Go priv-esc 8.0.
+- **MONITOR**: empty (all in-stack 7.x highs had fix versions implied by `< X.Y.Z` ranges; fell off per 6-11 Baileys precedent).
+- **Sources**: KEV ok · GH Advisory ok · EPSS ok. **First double-KEV PATCH TODAY** in digest history; 5 prior-week KEVs deduped against 6-11 log.
+- **Notification**: staged to `.pending-notify/1781361787-security-digest.md` (2994 chars) for post-run delivery (sandbox blocks direct `./notify "$(cat ...)"`).
+- **Log**: appended `### security-digest` block to `memory/logs/2026-06-13.md` with tier IDs, ranking rationale, source status, and notable signals.
 
-Files:
-- `.pending-notify/1781190500-security-digest.md` (3850 chars, under 4000)
-- `memory/logs/2026-06-11.md` — appended `### security-digest` block
-
-Follow-up: post-run delivery hook will fan out via `./notify` to configured channels (Telegram/Discord/Slack).
+Files modified: `memory/logs/2026-06-13.md`; created `.pending-notify/1781361787-security-digest.md`. Follow-up: post-run notify delivery step will fan out to Telegram/Discord/Slack.
