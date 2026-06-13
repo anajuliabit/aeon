@@ -1,11 +1,8 @@
+Fleet Control complete — pre-flight passed (gh auth ok, rate=4998), registry empty (`memory/instances.json` = `{"instances": []}`), so logged `FLEET_EMPTY` and stopped silently per spec. State file unchanged; no notification sent.
+
 ## Summary
-
-Executed `skills/fleet-control/SKILL.md` (var empty → Health Check Mode).
-
-**Pre-flight**: `gh auth status` OK (anajuliabit, repo+workflow scopes), `rate_limit.core.remaining=4992`.
-
-**Registry**: `memory/instances.json` = `{"instances": []}` — empty.
-
-**Outcome**: `FLEET_EMPTY`. Per spec: log and silent stop, no notification sent.
-
-**Files modified**: `memory/logs/2026-06-13.md` (appended fleet-control entry). No registry/state writes needed — registry stays empty, state file would also be empty so creation was skipped per the silent-stop rule.
+- Mode: Health Check (default — var empty).
+- Outcome: **FLEET_EMPTY** — no managed instances in registry. Silent stop, no notify per spec.
+- Files modified: `memory/logs/2026-06-13.md` (appended fleet-control entry at end).
+- Files unchanged: `memory/instances.json`, `memory/state/fleet-control-state.json` (nothing to update with empty registry).
+- Follow-ups: none — operator-gated (skill stays silent until instances are registered).
