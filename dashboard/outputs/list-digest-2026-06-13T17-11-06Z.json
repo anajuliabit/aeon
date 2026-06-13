@@ -1,0 +1,24 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "list-digest",
+        "description": "2026-06-13 staged"
+      },
+      "children": [
+        "text_status"
+      ]
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "see pending file",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
