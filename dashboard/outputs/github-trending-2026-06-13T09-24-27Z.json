@@ -1,0 +1,82 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "github-trending"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_date",
+        "stat_queued",
+        "separator1",
+        "text_top_label",
+        "item_top"
+      ]
+    },
+    "text_date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-13",
+        "variant": "caption"
+      }
+    },
+    "stat_queued": {
+      "type": "Stat",
+      "props": {
+        "label": "Picks queued",
+        "value": "5"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_top_label": {
+      "type": "Text",
+      "props": {
+        "text": "Top:",
+        "variant": "lead"
+      }
+    },
+    "item_top": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "storylink_shadcn",
+        "badge_status"
+      ]
+    },
+    "storylink_shadcn": {
+      "type": "StoryLink",
+      "props": {
+        "title": "shadcn/improve",
+        "href": "https://github.com/shadcn/improve",
+        "source": "GitHub"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "model-tier audit→execute",
+        "variant": "secondary"
+      }
+    }
+  }
+}
