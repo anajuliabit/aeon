@@ -1,6 +1,9 @@
+DEFI_MONITOR_OK.
+
 ## Summary
-
-Ran `defi-monitor` skill. No DeFi positions are configured — `memory/on-chain-watches.yml` is absent (6th consecutive NO_CONFIG day, operator-gated). Per skill spec, logged `DEFI_MONITOR_OK` and ended without sending a notification.
-
-- **Modified:** `memory/logs/2026-06-11.md` (appended `### defi-monitor (13:43 UTC)` entry)
-- **Follow-up:** None — skill is idle until operator populates `on-chain-watches.yml`.
+- Read `skills/defi-monitor/SKILL.md`, `memory/MEMORY.md`, and today's log.
+- `memory/on-chain-watches.yml` does not exist — 8th consecutive NO_CONFIG day (matches today's on-chain-monitor entry). Operator-gated.
+- Per skill spec ("If no DeFi positions configured, log 'DEFI_MONITOR_OK' and end"): no fetch attempted, no `./notify` sent.
+- Files modified: `memory/logs/2026-06-13.md` (appended `### defi-monitor` block).
+- Verdict: **DEFI_MONITOR_OK**.
+- Follow-up: operator to seed `memory/on-chain-watches.yml` with at least one `type: pool` or `type: position` entry, or accept the skill as durably blocked (already tracked in MEMORY.md Current Goals).
