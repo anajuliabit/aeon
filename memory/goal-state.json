@@ -1,43 +1,45 @@
 {
-  "run_at": "2026-06-13T17:50:00Z",
+  "run_at": "2026-06-14T18:43:04Z",
   "goals": {
     "reppo-swarm-migrated-to-docker": {
       "status": "DONE",
-      "activity_count_14d": 13,
-      "last_activity_date": "2026-06-13"
+      "activity_count_14d": 14,
+      "last_activity_date": "2026-06-14"
     },
     "capital-2x-program-double-net-worth-by-2027-12-31": {
       "status": "ON_TRACK",
-      "activity_count_14d": 30,
-      "last_activity_date": "2026-06-13"
+      "activity_count_14d": 50,
+      "last_activity_date": "2026-06-14"
     },
-    "file-iss-018-weekly-limit-incident-by-2026-06-09": {
+    "file-iss-019-weekly-limit-incident-by-2026-06-09": {
       "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 5,
-      "last_activity_date": "2026-06-13",
-      "note": "ISS-018 ID slot taken 2026-06-13 by vuln-scanner (sandbox-limitation) — weekly-limit incident still unfiled, needs ISS-019"
+      "activity_count_14d": 20,
+      "last_activity_date": "2026-06-14",
+      "note": "weekly-limit incident still unfiled (overdue 5d); ISS-018 slot taken 2026-06-13 by vuln-scanner — file as ISS-019"
     },
     "index-bookkeeping-flips-iss-007-009-010-016-by-2026-06-10": {
       "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 12,
-      "last_activity_date": "2026-06-13"
+      "activity_count_14d": 25,
+      "last_activity_date": "2026-06-14",
+      "note": "ISS-007/009/010/016 still in Open table at memory/issues/INDEX.md (overdue 4d); all four have code or workarounds shipped"
     },
     "datanet-rubric-plus-1-datanet-config-by-2026-06-12": {
       "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 13,
-      "last_activity_date": "2026-06-13"
+      "activity_count_14d": 18,
+      "last_activity_date": "2026-06-14",
+      "note": "no memory/datanets/RUBRIC.md exists; 13 unassigned datanets surface every off-CI orchestrator run (overdue 2d)"
     },
     "trading-agent-codify-spot-pct-and-sharpe-vs-pnl-tiebreak": {
       "status": "BLOCKED",
-      "activity_count_14d": 6,
-      "last_activity_date": "2026-06-13",
+      "activity_count_14d": 30,
+      "last_activity_date": "2026-06-14",
       "blocker": "operator-decision-gated (spot_pct threshold + Sharpe-vs-pnl tiebreak)"
     },
     "on-chain-monitor-defi-monitor-watches-yml": {
       "status": "BLOCKED",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-06-13",
-      "blocker": "operator-gated — 8 consecutive NO_CONFIG days (memory/on-chain-watches.yml unseeded)"
+      "activity_count_14d": 12,
+      "last_activity_date": "2026-06-14",
+      "blocker": "operator-gated — 9th consecutive NO_CONFIG day (memory/on-chain-watches.yml unseeded)"
     }
   }
 }
