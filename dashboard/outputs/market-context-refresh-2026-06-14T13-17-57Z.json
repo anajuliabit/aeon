@@ -1,0 +1,223 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context — 2026-06-14"
+      },
+      "children": [
+        "section_position",
+        "sep1",
+        "section_prices_metrics",
+        "sep2",
+        "section_narrative",
+        "sep3",
+        "section_prediction"
+      ]
+    },
+    "section_position": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_take",
+        "badge_conviction"
+      ]
+    },
+    "text_take": {
+      "type": "Text",
+      "props": {
+        "text": "take:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "badge_conviction": {
+      "type": "Badge",
+      "props": {
+        "text": "chop (conviction medium)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_prices_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "row_prices_fg",
+        "row_breadth_tvl"
+      ]
+    },
+    "row_prices_fg": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth",
+        "stat_fg"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$64,311",
+        "delta": "+0.29%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,667",
+        "delta": "−0.71%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat_fg": {
+      "type": "Stat",
+      "props": {
+        "label": "F&G",
+        "value": "18",
+        "delta": "extreme fear"
+      },
+      "children": []
+    },
+    "row_breadth_tvl": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "text_breadth",
+        "stat_tvl"
+      ]
+    },
+    "text_breadth": {
+      "type": "Text",
+      "props": {
+        "text": "breadth 10/20",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$72.58B",
+        "delta": "+0.41% c1d",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_narrative_label",
+        "text_narrative_content"
+      ]
+    },
+    "text_narrative_label": {
+      "type": "Text",
+      "props": {
+        "text": "top narrative:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_narrative_content": {
+      "type": "Text",
+      "props": {
+        "text": "decentralized AI bid (rising) — compute > wrapper split",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_prediction": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_prediction_label",
+        "text_prediction_q",
+        "progress_prediction",
+        "text_prediction_note"
+      ]
+    },
+    "text_prediction_label": {
+      "type": "Text",
+      "props": {
+        "text": "hot market:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_prediction_q": {
+      "type": "Text",
+      "props": {
+        "text": "US × Iran peace June 15?",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "progress_prediction": {
+      "type": "Progress",
+      "props": {
+        "value": 11,
+        "max": 100,
+        "label": "YES"
+      },
+      "children": []
+    },
+    "text_prediction_note": {
+      "type": "Text",
+      "props": {
+        "text": "was 24% yesterday — deal failed",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
