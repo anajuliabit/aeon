@@ -1,1 +1,1 @@
-defi-overview staged
+defi-overview 06-14 staged — Mixed verdict, tvl 72.58b +0.41% snap, dex vol −38% ex-polymarket-us, 0 chain movers, 2 protocol UP, fees-beating-TVL section drops. see .pending-notify/1781440450-defi-overview.md

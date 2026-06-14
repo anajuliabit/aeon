@@ -1,0 +1,200 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "defi-overview",
+        "description": "06-14"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badges_row",
+        "sep1",
+        "metrics_stack",
+        "sep2",
+        "notes_stack",
+        "sep3",
+        "file_link"
+      ]
+    },
+    "badges_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_verdict",
+        "badge_staged"
+      ]
+    },
+    "badge_verdict": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed verdict",
+        "variant": "outline"
+      }
+    },
+    "badge_staged": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tvl_group",
+        "dex_group",
+        "movers_group",
+        "protocol_group"
+      ]
+    },
+    "tvl_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tvl_stat",
+        "snap_text"
+      ]
+    },
+    "tvl_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "72.58b",
+        "delta": "+0.41%",
+        "trend": "up"
+      }
+    },
+    "snap_text": {
+      "type": "Text",
+      "props": {
+        "text": "snap",
+        "variant": "caption"
+      }
+    },
+    "dex_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dex_stat",
+        "dex_context_text"
+      ]
+    },
+    "dex_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume",
+        "value": "−38%",
+        "trend": "down"
+      }
+    },
+    "dex_context_text": {
+      "type": "Text",
+      "props": {
+        "text": "ex-polymarket-us",
+        "variant": "caption"
+      }
+    },
+    "movers_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "movers_badge"
+      ]
+    },
+    "movers_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "0 chain movers",
+        "variant": "secondary"
+      }
+    },
+    "protocol_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "protocol_badge"
+      ]
+    },
+    "protocol_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "2 protocol UP",
+        "variant": "default"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notes_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fees_text"
+      ]
+    },
+    "fees_text": {
+      "type": "Text",
+      "props": {
+        "text": "fees-beating-TVL section drops",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "file_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": ".pending-notify/1781440450-defi-overview.md",
+        "source": "defi-overview"
+      }
+    }
+  }
+}
