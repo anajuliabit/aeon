@@ -186,9 +186,9 @@
   "search-skill": {
     "last_dispatch": "2026-06-13T14:36:52Z",
     "last_status": "success",
-    "last_success": "2026-06-13T14:39:46Z",
-    "total_runs": 19,
-    "total_successes": 19,
+    "last_success": "2026-06-14T14:55:13Z",
+    "total_runs": 20,
+    "total_successes": 20,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
