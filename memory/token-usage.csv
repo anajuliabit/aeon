@@ -411,4 +411,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-14,heartbeat,claude-opus-4-7,11824,24026,2322590,118720
 2026-06-14,security-digest,claude-opus-4-7,23,10073,1478011,79890
 2026-06-14,btc-levels,claude-sonnet-4-6,10,5701,401027,48180
-2026-06-14,list-digest,claude-opus-4-7,25,10107,1304197,178787
+2026-06-14,skill-graph,claude-opus-4-7,186,82952,21092755,200036

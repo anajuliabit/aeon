@@ -1,0 +1,18 @@
+{
+  "mode": "SKILL_GRAPH_OK",
+  "verdict_one_line": "NEW_SKILLS: btc-levels, reppo-voter, thought-review · NEW_DEPS: fork-release-tracker->fleet-state, vercel-projects->external-feature, vercel-projects->repo-actions, vercel-projects->repo-scanner, action-converter->syndicate-article, action-converter->rss-feed (+154 more) · REMOVED_DEPS: skill-evals->cron-state, repo-scanner->external-feature, repo-scanner->repo-actions, repo-scanner->vercel-projects, reppo-orchestrator->reppo-trading-agent, reppo-orchestrator->reppo-digest (+6 more) · NEW_ENABLED: aixbt-pulse, btc-levels, deal-flow, defi-monitor, fork-cohort, fork-skill-digest, fork-skill-gap, list-digest (+8 more) · NEW_DISABLED: vibecoding-digest",
+  "skills_total": 127,
+  "enabled_count": 44,
+  "edges": {
+    "depends_on": 4,
+    "consume": 0,
+    "reactive": 0,
+    "shared_state": 195
+  },
+  "added_nodes": 3,
+  "removed_nodes": 0,
+  "added_edges": 160,
+  "removed_edges": 12,
+  "enabled_added": 16,
+  "enabled_removed": 1
+}

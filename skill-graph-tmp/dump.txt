@@ -1,0 +1,619 @@
+7595aa6fc60003180afc9fcf3cb9a45f24a233de  aeon.yml
+49d49cabf432e711114b74d0201f5a6e3f444911  skills.json
+skills/action-converter/SKILL.md: name: Action Converter
+skills/action-converter/SKILL.md: description: 5 concrete real-life actions for today, leverage-scored against open loops with specificity and anti-fluff gates
+skills/action-converter/SKILL.md: var: ""
+skills/action-converter/SKILL.md: tags: [meta]
+skills/agent-buzz/SKILL.md: name: Agent Buzz
+skills/agent-buzz/SKILL.md: description: Curated AI-agent tweets, clustered into narratives with insight summaries
+skills/agent-buzz/SKILL.md: var: ""
+skills/agent-buzz/SKILL.md: tags: [social]
+skills/ai-framework-watch/SKILL.md: name: AI Framework Watch
+skills/ai-framework-watch/SKILL.md: description: Weekly competitive-intelligence digest on the AI agent framework space — momentum, releases, breaking changes across a curated watchlist
+skills/ai-framework-watch/SKILL.md: var: ""
+skills/ai-framework-watch/SKILL.md: tags: [research, dev]
+memory/topics/framework-watch-state.json
+skills/aixbt-pulse/SKILL.md: name: AIXBT Pulse
+skills/aixbt-pulse/SKILL.md: description: Cross-domain market pulse from AIXBT's free grounding endpoint — crypto, macro, tradfi, geopolitics. Refreshes taxonomy references (clusters, chains) as a bonus.
+skills/aixbt-pulse/SKILL.md: schedule: "0 9,21 * * *"
+skills/aixbt-pulse/SKILL.md: commits: true
+skills/aixbt-pulse/SKILL.md: permissions:
+skills/aixbt-pulse/SKILL.md:   - contents:write
+skills/aixbt-pulse/SKILL.md: tags: [crypto, research]
+8. **Write `.outputs/aixbt-pulse.md`** so chain consumers (morning-brief, narrative-tracker, market-context-refresh) can inject this into their context via `consume:`. Same body as `memory/topics/aixbt-grounding.md` but prefixed with a one-paragraph TL;DR.
+memory/topics/aixbt-chains.md
+memory/topics/aixbt-clusters.md
+memory/topics/aixbt-grounding.md
+skills/article/SKILL.md: name: Daily Article
+skills/article/SKILL.md: description: Research trending topics and write a publication-ready article
+skills/article/SKILL.md: var: ""
+skills/article/SKILL.md: tags: [content]
+skills/auto-merge/SKILL.md: name: Auto Merge
+skills/auto-merge/SKILL.md: description: Automatically merge open PRs that have passing CI, no blocking reviews, and no conflicts
+skills/auto-merge/SKILL.md: var: ""
+skills/auto-merge/SKILL.md: tags: [dev, meta]
+skills/auto-workflow/SKILL.md: name: Auto-Workflow Builder
+skills/auto-workflow/SKILL.md: description: Analyze a URL and generate a tailored aeon.yml schedule with skill suggestions
+skills/auto-workflow/SKILL.md: var: ""
+skills/auto-workflow/SKILL.md: tags: [meta, dev]
+memory/topics/auto-workflow-analyzed.md
+skills/autoresearch/SKILL.md: name: Autoresearch
+skills/autoresearch/SKILL.md: description: Evolve a skill by generating variations, evaluating them, and updating the best version
+skills/autoresearch/SKILL.md: var: ""
+skills/autoresearch/SKILL.md: tags: [meta, dev]
+skills/btc-levels/SKILL.md: name: BTC Levels Monitor
+skills/btc-levels/SKILL.md: description: Watch BTC price against hard monitoring levels for the leveraged cbBTC position and alert on level crossings
+skills/btc-levels/SKILL.md: commits: true
+skills/btc-levels/SKILL.md: permissions:
+skills/btc-levels/SKILL.md:   - contents:write
+skills/btc-levels/SKILL.md: var: ""
+skills/btc-levels/SKILL.md: tags: [crypto]
+   - **Leverage-review trigger:** spot ≤ 45,000 → alert EVERY run while it
+skills/changelog/SKILL.md: name: Changelog
+skills/changelog/SKILL.md: description: Generate a user-facing weekly changelog (Keep a Changelog format) from recent commits across watched repos
+skills/changelog/SKILL.md: var: ""
+skills/changelog/SKILL.md: tags: [dev]
+skills/channel-recap/SKILL.md: name: Channel Recap
+skills/channel-recap/SKILL.md: description: Weekly recap article from a public Telegram channel — rank posts by engagement, expand on the best
+skills/channel-recap/SKILL.md: var: ""
+skills/channel-recap/SKILL.md: tags: [content]
+skills/code-health/SKILL.md: name: Code Health
+skills/code-health/SKILL.md: description: Weekly report on TODOs, dead code, and test coverage gaps
+skills/code-health/SKILL.md: var: ""
+skills/code-health/SKILL.md: tags: [dev]
+skills/competitor-launch-radar/SKILL.md: name: competitor-launch-radar
+skills/competitor-launch-radar/SKILL.md: description: Weekly scan of Product Hunt + Hacker News for NEW AI-agent-framework launches outside the 9-framework cohort already tracked by ai-framework-watch
+skills/competitor-launch-radar/SKILL.md: var: ""
+skills/competitor-launch-radar/SKILL.md: tags: [research, dev]
+memory/topics/competitor-launch-radar-state.json
+memory/topics/competitor-launch-radar-state.json.bak
+skills/contributor-reward/SKILL.md: name: contributor-reward
+skills/contributor-reward/SKILL.md: description: Closes the contributor flywheel — turns the weekly fork-contributor-leaderboard ranking into a tier-priced rewards plan, writes it into memory/distributions.yml, and hands off to distribute-tokens for the actual on-chain send
+skills/contributor-reward/SKILL.md: var: ""
+skills/contributor-reward/SKILL.md: tags: [community, crypto]
+memory/state/contributor-reward-state.json
+skills/contributor-spotlight/SKILL.md: name: contributor-spotlight
+skills/contributor-spotlight/SKILL.md: description: Weekly recognition post for one fork operator — converts fork-cohort cohort data into a named human moment (POWER fork callout with their work, stars, and skills enabled)
+skills/contributor-spotlight/SKILL.md: var: ""
+skills/contributor-spotlight/SKILL.md: tags: [meta, community]
+memory/topics/contributor-spotlight-history.json
+memory/topics/fork-cohort-state.json
+skills/cost-report/SKILL.md: name: cost-report
+skills/cost-report/SKILL.md: description: Weekly API cost report — computes dollar costs from token usage, flags anomalies, forecasts burn, and prescribes concrete optimizations
+skills/cost-report/SKILL.md: var: ""
+skills/cost-report/SKILL.md: tags: [meta]
+skills/cost-report/SKILL.md: version: "2.0.0"
+skills/create-campaign/SKILL.md: name: Create Campaign
+skills/create-campaign/SKILL.md: description: Provision Meta campaigns and ad sets on AdManage.ai from a declarative config. Runs on-demand — creates entities PAUSED, writes the returned IDs back into state so schedule-ads can launch into them.
+skills/create-campaign/SKILL.md: commits: true
+skills/create-campaign/SKILL.md: permissions:
+skills/create-campaign/SKILL.md:   - contents:write
+skills/create-campaign/SKILL.md: tags: [growth, ads]
+skills/create-skill/SKILL.md: name: Create Skill
+skills/create-skill/SKILL.md: description: Generate a complete new skill from a one-line prompt and ship it as a PR
+skills/create-skill/SKILL.md: var: ""
+skills/create-skill/SKILL.md: tags: [dev, meta]
+skills/daily-routine/SKILL.md: name: Daily Routine
+skills/daily-routine/SKILL.md: description: Morning briefing combining token movers, tweet roundup, paper pick, GitHub issues, and HN digest
+skills/daily-routine/SKILL.md: var: ""
+skills/daily-routine/SKILL.md: tags: [news]
+skills/deal-flow/SKILL.md: name: Deal Flow
+skills/deal-flow/SKILL.md: description: Weekly funding round tracker across configurable verticals
+skills/deal-flow/SKILL.md: var: ""
+skills/deal-flow/SKILL.md: tags: [research]
+skills/deep-research/SKILL.md: name: Deep Research
+skills/deep-research/SKILL.md: description: Exhaustive multi-source synthesis on any topic with explicit source credibility tiering and per-finding confidence — analyst-grade, not aggregator-grade
+skills/deep-research/SKILL.md: var: ""
+skills/deep-research/SKILL.md: tags: [research]
+skills/defi-monitor/SKILL.md: name: DeFi Monitor
+skills/defi-monitor/SKILL.md: description: Check pool health, positions, and yield rates for tracked protocols
+skills/defi-monitor/SKILL.md: var: ""
+skills/defi-monitor/SKILL.md: tags: [crypto]
+skills/defi-overview/SKILL.md: name: DeFi Overview
+skills/defi-overview/SKILL.md: description: Daily DeFi read — regime verdict, biggest movers with "why it matters", sustainable vs incentive yields, fees fundamentals
+skills/defi-overview/SKILL.md: var: ""
+skills/defi-overview/SKILL.md: tags: [crypto]
+skills/deploy-prototype/SKILL.md: name: Deploy Prototype
+skills/deploy-prototype/SKILL.md: description: Generate a small app or tool and deploy it live to Vercel via API
+skills/deploy-prototype/SKILL.md: var: ""
+skills/deploy-prototype/SKILL.md: tags: [dev, build]
+memory/topics/prototypes.md
+skills/digest/SKILL.md: name: Daily Digest
+skills/digest/SKILL.md: description: Generate and send a daily digest on a configurable topic
+skills/digest/SKILL.md: var: ""
+skills/digest/SKILL.md: tags: [content]
+skills/distribute-tokens/SKILL.md: name: Distribute Tokens
+skills/distribute-tokens/SKILL.md: description: Send tokens to a list of contributors via Bankr Wallet API with per-recipient idempotency, two-phase resolve→execute, dry-run, and recovery from partial runs
+skills/distribute-tokens/SKILL.md: var: ""
+skills/distribute-tokens/SKILL.md: tags: [crypto]
+memory/state/distributions.json
+skills/evening-recap/SKILL.md: name: Evening Recap
+skills/evening-recap/SKILL.md: description: End-of-day operational summary — what Aeon shipped, what failed, what needs follow-up
+skills/evening-recap/SKILL.md: var: ""
+skills/evening-recap/SKILL.md: tags: [meta]
+skills/external-feature/SKILL.md: name: External Feature
+skills/external-feature/SKILL.md: description: Proactively enhance watched repos — fix issues, add features, improve code
+skills/external-feature/SKILL.md: var: ""
+skills/external-feature/SKILL.md: tags: [dev, build]
+skills/external-feature/SKILL.md: depends_on: [repo-scanner]
+depends_on: [repo-scanner]
+memory/topics/repos.md
+skills/farcaster-digest/SKILL.md: name: Farcaster Digest
+skills/farcaster-digest/SKILL.md: description: Clustered, signal-scored digest of Farcaster casts with conversation-shape lead and insight-first editorial notes
+skills/farcaster-digest/SKILL.md: var: ""
+skills/farcaster-digest/SKILL.md: tags: [crypto, social]
+memory/state/farcaster-seen-hashes.json
+skills/fetch-tweets/SKILL.md: name: Fetch Tweets
+skills/fetch-tweets/SKILL.md: description: Search X/Twitter for tweets about a token, keyword, username, or topic — clustered by sub-narrative
+skills/fetch-tweets/SKILL.md: var: ""
+skills/fetch-tweets/SKILL.md: tags: [social]
+This skill has no chain consumers as of this commit (no `consume: [fetch-tweets]` references). If a downstream chain step starts consuming this output, emit a flat list of URLs before the clustered output so consumers aren't broken by cluster headers.
+skills/fleet-control/SKILL.md: name: Fleet Control
+skills/fleet-control/SKILL.md: description: Monitor managed Aeon instances — check health, dispatch skills, aggregate status
+skills/fleet-control/SKILL.md: var: ""
+skills/fleet-control/SKILL.md: tags: [dev]
+skills/fleet-control/SKILL.md: cron: "0 9,15 * * *"
+For each registered instance (skip `archived` from detail blocks but count them in the summary), gather in parallel:
+memory/state/fleet-control-state.json
+skills/fleet-state/SKILL.md: name: fleet-state
+skills/fleet-state/SKILL.md: description: Weekly fleet-state digest — synthesises fork-cohort, contributor-spotlight, and fork-release-tracker into one "state of the fleet" narrative
+skills/fleet-state/SKILL.md: var: ""
+skills/fleet-state/SKILL.md: tags: [meta, community]
+memory/topics/contributor-spotlight-history.json
+memory/topics/fleet-state.json
+memory/topics/fleet-state.json.bak
+memory/topics/fork-cohort-state.json
+memory/topics/fork-release-state.json
+skills/fork-cohort/SKILL.md: name: fork-cohort
+skills/fork-cohort/SKILL.md: description: Weekly fork-activation cohort tracker — buckets every fork by recent run activity (COLD / STALE / ACTIVE / POWER) with week-over-week deltas
+skills/fork-cohort/SKILL.md: var: ""
+skills/fork-cohort/SKILL.md: tags: [meta, community]
+memory/topics/fork-cohort-state.json
+skills/fork-contributor-leaderboard/SKILL.md: name: fork-contributor-leaderboard
+skills/fork-contributor-leaderboard/SKILL.md: description: Weekly ranking of developers contributing to the fork fleet and back upstream
+skills/fork-contributor-leaderboard/SKILL.md: var: ""
+skills/fork-contributor-leaderboard/SKILL.md: tags: [meta, community]
+memory/topics/leaderboard-optout.md
+skills/fork-first-run-alert/SKILL.md: name: fork-first-run-alert
+skills/fork-first-run-alert/SKILL.md: description: Daily — named alert the day a fork completes its first ever workflow run. Fork-cohort runs weekly; this catches the activation moment.
+skills/fork-first-run-alert/SKILL.md: var: ""
+skills/fork-first-run-alert/SKILL.md: tags: [meta, community]
+memory/topics/fork-cohort-state.json
+memory/topics/fork-first-run-state.json
+skills/fork-fleet/SKILL.md: name: fork-fleet
+skills/fork-fleet/SKILL.md: description: Inventory active Aeon forks, detect diverged work, surface upstream contribution candidates
+skills/fork-fleet/SKILL.md: var: ""
+skills/fork-fleet/SKILL.md: tags: [dev]
+skills/fork-fleet/SKILL.md: cron: "0 10 * * 1"
+memory/topics/fork-fleet-state.json
+skills/fork-release-tracker/SKILL.md: name: fork-release-tracker
+skills/fork-release-tracker/SKILL.md: description: Weekly scan — celebrate when any fork of the parent repo cuts a tagged GitHub release. Silent when no fork releases in the window.
+skills/fork-release-tracker/SKILL.md: var: ""
+skills/fork-release-tracker/SKILL.md: tags: [meta, community]
+memory/topics/fork-release-state.json
+memory/topics/fork-release-state.json.bak
+skills/fork-skill-digest/SKILL.md: name: fork-skill-digest
+skills/fork-skill-digest/SKILL.md: description: Weekly cross-fork customization digest — surfaces where the fleet's enable/disable/var/model decisions diverge from upstream defaults
+skills/fork-skill-digest/SKILL.md: var: ""
+skills/fork-skill-digest/SKILL.md: tags: [meta]
+memory/topics/fork-skill-digest-state.json
+skills/fork-skill-gap/SKILL.md: name: fork-skill-gap
+skills/fork-skill-gap/SKILL.md: description: Weekly cross-fork skill adoption digest — per-fork table of upstream skills the fork hasn't enabled, top forks by gap size called out, silent on small-gap weeks
+skills/fork-skill-gap/SKILL.md: var: ""
+skills/fork-skill-gap/SKILL.md: tags: [meta, community]
+memory/topics/fork-cohort-state.json
+memory/topics/fork-skill-gap-state.json
+skills/github-issues/SKILL.md: name: GitHub Issues
+skills/github-issues/SKILL.md: description: Daily digest of new open issues across your repos, ranked by signal (security/bug/feature/other)
+skills/github-issues/SKILL.md: var: ""
+skills/github-issues/SKILL.md: tags: [dev]
+skills/github-monitor/SKILL.md: name: GitHub Monitor
+skills/github-monitor/SKILL.md: description: Watch repos for stale PRs, new issues, and new releases — tiered by urgency with concrete next actions
+skills/github-monitor/SKILL.md: var: ""
+skills/github-monitor/SKILL.md: tags: [dev]
+skills/github-releases/SKILL.md: name: GitHub Releases
+skills/github-releases/SKILL.md: description: Upgrade-triage digest of new releases across watched AI/infra/crypto repos
+skills/github-releases/SKILL.md: schedule: "0 8 * * *"
+skills/github-releases/SKILL.md: commits: false
+skills/github-releases/SKILL.md: permissions: []
+skills/github-releases/SKILL.md: var: ""
+skills/github-releases/SKILL.md: tags: [dev]
+skills/github-trending/SKILL.md: name: GitHub Trending
+skills/github-trending/SKILL.md: description: Curated trending GitHub repos — clustered, filtered, and labeled by momentum
+skills/github-trending/SKILL.md: var: ""
+skills/github-trending/SKILL.md: tags: [dev]
+skills/goal-tracker/SKILL.md: name: Goal Tracker
+skills/goal-tracker/SKILL.md: description: Compare current progress against goals with quantified status, velocity, trend, and a concrete next action per goal
+skills/goal-tracker/SKILL.md: var: ""
+skills/goal-tracker/SKILL.md: tags: [meta]
+skills/hacker-news-digest/SKILL.md: name: Hacker News Digest
+skills/hacker-news-digest/SKILL.md: description: Top HN stories filtered by interests, with comment-mined insights and themed clustering
+skills/hacker-news-digest/SKILL.md: var: ""
+skills/hacker-news-digest/SKILL.md: tags: [research]
+skills/heartbeat/SKILL.md: name: Heartbeat
+skills/heartbeat/SKILL.md: description: Proactive ambient check — surface anything worth attention
+skills/heartbeat/SKILL.md: var: ""
+skills/heartbeat/SKILL.md: tags: [meta]
+skills/huggingface-trending/SKILL.md: name: Hugging Face Trending
+skills/huggingface-trending/SKILL.md: description: Curated trending Hugging Face models, datasets, and spaces — filtered, clustered, and labeled with a "why notable" line per pick
+skills/huggingface-trending/SKILL.md: var: ""
+skills/huggingface-trending/SKILL.md: tags: [research]
+skills/idea-capture/SKILL.md: name: Idea Capture
+skills/idea-capture/SKILL.md: description: Quick note capture triggered via Telegram — restates, triages, logs, and echoes back for confirmation
+skills/idea-capture/SKILL.md: var: ""
+skills/idea-capture/SKILL.md: tags: [creative]
+skills/issue-triage/SKILL.md: name: Issue Triage
+skills/issue-triage/SKILL.md: description: Decision-ready triage — classify, dedupe, and emit a verdict + next action per new GitHub issue
+skills/issue-triage/SKILL.md: var: ""
+skills/issue-triage/SKILL.md: tags: [dev]
+skills/last30/SKILL.md: name: Last 30 Days
+skills/last30/SKILL.md: description: Cross-platform social research — narrative-first intelligence on what people are saying about a topic across Reddit, X, HN, Polymarket, and the web over the last 30 days
+skills/last30/SKILL.md: var: ""
+skills/last30/SKILL.md: tags: [research, social]
+memory/topics/last30-
+skills/list-digest/SKILL.md: name: List Digest
+skills/list-digest/SKILL.md: description: Cross-list narrative resonance + signal-scored top tweets from tracked X lists in the past 24 hours
+skills/list-digest/SKILL.md: var: ""
+skills/list-digest/SKILL.md: tags: [social]
+skills/market-context-refresh/SKILL.md: name: Market Context Refresh
+skills/market-context-refresh/SKILL.md: description: Fetch live crypto macro data and update memory/topics/market-context.md
+skills/market-context-refresh/SKILL.md: schedule: "0 10 * * *"
+skills/market-context-refresh/SKILL.md: commits: true
+skills/market-context-refresh/SKILL.md: permissions:
+skills/market-context-refresh/SKILL.md:   - contents:write
+skills/market-context-refresh/SKILL.md: tags: [crypto]
+memory/topics/market-context.md
+skills/monitor-kalshi/SKILL.md: name: Monitor Kalshi
+skills/monitor-kalshi/SKILL.md: description: Monitor specific Kalshi prediction markets for 24h price moves, volume changes, and top events
+skills/monitor-kalshi/SKILL.md: var: ""
+skills/monitor-kalshi/SKILL.md: tags: [crypto, research]
+skills/monitor-polymarket/SKILL.md: name: Monitor Polymarket
+skills/monitor-polymarket/SKILL.md: description: Monitor specific prediction markets for 24h price moves, volume changes, and fresh comments
+skills/monitor-polymarket/SKILL.md: var: ""
+skills/monitor-polymarket/SKILL.md: tags: [crypto]
+skills/monitor-runners/SKILL.md: name: Monitor Runners
+skills/monitor-runners/SKILL.md: description: Find the top 5 tokens that ran hardest in the past 24h across major chains using GeckoTerminal
+skills/monitor-runners/SKILL.md: var: ""
+skills/monitor-runners/SKILL.md: tags: [crypto]
+skills/morning-brief/SKILL.md: name: Morning Brief
+skills/morning-brief/SKILL.md: description: Priority-driven daily briefing — the 3 things to focus on today, why now, and what moved
+skills/morning-brief/SKILL.md: var: ""
+skills/morning-brief/SKILL.md: tags: [meta]
+skills/narrative-tracker/SKILL.md: name: Narrative Tracker
+skills/narrative-tracker/SKILL.md: description: Track rising, peaking, and fading crypto/tech narratives with quantitative mindshare + velocity signals and explicit positioning calls
+skills/narrative-tracker/SKILL.md: schedule: "0 14 * * *"
+skills/narrative-tracker/SKILL.md: commits: true
+skills/narrative-tracker/SKILL.md: tags: [crypto, research]
+skills/narrative-tracker/SKILL.md: permissions:
+skills/narrative-tracker/SKILL.md:   - contents:write
+skills/on-chain-monitor/SKILL.md: name: On-Chain Monitor
+skills/on-chain-monitor/SKILL.md: description: Monitor blockchain addresses and contracts for notable activity
+skills/on-chain-monitor/SKILL.md: var: ""
+skills/on-chain-monitor/SKILL.md: tags: [crypto]
+skills/onboard/SKILL.md: name: onboard
+skills/onboard/SKILL.md: description: One-shot setup validator — runs every check from the ./onboard CLI inside the workflow and sends the resulting checklist to the configured notification channel
+skills/onboard/SKILL.md: var: ""
+skills/onboard/SKILL.md: tags: [meta]
+memory/topics/onboard-history.md
+skills/operator-scorecard/SKILL.md: name: operator-scorecard
+skills/operator-scorecard/SKILL.md: description: Weekly plain-language synthesis of agent health + community growth + economic activity — answers "was this week worth it?" in one notification
+skills/operator-scorecard/SKILL.md: var: ""
+skills/operator-scorecard/SKILL.md: tags: [meta, productivity]
+skills/paper-digest/SKILL.md: name: Paper Digest
+skills/paper-digest/SKILL.md: description: Find and summarize new papers matching tracked research interests
+skills/paper-digest/SKILL.md: var: ""
+skills/paper-digest/SKILL.md: tags: [research]
+skills/paper-pick/SKILL.md: name: Paper Pick
+skills/paper-pick/SKILL.md: description: Find the one paper you should read today from Hugging Face Papers
+skills/paper-pick/SKILL.md: var: ""
+skills/paper-pick/SKILL.md: tags: [research]
+skills/polymarket-comments/SKILL.md: name: Polymarket Comments
+skills/polymarket-comments/SKILL.md: description: Top trending Polymarket markets and the most interesting comments from them
+skills/polymarket-comments/SKILL.md: var: ""
+skills/polymarket-comments/SKILL.md: tags: [crypto]
+skills/pr-review/SKILL.md: name: PR Review
+skills/pr-review/SKILL.md: description: Auto-review open PRs with severity-tagged findings, inline comments, and a one-line verdict
+skills/pr-review/SKILL.md: var: ""
+skills/pr-review/SKILL.md: tags: [dev]
+skills/pr-triage/SKILL.md: name: PR Triage
+skills/pr-triage/SKILL.md: description: First-touch triage for external pull requests — verdict + label + welcoming comment within minutes of open
+skills/pr-triage/SKILL.md: var: ""
+skills/pr-triage/SKILL.md: tags: [dev]
+skills/price-threshold-alert/SKILL.md: name: price-threshold-alert
+skills/price-threshold-alert/SKILL.md: description: Fire when the tracked token does something — new ATH, sharp 1h move, or operator-set target crossed. Silent on normal days.
+skills/price-threshold-alert/SKILL.md: var: ""
+skills/price-threshold-alert/SKILL.md: tags: [crypto]
+memory/topics/price-alert-state.json
+skills/product-hunt-launch/SKILL.md: name: product-hunt-launch
+skills/product-hunt-launch/SKILL.md: description: Draft the full Product Hunt launch asset package (tagline, description, first comment, maker comment, six-bullet feature list) from live repo state — operator reviews and submits.
+skills/product-hunt-launch/SKILL.md: var: ""
+skills/product-hunt-launch/SKILL.md: tags: [dev]
+skills/project-lens/SKILL.md: name: project-lens
+skills/project-lens/SKILL.md: description: Write an article about the project through a surprising lens — connecting it to current events, trends, philosophy, or comparable projects
+skills/project-lens/SKILL.md: var: ""
+skills/project-lens/SKILL.md: tags: [content, dev]
+skills/push-recap/SKILL.md: name: push-recap
+skills/push-recap/SKILL.md: description: Daily deep-dive recap of all pushes — reads diffs, ranks impact, separates user-visible shipments from internal work, delivers a verdict
+skills/push-recap/SKILL.md: var: ""
+skills/push-recap/SKILL.md: tags: [dev]
+skills/reddit-digest/SKILL.md: name: Reddit Digest
+skills/reddit-digest/SKILL.md: description: Detect cross-subreddit narratives — stories surfacing in multiple unrelated subs at once
+skills/reddit-digest/SKILL.md: var: ""
+skills/reddit-digest/SKILL.md: tags: [news]
+skills/reflect/SKILL.md: name: Weekly Reflect
+skills/reflect/SKILL.md: description: Review recent activity, consolidate memory, and prune stale entries
+skills/reflect/SKILL.md: var: ""
+skills/reflect/SKILL.md: tags: [meta]
+skills/refresh-x/SKILL.md: name: Refresh X
+skills/refresh-x/SKILL.md: description: Fetch a tracked X/Twitter account's latest tweets, cluster them, and save a decision-ready gist to memory
+skills/refresh-x/SKILL.md: var: ""
+skills/refresh-x/SKILL.md: tags: [social]
+skills/reg-monitor/SKILL.md: name: Regulatory Monitor
+skills/reg-monitor/SKILL.md: description: Track legislation, regulatory actions, and legal developments affecting prediction markets, crypto, and AI agents — triaged by stage × impact for decision-ready output
+skills/reg-monitor/SKILL.md: var: ""
+skills/reg-monitor/SKILL.md: tags: [crypto, research]
+memory/topics/reg-monitor-seen.md
+skills/remix-tweets/SKILL.md: name: Remix Tweets
+skills/remix-tweets/SKILL.md: description: Fetch ~30 older tweets, pre-filter for remixability, then produce 10 new rephrased versions across diverse strategies with post-write quality gates
+skills/remix-tweets/SKILL.md: var: ""
+skills/remix-tweets/SKILL.md: tags: [social]
+memory/topics/tweet-archive.md
+skills/reply-maker/SKILL.md: name: Reply Maker
+skills/reply-maker/SKILL.md: description: Generate two reply options for 5 tweets from tracked X accounts or topics
+skills/reply-maker/SKILL.md: var: ""
+skills/reply-maker/SKILL.md: tags: [social]
+skills/repo-actions/SKILL.md: name: repo-actions
+skills/repo-actions/SKILL.md: description: Generate 5 anchored, implementable action ideas for a watched repo — specificity-gated, priority-ranked, with a Top Pick verdict
+skills/repo-actions/SKILL.md: var: ""
+skills/repo-actions/SKILL.md: tags: [dev]
+memory/topics/repos.md
+skills/repo-article/SKILL.md: name: repo-article
+skills/repo-article/SKILL.md: description: Thesis-driven article about a watched repo — falsifiable claim, cited evidence, self-edit quality gate
+skills/repo-article/SKILL.md: var: ""
+skills/repo-article/SKILL.md: tags: [dev, content]
+skills/repo-pulse/SKILL.md: name: repo-pulse
+skills/repo-pulse/SKILL.md: description: Daily report on new stars, forks, and releases for watched repos — with notable-stargazer enrichment and a one-line growth verdict
+skills/repo-pulse/SKILL.md: var: ""
+skills/repo-pulse/SKILL.md: tags: [dev]
+skills/repo-scanner/SKILL.md: name: Repo Scanner
+skills/repo-scanner/SKILL.md: description: Catalog GitHub repos into a prioritized fleet report with concrete, coded opportunities that downstream skills consume directly
+skills/repo-scanner/SKILL.md: var: ""
+skills/repo-scanner/SKILL.md: tags: [dev, meta]
+memory/topics/repos.md
+skills/reppo-digest/SKILL.md: name: Reppo Digest
+skills/reppo-digest/SKILL.md: description: Composes and sends one daily summary of the reppo-swarm run, updates the ledger and issue tracker
+skills/reppo-digest/SKILL.md: var: ""
+skills/reppo-digest/SKILL.md: tags: [reppo, digest]
+memory/topics/reppo.md
+skills/reppo-orchestrator/SKILL.md: name: Reppo Orchestrator
+skills/reppo-orchestrator/SKILL.md: description: Wakes daily, reads Reppo datanet state, decides RUN/SKIP for each datanet agent, and discovers unassigned datanets
+skills/reppo-orchestrator/SKILL.md: var: ""
+skills/reppo-orchestrator/SKILL.md: tags: [reppo, orchestration]
+memory/topics/reppo.md
+skills/reppo-trading-agent/SKILL.md: name: Reppo Trading Agent
+skills/reppo-trading-agent/SKILL.md: description: Constructs labeled Hyperliquid perp trade-dataset pods from public HL data (leaderboard wallets' userFills joined with HL OHLCV) and writes mint intent files for the TradingGymAI datanet. Mint-only — voting is handled independently by the reppo-voter skill.
+skills/reppo-trading-agent/SKILL.md: var: ""
+skills/reppo-trading-agent/SKILL.md: tags: [reppo, trading, hyperliquid]
+memory/topics/reppo.md
+memory/topics/tradinggymai-spec.md
+skills/reppo-voter/SKILL.md: name: Reppo Voter
+skills/reppo-voter/SKILL.md: description: Pulls current pods on the TradingGymAI datanet every trigger, evaluates each against the datanet goal/rubric, and writes LIKE/DISLIKE vote intent files. Independent of minting — runs whether or not reppo-trading-agent mints anything.
+skills/reppo-voter/SKILL.md: var: ""
+skills/reppo-voter/SKILL.md: tags: [reppo, voting, curation, hyperliquid]
+memory/topics/reppo.md
+skills/research-brief/SKILL.md: name: Research Brief
+skills/research-brief/SKILL.md: description: Deep dive on a topic with a falsifiable thesis, cited claims, and explicit uncertainty
+skills/research-brief/SKILL.md: var: ""
+skills/research-brief/SKILL.md: tags: [research]
+skills/rss-digest/SKILL.md: name: RSS Digest
+skills/rss-digest/SKILL.md: description: Fetch, summarize, and deliver RSS feed highlights
+skills/rss-digest/SKILL.md: var: ""
+skills/rss-digest/SKILL.md: tags: [news]
+skills/rss-feed/SKILL.md: name: RSS Feed Generator
+skills/rss-feed/SKILL.md: description: Generate an Atom XML feed from articles, validate it, and notify only when it actually changes
+skills/rss-feed/SKILL.md: var: ""
+skills/rss-feed/SKILL.md: tags: [content]
+skills/schedule-ads/SKILL.md: name: Schedule Ads
+skills/schedule-ads/SKILL.md: description: Schedule paid ads across Meta/TikTok/Snapchat/Pinterest/LinkedIn via the AdManage.ai API, driven by a declarative config file. Launches PAUSED by default — never auto-activates live spend.
+skills/schedule-ads/SKILL.md: schedule: "0 8 * * *"
+skills/schedule-ads/SKILL.md: commits: true
+skills/schedule-ads/SKILL.md: permissions:
+skills/schedule-ads/SKILL.md:   - contents:write
+skills/schedule-ads/SKILL.md: tags: [growth, ads]
+skills/search-skill/SKILL.md: name: Search Skills
+skills/search-skill/SKILL.md: description: Search the open agent skills ecosystem for skills that fill a real gap and install them via the native add-skill path
+skills/search-skill/SKILL.md: var: ""
+skills/search-skill/SKILL.md: tags: [meta]
+skills/security-digest/SKILL.md: name: Security Digest
+skills/security-digest/SKILL.md: description: Lead with confirmed exploitation (CISA KEV), enrich with EPSS, filter GitHub Advisories to your tracked stack, output one action per item
+skills/security-digest/SKILL.md: var: ""
+skills/security-digest/SKILL.md: tags: [news, dev]
+skills/self-improve/SKILL.md: name: self-improve
+skills/self-improve/SKILL.md: description: Improve the agent itself — better skills, prompts, workflows, and config based on recent performance
+skills/self-improve/SKILL.md: var: ""
+skills/self-improve/SKILL.md: tags: [meta]
+skills/show-hn-draft/SKILL.md: name: show-hn-draft
+skills/show-hn-draft/SKILL.md: description: Draft a Show HN post (plus shorter Reddit r/MachineLearning + r/selfhosted variants) from the live repo state — README, SHOWCASE, recent repo-articles + project-lens, real autonomous behavior examples from logs, and current stars/forks/skill counts. Operator pastes; agent writes.
+skills/show-hn-draft/SKILL.md: var: ""
+skills/show-hn-draft/SKILL.md: tags: [dev]
+skills/skill-analytics/SKILL.md: name: skill-analytics
+skills/skill-analytics/SKILL.md: description: Weekly fleet-level skill-run analytics — ranks skills by 7d run count, surfaces success rates, exit-taxonomy distribution, and anomaly flags (significance-gated)
+skills/skill-analytics/SKILL.md: var: ""
+skills/skill-analytics/SKILL.md: tags: [meta]
+skills/skill-evals/SKILL.md: name: Skill Evals
+skills/skill-evals/SKILL.md: description: Validate skill outputs against assertions, diff vs prior eval to flag regressions, file issues for new failures, and queue concrete fixes
+skills/skill-evals/SKILL.md: var: ""
+skills/skill-evals/SKILL.md: tags: [meta]
+skills/skill-freshness/SKILL.md: name: skill-freshness
+skills/skill-freshness/SKILL.md: description: Audit every enabled skill's upstream file dependencies for staleness — flags chained skills about to consume yesterday's article or a long-dead topic file
+skills/skill-freshness/SKILL.md: var: ""
+skills/skill-freshness/SKILL.md: tags: [meta, dev]
+Today is ${today}. Walk every enabled skill in `aeon.yml`, parse the file dependencies it declares (explicit `chains: consume:` edges + implicit `articles/`, `.outputs/`, `memory/topics/`, `memory/state/` references inside each `SKILL.md`), check the on-disk freshness of each dependency against a per-class threshold, and surface a single decision-ready report: which enabled consumer is about to read a file that's older than its expected freshness window.
+`MISSING` only fires for **explicit** dependencies (`chains: consume:` entries + canonical `articles/{producer}-${today}.md` patterns). Implicit grep-discovered references that simply never existed are not flagged — many SKILL.md files mention paths in pseudocode or comments that aren't real reads.
+### 3. Gather explicit dependencies (`chains: consume:`)
+Walk `aeon.yml` `chains:` blocks. For each step with a `consume: [...]` list, the consuming skill depends on `.outputs/{producer}.md` for each named producer. Record these as **explicit** edges with class `outputs` (4h threshold).
+Also record any step with `parallel: [...]` followed by a downstream `consume:` reference as the same class.
+- Explicit `chains: consume:` edges: ${explicit_count}
+- **Implicit dependencies are best-effort.** Grep-based discovery is heuristic. False positives are tolerated (consumer paragraph clarifies why); false negatives are accepted (an explicit `chains: consume:` edge is the source of truth for chain runs). The goal is to surface the worst-case staleness, not to prove formally complete coverage.
+memory/topics/skill-freshness-state.json
+skills/skill-graph/SKILL.md: name: Skill Dependency Graph
+skills/skill-graph/SKILL.md: description: Generate a navigable Mermaid dependency map of all skills with change detection, per-category drill-downs, and enabled overlay
+skills/skill-graph/SKILL.md: var: ""
+skills/skill-graph/SKILL.md: tags: [meta, dev]
+    grep -hE '^depends_on:|^- skill:|consume:|parallel:|trigger:' "$f" || true
+- `aeon.yml` → per-skill `enabled`, `schedule`, `var`, `model`; `chains:` blocks (`steps:`, `consume:`, `parallel:`); `reactive:` blocks (`trigger:`, `on:`, `when:`)
+11. **Source-status footer** — `skills parsed: N · depends_on: X · consume: Y · reactive: Z · shared-state derived: W · enabled: E/N · mode: SKILL_GRAPH_{OK,NEW,NO_CHANGE,ERROR}`
+memory/topics/skill-graph-state.json
+skills/skill-health/SKILL.md: name: Skill Health
+skills/skill-health/SKILL.md: description: Audit skill metrics, file/resolve issues in memory/issues/, and notify on state change only
+skills/skill-health/SKILL.md: var: ""
+skills/skill-health/SKILL.md: tags: [meta]
+skills/skill-leaderboard/SKILL.md: name: skill-leaderboard
+skills/skill-leaderboard/SKILL.md: description: Weekly ranking of which skills are most popular across CONFIGURED Aeon forks (excludes untouched templates)
+skills/skill-leaderboard/SKILL.md: var: ""
+skills/skill-leaderboard/SKILL.md: tags: [meta]
+memory/topics/skill-leaderboard-state.json
+skills/skill-repair/SKILL.md: name: Skill Repair
+skills/skill-repair/SKILL.md: description: Diagnose and fix failing or degraded skills automatically — systemic-first triage, per-category playbooks, verification plan
+skills/skill-repair/SKILL.md: var: ""
+skills/skill-repair/SKILL.md: tags: [meta, dev]
+skills/skill-repair/SKILL.md: depends_on: [skill-health]
+depends_on: [skill-health]
+**Manual trigger:** [Run skill](https://github.com/{owner}/{repo}/actions/workflows/aeon.yml) with `skill={name}` and `var={var}`.
+memory/state/skill-repair-history.json
+skills/skill-security-scan/SKILL.md: name: Skill Security Scan
+skills/skill-security-scan/SKILL.md: description: Audit skills, workflows, and companion scripts for injection, exfiltration, traversal, and prompt-override risks with delta tracking, baseline suppression, issue filing, and per-finding remediation
+skills/skill-security-scan/SKILL.md: var: ""
+skills/skill-security-scan/SKILL.md: tags: [dev]
+memory/state/security-scan.json
+skills/skill-update-check/SKILL.md: name: skill-update-check
+skills/skill-update-check/SKILL.md: description: Check imported skills for upstream changes and security regressions since the version in skills.lock
+skills/skill-update-check/SKILL.md: var: ""
+skills/skill-update-check/SKILL.md: tags: [dev, security]
+skills/skill-update-check/SKILL.md: cron: "0 19 * * 0"
+skills/smithery-manifest/SKILL.md: name: smithery-manifest
+skills/smithery-manifest/SKILL.md: description: Auto-generate Smithery + MCP Registry submission docs from skills.json and the aeon-mcp server — turns the 6-week-stuck "submit Aeon to Smithery" idea into a copy-paste form
+skills/smithery-manifest/SKILL.md: var: ""
+skills/smithery-manifest/SKILL.md: tags: [meta]
+skills/spawn-instance/SKILL.md: name: Spawn Instance
+skills/spawn-instance/SKILL.md: description: Clone this Aeon agent into a new GitHub repo — fork, configure skills, validate, register in fleet
+skills/spawn-instance/SKILL.md: var: ""
+skills/spawn-instance/SKILL.md: tags: [dev]
+skills/star-milestone/SKILL.md: name: star-milestone
+skills/star-milestone/SKILL.md: description: Announces when a watched repo crosses a star-count milestone (100, 150, 200, 250, 500, 1000, ...) with a velocity-shaped narrative — time-to-milestone, growth shape, projection, and a tight highlight reel
+skills/star-milestone/SKILL.md: var: ""
+skills/star-milestone/SKILL.md: tags: [dev]
+memory/topics/milestones.md
+skills/star-momentum-alert/SKILL.md: name: star-momentum-alert
+skills/star-momentum-alert/SKILL.md: description: Project the date a watched repo crosses its next star milestone — alert only when projected date lands inside the Show HN dispatch window (7-14 days out, Tue/Wed/Thu)
+skills/star-momentum-alert/SKILL.md: var: ""
+skills/star-momentum-alert/SKILL.md: tags: [meta, growth]
+memory/topics/star-momentum-state.json
+skills/startup-idea/SKILL.md: name: Startup Idea
+skills/startup-idea/SKILL.md: description: 2 evidence-backed startup memos with ICP, wedge, monetization, and numeric kill criteria
+skills/startup-idea/SKILL.md: var: ""
+skills/startup-idea/SKILL.md: tags: [creative]
+skills/syndicate-article/SKILL.md: name: syndicate-article
+skills/syndicate-article/SKILL.md: description: Cross-post articles to Dev.to and Farcaster with hook-driven copy and click-optimized metadata
+skills/syndicate-article/SKILL.md: var: ""
+skills/syndicate-article/SKILL.md: tags: [content, growth]
+skills/technical-explainer/SKILL.md: name: Technical Explainer
+skills/technical-explainer/SKILL.md: description: Generate a visual technical explanation of a recent topic using Replicate for the hero image
+skills/technical-explainer/SKILL.md: var: ""
+skills/technical-explainer/SKILL.md: tags: [content]
+skills/telegram-digest/SKILL.md: name: Telegram Digest
+skills/telegram-digest/SKILL.md: description: Cross-channel digest of public Telegram posts — ranked by signal, clustered by narrative, not by channel
+skills/telegram-digest/SKILL.md: var: ""
+skills/telegram-digest/SKILL.md: tags: [social]
+skills/thought-review/SKILL.md: name: Thought Review
+skills/thought-review/SKILL.md: description: Periodic priority-anchored review — read recent captures, score against life priorities, surface aligned actions and drift signals
+skills/thought-review/SKILL.md: var: ""
+skills/thought-review/SKILL.md: tags: [meta, capture]
+memory/topics/agent-evals.md.
+skills/thread-formatter/SKILL.md: name: Thread Formatter
+skills/thread-formatter/SKILL.md: description: Score the day's events from memory/logs and format the top one as a 5-tweet thread ready to paste
+skills/thread-formatter/SKILL.md: var: ""
+skills/thread-formatter/SKILL.md: tags: [social]
+skills/token-alert/SKILL.md: name: Token Alert
+skills/token-alert/SKILL.md: description: Notify on price or volume anomalies for tracked tokens
+skills/token-alert/SKILL.md: var: ""
+skills/token-alert/SKILL.md: tags: [crypto]
+skills/token-movers/SKILL.md: name: Token Movers
+skills/token-movers/SKILL.md: description: Top movers, losers, and trending coins from CoinGecko — with signal enrichment and pump-risk flags
+skills/token-movers/SKILL.md: var: ""
+skills/token-movers/SKILL.md: tags: [crypto]
+skills/token-pick/SKILL.md: name: Token Pick
+skills/token-pick/SKILL.md: description: One token recommendation and one prediction market pick — scored, quantified, with a skip branch when signals are weak
+skills/token-pick/SKILL.md: var: ""
+skills/token-pick/SKILL.md: tags: [crypto]
+skills/token-report/SKILL.md: name: token-report
+skills/token-report/SKILL.md: description: Daily price performance report for the project's token — price, volume, liquidity, and context
+skills/token-report/SKILL.md: var: ""
+skills/token-report/SKILL.md: tags: [crypto]
+skills/tool-builder/SKILL.md: name: Tool Builder
+skills/tool-builder/SKILL.md: description: Build automation scripts from action-converter suggestions and recurring manual tasks
+skills/tool-builder/SKILL.md: var: ""
+skills/tool-builder/SKILL.md: tags: [dev, build]
+skills/tool-builder/SKILL.md: depends_on: [action-converter]
+depends_on: [action-converter]
+skills/treasury-info/SKILL.md: name: Treasury Info
+skills/treasury-info/SKILL.md: description: Decision-ready treasury overview — verdict, concentration, depegs, significant changes
+skills/treasury-info/SKILL.md: var: ""
+skills/treasury-info/SKILL.md: tags: [crypto]
+memory/topics/known-tokens.md
+memory/topics/treasury-snapshots.md
+skills/tweet-roundup/SKILL.md: name: Tweet Roundup
+skills/tweet-roundup/SKILL.md: description: Gist of the latest tweets on configurable topics
+skills/tweet-roundup/SKILL.md: var: ""
+skills/tweet-roundup/SKILL.md: tags: [social]
+skills/unlock-monitor/SKILL.md: name: Unlock Monitor
+skills/unlock-monitor/SKILL.md: description: Weekly token unlock and vesting tracker — quantify supply pressure via absorption ratio, classify cliff vs linear, deliver one-line market reads
+skills/unlock-monitor/SKILL.md: schedule: "0 10 * * 1"
+skills/unlock-monitor/SKILL.md: commits: true
+skills/unlock-monitor/SKILL.md: tags: [crypto]
+skills/unlock-monitor/SKILL.md: permissions:
+skills/unlock-monitor/SKILL.md:   - contents:write
+Run these WebSearches in parallel:
+memory/state/unlock-monitor-seen.json
+skills/update-gallery/SKILL.md: name: Update Gallery
+skills/update-gallery/SKILL.md: description: Publish new or changed articles to the GitHub Pages gallery with change detection, silent on no-op weeks
+skills/update-gallery/SKILL.md: var: ""
+skills/update-gallery/SKILL.md: tags: [content]
+memory/state/update-gallery-state.json
+memory/topics/gallery-orphans.md
+skills/v4-readiness/SKILL.md: name: v4-readiness
+skills/v4-readiness/SKILL.md: description: Generate a per-fork v4 upgrade readiness checklist — reads the fork's aeon.yml, skills.json, and MEMORY.md, cross-references against the embedded v4 change manifest, emits Safe / Review / Custom / Action-items breakdown
+skills/v4-readiness/SKILL.md: var: ""
+skills/v4-readiness/SKILL.md: tags: [meta, dx]
+| `chains:` runner interface | `aeon.yml` | Step format (`parallel:` / `consume:` keys, `on_error` semantics) |
+skills/vercel-projects/SKILL.md: name: Vercel Projects
+skills/vercel-projects/SKILL.md: description: Triage Vercel deploy fleet — verdict, errored-first, what-changed since last snapshot
+skills/vercel-projects/SKILL.md: var: ""
+skills/vercel-projects/SKILL.md: tags: [dev, meta]
+memory/topics/repos.md
+memory/topics/vercel.md
+skills/vibecoding-digest/SKILL.md: name: Vibecoding Digest
+skills/vibecoding-digest/SKILL.md: description: Decision-ready pulse of r/vibecoding — ranked by signal score, narrative-clustered, with a one-line verdict and tools leaderboard
+skills/vibecoding-digest/SKILL.md: var: ""
+skills/vibecoding-digest/SKILL.md: tags: [content]
+skills/vuln-scanner/SKILL.md: name: Vuln Scanner
+skills/vuln-scanner/SKILL.md: description: Audit trending repos for real security vulnerabilities and disclose responsibly via PVR or dependency PRs
+skills/vuln-scanner/SKILL.md: var: ""
+skills/vuln-scanner/SKILL.md: tags: [dev, security]
+skills/vuln-scanner/SKILL.md: depends_on: [github-trending]
+depends_on: [github-trending]
+skills/weekly-review/SKILL.md: name: Weekly Review
+skills/weekly-review/SKILL.md: description: KALM retrospective grounded in objective metrics, with closed-loop tracking of last week's actions and SMART next-week actions
+skills/weekly-review/SKILL.md: var: ""
+skills/weekly-review/SKILL.md: tags: [meta]
+skills/weekly-shiplog/SKILL.md: name: weekly-shiplog
+skills/weekly-shiplog/SKILL.md: description: Weekly narrative of everything shipped — features, fixes, and momentum, written as a compelling update
+skills/weekly-shiplog/SKILL.md: var: ""
+skills/weekly-shiplog/SKILL.md: tags: [content]
+skills/workflow-security-audit/SKILL.md: name: workflow-security-audit
+skills/workflow-security-audit/SKILL.md: description: Audit .github/workflows and composite actions with zizmor + actionlint, classify findings against the prior audit, auto-fix Critical/High regressions, and open a PR only when something actually changed.
+skills/workflow-security-audit/SKILL.md: tags: [dev]
+skills/write-tweet/SKILL.md: name: Write Tweet
+skills/write-tweet/SKILL.md: description: Generate 10 tweet drafts across 5 size tiers (2 variations each) on a topic from today's outputs
+skills/write-tweet/SKILL.md: var: ""
+skills/write-tweet/SKILL.md: tags: [social]
