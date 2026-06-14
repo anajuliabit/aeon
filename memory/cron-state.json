@@ -364,10 +364,10 @@
     "last_dispatch": "2026-06-14T13:10:04Z"
   },
   "skill-graph": {
-    "last_status": "dispatched",
-    "last_success": "2026-05-31T17:42:47Z",
-    "total_runs": 2,
-    "total_successes": 2,
+    "last_status": "success",
+    "last_success": "2026-06-14T17:43:52Z",
+    "total_runs": 3,
+    "total_successes": 3,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
