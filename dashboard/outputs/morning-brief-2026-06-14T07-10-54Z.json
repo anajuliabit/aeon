@@ -1,0 +1,86 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "morning-brief"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date-text",
+        "focus-heading",
+        "items-stack",
+        "separator-main",
+        "pending-note"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-14",
+        "variant": "muted"
+      }
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3 Focus Items",
+        "level": "h3"
+      }
+    },
+    "items-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-iss-019",
+        "item-pr-108",
+        "item-index"
+      ]
+    },
+    "item-iss-019": {
+      "type": "Text",
+      "props": {
+        "text": "iss-019 file (5d)"
+      }
+    },
+    "item-pr-108": {
+      "type": "Text",
+      "props": {
+        "text": "PR #108 merge"
+      }
+    },
+    "item-index": {
+      "type": "Text",
+      "props": {
+        "text": "INDEX flips (4d)"
+      }
+    },
+    "separator-main": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pending-note": {
+      "type": "Text",
+      "props": {
+        "text": "full body queued to .pending-notify/morning-brief-msg.md",
+        "variant": "caption"
+      }
+    }
+  }
+}
