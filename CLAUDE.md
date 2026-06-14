@@ -75,6 +75,35 @@ chains:
 ### Standalone composition (legacy)
 A skill can still inline-execute another skill by reading its SKILL.md. Prefer chains when you need parallelism, output passing, or error handling.
 
+## Investment Advisor (scripts/advisor/)
+
+Advisory-only LLM swarm: reads the `investiments` portfolio snapshot + market
+data, writes ranked recommendations, stages directional calls as tracked picks.
+Lives on **`main`** (not feature branches). Scheduled via `.github/workflows/`:
+`investment-advisor.yml` (daily 13:00 UTC) + `weekly-conviction.yml`.
+
+- **Orchestrator:** `scripts/advisor/run.sh` — prefetch → 5 analysts → debate →
+  PM synthesis → POST report + picks + Telegram. `run-weekly.sh` = weekly conviction.
+- **Inputs:** `scripts/advisor/prefetch-data.sh` writes `.investiments-cache/advisor/*.json`
+  (keyless feeds + the portfolio snapshot via Railway Basic auth).
+- **LLM:** `scripts/llm-claude.sh` (Claude OAuth, primary) → falls back to
+  `scripts/llm.sh` (Virtuals, `claude-opus-4-8`). Runs OUTSIDE the Claude sandbox.
+- **Prompts:** `advisor/prompts/*.md`. Symbol→CoinGecko map: `advisor/token-refs.json`.
+- **Picks:** directional recs (increase→long, decrease/hedge→short) with a level
+  or snapshot spot POST to investiments `/api/picks`; stablecoins skipped. Daily
+  ids are `<date>-advisor-daily-<sym>`.
+
+### Required env (GitHub Actions secrets)
+`DASHBOARD_PASSWORD` (+ `DASHBOARD_USER=admin`) for the snapshot fetch + POSTs,
+`VIRTUALS_API_KEY`, `CLAUDE_CODE_OAUTH_TOKEN`, `XAI_API_KEY` (X sentiment),
+`TELEGRAM_*`. Missing `DASHBOARD_PASSWORD` → run aborts at the snapshot gate.
+
+### Local validation
+- `ADVISOR_DRY_RUN=1 ./scripts/advisor/run.sh` — full pipeline, prints report /
+  picks / Telegram to stdout, NO POSTs or Telegram sends.
+- **Before shipping any `scripts/advisor/*` change, run `bash scripts/advisor/selftest.sh`**
+  (offline jq/python fixtures; exits non-zero on failure — the CI gate).
+
 ## Notifications
 
 Always use `./notify "message"` for notifications. It fans out to every configured channel:
