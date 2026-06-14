@@ -1,0 +1,120 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "evening-recap 06-14"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_status",
+        "sep1",
+        "heading_events",
+        "stack_events",
+        "sep2",
+        "heading_issues",
+        "stack_issues"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_events": {
+      "type": "Heading",
+      "props": {
+        "text": "Highlights",
+        "level": "h3"
+      }
+    },
+    "stack_events": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_pr",
+        "alert_reppo",
+        "text_fork"
+      ]
+    },
+    "text_pr": {
+      "type": "Text",
+      "props": {
+        "text": "PR #108 landed"
+      }
+    },
+    "alert_reppo": {
+      "type": "Alert",
+      "props": {
+        "title": "REPPO alert",
+        "type": "warning"
+      }
+    },
+    "text_fork": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest debut"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Stuck (2)",
+        "level": "h3"
+      }
+    },
+    "stack_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_freshness",
+        "badge_cohort"
+      ]
+    },
+    "badge_freshness": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-freshness",
+        "variant": "destructive"
+      }
+    },
+    "badge_cohort": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort",
+        "variant": "destructive"
+      }
+    }
+  }
+}
