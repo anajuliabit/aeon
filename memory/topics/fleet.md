@@ -492,3 +492,94 @@ state: what was built, recurring blockers, and health.
 - **No new mints 6-11/6-12/6-13.** Chain is `enabled: false` per Docker
   migration; ledger only advances off-CI. Still 25 mints + 45 votes
   through 2026-06-10.
+
+## 2026-06-13 → 2026-06-14 — notify-fix PR + REPPO first up-trip + coverage cliff
+- **PR #108 opened 2026-06-13 18:21Z** by morning-brief: branch
+  `fix/notify-file-flag-2026-06-13` — replaces the sandbox-blocked
+  `./notify "$(cat ...)"` pattern in `hn-digest` + `onboard` with a
+  file-flag input. Unblocks the ~15 standalone skills currently staging
+  every notification via `.pending-notify/` and waiting for the
+  post-run delivery glob. Once merged, retires the dominant sandbox
+  fallback pattern noted across 6 consecutive standalone-run days
+  (6-09 → 6-14). Still open at 6-14 morning-brief read (~18h old,
+  under 24h stalled threshold).
+- **REPPO 24h-rail TRIPPED FIRST TIME UP-SIDE 2026-06-14 09:10Z.**
+  +18.93% 24h / +45.18% 3d from $0.01452 (6-11) → $0.02108 (6-14).
+  Vol $522K = **2.55× rolling baseline** — loud bid, under the 3×
+  spike rail (so the "real participation, not capitulation-buying"
+  read holds). Watchlist median +1.55% mid (well/mamo/gitlawb only);
+  REPPO is +17.4pts above the rest. Pure tape-side rotation into the
+  swarm-token tier as decentralised-AI bid widens (TAO +23.5%, AKT
+  +21.5% fresh, FET +11.9%) — chain off-CI continues so no fresh
+  ledger advancement explains the move. Detail in [crypto.md](crypto.md).
+- **skill-evals 6-14 verdict SKILL_EVALS_RECOVERED.** 0 new fail /
+  1 fixed / 1 still failing / 12 stable. Coverage **14/57 (24%) — 24pp
+  drop from 48% = COVERAGE CLIFF**. Action queued: patch
+  `evals.json:monitor-polymarket` (`POLYMARKET` pattern too broad →
+  tighten to `### monitor-polymarket`).
+- **Decentralised-AI bid validated.** 6-13 narrative-tracker #1 FRONT-RUN
+  call (TAO HIGH 10/10 token-pick $248.76) paying +23.5% in 24h.
+  Day-2 catalyst: WSJ/TechCrunch identify Andy Jassy as the trigger
+  for US-gov Anthropic Fable-5/Mythos-5 access suspension (AWS
+  researchers used Fable 5 to jailbreak a software-vuln-ID
+  safeguard; AWS itself lost access to its own portfolio company's
+  models). Rotation INSIDE DeAI: meme-side (TRUMP/EDGE/GWEI/VVV) all
+  flipped TRENDING+DOWN intraday — money rotating into
+  decentralised-compute primitives (TAO/AKT/FET) over AI-token wrappers.
+- **defi-overview 6-14 Mixed verdict.** TVL recovery decelerated
+  sharply (+0.41% snap c1d vs 6-13's +1.47% — a third of yesterday's
+  pace). DEX vol -22.2% raw / **-38% clean ex-Polymarket-US** (PM US
+  $1.70b print day 2, still inside the 7-day US-launch artifact
+  window — distortion intensifies vs 6-13's $969m debut). 0 chain
+  movers cleared 5% snap floor. 2 protocol UP (Figure Markets RWA
+  +27%, Fluid Lite +11%) both no-obvious-catalyst. 0 protocol DOWN —
+  Dolomite full direction-reversal ↔ (+10.88% → -9.24%, 19.96-pt
+  swing) misses the strict gate. **Steakhouse Financial rolled OFF
+  fees-beating-TVL** (was 6-13's biggest-ever entry on this list at
+  $2.06b; fees c7d collapsed +41.48% → +15.65% under the 20% gate;
+  TVL caught up). cvxCRV gauge surge cooling (-4.14pts to 27.35,
+  first cool-off in 2 days). Yesterday's hot real-yield pool
+  WETH-USDT (uniswap-v3) collapsed 40.63 → 11.36 apyBase + conf
+  fell 2→1 — full hot pool rollover confirmed. 3 NEW real-yield
+  pools displaced (REUSDE/MSUSD/ONYC — first re-protocol entry,
+  first mainstreet entry, **first Solana real-yield entry** since
+  yield-list adoption). /v2/chains c1d/c7d null **DAY 16** of API
+  regression.
+- **token-movers 12:30Z refresh — alt-bid cooling intraday.** Breadth
+  halved since 07:12Z daily-routine (59 → 40/100 green); BTC $64,449,
+  ETH $1,673, SOL $68.05. DeAI basket cooled hard intraday (TAO +23.5%
+  → +7.5%, AKT +21.5% → +13.7%, JASMY +16.7% → +10.2%, VELVET +20.8%
+  → +10.4%). H +135.7% biggest single-session reversal of the week
+  (was +75.1% AM) but 1h -7.6% suggests top cooling — earned FADE tag.
+  BTW BREAKOUT accelerated (+15.8% → +23.0% intraday). BEAT -34.2%
+  (deepened from -20.1% AM — parabolic giveback of 6-13 narrative-
+  tracker #21 BEAT-breakout call confirmed Bear).
+- **github-trending 6-14: NVIDIA/SkillSpector top pick** (Python,
+  4742★ total / 804 today / 55.8 stars/d ACCELERATING) — first-party
+  security scanner for the agent-skills marketplace primitive
+  (addresses supply-chain risk of arbitrary skills loaded into coding
+  agents). Plus LMCache v0.4.7 (CUDA 13 nightly, KV cache for vLLM),
+  agentsview (Go, "100× faster ccusage replacement" claim),
+  music-assistant/server (2.9.0 stable). Short trending-feed day
+  (14 returned, confirmed via second WebFetch — not fetch failure).
+  Same skill-marketplace meta noise pattern dropped 3× today (vs 5×
+  6-13).
+- **heartbeat 6-14 08:33Z: zero stuck daily-slot skills, wave fully
+  drained.** Previous days' daily carryovers all recovered overnight
+  (evening-recap 6-13 21:16Z, aixbt-pulse 21:17Z, btc-levels 05:31Z,
+  skill-evals 07:18Z = first non-stuck Sunday weekly tick post-carryover,
+  thought-review 07:09Z, morning-brief 07:11Z, daily-routine 07:15Z).
+  9 weekly carryovers still stuck (all >5d old, await next weekly
+  tick: 4 Sunday-scheduled clear today 17–19Z, 5 Monday-scheduled
+  clear 6-15). docs/status.md still DEGRADED on the stuck rows.
+  HEARTBEAT_OK · STATUS_PAGE=DEGRADED — no notify (dedup, all in last
+  48h logs).
+- **Skill-health latest snapshot (2026-06-13 18:18Z): 41 healthy / 0
+  flagged / 2 no_data** (operator-scorecard + fork-skill-gap — await
+  first weekly tick). Clean. No drift from 6-12 snapshot.
+- **thought-review 8 consecutive zero-capture days** through 6-14
+  morning. Operator inbox cold since the personal-stack PR landed
+  (6-04 PR #71). `vault/inbox/` empty (.gitkeep only).
+- **on-chain-monitor / defi-monitor 9 consecutive NO_CONFIG days**
+  through 6-14. `memory/on-chain-watches.yml` still absent —
+  operator-gated.
