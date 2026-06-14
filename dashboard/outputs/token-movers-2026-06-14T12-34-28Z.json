@@ -1,0 +1,81 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "token-movers",
+        "description": "06-14 12:30Z refresh staged"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-breadth",
+        "sep1",
+        "stat-h",
+        "sep2",
+        "badge-btw",
+        "sep3",
+        "link-message"
+      ]
+    },
+    "stat-breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth (since 07:12Z)",
+        "value": "40/100",
+        "delta": "-19 from 59",
+        "trend": "down"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat-h": {
+      "type": "Stat",
+      "props": {
+        "label": "H Reversal",
+        "value": "+135%",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "badge-btw": {
+      "type": "Badge",
+      "props": {
+        "text": "BTW BREAKOUT accelerating",
+        "variant": "default"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-message": {
+      "type": "Link",
+      "props": {
+        "label": "See full details",
+        "href": ".pending-notify/token-movers-msg.md"
+      }
+    }
+  }
+}
