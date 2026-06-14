@@ -1,0 +1,156 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Token Pick: 06-14 Staged"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "xpl_item",
+        "separator1",
+        "iran_item",
+        "separator2",
+        "file_link"
+      ]
+    },
+    "xpl_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "xpl_header",
+        "xpl_content"
+      ]
+    },
+    "xpl_header": {
+      "type": "Heading",
+      "props": {
+        "text": "XPL",
+        "level": "h3"
+      }
+    },
+    "xpl_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "xpl_confidence",
+        "xpl_rating",
+        "xpl_note"
+      ]
+    },
+    "xpl_confidence": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "default"
+      }
+    },
+    "xpl_rating": {
+      "type": "Stat",
+      "props": {
+        "value": "9/10"
+      }
+    },
+    "xpl_note": {
+      "type": "Text",
+      "props": {
+        "text": "Plasma one card launch next week",
+        "variant": "caption"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "iran_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iran_header",
+        "iran_content"
+      ]
+    },
+    "iran_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Iran-Enrichment",
+        "level": "h3"
+      }
+    },
+    "iran_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "iran_position",
+        "iran_price",
+        "iran_confidence",
+        "iran_edge"
+      ]
+    },
+    "iran_position": {
+      "type": "Badge",
+      "props": {
+        "text": "NO",
+        "variant": "outline"
+      }
+    },
+    "iran_price": {
+      "type": "Stat",
+      "props": {
+        "value": "59.5c"
+      }
+    },
+    "iran_confidence": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "default"
+      }
+    },
+    "iran_edge": {
+      "type": "Text",
+      "props": {
+        "text": "~20pp edge",
+        "variant": "caption"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "file_link": {
+      "type": "Link",
+      "props": {
+        "label": "See full report: token-pick-2026-06-14.md",
+        "href": ".pending-notify/token-pick-2026-06-14.md"
+      }
+    }
+  }
+}
