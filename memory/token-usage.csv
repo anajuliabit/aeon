@@ -405,4 +405,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-14,skill-evals,claude-sonnet-4-6,15,33184,832706,70225
 2026-06-14,heartbeat,claude-opus-4-7,23,18081,1268375,76262
 2026-06-14,aixbt-pulse,claude-sonnet-4-6,1495,18971,1190752,48262
-2026-06-14,btc-levels,claude-sonnet-4-6,10,3528,309565,25382
+2026-06-14,token-alert,claude-opus-4-7,18,8335,959705,60140

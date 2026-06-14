@@ -1,0 +1,71 @@
+{
+  "root": "card_alert",
+  "state": {},
+  "elements": {
+    "card_alert": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert",
+        "description": "06-14 — staged"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_event",
+        "stack_metrics",
+        "text_details"
+      ]
+    },
+    "heading_event": {
+      "type": "Heading",
+      "props": {
+        "text": "reppo trips 15% rail",
+        "level": "h3"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_24h",
+        "stat_2d"
+      ]
+    },
+    "stat_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+18.93%",
+        "delta": "+18.93%",
+        "trend": "up"
+      }
+    },
+    "stat_2d": {
+      "type": "Stat",
+      "props": {
+        "label": "2d",
+        "value": "+45%",
+        "delta": "+45%",
+        "trend": "up"
+      }
+    },
+    "text_details": {
+      "type": "Text",
+      "props": {
+        "text": "See .pending-notify/token-alert-msg.md for details",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -105,8 +105,9 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 | REPPO   | reppo              | 15%             |             |               |
 | GITLAWB | gitlawb            | 15%             |             |               |
 
-**Last token-alert 2026-06-13 09:30Z**: WELL $0.00370 (+2.35%), MAMO
-$0.00851 (+1.79%), **REPPO $0.01773 (+14.39% 24h / +22.05% 2d on
-0.94× baseline vol — closest non-trip up-side since canonical watchlist
-landed, 61bp under 15% rail)**, GITLAWB $0.00007964 (−5.93%). 0 alerts
-fired. Detail in [crypto.md](topics/crypto.md).
+**Last token-alert 2026-06-14 09:10Z**: WELL $0.00351 (+0.07%), MAMO
+$0.00856 (+0.41%), **REPPO $0.02108 (+18.93% 24h / +45.18% 3d on
+2.55× baseline vol — TRIPS 15% rail, first up-side alert since
+canonical watchlist landed; follows yesterday's 61bp near-miss)**,
+GITLAWB $0.00008134 (+2.68%). 1 alert fired (REPPO 24h). Detail in
+[crypto.md](topics/crypto.md).
