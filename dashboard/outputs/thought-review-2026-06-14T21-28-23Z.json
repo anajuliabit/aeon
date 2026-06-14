@@ -1,0 +1,63 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading",
+        "stat",
+        "scope",
+        "conclusion",
+        "footnote"
+      ]
+    },
+    "heading": {
+      "type": "Text",
+      "props": {
+        "text": "🧭 thought review · last 24h",
+        "variant": "lead"
+      }
+    },
+    "stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "scope": {
+      "type": "Text",
+      "props": {
+        "text": "across memory/logs and vault/inbox",
+        "variant": "caption"
+      }
+    },
+    "conclusion": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface"
+      }
+    },
+    "footnote": {
+      "type": "Text",
+      "props": {
+        "text": "9th zero-capture run — inbox cold since the personal-stack PR",
+        "variant": "muted"
+      }
+    }
+  }
+}
