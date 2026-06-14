@@ -1,17 +1,15 @@
 ## Summary
 
-Executed `skills/search-skill/SKILL.md`. Exited at step 1 with **SEARCH_SKILL_NO_GAP** (4th consecutive day).
+Executed `skills/search-skill/SKILL.md`. Exit mode: **SEARCH_SKILL_NO_GAP** (6th consecutive).
 
-**Sources checked:**
-- (a) cron-state: 0 failing skills at the qualifying threshold (`cf>=2` OR `sr<0.6` with `runs>=3`)
-- (b) issues INDEX: 6 open, all in non-qualifying categories (`prompt-bug`/`timeout`/`config`/`unknown`)
-- (c) MEMORY.md priorities: all internal repairs / operator-gated config — no external capability word
-- (d) 7d log grep: only `missing-secret`/`missing fenced reppo-plan`/`missing REDDIT_CLIENT_ID`/never-run weeklies — noise
+**Derivation trace:**
+- (a) `cron-state.json` — 0 failing skills; all 38 with ≥3 runs at sr=1.0, cf=0.
+- (b) `issues/INDEX.md` — 7 open (ISS-005/007/009/010/011/016/018), none in qualifying `{missing-secret, api-change, permanent-limitation, quality-regression}` set.
+- (c) `MEMORY.md` Current Goals — internal bookkeeping (file ISS-019, INDEX flips, datanet RUBRIC), BLOCKED (spot_pct thresholds, on-chain-watches.yml), or already deactivated (reppo-swarm chain). No concrete capability word.
+- (d) 7d log signals — only noise (`missing-secret`/`missing prefetch`/`missing fenced block`); no capability gap.
 
-**Actions:**
-- No catalog search performed (NO_GAP short-circuits step 3)
-- No install
-- No notification (silent on NO_GAP per spec)
-- Appended log entry to `memory/logs/2026-06-13.md`
+Per skill spec, catalog search skipped — log-only, no notify, no PR. Same pattern as 6-09/6-10/6-11/6-13.
 
-**Files modified:** `memory/logs/2026-06-13.md` (1 entry appended).
+**Files modified:** `memory/logs/2026-06-14.md` (appended `## search-skill` section).
+
+**Follow-up:** None — `SEARCH_SKILL_NO_GAP` is the correct outcome until a real capability gap surfaces (failing skill, qualifying open issue, concrete priority, or log signal).
