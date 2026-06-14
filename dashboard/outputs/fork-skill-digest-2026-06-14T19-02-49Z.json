@@ -1,0 +1,334 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest",
+        "description": "2026-06-14 — Fleet consensus analysis across 124 active forks"
+      },
+      "children": [
+        "stat_main",
+        "sep1",
+        "scan_summary",
+        "sep2",
+        "disabled_skills_section",
+        "sep3",
+        "model_consensus_section",
+        "sep4",
+        "fork_only_section",
+        "sep5",
+        "customizer_section",
+        "sep6",
+        "report_link"
+      ]
+    },
+    "stat_main": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks disabling search-skill",
+        "value": "117",
+        "delta": "95%"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "scan_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_scan",
+        "text_scan"
+      ]
+    },
+    "heading_scan": {
+      "type": "Heading",
+      "props": {
+        "text": "Scan Summary",
+        "level": "h3"
+      }
+    },
+    "text_scan": {
+      "type": "Text",
+      "props": {
+        "text": "Scanned 124 active forks of aaronjmars/aeon; 123 are configured.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "disabled_skills_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_disabled",
+        "text_disabled_desc",
+        "disabled_skills_stack"
+      ]
+    },
+    "heading_disabled": {
+      "type": "Heading",
+      "props": {
+        "text": "Flip disable (upstream on → fleet off)",
+        "level": "h3"
+      }
+    },
+    "text_disabled_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet is voting these as noise:",
+        "variant": "body"
+      }
+    },
+    "disabled_skills_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill_search",
+        "skill_security",
+        "skill_action",
+        "skill_more"
+      ]
+    },
+    "skill_search": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_search_name",
+        "text_search_count"
+      ]
+    },
+    "badge_search_name": {
+      "type": "Badge",
+      "props": {
+        "text": "search-skill",
+        "variant": "outline"
+      }
+    },
+    "text_search_count": {
+      "type": "Text",
+      "props": {
+        "text": "117 forks (95%)",
+        "variant": "caption"
+      }
+    },
+    "skill_security": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_security_name",
+        "text_security_count"
+      ]
+    },
+    "badge_security_name": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "outline"
+      }
+    },
+    "text_security_count": {
+      "type": "Text",
+      "props": {
+        "text": "117 forks (95%)",
+        "variant": "caption"
+      }
+    },
+    "skill_action": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_action_name",
+        "text_action_count"
+      ]
+    },
+    "badge_action_name": {
+      "type": "Badge",
+      "props": {
+        "text": "action-converter",
+        "variant": "outline"
+      }
+    },
+    "text_action_count": {
+      "type": "Text",
+      "props": {
+        "text": "117 forks (95%)",
+        "variant": "caption"
+      }
+    },
+    "skill_more": {
+      "type": "Text",
+      "props": {
+        "text": "+ 38 more skills at 76-95% disable rate",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "model_consensus_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_model",
+        "model_consensus_row"
+      ]
+    },
+    "heading_model": {
+      "type": "Heading",
+      "props": {
+        "text": "Model consensus",
+        "level": "h3"
+      }
+    },
+    "model_consensus_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_skill_name",
+        "badge_model_choice",
+        "text_model_count"
+      ]
+    },
+    "badge_skill_name": {
+      "type": "Badge",
+      "props": {
+        "text": "competitor-launch-radar",
+        "variant": "default"
+      }
+    },
+    "badge_model_choice": {
+      "type": "Badge",
+      "props": {
+        "text": "claude-sonnet-4-6",
+        "variant": "secondary"
+      }
+    },
+    "text_model_count": {
+      "type": "Text",
+      "props": {
+        "text": "78 forks (63%)",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fork_only_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fork_only",
+        "stat_fork_only",
+        "text_fork_only_notable"
+      ]
+    },
+    "heading_fork_only": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork-only skills",
+        "level": "h3"
+      }
+    },
+    "stat_fork_only": {
+      "type": "Stat",
+      "props": {
+        "label": "Unique fork-only skills across fleet",
+        "value": "157"
+      }
+    },
+    "text_fork_only_notable": {
+      "type": "Text",
+      "props": {
+        "text": "Notable: polymarket-thesis, rug-scan, atlas, mine-bean",
+        "variant": "caption"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "customizer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_customizer",
+        "stat_customizer"
+      ]
+    },
+    "heading_customizer": {
+      "type": "Heading",
+      "props": {
+        "text": "Heaviest customizer",
+        "level": "h3"
+      }
+    },
+    "stat_customizer": {
+      "type": "Stat",
+      "props": {
+        "label": "modelcollapse/aeon (fork-only)",
+        "value": "134 overrides"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "report_link": {
+      "type": "Link",
+      "props": {
+        "label": "Full report",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/fork-skill-digest-2026-06-14.md"
+      }
+    }
+  }
+}
