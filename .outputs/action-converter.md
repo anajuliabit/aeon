@@ -1,1 +1,1 @@
-action-converter staged: 5 actions for 2026-06-13, quality avg 4.4/5, mode OK, see .pending-notify/1781375400-action-converter.md
+action-converter 06-14 staged — 5 actions: file iss-019 + ship vuln-scanner prefetch + write datanet rubric + close 4 index rows + tighten evals (avg quality 4.6/5, mode=OK). full body at .pending-notify/action-converter-msg.md.

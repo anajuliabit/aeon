@@ -1,0 +1,146 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "06-14 staged"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-actions",
+        "stack-actions",
+        "separator-1",
+        "heading-quality",
+        "stack-quality",
+        "separator-2",
+        "link-full-body"
+      ]
+    },
+    "heading-actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Text",
+      "props": {
+        "text": "file iss-019"
+      },
+      "children": []
+    },
+    "action-2": {
+      "type": "Text",
+      "props": {
+        "text": "ship vuln-scanner prefetch"
+      },
+      "children": []
+    },
+    "action-3": {
+      "type": "Text",
+      "props": {
+        "text": "write datanet rubric"
+      },
+      "children": []
+    },
+    "action-4": {
+      "type": "Text",
+      "props": {
+        "text": "close 4 index rows"
+      },
+      "children": []
+    },
+    "action-5": {
+      "type": "Text",
+      "props": {
+        "text": "tighten evals"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-quality": {
+      "type": "Heading",
+      "props": {
+        "text": "Quality",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-quality": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-avg-quality",
+        "badge-mode"
+      ]
+    },
+    "stat-avg-quality": {
+      "type": "Stat",
+      "props": {
+        "label": "Average Quality",
+        "value": "4.6/5"
+      },
+      "children": []
+    },
+    "badge-mode": {
+      "type": "Badge",
+      "props": {
+        "text": "mode: OK",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link-full-body": {
+      "type": "Link",
+      "props": {
+        "label": "Full body",
+        "href": ".pending-notify/action-converter-msg.md"
+      },
+      "children": []
+    }
+  }
+}
