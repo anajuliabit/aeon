@@ -338,14 +338,18 @@ REPORT="$(jq -n \
 echo "advisor: report assembled"
 
 # ---------------------------------------------------------------------------
-# 5. Stage actionable directional recs as picks (same track record as
-#    token-pick and the weekly conviction run). Only increase/hedge calls with
-#    a symbol AND an entry level become bets; decrease/hold are de-risking
-#    moves, not directional bets, so tracking them as shorts would distort the
-#    record (mirrors run-weekly.sh). Daily picks use an "-advisor-daily-" id so
-#    they never collide with the weekly run's "-advisor-" ids on the same date.
+# 5. Stage every actionable rec (increase/decrease/hedge with a symbol) as a
+#    pick, so trims and adds both land in the track record alongside token-pick
+#    and the weekly run. side: increase => long; decrease/hedge => short (a trim
+#    is graded as "was reducing here timely" — hit if price then fell). The
+#    entry price is the rec's .level when given, else the symbol's spot from the
+#    snapshot. STABLECOINS are skipped: a USDC yield/deploy move has no price
+#    thesis and would pollute win-rate. A mis-oriented invalidation is dropped
+#    (set null) so the pick still lands. Daily picks use an "-advisor-daily-" id
+#    so they never collide with the weekly run's "-advisor-" ids on the same date.
 # ---------------------------------------------------------------------------
 REFS="$ROOT/advisor/token-refs.json"
+SNAP="$D/snapshot.json"
 STAGED=0
 CANDIDATES=0
 # Process substitution (not a pipe) so STAGED/CANDIDATES survive into this shell;
@@ -353,27 +357,58 @@ CANDIDATES=0
 while read -r rec; do
   CANDIDATES=$((CANDIDATES + 1))
   SYM=$(printf '%s' "$rec" | jq -r '.symbol')
+  DIR=$(printf '%s' "$rec" | jq -r '.direction')
   SYM_KEY=$(printf '%s' "$SYM" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9')
   CG_ID=$(jq -r --arg s "$SYM_KEY" '.[$s] // empty' "$REFS" 2>/dev/null)
   if [ -z "$CG_ID" ]; then
     echo "advisor: no coingecko id for $SYM — rec not tracked as pick"; continue
   fi
-  PICK=$(printf '%s' "$rec" | jq -c --arg d "$DATE" --arg cg "$CG_ID" '{
-    id: ($d + "-advisor-daily-" + (.symbol | ascii_downcase)),
-    source: "advisor",
-    symbol: .symbol,
-    coingeckoId: $cg,
-    side: (if .direction == "hedge" then "short" else "long" end),
-    entryPriceUsd: .level,
-    targetPriceUsd: null,
-    invalidationPriceUsd: .invalidateLevel,
-    horizonDays: (.horizonDays // 30),
-    conviction: "UNSTATED",
-    thesis: ((.title // "advisor call") + " — " + (.action // "")
-             + (if .rationale then " | " + .rationale else "" end))
-  }')
+  # Stablecoin? (isStable in the snapshot, or a known stable ticker.) Skip — no price bet.
+  ISSTABLE=$(jq -r --arg s "$SYM_KEY" '[.analytics.assets[]?
+    | select(((.symbol // "") | ascii_downcase | gsub("[^a-z0-9]";"")) == $s) | .isStable] | (first // false)' \
+    "$SNAP" 2>/dev/null || echo false)
+  case "$SYM_KEY" in usdc|usdt|usds|dai|usde|usdtb|frax|tusd) ISSTABLE=true ;; esac
+  if [ "$ISSTABLE" = "true" ]; then
+    echo "advisor: $SYM is a stablecoin move (no price thesis) — not tracked as pick"; continue
+  fi
+  # Entry: explicit .level, else spot price for the symbol from the snapshot positions.
+  LEVEL=$(printf '%s' "$rec" | jq -r '.level // empty')
+  ENTRY=""
+  if [ -n "$LEVEL" ] && awk "BEGIN{exit !($LEVEL>0)}" 2>/dev/null; then
+    ENTRY="$LEVEL"
+  else
+    ENTRY=$(jq -r --arg s "$SYM_KEY" '[.positions[]?
+      | select(((.symbol // "") | ascii_downcase | gsub("[^a-z0-9]";"")) == $s)
+      | .price] | map(select(. != null and . > 0)) | (first // empty)' "$SNAP" 2>/dev/null)
+  fi
+  if [ -z "$ENTRY" ]; then
+    echo "advisor: $SYM has no level or spot price — not tracked as pick"; continue
+  fi
+  SIDE=long; [ "$DIR" = "increase" ] || SIDE=short
+  PICK=$(printf '%s' "$rec" | jq -c \
+    --arg d "$DATE" --arg cg "$CG_ID" --arg side "$SIDE" --argjson entry "$ENTRY" '
+    (.invalidateLevel) as $inv
+    # Drop a mis-oriented invalidation (server rejects long inv>=entry / short inv<=entry).
+    | (if $inv == null then null
+       elif $side == "long"  and $inv < $entry then $inv
+       elif $side == "short" and $inv > $entry then $inv
+       else null end) as $invOK
+    | {
+        id: ($d + "-advisor-daily-" + (.symbol | ascii_downcase)),
+        source: "advisor",
+        symbol: .symbol,
+        coingeckoId: $cg,
+        side: $side,
+        entryPriceUsd: $entry,
+        targetPriceUsd: null,
+        invalidationPriceUsd: $invOK,
+        horizonDays: (.horizonDays // 30),
+        conviction: "UNSTATED",
+        thesis: ((.title // "advisor call") + " — " + (.action // "")
+                 + (if .rationale then " | " + .rationale else "" end))
+      }')
   if [ "$DRY" = "1" ]; then
-    echo "----- PICK $SYM -----"; printf '%s\n' "$PICK" | jq .
+    echo "----- PICK $SYM ($SIDE) -----"; printf '%s\n' "$PICK" | jq .
     STAGED=$((STAGED + 1))
   else
     # Capture the HTTP status so the CI log proves whether the pick landed
@@ -382,15 +417,15 @@ while read -r rec; do
       -H "Authorization: Basic ${AUTH}" -H "Content-Type: application/json" \
       -d "$PICK" 2>/dev/null || echo "000")
     if [ "$code" = "200" ] || [ "$code" = "201" ]; then
-      echo "advisor: pick staged $SYM (HTTP $code)"; STAGED=$((STAGED + 1))
+      echo "advisor: pick staged $SYM $SIDE (HTTP $code)"; STAGED=$((STAGED + 1))
     else
       echo "::warning::advisor: pick POST $SYM failed (HTTP $code)"
     fi
   fi
 done < <(printf '%s' "$REPORT" | jq -c '.recommendations[]?
-  | select(.symbol != null and .level != null)
-  | select(.direction == "increase" or .direction == "hedge")')
-echo "advisor: staged $STAGED/$CANDIDATES directional pick(s)"
+  | select(.symbol != null)
+  | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")')
+echo "advisor: staged $STAGED/$CANDIDATES actionable pick(s)"
 
 # Read-back verification (skipped in DRY): confirm the store actually persisted
 # today's advisor-daily picks — distinguishes "POST 200 but not stored" from a

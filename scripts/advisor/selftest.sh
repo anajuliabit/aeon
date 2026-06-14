@@ -112,22 +112,38 @@ ZDD=$(printf '%s' "$ZH" | jq '[.[] | select((.totalUsd // 0) > 0)] as $h | if ($
 check "drawdown skips zero-total entries" "$(printf '%s' "$ZDD" | jq -r '.today')" "20"
 
 # --- run.sh daily-pick staging: rec -> pick mapping + filter ---
-# Only increase/hedge recs with symbol AND level become picks; hold/decrease and
-# level-less recs are dropped. Mirrors the jq in run.sh step 5.
+# Every increase/decrease/hedge rec WITH a symbol is a candidate (hold dropped).
+# side: increase->long, decrease/hedge->short. Entry = level||spot; stablecoins
+# and entry-less recs are dropped downstream (bash, using the snapshot). Mirrors
+# the jq/bash in run.sh step 5.
 RECS='[
  {"symbol":"BTC","direction":"increase","level":67000,"invalidateLevel":61000,"horizonDays":30,"title":"Add BTC","action":"deploy","rationale":"reclaim"},
- {"symbol":"REPPO","direction":"hedge","level":0.42,"invalidateLevel":0.5,"horizonDays":60,"title":"Hedge REPPO","action":"short"},
+ {"symbol":"REPPO","direction":"decrease","level":0.42,"invalidateLevel":0.5,"horizonDays":60,"title":"Trim REPPO","action":"trim"},
  {"symbol":null,"direction":"hold","level":null,"invalidateLevel":null,"horizonDays":30,"title":"Hold","action":"wait"},
- {"symbol":"ETH","direction":"increase","level":null,"invalidateLevel":null,"horizonDays":30,"title":"watch ETH","action":"plan"},
- {"symbol":"USDC","direction":"decrease","level":1,"invalidateLevel":null,"horizonDays":30,"title":"trim","action":"x"}]'
-STAGED=$(printf '%s' "$RECS" | jq -c '[.[]
-  | select(.symbol != null and .level != null)
-  | select(.direction == "increase" or .direction == "hedge")
-  | {symbol, side: (if .direction == "hedge" then "short" else "long" end), entryPriceUsd: .level}]')
-check "pick filter keeps only directional+symbol+level" "$(printf '%s' "$STAGED" | jq -r 'length')" "2"
-check "pick maps hedge -> short" "$(printf '%s' "$STAGED" | jq -r '.[] | select(.symbol=="REPPO") | .side')" "short"
-check "pick maps increase -> long" "$(printf '%s' "$STAGED" | jq -r '.[] | select(.symbol=="BTC") | .side')" "long"
-check "pick entry from level" "$(printf '%s' "$STAGED" | jq -r '.[] | select(.symbol=="BTC") | .entryPriceUsd')" "67000"
+ {"symbol":"MAMO","direction":"increase","level":null,"invalidateLevel":null,"horizonDays":30,"title":"Add MAMO","action":"buy"},
+ {"symbol":"USDC","direction":"increase","level":1,"invalidateLevel":null,"horizonDays":30,"title":"Deploy USDC","action":"vault"}]'
+# Candidate filter (jq) — symbol present + actionable direction. USDC/level-less
+# still pass here; stablecoin + entry checks run in bash (need the snapshot).
+CAND=$(printf '%s' "$RECS" | jq -c '[.[] | select(.symbol != null)
+  | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")]')
+check "pick candidates include trims + drop holds" "$(printf '%s' "$CAND" | jq -r 'length')" "4"
+# side mapping
+sidemap() { [ "$1" = "increase" ] && echo long || echo short; }
+check "side increase -> long"  "$(sidemap increase)" "long"
+check "side decrease -> short" "$(sidemap decrease)" "short"
+check "side hedge -> short"    "$(sidemap hedge)"    "short"
+# stablecoin skip (snapshot isStable OR known ticker)
+SNAPFIX='{"analytics":{"assets":[{"symbol":"USDC","isStable":true},{"symbol":"REPPO","isStable":false}]},"positions":[{"symbol":"REPPO","price":0.40},{"symbol":"MAMO","price":0.0085}]}'
+isstable() { printf '%s' "$SNAPFIX" | jq -r --arg s "$1" '[.analytics.assets[]? | select((.symbol|ascii_downcase)==$s)|.isStable]|(first//false)'; }
+check "stablecoin USDC skipped" "$(isstable usdc)" "true"
+check "non-stable REPPO kept"   "$(isstable reppo)" "false"
+# entry fallback to snapshot spot when level absent (MAMO has no level)
+spot() { printf '%s' "$SNAPFIX" | jq -r --arg s "$1" '[.positions[]?|select((.symbol|ascii_downcase)==$s)|.price]|map(select(.!=null and .>0))|(first//empty)'; }
+check "entry falls back to spot for level-less rec" "$(spot mamo)" "0.0085"
+# invalidation orientation drop: short with inv<=entry must be nulled
+INVOK=$(jq -n --argjson entry 0.42 --arg side short --argjson inv 0.30 '
+  if $inv==null then null elif $side=="long" and $inv<$entry then $inv elif $side=="short" and $inv>$entry then $inv else null end')
+check "mis-oriented short invalidation dropped" "$INVOK" "null"
 PICKID=$(printf '%s' "$RECS" | jq -r '.[0] | "2026-06-14-advisor-daily-" + (.symbol | ascii_downcase)')
 check "pick id namespaced -daily-" "$PICKID" "2026-06-14-advisor-daily-btc"
 
