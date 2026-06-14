@@ -493,10 +493,10 @@
   },
   "list-digest": {
     "last_dispatch": "2026-06-14T17:19:39Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-13T17:11:29Z",
-    "total_runs": 5,
-    "total_successes": 5,
+    "last_status": "success",
+    "last_success": "2026-06-14T17:24:36Z",
+    "total_runs": 6,
+    "total_successes": 6,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
