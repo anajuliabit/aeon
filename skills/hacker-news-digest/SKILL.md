@@ -97,7 +97,7 @@ Hard constraints:
 - every entry has both *Why it matters* and (*HN take* OR *Author claim*) — no headline-only entries
 - no marketing language; if a comment quote runs >220 chars, trim with ellipsis
 
-Send via `./notify "$(cat digest.md)"` (or pipe directly).
+Send the digest. For multi-line content, the sandbox static analyzer blocks `./notify "$(cat digest.md)"` — write the body straight to `.pending-notify/hn-digest-msg.md` (the workflow's post-run step delivers everything in `.pending-notify/*.md`). For a short status line, `./notify "literal one-liner"` works inline.
 
 ## 6. Persist and log
 
