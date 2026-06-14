@@ -263,12 +263,6 @@ skills:
   auto-workflow: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — var: URL to analyze
   onboard: { enabled: false, schedule: "workflow_dispatch", var: "" } # one-shot setup validator — checks secrets/workflows/memory writability and notifies a checklist with fix commands; pair with ./onboard CLI
 
-  # --- Reppo swarm (run via the reppo-swarm chain, not standalone) ---
-  reppo-orchestrator: { enabled: false }
-  reppo-trading-agent: { enabled: false }
-  reppo-voter: { enabled: false }
-  reppo-digest: { enabled: false }
-
   # --- Fallback (must be last) ---
   heartbeat: { enabled: true, schedule: "0 8,14,20 * * *" }
 
@@ -304,18 +298,7 @@ reactive:
 #       steps:
 #         - parallel: [skill-a, skill-b]
 #         - skill: skill-c, consume: [skill-a, skill-b]
-chains:
-  # reppo-swarm DISABLED 2026-06-10: the swarm now runs self-hosted on Docker
-  # (operator-managed), not on GitHub Actions. Keeping the definition commented
-  # for reference / one-off manual dispatch via chain-runner if ever needed.
-  # reppo-swarm:
-  #   schedule: "0 */6 * * *"   # every 6 hours (00, 06, 12, 18 UTC)
-  #   on_error: continue
-  #   steps:
-  #     - skill: reppo-orchestrator
-  #     - parallel: [ reppo-trading-agent, reppo-voter ]
-  #     - skill: reppo-digest
-  #       consume: [ reppo-orchestrator, reppo-trading-agent, reppo-voter ]
+chains: {}   # none active — reppo-swarm (orquestra) moved to ~/code/orquestra, self-hosted
 
 # Default model for all skills. Override per-run via workflow_dispatch.
 # Options: claude-opus-4-7, claude-sonnet-4-6, claude-haiku-4-5-20251001

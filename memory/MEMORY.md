@@ -2,24 +2,16 @@
 *Last consolidated: 2026-06-14*
 
 ## About This Repo
-Aeon — autonomous agent on GitHub Actions via Claude Code. 43 enabled
-standalone skills + chains. Inbound messaging via Telegram. soul/ populated
-2026-05-25 (ana voice). Reppo-swarm ledger: **25 mints + 45 votes** on-chain
-through 2026-06-10 (24th-mint 42eec09d 0xbe195419 788 ENA Close-Short 4.61h
-Sharpe 134,103 **+$1,376,882 = largest single-mint pnl ever**; 25th-mint
-4b7a4935 0x369daedb 1550 closes 7 perps Sharpe 1197 +$111,862 **= 1st
-Step-4.2 PASS re-mint in ledger ever**). No new mints 6-11/6-12/6-13/6-14
-— chain is off-CI (Docker), ledger only advances on self-hosted runs.
+Aeon — autonomous agent on GitHub Actions via Claude Code. Enabled
+standalone skills on cron. Inbound messaging via Telegram. soul/ populated
+2026-05-25 (ana voice).
 
 ## Current Goals
-- **Reppo swarm runs off-CI on Docker (2026-06-10).** The reppo-swarm chain
-  is disabled in aeon.yml (`enabled: false`, lines 267-270) — orchestrator/
-  trading-agent/voter/digest now run self-hosted.
-> **Health-skill directive (still load-bearing):** reppo-swarm chain is
-> disabled in aeon.yml (`reppo-orchestrator/trading-agent/voter/digest`
-> = `enabled: false`, lines 267–270) — runs self-hosted on Docker. Do NOT
-> file issues about reppo-swarm not running on CI; the on-chain ledger
-> continues off-CI.
+> **Health-skill directive:** the reppo-swarm (orquestra) has been removed
+> from aeon entirely — it now lives at `~/code/orquestra` (self-hosted on
+> Docker). Do NOT re-add reppo-orchestrator/trading-agent/voter/digest skills,
+> chains, or scripts here, and do NOT file issues about reppo-swarm not
+> running on CI.
 - **CAPITAL-2× PROGRAM (north star): double net worth by 2027-12-31.**
   See [capital-2x-program.md](topics/capital-2x-program.md). Risk sleeve
   ≤15-20% net + moonshot sub-sleeve ≤1% for token-picks. BTC hard-level
@@ -43,14 +35,6 @@ Step-4.2 PASS re-mint in ledger ever**). No new mints 6-11/6-12/6-13/6-14
   yet. Watch 6-15 standalone runs to confirm the fallback retires.
 - **INDEX bookkeeping flips for ISS-007/009/010/016.** OVERDUE from
   2026-06-10 — **5d**. All have code shipped or workarounds durable.
-  ISS-010 (phantom chain dispatch) is moot — reppo-swarm chain disabled.
-- **Datanet RUBRIC.md + 1 datanet config.** OVERDUE from 2026-06-12
-  — **2d**. 13 unassigned datanets surface every off-CI orchestrator
-  run (ids 1, 2, 4–8, 10, 11, 13, 14, 17, 18). 4th weekly slip.
-- **Trading-agent: codify spot_pct threshold + Sharpe-vs-pnl tiebreak.**
-  *[BLOCKED: awaiting operator decision on thresholds.]* Rules fire
-  correctly in practice; Step-4.2 admission branch has working precedent
-  (25th mint, 2026-06-10).
 - **on-chain-monitor / defi-monitor watches.yml.** *[BLOCKED: awaiting
   operator to seed `memory/on-chain-watches.yml`.]* 9 consecutive
   NO_CONFIG days through 6-14.
@@ -121,14 +105,10 @@ Step-4.2 PASS re-mint in ledger ever**). No new mints 6-11/6-12/6-13/6-14
   with envelope, sub-sleeves, infra.
 - [Fleet status & infrastructure](topics/fleet.md) — PRs, blockers,
   open issues, lessons, skill health, weekly-review history.
-- [Reppo swarm ledger](topics/reppo.md) — append-only on-chain audit
-  (25 mints + 45 votes).
 - [Crypto research](topics/crypto.md) — narratives, picks, tracked-token
   alerts.
 - [Market context](topics/market-context.md) — refreshed each
   market-context-refresh cycle.
-- [TradingGymAI (datanet 9) contributor spec](topics/tradinggymai-spec.md) —
-  operator-shared 2026-05-26.
 - [Bitcoin 30-day snapshot](topics/last30-bitcoin.md) — stale baseline (05-21).
 
 ## Tracked Tokens
