@@ -1,0 +1,65 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "narrative-tracker",
+        "description": "06-14 staged"
+      },
+      "children": [
+        "stats-grid",
+        "file-link"
+      ]
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-new",
+        "stat-promoted",
+        "stat-demoted",
+        "stat-resurrected"
+      ]
+    },
+    "stat-new": {
+      "type": "Stat",
+      "props": {
+        "label": "NEW",
+        "value": "6"
+      }
+    },
+    "stat-promoted": {
+      "type": "Stat",
+      "props": {
+        "label": "PROMOTED",
+        "value": "1"
+      }
+    },
+    "stat-demoted": {
+      "type": "Stat",
+      "props": {
+        "label": "DEMOTED",
+        "value": "6"
+      }
+    },
+    "stat-resurrected": {
+      "type": "Stat",
+      "props": {
+        "label": "RESURRECTED",
+        "value": "1"
+      }
+    },
+    "file-link": {
+      "type": "Link",
+      "props": {
+        "label": "View detailed report: .pending-notify/narrative-tracker-msg.md",
+        "href": ".pending-notify/narrative-tracker-msg.md"
+      }
+    }
+  }
+}
