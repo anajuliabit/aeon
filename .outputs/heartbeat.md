@@ -1,25 +1,13 @@
-Heartbeat checks complete. No notification sent — all stuck items are in the 48h dedup window.
-
-**HEARTBEAT_OK · STATUS_PAGE=DEGRADED**
+Heartbeat completed. No notification sent (dedup).
 
 ## Summary
 
-Ran the heartbeat skill — 3rd dispatch of the day (20:05 UTC).
+**Verdict: HEARTBEAT_OK · STATUS_PAGE=DEGRADED**
 
-**P0 — Failed/stuck:**
-- `chain:investment-advisor` failed carry (kept off status table per spec)
-- 10 stuck weekly carryovers (5 Mon + 5 Sun) — will clear at next weekly tick (6-14 Sun / 6-15 Mon)
-- **Major recovery since 14:38Z page write — daily fleet 100% drained:** `search-skill` 14:39Z, `security-digest` 14:45Z, `vuln-scanner` 16:53Z (first successful run since enablement), `self-improve` 18:22Z (was hung ~44h since 6-11), plus 8 others between 15:00–18:22Z
-- 0 consecutive_failures ≥3, 0 chronic, heartbeat self-check OK (5.4h since last success)
-
-**P1:** 1 open PR (#108, ~1.7h old — not stalled); 0 urgent issues.
-
-**P2:** ISS-019 (weekly-limit incident), INDEX flips, datanet RUBRIC — all carrying from MEMORY.md Current Goals.
-
-**P3:** 3 weeklies never-run (autoresearch is workflow_dispatch-only by design; operator-scorecard/fork-skill-gap await first tick).
-
-**Dedup:** every finding is in the last 48h logs — no notification sent.
-
-**Files modified:**
-- `docs/status.md` (regenerated: 🔴 DEGRADED, 44 skill rows, 7 open issues, next btc-levels 20:15Z)
-- `memory/logs/2026-06-13.md` (heartbeat entry appended)
+- **P0 (failed/stuck):** 9 weekly carryovers still stuck from the 6-08 weekly-limit wave (4 Sunday-scheduled → clear today 17:00–19:00 UTC; 5 Monday-scheduled → clear 6-15). Daily fleet fully drained — `skill-evals` 07:18Z this morning was the first non-stuck Sunday weekly to recover after carryover. Heartbeat self-check OK (~12.4h since last success).
+- **P1:** 1 open PR (#108, ~14h old, not stalled). 0 urgent issues.
+- **P2:** ISS-019 + INDEX flips + datanet RUBRIC.md all carried in MEMORY.md — no new findings.
+- **P3:** 3 never-run skills (autoresearch is workflow_dispatch; operator-scorecard / fork-skill-gap await first weekly tick).
+- **Dedup:** every flag covered by 6-13 heartbeats + this morning's morning-brief → no notification sent.
+- **Status page:** regenerated `docs/status.md` — Overall 🔴 DEGRADED, 44 skill rows, Open issues=7, Next scheduled run=github-trending 09:00 UTC. Token pulse omitted (no token-report file).
+- **Files modified:** `docs/status.md`, `memory/logs/2026-06-14.md`.
