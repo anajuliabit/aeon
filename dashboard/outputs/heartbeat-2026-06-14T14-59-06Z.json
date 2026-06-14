@@ -1,0 +1,164 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat — 14:55z"
+      },
+      "children": [
+        "status-alert",
+        "main-content"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Status 🔴 Degraded",
+        "message": "skill-freshness hung at 08:32z (~6.4h duration, last successful run: 6-13 08:13z)",
+        "type": "error"
+      }
+    },
+    "main-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pattern-text",
+        "sep1",
+        "runs-section",
+        "sep2",
+        "recent-change",
+        "sep3",
+        "carryovers-section"
+      ]
+    },
+    "pattern-text": {
+      "type": "Text",
+      "props": {
+        "text": "Isolated daily-skill hang — every other 6-14 daily clean"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "runs-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "runs-heading",
+        "runs-grid"
+      ]
+    },
+    "runs-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Successful runs on 6-14",
+        "level": "h4"
+      }
+    },
+    "runs-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "sm"
+      },
+      "children": [
+        "run1",
+        "run2",
+        "run3",
+        "run4",
+        "run5",
+        "run6"
+      ]
+    },
+    "run1": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief 07:11"
+      }
+    },
+    "run2": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine 07:15"
+      }
+    },
+    "run3": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-evals 07:18"
+      }
+    },
+    "run4": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels through 12:30"
+      }
+    },
+    "run5": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-overview 12:37"
+      }
+    },
+    "run6": {
+      "type": "Badge",
+      "props": {
+        "text": "narrative-tracker 14:05"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "recent-change": {
+      "type": "Text",
+      "props": {
+        "text": "PR #108 merged since this morning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "carryovers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "carryovers-heading",
+        "carryovers-stat"
+      ]
+    },
+    "carryovers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Weekly carryovers",
+        "level": "h4"
+      }
+    },
+    "carryovers-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Waiting for sun 17–19z + mon ticks",
+        "value": "9"
+      }
+    }
+  }
+}
