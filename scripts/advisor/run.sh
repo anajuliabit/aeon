@@ -346,10 +346,12 @@ echo "advisor: report assembled"
 #    they never collide with the weekly run's "-advisor-" ids on the same date.
 # ---------------------------------------------------------------------------
 REFS="$ROOT/advisor/token-refs.json"
-printf '%s' "$REPORT" | jq -c '.recommendations[]?
-  | select(.symbol != null and .level != null)
-  | select(.direction == "increase" or .direction == "hedge")' |
+STAGED=0
+CANDIDATES=0
+# Process substitution (not a pipe) so STAGED/CANDIDATES survive into this shell;
+# a `jq | while` loop would mutate them only in the pipe's subshell.
 while read -r rec; do
+  CANDIDATES=$((CANDIDATES + 1))
   SYM=$(printf '%s' "$rec" | jq -r '.symbol')
   SYM_KEY=$(printf '%s' "$SYM" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9')
   CG_ID=$(jq -r --arg s "$SYM_KEY" '.[$s] // empty' "$REFS" 2>/dev/null)
@@ -372,10 +374,32 @@ while read -r rec; do
   }')
   if [ "$DRY" = "1" ]; then
     echo "----- PICK $SYM -----"; printf '%s\n' "$PICK" | jq .
+    STAGED=$((STAGED + 1))
   else
-    post "/api/picks" "$PICK"
+    # Capture the HTTP status so the CI log proves whether the pick landed
+    # (the silent `post` helper hid POST failures — and successes).
+    code=$(curl -sS --max-time 30 -o /dev/null -w "%{http_code}" -X POST "$BASE/api/picks" \
+      -H "Authorization: Basic ${AUTH}" -H "Content-Type: application/json" \
+      -d "$PICK" 2>/dev/null || echo "000")
+    if [ "$code" = "200" ] || [ "$code" = "201" ]; then
+      echo "advisor: pick staged $SYM (HTTP $code)"; STAGED=$((STAGED + 1))
+    else
+      echo "::warning::advisor: pick POST $SYM failed (HTTP $code)"
+    fi
   fi
-done
+done < <(printf '%s' "$REPORT" | jq -c '.recommendations[]?
+  | select(.symbol != null and .level != null)
+  | select(.direction == "increase" or .direction == "hedge")')
+echo "advisor: staged $STAGED/$CANDIDATES directional pick(s)"
+
+# Read-back verification (skipped in DRY): confirm the store actually persisted
+# today's advisor-daily picks — distinguishes "POST 200 but not stored" from a
+# genuine persistence problem (e.g. ephemeral Railway FS).
+if [ "$DRY" != "1" ] && [ "$STAGED" -gt 0 ]; then
+  BACK=$(curl -sS --max-time 30 -H "Authorization: Basic ${AUTH}" "$BASE/api/picks" 2>/dev/null \
+    | jq --arg d "$DATE" '[.[]? | select(.id | startswith($d + "-advisor-daily-"))] | length' 2>/dev/null || echo "?")
+  echo "advisor: read-back found $BACK today's advisor-daily pick(s) in store"
+fi
 
 # Telegram: .summary + the actionable trades (directional recs), so the operator
 # sees the trims/adds/hedges — not just whatever defensive "hold" the PM ranked
