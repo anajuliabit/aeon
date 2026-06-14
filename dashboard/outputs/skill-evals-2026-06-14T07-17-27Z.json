@@ -1,0 +1,83 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Evals"
+      },
+      "children": [
+        "status_badge",
+        "metrics_section",
+        "action_alert",
+        "separator1",
+        "article_link"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SKILL_EVALS_RECOVERED",
+        "variant": "secondary"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_fails",
+        "stat_fixed",
+        "stat_coverage"
+      ]
+    },
+    "stat_fails": {
+      "type": "Stat",
+      "props": {
+        "label": "new failures",
+        "value": "0"
+      }
+    },
+    "stat_fixed": {
+      "type": "Stat",
+      "props": {
+        "label": "fixed",
+        "value": "1"
+      }
+    },
+    "stat_coverage": {
+      "type": "Stat",
+      "props": {
+        "label": "coverage",
+        "value": "24%",
+        "delta": "-24pp",
+        "trend": "down"
+      }
+    },
+    "action_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Top action",
+        "message": "Patch evals.json:monitor-polymarket — POLYMARKET pattern too broad; tighten to `### monitor-polymarket`",
+        "type": "info"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "articles/skill-evals-2026-06-14.md",
+        "href": "articles/skill-evals-2026-06-14.md",
+        "source": "skill-evals"
+      }
+    }
+  }
+}
