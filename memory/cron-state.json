@@ -97,14 +97,14 @@
     "success_rate": 1
   },
   "narrative-tracker": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-13T13:57:43Z",
     "total_runs": 7,
     "total_successes": 7,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-13T13:47:17Z"
+    "last_dispatch": "2026-06-14T13:55:54Z"
   },
   "chain:reppo-swarm": {
     "last_dispatch": "2026-06-10T18:20:53Z",
