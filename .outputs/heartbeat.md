@@ -1,9 +1,17 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED · no notify (dedup vs 14:55Z run, ~37 min ago)
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote `docs/status.md`, no notify.
+
+**P0 findings:**
+- **Fresh re-stuck**: `fork-cohort` re-dispatched at 19:09 UTC, still `dispatched` ~76 min later (2nd consecutive failed weekly tick — first dispatch from 6-07 also never returned).
+- **Carry**: `skill-freshness` still hung from 08:32 UTC (~12h) — covered by 14:55Z notify.
+- **Recoveries**: 3 of 4 Sunday weekly carryovers cleared at today's tick — `skill-graph` 17:43Z, `fork-skill-digest` 19:03Z, `skill-update-check` 19:11Z. Only `fork-cohort` failed to recover.
+- **5 Monday carryovers** unchanged — clear tomorrow's 6-15 ticks.
+- Self-check OK (heartbeat last_success ~4h50m ago).
+
+**P1–P3**: 1 open PR (#112, 2h45m old — not stalled), 0 urgent issues, ISS-019/INDEX flips/datanet RUBRIC carryover overdue (all in MEMORY.md goals).
+
+**Dedup**: every finding present in last 48h logs. `fork-cohort` re-stuck is fresh data but same item the operator was already told is hung — no fresh notify.
 
 ## Summary
-- Ran heartbeat per `skills/heartbeat/SKILL.md`. P0/P1/P2/P3 findings all carried from this morning's 08:33Z + the 14:55Z heartbeats — no fresh state.
-- **Stuck:** `skill-freshness` 08:32Z dispatch still pending (~7h, last_success 2026-06-13 08:13Z) — covered by 14:55Z notify. 9 weekly carryovers unchanged (Sun cluster clears tonight 17:00–19:00Z tick; Mon cluster clears 6-15).
-- **Failed carry:** `chain:investment-advisor` last_failed 2026-06-08 (chain dropped from current `aeon.yml`, kept off table per spec).
-- **Heartbeat self-check:** OK (last_success 14:59:48Z, ~33 min ago).
-- **Notification:** none sent — every finding present in last 48h logs and the 37-min-ago heartbeat.
-- **Files modified:** `docs/status.md` (regenerated — heartbeat row caught up to 14:59 UTC, security-digest 14:59 UTC, search-skill 14:55 UTC added at top), `memory/logs/2026-06-14.md` (appended manual-re-run heartbeat entry).
+- Skill: heartbeat — regenerated `docs/status.md` (🔴 DEGRADED, 7 open issues, next scheduled run aixbt-pulse 21:00 UTC). Logged findings to `memory/logs/2026-06-14.md`. No notification sent (all items dedup-covered by morning + 14:55Z + 15:32Z heartbeats within 48h window).
+- Files: `docs/status.md`, `memory/logs/2026-06-14.md`.
+- Follow-up: watch tomorrow morning's heartbeat for whether `skill-freshness` 08:00 tick recovers from its 12h+ hang, and whether `fork-cohort` 6-21 Sunday tick finally completes after 2 consecutive misses.
