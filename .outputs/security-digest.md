@@ -1,13 +1,15 @@
 ## Summary
 
-Ran security-digest for 2026-06-14. **All three tiers empty → `SECURITY_DIGEST_OK`, no notify sent.**
+Ran security-digest. Feed-side dead-quiet — same dedup result as the 14:45Z run earlier today.
 
-**Source results:**
-- KEV (7 vulns this week): all 7 deduped against 6-13 14:45Z digest. PeopleSoft KEV dueDate Mon 6-15; Ivanti Sentry dueDate hit today.
-- GH critical 48h (1): GHSA-6xp4-cf37-ppjh Budibase deduped.
-- GH high 48h (22): 7 tracked-stack deduped (esbuild + 2 Budibase + pyo3 + radius + chisel + 5× filebrowser cluster), 10 in non-tracked ecosystems (composer/maven/swift), 1 fresh in tracked (`GHSA-qhv3-wjg8-6fx6 / CVE-2026-48151 @budibase/server 7.5` — same `≥3.39.0` patch already shipped to operator yesterday for 9.0 + 8.1 siblings; falls off per 6-13 Baileys precedent).
-- GH malware 48h (4): all deduped — first quiet 24h on malware feed since the 6-10/6-11/6-13 burst cycle.
+- **KEV (7-day):** 7 entries, identical to 14:45Z (PeopleSoft 6-12, Ivanti Sentry 6-11, Chrome V8 / Arista / Cisco SD-WAN 6-09, LiteLLM / Check Point 6-08). Zero new since 6-12 — feed hasn't moved in ≥48h.
+- **GH Advisory critical 48h:** 1 (Budibase 9.0) — deduped.
+- **GH Advisory high 48h:** 22 — all deduped or non-tracked stack. Probe with `published>=2026-06-13` returned `[]` (zero new reviewed advisories in 24h).
+- **GH Advisory malware 48h:** 4 — deduped. 24h probe `[]` (~36h quiet on malware feed, longest stretch since the 6-10/6-11/6-13 burst cycle).
+- **Tiers:** PATCH TODAY 0 · PATCH THIS WEEK 0 · MONITOR 0.
 
-**Notable:** first all-zero-tier digest of the canonical-watchlist era. Confirmed aeon's npm packages (mcp-server/dashboard/worker/a2a-server) don't depend on budibase or direct esbuild.
+Verdict: `SECURITY_DIGEST_OK` — all tiers empty, sources all ok, no notify per spec.
 
-**Files:** appended `### security-digest` entry to `memory/logs/2026-06-14.md`. No notification sent.
+Files: `.hl-cache/kev.json` (fetched), `memory/logs/2026-06-14.md` (appended second-run log entry).
+
+Follow-up: PeopleSoft KEV (CVE-2026-35273) dueDate Mon 6-15 — operator with PeopleSoft exposure now has 3 digests of warning before US-FCEB deadline. Ivanti Sentry dueDate expired today.
