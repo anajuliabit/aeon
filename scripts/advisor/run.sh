@@ -337,8 +337,66 @@ REPORT="$(jq -n \
 
 echo "advisor: report assembled"
 
+# ---------------------------------------------------------------------------
+# 5. Stage actionable directional recs as picks (same track record as
+#    token-pick and the weekly conviction run). Only increase/hedge calls with
+#    a symbol AND an entry level become bets; decrease/hold are de-risking
+#    moves, not directional bets, so tracking them as shorts would distort the
+#    record (mirrors run-weekly.sh). Daily picks use an "-advisor-daily-" id so
+#    they never collide with the weekly run's "-advisor-" ids on the same date.
+# ---------------------------------------------------------------------------
+REFS="$ROOT/advisor/token-refs.json"
+printf '%s' "$REPORT" | jq -c '.recommendations[]?
+  | select(.symbol != null and .level != null)
+  | select(.direction == "increase" or .direction == "hedge")' |
+while read -r rec; do
+  SYM=$(printf '%s' "$rec" | jq -r '.symbol')
+  SYM_KEY=$(printf '%s' "$SYM" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9')
+  CG_ID=$(jq -r --arg s "$SYM_KEY" '.[$s] // empty' "$REFS" 2>/dev/null)
+  if [ -z "$CG_ID" ]; then
+    echo "advisor: no coingecko id for $SYM — rec not tracked as pick"; continue
+  fi
+  PICK=$(printf '%s' "$rec" | jq -c --arg d "$DATE" --arg cg "$CG_ID" '{
+    id: ($d + "-advisor-daily-" + (.symbol | ascii_downcase)),
+    source: "advisor",
+    symbol: .symbol,
+    coingeckoId: $cg,
+    side: (if .direction == "hedge" then "short" else "long" end),
+    entryPriceUsd: .level,
+    targetPriceUsd: null,
+    invalidationPriceUsd: .invalidateLevel,
+    horizonDays: (.horizonDays // 30),
+    conviction: "UNSTATED",
+    thesis: ((.title // "advisor call") + " — " + (.action // "")
+             + (if .rationale then " | " + .rationale else "" end))
+  }')
+  if [ "$DRY" = "1" ]; then
+    echo "----- PICK $SYM -----"; printf '%s\n' "$PICK" | jq .
+  else
+    post "/api/picks" "$PICK"
+  fi
+done
+
+# Telegram: .summary + the actionable trades (directional recs), so the operator
+# sees the trims/adds/hedges — not just whatever defensive "hold" the PM ranked
+# first. Falls back to an explicit "no trades" line on a purely defensive day.
+TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" '
+  ([.recommendations[]? | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")]) as $trades
+  | "📊 Advisor (" + $d + "): " + (.summary // "(no summary)") + "\n"
+    + (if ($trades | length) == 0
+       then "No new trades — defensive stance (see dashboard)."
+       else "Potential trades:\n" + ([$trades[0:5][]
+         | "• [" + (.urgency // "?") + "] " + ((.direction // "?") | ascii_upcase) + " "
+           + (.symbol // "portfolio")
+           + (if .level != null then " @ $" + (.level | tostring) else "" end)
+           + (if .invalidateLevel != null then " (inv $" + (.invalidateLevel | tostring) + ")" else "" end)
+           + " — " + (.title // .action // "")] | join("\n"))
+       end)
+    + "\nNot financial advice."')"
+
 if [ "$DRY" = "1" ]; then
   echo "----- REPORT -----"; printf '%s\n' "$REPORT" | jq .
+  echo "----- TELEGRAM -----"; printf '%s\n' "$TG"
   echo "advisor: DRY_RUN — no POST/Telegram fired (model=$MODEL_LABEL)"
   exit 0
 fi
@@ -346,12 +404,7 @@ fi
 post "/api/advisor/report" "$(jq -n --arg d "$DATE" --argjson r "$REPORT" '{date:$d, report:$r}')"
 echo "advisor: report posted"
 
-# Telegram summary: .summary + top 2 recommendations + disclaimer.
 if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
-  TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" '
-    "📊 Advisor (" + $d + "): " + (.summary // "(no summary)") + "\n" +
-    ([.recommendations[0:2][] | "• [" + (.urgency // "?") + "] " + (.title // .action // "")] | join("\n")) +
-    "\nNot financial advice."')"
   curl -fsS --max-time 20 "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
     --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
     --data-urlencode "text=${TG}" \

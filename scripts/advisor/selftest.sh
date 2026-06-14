@@ -111,4 +111,30 @@ ZH='[{"date":"2026-06-01","totalUsd":0},{"date":"2026-06-02","totalUsd":100},{"d
 ZDD=$(printf '%s' "$ZH" | jq '[.[] | select((.totalUsd // 0) > 0)] as $h | if ($h | length) < 2 then {today: null} else [range($h | length) as $i | {dd: ((([$h[range(0; $i + 1)].totalUsd] | max) as $peak | if $peak > 0 then ($peak - $h[$i].totalUsd) / $peak * 100 else 0 end))}] | {today: .[-1].dd} end' -c)
 check "drawdown skips zero-total entries" "$(printf '%s' "$ZDD" | jq -r '.today')" "20"
 
+# --- run.sh daily-pick staging: rec -> pick mapping + filter ---
+# Only increase/hedge recs with symbol AND level become picks; hold/decrease and
+# level-less recs are dropped. Mirrors the jq in run.sh step 5.
+RECS='[
+ {"symbol":"BTC","direction":"increase","level":67000,"invalidateLevel":61000,"horizonDays":30,"title":"Add BTC","action":"deploy","rationale":"reclaim"},
+ {"symbol":"REPPO","direction":"hedge","level":0.42,"invalidateLevel":0.5,"horizonDays":60,"title":"Hedge REPPO","action":"short"},
+ {"symbol":null,"direction":"hold","level":null,"invalidateLevel":null,"horizonDays":30,"title":"Hold","action":"wait"},
+ {"symbol":"ETH","direction":"increase","level":null,"invalidateLevel":null,"horizonDays":30,"title":"watch ETH","action":"plan"},
+ {"symbol":"USDC","direction":"decrease","level":1,"invalidateLevel":null,"horizonDays":30,"title":"trim","action":"x"}]'
+STAGED=$(printf '%s' "$RECS" | jq -c '[.[]
+  | select(.symbol != null and .level != null)
+  | select(.direction == "increase" or .direction == "hedge")
+  | {symbol, side: (if .direction == "hedge" then "short" else "long" end), entryPriceUsd: .level}]')
+check "pick filter keeps only directional+symbol+level" "$(printf '%s' "$STAGED" | jq -r 'length')" "2"
+check "pick maps hedge -> short" "$(printf '%s' "$STAGED" | jq -r '.[] | select(.symbol=="REPPO") | .side')" "short"
+check "pick maps increase -> long" "$(printf '%s' "$STAGED" | jq -r '.[] | select(.symbol=="BTC") | .side')" "long"
+check "pick entry from level" "$(printf '%s' "$STAGED" | jq -r '.[] | select(.symbol=="BTC") | .entryPriceUsd')" "67000"
+PICKID=$(printf '%s' "$RECS" | jq -r '.[0] | "2026-06-14-advisor-daily-" + (.symbol | ascii_downcase)')
+check "pick id namespaced -daily-" "$PICKID" "2026-06-14-advisor-daily-btc"
+
+# --- run.sh Telegram trade filter: directional recs surface, holds don't ---
+TGTRADES=$(printf '%s' "$RECS" | jq -r '[.[] | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")] | length')
+check "telegram surfaces all directional recs (incl decrease)" "$TGTRADES" "4"
+TGEMPTY=$(printf '%s' '[{"direction":"hold","symbol":null}]' | jq -r '[.[] | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")] | length')
+check "telegram trade list empty on all-hold report" "$TGEMPTY" "0"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
