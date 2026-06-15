@@ -1,18 +1,18 @@
-Fleet Control executed. Per the skill, an empty registry is a **silent stop** — no notification sent.
+Done. The skill ran in Health Check Mode (default — `var` was empty) and exited cleanly at the registry gate.
 
 ## Summary
 
-Ran **Fleet Control** in Health Check Mode (default — `var` was empty).
+**Skill:** fleet-control (Health Check Mode — default, empty `var`)
+**Verdict:** `FLEET_EMPTY` — silent stop, no notification
 
-**Pre-flight checks (all passed):**
-- `gh auth` ✓ — logged in as `anajuliabit` with `repo`+`workflow` scopes
-- Rate limit: 4986 remaining (well above the 50 floor)
-- Loaded registry `memory/instances.json` → `{"instances": []}`
-- Loaded state `memory/state/fleet-control-state.json` (already present, empty)
+**Pre-flight results:**
+- ✓ gh auth OK (account `anajuliabit`, scopes `repo`+`workflow`; the missing `read:org` scope is non-blocking — fleet control only does cross-repo `gh api`/`gh workflow run`)
+- ✓ Rate limit: 4996 core requests remaining (far above the 50 floor)
+- `memory/instances.json` exists but `.instances` is `[]` → empty registry
 
-**Outcome:** `FLEET_EMPTY` — no managed instances registered. Per the skill spec, this is a **silent stop**: I logged the result but sent **no notification** (the empty-registry path is explicitly silent so the operator isn't trained to ignore fleet pings).
+Per the skill's pre-flight step 3, an empty registry triggers `FLEET_EMPTY` and a **silent stop** — no notification is sent (the operator isn't trained to react to "fleet is empty" pings). No registry or state-file mutations were needed (both already at their bootstrap defaults).
 
 **Files modified:**
-- `memory/logs/2026-06-15.md` — appended `## fleet-control (health check)` entry with verdict `FLEET_EMPTY`, sources, and the silent-stop action
+- `memory/logs/2026-06-15.md` — appended the ~15:00Z health-check log entry
 
-**Follow-up:** None required. The fleet has no children to monitor. Once instances are added to `memory/instances.json`, the next scheduled run (09:00/15:00 UTC) will begin health classification and delta-gated notifications.
+**Follow-up:** None required. The fleet will activate once instances are registered in `memory/instances.json` (spawned children with `repo`, `purpose`, etc.). Until then, every run is a silent no-op at the registry gate.
