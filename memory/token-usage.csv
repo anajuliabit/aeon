@@ -424,4 +424,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-15,token-pick,claude-opus-4-7,180603,31697,4488057,61142
 2026-06-15,skill-security-scan,claude-opus-4-7,187491,28992,3007677,63883
 2026-06-15,agent-buzz,claude-opus-4-7,81758,19310,1183003,29826
-2026-06-15,reflect,claude-opus-4-7,25,14799,1472996,213675
+2026-06-15,skill-health,claude-opus-4-7,11672,18896,2059111,85467

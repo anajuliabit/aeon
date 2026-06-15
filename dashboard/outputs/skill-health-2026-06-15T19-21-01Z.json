@@ -1,0 +1,74 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-status",
+        "stat-healthy",
+        "section-no-data",
+        "stat-issues"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "HEALTH: OK",
+        "variant": "default"
+      }
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills healthy",
+        "value": "41"
+      }
+    },
+    "section-no-data": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-no-data",
+        "text-no-data-skills"
+      ]
+    },
+    "badge-no-data": {
+      "type": "Badge",
+      "props": {
+        "text": "no-data (2)",
+        "variant": "secondary"
+      }
+    },
+    "text-no-data-skills": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard, fork-skill-gap",
+        "variant": "caption"
+      }
+    },
+    "stat-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "7"
+      }
+    }
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-15"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "header_token",
+        "sep1",
+        "section_price",
+        "sep2",
+        "section_score",
+        "sep3",
+        "section_catalyst",
+        "sep4",
+        "section_risk",
+        "sep5",
+        "section_stake",
+        "sep6",
+        "section_exit",
+        "sep7",
+        "section_recent",
+        "sep8",
+        "section_market",
+        "sep9",
+        "section_sources",
+        "sep10",
+        "alert_disclaimer"
+      ]
+    },
+    "header_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "heading_token",
+        "badge_signal"
+      ]
+    },
+    "heading_token": {
+      "type": "Heading",
+      "props": {
+        "text": "Token: NEAR",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "badge_signal": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH • 10/10",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_price": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_price",
+        "grid_price"
+      ]
+    },
+    "heading_price": {
+      "type": "Heading",
+      "props": {
+        "text": "Price & Metrics",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid_price": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_24h",
+        "stat_7d",
+        "stat_mcap",
+        "stat_vol",
+        "stat_ratio"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Price",
+        "value": "$2.47"
+      },
+      "children": []
+    },
+    "stat_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Change",
+        "value": "+17.5%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "+16.3%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$3.2B"
+      },
+      "children": []
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$512M"
+      },
+      "children": []
+    },
+    "stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol/Mcap Ratio",
+        "value": "0.16"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_score": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_score",
+        "text_score"
+      ]
+    },
+    "heading_score": {
+      "type": "Heading",
+      "props": {
+        "text": "Score Breakdown",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_score": {
+      "type": "Text",
+      "props": {
+        "text": "24h+ | 7d+ | both>5% (+2) | trending (+2) | vol/mcap (+2) | RS vs BTC/ETH (+2) = 10/10",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_catalyst": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_catalyst",
+        "text_catalyst_title",
+        "text_catalyst_details"
+      ]
+    },
+    "heading_catalyst": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_catalyst_title": {
+      "type": "Text",
+      "props": {
+        "text": "Dynamic resharding (network v2.13, shipping june) auto-splits shards on demand",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_catalyst_details": {
+      "type": "Text",
+      "props": {
+        "text": "Token ran ~27-30% on the news leg, with ~$32M NEAR Intents fees and a $19B cross-chain volume print giving real usage under the move, not just risk-on beta.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_risk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_risk",
+        "text_risk"
+      ]
+    },
+    "heading_risk": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_risk": {
+      "type": "Text",
+      "props": {
+        "text": "Broke from a ~$2.10 base on the broad hormuz risk-on day (86/100 top-100 green) — if the pop is pure beta it unwinds post-BOJ tuesday. No token unlock flagged near term.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_stake": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stake",
+        "text_stake"
+      ]
+    },
+    "heading_stake": {
+      "type": "Heading",
+      "props": {
+        "text": "Position Sizing",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_stake": {
+      "type": "Text",
+      "props": {
+        "text": "≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_exit": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_exit",
+        "grid_exit"
+      ]
+    },
+    "heading_exit": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit Strategy",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid_exit": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "text_exit_target",
+        "text_exit_invalidate",
+        "text_exit_time"
+      ]
+    },
+    "text_exit_target": {
+      "type": "Text",
+      "props": {
+        "text": "Target: $2.90",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_exit_invalidate": {
+      "type": "Text",
+      "props": {
+        "text": "Invalidate: $2.10",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_exit_time": {
+      "type": "Text",
+      "props": {
+        "text": "Time Stop: 14d",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_recent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_recent",
+        "text_recent"
+      ]
+    },
+    "heading_recent": {
+      "type": "Heading",
+      "props": {
+        "text": "vs Recent Picks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_recent": {
+      "type": "Text",
+      "props": {
+        "text": "First time (7d set: WLD, SENT, MORPHO, MON, TAO, XPL — all clean)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_market": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_market",
+        "text_market"
+      ]
+    },
+    "heading_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_market": {
+      "type": "Text",
+      "props": {
+        "text": "Skipped — field is ~all 2026 World Cup winner futures (efficient, no defensible edge ≥5pp). Putin-out-by-dec-31 8.5c prices ~3-5pp on NO, sub-gate and far-dated; Newsom 2028 resolves in 2+ years. No tactical edge today.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_sources",
+        "text_sources"
+      ]
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "cg=ok | dex=ok | poly=ok | x=absent",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep10": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert_disclaimer": {
+      "type": "Alert",
+      "props": {
+        "title": "Disclaimer & Action",
+        "message": "Not financial advice — pattern-matching only. If you take a pick, log it in the dashboard journal (kind=trade) so the advisor tracks it.",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "BTC Levels"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_spot",
+        "sep1",
+        "section_status",
+        "sep2",
+        "section_position",
+        "sep3",
+        "alert_disclaimer"
+      ]
+    },
+    "section_spot": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading",
+        "stat_spot"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "₿ BTC Levels",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$66.4k"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_reclaim",
+        "text_confirmation",
+        "text_prior",
+        "stat_prev_close",
+        "text_breakdown"
+      ]
+    },
+    "badge_reclaim": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ Reclaimed $65,900",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "text_confirmation": {
+      "type": "Text",
+      "props": {
+        "text": "Stabilization confirmed per the 2026-06-09 advisor levels",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_prior": {
+      "type": "Text",
+      "props": {
+        "text": "Prior reclaim of $63,500 already logged",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "stat_prev_close": {
+      "type": "Stat",
+      "props": {
+        "label": "Previous UTC Daily Close",
+        "value": "$65.7k"
+      },
+      "children": []
+    },
+    "text_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "Well clear of the $60,500 breakdown line",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_position": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_position",
+        "text_trigger"
+      ]
+    },
+    "heading_position": {
+      "type": "Heading",
+      "props": {
+        "text": "Leveraged cbBTC Position",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Review trigger sits way below at ≤$45k",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert_disclaimer": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Not financial advice"
+      },
+      "children": []
+    }
+  }
+}
