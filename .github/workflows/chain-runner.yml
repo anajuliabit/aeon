@@ -125,70 +125,20 @@ jobs:
           }
 
           # --- Helper: skill-specific post-completion validators ---
-          # Catches LLM drift from output formats that downstream skills
-          # depend on. The wait_for_runs check only verifies that the
-          # skill's workflow exited successfully — it doesn't verify the
-          # skill's output is well-formed. For chained skills where a
-          # downstream gate depends on a specific output shape, an LLM
-          # can produce a "successful" run that silently breaks the
-          # chain (see ISS-009 — reppo-orchestrator drifting away from
-          # the fenced reppo-plan block).
+          # Catches LLM drift from output formats that downstream skills depend
+          # on. wait_for_runs only verifies the workflow exited successfully, not
+          # that the output is well-formed. Add a `case` branch per skill whose
+          # downstream gate needs a specific output shape.
           #
-          # Returns 0 if the skill's output is well-formed (or no
-          # validator is defined for this skill), 1 if a contract is
-          # broken and the chain should treat the step as failed.
+          # Returns 0 if the skill's output is well-formed (or no validator is
+          # defined for this skill), 1 if a contract is broken and the chain
+          # should treat the step as failed.
           validate_skill_output() {
             local skill="$1"
             local out=".outputs/${skill}.md"
             case "$skill" in
-              reppo-orchestrator)
-                # reppo-trading-agent gates on a fenced code block
-                # whose first line is literally `reppo-plan`. The
-                # contract is documented in the top-section of
-                # skills/reppo-orchestrator/SKILL.md ("Output contract
-                # — NON-NEGOTIABLE"). If the marker line is absent,
-                # the LLM dropped the block (5 recurrences of ISS-009
-                # across 4 days despite progressively tighter prompt
-                # contracts). Synthesize a deterministic fallback plan
-                # from the rubric files themselves so the chain still
-                # produces on-chain activity, then mark the run failed
-                # for operator visibility.
-                if [ ! -f "$out" ]; then
-                  echo "::error::reppo-orchestrator validator: output file $out missing"
-                  return 1
-                fi
-                if ! grep -qE '^reppo-plan$' "$out"; then
-                  echo "::warning::reppo-orchestrator validator: missing fenced reppo-plan marker (ISS-009 recurrence). Synthesizing fallback plan from rubric files so the chain can still produce on-chain activity..."
-                  {
-                    echo ""
-                    echo '```'
-                    echo "reppo-plan"
-                    for rubric in configs/datanets/*.md; do
-                      [ -f "$rubric" ] || continue
-                      rubric_dn=$(awk '/^---[[:space:]]*$/{f++;next} f==1 && /^datanet_id:/ {sub(/^[^:]+:[[:space:]]*/,""); gsub(/["'"'"'"'"'"']/,""); gsub(/[[:space:]]+$/,""); print; exit}' "$rubric")
-                      rubric_ag=$(awk '/^---[[:space:]]*$/{f++;next} f==1 && /^agent:/ {sub(/^[^:]+:[[:space:]]*/,""); gsub(/["'"'"'"'"'"']/,""); gsub(/[[:space:]]+$/,""); print; exit}' "$rubric")
-                      if [ -n "$rubric_dn" ] && [ "${rubric_dn#REPLACE_WITH}" = "$rubric_dn" ] && [ -n "$rubric_ag" ]; then
-                        echo "$rubric_ag: RUN   (auto-fallback — orchestrator dropped block, ISS-009)"
-                      fi
-                    done
-                    echo '```'
-                  } >> "$out"
-                  # Push the patched output to main so trading-agent's
-                  # checkout sees the synthesized plan. Same retry-on-
-                  # conflict pattern as the existing chain-context commit.
-                  git add "$out"
-                  if ! git diff --staged --quiet 2>/dev/null; then
-                    git commit -m "chore(chain-runner): auto-fallback plan after orchestrator drift (ISS-009)" >/dev/null 2>&1 || true
-                    for attempt in 1 2 3; do
-                      git pull --rebase origin main 2>/dev/null || true
-                      git push -u origin HEAD 2>/dev/null && break
-                      sleep "$attempt"
-                    done
-                  fi
-                  echo "::error::reppo-orchestrator validator: ISS-009 recurrence — synthesized fallback plan and pushed the patched output. Chain continues with the rubric-derived plan, but the run is marked failed for visibility."
-                  return 1
-                fi
-                ;;
+              # No skill validators currently defined.
+              *) ;;
             esac
             return 0
           }
@@ -223,9 +173,8 @@ jobs:
           }
 
           # --- Helper: rebase-pull that auto-resolves conflicts ---
-          # Running chain steps in parallel (e.g. reppo-trading-agent +
-          # reppo-voter) means two aeon.yml workflows push to main near-
-          # simultaneously, so this runner's inter-step pulls can hit a
+          # Running chain steps in parallel means two aeon.yml workflows push
+          # to main near-simultaneously, so this runner's inter-step pulls can hit a
           # rebase conflict. A bare `git pull --rebase || true` swallows the
           # exit code but leaves the repo mid-rebase, so the NEXT git command
           # fails ("rebase in progress") — that is the 2026-05-31 15:40 chain
