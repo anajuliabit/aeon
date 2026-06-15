@@ -418,4 +418,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-14,heartbeat,claude-opus-4-7,8482,18026,985272,104643
 2026-06-14,aixbt-pulse,claude-sonnet-4-6,1460,17245,1014878,69605
 2026-06-15,btc-levels,claude-sonnet-4-6,12,4580,305000,21805
-2026-06-15,thought-review,claude-opus-4-7,48379,5602,869432,19642
+2026-06-15,morning-brief,claude-opus-4-7,262436,15069,914954,111797
