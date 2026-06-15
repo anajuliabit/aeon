@@ -153,28 +153,31 @@ check "telegram surfaces all directional recs (incl decrease)" "$TGTRADES" "4"
 TGEMPTY=$(printf '%s' '[{"direction":"hold","symbol":null}]' | jq -r '[.[] | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")] | length')
 check "telegram trade list empty on all-hold report" "$TGEMPTY" "0"
 
-# --- run.sh short-term buys: defensive re-filter + pick mapping ---
-# Keep only non-held longs with a coingeckoId and oriented levels
-# (target>entry, invalidate<entry or absent). Mirrors the jq in run.sh step 5a.
-STBUYS_IN='{"buys":[
- {"symbol":"WIF","coingeckoId":"dogwifcoin","entry":2.0,"target":2.6,"invalidate":1.7,"horizonDays":10,"conviction":"HIGH","thesis":"x"},
- {"symbol":"REPPO","coingeckoId":"reppo","entry":0.02,"target":0.03,"invalidate":0.015,"horizonDays":14,"conviction":"MEDIUM","thesis":"held — must drop"},
- {"symbol":"BAD","coingeckoId":"bad","entry":1.0,"target":0.9,"invalidate":0.8,"horizonDays":10,"conviction":"HIGH","thesis":"target<entry — drop"},
- {"symbol":"NOID","coingeckoId":null,"entry":1.0,"target":2.0,"invalidate":0.5,"horizonDays":10,"conviction":"HIGH","thesis":"no id — drop"}]}'
+# --- run.sh short-term trades: side-aware re-filter + pick mapping ---
+# LONG needs target>entry & invalidate<entry; SHORT needs target<entry &
+# invalidate>entry. Non-held, coingeckoId required. Mirrors run.sh step 5a.
+STTR_IN='{"trades":[
+ {"symbol":"WIF","coingeckoId":"dogwifcoin","side":"long","entry":2.0,"target":2.6,"invalidate":1.7,"horizonDays":10,"conviction":"HIGH","thesis":"x"},
+ {"symbol":"PEPE","coingeckoId":"pepe","side":"short","entry":0.001,"target":0.0008,"invalidate":0.0012,"horizonDays":10,"conviction":"MEDIUM","thesis":"overextended pump, unlock"},
+ {"symbol":"REPPO","coingeckoId":"reppo","side":"long","entry":0.02,"target":0.03,"invalidate":0.015,"horizonDays":14,"conviction":"MEDIUM","thesis":"held — drop"},
+ {"symbol":"BADL","coingeckoId":"badl","side":"long","entry":1.0,"target":0.9,"invalidate":0.8,"horizonDays":10,"conviction":"HIGH","thesis":"long target<entry — drop"},
+ {"symbol":"BADS","coingeckoId":"bads","side":"short","entry":1.0,"target":1.2,"invalidate":0.9,"horizonDays":10,"conviction":"HIGH","thesis":"short target>entry — drop"},
+ {"symbol":"NOID","coingeckoId":null,"side":"long","entry":1.0,"target":2.0,"invalidate":0.5,"horizonDays":10,"conviction":"HIGH","thesis":"no id — drop"}]}'
 STHELD="reppo mamo well usdc"
-STFILT=$(printf '%s' "$STBUYS_IN" | jq -c --arg held "$STHELD" '
+STFILT=$(printf '%s' "$STTR_IN" | jq -c --arg held "$STHELD" '
   ($held|ascii_downcase|split(" ")) as $h
-  | {buys:[.buys[]? | (.symbol // "" | ascii_downcase) as $sym
-      | select(.symbol!=null and .coingeckoId!=null and (.entry//0)>0
-      and (.target//0)>(.entry//0) and ((.invalidate//0)==0 or (.invalidate<.entry))
-      and (($h|index($sym))|not))] | .[0:2]}')
-check "stbuy filter keeps only valid non-held longs" "$(printf '%s' "$STFILT" | jq -r '.buys|length')" "1"
-check "stbuy keeps WIF (drops held/mis-oriented/no-id)" "$(printf '%s' "$STFILT" | jq -r '.buys[0].symbol')" "WIF"
-STPICK=$(printf '%s' "$STFILT" | jq -c '.buys[0] | {
-  id:("2026-06-15-advisor-stbuy-"+(.symbol|ascii_downcase)), side:"long",
-  entryPriceUsd:.entry, targetPriceUsd:.target,
-  invalidationPriceUsd:(if (.invalidate//0)>0 and .invalidate<.entry then .invalidate else null end)}')
-check "stbuy pick id namespaced" "$(printf '%s' "$STPICK" | jq -r .id)" "2026-06-15-advisor-stbuy-wif"
-check "stbuy pick is long w/ oriented inv" "$(printf '%s' "$STPICK" | jq -r '"\(.side) \(.entryPriceUsd) \(.invalidationPriceUsd)"')" "long 2.0 1.7"
+  | {trades:[.trades[]? | (.side // "long") as $side | (.symbol // "" | ascii_downcase) as $sym
+      | select(.symbol!=null and .coingeckoId!=null and (.entry//0)>0 and (($h|index($sym))|not)
+        and (if $side=="short"
+             then (.target//0)>0 and (.target<.entry) and ((.invalidate//0)==0 or (.invalidate>.entry))
+             else (.target//0)>(.entry) and ((.invalidate//0)==0 or (.invalidate<.entry)) end))]
+    | .[0:2]}')
+check "sttrade keeps valid long + short, drops rest" "$(printf '%s' "$STFILT" | jq -r '.trades|length')" "2"
+check "sttrade keeps WIF long" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol=="WIF")]|length')" "1"
+check "sttrade keeps PEPE short" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol=="PEPE" and .side=="short")]|length')" "1"
+check "sttrade drops held/mis-oriented/no-id" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol|test("REPPO|BADL|BADS|NOID"))]|length')" "0"
+STSHORT=$(printf '%s' "$STFILT" | jq -c '[.trades[]|select(.side=="short")][0] | {side, entryPriceUsd:.entry,
+  invalidationPriceUsd:(if (.invalidate//0)<=0 then null elif .side=="short" and .invalidate>.entry then .invalidate elif .side!="short" and .invalidate<.entry then .invalidate else null end)}')
+check "sttrade short keeps inv above entry" "$(printf '%s' "$STSHORT" | jq -r '"\(.side) \(.invalidationPriceUsd)"')" "short 0.0012"
 
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
