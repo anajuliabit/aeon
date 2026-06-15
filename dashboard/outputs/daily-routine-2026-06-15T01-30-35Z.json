@@ -1,0 +1,143 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "daily-routine",
+        "description": "06-14 staged"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-section",
+        "sep-1",
+        "file-section",
+        "sep-2",
+        "topics-section"
+      ]
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-status",
+        "text-status"
+      ]
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      }
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "Staged",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "file-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-file",
+        "text-filepath",
+        "text-filesize"
+      ]
+    },
+    "heading-file": {
+      "type": "Heading",
+      "props": {
+        "text": "Output File",
+        "level": "h3"
+      }
+    },
+    "text-filepath": {
+      "type": "Text",
+      "props": {
+        "text": ".pending-notify/daily-routine-msg.md",
+        "variant": "body"
+      }
+    },
+    "text-filesize": {
+      "type": "Text",
+      "props": {
+        "text": "3612 characters",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "topics-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-topics",
+        "badges-row"
+      ]
+    },
+    "heading-topics": {
+      "type": "Heading",
+      "props": {
+        "text": "Topics",
+        "level": "h3"
+      }
+    },
+    "badges-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-deai",
+        "badge-jassy"
+      ]
+    },
+    "badge-deai": {
+      "type": "Badge",
+      "props": {
+        "text": "deai-day-2",
+        "variant": "default"
+      }
+    },
+    "badge-jassy": {
+      "type": "Badge",
+      "props": {
+        "text": "jassy crackdown",
+        "variant": "default"
+      }
+    }
+  }
+}
