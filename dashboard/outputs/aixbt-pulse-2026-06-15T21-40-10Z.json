@@ -1,0 +1,221 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse",
+        "description": "2026-06-15 21:00Z"
+      },
+      "children": [
+        "crypto-section",
+        "sep-1",
+        "solana-section",
+        "sep-2",
+        "defi-section",
+        "sep-3",
+        "tradfi-section",
+        "sep-4",
+        "new-section",
+        "sep-5",
+        "bridge-section"
+      ]
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-heading",
+        "crypto-item-1",
+        "crypto-item-2"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h3"
+      }
+    },
+    "crypto-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "btc $67K on hormuz ceasefire — BOJ hike risk the next caution factor; $83K weekly close = trend confirmation"
+      }
+    },
+    "crypto-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "blackrock BITA covered-call BTC ETF launches tomorrow targeting 15-25% yield; kraken CFTC perps live"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "solana-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "solana-heading",
+        "solana-item-1"
+      ]
+    },
+    "solana-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "SOLANA / RWA",
+        "level": "h3"
+      }
+    },
+    "solana-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "SPCX $51M+ on-chain vol dominated solana attention — flipped narrative from \"under pressure\" to RWA grip in 12h"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "defi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "defi-heading",
+        "defi-item-1"
+      ]
+    },
+    "defi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DEFI",
+        "level": "h3"
+      }
+    },
+    "defi-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "pendle / altura / yieldbasis gain mindshare; uniswap 40x call from StanChart; protocol revenue sharing back in focus"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi-heading",
+        "tradfi-item-1"
+      ]
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h3"
+      }
+    },
+    "tradfi-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "ceasefire framework (was interim deal 12h ago) — oil -5%+, bond rallies, defense/energy shorts unwinding, banks bid"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-heading",
+        "new-item-1",
+        "new-item-2",
+        "new-item-3"
+      ]
+    },
+    "new-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h3"
+      }
+    },
+    "new-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "blackrock covered-call BTC ETF (BITA) launches tomorrow — yield extraction, not delta"
+      }
+    },
+    "new-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "SPCX $51M volume print (was a minor reference at 09:00Z)"
+      }
+    },
+    "new-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "defi yield stack: pendle / yieldbasis / uniswap; StanChart 40x target"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-heading",
+        "bridge-item-1"
+      ]
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h3"
+      }
+    },
+    "bridge-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "blackrock launches a covered-call BTC ETF at $67K. 15-25% yield target = they are selling vol, pricing a range. risk-on is real — the first institutional BTC product on the tape is a ceiling trade, not a breakout. BOJ tuesday is what ends or extends the window."
+      }
+    }
+  }
+}
