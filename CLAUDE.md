@@ -83,7 +83,8 @@ Lives on **`main`** (not feature branches). Scheduled via `.github/workflows/`:
 `investment-advisor.yml` (daily 13:00 UTC) + `weekly-conviction.yml`.
 
 - **Orchestrator:** `scripts/advisor/run.sh` — prefetch → 5 analysts → debate →
-  PM synthesis → POST report + picks + Telegram. `run-weekly.sh` = weekly conviction.
+  PM synthesis → short-term momentum buys → POST report + picks + Telegram.
+  `run-weekly.sh` = weekly conviction.
 - **Inputs:** `scripts/advisor/prefetch-data.sh` writes `.investiments-cache/advisor/*.json`
   (keyless feeds + the portfolio snapshot via Railway Basic auth).
 - **LLM:** `scripts/llm-claude.sh` (Claude OAuth, primary) → falls back to
@@ -92,6 +93,11 @@ Lives on **`main`** (not feature branches). Scheduled via `.github/workflows/`:
 - **Picks:** directional recs (increase→long, decrease/hedge→short) with a level
   or snapshot spot POST to investiments `/api/picks`; stablecoins skipped. Daily
   ids are `<date>-advisor-daily-<sym>`.
+- **Short-term buys:** `advisor/prompts/short_term_buys.md` generates 0–2 fresh
+  momentum LONGS (7–14d, ≤1% moonshot sleeve) from `cg-markets`/`gt-liquidity` —
+  NOT the held book, stablecoins excluded. Surfaced in the Telegram "🎯 Short-term
+  buys" block + `report.shortTermBuys`, staged as `<date>-advisor-stbuy-<sym>`
+  picks. Complements (doesn't duplicate) the daily `token-pick` skill.
 
 ### Required env (GitHub Actions secrets)
 `DASHBOARD_PASSWORD` (+ `DASHBOARD_USER=admin`) for the snapshot fetch + POSTs,

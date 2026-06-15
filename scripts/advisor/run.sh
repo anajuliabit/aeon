@@ -338,6 +338,38 @@ REPORT="$(jq -n \
 echo "advisor: report assembled"
 
 # ---------------------------------------------------------------------------
+# 5a. Short-term momentum buys — fresh tactical LONGS from the market data
+#     (NOT the held book), sized to the ≤1% moonshot sub-sleeve. 0–2 names,
+#     complements the daily token-pick. Merged onto the report + staged as picks
+#     + surfaced on Telegram. Defensive jq re-filter (held/stable/oriented) over
+#     the prompt rules so a drifting model can't push a junk buy.
+# ---------------------------------------------------------------------------
+HELD_LC="$(held_symbols)"
+stbuys_prompt="$(cat "$PROMPTS/short_term_buys.md")
+HELD SYMBOLS (already in book — do NOT recommend buying these): ${HELD_LC:-none}
+Use horizon 7-14 days.
+
+$(datablock cg_markets cg-markets.json '[.[]? | {symbol: (.symbol | ascii_upcase), id, price: .current_price, mcap: .market_cap, vol24h: .total_volume, change_24h: .price_change_percentage_24h, change_7d: .price_change_percentage_7d_in_currency}] | .[0:80]')
+$(datablock liquidity gt-liquidity.json '.')
+$(datablock fng fng.json '.')"
+STBUYS="$(complete "$stbuys_prompt")" || true
+if [ -z "$STBUYS" ] || ! printf '%s' "$STBUYS" | jq -e '.buys' >/dev/null 2>&1; then
+  STBUYS='{"buys":[]}'
+fi
+STBUYS="$(printf '%s' "$STBUYS" | jq -c --arg held "${HELD_LC:-}" '
+  ($held | ascii_downcase | split(" ")) as $h
+  | {buys: [.buys[]?
+      | (.symbol // "" | ascii_downcase) as $sym
+      | select(.symbol != null and .coingeckoId != null
+               and (.entry // 0) > 0
+               and (.target // 0) > (.entry // 0)
+               and ((.invalidate // 0) == 0 or (.invalidate < .entry))
+               and (($h | index($sym)) | not))
+    ] | .[0:2]}')"
+REPORT="$(jq -n --argjson rpt "$REPORT" --argjson st "$STBUYS" '$rpt | .shortTermBuys = ($st.buys // [])')"
+echo "advisor: short-term buys — $(printf '%s' "$STBUYS" | jq '.buys | length') candidate(s)"
+
+# ---------------------------------------------------------------------------
 # 5. Stage every actionable rec (increase/decrease/hedge with a symbol) as a
 #    pick, so trims and adds both land in the track record alongside token-pick
 #    and the weekly run. side: increase => long; decrease/hedge => short (a trim
@@ -436,11 +468,46 @@ if [ "$DRY" != "1" ] && [ "$STAGED" -gt 0 ]; then
   echo "advisor: read-back found $BACK today's advisor-daily pick(s) in store"
 fi
 
+# Stage short-term momentum buys as picks (source advisor, long, "-advisor-stbuy-" id).
+STB_STAGED=0
+while read -r b; do
+  [ -z "$b" ] && continue
+  SYM=$(printf '%s' "$b" | jq -r '.symbol')
+  PICK=$(printf '%s' "$b" | jq -c --arg d "$DATE" '{
+    id: ($d + "-advisor-stbuy-" + (.symbol | ascii_downcase)),
+    source: "advisor",
+    symbol: .symbol,
+    coingeckoId: .coingeckoId,
+    side: "long",
+    entryPriceUsd: .entry,
+    targetPriceUsd: .target,
+    invalidationPriceUsd: (if (.invalidate // 0) > 0 and .invalidate < .entry then .invalidate else null end),
+    horizonDays: (.horizonDays // 14),
+    conviction: (.conviction // "UNSTATED"),
+    thesis: ("SHORT-TERM BUY — " + (.thesis // ""))
+  }')
+  if [ "$DRY" = "1" ]; then
+    echo "----- STBUY $SYM -----"; printf '%s\n' "$PICK" | jq .
+    STB_STAGED=$((STB_STAGED + 1))
+  else
+    code=$(curl -sS --max-time 30 -o /dev/null -w "%{http_code}" -X POST "$BASE/api/picks" \
+      -H "Authorization: Basic ${AUTH}" -H "Content-Type: application/json" \
+      -d "$PICK" 2>/dev/null || echo "000")
+    if [ "$code" = "200" ] || [ "$code" = "201" ]; then
+      echo "advisor: short-term buy staged $SYM (HTTP $code)"; STB_STAGED=$((STB_STAGED + 1))
+    else
+      echo "::warning::advisor: short-term buy POST $SYM failed (HTTP $code)"
+    fi
+  fi
+done < <(printf '%s' "$REPORT" | jq -c '.shortTermBuys[]?')
+echo "advisor: staged $STB_STAGED short-term buy(s)"
+
 # Telegram: .summary + the actionable trades (directional recs), so the operator
 # sees the trims/adds/hedges — not just whatever defensive "hold" the PM ranked
 # first. Falls back to an explicit "no trades" line on a purely defensive day.
 TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" '
   ([.recommendations[]? | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")]) as $trades
+  | (.shortTermBuys // []) as $buys
   | "📊 Advisor (" + $d + "): " + (.summary // "(no summary)") + "\n"
     + (if ($trades | length) == 0
        then "No new trades — defensive stance (see dashboard)."
@@ -450,6 +517,14 @@ TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" '
            + (if .level != null then " @ $" + (.level | tostring) else "" end)
            + (if .invalidateLevel != null then " (inv $" + (.invalidateLevel | tostring) + ")" else "" end)
            + " — " + (.title // .action // "")] | join("\n"))
+       end)
+    + "\n\n" + (if ($buys | length) == 0
+       then "🎯 Short-term buys: none qualify today."
+       else "🎯 Short-term buys (≤1% sleeve each):\n" + ([$buys[]
+         | "• " + (.conviction // "?") + " " + (.symbol // "?")
+           + " buy $" + ((.entry // 0) | tostring) + " → $" + ((.target // 0) | tostring)
+           + (if .invalidate then " (inv $" + (.invalidate | tostring) + ")" else "" end)
+           + " / " + ((.horizonDays // 14) | tostring) + "d"] | join("\n"))
        end)
     + "\nNot financial advice."')"
 

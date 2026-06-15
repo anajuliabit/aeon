@@ -49,7 +49,7 @@ get protocols.json  "https://api.llama.fi/protocols"
 get cg-global.json  "https://api.coingecko.com/api/v3/global"
 get cg-btc.json     "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=30"
 get fng.json        "https://api.alternative.me/fng/?limit=1"
-get cg-markets.json "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1"
+get cg-markets.json "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=24h,7d"
 
 # --- Held-token fundamentals (fixes the top-100-only gap) ---
 # One keyless call resolves the HELD tickers (from the snapshot) to their
