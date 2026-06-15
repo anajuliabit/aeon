@@ -362,7 +362,7 @@ if [ -f "$D/cg-markets.json" ]; then
         | select(($s | test("^(usdc|usdt|usds|dai|usde|usdtb|frax|tusd|fdusd|pyusd|gusd)$")) | not)
       ]
     | sort_by( - (if (.c7) < 0 then -(.c7) else (.c7) end) )
-    | .[0:4]' "$D/cg-markets.json" 2>/dev/null || echo '[]')"
+    | .[0:8]' "$D/cg-markets.json" 2>/dev/null || echo '[]')"
 fi
 SL_N="$(printf '%s' "$SHORTLIST" | jq 'length' 2>/dev/null || echo 0)"
 echo "advisor: short-term shortlist — $SL_N candidate(s)"
@@ -425,7 +425,7 @@ TRADES="$(printf '%s' "$TRADES" | jq -c --arg held "${HELD_LC:-}" '
                and (if $side == "short"
                     then (.target // 0) > 0 and (.target < .entry) and ((.invalidate // 0) == 0 or (.invalidate > .entry))
                     else (.target // 0) > (.entry) and ((.invalidate // 0) == 0 or (.invalidate < .entry)) end))
-    ] | .[0:2]}')"
+    ] | .[0:5]}')"
 REPORT="$(jq -n --argjson rpt "$REPORT" --argjson st "$TRADES" '$rpt | .shortTermTrades = ($st.trades // [])')"
 echo "advisor: short-term trades — $(printf '%s' "$TRADES" | jq '.trades | length') selected"
 
