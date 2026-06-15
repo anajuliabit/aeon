@@ -1,0 +1,143 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "daily-routine 06-15",
+        "description": "staged"
+      },
+      "children": [
+        "content_stack"
+      ]
+    },
+    "content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "badge_status",
+        "sep1",
+        "market_section",
+        "sep2",
+        "items_stack",
+        "sep3",
+        "reference"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "risk-on snaps back",
+        "variant": "default"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "market_stats",
+        "trigger_note"
+      ]
+    },
+    "market_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_sentiment",
+        "stat_btc"
+      ]
+    },
+    "stat_sentiment": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Green",
+        "value": "86/100",
+        "trend": "up"
+      }
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$65.7k",
+        "delta": "+2.2%",
+        "trend": "up"
+      }
+    },
+    "trigger_note": {
+      "type": "Text",
+      "props": {
+        "text": "Catalyst: Hormuz deal",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "items_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_zec",
+        "item_harnessx",
+        "item_curl"
+      ]
+    },
+    "item_zec": {
+      "type": "Text",
+      "props": {
+        "text": "ZEC short-squeeze",
+        "variant": "body"
+      }
+    },
+    "item_harnessx": {
+      "type": "Text",
+      "props": {
+        "text": "harnessx paper",
+        "variant": "body"
+      }
+    },
+    "item_curl": {
+      "type": "Text",
+      "props": {
+        "text": "curl vuln-report pause",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reference": {
+      "type": "Link",
+      "props": {
+        "label": "See details: .pending-notify/daily-routine-msg.md",
+        "href": ".pending-notify/daily-routine-msg.md"
+      }
+    }
+  }
+}

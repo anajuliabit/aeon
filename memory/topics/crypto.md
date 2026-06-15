@@ -64,6 +64,48 @@ narrative-and-pick layer.
 - Note: Kaito Yaps/Yapper leaderboards shut Jan 15 2026 — no live
   mindshare leaderboard reference.
 
+### 2026-06-15 — risk-on regime flip on Hormuz landing
+- **#27 Risk-on regime flip (NEW, m4 ↑↑, Bull).** Hormuz peace deal LANDED
+  (Polymarket "US × Iran peace deal by June 15?" YES 11%→93% +82pp as
+  deadline arrived) drained the oil geopolitical premium → 86/100 → 92/100
+  top-100 green intraday, BTC 2-wk high $66.4k +3.3% / ETH $1,812 +8.7% /
+  SOL $73.59 +8.7% — alts outrun BTC = alt-bid stage, BTC dom -0.27pp.
+  Dollar flipped strength→soft in 12h (aixbt). "Whole tape is one trade"
+  (aixbt crypto item 1 = tradfi item 1). Bear: single-catalyst fragility
+  — **BOJ Tuesday is the soft-dollar-leg test**. Position RIDE (regime,
+  watch BOJ).
+- **#13 XMR/ZEC privacy RESURRECTED 6-15 (was DEAD 6-14, m1→m2 ↑↑, Cope).**
+  ZEC +15.9% AM → +24.5% intraday on ~$10M short squeeze + Garrett Jin's
+  named $21M HL long + clean security audit post AI-found counterfeiting
+  hard-fork; Philippines SEC ban shrugged off. 6th attempt — first with
+  real catalyst. **Reflexivity flag: squeeze≠demand** — fade if it
+  doesn't hold past the cover. Position WATCH.
+- **#7 BTC capitulation DEAD 6-15** (was Fading 6-14). 2-wk high $66.4k
+  + 86/100 → 92/100 breadth + F&G softening 13→20 contradicts the
+  sub-$60k bottom call. $250M short-squeeze liqs steady the wick (aixbt).
+- **#15 VELVET DEAD 6-15** (was RESURRECTED-COPE 6-14). −32.3% AM hard
+  giveback (7d still +28%) — parabola resolves after 5 sessions of flips.
+  6-14 FADE call paid; arc closed. Position FADE.
+- **#26 BOJ-tuesday PROMOTED Emerging→Rising (Bear).** Dollar flipped
+  soft 12h + 9-yr-high yen shorts squeeze risk + dated Tuesday catalyst.
+  Position WATCH (macro headwind).
+- **#1 decAI PROMOTED (thesis hardening).** @2xnmore canon: niche →
+  "obvious hedge" against Anthropic export controls + 4-pillar taxonomy
+  (compute/intelligence/agents/data). AKT +10.6% / 7d +34% (day-3
+  compute carry), TAO 7d +33% (24h cooled, intact 7d), WLD +16.2%, GRASS
+  +25.2% breakout (data pillar). Meme-wrappers continue bleeding
+  (GWEI −16% / EDGE −5.3%). Bear: @DukeD_Defi 90%-structural + @web3advise
+  most-crowded.
+- **DEX wave snaps back HARD.** Uniswap V4 +101.5% c1d (full reversal of
+  6-14's −35.5% bleed). Uniswap V3 +91.3% c1d (reverses −63%). HL Perps
+  fees +69.34% c1d (perp bid back). Aerodrome Slipstream +49.7% c1d. The
+  6-14 "DEX clean tape −38%" deterioration call inverted in 24h.
+- **DeFi yield: WETH-USDT real-yield RESURRECTED.** 35.57 → 40.63 → 18.88
+  → 11.36 (off list 6-14) → 40.47 today (apyBase, conf 1→3). 6-14
+  "hot-pool rollover confirmed" call REVERSES — pool resurged to early-
+  window peak on the risk-on tape (vol-driven fee APR). cvxCRV 3rd
+  cool-off (27.35 → 26.93, gauge thesis unwinding slowly).
+
 ### 2026-06-13 → 2026-06-14 — decentralised-AI standalone + ride extends
 - **#1 Decentralised AI bid (NEW STANDALONE 6-13, ride extends 6-14).**
   Was sub-cluster inside AI×crypto custody on 6-11; carved out 6-13
@@ -192,7 +234,8 @@ narrative-and-pick layer.
 | 2026-06-10 | SENT | $0.01508 | HIGH 7 | Open-AGI "GRID" protocol on Upbit-listing residual; broke down intraday $0.01508 → $0.01489 (-16.31%); re-fire 16:00Z SUPPRESSED per once-daily discipline despite MORPHO emerging HIGH 8 post-$175M Paradigm+a16z raise at $2B val |
 | 2026-06-11 | MON | $0.0220 | HIGH 10 | Monad L1 — Mu Digital tokenization 6-02 + governance shorten-consensus vote 6-06 + FalconX tokenized-credit + TownSquare $100M USD1 May. Risk: Nov-2026 investor 19.7% + team 27% unlock cliff. Market SKIPPED (Starmer-by-6-30 fair 12-15% vs 16.5¢ = 2-4pp edge, sub-5pp gate) |
 | 2026-06-13 | TAO | $248.76 | HIGH 10 | Bittensor — Anthropic Fable-5/Mythos-5 export-control catalyst; subnet 128→256 expansion; Grayscale+Bitwise spot-TAO ETF SEC decisions ~Aug; Dec 2025 halving cut emissions 7,200→3,600 / >70% staked; BIT-0011 Conviction Mechanism locked-stake; TAO Swap as liquidity hub. Risk: $215 consolidation shelf, +90% off March low. Market: Xi-out-before-2027 YES 7.25¢ MEDIUM 5.5pp. **Validated 6-14: +23.5% / 7d +34% — FRONT-RUN call held** |
-| 2026-06-14 | XPL | $0.0888 | HIGH 9 | Plasma One Visa Card launches next week — platinum/core/lite tiers require hold/lock XPL for cashback + stablecoin-spend yield; +27.8% 7d on vmc 0.45 (real turnover); 24h cooled to +0.9% = entry not chasing parabola. Risk: 6-25 unlock 88.89M XPL (~$7.5M ecosystem/growth) + 6-07 team transfer $9.64M = distribution overhang firing. Target $0.115 / inv $0.075 / 14d. Market: "Iran enrichment halt by 6-30?" NO 59.5¢ HIGH ~20pp edge (PBS 6-12 deal extends ceasefire but defers 15-20yr enrichment halt; Trump 6-12: "nuclear was not agreed") |
+| 2026-06-14 | XPL | $0.0888 | HIGH 9 | Plasma One Visa Card launches next week — platinum/core/lite tiers require hold/lock XPL for cashback + stablecoin-spend yield; +27.8% 7d on vmc 0.45 (real turnover); 24h cooled to +0.9% = entry not chasing parabola. Risk: 6-25 unlock 88.89M XPL (~$7.5M ecosystem/growth) + 6-07 team transfer $9.64M = distribution overhang firing. Target $0.115 / inv $0.075 / 14d. Market: "Iran enrichment halt by 6-30?" NO 59.5¢ HIGH ~20pp edge (PBS 6-12 deal extends ceasefire but defers 15-20yr enrichment halt; Trump 6-12: "nuclear was not agreed"). **6-15 update: Hormuz peace deal landed (Polymarket YES 11%→93%) — Iran NO-pair thesis now faces a live de-escalation headwind; re-check the print** |
+| 2026-06-15 | NEAR | $2.47 | HIGH 10 | Near Protocol — dynamic resharding upgrade (v2.13, shipping June) auto-splits shards on demand; ~+27-30% on the news leg with ~$32M NEAR Intents fees + $19B cross-chain volume = real usage under the move. mcap $3.2B (rk31, not pumpable), vol $512M, vol/mcap 0.16, on CG trending, RS vs BTC(+4.7% 7d)/ETH(+7.7% 7d). Target $2.90 / inv $2.10 / 14d. ZRO scored higher (raw 11) but REJECTED — June-20 unlock 25.71M ZRO (~$29.4M / 2.57% supply, 5d out) on -20% 30d trend = FADE pattern. Market SKIPPED — Polymarket field ~entirely 2026 WC futures (efficient, no defensible edge ≥5pp) |
 
 ## Picks deliberately skipped (rubric validated post-hoc)
 - **LAB** (5-29 → 6-02) — scored 10-11/10 five days running but skipped

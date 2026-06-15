@@ -1,0 +1,191 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-06-15",
+        "description": "agent-to-agent commerce dominated — x402 task markets, sign-to-pay, verified identity — plus a side thread reframing agents as the substrate, not the workflow."
+      },
+      "children": [
+        "sep1",
+        "section1",
+        "sep2",
+        "section2",
+        "sep3",
+        "section3",
+        "sep4",
+        "footer"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-s1",
+        "tweets-s1"
+      ]
+    },
+    "heading-s1": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-to-agent payment rails",
+        "level": "h2"
+      }
+    },
+    "tweets-s1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-2",
+        "tweet-3"
+      ]
+    },
+    "tweet-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "$AZL meters a machine-readable task market over x402: discover, settle-after-response, agent reputation on-chain.",
+        "href": "https://x.com/dabusthebuilder/status/2066306284547158238",
+        "source": "@dabusthebuilder"
+      }
+    },
+    "tweet-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Q402, a sign-to-pay layer enforcing permission and execution boundaries before an agent spends.",
+        "href": "https://x.com/Avou_Bakar/status/2066305937246507091",
+        "source": "@Avou_Bakar"
+      }
+    },
+    "tweet-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Concordium's verified badge binds a Solana agent to a real human/business identity without exposing who.",
+        "href": "https://x.com/Multi_mike01/status/2066307741120188500",
+        "source": "@Multi_mike01"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-s2",
+        "tweets-s2"
+      ]
+    },
+    "heading-s2": {
+      "type": "Heading",
+      "props": {
+        "text": "agents as substrate, not workflow",
+        "level": "h2"
+      }
+    },
+    "tweets-s2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-4",
+        "tweet-5"
+      ]
+    },
+    "tweet-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Delphi flipped from agents-on-workflows to workflows-on-agents; the inversion reshaped how they build.",
+        "href": "https://x.com/anildelphi/status/2066273432589811877",
+        "source": "@anildelphi",
+        "score": "47 likes"
+      }
+    },
+    "tweet-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "most agents are just a harness: right skills, MCP servers, a sharp system prompt — not orchestration.",
+        "href": "https://x.com/mnvsk97/status/2066259570356555885",
+        "source": "@mnvsk97"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-s3",
+        "tweets-s3"
+      ]
+    },
+    "heading-s3": {
+      "type": "Heading",
+      "props": {
+        "text": "anthropic research, applied",
+        "level": "h2"
+      }
+    },
+    "tweets-s3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-6",
+        "tweet-7"
+      ]
+    },
+    "tweet-6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Claude in chemistry nails the planning; the last 90% is execution the model still can't touch.",
+        "href": "https://x.com/ThePhilnado/status/2066273806768091223",
+        "source": "@ThePhilnado"
+      }
+    },
+    "tweet-7": {
+      "type": "StoryLink",
+      "props": {
+        "title": "the usable lesson from Anthropic's multi-agent work: split roles, coordination, cost before adding more agents.",
+        "href": "https://x.com/miraigent/status/2066307059365339429",
+        "source": "@miraigent"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 12 → kept: 7",
+        "variant": "caption"
+      }
+    }
+  }
+}

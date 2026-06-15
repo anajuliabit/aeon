@@ -1,0 +1,183 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-15 09:00Z"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_crypto",
+        "stack_crypto_items",
+        "separator_1",
+        "heading_macro",
+        "text_macro_note",
+        "separator_2",
+        "heading_geo",
+        "text_geo_item",
+        "separator_3",
+        "heading_tradfi",
+        "stack_tradfi_items",
+        "separator_4",
+        "heading_new",
+        "text_new_items",
+        "separator_5",
+        "heading_bridge",
+        "text_bridge"
+      ]
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "stack_crypto_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_crypto_1",
+        "text_crypto_2"
+      ]
+    },
+    "text_crypto_1": {
+      "type": "Text",
+      "props": {
+        "text": "btc back above $65k on us-iran relief — $250m short liqs, etf outflows steadying, whales done selling",
+        "variant": "body"
+      }
+    },
+    "text_crypto_2": {
+      "type": "Text",
+      "props": {
+        "text": "hyperliquid leads mindshare: $161m HYPE etf inflows, ~$1b annualized rev, HIP-3 perps into equities/commodities",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_macro": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO",
+        "level": "h2"
+      }
+    },
+    "text_macro_note": {
+      "type": "Text",
+      "props": {
+        "text": "(no macro/geo section this pull — folded into tradfi)",
+        "variant": "muted"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_geo": {
+      "type": "Heading",
+      "props": {
+        "text": "GEO",
+        "level": "h2"
+      }
+    },
+    "text_geo_item": {
+      "type": "Text",
+      "props": {
+        "text": "us-iran interim deal to reopen the strait of hormuz drained the oil premium",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "stack_tradfi_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_tradfi_1"
+      ]
+    },
+    "text_tradfi_1": {
+      "type": "Text",
+      "props": {
+        "text": "oil near $80 → treasury rally, yields compressing sharply, dollar softens, VIX slips",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "text_new_items": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE etf inflows + HIP-3 expansion; on-chain gaming split (kintara up, fishing frenzy dead); solana reframed dominance → pressure; dollar flipped strength → soft in 12h",
+        "variant": "body"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text_bridge": {
+      "type": "Text",
+      "props": {
+        "text": "the whole tape is one trade. hormuz deal → oil down → btc $65k. crypto item 1 and tradfi item 1 are the same headline on two rails. yesterday market-context called this deal effectively failed — today it is an interim deal. risk-on is real but single-catalyst — one headline reversal unwinds it. BOJ tuesday is the test for whether the softer-dollar leg sticks.",
+        "variant": "body"
+      }
+    }
+  }
+}
