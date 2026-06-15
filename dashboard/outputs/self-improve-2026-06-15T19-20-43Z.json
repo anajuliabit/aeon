@@ -1,0 +1,43 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "text_action",
+        "text_context",
+        "separator_1",
+        "link_pr"
+      ]
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Documented WebSearch API 400 fallback in CLAUDE.md"
+      }
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "8 skills hit it today, each re-discovered WebFetch ad-hoc"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #122",
+        "href": "https://github.com/anajuliabit/aeon/pull/122"
+      }
+    }
+  }
+}

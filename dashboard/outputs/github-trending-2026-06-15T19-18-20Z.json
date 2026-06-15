@@ -1,0 +1,415 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-06-15"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_top",
+        "boo_top",
+        "boo_top_desc",
+        "sep1",
+        "heading_aiml",
+        "kronos",
+        "aisuite",
+        "sep2",
+        "heading_devtools",
+        "boo_dev",
+        "kage",
+        "sep3",
+        "heading_infra",
+        "aur_check",
+        "sep4",
+        "footer"
+      ]
+    },
+    "heading_top": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h2"
+      }
+    },
+    "boo_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "coder/boo",
+        "href": "https://github.com/coder/boo",
+        "source": "GitHub"
+      }
+    },
+    "boo_top_desc": {
+      "type": "Text",
+      "props": {
+        "text": "a tmux/screen replacement built straight on ghostty's libghostty core — terminal multiplexing on a modern gpu terminal, in zig, from coder. fresh out the door, already the most clickable thing on the board.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      }
+    },
+    "kronos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kronos_link",
+        "kronos_meta",
+        "kronos_desc"
+      ]
+    },
+    "kronos_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "shiyu-coder/Kronos",
+        "href": "https://github.com/shiyu-coder/Kronos",
+        "source": "GitHub"
+      }
+    },
+    "kronos_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "kronos_stars",
+        "kronos_lang",
+        "kronos_badge"
+      ]
+    },
+    "kronos_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "30k",
+        "delta": "+244 today"
+      }
+    },
+    "kronos_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "kronos_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "kronos_desc": {
+      "type": "Text",
+      "props": {
+        "text": "open foundation model for ohlcv market data — forecasts price/vol as a language-modeling task. 86 stars/d lifetime.",
+        "variant": "caption"
+      }
+    },
+    "aisuite": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aisuite_link",
+        "aisuite_meta",
+        "aisuite_desc"
+      ]
+    },
+    "aisuite_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "andrewyng/aisuite",
+        "href": "https://github.com/andrewyng/aisuite",
+        "source": "GitHub"
+      }
+    },
+    "aisuite_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "aisuite_stars",
+        "aisuite_lang",
+        "aisuite_badge"
+      ]
+    },
+    "aisuite_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "14.5k",
+        "delta": "+291 today"
+      }
+    },
+    "aisuite_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "aisuite_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "aisuite_desc": {
+      "type": "Text",
+      "props": {
+        "text": "ng's one-line provider-swap sdk now ships a desktop app (v0.1.0, 6-11) — the openai-compatible shim grows a gui.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      }
+    },
+    "boo_dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "boo_dev_link",
+        "boo_dev_meta",
+        "boo_dev_desc"
+      ]
+    },
+    "boo_dev_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "coder/boo",
+        "href": "https://github.com/coder/boo",
+        "source": "GitHub"
+      }
+    },
+    "boo_dev_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "boo_dev_stars",
+        "boo_dev_lang",
+        "boo_dev_badge"
+      ]
+    },
+    "boo_dev_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "0.5k",
+        "delta": "~100/d"
+      }
+    },
+    "boo_dev_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Zig"
+      }
+    },
+    "boo_dev_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEBUT",
+        "variant": "secondary"
+      }
+    },
+    "boo_dev_desc": {
+      "type": "Text",
+      "props": {
+        "text": "multiplexer on libghostty — screen/tmux ergonomics on ghostty's render core.",
+        "variant": "caption"
+      }
+    },
+    "kage": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kage_link",
+        "kage_meta",
+        "kage_desc"
+      ]
+    },
+    "kage_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "tamnd/kage",
+        "href": "https://github.com/tamnd/kage",
+        "source": "GitHub"
+      }
+    },
+    "kage_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "kage_stars",
+        "kage_lang",
+        "kage_badge"
+      ]
+    },
+    "kage_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "1.1k",
+        "delta": "1d old"
+      }
+    },
+    "kage_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Go"
+      }
+    },
+    "kage_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEBUT",
+        "variant": "secondary"
+      }
+    },
+    "kage_desc": {
+      "type": "Text",
+      "props": {
+        "text": "shadows any site to static offline html with the javascript stripped — read-only mirror, no runtime, no tracking.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h2"
+      }
+    },
+    "aur_check": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aur_check_link",
+        "aur_check_meta",
+        "aur_check_desc"
+      ]
+    },
+    "aur_check_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "lenucksi/aur-malware-check",
+        "href": "https://github.com/lenucksi/aur-malware-check",
+        "source": "GitHub"
+      }
+    },
+    "aur_check_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "aur_check_stars",
+        "aur_check_lang",
+        "aur_check_badge"
+      ]
+    },
+    "aur_check_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "1.0k",
+        "delta": "3d old"
+      }
+    },
+    "aur_check_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Shell"
+      }
+    },
+    "aur_check_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEBUT",
+        "variant": "secondary"
+      }
+    },
+    "aur_check_desc": {
+      "type": "Text",
+      "props": {
+        "text": "consolidated community scanners for the reported june-2026 aur atomic-lockfile supply-chain attack — check if you got hit.",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok (16) · gh_api=ok · kept 5 (2 feed + 3 fallback)",
+        "variant": "muted"
+      }
+    }
+  }
+}

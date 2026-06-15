@@ -1,0 +1,79 @@
+{
+  "root": "card_btc",
+  "state": {},
+  "elements": {
+    "card_btc": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC levels",
+        "description": "Spot $66,400"
+      },
+      "children": [
+        "text_recap",
+        "sep1",
+        "stack_details",
+        "sep2",
+        "alert_disclaimer"
+      ]
+    },
+    "text_recap": {
+      "type": "Text",
+      "props": {
+        "text": "✅ Reclaimed $65,900 — stabilization confirmed per the 2026-06-09 advisor levels (prior reclaim of $63,500 already logged).",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_close",
+        "text_breakdown",
+        "text_trigger"
+      ]
+    },
+    "text_close": {
+      "type": "Text",
+      "props": {
+        "text": "Previous UTC daily close: $65.7k",
+        "variant": "body"
+      }
+    },
+    "text_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "Well clear of the $60,500 breakdown line.",
+        "variant": "body"
+      }
+    },
+    "text_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Leveraged cbBTC position: review trigger sits way below at ≤$45k.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_disclaimer": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Not financial advice."
+      }
+    }
+  }
+}
