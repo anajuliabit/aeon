@@ -1,0 +1,123 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC Levels"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "spot_price",
+        "status_info",
+        "separator1",
+        "price_levels_heading",
+        "price_levels_grid",
+        "context_text",
+        "separator2",
+        "cbBTC_heading",
+        "cbBTC_stat",
+        "disclaimer"
+      ]
+    },
+    "spot_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$66.4k"
+      }
+    },
+    "status_info": {
+      "type": "Text",
+      "props": {
+        "text": "✅ Reclaimed $65,900 — stabilization confirmed per 2026-06-09 advisor levels"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "price_levels_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Price Levels",
+        "level": "h3"
+      }
+    },
+    "price_levels_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "prev_close",
+        "breakdown_line",
+        "prior_reclaim"
+      ]
+    },
+    "prev_close": {
+      "type": "Stat",
+      "props": {
+        "label": "Previous UTC Daily Close",
+        "value": "$65.7k"
+      }
+    },
+    "breakdown_line": {
+      "type": "Stat",
+      "props": {
+        "label": "Breakdown Line",
+        "value": "$60,500"
+      }
+    },
+    "prior_reclaim": {
+      "type": "Stat",
+      "props": {
+        "label": "Prior Reclaim",
+        "value": "$63,500"
+      }
+    },
+    "context_text": {
+      "type": "Text",
+      "props": {
+        "text": "Well clear of the $60,500 breakdown line. Prior reclaim of $63,500 already logged.",
+        "variant": "muted"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "cbBTC_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Leveraged cbBTC Position",
+        "level": "h3"
+      }
+    },
+    "cbBTC_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Review Trigger (sits way below)",
+        "value": "≤$45k"
+      }
+    },
+    "disclaimer": {
+      "type": "Alert",
+      "props": {
+        "message": "Not financial advice",
+        "type": "info"
+      }
+    }
+  }
+}

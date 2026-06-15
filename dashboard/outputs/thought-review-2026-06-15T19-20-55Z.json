@@ -1,0 +1,60 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Thought Review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_period",
+        "badge_status",
+        "text_context",
+        "alert_surface"
+      ]
+    },
+    "text_period": {
+      "type": "Text",
+      "props": {
+        "text": "🧭 Last 24h",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "No captures",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "Inbox cold since the personal-stack PR (~3.5d, 10th zero run)"
+      },
+      "children": []
+    },
+    "alert_surface": {
+      "type": "Alert",
+      "props": {
+        "title": "Status",
+        "message": "Nothing to surface",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi Overview",
+        "description": "06-15 staged"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict_badge",
+        "separator1",
+        "metrics_stack"
+      ]
+    },
+    "verdict_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed verdict",
+        "variant": "secondary"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tvl_stat",
+        "dex_vol_stat",
+        "stables_badge",
+        "hl_chain_stat",
+        "world_chain_stat",
+        "weth_usdt_stat",
+        "separator2",
+        "pending_note"
+      ]
+    },
+    "tvl_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "+2.6%",
+        "trend": "up"
+      }
+    },
+    "dex_vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume (Hormuz risk-on)",
+        "value": "+24%",
+        "trend": "up"
+      }
+    },
+    "stables_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Stables flat",
+        "variant": "default"
+      }
+    },
+    "hl_chain_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HL L1 Chain Mover",
+        "value": "+6.9%",
+        "trend": "up"
+      }
+    },
+    "world_chain_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "World Chain",
+        "value": "+24%",
+        "trend": "up"
+      }
+    },
+    "weth_usdt_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "WETH-USDT Real-Yield",
+        "value": "40.5%"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pending_note": {
+      "type": "Text",
+      "props": {
+        "text": "Body in .pending-notify/",
+        "variant": "caption"
+      }
+    }
+  }
+}
