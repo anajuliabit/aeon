@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-15T07:47:30Z",
-  "lastSpot": 65507.93441230713,
+  "updatedAt": "2026-06-15T13:58:36Z",
+  "lastSpot": 66427.01515944122,
   "lastDailyClose": 65713.6235604093,
   "lastDailyCloseDate": "2026-06-14",
   "inLeverageReviewBand": false,
   "breakdownAlertedForClose": null,
   "reclaim63500Alerted": true,
-  "reclaim65900Alerted": false
+  "reclaim65900Alerted": true
 }
