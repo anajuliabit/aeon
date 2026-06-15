@@ -1,0 +1,65 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "captures_stat",
+        "status_group",
+        "context_text"
+      ]
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures (last 24h)",
+        "value": "0"
+      }
+    },
+    "status_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "inbox_badge",
+        "status_text"
+      ]
+    },
+    "inbox_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "inbox cold",
+        "variant": "outline"
+      }
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "No idea-capture blocks in window. Nothing to surface."
+      }
+    },
+    "context_text": {
+      "type": "Text",
+      "props": {
+        "text": "11th zero-capture run since personal-stack PR (~4d cold)",
+        "variant": "muted"
+      }
+    }
+  }
+}
