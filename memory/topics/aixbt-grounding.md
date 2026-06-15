@@ -1,53 +1,49 @@
-# AIXBT Grounding (as of 2026-06-15 09:00 UTC)
+# AIXBT Grounding (as of 2026-06-15 21:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-15T09:00:27.356Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-15T21:00:18.003Z
 
-Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again (3rd+ consecutive window) — iterating dynamically over whatever sections appear.
+Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent 4th+ consecutive window — iterating dynamically over whatever sections appear.
 
 ## Crypto
-- Bitcoin pushed back above $65K on US-Iran peace relief, sparking $250M in short liquidations; ETF outflows steadying, whale selling fading.
-- Hyperliquid leads attention with $161M in HYPE ETF inflows, roughly $1B annualized revenue, and HIP-3 broadening perps into equities/commodities.
-- Solana under pressure to move past memecoins: $250M USDC minted on-chain, SPCX tokenized shares rising, but SOL near $70 needs fresh app wins.
-- On-chain gaming split as Fishing Frenzy shut down while Kintara surged on real player earnings; ZEC and WLD drove altcoin gains on privacy/AI.
+- US-Iran deal resolution triggered a broad crypto relief rally; BTC reclaimed $67K but traders remain cautious, eyeing BOJ hike risk and weekly close above $83K for trend confirmation.
+- SpaceX $SPCX dominated attention with $51M+ on-chain volume on Solana, reinforcing the chain's grip on tokenized equities and cementing RWA trading as a breakout narrative.
+- BlackRock's $BITA covered-call BTC ETF launches tomorrow targeting 15-25% yield; Kraken goes live with CFTC-regulated perps, accelerating institutional onshore derivatives access.
+- DeFi yield strategies via Pendle, Altura, and YieldBasis gain mindshare; Uniswap tipped for 40x by StanChart on tokenization tailwinds as protocol-level revenue sharing re-enters focus.
 
 ## TradFi
-- A US-Iran interim deal to reopen the Strait of Hormuz cuts conflict risk, fueling risk-on positioning with equities up and oil tumbling.
-- Oil falling near $80 eases inflation, trimming hike bets and fueling Treasury rallies with yields compressing sharply.
-- Equity futures and Asian indices climb on a fading geopolitical premium, drawing flows into cyclicals and EM as VIX slips.
-- The dollar softens and safe-haven flows reverse on a better liquidity outlook, supporting carry trades and risk assets.
+- US-Iran ceasefire framework slashes geopolitical risk premium, triggering aggressive long equity positioning and broad risk-on flows into cyclicals as oil drops over 5%.
+- Lower energy prices from Hormuz reopening ease inflation pressures, supporting bond rallies and shifting rate expectations toward easier policy paths.
+- De-escalation reduces safe-haven demand for dollar and treasuries, transmitting cross-asset into weaker USD and compressed vol supporting risk assets.
+- Defense and energy sector shorts face unwind pressure while banks and cyclicals gain from improved macro liquidity and funding conditions.
 
-## What's New (vs last pull 2026-06-14 21:00 UTC)
-- (Crypto) **BTC reclaimed $65K, framing flipped to short-squeeze** — prior was "$64K bearish with contrarian signals (Saylor/ETF/CZ)." Now $250M short liqs, ETF outflows *steadying* (not inflows positive), whale selling fading. Price up; framing moved from named catalysts to squeeze mechanics.
-- (Crypto) **$161M HYPE ETF inflows + HIP-3 perps into equities/commodities** — prior HYPE was a bare price target ("eyeing $100"). Now flows + product: a HYPE ETF taking inflows, ~$1B annualized revenue, HIP-3 expanding perps into equities/commodities.
-- (Crypto) **On-chain gaming section is entirely new** — Fishing Frenzy shut down, Kintara surged on real player earnings. Never appeared in any prior window.
-- (Crypto) **ZEC (privacy) + WLD (AI) as altcoin gainers** — new names leading the altcoin bid. ZEC privacy rotation aligns with today's token-movers ZEC +15.9% squeeze+audit print.
-- (Crypto) **Solana reframed from dominance to pressure** — "needs to move past memecoins," SOL near $70 "needs fresh app wins." USDC mint number fell from $3.5B → $250M and framing went bearish.
-- (TradFi) **"interim deal" — deal status firmed** — prior was "progress toward a deal." Now an explicit interim deal to reopen Hormuz.
-- (TradFi) **Dollar SOFTENS — direct reversal in 12h** — 21:00Z said "Fed hold anchoring dollar strength." 09:00Z says "the dollar softens." Same feed, opposite sign, one window apart.
-- (TradFi) **Treasury rallies / yields compressing sharply** — prior was "modest yield easing." Now an explicit, sharp duration bid.
-- (TradFi) **VIX + EM + Asian indices** — new explicit risk gauges; flows into cyclicals and EM, VIX slipping.
+## What's New (vs last pull 2026-06-15 09:00 UTC)
+- (Crypto) **BTC reclaimed $67K** — was $65K at 09:00Z (+$2K in 12h); framing shifted from squeeze mechanics to post-deal relief rally; BOJ hike risk and $83K weekly close as new caution/confirmation markers
+- (Crypto) **SPCX $51M+ on-chain volume on Solana** — prior had SPCX as a minor persisting reference ("tokenized shares rising"); now the lead Solana story with explicit volume print; narrative flipped from "under pressure" to "grip"
+- (Crypto) **BlackRock $BITA covered-call BTC ETF launches tomorrow, targeting 15-25% yield; Kraken CFTC-regulated perps** — entirely new; no mention in any prior pull
+- (Crypto) **DeFi yield via Pendle, Altura, YieldBasis; Uniswap 40x call from StanChart** — entirely new names; protocol revenue sharing re-entering focus
+- (TradFi) **"ceasefire framework"** — escalated from "interim deal" (09:00Z); same direction, stronger language
+- (TradFi) **Defense/energy shorts unwind; banks/cyclicals gaining** — new explicit sector-level specificity
 
-## Gone (dropped from 2026-06-14 21:00 UTC)
-- VVV +907% / TAO AI-token leadership — the DeAI/AI-basket item dropped from crypto entirely (AI bid now shows as WLD/ZEC gainers, not the compute basket)
-- DeFi TVL at 2021 lows on exploit fears — dropped
-- Saylor buy hint / CZ supercycle / named contrarian actors — dropped (BTC now squeeze mechanics)
-- USD1 stablecoin via UFC bonuses — dropped
-- Aerodrome (Base) prediction-market-style LP allocation — dropped
-- CARDS collectibles / ICM narrative — dropped
-- Bittensor subnet milestones — dropped
-- (TradFi) "Fed hold" policy frame — dropped (no Fed mention today)
-- (TradFi) "conflict fatigue compresses tail risks" — dropped (replaced by concrete deal terms)
-- (TradFi) credit spreads tightening — dropped (now Treasury/yields framing instead of credit)
+## Gone (dropped from 2026-06-15 09:00 UTC)
+- (Crypto) Hyperliquid HYPE ETF $161M inflows + HIP-3 perps into equities/commodities — dropped entirely
+- (Crypto) Solana "under pressure / needs app wins" framing — fully reversed
+- (Crypto) On-chain gaming (Fishing Frenzy shutdown, Kintara surge) — dropped
+- (Crypto) ZEC (privacy) + WLD (AI) as altcoin gainers — dropped
+- (Crypto) $250M short liquidations / squeeze mechanics framing — subsumed into "relief rally"
+- (TradFi) VIX slipping, EM flows, Asian indices climb — dropped
+- (TradFi) "yields compressing sharply" explicit language — generalized to "bond rallies"
+- (TradFi) Carry trades — dropped
 
 ## Persisting Stories
-- **BTC ~$64-65K level** — reclaimed $65K this window; the level itself has held across every recent pull
-- **US-Iran de-escalation → oil lower → risk-on** — 7th+ consecutive window; now an "interim deal to reopen Hormuz," same direction, same transmission
-- **Solana USDC minting + SPCX tokenized shares** — persists, but mint number collapsed $3.5B → $250M and framing flipped to "under pressure"; SPCX is the one durable Solana story
-- **Hyperliquid/HYPE mindshare** — persisting; form cycled back to product/flows (ETF inflows + HIP-3) from last window's bare price target
+- **US-Iran deal → risk-on → oil lower** — 9th+ consecutive window; escalated from "interim deal" to "ceasefire framework," same directional transmission
+- **BTC at key levels** — $65K → $67K across the 12h window; level itself has held as the anchor across every recent pull
+- **SPCX tokenized equities on Solana** — persisting 3+ windows; now dominant (was minor reference)
+- **Weaker dollar / safe-haven reversal / vol compression → risk assets** — present every window since the Hormuz story landed
+- **Institutional derivatives pipeline** — Hyperliquid $1B annualized → BlackRock ETF launching tomorrow; same regime, new product
 
 ## Cross-Domain Bridges
-- the whole tape is one trade. hormuz deal → oil tumbling → btc reclaims $65k. crypto item 1 and tradfi item 1 are the same headline hitting two rails. yesterday's market-context called this deal "effectively failed" (iran-peace YES 11%) — today it's an "interim deal." the feed front-ran the resolution by a day. risk-on is real, but it's single-catalyst — one headline reversal unwinds the entire move.
-- the dollar flipped sign in 12h. 21:00Z: "fed hold anchoring dollar strength." 09:00Z: "dollar softens." softer dollar + sharply compressing yields is the liquidity tailwind crypto's been waiting for — but BOJ tuesday is the test. sticks past the BOJ print = regime. doesn't = window artifact, same class of noise as the VVV basket rotation last week.
-- AI-token leadership vanished from the crypto section. yesterday VVV +907% / TAO anchored it. today the AI bid is WLD (ai) and ZEC (privacy) gainers — rotation within the trade, not exit. but DeAI compute dropping out of the 12h window the same day token-movers logs AKT +10.6% / TAO 7d +33% means the grounding window lags the tape here. trust the chain prints over the paraphrase.
-- solana flipped from momentum to pressure in one window. yesterday: "$3.5b usdc minted, dominates on-chain activity." today: "$250m usdc, under pressure to move past memecoins, sol near $70 needs app wins." the read is memecoin fatigue — capital wants apps with revenue (hyperliquid's $1b annualized) over casino throughput. SPCX tokenized shares is the only solana story that survived the regime shift.
+- blackrock $bita covered-call BTC ETF launches tomorrow at $67K targeting 15-25% yield. that's institutions arriving to sell vol, not buy delta. the covered-call structure says they're pricing a range, not a breakout. risk-on is real — but the first institutional BTC product on the tape is a yield extraction structure. they think spot is near-term capped.
+- SPCX $51M on-chain volume flipped the solana narrative from "under pressure, needs app wins" (09:00Z) to "cementing RWA grip" (21:00Z) in 12h. one volume day did that. but the causation chain is compressed: hormuz peace → oil -5% → risk-on → capital into Solana RWA → narrative flip. the receipt is real; the 12h lag means the grounding window caught the result, not the cause.
+- DeFi yield mindshare shift from casino throughput to protocol revenue — Pendle/YieldBasis/Uniswap, StanChart 40x call, revenue sharing back in focus. hyperliquid's $1B annualized was the proof-of-concept. capital is now asking which protocols actually make money. sherwood/mamo territory.
+- BOJ hike risk entered the crypto section for the first time — "eyeing BOJ hike risk" after BTC $67K. macro and geo sections absent 4th+ window, but the inputs aren't gone — they're bleeding into the crypto items. trust the bleed-through: BOJ tuesday is the next binary for the risk-on window.
