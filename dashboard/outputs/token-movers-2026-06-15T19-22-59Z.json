@@ -1,0 +1,402 @@
+{
+  "root": "card-movers",
+  "state": {},
+  "elements": {
+    "card-movers": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers — 2026-06-15 (intraday)"
+      },
+      "children": [
+        "market-sentiment",
+        "market-stats",
+        "sep1",
+        "winners-section",
+        "sep2",
+        "losers-section",
+        "sep3",
+        "trending-section",
+        "sep4",
+        "notable-section"
+      ]
+    },
+    "market-sentiment": {
+      "type": "Text",
+      "props": {
+        "text": "Risk-on extending; majors and alts bid together.",
+        "variant": "lead"
+      }
+    },
+    "market-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-market-green",
+        "stat-median",
+        "stat-eth",
+        "stat-sol",
+        "stat-btc"
+      ]
+    },
+    "stat-market-green": {
+      "type": "Stat",
+      "props": {
+        "label": "Top-100 Green",
+        "value": "92/100"
+      }
+    },
+    "stat-median": {
+      "type": "Stat",
+      "props": {
+        "label": "Median Top-50",
+        "value": "+4.8%",
+        "trend": "up"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,811",
+        "delta": "+8.7%",
+        "trend": "up"
+      }
+    },
+    "stat-sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$74",
+        "delta": "+8.7%",
+        "trend": "up"
+      }
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$66,410",
+        "delta": "+3.3%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol/Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "H (Humanity)",
+            "$0.3112",
+            "+28.5%",
+            "−56.9%",
+            "+7.4%",
+            "$187M / #97",
+            "FADE"
+          ],
+          [
+            "ZRO (LayerZero)",
+            "$1.16",
+            "+25.8%",
+            "+31.1%",
+            "+0.6%",
+            "$84M / #139",
+            "BREAKOUT"
+          ],
+          [
+            "ZEC (Zcash)",
+            "$530",
+            "+24.5%",
+            "+22.4%",
+            "−0.4%",
+            "$866M / #14",
+            "TRENDING+UP, MAJOR"
+          ],
+          [
+            "JTO (Jito)",
+            "$0.6582",
+            "+22.6%",
+            "+4.3%",
+            "+1.8%",
+            "$80M / #134",
+            "—"
+          ],
+          [
+            "WLD (Worldcoin)",
+            "$0.6094",
+            "+21.4%",
+            "+27.8%",
+            "−0.4%",
+            "$1.1B / #43",
+            "BREAKOUT"
+          ],
+          [
+            "AERO (Aerodrome)",
+            "$0.4260",
+            "+19.5%",
+            "+25.6%",
+            "+1.7%",
+            "$34M / #121",
+            "BREAKOUT"
+          ],
+          [
+            "NEAR",
+            "$2.47",
+            "+17.4%",
+            "+16.3%",
+            "−0.1%",
+            "$512M / #31",
+            "TRENDING+UP"
+          ],
+          [
+            "XLM (Stellar)",
+            "$0.2129",
+            "+16.3%",
+            "+5.2%",
+            "+4.3%",
+            "$342M / #16",
+            "MAJOR"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "losers-table",
+        "losers-note"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol/Rank"
+        ],
+        "rows": [
+          [
+            "BEAT (Audiera)",
+            "$4.15",
+            "−24.3%",
+            "−7.4%",
+            "−2.1%",
+            "$53M / #63"
+          ],
+          [
+            "VELVET",
+            "$0.3329",
+            "−15.4%",
+            "−2.1%",
+            "+0.8%",
+            "$23M / #216"
+          ],
+          [
+            "GWEI (ETHGas)",
+            "$0.1488",
+            "−10.8%",
+            "+4.5%",
+            "+1.4%",
+            "$9M / #136"
+          ]
+        ]
+      }
+    },
+    "losers-note": {
+      "type": "Text",
+      "props": {
+        "text": "Real losers are scarce — the rest of the bottom-10 is under −5%, mostly flat in a green tape.",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending-heading",
+        "trending-table"
+      ]
+    },
+    "trending-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Rank",
+          "Price",
+          "24h",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "ZEC (Zcash)",
+            "#14",
+            "$532",
+            "+24.5%",
+            "—"
+          ],
+          [
+            "HYPE (Hyperliquid)",
+            "#10",
+            "$67.25",
+            "+10.0%",
+            "—"
+          ],
+          [
+            "PENGU (Pudgy Penguins)",
+            "#115",
+            "$0.007205",
+            "+9.3%",
+            "—"
+          ],
+          [
+            "GRAM (ex-Toncoin)",
+            "#22",
+            "$1.78",
+            "+2.5%",
+            "—"
+          ],
+          [
+            "SIREN",
+            "#533",
+            "$0.0550",
+            "−33.7%",
+            "TRENDING+DOWN"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-zec",
+        "notable-breakouts",
+        "notable-h",
+        "notable-siren"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-zec": {
+      "type": "Alert",
+      "props": {
+        "title": "ZEC (Zcash): Privacy Rotation",
+        "message": "Trending + #14 major, accelerated from +15.9% this morning to +24.5% on $866M vol — privacy rotation has legs, short-squeeze + clean audit tape behind it.",
+        "type": "info"
+      }
+    },
+    "notable-breakouts": {
+      "type": "Alert",
+      "props": {
+        "title": "Four BREAKOUTs at Once",
+        "message": "ZRO/WLD/AERO + GRASS off-list — 24h and 7d both green, sustained not flash.",
+        "type": "info"
+      }
+    },
+    "notable-h": {
+      "type": "Alert",
+      "props": {
+        "title": "H (Humanity): FADE Signal",
+        "message": "+28.5% but 7d −56.9% — relief spike inside a brutal downtrend, 1h +7.4% still hot.",
+        "type": "warning"
+      }
+    },
+    "notable-siren": {
+      "type": "Alert",
+      "props": {
+        "title": "SIREN: Capitulation",
+        "message": "−33.7% trending — second straight session capitulating (was −47.7% AM).",
+        "type": "error"
+      }
+    }
+  }
+}

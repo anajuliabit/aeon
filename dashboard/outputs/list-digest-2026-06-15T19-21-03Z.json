@@ -1,0 +1,163 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "Tracked list activity summary"
+      },
+      "children": [
+        "heading",
+        "intro",
+        "list-meta",
+        "sep1",
+        "tweet1",
+        "link1",
+        "tweet2",
+        "link2",
+        "tweet3",
+        "link3",
+        "tweet4",
+        "link4",
+        "sep2",
+        "footer",
+        "metadata"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "List Digest — 2026-06-15",
+        "level": "h2"
+      }
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "cyrilXBT owns the list with two long-form pieces (137k + 37k views) — but both are X-premium gated, so the signal is \"he's shipping deep threads people pay attention to,\" not the contents. Only readable substance is Flowslikeosmo's weekly watchlist.",
+        "variant": "body"
+      }
+    },
+    "list-meta": {
+      "type": "Text",
+      "props": {
+        "text": "Tracked list: 1642770456720683008",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "long-form article, list-dominant by 9x on views (137k); body paywalled (HTTP 402) so contents unverified — flagging the reach, not faking the take",
+        "likes": 304,
+        "retweets": 48
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2065984221756219807"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "second gated article same day (37k views); two premium drops in 24h = he's the list's center of gravity right now",
+        "likes": 135,
+        "retweets": 15
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2066307561792610490"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "weekly watchlist: $INDY (Cardano CDP, fees +1,495% 30d, price +38% wk), yieldbasis (fees +156% wk, no token), $RAIL privacy (+24% wk). The \"no token yet\" names are the real tell — flagging pre-listing fee growth, not chasing pumps",
+        "likes": 32,
+        "retweets": 4
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2066248308713230387"
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "\"war's over, coins due for a pump\" — the list is trading the US-Iran peace-deal headline as risk-on fuel, but Polymarket had that deal at 11% yesterday; positioning ahead of a story that already faded",
+        "likes": 24,
+        "retweets": 0
+      }
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2066278829325201418"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "Rest of the list was low-signal one-liner replies — quiet day under the top four.",
+        "variant": "muted"
+      }
+    },
+    "metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "source-badge",
+        "status-badge"
+      ]
+    },
+    "source-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "sources: list1=ok(10)",
+        "variant": "secondary"
+      }
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}
