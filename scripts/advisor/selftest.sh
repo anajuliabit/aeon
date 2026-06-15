@@ -171,7 +171,7 @@ STFILT=$(printf '%s' "$STTR_IN" | jq -c --arg held "$STHELD" '
         and (if $side=="short"
              then (.target//0)>0 and (.target<.entry) and ((.invalidate//0)==0 or (.invalidate>.entry))
              else (.target//0)>(.entry) and ((.invalidate//0)==0 or (.invalidate<.entry)) end))]
-    | .[0:2]}')
+    | .[0:5]}')
 check "sttrade keeps valid long + short, drops rest" "$(printf '%s' "$STFILT" | jq -r '.trades|length')" "2"
 check "sttrade keeps WIF long" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol=="WIF")]|length')" "1"
 check "sttrade keeps PEPE short" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol=="PEPE" and .side=="short")]|length')" "1"
@@ -179,5 +179,11 @@ check "sttrade drops held/mis-oriented/no-id" "$(printf '%s' "$STFILT" | jq -r '
 STSHORT=$(printf '%s' "$STFILT" | jq -c '[.trades[]|select(.side=="short")][0] | {side, entryPriceUsd:.entry,
   invalidationPriceUsd:(if (.invalidate//0)<=0 then null elif .side=="short" and .invalidate>.entry then .invalidate elif .side!="short" and .invalidate<.entry then .invalidate else null end)}')
 check "sttrade short keeps inv above entry" "$(printf '%s' "$STSHORT" | jq -r '"\(.side) \(.invalidationPriceUsd)"')" "short 0.0012"
+# Cap: many valid ideas are kept up to 5 (was 2). 7 valid longs -> 5.
+STMANY=$(jq -nc '{trades:[range(0;7) as $i | {symbol:("T"+($i|tostring)), coingeckoId:("id"+($i|tostring)), side:"long", entry:1.0, target:1.5, invalidate:0.8}]}' \
+  | jq -c '{trades:[.trades[]? | (.side//"long") as $side | select(.symbol!=null and .coingeckoId!=null and (.entry//0)>0
+      and (if $side=="short" then (.target//0)>0 and (.target<.entry) and ((.invalidate//0)==0 or (.invalidate>.entry))
+           else (.target//0)>(.entry) and ((.invalidate//0)==0 or (.invalidate<.entry)) end))] | .[0:5]}')
+check "sttrade cap keeps up to 5 ideas" "$(printf '%s' "$STMANY" | jq -r '.trades|length')" "5"
 
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }

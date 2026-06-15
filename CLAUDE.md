@@ -97,8 +97,9 @@ Lives on **`main`** (not feature branches). Scheduled via `.github/workflows/`:
   shortlist of liquid, non-held, non-stable movers from `cg-markets` (vol/mcap
   ≥0.05, top |7d| moves); (2) per-candidate **Grok `x_search`** (news/X/catalysts,
   last 7d) — fundamentals/news leg; (3) one LLM decision (`advisor/prompts/short_term_trades.md`)
-  over momentum + fundamentals (`protocols`/`fees`) + news → 0–2 trades, **LONG or
-  SHORT**, ≤1% moonshot sleeve, side-correct levels. Surfaced in the Telegram
+  over momentum + fundamentals (`protocols`/`fees`) + news → a menu of **up to 5
+  trades** (mix of **LONG / SHORT**, ranked best-first; shortlist is 8 candidates),
+  ≤1% moonshot sleeve each, side-correct levels. Surfaced in the Telegram
   "🎯 Short-term trades" block + `report.shortTermTrades`, staged as
   `<date>-advisor-sttrade-<sym>` picks. Complements the daily `token-pick`.
 
