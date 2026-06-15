@@ -1,45 +1,34 @@
 {
-  "run_at": "2026-06-14T18:43:04Z",
+  "run_at": "2026-06-15T19:13:49Z",
   "goals": {
-    "reppo-swarm-migrated-to-docker": {
-      "status": "DONE",
-      "activity_count_14d": 14,
-      "last_activity_date": "2026-06-14"
-    },
     "capital-2x-program-double-net-worth-by-2027-12-31": {
       "status": "ON_TRACK",
-      "activity_count_14d": 50,
-      "last_activity_date": "2026-06-14"
+      "activity_count_14d": 65,
+      "last_activity_date": "2026-06-15"
     },
     "file-iss-019-weekly-limit-incident-by-2026-06-09": {
       "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 20,
-      "last_activity_date": "2026-06-14",
-      "note": "weekly-limit incident still unfiled (overdue 5d); ISS-018 slot taken 2026-06-13 by vuln-scanner — file as ISS-019"
+      "activity_count_14d": 22,
+      "last_activity_date": "2026-06-15",
+      "note": "ISS-019 still unfiled (overdue 6d from 6-09); high mention activity but no concrete file write — mentions are 'still unfiled' = work-toward not completion"
+    },
+    "pr-108-notify-file-flag-merged-watch-2026-06-15-standalone-runs": {
+      "status": "DONE",
+      "activity_count_14d": 12,
+      "last_activity_date": "2026-06-15",
+      "note": "PR #108 merged 6-14; today's standalone runs (morning-brief / github-trending / aixbt-pulse / weekly-shiplog) confirmed direct-delivered without .pending-notify carryover; PR #119 today hardened wrapper -f handling"
     },
     "index-bookkeeping-flips-iss-007-009-010-016-by-2026-06-10": {
       "status": "NEEDS_ATTENTION",
       "activity_count_14d": 25,
-      "last_activity_date": "2026-06-14",
-      "note": "ISS-007/009/010/016 still in Open table at memory/issues/INDEX.md (overdue 4d); all four have code or workarounds shipped"
-    },
-    "datanet-rubric-plus-1-datanet-config-by-2026-06-12": {
-      "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 18,
-      "last_activity_date": "2026-06-14",
-      "note": "no memory/datanets/RUBRIC.md exists; 13 unassigned datanets surface every off-CI orchestrator run (overdue 2d)"
-    },
-    "trading-agent-codify-spot-pct-and-sharpe-vs-pnl-tiebreak": {
-      "status": "BLOCKED",
-      "activity_count_14d": 30,
-      "last_activity_date": "2026-06-14",
-      "blocker": "operator-decision-gated (spot_pct threshold + Sharpe-vs-pnl tiebreak)"
+      "last_activity_date": "2026-06-15",
+      "note": "ISS-007/009/010/016 still in Open table at memory/issues/INDEX.md (overdue 5d from 6-10); high mention but no flip applied"
     },
     "on-chain-monitor-defi-monitor-watches-yml": {
       "status": "BLOCKED",
-      "activity_count_14d": 12,
-      "last_activity_date": "2026-06-14",
-      "blocker": "operator-gated — 9th consecutive NO_CONFIG day (memory/on-chain-watches.yml unseeded)"
+      "activity_count_14d": 14,
+      "last_activity_date": "2026-06-15",
+      "blocker": "operator-gated — 10th consecutive NO_CONFIG day (memory/on-chain-watches.yml unseeded since 6-06)"
     }
   }
 }

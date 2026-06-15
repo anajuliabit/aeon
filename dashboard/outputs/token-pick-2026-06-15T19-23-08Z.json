@@ -1,0 +1,387 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-15"
+      },
+      "children": [
+        "token-header",
+        "sep1",
+        "price-section",
+        "sep2",
+        "score-section",
+        "sep3",
+        "catalyst-section",
+        "sep4",
+        "risk-section",
+        "sep5",
+        "stake-section",
+        "sep6",
+        "recent-picks-section",
+        "sep7",
+        "market-section",
+        "sep8",
+        "sources-section",
+        "sep9",
+        "disclaimer-alert"
+      ]
+    },
+    "token-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "token-badge",
+        "signal-badge",
+        "signal-score"
+      ]
+    },
+    "token-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEAR",
+        "variant": "default"
+      }
+    },
+    "signal-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "signal-score": {
+      "type": "Text",
+      "props": {
+        "text": "signal 10/10",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "metrics-grid"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$2.47"
+      }
+    },
+    "metrics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "metric-24h",
+        "metric-7d",
+        "metric-mcap",
+        "metric-vol",
+        "metric-vol-mcap"
+      ]
+    },
+    "metric-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+17.5%",
+        "trend": "up"
+      }
+    },
+    "metric-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+16.3%",
+        "trend": "up"
+      }
+    },
+    "metric-mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "mcap",
+        "value": "$3.2B"
+      }
+    },
+    "metric-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "vol",
+        "value": "$512M"
+      }
+    },
+    "metric-vol-mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "vol/mcap",
+        "value": "0.16"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "score-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "score-heading",
+        "score-breakdown-text"
+      ]
+    },
+    "score-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Score breakdown",
+        "level": "h3"
+      }
+    },
+    "score-breakdown-text": {
+      "type": "Text",
+      "props": {
+        "text": "24h+, 7d+, both>5%+2, trending+2, vol/mcap+2, RS vs BTC/ETH+2 = 10/10",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "catalyst-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "catalyst-heading",
+        "catalyst-text"
+      ]
+    },
+    "catalyst-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      }
+    },
+    "catalyst-text": {
+      "type": "Text",
+      "props": {
+        "text": "dynamic resharding (network v2.13, shipping june) auto-splits shards on demand — token ran ~27-30% on the news leg, with ~$32M NEAR Intents fees and a $19B cross-chain volume print giving real usage under the move, not just risk-on beta.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "risk-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "risk-heading",
+        "risk-text"
+      ]
+    },
+    "risk-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "risk-text": {
+      "type": "Text",
+      "props": {
+        "text": "broke from a ~$2.10 base on the broad hormuz risk-on day (86/100 top-100 green) — if the pop is pure beta it unwinds post-BOJ tuesday; no token unlock flagged near term.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stake-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stake-heading",
+        "stake-text",
+        "exit-heading",
+        "exit-text"
+      ]
+    },
+    "stake-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake",
+        "level": "h3"
+      }
+    },
+    "stake-text": {
+      "type": "Text",
+      "props": {
+        "text": "<=0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap",
+        "variant": "body"
+      }
+    },
+    "exit-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit",
+        "level": "h3"
+      }
+    },
+    "exit-text": {
+      "type": "Text",
+      "props": {
+        "text": "target $2.90 / invalidate $2.10 / time-stop 14d",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "recent-picks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "recent-heading",
+        "recent-text"
+      ]
+    },
+    "recent-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Vs recent picks",
+        "level": "h3"
+      }
+    },
+    "recent-text": {
+      "type": "Text",
+      "props": {
+        "text": "first time (7d set: WLD, SENT, MORPHO, MON, TAO, XPL — all clean)",
+        "variant": "body"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "market-heading",
+        "market-text"
+      ]
+    },
+    "market-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market",
+        "level": "h3"
+      }
+    },
+    "market-text": {
+      "type": "Text",
+      "props": {
+        "text": "skipped — field is ~all 2026 World Cup winner futures (efficient, no defensible edge >=5pp). Putin-out-by-dec-31 8.5c prices ~3-5pp on NO, sub-gate and far-dated; Newsom 2028 resolves in 2+ years. No tactical edge today.",
+        "variant": "body"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "cg=ok, dex=ok, poly=ok, x=absent",
+        "variant": "body"
+      }
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "disclaimer-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "If you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it. Not financial advice — pattern-matching only."
+      }
+    }
+  }
+}

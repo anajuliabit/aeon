@@ -1,0 +1,173 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "BTC Levels"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-current-spot",
+        "sep-1",
+        "heading-reclaimed",
+        "stack-reclaimed-items",
+        "sep-2",
+        "heading-price-action",
+        "stack-price-action",
+        "sep-3",
+        "alert-cbbtc",
+        "text-disclaimer"
+      ]
+    },
+    "stat-current-spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Spot Price",
+        "value": "$66.4k"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-reclaimed": {
+      "type": "Heading",
+      "props": {
+        "text": "Reclaimed Levels",
+        "level": "h3"
+      }
+    },
+    "stack-reclaimed-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-65900",
+        "item-63500"
+      ]
+    },
+    "item-65900": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stack-65900-header",
+        "text-65900-context"
+      ]
+    },
+    "stack-65900-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-65900",
+        "stat-65900"
+      ]
+    },
+    "badge-65900": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ Confirmed",
+        "variant": "default"
+      }
+    },
+    "stat-65900": {
+      "type": "Stat",
+      "props": {
+        "value": "$65,900"
+      }
+    },
+    "text-65900-context": {
+      "type": "Text",
+      "props": {
+        "text": "Stabilization confirmed per 2026-06-09 advisor levels",
+        "variant": "caption"
+      }
+    },
+    "item-63500": {
+      "type": "Text",
+      "props": {
+        "text": "Prior reclaim: $63,500 (already logged)",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-price-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Price Action & Support",
+        "level": "h3"
+      }
+    },
+    "stack-price-action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-prev-close",
+        "text-breakdown-line"
+      ]
+    },
+    "stat-prev-close": {
+      "type": "Stat",
+      "props": {
+        "label": "Previous UTC Daily Close",
+        "value": "$65.7k"
+      }
+    },
+    "text-breakdown-line": {
+      "type": "Text",
+      "props": {
+        "text": "Well clear of the $60,500 breakdown line",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-cbbtc": {
+      "type": "Alert",
+      "props": {
+        "title": "cbBTC Leveraged Position",
+        "message": "Review trigger sits way below at ≤$45k",
+        "type": "warning"
+      }
+    },
+    "text-disclaimer": {
+      "type": "Text",
+      "props": {
+        "text": "Not financial advice.",
+        "variant": "muted"
+      }
+    }
+  }
+}

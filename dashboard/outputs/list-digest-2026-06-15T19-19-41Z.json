@@ -1,0 +1,207 @@
+{
+  "root": "list-digest-card",
+  "state": {},
+  "elements": {
+    "list-digest-card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-15",
+        "description": "Tracked list: 1642770456720683008"
+      },
+      "children": [
+        "intro-text",
+        "separator-1",
+        "posts-stack",
+        "separator-2",
+        "footer-stack"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "cyrilXBT owns the list with two long-form pieces (137k + 37k views) — but both are X-premium gated, so the signal is \"he's shipping deep threads people pay attention to,\" not the contents. Only readable substance is Flowslikeosmo's weekly watchlist.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "posts-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "post-1-container",
+        "post-2-container",
+        "post-3-container",
+        "post-4-container"
+      ]
+    },
+    "post-1-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-1-tweet",
+        "post-1-link"
+      ]
+    },
+    "post-1-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "Long-form article, list-dominant by 9x on views (137k); body paywalled (HTTP 402) so contents unverified — flagging the reach, not faking the take",
+        "likes": 304,
+        "retweets": 48
+      }
+    },
+    "post-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View post",
+        "href": "https://x.com/cyrilXBT/status/2065984221756219807"
+      }
+    },
+    "post-2-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-2-tweet",
+        "post-2-link"
+      ]
+    },
+    "post-2-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "Second gated article same day (37k views); two premium drops in 24h = he's the list's center of gravity right now",
+        "likes": 135,
+        "retweets": 15
+      }
+    },
+    "post-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View post",
+        "href": "https://x.com/cyrilXBT/status/2066307561792610490"
+      }
+    },
+    "post-3-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-3-tweet",
+        "post-3-link"
+      ]
+    },
+    "post-3-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "Weekly watchlist: $INDY (Cardano CDP, fees +1,495% 30d, price +38% wk), yieldbasis (fees +156% wk, no token), $RAIL privacy (+24% wk). The \"no token yet\" names are the real tell — flagging pre-listing fee growth, not chasing pumps",
+        "likes": 32,
+        "retweets": 4
+      }
+    },
+    "post-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View post",
+        "href": "https://x.com/Flowslikeosmo/status/2066248308713230387"
+      }
+    },
+    "post-4-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post-4-tweet",
+        "post-4-link"
+      ]
+    },
+    "post-4-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "\"War's over, coins due for a pump\" — the list is trading the US-Iran peace-deal headline as risk-on fuel, but Polymarket had that deal at 11% yesterday; positioning ahead of a story that already faded",
+        "likes": 24,
+        "retweets": 0
+      }
+    },
+    "post-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View post",
+        "href": "https://x.com/Flowslikeosmo/status/2066278829325201418"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rest-signal",
+        "status-info"
+      ]
+    },
+    "rest-signal": {
+      "type": "Text",
+      "props": {
+        "text": "Rest of the list was low-signal one-liner replies — quiet day under the top four.",
+        "variant": "muted"
+      }
+    },
+    "status-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "sources-badge",
+        "status-badge"
+      ]
+    },
+    "sources-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "sources: list1=ok(10)",
+        "variant": "outline"
+      }
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}
