@@ -1,0 +1,226 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-15"
+      },
+      "children": [
+        "tldr-section",
+        "sep-1",
+        "headlines-section",
+        "sep-2",
+        "notable-section",
+        "sep-3",
+        "decisions-section",
+        "sep-4",
+        "footer-section"
+      ]
+    },
+    "tldr-section": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: heavy monday — 4 articles + PR #122 shipped, both BTC levels armed; deal-flow 7d stuck and ISS-019 7d overdue heading into tuesday.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "hl-1",
+        "hl-2",
+        "hl-3",
+        "hl-4",
+        "hl-5"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "hl-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "weekly-shiplog",
+        "href": "https://github.com/aaronjmars/aeon/blob/main/articles/weekly-shiplog-2026-06-15.md",
+        "source": "Article",
+        "score": "113 commits / 109 PRs merged 7d; LLM gateway + soul builder + MCP mid-run"
+      }
+    },
+    "hl-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve",
+        "href": "https://github.com/anajuliabit/aeon/pull/122",
+        "source": "GitHub PR #122",
+        "score": "CLAUDE.md WebSearch 400 fallback fleet-documented"
+      }
+    },
+    "hl-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "weekly-review",
+        "href": "articles/weekly-review-2026-06-15.md",
+        "source": "Article",
+        "score": "314 runs / 83.4% (+21pp vs 62.3%); virtuals fallback drove the snap"
+      }
+    },
+    "hl-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-security-scan",
+        "href": "articles/security-scan-2026-06-15.md",
+        "source": "Article",
+        "score": "0 new HIGH, ISS-017 fix confirmed, advisor surface clean"
+      }
+    },
+    "hl-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness",
+        "href": "articles/skill-freshness-2026-06-15.md",
+        "source": "Article",
+        "score": "FRESHNESS_OK · 44 consumers · 8 deps · 0 flagged"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "not-1",
+        "not-2",
+        "not-3",
+        "not-4",
+        "not-5"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "not-1": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels ×6 — reclaim65900 FIRED 14:00Z ($66,427); both armed levels SET",
+        "variant": "body"
+      }
+    },
+    "not-2": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — 34→27; #27 risk-on NEW, #13 ZEC RESURRECTED, #7 BTC cap + #15 VELVET DEAD",
+        "variant": "body"
+      }
+    },
+    "not-3": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh — risk-on HIGH; ETH/SOL +8.7% outrunning BTC +3.3%; BOJ Tuesday tail live",
+        "variant": "body"
+      }
+    },
+    "not-4": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick — NEAR HIGH 10/10 ($2.47, +17.5% 24h); dynamic resharding v2.13 + $32M Intents fees",
+        "variant": "body"
+      }
+    },
+    "not-5": {
+      "type": "Text",
+      "props": {
+        "text": "reflect + action-converter — MEMORY.md consolidated; 5 actions queued (ISS-019 · index flips · XPL · evals · PR #112)",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "dec-1",
+        "dec-2",
+        "dec-3",
+        "dec-4"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "dec-1": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-019 (weekly-limit-wave, 7d overdue) — aeon.yml:498, FALLBACK_CG_SKILLS",
+        "variant": "body"
+      }
+    },
+    "dec-2": {
+      "type": "Text",
+      "props": {
+        "text": "flip INDEX.md for ISS-007/009/010/016 (6d overdue)",
+        "variant": "body"
+      }
+    },
+    "dec-3": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #112 (skill-graph docs, 27h open)",
+        "variant": "body"
+      }
+    },
+    "dec-4": {
+      "type": "Text",
+      "props": {
+        "text": "investigate deal-flow stuck dispatched since 2026-06-08 (7d)",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-section": {
+      "type": "Text",
+      "props": {
+        "text": "+19 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
