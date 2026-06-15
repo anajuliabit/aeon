@@ -1,10 +1,14 @@
-Skill is single-step (check config, log, exit) — no task tracking needed.
+Skill executed. No notification sent — correct per the skill spec.
 
 ## Summary
 
-**defi-monitor — DEFI_MONITOR_OK**
+Executed `skills/defi-monitor/SKILL.md`.
 
-- `memory/on-chain-watches.yml` absent. Per skill spec ("If no DeFi positions configured, log DEFI_MONITOR_OK and end"), exited cleanly. No notify, no fetches, no state mutation.
-- **9th consecutive NO_CONFIG day** (6-06 through 6-14). Mirrors the on-chain-monitor 09:00Z run earlier today. Continues to track in MEMORY.md Current Goals as `[BLOCKED: awaiting operator to seed memory/on-chain-watches.yml]`.
-- Files modified: `memory/logs/2026-06-14.md` (appended `### defi-monitor` block).
-- Follow-up: operator action required — seed `memory/on-chain-watches.yml` with at least one entry of `type: pool` or `type: position` to unblock both defi-monitor and on-chain-monitor.
+- **Verdict: `DEFI_MONITOR_OK` (NO_CONFIG)** — the config file `memory/on-chain-watches.yml` does not exist, so there are no DeFi positions to query. This matches the skill's terminal instruction: "If no DeFi positions configured, log 'DEFI_MONITOR_OK' and end."
+- **No notification sent** — `./notify` is reserved for actual findings (yield/TVL/liquidation changes); a no-config run is silent by design.
+- This is the **10th consecutive no-config day** (9 prior through 2026-06-14). The skill remains **BLOCKED awaiting the operator** to seed `memory/on-chain-watches.yml` with watched contracts/positions — already tracked in MEMORY.md Current Goals.
+
+**Files modified:**
+- `memory/logs/2026-06-15.md` — appended `### defi-monitor` log entry.
+
+**Follow-up needed:** Operator must create `memory/on-chain-watches.yml` (format documented in the skill's Config section) before this skill can do useful work. Until then it will continue logging `DEFI_MONITOR_OK` silently.
