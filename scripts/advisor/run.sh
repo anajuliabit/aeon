@@ -426,8 +426,23 @@ TRADES="$(printf '%s' "$TRADES" | jq -c --arg held "${HELD_LC:-}" '
                     then (.target // 0) > 0 and (.target < .entry) and ((.invalidate // 0) == 0 or (.invalidate > .entry))
                     else (.target // 0) > (.entry) and ((.invalidate // 0) == 0 or (.invalidate < .entry)) end))
     ] | .[0:5]}')"
+
+# Position sizing: split a short-term-risk budget (default 5% of net worth) across
+# the selected trades, conviction-weighted (HIGH = 2× MEDIUM). Deterministic so the
+# dollar amounts are reproducible from the report, not LLM-guessed. Override the
+# budget pct with ST_RISK_PCT.
+ST_RISK_PCT="${ST_RISK_PCT:-5}"
+ST_TOTAL="$(jq -r '.totalUsd // 0' "$D/snapshot.json" 2>/dev/null || echo 0)"
+ST_BUDGET="$(awk "BEGIN{printf \"%.2f\", ($ST_TOTAL * $ST_RISK_PCT) / 100}")"
+TRADES="$(printf '%s' "$TRADES" | jq -c --argjson budget "$ST_BUDGET" --argjson total "$ST_TOTAL" '
+  .trades as $t
+  | ([$t[] | (if ((.conviction // "") | ascii_upcase | startswith("HIGH")) then 2 else 1 end)] | add // 0) as $wsum
+  | {trades: [ $t[]
+      | (if ((.conviction // "") | ascii_upcase | startswith("HIGH")) then 2 else 1 end) as $w
+      | .sizeUsd = (if $wsum > 0 then (($budget * $w / $wsum) | floor) else 0 end)
+      | .sizePctNet = (if $total > 0 then (((.sizeUsd / $total) * 1000) | round) / 10 else 0 end) ]}')"
 REPORT="$(jq -n --argjson rpt "$REPORT" --argjson st "$TRADES" '$rpt | .shortTermTrades = ($st.trades // [])')"
-echo "advisor: short-term trades — $(printf '%s' "$TRADES" | jq '.trades | length') selected"
+echo "advisor: short-term trades — $(printf '%s' "$TRADES" | jq '.trades | length') selected; sized from ${ST_RISK_PCT}% (\$$(printf '%.0f' "$ST_BUDGET")) of net \$$(printf '%.0f' "$ST_TOTAL")"
 
 # ---------------------------------------------------------------------------
 # 5. Stage every actionable rec (increase/decrease/hedge with a symbol) as a
@@ -550,6 +565,7 @@ while read -r b; do
                                else null end),
         horizonDays: (.horizonDays // 14),
         conviction: (.conviction // "UNSTATED"),
+        notionalUsd: (if (.sizeUsd // 0) > 0 then .sizeUsd else 1000 end),
         thesis: (("SHORT-TERM " + ($side | ascii_upcase) + " — ") + (.thesis // ""))
       }')
   if [ "$DRY" = "1" ]; then
@@ -586,9 +602,10 @@ TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" '
        end)
     + "\n\n" + (if ($buys | length) == 0
        then "🎯 Short-term trades: none qualify today."
-       else "🎯 Short-term trades (≤1% sleeve each):\n" + ([$buys[]
+       else "🎯 Short-term trades (sized from a 5% short-term sleeve):\n" + ([$buys[]
          | "• " + (.conviction // "?") + " " + ((.side // "long") | ascii_upcase) + " " + (.symbol // "?")
-           + " $" + ((.entry // 0) | tostring) + " → $" + ((.target // 0) | tostring)
+           + (if (.sizeUsd // 0) > 0 then " ~$" + (.sizeUsd | tostring) + " (" + ((.sizePctNet // 0) | tostring) + "% net)" else "" end)
+           + " · $" + ((.entry // 0) | tostring) + " → $" + ((.target // 0) | tostring)
            + (if .invalidate then " (inv $" + (.invalidate | tostring) + ")" else "" end)
            + " / " + ((.horizonDays // 14) | tostring) + "d"
            + (if (.thesis // "") != "" then "\n   ↳ " + (.thesis | .[0:240]) else "" end)] | join("\n"))

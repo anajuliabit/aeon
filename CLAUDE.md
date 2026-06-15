@@ -99,7 +99,10 @@ Lives on **`main`** (not feature branches). Scheduled via `.github/workflows/`:
   last 7d) — fundamentals/news leg; (3) one LLM decision (`advisor/prompts/short_term_trades.md`)
   over momentum + fundamentals (`protocols`/`fees`) + news → a menu of **up to 5
   trades** (mix of **LONG / SHORT**, ranked best-first; shortlist is 8 candidates),
-  ≤1% moonshot sleeve each, side-correct levels. Surfaced in the Telegram
+  side-correct levels. **Sizing** is deterministic (not LLM): a short-term-risk
+  budget (`ST_RISK_PCT`, default 5% of net worth) is split across the trades
+  conviction-weighted (HIGH = 2× MEDIUM) → `sizeUsd`/`sizePctNet` per trade, used
+  as the pick `notionalUsd`. Surfaced in the Telegram
   "🎯 Short-term trades" block + `report.shortTermTrades`, staged as
   `<date>-advisor-sttrade-<sym>` picks. Complements the daily `token-pick`.
 
