@@ -689,7 +689,15 @@ jobs:
           cat > ./notify << 'NOTIFY_SCRIPT'
           #!/usr/bin/env bash
           set -euo pipefail
-          MSG="$1"
+          # Support `-f <file>` (file-flag convention) as well as a positional arg.
+          if [ "${1:-}" = "-f" ]; then
+            MSG="$(cat "${2:-}" 2>/dev/null || true)"
+          else
+            MSG="${1:-}"
+          fi
+          if [ -z "${MSG//[[:space:]]/}" ]; then
+            echo "notify: empty message, skipping" >&2; exit 0
+          fi
           if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
             curl -sf -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
               -H "Content-Type: application/json" \
