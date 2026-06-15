@@ -1,0 +1,12 @@
+{
+  "source": "token-pick",
+  "symbol": "NEAR",
+  "coingeckoId": "near",
+  "side": "long",
+  "entryPriceUsd": 2.47,
+  "targetPriceUsd": 2.90,
+  "invalidationPriceUsd": 2.10,
+  "horizonDays": 14,
+  "conviction": "HIGH (10/10)",
+  "thesis": "Dynamic resharding upgrade (network v2.13) shipping June 2026 auto-scales shard capacity on demand; token surged ~27-30% on the news leg, with NEAR Intents fees (~$32M) and a $19B cross-chain volume milestone giving real-usage demand under the move. Score 10/10: +17.5% 24h / +16.3% 7d, vol/mcap 0.16, on CG trending, outperforming both BTC (+4.7% 7d) and ETH (+7.7% 7d). Wrong if it loses the $2.10 breakout base (back into prior range) or if the 24h pop proves to be pure risk-on beta from the Hormuz de-escalation that unwinds post-BOJ Tuesday."
+}
