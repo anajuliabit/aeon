@@ -1,1 +1,13 @@
-₿ BTC levels: spot $66.4k. ✅ reclaimed $65,900 — stabilization confirmed per the 2026-06-09 advisor levels (prior reclaim of $63,500 already logged). prev UTC daily close $65.7k, well clear of the $60,500 breakdown line. leveraged cbBTC position: review trigger sits way below at ≤$45k. not financial advice.
+Done.
+
+## Summary
+
+**BTC levels run (~20:30Z)** — quiet, no alerts fired.
+
+- **Spot:** $66,537 | **Previous daily close (2026-06-14):** $65,714
+- Leverage-review trigger (≤$45k): far clear
+- Breakdown (<$60,500 close): clear
+- Reclaim $63,500: already flagged (`true`)
+- Reclaim $65,900: already flagged (`true`)
+
+State updated with new spot price and committed alongside the log entry.
