@@ -22,6 +22,10 @@ Decide on THREE legs of evidence — never chart alone:
 ### Hard rules
 - Only use SHORTLIST symbols (already screened: liquid, real volume, not held,
   not stablecoins). Never invent a symbol or a number.
+- `conviction` (HIGH or MEDIUM) drives the dollar size downstream: a fixed
+  short-term-risk sleeve is split across your ideas, conviction-weighted, with a
+  HIGH getting ~2× a MEDIUM's allocation. Set it honestly — reserve HIGH for the
+  cleanest multi-leg setups; do NOT output a dollar amount yourself.
 - `coingeckoId` MUST be copied from the candidate's `id` in the data.
 - Oriented levels (entry = current price):
   - **LONG**: `invalidate < entry < target`.

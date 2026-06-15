@@ -186,4 +186,18 @@ STMANY=$(jq -nc '{trades:[range(0;7) as $i | {symbol:("T"+($i|tostring)), coinge
            else (.target//0)>(.entry) and ((.invalidate//0)==0 or (.invalidate<.entry)) end))] | .[0:5]}')
 check "sttrade cap keeps up to 5 ideas" "$(printf '%s' "$STMANY" | jq -r '.trades|length')" "5"
 
+# --- run.sh sizing: conviction-weighted split of a 5%-of-net budget ---
+# net 390000 → budget 19500; weights HIGH=2, MEDIUM=1; 2 HIGH + 3 MED = 7.
+# HIGH = floor(19500*2/7)=5571; MED = floor(19500*1/7)=2785; sum 19497 ≤ budget.
+SZIN='[{"conviction":"HIGH"},{"conviction":"HIGH"},{"conviction":"MEDIUM"},{"conviction":"MEDIUM"},{"conviction":"MEDIUM"}]'
+SZ=$(printf '%s' "$SZIN" | jq -c --argjson budget 19500 --argjson total 390000 '
+  . as $t | ([$t[] | (if ((.conviction//"")|ascii_upcase|startswith("HIGH")) then 2 else 1 end)]|add//0) as $wsum
+  | [ $t[] | (if ((.conviction//"")|ascii_upcase|startswith("HIGH")) then 2 else 1 end) as $w
+      | (if $wsum>0 then (($budget*$w/$wsum)|floor) else 0 end) as $sz
+      | {conviction, sizeUsd:$sz, sizePctNet:(if $total>0 then (($sz/$total*1000)|round)/10 else 0 end)} ]')
+check "sizing HIGH = floor(2/7 of budget)" "$(printf '%s' "$SZ" | jq -r '.[0].sizeUsd')" "5571"
+check "sizing MEDIUM = floor(1/7 of budget)" "$(printf '%s' "$SZ" | jq -r '.[2].sizeUsd')" "2785"
+check "sizing total stays within budget" "$(printf '%s' "$SZ" | jq -r '[.[].sizeUsd]|add <= 19500')" "true"
+check "sizing pct-of-net computed" "$(printf '%s' "$SZ" | jq -r '.[0].sizePctNet')" "1.4"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
