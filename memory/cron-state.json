@@ -453,10 +453,10 @@
   },
   "aixbt-pulse": {
     "last_dispatch": "2026-06-15T21:34:10Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-15T09:52:46Z",
-    "total_runs": 17,
-    "total_successes": 17,
+    "last_status": "success",
+    "last_success": "2026-06-15T21:41:08Z",
+    "total_runs": 18,
+    "total_successes": 18,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
