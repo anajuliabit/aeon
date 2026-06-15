@@ -42,7 +42,7 @@ When consolidating memory (reflect, memory-flush), move detail into topic files 
 - **`./notify "message"`** — Send to all configured notification channels (Telegram, Discord, Slack, json-render). Skips unconfigured channels silently.
 - **`./notify-jsonrender <skill_name> <markdown>`** — Convert skill output to a json-render spec and write to `dashboard/outputs/`. Called automatically by `./notify` when `JSONRENDER_ENABLED=true`.
 - **`./scripts/skill-runs [--hours N] [--full] [--json] [--failures]`** — Audit recent GitHub Actions skill runs. Shows counts, pass/fail rates, anomalies.
-- Use Claude Code's built-in **WebSearch** and **WebFetch** for web searches and URL fetching.
+- Use Claude Code's built-in **WebSearch** and **WebFetch** for web searches and URL fetching. If WebSearch returns an API 400 (litellm BadRequest) — an environmental failure that has hit the whole fleet for hours at a time — fall back to **WebFetch** against a search-results URL (DuckDuckGo HTML, or a specific source page known to carry the signal). Log the failure as `websearch=fail(400)` in the skill's source-status line.
 
 ## MCP Servers (local mode only)
 
