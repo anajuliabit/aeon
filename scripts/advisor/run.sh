@@ -590,7 +590,8 @@ TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" '
          | "• " + (.conviction // "?") + " " + ((.side // "long") | ascii_upcase) + " " + (.symbol // "?")
            + " $" + ((.entry // 0) | tostring) + " → $" + ((.target // 0) | tostring)
            + (if .invalidate then " (inv $" + (.invalidate | tostring) + ")" else "" end)
-           + " / " + ((.horizonDays // 14) | tostring) + "d"] | join("\n"))
+           + " / " + ((.horizonDays // 14) | tostring) + "d"
+           + (if (.thesis // "") != "" then "\n   ↳ " + (.thesis | .[0:240]) else "" end)] | join("\n"))
        end)
     + "\nNot financial advice."')"
 
