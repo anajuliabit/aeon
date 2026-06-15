@@ -1,17 +1,25 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote `docs/status.md`, no notify.
-
-**P0 findings:**
-- **Fresh re-stuck**: `fork-cohort` re-dispatched at 19:09 UTC, still `dispatched` ~76 min later (2nd consecutive failed weekly tick — first dispatch from 6-07 also never returned).
-- **Carry**: `skill-freshness` still hung from 08:32 UTC (~12h) — covered by 14:55Z notify.
-- **Recoveries**: 3 of 4 Sunday weekly carryovers cleared at today's tick — `skill-graph` 17:43Z, `fork-skill-digest` 19:03Z, `skill-update-check` 19:11Z. Only `fork-cohort` failed to recover.
-- **5 Monday carryovers** unchanged — clear tomorrow's 6-15 ticks.
-- Self-check OK (heartbeat last_success ~4h50m ago).
-
-**P1–P3**: 1 open PR (#112, 2h45m old — not stalled), 0 urgent issues, ISS-019/INDEX flips/datanet RUBRIC carryover overdue (all in MEMORY.md goals).
-
-**Dedup**: every finding present in last 48h logs. `fork-cohort` re-stuck is fresh data but same item the operator was already told is hung — no fresh notify.
+Heartbeat complete.
 
 ## Summary
-- Skill: heartbeat — regenerated `docs/status.md` (🔴 DEGRADED, 7 open issues, next scheduled run aixbt-pulse 21:00 UTC). Logged findings to `memory/logs/2026-06-14.md`. No notification sent (all items dedup-covered by morning + 14:55Z + 15:32Z heartbeats within 48h window).
-- Files: `docs/status.md`, `memory/logs/2026-06-14.md`.
-- Follow-up: watch tomorrow morning's heartbeat for whether `skill-freshness` 08:00 tick recovers from its 12h+ hang, and whether `fork-cohort` 6-21 Sunday tick finally completes after 2 consecutive misses.
+
+Ran the **heartbeat** skill for 2026-06-15 (~09:48 UTC). All priority checks done; status page regenerated.
+
+**P0 — Failed & stuck (no fresh items):**
+- `chain:investment-advisor` — carry fail (dropped from `aeon.yml`, off-table per spec).
+- `btc-levels` — failed 05:42Z, **recovered 07:38Z** (sr 96%, cf 0). Already surfaced in today's morning-brief.
+- Stuck: `skill-freshness` (6-14, ~25h, already notified 6-14 14:55Z), `fork-cohort` (6-14, ~14h, 2nd consecutive Sunday tick, covered 6-14 20:25Z), and 4 Monday weekly carryovers awaiting today's ticks.
+- **Recovery:** `cost-report` cleared at 07:45Z (Monday tick).
+- No consecutive_failures ≥3, no chronic sr<0.5. Heartbeat self-check OK (~13.3h since last success).
+
+**P1:** 1 open PR (#112, ~16h, under threshold). 0 urgent issues.
+**P2/P3:** ISS-019 + INDEX flips carried in MEMORY.md; `fork-skill-gap` still never-run.
+
+**Dedup:** every finding is already in the last-48h logs → **no notification sent**.
+
+**Files modified:**
+- `docs/status.md` — regenerated, Overall 🔴 DEGRADED, 42 skill rows, `cost-report` flipped to ✅. Token pulse omitted (no `articles/token-report-*.md`).
+- `memory/logs/2026-06-15.md` — appended heartbeat log entry.
+
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED` — wrote docs/status.md, no notify (dedup).
+
+**Follow-up (carried, operator-side):** file ISS-019 (weekly-limit wave, 6d overdue); flip ISS-007/009/010/016 in INDEX (5d overdue).
