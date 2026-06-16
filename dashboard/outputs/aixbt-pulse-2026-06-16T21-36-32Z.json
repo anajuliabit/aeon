@@ -1,0 +1,175 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse",
+        "description": "2026-06-16 21:00Z"
+      },
+      "children": [
+        "crypto_heading",
+        "crypto_stack",
+        "sep1",
+        "tradfi_heading",
+        "tradfi_stack",
+        "sep2",
+        "new_heading",
+        "new_stack",
+        "sep3",
+        "bridge_heading",
+        "bridge_text"
+      ]
+    },
+    "crypto_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "crypto_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto_item1",
+        "crypto_item2",
+        "crypto_item3",
+        "crypto_item4"
+      ]
+    },
+    "crypto_item1": {
+      "type": "Text",
+      "props": {
+        "text": "Coinbase \"System Update\" launched: tokenized stocks, pre-IPO perps, AI advisors, options — full super-app"
+      }
+    },
+    "crypto_item2": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE hits new ATH; Bitwise BHYP ETF $15M inflow; Hyperliquid named premier RWA/pre-IPO venue"
+      }
+    },
+    "crypto_item3": {
+      "type": "Text",
+      "props": {
+        "text": "Tokenized SpaceX $188M daily spot volume on Solana. Binance MiCA license rejection risk by July 1."
+      }
+    },
+    "crypto_item4": {
+      "type": "Text",
+      "props": {
+        "text": "BTC extreme fear (23) holds all day; Glassnode: base-building, not reversal"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "tradfi_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi_item1",
+        "tradfi_item2",
+        "tradfi_item3"
+      ]
+    },
+    "tradfi_item1": {
+      "type": "Text",
+      "props": {
+        "text": "Nasdaq lower on AI/chip profit-taking; Dow broadening — rotation underway"
+      }
+    },
+    "tradfi_item2": {
+      "type": "Text",
+      "props": {
+        "text": "Fed hold under new Chair Warsh positioned; oil relief limits hawkish risk"
+      }
+    },
+    "tradfi_item3": {
+      "type": "Text",
+      "props": {
+        "text": "VIX modestly elevated; Hormuz \"framework\" not yet \"pact\" — certainty softer than 09:00Z"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_item1",
+        "new_item2",
+        "new_item3"
+      ]
+    },
+    "new_item1": {
+      "type": "Text",
+      "props": {
+        "text": "Coinbase super-app shipped (was speculation this morning; now live product)"
+      }
+    },
+    "new_item2": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE ATH confirmed + ETF demand ($15M BHYP)"
+      }
+    },
+    "new_item3": {
+      "type": "Text",
+      "props": {
+        "text": "Binance MiCA risk — EU access by July 1 in question"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge_text": {
+      "type": "Text",
+      "props": {
+        "text": "Nasdaq reverses on AI/chip profit-taking the same day HYPE marks ATH with $15M ETF flows. the AI premium trade is leaving public equities and landing on-chain — Hyperliquid is where it's parking. coinbase shipping tokenized stocks + pre-IPO perps the same day confirms the direction: TradFi is moving on-chain."
+      }
+    }
+  }
+}
