@@ -434,3 +434,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-16,defi-overview,claude-opus-4-7,29,24908,2023899,88559
 2026-06-16,search-skill,claude-opus-4-7,20,6577,1110325,74950
 2026-06-16,fleet-control,claude-opus-4-7,12,1982,357156,41678
+2026-06-16,btc-levels,claude-sonnet-4-6,9,4705,312560,37028
