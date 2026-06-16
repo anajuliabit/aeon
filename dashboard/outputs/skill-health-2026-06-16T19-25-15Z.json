@@ -1,0 +1,41 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert",
+        "stat"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Status",
+        "message": "HEALTH: OK",
+        "type": "success"
+      }
+    },
+    "stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills healthy",
+        "value": "41"
+      }
+    }
+  }
+}
