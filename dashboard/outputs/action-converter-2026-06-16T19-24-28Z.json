@@ -1,0 +1,357 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-06-16",
+        "description": "Action converter: issue tracking, workflow extension, PR merge status"
+      },
+      "children": [
+        "heading-shape",
+        "sep-1",
+        "action-1-stack",
+        "sep-2",
+        "action-2-stack",
+        "sep-3",
+        "action-3-stack",
+        "sep-4",
+        "action-4-stack",
+        "sep-5",
+        "action-5-stack",
+        "sep-6",
+        "sources-section"
+      ]
+    },
+    "heading-shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: create iss-019, extend xai fallback, move 4 index rows, land pr #112, approve pr #122",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1-heading",
+        "action-1-file",
+        "action-1-why",
+        "action-1-done",
+        "action-1-loop"
+      ]
+    },
+    "action-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Create memory/issues/ISS-019.md",
+        "level": "h3"
+      }
+    },
+    "action-1-file": {
+      "type": "Text",
+      "props": {
+        "text": "Create memory/issues/ISS-019.md (status=open, severity=high, category=rate-limit) for the weekly-limit-wave; add row to memory/issues/INDEX.md open table."
+      }
+    },
+    "action-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 7d overdue, 4th occurrence proven on 2026-06-12 wave, no record anchors fix at aeon.yml:498.",
+        "variant": "muted"
+      }
+    },
+    "action-1-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done",
+        "message": "ISS-019.md committed with frontmatter + INDEX.md open row visible",
+        "type": "success"
+      }
+    },
+    "action-1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-019-file",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-2-heading",
+        "action-2-desc",
+        "action-2-why",
+        "action-2-done",
+        "action-2-loop"
+      ]
+    },
+    "action-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Extend .github/workflows/aeon.yml:498 with xai-fallback",
+        "level": "h3"
+      }
+    },
+    "action-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Extend .github/workflows/aeon.yml:498 with an xai-fallback branch covering token-pick / agent-buzz / list-digest — current FALLBACK_CG_SKILLS covers 5 cg skills, xai-dependent skills still hard-exit on 403."
+      }
+    },
+    "action-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 3 skills 403'd today on the same team-id quota; gap is the residual hole iss-019 captures.",
+        "variant": "muted"
+      }
+    },
+    "action-2-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done",
+        "message": "aeon.yml diff committed in a pr listing those 3 skill names in the xai branch",
+        "type": "success"
+      }
+    },
+    "action-2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-019-xai-extension",
+        "variant": "secondary"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-3-heading",
+        "action-3-desc",
+        "action-3-why",
+        "action-3-done",
+        "action-3-loop"
+      ]
+    },
+    "action-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Move iss-007/009/010/016 rows from open → resolved",
+        "level": "h3"
+      }
+    },
+    "action-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Move iss-007/009/010/016 rows from open → resolved in memory/issues/INDEX.md (resolved_at=2026-06-16) — all 4 have code shipped or workarounds durable per yesterday's weekly-review closed-loop notes."
+      }
+    },
+    "action-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 6d overdue from 6-10; inflated open count distorts skill-health open-issues delta read.",
+        "variant": "muted"
+      }
+    },
+    "action-3-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done",
+        "message": "4 rows present in resolved table, absent from open",
+        "type": "success"
+      }
+    },
+    "action-3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-index-flips",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-4-heading",
+        "action-4-pr",
+        "action-4-desc",
+        "action-4-why",
+        "action-4-done",
+        "action-4-loop"
+      ]
+    },
+    "action-4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Land PR #112",
+        "level": "h3"
+      }
+    },
+    "action-4-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #112 — skill-graph/2026-06-14 (docs auto-gen)",
+        "href": "#pr-112"
+      }
+    },
+    "action-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Read the docs diff and merge."
+      }
+    },
+    "action-4-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: ~50h stalled past the 24h heartbeat threshold; documented graph state diverges every day.",
+        "variant": "muted"
+      }
+    },
+    "action-4-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done",
+        "message": "pr #112 merged to main",
+        "type": "success"
+      }
+    },
+    "action-4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-112-merge",
+        "variant": "secondary"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-5-heading",
+        "action-5-pr",
+        "action-5-desc",
+        "action-5-why",
+        "action-5-done",
+        "action-5-loop"
+      ]
+    },
+    "action-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Approve PR #122",
+        "level": "h3"
+      }
+    },
+    "action-5-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #122 — fix/self-improve-2026-06-15 (CLAUDE.md websearch API 400 fallback)",
+        "href": "#pr-122"
+      }
+    },
+    "action-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Single-file CLAUDE.md update documenting the websearch api 400 fallback path."
+      }
+    },
+    "action-5-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: opened 6-15 19:13z, ~22h, captures the gap that bit morning-brief/daily-routine/narrative-tracker 6-15.",
+        "variant": "muted"
+      }
+    },
+    "action-5-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done",
+        "message": "pr #122 merged",
+        "type": "success"
+      }
+    },
+    "action-5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-122-merge",
+        "variant": "secondary"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory=102 lines | logs=7 days | topics=14 files | prs=2 open | cron_failing=0 | mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
