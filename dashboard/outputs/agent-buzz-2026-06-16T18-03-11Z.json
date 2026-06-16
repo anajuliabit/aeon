@@ -1,0 +1,113 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-06-16"
+      },
+      "children": [
+        "alert_error",
+        "separator1",
+        "stack_details",
+        "separator2",
+        "stack_results"
+      ]
+    },
+    "alert_error": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "All sources failed",
+        "message": "XAI team monthly credits exhausted (HTTP 403 at 17:56z prefetch)"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_related",
+        "text_api",
+        "text_websearch"
+      ]
+    },
+    "text_related": {
+      "type": "Text",
+      "props": {
+        "text": "Same root cause as 12:42z token-pick 403",
+        "variant": "caption"
+      }
+    },
+    "text_api": {
+      "type": "Text",
+      "props": {
+        "text": "curl/webfetch to api.x.ai would 403 on the same key",
+        "variant": "caption"
+      }
+    },
+    "text_websearch": {
+      "type": "Text",
+      "props": {
+        "text": "WebSearch returns articles, not X tweets with engagement counts",
+        "variant": "muted"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_results": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_outcome",
+        "stat_candidates",
+        "stat_kept",
+        "badge_status"
+      ]
+    },
+    "text_outcome": {
+      "type": "Text",
+      "props": {
+        "text": "No candidates, no clusters",
+        "variant": "lead"
+      }
+    },
+    "stat_candidates": {
+      "type": "Stat",
+      "props": {
+        "label": "Candidates",
+        "value": "0"
+      }
+    },
+    "stat_kept": {
+      "type": "Stat",
+      "props": {
+        "label": "Kept",
+        "value": "0"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "AGENT_BUZZ_ERROR",
+        "variant": "destructive"
+      }
+    }
+  }
+}

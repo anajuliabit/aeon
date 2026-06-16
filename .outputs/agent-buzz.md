@@ -1,24 +1,4 @@
-*Agent Buzz — 2026-06-15*
-_agent-to-agent commerce dominated — x402 task markets, sign-to-pay, verified identity — plus a side thread reframing agents as the substrate, not the workflow._
+*Agent Buzz — 2026-06-16*
+all sources failed — xai team monthly credits exhausted (http 403 on 17:56z prefetch · same root cause as 12:42z token-pick 403). curl/webfetch to api.x.ai would 403 on the same key; websearch returns articles not x tweets w/ engagement counts. no candidates, no clusters.
 
-**agent-to-agent payment rails**
-• @dabusthebuilder — $AZL meters a machine-readable task market over x402: discover, settle-after-response, agent reputation on-chain.
-  https://x.com/dabusthebuilder/status/2066306284547158238
-• @Avou_Bakar — Q402, a sign-to-pay layer enforcing permission and execution boundaries before an agent spends.
-  https://x.com/Avou_Bakar/status/2066305937246507091
-• @Multi_mike01 — Concordium's verified badge binds a Solana agent to a real human/business identity without exposing who.
-  https://x.com/Multi_mike01/status/2066307741120188500
-
-**agents as substrate, not workflow**
-• @anildelphi — Delphi flipped from agents-on-workflows to workflows-on-agents; the inversion reshaped how they build. (47 likes)
-  https://x.com/anildelphi/status/2066273432589811877
-• @mnvsk97 — most agents are just a harness: right skills, MCP servers, a sharp system prompt — not orchestration.
-  https://x.com/mnvsk97/status/2066259570356555885
-
-**anthropic research, applied**
-• @ThePhilnado — Claude in chemistry nails the planning; the last 90% is execution the model still can't touch.
-  https://x.com/ThePhilnado/status/2066273806768091223
-• @miraigent — the usable lesson from Anthropic's multi-agent work: split roles, coordination, cost before adding more agents.
-  https://x.com/miraigent/status/2066307059365339429
-
-<!-- _src: xai · candidates: 12 → kept: 7_ -->
+<!-- _src: none · candidates: 0 → kept: 0 · status: AGENT_BUZZ_ERROR -->
