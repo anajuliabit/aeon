@@ -1,0 +1,170 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-16 09:00Z"
+      },
+      "children": [
+        "crypto-section",
+        "crypto-sep",
+        "tradfi-section",
+        "tradfi-sep",
+        "new-pull-section",
+        "bridge-sep",
+        "bridge-section"
+      ]
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-heading",
+        "crypto-bullet1",
+        "crypto-bullet2",
+        "crypto-bullet3"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "crypto-bullet1": {
+      "type": "Text",
+      "props": {
+        "text": "$HYPE leads: Hyperliquid $1B+ daily $SPCX perp volume; Coinbase integration spec building toward ATH"
+      }
+    },
+    "crypto-bullet2": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $60K-$66K, fear index 23. 200-week MA cycle-bottom talk. Strategy +1,587 BTC. Taiwan floats reserves"
+      }
+    },
+    "crypto-bullet3": {
+      "type": "Text",
+      "props": {
+        "text": "DeFi leverage at 2021 levels on $13B exploit-driven outflows — Pendle/Panoptic V2/Flexmeow into fragile base"
+      }
+    },
+    "crypto-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi-heading",
+        "tradfi-bullet1",
+        "tradfi-bullet2"
+      ]
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "tradfi-bullet1": {
+      "type": "Text",
+      "props": {
+        "text": "Nasdaq +3% on US-Iran pact; Hormuz reopening → oil at March lows → cross-asset risk-on"
+      }
+    },
+    "tradfi-bullet2": {
+      "type": "Text",
+      "props": {
+        "text": "Vol compression + cyclical rotation; stabilizing dollar funding if de-escalation holds"
+      }
+    },
+    "tradfi-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-pull-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-pull-heading",
+        "new-pull-bullet1",
+        "new-pull-bullet2",
+        "new-pull-bullet3"
+      ]
+    },
+    "new-pull-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new-pull-bullet1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC sentiment flipped 180°: was $67K relief rally at 21:00Z; now extreme fear (23), $60K-$66K"
+      }
+    },
+    "new-pull-bullet2": {
+      "type": "Text",
+      "props": {
+        "text": "Strategy 1,587 BTC purchase + Taiwan BTC reserves — accumulation-at-max-fear from two buyer profiles"
+      }
+    },
+    "new-pull-bullet3": {
+      "type": "Text",
+      "props": {
+        "text": "DeFi fragility framing arrived: leverage at 2021 levels, $13B outflows, \"fragile conditions\""
+      }
+    },
+    "bridge-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-heading",
+        "bridge-text"
+      ]
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge-text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC decoupled from Hormuz macro. Nasdaq +3%, oil at March lows, vol compression — and crypto prints fear index 23. the US-Iran tailwind ran out at the crypto door. DeFi leverage at 2021 levels is the reason."
+      }
+    }
+  }
+}

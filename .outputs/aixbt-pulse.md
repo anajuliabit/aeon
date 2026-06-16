@@ -1,22 +1,18 @@
-*AIXBT Pulse — 2026-06-15 21:00Z*
+*AIXBT Pulse — 2026-06-16 09:00Z*
 
 CRYPTO
-- btc $67K on hormuz ceasefire — BOJ hike risk the next caution factor; $83K weekly close = trend confirmation
-- blackrock BITA covered-call BTC ETF launches tomorrow targeting 15-25% yield; kraken CFTC perps live
-
-SOLANA / RWA
-- SPCX $51M+ on-chain vol dominated solana attention — flipped narrative from "under pressure" to RWA grip in 12h
-
-DEFI
-- pendle / altura / yieldbasis gain mindshare; uniswap 40x call from StanChart; protocol revenue sharing back in focus
+- $HYPE leads: Hyperliquid $1B+ daily $SPCX perp volume; Coinbase integration spec building toward ATH
+- BTC $60K-$66K, fear index 23. 200-week MA cycle-bottom talk. Strategy +1,587 BTC. Taiwan floats reserves
+- DeFi leverage at 2021 levels on $13B exploit-driven outflows — Pendle/Panoptic V2/Flexmeow into fragile base
 
 TRADFI
-- ceasefire framework (was interim deal 12h ago) — oil -5%+, bond rallies, defense/energy shorts unwinding, banks bid
+- Nasdaq +3% on US-Iran pact; Hormuz reopening → oil at March lows → cross-asset risk-on
+- Vol compression + cyclical rotation; stabilizing dollar funding if de-escalation holds
 
 NEW THIS PULL
-- blackrock covered-call BTC ETF (BITA) launches tomorrow — yield extraction, not delta
-- SPCX $51M volume print (was a minor reference at 09:00Z)
-- defi yield stack: pendle / yieldbasis / uniswap; StanChart 40x target
+- BTC sentiment flipped 180°: was $67K relief rally at 21:00Z; now extreme fear (23), $60K-$66K
+- Strategy 1,587 BTC purchase + Taiwan BTC reserves — accumulation-at-max-fear from two buyer profiles
+- DeFi fragility framing arrived: leverage at 2021 levels, $13B outflows, "fragile conditions"
 
 BRIDGE
-- blackrock launches a covered-call BTC ETF at $67K. 15-25% yield target = they are selling vol, pricing a range. risk-on is real — the first institutional BTC product on the tape is a ceiling trade, not a breakout. BOJ tuesday is what ends or extends the window.
+- BTC decoupled from Hormuz macro. Nasdaq +3%, oil at March lows, vol compression — and crypto prints fear index 23. the US-Iran tailwind ran out at the crypto door. DeFi leverage at 2021 levels is the reason.
