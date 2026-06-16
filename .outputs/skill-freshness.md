@@ -1,22 +1,18 @@
-Per the exit taxonomy, **FRESHNESS_OK → no notification** (silence is the signal — a green daily ping would be noise). The run is complete.
+All three writes are done. No notification to send (FRESHNESS_OK suppresses it). Here's the summary:
 
 ## Summary
 
-Executed `skill-freshness` for 2026-06-15. Audited all **44 enabled skills** in `aeon.yml`, discovering dependencies implicitly (the fleet has `chains: {}` — **zero explicit `consume:` edges**, so every dependency is grep-discovered).
+**skill-freshness — 2026-06-16 — ✅ FRESHNESS_OK**
 
-**Verdict: ✅ FRESHNESS_OK** — 8 cross-skill dependencies checked, **0 flagged**. No enabled consumer is about to read an actionably-stale upstream file.
+Audited 44 enabled skills · 8 cross-skill dependencies · 0 flagged.
 
-**What I found:**
-- The fleet's structural reality: nearly every `articles/`/`.outputs/`/`topics/`/`state/` reference is a **producer touching its own state** (self-reference, out of scope per step 4). The surface area for silent upstream staleness is currently near-zero.
-- The one genuine live cross-skill edge — `vuln-scanner ← .outputs/github-trending.md` (also in its `depends_on:` frontmatter) — holds 06-14 content, but vuln-scanner runs **Saturdays only** and carries a live API fallback, so it's fresh at its actual cadence. Not a gap on a Monday.
-- Correctly **excluded** two textbook false-positives: `skill-security-scan`'s hardcoded `workflow-security-audit-2026-04-11.md` citation (historical reference, not a read) and `thought-review`'s `agent-evals.md` (a "suggest create" example, skipped not MISSING).
-- **CI-checkout caveat:** all on-disk mtimes are the checkout time and git-dates collapse onto today's bulk commit, so I scored against the durable per-file signal (filename-date / content-date) instead of meaningless mtimes. Same verdict either way.
+**Key findings:**
+- `vuln-scanner` ← `.outputs/github-trending.md` (06-15 content, ~24h old, 28h daily threshold) → **OK**
+- `operator-scorecard` ← `articles/skill-analytics-2026-06-10.md` (6 days old, 8-day weekly threshold) → **OK**
+- `skill-security-scan` ← historical citation (workflow-security-audit-2026-04-11.md) → excluded per methodology
+- 5 remaining pairs: disabled producers (`token-report`, `repo-pulse`, `tweet-allocator`, `fork-contributor-leaderboard`, `heartbeat-articles`) → not flagged
+- `fork-skill-gap` ← `memory/topics/fork-cohort-state.json` (missing, implicit ref) → not flagged; noted in article as fork-cohort consecutive Sunday failures
 
-**Files written:**
-- `articles/skill-freshness-2026-06-15.md` — full report
-- `memory/topics/skill-freshness-state.json` — updated (verdict OK, empty fingerprint, dep count 1→8)
-- `memory/logs/2026-06-15.md` — appended log block
+**Side observation:** `fork-cohort` has failed the last 2 consecutive Sundays (06-08 and 06-14) per morning-brief log — the state file was never committed, so `fork-skill-gap` always falls back to the live API. This is outside skill-freshness scope but worth flagging to `skill-health`.
 
-**Notification:** none sent (FRESHNESS_OK never notifies).
-
-**Follow-up:** A scratch helper `.freshness-audit.py` (untracked dotfile) was left in the repo root — the sandbox's `rm`/`mv` hooks blocked every cleanup attempt. It's untracked and won't be committed by this skill, but the operator may want to delete it manually. Separately, `python3` script/inline execution is gated behind approval in this sandbox (only `--version` ran), which is why this audit was done via the dedicated Grep/Read/Bash-ls tooling rather than a single script.
+**Files written:** `articles/skill-freshness-2026-06-16.md`, `memory/topics/skill-freshness-state.json`, `memory/logs/2026-06-16.md` (appended). Notification suppressed — green verdict, silence is the signal.
