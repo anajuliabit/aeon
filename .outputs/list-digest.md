@@ -1,15 +1,22 @@
-*List Digest — 2026-06-15*
+## Summary
 
-cyrilXBT owns the list with two long-form pieces (137k + 37k views) — but both are X-premium gated, so the signal is "he's shipping deep threads people pay attention to," not the contents. Only readable substance is Flowslikeosmo's weekly watchlist.
+**Skill:** list-digest (var=`1642770456720683008`)
+**Status:** `LIST_DIGEST_EMPTY` — logged only, no notification sent.
 
-*Tracked list (1642770456720683008)*
-- x.com/cyrilXBT — long-form article, list-dominant by 9x on views (137k); body paywalled (HTTP 402) so contents unverified — flagging the reach, not faking the take (♥304, ↻48) — [View](https://x.com/cyrilXBT/status/2065984221756219807)
-- x.com/cyrilXBT — second gated article same day (37k views); two premium drops in 24h = he's the list's center of gravity right now (♥135, ↻15) — [View](https://x.com/cyrilXBT/status/2066307561792610490)
-- x.com/Flowslikeosmo — weekly watchlist: $INDY (Cardano CDP, fees +1,495% 30d, price +38% wk), yieldbasis (fees +156% wk, no token), $RAIL privacy (+24% wk). The "no token yet" names are the real tell — flagging pre-listing fee growth, not chasing pumps (♥32, ↻4) — [View](https://x.com/Flowslikeosmo/status/2066248308713230387)
-- x.com/Flowslikeosmo — "war's over, coins due for a pump" — the list is trading the US-Iran peace-deal headline as risk-on fuel, but Polymarket had that deal at 11% yesterday; positioning ahead of a story that already faded (♥24, ↻0) — [View](https://x.com/Flowslikeosmo/status/2066278829325201418)
+**Why nothing surfaced:**
+- **Path A (cache):** `.xai-cache/list-digest-1642770456720683008.json` absent.
+- **Path B (XAI API):** prefetch failed at 17:56Z with HTTP 403 — team `3a8b4c1e-8c97-4885-84fc-bba6e3585efd` has exhausted monthly credits. Same root cause as today's 12:42Z token-pick XAI failure.
+- **Path C (WebSearch fallback):** tried 3 queries (list-ID literal, handle-OR query, single-handle date-filtered). Results returned only X profile URLs without tweet body content — X.com is paywalled to WebFetch (HTTP 402) and search engines can't index JS-rendered tweets.
 
-Rest of the list was low-signal one-liner replies — quiet day under the top four.
+**No tweet candidates were scoreable across any path.** Per the skill exit-mode taxonomy, `LIST_DIGEST_EMPTY` = log-only, no notify. Fabricating a digest off zero tweet content would violate the "insight, not paraphrase" rule.
 
----
-sources: list1=ok(10)
-status: LIST_DIGEST_OK
+**Files modified:**
+- `memory/logs/2026-06-16.md` — appended full `## list-digest` entry with per-path failure breakdown and cross-cut note (agent-buzz 17:30Z will hit the same wall).
+
+**Seen-file:** untouched at 19 lines (no URLs to dedupe).
+
+**Follow-up:** operator needs to top up X-AI credits or wait for the monthly quota reset; the fleet-wide XAI degradation will continue to affect list-digest, token-pick X-leg, agent-buzz, and any other Grok-dependent skills until then.
+
+Sources:
+- [X help — about lists](https://help.x.com/en/using-x/x-lists) (WebSearch fallback hit, not usable for tweet content)
+- [CyrilXBT profile (paywalled HTTP 402 on WebFetch)](https://x.com/cyrilXBT)
