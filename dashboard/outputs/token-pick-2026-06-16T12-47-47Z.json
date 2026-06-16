@@ -1,0 +1,450 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-16"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_token_header",
+        "sep_1",
+        "section_price",
+        "sep_2",
+        "section_score",
+        "sep_3",
+        "section_catalyst",
+        "sep_4",
+        "section_risk",
+        "sep_5",
+        "section_stake",
+        "sep_6",
+        "section_exit",
+        "sep_7",
+        "section_recent",
+        "sep_8",
+        "section_market",
+        "sep_9",
+        "section_sources"
+      ]
+    },
+    "section_token_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "heading_jto",
+        "badge_signal",
+        "badge_score"
+      ]
+    },
+    "heading_jto": {
+      "type": "Heading",
+      "props": {
+        "text": "JTO",
+        "level": "h2"
+      }
+    },
+    "badge_signal": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "secondary"
+      }
+    },
+    "badge_score": {
+      "type": "Badge",
+      "props": {
+        "text": "10/10",
+        "variant": "default"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_price": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_price",
+        "grid_price"
+      ]
+    },
+    "heading_price": {
+      "type": "Heading",
+      "props": {
+        "text": "Price",
+        "level": "h3"
+      }
+    },
+    "grid_price": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_24h",
+        "stat_7d",
+        "stat_mcap",
+        "stat_vol",
+        "stat_vol_mcap"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Price",
+        "value": "$0.87"
+      }
+    },
+    "stat_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Change",
+        "value": "+36.4%",
+        "trend": "up"
+      }
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "+38.8%",
+        "trend": "up"
+      }
+    },
+    "stat_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$421M"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$395M"
+      }
+    },
+    "stat_vol_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol/MCap Ratio",
+        "value": "0.94"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_score": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_score",
+        "text_score_breakdown"
+      ]
+    },
+    "heading_score": {
+      "type": "Heading",
+      "props": {
+        "text": "Score Breakdown",
+        "level": "h3"
+      }
+    },
+    "text_score_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "24h +1, 7d +1, both >+5% +2, trending +2, vol/mcap ≥0.20 +3, RS vs BTC/ETH 7d +2 = 11 → capped at 10/10",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_catalyst": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_catalyst",
+        "text_catalyst"
+      ]
+    },
+    "heading_catalyst": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      }
+    },
+    "text_catalyst": {
+      "type": "Text",
+      "props": {
+        "text": "JTX self-custody Solana trading platform (announced May at Solana Accelerate) launches July with 80% protocol revenue → open-market JTO buybacks — first direct value mechanism for the token.",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_risk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_risk",
+        "text_risk"
+      ]
+    },
+    "heading_risk": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "text_risk": {
+      "type": "Text",
+      "props": {
+        "text": "Emissions $96–128M/yr still outpace projected $19–30M buybacks; soft launch or volume miss reopens supply overhang.",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_stake": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_stake",
+        "text_stake"
+      ]
+    },
+    "heading_stake": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake",
+        "level": "h3"
+      }
+    },
+    "text_stake": {
+      "type": "Text",
+      "props": {
+        "text": "≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap",
+        "variant": "body"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_exit": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_exit",
+        "grid_exit"
+      ]
+    },
+    "heading_exit": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit",
+        "level": "h3"
+      }
+    },
+    "grid_exit": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_target",
+        "stat_invalidate",
+        "stat_time"
+      ]
+    },
+    "stat_target": {
+      "type": "Stat",
+      "props": {
+        "label": "Target",
+        "value": "$1.10"
+      }
+    },
+    "stat_invalidate": {
+      "type": "Stat",
+      "props": {
+        "label": "Invalidate",
+        "value": "$0.75"
+      }
+    },
+    "stat_time": {
+      "type": "Stat",
+      "props": {
+        "label": "Time Stop",
+        "value": "14d"
+      }
+    },
+    "sep_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_recent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_recent",
+        "text_recent"
+      ]
+    },
+    "heading_recent": {
+      "type": "Heading",
+      "props": {
+        "text": "Vs Recent Picks",
+        "level": "h3"
+      }
+    },
+    "text_recent": {
+      "type": "Text",
+      "props": {
+        "text": "Previous JTO pick was 2026-06-02 ($0.62, HIGH 9/10) — 14d ago, outside dedup window; today's catalyst (JTX July launch + buyback split) is the new wrinkle.",
+        "variant": "body"
+      }
+    },
+    "sep_8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_market": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_market",
+        "text_market_skipped"
+      ]
+    },
+    "heading_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market",
+        "level": "h3"
+      }
+    },
+    "text_market_skipped": {
+      "type": "Text",
+      "props": {
+        "text": "SKIPPED — no event clears 5pp edge gate after dedup. Field ~entirely 2026 World Cup futures (efficient, sub-5pp). Non-WC liquid markets: US-Russia clash by Dec 31 YES 7¢ ($118k vol, fair NO ~97–98% = ~4–5pp on NO, borderline-gate); Raimondo 2028 Dem Nom YES 0.75¢ ($205k vol, deep-tail efficient); Xi-2027 NO dedup-blocked (picked 6-13). Starmer-by-June-30 21¢ ($36k vol) sub-liquidity.",
+        "variant": "body"
+      }
+    },
+    "sep_9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_sources",
+        "text_sources",
+        "text_logging_note",
+        "alert_disclaimer"
+      ]
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources & Notes",
+        "level": "h3"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "cg=ok, dex=ok (no usable cross-confirm — search returns \"TREND\"-named tokens), poly=ok, x=absent (XAI prefetch 403 monthly limit)",
+        "variant": "body"
+      }
+    },
+    "text_logging_note": {
+      "type": "Text",
+      "props": {
+        "text": "If you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it",
+        "variant": "caption"
+      }
+    },
+    "alert_disclaimer": {
+      "type": "Alert",
+      "props": {
+        "title": "Disclaimer",
+        "message": "Not financial advice — pattern-matching only",
+        "type": "warning"
+      }
+    }
+  }
+}
