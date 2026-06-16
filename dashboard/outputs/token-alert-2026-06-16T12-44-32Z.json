@@ -1,0 +1,238 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert",
+        "description": "2026-06-16 — REPPO price alert triggered"
+      },
+      "children": [
+        "heading-reppo",
+        "separator-1",
+        "stats-section",
+        "separator-2",
+        "trigger-section",
+        "separator-3",
+        "watchlist-section"
+      ]
+    },
+    "heading-reppo": {
+      "type": "Heading",
+      "props": {
+        "text": "REPPO",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-change-24h",
+        "stat-volume"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Price",
+        "value": "$0.02007"
+      },
+      "children": []
+    },
+    "stat-change-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Change",
+        "value": "-15.78%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$514.7K",
+        "delta": "1.86x average"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "trigger-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-trigger",
+        "text-price-history"
+      ]
+    },
+    "alert-trigger": {
+      "type": "Alert",
+      "props": {
+        "title": "Alert Triggered",
+        "message": "24h change trips 15% rail — first down-side alert since canonical watchlist landed.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "text-price-history": {
+      "type": "Text",
+      "props": {
+        "text": "Reverses 6-14's +18.93% up-trip; -14.53% day-on-day off 6-15 $0.02349. Still +38.2% from 6-11 $0.01452 base.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "watchlist-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-watchlist",
+        "grid-watchlist",
+        "text-tape-status"
+      ]
+    },
+    "heading-watchlist": {
+      "type": "Heading",
+      "props": {
+        "text": "Watchlist Context",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-watchlist": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "token-well",
+        "token-mamo",
+        "token-gitlawb"
+      ]
+    },
+    "token-well": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-well",
+        "stat-well"
+      ]
+    },
+    "badge-well": {
+      "type": "Badge",
+      "props": {
+        "text": "WELL",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "stat-well": {
+      "type": "Stat",
+      "props": {
+        "value": "-1.67%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "token-mamo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-mamo",
+        "stat-mamo"
+      ]
+    },
+    "badge-mamo": {
+      "type": "Badge",
+      "props": {
+        "text": "MAMO",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "stat-mamo": {
+      "type": "Stat",
+      "props": {
+        "value": "-1.16%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "token-gitlawb": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-gitlawb",
+        "stat-gitlawb"
+      ]
+    },
+    "badge-gitlawb": {
+      "type": "Badge",
+      "props": {
+        "text": "GITLAWB",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "stat-gitlawb": {
+      "type": "Stat",
+      "props": {
+        "value": "+9.66%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "text-tape-status": {
+      "type": "Text",
+      "props": {
+        "text": "REPPO the only standout — broader tape neutral.",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
