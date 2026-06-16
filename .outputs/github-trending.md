@@ -1,25 +1,22 @@
-*GitHub Trending — 2026-06-15*
+*GitHub Trending — 06-16*
 
-*Top pick* — [coder/boo](https://github.com/coder/boo)
-a tmux/screen replacement built straight on ghostty's libghostty core — terminal multiplexing on a modern gpu terminal, in zig, from coder. fresh out the door, already the most clickable thing on the board.
+*Top pick* — [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach)
+agent-internet bridge scraping six platforms without API keys — fills the "agent can't read anything outside MCP" gap with one CLI.
 
 *AI/ML*
-• [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — ★ 244 today (30k total) · Python · [ACCELERATING]
-open foundation model for ohlcv market data — forecasts price/vol as a language-modeling task. 86 stars/d lifetime.
-
-• [andrewyng/aisuite](https://github.com/andrewyng/aisuite) — ★ 291 today (14.5k total) · Python · [RETURNING]
-ng's one-line provider-swap sdk now ships a desktop app (v0.1.0, 6-11) — the openai-compatible shim grows a gui.
+• [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) — ★ 1.1k today (31k total) · Python · [ACCELERATING]
+twitter/reddit/yt/github/bilibili/xhs scrape backend, v1.5.0 multi-backend routing shipped 6-11 — 276 stars/d lifetime.
 
 *Devtools*
-• [coder/boo](https://github.com/coder/boo) — 0.5k total · ~100/d · Zig · [DEBUT]
-multiplexer on libghostty — screen/tmux ergonomics on ghostty's render core.
+• [shadcn/improve](https://github.com/shadcn/improve) — ★ 4.9k total · TypeScript · [DEBUT]
+shadcn's plan/execute split — top-tier model audits + writes plans, cheap models execute the work. cost arbitrage shipped as one skill.
 
-• [tamnd/kage](https://github.com/tamnd/kage) — 1.1k total · 1d old · Go · [DEBUT]
-shadows any site to static offline html with the javascript stripped — read-only mirror, no runtime, no tracking.
+• [omnigent-ai/omnigent](https://github.com/omnigent-ai/omnigent) — ★ 2.1k total · Python · [DEBUT]
+swap or combine claude code/codex/pi under one policy + sandbox layer, with live co-driving of the same session from any device.
 
 *Infra*
-• [lenucksi/aur-malware-check](https://github.com/lenucksi/aur-malware-check) — 1.0k total · 3d old · Shell · [DEBUT]
-consolidated community scanners for the reported june-2026 aur atomic-lockfile supply-chain attack — check if you got hit.
+• [trycua/cua](https://github.com/trycua/cua) — ★ 70 today (18k total) · HTML · [RETURNING]
+desktop-control sandbox + benchmarks for macOS/Linux/Windows agents — driver-rs v0.5.5 + computer-server v0.3.41 both shipped in the last 24h.
 
 ---
-sources: trending=ok (16) · gh_api=ok · kept 5 (2 feed + 3 fallback)
+sources: trending=ok (18 returned, fallback used) · gh_api=ok · kept 4
