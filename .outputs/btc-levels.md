@@ -1,11 +1,16 @@
-Done.
-
 ## Summary
 
-- **Fetched** BTC price data from CoinGecko: spot **$65,959.86**, daily close (2026-06-15) **$66,300.96**
-- **Evaluated all levels** — 0 alerts fired:
-  - Spot well above $45k leverage band
-  - Close well above $60.5k breakdown threshold
-  - Both reclaim levels (63.5k, 65.9k) already set — no re-arm trigger (spot still above $60.5k)
-- **No notification sent** (quiet run)
-- **Updated** `memory/btc-levels-state.json` and appended to `memory/logs/2026-06-16.md`, committed as chore
+**BTC Levels Monitor — 2026-06-16 ~09:17Z**
+
+- **Spot**: $66,744.02 (up from $65,959.86 at the 05:17Z run)
+- **Previous close**: $66,300.96 (June 15, 2026)
+
+**Level checks — no alerts fired:**
+| Level | Condition | Result |
+|---|---|---|
+| ≤ $45,000 leverage-review | $66,744 | clear |
+| Close < $60,500 breakdown | $66,300.96 | clear |
+| Reclaim $63,500 | flag already set (6-11) | no re-arm needed |
+| Reclaim $65,900 | flag already set (6-15) | no re-arm needed |
+
+Quiet run. No notification sent. State and log committed to `main`.
