@@ -1,0 +1,179 @@
+{
+  "root": "heartbeat-card",
+  "state": {},
+  "elements": {
+    "heartbeat-card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "timestamp",
+        "sep-1",
+        "critical-alert",
+        "stalled-alert",
+        "sep-2",
+        "carry-section",
+        "sep-3",
+        "status-section"
+      ]
+    },
+    "timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat — 2026-06-16 20:25z",
+        "variant": "caption"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "critical-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 stuck: 14:29z cron tick stalled 4-skill batch",
+        "message": "heartbeat (14:00 fire), narrative-tracker, market-context-refresh, security-digest all dispatched together and none wrote `success` ~6h later. heartbeat's row will flip ✅ on next refresh (this 20:00 tick is what regenerated the status page); narrative/market-context/security-digest are real day-misses.",
+        "type": "error"
+      }
+    },
+    "stalled-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🟡 stalled: PR #122 fix(docs) crossed 24h threshold",
+        "message": "Opened 6-15 19:13z, now ~25h, action needed (approve/merge).",
+        "type": "warning"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "carry-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "carry-header",
+        "carry-1",
+        "carry-2",
+        "carry-3",
+        "carry-4"
+      ]
+    },
+    "carry-header": {
+      "type": "Text",
+      "props": {
+        "text": "Carry (no fresh notify, in last 48h logs)",
+        "variant": "muted"
+      }
+    },
+    "carry-1": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow stuck 8d since 6-08",
+        "variant": "body"
+      }
+    },
+    "carry-2": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort stuck 49h since 6-14",
+        "variant": "body"
+      }
+    },
+    "carry-3": {
+      "type": "Text",
+      "props": {
+        "text": "pr #112 stalled 50h",
+        "variant": "body"
+      }
+    },
+    "carry-4": {
+      "type": "Text",
+      "props": {
+        "text": "iss-019 unfiled / index flips / watches.yml seed / xai quota wall — all in memory goals",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status-header",
+        "status-file",
+        "status-health",
+        "status-metrics",
+        "status-issues",
+        "status-next"
+      ]
+    },
+    "status-header": {
+      "type": "Text",
+      "props": {
+        "text": "Status page:",
+        "variant": "muted"
+      }
+    },
+    "status-file": {
+      "type": "Text",
+      "props": {
+        "text": "docs/status.md regenerated",
+        "variant": "body"
+      }
+    },
+    "status-health": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴 degraded",
+        "variant": "destructive"
+      }
+    },
+    "status-metrics": {
+      "type": "Text",
+      "props": {
+        "text": "43 enabled rows, 5 🕸 stuck (4 fresh 14:29z + fork-cohort + deal-flow — fork-cohort/deal-flow counted once each, the batch is the new news)",
+        "variant": "body"
+      }
+    },
+    "status-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "7"
+      }
+    },
+    "status-next": {
+      "type": "Text",
+      "props": {
+        "text": "Next scheduled evening-recap 21:00z",
+        "variant": "body"
+      }
+    }
+  }
+}
