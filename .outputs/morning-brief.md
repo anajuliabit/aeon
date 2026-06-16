@@ -1,23 +1,20 @@
-*Morning Brief — 2026-06-15*
+*Morning Brief — 2026-06-16*
 
 *Focus today*
-1. btc through $65.5k — why now: two-week high on hormuz reopen, reclaim65900 ~$400 away
-2. btc-levels failed 05:42z — why now: breakout day, the monitor's blind
-3. file iss-019 — why now: monday = weekly-limit wave recurs today, 6d overdue
+1. boj verdict + blackrock $BITA list-day — why now: both binary catalysts land today on $66k tape
+2. file iss-019 — why now: 8d overdue, lock fix before next monday wave compounds
+3. merge pr #112 — why now: skill-graph docs 27h stalled past 24h threshold
 
 *Since yesterday*
-- pr #108 fallback retiring: evening-recap + aixbt 21:00z sent direct, no .pending-notify staging
-- btc-levels first failure (sr 0.96, cf 1) — empty-usage error at 05:42z
-- skill-freshness still stuck from 6-14 08:32z — should clear on today's 08:00 tick
-- fork-cohort stuck 2nd weekly tick (19:09z), on the sunday cron
+- both btc reclaim levels SET; reclaim65900 fired 14:00Z at $66,427 (north-star carry)
+- pr #122 shipped — claude.md now documents websearch 400-fallback (8 skills hit it 6-15)
+- weekly-review 83.4% success (+21pp vs prior 62.3% — virtuals fallback drove the snap)
+- deal-flow monday 14:00 tick FAILED to clear — now 8d stuck, expected recovery missed
+- btc $66,300 close → $65,959 by 05:17Z (overnight fade pre-boj)
 
 *Watch*
-- us-iran deal reopened strait of hormuz, oil premium drained — de-escalation validates xpl pick's iran-enrichment NO, unwinds yesterday's 'peace deal failed' read (focus #1)
+- boj 80-97% odds 25bp hike today (0.75→1.0%, highest since 1995); $10.1B net yen-shorts = jul-2024 carry-unwind precedent. every boj hike since mar-2024 = btc drawdown 18-32% (avg 27%) — implication for focus #1
+- $BITA lists nasdaq today, 15-25% target yield via 25-35% IBIT covered calls, 0.65% fee beats goldman july — institutions pricing range not breakout, supports the aixbt-pulse 21:00Z bridge call — implication for focus #1
 
 *Running today*
-- cost-report @ 07:00 utc (weekly)
-- weekly-shiplog @ 09:00 utc (weekly)
-- unlock-monitor @ 10:00 utc (weekly)
-- deal-flow @ 14:00 utc (weekly)
-- skill-security-scan @ 16:00 utc (weekly)
-- weekly-review @ 19:00 utc (weekly)
+- daily fleet on tue cron (no tue-specific weeklies); btc-levels next 08:15Z then 12:15/16:15/20:15

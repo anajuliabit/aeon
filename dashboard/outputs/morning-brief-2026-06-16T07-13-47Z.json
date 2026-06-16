@@ -1,0 +1,401 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-16"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_focus",
+        "sep_1",
+        "section_yesterday",
+        "sep_2",
+        "section_watch",
+        "sep_3",
+        "section_running"
+      ]
+    },
+    "section_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_1_title",
+        "focus_1_why"
+      ]
+    },
+    "focus_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "1. BOJ verdict + BlackRock $BITA list-day",
+        "variant": "lead"
+      }
+    },
+    "focus_1_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: both binary catalysts land today on $66k tape"
+      }
+    },
+    "focus_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_2_title",
+        "focus_2_why"
+      ]
+    },
+    "focus_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "2. File ISS-019",
+        "variant": "lead"
+      }
+    },
+    "focus_2_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: 8d overdue, lock fix before next monday wave compounds"
+      }
+    },
+    "focus_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_3_title",
+        "focus_3_why"
+      ]
+    },
+    "focus_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "3. Merge PR #112",
+        "variant": "lead"
+      }
+    },
+    "focus_3_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: skill-graph docs 27h stalled past 24h threshold"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_yesterday",
+        "yesterday_item_1",
+        "yesterday_item_2",
+        "yesterday_item_3",
+        "yesterday_item_4",
+        "yesterday_item_5"
+      ]
+    },
+    "heading_yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "yesterday_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yesterday_1_text",
+        "yesterday_1_stat"
+      ]
+    },
+    "yesterday_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "Both BTC reclaim levels SET; reclaim65900 fired 14:00Z"
+      }
+    },
+    "yesterday_1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Reclaim65900 level",
+        "value": "$66,427",
+        "delta": "north-star carry"
+      }
+    },
+    "yesterday_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #122 shipped — claude.md now documents websearch 400-fallback (8 skills hit it 6-15)"
+      }
+    },
+    "yesterday_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yesterday_3_text",
+        "yesterday_3_stat"
+      ]
+    },
+    "yesterday_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly-review success (virtuals fallback drove the snap)"
+      }
+    },
+    "yesterday_3_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Weekly-review success",
+        "value": "83.4%",
+        "delta": "+21pp vs 62.3%",
+        "trend": "up"
+      }
+    },
+    "yesterday_item_4": {
+      "type": "Alert",
+      "props": {
+        "message": "Deal-flow monday 14:00 tick FAILED to clear — now 8d stuck, expected recovery missed",
+        "type": "error"
+      }
+    },
+    "yesterday_item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yesterday_5_text",
+        "yesterday_5_stat"
+      ]
+    },
+    "yesterday_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC overnight fade pre-BOJ by 05:17Z"
+      }
+    },
+    "yesterday_5_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC close to 05:17Z",
+        "value": "$65,959",
+        "delta": "-$341 from $66,300 close",
+        "trend": "down"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_watch",
+        "watch_item_1",
+        "watch_item_2"
+      ]
+    },
+    "heading_watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch_1_title",
+        "watch_1_prob",
+        "watch_1_rate",
+        "watch_1_yen",
+        "watch_1_btc_impact"
+      ]
+    },
+    "watch_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "BOJ 25bp hike decision today",
+        "variant": "lead"
+      }
+    },
+    "watch_1_prob": {
+      "type": "Progress",
+      "props": {
+        "value": 88,
+        "max": 100,
+        "label": "Hike probability (80-97%)"
+      }
+    },
+    "watch_1_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Policy rate if approved",
+        "value": "1.0%",
+        "delta": "from 0.75% (highest since 1995)"
+      }
+    },
+    "watch_1_yen": {
+      "type": "Stat",
+      "props": {
+        "label": "Net yen-shorts position",
+        "value": "$10.1B",
+        "delta": "jul-2024 carry-unwind precedent"
+      }
+    },
+    "watch_1_btc_impact": {
+      "type": "Alert",
+      "props": {
+        "title": "BTC drawdown impact (mar-2024 pattern)",
+        "message": "Every BOJ hike since mar-2024 = BTC drawdown 18-32% (avg 27%). Implication for focus #1",
+        "type": "warning"
+      }
+    },
+    "watch_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch_2_title",
+        "watch_2_yield",
+        "watch_2_structure",
+        "watch_2_fee",
+        "watch_2_context"
+      ]
+    },
+    "watch_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "$BITA lists Nasdaq today",
+        "variant": "lead"
+      }
+    },
+    "watch_2_yield": {
+      "type": "Progress",
+      "props": {
+        "value": 20,
+        "max": 100,
+        "label": "Target yield (15-25%)"
+      }
+    },
+    "watch_2_structure": {
+      "type": "Stat",
+      "props": {
+        "label": "IBIT covered calls range",
+        "value": "25-35%"
+      }
+    },
+    "watch_2_fee": {
+      "type": "Stat",
+      "props": {
+        "label": "Management fee",
+        "value": "0.65%",
+        "delta": "beats goldman july"
+      }
+    },
+    "watch_2_context": {
+      "type": "Alert",
+      "props": {
+        "message": "Institutions pricing range not breakout. Supports aixbt-pulse 21:00Z bridge call. Implication for focus #1",
+        "type": "info"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_running",
+        "running_item_1",
+        "running_item_2"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "Daily fleet on tue cron (no tue-specific weeklies)"
+      }
+    },
+    "running_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "BTC-levels next 08:15Z then 12:15/16:15/20:15"
+      }
+    }
+  }
+}
