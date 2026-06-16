@@ -1,5 +1,11 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md, no notify (dedup)
+Heartbeat complete.
 
-P0 surface (3 items, all in last-48h logs): `chain:investment-advisor` failed-carry (off-table, chain dropped from `aeon.yml`); `deal-flow` stuck since 6-08 — today's Monday 14:00 tick didn't clear it (the 09:48Z heartbeat explicitly expected it to clear); `fork-cohort` stuck ~25h (2nd consecutive Sunday weekly miss). All other Monday weeklies recovered today. Heartbeat self-check OK (~10.6h since last_success).
+**HEARTBEAT_OK · STATUS_PAGE=DEGRADED** — wrote `docs/status.md`, no notify (full dedup).
 
-Status page regen: 43 enabled rows sorted last-run desc, 2 🕸 stuck (deal-flow + fork-cohort), 2 never-run at bottom (operator-scorecard + fork-skill-gap), 7 open issues, evening-recap 21:00 UTC up next. Token pulse omitted (no `articles/token-report-*.md` on disk).
+## Summary
+- **P0:** 2 stuck (deal-flow ~7d 18h, fork-cohort ~38h), `chain:investment-advisor` carry (off-table per spec). No consecutive_failures≥3, no chronic failures, heartbeat self-check OK (~12.7h ago).
+- **P1:** PR #112 stalled ~39.5h (already in action-converter loop); PR #122 ~14h under threshold; 0 urgent issues.
+- **P2/P3:** ISS-019/index-flips/watches.yml carried in MEMORY.md goals; `operator-scorecard` + `fork-skill-gap` still never-run (next ticks 6-22/6-21).
+- **Dedup:** every flag present in last 48h logs → no notification fired.
+- **Files modified:** `docs/status.md` (43 rows, 4 bumped to today, body paragraph refreshed), `memory/logs/2026-06-16.md` (heartbeat 09:10 UTC entry appended).
+- **Follow-up:** unchanged — operator to seed `memory/on-chain-watches.yml`; file ISS-019; flip INDEX rows 007/009/010/016; merge PR #112.
