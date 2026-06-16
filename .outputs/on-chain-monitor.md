@@ -1,15 +1,15 @@
-Done. The skill exited cleanly at the config gate.
-
 ## Summary
 
-Executed `skills/on-chain-monitor/SKILL.md`. Verdict: **ON_CHAIN_NO_CONFIG**.
+**Skill**: on-chain-monitor
+**Verdict**: `ON_CHAIN_NO_CONFIG` — clean exit, no notification.
 
-- **Checked config:** `memory/on-chain-watches.yml` is absent (along with `on-chain-state.json` and `known-addresses.yml`). Per the skill's Config section and End-states, a missing/empty config is *not* an error — log it and exit cleanly with no notification.
-- **No fetch performed:** the skill short-circuits at the config gate before any Alchemy / Etherscan / CoinGecko call, so no network activity, no state write, no alert.
-- **Logged** to `memory/logs/2026-06-15.md` under `### on-chain-monitor`.
+**What happened**
+- `memory/on-chain-watches.yml` is absent (also `memory/on-chain-state.json`).
+- Per skill spec: missing config logs `ON_CHAIN_NO_CONFIG` and exits cleanly — empty config is not an error, so no `./notify` call was made.
+- This extends the blocked streak. MEMORY.md goals tracked "10 consecutive NO_CONFIG days through 6-15"; today is day 12 since 6-05.
 
-**Status:** This is the 10th consecutive NO_CONFIG day. The watch remains **BLOCKED** — as already tracked in `MEMORY.md` Current Goals, it's awaiting the operator to seed `memory/on-chain-watches.yml` with at least one `{label, address, chain, type}` entry.
+**Files modified**
+- `memory/logs/2026-06-16.md` — appended `### on-chain-monitor` entry recording the no-config exit and carrying the watches.yml seed blocker.
 
-**Files modified:** `memory/logs/2026-06-15.md` (appended log entry).
-
-**Follow-up needed:** Operator action — populate `memory/on-chain-watches.yml` to activate this monitor. Until then every run will no-op at the config gate.
+**Follow-up needed** (carried, not actioned this run)
+- Operator to seed `memory/on-chain-watches.yml` with at least one watch — same ask already surfaced in MEMORY.md Current Goals, today's morning-brief, and heartbeat P2. Until then this skill is a daily no-op.
