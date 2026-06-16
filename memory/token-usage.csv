@@ -437,4 +437,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-16,agent-buzz,claude-opus-4-7,52,16270,2565208,111678
 2026-06-16,reflect,claude-opus-4-7,31,20759,2929314,257800
 2026-06-16,heartbeat,claude-opus-4-7,43,26315,3335815,92974
-2026-06-16,thought-review,claude-opus-4-7,1033,4858,529320,32198
+2026-06-16,evening-recap,claude-sonnet-4-6,1357,17496,921628,60062

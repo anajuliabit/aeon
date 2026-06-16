@@ -1,0 +1,293 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-16",
+        "description": "1 article + 1 pick landed, but XAI quota killed agent-buzz + list-digest and 14:29Z batch adds 3 more stuck skills"
+      },
+      "children": [
+        "tldr_text",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "blockers_section",
+        "sep5",
+        "footer_note"
+      ]
+    },
+    "tldr_text": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: 1 article + 1 pick landed, but XAI quota killed agent-buzz + list-digest and 14:29Z batch adds 3 more stuck skills",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_heading",
+        "headline_1",
+        "headline_2",
+        "headline_3",
+        "headline_4",
+        "headline_5"
+      ]
+    },
+    "headlines_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "[token-pick] — JTO HIGH 10/10 ($0.87, +36.4%) staged",
+        "href": ".pending-picks/2026-06-16-token-pick.json",
+        "source": "token-pick"
+      }
+    },
+    "headline_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "[skill-freshness] — 44 skills, 0 flagged",
+        "href": "articles/skill-freshness-2026-06-16.md",
+        "source": "skill-freshness"
+      }
+    },
+    "headline_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "[reflect] — MEMORY 102→67 lines, crypto.md + fleet.md updated",
+        "href": "memory/topics/fleet.md",
+        "source": "reflect"
+      }
+    },
+    "headline_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "[token-alert] — REPPO −15.78% fired (mirror of 6-14's +18.93% up-trip)",
+        "href": ".pending-notify/token-alert-msg.md",
+        "source": "token-alert"
+      }
+    },
+    "headline_5": {
+      "type": "Alert",
+      "props": {
+        "title": "[agent-buzz] — AGENT_BUZZ_ERROR",
+        "message": "XAI 403 depleted all 4 fallback paths · .pending-notify/agent-buzz-msg.md",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4",
+        "notable_5"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_1": {
+      "type": "Text",
+      "props": {
+        "text": "[daily-routine] — all legs (token-movers, paper-pick, hn-digest, tweet-roundup) delivered, 3,969 chars"
+      }
+    },
+    "notable_2": {
+      "type": "Text",
+      "props": {
+        "text": "[github-trending] — 4 picks: Agent-Reach ACCELERATING, shadcn/improve, omnigent, cua RETURNING"
+      }
+    },
+    "notable_3": {
+      "type": "Text",
+      "props": {
+        "text": "[defi-overview] — Mixed risk-on, DEX clean +57%, Spark −16.2% $300m outflow, HL L1 day 2"
+      }
+    },
+    "notable_4": {
+      "type": "Text",
+      "props": {
+        "text": "[action-converter] — 5 actions queued (ISS-019, XAI fallback, INDEX flips, PR #112/#122)"
+      }
+    },
+    "notable_5": {
+      "type": "Text",
+      "props": {
+        "text": "[heartbeat ×2] — 14:29Z batch flagged (narrative-tracker/market-context-refresh/security-digest stuck); PR #122 crossed 24h"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_heading",
+        "decision_1",
+        "decision_2",
+        "decision_3",
+        "decision_4"
+      ]
+    },
+    "decisions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "merge PR #112 (~50h stalled)",
+        "href": "https://github.com/anajuliabit/aeon/pull/112"
+      }
+    },
+    "decision_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "merge PR #122 (just crossed 24h)",
+        "href": "https://github.com/anajuliabit/aeon/pull/122"
+      }
+    },
+    "decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "top up XAI credits (team 3a8b4c1e monthly limit — agent-buzz + list-digest dead)"
+      }
+    },
+    "decision_4": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-019 (weekly-limit wave, 8d overdue, fix locus aeon.yml:498)"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers_heading",
+        "blocker_1",
+        "blocker_2",
+        "blocker_3",
+        "blocker_4",
+        "blocker_5"
+      ]
+    },
+    "blockers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker_1": {
+      "type": "Alert",
+      "props": {
+        "title": "narrative-tracker",
+        "message": "stuck dispatched 14:29Z (~6h), no log entry today",
+        "type": "error"
+      }
+    },
+    "blocker_2": {
+      "type": "Alert",
+      "props": {
+        "title": "market-context-refresh",
+        "message": "stuck dispatched 14:29Z (~6h), no log entry",
+        "type": "error"
+      }
+    },
+    "blocker_3": {
+      "type": "Alert",
+      "props": {
+        "title": "security-digest",
+        "message": "dispatched 14:29Z, last success 6-14 (~53h)",
+        "type": "error"
+      }
+    },
+    "blocker_4": {
+      "type": "Alert",
+      "props": {
+        "title": "deal-flow",
+        "message": "stuck 8d since 6-08, Monday tick didn't clear",
+        "type": "error"
+      }
+    },
+    "blocker_5": {
+      "type": "Alert",
+      "props": {
+        "title": "XAI quota",
+        "message": "3 skills blocked (agent-buzz/list-digest dead, token-pick partial)",
+        "type": "error"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_note": {
+      "type": "Text",
+      "props": {
+        "text": "+16 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
