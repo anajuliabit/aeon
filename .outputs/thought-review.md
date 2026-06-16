@@ -1,1 +1,1 @@
-thought review · last 24h · 0 captures. inbox cold 5d running. nothing to surface.
+🧭 thought review · last 24h · 0 captures. inbox cold ~6d since personal-stack PR. nothing to surface.
