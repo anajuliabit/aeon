@@ -1,8 +1,15 @@
-Pre-flight passed (gh=ok, rate=4988), but `memory/instances.json` is `{"instances": []}` — no managed instances registered. Per the skill spec, I log `FLEET_EMPTY` and stop silently (no notify).
-
 ## Summary
-- **Mode:** Health Check (var empty → default).
-- **Outcome:** `FLEET_EMPTY` — `memory/instances.json` has zero entries; per spec, stopped at pre-flight step 3 without notifying.
-- **State preserved:** `memory/state/fleet-control-state.json` already exists with `{"instances": {}, "last_full_summary_date": ""}` — no change needed.
-- **Files modified:** `memory/logs/2026-06-16.md` (appended `## fleet-control (health check)` log block).
-- **Follow-up:** none. Operator must hand-add child Aeon instances to `memory/instances.json` before this skill produces output.
+
+Executed `fleet-control` skill in Health Check mode (var empty → default).
+
+**Pre-flight checks:**
+- `gh auth status` — OK (authenticated as anajuliabit, GH_TOKEN)
+- Rate limit — 4998 remaining (well above 50 threshold)
+- Registry `memory/instances.json` — `{"instances": []}` (empty)
+
+**Outcome:** `FLEET_EMPTY` — no managed instances. Per skill spec, stopped at pre-flight step 3 and **did not notify** (silent no-op for empty registry).
+
+**Files modified:**
+- `memory/logs/2026-06-16.md` — appended 15:00Z health-check entry under existing 09:00Z fleet-control section
+
+**Follow-up:** None. State is unchanged since the 09:00Z tick. No instances to monitor, no deltas to surface, no notify warranted.
