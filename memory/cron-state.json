@@ -236,15 +236,15 @@
   },
   "action-converter": {
     "last_dispatch": "2026-06-17T21:07:53Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-16T19:25:39Z",
-    "total_runs": 28,
+    "total_runs": 29,
     "total_successes": 23,
-    "total_failures": 5,
-    "consecutive_failures": 5,
-    "success_rate": 0.82,
-    "last_failed": "2026-06-17T20:20:28Z",
-    "last_error": "a27e1c3\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "total_failures": 6,
+    "consecutive_failures": 6,
+    "success_rate": 0.79,
+    "last_failed": "2026-06-17T21:17:09Z",
+    "last_error": "Error: claude native binary not installed.  Either postinstall did not run (--ignore-scripts, some pnpm configs) or the platform-native optional dependency was not downloaded (--omit=optional).  Run t"
   },
   "evening-recap": {
     "last_dispatch": "2026-06-17T21:07:53Z",
