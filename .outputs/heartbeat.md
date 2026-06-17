@@ -1,9 +1,12 @@
-*heartbeat — 2026-06-16 20:25z*
+Heartbeat run complete.
 
-🔴 stuck: 14:29z cron tick stalled a 4-skill batch — heartbeat (14:00 fire), narrative-tracker, market-context-refresh, security-digest all dispatched together and none wrote `success` ~6h later. heartbeat's row will flip ✅ on next refresh (this 20:00 tick is what regenerated the status page); narrative/market-context/security-digest are real day-misses.
+## Summary
 
-🟡 stalled: pr #122 fix(docs) crossed 24h threshold — opened 6-15 19:13z, now ~25h, action needed (approve/merge).
+**HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md**
 
-carry (no fresh notify, in last 48h logs): deal-flow stuck 8d since 6-08; fork-cohort stuck 49h since 6-14; pr #112 stalled 50h; iss-019 unfiled / index flips / watches.yml seed / xai quota wall — all in memory goals.
-
-status page: docs/status.md regenerated → 🔴 degraded. 43 enabled rows, 5 🕸 stuck (4 fresh 14:29z + fork-cohort + deal-flow — fork-cohort/deal-flow counted once each, the batch is the new news). open issues 7, next scheduled evening-recap 21:00z.
+- **P0 stuck batch carries from 6-16 14:29Z** — `narrative-tracker` / `market-context-refresh` / `security-digest` still `dispatched` ~18.8h later. `deal-flow` (~9d 18h) and `fork-cohort` (~62h) carry. All already covered in last 48h logs (6-16 20:25Z heartbeat + 6-17 morning-brief + daily-routine), so **no notification sent per dedup rules**.
+- **Gap watch:** at 09:17Z no fresh state for today's 08:00 (`skill-freshness`, heartbeat) or 09:00 cluster (`github-trending`, `aixbt-pulse`) — likely GH Actions cron delay (this 08:00 heartbeat ran ~77min late).
+- **Heartbeat self-check OK**: last_success 2026-06-16 20:32Z, ~12.7h ago, under 36h threshold.
+- **PRs**: #112 (~63.6h), #122 (~38h) both past 24h stalled threshold. Both already in action-converter loops + morning-brief focus #3 — covered.
+- **Status page** regenerated: 🔴 DEGRADED, 43 enabled rows, 5 🕸 stuck rows (3 fresh batch + fork-cohort + deal-flow), 2 never-run rows. Next scheduled run: `token-pick` at 12:00 UTC. Token pulse section omitted (no `articles/token-report-*.md`).
+- **Files modified**: `docs/status.md`, `memory/logs/2026-06-17.md` (heartbeat block appended).
