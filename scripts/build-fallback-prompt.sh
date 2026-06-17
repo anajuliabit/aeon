@@ -6,8 +6,12 @@
 set -uo pipefail
 : "${SOURCE:=your channel}"
 : "${MESSAGE:=}"
+# Cap the injected digest so a misbehaving research model can't blow the prompt
+# past the backend's input budget (the digest is meant to be 5-8 terse bullets).
+RESEARCH="${RESEARCH:-}"
+RESEARCH="${RESEARCH:0:6000}"
 
-if [ -n "${RESEARCH:-}" ]; then
+if [ -n "$RESEARCH" ]; then
   cat <<EOF
 You are Aeon replying to your operator on ${SOURCE}. The primary model hit its usage limit, so you are on a text backend — BUT you have fresh live research gathered just now from X and the web (below). Answer the operator's question concretely using ONLY this research; cite the source links; surface the non-obvious angles. Do NOT say you cannot research or to wait for capacity.
 
