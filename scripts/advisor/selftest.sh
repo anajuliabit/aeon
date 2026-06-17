@@ -293,4 +293,30 @@ P_DEGRADED="$(SOURCE=telegram MESSAGE='hi' bash "$BFP")"
 check "degraded prompt has degraded line"        "$(printf '%s' "$P_DEGRADED" | grep -c 'degraded text-only fallback')" "1"
 check "degraded prompt omits LIVE RESEARCH"      "$(printf '%s' "$P_DEGRADED" | grep -c 'LIVE RESEARCH')" "0"
 
+# --- tg-chunk.sh: line-boundary chunking under the Telegram limit ---
+TGC="$(cd "$(dirname "$0")/.." && pwd)/tg-chunk.sh"
+# Consume NUL-delimited stdin -> "<count> <maxchunklen>" (portable: read -d '').
+tgstats() { local c n=0 m=0; while IFS= read -r -d '' c; do n=$((n+1)); [ "${#c}" -gt "$m" ] && m="${#c}"; done; echo "$n $m"; }
+
+SHORT="$(printf 'alpha\nbeta\ngamma')"
+check "tg-chunk short -> 1 chunk"       "$(printf '%s' "$SHORT" | bash "$TGC" | tgstats | cut -d' ' -f1)" "1"
+check "tg-chunk short reassembles"      "$(printf '%s' "$SHORT" | bash "$TGC" | tr -d '\0')" "$SHORT"
+
+# ~6100 chars across 120 lines (50 'x' + newline each) -> multiple chunks, each <=4000.
+LONG="$(for i in $(seq 1 120); do printf 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n'; done)"
+set -- $(printf '%s' "$LONG" | bash "$TGC" | tgstats)
+check "tg-chunk long -> >=2 chunks"     "$([ "$1" -ge 2 ] && echo yes)" "yes"
+check "tg-chunk long chunks <=4000"     "$([ "$2" -le 4000 ] && echo yes)" "yes"
+check "tg-chunk long reassembles"       "$(printf '%s' "$LONG" | bash "$TGC" | tr -d '\0')" "$LONG"
+
+# Single 5000-char line, no newline -> hard-split into >=2 chunks, each <=4000.
+BIG="$(printf 'y%.0s' $(seq 1 5000))"
+set -- $(printf '%s' "$BIG" | bash "$TGC" | tgstats)
+check "tg-chunk overlong line -> >=2"   "$([ "$1" -ge 2 ] && echo yes)" "yes"
+check "tg-chunk overlong line <=4000"   "$([ "$2" -le 4000 ] && echo yes)" "yes"
+
+# Exactly 4000 chars -> 1 chunk.
+B4000="$(printf 'z%.0s' $(seq 1 4000))"
+check "tg-chunk exactly 4000 -> 1 chunk" "$(printf '%s' "$B4000" | bash "$TGC" | tgstats | cut -d' ' -f1)" "1"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
