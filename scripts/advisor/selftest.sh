@@ -200,4 +200,28 @@ check "sizing MEDIUM = floor(1/7 of budget)" "$(printf '%s' "$SZ" | jq -r '.[2].
 check "sizing total stays within budget" "$(printf '%s' "$SZ" | jq -r '[.[].sizeUsd]|add <= 19500')" "true"
 check "sizing pct-of-net computed" "$(printf '%s' "$SZ" | jq -r '.[0].sizePctNet')" "1.4"
 
+# --- run.sh complete(): LLM failure must surface, not be swallowed ---
+# Regression: a dead token once produced a silent "PM gap" because complete()
+# piped the LLM's stderr to /dev/null. Load the real complete() against a stub
+# LLM that fails like an auth error and assert the reason reaches stderr.
+COMPLETE_DIR="$(cd "$(dirname "$0")" && pwd)"
+CT_TMP="$(mktemp -d)"
+cat > "$CT_TMP/fakellm.sh" <<'EOF'
+#!/usr/bin/env bash
+cat >/dev/null
+echo "llm.sh: API error: invalid x-api-key" >&2
+exit 1
+EOF
+chmod +x "$CT_TMP/fakellm.sh"
+sed -n '/^cat > "\$EXTRACTOR" <<.PY.$/,/^PY$/p' "$COMPLETE_DIR/run.sh" | sed '1d;$d' > "$CT_TMP/extract_json.py"
+EXTRACTOR="$CT_TMP/extract_json.py"
+extract_json() { python3 "$EXTRACTOR"; }
+LLM="$CT_TMP/fakellm.sh"
+eval "$(sed -n '/^complete() {/,/^}/p' "$COMPLETE_DIR/run.sh")"
+CT_OUT="$(complete "ping" 2>"$CT_TMP/err")"; CT_RC=$?
+check "complete() returns 1 on LLM failure" "$CT_RC" "1"
+check "complete() emits no stdout on failure" "$CT_OUT" ""
+check "complete() surfaces the LLM error to stderr" \
+  "$(grep -c 'LLM call failed.*invalid x-api-key' "$CT_TMP/err")" "1"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }

@@ -99,19 +99,30 @@ extract_json() {
 
 # complete: pipe a prompt to llm.sh, extract + validate JSON; retry once on failure.
 # Prints validated JSON to stdout, or nothing (returns 1) on second failure.
+# stdout is the JSON channel, so all diagnostics go to stderr. The LLM's own
+# stderr (auth errors, gateway 504s, "empty completion", Virtuals fallback) is
+# captured and surfaced on total failure instead of being discarded — otherwise
+# a dead token looks identical to a model that just produced no JSON.
 complete() {
   local prompt="$1"
-  local raw json
-  raw="$(printf '%s' "$prompt" | "$LLM" 2>/dev/null || true)"
+  local raw json errf
+  errf="$(mktemp)"
+  raw="$(printf '%s' "$prompt" | "$LLM" 2>"$errf" || true)"
   json="$(printf '%s' "$raw" | extract_json)"
   if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
-    printf '%s' "$json"; return 0
+    rm -f "$errf"; printf '%s' "$json"; return 0
   fi
-  raw="$(printf '%s\n\nReturn ONLY valid JSON, no prose.' "$prompt" | "$LLM" 2>/dev/null || true)"
+  raw="$(printf '%s\n\nReturn ONLY valid JSON, no prose.' "$prompt" | "$LLM" 2>>"$errf" || true)"
   json="$(printf '%s' "$raw" | extract_json)"
   if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
-    printf '%s' "$json"; return 0
+    rm -f "$errf"; printf '%s' "$json"; return 0
   fi
+  if [ -s "$errf" ]; then
+    echo "advisor: LLM call failed — $(tr '\n' ' ' < "$errf" | head -c 500)" >&2
+  else
+    echo "advisor: LLM call failed — no stderr; output had no parseable JSON (len=${#raw})" >&2
+  fi
+  rm -f "$errf"
   return 1
 }
 
