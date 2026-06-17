@@ -321,16 +321,16 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-17T09:17:40Z",
-    "total_runs": 49,
+    "total_runs": 53,
     "total_successes": 34,
-    "total_failures": 15,
-    "consecutive_failures": 15,
-    "success_rate": 0.69,
+    "total_failures": 19,
+    "consecutive_failures": 19,
+    "success_rate": 0.64,
     "last_dispatch": "2026-06-17T23:08:37Z",
-    "last_failed": "2026-06-17T22:36:10Z",
-    "last_error": "01d4584\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-06-17T23:10:37Z",
+    "last_error": "6d1a03c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-analytics": {
     "last_dispatch": "2026-06-17T23:08:37Z",
