@@ -25,22 +25,25 @@ call_xai() { # $1 = tools JSON
   local tools="$1" body
   body=$(jq -n --arg model "$MODEL" --arg content "$INSTR" --argjson tools "$tools" \
     '{model:$model, input:[{role:"user", content:$content}], tools:$tools}')
-  curl -sS --max-time 120 -X POST "https://api.x.ai/v1/responses" \
+  curl -sS --connect-timeout 10 --max-time 60 -X POST "https://api.x.ai/v1/responses" \
     -H "Authorization: Bearer $XAI_API_KEY" \
     -H "Content-Type: application/json" \
     -d "$body"
 }
 
 extract() { # reads RESP on stdin -> findings text or empty
+  # join("") yields a truthy "" so a plain `//` chain never reaches the
+  # fallbacks; only fall back when the primary array is genuinely empty.
   jq -r '
     ([ .output[]?.content[]? | select(has("text")) | .text ]
-       | map(select(. != null and . != "")) | join("\n"))
-    // .output_text // .choices[0].message.content // empty' 2>/dev/null
+       | map(select(. != null and . != ""))) as $t
+    | if ($t | length) > 0 then ($t | join("\n"))
+      else (.output_text // .choices[0].message.content // empty) end' 2>/dev/null
 }
 
 RESP="$(call_xai '[{"type":"x_search"},{"type":"web_search"}]')" || { echo "research-prefetch.sh: request failed" >&2; exit 1; }
 ERR=$(printf '%s' "$RESP" | jq -r '.error.message? // (.error|strings) // empty' 2>/dev/null || true)
-if printf '%s' "$ERR" | grep -qiE 'web_search|tool|unsupported|invalid'; then
+if printf '%s' "$ERR" | grep -qiE 'web_search|unsupported.*tool|tool.*(unsupported|not (supported|allowed))'; then
   echo "research-prefetch.sh: retrying x_search only ($ERR)" >&2
   RESP="$(call_xai '[{"type":"x_search"}]')" || { echo "research-prefetch.sh: request failed" >&2; exit 1; }
   ERR=$(printf '%s' "$RESP" | jq -r '.error.message? // (.error|strings) // empty' 2>/dev/null || true)
