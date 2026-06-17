@@ -17,13 +17,16 @@ jobs:
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
+          USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
+          USEPOD_MODEL: ${{ vars.USEPOD_MODEL }}
+          ADVISOR_LLM: ${{ vars.ADVISOR_LLM }}
           DASHBOARD_USER: ${{ secrets.DASHBOARD_USER }}
           DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/advisor/notify-vesting.sh scripts/advisor/notify-drawdown.sh scripts/advisor/notify-yield-delta.sh scripts/llm.sh scripts/llm-claude.sh
+          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/advisor/notify-vesting.sh scripts/advisor/notify-drawdown.sh scripts/advisor/notify-yield-delta.sh scripts/llm.sh scripts/llm-claude.sh scripts/llm-usepod.sh
           ./scripts/advisor/prefetch-data.sh
           ./scripts/advisor/run.sh
           ./scripts/advisor/notify-vesting.sh || echo "::warning::notify-vesting failed"

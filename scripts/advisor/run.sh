@@ -31,16 +31,33 @@ NOW_ISO=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 DRY="${ADVISOR_DRY_RUN:-0}"
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-# Backend: Claude subscription (claude-fable-5 via Claude Code CLI) when the
-# OAuth token is present; Virtuals otherwise. llm-claude.sh itself falls back
-# to llm.sh if the CLI call fails, so MODEL_LABEL reflects the primary backend.
-if [ -n "${CLAUDE_CODE_OAUTH_TOKEN:-}" ] || [ -n "${ANTHROPIC_API_KEY:-}" ]; then
-  LLM="$ROOT/scripts/llm-claude.sh"
-  MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)"
-else
-  LLM="$ROOT/scripts/llm.sh"
-  MODEL_LABEL="$VIRTUALS_MODEL (Virtuals)"
-fi
+# Backend selection. ADVISOR_LLM picks explicitly (usepod|claude|virtuals);
+# the default "auto" keeps the historical behavior: Claude subscription
+# (claude-fable-5 via Claude Code CLI) when an OAuth/API token is present,
+# Virtuals otherwise. llm-claude.sh / llm-usepod.sh fall back to llm.sh on
+# failure, so MODEL_LABEL reflects the primary backend. Sets LLM + MODEL_LABEL.
+select_backend() {
+  case "${ADVISOR_LLM:-auto}" in
+    usepod)
+      LLM="$ROOT/scripts/llm-usepod.sh"
+      MODEL_LABEL="${USEPOD_MODEL:-deepseek-v3.2} (usepod)" ;;
+    claude)
+      LLM="$ROOT/scripts/llm-claude.sh"
+      MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)" ;;
+    virtuals)
+      LLM="$ROOT/scripts/llm.sh"
+      MODEL_LABEL="${VIRTUALS_MODEL:-claude-opus-4-8} (Virtuals)" ;;
+    auto|*)
+      if [ -n "${CLAUDE_CODE_OAUTH_TOKEN:-}" ] || [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+        LLM="$ROOT/scripts/llm-claude.sh"
+        MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)"
+      else
+        LLM="$ROOT/scripts/llm.sh"
+        MODEL_LABEL="${VIRTUALS_MODEL:-claude-opus-4-8} (Virtuals)"
+      fi ;;
+  esac
+}
+select_backend
 PROMPTS="$ROOT/advisor/prompts"
 
 # Shared accounting note injected into every agent prompt so the gross-vs-net
@@ -99,19 +116,30 @@ extract_json() {
 
 # complete: pipe a prompt to llm.sh, extract + validate JSON; retry once on failure.
 # Prints validated JSON to stdout, or nothing (returns 1) on second failure.
+# stdout is the JSON channel, so all diagnostics go to stderr. The LLM's own
+# stderr (auth errors, gateway 504s, "empty completion", Virtuals fallback) is
+# captured and surfaced on total failure instead of being discarded — otherwise
+# a dead token looks identical to a model that just produced no JSON.
 complete() {
   local prompt="$1"
-  local raw json
-  raw="$(printf '%s' "$prompt" | "$LLM" 2>/dev/null || true)"
+  local raw json errf
+  errf="$(mktemp)"
+  raw="$(printf '%s' "$prompt" | "$LLM" 2>"$errf" || true)"
   json="$(printf '%s' "$raw" | extract_json)"
   if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
-    printf '%s' "$json"; return 0
+    rm -f "$errf"; printf '%s' "$json"; return 0
   fi
-  raw="$(printf '%s\n\nReturn ONLY valid JSON, no prose.' "$prompt" | "$LLM" 2>/dev/null || true)"
+  raw="$(printf '%s\n\nReturn ONLY valid JSON, no prose.' "$prompt" | "$LLM" 2>>"$errf" || true)"
   json="$(printf '%s' "$raw" | extract_json)"
   if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
-    printf '%s' "$json"; return 0
+    rm -f "$errf"; printf '%s' "$json"; return 0
   fi
+  if [ -s "$errf" ]; then
+    echo "advisor: LLM call failed — $(tr '\n' ' ' < "$errf" | head -c 500)" >&2
+  else
+    echo "advisor: LLM call failed — no stderr; output had no parseable JSON (len=${#raw})" >&2
+  fi
+  rm -f "$errf"
   return 1
 }
 
