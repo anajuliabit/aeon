@@ -319,15 +319,15 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-17T09:17:40Z",
-    "total_runs": 41,
+    "total_runs": 42,
     "total_successes": 34,
-    "total_failures": 7,
-    "consecutive_failures": 7,
-    "success_rate": 0.83,
+    "total_failures": 8,
+    "consecutive_failures": 8,
+    "success_rate": 0.81,
     "last_dispatch": "2026-06-17T20:18:23Z",
-    "last_failed": "2026-06-17T19:27:31Z",
+    "last_failed": "2026-06-17T20:49:26Z",
     "last_error": "0657355\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-analytics": {
