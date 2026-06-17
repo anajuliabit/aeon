@@ -755,7 +755,7 @@ jobs:
             # Pick the fallback backend: usepod first (llm-usepod.sh cascades to
             # Virtuals internally), else Virtuals directly. chmod so usepod's
             # internal `[ -x scripts/llm.sh ]` cascade can fire.
-            chmod +x scripts/llm.sh scripts/llm-usepod.sh 2>/dev/null || true
+            chmod +x scripts/llm.sh scripts/llm-usepod.sh scripts/research-prefetch.sh scripts/build-fallback-prompt.sh 2>/dev/null || true
             FB_LLM=""
             if [ -n "${USEPOD_TOKEN:-}" ]; then
               FB_LLM="scripts/llm-usepod.sh"
@@ -763,10 +763,13 @@ jobs:
               FB_LLM="scripts/llm.sh"
             fi
             if [ -n "$FB_LLM" ]; then
-              FB_PROMPT="You are Aeon, an autonomous assistant replying to your operator on ${SOURCE}. You are in a degraded text-only fallback (no file or tool access) because the primary model hit its usage limit. Reply helpfully and concisely in one short paragraph. If the request needs running a skill, editing files, or saving a note, say you will handle it once full capacity is restored.
-
-          Operator message:
-          \"$MESSAGE\""
+              # Best-effort live research (X + web via Grok); empty on any failure.
+              # Capture stderr so an empty result reports WHY (don't /dev/null it).
+              RP_ERR="$(mktemp)"
+              RESEARCH="$(printf '%s' "$MESSAGE" | bash scripts/research-prefetch.sh 2>"$RP_ERR" || true)"
+              if [ -n "$RESEARCH" ]; then echo "::notice::research-prefetch returned $(printf '%s' "$RESEARCH" | wc -c) chars"; else echo "::notice::research-prefetch empty — degraded prompt. Reason: $(tr '\n' ' ' < "$RP_ERR" | head -c 300)"; fi
+              rm -f "$RP_ERR"
+              FB_PROMPT="$(SOURCE="$SOURCE" MESSAGE="$MESSAGE" RESEARCH="$RESEARCH" bash scripts/build-fallback-prompt.sh)"
               if FB_REPLY=$(printf '%s' "$FB_PROMPT" | bash "$FB_LLM"); then
                 ./notify "$FB_REPLY"
                 echo "::notice::Replied via text fallback ($FB_LLM)."

@@ -270,4 +270,27 @@ chmod +x "$UP_TMP/scripts/llm.sh" "$UP_TMP/scripts/llm-usepod.sh"
 FB_OUT="$(USEPOD_TOKEN='' VIRTUALS_API_KEY='present' bash "$UP_TMP/scripts/llm-usepod.sh" 'ping' 2>/dev/null)"
 check "usepod falls back to Virtuals when token unset" "$FB_OUT" '{"ok":"virtuals-stub"}'
 
+# --- research-prefetch.sh: safe failure when unusable (offline) ---
+RP="$(cd "$(dirname "$0")/.." && pwd)/research-prefetch.sh"   # $0=scripts/advisor/selftest.sh, so dirname/.. = scripts/
+# Unconfigured (no XAI_API_KEY) -> exit 1, no stdout.
+RP_OUT="$(env -u XAI_API_KEY bash "$RP" 'find cheap polymarket bets' 2>/dev/null)"; RP_RC=$?
+check "research-prefetch exits 1 without XAI_API_KEY" "$RP_RC" "1"
+check "research-prefetch emits no stdout without key" "$RP_OUT" ""
+# Empty query (key present but blank prompt) -> exit 1, no stdout.
+RP_OUT2="$(XAI_API_KEY=dummy bash "$RP" '   ' 2>/dev/null)"; RP_RC2=$?
+check "research-prefetch exits 1 on empty query" "$RP_RC2" "1"
+check "research-prefetch emits no stdout on empty query" "$RP_OUT2" ""
+
+# --- build-fallback-prompt.sh: research-grounded vs degraded prompt ---
+BFP="$(cd "$(dirname "$0")/.." && pwd)/build-fallback-prompt.sh"
+# With RESEARCH -> research-grounded prompt.
+P_RESEARCH="$(SOURCE=telegram MESSAGE='find cheap polymarket bets' RESEARCH='- Market X underpriced (link, 2026-06-17)' bash "$BFP")"
+check "research prompt includes LIVE RESEARCH" "$(printf '%s' "$P_RESEARCH" | grep -c 'LIVE RESEARCH')" "1"
+check "research prompt includes the digest"    "$(printf '%s' "$P_RESEARCH" | grep -c 'Market X underpriced')" "1"
+check "research prompt omits degraded line"     "$(printf '%s' "$P_RESEARCH" | grep -c 'degraded text-only fallback')" "0"
+# Without RESEARCH -> degraded prompt.
+P_DEGRADED="$(SOURCE=telegram MESSAGE='hi' bash "$BFP")"
+check "degraded prompt has degraded line"        "$(printf '%s' "$P_DEGRADED" | grep -c 'degraded text-only fallback')" "1"
+check "degraded prompt omits LIVE RESEARCH"      "$(printf '%s' "$P_DEGRADED" | grep -c 'LIVE RESEARCH')" "0"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
