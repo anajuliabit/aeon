@@ -701,9 +701,23 @@ jobs:
             echo "notify: empty message, skipping" >&2; exit 0
           fi
           if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
-            curl -sf -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-              -H "Content-Type: application/json" \
-              -d "$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$MSG" '{chat_id: $chat, text: $text, parse_mode: "Markdown"}')" > /dev/null || true
+            # Telegram caps messages at 4096 chars and rejects Markdown it can't parse
+            # (links/*/_ in research answers). Chunk + label parts, send Markdown then
+            # retry the same chunk as plain text, and log a real failure (no silent drop).
+            mapfile -d '' _CHUNKS < <(printf '%s' "$MSG" | bash scripts/tg-chunk.sh)
+            _n=${#_CHUNKS[@]}; _i=0
+            for _c in "${_CHUNKS[@]}"; do
+              [ -n "$_c" ] || continue
+              _i=$((_i+1))
+              [ "$_n" -gt 1 ] && _c="($_i/$_n) $_c"
+              _body="$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$_c" '{chat_id:$chat, text:$text, parse_mode:"Markdown"}')"
+              _resp="$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" -H "Content-Type: application/json" -d "$_body")"
+              if [ "$(printf '%s' "$_resp" | jq -r '.ok // false')" != "true" ]; then
+                _body="$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$_c" '{chat_id:$chat, text:$text}')"
+                _resp="$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" -H "Content-Type: application/json" -d "$_body")"
+                [ "$(printf '%s' "$_resp" | jq -r '.ok // false')" = "true" ] || echo "::warning::notify: telegram send failed: $(printf '%s' "$_resp" | jq -r '.description // "unknown"')" >&2
+              fi
+            done
           fi
           if [ -n "${DISCORD_WEBHOOK_URL:-}" ]; then
             curl -sf -X POST "$DISCORD_WEBHOOK_URL" \
