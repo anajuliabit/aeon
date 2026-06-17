@@ -1,43 +1,42 @@
-*Token Movers — 2026-06-16 (intraday)*
+*Token Movers — 2026-06-17*
 
-_risk-on cooling further intraday — 52/100 top-100 green (vs 61 AM, 92 yest), median top-50 +0.7%; btc $66,443 flat / 7d +6.0%, sol $75 +3.5% / 7d +13.7% leads the week._
+_broad risk-off — 22/100 top-100 green, median top-50 −2.2%; BTC $64,681 −2.8% / ETH $1,747 −4.7% / SOL $72 −4.6% lead the move down. risk-on regime that ran 6-14→6-16 has snapped._
 
 *Top Winners (24h)*
-1. SKYAI (SkyAI) — $0.43  +38.6% / 7d +113.3% / 1h +5.3%  •  $43M / #119  [BREAKOUT]
-2. LAB (LAB) — $13.45  +38.2% / 7d +27.2% / 1h +11.8%  •  $41M / #27  [BREAKOUT]
-3. JTO (Jito) — $0.87  +36.4% / 7d +38.8% / 1h +3.7%  •  $395M / #120  [TRENDING+UP, BREAKOUT]
-4. VELVET (Velvet) — $0.39  +17.8% / 7d −5.4% / 1h +5.4%  •  $31M / #200
-5. UNI (Uniswap) — $3.05  +13.2% / 7d +21.6% / 1h +1.7%  •  $443M / #47
-6. AERO (Aerodrome) — $0.47  +13.2% / 7d +39.8% / 1h +3.4%  •  $61M / #114
-7. HYPE (Hyperliquid) — $75.94  +12.0% / 7d +22.8% / 1h +1.4%  •  $2.4B / #10  [TRENDING+UP, MAJOR]
-8. SENT (Sentient) — $0.0171  +11.7% / 7d +17.4% / 1h +0.3%  •  $23M / #237
-9. XLM (Stellar) — $0.23  +11.5% / 7d +15.6% / 1h +2.7%  •  $1.1B / #16  [MAJOR]
-10. ZANO (Zano) — $10.40  +10.6% / 7d +16.1% / 1h −0.6%  •  $2M / #205  [TRENDING+UP]
+1. BP (Backpack) — $0.5007  +20.3% / 7d +105.6% / 1h +0.3%  •  $7M / #234  [BREAKOUT]
+2. TAG (TAGGER) — $0.001236  +19.6% / 7d +24.1% / 1h +1.4%  •  $6M / #223
+3. BSB (Block Street) — $0.5728  +15.8% / 7d +117.7% / 1h −1.7%  •  $65M / #229  [BREAKOUT]
+4. ASTER (Aster) — $0.7420  +11.4% / 7d +19.7% / 1h +12.6%  •  $193M / #45
+5. SPX (SPX6900) — $0.4290  +11.0% / 7d +42.8% / 1h −0.6%  •  $116M / #121
+6. UNI (Uniswap) — $3.28  +7.2% / 7d +34.5% / 1h −1.7%  •  $972M / #44  [TRENDING+UP]
+7. CFX (Conflux) — $0.0504  +6.7% / 7d +15.3% / 1h +0.7%  •  $12M / #143
+8. 2Z (DoubleZero) — $0.0752  +6.2% / 7d +9.6% / 1h +1.9%  •  $10M / #145
+9. TIA (Celestia) — $0.3990  +5.5% / 7d +25.7% / 1h −0.1%  •  $67M / #127
+10. EDGE (edgeX) — $0.3659  +5.5% / 7d −8.8% / 1h +0.3%  •  $12M / #230
 
 *Top Losers (24h)*
-1. BTW (Bitway) — $0.062  −33.3% / 7d +2.9% / 1h +0.3%  •  $17M / #218
-2. BEAT (Audiera) — $2.90  −29.2% / 7d −36.0% / 1h −7.0%  •  $52M / #80
-3. H (Humanity) — $0.20  −26.0% / 7d −18.3% / 1h +6.7%  •  $111M / #127  [CAPITULATION]
-4. BILL (Billions Network) — $0.067  −11.8% / 7d −6.4% / 1h +0.7%  •  $30M / #199
-5. GENIUS (Genius) — $0.43  −7.7% / 7d −5.2% / 1h −1.4%  •  $18M / #213
-6. GRAM (ex-Toncoin) — $1.67  −5.6% / 7d −4.0% / 1h 0.0%  •  $10M / #24
-7. JASMY (JasmyCoin) — $0.005031  −5.5% / 7d +7.7% / 1h +1.0%  •  $14M / #152
-8. VVV (Venice Token) — $15.43  −5.4% / 7d −2.1% / 1h +0.8%  •  $57M / #84
-9. TAO (Bittensor) — $266  −4.9% / 7d +23.6% / 1h +0.7%  •  $269M / #40
-10. TRUMP (Official Trump) — $1.93  −4.5% / 7d +16.0% / 1h +0.4%  •  $142M / #111
+1. BEAT (Audiera) — $1.79  −40.0% / 7d −67.5% / 1h +0.3%  •  $78M / #99
+2. JTO (Jito) — $0.7284  −16.0% / 7d +24.7% / 1h −2.0%  •  $114M / #129  [CAPITULATION]
+3. DEXE (DeXe) — $15.76  −15.4% / 7d −14.6% / 1h −0.9%  •  $19M / #82
+4. ZRO (LayerZero) — $1.034  −13.8% / 7d +26.5% / 1h −0.1%  •  $65M / #146
+5. GWEI (ETHGas) — $0.1242  −11.7% / 7d −27.4% / 1h +4.3%  •  $8M / #147
+6. NIGHT (Midnight) — $0.0307  −10.2% / 7d −0.3% / 1h −0.3%  •  $70M / #101
+7. INJ (Injective) — $5.39  −9.5% / 7d +5.6% / 1h −0.4%  •  $136M / #97
+8. SKYAI (SkyAI) — $0.3812  −9.0% / 7d +132.7% / 1h +3.6%  •  $47M / #125
+9. MON (Monad) — $0.0218  −8.6% / 7d +2.7% / 1h +0.1%  •  $32M / #148
+10. PUMP (Pump.fun) — $0.001461  −7.7% / 7d −0.3% / 1h −0.5%  •  $41M / #103
 
 *Trending*
-1. Hyperliquid (HYPE) — #10, $75.54, 24h +11.4%  [TRENDING+UP, MAJOR]
-2. Zano (ZANO) — #205, $10.41, 24h +10.6%  [TRENDING+UP]
-3. Jito (JTO) — #120, $0.87, 24h +36.4%  [TRENDING+UP, BREAKOUT]
-4. SpaceX xStock (SPCXX) — #636, $202.19, 24h +18.7%
-5. Pudgy Penguins (PENGU) — #112, $0.0073, 24h +2.1%
-6. Lighter (LIT) — #116, $1.79, 24h +6.0%
-7. Siren (SIREN) — #605, $0.046, 24h −23.9%  [TRENDING+DOWN]
+1. SIREN — #560, $0.0522, 24h +15.0%
+2. UNI (Uniswap) — #44, $3.28, 24h +8.5%  [TRENDING+UP]
+3. WLD (Worldcoin) — #42, $0.6536, 24h +0.6%
+4. HYPE (Hyperliquid) — #10, $70.20, 24h −7.2%  [MAJOR]
+5. ZAMA — #320, $0.0356, 24h +7.7%
+6. AERO (Aerodrome) — #107, $0.4955, 24h +5.8%
+7. XPL (Plasma) — #157, $0.0984, 24h +2.3%
 
 *Notable*
-• jto extending day-2 — AM +24.5% → +36.4% on $395M vol + on trending, sustained not flash.
-• lab +38.2% at rank #27 — large-cap +38% on $41M vol is the unusual print of the day.
-• skyai +38.6% / 7d +113% breakout — third sustained breakout below #150 ranks, no pump-risk fires (vol/cap holds).
-• h −26.0% capitulation — yesterday's FADE call (was +28.5%) playing out clean.
-• velvet +17.8% holds — narrative #15 reversal from "DEAD" yesterday is now day-2, not a one-day bounce.
+• jto: yesterday's TRENDING+UP+BREAKOUT (+36.4% on $395M vol, flagged "sustained not flash") → −16.0% CAPITULATION today. one-day refutation of the sustained-move call.
+• beat: day-4 unwind extending — −40.0% on top of −31.5% / −29.2%. 7d now −67.5%, narrative #21 still dead.
+• bp and bsb: fresh BREAKOUTs at rank #234 / #229, both 7d > +100%. low-rank but vol survives the $1M floor — track for follow-through, not yet PUMP-RISK.
+• siren: 4-day capitulation broke — +15.0% bounce after −47.7% / −33.7% / −23.9% the prior 3 sessions.
