@@ -1,4 +1,4 @@
-# AIXBT Clusters (as of 2026-06-04)
+# AIXBT Clusters (as of 2026-06-17)
 
 36 sub-community clusters AIXBT tracks (free tier returns 36; paid docs reference 46). Schema: id, name, description, universe — sentiment and ideology fields absent in free-tier response. Used when filtering projects/intel/momentum endpoints (paid tier).
 

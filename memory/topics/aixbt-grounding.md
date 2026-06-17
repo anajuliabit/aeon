@@ -1,47 +1,49 @@
-# AIXBT Grounding (as of 2026-06-16 21:00 UTC)
+# AIXBT Grounding (as of 2026-06-17 09:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-16T21:00:30.233Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-17T09:00:29.781Z
 
-Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent 6th+ consecutive window — iterating dynamically over whatever sections appear.
+Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent 7th+ consecutive window — iterating dynamically over whatever sections appear.
 
 ## Crypto
-- Coinbase launched a sweeping "System Update" adding tokenized stocks, pre-IPO perps, AI advisors, and options—positioning itself as an all-in-one financial super-app.
-- HYPE hit new ATHs with $15M flowing into the Bitwise BHYP ETF; Hyperliquid draws praise as the premier venue for RWAs, tokenized equities, and on-chain pre-IPO pricing.
-- Tokenized SpaceX drove record $188M daily spot volume on Solana, but Binance's MiCA license faces potential rejection threatening its EU access by July 1.
-- BTC sentiment sits at "Extreme Fear" (23) with Glassnode calling the move base-building not reversal, while BlackRock's new covered-call ETF (BITA) signals maturing demand.
+- HYPE surges to ATH near $75 as equity perps (SPCX) drive record volume; Bitwise ETF stakes 1M+ tokens, with analysts targeting $100-150.
+- Tokenized stocks dominate mindshare: Solana hits $210M daily volume ATH, Backpack captures 50%+ share, and Coinbase pushes equities on Base.
+- BTC stalls near $65K in extreme fear (F&G 22) ahead of first Warsh-led FOMC; ETF inflows remain modest while 5K BTC leave exchanges signaling accumulation.
+- Altcoin rotation heats up as UNI and JTO break out on bullish divergences, ETH draws Standard Chartered's $40K target, and RWA/DeFi protocols attract institutional capital.
 
 ## TradFi
-- US-Iran framework deal prospects for Hormuz reopening are sending oil to three-month lows, easing inflation concerns and transmitting to lower yields supportive of risk assets into the Fed meeting.
-- Profit-taking in concentrated AI and chip positions is pressuring Nasdaq lower while Dow strength highlights broadening equity participation and reduced sector concentration risks.
-- Markets are positioned for a Fed hold under new Chair Warsh with oil relief improving the inflation outlook, limiting potential hawkish surprises and favoring carry trades over aggressive de-risking.
-- Lingering uncertainties on deal terms are tempering full risk-on conviction despite macro relief, keeping VIX modestly elevated as traders await formal signing and implementation clarity.
+- Progress toward a US-Iran deal is easing geopolitical tensions, with oil sliding below $80 and reducing cross-asset inflation hedges in rates and credit markets.
+- Equity flows reflect rotation into cyclicals and financials, supporting Dow records near 52k while pressuring tech-heavy Nasdaq amid semiconductor profit-taking.
+- Positioning ahead of the Fed centers on a rates hold, with dot plot scrutiny set to reshape duration bets, yields, and dollar exposure.
+- Cheaper energy from Hormuz reopening prospects is bolstering global liquidity by cutting shipping and input costs, aiding credit and EM flows.
 
-## What's New (vs last pull 2026-06-16 09:00 UTC)
-- (Crypto) **Coinbase "System Update"** — tokenized stocks, pre-IPO perps, AI advisors, options all dropped at once. The 09:00Z pull had "speculation about Coinbase integration"; this is the shipped product.
-- (Crypto) **HYPE new ATH + Bitwise BHYP ETF $15M inflows** — prior had "near ATH speculation via Coinbase integration." ATH now confirmed with institutional ETF demand as the driver.
-- (Crypto) **Tokenized SpaceX $188M daily spot on Solana** — specific named token and volume number both new.
-- (Crypto) **Binance MiCA license rejection risk / EU access by July 1** — entirely new; not in prior windows.
-- (Crypto) **Glassnode "base-building not reversal" framing** for BTC — new analyst call framing the fear-23 environment.
-- (TradFi) **Nasdaq LOWER on AI/chip profit-taking** — complete reversal from 09:00Z's Nasdaq +3%. Dow broadening new.
-- (TradFi) **New Fed Chair Warsh + hold positioning** — explicit new Fed chair context.
-- (TradFi) **VIX modestly elevated; "framework deal prospects" not "pact"** — Hormuz certainty softened; uncertainty returned to price.
+## What's New (vs last pull 2026-06-16 21:00 UTC)
+- (Crypto) **HYPE $75 ATH + $100-150 analyst targets + Bitwise staking 1M+ tokens** — prior had ATH confirmed but no price level, no analyst targets, no staking detail
+- (Crypto) **Solana $210M daily volume ATH / Backpack 50%+ share** — volume grew from $188M (SpaceX-driven) to $210M (broad tokenized stocks); Backpack as venue leader is new
+- (Crypto) **5K BTC leaving exchanges** — on-chain accumulation signal; not in prior pulls
+- (Crypto) **UNI and JTO breakouts on bullish divergences** — new altcoins entirely; altcoin rotation wasn't in 21:00Z pull
+- (Crypto) **Standard Chartered ETH $40K target** — new analyst call
+- (TradFi) **Oil below $80** — specific price level (prev: "three-month lows")
+- (TradFi) **Dow records near 52k** — specific level new
+- (TradFi) **Dot plot scrutiny reshaping duration bets** — sharper FOMC framing vs prior's generic "rates hold" language
 
-## Gone (dropped from 2026-06-16 09:00 UTC)
-- (Crypto) Strategy adds 1,587 BTC; Taiwan floats BTC reserves — dropped
-- (Crypto) $HYPE/$SPCX perp volume dominance story — narrative shifted: HYPE is now the ATH story itself, not the venue for SPCX perps
-- (Crypto) DeFi leverage at 2021 levels / $13B exploit-driven outflows / Panoptic V2 / Flexmeow fragile conditions — dropped entirely
-- (TradFi) Nasdaq +3% / "US-Iran pact slashed geopolitical risk premia" certainty language — reversed
-- (TradFi) "Fading Iran conflict transmission compresses vol" / tighter spreads / sustained equity upside conviction — now replaced by VIX elevated + uncertainty
+## Gone (dropped from 2026-06-16 21:00 UTC)
+- (Crypto) Binance MiCA license rejection risk by July 1 — dropped entirely
+- (Crypto) Glassnode "base-building not reversal" call — dropped; BTC fear floor persists but without that attribution
+- (Crypto) BlackRock BITA covered-call ETF — dropped
+- (Crypto) Coinbase "System Update" as a standalone launch event — absorbed into the tokenized stocks dominance narrative
+- (TradFi) VIX modestly elevated / "awaiting formal signing" uncertainty framing — dropped; oil-relief narrative returned to confidence
+- (TradFi) "carry trades over aggressive de-risking" framing — dropped
 
 ## Persisting Stories
-- **BTC extreme fear (23)** — both 09:00Z and 21:00Z; holding the same fear floor across the full day
-- **BlackRock BITA covered-call ETF** — now cited as evidence of "maturing demand" (was in prior's Gone as "presumably live and no longer novel"; re-emerged with a different angle)
-- **Hormuz reopening → oil lower → inflation relief → rate-supportive** — direction unchanged, but certainty moderated from "pact" to "framework deal prospects"
-- **Risk-on / cyclicals directional bias** — persists, softer; now "carry trades" over "aggressive rotation" language
+- **BTC extreme fear (F&G 23 → 22)** — holding same floor across full 24h+ window; 5K BTC exchange outflows are new supporting signal
+- **HYPE ATH narrative** — persists and sharpened: now has price ($75), analyst targets ($100-150), and Bitwise staking detail
+- **Tokenized stocks / Solana / Coinbase dominance** — growing: $188M → $210M volume, Backpack at 50%+, Coinbase deploying on Base
+- **Hormuz/oil relief → inflation easing → rate-supportive** — direction unchanged; oil now below $80 from "three-month lows"
+- **Warsh FOMC / Fed hold** — persists; dot plot framing sharpened this pull
 
 ## Cross-Domain Bridges
-- Nasdaq reverses on AI/chip profit-taking the same day HYPE marks ATH with $15M ETF flows. the AI premium trade is leaving public equities and landing on-chain — Hyperliquid is where it's parking. the capital didn't disappear; it rotated.
-- Coinbase drops tokenized stocks + pre-IPO perps. SpaceX hits $188M daily spot on Solana. Hyperliquid is named the premier RWA/pre-IPO venue. three separate data points in one pull — RWA found product-market fit. this isn't a narrative anymore; it's running.
-- Coinbase ships a full TradFi surface while Binance faces MiCA rejection by July 1. the exchange that built in regulated jurisdictions is shipping new asset classes; the one fighting regulators is defending existing access. regulatory moat being dug in real time.
-- Hormuz certainty half-disappeared between morning and evening. "US-Iran pact" at 09:00Z became "framework deal prospects" + VIX elevated + "awaiting formal signing" by 21:00Z. oil still lower, BTC still at fear 23 — the macro relief didn't reach crypto and the geopolitical certainty premium already eroded within 12 hours.
+- SPCX equity perps driving HYPE to $75 with $100-150 analyst targets. TradFi instruments manufactured on-chain are pricing into the token itself. the reflexivity loop is running — SPCX volume feeds HYPE ATH feeds the HYPE narrative feeds more SPCX volume. this isn't price speculation. it's a self-referential market.
+- 5K BTC leaving exchanges while Nasdaq bleeds AI/chip profit-taking. the capital isn't destroyed — it's repositioning. silent on-chain accumulation while public markets exit their AI premium. different asset, same directional bet on what comes next.
+- Solana $210M volume ATH, up from $188M at the 21:00Z pull 12 hours earlier. Backpack at 50%+ share. Coinbase deploying on Base simultaneously. tokenized stocks went from "launched" to "three-way venue war" in a single window. PMF is confirmed — the race now is capture.
+- FOMC dot plot is the single break point for everything bullish in this window. oil below $80 eases inflation, Warsh positioned for a hold — but if dots surprise hawkish, HYPE $100-150 targets, altcoin rotation, and $210M Solana volume all have the same single vector of fragility. one print, one unwind.

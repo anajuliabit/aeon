@@ -1,20 +1,22 @@
-*AIXBT Pulse — 2026-06-16 21:00Z*
+*AIXBT Pulse — 2026-06-17 09:00Z*
 
 CRYPTO
-- Coinbase "System Update" launched: tokenized stocks, pre-IPO perps, AI advisors, options — full super-app
-- HYPE hits new ATH; Bitwise BHYP ETF $15M inflow; Hyperliquid named premier RWA/pre-IPO venue
-- Tokenized SpaceX $188M daily spot volume on Solana. Binance MiCA license rejection risk by July 1.
-- BTC extreme fear (23) holds all day; Glassnode: base-building, not reversal
+- HYPE ATH $75; SPCX perp volume driving it; Bitwise staking 1M+ tokens; analysts targeting $100-150
+- Solana $210M daily volume ATH (from $188M); Backpack 50%+ share; Coinbase pushing equities on Base
+
+MACRO
+- Oil below $80 on Hormuz progress; rate-supportive; Dow records near 52k
+
+GEO
+- (absent this window — macro/geo sections not returned by AIXBT 7th+ consecutive pull)
 
 TRADFI
-- Nasdaq lower on AI/chip profit-taking; Dow broadening — rotation underway
-- Fed hold under new Chair Warsh positioned; oil relief limits hawkish risk
-- VIX modestly elevated; Hormuz "framework" not yet "pact" — certainty softer than 09:00Z
+- FOMC dot plot scrutiny ahead; Warsh hold positioned but dots reshape duration bets and dollar exposure
 
 NEW THIS PULL
-- Coinbase super-app shipped (was speculation this morning; now live product)
-- HYPE ATH confirmed + ETF demand ($15M BHYP)
-- Binance MiCA risk — EU access by July 1 in question
+- Solana $210M volume ATH (up from $188M); Backpack 50%+ share — venue war live
+- 5K BTC leaving exchanges — silent accumulation signal
+- UNI + JTO breakouts; Standard Chartered ETH $40K target
 
 BRIDGE
-- Nasdaq reverses on AI/chip profit-taking the same day HYPE marks ATH with $15M ETF flows. the AI premium trade is leaving public equities and landing on-chain — Hyperliquid is where it's parking. coinbase shipping tokenized stocks + pre-IPO perps the same day confirms the direction: TradFi is moving on-chain.
+- SPCX perps feeding HYPE to $75 with analyst $100-150 targets — reflexivity loop running, not speculation. 5K BTC leaving exchanges while Nasdaq bleeds AI/chip profit-taking: capital repositioning, not destruction. FOMC dot plot is the single break point for everything bullish in this window.
