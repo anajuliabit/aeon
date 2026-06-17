@@ -281,4 +281,16 @@ RP_OUT2="$(XAI_API_KEY=dummy bash "$RP" '   ' 2>/dev/null)"; RP_RC2=$?
 check "research-prefetch exits 1 on empty query" "$RP_RC2" "1"
 check "research-prefetch emits no stdout on empty query" "$RP_OUT2" ""
 
+# --- build-fallback-prompt.sh: research-grounded vs degraded prompt ---
+BFP="$(cd "$(dirname "$0")/.." && pwd)/build-fallback-prompt.sh"
+# With RESEARCH -> research-grounded prompt.
+P_RESEARCH="$(SOURCE=telegram MESSAGE='find cheap polymarket bets' RESEARCH='- Market X underpriced (link, 2026-06-17)' bash "$BFP")"
+check "research prompt includes LIVE RESEARCH" "$(printf '%s' "$P_RESEARCH" | grep -c 'LIVE RESEARCH')" "1"
+check "research prompt includes the digest"    "$(printf '%s' "$P_RESEARCH" | grep -c 'Market X underpriced')" "1"
+check "research prompt omits degraded line"     "$(printf '%s' "$P_RESEARCH" | grep -c 'degraded text-only fallback')" "0"
+# Without RESEARCH -> degraded prompt.
+P_DEGRADED="$(SOURCE=telegram MESSAGE='hi' bash "$BFP")"
+check "degraded prompt has degraded line"        "$(printf '%s' "$P_DEGRADED" | grep -c 'degraded text-only fallback')" "1"
+check "degraded prompt omits LIVE RESEARCH"      "$(printf '%s' "$P_DEGRADED" | grep -c 'LIVE RESEARCH')" "0"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
