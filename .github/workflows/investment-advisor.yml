@@ -17,6 +17,9 @@ jobs:
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
+          USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
+          USEPOD_MODEL: ${{ vars.USEPOD_MODEL }}
+          ADVISOR_LLM: ${{ vars.ADVISOR_LLM }}
           DASHBOARD_USER: ${{ secrets.DASHBOARD_USER }}
           DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
