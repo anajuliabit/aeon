@@ -1,16 +1,21 @@
-*Daily Pick — 2026-06-16*
+*Daily Pick — 2026-06-17*
 
-*Token: JTO*  [HIGH]  signal 10/10
-Price: $0.87 (+36.4% 24h / +38.8% 7d) | mcap $421M | vol $395M (vol/mcap 0.94)
-Score breakdown: [24h+1, 7d+1, both>+5%+2, trending+2, vol/mcap≥0.20+3, RS vs BTC/ETH 7d+2] = 11→cap 10/10
-Catalyst: JTX self-custody Solana trading platform (announced May at Solana Accelerate) launches July with 80% protocol revenue → open-market JTO buybacks — first direct value mechanism for the token.
-Risk: emissions $96–128M/yr still outpace projected $19–30M buybacks; soft launch or volume miss reopens supply overhang.
-Stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap
-Exit: target $1.10 / invalidate $0.75 / time-stop 14d
-Vs recent picks: previous JTO pick was 2026-06-02 ($0.62, HIGH 9/10) — 14d ago, outside dedup window; today's catalyst (JTX July launch + buyback split) is the new wrinkle.
+*Token: UNI*  HIGH  signal 10/10
+price $3.28 (+7.3% 24h / +34.6% 7d) | mcap $2.03B | vol $973M (vol/mcap 0.48)
+score breakdown: 24h+ / 7d+ / both>5%+2 / trending+2 / vol/mcap≥0.20+3 / RS>BTC+ETH+2 = 11 (capped 10)
+catalyst: standard chartered initiated uni coverage with a $6.5 end-2026 / $100 end-2030 path — layered on the UNIfication fee-switch live since jan 1 (134k UNI burned on june 5 alone, deflationary loop ramping with volume).
+risk: post-BOJ alt-derisk could unwind the standard chartered move before burn cashflow catches up to emissions; the call is sentiment, not cashflow.
+stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap
+exit: target $4.00 / invalidate $2.85 / time-stop 14d
+vs recent picks: first time in 7d (MON 6-11, TAO 6-13, XPL 6-14, NEAR 6-15, JTO 6-16 — all distinct)
 
-*Market: SKIPPED* — no event clears 5pp edge gate after dedup. Field ~entirely 2026 World Cup futures (efficient, sub-5pp). Non-WC liquid markets: US-Russia clash by Dec 31 YES 7¢ ($118k vol, fair NO ~97–98% = ~4–5pp on NO, borderline-gate); Raimondo 2028 Dem Nom YES 0.75¢ ($205k vol, deep-tail efficient); Xi-2027 NO dedup-blocked (picked 6-13). Starmer-by-June-30 21¢ ($36k vol) sub-liquidity.
+*Market: "Strait of Hormuz traffic returns to normal by end of June?"*  HIGH  edge ~13.5pp on NO
+current: YES 18.5¢ / NO 81.5¢ | 24h vol $611k | resolves 2026-06-30
+fair YES: ~5% (inputs: nbc/hstoday trackers show ~0 transits vs ~94/day normal across jun 11-14; argus 6-16 "hormuz tanker traffic unchanged after us-iran deal"; bloomberg 6-16 "why restoring hormuz shipping traffic won't be easy" — sea mines, insurance markets, IRGC posture).
+thesis: resolution needs IMF portwatch 7-day MA ≥60 transits; ramping from ~0 to ≥60-avg in 13 days with sea mines still in the water and the US-Iran MOU not formally signed until jun 19 is the long tail. take NO at 81.5¢.
+risk: shipowners front-run the jun 19 signing on insurance-escort convoys and the 7-day MA crosses 60 by month-end — possible if IRGC steps off the mines fast.
+stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap
 
-sources: cg=ok, dex=ok (no usable cross-confirm — search returns "TREND"-named tokens), poly=ok, x=absent (XAI prefetch 403 monthly limit)
+sources: cg=ok, dex=ok, poly=ok, x=absent
 if you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it
 not financial advice — pattern-matching only

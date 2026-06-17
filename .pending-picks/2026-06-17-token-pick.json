@@ -1,0 +1,12 @@
+{
+  "source": "token-pick",
+  "symbol": "UNI",
+  "coingeckoId": "uniswap",
+  "side": "long",
+  "entryPriceUsd": 3.28,
+  "targetPriceUsd": 4.00,
+  "invalidationPriceUsd": 2.85,
+  "horizonDays": 14,
+  "conviction": "HIGH (10/10)",
+  "thesis": "Standard Chartered initiated UNI coverage with a $6.5 end-2026 / $100 end-2030 path, layered on top of the UNIfication fee-switch live since Jan 1 2026 (134k UNI burned on June 5 alone). +34.6% 7d on vol/mcap 0.48 — real bid, not stale rotation, and outperforming both BTC (+5.5% 7d) and ETH (+7.4% 7d). Wrong if it loses the $2.85 base — that would give back the entire Standard Chartered move and signal the deflationary thesis hasn't outrun post-BOJ alt-derisk."
+}

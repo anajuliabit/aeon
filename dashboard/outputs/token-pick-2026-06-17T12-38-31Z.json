@@ -1,0 +1,375 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-17"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-uni",
+        "stack-uni",
+        "sep-1",
+        "heading-hormuz",
+        "stack-hormuz",
+        "sep-2",
+        "stack-meta"
+      ]
+    },
+    "heading-uni": {
+      "type": "Heading",
+      "props": {
+        "text": "Token Pick: UNI",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-uni": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-uni-signal",
+        "grid-uni-prices",
+        "text-uni-score",
+        "text-uni-catalyst",
+        "text-uni-risk",
+        "grid-uni-exits",
+        "text-uni-recent"
+      ]
+    },
+    "badge-uni-signal": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH signal 10/10",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "grid-uni-prices": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-uni-price",
+        "stat-uni-mcap",
+        "stat-uni-vol",
+        "stat-uni-ratio"
+      ]
+    },
+    "stat-uni-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$3.28",
+        "delta": "+7.3% 24h / +34.6% 7d",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-uni-mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "mcap",
+        "value": "$2.03B"
+      },
+      "children": []
+    },
+    "stat-uni-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "vol",
+        "value": "$973M"
+      },
+      "children": []
+    },
+    "stat-uni-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "vol/mcap",
+        "value": "0.48"
+      },
+      "children": []
+    },
+    "text-uni-score": {
+      "type": "Text",
+      "props": {
+        "text": "Score breakdown: 24h+ / 7d+ / both>5%+2 / trending+2 / vol/mcap≥0.20+3 / RS>BTC+ETH+2 = 11 (capped 10)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "text-uni-catalyst": {
+      "type": "Text",
+      "props": {
+        "text": "Catalyst: Standard Chartered initiated UNI coverage with a $6.5 end-2026 / $100 end-2030 price path — layered on the UNIfication fee-switch live since Jan 1 (134k UNI burned on June 5 alone, deflationary loop ramping with volume).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-uni-risk": {
+      "type": "Text",
+      "props": {
+        "text": "Risk: Post-BOJ alt-derisk could unwind the Standard Chartered move before burn cashflow catches up to emissions; the call is sentiment, not cashflow.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "grid-uni-exits": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-uni-stake",
+        "stat-uni-target",
+        "stat-uni-invalidate",
+        "stat-uni-time"
+      ]
+    },
+    "stat-uni-stake": {
+      "type": "Stat",
+      "props": {
+        "label": "Stake",
+        "value": "≤0.5% net (HIGH)",
+        "delta": "1% total cap"
+      },
+      "children": []
+    },
+    "stat-uni-target": {
+      "type": "Stat",
+      "props": {
+        "label": "Target",
+        "value": "$4.00"
+      },
+      "children": []
+    },
+    "stat-uni-invalidate": {
+      "type": "Stat",
+      "props": {
+        "label": "Invalidate",
+        "value": "$2.85"
+      },
+      "children": []
+    },
+    "stat-uni-time": {
+      "type": "Stat",
+      "props": {
+        "label": "Time-stop",
+        "value": "14d"
+      },
+      "children": []
+    },
+    "text-uni-recent": {
+      "type": "Text",
+      "props": {
+        "text": "vs recent picks: First time in 7d (MON 6-11, TAO 6-13, XPL 6-14, NEAR 6-15, JTO 6-16 — all distinct)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-hormuz": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Pick: Strait of Hormuz",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-hormuz": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-hormuz-signal",
+        "text-hormuz-question",
+        "grid-hormuz-odds",
+        "text-hormuz-fair",
+        "text-hormuz-inputs",
+        "text-hormuz-thesis",
+        "text-hormuz-risk",
+        "grid-hormuz-exits"
+      ]
+    },
+    "badge-hormuz-signal": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH edge ~13.5pp on NO",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "text-hormuz-question": {
+      "type": "Text",
+      "props": {
+        "text": "\"Strait of Hormuz traffic returns to normal by end of June?\"",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "grid-hormuz-odds": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-hormuz-yes",
+        "stat-hormuz-no",
+        "stat-hormuz-vol"
+      ]
+    },
+    "stat-hormuz-yes": {
+      "type": "Stat",
+      "props": {
+        "label": "YES",
+        "value": "18.5¢"
+      },
+      "children": []
+    },
+    "stat-hormuz-no": {
+      "type": "Stat",
+      "props": {
+        "label": "NO",
+        "value": "81.5¢"
+      },
+      "children": []
+    },
+    "stat-hormuz-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h vol",
+        "value": "$611k"
+      },
+      "children": []
+    },
+    "text-hormuz-fair": {
+      "type": "Text",
+      "props": {
+        "text": "Fair YES: ~5%",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-hormuz-inputs": {
+      "type": "Text",
+      "props": {
+        "text": "Inputs: NBC/HStoday trackers show ~0 transits vs ~94/day normal across Jun 11-14; Argus 6-16 \"Hormuz tanker traffic unchanged after US-Iran deal\"; Bloomberg 6-16 \"Why restoring Hormuz shipping traffic won't be easy\" — sea mines, insurance markets, IRGC posture.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "text-hormuz-thesis": {
+      "type": "Text",
+      "props": {
+        "text": "Thesis: Resolution needs IMF portwatch 7-day MA ≥60 transits; ramping from ~0 to ≥60-avg in 13 days with sea mines still in the water and the US-Iran MOU not formally signed until Jun 19 is the long tail. Take NO at 81.5¢.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-hormuz-risk": {
+      "type": "Text",
+      "props": {
+        "text": "Risk: Shipowners front-run the Jun 19 signing on insurance-escort convoys and the 7-day MA crosses 60 by month-end — possible if IRGC steps off the mines fast.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "grid-hormuz-exits": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-hormuz-stake",
+        "stat-hormuz-resolve"
+      ]
+    },
+    "stat-hormuz-stake": {
+      "type": "Stat",
+      "props": {
+        "label": "Stake",
+        "value": "≤0.5% net (HIGH)",
+        "delta": "1% total cap"
+      },
+      "children": []
+    },
+    "stat-hormuz-resolve": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolves",
+        "value": "2026-06-30"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-sources",
+        "text-logging",
+        "text-disclaimer"
+      ]
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: cg=ok, dex=ok, poly=ok, x=absent",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "text-logging": {
+      "type": "Text",
+      "props": {
+        "text": "If you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "text-disclaimer": {
+      "type": "Text",
+      "props": {
+        "text": "Not financial advice — pattern-matching only",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
