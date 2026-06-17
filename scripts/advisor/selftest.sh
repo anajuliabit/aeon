@@ -244,4 +244,30 @@ check "auto + no token -> virtuals"         "$(sb auto '' 'kimi' '' | cut -d'|' 
 check "auto + no token label"               "$(sb auto '' 'kimi' '' | cut -d'|' -f2)" "kimi (Virtuals)"
 check "unset ADVISOR_LLM behaves as auto"   "$(sb '' 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
 
+# --- llm-usepod.sh: redaction + fallback (offline, stubbed) ---
+UP_DIR="$(cd "$(dirname "$0")/.." && pwd)"   # repo scripts/ dir
+UP_TMP="$(mktemp -d)"
+
+# Redactor: load the real redact() from llm-usepod.sh and check it scrubs the token.
+eval "$(sed -n '/^redact() {/,/^}/p' "$UP_DIR/llm-usepod.sh")"
+RED_IN='curl failed for https://api.usepod.ai/proxy/SECRETTOKEN/v1/chat/completions now'
+check "redact scrubs usepod token" \
+  "$(printf '%s' "$RED_IN" | redact)" \
+  'curl failed for https://api.usepod.ai/proxy/<redacted>/v1/chat/completions now'
+check "redact leaves non-usepod text" \
+  "$(printf '%s' 'no secrets here' | redact)" 'no secrets here'
+
+# Fallback: USEPOD_TOKEN unset + a stub Virtuals llm.sh on a fake root -> usepod
+# defers to Virtuals and returns the stub's output.
+mkdir -p "$UP_TMP/scripts"
+cp "$UP_DIR/llm-usepod.sh" "$UP_TMP/scripts/llm-usepod.sh"
+cat > "$UP_TMP/scripts/llm.sh" <<'EOF'
+#!/usr/bin/env bash
+cat >/dev/null
+echo '{"ok":"virtuals-stub"}'
+EOF
+chmod +x "$UP_TMP/scripts/llm.sh" "$UP_TMP/scripts/llm-usepod.sh"
+FB_OUT="$(USEPOD_TOKEN='' VIRTUALS_API_KEY='present' bash "$UP_TMP/scripts/llm-usepod.sh" 'ping' 2>/dev/null)"
+check "usepod falls back to Virtuals when token unset" "$FB_OUT" '{"ok":"virtuals-stub"}'
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
