@@ -1,20 +1,21 @@
-*Morning Brief — 2026-06-16*
+*Morning Brief — 2026-06-17*
 
 *Focus today*
-1. boj verdict + blackrock $BITA list-day — why now: both binary catalysts land today on $66k tape
-2. file iss-019 — why now: 8d overdue, lock fix before next monday wave compounds
-3. merge pr #112 — why now: skill-graph docs 27h stalled past 24h threshold
+1. boj hike confirmed — why now: btc -2% to ~$65.8k, pinned at reclaim65900, carry-unwind live
+2. xai quota top-up — why now: ~10 x_search skills flatlining since 6-16 12:42z (team 3a8b4c1e)
+3. land prs #112 + #122 — why now: 62h and 36h stalled, action-converter loop carrying since 6-15
 
 *Since yesterday*
-- both btc reclaim levels SET; reclaim65900 fired 14:00Z at $66,427 (north-star carry)
-- pr #122 shipped — claude.md now documents websearch 400-fallback (8 skills hit it 6-15)
-- weekly-review 83.4% success (+21pp vs prior 62.3% — virtuals fallback drove the snap)
-- deal-flow monday 14:00 tick FAILED to clear — now 8d stuck, expected recovery missed
-- btc $66,300 close → $65,959 by 05:17Z (overnight fade pre-boj)
+- boj +25bp to 1.00% (highest since 1995), btc -2% — capital-2x risk-sleeve posture call due
+- jto staged: $0.87 entry / $1.10 target, high 10/10 (jtx july buyback split catalyst)
+- reppo -15.78% 24h alert fired — mirror inverse of 6-14 +18.93% up-trip
+- sky ecosystem ~$300m outflow (spark savings -16.2%, liquidity layer -14.6%) — first protocol-down to clear gate in 3d
+- 14:29z stuck batch carries: narrative-tracker / market-context-refresh / security-digest day-missed
 
 *Watch*
-- boj 80-97% odds 25bp hike today (0.75→1.0%, highest since 1995); $10.1B net yen-shorts = jul-2024 carry-unwind precedent. every boj hike since mar-2024 = btc drawdown 18-32% (avg 27%) — implication for focus #1
-- $BITA lists nasdaq today, 15-25% target yield via 25-35% IBIT covered calls, 0.65% fee beats goldman july — institutions pricing range not breakout, supports the aixbt-pulse 21:00Z bridge call — implication for focus #1
+- bitcoin -2% to ~$65.8k after boj 1.0% hike — every boj hike since mar-2024 = btc -18-32% (avg -27%) — implication for focus #1
 
 *Running today*
-- daily fleet on tue cron (no tue-specific weeklies); btc-levels next 08:15Z then 12:15/16:15/20:15
+- reg-monitor @ 14:00 UTC (wed-only)
+- skill-analytics @ 18:30 UTC (wed-only)
+- daily fleet: defi-overview / token-pick / token-alert 12:00, market-context-refresh 13:00, btc-levels every 4h
