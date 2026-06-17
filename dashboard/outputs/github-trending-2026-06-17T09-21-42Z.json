@@ -1,0 +1,239 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-17"
+      },
+      "children": [
+        "heading_top_pick",
+        "link_iroh",
+        "text_iroh_desc",
+        "separator_1",
+        "heading_ai_ml",
+        "link_voxcpm",
+        "text_voxcpm_meta",
+        "badge_voxcpm",
+        "text_voxcpm_desc",
+        "link_gategpt",
+        "text_gategpt_meta",
+        "badge_gategpt",
+        "text_gategpt_desc",
+        "separator_2",
+        "heading_devtools",
+        "link_sqltoerdiagram",
+        "text_sqltoerdiagram_meta",
+        "badge_sqltoerdiagram",
+        "text_sqltoerdiagram_desc",
+        "link_macocr",
+        "text_macocr_meta",
+        "badge_macocr",
+        "text_macocr_desc",
+        "separator_3",
+        "heading_infra",
+        "link_zvec",
+        "text_zvec_meta",
+        "badge_zvec",
+        "text_zvec_desc",
+        "separator_4",
+        "text_footer"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h2"
+      }
+    },
+    "link_iroh": {
+      "type": "StoryLink",
+      "props": {
+        "title": "n0-computer/iroh",
+        "href": "https://github.com/n0-computer/iroh"
+      }
+    },
+    "text_iroh_desc": {
+      "type": "Text",
+      "props": {
+        "text": "n0's modular rust networking stack shipped v1.0.0 monday after 4 years and 2 release candidates — the bet that dial-by-key supersedes dial-by-ip just hit its production cut."
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_ai_ml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      }
+    },
+    "link_voxcpm": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OpenBMB/VoxCPM",
+        "href": "https://github.com/OpenBMB/VoxCPM"
+      }
+    },
+    "text_voxcpm_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 408 today (30k total) · Python",
+        "variant": "caption"
+      }
+    },
+    "badge_voxcpm": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING"
+      }
+    },
+    "text_voxcpm_desc": {
+      "type": "Text",
+      "props": {
+        "text": "tokenizer-free tts trained on raw audio — multilingual voice cloning without the bpe loss step, technical report dropped 6-08."
+      }
+    },
+    "link_gategpt": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fguzman82/gateGPT",
+        "href": "https://github.com/fguzman82/gateGPT"
+      }
+    },
+    "text_gategpt_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 459 total · 5d old · Verilog",
+        "variant": "caption"
+      }
+    },
+    "badge_gategpt": {
+      "type": "Badge",
+      "props": {
+        "text": "DEBUT"
+      }
+    },
+    "text_gategpt_desc": {
+      "type": "Text",
+      "props": {
+        "text": "full transformer synthesized onto a virtex-5 fpga in pure rtl — 56k tokens/sec name-gen from logic gates."
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      }
+    },
+    "link_sqltoerdiagram": {
+      "type": "StoryLink",
+      "props": {
+        "title": "royalbhati/sqltoerdiagram",
+        "href": "https://github.com/royalbhati/sqltoerdiagram"
+      }
+    },
+    "text_sqltoerdiagram_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 413 total · 3d old · JavaScript",
+        "variant": "caption"
+      }
+    },
+    "badge_sqltoerdiagram": {
+      "type": "Badge",
+      "props": {
+        "text": "DEBUT"
+      }
+    },
+    "text_sqltoerdiagram_desc": {
+      "type": "Text",
+      "props": {
+        "text": "paste create table statements, get an interactive erd in-browser — no upload, no schema leakage to a saas."
+      }
+    },
+    "link_macocr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "privatenumber/mac-ocr",
+        "href": "https://github.com/privatenumber/mac-ocr"
+      }
+    },
+    "text_macocr_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 270 total · 4d old · Swift",
+        "variant": "caption"
+      }
+    },
+    "badge_macocr": {
+      "type": "Badge",
+      "props": {
+        "text": "DEBUT"
+      }
+    },
+    "text_macocr_desc": {
+      "type": "Text",
+      "props": {
+        "text": "wraps apple's vision framework as a cli — ocr to searchable pdf locally, no api keys, no cloud round-trip."
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h2"
+      }
+    },
+    "link_zvec": {
+      "type": "StoryLink",
+      "props": {
+        "title": "alibaba/zvec",
+        "href": "https://github.com/alibaba/zvec"
+      }
+    },
+    "text_zvec_meta": {
+      "type": "Text",
+      "props": {
+        "text": "★ 156 today (10.7k total) · C++",
+        "variant": "caption"
+      }
+    },
+    "badge_zvec": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING"
+      }
+    },
+    "text_zvec_desc": {
+      "type": "Text",
+      "props": {
+        "text": "embedded c++ vector db with hnsw and quantization — feat: external vector source support shipped today (#490)."
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok (13 returned) · gh_api=ok · fallback used (gh search created:>06-10) · kept 6/~30",
+        "variant": "caption"
+      }
+    }
+  }
+}
