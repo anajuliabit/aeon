@@ -21,6 +21,8 @@ PROXY_BASE="${USEPOD_BASE:-https://api.usepod.ai/proxy}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 # Replace the token path segment (proxy/<token>) with <redacted> in any text.
+# Assumes the `proxy/` path segment from the default USEPOD_BASE; an override
+# with a different pre-token segment would need this pattern updated to match.
 redact() {
   sed 's#\(proxy/\)[^/]*#\1<redacted>#g'
 }
@@ -66,6 +68,8 @@ while :; do
     ERR=$(printf '%s' "$RESP" | jq -r '.error.message? // .message? // empty' 2>/dev/null || true)
     CONTENT=$(printf '%s' "$RESP" | jq -r '.choices[0].message.content // empty' 2>/dev/null || true)
     if [ -z "$ERR" ] && [ -n "$CONTENT" ]; then
+      # CONTENT is model output; the token never enters the prompt, so stdout
+      # carries no secret and needs no redaction.
       printf '%s\n' "$CONTENT"
       exit 0
     fi

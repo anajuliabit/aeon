@@ -245,7 +245,7 @@ check "auto + no token label"               "$(sb auto '' 'kimi' '' | cut -d'|' 
 check "unset ADVISOR_LLM behaves as auto"   "$(sb '' 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
 
 # --- llm-usepod.sh: redaction + fallback (offline, stubbed) ---
-UP_DIR="$(cd "$(dirname "$0")/.." && pwd)"   # repo scripts/ dir
+UP_DIR="$(cd "$(dirname "$0")/.." && pwd)"   # repo scripts/ dir ($0=scripts/advisor/selftest.sh, so dirname/.. = scripts/)
 UP_TMP="$(mktemp -d)"
 
 # Redactor: load the real redact() from llm-usepod.sh and check it scrubs the token.
