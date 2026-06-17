@@ -1,6 +1,11 @@
 ## Summary
 
-- **Spot:** $65,739 | **Previous daily close:** $66,301 (CoinGecko API returned stale data — prices[-1] timestamp ≈24h old, derived close date regressed to 2026-06-14)
-- **No alerts fired:** leverage-review ($65,739 >> $45k), breakdown ($66,301 > $60,500 threshold), reclaim $63,500 (flag already armed), reclaim $65,900 (spot just below but re-arm condition not met)
-- State updated: `lastSpot` $65,739 · `lastDailyCloseDate` "2026-06-14" (stale API artifact) · all flags unchanged
-- Log entry appended, both files committed to main.
+Quiet run — no alerts fired.
+
+- **Spot**: $65,524.88 (June 17, 01:31 UTC)
+- **Daily close (June 16)**: $65,598.94
+- **Leverage-review trigger** (≤$45k): clear
+- **Breakdown signal** (<$60,500 close): clear
+- **Reclaim $63,500** / **$65,900**: both previously alerted; re-arm condition (spot <$60,500) not met
+
+State updated to reflect June 16 close (advancing from the stale June 14 entry), log written, committed.
