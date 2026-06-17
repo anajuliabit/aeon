@@ -334,15 +334,15 @@
   },
   "skill-analytics": {
     "last_dispatch": "2026-06-17T22:34:08Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-10T19:36:40Z",
-    "total_runs": 11,
+    "total_runs": 12,
     "total_successes": 3,
-    "total_failures": 8,
-    "consecutive_failures": 8,
-    "success_rate": 0.27,
-    "last_failed": "2026-06-17T21:55:08Z",
-    "last_error": "aa02d4d\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "total_failures": 9,
+    "consecutive_failures": 9,
+    "success_rate": 0.25,
+    "last_failed": "2026-06-17T22:35:38Z",
+    "last_error": "222bc64\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "vibecoding-digest": {
     "last_status": "success",
