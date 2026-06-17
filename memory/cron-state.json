@@ -236,15 +236,15 @@
   },
   "action-converter": {
     "last_dispatch": "2026-06-17T23:08:37Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-16T19:25:39Z",
-    "total_runs": 31,
+    "total_runs": 34,
     "total_successes": 23,
-    "total_failures": 8,
-    "consecutive_failures": 8,
-    "success_rate": 0.74,
-    "last_failed": "2026-06-17T22:35:40Z",
-    "last_error": "6c36eb1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "total_failures": 11,
+    "consecutive_failures": 11,
+    "success_rate": 0.68,
+    "last_failed": "2026-06-17T23:10:39Z",
+    "last_error": "98320ef\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "evening-recap": {
     "last_dispatch": "2026-06-17T23:08:37Z",
