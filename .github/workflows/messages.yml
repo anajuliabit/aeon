@@ -704,7 +704,19 @@ jobs:
             # Telegram caps messages at 4096 chars and rejects Markdown it can't parse
             # (links/*/_ in research answers). Chunk + label parts, send Markdown then
             # retry the same chunk as plain text, and log a real failure (no silent drop).
-            mapfile -d '' _CHUNKS < <(printf '%s' "$MSG" | bash scripts/tg-chunk.sh)
+            # Chunk via a temp file: tg-chunk emits NUL-separated output (a string var
+            # would lose NULs to command substitution), and the file lets us check its
+            # exit status. If the chunker is unreachable/fails, fall back to one
+            # unchunked send rather than silently dropping the reply.
+            _TGTMP="$(mktemp)"
+            if printf '%s' "$MSG" | bash scripts/tg-chunk.sh > "$_TGTMP"; then
+              mapfile -d '' _CHUNKS < "$_TGTMP"
+            else
+              echo "::warning::notify: tg-chunk failed; sending unchunked" >&2
+              _CHUNKS=("$MSG")
+            fi
+            rm -f "$_TGTMP"
+            [ "${#_CHUNKS[@]}" -gt 0 ] || { echo "::warning::notify: no chunks for non-empty message; sending unchunked" >&2; _CHUNKS=("$MSG"); }
             _n=${#_CHUNKS[@]}; _i=0
             for _c in "${_CHUNKS[@]}"; do
               [ -n "$_c" ] || continue

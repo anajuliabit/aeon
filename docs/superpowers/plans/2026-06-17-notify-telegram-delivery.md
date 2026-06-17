@@ -213,7 +213,7 @@ Run:
 ```bash
 printf 'line\n%s' "$(printf 'q%.0s' $(seq 1 9000))" | bash scripts/tg-chunk.sh | { n=0; while IFS= read -r -d '' c; do n=$((n+1)); echo "chunk $n: ${#c} chars"; done; }
 ```
-Expected: 3 chunks, each ≤4000 chars (≈4000, 4000, ~1005) — confirms a 9000-char reply is sent as `(1/3)/(2/3)/(3/3)` instead of dropped.
+Expected: 4 chunks, each ≤4000 chars (5, 4000, 4000, 1000) — the leading `line\n` is its own chunk (line-boundary cut), then the 9000-char run hard-splits. Confirms a long reply is sent as `(1/4)…(4/4)` instead of dropped.
 
 - [ ] **Step 3: Confirm Discord/Slack branches untouched**
 
