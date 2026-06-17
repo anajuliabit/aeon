@@ -374,10 +374,10 @@
     "last_dispatch": "2026-06-14T17:19:39Z"
   },
   "daily-routine": {
-    "last_status": "dispatched",
-    "last_success": "2026-06-16T07:21:41Z",
-    "total_runs": 17,
-    "total_successes": 17,
+    "last_status": "success",
+    "last_success": "2026-06-17T07:41:03Z",
+    "total_runs": 18,
+    "total_successes": 18,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
