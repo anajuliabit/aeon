@@ -1,11 +1,6 @@
 ## Summary
 
-Quiet run — no alerts fired.
-
-- **Spot**: $65,524.88 (June 17, 01:31 UTC)
-- **Daily close (June 16)**: $65,598.94
-- **Leverage-review trigger** (≤$45k): clear
-- **Breakdown signal** (<$60,500 close): clear
-- **Reclaim $63,500** / **$65,900**: both previously alerted; re-arm condition (spot <$60,500) not met
-
-State updated to reflect June 16 close (advancing from the stale June 14 entry), log written, committed.
+- **Fetched** BTC price from CoinGecko: spot $65,817.20, daily close $65,598.94 (June 16)
+- **No alerts fired**: spot is well above $45k leverage band, close is above $60.5k, and both reclaim flags ($63,500 / $65,900) were already set on prior runs
+- **BTC is ~$83 below the $65,900 reclaim level** — that flag stays armed; a clean break above $65,900 on a future run will alert
+- **Updated** `memory/btc-levels-state.json` and appended to `memory/logs/2026-06-17.md`, committed as state chore
