@@ -224,4 +224,23 @@ check "complete() emits no stdout on failure" "$CT_OUT" ""
 check "complete() surfaces the LLM error to stderr" \
   "$(grep -c 'LLM call failed.*invalid x-api-key' "$CT_TMP/err")" "1"
 
+# --- run.sh select_backend(): ADVISOR_LLM selector ---
+SB_DIR="$(cd "$(dirname "$0")" && pwd)"
+# Run the real select_backend() in a clean subshell with controlled env.
+sb() { # ADVISOR_LLM, CLAUDE_CODE_OAUTH_TOKEN, VIRTUALS_MODEL, USEPOD_MODEL -> "LLM|LABEL"
+  ADVISOR_LLM="$1" CLAUDE_CODE_OAUTH_TOKEN="$2" ANTHROPIC_API_KEY="" \
+    VIRTUALS_MODEL="${3:-}" USEPOD_MODEL="${4:-}" CLAUDE_MODEL="" ROOT="/fake/root" \
+    bash -c 'unset LLM MODEL_LABEL
+      '"$(sed -n '/^select_backend() {/,/^}/p' "$SB_DIR/run.sh")"'
+      select_backend; printf "%s|%s" "$LLM" "$MODEL_LABEL"' 2>/dev/null
+}
+check "select usepod -> llm-usepod.sh"      "$(sb usepod '' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-usepod.sh"
+check "select usepod default label"         "$(sb usepod '' '' '' | cut -d'|' -f2)" "deepseek-v3.2 (usepod)"
+check "select usepod honors USEPOD_MODEL"   "$(sb usepod '' '' qwen-3.5 | cut -d'|' -f2)" "qwen-3.5 (usepod)"
+check "select claude explicit"              "$(sb claude '' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
+check "select virtuals explicit"            "$(sb virtuals 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm.sh"
+check "auto + claude token -> claude"       "$(sb auto 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
+check "auto + no token -> virtuals"         "$(sb auto '' 'kimi' '' | cut -d'|' -f1)" "/fake/root/scripts/llm.sh"
+check "unset ADVISOR_LLM behaves as auto"   "$(sb '' 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }

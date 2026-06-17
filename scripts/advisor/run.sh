@@ -31,16 +31,33 @@ NOW_ISO=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 DRY="${ADVISOR_DRY_RUN:-0}"
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-# Backend: Claude subscription (claude-fable-5 via Claude Code CLI) when the
-# OAuth token is present; Virtuals otherwise. llm-claude.sh itself falls back
-# to llm.sh if the CLI call fails, so MODEL_LABEL reflects the primary backend.
-if [ -n "${CLAUDE_CODE_OAUTH_TOKEN:-}" ] || [ -n "${ANTHROPIC_API_KEY:-}" ]; then
-  LLM="$ROOT/scripts/llm-claude.sh"
-  MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)"
-else
-  LLM="$ROOT/scripts/llm.sh"
-  MODEL_LABEL="$VIRTUALS_MODEL (Virtuals)"
-fi
+# Backend selection. ADVISOR_LLM picks explicitly (usepod|claude|virtuals);
+# the default "auto" keeps the historical behavior: Claude subscription
+# (claude-fable-5 via Claude Code CLI) when an OAuth/API token is present,
+# Virtuals otherwise. llm-claude.sh / llm-usepod.sh fall back to llm.sh on
+# failure, so MODEL_LABEL reflects the primary backend. Sets LLM + MODEL_LABEL.
+select_backend() {
+  case "${ADVISOR_LLM:-auto}" in
+    usepod)
+      LLM="$ROOT/scripts/llm-usepod.sh"
+      MODEL_LABEL="${USEPOD_MODEL:-deepseek-v3.2} (usepod)" ;;
+    claude)
+      LLM="$ROOT/scripts/llm-claude.sh"
+      MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)" ;;
+    virtuals)
+      LLM="$ROOT/scripts/llm.sh"
+      MODEL_LABEL="${VIRTUALS_MODEL:-claude-opus-4-8} (Virtuals)" ;;
+    auto|*)
+      if [ -n "${CLAUDE_CODE_OAUTH_TOKEN:-}" ] || [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+        LLM="$ROOT/scripts/llm-claude.sh"
+        MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)"
+      else
+        LLM="$ROOT/scripts/llm.sh"
+        MODEL_LABEL="$VIRTUALS_MODEL (Virtuals)"
+      fi ;;
+  esac
+}
+select_backend
 PROMPTS="$ROOT/advisor/prompts"
 
 # Shared accounting note injected into every agent prompt so the gross-vs-net
