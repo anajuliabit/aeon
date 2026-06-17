@@ -270,4 +270,15 @@ chmod +x "$UP_TMP/scripts/llm.sh" "$UP_TMP/scripts/llm-usepod.sh"
 FB_OUT="$(USEPOD_TOKEN='' VIRTUALS_API_KEY='present' bash "$UP_TMP/scripts/llm-usepod.sh" 'ping' 2>/dev/null)"
 check "usepod falls back to Virtuals when token unset" "$FB_OUT" '{"ok":"virtuals-stub"}'
 
+# --- research-prefetch.sh: safe failure when unusable (offline) ---
+RP="$(cd "$(dirname "$0")/.." && pwd)/research-prefetch.sh"   # $0=scripts/advisor/selftest.sh, so dirname/.. = scripts/
+# Unconfigured (no XAI_API_KEY) -> exit 1, no stdout.
+RP_OUT="$(env -u XAI_API_KEY bash "$RP" 'find cheap polymarket bets' 2>/dev/null)"; RP_RC=$?
+check "research-prefetch exits 1 without XAI_API_KEY" "$RP_RC" "1"
+check "research-prefetch emits no stdout without key" "$RP_OUT" ""
+# Empty query (key present but blank prompt) -> exit 1, no stdout.
+RP_OUT2="$(XAI_API_KEY=dummy bash "$RP" '   ' 2>/dev/null)"; RP_RC2=$?
+check "research-prefetch exits 1 on empty query" "$RP_RC2" "1"
+check "research-prefetch emits no stdout on empty query" "$RP_OUT2" ""
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
