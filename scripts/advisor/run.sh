@@ -53,7 +53,7 @@ select_backend() {
         MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)"
       else
         LLM="$ROOT/scripts/llm.sh"
-        MODEL_LABEL="$VIRTUALS_MODEL (Virtuals)"
+        MODEL_LABEL="${VIRTUALS_MODEL:-claude-opus-4-8} (Virtuals)"
       fi ;;
   esac
 }

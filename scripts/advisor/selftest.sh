@@ -241,6 +241,7 @@ check "select claude explicit"              "$(sb claude '' '' '' | cut -d'|' -f
 check "select virtuals explicit"            "$(sb virtuals 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm.sh"
 check "auto + claude token -> claude"       "$(sb auto 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
 check "auto + no token -> virtuals"         "$(sb auto '' 'kimi' '' | cut -d'|' -f1)" "/fake/root/scripts/llm.sh"
+check "auto + no token label"               "$(sb auto '' 'kimi' '' | cut -d'|' -f2)" "kimi (Virtuals)"
 check "unset ADVISOR_LLM behaves as auto"   "$(sb '' 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
 
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
