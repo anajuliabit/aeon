@@ -1,15 +1,14 @@
 ## Summary
 
-Executed `fleet-control` skill in Health Check mode (var empty → default).
+Ran `fleet-control` in Health Check Mode (default — `var` empty).
 
-**Pre-flight checks:**
-- `gh auth status` — OK (authenticated as anajuliabit, GH_TOKEN)
-- Rate limit — 4998 remaining (well above 50 threshold)
-- Registry `memory/instances.json` — `{"instances": []}` (empty)
+**Outcome:** `FLEET_EMPTY` — silent stop, no notification.
 
-**Outcome:** `FLEET_EMPTY` — no managed instances. Per skill spec, stopped at pre-flight step 3 and **did not notify** (silent no-op for empty registry).
+**Why:** Pre-flight passed (gh auth ✓ as `anajuliabit`), but `memory/instances.json` holds `{"instances": []}` — no managed children to check. Skill spec explicitly says: empty registry → log to today's log and stop without notifying.
 
 **Files modified:**
-- `memory/logs/2026-06-16.md` — appended 15:00Z health-check entry under existing 09:00Z fleet-control section
+- `memory/logs/2026-06-17.md` — appended `## fleet-control (health check)` block with `FLEET_EMPTY` verdict.
 
-**Follow-up:** None. State is unchanged since the 09:00Z tick. No instances to monitor, no deltas to surface, no notify warranted.
+**Untouched (per spec):** `memory/instances.json`, `memory/state/fleet-control-state.json`. No notify sent.
+
+**Follow-up:** None automated. If the operator wants this fleet active, they need to seed `memory/instances.json` with at least one child entry (name, repo, purpose, parent, created, skills_enabled).
