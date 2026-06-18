@@ -11,14 +11,14 @@
     "last_success": "2026-05-21T12:33:53Z"
   },
   "defi-overview": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T12:41:34Z",
     "total_runs": 36,
     "total_successes": 27,
     "total_failures": 9,
     "consecutive_failures": 9,
     "success_rate": 0.75,
-    "last_dispatch": "2026-06-17T12:33:06Z",
+    "last_dispatch": "2026-06-18T19:54:56Z",
     "last_failed": "2026-06-18T19:05:12Z",
     "last_error": "b3b6e96\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:21:42Z",
     "total_runs": 112,
     "total_successes": 69,
@@ -44,14 +44,14 @@
     "last_error": "324d711\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-pick": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T12:40:07Z",
     "total_runs": 38,
     "total_successes": 24,
     "total_failures": 14,
     "consecutive_failures": 14,
     "success_rate": 0.63,
-    "last_dispatch": "2026-06-17T12:33:06Z",
+    "last_dispatch": "2026-06-18T19:54:56Z",
     "last_failed": "2026-06-18T19:05:41Z",
     "last_error": "1145dc9\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -74,14 +74,14 @@
     "success_rate": 1
   },
   "agent-buzz": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T18:03:52Z",
     "total_runs": 22,
     "total_successes": 20,
     "total_failures": 2,
     "consecutive_failures": 2,
     "success_rate": 0.91,
-    "last_dispatch": "2026-06-17T17:35:51Z",
+    "last_dispatch": "2026-06-18T19:54:56Z",
     "last_failed": "2026-06-18T19:07:30Z",
     "last_error": "345fb5d\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -105,14 +105,14 @@
     "success_rate": 1
   },
   "narrative-tracker": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-15T14:08:34Z",
     "total_runs": 18,
     "total_successes": 9,
     "total_failures": 9,
     "consecutive_failures": 9,
     "success_rate": 0.5,
-    "last_dispatch": "2026-06-17T13:56:03Z",
+    "last_dispatch": "2026-06-18T19:54:56Z",
     "last_quality_score": 4,
     "last_failed": "2026-06-18T19:06:09Z",
     "last_error": "f1cae16\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
@@ -124,8 +124,8 @@
     "last_success": "2026-06-10T18:41:13Z"
   },
   "morning-brief": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T07:37:03Z",
     "total_runs": 38,
     "total_successes": 24,
@@ -155,8 +155,8 @@
     "success_rate": 1
   },
   "skill-freshness": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:23:38Z",
     "total_runs": 34,
     "total_successes": 22,
@@ -167,8 +167,8 @@
     "last_error": "b81564a\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "github-trending": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:22:42Z",
     "total_runs": 32,
     "total_successes": 23,
@@ -179,8 +179,8 @@
     "last_error": "d701f37\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-alert": {
-    "last_dispatch": "2026-06-17T12:33:06Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T12:36:26Z",
     "total_runs": 34,
     "total_successes": 26,
@@ -200,8 +200,8 @@
     "success_rate": 1
   },
   "search-skill": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T14:32:04Z",
     "total_runs": 56,
     "total_successes": 22,
@@ -213,8 +213,8 @@
     "last_error": "a20822c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "goal-tracker": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T19:26:05Z",
     "total_runs": 58,
     "total_successes": 22,
@@ -225,8 +225,8 @@
     "last_error": "61f5e58\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-health": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T19:25:48Z",
     "total_runs": 63,
     "total_successes": 22,
@@ -237,8 +237,8 @@
     "last_error": "abbbbb7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "reflect": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T19:26:35Z",
     "total_runs": 54,
     "total_successes": 22,
@@ -249,8 +249,8 @@
     "last_error": "349d69c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "action-converter": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T19:25:39Z",
     "total_runs": 57,
     "total_successes": 23,
@@ -261,8 +261,8 @@
     "last_error": "48d01ca\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "evening-recap": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T21:37:06Z",
     "total_runs": 51,
     "total_successes": 23,
@@ -273,8 +273,8 @@
     "last_error": "039c440\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "self-improve": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-15T19:23:02Z",
     "total_runs": 43,
     "total_successes": 11,
@@ -335,20 +335,20 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:17:40Z",
     "total_runs": 81,
     "total_successes": 34,
     "total_failures": 47,
     "consecutive_failures": 47,
     "success_rate": 0.42,
-    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_dispatch": "2026-06-18T19:54:56Z",
     "last_failed": "2026-06-18T19:06:42Z",
     "last_error": "66a87bb\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-analytics": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-10T19:36:40Z",
     "total_runs": 45,
     "total_successes": 3,
@@ -388,14 +388,14 @@
     "last_dispatch": "2026-06-15T09:46:06Z"
   },
   "market-context-refresh": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-15T14:08:59Z",
     "total_runs": 43,
     "total_successes": 19,
     "total_failures": 24,
     "consecutive_failures": 24,
     "success_rate": 0.44,
-    "last_dispatch": "2026-06-18T02:28:40Z",
+    "last_dispatch": "2026-06-18T19:54:56Z",
     "last_failed": "2026-06-18T19:06:29Z",
     "last_error": "04ec24e\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -410,14 +410,14 @@
     "last_dispatch": "2026-06-14T17:19:39Z"
   },
   "daily-routine": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T07:41:03Z",
     "total_runs": 28,
     "total_successes": 18,
     "total_failures": 10,
     "consecutive_failures": 10,
     "success_rate": 0.64,
-    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_dispatch": "2026-06-18T19:54:56Z",
     "last_failed": "2026-06-18T19:04:40Z",
     "last_error": "f0d1bab\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -440,8 +440,8 @@
     "success_rate": 1
   },
   "security-digest": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-14T15:35:31Z",
     "total_runs": 49,
     "total_successes": 11,
@@ -482,8 +482,8 @@
     "success_rate": 1
   },
   "reg-monitor": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-10T14:58:16Z",
     "total_runs": 40,
     "total_successes": 2,
@@ -494,8 +494,8 @@
     "last_error": "18929af\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "aixbt-pulse": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:24:26Z",
     "total_runs": 54,
     "total_successes": 21,
@@ -506,8 +506,8 @@
     "last_error": "65fb260\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-movers": {
-    "last_dispatch": "2026-06-17T12:33:06Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T12:39:03Z",
     "total_runs": 26,
     "total_successes": 15,
@@ -518,8 +518,8 @@
     "last_error": "0c4dced\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "on-chain-monitor": {
-    "last_dispatch": "2026-06-17T12:33:06Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T12:35:00Z",
     "total_runs": 19,
     "total_successes": 10,
@@ -530,8 +530,8 @@
     "last_error": "262d35f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "defi-monitor": {
-    "last_dispatch": "2026-06-17T21:07:53Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T12:43:18Z",
     "total_runs": 24,
     "total_successes": 9,
@@ -542,8 +542,8 @@
     "last_error": "8894cf7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "list-digest": {
-    "last_dispatch": "2026-06-17T17:35:51Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T18:01:12Z",
     "total_runs": 11,
     "total_successes": 8,
@@ -564,8 +564,8 @@
     "success_rate": 1
   },
   "thought-review": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T07:33:28Z",
     "total_runs": 43,
     "total_successes": 16,
@@ -604,8 +604,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T12:38:00Z",
     "total_runs": 70,
     "total_successes": 40,
