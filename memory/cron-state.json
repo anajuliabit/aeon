@@ -238,13 +238,13 @@
     "last_dispatch": "2026-06-18T10:37:23Z",
     "last_status": "failed",
     "last_success": "2026-06-16T19:26:35Z",
-    "total_runs": 50,
+    "total_runs": 51,
     "total_successes": 22,
-    "total_failures": 28,
-    "consecutive_failures": 28,
-    "success_rate": 0.44,
-    "last_failed": "2026-06-18T13:28:37Z",
-    "last_error": "83a7a14\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "total_failures": 29,
+    "consecutive_failures": 29,
+    "success_rate": 0.43,
+    "last_failed": "2026-06-18T14:34:30Z",
+    "last_error": "38136a5\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "action-converter": {
     "last_dispatch": "2026-06-18T10:37:23Z",
