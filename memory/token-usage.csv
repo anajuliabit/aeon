@@ -445,4 +445,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-17,defi-overview,claude-opus-4-7,1915,26831,2775802,114555
 2026-06-18,heartbeat,claude-opus-4-7,0,4339,0,0
 2026-06-18,reflect,claude-opus-4-7,0,12090,0,0
-2026-06-18,btc-levels,claude-sonnet-4-6,0,1276,0,0
+2026-06-18,thought-review,claude-opus-4-7,0,1999,0,0
