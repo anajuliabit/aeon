@@ -687,6 +687,10 @@ jobs:
           TODAY=$(date -u +%Y-%m-%d)
           CONFIG_MODEL=$(grep -E '^model:' aeon.yml | sed 's/^model: *//' | tr -d ' ')
           MODEL="${CONFIG_MODEL:-claude-opus-4-7}"
+          # Route the primary agentic chat through the shared gateway (usepod = agentic
+          # on usepod with tools; far better than the text-only fallback below).
+          # `|| exit 1`: set -e won't abort on a sourced return (see helper header).
+          . scripts/anthropic-gateway.sh || exit 1
 
           cat > ./notify << 'NOTIFY_SCRIPT'
           #!/usr/bin/env bash
@@ -769,7 +773,7 @@ jobs:
           Always send your response back via ./notify so the user sees it."
           CLAUDE_OK=true
           CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
-            --model "$MODEL" --allowedTools "$ALLOWED" \
+            --model "$GATEWAY_MODEL" --allowedTools "$ALLOWED" \
             --output-format json 2>&1) || CLAUDE_OK=false
           # Also treat in-band API errors (e.g. 429 weekly-limit) as failure.
           if [ "$CLAUDE_OK" = true ] && echo "$CLAUDE_OUTPUT" | jq -e '.is_error == true' >/dev/null 2>&1; then
