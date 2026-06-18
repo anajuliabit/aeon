@@ -1,18 +1,1 @@
-*Goal Tracker — 2026-06-16*
 
-Summary: 4 goals — 0 at risk, 2 needs attention, 1 on track, 1 blocked, 0 done (overall → flat)
-
-*Needs Attention*
-• File the weekly-limit-wave incident issue (ISS-019) — 0d idle, 25 activity/14d, **overdue 7d** from 6-09 (flat)
-  → Action: Write `memory/issues/ISS-019.md` per template — fix locus `aeon.yml:498`, note residual XAI-skill gap exposed today (token-pick / list-digest / agent-buzz all 403'd on team `3a8b4c1e…` monthly limit, no fallback)
-• INDEX bookkeeping flips for ISS-007/009/010/016 — 0d idle, 27 activity/14d, **overdue 6d** from 6-10 (flat)
-  → Action: Move ISS-007/009/010/016 from Open → Resolved in `memory/issues/INDEX.md` with fix refs
-
-*Blocked*
-• on-chain-monitor / defi-monitor watches.yml — operator-gated, **day 12 NO_CONFIG** since 6-05 (flat)
-  → Action: Operator seeds `memory/on-chain-watches.yml` (name+chain+address+threshold per schema)
-
-*On Track*
-• CAPITAL-2× PROGRAM (double net worth by 2027-12-31) — 0d idle, 70 activity/14d (flat) — btc-levels both reclaim targets SET (63500 6-11 / 65900 6-15), advisor stack shipped PRs #116-#121 yesterday, today JTO HIGH 10/10 + Mixed risk-on defi-overview
-
-Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
