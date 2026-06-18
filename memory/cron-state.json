@@ -105,15 +105,15 @@
   "narrative-tracker": {
     "last_status": "failed",
     "last_success": "2026-06-15T14:08:34Z",
-    "total_runs": 10,
+    "total_runs": 12,
     "total_successes": 9,
-    "total_failures": 1,
-    "consecutive_failures": 1,
-    "success_rate": 0.9,
+    "total_failures": 3,
+    "consecutive_failures": 3,
+    "success_rate": 0.75,
     "last_dispatch": "2026-06-17T13:56:03Z",
     "last_quality_score": 4,
-    "last_failed": "2026-06-18T14:34:01Z",
-    "last_error": "40445c3\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-06-18T15:54:12Z",
+    "last_error": "5ca72f7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "chain:reppo-swarm": {
     "last_dispatch": "2026-06-10T18:20:53Z",
