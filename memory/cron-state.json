@@ -30,8 +30,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:21:42Z",
     "total_runs": 95,
     "total_successes": 69,
@@ -116,8 +116,8 @@
     "last_success": "2026-06-10T18:41:13Z"
   },
   "morning-brief": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T07:37:03Z",
     "total_runs": 26,
     "total_successes": 24,
@@ -147,8 +147,8 @@
     "success_rate": 1
   },
   "skill-freshness": {
-    "last_dispatch": "2026-06-17T09:15:52Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:23:38Z",
     "total_runs": 24,
     "total_successes": 22,
@@ -159,8 +159,8 @@
     "last_error": "fc70987\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "github-trending": {
-    "last_dispatch": "2026-06-17T09:15:52Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:22:42Z",
     "total_runs": 24,
     "total_successes": 23,
@@ -190,8 +190,8 @@
     "success_rate": 1
   },
   "search-skill": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T14:32:04Z",
     "total_runs": 45,
     "total_successes": 22,
@@ -203,8 +203,8 @@
     "last_error": "85d834f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "goal-tracker": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T19:26:05Z",
     "total_runs": 42,
     "total_successes": 22,
@@ -215,8 +215,8 @@
     "last_error": "8445412\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-health": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T19:25:48Z",
     "total_runs": 49,
     "total_successes": 22,
@@ -227,8 +227,8 @@
     "last_error": "b523321\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "reflect": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T19:26:35Z",
     "total_runs": 45,
     "total_successes": 22,
@@ -239,8 +239,8 @@
     "last_error": "65357c9\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "action-converter": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T19:25:39Z",
     "total_runs": 45,
     "total_successes": 23,
@@ -251,8 +251,8 @@
     "last_error": "b138a68\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "evening-recap": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-16T21:37:06Z",
     "total_runs": 43,
     "total_successes": 23,
@@ -263,8 +263,8 @@
     "last_error": "37be5d6\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "self-improve": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-15T19:23:02Z",
     "total_runs": 32,
     "total_successes": 11,
@@ -325,20 +325,20 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:17:40Z",
     "total_runs": 62,
     "total_successes": 34,
     "total_failures": 28,
     "consecutive_failures": 28,
     "success_rate": 0.55,
-    "last_dispatch": "2026-06-18T07:17:28Z",
+    "last_dispatch": "2026-06-18T10:37:23Z",
     "last_failed": "2026-06-18T09:00:05Z",
     "last_error": "f414c02\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-analytics": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-10T19:36:40Z",
     "total_runs": 28,
     "total_successes": 3,
@@ -400,14 +400,14 @@
     "last_dispatch": "2026-06-14T17:19:39Z"
   },
   "daily-routine": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T07:41:03Z",
     "total_runs": 20,
     "total_successes": 18,
     "total_failures": 2,
     "consecutive_failures": 2,
     "success_rate": 0.9,
-    "last_dispatch": "2026-06-18T07:17:28Z",
+    "last_dispatch": "2026-06-18T10:37:23Z",
     "last_failed": "2026-06-18T08:58:34Z",
     "last_error": "a9a1b28\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -430,8 +430,8 @@
     "success_rate": 1
   },
   "security-digest": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-14T15:35:31Z",
     "total_runs": 35,
     "total_successes": 11,
@@ -472,8 +472,8 @@
     "success_rate": 1
   },
   "reg-monitor": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-10T14:58:16Z",
     "total_runs": 25,
     "total_successes": 2,
@@ -484,8 +484,8 @@
     "last_error": "1a51803\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "aixbt-pulse": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T09:24:26Z",
     "total_runs": 40,
     "total_successes": 21,
@@ -548,8 +548,8 @@
     "success_rate": 1
   },
   "thought-review": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T07:33:28Z",
     "total_runs": 33,
     "total_successes": 16,
@@ -588,8 +588,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-06-18T07:17:28Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-18T10:37:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-17T12:38:00Z",
     "total_runs": 60,
     "total_successes": 40,
