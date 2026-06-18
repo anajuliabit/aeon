@@ -410,13 +410,13 @@
     "last_dispatch": "2026-06-14T17:19:39Z"
   },
   "daily-routine": {
-    "last_status": "dispatched",
-    "last_success": "2026-06-17T07:41:03Z",
-    "total_runs": 28,
-    "total_successes": 18,
+    "last_status": "success",
+    "last_success": "2026-06-18T20:01:43Z",
+    "total_runs": 29,
+    "total_successes": 19,
     "total_failures": 10,
-    "consecutive_failures": 10,
-    "success_rate": 0.64,
+    "consecutive_failures": 0,
+    "success_rate": 0.66,
     "last_dispatch": "2026-06-18T19:54:56Z",
     "last_failed": "2026-06-18T19:04:40Z",
     "last_error": "f0d1bab\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
