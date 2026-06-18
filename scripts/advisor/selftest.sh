@@ -319,4 +319,31 @@ check "tg-chunk overlong line <=4000"   "$([ "$2" -le 4000 ] && echo yes)" "yes"
 B4000="$(printf 'z%.0s' $(seq 1 4000))"
 check "tg-chunk exactly 4000 -> 1 chunk" "$(printf '%s' "$B4000" | bash "$TGC" | tgstats | cut -d' ' -f1)" "1"
 
+# --- anthropic-gateway.sh: provider resolution + usepod routing (sourced) ---
+GW="$(cd "$(dirname "$0")/.." && pwd)/anthropic-gateway.sh"
+# Source in a subshell with controlled env; echo the resolved exports.
+gw() { # GATEWAY, USEPOD_TOKEN, USEPOD_MODEL, MODEL  -> "BASEURL|MODEL|AUTH"
+  ( export GATEWAY="$1" USEPOD_TOKEN="${2-}" USEPOD_MODEL="${3-}" MODEL="${4-}" \
+      BANKR_LLM_KEY="" VIRTUALS_API_KEY=""
+    . "$GW" >/dev/null 2>&1
+    printf '%s|%s|%s' "${ANTHROPIC_BASE_URL:-}" "${GATEWAY_MODEL:-}" "${ANTHROPIC_AUTH_TOKEN:-}" )
+}
+check "gw usepod base url"   "$(gw usepod SECRET '' claude-opus-4-7 | cut -d'|' -f1)" "https://api.usepod.ai/proxy/SECRET"
+check "gw usepod model default" "$(gw usepod SECRET '' claude-opus-4-7 | cut -d'|' -f2)" "deepseek-v3.2"
+check "gw usepod model override" "$(gw usepod SECRET qwen-3.5 claude-opus-4-7 | cut -d'|' -f2)" "qwen-3.5"
+check "gw usepod auth literal" "$(gw usepod SECRET '' x | cut -d'|' -f3)" "unused"
+check "gw direct no base url" "$(gw direct '' '' claude-opus-4-7 | cut -d'|' -f1)" ""
+check "gw direct keeps model" "$(gw direct '' '' claude-opus-4-7 | cut -d'|' -f2)" "claude-opus-4-7"
+check "gw bankr base url"     "$( ( export GATEWAY=bankr BANKR_LLM_KEY=k USEPOD_TOKEN='' VIRTUALS_API_KEY='' MODEL=m; . "$GW" >/dev/null 2>&1; printf '%s' "${ANTHROPIC_BASE_URL:-}") )" "https://llm.bankr.bot"
+check "gw virtuals base url"  "$( ( export GATEWAY=virtuals VIRTUALS_API_KEY=k USEPOD_TOKEN='' BANKR_LLM_KEY='' MODEL=m; . "$GW" >/dev/null 2>&1; printf '%s' "${ANTHROPIC_BASE_URL:-}") )" "https://compute.virtuals.io"
+# Redaction: the usepod notice must NOT leak the token.
+GW_NOTICE="$( ( export GATEWAY=usepod USEPOD_TOKEN=SUPERSECRET MODEL=x; . "$GW" 2>/dev/null ) )"
+check "gw usepod notice redacted" "$(printf '%s' "$GW_NOTICE" | grep -c 'SUPERSECRET')" "0"
+check "gw usepod notice has marker" "$(printf '%s' "$GW_NOTICE" | grep -c '<redacted>')" "1"
+# Missing token -> non-zero.
+( export GATEWAY=usepod USEPOD_TOKEN='' MODEL=x; . "$GW" >/dev/null 2>&1 ); check "gw usepod missing token fails" "$?" "1"
+# Provider from aeon.yml config when GATEWAY unset.
+GW_CFG_DIR="$(mktemp -d)"; printf 'gateway:\n  provider: usepod\n' > "$GW_CFG_DIR/aeon.yml"
+check "gw reads provider from aeon.yml" "$( cd "$GW_CFG_DIR" && ( export USEPOD_TOKEN=T MODEL=x; unset GATEWAY; . "$GW" >/dev/null 2>&1; printf '%s' "${GATEWAY:-}") )" "usepod"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
