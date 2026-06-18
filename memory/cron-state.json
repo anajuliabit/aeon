@@ -402,14 +402,14 @@
   "daily-routine": {
     "last_status": "failed",
     "last_success": "2026-06-17T07:41:03Z",
-    "total_runs": 22,
+    "total_runs": 23,
     "total_successes": 18,
-    "total_failures": 4,
-    "consecutive_failures": 4,
-    "success_rate": 0.82,
+    "total_failures": 5,
+    "consecutive_failures": 5,
+    "success_rate": 0.78,
     "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_failed": "2026-06-18T11:59:11Z",
-    "last_error": "a8ca7b2\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-06-18T13:27:14Z",
+    "last_error": "b25331d\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "technical-explainer": {
     "last_status": "success",
