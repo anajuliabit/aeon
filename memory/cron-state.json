@@ -473,15 +473,15 @@
   },
   "reg-monitor": {
     "last_dispatch": "2026-06-18T10:37:23Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-10T14:58:16Z",
-    "total_runs": 25,
+    "total_runs": 26,
     "total_successes": 2,
-    "total_failures": 23,
-    "consecutive_failures": 23,
+    "total_failures": 24,
+    "consecutive_failures": 24,
     "success_rate": 0.08,
-    "last_failed": "2026-06-18T08:59:05Z",
-    "last_error": "1a51803\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-06-18T10:53:20Z",
+    "last_error": "295fbef\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "aixbt-pulse": {
     "last_dispatch": "2026-06-18T10:37:23Z",
