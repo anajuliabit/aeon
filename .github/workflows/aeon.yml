@@ -191,6 +191,8 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
+          USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
+          USEPOD_MODEL: ${{ vars.USEPOD_MODEL }}
           VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'deepseek-v4-flash' }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
           GITHUB_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
@@ -235,36 +237,12 @@ jobs:
           echo "Using model: $MODEL"
           echo "SKILL_MODEL=$MODEL" >> "$GITHUB_OUTPUT"
 
-          # --- AI Gateway routing ---
-          GATEWAY=$(grep -A1 '^gateway:' aeon.yml | grep 'provider:' | sed 's/.*provider: *//' | tr -d ' "'"'" || echo "direct")
-          GATEWAY="${GATEWAY:-direct}"
+          # --- AI Gateway routing (shared resolver; sets ANTHROPIC_BASE_URL + GATEWAY_MODEL) ---
+          # MUST use `|| exit 1`: set -e does NOT abort on a sourced script's return,
+          # so without this a misconfigured provider would run against a bad base URL.
+          . scripts/anthropic-gateway.sh || exit 1
           echo "Gateway: $GATEWAY"
-
           echo "GATEWAY=$GATEWAY" >> "$GITHUB_OUTPUT"
-
-          if [ "$GATEWAY" = "bankr" ]; then
-            if [ -z "${BANKR_LLM_KEY:-}" ]; then
-              echo "::error::gateway.provider=bankr but BANKR_LLM_KEY secret is not set"
-              exit 1
-            fi
-            export ANTHROPIC_BASE_URL="https://llm.bankr.bot"
-            export ANTHROPIC_AUTH_TOKEN="$BANKR_LLM_KEY"
-            unset ANTHROPIC_API_KEY
-            unset CLAUDE_CODE_OAUTH_TOKEN
-            echo "::notice::Routing through Bankr Gateway (https://llm.bankr.bot)"
-          elif [ "$GATEWAY" = "virtuals" ]; then
-            if [ -z "${VIRTUALS_API_KEY:-}" ]; then
-              echo "::error::gateway.provider=virtuals but VIRTUALS_API_KEY secret is not set"
-              exit 1
-            fi
-            export ANTHROPIC_BASE_URL="https://compute.virtuals.io"
-            export ANTHROPIC_AUTH_TOKEN="$VIRTUALS_API_KEY"
-            unset ANTHROPIC_API_KEY
-            unset CLAUDE_CODE_OAUTH_TOKEN
-            echo "::notice::Routing through Virtuals Gateway (https://compute.virtuals.io)"
-          else
-            echo "::notice::Using direct Anthropic API"
-          fi
 
           # Generate notify script in workspace (Claude calls: ./notify "message")
           # Messages are saved to .pending-notify/ for reliable post-run delivery
@@ -447,7 +425,7 @@ jobs:
           fi
           CLAUDE_OK=true
           CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
-            --model "$MODEL" --allowedTools "$ALLOWED" \
+            --model "$GATEWAY_MODEL" --allowedTools "$ALLOWED" \
             --output-format json 2>&1) || CLAUDE_OK=false
           if [ "$CLAUDE_OK" = true ] && echo "$CLAUDE_OUTPUT" | jq -e '.is_error == true' >/dev/null 2>&1; then
             CLAUDE_OK=false
