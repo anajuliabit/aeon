@@ -214,13 +214,13 @@
     "last_dispatch": "2026-06-18T10:37:23Z",
     "last_status": "failed",
     "last_success": "2026-06-16T19:26:05Z",
-    "total_runs": 47,
+    "total_runs": 49,
     "total_successes": 22,
-    "total_failures": 25,
-    "consecutive_failures": 25,
-    "success_rate": 0.47,
-    "last_failed": "2026-06-18T13:28:07Z",
-    "last_error": "e1be060\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "total_failures": 27,
+    "consecutive_failures": 27,
+    "success_rate": 0.45,
+    "last_failed": "2026-06-18T14:34:30Z",
+    "last_error": "28030fe\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-health": {
     "last_dispatch": "2026-06-18T10:37:23Z",
