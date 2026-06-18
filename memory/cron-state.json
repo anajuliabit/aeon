@@ -585,12 +585,12 @@
     "last_dispatch": "2026-06-18T00:21:59Z",
     "last_status": "failed",
     "last_success": "2026-06-17T12:38:00Z",
-    "total_runs": 54,
+    "total_runs": 55,
     "total_successes": 40,
-    "total_failures": 14,
-    "consecutive_failures": 13,
-    "success_rate": 0.74,
-    "last_failed": "2026-06-18T00:23:31Z",
-    "last_error": "140c01e\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "total_failures": 15,
+    "consecutive_failures": 14,
+    "success_rate": 0.73,
+    "last_failed": "2026-06-18T01:31:47Z",
+    "last_error": "5079cb3\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   }
 }
