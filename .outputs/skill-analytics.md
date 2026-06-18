@@ -1,1 +1,1 @@
-skill-analytics 2026-06-10 — 32 anomalies. 395 runs, 48 skills, 65% success (claude api rate-limit cluster 06-06→06-08 caused ~140 failures fleet-wide; all recovered, consecutive_failures=0). 2 SILENT: fork-skill-gap (missed Sun 06-07) + operator-scorecard (missed Mon 06-08) — cron windows landed in the dead zone, 2nd consecutive miss. 30 LOW_SUCCESS skills, all clean. fleet-control: 56.3%, last=failure — manual check warranted.
+
