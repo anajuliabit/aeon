@@ -531,13 +531,13 @@
     "last_dispatch": "2026-06-17T21:07:53Z",
     "last_status": "failed",
     "last_success": "2026-06-16T12:43:18Z",
-    "total_runs": 22,
+    "total_runs": 23,
     "total_successes": 9,
-    "total_failures": 13,
-    "consecutive_failures": 13,
-    "success_rate": 0.41,
-    "last_failed": "2026-06-18T16:59:41Z",
-    "last_error": "527b417\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "total_failures": 14,
+    "consecutive_failures": 14,
+    "success_rate": 0.39,
+    "last_failed": "2026-06-18T18:08:54Z",
+    "last_error": "3aabbfa\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "list-digest": {
     "last_dispatch": "2026-06-17T17:35:51Z",
