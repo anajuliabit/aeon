@@ -46,14 +46,14 @@
   "token-pick": {
     "last_status": "failed",
     "last_success": "2026-06-17T12:40:07Z",
-    "total_runs": 27,
+    "total_runs": 32,
     "total_successes": 24,
-    "total_failures": 3,
-    "consecutive_failures": 3,
-    "success_rate": 0.89,
+    "total_failures": 8,
+    "consecutive_failures": 8,
+    "success_rate": 0.75,
     "last_dispatch": "2026-06-17T12:33:06Z",
-    "last_failed": "2026-06-18T14:34:01Z",
-    "last_error": "ef53475\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-06-18T15:54:12Z",
+    "last_error": "da0ba4b\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "fetch-tweets": {
     "last_status": "success",
