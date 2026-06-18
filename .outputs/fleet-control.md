@@ -1,14 +1,35 @@
-## Summary
+## fleet-control (health check)
 
-Ran `fleet-control` in Health Check Mode (default — `var` empty).
+**Verdict:** FLEET_EMPTY — no managed instances
 
-**Outcome:** `FLEET_EMPTY` — silent stop, no notification.
+**Delta vs prior:** none
 
-**Why:** Pre-flight passed (gh auth ✓ as `anajuliabit`), but `memory/instances.json` holds `{"instances": []}` — no managed children to check. Skill spec explicitly says: empty registry → log to today's log and stop without notifying.
+**Per-instance actions:** *(registry empty)*
 
-**Files modified:**
-- `memory/logs/2026-06-17.md` — appended `## fleet-control (health check)` block with `FLEET_EMPTY` verdict.
+**Fleet size:** total=0, healthy=0, warning=0, degraded=0, stale=0, pending=0, unreachable=0, archived=0
 
-**Untouched (per spec):** `memory/instances.json`, `memory/state/fleet-control-state.json`. No notify sent.
+**Sources:** gh=ok, rate_remaining=4938
 
-**Follow-up:** None automated. If the operator wants this fleet active, they need to seed `memory/instances.json` with at least one child entry (name, repo, purpose, parent, created, skills_enabled).
+**Log:** wrote `FLEET_EMPTY` to `memory/logs/2026-06-18.md`
+
+**Notification:** skipped (empty registry)
+
+The skill completed without notifying because the instance registry (`memory/instances.json`) contains no instances. This is expected if the fleet hasn't been populated yet.
+
+**Next steps:**
+1. Add child Aeon instances to `memory/instances.json` with format:
+   ```json
+   {
+     "instances": [
+       {
+         "name": "instance-name",
+         "repo": "owner/repo",
+         "purpose": "description",
+         "parent": "main/repo",
+         "created": "YYYY-MM-DD",
+         "skills_enabled": ["skill1", "skill2"]
+       }
+     ]
+   }
+   ```
+2. After populating the registry, subsequent fleet-control runs will monitor health and dispatch skills.
