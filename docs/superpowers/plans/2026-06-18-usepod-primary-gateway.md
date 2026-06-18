@@ -205,7 +205,9 @@ Replace with:
 
 ```bash
           # --- AI Gateway routing (shared resolver; sets ANTHROPIC_BASE_URL + GATEWAY_MODEL) ---
-          . scripts/anthropic-gateway.sh
+          # MUST use `|| exit 1`: set -e does NOT abort on a sourced script's return,
+          # so without this a misconfigured provider would run against a bad base URL.
+          . scripts/anthropic-gateway.sh || exit 1
           echo "Gateway: $GATEWAY"
           echo "GATEWAY=$GATEWAY" >> "$GITHUB_OUTPUT"
 ```
@@ -287,7 +289,8 @@ Add immediately after those two lines:
 ```bash
           # Route the primary agentic chat through the shared gateway (usepod = agentic
           # on usepod with tools; far better than the text-only fallback below).
-          . scripts/anthropic-gateway.sh
+          # `|| exit 1`: set -e won't abort on a sourced return (see helper header).
+          . scripts/anthropic-gateway.sh || exit 1
 ```
 
 - [ ] **Step 3: Use `$GATEWAY_MODEL` for the primary chat call**

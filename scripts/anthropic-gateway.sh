@@ -6,8 +6,15 @@
 # Provider precedence: $GATEWAY env override > aeon.yml `gateway.provider` > direct.
 # usepod is Anthropic-compatible (`/v1/messages`) with the token IN THE URL PATH, so
 # the token never goes in a header — and the notice redacts it (GitHub also masks the
-# USEPOD_TOKEN secret). Never `set -x` around this. Returns non-zero (when sourced) on
-# a misconfigured provider so the caller can fail the step.
+# USEPOD_TOKEN secret).
+#
+# SOURCING CONTRACT (load-bearing): on a misconfigured provider this returns non-zero,
+# but `set -e` does NOT abort a caller on a sourced script's return. Callers MUST
+# source as:  . scripts/anthropic-gateway.sh || exit 1
+# Relying on `set -e` alone will let the step continue with a malformed base URL.
+#
+# SECURITY: the usepod token is in the exported ANTHROPIC_BASE_URL. Never `set -x`
+# around this, and never `echo "$ANTHROPIC_BASE_URL"` / dump `env` — that leaks it.
 GATEWAY="${GATEWAY:-$(grep -A1 '^gateway:' aeon.yml 2>/dev/null | grep 'provider:' | sed 's/.*provider: *//' | tr -d ' "'"'" )}"
 GATEWAY="${GATEWAY:-direct}"
 GATEWAY_MODEL="${MODEL:-}"   # default: caller's model unchanged; usepod overrides below

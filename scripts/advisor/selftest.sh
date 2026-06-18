@@ -342,6 +342,10 @@ check "gw usepod notice redacted" "$(printf '%s' "$GW_NOTICE" | grep -c 'SUPERSE
 check "gw usepod notice has marker" "$(printf '%s' "$GW_NOTICE" | grep -c '<redacted>')" "1"
 # Missing token -> non-zero.
 ( export GATEWAY=usepod USEPOD_TOKEN='' MODEL=x; . "$GW" >/dev/null 2>&1 ); check "gw usepod missing token fails" "$?" "1"
+# Production mode: sourced under `set -e` with the `|| exit 1` contract MUST halt the
+# caller (set -e alone does NOT abort on a sourced return — callers append || exit 1).
+GW_REACHED="$(GATEWAY=usepod USEPOD_TOKEN='' MODEL=x bash -c 'set -euo pipefail; . "'"$GW"'" >/dev/null 2>&1 || exit 1; echo REACHED' 2>/dev/null)"
+check "gw missing token halts set -e caller" "$GW_REACHED" ""
 # Provider from aeon.yml config when GATEWAY unset.
 GW_CFG_DIR="$(mktemp -d)"; printf 'gateway:\n  provider: usepod\n' > "$GW_CFG_DIR/aeon.yml"
 check "gw reads provider from aeon.yml" "$( cd "$GW_CFG_DIR" && ( export USEPOD_TOKEN=T MODEL=x; unset GATEWAY; . "$GW" >/dev/null 2>&1; printf '%s' "${GATEWAY:-}") )" "usepod"
