@@ -11,14 +11,14 @@
     "last_success": "2026-05-21T12:33:53Z"
   },
   "defi-overview": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-18T21:09:59Z",
     "total_runs": 38,
     "total_successes": 28,
     "total_failures": 10,
     "consecutive_failures": 0,
     "success_rate": 0.74,
-    "last_dispatch": "2026-06-18T20:54:22Z",
+    "last_dispatch": "2026-06-19T12:39:37Z",
     "last_failed": "2026-06-18T20:25:41Z",
     "last_error": "b3b6e96\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -44,14 +44,14 @@
     "last_error": "324d711\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-pick": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-18T20:16:29Z",
     "total_runs": 39,
     "total_successes": 25,
     "total_failures": 14,
     "consecutive_failures": 0,
     "success_rate": 0.64,
-    "last_dispatch": "2026-06-18T19:54:56Z",
+    "last_dispatch": "2026-06-19T12:39:37Z",
     "last_failed": "2026-06-18T19:05:41Z",
     "last_error": "1145dc9\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -155,8 +155,8 @@
     "success_rate": 1
   },
   "skill-freshness": {
-    "last_dispatch": "2026-06-19T11:18:12Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-19T12:39:37Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-18T21:50:18Z",
     "total_runs": 39,
     "total_successes": 23,
@@ -167,8 +167,8 @@
     "last_error": "w = datetime.datetime.utcnow()\\nwith open('aeon.yml', 'r') as f:\\n    config = yaml.safe_load(f)\\n\\nskills = config.get('skills', {})\\nenabled = {k: v for k, v in skills.items() if v.get('enabled', Fa"
   },
   "github-trending": {
-    "last_dispatch": "2026-06-19T11:18:12Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-19T12:39:37Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-18T21:52:23Z",
     "total_runs": 37,
     "total_successes": 24,
@@ -179,8 +179,8 @@
     "last_error": "reated = parse_date(repo['created_at'])\\n    days_old = (today - created).days\\n    print(f\\\\\\\"{repo['owner_repo']:30} stars_today={repo['stars_today']:4} total={repo['total_stars']:6} days={days_old:"
   },
   "token-alert": {
-    "last_dispatch": "2026-06-18T20:54:22Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-19T12:39:37Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-18T20:56:28Z",
     "total_runs": 36,
     "total_successes": 27,
@@ -506,8 +506,8 @@
     "last_error": "65fb260\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-movers": {
-    "last_dispatch": "2026-06-18T20:54:22Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-19T12:39:37Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-18T21:11:31Z",
     "total_runs": 28,
     "total_successes": 16,
@@ -518,8 +518,8 @@
     "last_error": "\" > .tm-cache/cg-markets.json\",\"description\":\"Save market data directly\"}},{\"tool_name\":\"Bash\",\"tool_use_id\":\"call_00_eE5T1kStjcK3iJdAbHaxePzY\",\"tool_input\":{\"command\":\"curl -s \\\"https://api.coingecko"
   },
   "on-chain-monitor": {
-    "last_dispatch": "2026-06-18T19:54:56Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-19T12:39:37Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-18T20:01:01Z",
     "total_runs": 20,
     "total_successes": 11,
@@ -604,8 +604,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-06-19T09:44:49Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-19T12:39:37Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-19T09:51:03Z",
     "total_runs": 75,
     "total_successes": 45,
