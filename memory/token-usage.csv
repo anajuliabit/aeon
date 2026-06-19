@@ -449,4 +449,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-19,btc-levels,claude-sonnet-4-6,0,11740,0,0
 2026-06-19,btc-levels,claude-sonnet-4-6,0,3932,0,0
 2026-06-19,thought-review,claude-opus-4-7,0,15699,0,0
-2026-06-19,btc-levels,claude-sonnet-4-6,0,5036,0,0
+2026-06-19,fleet-control,claude-opus-4-7,0,4893,0,0
