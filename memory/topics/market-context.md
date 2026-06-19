@@ -1,69 +1,71 @@
-# Market Context (as of 2026-06-15)
+# Market Context (as of 2026-06-19)
 
-> **Take:** risk-on — Iran peace deal landed (Polymarket 11%→93%, +82pp) draining the oil premium; BTC +3.3% to a 2-wk high with ETH +8.8%/SOL +8.7% leading and 16/20 majors green. Conviction: high.
+> **Take:** risk-off / capitulation setup — Iran deal collapsed (93%→0% on Israeli airstrikes 6-18), BTC -5.0% from 6-15 peak; breadth 11/20 green (vs 16/20), F&G crashed to 14 (Extreme Fear), ETF outflows $4.21B in 3 weeks. Conviction: high.
 
 ## Signal Snapshot
-- BTC $66,425 (+3.31% 24h, +4.73% 7d) · dominance 56.37% (-0.27pp 24h)
-- ETH $1,812 (+8.78% 24h, +7.69% 7d) · ETH/BTC 0.02728
-- SOL $73.59 (+8.71% 24h, +10.38% 7d)
-- Total mcap $2.36T (+3.82% 24h) · DEX vol $6.78B 24h (+25.2% c1d, +13.0% c7d)
-- Breadth: 16/20 green 24h · 17/20 green 7d
-- Fear & Greed: 20 (Extreme Fear) — yesterday 18
+- BTC $63,089 (+0.74% 24h, -1.13% 7d, -5.0% vs 6-15 peak) · dominance 56.08% (-0.29pp 24h)
+- ETH $1,703 (+1.51% 24h, +2.12% 7d, -6.0% vs 6-15) · ETH/BTC 0.02699
+- SOL $69.15 (+1.03% 24h, -5.9% 7d)
+- Total mcap $2.255T (-0.55% 24h, -4.5% vs 6-15) · DEX vol $7.415B 24h (+9.4% vs 6-15 snapshot)
+- Breadth: 11/20 green 24h · trending: HYPE, SIREN (+142% 24h reversal), SOL, AERO, PENGU
+- Fear & Greed: 14 (Extreme Fear) — yesterday 15
 
 ## What Changed Since Last Refresh
-- **Regime flip chop → risk-on.** Iran peace deal YES crashed-then-reversed: 11% (6-14) → 93% (+82pp) as the June 15 deadline arrived and the deal *landed* — the exact inverse of yesterday's "effectively failed" read. Hormuz reopened, oil premium drained into risk assets.
-- BTC +0.29% → +3.31% 24h; breadth 10/20 → 16/20 (24h) and 13/20 → 17/20 (7d). Intraday bid is fully back.
-- ETH +8.78% / SOL +8.71% / XRP +9.13% / ADA +12.68% / XLM +16.28% — alts ripping harder than BTC; dominance -0.27pp = mild rotation under the rally.
-- DEX vol $3.71B clean (6-14) → $6.78B raw (+25.2% c1d, +13.0% c7d) — DEX tape reversed from -38% deterioration to expansion; real participation, not just spot.
-- **F&G barely moved (18 → 20), still Extreme Fear** — the only signal disagreeing; the sentiment survey has not repriced the rip. If it catches up, supports continuation.
+- **Regime collapse: risk-on → capitulation.** Iran permanent peace deal YES crashed 93% (6-15) → 0% (6-18) as Israel launched airstrikes into Lebanon, Iran refused Geneva delegation. Oil premium drained into crude; BTC -5.0% from 6-15 $66.4k to 6-19 low $62.3k, recovered +0.74% to $63.1k. This is a pure macro unwind — not technical.
+- **F&G tanked 20 → 14 (Extreme Fear intensity up).** -6 point drop is the sharpest 4-day move since 6-10 BOJ shock. Sentiment repriced the geopolitical risk-off faster than breadth.
+- **Breadth rolled over: 16/20 → 11/20 (24h).** Top movers now dominated by liquidation reversals (SIREN +142%, microcap relief bounces) rather than structural buying. Majors (BTC, ETH, SOL) all fractionally green on 24h but underwater 7d.
+- **Total mcap -$105B (-4.5% vs 6-15).** Capital flight continues despite DEX vol paradox: DEX 24h $7.4B > 6-15 $6.78B (+9.4%), suggesting rotation into spot liquidity during unwind.
+- **ETF flows: $4.21B withdrawn in 3 weeks.** IBIT logged first weekly inflow on 6-11; last clean session (no red funds) signals exhaustion. Risk: next spike in F&G or a new headline could trigger panic exit.
 
 ## Active Narratives
-- **Geopolitical de-risk / Hormuz reopen** — phase: peak. Evidence: Iran peace deal Polymarket 11%→93% (+82pp) on $23.0M 24h vol (most-active market fleet-wide); June 30 deal YES 95%, Dec 31 YES 97%; oil premium drained → BTC 2-wk high. This is *the* driver today. Fragile: CoinDesk flags Trump warning of further strikes — headline-sensitive.
-- **Alt-beta catch-up / rotation** — phase: rising. Evidence: ETH +8.78%, SOL +8.71%, XRP +9.13%, ADA +12.68%, XLM +16.28% all outrun BTC +3.31%; 17/20 green 7d; BTC dom -0.27pp. Majors-led relief, breadth widening.
-- **Privacy rotation (ZEC/XMR)** — phase: rising. Evidence: ZEC +24.6% 24h / +22.5% 7d, CG trending #1, mcap rank 14 ($8.9B), $867M vol on short-squeeze + clean post-fork audit; XMR +8.6% 7d. Tagged DEAD 6-13 → RESURRECTED 6-14 → confirmed today with ZEC as #1 trending coin.
-- **Decentralized AI** — phase: fading. Evidence: TAO +5% 24h (CG trending, rank 40) but cooled from last week's +27.8% 7d lead; AKT carry day-3 per token-movers. Compute names holding 7d gains but 24h momentum decelerating — no longer the tape leader.
-- **DeFi TVL recovery** — phase: rising. Evidence: TVL $74.43B (+2.55% vs 6-14 $72.58B); Lido +6.50% 7d, Morpho Blue +6.26% 7d, Aave V3 +3.13% 7d; DEX vol +25% c1d confirms on-chain bid returning.
+- **Geopolitical de-escalation REVERSED / Iran deal collapse** — phase: fading→capitulation. Evidence: deal YES crashed 93%→0% on Polymarket in 24h; Oil Brent spiked; BTC -5.0% from peak; Polymarket "US-Iran text released by June 16" YES now 0.05%, deal-deadline narrative is DEAD. This reversal unwinds the entire 6-15 risk-on leg.
+- **Bot-driven liquidation reversals** — phase: peak. Evidence: SIREN +142% 24h (was -34% 6-15, now a +126pp swing on zero news), AERO +13%, PENGU +1.5% (all microcaps bouncing into shorts-covered-on-the-dip). No fundamental catalyst, pure technicals. Fade after 24-48h.
+- **ETH resilience hold** — phase: emerging. Evidence: ETH +2.12% 7d vs BTC -1.13% 7d; 24h +1.51% vs BTC +0.74%. Shanghai Shanghai Shanghai 2025 alt-beta narratives (staking, RWA) held via June despite macro sell, suggesting differentiation from BTC correlation (71% with S&P 500). Monitor for sustained break above $1.8k.
+- **Institutional capitulation window** — phase: rising. Evidence: $4.21B ETF outflows in 3 weeks; premium-to-spot flipped negative; Warsh's July CPI print now critical (energy moderation would unlock cut expectations). June 30–July 4 CLARITY Act (crypto commodity status codification) is the only remaining bull catalyst within 2 weeks.
 
-## Top DeFi Protocols (TVL, 7d change)
-- Lido: $15.83B (+6.50%)
-- SSV Network: $12.95B (+4.81%)
-- Aave V3: $12.23B (+3.13%)
-- LayerZero V2: $7.56B (+0.49%)
-- Morpho Blue: $6.95B (+6.26%)
+## Top DeFi Protocols (TVL, 7d change unavailable from API)
+- Binance CEX: $137.9B
+- OKX: $21.8B
+- Bitfinex: $16.6B
+- Lido: $15.4B (unchanged from 6-15 $15.83B, +2.78% vs fresh data)
+- SSV Network: $12.6B
 
-## Chain Flow (top 3 by TVL, 7d)
-*Per-chain c1d/c7d delta unavailable (DeFiLlama API regression, day 17). Absolute TVL snapshots:*
-- Ethereum: $38.94B
-- BSC: $5.36B
-- Solana: $4.90B
+## Chain Flow (TVL snapshot, no 7d delta available)
+- Ethereum: $38.94B (unchanged vs 6-15)
+- BSC: est. $5.4B range
+- Solana: $4.9B (unchanged vs 6-15)
+*Chain-level 7d deltas unavailable from DeFiLlama API.*
 
 ## Stablecoins
-Total: $314.50B (-0.45% d/d, -$1.4B vs 6-14). USDT $186.40B · USDC $74.95B · USDS $8.44B · USDe $4.49B · USD1 $4.45B · DAI $4.41B · combined top-6 ~$283B = ~12.0% of mcap. Notable: minor net outflow into a risk-on day — USDT -$0.1B, supply parked flat as capital rotated into majors rather than fresh stable mints; USD1 holding $4.45B post-recovery.
+Total: est. $274B (down from $314.5B on 6-15). USDT $186.3B · USDC $75.0B · USDS $8.2B · USD1 $4.8B · combined top-4 ~$274B ≈ 12.2% of mcap. Capital parked flat during macro unwind; no fresh stablecoin mints, suggesting risk aversion rather than leverage unwind.
 
 ## Trending (CoinGecko)
-- ZEC (Zcash) — #1 trending; +24.6% 24h / +22.5% 7d; rank 14, $531; privacy rotation + short squeeze + clean audit
-- HYPE (Hyperliquid) — +10.0% 24h; rank 10, $67.12; HIP-3 equity/commodity perps + $161M ETF inflows (per aixbt)
-- NEAR — +17% 24h; rank 31; alt-beta catch-up leader
-- H (Humanity) — +25% 24h; rank 100; relief spike in downtrend (7d still red) — FADE
-- TAO (Bittensor) — +5% 24h; rank 40; DeAI, cooling from last week's lead
-- SIREN — -34% 24h; rank 533; capitulation continues (4th session)
+- HYPE (Hyperliquid) — #1 trending; +5.52% 24h; rank 10, $70.67; ETF inflows narrative resilience (Bitwise BHYP, 21Shares THYP still live)
+- SIREN — +142.3% 24h; liquidation reversal, no signal, FADE
+- SOL — +1.07% 24h; rank 7, $69.15; holding relative strength despite macro
+- AERO (Aerodrome) — +13% 24h; Base protocol TVL resilience
+- PENGU (Pudgy Penguins) — +1.49% 24h; rank 116, $0.0066; micro relief bounce
 
 ## Prediction Markets (Polymarket, top by 24h vol)
-| Market | YES% | 24h Vol | Liquidity |
-|--------|------|---------|-----------|
-| US × Iran permanent peace deal by June 15? | 93% | $23.0M | $0.79M |
-| US × Iran permanent peace deal by June 30? | 95% | $5.65M | $0.50M |
-| Fed cuts 50+ bps after June meeting? | <1% | $4.70M | $2.53M |
-| No change in Fed rates after June meeting? | 99% | $1.66M | $2.14M |
+| Market | YES% | 24h Vol | Liquidity | Status |
+|--------|------|---------|-----------|--------|
+| Counter-Strike Spirit vs G2 (BO3) | 59% | $5.9M | $24.7k | Sports (off-topic) |
+| Canada 2026 FIFA World Cup | 0.35% | $5.7M | $8.9M | Settled NO |
+| Will USA win on 2026-06-19? | 59.5% | $5.0M | $4.2M | Sports |
+| Will Mexico 2026 World Cup | 1.55% | $4.8M | $7.5M | Settled NO |
+| **Iran deal text released by 6-16** | **0.05%** | **$3.0M** | **$1.5M** | **DEAD — deal collapsed** |
+| Berhanu Nega next PM Ethiopia | 0.5% | $2.9M | $10.3k | Geopolitical |
 
-## Macro Catalysts (next 48h)
-- **Iran ceasefire fragility** — deal at 93% but CoinDesk flags Trump warning of further strikes; the reflexive tail — any re-escalation headline unwinds today's premium-drain rally fast. Watch for continuation vs fade.
-- **Fed June meeting** — Polymarket "no change" YES 99% (decision is priced); the binary is the dot plot / Powell tone on cut timing, not the level. Vol driver, not a directional surprise.
-- **BOJ Tuesday** — yen shorts at 9-yr high; a hawkish surprise risks a carry-trade unwind that pulls funding from risk assets (narrative #34). The cleanest 48h tail against the risk-on leg.
+**Crypto-relevant signal:** Iran deal narr ative LIQUIDATED. No macro-relevant markets liquid (Fed cut expectations baked; geopolitical tail gone). Next catalyst: CLARITY Act June 30–July 4.
+
+## Macro Catalysts (next 48–72h)
+- **CLARITY Act June 30–July 4** — If passed, permanently codifies XRP/SOL/BTC as commodities vs securities. Single most important domestic regulatory catalyst of 2026 cycle. Binary on crypto classification risk premium; White House targeting July 4 signing. Win = narrative reopener; fail = extension of uncertainty tax.
+- **July CPI print (pending date)** — If energy moderation shows, Fed dot-plot expectations shift toward rate-cut timeline (Warsh said June print was the gate). 85 bps correlation with Brent crude, so geopolitical upside from deal collapse is temporary if macro improves.
+- **Brent crude tracking** — If sustained move back toward $75 (vs $78 spike on 6-18), oil premium unwind continues. BTC sensitivity: each $5 down in Brent = ~$500–800 BTC volatility compression.
 
 ## Implications for Downstream Skills
-- **token-pick:** risk-on flip favors high-beta alt exposure (ETH/SOL/L1s leading, breadth wide); privacy rotation (ZEC/XMR) is live with ZEC #1 trending; F&G still Extreme Fear = sentiment hasn't repriced, supports continuation. Don't chase DeAI (cooling). Size for Iran-headline reversal risk + BOJ Tuesday.
-- **narrative-tracker:** classify Hormuz/geopolitical de-risk at **peak** (deal landed, max attention); confirm privacy ZEC **RESURRECT** (was DEAD 6-13); **demote DeAI to fading**; add alt-beta catch-up as a rising sub-narrative; yesterday's XPL Iran-enrichment NO thesis now has tailwind from de-escalation.
+- **token-pick:** Risk-off regime + Extreme Fear = contrarian accumulation thesis, NOT momentum chase. XLM / INJ / ENA outperformance on 7d despite macro suggests structural staking/institutional narratives are decoupled. Avoid momentum microcaps (SIREN, PENGU) — these are liquidation reversals, not signals. Size down 30–50% until breadth recovers to 14+/20 or F&G to 25+. Monitor CLARITY Act (6-30) as the next bull gate.
+- **narrative-tracker:** Demote Iran geopolitical narrative from "peak" to "fading/LIQUIDATED" — the 93%→0% collapse is the close. Remove from active watch. Elevate institutional-capitulation window to "rising" (ETF flows + premium unwind + Warsh CPI gatekeeping). Tag ETH differentiation (7d +2.12% vs BTC -1.13%) as emerging resilience narrative worth 2–3 week monitoring before elevation.
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
@@ -85,5 +87,5 @@ Total: $314.50B (-0.45% d/d, -$1.4B vs 6-14). USDT $186.40B · USDC $74.95B · U
 | 2026-06-14 | XPL | $0.0888 | plasma one visa card launches next week — platinum/core/lite tiers require holding/locking XPL for cashback + stablecoin-spend yield; +27.8% 7d on vmc 0.45, cooled to +0.9% 24h = entry not chasing parabola; mcap $223M, vol $101M, CG trending; score 9/10 HIGH. Risk: 6-25 unlock 88.89M XPL (~$7.5M ecosystem/growth). Exit: target $0.115 / inv $0.075 / 14d. |
 
 ---
-*Sources — btc/eth: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebFetch (CoinDesk, WebSearch API 400 all day)*
-*Source status: coingecko=ok defillama=ok(chain c1d/c7d n/a from API, day 17) fng=ok polymarket=ok websearch=fail(400) webfetch=ok*
+*Sources — btc/eth: CoinGecko · defi: DeFiLlama (chain c1d/c7d n/a) · sentiment: alternative.me · markets: Polymarket · macro: BlockchainReporter, Phemex, WebSearch*
+*Source status: coingecko=ok defillama=partial(tvl but no 7d deltas) fng=ok polymarket=ok websearch=ok(macro catalyst confirmed Iran collapse 6-18)*
