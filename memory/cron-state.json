@@ -32,7 +32,7 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-06-19T16:12:56Z",
+    "last_dispatch": "2026-06-19T20:39:44Z",
     "last_status": "dispatched",
     "last_success": "2026-06-19T11:34:57Z",
     "total_runs": 117,
@@ -604,8 +604,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-06-19T17:52:58Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-19T20:39:44Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-19T18:07:39Z",
     "total_runs": 78,
     "total_successes": 47,
