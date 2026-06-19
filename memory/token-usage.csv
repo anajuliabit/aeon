@@ -453,3 +453,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-19,daily-routine,claude-opus-4-7,0,17335,0,0
 2026-06-19,btc-levels,claude-sonnet-4-6,0,6528,0,0
 2026-06-19,token-alert,claude-opus-4-7,0,7612,0,0
+2026-06-19,token-movers,claude-opus-4-7,0,3162,0,0
