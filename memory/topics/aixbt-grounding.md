@@ -1,48 +1,44 @@
-# AIXBT Grounding (as of 2026-06-19 18:00 UTC)
+# AIXBT Grounding (as of 2026-06-19 21:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-19T18:00:45.499Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-19T21:00:25.942Z
 
-Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent 10th+ consecutive window — iterating dynamically over whatever sections appear.
+Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent 11th+ consecutive window — iterating dynamically over whatever sections appear.
 
 ## Crypto
-- ETH sentiment is deeply split: whales withdrew ~$30M from Binance signaling accumulation, while BTC/ETH ETFs saw net outflows and bears eye triple-digit ETH.
-- Solana ecosystem gains momentum with Meteora dominating spot volume, tokenized equities driving $JUP interest, privacy narratives, and Kraken embedding on-chain trading.
-- STRC stress dominates discourse as Saylor's portfolio shows $11B unrealized losses, sparking MSTR/STRC short theses and BTC capitulation wick scenarios.
-- Pudgy Penguins TCG launches in Target nationwide, Axelar discloses a $4.67M bridge exploit, and Aave's revenue mix shifts as Chainlink SVR recaptures liquidation fees.
+- Pudgy Penguins TCG Season 3 launches in all US Targets, signaling a broader push by NFT brands into mainstream retail and off-chain revenue streams.
+- STRC stability concerns dominate debate as analysts draw UST parallels; BTC at $63K in "extreme fear" with Saylor burns and institutional dip-buying adding volatility.
+- Aave V4 targets trillion-dollar TradFi markets, prediction platforms like Kalshi eye IPOs, and Schwab enters the space—blurring DeFi and traditional finance lines.
+- Solana leads RWA holder count and sees $250M USDC mint; AI-crypto infra (DePIN, agentic tooling) and on-chain gaming tokens like $KINS gain traction.
 
 ## TradFi
-- Scrutiny over U.S.-Iran peace deal durability has reversed oil declines, transmitting energy cost pressures into higher inflation expectations, yields and equity risk premia.
-- Fed signals of possible 2026 rate hikes amid persistent inflation are anchoring USD higher while pressuring duration-sensitive assets and capping growth stock gains.
-- Overweight equity positioning in tech and semis faces de-risking transmission from geopolitical volatility, with small-cap outperformance and Asia closes signaling rotation.
-- Yen nearing 40-year lows heightens BOJ intervention risks, threatening yen-funded carry unwind and amplifying cross-asset funding stress and vol spikes.
+- US-Iran interim deal reopening Hormuz transmits lower oil prices and reduced inflation risk into equity risk-on positioning.
+- Semiconductor leadership drives S&P gains as traders unwind defensive flows amid geopolitical de-escalation.
+- Hawkish Fed repricing on Warsh comments lifts yields and bolsters dollar, pressuring EM currency and carry trades.
+- Yen near 40-year lows raises BoJ intervention odds, spurring FX vol and cross-asset hedging demand.
 
-## What's New (vs last pull 2026-06-19 09:00 UTC)
-- (Crypto) **ETH whales accumulating ($30M Binance withdrawal) while ETF outflows persist** — split sentiment emerging
-- (Crypto) **Meteora dominates Solana spot volume, Kraken embeds on-chain trading** — updated ecosystem structure
-- (Crypto) **STRC stress shifts to Saylor/MSTR short theses and BTC capitulation wicks** — narrative escalated from $100 par break
-- (Crypto) **Axelar $4.67M bridge exploit, Pudgy Penguins TCG Target launch** — infrastructure stress vs. mainstream adoption collision
-- (TradFi) **US-Iran deal durability scrutiny *reverses* oil declines** — geopolitical relief unwinds, inflation pressures return
-- (TradFi) **Fed 2026 hike signals amid persistent inflation** — forward guidance tightened vs. prior hawkish tilt
-- (TradFi) **BOJ yen at 40-year lows, intervention risks** — FX vol amplifying funding stress
+## What's New (vs last pull 2026-06-19 18:00 UTC)
+- (Crypto) **Pudgy Penguins TCG Season 3 at Target** — NFT mainstream retail escalation vs. prior ecosystem-only framing
+- (Crypto) **Aave V4 on TradFi, Kalshi IPO eyes, Schwab enters** — institutional-DeFi convergence now front-and-center
+- (Crypto) **Solana RWA leadership, $250M USDC, AI+gaming tokens** — RWA and agentic tooling narrative emerged
+- (TradFi) **Warsh repricing Fed hawks more explicitly** — higher clarity on nearterm rate cycle vs. "possible 2026" drift
+- (TradFi) **Explicit risk-on from Hormuz deal (lower oil, reduced inflation)** — geopolitical de-escalation transmitted clearly
 
-## Gone (dropped from 2026-06-19 09:00 UTC)
-- (Crypto) BTC extreme fear (index 14) specific reference — now part of generalized "capitulation wick" framing
-- (Crypto) Solana $250M USDC minted, Sanctum>Kamino metrics — replaced by Meteora TVL dominance
-- (Crypto) Coinbase AI agent wallets shipping — dropped from forefront
-- (Crypto) Morgan Stanley low-fee SOL ETF filing — absent
-- (TradFi) De-escalation in Middle East reduces geopolitics vol transmission — *reversed* to escalation scrutiny
-- (TradFi) Global liquidity improves, Brent weakness offsets supply shock — replaced by inflationary transmission
-- (TradFi) Oil below $80, energy risk premia compressed — now oil *rising* due to deal durability doubt
+## Gone (dropped from 2026-06-19 18:00 UTC)
+- (Crypto) ETH whales $30M Binance withdrawal — specific whale action replaced by institutional Aave/Kalshi adoption narrative
+- (Crypto) Axelar $4.67M bridge exploit — infrastructure exploits receded from forefront
+- (Crypto) Meteora Solana TVL dominance — replaced by broader RWA + AI-crypto infra framing
+- (TradFi) US-Iran deal *durability scrutiny* reversing oil declines — now deal is *accepted as de-escalation*, not questioned
+- (TradFi) BOJ yen 40-year lows (standalone risk item) — now bundled with Warsh-driven Fed repricing creating clearer two-way vol
 
 ## Persisting Stories
-- **Solana ecosystem momentum** — continues with infrastructure evolution (Meteora, Kraken on-chain)
-- **STRC/Saylor stress** — persists and escalates (from par break to short theses + capitulation wick framing)
-- **Fed policy tightening** — persists (hawkish tilt now explicit 2026 hike signals)
-- **Institutional crypto adoption advancing in parallel with contagion risk** — Axelar exploit vs. Pudgy Penguins Target launch
+- **STRC stability crisis** — continues (UST parallel now drawn explicitly)
+- **Solana ecosystem strength** — persists (evolved from Meteora → RWA + AI infra breadth)
+- **Fed policy tightening into risk assets** — persists (Warsh repricing clarifies hawkish trajectory)
+- **Institutional crypto adoption** — persists and accelerates (Aave V4 TradFi, Kalshi IPO, Schwab entry, Pudgy Penguins at Target)
 
 ## Cross-Domain Bridges
-- **Geopolitical relief just unwound.** US-Iran deal durability reversal transmits oil back up, inflation pressures return, and Fed's 2026 hike signals bite harder. That's crypto's macro floor getting pulled: STRC leveraged positions can't survive another shock, BTC capitulation wicks are live.
-- **ETH whales buying the bid while macro rolls over.** $30M Binance withdrawal into a TradFi repricing — builders aren't waiting, but it's still a lonely trade. Saylor's $11B unrealized losses are the leverage warning; institutional entry on-chain (Kraken, Pudgy Penguins at Target) is real, but the vol regime just shifted.
-- **Yen carry unwind via 40-year lows threatens the entire Solana momentum run.** Yen-funded leverage is a shadow funding mechanism for crypto risk; BOJ intervention risks mean sudden deleveraging. That's the tail event — not STRC alone, but the cascade if yen carry blows.
+- **Institutional adoption + macro tightening = retail FOMO collision.** Aave V4, Kalshi, Schwab onboarding legit TradFi flows into crypto, but Warsh repricing is yanking duration and lifting real rates. STRC stress is the canary — leveraged bets can't breathe in a risk-off vol regime. Pudgy Penguins at Target is *real* adoption, but it's happening into macro headwinds.
+- **Hormuz deal removes a pin, but Fed tightness pins the trade.** Lower oil + reduced inflation *should* be risk-on, and equities are tracking it (semis rallying). But higher-for-longer rates + EM carry pressure mean crypto doesn't get the full equity bounce. Solana's RWA lead is smart positioning — tokenized bonds + stables are the place to be if yields stay sticky.
+- **Yen + Dollar both strong = funding shock risk.** BOJ at intervention edge, Warsh-driven dollar bid = shadow financing for crypto leverage tightens. Not yet the yen-carry unwind, but the plumbing is creaking.
 
