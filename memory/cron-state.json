@@ -156,15 +156,15 @@
   },
   "skill-freshness": {
     "last_dispatch": "2026-06-19T11:18:12Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-18T21:50:18Z",
-    "total_runs": 38,
+    "total_runs": 39,
     "total_successes": 23,
-    "total_failures": 15,
-    "consecutive_failures": 1,
-    "success_rate": 0.61,
-    "last_failed": "2026-06-19T09:57:43Z",
-    "last_error": "\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{\"deepseek-v3.2\":{\"inputTokens\":41256,\"out"
+    "total_failures": 16,
+    "consecutive_failures": 2,
+    "success_rate": 0.59,
+    "last_failed": "2026-06-19T11:32:58Z",
+    "last_error": "w = datetime.datetime.utcnow()\\nwith open('aeon.yml', 'r') as f:\\n    config = yaml.safe_load(f)\\n\\nskills = config.get('skills', {})\\nenabled = {k: v for k, v in skills.items() if v.get('enabled', Fa"
   },
   "github-trending": {
     "last_dispatch": "2026-06-19T11:18:12Z",
