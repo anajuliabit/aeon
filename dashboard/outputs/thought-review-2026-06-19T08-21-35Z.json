@@ -1,0 +1,62 @@
+{
+  "root": "card_thoughtreview",
+  "state": {},
+  "elements": {
+    "card_thoughtreview": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_period",
+        "stat_captures",
+        "text_status",
+        "separator_1",
+        "text_priorities"
+      ]
+    },
+    "text_period": {
+      "type": "Text",
+      "props": {
+        "text": "Time period: last 24h"
+      }
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures across memory/logs and vault/inbox",
+        "value": "0"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "muted"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_priorities": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md last reviewed 2026-06-04 (15 days ago)",
+        "variant": "caption"
+      }
+    }
+  }
+}
