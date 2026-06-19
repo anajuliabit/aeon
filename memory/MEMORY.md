@@ -34,8 +34,8 @@ skills on cron. Inbound messaging via Telegram. soul/ populated
 - **PR #112 stalled** (skill-graph docs auto-gen, opened 6-14 17:41Z,
   ~4d). Action‑converter loop "merge #112" carried since 6-15.
 - **on-chain-monitor / defi-monitor watches.yml.** *[BLOCKED: awaiting
-  operator to seed `memory/on-chain-watches.yml`.]* **13 consecutive
-  NO_CONFIG days** through 6-17.
+  operator to seed `memory/on-chain-watches.yml`.]* **14 consecutive
+  NO_CONFIG days** through 6-19.
 
 ## Active Topics
 - [Capital‑2× program](topics/capital-2x-program.md) — north‑star spec
