@@ -520,12 +520,12 @@
   "on-chain-monitor": {
     "last_dispatch": "2026-06-19T12:39:37Z",
     "last_status": "success",
-    "last_success": "2026-06-19T12:45:52Z",
-    "total_runs": 21,
-    "total_successes": 12,
+    "last_success": "2026-06-19T18:46:35Z",
+    "total_runs": 22,
+    "total_successes": 13,
     "total_failures": 9,
     "consecutive_failures": 0,
-    "success_rate": 0.57,
+    "success_rate": 0.59,
     "last_failed": "2026-06-18T19:05:12Z",
     "last_error": "262d35f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
