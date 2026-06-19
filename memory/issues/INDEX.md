@@ -11,6 +11,9 @@
 | ISS-011 | Reppo vote write reverts with "nonce too low" after sibling votes land same batch | medium | unknown | 2026-05-29 | reppo-trading-agent, reppo-digest |
 | ISS-016 | Reppo vote dry-run fails CANNOT_VOTE_FOR_OWN_POD — workaround misses historical own-pods predating ledger | high | prompt-bug | 2026-05-31 | reppo-trading-agent, reppo-voter, reppo-digest |
 | ISS-018 | vuln-scanner missing scripts/prefetch-vuln-scanner.sh — semgrep/trufflehog/osv-scanner binaries unavailable in sandbox | high | sandbox-limitation | 2026-06-13 | vuln-scanner |
+| ISS-019 | defi-overview 6 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | defi-overview |
+| ISS-020 | token-pick 6 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | token-pick |
+| ISS-021 | search-skill 4 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | search-skill |
 
 ## Resolved
 
