@@ -1,49 +1,50 @@
-# AIXBT Grounding (as of 2026-06-17 09:00 UTC)
+# AIXBT Grounding (as of 2026-06-19 09:48 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-17T09:00:29.781Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-19T09:00:22.410Z
 
-Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent 7th+ consecutive window — iterating dynamically over whatever sections appear.
+Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent 8th+ consecutive window — iterating dynamically over whatever sections appear.
 
 ## Crypto
-- HYPE surges to ATH near $75 as equity perps (SPCX) drive record volume; Bitwise ETF stakes 1M+ tokens, with analysts targeting $100-150.
-- Tokenized stocks dominate mindshare: Solana hits $210M daily volume ATH, Backpack captures 50%+ share, and Coinbase pushes equities on Base.
-- BTC stalls near $65K in extreme fear (F&G 22) ahead of first Warsh-led FOMC; ETF inflows remain modest while 5K BTC leave exchanges signaling accumulation.
-- Altcoin rotation heats up as UNI and JTO break out on bullish divergences, ETH draws Standard Chartered's $40K target, and RWA/DeFi protocols attract institutional capital.
+- STRC's break below $100 par dominates discourse, drawing Luna/UST comparisons and raising contagion fears for DeFi yield strategies built on its leverage.
+- BTC sits at $62K near the 200W MA amid extreme fear (index 14), crowded long funding, net ETF outflows, and rising exchange deposits signaling fragile support.
+- Solana ecosystem momentum continues: $250M USDC minted, 97% tokenized equity volume share, Sanctum overtakes Kamino in TVL, and Morgan Stanley files low-fee SOL ETF.
+- Institutional infrastructure advances as Coinbase ships AI agent wallets and tokenized stocks, Ondo partners with Mirae Asset, and Ethena on-chain activity hits ATHs.
 
 ## TradFi
-- Progress toward a US-Iran deal is easing geopolitical tensions, with oil sliding below $80 and reducing cross-asset inflation hedges in rates and credit markets.
-- Equity flows reflect rotation into cyclicals and financials, supporting Dow records near 52k while pressuring tech-heavy Nasdaq amid semiconductor profit-taking.
-- Positioning ahead of the Fed centers on a rates hold, with dot plot scrutiny set to reshape duration bets, yields, and dollar exposure.
-- Cheaper energy from Hormuz reopening prospects is bolstering global liquidity by cutting shipping and input costs, aiding credit and EM flows.
+- US-Iran MOU reopening Hormuz and easing sanctions has driven oil below $80, compressing energy risk premia and boosting equity positioning via lower inflation pass-through.
+- Fed's hawkish tilt under Warsh signaling possible 2026 hikes lifted short-end yields while Iran optimism supported tech flows and Nasdaq recovery into Juneteenth close.
+- De-escalation in Middle East conflict reduces geopolitical vol transmission to shipping and credit, favoring risk assets over safe-haven flows in the near term.
+- Global liquidity improves as Brent weakness offsets prior supply shock, with positioning shifting toward equities and away from rate-sensitive bonds ahead of holiday.
 
-## What's New (vs last pull 2026-06-16 21:00 UTC)
-- (Crypto) **HYPE $75 ATH + $100-150 analyst targets + Bitwise staking 1M+ tokens** — prior had ATH confirmed but no price level, no analyst targets, no staking detail
-- (Crypto) **Solana $210M daily volume ATH / Backpack 50%+ share** — volume grew from $188M (SpaceX-driven) to $210M (broad tokenized stocks); Backpack as venue leader is new
-- (Crypto) **5K BTC leaving exchanges** — on-chain accumulation signal; not in prior pulls
-- (Crypto) **UNI and JTO breakouts on bullish divergences** — new altcoins entirely; altcoin rotation wasn't in 21:00Z pull
-- (Crypto) **Standard Chartered ETH $40K target** — new analyst call
-- (TradFi) **Oil below $80** — specific price level (prev: "three-month lows")
-- (TradFi) **Dow records near 52k** — specific level new
-- (TradFi) **Dot plot scrutiny reshaping duration bets** — sharper FOMC framing vs prior's generic "rates hold" language
+## What's New (vs last pull 2026-06-17 09:00 UTC)
+- (Crypto) **STRC break below $100 par with Luna/UST comparisons** — new contagion risk narrative for DeFi yield strategies
+- (Crypto) **BTC extreme fear (index 14) and crowded long funding** — fear index specific (prev: generic "extreme fear")
+- (Crypto) **Solana $250M USDC minted, Sanctum overtakes Kamino** — new ecosystem momentum metrics
+- (Crypto) **Coinbase AI agent wallets + tokenized stocks** — institutional infrastructure advances
+- (TradFi) **Fed's hawkish tilt under Warsh signaling possible 2026 hikes** — new forward guidance
+- (TradFi) **De-escalation reduces geopolitical vol transmission** — new risk asset tailwind framing
+- (TradFi) **Brent weakness offsets supply shock** — global liquidity improvement specifics
 
-## Gone (dropped from 2026-06-16 21:00 UTC)
-- (Crypto) Binance MiCA license rejection risk by July 1 — dropped entirely
-- (Crypto) Glassnode "base-building not reversal" call — dropped; BTC fear floor persists but without that attribution
-- (Crypto) BlackRock BITA covered-call ETF — dropped
-- (Crypto) Coinbase "System Update" as a standalone launch event — absorbed into the tokenized stocks dominance narrative
-- (TradFi) VIX modestly elevated / "awaiting formal signing" uncertainty framing — dropped; oil-relief narrative returned to confidence
-- (TradFi) "carry trades over aggressive de-risking" framing — dropped
+## Gone (dropped from 2026-06-17 09:00 UTC)
+- (Crypto) HYPE ATH at $75 with analyst targets — completely disappeared
+- (Crypto) Tokenized stocks volume hitting $210M ATH — gone
+- (Crypto) BTC leaving exchanges accumulation signal — absent
+- (Crypto) Altcoin rotation (UNI/JTO breakouts) — dropped
+- (Crypto) Standard Chartered ETH $40K target — absent
+- (TradFi) Progress toward US-Iran deal easing tensions — replaced by confirmed MOU
+- (TradFi) Equity flows into cyclicals/financials — gone
+- (TradFi) Fed dot plot scrutiny reshaping duration bets — replaced by hawkish tilt framing
 
 ## Persisting Stories
-- **BTC extreme fear (F&G 23 → 22)** — holding same floor across full 24h+ window; 5K BTC exchange outflows are new supporting signal
-- **HYPE ATH narrative** — persists and sharpened: now has price ($75), analyst targets ($100-150), and Bitwise staking detail
-- **Tokenized stocks / Solana / Coinbase dominance** — growing: $188M → $210M volume, Backpack at 50%+, Coinbase deploying on Base
-- **Hormuz/oil relief → inflation easing → rate-supportive** — direction unchanged; oil now below $80 from "three-month lows"
-- **Warsh FOMC / Fed hold** — persists; dot plot framing sharpened this pull
+- **BTC extreme fear** — persists but now at specific index 14 (vs generic)
+- **Solana momentum** — continues but with new metrics ($250M USDC minted, Sanctum>Kamino)
+- **Institutional crypto infra** — persists with Coinbase AI agent wallets addition
+- **Hormuz/oil relief → inflation easing** — persists with oil now below $80
+- **Fed policy focus** — persists but shifted from "hold" to "hawkish tilt signaling 2026 hikes"
 
 ## Cross-Domain Bridges
-- SPCX equity perps driving HYPE to $75 with $100-150 analyst targets. TradFi instruments manufactured on-chain are pricing into the token itself. the reflexivity loop is running — SPCX volume feeds HYPE ATH feeds the HYPE narrative feeds more SPCX volume. this isn't price speculation. it's a self-referential market.
-- 5K BTC leaving exchanges while Nasdaq bleeds AI/chip profit-taking. the capital isn't destroyed — it's repositioning. silent on-chain accumulation while public markets exit their AI premium. different asset, same directional bet on what comes next.
-- Solana $210M volume ATH, up from $188M at the 21:00Z pull 12 hours earlier. Backpack at 50%+ share. Coinbase deploying on Base simultaneously. tokenized stocks went from "launched" to "three-way venue war" in a single window. PMF is confirmed — the race now is capture.
-- FOMC dot plot is the single break point for everything bullish in this window. oil below $80 eases inflation, Warsh positioned for a hold — but if dots surprise hawkish, HYPE $100-150 targets, altcoin rotation, and $210M Solana volume all have the same single vector of fragility. one print, one unwind.
+- STRC's $100 break draws Luna/UST parallels — DeFi leverage contagion meets Middle East de‑escalation compressing risk premia. That's a lethal mix: crypto yield strategies built on fragile leverage while the macro floor softens.
+- Extreme fear index 14 + crowded long funding + net ETF outflows against Fed hawkish tilt signaling 2026 hikes. The timing gap is the story — crypto's technicals diverging from TradFi inflation pass‑through relief.
+- Coinbase ships AI agent wallets the same window Solana scores $250M USDC minted and Sanctum flips Kamino. Infrastructure velocity is picking up while retail sentiment bottoms. That's the forward signal — builders don't wait for price.
+- Morgan Stanley low‑fee SOL ETF filing meets US‑Iran MOU reopening Hormuz. Institutions aren't just entering crypto — they're entering *through* the assets that win the macro pivot. SOL as the energy‑sensitive tech proxy.
