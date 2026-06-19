@@ -543,14 +543,14 @@
   },
   "list-digest": {
     "last_dispatch": "2026-06-19T17:08:04Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-18T21:00:06Z",
-    "total_runs": 13,
+    "total_runs": 14,
     "total_successes": 9,
-    "total_failures": 4,
-    "consecutive_failures": 0,
-    "success_rate": 0.69,
-    "last_failed": "2026-06-18T20:06:18Z",
+    "total_failures": 5,
+    "consecutive_failures": 1,
+    "success_rate": 0.64,
+    "last_failed": "2026-06-19T17:38:43Z",
     "last_error": "ol_input\":{\"command\":\"cd /home/runner/work/aeon/aeon; LIST_ID=1642770456720683008; cat \\\".xai-cache/list-digest-${LIST_ID}.json\\\" 2>/dev/null | jq -r '.output[] | select(.type == \\\"message\\\") | .conte"
   },
   "vuln-scanner": {
