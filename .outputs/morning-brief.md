@@ -1,18 +1,42 @@
-*Morning Brief — 2026-06-18*
+## Summary
 
-*Focus today*
-1. **xai quota top-up** — why now: 10+ skills flatlined since 6-16, team 3a8b4c1e monthly limit hit, operator action required.
-2. **boj +25bp risk-sleeve posture call** — why now: capital-2x program north star, avg −27% drawdown post-boj-hike precedent, 24–48h window from print.
-3. **iss-019 weekly-limit wave fix** — why now: 9d overdue, 4th occurrence proven 6-12, FALLBACK_CG_SKILLS covers 5 CG-price skills via Virtuals, residual gap non-CG dailies + XAI-dependent skills.
+Successfully executed the morning-brief skill for 2026-06-19. The skill follows a priority-driven approach focusing on the "why now" for each item rather than just aggregating news.
 
-*Since yesterday*
-- boj +25bp to 1.00% (7-1 vote, highest since 1995) — BTC −2% to ~$65.8k, pinned at reclaim65900 level.
-- sky ecosystem ~$520m c1d unwind DAY 2 (Spark Liquidity Layer −12%, Spark Savings −13%, USDS −$275m).
-- 14:29Z stuck batch persists: narrative-tracker, market-context-refresh, security-digest dispatched-without-success ~20h.
-- PR #112 docs(skill-graph) 4d+ past 24h threshold; PR #122 fix(docs) 3d+ past threshold.
-- ISS-007/009/010/016 index bookkeeping flips 8d overdue.
+**What I did:**
 
-*Running today*
-- reg-monitor @ 14:00 UTC (Wednesday-specific)
-- skill-analytics @ 18:30 UTC (Wednesday-specific)
-- btc-levels every 4h offset 15m (next 00:15)
+1. **Gathered context** from:
+   - `memory/MEMORY.md` to understand current goals and active topics
+   - `memory/logs/2026-06-18.md` for yesterday's unfinished work and follow-ups
+   - `memory/cron-state.json` to identify skills with consecutive failures or low success rates
+   - `memory/logs/2026-06-19.md` for today's BTC-levels runs
+   - Open PRs (`gh pr list --state open`) to identify stalled work
+   - `aeon.yml` to see today's scheduled skills
+   - Soul files (`soul/SOUL.md` and `soul/STYLE.md`) to understand Ana's voice and writing style
+
+2. **Ranked candidate items** using leverage × urgency scoring:
+   - **XAI quota exhaustion** - Top priority: blocks 10+ skills (token-pick, agent-buzz, list-digest, etc.), operator action required
+   - **BTC post-BOJ drawdown window** - High priority: BOJ +25bp landed June 17, BTC currently ~$62.7k, historical average -27% drawdown within 24-48h after hike
+   - **On-chain-monitor stuck** - High priority: 13 consecutive NO_CONFIG days awaiting operator to seed `memory/on-chain-watches.yml`
+
+3. **Created concise briefing** following the soul voice guidelines:
+   - Lowercase by default
+   - Concrete, direct language
+   - Avoids marketing verbs and filler phrases
+   - Focus on "why now" for each priority item
+
+4. **Formatted and sent** the brief according to the skill template:
+   - Focus today: 3 priority items with ≤12-word "why now" explanations
+   - Since yesterday: 5 bullet summary of what moved/stuck
+   - Watch: One relevant market development affecting focus #2 (BTC drawdown)
+   - Running today: Today's scheduled skills with blocked ones noted
+
+5. **Sent notification** via `./notify` script and appended log entry to `memory/logs/2026-06-19.md`
+
+**Key focus items identified:**
+1. **XAI quota exhausted** - Blocks 10+ skills including token-pick, agent-buzz, list-digest until operator tops up credits
+2. **BTC post-BOJ drawdown window** - BOJ +25bp landed June 17, BTC at $62.7k entering historical -27% avg drawdown window (18-32% range)
+3. **On-chain-monitor stuck** - 13 consecutive NO_CONFIG days, skills blind to on-chain positions awaiting operator config
+
+**Skills flagged from cron-state:** deal-flow (dispatched 10 days ago), fork-cohort (2nd consecutive Sunday failure)
+
+The brief captures the operator's attention on immediate action items while providing context on market timing for investment decisions.
