@@ -350,4 +350,34 @@ check "gw missing token halts set -e caller" "$GW_REACHED" ""
 GW_CFG_DIR="$(mktemp -d)"; printf 'gateway:\n  provider: usepod\n' > "$GW_CFG_DIR/aeon.yml"
 check "gw reads provider from aeon.yml" "$( cd "$GW_CFG_DIR" && ( export USEPOD_TOKEN=T MODEL=x; unset GATEWAY; . "$GW" >/dev/null 2>&1; printf '%s' "${GATEWAY:-}") )" "usepod"
 
+# --- per-skill usepod_model: extraction regexes + resolution chain ---
+GWP="$(cd "$(dirname "$0")/.." && pwd)/anthropic-gateway.sh"
+PS_DIR="$(mktemp -d)"
+cat > "$PS_DIR/aeon.yml" <<'EOF'
+gateway:
+  provider: usepod
+skills:
+  heavyskill: { enabled: true, schedule: "0 12 * * *", usepod_model: "llama-4" }
+  bothskill: { enabled: true, model: "claude-sonnet-4-6", usepod_model: "llama-4" }
+  plainskill: { enabled: true, model: "claude-sonnet-4-6" }
+  bareskill: { enabled: true }
+EOF
+# These two sed expressions MUST match the ones used in .github/workflows/aeon.yml.
+skill_model()  { grep "^  $1:" "$PS_DIR/aeon.yml" | sed -n 's/.*[ ,{]model: *"\([^"]*\)".*/\1/p'; }
+usepod_model() { grep "^  $1:" "$PS_DIR/aeon.yml" | sed -n 's/.*usepod_model: *"\([^"]*\)".*/\1/p'; }
+resolve() { # skill -> GATEWAY_MODEL
+  local u; u="$(usepod_model "$1")"
+  ( cd "$PS_DIR"; export GATEWAY=usepod USEPOD_TOKEN=T MODEL="$(skill_model "$1")"; \
+    [ -n "$u" ] && export USEPOD_MODEL="$u"; . "$GWP" >/dev/null 2>&1; printf '%s' "$GATEWAY_MODEL" )
+}
+check "usepod_model extracted for heavyskill" "$(usepod_model heavyskill)" "llama-4"
+check "usepod_model empty for plainskill"     "$(usepod_model plainskill)" ""
+check "SKILL_MODEL not fooled by usepod_model" "$(skill_model bothskill)" "claude-sonnet-4-6"
+check "usepod_model on bothskill"              "$(usepod_model bothskill)" "llama-4"
+check "resolve heavyskill -> llama-4"   "$(resolve heavyskill)" "llama-4"
+check "resolve bothskill -> llama-4"    "$(resolve bothskill)" "llama-4"
+check "resolve plainskill -> deepseek"  "$(resolve plainskill)" "deepseek-v3.2"
+check "resolve bareskill -> deepseek"   "$(resolve bareskill)" "deepseek-v3.2"
+check "resolve var-default for plainskill" "$( cd "$PS_DIR"; export GATEWAY=usepod USEPOD_TOKEN=T USEPOD_MODEL=qwen-3.5 MODEL=claude-sonnet-4-6; . "$GWP" >/dev/null 2>&1; printf '%s' "$GATEWAY_MODEL" )" "qwen-3.5"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }

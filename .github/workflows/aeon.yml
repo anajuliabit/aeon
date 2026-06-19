@@ -225,7 +225,7 @@ jobs:
           export SKILL_NAME
           CONFIG_MODEL=$(grep -E '^model:' aeon.yml | sed 's/^model: *//' | tr -d ' ')
           # Check for per-skill model override in aeon.yml (extract quoted value, ignore comments)
-          SKILL_MODEL=$(grep "^  ${SKILL_NAME}:" aeon.yml | sed -n 's/.*model: *"\([^"]*\)".*/\1/p')
+          SKILL_MODEL=$(grep "^  ${SKILL_NAME}:" aeon.yml | sed -n 's/.*[ ,{]model: *"\([^"]*\)".*/\1/p')
           INPUT_MODEL="${{ inputs.model }}"
           if [ -n "$INPUT_MODEL" ] && [ "$INPUT_MODEL" != "(config default)" ]; then
             MODEL="$INPUT_MODEL"
@@ -236,6 +236,12 @@ jobs:
           fi
           echo "Using model: $MODEL"
           echo "SKILL_MODEL=$MODEL" >> "$GITHUB_OUTPUT"
+
+          # Per-skill usepod model override (heavy skills run a faster model to avoid
+          # usepod's 120s origin timeout). Only affects the usepod gateway; direct/bankr
+          # still use the per-skill `model:` (claude-*) above.
+          SKILL_USEPOD_MODEL=$(grep "^  ${SKILL_NAME}:" aeon.yml | sed -n 's/.*usepod_model: *"\([^"]*\)".*/\1/p')
+          [ -n "$SKILL_USEPOD_MODEL" ] && export USEPOD_MODEL="$SKILL_USEPOD_MODEL"
 
           # --- AI Gateway routing (shared resolver; sets ANTHROPIC_BASE_URL + GATEWAY_MODEL) ---
           # MUST use `|| exit 1`: set -e does NOT abort on a sourced script's return,
