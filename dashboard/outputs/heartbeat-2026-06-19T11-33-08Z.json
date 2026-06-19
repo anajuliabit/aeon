@@ -1,0 +1,380 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🔴 HEARTBEAT_DEGRADED",
+        "description": "System health report with critical failures and degraded services"
+      },
+      "children": [
+        "alert_critical",
+        "sep1",
+        "section_p0_failed",
+        "sep2",
+        "section_p0_stuck",
+        "sep3",
+        "section_chronic",
+        "sep4",
+        "section_stalled",
+        "sep5",
+        "section_memory",
+        "sep6",
+        "section_missing"
+      ]
+    },
+    "alert_critical": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 HEARTBEAT_DEGRADED",
+        "message": "Multiple P0 failures. XAI quota exhausted. Deal-flow and fork-cohort dispatches stuck beyond normal intervals.",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_p0_failed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_p0_failed",
+        "list_p0_failed"
+      ]
+    },
+    "h_p0_failed": {
+      "type": "Heading",
+      "props": {
+        "text": "P0 FAILED",
+        "level": "h3"
+      }
+    },
+    "list_p0_failed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "p0_1",
+        "p0_2",
+        "p0_3",
+        "p0_4",
+        "p0_5"
+      ]
+    },
+    "p0_1": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat (just now)",
+        "variant": "body"
+      }
+    },
+    "p0_2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness (~1h)",
+        "variant": "body"
+      }
+    },
+    "p0_3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending (~1h)",
+        "variant": "body"
+      }
+    },
+    "p0_4": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine (~1h)",
+        "variant": "body"
+      }
+    },
+    "p0_5": {
+      "type": "Text",
+      "props": {
+        "text": "chain:investment-advisor (11d)",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_p0_stuck": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_p0_stuck",
+        "list_p0_stuck"
+      ]
+    },
+    "h_p0_stuck": {
+      "type": "Heading",
+      "props": {
+        "text": "P0 STUCK",
+        "level": "h3"
+      }
+    },
+    "list_p0_stuck": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stuck_1",
+        "stuck_2"
+      ]
+    },
+    "stuck_1": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow (10d dispatched)",
+        "variant": "body"
+      }
+    },
+    "stuck_2": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort (4d dispatched)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_chronic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_chronic",
+        "table_chronic"
+      ]
+    },
+    "h_chronic": {
+      "type": "Heading",
+      "props": {
+        "text": "CHRONIC LOW SUCCESS",
+        "level": "h3"
+      }
+    },
+    "table_chronic": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate"
+        ],
+        "rows": [
+          [
+            "reg-monitor",
+            "7%"
+          ],
+          [
+            "skill-analytics",
+            "9%"
+          ],
+          [
+            "security-digest",
+            "24%"
+          ],
+          [
+            "self-improve",
+            "27%"
+          ],
+          [
+            "skill-health",
+            "36%"
+          ],
+          [
+            "goal-tracker",
+            "39%"
+          ],
+          [
+            "search-skill",
+            "40%"
+          ],
+          [
+            "action-converter",
+            "41%"
+          ],
+          [
+            "reflect",
+            "41%"
+          ],
+          [
+            "evening-recap",
+            "47%"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_stalled": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_stalled",
+        "list_stalled"
+      ]
+    },
+    "h_stalled": {
+      "type": "Heading",
+      "props": {
+        "text": "STALLED",
+        "level": "h3"
+      }
+    },
+    "list_stalled": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stalled_1",
+        "stalled_2"
+      ]
+    },
+    "stalled_1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #112 (~4d)",
+        "variant": "body"
+      }
+    },
+    "stalled_2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #122 (~3d)",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_memory",
+        "list_memory"
+      ]
+    },
+    "h_memory": {
+      "type": "Heading",
+      "props": {
+        "text": "MEMORY FLAGS",
+        "level": "h3"
+      }
+    },
+    "list_memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mem_1",
+        "mem_2",
+        "mem_3",
+        "mem_4"
+      ]
+    },
+    "mem_1": {
+      "type": "Alert",
+      "props": {
+        "title": "XAI Quota Exhausted",
+        "message": "10+ skills blocked",
+        "type": "error"
+      }
+    },
+    "mem_2": {
+      "type": "Text",
+      "props": {
+        "text": "14:29Z batch stuck",
+        "variant": "body"
+      }
+    },
+    "mem_3": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow/fork-cohort stuck",
+        "variant": "body"
+      }
+    },
+    "mem_4": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor NO_CONFIG (13d)",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_missing": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_missing",
+        "missing_1"
+      ]
+    },
+    "h_missing": {
+      "type": "Heading",
+      "props": {
+        "text": "MISSING RUNS",
+        "level": "h3"
+      }
+    },
+    "missing_1": {
+      "type": "Alert",
+      "props": {
+        "title": "deal-flow Weekly Interval Exceeded",
+        "message": ">2× interval (18d since last success)",
+        "type": "warning"
+      }
+    }
+  }
+}
