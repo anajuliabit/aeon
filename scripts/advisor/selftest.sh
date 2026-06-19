@@ -379,5 +379,10 @@ check "resolve bothskill -> llama-4"    "$(resolve bothskill)" "llama-4"
 check "resolve plainskill -> deepseek"  "$(resolve plainskill)" "deepseek-v3.2"
 check "resolve bareskill -> deepseek"   "$(resolve bareskill)" "deepseek-v3.2"
 check "resolve var-default for plainskill" "$( cd "$PS_DIR"; export GATEWAY=usepod USEPOD_TOKEN=T USEPOD_MODEL=qwen-3.5 MODEL=claude-sonnet-4-6; . "$GWP" >/dev/null 2>&1; printf '%s' "$GATEWAY_MODEL" )" "qwen-3.5"
+# Drift guard: the sed regexes above are copies of the workflow's — assert the live
+# workflow still contains both, so a future regex edit there can't silently diverge.
+PS_WF="$(cd "$(dirname "$0")/../.." && pwd)/.github/workflows/aeon.yml"
+check "workflow has tightened SKILL_MODEL regex" "$(grep -c 's/.*\[ ,{\]model: \*"' "$PS_WF")" "1"
+check "workflow has usepod_model regex"          "$(grep -c 's/.*usepod_model: \*"' "$PS_WF")" "1"
 
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
