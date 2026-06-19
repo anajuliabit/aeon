@@ -1,0 +1,21 @@
+# memory/on-chain-watches.yml
+# DeFi positions and wallets to monitor
+# Add entries under 'watches:' list
+#
+# Example:
+# watches:
+#   - label: My Wallet
+#     address: "0x1234...abcd"
+#     chain: ethereum
+#     rpc_url: https://eth.llamarpc.com
+#     type: wallet
+#     threshold: 0.1  # ETH — alert on balance changes above this
+#
+#   - label: Uniswap Pool
+#     address: "0xabcd...5678"
+#     chain: ethereum
+#     rpc_url: https://eth.llamarpc.com
+#     type: contract
+
+watches: []
+# No watches configured — skill will skip until operator adds positions
