@@ -1,10 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-06-18*
-
-## About This Repo
-Aeon — autonomous agent on GitHub Actions via Claude Code. Standalone
-skills on cron. Inbound messaging via Telegram. soul/ populated
-2026-05-25 (ana voice).
+*Last consolidated: 2026-06-19*
 
 ## Current Goals
 > **Health-skill directive:** reppo-swarm (orquestra) removed entirely
@@ -12,30 +7,26 @@ skills on cron. Inbound messaging via Telegram. soul/ populated
 > reppo-orchestrator/trading-agent/voter/digest skills, chains, or
 > scripts here, and do NOT file issues about reppo-swarm not running
 > on CI.
-- **CAPITAL-2× PROGRAM (north star): double net worth by 2027-12-31.**
-  See [capital-2x-program.md](topics/capital-2x-program.md). Risk sleeve
-  ≤15-20% net + moonshot sub-sleeve ≤1% for token-picks. BTC hard-level
-  monitor in `skills/btc-levels` (4-hourly). Both armed reclaim levels
-  now SET (reclaim63500 6-11, reclaim65900 6-15 on Hormuz peace deal).
-  Consolidating ~$64.5k post-BOJ hike, awaiting 24-48h drawdown window
-  (historical avg -27% per hike since Mar‑2024).
-- **XAI quota exhausted (ongoing).** Team 3a8b4c1e monthly credit limit
-  hit 6-16 — 10+ XAI-dependent skills blocked (token-pick, agent-buzz,
-  list-digest, refresh-x, remix-tweets, tweet-roundup, narrative-tracker,
-  reply-maker, article, fetch-tweets). Operator action required: top up
-  credits or wait for monthly reset. FALLBACK_CG_SKILLS covers 5 CG-price
-  skills via Virtuals deepseek-v4-flash; XAI path lacks fallback.
-- **14:29Z batch stuck.** narrative-tracker, market-context-refresh,
-  security-digest all dispatched 6-16 without success. Likely GH Actions
-  cron delay, but if not resolved by next heartbeat, fleet outage flag.
-- **deal-flow stuck since 6-08 (10d).** Off status table per chain‑dropped.
-- **fork-cohort stuck since 6-14 (2nd consecutive Sunday weekly fail).**
-  Next try Sun 6-21.
-- **PR #112 stalled** (skill-graph docs auto-gen, opened 6-14 17:41Z,
-  ~4d). Action‑converter loop "merge #112" carried since 6-15.
-- **on-chain-monitor / defi-monitor watches.yml.** *[BLOCKED: awaiting
-  operator to seed `memory/on-chain-watches.yml`.]* **14 consecutive
-  NO_CONFIG days** through 6-19.
+
+### Active Blockers (Operator Action)
+- **XAI quota exhausted** — Team 3a8b4c1e monthly credit limit hit 6-16 → 10+ XAI-dependent skills blocked (token-pick, agent-buzz, list-digest, refresh-x, remix-tweets, tweet-roundup, narrative-tracker, reply-maker, article, fetch-tweets). FALLBACK_CG_SKILLS covers 5 CG-price skills via Virtuals; XAI path has no fallback.
+- **on-chain-monitor / defi-monitor** — 14 consecutive NO_CONFIG days awaiting `memory/on-chain-watches.yml` seed.
+- **deal-flow stuck** since 6-08 (10d).
+- **fork-cohort stuck** since 6-14 (2nd consecutive Sunday weekly fail).
+
+### System Health
+Copyright © 2026. All rights reserved.
+- **Fleet status:** 41 healthy skills, 2 no_data (operator-scorecard, fork-skill-gap), 0 degraded/flapping.
+- **Recent batch:** 14:29Z cluster (narrative-tracker, market-context-refresh, security-digest) dispatched 6-16 without success — likely GH cron lag.
+- **PR backlog:** #112 (skill-graph docs) stalled ~4d, #122 (self-improve fix) <24h.
+- **BTC levels:** Both reclaim levels SET (63500 on 6-11, 65900 on 6-15). Consolidating ~$64.5k post-BOJ hike within -27% historical drawdown window.
+
+## Active Topics
+- [Capital‑2× program](topics/capital-2x-program.md) — north‑star spec with envelope, sub‑sleeves, infra.
+- [Fleet status & infrastructure](topics/fleet.md) — PRs, blockers, open issues, lessons, skill health, weekly‑review history.
+- [Crypto research](topics/crypto.md) — narratives, picks, tracked‑token alerts.
+- [Market context](topics/market-context.md) — refreshed each market‑context‑refresh cycle.
+- [Bitcoin 30‑day snapshot](topics/last30-bitcoin.md) — stale baseline (05‑21).
 
 ## Active Topics
 - [Capital‑2× program](topics/capital-2x-program.md) — north‑star spec
@@ -59,7 +50,20 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 | REPPO   | reppo              | 15%             |             |               |
 | GITLAWB | gitlawb            | 15%             |             |               |
 
-**Last token-alert 2026-06-16 ~12:45 UTC**: REPPO -15.78% TRIPPED
-DOWN-SIDE (first down-side alert since canonical watchlist landed;
-mirror inverse of 6-14's +18.93% up-trip). WELL -1.67%, MAMO -1.16%,
-GITLAWB +9.66%. Detail in [crypto.md](topics/crypto.md).
+## Recent Patterns
+- **Market regime:** Risk-on flip 6-15 (Hormuz peace deal) → post-BOJ cooling 6-17 (BTC $64-65.5k). Narrative tracker consolidated 34→27 narratives.
+- **Token alert trips:** REPPO +18.93% (6-14 up-side), -15.78% (6-16 down-side). GITLAWB -13.48% near-miss (6-17).
+- **Skill execution:** XAI quota blocks most X-dependent skills; 5 CG-price skills use Virtuals fallback. Deal-flow (10d) + fork-cohort (2nd Sun) stuck.
+- **BTC hard-levels:** Both reclaim levels SET; daily close < $60,500 = downtrend continuation alert armed.
+
+## Tracked Tokens
+Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
+
+| Token   | CoinGecko ID       | 24h % Threshold | Recent Activity |
+|---------|--------------------|-----------------|-----------------|
+| WELL    | moonwell-artemis   | 10%             | Stable, -2.88% 6-19 |
+| MAMO    | mamo               | 15%             | Stable, -0.35% 6-19 |
+| REPPO   | reppo              | 15%             | Both-direction trips: +18.93% (6-14), -15.78% (6-16) |
+| GITLAWB | gitlawb            | 15%             | Near-miss -13.48% (6-17), -10.61% 6-19 |
+
+**Daily baseline:** All tokens red 6-19 (WELL -2.88%, MAMO -0.35%, REPPO -8.52%, GITLAWB -10.61%). No triggers.
