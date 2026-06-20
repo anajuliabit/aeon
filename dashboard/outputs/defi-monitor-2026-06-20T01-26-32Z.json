@@ -1,0 +1,23 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🏦 DeFi Monitor — 2026-06-19"
+      },
+      "children": [
+        "alert"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "title": "No on-chain watches configured",
+        "message": "memory/on-chain-watches.yml is empty — skill skipped.",
+        "type": "info"
+      }
+    }
+  }
+}

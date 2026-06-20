@@ -1,0 +1,78 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "period_text",
+        "metrics_row",
+        "separator",
+        "review_info"
+      ]
+    },
+    "period_text": {
+      "type": "Text",
+      "props": {
+        "text": "Last 24h",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "metrics_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "captures_stat",
+        "consecutive_runs_stat"
+      ]
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      },
+      "children": []
+    },
+    "consecutive_runs_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive zero-capture run",
+        "value": "15"
+      },
+      "children": []
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "review_info": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md last reviewed 2026-06-04 (15d)",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

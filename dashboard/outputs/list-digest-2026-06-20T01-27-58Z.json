@@ -1,0 +1,23 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest"
+      },
+      "children": [
+        "date_text"
+      ]
+    },
+    "date_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-19",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
