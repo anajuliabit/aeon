@@ -1,13 +1,16 @@
-## Summary
+**on-chain-monitor** — Status: **ON_CHAIN_NO_CONFIG**
 
-**on-chain-monitor** executed successfully.
+The skill ran successfully. Configuration file `memory/on-chain-watches.yml` is empty (`watches: []`), so no monitors are active. Per the SKILL spec, this is not an error — it's a clean exit awaiting operator configuration.
 
-**Result:** `ON_CHAIN_NO_CONFIG` — The skill read `memory/on-chain-watches.yml`, found it empty (`watches: []`), and exited cleanly without sending a notification. This is the 14th consecutive day with no watches configured.
+**Next step:** To activate on-chain monitoring, seed `memory/on-chain-watches.yml` with watch entries, e.g.:
 
-**What happened:**
-- Read config, state, and recent logs
-- Detected zero watches in the configuration
-- Per SKILL.md, empty config is not an error — logged the status and returned cleanly
-- Appended result to `memory/logs/2026-06-19.md`
+```yaml
+watches:
+  - label: My Wallet
+    address: "0x..."
+    chain: ethereum
+    type: wallet
+    threshold_usd: 1000
+```
 
-**Next step:** Operator needs to populate `memory/on-chain-watches.yml` with blockchain addresses and contracts to monitor in order for this skill to begin tracking on-chain activity.
+Logged and complete.
