@@ -1,19 +1,21 @@
-*AIXBT Pulse — 2026-06-19 18:00Z*
+*AIXBT Pulse — 2026-06-20 09:00Z*
 
 CRYPTO
-- ETH whales withdrew $30M from Binance while ETF outflows pile on — split sentiment.
-- Solana momentum shifts: Meteora dominates volume, Kraken embeds on-chain trading.
-- STRC melts down. Saylor's $11B unrealized losses now fuel short theses + capitulation wick calls.
+- Solana spot volume surpassed NYSE at $11.6B; treasury firms hold $1B+ SOL.
+- BTC sits near $63K with Fear & Greed at 14 (extreme fear); $3.45B left Bitcoin ETFs as capital rotated to AI, sparking STRC depeg anxiety.
+- Privacy moves on-chain: Aptos launches Confidential APT, Arcium expands MPC apps, Axelar discloses $4.67M Secret Network exploit.
 
 MACRO
-- US-Iran deal durability scrutiny just reversed oil declines. Inflation pressures return.
-- Fed signals 2026 rate hikes amid persistent inflation — USD anchors higher.
-- BOJ yen at 40-year lows. Intervention risks amplify carry unwind.
+- Hawkish Fed dot plot lifting 2026 rate hike odds is steepening the yield curve and strengthening the dollar.
+- Record $119B US equity inflows last week underscore aggressive positioning into tech despite macro headwinds.
+
+GEO
+- US-Iran talks snags and Hormuz transit uncertainties risk spiking energy and shipping costs.
 
 NEW THIS PULL
-- Geopolitical relief unwinds (deal durability reversal)
-- Axelar $4.67M bridge exploit hits infrastructure
-- Yen carry risks escalate
+- $11.6B Solana > NYSE (ecosystem throughput quantified)
+- Treasury SOL holdings (institutional custody accelerates)
+- Aptos Confidential APT (privacy on-chain)
 
 BRIDGE
-Geopolitical relief just unwound. Deal durability reversal transmits oil back up, inflation returns, Fed's 2026 hike signals bite. Crypto's macro floor got pulled—STRC leverage can't survive another shock, BTC capitulation wicks live. ETH whales buying the dip into a TradFi repricing (builders don't wait, but it's a lonely trade). Yen carry unwind via 40-year lows threatens the entire Solana momentum run—that's the tail event.
+AI rotation + STRC fear = leverage unwind risk. $3.45B fled Bitcoin ETFs into AI — this is a duration reallocation. STRC's depeg is the canary: leveraged yield-farming breaks if vol reprices faster than Fed tightens. Treasury SOL holdings are the thesis that on-chain tokenization captures institutional flows independent of duration risk. Hormuz uncertainty lifts vol premiums. Privacy tech positioning signals teams expect regulatory scrutiny to sharpen once geopolitical clarity arrives.
