@@ -105,14 +105,14 @@
     "success_rate": 1
   },
   "narrative-tracker": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-19T18:53:20Z",
     "total_runs": 20,
     "total_successes": 11,
     "total_failures": 9,
     "consecutive_failures": 0,
     "success_rate": 0.55,
-    "last_dispatch": "2026-06-19T13:54:24Z",
+    "last_dispatch": "2026-06-20T13:58:12Z",
     "last_quality_score": 4,
     "last_failed": "2026-06-18T19:06:09Z",
     "last_error": "f1cae16\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
@@ -167,8 +167,8 @@
     "last_error": "ce_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{\"deepseek-v3.2\":{\"inputTokens\":4"
   },
   "github-trending": {
-    "last_dispatch": "2026-06-20T13:11:41Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-20T13:58:12Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-19T15:23:01Z",
     "total_runs": 46,
     "total_successes": 25,
@@ -388,14 +388,14 @@
     "last_dispatch": "2026-06-15T09:46:06Z"
   },
   "market-context-refresh": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-06-19T18:24:06Z",
     "total_runs": 53,
     "total_successes": 21,
     "total_failures": 32,
     "consecutive_failures": 1,
     "success_rate": 0.4,
-    "last_dispatch": "2026-06-20T13:11:41Z",
+    "last_dispatch": "2026-06-20T13:58:12Z",
     "last_failed": "2026-06-20T13:12:08Z",
     "last_error": "71b8d6c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -530,8 +530,8 @@
     "last_error": "262d35f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "defi-monitor": {
-    "last_dispatch": "2026-06-20T13:11:41Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-20T13:58:12Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-19T18:47:02Z",
     "total_runs": 28,
     "total_successes": 12,
