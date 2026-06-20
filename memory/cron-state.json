@@ -388,16 +388,16 @@
     "last_dispatch": "2026-06-15T09:46:06Z"
   },
   "market-context-refresh": {
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-19T18:24:06Z",
-    "total_runs": 52,
+    "total_runs": 53,
     "total_successes": 21,
-    "total_failures": 31,
-    "consecutive_failures": 0,
+    "total_failures": 32,
+    "consecutive_failures": 1,
     "success_rate": 0.4,
     "last_dispatch": "2026-06-20T13:11:41Z",
-    "last_failed": "2026-06-19T17:59:49Z",
-    "last_error": "008f0c6\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-06-20T13:12:08Z",
+    "last_error": "71b8d6c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-graph": {
     "last_status": "success",
