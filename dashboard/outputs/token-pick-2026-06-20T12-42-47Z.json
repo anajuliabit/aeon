@@ -1,0 +1,360 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-20"
+      },
+      "children": [
+        "token_header",
+        "sep1",
+        "price_section",
+        "sep2",
+        "score_section",
+        "sep3",
+        "catalyst_section",
+        "sep4",
+        "risk_section",
+        "sep5",
+        "stake_section",
+        "sep6",
+        "exit_section",
+        "sep7",
+        "sources_section",
+        "disclaimer"
+      ]
+    },
+    "token_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "token_name",
+        "signal_badge"
+      ]
+    },
+    "token_name": {
+      "type": "Heading",
+      "props": {
+        "text": "HYPE",
+        "level": "h2"
+      }
+    },
+    "signal_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "price_changes",
+        "market_metrics"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$71.06"
+      }
+    },
+    "price_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "change_24h",
+        "change_7d"
+      ]
+    },
+    "change_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Change",
+        "value": "+6.13%",
+        "trend": "up"
+      }
+    },
+    "change_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "+22.07%",
+        "trend": "up"
+      }
+    },
+    "market_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "mcap_stat",
+        "vol_stat",
+        "vol_ratio_stat"
+      ]
+    },
+    "mcap_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$15.8B"
+      }
+    },
+    "vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$742M"
+      }
+    },
+    "vol_ratio_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol/Mcap Ratio",
+        "value": "0.047"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "score_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "score_heading",
+        "score_stat",
+        "score_breakdown"
+      ]
+    },
+    "score_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Score Breakdown",
+        "level": "h3"
+      }
+    },
+    "score_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Signal Score",
+        "value": "8/10"
+      }
+    },
+    "score_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "trending+2, 24h+1d+7d+2, >5% both+2, outperforms BTC/ETH+2"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "catalyst_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "catalyst_heading",
+        "catalyst_text"
+      ]
+    },
+    "catalyst_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      }
+    },
+    "catalyst_text": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid ecosystem momentum in risk-on regime; strong 7d relative strength vs BTC/ETH after BOJ dovish tilt shift (6-17)."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "risk_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "risk_heading",
+        "risk_text"
+      ]
+    },
+    "risk_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "risk_text": {
+      "type": "Text",
+      "props": {
+        "text": "Momentum exhaustion if macro swings risk-off; position reversal on break of 7d support $62."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stake_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stake_heading",
+        "stake_text"
+      ]
+    },
+    "stake_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake",
+        "level": "h3"
+      }
+    },
+    "stake_text": {
+      "type": "Text",
+      "props": {
+        "text": "≤0.5% of net worth (HIGH conviction) — moonshot sleeve, 1% total cap"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "exit_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "exit_heading",
+        "exit_targets"
+      ]
+    },
+    "exit_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit Strategy",
+        "level": "h3"
+      }
+    },
+    "exit_targets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "exit_target",
+        "exit_invalidate",
+        "exit_time"
+      ]
+    },
+    "exit_target": {
+      "type": "Text",
+      "props": {
+        "text": "Target: $85.00"
+      }
+    },
+    "exit_invalidate": {
+      "type": "Text",
+      "props": {
+        "text": "Invalidate: $62.00"
+      }
+    },
+    "exit_time": {
+      "type": "Text",
+      "props": {
+        "text": "Time-stop: 14d"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_list"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Data Sources",
+        "level": "h3"
+      }
+    },
+    "sources_list": {
+      "type": "Text",
+      "props": {
+        "text": "cg=ok, dex=absent, poly=stale, x=ok",
+        "variant": "caption"
+      }
+    },
+    "disclaimer": {
+      "type": "Alert",
+      "props": {
+        "message": "Pattern-matching only, not financial advice",
+        "type": "info"
+      }
+    }
+  }
+}
