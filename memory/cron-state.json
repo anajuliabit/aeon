@@ -168,15 +168,15 @@
   },
   "github-trending": {
     "last_dispatch": "2026-06-20T12:35:33Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-19T15:23:01Z",
-    "total_runs": 44,
+    "total_runs": 45,
     "total_successes": 25,
-    "total_failures": 19,
-    "consecutive_failures": 4,
-    "success_rate": 0.57,
-    "last_failed": "2026-06-20T12:23:52Z",
-    "last_error": "tTokens\":383,\"outputTokens\":9621,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.24243999999999993,\"contextWindow\":200000,\"maxOutputTokens\":32000}},\"permission_"
+    "total_failures": 20,
+    "consecutive_failures": 5,
+    "success_rate": 0.56,
+    "last_failed": "2026-06-20T12:56:14Z",
+    "last_error": "/turso DeusData/codebase-memory-mcp; do gh api \\\"repos/$repo\\\" --jq '.created_at' 2>&1 | head -1; done\",\"description\":\"Get creation dates for first 5 repos\"}},{\"tool_name\":\"Bash\",\"tool_use_id\":\"call_0"
   },
   "token-alert": {
     "last_dispatch": "2026-06-20T12:35:33Z",
