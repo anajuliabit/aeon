@@ -167,8 +167,8 @@
     "last_error": "ce_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{\"deepseek-v3.2\":{\"inputTokens\":4"
   },
   "github-trending": {
-    "last_dispatch": "2026-06-20T11:08:10Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-20T11:53:32Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-19T15:23:01Z",
     "total_runs": 43,
     "total_successes": 25,
