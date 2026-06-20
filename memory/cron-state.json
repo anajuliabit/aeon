@@ -203,14 +203,14 @@
     "last_dispatch": "2026-06-20T14:53:22Z",
     "last_status": "failed",
     "last_success": "2026-06-19T18:53:03Z",
-    "total_runs": 72,
+    "total_runs": 73,
     "total_successes": 24,
-    "total_failures": 48,
-    "consecutive_failures": 10,
+    "total_failures": 49,
+    "consecutive_failures": 11,
     "success_rate": 0.33,
     "last_quality_score": 4,
-    "last_failed": "2026-06-20T19:42:52Z",
-    "last_error": "c204c3c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-06-20T20:14:18Z",
+    "last_error": "10309e9\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "goal-tracker": {
     "last_dispatch": "2026-06-19T18:33:14Z",
