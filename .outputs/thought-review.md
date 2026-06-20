@@ -1,1 +1,1 @@
-thought review · last 24h · 0 captures · 15th consecutive zero-capture run. priorities.md last reviewed 2026-06-04 (15d)
+🧭 thought review · last 24h · 0 captures, nothing to surface.
