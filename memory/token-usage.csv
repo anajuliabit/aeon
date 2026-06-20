@@ -462,4 +462,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-19,thought-review,claude-opus-4-7,0,11065,0,0
 2026-06-20,btc-levels,claude-sonnet-4-6,0,5032,0,0
 2026-06-20,btc-levels,claude-sonnet-4-6,0,9778,0,0
-2026-06-20,thought-review,claude-opus-4-7,0,7366,0,0
+2026-06-20,daily-routine,claude-opus-4-7,0,10959,0,0
