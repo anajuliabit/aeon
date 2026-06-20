@@ -1,59 +1,45 @@
-I've executed the `fleet-control` skill in Health Check Mode (default). Here's what happened:
+I've executed the fleet-control skill successfully. Since there are no managed instances registered (the `instances.json` file is empty: `{"instances": []}`), the skill completed with:
 
-## Execution Summary
+**Status**: FLEET_EMPTY - No managed instances to monitor
 
-1. **Pre-flight checks**:
-   - ✅ GitHub CLI authentication verified (`gh auth status`)
-   - ✅ API rate limit sufficient (4982 remaining, well above 50 threshold)
+**What happened:**
+1. ✅ GitHub authentication verified
+2. ✅ API rate limit checked (4987 remaining, well above 50 threshold)
+3. ✅ Registry loaded - empty
+4. ✅ State file created/checked (`memory/state/fleet-control-state.json`)
+5. ✅ Log entry added to `memory/logs/2026-06-20.md`
+6. ✅ No notification sent (as per spec: empty registry stops silently)
 
-2. **Registry check**:
-   - Loaded `memory/instances.json` - found empty array (`{"instances": []}`)
-   - No managed Aeon instances in the registry
-
-3. **Health Check Mode**:
-   - No instances to check, skipped parallel API calls
-   - Classification thresholds not applicable
-
-4. **Logging**:
-   - Added entry to `memory/logs/2026-06-19.md` with verdict `FLEET_EMPTY`
-   - Logged counts: total=0, healthy=0, warning=0, degraded=0, stale=0, pending=0, unreachable=0, archived=0
-   - No deltas detected (no instances to compare)
-
-5. **Notification**:
-   - As per spec: **No notification sent** when registry is empty
-   - Silent no-op prevents operator spam for empty fleet
-
-## Next Actions
-
-To use fleet-control effectively, you need to register managed Aeon instances in `memory/instances.json`. The file currently contains an empty array:
-
-```json
-{"instances": []}
+**Log entry added:**
+```
+## fleet-control (health check)
+- Verdict: FLEET_EMPTY: no managed instances
+- Sizes: total=0, healthy=0, warning=0, degraded=0, stale=0, pending=0, unreachable=0, archived=0
+- Deltas: none
+- Sources: gh=ok, rate_remaining=4987
 ```
 
-Add instances in the format:
+**Next steps to use fleet control:**
+To start monitoring Aeon instances, populate `memory/instances.json` with repository entries like:
 ```json
 {
   "instances": [
     {
-      "name": "instance-name",
-      "repo": "owner/repo",
-      "purpose": "description",
-      "parent": "parent-repo",
+      "name": "your-instance-name",
+      "repo": "owner/repository-name",
+      "purpose": "brief description",
       "created": "YYYY-MM-DD",
-      "skills_enabled": ["skill1", "skill2"],
-      "archived": false
+      "skills_enabled": ["skill1", "skill2"]
     }
   ]
 }
 ```
 
-Once instances are added, the skill will:
-- Check each instance's repository metadata
-- Monitor workflow runs from the last 24 hours  
-- Fetch cron-state from child instances
-- Classify health status (healthy/warning/degraded/stale/pending/unreachable)
-- Calculate deltas from previous state
-- Send notifications when changes occur or for daily rollups
+Once instances are added, the fleet control system will:
+- Monitor health every 6 hours (09:00 and 15:00 UTC)
+- Send notifications when status changes
+- Provide daily rollups
+- Enable skill dispatch capability
+- Classify instances as: healthy, warning, degraded, stale, pending_secrets, unreachable, or archived
 
-The skill is scheduled to run at 9:00 and 15:00 UTC daily via cron.
+Task #1 is now completed. The system is ready and waiting for instance data to begin active monitoring.
