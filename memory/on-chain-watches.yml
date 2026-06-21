@@ -1,21 +1,43 @@
 # memory/on-chain-watches.yml
-# DeFi positions and wallets to monitor
-# Add entries under 'watches:' list
+# DeFi positions and wallets to monitor.
+# Read by skills: on-chain-monitor (wallet/contract transfers ≥ threshold_usd)
+#   and defi-monitor (pool/position contract state).
+# chain: ethereum | base | arbitrum | optimism | polygon
+# type:  wallet | contract | pool | position
 #
-# Example:
-# watches:
-#   - label: My Wallet
-#     address: "0x1234...abcd"
-#     chain: ethereum
-#     rpc_url: https://eth.llamarpc.com
-#     type: wallet
-#     threshold: 0.1  # ETH — alert on balance changes above this
-#
-#   - label: Uniswap Pool
-#     address: "0xabcd...5678"
-#     chain: ethereum
-#     rpc_url: https://eth.llamarpc.com
-#     type: contract
+# Seeded 2026-06-21 with the operator's 5 tracked wallets (public addresses,
+# from investiments/wallets.ts) on Base — the primary DeFi chain (Morpho cbBTC
+# leverage, REPPO, MAMO). Refine chains/thresholds per wallet, and add DeFi
+# pool/position CONTRACT addresses (type: pool) for defi-monitor's state reads
+# once their exact Morpho market/vault addresses are confirmed on-chain.
 
-watches: []
-# No watches configured — skill will skip until operator adds positions
+watches:
+  - label: Wallet 1 (primary)
+    address: "0x98e5f932a264bce0a37f3d87accaab5f5bf7c0a9"
+    chain: base
+    type: wallet
+    threshold_usd: 1000      # alert on transfers ≥ $1k
+
+  - label: Wallet 2
+    address: "0xf595346efb499f35b390f324d1655b4cd9751d9b"
+    chain: base
+    type: wallet
+    threshold_usd: 1000
+
+  - label: Wallet 3
+    address: "0x0f2570ab0638621cd97071fcc9de4a84787531b1"
+    chain: base
+    type: wallet
+    threshold_usd: 1000
+
+  - label: Wallet 4
+    address: "0xa958f3856b434445c1fcf54766d9431579e2c454"
+    chain: base
+    type: wallet
+    threshold_usd: 1000
+
+  - label: Wallet 5
+    address: "0x3e6385a81386ccf65674c791757b44601209d931"
+    chain: base
+    type: wallet
+    threshold_usd: 1000
