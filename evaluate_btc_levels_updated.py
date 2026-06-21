@@ -156,7 +156,7 @@ else:
 # Append to daily log
 log_date = datetime.utcnow().strftime("%Y-%m-%d")
 log_file = f"memory/logs/{log_date}.md"
-log_entry = f"- BTC-levels: spot ${current_spot:,.0f}k, close ${prev_close_price:,.0f}k, alerts: {', '.join(alerts) if alerts else 'none'} ({datetime.utcnow().isoformat()}Z)\n"
+log_entry = f"BTC-levels: spot ${current_spot:,.2f}k, close ${prev_close_price:,.2f}k, alerts: {', '.join(alerts) if alerts else 'none'} ({datetime.utcnow().isoformat()}Z)\n"
 
 try:
     with open(log_file, "a") as f:

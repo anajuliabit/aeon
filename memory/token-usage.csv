@@ -468,4 +468,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-20,token-movers,claude-opus-4-7,10,7859,0,80702
 2026-06-21,on-chain-monitor,claude-opus-4-7,0,1007,0,0
 2026-06-21,vuln-scanner,claude-opus-4-7,0,15813,0,0
-2026-06-21,goal-tracker,claude-opus-4-7,0,3848,0,0
+2026-06-21,btc-levels,claude-sonnet-4-6,0,8040,0,0
