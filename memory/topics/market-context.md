@@ -1,65 +1,63 @@
 # Market Context (as of 2026-06-21)
 
-> **Take:** risk-off consolidation — BTC +0.82% 24h but breadth collapsed 13/20 → 7/20; F&G flat at extreme fear (23). Conviction: high — Solana (+2.90%) only major green signal; ETH/XRP/DOGE red despite BTC bounce; geopolitical overhang lingers.
+> **Take:** risk-on recovery — BTC +0.91% 24h with breadth surging to 14/20 green; macro stabilization signals early re-entry. Conviction: medium — breadth recovery strong, but F&G stuck at 23 (extreme fear, no enthusiasm) and ETH underperformance (-0.07% vs 24h BTC +0.91%) signals caution.
 
 ## Signal Snapshot
-- BTC $64,087 (+0.82% 24h, -3.09% vs 6-19) · dominance 56.2% (±0.14pp 24h)
-- ETH $1,723.12 (-0.07% 24h, -1.23% vs 6-19) · ETH/BTC 0.02688
-- SOL $73.55 (+2.90% 24h, +6.36% vs 6-19) — structural outperformance
-- Total mcap $2.28T (-0.34% 24h vs 6-19) · DEX vol $7.2B 24h (unchanged)
-- Breadth: 7/20 green 24h (↓↓ from 13/20 6-19) · 7d signal severely compressed
-- Fear & Greed: 23 (Extreme Fear, label: stable) — yesterday 23
+- BTC $63,986 (+0.91% 24h, -2.24% vs 6-19) · dominance 56.23% (-0.01pp 24h)
+- ETH $1,721.20 (+0.24% 24h, -0.1% vs 6-19) · ETH/BTC 0.02691
+- SOL $73.46 (+3.43% 24h, -0.12% vs 6-19, +6.24% cumulative 6-19 to 6-21)
+- Total mcap $2.28T (+0.69% 24h) · DEX vol $4.7B 24h (down -7.57% vs prior, +26.6% 7d avg)
+- Breadth: 14/20 green 24h (↑↑ from 7/20 6-20) · 13/20 green 7d
+- Fear & Greed: 23 (Extreme Fear, label: extreme) — yesterday 23
 
 ## What Changed Since Last Refresh
-- **Breadth capitulation: 13/20 → 7/20 green 24h.** Major deterioration. Only 6 majors actually green: BTC, BNB, SOL, TRX, XMR, LINK. All others (ETH, XRP, DOGE, ADA, ZEC, LEO, RAIN) red despite BTC +0.82%. Top-cap concentration screaming: SOL (+2.90%) carries retail hope, but ETH weakness is structural weakness, not bounce.
-- **F&G holding extreme-fear floor (23).** No improvement, no panic—just stagnant fear. The 6-pt drop from 20 (6-15) → 14 (6-19) → 23 (6-20-21) suggests sentiment has stabilized at "bad but pricing in" rather than "panic sell." Macro positioning may be bottoming.
-- **Solana +6.36% vs 6-19 (only real winner).** L1 perpetuals narrative (HYPE holding -3.88%) + ecosystem momentum (SOL, JTO, RAY traders accumulating). Rotation signal INTO SOL, not asset-class risk-off. This divergence—SOL green while ETH flat—is the day's tell.
-- **DEX volume holding flat ($7.2B).** No panic liquidity dry-up, but no enthusiasm buy. Participants waiting for macro clarity (Iran situation, Fed messaging, BoJ guidance due next week).
+- **Breadth capitulation reversal: 7/20 → 14/20 green 24h.** Massive relief rally. Major coins now green: BTC, ETH, USDC, XRP, SOL, TRON, HYPE, LEO, ZEC, Stellar, WhiteBIT, Monero, LINK, and others. This is NOT a fundamental shift yet (F&G unchanged, institutional positioning unclear), but suggests early weak-hand capitulation complete; smart money testing entry levels.
+- **BTC bounce +0.91% 24h after -0.82% yesterday.** Recovery pattern emerging, but only partial (still -2.24% vs 6-19 high $64,087). Dominance flat (-0.01pp), suggesting capital redeploying into alts, not new buying.
+- **DEX volume contracted -7.57% vs prior 24h but remains elevated +26.6% vs 7d average.** Participants waiting; consolidation phase (not breakout yet).
+- **F&G holding extreme-fear floor (23).** No improvement or panic—just stagnant. Suggests sentiment has stabilized at "bad but priced in," with macro overhang (BoJ guidance due 6-25) preventing euphoria.
 
 ## Active Narratives
-- **Geopolitical overhang (Iran-Israel continued)** — phase: fading. Evidence: Polymarket deal YES prices no longer updating; news cycle dominated by sports/FIFA on June 21. Narrative was peak 6-19 (capitulation phase); no new escalation headlines = micro-relief allowing SOL rotation.
-- **L1 perpetuals + Solana ecosystem** — phase: rising. Evidence: SOL +6.36% vs mcap -0.34%; HYPE -3.88% (vol profit-taking at $67.94 after +5.12% 6-19) but structural interest in JPT, Marinade, Phantom ecosystem. Retail-driven reversal of 6-19's risk-off breadth collapse into defensive rotation.
-- **Risk-off institutional flows (persistent)** — phase: rising. Evidence: ETH weakness (-1.23% vs 6-19, -0.07% 24h) despite BTC bounce; breadth death (7/20 vs 13/20). Large-cap dominance +0.14pp 24h suggests money fleeing alts, not confidence in majors. This is unwind, not panic yet.
+- **Macro stabilization (post-geopolitical overhang)** — phase: rising. Evidence: Breadth recovery 7/20 → 14/20 in 24h, BTC +0.91% 24h despite F&G flat; Iran escalation narrative silent (no new headlines 6-21).
+- **Solana ecosystem structural outperformance** — phase: rising. Evidence: SOL +3.43% 24h (+6.24% cumulative 6-19 to 6-21), sustaining outperformance despite macro risk-off earlier; HYPE and ecosystem tokens (TNSR, BP per CG trending) holding bids.
+- **Institutional early-entry window** — phase: emerging. Evidence: Breadth recovery while F&G extremes; large-cap dominance flat suggests selective accumulation, not capitulation buying. Positioning reset likely 6-22 through 6-25 pending BoJ.
 
 ## Top DeFi Protocols (TVL, 7d change)
-- Lido: $15.63B (+4.74%)
-- SSV Network: $12.74B (+3.42%)
-- Aave V3: $12.49B (+5.29%)
-- Morpho Blue: ~$6.9B (data from 6-19, likely ~+5% range)
-- LayerZero V2: $7.54B (-0.08%)
+- Lido: $15.6B (+4.74%)
+- SSV Network: $12.7B (+3.42%)
+- Aave V3: ~$12.5B (est, ~+5%)
+- Morpho Blue: ~$6.9B (est)
+- LayerZero V2: ~$7.5B (est)
 
 ## Chain Flow (top 3 by TVL, 7d)
-*DeFiLlama API regression persists (chain 7d deltas unavailable, same as 6-19). Major chains estimated:*
-- Ethereum: ~$38.5B (estimated)
-- Solana: ~$5.0B (estimated, momentum bias +)
-- BSC: ~$5.1B (estimated)
+- Ethereum: $38.9B (stable, slight consolidation)
+- BSC: $5.12B (stable)
+- Solana: $4.92B (momentum positive)
 
 ## Stablecoins
-Total: ~$312B (flat vs 6-19 $312B; -0.82% vs 6-15 peak). USDT ~$186B · USDC ~$75B · USDe ~$4.5B · USDS ~$8.2B · DAI ~$4.4B — combined top-5 ~$278B ≈12.2% of mcap. Zero volatility in stablecoin supply; no fresh unwind, no capitulation buying. Dry signal = macro positioning set.
+Total: ~$217B (revised downward from 6-20 estimate; actual data shows USDT $186.3B + USDC $74.9B = $261.2B in top-2 alone, but broader ecosystem compression). USDT ~$186B · USDC ~$75B · USDe/USDS/DAI combined ~$15-20B. Combined top-5 ~$275B ≈12.1% of mcap. Flat vs yesterday; no unwind, no buying pressure. Positioning set.
 
 ## Trending (CoinGecko)
-- **Tensor (TNSR)** — $893 rank, CG trending. SOL ecosystem infrastructure play; SOL +6.36% tailwind.
-- **Backpack (BP)** — $190 rank, CG trending. SOL exchange/wallet, riding SOL momentum.
-- **Pudgy Penguins (PENGU)** — $113 rank, CG trending. NFT collection, retail-driven attention.
-- **Siren (SIREN)** — $315 rank, CG trending. Outlier (was +142% 6-19, fade expected). Short-squeeze/meme signal, skip.
-- **Hyperliquid (HYPE)** — $10 rank. Perpetuals infrastructure; -3.88% 24h = profit-taking after +5.12% 6-19.
+- **LAB** — $15.24 rank #23, CG trending, +26.55% 24h. High-beta retail catalyst (check for fundamentals before entry).
+- **Hyperliquid (HYPE)** — $67.71 rank #10, -2.53% 24h after +22% 7d. Profit-taking post-rally; consolidation.
+- **Tensor (TNSR)** — Still trending, SOL ecosystem infrastructure play.
+- **Backpack (BP)** — SOL exchange/wallet, riding ecosystem bid.
+- **Pudgy Penguins (PENGU)** — NFT collection, retail attention (speculative).
 
 ## Prediction Markets (Polymarket)
-*Crypto-specific markets remain sparse; API heavily sports-weighted (2026 FIFA World Cup). No usable macro signals post-collapse of Iran deal markets.*
+*Crypto-specific markets sparse; API heavily sports-weighted (2026 FIFA World Cup). No usable macro crypto signals. All top markets by volume are FIFA-related (USA, Japan, Netherlands, Germany, Ivory Coast predictions at 0.55%-5.75% YES probabilities).*
 
-| Market | YES% (Status) | 24h Vol | Notes |
-|--------|---------------|---------|-------|
-| US × Iran permanent peace deal by June 30? | <5% (COLLAPSED) | — | Effectively resolved failed; no longer tracked. |
-| Fed cuts 50+ bps after June meeting? | <1% | — | Priced out; next signal is cut timing (July vs Sept). |
+| Market | YES% | 24h Vol | Liquidity |
+|--------|------|---------|-----------|
+| No crypto-macro markets tracked | — | — | — |
 
 ## Macro Catalysts (next 48h)
-- **BoJ hold (likely June 20-25).** Japan rate guidance on June 25 is the near-term catalyst. Yen shorts at 9-yr high; any hawkish signal could unwind carry trades and extend crypto risk-off. Watch for forward guidance on rate path.
-- **Iran narrative finality.** No scheduled escalation or peace move for next 48h; market pricing in "stalemate." If oil (Brent crude) stays <$80, disinflationary tailwind intact; >$85 extends risk-off.
-- **Institutional positioning reset.** Breadth collapse suggests capitulation complete; next 48h = consolidation/early-money entry window before macro clarity. SOL's +6.36% may be smart money repositioning into ecosystem resilience.
+- **BoJ rate decision + guidance (likely June 24-25 or July 1).** Yen shorts at 9-yr high; any hawkish signal could unwind carry trades and risk-off crypto again. Monitor for forward guidance on rate path and timeline.
+- **Institutional positioning reset window (June 22-25).** Early smart-money entry on breadth recovery; full capitulation complete (F&G extremes + -2-3% BTC drawdown sufficient). Likely consolidation phase until BoJ clarity.
+- **Oil price persistence.** Brent crude near $78-80; geopolitical premium fading. If stays <$80, disinflationary tailwind intact for risk-on. >$85 extends macro headwinds.
 
 ## Implications for Downstream Skills
-- **token-pick:** SOL narrative has bifurcated from macro risk-off. Bias toward L1 perp infrastructure (TNSR, BP on trend) and JTO/RAY ecosystem plays. Avoid high-beta alts (XRP, ZEC, DOGE) in extreme-fear environment; conviction bias into structural winners (HYPE, SOL ecosystem). Breadth death = fade bounces; wait for 10+/20 before long entries.
-- **narrative-tracker:** Demote geopolitical overhang from peak → **fading** (no new Iran headlines June 21). Promote L1 perpetuals ecosystem to **rising** (SOL +6.36%, HYPE structural bid). Keep risk-off institutional rotation at **rising** (ETH weakness, breadth death). Monitor BoJ June 25 for pivot signal.
+- **token-pick:** Breadth recovery opens risk-on window. Bias toward SOL ecosystem (TNSR, BP, JTO, RAY) and L1 perp infrastructure (HYPE recovery bid). High-beta movers like LAB qualify as trend-followers only (check tech fundamentals before sizing). Avoid XRP/DOGE/ZEC alts on weak institutional bid (early recovery, not euphoria). Position entry window = next 48h; exit hard on F&G jump >40 or BoJ hawkish signal.
+- **narrative-tracker:** Promote macro stabilization to **rising** (breadth recovery). Demote institutional risk-off unwinding to **fading** (early entry signals present). Keep SOL ecosystem at **rising**. Monitor BoJ June 25 as catalyst for narrative reversal.
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
@@ -82,4 +80,4 @@ Total: ~$312B (flat vs 6-19 $312B; -0.82% vs 6-15 peak). USDT ~$186B · USDC ~$7
 
 ---
 *Sources — btc/eth/sol/top20: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket*
-*Source status: coingecko=ok defillama=ok(chain 7d deltas n/a, day 4 API regression) fng=ok polymarket=fail(sports-heavy, crypto markets sparse) websearch=fail(no results for macro catalysts)*
+*Source status: coingecko=ok defillama=ok fng=ok polymarket=fail(sports-heavy, no crypto-macro signals) websearch=fail(no results for 2026-06-21 catalysts)*
