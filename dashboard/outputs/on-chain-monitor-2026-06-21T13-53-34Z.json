@@ -1,0 +1,107 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "On-Chain Monitor",
+        "description": "2026-06-21"
+      },
+      "children": [
+        "alert_api_blocked",
+        "separator_1",
+        "stats_section",
+        "separator_2",
+        "solution_section",
+        "log_link"
+      ]
+    },
+    "alert_api_blocked": {
+      "type": "Alert",
+      "props": {
+        "title": "API Blocked",
+        "message": "Etherscan v2 free tier doesn't support Base transfers",
+        "type": "error"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_wallets",
+        "stat_events"
+      ]
+    },
+    "stat_wallets": {
+      "type": "Stat",
+      "props": {
+        "label": "Wallets Configured",
+        "value": "5"
+      },
+      "children": []
+    },
+    "stat_events": {
+      "type": "Stat",
+      "props": {
+        "label": "Events This Run",
+        "value": "0",
+        "delta": "API failure"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "solution_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "solution_heading",
+        "solution_text"
+      ]
+    },
+    "solution_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "solution_text": {
+      "type": "Text",
+      "props": {
+        "text": "Set ALCHEMY_API_KEY or ETHERSCAN_API_KEY environment variables to proceed.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "log_link": {
+      "type": "Link",
+      "props": {
+        "label": "View Log (memory/logs/2026-06-21.md)",
+        "href": "memory/logs/2026-06-21.md"
+      },
+      "children": []
+    }
+  }
+}
