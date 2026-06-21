@@ -1,32 +1,15 @@
-The **fleet-control** skill executed in Health Check Mode but found an empty instance registry (`memory/instances.json`). According to the skill specification, this is a normal state — the registry hasn’t been populated with any managed Aeon instances yet.
+## Summary
 
-### What happened
-- Verified `gh` authentication ✅ (`github.com`, `anajuliabit`, scopes: 'repo', 'workflow')
-- Checked GitHub API rate limit ✅ (4,524 remaining)
-- Loaded registry: `{"instances": []}`
-- Loaded prior state: `memory/state/fleet-control-state.json` (empty)
-- No active instances to monitor or classify
-- Logged **FLEET_EMPTY** to `memory/logs/2026-06-21.md`
-- No notification sent (as per spec when registry is empty)
+Executed `skills/fleet-control/SKILL.md` in Health Check Mode (var empty).
 
-### Next steps
-The fleet-control skill is ready to monitor instances once they are registered. To add an instance:
+**Pre-flight passed:**
+- `gh auth status`: ok (logged in as anajuliabit, token has repo+workflow scopes)
+- Rate limit: 4996/5000 remaining
+- Registry loaded: `memory/instances.json` → `{"instances": []}`
 
-1. Edit `memory/instances.json` with the format:
-```json
-{
-  "instances": [
-    {
-      "name": "example-name",
-      "repo": "owner/repo",
-      "purpose": "optional description",
-      "created": "2025-06-21",
-      "skills_enabled": ["skill1", "skill2"]
-    }
-  ]
-}
-```
+**Outcome:** `FLEET_EMPTY` — the registry has zero managed instances, so per the skill's explicit rule the run logs and stops **silently** (no notification). State file at `memory/state/fleet-control-state.json` is already in the empty-default shape; nothing to update.
 
-2. The next scheduled run (daily at 09:00 and 15:00 UTC) will pick up the new instance, classify its health, and begin tracking changes.
+**Files modified:**
+- `memory/logs/2026-06-21.md` — appended `## fleet-control (health check) — 15:00 UTC` entry with verdict `FLEET_EMPTY`.
 
-No notification was sent because the registry is empty — this is intentional to avoid spam when no instances exist.
+**Follow-up:** Same as prior runs — fleet remains empty until the operator registers a child instance in `memory/instances.json`.
