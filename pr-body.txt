@@ -1,0 +1,17 @@
+## Problem
+Article skill has been failing since 2026-05-21 with a 50% success rate (cron-state.json). The sandbox in GitHub Actions often blocks outbound WebFetch/WebSearch calls, causing the skill to fail when it can't access web sources.
+
+## Fix
+1. Added robust fallback research approach to the skill instructions:
+   - Check `.article-cache/` directory for pre-fetched content from `scripts/prefetch-article.sh`
+   - Use `memory/topics/` files as alternative sources when web research is blocked
+   - Use recent logs/articles as fallback topics if completely blocked
+2. Documented exit codes for better monitoring: ARTICLE_OK, ARTICLE_CACHE, ARTICLE_NO_SOURCES
+3. Expanded sandbox note with specific fallback guidance following CLAUDE.md patterns
+
+## Evidence
+- cron-state.json shows article skill: last success 2026-05-21, last failure 2026-05-21T12:29:08Z, success rate 0.5
+- Skill has consecutive_failures: 0 but hasn't run successfully in a month
+- Similar sandbox issues documented in CLAUDE.md for other skills
+
+This minimal change addresses the highest-impact, smallest-effort fix per self-improve guidelines.
