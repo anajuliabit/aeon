@@ -1,0 +1,183 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Freshness — 2026-06-21"
+      },
+      "children": [
+        "alert-main",
+        "sep1",
+        "heading-worst",
+        "issue-details",
+        "sep2",
+        "timing-stack",
+        "sep3",
+        "action-stack"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "⚠️ FRESHNESS_WARN — 1 of 8 deps flagged across 1 of 44 enabled consumers"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "heading-worst": {
+      "type": "Heading",
+      "props": {
+        "text": "Worst",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "issue-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-consumer",
+        "badges-stack",
+        "stat-age"
+      ]
+    },
+    "text-consumer": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard ← articles/skill-analytics-*.md"
+      },
+      "children": []
+    },
+    "badges-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-class",
+        "badge-severity"
+      ]
+    },
+    "badge-class": {
+      "type": "Badge",
+      "props": {
+        "text": "articles/weekly"
+      },
+      "children": []
+    },
+    "badge-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "WARN",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "stat-age": {
+      "type": "Stat",
+      "props": {
+        "label": "Age",
+        "value": "264h / 11d old"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "timing-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-lastran",
+        "text-expected",
+        "text-nextwindow",
+        "text-conflict"
+      ]
+    },
+    "text-lastran": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics last ran 2026-06-10 (Wednesday)."
+      },
+      "children": []
+    },
+    "text-expected": {
+      "type": "Text",
+      "props": {
+        "text": "Expected 2026-06-17 run produced no article."
+      },
+      "children": []
+    },
+    "text-nextwindow": {
+      "type": "Text",
+      "props": {
+        "text": "Next window: 2026-06-24 (Wednesday)."
+      },
+      "children": []
+    },
+    "text-conflict": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard runs Monday 2026-06-22 — will read an 12d-old analytics file."
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "action-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-action",
+        "link-action",
+        "link-full"
+      ]
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "link-action": {
+      "type": "Link",
+      "props": {
+        "label": "./scripts/skill-runs --skill skill-analytics --hours 168",
+        "href": "file://./scripts/skill-runs"
+      },
+      "children": []
+    },
+    "link-full": {
+      "type": "Link",
+      "props": {
+        "label": "Full: articles/skill-freshness-2026-06-21.md",
+        "href": "file://articles/skill-freshness-2026-06-21.md"
+      },
+      "children": []
+    }
+  }
+}
