@@ -240,13 +240,13 @@
     "last_dispatch": "2026-06-19T18:33:14Z",
     "last_status": "failed",
     "last_success": "2026-06-19T18:46:55Z",
-    "total_runs": 71,
+    "total_runs": 72,
     "total_successes": 24,
-    "total_failures": 47,
-    "consecutive_failures": 14,
-    "success_rate": 0.34,
-    "last_failed": "2026-06-21T00:20:33Z",
-    "last_error": "cf99788\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "total_failures": 48,
+    "consecutive_failures": 15,
+    "success_rate": 0.33,
+    "last_failed": "2026-06-21T01:35:32Z",
+    "last_error": "b4518ff\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "action-converter": {
     "last_dispatch": "2026-06-19T18:33:14Z",
