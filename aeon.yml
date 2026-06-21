@@ -306,11 +306,11 @@ chains: {}   # none active — reppo-swarm (orquestra) moved to ~/code/orquestra
 model: claude-opus-4-7
 
 # AI Gateway — route Claude Code requests through an LLM gateway.
-# provider: usepod (USEPOD_TOKEN, Anthropic-compat proxy, model=USEPOD_MODEL|deepseek-v3.2)
-#         | direct (ANTHROPIC_API_KEY) | bankr (BANKR_LLM_KEY) | virtuals (VIRTUALS_API_KEY)
+# provider: direct (CLAUDE_CODE_OAUTH_TOKEN, default) | usepod (USEPOD_TOKEN, rate-limit fallback)
+#         | bankr (BANKR_LLM_KEY) | virtuals (VIRTUALS_API_KEY)
 # Bankr docs: https://docs.bankr.bot/llm-gateway/overview
 gateway:
-  provider: usepod
+  provider: direct
 
 # Output channels
 channels:
