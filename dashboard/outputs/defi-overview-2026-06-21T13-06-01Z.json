@@ -1,0 +1,270 @@
+{
+  "root": "card_defi",
+  "state": {},
+  "elements": {
+    "card_defi": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi — 2026-06-21",
+        "description": "Mixed: Volume pullback vs. strong weekly momentum"
+      },
+      "children": [
+        "tvl_section",
+        "sep1",
+        "fees_section",
+        "sep2",
+        "dex_section",
+        "sep3",
+        "stables_section",
+        "sep4",
+        "real_yield_section",
+        "incentive_yield_section",
+        "sep5",
+        "sources_text"
+      ]
+    },
+    "tvl_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tvl_stat",
+        "tvl_context"
+      ]
+    },
+    "tvl_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$58.3T",
+        "delta": "flat 24h",
+        "trend": "neutral"
+      }
+    },
+    "tvl_context": {
+      "type": "Text",
+      "props": {
+        "text": "est. +0.5% 7d",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fees_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fees_heading",
+        "curve_stat",
+        "fees_desc"
+      ]
+    },
+    "fees_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "curve_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Curve DEX",
+        "value": "$49.1M",
+        "delta": "−21.58% 1d",
+        "trend": "down"
+      }
+    },
+    "fees_desc": {
+      "type": "Text",
+      "props": {
+        "text": "sustained liquidity demand across 18 chains",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "dex_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dex_heading",
+        "dex_stat",
+        "dex_context"
+      ]
+    },
+    "dex_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX Volume (24h)",
+        "level": "h3"
+      }
+    },
+    "dex_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$4.7B",
+        "delta": "−7.6% 1d",
+        "trend": "down"
+      }
+    },
+    "dex_context": {
+      "type": "Text",
+      "props": {
+        "text": "vs. 7d +26.6% — intraweek consolidation after strong rally",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stables_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stables_heading",
+        "stables_stat",
+        "stables_table",
+        "stables_note"
+      ]
+    },
+    "stables_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stables",
+        "level": "h3"
+      }
+    },
+    "stables_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "$283B",
+        "delta": "flat 24h",
+        "trend": "neutral"
+      }
+    },
+    "stables_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "USDT",
+            "$186.3B"
+          ],
+          [
+            "USDC",
+            "$74.8B"
+          ],
+          [
+            "USDS",
+            "$8.2B"
+          ]
+        ]
+      }
+    },
+    "stables_note": {
+      "type": "Text",
+      "props": {
+        "text": "no depeg risk",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "real_yield_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "real_yield_heading",
+        "real_yield_text"
+      ]
+    },
+    "real_yield_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Real Yield (sustainable, ≥$10M, filtered)",
+        "level": "h4"
+      }
+    },
+    "real_yield_text": {
+      "type": "Text",
+      "props": {
+        "text": "no real-yield pools cleared filter today",
+        "variant": "muted"
+      }
+    },
+    "incentive_yield_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "incentive_yield_heading",
+        "incentive_yield_text"
+      ]
+    },
+    "incentive_yield_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive Yield (points / emissions, ≥$25M)",
+        "level": "h4"
+      }
+    },
+    "incentive_yield_text": {
+      "type": "Text",
+      "props": {
+        "text": "no incentive-yield pools cleared filter today",
+        "variant": "muted"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: llama_tvl=partial llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=fail | var: none",
+        "variant": "muted"
+      }
+    }
+  }
+}
