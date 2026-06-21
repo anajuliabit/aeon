@@ -1,0 +1,41 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi Monitor"
+      },
+      "children": [
+        "date_text",
+        "separator_1",
+        "status_alert"
+      ]
+    },
+    "date_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-21",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "No DeFi Positions Configured",
+        "message": "Awaiting memory/on-chain-watches.yml setup to begin monitoring pools, positions, and yield rates.",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}
