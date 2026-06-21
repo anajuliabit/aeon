@@ -1,29 +1,29 @@
-*5 Actions — 2026-06-16*
-Shape: create iss-019, extend xai fallback, move 4 index rows, land pr #112, approve pr #122
+*5 Actions — 2026-06-21*
+Shape: root-cause iss-024, diagnose iss-022 cluster, unstick token-alert, merge #129, seed defi watches
 
-1. create memory/issues/ISS-019.md (status=open, severity=high, category=rate-limit) for the weekly-limit-wave; add row to memory/issues/INDEX.md open table.
-why: 7d overdue, 4th occurrence proven on 2026-06-12 wave, no record anchors fix at aeon.yml:498.
-done: ISS-019.md committed with frontmatter + INDEX.md open row visible.
-loop: iss-019-file
+1. root-cause `iss-024` skill-health 26-consecutive-fail loop in `memory/issues/ISS-024.md`.
+why: head of today's skill-evals action queue — canary skill blind = whole fleet observability degraded.
+done: `root_cause:` field populated, status flipped open → investigating.
+loop: iss-024-investigate
 
-2. extend .github/workflows/aeon.yml:498 with an xai-fallback branch covering token-pick / agent-buzz / list-digest — current FALLBACK_CG_SKILLS covers 5 cg skills, xai-dependent skills still hard-exit on 403.
-why: 3 skills 403'd today on the same team-id quota; gap is the residual hole iss-019 captures.
-done: aeon.yml diff committed in a pr listing those 3 skill names in the xai branch.
-loop: iss-019-xai-extension
+2. diagnose `iss-022` sandbox-truncation cluster — 8 skills hit output_tokens=0 between 12:14z and 14:17z today.
+why: extends iss-019/020/021; chronic-failure tail jumped 11 → 24 skills, all on this driver.
+done: iss-022 lists the 8 affected skills + first-suspected-cause line; status set to investigating.
+loop: iss-022-diagnose
 
-3. move iss-007/009/010/016 rows from open → resolved in memory/issues/INDEX.md (resolved_at=2026-06-16) — all 4 have code shipped or workarounds durable per yesterday's weekly-review closed-loop notes.
-why: 6d overdue from 6-10; inflated open count distorts skill-health open-issues delta read.
-done: 4 rows present in resolved table, absent from open.
-loop: iss-index-flips
+3. cancel hung `token-alert` dispatch and re-fire — last_dispatch 13:45z, status=dispatched, 96min elapsed, cf=2.
+why: first time token-alert hung mid-dispatch; reppo/gitlawb/well/mamo alerts paused while it sits.
+done: stuck gh workflow run cancelled, fresh dispatch fired, cron-state last_status=success.
+loop: token-alert-unstick
 
-4. land pr #112 (`skill-graph/2026-06-14`, docs auto-gen) — read the docs diff and merge.
-why: ~50h stalled past the 24h heartbeat threshold; documented graph state diverges every day.
-done: pr #112 merged to main.
-loop: pr-112-merge
+4. merge PR #129 (`skill-graph/2026-06-21`) — doc-only, retired_skills -4, shared_state_edges 195→9.
+why: auto-generated, ~6h old, nothing gated on it; clears the open-PR slot for tomorrow.
+done: #129 squashed to main, branch deleted.
+loop: pr-129-merge
 
-5. approve pr #122 (`fix/self-improve-2026-06-15`) — single-file CLAUDE.md update documenting the websearch api 400 fallback path.
-why: opened 6-15 19:13z, ~22h, captures the gap that bit morning-brief/daily-routine/narrative-tracker 6-15.
-done: pr #122 merged.
-loop: pr-122-merge
+5. add a `type: pool` or `type: position` entry to `memory/on-chain-watches.yml` (morpho/aave/curve).
+why: defi-monitor 14d no_config; wallets seeded but pool/position list is empty.
+done: ≥1 `type: pool` or `type: position` watch in watches.yml; next defi-monitor run logs ≥1 position.
+loop: defi-monitor-config
 
-sources: memory=102 lines logs=7 days topics=14 files prs=2 open cron_failing=0 mode=OK
+sources: memory=42 lines logs=7 days topics=11 files prs=1 open cron_failing=1 mode=OK

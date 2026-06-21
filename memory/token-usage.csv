@@ -473,4 +473,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-21,heartbeat,claude-opus-4-7,42,21860,3333684,87605
 2026-06-21,btc-levels,claude-sonnet-4-6,10,8382,382901,36204
 2026-06-21,list-digest,claude-opus-4-7,25,5918,1121048,36985
-2026-06-21,goal-tracker,claude-opus-4-7,48,25324,3307382,79116
+2026-06-21,action-converter,claude-opus-4-7,40,18308,2282965,117963
