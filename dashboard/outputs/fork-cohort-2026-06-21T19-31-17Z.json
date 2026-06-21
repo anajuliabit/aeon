@@ -1,0 +1,268 @@
+{
+  "root": "card-fork-cohort",
+  "state": {},
+  "elements": {
+    "card-fork-cohort": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Cohort",
+        "description": "2026-06-21 — aaronjmars/aeon"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-stats",
+        "sep-1",
+        "section-breakdown",
+        "sep-2",
+        "section-forks",
+        "sep-3",
+        "section-report"
+      ]
+    },
+    "section-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-cold-start",
+        "stack-numbers"
+      ]
+    },
+    "text-cold-start": {
+      "type": "Text",
+      "props": {
+        "text": "COLD START: 186 forks, 32 running (first scan)",
+        "variant": "lead"
+      }
+    },
+    "stack-numbers": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-total",
+        "stat-scanned",
+        "stat-running",
+        "stat-coverage"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Forks",
+        "value": "186"
+      }
+    },
+    "stat-scanned": {
+      "type": "Stat",
+      "props": {
+        "label": "Scanned",
+        "value": "80"
+      }
+    },
+    "stat-running": {
+      "type": "Stat",
+      "props": {
+        "label": "Running (7d)",
+        "value": "32"
+      }
+    },
+    "stat-coverage": {
+      "type": "Stat",
+      "props": {
+        "label": "Coverage",
+        "value": "40%"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "section-breakdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-breakdown",
+        "stack-breakdown-stats"
+      ]
+    },
+    "heading-breakdown": {
+      "type": "Heading",
+      "props": {
+        "text": "Activity Breakdown",
+        "level": "h3"
+      }
+    },
+    "stack-breakdown-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-power",
+        "stat-active",
+        "stat-stale",
+        "stat-cold"
+      ]
+    },
+    "stat-power": {
+      "type": "Stat",
+      "props": {
+        "label": "POWER",
+        "value": "15"
+      }
+    },
+    "stat-active": {
+      "type": "Stat",
+      "props": {
+        "label": "ACTIVE",
+        "value": "17"
+      }
+    },
+    "stat-stale": {
+      "type": "Stat",
+      "props": {
+        "label": "STALE",
+        "value": "9"
+      }
+    },
+    "stat-cold": {
+      "type": "Stat",
+      "props": {
+        "label": "COLD",
+        "value": "39"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "section-forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-forks",
+        "stack-fork-list"
+      ]
+    },
+    "heading-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New Running Forks (POWER)",
+        "level": "h3"
+      }
+    },
+    "stack-fork-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-1",
+        "fork-2",
+        "fork-3",
+        "fork-4",
+        "fork-5",
+        "text-more-forks"
+      ]
+    },
+    "fork-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "tomscaria/aeon",
+        "href": "https://github.com/tomscaria/aeon",
+        "source": "@tomscaria",
+        "score": "56 skills enabled"
+      }
+    },
+    "fork-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Boodszw/Boodszw_Bread",
+        "href": "https://github.com/Boodszw/Boodszw_Bread",
+        "source": "@Boodszw",
+        "score": "16 skills"
+      }
+    },
+    "fork-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "taekwonv89/aeon",
+        "href": "https://github.com/taekwonv89/aeon",
+        "source": "@taekwonv89",
+        "score": "16 skills"
+      }
+    },
+    "fork-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "0xMal0u/aeon",
+        "href": "https://github.com/0xMal0u/aeon",
+        "source": "@0xMal0u",
+        "score": "11 skills"
+      }
+    },
+    "fork-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "chxoky/aeon",
+        "href": "https://github.com/chxoky/aeon",
+        "source": "@chxoky",
+        "score": "11 skills"
+      }
+    },
+    "text-more-forks": {
+      "type": "Text",
+      "props": {
+        "text": "... and 10 more POWER, 17 ACTIVE",
+        "variant": "muted"
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "section-report": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-full-report",
+        "link-report"
+      ]
+    },
+    "text-full-report": {
+      "type": "Text",
+      "props": {
+        "text": "Full report:"
+      }
+    },
+    "link-report": {
+      "type": "Link",
+      "props": {
+        "label": "articles/fork-cohort-2026-06-21.md",
+        "href": "articles/fork-cohort-2026-06-21.md"
+      }
+    }
+  }
+}
