@@ -497,13 +497,13 @@
   },
   "aixbt-pulse": {
     "last_dispatch": "2026-06-21T21:13:44Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-21T13:11:22Z",
-    "total_runs": 77,
-    "total_successes": 28,
+    "last_status": "success",
+    "last_success": "2026-06-21T21:18:46Z",
+    "total_runs": 78,
+    "total_successes": 29,
     "total_failures": 49,
     "consecutive_failures": 0,
-    "success_rate": 0.36,
+    "success_rate": 0.37,
     "last_failed": "2026-06-21T12:14:36Z",
     "last_error": "1aad75a\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
