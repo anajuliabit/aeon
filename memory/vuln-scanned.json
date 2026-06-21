@@ -12,5 +12,19 @@
       "slither": "n/a"
     },
     "notes": "dep-CVE-only audit; code-flaw + secrets scans blocked by sandbox; next 15.5.15 surfaced 7 high CVEs only in apps/sample (private demo) — dropped per demo/ triage rule"
+  },
+  {
+    "repo": "vercel/eve",
+    "scanned_at": "2026-06-21T13:28:00Z",
+    "findings": 0,
+    "channel": "skipped-no-scanner",
+    "scanner_status": {
+      "semgrep": "fail",
+      "trufflehog": "fail",
+      "osv-binary": "fail",
+      "osv-api": "tool-not-available",
+      "slither": "n/a"
+    },
+    "notes": "manual audit only — scanner binaries missing (ISS-018). Examined dependency tree (axios 1.16.1, jose 6.2.3, etc.) for known CVEs via manual web search but rate-limited; basic security posture review found no obvious code-flow vulnerabilities. SECURITY.md present with PVR email contact."
   }
 ]

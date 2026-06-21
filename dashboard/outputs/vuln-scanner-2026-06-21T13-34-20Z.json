@@ -1,0 +1,172 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Vuln Scanner — vercel/eve"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_binaries",
+        "sep1",
+        "deps_examined",
+        "sep2",
+        "security_review",
+        "sep3",
+        "security_md_info",
+        "sep4",
+        "scanners_status"
+      ]
+    },
+    "alert_binaries": {
+      "type": "Alert",
+      "props": {
+        "title": "Manual audit only",
+        "message": "Scanner binaries missing (ISS-018)",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deps_examined": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deps_heading",
+        "deps_text"
+      ]
+    },
+    "deps_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dependencies Examined",
+        "level": "h3"
+      }
+    },
+    "deps_text": {
+      "type": "Text",
+      "props": {
+        "text": "axios 1.16.1, jose 6.2.3 — searched for known CVEs via manual search but rate-limited"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "security_review": {
+      "type": "Alert",
+      "props": {
+        "title": "Security Posture Review",
+        "message": "No obvious code-flow vulnerabilities detected",
+        "type": "success"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "security_md_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "security_md_heading",
+        "security_md_contact"
+      ]
+    },
+    "security_md_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "SECURITY.md",
+        "level": "h3"
+      }
+    },
+    "security_md_contact": {
+      "type": "Text",
+      "props": {
+        "text": "Present — responsible disclosure contact: responsible.disclosure@vercel.com"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "scanners_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "scanners_heading",
+        "scanner_results"
+      ]
+    },
+    "scanners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scanner Status",
+        "level": "h3"
+      }
+    },
+    "scanner_results": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_semgrep",
+        "badge_trufflehog",
+        "badge_osv"
+      ]
+    },
+    "badge_semgrep": {
+      "type": "Badge",
+      "props": {
+        "text": "semgrep: fail",
+        "variant": "destructive"
+      }
+    },
+    "badge_trufflehog": {
+      "type": "Badge",
+      "props": {
+        "text": "trufflehog: fail",
+        "variant": "destructive"
+      }
+    },
+    "badge_osv": {
+      "type": "Badge",
+      "props": {
+        "text": "osv-scanner: fail",
+        "variant": "destructive"
+      }
+    }
+  }
+}

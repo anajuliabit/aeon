@@ -1,0 +1,5 @@
+semgrep=fail
+trufflehog=fail
+osv-binary=fail
+osv-api=tool-not-available
+slither=n/a
