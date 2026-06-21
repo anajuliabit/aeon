@@ -1,1 +1,1 @@
-*Skill Graph updated* — NEW_SKILLS: btc-levels, reppo-voter, thought-review · NEW_ENABLED 16 (aixbt-pulse, btc-levels, deal-flow, defi-monitor, fork-cohort, fork-skill-digest, fork-skill-gap, list-digest +8) · NEW_DEPS: +160 · REMOVED_DEPS: 12 (reppo-swarm chain off-CI). PR: https://github.com/anajuliabit/aeon/pull/112
+*Skill Graph updated* — RETIRED_SKILLS: -4 | SHARED_STATE_EDGES: 195->9. PR: https://github.com/anajuliabit/aeon/pull/129
