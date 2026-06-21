@@ -1,0 +1,279 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-14 21:00Z"
+      },
+      "children": [
+        "crypto-section",
+        "sep-1",
+        "tradfi-section",
+        "sep-2",
+        "new-pull-section",
+        "sep-3",
+        "bridge-section"
+      ]
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-heading",
+        "vvv-stat",
+        "tao-stat",
+        "defi-tvl-item",
+        "solana-items",
+        "aerodrome-item"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "vvv-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "VVV YTD",
+        "value": "+907%"
+      }
+    },
+    "tao-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TAO",
+        "value": "+26%",
+        "delta": "lead AI bid"
+      }
+    },
+    "defi-tvl-item": {
+      "type": "Alert",
+      "props": {
+        "title": "DeFi TVL Slides to 2021 Lows",
+        "message": "Exploit fears driving decline. Same day AIXBT named a DeFi yield renaissance — but high APR on thinning TVL is pool concentration risk, not renaissance.",
+        "type": "warning"
+      }
+    },
+    "solana-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "solana-label",
+        "usdc-item",
+        "spacex-item",
+        "icm-item"
+      ]
+    },
+    "solana-label": {
+      "type": "Text",
+      "props": {
+        "text": "Solana:",
+        "variant": "lead"
+      }
+    },
+    "usdc-item": {
+      "type": "Text",
+      "props": {
+        "text": "$3.5B USDC minted in a week"
+      }
+    },
+    "spacex-item": {
+      "type": "Text",
+      "props": {
+        "text": "Tokenized SpaceX stocks live"
+      }
+    },
+    "icm-item": {
+      "type": "Text",
+      "props": {
+        "text": "ICM narrative new"
+      }
+    },
+    "aerodrome-item": {
+      "type": "Text",
+      "props": {
+        "text": "Aerodrome (Base) previews prediction-market LP allocation — first Base-native protocol absorbing prediction-market mindshare"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi-heading",
+        "iran-item",
+        "spreads-item",
+        "oil-item",
+        "conflict-item",
+        "fed-item"
+      ]
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "iran-item": {
+      "type": "Text",
+      "props": {
+        "text": "Iran risk premia unwinding, credit spreads tightening, oil lower"
+      }
+    },
+    "spreads-item": {
+      "type": "Text",
+      "props": {
+        "text": "\"Conflict fatigue\" is the framing — people stopped pricing the tail, not a deal close"
+      }
+    },
+    "oil-item": {
+      "type": "Text",
+      "props": {
+        "text": "Fed hold anchoring dollar strength + yield easing → carry trade positioning"
+      }
+    },
+    "conflict-item": {
+      "type": "Text",
+      "props": {
+        "text": ""
+      }
+    },
+    "fed-item": {
+      "type": "Text",
+      "props": {
+        "text": ""
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-pull-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-pull-heading",
+        "vvv-returned-item",
+        "basket-item",
+        "concentration-item",
+        "tvl-contradiction-item",
+        "usd1-item"
+      ]
+    },
+    "new-pull-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "vvv-returned-item": {
+      "type": "Text",
+      "props": {
+        "text": "VVV returned after 12h GONE — 09:00Z \"basket widening to VENICE/ICP\" read was noise"
+      }
+    },
+    "basket-item": {
+      "type": "Text",
+      "props": {
+        "text": "Concentration is still VVV + TAO"
+      }
+    },
+    "concentration-item": {
+      "type": "Text",
+      "props": {
+        "text": ""
+      }
+    },
+    "tvl-contradiction-item": {
+      "type": "Alert",
+      "props": {
+        "title": "DeFi TVL at 2021 Lows",
+        "message": "Direct contradiction of morning's yield renaissance call",
+        "type": "warning"
+      }
+    },
+    "usd1-item": {
+      "type": "Text",
+      "props": {
+        "text": "USD1 stablecoin via UFC bonuses — mainstream distribution bypassing every DEX/CEX"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-heading",
+        "spcx-item",
+        "ipo-item",
+        "hyperliquid-item",
+        "two-rails-item"
+      ]
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "spcx-item": {
+      "type": "Text",
+      "props": {
+        "text": "SPCX migrated from TradFi to crypto in 12 hours — morning IPO equity story, evening tokenized SpaceX on Solana"
+      }
+    },
+    "ipo-item": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid stock perps running same direction"
+      }
+    },
+    "hyperliquid-item": {
+      "type": "Text",
+      "props": {
+        "text": "Two rails live simultaneously. That's market structure, not a narrative."
+      }
+    },
+    "two-rails-item": {
+      "type": "Text",
+      "props": {
+        "text": ""
+      }
+    }
+  }
+}

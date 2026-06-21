@@ -1,0 +1,97 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "agent-buzz",
+        "description": "06-14 staged"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "topics_heading",
+        "topics_list",
+        "separator",
+        "metrics"
+      ]
+    },
+    "topics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Topics",
+        "level": "h3"
+      }
+    },
+    "topics_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "topic_mcp",
+        "topic_coinbase",
+        "topic_orchestrator"
+      ]
+    },
+    "topic_mcp": {
+      "type": "Badge",
+      "props": {
+        "text": "MCP explainer crossed mainstream"
+      }
+    },
+    "topic_coinbase": {
+      "type": "Badge",
+      "props": {
+        "text": "Coinbase shipped agent commerce"
+      }
+    },
+    "topic_orchestrator": {
+      "type": "Badge",
+      "props": {
+        "text": "Orchestrator backlash from researchers"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_tweets",
+        "stat_clusters"
+      ]
+    },
+    "stat_tweets": {
+      "type": "Stat",
+      "props": {
+        "value": "6",
+        "label": "tweets"
+      }
+    },
+    "stat_clusters": {
+      "type": "Stat",
+      "props": {
+        "value": "3",
+        "label": "clusters"
+      }
+    }
+  }
+}

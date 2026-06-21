@@ -1,1 +1,1 @@
-list-digest 2026-06-13 staged — see pending file
+*List Digest — 2026-06-19*

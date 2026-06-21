@@ -34,17 +34,17 @@ skills:
 
   # --- Midday (12 PM UTC) ---
   token-alert: { enabled: true, schedule: "0 12 * * *", var: "" } # reads watchlist from "Tracked Tokens" in memory/MEMORY.md
-  token-movers: { enabled: true, schedule: "10 12 * * *" } # enabled 2026-06-03 — top cohort crypto-intel skill
-  on-chain-monitor: { enabled: true, schedule: "20 12 * * *" } # enabled 2026-06-03 — staggered off 12:00 cluster
-  defi-monitor: { enabled: true, schedule: "40 12 * * *" } # enabled 2026-06-03 — staggered off 12:00 cluster
+  token-movers: { enabled: true, schedule: "10 12 * * *", usepod_model: "claude-haiku-4-5-20251001" } # enabled 2026-06-03 — top cohort crypto-intel skill
+  on-chain-monitor: { enabled: true, schedule: "20 12 * * *", usepod_model: "claude-haiku-4-5-20251001" } # enabled 2026-06-03 — staggered off 12:00 cluster
+  defi-monitor: { enabled: true, schedule: "40 12 * * *", usepod_model: "claude-haiku-4-5-20251001" } # enabled 2026-06-03 — staggered off 12:00 cluster
   treasury-info: { enabled: false, schedule: "0 12 * * *" }
   distribute-tokens: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — var: distribution list label
-  defi-overview: { enabled: true, schedule: "0 12 * * *" }
+  defi-overview: { enabled: true, schedule: "0 12 * * *", usepod_model: "claude-haiku-4-5-20251001" }
 
   monitor-polymarket: { enabled: false, schedule: "30 12 * * *", model: "claude-sonnet-4-6" } # monitor specific markets for 24h price moves and volume changes
   monitor-kalshi: { enabled: false, schedule: "0 13 * * *", model: "claude-sonnet-4-6" } # monitor Kalshi prediction markets for 24h price moves and volume
   monitor-runners: { enabled: false, schedule: "0 12 * * *" }
-  token-pick: { enabled: true, schedule: "0 12 * * *" }
+  token-pick: { enabled: true, schedule: "0 12 * * *", usepod_model: "claude-haiku-4-5-20251001" }
   token-report: { enabled: false, schedule: "30 12 * * *", model: "claude-sonnet-4-6" } # daily token price/volume from GeckoTerminal
   price-threshold-alert:
     {
@@ -53,12 +53,12 @@ skills:
       model: "claude-sonnet-4-6",
       var: ""
     } # every 30 minutes — fire on tracked-token ATH, ±20% 1h move, or operator-set target crossing (var=target_price,target_price2,...). Silent on normal runs. Set var=dry-run to skip notify.
-  market-context-refresh: { enabled: true, schedule: "0 13 * * *", model: "claude-sonnet-4-6" } # fetch live crypto macro data, update memory
+  market-context-refresh: { enabled: true, schedule: "0 13 * * *", model: "claude-sonnet-4-6", usepod_model: "claude-haiku-4-5-20251001" } # fetch live crypto macro data, update memory
   btc-levels: { enabled: true, schedule: "15 */4 * * *", model: "claude-sonnet-4-6" } # BTC vs 2026-06-09 advisor hard levels for leveraged cbBTC (40-45k review band, <60.5k daily close, 63.5k/65.9k reclaim); alerts on crossings only, silent otherwise
-  narrative-tracker: { enabled: true, schedule: "30 13 * * *" } # track rising/peaking/fading narratives
+  narrative-tracker: { enabled: true, schedule: "30 13 * * *", usepod_model: "claude-haiku-4-5-20251001" } # track rising/peaking/fading narratives
   polymarket-comments: { enabled: false, schedule: "0 13 * * *" } # top comments from trending Polymarket markets
   unlock-monitor: { enabled: true, schedule: "0 10 * * 1" } # weekly token unlock/vesting tracker
-  aixbt-pulse: { enabled: true, schedule: "0 9,21 * * *", model: "claude-sonnet-4-6" } # twice daily — AIXBT free grounding endpoint: cross-domain market pulse (crypto/macro/tradfi/geopolitics) with taxonomy refresh
+  aixbt-pulse: { enabled: true, schedule: "0 9,21 * * *", model: "claude-sonnet-4-6", usepod_model: "claude-haiku-4-5-20251001" } # twice daily — AIXBT free grounding endpoint: cross-domain market pulse (crypto/macro/tradfi/geopolitics) with taxonomy refresh
 
   # --- Afternoon (2 PM UTC) ---
   article: { enabled: false, schedule: "0 14 * * *" }
@@ -263,12 +263,6 @@ skills:
   auto-workflow: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — var: URL to analyze
   onboard: { enabled: false, schedule: "workflow_dispatch", var: "" } # one-shot setup validator — checks secrets/workflows/memory writability and notifies a checklist with fix commands; pair with ./onboard CLI
 
-  # --- Reppo swarm (run via the reppo-swarm chain, not standalone) ---
-  reppo-orchestrator: { enabled: false }
-  reppo-trading-agent: { enabled: false }
-  reppo-voter: { enabled: false }
-  reppo-digest: { enabled: false }
-
   # --- Fallback (must be last) ---
   heartbeat: { enabled: true, schedule: "0 8,14,20 * * *" }
 
@@ -304,18 +298,7 @@ reactive:
 #       steps:
 #         - parallel: [skill-a, skill-b]
 #         - skill: skill-c, consume: [skill-a, skill-b]
-chains:
-  # reppo-swarm DISABLED 2026-06-10: the swarm now runs self-hosted on Docker
-  # (operator-managed), not on GitHub Actions. Keeping the definition commented
-  # for reference / one-off manual dispatch via chain-runner if ever needed.
-  # reppo-swarm:
-  #   schedule: "0 */6 * * *"   # every 6 hours (00, 06, 12, 18 UTC)
-  #   on_error: continue
-  #   steps:
-  #     - skill: reppo-orchestrator
-  #     - parallel: [ reppo-trading-agent, reppo-voter ]
-  #     - skill: reppo-digest
-  #       consume: [ reppo-orchestrator, reppo-trading-agent, reppo-voter ]
+chains: {}   # none active — reppo-swarm (orquestra) moved to ~/code/orquestra, self-hosted
 
 # Default model for all skills. Override per-run via workflow_dispatch.
 # Options: claude-opus-4-7, claude-sonnet-4-6, claude-haiku-4-5-20251001
@@ -323,10 +306,11 @@ chains:
 model: claude-opus-4-7
 
 # AI Gateway — route Claude Code requests through an LLM gateway.
-# provider: direct (default, uses ANTHROPIC_API_KEY) | bankr (uses BANKR_LLM_KEY)
+# provider: usepod (USEPOD_TOKEN, Anthropic-compat proxy, model=USEPOD_MODEL|deepseek-v3.2)
+#         | direct (ANTHROPIC_API_KEY) | bankr (BANKR_LLM_KEY) | virtuals (VIRTUALS_API_KEY)
 # Bankr docs: https://docs.bankr.bot/llm-gateway/overview
 gateway:
-  provider: direct
+  provider: usepod
 
 # Output channels
 channels:

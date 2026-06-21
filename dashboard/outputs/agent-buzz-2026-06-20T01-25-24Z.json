@@ -1,0 +1,214 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-06-19",
+        "description": "Conversation shape: MCP's native Unreal integration signals protocol momentum, while builders debate environment design vs prompt engineering, and a Hermes-to-WhatsApp bridge shows agent reach expanding beyond desktop."
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-1",
+        "sep-1",
+        "section-2",
+        "sep-2",
+        "section-3",
+        "sep-3",
+        "section-4",
+        "sep-4",
+        "footer"
+      ]
+    },
+    "section-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-1",
+        "story-1-1",
+        "story-1-2"
+      ]
+    },
+    "h-1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP Ecosystem Momentum",
+        "level": "h2"
+      }
+    },
+    "story-1-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@sunaiuse — Unreal Engine 5.8 now runs a full MCP server natively, not a plugin — game engines are becoming first-class agent environments.",
+        "href": "https://x.com/sunaiuse/status/2067757990246232416",
+        "source": "@sunaiuse"
+      }
+    },
+    "story-1-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@AunySillyMe — MCP write upgrades land at Beehiiv, Lovable gains plugins, Unreal goes native — the protocol footprint widens beyond Claude Code.",
+        "href": "https://x.com/AunySillyMe/status/2067759151577804965",
+        "source": "@AunySillyMe"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-2",
+        "story-2-1",
+        "story-2-2",
+        "story-2-3"
+      ]
+    },
+    "h-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Environment Design Over Prompt Engineering",
+        "level": "h2"
+      }
+    },
+    "story-2-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@nonepcbl — The leverage shift isn't smarter prompts but environments where agents run indefinitely; longer-lived systems beat optimal single-step reasoning.",
+        "href": "https://x.com/nonepcbl/status/2067757620002517113",
+        "source": "@nonepcbl"
+      }
+    },
+    "story-2-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@chuhaiqu — An open-source project extracts agent memory from tools into local Markdown+SQLite+LanceDB, giving cases/skills persistent storage outside the provider's walled garden.",
+        "href": "https://x.com/chuhaiqu/status/2067755602085097726",
+        "source": "@chuhaiqu"
+      }
+    },
+    "story-2-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@atrium_dev — Atrium v0.191.0 ships browser CDP access for agents — raw Chrome DevTools Protocol commands run against browser panes, plus H.264/AAC video playback.",
+        "href": "https://x.com/atrium_dev/status/2067742186406289762",
+        "source": "@atrium_dev"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-3",
+        "story-3-1",
+        "story-3-2",
+        "story-3-3"
+      ]
+    },
+    "h-3": {
+      "type": "Heading",
+      "props": {
+        "text": "Research & Benchmarks",
+        "level": "h2"
+      }
+    },
+    "story-3-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@nbesnbesnbes — ALifeConf paper studies how near-critical dynamics inside individual agents shape collective population‑scale behavior — criticality transfers upward.",
+        "href": "https://x.com/nbesnbesnbes/status/2067741255996428472",
+        "source": "@nbesnbesnbes"
+      }
+    },
+    "story-3-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@romir_jain — TokenPilot paper shows pruning context in long‑running LLM agents destroys the prompt cache, a hidden cost nobody talks about.",
+        "href": "https://x.com/romir_jain/status/2067747132657045517",
+        "source": "@romir_jain"
+      }
+    },
+    "story-3-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@hibenchmark — Pi baseline this week: 1,255 tokens, 4 tools, no skills/subagents/MCP declarations — a quiet baseline for stripped‑down agent runs.",
+        "href": "https://x.com/hibenchmark/status/2067721130706645281",
+        "source": "@hibenchmark"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-4",
+        "story-4-1"
+      ]
+    },
+    "h-4": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Reach Beyond Desktop",
+        "level": "h2"
+      }
+    },
+    "story-4-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@RoundtableSpace — Hermes now bridges AI agents to WhatsApp, moving agent communication from desktop notifications to the dominant global messaging platform.",
+        "href": "https://x.com/RoundtableSpace/status/2067755488834453705",
+        "source": "@RoundtableSpace"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai (cache) · candidates: 10 → kept: 8_",
+        "variant": "caption"
+      }
+    }
+  }
+}

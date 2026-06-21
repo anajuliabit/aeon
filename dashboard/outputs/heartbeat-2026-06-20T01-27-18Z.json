@@ -1,0 +1,220 @@
+{
+  "root": "hb-card",
+  "state": {},
+  "elements": {
+    "hb-card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "failed-section",
+        "stuck-section",
+        "chronic-section",
+        "stalled-section",
+        "memory-section",
+        "issues-section"
+      ]
+    },
+    "failed-section": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Failed Chain",
+        "message": "chain:investment-advisor failed on 2026-06-08"
+      }
+    },
+    "stuck-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stuck-h",
+        "stuck-stack"
+      ]
+    },
+    "stuck-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Stuck Skills",
+        "level": "h3"
+      }
+    },
+    "stuck-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stuck-1",
+        "stuck-2",
+        "stuck-3",
+        "stuck-4"
+      ]
+    },
+    "stuck-1": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat (4h)"
+      }
+    },
+    "stuck-2": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest (5h)"
+      }
+    },
+    "stuck-3": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow (10d)"
+      }
+    },
+    "stuck-4": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort (5d)"
+      }
+    },
+    "chronic-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "chronic-h",
+        "chronic-table"
+      ]
+    },
+    "chronic-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Chronic Failures (11 skills, success_rate < 0.5)",
+        "level": "h3"
+      }
+    },
+    "chronic-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate"
+        ],
+        "rows": [
+          [
+            "reg-monitor",
+            "7%"
+          ],
+          [
+            "skill-analytics",
+            "9%"
+          ],
+          [
+            "security-digest",
+            "24%"
+          ],
+          [
+            "self-improve",
+            "29%"
+          ],
+          [
+            "skill-health",
+            "37%"
+          ],
+          [
+            "market-context-refresh",
+            "40%"
+          ],
+          [
+            "goal-tracker",
+            "40%"
+          ],
+          [
+            "action-converter",
+            "42%"
+          ],
+          [
+            "reflect",
+            "42%"
+          ],
+          [
+            "aixbt-pulse",
+            "43%"
+          ],
+          [
+            "fleet-control",
+            "44%"
+          ]
+        ]
+      }
+    },
+    "stalled-section": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Stalled PR",
+        "message": "PR #112 (skill-graph docs) open 4d"
+      }
+    },
+    "memory-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "memory-h",
+        "memory-stack"
+      ]
+    },
+    "memory-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory Status",
+        "level": "h3"
+      }
+    },
+    "memory-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mem-1",
+        "mem-2",
+        "mem-3"
+      ]
+    },
+    "mem-1": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota exhausted (10+ skills)"
+      }
+    },
+    "mem-2": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain/defi-monitor NO_CONFIG (14d)"
+      }
+    },
+    "mem-3": {
+      "type": "Text",
+      "props": {
+        "text": "14:29Z cluster dispatched 6-16"
+      }
+    },
+    "issues-section": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "10 Open Issues",
+        "message": "3 critical: ISS-019/020/021 sandbox failures"
+      }
+    }
+  }
+}

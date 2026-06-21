@@ -1,0 +1,12 @@
+{
+  "source": "token-pick",
+  "symbol": "JTO",
+  "coingeckoId": "jito-governance-token",
+  "side": "long",
+  "entryPriceUsd": 0.87,
+  "targetPriceUsd": 1.10,
+  "invalidationPriceUsd": 0.75,
+  "horizonDays": 14,
+  "conviction": "HIGH (10/10)",
+  "thesis": "JTX self-custody Solana trading platform (announced May 5 at Solana Accelerate) launches July 2026 with 80% of protocol revenue directed to open-market JTO buybacks — first direct value mechanism for the token. Trending on CoinGecko at +36% 24h / +39% 7d with vol/mcap 0.94 confirming real bid not stale rotation. Wrong if JTX launch slips past Q3 or buyback mechanism dilutes — annual emissions $96-128M still outpace projected $19-30M buybacks, so a soft launch invalidates the cashflow thesis."
+}

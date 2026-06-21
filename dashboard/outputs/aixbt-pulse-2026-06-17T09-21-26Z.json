@@ -1,0 +1,275 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-17 09:00Z"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-crypto",
+        "crypto-item-1",
+        "crypto-item-2",
+        "sep1",
+        "heading-macro",
+        "macro-item-1",
+        "sep2",
+        "heading-geo",
+        "geo-item-1",
+        "sep3",
+        "heading-tradfi",
+        "tradfi-item-1",
+        "sep4",
+        "heading-new",
+        "new-item-1",
+        "new-item-2",
+        "new-item-3",
+        "sep5",
+        "heading-bridge",
+        "bridge-item-1"
+      ]
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "crypto-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-1-stat",
+        "crypto-1-text"
+      ]
+    },
+    "crypto-1-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE ATH",
+        "value": "$75"
+      }
+    },
+    "crypto-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "SPCX perp volume driving it; Bitwise staking 1M+ tokens; analysts targeting $100-150"
+      }
+    },
+    "crypto-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-2-stat",
+        "crypto-2-text"
+      ]
+    },
+    "crypto-2-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana daily volume ATH",
+        "value": "$210M",
+        "delta": "from $188M",
+        "trend": "up"
+      }
+    },
+    "crypto-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Backpack 50%+ share; Coinbase pushing equities on Base"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-macro": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO",
+        "level": "h2"
+      }
+    },
+    "macro-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "macro-1-stat-oil",
+        "macro-1-text",
+        "macro-1-stat-dow"
+      ]
+    },
+    "macro-1-stat-oil": {
+      "type": "Stat",
+      "props": {
+        "label": "Oil",
+        "value": "below $80"
+      }
+    },
+    "macro-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz progress; rate-supportive"
+      }
+    },
+    "macro-1-stat-dow": {
+      "type": "Stat",
+      "props": {
+        "label": "Dow records",
+        "value": "near 52k"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-geo": {
+      "type": "Heading",
+      "props": {
+        "text": "GEO",
+        "level": "h2"
+      }
+    },
+    "geo-item-1": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Absent this window — macro/geo sections not returned by AIXBT 7th+ consecutive pull"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "tradfi-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "FOMC dot plot scrutiny ahead; Warsh hold positioned but dots reshape duration bets and dollar exposure"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-1-stat",
+        "new-1-text"
+      ]
+    },
+    "new-1-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana volume ATH",
+        "value": "$210M",
+        "delta": "from $188M",
+        "trend": "up"
+      }
+    },
+    "new-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Backpack 50%+ share — venue war live"
+      }
+    },
+    "new-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "5K BTC leaving exchanges — silent accumulation signal",
+        "variant": "lead"
+      }
+    },
+    "new-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-3-text",
+        "new-3-stat"
+      ]
+    },
+    "new-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "UNI + JTO breakouts"
+      }
+    },
+    "new-3-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Standard Chartered ETH target",
+        "value": "$40K"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "SPCX perps feeding HYPE to $75 with analyst $100-150 targets — reflexivity loop running, not speculation. 5K BTC leaving exchanges while Nasdaq bleeds AI/chip profit-taking: capital repositioning, not destruction. FOMC dot plot is the single break point for everything bullish in this window.",
+        "variant": "lead"
+      }
+    }
+  }
+}

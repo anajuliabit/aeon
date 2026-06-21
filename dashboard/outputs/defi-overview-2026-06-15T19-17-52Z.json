@@ -1,0 +1,146 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "defi-overview 06-15"
+      },
+      "children": [
+        "status_badge",
+        "sep1",
+        "verdict_section",
+        "metrics_grid",
+        "sep2",
+        "footer_note"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "verdict_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict_heading",
+        "risk_context"
+      ]
+    },
+    "verdict_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Mixed verdict",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "risk_context": {
+      "type": "Badge",
+      "props": {
+        "text": "Hormuz risk-on",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "tvl_stat",
+        "dex_vol_stat",
+        "stables_stat",
+        "hl_l1_stat",
+        "world_chain_stat",
+        "weth_stat"
+      ]
+    },
+    "tvl_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL (snapshot)",
+        "value": "+2.6%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "dex_vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume",
+        "value": "+24%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stables_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stables",
+        "value": "flat",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "hl_l1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HL L1 Chain Mover",
+        "value": "+6.9%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "world_chain_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "World Chain",
+        "value": "+24%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "weth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "WETH-USDT Real-Yield",
+        "value": "40.5%",
+        "delta": "back to 40.5%"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer_note": {
+      "type": "Text",
+      "props": {
+        "text": "Full report body in .pending-notify/",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

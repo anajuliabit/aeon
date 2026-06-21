@@ -1,0 +1,254 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context",
+        "description": "2026-06-15"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_main_take",
+        "stack_conviction",
+        "separator_1",
+        "heading_prices",
+        "stat_btc",
+        "stat_eth",
+        "stat_fg",
+        "separator_2",
+        "heading_metrics",
+        "stat_breadth",
+        "stat_tvl",
+        "separator_3",
+        "heading_alts",
+        "stat_xlm",
+        "stat_ada",
+        "separator_4",
+        "heading_narratives",
+        "text_hormuz",
+        "stack_zec",
+        "separator_5",
+        "heading_hot_market",
+        "text_polymarket_question",
+        "progress_peace_deal",
+        "text_polymarket_volume"
+      ]
+    },
+    "heading_main_take": {
+      "type": "Heading",
+      "props": {
+        "text": "Main Take",
+        "level": "h2"
+      }
+    },
+    "stack_conviction": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_risk_on",
+        "text_take_detail"
+      ]
+    },
+    "badge_risk_on": {
+      "type": "Badge",
+      "props": {
+        "text": "Risk-On — HIGH CONVICTION",
+        "variant": "default"
+      }
+    },
+    "text_take_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Iran peace deal landed. Polymarket 11% → 93%. Hormuz reopened, oil premium drained into risk."
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_prices": {
+      "type": "Heading",
+      "props": {
+        "text": "Asset Prices",
+        "level": "h3"
+      }
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$66,425",
+        "delta": "+3.3%",
+        "trend": "up"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,812",
+        "delta": "+8.8%",
+        "trend": "up"
+      }
+    },
+    "stat_fg": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "20",
+        "delta": "Extreme fear — survey hasn't repriced"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Metrics",
+        "level": "h3"
+      }
+    },
+    "stat_breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "16/20"
+      }
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$74.4B",
+        "delta": "+2.6%",
+        "trend": "up"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_alts": {
+      "type": "Heading",
+      "props": {
+        "text": "Alt Outperformance",
+        "level": "h3"
+      }
+    },
+    "stat_xlm": {
+      "type": "Stat",
+      "props": {
+        "label": "XLM",
+        "value": "+16%",
+        "trend": "up"
+      }
+    },
+    "stat_ada": {
+      "type": "Stat",
+      "props": {
+        "label": "ADA",
+        "value": "+13%",
+        "trend": "up"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_narratives": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narratives",
+        "level": "h3"
+      }
+    },
+    "text_hormuz": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz de-risk (peak)"
+      }
+    },
+    "stack_zec": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_zec_desc",
+        "badge_zec_trending"
+      ]
+    },
+    "text_zec_desc": {
+      "type": "Text",
+      "props": {
+        "text": "ZEC privacy resurrect (+25%)"
+      }
+    },
+    "badge_zec_trending": {
+      "type": "Badge",
+      "props": {
+        "text": "Trending #1",
+        "variant": "secondary"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_hot_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h3"
+      }
+    },
+    "text_polymarket_question": {
+      "type": "Text",
+      "props": {
+        "text": "Polymarket: \"US × Iran peace deal by Jun 15?\""
+      }
+    },
+    "progress_peace_deal": {
+      "type": "Progress",
+      "props": {
+        "value": 93,
+        "max": 100,
+        "label": "YES"
+      }
+    },
+    "text_polymarket_volume": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: $23M",
+        "variant": "caption"
+      }
+    }
+  }
+}

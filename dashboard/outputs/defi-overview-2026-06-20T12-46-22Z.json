@@ -1,0 +1,188 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi Overview — 2026-06-20",
+        "description": "Mixed: Volume collapse −31%, fees sliding −17%, capital in flux."
+      },
+      "children": [
+        "stat_tvl",
+        "sep_1",
+        "heading_chains",
+        "table_chains",
+        "sep_2",
+        "heading_fees",
+        "table_fees",
+        "sep_3",
+        "stat_dex_vol",
+        "stat_stables",
+        "sep_4",
+        "heading_real_yield",
+        "alert_real_yield",
+        "heading_incentive_yield",
+        "alert_incentive_yield",
+        "sep_5",
+        "text_sources"
+      ]
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$58.3T",
+        "trend": "neutral"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_chains": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Chains",
+        "level": "h3"
+      }
+    },
+    "table_chains": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Chain",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "Ethereum",
+            "$38.9B"
+          ],
+          [
+            "BSC",
+            "$5.1B"
+          ],
+          [
+            "Solana",
+            "$4.8B"
+          ]
+        ]
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_fees": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees Leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "table_fees": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Protocol",
+          "24h Fees",
+          "vs 7d avg"
+        ],
+        "rows": [
+          [
+            "Tether",
+            "$16.1M",
+            "−0.06%"
+          ],
+          [
+            "Circle USDC",
+            "$6.5M",
+            "+0.08%"
+          ],
+          [
+            "Canton",
+            "$2.1M",
+            "−1.76%"
+          ]
+        ]
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat_dex_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume (24h)",
+        "value": "$5.1B",
+        "delta": "−30.89%",
+        "trend": "down"
+      }
+    },
+    "stat_stables": {
+      "type": "Stat",
+      "props": {
+        "label": "Stables",
+        "value": "$261.1B",
+        "trend": "neutral"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_real_yield": {
+      "type": "Heading",
+      "props": {
+        "text": "Real Yield (sustainable, ≥$10M)",
+        "level": "h3"
+      }
+    },
+    "alert_real_yield": {
+      "type": "Alert",
+      "props": {
+        "title": "No qualifying pools",
+        "message": "Filtering yielded 0 pools meeting all criteria — apyMean30d window tightened",
+        "type": "info"
+      }
+    },
+    "heading_incentive_yield": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive Yield (points / emissions, ≥$25M)",
+        "level": "h3"
+      }
+    },
+    "alert_incentive_yield": {
+      "type": "Alert",
+      "props": {
+        "title": "No qualifying pools",
+        "message": "Filtering yielded 0 pools with reward APY > 0 at scale",
+        "type": "info"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: llama_tvl=ok  llama_dex=ok  llama_fees=ok  llama_stables=ok  llama_yields=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

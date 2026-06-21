@@ -1,0 +1,361 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context — 2026-06-15"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_take",
+        "sep1",
+        "section_prices",
+        "sep2",
+        "section_metrics",
+        "sep3",
+        "section_alts",
+        "sep4",
+        "section_narrative",
+        "sep5",
+        "section_polymarket"
+      ]
+    },
+    "section_take": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_take",
+        "badge_take",
+        "text_take_details"
+      ]
+    },
+    "heading_take": {
+      "type": "Heading",
+      "props": {
+        "text": "Take",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge_take": {
+      "type": "Badge",
+      "props": {
+        "text": "Risk-on • Conviction High",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "text_take_details": {
+      "type": "Text",
+      "props": {
+        "text": "Iran peace deal landed • Polymarket 11%→93% • Hormuz reopened • Oil premium drained into risk",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_prices",
+        "grid_prices"
+      ]
+    },
+    "heading_prices": {
+      "type": "Heading",
+      "props": {
+        "text": "Assets",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid_prices": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$66,425",
+        "delta": "+3.3%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,812",
+        "delta": "+8.8%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_metrics",
+        "grid_metrics",
+        "text_fg_note"
+      ]
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Metrics",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_fg",
+        "stat_breadth",
+        "stat_tvl"
+      ]
+    },
+    "stat_fg": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "20"
+      },
+      "children": []
+    },
+    "text_fg_note": {
+      "type": "Text",
+      "props": {
+        "text": "Extreme fear — survey hasn't repriced",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "stat_breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "16/20"
+      },
+      "children": []
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$74.4B",
+        "delta": "+2.6%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_alts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_alts",
+        "text_alts_info"
+      ]
+    },
+    "heading_alts": {
+      "type": "Heading",
+      "props": {
+        "text": "Alt Outperformance",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_alts_info": {
+      "type": "Text",
+      "props": {
+        "text": "XLM +16% • ADA +13%",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_narrative",
+        "text_narrative_hormuz",
+        "stack_narrative_zec"
+      ]
+    },
+    "heading_narrative": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_narrative_hormuz": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz de-risk (peak)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stack_narrative_zec": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_zec_label",
+        "badge_zec"
+      ]
+    },
+    "text_zec_label": {
+      "type": "Text",
+      "props": {
+        "text": "ZEC privacy resurrect",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "badge_zec": {
+      "type": "Badge",
+      "props": {
+        "text": "+25% • Trending #1",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_polymarket": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_polymarket",
+        "text_polymarket_q",
+        "grid_polymarket"
+      ]
+    },
+    "heading_polymarket": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_polymarket_q": {
+      "type": "Text",
+      "props": {
+        "text": "US × Iran peace deal by Jun 15?",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "grid_polymarket": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_polymarket_yes",
+        "stat_polymarket_vol"
+      ]
+    },
+    "stat_polymarket_yes": {
+      "type": "Stat",
+      "props": {
+        "label": "Yes",
+        "value": "93%",
+        "delta": "+82pp",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_polymarket_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$23M"
+      },
+      "children": []
+    }
+  }
+}

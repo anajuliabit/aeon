@@ -1,0 +1,221 @@
+{
+  "root": "card_market",
+  "state": {},
+  "elements": {
+    "card_market": {
+      "type": "Card",
+      "props": {
+        "title": "market-context-refresh",
+        "description": "2026-06-21"
+      },
+      "children": [
+        "heading_main",
+        "sep_1",
+        "stack_content"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Context",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "take_section",
+        "sep_2",
+        "prices_section",
+        "sep_3",
+        "fear_greed_section",
+        "sep_4",
+        "breadth_section",
+        "sep_5",
+        "narratives_section"
+      ]
+    },
+    "take_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "take_label",
+        "conviction_badge"
+      ]
+    },
+    "take_label": {
+      "type": "Text",
+      "props": {
+        "text": "Take: risk-off consolidation",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "conviction_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "conviction: high",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "prices_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "btc_stat",
+        "eth_stat"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$64,087",
+        "delta": "+0.82%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "eth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,723",
+        "delta": "-0.07%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "fear_greed_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fg_progress",
+        "fg_label"
+      ]
+    },
+    "fg_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 23,
+        "max": 100,
+        "label": "Fear & Greed Index"
+      },
+      "children": []
+    },
+    "fg_label": {
+      "type": "Text",
+      "props": {
+        "text": "Extreme Fear",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "breadth_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "breadth_progress",
+        "sol_stat"
+      ]
+    },
+    "breadth_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 7,
+        "max": 20,
+        "label": "Breadth: green (↓↓)"
+      },
+      "children": []
+    },
+    "sol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "+2.90%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "narratives_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "narrative_text",
+        "catalyst_text"
+      ]
+    },
+    "narrative_text": {
+      "type": "Text",
+      "props": {
+        "text": "Top narrative: L1 perpetuals ecosystem (rising)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "catalyst_text": {
+      "type": "Text",
+      "props": {
+        "text": "Catalyst: BoJ June 25, Iran stalemate finality",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

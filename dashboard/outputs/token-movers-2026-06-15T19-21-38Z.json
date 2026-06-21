@@ -1,0 +1,379 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers — 2026-06-15 (intraday)"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_summary",
+        "grid_metrics",
+        "sep1",
+        "heading_winners",
+        "table_winners",
+        "sep2",
+        "heading_losers",
+        "table_losers",
+        "text_losers_note",
+        "sep3",
+        "heading_trending",
+        "table_trending",
+        "sep4",
+        "heading_notable",
+        "stack_notable"
+      ]
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "risk-on extending — majors and alts bid together.",
+        "variant": "lead"
+      }
+    },
+    "grid_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat_green",
+        "stat_median",
+        "stat_btc",
+        "stat_eth",
+        "stat_sol"
+      ]
+    },
+    "stat_green": {
+      "type": "Stat",
+      "props": {
+        "label": "Top-100 Green",
+        "value": "92/100",
+        "trend": "up"
+      }
+    },
+    "stat_median": {
+      "type": "Stat",
+      "props": {
+        "label": "Median Top-50",
+        "value": "+4.8%",
+        "trend": "up"
+      }
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$66,410",
+        "delta": "+3.3%",
+        "trend": "up"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,811",
+        "delta": "+8.7%",
+        "trend": "up"
+      }
+    },
+    "stat_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$74",
+        "delta": "+8.7%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol/Rank",
+          "Status"
+        ],
+        "rows": [
+          [
+            "H (Humanity)",
+            "$0.3112",
+            "+28.5%",
+            "−56.9%",
+            "+7.4%",
+            "$187M / #97",
+            "FADE"
+          ],
+          [
+            "ZRO (LayerZero)",
+            "$1.16",
+            "+25.8%",
+            "+31.1%",
+            "+0.6%",
+            "$84M / #139",
+            "BREAKOUT"
+          ],
+          [
+            "ZEC (Zcash)",
+            "$530",
+            "+24.5%",
+            "+22.4%",
+            "−0.4%",
+            "$866M / #14",
+            "TRENDING+UP, MAJOR"
+          ],
+          [
+            "JTO (Jito)",
+            "$0.6582",
+            "+22.6%",
+            "+4.3%",
+            "+1.8%",
+            "$80M / #134",
+            ""
+          ],
+          [
+            "WLD (Worldcoin)",
+            "$0.6094",
+            "+21.4%",
+            "+27.8%",
+            "−0.4%",
+            "$1.1B / #43",
+            "BREAKOUT"
+          ],
+          [
+            "AERO (Aerodrome)",
+            "$0.4260",
+            "+19.5%",
+            "+25.6%",
+            "+1.7%",
+            "$34M / #121",
+            "BREAKOUT"
+          ],
+          [
+            "NEAR",
+            "$2.47",
+            "+17.4%",
+            "+16.3%",
+            "−0.1%",
+            "$512M / #31",
+            "TRENDING+UP"
+          ],
+          [
+            "XLM (Stellar)",
+            "$0.2129",
+            "+16.3%",
+            "+5.2%",
+            "+4.3%",
+            "$342M / #16",
+            "MAJOR"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol/Rank"
+        ],
+        "rows": [
+          [
+            "BEAT (Audiera)",
+            "$4.15",
+            "−24.3%",
+            "−7.4%",
+            "−2.1%",
+            "$53M / #63"
+          ],
+          [
+            "VELVET",
+            "$0.3329",
+            "−15.4%",
+            "−2.1%",
+            "+0.8%",
+            "$23M / #216"
+          ],
+          [
+            "GWEI (ETHGas)",
+            "$0.1488",
+            "−10.8%",
+            "+4.5%",
+            "+1.4%",
+            "$9M / #136"
+          ]
+        ]
+      }
+    },
+    "text_losers_note": {
+      "type": "Text",
+      "props": {
+        "text": "real losers are scarce — the rest of the bottom-10 is under −5%, mostly flat in a green tape.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_trending": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h3"
+      }
+    },
+    "table_trending": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Rank",
+          "Price",
+          "24h",
+          "Status"
+        ],
+        "rows": [
+          [
+            "ZEC (Zcash)",
+            "#14",
+            "$532",
+            "+24.5%",
+            ""
+          ],
+          [
+            "HYPE (Hyperliquid)",
+            "#10",
+            "$67.25",
+            "+10.0%",
+            ""
+          ],
+          [
+            "PENGU (Pudgy Penguins)",
+            "#115",
+            "$0.007205",
+            "+9.3%",
+            ""
+          ],
+          [
+            "GRAM (ex-Toncoin)",
+            "#22",
+            "$1.78",
+            "+2.5%",
+            ""
+          ],
+          [
+            "SIREN",
+            "#533",
+            "$0.0550",
+            "−33.7%",
+            "TRENDING+DOWN"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "stack_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_zec",
+        "notable_breakouts",
+        "notable_h",
+        "notable_siren"
+      ]
+    },
+    "notable_zec": {
+      "type": "Text",
+      "props": {
+        "text": "ZEC: trending + #14 major, accelerated from +15.9% this morning to +24.5% on $866M vol — privacy rotation has legs, short-squeeze + clean audit tape behind it.",
+        "variant": "body"
+      }
+    },
+    "notable_breakouts": {
+      "type": "Text",
+      "props": {
+        "text": "four BREAKOUTs at once (ZRO/WLD/AERO + GRASS off-list) — 24h and 7d both green, sustained not flash.",
+        "variant": "body"
+      }
+    },
+    "notable_h": {
+      "type": "Text",
+      "props": {
+        "text": "H: +28.5% but 7d −56.9% — FADE, relief spike inside a brutal downtrend, 1h +7.4% still hot.",
+        "variant": "body"
+      }
+    },
+    "notable_siren": {
+      "type": "Text",
+      "props": {
+        "text": "SIREN: −33.7% trending — second straight session capitulating (was −47.7% AM).",
+        "variant": "body"
+      }
+    }
+  }
+}

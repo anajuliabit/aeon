@@ -1,0 +1,175 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-15"
+      },
+      "children": [
+        "text_intro",
+        "sep1",
+        "heading_tracked",
+        "group1",
+        "group2",
+        "group3",
+        "group4",
+        "sep2",
+        "text_closing",
+        "sep3",
+        "text_status"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "cyrilXBT owns the list with two long-form pieces (137k + 37k views) — but both are X-premium gated, so the signal is \"he's shipping deep threads people pay attention to,\" not the contents. Only readable substance is Flowslikeosmo's weekly watchlist."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_tracked": {
+      "type": "Heading",
+      "props": {
+        "text": "Tracked list (1642770456720683008)",
+        "level": "h3"
+      }
+    },
+    "group1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "Long-form article, list-dominant by 9x on views (137k); body paywalled (HTTP 402) so contents unverified — flagging the reach, not faking the take",
+        "likes": 304,
+        "retweets": 48
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2065984221756219807"
+      }
+    },
+    "group2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "Second gated article same day (37k views); two premium drops in 24h = he's the list's center of gravity right now",
+        "likes": 135,
+        "retweets": 15
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2066307561792610490"
+      }
+    },
+    "group3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "Weekly watchlist: $INDY (Cardano CDP, fees +1,495% 30d, price +38% wk), yieldbasis (fees +156% wk, no token), $RAIL privacy (+24% wk). The \"no token yet\" names are the real tell — flagging pre-listing fee growth, not chasing pumps",
+        "likes": 32,
+        "retweets": 4
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2066248308713230387"
+      }
+    },
+    "group4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "link4"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "\"War's over, coins due for a pump\" — the list is trading the US-Iran peace-deal headline as risk-on fuel, but Polymarket had that deal at 11% yesterday; positioning ahead of a story that already faded",
+        "likes": 24,
+        "retweets": 0
+      }
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2066278829325201418"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_closing": {
+      "type": "Text",
+      "props": {
+        "text": "Rest of the list was low-signal one-liner replies — quiet day under the top four."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(10) | status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -75,6 +75,48 @@ chains:
 ### Standalone composition (legacy)
 A skill can still inline-execute another skill by reading its SKILL.md. Prefer chains when you need parallelism, output passing, or error handling.
 
+## Investment Advisor (scripts/advisor/)
+
+Advisory-only LLM swarm: reads the `investiments` portfolio snapshot + market
+data, writes ranked recommendations, stages directional calls as tracked picks.
+Lives on **`main`** (not feature branches). Scheduled via `.github/workflows/`:
+`investment-advisor.yml` (daily 13:00 UTC) + `weekly-conviction.yml`.
+
+- **Orchestrator:** `scripts/advisor/run.sh` — prefetch → 5 analysts → debate →
+  PM synthesis → short-term trades → POST report + picks + Telegram.
+  `run-weekly.sh` = weekly conviction.
+- **Inputs:** `scripts/advisor/prefetch-data.sh` writes `.investiments-cache/advisor/*.json`
+  (keyless feeds + the portfolio snapshot via Railway Basic auth).
+- **LLM:** `scripts/llm-claude.sh` (Claude OAuth, primary) → falls back to
+  `scripts/llm.sh` (Virtuals, `claude-opus-4-8`). Runs OUTSIDE the Claude sandbox.
+- **Prompts:** `advisor/prompts/*.md`. Symbol→CoinGecko map: `advisor/token-refs.json`.
+- **Picks:** directional recs (increase→long, decrease/hedge→short) with a level
+  or snapshot spot POST to investiments `/api/picks`; stablecoins skipped. Daily
+  ids are `<date>-advisor-daily-<sym>`.
+- **Short-term trades:** `run.sh` step 5a — 3 stages: (1) deterministic jq
+  shortlist of liquid, non-held, non-stable movers from `cg-markets` (vol/mcap
+  ≥0.05, top |7d| moves); (2) per-candidate **Grok `x_search`** (news/X/catalysts,
+  last 7d) — fundamentals/news leg; (3) one LLM decision (`advisor/prompts/short_term_trades.md`)
+  over momentum + fundamentals (`protocols`/`fees`) + news → a menu of **up to 5
+  trades** (mix of **LONG / SHORT**, ranked best-first; shortlist is 8 candidates),
+  side-correct levels. **Sizing** is deterministic (not LLM): a short-term-risk
+  budget (`ST_RISK_PCT`, default 5% of net worth) is split across the trades
+  conviction-weighted (HIGH = 2× MEDIUM) → `sizeUsd`/`sizePctNet` per trade, used
+  as the pick `notionalUsd`. Surfaced in the Telegram
+  "🎯 Short-term trades" block + `report.shortTermTrades`, staged as
+  `<date>-advisor-sttrade-<sym>` picks. Complements the daily `token-pick`.
+
+### Required env (GitHub Actions secrets)
+`DASHBOARD_PASSWORD` (+ `DASHBOARD_USER=admin`) for the snapshot fetch + POSTs,
+`VIRTUALS_API_KEY`, `CLAUDE_CODE_OAUTH_TOKEN`, `XAI_API_KEY` (X sentiment),
+`TELEGRAM_*`. Missing `DASHBOARD_PASSWORD` → run aborts at the snapshot gate.
+
+### Local validation
+- `ADVISOR_DRY_RUN=1 ./scripts/advisor/run.sh` — full pipeline, prints report /
+  picks / Telegram to stdout, NO POSTs or Telegram sends.
+- **Before shipping any `scripts/advisor/*` change, run `bash scripts/advisor/selftest.sh`**
+  (offline jq/python fixtures; exits non-zero on failure — the CI gate).
+
 ## Notifications
 
 Always use `./notify "message"` for notifications. It fans out to every configured channel:

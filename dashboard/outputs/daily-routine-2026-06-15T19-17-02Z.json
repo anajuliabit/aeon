@@ -1,0 +1,147 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "daily-routine 06-15"
+      },
+      "children": [
+        "content_stack"
+      ]
+    },
+    "content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_badge",
+        "main_heading",
+        "sep1",
+        "metrics_stack",
+        "sep2",
+        "items_stack",
+        "sep3",
+        "ref_link"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "secondary"
+      }
+    },
+    "main_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "risk-on snaps back",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "risk_progress",
+        "btc_section"
+      ]
+    },
+    "risk_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 86,
+        "max": 100,
+        "label": "Risk Sentiment: green"
+      }
+    },
+    "btc_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc_stat",
+        "btc_context"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "btc",
+        "value": "65.7k",
+        "delta": "+2.2%",
+        "trend": "up"
+      }
+    },
+    "btc_context": {
+      "type": "Text",
+      "props": {
+        "text": "on hormuz deal",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "items_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "zec_item",
+        "harnessx_item",
+        "curl_item"
+      ]
+    },
+    "zec_item": {
+      "type": "Text",
+      "props": {
+        "text": "zec: short-squeeze"
+      }
+    },
+    "harnessx_item": {
+      "type": "Text",
+      "props": {
+        "text": "harnessx: paper"
+      }
+    },
+    "curl_item": {
+      "type": "Text",
+      "props": {
+        "text": "curl: vuln-report pause"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ref_link": {
+      "type": "Link",
+      "props": {
+        "label": "See detailed message: .pending-notify/daily-routine-msg.md",
+        "href": ".pending-notify/daily-routine-msg.md"
+      }
+    }
+  }
+}

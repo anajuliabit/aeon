@@ -1,0 +1,197 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-06-15"
+      },
+      "children": [
+        "text-intro",
+        "separator-1",
+        "tweet-stack-1",
+        "tweet-stack-2",
+        "tweet-stack-3",
+        "tweet-stack-4",
+        "separator-2",
+        "text-closing",
+        "metadata-section"
+      ]
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "cyrilXBT owns the list with two long-form pieces (137k + 37k views) — but both are X-premium gated, so the signal is \"he's shipping deep threads people pay attention to,\" not the contents. Only readable substance is Flowslikeosmo's weekly watchlist.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet-stack-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "text": "long-form article, list-dominant by 9x on views (137k); body paywalled (HTTP 402) so contents unverified — flagging the reach, not faking the take",
+        "likes": 304,
+        "retweets": 48
+      },
+      "children": []
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2065984221756219807"
+      },
+      "children": []
+    },
+    "tweet-stack-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "text": "second gated article same day (37k views); two premium drops in 24h = he's the list's center of gravity right now",
+        "likes": 135,
+        "retweets": 15
+      },
+      "children": []
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2066307561792610490"
+      },
+      "children": []
+    },
+    "tweet-stack-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "text": "weekly watchlist: $INDY (Cardano CDP, fees +1,495% 30d, price +38% wk), yieldbasis (fees +156% wk, no token), $RAIL privacy (+24% wk). The \"no token yet\" names are the real tell — flagging pre-listing fee growth, not chasing pumps",
+        "likes": 32,
+        "retweets": 4
+      },
+      "children": []
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2066248308713230387"
+      },
+      "children": []
+    },
+    "tweet-stack-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4",
+        "link-4"
+      ]
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "text": "\"war's over, coins due for a pump\" — the list is trading the US-Iran peace-deal headline as risk-on fuel, but Polymarket had that deal at 11% yesterday; positioning ahead of a story that already faded",
+        "likes": 24,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2066278829325201418"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-closing": {
+      "type": "Text",
+      "props": {
+        "text": "Rest of the list was low-signal one-liner replies — quiet day under the top four.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "metadata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-status",
+        "text-sources"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(10)",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

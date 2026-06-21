@@ -1,0 +1,293 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-15 09:00Z",
+        "description": "Crypto, macro, and tradfi market context"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-crypto",
+        "sep-1",
+        "section-geo",
+        "sep-2",
+        "section-tradfi",
+        "sep-3",
+        "section-new",
+        "sep-4",
+        "section-bridge"
+      ]
+    },
+    "section-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-crypto",
+        "stat-btc",
+        "text-crypto-1",
+        "text-crypto-2",
+        "text-crypto-3",
+        "stat-hype-inflows",
+        "stat-hype-annualized",
+        "text-crypto-4"
+      ]
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$65k",
+        "delta": "Back above on US-Iran relief"
+      },
+      "children": []
+    },
+    "text-crypto-1": {
+      "type": "Text",
+      "props": {
+        "text": "$250m short liquidations"
+      },
+      "children": []
+    },
+    "text-crypto-2": {
+      "type": "Text",
+      "props": {
+        "text": "ETF outflows steadying; whales done selling"
+      },
+      "children": []
+    },
+    "text-crypto-3": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid leads mindshare"
+      },
+      "children": []
+    },
+    "stat-hype-inflows": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE ETF",
+        "value": "$161m",
+        "delta": "Inflows"
+      },
+      "children": []
+    },
+    "stat-hype-annualized": {
+      "type": "Stat",
+      "props": {
+        "label": "Hyperliquid annualized revenue",
+        "value": "$1b"
+      },
+      "children": []
+    },
+    "text-crypto-4": {
+      "type": "Text",
+      "props": {
+        "text": "HIP-3 perps expanding into equities and commodities"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-geo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-geo",
+        "text-geo-1",
+        "text-geo-2"
+      ]
+    },
+    "heading-geo": {
+      "type": "Heading",
+      "props": {
+        "text": "GEO",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text-geo-1": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran interim deal to reopen the Strait of Hormuz"
+      },
+      "children": []
+    },
+    "text-geo-2": {
+      "type": "Text",
+      "props": {
+        "text": "Oil premium draining from the tape"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-tradfi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-tradfi",
+        "stat-oil",
+        "text-tradfi-1",
+        "text-tradfi-2",
+        "text-tradfi-3",
+        "text-tradfi-4"
+      ]
+    },
+    "heading-tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat-oil": {
+      "type": "Stat",
+      "props": {
+        "label": "Oil",
+        "value": "$80"
+      },
+      "children": []
+    },
+    "text-tradfi-1": {
+      "type": "Text",
+      "props": {
+        "text": "Treasury rally underway"
+      },
+      "children": []
+    },
+    "text-tradfi-2": {
+      "type": "Text",
+      "props": {
+        "text": "Yields compressing sharply"
+      },
+      "children": []
+    },
+    "text-tradfi-3": {
+      "type": "Text",
+      "props": {
+        "text": "Dollar softens"
+      },
+      "children": []
+    },
+    "text-tradfi-4": {
+      "type": "Text",
+      "props": {
+        "text": "VIX slips"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-new",
+        "text-new-1",
+        "text-new-2",
+        "text-new-3",
+        "text-new-4"
+      ]
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text-new-1": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE ETF inflows + HIP-3 expansion"
+      },
+      "children": []
+    },
+    "text-new-2": {
+      "type": "Text",
+      "props": {
+        "text": "On-chain gaming split: Kintara up, Fishing Frenzy dead"
+      },
+      "children": []
+    },
+    "text-new-3": {
+      "type": "Text",
+      "props": {
+        "text": "Solana reframed dominance → pressure on alternatives"
+      },
+      "children": []
+    },
+    "text-new-4": {
+      "type": "Text",
+      "props": {
+        "text": "Dollar flipped strength → soft in 12h"
+      },
+      "children": []
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-bridge": {
+      "type": "Alert",
+      "props": {
+        "title": "BRIDGE — Unified Market Thesis",
+        "message": "The whole tape is one trade: Hormuz deal → oil down → BTC $65k. Crypto item 1 and tradfi item 1 are the same headline on two rails. Yesterday: this deal effectively failed. Today: interim deal. Risk-on is real but single-catalyst—one headline reversal unwinds everything. BOJ Tuesday is the test for whether the softer-dollar leg sticks.",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}

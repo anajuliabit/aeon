@@ -1,0 +1,216 @@
+{
+  "root": "card_health",
+  "state": {},
+  "elements": {
+    "card_health": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-06-19"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_critical",
+        "sep_1",
+        "heading_critical",
+        "text_critical_skills",
+        "sep_2",
+        "heading_degraded",
+        "progress_reg_monitor",
+        "progress_skill_analytics",
+        "progress_security_digest",
+        "text_degraded_more",
+        "sep_3",
+        "heading_warning",
+        "text_warning_skills",
+        "sep_4",
+        "heading_nodata",
+        "text_nodata_skills",
+        "sep_5",
+        "heading_healthy",
+        "stat_healthy_count",
+        "sep_6",
+        "heading_summary",
+        "stack_summary"
+      ]
+    },
+    "alert_critical": {
+      "type": "Alert",
+      "props": {
+        "message": "HEALTH: CRITICAL (3 skills failing)",
+        "type": "error"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_critical": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 Critical",
+        "level": "h3"
+      }
+    },
+    "text_critical_skills": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview (6 fails), token-pick (6 fails), search-skill (4 fails)",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 Degraded",
+        "level": "h3"
+      }
+    },
+    "progress_reg_monitor": {
+      "type": "Progress",
+      "props": {
+        "label": "reg-monitor",
+        "value": 7,
+        "max": 100
+      }
+    },
+    "progress_skill_analytics": {
+      "type": "Progress",
+      "props": {
+        "label": "skill-analytics",
+        "value": 9,
+        "max": 100
+      }
+    },
+    "progress_security_digest": {
+      "type": "Progress",
+      "props": {
+        "label": "security-digest",
+        "value": 24,
+        "max": 100
+      }
+    },
+    "text_degraded_more": {
+      "type": "Text",
+      "props": {
+        "text": "+7 more degraded skills",
+        "variant": "caption"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_warning": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 Warning",
+        "level": "h3"
+      }
+    },
+    "text_warning_skills": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest (2 fails), heartbeat (1 fail)",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ No Data",
+        "level": "h3"
+      }
+    },
+    "text_nodata_skills": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard, fork-skill-gap",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 Healthy",
+        "level": "h3"
+      }
+    },
+    "stat_healthy_count": {
+      "type": "Stat",
+      "props": {
+        "value": "27",
+        "label": "skills"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "stack_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_open_issues",
+        "stat_resolved"
+      ]
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "10"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine 06-15"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_status",
+        "stack_market",
+        "separator_1",
+        "stack_items",
+        "separator_2",
+        "text_pending"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Staged",
+        "level": "h2"
+      }
+    },
+    "stack_market": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_market",
+        "badge_sentiment",
+        "stat_health",
+        "stat_btc",
+        "text_btc_context"
+      ]
+    },
+    "heading_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Recap",
+        "level": "h3"
+      }
+    },
+    "badge_sentiment": {
+      "type": "Badge",
+      "props": {
+        "text": "Risk-on snaps back",
+        "variant": "default"
+      }
+    },
+    "stat_health": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Health",
+        "value": "86/100"
+      }
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$65.7k",
+        "delta": "+2.2%",
+        "trend": "up"
+      }
+    },
+    "text_btc_context": {
+      "type": "Text",
+      "props": {
+        "text": "Context: on Hormuz deal",
+        "variant": "caption"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_items",
+        "badge_zec",
+        "badge_harness",
+        "alert_curl"
+      ]
+    },
+    "heading_items": {
+      "type": "Heading",
+      "props": {
+        "text": "Notes",
+        "level": "h3"
+      }
+    },
+    "badge_zec": {
+      "type": "Badge",
+      "props": {
+        "text": "ZEC short-squeeze",
+        "variant": "default"
+      }
+    },
+    "badge_harness": {
+      "type": "Badge",
+      "props": {
+        "text": "HarnesX paper",
+        "variant": "default"
+      }
+    },
+    "alert_curl": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Curl vulnerability report",
+        "message": "Paused"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_pending": {
+      "type": "Text",
+      "props": {
+        "text": "See .pending-notify/daily-routine-msg.md for full details",
+        "variant": "caption"
+      }
+    }
+  }
+}

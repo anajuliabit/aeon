@@ -1,0 +1,327 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Graph"
+      },
+      "children": [
+        "heading_main",
+        "separator_1",
+        "stack_content",
+        "separator_2",
+        "link_pr"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Graph updated",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_new_skills",
+        "section_new_enabled",
+        "section_deps"
+      ]
+    },
+    "section_new_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_new_skills",
+        "stack_badges_skills"
+      ]
+    },
+    "label_new_skills": {
+      "type": "Heading",
+      "props": {
+        "text": "New Skills",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "stack_badges_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_btc_levels",
+        "badge_reppo_voter",
+        "badge_thought_review"
+      ]
+    },
+    "badge_btc_levels": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_reppo_voter": {
+      "type": "Badge",
+      "props": {
+        "text": "reppo-voter",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_thought_review": {
+      "type": "Badge",
+      "props": {
+        "text": "thought-review",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "section_new_enabled": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_new_enabled",
+        "text_new_enabled_count",
+        "grid_enabled_skills"
+      ]
+    },
+    "label_new_enabled": {
+      "type": "Heading",
+      "props": {
+        "text": "New Enabled",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "text_new_enabled_count": {
+      "type": "Text",
+      "props": {
+        "text": "16 total",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "grid_enabled_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_aixbt_pulse",
+        "badge_btc_levels_enabled",
+        "badge_deal_flow",
+        "badge_defi_monitor",
+        "badge_fork_cohort",
+        "badge_fork_skill_digest",
+        "badge_fork_skill_gap",
+        "badge_list_digest",
+        "text_plus_8"
+      ]
+    },
+    "badge_aixbt_pulse": {
+      "type": "Badge",
+      "props": {
+        "text": "aixbt-pulse",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_btc_levels_enabled": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_deal_flow": {
+      "type": "Badge",
+      "props": {
+        "text": "deal-flow",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_defi_monitor": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-monitor",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_fork_cohort": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_fork_skill_digest": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-digest",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_fork_skill_gap": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_list_digest": {
+      "type": "Badge",
+      "props": {
+        "text": "list-digest",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text_plus_8": {
+      "type": "Text",
+      "props": {
+        "text": "+8 more",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "section_deps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_deps",
+        "grid_deps",
+        "removed_details"
+      ]
+    },
+    "label_deps": {
+      "type": "Heading",
+      "props": {
+        "text": "Dependencies",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "grid_deps": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_new_deps",
+        "stat_removed_deps"
+      ]
+    },
+    "stat_new_deps": {
+      "type": "Stat",
+      "props": {
+        "label": "New Dependencies",
+        "value": "+160"
+      },
+      "children": []
+    },
+    "stat_removed_deps": {
+      "type": "Stat",
+      "props": {
+        "label": "Removed Dependencies",
+        "value": "12"
+      },
+      "children": []
+    },
+    "removed_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_removed_label",
+        "badge_reppo_swarm",
+        "badge_chain",
+        "badge_off_ci"
+      ]
+    },
+    "text_removed_label": {
+      "type": "Text",
+      "props": {
+        "text": "Examples:",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "badge_reppo_swarm": {
+      "type": "Badge",
+      "props": {
+        "text": "reppo-swarm",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_chain": {
+      "type": "Badge",
+      "props": {
+        "text": "chain",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_off_ci": {
+      "type": "Badge",
+      "props": {
+        "text": "off-CI",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #112",
+        "href": "https://github.com/anajuliabit/aeon/pull/112",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

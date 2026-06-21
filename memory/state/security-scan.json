@@ -1,27 +1,29 @@
 {
-  "generated_at": "2026-06-01",
+  "generated_at": "2026-06-15",
   "scope": "full corpus",
   "scanner_mode": "inline_grep_fallback",
-  "scanner_mode_reason": "scan.sh execution blocked by sandbox approval gate (same as 2026-05-25 baseline); inline Grep over scan.sh's HIGH/MEDIUM/LOW pattern library + manual workflow-injection audit per SKILL.md sandbox fallback",
-  "exit_status": "SECURITY_SCAN_NEW",
+  "scanner_mode_reason": "scan.sh execution blocked by sandbox approval gate (same as 2026-05-25 and 2026-06-01 runs); inline Grep over scan.sh's HIGH/MEDIUM/LOW pattern library + manual GitHub Actions script-injection audit of every ${{ }} expression in run: blocks, per SKILL.md step 4 + sandbox fallback. Never silently skipped.",
+  "exit_status": "SECURITY_SCAN_RESOLVED",
   "delta_summary": {
-    "new_high": 2,
-    "resolved_high": 1,
+    "new_high": 0,
+    "resolved_high": 2,
     "persistent_high": 4,
     "new_medium": 0,
-    "new_low": 0
+    "new_low": 0,
+    "resolved_note": "The 2 resolved HIGH (chain-runner.yml:41 + :416/now :368, ISS-017) cleared vs the STALE 2026-06-01 state snapshot only. ISS-017 was actually fixed 2026-06-03 (branch focus/iss-017-chain-runner-env) and is already in INDEX.md ## Resolved. This run refreshes the state file to match. No operator notification warranted -- already-known resolution, no new HIGH."
   },
   "counts": {
-    "files_scanned": 145,
-    "skills_scanned": 125,
-    "workflows_scanned": 5,
-    "scripts_scanned": 14,
-    "skill_companion_scripts_scanned": 1,
-    "high_post_filter": 6,
-    "medium_post_filter": 14,
+    "files_scanned": 152,
+    "skills_scanned": 123,
+    "workflows_scanned": 7,
+    "repo_scripts_scanned": 13,
+    "advisor_scripts_scanned": 8,
+    "companion_scripts_scanned": 1,
+    "high_post_filter": 4,
+    "medium_post_filter": 15,
     "low_post_filter": 4
   },
-  "note": "First delta-eligible run after 2026-05-25 bootstrap. messages.yml:578 RESOLVED via env: indirection fix (lines 587-591 bind _INPUT_MESSAGE/_EVENT_ACTION/_PAYLOAD_MESSAGE/_INPUT_SOURCE and shell reads $_EVENT_NAME etc.) — same shape as canonical 2026-04-11 fix. chain-runner.yml lines 41+416 NEW HIGH (filed as ISS-017). aeon.yml lines 86/94/96/725 PERSISTENT (line :725 was :718 in baseline — code drift in same file, same anti-pattern). aeon.yml:725 fingerprint differs from :718 but is logically the same finding. Sandbox blocked direct ./skills/skill-security-scan/scan.sh execution (Bash permission error), inline Grep fallback applied — never silently skipped.",
+  "note": "No NEW HIGH findings this run. New surface since baseline (investment advisor: scripts/advisor/*.sh, investment-advisor.yml, weekly-conviction.yml) audited clean -- no run:-block injection, external Grok/market data handled as jq-parsed data not shell, secrets flow only to intended API hosts. scripts/advisor/selftest.sh:31 'rm -rf /' is a defensive test fixture (string fed through allowlist case defaulting to hold), never executed. ISS-017 (chain-runner.yml) confirmed fixed via env: _CHAIN indirection at both sites. aeon.yml 4 HIGH persistent (workflow_dispatch-gated, low real risk, baseline-noted). Obfuscation sweep clean (no zero-width/bidi/fromCharCode/base64-to-shell/SSRF-webhook hosts).",
   "real_high_findings_after_filtering": [
     {
       "file": ".github/workflows/aeon.yml",
@@ -30,7 +32,7 @@
       "severity": "high",
       "fingerprint": "aeon.yml:86:inputs.skill",
       "delta": "PERSISTENT",
-      "note": "Low real risk (workflow_dispatch requires write access) but anti-pattern unchanged since baseline."
+      "note": "echo name=${{ inputs.skill }}. Low real risk (workflow_dispatch/workflow_call require write access). Anti-pattern unchanged since baseline."
     },
     {
       "file": ".github/workflows/aeon.yml",
@@ -52,90 +54,41 @@
     },
     {
       "file": ".github/workflows/aeon.yml",
-      "line": 725,
+      "line": 849,
       "pattern": "steps.work.outputs.label interpolated into run: block",
       "severity": "high",
-      "fingerprint": "aeon.yml:725:steps.work.outputs.label",
+      "fingerprint": "aeon.yml:849:steps.work.outputs.label",
       "delta": "PERSISTENT_LINE_DRIFT",
-      "note": "Was aeon.yml:718 at baseline — code added above shifted line. Same anti-pattern, derived from steps.skill.outputs.name → inputs.skill."
-    },
+      "note": "Was aeon.yml:725 at 06-01 snapshot (and :718 at baseline). Code drift shifted the line; same anti-pattern, derived from steps.skill.outputs.name -> inputs.skill."
+    }
+  ],
+  "resolved_high_findings_this_run": [
     {
       "file": ".github/workflows/chain-runner.yml",
       "line": 41,
       "pattern": "inputs.chain interpolated into run: block",
       "severity": "high",
       "fingerprint": "chain-runner.yml:41:inputs.chain",
-      "delta": "NEW",
+      "delta": "RESOLVED",
       "iss": "ISS-017",
-      "note": "Anti-pattern matches 2026-04-11 incident class. Low real risk (workflow_dispatch requires write auth). Fix: env: indirection like messages.yml:587-595."
+      "note": "Now bound via env: _CHAIN indirection; shell reads CHAIN=$_CHAIN. Canonical messages.yml fix shape. ISS-017 closed 2026-06-03. Resolution relative to stale 06-01 state file only."
     },
     {
       "file": ".github/workflows/chain-runner.yml",
-      "line": 416,
-      "pattern": "inputs.chain interpolated into run: block",
+      "line": 368,
+      "pattern": "inputs.chain interpolated into run: block (was line 416 at 06-01)",
       "severity": "high",
       "fingerprint": "chain-runner.yml:416:inputs.chain",
-      "delta": "NEW",
-      "iss": "ISS-017",
-      "note": "Second occurrence in the same file (Update cron state step). Same fix shape."
-    }
-  ],
-  "resolved_high_findings_this_run": [
-    {
-      "file": ".github/workflows/messages.yml",
-      "line": 578,
-      "pattern": "github.event.action interpolated directly into run: block",
-      "severity": "high",
-      "fingerprint": "messages.yml:578:github.event.action",
       "delta": "RESOLVED",
-      "note": "Fixed via env: indirection — lines 586-591 now bind _INPUT_MESSAGE/_INPUT_SOURCE/_EVENT_NAME/_EVENT_ACTION/_PAYLOAD_MESSAGE; shell at lines 592+ reads $_EVENT_NAME / $_PAYLOAD_MESSAGE etc. Canonical 2026-04-11 fix shape applied. No open ISS was filed for this finding (baseline was bootstrap mode), so no INDEX.md row to close."
+      "iss": "ISS-017",
+      "note": "Second site (Update cron state step), now line 368, env: _CHAIN indirection. Same fix. ISS-017 closed 2026-06-03."
     }
   ],
-  "code_fence_downgraded_findings": [
-    {
-      "file": "skills/monitor-runners/SKILL.md",
-      "lines": [74, 77],
-      "pattern": "eval \"${N}_TREND_OK=1\"",
-      "severity_pre_downgrade": "high",
-      "severity_post_downgrade": "medium",
-      "note": "Inside fenced bash code block (lines 67-83 wrapped by ```bash...```). $NETWORKS is a controlled internal list, not user input. Documentation example, not an executable skill body."
-    }
+  "new_surface_audited_clean": [
+    {"file": ".github/workflows/investment-advisor.yml", "note": "NEW since baseline. No ${{ }} -> run: injection."},
+    {"file": ".github/workflows/weekly-conviction.yml", "note": "NEW since baseline. No ${{ }} -> run: injection."},
+    {"files": "scripts/advisor/*.sh (8)", "note": "NEW since baseline. curl secrets -> intended hosts only (Railway investiments, CoinGecko, DefiLlama, x.ai, Telegram, Hyperliquid, GeckoTerminal). External Grok/market data handled as jq-parsed data, not shell-interpolated."},
+    {"file": "scripts/advisor/selftest.sh", "line": 31, "note": "rm -rf / is a defensive test-fixture string fed through an allowlist case defaulting to hold. Never executed. real_risk: false."}
   ],
-  "low_real_risk_persistent": [
-    {"file": ".github/workflows/sync-upstream.yml", "lines": [66, 73, 74, 75], "note": "steps.merge.outputs.branch/conflict + steps.diff.outputs.ahead direct in run:. Values are internally computed (date-derived branch name, boolean string, numeric count) — not user-controllable. Anti-pattern but no exploit path."},
-    {"file": ".github/workflows/replicate-oneoff.yml", "line": 2, "note": "run-name display interpolation, not executed shell. Inputs at lines 52-55 properly bound via env: indirection."}
-  ],
-  "findings_summary_by_file": [
-    {"file": "scripts/postprocess-reppo.sh", "high": 9, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline — escaped backticks in echo strings."},
-    {"file": "scripts/prefetch-xai.sh", "high": 2, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline — Vercel API calls with env-var query params."},
-    {"file": "scripts/postprocess-admanage.sh", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "scripts/postprocess-admanage-create.sh", "high": 2, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "scripts/postprocess-replicate.sh", "high": 2, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "scripts/postprocess-devto.sh", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "NEW since baseline. POST to dev.to/api/articles with api-key header — standard pattern."},
-    {"file": "scripts/postprocess-farcaster.sh", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "NEW since baseline. POST to api.neynar.com with x-api-key header — standard pattern."},
-    {"file": "scripts/prefetch-hl.sh", "high": 3, "medium": 0, "low": 0, "real_risk": false, "note": "NEW since baseline. Hyperliquid public API leaderboard + fills — no auth header."},
-    {"file": "scripts/prefetch-reppo.sh", "high": 0, "medium": 0, "low": 0, "real_risk": false, "note": "NEW since baseline. Clean."},
-    {"file": "scripts/prefetch-vibecoding.sh", "high": 3, "medium": 0, "low": 0, "real_risk": false, "note": "NEW since baseline. Reddit oauth.reddit.com + old.reddit.com with bearer token — ISS-015 fix path."},
-    {"file": "scripts/generate-feed.sh", "high": 0, "medium": 0, "low": 0, "real_risk": false, "note": "NEW since baseline. Pure local file I/O."},
-    {"file": "scripts/reppo-lock.sh", "high": 0, "medium": 0, "low": 0, "real_risk": false, "note": "NEW since baseline. Pure local file I/O for chain locking."},
-    {"file": "scripts/sync-site-data.sh", "high": 0, "medium": 0, "low": 0, "real_risk": false, "note": "NEW since baseline. Pure local file I/O."},
-    {"file": "scripts/sync-upstream.sh", "high": 0, "medium": 1, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "notify", "high": 0, "medium": 1, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "skills/skill-security-scan/scan.sh", "high": 9, "medium": 0, "low": 0, "real_risk": false, "note": "Scanner's own pattern definitions — self-reference."},
-    {"file": ".github/workflows/messages.yml", "high": 8, "medium": 1, "low": 0, "real_risk_count": 0, "note": "RESOLVED line 578 finding via env: indirection. Other matches are legitimate curl-with-token calls."},
-    {"file": ".github/workflows/aeon.yml", "high": 11, "medium": 1, "low": 0, "real_risk_count": 4, "note": "PERSISTENT lines 86/94/96/725 anti-pattern (workflow_dispatch-gated, low real risk). Other matches legitimate."},
-    {"file": ".github/workflows/chain-runner.yml", "high": 2, "medium": 0, "low": 0, "real_risk_count": 2, "note": "NEW HIGH lines 41 + 416 — ISS-017."},
-    {"file": ".github/workflows/replicate-oneoff.yml", "high": 0, "medium": 0, "low": 0, "real_risk_count": 0, "note": "NEW since baseline. Inputs properly bound via env: indirection; run-name display interpolation only."},
-    {"file": ".github/workflows/sync-upstream.yml", "high": 0, "medium": 0, "low": 0, "real_risk_count": 0, "note": "Internal step outputs (branch/conflict/ahead) — not user-controllable, low real risk."},
-    {"file": "skills/security-digest/SKILL.md", "high": 5, "medium": 0, "low": 0, "real_risk": false, "note": "Code-fence downgrade + baseline-suppressed."},
-    {"file": "skills/skill-security-scan/SKILL.md", "high": 17, "medium": 0, "low": 0, "real_risk": false, "note": "Inline backtick template paths + 6 prompt-override patterns in Threat Categories — baseline-suppressed."},
-    {"file": "skills/monitor-runners/SKILL.md", "high": 2, "medium": 0, "low": 0, "real_risk": false, "note": "Code-fence downgrade applied — eval inside ```bash fence, $NETWORKS is controlled internal list."},
-    {"file": "skills/competitor-launch-radar/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Prompt-override quoted in security-advice section."},
-    {"file": "skills/fork-release-tracker/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "skills/research-brief/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "skills/deep-research/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "skills/last30/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "skills/repo-actions/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline."},
-    {"file": "skills/fork-skill-gap/SKILL.md", "high": 1, "medium": 0, "low": 0, "real_risk": false, "note": "Same as baseline — $(rm -rf /) inside JSON example demonstrating data-vs-code separation."}
-  ]
+  "medium_low_persistent_note": "All base64 -d matches decode GitHub API contents responses (API returns base64) or aeon.yml:359 chunked Telegram message into a jq-built JSON payload. None pipe to a shell -> no decode-then-execute. Path-traversal/force-push MEDIUM matches are documentation or internally-computed non-user-controllable step outputs. Unchanged from baseline."
 }

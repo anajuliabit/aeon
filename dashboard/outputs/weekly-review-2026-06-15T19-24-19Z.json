@@ -1,0 +1,166 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review — 2026-06-15"
+      },
+      "children": [
+        "alert_action",
+        "sep1",
+        "heading_health",
+        "stat_health",
+        "progress_health",
+        "text_prior",
+        "heading_improvements",
+        "stack_improvements",
+        "sep2",
+        "heading_failures",
+        "alert_failures",
+        "sep3",
+        "heading_review",
+        "link_review"
+      ]
+    },
+    "alert_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Top Action: ISS-019 (weekly-limit-wave)",
+        "message": "File in memory/issues/ + INDEX.md by 2026-06-17 (6d overdue) — Fix locus: aeon.yml:508"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Health Overview",
+        "level": "h2"
+      }
+    },
+    "stat_health": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "83.4%",
+        "delta": "+21pp",
+        "trend": "up"
+      }
+    },
+    "progress_health": {
+      "type": "Progress",
+      "props": {
+        "value": 83.4,
+        "max": 100,
+        "label": "262/314 skills ok"
+      }
+    },
+    "text_prior": {
+      "type": "Text",
+      "props": {
+        "text": "vs prior week's 62.3%",
+        "variant": "muted"
+      }
+    },
+    "heading_improvements": {
+      "type": "Heading",
+      "props": {
+        "text": "Improvements",
+        "level": "h3"
+      }
+    },
+    "stack_improvements": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_virtuals",
+        "text_limit",
+        "text_issue",
+        "text_reppo",
+        "text_chain",
+        "text_advisor"
+      ]
+    },
+    "text_virtuals": {
+      "type": "Text",
+      "props": {
+        "text": "Virtuals fallback shipped (PRs #106/#107)"
+      }
+    },
+    "text_limit": {
+      "type": "Text",
+      "props": {
+        "text": "Absorbed the weekly-limit blast on 5 cg skills"
+      }
+    },
+    "text_issue": {
+      "type": "Text",
+      "props": {
+        "text": "1 new issue (ISS-018 vuln-scanner)"
+      }
+    },
+    "text_reppo": {
+      "type": "Text",
+      "props": {
+        "text": "reppo-swarm migrated to ~/code/orquestra"
+      }
+    },
+    "text_chain": {
+      "type": "Text",
+      "props": {
+        "text": "4 chain skills off the failure surface"
+      }
+    },
+    "text_advisor": {
+      "type": "Text",
+      "props": {
+        "text": "investment-advisor shipped 19 PRs in 7 days"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_failures": {
+      "type": "Heading",
+      "props": {
+        "text": "Failures & Slipped Items",
+        "level": "h2"
+      }
+    },
+    "alert_failures": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "3 Items Slipped",
+        "message": "ISS-019 file | INDEX flips ISS-007/009/010/016 | btc-levels empty-usage failures (8/week, top failure source tied with token-movers)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_review": {
+      "type": "Heading",
+      "props": {
+        "text": "Full Review",
+        "level": "h3"
+      }
+    },
+    "link_review": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Weekly Review Article",
+        "href": "articles/weekly-review-2026-06-15.md"
+      }
+    }
+  }
+}

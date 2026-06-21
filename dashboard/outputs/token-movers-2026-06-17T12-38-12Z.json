@@ -1,0 +1,419 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers — 2026-06-17"
+      },
+      "children": [
+        "heading_overview",
+        "text_overview",
+        "sep_1",
+        "heading_winners",
+        "table_winners",
+        "sep_2",
+        "heading_losers",
+        "table_losers",
+        "sep_3",
+        "heading_trending",
+        "table_trending",
+        "sep_4",
+        "heading_notable",
+        "stack_notable"
+      ]
+    },
+    "heading_overview": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Overview",
+        "level": "h2"
+      }
+    },
+    "text_overview": {
+      "type": "Text",
+      "props": {
+        "text": "Broad risk-off — 22/100 top-100 green, median top-50 −2.2%; BTC $64,681 −2.8% / ETH $1,747 −4.7% / SOL $72 −4.6% lead the move down. Risk-on regime that ran 6-14→6-16 has snapped."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Token",
+          "Price",
+          "24h%",
+          "7d%",
+          "1h%",
+          "Volume/Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "1",
+            "BP (Backpack)",
+            "$0.5007",
+            "+20.3%",
+            "+105.6%",
+            "+0.3%",
+            "$7M / #234",
+            "[BREAKOUT]"
+          ],
+          [
+            "2",
+            "TAG (TAGGER)",
+            "$0.001236",
+            "+19.6%",
+            "+24.1%",
+            "+1.4%",
+            "$6M / #223",
+            ""
+          ],
+          [
+            "3",
+            "BSB (Block Street)",
+            "$0.5728",
+            "+15.8%",
+            "+117.7%",
+            "−1.7%",
+            "$65M / #229",
+            "[BREAKOUT]"
+          ],
+          [
+            "4",
+            "ASTER (Aster)",
+            "$0.7420",
+            "+11.4%",
+            "+19.7%",
+            "+12.6%",
+            "$193M / #45",
+            ""
+          ],
+          [
+            "5",
+            "SPX (SPX6900)",
+            "$0.4290",
+            "+11.0%",
+            "+42.8%",
+            "−0.6%",
+            "$116M / #121",
+            ""
+          ],
+          [
+            "6",
+            "UNI (Uniswap)",
+            "$3.28",
+            "+7.2%",
+            "+34.5%",
+            "−1.7%",
+            "$972M / #44",
+            "[TRENDING+UP]"
+          ],
+          [
+            "7",
+            "CFX (Conflux)",
+            "$0.0504",
+            "+6.7%",
+            "+15.3%",
+            "+0.7%",
+            "$12M / #143",
+            ""
+          ],
+          [
+            "8",
+            "2Z (DoubleZero)",
+            "$0.0752",
+            "+6.2%",
+            "+9.6%",
+            "+1.9%",
+            "$10M / #145",
+            ""
+          ],
+          [
+            "9",
+            "TIA (Celestia)",
+            "$0.3990",
+            "+5.5%",
+            "+25.7%",
+            "−0.1%",
+            "$67M / #127",
+            ""
+          ],
+          [
+            "10",
+            "EDGE (edgeX)",
+            "$0.3659",
+            "+5.5%",
+            "−8.8%",
+            "+0.3%",
+            "$12M / #230",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Token",
+          "Price",
+          "24h%",
+          "7d%",
+          "1h%",
+          "Volume/Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "1",
+            "BEAT (Audiera)",
+            "$1.79",
+            "−40.0%",
+            "−67.5%",
+            "+0.3%",
+            "$78M / #99",
+            ""
+          ],
+          [
+            "2",
+            "JTO (Jito)",
+            "$0.7284",
+            "−16.0%",
+            "+24.7%",
+            "−2.0%",
+            "$114M / #129",
+            "[CAPITULATION]"
+          ],
+          [
+            "3",
+            "DEXE (DeXe)",
+            "$15.76",
+            "−15.4%",
+            "−14.6%",
+            "−0.9%",
+            "$19M / #82",
+            ""
+          ],
+          [
+            "4",
+            "ZRO (LayerZero)",
+            "$1.034",
+            "−13.8%",
+            "+26.5%",
+            "−0.1%",
+            "$65M / #146",
+            ""
+          ],
+          [
+            "5",
+            "GWEI (ETHGas)",
+            "$0.1242",
+            "−11.7%",
+            "−27.4%",
+            "+4.3%",
+            "$8M / #147",
+            ""
+          ],
+          [
+            "6",
+            "NIGHT (Midnight)",
+            "$0.0307",
+            "−10.2%",
+            "−0.3%",
+            "−0.3%",
+            "$70M / #101",
+            ""
+          ],
+          [
+            "7",
+            "INJ (Injective)",
+            "$5.39",
+            "−9.5%",
+            "+5.6%",
+            "−0.4%",
+            "$136M / #97",
+            ""
+          ],
+          [
+            "8",
+            "SKYAI (SkyAI)",
+            "$0.3812",
+            "−9.0%",
+            "+132.7%",
+            "+3.6%",
+            "$47M / #125",
+            ""
+          ],
+          [
+            "9",
+            "MON (Monad)",
+            "$0.0218",
+            "−8.6%",
+            "+2.7%",
+            "+0.1%",
+            "$32M / #148",
+            ""
+          ],
+          [
+            "10",
+            "PUMP (Pump.fun)",
+            "$0.001461",
+            "−7.7%",
+            "−0.3%",
+            "−0.5%",
+            "$41M / #103",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_trending": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "table_trending": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Token",
+          "Price",
+          "24h%",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "#560",
+            "SIREN",
+            "$0.0522",
+            "+15.0%",
+            ""
+          ],
+          [
+            "#44",
+            "UNI (Uniswap)",
+            "$3.28",
+            "+8.5%",
+            "[TRENDING+UP]"
+          ],
+          [
+            "#42",
+            "WLD (Worldcoin)",
+            "$0.6536",
+            "+0.6%",
+            ""
+          ],
+          [
+            "#10",
+            "HYPE (Hyperliquid)",
+            "$70.20",
+            "−7.2%",
+            "[MAJOR]"
+          ],
+          [
+            "#320",
+            "ZAMA",
+            "$0.0356",
+            "+7.7%",
+            ""
+          ],
+          [
+            "#107",
+            "AERO (Aerodrome)",
+            "$0.4955",
+            "+5.8%",
+            ""
+          ],
+          [
+            "#157",
+            "XPL (Plasma)",
+            "$0.0984",
+            "+2.3%",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_notable_1",
+        "text_notable_2",
+        "text_notable_3",
+        "text_notable_4"
+      ]
+    },
+    "text_notable_1": {
+      "type": "Text",
+      "props": {
+        "text": "jto: yesterday's TRENDING+UP+BREAKOUT (+36.4% on $395M vol, flagged \"sustained not flash\") → −16.0% CAPITULATION today. One-day refutation of the sustained-move call."
+      }
+    },
+    "text_notable_2": {
+      "type": "Text",
+      "props": {
+        "text": "beat: day-4 unwind extending — −40.0% on top of −31.5% / −29.2%. 7d now −67.5%, narrative #21 still dead."
+      }
+    },
+    "text_notable_3": {
+      "type": "Text",
+      "props": {
+        "text": "bp and bsb: fresh BREAKOUTs at rank #234 / #229, both 7d > +100%. Low-rank but vol survives the $1M floor — track for follow-through, not yet PUMP-RISK."
+      }
+    },
+    "text_notable_4": {
+      "type": "Text",
+      "props": {
+        "text": "siren: 4-day capitulation broke — +15.0% bounce after −47.7% / −33.7% / −23.9% the prior 3 sessions."
+      }
+    }
+  }
+}

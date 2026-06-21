@@ -1,0 +1,99 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi Overview",
+        "description": "06-15 • Mixed Verdict"
+      },
+      "children": [
+        "verdict_badge",
+        "market_condition",
+        "sep1",
+        "metrics_grid"
+      ]
+    },
+    "verdict_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed Verdict",
+        "variant": "secondary"
+      }
+    },
+    "market_condition": {
+      "type": "Text",
+      "props": {
+        "text": "Market: Hormuz risk-on",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "tvl_stat",
+        "dex_vol_stat",
+        "hl_l1_stat",
+        "world_chain_stat",
+        "weth_usdt_stat",
+        "stables_stat"
+      ]
+    },
+    "tvl_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL (Snapshot)",
+        "value": "+2.6%",
+        "trend": "up"
+      }
+    },
+    "dex_vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume",
+        "value": "+24%",
+        "trend": "up"
+      }
+    },
+    "hl_l1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HL L1 Chain",
+        "value": "+6.9%",
+        "trend": "up"
+      }
+    },
+    "world_chain_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "World Chain",
+        "value": "+24%",
+        "trend": "up"
+      }
+    },
+    "weth_usdt_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "WETH-USDT Real Yield",
+        "value": "40.5%"
+      }
+    },
+    "stables_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stables",
+        "value": "Flat",
+        "trend": "neutral"
+      }
+    }
+  }
+}

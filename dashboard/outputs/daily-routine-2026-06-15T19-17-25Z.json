@@ -1,0 +1,133 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "daily-routine",
+        "description": "06-15 staged"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-heading",
+        "separator-1",
+        "stack-markets",
+        "separator-2",
+        "stack-items",
+        "separator-3",
+        "text-pending"
+      ]
+    },
+    "status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk-on snaps back",
+        "level": "h2"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-markets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-market",
+        "stat-btc",
+        "text-btc-context"
+      ]
+    },
+    "stat-market": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Health",
+        "value": "86/100",
+        "trend": "up"
+      }
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$65.7k",
+        "delta": "+2.2%",
+        "trend": "up"
+      }
+    },
+    "text-btc-context": {
+      "type": "Text",
+      "props": {
+        "text": "on Hormuz deal",
+        "variant": "caption"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-zec",
+        "badge-harnessx",
+        "badge-curl"
+      ]
+    },
+    "badge-zec": {
+      "type": "Badge",
+      "props": {
+        "text": "zec short-squeeze",
+        "variant": "default"
+      }
+    },
+    "badge-harnessx": {
+      "type": "Badge",
+      "props": {
+        "text": "harnessx paper",
+        "variant": "default"
+      }
+    },
+    "badge-curl": {
+      "type": "Badge",
+      "props": {
+        "text": "curl vuln-report pause",
+        "variant": "secondary"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-pending": {
+      "type": "Text",
+      "props": {
+        "text": "see .pending-notify/daily-routine-msg.md",
+        "variant": "muted"
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "daily-routine 06-15",
+        "description": "staged"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "market-section",
+        "sep1",
+        "alerts-section",
+        "sep2",
+        "reference-link"
+      ]
+    },
+    "market-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "market-heading",
+        "risk-progress",
+        "btc-stat",
+        "hormuz-context"
+      ]
+    },
+    "market-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "risk-on snaps back",
+        "level": "h3"
+      }
+    },
+    "risk-progress": {
+      "type": "Progress",
+      "props": {
+        "value": 86,
+        "max": 100,
+        "label": "green"
+      }
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "65.7k",
+        "delta": "+2.2%",
+        "trend": "up"
+      }
+    },
+    "hormuz-context": {
+      "type": "Text",
+      "props": {
+        "text": "on hormuz deal",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alerts-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "zec-badge",
+        "harnessx-badge",
+        "curl-badge"
+      ]
+    },
+    "zec-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "zec short-squeeze",
+        "variant": "secondary"
+      }
+    },
+    "harnessx-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "harnessx paper",
+        "variant": "default"
+      }
+    },
+    "curl-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "curl vuln-report pause",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reference-link": {
+      "type": "Link",
+      "props": {
+        "label": "see .pending-notify/daily-routine-msg.md",
+        "href": ".pending-notify/daily-routine-msg.md"
+      }
+    }
+  }
+}

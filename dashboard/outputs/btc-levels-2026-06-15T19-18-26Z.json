@@ -1,0 +1,114 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC levels"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-spot",
+        "stack-status",
+        "separator-1",
+        "stack-levels",
+        "separator-2",
+        "alert-disclaimer"
+      ]
+    },
+    "stat-spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$66.4k"
+      }
+    },
+    "stack-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-reclaim",
+        "text-reclaim-context"
+      ]
+    },
+    "badge-reclaim": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ $65,900 reclaimed",
+        "variant": "default"
+      }
+    },
+    "text-reclaim-context": {
+      "type": "Text",
+      "props": {
+        "text": "Stabilization confirmed per 2026-06-09 advisor levels (prior reclaim of $63,500 already logged)",
+        "variant": "caption"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-levels": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-daily-close",
+        "text-breakdown",
+        "text-review-trigger"
+      ]
+    },
+    "stat-daily-close": {
+      "type": "Stat",
+      "props": {
+        "label": "Previous UTC Daily Close",
+        "value": "$65.7k"
+      }
+    },
+    "text-breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "Well clear of $60,500 breakdown line",
+        "variant": "body"
+      }
+    },
+    "text-review-trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Leveraged cbBTC position review trigger: ≤$45k",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-disclaimer": {
+      "type": "Alert",
+      "props": {
+        "message": "Not financial advice",
+        "type": "info"
+      }
+    }
+  }
+}

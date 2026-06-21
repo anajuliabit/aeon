@@ -1,0 +1,225 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse",
+        "description": "2026-06-20 09:00Z"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_crypto",
+        "stat_solana_volume",
+        "stat_treasury_sol",
+        "stat_btc_price",
+        "stat_fear_greed",
+        "text_ai_rotation",
+        "text_strc_depeg",
+        "text_privacy_aptos",
+        "text_privacy_arcium",
+        "text_privacy_axelar",
+        "separator_1",
+        "heading_macro",
+        "text_fed_dot_plot",
+        "stat_equity_inflows",
+        "separator_2",
+        "heading_geo",
+        "alert_hormuz",
+        "separator_3",
+        "heading_new_pull",
+        "text_new_solana_nyse",
+        "text_new_treasury_sol",
+        "text_new_aptos_confidential",
+        "separator_4",
+        "heading_bridge",
+        "text_bridge_analysis"
+      ]
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "stat_solana_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana spot volume",
+        "value": "$11.6B",
+        "delta": "surpassed NYSE"
+      }
+    },
+    "stat_treasury_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "Treasury firms SOL holdings",
+        "value": "$1B+"
+      }
+    },
+    "stat_btc_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Bitcoin",
+        "value": "$63K"
+      }
+    },
+    "stat_fear_greed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "14",
+        "delta": "extreme fear",
+        "trend": "down"
+      }
+    },
+    "text_ai_rotation": {
+      "type": "Text",
+      "props": {
+        "text": "$3.45B left Bitcoin ETFs as capital rotated to AI",
+        "variant": "body"
+      }
+    },
+    "text_strc_depeg": {
+      "type": "Text",
+      "props": {
+        "text": "STRC depeg anxiety sparked by AI capital rotation",
+        "variant": "body"
+      }
+    },
+    "text_privacy_aptos": {
+      "type": "Text",
+      "props": {
+        "text": "Aptos launches Confidential APT",
+        "variant": "body"
+      }
+    },
+    "text_privacy_arcium": {
+      "type": "Text",
+      "props": {
+        "text": "Arcium expands MPC apps",
+        "variant": "body"
+      }
+    },
+    "text_privacy_axelar": {
+      "type": "Text",
+      "props": {
+        "text": "Axelar discloses $4.67M Secret Network exploit",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_macro": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO",
+        "level": "h2"
+      }
+    },
+    "text_fed_dot_plot": {
+      "type": "Text",
+      "props": {
+        "text": "Hawkish Fed dot plot lifting 2026 rate hike odds is steepening the yield curve and strengthening the dollar",
+        "variant": "body"
+      }
+    },
+    "stat_equity_inflows": {
+      "type": "Stat",
+      "props": {
+        "label": "US equity inflows (last week)",
+        "value": "$119B",
+        "delta": "record"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_geo": {
+      "type": "Heading",
+      "props": {
+        "text": "GEO",
+        "level": "h2"
+      }
+    },
+    "alert_hormuz": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "US-Iran talks snags and Hormuz transit uncertainties risk spiking energy and shipping costs"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_new_pull": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "text_new_solana_nyse": {
+      "type": "Text",
+      "props": {
+        "text": "$11.6B Solana > NYSE (ecosystem throughput quantified)",
+        "variant": "body"
+      }
+    },
+    "text_new_treasury_sol": {
+      "type": "Text",
+      "props": {
+        "text": "Treasury SOL holdings (institutional custody accelerates)",
+        "variant": "body"
+      }
+    },
+    "text_new_aptos_confidential": {
+      "type": "Text",
+      "props": {
+        "text": "Aptos Confidential APT (privacy on-chain)",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text_bridge_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "AI rotation + STRC fear = leverage unwind risk. $3.45B fled Bitcoin ETFs into AI — this is a duration reallocation. STRC's depeg is the canary: leveraged yield-farming breaks if vol reprices faster than Fed tightens. Treasury SOL holdings are the thesis that on-chain tokenization captures institutional flows independent of duration risk. Hormuz uncertainty lifts vol premiums. Privacy tech positioning signals teams expect regulatory scrutiny to sharpen once geopolitical clarity arrives.",
+        "variant": "body"
+      }
+    }
+  }
+}

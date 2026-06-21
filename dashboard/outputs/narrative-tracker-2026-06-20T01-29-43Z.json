@@ -1,0 +1,1279 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-19"
+      },
+      "children": [
+        "transitions_section",
+        "sep1",
+        "reflexivity_section",
+        "sep2",
+        "positions_section",
+        "sep3",
+        "map_section"
+      ]
+    },
+    "transitions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "transitions_heading",
+        "dead_block",
+        "promoted_block",
+        "demoted_block",
+        "new_block"
+      ]
+    },
+    "transitions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      }
+    },
+    "dead_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dead_badge",
+        "dead_1",
+        "dead_2"
+      ]
+    },
+    "dead_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEAD",
+        "variant": "destructive"
+      }
+    },
+    "dead_1": {
+      "type": "Text",
+      "props": {
+        "text": "risk-on regime (Hormuz peace) — collapsed on Iran deal reversal (deal YES <5% Polymarket, was 95% on 6-15); $66.4k → $63.1k BTC unwind",
+        "variant": "body"
+      }
+    },
+    "dead_2": {
+      "type": "Text",
+      "props": {
+        "text": "corporate Bitcoin treasury narrative — reflexive kill tied to risk-on flip; \"BTC per share\" metrics now liability under geopolitical pressure",
+        "variant": "body"
+      }
+    },
+    "promoted_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "promoted_badge",
+        "promoted_1",
+        "promoted_2"
+      ]
+    },
+    "promoted_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PROMOTED",
+        "variant": "secondary"
+      }
+    },
+    "promoted_1": {
+      "type": "Text",
+      "props": {
+        "text": "AI agents infrastructure (prompts → persistent environment systems) — foundational infrastructure role now clear vs prompt engineering; Coinbase/MetaMask agent wallets live",
+        "variant": "body"
+      }
+    },
+    "promoted_2": {
+      "type": "Text",
+      "props": {
+        "text": "Perps/DEX as tech narrative (fading → rising) — HLperps volume sustaining despite risk-off selloff; vol/volatility decoupling",
+        "variant": "body"
+      }
+    },
+    "demoted_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "demoted_badge",
+        "demoted_1",
+        "demoted_2"
+      ]
+    },
+    "demoted_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEMOTED",
+        "variant": "outline"
+      }
+    },
+    "demoted_1": {
+      "type": "Text",
+      "props": {
+        "text": "stablecoin payments real-world (peak → fading) — Solana USDC cooling; geopolitical flight-to-safety headwind",
+        "variant": "body"
+      }
+    },
+    "demoted_2": {
+      "type": "Text",
+      "props": {
+        "text": "RWA tokenization (peak, steady) — institutional flow faces reflexivity headwind from geopolitical risk-off flip",
+        "variant": "body"
+      }
+    },
+    "new_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new_badge",
+        "new_1",
+        "new_2",
+        "new_3"
+      ]
+    },
+    "new_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "new_1": {
+      "type": "Text",
+      "props": {
+        "text": "sovereign L1 infrastructure (developers own economics/governance/blockspace vs app-layer hype)",
+        "variant": "body"
+      }
+    },
+    "new_2": {
+      "type": "Text",
+      "props": {
+        "text": "DePIN + cloud infrastructure (reframed as structural alongside AI, not narrative hype)",
+        "variant": "body"
+      }
+    },
+    "new_3": {
+      "type": "Text",
+      "props": {
+        "text": "autonomous AI trading agents (expanding beyond crypto; hedge against geopolitical equity volatility)",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reflexivity_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reflexivity_heading",
+        "refl_alert_1",
+        "refl_alert_2",
+        "refl_alert_3"
+      ]
+    },
+    "reflexivity_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "REFLEXIVITY ALERT",
+        "level": "h2"
+      }
+    },
+    "refl_alert_1": {
+      "type": "Alert",
+      "props": {
+        "title": "Iran deal collapse + BTC unwind = reflexive narrative kill",
+        "message": "Hormuz peace (NEW 6-15) anchored risk-on momentum; Iran YES flip (<5%) on 6-19 unwinds BTC ($66.4k → $63.1k −4.9%), stablecoin confidence, and corporate treasury thesis. Narratives riding single macro-catalyst are fragile.",
+        "type": "warning"
+      }
+    },
+    "refl_alert_2": {
+      "type": "Alert",
+      "props": {
+        "title": "Privacy ZEC bounce = squeeze not demand",
+        "message": "ZEC +15.9% (6-15) was ~$10M short squeeze + whale long ($21M HL); check if recent bounce extends squeeze or reverses to fundamentals (audit post-exploit was catalyst, not adoption shift).",
+        "type": "info"
+      }
+    },
+    "refl_alert_3": {
+      "type": "Alert",
+      "props": {
+        "title": "HL perps volume sustains = vol-on-volatility, not demand",
+        "message": "HLperps fees leading despite BTC down; equity perps tail (HIP-3 into Nasdaq) extends but cap is finite; distinguish flow from reflexivity.",
+        "type": "info"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "positions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "positions_heading",
+        "frontrun_group",
+        "ride_group",
+        "watch_group",
+        "fade_group"
+      ]
+    },
+    "positions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      }
+    },
+    "frontrun_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fr_label",
+        "fr_pos_1"
+      ]
+    },
+    "fr_label": {
+      "type": "Badge",
+      "props": {
+        "text": "FRONT-RUN",
+        "variant": "default"
+      }
+    },
+    "fr_pos_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fr_title",
+        "fr_metrics",
+        "fr_data",
+        "fr_link",
+        "fr_notes"
+      ]
+    },
+    "fr_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto × AI agent economies",
+        "level": "h3"
+      }
+    },
+    "fr_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fr_ms",
+        "fr_st",
+        "fr_sen"
+      ]
+    },
+    "fr_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 3 ↑↑",
+        "variant": "outline"
+      }
+    },
+    "fr_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Emerging",
+        "variant": "outline"
+      }
+    },
+    "fr_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Bull",
+        "variant": "secondary"
+      }
+    },
+    "fr_data": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fr_desc",
+        "fr_stats"
+      ]
+    },
+    "fr_desc": {
+      "type": "Text",
+      "props": {
+        "text": "x402 protocol 480k agents, 165M transactions, 265% transaction growth Q1→Q2; infrastructure not hype.",
+        "variant": "body"
+      }
+    },
+    "fr_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "fr_agents",
+        "fr_txn",
+        "fr_growth"
+      ]
+    },
+    "fr_agents": {
+      "type": "Stat",
+      "props": {
+        "label": "Agents",
+        "value": "480k"
+      }
+    },
+    "fr_txn": {
+      "type": "Stat",
+      "props": {
+        "label": "Transactions",
+        "value": "165M"
+      }
+    },
+    "fr_growth": {
+      "type": "Stat",
+      "props": {
+        "label": "Growth Q1→Q2",
+        "value": "265%",
+        "trend": "up"
+      }
+    },
+    "fr_link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/chill_cases/status/2067657010649219355"
+      }
+    },
+    "fr_notes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fr_driver",
+        "fr_bear"
+      ]
+    },
+    "fr_driver": {
+      "type": "Text",
+      "props": {
+        "text": "Driver: Coinbase/MetaMask wallets live, @ChainAI ecosystem motion",
+        "variant": "caption"
+      }
+    },
+    "fr_bear": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: settlement ≠ token capture",
+        "variant": "caption"
+      }
+    },
+    "ride_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ride_label",
+        "ride_1",
+        "ride_2",
+        "ride_3"
+      ]
+    },
+    "ride_label": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      }
+    },
+    "ride_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r1_title",
+        "r1_metrics",
+        "r1_desc",
+        "r1_notes"
+      ]
+    },
+    "r1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "AI agents persistent infrastructure",
+        "level": "h3"
+      }
+    },
+    "r1_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "r1_ms",
+        "r1_st",
+        "r1_sen"
+      ]
+    },
+    "r1_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 4 ↑",
+        "variant": "outline"
+      }
+    },
+    "r1_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Rising",
+        "variant": "outline"
+      }
+    },
+    "r1_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Bull",
+        "variant": "secondary"
+      }
+    },
+    "r1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "foundational shift from prompt engineering to long-lived environments. Drivers: @nonepcbl, Coinbase, MetaMask. Bear: settlement rails ≠ token capture.",
+        "variant": "body"
+      }
+    },
+    "r1_notes": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "caption"
+      }
+    },
+    "ride_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r2_title",
+        "r2_metrics",
+        "r2_desc",
+        "r2_stats"
+      ]
+    },
+    "r2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Prediction markets",
+        "level": "h3"
+      }
+    },
+    "r2_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "r2_ms",
+        "r2_st",
+        "r2_sen"
+      ]
+    },
+    "r2_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 4 →",
+        "variant": "outline"
+      }
+    },
+    "r2_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Peak",
+        "variant": "outline"
+      }
+    },
+    "r2_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Bull",
+        "variant": "secondary"
+      }
+    },
+    "r2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Iran re-pricing (YES 95%→<5%) proves real arbitrage; $23M Polymarket volume. Bear: bot-manipulation risk.",
+        "variant": "body"
+      }
+    },
+    "r2_stats": {
+      "type": "Stat",
+      "props": {
+        "label": "Polymarket volume",
+        "value": "$23M"
+      }
+    },
+    "ride_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r3_title",
+        "r3_metrics",
+        "r3_desc"
+      ]
+    },
+    "r3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "DePIN + cloud infrastructure",
+        "level": "h3"
+      }
+    },
+    "r3_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "r3_ms",
+        "r3_st",
+        "r3_sen"
+      ]
+    },
+    "r3_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 3 ↑",
+        "variant": "outline"
+      }
+    },
+    "r3_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Rising",
+        "variant": "outline"
+      }
+    },
+    "r3_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Bull",
+        "variant": "secondary"
+      }
+    },
+    "r3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "infrastructure receives less attention than hype but determines scalability. Structural alongside AI agents. Bear: capex intensity.",
+        "variant": "body"
+      }
+    },
+    "watch_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_label",
+        "w1",
+        "w2",
+        "w3",
+        "w4",
+        "w5"
+      ]
+    },
+    "watch_label": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "outline"
+      }
+    },
+    "w1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w1_title",
+        "w1_metrics",
+        "w1_desc"
+      ]
+    },
+    "w1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Perps/DEX tech narrative",
+        "level": "h3"
+      }
+    },
+    "w1_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w1_ms",
+        "w1_st",
+        "w1_sen"
+      ]
+    },
+    "w1_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 3 ↑",
+        "variant": "outline"
+      }
+    },
+    "w1_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Rising",
+        "variant": "outline"
+      }
+    },
+    "w1_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed",
+        "variant": "outline"
+      }
+    },
+    "w1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "HLperps sustain despite risk-off; vol-on-volatility decoupling. Bear: flow is reflexivity, not demand.",
+        "variant": "body"
+      }
+    },
+    "w2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w2_title",
+        "w2_metrics",
+        "w2_desc",
+        "w2_stat"
+      ]
+    },
+    "w2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "RWA on-chain capital markets",
+        "level": "h3"
+      }
+    },
+    "w2_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w2_ms",
+        "w2_st",
+        "w2_sen"
+      ]
+    },
+    "w2_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 5 →",
+        "variant": "outline"
+      }
+    },
+    "w2_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Peak",
+        "variant": "outline"
+      }
+    },
+    "w2_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed",
+        "variant": "outline"
+      }
+    },
+    "w2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "$14.6B market carries; institutional flow faces geopolitical headwind. Reflexivity flag.",
+        "variant": "body"
+      }
+    },
+    "w2_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Market cap",
+        "value": "$14.6B"
+      }
+    },
+    "w3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w3_title",
+        "w3_metrics",
+        "w3_desc"
+      ]
+    },
+    "w3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Sovereign L1 infrastructure",
+        "level": "h3"
+      }
+    },
+    "w3_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w3_ms",
+        "w3_st",
+        "w3_sen"
+      ]
+    },
+    "w3_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 2 ↑↑",
+        "variant": "outline"
+      }
+    },
+    "w3_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Emerging",
+        "variant": "outline"
+      }
+    },
+    "w3_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Bull",
+        "variant": "secondary"
+      }
+    },
+    "w3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "developers launch own L1s with custom economics/governance/blockspace. Bear: fragmentation risk.",
+        "variant": "body"
+      }
+    },
+    "w4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w4_title",
+        "w4_metrics",
+        "w4_desc",
+        "w4_stats"
+      ]
+    },
+    "w4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Privacy regaining relevance",
+        "level": "h3"
+      }
+    },
+    "w4_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w4_ms",
+        "w4_st",
+        "w4_sen"
+      ]
+    },
+    "w4_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 2 ↑",
+        "variant": "outline"
+      }
+    },
+    "w4_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Emerging",
+        "variant": "outline"
+      }
+    },
+    "w4_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed",
+        "variant": "outline"
+      }
+    },
+    "w4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "ZEC +15.9% (6-15) was ~$10M short squeeze + whale long ($21M HL); check if recent bounce extends squeeze or reverses to fundamentals (audit post-exploit was catalyst, not adoption shift).",
+        "variant": "body"
+      }
+    },
+    "w4_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w4_s1",
+        "w4_s2"
+      ]
+    },
+    "w4_s1": {
+      "type": "Stat",
+      "props": {
+        "label": "ZEC perf (6-15)",
+        "value": "+15.9%",
+        "trend": "up"
+      }
+    },
+    "w4_s2": {
+      "type": "Stat",
+      "props": {
+        "label": "Short squeeze",
+        "value": "~$10M + $21M HL"
+      }
+    },
+    "w5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w5_title",
+        "w5_metrics",
+        "w5_desc"
+      ]
+    },
+    "w5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Autonomous AI trading agents",
+        "level": "h3"
+      }
+    },
+    "w5_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w5_ms",
+        "w5_st",
+        "w5_sen"
+      ]
+    },
+    "w5_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 2 ↑↑",
+        "variant": "outline"
+      }
+    },
+    "w5_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Emerging",
+        "variant": "outline"
+      }
+    },
+    "w5_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Bull",
+        "variant": "secondary"
+      }
+    },
+    "w5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "hedge against equity volatility; expanding beyond crypto. Bear: commoditizes quickly.",
+        "variant": "body"
+      }
+    },
+    "fade_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fade_label",
+        "f1",
+        "f2"
+      ]
+    },
+    "fade_label": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "destructive"
+      }
+    },
+    "f1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "f1_title",
+        "f1_metrics",
+        "f1_desc",
+        "f1_stat"
+      ]
+    },
+    "f1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Stablecoin payments into real-world",
+        "level": "h3"
+      }
+    },
+    "f1_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "f1_ms",
+        "f1_st",
+        "f1_sen"
+      ]
+    },
+    "f1_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 4 ↓",
+        "variant": "outline"
+      }
+    },
+    "f1_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Fading",
+        "variant": "outline"
+      }
+    },
+    "f1_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed",
+        "variant": "outline"
+      }
+    },
+    "f1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "reflexive headwind from risk-off flip; Solana USDC $3.5B→$250M cooling; flight-to-safety kills confidence narrative.",
+        "variant": "body"
+      }
+    },
+    "f1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana USDC",
+        "value": "$3.5B → $250M",
+        "trend": "down"
+      }
+    },
+    "f2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "f2_title",
+        "f2_metrics",
+        "f2_desc"
+      ]
+    },
+    "f2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Corporate Bitcoin treasury strategies",
+        "level": "h3"
+      }
+    },
+    "f2_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "f2_ms",
+        "f2_st",
+        "f2_sen"
+      ]
+    },
+    "f2_ms": {
+      "type": "Badge",
+      "props": {
+        "text": "mindshare 2 ↑ but reflexive kill",
+        "variant": "outline"
+      }
+    },
+    "f2_st": {
+      "type": "Badge",
+      "props": {
+        "text": "Fading",
+        "variant": "outline"
+      }
+    },
+    "f2_sen": {
+      "type": "Badge",
+      "props": {
+        "text": "Cope",
+        "variant": "destructive"
+      }
+    },
+    "f2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "\"BTC per share\" metrics were risk-on reflexivity; Iran deal collapse unwinds thesis. Fade the narrative-driven move.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "map_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "map_heading",
+        "map_emerging",
+        "map_rising",
+        "map_peak",
+        "map_fading",
+        "map_dead"
+      ]
+    },
+    "map_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      }
+    },
+    "map_emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_e_badge",
+        "map_e_text"
+      ]
+    },
+    "map_e_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Emerging",
+        "variant": "default"
+      }
+    },
+    "map_e_text": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent economies (x402 catalyst), sovereign L1 infrastructure, autonomous trading agents, privacy regaining (squeeze flag)",
+        "variant": "body"
+      }
+    },
+    "map_rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_r_badge",
+        "map_r_text"
+      ]
+    },
+    "map_r_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Rising",
+        "variant": "secondary"
+      }
+    },
+    "map_r_text": {
+      "type": "Text",
+      "props": {
+        "text": "AI agents infrastructure, perps/DEX tech, DePIN + cloud, stablecoin payments (cooling)",
+        "variant": "body"
+      }
+    },
+    "map_peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_p_badge",
+        "map_p_text"
+      ]
+    },
+    "map_p_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Peak",
+        "variant": "outline"
+      }
+    },
+    "map_p_text": {
+      "type": "Text",
+      "props": {
+        "text": "Prediction markets, RWA tokenization (geopolitical headwind)",
+        "variant": "body"
+      }
+    },
+    "map_fading": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_f_badge",
+        "map_f_text"
+      ]
+    },
+    "map_f_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Fading",
+        "variant": "outline"
+      }
+    },
+    "map_f_text": {
+      "type": "Text",
+      "props": {
+        "text": "Stablecoin payments (reflexive), corporate Bitcoin treasury (Iran deal collapse), HL perps vol (check if extends), privacy bounce (squeeze not demand)",
+        "variant": "body"
+      }
+    },
+    "map_dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_d_badge",
+        "map_d_text"
+      ]
+    },
+    "map_d_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Dead",
+        "variant": "destructive"
+      }
+    },
+    "map_d_text": {
+      "type": "Text",
+      "props": {
+        "text": "Risk-on regime (Hormuz), BOJ tail carry",
+        "variant": "body"
+      }
+    }
+  }
+}

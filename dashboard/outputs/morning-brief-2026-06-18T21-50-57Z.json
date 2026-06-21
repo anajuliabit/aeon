@@ -1,0 +1,234 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-18"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-section",
+        "sep1",
+        "since-section",
+        "sep2",
+        "running-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-title",
+        "focus-1-text"
+      ]
+    },
+    "focus-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. xai quota top-up",
+        "level": "h4"
+      }
+    },
+    "focus-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: 10+ skills flatlined since 6-16, team 3a8b4c1e monthly limit hit, operator action required.",
+        "variant": "body"
+      }
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-title",
+        "focus-2-text"
+      ]
+    },
+    "focus-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. boj +25bp risk-sleeve posture call",
+        "level": "h4"
+      }
+    },
+    "focus-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: capital-2x program north star, avg −27% drawdown post-boj-hike precedent, 24–48h window from print.",
+        "variant": "body"
+      }
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-text"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. iss-019 weekly-limit wave fix",
+        "level": "h4"
+      }
+    },
+    "focus-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: 9d overdue, 4th occurrence proven 6-12, FALLBACK_CG_SKILLS covers 5 CG-price skills via Virtuals, residual gap non-CG dailies + XAI-dependent skills.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "boj +25bp to 1.00% (7-1 vote, highest since 1995) — BTC −2% to ~$65.8k, pinned at reclaim65900 level.",
+        "variant": "body"
+      }
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "sky ecosystem ~$520m c1d unwind DAY 2 (Spark Liquidity Layer −12%, Spark Savings −13%, USDS −$275m).",
+        "variant": "body"
+      }
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "14:29Z stuck batch persists: narrative-tracker, market-context-refresh, security-digest dispatched-without-success ~20h.",
+        "variant": "body"
+      }
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "PR #112 docs(skill-graph) 4d+ past 24h threshold; PR #122 fix(docs) 3d+ past threshold.",
+        "variant": "body"
+      }
+    },
+    "since-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-007/009/010/016 index bookkeeping flips 8d overdue.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-item-1",
+        "running-item-2",
+        "running-item-3"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor @ 14:00 UTC (Wednesday-specific)",
+        "variant": "body"
+      }
+    },
+    "running-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics @ 18:30 UTC (Wednesday-specific)",
+        "variant": "body"
+      }
+    },
+    "running-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels every 4h offset 15m (next 00:15)",
+        "variant": "body"
+      }
+    }
+  }
+}

@@ -153,4 +153,236 @@ check "telegram surfaces all directional recs (incl decrease)" "$TGTRADES" "4"
 TGEMPTY=$(printf '%s' '[{"direction":"hold","symbol":null}]' | jq -r '[.[] | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")] | length')
 check "telegram trade list empty on all-hold report" "$TGEMPTY" "0"
 
+# --- run.sh short-term trades: side-aware re-filter + pick mapping ---
+# LONG needs target>entry & invalidate<entry; SHORT needs target<entry &
+# invalidate>entry. Non-held, coingeckoId required. Mirrors run.sh step 5a.
+STTR_IN='{"trades":[
+ {"symbol":"WIF","coingeckoId":"dogwifcoin","side":"long","entry":2.0,"target":2.6,"invalidate":1.7,"horizonDays":10,"conviction":"HIGH","thesis":"x"},
+ {"symbol":"PEPE","coingeckoId":"pepe","side":"short","entry":0.001,"target":0.0008,"invalidate":0.0012,"horizonDays":10,"conviction":"MEDIUM","thesis":"overextended pump, unlock"},
+ {"symbol":"REPPO","coingeckoId":"reppo","side":"long","entry":0.02,"target":0.03,"invalidate":0.015,"horizonDays":14,"conviction":"MEDIUM","thesis":"held — drop"},
+ {"symbol":"BADL","coingeckoId":"badl","side":"long","entry":1.0,"target":0.9,"invalidate":0.8,"horizonDays":10,"conviction":"HIGH","thesis":"long target<entry — drop"},
+ {"symbol":"BADS","coingeckoId":"bads","side":"short","entry":1.0,"target":1.2,"invalidate":0.9,"horizonDays":10,"conviction":"HIGH","thesis":"short target>entry — drop"},
+ {"symbol":"NOID","coingeckoId":null,"side":"long","entry":1.0,"target":2.0,"invalidate":0.5,"horizonDays":10,"conviction":"HIGH","thesis":"no id — drop"}]}'
+STHELD="reppo mamo well usdc"
+STFILT=$(printf '%s' "$STTR_IN" | jq -c --arg held "$STHELD" '
+  ($held|ascii_downcase|split(" ")) as $h
+  | {trades:[.trades[]? | (.side // "long") as $side | (.symbol // "" | ascii_downcase) as $sym
+      | select(.symbol!=null and .coingeckoId!=null and (.entry//0)>0 and (($h|index($sym))|not)
+        and (if $side=="short"
+             then (.target//0)>0 and (.target<.entry) and ((.invalidate//0)==0 or (.invalidate>.entry))
+             else (.target//0)>(.entry) and ((.invalidate//0)==0 or (.invalidate<.entry)) end))]
+    | .[0:5]}')
+check "sttrade keeps valid long + short, drops rest" "$(printf '%s' "$STFILT" | jq -r '.trades|length')" "2"
+check "sttrade keeps WIF long" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol=="WIF")]|length')" "1"
+check "sttrade keeps PEPE short" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol=="PEPE" and .side=="short")]|length')" "1"
+check "sttrade drops held/mis-oriented/no-id" "$(printf '%s' "$STFILT" | jq -r '[.trades[]|select(.symbol|test("REPPO|BADL|BADS|NOID"))]|length')" "0"
+STSHORT=$(printf '%s' "$STFILT" | jq -c '[.trades[]|select(.side=="short")][0] | {side, entryPriceUsd:.entry,
+  invalidationPriceUsd:(if (.invalidate//0)<=0 then null elif .side=="short" and .invalidate>.entry then .invalidate elif .side!="short" and .invalidate<.entry then .invalidate else null end)}')
+check "sttrade short keeps inv above entry" "$(printf '%s' "$STSHORT" | jq -r '"\(.side) \(.invalidationPriceUsd)"')" "short 0.0012"
+# Cap: many valid ideas are kept up to 5 (was 2). 7 valid longs -> 5.
+STMANY=$(jq -nc '{trades:[range(0;7) as $i | {symbol:("T"+($i|tostring)), coingeckoId:("id"+($i|tostring)), side:"long", entry:1.0, target:1.5, invalidate:0.8}]}' \
+  | jq -c '{trades:[.trades[]? | (.side//"long") as $side | select(.symbol!=null and .coingeckoId!=null and (.entry//0)>0
+      and (if $side=="short" then (.target//0)>0 and (.target<.entry) and ((.invalidate//0)==0 or (.invalidate>.entry))
+           else (.target//0)>(.entry) and ((.invalidate//0)==0 or (.invalidate<.entry)) end))] | .[0:5]}')
+check "sttrade cap keeps up to 5 ideas" "$(printf '%s' "$STMANY" | jq -r '.trades|length')" "5"
+
+# --- run.sh sizing: conviction-weighted split of a 5%-of-net budget ---
+# net 390000 → budget 19500; weights HIGH=2, MEDIUM=1; 2 HIGH + 3 MED = 7.
+# HIGH = floor(19500*2/7)=5571; MED = floor(19500*1/7)=2785; sum 19497 ≤ budget.
+SZIN='[{"conviction":"HIGH"},{"conviction":"HIGH"},{"conviction":"MEDIUM"},{"conviction":"MEDIUM"},{"conviction":"MEDIUM"}]'
+SZ=$(printf '%s' "$SZIN" | jq -c --argjson budget 19500 --argjson total 390000 '
+  . as $t | ([$t[] | (if ((.conviction//"")|ascii_upcase|startswith("HIGH")) then 2 else 1 end)]|add//0) as $wsum
+  | [ $t[] | (if ((.conviction//"")|ascii_upcase|startswith("HIGH")) then 2 else 1 end) as $w
+      | (if $wsum>0 then (($budget*$w/$wsum)|floor) else 0 end) as $sz
+      | {conviction, sizeUsd:$sz, sizePctNet:(if $total>0 then (($sz/$total*1000)|round)/10 else 0 end)} ]')
+check "sizing HIGH = floor(2/7 of budget)" "$(printf '%s' "$SZ" | jq -r '.[0].sizeUsd')" "5571"
+check "sizing MEDIUM = floor(1/7 of budget)" "$(printf '%s' "$SZ" | jq -r '.[2].sizeUsd')" "2785"
+check "sizing total stays within budget" "$(printf '%s' "$SZ" | jq -r '[.[].sizeUsd]|add <= 19500')" "true"
+check "sizing pct-of-net computed" "$(printf '%s' "$SZ" | jq -r '.[0].sizePctNet')" "1.4"
+
+# --- run.sh complete(): LLM failure must surface, not be swallowed ---
+# Regression: a dead token once produced a silent "PM gap" because complete()
+# piped the LLM's stderr to /dev/null. Load the real complete() against a stub
+# LLM that fails like an auth error and assert the reason reaches stderr.
+COMPLETE_DIR="$(cd "$(dirname "$0")" && pwd)"
+CT_TMP="$(mktemp -d)"
+cat > "$CT_TMP/fakellm.sh" <<'EOF'
+#!/usr/bin/env bash
+cat >/dev/null
+echo "llm.sh: API error: invalid x-api-key" >&2
+exit 1
+EOF
+chmod +x "$CT_TMP/fakellm.sh"
+sed -n '/^cat > "\$EXTRACTOR" <<.PY.$/,/^PY$/p' "$COMPLETE_DIR/run.sh" | sed '1d;$d' > "$CT_TMP/extract_json.py"
+EXTRACTOR="$CT_TMP/extract_json.py"
+extract_json() { python3 "$EXTRACTOR"; }
+LLM="$CT_TMP/fakellm.sh"
+eval "$(sed -n '/^complete() {/,/^}/p' "$COMPLETE_DIR/run.sh")"
+CT_OUT="$(complete "ping" 2>"$CT_TMP/err")"; CT_RC=$?
+check "complete() returns 1 on LLM failure" "$CT_RC" "1"
+check "complete() emits no stdout on failure" "$CT_OUT" ""
+check "complete() surfaces the LLM error to stderr" \
+  "$(grep -c 'LLM call failed.*invalid x-api-key' "$CT_TMP/err")" "1"
+
+# --- run.sh select_backend(): ADVISOR_LLM selector ---
+SB_DIR="$(cd "$(dirname "$0")" && pwd)"
+# Run the real select_backend() in a clean subshell with controlled env.
+sb() { # ADVISOR_LLM, CLAUDE_CODE_OAUTH_TOKEN, VIRTUALS_MODEL, USEPOD_MODEL -> "LLM|LABEL"
+  ADVISOR_LLM="$1" CLAUDE_CODE_OAUTH_TOKEN="$2" ANTHROPIC_API_KEY="" \
+    VIRTUALS_MODEL="${3:-}" USEPOD_MODEL="${4:-}" CLAUDE_MODEL="" ROOT="/fake/root" \
+    bash -c 'unset LLM MODEL_LABEL
+      '"$(sed -n '/^select_backend() {/,/^}/p' "$SB_DIR/run.sh")"'
+      select_backend; printf "%s|%s" "$LLM" "$MODEL_LABEL"' 2>/dev/null
+}
+check "select usepod -> llm-usepod.sh"      "$(sb usepod '' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-usepod.sh"
+check "select usepod default label"         "$(sb usepod '' '' '' | cut -d'|' -f2)" "deepseek-v3.2 (usepod)"
+check "select usepod honors USEPOD_MODEL"   "$(sb usepod '' '' qwen-3.5 | cut -d'|' -f2)" "qwen-3.5 (usepod)"
+check "select claude explicit"              "$(sb claude '' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
+check "select virtuals explicit"            "$(sb virtuals 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm.sh"
+check "auto + claude token -> claude"       "$(sb auto 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
+check "auto + no token -> virtuals"         "$(sb auto '' 'kimi' '' | cut -d'|' -f1)" "/fake/root/scripts/llm.sh"
+check "auto + no token label"               "$(sb auto '' 'kimi' '' | cut -d'|' -f2)" "kimi (Virtuals)"
+check "unset ADVISOR_LLM behaves as auto"   "$(sb '' 'tok' '' '' | cut -d'|' -f1)" "/fake/root/scripts/llm-claude.sh"
+
+# --- llm-usepod.sh: redaction + fallback (offline, stubbed) ---
+UP_DIR="$(cd "$(dirname "$0")/.." && pwd)"   # repo scripts/ dir ($0=scripts/advisor/selftest.sh, so dirname/.. = scripts/)
+UP_TMP="$(mktemp -d)"
+
+# Redactor: load the real redact() from llm-usepod.sh and check it scrubs the token.
+eval "$(sed -n '/^redact() {/,/^}/p' "$UP_DIR/llm-usepod.sh")"
+RED_IN='curl failed for https://api.usepod.ai/proxy/SECRETTOKEN/v1/chat/completions now'
+check "redact scrubs usepod token" \
+  "$(printf '%s' "$RED_IN" | redact)" \
+  'curl failed for https://api.usepod.ai/proxy/<redacted>/v1/chat/completions now'
+check "redact leaves non-usepod text" \
+  "$(printf '%s' 'no secrets here' | redact)" 'no secrets here'
+
+# Fallback: USEPOD_TOKEN unset + a stub Virtuals llm.sh on a fake root -> usepod
+# defers to Virtuals and returns the stub's output.
+mkdir -p "$UP_TMP/scripts"
+cp "$UP_DIR/llm-usepod.sh" "$UP_TMP/scripts/llm-usepod.sh"
+cat > "$UP_TMP/scripts/llm.sh" <<'EOF'
+#!/usr/bin/env bash
+cat >/dev/null
+echo '{"ok":"virtuals-stub"}'
+EOF
+chmod +x "$UP_TMP/scripts/llm.sh" "$UP_TMP/scripts/llm-usepod.sh"
+FB_OUT="$(USEPOD_TOKEN='' VIRTUALS_API_KEY='present' bash "$UP_TMP/scripts/llm-usepod.sh" 'ping' 2>/dev/null)"
+check "usepod falls back to Virtuals when token unset" "$FB_OUT" '{"ok":"virtuals-stub"}'
+
+# --- research-prefetch.sh: safe failure when unusable (offline) ---
+RP="$(cd "$(dirname "$0")/.." && pwd)/research-prefetch.sh"   # $0=scripts/advisor/selftest.sh, so dirname/.. = scripts/
+# Unconfigured (no XAI_API_KEY) -> exit 1, no stdout.
+RP_OUT="$(env -u XAI_API_KEY bash "$RP" 'find cheap polymarket bets' 2>/dev/null)"; RP_RC=$?
+check "research-prefetch exits 1 without XAI_API_KEY" "$RP_RC" "1"
+check "research-prefetch emits no stdout without key" "$RP_OUT" ""
+# Empty query (key present but blank prompt) -> exit 1, no stdout.
+RP_OUT2="$(XAI_API_KEY=dummy bash "$RP" '   ' 2>/dev/null)"; RP_RC2=$?
+check "research-prefetch exits 1 on empty query" "$RP_RC2" "1"
+check "research-prefetch emits no stdout on empty query" "$RP_OUT2" ""
+
+# --- build-fallback-prompt.sh: research-grounded vs degraded prompt ---
+BFP="$(cd "$(dirname "$0")/.." && pwd)/build-fallback-prompt.sh"
+# With RESEARCH -> research-grounded prompt.
+P_RESEARCH="$(SOURCE=telegram MESSAGE='find cheap polymarket bets' RESEARCH='- Market X underpriced (link, 2026-06-17)' bash "$BFP")"
+check "research prompt includes LIVE RESEARCH" "$(printf '%s' "$P_RESEARCH" | grep -c 'LIVE RESEARCH')" "1"
+check "research prompt includes the digest"    "$(printf '%s' "$P_RESEARCH" | grep -c 'Market X underpriced')" "1"
+check "research prompt omits degraded line"     "$(printf '%s' "$P_RESEARCH" | grep -c 'degraded text-only fallback')" "0"
+# Without RESEARCH -> degraded prompt.
+P_DEGRADED="$(SOURCE=telegram MESSAGE='hi' bash "$BFP")"
+check "degraded prompt has degraded line"        "$(printf '%s' "$P_DEGRADED" | grep -c 'degraded text-only fallback')" "1"
+check "degraded prompt omits LIVE RESEARCH"      "$(printf '%s' "$P_DEGRADED" | grep -c 'LIVE RESEARCH')" "0"
+
+# --- tg-chunk.sh: line-boundary chunking under the Telegram limit ---
+TGC="$(cd "$(dirname "$0")/.." && pwd)/tg-chunk.sh"
+# Consume NUL-delimited stdin -> "<count> <maxchunklen>" (portable: read -d '').
+tgstats() { local c n=0 m=0; while IFS= read -r -d '' c; do n=$((n+1)); [ "${#c}" -gt "$m" ] && m="${#c}"; done; echo "$n $m"; }
+
+SHORT="$(printf 'alpha\nbeta\ngamma')"
+check "tg-chunk short -> 1 chunk"       "$(printf '%s' "$SHORT" | bash "$TGC" | tgstats | cut -d' ' -f1)" "1"
+check "tg-chunk short reassembles"      "$(printf '%s' "$SHORT" | bash "$TGC" | tr -d '\0')" "$SHORT"
+
+# ~6100 chars across 120 lines (50 'x' + newline each) -> multiple chunks, each <=4000.
+LONG="$(for i in $(seq 1 120); do printf 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n'; done)"
+set -- $(printf '%s' "$LONG" | bash "$TGC" | tgstats)
+check "tg-chunk long -> >=2 chunks"     "$([ "$1" -ge 2 ] && echo yes)" "yes"
+check "tg-chunk long chunks <=4000"     "$([ "$2" -le 4000 ] && echo yes)" "yes"
+check "tg-chunk long reassembles"       "$(printf '%s' "$LONG" | bash "$TGC" | tr -d '\0')" "$LONG"
+
+# Single 5000-char line, no newline -> hard-split into >=2 chunks, each <=4000.
+BIG="$(printf 'y%.0s' $(seq 1 5000))"
+set -- $(printf '%s' "$BIG" | bash "$TGC" | tgstats)
+check "tg-chunk overlong line -> >=2"   "$([ "$1" -ge 2 ] && echo yes)" "yes"
+check "tg-chunk overlong line <=4000"   "$([ "$2" -le 4000 ] && echo yes)" "yes"
+
+# Exactly 4000 chars -> 1 chunk.
+B4000="$(printf 'z%.0s' $(seq 1 4000))"
+check "tg-chunk exactly 4000 -> 1 chunk" "$(printf '%s' "$B4000" | bash "$TGC" | tgstats | cut -d' ' -f1)" "1"
+
+# --- anthropic-gateway.sh: provider resolution + usepod routing (sourced) ---
+GW="$(cd "$(dirname "$0")/.." && pwd)/anthropic-gateway.sh"
+# Source in a subshell with controlled env; echo the resolved exports.
+gw() { # GATEWAY, USEPOD_TOKEN, USEPOD_MODEL, MODEL  -> "BASEURL|MODEL|AUTH"
+  ( export GATEWAY="$1" USEPOD_TOKEN="${2-}" USEPOD_MODEL="${3-}" MODEL="${4-}" \
+      BANKR_LLM_KEY="" VIRTUALS_API_KEY=""
+    . "$GW" >/dev/null 2>&1
+    printf '%s|%s|%s' "${ANTHROPIC_BASE_URL:-}" "${GATEWAY_MODEL:-}" "${ANTHROPIC_AUTH_TOKEN:-}" )
+}
+check "gw usepod base url"   "$(gw usepod SECRET '' claude-opus-4-7 | cut -d'|' -f1)" "https://api.usepod.ai/proxy/SECRET"
+check "gw usepod model default" "$(gw usepod SECRET '' claude-opus-4-7 | cut -d'|' -f2)" "deepseek-v3.2"
+check "gw usepod model override" "$(gw usepod SECRET qwen-3.5 claude-opus-4-7 | cut -d'|' -f2)" "qwen-3.5"
+check "gw usepod auth literal" "$(gw usepod SECRET '' x | cut -d'|' -f3)" "unused"
+check "gw direct no base url" "$(gw direct '' '' claude-opus-4-7 | cut -d'|' -f1)" ""
+check "gw direct keeps model" "$(gw direct '' '' claude-opus-4-7 | cut -d'|' -f2)" "claude-opus-4-7"
+check "gw bankr base url"     "$( ( export GATEWAY=bankr BANKR_LLM_KEY=k USEPOD_TOKEN='' VIRTUALS_API_KEY='' MODEL=m; . "$GW" >/dev/null 2>&1; printf '%s' "${ANTHROPIC_BASE_URL:-}") )" "https://llm.bankr.bot"
+check "gw virtuals base url"  "$( ( export GATEWAY=virtuals VIRTUALS_API_KEY=k USEPOD_TOKEN='' BANKR_LLM_KEY='' MODEL=m; . "$GW" >/dev/null 2>&1; printf '%s' "${ANTHROPIC_BASE_URL:-}") )" "https://compute.virtuals.io"
+# Redaction: the usepod notice must NOT leak the token.
+GW_NOTICE="$( ( export GATEWAY=usepod USEPOD_TOKEN=SUPERSECRET MODEL=x; . "$GW" 2>/dev/null ) )"
+check "gw usepod notice redacted" "$(printf '%s' "$GW_NOTICE" | grep -c 'SUPERSECRET')" "0"
+check "gw usepod notice has marker" "$(printf '%s' "$GW_NOTICE" | grep -c '<redacted>')" "1"
+# Missing token -> non-zero.
+( export GATEWAY=usepod USEPOD_TOKEN='' MODEL=x; . "$GW" >/dev/null 2>&1 ); check "gw usepod missing token fails" "$?" "1"
+# Production mode: sourced under `set -e` with the `|| exit 1` contract MUST halt the
+# caller (set -e alone does NOT abort on a sourced return — callers append || exit 1).
+GW_REACHED="$(GATEWAY=usepod USEPOD_TOKEN='' MODEL=x bash -c 'set -euo pipefail; . "'"$GW"'" >/dev/null 2>&1 || exit 1; echo REACHED' 2>/dev/null)"
+check "gw missing token halts set -e caller" "$GW_REACHED" ""
+# Provider from aeon.yml config when GATEWAY unset.
+GW_CFG_DIR="$(mktemp -d)"; printf 'gateway:\n  provider: usepod\n' > "$GW_CFG_DIR/aeon.yml"
+check "gw reads provider from aeon.yml" "$( cd "$GW_CFG_DIR" && ( export USEPOD_TOKEN=T MODEL=x; unset GATEWAY; . "$GW" >/dev/null 2>&1; printf '%s' "${GATEWAY:-}") )" "usepod"
+
+# --- per-skill usepod_model: extraction regexes + resolution chain ---
+GWP="$(cd "$(dirname "$0")/.." && pwd)/anthropic-gateway.sh"
+PS_DIR="$(mktemp -d)"
+cat > "$PS_DIR/aeon.yml" <<'EOF'
+gateway:
+  provider: usepod
+skills:
+  heavyskill: { enabled: true, schedule: "0 12 * * *", usepod_model: "llama-4" }
+  bothskill: { enabled: true, model: "claude-sonnet-4-6", usepod_model: "llama-4" }
+  plainskill: { enabled: true, model: "claude-sonnet-4-6" }
+  bareskill: { enabled: true }
+EOF
+# These two sed expressions MUST match the ones used in .github/workflows/aeon.yml.
+skill_model()  { grep "^  $1:" "$PS_DIR/aeon.yml" | sed -n 's/.*[ ,{]model: *"\([^"]*\)".*/\1/p'; }
+usepod_model() { grep "^  $1:" "$PS_DIR/aeon.yml" | sed -n 's/.*usepod_model: *"\([^"]*\)".*/\1/p'; }
+resolve() { # skill -> GATEWAY_MODEL
+  local u; u="$(usepod_model "$1")"
+  ( cd "$PS_DIR"; export GATEWAY=usepod USEPOD_TOKEN=T MODEL="$(skill_model "$1")"; \
+    [ -n "$u" ] && export USEPOD_MODEL="$u"; . "$GWP" >/dev/null 2>&1; printf '%s' "$GATEWAY_MODEL" )
+}
+check "usepod_model extracted for heavyskill" "$(usepod_model heavyskill)" "llama-4"
+check "usepod_model empty for plainskill"     "$(usepod_model plainskill)" ""
+check "SKILL_MODEL not fooled by usepod_model" "$(skill_model bothskill)" "claude-sonnet-4-6"
+check "usepod_model on bothskill"              "$(usepod_model bothskill)" "llama-4"
+check "resolve heavyskill -> llama-4"   "$(resolve heavyskill)" "llama-4"
+check "resolve bothskill -> llama-4"    "$(resolve bothskill)" "llama-4"
+check "resolve plainskill -> deepseek"  "$(resolve plainskill)" "deepseek-v3.2"
+check "resolve bareskill -> deepseek"   "$(resolve bareskill)" "deepseek-v3.2"
+check "resolve var-default for plainskill" "$( cd "$PS_DIR"; export GATEWAY=usepod USEPOD_TOKEN=T USEPOD_MODEL=qwen-3.5 MODEL=claude-sonnet-4-6; . "$GWP" >/dev/null 2>&1; printf '%s' "$GATEWAY_MODEL" )" "qwen-3.5"
+# Drift guard: the sed regexes above are copies of the workflow's — assert the live
+# workflow still contains both, so a future regex edit there can't silently diverge.
+PS_WF="$(cd "$(dirname "$0")/../.." && pwd)/.github/workflows/aeon.yml"
+check "workflow has tightened SKILL_MODEL regex" "$(grep -c 's/.*\[ ,{\]model: \*"' "$PS_WF")" "1"
+check "workflow has usepod_model regex"          "$(grep -c 's/.*usepod_model: \*"' "$PS_WF")" "1"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }

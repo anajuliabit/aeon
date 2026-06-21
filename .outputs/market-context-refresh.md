@@ -1,7 +1,7 @@
-market context — 2026-06-14
+market context — 2026-06-21
 
-take: chop (conviction medium)
-BTC $64,311 (+0.29%) / ETH $1,667 (−0.71%) · F&G 18 (extreme fear)
-breadth 10/20 · TVL $72.58B (+0.41% c1d)
-top narrative: decentralized AI bid (rising) — compute > wrapper split
-hot market: "US × Iran peace June 15?" YES 11% (was 24% yesterday — deal failed)
+take: risk-off consolidation (conviction: high)
+BTC $64,087 (+0.82% 24h) / ETH $1,723 (-0.07% 24h) · F&G 23 (Extreme Fear)
+breadth 7/20 green (↓↓) · SOL +2.90% (only winner)
+top narrative: L1 perpetuals ecosystem (rising)
+catalyst: BoJ June 25, Iran stalemate finality

@@ -1,0 +1,55 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "list-digest",
+        "description": "06-14"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_status",
+        "text_details",
+        "separator_1",
+        "link_file"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "staged",
+        "variant": "default"
+      }
+    },
+    "text_details": {
+      "type": "Text",
+      "props": {
+        "text": "thin tape (cyrilXBT longform + flowslikeosmo solana-low-cap), 9 sub-floor"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_file": {
+      "type": "Link",
+      "props": {
+        "label": ".pending-notify/list-digest-2026-06-14.md",
+        "href": ".pending-notify/list-digest-2026-06-14.md"
+      }
+    }
+  }
+}

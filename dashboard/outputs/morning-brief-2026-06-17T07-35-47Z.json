@@ -1,0 +1,428 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief",
+        "description": "2026-06-17"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "stack-focus",
+        "sep-1",
+        "heading-yesterday",
+        "stack-yesterday",
+        "sep-2",
+        "heading-watch",
+        "stack-watch",
+        "sep-3",
+        "heading-running",
+        "stack-running"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "stack-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-badge",
+        "focus-1-title",
+        "focus-1-detail"
+      ]
+    },
+    "focus-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "1",
+        "variant": "secondary"
+      }
+    },
+    "focus-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "BOJ hike confirmed",
+        "level": "h3"
+      }
+    },
+    "focus-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: BTC -2% to ~$65.8k, pinned at reclaim65900, carry-unwind live"
+      }
+    },
+    "focus-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-badge",
+        "focus-2-title",
+        "focus-2-detail"
+      ]
+    },
+    "focus-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "2",
+        "variant": "secondary"
+      }
+    },
+    "focus-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "XAI quota top-up",
+        "level": "h3"
+      }
+    },
+    "focus-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: ~10 x_search skills flatlining since 6-16 12:42z (team 3a8b4c1e)"
+      }
+    },
+    "focus-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-badge",
+        "focus-3-title",
+        "focus-3-detail"
+      ]
+    },
+    "focus-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "3",
+        "variant": "secondary"
+      }
+    },
+    "focus-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Land PRs #112 + #122",
+        "level": "h3"
+      }
+    },
+    "focus-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: 62h and 36h stalled, action-converter loop carrying since 6-15"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "stack-yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yesterday-1",
+        "yesterday-2",
+        "yesterday-3",
+        "yesterday-4",
+        "yesterday-5"
+      ]
+    },
+    "yesterday-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yesterday-1-stats",
+        "yesterday-1-detail"
+      ]
+    },
+    "yesterday-1-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-boj",
+        "stat-btc"
+      ]
+    },
+    "stat-boj": {
+      "type": "Stat",
+      "props": {
+        "label": "BOJ rate",
+        "value": "1.00%",
+        "delta": "+25bp (highest since 1995)",
+        "trend": "up"
+      }
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "Bitcoin",
+        "value": "$65.8k",
+        "delta": "-2%",
+        "trend": "down"
+      }
+    },
+    "yesterday-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Capital-2x risk-sleeve posture call due"
+      }
+    },
+    "yesterday-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yesterday-2-title",
+        "yesterday-2-detail"
+      ]
+    },
+    "yesterday-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "JTO staged: $0.87 entry / $1.10 target, high 10/10",
+        "variant": "lead"
+      }
+    },
+    "yesterday-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "JTX July buyback split catalyst"
+      }
+    },
+    "yesterday-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-reppo",
+        "yesterday-3-detail"
+      ]
+    },
+    "stat-reppo": {
+      "type": "Stat",
+      "props": {
+        "label": "REPPO 24h alert",
+        "value": "-15.78%",
+        "trend": "down"
+      }
+    },
+    "yesterday-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Mirror inverse of 6-14 +18.93% up-trip"
+      }
+    },
+    "yesterday-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yesterday-4-title",
+        "yesterday-4-subdetails"
+      ]
+    },
+    "yesterday-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "SKY ecosystem ~$300m outflow",
+        "variant": "lead"
+      }
+    },
+    "yesterday-4-subdetails": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yesterday-4-detail-1",
+        "yesterday-4-detail-2"
+      ]
+    },
+    "yesterday-4-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "Spark savings -16.2%, liquidity layer -14.6%"
+      }
+    },
+    "yesterday-4-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "First protocol-down to clear gate in 3d"
+      }
+    },
+    "yesterday-5": {
+      "type": "Text",
+      "props": {
+        "text": "14:29z stuck batch carries: narrative-tracker / market-context-refresh / security-digest day-missed"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "stack-watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch-1"
+      ]
+    },
+    "watch-1": {
+      "type": "Text",
+      "props": {
+        "text": "Bitcoin -2% to ~$65.8k after BOJ 1.0% hike — every BOJ hike since Mar-2024 = BTC -18-32% (avg -27%) — implication for focus #1"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "stack-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-1",
+        "running-2",
+        "running-3"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor @ 14:00 UTC (wed-only)"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics @ 18:30 UTC (wed-only)"
+      }
+    },
+    "running-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-3-title",
+        "running-3-details"
+      ]
+    },
+    "running-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "Daily fleet:",
+        "variant": "lead"
+      }
+    },
+    "running-3-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-3-detail-1",
+        "running-3-detail-2",
+        "running-3-detail-3"
+      ]
+    },
+    "running-3-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview / token-pick / token-alert @ 12:00"
+      }
+    },
+    "running-3-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh @ 13:00"
+      }
+    },
+    "running-3-detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels every 4h"
+      }
+    }
+  }
+}

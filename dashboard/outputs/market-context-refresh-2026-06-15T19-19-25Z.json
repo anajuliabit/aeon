@@ -1,0 +1,394 @@
+{
+  "root": "card-market-context",
+  "state": {},
+  "elements": {
+    "card-market-context": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context — 2026-06-15"
+      },
+      "children": [
+        "stack-take",
+        "separator-1",
+        "stack-prices",
+        "separator-2",
+        "stack-indicators",
+        "separator-3",
+        "stack-alts",
+        "separator-4",
+        "stack-narrative",
+        "separator-5",
+        "stack-hot-market"
+      ]
+    },
+    "stack-take": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-take",
+        "badge-risk-on",
+        "text-take-details"
+      ]
+    },
+    "heading-take": {
+      "type": "Heading",
+      "props": {
+        "text": "Take",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge-risk-on": {
+      "type": "Badge",
+      "props": {
+        "text": "Risk-On (Conviction High)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text-take-details": {
+      "type": "Text",
+      "props": {
+        "text": "Iran peace deal landed, polymarket 11%→93%, hormuz reopened, oil premium drained into risk."
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-prices",
+        "grid-prices"
+      ]
+    },
+    "heading-prices": {
+      "type": "Heading",
+      "props": {
+        "text": "Asset Prices",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-prices": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$66,425",
+        "delta": "+3.3%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,812",
+        "delta": "+8.8%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-indicators": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-indicators",
+        "grid-indicators",
+        "text-fg-context"
+      ]
+    },
+    "heading-indicators": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Indicators",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-indicators": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-fg",
+        "stat-breadth",
+        "stat-tvl"
+      ]
+    },
+    "stat-fg": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "20",
+        "delta": "Extreme Fear"
+      },
+      "children": []
+    },
+    "stat-breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "16/20"
+      },
+      "children": []
+    },
+    "stat-tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$74.4B",
+        "delta": "+2.6%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "text-fg-context": {
+      "type": "Text",
+      "props": {
+        "text": "Survey hasn't repriced",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-alts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-alts",
+        "text-alts-desc",
+        "grid-alts"
+      ]
+    },
+    "heading-alts": {
+      "type": "Heading",
+      "props": {
+        "text": "Altcoin Performance",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-alts-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Alts outrunning",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "grid-alts": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-xlm",
+        "stat-ada"
+      ]
+    },
+    "stat-xlm": {
+      "type": "Stat",
+      "props": {
+        "label": "XLM",
+        "value": "+16%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-ada": {
+      "type": "Stat",
+      "props": {
+        "label": "ADA",
+        "value": "+13%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-narrative",
+        "text-hormuz",
+        "stack-zec"
+      ]
+    },
+    "heading-narrative": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-hormuz": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz de-risk (peak)"
+      },
+      "children": []
+    },
+    "stack-zec": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-zec-label",
+        "badge-zec-up",
+        "badge-zec-trending"
+      ]
+    },
+    "text-zec-label": {
+      "type": "Text",
+      "props": {
+        "text": "ZEC privacy resurrect"
+      },
+      "children": []
+    },
+    "badge-zec-up": {
+      "type": "Badge",
+      "props": {
+        "text": "+25%",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-zec-trending": {
+      "type": "Badge",
+      "props": {
+        "text": "Trending #1",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-hot-market": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-hot-market",
+        "text-market-question",
+        "grid-market-outcome"
+      ]
+    },
+    "heading-hot-market": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-market-question": {
+      "type": "Text",
+      "props": {
+        "text": "US × Iran peace deal by Jun 15?"
+      },
+      "children": []
+    },
+    "grid-market-outcome": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "badge-market-yes",
+        "stat-market-odds",
+        "text-market-volume"
+      ]
+    },
+    "badge-market-yes": {
+      "type": "Badge",
+      "props": {
+        "text": "YES",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "stat-market-odds": {
+      "type": "Stat",
+      "props": {
+        "label": "Probability",
+        "value": "93%"
+      },
+      "children": []
+    },
+    "text-market-volume": {
+      "type": "Text",
+      "props": {
+        "text": "$23M volume",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "defi-overview",
+        "description": "2026-06-15 — staged"
+      },
+      "children": [
+        "verdict-badge",
+        "sep1",
+        "market-section",
+        "sep2",
+        "chains-section",
+        "sep3",
+        "yield-section",
+        "sep4",
+        "footer"
+      ]
+    },
+    "verdict-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed verdict",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "market-heading",
+        "tvl-stat",
+        "dex-stat",
+        "stables-text"
+      ]
+    },
+    "market-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Metrics",
+        "level": "h3"
+      }
+    },
+    "tvl-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL (snapshot)",
+        "value": "",
+        "delta": "+2.6%",
+        "trend": "up"
+      }
+    },
+    "dex-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume (hormuz risk-on)",
+        "value": "",
+        "delta": "+24%",
+        "trend": "up"
+      }
+    },
+    "stables-text": {
+      "type": "Text",
+      "props": {
+        "text": "Stables: flat",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chains-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "chains-heading",
+        "hl-stat",
+        "world-stat"
+      ]
+    },
+    "chains-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "L1 Chain Movers",
+        "level": "h3"
+      }
+    },
+    "hl-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HL L1",
+        "value": "",
+        "delta": "+6.9%",
+        "trend": "up"
+      }
+    },
+    "world-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "World Chain",
+        "value": "",
+        "delta": "+24%",
+        "trend": "up"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "yield-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yield-heading",
+        "weth-stat"
+      ]
+    },
+    "yield-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Real-Yield",
+        "level": "h3"
+      }
+    },
+    "weth-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "WETH-USDT",
+        "value": "40.5%"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "Full body in .pending-notify/",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_period",
+        "badge_captures",
+        "text_context",
+        "text_summary"
+      ]
+    },
+    "text_period": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h",
+        "variant": "caption"
+      }
+    },
+    "badge_captures": {
+      "type": "Badge",
+      "props": {
+        "text": "no captures",
+        "variant": "outline"
+      }
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "Inbox cold since personal-stack PR (~3.5d, 10th zero run)"
+      }
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "muted"
+      }
+    }
+  }
+}

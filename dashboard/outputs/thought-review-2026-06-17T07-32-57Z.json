@@ -1,0 +1,55 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review",
+        "description": "last 24h"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_captures",
+        "text_inbox",
+        "text_priorities",
+        "alert_refresh"
+      ]
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "text_inbox": {
+      "type": "Text",
+      "props": {
+        "text": "inbox cold 7d since personal-stack PR"
+      }
+    },
+    "text_priorities": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md last touched 13d ago"
+      }
+    },
+    "alert_refresh": {
+      "type": "Alert",
+      "props": {
+        "message": "worth a refresh?",
+        "type": "info"
+      }
+    }
+  }
+}

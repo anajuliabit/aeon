@@ -1,0 +1,370 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-06-15"
+      },
+      "children": [
+        "shape_header",
+        "sep0",
+        "action1",
+        "sep1",
+        "action2",
+        "sep2",
+        "action3",
+        "sep3",
+        "action4",
+        "sep4",
+        "action5",
+        "sep5",
+        "footer"
+      ]
+    },
+    "shape_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "shape_heading",
+        "shape_text"
+      ]
+    },
+    "shape_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape",
+        "level": "h3"
+      }
+    },
+    "shape_text": {
+      "type": "Text",
+      "props": {
+        "text": "ship iss-019, narrow evals pattern, recheck XPL pair, flip 4 index rows, merge #112"
+      }
+    },
+    "sep0": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_title",
+        "a1_why_label",
+        "a1_why_text",
+        "a1_done_label",
+        "a1_done_text",
+        "a1_loop"
+      ]
+    },
+    "a1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. ship memory/issues/ISS-019.md",
+        "level": "h3"
+      }
+    },
+    "a1_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a1_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "6d overdue from 6-09 — monday is the proven weekly-limit-wave day, 4th occurrence logged 6-12 + 6-13 carryover drain. Frontmatter: severity high / category sandbox-limitation. Fix locus: `.github/workflows/aeon.yml:498` covering FALLBACK_CG_SKILLS gap for non-CG dailies."
+      }
+    },
+    "a1_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "memory/issues/ISS-019.md exists + new row in INDEX.md open table"
+      }
+    },
+    "a1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-019-file"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_title",
+        "a2_why_label",
+        "a2_why_text",
+        "a2_done_label",
+        "a2_done_text",
+        "a2_loop"
+      ]
+    },
+    "a2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. narrow evals.json monitor-polymarket pattern",
+        "level": "h3"
+      }
+    },
+    "a2_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a2_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals coverage cratered 48% → 24% (24pp drop) on the over-broad pattern — action-queue head from today's skill-evals verdict. Pattern shift: from `POLYMARKET` to `### monitor-polymarket`"
+      }
+    },
+    "a2_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "grep evals.json shows tightened literal + next skill-evals run rebounds coverage"
+      }
+    },
+    "a2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: evals-monitor-polymarket"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_title",
+        "a3_why_label",
+        "a3_why_text",
+        "a3_done_label",
+        "a3_done_text",
+        "a3_loop"
+      ]
+    },
+    "a3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. recheck the XPL polymarket pair",
+        "level": "h3"
+      }
+    },
+    "a3_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a3_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "yesterday's token-pick HIGH 9/10 + market HIGH 20pp-edge thesis faces fresh de-escalation tape — peace deal landed 11% → 93% on the date. Pair detail: NO 59.5¢ iran-enrichment by 6-30, on live hormuz risk-on tape"
+      }
+    },
+    "a3_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a3_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "NO price logged + hold/scale/close decision appended to memory/topics/crypto.md"
+      }
+    },
+    "a3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: xpl-pair-recheck"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_title",
+        "a4_why_label",
+        "a4_why_text",
+        "a4_done_label",
+        "a4_done_text",
+        "a4_loop"
+      ]
+    },
+    "a4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. flip ISS-007/009/010/016 rows to resolved in memory/issues/INDEX.md",
+        "level": "h3"
+      }
+    },
+    "a4_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a4_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "5d overdue from 6-10 — all 4 have shipped code or durable workarounds, only the bookkeeping lags"
+      }
+    },
+    "a4_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a4_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "4 rows moved from open to resolved table in INDEX.md with resolved_at = 2026-06-15"
+      }
+    },
+    "a4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-index-flips"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_title",
+        "a5_why_label",
+        "a5_why_text",
+        "a5_done_label",
+        "a5_done_text",
+        "a5_loop"
+      ]
+    },
+    "a5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. merge PR #112",
+        "level": "h3"
+      }
+    },
+    "a5_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "a5_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "~24h old, in stall window — docs freshness loop on the auto-gen surface. Details: skill-graph docs auto-gen, branch skill-graph/2026-06-14"
+      }
+    },
+    "a5_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "a5_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #112 merged into main"
+      }
+    },
+    "a5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-112-merge"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_heading",
+        "footer_text"
+      ]
+    },
+    "footer_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "memory=131 lines, logs=7 days, topics=12 files, prs=1 open, cron_failing=0, mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

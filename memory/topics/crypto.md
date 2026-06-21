@@ -64,6 +64,167 @@ narrative-and-pick layer.
 - Note: Kaito Yaps/Yapper leaderboards shut Jan 15 2026 — no live
   mindshare leaderboard reference.
 
+### 2026-06-16 — REPPO down-trip + JTO pick + tape cools
+
+- **REPPO 24h-rail TRIPPED DOWN-SIDE first time 6-16 ~12:45 UTC.**
+  -15.78% 24h on $515K vol (1.86× baseline, under 3× spike rail).
+  Mirror-inverse of 6-14's +18.93% up-trip. Day-over-day arc: $0.01452
+  (6-11) → $0.01773 (6-13) → $0.02108 (6-14) → $0.02349 (6-15) →
+  $0.02007 (6-16) — gives back 6-15's +11.41% + most of 6-14's
+  +18.93% trip; still +38.2% net from 6-11 base. WELL -1.67%, MAMO
+  -1.16%, GITLAWB +9.66%. Tape-side fade of the swarm-token rotation,
+  no on-chain catalyst (chain off-CI per Docker migration).
+- **Today's token-pick: JTO HIGH 10/10 raw 11** ($0.87, +36.4% 24h /
+  +38.8% 7d). JTX self-custody Solana trading platform launches July
+  2026; **80% of protocol revenue → JTO open-market buybacks** (first
+  direct value mechanism). $395M vol (vmc 0.94) confirms real bid.
+  Risk: $96-128M/yr emissions still outpace projected $19-30M buybacks
+  if launch volume disappoints. Target $1.10 / inv $0.75 / 14d. JTO
+  last picked 6-02 (14d ago — outside window, JTX July launch is the
+  new catalyst). Market SKIPPED (Polymarket field ~all 2026 WC futures
+  efficient).
+- **Tape cooling, regime intact.** Top-100 green dropped 92 (6-15
+  14:02Z) → 61 (6-16 AM) → 52 (12:42Z); median top-50 +4.8% → +0.81%
+  → +0.66%. BTC $66,443 flat 24h, ETH $1,817 +2.5%, SOL $75 +4.3%
+  (7d +13.7% leads week). 3 fresh BREAKOUTs intraday (SKYAI +38.6% /
+  7d +113.3%, LAB +38.2% rank #27 on $41M, JTO +36.4% sustained on
+  $395M day-2 from +24.5% AM). H FADE→CAPITULATION confirms 6-15
+  call (was +28.5%, -33.8% AM, -26.0% intraday). LIT (Lighter)
+  NEW on trending #116.
+- **DEX wave clean tape extends.** Uniswap V4 +50.08% c1d ($967m,
+  extends 6-15's +101.5% reversal). Uniswap V3 +110.87% c1d ($630m,
+  doubles 6-15's +91.3% rebound). 4-day clean-tape arc: $6.0b → $3.7b →
+  $4.6b → $7.3b — biggest clean-tape jump in the arc. Polymarket US
+  $2.16b print 0% c1d flat day-over-day = artifact stabilizing day 4.
+- **HL ecosystem deposit wave DAY 2.** Hyperliquid L1 chain mover ↑
+  +6.0% snap c1d (Kinetiq kHYPE +13.0% to $1.15b, stHYPE +13.6%,
+  HyperLend Pooled +12.4% all c1d). Same pattern as 6-15 confirms
+  deposit wave not blip. HL Perps fees +49.33% c1d (extends 6-15's
+  +69%) — perp bid sticky.
+- **WETH-USDT real-yield extends 40.47 → 42.31 apyBase.** Resurrection
+  thesis hardens to "rolling-vol regime, not hot-pool rollover".
+- **Sky ecosystem ~$300m c1d outflow** — Spark Savings -16.16% c1d
+  ($1.85b → $1.55b) + Spark Liquidity Layer -14.59% ($2.13b → $1.82b).
+  First protocol-down to clear gate in 3 days. NO obvious catalyst;
+  possibly leverage de-risk (aixbt: DeFi leverage at 2021 levels).
+- **Stable single-issuer notable.** USDGO +16.13% (+$78m to $562m,
+  first time clearing gate). USDM MegaUSD +8.11% DAY 3 of cliff
+  ACCELERATING (cum 3d +$40m). USD1 +1.73% DAY 4 recovery extension
+  (cum +$140m+ since 6-11 bleed-stop). NUSD -7.11% DAY 2 unwind
+  ACCELERATING.
+- **XAI quota exhausted 6-16 12:42Z + 17:56Z** (team 3a8b4c1e monthly
+  credit limit). token-pick X leg absent, list-digest LIST_DIGEST_EMPTY,
+  agent-buzz AGENT_BUZZ_ERROR. Operator action: top up XAI credits.
+
+### 2026-06-15 — risk-on regime flip on Hormuz landing
+- **#27 Risk-on regime flip (NEW, m4 ↑↑, Bull).** Hormuz peace deal LANDED
+  (Polymarket "US × Iran peace deal by June 15?" YES 11%→93% +82pp as
+  deadline arrived) drained the oil geopolitical premium → 86/100 → 92/100
+  top-100 green intraday, BTC 2-wk high $66.4k +3.3% / ETH $1,812 +8.7% /
+  SOL $73.59 +8.7% — alts outrun BTC = alt-bid stage, BTC dom -0.27pp.
+  Dollar flipped strength→soft in 12h (aixbt). "Whole tape is one trade"
+  (aixbt crypto item 1 = tradfi item 1). Bear: single-catalyst fragility
+  — **BOJ Tuesday is the soft-dollar-leg test**. Position RIDE (regime,
+  watch BOJ).
+- **#13 XMR/ZEC privacy RESURRECTED 6-15 (was DEAD 6-14, m1→m2 ↑↑, Cope).**
+  ZEC +15.9% AM → +24.5% intraday on ~$10M short squeeze + Garrett Jin's
+  named $21M HL long + clean security audit post AI-found counterfeiting
+  hard-fork; Philippines SEC ban shrugged off. 6th attempt — first with
+  real catalyst. **Reflexivity flag: squeeze≠demand** — fade if it
+  doesn't hold past the cover. Position WATCH.
+- **#7 BTC capitulation DEAD 6-15** (was Fading 6-14). 2-wk high $66.4k
+  + 86/100 → 92/100 breadth + F&G softening 13→20 contradicts the
+  sub-$60k bottom call. $250M short-squeeze liqs steady the wick (aixbt).
+- **#15 VELVET DEAD 6-15** (was RESURRECTED-COPE 6-14). −32.3% AM hard
+  giveback (7d still +28%) — parabola resolves after 5 sessions of flips.
+  6-14 FADE call paid; arc closed. Position FADE.
+- **#26 BOJ-tuesday PROMOTED Emerging→Rising (Bear).** Dollar flipped
+  soft 12h + 9-yr-high yen shorts squeeze risk + dated Tuesday catalyst.
+  Position WATCH (macro headwind).
+- **#1 decAI PROMOTED (thesis hardening).** @2xnmore canon: niche →
+  "obvious hedge" against Anthropic export controls + 4-pillar taxonomy
+  (compute/intelligence/agents/data). AKT +10.6% / 7d +34% (day-3
+  compute carry), TAO 7d +33% (24h cooled, intact 7d), WLD +16.2%, GRASS
+  +25.2% breakout (data pillar). Meme-wrappers continue bleeding
+  (GWEI −16% / EDGE −5.3%). Bear: @DukeD_Defi 90%-structural + @web3advise
+  most-crowded.
+- **DEX wave snaps back HARD.** Uniswap V4 +101.5% c1d (full reversal of
+  6-14's −35.5% bleed). Uniswap V3 +91.3% c1d (reverses −63%). HL Perps
+  fees +69.34% c1d (perp bid back). Aerodrome Slipstream +49.7% c1d. The
+  6-14 "DEX clean tape −38%" deterioration call inverted in 24h.
+- **DeFi yield: WETH-USDT real-yield RESURRECTED.** 35.57 → 40.63 → 18.88
+  → 11.36 (off list 6-14) → 40.47 today (apyBase, conf 1→3). 6-14
+  "hot-pool rollover confirmed" call REVERSES — pool resurged to early-
+  window peak on the risk-on tape (vol-driven fee APR). cvxCRV 3rd
+  cool-off (27.35 → 26.93, gauge thesis unwinding slowly).
+
+### 2026-06-13 → 2026-06-14 — decentralised-AI standalone + ride extends
+- **#1 Decentralised AI bid (NEW STANDALONE 6-13, ride extends 6-14).**
+  Was sub-cluster inside AI×crypto custody on 6-11; carved out 6-13
+  Emerging→Rising on the Anthropic Fable-5 + Mythos-5 US-gov
+  export-control suspension catalyst (per 6-13 daily-routine tweet-
+  roundup + aixbt-pulse). TAO +17.4% [TRENDING+UP+BREAKOUT] day-1,
+  **+23.5% / 7d +34% day-2** on Andy Jassy-named WSJ/TechCrunch
+  framing (AWS researchers used Fable 5 to jailbreak a vuln-ID
+  safeguard; AWS itself lost access to its own portfolio company's
+  models). AKT +21.5% fresh entry 6-14 (Akash decentralised-compute).
+  FET +11.9%, JASMY +16.7%, EIGEN +9.6%. Subnet 128→256 expansion live,
+  Grayscale/Bitwise spot-TAO ETF SEC decisions ~Aug, Dec 2025 halving
+  cut emissions 7,200→3,600 / >70% staked, BIT-0011 Conviction
+  Mechanism locked-stake proposal live. Position FRONT-RUN held, RIDE
+  validated (token-pick TAO HIGH 10/10 6-13 paying +24%). **Rotation
+  inside DeAI**: meme-side (TRUMP -8.7%, EDGE -16.9%, GWEI -12.7%,
+  VVV -7.8%) all flipped TRENDING+DOWN intraday — money rotating into
+  decentralised-compute primitives, not AI-token wrappers.
+- **#2 AI×crypto agent custody PROMOTED Peak.** Coinbase agent accounts
+  6-12 = 5th big-co primitive in 4 months (MetaMask 10-chain 6-08 +
+  Coinbase Agentic 2-26 + MoonPay 3-26 + Mastercard×Coinbase×Ripple
+  6-11 + Coinbase agent accounts 6-12). Sherwood/Reppo-class own
+  positioning hardens. Position RIDE.
+- **#5 Prediction markets PROMOTED.** Polymarket US debut on defi-
+  overview leaderboard 6-13: $969M day-1 print, $1.70b day-2 (+75% c1d)
+  on CFTC-approved onshore rail (QCEX acquisition path). +8264% c7d
+  is artifact; the structural primitive is the CFTC-approved US venue.
+  Polymarket International also debuts on fees leaderboard. Position
+  RIDE.
+- **#24 Polymarket US debut (NEW 6-13).** Folds into #5.
+- **#25 Curve gauge weight rotation (NEW 6-13).** cvxCRV 18.42 → 31.49
+  apy (+13.07pts surge 6-13), sdcrv +3.5pts. Likely CRV emission
+  schedule trigger or gauge weight rotation. 6-14 cools (-4.14pts to
+  27.35) — first cool-off in 2 days. Position WATCH (no clean token
+  trade).
+- **#26 CFTC onshore BTC perpetual futures (NEW 6-13).** RWA perps
+  $211B in May; tokenized assets +589% from early-2025; twin domestic-
+  rail print with Polymarket US debut. Position WATCH.
+- **#28 AI engineering layoffs (NEW 6-13).** Snap -1k / Meta -8k as
+  AI writes 65% of new code. Bridges to capital-rotation but tech-side
+  not crypto-tradable. Position IGNORE.
+- **#3 HL perp DEX DEMOTED Fading deepens.** HL Perps fees c7d
+  -33.8% → -67.77% (6-13) → -52.68% (6-14) — 6-11 bottom call
+  INVALID, 6-13 deeper-unwind call partially walked back +15pts but
+  still red. Aave V3 fees c7d also -42.57 → -85.47 → -71.25. HYPE/H/
+  SPK/MEGA unlock overhang. Position FADE intensified.
+- **#6 Stablecoin rails DEMOTED Mixed.** USDTB Ethena USDtb twin
+  bleed (issuance -$100m + RWA -9.78%) 6-13; USD1 multi-day bleed
+  STOPPED (+0.13% → +1.41% 6-14, day-3 recovery extends). USDM
+  MegaUSD day-2 cliff +5.17% → +4.70% (cum 2d +$19m). Position RIDE,
+  mixed conviction.
+- **#8 Capital rotation crypto→AI equities DEMOTED Mixed.** Anthropic
+  export-control SPLITS the call — centralised-AI hit (Fable 5 access
+  suspended), decentralised-AI bid (TAO/VVV/MOR). "Crypto is dying"
+  loses its clean signal. Position WATCH.
+- **#13 XMR/ZEC privacy-coin rotation DEAD 6-13.** XMR -12.2%
+  TRENDING+DOWN MAJOR direction-flipped from 6-11's +12.9% winner;
+  ZEC -4.9% MAJOR. 4th consecutive failed privacy-coin call (6-05 ZEC
+  FADE wrong, 6-09 ZEC FRONT-RUN wrong, 6-10 ZEC reversal called,
+  6-11 ZEC quiet-fade). Pattern stop active. Position IGNORE.
+- **#15 VELVET parabolic reflexivity DEAD 6-13.** -76.2% TRENDING+DOWN
+  CAPITULATION after 6-11's +618% 7d / 3-direction-flip arc. Full
+  sequence: +24/-17/+119/+126/-78. 6-11 FADE validated. **6-14 caveat:
+  +20.8% bounce intraday challenged the DEAD call; 12:30Z refresh
+  showed +10.4%, position IGNORE held (parabola in this regime
+  resolves inside 5 sessions — VELVET is on day 5).**
+
 ### 2026-06-09 — post-gap re-baseline (4-day gap, 6-06/6-07/6-08 stuck)
 - **NEW: Quantum-resistance (ZEC vehicle).** Carved out of dead privacy-
   coins frame. Orchard exploit fixed in <72h; ZEC +80% off 6-05 low w/
@@ -122,6 +283,12 @@ narrative-and-pick layer.
 | 2026-06-04 | HUMAN | (pick 6-04, see daily log) | (tier per log) | Carried in 7-day dedup window 6-05 |
 | 2026-06-05 | DEXE | $20.15 | MEDIUM 6 | BingX DEXE-USDT perp listing 5-25 broke $16 resistance held since Apr 2025; TVL tripled to ~$1.7B Q2 + validator voting layer push staking APR ~102%; risk: 48% supply circ, FDV $424M ~2x mcap, Q4 2026 unlock cliff. Market SKIPPED — no event cleared 5pp gate post-dedup |
 | 2026-06-09 | WLD | $0.48 | HIGH 11 | OpenAI confidential S-1 + July unlock-reduction (43% cut to daily emissions); 9-day re-entry vs 5-31 ($0.333) clean by dedup + fresh catalyst stack; market pair NYK Finals YES 62.35¢ MEDIUM edge 5.6pp |
+| 2026-06-10 | SENT | $0.01508 | HIGH 7 | Open-AGI "GRID" protocol on Upbit-listing residual; broke down intraday $0.01508 → $0.01489 (-16.31%); re-fire 16:00Z SUPPRESSED per once-daily discipline despite MORPHO emerging HIGH 8 post-$175M Paradigm+a16z raise at $2B val |
+| 2026-06-11 | MON | $0.0220 | HIGH 10 | Monad L1 — Mu Digital tokenization 6-02 + governance shorten-consensus vote 6-06 + FalconX tokenized-credit + TownSquare $100M USD1 May. Risk: Nov-2026 investor 19.7% + team 27% unlock cliff. Market SKIPPED (Starmer-by-6-30 fair 12-15% vs 16.5¢ = 2-4pp edge, sub-5pp gate) |
+| 2026-06-13 | TAO | $248.76 | HIGH 10 | Bittensor — Anthropic Fable-5/Mythos-5 export-control catalyst; subnet 128→256 expansion; Grayscale+Bitwise spot-TAO ETF SEC decisions ~Aug; Dec 2025 halving cut emissions 7,200→3,600 / >70% staked; BIT-0011 Conviction Mechanism locked-stake; TAO Swap as liquidity hub. Risk: $215 consolidation shelf, +90% off March low. Market: Xi-out-before-2027 YES 7.25¢ MEDIUM 5.5pp. **Validated 6-14: +23.5% / 7d +34% — FRONT-RUN call held** |
+| 2026-06-14 | XPL | $0.0888 | HIGH 9 | Plasma One Visa Card launches next week — platinum/core/lite tiers require hold/lock XPL for cashback + stablecoin-spend yield; +27.8% 7d on vmc 0.45 (real turnover); 24h cooled to +0.9% = entry not chasing parabola. Risk: 6-25 unlock 88.89M XPL (~$7.5M ecosystem/growth) + 6-07 team transfer $9.64M = distribution overhang firing. Target $0.115 / inv $0.075 / 14d. Market: "Iran enrichment halt by 6-30?" NO 59.5¢ HIGH ~20pp edge (PBS 6-12 deal extends ceasefire but defers 15-20yr enrichment halt; Trump 6-12: "nuclear was not agreed"). **6-15 update: Hormuz peace deal landed (Polymarket YES 11%→93%) — Iran NO-pair thesis now faces a live de-escalation headwind; re-check the print** |
+| 2026-06-15 | NEAR | $2.47 | HIGH 10 | Near Protocol — dynamic resharding upgrade (v2.13, shipping June) auto-splits shards on demand; ~+27-30% on the news leg with ~$32M NEAR Intents fees + $19B cross-chain volume = real usage under the move. mcap $3.2B (rk31, not pumpable), vol $512M, vol/mcap 0.16, on CG trending, RS vs BTC(+4.7% 7d)/ETH(+7.7% 7d). Target $2.90 / inv $2.10 / 14d. ZRO scored higher (raw 11) but REJECTED — June-20 unlock 25.71M ZRO (~$29.4M / 2.57% supply, 5d out) on -20% 30d trend = FADE pattern. Market SKIPPED — Polymarket field ~entirely 2026 WC futures (efficient, no defensible edge ≥5pp) |
+| 2026-06-20 | HYPE | $71.06 | HIGH 8 | CoinGecko trending (+2), momentum both 24h/7d, outperforms BTC/ETH on 7d. Polymarket data stale (expired UK political futures); market SKIP. Risk: momentum exhaustion on macro risk-off; invalidate $62. |
 
 ## Picks deliberately skipped (rubric validated post-hoc)
 - **LAB** (5-29 → 6-02) — scored 10-11/10 five days running but skipped
@@ -164,6 +331,47 @@ narrative-and-pick layer.
   3-consecutive-red accelerating sequence — 15% rail trip averted); REPPO
   -5.34% (4d +9.31% snaps 3-day red); WELL -1.05%. Watchlist 4-day:
   WELL +5.80%, MAMO +4.81%, REPPO +9.31%, GITLAWB +42.40%.
+- 2026-06-10: GITLAWB -13.71% (gives back most of 6-09 squeeze on
+  matching light tape — 6-09's no-fresh-demand thesis validated); WELL
+  -2.68%, MAMO -3.56%, REPPO -0.26% (dead-flat $0.0140 band). Median
+  -3.12%; mean-reversion loop closes. No alerts.
+- 2026-06-11: tightest 24h tape in a week — all 4 inside ±4% (WELL
+  +0.73%, MAMO +0.77%, REPPO +3.65%, GITLAWB +3.81%). REPPO snaps
+  dead-flat band on 0.36× baseline vol. GITLAWB 2-day net from 6-05
+  low +26.30%. No alerts.
+- 2026-06-12: SKILL DID NOT RUN — caught in weekly-limit wave.
+- 2026-06-13: **REPPO +14.39% 24h / +22.05% 2d on 0.94× baseline vol
+  — 61bp under 15% rail, closest non-trip on the up-side since canonical
+  watchlist landed.** Watchlist median +2.07% mid. WELL +2.35%, MAMO
+  +1.79% (breaks 2-session bleed), GITLAWB -5.93% (2nd leg lower after
+  6-10 give-back). No alerts. Quality of REPPO print suspect — thin
+  participation, easy to fade if no follow-through.
+- 2026-06-14: **REPPO +18.93% 24h / +45.18% 3d TRIPPED — first up-side
+  alert since canonical watchlist landed (PR #55).** Vol $522K = 2.55×
+  rolling baseline (loud bid, under 3× spike rail = real participation
+  not capitulation-buying). 3-day arc: $0.01452 (6-11) → $0.01773 (6-13)
+  → $0.02108 (6-14). Watchlist median +1.55% (well/mamo/gitlawb only);
+  REPPO is +17.4pts above the rest = cleanest outlier since list
+  landed. WELL +0.07%, MAMO +0.41%, GITLAWB +2.68%. No reppo-swarm
+  mint activity 6-11→6-14 (chain off-CI) so the move is pure tape-side
+  rotation into the swarm-token tier as AI-basket bid extends (TAO
+  +23.5%, AKT +21.5% fresh, FET +11.9%). 1 alert fired.
+- 2026-06-15: whole watchlist green — WELL $0.00385916 +9.08% (92bp
+  under 10% rail on 2.55× vol — broadest watchlist participation,
+  closest non-trip), MAMO +5.06%, REPPO $0.02348886 +11.03% (cooled
+  below 6-14's trip but held gains + added +11.41% d/d on baseline
+  vol = follow-through not fade), GITLAWB +6.42%. Median +7.75% —
+  broadest green print since canonical list landed. 0 alerts.
+- 2026-06-16: **REPPO -15.78% TRIPPED DOWN-SIDE — first down-side
+  alert since canonical watchlist landed.** Mirror inverse of 6-14's
+  +18.93% up-trip. WELL $0.00377701 -1.67% (mild fade), MAMO
+  $0.00878800 -1.16% (2nd-down session), REPPO $0.02007476 -15.78%
+  (5-day arc: $0.01452 → $0.01773 → $0.02108 → $0.02349 → $0.02007,
+  gives back 6-15's +11.41% + most of 6-14's +18.93%; still +38.2%
+  net from 6-11), GITLAWB $0.00008695 +9.66% (flat-bias up).
+  REPPO vol $515K = 1.86× baseline (loud bid both directions this
+  week, under 3× spike rail). Watchlist split: REPPO down hard, GITLAWB
+  up firm, WELL/MAMO mild fade. 1 alert fired.
 
 ## Bitcoin
 See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline

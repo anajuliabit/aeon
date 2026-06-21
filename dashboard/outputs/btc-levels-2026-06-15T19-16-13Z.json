@@ -1,0 +1,120 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "BTC Levels"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_spot",
+        "badge_status",
+        "text_reference",
+        "sep1",
+        "heading_levels",
+        "stack_levels",
+        "text_breakdown_context",
+        "sep2",
+        "alert_disclaimer"
+      ]
+    },
+    "stat_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC Spot",
+        "value": "$66,400"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ Reclaimed $65,900 — Stabilization Confirmed",
+        "variant": "default"
+      }
+    },
+    "text_reference": {
+      "type": "Text",
+      "props": {
+        "text": "Per 2026-06-09 advisor levels. Prior reclaim: $63,500",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_levels": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Price Levels",
+        "level": "h4"
+      }
+    },
+    "stack_levels": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_prev_close",
+        "stat_breakdown",
+        "stat_cbbtc"
+      ]
+    },
+    "stat_prev_close": {
+      "type": "Stat",
+      "props": {
+        "label": "Previous UTC Daily Close",
+        "value": "$65,700"
+      }
+    },
+    "stat_breakdown": {
+      "type": "Stat",
+      "props": {
+        "label": "Breakdown Line",
+        "value": "$60,500"
+      }
+    },
+    "stat_cbbtc": {
+      "type": "Stat",
+      "props": {
+        "label": "cbBTC Review Trigger",
+        "value": "≤$45,000"
+      }
+    },
+    "text_breakdown_context": {
+      "type": "Text",
+      "props": {
+        "text": "Price well clear of $60,500 breakdown line",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_disclaimer": {
+      "type": "Alert",
+      "props": {
+        "message": "Not financial advice",
+        "type": "info"
+      }
+    }
+  }
+}

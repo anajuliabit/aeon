@@ -1,0 +1,506 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi — 2026-06-16"
+      },
+      "children": [
+        "summary-text",
+        "tvl-stat",
+        "tvl-context",
+        "sep-1",
+        "chains-heading",
+        "chains-table",
+        "sep-2",
+        "movers-heading",
+        "movers-stack",
+        "sep-3",
+        "fees-heading",
+        "fees-note",
+        "fees-table",
+        "sep-4",
+        "dex-heading",
+        "dex-text",
+        "dex-table",
+        "sep-5",
+        "stables-heading",
+        "stables-stat",
+        "stables-context",
+        "stables-list",
+        "sep-6",
+        "reals-heading",
+        "reals-table",
+        "sep-7",
+        "incentive-heading",
+        "incentive-table",
+        "sep-8",
+        "sources-text"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "Mixed (risk-on continuing): dex vol +39% c1d on alt-routing surge, tvl/stables drift up.",
+        "variant": "lead"
+      }
+    },
+    "tvl-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$74.99b",
+        "delta": "+0.75%",
+        "trend": "up"
+      }
+    },
+    "tvl-context": {
+      "type": "Text",
+      "props": {
+        "text": "snap c1d vs 6-15 $74.43b | /v2/chains c1d/c7d null DAY 18",
+        "variant": "caption"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chains-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Chains",
+        "level": "h3"
+      }
+    },
+    "chains-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Chain",
+          "TVL",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Ethereum",
+            "$39.54b",
+            "+1.5% snap"
+          ],
+          [
+            "BSC",
+            "$5.33b",
+            "—"
+          ],
+          [
+            "Solana",
+            "$4.96b",
+            "+1.3% snap"
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "movers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers",
+        "level": "h3"
+      }
+    },
+    "movers-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mover-1",
+        "mover-2",
+        "mover-3"
+      ]
+    },
+    "mover-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m1-badge",
+        "m1-change",
+        "m1-details"
+      ]
+    },
+    "m1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ Hyperliquid L1",
+        "variant": "secondary"
+      }
+    },
+    "m1-change": {
+      "type": "Text",
+      "props": {
+        "text": "+6.0% snap ($1.56b → $1.65b)"
+      }
+    },
+    "m1-details": {
+      "type": "Text",
+      "props": {
+        "text": "kinetiq khype +13%, sthype +14%, hyperlend pooled +12% c1d, lst-deposit surge day 2.",
+        "variant": "caption"
+      }
+    },
+    "mover-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m2-badge",
+        "m2-change",
+        "m2-details"
+      ]
+    },
+    "m2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ Apollo Diversified Credit",
+        "variant": "secondary"
+      }
+    },
+    "m2-change": {
+      "type": "Text",
+      "props": {
+        "text": "+27.5% c1d / +28% c7d ($90m → $115m)"
+      }
+    },
+    "m2-details": {
+      "type": "Text",
+      "props": {
+        "text": "RWA prime fund inflow, no obvious catalyst.",
+        "variant": "caption"
+      }
+    },
+    "mover-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m3-badge",
+        "m3-change",
+        "m3-details"
+      ]
+    },
+    "m3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↓ Spark Savings",
+        "variant": "destructive"
+      }
+    },
+    "m3-change": {
+      "type": "Text",
+      "props": {
+        "text": "−16.2% c1d ($1.85b → $1.55b)"
+      }
+    },
+    "m3-details": {
+      "type": "Text",
+      "props": {
+        "text": "Sky ecosystem ~$300m c1d outflow with Liquidity Layer −14.6%, no protocol catalyst posted.",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fees-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees Leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "fees-note": {
+      "type": "Text",
+      "props": {
+        "text": "Fees beating TVL: Polymarket Intl misses 3rd day (fees c7d +111% / TVL c7d +6.5% over <+5% gate); no other qualifier.",
+        "variant": "muted"
+      }
+    },
+    "fees-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Protocol",
+          "Fees (24h)",
+          "vs 7d Avg"
+        ],
+        "rows": [
+          [
+            "Tether",
+            "$16.31m",
+            "flat"
+          ],
+          [
+            "Circle USDC",
+            "$6.37m",
+            "−0.5%"
+          ],
+          [
+            "Hyperliquid Perps",
+            "$2.51m",
+            "+49% c1d, +17%"
+          ]
+        ]
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "dex-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX Volume (24h)",
+        "level": "h3"
+      }
+    },
+    "dex-text": {
+      "type": "Text",
+      "props": {
+        "text": "$9.43b (+39% raw, ≈+57% clean ex-Polymarket-US $2.16b)"
+      }
+    },
+    "dex-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "DEX",
+          "Volume",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Polymarket US",
+            "$2.16b",
+            "[artifact day 4]"
+          ],
+          [
+            "Uniswap V4",
+            "$967m",
+            "+50% c1d"
+          ],
+          [
+            "Uniswap V3",
+            "$630m",
+            "+111% c1d"
+          ],
+          [
+            "PancakeSwap AMM V3",
+            "$564m",
+            "+26%"
+          ],
+          [
+            "Aerodrome Slipstream",
+            "$518m",
+            "+79%"
+          ]
+        ]
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stables-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stables",
+        "level": "h3"
+      }
+    },
+    "stables-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Market Cap",
+        "value": "$314.18b",
+        "delta": "+0.23%",
+        "trend": "up"
+      }
+    },
+    "stables-context": {
+      "type": "Text",
+      "props": {
+        "text": "c1d, +$735m d/d",
+        "variant": "caption"
+      }
+    },
+    "stables-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stable-1",
+        "stable-2",
+        "stable-3",
+        "stable-4",
+        "stable-5",
+        "stable-6"
+      ]
+    },
+    "stable-1": {
+      "type": "Text",
+      "props": {
+        "text": "USDGO +16.1% (+$78m to $562m, new high-velocity stable)"
+      }
+    },
+    "stable-2": {
+      "type": "Text",
+      "props": {
+        "text": "USDM +8.1% (cliff DAY 3 accelerating, was +4.7%/+5.2% prior)"
+      }
+    },
+    "stable-3": {
+      "type": "Text",
+      "props": {
+        "text": "USDG Global Dollar +3.3% (+$85m to $2.69b, largest absolute add)"
+      }
+    },
+    "stable-4": {
+      "type": "Text",
+      "props": {
+        "text": "USD1 +1.7% (+$76m, recovery DAY 4)"
+      }
+    },
+    "stable-5": {
+      "type": "Text",
+      "props": {
+        "text": "FDUSD +4.4% (+$15m)"
+      }
+    },
+    "stable-6": {
+      "type": "Text",
+      "props": {
+        "text": "NUSD −7.1% (−$8.4m, unwind day 2 accelerating from −1.1%)"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reals-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Real Yield (sustainable, ≥$10M, filtered)",
+        "level": "h3"
+      }
+    },
+    "reals-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Pool",
+          "APY",
+          "TVL",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "WETH-USDT (uniswap-v3 0.3%, ETH)",
+            "42.31%",
+            "$76m",
+            "conf=3, extends 6-15 resurrection (40.47 → 42.31)"
+          ],
+          [
+            "ETH-LINK (uniswap-v4, ETH)",
+            "27.85%",
+            "$25m",
+            "conf=3, m30=17.29, NEW"
+          ],
+          [
+            "USDC-WETH (uniswap-v3, ETH)",
+            "25.34%",
+            "$21m",
+            "conf=2, same pool 16.83 → 25.34, +8.5pts c1d"
+          ]
+        ]
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "incentive-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive Yield (points / emissions, ≥$25M)",
+        "level": "h3"
+      }
+    },
+    "incentive-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "APY",
+          "TVL",
+          "Composition/Notes"
+        ],
+        "rows": [
+          [
+            "cvxCRV (Convex, ETH)",
+            "26.61%",
+            "$33m",
+            "$CRV+$CVX+$crvUSD, 4th cool-off (31.49 → 27.35 → 26.93 → 26.61)"
+          ],
+          [
+            "SDCRV (Stake DAO, ETH)",
+            "20.43%",
+            "$29m",
+            "$CRV+$SDT, sharper cool (24.65 → 20.43, −4.2pts c1d)"
+          ]
+        ]
+      }
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: llama_tvl=ok llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none",
+        "variant": "caption"
+      }
+    }
+  }
+}

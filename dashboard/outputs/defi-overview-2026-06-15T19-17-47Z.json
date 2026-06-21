@@ -1,0 +1,111 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "defi-overview",
+        "description": "06-15 staged"
+      },
+      "children": [
+        "verdict_badge",
+        "sep1",
+        "metrics_grid",
+        "pending_note"
+      ]
+    },
+    "verdict_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Mixed verdict",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "tvl_stat",
+        "dex_vol_stat",
+        "stables_stat",
+        "hl_l1_stat",
+        "world_chain_stat",
+        "weth_usdt_stat"
+      ]
+    },
+    "tvl_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL (snapshot)",
+        "value": "+2.6%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "dex_vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume (Hormuz risk-on)",
+        "value": "+24%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stables_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stables",
+        "value": "flat",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "hl_l1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HL L1 Chain mover",
+        "value": "+6.9%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "world_chain_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "World Chain",
+        "value": "+24%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "weth_usdt_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "WETH-USDT Real-Yield",
+        "value": "40.5% (back to)",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "pending_note": {
+      "type": "Text",
+      "props": {
+        "text": "Full body in .pending-notify/",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,1 +1,1 @@
-daily-routine 06-14 staged — see .pending-notify/daily-routine-msg.md (3612 chars, deai-day-2 + jassy crackdown)
+Daily routine complete — see .pending-notify/daily-routine-msg.md for full briefing

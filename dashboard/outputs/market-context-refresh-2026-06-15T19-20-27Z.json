@@ -1,0 +1,196 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context"
+      },
+      "children": [
+        "heading-date",
+        "badge-stance",
+        "text-thesis",
+        "sep1",
+        "stack-prices",
+        "progress-fg",
+        "text-fg-note",
+        "stat-breadth",
+        "stat-tvl",
+        "sep2",
+        "heading-alts",
+        "stack-alts",
+        "sep3",
+        "heading-narrative",
+        "text-narrative",
+        "sep4",
+        "heading-hotmarket",
+        "text-hotmarket"
+      ]
+    },
+    "heading-date": {
+      "type": "Heading",
+      "props": {
+        "text": "market context — 2026-06-15",
+        "level": "h2"
+      }
+    },
+    "badge-stance": {
+      "type": "Badge",
+      "props": {
+        "text": "risk-on (conviction high)",
+        "variant": "default"
+      }
+    },
+    "text-thesis": {
+      "type": "Text",
+      "props": {
+        "text": "iran peace deal landed, polymarket 11%→93%, hormuz reopened, oil premium drained into risk"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$66,425",
+        "delta": "+3.3%",
+        "trend": "up"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,812",
+        "delta": "+8.8%",
+        "trend": "up"
+      }
+    },
+    "progress-fg": {
+      "type": "Progress",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": 20,
+        "max": 100
+      }
+    },
+    "text-fg-note": {
+      "type": "Text",
+      "props": {
+        "text": "Extreme fear — survey hasnt repriced",
+        "variant": "caption"
+      }
+    },
+    "stat-breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "16/20"
+      }
+    },
+    "stat-tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$74.4B",
+        "delta": "+2.6%",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-alts": {
+      "type": "Heading",
+      "props": {
+        "text": "Alts Outrunning",
+        "level": "h3"
+      }
+    },
+    "stack-alts": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-xlm",
+        "stat-ada"
+      ]
+    },
+    "stat-xlm": {
+      "type": "Stat",
+      "props": {
+        "label": "XLM",
+        "value": "+16%",
+        "trend": "up"
+      }
+    },
+    "stat-ada": {
+      "type": "Stat",
+      "props": {
+        "label": "ADA",
+        "value": "+13%",
+        "trend": "up"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-narrative": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h3"
+      }
+    },
+    "text-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "hormuz de-risk (peak); ZEC privacy resurrect (+25%, trending #1)"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-hotmarket": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h3"
+      }
+    },
+    "text-hotmarket": {
+      "type": "Text",
+      "props": {
+        "text": "\"US×iran peace deal by jun 15?\" YES 93% ($23m vol)"
+      }
+    }
+  }
+}

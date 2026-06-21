@@ -1,0 +1,314 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context — 2026-06-15"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stack-thesis",
+        "sep-1",
+        "stack-prices",
+        "sep-2",
+        "stack-onchain",
+        "sep-3",
+        "stack-narratives",
+        "sep-4",
+        "stack-hotmarket"
+      ]
+    },
+    "stack-thesis": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-riskcon",
+        "text-thesis"
+      ]
+    },
+    "badge-riskcon": {
+      "type": "Badge",
+      "props": {
+        "text": "Risk-On (High Conviction)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text-thesis": {
+      "type": "Text",
+      "props": {
+        "text": "Iran peace deal landed — Polymarket 11% → 93%, Hormuz reopened, oil premium drained into risk.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-prices",
+        "grid-price-assets",
+        "stat-fg"
+      ]
+    },
+    "heading-prices": {
+      "type": "Heading",
+      "props": {
+        "text": "Price Action",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-price-assets": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$66,425",
+        "delta": "+3.3%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,812",
+        "delta": "+8.8%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-fg": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "20",
+        "delta": "Extreme Fear — Survey hasn't repriced"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-onchain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-onchain",
+        "grid-onchain",
+        "text-alts"
+      ]
+    },
+    "heading-onchain": {
+      "type": "Heading",
+      "props": {
+        "text": "On-Chain Health & Alts",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-onchain": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-breadth",
+        "stat-tvl"
+      ]
+    },
+    "stat-breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "16/20"
+      },
+      "children": []
+    },
+    "stat-tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$74.4B",
+        "delta": "+2.6%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "text-alts": {
+      "type": "Text",
+      "props": {
+        "text": "Alts outrunning: XLM +16%, ADA +13%",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-narratives": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-narratives",
+        "text-hormuz",
+        "stack-zec"
+      ]
+    },
+    "heading-narratives": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narratives",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-hormuz": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz de-risk (peak)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stack-zec": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-zec",
+        "badge-zec-pct",
+        "badge-trending"
+      ]
+    },
+    "text-zec": {
+      "type": "Text",
+      "props": {
+        "text": "ZEC privacy resurrect",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "badge-zec-pct": {
+      "type": "Badge",
+      "props": {
+        "text": "+25%",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-trending": {
+      "type": "Badge",
+      "props": {
+        "text": "Trending #1",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-hotmarket": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-hotmarket",
+        "text-hotmarket-question",
+        "stat-polymarket-prob",
+        "text-volume"
+      ]
+    },
+    "heading-hotmarket": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-hotmarket-question": {
+      "type": "Text",
+      "props": {
+        "text": "US × Iran peace deal by Jun 15?",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stat-polymarket-prob": {
+      "type": "Stat",
+      "props": {
+        "label": "Polymarket Probability",
+        "value": "93%"
+      },
+      "children": []
+    },
+    "text-volume": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: $23M",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

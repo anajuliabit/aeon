@@ -1,0 +1,79 @@
+{
+  "root": "thought-review-card",
+  "state": {},
+  "elements": {
+    "thought-review-card": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-text",
+        "separator1",
+        "details-stack",
+        "separator2",
+        "footer-text"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h · no captures",
+        "variant": "lead"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context-text",
+        "zero-run-stat"
+      ]
+    },
+    "context-text": {
+      "type": "Text",
+      "props": {
+        "text": "Inbox cold since the personal-stack PR (~3.5d)"
+      }
+    },
+    "zero-run-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "consecutive zero runs",
+        "value": "10"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "muted"
+      }
+    }
+  }
+}

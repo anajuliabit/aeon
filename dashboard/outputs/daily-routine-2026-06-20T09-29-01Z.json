@@ -1,0 +1,22 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "daily-routine"
+      },
+      "children": [
+        "status-text"
+      ]
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "Daily routine complete — see .pending-notify/daily-routine-msg.md for full briefing",
+        "variant": "body"
+      }
+    }
+  }
+}

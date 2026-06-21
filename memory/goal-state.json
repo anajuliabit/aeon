@@ -1,43 +1,47 @@
 {
-  "run_at": "2026-06-13T17:50:00Z",
+  "run_at": "2026-06-19T00:00:00Z",
   "goals": {
-    "reppo-swarm-migrated-to-docker": {
-      "status": "DONE",
-      "activity_count_14d": 13,
-      "last_activity_date": "2026-06-13"
-    },
     "capital-2x-program-double-net-worth-by-2027-12-31": {
       "status": "ON_TRACK",
-      "activity_count_14d": 30,
-      "last_activity_date": "2026-06-13"
+      "activity_count_14d": 84,
+      "last_activity_date": "2026-06-19",
+      "note": ""
     },
-    "file-iss-018-weekly-limit-incident-by-2026-06-09": {
-      "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 5,
-      "last_activity_date": "2026-06-13",
-      "note": "ISS-018 ID slot taken 2026-06-13 by vuln-scanner (sandbox-limitation) — weekly-limit incident still unfiled, needs ISS-019"
-    },
-    "index-bookkeeping-flips-iss-007-009-010-016-by-2026-06-10": {
-      "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 12,
-      "last_activity_date": "2026-06-13"
-    },
-    "datanet-rubric-plus-1-datanet-config-by-2026-06-12": {
-      "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 13,
-      "last_activity_date": "2026-06-13"
-    },
-    "trading-agent-codify-spot-pct-and-sharpe-vs-pnl-tiebreak": {
+    "xai-quota-exhausted-ongoing": {
       "status": "BLOCKED",
-      "activity_count_14d": 6,
-      "last_activity_date": "2026-06-13",
-      "blocker": "operator-decision-gated (spot_pct threshold + Sharpe-vs-pnl tiebreak)"
+      "activity_count_14d": 3,
+      "last_activity_date": "2026-06-18",
+      "note": "Request operator to top up XAI credits or wait for monthly reset"
+    },
+    "14-29z-batch-stuck": {
+      "status": "AT_RISK",
+      "activity_count_14d": 0,
+      "last_activity_date": "2026-06-16",
+      "note": "Investigate GH Actions cron delay and restart stuck batch"
+    },
+    "deal-flow-stuck-since-6-08-10d": {
+      "status": "AT_RISK",
+      "activity_count_14d": 0,
+      "last_activity_date": "2026-06-08",
+      "note": "Enable deal-flow skill in aeon.yml to produce evidence"
+    },
+    "fork-cohort-stuck-since-6-14-2nd-consecutive-sunday-weekly-fail": {
+      "status": "AT_RISK",
+      "activity_count_14d": 0,
+      "last_activity_date": "2026-06-14",
+      "note": "Run fork-cohort skill next Sunday to produce evidence"
+    },
+    "pr-112-stalled-skill-graph-docs-auto-gen": {
+      "status": "NEEDS_ATTENTION",
+      "activity_count_14d": 1,
+      "last_activity_date": "2026-06-14",
+      "note": "Review PR #112 and merge or close"
     },
     "on-chain-monitor-defi-monitor-watches-yml": {
       "status": "BLOCKED",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-06-13",
-      "blocker": "operator-gated — 8 consecutive NO_CONFIG days (memory/on-chain-watches.yml unseeded)"
+      "activity_count_14d": 14,
+      "last_activity_date": "2026-06-19",
+      "note": "Seed memory/on-chain-watches.yml with at least one watch"
     }
   }
 }

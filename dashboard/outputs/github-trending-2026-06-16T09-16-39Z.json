@@ -1,0 +1,410 @@
+{
+  "root": "main",
+  "state": {},
+  "elements": {
+    "main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 06-16"
+      },
+      "children": [
+        "top_pick_section",
+        "ai_ml_section",
+        "devtools_section",
+        "infra_section",
+        "sources_section"
+      ]
+    },
+    "top_pick_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_pick_label",
+        "agent_reach_top"
+      ]
+    },
+    "top_pick_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "agent_reach_top": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "agent_reach_top_link",
+        "agent_reach_top_desc"
+      ]
+    },
+    "agent_reach_top_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Panniantong/Agent-Reach",
+        "href": "https://github.com/Panniantong/Agent-Reach",
+        "source": "GitHub"
+      }
+    },
+    "agent_reach_top_desc": {
+      "type": "Text",
+      "props": {
+        "text": "agent-internet bridge scraping six platforms without API keys — fills the \"agent can't read anything outside MCP\" gap with one CLI."
+      }
+    },
+    "ai_ml_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ai_ml_heading",
+        "sep1",
+        "agent_reach_ai"
+      ]
+    },
+    "ai_ml_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "agent_reach_ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "agent_reach_ai_link",
+        "agent_reach_ai_meta",
+        "agent_reach_ai_desc"
+      ]
+    },
+    "agent_reach_ai_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Panniantong/Agent-Reach",
+        "href": "https://github.com/Panniantong/Agent-Reach",
+        "source": "GitHub"
+      }
+    },
+    "agent_reach_ai_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ar_stars_today",
+        "ar_stars_total",
+        "ar_lang",
+        "ar_status"
+      ]
+    },
+    "ar_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "1.1k"
+      }
+    },
+    "ar_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "31k"
+      }
+    },
+    "ar_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "ar_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "agent_reach_ai_desc": {
+      "type": "Text",
+      "props": {
+        "text": "twitter/reddit/yt/github/bilibili/xhs scrape backend, v1.5.0 multi-backend routing shipped 6-11 — 276 stars/d lifetime."
+      }
+    },
+    "devtools_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools_heading",
+        "sep2",
+        "shadcn_improve",
+        "omnigent_item"
+      ]
+    },
+    "devtools_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "shadcn_improve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "shadcn_link",
+        "shadcn_meta",
+        "shadcn_desc"
+      ]
+    },
+    "shadcn_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "shadcn/improve",
+        "href": "https://github.com/shadcn/improve",
+        "source": "GitHub"
+      }
+    },
+    "shadcn_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "shadcn_stars",
+        "shadcn_lang",
+        "shadcn_status"
+      ]
+    },
+    "shadcn_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "4.9k"
+      }
+    },
+    "shadcn_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "shadcn_status": {
+      "type": "Badge",
+      "props": {
+        "text": "DEBUT",
+        "variant": "secondary"
+      }
+    },
+    "shadcn_desc": {
+      "type": "Text",
+      "props": {
+        "text": "shadcn's plan/execute split — top-tier model audits + writes plans, cheap models execute the work. cost arbitrage shipped as one skill."
+      }
+    },
+    "omnigent_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "omnigent_link",
+        "omnigent_meta",
+        "omnigent_desc"
+      ]
+    },
+    "omnigent_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "omnigent-ai/omnigent",
+        "href": "https://github.com/omnigent-ai/omnigent",
+        "source": "GitHub"
+      }
+    },
+    "omnigent_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "omnigent_stars",
+        "omnigent_lang",
+        "omnigent_status"
+      ]
+    },
+    "omnigent_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "2.1k"
+      }
+    },
+    "omnigent_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "omnigent_status": {
+      "type": "Badge",
+      "props": {
+        "text": "DEBUT",
+        "variant": "secondary"
+      }
+    },
+    "omnigent_desc": {
+      "type": "Text",
+      "props": {
+        "text": "swap or combine claude code/codex/pi under one policy + sandbox layer, with live co-driving of the same session from any device."
+      }
+    },
+    "infra_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "infra_heading",
+        "sep3",
+        "cua_item"
+      ]
+    },
+    "infra_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cua_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cua_link",
+        "cua_meta",
+        "cua_desc"
+      ]
+    },
+    "cua_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "trycua/cua",
+        "href": "https://github.com/trycua/cua",
+        "source": "GitHub"
+      }
+    },
+    "cua_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cua_stars_today",
+        "cua_stars_total",
+        "cua_lang",
+        "cua_status"
+      ]
+    },
+    "cua_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "70"
+      }
+    },
+    "cua_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "18k"
+      }
+    },
+    "cua_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "HTML"
+      }
+    },
+    "cua_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "cua_desc": {
+      "type": "Text",
+      "props": {
+        "text": "desktop-control sandbox + benchmarks for macOS/Linux/Windows agents — driver-rs v0.5.5 + computer-server v0.3.41 both shipped in the last 24h."
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sep4",
+        "sources_text"
+      ]
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok (18 returned, fallback used) · gh_api=ok · kept 4",
+        "variant": "caption"
+      }
+    }
+  }
+}

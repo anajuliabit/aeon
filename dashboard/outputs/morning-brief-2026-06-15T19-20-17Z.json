@@ -1,0 +1,215 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-15"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_focus",
+        "stack_focus",
+        "sep_1",
+        "heading_yesterday",
+        "stack_yesterday",
+        "sep_2",
+        "heading_watch",
+        "stack_watch",
+        "sep_3",
+        "heading_running",
+        "stack_running"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "stack_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_focus_1",
+        "item_focus_2",
+        "item_focus_3"
+      ]
+    },
+    "item_focus_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. btc through $65.5k — why now: two-week high on hormuz reopen, reclaim65900 ~$400 away"
+      }
+    },
+    "item_focus_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. btc-levels failed 05:42z — why now: breakout day, the monitor's blind"
+      }
+    },
+    "item_focus_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. file iss-019 — why now: monday = weekly-limit wave recurs today, 6d overdue"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "stack_yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_yesterday_1",
+        "item_yesterday_2",
+        "item_yesterday_3",
+        "item_yesterday_4"
+      ]
+    },
+    "item_yesterday_1": {
+      "type": "Text",
+      "props": {
+        "text": "pr #108 fallback retiring: evening-recap + aixbt 21:00z sent direct, no .pending-notify staging"
+      }
+    },
+    "item_yesterday_2": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels first failure (sr 0.96, cf 1) — empty-usage error at 05:42z"
+      }
+    },
+    "item_yesterday_3": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness still stuck from 6-14 08:32z — should clear on today's 08:00 tick"
+      }
+    },
+    "item_yesterday_4": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort stuck 2nd weekly tick (19:09z), on the sunday cron"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "stack_watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_watch_1"
+      ]
+    },
+    "item_watch_1": {
+      "type": "Text",
+      "props": {
+        "text": "us-iran deal reopened strait of hormuz, oil premium drained — de-escalation validates xpl pick's iran-enrichment NO, unwinds yesterday's 'peace deal failed' read (focus #1)"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "stack_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_running_1",
+        "item_running_2",
+        "item_running_3",
+        "item_running_4",
+        "item_running_5",
+        "item_running_6"
+      ]
+    },
+    "item_running_1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report @ 07:00 utc (weekly)"
+      }
+    },
+    "item_running_2": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog @ 09:00 utc (weekly)"
+      }
+    },
+    "item_running_3": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor @ 10:00 utc (weekly)"
+      }
+    },
+    "item_running_4": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow @ 14:00 utc (weekly)"
+      }
+    },
+    "item_running_5": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan @ 16:00 utc (weekly)"
+      }
+    },
+    "item_running_6": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review @ 19:00 utc (weekly)"
+      }
+    }
+  }
+}

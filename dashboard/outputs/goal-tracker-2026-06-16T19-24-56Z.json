@@ -1,0 +1,337 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-06-16"
+      },
+      "children": [
+        "summary-stack",
+        "sep1",
+        "needs-section",
+        "sep2",
+        "blocked-section",
+        "sep3",
+        "on-track-section",
+        "sep4",
+        "sources-section"
+      ]
+    },
+    "summary-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-grid",
+        "trend-badge"
+      ]
+    },
+    "summary-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "sm"
+      },
+      "children": [
+        "stat-total",
+        "stat-at-risk",
+        "stat-attention",
+        "stat-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "4"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "2"
+      }
+    },
+    "stat-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "1"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "1"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "trend-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Overall Trend: flat",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "needs-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "needs-heading",
+        "needs-item-1",
+        "needs-item-2"
+      ]
+    },
+    "needs-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Needs Attention",
+        "level": "h2"
+      }
+    },
+    "needs-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "needs-1-title",
+        "needs-1-status",
+        "needs-1-action"
+      ]
+    },
+    "needs-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "File the weekly-limit-wave incident issue (ISS-019)",
+        "level": "h3"
+      }
+    },
+    "needs-1-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 25 activity/14d, overdue 7d from 6-09 (flat)"
+      }
+    },
+    "needs-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Write memory/issues/ISS-019.md per template — fix locus aeon.yml:498, note residual XAI-skill gap exposed today (token-pick / list-digest / agent-buzz all 403'd on team 3a8b4c1e… monthly limit, no fallback)",
+        "variant": "caption"
+      }
+    },
+    "needs-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "needs-2-title",
+        "needs-2-status",
+        "needs-2-action"
+      ]
+    },
+    "needs-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "INDEX bookkeeping flips for ISS-007/009/010/016",
+        "level": "h3"
+      }
+    },
+    "needs-2-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 27 activity/14d, overdue 6d from 6-10 (flat)"
+      }
+    },
+    "needs-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Move ISS-007/009/010/016 from Open → Resolved in memory/issues/INDEX.md with fix refs",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item-1"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked",
+        "level": "h2"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-1-title",
+        "blocked-1-status",
+        "blocked-1-action"
+      ]
+    },
+    "blocked-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "on-chain-monitor / defi-monitor watches.yml",
+        "level": "h3"
+      }
+    },
+    "blocked-1-status": {
+      "type": "Text",
+      "props": {
+        "text": "operator-gated, day 12 NO_CONFIG since 6-05 (flat)"
+      }
+    },
+    "blocked-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Operator seeds memory/on-chain-watches.yml (name+chain+address+threshold per schema)",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-item-1"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On Track",
+        "level": "h2"
+      }
+    },
+    "on-track-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "track-1-title",
+        "track-1-description",
+        "track-1-status",
+        "track-1-details"
+      ]
+    },
+    "track-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "CAPITAL-2× PROGRAM",
+        "level": "h3"
+      }
+    },
+    "track-1-description": {
+      "type": "Text",
+      "props": {
+        "text": "double net worth by 2027-12-31"
+      }
+    },
+    "track-1-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 70 activity/14d (flat)"
+      }
+    },
+    "track-1-details": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels both reclaim targets SET (63500 6-11 / 65900 6-15), advisor stack shipped PRs #116-#121 yesterday, today JTO HIGH 10/10 + Mixed risk-on defi-overview",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-list"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-list": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

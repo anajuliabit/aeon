@@ -666,6 +666,8 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
           VIRTUALS_MODEL: ${{ vars.VIRTUALS_MODEL || 'claude-opus-4-8' }}
+          USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
+          USEPOD_MODEL: ${{ vars.USEPOD_MODEL }}
           GITHUB_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -685,15 +687,53 @@ jobs:
           TODAY=$(date -u +%Y-%m-%d)
           CONFIG_MODEL=$(grep -E '^model:' aeon.yml | sed 's/^model: *//' | tr -d ' ')
           MODEL="${CONFIG_MODEL:-claude-opus-4-7}"
+          # Route the primary agentic chat through the shared gateway (usepod = agentic
+          # on usepod with tools; far better than the text-only fallback below).
+          # `|| exit 1`: set -e won't abort on a sourced return (see helper header).
+          . scripts/anthropic-gateway.sh || exit 1
 
           cat > ./notify << 'NOTIFY_SCRIPT'
           #!/usr/bin/env bash
           set -euo pipefail
-          MSG="$1"
+          # Support `-f <file>` (file-flag convention) as well as a positional arg.
+          if [ "${1:-}" = "-f" ]; then
+            MSG="$(cat "${2:-}" 2>/dev/null || true)"
+          else
+            MSG="${1:-}"
+          fi
+          if [ -z "${MSG//[[:space:]]/}" ]; then
+            echo "notify: empty message, skipping" >&2; exit 0
+          fi
           if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
-            curl -sf -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-              -H "Content-Type: application/json" \
-              -d "$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$MSG" '{chat_id: $chat, text: $text, parse_mode: "Markdown"}')" > /dev/null || true
+            # Telegram caps messages at 4096 chars and rejects Markdown it can't parse
+            # (links/*/_ in research answers). Chunk + label parts, send Markdown then
+            # retry the same chunk as plain text, and log a real failure (no silent drop).
+            # Chunk via a temp file: tg-chunk emits NUL-separated output (a string var
+            # would lose NULs to command substitution), and the file lets us check its
+            # exit status. If the chunker is unreachable/fails, fall back to one
+            # unchunked send rather than silently dropping the reply.
+            _TGTMP="$(mktemp)"
+            if printf '%s' "$MSG" | bash scripts/tg-chunk.sh > "$_TGTMP"; then
+              mapfile -d '' _CHUNKS < "$_TGTMP"
+            else
+              echo "::warning::notify: tg-chunk failed; sending unchunked" >&2
+              _CHUNKS=("$MSG")
+            fi
+            rm -f "$_TGTMP"
+            [ "${#_CHUNKS[@]}" -gt 0 ] || { echo "::warning::notify: no chunks for non-empty message; sending unchunked" >&2; _CHUNKS=("$MSG"); }
+            _n=${#_CHUNKS[@]}; _i=0
+            for _c in "${_CHUNKS[@]}"; do
+              [ -n "$_c" ] || continue
+              _i=$((_i+1))
+              [ "$_n" -gt 1 ] && _c="($_i/$_n) $_c"
+              _body="$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$_c" '{chat_id:$chat, text:$text, parse_mode:"Markdown"}')"
+              _resp="$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" -H "Content-Type: application/json" -d "$_body")"
+              if [ "$(printf '%s' "$_resp" | jq -r '.ok // false')" != "true" ]; then
+                _body="$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$_c" '{chat_id:$chat, text:$text}')"
+                _resp="$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" -H "Content-Type: application/json" -d "$_body")"
+                [ "$(printf '%s' "$_resp" | jq -r '.ok // false')" = "true" ] || echo "::warning::notify: telegram send failed: $(printf '%s' "$_resp" | jq -r '.description // "unknown"')" >&2
+              fi
+            done
           fi
           if [ -n "${DISCORD_WEBHOOK_URL:-}" ]; then
             curl -sf -X POST "$DISCORD_WEBHOOK_URL" \
@@ -733,7 +773,7 @@ jobs:
           Always send your response back via ./notify so the user sees it."
           CLAUDE_OK=true
           CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
-            --model "$MODEL" --allowedTools "$ALLOWED" \
+            --model "$GATEWAY_MODEL" --allowedTools "$ALLOWED" \
             --output-format json 2>&1) || CLAUDE_OK=false
           # Also treat in-band API errors (e.g. 429 weekly-limit) as failure.
           if [ "$CLAUDE_OK" = true ] && echo "$CLAUDE_OUTPUT" | jq -e '.is_error == true' >/dev/null 2>&1; then
@@ -741,23 +781,36 @@ jobs:
           fi
 
           if [ "$CLAUDE_OK" = false ]; then
-            echo "::warning::Claude unavailable (limit/error) — trying Virtuals/Kimi text fallback. Detail: $(echo "$CLAUDE_OUTPUT" | head -c 200)"
-            if [ -n "${VIRTUALS_API_KEY:-}" ]; then
-              FB_PROMPT="You are Aeon, an autonomous assistant replying to your operator on ${SOURCE}. You are in a degraded text-only fallback (no file or tool access) because the primary model hit its usage limit. Reply helpfully and concisely in one short paragraph. If the request needs running a skill, editing files, or saving a note, say you will handle it once full capacity is restored.
-
-          Operator message:
-          \"$MESSAGE\""
-              if FB_REPLY=$(printf '%s' "$FB_PROMPT" | bash scripts/llm.sh); then
+            echo "::warning::Claude unavailable (limit/error) — trying text fallback. Detail: $(echo "$CLAUDE_OUTPUT" | head -c 200)"
+            # Pick the fallback backend: usepod first (llm-usepod.sh cascades to
+            # Virtuals internally), else Virtuals directly. chmod so usepod's
+            # internal `[ -x scripts/llm.sh ]` cascade can fire.
+            chmod +x scripts/llm.sh scripts/llm-usepod.sh scripts/research-prefetch.sh scripts/build-fallback-prompt.sh 2>/dev/null || true
+            FB_LLM=""
+            if [ -n "${USEPOD_TOKEN:-}" ]; then
+              FB_LLM="scripts/llm-usepod.sh"
+            elif [ -n "${VIRTUALS_API_KEY:-}" ]; then
+              FB_LLM="scripts/llm.sh"
+            fi
+            if [ -n "$FB_LLM" ]; then
+              # Best-effort live research (X + web via Grok); empty on any failure.
+              # Capture stderr so an empty result reports WHY (don't /dev/null it).
+              RP_ERR="$(mktemp)"
+              RESEARCH="$(printf '%s' "$MESSAGE" | bash scripts/research-prefetch.sh 2>"$RP_ERR" || true)"
+              if [ -n "$RESEARCH" ]; then echo "::notice::research-prefetch returned $(printf '%s' "$RESEARCH" | wc -c) chars"; else echo "::notice::research-prefetch empty — degraded prompt. Reason: $(tr '\n' ' ' < "$RP_ERR" | head -c 300)"; fi
+              rm -f "$RP_ERR"
+              FB_PROMPT="$(SOURCE="$SOURCE" MESSAGE="$MESSAGE" RESEARCH="$RESEARCH" bash scripts/build-fallback-prompt.sh)"
+              if FB_REPLY=$(printf '%s' "$FB_PROMPT" | bash "$FB_LLM"); then
                 ./notify "$FB_REPLY"
-                echo "::notice::Replied via Virtuals/Kimi fallback."
+                echo "::notice::Replied via text fallback ($FB_LLM)."
                 exit 0
               else
-                echo "::error::Virtuals fallback also failed (see llm.sh stderr above)."
+                echo "::error::Text fallback ($FB_LLM) also failed (see stderr above)."
                 ./notify "⚠️ Aeon is at its model usage limit and the fallback also failed; I'll catch up when capacity resets." || true
                 exit 1
               fi
             else
-              echo "::error::Claude failed and VIRTUALS_API_KEY not set — no fallback configured."
+              echo "::error::Claude failed and no fallback configured (set USEPOD_TOKEN or VIRTUALS_API_KEY)."
               ./notify "⚠️ Aeon hit its model usage limit and no fallback is configured." || true
               exit 1
             fi

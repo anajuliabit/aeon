@@ -1,0 +1,42 @@
+*Token Movers — 2026-06-19*
+
+_57/100 top coins green 24h (57%), median +0.07% — mixed tape with tactical moves, breadth declining post-geopolitical reversal._
+
+*Top Winners (24h)*
+1. BTW (Bitway) — $0.0815  +71.2% / 7d +1.4% / 1h +5.2%  •  $67.3M / #184  [PUMP-RISK]
+2. O (o1.exchange) — $0.7418  +20.2% / 7d N/A / 1h −0.5%  •  $46.8M / #236  [PUMP-RISK]
+3. 9BIT (The9bit) — $0.0424  +15.5% / 7d −3.8% / 1h −0.2%  •  $7.0M / #128
+4. AERO (Aerodrome Finance) — $0.4874  +11.5% / 7d +36.0% / 1h +0.1%  •  $45.1M / #108  [BREAKOUT]
+5. EIGEN (EigenCloud) — $0.2308  +10.1% / 7d +28.6% / 1h −0.1%  •  $47.7M / #187
+6. DEXE (DeXe) — $16.72  +9.0% / 7d −19.8% / 1h −0.5%  •  $22.1M / #81  [FADE]
+7. GENIUS (Genius) — $0.4157  +8.5% / 7d −9.4% / 1h +0.3%  •  $22.5M / #212
+8. ETC (Ethereum Classic) — $7.63  +8.2% / 7d +5.6% / 1h +0.7%  •  $64.7M / #62  [MAJOR]
+9. EDGE (edgeX) — $0.3646  +6.5% / 7d −7.6% / 1h −0.1%  •  $7.5M / #226
+10. XPL (Plasma) — $0.1001  +5.7% / 7d +11.7% / 1h −3.4%  •  $140.4M / #142
+
+*Top Losers (24h)*
+1. UB (Unibase) — $0.0847  −25.0% / 7d −40.4% / 1h −1.3%  •  $13.2M / #170
+2. LAB (LAB) — $13.23  −22.5% / 7d +31.5% / 1h −4.2%  •  $56.8M / #25  [MAJOR] [FADE]
+3. VELVET (Velvet) — $0.4621  −13.6% / 7d −53.0% / 1h −0.1%  •  $24.0M / #179
+4. NEX (Nexus) — $0.000002551  −11.9% / 7d −14.8% / 1h −1.0%  •  $2.4M / #204
+5. AVAX (Avalanche) — $5.85  −6.8% / 7d −11.5% / 1h −4.2%  •  $310.5M / #38  [MAJOR]
+6. BP (Backpack) — $0.5988  −6.1% / 7d +115.8% / 1h +0.2%  •  $4.6M / #207  [FADE]
+7. BILL (Billions Network) — $0.0598  −5.8% / 7d −16.9% / 1h +0.1%  •  $26.7M / #210
+8. FF (Falcon Finance) — $0.0689  −5.7% / 7d −16.2% / 1h −0.6%  •  $16.5M / #178
+9. XLM (Stellar) — $0.2209  −5.3% / 7d N/A / 1h −0.2%  •  $465.8M / #16  [MAJOR]
+10. BTSE (BTSE Token) — $1.034  −5.0% / 7d N/A / 1h −0.8%  •  $7.2M / #191
+
+*Trending*
+1. Pudgy Penguins (PENGU) — #116, $0.00659, 24h +0.95%
+2. Aerodrome Finance (AERO) — #108, $0.4874, 24h +11.5%  [BREAKOUT]
+3. Hyperliquid (HYPE) — #10, $9,340, 24h +4.2%  [MAJOR]
+4. Kintara (KINS) — #893, $0.0000107, 24h −1.8%
+5. Siren (SIREN) — #308, $0.00253, 24h +11.7%
+6. Solana (SOL) — #7, $143.56, 24h −1.0%  [MAJOR]
+7. Bitcoin (BTC) — #1, $62,998, 24h +0.5%  [MAJOR]
+
+*Notable*
+• BTW: +71% on micro-liquidity ($67M vol, rank #184) — extreme PUMP-RISK, avoid
+• AERO: +11.5% sustained breakout (+36% 7d), already in trending — signal strength intact
+• LAB: flipped to −22.5% after 2d +36% / +56% 7d breakout — FADE on relief bounce
+• XLM / AVAX: major cap slides (−5.3% / −6.8%) post-geopolitical risk-off, breadth weak vs 6-17

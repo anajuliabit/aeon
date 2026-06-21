@@ -1,0 +1,224 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-18"
+      },
+      "children": [
+        "focus-section",
+        "sep-1",
+        "since-yesterday-section",
+        "sep-2",
+        "running-today-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-title",
+        "focus-1-reason"
+      ]
+    },
+    "focus-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "xai quota top-up",
+        "level": "h3"
+      }
+    },
+    "focus-1-reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 10+ skills flatlined since 6-16, team 3a8b4c1e monthly limit hit, operator action required.",
+        "variant": "body"
+      }
+    },
+    "focus-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-title",
+        "focus-2-reason"
+      ]
+    },
+    "focus-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "boj +25bp risk-sleeve posture call",
+        "level": "h3"
+      }
+    },
+    "focus-2-reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: capital-2x program north star, avg −27% drawdown post-boj-hike precedent, 24–48h window from print.",
+        "variant": "body"
+      }
+    },
+    "focus-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-reason"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-019 weekly-limit wave fix",
+        "level": "h3"
+      }
+    },
+    "focus-3-reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 9d overdue, 4th occurrence proven 6-12, FALLBACK_CG_SKILLS covers 5 CG-price skills via Virtuals, residual gap non-CG dailies + XAI-dependent skills.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since-yesterday-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "update-1",
+        "update-2",
+        "update-3",
+        "update-4",
+        "update-5"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "update-1": {
+      "type": "Text",
+      "props": {
+        "text": "boj +25bp to 1.00% (7-1 vote, highest since 1995) — BTC −2% to ~$65.8k, pinned at reclaim65900 level.",
+        "variant": "body"
+      }
+    },
+    "update-2": {
+      "type": "Text",
+      "props": {
+        "text": "sky ecosystem ~$520m c1d unwind DAY 2 (Spark Liquidity Layer −12%, Spark Savings −13%, USDS −$275m).",
+        "variant": "body"
+      }
+    },
+    "update-3": {
+      "type": "Text",
+      "props": {
+        "text": "14:29Z stuck batch persists: narrative-tracker, market-context-refresh, security-digest dispatched-without-success ~20h.",
+        "variant": "body"
+      }
+    },
+    "update-4": {
+      "type": "Text",
+      "props": {
+        "text": "PR #112 docs(skill-graph) 4d+ past 24h threshold; PR #122 fix(docs) 3d+ past threshold.",
+        "variant": "body"
+      }
+    },
+    "update-5": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-007/009/010/016 index bookkeeping flips 8d overdue.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "task-1",
+        "task-2",
+        "task-3"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "task-1": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor @ 14:00 UTC (Wednesday-specific)",
+        "variant": "body"
+      }
+    },
+    "task-2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics @ 18:30 UTC (Wednesday-specific)",
+        "variant": "body"
+      }
+    },
+    "task-3": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels every 4h offset 15m (next 00:15)",
+        "variant": "body"
+      }
+    }
+  }
+}

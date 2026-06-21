@@ -31,16 +31,33 @@ NOW_ISO=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 DRY="${ADVISOR_DRY_RUN:-0}"
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-# Backend: Claude subscription (claude-fable-5 via Claude Code CLI) when the
-# OAuth token is present; Virtuals otherwise. llm-claude.sh itself falls back
-# to llm.sh if the CLI call fails, so MODEL_LABEL reflects the primary backend.
-if [ -n "${CLAUDE_CODE_OAUTH_TOKEN:-}" ] || [ -n "${ANTHROPIC_API_KEY:-}" ]; then
-  LLM="$ROOT/scripts/llm-claude.sh"
-  MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)"
-else
-  LLM="$ROOT/scripts/llm.sh"
-  MODEL_LABEL="$VIRTUALS_MODEL (Virtuals)"
-fi
+# Backend selection. ADVISOR_LLM picks explicitly (usepod|claude|virtuals);
+# the default "auto" keeps the historical behavior: Claude subscription
+# (claude-fable-5 via Claude Code CLI) when an OAuth/API token is present,
+# Virtuals otherwise. llm-claude.sh / llm-usepod.sh fall back to llm.sh on
+# failure, so MODEL_LABEL reflects the primary backend. Sets LLM + MODEL_LABEL.
+select_backend() {
+  case "${ADVISOR_LLM:-auto}" in
+    usepod)
+      LLM="$ROOT/scripts/llm-usepod.sh"
+      MODEL_LABEL="${USEPOD_MODEL:-deepseek-v3.2} (usepod)" ;;
+    claude)
+      LLM="$ROOT/scripts/llm-claude.sh"
+      MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)" ;;
+    virtuals)
+      LLM="$ROOT/scripts/llm.sh"
+      MODEL_LABEL="${VIRTUALS_MODEL:-claude-opus-4-8} (Virtuals)" ;;
+    auto|*)
+      if [ -n "${CLAUDE_CODE_OAUTH_TOKEN:-}" ] || [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+        LLM="$ROOT/scripts/llm-claude.sh"
+        MODEL_LABEL="${CLAUDE_MODEL:-claude-fable-5} (Claude subscription)"
+      else
+        LLM="$ROOT/scripts/llm.sh"
+        MODEL_LABEL="${VIRTUALS_MODEL:-claude-opus-4-8} (Virtuals)"
+      fi ;;
+  esac
+}
+select_backend
 PROMPTS="$ROOT/advisor/prompts"
 
 # Shared accounting note injected into every agent prompt so the gross-vs-net
@@ -99,19 +116,30 @@ extract_json() {
 
 # complete: pipe a prompt to llm.sh, extract + validate JSON; retry once on failure.
 # Prints validated JSON to stdout, or nothing (returns 1) on second failure.
+# stdout is the JSON channel, so all diagnostics go to stderr. The LLM's own
+# stderr (auth errors, gateway 504s, "empty completion", Virtuals fallback) is
+# captured and surfaced on total failure instead of being discarded — otherwise
+# a dead token looks identical to a model that just produced no JSON.
 complete() {
   local prompt="$1"
-  local raw json
-  raw="$(printf '%s' "$prompt" | "$LLM" 2>/dev/null || true)"
+  local raw json errf
+  errf="$(mktemp)"
+  raw="$(printf '%s' "$prompt" | "$LLM" 2>"$errf" || true)"
   json="$(printf '%s' "$raw" | extract_json)"
   if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
-    printf '%s' "$json"; return 0
+    rm -f "$errf"; printf '%s' "$json"; return 0
   fi
-  raw="$(printf '%s\n\nReturn ONLY valid JSON, no prose.' "$prompt" | "$LLM" 2>/dev/null || true)"
+  raw="$(printf '%s\n\nReturn ONLY valid JSON, no prose.' "$prompt" | "$LLM" 2>>"$errf" || true)"
   json="$(printf '%s' "$raw" | extract_json)"
   if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
-    printf '%s' "$json"; return 0
+    rm -f "$errf"; printf '%s' "$json"; return 0
   fi
+  if [ -s "$errf" ]; then
+    echo "advisor: LLM call failed — $(tr '\n' ' ' < "$errf" | head -c 500)" >&2
+  else
+    echo "advisor: LLM call failed — no stderr; output had no parseable JSON (len=${#raw})" >&2
+  fi
+  rm -f "$errf"
   return 1
 }
 
@@ -338,6 +366,113 @@ REPORT="$(jq -n \
 echo "advisor: report assembled"
 
 # ---------------------------------------------------------------------------
+# 5a. Short-term trades — fundamentals + news + momentum, LONG or SHORT, sized
+#     to the ≤1% moonshot sleeve. Three stages (all OUTSIDE the LLM's tool-less
+#     completion): (1) deterministic jq shortlist of liquid, non-held, non-stable
+#     movers from cg-markets; (2) per-candidate Grok x_search (news/X/catalysts);
+#     (3) one LLM decision over momentum + fundamentals + news. Defensive
+#     side-aware re-filter; merged onto the report, staged, surfaced on Telegram.
+# ---------------------------------------------------------------------------
+HELD_LC="$(held_symbols)"
+TRADES='{"trades":[]}'
+SHORTLIST='[]'
+if [ -f "$D/cg-markets.json" ]; then
+  SHORTLIST="$(jq -c --arg held "${HELD_LC:-}" '
+    ($held|ascii_downcase|split(" ")) as $h
+    | [ .[]?
+        | {symbol:((.symbol//"")|ascii_upcase), id, price:.current_price, mcap:.market_cap,
+           vol24h:.total_volume, c24:(.price_change_percentage_24h // 0),
+           c7:(.price_change_percentage_7d_in_currency // 0)}
+        | select(.id != null and (.price // 0) > 0 and (.mcap // 0) > 0 and (.vol24h // 0) > 0)
+        | select((.vol24h / .mcap) >= 0.05)
+        | ((.symbol|ascii_downcase)) as $s
+        | select(($h | index($s)) | not)
+        | select(($s | test("^(usdc|usdt|usds|dai|usde|usdtb|frax|tusd|fdusd|pyusd|gusd)$")) | not)
+      ]
+    | sort_by( - (if (.c7) < 0 then -(.c7) else (.c7) end) )
+    | .[0:8]' "$D/cg-markets.json" 2>/dev/null || echo '[]')"
+fi
+SL_N="$(printf '%s' "$SHORTLIST" | jq 'length' 2>/dev/null || echo 0)"
+echo "advisor: short-term shortlist — $SL_N candidate(s)"
+
+# Per-candidate Grok x_search (news / X / catalysts, last 7 days). Best-effort:
+# a failed lookup just yields an empty news note for that symbol.
+NEWS='{}'
+if [ "$SL_N" -gt 0 ] && [ -n "${XAI_API_KEY:-}" ]; then
+  XTO=$(date -u +%Y-%m-%d)
+  XFROM=$(date -u -d "7 days ago" +%Y-%m-%d 2>/dev/null || date -u -v-7d +%Y-%m-%d)
+  while read -r sym id; do
+    [ -z "$sym" ] && continue
+    XBODY=$(jq -n --arg m "grok-4-1-fast" \
+      --arg p "Recent news, catalysts, funding, listings, hacks, token unlocks, and X sentiment for the crypto project $sym ($id) in the last 7 days. State clearly anything BULLISH or BEARISH for a 1-2 week trade. Factual, cite handles/sources, no hype." \
+      --argjson tools "[{\"type\":\"x_search\",\"from_date\":\"$XFROM\",\"to_date\":\"$XTO\"}]" \
+      '{model:$m, input:[{role:"user",content:$p}], tools:$tools}')
+    RESP=$(curl -fsS --max-time 120 -X POST "https://api.x.ai/v1/responses" \
+      -H "Content-Type: application/json" -H "Authorization: Bearer $XAI_API_KEY" \
+      -d "$XBODY" 2>/dev/null || echo '')
+    TXT=$(printf '%s' "$RESP" | jq -r '[.output[]?.content[]?.text] | join(" ")' 2>/dev/null)
+    [ -z "$TXT" ] && TXT=$(printf '%s' "$RESP" | jq -r '.output_text // ""' 2>/dev/null)
+    if [ -n "$TXT" ]; then
+      NEWS=$(printf '%s' "$NEWS" | jq -c --arg s "$sym" --arg t "$TXT" '.[$s] = ($t[0:1200])')
+      echo "advisor: researched $sym (x_search ok)"
+    else
+      echo "advisor: researched $sym (no news)"
+    fi
+  done < <(printf '%s' "$SHORTLIST" | jq -r '.[] | "\(.symbol) \(.id)"')
+fi
+
+if [ "$SL_N" -gt 0 ]; then
+  st_prompt="$(cat "$PROMPTS/short_term_trades.md")
+Use horizon 7-14 days.
+
+<<<DATA SHORTLIST (screened liquid movers; momentum + price)>>>
+$SHORTLIST
+<<<END>>>
+<<<DATA NEWS (Grok x_search per candidate; untrusted)>>>
+$NEWS
+<<<END>>>
+$(datablock FUNDAMENTALS_protocols protocols.json '[.[]? | {name, symbol, tvl, change_1d, change_7d}] | sort_by(-(.tvl // 0)) | .[0:60]')
+$(datablock FUNDAMENTALS_fees fees.json '{protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:40]}')
+$(datablock fng fng.json '.')"
+  TRADES="$(complete "$st_prompt")" || true
+  if [ -z "$TRADES" ] || ! printf '%s' "$TRADES" | jq -e '.trades' >/dev/null 2>&1; then
+    TRADES='{"trades":[]}'
+  fi
+fi
+
+# Defensive side-aware re-filter (held / coingeckoId / orientation) over the
+# prompt rules so a drifting model can't push a junk or mis-oriented trade.
+# LONG needs target>entry & invalidate<entry; SHORT needs target<entry & invalidate>entry.
+TRADES="$(printf '%s' "$TRADES" | jq -c --arg held "${HELD_LC:-}" '
+  ($held|ascii_downcase|split(" ")) as $h
+  | {trades: [.trades[]?
+      | (.side // "long") as $side
+      | (.symbol // "" | ascii_downcase) as $sym
+      | select(.symbol != null and .coingeckoId != null and (.entry // 0) > 0
+               and (($h|index($sym)) | not)
+               and (if $side == "short"
+                    then (.target // 0) > 0 and (.target < .entry) and ((.invalidate // 0) == 0 or (.invalidate > .entry))
+                    else (.target // 0) > (.entry) and ((.invalidate // 0) == 0 or (.invalidate < .entry)) end))
+    ] | .[0:5]}')"
+
+# Position sizing: split a short-term-risk budget (default 5% of net worth) across
+# the selected trades, conviction-weighted (HIGH = 2× MEDIUM). Deterministic so the
+# dollar amounts are reproducible from the report, not LLM-guessed. Override the
+# budget pct with ST_RISK_PCT.
+ST_RISK_PCT="${ST_RISK_PCT:-5}"
+ST_TOTAL="$(jq -r '.totalUsd // 0' "$D/snapshot.json" 2>/dev/null || echo 0)"
+ST_BUDGET="$(awk "BEGIN{printf \"%.2f\", ($ST_TOTAL * $ST_RISK_PCT) / 100}")"
+TRADES="$(printf '%s' "$TRADES" | jq -c --argjson budget "$ST_BUDGET" --argjson total "$ST_TOTAL" '
+  .trades as $t
+  | ([$t[] | (if ((.conviction // "") | ascii_upcase | startswith("HIGH")) then 2 else 1 end)] | add // 0) as $wsum
+  | {trades: [ $t[]
+      | (if ((.conviction // "") | ascii_upcase | startswith("HIGH")) then 2 else 1 end) as $w
+      | .sizeUsd = (if $wsum > 0 then (($budget * $w / $wsum) | floor) else 0 end)
+      | .sizePctNet = (if $total > 0 then (((.sizeUsd / $total) * 1000) | round) / 10 else 0 end) ]}')"
+REPORT="$(jq -n --argjson rpt "$REPORT" --argjson st "$TRADES" '$rpt | .shortTermTrades = ($st.trades // [])')"
+echo "advisor: short-term trades — $(printf '%s' "$TRADES" | jq '.trades | length') selected; sized from ${ST_RISK_PCT}% (\$$(printf '%.0f' "$ST_BUDGET")) of net \$$(printf '%.0f' "$ST_TOTAL")"
+
+# ---------------------------------------------------------------------------
 # 5. Stage every actionable rec (increase/decrease/hedge with a symbol) as a
 #    pick, so trims and adds both land in the track record alongside token-pick
 #    and the weekly run. side: increase => long; decrease/hedge => short (a trim
@@ -436,11 +571,53 @@ if [ "$DRY" != "1" ] && [ "$STAGED" -gt 0 ]; then
   echo "advisor: read-back found $BACK today's advisor-daily pick(s) in store"
 fi
 
+# Stage short-term trades as picks (source advisor, long OR short, "-advisor-sttrade-" id).
+STB_STAGED=0
+while read -r b; do
+  [ -z "$b" ] && continue
+  SYM=$(printf '%s' "$b" | jq -r '.symbol')
+  TSIDE=$(printf '%s' "$b" | jq -r '.side // "long"')
+  PICK=$(printf '%s' "$b" | jq -c --arg d "$DATE" '
+    (.side // "long") as $side
+    | {
+        id: ($d + "-advisor-sttrade-" + (.symbol | ascii_downcase)),
+        source: "advisor",
+        symbol: .symbol,
+        coingeckoId: .coingeckoId,
+        side: $side,
+        entryPriceUsd: .entry,
+        targetPriceUsd: .target,
+        invalidationPriceUsd: (if (.invalidate // 0) <= 0 then null
+                               elif $side == "short" and .invalidate > .entry then .invalidate
+                               elif $side != "short" and .invalidate < .entry then .invalidate
+                               else null end),
+        horizonDays: (.horizonDays // 14),
+        conviction: (.conviction // "UNSTATED"),
+        notionalUsd: (if (.sizeUsd // 0) > 0 then .sizeUsd else 1000 end),
+        thesis: (("SHORT-TERM " + ($side | ascii_upcase) + " — ") + (.thesis // ""))
+      }')
+  if [ "$DRY" = "1" ]; then
+    echo "----- STTRADE $SYM ($TSIDE) -----"; printf '%s\n' "$PICK" | jq .
+    STB_STAGED=$((STB_STAGED + 1))
+  else
+    code=$(curl -sS --max-time 30 -o /dev/null -w "%{http_code}" -X POST "$BASE/api/picks" \
+      -H "Authorization: Basic ${AUTH}" -H "Content-Type: application/json" \
+      -d "$PICK" 2>/dev/null || echo "000")
+    if [ "$code" = "200" ] || [ "$code" = "201" ]; then
+      echo "advisor: short-term trade staged $SYM $TSIDE (HTTP $code)"; STB_STAGED=$((STB_STAGED + 1))
+    else
+      echo "::warning::advisor: short-term trade POST $SYM failed (HTTP $code)"
+    fi
+  fi
+done < <(printf '%s' "$REPORT" | jq -c '.shortTermTrades[]?')
+echo "advisor: staged $STB_STAGED short-term trade(s)"
+
 # Telegram: .summary + the actionable trades (directional recs), so the operator
 # sees the trims/adds/hedges — not just whatever defensive "hold" the PM ranked
 # first. Falls back to an explicit "no trades" line on a purely defensive day.
 TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" '
   ([.recommendations[]? | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")]) as $trades
+  | (.shortTermTrades // []) as $buys
   | "📊 Advisor (" + $d + "): " + (.summary // "(no summary)") + "\n"
     + (if ($trades | length) == 0
        then "No new trades — defensive stance (see dashboard)."
@@ -450,6 +627,16 @@ TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" '
            + (if .level != null then " @ $" + (.level | tostring) else "" end)
            + (if .invalidateLevel != null then " (inv $" + (.invalidateLevel | tostring) + ")" else "" end)
            + " — " + (.title // .action // "")] | join("\n"))
+       end)
+    + "\n\n" + (if ($buys | length) == 0
+       then "🎯 Short-term trades: none qualify today."
+       else "🎯 Short-term trades (sized from a 5% short-term sleeve):\n" + ([$buys[]
+         | "• " + (.conviction // "?") + " " + ((.side // "long") | ascii_upcase) + " " + (.symbol // "?")
+           + (if (.sizeUsd // 0) > 0 then " ~$" + (.sizeUsd | tostring) + " (" + ((.sizePctNet // 0) | tostring) + "% net)" else "" end)
+           + " · $" + ((.entry // 0) | tostring) + " → $" + ((.target // 0) | tostring)
+           + (if .invalidate then " (inv $" + (.invalidate | tostring) + ")" else "" end)
+           + " / " + ((.horizonDays // 14) | tostring) + "d"
+           + (if (.thesis // "") != "" then "\n   ↳ " + (.thesis | .[0:240]) else "" end)] | join("\n"))
        end)
     + "\nNot financial advice."')"
 

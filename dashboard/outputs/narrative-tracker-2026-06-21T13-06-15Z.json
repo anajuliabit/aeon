@@ -1,0 +1,419 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-21"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "transitions-section",
+        "sep-1",
+        "reflexivity-section",
+        "sep-2",
+        "positions-section",
+        "sep-3",
+        "map-section"
+      ]
+    },
+    "transitions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "transitions-heading",
+        "transition-1",
+        "transition-2",
+        "transition-3",
+        "transition-4",
+        "transition-5"
+      ]
+    },
+    "transitions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      }
+    },
+    "transition-1": {
+      "type": "Text",
+      "props": {
+        "text": "PROMOTED: RWA × AI Agents (Emerging → Peak) — autonomous wallets × tokenized assets framed as canonical 2026 meta"
+      }
+    },
+    "transition-2": {
+      "type": "Text",
+      "props": {
+        "text": "PROMOTED: AI Agents as native users (Rising → Peak) — Crypto's 'ultimate native users' thesis, Bittensor backing it"
+      }
+    },
+    "transition-3": {
+      "type": "Text",
+      "props": {
+        "text": "PROMOTED: Sovereign AI chains (Emerging → Rising) — agents demanding their own blockspace (agent-specific security model)"
+      }
+    },
+    "transition-4": {
+      "type": "Text",
+      "props": {
+        "text": "NEW: Memecoin 3.0 / super-cycle — momentum live but breadth weak (92 green 6-15 → 57 green 6-19)"
+      }
+    },
+    "transition-5": {
+      "type": "Text",
+      "props": {
+        "text": "NEW: Solana vs. Base divergence — Solana volume recovery vs. Base ecosystem friction"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "reflexivity-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reflexivity-heading",
+        "reflexivity-1",
+        "reflexivity-2",
+        "reflexivity-3"
+      ]
+    },
+    "reflexivity-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "REFLEXIVITY ALERT",
+        "level": "h2"
+      }
+    },
+    "reflexivity-1": {
+      "type": "Text",
+      "props": {
+        "text": "RWA × AI agents: Narrative-driven without deployed autonomous wallets yet — reflexivity over fundamentals"
+      }
+    },
+    "reflexivity-2": {
+      "type": "Text",
+      "props": {
+        "text": "Memecoin super-cycle: Micro-cap PUMP-RISK (+126% VELVET, +61% BEAT) contradicted by breadth collapse"
+      }
+    },
+    "reflexivity-3": {
+      "type": "Text",
+      "props": {
+        "text": "Solana momentum: Self-reinforcing volume loop; vulnerable to macro risk-off (BTC < $63k trigger)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "positions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "positions-heading",
+        "position-frontrun",
+        "position-ride",
+        "position-watch",
+        "position-fade"
+      ]
+    },
+    "positions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      }
+    },
+    "position-frontrun": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-frontrun",
+        "text-frontrun"
+      ]
+    },
+    "badge-frontrun": {
+      "type": "Badge",
+      "props": {
+        "text": "FRONT-RUN",
+        "variant": "default"
+      }
+    },
+    "text-frontrun": {
+      "type": "Text",
+      "props": {
+        "text": "RWA × AI Agents (mindshare 5 ↑↑, Bull) — @VexaWeb3 / a16zcrypto — canonical meta but regulatory risk"
+      }
+    },
+    "position-ride": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ride",
+        "text-ride"
+      ]
+    },
+    "badge-ride": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      }
+    },
+    "text-ride": {
+      "type": "Text",
+      "props": {
+        "text": "AI agents (5 ↑↑), prediction markets (4 →), Bitcoin L2s/DePIN (4 ↑), Ethereum shipping (4 ↑), Solana (3 ↑)"
+      }
+    },
+    "position-watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-watch",
+        "text-watch"
+      ]
+    },
+    "badge-watch": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "outline"
+      }
+    },
+    "text-watch": {
+      "type": "Text",
+      "props": {
+        "text": "Sovereign AI chains (3 ↑), privacy coins (3 ↑), stablecoin enterprise (3 →)"
+      }
+    },
+    "position-fade": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-fade",
+        "text-fade"
+      ]
+    },
+    "badge-fade": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "destructive"
+      }
+    },
+    "text-fade": {
+      "type": "Text",
+      "props": {
+        "text": "Memecoin super-cycle (3 ↑, Cope) — breadth fails narrative"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "map-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "map-heading",
+        "map-grid"
+      ]
+    },
+    "map-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      }
+    },
+    "map-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "map-emerging",
+        "map-rising",
+        "map-peak"
+      ]
+    },
+    "map-emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-emerging-label",
+        "map-emerging-item1",
+        "map-emerging-item2"
+      ]
+    },
+    "map-emerging-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Emerging",
+        "level": "h4"
+      }
+    },
+    "map-emerging-item1": {
+      "type": "Text",
+      "props": {
+        "text": "Sovereign AI chains",
+        "variant": "body"
+      }
+    },
+    "map-emerging-item2": {
+      "type": "Text",
+      "props": {
+        "text": "Privacy coins",
+        "variant": "body"
+      }
+    },
+    "map-rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-rising-label",
+        "map-rising-item1",
+        "map-rising-item2",
+        "map-rising-item3",
+        "map-rising-item4",
+        "map-rising-item5",
+        "map-rising-item6"
+      ]
+    },
+    "map-rising-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Rising",
+        "level": "h4"
+      }
+    },
+    "map-rising-item1": {
+      "type": "Text",
+      "props": {
+        "text": "Bitcoin L2s",
+        "variant": "body"
+      }
+    },
+    "map-rising-item2": {
+      "type": "Text",
+      "props": {
+        "text": "DePIN",
+        "variant": "body"
+      }
+    },
+    "map-rising-item3": {
+      "type": "Text",
+      "props": {
+        "text": "Ethereum",
+        "variant": "body"
+      }
+    },
+    "map-rising-item4": {
+      "type": "Text",
+      "props": {
+        "text": "Solana vs. Base",
+        "variant": "body"
+      }
+    },
+    "map-rising-item5": {
+      "type": "Text",
+      "props": {
+        "text": "Stablecoin enterprise",
+        "variant": "body"
+      }
+    },
+    "map-rising-item6": {
+      "type": "Text",
+      "props": {
+        "text": "Memecoin 3.0",
+        "variant": "body"
+      }
+    },
+    "map-peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-peak-label",
+        "map-peak-item1",
+        "map-peak-item2",
+        "map-peak-item3"
+      ]
+    },
+    "map-peak-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Peak",
+        "level": "h4"
+      }
+    },
+    "map-peak-item1": {
+      "type": "Text",
+      "props": {
+        "text": "RWA × AI Agents",
+        "variant": "body"
+      }
+    },
+    "map-peak-item2": {
+      "type": "Text",
+      "props": {
+        "text": "AI agents as native users",
+        "variant": "body"
+      }
+    },
+    "map-peak-item3": {
+      "type": "Text",
+      "props": {
+        "text": "Prediction markets",
+        "variant": "body"
+      }
+    }
+  }
+}

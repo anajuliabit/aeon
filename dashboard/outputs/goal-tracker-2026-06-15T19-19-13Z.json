@@ -1,0 +1,215 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_intro",
+        "heading_summary",
+        "table_status",
+        "text_no_status_change",
+        "text_activity_counts",
+        "sep1",
+        "heading_files",
+        "stack_files",
+        "sep2",
+        "heading_actions",
+        "stack_actions"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Goal-tracker run complete.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "table_status": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Status",
+          "Count"
+        ],
+        "rows": [
+          [
+            "ON TRACK",
+            "1 (capital-2×)"
+          ],
+          [
+            "NEEDS ATTENTION",
+            "3 (iss-019 filing, INDEX bookkeeping, datanet RUBRIC)"
+          ],
+          [
+            "BLOCKED",
+            "2 (trading-agent thresholds, on-chain watches.yml)"
+          ],
+          [
+            "DONE",
+            "1 (reppo swarm → Docker)"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "text_no_status_change": {
+      "type": "Text",
+      "props": {
+        "text": "No status changed vs the 2026-06-13 17:50Z snapshot — so memory/MEMORY.md was left untouched per skill rule.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_activity_counts": {
+      "type": "Text",
+      "props": {
+        "text": "Activity counts rose materially on four goals (capital-2× 30→50, iss-019 filing 5→20, INDEX bookkeeping 12→25, trading-agent thresholds 6→30) but the overdue items remain incomplete: ISS-019 still unfiled, ISS-007/009/010/016 still in INDEX Open table, no memory/datanets/RUBRIC.md, no memory/on-chain-watches.yml.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_files": {
+      "type": "Heading",
+      "props": {
+        "text": "Files Modified",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_files": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file_1",
+        "file_2",
+        "file_3"
+      ]
+    },
+    "file_1": {
+      "type": "Text",
+      "props": {
+        "text": "memory/goal-state.json — refreshed activity counts + notes + run_at=2026-06-14T18:43:04Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "file_2": {
+      "type": "Text",
+      "props": {
+        "text": "memory/logs/2026-06-14.md — appended ### goal-tracker block, exit GOAL_TRACKER_OK",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "file_3": {
+      "type": "Text",
+      "props": {
+        "text": ".pending-notify/goal-tracker-1781462679.md — full formatted report staged for post-run delivery (sandbox blocks ./notify per established pattern)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Follow-up Actions Surfaced",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_1",
+        "action_2",
+        "action_3",
+        "action_4",
+        "action_5"
+      ]
+    },
+    "action_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. Write memory/issues/ISS-019.md for the weekly-limit-wave incident (locus aeon.yml:498 + non-CG residual-gap note).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. Move ISS-007/009/010/016 to the Resolved table in memory/issues/INDEX.md.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. Draft memory/datanets/RUBRIC.md + seed 1 config from the 13 off-CI orchestrator datanet surfaces.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_4": {
+      "type": "Text",
+      "props": {
+        "text": "4. Ping operator for spot_pct threshold + Sharpe-vs-pnl tiebreak.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_5": {
+      "type": "Text",
+      "props": {
+        "text": "5. Ping operator to seed memory/on-chain-watches.yml (9th NO_CONFIG day).",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

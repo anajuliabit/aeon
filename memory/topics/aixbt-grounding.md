@@ -1,55 +1,37 @@
-# AIXBT Grounding (as of 2026-06-14 09:00 UTC)
+# AIXBT Grounding (as of 2026-06-21 13:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-14T09:00:20.138Z
-
-Note: sections returned this pull = crypto, tradfi. Macro and geopolitics absent again — iterating dynamically over whatever sections appear.
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-21T13:00:28.356Z
 
 ## Crypto
-- Prediction markets dominate mindshare as Polymarket and Kalshi see surging World Cup volumes, with LPs farming yields and billion-dollar valuations drawing scrutiny.
-- Stablecoin yields and RWA-backed fixed-income plays on Pendle, Morpho, and Katana attract capital, with 10-20% APRs across multiple protocols signaling a DeFi yield renaissance.
-- AI and infra tokens lead 24h gains (TAO +24%, VENICE +17%, ICP +14%) as Fable/Mythos shutdowns amplify the decentralized AI narrative and open-source model thesis.
-- BTC sits in extreme fear at $64K with spot-led buying and falling open interest, while Hyperliquid ships onchain stock perps and $HYPE buybacks hit $64M in 30 days.
+- Bitcoin sustains support above $60K amid significant ETF outflows totaling $6.35B over 30 days, with MicroStrategy's leadership suggesting additional purchases despite debate over fundamentals.
+- Solana experiences sentiment shift toward bullish positioning as prominent traders increase exposure; Real-World Assets sector reaches $2B valuation with BlackRock's BUIDL product doubling in value.
+- "JaredFromSubway MEV bot exploited for ~$7.7M via fake token traps" with automated approval vulnerabilities exposed; approximately 1,000 ETH subsequently laundered through mixing services.
+- Hyperliquid consolidates dominance in decentralized perpetuals with "$3B non-crypto OI," while prediction market platform faces regulatory scrutiny over influencer compensation practices.
 
-## TradFi
-- US-Iran deal hopes are rapidly unwinding the geopolitical risk premium, driving oil sharply lower and transmitting risk-on flows into cyclicals as defensives are unwound.
-- SpaceX's record IPO debut with SPCX up nearly 20% is boosting equity sentiment and flows into growth sectors amid broad index gains and VIX compression.
-- Lower oil and falling volatility are easing macro inflation pressures, supporting lower yields and positioning for stable liquidity into the upcoming Fed meeting.
-- Cross-asset rotation shows strength in equities and commodities but lagging credit confirmation, highlighting deal-contingent persistence in risk appetite.
+## Global Liquidity / Macro
+- Federal Reserve maintains hawkish stance, holding rates at 3.5-3.75% while signaling delayed rate reductions; shorter-duration yields and dollar strength increase headwinds for equities.
+- Geopolitical disputes over strategic waterways create commodity market volatility and elevated shipping costs, transmitting supply chain risks broadly.
+- Growth-oriented indices demonstrate resilience despite macro challenges, reflecting persistent investor appetite for risk assets.
+- Market participants implementing volatility hedges and defensive positioning amid regional tensions and monetary policy uncertainty.
 
-## What's New (vs last pull 2026-06-13 21:00 UTC)
-- (Crypto) **DeFi yield renaissance.** Pendle/Morpho/Katana named with 10-20% APRs on stablecoin/RWA positions. Entirely absent from all prior windows — new structural item.
-- (Crypto) **VENICE +17%, ICP +14%.** Two new entrants to the AI basket. Were absent when $TAO/$VVV/$ZEC held the basket. The AI bid is widening.
-- (Crypto) **Hyperliquid onchain stock perps launched.** Prior metric was HIP-3 volume share ATH. Product launch is new; $HYPE buybacks $64M/30d also new metric.
-- (Crypto) **BTC "extreme fear" + "spot-led buying, falling open interest."** Prior framing: "consolidates." Market structure reads (spot vs. perp divergence) are new signal layers.
-- (Crypto) **"open-source model thesis"** appended to Fable/Mythos narrative. Prior was pure decentralized AI framing. Open-source model angle is a distinct investment thesis.
-- (Crypto) **Kalshi named alongside Polymarket.** Limitless dropped. Prediction market landscape shifting from Solana-native focus toward CFTC-approved domestic venues.
-- (Crypto) **LP yield farming + valuation scrutiny on prediction markets.** Prior: "World Cup fuels activity." Now: LPs farming yield + billion-dollar valuations under scrutiny. Narrative maturing.
-- (TradFi) **"upcoming Fed meeting" forward-looking reference.** New temporal anchor in TradFi section.
-- (TradFi) **"lagging credit confirmation."** New signal. Cross-asset divergence: equities/commodities up, credit not confirming. First explicit caution embedded in TradFi framing.
-
-## Gone (dropped from 2026-06-13 21:00 UTC)
-- $VVV and $ZEC in the AI basket — replaced by VENICE and ICP
-- HIP-3 share of HL volume at ATH ~50% — replaced by onchain stock perps + $HYPE buybacks
-- BTC $67K-$70K targets — dropped
-- BOJ rate hike risk as BTC headwind — dropped
-- BTC treasury-stock volumes "collapsing" — dropped
-- Limitless and Solana-native prediction market platforms — replaced by Kalshi
-- Onchain TCG and gaming metas — dropped
-- Strait of Hormuz / dollar pressure framing — absorbed into oil/risk-on language
+## What's New (vs last pull 2026-06-20 09:00 UTC)
+- (Crypto) **MEV bot exploit ($7.7M JaredFromSubway)** — visibility into automated approval vulnerabilities + token trap tactics
+- (Crypto) **RWA sector $2B, BlackRock BUIDL doubled** — institutional on-ramp moving from conceptual to execution
+- (Crypto) **Hyperliquid $3B non-crypto OI** — perps dominance solidifies, prediction market regulatory pressure mounts
+- (Macro) **Fed holds 3.5-3.75%, delays cuts** — more explicit signal than prior "dot plot hike odds" framing
+- (Macro) **Waterway geopolitics broadening** — Hormuz narrowed to "strategic waterways" plural, shipping/commodity tail risk generalized
 
 ## Persisting Stories
-- **Decentralized AI bid ($TAO +24% vs +20%+ prior)** — 5th+ consecutive window; strengthening each pull. Durably anchored to Anthropic export-control directive.
-- **Fable/Mythos shutdown as catalyst** — framing now extended to "open-source model thesis." Narrative deepening.
-- **SpaceX/SPCX** — post-IPO equity story; up ~20% debut. In every window for a week+.
-- **US-Iran de-escalation → oil lower → risk-on → cyclicals** — 5th consecutive window, same direction. Position is likely full.
-- **VIX compression** — same read, tightening further.
-- **Hyperliquid mindshare** — persistent; form evolving (HIP-3 → onchain stock perps + buybacks).
-- **Prediction markets / World Cup** — Polymarket core, Kalshi added; framing shifting from activity volume to LP yields + valuation scrutiny.
-- **BTC at $64K** — same level across windows; sentiment label now "extreme fear."
+- **BTC ETF flows negative** — $3.45B → $6.35B out over extended window. Capital rotation sustained, not one-session event.
+- **Solana institutional adoption** — evolved from RWA holder count → BUIDL vault doubling + institutional perp activity. Narrative matured.
+- **Fed tightening into risk assets** — prior "dot plot 2026 hikes" now "hold + delayed cuts." Same effect (duration drag) but more certain.
+- **Geopolitical tail risk** — Hormuz talks → waterway disputes. Regime shift from bilateral to systemic supply chain anxiety.
+- **Vol hedging demand** — Prior "volatility hedges" mentioned in TradFi; now explicit as policy lever in crypto vol premiums.
 
 ## Cross-Domain Bridges
-- credit is not buying the Iran trade. five windows of equity risk-on: oil down, VIX compressing, SPCX +20%, cyclicals rotating. but this window explicitly flags "lagging credit confirmation" and "deal-contingent persistence." credit prices cash flows, not headlines. if the Iran deal cracks, credit was right the entire time and equity was running on hope.
-- the AI basket is becoming a censorship-resistance basket — and that's a rotation signal, not a thesis validation. TAO is decentralized AI compute. VENICE is a privacy AI model. ICP is internet computer infrastructure. the Fable export-control narrative doesn't apply to all three equally. basket widening to 3 new names in one window means capital is spraying. that's the tell.
-- DeFi yield 10-20% APR vs. TradFi sub-5% is the first time AIXBT has named a structural allocation case across domains. oil lower → inflation softer → Fed dovish → TradFi yields compress → DeFi premium widens. Pendle/Morpho/Katana 10-20% on stablecoin/RWA isn't a farming play. it's a capital rotation argument and the macro setup is tightening it in DeFi's favor.
-- Hyperliquid shipping onchain stock perps while SPCX IPOs on Nasdaq is the same narrative on two rails. if SPCX keeps printing, the HL stock perp market gets organic hedging flow from equity holders. two rails with aligned direction = structural bid. this one has receipts.
+- **ETF bleed + RWA thesis reflexivity.** $6.35B fled BTC ETFs, but BlackRock's BUIDL doubled into that same window. Not capital exit from crypto — capital *reallocation* from custody risk (ETF leverage concerns) into protocol-native tokenization. Institutional entry point at the volatility, not away from it. If ETF outflows continued due to STRC depeg fears, RWA adoption accelerates as the *alternative* — no leverage, on-chain transparency.
+
+- **MEV hack → perps dominance shift.** $7.7M JaredFromSubway exploit hits when Solana sentiment flips bullish. Would normally tank ecosystem confidence. Instead: traders move spot risk into Hyperliquid perps ($3B non-crypto OI). This isn't "avoiding Solana" — it's "leveraging Solana ecosystem, avoiding spot MEV." Institutional flow pattern: centralized volume (Solana) + decentralized risk transfer (Hyperliquid). Separation of liquidity and settlement.
+
+- **Fed hold + waterway risk = crypto vol as hedge.** Fed at 3.5-3.75% with no cuts signals rates sticky. Normally crushes risk appetite. But geopolitical waterway disputes broadening means real tail risk returning. Institutions implementing vol hedges — and crypto vol premiums (Hyperliquid, perps) are cheaper than traditional Vol products when geopolitical surprises spike. Crypto becomes the efficient hedge when traditional finance reprices too slow.

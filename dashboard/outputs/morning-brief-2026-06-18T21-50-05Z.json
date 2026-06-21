@@ -1,0 +1,466 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_focus",
+        "stack_focus_items",
+        "sep_1",
+        "heading_since",
+        "stack_since_items",
+        "sep_2",
+        "heading_running",
+        "stack_running_items"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "stack_focus_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "focus_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_xai",
+        "text_xai_title",
+        "text_xai_desc"
+      ]
+    },
+    "badge_xai": {
+      "type": "Badge",
+      "props": {
+        "text": "URGENT",
+        "variant": "destructive"
+      }
+    },
+    "text_xai_title": {
+      "type": "Heading",
+      "props": {
+        "text": "xai quota top-up",
+        "level": "h3"
+      }
+    },
+    "text_xai_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: 10+ skills flatlined since 6-16, team 3a8b4c1e monthly limit hit, operator action required.",
+        "variant": "body"
+      }
+    },
+    "focus_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_boj",
+        "text_boj_title",
+        "text_boj_desc"
+      ]
+    },
+    "badge_boj": {
+      "type": "Badge",
+      "props": {
+        "text": "CRITICAL",
+        "variant": "destructive"
+      }
+    },
+    "text_boj_title": {
+      "type": "Heading",
+      "props": {
+        "text": "boj +25bp risk-sleeve posture call",
+        "level": "h3"
+      }
+    },
+    "text_boj_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: capital-2x program north star, avg −27% drawdown post-boj-hike precedent, 24–48h window from print.",
+        "variant": "body"
+      }
+    },
+    "focus_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss",
+        "text_iss_title",
+        "text_iss_desc"
+      ]
+    },
+    "badge_iss": {
+      "type": "Badge",
+      "props": {
+        "text": "OVERDUE",
+        "variant": "destructive"
+      }
+    },
+    "text_iss_title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-019 weekly-limit wave fix",
+        "level": "h3"
+      }
+    },
+    "text_iss_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Why now: 9d overdue, 4th occurrence proven 6-12, FALLBACK_CG_SKILLS covers 5 CG-price skills via Virtuals, residual gap non-CG dailies + XAI-dependent skills.",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "stack_since_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since_boj",
+        "since_sky",
+        "since_stuck",
+        "since_prs",
+        "since_iss"
+      ]
+    },
+    "since_boj": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_boj_event",
+        "grid_boj_stats"
+      ]
+    },
+    "text_boj_event": {
+      "type": "Text",
+      "props": {
+        "text": "BOJ +25bp to 1.00% (7-1 vote, highest since 1995)",
+        "variant": "lead"
+      }
+    },
+    "grid_boj_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc_price",
+        "stat_btc_level"
+      ]
+    },
+    "stat_btc_price": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "~$65.8k",
+        "delta": "−2%",
+        "trend": "down"
+      }
+    },
+    "stat_btc_level": {
+      "type": "Text",
+      "props": {
+        "text": "Pinned at reclaim65900 level",
+        "variant": "caption"
+      }
+    },
+    "since_sky": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_sky_title",
+        "grid_sky_metrics"
+      ]
+    },
+    "text_sky_title": {
+      "type": "Text",
+      "props": {
+        "text": "Sky Ecosystem Unwind — DAY 2",
+        "variant": "lead"
+      }
+    },
+    "grid_sky_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_sky_size",
+        "stat_spark_liquidity",
+        "stat_spark_savings",
+        "stat_usds"
+      ]
+    },
+    "stat_sky_size": {
+      "type": "Stat",
+      "props": {
+        "label": "Total c1d unwind",
+        "value": "~$520m"
+      }
+    },
+    "stat_spark_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Spark Liquidity Layer",
+        "value": "−12%"
+      }
+    },
+    "stat_spark_savings": {
+      "type": "Stat",
+      "props": {
+        "label": "Spark Savings",
+        "value": "−13%"
+      }
+    },
+    "stat_usds": {
+      "type": "Stat",
+      "props": {
+        "label": "USDS outflow",
+        "value": "−$275m"
+      }
+    },
+    "since_stuck": {
+      "type": "Alert",
+      "props": {
+        "title": "Stuck Batch (14:29Z)",
+        "message": "narrative-tracker, market-context-refresh, security-digest dispatched-without-success ~20h",
+        "type": "warning"
+      }
+    },
+    "since_prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_prs_label",
+        "text_pr_112",
+        "text_pr_122"
+      ]
+    },
+    "text_prs_label": {
+      "type": "Text",
+      "props": {
+        "text": "Pull Requests Pending",
+        "variant": "lead"
+      }
+    },
+    "text_pr_112": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_pr112",
+        "text_pr112_detail"
+      ]
+    },
+    "badge_pr112": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #112",
+        "variant": "outline"
+      }
+    },
+    "text_pr112_detail": {
+      "type": "Text",
+      "props": {
+        "text": "docs(skill-graph) — 4d+ past 24h threshold",
+        "variant": "body"
+      }
+    },
+    "text_pr_122": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_pr122",
+        "text_pr122_detail"
+      ]
+    },
+    "badge_pr122": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #122",
+        "variant": "outline"
+      }
+    },
+    "text_pr122_detail": {
+      "type": "Text",
+      "props": {
+        "text": "fix(docs) — 3d+ past threshold",
+        "variant": "body"
+      }
+    },
+    "since_iss": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS Index Bookkeeping",
+        "message": "ISS-007/009/010/016 bookkeeping flips 8d overdue",
+        "type": "error"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "stack_running_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "task_reg_monitor",
+        "task_skill_analytics",
+        "task_btc_levels"
+      ]
+    },
+    "task_reg_monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_reg_name",
+        "badge_reg_time"
+      ]
+    },
+    "text_reg_name": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "body"
+      }
+    },
+    "badge_reg_time": {
+      "type": "Badge",
+      "props": {
+        "text": "14:00 UTC (Wed)",
+        "variant": "secondary"
+      }
+    },
+    "task_skill_analytics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_skill_name",
+        "badge_skill_time"
+      ]
+    },
+    "text_skill_name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "body"
+      }
+    },
+    "badge_skill_time": {
+      "type": "Badge",
+      "props": {
+        "text": "18:30 UTC (Wed)",
+        "variant": "secondary"
+      }
+    },
+    "task_btc_levels": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_btc_name",
+        "badge_btc_time"
+      ]
+    },
+    "text_btc_name": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels",
+        "variant": "body"
+      }
+    },
+    "badge_btc_time": {
+      "type": "Badge",
+      "props": {
+        "text": "every 4h offset 15m (next 00:15)",
+        "variant": "secondary"
+      }
+    }
+  }
+}

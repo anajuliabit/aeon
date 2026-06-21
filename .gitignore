@@ -79,3 +79,9 @@ vault/.obsidian/appearance.json
 reports/advisor/
 .outputs/portfolio-snapshot.md
 .outputs/advisor-*.md
+
+# DeFi-overview scratch — transient API dumps + draft notification text the
+# defi-monitor job fetches at runtime; never meant to be tracked.
+tmpdata/
+notify-defi-msg.md
+.pending-notify/

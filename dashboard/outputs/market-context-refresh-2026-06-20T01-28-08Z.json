@@ -1,0 +1,287 @@
+{
+  "root": "root",
+  "state": {},
+  "elements": {
+    "root": {
+      "type": "Card",
+      "props": {
+        "title": "market context — 2026-06-19"
+      },
+      "children": [
+        "take_section",
+        "sep1",
+        "prices_section",
+        "sep2",
+        "indicators_section",
+        "sep3",
+        "narrative_section"
+      ]
+    },
+    "take_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "take_heading",
+        "take_badges"
+      ]
+    },
+    "take_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Take",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "take_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_reversal",
+        "badge_conviction"
+      ]
+    },
+    "badge_reversal": {
+      "type": "Badge",
+      "props": {
+        "text": "risk-off reversal",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_conviction": {
+      "type": "Badge",
+      "props": {
+        "text": "conviction high",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "prices_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "prices_heading",
+        "btc_row",
+        "eth_row"
+      ]
+    },
+    "prices_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Prices",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "btc_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "btc_stat",
+        "btc_vpeak"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$63,084",
+        "delta": "+0.41% 24h",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "btc_vpeak": {
+      "type": "Text",
+      "props": {
+        "text": "vs peak: -4.87%",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "eth_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "eth_stat",
+        "eth_vpeak"
+      ]
+    },
+    "eth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,702",
+        "delta": "+1.14% 24h",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "eth_vpeak": {
+      "type": "Text",
+      "props": {
+        "text": "vs peak: -6.04%",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "indicators_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "indicators_heading",
+        "indicators_grid"
+      ]
+    },
+    "indicators_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Indicators",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "indicators_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "fg_cell",
+        "breadth_stat"
+      ]
+    },
+    "fg_cell": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fg_stat",
+        "fg_label"
+      ]
+    },
+    "fg_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "14",
+        "delta": "-6pts",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "fg_label": {
+      "type": "Text",
+      "props": {
+        "text": "Extreme Fear",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "breadth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth (24h)",
+        "value": "13/20 green",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "narrative_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "narrative_heading",
+        "iran_text",
+        "sep_narrative",
+        "polymarket_text",
+        "geopolitical_text"
+      ]
+    },
+    "narrative_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "iran_text": {
+      "type": "Text",
+      "props": {
+        "text": "Iran deal collapse (diplomatic failure, memo signing cancelled)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_narrative": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "polymarket_text": {
+      "type": "Text",
+      "props": {
+        "text": "Polymarket Iran deal YES crashed from 95% → <5%",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "geopolitical_text": {
+      "type": "Text",
+      "props": {
+        "text": "Geopolitical de-risk tailwind fully reversed",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

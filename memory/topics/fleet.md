@@ -492,3 +492,176 @@ state: what was built, recurring blockers, and health.
 - **No new mints 6-11/6-12/6-13.** Chain is `enabled: false` per Docker
   migration; ledger only advances off-CI. Still 25 mints + 45 votes
   through 2026-06-10.
+
+## 2026-06-15 → 2026-06-16 — PR #108 durable + Hormuz risk-on + XAI quota wall
+- **PR #108 file-flag notify path CONFIRMED durable.** All standalone
+  skill notifications across 6-15 + 6-16 (morning-brief, daily-routine,
+  weekly-shiplog, github-trending, aixbt-pulse, narrative-tracker,
+  market-context-refresh, defi-overview, token-pick, token-movers,
+  token-alert, list-digest, agent-buzz) delivered direct via
+  `./notify -f .pending-notify/{skill}-msg.md` or `./notify` literal
+  arg — no post-run `.pending-notify/` carryover fallback observed.
+  6-14 caveat ("standalone runs still staging") fully cleared. PR
+  retired the dominant sandbox fallback pattern noted across 6 days
+  of standalone runs (6-09 → 6-14). Some `.pending-notify/` rm
+  attempts still blocked by sandbox gate, but dedup catches and
+  delivery still succeeds — operationally clean.
+- **Weekly-shiplog 2026-06-15: SHIPLOG_OK.** 113 commits / 109 PRs
+  merged / 2 issues closed in 7d window (2026-06-08→2026-06-15).
+  Themes: multi-provider LLM gateway with automatic failover, soul
+  & strategy builders lower the on-ramp, skills can call MCP servers
+  mid-run. +11,602 / -4,784 lines across ~300 files. Article at
+  `articles/weekly-shiplog-2026-06-15.md`.
+- **BTC reclaim65900 FIRED 2026-06-15 14:00Z** ($66,427 spot vs
+  $65,713.62 prior close). reclaim65900Alerted false→true. Both
+  armed reclaim levels now SET (reclaim63500 6-11, reclaim65900
+  6-15). Driver: Hormuz peace deal LANDED — Polymarket "US × Iran
+  peace deal by June 15?" YES 11%→93% (+82pp) as deadline arrived;
+  oil premium drained into risk. 6-16 consolidating $66k-$67k
+  pre-BOJ-Tuesday (binary catalyst per morning-brief focus).
+- **btc-levels recovered same-day 6-15** — failed 05:42Z (first
+  failure since skill landed, empty-usage `total_cost_usd:0 /
+  output_tokens:0` error, same signature as bb3ab24 chore commit)
+  → RECOVERED 07:38Z. sr 0.97, cf 0.
+- **Narrative tracker consolidated 34→27 on 6-15.** 1 NEW (#27
+  risk-on regime flip on Hormuz landing), 1 RESURRECTED (#13 XMR/ZEC
+  privacy on ZEC +24.5% squeeze + Garrett Jin $21M HL long + clean
+  audit), 2 PROMOTED (#26 BOJ-tuesday Emerging→Rising, #1 decAI
+  thesis-hardening), 1 DEMOTED (#22 COAI faded), 2 DEAD (#7 BTC
+  capitulation contradicted, #15 VELVET parabola resolved).
+- **XAI quota exhausted 6-16 (NEW MEMORY.md goal).** Team 3a8b4c1e
+  monthly credit limit hit — 3 skills today: token-pick 12:42Z
+  (X leg absent), list-digest 17:56Z (LIST_DIGEST_EMPTY), agent-buzz
+  17:56Z (AGENT_BUZZ_ERROR). Tweet-roundup AM (07:18Z) worked because
+  WebSearch returned summary-grade news (not tweets) and spec accepts
+  that; agent-buzz requires engagement metadata and cannot. **Residual
+  gap from ISS-019 scope extends here:** when XAI quota dies,
+  x_search-dependent skills have no fallback chain that resolves to
+  a deliverable curation. XAI-dependent skills (agent-buzz / token-pick /
+  refresh-x / remix-tweets / tweet-roundup / narrative-tracker /
+  reply-maker / list-digest / article / fetch-tweets) NOT covered by
+  `FALLBACK_CG_SKILLS`. Operator action: top up XAI credits or wait
+  for monthly reset.
+- **Monday-weekly tick 6-15 fully cleared previous-week carryovers.**
+  cost-report 07:45Z, weekly-shiplog ran ok, unlock-monitor 10:00Z
+  UNLOCK_MONITOR_OK (CONX 2,886× daily-vol leverage, SPK fade-pump,
+  H biggest $ at $109.8M absorbed), deal-flow Monday 14:00 tick
+  FAILED to clear it (stuck since 6-08 15:02Z, ~8d). fork-cohort
+  2nd consecutive Sunday weekly fail (stuck 6-14 19:09Z).
+- **PR #112 stalled** (skill-graph docs auto-gen, opened 6-14
+  17:41Z) — past 24h stalled threshold across 6-15 → 6-16. Action-
+  converter loop "merge #112" per 6-15 19:23Z + heartbeat 20:27Z
+  flag.
+- **PR #122 fix(docs) opened 6-15 19:13Z** in response to all-skill
+  WebSearch 400 environmental failure earlier in the day. Under 24h
+  threshold at 6-16 morning-brief read.
+- **skill-evals 6-14: SKILL_EVALS_RECOVERED + COVERAGE CLIFF.**
+  0 new fail / 1 fixed / 1 still failing / 12 stable. Coverage
+  14/57 (24%) — 24pp drop from 48%. Action queued: patch
+  `evals.json:monitor-polymarket` (POLYMARKET pattern too broad
+  → tighten to `### monitor-polymarket`).
+- **ISS-018 number collision noted on 6-13.** vuln-scanner filed
+  ISS-018 (sandbox-limitation: scripts/prefetch-vuln-scanner.sh
+  missing). The "weekly-limit incident" issue overdue from 2026-06-09
+  remains UNFILED and should be **ISS-019** if filed. MEMORY.md
+  goal renamed.
+- **Skill health stable through 6-15 19:13Z snapshot: 41 healthy /
+  0 flagged / 2 no_data** (operator-scorecard + fork-skill-gap
+  await first weekly tick). Same classification through entire week
+  6-12 → 6-15.
+- **Status page docs/status.md** regenerated each heartbeat —
+  consistently Overall=🔴 DEGRADED on stuck rows (deal-flow 8d,
+  fork-cohort 38h). 43-44 enabled rows sorted last-run desc.
+- **search-skill 7th consecutive NO_GAP** (6-09 → 6-16). Fleet
+  capability gap-free; all "missing" signals are internal shims
+  (ISS-018) or operator-blocked (watches.yml).
+- **Thought-review 12 consecutive zero-capture days** through
+  6-16. Operator inbox cold since personal-stack PR (~12d).
+  `vault/inbox/` empty (.gitkeep only).
+- **on-chain-monitor / defi-monitor 12 consecutive NO_CONFIG days**
+  through 6-16. Operator-gated on `memory/on-chain-watches.yml`
+  seed.
+
+## Recent Issues & Patterns (through 2026-06-21)
+- **ISS-019/020/021 filed** (6-19): Sandbox timeout/cost truncation patterns for `defi-overview`, `token-pick`, `search-skill`. These are critical failures but likely stemming from Claude weekly rate-limit exhaustion rather than inherent skill bugs.
+- **Weekly-limit wave 2026-06-12**: 4th occurrence of the ISS-018 pattern. Diagnostic split confirmed: 5 `FALLBACK_CG_SKILLS` succeeded via Virtuals fresh-fetch fallback; every non-fallback skill dispatched in same window HUNG. Pattern is provably weekly-cyclical.
+- **XAI quota exhausted** (6-16): Team 3a8b4c1e monthly credit limit hit → 10+ XAI-dependent skills blocked. Residual gap: non-reppo CI dailies outside `FALLBACK_CG_SKILLS` still exit 1 on weekly limit.
+- **on-chain-monitor / defi-monitor NO_CONFIG streak**: >14 consecutive days awaiting `memory/on-chain-watches.yml` seed.
+- **deal-flow stuck** since 6-08 (13 days).
+- **fork-cohort** 2nd consecutive Sunday weekly fail (6-14).
+- **PR #112 (skill-graph docs)** stalled ~6 days.
+- **PR #122 (self-improve fix)** <24h old.
+- **BTC levels**: Both reclaim 63,500 (6-11) and 65,900 (6-15) triggered. Daily close < $60,500 triggers downtrend continuation alert.
+- **Token alert activity**: REPPO ±15% trips (6-14 +18.93%, 6-16 -15.78%) demonstrate canonical watchlist sensitivity. GITLAWB -13.48% near-miss (6-17).
+- **AIXBT Pulse 6-20**: Grounded crypto + tradfi absent (11th+ consecutive), bridge call "AI rotation + STRC depeg = leverage unwind risk".
+- **Token picks**: Recent HYPE (6-20) $71.06 (+6.13% 24h), JTO (6-16) $0.87 (+36.4% 24h).
+- **defi-overview 6-20**: Mixed — volume collapse −31%, fees sliding −17%, capital in flux.
+
+## Infrastructure updates (since 6-17)
+- **PR #108 file-flag notify path** confirmed durable (6-15→6-16). Retires dominant sandbox fallback pattern (`./notify "$(cat ...)"`) across standalone skills.
+- **Decentralised-AI bid validated.** 6-13 narrative-tracker #1 FRONT-RUN
+  call (TAO HIGH 10/10 token-pick $248.76) paying +23.5% in 24h.
+  Day-2 catalyst: WSJ/TechCrunch identify Andy Jassy as the trigger
+  for US-gov Anthropic Fable-5/Mythos-5 access suspension (AWS
+  researchers used Fable 5 to jailbreak a software-vuln-ID
+  safeguard; AWS itself lost access to its own portfolio company's
+  models). Rotation INSIDE DeAI: meme-side (TRUMP/EDGE/GWEI/VVV) all
+  flipped TRENDING+DOWN intraday — money rotating into
+  decentralised-compute primitives (TAO/AKT/FET) over AI-token wrappers.
+- **defi-overview 6-14 Mixed verdict.** TVL recovery decelerated
+  sharply (+0.41% snap c1d vs 6-13's +1.47% — a third of yesterday's
+  pace). DEX vol -22.2% raw / **-38% clean ex-Polymarket-US** (PM US
+  $1.70b print day 2, still inside the 7-day US-launch artifact
+  window — distortion intensifies vs 6-13's $969m debut). 0 chain
+  movers cleared 5% snap floor. 2 protocol UP (Figure Markets RWA
+  +27%, Fluid Lite +11%) both no-obvious-catalyst. 0 protocol DOWN —
+  Dolomite full direction-reversal ↔ (+10.88% → -9.24%, 19.96-pt
+  swing) misses the strict gate. **Steakhouse Financial rolled OFF
+  fees-beating-TVL** (was 6-13's biggest-ever entry on this list at
+  $2.06b; fees c7d collapsed +41.48% → +15.65% under the 20% gate;
+  TVL caught up). cvxCRV gauge surge cooling (-4.14pts to 27.35,
+  first cool-off in 2 days). Yesterday's hot real-yield pool
+  WETH-USDT (uniswap-v3) collapsed 40.63 → 11.36 apyBase + conf
+  fell 2→1 — full hot pool rollover confirmed. 3 NEW real-yield
+  pools displaced (REUSDE/MSUSD/ONYC — first re-protocol entry,
+  first mainstreet entry, **first Solana real-yield entry** since
+  yield-list adoption). /v2/chains c1d/c7d null **DAY 16** of API
+  regression.
+- **token-movers 12:30Z refresh — alt-bid cooling intraday.** Breadth
+  halved since 07:12Z daily-routine (59 → 40/100 green); BTC $64,449,
+  ETH $1,673, SOL $68.05. DeAI basket cooled hard intraday (TAO +23.5%
+  → +7.5%, AKT +21.5% → +13.7%, JASMY +16.7% → +10.2%, VELVET +20.8%
+  → +10.4%). H +135.7% biggest single-session reversal of the week
+  (was +75.1% AM) but 1h -7.6% suggests top cooling — earned FADE tag.
+  BTW BREAKOUT accelerated (+15.8% → +23.0% intraday). BEAT -34.2%
+  (deepened from -20.1% AM — parabolic giveback of 6-13 narrative-
+  tracker #21 BEAT-breakout call confirmed Bear).
+- **github-trending 6-14: NVIDIA/SkillSpector top pick** (Python,
+  4742★ total / 804 today / 55.8 stars/d ACCELERATING) — first-party
+  security scanner for the agent-skills marketplace primitive
+  (addresses supply-chain risk of arbitrary skills loaded into coding
+  agents). Plus LMCache v0.4.7 (CUDA 13 nightly, KV cache for vLLM),
+  agentsview (Go, "100× faster ccusage replacement" claim),
+  music-assistant/server (2.9.0 stable). Short trending-feed day
+  (14 returned, confirmed via second WebFetch — not fetch failure).
+  Same skill-marketplace meta noise pattern dropped 3× today (vs 5×
+  6-13).
+- **heartbeat 6-14 08:33Z: zero stuck daily-slot skills, wave fully
+  drained.** Previous days' daily carryovers all recovered overnight
+  (evening-recap 6-13 21:16Z, aixbt-pulse 21:17Z, btc-levels 05:31Z,
+  skill-evals 07:18Z = first non-stuck Sunday weekly tick post-carryover,
+  thought-review 07:09Z, morning-brief 07:11Z, daily-routine 07:15Z).
+  9 weekly carryovers still stuck (all >5d old, await next weekly
+  tick: 4 Sunday-scheduled clear today 17–19Z, 5 Monday-scheduled
+  clear 6-15). docs/status.md still DEGRADED on the stuck rows.
+  HEARTBEAT_OK · STATUS_PAGE=DEGRADED — no notify (dedup, all in last
+  48h logs).
+- **Skill-health latest snapshot (2026-06-13 18:18Z): 41 healthy / 0
+  flagged / 2 no_data** (operator-scorecard + fork-skill-gap — await
+  first weekly tick). Clean. No drift from 6-12 snapshot.
+- **thought-review 8 consecutive zero-capture days** through 6-14
+  morning. Operator inbox cold since the personal-stack PR landed
+  (6-04 PR #71). `vault/inbox/` empty (.gitkeep only).
+- **on-chain-monitor / defi-monitor 9 consecutive NO_CONFIG days**
+  through 6-14. `memory/on-chain-watches.yml` still absent —
+  operator-gated.
