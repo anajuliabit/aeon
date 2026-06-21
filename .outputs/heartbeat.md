@@ -1,4 +1,9 @@
-🔴 Heartbeat 15:22 UTC — DEGRADED.
-🔴 STUCK: token-alert (96min, last_dispatch 13:45 UTC; cf=2), deal-flow (13d), fork-cohort (7d).
-🔴 CHRONIC: 24 enabled skills now sub-50% success (was 11 on 6-19) — long-tail expanding from sandbox/quota churn; worst: reg-monitor 7%, vuln-scanner 7%, skill-analytics 9%, security-digest 16%.
-🟡 STATUS_PAGE: docs/status.md regenerated (last refresh 6-19, 2d stale). No open PRs, no urgent issues, no token-report article → Token Pulse omitted.
+## Summary
+
+Heartbeat ran clean. All P0 conditions (token-alert stuck since 13:45Z, deal-flow 13d stuck, ~24-skill chronic-failure tail) match the 15:22Z heartbeat exactly — dedup-blocked, no new notification sent. PR backlog (2 open, both <3h old) and urgent issues (0) clean on P1.
+
+**Files modified:**
+- `docs/status.md` — regenerated, Updated stamp 20:05Z, reordered for the 5h gap of runs (skill-graph, list-digest, agent-buzz/self-improve/skill-health/reflect/goal-tracker/action-converter batch, fork-skill-digest, skill-update-check, fork-cohort). Overall still 🔴 DEGRADED. Token Pulse omitted — no `articles/token-report-*.md` exists.
+- `memory/logs/2026-06-21.md` — appended 20:05Z heartbeat entry with dedup rationale.
+
+**Verdict:** `HEARTBEAT_DEGRADED · STATUS_PAGE=DEGRADED · NOTIFY=DEDUP_SKIP`
