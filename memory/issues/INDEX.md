@@ -14,6 +14,7 @@
 | ISS-019 | defi-overview 6 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | defi-overview |
 | ISS-020 | token-pick 6 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | token-pick |
 | ISS-021 | search-skill 4 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | search-skill |
+| ISS-022 | Systemic sandbox truncation — 8 skills hit >=3 consecutive failures with output_tokens=0 signature | critical | sandbox-limitation | 2026-06-21 | agent-buzz, list-digest, github-trending, security-digest, skill-freshness, skill-evals, skill-health, daily-routine |
 
 ## Resolved
 

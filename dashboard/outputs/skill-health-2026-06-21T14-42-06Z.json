@@ -1,0 +1,437 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-06-21"
+      },
+      "children": [
+        "alert_header",
+        "sep1",
+        "section_critical",
+        "sep2",
+        "section_degraded",
+        "sep3",
+        "section_nodata",
+        "sep4",
+        "section_healthy",
+        "sep5",
+        "section_summary"
+      ]
+    },
+    "alert_header": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: CRITICAL (9)",
+        "message": "Systemic: sandbox-truncation output_tokens=0 — 8 skills + extends ISS-019/020/021",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_critical": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_critical",
+        "critical_1",
+        "critical_2",
+        "critical_3",
+        "critical_4",
+        "critical_5",
+        "critical_more"
+      ]
+    },
+    "heading_critical": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL",
+        "level": "h3"
+      }
+    },
+    "critical_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_c1",
+        "text_c1"
+      ]
+    },
+    "badge_c1": {
+      "type": "Badge",
+      "props": {
+        "text": "search-skill",
+        "variant": "destructive"
+      }
+    },
+    "text_c1": {
+      "type": "Text",
+      "props": {
+        "text": "34 fails, 2d down — WAIT-API (truncation) → ISS-021"
+      }
+    },
+    "critical_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_c2",
+        "text_c2"
+      ]
+    },
+    "badge_c2": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "destructive"
+      }
+    },
+    "text_c2": {
+      "type": "Text",
+      "props": {
+        "text": "30 fails, 3d down — WAIT-API → ISS-022"
+      }
+    },
+    "critical_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_c3",
+        "text_c3"
+      ]
+    },
+    "badge_c3": {
+      "type": "Badge",
+      "props": {
+        "text": "list-digest",
+        "variant": "destructive"
+      }
+    },
+    "text_c3": {
+      "type": "Text",
+      "props": {
+        "text": "33 fails, 2d down — WAIT-API → ISS-022"
+      }
+    },
+    "critical_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_c4",
+        "text_c4"
+      ]
+    },
+    "badge_c4": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "destructive"
+      }
+    },
+    "text_c4": {
+      "type": "Text",
+      "props": {
+        "text": "29 fails, 2d down — WAIT-API → ISS-022"
+      }
+    },
+    "critical_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_c5",
+        "text_c5"
+      ]
+    },
+    "badge_c5": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health",
+        "variant": "destructive"
+      }
+    },
+    "text_c5": {
+      "type": "Text",
+      "props": {
+        "text": "26 fails, 2d down — WAIT-API → ISS-022"
+      }
+    },
+    "critical_more": {
+      "type": "Text",
+      "props": {
+        "text": "+4 more (github-trending, skill-evals, skill-freshness, daily-routine) → ISS-022",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_degraded": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_degraded",
+        "degraded_1",
+        "degraded_2",
+        "degraded_3",
+        "degraded_4",
+        "degraded_5",
+        "degraded_more"
+      ]
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (19)",
+        "level": "h3"
+      }
+    },
+    "degraded_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_d1",
+        "text_d1"
+      ]
+    },
+    "badge_d1": {
+      "type": "Badge",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "secondary"
+      }
+    },
+    "text_d1": {
+      "type": "Text",
+      "props": {
+        "text": "7% success"
+      }
+    },
+    "degraded_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_d2",
+        "text_d2"
+      ]
+    },
+    "badge_d2": {
+      "type": "Badge",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "secondary"
+      }
+    },
+    "text_d2": {
+      "type": "Text",
+      "props": {
+        "text": "7% success"
+      }
+    },
+    "degraded_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_d3",
+        "text_d3"
+      ]
+    },
+    "badge_d3": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "secondary"
+      }
+    },
+    "text_d3": {
+      "type": "Text",
+      "props": {
+        "text": "9% success"
+      }
+    },
+    "degraded_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_d4",
+        "text_d4"
+      ]
+    },
+    "badge_d4": {
+      "type": "Badge",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "secondary"
+      }
+    },
+    "text_d4": {
+      "type": "Text",
+      "props": {
+        "text": "25% success"
+      }
+    },
+    "degraded_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_d5",
+        "text_d5"
+      ]
+    },
+    "badge_d5": {
+      "type": "Badge",
+      "props": {
+        "text": "market-context-refresh",
+        "variant": "secondary"
+      }
+    },
+    "text_d5": {
+      "type": "Text",
+      "props": {
+        "text": "27% success"
+      }
+    },
+    "degraded_more": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_d_more",
+        "link_index"
+      ]
+    },
+    "text_d_more": {
+      "type": "Text",
+      "props": {
+        "text": "+14 more —",
+        "variant": "muted"
+      }
+    },
+    "link_index": {
+      "type": "Link",
+      "props": {
+        "label": "see memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_nodata",
+        "text_nodata"
+      ]
+    },
+    "heading_nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (2)",
+        "level": "h3"
+      }
+    },
+    "text_nodata": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-cohort — DISPATCH-SKILL"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "🟢 HEALTHY",
+        "value": "9"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_open",
+        "stat_resolved"
+      ]
+    },
+    "stat_open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "11"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}
