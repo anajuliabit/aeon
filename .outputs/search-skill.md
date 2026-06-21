@@ -1,12 +1,9 @@
-The skill execution is complete. I've followed the search-skill SKILL.md instructions:
+## Summary
 
-**Summary**:
-1. Derived query from failing skill `defi-overview` (consecutive_failures=6, success_rate=0.64, total_runs=44)
-2. Searched catalogs via npx skills find (2 candidates found)
-3. Evaluated candidates against gates:
-   - Both failed Gate 1: don't fill the "DeFi overview" gap (personal portfolio tracking ≠ market overview)
-4. Result: SEARCH_SKILL_EMPTY (no suitable candidates)
-5. Logged to `memory/logs/2026-06-19.md` as required
-6. No notification sent (silent on EMPTY per skill spec)
+**Mode:** SEARCH_SKILL_EMPTY — logged, no notify (per skill spec).
 
-The search-skill completed successfully without installing any new skills, which is correct when no suitable external skills match the identified gap.
+- **Query derivation:** `github trending` from `cron-state.json` (github-trending has 13 consecutive failures). XAI-quota failing skills (agent-buzz, list-digest, security-digest, narrative-tracker) excluded — quota is operator/billing, not a capability gap. Internal meta-skills (skill-health, skill-freshness, search-skill itself) excluded — can't be externally replaced.
+- **Catalogs searched:** npx (ok, 1 hit), vercel-labs/agent-skills (8 skills, none github), anthropics/skills (page didn't enumerate, no github surfaced), BankrBot/skills (none github), skills.sh (fail).
+- **Only candidate:** `hoodini/ai-agents-skills@github-trending` — dropped by step 2 duplicate guard (`github-trending` already in `skills/`).
+- **Outcome:** zero non-duplicate candidates → EMPTY exit mode. Per spec: log only, no notification, no install.
+- **Files modified:** `memory/logs/2026-06-21.md` (appended search-skill entry).
