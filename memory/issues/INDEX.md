@@ -14,7 +14,9 @@
 | ISS-019 | defi-overview 6 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | defi-overview |
 | ISS-020 | token-pick 6 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | token-pick |
 | ISS-021 | search-skill 4 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | search-skill |
-| ISS-022 | Systemic sandbox truncation — 8 skills hit >=3 consecutive failures with output_tokens=0 signature | critical | sandbox-limitation | 2026-06-21 | agent-buzz, list-digest, github-trending, security-digest, skill-freshness, skill-evals, skill-health, daily-routine |
+| ISS-022 | monitor-polymarket: missing_pattern — disabled skill causing churn in evals | high | prompt-bug | 2026-06-21 | monitor-polymarket |
+| ISS-023 | token-alert: missing_pattern — pattern not found in live-day log | high | prompt-bug | 2026-06-21 | token-alert |
+| ISS-024 | skill-health: missing_pattern — 26 consecutive failures, 0.26 success_rate | high | quality-regression | 2026-06-21 | skill-health |
 
 ## Resolved
 

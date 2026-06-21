@@ -1,0 +1,113 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Evals"
+      },
+      "children": [
+        "alert_regression",
+        "stack_metrics",
+        "text_action",
+        "link_article",
+        "sep1",
+        "heading_failures",
+        "table_failures"
+      ]
+    },
+    "alert_regression": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "SKILL_EVALS_REGRESSED",
+        "message": "3 new fail · 0 fixed · coverage 32%"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_newfail",
+        "stat_fixed",
+        "stat_coverage"
+      ]
+    },
+    "stat_newfail": {
+      "type": "Stat",
+      "props": {
+        "label": "New Fail",
+        "value": "3"
+      }
+    },
+    "stat_fixed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fixed",
+        "value": "0"
+      }
+    },
+    "stat_coverage": {
+      "type": "Stat",
+      "props": {
+        "label": "Coverage",
+        "value": "32%"
+      }
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Top action: Investigate skill-health — 26 consecutive failures (ISS-024)",
+        "variant": "lead"
+      }
+    },
+    "link_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Skill Evals Report",
+        "href": "articles/skill-evals-2026-06-21.md",
+        "source": "skill-evals"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_failures": {
+      "type": "Heading",
+      "props": {
+        "text": "Failing Skills",
+        "level": "h3"
+      }
+    },
+    "table_failures": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Issue"
+        ],
+        "rows": [
+          [
+            "skill-health",
+            "missing_pattern: ### skill-health|SKILL_HEALTH|HEALTH:"
+          ],
+          [
+            "token-alert",
+            "missing_pattern: ### token-alert|TOKEN_ALERT"
+          ],
+          [
+            "monitor-polymarket",
+            "missing_pattern: ### monitor-polymarket|## Polymarket|POLYMARKET"
+          ]
+        ]
+      }
+    }
+  }
+}
