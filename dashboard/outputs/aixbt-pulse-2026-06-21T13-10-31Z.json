@@ -1,0 +1,276 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-21 13:00Z"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "crypto-stack",
+        "sep-1",
+        "macro-stack",
+        "sep-2",
+        "new-stack",
+        "sep-3",
+        "bridge-stack"
+      ]
+    },
+    "crypto-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-h",
+        "btc-stat",
+        "etf-text",
+        "solana-text",
+        "rwa-stat",
+        "blackrock-text",
+        "mev-alert",
+        "hyperliquid-stat",
+        "pred-markets-alert"
+      ]
+    },
+    "crypto-h": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$60K+"
+      }
+    },
+    "etf-text": {
+      "type": "Text",
+      "props": {
+        "text": "ETF bleed: $6.35B out over 30 days"
+      }
+    },
+    "solana-text": {
+      "type": "Text",
+      "props": {
+        "text": "Solana sentiment flipped bullish"
+      }
+    },
+    "rwa-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "RWA sector",
+        "value": "$2B"
+      }
+    },
+    "blackrock-text": {
+      "type": "Text",
+      "props": {
+        "text": "BlackRock BUIDL doubled"
+      }
+    },
+    "mev-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "JaredFromSubway MEV exploit: $7.7M",
+        "message": "Exposed automated approval traps",
+        "type": "warning"
+      }
+    },
+    "hyperliquid-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Hyperliquid non-crypto OI",
+        "value": "$3B"
+      }
+    },
+    "pred-markets-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "Prediction markets face scrutiny",
+        "type": "info"
+      }
+    },
+    "macro-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "macro-h",
+        "fed-stat",
+        "fed-cuts-alert",
+        "duration-drag-alert",
+        "geopolitical-alert",
+        "shipping-text",
+        "tail-risk-alert"
+      ]
+    },
+    "macro-h": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO",
+        "level": "h2"
+      }
+    },
+    "fed-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fed holds",
+        "value": "3.5–3.75%"
+      }
+    },
+    "fed-cuts-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "Signals delayed cuts",
+        "type": "warning"
+      }
+    },
+    "duration-drag-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "Duration drag now certain",
+        "type": "warning"
+      }
+    },
+    "geopolitical-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "Geopolitical waterway disputes broadening",
+        "type": "warning"
+      }
+    },
+    "shipping-text": {
+      "type": "Text",
+      "props": {
+        "text": "Shipping costs spiking"
+      }
+    },
+    "tail-risk-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "Tail risk returning",
+        "type": "warning"
+      }
+    },
+    "new-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-h",
+        "mev-insight",
+        "rwa-insight",
+        "fed-geo-insight"
+      ]
+    },
+    "new-h": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "mev-insight": {
+      "type": "Text",
+      "props": {
+        "text": "MEV hack ($7.7M) when Solana bullish — traders moved spot into Hyperliquid perps instead of fleeing"
+      }
+    },
+    "rwa-insight": {
+      "type": "Text",
+      "props": {
+        "text": "RWA sector execution phase: BlackRock BUIDL doubled into ETF bleed window"
+      }
+    },
+    "fed-geo-insight": {
+      "type": "Text",
+      "props": {
+        "text": "Fed explicit hold + delayed cuts; waterway geopolitics systemic, not bilateral"
+      }
+    },
+    "bridge-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-h",
+        "etf-rwa-text",
+        "reallocation-text",
+        "institutional-text",
+        "mev-perps-text",
+        "fed-vol-text"
+      ]
+    },
+    "bridge-h": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "etf-rwa-text": {
+      "type": "Text",
+      "props": {
+        "text": "ETF bleed → RWA reflexivity. Not exit; reallocation."
+      }
+    },
+    "institutional-text": {
+      "type": "Text",
+      "props": {
+        "text": "Institutional entry at volatility into on-chain custody."
+      }
+    },
+    "mev-perps-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEV hack → perps shift."
+      }
+    },
+    "fed-vol-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fed sticky + waterway risk = crypto vol cheaper than TradFi when surprises hit."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    }
+  }
+}

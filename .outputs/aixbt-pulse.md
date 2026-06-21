@@ -1,21 +1,19 @@
-*AIXBT Pulse — 2026-06-20 09:00Z*
+*AIXBT Pulse — 2026-06-21 13:00Z*
 
 CRYPTO
-- Solana spot volume surpassed NYSE at $11.6B; treasury firms hold $1B+ SOL.
-- BTC sits near $63K with Fear & Greed at 14 (extreme fear); $3.45B left Bitcoin ETFs as capital rotated to AI, sparking STRC depeg anxiety.
-- Privacy moves on-chain: Aptos launches Confidential APT, Arcium expands MPC apps, Axelar discloses $4.67M Secret Network exploit.
+- BTC held $60K+ but ETF bleed accelerated: $6.35B out over 30 days.
+- Solana sentiment flipped bullish; RWA sector at $2B, BlackRock BUIDL doubled.
+- JaredFromSubway MEV exploit ($7.7M) exposed automated approval traps.
+- Hyperliquid consolidates $3B non-crypto OI; prediction markets face scrutiny.
 
 MACRO
-- Hawkish Fed dot plot lifting 2026 rate hike odds is steepening the yield curve and strengthening the dollar.
-- Record $119B US equity inflows last week underscore aggressive positioning into tech despite macro headwinds.
-
-GEO
-- US-Iran talks snags and Hormuz transit uncertainties risk spiking energy and shipping costs.
+- Fed holds 3.5-3.75%, signals delayed cuts. duration drag now certain.
+- Geopolitical waterway disputes broadening. shipping costs spiking. tail risk returning.
 
 NEW THIS PULL
-- $11.6B Solana > NYSE (ecosystem throughput quantified)
-- Treasury SOL holdings (institutional custody accelerates)
-- Aptos Confidential APT (privacy on-chain)
+- MEV hack ($7.7M) when Solana bullish — traders moved spot into Hyperliquid perps instead of fleeing.
+- RWA sector execution phase: BlackRock BUIDL doubled into ETF bleed window.
+- Fed explicit hold + delayed cuts; waterway geopolitics systemic, not bilateral.
 
 BRIDGE
-AI rotation + STRC fear = leverage unwind risk. $3.45B fled Bitcoin ETFs into AI — this is a duration reallocation. STRC's depeg is the canary: leveraged yield-farming breaks if vol reprices faster than Fed tightens. Treasury SOL holdings are the thesis that on-chain tokenization captures institutional flows independent of duration risk. Hormuz uncertainty lifts vol premiums. Privacy tech positioning signals teams expect regulatory scrutiny to sharpen once geopolitical clarity arrives.
+ETF bleed → RWA reflexivity. not exit; reallocation. institutional entry at volatility into on-chain custody. MEV hack → perps shift. Fed sticky + waterway risk = crypto vol cheaper than TradFi when surprises hit.

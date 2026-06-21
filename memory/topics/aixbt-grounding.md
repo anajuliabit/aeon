@@ -1,40 +1,37 @@
-# AIXBT Grounding (as of 2026-06-20 09:00 UTC)
+# AIXBT Grounding (as of 2026-06-21 13:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-20T09:00:19.369Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-21T13:00:28.356Z
 
 ## Crypto
-- BTC sits near $63K with Fear & Greed at 14 (extreme fear); $3.45B left Bitcoin ETFs in 11 sessions as capital rotated to AI stocks, sparking STRC depeg anxiety.
-- Solana spot volume surpassed NYSE at $11.6B; tokenized equities via Backpack, treasury firms holding $1B+ SOL, and SOL/ETH breakout fuel bullish ecosystem momentum.
-- Privacy and infra narratives gain traction: Aptos launches Confidential APT, Arcium expands MPC privacy apps, Axelar discloses $4.67M Secret Network bridge exploit.
-- HYPE bulls target top-5 token status, $PUMP bleeds despite buybacks, ZEC sees short squeezes, and on-chain gaming ($KINS) emerges as a Solana utility narrative.
+- Bitcoin sustains support above $60K amid significant ETF outflows totaling $6.35B over 30 days, with MicroStrategy's leadership suggesting additional purchases despite debate over fundamentals.
+- Solana experiences sentiment shift toward bullish positioning as prominent traders increase exposure; Real-World Assets sector reaches $2B valuation with BlackRock's BUIDL product doubling in value.
+- "JaredFromSubway MEV bot exploited for ~$7.7M via fake token traps" with automated approval vulnerabilities exposed; approximately 1,000 ETH subsequently laundered through mixing services.
+- Hyperliquid consolidates dominance in decentralized perpetuals with "$3B non-crypto OI," while prediction market platform faces regulatory scrutiny over influencer compensation practices.
 
-## TradFi
-- Hawkish Fed dot plot lifting 2026 rate hike odds is steepening the yield curve and strengthening the dollar, pressuring duration and transmitting caution into credit and risk assets.
-- Record $119B US equity inflows last week underscore aggressive positioning into tech, sustaining Nasdaq momentum and cross-asset support for growth equities despite macro headwinds.
-- Chip-led equity rebound post-Fed signals sector rotation favoring AI capex plays, with flows amplifying vol compression and risk-on transmission across equities and credit.
-- US-Iran talks snags and Hormuz transit uncertainties risk spiking energy and shipping costs, capping broader risk appetite and pressuring cyclical sectors via geopolitical transmission.
+## Global Liquidity / Macro
+- Federal Reserve maintains hawkish stance, holding rates at 3.5-3.75% while signaling delayed rate reductions; shorter-duration yields and dollar strength increase headwinds for equities.
+- Geopolitical disputes over strategic waterways create commodity market volatility and elevated shipping costs, transmitting supply chain risks broadly.
+- Growth-oriented indices demonstrate resilience despite macro challenges, reflecting persistent investor appetite for risk assets.
+- Market participants implementing volatility hedges and defensive positioning amid regional tensions and monetary policy uncertainty.
 
-## What's New (vs last pull 2026-06-19 21:00 UTC)
-- (Crypto) **Aptos Confidential APT** — privacy tech moves on-chain, competition to Monero/ZEC tooling
-- (Crypto) **$11.6B Solana spot volume > NYSE** — ecosystem throughput claim now quantified vs narrative-only
-- (Crypto) **Treasury firms holding $1B+ SOL** — institutional custody of SOL accelerates (was RWA broadly)
-- (TradFi) **$119B US equity inflows last week** — reaffirms tech bid despite macro caution
-
-## Gone (dropped from 2026-06-19 21:00 UTC)
-- (Crypto) Solana leads RWA holder count — replaced by Backpack tokenized-equity framing + treasury holdings
-- (Crypto) Solana $250M USDC mint — specific event replaced by broader RWA + institutional custody narrative
-- (TradFi) Yen near 40-year lows raises BoJ intervention odds — absorbed into Fed dot-plot tightening context
-- (TradFi) Semiconductor leadership drives S&P gains — genericized to "chip-led equity rebound"
+## What's New (vs last pull 2026-06-20 09:00 UTC)
+- (Crypto) **MEV bot exploit ($7.7M JaredFromSubway)** — visibility into automated approval vulnerabilities + token trap tactics
+- (Crypto) **RWA sector $2B, BlackRock BUIDL doubled** — institutional on-ramp moving from conceptual to execution
+- (Crypto) **Hyperliquid $3B non-crypto OI** — perps dominance solidifies, prediction market regulatory pressure mounts
+- (Macro) **Fed holds 3.5-3.75%, delays cuts** — more explicit signal than prior "dot plot hike odds" framing
+- (Macro) **Waterway geopolitics broadening** — Hormuz narrowed to "strategic waterways" plural, shipping/commodity tail risk generalized
 
 ## Persisting Stories
-- **STRC depeg anxiety** — continues (capital rotation trigger now explicit: $3.45B out of BTC ETFs)
-- **Solana ecosystem strength** — persists (evolved from RWA → tokenized equities + institutional custody breadth)
-- **Fed tightening into risk assets** — persists (Warsh repricing sharpened to "dot plot 2026 rate hikes")
-- **Institutional crypto adoption** — persists (treasury SOL holdings + Backpack tokenized equities = real on-chain custody)
-- **Privacy tech narratives** — persists (Aptos Confidential, Arcium MPC apps, Axelar bridge exploit all point to infra hardening)
+- **BTC ETF flows negative** — $3.45B → $6.35B out over extended window. Capital rotation sustained, not one-session event.
+- **Solana institutional adoption** — evolved from RWA holder count → BUIDL vault doubling + institutional perp activity. Narrative matured.
+- **Fed tightening into risk assets** — prior "dot plot 2026 hikes" now "hold + delayed cuts." Same effect (duration drag) but more certain.
+- **Geopolitical tail risk** — Hormuz talks → waterway disputes. Regime shift from bilateral to systemic supply chain anxiety.
+- **Vol hedging demand** — Prior "volatility hedges" mentioned in TradFi; now explicit as policy lever in crypto vol premiums.
 
 ## Cross-Domain Bridges
-- **AI stock rotation + STRC fear = leverage unwind risk.** $3.45B fled Bitcoin ETFs into AI in 11 sessions — this isn't just FOMO, it's a reallocation of duration bets. STRC's depeg at $63K BTC is the canary: it's a leveraged yield-farming position that breaks if volatility reprices funding rates. Solana's $11.6B spot volume is real, but it's trading *into* the Fed's dot-plot tightening. If rate hikes accelerate, staking yield compresses and the vol unwinds.
-- **Fed + US-Iran = asymmetric edges for institutional crypto.** Hawkish dot plot strengthens the dollar and steepens yields, which normally crushes duration and risk assets. But treasury firms dumping $1B+ SOL into custody isn't capital flight — it's the thesis that on-chain asset tokenization (Backpack equities) can capture institutional flows *because* it's not duration-sensitive. Hormuz uncertainty is a tail risk that lifts vol premiums; institutions buy vol when geopolitics spike.
-- **Privacy tech = hedge against regulatory clarity.** Aptos/Arcium/Axelar moves toward privacy (Confidential contracts, MPC, bridge hardening) signal teams expect regulatory scrutiny to sharpen once geopolitical uncertainty clears. If Hormuz talks resolve cleanly, risk-on will reallocate to "clean" narratives (DeFi → TradFi tokenization). Privacy protocols are positioning for the *opposite* — they want to be defensive when the next regulatory wave hits.
+- **ETF bleed + RWA thesis reflexivity.** $6.35B fled BTC ETFs, but BlackRock's BUIDL doubled into that same window. Not capital exit from crypto — capital *reallocation* from custody risk (ETF leverage concerns) into protocol-native tokenization. Institutional entry point at the volatility, not away from it. If ETF outflows continued due to STRC depeg fears, RWA adoption accelerates as the *alternative* — no leverage, on-chain transparency.
+
+- **MEV hack → perps dominance shift.** $7.7M JaredFromSubway exploit hits when Solana sentiment flips bullish. Would normally tank ecosystem confidence. Instead: traders move spot risk into Hyperliquid perps ($3B non-crypto OI). This isn't "avoiding Solana" — it's "leveraging Solana ecosystem, avoiding spot MEV." Institutional flow pattern: centralized volume (Solana) + decentralized risk transfer (Hyperliquid). Separation of liquidity and settlement.
+
+- **Fed hold + waterway risk = crypto vol as hedge.** Fed at 3.5-3.75% with no cuts signals rates sticky. Normally crushes risk appetite. But geopolitical waterway disputes broadening means real tail risk returning. Institutions implementing vol hedges — and crypto vol premiums (Hyperliquid, perps) are cheaper than traditional Vol products when geopolitical surprises spike. Crypto becomes the efficient hedge when traditional finance reprices too slow.
