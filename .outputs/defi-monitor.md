@@ -1,5 +1,1 @@
-🏦 DeFi Monitor — 2026‑06‑19
-
-no on‑chain watches configured.
-
-memory/on‑chain‑watches.yml is empty — skill skipped.
+**DeFi Monitor — 2026-06-21**\n\nNo DeFi positions configured. Awaiting `memory/on-chain-watches.yml` setup to begin monitoring pools, positions, and yield rates.

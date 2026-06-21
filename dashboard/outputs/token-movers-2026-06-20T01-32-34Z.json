@@ -1,0 +1,428 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers — 2026-06-19"
+      },
+      "children": [
+        "summary",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "trending_section",
+        "sep4",
+        "notable_section"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "57/100 top coins green 24h (57%), median +0.07% — mixed tape with tactical moves, breadth declining post-geopolitical reversal.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Market Cap / Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "BTW (Bitway)",
+            "$0.0815",
+            "+71.2%",
+            "+1.4%",
+            "+5.2%",
+            "$67.3M / #184",
+            "PUMP-RISK"
+          ],
+          [
+            "O (o1.exchange)",
+            "$0.7418",
+            "+20.2%",
+            "N/A",
+            "−0.5%",
+            "$46.8M / #236",
+            "PUMP-RISK"
+          ],
+          [
+            "9BIT (The9bit)",
+            "$0.0424",
+            "+15.5%",
+            "−3.8%",
+            "−0.2%",
+            "$7.0M / #128",
+            ""
+          ],
+          [
+            "AERO (Aerodrome Finance)",
+            "$0.4874",
+            "+11.5%",
+            "+36.0%",
+            "+0.1%",
+            "$45.1M / #108",
+            "BREAKOUT"
+          ],
+          [
+            "EIGEN (EigenCloud)",
+            "$0.2308",
+            "+10.1%",
+            "+28.6%",
+            "−0.1%",
+            "$47.7M / #187",
+            ""
+          ],
+          [
+            "DEXE (DeXe)",
+            "$16.72",
+            "+9.0%",
+            "−19.8%",
+            "−0.5%",
+            "$22.1M / #81",
+            "FADE"
+          ],
+          [
+            "GENIUS (Genius)",
+            "$0.4157",
+            "+8.5%",
+            "−9.4%",
+            "+0.3%",
+            "$22.5M / #212",
+            ""
+          ],
+          [
+            "ETC (Ethereum Classic)",
+            "$7.63",
+            "+8.2%",
+            "+5.6%",
+            "+0.7%",
+            "$64.7M / #62",
+            "MAJOR"
+          ],
+          [
+            "EDGE (edgeX)",
+            "$0.3646",
+            "+6.5%",
+            "−7.6%",
+            "−0.1%",
+            "$7.5M / #226",
+            ""
+          ],
+          [
+            "XPL (Plasma)",
+            "$0.1001",
+            "+5.7%",
+            "+11.7%",
+            "−3.4%",
+            "$140.4M / #142",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Market Cap / Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "UB (Unibase)",
+            "$0.0847",
+            "−25.0%",
+            "−40.4%",
+            "−1.3%",
+            "$13.2M / #170",
+            ""
+          ],
+          [
+            "LAB (LAB)",
+            "$13.23",
+            "−22.5%",
+            "+31.5%",
+            "−4.2%",
+            "$56.8M / #25",
+            "MAJOR FADE"
+          ],
+          [
+            "VELVET (Velvet)",
+            "$0.4621",
+            "−13.6%",
+            "−53.0%",
+            "−0.1%",
+            "$24.0M / #179",
+            ""
+          ],
+          [
+            "NEX (Nexus)",
+            "$0.000002551",
+            "−11.9%",
+            "−14.8%",
+            "−1.0%",
+            "$2.4M / #204",
+            ""
+          ],
+          [
+            "AVAX (Avalanche)",
+            "$5.85",
+            "−6.8%",
+            "−11.5%",
+            "−4.2%",
+            "$310.5M / #38",
+            "MAJOR"
+          ],
+          [
+            "BP (Backpack)",
+            "$0.5988",
+            "−6.1%",
+            "+115.8%",
+            "+0.2%",
+            "$4.6M / #207",
+            "FADE"
+          ],
+          [
+            "BILL (Billions Network)",
+            "$0.0598",
+            "−5.8%",
+            "−16.9%",
+            "+0.1%",
+            "$26.7M / #210",
+            ""
+          ],
+          [
+            "FF (Falcon Finance)",
+            "$0.0689",
+            "−5.7%",
+            "−16.2%",
+            "−0.6%",
+            "$16.5M / #178",
+            ""
+          ],
+          [
+            "XLM (Stellar)",
+            "$0.2209",
+            "−5.3%",
+            "N/A",
+            "−0.2%",
+            "$465.8M / #16",
+            "MAJOR"
+          ],
+          [
+            "BTSE (BTSE Token)",
+            "$1.034",
+            "−5.0%",
+            "N/A",
+            "−0.8%",
+            "$7.2M / #191",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending_heading",
+        "trending_table"
+      ]
+    },
+    "trending_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Rank",
+          "Price",
+          "24h Change",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "Pudgy Penguins (PENGU)",
+            "#116",
+            "$0.00659",
+            "+0.95%",
+            ""
+          ],
+          [
+            "Aerodrome Finance (AERO)",
+            "#108",
+            "$0.4874",
+            "+11.5%",
+            "BREAKOUT"
+          ],
+          [
+            "Hyperliquid (HYPE)",
+            "#10",
+            "$9,340",
+            "+4.2%",
+            "MAJOR"
+          ],
+          [
+            "Kintara (KINS)",
+            "#893",
+            "$0.0000107",
+            "−1.8%",
+            ""
+          ],
+          [
+            "Siren (SIREN)",
+            "#308",
+            "$0.00253",
+            "+11.7%",
+            ""
+          ],
+          [
+            "Solana (SOL)",
+            "#7",
+            "$143.56",
+            "−1.0%",
+            "MAJOR"
+          ],
+          [
+            "Bitcoin (BTC)",
+            "#1",
+            "$62,998",
+            "+0.5%",
+            "MAJOR"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable1",
+        "notable2",
+        "notable3",
+        "notable4"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable1": {
+      "type": "Alert",
+      "props": {
+        "title": "BTW: Extreme Pump Risk",
+        "message": "+71% on micro-liquidity ($67M vol, rank #184) — extreme PUMP-RISK, avoid",
+        "type": "warning"
+      }
+    },
+    "notable2": {
+      "type": "Alert",
+      "props": {
+        "title": "AERO: Sustained Breakout",
+        "message": "+11.5% sustained breakout (+36% 7d), already in trending — signal strength intact",
+        "type": "success"
+      }
+    },
+    "notable3": {
+      "type": "Alert",
+      "props": {
+        "title": "LAB: Fade on Relief Bounce",
+        "message": "Flipped to −22.5% after 2d +36% / +56% 7d breakout — FADE on relief bounce",
+        "type": "warning"
+      }
+    },
+    "notable4": {
+      "type": "Alert",
+      "props": {
+        "title": "XLM / AVAX: Major Cap Weakness",
+        "message": "Major cap slides (−5.3% / −6.8%) post-geopolitical risk-off, breadth weak vs 6-17",
+        "type": "info"
+      }
+    }
+  }
+}

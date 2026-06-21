@@ -1,0 +1,265 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi Overview"
+      },
+      "children": [
+        "heading_date",
+        "text_mixed",
+        "sep1",
+        "stat_tvl",
+        "sep2",
+        "heading_chains",
+        "table_chains",
+        "sep3",
+        "heading_dex",
+        "stat_dex_24h",
+        "stat_dex_7d",
+        "sep4",
+        "heading_fees",
+        "stat_curve",
+        "stat_lido",
+        "stat_sky",
+        "sep5",
+        "heading_stables",
+        "stat_stables",
+        "text_stables_detail",
+        "sep6",
+        "heading_sources",
+        "stack_sources",
+        "text_var_note"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi — 2026-06-19",
+        "level": "h2"
+      }
+    },
+    "text_mixed": {
+      "type": "Text",
+      "props": {
+        "text": "Mixed: volume +3% on stablecoin headwinds, fees accelerating +10.5%.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$1.2T",
+        "delta": "+0.8% 24h, +2.1% 7d"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_chains": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Chains",
+        "level": "h3"
+      }
+    },
+    "table_chains": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Chain",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "Ethereum",
+            "$38.4B"
+          ],
+          [
+            "BSC",
+            "$5.1B"
+          ],
+          [
+            "Solana",
+            "$4.8B"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_dex": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX Volume",
+        "level": "h3"
+      }
+    },
+    "stat_dex_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$7.4B",
+        "delta": "+3.01%",
+        "trend": "up"
+      }
+    },
+    "stat_dex_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Volume",
+        "value": "$42.8B",
+        "delta": "+22.1%",
+        "trend": "up"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_fees": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees Leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "stat_curve": {
+      "type": "Stat",
+      "props": {
+        "label": "Curve (protocol core)",
+        "value": "$99.7k"
+      }
+    },
+    "stat_lido": {
+      "type": "Stat",
+      "props": {
+        "label": "Lido (ETH staking)",
+        "value": "$1.1M"
+      }
+    },
+    "stat_sky": {
+      "type": "Stat",
+      "props": {
+        "label": "Sky (CDPs)",
+        "value": "$993k"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_stables": {
+      "type": "Heading",
+      "props": {
+        "text": "Stablecoins",
+        "level": "h3"
+      }
+    },
+    "stat_stables": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Stables",
+        "value": "$282.6B",
+        "delta": "−0.35% 24h",
+        "trend": "down"
+      }
+    },
+    "text_stables_detail": {
+      "type": "Text",
+      "props": {
+        "text": "USDT/USDC flat, USD1 +2.44% (yield migration signal)",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Data Sources",
+        "level": "h3"
+      }
+    },
+    "stack_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_tvl",
+        "badge_dex",
+        "badge_fees",
+        "badge_stables",
+        "badge_yields"
+      ]
+    },
+    "badge_tvl": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_tvl: ok",
+        "variant": "default"
+      }
+    },
+    "badge_dex": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_dex: ok",
+        "variant": "default"
+      }
+    },
+    "badge_fees": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_fees: ok",
+        "variant": "default"
+      }
+    },
+    "badge_stables": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_stables: ok",
+        "variant": "default"
+      }
+    },
+    "badge_yields": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_yields: fail",
+        "variant": "destructive"
+      }
+    },
+    "text_var_note": {
+      "type": "Text",
+      "props": {
+        "text": "var: none",
+        "variant": "muted"
+      }
+    }
+  }
+}

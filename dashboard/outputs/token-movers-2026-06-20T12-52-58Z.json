@@ -1,0 +1,283 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "💹 Token Movers Report (2026-06-20)"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_pulse",
+        "sep1",
+        "section_winners",
+        "sep2",
+        "section_losers",
+        "sep3",
+        "section_trending"
+      ]
+    },
+    "section_pulse": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_pulse",
+        "stat_green",
+        "stat_median"
+      ]
+    },
+    "heading_pulse": {
+      "type": "Heading",
+      "props": {
+        "text": "🎯 Market Pulse",
+        "level": "h3"
+      }
+    },
+    "stat_green": {
+      "type": "Stat",
+      "props": {
+        "label": "Top 100 coins green",
+        "value": "71.8%"
+      }
+    },
+    "stat_median": {
+      "type": "Stat",
+      "props": {
+        "label": "Median change",
+        "value": "+1.89%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_winners": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_winners",
+        "stat_velvet",
+        "stat_beat",
+        "stat_skyai",
+        "stat_crv",
+        "stat_pyth"
+      ]
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "🚀 Top Winners",
+        "level": "h3"
+      }
+    },
+    "stat_velvet": {
+      "type": "Stat",
+      "props": {
+        "label": "VELVET",
+        "value": "+126.18%",
+        "trend": "up"
+      }
+    },
+    "stat_beat": {
+      "type": "Stat",
+      "props": {
+        "label": "BEAT",
+        "value": "+61.35%",
+        "trend": "up"
+      }
+    },
+    "stat_skyai": {
+      "type": "Stat",
+      "props": {
+        "label": "SKYAI",
+        "value": "+40.04%",
+        "trend": "up"
+      }
+    },
+    "stat_crv": {
+      "type": "Stat",
+      "props": {
+        "label": "CRV",
+        "value": "+21.07%",
+        "trend": "up"
+      }
+    },
+    "stat_pyth": {
+      "type": "Stat",
+      "props": {
+        "label": "PYTH",
+        "value": "+13.24%",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_losers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_losers",
+        "stat_siren",
+        "stat_ub",
+        "stat_lab",
+        "stat_genius",
+        "stat_h"
+      ]
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "📉 Top Losers",
+        "level": "h3"
+      }
+    },
+    "stat_siren": {
+      "type": "Stat",
+      "props": {
+        "label": "SIREN",
+        "value": "-21.93%",
+        "trend": "down"
+      }
+    },
+    "stat_ub": {
+      "type": "Stat",
+      "props": {
+        "label": "UB",
+        "value": "-17.57%",
+        "trend": "down"
+      }
+    },
+    "stat_lab": {
+      "type": "Stat",
+      "props": {
+        "label": "LAB",
+        "value": "-12.35%",
+        "trend": "down"
+      }
+    },
+    "stat_genius": {
+      "type": "Stat",
+      "props": {
+        "label": "GENIUS",
+        "value": "-8.83%",
+        "trend": "down"
+      }
+    },
+    "stat_h": {
+      "type": "Stat",
+      "props": {
+        "label": "H",
+        "value": "-6.65%",
+        "trend": "down"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_trending": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_trending",
+        "stack_trending_badges"
+      ]
+    },
+    "heading_trending": {
+      "type": "Heading",
+      "props": {
+        "text": "🔥 Trending",
+        "level": "h3"
+      }
+    },
+    "stack_trending_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_bonk",
+        "badge_beat",
+        "badge_velvet",
+        "badge_pengu",
+        "badge_cc",
+        "badge_h",
+        "badge_hype"
+      ]
+    },
+    "badge_bonk": {
+      "type": "Badge",
+      "props": {
+        "text": "BONK"
+      }
+    },
+    "badge_beat": {
+      "type": "Badge",
+      "props": {
+        "text": "BEAT"
+      }
+    },
+    "badge_velvet": {
+      "type": "Badge",
+      "props": {
+        "text": "VELVET"
+      }
+    },
+    "badge_pengu": {
+      "type": "Badge",
+      "props": {
+        "text": "PENGU"
+      }
+    },
+    "badge_cc": {
+      "type": "Badge",
+      "props": {
+        "text": "CC"
+      }
+    },
+    "badge_h": {
+      "type": "Badge",
+      "props": {
+        "text": "H"
+      }
+    },
+    "badge_hype": {
+      "type": "Badge",
+      "props": {
+        "text": "HYPE"
+      }
+    }
+  }
+}

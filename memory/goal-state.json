@@ -1,29 +1,47 @@
 {
-  "run_at": "2026-06-16T18:30:00Z",
+  "run_at": "2026-06-19T00:00:00Z",
   "goals": {
     "capital-2x-program-double-net-worth-by-2027-12-31": {
       "status": "ON_TRACK",
-      "activity_count_14d": 70,
-      "last_activity_date": "2026-06-16",
-      "note": "north-star — btc-levels every 4h with both reclaim levels SET (63500 6-11, 65900 6-15); advisor stack landed PRs #116-#121 yesterday; today JTO HIGH 10/10 token-pick, Mixed risk-on defi-overview ($74.99b TVL, DEX clean +57% c1d), spot $66,253→$66,744 across today's btc-levels runs"
+      "activity_count_14d": 84,
+      "last_activity_date": "2026-06-19",
+      "note": ""
     },
-    "file-iss-019-weekly-limit-incident-by-2026-06-09": {
-      "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 25,
-      "last_activity_date": "2026-06-16",
-      "note": "still unfiled — overdue 7d from 6-09. ISS-019 file absent from memory/issues/. Surfaced today in 06:00Z morning-brief focus-2, 09:10Z heartbeat P2, 18:xxZ agent-buzz log (XAI quota wall exposed residual gap — FALLBACK_CG_SKILLS covers 5 CG-skills but XAI-dependent skills agent-buzz/token-pick/list-digest/refresh-x/tweet-roundup have no fallback). 25 mentions but no file write — mentions are 'still unfiled' = work-toward not completion"
+    "xai-quota-exhausted-ongoing": {
+      "status": "BLOCKED",
+      "activity_count_14d": 3,
+      "last_activity_date": "2026-06-18",
+      "note": "Request operator to top up XAI credits or wait for monthly reset"
     },
-    "index-bookkeeping-flips-iss-007-009-010-016-by-2026-06-10": {
-      "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 27,
+    "14-29z-batch-stuck": {
+      "status": "AT_RISK",
+      "activity_count_14d": 0,
       "last_activity_date": "2026-06-16",
-      "note": "overdue 6d from 6-10. INDEX.md confirmed today: 7 open = 6 reppo + ISS-018; ISS-007/009/010/016 still in Open table. All have code shipped or workarounds durable — pure bookkeeping flip remains. Mentioned in 09:10Z heartbeat P2 + 12:42Z search-skill trace"
+      "note": "Investigate GH Actions cron delay and restart stuck batch"
+    },
+    "deal-flow-stuck-since-6-08-10d": {
+      "status": "AT_RISK",
+      "activity_count_14d": 0,
+      "last_activity_date": "2026-06-08",
+      "note": "Enable deal-flow skill in aeon.yml to produce evidence"
+    },
+    "fork-cohort-stuck-since-6-14-2nd-consecutive-sunday-weekly-fail": {
+      "status": "AT_RISK",
+      "activity_count_14d": 0,
+      "last_activity_date": "2026-06-14",
+      "note": "Run fork-cohort skill next Sunday to produce evidence"
+    },
+    "pr-112-stalled-skill-graph-docs-auto-gen": {
+      "status": "NEEDS_ATTENTION",
+      "activity_count_14d": 1,
+      "last_activity_date": "2026-06-14",
+      "note": "Review PR #112 and merge or close"
     },
     "on-chain-monitor-defi-monitor-watches-yml": {
       "status": "BLOCKED",
       "activity_count_14d": 14,
-      "last_activity_date": "2026-06-16",
-      "blocker": "operator-gated — day 12 NO_CONFIG (memory/on-chain-watches.yml unseeded since 6-05). Today: on-chain-monitor exited ON_CHAIN_NO_CONFIG, defi-monitor exited DEFI_MONITOR_OK (NO_CONFIG)"
+      "last_activity_date": "2026-06-19",
+      "note": "Seed memory/on-chain-watches.yml with at least one watch"
     }
   }
 }

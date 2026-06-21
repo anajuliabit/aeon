@@ -1,0 +1,225 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-19",
+        "description": "no picks"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_decision",
+        "sep_1",
+        "heading_signals",
+        "text_signals_weak",
+        "stat_best_token",
+        "text_risk_context",
+        "stat_fear_greed",
+        "stat_breadth",
+        "text_alt_momentum",
+        "sep_2",
+        "heading_activity",
+        "text_uni_pick",
+        "text_catalyst_quota",
+        "sep_3",
+        "heading_markets",
+        "text_liquidity",
+        "text_polymarket_note",
+        "text_no_edge",
+        "sep_4",
+        "heading_sources",
+        "stack_sources"
+      ]
+    },
+    "alert_decision": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "Decision",
+        "message": "Skip ratified per spec step 5 (both token + market < MEDIUM conviction)"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_signals": {
+      "type": "Heading",
+      "props": {
+        "text": "Token Signals",
+        "level": "h3"
+      }
+    },
+    "text_signals_weak": {
+      "type": "Text",
+      "props": {
+        "text": "Token signals weak today",
+        "variant": "body"
+      }
+    },
+    "stat_best_token": {
+      "type": "Stat",
+      "props": {
+        "label": "Best Token (HYPE)",
+        "value": "5/10"
+      }
+    },
+    "text_risk_context": {
+      "type": "Text",
+      "props": {
+        "text": "Risk-off reversal (Iran deal collapse)",
+        "variant": "muted"
+      }
+    },
+    "stat_fear_greed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "14"
+      }
+    },
+    "stat_breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth (Green)",
+        "value": "13/20",
+        "trend": "down"
+      }
+    },
+    "text_alt_momentum": {
+      "type": "Text",
+      "props": {
+        "text": "Breadth + risk-off + F&G kill alt momentum",
+        "variant": "muted"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_activity": {
+      "type": "Heading",
+      "props": {
+        "text": "Recent Activity",
+        "level": "h3"
+      }
+    },
+    "text_uni_pick": {
+      "type": "Text",
+      "props": {
+        "text": "UNI picked 6-17: HIGH conviction, entry $3.28",
+        "variant": "body"
+      }
+    },
+    "text_catalyst_quota": {
+      "type": "Text",
+      "props": {
+        "text": "No fresh catalyst search (XAI quota exhausted 6-16)",
+        "variant": "muted"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_markets": {
+      "type": "Heading",
+      "props": {
+        "text": "Markets",
+        "level": "h3"
+      }
+    },
+    "text_liquidity": {
+      "type": "Text",
+      "props": {
+        "text": "Top liquidity on political outcomes (Starmer family)",
+        "variant": "body"
+      }
+    },
+    "text_polymarket_note": {
+      "type": "Text",
+      "props": {
+        "text": "Polymarket data: sports-heavy",
+        "variant": "muted"
+      }
+    },
+    "text_no_edge": {
+      "type": "Text",
+      "props": {
+        "text": "No crypto-specific mispricings with ≥5pp edge",
+        "variant": "muted"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Data Sources",
+        "level": "h3"
+      }
+    },
+    "stack_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_cg",
+        "badge_dex",
+        "badge_poly",
+        "badge_x"
+      ]
+    },
+    "badge_cg": {
+      "type": "Badge",
+      "props": {
+        "text": "CoinGecko: ok",
+        "variant": "default"
+      }
+    },
+    "badge_dex": {
+      "type": "Badge",
+      "props": {
+        "text": "DEX: limited-trending-only",
+        "variant": "outline"
+      }
+    },
+    "badge_poly": {
+      "type": "Badge",
+      "props": {
+        "text": "Polymarket: ok",
+        "variant": "default"
+      }
+    },
+    "badge_x": {
+      "type": "Badge",
+      "props": {
+        "text": "X: absent",
+        "variant": "secondary"
+      }
+    }
+  }
+}

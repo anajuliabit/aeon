@@ -1,8 +1,7 @@
-market context — 2026-06-19
+market context — 2026-06-21
 
-take: risk-off reversal (conviction high)
-BTC $63,084 (+0.41% 24h, -4.87% vs peak) / ETH $1,702 (+1.14% 24h, -6.04% vs peak)
-F&G 14 (Extreme Fear, down 6pts) · breadth 13/20 green 24h ↓
-
-top narrative: Iran deal collapse (diplomatic failure, memo signing cancelled)
-Polymarket Iran deal YES crashed from 95% → <5% — geopolitical de-risk tailwind fully reversed
+take: risk-off consolidation (conviction: high)
+BTC $64,087 (+0.82% 24h) / ETH $1,723 (-0.07% 24h) · F&G 23 (Extreme Fear)
+breadth 7/20 green (↓↓) · SOL +2.90% (only winner)
+top narrative: L1 perpetuals ecosystem (rising)
+catalyst: BoJ June 25, Iran stalemate finality

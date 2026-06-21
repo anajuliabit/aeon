@@ -1,0 +1,273 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-06-21",
+        "description": "Unblock failing XAI-dependent skills, fix critical cron failures, seed on-chain config"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action1_heading",
+        "action1_content",
+        "sep1",
+        "action2_heading",
+        "action2_content",
+        "sep2",
+        "action3_heading",
+        "action3_content",
+        "sep3",
+        "action4_heading",
+        "action4_content",
+        "sep4",
+        "action5_heading",
+        "action5_content",
+        "sep5",
+        "footer"
+      ]
+    },
+    "action1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Top up XAI API credits for team 3a8b4c1e",
+        "level": "h3"
+      }
+    },
+    "action1_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_why",
+        "action1_done",
+        "action1_loop"
+      ]
+    },
+    "action1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: Monthly credit limit hit on 6-16 blocks 10+ skills (token-pick, agent-buzz, list-digest, etc.)",
+        "variant": "body"
+      }
+    },
+    "action1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: XAI dashboard shows refreshed quota and skill runs resume successfully",
+        "variant": "body"
+      }
+    },
+    "action1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "xai-quota-exhausted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Fix btc-levels skill's 27 consecutive failures",
+        "level": "h3"
+      }
+    },
+    "action2_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_why",
+        "action2_done",
+        "action2_loop"
+      ]
+    },
+    "action2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: BTC hard-level alerts critical for Capital‑2× program; 27 straight failures indicate root cause",
+        "variant": "body"
+      }
+    },
+    "action2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: btc-levels skill completes without error in next cron run",
+        "variant": "body"
+      }
+    },
+    "action2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels-failed"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Seed memory/on-chain-watches.yml with at least 3 DeFi positions",
+        "level": "h3"
+      }
+    },
+    "action3_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_why",
+        "action3_done",
+        "action3_loop"
+      ]
+    },
+    "action3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: on-chain-monitor and defi-monitor stuck 14 days with NO_CONFIG status",
+        "variant": "body"
+      }
+    },
+    "action3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: watches.yml contains ≥3 watch entries with addresses and thresholds",
+        "variant": "body"
+      }
+    },
+    "action3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "on-chain-watches-missing"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Review and merge PR #112 (skill-graph docs)",
+        "level": "h3"
+      }
+    },
+    "action4_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_why",
+        "action4_done",
+        "action4_loop"
+      ]
+    },
+    "action4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: Stalled 4 days; skill-graph updates block fleet documentation",
+        "variant": "body"
+      }
+    },
+    "action4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #112 merged to main branch",
+        "variant": "body"
+      }
+    },
+    "action4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-112-stalled"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Investigate 14:29Z cluster dispatch lag (narrative-tracker, market-context-refresh, security-digest)",
+        "level": "h3"
+      }
+    },
+    "action5_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_why",
+        "action5_done",
+        "action5_loop"
+      ]
+    },
+    "action5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: Batch dispatched 6-16 without success; likely GitHub Actions cron congestion",
+        "variant": "body"
+      }
+    },
+    "action5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Identify root cause in workflow logs and implement fix",
+        "variant": "body"
+      }
+    },
+    "action5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "1429z-batch-stuck"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=70 logs=3 topics=12 prs=3 cron_failing=17 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

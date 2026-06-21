@@ -1,0 +1,178 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-19 18:00Z"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto_heading",
+        "crypto_stack",
+        "sep1",
+        "macro_heading",
+        "macro_stack",
+        "sep2",
+        "new_heading",
+        "new_stack",
+        "sep3",
+        "bridge_heading",
+        "bridge_text"
+      ]
+    },
+    "crypto_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "crypto_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto_1",
+        "crypto_2",
+        "crypto_3"
+      ]
+    },
+    "crypto_1": {
+      "type": "Text",
+      "props": {
+        "text": "ETH whales withdrew $30M from Binance while ETF outflows pile on — split sentiment."
+      }
+    },
+    "crypto_2": {
+      "type": "Text",
+      "props": {
+        "text": "Solana momentum shifts: Meteora dominates volume, Kraken embeds on-chain trading."
+      }
+    },
+    "crypto_3": {
+      "type": "Text",
+      "props": {
+        "text": "STRC melts down. Saylor's $11B unrealized losses now fuel short theses + capitulation wick calls."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "macro_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO",
+        "level": "h2"
+      }
+    },
+    "macro_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "macro_1",
+        "macro_2",
+        "macro_3"
+      ]
+    },
+    "macro_1": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran deal durability scrutiny just reversed oil declines. Inflation pressures return."
+      }
+    },
+    "macro_2": {
+      "type": "Text",
+      "props": {
+        "text": "Fed signals 2026 rate hikes amid persistent inflation — USD anchors higher."
+      }
+    },
+    "macro_3": {
+      "type": "Text",
+      "props": {
+        "text": "BOJ yen at 40-year lows. Intervention risks amplify carry unwind."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new_1",
+        "new_2",
+        "new_3"
+      ]
+    },
+    "new_1": {
+      "type": "Text",
+      "props": {
+        "text": "Geopolitical relief unwinds (deal durability reversal)"
+      }
+    },
+    "new_2": {
+      "type": "Text",
+      "props": {
+        "text": "Axelar $4.67M bridge exploit hits infrastructure"
+      }
+    },
+    "new_3": {
+      "type": "Text",
+      "props": {
+        "text": "Yen carry risks escalate"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge_text": {
+      "type": "Text",
+      "props": {
+        "text": "Geopolitical relief just unwound. Deal durability reversal transmits oil back up, inflation returns, Fed's 2026 hike signals bite. Crypto's macro floor got pulled—STRC leverage can't survive another shock, BTC capitulation wicks live. ETH whales buying the dip into a TradFi repricing (builders don't wait, but it's a lonely trade). Yen carry unwind via 40-year lows threatens the entire Solana momentum run—that's the tail event.",
+        "variant": "body"
+      }
+    }
+  }
+}

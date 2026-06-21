@@ -1,0 +1,256 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-06-19"
+      },
+      "children": [
+        "shape-heading",
+        "separator-1",
+        "action-1",
+        "separator-2",
+        "action-2",
+        "separator-3",
+        "action-3",
+        "separator-4",
+        "action-4",
+        "separator-5",
+        "action-5",
+        "separator-6",
+        "sources-text"
+      ]
+    },
+    "shape-heading": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: Unblock XAI quota, fix failing skills, merge stalled PR",
+        "variant": "lead"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1-heading",
+        "action-1-why",
+        "action-1-done",
+        "action-1-loop"
+      ]
+    },
+    "action-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Contact XAI support to increase monthly credit quota for team 3a8b4c1e",
+        "level": "h3"
+      }
+    },
+    "action-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: XAI quota blocks 10+ skills, action required per memory goal"
+      }
+    },
+    "action-1-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Email or support ticket sent with team ID"
+      }
+    },
+    "action-1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: xai-quota"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-2-heading",
+        "action-2-why",
+        "action-2-done",
+        "action-2-loop"
+      ]
+    },
+    "action-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Review and merge PR #112 (skill-graph docs)",
+        "level": "h3"
+      }
+    },
+    "action-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: PR stalled 4 days, blocks skill-graph updates"
+      }
+    },
+    "action-2-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR merged and closed"
+      }
+    },
+    "action-2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-112"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-3-heading",
+        "action-3-why",
+        "action-3-done",
+        "action-3-loop"
+      ]
+    },
+    "action-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Debug defi-overview skill failure (6 consecutive)",
+        "level": "h3"
+      }
+    },
+    "action-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: Critical daily skill failing repeatedly, last error truncated"
+      }
+    },
+    "action-3-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Fix applied and test run succeeds"
+      }
+    },
+    "action-3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: defi-overview-failed"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-4-heading",
+        "action-4-why",
+        "action-4-done",
+        "action-4-loop"
+      ]
+    },
+    "action-4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Create memory/on-chain-watches.yml configuration",
+        "level": "h3"
+      }
+    },
+    "action-4-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: On-chain and defi monitors blocked 14 days awaiting config"
+      }
+    },
+    "action-4-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: File created with ≥3 watch entries"
+      }
+    },
+    "action-4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: on-chain-watches"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-5-heading",
+        "action-5-why",
+        "action-5-done",
+        "action-5-loop"
+      ]
+    },
+    "action-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Check 14:29Z batch (narrative-tracker, market-context-refresh, security-digest)",
+        "level": "h3"
+      }
+    },
+    "action-5-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: Stuck since 6-16, if not cleared flag fleet outage"
+      }
+    },
+    "action-5-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Confirm runs succeeded or file ISS-019"
+      }
+    },
+    "action-5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: 1429z-batch"
+      }
+    },
+    "separator-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=44 logs=20 topics=8 prs=2 cron_failing=4 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

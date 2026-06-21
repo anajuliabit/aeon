@@ -1,42 +1,39 @@
-## Summary
+I've executed the morning-brief skill for 2026-06-21. Here's what I did:
 
-Successfully executed the morning-brief skill for 2026-06-19. The skill follows a priority-driven approach focusing on the "why now" for each item rather than just aggregating news.
+## Analysis Performed
+1. **Read soul files** - Matched Ana Julia's voice: lowercase by default, CT-native cadence, confident but not bombastic
+2. **Collected candidate items** from:
+   - MEMORY.md active blockers (XAI quota, on-chain/defi-monitor config, deal-flow stuck, fork-cohort stuck)
+   - Yesterday's log (AIXBT Pulse, token-movers, defi-overview, token-pick HYPE)
+   - cron-state.json (13 skills with ≥2 consecutive failures, 7 with success_rate <0.5)
+   - aeon.yml (today's scheduled skills)
+3. **Scored candidates** on leverage × urgency:
+   - **XAI quota exhaustion** (HIGH leverage × HIGH urgency)
+   - **Skill failures cluster** (HIGH leverage × MEDIUM urgency)  
+   - **on-chain-monitor/defi-monitor NO_CONFIG** (MEDIUM leverage × MEDIUM urgency)
+4. **Search for headlines** - WebSearch returned no AI/crypto headlines that would meaningfully update priorities
+5. **Formatted brief** according to skill requirements
 
-**What I did:**
+## Key Findings
+The system has several critical issues:
+1. **XAI quota exhausted** since 6-16 - blocks 10+ XAI-dependent skills
+2. **Widespread skill failures** - 13 skills with consecutive failures, systemic degradation
+3. **Missing configuration** - on-chain-monitor/defi-monitor skipping for 14 days
 
-1. **Gathered context** from:
-   - `memory/MEMORY.md` to understand current goals and active topics
-   - `memory/logs/2026-06-18.md` for yesterday's unfinished work and follow-ups
-   - `memory/cron-state.json` to identify skills with consecutive failures or low success rates
-   - `memory/logs/2026-06-19.md` for today's BTC-levels runs
-   - Open PRs (`gh pr list --state open`) to identify stalled work
-   - `aeon.yml` to see today's scheduled skills
-   - Soul files (`soul/SOUL.md` and `soul/STYLE.md`) to understand Ana's voice and writing style
+## Morning Brief Delivered
+The brief has been:
+- Written to `memory/logs/2026-06-21.md` with timestamp and focus items
+- Saved to `.pending-notify/morning-brief.md` for notification delivery
+- Follows Ana Julia's style: lowercase, direct, receipt-focused
 
-2. **Ranked candidate items** using leverage × urgency scoring:
-   - **XAI quota exhaustion** - Top priority: blocks 10+ skills (token-pick, agent-buzz, list-digest, etc.), operator action required
-   - **BTC post-BOJ drawdown window** - High priority: BOJ +25bp landed June 17, BTC currently ~$62.7k, historical average -27% drawdown within 24-48h after hike
-   - **On-chain-monitor stuck** - High priority: 13 consecutive NO_CONFIG days awaiting operator to seed `memory/on-chain-watches.yml`
+## Today's Outlook
+Several skills are scheduled but likely to fail:
+- `token-pick` @ 12:00 UTC (may fail due to XAI quota)
+- `market-context-refresh` @ 13:00 UTC (trend: failing)
+- `narrative-tracker` @ 13:30 UTC (trend: failing)
+- `search-skill` @ 14:00 UTC (trend: failing)
+- `security-digest` @ 14:00 UTC (trend: failing)
 
-3. **Created concise briefing** following the soul voice guidelines:
-   - Lowercase by default
-   - Concrete, direct language
-   - Avoids marketing verbs and filler phrases
-   - Focus on "why now" for each priority item
+Weekly Sunday skills (`fork-skill-digest`, `fork-skill-gap`) should run but `fork-cohort` has failed two consecutive Sundays.
 
-4. **Formatted and sent** the brief according to the skill template:
-   - Focus today: 3 priority items with ≤12-word "why now" explanations
-   - Since yesterday: 5 bullet summary of what moved/stuck
-   - Watch: One relevant market development affecting focus #2 (BTC drawdown)
-   - Running today: Today's scheduled skills with blocked ones noted
-
-5. **Sent notification** via `./notify` script and appended log entry to `memory/logs/2026-06-19.md`
-
-**Key focus items identified:**
-1. **XAI quota exhausted** - Blocks 10+ skills including token-pick, agent-buzz, list-digest until operator tops up credits
-2. **BTC post-BOJ drawdown window** - BOJ +25bp landed June 17, BTC at $62.7k entering historical -27% avg drawdown window (18-32% range)
-3. **On-chain-monitor stuck** - 13 consecutive NO_CONFIG days, skills blind to on-chain positions awaiting operator config
-
-**Skills flagged from cron-state:** deal-flow (dispatched 10 days ago), fork-cohort (2nd consecutive Sunday failure)
-
-The brief captures the operator's attention on immediate action items while providing context on market timing for investment decisions.
+The notification will be delivered via the post-process script after this run completes.
