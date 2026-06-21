@@ -1,0 +1,649 @@
+{
+  "root": "root-card",
+  "state": {},
+  "elements": {
+    "root-card": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-21"
+      },
+      "children": [
+        "top-pick-section",
+        "separator-1",
+        "aiml-section",
+        "separator-2",
+        "devtools-section",
+        "separator-3",
+        "infra-section",
+        "separator-4",
+        "web-section",
+        "separator-5",
+        "sources-text"
+      ]
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-pick-heading",
+        "headroom-entry"
+      ]
+    },
+    "top-pick-heading": {
+      "type": "Text",
+      "props": {
+        "text": "Top pick",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "headroom-entry": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headroom-link",
+        "headroom-description"
+      ]
+    },
+    "headroom-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "chopratejas/headroom",
+        "href": "https://github.com/chopratejas/headroom",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "headroom-description": {
+      "type": "Text",
+      "props": {
+        "text": "token compression sitting between your tools and the LLM — 43k stars in five months because every agent stack now has a context-bloat problem.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "aiml-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "aiml-heading",
+        "aiml-repo-1",
+        "aiml-repo-2",
+        "aiml-repo-3",
+        "aiml-repo-4"
+      ]
+    },
+    "aiml-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "aiml-repo-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo1-link",
+        "aiml-repo1-meta",
+        "aiml-repo1-description"
+      ]
+    },
+    "aiml-repo1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "chopratejas/headroom",
+        "href": "https://github.com/chopratejas/headroom",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "aiml-repo1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo1-stars",
+        "aiml-repo1-lang",
+        "aiml-repo1-status"
+      ]
+    },
+    "aiml-repo1-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 2.6k today (43k total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml-repo1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "aiml-repo1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aiml-repo1-description": {
+      "type": "Text",
+      "props": {
+        "text": "60-95% fewer tokens via library / proxy / MCP server — cheapest LLM cost win you can drop in this week.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aiml-repo-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo2-link",
+        "aiml-repo2-meta",
+        "aiml-repo2-description"
+      ]
+    },
+    "aiml-repo2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "bytedance/deer-flow",
+        "href": "https://github.com/bytedance/deer-flow",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "aiml-repo2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo2-stars",
+        "aiml-repo2-lang",
+        "aiml-repo2-status"
+      ]
+    },
+    "aiml-repo2-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 0.4k today (72k total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml-repo2-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "aiml-repo2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aiml-repo2-description": {
+      "type": "Text",
+      "props": {
+        "text": "bytedance's open long-horizon agent harness — sandboxes, memory, subagents, message gateway, hours-long tasks.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aiml-repo-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo3-link",
+        "aiml-repo3-meta",
+        "aiml-repo3-description"
+      ]
+    },
+    "aiml-repo3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "topoteretes/cognee",
+        "href": "https://github.com/topoteretes/cognee",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "aiml-repo3-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo3-stars",
+        "aiml-repo3-lang",
+        "aiml-repo3-status"
+      ]
+    },
+    "aiml-repo3-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 0.4k today (18k total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml-repo3-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "aiml-repo3-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aiml-repo3-description": {
+      "type": "Text",
+      "props": {
+        "text": "self-hosted knowledge-graph engine for persistent agent memory — alternative to bolting RAG onto every workflow.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aiml-repo-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo4-link",
+        "aiml-repo4-meta",
+        "aiml-repo4-description"
+      ]
+    },
+    "aiml-repo4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "calesthio/OpenMontage",
+        "href": "https://github.com/calesthio/OpenMontage",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "aiml-repo4-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-repo4-stars",
+        "aiml-repo4-lang",
+        "aiml-repo4-status"
+      ]
+    },
+    "aiml-repo4-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 1.0k today (8k total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aiml-repo4-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "aiml-repo4-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aiml-repo4-description": {
+      "type": "Text",
+      "props": {
+        "text": "plugs into AI coding assistants to turn them into a 12-pipeline, 52-tool video production studio.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "devtools-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "devtools-heading",
+        "devtools-repo-1"
+      ]
+    },
+    "devtools-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "devtools-repo-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-repo1-link",
+        "devtools-repo1-meta",
+        "devtools-repo1-description"
+      ]
+    },
+    "devtools-repo1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "DeusData/codebase-memory-mcp",
+        "href": "https://github.com/DeusData/codebase-memory-mcp",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "devtools-repo1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-repo1-stars",
+        "devtools-repo1-lang",
+        "devtools-repo1-status"
+      ]
+    },
+    "devtools-repo1-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 1.0k today (10k total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "devtools-repo1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "C",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "devtools-repo1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "devtools-repo1-description": {
+      "type": "Text",
+      "props": {
+        "text": "static binary indexes 158 languages into a persistent code knowledge graph — sub-ms queries, 99% fewer tokens.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "infra-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "infra-heading",
+        "infra-repo-1"
+      ]
+    },
+    "infra-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "infra-repo-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "infra-repo1-link",
+        "infra-repo1-meta",
+        "infra-repo1-description"
+      ]
+    },
+    "infra-repo1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "tursodatabase/turso",
+        "href": "https://github.com/tursodatabase/turso",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "infra-repo1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "infra-repo1-stars",
+        "infra-repo1-lang",
+        "infra-repo1-status"
+      ]
+    },
+    "infra-repo1-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 0.5k today (21k total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "infra-repo1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "infra-repo1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "infra-repo1-description": {
+      "type": "Text",
+      "props": {
+        "text": "SQLite-compatible in-process DB rewritten in Rust — back on the daily after a fresh push.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "web-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "web-heading",
+        "web-repo-1"
+      ]
+    },
+    "web-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "web-repo-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "web-repo1-link",
+        "web-repo1-meta",
+        "web-repo1-description"
+      ]
+    },
+    "web-repo1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "palmier-io/palmier-pro",
+        "href": "https://github.com/palmier-io/palmier-pro",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "web-repo1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "web-repo1-stars",
+        "web-repo1-lang",
+        "web-repo1-status"
+      ]
+    },
+    "web-repo1-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 1.8k today (4k total)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "web-repo1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Swift",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "web-repo1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "web-repo1-description": {
+      "type": "Text",
+      "props": {
+        "text": "native macOS video editor built for AI-assisted cuts — Swift, not an Electron wrapper.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 7/16",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
