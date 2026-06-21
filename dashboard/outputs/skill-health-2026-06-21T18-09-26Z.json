@@ -1,0 +1,240 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-06-21"
+      },
+      "children": [
+        "status_alert",
+        "sep1",
+        "degraded_section",
+        "sep2",
+        "warning_text",
+        "sep3",
+        "nodata_text",
+        "sep4",
+        "healthy_text",
+        "sep5",
+        "stats_and_note"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: DEGRADED (28)",
+        "message": "Systemic: sandbox-truncation (output_tokens=0) — 28 skills share signature",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "degraded_list"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (28)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "degraded_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill_1",
+        "skill_2",
+        "skill_3",
+        "skill_4",
+        "skill_5",
+        "skills_more"
+      ]
+    },
+    "skill_1": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — 7% sr, 3d down — WAIT-API (sandbox truncation)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "skill_2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics — 9% sr, 3d down — WAIT-API (sandbox truncation)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "skill_3": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve — 29% sr, 2d down — WAIT-API (sandbox truncation)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "skill_4": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner — 7% sr — WAIT-API (sandbox truncation)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "skill_5": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — 16% sr — WAIT-API (sandbox truncation) → ISS-021 pattern",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "skills_more": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "more_text",
+        "index_link"
+      ]
+    },
+    "more_text": {
+      "type": "Text",
+      "props": {
+        "text": "+23 more —",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "index_link": {
+      "type": "Link",
+      "props": {
+        "label": "see memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "warning_text": {
+      "type": "Text",
+      "props": {
+        "text": "⚠️ WARNING (3): defi-overview, on-chain-monitor, token-alert(cf=2)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "nodata_text": {
+      "type": "Text",
+      "props": {
+        "text": "⚪ NO DATA (2): autoresearch (workflow_dispatch), fork-cohort",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "healthy_text": {
+      "type": "Text",
+      "props": {
+        "text": "🟢 HEALTHY: 9",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats_and_note": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_row",
+        "note_line"
+      ]
+    },
+    "stats_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_open",
+        "stat_resolved"
+      ]
+    },
+    "stat_open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "13"
+      },
+      "children": []
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      },
+      "children": []
+    },
+    "note_line": {
+      "type": "Text",
+      "props": {
+        "text": "Note: No CRITICAL/FLAPPING — all prior cf>=3 cleared after recent successes. Sandbox-truncation suppressing quality, not killing runs.",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

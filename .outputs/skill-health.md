@@ -1,23 +1,17 @@
 *Skill Health — 2026-06-21*
-HEALTH: CRITICAL(9)  [systemic: sandbox-truncation output_tokens=0 — 8 skills + extends ISS-019/020/021]
+HEALTH: DEGRADED(28) [systemic: sandbox-truncation (output_tokens=0) — 28 skills share signature]
 
-🔴 CRITICAL
-- search-skill — 34 fails, 2d down — WAIT-API (truncation) → ISS-021
-- security-digest — 30 fails, 3d down — WAIT-API → ISS-022
-- list-digest — 33 fails, 2d down — WAIT-API → ISS-022
-- agent-buzz — 29 fails, 2d down — WAIT-API → ISS-022
-- skill-health — 26 fails, 2d down — WAIT-API → ISS-022
-+4 more (github-trending, skill-evals, skill-freshness, daily-routine) — see ISS-022
+🟡 DEGRADED (28)
+- reg-monitor — 7% sr, 3d down — WAIT-API (sandbox truncation)
+- skill-analytics — 9% sr, 3d down — WAIT-API (sandbox truncation)
+- self-improve — 29% sr, 2d down — WAIT-API (sandbox truncation)
+- vuln-scanner — 7% sr — WAIT-API (sandbox truncation)
+- security-digest — 16% sr — WAIT-API (sandbox truncation) → ISS-021 pattern
++23 more — see memory/issues/INDEX.md
 
-🟡 DEGRADED (19)
-- reg-monitor — 7% success
-- vuln-scanner — 7% success
-- skill-analytics — 9% success
-- narrative-tracker — 25% success
-- market-context-refresh — 27% success
-+14 more — see memory/issues/INDEX.md
-
-⚪ NO DATA (2): autoresearch, fork-cohort — DISPATCH-SKILL
+⚠️ WARNING (3): defi-overview, on-chain-monitor, token-alert(cf=2)
+⚪ NO DATA (2): autoresearch (workflow_dispatch), fork-cohort
 🟢 HEALTHY: 9
 
-Open issues: 11 · Resolved this run: 0
+Open issues: 13 · Resolved this run: 0
+Note: No CRITICAL/FLAPPING — all prior cf>=3 cleared after recent successes. Sandbox-truncation suppressing quality, not killing runs.

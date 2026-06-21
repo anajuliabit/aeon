@@ -1,14 +1,14 @@
 {
-  "hash": "5290d5c340cd96674e9644b9dd294bca2188ef808d482e9aab37e3bbb2c45b83",
-  "last_notified_at": "2026-06-21T18:55:00Z",
-  "last_run_at": "2026-06-21T18:55:00Z",
+  "hash": "1d539d3f6246f9369324d0d04217a4b74fe92830569c1b190683ffd4e2725bd1",
+  "last_notified_at": "2026-06-21T18:05:00Z",
+  "last_run_at": "2026-06-21T18:05:00Z",
   "classification": {
-    "critical": ["search-skill", "security-digest", "list-digest", "agent-buzz", "skill-health", "github-trending", "skill-evals", "skill-freshness", "daily-routine"],
-    "degraded": ["reg-monitor", "vuln-scanner", "skill-analytics", "narrative-tracker", "market-context-refresh", "self-improve", "goal-tracker", "action-converter", "reflect", "thought-review", "fleet-control", "aixbt-pulse", "evening-recap", "defi-monitor", "heartbeat", "btc-levels", "morning-brief", "token-movers", "token-pick"],
+    "critical": [],
+    "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "btc-levels", "daily-routine", "defi-monitor", "evening-recap", "fleet-control", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "morning-brief", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "token-movers", "token-pick", "vuln-scanner"],
     "flapping": [],
     "warning": ["defi-overview", "on-chain-monitor", "token-alert"],
     "healthy_count": 9,
     "no_data": ["autoresearch", "fork-cohort"]
   },
-  "systemic": "sandbox-truncation (output_tokens=0) — 8 skills critical, 19 degraded share signature class"
+  "systemic": "sandbox-truncation (output_tokens=0) — 28 degraded skills share signature; all CRITICAL skills cleared after recent successes"
 }
