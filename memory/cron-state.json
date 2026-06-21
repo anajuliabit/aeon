@@ -264,13 +264,13 @@
     "last_dispatch": "2026-06-19T21:09:58Z",
     "last_status": "failed",
     "last_success": "2026-06-19T21:13:55Z",
-    "total_runs": 64,
+    "total_runs": 65,
     "total_successes": 26,
-    "total_failures": 38,
-    "consecutive_failures": 10,
-    "success_rate": 0.41,
-    "last_failed": "2026-06-21T02:35:24Z",
-    "last_error": "d685e51\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "total_failures": 39,
+    "consecutive_failures": 11,
+    "success_rate": 0.4,
+    "last_failed": "2026-06-21T04:03:16Z",
+    "last_error": "7c47d92\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "self-improve": {
     "last_dispatch": "2026-06-19T18:33:14Z",
