@@ -76,14 +76,14 @@
   "agent-buzz": {
     "last_status": "failed",
     "last_success": "2026-06-19T18:16:05Z",
-    "total_runs": 43,
+    "total_runs": 44,
     "total_successes": 22,
-    "total_failures": 21,
-    "consecutive_failures": 19,
-    "success_rate": 0.51,
+    "total_failures": 22,
+    "consecutive_failures": 20,
+    "success_rate": 0.5,
     "last_dispatch": "2026-06-19T17:52:58Z",
-    "last_failed": "2026-06-21T01:35:42Z",
-    "last_error": "1e61b85\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-06-21T02:35:53Z",
+    "last_error": "2b9911b\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "reppo-digest": {
     "last_status": "success",
