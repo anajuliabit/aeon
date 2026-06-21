@@ -1,0 +1,525 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-06-21"
+      },
+      "children": [
+        "text_verdict",
+        "sep1",
+        "heading_patch_today",
+        "stack_pt_cve1",
+        "stack_pt_cve2",
+        "stack_pt_npm",
+        "sep2",
+        "heading_patch_week",
+        "stack_pw_cve1",
+        "stack_pw_cve2",
+        "stack_pw_cve3",
+        "stack_pw_cve4",
+        "stack_pw_cve5",
+        "sep3",
+        "heading_monitor",
+        "stack_mon_cve1"
+      ]
+    },
+    "text_verdict": {
+      "type": "Text",
+      "props": {
+        "text": "2 actively exploited · 5 to patch this week · 1 to monitor",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_patch_today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "stack_pt_cve1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_cve_20253",
+        "badge_pt_cve1",
+        "text_pt_cve1_meta",
+        "text_pt_cve1_desc",
+        "text_pt_cve1_action"
+      ]
+    },
+    "link_cve_20253": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-20253",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-20253"
+      }
+    },
+    "badge_pt_cve1": {
+      "type": "Badge",
+      "props": {
+        "text": "Splunk Enterprise",
+        "variant": "secondary"
+      }
+    },
+    "text_pt_cve1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-06-18 · EPSS 0.10 (95th%) · CVSS n/a",
+        "variant": "caption"
+      }
+    },
+    "text_pt_cve1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth file create/truncate via postgres sidecar endpoint. CISA due 2026-06-21.",
+        "variant": "body"
+      }
+    },
+    "text_pt_cve1_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Apply svd-2026-0603 today.",
+        "variant": "lead"
+      }
+    },
+    "stack_pt_cve2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_cve_48907",
+        "badge_pt_cve2",
+        "text_pt_cve2_meta",
+        "text_pt_cve2_desc",
+        "text_pt_cve2_action"
+      ]
+    },
+    "link_cve_48907": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-48907",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-48907"
+      }
+    },
+    "badge_pt_cve2": {
+      "type": "Badge",
+      "props": {
+        "text": "Joomla Content Editor (Widget Factory)",
+        "variant": "secondary"
+      }
+    },
+    "text_pt_cve2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-06-16 · EPSS 0.07 (93rd%) · CVSS n/a",
+        "variant": "caption"
+      }
+    },
+    "text_pt_cve2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth PHP upload+exec via new editor-profile creation.",
+        "variant": "body"
+      }
+    },
+    "text_pt_cve2_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Apply JCE free patch / upgrade per joomlacontenteditor.net.",
+        "variant": "lead"
+      }
+    },
+    "stack_pt_npm": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_npm",
+        "badge_pt_npm",
+        "text_pt_npm_meta",
+        "text_pt_npm_packages",
+        "text_pt_npm_desc",
+        "text_pt_npm_action"
+      ]
+    },
+    "link_ghsa_npm": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-chhh-8532-pg35 (+9 related)",
+        "href": "https://github.com/advisories/GHSA-chhh-8532-pg35"
+      }
+    },
+    "badge_pt_npm": {
+      "type": "Badge",
+      "props": {
+        "text": "10 Malicious NPM Packages",
+        "variant": "destructive"
+      }
+    },
+    "text_pt_npm_meta": {
+      "type": "Text",
+      "props": {
+        "text": "Flagged 2026-06-19→21 · Typo-squat wave · Credential-stealer pattern",
+        "variant": "caption"
+      }
+    },
+    "text_pt_npm_packages": {
+      "type": "Text",
+      "props": {
+        "text": "Packages: ethereum-gas-reporter, eth-util, mongoose-jsonify, pretty-logger-js, assert-kit, new-ecro, ts-ecro family",
+        "variant": "body"
+      }
+    },
+    "text_pt_npm_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Newly-published malicious versions with credential-stealer behavior.",
+        "variant": "body"
+      }
+    },
+    "text_pt_npm_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Grep lockfiles for the 10 names; if any installed, uninstall + rotate any creds the process touched.",
+        "variant": "lead"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_patch_week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "stack_pw_cve1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_cve_55255",
+        "badge_pw_cve1",
+        "text_pw_cve1_meta",
+        "text_pw_cve1_desc",
+        "text_pw_cve1_action"
+      ]
+    },
+    "link_cve_55255": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-55255",
+        "href": "https://github.com/advisories/GHSA-qrpv-q767-xqq2"
+      }
+    },
+    "badge_pw_cve1": {
+      "type": "Badge",
+      "props": {
+        "text": "Langflow (pip)",
+        "variant": "outline"
+      }
+    },
+    "text_pw_cve1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 9.9 · EPSS n/a",
+        "variant": "caption"
+      }
+    },
+    "text_pw_cve1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "IDOR on /api/v1/responses lets authed users read other users' flows.",
+        "variant": "body"
+      }
+    },
+    "text_pw_cve1_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade langflow to ≥1.9.1.",
+        "variant": "lead"
+      }
+    },
+    "stack_pw_cve2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_cve_54051",
+        "badge_pw_cve2",
+        "text_pw_cve2_meta",
+        "text_pw_cve2_desc",
+        "text_pw_cve2_action"
+      ]
+    },
+    "link_cve_54051": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-54051",
+        "href": "https://github.com/advisories/GHSA-qw6v-5fcf-5666"
+      }
+    },
+    "badge_pw_cve2": {
+      "type": "Badge",
+      "props": {
+        "text": "Network-AI (npm)",
+        "variant": "outline"
+      }
+    },
+    "text_pw_cve2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 9.9 · EPSS n/a",
+        "variant": "caption"
+      }
+    },
+    "text_pw_cve2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "OS command injection.",
+        "variant": "body"
+      }
+    },
+    "text_pw_cve2_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade network-ai to ≥5.9.1.",
+        "variant": "lead"
+      }
+    },
+    "stack_pw_cve3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_cve_55447",
+        "badge_pw_cve3",
+        "text_pw_cve3_meta",
+        "text_pw_cve3_desc",
+        "text_pw_cve3_action"
+      ]
+    },
+    "link_cve_55447": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-55447",
+        "href": "https://github.com/advisories/GHSA-ccv6-r384-xp75"
+      }
+    },
+    "badge_pw_cve3": {
+      "type": "Badge",
+      "props": {
+        "text": "Langflow (pip)",
+        "variant": "outline"
+      }
+    },
+    "text_pw_cve3_meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 9.6 · EPSS n/a · PoC in advisory",
+        "variant": "caption"
+      }
+    },
+    "text_pw_cve3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "BaseFileComponent arbitrary file read chained to RCE.",
+        "variant": "body"
+      }
+    },
+    "text_pw_cve3_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade langflow to ≥1.9.2 (covers CVE-2026-55255 + CVE-2026-55447).",
+        "variant": "lead"
+      }
+    },
+    "stack_pw_cve4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_cve_48814",
+        "badge_pw_cve4",
+        "text_pw_cve4_meta",
+        "text_pw_cve4_desc",
+        "text_pw_cve4_action"
+      ]
+    },
+    "link_cve_48814": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-48814",
+        "href": "https://github.com/advisories/GHSA-r78r-rwrf-rjwp"
+      }
+    },
+    "badge_pw_cve4": {
+      "type": "Badge",
+      "props": {
+        "text": "Network-AI (npm)",
+        "variant": "outline"
+      }
+    },
+    "text_pw_cve4_meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 9.1 · EPSS n/a",
+        "variant": "caption"
+      }
+    },
+    "text_pw_cve4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fix for CVE-2026-46701 was incomplete — empty default secret still authorizes all requests.",
+        "variant": "body"
+      }
+    },
+    "text_pw_cve4_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade network-ai to ≥5.7.2 (or 5.9.1 to also cover CVE-2026-54051).",
+        "variant": "lead"
+      }
+    },
+    "stack_pw_cve5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_blocky",
+        "badge_pw_cve5",
+        "text_pw_cve5_meta",
+        "text_pw_cve5_desc",
+        "text_pw_cve5_action"
+      ]
+    },
+    "link_ghsa_blocky": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-x845-2f78-7v36",
+        "href": "https://github.com/advisories/GHSA-x845-2f78-7v36"
+      }
+    },
+    "badge_pw_cve5": {
+      "type": "Badge",
+      "props": {
+        "text": "Blocky (Go)",
+        "variant": "outline"
+      }
+    },
+    "text_pw_cve5_meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 8.6 · EPSS n/a",
+        "variant": "caption"
+      }
+    },
+    "text_pw_cve5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DNSSEC validation bypass + cache-scope pollution.",
+        "variant": "body"
+      }
+    },
+    "text_pw_cve5_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade blocky to ≥0.32.0.",
+        "variant": "lead"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "stack_mon_cve1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_crossplane",
+        "badge_mon_cve1",
+        "text_mon_cve1_meta",
+        "text_mon_cve1_desc",
+        "text_mon_cve1_action"
+      ]
+    },
+    "link_ghsa_crossplane": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-wfqx-gjrf-g28r",
+        "href": "https://github.com/advisories/GHSA-wfqx-gjrf-g28r"
+      }
+    },
+    "badge_mon_cve1": {
+      "type": "Badge",
+      "props": {
+        "text": "Crossplane (Go)",
+        "variant": "outline"
+      }
+    },
+    "text_mon_cve1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 9.0 · EPSS n/a · No fix yet",
+        "variant": "caption"
+      }
+    },
+    "text_mon_cve1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Signature-verification TOCTOU: mutable tag lets attacker swap package content post-verify.",
+        "variant": "body"
+      }
+    },
+    "text_mon_cve1_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Pin images by digest; track for patched release.",
+        "variant": "lead"
+      }
+    }
+  }
+}
