@@ -477,3 +477,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-21,fork-skill-digest,claude-sonnet-4-6,36,39503,2840582,92773
 2026-06-21,fork-cohort,claude-sonnet-4-6,47,49556,2780789,93102
 2026-06-21,heartbeat,claude-opus-4-7,23,10933,1472148,89132
+2026-06-21,btc-levels,claude-sonnet-4-6,13,8496,444035,24986
