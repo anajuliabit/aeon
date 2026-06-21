@@ -201,15 +201,15 @@
   },
   "search-skill": {
     "last_dispatch": "2026-06-21T13:45:55Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-19T18:53:03Z",
-    "total_runs": 95,
+    "total_runs": 96,
     "total_successes": 24,
-    "total_failures": 71,
-    "consecutive_failures": 33,
+    "total_failures": 72,
+    "consecutive_failures": 34,
     "success_rate": 0.25,
     "last_quality_score": 4,
-    "last_failed": "2026-06-21T13:33:26Z",
+    "last_failed": "2026-06-21T14:16:51Z",
     "last_error": "6dcbbd2\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "goal-tracker": {
