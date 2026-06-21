@@ -1,24 +1,29 @@
 *Narrative Tracker — 2026-06-21*
 
-TRANSITIONS
-• PROMOTED: RWA × AI Agents (Emerging → Peak) — autonomous wallets × tokenized assets framed as canonical 2026 meta
-• PROMOTED: AI Agents as native users (Rising → Peak) — Crypto's 'ultimate native users' thesis, Bittensor backing it
-• PROMOTED: Sovereign AI chains (Emerging → Rising) — agents demanding their own blockspace (agent-specific security model)
-• NEW: Memecoin 3.0 / super-cycle — momentum live but breadth weak (92 green 6-15 → 57 green 6-19)
-• NEW: Solana vs. Base divergence — Solana volume recovery vs. Base ecosystem friction
+**TRANSITIONS**
+• PROMOTED: AI Agents infrastructure (Rising → Peak) — Bittensor/TAO paradigm + compute economy canonical weight
+• NEW: Seamless UX Neobanks — @blimbroc/@Zek_eth calling 'undisputed'; narrative resurfaced with builder framing
+• NEW: RWA Perps — @_Jamisky explicit derivatives thesis distinguishing normie vs degen exposure
+• NEW: AI Infrastructure Plays — Optical networking + decentralized compute (@asianinvestors, Japan gov AI chips)
+• CONSOLIDATED: RWA × AI Agents merged into ONE 2026 meta-narrative (RWA tokenization + AI agents infrastructure)
+• DEAD: Prediction markets (Polymarket sports-heavy, no crypto edge), Solana-specific narratives (merged into L1 generics)
 
-REFLEXIVITY ALERT
-• RWA × AI agents: Narrative-driven without deployed autonomous wallets yet — reflexivity over fundamentals
-• Memecoin super-cycle: Micro-cap PUMP-RISK (+126% VELVET, +61% BEAT) contradicted by breadth collapse
-• Solana momentum: Self-reinforcing volume loop; vulnerable to macro risk-off (BTC < $63k trigger)
+**REFLEXIVITY ALERT**
+• RWA × AI agents — Autonomous wallets buying tokenized assets are fictional in June 2026; @VexaWeb3 calling 'next phase' with zero deployment data. Token prices moving on story alone.
+• Seamless UX Neobanks — Identical narrative since 2023 (WalletConnect, Ledger, Argent promised 'disappearing wallets'). No metrics on actual user activation.
+• Utility vs. Hype Shift — Meta-narrative about narratives; market rewards frame of 'real builders' without evidence shipping differs from 2023.
 
-POSITIONS
-• FRONT-RUN: RWA × AI Agents (mindshare 5 ↑↑, Bull) — @VexaWeb3 / a16zcrypto — canonical meta but regulatory risk
-• RIDE: AI agents (5 ↑↑), prediction markets (4 →), Bitcoin L2s/DePIN (4 ↑), Ethereum shipping (4 ↑), Solana (3 ↑)
-• WATCH: Sovereign AI chains (3 ↑), privacy coins (3 ↑), stablecoin enterprise (3 →)
-• FADE: Memecoin super-cycle (3 ↑, Cope) — breadth fails narrative
+**POSITIONS**
+• FRONT-RUN (2): AI Agents × RWA (5 ↑↑, Bull) — canonical meta, execution pending — AI Agents compute (5 ↑↑, Bull) — Bittensor/TAO backing
+• RIDE (6): Stablecoins (5 →, Bull), RWA Mega (5 ↑, Bull), AI Infra (4 ↑↑, Bull), Seamless UX (4 ↑, Bull), Bitcoin L2s (4 ↑, Bull), Utility Shift (4 ↑, Bull)
+• WATCH (5): Sovereign AI (3 ↑), RWA Perps (3 ↑), Super-Apps (3 ↑), Privacy (3 →, Mixed), AI Accountability (3 ↑)
+• FADE: L1-vs-AI wars (3 →, Cope) — narrative war, not fundamentals
+• IGNORE: Meme 3.0 (2 →, Cope) — zero revenue survivors
 
-MAP
-Emerging: Sovereign AI chains, Privacy coins
-Rising: Bitcoin L2s, DePIN, Ethereum, Solana vs. Base, Stablecoin enterprise, Memecoin 3.0
-Peak: RWA × AI Agents, AI agents as native users, Prediction markets
+**MAP**
+• Rising: Seamless UX, AI Infra, RWA Perps, Sovereign AI, Super-Apps, AI Accountability, L1-vs-AI wars
+• Peak: AI Agents × RWA, AI Agents compute, Stablecoins, RWA Mega, Privacy, Meme 3.0
+• Fading: (none)
+• Emerging: (all tracked narratives at Rising+)
+
+**Verdict:** Canonical 2026 meta (RWA × AI Agents) holding Peak + highest conviction. New reflexivity: builder narrative and neobank framing resurfaced from 2023 without new adoption metrics. Execution timeline on AI agent wallets critical for FRONT-RUN call validity.

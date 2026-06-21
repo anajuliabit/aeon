@@ -1,0 +1,503 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-21"
+      },
+      "children": [
+        "transitions_section",
+        "sep1",
+        "reflexivity_section",
+        "sep2",
+        "positions_section",
+        "sep3",
+        "map_section",
+        "sep4",
+        "verdict_section"
+      ]
+    },
+    "transitions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trans_heading",
+        "trans_promoted",
+        "trans_new1",
+        "trans_new2",
+        "trans_new3",
+        "trans_consolidated",
+        "trans_dead"
+      ]
+    },
+    "trans_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      }
+    },
+    "trans_promoted": {
+      "type": "Text",
+      "props": {
+        "text": "PROMOTED: AI Agents infrastructure (Rising → Peak) — Bittensor/TAO paradigm + compute economy canonical weight"
+      }
+    },
+    "trans_new1": {
+      "type": "Text",
+      "props": {
+        "text": "NEW: Seamless UX Neobanks — @blimbroc/@Zek_eth calling 'undisputed'; narrative resurfaced with builder framing"
+      }
+    },
+    "trans_new2": {
+      "type": "Text",
+      "props": {
+        "text": "NEW: RWA Perps — @_Jamisky explicit derivatives thesis distinguishing normie vs degen exposure"
+      }
+    },
+    "trans_new3": {
+      "type": "Text",
+      "props": {
+        "text": "NEW: AI Infrastructure Plays — Optical networking + decentralized compute (@asianinvestors, Japan gov AI chips)"
+      }
+    },
+    "trans_consolidated": {
+      "type": "Text",
+      "props": {
+        "text": "CONSOLIDATED: RWA × AI Agents merged into ONE 2026 meta-narrative (RWA tokenization + AI agents infrastructure)"
+      }
+    },
+    "trans_dead": {
+      "type": "Text",
+      "props": {
+        "text": "DEAD: Prediction markets (Polymarket sports-heavy, no crypto edge), Solana-specific narratives (merged into L1 generics)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reflexivity_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "refl_heading",
+        "refl_alert1",
+        "refl_alert2",
+        "refl_alert3"
+      ]
+    },
+    "refl_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "REFLEXIVITY ALERT",
+        "level": "h2"
+      }
+    },
+    "refl_alert1": {
+      "type": "Alert",
+      "props": {
+        "title": "RWA × AI agents",
+        "message": "Autonomous wallets buying tokenized assets are fictional in June 2026; @VexaWeb3 calling 'next phase' with zero deployment data. Token prices moving on story alone.",
+        "type": "warning"
+      }
+    },
+    "refl_alert2": {
+      "type": "Alert",
+      "props": {
+        "title": "Seamless UX Neobanks",
+        "message": "Identical narrative since 2023 (WalletConnect, Ledger, Argent promised 'disappearing wallets'). No metrics on actual user activation.",
+        "type": "warning"
+      }
+    },
+    "refl_alert3": {
+      "type": "Alert",
+      "props": {
+        "title": "Utility vs. Hype Shift",
+        "message": "Meta-narrative about narratives; market rewards frame of 'real builders' without evidence shipping differs from 2023.",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "positions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "pos_heading",
+        "pos_frontrun_group",
+        "pos_ride_group",
+        "pos_watch_group",
+        "pos_fade_group",
+        "pos_ignore_group"
+      ]
+    },
+    "pos_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      }
+    },
+    "pos_frontrun_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_frontrun_label",
+        "pos_frontrun_item1",
+        "pos_frontrun_item2"
+      ]
+    },
+    "pos_frontrun_label": {
+      "type": "Badge",
+      "props": {
+        "text": "FRONT-RUN (2)",
+        "variant": "default"
+      }
+    },
+    "pos_frontrun_item1": {
+      "type": "Text",
+      "props": {
+        "text": "AI Agents × RWA (5 ↑↑, Bull) — canonical meta, execution pending"
+      }
+    },
+    "pos_frontrun_item2": {
+      "type": "Text",
+      "props": {
+        "text": "AI Agents compute (5 ↑↑, Bull) — Bittensor/TAO backing"
+      }
+    },
+    "pos_ride_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_ride_label",
+        "pos_ride_item1",
+        "pos_ride_item2",
+        "pos_ride_item3",
+        "pos_ride_item4",
+        "pos_ride_item5",
+        "pos_ride_item6"
+      ]
+    },
+    "pos_ride_label": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE (6)",
+        "variant": "secondary"
+      }
+    },
+    "pos_ride_item1": {
+      "type": "Text",
+      "props": {
+        "text": "Stablecoins (5 →, Bull)"
+      }
+    },
+    "pos_ride_item2": {
+      "type": "Text",
+      "props": {
+        "text": "RWA Mega (5 ↑, Bull)"
+      }
+    },
+    "pos_ride_item3": {
+      "type": "Text",
+      "props": {
+        "text": "AI Infra (4 ↑↑, Bull)"
+      }
+    },
+    "pos_ride_item4": {
+      "type": "Text",
+      "props": {
+        "text": "Seamless UX (4 ↑, Bull)"
+      }
+    },
+    "pos_ride_item5": {
+      "type": "Text",
+      "props": {
+        "text": "Bitcoin L2s (4 ↑, Bull)"
+      }
+    },
+    "pos_ride_item6": {
+      "type": "Text",
+      "props": {
+        "text": "Utility Shift (4 ↑, Bull)"
+      }
+    },
+    "pos_watch_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_watch_label",
+        "pos_watch_item1",
+        "pos_watch_item2",
+        "pos_watch_item3",
+        "pos_watch_item4",
+        "pos_watch_item5"
+      ]
+    },
+    "pos_watch_label": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH (5)",
+        "variant": "outline"
+      }
+    },
+    "pos_watch_item1": {
+      "type": "Text",
+      "props": {
+        "text": "Sovereign AI (3 ↑)"
+      }
+    },
+    "pos_watch_item2": {
+      "type": "Text",
+      "props": {
+        "text": "RWA Perps (3 ↑)"
+      }
+    },
+    "pos_watch_item3": {
+      "type": "Text",
+      "props": {
+        "text": "Super-Apps (3 ↑)"
+      }
+    },
+    "pos_watch_item4": {
+      "type": "Text",
+      "props": {
+        "text": "Privacy (3 →, Mixed)"
+      }
+    },
+    "pos_watch_item5": {
+      "type": "Text",
+      "props": {
+        "text": "AI Accountability (3 ↑)"
+      }
+    },
+    "pos_fade_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_fade_label",
+        "pos_fade_item1"
+      ]
+    },
+    "pos_fade_label": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "destructive"
+      }
+    },
+    "pos_fade_item1": {
+      "type": "Text",
+      "props": {
+        "text": "L1-vs-AI wars (3 →, Cope) — narrative war, not fundamentals"
+      }
+    },
+    "pos_ignore_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_ignore_label",
+        "pos_ignore_item1"
+      ]
+    },
+    "pos_ignore_label": {
+      "type": "Badge",
+      "props": {
+        "text": "IGNORE",
+        "variant": "destructive"
+      }
+    },
+    "pos_ignore_item1": {
+      "type": "Text",
+      "props": {
+        "text": "Meme 3.0 (2 →, Cope) — zero revenue survivors"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "map_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "map_heading",
+        "map_rising",
+        "map_peak",
+        "map_fading",
+        "map_emerging"
+      ]
+    },
+    "map_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      }
+    },
+    "map_rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_rising_label",
+        "map_rising_list"
+      ]
+    },
+    "map_rising_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Rising",
+        "variant": "default"
+      }
+    },
+    "map_rising_list": {
+      "type": "Text",
+      "props": {
+        "text": "Seamless UX, AI Infra, RWA Perps, Sovereign AI, Super-Apps, AI Accountability, L1-vs-AI wars"
+      }
+    },
+    "map_peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_peak_label",
+        "map_peak_list"
+      ]
+    },
+    "map_peak_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Peak",
+        "variant": "secondary"
+      }
+    },
+    "map_peak_list": {
+      "type": "Text",
+      "props": {
+        "text": "AI Agents × RWA, AI Agents compute, Stablecoins, RWA Mega, Privacy, Meme 3.0"
+      }
+    },
+    "map_fading": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_fading_label",
+        "map_fading_list"
+      ]
+    },
+    "map_fading_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Fading",
+        "variant": "outline"
+      }
+    },
+    "map_fading_list": {
+      "type": "Text",
+      "props": {
+        "text": "(none)"
+      }
+    },
+    "map_emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_emerging_label",
+        "map_emerging_list"
+      ]
+    },
+    "map_emerging_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Emerging",
+        "variant": "default"
+      }
+    },
+    "map_emerging_list": {
+      "type": "Text",
+      "props": {
+        "text": "(all tracked narratives at Rising+)"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "verdict_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict_heading",
+        "verdict_text"
+      ]
+    },
+    "verdict_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Verdict",
+        "level": "h2"
+      }
+    },
+    "verdict_text": {
+      "type": "Text",
+      "props": {
+        "text": "Canonical 2026 meta (RWA × AI Agents) holding Peak + highest conviction. New reflexivity: builder narrative and neobank framing resurfaced from 2023 without new adoption metrics. Execution timeline on AI agent wallets critical for FRONT-RUN call validity."
+      }
+    }
+  }
+}
