@@ -1,0 +1,499 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "daily routine — 2026-06-21"
+      },
+      "children": [
+        "winners_section",
+        "sep1",
+        "losers_section",
+        "sep2",
+        "commentary",
+        "sep3",
+        "tweet_roundup",
+        "sep4",
+        "paper_section",
+        "sep5",
+        "github_section",
+        "sep6",
+        "hn_section"
+      ]
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "winners 24h",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change"
+        ],
+        "rows": [
+          [
+            "UB",
+            "$0.092",
+            "+27.7%"
+          ],
+          [
+            "LAB",
+            "$14.32",
+            "+16.8%"
+          ],
+          [
+            "PUMP",
+            "$0.0015",
+            "+11.6%"
+          ],
+          [
+            "JUP",
+            "$0.22",
+            "+10.6%"
+          ],
+          [
+            "BP",
+            "$0.70",
+            "+10.4%"
+          ],
+          [
+            "2Z",
+            "$0.075",
+            "+10.4%"
+          ],
+          [
+            "AERO",
+            "$0.54",
+            "+10.0%"
+          ],
+          [
+            "EIGEN",
+            "$0.27",
+            "+9.2%"
+          ],
+          [
+            "STABLE",
+            "$0.035",
+            "+7.3%"
+          ],
+          [
+            "PENDLE",
+            "$1.44",
+            "+6.2%"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "losers 24h",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change"
+        ],
+        "rows": [
+          [
+            "BTW",
+            "$0.093",
+            "-39.2%"
+          ],
+          [
+            "H",
+            "$0.18",
+            "-11.0%"
+          ],
+          [
+            "DEXE",
+            "$14.35",
+            "-6.2%"
+          ],
+          [
+            "GWEI",
+            "$0.10",
+            "-5.6%"
+          ],
+          [
+            "AKT",
+            "$0.74",
+            "-3.9%"
+          ],
+          [
+            "EDGE",
+            "$0.39",
+            "-3.5%"
+          ],
+          [
+            "B",
+            "$0.22",
+            "-3.2%"
+          ],
+          [
+            "ZEC",
+            "$452.39",
+            "-2.9%"
+          ],
+          [
+            "XPL",
+            "$0.093",
+            "-2.5%"
+          ],
+          [
+            "HYPE",
+            "$67.82",
+            "-2.3%"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "commentary": {
+      "type": "Text",
+      "props": {
+        "text": "aero, jup, pendle, eigen pulling on l2/defi rotation. btw imploded -39%. zec weakness persists.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet_roundup": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_heading",
+        "tweet_crypto",
+        "tweet_ai",
+        "tweet_dev"
+      ]
+    },
+    "tweet_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "tweet roundup",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto_badge",
+        "crypto_text"
+      ]
+    },
+    "crypto_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "crypto",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "crypto_text": {
+      "type": "Text",
+      "props": {
+        "text": "btc testing $63,830 support; 4th straight red day. sec dropped a formal classification framework. grayscale pushing onchain perp etf exposure. eth still ~60% of stables/rwa/defi but down -10.7% week.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet_ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_badge",
+        "ai_text"
+      ]
+    },
+    "ai_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ai",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "ai_text": {
+      "type": "Text",
+      "props": {
+        "text": "claude fable 5 preview + mythos 5 ga shipped this month; gpt-5.6, gemini 3.2 also dropped. claude code at $2.5b arr after 9 months. google's managed agents spin sandboxed linux envs in one api call.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet_dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev_badge",
+        "dev_text"
+      ]
+    },
+    "dev_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "dev",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "dev_text": {
+      "type": "Text",
+      "props": {
+        "text": "aider holding the #1 open-source coding agent slot; biome lints 10k files in 0.8s vs eslint 45s. ollama, valkey, cline all production-grade now.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_stack"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "paper of the day",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "paper_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper_title",
+        "paper_meta",
+        "paper_description",
+        "paper_links"
+      ]
+    },
+    "paper_title": {
+      "type": "Text",
+      "props": {
+        "text": "context-aware rl for agentic and multimodal llms",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "paper_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "paper_authors",
+        "paper_score"
+      ]
+    },
+    "paper_authors": {
+      "type": "Text",
+      "props": {
+        "text": "xu et al",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "paper_score": {
+      "type": "Badge",
+      "props": {
+        "text": "↑10",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "paper_description": {
+      "type": "Text",
+      "props": {
+        "text": "contextrl rewards models for picking the right context from two near-duplicates instead of just the final answer. +2.2% on long-horizon, +1.8% on vqa over gpro. relevant if you're tuning tool-use agents.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "paper_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "paper_link_abstract",
+        "paper_link_pdf"
+      ]
+    },
+    "paper_link_abstract": {
+      "type": "Link",
+      "props": {
+        "label": "read",
+        "href": "https://arxiv.org/abs/2606.17053"
+      },
+      "children": []
+    },
+    "paper_link_pdf": {
+      "type": "Link",
+      "props": {
+        "label": "pdf",
+        "href": "https://arxiv.org/pdf/2606.17053"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "github_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "github_heading",
+        "github_text"
+      ]
+    },
+    "github_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "github issues",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "github_text": {
+      "type": "Text",
+      "props": {
+        "text": "no new issues across user:anajuliabit.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_heading",
+        "hn_text"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "hn digest",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "hn_text": {
+      "type": "Text",
+      "props": {
+        "text": "skill not configured.",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
