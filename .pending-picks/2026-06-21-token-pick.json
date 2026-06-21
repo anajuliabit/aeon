@@ -1,0 +1,12 @@
+{
+  "source": "token-pick",
+  "symbol": "AERO",
+  "coingeckoId": "aerodrome-finance",
+  "side": "long",
+  "entryPriceUsd": 0.5406,
+  "targetPriceUsd": 0.60,
+  "invalidationPriceUsd": 0.48,
+  "horizonDays": 10,
+  "conviction": "HIGH (7/10)",
+  "thesis": "Base ecosystem DEX capturing momentum from recent narratives (UK political uncertainty, Starmer-pivot to tech-friendly policies). AERO outperforming BTC/ETH on 7d, high vol/mcap ratio (0.128), trending top-10. Wrong if macro risk-off regime or Base ecosystem narrative fade."
+}
