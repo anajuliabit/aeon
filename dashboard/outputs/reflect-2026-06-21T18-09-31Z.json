@@ -1,0 +1,219 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Reflect"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-subtitle",
+        "sep-1",
+        "heading-health",
+        "stat-skill-health",
+        "sep-2",
+        "heading-sandbox",
+        "alert-sandbox",
+        "sep-3",
+        "heading-issues",
+        "grid-issues",
+        "sep-4",
+        "heading-updates",
+        "stack-updates"
+      ]
+    },
+    "text-subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "Memory consolidated — 2026-06-21",
+        "variant": "caption"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-health": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Health",
+        "level": "h2"
+      }
+    },
+    "stat-skill-health": {
+      "type": "Stat",
+      "props": {
+        "label": "Health Status",
+        "value": "9 healthy / 19 degraded",
+        "delta": "−32 healthy",
+        "trend": "down"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-sandbox": {
+      "type": "Heading",
+      "props": {
+        "text": "Critical Issue",
+        "level": "h2"
+      }
+    },
+    "alert-sandbox": {
+      "type": "Alert",
+      "props": {
+        "title": "Sandbox Truncation — Systemic",
+        "message": "Multiple skills affected by sandbox-truncation",
+        "type": "warning"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Associated Issues",
+        "level": "h3"
+      }
+    },
+    "grid-issues": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "sm"
+      },
+      "children": [
+        "badge-iss019",
+        "badge-iss020",
+        "badge-iss021",
+        "badge-iss022",
+        "badge-iss023",
+        "badge-iss024"
+      ]
+    },
+    "badge-iss019": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-019",
+        "variant": "secondary"
+      }
+    },
+    "badge-iss020": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-020",
+        "variant": "secondary"
+      }
+    },
+    "badge-iss021": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-021",
+        "variant": "secondary"
+      }
+    },
+    "badge-iss022": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-022",
+        "variant": "secondary"
+      }
+    },
+    "badge-iss023": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-023",
+        "variant": "secondary"
+      }
+    },
+    "badge-iss024": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-024",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-updates": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Updates",
+        "level": "h2"
+      }
+    },
+    "stack-updates": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-pr-backlog",
+        "item-wallets",
+        "item-defi",
+        "item-token-alert",
+        "item-heartbeat"
+      ]
+    },
+    "item-pr-backlog": {
+      "type": "Text",
+      "props": {
+        "text": "✓ PR backlog cleared (0 open)",
+        "variant": "body"
+      }
+    },
+    "item-wallets": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-watches.yml seeded with 5 base wallets",
+        "variant": "body"
+      }
+    },
+    "item-defi": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor: needs pool entries; etherscan free tier blocks base",
+        "variant": "body"
+      }
+    },
+    "item-token-alert": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert hung mid-dispatch (96 min) — first occurrence",
+        "variant": "body"
+      }
+    },
+    "item-heartbeat": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat: regression from 11 to 24 skills under 50% success rate",
+        "variant": "body"
+      }
+    }
+  }
+}
