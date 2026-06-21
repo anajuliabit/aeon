@@ -1,19 +1,20 @@
-*AIXBT Pulse — 2026-06-21 13:00Z*
+*AIXBT Pulse — 2026-06-21 21:00Z*
 
 CRYPTO
-- BTC held $60K+ but ETF bleed accelerated: $6.35B out over 30 days.
-- Solana sentiment flipped bullish; RWA sector at $2B, BlackRock BUIDL doubled.
-- JaredFromSubway MEV exploit ($7.7M) exposed automated approval traps.
-- Hyperliquid consolidates $3B non-crypto OI; prediction markets face scrutiny.
+- BTC $64K, F&G 23. 44-day negative Coinbase premium — US institutional demand gone.
+- EigenLayer Darkbloom AI pivot + LINK DTCC integration. protocol-level narratives leading.
+- Altcoin rotation: select tokens at yearly highs. Arcium TGE, TCG, DeFi yield pulling flow.
 
-MACRO
-- Fed holds 3.5-3.75%, signals delayed cuts. duration drag now certain.
-- Geopolitical waterway disputes broadening. shipping costs spiking. tail risk returning.
+TRADFI
+- Warsh hawkish: near-term cuts removed. carry trade into dollar assets.
+- Semiconductor inflows → Nasdaq → on-chain AI infrastructure. new capital pathway.
+- US-Iran MOU progress. Hormuz tail risk easing. VIX compresses, short-vol opens.
 
 NEW THIS PULL
-- MEV hack ($7.7M) when Solana bullish — traders moved spot into Hyperliquid perps instead of fleeing.
-- RWA sector execution phase: BlackRock BUIDL doubled into ETF bleed window.
-- Fed explicit hold + delayed cuts; waterway geopolitics systemic, not bilateral.
+- EigenLayer Darkbloom (AI pivot), LINK DTCC, Arcium TGE — all new
+- 44-day negative premium specific metric
+- Solana KOL shilling flagged by AIXBT — skepticism on the bottom narrative
+- US-Iran MOU: waterway risk partially resolved
 
 BRIDGE
-ETF bleed → RWA reflexivity. not exit; reallocation. institutional entry at volatility into on-chain custody. MEV hack → perps shift. Fed sticky + waterway risk = crypto vol cheaper than TradFi when surprises hit.
+Warsh kills rate cuts; semiconductors route TradFi AI money into EigenLayer and Arcium — not BTC. US-Iran MOU → VIX compression → crypto gets the risk-on beta, but the MOU is preliminary. Solana bottom is being manufactured; 9 red candles + coordinated KOL calls is the setup, not the signal.
