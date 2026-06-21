@@ -1,0 +1,184 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "market-context-refresh"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_date",
+        "badge_take",
+        "sep1",
+        "heading_prices",
+        "stack_prices",
+        "sep2",
+        "heading_conditions",
+        "text_fg",
+        "stat_breadth",
+        "stat_dex",
+        "sep3",
+        "heading_narrative",
+        "text_narrative",
+        "text_capitulation",
+        "alert_catalysts"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Context — 2026-06-21",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "badge_take": {
+      "type": "Badge",
+      "props": {
+        "text": "Risk-On Recovery · Medium Conviction",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_prices": {
+      "type": "Heading",
+      "props": {
+        "text": "Price Action",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$63,986",
+        "delta": "+0.91%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,721",
+        "delta": "+0.24%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_conditions": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Conditions",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_fg": {
+      "type": "Text",
+      "props": {
+        "text": "Fear & Greed Index: 23 (Extreme Fear)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stat_breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Breadth",
+        "value": "14/20",
+        "delta": "↑↑ from 7/20",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_dex": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume",
+        "value": "$4.7B",
+        "delta": "-7.6% (24h) · +26.6% (7d)",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_narrative": {
+      "type": "Heading",
+      "props": {
+        "text": "Narrative & Catalysts",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Top narrative: Macro stabilization (rising)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_capitulation": {
+      "type": "Text",
+      "props": {
+        "text": "Weak-hand capitulation likely complete",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "alert_catalysts": {
+      "type": "Alert",
+      "props": {
+        "title": "Upcoming Catalysts",
+        "message": "BoJ guidance June 25 + Iran oil <$80 (disinflationary tailwind)",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}
