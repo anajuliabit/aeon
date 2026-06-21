@@ -582,30 +582,23 @@ state: what was built, recurring blockers, and health.
   through 6-16. Operator-gated on `memory/on-chain-watches.yml`
   seed.
 
-## 2026-06-13 → 2026-06-14 — notify-fix PR + REPPO first up-trip + coverage cliff
-- **PR #108 opened 2026-06-13 18:21Z** by morning-brief: branch
-  `fix/notify-file-flag-2026-06-13` — replaces the sandbox-blocked
-  `./notify "$(cat ...)"` pattern in `hn-digest` + `onboard` with a
-  file-flag input. Unblocks the ~15 standalone skills currently staging
-  every notification via `.pending-notify/` and waiting for the
-  post-run delivery glob. Once merged, retires the dominant sandbox
-  fallback pattern noted across 6 consecutive standalone-run days
-  (6-09 → 6-14). Still open at 6-14 morning-brief read (~18h old,
-  under 24h stalled threshold).
-- **REPPO 24h-rail TRIPPED FIRST TIME UP-SIDE 2026-06-14 09:10Z.**
-  +18.93% 24h / +45.18% 3d from $0.01452 (6-11) → $0.02108 (6-14).
-  Vol $522K = **2.55× rolling baseline** — loud bid, under the 3×
-  spike rail (so the "real participation, not capitulation-buying"
-  read holds). Watchlist median +1.55% mid (well/mamo/gitlawb only);
-  REPPO is +17.4pts above the rest. Pure tape-side rotation into the
-  swarm-token tier as decentralised-AI bid widens (TAO +23.5%, AKT
-  +21.5% fresh, FET +11.9%) — chain off-CI continues so no fresh
-  ledger advancement explains the move. Detail in [crypto.md](crypto.md).
-- **skill-evals 6-14 verdict SKILL_EVALS_RECOVERED.** 0 new fail /
-  1 fixed / 1 still failing / 12 stable. Coverage **14/57 (24%) — 24pp
-  drop from 48% = COVERAGE CLIFF**. Action queued: patch
-  `evals.json:monitor-polymarket` (`POLYMARKET` pattern too broad →
-  tighten to `### monitor-polymarket`).
+## Recent Issues & Patterns (through 2026-06-21)
+- **ISS-019/020/021 filed** (6-19): Sandbox timeout/cost truncation patterns for `defi-overview`, `token-pick`, `search-skill`. These are critical failures but likely stemming from Claude weekly rate-limit exhaustion rather than inherent skill bugs.
+- **Weekly-limit wave 2026-06-12**: 4th occurrence of the ISS-018 pattern. Diagnostic split confirmed: 5 `FALLBACK_CG_SKILLS` succeeded via Virtuals fresh-fetch fallback; every non-fallback skill dispatched in same window HUNG. Pattern is provably weekly-cyclical.
+- **XAI quota exhausted** (6-16): Team 3a8b4c1e monthly credit limit hit → 10+ XAI-dependent skills blocked. Residual gap: non-reppo CI dailies outside `FALLBACK_CG_SKILLS` still exit 1 on weekly limit.
+- **on-chain-monitor / defi-monitor NO_CONFIG streak**: >14 consecutive days awaiting `memory/on-chain-watches.yml` seed.
+- **deal-flow stuck** since 6-08 (13 days).
+- **fork-cohort** 2nd consecutive Sunday weekly fail (6-14).
+- **PR #112 (skill-graph docs)** stalled ~6 days.
+- **PR #122 (self-improve fix)** <24h old.
+- **BTC levels**: Both reclaim 63,500 (6-11) and 65,900 (6-15) triggered. Daily close < $60,500 triggers downtrend continuation alert.
+- **Token alert activity**: REPPO ±15% trips (6-14 +18.93%, 6-16 -15.78%) demonstrate canonical watchlist sensitivity. GITLAWB -13.48% near-miss (6-17).
+- **AIXBT Pulse 6-20**: Grounded crypto + tradfi absent (11th+ consecutive), bridge call "AI rotation + STRC depeg = leverage unwind risk".
+- **Token picks**: Recent HYPE (6-20) $71.06 (+6.13% 24h), JTO (6-16) $0.87 (+36.4% 24h).
+- **defi-overview 6-20**: Mixed — volume collapse −31%, fees sliding −17%, capital in flux.
+
+## Infrastructure updates (since 6-17)
+- **PR #108 file-flag notify path** confirmed durable (6-15→6-16). Retires dominant sandbox fallback pattern (`./notify "$(cat ...)"`) across standalone skills.
 - **Decentralised-AI bid validated.** 6-13 narrative-tracker #1 FRONT-RUN
   call (TAO HIGH 10/10 token-pick $248.76) paying +23.5% in 24h.
   Day-2 catalyst: WSJ/TechCrunch identify Andy Jassy as the trigger
