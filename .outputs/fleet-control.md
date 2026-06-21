@@ -1,45 +1,32 @@
-I've executed the fleet-control skill successfully. Since there are no managed instances registered (the `instances.json` file is empty: `{"instances": []}`), the skill completed with:
+The **fleet-control** skill executed in Health Check Mode but found an empty instance registry (`memory/instances.json`). According to the skill specification, this is a normal state — the registry hasn’t been populated with any managed Aeon instances yet.
 
-**Status**: FLEET_EMPTY - No managed instances to monitor
+### What happened
+- Verified `gh` authentication ✅ (`github.com`, `anajuliabit`, scopes: 'repo', 'workflow')
+- Checked GitHub API rate limit ✅ (4,524 remaining)
+- Loaded registry: `{"instances": []}`
+- Loaded prior state: `memory/state/fleet-control-state.json` (empty)
+- No active instances to monitor or classify
+- Logged **FLEET_EMPTY** to `memory/logs/2026-06-21.md`
+- No notification sent (as per spec when registry is empty)
 
-**What happened:**
-1. ✅ GitHub authentication verified
-2. ✅ API rate limit checked (4987 remaining, well above 50 threshold)
-3. ✅ Registry loaded - empty
-4. ✅ State file created/checked (`memory/state/fleet-control-state.json`)
-5. ✅ Log entry added to `memory/logs/2026-06-20.md`
-6. ✅ No notification sent (as per spec: empty registry stops silently)
+### Next steps
+The fleet-control skill is ready to monitor instances once they are registered. To add an instance:
 
-**Log entry added:**
-```
-## fleet-control (health check)
-- Verdict: FLEET_EMPTY: no managed instances
-- Sizes: total=0, healthy=0, warning=0, degraded=0, stale=0, pending=0, unreachable=0, archived=0
-- Deltas: none
-- Sources: gh=ok, rate_remaining=4987
-```
-
-**Next steps to use fleet control:**
-To start monitoring Aeon instances, populate `memory/instances.json` with repository entries like:
+1. Edit `memory/instances.json` with the format:
 ```json
 {
   "instances": [
     {
-      "name": "your-instance-name",
-      "repo": "owner/repository-name",
-      "purpose": "brief description",
-      "created": "YYYY-MM-DD",
+      "name": "example-name",
+      "repo": "owner/repo",
+      "purpose": "optional description",
+      "created": "2025-06-21",
       "skills_enabled": ["skill1", "skill2"]
     }
   ]
 }
 ```
 
-Once instances are added, the fleet control system will:
-- Monitor health every 6 hours (09:00 and 15:00 UTC)
-- Send notifications when status changes
-- Provide daily rollups
-- Enable skill dispatch capability
-- Classify instances as: healthy, warning, degraded, stale, pending_secrets, unreachable, or archived
+2. The next scheduled run (daily at 09:00 and 15:00 UTC) will pick up the new instance, classify its health, and begin tracking changes.
 
-Task #1 is now completed. The system is ready and waiting for instance data to begin active monitoring.
+No notification was sent because the registry is empty — this is intentional to avoid spam when no instances exist.
