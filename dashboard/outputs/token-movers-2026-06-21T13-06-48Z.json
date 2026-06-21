@@ -1,0 +1,397 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "token-movers",
+        "description": "2026-06-21"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_summary",
+        "sep_1",
+        "heading_winners",
+        "table_winners",
+        "sep_2",
+        "heading_losers",
+        "table_losers",
+        "sep_3",
+        "heading_trending",
+        "stack_trending",
+        "sep_4",
+        "heading_notable",
+        "stack_notable"
+      ]
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "Mixed tape with selective alt momentum — 67% of top-100 coins green, median +0.15%; winners concentrated in layer-2/AI narrative (LAB, JUP, AERO), losers dominated by privacy (ZEC) and L1 consolidation (HYPE, MATIC).",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Volume/Rank",
+          "Tag"
+        ],
+        "rows": [
+          [
+            "LAB (LAB)",
+            "$15.31",
+            "+26.9%",
+            "+54.6%",
+            "−5.4%",
+            "$41.6M / #22",
+            "BREAKOUT"
+          ],
+          [
+            "JUP (Jupiter)",
+            "$0.222",
+            "+12.4%",
+            "+31.3%",
+            "+0.4%",
+            "$70.2M / #82",
+            "BREAKOUT"
+          ],
+          [
+            "AERO (Aerodrome Finance)",
+            "$0.542",
+            "+10.0%",
+            "+52.0%",
+            "+0.1%",
+            "$66.0M / #100",
+            "BREAKOUT"
+          ],
+          [
+            "PUMP (Pump.fun)",
+            "$0.00149",
+            "+8.8%",
+            "−3.1%",
+            "+0.4%",
+            "$53.2M / #102",
+            "FADE"
+          ],
+          [
+            "STABLE",
+            "$0.0346",
+            "+7.1%",
+            "−1.7%",
+            "+0.8%",
+            "$13.7M / #79",
+            ""
+          ],
+          [
+            "HASH (Provenance)",
+            "$0.0102",
+            "+10.3%",
+            "+2.8%",
+            "+0.2%",
+            "$3.6M / #96",
+            ""
+          ],
+          [
+            "GRAM (Toncoin)",
+            "$1.69",
+            "+4.9%",
+            "−1.9%",
+            "+0.7%",
+            "$41.5M / #24",
+            ""
+          ],
+          [
+            "ADI",
+            "$4.13",
+            "+2.4%",
+            "+10.7%",
+            "+0.2%",
+            "$5.5M / #101",
+            ""
+          ],
+          [
+            "SKY",
+            "$0.0592",
+            "+1.9%",
+            "+4.3%",
+            "−0.1%",
+            "$11.0M / #56",
+            ""
+          ],
+          [
+            "NIGHT (Midnight)",
+            "$0.0330",
+            "+1.3%",
+            "+3.9%",
+            "+0.3%",
+            "$10.6M / #97",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Volume/Rank",
+          "Tag"
+        ],
+        "rows": [
+          [
+            "DEXE (DeXe)",
+            "$14.27",
+            "−6.9%",
+            "−21.0%",
+            "−0.0%",
+            "$11.2M / #87",
+            "FADE"
+          ],
+          [
+            "ZEC (Zcash)",
+            "$451.23",
+            "−4.5%",
+            "+6.6%",
+            "−0.5%",
+            "$269.9M / #15",
+            ""
+          ],
+          [
+            "HYPE (Hyperliquid)",
+            "$67.93",
+            "−3.9%",
+            "+11.8%",
+            "+0.4%",
+            "$441.3M / #10",
+            "MAJOR"
+          ],
+          [
+            "ETC (Ethereum Classic)",
+            "$7.36",
+            "−3.1%",
+            "+3.4%",
+            "+0.1%",
+            "$43.7M / #63",
+            ""
+          ],
+          [
+            "POL (ex-MATIC)",
+            "$0.0793",
+            "−2.7%",
+            "+5.6%",
+            "+0.3%",
+            "$34.2M / #75",
+            ""
+          ],
+          [
+            "BDX (Beldex)",
+            "$0.0797",
+            "−2.3%",
+            "−0.5%",
+            "−0.3%",
+            "$10.6M / #90",
+            ""
+          ],
+          [
+            "ONDO (Ondo)",
+            "$0.339",
+            "−2.1%",
+            "−5.4%",
+            "+0.6%",
+            "$71.3M / #49",
+            ""
+          ],
+          [
+            "VVV (Venice Token)",
+            "$14.51",
+            "−0.6%",
+            "−9.4%",
+            "+0.6%",
+            "$13.9M / #86",
+            ""
+          ],
+          [
+            "WLD (Worldcoin)",
+            "$0.602",
+            "−1.0%",
+            "+20.1%",
+            "+1.1%",
+            "$272.2M / #43",
+            ""
+          ],
+          [
+            "TAO (Bittensor)",
+            "$234.05",
+            "+1.5%",
+            "−11.6%",
+            "+0.2%",
+            "$320.2M / #41",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_trending": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "stack_trending": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend_1",
+        "trend_2",
+        "trend_3",
+        "trend_4",
+        "trend_5",
+        "trend_6",
+        "trend_7"
+      ]
+    },
+    "trend_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. Bitcoin (BTC) — #1, $64,079.58, +0.8% [MAJOR]"
+      }
+    },
+    "trend_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. Ethereum (ETH) — #2, $1,722.59, −0.1% [MAJOR]"
+      }
+    },
+    "trend_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. Solana (SOL) — #7, $73.24, +2.5% [MAJOR]"
+      }
+    },
+    "trend_4": {
+      "type": "Text",
+      "props": {
+        "text": "4. Hyperliquid (HYPE) — #10, $67.87, −4.1% [MAJOR]"
+      }
+    },
+    "trend_5": {
+      "type": "Text",
+      "props": {
+        "text": "5. Bittensor (TAO) — #41, $233.54, +1.3%"
+      }
+    },
+    "trend_6": {
+      "type": "Text",
+      "props": {
+        "text": "6. LAB — #22, $15.42, +27.5% [TRENDING+UP]"
+      }
+    },
+    "trend_7": {
+      "type": "Text",
+      "props": {
+        "text": "7. Aerodrome Finance (AERO) — #100, $0.54, +10.2% [TRENDING+UP]"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_1",
+        "notable_2",
+        "notable_3"
+      ]
+    },
+    "notable_1": {
+      "type": "Text",
+      "props": {
+        "text": "LAB: [TRENDING+UP] + [BREAKOUT] — +26.9% on strong momentum (54.6% 7d), appears in trending"
+      }
+    },
+    "notable_2": {
+      "type": "Text",
+      "props": {
+        "text": "JUP: [BREAKOUT] — +12.4% with sustained 7d strength (+31.3%), core DeFi narrative"
+      }
+    },
+    "notable_3": {
+      "type": "Text",
+      "props": {
+        "text": "AERO: [TRENDING+UP] + [BREAKOUT] — +10.0% on exceptional 7d (+52.0%), Arbitrum ecosystem play"
+      }
+    }
+  }
+}
