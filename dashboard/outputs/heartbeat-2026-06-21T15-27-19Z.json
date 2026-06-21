@@ -1,0 +1,170 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_status",
+        "separator1",
+        "section_stuck",
+        "separator2",
+        "section_chronic",
+        "separator3",
+        "section_status"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "Heartbeat 15:22 UTC",
+        "message": "DEGRADED",
+        "type": "error"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_stuck": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stuck",
+        "table_stuck"
+      ]
+    },
+    "heading_stuck": {
+      "type": "Heading",
+      "props": {
+        "text": "STUCK",
+        "level": "h3"
+      }
+    },
+    "table_stuck": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Duration",
+          "Details"
+        ],
+        "rows": [
+          [
+            "token-alert",
+            "96min",
+            "last_dispatch 13:45 UTC; cf=2"
+          ],
+          [
+            "deal-flow",
+            "13d",
+            ""
+          ],
+          [
+            "fork-cohort",
+            "7d",
+            ""
+          ]
+        ]
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_chronic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_chronic",
+        "text_chronic_summary",
+        "table_chronic"
+      ]
+    },
+    "heading_chronic": {
+      "type": "Heading",
+      "props": {
+        "text": "CHRONIC",
+        "level": "h3"
+      }
+    },
+    "text_chronic_summary": {
+      "type": "Text",
+      "props": {
+        "text": "24 enabled skills now sub-50% success (was 11 on 6-19) — long-tail expanding from sandbox/quota churn",
+        "variant": "body"
+      }
+    },
+    "table_chronic": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate"
+        ],
+        "rows": [
+          [
+            "reg-monitor",
+            "7%"
+          ],
+          [
+            "vuln-scanner",
+            "7%"
+          ],
+          [
+            "skill-analytics",
+            "9%"
+          ],
+          [
+            "security-digest",
+            "16%"
+          ]
+        ]
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_status",
+        "text_status"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "STATUS_PAGE",
+        "level": "h3"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "docs/status.md regenerated (last refresh 6-19, 2d stale). No open PRs, no urgent issues, no token-report article → Token Pulse omitted.",
+        "variant": "body"
+      }
+    }
+  }
+}
