@@ -1,0 +1,163 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_title",
+        "text_description",
+        "sep1",
+        "stack_section1",
+        "sep2",
+        "stack_section2",
+        "sep3",
+        "text_footer"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Buzz — 2026-06-21",
+        "level": "h1"
+      },
+      "children": []
+    },
+    "text_description": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet builder day — three takes on minimal/specialized agent toolsets, two agent-native product launches on the side.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_section1",
+        "tweet1",
+        "tweet2",
+        "tweet3"
+      ]
+    },
+    "heading_section1": {
+      "type": "Heading",
+      "props": {
+        "text": "Skills & minimal toolsets",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hampsonw",
+        "handle": "hampsonw",
+        "text": "Skills may be coupled to Claude's harness; portability of agentic dev across models is the missing layer"
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Marktechpost",
+        "handle": "Marktechpost",
+        "text": "Hermes Agent ships \"Blank Slate\": boots only provider+files+terminal, platform toolsets opt-in per session"
+      },
+      "children": []
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Oliver__Hahn",
+        "handle": "Oliver__Hahn",
+        "text": "Stats/methods/conclusions critic sub-agents preserve quality in long unattended CompBio analysis runs"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_section2",
+        "tweet4",
+        "tweet5"
+      ]
+    },
+    "heading_section2": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent-native product launches",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "jamiepine",
+        "handle": "jamiepine",
+        "text": "discover.me: agents interview you on projects/repos/resume; \"Lisa\" runs background research, generates a portfolio"
+      },
+      "children": []
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Vintage8080",
+        "handle": "Vintage8080",
+        "text": "GenLayer pitches the adjudication layer: validator nets running different models reach consensus on subjective calls"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai-cache · candidates: 10 → kept: 5_",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
