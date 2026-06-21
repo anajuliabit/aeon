@@ -569,13 +569,13 @@
   },
   "thought-review": {
     "last_dispatch": "2026-06-21T21:13:44Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-21T13:20:48Z",
-    "total_runs": 66,
-    "total_successes": 22,
+    "last_status": "success",
+    "last_success": "2026-06-21T21:16:48Z",
+    "total_runs": 67,
+    "total_successes": 23,
     "total_failures": 44,
     "consecutive_failures": 0,
-    "success_rate": 0.33,
+    "success_rate": 0.34,
     "last_failed": "2026-06-21T12:15:07Z",
     "last_error": "f830df7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
