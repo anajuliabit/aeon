@@ -1,0 +1,32 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "text-summary",
+        "pr-link"
+      ]
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "article skill sandbox fallbacks added"
+      },
+      "children": []
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #127: article skill sandbox fallbacks added",
+        "href": "https://github.com/anajuliabit/aeon/pull/127",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
