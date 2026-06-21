@@ -1,0 +1,373 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-21"
+      },
+      "children": [
+        "token_header",
+        "sep1",
+        "price_group",
+        "sep2",
+        "score_group",
+        "sep3",
+        "catalyst_group",
+        "sep4",
+        "risk_group",
+        "sep5",
+        "stake_group",
+        "sep6",
+        "exit_group",
+        "sep7",
+        "recent_group",
+        "sep8",
+        "sources_group",
+        "sep9",
+        "disclaimer_group"
+      ]
+    },
+    "token_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "token_name",
+        "signal_badge",
+        "signal_stat"
+      ]
+    },
+    "token_name": {
+      "type": "Heading",
+      "props": {
+        "text": "SOL",
+        "level": "h2"
+      }
+    },
+    "signal_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "default"
+      }
+    },
+    "signal_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Signal",
+        "value": "7/10"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_grid",
+        "price_details"
+      ]
+    },
+    "price_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "price_stat",
+        "change_24h",
+        "change_7d"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$73.47"
+      }
+    },
+    "change_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h",
+        "value": "+3.45%",
+        "trend": "up"
+      }
+    },
+    "change_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+8.46%",
+        "trend": "up"
+      }
+    },
+    "price_details": {
+      "type": "Text",
+      "props": {
+        "text": "mcap $42.63B | vol $2.27B | vol/mcap 0.053",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "score_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "score_heading",
+        "score_text"
+      ]
+    },
+    "score_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Score Breakdown",
+        "level": "h3"
+      }
+    },
+    "score_text": {
+      "type": "Text",
+      "props": {
+        "text": "24h positive +1, 7d positive +1, both >5% +2, outperforming BTC/ETH +2, vol/mcap +1 = 7/10",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "catalyst_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "catalyst_heading",
+        "catalyst_text"
+      ]
+    },
+    "catalyst_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      }
+    },
+    "catalyst_text": {
+      "type": "Text",
+      "props": {
+        "text": "Solana ecosystem structurally outperforming macro risk-off (SOL +8.46% 7d vs BTC -0.48%, ETH +2.88%). L1 perpetuals narrative rising (Hyperliquid capitulation: +5.12% 6-19 → -2.49% 24h). Breadth collapse (7/20 green) suggests rotation into resilient narratives.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "risk_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "risk_heading",
+        "risk_alert"
+      ]
+    },
+    "risk_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "risk_alert": {
+      "type": "Alert",
+      "props": {
+        "message": "Breadth still severely compressed; macro overhang (Iran escalation, BoJ June 25 hawkish signal) could force re-risk-off or unwind carry trades faster than narrative recovers.",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stake_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stake_heading",
+        "stake_text"
+      ]
+    },
+    "stake_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake",
+        "level": "h3"
+      }
+    },
+    "stake_text": {
+      "type": "Text",
+      "props": {
+        "text": "≤0.5% of net worth (HIGH conviction) — moonshot sleeve, 1% total cap, max 2 open",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "exit_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "exit_heading",
+        "exit_text"
+      ]
+    },
+    "exit_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit",
+        "level": "h3"
+      }
+    },
+    "exit_text": {
+      "type": "Text",
+      "props": {
+        "text": "target $82.50 / invalidate $68.00 / time-stop 14d",
+        "variant": "body"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "recent_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "recent_heading",
+        "recent_text"
+      ]
+    },
+    "recent_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Vs recent picks",
+        "level": "h3"
+      }
+    },
+    "recent_text": {
+      "type": "Text",
+      "props": {
+        "text": "New entry (SOL previously skipped 6-11 on risk-off breadth; structural bifurcation now clear 6-21).",
+        "variant": "body"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "cg=ok, poly=fail(dedup/vol gates), x=absent(no catalysts)",
+        "variant": "caption"
+      }
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "disclaimer_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "disclaimer_alert",
+        "journal_note"
+      ]
+    },
+    "disclaimer_alert": {
+      "type": "Alert",
+      "props": {
+        "message": "not financial advice — pattern-matching only",
+        "type": "info"
+      }
+    },
+    "journal_note": {
+      "type": "Text",
+      "props": {
+        "text": "If you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it",
+        "variant": "caption"
+      }
+    }
+  }
+}

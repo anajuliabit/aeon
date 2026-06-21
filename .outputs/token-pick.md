@@ -1,34 +1,14 @@
-Excellent. The skill execution is complete. Let me provide a summary:
+*Daily Pick — 2026-06-21*
 
-## Summary
+*Token: SOL*  [HIGH]  signal 7/10
+Price: $73.47 (+3.45% 24h / +8.46% 7d) | mcap $42.63B | vol $2.27B (vol/mcap 0.053)
+Score breakdown: [24h positive+1, 7d positive+1, both >5%+2, outperforming BTC/ETH+2, vol/mcap+1] = 7/10
+Catalyst: Solana ecosystem structurally outperforming macro risk-off (SOL +8.46% 7d vs BTC -0.48%, ETH +2.88%). L1 perpetuals narrative rising (Hyperliquid capitulation: +5.12% 6-19 → -2.49% 24h). Breadth collapse (7/20 green) suggests rotation into resilient narratives.
+Risk: Breadth still severely compressed; macro overhang (Iran escalation, BoJ June 25 hawkish signal) could force re-risk-off or unwind carry trades faster than narrative recovers.
+Stake: ≤0.5% of net worth (HIGH conviction) — moonshot sleeve, 1% total cap, max 2 open
+Exit: target $82.50 / invalidate $68.00 / time-stop 14d
+Vs recent picks: New entry (SOL previously skipped 6-11 on risk-off breadth; structural bifurcation now clear 6-21).
 
-**Token Pick — 2026-06-21 executed successfully.**
-
-### Pick Generated
-**Token: AERO (Aerodrome Finance) — HIGH conviction, 7/10 signal score**
-- **Price:** $0.5406 (+10.19% 24h momentum)
-- **Entry:** $0.5406 | **Target:** $0.60 | **Invalidation:** $0.48 | **Horizon:** 10 days
-- **Stake:** ≤0.5% of net worth (moonshot sleeve)
-- **Catalyst:** Base DEX capturing Solana/L1 ecosystem momentum rotation; trending top-10 on CoinGecko
-- **Risk:** Narrative fade on macro downturn; ETH weakness could unwind Base rally
-- **Dedup status:** Clean (no prior 7-day picks)
-
-**Score breakdown:** +1(24h>0) +1(7d>0) +2(both>5%) +2(trending top-10) +1(vol/mcap 0.128) = 7/10
-
-### Market Analysis
-**"Starmer out by June 30?"** — Skipped
-- Massive mispricing: YES trading at 91¢ vs. fair value ~4% (edge -86pp)
-- Only defensible side is NO (requires shorting), not natural long bet
-- Starmer just re-elected; no acute crisis visible
-
-### Files Created
-- **Pick staged:** `.pending-picks/2026-06-21-token-pick.json` (ready for post-process posting)
-- **Log entry:** `memory/logs/2026-06-21.md` (with dedup marker)
-
-### Sources Status
-✓ CoinGecko: ok  
-✗ DexScreener: absent  
-✓ Polymarket: ok (data stale but available)  
-✗ XAI/X: absent  
-
-The skill completed within constraints. Notification ready for dispatch via `./notify` script.
+sources: cg=ok, poly=fail(dedup/vol gates), x=absent(no catalysts)
+if you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it
+not financial advice — pattern-matching only
