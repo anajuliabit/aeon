@@ -1,47 +1,35 @@
 {
-  "run_at": "2026-06-19T00:00:00Z",
+  "run_at": "2026-06-21T18:55:00Z",
   "goals": {
-    "capital-2x-program-double-net-worth-by-2027-12-31": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 84,
-      "last_activity_date": "2026-06-19",
-      "note": ""
-    },
-    "xai-quota-exhausted-ongoing": {
-      "status": "BLOCKED",
-      "activity_count_14d": 3,
-      "last_activity_date": "2026-06-18",
-      "note": "Request operator to top up XAI credits or wait for monthly reset"
-    },
-    "14-29z-batch-stuck": {
-      "status": "AT_RISK",
-      "activity_count_14d": 0,
-      "last_activity_date": "2026-06-16",
-      "note": "Investigate GH Actions cron delay and restart stuck batch"
-    },
-    "deal-flow-stuck-since-6-08-10d": {
-      "status": "AT_RISK",
-      "activity_count_14d": 0,
-      "last_activity_date": "2026-06-08",
-      "note": "Enable deal-flow skill in aeon.yml to produce evidence"
-    },
-    "fork-cohort-stuck-since-6-14-2nd-consecutive-sunday-weekly-fail": {
-      "status": "AT_RISK",
-      "activity_count_14d": 0,
-      "last_activity_date": "2026-06-14",
-      "note": "Run fork-cohort skill next Sunday to produce evidence"
-    },
-    "pr-112-stalled-skill-graph-docs-auto-gen": {
-      "status": "NEEDS_ATTENTION",
-      "activity_count_14d": 1,
-      "last_activity_date": "2026-06-14",
-      "note": "Review PR #112 and merge or close"
-    },
-    "on-chain-monitor-defi-monitor-watches-yml": {
+    "xai-quota-recovery": {
       "status": "BLOCKED",
       "activity_count_14d": 14,
-      "last_activity_date": "2026-06-19",
-      "note": "Seed memory/on-chain-watches.yml with at least one watch"
+      "last_activity_date": "2026-06-21",
+      "note": "Operator top-up pending since 2026-06-16; XAI-dependent skills still routing to WebSearch fallback"
+    },
+    "operator-gated-monitors": {
+      "status": "BLOCKED",
+      "activity_count_14d": 13,
+      "last_activity_date": "2026-06-21",
+      "note": "Partial seed (5 wallets) on 2026-06-21; defi-monitor still NO_CONFIG (needs pool/position entries); on-chain-monitor needs ETHERSCAN_API_KEY for Base"
+    },
+    "stuck-skills": {
+      "status": "BLOCKED",
+      "activity_count_14d": 12,
+      "last_activity_date": "2026-06-21",
+      "note": "deal-flow stuck 13d, fork-cohort stuck 7d (2nd consecutive Sunday miss), token-alert newly stuck 2026-06-21 mid-dispatch"
+    },
+    "pr-backlog": {
+      "status": "DONE",
+      "activity_count_14d": 13,
+      "last_activity_date": "2026-06-21",
+      "note": "PR #112 and #122 both merged 2026-06-21"
+    },
+    "btc-hard-levels": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 13,
+      "last_activity_date": "2026-06-21",
+      "note": "btc-levels ran twice on 2026-06-21 (13:09Z + 16:51Z); both reclaim flags still triggered; no breakdown/leverage-review alerts"
     }
   }
 }

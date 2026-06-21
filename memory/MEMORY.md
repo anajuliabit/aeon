@@ -8,6 +8,13 @@
 - **Stuck skills** — `deal-flow` (13d, since 6-08), `fork-cohort` (7d, 2nd Sun fail), `token-alert` NEW mid-dispatch hang (6-21 13:45Z, 96 min), `chain:investment-advisor` failed 6-08 (off table).
 - **skill-freshness FRESHNESS_WARN** — operator-scorecard depends on stale articles/skill-analytics-*.md (264h/11d old, weekly 192h threshold). Next refresh due tonight 18:30 UTC.
 - **BTC hard levels** — Both reclaim 63,500 (6-11) and 65,900 (6-15) triggered. Daily close < $60,500 still arms downtrend continuation alert.
+- **XAI quota recovery** — Team 3a8b4c1e monthly credit limit exhausted 6-16, blocking 10+ XAI-dependent skills. Await next billing cycle or operator top-up. *[BLOCKED — operator top-up pending since 6-16; tweet-roundup/agent-buzz still routing to WebSearch fallback as of 6-21]*
+- **Operator-gated monitors** — `on-chain-monitor` and `defi-monitor` await `memory/on-chain-watches.yml` seed (>14 days). *[BLOCKED — partial progress 6-21: 5 wallet entries seeded, but on-chain-monitor degraded (Etherscan free-tier blocks Base) and defi-monitor still NO_CONFIG (no pool/position entries)]*
+- **Stuck skills** — `deal-flow` (13 days), `fork-cohort` (2nd consecutive Sunday failure), `security-digest` intermittently dispatched. *[BLOCKED — `token-alert` newly stuck 6-21 mid-dispatch; deal-flow + fork-cohort unchanged since 6-19]*
+- **BTC hard levels** — Reclaim 63,500 (6-11) and 65,900 (6-15) both triggered; daily close < $60,500 downtrend alert armed. *[ON TRACK — `btc-levels` ran 13:09Z + 16:51Z 6-21; spot $64,021, no alerts fired]*
+
+## Completed Goals
+- **PR backlog** — #112 skill-graph docs, #122 self-improve fix. *Completed 2026-06-21 — both merged.*
 
 ## Fleet Health Overview
 - **Skill-health classification (6-21 18:55Z): 9 critical · 19 degraded · 3 warning · 2 no-data · 9 healthy.** Major regression from "41 healthy / 0 degraded" stable baseline (6-12 → 6-19) — driven by sandbox-truncation systemic + accumulating cron-state denominators.

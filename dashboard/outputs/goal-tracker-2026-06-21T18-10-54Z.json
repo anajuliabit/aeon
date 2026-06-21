@@ -1,0 +1,379 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker"
+      },
+      "children": [
+        "date",
+        "summary",
+        "sep1",
+        "blocked_section",
+        "sep2",
+        "on_track_section",
+        "sep3",
+        "done_section",
+        "sep4",
+        "sources_section"
+      ]
+    },
+    "date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-21",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "5 goals — 0 at risk, 0 needs attention, 1 on track, 3 blocked, 1 done (overall ↑ improving)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "blocked_h",
+        "goal_block_1",
+        "goal_block_2",
+        "goal_block_3"
+      ]
+    },
+    "blocked_h": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "goal_block_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "block1_title",
+        "block1_desc",
+        "block1_action"
+      ]
+    },
+    "block1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "XAI quota recovery",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "block1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Operator top-up pending since 6-16; 14 activity/14d (was BLOCKED ↑ improving, count 3→14)"
+      },
+      "children": []
+    },
+    "block1_action": {
+      "type": "Alert",
+      "props": {
+        "message": "Action: Nudge operator to top up Team 3a8b4c1e XAI credits or wait monthly reset (10+ skills blocked).",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "goal_block_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "block2_title",
+        "block2_desc",
+        "block2_action"
+      ]
+    },
+    "block2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator-gated monitors",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "block2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "5 wallets seeded 6-21 but defi-monitor still NO_CONFIG and on-chain-monitor degraded (Etherscan free-tier blocks Base); 13 activity/14d (was BLOCKED → flat)"
+      },
+      "children": []
+    },
+    "block2_action": {
+      "type": "Alert",
+      "props": {
+        "message": "Action: Add pool/position entries to memory/on-chain-watches.yml and set ETHERSCAN_API_KEY.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "goal_block_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "block3_title",
+        "block3_desc",
+        "block3_action"
+      ]
+    },
+    "block3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Stuck skills",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "block3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Deal-flow stuck 13d, fork-cohort 7d (2nd consecutive Sunday miss), token-alert newly stuck 6-21; 12 activity/14d (new combined goal)"
+      },
+      "children": []
+    },
+    "block3_action": {
+      "type": "Alert",
+      "props": {
+        "message": "Action: Manually dispatch deal-flow and debug fork-cohort Sunday-cron failure pattern.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "on_track_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "on_track_h",
+        "goal_ot_1"
+      ]
+    },
+    "on_track_h": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "goal_ot_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot1_title",
+        "ot1_desc"
+      ]
+    },
+    "ot1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "BTC hard levels",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "ot1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 13 activity/14d (new) — spot $64,021, both reclaim flags triggered, no breakdown alerts"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "done_h",
+        "goal_done_1"
+      ]
+    },
+    "done_h": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "goal_done_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done1_title",
+        "done1_desc",
+        "done1_prs"
+      ]
+    },
+    "done1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "PR backlog",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "done1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Completed 2026-06-21"
+      },
+      "children": []
+    },
+    "done1_prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr_112",
+        "pr_122"
+      ]
+    },
+    "pr_112": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#112 skill-graph docs",
+        "href": "https://github.com/aeon/aeon/pull/112",
+        "source": "merged"
+      },
+      "children": []
+    },
+    "pr_122": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#122 self-improve fix",
+        "href": "https://github.com/aeon/aeon/pull/122",
+        "source": "merged"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_h",
+        "sources_badges"
+      ]
+    },
+    "sources_h": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "sources_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_logs",
+        "badge_git",
+        "badge_gh_pr",
+        "badge_gh_issue",
+        "badge_cron"
+      ]
+    },
+    "badge_logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs=ok",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_git": {
+      "type": "Badge",
+      "props": {
+        "text": "git=ok",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_gh_pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr=ok",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_gh_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue=ok",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_cron": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "outline"
+      },
+      "children": []
+    }
+  }
+}
