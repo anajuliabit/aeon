@@ -1,0 +1,143 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-21",
+        "description": "one tracked list, one author firing: cyrilXBT's two unannotated article drops outpulling his 8-prompt-templates thread ~3:1 on engagement."
+      },
+      "children": [
+        "section1",
+        "tweet1-stack",
+        "tweet2-stack",
+        "tweet3-stack",
+        "sep",
+        "status-section"
+      ]
+    },
+    "section1": {
+      "type": "Heading",
+      "props": {
+        "text": "Tracked list (cyrilXBT-heavy)",
+        "level": "h3"
+      }
+    },
+    "tweet1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet1-link"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "pure article share, no commentary; 79k views says the article delivers but you click in blind",
+        "likes": 408,
+        "retweets": 78
+      }
+    },
+    "tweet1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2068135133618540931"
+      }
+    },
+    "tweet2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "tweet2-link"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "second unannotated article drop, same pattern; readers self-clicking means the author earned the no-tease",
+        "likes": 323,
+        "retweets": 65
+      }
+    },
+    "tweet2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2068345955183735286"
+      }
+    },
+    "tweet3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "tweet3-link"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "8 prompt templates reframing claude prompts as role assignment (senior eng / debug / perf / api) not task lists; the gap between junior and senior output is the role, not the model",
+        "likes": 118,
+        "retweets": 17
+      }
+    },
+    "tweet3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2068251767557816579"
+      }
+    },
+    "sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status-text",
+        "status-badge"
+      ]
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1642770456720683008=ok(3)",
+        "variant": "caption"
+      }
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}
