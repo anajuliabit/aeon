@@ -1,13 +1,16 @@
-Done. Quiet run — no alerts fired.
-
 ## Summary
 
-**BTC spot:** $63,915.58 | **June 20 close:** $64,240.23
+**BTC Levels Monitor — 2026-06-22 02:45Z**
 
-Level checks:
-- Leverage-review (≤$45k): clear — spot $63.9k
-- Breakdown close (<$60,500): clear — June 20 close $64,240
-- Reclaim $63,500: already alerted (flag true, re-arm requires spot <$60,500)
-- Reclaim $65,900: already alerted (same re-arm condition not met)
+| | Value |
+|---|---|
+| Spot | $64,433.67 |
+| 2026-06-21 daily close | $63,231.87 |
 
-No notification sent. State and log committed.
+**Level checks:**
+- Leverage-review (≤ $45k): clear
+- Breakdown close (< $60,500): clear — close $63.2k
+- Reclaim $63,500: already alerted (flag stays true)
+- Reclaim $65,900: not yet reached (spot $64.4k < $65,900)
+
+No alerts fired. State and log committed to main.
