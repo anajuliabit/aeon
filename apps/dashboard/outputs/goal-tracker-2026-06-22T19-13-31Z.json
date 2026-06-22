@@ -1,0 +1,433 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-06-22"
+      },
+      "children": [
+        "summary",
+        "stats",
+        "sep1",
+        "blocked_section",
+        "on_track_section",
+        "done_section",
+        "sep2",
+        "sources_section"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "7 active goals — 0 at risk, 0 needs attention, 4 on track, 3 blocked, 1 done (overall ↑ improving — stuck-skills recovered from BLOCKED)",
+        "variant": "lead"
+      }
+    },
+    "stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_at_risk",
+        "stat_needs_attn",
+        "stat_on_track",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "7"
+      }
+    },
+    "stat_at_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_needs_attn": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_on_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "4",
+        "trend": "up"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "3"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "1"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_heading",
+        "blocked_items"
+      ]
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_1",
+        "blocked_2",
+        "blocked_3"
+      ]
+    },
+    "blocked_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_1_title",
+        "blocked_1_details",
+        "blocked_1_action"
+      ]
+    },
+    "blocked_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota recovery",
+        "variant": "body"
+      }
+    },
+    "blocked_1_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~14 entries/14d (→ flat, blocked since 6-16)",
+        "variant": "caption"
+      }
+    },
+    "blocked_1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator top up Team 3a8b4c1e XAI billing",
+        "variant": "muted"
+      }
+    },
+    "blocked_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_2_title",
+        "blocked_2_details",
+        "blocked_2_action"
+      ]
+    },
+    "blocked_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator action: on-chain config completion",
+        "variant": "body"
+      }
+    },
+    "blocked_2_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~8 entries/14d (new)",
+        "variant": "caption"
+      }
+    },
+    "blocked_2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator set ALCHEMY_API_KEY (non-empty) and add pool/position entries to memory/on-chain-watches.yml",
+        "variant": "muted"
+      }
+    },
+    "blocked_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_3_title",
+        "blocked_3_details",
+        "blocked_3_action"
+      ]
+    },
+    "blocked_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator-gated monitors",
+        "variant": "body"
+      }
+    },
+    "blocked_3_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~13 entries/14d (→ flat)",
+        "variant": "caption"
+      }
+    },
+    "blocked_3_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator set ETHERSCAN_API_KEY for Base, seed defi-monitor pool/position rows",
+        "variant": "muted"
+      }
+    },
+    "on_track_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on_track_heading",
+        "on_track_items"
+      ]
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on_track_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on_track_1",
+        "on_track_2",
+        "on_track_3",
+        "on_track_4"
+      ]
+    },
+    "on_track_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_1_title",
+        "on_track_1_details"
+      ]
+    },
+    "on_track_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "variant": "body"
+      }
+    },
+    "on_track_1_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~30 entries/14d (new — cost-report joined cluster today, root-cause still open)",
+        "variant": "caption"
+      }
+    },
+    "on_track_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_2_title",
+        "on_track_2_details"
+      ]
+    },
+    "on_track_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "Stuck skills",
+        "variant": "body"
+      }
+    },
+    "on_track_2_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~13 entries/14d (↑ improving from BLOCKED — deal-flow + fork-cohort + token-alert all recovered)",
+        "variant": "caption"
+      }
+    },
+    "on_track_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_3_title",
+        "on_track_3_details"
+      ]
+    },
+    "on_track_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness FRESHNESS_WARN",
+        "variant": "body"
+      }
+    },
+    "on_track_3_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~12 entries/14d (new — fingerprint unchanged since 6-21, re-emit 6-28 if unresolved)",
+        "variant": "caption"
+      }
+    },
+    "on_track_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_4_title",
+        "on_track_4_details"
+      ]
+    },
+    "on_track_4_title": {
+      "type": "Text",
+      "props": {
+        "text": "BTC hard levels",
+        "variant": "body"
+      }
+    },
+    "on_track_4_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~20 entries/14d (→ flat — btc-levels ran 5x today, no breakdown)",
+        "variant": "caption"
+      }
+    },
+    "done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done_heading",
+        "done_items"
+      ]
+    },
+    "done_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h3"
+      }
+    },
+    "done_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done_1"
+      ]
+    },
+    "done_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done_1_title",
+        "done_1_details"
+      ]
+    },
+    "done_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "PR backlog",
+        "variant": "body"
+      }
+    },
+    "done_1_details": {
+      "type": "Text",
+      "props": {
+        "text": "completed 2026-06-21",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok(empty), cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,19 +1,22 @@
-*Goal Tracker — 2026-06-21*
+*Goal Tracker — 2026-06-22*
 
-Summary: 5 goals — 0 at risk, 0 needs attention, 1 on track, 3 blocked, 1 done (overall ↑ improving)
+Summary: 7 active goals — 0 at risk, 0 needs attention, 4 on track, 3 blocked, 1 done (overall ↑ improving — stuck-skills recovered from BLOCKED)
 
 BLOCKED
-• XAI quota recovery — operator top-up pending since 6-16; 14 activity/14d (was BLOCKED ↑ improving, count 3→14)
-  → Action: nudge operator to top up Team 3a8b4c1e XAI credits or wait monthly reset (10+ skills blocked).
-• Operator-gated monitors — 5 wallets seeded 6-21 but defi-monitor still NO_CONFIG and on-chain-monitor degraded (Etherscan free-tier blocks Base); 13 activity/14d (was BLOCKED → flat)
-  → Action: add pool/position entries to memory/on-chain-watches.yml and set ETHERSCAN_API_KEY.
-• Stuck skills — deal-flow stuck 13d, fork-cohort 7d (2nd consecutive Sunday miss), token-alert newly stuck 6-21; 12 activity/14d (new combined goal)
-  → Action: manually dispatch deal-flow and debug fork-cohort Sunday-cron failure pattern.
+• XAI quota recovery — 0d idle, ~14 entries/14d (→ flat, blocked since 6-16)
+  → Action: operator top up Team 3a8b4c1e XAI billing
+• Operator action: on-chain config completion — 0d idle, ~8 entries/14d (new)
+  → Action: operator set ALCHEMY_API_KEY (non-empty) and add pool/position entries to memory/on-chain-watches.yml
+• Operator-gated monitors — 0d idle, ~13 entries/14d (→ flat)
+  → Action: operator set ETHERSCAN_API_KEY for Base, seed defi-monitor pool/position rows
 
 ON TRACK
-• BTC hard levels — 0d idle, 13 activity/14d (new) — spot $64,021, both reclaim flags triggered, no breakdown alerts
+• Sandbox-truncation systemic — 0d idle, ~30 entries/14d (new — cost-report joined cluster today, root-cause still open)
+• Stuck skills — 0d idle, ~13 entries/14d (↑ improving from BLOCKED — deal-flow + fork-cohort + token-alert all recovered)
+• skill-freshness FRESHNESS_WARN — 0d idle, ~12 entries/14d (new — fingerprint unchanged since 6-21, re-emit 6-28 if unresolved)
+• BTC hard levels — 0d idle, ~20 entries/14d (→ flat — btc-levels ran 5x today, no breakdown)
 
 DONE
-• PR backlog — completed 2026-06-21 (#112 skill-graph docs + #122 self-improve fix both merged)
+• PR backlog — completed 2026-06-21
 
-Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
+Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok(empty), cron-state=ok

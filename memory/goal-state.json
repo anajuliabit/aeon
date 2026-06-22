@@ -1,35 +1,53 @@
 {
-  "run_at": "2026-06-21T18:55:00Z",
+  "run_at": "2026-06-22T19:10:00Z",
   "goals": {
+    "sandbox-truncation-systemic": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 30,
+      "last_activity_date": "2026-06-22",
+      "note": "cost-report joined ISS-019/020/021/024 cluster today (cf=3, output_tokens=0); 22-24 chronic-failure tail unchanged. Investigation active, no durable fix shipped"
+    },
     "xai-quota-recovery": {
       "status": "BLOCKED",
       "activity_count_14d": 14,
-      "last_activity_date": "2026-06-21",
-      "note": "Operator top-up pending since 2026-06-16; XAI-dependent skills still routing to WebSearch fallback"
+      "last_activity_date": "2026-06-22",
+      "note": "Team 3a8b4c1e exhausted since 2026-06-16; WebSearch fallback holding (daily-routine 08:38Z xai=skipped(quota)); no top-up signal from operator"
+    },
+    "operator-on-chain-config-completion": {
+      "status": "BLOCKED",
+      "activity_count_14d": 8,
+      "last_activity_date": "2026-06-22",
+      "note": "on-chain-monitor 12:47Z probed keys: ALCHEMY_API_KEY length=0, ETHERSCAN_API_KEY unset. defi-monitor recovered with empty pool/position list but still NO_CONFIG semantically"
+    },
+    "stuck-skills": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 13,
+      "last_activity_date": "2026-06-22",
+      "note": "deal-flow ran clean today (8 deals kept, DEAL_FLOW_OK), token-alert recovered 12:39Z (ISS-023 closed), fork-cohort recovered 2026-06-21 (Sunday cycle clean). Chronic tail remains but ladders to sandbox-truncation goal"
+    },
+    "skill-freshness-warn": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 12,
+      "last_activity_date": "2026-06-22",
+      "note": "skill-freshness ran today, FRESHNESS_NO_CHANGE (fingerprint d522755e unchanged since 6-21T14:39Z, articles/skill-analytics-*.md 288h/12d old). Next re-emit 2026-06-28 if unresolved"
+    },
+    "btc-hard-levels": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 20,
+      "last_activity_date": "2026-06-22",
+      "note": "btc-levels ran 5x today (02:45/04:20/08:33/12:37/16:16Z); spot $64,659 close 6-21 $63,231; both reclaim flags still set, no breakdown triggered"
     },
     "operator-gated-monitors": {
       "status": "BLOCKED",
       "activity_count_14d": 13,
-      "last_activity_date": "2026-06-21",
-      "note": "Partial seed (5 wallets) on 2026-06-21; defi-monitor still NO_CONFIG (needs pool/position entries); on-chain-monitor needs ETHERSCAN_API_KEY for Base"
-    },
-    "stuck-skills": {
-      "status": "BLOCKED",
-      "activity_count_14d": 12,
-      "last_activity_date": "2026-06-21",
-      "note": "deal-flow stuck 13d, fork-cohort stuck 7d (2nd consecutive Sunday miss), token-alert newly stuck 2026-06-21 mid-dispatch"
+      "last_activity_date": "2026-06-22",
+      "note": "on-chain-monitor running keyless (Blockscout v2) but degraded — 0 events in 2400-block Base window across 5 wallets; defi-monitor still NO_CONFIG (no pool/position entries). Operator gate unchanged from 6-21"
     },
     "pr-backlog": {
       "status": "DONE",
       "activity_count_14d": 13,
       "last_activity_date": "2026-06-21",
-      "note": "PR #112 and #122 both merged 2026-06-21"
-    },
-    "btc-hard-levels": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 13,
-      "last_activity_date": "2026-06-21",
-      "note": "btc-levels ran twice on 2026-06-21 (13:09Z + 16:51Z); both reclaim flags still triggered; no breakdown/leverage-review alerts"
+      "note": "PR #112 + #122 + #127 merged 6-21; no open PRs at 14:37Z heartbeat. Goal closed in Completed Goals section"
     }
   }
 }
