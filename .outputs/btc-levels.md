@@ -1,13 +1,14 @@
 ## Summary
 
-**btc-levels** ran at 12:37Z — quiet run, no alerts fired.
+**btc-levels run — 2026-06-22 ~16:16 UTC**
 
-| Check | Value | Result |
-|---|---|---|
-| Spot | $64,888.72 | — |
-| 2026-06-21 daily close | $63,231.87 | ≥ $60,500, no breakdown |
-| Leverage-review (≤ $45k) | $64,888.72 | Well above, no trigger |
-| Reclaim $63,500 | Already alerted; re-arm needs < $60,500 | No change |
-| Reclaim $65,900 | Spot < $65,900; flag already set | No change |
+| | |
+|---|---|
+| Spot | $64,659 |
+| 2026-06-21 daily close | $63,232 |
+| Leverage-review trigger (≤$45k) | clear |
+| Breakdown alert (close < $60.5k) | clear |
+| Reclaim $63,500 | already alerted |
+| Reclaim $65,900 | armed (spot < $65,900; re-arm fires at < $60,500) |
 
-State updated (`lastSpot` $64,888.72), log appended, committed. No notification sent.
+No alerts fired — quiet run. State and log committed to `main`.
