@@ -1,4 +1,21 @@
-🔴 Heartbeat 15:22 UTC — DEGRADED.
-🔴 STUCK: token-alert (96min, last_dispatch 13:45 UTC; cf=2), deal-flow (13d), fork-cohort (7d).
-🔴 CHRONIC: 24 enabled skills now sub-50% success (was 11 on 6-19) — long-tail expanding from sandbox/quota churn; worst: reg-monitor 7%, vuln-scanner 7%, skill-analytics 9%, security-digest 16%.
-🟡 STATUS_PAGE: docs/status.md regenerated (last refresh 6-19, 2d stale). No open PRs, no urgent issues, no token-report article → Token Pulse omitted.
+## Summary
+
+Ran the heartbeat skill at 2026-06-22 08:33 UTC.
+
+**Overall:** 🔴 DEGRADED · STATUS_PAGE=DEGRADED
+
+**P0 findings (all dedup-blocked, no notify sent):**
+- `token-alert` stuck mid-dispatch since 2026-06-21T13:45Z (~19h) — ISS-023
+- `deal-flow` stuck since 2026-06-08 (~14d)
+- `chain:investment-advisor` last_status=failed (2026-06-08, long-standing)
+- 24 chronic-failure skills (success_rate < 0.5) — same sandbox-truncation cluster ISS-019/020/021/024
+
+**Self-check:** heartbeat last_success 12.5h ago — healthy.
+
+**Delta vs 2026-06-21 15:22Z heartbeat:** `fork-cohort` recovered (Sunday cycle ran clean, 100% sr).
+
+**Files modified:**
+- `docs/status.md` — regenerated (overall DEGRADED, 13 open issues, 44 enabled skills tracked, 3 never-run, token-pulse section omitted because no `articles/token-report-*.md` exists)
+- `memory/logs/2026-06-22.md` — appended heartbeat log entry
+
+**Follow-up:** None new — all blockers (sandbox-truncation systemic, XAI quota, operator on-chain config) tracked in MEMORY.md goals and awaiting operator action.

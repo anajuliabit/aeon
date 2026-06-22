@@ -1,0 +1,199 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse",
+        "description": "2026-06-21 21:00Z"
+      },
+      "children": [
+        "heading_crypto",
+        "stack_crypto",
+        "sep_1",
+        "heading_tradfi",
+        "stack_tradfi",
+        "sep_2",
+        "heading_new",
+        "stack_new",
+        "sep_3",
+        "heading_bridge",
+        "stack_bridge"
+      ]
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "stack_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_btc",
+        "text_eigenlink",
+        "text_altcoin"
+      ]
+    },
+    "text_btc": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $64K, F&G 23. 44-day negative Coinbase premium — US institutional demand gone."
+      }
+    },
+    "text_eigenlink": {
+      "type": "Text",
+      "props": {
+        "text": "EigenLayer Darkbloom AI pivot + LINK DTCC integration. protocol-level narratives leading."
+      }
+    },
+    "text_altcoin": {
+      "type": "Text",
+      "props": {
+        "text": "Altcoin rotation: select tokens at yearly highs. Arcium TGE, TCG, DeFi yield pulling flow."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "stack_tradfi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_warsh",
+        "text_semi",
+        "text_iran"
+      ]
+    },
+    "text_warsh": {
+      "type": "Text",
+      "props": {
+        "text": "Warsh hawkish: near-term cuts removed. carry trade into dollar assets."
+      }
+    },
+    "text_semi": {
+      "type": "Text",
+      "props": {
+        "text": "Semiconductor inflows → Nasdaq → on-chain AI infrastructure. new capital pathway."
+      }
+    },
+    "text_iran": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran MOU progress. Hormuz tail risk easing. VIX compresses, short-vol opens."
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "stack_new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_new_protocols",
+        "text_new_premium",
+        "text_new_solana",
+        "text_new_mou"
+      ]
+    },
+    "text_new_protocols": {
+      "type": "Text",
+      "props": {
+        "text": "EigenLayer Darkbloom (AI pivot), LINK DTCC, Arcium TGE — all new"
+      }
+    },
+    "text_new_premium": {
+      "type": "Text",
+      "props": {
+        "text": "44-day negative premium specific metric"
+      }
+    },
+    "text_new_solana": {
+      "type": "Text",
+      "props": {
+        "text": "Solana KOL shilling flagged by AIXBT — skepticism on the bottom narrative"
+      }
+    },
+    "text_new_mou": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran MOU: waterway risk partially resolved"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "stack_bridge": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_bridge_flow",
+        "text_bridge_vix",
+        "text_bridge_solana"
+      ]
+    },
+    "text_bridge_flow": {
+      "type": "Text",
+      "props": {
+        "text": "Warsh kills rate cuts; semiconductors route TradFi AI money into EigenLayer and Arcium — not BTC."
+      }
+    },
+    "text_bridge_vix": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran MOU → VIX compression → crypto gets the risk-on beta, but the MOU is preliminary."
+      }
+    },
+    "text_bridge_solana": {
+      "type": "Text",
+      "props": {
+        "text": "Solana bottom is being manufactured; 9 red candles + coordinated KOL calls is the setup, not the signal."
+      }
+    }
+  }
+}

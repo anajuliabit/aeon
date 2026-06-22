@@ -1,0 +1,442 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-21",
+        "description": "heavy ship day — 2 PRs filed + fork-cohort cold-started; fleet stayed red, token-alert stuck >7h unresolved."
+      },
+      "children": [
+        "section_headlines",
+        "sep1",
+        "section_notable",
+        "sep2",
+        "section_decisions",
+        "sep3",
+        "section_blockers",
+        "sep4",
+        "section_footer"
+      ]
+    },
+    "section_headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_title",
+        "headline_1",
+        "headline_2",
+        "headline_3",
+        "headline_4",
+        "headline_5"
+      ]
+    },
+    "h_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — PR #130 opened: drop disabled monitor-polymarket eval (ISS-022)",
+        "href": "https://github.com/anajuliabit/aeon/pull/130",
+        "source": "GitHub"
+      }
+    },
+    "headline_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-graph — PR #129 opened: RETIRED_SKILLS -4, SHARED_STATE_EDGES 195→9",
+        "href": "https://github.com/anajuliabit/aeon/pull/129",
+        "source": "GitHub"
+      }
+    },
+    "headline_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fork-cohort — first run shipped: 186 forks, 32 power/active",
+        "href": "articles/fork-cohort-2026-06-21.md"
+      }
+    },
+    "headline_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-evals — REGRESSED: 3 new fails, ISS-022/023/024 filed, coverage 24%→32%",
+        "href": "memory/issues/ISS-024.md"
+      }
+    },
+    "headline_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness — FRESHNESS_WARN: operator-scorecard dep 11d stale",
+        "href": "articles/skill-freshness-2026-06-21.md"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "n_title",
+        "notable_security",
+        "notable_tokens",
+        "notable_daily",
+        "notable_narrative",
+        "notable_market"
+      ]
+    },
+    "n_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_security": {
+      "type": "Alert",
+      "props": {
+        "title": "security-digest",
+        "message": "10-pkg npm malware wave + Langflow RCE+IDOR same-week double CVE; patch to 1.9.2",
+        "type": "warning"
+      }
+    },
+    "notable_tokens": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "token_title",
+        "token_aero",
+        "token_sol"
+      ]
+    },
+    "token_title": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick ×2 — both HIGH 7/10 staged"
+      }
+    },
+    "token_aero": {
+      "type": "Stat",
+      "props": {
+        "label": "AERO",
+        "value": "$0.54"
+      }
+    },
+    "token_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$73.47"
+      }
+    },
+    "notable_daily": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "daily_title",
+        "daily_lab",
+        "daily_paper",
+        "daily_note"
+      ]
+    },
+    "daily_title": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine"
+      }
+    },
+    "daily_lab": {
+      "type": "Stat",
+      "props": {
+        "label": "LAB",
+        "value": "+26.9%",
+        "trend": "up"
+      }
+    },
+    "daily_paper": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ContextRL paper arXiv 2606.17053",
+        "href": "https://arxiv.org/abs/2606.17053",
+        "source": "arXiv"
+      }
+    },
+    "daily_note": {
+      "type": "Text",
+      "props": {
+        "text": "tweet-roundup via WebSearch fallback",
+        "variant": "caption"
+      }
+    },
+    "notable_narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "narrative_title",
+        "narrative_actionable",
+        "narrative_frontrun",
+        "narrative_reflexivity"
+      ]
+    },
+    "narrative_title": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker"
+      }
+    },
+    "narrative_actionable": {
+      "type": "Stat",
+      "props": {
+        "label": "Actionable items",
+        "value": "15"
+      }
+    },
+    "narrative_frontrun": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "narrative_frontrun_title",
+        "narrative_frontrun_badges"
+      ]
+    },
+    "narrative_frontrun_title": {
+      "type": "Text",
+      "props": {
+        "text": "FRONT-RUN themes:",
+        "variant": "caption"
+      }
+    },
+    "narrative_frontrun_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_ai_rwa",
+        "badge_ai_compute"
+      ]
+    },
+    "badge_ai_rwa": {
+      "type": "Badge",
+      "props": {
+        "text": "AI×RWA",
+        "variant": "outline"
+      }
+    },
+    "badge_ai_compute": {
+      "type": "Badge",
+      "props": {
+        "text": "Onchain AI×Compute",
+        "variant": "outline"
+      }
+    },
+    "narrative_reflexivity": {
+      "type": "Stat",
+      "props": {
+        "label": "Reflexivity flags",
+        "value": "3"
+      }
+    },
+    "notable_market": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "market_title",
+        "market_breadth",
+        "market_recovery",
+        "market_catalyst"
+      ]
+    },
+    "market_title": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh ×2"
+      }
+    },
+    "market_breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "14/20",
+        "delta": "+7"
+      }
+    },
+    "market_recovery": {
+      "type": "Badge",
+      "props": {
+        "text": "risk-on recovery",
+        "variant": "secondary"
+      }
+    },
+    "market_catalyst": {
+      "type": "Text",
+      "props": {
+        "text": "BoJ 6-25 next catalyst",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d_title",
+        "decision_1",
+        "decision_2",
+        "decision_3"
+      ]
+    },
+    "d_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision_1": {
+      "type": "Alert",
+      "props": {
+        "title": "Merge PRs",
+        "message": "PR #129 + #130 (both ~4h old, no blockers flagged)",
+        "type": "info"
+      }
+    },
+    "decision_2": {
+      "type": "Alert",
+      "props": {
+        "title": "Investigate token-alert",
+        "message": "stuck dispatched since 13:45Z (>7h elapsed, ISS-023 filed)",
+        "type": "warning"
+      }
+    },
+    "decision_3": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator action",
+        "message": "Set ALCHEMY_API_KEY or ETHERSCAN_API_KEY to unblock Base on-chain coverage",
+        "type": "info"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_blockers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "b_title",
+        "blocker_1",
+        "blocker_2"
+      ]
+    },
+    "b_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker_1": {
+      "type": "Alert",
+      "props": {
+        "title": "token-alert",
+        "message": "dispatched 13:45Z, cf=2, no completion · ISS-023",
+        "type": "error"
+      }
+    },
+    "blocker_2": {
+      "type": "Alert",
+      "props": {
+        "title": "deal-flow",
+        "message": "stuck dispatched 13d, no change",
+        "type": "error"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_collapsed",
+        "footer_sources"
+      ]
+    },
+    "footer_collapsed": {
+      "type": "Text",
+      "props": {
+        "text": "+27 routine runs collapsed",
+        "variant": "caption"
+      }
+    },
+    "footer_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_log",
+        "badge_cron"
+      ]
+    },
+    "badge_log": {
+      "type": "Badge",
+      "props": {
+        "text": "log=ok",
+        "variant": "secondary"
+      }
+    },
+    "badge_cron": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "secondary"
+      }
+    }
+  }
+}

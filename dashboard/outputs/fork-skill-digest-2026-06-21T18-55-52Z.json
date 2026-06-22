@@ -1,0 +1,320 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest",
+        "description": "2026-06-21"
+      },
+      "children": [
+        "insight_top",
+        "sep1",
+        "stats_fleet",
+        "sep2",
+        "flip_section",
+        "sep3",
+        "consensus_section",
+        "sep4",
+        "new_skills_section",
+        "sep5",
+        "customizers_section",
+        "sep6",
+        "report_link"
+      ]
+    },
+    "insight_top": {
+      "type": "Alert",
+      "props": {
+        "title": "Fleet voting: search-skill as noise",
+        "message": "98 forks disable search-skill (upstream defaults on)",
+        "type": "info"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_active",
+        "stat_configured"
+      ]
+    },
+    "stat_active": {
+      "type": "Stat",
+      "props": {
+        "label": "Active forks scanned",
+        "value": "107"
+      }
+    },
+    "stat_configured": {
+      "type": "Stat",
+      "props": {
+        "label": "Configured",
+        "value": "103"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "flip_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "flip_heading",
+        "flip_table"
+      ]
+    },
+    "flip_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 Disabled Skills",
+        "level": "h3"
+      }
+    },
+    "flip_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Forks",
+          "%"
+        ],
+        "rows": [
+          [
+            "search-skill",
+            "98",
+            "95%"
+          ],
+          [
+            "security-digest",
+            "98",
+            "95%"
+          ],
+          [
+            "action-converter",
+            "98",
+            "95%"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "consensus_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "consensus_heading",
+        "consensus_item"
+      ]
+    },
+    "consensus_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Model Consensus",
+        "level": "h3"
+      }
+    },
+    "consensus_item": {
+      "type": "Text",
+      "props": {
+        "text": "competitor-launch-radar → claude-sonnet-4-6 (65 forks)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new_skills_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_skills_heading",
+        "new_skills_list"
+      ]
+    },
+    "new_skills_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Fork-Only Skills This Week",
+        "level": "h3"
+      }
+    },
+    "new_skills_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill1",
+        "skill2",
+        "skill3",
+        "skill4",
+        "skill5",
+        "skill6",
+        "skill7"
+      ]
+    },
+    "skill1": {
+      "type": "Badge",
+      "props": {
+        "text": "chxoky/chart-request",
+        "variant": "default"
+      }
+    },
+    "skill2": {
+      "type": "Badge",
+      "props": {
+        "text": "ether-btc/github-upstream-tracker",
+        "variant": "default"
+      }
+    },
+    "skill3": {
+      "type": "Badge",
+      "props": {
+        "text": "tomscaria/+5 skills",
+        "variant": "default"
+      }
+    },
+    "skill4": {
+      "type": "Badge",
+      "props": {
+        "text": "sparkleware/+2 skills",
+        "variant": "default"
+      }
+    },
+    "skill5": {
+      "type": "Badge",
+      "props": {
+        "text": "modelcollapse/+15 security tools",
+        "variant": "default"
+      }
+    },
+    "skill6": {
+      "type": "Badge",
+      "props": {
+        "text": "damo-nu11/mine-bean (activated)",
+        "variant": "secondary"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "customizers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "customizers_heading",
+        "customizer1",
+        "customizer2"
+      ]
+    },
+    "customizers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Heaviest Customizers",
+        "level": "h3"
+      }
+    },
+    "customizer1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_customizer1",
+        "text_customizer1"
+      ]
+    },
+    "badge_customizer1": {
+      "type": "Badge",
+      "props": {
+        "text": "modelcollapse/aeon",
+        "variant": "default"
+      }
+    },
+    "text_customizer1": {
+      "type": "Text",
+      "props": {
+        "text": "~150 overrides (fork-only)",
+        "variant": "muted"
+      }
+    },
+    "customizer2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_customizer2",
+        "text_customizer2"
+      ]
+    },
+    "badge_customizer2": {
+      "type": "Badge",
+      "props": {
+        "text": "tomscaria/aeon (new entrant)",
+        "variant": "outline"
+      }
+    },
+    "text_customizer2": {
+      "type": "Text",
+      "props": {
+        "text": "~65 overrides (mixed crypto+dev)",
+        "variant": "muted"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report: Fork Skill Digest",
+        "href": "https://github.com/aeonframework/aeon/blob/main/articles/fork-skill-digest-2026-06-21.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

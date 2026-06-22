@@ -1,19 +1,18 @@
-*Fork Skill Digest — 2026-06-14*
-117 forks disable search-skill (upstream defaults on) — fleet is voting it as noise
+*Fork Skill Digest — 2026-06-21*
+98 forks disable search-skill (upstream defaults on) — fleet is voting it as noise
 
-Scanned 124 active forks of aaronjmars/aeon; 123 are configured.
+scanned 107 active forks; 103 configured.
 
-Flip disable (upstream on → fleet off):
-- search-skill — 117 forks (95%)
-- security-digest — 117 forks (95%)
-- action-converter — 117 forks (95%)
-+ 38 more skills at 76-95% disable rate
+flip disable (top 3):
+- search-skill — 98 forks (95%)
+- security-digest — 98 forks (95%)
+- action-converter — 98 forks (95%)
 
-Model consensus:
-- competitor-launch-radar → claude-sonnet-4-6 (78 forks, 63%)
+model consensus:
+- competitor-launch-radar → claude-sonnet-4-6 (65 forks)
 
-157 unique fork-only skills across fleet (notable: polymarket-thesis, rug-scan, atlas, mine-bean).
+new fork-only skills this week: chxoky/chart-request, ether-btc/github-upstream-tracker, tomscaria/+5 skills, sparkleware/+2 skills, modelcollapse/+15 security tools. damo-nu11/mine-bean activated (was disabled).
 
-Heaviest customizer: modelcollapse/aeon (134 overrides, fork-only)
+heaviest customizer: modelcollapse/aeon (~150 overrides, fork-only). new entrant: tomscaria/aeon (~65 overrides, mixed crypto+dev).
 
-Full report: https://github.com/anajuliabit/aeon/blob/main/articles/fork-skill-digest-2026-06-14.md
+full report: https://github.com/aeonframework/aeon/blob/main/articles/fork-skill-digest-2026-06-21.md

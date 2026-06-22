@@ -1,0 +1,94 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-06-21",
+        "description": "quiet builder day. two craft posts — harness discipline and pipeline observability — no drama."
+      },
+      "children": [
+        "separator_1",
+        "heading_craft",
+        "stack_posts"
+      ]
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_craft": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent infra craft",
+        "level": "h2"
+      }
+    },
+    "stack_posts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "post_milton_container",
+        "post_michael_container"
+      ]
+    },
+    "post_milton_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post_milton_card",
+        "post_milton_link"
+      ]
+    },
+    "post_milton_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Milton Heyan",
+        "handle": "miltonheyan",
+        "text": "agents are a system you maintain, not a chatbot you prompt. skills and MCP servers only 10x behind a harness that enforces them."
+      }
+    },
+    "post_milton_link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/miltonheyan/status/2068483665265643955"
+      }
+    },
+    "post_michael_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post_michael_card",
+        "post_michael_link"
+      ]
+    },
+    "post_michael_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Michael Hutu",
+        "handle": "MichaelHutu",
+        "text": "viewllm: html report of what the LLM actually rendered, instead of digging through raw logs. plugs the agentic-pipeline visibility gap."
+      }
+    },
+    "post_michael_link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/MichaelHutu/status/2068483833788289362"
+      }
+    }
+  }
+}

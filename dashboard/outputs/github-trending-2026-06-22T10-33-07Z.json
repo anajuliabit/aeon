@@ -1,0 +1,236 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-22"
+      },
+      "children": [
+        "text_quiet",
+        "sep1",
+        "stack_yesterday",
+        "sep2",
+        "stack_momentum",
+        "sep3",
+        "text_sources"
+      ]
+    },
+    "text_quiet": {
+      "type": "Text",
+      "props": {
+        "text": "quiet day, nothing above the noise floor."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_yesterday",
+        "text_rerun_desc",
+        "grid_yesterday_repos"
+      ]
+    },
+    "heading_yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Yesterday's rerun",
+        "level": "h3"
+      }
+    },
+    "text_rerun_desc": {
+      "type": "Text",
+      "props": {
+        "text": "These repos are still on top (already featured 6-21). No fresh repos cleared the \"why notable\" gate today."
+      }
+    },
+    "grid_yesterday_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_palmier_pro",
+        "link_openmontage",
+        "link_deer_flow",
+        "link_codebase_memory",
+        "link_cognee",
+        "link_turso"
+      ]
+    },
+    "link_palmier_pro": {
+      "type": "StoryLink",
+      "props": {
+        "title": "palmier-pro",
+        "href": "https://github.com/palmier-io/palmier-pro",
+        "source": "GitHub"
+      }
+    },
+    "link_openmontage": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OpenMontage",
+        "href": "https://github.com/OpenMontage/OpenMontage",
+        "source": "GitHub"
+      }
+    },
+    "link_deer_flow": {
+      "type": "StoryLink",
+      "props": {
+        "title": "deer-flow",
+        "href": "https://github.com/deer-flow/deer-flow",
+        "source": "GitHub"
+      }
+    },
+    "link_codebase_memory": {
+      "type": "StoryLink",
+      "props": {
+        "title": "codebase-memory-mcp",
+        "href": "https://github.com/DeusData/codebase-memory-mcp",
+        "source": "GitHub"
+      }
+    },
+    "link_cognee": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cognee",
+        "href": "https://github.com/cognee/cognee",
+        "source": "GitHub"
+      }
+    },
+    "link_turso": {
+      "type": "StoryLink",
+      "props": {
+        "title": "turso",
+        "href": "https://github.com/tursodatabase/turso",
+        "source": "GitHub"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_momentum": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_momentum",
+        "text_momentum_desc",
+        "repo_palmier",
+        "repo_memory"
+      ]
+    },
+    "heading_momentum": {
+      "type": "Heading",
+      "props": {
+        "text": "Ongoing momentum",
+        "level": "h3"
+      }
+    },
+    "text_momentum_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Repos still accelerating from yesterday's slate (no re-feature)."
+      }
+    },
+    "repo_palmier": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_palmier_full",
+        "stat_palmier_today",
+        "stat_palmier_total"
+      ]
+    },
+    "link_palmier_full": {
+      "type": "StoryLink",
+      "props": {
+        "title": "palmier-io/palmier-pro",
+        "href": "https://github.com/palmier-io/palmier-pro",
+        "source": "GitHub"
+      }
+    },
+    "stat_palmier_today": {
+      "type": "Stat",
+      "props": {
+        "label": "stars today",
+        "value": "+1834",
+        "trend": "up"
+      }
+    },
+    "stat_palmier_total": {
+      "type": "Stat",
+      "props": {
+        "label": "total stars",
+        "value": "6.4k"
+      }
+    },
+    "repo_memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_memory_full",
+        "stat_memory_today",
+        "stat_memory_total"
+      ]
+    },
+    "link_memory_full": {
+      "type": "StoryLink",
+      "props": {
+        "title": "DeusData/codebase-memory-mcp",
+        "href": "https://github.com/DeusData/codebase-memory-mcp",
+        "source": "GitHub"
+      }
+    },
+    "stat_memory_today": {
+      "type": "Stat",
+      "props": {
+        "label": "stars today",
+        "value": "+1032",
+        "trend": "up"
+      }
+    },
+    "stat_memory_total": {
+      "type": "Stat",
+      "props": {
+        "label": "total stars",
+        "value": "10.9k"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=skipped · kept 0/15",
+        "variant": "caption"
+      }
+    }
+  }
+}

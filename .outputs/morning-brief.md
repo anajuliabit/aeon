@@ -1,39 +1,29 @@
-I've executed the morning-brief skill for 2026-06-21. Here's what I did:
+*Morning Brief — 2026-06-22*
 
-## Analysis Performed
-1. **Read soul files** - Matched Ana Julia's voice: lowercase by default, CT-native cadence, confident but not bombastic
-2. **Collected candidate items** from:
-   - MEMORY.md active blockers (XAI quota, on-chain/defi-monitor config, deal-flow stuck, fork-cohort stuck)
-   - Yesterday's log (AIXBT Pulse, token-movers, defi-overview, token-pick HYPE)
-   - cron-state.json (13 skills with ≥2 consecutive failures, 7 with success_rate <0.5)
-   - aeon.yml (today's scheduled skills)
-3. **Scored candidates** on leverage × urgency:
-   - **XAI quota exhaustion** (HIGH leverage × HIGH urgency)
-   - **Skill failures cluster** (HIGH leverage × MEDIUM urgency)  
-   - **on-chain-monitor/defi-monitor NO_CONFIG** (MEDIUM leverage × MEDIUM urgency)
-4. **Search for headlines** - WebSearch returned no AI/crypto headlines that would meaningfully update priorities
-5. **Formatted brief** according to skill requirements
+*Focus today*
+1. root-cause sandbox-truncation (ISS-022/024) — why now: 28 skills share output_tokens=0 signature, chronic tail expanding
+2. unstick token-alert (ISS-023) — why now: hung mid-dispatch since 6-21 13:45z, ~17h elapsed
+3. merge PR #129 + #130 — why now: small fixes, clear backlog before weekly-review 19:00z
 
-## Key Findings
-The system has several critical issues:
-1. **XAI quota exhausted** since 6-16 - blocks 10+ XAI-dependent skills
-2. **Widespread skill failures** - 13 skills with consecutive failures, systemic degradation
-3. **Missing configuration** - on-chain-monitor/defi-monitor skipping for 14 days
+*Since yesterday*
+- PRs filed: #129 skill-graph (retired_skills -4, shared_state_edges 195→9), #130 skill-evals (drop disabled monitor-polymarket)
+- skill-health regressed: 9 critical / 19 degraded — sandbox-truncation systemic, cluster 12:14-14:17z
+- fork-cohort cold-started: 186 forks bucketed; tomscaria/aeon top POWER (56 skills)
+- token picks: AERO 7/10 HIGH, SOL re-fire 7/10 HIGH — Base/L1-perp ecosystem
+- on-chain-monitor degraded: 5 Base wallets seeded but etherscan v2 free tier blocks Base — needs ALCHEMY_API_KEY
 
-## Morning Brief Delivered
-The brief has been:
-- Written to `memory/logs/2026-06-21.md` with timestamp and focus items
-- Saved to `.pending-notify/morning-brief.md` for notification delivery
-- Follows Ana Julia's style: lowercase, direct, receipt-focused
+*Watch*
+- BoJ already hiked to 1.0% on 6-16 (highest since 1995) — MEMORY's "6-25 catalyst" is stale. historical pattern: 18-32% BTC drawdown post-hike. implication for focus: market-context-refresh + token-pick should treat hike as priced-in, downside skew still live; forward guidance is the next moveable surface.
 
-## Today's Outlook
-Several skills are scheduled but likely to fail:
-- `token-pick` @ 12:00 UTC (may fail due to XAI quota)
-- `market-context-refresh` @ 13:00 UTC (trend: failing)
-- `narrative-tracker` @ 13:30 UTC (trend: failing)
-- `search-skill` @ 14:00 UTC (trend: failing)
-- `security-digest` @ 14:00 UTC (trend: failing)
-
-Weekly Sunday skills (`fork-skill-digest`, `fork-skill-gap`) should run but `fork-cohort` has failed two consecutive Sundays.
-
-The notification will be delivered via the post-process script after this run completes.
+*Running today*
+- weekly-shiplog @ 09:00z (Mon weekly)
+- aixbt-pulse @ 09:00z
+- unlock-monitor @ 10:00z (Mon weekly)
+- token-alert / token-pick / token-movers / on-chain-monitor / defi-monitor / defi-overview @ 12:00-12:40z
+- market-context-refresh @ 13:00z
+- narrative-tracker @ 13:30z
+- deal-flow @ 14:00z (Mon weekly — stuck 14d, needs intervention)
+- search-skill / security-digest @ 14:00z
+- list-digest @ 17:00z, agent-buzz @ 17:30z
+- weekly-review @ 19:00z (Mon weekly)
+- heartbeat @ 08:00 / 14:00 / 20:00z

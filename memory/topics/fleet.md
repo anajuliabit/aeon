@@ -583,19 +583,28 @@ state: what was built, recurring blockers, and health.
   seed.
 
 ## Recent Issues & Patterns (through 2026-06-21)
-- **ISS-019/020/021 filed** (6-19): Sandbox timeout/cost truncation patterns for `defi-overview`, `token-pick`, `search-skill`. These are critical failures but likely stemming from Claude weekly rate-limit exhaustion rather than inherent skill bugs.
-- **Weekly-limit wave 2026-06-12**: 4th occurrence of the ISS-018 pattern. Diagnostic split confirmed: 5 `FALLBACK_CG_SKILLS` succeeded via Virtuals fresh-fetch fallback; every non-fallback skill dispatched in same window HUNG. Pattern is provably weekly-cyclical.
-- **XAI quota exhausted** (6-16): Team 3a8b4c1e monthly credit limit hit → 10+ XAI-dependent skills blocked. Residual gap: non-reppo CI dailies outside `FALLBACK_CG_SKILLS` still exit 1 on weekly limit.
-- **on-chain-monitor / defi-monitor NO_CONFIG streak**: >14 consecutive days awaiting `memory/on-chain-watches.yml` seed.
-- **deal-flow stuck** since 6-08 (13 days).
-- **fork-cohort** 2nd consecutive Sunday weekly fail (6-14).
-- **PR #112 (skill-graph docs)** stalled ~6 days.
-- **PR #122 (self-improve fix)** <24h old.
-- **BTC levels**: Both reclaim 63,500 (6-11) and 65,900 (6-15) triggered. Daily close < $60,500 triggers downtrend continuation alert.
-- **Token alert activity**: REPPO ±15% trips (6-14 +18.93%, 6-16 -15.78%) demonstrate canonical watchlist sensitivity. GITLAWB -13.48% near-miss (6-17).
-- **AIXBT Pulse 6-20**: Grounded crypto + tradfi absent (11th+ consecutive), bridge call "AI rotation + STRC depeg = leverage unwind risk".
-- **Token picks**: Recent HYPE (6-20) $71.06 (+6.13% 24h), JTO (6-16) $0.87 (+36.4% 24h).
-- **defi-overview 6-20**: Mixed — volume collapse −31%, fees sliding −17%, capital in flux.
+- **Sandbox-truncation systemic** (6-19 → 6-21): ISS-019/020/021 (defi-overview, token-pick, search-skill) extended by ISS-022/023/024 (monitor-polymarket, token-alert, skill-health) — 8 skills critical / 19 degraded share `output_tokens=0` signature. Cluster timestamps 2026-06-21 12:14-14:17Z.
+- **Skill-health classification flipped 6-21**: From "41 healthy / 0 degraded" stable baseline (6-12 → 6-19) to **9 critical / 19 degraded / 3 warning / 2 no-data / 9 healthy**. systemic flag set. Caused by accumulating cron-state denominators while successes lag.
+- **Heartbeat chronic tail expanded 6-21**: 24 skills with success_rate < 0.5 (vs 11 on 6-19 baseline). Worst: reg-monitor 7%, vuln-scanner 7%, skill-analytics 9%, security-digest 16%, list-digest 22%.
+- **Token-alert NEW stuck mode (6-21 13:45Z)**: First time the skill hung mid-dispatch (`last_status=dispatched`, 96 min elapsed). Different failure mode from cron-tick miss.
+- **on-chain-monitor seeded but degraded** (6-21): Operator populated `memory/on-chain-watches.yml` with 5 Base wallets. Etherscan v2 keyless API blocks Base chain on free tier — `ON_CHAIN_DEGRADED` until `ALCHEMY_API_KEY` / `ETHERSCAN_API_KEY` set. CoinGecko ETH/USDC prices OK.
+- **defi-monitor still NO_CONFIG**: Watches file has only wallet entries. defi-monitor consumes `type: pool` / `type: position`. Needs pool/position contract addresses + ABIs seeded.
+- **PR backlog cleared**: 0 open PRs as of 6-21 15:22Z heartbeat. #112 + #122 + #127 all merged or closed since 6-19.
+- **Weekly-limit wave 2026-06-12**: 4th occurrence of the ISS-018 pattern. Diagnostic split confirmed: 5 `FALLBACK_CG_SKILLS` succeeded via Virtuals fresh-fetch fallback; non-fallback skills HUNG. Pattern is weekly-cyclical.
+- **XAI quota exhausted since 6-16**: Team 3a8b4c1e monthly credit limit. 10+ XAI-dependent skills blocked. As of 6-21 daily-routine: `tweet-roundup` working off WebSearch fallback successfully (no 400). `agent-buzz` 6-21 ran off XAI cache (`.xai-cache/agent-buzz.json`, fresh 14:37Z) — cache still warm despite quota.
+- **deal-flow stuck since 6-08** (13 days). **fork-cohort** stuck 7 days (2nd consecutive Sunday weekly fail).
+- **chain:investment-advisor** failed 6-08, off status table (dropped from `aeon.yml chains:`).
+- **PR #108 file-flag notify path** continues working durably across all standalone skills (no `.pending-notify/` carry-over).
+- **BTC levels**: Both reclaim 63,500 (6-11) and 65,900 (6-15) triggered. 6-21 spot range $63,986–$64,080, close $64,240. No alerts fired this week. Daily close < $60,500 still arms downtrend continuation alert.
+- **Token alert canonical watchlist**: REPPO ±15% trips (6-14 +18.93%, 6-16 -15.78%) → 6-19 consolidation -8.52% (no follow-through). GITLAWB downtrend through 6-19 ($0.00006304). WELL/MAMO stable.
+- **Recent token picks**: AERO (6-21 13:15Z) $0.5406 +10.19% HIGH 7/10 Base DEX play; SOL (6-21 13:50Z re-fire) $73.47 +8.46% 7d HIGH 7/10; HYPE (6-20) $71.06; JTO (6-16) $0.87 — all market legs skipped on Polymarket sports-heavy / dedup gates.
+- **Narrative tracker 6-21**: Consolidated to 15 actionable narratives (from 27 on 6-15). 2 FRONT-RUN (AI Agents × RWA, Onchain AI Agents × Compute), 6 RIDE, 5 WATCH, 1 FADE (L1-vs-AI wars), 1 IGNORE (Meme 3.0).
+- **AIXBT Pulse 6-21 13:00Z**: 5 NEW (MEV exploit, RWA sector growth, Hyperliquid OI, Fed explicit hold, waterway geopolitics). Clusters 46 tracked, ~250 chains indexed (both unchanged).
+- **market-context-refresh 6-21 18:47Z**: regime risk-on recovery (med conviction). BTC $63,986 +0.91%, ETH $1,721 +0.24% (weak relative). Breadth 14/20 green (recovery from 7/20 on 6-20). F&G 23 (Extreme Fear, flat). BoJ 6-25 guidance + Iran oil stability are next catalysts.
+- **defi-overview 6-21 14:30Z**: Mixed — TVL $58.3T flat, DEX vol $4.7B (-7.6% 1d, +26.6% 7d), 0 real/incentive yield pools cleared filters (`yields=fail`).
+- **search-skill 6-21**: Queried "github trending" (cron-state derived). Found duplicate of installed `github-trending`; no install. `SEARCH_SKILL_EMPTY`.
+- **skill-evals 6-21**: SKILL_EVALS_REGRESSED — 3 new fail / 0 fixed / 1 still failing / 10 stable. Coverage 14/44 (32%, ↑8pp).
+- **skill-freshness 6-21**: FRESHNESS_WARN — operator-scorecard depends on articles/skill-analytics-*.md (264h / 11d old, weekly 192h threshold).
 
 ## Infrastructure updates (since 6-17)
 - **PR #108 file-flag notify path** confirmed durable (6-15→6-16). Retires dominant sandbox fallback pattern (`./notify "$(cat ...)"`) across standalone skills.

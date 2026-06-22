@@ -1,0 +1,56 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_action",
+        "stack_meta"
+      ]
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "dropped disabled monitor-polymarket entry from skill-evals/evals.json"
+      }
+    },
+    "stack_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_issue",
+        "link_pr"
+      ]
+    },
+    "badge_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-022"
+      }
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #130",
+        "href": "https://github.com/anajuliabit/aeon/pull/130"
+      }
+    }
+  }
+}

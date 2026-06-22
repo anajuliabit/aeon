@@ -1,14 +1,10 @@
 ## Summary
 
-**btc-levels run — 2026-06-21T16:51Z**
-
-- **Spot:** $64,080.50
-- **Daily close (2026-06-20 UTC):** $64,240.23
-
-Level checks (all quiet):
-- Leverage review (≤$45k): no — spot is $64k, well clear
-- Breakdown (<$60,500 daily close): no — close is $64,240
-- Reclaim $63,500: flag already set (triggered on 6-11), not re-armed
-- Reclaim $65,900: flag already set (triggered on 6-15), spot below $65,900 but re-arm only on <$60,500
-
-**No alerts fired. No notification sent.** State updated (`lastDailyCloseDate` advanced from 2026-06-19 → 2026-06-20), committed.
+- **Spot:** $64,104.61 — well above all alert levels
+- **2026-06-21 close:** $63,231.87 — above $60,500 breakdown threshold
+- **Alerts fired:** none
+  - Leverage-review ($45k): not triggered
+  - Breakdown (<$60,500 close): not triggered
+  - Reclaim $63,500: already alerted (flag true), not re-armed
+  - Reclaim $65,900: not yet reached at current spot
+- State and log committed.

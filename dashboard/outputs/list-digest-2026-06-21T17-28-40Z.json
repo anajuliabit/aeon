@@ -1,0 +1,70 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-21",
+        "description": "one list tracked, one new signal: @hooeem's jaredfromsubway post-mortem; the day's other top posts (cyrilXBT's claude-prompt thread x3) already shipped yesterday."
+      },
+      "children": [
+        "separator-1",
+        "heading-list",
+        "tweet-stack",
+        "separator-2",
+        "status-info"
+      ]
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-list": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/DeFi/crypto-lore list",
+        "level": "h2"
+      }
+    },
+    "tweet-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "link-view"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "jaredfromsubway.eth, the sandwich bot that owned ~60% of eth blocks at peak, got drained for $15m on 20/06 via a dangling approval + fake arb routes. hunter→lunch arc; the lesson is on-chain hygiene, not edge.",
+        "likes": 83,
+        "retweets": 19
+      }
+    },
+    "link-view": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2068470822142881809"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status-info": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(1 fresh of 4)\nstatus: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

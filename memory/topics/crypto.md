@@ -289,6 +289,8 @@ narrative-and-pick layer.
 | 2026-06-14 | XPL | $0.0888 | HIGH 9 | Plasma One Visa Card launches next week — platinum/core/lite tiers require hold/lock XPL for cashback + stablecoin-spend yield; +27.8% 7d on vmc 0.45 (real turnover); 24h cooled to +0.9% = entry not chasing parabola. Risk: 6-25 unlock 88.89M XPL (~$7.5M ecosystem/growth) + 6-07 team transfer $9.64M = distribution overhang firing. Target $0.115 / inv $0.075 / 14d. Market: "Iran enrichment halt by 6-30?" NO 59.5¢ HIGH ~20pp edge (PBS 6-12 deal extends ceasefire but defers 15-20yr enrichment halt; Trump 6-12: "nuclear was not agreed"). **6-15 update: Hormuz peace deal landed (Polymarket YES 11%→93%) — Iran NO-pair thesis now faces a live de-escalation headwind; re-check the print** |
 | 2026-06-15 | NEAR | $2.47 | HIGH 10 | Near Protocol — dynamic resharding upgrade (v2.13, shipping June) auto-splits shards on demand; ~+27-30% on the news leg with ~$32M NEAR Intents fees + $19B cross-chain volume = real usage under the move. mcap $3.2B (rk31, not pumpable), vol $512M, vol/mcap 0.16, on CG trending, RS vs BTC(+4.7% 7d)/ETH(+7.7% 7d). Target $2.90 / inv $2.10 / 14d. ZRO scored higher (raw 11) but REJECTED — June-20 unlock 25.71M ZRO (~$29.4M / 2.57% supply, 5d out) on -20% 30d trend = FADE pattern. Market SKIPPED — Polymarket field ~entirely 2026 WC futures (efficient, no defensible edge ≥5pp) |
 | 2026-06-20 | HYPE | $71.06 | HIGH 8 | CoinGecko trending (+2), momentum both 24h/7d, outperforms BTC/ETH on 7d. Polymarket data stale (expired UK political futures); market SKIP. Risk: momentum exhaustion on macro risk-off; invalidate $62. |
+| 2026-06-21 | AERO | $0.5406 | HIGH 7 | Aerodrome Finance — Base DEX trending top-10 (score 10), momentum 24h+1, vol/mcap 0.128 (+1), both 24h/7d positive. Catalyst: Base ecosystem momentum from Solana/L1 rotation. Risk: narrative fade on macro downturn or ETH weakness; invalidate $0.48. Market: "Starmer out by June 30?" YES 91¢ vs fair ~4% — edge -86pp on YES (mispriced, only liquid via NO short, skipped per defensibility gate) |
+| 2026-06-21 (re-fire ~13:50Z) | SOL | $73.47 | HIGH 7 | Solana ecosystem structurally outperforming macro risk-off (SOL +8.46% 7d vs BTC -0.48%, ETH +2.88%). L1 perp infrastructure narrative rising; breadth collapse (7/20 green earlier) suggests rotation. Market SKIPPED (Starmer dedup-blocked from earlier pick; alternatives fail vol/edge gates) |
 
 ## Picks deliberately skipped (rubric validated post-hoc)
 - **LAB** (5-29 → 6-02) — scored 10-11/10 five days running but skipped
@@ -372,6 +374,23 @@ narrative-and-pick layer.
   REPPO vol $515K = 1.86× baseline (loud bid both directions this
   week, under 3× spike rail). Watchlist split: REPPO down hard, GITLAWB
   up firm, WELL/MAMO mild fade. 1 alert fired.
+- 2026-06-17: **GITLAWB -13.48% closest near-miss (1.52pp under 15% rail)** —
+  symmetric inverse of 6-16's +9.66% up-trip; gives back full bounce +
+  ~4pp more on 0.96× baseline vol (mechanical drift, not capitulation).
+  WELL +3.51%, MAMO -3.66%, REPPO -1.78% (no follow-through after 6-16's
+  down-trip). No alerts. 4 consecutive runs (6-14/6-15/6-16/6-17) of
+  GITLAWB inside the -15% to +9.66% wobble band.
+- 2026-06-18: skill caught in 14:29Z stuck batch (cron lag, dispatched but
+  no completion). No reading.
+- 2026-06-19: Watchlist all red, median -5.59%. WELL $0.00370202 -2.88%,
+  MAMO $0.00831451 -0.35%, REPPO $0.01716998 -8.52% (consolidation after
+  6-16 trip, no bounce-back), GITLAWB $0.00006304 **-10.61%** (continues
+  downtrend below 6-17's near-miss level; 2-day -15.98%). No 24h alerts
+  (GITLAWB 4.39pp under rail); no volume spikes. 0 alerts fired.
+- 2026-06-20 / 2026-06-21: skill firing inconsistently. 6-21 13:45Z
+  triggered "stuck" mid-dispatch (96 min `last_status=dispatched`,
+  first time this skill has hung mid-dispatch — new failure mode, filed
+  ISS-023 for missing_pattern).
 
 ## Bitcoin
 See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
