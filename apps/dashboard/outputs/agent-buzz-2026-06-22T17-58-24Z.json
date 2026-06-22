@@ -1,0 +1,177 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "2026-06-22 · thin day. two payment-rail pitches, two discovery/integration plumbings — no benchmarks, no drama."
+      },
+      "children": [
+        "heading_money",
+        "section_money",
+        "sep1",
+        "heading_tools",
+        "section_tools"
+      ]
+    },
+    "heading_money": {
+      "type": "Heading",
+      "props": {
+        "text": "Agents move money",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "section_money": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "group1",
+        "group2"
+      ]
+    },
+    "group1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "winsznx",
+        "handle": "@winsznx",
+        "text": "Shipped Custos at qvac hackathon: air-gapped agent reads invoices, verifies vs local ledger, stages USD₮ via Tether WDK."
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/winsznx/status/2068839413958738004"
+      },
+      "children": []
+    },
+    "group2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SublyFi",
+        "handle": "@SublyFi",
+        "text": "On-chain allowances agents draw from autonomously, operator-capped — pitched as the payment rail for the agent economy."
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/SublyFi/status/2068842165158166707"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_tools": {
+      "type": "Heading",
+      "props": {
+        "text": "Agents find tools",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "section_tools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "group3",
+        "group4"
+      ]
+    },
+    "group3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MerloOfficial",
+        "handle": "@MerloOfficial",
+        "text": "Goblinarinos agents now hit OpenSea over MCP — collection browse + NFT buys via chat, on-chain auditable."
+      },
+      "children": []
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/MerloOfficial/status/2068845727271338037"
+      },
+      "children": []
+    },
+    "group4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "link4"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SeoRobertson",
+        "handle": "@SeoRobertson",
+        "text": "Pitches Google's \"Agentic Resource Discovery\" as SEO-for-agents — claims agent-findability will matter like ranking does now."
+      },
+      "children": []
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/SeoRobertson/status/2068844889463496921"
+      },
+      "children": []
+    }
+  }
+}
