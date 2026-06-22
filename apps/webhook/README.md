@@ -19,7 +19,7 @@ poller doesn't reprocess the same message.
 ## Deploy
 
 ```bash
-cd worker
+cd apps/webhook
 npm install
 npx wrangler login        # one-time, opens browser
 npx wrangler deploy       # prints the *.workers.dev URL

@@ -26,8 +26,8 @@ import { spawnSync } from "child_process";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// mcp-server/dist/index.js → mcp-server/ → repo root
-const REPO_ROOT = join(__dirname, "..", "..");
+// apps/mcp-server/dist/index.js → apps/mcp-server/ → apps/ → repo root
+const REPO_ROOT = join(__dirname, "..", "..", "..");
 
 interface Skill {
   slug: string;

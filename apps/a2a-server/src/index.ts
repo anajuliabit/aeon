@@ -28,8 +28,8 @@ import { randomUUID } from "crypto";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// a2a-server/dist/index.js → a2a-server/ → repo root
-const REPO_ROOT = join(__dirname, "..", "..");
+// apps/a2a-server/dist/index.js → apps/a2a-server/ → apps/ → repo root
+const REPO_ROOT = join(__dirname, "..", "..", "..");
 const DEFAULT_PORT = parseInt(process.env.A2A_PORT ?? "41241", 10);
 const SERVER_URL = process.env.A2A_URL ?? `http://localhost:${DEFAULT_PORT}`;
 

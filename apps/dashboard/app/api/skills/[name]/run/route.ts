@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { execFileSync } from 'child_process'
 import { resolve } from 'path'
 
-const REPO_ROOT = resolve(process.cwd(), '..')
+const REPO_ROOT = resolve(process.cwd(), '..', '..')
 
 export async function POST(
   request: Request,

@@ -4,7 +4,7 @@ import { join, resolve } from 'path'
 const GITHUB_API = 'https://api.github.com'
 
 // Resolve the repo root (one level up from dashboard/)
-const REPO_ROOT = resolve(process.cwd(), '..')
+const REPO_ROOT = resolve(process.cwd(), '..', '..')
 
 function isLocal() {
   return !process.env.GITHUB_TOKEN || !process.env.GITHUB_REPO

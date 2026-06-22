@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { execFileSync, execSync } from 'child_process'
 import { resolve } from 'path'
 
-const REPO_ROOT = resolve(process.cwd(), '..')
+const REPO_ROOT = resolve(process.cwd(), '..', '..')
 
 function ghRepo(): string | null {
   try {

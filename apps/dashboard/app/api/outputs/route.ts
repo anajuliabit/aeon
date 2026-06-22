@@ -4,7 +4,7 @@ import { join, resolve } from 'path'
 import { execSync } from 'child_process'
 
 const OUTPUTS_DIR = join(process.cwd(), 'outputs')
-const REPO_ROOT = resolve(process.cwd(), '..')
+const REPO_ROOT = resolve(process.cwd(), '..', '..')
 
 export async function GET() {
   try {
