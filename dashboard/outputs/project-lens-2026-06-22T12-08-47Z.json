@@ -1,0 +1,49 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline",
+        "text",
+        "storylink"
+      ]
+    },
+    "headline": {
+      "type": "Heading",
+      "props": {
+        "text": "New Article: per-action approval doesn't survive the agent era",
+        "level": "h2"
+      }
+    },
+    "text": {
+      "type": "Text",
+      "props": {
+        "text": "every major ai agent product is shipping click-to-approve modals — and a 2026 review already named the failure mode hitl theater. the production stacks moving real money (sherwood's vault, the postprocess-picks seam in this repo) inverted the primitive years ago: default-approve in silence, slashable objection inside a window. same shape as optimistic rollups, denominated in bash instead of solidity.",
+        "variant": "body"
+      }
+    },
+    "storylink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "New Article: per-action approval doesn't survive the agent era",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/project-lens-2026-06-22.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
