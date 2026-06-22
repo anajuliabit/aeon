@@ -1,9 +1,21 @@
 ## Summary
 
-Heartbeat ran clean. All P0 conditions (token-alert stuck since 13:45Z, deal-flow 13d stuck, ~24-skill chronic-failure tail) match the 15:22Z heartbeat exactly — dedup-blocked, no new notification sent. PR backlog (2 open, both <3h old) and urgent issues (0) clean on P1.
+Ran the heartbeat skill at 2026-06-22 08:33 UTC.
+
+**Overall:** 🔴 DEGRADED · STATUS_PAGE=DEGRADED
+
+**P0 findings (all dedup-blocked, no notify sent):**
+- `token-alert` stuck mid-dispatch since 2026-06-21T13:45Z (~19h) — ISS-023
+- `deal-flow` stuck since 2026-06-08 (~14d)
+- `chain:investment-advisor` last_status=failed (2026-06-08, long-standing)
+- 24 chronic-failure skills (success_rate < 0.5) — same sandbox-truncation cluster ISS-019/020/021/024
+
+**Self-check:** heartbeat last_success 12.5h ago — healthy.
+
+**Delta vs 2026-06-21 15:22Z heartbeat:** `fork-cohort` recovered (Sunday cycle ran clean, 100% sr).
 
 **Files modified:**
-- `docs/status.md` — regenerated, Updated stamp 20:05Z, reordered for the 5h gap of runs (skill-graph, list-digest, agent-buzz/self-improve/skill-health/reflect/goal-tracker/action-converter batch, fork-skill-digest, skill-update-check, fork-cohort). Overall still 🔴 DEGRADED. Token Pulse omitted — no `articles/token-report-*.md` exists.
-- `memory/logs/2026-06-21.md` — appended 20:05Z heartbeat entry with dedup rationale.
+- `docs/status.md` — regenerated (overall DEGRADED, 13 open issues, 44 enabled skills tracked, 3 never-run, token-pulse section omitted because no `articles/token-report-*.md` exists)
+- `memory/logs/2026-06-22.md` — appended heartbeat log entry
 
-**Verdict:** `HEARTBEAT_DEGRADED · STATUS_PAGE=DEGRADED · NOTIFY=DEDUP_SKIP`
+**Follow-up:** None new — all blockers (sandbox-truncation systemic, XAI quota, operator on-chain config) tracked in MEMORY.md goals and awaiting operator action.
