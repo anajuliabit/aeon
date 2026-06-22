@@ -22,6 +22,7 @@
 .reppo-cache/
 .pending-reppo/
 .vc-cache/
+.cache-bs/
 
 # Skill provenance lock (per-repo, not committed)
 skills.lock
