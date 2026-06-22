@@ -1,0 +1,56 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review",
+        "description": "last 24h · 1 capture"
+      },
+      "children": [
+        "stats_stack",
+        "separator_1",
+        "action_text"
+      ]
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_aligned",
+        "stat_drift"
+      ]
+    },
+    "stat_aligned": {
+      "type": "Stat",
+      "props": {
+        "label": "aligned with priorities",
+        "value": "1"
+      }
+    },
+    "stat_drift": {
+      "type": "Stat",
+      "props": {
+        "label": "drift signals",
+        "value": "0"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_text": {
+      "type": "Text",
+      "props": {
+        "text": "reppo content idea sitting in the inbox — draft it receipts-first, kill the \"building you love\" frame before it lands inspirational.",
+        "variant": "body"
+      }
+    }
+  }
+}
