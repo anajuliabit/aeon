@@ -1,35 +1,17 @@
-I've executed the token-alert skill for June 20, 2026. Here's what was done:
-
 ## Summary
 
-### 📊 Price Check Completed
-- **WELL (moonwell-artemis)**: $0.003824 (+5.50% 24h, vol $1.24M) — UNDER 10% threshold
-- **MAMO (mamo)**: $0.008683 (+5.59% 24h, vol $1.02M) — UNDER 15% threshold  
-- **REPPO (reppo)**: $0.017185 (-4.53% 24h, vol $220K) — UNDER 15% threshold
-- **GITLAWB (gitlawb)**: $0.00006095 (-2.87% 24h, vol $428K) — UNDER 15% threshold
+Ran `token-alert` over all 4 tracked tokens from `memory/MEMORY.md` (var empty). CoinGecko public API returned cleanly on first call — first successful run since 2026-06-19 (skill was stuck mid-dispatch since 2026-06-21T13:45Z per ISS-023).
 
-### 🔍 Alert Checks Performed
-1. **24h price change thresholds** ✓ No alerts triggered — all tokens within their respective thresholds
-2. **Volume spike detection** ⏭ Skipped — insufficient historical data (need 5 days, have 4)
-3. **Price floor/ceiling crossing** ⏭ Skipped — no levels configured
+**Prices (2026-06-22 ~13:00 UTC):**
+- WELL: $0.00376527 (-1.84% 24h)
+- MAMO: $0.00855576 (-1.34% 24h)
+- REPPO: $0.02505217 (+5.49% 24h)
+- GITLAWB: $0.00007087 (+9.66% 24h)
 
-### 📝 Logged Results
-- Added detailed token-alert results to `memory/logs/2026-06-20.md`
-- Recorded all current prices for future comparison
-- Status: **TOKEN_ALERT_OK** — no anomalies detected
-- Notification sent via `./notify`
+**Triggers:** All under thresholds (10%/15%/15%/15%). Volume-spike skipped (n=2, need 5 — stuck-dispatch gap means no 6-20/6-21 data). Threshold-cross skipped (no Floor/Ceiling configured).
 
-### 📈 Market Context
-All tokens show mixed performance but within normal thresholds:
-- WELL & MAMO: Positive ~5.5% gains (post-BOJ rebound)
-- REPPO & GITLAWB: Slight declines (-4.5%, -2.9%)
-- Median 24h change: +5.50%
-- No significant price movements warranting alerts
+**Status: TOKEN_ALERT_OK** — no notification sent per skill spec. Logged baseline to `memory/logs/2026-06-22.md` for next run. Side note: REPPO +45.91%/3d and GITLAWB first green print since 6-12 are interesting but neither broke the 24h rail.
 
-The skill executed successfully and will serve as baseline for tomorrow's comparison. Volume spike check requires one more day of historical data to activate. No price floor/ceiling thresholds are configured for the tracked tokens. Token movements remain within safe ranges. Status: `TOKEN_ALERT_OK`.
+**Files modified:** `memory/logs/2026-06-22.md` (appended token-alert block).
 
-Files modified: `memory/logs/2026-06-20.md`
-Notification dispatched via `./notify`
-Sandbox handled: used WebFetch for CoinGecko API call
-No fallback needed — 10th consecutive clean CoinGecko day
-Token alert chain remains healthy
+**Follow-up:** ISS-023 (token-alert stuck-dispatch) can likely be marked resolved — this run completed end-to-end. Worth verifying via skill-health on next cycle before closing.
