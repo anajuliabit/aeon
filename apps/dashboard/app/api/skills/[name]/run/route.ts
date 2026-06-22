@@ -22,7 +22,10 @@ export async function POST(
     try {
       const body = await request.json() as { var?: string; model?: string }
       if (body.var && typeof body.var === 'string') {
-        skillVar = body.var.replace(/[^a-zA-Z0-9_ .\-/#@]/g, '')
+        // Allow structured-var chars too (=, |, comma, :) so formats like
+        // `x=handle | links=https://a,https://b` survive. Safe: execFileSync
+        // runs gh with no shell, so these are literal arg characters.
+        skillVar = body.var.replace(/[^a-zA-Z0-9_ .\-/#@=|,:]/g, '')
       }
       if (body.model && typeof body.model === 'string') {
         model = sanitizeModel(body.model)
