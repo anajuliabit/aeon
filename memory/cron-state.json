@@ -167,8 +167,8 @@
     "last_error": "nputTokens\":54400,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.15796499999999997,\"contextWindow\":200000,\"maxOutputTokens\":32000}},\"permission_denials\":[{\"tool_name\":\"Bash\",\"tool_use_"
   },
   "github-trending": {
-    "last_dispatch": "2026-06-21T14:36:51Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-22T10:30:07Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-21T14:42:01Z",
     "total_runs": 54,
     "total_successes": 26,
@@ -307,8 +307,8 @@
     "success_rate": 1
   },
   "cost-report": {
-    "last_dispatch": "2026-06-22T08:31:16Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-22T10:30:07Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-15T07:45:56Z",
     "total_runs": 4,
     "total_successes": 3,
@@ -339,14 +339,14 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-21T15:23:14Z",
     "total_runs": 121,
     "total_successes": 40,
     "total_failures": 81,
     "consecutive_failures": 0,
     "success_rate": 0.33,
-    "last_dispatch": "2026-06-21T15:21:44Z",
+    "last_dispatch": "2026-06-22T10:30:07Z",
     "last_failed": "2026-06-21T12:15:13Z",
     "last_error": "cca4a2d\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -382,14 +382,14 @@
     "success_rate": 1
   },
   "weekly-shiplog": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-15T09:51:39Z",
     "total_runs": 3,
     "total_successes": 3,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-15T09:46:06Z"
+    "last_dispatch": "2026-06-22T10:30:07Z"
   },
   "market-context-refresh": {
     "last_status": "success",
@@ -498,8 +498,8 @@
     "last_error": "18929af\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "aixbt-pulse": {
-    "last_dispatch": "2026-06-21T21:13:44Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-22T10:30:07Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-21T21:18:46Z",
     "total_runs": 78,
     "total_successes": 29,
@@ -602,8 +602,8 @@
     "success_rate": 1
   },
   "unlock-monitor": {
-    "last_dispatch": "2026-06-15T11:51:01Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-22T10:30:07Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-15T11:59:25Z",
     "total_runs": 1,
     "total_successes": 1,
