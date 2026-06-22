@@ -1,7 +1,8 @@
-market context — 2026-06-21
+market context — 2026-06-22
 
-take: risk-on recovery (conviction medium)
-BTC $63,986 (+0.91%) / ETH $1,721 (+0.24%) · F&G 23 (extreme fear)
-breadth 14/20 ↑↑ from 7/20 · DEX vol $4.7B (-7.6% 24h, +26.6% 7d)
-top narrative: macro stabilization (rising) — weak-hand capitulation likely complete
-catalyst: BoJ guidance June 25 + Iran oil <$80 (disinflationary tailwind)
+take: chop (conviction low)
+BTC $64,938 (+1.52%) / ETH $1,755 (+1.92%) · F&G 20 (extreme fear, ↓3)
+breadth 13/20 24h · 6/20 7d (weekly downtrend intact)
+TVL $73.6B · DEX vol $4.2B (-10.8% 1d, -9.1% 7d avg)
+top narrative: EigenCloud/AI-infra restaking (rising — EIGEN +42.8% 7d)
+hot market: no crypto-macro on Polymarket (FIFA World Cup dominates)

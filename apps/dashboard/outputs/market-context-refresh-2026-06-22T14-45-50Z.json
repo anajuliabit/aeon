@@ -1,0 +1,335 @@
+{
+  "root": "card_market_context",
+  "state": {},
+  "elements": {
+    "card_market_context": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context — 2026-06-22"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "take_section",
+        "sep1",
+        "prices_section",
+        "sep2",
+        "market_health",
+        "sep3",
+        "liquidity_section",
+        "sep4",
+        "narrative_section",
+        "sep5",
+        "market_conditions"
+      ]
+    },
+    "take_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_take_label",
+        "badge_chop",
+        "badge_conviction"
+      ]
+    },
+    "text_take_label": {
+      "type": "Text",
+      "props": {
+        "text": "Take:",
+        "variant": "lead"
+      }
+    },
+    "badge_chop": {
+      "type": "Badge",
+      "props": {
+        "text": "chop"
+      }
+    },
+    "badge_conviction": {
+      "type": "Badge",
+      "props": {
+        "text": "conviction low",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prices_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$64,938",
+        "delta": "+1.52%",
+        "trend": "up"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,755",
+        "delta": "+1.92%",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fg_section",
+        "breadth_section"
+      ]
+    },
+    "fg_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fg_label",
+        "prog_fear_greed"
+      ]
+    },
+    "fg_label": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_fg_label",
+        "badge_extreme_fear",
+        "badge_fg_down"
+      ]
+    },
+    "text_fg_label": {
+      "type": "Text",
+      "props": {
+        "text": "Fear & Greed:",
+        "variant": "body"
+      }
+    },
+    "badge_extreme_fear": {
+      "type": "Badge",
+      "props": {
+        "text": "extreme fear"
+      }
+    },
+    "badge_fg_down": {
+      "type": "Badge",
+      "props": {
+        "text": "↓3",
+        "variant": "destructive"
+      }
+    },
+    "prog_fear_greed": {
+      "type": "Progress",
+      "props": {
+        "value": 20,
+        "max": 100,
+        "label": "20/100"
+      }
+    },
+    "breadth_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "breadth_label",
+        "prog_breadth_24h",
+        "breadth_7d_group"
+      ]
+    },
+    "breadth_label": {
+      "type": "Text",
+      "props": {
+        "text": "Breadth",
+        "variant": "lead"
+      }
+    },
+    "prog_breadth_24h": {
+      "type": "Progress",
+      "props": {
+        "value": 13,
+        "max": 20,
+        "label": "24h: 13/20"
+      }
+    },
+    "breadth_7d_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "prog_breadth_7d",
+        "text_downtrend"
+      ]
+    },
+    "prog_breadth_7d": {
+      "type": "Progress",
+      "props": {
+        "value": 6,
+        "max": 20,
+        "label": "7d: 6/20"
+      }
+    },
+    "text_downtrend": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly downtrend intact",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "liquidity_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_tvl",
+        "stat_dex_vol"
+      ]
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$73.6B"
+      }
+    },
+    "stat_dex_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Volume",
+        "value": "$4.2B",
+        "delta": "-10.8% (1d), -9.1% (7d avg)",
+        "trend": "down"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narrative_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "narrative_label",
+        "eigen_info"
+      ]
+    },
+    "narrative_label": {
+      "type": "Text",
+      "props": {
+        "text": "Top Narrative",
+        "variant": "lead"
+      }
+    },
+    "eigen_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_eigen_narrative",
+        "badge_eigen_rising"
+      ]
+    },
+    "text_eigen_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "EigenCloud/AI-infra restaking"
+      }
+    },
+    "badge_eigen_rising": {
+      "type": "Badge",
+      "props": {
+        "text": "EIGEN +42.8% 7d",
+        "variant": "secondary"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_conditions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hot_market_label",
+        "alert_polymarket"
+      ]
+    },
+    "hot_market_label": {
+      "type": "Text",
+      "props": {
+        "text": "Hot Market",
+        "variant": "lead"
+      }
+    },
+    "alert_polymarket": {
+      "type": "Alert",
+      "props": {
+        "message": "No crypto-macro on Polymarket (FIFA World Cup dominates)",
+        "type": "info"
+      }
+    }
+  }
+}
