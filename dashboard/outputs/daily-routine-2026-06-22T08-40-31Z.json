@@ -1,0 +1,738 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-06-22"
+      },
+      "children": [
+        "winners_section",
+        "sep1",
+        "losers_section",
+        "sep2",
+        "breadth_section",
+        "sep3",
+        "tweet_section",
+        "sep4",
+        "paper_section",
+        "sep5",
+        "github_section",
+        "sep6",
+        "hn_section"
+      ]
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Ticker",
+          "Price",
+          "24h Change",
+          "7d / Notes"
+        ],
+        "rows": [
+          [
+            "UB",
+            "$0.138",
+            "+58.9%",
+            "7d +12.0%"
+          ],
+          [
+            "O",
+            "$0.771",
+            "+16.4%",
+            ""
+          ],
+          [
+            "BTW",
+            "$0.107",
+            "+15.7%",
+            "snap-back after −39% yesterday"
+          ],
+          [
+            "SKYAI",
+            "$0.378",
+            "+11.0%",
+            ""
+          ],
+          [
+            "EIGEN",
+            "$0.300",
+            "+9.8%",
+            "7d +42.7% — sustained"
+          ],
+          [
+            "BILL",
+            "$0.061",
+            "+9.7%",
+            ""
+          ],
+          [
+            "VVV",
+            "$15.47",
+            "+8.2%",
+            ""
+          ],
+          [
+            "DEXE",
+            "$15.62",
+            "+8.1%",
+            ""
+          ],
+          [
+            "LIT",
+            "$1.67",
+            "+6.1%",
+            ""
+          ],
+          [
+            "ENA",
+            "$0.095",
+            "+6.1%",
+            "7d +10.8%"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Ticker",
+          "Price",
+          "24h Change",
+          "7d / Notes"
+        ],
+        "rows": [
+          [
+            "H",
+            "$0.158",
+            "−20.0%",
+            "7d −70.6%"
+          ],
+          [
+            "RE",
+            "$0.810",
+            "−15.7%",
+            ""
+          ],
+          [
+            "BP",
+            "$0.671",
+            "−10.1%",
+            "7d still +42.9%"
+          ],
+          [
+            "AXS",
+            "$1.033",
+            "−9.0%",
+            ""
+          ],
+          [
+            "JTO",
+            "$0.650",
+            "−8.5%",
+            ""
+          ],
+          [
+            "XPL",
+            "$0.090",
+            "−4.8%",
+            ""
+          ],
+          [
+            "BTSE",
+            "$0.935",
+            "−4.0%",
+            ""
+          ],
+          [
+            "STABLE",
+            "$0.034",
+            "−3.6%",
+            ""
+          ],
+          [
+            "GALA",
+            "$0.0026",
+            "−3.5%",
+            ""
+          ],
+          [
+            "CC",
+            "$0.150",
+            "−3.5%",
+            ""
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "breadth_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "breadth_heading",
+        "breadth_stat",
+        "breadth_note"
+      ]
+    },
+    "breadth_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Breadth",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "breadth_stat": {
+      "type": "Text",
+      "props": {
+        "text": "97/191 green (50.8%), median +0.01%",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "breadth_note": {
+      "type": "Text",
+      "props": {
+        "text": "flat tape, microcap pump-dump dominating winners",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet_heading",
+        "crypto_block",
+        "ai_block",
+        "dev_block"
+      ]
+    },
+    "tweet_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "crypto_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto_heading",
+        "crypto_text"
+      ]
+    },
+    "crypto_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "crypto_text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC weakness 4th day, smart-contract/DeFi leading losses; Strive CEO blames leverage liquidations for STRC/SATA selloff. XRP −3% lost $1.15 support. RWA tokenized assets +589% since early 2025; Ethereum holds ~60% share across stables/RWA/DeFi.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "ai_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_heading",
+        "ai_text"
+      ]
+    },
+    "ai_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "ai_text": {
+      "type": "Text",
+      "props": {
+        "text": "Qwen 3.7 Max launched at $1.25/$3.75 per 1M tokens (50% promo through today). Claude web traffic +306% Jan→Apr (203M→824M). Mythos 5 GA + Fable 5 preview already shipped this month; agentic the fastest-growing category.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "dev_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev_heading",
+        "dev_text"
+      ]
+    },
+    "dev_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "dev_text": {
+      "type": "Text",
+      "props": {
+        "text": "Gemma 4 first Gemma model under Apache 2.0. UN Open Source Week 6-22→6-26 NYC. ZAYA1-8B (Zyphra, Apache 2.0) trained from scratch on AMD Instinct — non-Nvidia pipeline working.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_badge",
+        "paper_title",
+        "paper_desc",
+        "paper_link"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "paper_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑40",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "paper_title": {
+      "type": "Text",
+      "props": {
+        "text": "PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "First diffusion MLLM that captions multiple image regions in parallel instead of one-at-a-time. Code + models released.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "paper_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "arxiv.org/abs/2606.19534",
+        "href": "https://arxiv.org/abs/2606.19534",
+        "source": "arXiv"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "github_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github_heading",
+        "github_text"
+      ]
+    },
+    "github_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "github_text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues in user:anajuliabit (24h window).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_heading",
+        "hn_item_1",
+        "hn_item_2",
+        "hn_item_3",
+        "hn_item_4",
+        "hn_item_5"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "hn_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_1_link",
+        "hn_1_desc"
+      ]
+    },
+    "hn_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Identity verification on Claude",
+        "href": "https://support.claude.com/en/articles/14328960-identity-verification-on-claude",
+        "source": "Anthropic Support",
+        "score": "731 pts"
+      },
+      "children": []
+    },
+    "hn_1_desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_1_text",
+        "hn_1_discuss"
+      ]
+    },
+    "hn_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic rolling out KYC-style verification.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_1_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=48618455"
+      },
+      "children": []
+    },
+    "hn_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_2_link",
+        "hn_2_desc"
+      ]
+    },
+    "hn_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Did my old job only exist because of fraud?",
+        "href": "https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/",
+        "source": "David New Gas",
+        "score": "512 pts"
+      },
+      "children": []
+    },
+    "hn_2_desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_2_text",
+        "hn_2_discuss"
+      ]
+    },
+    "hn_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "postmortem from a worker who quit.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_2_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=48622867"
+      },
+      "children": []
+    },
+    "hn_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_3_link",
+        "hn_3_desc"
+      ]
+    },
+    "hn_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Prefer duplication over the wrong abstraction (2016)",
+        "href": "https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction",
+        "source": "Sandi Metz",
+        "score": "475 pts"
+      },
+      "children": []
+    },
+    "hn_3_desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_3_text",
+        "hn_3_discuss"
+      ]
+    },
+    "hn_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "Sandi Metz classic resurfaces.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_3_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=48620090"
+      },
+      "children": []
+    },
+    "hn_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_4_link",
+        "hn_4_desc"
+      ]
+    },
+    "hn_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Apertus — Open Foundation Model for Sovereign AI",
+        "href": "https://apertvs.ai/",
+        "source": "Apertus",
+        "score": "361 pts"
+      },
+      "children": []
+    },
+    "hn_4_desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_4_text",
+        "hn_4_discuss"
+      ]
+    },
+    "hn_4_text": {
+      "type": "Text",
+      "props": {
+        "text": "Swiss-led sovereign model push.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_4_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=48622778"
+      },
+      "children": []
+    },
+    "hn_item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_5_link",
+        "hn_5_desc"
+      ]
+    },
+    "hn_5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Deno Desktop",
+        "href": "https://docs.deno.com/runtime/desktop/",
+        "source": "Deno Docs",
+        "score": "261 pts"
+      },
+      "children": []
+    },
+    "hn_5_desc": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_5_text",
+        "hn_5_discuss"
+      ]
+    },
+    "hn_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "Deno ships a desktop runtime.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_5_discuss": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss",
+        "href": "https://news.ycombinator.com/item?id=48626137"
+      },
+      "children": []
+    }
+  }
+}
