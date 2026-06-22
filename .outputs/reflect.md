@@ -1,1 +1,1 @@
-memory consolidated — 2026-06-21. skill-health flipped 41 healthy → 9 healthy / 19 degraded; sandbox-truncation systemic (ISS-019/020/021/022/023/024). PR backlog cleared (0 open). on-chain-watches.yml seeded with 5 base wallets — defi-monitor still needs pool entries, etherscan free tier blocks base. token-alert hung mid-dispatch for the first time (96 min). heartbeat chronic tail 11 → 24 skills under 50% sr.
+Memory consolidated — 2026-06-22

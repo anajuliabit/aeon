@@ -391,6 +391,85 @@ narrative-and-pick layer.
   triggered "stuck" mid-dispatch (96 min `last_status=dispatched`,
   first time this skill has hung mid-dispatch — new failure mode, filed
   ISS-023 for missing_pattern).
+- 2026-06-22 ~13:00Z: **TOKEN_ALERT_OK — first clean run since 6-19,
+  closes ISS-023 stuck-dispatch window.** REPPO $0.02505217 +5.49%
+  24h / **+45.91% 3d** (full reversal of 6-16 -15.78% trip, but 24h
+  leg only +5.49% so move happened earlier in window). GITLAWB
+  $0.00007087 +9.66% 24h / +12.42% 3d (first green print since 6-12
+  downtrend started). WELL $0.00376527 -1.84% / +1.71% 3d slight
+  bounce. MAMO $0.00855576 -1.34% / +2.90% 3d. Watchlist median 24h
+  +1.83% — first green-median print since 6-14; 2 green, 2 red, all
+  under thresholds. Volume-spike leg SKIPPED (n=2, need 5; 6-20/6-21
+  missing due to stuck-dispatch gap — no invented baseline). No
+  alerts fired.
+
+### 2026-06-22 — EIGEN token pick + chop regime + narrative consolidation
+
+- **Token pick: EIGEN HIGH 9/10 $0.305** (+12.22% 24h / **+42.93% 7d**).
+  EigenCloud rebrand (was EigenLayer) + Darkbloom Research Preview →
+  Public Alpha: 600M+ tokens served on idle Apple silicon, 30–200%
+  perf gains. Restaking → AI-infra narrative pivot. vmc 0.46, mcap
+  $226M. 7d outperforms BTC -1.47% / ETH +1.56% by ~44pp. Entry
+  $0.305, target $0.40, invalidation $0.26, horizon 14d. Risk: 7-01
+  $8M unlock + uncapped supply + Q1 revenue collapse ($8.74M vs
+  $31.93M LY). Market SKIPPED (Polymarket events sub-$50k vol or
+  efficient).
+- **Market context regime chop, low conviction.** BTC $64,938 +1.52%
+  24h, ETH $1,755 +1.92%, F&G 20 (Extreme Fear, ↓3 from 23). Breadth
+  13/20 green 24h · **6/20 green 7d** — weekly downtrend dominant.
+  Polymarket sports-only (FIFA World Cup field), no crypto-macro
+  signals. Top rising narrative: EigenCloud/AI-infra restaking.
+- **Token-movers 12:37Z pulse 77/100 green, median +0.87%** — risk-on
+  breadth but bounce-back leaderboard not breakout. Winners UB
+  +21.5% [FADE] (7d -3.8%, cooling from morning +58.9% rip), DEXE
+  +18.7% (snap-back from 6-21 loser), BILL +15.0%, EIGEN +12.2%
+  (Darkbloom pivot), DYDX +10.9%, GRASS +10.5%. Losers H **-22.5%**
+  (7d -73% continued capitulation), RE -17.6% **[CAPITULATION]**
+  (vol $159.8M on $125M mcap, ratio >1.0), BP -9.4% [TRENDING+DOWN],
+  BTW -8.6% (roundtrip after morning +15.7%), LAB -6.1% [MAJOR]
+  reversal from +27% 6-21. Trending: SYN +91.6% **[PUMP-RISK]** #387.
+- **Narrative tracker transitions 6-22**: 5 NEW (Hyperliquid/perps
+  explicit anchor — 3 ETFs + revenue per @0xLuciferNox CT Narratives
+  Snapshot; P2P restaked security mesh — Canopy; AI coding agents +
+  MCP/tooling; ownership tokens vs points programs; hardware moats
+  in AI era). 1 PROMOTED (stablecoins velocity → ↑↑ — $311B mcap
+  +50% vs 2025 start, x402 480k agents / $50M cumulative,
+  MetaMask AI agent wallet shipped, Visa/Stripe/Anthropic at
+  Foundation). 2 DEMOTED (onchain AI agents × compute ↑↑→→ peak
+  holding; Meme 3.0 Peak→Fading). 4 DEAD (Sovereign AI Chains,
+  Privacy Tech Governance — ZEC squeeze faded, AI Agent Delivery/
+  Accountability — subsumed into AI coding agents/MCP, Altseason/
+  BTC-rotation thesis — "rotation basically disappeared" per
+  @0xLuciferNox + BTC dominance 58%). 4 CONSOLIDATED (Seamless UX
+  → stablecoins-as-rails, Utility-vs-Hype → Ownership-tokens, RWA
+  Perps → Hyperliquid/perps, Unified Super-Apps absorbed).
+- **4 reflexivity flags incl. 1 inverse-reflexivity (stablecoins)**:
+  (1) Hyperliquid/perps loud narrative but HYPE -3.9% 24h — story
+  amplified faster than price; (2) AI Agents × RWA zero autonomous
+  wallets deployed, pure narrative running ahead of execution;
+  (3) **INVERSE — stablecoins x402 = 480k agents + $50M cumulative
+  + 265% weekly txn growth IS real infrastructure, fundamentals
+  catching story rather than story-driving-price**; (4) **Structural
+  — Kaito killed Yapper leaderboard 2026-01-15** (X revoked API
+  access for incentivized leaderboards); replaced w/ Studio (tier-
+  based) + Attention Markets (Polymarket joint, AI-aggregated
+  X/TikTok/IG/YouTube). Mindshare measurement layer itself shifted
+  from points-driven to prediction-market-driven — affects how any
+  future narrative-tracker can quantify mindshare reliably.
+- **AIXBT Pulse 7 NEW**: Toss Bank Korea Solana PoC, SOL tokenized
+  stock volume, security cluster (Taiko/Aztec/Altura — 4 exploits),
+  BTC ETF $6.35B quantified, China +1T yuan, Treasuries 4.48%
+  retreating, TradFi regime flip hawkish→easing. Bridge call:
+  Iran ceasefire → oil lower → yields retreating → dollar weak →
+  China +1T yuan + EM risk-on; BTC not catching bid (extreme
+  fear, $6.35B outflows); bid goes to protocol narratives +
+  Hyperliquid DeFi concentration from 4-exploit security cluster.
+- **defi-overview Mixed**: TVL $73.6B (chain delta API regression
+  day 5). DEX vol $4.2B (-10.8% 1d, -9.1% 7d). Top mover up
+  **Dolomite +14% (7d +56%)** sustained lending inflows; no obvious
+  named catalyst. Top down Telos Consilium -13%. 3 real-yield pools
+  **recovered vs 6-21's 0** (WSOL-USDC Raydium 32.4%, WETH-USDT
+  UniV3 25.1%, UNI-WETH UniV3 17.3%). Stables $313.9B (+0.05%).
 
 ## Bitcoin
 See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline

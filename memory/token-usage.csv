@@ -488,4 +488,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-22,soul-builder,claude-sonnet-4-6,1541,15776,1324548,57784
 2026-06-22,skill-security-scan,claude-opus-4-7,32,27619,1945591,140720
 2026-06-22,agent-buzz,claude-opus-4-7,24,10277,998291,36764
-2026-06-22,goal-tracker,claude-opus-4-7,24,16568,965277,102947
+2026-06-22,reflect,claude-opus-4-7,35,20348,2189988,153670
