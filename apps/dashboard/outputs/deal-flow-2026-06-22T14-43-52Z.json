@@ -1,0 +1,542 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Deal Flow — 2026-06-22"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_intro",
+        "sep_1",
+        "heading_deal1",
+        "badge_deal1",
+        "stat_deal1_fund",
+        "stat_deal1_val",
+        "text_deal1_investors",
+        "text_deal1_why",
+        "sep_2",
+        "heading_deal2",
+        "badge_deal2",
+        "stat_deal2_fund",
+        "stat_deal2_val",
+        "text_deal2_investors",
+        "text_deal2_why",
+        "sep_3",
+        "heading_deal3",
+        "badge_deal3",
+        "stat_deal3_fund",
+        "stat_deal3_val",
+        "text_deal3_investors",
+        "text_deal3_why",
+        "sep_4",
+        "heading_deal4",
+        "badge_deal4",
+        "stat_deal4_fund",
+        "stat_deal4_val",
+        "text_deal4_investors",
+        "text_deal4_why",
+        "sep_5",
+        "heading_deal5",
+        "badge_deal5",
+        "stat_deal5_fund",
+        "stat_deal5_val",
+        "text_deal5_investors",
+        "text_deal5_why",
+        "sep_6",
+        "heading_deal6",
+        "badge_deal6",
+        "stat_deal6_fund",
+        "stat_deal6_val",
+        "text_deal6_investors",
+        "text_deal6_why",
+        "sep_7",
+        "heading_deal7",
+        "badge_deal7",
+        "stat_deal7_fund",
+        "stat_deal7_val",
+        "text_deal7_investors",
+        "text_deal7_why",
+        "sep_8",
+        "heading_deal8",
+        "badge_deal8",
+        "stat_deal8_fund",
+        "stat_deal8_val",
+        "text_deal8_investors",
+        "text_deal8_why",
+        "sep_final",
+        "text_sources"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Read: capital this week piled into inference + compute (baseten 2.6× in 5 months, hydra host pulls nvidia + founders fund into a bare-metal GPU Series A) while two adjacencies got cross-camp validation — morpho's $175M from paradigm + a16z + ribbit puts fintech money inside a DeFi credit protocol, and ripple bought into flutterwave at $3.2B to wire RLUSD onto african payment rails.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_deal1": {
+      "type": "Heading",
+      "props": {
+        "text": "Baseten",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge_deal1": {
+      "type": "Badge",
+      "props": {
+        "text": "AI inference serving infra"
+      },
+      "children": []
+    },
+    "stat_deal1_fund": {
+      "type": "Stat",
+      "props": {
+        "label": "Funding",
+        "value": "$1.5B Series E"
+      },
+      "children": []
+    },
+    "stat_deal1_val": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-Money Valuation",
+        "value": "$13B",
+        "delta": "+2.6×",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "text_deal1_investors": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Spark / Sands / Altimeter / Wellington / Conviction",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_deal1_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: second mega-round in 5 months at 2.6× the prior mark, split-priced — inference compute is now a category arms race separate from training.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_deal2": {
+      "type": "Heading",
+      "props": {
+        "text": "Morpho",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge_deal2": {
+      "type": "Badge",
+      "props": {
+        "text": "Onchain credit protocol on Ethereum + Base"
+      },
+      "children": []
+    },
+    "stat_deal2_fund": {
+      "type": "Stat",
+      "props": {
+        "label": "Funding",
+        "value": "$175M"
+      },
+      "children": []
+    },
+    "stat_deal2_val": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-Money Valuation",
+        "value": "~$2B"
+      },
+      "children": []
+    },
+    "text_deal2_investors": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Paradigm / a16z Crypto / Ribbit Capital",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_deal2_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: first fintech-grade VC (ribbit) co-leading a DeFi credit round alongside paradigm + a16z — open-credit framing pulls TradFi money on-chain.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_deal3": {
+      "type": "Heading",
+      "props": {
+        "text": "Hydra Host",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge_deal3": {
+      "type": "Badge",
+      "props": {
+        "text": "Bare-metal GPU platform for distributed AI compute"
+      },
+      "children": []
+    },
+    "stat_deal3_fund": {
+      "type": "Stat",
+      "props": {
+        "label": "Funding",
+        "value": "$100M Series A"
+      },
+      "children": []
+    },
+    "stat_deal3_val": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-Money Valuation",
+        "value": "Not Disclosed"
+      },
+      "children": []
+    },
+    "text_deal3_investors": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Kindred Ventures; Founders Fund, Nvidia, ARK, Comcast, 10x Founders",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_deal3_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: nvidia + founders fund anchoring a $100M Series A says decentralized-GPU thesis (io.net / akash / render territory) is being front-run from inside the silicon supply chain.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_deal4": {
+      "type": "Heading",
+      "props": {
+        "text": "Flutterwave",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge_deal4": {
+      "type": "Badge",
+      "props": {
+        "text": "Africa cross-border payments infra"
+      },
+      "children": []
+    },
+    "stat_deal4_fund": {
+      "type": "Stat",
+      "props": {
+        "label": "Funding",
+        "value": "Undisclosed Series E"
+      },
+      "children": []
+    },
+    "stat_deal4_val": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-Money Valuation",
+        "value": "$3.2B"
+      },
+      "children": []
+    },
+    "text_deal4_investors": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Ripple (strategic, alongside existing Series E investors)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_deal4_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: first time a stablecoin issuer takes equity in a regional payments giant to wire its stablecoin (RLUSD) into corporate corridors — payment-rail M&A pattern, not a portfolio bet.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_deal5": {
+      "type": "Heading",
+      "props": {
+        "text": "Pramaana Labs",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge_deal5": {
+      "type": "Badge",
+      "props": {
+        "text": "Formal verification for AI systems"
+      },
+      "children": []
+    },
+    "stat_deal5_fund": {
+      "type": "Stat",
+      "props": {
+        "label": "Funding",
+        "value": "$27M Seed"
+      },
+      "children": []
+    },
+    "stat_deal5_val": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-Money Valuation",
+        "value": "Not Disclosed"
+      },
+      "children": []
+    },
+    "text_deal5_investors": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Khosla Ventures",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_deal5_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: $27M is ~9× a normal seed — pricing in that agent-correctness becomes a regulatory + liability concern before LLMs ship into safety-critical work.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_deal6": {
+      "type": "Heading",
+      "props": {
+        "text": "Odyssey",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge_deal6": {
+      "type": "Badge",
+      "props": {
+        "text": "World-model AI for spatial / video generation"
+      },
+      "children": []
+    },
+    "stat_deal6_fund": {
+      "type": "Stat",
+      "props": {
+        "label": "Funding",
+        "value": "$310M Series B"
+      },
+      "children": []
+    },
+    "stat_deal6_val": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-Money Valuation",
+        "value": "$1.45B"
+      },
+      "children": []
+    },
+    "text_deal6_investors": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Natural Capital; Amazon, AMD Ventures, Google Ventures, EQT, IQT, SignalRank",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_deal6_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: world models now have their own investor cohort separate from frontier-LLM bets — three hyperscaler venture arms in one round.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_deal7": {
+      "type": "Heading",
+      "props": {
+        "text": "Ent.AI",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge_deal7": {
+      "type": "Badge",
+      "props": {
+        "text": "AI-workspace security platform"
+      },
+      "children": []
+    },
+    "stat_deal7_fund": {
+      "type": "Stat",
+      "props": {
+        "label": "Funding",
+        "value": "$100M Seed"
+      },
+      "children": []
+    },
+    "stat_deal7_val": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-Money Valuation",
+        "value": "Not Disclosed"
+      },
+      "children": []
+    },
+    "text_deal7_investors": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Decibel Partners; Sequoia, Craft, Felicis, IQT, Shield Capital, Crosspoint",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_deal7_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: $100M seed with sequoia + IQT + shield in the syndicate is a pre-revenue national-security bet on agent-on-workspace data leakage.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_deal8": {
+      "type": "Heading",
+      "props": {
+        "text": "Sarvam",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "badge_deal8": {
+      "type": "Badge",
+      "props": {
+        "text": "Sovereign Indian LLMs + agent infra"
+      },
+      "children": []
+    },
+    "stat_deal8_fund": {
+      "type": "Stat",
+      "props": {
+        "label": "Funding",
+        "value": "$234M"
+      },
+      "children": []
+    },
+    "stat_deal8_val": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-Money Valuation",
+        "value": "$1.5B",
+        "delta": "up from ~$41M prior",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "text_deal8_investors": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: HCLTech (corporate strategic)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_deal8_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: HCL writes the lead check — non-US AI capital now routes through national champions, not pure VC syndicates.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_final": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: crunchbase=ok, techcrunch=ok, cryptorank=ok (partial paywall), crypto-fundraising=ok, aift=fail (not fetched), websearch=ok | candidates=~32 → kept=8",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

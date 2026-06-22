@@ -1,15 +1,37 @@
-## Summary
+*Deal Flow — 2026-06-22*
 
-Executed `skills/deal-flow/SKILL.md` for 2026-06-01.
+**Read:** capital this week piled into inference + compute (baseten 2.6× in 5 months, hydra host pulls nvidia + founders fund into a bare-metal GPU Series A) while two adjacencies got cross-camp validation — morpho's $175M from paradigm + a16z + ribbit puts fintech money inside a DeFi credit protocol, and ripple bought into flutterwave at $3.2B to wire RLUSD onto african payment rails.
 
-**Done:**
-- Searched Tier 1/2/3 sources across Crunchbase, TechCrunch, crypto-fundraising.info, techstartups.com, and 8 targeted WebSearches. Cryptorank.io and aifundingtracker.com failed (paywall / not fetched).
-- Built ~30-deal candidate pool, dedup vs last 14 days of logs (no prior `### deal-flow` entries → empty dedup set this week), dropped 4 out-of-window deals (Anysphere Nov 2025, Parallel Apr 2026, Replit Mar 2026, Saronic lead unverifiable).
-- Scored survivors by Magnitude / Investor / Thesis / Narrative / Valuation, kept top 8: Anthropic (24), Cognition (22), Exa (20), Catena Labs (19+T3), Modal Labs (19), OpenRouter (19), Corgi (19), Decart (18).
-- Wrote 2,503-char digest in ana voice (lowercase, em dashes as beats, no banned phrases, every "why it matters" names a specific signal).
+1. **Baseten** — AI inference serving infra
+   $1.5B Series E @ $13B post (UP 2.6× vs $5B Jan) | Lead: Spark / Sands / Altimeter / Wellington / Conviction
+   *Why it matters:* second mega-round in 5 months at 2.6× the prior mark, split-priced — inference compute is now a category arms race separate from training.
 
-**Files:**
-- Created `.pending-notify/1780327479-deal-flow.md` (digest, 2503 chars, picked up by post-run delivery)
-- Appended `### deal-flow` block to `memory/logs/2026-06-01.md`
+2. **Morpho** — onchain credit protocol on ethereum + base
+   $175M @ ~$2B post (n/d vs prior) | Lead: Paradigm / a16z crypto / Ribbit Capital
+   *Why it matters:* first fintech-grade VC (ribbit) co-leading a DeFi credit round alongside paradigm + a16z — open-credit framing pulls TradFi money on-chain.
 
-**Read line:** $65B Anthropic vacuumed the headline, but the signal is the agent-stack triple — Catena (banking) + Exa (search) + OpenRouter (routing) all funded same week — capital priced agent-infra as a layer distinct from the lab tier.
+3. **Hydra Host** — bare-metal GPU platform for distributed AI compute
+   $100M Series A (n/d post) | Lead: Kindred Ventures; Founders Fund, Nvidia, ARK, Comcast, 10x Founders
+   *Why it matters:* nvidia + founders fund anchoring a $100M Series A says decentralized-GPU thesis (io.net / akash / render territory) is being front-run from inside the silicon supply chain.
+
+4. **Flutterwave** — africa cross-border payments infra
+   undisclosed Series E @ $3.2B post (n/d vs prior) | Lead: Ripple (strategic, alongside existing Series E investors)
+   *Why it matters:* first time a stablecoin issuer takes equity in a regional payments giant to wire its stablecoin (RLUSD) into corporate corridors — payment-rail M&A pattern, not a portfolio bet.
+
+5. **Pramaana Labs** — formal verification for AI systems
+   $27M seed (n/d post) | Lead: Khosla Ventures
+   *Why it matters:* $27M is ~9× a normal seed — pricing in that agent-correctness becomes a regulatory + liability concern before LLMs ship into safety-critical work.
+
+6. **Odyssey** — world-model AI for spatial / video generation
+   $310M Series B @ $1.45B post (n/d vs prior) | Lead: Natural Capital; Amazon, AMD Ventures, Google Ventures, EQT, IQT, SignalRank
+   *Why it matters:* world models now have their own investor cohort separate from frontier-LLM bets — three hyperscaler venture arms in one round.
+
+7. **Ent.AI** — AI-workspace security platform
+   $100M seed (n/d post) | Lead: Decibel Partners; Sequoia, Craft, Felicis, IQT, Shield Capital, Crosspoint
+   *Why it matters:* $100M seed with sequoia + IQT + shield in the syndicate is a pre-revenue national-security bet on agent-on-workspace data leakage.
+
+8. **Sarvam** — sovereign indian LLMs + agent infra
+   $234M @ $1.5B post (UP from ~$41M prior) | Lead: HCLTech (corporate strategic)
+   *Why it matters:* HCL writes the lead check — non-US AI capital now routes through national champions, not pure VC syndicates.
+
+*Sources:* crunchbase=ok, techcrunch=ok, cryptorank=ok (partial paywall), crypto-fundraising=ok, aift=fail (not fetched), websearch=ok | candidates=~32 → kept=8
