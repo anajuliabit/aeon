@@ -1,15 +1,10 @@
 ## Summary
 
-Executed `skills/fleet-control/SKILL.md` in Health Check Mode (var empty).
+Ran `fleet-control` in Health Check mode (var empty).
 
-**Pre-flight passed:**
-- `gh auth status`: ok (logged in as anajuliabit, token has repo+workflow scopes)
-- Rate limit: 4996/5000 remaining
-- Registry loaded: `memory/instances.json` → `{"instances": []}`
+- **Pre-flight:** gh auth OK, rate_remaining=4988, well above the 50-call floor.
+- **Registry check:** `memory/instances.json` has `.instances: []` — no managed Aeon children.
+- **Outcome:** `FLEET_EMPTY` — logged to `memory/logs/2026-06-22.md`, **no notification sent** (per skill spec, silent stop when registry is empty).
+- **State file:** untouched (`memory/state/fleet-control-state.json` already at `{instances: {}, last_full_summary_date: ""}`).
 
-**Outcome:** `FLEET_EMPTY` — the registry has zero managed instances, so per the skill's explicit rule the run logs and stops **silently** (no notification). State file at `memory/state/fleet-control-state.json` is already in the empty-default shape; nothing to update.
-
-**Files modified:**
-- `memory/logs/2026-06-21.md` — appended `## fleet-control (health check) — 15:00 UTC` entry with verdict `FLEET_EMPTY`.
-
-**Follow-up:** Same as prior runs — fleet remains empty until the operator registers a child instance in `memory/instances.json`.
+No follow-ups. Fleet-control will re-fire at 15:00 UTC; until the operator seeds `memory/instances.json` with at least one child repo, every run will silently log `FLEET_EMPTY` and exit.
