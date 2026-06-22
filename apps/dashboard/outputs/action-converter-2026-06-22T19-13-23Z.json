@@ -1,0 +1,388 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-06-22"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action1_group",
+        "sep1",
+        "action2_group",
+        "sep2",
+        "action3_group",
+        "sep3",
+        "action4_group",
+        "sep4",
+        "action5_group",
+        "sep5",
+        "sources_text"
+      ]
+    },
+    "action1_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_header",
+        "action1_why",
+        "action1_done",
+        "action1_loop"
+      ]
+    },
+    "action1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge1",
+        "text_action1_title"
+      ]
+    },
+    "badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "1"
+      },
+      "children": []
+    },
+    "text_action1_title": {
+      "type": "Text",
+      "props": {
+        "text": "file memory/issues/ISS-025.md for cost-report cf=6 — extends ISS-019/020/021/024 sandbox-truncation cluster (output_tokens=0 signature)"
+      },
+      "children": []
+    },
+    "action1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: cost-report just crossed cf=6 at 18:24Z today; heartbeat 14:37Z explicitly said \"file new ISS as it sees fit\"",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: ISS-025.md committed + INDEX.md open table updated with critical/sandbox-limitation row",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action1_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: cost-report-cf6",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action2_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_header",
+        "action2_why",
+        "action2_done",
+        "action2_loop"
+      ]
+    },
+    "action2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge2",
+        "text_action2_title"
+      ]
+    },
+    "badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "2"
+      },
+      "children": []
+    },
+    "text_action2_title": {
+      "type": "Text",
+      "props": {
+        "text": "open PR — env: indirection on aeon.yml L86/L94/L96/L812 to close 4 persistent HIGH workflow-injection sites"
+      },
+      "children": []
+    },
+    "action2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: skill-security-scan 14:45Z handed scoped remediation hint; 4 HIGHs unchanged since baseline, single-PR shape",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened with diff against the 4 lines; next skill-security-scan drops HIGH count from 4 to 0",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action2_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: skill-security-scan-4-HIGH",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action3_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_header",
+        "action3_why",
+        "action3_done",
+        "action3_loop"
+      ]
+    },
+    "action3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge3",
+        "text_action3_title"
+      ]
+    },
+    "badge3": {
+      "type": "Badge",
+      "props": {
+        "text": "3"
+      },
+      "children": []
+    },
+    "text_action3_title": {
+      "type": "Text",
+      "props": {
+        "text": "draft memory/topics/sandbox-truncation.md — consolidate ISS-019/020/021/022/023/024 + cost-report; 5-bullet root-cause hypothesis on output_tokens=0 cluster (timestamps 12:14-14:17Z 6-21)"
+      },
+      "children": []
+    },
+    "action3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 8 critical + 19 degraded share one signature, no shared topic yet; MEMORY.md \"Current Goals\" line 5 calls out the gap",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: topic file lists affected skills + 5 hypotheses + linked from MEMORY.md \"Active Topics\"",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action3_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: sandbox-truncation-systemic",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action4_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_header",
+        "action4_why",
+        "action4_done",
+        "action4_loop"
+      ]
+    },
+    "action4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge4",
+        "text_action4_title"
+      ]
+    },
+    "badge4": {
+      "type": "Badge",
+      "props": {
+        "text": "4"
+      },
+      "children": []
+    },
+    "text_action4_title": {
+      "type": "Text",
+      "props": {
+        "text": "collapse duplicate \"Current Goals\" entries in memory/MEMORY.md — XAI/Stuck/BTC each appear twice (lines 6-10 vs 11-14)"
+      },
+      "children": []
+    },
+    "action4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 6-21 consolidation left the older bullets in place; downstream skills read both and double-count blockers",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: each goal appears once; \"Last consolidated\" stamp refreshed to 2026-06-22",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action4_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: memory-md-dedup",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action5_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_header",
+        "action5_why",
+        "action5_done",
+        "action5_loop"
+      ]
+    },
+    "action5_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge5",
+        "text_action5_title"
+      ]
+    },
+    "badge5": {
+      "type": "Badge",
+      "props": {
+        "text": "5"
+      },
+      "children": []
+    },
+    "text_action5_title": {
+      "type": "Text",
+      "props": {
+        "text": "decide on davila7/claude-code-templates vulnerability-scanner — search-skill flagged 19-pt UNTRUSTED match for ISS-018"
+      },
+      "children": []
+    },
+    "action5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: davila7 candidate is pure-python, sidesteps semgrep/trufflehog sandbox block; only sandbox-compatible hit so far",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: davila7 added to trusted-sources OR rejection rationale appended to memory/topics/skill-search-vetting.md",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "action5_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: ISS-018-vuln-scanner-replacement",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=53 logs=14 topics=11 prs=0 cron_failing=2 mode=OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

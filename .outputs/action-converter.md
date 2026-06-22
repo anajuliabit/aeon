@@ -1,29 +1,29 @@
-*5 Actions — 2026-06-21*
-Shape: root-cause iss-024, diagnose iss-022 cluster, unstick token-alert, merge #129, seed defi watches
+*5 Actions — 2026-06-22*
+Shape: file ISS-025, ship workflow-injection PR, draft sandbox topic, dedupe MEMORY, decide vulnerability-scanner
 
-1. root-cause `iss-024` skill-health 26-consecutive-fail loop in `memory/issues/ISS-024.md`.
-why: head of today's skill-evals action queue — canary skill blind = whole fleet observability degraded.
-done: `root_cause:` field populated, status flipped open → investigating.
-loop: iss-024-investigate
+1. file memory/issues/ISS-025.md for cost-report cf=6 — extends ISS-019/020/021/024 sandbox-truncation cluster (output_tokens=0 signature)
+why: cost-report just crossed cf=6 at 18:24Z today; heartbeat 14:37Z explicitly said "file new ISS as it sees fit"
+done: ISS-025.md committed + INDEX.md open table updated with critical/sandbox-limitation row
+loop: cost-report-cf6
 
-2. diagnose `iss-022` sandbox-truncation cluster — 8 skills hit output_tokens=0 between 12:14z and 14:17z today.
-why: extends iss-019/020/021; chronic-failure tail jumped 11 → 24 skills, all on this driver.
-done: iss-022 lists the 8 affected skills + first-suspected-cause line; status set to investigating.
-loop: iss-022-diagnose
+2. open PR — env: indirection on aeon.yml L86/L94/L96/L812 to close 4 persistent HIGH workflow-injection sites
+why: skill-security-scan 14:45Z handed scoped remediation hint; 4 HIGHs unchanged since baseline, single-PR shape
+done: PR opened with diff against the 4 lines; next skill-security-scan drops HIGH count from 4 to 0
+loop: skill-security-scan-4-HIGH
 
-3. cancel hung `token-alert` dispatch and re-fire — last_dispatch 13:45z, status=dispatched, 96min elapsed, cf=2.
-why: first time token-alert hung mid-dispatch; reppo/gitlawb/well/mamo alerts paused while it sits.
-done: stuck gh workflow run cancelled, fresh dispatch fired, cron-state last_status=success.
-loop: token-alert-unstick
+3. draft memory/topics/sandbox-truncation.md — consolidate ISS-019/020/021/022/023/024 + cost-report; 5-bullet root-cause hypothesis on output_tokens=0 cluster (timestamps 12:14-14:17Z 6-21)
+why: 8 critical + 19 degraded share one signature, no shared topic yet; MEMORY.md "Current Goals" line 5 calls out the gap
+done: topic file lists affected skills + 5 hypotheses + linked from MEMORY.md "Active Topics"
+loop: sandbox-truncation-systemic
 
-4. merge PR #129 (`skill-graph/2026-06-21`) — doc-only, retired_skills -4, shared_state_edges 195→9.
-why: auto-generated, ~6h old, nothing gated on it; clears the open-PR slot for tomorrow.
-done: #129 squashed to main, branch deleted.
-loop: pr-129-merge
+4. collapse duplicate "Current Goals" entries in memory/MEMORY.md — XAI/Stuck/BTC each appear twice (lines 6-10 vs 11-14)
+why: 6-21 consolidation left the older bullets in place; downstream skills read both and double-count blockers
+done: each goal appears once; "Last consolidated" stamp refreshed to 2026-06-22
+loop: memory-md-dedup
 
-5. add a `type: pool` or `type: position` entry to `memory/on-chain-watches.yml` (morpho/aave/curve).
-why: defi-monitor 14d no_config; wallets seeded but pool/position list is empty.
-done: ≥1 `type: pool` or `type: position` watch in watches.yml; next defi-monitor run logs ≥1 position.
-loop: defi-monitor-config
+5. decide on davila7/claude-code-templates vulnerability-scanner — search-skill flagged 19-pt UNTRUSTED match for ISS-018
+why: davila7 candidate is pure-python, sidesteps semgrep/trufflehog sandbox block; only sandbox-compatible hit so far
+done: davila7 added to trusted-sources OR rejection rationale appended to memory/topics/skill-search-vetting.md
+loop: ISS-018-vuln-scanner-replacement
 
-sources: memory=42 lines logs=7 days topics=11 files prs=1 open cron_failing=1 mode=OK
+sources: memory=53 logs=14 topics=11 prs=0 cron_failing=2 mode=OK
