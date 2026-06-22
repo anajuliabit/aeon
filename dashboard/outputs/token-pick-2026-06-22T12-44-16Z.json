@@ -1,0 +1,304 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-22"
+      },
+      "children": [
+        "token-header",
+        "stats-section",
+        "score-breakdown",
+        "separator1",
+        "catalyst-section",
+        "risk-section",
+        "stake-section",
+        "vs-picks-section",
+        "separator2",
+        "market-section",
+        "sources-section",
+        "disclaimer-section"
+      ]
+    },
+    "token-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "token-name",
+        "badge-high",
+        "badge-signal"
+      ]
+    },
+    "token-name": {
+      "type": "Heading",
+      "props": {
+        "text": "EIGEN",
+        "level": "h2"
+      }
+    },
+    "badge-high": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "secondary"
+      }
+    },
+    "badge-signal": {
+      "type": "Badge",
+      "props": {
+        "text": "signal 9/10",
+        "variant": "default"
+      }
+    },
+    "stats-section": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "mcap-stat",
+        "volume-stat",
+        "vol-mcap-ratio"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.305",
+        "delta": "+12.2% 24h / +42.9% 7d",
+        "trend": "up"
+      }
+    },
+    "mcap-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$226M"
+      }
+    },
+    "volume-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$103M"
+      }
+    },
+    "vol-mcap-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "vol/mcap",
+        "value": "0.46"
+      }
+    },
+    "score-breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "Score breakdown: [both 24h&7d > +5% = +4, vmc 0.46 ≥ 0.20 = +3, RS vs BTC/ETH on 7d = +2] = 9/10",
+        "variant": "muted"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "catalyst-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "catalyst-heading",
+        "catalyst-text"
+      ]
+    },
+    "catalyst-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      }
+    },
+    "catalyst-text": {
+      "type": "Text",
+      "props": {
+        "text": "Project Darkbloom moved from Research Preview to Public Alpha — 600M+ tokens served on idle Apple silicon, 30–200% perf gains across TTFT/TPS, EigenCloud rebrand cements the restaking → AI-infra pivot",
+        "variant": "body"
+      }
+    },
+    "risk-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "risk-heading",
+        "risk-text"
+      ]
+    },
+    "risk-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "risk-text": {
+      "type": "Text",
+      "props": {
+        "text": "July 1 $8M token unlock (10d out) hits the post-pivot bid; supply uncapped and Q1 protocol revenue $8.74M vs $31.93M LY — pivot has to convert into datanet metrics fast",
+        "variant": "body"
+      }
+    },
+    "stake-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stake-heading",
+        "stake-text",
+        "exit-text"
+      ]
+    },
+    "stake-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake & Exit",
+        "level": "h3"
+      }
+    },
+    "stake-text": {
+      "type": "Text",
+      "props": {
+        "text": "Stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap",
+        "variant": "body"
+      }
+    },
+    "exit-text": {
+      "type": "Text",
+      "props": {
+        "text": "Exit: target $0.40 / invalidate $0.26 / time-stop 14d",
+        "variant": "body"
+      }
+    },
+    "vs-picks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vs-picks-heading",
+        "vs-picks-text"
+      ]
+    },
+    "vs-picks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Vs Recent Picks",
+        "level": "h3"
+      }
+    },
+    "vs-picks-text": {
+      "type": "Text",
+      "props": {
+        "text": "First time — 7d covered SOL/AERO/HYPE/UNI/JTO/NEAR, none in the AI-infra lane",
+        "variant": "body"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "market-heading",
+        "market-text"
+      ]
+    },
+    "market-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market",
+        "level": "h3"
+      }
+    },
+    "market-text": {
+      "type": "Text",
+      "props": {
+        "text": "Skipped — every Polymarket event clearing $50k 24h-vol is dedup-blocked or efficient. World Cup field efficient (Spain 13.9¢, Argentina 13.4¢ both fair), 2028 dem-nom/pres individual candidates all sub-$50k, Xi-out-by-2027 $19k vol fails liquidity gate",
+        "variant": "body"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "cg=ok, dex=partial(only meme tokens on /search?q=trending), poly=ok, x=ok(cache)",
+        "variant": "caption"
+      }
+    },
+    "disclaimer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "disclaimer-note1",
+        "disclaimer-note2"
+      ]
+    },
+    "disclaimer-note1": {
+      "type": "Text",
+      "props": {
+        "text": "If you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it",
+        "variant": "caption"
+      }
+    },
+    "disclaimer-note2": {
+      "type": "Text",
+      "props": {
+        "text": "Not financial advice — pattern-matching only",
+        "variant": "caption"
+      }
+    }
+  }
+}
