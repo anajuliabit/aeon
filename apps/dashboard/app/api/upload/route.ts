@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server'
-import { createFile, getFileContent, updateFile } from '@/lib/github'
+import { createFile, getFileContent, updateFile, commitAndPush } from '@/lib/github'
+import { errorResponse } from '@/lib/http'
+import { isRecord } from '@/lib/utils'
 import { addSkillToConfig } from '@/lib/config'
+import { parseFrontmatter, setFrontmatterCategory, SKILL_CATEGORIES } from '@/lib/frontmatter'
+import type { UploadFile } from '@/lib/types'
 
 function detectSecretsFromContent(content: string): string[] {
   const matches = new Set<string>()
@@ -16,16 +20,16 @@ function detectSecretsFromContent(content: string): string[] {
 }
 
 function extractSkillName(content: string): string {
-  // Try frontmatter name field
-  const fm = content.match(/^---\s*\n([\s\S]*?)\n---/)
-  if (fm) {
-    const nameMatch = fm[1].match(/name:\s*(.+)/)
-    if (nameMatch) {
-      // Slugify: "Daily Article" → "daily-article"
-      return nameMatch[1].trim().replace(/^['"]|['"]$/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-    }
-  }
-  return ''
+  // Slugify the frontmatter name: "Fleet Scorecard" → "fleet-scorecard"
+  const { name } = parseFrontmatter(content)
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
+// Validate a single element of an untrusted `files` array. We only require the
+// two fields this route actually reads (path, content); extra fields are kept,
+// so valid uploads carrying additional metadata still pass.
+function isUploadFile(v: unknown): v is UploadFile {
+  return isRecord(v) && typeof v.path === 'string' && typeof v.content === 'string'
 }
 
 function isSkillFile(path: string): boolean {
@@ -37,7 +41,7 @@ function stripSkillExt(name: string): string {
   return name.replace(/\.skill$/i, '')
 }
 
-function deriveSkillName(files: Array<{ path: string; content: string }>): { name: string; prefix: string } {
+function deriveSkillName(files: UploadFile[]): { name: string; prefix: string } {
   // First try SKILL.md
   const skillFile = files.find(f =>
     f.path === 'SKILL.md' ||
@@ -89,11 +93,18 @@ function deriveSkillName(files: Array<{ path: string; content: string }>): { nam
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json()
-    const files = body.files as Array<{ path: string; content: string }>
-    const overrideName = body.name as string | undefined
+    const body = await request.json() as unknown
+    const rawFiles = isRecord(body) && Array.isArray(body.files) ? body.files : []
+    const overrideName = isRecord(body) && typeof body.name === 'string' ? body.name : undefined
+    // Optional pack category - injected into the uploaded SKILL.md frontmatter so
+    // the skill lands in the right pack. Ignored unless it's a known category.
+    const rawCategory = isRecord(body) && typeof body.category === 'string' ? body.category : undefined
+    const category = rawCategory && (SKILL_CATEGORIES as readonly string[]).includes(rawCategory) ? rawCategory : undefined
+    // Drop any element that isn't a well-formed { path, content } before it
+    // reaches createFile / the secret scanner.
+    const files = rawFiles.filter(isUploadFile)
 
-    if (!files || files.length === 0) {
+    if (files.length === 0) {
       return NextResponse.json({ error: 'No files provided' }, { status: 400 })
     }
 
@@ -132,32 +143,53 @@ export async function POST(request: Request) {
         relativePath = 'SKILL.md'
       }
 
+      // Stamp the chosen category onto the skill's SKILL.md frontmatter.
+      const content = (category && relativePath === 'SKILL.md')
+        ? setFrontmatterCategory(file.content, category)
+        : file.content
+
       await createFile(
         `skills/${skillName}/${relativePath}`,
-        file.content,
+        content,
         `feat: upload ${skillName} skill`,
       )
       filesWritten++
     }
 
     // Add to aeon.yml if not already present
+    let configUpdated = true
+    let configError: string | undefined
     try {
       const config = await getFileContent('aeon.yml')
       const updated = addSkillToConfig(config.content, skillName)
       if (updated !== config.content) {
         await updateFile('aeon.yml', updated, config.sha, `chore: add ${skillName} to config`)
       }
-    } catch {
-      // Config update failed — skill files were still created
+    } catch (e: unknown) {
+      // The aeon.yml write is a real GitHub-API/file-IO boundary that can throw;
+      // the skill files are already on disk, so don't fail the whole upload —
+      // but surface it instead of swallowing it silently.
+      configUpdated = false
+      configError = e instanceof Error ? e.message : 'Failed to update aeon.yml'
+      console.error(`upload: failed to add ${skillName} to aeon.yml:`, e)
     }
 
     // Detect secrets referenced in skill content
     const allContent = files.map(f => f.content).join('\n')
     const detectedSecrets = detectSecretsFromContent(allContent)
 
-    return NextResponse.json({ name: skillName, filesWritten, detectedSecrets })
+    const sync = commitAndPush(['aeon.yml', `skills/${skillName}`], `feat: upload ${skillName} skill`)
+
+    return NextResponse.json({
+      name: skillName,
+      filesWritten,
+      detectedSecrets,
+      configUpdated,
+      ...(configError ? { configError } : {}),
+      synced: sync.synced,
+      ...(sync.reason ? { syncError: sync.reason } : {}),
+    })
   } catch (error: unknown) {
-    const msg = error instanceof Error ? error.message : 'Unknown error'
-    return NextResponse.json({ error: msg }, { status: 500 })
+    return errorResponse(error, 'Unknown error')
   }
 }

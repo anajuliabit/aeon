@@ -1,53 +1,12 @@
 import { NextResponse } from 'next/server'
-import { execFileSync, execSync } from 'child_process'
+import { execFileSync } from 'child_process'
 import { resolve } from 'path'
-import { readdirSync, readFileSync } from 'fs'
+import { readFileSync } from 'fs'
+import { REPO_ROOT, ghArgsRepo } from '@/lib/gh'
+import { errorResponse } from '@/lib/http'
+import type { SkillMetrics, Insight, GhRunJson } from '@/lib/types'
 
-const REPO_ROOT = resolve(process.cwd(), '..', '..')
-
-function ghRepo(): string | null {
-  try {
-    const repo = execSync('gh repo set-default --view', { stdio: 'pipe', cwd: REPO_ROOT }).toString().trim()
-    if (repo && !repo.startsWith('no default')) return repo
-  } catch {}
-  try {
-    const repo = execSync('gh repo view --json nameWithOwner -q .nameWithOwner', { stdio: 'pipe', cwd: REPO_ROOT }).toString().trim()
-    if (repo) return repo
-  } catch {}
-  return null
-}
-
-function ghArgsRepo(): string[] {
-  const repo = ghRepo()
-  return repo ? ['-R', repo] : []
-}
-
-interface RunRecord {
-  name: string
-  status: string
-  conclusion: string | null
-  createdAt: string
-  updatedAt: string
-}
-
-interface SkillMetrics {
-  name: string
-  total: number
-  success: number
-  failure: number
-  cancelled: number
-  inProgress: number
-  successRate: number
-  lastRun: string | null
-  lastConclusion: string | null
-  avgDurationMin: number | null
-  streak: number // positive = consecutive successes, negative = consecutive failures
-}
-
-interface Insight {
-  type: 'warning' | 'info' | 'success'
-  message: string
-}
+type RunRecord = Pick<GhRunJson, 'name' | 'status' | 'conclusion' | 'createdAt' | 'updatedAt'>
 
 export async function GET() {
   try {
@@ -69,7 +28,6 @@ export async function GET() {
       bySkill.get(skill)!.push(run)
     }
 
-    // Compute per-skill metrics
     const skills: SkillMetrics[] = []
     for (const [name, runs] of bySkill) {
       const sorted = runs.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
@@ -79,7 +37,6 @@ export async function GET() {
       const inProgress = sorted.filter(r => r.status === 'in_progress').length
       const total = sorted.length
 
-      // Calculate average duration for completed runs
       let avgDurationMin: number | null = null
       const completedRuns = sorted.filter(r => r.conclusion && r.createdAt && r.updatedAt)
       if (completedRuns.length > 0) {
@@ -89,7 +46,6 @@ export async function GET() {
         avgDurationMin = Math.round((totalMs / completedRuns.length / 60000) * 10) / 10
       }
 
-      // Calculate streak
       let streak = 0
       if (sorted.length > 0) {
         const first = sorted[0].conclusion
@@ -117,7 +73,6 @@ export async function GET() {
       })
     }
 
-    // Sort by total runs descending
     skills.sort((a, b) => b.total - a.total)
 
     // Generate insights
@@ -153,8 +108,10 @@ export async function GET() {
       const enabledSkills: string[] = []
       const lines = yml.split('\n')
       for (const line of lines) {
-        const m = line.match(/^\s+(\S+):\s*\{.*enabled:\s*true/)
-        if (m) enabledSkills.push(m[1])
+        // Capture only the inline brace body ([^}]*) so a trailing
+        // "# ... enabled:true ..." comment can't trigger a false positive.
+        const m = line.match(/^\s+(\S+):\s*\{([^}]*)\}/)
+        if (m && /enabled:\s*true/.test(m[2])) enabledSkills.push(m[1])
       }
 
       for (const skillName of enabledSkills) {
@@ -186,7 +143,6 @@ export async function GET() {
       }
     }
 
-    // Overall stats
     const totalRuns = skills.reduce((s, sk) => s + sk.total, 0)
     const totalSuccess = skills.reduce((s, sk) => s + sk.success, 0)
     const totalFailure = skills.reduce((s, sk) => s + sk.failure, 0)
@@ -206,7 +162,7 @@ export async function GET() {
           : 0,
       },
     })
-  } catch {
-    return NextResponse.json({ skills: [], insights: [], summary: { totalRuns: 0, totalSuccess: 0, totalFailure: 0, overallSuccessRate: 0, uniqueSkills: 0, periodDays: 0 } })
+  } catch (error: unknown) {
+    return errorResponse(error, 'Failed to load analytics')
   }
 }

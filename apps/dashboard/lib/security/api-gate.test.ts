@@ -1,9 +1,9 @@
 /**
  * Smoke tests for the dashboard API gate. Pure stdlib (`node:test` +
  * `node:assert`) so this file runs with `node --test` without a
- * framework dep — the dashboard doesn't ship a test runner today.
+ * framework dep - the dashboard doesn't ship a test runner today.
  *
- *   node --import tsx --test dashboard/lib/security/api-gate.test.ts
+ *   node --import tsx --test apps/dashboard/lib/security/api-gate.test.ts
  */
 import { afterEach, describe, it } from "node:test";
 import { strict as assert } from "node:assert";

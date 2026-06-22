@@ -1,18 +1,62 @@
-import { readFile, writeFile, readdir, mkdir, stat, rm } from 'fs/promises'
-import { join, resolve } from 'path'
+import { readFile, writeFile, readdir, mkdir, rm } from 'fs/promises'
+import { execFileSync } from 'child_process'
+import { join } from 'path'
+import { REPO_ROOT } from './gh'
 
 const GITHUB_API = 'https://api.github.com'
 
-// Resolve the repo root (one level up from dashboard/)
-const REPO_ROOT = resolve(process.cwd(), '..', '..')
+// Minimal shapes for the GitHub "Get repository content" REST responses.
+interface GitHubContentFile { content: string; sha: string; encoding: string }
+interface GitHubContentEntry { name: string; type: 'file' | 'dir' | 'symlink' | 'submodule'; path: string }
 
-function isLocal() {
+export function isLocal() {
   return !process.env.GITHUB_TOKEN || !process.env.GITHUB_REPO
 }
 
+/**
+ * Local-mode auto-sync. After a dashboard edit writes a file to disk, stage
+ * exactly those paths, commit, and push so the change lands on GitHub
+ * immediately - otherwise scheduled runs (which read committed `main`) never see
+ * it. Hosted mode already commits through the Contents API, so this is a no-op
+ * there. Best-effort and never throws: the file is already saved locally, so a
+ * failed push degrades to { synced: false } (surfaced to the UI) rather than
+ * failing the request. Only the given paths are committed, so unrelated
+ * working-tree changes are left untouched.
+ */
+export function commitAndPush(paths: string[], message: string): { synced: boolean; reason?: string } {
+  if (isLocal() === false) return { synced: true } // hosted mode: edit already committed via API
+  const git = (...args: string[]) =>
+    execFileSync('git', args, { stdio: 'pipe', cwd: REPO_ROOT }).toString().trim()
+  const errMsg = (e: unknown) => (e instanceof Error ? e.message : String(e)).slice(0, 200)
+  try {
+    git('add', '--', ...paths) // stages content changes AND deletions under these paths
+    let staged = true
+    try { git('diff', '--cached', '--quiet', '--', ...paths); staged = false } catch { staged = true }
+    if (!staged) return { synced: true } // nothing changed in these paths
+    git('commit', '-m', message, '--', ...paths)
+    try {
+      git('push')
+    } catch {
+      // Most likely behind origin/main (e.g. an Actions bot commit). Rebase onto
+      // the remote and retry once; abort cleanly if it conflicts.
+      try {
+        git('pull', '--rebase', '--autostash')
+        git('push')
+      } catch (e) {
+        try { git('rebase', '--abort') } catch { /* not mid-rebase */ }
+        return { synced: false, reason: errMsg(e) }
+      }
+    }
+    return { synced: true }
+  } catch (e) {
+    return { synced: false, reason: errMsg(e) }
+  }
+}
+
 function getConfig() {
-  const token = process.env.GITHUB_TOKEN!
-  const repo = process.env.GITHUB_REPO!
+  const token = process.env.GITHUB_TOKEN
+  const repo = process.env.GITHUB_REPO
+  if (!token || !repo) throw new Error('github.ts: getConfig() requires GITHUB_TOKEN and GITHUB_REPO (non-local mode)')
   return { token, repo }
 }
 
@@ -37,14 +81,14 @@ export async function getFileContent(path: string): Promise<{ content: string; s
     cache: 'no-store',
   })
   if (!res.ok) throw new Error(`GitHub API ${res.status}: failed to read ${path}`)
-  const data = await res.json()
+  const data = (await res.json()) as GitHubContentFile
   return {
     content: Buffer.from(data.content, 'base64').toString('utf-8'),
-    sha: data.sha as string,
+    sha: data.sha,
   }
 }
 
-export async function updateFile(path: string, content: string, sha: string, _message: string) {
+export async function updateFile(path: string, content: string, sha: string, _message: string): Promise<unknown> {
   if (isLocal()) {
     await writeFile(join(REPO_ROOT, path), content, 'utf-8')
     return { ok: true }
@@ -64,7 +108,7 @@ export async function updateFile(path: string, content: string, sha: string, _me
   return res.json()
 }
 
-export async function createFile(path: string, content: string, message: string) {
+export async function createFile(path: string, content: string, message: string): Promise<unknown> {
   if (isLocal()) {
     const fullPath = join(REPO_ROOT, path)
     await mkdir(join(fullPath, '..'), { recursive: true })
@@ -76,7 +120,7 @@ export async function createFile(path: string, content: string, message: string)
     const existing = await getFileContent(path)
     return updateFile(path, content, existing.sha, message)
   } catch {
-    // File doesn't exist — create it
+    // File doesn't exist - create it
   }
   const res = await fetch(`${GITHUB_API}/repos/${repo}/contents/${path}`, {
     method: 'PUT',
@@ -89,6 +133,31 @@ export async function createFile(path: string, content: string, message: string)
   })
   if (!res.ok) throw new Error(`GitHub API ${res.status}: failed to create ${path}`)
   return res.json()
+}
+
+/**
+ * Write a file, updating it in place when it already exists and creating it
+ * otherwise, then sync via commitAndPush. Returns commitAndPush's result
+ * ({ synced, reason }) so routes can spread it - best-effort/local-mode-only,
+ * never throws from the sync step.
+ */
+export async function saveFile(
+  path: string,
+  content: string,
+  opts: { updateMsg: string; createMsg: string },
+): Promise<{ synced: boolean; reason?: string }> {
+  let sha: string | undefined
+  try {
+    sha = (await getFileContent(path)).sha
+  } catch {
+    // File doesn't exist yet - create it
+  }
+  if (sha) {
+    await updateFile(path, content, sha, opts.updateMsg)
+  } else {
+    await createFile(path, content, opts.createMsg)
+  }
+  return commitAndPush([path], sha ? opts.updateMsg : opts.createMsg)
 }
 
 export async function getDirectory(path: string): Promise<Array<{ name: string; type: string; path: string }>> {
@@ -110,68 +179,40 @@ export async function getDirectory(path: string): Promise<Array<{ name: string; 
     headers: authHeaders(token),
     cache: 'no-store',
   })
-  if (!res.ok) return []
-  const data = await res.json()
+  if (res.status === 404) return [] // legitimately-absent path
+  if (!res.ok) throw new Error(`GitHub API ${res.status} listing ${path}`)
+  const data = (await res.json()) as GitHubContentEntry[] | GitHubContentFile
   return Array.isArray(data) ? data : []
-}
-
-export async function triggerWorkflow(skill: string) {
-  if (isLocal()) {
-    throw new Error('Cannot trigger GitHub Actions locally — set GITHUB_TOKEN and GITHUB_REPO to enable remote runs')
-  }
-  const { token, repo } = getConfig()
-  const res = await fetch(`${GITHUB_API}/repos/${repo}/actions/workflows/aeon.yml/dispatches`, {
-    method: 'POST',
-    headers: authHeaders(token),
-    body: JSON.stringify({ ref: 'main', inputs: { skill } }),
-    cache: 'no-store',
-  })
-  if (!res.ok) throw new Error(`GitHub API ${res.status}: failed to trigger workflow`)
-}
-
-export async function getWorkflowRuns(perPage = 20) {
-  if (isLocal()) {
-    // Return empty — no GitHub Actions access locally
-    return []
-  }
-  const { token, repo } = getConfig()
-  const res = await fetch(
-    `${GITHUB_API}/repos/${repo}/actions/runs?per_page=${perPage}`,
-    { headers: authHeaders(token), cache: 'no-store' },
-  )
-  if (!res.ok) throw new Error(`GitHub API ${res.status}: failed to fetch runs`)
-  const data = await res.json()
-  return data.workflow_runs || []
 }
 
 // --- Remote repo helpers (for importing skills) ---
 
+function remoteAuthHeaders(): Record<string, string> {
+  return {
+    Accept: 'application/vnd.github+json',
+    ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}),
+  }
+}
+
 export async function getRemoteDirectory(remoteRepo: string, path: string): Promise<Array<{ name: string; type: string }>> {
   // Always uses GitHub API (remote repo)
-  const headers: Record<string, string> = { Accept: 'application/vnd.github+json' }
-  if (process.env.GITHUB_TOKEN) {
-    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`
-  }
   const url = path
     ? `${GITHUB_API}/repos/${remoteRepo}/contents/${path}`
     : `${GITHUB_API}/repos/${remoteRepo}/contents`
-  const res = await fetch(url, { headers, cache: 'no-store' })
-  if (!res.ok) return []
-  const data = await res.json()
+  const res = await fetch(url, { headers: remoteAuthHeaders(), cache: 'no-store' })
+  if (res.status === 404) return [] // legitimately-absent path
+  if (!res.ok) throw new Error(`GitHub API ${res.status} listing ${path}`)
+  const data = (await res.json()) as GitHubContentEntry[] | GitHubContentFile
   return Array.isArray(data) ? data : []
 }
 
 export async function getRemoteFileContent(remoteRepo: string, path: string): Promise<string | null> {
-  const headers: Record<string, string> = { Accept: 'application/vnd.github+json' }
-  if (process.env.GITHUB_TOKEN) {
-    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`
-  }
   const res = await fetch(`${GITHUB_API}/repos/${remoteRepo}/contents/${path}`, {
-    headers,
+    headers: remoteAuthHeaders(),
     cache: 'no-store',
   })
   if (!res.ok) return null
-  const data = await res.json()
+  const data = (await res.json()) as GitHubContentFile
   return Buffer.from(data.content, 'base64').toString('utf-8')
 }
 
@@ -196,22 +237,5 @@ export async function deleteDirectory(path: string, message: string): Promise<vo
       })
       if (!res.ok) throw new Error(`GitHub API ${res.status}: failed to delete ${path}/${file.name}`)
     }
-  }
-}
-
-export async function fileExists(path: string): Promise<boolean> {
-  if (isLocal()) {
-    try {
-      await stat(join(REPO_ROOT, path))
-      return true
-    } catch {
-      return false
-    }
-  }
-  try {
-    await getFileContent(path)
-    return true
-  } catch {
-    return false
   }
 }
