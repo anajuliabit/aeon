@@ -1,0 +1,156 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-06-22"
+      },
+      "children": [
+        "text_intro",
+        "separator_1",
+        "heading_list",
+        "separator_2",
+        "stack_post_1",
+        "separator_3",
+        "stack_post_2",
+        "separator_4",
+        "heading_other",
+        "text_other_posts",
+        "separator_5",
+        "heading_status",
+        "text_status_info"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Single tracked list, slow day — only two posts cleared the noise floor; hooeem's long-form drop pulls the heat, flowslikeosmo's weekly watchlist holds.",
+        "variant": "lead"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_list": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Curators List (1642770456720683008)",
+        "level": "h2"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_post_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "link_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "Fresh x-article (paywalled to bots, can't extract specifics) but 179♥ / 17↻ / 51k views says the list treats it as a must-read — chase the article if you trust hooeem on direction.",
+        "likes": 179,
+        "retweets": 17
+      }
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2068752941553476002"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_post_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "link_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "Weekly crypto watchlist: tickers, fees, TVL, catalysts, unlocks, security notes. 25 replies = list members workshopping picks, not passive reads — standing-order signal worth scraping weekly (♥77, ↻7)",
+        "likes": 77,
+        "retweets": 7
+      }
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2068802136499257558"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_other": {
+      "type": "Heading",
+      "props": {
+        "text": "Sub-threshold Posts",
+        "level": "h3"
+      }
+    },
+    "text_other_posts": {
+      "type": "Text",
+      "props": {
+        "text": "Rest of the list ran light: pendle one-liner, \"manlet szn\" memes, father's day chatter, arndxt's \"cards sector booming\" reply — sub-threshold, no insight to extract.",
+        "variant": "caption"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      }
+    },
+    "text_status_info": {
+      "type": "Text",
+      "props": {
+        "text": "Source: 1642770456720683008=ok(12) | Status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

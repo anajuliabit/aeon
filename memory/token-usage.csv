@@ -487,3 +487,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-22,on-chain-monitor,claude-opus-4-7,3332,42222,6181855,110682
 2026-06-22,soul-builder,claude-sonnet-4-6,1541,15776,1324548,57784
 2026-06-22,skill-security-scan,claude-opus-4-7,32,27619,1945591,140720
+2026-06-22,list-digest,claude-opus-4-7,37,10667,1560515,72850
