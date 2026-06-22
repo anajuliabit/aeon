@@ -125,13 +125,13 @@
   },
   "morning-brief": {
     "last_dispatch": "2026-06-22T08:31:16Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-21T13:21:01Z",
-    "total_runs": 50,
-    "total_successes": 28,
+    "last_status": "success",
+    "last_success": "2026-06-22T08:35:33Z",
+    "total_runs": 51,
+    "total_successes": 29,
     "total_failures": 22,
     "consecutive_failures": 0,
-    "success_rate": 0.56,
+    "success_rate": 0.57,
     "last_failed": "2026-06-21T12:14:08Z",
     "last_error": "b321a93\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
