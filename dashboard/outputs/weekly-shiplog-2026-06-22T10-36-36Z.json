@@ -1,0 +1,184 @@
+{
+  "root": "card-shiplog",
+  "state": {},
+  "elements": {
+    "card-shiplog": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog — 2026-06-22"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-main",
+        "description",
+        "separator-1",
+        "themes-section",
+        "separator-2",
+        "stats-section",
+        "separator-3",
+        "link-section"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Catalog Evolution: From Flat List to Modular Packs",
+        "level": "h2"
+      }
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "The skill catalog stopped being one flat list of 202 items. Now featuring a Core pack (enabled by default) plus opt-in packs with a one-click install path. Five outside contributors have already shipped packs onto it.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "themes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "themes-heading",
+        "themes-stack"
+      ]
+    },
+    "themes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Themes",
+        "level": "h3"
+      }
+    },
+    "themes-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme-1",
+        "theme-2",
+        "theme-3"
+      ]
+    },
+    "theme-1": {
+      "type": "Badge",
+      "props": {
+        "text": "From flat skill list to packs",
+        "variant": "outline"
+      }
+    },
+    "theme-2": {
+      "type": "Badge",
+      "props": {
+        "text": "One-click community pack install, five packs already on it",
+        "variant": "outline"
+      }
+    },
+    "theme-3": {
+      "type": "Badge",
+      "props": {
+        "text": "Dependency hygiene wired into the repo",
+        "variant": "outline"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-heading",
+        "stats-grid"
+      ]
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Activity Metrics",
+        "level": "h3"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-commits",
+        "stat-prs",
+        "stat-lines"
+      ]
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits",
+        "value": "58"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Pull Requests",
+        "value": "58"
+      }
+    },
+    "stat-lines": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines Changed",
+        "value": "+3,300 / −3,920"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "full-article-link"
+      ]
+    },
+    "full-article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Weekly Shiplog Article",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-06-22.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
