@@ -192,7 +192,7 @@ jobs:
               local f
               for f in $conflicted; do
                 case "$f" in
-                  memory/logs/*|memory/topics/*|memory/MEMORY.md|memory/skill-health/*|memory/cron-state.json|dashboard/outputs/*|.outputs/*)
+                  memory/logs/*|memory/topics/*|memory/MEMORY.md|memory/skill-health/*|memory/cron-state.json|apps/dashboard/outputs/*|.outputs/*)
                     sed -i '/^<<<<<<< /d; /^=======$/d; /^>>>>>>> /d' "$f" ;;
                   *)
                     git checkout --theirs "$f" 2>/dev/null || true ;;

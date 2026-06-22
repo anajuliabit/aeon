@@ -22,7 +22,7 @@ The Worker is a Wrangler project. Full instructions are in
 [`worker/README.md`](../worker/README.md). In short:
 
 ```bash
-cd worker
+cd apps/webhook
 npm install
 npx wrangler login
 npx wrangler deploy

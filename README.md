@@ -88,7 +88,7 @@ If you need to reach the dashboard from another machine on the same network or o
 | `AEON_DASHBOARD_ALLOWED_HOSTS=aeon.local,box.tail-xxx.ts.net` | Extends the loopback allowlist by one or more hostnames (comma-separated, case- and port-insensitive). The defaults stay accepted. |
 | `AEON_DASHBOARD_ALLOW_ANY_HOST=1` | Disables Host-header checking entirely. Intended only for a trusted reverse proxy that terminates `Host` upstream. Loudly insecure if set without an authenticating proxy in front. |
 
-The gate also rejects state-changing requests (POST / PUT / PATCH / DELETE) whose `Origin` (or `Referer` fallback) isn't on the same allowlist — so a malicious page on another origin can't drive `/api/secrets` or `/api/skills/.../run` via a no-cors POST. Code lives in [`dashboard/middleware.ts`](dashboard/middleware.ts) + [`dashboard/lib/security/api-gate.ts`](dashboard/lib/security/api-gate.ts).
+The gate also rejects state-changing requests (POST / PUT / PATCH / DELETE) whose `Origin` (or `Referer` fallback) isn't on the same allowlist — so a malicious page on another origin can't drive `/api/secrets` or `/api/skills/.../run` via a no-cors POST. Code lives in [`apps/dashboard/middleware.ts`](apps/dashboard/middleware.ts) + [`apps/dashboard/lib/security/api-gate.ts`](apps/dashboard/lib/security/api-gate.ts).
 
 ---
 
@@ -322,9 +322,9 @@ skills/                  ← each skill is a SKILL.md prompt file
   heartbeat/
   ...                    ← 121 skills total
 workflows/               ← GitHub Agentic Workflow templates (.md)
-mcp-server/              ← MCP server — exposes skills as Claude tools
-a2a-server/              ← A2A protocol gateway — exposes skills to any agent framework
-dashboard/               ← local web UI (Next.js + json-render feed)
+apps/mcp-server/              ← MCP server — exposes skills as Claude tools
+apps/a2a-server/              ← A2A protocol gateway — exposes skills to any agent framework
+apps/dashboard/               ← local web UI (Next.js + json-render feed)
 memory/
   MEMORY.md              ← goals, active topics, pointers
   cron-state.json        ← per-skill execution metrics (status, success rate, quality)

@@ -5,6 +5,75 @@
 # Set model: "claude-sonnet-4-6" per skill to override the default model (cost optimization).
 
 skills:
+  # --- Ported from upstream (aaronjmars/aeon) 2026-06-22 — all disabled pending config/review ---
+  agent-displacement: { enabled: false, schedule: "0 11 * * 0" } # Sunday — AI-agent headcount-displacement signals (named roles + real deployments)
+  api-health: { enabled: false, schedule: "30 6 * * *" } # daily 06:30 UTC — pre-batch health probe of every configured API provider key (credit exhaustion / auth failure / outage) via scripts/prefetch-api-probe.sh; files/updates issues; notifies only on degradation or recovery
+  approval-audit: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: wallet address — live token-approval audit
+  article-queue: { enabled: false, schedule: "0 11 * * 0" } # Sunday 11:00 UTC — synthesizes beat-tracker + topic-momentum + narrative-tracker into a ranked queue at memory/topics/article-queue.md that the article skill picks up via MEMORY.md
+  atrium-watch:
+  base-mcp: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — Base Account access via the Base MCP server (mcp.base.org)
+  batch-health: { enabled: false, schedule: "30 8 * * *" } # daily — verify enabled morning-batch skills fired; alert on silent misses
+  beamr-route: { enabled: false, schedule: "workflow_dispatch", var: "" }
+  beat-tracker: { enabled: false, schedule: "0 9 * * 3" } # Wednesday 09:00 UTC — persistent beat counts per news storyline; alerts when a thread hits 3 beats (article-ready). Event-level complement to topic-momentum + narrative-tracker.
+  builder-map: { enabled: false, schedule: "0 10 * * 2" } # Tuesday — who's building on watched repos (forks, ecosystem repos, announcements)
+  capabilities-map:
+  compute-pulse: { enabled: false, schedule: "0 11 * * 6" } # Saturday — AI compute market: GPU/hardware deals, inference pricing, decentralized-compute tokens
+  config-validator: { enabled: false, schedule: "30 16 * * 0" } # Sunday — lint aeon.yml + workflow for structural invariants (checkout order, dup keys, missing files)
+  content-performance:
+  contract-audit: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: contract address — powers/ownership/proxy audit
+  ctrl: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: natural-language workflow (e.g. "DCA 0.005 ETH into USDC weekly") — compiles a trigger→action graph into a CTRL V3 vault on Base via the live /api/mcp REST API, hands the user a one-shot signUrl. Agent never signs; the wallet signs an EIP-5792 batch once, the keeper executes after under per-swap/per-day caps. Operator-initiated only. No API key needed (anonymous create; wallet signature is the trust boundary).
+  deployer-trace: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: deployer/token address — serial-rug detection
+  disclosure-tracker: { enabled: false, schedule: "15 16 * * *" } # daily — audit pending disclosure queue, alert on aging CRITICAL/HIGH advisories
+  ecosystem-links:
+  ecosystem-pulse:
+  engagement-act: { enabled: false, schedule: "30 9 * * *" } # daily — turn flagged engagement opportunities into copy-paste-ready replies
+  fear-divergence: { enabled: false, schedule: "30 7 * * *" } # daily 07:30 UTC — conditional: fires only when Fear & Greed < 25; surfaces assets diverging from the BTC drawdown with narrative catalysts from memory; silent skip otherwise. Reads market-context.md (enable market-context first).
+  fleet-scorecard: { enabled: false, schedule: "0 13 * * *" } # daily 13:00 UTC — fleet-wide scorecard (self + every non-archived repo in memory/instances.json): runs, tokens (OpenRouter shape), est. cost, reliability, day-over-day deltas + alerts. Reads scripts/prefetch-fleet-scorecard.sh output.
+  followup-patrol:
+  fork-health:
+  frequency-guard: { enabled: false, schedule: "0 23 * * *" } # daily — watchdog for capped skills exceeding their per-day run limit
+  fund-flow: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: address — trace multi-hop fund movement (Mermaid graph)
+  holder-concentration: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: token address — distribution/HHI analysis
+  honeypot-check: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: token address — honeypot / sell-restriction check
+  idea-pipeline: { enabled: false, schedule: "0 18 * * 1" } # Monday — execution-gap audit: top 3 backlog ideas to build this week
+  idea-validator: { enabled: false, schedule: "30 18 * * 1" } # Monday — screen the startup-idea backlog, score viability
+  install-skill: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — install a community skill pack and open a PR; var: owner/repo [skill...]
+  investigation-report: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: token address — composite rug+audit+deployer+holders report
+  janitor: { enabled: false, schedule: "30 5 * * 0" } # Sunday — clean stale .notify-*, .pending-notify-temp/, expired .outputs/ artifacts
+  linked-wallets: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: address — cluster same-entity wallets (shared-funder + co-spend)
+  liquidpad-launch: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — var: token concept (≥6 chars, or JSON {name,symbol,theme}); deploys a token on Base via LiquidPad through a prefetch/postprocess shim. Requires LIQUIDPAD_API_KEY (read by the shim, not the skill). Set LIQUIDPAD_DRY_RUN=1 to simulate.
+  lp-lock: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: token address — LP lock / rug-pull risk check
+  mcp-pulse: { enabled: false, schedule: "0 10 * * 5" } # Friday 10:00 UTC — MCP ecosystem tracker: new servers, npm/GitHub adoption velocity, protocol evolution, thesis check. Pairs with x402-monitor for full agent-infra coverage (tool-calls + payments).
+  memory-dedupe: { enabled: false, schedule: "10 6 2/2 * *" } # every other day — collapse duplicate section rows + duplicate H2 headings in MEMORY.md
+  mention-radar:
+  milestone-tracker: { enabled: false, schedule: "0 19 * * 1" } # Monday — progress on key product/growth milestones; crossings, approaches, stalls
+  narrative-convergence:
+  pm-manipulation: { enabled: false, schedule: "15 13 * * *" } # daily — flag suspected PM manipulation from 3-day price/volume/comment + local-press anomalies
+  pm-pulse: { enabled: false, schedule: "0 13 * * 1" } # Monday — prediction/coordination-market volume, new mechanisms, regulatory moves
+  pr-merge: { enabled: false, schedule: "45 9 * * *", var: "" } # daily 09:45 UTC — operator-facing morning digest of every open PR on the target repo (default aaronjmars/aeon), bucketed by touched-file risk tier (FAST_TRACK/SKILL_PASS/INFRA_REVIEW/SKILL_WARN_OR_BLOCK/CORE_REVIEW/UNKNOWN), each skill-PR scanned via skill-scan/scan.sh, gated re-notify on head SHA. var: dry-run [owner/repo]
+  pr-tracker: { enabled: false, schedule: "30 9 * * *" } # daily — status of cross-repo PRs opened by this instance (merge/stale/closed)
+  pvr-triage: { enabled: false, schedule: "30 16 * * 6" } # Saturday — lifecycle check on submitted private vuln reports (accept/reject/aging >30d)
+  pvr-watchlist: { enabled: false, schedule: "0 16 * * 6" } # Saturday — probe watchlist repos for private-vuln-reporting status, re-submit queued advisories
+  repo-revive: { enabled: false, schedule: "0 10 * * 6" } # Saturday — one targeted improvement to reactivate the top dormant watched repo
+  rug-scan: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: token address — rug-pull risk verdict
+  rwa-pulse: { enabled: false, schedule: "0 12 * * 1" } # Monday — RWA tokenization momentum: launches, TVL, institutional adoption, regulation
+  signal-verdict: { enabled: false, schedule: "0 8 * * 1" } # Monday — verify tracker skills produce citable signals; surface uncited trackers
+  skill-adoption:
+  skill-enabler: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — flip skills enabled:true by slug list, validate, commit + open PR
+  skill-spotlight: { enabled: false, schedule: "workflow_dispatch", var: "" } # picks one skill from a rotation queue (memory/topics/skill-spotlight.md), writes a paste-ready feature tweet in the "Aeon skill spotlight 🌟" format, then dispatches the picked skill so its own ./notify delivers the live outcome. Two notifications per run: tweet draft + skill result. Set var=<skill-name> to override the queue. Recommended enabled cron: "0 8 * * *".
+  skill-triage:
+  soul-builder: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — build a SOUL from any mix of sources (X handle, full name, links), drafting soul/SOUL.md + STYLE.md + examples so every content skill speaks in that voice. var: bare X handle, or structured brief "x=handle | name=Full Name | links=url1,url2". Powers the dashboard Soul → Build my soul button. XAI_API_KEY optional (name/links use built-in WebSearch/WebFetch).
+  sparkleware-catalog:
+  spend-monitor:
+  strategy-builder: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — draft STRATEGY.md (north-star / priorities / audience / constraints) from a brief + repo README + memory. var: bare goal text, or structured brief "repo=owner/repo | links=url1,url2 | goal=free text". Powers the dashboard Strategy → Build my strategy button. No API key needed.
+  topic-momentum: { enabled: false, schedule: "30 6 * * 1" } # Monday — content-gap scan: top 3 uncovered angles vs recent article history
+  tx-explain: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: tx hash — plain-English decode
+  vigil: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: wallet or token address on Base — keyless read-only onchain security scan (approvals, honeypot, rugpull indicators, contract-safety score) via VIGIL API. Pairs with vigil-revoke for the write action.
+  vigil-revoke: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: wallet:spender:token (triplet of 0x40-hex addresses) — revoke a single live ERC-20 approval on Base via Bankr. Confirms live allowance, submits approve(spender, 0), waits for receipt. Operator-initiated only — pairs with wallet-risk + approval-audit. Requires BANKR_API_KEY (read-write, Wallet API). No auto-retry, no bulk, no scheduled cron.
+  vuln-tracker: { enabled: false, schedule: "30 16 * * *" } # daily — status of vuln-scanner PRs/advisories/queued drafts
+  wallet-profile: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: wallet address — behavioral profile
+  wallet-risk:
+  x402-monitor:
   # --- Morning aggregation (7 AM UTC) ---
   morning-brief: { enabled: true, schedule: "0 7 * * *" }
   daily-routine: { enabled: true, schedule: "0 7 * * *" }

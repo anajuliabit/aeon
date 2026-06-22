@@ -73,7 +73,7 @@ These are the patterns the operator's social posts have signposted as in-scope f
 | MCP server tool naming (`aeon-${skill_slug}`) | `mcp-server/src/index.ts` | Naming convention for forks consuming the MCP |
 | `add-skill`, `add-mcp`, `add-a2a` CLIs | repo root | Argument shape, supported sources |
 | `skills.json` schema (`version`, `categories`, `skills[].install`) | `skills.json` | Field set; rename/remove of optional fields |
-| `dashboard/lib/catalog.ts` json-render catalog shape | `dashboard/` | Spec shape for `dashboard/outputs/*.json` |
+| `apps/dashboard/lib/catalog.ts` json-render catalog shape | `apps/dashboard/` | Spec shape for `apps/dashboard/outputs/*.json` |
 
 ### Custom — skills with no upstream equivalent
 
