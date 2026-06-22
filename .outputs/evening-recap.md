@@ -1,27 +1,23 @@
-*Evening Recap — 2026-06-21*
-_TL;DR: heavy ship day — 2 PRs filed + fork-cohort cold-started; fleet stayed red, token-alert stuck >7h unresolved._
+*Evening Recap — 2026-06-22*
+_TL;DR: heavy day — 2 articles shipped and deal-flow recovered after 14d, but cost-report went critical (cf=8) and sandbox-truncation now at 14 open issues_
 
 *Headlines:*
-- self-improve — PR #130 opened: drop disabled monitor-polymarket eval (ISS-022) · https://github.com/anajuliabit/aeon/pull/130
-- skill-graph — PR #129 opened: RETIRED_SKILLS -4, SHARED_STATE_EDGES 195→9 · https://github.com/anajuliabit/aeon/pull/129
-- fork-cohort — first run shipped: 186 forks, 32 power/active · articles/fork-cohort-2026-06-21.md
-- skill-evals — REGRESSED: 3 new fails, ISS-022/023/024 filed, coverage 24%→32% · memory/issues/ISS-024.md
-- skill-freshness — FRESHNESS_WARN: operator-scorecard dep 11d stale · articles/skill-freshness-2026-06-21.md
+- weekly-shiplog — 58 commits/PRs, first net-negative-lines week (20-skill prune #473, −3,920 lines) · https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-06-22.md
+- project-lens — per-action approval is hitl theater; optimistic-window primitive thesis shipped · https://github.com/anajuliabit/aeon/blob/main/articles/project-lens-2026-06-22.md
 
 *Notable:*
-- security-digest — 10-pkg npm malware wave + Langflow RCE+IDOR same-week double CVE; patch to 1.9.2
-- token-pick ×2 — AERO $0.54 + SOL $73.47, both HIGH 7/10 staged
-- daily-routine — LAB +26.9%, ContextRL paper arXiv 2606.17053, tweet-roundup via WebSearch fallback
-- narrative-tracker — 15 actionable; 2 FRONT-RUN (AI×RWA, Onchain AI×Compute); 3 reflexivity flags
-- market-context-refresh ×2 — breadth 7/20→14/20; risk-on recovery; BoJ 6-25 next catalyst
+- deal-flow — recovered after 14d stuck dispatch; 8 deals, Baseten $1.5B Series E top
+- skill-health — filed ISS-025: cost-report CRITICAL cf=8, outputTokens=12, last clean run 7d ago
+- unlock-monitor — NEWT CRISIS: 64.9% circ supply cliff 6-24 on $11M mcap (supply doubles in 2d)
+- token-alert — ISS-023 closed: first clean run since 6-19, 19h stuck dispatch resolved
+- weekly-review — 874 runs / 22.1% sr this week; top action: patch sandbox-truncation capture step by 6-26 · articles/weekly-review-2026-06-22.md
 
 *Decisions for tomorrow:*
-- merge PR #129 + #130 (both ~4h old, no blockers flagged)
-- investigate token-alert: stuck dispatched since 13:45Z (>7h elapsed, ISS-023 filed)
-- operator: set ALCHEMY_API_KEY or ETHERSCAN_API_KEY to unblock Base on-chain coverage
+- XAI top-up: 6+ days blocked, tweet-roundup + agent-buzz on WebSearch fallback (operator-gated)
+- provide ALCHEMY_API_KEY: on-chain-monitor on keyless Blockscout only, 0 events on slow multisigs
+- decide davila7/claude-code-templates:vulnerability-scanner — UNTRUSTED, fills ISS-018 sandbox gap (`./add-skill davila7/claude-code-templates vulnerability-scanner`)
 
 *Blockers:*
-- token-alert — dispatched 13:45Z, cf=2, no completion · ISS-023
-- deal-flow — stuck dispatched 13d, no change
+- cost-report — cf=8, ISS-025, output_tokens=12 truncation variant, no clean run since 6-15
 
-_+27 routine runs collapsed · sources: log=ok cron-state=ok_
+_+33 routine runs collapsed · sources: log=ok cron-state=ok_

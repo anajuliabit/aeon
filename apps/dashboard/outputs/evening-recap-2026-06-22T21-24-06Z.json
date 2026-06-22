@@ -1,0 +1,228 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-22",
+        "description": "heavy day — 2 articles shipped and deal-flow recovered after 14d, but cost-report went critical (cf=8) and sandbox-truncation now at 14 open issues"
+      },
+      "children": [
+        "heading-tldr",
+        "text-tldr",
+        "separator-1",
+        "heading-headlines",
+        "storylink-weekly-shiplog",
+        "storylink-project-lens",
+        "separator-2",
+        "heading-notable",
+        "stack-notable",
+        "separator-3",
+        "heading-decisions",
+        "stack-decisions",
+        "separator-4",
+        "heading-blockers",
+        "alert-cost-report",
+        "separator-5",
+        "text-footer"
+      ]
+    },
+    "heading-tldr": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h2"
+      }
+    },
+    "text-tldr": {
+      "type": "Text",
+      "props": {
+        "text": "heavy day — 2 articles shipped and deal-flow recovered after 14d, but cost-report went critical (cf=8) and sandbox-truncation now at 14 open issues",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "storylink-weekly-shiplog": {
+      "type": "StoryLink",
+      "props": {
+        "title": "weekly-shiplog — 58 commits/PRs, first net-negative-lines week (20-skill prune #473, −3,920 lines)",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-06-22.md",
+        "source": "GitHub"
+      }
+    },
+    "storylink-project-lens": {
+      "type": "StoryLink",
+      "props": {
+        "title": "project-lens — per-action approval is hitl theater; optimistic-window primitive thesis shipped",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/project-lens-2026-06-22.md",
+        "source": "GitHub"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-deal-flow",
+        "item-skill-health",
+        "item-unlock-monitor",
+        "item-token-alert",
+        "item-weekly-review"
+      ]
+    },
+    "item-deal-flow": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow — recovered after 14d stuck dispatch; 8 deals, Baseten $1.5B Series E top"
+      }
+    },
+    "item-skill-health": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — filed ISS-025: cost-report CRITICAL cf=8, outputTokens=12, last clean run 7d ago"
+      }
+    },
+    "item-unlock-monitor": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor — NEWT CRISIS: 64.9% circ supply cliff 6-24 on $11M mcap (supply doubles in 2d)"
+      }
+    },
+    "item-token-alert": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — ISS-023 closed: first clean run since 6-19, 19h stuck dispatch resolved"
+      }
+    },
+    "item-weekly-review": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-weekly-review-main",
+        "storylink-weekly-review"
+      ]
+    },
+    "text-weekly-review-main": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review — 874 runs / 22.1% sr this week; top action: patch sandbox-truncation capture step by 6-26"
+      }
+    },
+    "storylink-weekly-review": {
+      "type": "StoryLink",
+      "props": {
+        "title": "articles/weekly-review-2026-06-22.md",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-review-2026-06-22.md",
+        "source": "GitHub"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "stack-decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-decision-1",
+        "text-decision-2",
+        "text-decision-3"
+      ]
+    },
+    "text-decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "XAI top-up: 6+ days blocked, tweet-roundup + agent-buzz on WebSearch fallback (operator-gated)"
+      }
+    },
+    "text-decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "provide ALCHEMY_API_KEY: on-chain-monitor on keyless Blockscout only, 0 events on slow multisigs"
+      }
+    },
+    "text-decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "decide davila7/claude-code-templates:vulnerability-scanner — UNTRUSTED, fills ISS-018 sandbox gap (`./add-skill davila7/claude-code-templates vulnerability-scanner`)"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "alert-cost-report": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "cf=8, ISS-025, output_tokens=12 truncation variant, no clean run since 6-15",
+        "type": "error"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "+33 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
