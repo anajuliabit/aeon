@@ -1,9 +1,14 @@
-## Summary
+*Search Skills — 2026-06-22*
+Gap: vuln-scanner failing 7% (29 runs) — ISS-018 open, semgrep/trufflehog binaries blocked in sandbox.
 
-**Mode:** SEARCH_SKILL_EMPTY — logged, no notify (per skill spec).
+Candidates (not auto-installed — all UNTRUSTED sources):
+- **vulnerability-scanner** — davila7/claude-code-templates (gap-fit 5/5, sum 19/20, UNTRUSTED) — pure-python OWASP 2025 + supply-chain checklist scanner, no binary deps. Sidesteps ISS-018.
+- **security-audit** — davila7/claude-code-templates (gap-fit 4/5, sum 17/20, UNTRUSTED) — workflow bundle: recon → vuln-assess → pentest → harden. Heavier than current vuln-scanner.
+- **code-security** — semgrep/skills (gap-fit 3/5, sum 15/20, UNTRUSTED) — secure-coding rules across 15+ langs, prompt-only, no semgrep binary needed. Different scope (write-time rules vs scan-time).
 
-- **Query derivation:** `github trending` from `cron-state.json` (github-trending has 13 consecutive failures). XAI-quota failing skills (agent-buzz, list-digest, security-digest, narrative-tracker) excluded — quota is operator/billing, not a capability gap. Internal meta-skills (skill-health, skill-freshness, search-skill itself) excluded — can't be externally replaced.
-- **Catalogs searched:** npx (ok, 1 hit), vercel-labs/agent-skills (8 skills, none github), anthropics/skills (page didn't enumerate, no github surfaced), BankrBot/skills (none github), skills.sh (fail).
-- **Only candidate:** `hoodini/ai-agents-skills@github-trending` — dropped by step 2 duplicate guard (`github-trending` already in `skills/`).
-- **Outcome:** zero non-duplicate candidates → EMPTY exit mode. Per spec: log only, no notification, no install.
-- **Files modified:** `memory/logs/2026-06-21.md` (appended search-skill entry).
+Manual install (after review):
+```
+./add-skill davila7/claude-code-templates vulnerability-scanner
+```
+
+Sources: npx=ok vercel=0 anthropics=0 bankr=2(both dupes) skills.sh=ok

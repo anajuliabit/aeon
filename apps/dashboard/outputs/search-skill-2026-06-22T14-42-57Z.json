@@ -1,0 +1,280 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Search Skills",
+        "description": "2026-06-22"
+      },
+      "children": [
+        "alert-gap",
+        "separator-1",
+        "heading-candidates",
+        "text-note",
+        "stack-candidates",
+        "separator-2",
+        "heading-install",
+        "text-command",
+        "separator-3",
+        "heading-sources",
+        "text-sources"
+      ]
+    },
+    "alert-gap": {
+      "type": "Alert",
+      "props": {
+        "title": "Gap: vuln-scanner failing",
+        "message": "7% failure rate (29 runs) — ISS-018 open. semgrep/trufflehog binaries blocked in sandbox.",
+        "type": "warning"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-candidates": {
+      "type": "Heading",
+      "props": {
+        "text": "Candidates",
+        "level": "h2"
+      }
+    },
+    "text-note": {
+      "type": "Text",
+      "props": {
+        "text": "Not auto-installed — all UNTRUSTED sources",
+        "variant": "muted"
+      }
+    },
+    "stack-candidates": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "candidate-1",
+        "candidate-2",
+        "candidate-3"
+      ]
+    },
+    "candidate-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-vuln-scanner",
+        "text-vuln-scanner-desc",
+        "stack-vuln-scanner-meta"
+      ]
+    },
+    "link-vuln-scanner": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vulnerability-scanner",
+        "href": "https://github.com/davila7/claude-code-templates",
+        "source": "davila7/claude-code-templates"
+      }
+    },
+    "text-vuln-scanner-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Pure-python OWASP 2025 + supply-chain checklist scanner, no binary deps. Sidesteps ISS-018.",
+        "variant": "body"
+      }
+    },
+    "stack-vuln-scanner-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-fit-5",
+        "badge-sum-19",
+        "badge-untrusted-1"
+      ]
+    },
+    "badge-fit-5": {
+      "type": "Badge",
+      "props": {
+        "text": "gap-fit 5/5",
+        "variant": "default"
+      }
+    },
+    "badge-sum-19": {
+      "type": "Badge",
+      "props": {
+        "text": "sum 19/20",
+        "variant": "default"
+      }
+    },
+    "badge-untrusted-1": {
+      "type": "Badge",
+      "props": {
+        "text": "UNTRUSTED",
+        "variant": "destructive"
+      }
+    },
+    "candidate-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-security-audit",
+        "text-security-audit-desc",
+        "stack-security-audit-meta"
+      ]
+    },
+    "link-security-audit": {
+      "type": "StoryLink",
+      "props": {
+        "title": "security-audit",
+        "href": "https://github.com/davila7/claude-code-templates",
+        "source": "davila7/claude-code-templates"
+      }
+    },
+    "text-security-audit-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Workflow bundle: recon → vuln-assess → pentest → harden. Heavier than current vuln-scanner.",
+        "variant": "body"
+      }
+    },
+    "stack-security-audit-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-fit-4",
+        "badge-sum-17",
+        "badge-untrusted-2"
+      ]
+    },
+    "badge-fit-4": {
+      "type": "Badge",
+      "props": {
+        "text": "gap-fit 4/5",
+        "variant": "default"
+      }
+    },
+    "badge-sum-17": {
+      "type": "Badge",
+      "props": {
+        "text": "sum 17/20",
+        "variant": "default"
+      }
+    },
+    "badge-untrusted-2": {
+      "type": "Badge",
+      "props": {
+        "text": "UNTRUSTED",
+        "variant": "destructive"
+      }
+    },
+    "candidate-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-code-security",
+        "text-code-security-desc",
+        "stack-code-security-meta"
+      ]
+    },
+    "link-code-security": {
+      "type": "StoryLink",
+      "props": {
+        "title": "code-security",
+        "href": "https://github.com/semgrep/skills",
+        "source": "semgrep/skills"
+      }
+    },
+    "text-code-security-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Secure-coding rules across 15+ langs, prompt-only, no semgrep binary needed. Different scope (write-time rules vs scan-time).",
+        "variant": "body"
+      }
+    },
+    "stack-code-security-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-fit-3",
+        "badge-sum-15",
+        "badge-untrusted-3"
+      ]
+    },
+    "badge-fit-3": {
+      "type": "Badge",
+      "props": {
+        "text": "gap-fit 3/5",
+        "variant": "default"
+      }
+    },
+    "badge-sum-15": {
+      "type": "Badge",
+      "props": {
+        "text": "sum 15/20",
+        "variant": "default"
+      }
+    },
+    "badge-untrusted-3": {
+      "type": "Badge",
+      "props": {
+        "text": "UNTRUSTED",
+        "variant": "destructive"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-install": {
+      "type": "Heading",
+      "props": {
+        "text": "Manual install (after review)",
+        "level": "h3"
+      }
+    },
+    "text-command": {
+      "type": "Text",
+      "props": {
+        "text": "./add-skill davila7/claude-code-templates vulnerability-scanner",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "npx=ok vercel=0 anthropics=0 bankr=2(both dupes) skills.sh=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
