@@ -1,0 +1,5 @@
+{
+  "message": "The date input '2026-06-20T14:37:52Z..' is invalid.",
+  "documentation_url": "https://docs.github.com/rest/security-advisories/global-advisories#list-global-security-advisories",
+  "status": "422"
+}

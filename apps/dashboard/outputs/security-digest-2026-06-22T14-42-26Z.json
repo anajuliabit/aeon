@@ -1,0 +1,283 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-06-22",
+        "description": "2 actively exploited (KEV new this week), 2 npm packages caught publishing malware. Nothing else queued."
+      },
+      "children": [
+        "sources-text",
+        "patch-sep",
+        "patch-section"
+      ]
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "caption"
+      }
+    },
+    "patch-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "patch-heading",
+        "cve-2026-20262",
+        "cve-2026-54420",
+        "npm-malware"
+      ]
+    },
+    "patch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve-2026-20262": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve-20262-link",
+        "cve-20262-meta",
+        "cve-20262-desc",
+        "cve-20262-action"
+      ]
+    },
+    "cve-20262-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-20262 — Cisco Catalyst SD-WAN Manager",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-20262",
+        "source": "NVD"
+      }
+    },
+    "cve-20262-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-20262-kev",
+        "cve-20262-epss",
+        "cve-20262-cvss",
+        "cve-20262-cisa"
+      ]
+    },
+    "cve-20262-kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV 2026-06-15",
+        "variant": "destructive"
+      }
+    },
+    "cve-20262-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.011"
+      }
+    },
+    "cve-20262-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "6.5"
+      }
+    },
+    "cve-20262-cisa": {
+      "type": "Badge",
+      "props": {
+        "text": "CISA due 2026-06-29",
+        "variant": "outline"
+      }
+    },
+    "cve-20262-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Authenticated remote attacker can create or overwrite any file on the manager via path traversal — config tamper / persistence.",
+        "variant": "body"
+      }
+    },
+    "cve-20262-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Apply Cisco's fixed Catalyst SD-WAN Manager build per the vendor advisory now; restrict mgmt-plane access until patched.",
+        "type": "warning"
+      }
+    },
+    "cve-2026-54420": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve-54420-link",
+        "cve-54420-meta",
+        "cve-54420-desc",
+        "cve-54420-action"
+      ]
+    },
+    "cve-54420-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-54420 — LiteSpeed cPanel Plugin",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-54420",
+        "source": "NVD"
+      }
+    },
+    "cve-54420-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-54420-kev",
+        "cve-54420-epss",
+        "cve-54420-cvss",
+        "cve-54420-cisa"
+      ]
+    },
+    "cve-54420-kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV 2026-06-15",
+        "variant": "destructive"
+      }
+    },
+    "cve-54420-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.0065"
+      }
+    },
+    "cve-54420-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "n/a"
+      }
+    },
+    "cve-54420-cisa": {
+      "type": "Badge",
+      "props": {
+        "text": "CISA due 2026-06-18 (overdue)",
+        "variant": "destructive"
+      }
+    },
+    "cve-54420-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Symlink-following on shared CloudLinux/CageFS hosting — user with FTP or a web shell escapes the cage and reads/writes other tenants' files.",
+        "variant": "body"
+      }
+    },
+    "cve-54420-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Upgrade LiteSpeed cPanel plugin to the vendor-patched build on every shared host today.",
+        "type": "warning"
+      }
+    },
+    "npm-malware": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "npm-heading",
+        "npm-pkg-1",
+        "npm-pkg-2",
+        "npm-meta",
+        "npm-desc",
+        "npm-action"
+      ]
+    },
+    "npm-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "npm Malware Packages",
+        "level": "h3"
+      }
+    },
+    "npm-pkg-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-7qr8-pqwp-95p9 — node-path-utils",
+        "href": "https://github.com/advisories/GHSA-7qr8-pqwp-95p9",
+        "source": "GitHub Advisory"
+      }
+    },
+    "npm-pkg-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-75f4-4w6r-vvch — mddriver",
+        "href": "https://github.com/advisories/GHSA-75f4-4w6r-vvch",
+        "source": "GitHub Advisory"
+      }
+    },
+    "npm-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "npm-type",
+        "npm-published"
+      ]
+    },
+    "npm-type": {
+      "type": "Badge",
+      "props": {
+        "text": "Malware",
+        "variant": "destructive"
+      }
+    },
+    "npm-published": {
+      "type": "Badge",
+      "props": {
+        "text": "Published 2026-06-22",
+        "variant": "destructive"
+      }
+    },
+    "npm-desc": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub-classified malicious npm packages. Per advisory: any machine that installed them should be considered fully compromised — installer hooks may have already exfiltrated secrets.",
+        "variant": "body"
+      }
+    },
+    "npm-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "npm uninstall node-path-utils mddriver everywhere, scan lockfiles + CI caches, rotate any creds those builds could touch from a clean machine.",
+        "type": "error"
+      }
+    }
+  }
+}
