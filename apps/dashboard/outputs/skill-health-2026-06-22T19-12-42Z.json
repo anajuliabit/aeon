@@ -1,0 +1,493 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "skill health — 2026-06-22",
+        "description": "Systemic sandbox-truncation affecting 27 degraded skills, output_tokens=0"
+      },
+      "children": [
+        "critical-alert",
+        "critical-section",
+        "sep1",
+        "degraded-section",
+        "sep2",
+        "nodata-section",
+        "sep3",
+        "healthy-section",
+        "sep4",
+        "summary-section"
+      ]
+    },
+    "critical-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 CRITICAL(1)",
+        "message": "Systemic issue: sandbox-truncation, 27 degraded skills, output_tokens=0",
+        "type": "error"
+      }
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "critical-heading",
+        "cost-report-item"
+      ]
+    },
+    "critical-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Critical Issues",
+        "level": "h3"
+      }
+    },
+    "cost-report-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cost-name",
+        "cost-fails",
+        "cost-7d",
+        "cost-investigate",
+        "cost-truncation",
+        "cost-issue"
+      ]
+    },
+    "cost-name": {
+      "type": "Badge",
+      "props": {
+        "text": "cost-report",
+        "variant": "destructive"
+      }
+    },
+    "cost-fails": {
+      "type": "Badge",
+      "props": {
+        "text": "6 fails",
+        "variant": "destructive"
+      }
+    },
+    "cost-7d": {
+      "type": "Badge",
+      "props": {
+        "text": "7d down",
+        "variant": "destructive"
+      }
+    },
+    "cost-investigate": {
+      "type": "Badge",
+      "props": {
+        "text": "INVESTIGATE",
+        "variant": "destructive"
+      }
+    },
+    "cost-truncation": {
+      "type": "Badge",
+      "props": {
+        "text": "outputTokens=12 truncation",
+        "variant": "outline"
+      }
+    },
+    "cost-issue": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-025",
+        "href": "memory/issues/ISS-025.md"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "deg-skill-1",
+        "deg-skill-2",
+        "deg-skill-3",
+        "deg-skill-4",
+        "deg-skill-5",
+        "deg-more"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (27 skills, top 5 by success rate)",
+        "level": "h3"
+      }
+    },
+    "deg-skill-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-1-name",
+        "deg-1-sr",
+        "deg-1-runs",
+        "deg-1-cause",
+        "deg-1-issue"
+      ]
+    },
+    "deg-1-name": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "body"
+      }
+    },
+    "deg-1-sr": {
+      "type": "Badge",
+      "props": {
+        "text": "7%",
+        "variant": "destructive"
+      }
+    },
+    "deg-1-runs": {
+      "type": "Text",
+      "props": {
+        "text": "(41 runs)",
+        "variant": "caption"
+      }
+    },
+    "deg-1-cause": {
+      "type": "Badge",
+      "props": {
+        "text": "sandbox-truncation",
+        "variant": "outline"
+      }
+    },
+    "deg-1-issue": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-024-cluster",
+        "href": "memory/issues/ISS-024-cluster.md"
+      }
+    },
+    "deg-skill-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-2-name",
+        "deg-2-sr",
+        "deg-2-runs",
+        "deg-2-causes",
+        "deg-2-issue"
+      ]
+    },
+    "deg-2-name": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "body"
+      }
+    },
+    "deg-2-sr": {
+      "type": "Badge",
+      "props": {
+        "text": "7%",
+        "variant": "destructive"
+      }
+    },
+    "deg-2-runs": {
+      "type": "Text",
+      "props": {
+        "text": "(29 runs)",
+        "variant": "caption"
+      }
+    },
+    "deg-2-causes": {
+      "type": "Badge",
+      "props": {
+        "text": "sandbox-truncation + binaries missing",
+        "variant": "outline"
+      }
+    },
+    "deg-2-issue": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-018",
+        "href": "memory/issues/ISS-018.md"
+      }
+    },
+    "deg-skill-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-3-name",
+        "deg-3-sr",
+        "deg-3-runs",
+        "deg-3-cause"
+      ]
+    },
+    "deg-3-name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "body"
+      }
+    },
+    "deg-3-sr": {
+      "type": "Badge",
+      "props": {
+        "text": "9%",
+        "variant": "destructive"
+      }
+    },
+    "deg-3-runs": {
+      "type": "Text",
+      "props": {
+        "text": "(46 runs)",
+        "variant": "caption"
+      }
+    },
+    "deg-3-cause": {
+      "type": "Badge",
+      "props": {
+        "text": "sandbox-truncation",
+        "variant": "outline"
+      }
+    },
+    "deg-skill-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-4-name",
+        "deg-4-sr",
+        "deg-4-runs",
+        "deg-4-cause"
+      ]
+    },
+    "deg-4-name": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "body"
+      }
+    },
+    "deg-4-sr": {
+      "type": "Badge",
+      "props": {
+        "text": "17%",
+        "variant": "secondary"
+      }
+    },
+    "deg-4-runs": {
+      "type": "Text",
+      "props": {
+        "text": "(82 runs)",
+        "variant": "caption"
+      }
+    },
+    "deg-4-cause": {
+      "type": "Badge",
+      "props": {
+        "text": "sandbox-truncation",
+        "variant": "outline"
+      }
+    },
+    "deg-skill-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-5-name",
+        "deg-5-sr",
+        "deg-5-runs",
+        "deg-5-cause"
+      ]
+    },
+    "deg-5-name": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest",
+        "variant": "body"
+      }
+    },
+    "deg-5-sr": {
+      "type": "Badge",
+      "props": {
+        "text": "25%",
+        "variant": "secondary"
+      }
+    },
+    "deg-5-runs": {
+      "type": "Text",
+      "props": {
+        "text": "(52 runs)",
+        "variant": "caption"
+      }
+    },
+    "deg-5-cause": {
+      "type": "Badge",
+      "props": {
+        "text": "sandbox-truncation",
+        "variant": "outline"
+      }
+    },
+    "deg-more": {
+      "type": "StoryLink",
+      "props": {
+        "title": "+22 more degraded skills",
+        "href": "memory/issues/INDEX.md",
+        "source": "Memory"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "nodata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nodata-heading",
+        "nodata-items",
+        "nodata-action"
+      ]
+    },
+    "nodata-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (2 skills)",
+        "level": "h3"
+      }
+    },
+    "nodata-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "nodata-item-1",
+        "nodata-item-2"
+      ]
+    },
+    "nodata-item-1": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "outline"
+      }
+    },
+    "nodata-item-2": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "outline"
+      }
+    },
+    "nodata-action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-stat"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills healthy",
+        "value": "9"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "summary-open-issues",
+        "summary-filed",
+        "summary-resolved"
+      ]
+    },
+    "summary-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "14"
+      }
+    },
+    "summary-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed this run",
+        "value": "ISS-025"
+      }
+    },
+    "summary-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}

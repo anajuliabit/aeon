@@ -17,6 +17,7 @@
 | ISS-022 | monitor-polymarket: missing_pattern — disabled skill causing churn in evals | high | prompt-bug | 2026-06-21 | monitor-polymarket |
 | ISS-023 | token-alert: missing_pattern — pattern not found in live-day log | high | prompt-bug | 2026-06-21 | token-alert |
 | ISS-024 | skill-health: missing_pattern — 26 consecutive failures, 0.26 success_rate | high | quality-regression | 2026-06-21 | skill-health |
+| ISS-025 | cost-report 6 consecutive failures — weekly tick truncated at outputTokens=12 | critical | sandbox-limitation | 2026-06-22 | cost-report |
 
 ## Resolved
 
