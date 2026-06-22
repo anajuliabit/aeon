@@ -1,6 +1,6 @@
-# AIXBT Clusters (as of 2026-06-21)
+# AIXBT Clusters (as of 2026-06-22)
 
-46 sub-community clusters AIXBT tracks. Each cluster has a description, member archetype, sentiment, and ideology. Used when filtering projects/intel/momentum endpoints (paid tier).
+36 sub-community clusters AIXBT tracks (down from 46 on 6-21 — API count reduced). Each cluster has a description and member archetype. Sentiment/ideology fields absent from current API response. Used when filtering projects/intel/momentum endpoints (paid tier).
 
 | id | name | one-line vibe |
 |----|------|---------------|
@@ -11,7 +11,7 @@
 | AUTOMATED_FEED | Automated Feed | Templated market, on-chain, alert, whale, app-rank, research, or news feed. |
 | BTC_MAXI | BTC Maxi | Bitcoin-only conviction; everything else is a distraction or scam. |
 | BIZDEV | Bizdev | Sales, partnerships, GTM, ops, and commercial relationship-building. |
-| CULTURE_SIGNAL | Culture Signal | Celebrity, creator, athlete, musician, gaming, or retail-culture account with crypto, NFT, or token relevance. |
+| CULTURE_SIGNAL | Culture Signal | Celebrity, creator, athlete, musician, gaming, or retail-culture account with crypto relevance. |
 | DESIGNER | Designer | Crypto product, brand, UI/UX, design-system, or visual-identity work. |
 | DEV | Dev | Ships code, commits, technical replies, and implementation detail. |
 | DOOMER | Doomer | Collapse, depeg, wick, and headline panic. |

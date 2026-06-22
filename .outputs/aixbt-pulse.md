@@ -1,20 +1,22 @@
-*AIXBT Pulse — 2026-06-21 21:00Z*
+*AIXBT Pulse — 2026-06-22 10:00Z*
 
 CRYPTO
-- BTC $64K, F&G 23. 44-day negative Coinbase premium — US institutional demand gone.
-- EigenLayer Darkbloom AI pivot + LINK DTCC integration. protocol-level narratives leading.
-- Altcoin rotation: select tokens at yearly highs. Arcium TGE, TCG, DeFi yield pulling flow.
+- BTC $63.6K, extreme fear. $6.35B ETF outflows over 30 days, 6 straight weeks. $65K resistance = the line.
+- Solana: Toss Bank (Korea, 15M users) signs stablecoin remittance PoC. SOL leads tokenized stock volume. prior window was KOL shilling; this is receipts.
 
-TRADFI
-- Warsh hawkish: near-term cuts removed. carry trade into dollar assets.
-- Semiconductor inflows → Nasdaq → on-chain AI infrastructure. new capital pathway.
-- US-Iran MOU progress. Hormuz tail risk easing. VIX compresses, short-vol opens.
+MACRO / TRADFI
+- Iran ceasefire extension → oil lower → 10Y yields retreating from 4.48% → dollar softening → China +1T yuan equity inflows. risk-on is real and broad.
+
+GEO
+- Hormuz tail compressing. ceasefire extension holds for now. breakdown reverses fast.
+
+SECURITY
+- 4 exploits in 12h: Taiko $1.7M, Aztec $2M, jaredfromsubway $7.5M, Altura vaults shutdown. DeFi security degraded across the board.
 
 NEW THIS PULL
-- EigenLayer Darkbloom (AI pivot), LINK DTCC, Arcium TGE — all new
-- 44-day negative premium specific metric
-- Solana KOL shilling flagged by AIXBT — skepticism on the bottom narrative
-- US-Iran MOU: waterway risk partially resolved
+- Toss Bank × Solana PoC (institutional, first appearance)
+- BTC $6.35B ETF outflow figure (quantified, 6 weeks)
+- TradFi regime flip: Warsh/hawkish gone, dollar weakening + EM carry opening
 
 BRIDGE
-Warsh kills rate cuts; semiconductors route TradFi AI money into EigenLayer and Arcium — not BTC. US-Iran MOU → VIX compression → crypto gets the risk-on beta, but the MOU is preliminary. Solana bottom is being manufactured; 9 red candles + coordinated KOL calls is the setup, not the signal.
+- iran ceasefire is doing all the macro work. yields retreating, dollar weak, China adding a trillion. risk-on flows are real — but BTC is in extreme fear with $6.35B out. the bid lands on protocol narratives (Hyperliquid DeFi growth, Solana institutional, EigenLayer AI) not BTC spot. 4 exploits in one window accelerates the consolidation: capital moves to the venue it trusts. AIXBT names Hyperliquid explicitly. that's the trade.

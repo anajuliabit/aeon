@@ -1,0 +1,301 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-22 10:00Z"
+      },
+      "children": [
+        "crypto_section",
+        "macro_section",
+        "geo_section",
+        "security_section",
+        "new_section",
+        "bridge_section"
+      ]
+    },
+    "crypto_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto_heading",
+        "btc_price",
+        "btc_fear",
+        "btc_resistance",
+        "sep_crypto",
+        "solana_news",
+        "solana_vol",
+        "solana_context"
+      ]
+    },
+    "crypto_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "btc_price": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$63.6K"
+      }
+    },
+    "btc_fear": {
+      "type": "Text",
+      "props": {
+        "text": "Extreme fear sentiment. $6.35B ETF outflows over 30 days, 6 straight weeks.",
+        "variant": "body"
+      }
+    },
+    "btc_resistance": {
+      "type": "Text",
+      "props": {
+        "text": "$65K resistance = the line.",
+        "variant": "body"
+      }
+    },
+    "sep_crypto": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "solana_news": {
+      "type": "Text",
+      "props": {
+        "text": "Toss Bank (Korea, 15M users) signs stablecoin remittance PoC",
+        "variant": "lead"
+      }
+    },
+    "solana_vol": {
+      "type": "Text",
+      "props": {
+        "text": "SOL leads tokenized stock volume",
+        "variant": "body"
+      }
+    },
+    "solana_context": {
+      "type": "Text",
+      "props": {
+        "text": "Prior window was KOL shilling; this is receipts.",
+        "variant": "muted"
+      }
+    },
+    "macro_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "macro_heading",
+        "macro_chain",
+        "macro_summary",
+        "sep_macro",
+        "macro_regime_heading",
+        "macro_regime_detail"
+      ]
+    },
+    "macro_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO / TRADFI",
+        "level": "h2"
+      }
+    },
+    "macro_chain": {
+      "type": "Text",
+      "props": {
+        "text": "Iran ceasefire extension → oil lower → 10Y yields retreating from 4.48% → dollar softening → China +1T yuan equity inflows",
+        "variant": "body"
+      }
+    },
+    "macro_summary": {
+      "type": "Text",
+      "props": {
+        "text": "Risk-on is real and broad.",
+        "variant": "body"
+      }
+    },
+    "sep_macro": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "macro_regime_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Regime Shift",
+        "level": "h4"
+      }
+    },
+    "macro_regime_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Warsh/hawkish gone, dollar weakening + EM carry opening",
+        "variant": "body"
+      }
+    },
+    "geo_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "geo_heading",
+        "geo_status",
+        "geo_risk"
+      ]
+    },
+    "geo_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GEO",
+        "level": "h2"
+      }
+    },
+    "geo_status": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz tail compressing. Ceasefire extension holds for now.",
+        "variant": "body"
+      }
+    },
+    "geo_risk": {
+      "type": "Alert",
+      "props": {
+        "message": "Breakdown reverses fast.",
+        "type": "warning"
+      }
+    },
+    "security_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "security_heading",
+        "security_alert",
+        "exploits_table"
+      ]
+    },
+    "security_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "SECURITY",
+        "level": "h2"
+      }
+    },
+    "security_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "4 exploits in 12h",
+        "message": "DeFi security degraded across the board.",
+        "type": "error"
+      }
+    },
+    "exploits_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Protocol",
+          "Loss"
+        ],
+        "rows": [
+          [
+            "Taiko",
+            "$1.7M"
+          ],
+          [
+            "Aztec",
+            "$2M"
+          ],
+          [
+            "jaredfromsubway",
+            "$7.5M"
+          ],
+          [
+            "Altura",
+            "vaults shutdown"
+          ]
+        ]
+      }
+    },
+    "new_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_heading",
+        "new_item_1",
+        "new_item_2",
+        "new_item_3"
+      ]
+    },
+    "new_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new_item_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Toss Bank × Solana PoC (institutional, first appearance)",
+        "variant": "secondary"
+      }
+    },
+    "new_item_2": {
+      "type": "Badge",
+      "props": {
+        "text": "BTC $6.35B ETF outflow figure (quantified, 6 weeks)",
+        "variant": "secondary"
+      }
+    },
+    "new_item_3": {
+      "type": "Badge",
+      "props": {
+        "text": "TradFi regime flip: Warsh/hawkish gone, dollar weakening + EM carry opening",
+        "variant": "secondary"
+      }
+    },
+    "bridge_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge_heading",
+        "bridge_text"
+      ]
+    },
+    "bridge_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge_text": {
+      "type": "Text",
+      "props": {
+        "text": "Iran ceasefire is doing all the macro work. Yields retreating, dollar weak, China adding a trillion. Risk-on flows are real — but BTC is in extreme fear with $6.35B out. The bid lands on protocol narratives (Hyperliquid DeFi growth, Solana institutional, EigenLayer AI) not BTC spot. 4 exploits in one window accelerates the consolidation: capital moves to the venue it trusts. AIXBT names Hyperliquid explicitly. That's the trade.",
+        "variant": "lead"
+      }
+    }
+  }
+}
