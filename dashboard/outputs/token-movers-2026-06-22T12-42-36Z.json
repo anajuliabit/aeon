@@ -1,0 +1,1018 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers — 2026-06-22",
+        "description": "77/100 top coins green, median +0.87% — risk-on breadth, but the leaderboard skews bounce-back, not breakout."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "market_stat",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "trending_section",
+        "sep4",
+        "notable_section"
+      ]
+    },
+    "market_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Top 100 coins",
+        "value": "77 green",
+        "delta": "+0.87%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_list"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "w1",
+        "w2",
+        "w3",
+        "w4",
+        "w5",
+        "w6",
+        "w7",
+        "w8",
+        "w9",
+        "w10"
+      ]
+    },
+    "w1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w1_title",
+        "w1_data",
+        "w1_badge"
+      ]
+    },
+    "w1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. UB (Unibase)",
+        "level": "h4"
+      }
+    },
+    "w1_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.1155  +21.5% / 7d −3.8% / 1h +1.7%  •  $60.3M / #136",
+        "variant": "body"
+      }
+    },
+    "w1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "destructive"
+      }
+    },
+    "w2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w2_title",
+        "w2_data"
+      ]
+    },
+    "w2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. DEXE (DeXe)",
+        "level": "h4"
+      }
+    },
+    "w2_data": {
+      "type": "Text",
+      "props": {
+        "text": "$17.09  +18.7% / 7d −9.7% / 1h +1.7%  •  $32.5M / #80",
+        "variant": "body"
+      }
+    },
+    "w3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w3_title",
+        "w3_data"
+      ]
+    },
+    "w3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. BILL (Billions Network)",
+        "level": "h4"
+      }
+    },
+    "w3_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.0621  +15.0% / 7d −16.9% / 1h +0.8%  •  $25.9M / #206",
+        "variant": "body"
+      }
+    },
+    "w4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w4_title",
+        "w4_data"
+      ]
+    },
+    "w4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. EIGEN (EigenCloud)",
+        "level": "h4"
+      }
+    },
+    "w4_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.3049  +12.2% / 7d +42.8% / 1h +0.2%  •  $103.9M / #162",
+        "variant": "body"
+      }
+    },
+    "w5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w5_title",
+        "w5_data",
+        "w5_badge"
+      ]
+    },
+    "w5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. DYDX (dYdX)",
+        "level": "h4"
+      }
+    },
+    "w5_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.1333  +10.9% / 7d +7.8% / 1h +1.0%  •  $11.4M / #250",
+        "variant": "body"
+      }
+    },
+    "w5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MICROCAP",
+        "variant": "outline"
+      }
+    },
+    "w6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w6_title",
+        "w6_data"
+      ]
+    },
+    "w6_title": {
+      "type": "Heading",
+      "props": {
+        "text": "6. GRASS (Grass)",
+        "level": "h4"
+      }
+    },
+    "w6_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.4565  +10.5% / 7d +1.6% / 1h +3.8%  •  $26.6M / #137",
+        "variant": "body"
+      }
+    },
+    "w7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w7_title",
+        "w7_data"
+      ]
+    },
+    "w7_title": {
+      "type": "Heading",
+      "props": {
+        "text": "7. VVV (Venice Token)",
+        "level": "h4"
+      }
+    },
+    "w7_data": {
+      "type": "Text",
+      "props": {
+        "text": "$15.85  +10.5% / 7d −0.3% / 1h +2.0%  •  $25.4M / #82",
+        "variant": "body"
+      }
+    },
+    "w8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w8_title",
+        "w8_data"
+      ]
+    },
+    "w8_title": {
+      "type": "Heading",
+      "props": {
+        "text": "8. LIT (Lighter)",
+        "level": "h4"
+      }
+    },
+    "w8_data": {
+      "type": "Text",
+      "props": {
+        "text": "$1.69  +9.1% / 7d −0.6% / 1h +0.0%  •  $38.9M / #115",
+        "variant": "body"
+      }
+    },
+    "w9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w9_title",
+        "w9_data"
+      ]
+    },
+    "w9_title": {
+      "type": "Heading",
+      "props": {
+        "text": "9. B (BUILDon)",
+        "level": "h4"
+      }
+    },
+    "w9_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.2386  +8.1% / 7d +2.3% / 1h −3.5%  •  $5.6M / #153",
+        "variant": "body"
+      }
+    },
+    "w10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w10_title",
+        "w10_data",
+        "w10_badge"
+      ]
+    },
+    "w10_title": {
+      "type": "Heading",
+      "props": {
+        "text": "10. AWE (AWE Network)",
+        "level": "h4"
+      }
+    },
+    "w10_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.0582  +7.4% / 7d +7.9% / 1h −0.4%  •  $16.6M / #248",
+        "variant": "body"
+      }
+    },
+    "w10_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MICROCAP",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_list"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "l1",
+        "l2",
+        "l3",
+        "l4",
+        "l5",
+        "l6",
+        "l7",
+        "l8",
+        "l9",
+        "l10"
+      ]
+    },
+    "l1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l1_title",
+        "l1_data"
+      ]
+    },
+    "l1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. H (Humanity)",
+        "level": "h4"
+      }
+    },
+    "l1_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.1407  −22.5% / 7d −73.0% / 1h −2.9%  •  $25.2M / #142",
+        "variant": "body"
+      }
+    },
+    "l2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l2_title",
+        "l2_data",
+        "l2_badge"
+      ]
+    },
+    "l2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. RE",
+        "level": "h4"
+      }
+    },
+    "l2_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.7836  −17.6% / 7d n/a / 1h −2.3%  •  $159.8M / #228",
+        "variant": "body"
+      }
+    },
+    "l2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CAPITULATION",
+        "variant": "destructive"
+      }
+    },
+    "l3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l3_title",
+        "l3_data",
+        "l3_badge"
+      ]
+    },
+    "l3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. BP (Backpack)",
+        "level": "h4"
+      }
+    },
+    "l3_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.6329  −9.4% / 7d +42.2% / 1h −0.6%  •  $7.8M / #199",
+        "variant": "body"
+      }
+    },
+    "l3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+DOWN",
+        "variant": "outline"
+      }
+    },
+    "l4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l4_title",
+        "l4_data"
+      ]
+    },
+    "l4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. BTW (Bitway)",
+        "level": "h4"
+      }
+    },
+    "l4_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.1105  −8.6% / 7d +15.1% / 1h −4.0%  •  $61.3M / #152",
+        "variant": "body"
+      }
+    },
+    "l5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l5_title",
+        "l5_data"
+      ]
+    },
+    "l5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. JTO (Jito)",
+        "level": "h4"
+      }
+    },
+    "l5_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.6413  −8.3% / 7d +2.8% / 1h −0.7%  •  $49.2M / #132",
+        "variant": "body"
+      }
+    },
+    "l6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l6_title",
+        "l6_data",
+        "l6_badge"
+      ]
+    },
+    "l6_title": {
+      "type": "Heading",
+      "props": {
+        "text": "6. LAB",
+        "level": "h4"
+      }
+    },
+    "l6_data": {
+      "type": "Text",
+      "props": {
+        "text": "$14.92  −6.1% / 7d +51.0% / 1h −0.4%  •  $65.4M / #23",
+        "variant": "body"
+      }
+    },
+    "l6_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MAJOR",
+        "variant": "secondary"
+      }
+    },
+    "l7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l7_title",
+        "l7_data"
+      ]
+    },
+    "l7_title": {
+      "type": "Heading",
+      "props": {
+        "text": "7. AXS (Axie Infinity)",
+        "level": "h4"
+      }
+    },
+    "l7_data": {
+      "type": "Text",
+      "props": {
+        "text": "$1.059  −4.8% / 7d +6.9% / 1h +1.1%  •  $34.1M / #185",
+        "variant": "body"
+      }
+    },
+    "l8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l8_title",
+        "l8_data"
+      ]
+    },
+    "l8_title": {
+      "type": "Heading",
+      "props": {
+        "text": "8. VELVET",
+        "level": "h4"
+      }
+    },
+    "l8_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.4437  −4.4% / 7d +32.5% / 1h −0.3%  •  $10.1M / #183",
+        "variant": "body"
+      }
+    },
+    "l9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l9_title",
+        "l9_data"
+      ]
+    },
+    "l9_title": {
+      "type": "Heading",
+      "props": {
+        "text": "9. TRUMP (Official Trump)",
+        "level": "h4"
+      }
+    },
+    "l9_data": {
+      "type": "Text",
+      "props": {
+        "text": "$1.90  −4.3% / 7d −5.5% / 1h +0.2%  •  $141.8M / #109",
+        "variant": "body"
+      }
+    },
+    "l10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l10_title",
+        "l10_data"
+      ]
+    },
+    "l10_title": {
+      "type": "Heading",
+      "props": {
+        "text": "10. TRAC (OriginTrail)",
+        "level": "h4"
+      }
+    },
+    "l10_data": {
+      "type": "Text",
+      "props": {
+        "text": "$0.3284  −3.5% / 7d −11.0% / 1h −1.3%  •  $4.1M / #210",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending_heading",
+        "trending_list"
+      ]
+    },
+    "trending_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ]
+    },
+    "t1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t1_title",
+        "t1_data",
+        "t1_badge"
+      ]
+    },
+    "t1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. ARX (Arcium)",
+        "level": "h4"
+      }
+    },
+    "t1_data": {
+      "type": "Text",
+      "props": {
+        "text": "#343, $0.334, 24h −5.9%",
+        "variant": "body"
+      }
+    },
+    "t1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MICROCAP",
+        "variant": "outline"
+      }
+    },
+    "t2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t2_title",
+        "t2_data",
+        "t2_badge"
+      ]
+    },
+    "t2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. SYN (Synapse)",
+        "level": "h4"
+      }
+    },
+    "t2_data": {
+      "type": "Text",
+      "props": {
+        "text": "#387, $0.286, 24h +91.6%",
+        "variant": "body"
+      }
+    },
+    "t2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PUMP-RISK",
+        "variant": "destructive"
+      }
+    },
+    "t3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t3_title",
+        "t3_data",
+        "t3_badge"
+      ]
+    },
+    "t3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. HYPE (Hyperliquid)",
+        "level": "h4"
+      }
+    },
+    "t3_data": {
+      "type": "Text",
+      "props": {
+        "text": "#10, $67.94, 24h +0.9%",
+        "variant": "body"
+      }
+    },
+    "t3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MAJOR",
+        "variant": "secondary"
+      }
+    },
+    "t4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t4_title",
+        "t4_data"
+      ]
+    },
+    "t4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. PENGU (Pudgy Penguins)",
+        "level": "h4"
+      }
+    },
+    "t4_data": {
+      "type": "Text",
+      "props": {
+        "text": "#113, $0.0068, 24h +0.5%",
+        "variant": "body"
+      }
+    },
+    "t5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t5_title",
+        "t5_data",
+        "t5_badge"
+      ]
+    },
+    "t5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. BTC (Bitcoin)",
+        "level": "h4"
+      }
+    },
+    "t5_data": {
+      "type": "Text",
+      "props": {
+        "text": "#1, $64,830, 24h +1.4%",
+        "variant": "body"
+      }
+    },
+    "t5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MAJOR",
+        "variant": "secondary"
+      }
+    },
+    "t6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t6_title",
+        "t6_data",
+        "t6_badge"
+      ]
+    },
+    "t6_title": {
+      "type": "Heading",
+      "props": {
+        "text": "6. XRP",
+        "level": "h4"
+      }
+    },
+    "t6_data": {
+      "type": "Text",
+      "props": {
+        "text": "#6, $1.15, 24h +0.6%",
+        "variant": "body"
+      }
+    },
+    "t6_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MAJOR",
+        "variant": "secondary"
+      }
+    },
+    "t7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t7_title",
+        "t7_data",
+        "t7_badge"
+      ]
+    },
+    "t7_title": {
+      "type": "Heading",
+      "props": {
+        "text": "7. BP (Backpack)",
+        "level": "h4"
+      }
+    },
+    "t7_data": {
+      "type": "Text",
+      "props": {
+        "text": "#198, $0.633, 24h −10.2%",
+        "variant": "body"
+      }
+    },
+    "t7_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+DOWN",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable_list"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4",
+        "notable_5"
+      ]
+    },
+    "notable_1": {
+      "type": "Alert",
+      "props": {
+        "title": "RE",
+        "message": "$159.8M volume on $125M mcap — forced selling, vol/mcap >1.0 [CAPITULATION]",
+        "type": "warning"
+      }
+    },
+    "notable_2": {
+      "type": "Alert",
+      "props": {
+        "title": "SYN",
+        "message": "Trending +91.6% at rank #387 — [PUMP-RISK], extreme microcap",
+        "type": "warning"
+      }
+    },
+    "notable_3": {
+      "type": "Alert",
+      "props": {
+        "title": "BP",
+        "message": "Red on trending list — Hyperliquid eco giveback, 7d still +42%",
+        "type": "info"
+      }
+    },
+    "notable_4": {
+      "type": "Alert",
+      "props": {
+        "title": "UB",
+        "message": "Roundtripping the morning rip (was +58.9% at 08:38Z, now +21.5%, 7d −3.8%) [FADE]",
+        "type": "info"
+      }
+    },
+    "notable_5": {
+      "type": "Alert",
+      "props": {
+        "title": "LAB",
+        "message": "#23 down −6.1% after yesterday's +27% rally — large-cap reversal",
+        "type": "info"
+      }
+    }
+  }
+}
