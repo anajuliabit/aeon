@@ -1,0 +1,330 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "soul rebuilt — @anajuliabit"
+      },
+      "children": [
+        "identity-section",
+        "sources-section",
+        "trait-section",
+        "updates-section"
+      ]
+    },
+    "identity-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "identity-heading",
+        "identity-text",
+        "projects-heading",
+        "projects-stack"
+      ]
+    },
+    "identity-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Identity",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "identity-text": {
+      "type": "Text",
+      "props": {
+        "text": "Brazilian solidity + TS engineer building capital infrastructure for AI agents",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "projects-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Projects",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "projects-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-sherwood",
+        "badge-reppo",
+        "badge-memoclaw"
+      ]
+    },
+    "badge-sherwood": {
+      "type": "Badge",
+      "props": {
+        "text": "Sherwood — agent vaults",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-reppo": {
+      "type": "Badge",
+      "props": {
+        "text": "Reppo — permissionless coordination",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-memoclaw": {
+      "type": "Badge",
+      "props": {
+        "text": "MemoClaw — semantic memory API",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text",
+        "links-stack"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Links + web search (DEV.to articles, X posts)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "links-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-eth-limo",
+        "link-github"
+      ]
+    },
+    "link-eth-limo": {
+      "type": "Link",
+      "props": {
+        "label": "anajuliabit.eth.limo",
+        "href": "https://anajuliabit.eth.limo"
+      },
+      "children": []
+    },
+    "link-github": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/anajuliabit",
+        "href": "https://github.com/anajuliabit",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "trait-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trait-heading",
+        "trait-text",
+        "trait-quote"
+      ]
+    },
+    "trait-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Distinctive Trait",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "trait-text": {
+      "type": "Text",
+      "props": {
+        "text": "Holds the critique and the product simultaneously — builds tools to fix AI amnesia while shipping AI agents, because it's the same thesis from both ends. Register is dry and declarative.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "trait-quote": {
+      "type": "Text",
+      "props": {
+        "text": "\"agent fund management isn't custody. it's mandate.\"",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "updates-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "updates-heading",
+        "updates-intro",
+        "files-heading",
+        "files-stack",
+        "changes-heading",
+        "changes-stack",
+        "actions-alert"
+      ]
+    },
+    "updates-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Soul Files & Updates",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "updates-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Prior soul existed (preserved in git history). This run adds MemoClaw, ZHC worldview, DEV.to writing samples, The Range section, and examples/good-outputs.md (was missing).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "files-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Files",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "files-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-soul",
+        "badge-style",
+        "badge-examples"
+      ]
+    },
+    "badge-soul": {
+      "type": "Badge",
+      "props": {
+        "text": "soul/SOUL.md",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-style": {
+      "type": "Badge",
+      "props": {
+        "text": "soul/STYLE.md",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-examples": {
+      "type": "Badge",
+      "props": {
+        "text": "soul/examples/good-outputs.md",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Changes in This Run",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "changes-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-change-1",
+        "badge-change-2",
+        "badge-change-3",
+        "badge-change-4",
+        "badge-change-5"
+      ]
+    },
+    "badge-change-1": {
+      "type": "Badge",
+      "props": {
+        "text": "MemoClaw added",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-change-2": {
+      "type": "Badge",
+      "props": {
+        "text": "ZHC worldview",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-change-3": {
+      "type": "Badge",
+      "props": {
+        "text": "DEV.to writing samples",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-change-4": {
+      "type": "Badge",
+      "props": {
+        "text": "The Range section",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-change-5": {
+      "type": "Badge",
+      "props": {
+        "text": "examples/good-outputs.md (was missing)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "actions-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Next Steps",
+        "message": "Review + edit in the dashboard Soul tab, then Pull to refresh.",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}
