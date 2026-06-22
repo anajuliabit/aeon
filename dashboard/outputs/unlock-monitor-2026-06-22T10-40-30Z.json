@@ -1,0 +1,189 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Unlock Monitor",
+        "description": "week of 2026-06-22"
+      },
+      "children": [
+        "opening_summary",
+        "sep1",
+        "heading_crisis",
+        "crisis_section",
+        "sep2",
+        "heading_digestible",
+        "digestible_section",
+        "sep3",
+        "heading_absorbable",
+        "absorbable_section",
+        "sep4",
+        "supply_read_section",
+        "sep5",
+        "sources_section"
+      ]
+    },
+    "opening_summary": {
+      "type": "Text",
+      "props": {
+        "text": "most leveraged: NEWT cliff wed 6-24 — 139.58M tokens ($7.14M) = 64.9% of circulating supply. team allocation into a -5.3% 7d tape. market is asleep."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_crisis": {
+      "type": "Heading",
+      "props": {
+        "text": "CRISIS (> 2.4× daily vol after recipient bump)",
+        "level": "h2"
+      }
+    },
+    "crisis_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "newt_crisis",
+        "h_crisis"
+      ]
+    },
+    "newt_crisis": {
+      "type": "Alert",
+      "props": {
+        "title": "NEWT — wed 6-24",
+        "message": "139.58M cliff · 64.9% of circ · $7.14M · core contributors (team) · 1.36× → CRISIS by team bump · 7d -5.3% → market asleep. Cliff pattern says weakness 30d prior; absent. Supply shock unpriced on a $11M-mcap, $5M/day book.",
+        "type": "error"
+      }
+    },
+    "h_crisis": {
+      "type": "Alert",
+      "props": {
+        "title": "H — thu 6-25",
+        "message": "266.47M cliff · 14.6% circ · $41.02M · early contributors (investor) · 1.95× → CRISIS by investor bump · 7d -75.4% → priced in. Post $36M exploit + ATH 6-02 $0.84 → $0.15 today. Forced overhang on a corpse, not a fade-the-rip.",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_digestible": {
+      "type": "Heading",
+      "props": {
+        "text": "DIGESTIBLE (0.3–1.0× after community bump-down)",
+        "level": "h2"
+      }
+    },
+    "digestible_section": {
+      "type": "Alert",
+      "props": {
+        "title": "SAHARA — fri 6-26",
+        "message": "1.03B cliff · ~30% of unlocked supply · $12.92M · community incentives · 1.10× bumped down by community flag · 30d +63.6% → market asleep. Rip-into-cliff timing on AI data infra; community recipients diffuse the force but the supply expansion is real.",
+        "type": "info"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_absorbable": {
+      "type": "Heading",
+      "props": {
+        "text": "absorbable (TRIVIAL, dropped)",
+        "level": "h2"
+      }
+    },
+    "absorbable_section": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Date",
+          "Amount",
+          "Multiplier",
+          "Type",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "MEGA",
+            "tue 6-23",
+            "$14M",
+            "0.34×",
+            "Echo Round",
+            "community, largest $ but recipient dampens it"
+          ],
+          [
+            "XPL",
+            "thu 6-25",
+            "$8.01M",
+            "0.09×",
+            "ecosystem cliff",
+            "too liquid to bite"
+          ],
+          [
+            "ID",
+            "mon 6-22",
+            "$2.65M / 16.2% mcap",
+            "0.02×",
+            "—",
+            "ripping into it (+38% 7d)"
+          ],
+          [
+            "SCR",
+            "mon 6-22",
+            "$343K",
+            "—",
+            "—",
+            "noise"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "supply_read_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "supply_read_heading",
+        "supply_read_text"
+      ]
+    },
+    "supply_read_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Supply read",
+        "level": "h3"
+      }
+    },
+    "supply_read_text": {
+      "type": "Text",
+      "props": {
+        "text": "NEWT is the asymmetry. core-contributor cliff that ~doubles a $11M-mcap float with no pre-cliff bleed — the asleep tape is the trade. H is done; -75% 7d post-exploit means the unlock just pins the lid on. SAHARA is the cleanest timing setup if you want one — community cliff into a +63% rip, even after the bump-down. dollars are loud (MEGA $14M, H $41M); real liquidity strain is NEWT."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources_section": {
+      "type": "Text",
+      "props": {
+        "text": "sources: tokenomist=ok, defillama=fail(403), cryptorank=ok, dropstab=fail(no-dates), coingecko=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
