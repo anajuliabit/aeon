@@ -1,25 +1,10 @@
 import { NextResponse } from 'next/server'
-import { execFileSync, execSync } from 'child_process'
-import { resolve } from 'path'
+import { execFileSync } from 'child_process'
+import { REPO_ROOT, ghArgsRepo } from '@/lib/gh'
+import { errorResponse } from '@/lib/http'
+import type { GhRunJson } from '@/lib/types'
 
-const REPO_ROOT = resolve(process.cwd(), '..', '..')
-
-function ghRepo(): string | null {
-  try {
-    const repo = execSync('gh repo set-default --view', { stdio: 'pipe', cwd: REPO_ROOT }).toString().trim()
-    if (repo && !repo.startsWith('no default')) return repo
-  } catch {}
-  try {
-    const repo = execSync('gh repo view --json nameWithOwner -q .nameWithOwner', { stdio: 'pipe', cwd: REPO_ROOT }).toString().trim()
-    if (repo) return repo
-  } catch {}
-  return null
-}
-
-function ghArgsRepo(): string[] {
-  const repo = ghRepo()
-  return repo ? ['-R', repo] : []
-}
+type GhRunView = Pick<GhRunJson, 'status' | 'conclusion' | 'displayTitle' | 'jobs'>
 
 export async function GET(
   _request: Request,
@@ -41,9 +26,9 @@ export async function GET(
       ['run', 'view', id, ...repoArgs, '--json', 'status,conclusion,displayTitle,jobs'],
       { stdio: 'pipe', cwd: REPO_ROOT, timeout: 15000 },
     ).toString()
-    const info = JSON.parse(infoRaw)
+    const info: GhRunView = JSON.parse(infoRaw)
 
-    // Get logs — use --log-failed for failed runs, --log for completed
+    // Get logs - use --log-failed for failed runs, --log for completed
     let logs = ''
     try {
       const logFlag = info.conclusion === 'failure' ? '--log-failed' : '--log'
@@ -55,7 +40,7 @@ export async function GET(
       }).toString()
     } catch {
       // Log fetch can fail for in-progress runs
-      logs = '(Logs not available yet — run may still be in progress)'
+      logs = '(Logs not available yet - run may still be in progress)'
     }
 
     // Extract the interesting part: the "Run" step output from Claude
@@ -119,7 +104,6 @@ export async function GET(
       summary: summaryLines.length > 0 ? summaryLines.join('\n') : '',
     })
   } catch (error: unknown) {
-    const msg = error instanceof Error ? error.message : 'Failed to fetch logs'
-    return NextResponse.json({ error: msg }, { status: 500 })
+    return errorResponse(error, 'Failed to fetch logs')
   }
 }

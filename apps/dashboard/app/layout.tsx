@@ -1,17 +1,28 @@
 import type { Metadata } from 'next'
-import { Young_Serif, Space_Mono } from 'next/font/google'
+import { Dela_Gothic_One, Inter, Space_Mono } from 'next/font/google'
 import './globals.css'
 
-const youngSerif = Young_Serif({
+// Chunky uppercase display face - the signature voice of aeon.fun.
+const dela = Dela_Gothic_One({
   weight: '400',
   subsets: ['latin'],
-  variable: '--font-display',
+  variable: '--font-display-dela',
+  display: 'swap',
 })
 
-const spaceMono = Space_Mono({
+// Clean neo-grotesque for body / labels.
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans-inter',
+  display: 'swap',
+})
+
+// Inline code tokens, log output, mono labels.
+const mono = Space_Mono({
   weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-mono',
+  variable: '--font-mono-space',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -30,10 +41,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${youngSerif.variable} ${spaceMono.variable} antialiased`}>
-        {children}
-      </body>
+    <html lang="en" className={`${dela.variable} ${inter.variable} ${mono.variable}`}>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }

@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
 import { execFileSync } from 'child_process'
-import { resolve } from 'path'
-
-const REPO_ROOT = resolve(process.cwd(), '..', '..')
+import { REPO_ROOT, ensureActionsCanOpenPRs } from '@/lib/gh'
+import { errorResponse } from '@/lib/http'
+import { sanitizeModel } from '@/lib/dispatch'
 
 export async function POST(
   request: Request,
@@ -20,14 +20,20 @@ export async function POST(
     let skillVar = ''
     let model = ''
     try {
-      const body = await request.json()
+      const body = await request.json() as { var?: string; model?: string }
       if (body.var && typeof body.var === 'string') {
         skillVar = body.var.replace(/[^a-zA-Z0-9_ .\-/#@]/g, '')
       }
       if (body.model && typeof body.model === 'string') {
-        model = body.model.replace(/[^a-zA-Z0-9_\-]/g, '')
+        model = sanitizeModel(body.model)
       }
     } catch { /* no body is fine */ }
+
+    // install-skill installs a community pack and ships it as an auto-merged PR
+    // — which the in-Actions GITHUB_TOKEN can only do if this repo's Actions
+    // PR-creation setting is on. It isn't on a fresh fork and doesn't inherit,
+    // so guarantee it from the operator's (admin) local gh before dispatching.
+    if (name === 'install-skill') ensureActionsCanOpenPRs()
 
     const args = ['workflow', 'run', 'aeon.yml', '-f', `skill=${name}`]
     if (skillVar) args.push('-f', `var=${skillVar}`)
@@ -37,7 +43,6 @@ export async function POST(
 
     return NextResponse.json({ ok: true })
   } catch (error: unknown) {
-    const msg = error instanceof Error ? error.message : 'Failed to trigger run'
-    return NextResponse.json({ error: msg }, { status: 500 })
+    return errorResponse(error, 'Failed to trigger run')
   }
 }

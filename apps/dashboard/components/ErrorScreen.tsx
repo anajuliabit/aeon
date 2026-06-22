@@ -1,16 +1,11 @@
 export function ErrorScreen({ error }: { error: string }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-grid">
-      <div className="card-hst p-[var(--space-lg)] corner-markers max-w-sm">
-        <div className="corner-marker corner-marker-sm top-left" />
-        <div className="corner-marker corner-marker-sm top-right" />
-        <div className="corner-marker corner-marker-sm bottom-left" />
-        <div className="corner-marker corner-marker-sm bottom-right" />
-        <div className="text-center">
-          <p className="font-display text-xl text-eva-red mb-2">Connection Error</p>
-          <div className="warning-stripes my-3" />
-          <p className="text-xs text-primary-50 font-mono">{error}</p>
-        </div>
+    <div className="min-h-screen flex items-center justify-center bg-aeon-bg relative overflow-hidden">
+      <div className="dither" aria-hidden="true" />
+      <div className="relative z-10 max-w-sm card-hst p-[var(--space-lg)] text-center">
+        <p className="font-display text-2xl uppercase tracking-wide text-aeon-red mb-2">Connection Lost</p>
+        <div className="warning-stripes my-4" />
+        <p className="text-xs text-primary-50 font-mono">{error}</p>
       </div>
     </div>
   )

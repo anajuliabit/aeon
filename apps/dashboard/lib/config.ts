@@ -1,4 +1,6 @@
-import { parseDocument, isMap, isSeq, isPair, isScalar, type Document } from 'yaml'
+import { parseDocument, isMap, isPair, isScalar } from 'yaml'
+import { GATEWAY_PROVIDERS } from './types'
+import type { GatewayProvider } from './types'
 
 export interface SkillConfig {
   enabled: boolean
@@ -7,8 +9,8 @@ export interface SkillConfig {
   model: string
 }
 
-export interface GatewayConfig {
-  provider: 'direct' | 'bankr'
+interface GatewayConfig {
+  provider: GatewayProvider
 }
 
 export interface AeonConfig {
@@ -44,11 +46,11 @@ export function parseConfig(raw: string): AeonConfig {
 
   const model = String(doc.get('model') ?? 'claude-sonnet-4-6')
 
-  let gateway: GatewayConfig = { provider: 'direct' }
+  let gateway: GatewayConfig = { provider: 'auto' }
   const gatewayNode = doc.get('gateway')
   if (isMap(gatewayNode)) {
-    const provider = String(getMapValue(gatewayNode, 'provider') ?? 'direct')
-    gateway = { provider: provider === 'bankr' ? 'bankr' : 'direct' }
+    const provider = String(getMapValue(gatewayNode, 'provider') ?? 'auto')
+    gateway = { provider: GATEWAY_PROVIDERS.includes(provider as GatewayProvider) ? (provider as GatewayProvider) : 'auto' }
   }
 
   let jsonrenderEnabled = false
@@ -112,6 +114,15 @@ export function updateModelInConfig(raw: string, model: string): string {
 }
 
 /**
+ * Update the LLM gateway provider. Creates the gateway block if absent.
+ */
+export function updateGatewayInConfig(raw: string, provider: GatewayProvider): string {
+  const doc = parseDocument(raw)
+  doc.setIn(['gateway', 'provider'], provider)
+  return doc.toString()
+}
+
+/**
  * Update jsonrender enabled flag.
  */
 export function updateJsonrenderInConfig(raw: string, enabled: boolean): string {
@@ -160,7 +171,7 @@ export function addSkillToConfig(
   })
   // Set flow style to match inline format
   if (isMap(entry)) {
-    (entry as any).flow = true
+    entry.flow = true
   }
 
   // Find the fallback skill (heartbeat, last entry) and insert before it
@@ -171,7 +182,7 @@ export function addSkillToConfig(
 
   if (fallbackIdx >= 0) {
     const pair = doc.createPair(name, entry)
-    items.splice(fallbackIdx, 0, pair as any)
+    items.splice(fallbackIdx, 0, pair)
   } else {
     skillsNode.set(name, entry)
   }
@@ -181,7 +192,7 @@ export function addSkillToConfig(
 
 // --- Helpers ---
 
-function getMapValue(map: any, key: string): unknown {
+function getMapValue(map: unknown, key: string): unknown {
   if (!isMap(map)) return undefined
   for (const item of map.items) {
     if (isPair(item) && isScalar(item.key) && item.key.value === key) {
