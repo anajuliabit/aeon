@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-15",
+  "generated_at": "2026-06-22",
   "scope": "full corpus",
   "scanner_mode": "inline_grep_fallback",
-  "scanner_mode_reason": "scan.sh execution blocked by sandbox approval gate (same as 2026-05-25 and 2026-06-01 runs); inline Grep over scan.sh's HIGH/MEDIUM/LOW pattern library + manual GitHub Actions script-injection audit of every ${{ }} expression in run: blocks, per SKILL.md step 4 + sandbox fallback. Never silently skipped.",
-  "exit_status": "SECURITY_SCAN_RESOLVED",
+  "scanner_mode_reason": "scan.sh execution blocked by sandbox approval gate (same as 2026-05-25, 2026-06-01, 2026-06-15 runs); inline Grep over scan.sh's HIGH/MEDIUM/LOW pattern library + manual GitHub Actions script-injection audit of every ${{ }} expression in run: blocks, per SKILL.md step 4 sandbox fallback. Never silently skipped.",
+  "exit_status": "SECURITY_SCAN_NOCHANGE",
   "delta_summary": {
     "new_high": 0,
-    "resolved_high": 2,
+    "resolved_high": 0,
     "persistent_high": 4,
     "new_medium": 0,
     "new_low": 0,
-    "resolved_note": "The 2 resolved HIGH (chain-runner.yml:41 + :416/now :368, ISS-017) cleared vs the STALE 2026-06-01 state snapshot only. ISS-017 was actually fixed 2026-06-03 (branch focus/iss-017-chain-runner-env) and is already in INDEX.md ## Resolved. This run refreshes the state file to match. No operator notification warranted -- already-known resolution, no new HIGH."
+    "delta_note": "Identical finding set to 2026-06-15. The canonical-4 aeon.yml workflow_dispatch-chain HIGH findings persist; finding #4 line-drifted from :849 to :812 (37-line shift, content+pattern unchanged). chain-runner.yml ISS-017 fix held (env: indirection). messages.yml 2026-04-11 incident-class fix held across every site (L612-616, L684-685, L838-863)."
   },
   "counts": {
-    "files_scanned": 152,
-    "skills_scanned": 123,
-    "workflows_scanned": 7,
-    "repo_scripts_scanned": 13,
+    "files_scanned": 228,
+    "skills_scanned": 191,
+    "workflows_scanned": 9,
+    "repo_scripts_scanned": 19,
     "advisor_scripts_scanned": 8,
     "companion_scripts_scanned": 1,
     "high_post_filter": 4,
     "medium_post_filter": 15,
     "low_post_filter": 4
   },
-  "note": "No NEW HIGH findings this run. New surface since baseline (investment advisor: scripts/advisor/*.sh, investment-advisor.yml, weekly-conviction.yml) audited clean -- no run:-block injection, external Grok/market data handled as jq-parsed data not shell, secrets flow only to intended API hosts. scripts/advisor/selftest.sh:31 'rm -rf /' is a defensive test fixture (string fed through allowlist case defaulting to hold), never executed. ISS-017 (chain-runner.yml) confirmed fixed via env: _CHAIN indirection at both sites. aeon.yml 4 HIGH persistent (workflow_dispatch-gated, low real risk, baseline-noted). Obfuscation sweep clean (no zero-width/bidi/fromCharCode/base64-to-shell/SSRF-webhook hosts).",
+  "note": "No NEW HIGH findings this run. No RESOLVED HIGH findings this run. All four aeon.yml HIGH findings PERSISTENT (workflow_dispatch-gated, low real real risk, accepted as anti-pattern). Obfuscation sweep clean (no zero-width/bidi/fromCharCode/base64-to-shell/SSRF-webhook hosts). selftest.sh:31 rm -rf / is the defensive test fixture (allowlist case defaults to hold), never executed. selftest.sh:220, :252 eval is internal helper extraction from same-repo files (trusted source). ~80 SKILL.md curl-with-secret matches all inside fenced code blocks (documentation, not execution path) — post code-fence downgrade they are MEDIUM, not HIGH. Existing baseline entries cover the canonical security-digest examples; the remainder share the same MEDIUM disposition.",
   "real_high_findings_after_filtering": [
     {
       "file": ".github/workflows/aeon.yml",
@@ -54,41 +54,47 @@
     },
     {
       "file": ".github/workflows/aeon.yml",
-      "line": 849,
+      "line": 812,
       "pattern": "steps.work.outputs.label interpolated into run: block",
       "severity": "high",
-      "fingerprint": "aeon.yml:849:steps.work.outputs.label",
+      "fingerprint": "aeon.yml:812:steps.work.outputs.label",
       "delta": "PERSISTENT_LINE_DRIFT",
-      "note": "Was aeon.yml:725 at 06-01 snapshot (and :718 at baseline). Code drift shifted the line; same anti-pattern, derived from steps.skill.outputs.name -> inputs.skill."
+      "note": "Was aeon.yml:849 at 06-15 snapshot (:725 at 06-01, :718 at baseline). Code drift shifted the line down 37 lines this cycle; same anti-pattern, derived from steps.skill.outputs.name -> inputs.skill."
     }
   ],
-  "resolved_high_findings_this_run": [
-    {
-      "file": ".github/workflows/chain-runner.yml",
-      "line": 41,
-      "pattern": "inputs.chain interpolated into run: block",
-      "severity": "high",
-      "fingerprint": "chain-runner.yml:41:inputs.chain",
-      "delta": "RESOLVED",
-      "iss": "ISS-017",
-      "note": "Now bound via env: _CHAIN indirection; shell reads CHAIN=$_CHAIN. Canonical messages.yml fix shape. ISS-017 closed 2026-06-03. Resolution relative to stale 06-01 state file only."
-    },
-    {
-      "file": ".github/workflows/chain-runner.yml",
-      "line": 368,
-      "pattern": "inputs.chain interpolated into run: block (was line 416 at 06-01)",
-      "severity": "high",
-      "fingerprint": "chain-runner.yml:416:inputs.chain",
-      "delta": "RESOLVED",
-      "iss": "ISS-017",
-      "note": "Second site (Update cron state step), now line 368, env: _CHAIN indirection. Same fix. ISS-017 closed 2026-06-03."
-    }
+  "downstream_same_chain_sites_informational": [
+    {"file": ".github/workflows/aeon.yml", "line": 132, "expr": "SKILL_FILE=\"skills/${{ steps.skill.outputs.name }}/SKILL.md\"", "source_chain": "inputs.skill"},
+    {"file": ".github/workflows/aeon.yml", "line": 178, "expr": "SKILL=\"${{ steps.skill.outputs.name }}\"", "source_chain": "inputs.skill"},
+    {"file": ".github/workflows/aeon.yml", "line": 224, "expr": "SKILL_NAME=\"${{ steps.skill.outputs.name }}\"", "source_chain": "inputs.skill"},
+    {"file": ".github/workflows/aeon.yml", "line": 229, "expr": "INPUT_MODEL=\"${{ inputs.model }}\"", "source_chain": "inputs.model"},
+    {"file": ".github/workflows/aeon.yml", "line": 409, "expr": "SKILL_NAME=\"${{ steps.skill.outputs.name }}\"", "source_chain": "inputs.skill"},
+    {"file": ".github/workflows/aeon.yml", "line": 413, "expr": "CHAIN_CTX=\"${{ inputs.chain_context_file }}\"", "source_chain": "inputs.chain_context_file"},
+    {"file": ".github/workflows/aeon.yml", "line": "536-541, 559", "expr": "${{ steps.run.outputs.SKILL_*_TOKENS }}", "source_chain": "jq-derived integers"},
+    {"file": ".github/workflows/aeon.yml", "line": "564,587,876", "expr": "SKILL=\"${{ steps.skill.outputs.name }}\" (3 sites)", "source_chain": "inputs.skill"},
+    {"file": ".github/workflows/aeon.yml", "line": 880, "expr": "QUALITY_SCORE=\"${{ steps.analyze.outputs.QUALITY_SCORE }}\"", "source_chain": "step-internal integer"},
+    {"file": ".github/workflows/sync-upstream.yml", "line": "66,73-75", "expr": "BRANCH/CONFLICT/AHEAD from steps.merge/diff outputs", "source_chain": "internal date math + numeric counts"}
   ],
-  "new_surface_audited_clean": [
-    {"file": ".github/workflows/investment-advisor.yml", "note": "NEW since baseline. No ${{ }} -> run: injection."},
-    {"file": ".github/workflows/weekly-conviction.yml", "note": "NEW since baseline. No ${{ }} -> run: injection."},
-    {"files": "scripts/advisor/*.sh (8)", "note": "NEW since baseline. curl secrets -> intended hosts only (Railway investiments, CoinGecko, DefiLlama, x.ai, Telegram, Hyperliquid, GeckoTerminal). External Grok/market data handled as jq-parsed data, not shell-interpolated."},
-    {"file": "scripts/advisor/selftest.sh", "line": 31, "note": "rm -rf / is a defensive test-fixture string fed through an allowlist case defaulting to hold. Never executed. real_risk: false."}
+  "resolved_high_findings_this_run": [],
+  "still_resolved_from_prior_scans": [
+    {"file": ".github/workflows/chain-runner.yml", "line": 41, "iss": "ISS-017", "resolved_at": "2026-06-03", "note": "env: _CHAIN indirection held"},
+    {"file": ".github/workflows/chain-runner.yml", "line": 368, "iss": "ISS-017", "resolved_at": "2026-06-03", "note": "env: _CHAIN indirection held"}
   ],
-  "medium_low_persistent_note": "All base64 -d matches decode GitHub API contents responses (API returns base64) or aeon.yml:359 chunked Telegram message into a jq-built JSON payload. None pipe to a shell -> no decode-then-execute. Path-traversal/force-push MEDIUM matches are documentation or internally-computed non-user-controllable step outputs. Unchanged from baseline."
+  "audited_clean_this_run": [
+    {"file": ".github/workflows/messages.yml", "note": "L612-616 + L684-685 + L838-863 all env: indirection. 2026-04-11 incident pattern fully addressed across every site."},
+    {"file": ".github/workflows/replicate-oneoff.yml", "note": "L52-55 + L78 env: indirection. Safe."},
+    {"file": ".github/workflows/investment-advisor.yml", "note": "Cron-only, no inputs, no injection surface."},
+    {"file": ".github/workflows/weekly-conviction.yml", "note": "Cron-only, no inputs, no injection surface."},
+    {"file": ".github/workflows/ci-packs-json.yml", "note": "No ${{ }} -> run: injection."},
+    {"file": ".github/workflows/ci-skills-json.yml", "note": "No ${{ }} -> run: injection."},
+    {"file": "scripts/advisor/selftest.sh", "line": 31, "note": "rm -rf / defensive test fixture (allowlist case defaults to hold). Never executed. real_risk: false."},
+    {"file": "scripts/advisor/selftest.sh", "line": "220,252", "note": "eval used to extract internal helper functions from same-repo run.sh / llm-usepod.sh for unit testing — trusted-source content, not external data path."}
+  ],
+  "obfuscation_sweep": {
+    "zero_width_unicode": "clean",
+    "bidi_override": "clean",
+    "fromCharCode": "clean",
+    "base64_decode_to_shell": "clean (all base64 -d decodes gh-api content, no pipe-to-shell anywhere)",
+    "ssrf_webhook_hosts": "clean (one README.md mention of ngrok as tunnel example, one prose mention in add-a2a; no active code uses any flagged host)"
+  },
+  "medium_low_persistent_note": "All base64 -d matches decode GitHub API contents responses (API returns base64) or aeon.yml:359 chunked Telegram message into a jq-built JSON payload. None pipe to a shell -> no decode-then-execute. Path-traversal/force-push MEDIUM matches are documentation or internally-computed non-user-controllable step outputs. Unchanged from 2026-06-15. ~80 SKILL.md curl-with-secret MEDIUM matches all inside fenced code blocks (documentation, not execution path)."
 }
