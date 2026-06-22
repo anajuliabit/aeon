@@ -1,4 +1,4 @@
-# AIXBT Indexed Chains (as of 2026-06-21)
+# AIXBT Indexed Chains (as of 2026-06-22 21:00 UTC)
 
 ~250 chain slugs AIXBT indexes. Use as the canonical list when filtering by chain on paid endpoints.
 

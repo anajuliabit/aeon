@@ -1,22 +1,16 @@
-*AIXBT Pulse — 2026-06-22 10:00Z*
+*AIXBT Pulse — 2026-06-22 21:00Z*
 
 CRYPTO
-- BTC $63.6K, extreme fear. $6.35B ETF outflows over 30 days, 6 straight weeks. $65K resistance = the line.
-- Solana: Toss Bank (Korea, 15M users) signs stablecoin remittance PoC. SOL leads tokenized stock volume. prior window was KOL shilling; this is receipts.
+- Ethlabs launch: ETH-as-settlement + DeFi prioritization + Aztec privacy. ecosystem consolidates after the 10:00 exploit cluster.
+- Solana: MoneyGram validator + Toss Bank stablecoin + WSOP $10M+ via Moonpay. three institutional receipts in one window.
 
-MACRO / TRADFI
-- Iran ceasefire extension → oil lower → 10Y yields retreating from 4.48% → dollar softening → China +1T yuan equity inflows. risk-on is real and broad.
-
-GEO
-- Hormuz tail compressing. ceasefire extension holds for now. breakdown reverses fast.
-
-SECURITY
-- 4 exploits in 12h: Taiko $1.7M, Aztec $2M, jaredfromsubway $7.5M, Altura vaults shutdown. DeFi security degraded across the board.
+TRADFI
+- US-Iran oil decline ran clean. but the bid split: Dow up, Nasdaq down on AI valuation pressure. risk-on now means bonds + energy unwind, not growth.
 
 NEW THIS PULL
-- Toss Bank × Solana PoC (institutional, first appearance)
-- BTC $6.35B ETF outflow figure (quantified, 6 weeks)
-- TradFi regime flip: Warsh/hawkish gone, dollar weakening + EM carry opening
+- Ethlabs launch (ETH narrative pivot — ETH-as-settlement replacing exploit discourse)
+- 21Shares ETF options on Hyperliquid (TradFi product on DeFi-native venue, first appearance)
+- Glassnode early altseason signal
 
 BRIDGE
-- iran ceasefire is doing all the macro work. yields retreating, dollar weak, China adding a trillion. risk-on flows are real — but BTC is in extreme fear with $6.35B out. the bid lands on protocol narratives (Hyperliquid DeFi growth, Solana institutional, EigenLayer AI) not BTC spot. 4 exploits in one window accelerates the consolidation: capital moves to the venue it trusts. AIXBT names Hyperliquid explicitly. that's the trade.
+- Ethlabs arrives 11 hours after Taiko + Aztec cleared the feed as exploit victims. Aztec back as privacy primitive. fast rebrand — the settlement narrative is doing extra work, but Ethlabs is real infra. Glassnode altseason signal + 21Shares ETF options on Hyperliquid: institutional on-ramp forming at the venue AIXBT named dominant two pulls running.

@@ -1,6 +1,6 @@
-# AIXBT Clusters (as of 2026-06-22)
+# AIXBT Clusters (as of 2026-06-22 21:00 UTC)
 
-36 sub-community clusters AIXBT tracks (down from 46 on 6-21 — API count reduced). Each cluster has a description and member archetype. Sentiment/ideology fields absent from current API response. Used when filtering projects/intel/momentum endpoints (paid tier).
+36 sub-community clusters AIXBT tracks (down from 46 on 6-21 — API count reduced; stable through 21:00 pull). Each cluster has a description and member archetype. Sentiment/ideology fields absent from current API response. Used when filtering projects/intel/momentum endpoints (paid tier).
 
 | id | name | one-line vibe |
 |----|------|---------------|
