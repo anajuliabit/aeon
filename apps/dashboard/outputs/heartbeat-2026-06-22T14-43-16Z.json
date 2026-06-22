@@ -1,0 +1,210 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "failure_section",
+        "sep2",
+        "blockers_section",
+        "sep3",
+        "actions_section"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "cost-report failed — mon weekly tick dispatched 12:36z, failed 13:05z",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "failure_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_failure",
+        "failure_details"
+      ]
+    },
+    "h_failure": {
+      "type": "Heading",
+      "props": {
+        "text": "Failure Details",
+        "level": "h3"
+      }
+    },
+    "failure_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fd_skill",
+        "fd_cf",
+        "fd_timing",
+        "fd_error",
+        "fd_family",
+        "fd_issues"
+      ]
+    },
+    "fd_skill": {
+      "type": "Text",
+      "props": {
+        "text": "Skill: cost-report"
+      }
+    },
+    "fd_cf": {
+      "type": "Badge",
+      "props": {
+        "text": "cf=3",
+        "variant": "outline"
+      }
+    },
+    "fd_timing": {
+      "type": "Text",
+      "props": {
+        "text": "Dispatched: 12:36z | Failed: 13:05z"
+      }
+    },
+    "fd_error": {
+      "type": "Text",
+      "props": {
+        "text": "Error signature: output_tokens=0"
+      }
+    },
+    "fd_family": {
+      "type": "Badge",
+      "props": {
+        "text": "sandbox-truncation family",
+        "variant": "secondary"
+      }
+    },
+    "fd_issues": {
+      "type": "Text",
+      "props": {
+        "text": "Extends ISS-019/020/021/024 cluster"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blockers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_blockers",
+        "blockers_list",
+        "dedup_warning"
+      ]
+    },
+    "h_blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "P0 Blockers",
+        "level": "h3"
+      }
+    },
+    "blockers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker_dealflow",
+        "blocker_chronic"
+      ]
+    },
+    "blocker_dealflow": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow: 14d stuck"
+      }
+    },
+    "blocker_chronic": {
+      "type": "Text",
+      "props": {
+        "text": "chronic tail: 22 skills sr<0.5"
+      }
+    },
+    "dedup_warning": {
+      "type": "Alert",
+      "props": {
+        "title": "Dedup-blocked",
+        "message": "All other p0 issues blocked on deduplication",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "actions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_actions",
+        "actions_list"
+      ]
+    },
+    "h_actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions & Next Steps",
+        "level": "h3"
+      }
+    },
+    "actions_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_health",
+        "action_artifact",
+        "action_next"
+      ]
+    },
+    "action_health": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health (18z): absorb cost-report into existing issue"
+      }
+    },
+    "action_artifact": {
+      "type": "Text",
+      "props": {
+        "text": "status.md regenerated"
+      }
+    },
+    "action_next": {
+      "type": "Text",
+      "props": {
+        "text": "Next: skill-security-scan scheduled for 16:00z mon"
+      }
+    }
+  }
+}
