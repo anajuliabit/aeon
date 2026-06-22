@@ -1,0 +1,125 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review — 2026-06-22"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-top-action",
+        "sep-1",
+        "stack-health"
+      ]
+    },
+    "alert-top-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Top Action",
+        "message": "Root-cause + patch the `output_tokens=0` sandbox-truncation signature at `.github/workflows/aeon.yml` by 2026-06-26 — 6 new issues + 22 chronic-tail skills share it",
+        "type": "warning"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-health",
+        "grid-stats",
+        "text-gateway-note",
+        "sep-2",
+        "link-full-review"
+      ]
+    },
+    "heading-health": {
+      "type": "Heading",
+      "props": {
+        "text": "Health Status",
+        "level": "h3"
+      }
+    },
+    "grid-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-success-rate",
+        "stat-new-issues",
+        "stat-resolved",
+        "stat-prs-merged"
+      ]
+    },
+    "stat-success-rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Healthy",
+        "value": "178 / 874",
+        "delta": "22.1% (−61pp)",
+        "trend": "down"
+      }
+    },
+    "stat-new-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "New Issues",
+        "value": "6"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved",
+        "value": "0"
+      }
+    },
+    "stat-prs-merged": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs Merged",
+        "value": "16"
+      }
+    },
+    "text-gateway-note": {
+      "type": "Text",
+      "props": {
+        "text": "Gateway pivot shipped (usepod default) but didn't kill the empty-usage payload",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-full-review": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Review",
+        "href": "articles/weekly-review-2026-06-22.md"
+      }
+    }
+  }
+}
