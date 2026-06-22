@@ -1,0 +1,67 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Graph updated"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_row",
+        "separator",
+        "pr_link"
+      ]
+    },
+    "stats_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_retired",
+        "stat_edges"
+      ]
+    },
+    "stat_retired": {
+      "type": "Stat",
+      "props": {
+        "label": "RETIRED_SKILLS",
+        "value": "-4",
+        "trend": "down"
+      }
+    },
+    "stat_edges": {
+      "type": "Stat",
+      "props": {
+        "label": "SHARED_STATE_EDGES",
+        "value": "9",
+        "delta": "-186",
+        "trend": "down"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Pull Request #129",
+        "href": "https://github.com/anajuliabit/aeon/pull/129",
+        "source": "GitHub"
+      }
+    }
+  }
+}
