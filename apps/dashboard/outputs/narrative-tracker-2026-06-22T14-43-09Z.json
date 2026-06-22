@@ -1,0 +1,886 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-22"
+      },
+      "children": [
+        "section_transitions",
+        "sep1",
+        "section_reflexivity",
+        "sep2",
+        "section_positions",
+        "sep3",
+        "section_map"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_transitions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "h_transitions",
+        "subsec_new",
+        "subsec_promoted",
+        "subsec_demoted",
+        "subsec_dead"
+      ]
+    },
+    "h_transitions": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      }
+    },
+    "subsec_new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_new_header",
+        "new_1",
+        "new_2",
+        "new_3",
+        "new_4",
+        "new_5"
+      ]
+    },
+    "badge_new_header": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "outline"
+      }
+    },
+    "new_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_new_1a",
+        "link_new_1",
+        "text_new_1b"
+      ]
+    },
+    "text_new_1a": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid + onchain perps — explicit anchor w/ 3 ETFs + revenue leadership ("
+      }
+    },
+    "link_new_1": {
+      "type": "Link",
+      "props": {
+        "label": "@0xLuciferNox",
+        "href": "https://twitter.com/0xLuciferNox"
+      }
+    },
+    "text_new_1b": {
+      "type": "Text",
+      "props": {
+        "text": " snapshot)"
+      }
+    },
+    "new_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_new_2a",
+        "link_new_2",
+        "text_new_2b"
+      ]
+    },
+    "text_new_2a": {
+      "type": "Text",
+      "props": {
+        "text": "P2P restaked security mesh (Canopy, "
+      }
+    },
+    "link_new_2": {
+      "type": "Link",
+      "props": {
+        "label": "@CNPYNetwork",
+        "href": "https://twitter.com/CNPYNetwork"
+      }
+    },
+    "text_new_2b": {
+      "type": "Text",
+      "props": {
+        "text": ") — emerging contrarian to monolithic L1s"
+      }
+    },
+    "new_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_new_3a",
+        "link_new_3",
+        "text_new_3b"
+      ]
+    },
+    "text_new_3a": {
+      "type": "Text",
+      "props": {
+        "text": "AI coding agents + MCP/tooling — practical dev-tooling momentum ("
+      }
+    },
+    "link_new_3": {
+      "type": "Link",
+      "props": {
+        "label": "@Mars_DeFi",
+        "href": "https://twitter.com/Mars_DeFi"
+      }
+    },
+    "text_new_3b": {
+      "type": "Text",
+      "props": {
+        "text": " multi-example)"
+      }
+    },
+    "new_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_new_4a",
+        "link_new_4a",
+        "text_new_4b",
+        "link_new_4b",
+        "text_new_4c"
+      ]
+    },
+    "text_new_4a": {
+      "type": "Text",
+      "props": {
+        "text": "Ownership tokens vs. points programs — user-alignment narrative shift ("
+      }
+    },
+    "link_new_4a": {
+      "type": "Link",
+      "props": {
+        "label": "@nftboi_",
+        "href": "https://twitter.com/nftboi_"
+      }
+    },
+    "text_new_4b": {
+      "type": "Text",
+      "props": {
+        "text": " on "
+      }
+    },
+    "link_new_4b": {
+      "type": "Link",
+      "props": {
+        "label": "@AviciMoney",
+        "href": "https://twitter.com/AviciMoney"
+      }
+    },
+    "text_new_4c": {
+      "type": "Text",
+      "props": {
+        "text": " flywheel)"
+      }
+    },
+    "new_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_new_5a",
+        "link_new_5a",
+        "text_new_5b",
+        "link_new_5b"
+      ]
+    },
+    "text_new_5a": {
+      "type": "Text",
+      "props": {
+        "text": "Hardware moats in AI era — contrarian: software commoditized, hardware durable ("
+      }
+    },
+    "link_new_5a": {
+      "type": "Link",
+      "props": {
+        "label": "@signulll",
+        "href": "https://twitter.com/signulll"
+      }
+    },
+    "text_new_5b": {
+      "type": "Text",
+      "props": {
+        "text": "/"
+      }
+    },
+    "link_new_5b": {
+      "type": "Link",
+      "props": {
+        "label": "@lennysan",
+        "href": "https://twitter.com/lennysan"
+      }
+    },
+    "subsec_promoted": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_promoted",
+        "promoted_1"
+      ]
+    },
+    "badge_promoted": {
+      "type": "Badge",
+      "props": {
+        "text": "PROMOTED",
+        "variant": "outline"
+      }
+    },
+    "promoted_1": {
+      "type": "Text",
+      "props": {
+        "text": "Stablecoins as rails velocity → to ↑ — $311B mcap (+50% vs 2025 start), x402 480k agents/$50M cumulative, MetaMask AI-agent wallet shipped"
+      }
+    },
+    "subsec_demoted": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_demoted",
+        "demoted_1",
+        "demoted_2"
+      ]
+    },
+    "badge_demoted": {
+      "type": "Badge",
+      "props": {
+        "text": "DEMOTED",
+        "variant": "outline"
+      }
+    },
+    "demoted_1": {
+      "type": "Text",
+      "props": {
+        "text": "Onchain AI agents × compute ↑↑ to → — peak holding, no acceleration"
+      }
+    },
+    "demoted_2": {
+      "type": "Text",
+      "props": {
+        "text": "Meme 3.0 Peak → Fading — losing relative steam confirmed"
+      }
+    },
+    "subsec_dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_dead",
+        "dead_1",
+        "dead_2",
+        "dead_3",
+        "dead_4"
+      ]
+    },
+    "badge_dead": {
+      "type": "Badge",
+      "props": {
+        "text": "DEAD",
+        "variant": "destructive"
+      }
+    },
+    "dead_1": {
+      "type": "Text",
+      "props": {
+        "text": "Sovereign AI chains"
+      }
+    },
+    "dead_2": {
+      "type": "Text",
+      "props": {
+        "text": "Privacy tech governance"
+      }
+    },
+    "dead_3": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent accountability"
+      }
+    },
+    "dead_4": {
+      "type": "Text",
+      "props": {
+        "text": "Altseason rotation (rotation \"basically disappeared\" per @0xLuciferNox + BTC dominance 58%)"
+      }
+    },
+    "section_reflexivity": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_reflexivity",
+        "alert_1",
+        "alert_2",
+        "alert_3",
+        "alert_4"
+      ]
+    },
+    "h_reflexivity": {
+      "type": "Heading",
+      "props": {
+        "text": "REFLEXIVITY ALERT",
+        "level": "h2"
+      }
+    },
+    "alert_1": {
+      "type": "Alert",
+      "props": {
+        "message": "Hyperliquid/perps: 3-ETF narrative loud, but HYPE −3.9% 24h (6-21 movers) — story not converting to price",
+        "type": "warning"
+      }
+    },
+    "alert_2": {
+      "type": "Alert",
+      "props": {
+        "message": "AI agents × RWA: still zero autonomous wallets deployed (6-21 flag valid); @VexaWeb3 thesis runs ahead of fundamentals",
+        "type": "warning"
+      }
+    },
+    "alert_3": {
+      "type": "Alert",
+      "props": {
+        "message": "Stablecoins flipping the other way — x402 + $311B make this less reflexive; fundamentals catching the story",
+        "type": "success"
+      }
+    },
+    "alert_4": {
+      "type": "Alert",
+      "props": {
+        "message": "Structural: Kaito killed Yapper leaderboard Jan-15 (X API revoked); mindshare attribution now Attention Markets (Polymarket joint) — measurement layer itself shifting",
+        "type": "info"
+      }
+    },
+    "section_positions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "h_positions",
+        "pos_frontrun_stack",
+        "pos_ride_stack",
+        "pos_watch_stack",
+        "pos_fade_stack",
+        "pos_ignore_stack"
+      ]
+    },
+    "h_positions": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      }
+    },
+    "pos_frontrun_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_frontrun",
+        "pos_fr_1",
+        "pos_fr_2"
+      ]
+    },
+    "badge_frontrun": {
+      "type": "Badge",
+      "props": {
+        "text": "FRONT-RUN",
+        "variant": "secondary"
+      }
+    },
+    "pos_fr_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_fr_1a",
+        "text_fr_1b"
+      ]
+    },
+    "text_fr_1a": {
+      "type": "Text",
+      "props": {
+        "text": "P2P security mesh (2 ↑↑ Bull) — @CNPYNetwork \"BitTorrent moment\""
+      }
+    },
+    "text_fr_1b": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: never compounds past niche",
+        "variant": "caption"
+      }
+    },
+    "pos_fr_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_fr_2a",
+        "text_fr_2b"
+      ]
+    },
+    "text_fr_2a": {
+      "type": "Text",
+      "props": {
+        "text": "Ownership tokens vs points (3 ↑ Bull) — @AviciMoney flywheel"
+      }
+    },
+    "text_fr_2b": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: builders default to points for liquidity",
+        "variant": "caption"
+      }
+    },
+    "pos_ride_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_ride",
+        "pos_rd_1",
+        "pos_rd_2",
+        "pos_rd_3",
+        "pos_rd_4",
+        "pos_rd_5"
+      ]
+    },
+    "badge_ride": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      }
+    },
+    "pos_rd_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_rd_1a",
+        "text_rd_1b"
+      ]
+    },
+    "text_rd_1a": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid/perps (5 ↑↑ Bull) — @0xLuciferNox, 3 ETFs"
+      }
+    },
+    "text_rd_1b": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: HYPE price not following the snapshot",
+        "variant": "caption"
+      }
+    },
+    "pos_rd_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_rd_2a",
+        "text_rd_2b"
+      ]
+    },
+    "text_rd_2a": {
+      "type": "Text",
+      "props": {
+        "text": "Stablecoins as rails (5 ↑ Bull) — x402, MetaMask, Visa/Stripe/Anthropic at foundation"
+      }
+    },
+    "text_rd_2b": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: OFAC overhang",
+        "variant": "caption"
+      }
+    },
+    "pos_rd_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_rd_3a",
+        "text_rd_3b"
+      ]
+    },
+    "text_rd_3a": {
+      "type": "Text",
+      "props": {
+        "text": "RWA/tokenization (5 ↑ Bull) — BlackRock, FT, a16zcrypto"
+      }
+    },
+    "text_rd_3b": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: 3-5y execution lag on $20T forecasts",
+        "variant": "caption"
+      }
+    },
+    "pos_rd_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_rd_4a",
+        "text_rd_4b"
+      ]
+    },
+    "text_rd_4a": {
+      "type": "Text",
+      "props": {
+        "text": "AI agents × RWA (5 ↑ Bull) — @VexaWeb3 thesis"
+      }
+    },
+    "text_rd_4b": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: autonomous-wallet vapor",
+        "variant": "caption"
+      }
+    },
+    "pos_rd_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_rd_5a",
+        "text_rd_5b"
+      ]
+    },
+    "text_rd_5a": {
+      "type": "Text",
+      "props": {
+        "text": "Performance L1s (SOL/SUI/NEAR/INJ) (4 ↑ Bull) — @FrankLambeek \"new meta loading\""
+      }
+    },
+    "text_rd_5b": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: cyclical, not structural",
+        "variant": "caption"
+      }
+    },
+    "pos_watch_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_watch",
+        "pos_wt_1",
+        "pos_wt_2",
+        "pos_wt_3"
+      ]
+    },
+    "badge_watch": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "outline"
+      }
+    },
+    "pos_wt_1": {
+      "type": "Text",
+      "props": {
+        "text": "AI coding agents + MCP (3 ↑ Bull) — dev-tooling utility, no token thesis yet"
+      }
+    },
+    "pos_wt_2": {
+      "type": "Text",
+      "props": {
+        "text": "Hardware moats (3 → Mixed) — contrarian, Snap/Spiegel framing doesn't crypto-translate"
+      }
+    },
+    "pos_wt_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_wt_3a",
+        "link_wt_3"
+      ]
+    },
+    "text_wt_3a": {
+      "type": "Text",
+      "props": {
+        "text": "Embodied AI / energy & raw materials (2 ↑ Bull) — "
+      }
+    },
+    "link_wt_3": {
+      "type": "Link",
+      "props": {
+        "label": "@RationalAvocado",
+        "href": "https://twitter.com/RationalAvocado"
+      }
+    },
+    "pos_fade_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_fade",
+        "pos_fd_1"
+      ]
+    },
+    "badge_fade": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "destructive"
+      }
+    },
+    "pos_fd_1": {
+      "type": "Text",
+      "props": {
+        "text": "L1 vs AI token competition (3 → Cope) — narrative war, not fundamentals"
+      }
+    },
+    "pos_ignore_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_ignore",
+        "pos_ig_1"
+      ]
+    },
+    "badge_ignore": {
+      "type": "Badge",
+      "props": {
+        "text": "IGNORE",
+        "variant": "destructive"
+      }
+    },
+    "pos_ig_1": {
+      "type": "Text",
+      "props": {
+        "text": "Meme 3.0 (2 ↓ Cope) — zero revenue survivors; breadth failing"
+      }
+    },
+    "section_map": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "h_map",
+        "map_emerging",
+        "map_rising",
+        "map_peak",
+        "map_fading",
+        "map_dead"
+      ]
+    },
+    "h_map": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      }
+    },
+    "map_emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_emerging",
+        "text_emerging"
+      ]
+    },
+    "label_emerging": {
+      "type": "Heading",
+      "props": {
+        "text": "Emerging",
+        "level": "h4"
+      }
+    },
+    "text_emerging": {
+      "type": "Text",
+      "props": {
+        "text": "P2P security mesh, ownership tokens, embodied AI/energy"
+      }
+    },
+    "map_rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_rising",
+        "text_rising"
+      ]
+    },
+    "label_rising": {
+      "type": "Heading",
+      "props": {
+        "text": "Rising",
+        "level": "h4"
+      }
+    },
+    "text_rising": {
+      "type": "Text",
+      "props": {
+        "text": "Performance L1s, AI infra, BTC L2s + DePIN, AI coding agents/MCP, hardware moats, L1-vs-AI wars"
+      }
+    },
+    "map_peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_peak",
+        "text_peak"
+      ]
+    },
+    "label_peak": {
+      "type": "Heading",
+      "props": {
+        "text": "Peak",
+        "level": "h4"
+      }
+    },
+    "text_peak": {
+      "type": "Text",
+      "props": {
+        "text": "AI agents × RWA, onchain AI agents × compute, Hyperliquid/perps, stablecoins, RWA mega"
+      }
+    },
+    "map_fading": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_fading",
+        "text_fading"
+      ]
+    },
+    "label_fading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fading",
+        "level": "h4"
+      }
+    },
+    "text_fading": {
+      "type": "Text",
+      "props": {
+        "text": "Meme 3.0"
+      }
+    },
+    "map_dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_dead_map",
+        "text_dead_map"
+      ]
+    },
+    "label_dead_map": {
+      "type": "Heading",
+      "props": {
+        "text": "Dead",
+        "level": "h4"
+      }
+    },
+    "text_dead_map": {
+      "type": "Text",
+      "props": {
+        "text": "Sovereign AI chains, privacy tech governance, AI agent accountability, altseason rotation"
+      }
+    }
+  }
+}
