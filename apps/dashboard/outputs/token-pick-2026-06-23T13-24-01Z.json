@@ -1,0 +1,395 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-23"
+      },
+      "children": [
+        "dexe_stack",
+        "sep_1",
+        "market_stack",
+        "sep_2",
+        "footer_stack"
+      ]
+    },
+    "dexe_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dexe_header",
+        "dexe_metrics",
+        "dexe_score_breakdown",
+        "dexe_catalyst",
+        "dexe_risk",
+        "dexe_stake",
+        "dexe_exit",
+        "dexe_vs"
+      ]
+    },
+    "dexe_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "dexe_title",
+        "dexe_badge",
+        "dexe_signal"
+      ]
+    },
+    "dexe_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Token: DEXE",
+        "level": "h3"
+      }
+    },
+    "dexe_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "dexe_signal": {
+      "type": "Text",
+      "props": {
+        "text": "signal 7/10"
+      }
+    },
+    "dexe_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dexe_price",
+        "dexe_mcap",
+        "dexe_vol"
+      ]
+    },
+    "dexe_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$22.98",
+        "delta": "+28.2% (24h) / +23.4% (7d)"
+      }
+    },
+    "dexe_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$1.08B"
+      }
+    },
+    "dexe_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$102M (vol/mcap 0.09)"
+      }
+    },
+    "dexe_score_breakdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "score_label",
+        "score_detail"
+      ]
+    },
+    "score_label": {
+      "type": "Text",
+      "props": {
+        "text": "Score breakdown:",
+        "variant": "lead"
+      }
+    },
+    "score_detail": {
+      "type": "Text",
+      "props": {
+        "text": "[24h+1, 7d+1, both>5%+2, RS vs BTC/ETH+2 (BTC -6.6% / ETH -8.3% 7d), DEX confirm+1] = 7/10"
+      }
+    },
+    "dexe_catalyst": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "catalyst_label",
+        "catalyst_detail"
+      ]
+    },
+    "catalyst_label": {
+      "type": "Text",
+      "props": {
+        "text": "Catalyst:",
+        "variant": "lead"
+      }
+    },
+    "catalyst_detail": {
+      "type": "Text",
+      "props": {
+        "text": "KCEX listing + DAO-governance rotation under \"Dexelization\" DAO-Studio framing — only large-cap green on a sea-of-red day."
+      }
+    },
+    "dexe_risk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "risk_label",
+        "risk_detail"
+      ]
+    },
+    "risk_label": {
+      "type": "Text",
+      "props": {
+        "text": "Risk:",
+        "variant": "lead"
+      }
+    },
+    "risk_detail": {
+      "type": "Text",
+      "props": {
+        "text": "51.5% supply still locked (FDV/mcap 2.1×) and today's $22.98 sits mid-range between $17.62 low and $24.12 high, same area where June 3 wicked to $24.49 then reversed."
+      }
+    },
+    "dexe_stake": {
+      "type": "Text",
+      "props": {
+        "text": "Stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap"
+      }
+    },
+    "dexe_exit": {
+      "type": "Text",
+      "props": {
+        "text": "Exit: target $28 / invalidate $19 / time-stop 14d"
+      }
+    },
+    "dexe_vs": {
+      "type": "Text",
+      "props": {
+        "text": "Vs recent picks: first time (last 7d: EIGEN, SOL, AERO, HYPE, UNI, JTO — DEXE clean)"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "market_header",
+        "market_odds",
+        "market_vol",
+        "market_fair",
+        "market_thesis",
+        "market_risk",
+        "market_stake"
+      ]
+    },
+    "market_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "market_title",
+        "market_badge",
+        "market_edge"
+      ]
+    },
+    "market_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Market: \"Israel x Hezbollah permanent peace deal by July 31, 2026?\"",
+        "level": "h3"
+      }
+    },
+    "market_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "market_edge": {
+      "type": "Text",
+      "props": {
+        "text": "edge 10.5pp"
+      }
+    },
+    "market_odds": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "odds_label",
+        "odds_values"
+      ]
+    },
+    "odds_label": {
+      "type": "Text",
+      "props": {
+        "text": "Current:",
+        "variant": "lead"
+      }
+    },
+    "odds_values": {
+      "type": "Text",
+      "props": {
+        "text": "YES 16.5¢ / NO 83.5¢ | resolves: 2026-07-31"
+      }
+    },
+    "market_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$211k"
+      }
+    },
+    "market_fair": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fair_label",
+        "fair_inputs"
+      ]
+    },
+    "fair_label": {
+      "type": "Stat",
+      "props": {
+        "label": "Fair YES",
+        "value": "~6%"
+      }
+    },
+    "fair_inputs": {
+      "type": "Text",
+      "props": {
+        "text": "Inputs: June 19 US-mediated truce is a ceasefire not a peace deal; week-of-June-22 talks just opened toward \"comprehensive agreement\"; Hezbollah disarmament + Israeli southern-Lebanon withdrawal both unresolved, May 17 1983 precedent failed",
+        "variant": "caption"
+      }
+    },
+    "market_thesis": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "thesis_label",
+        "thesis_detail"
+      ]
+    },
+    "thesis_label": {
+      "type": "Text",
+      "props": {
+        "text": "Thesis:",
+        "variant": "lead"
+      }
+    },
+    "thesis_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Market is pricing a 5-week jump from fragile ceasefire to signed permanent deal — sell YES / buy NO at 83.5¢."
+      }
+    },
+    "market_risk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "market_risk_label",
+        "market_risk_detail"
+      ]
+    },
+    "market_risk_label": {
+      "type": "Text",
+      "props": {
+        "text": "Risk:",
+        "variant": "lead"
+      }
+    },
+    "market_risk_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Trump-administration pressure could force a face-saving signed framework even without real disarmament; if any document gets labeled \"peace deal\" the market resolves YES."
+      }
+    },
+    "market_stake": {
+      "type": "Text",
+      "props": {
+        "text": "Stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources",
+        "logging",
+        "disclaimer"
+      ]
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: cg=ok, dex=ok, poly=ok, x=ok",
+        "variant": "caption"
+      }
+    },
+    "logging": {
+      "type": "Text",
+      "props": {
+        "text": "if you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it",
+        "variant": "caption"
+      }
+    },
+    "disclaimer": {
+      "type": "Text",
+      "props": {
+        "text": "not financial advice — pattern-matching only",
+        "variant": "caption"
+      }
+    }
+  }
+}
