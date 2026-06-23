@@ -1,0 +1,638 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-06-23"
+      },
+      "children": [
+        "market-overview",
+        "sep1",
+        "winners-section",
+        "sep2",
+        "losers-section",
+        "sep3",
+        "tweets-section",
+        "sep4",
+        "paper-section",
+        "sep5",
+        "github-section",
+        "sep6",
+        "hn-section"
+      ]
+    },
+    "market-overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mo-heading",
+        "mo-text"
+      ]
+    },
+    "mo-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Overview",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "mo-text": {
+      "type": "Text",
+      "props": {
+        "text": "Broad risk-off — 19/76 top-100 alts green (25%), median −2.1%; majors red (BTC −1.7%, SOL −4.8%, HYPE −3.0%), but DEXE rips +77% on $110M vol.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "Price (24h)",
+          "7d Change",
+          "Volume",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "DEXE",
+            "$24.06 (+76.8%)",
+            "+23.8%",
+            "$110M",
+            "BREAKOUT"
+          ],
+          [
+            "GWEI",
+            "$0.1226 (+14.1%)",
+            "−13.6%",
+            "—",
+            ""
+          ],
+          [
+            "LAB",
+            "$16.90 (+13.2%)",
+            "+68.9%",
+            "—",
+            "MAJOR, BREAKOUT"
+          ],
+          [
+            "RAIN",
+            "$0.01593 (+10.6%)",
+            "+16.3%",
+            "—",
+            "MAJOR"
+          ],
+          [
+            "DYDX",
+            "$0.131 (+8.8%)",
+            "+7.2%",
+            "—",
+            ""
+          ],
+          [
+            "B",
+            "$0.237 (+8.0%)",
+            "−10.8%",
+            "—",
+            ""
+          ],
+          [
+            "AWE",
+            "$0.061 (+7.1%)",
+            "—",
+            "—",
+            "MICROCAP"
+          ],
+          [
+            "TEL",
+            "$0.00255 (+6.8%)",
+            "—",
+            "—",
+            ""
+          ],
+          [
+            "GRAM",
+            "$1.73 (+6.4%)",
+            "—",
+            "—",
+            "MAJOR"
+          ],
+          [
+            "AERO",
+            "$0.537 (+5.3%)",
+            "+22.9%",
+            "—",
+            "TRENDING+UP"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "losers-table"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "Price (24h)",
+          "7d Change",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "UB",
+            "$0.0887 (−35.7%)",
+            "−22.5%",
+            "Full roundtrip from yesterday's +21.5% winner"
+          ],
+          [
+            "H",
+            "$0.123 (−28.5%)",
+            "−47.7%",
+            "Continuation"
+          ],
+          [
+            "EIGEN",
+            "$0.259 (−15.3%)",
+            "+19.1%",
+            "CAPITULATION — reverses yesterday's HIGH 9/10 pick"
+          ],
+          [
+            "SKYAI",
+            "$0.331 (−14.1%)",
+            "—",
+            ""
+          ],
+          [
+            "BP",
+            "$0.586 (−13.0%)",
+            "+29.7%",
+            ""
+          ],
+          [
+            "BTW",
+            "$0.0894 (−11.5%)",
+            "+26.5%",
+            ""
+          ],
+          [
+            "TRAC",
+            "$0.298 (−10.3%)",
+            "—",
+            ""
+          ],
+          [
+            "BILL",
+            "$0.0542 (−9.5%)",
+            "—",
+            "Reverses yesterday's +15% winner"
+          ],
+          [
+            "WLD",
+            "$0.587 (−8.7%)",
+            "—",
+            "MAJOR"
+          ],
+          [
+            "CHZ",
+            "$0.0192 (−8.4%)",
+            "−20.3%",
+            ""
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets-heading",
+        "crypto-subsection",
+        "ai-subsection",
+        "dev-subsection"
+      ]
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "crypto-subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-badge",
+        "crypto-text"
+      ]
+    },
+    "crypto-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CRYPTO",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "Taiko halted its L2 after a $1.7M bridge exploit (forged withdrawal proofs). BoE softened on stablecoins — $50B issuance cap ahead of 2027 market. Schwab + Cboe entering prediction-market trading, direct Polymarket/Kalshi pressure.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "ai-subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai-badge",
+        "ai-text"
+      ]
+    },
+    "ai-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "AI",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "OpenAI shipped GPT-5.4 + Pro (native computer-use, 1M ctx). Anthropic at $30B revenue run rate (80x Q1 growth); Claude Code at $2.5B ARR in 9 months.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "dev-subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev-badge",
+        "dev-text"
+      ]
+    },
+    "dev-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEV",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fable 5 GA in Copilot — Stripe migrated a 50M-line codebase in a day. Claude Agent SDK released for TS/Python (MCP + sub-agents). NVIDIA RTX Spark Superchip: 128GB unified, 1 PFLOP on a laptop.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-heading",
+        "paper-item-stack"
+      ]
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "paper-item-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper-link",
+        "paper-desc"
+      ]
+    },
+    "paper-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CLI-Universe: Towards Verifiable Task Synthesis Engine for Terminal Agents",
+        "href": "https://arxiv.org/abs/2606.22883",
+        "source": "arXiv",
+        "score": "↑18"
+      },
+      "children": []
+    },
+    "paper-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Capability-taxonomy-grounded synthesis pipeline for terminal-agent training data; directly relevant to the agent-tooling stack.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "github-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github-heading",
+        "github-alert"
+      ]
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "github-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "message": "No new issues across anajuliabit/* — clean day."
+      },
+      "children": []
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-heading",
+        "hn-item-1",
+        "hn-item-2",
+        "hn-item-3",
+        "hn-item-4",
+        "hn-item-5"
+      ]
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "hn-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-1",
+        "hn-desc-1"
+      ]
+    },
+    "hn-link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Steam Machine launches today",
+        "href": "https://news.ycombinator.com/item?id=48632884",
+        "source": "Hacker News",
+        "score": "1465 pts / 1290 comments"
+      },
+      "children": []
+    },
+    "hn-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "Valve's console-form-factor SteamOS box ships",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-2",
+        "hn-desc-2"
+      ]
+    },
+    "hn-link-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Deno Desktop",
+        "href": "https://news.ycombinator.com/item?id=48626137",
+        "source": "Hacker News",
+        "score": "1055 pts / 381 comments"
+      },
+      "children": []
+    },
+    "hn-desc-2": {
+      "type": "Text",
+      "props": {
+        "text": "Deno ships native desktop runtime, another bid against Electron",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-3",
+        "hn-desc-3"
+      ]
+    },
+    "hn-link-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Flock-powered chiefs stalking women",
+        "href": "https://news.ycombinator.com/item?id=48634694",
+        "source": "Hacker News",
+        "score": "482 pts / 196 comments"
+      },
+      "children": []
+    },
+    "hn-desc-3": {
+      "type": "Text",
+      "props": {
+        "text": "ALPR misuse case; warrants-for-fleet-data argument hardens",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-4",
+        "hn-desc-4"
+      ]
+    },
+    "hn-link-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Canada's nuclear renaissance",
+        "href": "https://news.ycombinator.com/item?id=48634585",
+        "source": "Hacker News",
+        "score": "433 pts / 274 comments"
+      },
+      "children": []
+    },
+    "hn-desc-4": {
+      "type": "Text",
+      "props": {
+        "text": "Up to 10 reactors by 2040",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-link-5",
+        "hn-desc-5"
+      ]
+    },
+    "hn-link-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GLM-5.2 how to run locally",
+        "href": "https://news.ycombinator.com/item?id=48636377",
+        "source": "Hacker News",
+        "score": "321 pts / 141 comments"
+      },
+      "children": []
+    },
+    "hn-desc-5": {
+      "type": "Text",
+      "props": {
+        "text": "Unsloth's local-inference guide for the new Chinese OS model",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

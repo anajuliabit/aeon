@@ -1,47 +1,46 @@
-*Daily Routine — 2026-06-22*
+*daily routine — 2026-06-23*
 
-*Top 10 Winners (24h)*
-1. UB $0.138 (+58.9%, 7d +12.0%)
-2. O $0.771 (+16.4%)
-3. BTW $0.107 (+15.7%, snap-back after −39% yesterday)
-4. SKYAI $0.378 (+11.0%)
-5. EIGEN $0.300 (+9.8%, 7d +42.7%) — sustained
-6. BILL $0.061 (+9.7%)
-7. VVV $15.47 (+8.2%)
-8. DEXE $15.62 (+8.1%)
-9. LIT $1.67 (+6.1%)
-10. ENA $0.095 (+6.1%, 7d +10.8%)
+_broad risk-off — 19/76 top-100 alts green (25%), median −2.1%; majors red (BTC −1.7%, SOL −4.8%, HYPE −3.0%), but DEXE rips +77% on $110M vol._
 
-*Top 10 Losers (24h)*
-1. H $0.158 (−20.0%, 7d −70.6%)
-2. RE $0.810 (−15.7%)
-3. BP $0.671 (−10.1%, 7d still +42.9%)
-4. AXS $1.033 (−9.0%)
-5. JTO $0.650 (−8.5%)
-6. XPL $0.090 (−4.8%)
-7. BTSE $0.935 (−4.0%)
-8. STABLE $0.034 (−3.6%)
-9. GALA $0.0026 (−3.5%)
-10. CC $0.150 (−3.5%)
+*top 10 winners (24h)*
+1. DEXE: $24.06 (+76.8%) · 7d +23.8% · $110M vol
+2. GWEI: $0.1226 (+14.1%) · 7d −13.6%
+3. LAB: $16.90 (+13.2%) · 7d +68.9% [MAJOR][BREAKOUT]
+4. RAIN: $0.01593 (+10.6%) · 7d +16.3% [MAJOR]
+5. DYDX: $0.131 (+8.8%) · 7d +7.2%
+6. B: $0.237 (+8.0%) · 7d −10.8%
+7. AWE: $0.061 (+7.1%) [MICROCAP]
+8. TEL: $0.00255 (+6.8%)
+9. GRAM: $1.73 (+6.4%) [MAJOR]
+10. AERO: $0.537 (+5.3%) · 7d +22.9% [TRENDING+UP]
 
-breadth 97/191 green (50.8%), median +0.01% — flat tape, microcap pump-dump dominating winners
+*top 10 losers (24h)*
+1. UB: $0.0887 (−35.7%) · 7d −22.5% — full roundtrip from yesterday's +21.5% winner
+2. H: $0.123 (−28.5%) · 7d −47.7% — continuation
+3. EIGEN: $0.259 (−15.3%) · 7d +19.1% [CAPITULATION] — reverses yesterday's HIGH 9/10 pick
+4. SKYAI: $0.331 (−14.1%)
+5. BP: $0.586 (−13.0%) · 7d +29.7%
+6. BTW: $0.0894 (−11.5%) · 7d +26.5%
+7. TRAC: $0.298 (−10.3%)
+8. BILL: $0.0542 (−9.5%) — reverses yesterday's +15% winner
+9. WLD: $0.587 (−8.7%) [MAJOR]
+10. CHZ: $0.0192 (−8.4%) · 7d −20.3%
 
-*Tweet Roundup*
-*Crypto:* BTC weakness 4th day, smart-contract/DeFi leading losses; Strive CEO blames leverage liquidations for STRC/SATA selloff. XRP −3% lost $1.15 support. RWA tokenized assets +589% since early 2025; Ethereum holds ~60% share across stables/RWA/DeFi.
-*AI:* Qwen 3.7 Max launched at $1.25/$3.75 per 1M tokens (50% promo through today). Claude web traffic +306% Jan→Apr (203M→824M). Mythos 5 GA + Fable 5 preview already shipped this month; agentic the fastest-growing category.
-*Dev:* Gemma 4 first Gemma model under Apache 2.0. UN Open Source Week 6-22→6-26 NYC. ZAYA1-8B (Zyphra, Apache 2.0) trained from scratch on AMD Instinct — non-Nvidia pipeline working.
+*tweet roundup*
+*crypto* — Taiko halted its L2 after a $1.7M bridge exploit (forged withdrawal proofs). BoE softened on stablecoins — $50B issuance cap ahead of 2027 market. Schwab + Cboe entering prediction-market trading, direct Polymarket/Kalshi pressure.
+*ai* — OpenAI shipped GPT-5.4 + Pro (native computer-use, 1M ctx). Anthropic at $30B revenue run rate (80x Q1 growth); Claude Code at $2.5B ARR in 9 months.
+*dev* — Fable 5 GA in Copilot — Stripe migrated a 50M-line codebase in a day. Claude Agent SDK released for TS/Python (MCP + sub-agents). NVIDIA RTX Spark Superchip: 128GB unified, 1 PFLOP on a laptop.
 
-*Paper of the Day*
-"PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models" — ↑40
-First diffusion MLLM that captions multiple image regions in parallel instead of one-at-a-time. Code + models released.
-[arxiv.org/abs/2606.19534](https://arxiv.org/abs/2606.19534)
+*paper of the day*
+"CLI-Universe: Towards Verifiable Task Synthesis Engine for Terminal Agents" — ↑18. Capability-taxonomy-grounded synthesis pipeline for terminal-agent training data; directly relevant to the agent-tooling stack.
+https://arxiv.org/abs/2606.22883
 
-*GitHub Issues*
-No new issues in user:anajuliabit (24h window).
+*github issues*
+no new issues across anajuliabit/* — clean day.
 
-*HN Digest*
-1. [Identity verification on Claude](https://support.claude.com/en/articles/14328960-identity-verification-on-claude) (731pts) — Anthropic rolling out KYC-style verification. [Discuss](https://news.ycombinator.com/item?id=48618455)
-2. [Did my old job only exist because of fraud?](https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/) (512pts) — postmortem from a worker who quit. [Discuss](https://news.ycombinator.com/item?id=48622867)
-3. [Prefer duplication over the wrong abstraction (2016)](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction) (475pts) — Sandi Metz classic resurfaces. [Discuss](https://news.ycombinator.com/item?id=48620090)
-4. [Apertus — Open Foundation Model for Sovereign AI](https://apertvs.ai/) (361pts) — Swiss-led sovereign model push. [Discuss](https://news.ycombinator.com/item?id=48622778)
-5. [Deno Desktop](https://docs.deno.com/runtime/desktop/) (261pts) — Deno ships a desktop runtime. [Discuss](https://news.ycombinator.com/item?id=48626137)
+*hn digest*
+1. Steam Machine launches today (1465pts/1290c) — Valve's console-form-factor SteamOS box ships — https://news.ycombinator.com/item?id=48632884
+2. Deno Desktop (1055pts/381c) — Deno ships native desktop runtime, another bid against Electron — https://news.ycombinator.com/item?id=48626137
+3. Flock-powered chiefs stalking women (482pts/196c) — ALPR misuse case; warrants-for-fleet-data argument hardens — https://news.ycombinator.com/item?id=48634694
+4. Canada's nuclear renaissance — up to 10 reactors by 2040 (433pts/274c) — https://news.ycombinator.com/item?id=48634585
+5. GLM-5.2 how to run locally (321pts/141c) — Unsloth's local-inference guide for the new Chinese OS model — https://news.ycombinator.com/item?id=48636377
