@@ -1,0 +1,429 @@
+{
+  "root": "card-token-movers",
+  "state": {},
+  "elements": {
+    "card-token-movers": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers — 2026-06-23"
+      },
+      "children": [
+        "summary-section",
+        "sep-1",
+        "winners-heading",
+        "winners-table",
+        "sep-2",
+        "losers-heading",
+        "losers-table",
+        "sep-3",
+        "trending-heading",
+        "trending-table",
+        "sep-4",
+        "notable-heading",
+        "notable-stack"
+      ]
+    },
+    "summary-section": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Capitulation accelerated post-morning run — 13/100 top alts green, median 24h -4.79%; BTC -4.65%, ETH -6.45%, SOL -7.43% (morning was -1.7/-1.6/-4.8)."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Name",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "DEXE",
+            "DeXe",
+            "$23.03",
+            "+28.6%",
+            "+23.6%",
+            "+0.9%",
+            "$102M",
+            "#65",
+            "rolling continuation of 6-22 +76.8% rip"
+          ],
+          [
+            "GWEI",
+            "ETHGas",
+            "$0.1258",
+            "+19.2%",
+            "-9.3%",
+            "+5.6%",
+            "$6M",
+            "#138",
+            "accelerated vs morning +14.1%"
+          ],
+          [
+            "RAIN",
+            "Rain",
+            "$0.01578",
+            "+9.6%",
+            "+13.2%",
+            "",
+            "$44M",
+            "#13",
+            "MAJOR — sole rank-≤20 green"
+          ],
+          [
+            "ZANO",
+            "ZANO",
+            "$9.77",
+            "+8.8%",
+            "-5.9%",
+            "",
+            "$1.6M",
+            "#199",
+            ""
+          ],
+          [
+            "AWE",
+            "AWE Network",
+            "$0.0630",
+            "+7.5%",
+            "+15.7%",
+            "",
+            "$6.5M",
+            "#230",
+            ""
+          ],
+          [
+            "VELVET",
+            "VELVET",
+            "$0.4748",
+            "+6.2%",
+            "+30.5%",
+            "",
+            "$11M",
+            "#170",
+            ""
+          ],
+          [
+            "BEAT",
+            "Audiera",
+            "$1.76",
+            "+4.2%",
+            "-44.8%",
+            "",
+            "$16M",
+            "#100",
+            "relief bounce"
+          ],
+          [
+            "ALGO",
+            "Algorand",
+            "$0.0949",
+            "+3.9%",
+            "-0.9%",
+            "",
+            "$42M",
+            "#75",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Name",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "UB",
+            "Unibase",
+            "$0.0779",
+            "-33.6%",
+            "-32.6%",
+            "$38M",
+            "#176",
+            "carry from morning -35.7%"
+          ],
+          [
+            "EIGEN",
+            "EigenCloud",
+            "$0.2502",
+            "-17.0%",
+            "+14.3%",
+            "$51M",
+            "#182",
+            "TRENDING+DOWN — 2nd day reversal of 6-22 HIGH 9/10 pick"
+          ],
+          [
+            "VVV",
+            "Venice Token",
+            "$13.36",
+            "-16.0%",
+            "-12.8%",
+            "$26M",
+            "#88",
+            "new vs morning"
+          ],
+          [
+            "H",
+            "Humanity",
+            "$0.1229",
+            "-14.9%",
+            "-38.3%",
+            "$30M",
+            "#152",
+            "carry, continued capitulation"
+          ],
+          [
+            "BILL",
+            "Billions Network",
+            "$0.0525",
+            "-14.1%",
+            "-21.8%",
+            "$22M",
+            "#222",
+            "accelerated from morning -9.5%"
+          ],
+          [
+            "WLD",
+            "Worldcoin",
+            "$0.5637",
+            "-11.6%",
+            "-13.5%",
+            "$302M",
+            "#43",
+            "accelerated from morning -8.7%"
+          ],
+          [
+            "SPX",
+            "SPX6900",
+            "$0.3399",
+            "-11.0%",
+            "-10.6%",
+            "$11M",
+            "#129",
+            "new"
+          ],
+          [
+            "BP",
+            "Backpack",
+            "$0.5723",
+            "-10.9%",
+            "+36.8%",
+            "$7.3M",
+            "#207",
+            "TRENDING+DOWN, giveback continues"
+          ],
+          [
+            "XLM",
+            "Stellar",
+            "$0.1918",
+            "-10.5%",
+            "-13.6%",
+            "$241M",
+            "#16",
+            "MAJOR — rare rank-≤20 -10% day"
+          ],
+          [
+            "BTW",
+            "Bitway",
+            "$0.1041",
+            "-10.5%",
+            "+68.7%",
+            "$35M",
+            "#153",
+            "carry, giveback ongoing"
+          ]
+        ]
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "trending-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Name",
+          "Rank",
+          "Price",
+          "24h",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "ARX",
+            "Arcium",
+            "#328",
+            "$0.357",
+            "-0.9%",
+            ""
+          ],
+          [
+            "SOL",
+            "",
+            "#7",
+            "$68.87",
+            "-7.3%",
+            "TRENDING+DOWN MAJOR"
+          ],
+          [
+            "BTC",
+            "",
+            "#1",
+            "$62,200",
+            "-4.4%",
+            "TRENDING+DOWN MAJOR"
+          ],
+          [
+            "PENGU",
+            "",
+            "#114",
+            "$0.00629",
+            "-8.2%",
+            "TRENDING+DOWN"
+          ],
+          [
+            "AERO",
+            "Aerodrome",
+            "#105",
+            "$0.509",
+            "-6.1%",
+            "TRENDING+DOWN — direction flip vs morning's TRENDING+UP"
+          ],
+          [
+            "HYPE",
+            "",
+            "#10",
+            "$62.80",
+            "-8.3%",
+            "TRENDING+DOWN MAJOR"
+          ],
+          [
+            "ARB",
+            "Arbitrum",
+            "#102",
+            "$0.0787",
+            "-8.6%",
+            "TRENDING+DOWN"
+          ]
+        ]
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5",
+        "notable-6"
+      ]
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "tape regime worsened vs morning — BTC -1.7% → -4.65%, top-100 median -2.1% → -4.79%, breadth 25% → 13% green",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "trending list is 13/15 red — capitulation, not chase; ARB/SUI/ONDO/RENDER/EIGEN all trending and down ≥8%",
+        "variant": "body"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "AERO direction flip ([TRENDING+UP] morning → [TRENDING+DOWN] now) — single most meaningful reversal",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "SNX entered trending (-4.4%) — ties to 09:00Z aixbt-pulse \"protocol unwind cluster\" (Synthetix/ENS/Sonic)",
+        "variant": "body"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "PENDLE -10.3% new loser — was top winner 6-21 (+6.2%), full giveback in 2 days",
+        "variant": "body"
+      }
+    },
+    "notable-6": {
+      "type": "Text",
+      "props": {
+        "text": "XLM -10.5% [MAJOR] — uncommon rank-16 -10% session",
+        "variant": "body"
+      }
+    }
+  }
+}
