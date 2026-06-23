@@ -1,0 +1,284 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-23"
+      },
+      "children": [
+        "heading-tldr",
+        "text-tldr",
+        "sep1",
+        "heading-headlines",
+        "headlines-stack",
+        "sep2",
+        "heading-notable",
+        "notable-stack",
+        "sep3",
+        "heading-decisions",
+        "decisions-stack",
+        "sep4",
+        "heading-blockers",
+        "blockers-alert",
+        "sep5",
+        "footer-text"
+      ]
+    },
+    "heading-tldr": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h3"
+      }
+    },
+    "text-tldr": {
+      "type": "Text",
+      "props": {
+        "text": "solid delivery — phishing caught on-chain, one PR shipped, DEXE pick staged; cost-report at cf=31 is the open wound.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "headlines-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headline-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — PR #138 filed: goal-tracker headers aligned with MEMORY.md",
+        "href": "https://github.com/anajuliabit/aeon/pull/138"
+      }
+    },
+    "headline-2": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor — cyrillic ÚSDС mirroring attack on W3, operator alerted ($1,480 fake-USDC 3min after legit transfer) · memory/on-chain-state.json",
+        "variant": "body"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-h3",
+        "badge-iss025-h3"
+      ]
+    },
+    "text-h3": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — cost-report CRITICAL cf=28; ISS-025 widening, hash-change notify fired",
+        "variant": "body"
+      }
+    },
+    "badge-iss025-h3": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025",
+        "variant": "destructive"
+      }
+    },
+    "headline-4": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick — DEXE HIGH 7/10 $22.98, sole large-cap green on risk-off day, DAO-governance · .pending-picks/2026-06-23-token-pick.json",
+        "variant": "body"
+      }
+    },
+    "headline-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-h5",
+        "link-ghsa"
+      ]
+    },
+    "text-h5": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — free-claude + free-anthropic-claude Anthropic-SDK typosquats flagged; 26 npm malware burst",
+        "variant": "body"
+      }
+    },
+    "link-ghsa": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-7qpf-5pm7-57rh",
+        "href": "https://github.com/advisories/GHSA-7qpf-5pm7-57rh"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — 5 sub-skills clean; tweet-roundup on WebSearch fallback, XAI quota day 7",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — GITLAWB -15.63% rail break fired; watchlist median -11.34%, first sub-(-10%) since canonical landed",
+        "variant": "body"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — 12 actionable, 5 NEW (US policy, AI-displaces-crypto, BTC+AI, AI capex bear, Chinese AI); DePIN promoted Peak",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — gstack 1,092 stars/day (garrytan 23-tool Claude Code bundle, 114k total); hyperframes; voicebox kept",
+        "variant": "body"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY.md consolidated; 5 dedup Current Goal bullets pruned; topics/fleet + crypto appended",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "decisions-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decision-1",
+        "decision-2"
+      ]
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #138 (goal-tracker header fix, 3h open, no CI blockers)",
+        "variant": "body"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-d2",
+        "badge-iss025-d2"
+      ]
+    },
+    "text-d2": {
+      "type": "Text",
+      "props": {
+        "text": "name ISS-025 root cause at aeon.yml capture step — cost-report cf=31, 8d down",
+        "variant": "body"
+      }
+    },
+    "badge-iss025-d2": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025",
+        "variant": "destructive"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h3"
+      }
+    },
+    "blockers-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "cf=31 / sr=9% / outputTokens=12 · ISS-025",
+        "type": "error"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+26 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
