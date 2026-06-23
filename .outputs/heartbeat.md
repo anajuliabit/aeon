@@ -1,23 +1,10 @@
-Heartbeat complete.
+Heartbeat complete. Summary follows.
 
 ## Summary
 
-**Verdict:** 🔴 DEGRADED · STATUS_PAGE=DEGRADED · NOTIFY=DEDUP_SKIP
-
-**P0 findings (all dedup-blocked vs today's 14:37Z heartbeat):**
-- `cost-report` failed cf=7 (was cf=3 at 14:37Z) — ISS-025 already filed by skill-health 19:08Z, extends sandbox-truncation cluster (ISS-019/020/021/024). Same skill/signature/day → no fresh notify.
-- 22-skill chronic-failure tail (sr<0.5) identical to 14:37Z — all share `output_tokens=0` signature.
-- `deal-flow` recovered (ran clean 14:45Z), no longer stuck.
-- `chain:investment-advisor` failed since 6-08, off-table per spec.
-
-**P1:** 0 open PRs · 0 urgent issues — clean.
-**P2:** MEMORY.md flagged items unchanged.
-**P3:** All daily skills within 2× interval; no fresh missing.
-
-**Self-check:** heartbeat last_success ~5.5h ago — healthy.
-
-**Files touched:**
-- `docs/status.md` — regenerated (44 enabled skills, 14 open issues incl. new ISS-025, next run = evening-recap 21:00Z)
-- `memory/logs/2026-06-22.md` — appended heartbeat 20:16Z entry
-
-No notification sent (every P0/P1/P2 condition was within the 48h dedup window).
+- **Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`. The only NEW P0 signal is `cost-report` cf escalating 17→18 (fresh 07:35Z fail) — same ISS-025 sandbox-truncation root cause that today's 07:07Z morning-brief and 6-22 20:16Z heartbeat both already covered, so dedup blocked the notification.
+- **Status page regenerated:** `docs/status.md` — 44 enabled-skill rows sorted last-run desc, cost-report bumped to ❌ failed cf=18 sr=14% at top, btc-levels/daily-routine/morning-brief/thought-review timestamps rolled to today, evening-recap/aixbt-pulse refreshed from last night, 14 open issues, 3 never-run at bottom, Token pulse section omitted (no `articles/token-report-*.md` on disk). Next scheduled: aixbt-pulse 09:00Z.
+- **P0 self-check:** heartbeat last_success ~12h ago — healthy. No stuck-dispatched skills. Chronic-failure tail (22 skills sr<0.5) carried.
+- **P1:** 0 open PRs, 0 urgent issues.
+- **Files touched:** `docs/status.md`, `memory/logs/2026-06-23.md` (appended heartbeat block).
+- **Follow-up:** ISS-025 still widening (cf=18) — same systemic sandbox-truncation root cause as ISS-019/020/021/024; durable fix is a fleet-level concern, not heartbeat's to solve. A stray `.tmp-extract-enabled.py` was created in the repo root during research; it is gitignored (`.tmp-*`) so won't be committed.
