@@ -1,0 +1,733 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-06-23"
+      },
+      "children": [
+        "verdict_text",
+        "sep1",
+        "patch_today_section",
+        "sep2",
+        "patch_week_section",
+        "sep3",
+        "monitor_section"
+      ]
+    },
+    "verdict_text": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 28 npm typosquats out today, kev quiet (2 net-new this week both deduped from 6-22). 5 to schedule, 2 to monitor.\nSources: KEV, GH Advisory, EPSS",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_today_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_today_heading",
+        "free_claude_item",
+        "npm_malware_item"
+      ]
+    },
+    "patch_today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "free_claude_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fc_title",
+        "fc_links",
+        "fc_badges",
+        "fc_desc",
+        "fc_action"
+      ]
+    },
+    "fc_title": {
+      "type": "Text",
+      "props": {
+        "text": "free-claude / free-anthropic-claude",
+        "variant": "body"
+      }
+    },
+    "fc_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fc_link1",
+        "fc_link2"
+      ]
+    },
+    "fc_link1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-7qpf-5pm7-57rh",
+        "href": "https://github.com/advisories/GHSA-7qpf-5pm7-57rh",
+        "source": "npm"
+      }
+    },
+    "fc_link2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-3h58-8ch3-mgp3",
+        "href": "https://github.com/advisories/GHSA-3h58-8ch3-mgp3",
+        "source": "npm"
+      }
+    },
+    "fc_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fc_badge_type",
+        "fc_badge_date"
+      ]
+    },
+    "fc_badge_type": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "fc_badge_date": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-06-22 18:07Z",
+        "variant": "secondary"
+      }
+    },
+    "fc_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic-themed typosquats — install hook runs malicious code.",
+        "variant": "body"
+      }
+    },
+    "fc_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ grep lockfiles for either name; uninstall + rotate any token that touched the install env.",
+        "variant": "caption"
+      }
+    },
+    "npm_malware_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm_heading",
+        "npm_malware_badges",
+        "npm_malware_list",
+        "npm_malware_desc",
+        "npm_malware_action"
+      ]
+    },
+    "npm_heading": {
+      "type": "Text",
+      "props": {
+        "text": "26 more npm malware drops",
+        "variant": "body"
+      }
+    },
+    "npm_malware_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "npm_badge_type",
+        "npm_badge_time"
+      ]
+    },
+    "npm_badge_type": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "npm_badge_time": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-06-23 06:10–12:15Z",
+        "variant": "secondary"
+      }
+    },
+    "npm_malware_list": {
+      "type": "Text",
+      "props": {
+        "text": "new-mjs-eslint, new-helper, new-eslint-1, new-ecro-helper, new-ts-helper, new-solt-1, eslint-helper-1, poly-utils, new-solt, new-ecro-1, local-ip-helper, ts-numbering, libsignal-node-travatiger, datacamp-light, chai-as-uphelded, chai-as-attested, node-slot, ts-wross, node-core-libs, node-fetch-utils, search-from-search, crud-respect, setka-editor, onboarding-respects-modal, carousel-controller-mixin, respects-switch",
+        "variant": "caption"
+      }
+    },
+    "npm_malware_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Coordinated burst — typosquats of eslint, libsignal, node-fetch, chai, ts-tooling.",
+        "variant": "body"
+      }
+    },
+    "npm_malware_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ grep lockfiles; uninstall + rotate creds exposed to install if hit.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_week_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_week_heading",
+        "budibase_item",
+        "mise_item",
+        "scim_item",
+        "budibase_batch_item",
+        "gogs_batch_item"
+      ]
+    },
+    "patch_week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "budibase_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "budibase_link",
+        "budibase_meta",
+        "budibase_desc",
+        "budibase_action"
+      ]
+    },
+    "budibase_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-54352 — @budibase/server",
+        "href": "https://github.com/advisories/GHSA-w7mq-r738-x278",
+        "source": "npm"
+      }
+    },
+    "budibase_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "budibase_cvss",
+        "budibase_epss",
+        "budibase_kev"
+      ]
+    },
+    "budibase_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.6",
+        "variant": "destructive"
+      }
+    },
+    "budibase_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS n/a",
+        "variant": "secondary"
+      }
+    },
+    "budibase_kev": {
+      "type": "Badge",
+      "props": {
+        "text": "no kev",
+        "variant": "secondary"
+      }
+    },
+    "budibase_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Symlink in PWA-zip bypasses path validation → workspace builder reads /data/.env (JWT_SECRET, MINIO_*, REDIS_PASSWORD, COUCHDB_PASSWORD, DATABASE_URL).",
+        "variant": "body"
+      }
+    },
+    "budibase_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade @budibase/server to ≥3.39.9.",
+        "variant": "caption"
+      }
+    },
+    "mise_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mise_link",
+        "mise_meta",
+        "mise_desc",
+        "mise_action"
+      ]
+    },
+    "mise_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-33646 — mise",
+        "href": "https://github.com/advisories/GHSA-fjj5-v948-whjj",
+        "source": "crates.io"
+      }
+    },
+    "mise_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "mise_cvss",
+        "mise_epss",
+        "mise_kev"
+      ]
+    },
+    "mise_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.6",
+        "variant": "destructive"
+      }
+    },
+    "mise_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS n/a",
+        "variant": "secondary"
+      }
+    },
+    "mise_kev": {
+      "type": "Badge",
+      "props": {
+        "text": "no kev",
+        "variant": "secondary"
+      }
+    },
+    "mise_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Tera template injection in .tool-versions files → arbitrary code execution on mise trust.",
+        "variant": "body"
+      }
+    },
+    "mise_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade mise to ≥2026.3.10.",
+        "variant": "caption"
+      }
+    },
+    "scim_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "scim_link",
+        "scim_meta",
+        "scim_desc",
+        "scim_action"
+      ]
+    },
+    "scim_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48170 — scim-patch",
+        "href": "https://github.com/advisories/GHSA-9m6g-wc8r-q59c",
+        "source": "npm"
+      }
+    },
+    "scim_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "scim_cvss",
+        "scim_epss",
+        "scim_kev"
+      ]
+    },
+    "scim_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.1",
+        "variant": "destructive"
+      }
+    },
+    "scim_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS n/a",
+        "variant": "secondary"
+      }
+    },
+    "scim_kev": {
+      "type": "Badge",
+      "props": {
+        "text": "no kev",
+        "variant": "secondary"
+      }
+    },
+    "scim_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Prototype pollution via unfiltered keys in scim patch ops.",
+        "variant": "body"
+      }
+    },
+    "scim_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade scim-patch beyond 0.9.0.",
+        "variant": "caption"
+      }
+    },
+    "budibase_batch_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "budibase_batch_heading",
+        "budibase_batch_meta",
+        "budibase_batch_desc",
+        "budibase_batch_action"
+      ]
+    },
+    "budibase_batch_heading": {
+      "type": "Text",
+      "props": {
+        "text": "Budibase coordinated batch — 5 highs in @budibase/server + @budibase/backend-core",
+        "variant": "body"
+      }
+    },
+    "budibase_batch_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "bud_cves",
+        "bud_cvss_range"
+      ]
+    },
+    "bud_cves": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-54353/54351/50137/50136/50132/48153",
+        "variant": "secondary"
+      }
+    },
+    "bud_cvss_range": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.3–8.5",
+        "variant": "destructive"
+      }
+    },
+    "budibase_batch_desc": {
+      "type": "Text",
+      "props": {
+        "text": "SSRF DNS-rebinding, mass-assignment in webhook trigger, unauth attachment URL, unauth S3 signed upload, account impersonation, OAuth2 SSRF.",
+        "variant": "body"
+      }
+    },
+    "budibase_batch_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade @budibase/server + @budibase/backend-core to ≥3.39.9 (covers all).",
+        "variant": "caption"
+      }
+    },
+    "gogs_batch_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "gogs_batch_heading",
+        "gogs_batch_meta",
+        "gogs_batch_desc",
+        "gogs_batch_action"
+      ]
+    },
+    "gogs_batch_heading": {
+      "type": "Text",
+      "props": {
+        "text": "Gogs coordinated batch — 5 highs in gogs.io/gogs",
+        "variant": "body"
+      }
+    },
+    "gogs_batch_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "gogs_cves",
+        "gogs_cvss_range"
+      ]
+    },
+    "gogs_cves": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-52801/52800/52799/52798/25119",
+        "variant": "secondary"
+      }
+    },
+    "gogs_cvss_range": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5–8.9",
+        "variant": "destructive"
+      }
+    },
+    "gogs_batch_desc": {
+      "type": "Text",
+      "props": {
+        "text": "CSRF org-owner takeover, stored XSS in .ipynb preview, missing authz on attachment download, local-repo import via mirror, reverse-proxy header auth bypass.",
+        "variant": "body"
+      }
+    },
+    "gogs_batch_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade gogs.io/gogs to ≥0.14.3.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_heading",
+        "glances_item",
+        "motioneye_item"
+      ]
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "glances_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "glances_heading",
+        "glances_meta",
+        "glances_desc",
+        "glances_action"
+      ]
+    },
+    "glances_heading": {
+      "type": "Text",
+      "props": {
+        "text": "Glances 3-CVE batch",
+        "variant": "body"
+      }
+    },
+    "glances_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "glances_cve1",
+        "glances_cve2",
+        "glances_cve3",
+        "glances_source",
+        "glances_cvss"
+      ]
+    },
+    "glances_cve1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-46606",
+        "href": "https://github.com/advisories/GHSA-v5r2-qh84-fjx5"
+      }
+    },
+    "glances_cve2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-46607",
+        "href": "https://github.com/advisories/GHSA-9837-48hr-q32j"
+      }
+    },
+    "glances_cve3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-46608",
+        "href": "https://github.com/advisories/GHSA-87qc-fj39-wccr"
+      }
+    },
+    "glances_source": {
+      "type": "Badge",
+      "props": {
+        "text": "glances (pip)",
+        "variant": "secondary"
+      }
+    },
+    "glances_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.4–7.8",
+        "variant": "destructive"
+      }
+    },
+    "glances_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Insecure pickle deserialization (RCE), command injection via KVM/QEMU VM domain names, CORS wildcard fallback.",
+        "variant": "body"
+      }
+    },
+    "glances_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ if running glances, upgrade to ≥4.5.5.",
+        "variant": "caption"
+      }
+    },
+    "motioneye_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "motioneye_link",
+        "motioneye_meta",
+        "motioneye_desc",
+        "motioneye_action"
+      ]
+    },
+    "motioneye_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-46488 — motioneye",
+        "href": "https://github.com/advisories/GHSA-r3cw-c95m-wfh9",
+        "source": "pip"
+      }
+    },
+    "motioneye_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "motioneye_severity",
+        "motioneye_cvss",
+        "motioneye_kev"
+      ]
+    },
+    "motioneye_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "critical",
+        "variant": "destructive"
+      }
+    },
+    "motioneye_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS n/a",
+        "variant": "secondary"
+      }
+    },
+    "motioneye_kev": {
+      "type": "Badge",
+      "props": {
+        "text": "no kev",
+        "variant": "secondary"
+      }
+    },
+    "motioneye_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Authentication possible via password hash (auth bypass).",
+        "variant": "body"
+      }
+    },
+    "motioneye_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade motioneye to ≥0.44.0.",
+        "variant": "caption"
+      }
+    }
+  }
+}
