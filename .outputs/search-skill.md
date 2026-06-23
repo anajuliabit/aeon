@@ -1,14 +1,15 @@
-*Search Skills — 2026-06-22*
-Gap: vuln-scanner failing 7% (29 runs) — ISS-018 open, semgrep/trufflehog binaries blocked in sandbox.
+## Summary
 
-Candidates (not auto-installed — all UNTRUSTED sources):
-- **vulnerability-scanner** — davila7/claude-code-templates (gap-fit 5/5, sum 19/20, UNTRUSTED) — pure-python OWASP 2025 + supply-chain checklist scanner, no binary deps. Sidesteps ISS-018.
-- **security-audit** — davila7/claude-code-templates (gap-fit 4/5, sum 17/20, UNTRUSTED) — workflow bundle: recon → vuln-assess → pentest → harden. Heavier than current vuln-scanner.
-- **code-security** — semgrep/skills (gap-fit 3/5, sum 15/20, UNTRUSTED) — secure-coding rules across 15+ langs, prompt-only, no semgrep binary needed. Different scope (write-time rules vs scan-time).
+**search-skill executed → exit mode: SEARCH_SKILL_EMPTY (silent, log-only).**
 
-Manual install (after review):
-```
-./add-skill davila7/claude-code-templates vulnerability-scanner
-```
-
-Sources: npx=ok vercel=0 anthropics=0 bankr=2(both dupes) skills.sh=ok
+- **Query derivation:** `llm cost`, source = `memory/cron-state.json` (cost-report cf=23, sr=0.12, ISS-025 critical sandbox-truncation widening to cf=18 this morning).
+- **Catalogs:** `npx skills find` returned 5 hits (ok); `./add-skill --list` sandbox-blocked for vercel-labs / anthropics / BankrBot; skills.sh JS-rendered (npx covers the same surface).
+- **Hard-gate eval:** All 5 candidates dropped.
+  - `posthog/skills@exploring-llm-costs` + `posthog/ai-plugin@exploring-llm-costs` — gate 2 fail (require PostHog instrumentation with `$ai_generation`/`$ai_embedding` events; we don't have PostHog).
+  - `bagelhole/devops-security-agent-skills@llm-cost-optimization` — gate 1 fail (Python/LiteLLM optimization playbook, not an executable cron-style cost reporter).
+  - `simota/agent-skills@oracle` — gate 1 fail (AI/ML design playbook, not a cost reporter).
+  - `avelikiy/great_cto@cost-model` — gates 1+2 fail (project-locked to great_cto board's `/api/cost`).
+- **Diagnosis:** cost-report's failure is sandbox-truncation (ISS-025), not a capability gap — external swap won't help. Root cause work belongs on ISS-025.
+- **Files modified:** `memory/logs/2026-06-23.md` (appended search-skill block per skill spec).
+- **No notification sent** (correct per spec: silence on EMPTY prevents training operator to ignore the channel).
+- **No PR / no install** (correct per spec: install only on OK_INSTALLED).
