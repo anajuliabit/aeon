@@ -1,0 +1,245 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-06-23"
+      },
+      "children": [
+        "text-shape",
+        "separator-1",
+        "stack-actions",
+        "separator-2",
+        "text-sources"
+      ]
+    },
+    "text-shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: root-cause ISS-025, stage NEWT pre-cliff short, kill EIGEN pick, seed defi pools, refresh skill-analytics"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-title",
+        "a1-why",
+        "a1-done",
+        "a1-loop"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. open probe PR against ISS-025 — instrument cost-report output_tokens=0 path on the claude-sonnet-4-6 dispatch leg",
+        "level": "h3"
+      }
+    },
+    "a1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: cf=23 today (was 17 last night), same signature as ISS-019/020/021/022/024 — 22 skills sr<0.5 roll up here"
+      }
+    },
+    "a1-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: branch iss-025-probe pushed, PR linked from memory/issues/ISS-025.md, instruments at least one failing leg"
+      }
+    },
+    "a1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-rootcause"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-title",
+        "a2-why",
+        "a2-done",
+        "a2-loop"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. stage NEWT pre-cliff short to .pending-picks/2026-06-23-newt-short.json",
+        "level": "h3"
+      }
+    },
+    "a2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 139.58M tokens = 64.9% circ supply unlock 6-24, $11M mcap roughly doubles tomorrow per unlock-monitor"
+      }
+    },
+    "a2-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: pick json on disk with side=short / entry / invalidation, postprocess-picks.sh picks it up next run"
+      }
+    },
+    "a2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: newt-unlock-cliff"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-title",
+        "a3-why",
+        "a3-done",
+        "a3-loop"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. kill .pending-picks/2026-06-22-token-pick.json EIGEN — invalidation tripped",
+        "level": "h3"
+      }
+    },
+    "a3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 13:12Z -17% leg puts spot ~$0.253, under the $0.26 invalidation rail set at yesterday's $0.305 entry"
+      }
+    },
+    "a3-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: pick file marked status:invalidated, exit recorded in memory/logs/2026-06-23.md"
+      }
+    },
+    "a3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: eigen-pick-reversal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-title",
+        "a4-why",
+        "a4-done",
+        "a4-loop"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. populate type:pool entries in memory/on-chain-watches.yml — Aave V3 USDC Base + Aerodrome USDC-AERO LP + Moonwell WELL market",
+        "level": "h3"
+      }
+    },
+    "a4-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: defi-monitor 16 days NO_CONFIG, only type:wallet entries exist, blocks contract-state queries entirely"
+      }
+    },
+    "a4-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: yml has ≥3 type:pool blocks with abi field, defi-monitor exits OK on next cron tick"
+      }
+    },
+    "a4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: defi-monitor-config"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-title",
+        "a5-why",
+        "a5-done",
+        "a5-loop"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. trigger skill-analytics via gh workflow run aeon.yml -f skill=skill-analytics",
+        "level": "h3"
+      }
+    },
+    "a5-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: articles/skill-analytics-*.md at 312h/13d, operator-scorecard FRESHNESS_WARN clock 42/168h, escalates 2026-06-28"
+      }
+    },
+    "a5-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: fresh articles/skill-analytics-2026-06-23.md written, skill-freshness fingerprint flips"
+      }
+    },
+    "a5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: skill-analytics-stale"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=60 lines logs=7 days topics=11 files prs=0 cron_failing=1 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
