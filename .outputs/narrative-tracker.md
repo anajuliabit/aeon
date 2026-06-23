@@ -1,39 +1,38 @@
-*Narrative Tracker — 2026-06-22*
+*Narrative Tracker — 2026-06-23*
 
 TRANSITIONS
-• NEW: Hyperliquid + onchain perps — explicit anchor w/ 3 ETFs + revenue leadership (@0xLuciferNox snapshot)
-• NEW: P2P restaked security mesh (Canopy, @CNPYNetwork) — emerging contrarian to monolithic L1s
-• NEW: AI coding agents + MCP/tooling — practical dev-tooling momentum (@Mars_DeFi multi-example)
-• NEW: Ownership tokens vs. points programs — user-alignment narrative shift (@nftboi_ on @AviciMoney flywheel)
-• NEW: Hardware moats in AI era — contrarian: software commoditized, hardware durable (@signulll/@lennysan)
-• PROMOTED: Stablecoins as rails velocity → to ↑ — $311B mcap (+50% vs 2025 start), x402 480k agents/$50M cumulative, MetaMask AI-agent wallet shipped
-• DEMOTED: Onchain AI agents × compute ↑↑ to → — peak holding, no acceleration
-• DEMOTED: Meme 3.0 Peak → Fading — losing relative steam confirmed
-• DEAD: Sovereign AI chains, Privacy tech governance, AI agent accountability, Altseason rotation (rotation "basically disappeared" per @0xLuciferNox + BTC dominance 58%)
+• NEW: us pro-crypto policy codified ("Bitcoin built in America") — @CheekyCrypto framing it as permanent paradigm shift, institutional momentum stacking on top of Q4 ETF expansion — https://x.com/CheekyCrypto/status/2069204033806758397
+• NEW: AI-displaces-crypto attention meta — @LumixWeb3 "Google Trends doesn't lie" thesis; 9 of 12 threads today are AI-side, only 3 crypto-direct — https://x.com/LumixWeb3/status/2068352215765418203
+• NEW: AI capex rationing (contrarian) — Tencent rationing tokens, Uber burned 2026 AI coding budget in 4mo per @poezhao0605 — first crack in "infinite AI spend" consensus — https://x.com/poezhao0605/status/2069205969641644507
+• NEW: BTC + AI synergy as canonical BTC-maxi framing — agents + optimized mining
+• NEW: Chinese AI > US in real usage (DeepSeek V4) — contrarian to US-dominance assumption
+• PROMOTED: DePIN/GPU compute Rising → Peak — explicit "GitHub AI commits 14x" with named tokens IO/TAO/AKT (@amirsrtp)
+• DEMOTED: AI Agents × RWA Peak → Rising — no explicit "agents buying RWA" thread today, narrative quieted vs 6-22 5↑
+• DEMOTED: Ownership tokens vs points FRONT-RUN → WATCH — absent from cache + supplements, builder traction not visible
+• DEAD: L1 vs AI Token Competition — silence across XAI + WebSearch (was 3 → Cope/FADE 6-22)
+• DEAD: Meme 3.0 — confirmed gone, 0 survivors
 
 REFLEXIVITY ALERT
-• Hyperliquid/perps: 3-ETF narrative loud, but HYPE −3.9% 24h (6-21 movers) — story not converting to price
-• AI agents × RWA: still zero autonomous wallets deployed (6-21 flag valid); @VexaWeb3 thesis runs ahead of fundamentals
-• Stablecoins flipping the other way — x402 + $311B make this less reflexive; fundamentals catching the story
-• Structural: Kaito killed Yapper leaderboard Jan-15 (X API revoked); mindshare attribution now Attention Markets (Polymarket joint) — measurement layer itself shifting
+• AI-displaces-crypto attention — Google Trends framing IS the reflexive trade; if traders believe AI "won," they rotate into AI-token proxies (TAO/IO/AKT), reinforcing the rotation. story moving outcomes directly.
+• "Bitcoin built in America" — pure policy *framing* as catalyst, no specific bill or EO cited in the cache. narrative is the catalyst; watch for actual text vs vibes.
+• AI capex rationing — INVERSE reflexivity. Tencent + Uber are real fundamentals catching up to AI-infra story. if it gathers steam, bear thesis for compute tokens (TAO/IO/AKT) — same flavor as 6-22 stablecoin-x402 inverse flag.
 
 POSITIONS
-• FRONT-RUN: P2P security mesh (2 ↑↑ Bull) — @CNPYNetwork "BitTorrent moment" — bear: never compounds past niche
-• FRONT-RUN: Ownership tokens vs points (3 ↑ Bull) — @AviciMoney flywheel — bear: builders default to points for liquidity
-• RIDE: Hyperliquid/perps (5 ↑↑ Bull) — @0xLuciferNox, 3 ETFs — bear: HYPE price not following the snapshot
-• RIDE: Stablecoins as rails (5 ↑ Bull) — x402, MetaMask, Visa/Stripe/Anthropic at foundation — bear: OFAC overhang
-• RIDE: RWA/tokenization (5 ↑ Bull) — BlackRock, FT, a16zcrypto — bear: 3-5y execution lag on $20T forecasts
-• RIDE: AI agents × RWA (5 ↑ Bull) — @VexaWeb3 thesis — bear: autonomous-wallet vapor
-• RIDE: Performance L1s (SOL/SUI/NEAR/INJ) (4 ↑ Bull) — @FrankLambeek "new meta loading" — bear: cyclical, not structural
-• WATCH: AI coding agents + MCP (3 ↑ Bull) — dev-tooling utility, no token thesis yet
-• WATCH: Hardware moats (3 → Mixed) — contrarian, Snap/Spiegel framing doesn't crypto-translate
-• WATCH: Embodied AI / energy & raw materials (2 ↑ Bull) — @RationalAvocado — copper/uranium-for-robots tail
-• FADE: L1 vs AI token competition (3 → Cope) — narrative war, not fundamentals
-• IGNORE: Meme 3.0 (2 ↓ Cope) — zero revenue survivors; breadth failing
+• FRONT-RUN: P2P security mesh / Canopy (MS 2 ↑ Bull) — @CNPYNetwork "chains in minutes" builder thread carry-over — bear: niche, never compounds
+• RIDE: DePIN/GPU compute IO/TAO/AKT (MS 5 ↑↑ Bull) — @amirsrtp GitHub-14x signal — bear: 14x metric possibly cherry-picked, commoditization risk
+• RIDE: AI Agents × Compute / DeAI (MS 5 → Bull) — Bittensor/TAO canonical — bear: incentive misalignment unchanged from 6-22
+• RIDE: Stablecoins as rails (MS 4 → Bull, WebSearch supplement) — x402 still scaling; 480k agents/$50M cumulative per Coindesk 6-11 — bear: OFAC/reg
+• RIDE: RWA + on-chain trading (MS 4 ↑ Bull) — @_Pretty_Miraa "strongest institutional" — bear: 3-5y execution lag on $20T forecasts
+• RIDE: US pro-crypto policy "Bitcoin built in America" (MS 4 ↑↑ Bull) — policy momentum real — bear: codification language outpaces actual legislation
+• RIDE: BTC + AI synergy (MS 3 ↑ Bull) — BTC-maxi merging with AI thesis — bear: "AI prints money while you sleep" is cope-adjacent
+• WATCH: AI-displaces-crypto meta (MS 4 ↑ Mixed) — not directly playable but informs rotation
+• WATCH: AI capex rationing (MS 3 ↑ Bear-contrarian) — 1 thread today, needs corroboration before sizing short
+• WATCH: Chinese AI > US (MS 3 ↑ Mixed) — most Chinese AI tokens not tradeable
+• WATCH: Embodied AI/robotics/materials (MS 2 ↑ Bull) — long-tail thesis, copper/uranium-for-robots
 
 MAP
-Emerging: P2P security mesh, ownership tokens, embodied AI/energy
-Rising: Performance L1s, AI infra, BTC L2s + DePIN, AI coding agents/MCP, hardware moats, L1-vs-AI wars
-Peak: AI agents × RWA, onchain AI agents × compute, Hyperliquid/perps, stablecoins, RWA mega
-Fading: Meme 3.0
-Dead: Sovereign AI chains, privacy tech governance, AI agent accountability, altseason rotation
+Emerging: P2P security mesh, AI capex rationing, Chinese AI > US, embodied AI
+Rising: US pro-crypto policy, BTC+AI synergy, AI-displaces-crypto meta
+Peak: DePIN/compute, AI agents/compute, RWA, stablecoins
+Fading: AI agents × RWA (demoted from Peak)
+Dead: L1 vs AI wars, Meme 3.0

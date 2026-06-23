@@ -1,0 +1,852 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-23"
+      },
+      "children": [
+        "section-transitions",
+        "sep1",
+        "section-reflexivity",
+        "sep2",
+        "section-positions",
+        "sep3",
+        "section-map"
+      ]
+    },
+    "section-transitions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-transitions",
+        "trans-item-1",
+        "trans-item-2",
+        "trans-item-3",
+        "trans-item-4",
+        "trans-item-5",
+        "trans-item-6",
+        "trans-item-7",
+        "trans-item-8",
+        "trans-item-9",
+        "trans-item-10"
+      ]
+    },
+    "heading-transitions": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "trans-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-1-badge",
+        "trans-1-link"
+      ]
+    },
+    "trans-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "trans-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "us pro-crypto policy codified (\"Bitcoin built in America\") — @CheekyCrypto framing it as permanent paradigm shift, institutional momentum stacking on top of Q4 ETF expansion",
+        "href": "https://x.com/CheekyCrypto/status/2069204033806758397",
+        "source": "X"
+      },
+      "children": []
+    },
+    "trans-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-2-badge",
+        "trans-2-link"
+      ]
+    },
+    "trans-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "trans-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AI-displaces-crypto attention meta — @LumixWeb3 \"Google Trends doesn't lie\" thesis; 9 of 12 threads today are AI-side, only 3 crypto-direct",
+        "href": "https://x.com/LumixWeb3/status/2068352215765418203",
+        "source": "X"
+      },
+      "children": []
+    },
+    "trans-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-3-badge",
+        "trans-3-link"
+      ]
+    },
+    "trans-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "trans-3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AI capex rationing (contrarian) — Tencent rationing tokens, Uber burned 2026 AI coding budget in 4mo per @poezhao0605 — first crack in \"infinite AI spend\" consensus",
+        "href": "https://x.com/poezhao0605/status/2069205969641644507",
+        "source": "X"
+      },
+      "children": []
+    },
+    "trans-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-4-badge",
+        "trans-4-text"
+      ]
+    },
+    "trans-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "trans-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC + AI synergy as canonical BTC-maxi framing — agents + optimized mining"
+      },
+      "children": []
+    },
+    "trans-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-5-badge",
+        "trans-5-text"
+      ]
+    },
+    "trans-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "trans-5-text": {
+      "type": "Text",
+      "props": {
+        "text": "Chinese AI > US in real usage (DeepSeek V4) — contrarian to US-dominance assumption"
+      },
+      "children": []
+    },
+    "trans-item-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-6-badge",
+        "trans-6-text"
+      ]
+    },
+    "trans-6-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PROMOTED",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "trans-6-text": {
+      "type": "Text",
+      "props": {
+        "text": "DePIN/GPU compute Rising → Peak — explicit \"GitHub AI commits 14x\" with named tokens IO/TAO/AKT (@amirsrtp)"
+      },
+      "children": []
+    },
+    "trans-item-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-7-badge",
+        "trans-7-text"
+      ]
+    },
+    "trans-7-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEMOTED",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "trans-7-text": {
+      "type": "Text",
+      "props": {
+        "text": "AI Agents × RWA Peak → Rising — no explicit \"agents buying RWA\" thread today, narrative quieted vs 6-22 5↑"
+      },
+      "children": []
+    },
+    "trans-item-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-8-badge",
+        "trans-8-text"
+      ]
+    },
+    "trans-8-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEMOTED",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "trans-8-text": {
+      "type": "Text",
+      "props": {
+        "text": "Ownership tokens vs points FRONT-RUN → WATCH — absent from cache + supplements, builder traction not visible"
+      },
+      "children": []
+    },
+    "trans-item-9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-9-badge",
+        "trans-9-text"
+      ]
+    },
+    "trans-9-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEAD",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "trans-9-text": {
+      "type": "Text",
+      "props": {
+        "text": "L1 vs AI Token Competition — silence across XAI + WebSearch (was 3 → Cope/FADE 6-22)"
+      },
+      "children": []
+    },
+    "trans-item-10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans-10-badge",
+        "trans-10-text"
+      ]
+    },
+    "trans-10-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEAD",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "trans-10-text": {
+      "type": "Text",
+      "props": {
+        "text": "Meme 3.0 — confirmed gone, 0 survivors"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-reflexivity": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-reflexivity",
+        "reflex-item-1",
+        "reflex-item-2",
+        "reflex-item-3"
+      ]
+    },
+    "heading-reflexivity": {
+      "type": "Heading",
+      "props": {
+        "text": "REFLEXIVITY ALERT",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "reflex-item-1": {
+      "type": "Alert",
+      "props": {
+        "title": "AI-displaces-crypto attention",
+        "message": "Google Trends framing IS the reflexive trade; if traders believe AI \"won,\" they rotate into AI-token proxies (TAO/IO/AKT), reinforcing the rotation. story moving outcomes directly.",
+        "type": "info"
+      },
+      "children": []
+    },
+    "reflex-item-2": {
+      "type": "Alert",
+      "props": {
+        "title": "Bitcoin built in America",
+        "message": "Pure policy framing as catalyst, no specific bill or EO cited in the cache. narrative is the catalyst; watch for actual text vs vibes.",
+        "type": "info"
+      },
+      "children": []
+    },
+    "reflex-item-3": {
+      "type": "Alert",
+      "props": {
+        "title": "AI capex rationing",
+        "message": "INVERSE reflexivity. Tencent + Uber are real fundamentals catching up to AI-infra story. if it gathers steam, bear thesis for compute tokens (TAO/IO/AKT) — same flavor as 6-22 stablecoin-x402 inverse flag.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-positions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-positions",
+        "pos-item-1",
+        "pos-item-2",
+        "pos-item-3",
+        "pos-item-4",
+        "pos-item-5",
+        "pos-item-6",
+        "pos-item-7",
+        "pos-item-8",
+        "pos-item-9",
+        "pos-item-10",
+        "pos-item-11"
+      ]
+    },
+    "heading-positions": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "pos-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-1-badge",
+        "pos-1-text"
+      ]
+    },
+    "pos-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FRONT-RUN",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "pos-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "P2P security mesh / Canopy (MS 2 ↑ Bull) — @CNPYNetwork \"chains in minutes\" builder thread carry-over — bear: niche, never compounds"
+      },
+      "children": []
+    },
+    "pos-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-2-badge",
+        "pos-2-text"
+      ]
+    },
+    "pos-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "pos-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "DePIN/GPU compute IO/TAO/AKT (MS 5 ↑↑ Bull) — @amirsrtp GitHub-14x signal — bear: 14x metric possibly cherry-picked, commoditization risk"
+      },
+      "children": []
+    },
+    "pos-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-3-badge",
+        "pos-3-text"
+      ]
+    },
+    "pos-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "pos-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "AI Agents × Compute / DeAI (MS 5 → Bull) — Bittensor/TAO canonical — bear: incentive misalignment unchanged from 6-22"
+      },
+      "children": []
+    },
+    "pos-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-4-badge",
+        "pos-4-text"
+      ]
+    },
+    "pos-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "pos-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "Stablecoins as rails (MS 4 → Bull, WebSearch supplement) — x402 still scaling; 480k agents/$50M cumulative per Coindesk 6-11 — bear: OFAC/reg"
+      },
+      "children": []
+    },
+    "pos-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-5-badge",
+        "pos-5-text"
+      ]
+    },
+    "pos-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "pos-5-text": {
+      "type": "Text",
+      "props": {
+        "text": "RWA + on-chain trading (MS 4 ↑ Bull) — @_Pretty_Miraa \"strongest institutional\" — bear: 3-5y execution lag on $20T forecasts"
+      },
+      "children": []
+    },
+    "pos-item-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-6-badge",
+        "pos-6-text"
+      ]
+    },
+    "pos-6-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "pos-6-text": {
+      "type": "Text",
+      "props": {
+        "text": "US pro-crypto policy \"Bitcoin built in America\" (MS 4 ↑↑ Bull) — policy momentum real — bear: codification language outpaces actual legislation"
+      },
+      "children": []
+    },
+    "pos-item-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-7-badge",
+        "pos-7-text"
+      ]
+    },
+    "pos-7-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "pos-7-text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC + AI synergy (MS 3 ↑ Bull) — BTC-maxi merging with AI thesis — bear: \"AI prints money while you sleep\" is cope-adjacent"
+      },
+      "children": []
+    },
+    "pos-item-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-8-badge",
+        "pos-8-text"
+      ]
+    },
+    "pos-8-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "pos-8-text": {
+      "type": "Text",
+      "props": {
+        "text": "AI-displaces-crypto meta (MS 4 ↑ Mixed) — not directly playable but informs rotation"
+      },
+      "children": []
+    },
+    "pos-item-9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-9-badge",
+        "pos-9-text"
+      ]
+    },
+    "pos-9-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "pos-9-text": {
+      "type": "Text",
+      "props": {
+        "text": "AI capex rationing (MS 3 ↑ Bear-contrarian) — 1 thread today, needs corroboration before sizing short"
+      },
+      "children": []
+    },
+    "pos-item-10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-10-badge",
+        "pos-10-text"
+      ]
+    },
+    "pos-10-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "pos-10-text": {
+      "type": "Text",
+      "props": {
+        "text": "Chinese AI > US (MS 3 ↑ Mixed) — most Chinese AI tokens not tradeable"
+      },
+      "children": []
+    },
+    "pos-item-11": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-11-badge",
+        "pos-11-text"
+      ]
+    },
+    "pos-11-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "pos-11-text": {
+      "type": "Text",
+      "props": {
+        "text": "Embodied AI/robotics/materials (MS 2 ↑ Bull) — long-tail thesis, copper/uranium-for-robots"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-map": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-map",
+        "map-emerging",
+        "map-rising",
+        "map-peak",
+        "map-fading",
+        "map-dead"
+      ]
+    },
+    "heading-map": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "map-emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-emerging-label",
+        "map-emerging-text"
+      ]
+    },
+    "map-emerging-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Emerging",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "map-emerging-text": {
+      "type": "Text",
+      "props": {
+        "text": "P2P security mesh, AI capex rationing, Chinese AI > US, embodied AI"
+      },
+      "children": []
+    },
+    "map-rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-rising-label",
+        "map-rising-text"
+      ]
+    },
+    "map-rising-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Rising",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "map-rising-text": {
+      "type": "Text",
+      "props": {
+        "text": "US pro-crypto policy, BTC+AI synergy, AI-displaces-crypto meta"
+      },
+      "children": []
+    },
+    "map-peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-peak-label",
+        "map-peak-text"
+      ]
+    },
+    "map-peak-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Peak",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "map-peak-text": {
+      "type": "Text",
+      "props": {
+        "text": "DePIN/compute, AI agents/compute, RWA, stablecoins"
+      },
+      "children": []
+    },
+    "map-fading": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-fading-label",
+        "map-fading-text"
+      ]
+    },
+    "map-fading-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Fading",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "map-fading-text": {
+      "type": "Text",
+      "props": {
+        "text": "AI agents × RWA (demoted from Peak)"
+      },
+      "children": []
+    },
+    "map-dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-dead-label",
+        "map-dead-text"
+      ]
+    },
+    "map-dead-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Dead",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "map-dead-text": {
+      "type": "Text",
+      "props": {
+        "text": "L1 vs AI wars, Meme 3.0"
+      },
+      "children": []
+    }
+  }
+}
