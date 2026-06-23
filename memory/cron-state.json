@@ -307,8 +307,8 @@
     "success_rate": 1
   },
   "cost-report": {
-    "last_dispatch": "2026-06-23T18:35:54Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-23T19:31:18Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-15T07:45:56Z",
     "total_runs": 32,
     "total_successes": 3,
