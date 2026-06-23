@@ -1,1 +1,1 @@
-self-improve: dropped disabled monitor-polymarket entry from skill-evals/evals.json (ISS-022) — PR: https://github.com/anajuliabit/aeon/pull/130
+self-improve: aligned goal-tracker SKILL.md headers with MEMORY.md (## Current Goals + ## Recently Cleared) — PR: https://github.com/anajuliabit/aeon/pull/138

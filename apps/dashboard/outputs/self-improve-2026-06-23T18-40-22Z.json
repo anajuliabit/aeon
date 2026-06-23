@@ -1,0 +1,25 @@
+{
+  "root": "card_1",
+  "state": {},
+  "elements": {
+    "card_1": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve",
+        "description": "Aligned goal-tracker SKILL.md headers with MEMORY.md (## Current Goals + ## Recently Cleared)"
+      },
+      "children": [
+        "link_1"
+      ]
+    },
+    "link_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #138",
+        "href": "https://github.com/anajuliabit/aeon/pull/138",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
