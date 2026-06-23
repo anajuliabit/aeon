@@ -1,0 +1,271 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-23"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-focus",
+        "sep-1",
+        "section-since",
+        "sep-2",
+        "section-running"
+      ]
+    },
+    "section-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-stat",
+        "focus-1-text"
+      ]
+    },
+    "focus-1-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "cost-report cf",
+        "value": "17"
+      },
+      "children": []
+    },
+    "focus-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 17th fail at 06:18z, ISS-025 widening sandbox-truncation",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-badge",
+        "focus-2-text"
+      ]
+    },
+    "focus-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEWT unlock cliff 6-24",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "focus-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 64.9% of circ supply hits tomorrow on $11m mcap",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-text"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "operator on-chain config",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "focus-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 5-wallet seed stagnant 48h, 0 events kept yesterday",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-since",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report cf 7 → 17 overnight (4 more fails, ISS-025 filed by skill-health 19:08z)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review: 22.1% sr week, −61pp wow, sandbox-truncation owns the regression",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow recovered after 14d stuck (8 deals, baseten $1.5b series e top)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "0 open PRs, 14 open issues per evening-recap 6-22",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt pulse 21:00z: ethlabs launch, 21shares hyperliquid etf options, glassnode altseason signal",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-running",
+        "running-item-1",
+        "running-item-2",
+        "running-item-3",
+        "running-item-4",
+        "running-item-5"
+      ]
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "running-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine 07:00z, thought-review 07/21z, skill-freshness 08:00z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat 08/14/20z, fleet-control 09/15z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "12:00z cluster: token-alert, movers, on-chain, defi-overview, token-pick",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker 13:30z, search-skill + security-digest 14:00z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap 21:00z",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
