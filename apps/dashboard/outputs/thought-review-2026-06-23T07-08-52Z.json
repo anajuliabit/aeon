@@ -1,0 +1,133 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review",
+        "description": "last 24h"
+      },
+      "children": [
+        "metrics_stack",
+        "separator_1",
+        "notes_section",
+        "separator_2",
+        "actions_section"
+      ]
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_capture",
+        "stat_aligned",
+        "stat_drift"
+      ]
+    },
+    "stat_capture": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "1"
+      },
+      "children": []
+    },
+    "stat_aligned": {
+      "type": "Stat",
+      "props": {
+        "label": "Aligned",
+        "value": "1"
+      },
+      "children": []
+    },
+    "stat_drift": {
+      "type": "Stat",
+      "props": {
+        "label": "Drift",
+        "value": "0"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "notes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note_heading",
+        "note_text"
+      ]
+    },
+    "note_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "note_text": {
+      "type": "Text",
+      "props": {
+        "text": "Same reppo-content note from yesterday — still sitting in vault/inbox/, not archived.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "actions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions_heading",
+        "action_draft",
+        "action_kill_frame"
+      ]
+    },
+    "actions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action_draft": {
+      "type": "Text",
+      "props": {
+        "text": "Draft it receipts-first (pod / artifact / epoch)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "action_kill_frame": {
+      "type": "Text",
+      "props": {
+        "text": "Kill the 'building is something you love' frame before it lands",
+        "variant": "lead"
+      },
+      "children": []
+    }
+  }
+}

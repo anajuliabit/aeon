@@ -1,3 +1,1 @@
-🧭 thought review · last 24h · 1 capture
-1 aligned with priorities, 0 drift signals.
-reppo content idea sitting in the inbox — draft it receipts-first, kill the "building you love" frame before it lands inspirational.
+thought review · last 24h · 1 capture, 1 aligned, 0 drift. same reppo-content note from yesterday — still sitting in vault/inbox/, not archived. draft it receipts-first (pod / artifact / epoch); kill the 'building is something you love' frame before it lands.
