@@ -1,10 +1,19 @@
-Heartbeat complete. Summary follows.
+Heartbeat complete. All P0 conditions dedup-blocked vs this morning's heartbeat + morning-brief, so no notification fired.
 
 ## Summary
 
-- **Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`. The only NEW P0 signal is `cost-report` cf escalating 17→18 (fresh 07:35Z fail) — same ISS-025 sandbox-truncation root cause that today's 07:07Z morning-brief and 6-22 20:16Z heartbeat both already covered, so dedup blocked the notification.
-- **Status page regenerated:** `docs/status.md` — 44 enabled-skill rows sorted last-run desc, cost-report bumped to ❌ failed cf=18 sr=14% at top, btc-levels/daily-routine/morning-brief/thought-review timestamps rolled to today, evening-recap/aixbt-pulse refreshed from last night, 14 open issues, 3 never-run at bottom, Token pulse section omitted (no `articles/token-report-*.md` on disk). Next scheduled: aixbt-pulse 09:00Z.
-- **P0 self-check:** heartbeat last_success ~12h ago — healthy. No stuck-dispatched skills. Chronic-failure tail (22 skills sr<0.5) carried.
-- **P1:** 0 open PRs, 0 urgent issues.
-- **Files touched:** `docs/status.md`, `memory/logs/2026-06-23.md` (appended heartbeat block).
-- **Follow-up:** ISS-025 still widening (cf=18) — same systemic sandbox-truncation root cause as ISS-019/020/021/024; durable fix is a fleet-level concern, not heartbeat's to solve. A stray `.tmp-extract-enabled.py` was created in the repo root during research; it is gitignored (`.tmp-*`) so won't be committed.
+**Verdict:** HEARTBEAT_OK · STATUS_PAGE=DEGRADED
+
+**Findings:**
+- **cost-report cf=18→23** (5 more failures in the 13:10Z batch wave, same `outputTokens=12` sandbox-truncation signature — ISS-025 widening but no fresh root cause). Dedup-blocked vs 08:24Z heartbeat + 07:07Z morning-brief.
+- No stuck-dispatched skills (>45min mid-flight).
+- Chronic-failure tail unchanged (22 skills sr<0.5, all output_tokens=0 family).
+- 0 open PRs, 0 urgent issues.
+- Self-check: heartbeat last_success 5.6h ago, ✅ under threshold.
+- Positive delta: full 13:10Z afternoon batch landed clean (defi-overview / token-pick / token-alert / token-movers / btc-levels / defi-monitor / market-context-refresh / on-chain-monitor all green); token-alert fired first GITLAWB -15.63% rail-break since 6-19; on-chain-monitor surfaced W3 address-poisoning attack.
+
+**Notification:** skipped (all P0 conditions covered by morning logs within 48h).
+
+**Files modified:**
+- `docs/status.md` — refreshed (Updated 14:05 UTC, cost-report row → ❌ 13:38 / 12% / cf=23, 13:10Z batch timestamps current, open-issues count 14 unchanged, token-pulse omitted per spec — no `articles/token-report-*.md` on disk).
+- `memory/logs/2026-06-23.md` — appended afternoon heartbeat entry.
