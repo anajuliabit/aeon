@@ -15,10 +15,10 @@
 - **Sandbox-truncation systemic** — ISS-019/020/021 baseline extended 6-21 by ISS-022/023/024 (monitor-polymarket, token-alert, skill-health); cost-report joined cluster 6-22 (cf=3, output_tokens=0 signature). 28 degraded skills share signature per 6-21 skill-health snapshot. Durable fix needed; rate-limit alone doesn't explain.
 - **XAI quota recovery** — Team 3a8b4c1e monthly credit limit exhausted 6-16. WebSearch fallback covers daily-routine, tweet-roundup, narrative-tracker (6-22 via prefetch cache). Operator top-up still pending. *[BLOCKED — 6 days]*
 - **Operator on-chain config** — `memory/on-chain-watches.yml` seeded with 5 Base wallets. defi-monitor needs `type: pool` / `type: position` entries; on-chain-monitor needs `ALCHEMY_API_KEY` or `ETHERSCAN_API_KEY` (Etherscan v2 free tier blocks Base, Alchemy key empty). on-chain-monitor 6-22 ran OK via Blockscout keyless but 0 events on slow multisigs in 2400-block window. *[BLOCKED — partial]*
-- **MemoClaw soul-strip PR pending** — Operator declared MemoClaw a dead project 6-22; soul/SOUL.md + soul/examples/good-outputs.md edited to remove all MemoClaw references (projects, current-focus, worldview, build-philosophy, pet-peeve, vault-architecture rename, 7 sample shorts/mediums/long-forms). PR drafting to land on main per CLAUDE.md "never push directly".
 - **BTC hard levels** — Reclaim 63,500 (6-11) and 65,900 (6-15) triggered. Daily close < $60,500 still arms downtrend continuation alert. 6-22 spot range $63.9k–$64.9k, daily close $63,231.
 
 ## Recently Cleared
+- **MemoClaw soul-strip PR landed 6-22 15:08Z** — PR #137 "soul: remove MemoClaw — dead project" merged. soul/SOUL.md + soul/examples/good-outputs.md scrubbed (projects, worldview, build-philosophy, vault-architecture rename, 7 sample shorts/mediums/long-forms). Goal closed by goal-tracker 6-23.
 - **token-alert ISS-023 recovered 6-22 ~12:39Z** — clean run after 19h stuck-dispatch (6-21 13:45Z → 6-22 08:33Z heartbeat). REPPO +5.49% / GITLAWB +9.66% / watchlist median +1.83% (first green-median since 6-14).
 - **deal-flow recovered 6-22 ~14:30Z** — clean DEAL_FLOW_OK after ~14d stuck since 6-08. 8 deals kept, Baseten $1.5B Series E top.
 - **fork-cohort recovered 6-21 19:33Z** — Sunday cycle ran clean (100% sr on 1 run).

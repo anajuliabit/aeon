@@ -1,22 +1,23 @@
-*Goal Tracker — 2026-06-22*
+*Goal Tracker — 2026-06-23*
 
-Summary: 7 active goals — 0 at risk, 0 needs attention, 4 on track, 3 blocked, 1 done (overall ↑ improving — stuck-skills recovered from BLOCKED)
+Summary: 9 goals — 0 at risk, 0 needs attention, 4 on track, 3 blocked, 2 done (overall → flat, +1 done)
 
 BLOCKED
-• XAI quota recovery — 0d idle, ~14 entries/14d (→ flat, blocked since 6-16)
-  → Action: operator top up Team 3a8b4c1e XAI billing
-• Operator action: on-chain config completion — 0d idle, ~8 entries/14d (new)
-  → Action: operator set ALCHEMY_API_KEY (non-empty) and add pool/position entries to memory/on-chain-watches.yml
-• Operator-gated monitors — 0d idle, ~13 entries/14d (→ flat)
-  → Action: operator set ETHERSCAN_API_KEY for Base, seed defi-monitor pool/position rows
+• XAI quota recovery — waiting on operator top-up since 2026-06-16 (7d). websearch fallback holds.
+  → Action: operator — top up Team 3a8b4c1e xai credits, or formalize websearch fallback as durable
+• Operator action: on-chain config completion — waiting on ALCHEMY_API_KEY / ETHERSCAN_API_KEY (probe 13:25Z: len=0 / null)
+  → Action: operator — set ALCHEMY_API_KEY env to lift on-chain-monitor degraded
+• Operator-gated monitors — defi-monitor 16d NO_CONFIG streak; no type:pool / type:position entries
+  → Action: operator — add type:pool / type:position rows to memory/on-chain-watches.yml
 
 ON TRACK
-• Sandbox-truncation systemic — 0d idle, ~30 entries/14d (new — cost-report joined cluster today, root-cause still open)
-• Stuck skills — 0d idle, ~13 entries/14d (↑ improving from BLOCKED — deal-flow + fork-cohort + token-alert all recovered)
-• skill-freshness FRESHNESS_WARN — 0d idle, ~12 entries/14d (new — fingerprint unchanged since 6-21, re-emit 6-28 if unresolved)
-• BTC hard levels — 0d idle, ~20 entries/14d (→ flat — btc-levels ran 5x today, no breakdown)
+• Sandbox-truncation systemic — 0d idle, ~32 activity/14d (→ flat; ISS-025 widened cf 17→23 today, no durable fix yet)
+• Stuck skills — 0d idle, ~14 activity/14d (→ flat; deal-flow/token-alert/fork-cohort all recovered 6-21/6-22)
+• skill-freshness FRESHNESS_WARN — 0d idle, ~13 activity/14d (→ flat; operator-scorecard articles 312h/13d, re-emit 6-28)
+• BTC hard levels — 0d idle, ~25 activity/14d (→ flat; spot $62.0–64.0k, close 6-22 $63,957, no breakdown)
 
 DONE
-• PR backlog — completed 2026-06-21
+• MemoClaw soul-strip PR pending — completed 2026-06-22 (PR #137 merged 15:08Z)
+• PR backlog — completed 2026-06-21 (still 0 open at today's heartbeats)
 
 Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok(empty), cron-state=ok

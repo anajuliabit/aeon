@@ -1,53 +1,59 @@
 {
-  "run_at": "2026-06-22T19:10:00Z",
+  "run_at": "2026-06-23T17:30:00Z",
   "goals": {
     "sandbox-truncation-systemic": {
       "status": "ON_TRACK",
-      "activity_count_14d": 30,
-      "last_activity_date": "2026-06-22",
-      "note": "cost-report joined ISS-019/020/021/024 cluster today (cf=3, output_tokens=0); 22-24 chronic-failure tail unchanged. Investigation active, no durable fix shipped"
+      "activity_count_14d": 32,
+      "last_activity_date": "2026-06-23",
+      "note": "ISS-025 widening — cost-report cf 17→18→23 today across morning + 13:10Z batch waves; same outputTokens=12 signature. 22-skill chronic-failure tail unchanged. Active investigation, still no durable fix."
     },
     "xai-quota-recovery": {
       "status": "BLOCKED",
       "activity_count_14d": 14,
-      "last_activity_date": "2026-06-22",
-      "note": "Team 3a8b4c1e exhausted since 2026-06-16; WebSearch fallback holding (daily-routine 08:38Z xai=skipped(quota)); no top-up signal from operator"
+      "last_activity_date": "2026-06-23",
+      "note": "Team 3a8b4c1e exhausted since 2026-06-16 (7d). WebSearch fallback covered daily-routine (08:38Z xai=skipped(quota)) + tweet-roundup today. Operator top-up still pending."
     },
     "operator-on-chain-config-completion": {
       "status": "BLOCKED",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-06-22",
-      "note": "on-chain-monitor 12:47Z probed keys: ALCHEMY_API_KEY length=0, ETHERSCAN_API_KEY unset. defi-monitor recovered with empty pool/position list but still NO_CONFIG semantically"
+      "activity_count_14d": 9,
+      "last_activity_date": "2026-06-23",
+      "note": "on-chain-monitor 13:25Z probed keys: ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null, COINGECKO_API_KEY len=0. Blockscout keyless covered today (5/5 watches, 8 events) but Etherscan v2 free tier still blocks Base."
     },
     "stuck-skills": {
       "status": "ON_TRACK",
-      "activity_count_14d": 13,
-      "last_activity_date": "2026-06-22",
-      "note": "deal-flow ran clean today (8 deals kept, DEAL_FLOW_OK), token-alert recovered 12:39Z (ISS-023 closed), fork-cohort recovered 2026-06-21 (Sunday cycle clean). Chronic tail remains but ladders to sandbox-truncation goal"
+      "activity_count_14d": 14,
+      "last_activity_date": "2026-06-23",
+      "note": "deal-flow + token-alert + fork-cohort recoveries banked 6-21/6-22. Chronic 22-skill tail unchanged in today's 08:24Z + 14:05Z heartbeats — rolls up to sandbox-truncation goal."
     },
     "skill-freshness-warn": {
       "status": "ON_TRACK",
-      "activity_count_14d": 12,
-      "last_activity_date": "2026-06-22",
-      "note": "skill-freshness ran today, FRESHNESS_NO_CHANGE (fingerprint d522755e unchanged since 6-21T14:39Z, articles/skill-analytics-*.md 288h/12d old). Next re-emit 2026-06-28 if unresolved"
+      "activity_count_14d": 13,
+      "last_activity_date": "2026-06-23",
+      "note": "FRESHNESS_NO_CHANGE today — operator-scorecard still on stale articles/skill-analytics-*.md (312h/13d old, escalation clock 42h/168h). Re-emit 2026-06-28 if unresolved."
     },
     "btc-hard-levels": {
       "status": "ON_TRACK",
-      "activity_count_14d": 20,
-      "last_activity_date": "2026-06-22",
-      "note": "btc-levels ran 5x today (02:45/04:20/08:33/12:37/16:16Z); spot $64,659 close 6-21 $63,231; both reclaim flags still set, no breakdown triggered"
+      "activity_count_14d": 25,
+      "last_activity_date": "2026-06-23",
+      "note": "btc-levels ran 5x today (00:58/04:21/08:23/13:12/17:07Z); spot range $62.0k–$64.0k, close 6-22 $63,957. Reclaim 63,500/65,900 already alerted. Close > $60,500 — breakdown still armed."
     },
     "operator-gated-monitors": {
       "status": "BLOCKED",
-      "activity_count_14d": 13,
+      "activity_count_14d": 14,
+      "last_activity_date": "2026-06-23",
+      "note": "defi-monitor 16d NO_CONFIG streak today (no type:pool/position entries). on-chain-monitor degraded-but-running on Blockscout keyless. Operator gate unchanged from 6-22."
+    },
+    "memoclaw-soul-strip-pr-pending": {
+      "status": "DONE",
+      "activity_count_14d": 3,
       "last_activity_date": "2026-06-22",
-      "note": "on-chain-monitor running keyless (Blockscout v2) but degraded — 0 events in 2400-block Base window across 5 wallets; defi-monitor still NO_CONFIG (no pool/position entries). Operator gate unchanged from 6-21"
+      "note": "PR #137 merged 2026-06-22T15:08:20Z — \"soul: remove MemoClaw — dead project\". Goal closed."
     },
     "pr-backlog": {
       "status": "DONE",
       "activity_count_14d": 13,
       "last_activity_date": "2026-06-21",
-      "note": "PR #112 + #122 + #127 merged 6-21; no open PRs at 14:37Z heartbeat. Goal closed in Completed Goals section"
+      "note": "Closed previously; 0 open PRs at today's 08:24Z + 14:05Z heartbeats — sustained."
     }
   }
 }

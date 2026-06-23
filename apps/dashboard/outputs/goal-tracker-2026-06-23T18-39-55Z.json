@@ -1,0 +1,247 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-06-23"
+      },
+      "children": [
+        "summary",
+        "sep1",
+        "blocked",
+        "sep2",
+        "on-track",
+        "sep3",
+        "done",
+        "sep4",
+        "sources"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "9 goals — 0 at risk, 0 needs attention, 4 on track, 3 blocked, 2 done (overall → flat, +1 done)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blocked": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-h",
+        "blocked-1",
+        "blocked-2",
+        "blocked-3"
+      ]
+    },
+    "blocked-h": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "blocked-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b1-desc",
+        "b1-action"
+      ]
+    },
+    "b1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota recovery — waiting on operator top-up since 2026-06-16 (7d). websearch fallback holds.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "b1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator — top up Team 3a8b4c1e xai credits, or formalize websearch fallback as durable",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "blocked-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b2-desc",
+        "b2-action"
+      ]
+    },
+    "b2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Operator action: on-chain config completion — waiting on ALCHEMY_API_KEY / ETHERSCAN_API_KEY (probe 13:25Z: len=0 / null)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "b2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator — set ALCHEMY_API_KEY env to lift on-chain-monitor degraded",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "blocked-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b3-desc",
+        "b3-action"
+      ]
+    },
+    "b3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Operator-gated monitors — defi-monitor 16d NO_CONFIG streak; no type:pool / type:position entries",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "b3-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator — add type:pool / type:position rows to memory/on-chain-watches.yml",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "on-track": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ot-h",
+        "ot-1",
+        "ot-2",
+        "ot-3",
+        "ot-4"
+      ]
+    },
+    "ot-h": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "ot-1": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation systemic — 0d idle, ~32 activity/14d (→ flat; ISS-025 widened cf 17→23 today, no durable fix yet)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "ot-2": {
+      "type": "Text",
+      "props": {
+        "text": "Stuck skills — 0d idle, ~14 activity/14d (→ flat; deal-flow/token-alert/fork-cohort all recovered 6-21/6-22)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "ot-3": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness FRESHNESS_WARN — 0d idle, ~13 activity/14d (→ flat; operator-scorecard articles 312h/13d, re-emit 6-28)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "ot-4": {
+      "type": "Text",
+      "props": {
+        "text": "BTC hard levels — 0d idle, ~25 activity/14d (→ flat; spot $62.0–64.0k, close 6-22 $63,957, no breakdown)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "done": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done-h",
+        "done-1",
+        "done-2"
+      ]
+    },
+    "done-h": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "done-1": {
+      "type": "Text",
+      "props": {
+        "text": "MemoClaw soul-strip PR pending — completed 2026-06-22 (PR #137 merged 15:08Z)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "done-2": {
+      "type": "Text",
+      "props": {
+        "text": "PR backlog — completed 2026-06-21 (still 0 open at today's heartbeats)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok(empty), cron-state=ok",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
