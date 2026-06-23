@@ -686,3 +686,78 @@ state: what was built, recurring blockers, and health.
 - **on-chain-monitor / defi-monitor 9 consecutive NO_CONFIG days**
   through 6-14. `memory/on-chain-watches.yml` still absent —
   operator-gated.
+
+## 2026-06-23 fleet deltas
+
+- **Regime flip chop → risk-off (high conviction).** market-context-refresh
+  13:24Z: BTC $62,055 -4.66% 24h, breadth collapsed 13/20 → 3/20 green in
+  one session. Triggers: Korea Kospi -10% circuit breakers, $500M crypto
+  liquidations, Warsh hawkish Fed repricing, JPMorgan $165B Q2-end
+  rebalancing. F&G 23 still lags (doesn't yet capture today's action).
+- **ISS-025 cost-report widening.** cf escalated 6 → 7 (6-22 evening)
+  → 18 (6-23 morning batch) → 23 (6-23 13:10Z batch wave), sr=0.12 (3/26).
+  Same `outputTokens=12` sandbox-truncation variant of ISS-019/020/021/024
+  family. Dedup-blocked across morning-brief 07:07Z + heartbeat 08:24Z +
+  14:05Z — no spam-notify on same-day escalation.
+- **Positive 13:10Z batch wave.** 8 skills green: defi-overview /
+  token-pick / token-alert / token-movers / btc-levels / defi-monitor /
+  market-context-refresh / on-chain-monitor. cost-report sole failure
+  in batch. on-chain-monitor surfaced W3 cyrillic `ÚSDС` mirror attack
+  (1480 fake-units, fires 3 min after legit $1480 USDC W3→W1 transfer;
+  byte-swap clone of W1 address). Operator notified + explainer sent via
+  Telegram.
+- **token-alert 6-23 13:12Z fired GITLAWB -15.63% rail break** — first
+  downside trip since REPPO -15.78% on 6-16. Watchlist median 24h
+  **-11.34%** — first sub-(-10%) median print since canonical watchlist
+  landed. WELL/MAMO/REPPO/GITLAWB all red, consistent with broader
+  risk-off (BTC -4.66%). vol on GITLAWB at 1.26× (real bid on dump,
+  well under 3× capitulation rail).
+- **EIGEN 6-22 HIGH 9/10 pick at invalidation.** -15.3% morning →
+  -17.0% afternoon TRENDING+DOWN. Estimated ~$0.258 vs $0.26 invalidation.
+  One-day reversal of restaking → AI-infra narrative pivot. SSV Network
+  TVL -38.95% 7d confirms restaking sector derisked.
+- **Token pick 6-23 DEXE HIGH 7/10 $22.98** (+28.2% 24h / +23.4% 7d).
+  Only large-cap green on sea-of-red day. DAO-governance rotation —
+  KCEX listing + "Dexelization" framing + $1.7B platform TVL. Score
+  7/10: 24h+1, 7d+1, both>5%+2, RS vs BTC/ETH+2, DEX+1. Risk: 51.5%
+  supply locked Q4 unlock cliff; intraday $17.62/$24.12 range mirrors
+  June 3 $24.49 wick reversal. Exit target $28 / inv $19 / 14d.
+  Market: Israel × Hezbollah peace deal by July 31 — YES 16.5¢, fair
+  ~6%, edge 10.5pp (sell YES / buy NO at 83.5¢).
+- **Narrative-tracker 6-23 14:09Z:** 12 actionable (vs 6-22's 15).
+  5 NEW + 1 PROMOTED (DePIN/GPU compute Rising→Peak w/ IO/TAO/AKT
+  slate) + 2 DEMOTED + 2 DEAD + 3 CONSOLIDATED. 3 reflexivity flags +
+  1 carry-over (Kaito Yapper EOL). **INVERSE flag — AI capex rationing**
+  (Tencent + Uber real fundamentals catching the AI-infra story,
+  contrarian-bear). Key today: 9 of 12 threads AI-side, rotation
+  signal hardening.
+- **AIXBT Pulse 6-23 09:00Z:** 6 NEW (Warsh hawkish repricing, BTC
+  crash <$62K + $500M liqs, Solana $40 bear call + KOL skepticism,
+  institutional receipts Cboe/Ripple/UBS/Allfunds, protocol unwind
+  Synthetix/ENS/Sonic, SpaceX-led tech selloff). Bridge call:
+  Warsh + DXY executing into BTC order book — $500M liq = macro
+  reading into on-chain leverage.
+- **defi-overview 6-23:** Mixed — DEX vol $6.02B +45% 1d on sell-off
+  volume spike. Top mover up Mellow Core +34% / Polygon Bridge +25%.
+  Top mover down SSV -37% ($4.7B drop, likely re-measurement). Real-yield
+  count **301 cleared** (vs 6-22's 3, 6-21's 0 — yields data quality
+  fully recovered). Aave V3 fees +31% / TVL -4% 7d (real lending demand).
+  Stables $313.8B; DAI +8.5% on $4.85B = ~$380M new mint.
+- **security-digest 6-23 14:12Z:** 2 today / 5 this-week / 2 monitor.
+  free-claude + free-anthropic-claude = Anthropic-SDK typosquats —
+  direct supply-chain shot at ecosystem operator builds against. Plus
+  26 npm malware drops in single 6h window. Budibase + Gogs coordinated
+  patch batches collapsed onto one line each. KEV net-new = 0 this week
+  (Splunk + Joomla already in prior digests).
+- **search-skill 6-23** queried "llm cost" (cost-report cf=23). 5 hits
+  all failed hard gates (PostHog-coupled, playbook-not-cron, board-locked).
+  Note: cost-report failure is ISS-025 sandbox-truncation, not capability
+  gap. Right fix path is root-cause, not external swap. SEARCH_SKILL_EMPTY.
+- **list-digest 6-23 17:10Z** + **agent-buzz 6-23 18:00Z:** both clean
+  via xai-cache path. cyrilXBT anthropic 13-cert drop top tweet
+  (♥266/↻62/score 19.1). agent-buzz: MCP landscape mapped + tooling
+  stack fills in + production multi-agent governance.
+- **skill-freshness 6-23 08:24Z:** FRESHNESS_NO_CHANGE — operator-scorecard
+  still depends on stale articles/skill-analytics-*.md (312h/13d, weekly
+  192h threshold). Fingerprint unchanged from 6-22; re-emits 6-28 if
+  still unresolved.

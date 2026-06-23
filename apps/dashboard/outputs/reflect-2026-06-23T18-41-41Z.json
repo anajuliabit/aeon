@@ -1,0 +1,223 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidated — 2026-06-23",
+        "description": "Reflect skill: memory consolidation, market regime shift, issues escalation, picks status, and narrative tracking"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_dedup",
+        "sep_1",
+        "h_market",
+        "grid_market",
+        "text_regime",
+        "sep_2",
+        "h_issues",
+        "text_iss025",
+        "sep_3",
+        "h_picks",
+        "stack_picks",
+        "sep_4",
+        "h_narratives",
+        "stack_narratives",
+        "sep_5",
+        "h_topics",
+        "text_topics"
+      ]
+    },
+    "alert_dedup": {
+      "type": "Alert",
+      "props": {
+        "title": "Recurring Deduplication Issue",
+        "message": "5 duplicate entries in MEMORY.md have reappeared (same dupes from 6-22 reflect). Flagging as recurring pattern.",
+        "type": "warning"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Regime",
+        "level": "h2"
+      }
+    },
+    "grid_market": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc",
+        "stat_breadth",
+        "stat_session"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "Bitcoin",
+        "value": "-4.66%",
+        "trend": "down"
+      }
+    },
+    "stat_breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "3/20",
+        "delta": "13/20 → 3/20",
+        "trend": "down"
+      }
+    },
+    "stat_session": {
+      "type": "Text",
+      "props": {
+        "text": "Regime flip: Chop → Risk-off (single session)"
+      }
+    },
+    "text_regime": {
+      "type": "Text",
+      "props": {
+        "text": "Folded 6-23 market deltas into memory/topics/fleet.md and memory/topics/crypto.md"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues & Escalations",
+        "level": "h2"
+      }
+    },
+    "text_iss025": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 cost-report escalation: level 6 → 23"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h_picks": {
+      "type": "Heading",
+      "props": {
+        "text": "Picks Status",
+        "level": "h2"
+      }
+    },
+    "stack_picks": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_dexe",
+        "badge_eigen"
+      ]
+    },
+    "badge_dexe": {
+      "type": "Badge",
+      "props": {
+        "text": "DEXE HIGH 7/10",
+        "variant": "default"
+      }
+    },
+    "badge_eigen": {
+      "type": "Badge",
+      "props": {
+        "text": "EIGEN 6-22 pick at invalidation",
+        "variant": "destructive"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h_narratives": {
+      "type": "Heading",
+      "props": {
+        "text": "Narratives & Flags",
+        "level": "h2"
+      }
+    },
+    "stack_narratives": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_inverse",
+        "text_ai_capex",
+        "text_w3"
+      ]
+    },
+    "text_inverse": {
+      "type": "Text",
+      "props": {
+        "text": "Narrative-tracker INVERSE-reflexivity flag #2: market reflexivity detected"
+      }
+    },
+    "text_ai_capex": {
+      "type": "Text",
+      "props": {
+        "text": "AI capex rationing (bear-side) mirrors 6-22 stablecoin bull-side inverse dynamic"
+      }
+    },
+    "text_w3": {
+      "type": "Text",
+      "props": {
+        "text": "W3 cyrillic USDC mirroring attack: potential market manipulation vector"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h_topics": {
+      "type": "Heading",
+      "props": {
+        "text": "Consolidated Topics",
+        "level": "h2"
+      }
+    },
+    "text_topics": {
+      "type": "Text",
+      "props": {
+        "text": "Updated memory/topics/fleet.md and memory/topics/crypto.md with 6-23 deltas"
+      }
+    }
+  }
+}

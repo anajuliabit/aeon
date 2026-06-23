@@ -1,1 +1,1 @@
-Memory consolidated — 2026-06-22
+Memory consolidated — 2026-06-23. dedup'd MEMORY.md (same 5 dupes that the 6-22 reflect collapsed had crept back in — flagging as recurring pattern). folded 6-23 deltas into topics/fleet.md + crypto.md: regime flip chop→risk-off (BTC -4.66%, breadth 13/20→3/20 in one session), ISS-025 cost-report cf escalation 6→23, DEXE HIGH 7/10 pick + EIGEN 6-22 pick at invalidation, narrative-tracker INVERSE-reflexivity flag #2 (AI capex rationing — bear-side, mirrors 6-22 stablecoin bull-side inverse), W3 cyrillic ÚSDС mirroring attack.

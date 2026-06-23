@@ -471,6 +471,85 @@ narrative-and-pick layer.
   **recovered vs 6-21's 0** (WSOL-USDC Raydium 32.4%, WETH-USDT
   UniV3 25.1%, UNI-WETH UniV3 17.3%). Stables $313.9B (+0.05%).
 
+### 2026-06-23 — risk-off cascade + DEXE pick + EIGEN reversal
+
+- **Regime flip chop → risk-off (high conviction).** BTC -4.66%
+  to $62,055 (intraday range $62,038–$64,037), ETH $1,649 -6.48%,
+  SOL $68.74 -7.45%. Breadth collapsed 13/20 → 3/20 green in one
+  session. Triggers: Korea Kospi -10% circuit breakers (Samsung/
+  SK Hynix -10-12%), $500M crypto liquidations, Warsh hawkish
+  Fed repricing, JPMorgan $165B Q2-end equity rebalancing. F&G 23
+  still lags (doesn't yet capture today's action).
+- **Token pick DEXE HIGH 7/10 $22.98** (+28.2% 24h / +23.4% 7d).
+  Only large-cap green on sea-of-red day. DAO-governance rotation —
+  KCEX listing + "Dexelization" DAO-Studio framing + $1.7B platform
+  TVL. mcap $1.08B (rank 65), vol $102M, vmc 0.09 just under gate.
+  Score 7/10: 24h+1, 7d+1, both>5%+2, RS vs BTC/ETH+2, DEX+1.
+  Risk: 51.5% supply locked (FDV/mcap 2.1×) Q4 unlock cliff;
+  intraday $17.62/$24.12 range mirrors June 3 $24.49 wick reversal.
+  Exit: target $28 / inv $19 / 14d. Market: "Israel × Hezbollah
+  permanent peace deal by July 31, 2026?" YES 16.5¢ — fair ~6%,
+  edge 10.5pp (sell YES / buy NO at 83.5¢). Vol $211k 24h.
+- **EIGEN 6-22 HIGH 9/10 at invalidation.** -15.3% morning → -17.0%
+  afternoon TRENDING+DOWN. Estimated ~$0.258 vs $0.26 invalidation.
+  Restaking → AI-infra narrative pivot reversed in one session.
+  SSV Network TVL -38.95% 7d confirms restaking sector derisked.
+- **token-alert 6-23 fired GITLAWB -15.63%** — first downside rail
+  break since REPPO -15.78% on 6-16. Watchlist median **-11.34%**
+  = first sub-(-10%) median print since canonical watchlist landed.
+  All 4 tokens red. GITLAWB vol 1.26× (real bid on dump, well under
+  3× capitulation). REPPO unwinds 6-22 bounce on thin tape (0.48×
+  vol — no follow-through buying after 3d +45.91% spike).
+- **token-movers afternoon capitulation deepened.** 13/100 green
+  (vs morning 19/76), median -4.79% (vs -2.1%). Trending list 13/15
+  red = capitulation not chase. AERO direction-flip TRENDING+UP
+  morning → TRENDING+DOWN afternoon. SNX entered trending (ties to
+  AIXBT protocol-unwind cluster). PENDLE -10.3% (was 6-21 top
+  winner +6.2%). XLM rank-16 -10.5% [MAJOR].
+- **Narrative tracker transitions 6-23**: 12 actionable (vs 6-22's
+  15). 5 NEW (US pro-crypto policy "Bitcoin built in America" pure
+  framing; AI-displaces-crypto attention meta — @LumixWeb3 Google
+  Trends thesis, 9 of 12 threads AI-side; BTC+AI synergy; AI capex
+  rationing contrarian-bear — Tencent + Uber receipts; Chinese AI >
+  US contrarian — DeepSeek V4). 1 PROMOTED (DePIN/GPU compute
+  Rising→Peak with named slate IO/TAO/AKT — @amirsrtp GitHub-14x
+  metric). 2 DEMOTED (AI Agents × RWA Peak→Rising — folded under
+  other clusters; Ownership tokens FRONT-RUN→WATCH — absent today).
+  2 DEAD (L1 vs AI wars, Meme 3.0 confirmed zero survivors).
+  3 CONSOLIDATED.
+- **3 reflexivity flags + 1 carry-over**: (1) AI-displaces-crypto
+  meta = the reflexive trade itself (Google Trends framing IS the
+  predicate); (2) "Bitcoin built in America" pure POLICY FRAMING
+  catalyst, no bill/EO text — narrative outrunning legislation;
+  (3) **INVERSE — AI capex rationing**: Tencent + Uber are REAL
+  fundamentals catching the AI-infra story (mirrors 6-22 inverse
+  stablecoin/x402 flag, different sign — bear thesis for TAO/IO/AKT
+  if it gathers steam); (4) carry-over Kaito Yapper EOL structural
+  shift unchanged.
+- **AIXBT Pulse 6-23 09:00Z 6 NEW**: Warsh hawkish repricing, BTC
+  crash <$62K + $500M liqs, Solana $40 bear call + KOL skepticism,
+  institutional receipt stack Cboe/Ripple/UBS/Allfunds, protocol
+  unwind cluster Synthetix/ENS/Sonic, SpaceX-led tech selloff.
+  Bridge call: Warsh + DXY executing into BTC order book — $500M
+  liq = macro reading into on-chain leverage; geo relief (US-Iran,
+  oil lower) transmitted and lost.
+- **defi-overview 6-23 Mixed:** DEX vol $6.02B (+45% 1d on sell-off
+  volume spike, 7d still -17%). Top mover up Mellow Core +34%
+  ($142M → $190M, 7d +48%); Polygon Bridge +25% ($2.27B → $2.84B).
+  Top down SSV Network -37% ($12.85B → $8.07B). Real-yield count
+  **301 cleared** (vs 6-22's 3, 6-21's 0 — yields data quality fully
+  recovered). Aave V3 fees 7d +31% / TVL -4% = real lending demand.
+  Stables $313.8B (+0.03%); **DAI +8.5% on $4.85B = ~$380M new mint**
+  (real, crypto-backed peg expansion). chain change_1d API regression
+  day 6.
+- **PHISHING DETECTED W3 on-chain-monitor 6-23 13:25Z:** Cyrillic
+  `ÚSDС` (Ú+С lookalikes) 1480 fake-units → address that
+  visual-clones W1 (first/last bytes match, middle byte-swap).
+  **Fires 3 min after legit W3→W1 $1480 USDC transfer** — textbook
+  mirroring attack against copy-paste. Plus 2× `EṬH` (non-ASCII Ṭ)
+  lookalike spam + Jetchua airdrop. Operator notified + explainer
+  sent via Telegram (address-book / hardware-screen mitigation).
+
 ## Bitcoin
 See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 2026-05-21, still stale — last30 has not re-run).
