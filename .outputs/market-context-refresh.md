@@ -1,8 +1,8 @@
-market context — 2026-06-22
+market context — 2026-06-23
 
-take: chop (conviction low)
-BTC $64,938 (+1.52%) / ETH $1,755 (+1.92%) · F&G 20 (extreme fear, ↓3)
-breadth 13/20 24h · 6/20 7d (weekly downtrend intact)
-TVL $73.6B · DEX vol $4.2B (-10.8% 1d, -9.1% 7d avg)
-top narrative: EigenCloud/AI-infra restaking (rising — EIGEN +42.8% 7d)
-hot market: no crypto-macro on Polymarket (FIFA World Cup dominates)
+take: risk-off (conviction high)
+BTC $62,055 (-4.66%) / ETH $1,649 (-6.48%) · F&G 23 (extreme fear)
+breadth 3/20 · TVL top chains est. -3% vs 6-22
+trigger: kospi -10% circuit breakers + warsh repricing + $500M liquidations
+top narrative: RWA rising (rain +10.6%) · eigen -15.3% CAPITULATION (6-22 pick at risk)
+hot market: 2026 fifa WC sports-only — no crypto-macro signal day 3

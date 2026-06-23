@@ -1,0 +1,262 @@
+{
+  "root": "market-context-card",
+  "state": {},
+  "elements": {
+    "market-context-card": {
+      "type": "Card",
+      "props": {
+        "title": "market context — 2026-06-23"
+      },
+      "children": [
+        "risk-section",
+        "sep1",
+        "prices-section",
+        "sep2",
+        "breadth-section",
+        "sep3",
+        "triggers-section",
+        "sep4",
+        "narratives-section",
+        "sep5",
+        "hot-market-section"
+      ]
+    },
+    "risk-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "risk-badge",
+        "conviction-text"
+      ]
+    },
+    "risk-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "risk-off",
+        "variant": "destructive"
+      }
+    },
+    "conviction-text": {
+      "type": "Text",
+      "props": {
+        "text": "conviction high",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prices-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "prices-row",
+        "fear-greed"
+      ]
+    },
+    "prices-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "btc-stat",
+        "eth-stat"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62,055",
+        "delta": "-4.66%",
+        "trend": "down"
+      }
+    },
+    "eth-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,649",
+        "delta": "-6.48%",
+        "trend": "down"
+      }
+    },
+    "fear-greed": {
+      "type": "Text",
+      "props": {
+        "text": "F&G 23 (extreme fear)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "breadth-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "breadth-text",
+        "tvl-text"
+      ]
+    },
+    "breadth-text": {
+      "type": "Text",
+      "props": {
+        "text": "breadth 3/20",
+        "variant": "body"
+      }
+    },
+    "tvl-text": {
+      "type": "Text",
+      "props": {
+        "text": "TVL top chains est. -3% vs 6-22",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "triggers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trigger-label",
+        "trigger-list"
+      ]
+    },
+    "trigger-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Triggers",
+        "level": "h4"
+      }
+    },
+    "trigger-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trigger-1",
+        "trigger-2",
+        "trigger-3"
+      ]
+    },
+    "trigger-1": {
+      "type": "Text",
+      "props": {
+        "text": "KOSPI -10% circuit breakers",
+        "variant": "body"
+      }
+    },
+    "trigger-2": {
+      "type": "Text",
+      "props": {
+        "text": "warsh repricing",
+        "variant": "body"
+      }
+    },
+    "trigger-3": {
+      "type": "Text",
+      "props": {
+        "text": "$500M liquidations",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narratives-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "narrative-label",
+        "rwa-narrative",
+        "eigen-alert"
+      ]
+    },
+    "narrative-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narratives",
+        "level": "h4"
+      }
+    },
+    "rwa-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "RWA rising (rain +10.6%)",
+        "variant": "body"
+      }
+    },
+    "eigen-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "eigen -15.3% CAPITULATION",
+        "message": "6-22 pick at risk",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hot-market-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hot-label",
+        "hot-text"
+      ]
+    },
+    "hot-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h4"
+      }
+    },
+    "hot-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026 fifa WC sports-only — no crypto-macro signal day 3",
+        "variant": "body"
+      }
+    }
+  }
+}
