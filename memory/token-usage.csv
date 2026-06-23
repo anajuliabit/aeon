@@ -503,4 +503,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-23,agent-buzz,claude-opus-4-7,22,10603,1074304,65208
 2026-06-23,reflect,claude-opus-4-7,26,17338,1775531,229330
 2026-06-23,heartbeat,claude-opus-4-7,3032,16257,719862,101871
-2026-06-23,evening-recap,claude-sonnet-4-6,1684,13276,560854,69396
+2026-06-23,aixbt-pulse,claude-sonnet-4-6,1506,19766,983117,72732

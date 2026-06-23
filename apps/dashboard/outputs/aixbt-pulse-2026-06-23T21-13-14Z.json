@@ -1,0 +1,109 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-23 21:00Z"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-crypto",
+        "text-crypto",
+        "sep-1",
+        "heading-tradfi",
+        "text-tradfi",
+        "sep-2",
+        "heading-new",
+        "text-new",
+        "sep-3",
+        "heading-bridge",
+        "text-bridge"
+      ]
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "text-crypto": {
+      "type": "Text",
+      "props": {
+        "text": "- BTC at 200WMA, bears calling $40K. LTH selling lowest since Nov 2024 — conviction not breaking.\n- Meta building \"Arena\" vs Polymarket/Kalshi; World Cup driving on-chain betting. Chainlink billing settlement infra in the same breath.\n- RWA +589% to $31.9B (Binance); Chainlink joins 47 banks for T+0 FX; Baillie Gifford launches on-chain bond fund.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "text-tradfi": {
+      "type": "Text",
+      "props": {
+        "text": "- Chip rout → Nasdaq -2%, cross-asset vol up. SpaceX $25B bond issuance signals high-growth de-rating.\n- US-Iran easing energy premia; Fed hawkish projections pushing yields, compressing multiples.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "text-new": {
+      "type": "Text",
+      "props": {
+        "text": "- Meta \"Arena\" prediction market rival + World Cup on-chain betting (absent from 09:00Z pull)\n- RWA $31.9B with named receipts — 47 banks T+0 FX, Baillie Gifford on-chain bond fund\n- BTC 200WMA structural frame + LTH Nov-2024-low selling (replaces morning crash-event framing)",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text-bridge": {
+      "type": "Text",
+      "props": {
+        "text": "chip rout + SpaceX $25B bond are executing the same trade: AI growth premium deflating. BTC at 200WMA is where that deleveraging stops for now — LTHs aren't selling, structural buyers still present. RWA settlement rails went operational this window (T+0 FX, real fund managers, named bank count). Meta \"Arena\" is prediction markets' first institutional-scale distribution test. four signals, one regime: real infra building out while the AI multiple that inflated everything contracts.",
+        "variant": "body"
+      }
+    }
+  }
+}
