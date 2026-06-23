@@ -1,0 +1,309 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-06-23"
+      },
+      "children": [
+        "subtitle",
+        "separator-1",
+        "heading-crypto",
+        "separator-2",
+        "tweets-stack",
+        "separator-3",
+        "sources-section"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "single list, two voices — flowslikeosmo on defi fee/buyback math, cyrilXBT on free anthropic + GLM 5.2 stacks.",
+        "variant": "muted"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto Researchers",
+        "level": "h2"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-group-1",
+        "tweet-group-2",
+        "tweet-group-3",
+        "tweet-group-4",
+        "tweet-group-5"
+      ]
+    },
+    "tweet-group-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "author-link-1",
+        "tweet-1",
+        "view-link-1"
+      ]
+    },
+    "author-link-1": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/cyrilXBT",
+        "href": "https://x.com/cyrilXBT"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "anthropic shipped 13 free claude certs (claude 101 → MCP advanced + bedrock/vertex tracks); the courseware they use to onboard $150-300k claude engineers, now a public hiring filter",
+        "likes": 266,
+        "retweets": 62
+      }
+    },
+    "view-link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2068977038292066409"
+      }
+    },
+    "tweet-group-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "author-link-2",
+        "tweet-2",
+        "view-link-2"
+      ]
+    },
+    "author-link-2": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/Flowslikeosmo",
+        "href": "https://x.com/Flowslikeosmo"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "26 protocols cleared $10M monthly fees, $15.2B annualized = 1.7× vegas strip 2025; tether $490M is 6× #3 hyperliquid — stablecoin issuance still the only real-money business in crypto by fee volume",
+        "likes": 103,
+        "retweets": 6
+      }
+    },
+    "view-link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2069088524000002502"
+      }
+    },
+    "tweet-group-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "author-link-3",
+        "tweet-3",
+        "view-link-3"
+      ]
+    },
+    "author-link-3": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/cyrilXBT",
+        "href": "https://x.com/cyrilXBT"
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "notebookLM (raw → questions) handed to GLM 5.2 (750k ctx → week of posts); open-weight long-context being slotted as the cheap end of the content-ops agent stack vs claude/gpt",
+        "likes": 86,
+        "retweets": 14
+      }
+    },
+    "view-link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2068932364366139581"
+      }
+    },
+    "tweet-group-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "author-link-4",
+        "tweet-4",
+        "view-link-4"
+      ]
+    },
+    "author-link-4": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/Flowslikeosmo",
+        "href": "https://x.com/Flowslikeosmo"
+      }
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "\"2026 is the year of revenue. aero is revenue\" QT on aerodrome volume share; same curator framing the rotation 6-22 token-movers logged AERO +5.3% before today's TRENDING-flip reversal",
+        "likes": 101,
+        "retweets": 4
+      }
+    },
+    "view-link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2069143690589659598"
+      }
+    },
+    "tweet-group-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "author-link-5",
+        "tweet-5",
+        "view-link-5"
+      ]
+    },
+    "author-link-5": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/Flowslikeosmo",
+        "href": "https://x.com/Flowslikeosmo"
+      }
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "QT on protocol buyback list: HYPE 99% buyback = 4.93% annualized holder yield vs AERO 100% = 11.62%; fee base × buyback ÷ mcap is the only number — \"100% buyback\" claims are dead weight when mcap is bloated",
+        "likes": 37,
+        "retweets": 1
+      }
+    },
+    "view-link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2069043249575072004"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-row",
+        "status-row"
+      ]
+    },
+    "sources-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-label",
+        "sources-text"
+      ]
+    },
+    "sources-label": {
+      "type": "Text",
+      "props": {
+        "text": "sources:",
+        "variant": "caption"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "list1=ok(5) | xai=ok(cache)",
+        "variant": "caption"
+      }
+    },
+    "status-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "status-label",
+        "status-text"
+      ]
+    },
+    "status-label": {
+      "type": "Text",
+      "props": {
+        "text": "status:",
+        "variant": "caption"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
