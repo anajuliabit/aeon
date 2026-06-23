@@ -1,0 +1,87 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert",
+        "description": "GITLAWB — 2026-06-23"
+      },
+      "children": [
+        "mainStack"
+      ]
+    },
+    "mainStack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "priceSection",
+        "volumeSection",
+        "triggerSection"
+      ]
+    },
+    "priceSection": {
+      "type": "Stat",
+      "props": {
+        "label": "GITLAWB",
+        "value": "$0.00005986",
+        "delta": "-15.63%",
+        "trend": "down"
+      }
+    },
+    "volumeSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "volumeValue",
+        "volumeContext"
+      ]
+    },
+    "volumeValue": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$556,777"
+      }
+    },
+    "volumeContext": {
+      "type": "Text",
+      "props": {
+        "text": "1.26x 5-run mean of $442k — not a spike",
+        "variant": "caption"
+      }
+    },
+    "triggerSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "triggerHeader",
+        "triggerContent"
+      ]
+    },
+    "triggerHeader": {
+      "type": "Heading",
+      "props": {
+        "text": "Trigger",
+        "level": "h3"
+      }
+    },
+    "triggerContent": {
+      "type": "Text",
+      "props": {
+        "text": "24h-change ≥15% rail (down-side, trips by 63bp). first down-side trip since reppo 6-16 -15.78%. fresh local low — breaks 6-19's $0.00006304 downtrend pivot. tape is baseline, no capitulation vol — mechanical bleed in a broader risk-off session (BTC -1.7%, alt median -2.1% per 07:14Z daily-routine).",
+        "variant": "body"
+      }
+    }
+  }
+}
