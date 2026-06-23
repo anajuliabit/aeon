@@ -1,1 +1,1 @@
-thought review · last 24h · 1 capture, 1 aligned, 0 drift. same reppo-content note from yesterday — still sitting in vault/inbox/, not archived. draft it receipts-first (pod / artifact / epoch); kill the 'building is something you love' frame before it lands.
+🧭 thought review · last 24h · 0 captures. nothing to surface. inbox still holds 2026-06-22-1657-reppo-building-comment.md (28h, surfaced twice already) — operator archive call.

@@ -1,0 +1,48 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_header",
+        "separator_1",
+        "alert_action"
+      ]
+    },
+    "text_header": {
+      "type": "Text",
+      "props": {
+        "text": "🧭 thought review · last 24h · 0 captures · nothing to surface",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator Action Required",
+        "message": "inbox still holds 2026-06-22-1657-reppo-building-comment.md (28h, surfaced twice already) — operator archive call",
+        "type": "info"
+      }
+    }
+  }
+}
