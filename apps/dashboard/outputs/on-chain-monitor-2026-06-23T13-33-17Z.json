@@ -1,0 +1,229 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "on-chain — base, last 24h"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-phishing",
+        "sep1",
+        "heading-real-moves",
+        "moves-stack",
+        "sep2",
+        "heading-summary",
+        "summary-stack"
+      ]
+    },
+    "alert-phishing": {
+      "type": "Alert",
+      "props": {
+        "title": "3 Phishing Transfers on W3",
+        "message": "Cyrillic ÚSDС (1480 fake-units) to 0x98E57e6799...c0a9 — visual clone of W1, fired 3 min after the legit W3→W1 USDC for $1480. Classic mirroring. Plus 2× EṬH lookalike (non-ascii Ṭ). ⚠️ Don't copy-paste destinations out of W3 history.",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-real-moves": {
+      "type": "Heading",
+      "props": {
+        "text": "Real Moves (sorted)",
+        "level": "h2"
+      }
+    },
+    "moves-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "move1",
+        "move2",
+        "move3",
+        "move4"
+      ]
+    },
+    "move1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "move1-title",
+        "move1-text"
+      ]
+    },
+    "move1-title": {
+      "type": "Text",
+      "props": {
+        "text": "W2 cow swap",
+        "variant": "lead"
+      }
+    },
+    "move1-text": {
+      "type": "Text",
+      "props": {
+        "text": "833.33k MAMO → 0.10872 cbBTC ($6.7k each leg). Same minute as W2's sablier MAMO unlock (833.33k, $6.6k) — operator dumped the unlock into cow inside one block of the cliff."
+      }
+    },
+    "move2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "move2-title",
+        "move2-text",
+        "move2-flag"
+      ]
+    },
+    "move2-title": {
+      "type": "Text",
+      "props": {
+        "text": "W1 ← 4000 USDC inbound",
+        "variant": "lead"
+      }
+    },
+    "move2-text": {
+      "type": "Text",
+      "props": {
+        "text": "From 0xA63dfB...fA19A (unknown EOA)"
+      }
+    },
+    "move2-flag": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Flag if not expected"
+      }
+    },
+    "move3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "move3-title",
+        "move3-item1",
+        "move3-item2"
+      ]
+    },
+    "move3-title": {
+      "type": "Text",
+      "props": {
+        "text": "W3 vesting claimed",
+        "variant": "lead"
+      }
+    },
+    "move3-item1": {
+      "type": "Text",
+      "props": {
+        "text": "175k REPPO ($3956) from Grant #2"
+      }
+    },
+    "move3-item2": {
+      "type": "Text",
+      "props": {
+        "text": "60k REPPO ($1358) from Grant"
+      }
+    },
+    "move4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "move4-text"
+      ]
+    },
+    "move4-text": {
+      "type": "Text",
+      "props": {
+        "text": "W3 → W1: 1480 USDC intra-wallet",
+        "variant": "lead"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "summary-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-events",
+        "text-w4",
+        "text-w5",
+        "text-sources",
+        "text-state"
+      ]
+    },
+    "stat-events": {
+      "type": "Stat",
+      "props": {
+        "label": "Events ≥ $1k",
+        "value": "8"
+      }
+    },
+    "text-w4": {
+      "type": "Text",
+      "props": {
+        "text": "W4: sub-threshold cow swap + sablier WELL unlock (atomic in same block as W2 — batched)"
+      }
+    },
+    "text-w5": {
+      "type": "Text",
+      "props": {
+        "text": "W5: dormant"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: blockscout ok, alchemy/etherscan keys still empty (operator)",
+        "variant": "caption"
+      }
+    },
+    "text-state": {
+      "type": "Text",
+      "props": {
+        "text": "State: last_block→47715479",
+        "variant": "caption"
+      }
+    }
+  }
+}
