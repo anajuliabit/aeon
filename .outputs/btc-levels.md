@@ -1,11 +1,12 @@
 ## Summary
 
-Run complete. No alerts fired.
+**btc-levels run — 2026-06-23T20:22Z**
 
-- **Spot**: $62,398 (up from $62,038 at 13:12Z)
-- **Daily close (2026-06-22)**: $63,957 — above $60,500 breakdown threshold, no breakdown alert
-- **Leverage-review trigger (≤$45k)**: not triggered
-- **Reclaim $63,500 / $65,900**: both flags already set from prior cycles, no new trigger
-- **State updated**: `memory/btc-levels-state.json` (updatedAt → 17:07Z, lastSpot → $62,398)
-- **Log appended**: `memory/logs/2026-06-23.md` (5th btc-levels run today)
-- **Committed**: `b75fe2e`
+| Level | Status |
+|---|---|
+| Spot ≤ $45,000 (leverage-review) | $62,387 — not triggered |
+| Daily close < $60,500 (breakdown) | June 22 close $63,957 — not triggered |
+| Spot ≥ $63,500 (reclaim) | Already alerted — flag stays armed |
+| Spot ≥ $65,900 (reclaim) | Already alerted — flag stays armed |
+
+No alerts fired. BTC dropped further from the 17:07Z run ($62,398 → $62,387) — still above the $60,500 breakdown threshold and both reclaim flags remain set (waiting for a dip below $60,500 to re-arm them). State updated and committed.
