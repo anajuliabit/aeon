@@ -1,7 +1,10 @@
-Done. Quiet run — no alerts fired.
+## Summary
 
-**Summary:**
-- Fetched BTC data: spot **$64,457** / 2026-06-21 daily close **$63,231**
-- All four levels checked: spot well above $45k (no leverage-review), close above $60.5k (no breakdown), reclaim flags already set for $63.5k and $65.9k (no new crossings)
-- No notification sent
-- `memory/btc-levels-state.json` updated, log entry appended to `memory/logs/2026-06-22.md`, committed
+- **Spot:** $64,037 · **Daily close (2026-06-22):** $63,957
+- All levels evaluated: no alerts fired
+  - Leverage-review: spot well above $45k trigger
+  - Breakdown: close $63,957 above $60,500 threshold
+  - Reclaim $63,500: already alerted in prior cycle
+  - Reclaim $65,900: spot still below this level ($64,037 < $65,900)
+- State updated (`memory/btc-levels-state.json`) and log entry created (`memory/logs/2026-06-23.md`)
+- Committed — quiet run, no notification sent
