@@ -1,0 +1,366 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi — 2026-06-23"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-summary",
+        "sep-1",
+        "stat-tvl",
+        "text-tvl-note",
+        "sep-2",
+        "heading-chains",
+        "text-chains",
+        "sep-3",
+        "heading-movers",
+        "stack-movers",
+        "sep-4",
+        "heading-fees-leaders",
+        "table-fees",
+        "sep-5",
+        "heading-fees-beating",
+        "text-fees-beating",
+        "sep-6",
+        "heading-dex-vol",
+        "stat-dex-vol",
+        "text-dex-top",
+        "sep-7",
+        "heading-stables",
+        "stat-stables",
+        "text-stables",
+        "sep-8",
+        "heading-real-yield",
+        "text-real-yield-note",
+        "stack-real-yield",
+        "sep-9",
+        "heading-incentive-yield",
+        "stack-incentive-yield",
+        "sep-10",
+        "text-sources"
+      ]
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Mixed: DEX vol +45% 1d on weekend-base rebound, 7d still −17%, stables flat",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stat-tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL (chain-sum)",
+        "value": "$71.85B",
+        "delta": "−$1.75B",
+        "trend": "down"
+      }
+    },
+    "text-tvl-note": {
+      "type": "Text",
+      "props": {
+        "text": "chain delta API null day 6 — DeFiLlama regression; vs $73.6B yesterday",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-chains": {
+      "type": "Heading",
+      "props": {
+        "text": "Top chains",
+        "level": "h3"
+      }
+    },
+    "text-chains": {
+      "type": "Text",
+      "props": {
+        "text": "1. Ethereum — $38.15B\n2. BSC — $5.05B\n3. Solana — $4.74B",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-movers": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers — protocols",
+        "level": "h3"
+      }
+    },
+    "stack-movers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mover-1",
+        "mover-2",
+        "mover-3",
+        "mover-4"
+      ]
+    },
+    "mover-1": {
+      "type": "Text",
+      "props": {
+        "text": "↑ Mellow Core +34% ($142M → $190M, 7d +48%) — onchain capital allocator, sustained inflows, no obvious named catalyst",
+        "variant": "body"
+      }
+    },
+    "mover-2": {
+      "type": "Text",
+      "props": {
+        "text": "↑ Polygon Bridge +25% ($2.27B → $2.84B) — bridge deposit wave, no obvious named catalyst",
+        "variant": "body"
+      }
+    },
+    "mover-3": {
+      "type": "Text",
+      "props": {
+        "text": "↓ SSV Network −37% ($12.8B → $8.07B) — $4.7B drop on a staking pool, no obvious named catalyst (possible re-measurement)",
+        "variant": "body"
+      }
+    },
+    "mover-4": {
+      "type": "Text",
+      "props": {
+        "text": "↓ B2 Buzz −16% ($240M → $200M) — canonical bridge outflow, no obvious named catalyst",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-fees-leaders": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "table-fees": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Protocol",
+          "Fees (24h)",
+          "vs 7d avg"
+        ],
+        "rows": [
+          [
+            "1",
+            "Tether",
+            "$16.0M",
+            "flat"
+          ],
+          [
+            "2",
+            "Circle USDC",
+            "$6.5M",
+            "flat"
+          ],
+          [
+            "3",
+            "Hyperliquid Perps",
+            "$2.5M",
+            "+22% (1d +104%)"
+          ]
+        ]
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-fees-beating": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees beating TVL",
+        "level": "h3"
+      }
+    },
+    "text-fees-beating": {
+      "type": "Text",
+      "props": {
+        "text": "Aave V3 — fees +31% / TVL −4% (7d) — lending demand outrunning deposits",
+        "variant": "body"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-dex-vol": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX vol (24h)",
+        "level": "h3"
+      }
+    },
+    "stat-dex-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Total DEX Volume",
+        "value": "$6.02B",
+        "delta": "+45% (1d), −17% (7d)",
+        "trend": "up"
+      }
+    },
+    "text-dex-top": {
+      "type": "Text",
+      "props": {
+        "text": "Top performers: Uniswap V4 $932M (+67%), Uniswap V3 $486M (+137%), Aerodrome Slipstream $479M (+67%)",
+        "variant": "body"
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-stables": {
+      "type": "Heading",
+      "props": {
+        "text": "Stables",
+        "level": "h3"
+      }
+    },
+    "stat-stables": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Stablecoin Supply",
+        "value": "$313.8B",
+        "delta": "+0.03%",
+        "trend": "neutral"
+      }
+    },
+    "text-stables": {
+      "type": "Text",
+      "props": {
+        "text": "DAI +8.5% on $4.85B = ~$380M new mint; crvUSD −5.3%, avUSD −4.0%, YLDS −4.7% on the small-cap side",
+        "variant": "body"
+      }
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-real-yield": {
+      "type": "Heading",
+      "props": {
+        "text": "Real yield (sustainable, ≥$10M, filtered — 301 cleared, top 3)",
+        "level": "h3"
+      }
+    },
+    "text-real-yield-note": {
+      "type": "Text",
+      "props": {
+        "text": "Yields data quality recovered hard vs 6-21 zero-pool day; 6-22's WETH-USDT carried over and climbed 25% → 38%",
+        "variant": "caption"
+      }
+    },
+    "stack-real-yield": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ry-1",
+        "ry-2",
+        "ry-3"
+      ]
+    },
+    "ry-1": {
+      "type": "Text",
+      "props": {
+        "text": "WETH-USDT (uniswap-v3, ETH) — 37.6% apyBase ($77M TVL, 30d 38.8%)",
+        "variant": "body"
+      }
+    },
+    "ry-2": {
+      "type": "Text",
+      "props": {
+        "text": "CRVUSD-WETH (curve, ETH) — 27.1% apyBase ($16M TVL, 30d 18.7%)",
+        "variant": "body"
+      }
+    },
+    "ry-3": {
+      "type": "Text",
+      "props": {
+        "text": "USDC-WETH (uniswap-v3, ETH) — 26.3% apyBase ($19M TVL, 30d 19.4%)",
+        "variant": "body"
+      }
+    },
+    "sep-9": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-incentive-yield": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive yield (points / emissions, ≥$25M — 49 cleared, top 2)",
+        "level": "h3"
+      }
+    },
+    "stack-incentive-yield": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iy-1",
+        "iy-2"
+      ]
+    },
+    "iy-1": {
+      "type": "Text",
+      "props": {
+        "text": "CVXCRV (Convex, ETH) — 28.1% apy via CRV+CVX ($30M TVL)",
+        "variant": "body"
+      }
+    },
+    "iy-2": {
+      "type": "Text",
+      "props": {
+        "text": "USDC-AERO (Aerodrome v1, Base) — 25.6% apy via AERO ($26M TVL)",
+        "variant": "body"
+      }
+    },
+    "sep-10": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: llama_tvl=partial(chain_delta_null_day_6) llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none",
+        "variant": "caption"
+      }
+    }
+  }
+}

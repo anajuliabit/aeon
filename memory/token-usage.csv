@@ -496,4 +496,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-23,daily-routine,claude-opus-4-7,95,25047,6448077,109648
 2026-06-23,heartbeat,claude-opus-4-7,36,20487,2647908,82432
 2026-06-23,github-trending,claude-opus-4-7,2164,15192,1237066,98128
-2026-06-23,token-alert,claude-opus-4-7,21,12598,1099843,58146
+2026-06-23,defi-overview,claude-opus-4-7,39,26873,2357345,64407
