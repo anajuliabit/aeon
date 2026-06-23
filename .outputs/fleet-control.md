@@ -1,18 +1,14 @@
 ## Summary
 
-**Skill:** fleet-control (Health Check mode — `var` empty)
+**Skill:** fleet-control (Health Check Mode, var empty)
 
-**Outcome:** `FLEET_EMPTY` — silent stop per spec.
+**Outcome:** `FLEET_EMPTY` — silent stop per skill spec.
 
-**Pre-flight:**
-- gh auth: ✓ (anajuliabit, GH_TOKEN, scopes `repo`,`workflow`)
-- Registry `memory/instances.json` exists but `.instances = []` → spec mandates log + stop with no notification.
+**Why:** `memory/instances.json` contains `{"instances": []}` — no managed Aeon children registered to monitor. The skill spec explicitly directs "Stop. Do NOT notify." on empty registry to avoid training the operator to ignore the channel.
 
-**Files modified:**
-- `memory/logs/2026-06-23.md` — appended `## fleet-control (health check)` block with `FLEET_EMPTY` verdict.
+**Actions taken:**
+- Read registry (`memory/instances.json`) → empty array
+- Read state file (`memory/state/fleet-control-state.json`) → already bootstrapped, no update needed (last_full_summary_date stays empty since we didn't notify)
+- Appended log entry to `memory/logs/2026-06-23.md` under `## fleet-control (health check) — 15:00Z tick`
 
-**Files unchanged (correctly):**
-- `memory/instances.json` — empty registry preserved.
-- `memory/state/fleet-control-state.json` — not created; spec only writes state when a check actually runs over instances. (Empty-registry path stops before classification.)
-
-**Follow-ups:** None. Notification intentionally suppressed (operator isn't trained to act on "still no instances"). When the operator first registers an instance in `memory/instances.json`, the next scheduled run (09:00 / 15:00 UTC) will pick it up.
+**No notification fired.** No state mutation. Same exit pattern as the earlier 13:09Z tick today.
