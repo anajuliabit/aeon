@@ -1,9 +1,18 @@
 ## Summary
 
-Ran fleet-control in Health Check mode (var empty → default).
+**Skill:** fleet-control (Health Check mode — `var` empty)
 
-- **Pre-flight:** `gh auth` ok · rate_remaining=4992 · registry loaded
-- **Registry state:** `memory/instances.json` `.instances` is `[]` (no managed children — unchanged since the 10:31Z run earlier today)
-- **Verdict:** `FLEET_EMPTY` — silent stop per skill spec, no notification sent
-- **Files modified:** appended log entry to `memory/logs/2026-06-22.md`. State file untouched (no per-instance entries; `last_full_summary_date` stays empty because no notification fired)
-- **Follow-up:** none — fleet-control is a no-op until the operator registers child instances
+**Outcome:** `FLEET_EMPTY` — silent stop per spec.
+
+**Pre-flight:**
+- gh auth: ✓ (anajuliabit, GH_TOKEN, scopes `repo`,`workflow`)
+- Registry `memory/instances.json` exists but `.instances = []` → spec mandates log + stop with no notification.
+
+**Files modified:**
+- `memory/logs/2026-06-23.md` — appended `## fleet-control (health check)` block with `FLEET_EMPTY` verdict.
+
+**Files unchanged (correctly):**
+- `memory/instances.json` — empty registry preserved.
+- `memory/state/fleet-control-state.json` — not created; spec only writes state when a check actually runs over instances. (Empty-registry path stops before classification.)
+
+**Follow-ups:** None. Notification intentionally suppressed (operator isn't trained to act on "still no instances"). When the operator first registers an instance in `memory/instances.json`, the next scheduled run (09:00 / 15:00 UTC) will pick it up.
