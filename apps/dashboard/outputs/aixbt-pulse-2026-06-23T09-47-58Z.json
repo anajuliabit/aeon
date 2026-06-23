@@ -1,0 +1,174 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse",
+        "description": "2026-06-23 09:00Z"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack-crypto",
+        "sep-1",
+        "stack-tradfi",
+        "sep-2",
+        "stack-new",
+        "sep-3",
+        "stack-bridge"
+      ]
+    },
+    "stack-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-crypto",
+        "text-crypto-1",
+        "text-crypto-2"
+      ]
+    },
+    "h-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "text-crypto-1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC crashed below $62K — $500M+ liquidations, $4B/mo ETF outflows; shorts at $61.4K"
+      }
+    },
+    "text-crypto-2": {
+      "type": "Text",
+      "props": {
+        "text": "Synthetix sUSD retired + ENS treasury dissolution + Sonic board exits — protocol triage simultaneous with the crash"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-tradfi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-tradfi",
+        "text-tradfi-1",
+        "text-tradfi-2"
+      ]
+    },
+    "h-tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "text-tradfi-1": {
+      "type": "Text",
+      "props": {
+        "text": "Fed Chair Warsh repricing multiple 2026 rate hikes — yields up, DXY up, financial conditions tighten"
+      }
+    },
+    "text-tradfi-2": {
+      "type": "Text",
+      "props": {
+        "text": "SpaceX-led tech selloff hitting Nasdaq futures; geo relief (US-Iran, oil lower) not enough to offset"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-new",
+        "text-new-1",
+        "text-new-2",
+        "text-new-3"
+      ]
+    },
+    "h-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "text-new-1": {
+      "type": "Text",
+      "props": {
+        "text": "Warsh hawkish repricing (new character, changes rate trajectory entirely)"
+      }
+    },
+    "text-new-2": {
+      "type": "Text",
+      "props": {
+        "text": "Cboe eyes perp futures + Ripple MiCA prelim + UBS on Ethereum + Allfunds on Solana — institutional receipt stack"
+      }
+    },
+    "text-new-3": {
+      "type": "Text",
+      "props": {
+        "text": "Protocol unwind cluster: Synthetix, ENS, Sonic — all in same window as the crash"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-bridge": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-bridge",
+        "text-bridge-1"
+      ]
+    },
+    "h-bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text-bridge-1": {
+      "type": "Text",
+      "props": {
+        "text": "Warsh + DXY is executing directly into the BTC order book. $500M liquidation isn't volatility — it's macro reading itself into on-chain leverage. Geo relief ran and lost. Two tailwinds (oil lower, Iran ease) can't clear one headwind (Warsh). Protocol questions (Synthetix, ENS, Sonic) surface when price stops papering them over."
+      }
+    }
+  }
+}
