@@ -1,16 +1,10 @@
 ## Summary
 
-**defi-monitor skill executed successfully.**
+**Status:** DEFI_MONITOR_OK (NO_CONFIG)
 
-**Status:** `DEFI_MONITOR_OK`
+`memory/on-chain-watches.yml` holds 5 `type: wallet` Base entries; defi-monitor operates on `type: pool` / `type: position` contracts only (wallets are routed to `on-chain-monitor`). With zero pool/position entries, there is nothing to query, compare, or alert on.
 
-**Findings:**
-- No DeFi pool/position watches configured in `memory/on-chain-watches.yml`
-- Current config contains only wallet watches (5 wallets on Base chain, type: wallet)
-- defi-monitor requires **type: pool** or **type: position** contract entries to perform state monitoring (yields, TVL, liquidation risk, etc.)
+**Files modified:**
+- `memory/logs/2026-06-23.md` — appended defi-monitor entry (NO_CONFIG, 16-day streak, no notification per skill spec).
 
-**Action taken:**
-- Verified skill ran cleanly per SKILL.md rule: "If no DeFi positions configured, log DEFI_MONITOR_OK and end"
-- Updated memory/logs/2026-06-21.md with execution details
-
-**Next step:** Operator should seed `memory/on-chain-watches.yml` with DeFi pool/position contracts (Morpho markets, Uniswap/Curve LPs, lending protocol positions, etc.) to activate position monitoring.
+**Follow-up:** Operator action still pending — add `type: pool` / `type: position` entries with the actual Morpho cbBTC market / vault addresses (and any Aerodrome / Aave / Curve LP positions) to lift NO_CONFIG. Carried in `memory/MEMORY.md` under "Operator on-chain config".
