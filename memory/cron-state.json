@@ -261,8 +261,8 @@
     "last_error": "8a874fd\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "evening-recap": {
-    "last_dispatch": "2026-06-22T21:19:08Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-23T21:05:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-22T21:24:57Z",
     "total_runs": 74,
     "total_successes": 29,
@@ -307,8 +307,8 @@
     "success_rate": 1
   },
   "cost-report": {
-    "last_dispatch": "2026-06-23T20:20:55Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-06-23T21:05:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-15T07:45:56Z",
     "total_runs": 34,
     "total_successes": 3,
@@ -498,8 +498,8 @@
     "last_error": "18929af\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "aixbt-pulse": {
-    "last_dispatch": "2026-06-23T09:42:55Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-23T21:05:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-23T09:48:31Z",
     "total_runs": 81,
     "total_successes": 32,
@@ -571,8 +571,8 @@
     "last_error": "5fab1f1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "thought-review": {
-    "last_dispatch": "2026-06-23T07:04:56Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-23T21:05:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-23T07:09:16Z",
     "total_runs": 70,
     "total_successes": 26,
