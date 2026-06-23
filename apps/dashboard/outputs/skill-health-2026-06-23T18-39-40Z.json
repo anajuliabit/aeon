@@ -1,0 +1,296 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-06-23"
+      },
+      "children": [
+        "health-alert",
+        "sep1",
+        "critical-section",
+        "sep2",
+        "degraded-section",
+        "sep3",
+        "no-data-section",
+        "sep4",
+        "healthy-section",
+        "sep5",
+        "summary-section"
+      ]
+    },
+    "health-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "HEALTH: CRITICAL(1)",
+        "message": "Systemic: sandbox-truncation output_tokens=0 — 26 skills affected"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical-heading",
+        "cost-report-stack"
+      ]
+    },
+    "critical-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL",
+        "level": "h3"
+      }
+    },
+    "cost-report-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cost-report-name",
+        "cost-report-metrics",
+        "cost-report-link"
+      ]
+    },
+    "cost-report-name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "cost-report-metrics": {
+      "type": "Text",
+      "props": {
+        "text": "28 fails, 8d down (outputTokens=12, claude-sonnet-4-6) — WAIT-API",
+        "variant": "body"
+      }
+    },
+    "cost-report-link": {
+      "type": "Link",
+      "props": {
+        "label": "→ ISS-025",
+        "href": "memory/issues/ISS-025.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "degraded-table",
+        "degraded-more-intro",
+        "degraded-more-list",
+        "degraded-index-link"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (26, sorted by sr asc)",
+        "level": "h3"
+      }
+    },
+    "degraded-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate"
+        ],
+        "rows": [
+          [
+            "reg-monitor",
+            "7%"
+          ],
+          [
+            "vuln-scanner",
+            "7%"
+          ],
+          [
+            "skill-analytics",
+            "9%"
+          ],
+          [
+            "security-digest",
+            "18%"
+          ],
+          [
+            "list-digest",
+            "26%"
+          ],
+          [
+            "narrative-tracker",
+            "27%"
+          ],
+          [
+            "search-skill",
+            "28%"
+          ],
+          [
+            "market-context-refresh",
+            "28%"
+          ],
+          [
+            "skill-health",
+            "29%"
+          ]
+        ]
+      }
+    },
+    "degraded-more-intro": {
+      "type": "Text",
+      "props": {
+        "text": "+17 more:",
+        "variant": "caption"
+      }
+    },
+    "degraded-more-list": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat / skill-freshness / daily-routine / morning-brief / btc-levels / fleet-control / agent-buzz / defi-monitor / github-trending / aixbt-pulse / evening-recap / thought-review / skill-evals / reflect / action-converter / goal-tracker / self-improve",
+        "variant": "body"
+      }
+    },
+    "degraded-index-link": {
+      "type": "Link",
+      "props": {
+        "label": "See memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-heading",
+        "no-data-content"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (2)",
+        "level": "h3"
+      }
+    },
+    "no-data-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-skills",
+        "no-data-action"
+      ]
+    },
+    "no-data-skills": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard, fork-skill-gap",
+        "variant": "body"
+      }
+    },
+    "no-data-action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy-heading"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY: 9",
+        "level": "h3"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-heading",
+        "summary-stats"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h4"
+      }
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-open",
+        "stat-resolved"
+      ]
+    },
+    "stat-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "14"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}

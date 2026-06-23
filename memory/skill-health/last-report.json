@@ -1,14 +1,14 @@
 {
-  "hash": "b8a1d4e9f23c5670e9e2c4f1a3d8b9c0e7f6a5d2c1b3e4f5a6b7c8d9e0f1a2b3",
-  "last_notified_at": "2026-06-22T19:08:00Z",
-  "last_run_at": "2026-06-22T19:08:00Z",
+  "hash": "c92f7ad3e8b1467209c5d4a0bf38e1c4d6a7b9f5e2c80d3f15b6a4c7e9d2f8b1",
+  "last_notified_at": "2026-06-23T18:38:00Z",
+  "last_run_at": "2026-06-23T18:38:00Z",
   "classification": {
     "critical": ["cost-report"],
-    "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "btc-levels", "daily-routine", "defi-monitor", "evening-recap", "fleet-control", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "morning-brief", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "token-movers", "vuln-scanner"],
+    "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "btc-levels", "daily-routine", "defi-monitor", "evening-recap", "fleet-control", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "morning-brief", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "vuln-scanner"],
     "flapping": [],
-    "warning": ["defi-overview", "on-chain-monitor", "token-alert", "token-pick"],
+    "warning": ["defi-overview", "on-chain-monitor", "token-alert", "token-movers", "token-pick"],
     "healthy_count": 9,
     "no_data": ["operator-scorecard", "fork-skill-gap"]
   },
-  "systemic": "sandbox-truncation (output_tokens=0) — 27 degraded skills share historical signature; cost-report newly CRITICAL with related variant (outputTokens=12)"
+  "systemic": "sandbox-truncation (output_tokens=0) — 26 degraded skills share signature; cost-report still CRITICAL with outputTokens=12 variant (ISS-025 cf=28)"
 }

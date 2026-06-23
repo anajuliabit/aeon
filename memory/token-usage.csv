@@ -501,4 +501,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-23,fleet-control,claude-opus-4-7,16,3556,657261,49286
 2026-06-23,list-digest,claude-opus-4-7,24,11287,1763465,84412
 2026-06-23,agent-buzz,claude-opus-4-7,22,10603,1074304,65208
-2026-06-23,self-improve,claude-opus-4-7,42,11185,2651775,135529
+2026-06-23,skill-health,claude-opus-4-7,17,12699,1065764,92284
