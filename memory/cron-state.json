@@ -44,13 +44,13 @@
     "last_error": "041e064\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-pick": {
-    "last_status": "dispatched",
-    "last_success": "2026-06-23T13:24:44Z",
-    "total_runs": 53,
-    "total_successes": 32,
+    "last_status": "success",
+    "last_success": "2026-06-24T12:15:49Z",
+    "total_runs": 54,
+    "total_successes": 33,
     "total_failures": 21,
     "consecutive_failures": 0,
-    "success_rate": 0.6,
+    "success_rate": 0.61,
     "last_dispatch": "2026-06-24T12:07:10Z",
     "last_failed": "2026-06-21T12:14:38Z",
     "last_error": "cb4accf\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
