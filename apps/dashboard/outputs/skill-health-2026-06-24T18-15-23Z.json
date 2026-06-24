@@ -1,0 +1,224 @@
+{
+  "root": "card-health",
+  "state": {},
+  "elements": {
+    "card-health": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-06-24"
+      },
+      "children": [
+        "alert-degraded",
+        "sep-1",
+        "heading-degraded",
+        "table-degraded",
+        "text-more-degraded",
+        "sep-2",
+        "stack-nodata",
+        "sep-3",
+        "stack-healthy",
+        "sep-4",
+        "stack-summary"
+      ]
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "DEGRADED(27)",
+        "message": "Systemic: sandbox-truncation output_tokens=0 — 27 skills; cost-report recovered cf=28→0 at 03:48Z"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED / FLAPPING",
+        "level": "h3"
+      }
+    },
+    "table-degraded": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "SR",
+          "Status",
+          "Details"
+        ],
+        "rows": [
+          [
+            "vuln-scanner",
+            "7%",
+            "INVESTIGATE",
+            "sandbox-truncation, also ISS-018 prefetch missing"
+          ],
+          [
+            "skill-analytics",
+            "9%",
+            "INVESTIGATE",
+            "sandbox-truncation cluster"
+          ],
+          [
+            "reg-monitor",
+            "10%",
+            "INVESTIGATE",
+            "last ran clean 14:55Z but lifetime sr still bottom"
+          ],
+          [
+            "cost-report",
+            "10% cf=0",
+            "INVESTIGATE",
+            "ISS-025; recovered overnight, structurally not resolved"
+          ],
+          [
+            "security-digest",
+            "19%",
+            "INVESTIGATE",
+            "sandbox-truncation; ran clean 15:11Z"
+          ]
+        ]
+      }
+    },
+    "text-more-degraded": {
+      "type": "Text",
+      "props": {
+        "text": "+22 more — see memory/issues/INDEX.md",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-nodata",
+        "text-nodata-autoresearch",
+        "text-nodata-scorecard",
+        "text-nodata-gap"
+      ]
+    },
+    "heading-nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "text-nodata-autoresearch": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch (workflow_dispatch — OK)",
+        "variant": "body"
+      }
+    },
+    "text-nodata-scorecard": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard (first tick 6-29)",
+        "variant": "body"
+      }
+    },
+    "text-nodata-gap": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap (first tick 6-28)",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-healthy": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-healthy",
+        "stat-healthy"
+      ]
+    },
+    "heading-healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "9"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-summary",
+        "grid-summary"
+      ]
+    },
+    "heading-summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "grid-summary": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-open-issues",
+        "stat-resolved",
+        "stat-filed"
+      ]
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "14"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed this run",
+        "value": "0"
+      }
+    }
+  }
+}
