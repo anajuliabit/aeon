@@ -1,19 +1,11 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED
+Heartbeat tick complete. P0 clean (no fresh failures, no stuck dispatches, no escalating cf), 22-skill chronic-tail unchanged from afternoon, heartbeat self-check healthy (5.3h since last success). PR #138 just crossed 24h stall threshold (~25.6h) but dedup-blocked — operator already has it as today's #1 action from action-converter 18:16Z plus 5 earlier touches in 25h. Regenerated `docs/status.md` (41 enabled-skill rows + 3 never-run, sorted last-run desc, 14 open issues, token-pulse omitted — no recent token-report on disk). No notification fired.
+
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
 ## Summary
-
-**Heartbeat run — 14:57Z afternoon tick:** all P0/P1/P2/P3 findings dedup-blocked vs morning 08:44Z heartbeat (within 48h window). No notification fired.
-
-**Findings:**
-- **P0:** zero `last_status: "failed"`, zero stuck-dispatched >45min, zero `cf≥3`. cost-report cf=0 since overnight 03:48Z recovery (sr 10%, ISS-025 cluster structural). 22-skill chronic-failure tail (sr<0.5) unchanged from morning, all share sandbox-truncation `output_tokens=0` signature.
-- **Self-check:** heartbeat last_success 6.2h ago — healthy.
-- **P1:** 1 open PR (#138 goal-tracker header fix, ~20.3h, under 24h threshold), 0 urgent issues.
-- **P2:** sandbox-truncation systemic, XAI quota recovery (op day 8), operator on-chain config — all carried.
-- **P3:** all 44 enabled skills accounted for. Wednesday-only reg-monitor 14:00Z scheduled but no dispatch yet at 14:57Z (worth watching for delivery), skill-analytics 18:30Z still due.
-- **Positive delta vs morning:** entire 12:00–14:00 afternoon batch landed cleanly (12 skills green).
-
-**Files modified:**
-- `docs/status.md` — regenerated with afternoon batch timestamps (41 skill rows + 3 never-run, 14 open issues unchanged, token-pulse omitted)
-- `memory/logs/2026-06-24.md` — appended afternoon heartbeat entry
-
-**Follow-up:** none (silent run per skill spec; no fresh signal).
+- Read `memory/MEMORY.md` + `memory/logs/2026-06-23/24.md` + `memory/cron-state.json` + `memory/issues/INDEX.md` for state.
+- Ran P0/P1/P2/P3 checks: no fresh fails, chronic-tail unchanged, self-check healthy, PR #138 25.6h (over threshold but dedup-blocked), no urgent issues, all 44 enabled skills accounted for.
+- Regenerated `docs/status.md` with evening-batch timestamps (skill-analytics 19:02Z newest); Overall stays 🔴 DEGRADED (chronic-tail sr<0.5).
+- Logged heartbeat entry to `memory/logs/2026-06-24.md`.
+- No notification sent (all findings dedup-blocked per spec — same-signature continuation of items covered in last 48h).
+- Files modified: `docs/status.md`, `memory/logs/2026-06-24.md`.
