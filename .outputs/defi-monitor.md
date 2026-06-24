@@ -1,10 +1,7 @@
 ## Summary
 
-**Status:** DEFI_MONITOR_OK (NO_CONFIG)
+Executed `skills/defi-monitor/SKILL.md`. Read `memory/on-chain-watches.yml`: 5 `type: wallet` entries on Base, 0 `type: pool` / `type: position` entries (day 17 NO_CONFIG, same blocker as 6-22/6-23). Per skill spec, logged `DEFI_MONITOR_OK` to `memory/logs/2026-06-24.md` and ended — no notification fired.
 
-`memory/on-chain-watches.yml` holds 5 `type: wallet` Base entries; defi-monitor operates on `type: pool` / `type: position` contracts only (wallets are routed to `on-chain-monitor`). With zero pool/position entries, there is nothing to query, compare, or alert on.
+**Files modified:** `memory/logs/2026-06-24.md` (defi-monitor section appended).
 
-**Files modified:**
-- `memory/logs/2026-06-23.md` — appended defi-monitor entry (NO_CONFIG, 16-day streak, no notification per skill spec).
-
-**Follow-up:** Operator action still pending — add `type: pool` / `type: position` entries with the actual Morpho cbBTC market / vault addresses (and any Aerodrome / Aave / Curve LP positions) to lift NO_CONFIG. Carried in `memory/MEMORY.md` under "Operator on-chain config".
+**Follow-up:** Operator action still queued — add `type: pool` entries for Morpho cbBTC leverage market and REPPO/MAMO LP contracts once exact market/vault addresses are confirmed on-chain.
