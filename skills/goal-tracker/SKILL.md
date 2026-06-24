@@ -12,7 +12,7 @@ Read `memory/MEMORY.md` (for the goal list) and `memory/goal-state.json` (prior-
 
 ## Inputs
 
-**Primary goal source:** `memory/MEMORY.md` section titled `## Goals`. If absent, fall back to `## Next Priorities`. If both are missing or empty, send `./notify "Goal Tracker — NO_GOALS (add a '## Goals' section to memory/MEMORY.md)"` and exit.
+**Primary goal source:** `memory/MEMORY.md` section titled `## Current Goals`. If absent, fall back (in order) to `## Goals`, then `## Next Priorities`. If all are missing or empty, send `./notify "Goal Tracker — NO_GOALS (add a '## Current Goals' section to memory/MEMORY.md)"` and exit.
 
 **Evidence sources (use every source that responds; record each in the source-status footer):**
 - `memory/logs/*.md` — last 30 days. Case-insensitive whole-word match against keywords parsed from each goal title.
@@ -106,7 +106,7 @@ Omit any status section that has zero goals.
 
 ### 7. Update MEMORY.md safely
 
-- Move DONE goals to a `## Completed Goals` section with completion date. Never delete goals silently.
+- Move DONE goals to a `## Recently Cleared` section with completion date (if that section is absent, fall back to `## Completed Goals`). Never delete goals silently.
 - Annotate BLOCKED goals inline with the blocker note, but keep them in the active list.
 - Do **not** reorder, rephrase, or rewrite the user's goal text.
 - Only write MEMORY.md if at least one goal's status changed since the last run. Otherwise leave the file untouched.
