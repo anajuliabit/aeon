@@ -1,0 +1,600 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-06-24"
+      },
+      "children": [
+        "overview_stack",
+        "sep1",
+        "winners_heading",
+        "winners_table",
+        "sep2",
+        "losers_heading",
+        "losers_table",
+        "sep3",
+        "anchors_heading",
+        "anchors_grid",
+        "sep4",
+        "tweet_heading",
+        "tweet_stack",
+        "sep5",
+        "paper_heading",
+        "paper_link",
+        "paper_text",
+        "sep6",
+        "issues_heading",
+        "issues_alert",
+        "sep7",
+        "hn_heading",
+        "hn_stack"
+      ]
+    },
+    "overview_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "overview_text"
+      ]
+    },
+    "overview_text": {
+      "type": "Text",
+      "props": {
+        "text": "post-cascade stabilization — BTC −0.47%, breadth meh, but BEAT prints +58% and UB extends −37%. tape calmer than 6-23 but not bouncing.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "BEAT",
+            "$2.68",
+            "+58.4%",
+            "+24.4%",
+            "#82 TRENDING+UP MAJOR"
+          ],
+          [
+            "BTW",
+            "$0.101",
+            "+10.4%",
+            "+49.9%",
+            "#157 carry from 6-23"
+          ],
+          [
+            "DYDX",
+            "$0.144",
+            "+8.5%",
+            "+13.5%",
+            ""
+          ],
+          [
+            "GRASS",
+            "$0.443",
+            "+6.8%",
+            "",
+            "#136 TRENDING"
+          ],
+          [
+            "TIBBIR",
+            "$0.110",
+            "+6.6%",
+            "",
+            ""
+          ],
+          [
+            "FARTCOIN",
+            "$0.129",
+            "+4.8%",
+            "",
+            ""
+          ],
+          [
+            "JTO",
+            "$0.66",
+            "+4.3%",
+            "",
+            ""
+          ],
+          [
+            "ZANO",
+            "$9.61",
+            "+4.3%",
+            "",
+            ""
+          ],
+          [
+            "ETHFI",
+            "$0.345",
+            "+4.0%",
+            "",
+            ""
+          ],
+          [
+            "AVAX",
+            "$6.39",
+            "+3.6%",
+            "",
+            "#34 first rank-≤40 green this week"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "UB",
+            "$0.059",
+            "−37.3%",
+            "−49.7%",
+            "extends 6-23 −33.6%, full giveback ongoing"
+          ],
+          [
+            "H",
+            "$0.103",
+            "−16.0%",
+            "−61.4%",
+            "unlock day post-$36M exploit"
+          ],
+          [
+            "RE",
+            "$0.73",
+            "−12.5%",
+            "",
+            ""
+          ],
+          [
+            "WLD",
+            "$0.524",
+            "−10.6%",
+            "",
+            "#45 MAJOR, 3rd day red"
+          ],
+          [
+            "GRAM",
+            "$1.56",
+            "−8.8%",
+            "",
+            "#26 MAJOR"
+          ],
+          [
+            "EIGEN",
+            "$0.244",
+            "−6.7%",
+            "",
+            "3rd-day reversal of 6-22 HIGH 9/10 pick, at invalidation"
+          ],
+          [
+            "SKYAI",
+            "",
+            "−6.7%",
+            "",
+            ""
+          ],
+          [
+            "B",
+            "",
+            "−6.6%",
+            "",
+            ""
+          ],
+          [
+            "VELVET",
+            "",
+            "−6.4%",
+            "",
+            ""
+          ],
+          [
+            "NIGHT",
+            "",
+            "−6.2%",
+            "",
+            ""
+          ],
+          [
+            "VVV",
+            "",
+            "−5.7%",
+            "",
+            ""
+          ],
+          [
+            "MORPHO",
+            "",
+            "−5.3%",
+            "",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "anchors_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Anchors",
+        "level": "h2"
+      }
+    },
+    "anchors_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "btc_stat",
+        "eth_stat",
+        "sol_stat",
+        "hype_stat"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62,571",
+        "delta": "−0.47%",
+        "trend": "down"
+      }
+    },
+    "eth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,669",
+        "delta": "−1.03%",
+        "trend": "down"
+      }
+    },
+    "sol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$69.43",
+        "delta": "−1.13%",
+        "trend": "down"
+      }
+    },
+    "hype_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$62.04",
+        "delta": "−3.19%",
+        "trend": "down"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweet_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto_section",
+        "ai_section",
+        "dev_section"
+      ]
+    },
+    "crypto_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto_subheading",
+        "crypto_text1",
+        "crypto_text2",
+        "crypto_text3",
+        "crypto_text4"
+      ]
+    },
+    "crypto_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "crypto_text1": {
+      "type": "Text",
+      "props": {
+        "text": "Strategy bought 24,869 BTC for $2.01B (top-tier single buy)."
+      }
+    },
+    "crypto_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Bitmine added 101.9k ETH ($236M)."
+      }
+    },
+    "crypto_text3": {
+      "type": "Text",
+      "props": {
+        "text": "Institutional accumulation into the dip."
+      }
+    },
+    "crypto_text4": {
+      "type": "Text",
+      "props": {
+        "text": "SEC published first formal crypto-security classification framework."
+      }
+    },
+    "ai_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_subheading",
+        "ai_text1",
+        "ai_text2",
+        "ai_text3"
+      ]
+    },
+    "ai_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "ai_text1": {
+      "type": "Text",
+      "props": {
+        "text": "Claude outage 6-23 14:02 UTC, peaked at 7,119 down-reports — all models hit, chat + Code."
+      }
+    },
+    "ai_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic split programmatic usage from chat sub limits 6-15: dedicated monthly credit for Agent SDK / GH Actions / 3rd-party."
+      }
+    },
+    "ai_text3": {
+      "type": "Text",
+      "props": {
+        "text": "Fable 5 GA at 95% SWE-bench Verified, $10/$50 per M tokens."
+      }
+    },
+    "dev_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev_subheading",
+        "dev_text1",
+        "dev_text2",
+        "dev_text3"
+      ]
+    },
+    "dev_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "dev_text1": {
+      "type": "Text",
+      "props": {
+        "text": "Google donated A2A (Agent2Agent) protocol to Linux Foundation — vendor-neutral standard."
+      }
+    },
+    "dev_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Eclipse Theia AI IDE launched."
+      }
+    },
+    "dev_text3": {
+      "type": "Text",
+      "props": {
+        "text": "Rust CLI proxy claiming 60–90% LLM-token reduction on common dev commands."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AOHP: Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction",
+        "href": "https://arxiv.org/abs/2606.23449",
+        "source": "THU-AIR",
+        "score": "↑21"
+      }
+    },
+    "paper_text": {
+      "type": "Text",
+      "props": {
+        "text": "Android fork treating agents as first-class OS actors — adaptive UI, agent-native runtime, secure information flow. +21% task completion, −51% token cost vs vanilla AOSP. Relevant: aeon's whole pain is agents wedged into application-centric OSes."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "issues_alert": {
+      "type": "Alert",
+      "props": {
+        "message": "No new issues across anajuliabit/*",
+        "type": "success"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_1",
+        "hn_2",
+        "hn_3",
+        "hn_4",
+        "hn_5",
+        "hn_6"
+      ]
+    },
+    "hn_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Fired by Google for creating the Workspace CLI",
+        "href": "https://news.ycombinator.com/item?id=48649011",
+        "source": "policy",
+        "score": "465p/285c"
+      }
+    },
+    "hn_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "FUTO Swipe — new on-device swipe-typing model",
+        "href": "https://news.ycombinator.com/item?id=48648619",
+        "source": "devtools",
+        "score": "485p/147c"
+      }
+    },
+    "hn_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The worthlessness of Vitamin D is mildly exaggerated",
+        "href": "https://news.ycombinator.com/item?id=48647486",
+        "source": "science",
+        "score": "278p/188c"
+      }
+    },
+    "hn_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Vulnerability reports are not special anymore",
+        "href": "https://news.ycombinator.com/item?id=48653216",
+        "source": "security",
+        "score": "224p/120c"
+      }
+    },
+    "hn_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Qwen-AgentWorld: Language World Models for General Agents",
+        "href": "https://news.ycombinator.com/item?id=48654351",
+        "source": "agents",
+        "score": "69p/14c"
+      }
+    },
+    "hn_6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "In memory of the man who put red and green squiggles under words",
+        "href": "https://news.ycombinator.com/item?id=48648959",
+        "source": "culture",
+        "score": "329p/44c"
+      }
+    }
+  }
+}

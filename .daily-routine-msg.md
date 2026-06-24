@@ -1,46 +1,47 @@
-*daily routine — 2026-06-23*
+*daily routine — 2026-06-24*
 
-_broad risk-off — 19/76 top-100 alts green (25%), median −2.1%; majors red (BTC −1.7%, SOL −4.8%, HYPE −3.0%), but DEXE rips +77% on $110M vol._
+_post-cascade stabilization — BTC −0.47%, breadth meh, but BEAT prints +58% and UB extends −37%. tape calmer than 6-23 but not bouncing._
 
-*top 10 winners (24h)*
-1. DEXE: $24.06 (+76.8%) · 7d +23.8% · $110M vol
-2. GWEI: $0.1226 (+14.1%) · 7d −13.6%
-3. LAB: $16.90 (+13.2%) · 7d +68.9% [MAJOR][BREAKOUT]
-4. RAIN: $0.01593 (+10.6%) · 7d +16.3% [MAJOR]
-5. DYDX: $0.131 (+8.8%) · 7d +7.2%
-6. B: $0.237 (+8.0%) · 7d −10.8%
-7. AWE: $0.061 (+7.1%) [MICROCAP]
-8. TEL: $0.00255 (+6.8%)
-9. GRAM: $1.73 (+6.4%) [MAJOR]
-10. AERO: $0.537 (+5.3%) · 7d +22.9% [TRENDING+UP]
+*top winners (24h)*
+1. BEAT: $2.68 (+58.4%) · 7d +24.4% · #82 [TRENDING+UP MAJOR]
+2. BTW: $0.101 (+10.4%) · 7d +49.9% · #157 [carry from 6-23]
+3. DYDX: $0.144 (+8.5%) · 7d +13.5%
+4. GRASS: $0.443 (+6.8%) · #136 [TRENDING]
+5. TIBBIR: $0.110 (+6.6%)
+6. FARTCOIN: $0.129 (+4.8%)
+7. JTO: $0.66 (+4.3%)
+8. ZANO: $9.61 (+4.3%)
+9. ETHFI: $0.345 (+4.0%)
+10. AVAX: $6.39 (+3.6%) · #34 [first rank-≤40 green this week]
 
-*top 10 losers (24h)*
-1. UB: $0.0887 (−35.7%) · 7d −22.5% — full roundtrip from yesterday's +21.5% winner
-2. H: $0.123 (−28.5%) · 7d −47.7% — continuation
-3. EIGEN: $0.259 (−15.3%) · 7d +19.1% [CAPITULATION] — reverses yesterday's HIGH 9/10 pick
-4. SKYAI: $0.331 (−14.1%)
-5. BP: $0.586 (−13.0%) · 7d +29.7%
-6. BTW: $0.0894 (−11.5%) · 7d +26.5%
-7. TRAC: $0.298 (−10.3%)
-8. BILL: $0.0542 (−9.5%) — reverses yesterday's +15% winner
-9. WLD: $0.587 (−8.7%) [MAJOR]
-10. CHZ: $0.0192 (−8.4%) · 7d −20.3%
+*top losers (24h)*
+1. UB: $0.059 (−37.3%) · 7d −49.7% — extends 6-23 −33.6%, full giveback ongoing
+2. H: $0.103 (−16.0%) · 7d −61.4% — unlock day post-$36M exploit
+3. RE: $0.73 (−12.5%)
+4. WLD: $0.524 (−10.6%) · #45 [MAJOR, 3rd day red]
+5. GRAM: $1.56 (−8.8%) · #26 [MAJOR]
+6. EIGEN: $0.244 (−6.7%) — 3rd-day reversal of 6-22 HIGH 9/10 pick, at invalidation
+7. SKYAI −6.7%, B −6.6%, VELVET −6.4%, NIGHT −6.2%, VVV −5.7%, MORPHO −5.3%
+
+anchors: BTC $62,571 −0.47%, ETH $1,669 −1.03%, SOL $69.43 −1.13%, HYPE $62.04 −3.19%.
 
 *tweet roundup*
-*crypto* — Taiko halted its L2 after a $1.7M bridge exploit (forged withdrawal proofs). BoE softened on stablecoins — $50B issuance cap ahead of 2027 market. Schwab + Cboe entering prediction-market trading, direct Polymarket/Kalshi pressure.
-*ai* — OpenAI shipped GPT-5.4 + Pro (native computer-use, 1M ctx). Anthropic at $30B revenue run rate (80x Q1 growth); Claude Code at $2.5B ARR in 9 months.
-*dev* — Fable 5 GA in Copilot — Stripe migrated a 50M-line codebase in a day. Claude Agent SDK released for TS/Python (MCP + sub-agents). NVIDIA RTX Spark Superchip: 128GB unified, 1 PFLOP on a laptop.
+*crypto* — Strategy bought 24,869 BTC for $2.01B (top-tier single buy). Bitmine added 101.9k ETH ($236M). institutional accumulation into the dip. SEC published first formal crypto-security classification framework.
+*ai* — Claude outage 6-23 14:02 UTC, peaked at 7,119 down-reports — all models hit, chat + Code. Anthropic split programmatic usage from chat sub limits 6-15: dedicated monthly credit for Agent SDK / GH Actions / 3rd-party. Fable 5 GA at 95% SWE-bench Verified, $10/$50 per M tokens.
+*dev* — Google donated A2A (Agent2Agent) protocol to Linux Foundation — vendor-neutral standard. Eclipse Theia AI IDE launched. Rust CLI proxy claiming 60–90% LLM-token reduction on common dev commands.
 
 *paper of the day*
-"CLI-Universe: Towards Verifiable Task Synthesis Engine for Terminal Agents" — ↑18. Capability-taxonomy-grounded synthesis pipeline for terminal-agent training data; directly relevant to the agent-tooling stack.
-https://arxiv.org/abs/2606.22883
+"AOHP: Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction" — THU-AIR · ↑21
+Android fork treating agents as first-class OS actors — adaptive UI, agent-native runtime, secure information flow. +21% task completion, −51% token cost vs vanilla AOSP. relevant: aeon's whole pain is agents wedged into application-centric OSes.
+https://arxiv.org/abs/2606.23449
 
 *github issues*
-no new issues across anajuliabit/* — clean day.
+no new issues across anajuliabit/* — GITHUB_ISSUES_OK.
 
 *hn digest*
-1. Steam Machine launches today (1465pts/1290c) — Valve's console-form-factor SteamOS box ships — https://news.ycombinator.com/item?id=48632884
-2. Deno Desktop (1055pts/381c) — Deno ships native desktop runtime, another bid against Electron — https://news.ycombinator.com/item?id=48626137
-3. Flock-powered chiefs stalking women (482pts/196c) — ALPR misuse case; warrants-for-fleet-data argument hardens — https://news.ycombinator.com/item?id=48634694
-4. Canada's nuclear renaissance — up to 10 reactors by 2040 (433pts/274c) — https://news.ycombinator.com/item?id=48634585
-5. GLM-5.2 how to run locally (321pts/141c) — Unsloth's local-inference guide for the new Chinese OS model — https://news.ycombinator.com/item?id=48636377
+1. [policy] Fired by Google for creating the Workspace CLI (465p/285c) — https://news.ycombinator.com/item?id=48649011
+2. [devtools] FUTO Swipe — new on-device swipe-typing model (485p/147c) — https://news.ycombinator.com/item?id=48648619
+3. [science] The worthlessness of Vitamin D is mildly exaggerated (278p/188c) — https://news.ycombinator.com/item?id=48647486
+4. [security] Vulnerability reports are not special anymore — filippo (224p/120c) — https://news.ycombinator.com/item?id=48653216
+5. [agents] Qwen-AgentWorld: Language World Models for General Agents (69p/14c) — https://news.ycombinator.com/item?id=48654351
+6. [culture] In memory of the man who put red and green squiggles under words (329p/44c) — https://news.ycombinator.com/item?id=48648959
