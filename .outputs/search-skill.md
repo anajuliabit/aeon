@@ -1,15 +1,16 @@
+Per skill spec, exit mode `SEARCH_SKILL_NO_GAP` is silent — no notification, no PR, no install. Log entry appended to `memory/logs/2026-06-24.md`.
+
 ## Summary
 
-**search-skill executed → exit mode: SEARCH_SKILL_EMPTY (silent, log-only).**
+**Mode:** `SEARCH_SKILL_NO_GAP` (silent log-only per skill spec).
 
-- **Query derivation:** `llm cost`, source = `memory/cron-state.json` (cost-report cf=23, sr=0.12, ISS-025 critical sandbox-truncation widening to cf=18 this morning).
-- **Catalogs:** `npx skills find` returned 5 hits (ok); `./add-skill --list` sandbox-blocked for vercel-labs / anthropics / BankrBot; skills.sh JS-rendered (npx covers the same surface).
-- **Hard-gate eval:** All 5 candidates dropped.
-  - `posthog/skills@exploring-llm-costs` + `posthog/ai-plugin@exploring-llm-costs` — gate 2 fail (require PostHog instrumentation with `$ai_generation`/`$ai_embedding` events; we don't have PostHog).
-  - `bagelhole/devops-security-agent-skills@llm-cost-optimization` — gate 1 fail (Python/LiteLLM optimization playbook, not an executable cron-style cost reporter).
-  - `simota/agent-skills@oracle` — gate 1 fail (AI/ML design playbook, not a cost reporter).
-  - `avelikiy/great_cto@cost-model` — gates 1+2 fail (project-locked to great_cto board's `/api/cost`).
-- **Diagnosis:** cost-report's failure is sandbox-truncation (ISS-025), not a capability gap — external swap won't help. Root cause work belongs on ISS-025.
-- **Files modified:** `memory/logs/2026-06-23.md` (appended search-skill block per skill spec).
-- **No notification sent** (correct per spec: silence on EMPTY prevents training operator to ignore the channel).
-- **No PR / no install** (correct per spec: install only on OK_INSTALLED).
+**Why no gap:**
+- **Failing skills (a):** all 22 chronic-tail skills sit at cf=0 today after 6-21 recoveries; they share the `output_tokens=0` sandbox-truncation signature (ISS-019/020/021/024/025). Per 6-23 cost-report precedent, sandbox-truncation is infra, not capability — external swap won't help.
+- **Open issues (b):** only ISS-024 is in the qualifying category set, but skill-health is internal monitoring (not externally replaceable).
+- **MEMORY goals (c):** sandbox-truncation, XAI quota top-up, on-chain config — all infra/operator-blocked, no concrete capability word.
+- **Log signals (d):** same `missing-secret` / `missing prefetch` / operator-config noise as 6-09 through 6-23 streak.
+
+**Files modified:**
+- `memory/logs/2026-06-24.md` — appended search-skill log entry.
+
+**No PR, no notification, no install** — per spec, silence is correct on NO_GAP runs.
