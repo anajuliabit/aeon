@@ -1,51 +1,37 @@
-I've executed the Regulatory Monitor skill for **2026-06-18**. Here's a summary of what I found:
+*reg monitor — 2026-06-24*
+4 act / 4 watch · cftc-state preemption war widens, first active crypto etf, celsius civil closure.
 
-## Sources Checked
+*ACT*
+• [CFTC Sues Kentucky](https://www.cftc.gov/PressRoom/PressReleases/9260-26) — US federal · litigation
+  CFTC filed in federal court 6-23 seeking to enjoin KY's 14.25% excise on DCM event-contract notional + KY's state-court suits vs Kalshi/Polymarket. 9th state CFTC has sued (MN/IL/RI/NM/KY on table).
+  ⏰ no schedule yet; reply window typically ~21d
+  📊 prediction-market angle: directly defends Kalshi/Polymarket sports contracts under federal preemption. A loss flips the entire state-DCM perimeter — tradeable as the regime question itself.
 
-1. **Federal Register** (US rulemakings): ✅ OK - Searched for "prediction market OR digital asset OR stablecoin OR cryptocurrency OR AI agent" from 2026-06-11 onward — **0 items found**
+• [SEC approves NYSE Arca active crypto ETF](https://www.federalregister.gov/documents/2026/06/17/2026-12160/self-regulatory-organizations-nyse-arca-inc-order-granting-approval-of-a-proposed-rule-change-as) — US federal · final order
+  Order granted 6-17 approving NYSE Arca rule change to list T. Rowe Price's actively-managed crypto ETF. First active (non-passive) crypto product cleared by SEC.
+  📊 prediction-market angle: rerates "SEC approves spot/active crypto ETF for X" markets across alts — managers can now hold a basket, not just BTC/ETH spot.
 
-2. **SEC Press Releases RSS**: ✅ OK - Filtered for crypto/digital asset/prediction/AI keywords since June 11 — **0 relevant items**
+• [CFTC closes Celsius civil action vs Mashinsky](https://www.cftc.gov/PressRoom/PressReleases/9256-26) — US federal · consent order
+  SDNY entered consent order 6-18: permanent anti-fraud injunction + permanent trading + registration bans. Civil bookend to the May-2025 criminal 12yr / $48.4M forfeiture.
+  📊 angle: closes the playbook on the 2022-cycle CEX-yield-fraud archetype.
 
-3. **CFTC Press Releases RSS**: ❌ FAIL - URL `https://www.cftc.gov/RSS/RSSPR/rsspr.xml` returned HTTP 404 (Not Found). Manual web searches for CFTC press releases also found no recent relevant items.
+• [Curtis-Schiff Prediction Markets Are Gambling Act](https://www.curtis.senate.gov/press-releases/curtis-schiff-introduce-bipartisan-legislation-to-ban-sports-prediction-market-contracts/) — US federal · bill introduced
+  Bipartisan (R-UT + D-CA) bill to prohibit any CFTC-registered DCM from listing contracts that resemble a sports bet or casino-style game. Joins BETS OFF (S.4115/H.R.7955) cluster — gaming lobby + state AGs pushing same direction CFTC is litigating against.
+  📊 angle: if any of this cluster moves out of committee, sports-event-contract TAM is the directly priced thing.
 
-4. **WebSearch** (gap-filler): ✅ OK - Searched for:
-   - "prediction market" (bill OR legislation OR ban OR ruling) 2026
-   - "Polymarket" OR "Kalshi" (CFTC OR state OR ruling OR investigation) 2026
-   - stablecoin (legislation OR regulation OR enforcement) 2026
-   - "AI agent" (regulation OR liability OR legislation) 2026
-   - ESMA OR MiCA (enforcement OR guidance) 2026
-   
-   No concrete regulatory developments (bills introduced/advancing, agency rulemakings, enforcement actions, court rulings, official guidance) meeting the skill's criteria were found in search results.
+*WATCH*
+• [24X National Exchange — tokenized securities live](https://www.federalregister.gov/documents/2026/06/22/2026-12403/self-regulatory-organizations-24x-national-exchange-llc-notice-of-filing-and-immediate-effectiveness) — US federal · immediate effectiveness
+  SEC notice 6-22, rule change effective on filing. tokenized-securities exchange now operational under SRO framework.
 
-5. **Congress.gov**: ⏭️ SKIP - No `CONGRESS_GOV_API_KEY` environment variable set (graceful degradation as per spec)
+• [SEC+CFTC joint NPRM — re-defining "swap" / "security-based swap"](https://www.federalregister.gov/documents/2026/06/24/2026-12743/joint-request-for-comment-on-further-definition-of-swap-and-security-based-swap-and-on-alternative) — US federal · RFC
+  joint reopen of the core derivative definitions, hooked to "innovative products + alternative compliance." perpetuals + event contracts sit inside this debate.
 
-## Deduplication & Filtering
+• [FinCEN+banking agencies — GENIUS Act stablecoin CIP NPRM](https://www.federalregister.gov/documents/2026/06/22/2026-12460/permitted-payment-stablecoin-issuer-customer-identification-program) — US federal · NPRM
+  proposed customer-id rules for permitted payment stablecoin issuers. last week's OCC AML/CFT NPRM (FR 2026-12692) is the parallel track.
 
-- Checked against `memory/topics/reg-monitor-seen.md` (17 previously seen URLs)
-- Applied strict filtering criteria:
-  - Discarded opinion pieces, think-tank posts, academic papers (unless directly cited in bill/rule/ruling)
-  - Discarded industry lobbying announcements without bill/docket links
-  - Discarded generic crypto news without regulatory action
-  - Discarded rumors without concrete document/docket/case numbers
-- Kept only: bills introduced/advancing, agency rulemakings, enforcement actions, court rulings, official guidance, international regulatory coordination
+• [CFTC RFC — 24/7 trading + perpetual energy contracts](https://www.cftc.gov/PressRoom/PressReleases/9259-26) — US federal · RFC
+  perpetuals + round-the-clock listing model now formally on the table for non-crypto commodities. confirms the Kalshi BTCPERP-approval (5-29) wasn't a one-off.
 
-## Results
-
-**No items cleared the ACT/WATCH/CONTEXT thresholds** after scoring and triage. The skill executed successfully but found no new regulatory developments meeting the criteria.
-
-## Status
-
-- **No notification sent** (as per skill spec: "If all buckets empty after filtering: skip notify, write REG_MONITOR_OK to the log, end")
-- **Log entry written** to `memory/logs/2026-06-18.md` with status: `REG_MONITOR_OK`
-- **Sources status**: federal-register=ok · sec=ok · cftc=fail · websearch=ok · congress=skip
-- **No URLs added** to seen file (since no items found)
-
-## Summary
-
-This appears to be a quiet week for regulatory developments affecting prediction markets, crypto, and AI agents. All primary authoritative sources (Federal Register, SEC) returned no relevant items from the past 7 days, and web searches found no concrete legislative or enforcement actions. The CFTC RSS feed appears to be unavailable at the expected URL.
-
-**Sources:**
-- Federal Register API: https://www.federalregister.gov/api/v1/documents.json?conditions[publication_date][gte]=2026-06-11&conditions[term]=prediction+market+OR+digital+asset+OR+stablecoin+OR+cryptocurrency+OR+AI+agent&per_page=40&order=newest
-- SEC RSS: https://www.sec.gov/news/pressreleases.rss
-- CFTC RSS: https://www.cftc.gov/RSS/RSSPR/rsspr.xml (404)
-- WebSearch queries as listed above
+—
+sources: federal-register=ok · sec=ok · cftc=ok(rss 404 → html ok) · websearch=ok · congress=skip
+14 scored · 4 act / 4 watch / 0 context

@@ -1,0 +1,414 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reg monitor — 2026-06-24",
+        "description": "4 act / 4 watch · cftc-state preemption war widens, first active crypto etf, celsius civil closure."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sep1",
+        "heading_act",
+        "stack_act",
+        "sep2",
+        "heading_watch",
+        "stack_watch",
+        "sep3",
+        "footer"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_act": {
+      "type": "Heading",
+      "props": {
+        "text": "ACT",
+        "level": "h2"
+      }
+    },
+    "stack_act": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "item_act_1",
+        "item_act_2",
+        "item_act_3",
+        "item_act_4"
+      ]
+    },
+    "item_act_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_act_1",
+        "badge_type_act_1",
+        "text_details_act_1",
+        "text_timeline_act_1",
+        "text_angle_act_1"
+      ]
+    },
+    "link_act_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC Sues Kentucky",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9260-26",
+        "source": "CFTC"
+      }
+    },
+    "badge_type_act_1": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal · litigation",
+        "variant": "secondary"
+      }
+    },
+    "text_details_act_1": {
+      "type": "Text",
+      "props": {
+        "text": "CFTC filed in federal court 6-23 seeking to enjoin KY's 14.25% excise on DCM event-contract notional + KY's state-court suits vs Kalshi/Polymarket. 9th state CFTC has sued (MN/IL/RI/NM/KY on table)."
+      }
+    },
+    "text_timeline_act_1": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ no schedule yet; reply window typically ~21d",
+        "variant": "caption"
+      }
+    },
+    "text_angle_act_1": {
+      "type": "Text",
+      "props": {
+        "text": "📊 prediction-market angle: directly defends Kalshi/Polymarket sports contracts under federal preemption. A loss flips the entire state-DCM perimeter — tradeable as the regime question itself.",
+        "variant": "muted"
+      }
+    },
+    "item_act_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_act_2",
+        "badge_type_act_2",
+        "text_details_act_2",
+        "text_angle_act_2"
+      ]
+    },
+    "link_act_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SEC approves NYSE Arca active crypto ETF",
+        "href": "https://www.federalregister.gov/documents/2026/06/17/2026-12160/self-regulatory-organizations-nyse-arca-inc-order-granting-approval-of-a-proposed-rule-change-as",
+        "source": "Federal Register"
+      }
+    },
+    "badge_type_act_2": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal · final order",
+        "variant": "secondary"
+      }
+    },
+    "text_details_act_2": {
+      "type": "Text",
+      "props": {
+        "text": "Order granted 6-17 approving NYSE Arca rule change to list T. Rowe Price's actively-managed crypto ETF. First active (non-passive) crypto product cleared by SEC."
+      }
+    },
+    "text_angle_act_2": {
+      "type": "Text",
+      "props": {
+        "text": "📊 prediction-market angle: rerates \"SEC approves spot/active crypto ETF for X\" markets across alts — managers can now hold a basket, not just BTC/ETH spot.",
+        "variant": "muted"
+      }
+    },
+    "item_act_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_act_3",
+        "badge_type_act_3",
+        "text_details_act_3",
+        "text_angle_act_3"
+      ]
+    },
+    "link_act_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC closes Celsius civil action vs Mashinsky",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9256-26",
+        "source": "CFTC"
+      }
+    },
+    "badge_type_act_3": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal · consent order",
+        "variant": "secondary"
+      }
+    },
+    "text_details_act_3": {
+      "type": "Text",
+      "props": {
+        "text": "SDNY entered consent order 6-18: permanent anti-fraud injunction + permanent trading + registration bans. Civil bookend to the May-2025 criminal 12yr / $48.4M forfeiture."
+      }
+    },
+    "text_angle_act_3": {
+      "type": "Text",
+      "props": {
+        "text": "📊 angle: closes the playbook on the 2022-cycle CEX-yield-fraud archetype.",
+        "variant": "muted"
+      }
+    },
+    "item_act_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_act_4",
+        "badge_type_act_4",
+        "text_details_act_4",
+        "text_angle_act_4"
+      ]
+    },
+    "link_act_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Curtis-Schiff Prediction Markets Are Gambling Act",
+        "href": "https://www.curtis.senate.gov/press-releases/curtis-schiff-introduce-bipartisan-legislation-to-ban-sports-prediction-market-contracts/",
+        "source": "Senate"
+      }
+    },
+    "badge_type_act_4": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal · bill introduced",
+        "variant": "secondary"
+      }
+    },
+    "text_details_act_4": {
+      "type": "Text",
+      "props": {
+        "text": "Bipartisan (R-UT + D-CA) bill to prohibit any CFTC-registered DCM from listing contracts that resemble a sports bet or casino-style game. Joins BETS OFF (S.4115/H.R.7955) cluster — gaming lobby + state AGs pushing same direction CFTC is litigating against."
+      }
+    },
+    "text_angle_act_4": {
+      "type": "Text",
+      "props": {
+        "text": "📊 angle: if any of this cluster moves out of committee, sports-event-contract TAM is the directly priced thing.",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_watch": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h2"
+      }
+    },
+    "stack_watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "item_watch_1",
+        "item_watch_2",
+        "item_watch_3",
+        "item_watch_4"
+      ]
+    },
+    "item_watch_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_watch_1",
+        "badge_type_watch_1",
+        "text_details_watch_1"
+      ]
+    },
+    "link_watch_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "24X National Exchange — tokenized securities live",
+        "href": "https://www.federalregister.gov/documents/2026/06/22/2026-12403/self-regulatory-organizations-24x-national-exchange-llc-notice-of-filing-and-immediate-effectiveness",
+        "source": "Federal Register"
+      }
+    },
+    "badge_type_watch_1": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal · immediate effectiveness",
+        "variant": "secondary"
+      }
+    },
+    "text_details_watch_1": {
+      "type": "Text",
+      "props": {
+        "text": "SEC notice 6-22, rule change effective on filing. tokenized-securities exchange now operational under SRO framework."
+      }
+    },
+    "item_watch_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_watch_2",
+        "badge_type_watch_2",
+        "text_details_watch_2"
+      ]
+    },
+    "link_watch_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SEC+CFTC joint NPRM — re-defining \"swap\" / \"security-based swap\"",
+        "href": "https://www.federalregister.gov/documents/2026/06/24/2026-12743/joint-request-for-comment-on-further-definition-of-swap-and-security-based-swap-and-on-alternative",
+        "source": "Federal Register"
+      }
+    },
+    "badge_type_watch_2": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal · RFC",
+        "variant": "secondary"
+      }
+    },
+    "text_details_watch_2": {
+      "type": "Text",
+      "props": {
+        "text": "joint reopen of the core derivative definitions, hooked to \"innovative products + alternative compliance.\" perpetuals + event contracts sit inside this debate."
+      }
+    },
+    "item_watch_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_watch_3",
+        "badge_type_watch_3",
+        "text_details_watch_3"
+      ]
+    },
+    "link_watch_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "FinCEN+banking agencies — GENIUS Act stablecoin CIP NPRM",
+        "href": "https://www.federalregister.gov/documents/2026/06/22/2026-12460/permitted-payment-stablecoin-issuer-customer-identification-program",
+        "source": "Federal Register"
+      }
+    },
+    "badge_type_watch_3": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal · NPRM",
+        "variant": "secondary"
+      }
+    },
+    "text_details_watch_3": {
+      "type": "Text",
+      "props": {
+        "text": "proposed customer-id rules for permitted payment stablecoin issuers. last week's OCC AML/CFT NPRM (FR 2026-12692) is the parallel track."
+      }
+    },
+    "item_watch_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_watch_4",
+        "badge_type_watch_4",
+        "text_details_watch_4"
+      ]
+    },
+    "link_watch_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC RFC — 24/7 trading + perpetual energy contracts",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9259-26",
+        "source": "CFTC"
+      }
+    },
+    "badge_type_watch_4": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal · RFC",
+        "variant": "secondary"
+      }
+    },
+    "text_details_watch_4": {
+      "type": "Text",
+      "props": {
+        "text": "perpetuals + round-the-clock listing model now formally on the table for non-crypto commodities. confirms the Kalshi BTCPERP-approval (5-29) wasn't a one-off."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_sources",
+        "text_scoring"
+      ]
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: federal-register=ok · sec=ok · cftc=ok(rss 404 → html ok) · websearch=ok · congress=skip",
+        "variant": "caption"
+      }
+    },
+    "text_scoring": {
+      "type": "Text",
+      "props": {
+        "text": "14 scored · 4 act / 4 watch / 0 context",
+        "variant": "caption"
+      }
+    }
+  }
+}
