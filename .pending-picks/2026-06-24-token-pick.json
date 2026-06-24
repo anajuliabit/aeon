@@ -1,0 +1,12 @@
+{
+  "source": "token-pick",
+  "symbol": "AAVE",
+  "coingeckoId": "aave",
+  "side": "long",
+  "entryPriceUsd": 76.09,
+  "targetPriceUsd": 87,
+  "invalidationPriceUsd": 69,
+  "horizonDays": 14,
+  "conviction": "HIGH (8/10)",
+  "thesis": "AAVE trending #1, only large-cap DeFi green on 7d (+1.82% vs BTC -3.0% / ETH -4.9%) on risk-off tape. Catalyst stack: Grayscale 6-20 fair-value report ($175 target on RWA regulatory clarity) plus V4 Tokenization Spoke security audit same day advancing on-chain securities finance rails. Wrong if BTC daily close breaks <$60,500 and drags DeFi blue-chips down with the tape regardless of relative strength."
+}

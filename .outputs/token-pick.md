@@ -1,21 +1,16 @@
-*Daily Pick — 2026-06-23*
+*Daily Pick — 2026-06-24*
 
-*Token: DEXE*  [HIGH]  signal 7/10
-Price: $22.98 (+28.2% 24h / +23.4% 7d) | mcap $1.08B | vol $102M (vol/mcap 0.09)
-Score breakdown: [24h+1, 7d+1, both>5%+2, RS vs BTC/ETH+2 (BTC -6.6% / ETH -8.3% 7d), DEX confirm+1] = 7/10
-Catalyst: KCEX listing + DAO-governance rotation under "Dexelization" DAO-Studio framing — only large-cap green on a sea-of-red day.
-Risk: 51.5% supply still locked (FDV/mcap 2.1×) and today's $22.98 sits mid-range between $17.62 low and $24.12 high, same area where June 3 wicked to $24.49 then reversed.
+*Token: AAVE*  [HIGH]  signal 8/10
+Price: $76.09 (+4.55% 24h / +1.82% 7d) | mcap $1.2B | vol $187.6M (vol/mcap 0.16)
+Score: 24h+1, 7d+1, trending+2, vol/mcap+2, RS vs BTC/ETH+2 = 8/10
+Catalyst: Grayscale 6-20 fair-value report ($175 target on RWA regulatory clarity) + V4 Tokenization Spoke security audit same day advancing on-chain securities finance rails. AAVE only large-cap DeFi name green on 7d while BTC -3.0% / ETH -4.9%.
+Risk: BTC daily close <$60,500 (~1.3% away) historically drags DeFi blue-chips down with the tape regardless of relative strength.
 Stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap
-Exit: target $28 / invalidate $19 / time-stop 14d
-Vs recent picks: first time (last 7d: EIGEN, SOL, AERO, HYPE, UNI, JTO — DEXE clean)
+Exit: target $87 / invalidate $69 / time-stop 14d
+Vs recent picks: first time (UNI/HYPE/SOL/AERO/EIGEN/DEXE dedup-cleared)
 
-*Market: "Israel x Hezbollah permanent peace deal by July 31, 2026?"*  [HIGH]  edge 10.5pp
-Current: YES 16.5¢ / NO 83.5¢ | 24h vol $211k | resolves: 2026-07-31
-Fair YES: ~6% (inputs: June 19 US-mediated truce is a ceasefire not a peace deal; week-of-June-22 talks just opened toward "comprehensive agreement"; Hezbollah disarmament + Israeli southern-Lebanon withdrawal both unresolved, May 17 1983 precedent failed)
-Thesis: Market is pricing a 5-week jump from fragile ceasefire to signed permanent deal — sell YES / buy NO at 83.5¢.
-Risk: Trump-administration pressure could force a face-saving signed framework even without real disarmament; if any document gets labeled "peace deal" the market resolves YES.
-Stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap
+Considered but dropped: BEAT scored 10/10 by rubric — dropped on post-blow-off pattern (-78% from $9.34 ATH on 6-11, 2-week-stale catalysts). Disciplined skip.
 
-sources: cg=ok, dex=ok, poly=ok, x=ok
-if you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it
+sources: cg=ok, dex=skipped, poly=ok (sports-only day 4 — no non-sports market clears $50k 24h-vol gate), x=ok (no candidates with named/dated catalysts surfaced)
+if you take it: log in the dashboard journal (kind=trade) so the advisor tracks it
 not financial advice — pattern-matching only
