@@ -1,0 +1,770 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi — 2026-06-24"
+      },
+      "children": [
+        "summary-text",
+        "sep1",
+        "tvl-section",
+        "sep2",
+        "top-chains-heading",
+        "top-chains",
+        "sep3",
+        "movers-heading",
+        "movers-section",
+        "sep4",
+        "fees-leaders-heading",
+        "fees-table",
+        "sep5",
+        "fees-beating-heading",
+        "fees-beating-section",
+        "fees-note",
+        "sep6",
+        "dex-vol-section",
+        "sep7",
+        "stables-heading",
+        "stables-section",
+        "sep8",
+        "real-yield-heading",
+        "real-yield-section",
+        "sep9",
+        "incentive-yield-heading",
+        "incentive-yield-section",
+        "sep10",
+        "sources-text"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sideways: TVL ~flat, DEX vol +3% but mid-tier carrying, fees −4%",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tvl-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tvl-stat",
+        "tvl-note"
+      ]
+    },
+    "tvl-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL (chain-sum)",
+        "value": "$71.86B"
+      }
+    },
+    "tvl-note": {
+      "type": "Text",
+      "props": {
+        "text": "vs 6-23 $71.85B = effectively flat; chain change_1d null day 7 — DeFiLlama regression continues",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top-chains-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top chains",
+        "level": "h3"
+      }
+    },
+    "top-chains": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "chain-eth",
+        "chain-bsc",
+        "chain-sol"
+      ]
+    },
+    "chain-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "Ethereum",
+        "value": "$38.2B"
+      }
+    },
+    "chain-bsc": {
+      "type": "Stat",
+      "props": {
+        "label": "BSC",
+        "value": "$5.1B"
+      }
+    },
+    "chain-sol": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana",
+        "value": "$4.8B"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "movers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers — protocols",
+        "level": "h3"
+      }
+    },
+    "movers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mover-xstocks",
+        "mover-ssv"
+      ]
+    },
+    "mover-xstocks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "xstocks-header",
+        "xstocks-detail1",
+        "xstocks-detail2",
+        "xstocks-detail3"
+      ]
+    },
+    "xstocks-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "xstocks-badge",
+        "xstocks-title"
+      ]
+    },
+    "xstocks-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ +20%",
+        "variant": "default"
+      }
+    },
+    "xstocks-title": {
+      "type": "Text",
+      "props": {
+        "text": "xStocks",
+        "variant": "body"
+      }
+    },
+    "xstocks-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "TVL: $493M → $588M, 7d +15%",
+        "variant": "caption"
+      }
+    },
+    "xstocks-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "RWA equity-tokenization printing while cash US-equities sold off 6-23; category continuation (Ondo Yield fees +63% 7d, RAIN top-20 outlier 6-23)",
+        "variant": "caption"
+      }
+    },
+    "xstocks-detail3": {
+      "type": "Text",
+      "props": {
+        "text": "No specific named catalyst today",
+        "variant": "caption"
+      }
+    },
+    "mover-ssv": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ssv-header",
+        "ssv-detail1",
+        "ssv-detail2",
+        "ssv-detail3"
+      ]
+    },
+    "ssv-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ssv-badge",
+        "ssv-title"
+      ]
+    },
+    "ssv-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↓ −33%",
+        "variant": "destructive"
+      }
+    },
+    "ssv-title": {
+      "type": "Text",
+      "props": {
+        "text": "SSV Network",
+        "variant": "body"
+      }
+    },
+    "ssv-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "TVL: $12.2B → $8.2B",
+        "variant": "caption"
+      }
+    },
+    "ssv-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "2nd consecutive day of staking-pool collapse (was −37% 6-23, −$8.6B cumulative over 48h). Reads as sustained category re-measurement, not a fresh exploit",
+        "variant": "caption"
+      }
+    },
+    "ssv-detail3": {
+      "type": "Text",
+      "props": {
+        "text": "No obvious named catalyst",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fees-leaders-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "fees-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Protocol",
+          "Fees (24h)"
+        ],
+        "rows": [
+          [
+            "Tether",
+            "$16.1M (flat vs 7d avg)"
+          ],
+          [
+            "Circle USDC",
+            "$6.5M (flat)"
+          ],
+          [
+            "Hyperliquid Perps",
+            "$2.5M (+20% vs 7d avg)"
+          ]
+        ]
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fees-beating-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees beating TVL (7d fees >+20% / TVL <+5%)",
+        "level": "h3"
+      }
+    },
+    "fees-beating-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "jupiter-perp",
+        "veda-protocol"
+      ]
+    },
+    "jupiter-perp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "jupiter-title",
+        "jupiter-metrics",
+        "jupiter-detail"
+      ]
+    },
+    "jupiter-title": {
+      "type": "Text",
+      "props": {
+        "text": "Jupiter Perpetual Exchange",
+        "variant": "body"
+      }
+    },
+    "jupiter-metrics": {
+      "type": "Text",
+      "props": {
+        "text": "Fees +78% / TVL −2% (7d)",
+        "variant": "caption"
+      }
+    },
+    "jupiter-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Perp demand outrunning deposits on $670M TVL (Derivatives)",
+        "variant": "caption"
+      }
+    },
+    "veda-protocol": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "veda-title",
+        "veda-metrics",
+        "veda-detail"
+      ]
+    },
+    "veda-title": {
+      "type": "Text",
+      "props": {
+        "text": "Veda",
+        "variant": "body"
+      }
+    },
+    "veda-metrics": {
+      "type": "Text",
+      "props": {
+        "text": "Fees +300% / TVL −1% (7d)",
+        "variant": "caption"
+      }
+    },
+    "veda-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Onchain capital allocator monetizing $1.06B without new inflows; low-base caveat (24h fees $296k)",
+        "variant": "caption"
+      }
+    },
+    "fees-note": {
+      "type": "Text",
+      "props": {
+        "text": "Note: yesterday's leader (Aave V3 fees +31% 7d) fell out — Aave V3 fees now −0.1% 7d. Real-lending-demand pulse cooled in one day",
+        "variant": "caption"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "dex-vol-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dex-vol-heading",
+        "dex-vol-stat",
+        "dex-vol-note",
+        "dex-vol-table"
+      ]
+    },
+    "dex-vol-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX volume (24h)",
+        "level": "h3"
+      }
+    },
+    "dex-vol-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total DEX Volume",
+        "value": "$6.24B",
+        "delta": "+3.25% 1d, −5.6% 7d, +30.7% 1m"
+      }
+    },
+    "dex-vol-note": {
+      "type": "Text",
+      "props": {
+        "text": "Leaders down 1d, mid-tier DEXes carrying the +3%",
+        "variant": "caption"
+      }
+    },
+    "dex-vol-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "DEX",
+          "Volume (24h)",
+          "Change 1d"
+        ],
+        "rows": [
+          [
+            "Uniswap V4",
+            "$671M",
+            "−21%"
+          ],
+          [
+            "PancakeSwap V3",
+            "$454M",
+            "+5%"
+          ],
+          [
+            "Uniswap V3",
+            "$411M",
+            "−16%"
+          ]
+        ]
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stables-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stablecoins",
+        "level": "h3"
+      }
+    },
+    "stables-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stables-total",
+        "issuer-usdgo",
+        "issuer-usd1",
+        "issuer-crvusd"
+      ]
+    },
+    "stables-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Stablecoins",
+        "value": "$313.5B",
+        "delta": "−0.1% vs 6-23 $313.8B"
+      }
+    },
+    "issuer-usdgo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "usdgo-badge",
+        "usdgo-detail"
+      ]
+    },
+    "usdgo-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "USDGO +12%",
+        "variant": "secondary"
+      }
+    },
+    "usdgo-detail": {
+      "type": "Text",
+      "props": {
+        "text": "~$83M expansion on $757M total — only meaningful issuer mint",
+        "variant": "caption"
+      }
+    },
+    "issuer-usd1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "usd1-badge",
+        "usd1-detail"
+      ]
+    },
+    "usd1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "USD1/WLFI −2%",
+        "variant": "secondary"
+      }
+    },
+    "usd1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "~$100M redemption on $4.75B total — only meaningful issuer contraction",
+        "variant": "caption"
+      }
+    },
+    "issuer-crvusd": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crvusd-badge",
+        "crvusd-detail"
+      ]
+    },
+    "crvusd-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "crvUSD −5%",
+        "variant": "secondary"
+      }
+    },
+    "crvusd-detail": {
+      "type": "Text",
+      "props": {
+        "text": "On small base ($210M, −$11M)",
+        "variant": "caption"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "real-yield-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Real yield (sustainable, ≥$10M, filtered)",
+        "level": "h3"
+      }
+    },
+    "real-yield-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yield-weth-usdt",
+        "yield-eth-link",
+        "yield-crvusd-weth"
+      ]
+    },
+    "yield-weth-usdt": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "weth-usdt-stat",
+        "weth-usdt-detail"
+      ]
+    },
+    "weth-usdt-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "WETH-USDT (uniswap-v3, ETH)",
+        "value": "21.4% apyBase",
+        "delta": "from 6-23 37.6% — cooling"
+      }
+    },
+    "weth-usdt-detail": {
+      "type": "Text",
+      "props": {
+        "text": "TVL: $76M",
+        "variant": "caption"
+      }
+    },
+    "yield-eth-link": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "eth-link-stat",
+        "eth-link-detail"
+      ]
+    },
+    "eth-link-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH-LINK (uniswap-v4, ETH)",
+        "value": "19.2% apyBase"
+      }
+    },
+    "eth-link-detail": {
+      "type": "Text",
+      "props": {
+        "text": "TVL: $21M",
+        "variant": "caption"
+      }
+    },
+    "yield-crvusd-weth": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crvusd-weth-stat",
+        "crvusd-weth-detail"
+      ]
+    },
+    "crvusd-weth-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "CRVUSD-WETH (curve, ETH)",
+        "value": "17.8% apyBase",
+        "delta": "from 6-23 27.1% — cooling"
+      }
+    },
+    "crvusd-weth-detail": {
+      "type": "Text",
+      "props": {
+        "text": "TVL: $16M",
+        "variant": "caption"
+      }
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "incentive-yield-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive yield (points / emissions, ≥$25M)",
+        "level": "h3"
+      }
+    },
+    "incentive-yield-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "incentive-cvxcrv",
+        "incentive-usdc-aero"
+      ]
+    },
+    "incentive-cvxcrv": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cvxcrv-stat",
+        "cvxcrv-detail"
+      ]
+    },
+    "cvxcrv-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "CVXCRV (Convex, ETH)",
+        "value": "28.8% apy",
+        "delta": "via CRV+CVX+FXS rewards"
+      }
+    },
+    "cvxcrv-detail": {
+      "type": "Text",
+      "props": {
+        "text": "TVL: $29M — same name as 6-22/23, magnitude stable",
+        "variant": "caption"
+      }
+    },
+    "incentive-usdc-aero": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "usdc-aero-stat",
+        "usdc-aero-detail"
+      ]
+    },
+    "usdc-aero-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "USDC-AERO (Aerodrome v1, Base)",
+        "value": "25.2% apy",
+        "delta": "via AERO rewards"
+      }
+    },
+    "usdc-aero-detail": {
+      "type": "Text",
+      "props": {
+        "text": "TVL: $26M — same name as 6-22/23, magnitude stable",
+        "variant": "caption"
+      }
+    },
+    "sep10": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: llama_tvl=partial(chain_delta_null_day_7) llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none_",
+        "variant": "muted"
+      }
+    }
+  }
+}

@@ -1,39 +1,43 @@
-*DeFi — 2026-06-23* — Mixed: DEX vol +45% 1d on weekend-base rebound, 7d still −17%, stables flat
+*DeFi — 2026-06-24* — Sideways: TVL ~flat, DEX vol +3% but mid-tier carrying, fees −4%
 
-*TVL:* $71.85B chain-sum (chain delta API null day 6 — DeFiLlama regression; vs $73.6B yesterday = −$1.75B nominal)
+*TVL:* $71.86B chain-sum (vs 6-23 $71.85B = effectively flat; chain `change_1d` null day 7 — DeFiLlama regression continues)
 
 *Top chains*
-1. Ethereum — $38.15B
-2. BSC — $5.05B
-3. Solana — $4.74B
+1. Ethereum — $38.2B
+2. BSC — $5.1B
+3. Solana — $4.8B
+(per-chain deltas suppressed — `change_1d` null day 7)
 
 *Movers — protocols*
-↑ Mellow Core +34% ($142M → $190M, 7d +48%) — onchain capital allocator, sustained inflows, no obvious named catalyst
-↑ Polygon Bridge +25% ($2.27B → $2.84B) — bridge deposit wave, no obvious named catalyst
-↓ SSV Network −37% ($12.8B → $8.07B) — $4.7B drop on a staking pool, no obvious named catalyst (possible re-measurement)
-↓ B2 Buzz −16% ($240M → $200M) — canonical bridge outflow, no obvious named catalyst
+↑ xStocks +20% ($493M → $588M, 7d +15%) — RWA equity-tokenization printing while cash US-equities sold off 6-23; category continuation (Ondo Yield fees +63% 7d, RAIN top-20 outlier 6-23). No specific named catalyst today.
+↓ SSV Network −33% ($12.2B → $8.2B) — 2nd consecutive day of staking-pool collapse (was −37% 6-23, −$8.6B cumulative over 48h). Reads as sustained category re-measurement, not a fresh exploit. No obvious named catalyst.
+(chain-movers section dropped — no chain `change_1d` data)
 
 *Fees leaders (24h)*
-1. Tether — $16.0M (flat vs 7d avg)
+1. Tether — $16.1M (flat vs 7d avg)
 2. Circle USDC — $6.5M (flat)
-3. Hyperliquid Perps — $2.5M (+22% vs 7d avg; 1d +104%)
+3. Hyperliquid Perps — $2.5M (+20% vs 7d avg)
 
-*Fees beating TVL*
-• Aave V3 — fees +31% / TVL −4% (7d) — lending demand outrunning deposits
-_other matches all 0-base LST/staking-fee artifacts, dropped_
+*Fees beating TVL (7d fees >+20% / TVL <+5%)*
+• Jupiter Perpetual Exchange — fees +78% / TVL −2% (7d) — perp demand outrunning deposits on $670M TVL (Derivatives)
+• Veda — fees +300% / TVL −1% (7d) — onchain capital allocator monetizing $1.06B without new inflows; low-base caveat (24h fees $296k)
 
-*DEX vol (24h):* $6.02B (+45% 1d, −17% 7d) — top: Uniswap V4 $932M (+67%), Uniswap V3 $486M (+137%), Aerodrome Slipstream $479M (+67%)
+Note: yesterday's leader (Aave V3 fees +31% 7d) fell out — Aave V3 fees now −0.1% 7d. Real-lending-demand pulse cooled in one day.
 
-*Stables:* $313.8B (flat, +0.03%) — DAI +8.5% on $4.85B = ~$380M new mint; crvUSD −5.3%, avUSD −4.0%, YLDS −4.7% on the small-cap side
+*DEX vol (24h):* $6.24B (+3.25% 1d, −5.6% 7d, +30.7% 1m). Top: Uniswap V4 $671M (−21%), PancakeSwap V3 $454M (+5%), Uniswap V3 $411M (−16%) — leaders down 1d, mid-tier DEXes carrying the +3%.
 
-*Real yield (sustainable, ≥$10M, filtered — 301 cleared, top 3)*
-• WETH-USDT (uniswap-v3, ETH) — 37.6% apyBase ($77M TVL, 30d 38.8%)
-• CRVUSD-WETH (curve, ETH) — 27.1% apyBase ($16M TVL, 30d 18.7%)
-• USDC-WETH (uniswap-v3, ETH) — 26.3% apyBase ($19M TVL, 30d 19.4%)
-_yields data quality recovered hard vs 6-21 zero-pool day; 6-22's WETH-USDT carried over and climbed 25% → 38%_
+*Stables:* $313.5B (−0.1% vs 6-23 $313.8B). Notable single-issuer:
+• USDGO +12% (~$83M expansion on $757M total) — only meaningful issuer mint
+• USD1/WLFI −2% (~$100M redemption on $4.75B total) — only meaningful issuer contraction
+• crvUSD −5% on small base ($210M, −$11M)
 
-*Incentive yield (points / emissions, ≥$25M — 49 cleared, top 2)*
-• CVXCRV (Convex, ETH) — 28.1% apy via CRV+CVX ($30M TVL)
-• USDC-AERO (Aerodrome v1, Base) — 25.6% apy via AERO ($26M TVL)
+*Real yield (sustainable, ≥$10M, filtered)*
+• WETH-USDT (uniswap-v3, ETH) — 21.4% apyBase ($76M TVL) — carry from 6-23 37.6% → 21.4%, cooling
+• ETH-LINK (uniswap-v4, ETH) — 19.2% apyBase ($21M TVL)
+• CRVUSD-WETH (curve, ETH) — 17.8% apyBase ($16M TVL) — carry from 6-23 27.1% → 17.8%
 
-_sources: llama_tvl=partial(chain_delta_null_day_6)  llama_dex=ok  llama_fees=ok  llama_stables=ok  llama_yields=ok  | var: none_
+*Incentive yield (points / emissions, ≥$25M)*
+• CVXCRV (Convex, ETH) — 28.8% apy via CRV+CVX+FXS rewards ($29M TVL) — same name as 6-22/23, magnitude stable
+• USDC-AERO (Aerodrome v1, Base) — 25.2% apy via AERO rewards ($26M TVL) — same name as 6-22/23, magnitude stable
+
+_sources: llama_tvl=partial(chain_delta_null_day_7) llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none_
