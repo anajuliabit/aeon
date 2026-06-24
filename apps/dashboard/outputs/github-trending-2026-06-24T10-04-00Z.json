@@ -1,0 +1,520 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-24"
+      },
+      "children": [
+        "top_pick_section",
+        "sep1",
+        "aiml_section",
+        "sep2",
+        "devtools_section",
+        "sep3",
+        "web_section",
+        "sep4",
+        "sources_section"
+      ]
+    },
+    "top_pick_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_pick_label",
+        "top_pick_project"
+      ]
+    },
+    "top_pick_label": {
+      "type": "Text",
+      "props": {
+        "text": "Top pick",
+        "variant": "lead"
+      }
+    },
+    "top_pick_project": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top_pick_link",
+        "top_pick_desc"
+      ]
+    },
+    "top_pick_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "calesthio/OpenMontage",
+        "href": "https://github.com/calesthio/OpenMontage"
+      }
+    },
+    "top_pick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "the first credible open-source rival to closed agentic video stacks — 4 days holding the top of trending, fresh release pushed this morning.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "aiml_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml_heading",
+        "aiml_projects"
+      ]
+    },
+    "aiml_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml_projects": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "project_openmontage",
+        "project_hermes",
+        "project_harness"
+      ]
+    },
+    "project_openmontage": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "om_link",
+        "om_stats",
+        "om_desc"
+      ]
+    },
+    "om_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "calesthio/OpenMontage",
+        "href": "https://github.com/calesthio/OpenMontage"
+      }
+    },
+    "om_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "om_stars_today",
+        "om_stars_total",
+        "om_lang",
+        "om_status"
+      ]
+    },
+    "om_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "today",
+        "value": "3.6k"
+      }
+    },
+    "om_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "total",
+        "value": "17k"
+      }
+    },
+    "om_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "om_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "om_desc": {
+      "type": "Text",
+      "props": {
+        "text": "fresh release this morning, 4-day trending streak — first open-source counter to Runway/Sora-class video harnesses.",
+        "variant": "caption"
+      }
+    },
+    "project_hermes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hermes_link",
+        "hermes_stats",
+        "hermes_desc"
+      ]
+    },
+    "hermes_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NousResearch/hermes-agent",
+        "href": "https://github.com/NousResearch/hermes-agent"
+      }
+    },
+    "hermes_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "hermes_stars_today",
+        "hermes_stars_total",
+        "hermes_lang",
+        "hermes_status"
+      ]
+    },
+    "hermes_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "today",
+        "value": "936"
+      }
+    },
+    "hermes_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "total",
+        "value": "201k"
+      }
+    },
+    "hermes_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "hermes_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      }
+    },
+    "hermes_desc": {
+      "type": "Text",
+      "props": {
+        "text": "nous's long-running agent harness — persistent memory + skills, open-weight alternative to closed agent stacks.",
+        "variant": "caption"
+      }
+    },
+    "project_harness": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "harness_link",
+        "harness_stats",
+        "harness_desc"
+      ]
+    },
+    "harness_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "revfactory/harness",
+        "href": "https://github.com/revfactory/harness"
+      }
+    },
+    "harness_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "harness_stars_today",
+        "harness_stars_total",
+        "harness_lang",
+        "harness_status"
+      ]
+    },
+    "harness_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "today",
+        "value": "128"
+      }
+    },
+    "harness_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "total",
+        "value": "7.5k"
+      }
+    },
+    "harness_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "HTML",
+        "variant": "secondary"
+      }
+    },
+    "harness_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "harness_desc": {
+      "type": "Text",
+      "props": {
+        "text": "meta-skill that designs agent teams and generates the skills they use — skill-of-skills compounding.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "devtools_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools_heading",
+        "devtools_projects"
+      ]
+    },
+    "devtools_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools_projects": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "project_codebase_memory"
+      ]
+    },
+    "project_codebase_memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cm_link",
+        "cm_stats",
+        "cm_desc"
+      ]
+    },
+    "cm_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "DeusData/codebase-memory-mcp",
+        "href": "https://github.com/DeusData/codebase-memory-mcp"
+      }
+    },
+    "cm_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cm_stars_today",
+        "cm_stars_total",
+        "cm_lang",
+        "cm_status"
+      ]
+    },
+    "cm_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "today",
+        "value": "1.3k"
+      }
+    },
+    "cm_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "total",
+        "value": "13.6k"
+      }
+    },
+    "cm_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "C",
+        "variant": "secondary"
+      }
+    },
+    "cm_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "cm_desc": {
+      "type": "Text",
+      "props": {
+        "text": "persistent codebase knowledge graph as MCP server — 158 languages, sub-ms queries, claims 99% fewer tokens vs RAG.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "web_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "web_heading",
+        "web_projects"
+      ]
+    },
+    "web_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      }
+    },
+    "web_projects": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "project_palmier"
+      ]
+    },
+    "project_palmier": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "palmier_link",
+        "palmier_stats",
+        "palmier_desc"
+      ]
+    },
+    "palmier_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "palmier-io/palmier-pro",
+        "href": "https://github.com/palmier-io/palmier-pro"
+      }
+    },
+    "palmier_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "palmier_stars_today",
+        "palmier_stars_total",
+        "palmier_lang",
+        "palmier_status"
+      ]
+    },
+    "palmier_stars_today": {
+      "type": "Stat",
+      "props": {
+        "label": "today",
+        "value": "1.6k"
+      }
+    },
+    "palmier_stars_total": {
+      "type": "Stat",
+      "props": {
+        "label": "total",
+        "value": "8.7k"
+      }
+    },
+    "palmier_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Swift",
+        "variant": "secondary"
+      }
+    },
+    "palmier_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "palmier_desc": {
+      "type": "Text",
+      "props": {
+        "text": "cursor-for-video — AI-native swift macOS editor, viral momentum: 8.7k stars in 78 days.",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_label"
+      ]
+    },
+    "sources_label": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 5/16",
+        "variant": "muted"
+      }
+    }
+  }
+}
