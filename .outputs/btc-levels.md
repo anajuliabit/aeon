@@ -1,9 +1,16 @@
-Quiet run. No alerts fired.
-
 ## Summary
 
-- **Spot:** $62,660 | **Daily close (June 23):** $62,651.93
-- **Leverage-review (≤$45k):** inactive
-- **Breakdown (<$60,500):** June 23 close clears the threshold — no alert
-- **Reclaim $63,500 / $65,900:** both flags remain set from prior cycles; re-arm threshold is spot < $60,500 (not yet reached)
-- State updated and committed. No notification sent (quiet run is the norm).
+**btc-levels run — 2026-06-24 ~12:25 UTC**
+
+- **Spot:** $62,409.20
+- **Daily close (2026-06-23):** $62,651.93
+
+**Level evaluation:**
+| Level | Status |
+|---|---|
+| Spot ≤ $45,000 (leverage-review) | Clear — spot $17k above trigger |
+| Daily close < $60,500 (breakdown) | Clear — close $2.15k above threshold |
+| Reclaim $63,500 | Already alerted; re-arm pending spot < $60,500 |
+| Reclaim $65,900 | Already alerted; re-arm pending spot < $60,500 |
+
+No alerts fired. No notification sent. State and log committed.
