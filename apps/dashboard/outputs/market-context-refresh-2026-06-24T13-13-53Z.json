@@ -1,0 +1,282 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context — 2026-06-24"
+      },
+      "children": [
+        "take_row",
+        "sep1",
+        "markets_section",
+        "sep2",
+        "indicators_section",
+        "sep3",
+        "narrative_section",
+        "sep4",
+        "hot_section"
+      ]
+    },
+    "take_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "take_label",
+        "take_badge"
+      ]
+    },
+    "take_label": {
+      "type": "Text",
+      "props": {
+        "text": "Take:",
+        "variant": "lead"
+      }
+    },
+    "take_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "chop",
+        "variant": "default"
+      }
+    },
+    "take_conviction": {
+      "type": "Text",
+      "props": {
+        "text": "conviction medium",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "markets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "btc_stat",
+        "eth_stat"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62,442",
+        "delta": "+0.48%",
+        "trend": "up"
+      }
+    },
+    "eth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,667",
+        "delta": "+0.93%",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "indicators_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fg_section",
+        "breadth_tvl_row"
+      ]
+    },
+    "fg_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fg_label",
+        "fg_progress",
+        "fg_note"
+      ]
+    },
+    "fg_label": {
+      "type": "Text",
+      "props": {
+        "text": "Fear & Greed",
+        "variant": "body"
+      }
+    },
+    "fg_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 17,
+        "max": 100,
+        "label": "17 — Extreme Fear"
+      }
+    },
+    "fg_note": {
+      "type": "Text",
+      "props": {
+        "text": "lagging 6-23 crash",
+        "variant": "caption"
+      }
+    },
+    "breadth_tvl_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "breadth_stat",
+        "tvl_stat"
+      ]
+    },
+    "breadth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "10/20"
+      }
+    },
+    "tvl_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$71.9B",
+        "delta": "~flat",
+        "trend": "neutral"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narrative_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "narrative_heading",
+        "narrative_topic",
+        "rain_detail"
+      ]
+    },
+    "narrative_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h3"
+      }
+    },
+    "narrative_topic": {
+      "type": "Badge",
+      "props": {
+        "text": "RWA/tokenized assets",
+        "variant": "outline"
+      }
+    },
+    "rain_detail": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rain_text",
+        "rain_status"
+      ]
+    },
+    "rain_text": {
+      "type": "Text",
+      "props": {
+        "text": "RAIN sole top-20 green",
+        "variant": "body"
+      }
+    },
+    "rain_status": {
+      "type": "Stat",
+      "props": {
+        "label": "7d change",
+        "value": "+14.25%",
+        "trend": "up"
+      }
+    },
+    "rain_day": {
+      "type": "Text",
+      "props": {
+        "text": "2nd day",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hot_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hot_heading",
+        "fifa_stack"
+      ]
+    },
+    "hot_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h3"
+      }
+    },
+    "fifa_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fifa_text",
+        "fifa_note"
+      ]
+    },
+    "fifa_text": {
+      "type": "Text",
+      "props": {
+        "text": "FIFA sports-only — day 4",
+        "variant": "body"
+      }
+    },
+    "fifa_note": {
+      "type": "Text",
+      "props": {
+        "text": "no crypto-macro on Polymarket",
+        "variant": "caption"
+      }
+    }
+  }
+}
