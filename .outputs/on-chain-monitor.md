@@ -1,13 +1,10 @@
-*on-chain — base, last 24h*
+Skill complete. No notification sent (zero surviving events per spec step 8). 
 
-3 phishing transfers on W3. cyrillic `ÚSDС` (1480 fake-units) to `0x98E57e6799...c0a9` — visual clone of W1, fired 3 min after the legit W3→W1 USDC for $1480. classic mirroring. plus 2× `EṬH` lookalike (non-ascii `Ṭ`). don't copy-paste destinations out of W3 history.
-
-real moves, sorted:
-• W2 cow swap — 833.33k MAMO → 0.10872 cbBTC ($6.7k each leg). same minute as W2's sablier MAMO unlock (833.33k, $6.6k) — operator dumped the unlock into cow inside one block of the cliff
-• W1 ← 4000 USDC inbound from `0xA63dfB...fA19A` (unknown EOA). flag if not expected
-• W3 vesting claimed: 175k REPPO ($3956) from Grant #2 + 60k REPPO ($1358) from Grant
-• W3 → W1: 1480 USDC intra-wallet
-
-8 events ≥ $1k across W1/W2/W3. W4 sub-threshold cow swap + sablier WELL unlock (atomic in same block as W2 — batched). W5 dormant.
-
-sources: blockscout ok, alchemy/etherscan keys still empty (operator). state: last_block→47715479.
+## Summary
+- **Skill:** `on-chain-monitor` executed for all 5 Base wallet watches.
+- **Result:** `ON_CHAIN_OK` — 5/5 watches succeeded, 0 surviving events across a 42,969-block window (~23.9h). All 5 wallets dormant since the 6-23 13:25Z run; most recent on-chain activity for any watch is 6-22 (already alerted on 6-23).
+- **Sources:** Blockscout v2 keyless (Base), works; Alchemy/Etherscan/CoinGecko keys still unset (operator-pending day 8, same as 6-22/6-23).
+- **State:** `memory/on-chain-state.json` updated — last_block 47715479 → 47758448 for all 5; retained 7 alerted_tx hashes from 6-22 (within 7d cap); median_usd_30d still null (per-watch samples < 5).
+- **Files modified:** `memory/on-chain-state.json`, `memory/logs/2026-06-24.md` (appended on-chain-monitor block).
+- **Notes:** Sandbox blocked `mv`/`rm`, so state write went via Write tool (still atomic at the editor level); a 0-byte `memory/on-chain-state.json.tmp` leftover can't be removed in-session — harmless, but worth a one-line cleanup next time someone touches that dir.
+- **Follow-up:** Operator-side blockers unchanged — `ALCHEMY_API_KEY` to lift Etherscan/Base limitation; XAI top-up still pending (day 8); defi-monitor needs `type: pool` / `type: position` entries.
