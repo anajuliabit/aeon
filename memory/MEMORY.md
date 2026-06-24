@@ -53,10 +53,10 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | $0.00350404 -7.49% 6-23 (breaks 6-19 $0.00370 downtrend pivot, fresh local low) |
-| MAMO    | mamo               | 15%           | $0.00790163 -7.01% 6-23 (first sub-$0.008 since watchlist landed; breaks 6-19 $0.00831) |
-| REPPO   | reppo              | 15%           | $0.02260894 -10.06% 6-23 (unwinds 6-22 +5.49% bounce on 0.48× vol, still net +31.7% from 6-19 base) |
-| GITLAWB | gitlawb            | 15%           | $0.00005986 **-15.63% 6-23 (24h rail break, first downside trip since 6-16 REPPO -15.78%)** |
+| WELL    | moonwell-artemis   | 10%           | $0.00358962 +2.38% 6-24 (small bounce on 0.06× vol — near-zero tape, no reclaim of 6-19 $0.00370 pivot) |
+| MAMO    | mamo               | 15%           | $0.00797785 +0.65% 6-24 (holds sub-$0.008 after 6-23 -7.65% rinse, baseline vol 1.03×) |
+| REPPO   | reppo              | 15%           | $0.02335656 +2.91% 6-24 (recovers ~⅓ of 6-23 -9.75% leg on 0.53× vol; still net +36.0% from 6-19 base) |
+| GITLAWB | gitlawb            | 15%           | $0.00005658 -6.04% 6-24 (follow-through fresh local low day after 6-23 rail break; -34.3% from 6-15 top) |
 
 ## Recent Patterns & Issues
 - **Token pick 6-23 DEXE HIGH 7/10 $22.98** — DAO-governance rotation, only large-cap green on risk-off day (BTC -6.6% / ETH -8.3% 7d). KCEX listing + "Dexelization" DAO-Studio framing + $1.7B platform TVL. mcap $1.08B (rank 65), vmc 0.09 just under gate. Score: 24h+1, 7d+1, both>5%+2, RS vs BTC/ETH+2, DEX+1 = 7/10. Risk: 51.5% supply locked (FDV/mcap 2.1×) Q4 unlock cliff; intraday wick mirrors June 3 $24.49 reversal. Exit: target $28 / inv $19 / 14d. Market: Israel×Hezbollah-peace-deal-by-July-31 at 16.5¢ YES (sell YES / buy NO at 83.5¢) — fair ~6%, edge 10.5pp.
