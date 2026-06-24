@@ -1,0 +1,282 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-24",
+        "description": "Daily priorities, market moves, and scheduled tasks"
+      },
+      "children": [
+        "section-focus",
+        "sep-1",
+        "section-since",
+        "sep-2",
+        "section-watch",
+        "sep-3",
+        "section-running"
+      ]
+    },
+    "section-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-title",
+        "focus-1-detail"
+      ]
+    },
+    "focus-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "1. NEWT unlock cliff",
+        "variant": "lead"
+      }
+    },
+    "focus-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 139.58M tokens (64.9% circ) drop on $11M mcap, short staged.",
+        "variant": "body"
+      }
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-title",
+        "focus-2-detail"
+      ]
+    },
+    "focus-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "2. PR #138 awaiting merge",
+        "variant": "lead"
+      }
+    },
+    "focus-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "why now: goal-tracker header drift fix sitting 18h, blocks 18:00 batch coherence.",
+        "variant": "body"
+      }
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-detail"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "3. ISS-025 durable fix at workflow capture step",
+        "variant": "lead"
+      }
+    },
+    "focus-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 26 skills still on output_tokens=0 tail, no root-cause shipped.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-since",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert fired GITLAWB -15.63% (first downside rail break in 4d); watchlist median -11.34%.",
+        "variant": "body"
+      }
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor caught W3 cyrillic ÚSDС mirror (1480 fake-units, 3min after legit transfer); operator notified.",
+        "variant": "body"
+      }
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker: 12 actionable + INVERSE bear flag AI capex rationing (Tencent + Uber); DePIN/GPU promoted to Peak (IO/TAO/AKT).",
+        "variant": "body"
+      }
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "EIGEN 6-22 HIGH 9/10 at invalidation — $0.305 entry, -17% reversal to ~$0.253. Kill from pending-picks.",
+        "variant": "body"
+      }
+    },
+    "since-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report cleared this morning (cf=30 → 0 at 02:32Z); ISS-025 still open, 26-skill signature unchanged.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-watch",
+        "watch-item-1"
+      ]
+    },
+    "heading-watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC ~$62k, $1.1B liqs overnight, F&G 23→20 — weak tape sharpens focus #1 (unlock into capitulation).",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-running",
+        "running-item-1",
+        "running-item-2",
+        "running-item-3",
+        "running-item-4",
+        "running-item-5",
+        "running-item-6"
+      ]
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine @ 07:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview / token-pick / token-alert @ 12:00 UTC (NEWT short stage window)",
+        "variant": "body"
+      }
+    },
+    "running-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh @ 13:00, narrative-tracker @ 13:30",
+        "variant": "body"
+      }
+    },
+    "running-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor @ 14:00 (Wed-only)",
+        "variant": "body"
+      }
+    },
+    "running-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics @ 18:30 (Wed-only)",
+        "variant": "body"
+      }
+    },
+    "running-item-6": {
+      "type": "Text",
+      "props": {
+        "text": "evening batch @ 18:00, evening-recap @ 21:00",
+        "variant": "body"
+      }
+    }
+  }
+}
