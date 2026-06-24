@@ -761,3 +761,43 @@ state: what was built, recurring blockers, and health.
   still depends on stale articles/skill-analytics-*.md (312h/13d, weekly
   192h threshold). Fingerprint unchanged from 6-22; re-emits 6-28 if
   still unresolved.
+
+## 2026-06-24 fleet deltas
+
+- **Regime flip risk-off → chop.** market-context-refresh: BTC bounced
+  $62,055 → $62,442 (+0.62%), breadth 3/20 → 10/20 green. F&G 23 → 17
+  is the index catching up to 6-23 crash, not fresh deterioration.
+  Both readings Extreme Fear; directional signal noise. ETF outflows
+  $1.67B weekly / $4.21B 3 weeks = institutional derisking anchor.
+- **cost-report ISS-025 cf=30 → 0 overnight 03:48Z.** Weekly tick on
+  `claude-sonnet-4-6` succeeded after 8 days. Sr still 10%, ISS-025
+  cluster structurally persists across the 22-skill chronic tail.
+  6-24 cost-report normal run also clean ($237.60 / 67 runs, −55.2%
+  WoW — reppo cluster absent this week).
+- **reg-monitor end-to-end clean at 14:55Z.** First success with all
+  4 primary sources delivering (sr was 7%). Top item: CFTC v. Kentucky
+  (9th state lawsuit over prediction-market preemption, 14.25% KY
+  excise tax on event-contract notional is the live test). Worth
+  watching across next 2-3 runs for sustained recovery.
+- **BTC sub-$60,500 16:38Z.** Spot dipped to $60,319, both reclaim
+  flags re-armed. If today's UTC close < $60,500, breakdown alert
+  fires next run. Spot range 6-24 $60,319 → $62,903 (intraday).
+- **Operator query 17:00Z — Morpho Alpha USDC Delta V2.** Vault
+  collapsed 2026-06-20 (curator AlphaPing, ~30% concentrated in
+  single msY/USDC market, msY crashed 70–85%, market at 100% util →
+  withdrawals frozen, ~$18M trapped). Verdict to operator: DO NOT
+  DEPOSIT. Documented as general Morpho curator-risk pattern in
+  [[crypto]] for surface on future Morpho queries.
+- **security-digest 6-24 15:05Z:** Ubiquiti CVE-2026-34910 EPSS
+  0.818 / p96 — first EPSS≥0.5 PATCH TODAY trigger of 2026. UniFi
+  KEV trio (34908/909/910) + Lantronix EDS5000 KEV. 40 net-new npm
+  malware drops in 48h sustained ~20-22/day.
+- **Token pick 6-24 AAVE HIGH 8/10 $76.09** — DeFi blue-chip relief,
+  trending #1 CG, only large-cap DeFi green 7d vs BTC -3.0%.
+  Grayscale $175 FV target + V4 Tokenization Spoke audit.
+- **Narrative-tracker 6-24:** first major BEAR-BTC thesis (Hedgeye
+  quad4) + first btc-maxi internal contrarian (Saylor critique).
+  FRONT-RUN bucket emptied first time in 4 days. RESURFACED bucket
+  appears (hyperliquid + BTC dominance returning from DEAD).
+- **PR #138 (goal-tracker header drift fix)** open ~24h, under
+  24h stall threshold per heartbeat. No urgent issues.

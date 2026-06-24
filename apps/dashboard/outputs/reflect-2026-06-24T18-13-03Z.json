@@ -1,0 +1,301 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reflect",
+        "description": "Memory consolidated — 2026-06-24"
+      },
+      "children": [
+        "memory_section",
+        "sep1",
+        "review_section",
+        "sep2",
+        "picks_section",
+        "sep3",
+        "fleet_section"
+      ]
+    },
+    "memory_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "memory_heading",
+        "memory_stat",
+        "memory_dedup"
+      ]
+    },
+    "memory_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MEMORY.md Pruned",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "memory_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Goals",
+        "value": "5",
+        "delta": "-1"
+      },
+      "children": []
+    },
+    "memory_dedup": {
+      "type": "Text",
+      "props": {
+        "text": "Deduplicated 'Recently Cleared'",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "review_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "review_heading",
+        "review_summary",
+        "issues_row",
+        "cost_report",
+        "reg_monitor"
+      ]
+    },
+    "review_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "7-Day Log Review",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "review_summary": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation cluster still systemic",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "issues_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "issue_019",
+        "issue_020",
+        "issue_021",
+        "issue_024",
+        "issue_025"
+      ]
+    },
+    "issue_019": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-019",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "issue_020": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-020",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "issue_021": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-021",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "issue_024": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-024",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "issue_025": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "cost_report": {
+      "type": "Stat",
+      "props": {
+        "label": "Cost Report (cf)",
+        "value": "0",
+        "delta": "-30",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "reg_monitor": {
+      "type": "Badge",
+      "props": {
+        "text": "reg-monitor: First end-to-end clean",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "picks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "picks_heading",
+        "aave_pick",
+        "morpho_pick",
+        "btc_pick"
+      ]
+    },
+    "picks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Investment Picks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "aave_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "aave_label",
+        "aave_score",
+        "aave_price"
+      ]
+    },
+    "aave_label": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "aave_score": {
+      "type": "Badge",
+      "props": {
+        "text": "8/10",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "aave_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$76.09"
+      },
+      "children": []
+    },
+    "morpho_pick": {
+      "type": "Text",
+      "props": {
+        "text": "Morpho: curator-risk principle recorded",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "btc_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc_level",
+        "btc_action"
+      ]
+    },
+    "btc_level": {
+      "type": "Badge",
+      "props": {
+        "text": "BTC sub-$60,500",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "btc_action": {
+      "type": "Text",
+      "props": {
+        "text": "Re-armed both reclaim flags @ 16:38Z",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "fleet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleet_heading",
+        "fleet_text"
+      ]
+    },
+    "fleet_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "fleet_text": {
+      "type": "Text",
+      "props": {
+        "text": "6-24 deltas appended to fleet.md",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
