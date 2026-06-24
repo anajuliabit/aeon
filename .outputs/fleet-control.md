@@ -1,14 +1,14 @@
 ## Summary
 
-**Skill:** fleet-control (Health Check Mode, var empty)
+Executed **fleet-control** in default Health Check Mode.
 
-**Outcome:** `FLEET_EMPTY` — silent stop per skill spec.
+**Pre-flight:** gh auth OK (anajuliabit, GH_TOKEN), rate_remaining=4994.
 
-**Why:** `memory/instances.json` contains `{"instances": []}` — no managed Aeon children registered to monitor. The skill spec explicitly directs "Stop. Do NOT notify." on empty registry to avoid training the operator to ignore the channel.
+**Registry state:** `memory/instances.json` contains `{"instances": []}` — no managed Aeon instances registered.
 
-**Actions taken:**
-- Read registry (`memory/instances.json`) → empty array
-- Read state file (`memory/state/fleet-control-state.json`) → already bootstrapped, no update needed (last_full_summary_date stays empty since we didn't notify)
-- Appended log entry to `memory/logs/2026-06-23.md` under `## fleet-control (health check) — 15:00Z tick`
+**Result:** `FLEET_EMPTY` — per the skill spec, this is a silent stop. Logged the entry to `memory/logs/2026-06-24.md` and did **not** send a notification (the spec explicitly forbids notifying on empty registry to avoid noise).
 
-**No notification fired.** No state mutation. Same exit pattern as the earlier 13:09Z tick today.
+**Files modified:**
+- `memory/logs/2026-06-24.md` — appended `## fleet-control (health check)` block.
+
+**Follow-up:** None required. To start managing instances, an operator would add entries to `memory/instances.json` with `{name, repo, purpose, created, ...}` fields; subsequent runs would then health-check each one.
