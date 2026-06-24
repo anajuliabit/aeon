@@ -1,0 +1,23 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "thought review",
+        "description": "no captures in last 24h"
+      },
+      "children": [
+        "text_content"
+      ]
+    },
+    "text_content": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface.",
+        "variant": "muted"
+      }
+    }
+  }
+}
