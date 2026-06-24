@@ -1,0 +1,576 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-24",
+        "description": "Full ship day — 3 articles landed, AAVE pick staged, 2026's highest-EPSS KEV flagged, and PR #138 stalled past 24h."
+      },
+      "children": [
+        "headlines-section",
+        "sep1",
+        "notable-section",
+        "sep2",
+        "decisions-section",
+        "sep3",
+        "footer-text"
+      ]
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "headlines-heading",
+        "cost-report-item",
+        "skill-analytics-item",
+        "skill-freshness-item",
+        "token-pick-item",
+        "security-digest-item"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "cost-report-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cost-report-title",
+        "cost-report-stat",
+        "cost-report-warning",
+        "cost-report-link"
+      ]
+    },
+    "cost-report-title": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "body"
+      }
+    },
+    "cost-report-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "7-day cost",
+        "value": "$237.60",
+        "delta": "-55.2%",
+        "trend": "down"
+      }
+    },
+    "cost-report-warning": {
+      "type": "Text",
+      "props": {
+        "text": "$1,018/mo burn warning",
+        "variant": "caption"
+      }
+    },
+    "cost-report-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cost-report-2026-06-24",
+        "href": "articles/cost-report-2026-06-24.md",
+        "source": "articles"
+      }
+    },
+    "skill-analytics-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-analytics-title",
+        "skill-analytics-grid",
+        "skill-analytics-link"
+      ]
+    },
+    "skill-analytics-title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "body"
+      }
+    },
+    "skill-analytics-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skill-analytics-runs-stat",
+        "skill-analytics-sr-stat",
+        "skill-analytics-anomalies-stat"
+      ]
+    },
+    "skill-analytics-runs-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "runs",
+        "value": "828"
+      }
+    },
+    "skill-analytics-sr-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "success rate",
+        "value": "34.2%"
+      }
+    },
+    "skill-analytics-anomalies-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "anomalies",
+        "value": "32"
+      }
+    },
+    "skill-analytics-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-analytics-2026-06-24",
+        "href": "articles/skill-analytics-2026-06-24.md",
+        "source": "articles"
+      }
+    },
+    "skill-freshness-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-freshness-title",
+        "skill-freshness-badge",
+        "skill-freshness-note",
+        "skill-freshness-link"
+      ]
+    },
+    "skill-freshness-title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness",
+        "variant": "body"
+      }
+    },
+    "skill-freshness-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FRESHNESS_WARN",
+        "variant": "destructive"
+      }
+    },
+    "skill-freshness-note": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard dep 14d stale",
+        "variant": "caption"
+      }
+    },
+    "skill-freshness-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness-2026-06-24",
+        "href": "articles/skill-freshness-2026-06-24.md",
+        "source": "articles"
+      }
+    },
+    "token-pick-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "token-pick-title",
+        "token-pick-badge-row",
+        "token-pick-price-stat",
+        "token-pick-targets",
+        "token-pick-link"
+      ]
+    },
+    "token-pick-title": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick",
+        "variant": "body"
+      }
+    },
+    "token-pick-badge-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "token-pick-badge",
+        "token-pick-rating"
+      ]
+    },
+    "token-pick-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "AAVE HIGH",
+        "variant": "default"
+      }
+    },
+    "token-pick-rating": {
+      "type": "Text",
+      "props": {
+        "text": "8/10",
+        "variant": "body"
+      }
+    },
+    "token-pick-price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "current price",
+        "value": "$76.09"
+      }
+    },
+    "token-pick-targets": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "token-pick-target-up",
+        "token-pick-target-inv"
+      ]
+    },
+    "token-pick-target-up": {
+      "type": "Text",
+      "props": {
+        "text": "target $87",
+        "variant": "caption"
+      }
+    },
+    "token-pick-target-inv": {
+      "type": "Text",
+      "props": {
+        "text": "inv $69/14d",
+        "variant": "caption"
+      }
+    },
+    "token-pick-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "2026-06-24-token-pick",
+        "href": ".pending-picks/2026-06-24-token-pick.json"
+      }
+    },
+    "security-digest-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "security-digest-title",
+        "security-digest-badge",
+        "security-digest-epss",
+        "security-digest-malware",
+        "security-digest-hash"
+      ]
+    },
+    "security-digest-title": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "body"
+      }
+    },
+    "security-digest-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-34910",
+        "variant": "destructive"
+      }
+    },
+    "security-digest-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS (2026 high)",
+        "value": "0.818",
+        "delta": "p96"
+      }
+    },
+    "security-digest-malware": {
+      "type": "Text",
+      "props": {
+        "text": "40 npm malware samples",
+        "variant": "caption"
+      }
+    },
+    "security-digest-hash": {
+      "type": "Text",
+      "props": {
+        "text": "notification hash: 8091092b",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "notable-heading",
+        "notable-narrative-item",
+        "notable-btc-item",
+        "notable-reg-item",
+        "notable-reflect-item",
+        "notable-list-item"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-narrative-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "notable-narrative-title",
+        "notable-narrative-text"
+      ]
+    },
+    "notable-narrative-title": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "body"
+      }
+    },
+    "notable-narrative-text": {
+      "type": "Text",
+      "props": {
+        "text": "first BEAR-BTC thesis (Hedgeye quad4) + btc-maxi contrarian; FRONT-RUN bucket closed",
+        "variant": "body"
+      }
+    },
+    "notable-btc-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "notable-btc-title",
+        "notable-btc-text"
+      ]
+    },
+    "notable-btc-title": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels ×6",
+        "variant": "body"
+      }
+    },
+    "notable-btc-text": {
+      "type": "Text",
+      "props": {
+        "text": "dipped to $60,319 at 16:38Z (reclaim flags re-armed); recovered $61,030 by 20:00Z",
+        "variant": "body"
+      }
+    },
+    "notable-reg-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "notable-reg-title",
+        "notable-reg-text"
+      ]
+    },
+    "notable-reg-title": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "body"
+      }
+    },
+    "notable-reg-text": {
+      "type": "Text",
+      "props": {
+        "text": "first end-to-end clean run in a week (4 act/4 watch, sr was 7%)",
+        "variant": "body"
+      }
+    },
+    "notable-reflect-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "notable-reflect-title",
+        "notable-reflect-text"
+      ]
+    },
+    "notable-reflect-title": {
+      "type": "Text",
+      "props": {
+        "text": "reflect",
+        "variant": "body"
+      }
+    },
+    "notable-reflect-text": {
+      "type": "Text",
+      "props": {
+        "text": "memory consolidated; Morpho curator-risk + EPSS record added to topics",
+        "variant": "body"
+      }
+    },
+    "notable-list-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "notable-list-title",
+        "notable-list-text"
+      ]
+    },
+    "notable-list-title": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest",
+        "variant": "body"
+      }
+    },
+    "notable-list-text": {
+      "type": "Text",
+      "props": {
+        "text": "3 above floor: cyrilXBT paywall longread, Flowslikeosmo fee scoreboard, Hercules yield thesis",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-pr-item",
+        "decision-newt-item",
+        "decision-btc-item"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-pr-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-pr-text",
+        "decision-pr-link"
+      ]
+    },
+    "decision-pr-text": {
+      "type": "Text",
+      "props": {
+        "text": "Merge PR #138 (goal-tracker header drift fix)",
+        "variant": "body"
+      }
+    },
+    "decision-pr-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/138",
+        "href": "https://github.com/anajuliabit/aeon/pull/138"
+      }
+    },
+    "decision-newt-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-newt-text"
+      ]
+    },
+    "decision-newt-text": {
+      "type": "Text",
+      "props": {
+        "text": "File NEWT short pick — top action-converter action, NEWT unlock 6-24 +64.9% supply cliff",
+        "variant": "body"
+      }
+    },
+    "decision-btc-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-btc-text"
+      ]
+    },
+    "decision-btc-text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC UTC close watch: if <$60,500, breakdown alert fires next btc-levels run",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+14 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
