@@ -30,7 +30,7 @@
 - [Market context](topics/market-context.md) — 6-24 snapshot: regime **chop** (oversold relief), BTC $62,442 +0.48%, F&G 17 (lagging 6-23 crash).
 - [Capital-2× program](topics/capital-2x-program.md) — North-star spec.
 - [XAI quota state](topics/xai-quota-exhausted.md) — Outage tracker since 6-16.
-- [AIXBT signals](topics/aixbt-grounding.md), [clusters](topics/aixbt-clusters.md), [chains](topics/aixbt-chains.md) — 36 clusters / ~193 chains as of 6-24 09:00Z pulse.
+- [AIXBT signals](topics/aixbt-grounding.md), [clusters](topics/aixbt-clusters.md), [chains](topics/aixbt-chains.md) — 36 clusters / ~204 chains as of 6-24 21:00Z pulse. Key: BTC sub-$60K (Saylor liquidation fear), Micron earnings 4× AI memory (demand intact), prediction markets $40B+pUSD$500M, EU MiCA July 1.
 
 ## Tracked Tokens
 Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).

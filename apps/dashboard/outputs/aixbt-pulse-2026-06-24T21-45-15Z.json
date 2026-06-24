@@ -1,0 +1,139 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-24 21:00Z"
+      },
+      "children": [
+        "heading_crypto",
+        "text_crypto_1",
+        "text_crypto_2",
+        "sep_1",
+        "heading_tradfi",
+        "text_tradfi_1",
+        "text_tradfi_2",
+        "sep_2",
+        "heading_new",
+        "text_new_1",
+        "text_new_2",
+        "text_new_3",
+        "text_new_4",
+        "sep_3",
+        "heading_bridge",
+        "text_bridge"
+      ]
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "text_crypto_1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC broke sub-$60K — new YTD lows. MSTR/STRC at record lows. Saylor liquidation fear entered the narrative.",
+        "variant": "body"
+      }
+    },
+    "text_crypto_2": {
+      "type": "Text",
+      "props": {
+        "text": "prediction markets: Kalshi targeting $40B raise, Polymarket pUSD tops $500M supply. betting collateral is becoming stablecoin infrastructure.",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "text_tradfi_1": {
+      "type": "Text",
+      "props": {
+        "text": "Micron flipped in 12h: chip rout → 4× AI memory revenue beat. AI demand thesis intact. pre-earnings positioning was wrong.",
+        "variant": "body"
+      }
+    },
+    "text_tradfi_2": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran easing continues. oil lower, yields falling. macro tail compressing.",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "text_new_1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC sub-$60K + Saylor liquidation framing (was \"extreme fear\" at $62K — 12h ago)",
+        "variant": "body"
+      }
+    },
+    "text_new_2": {
+      "type": "Text",
+      "props": {
+        "text": "Kalshi $40B raise + pUSD $500M (prediction markets as monetary infra — first window)",
+        "variant": "body"
+      }
+    },
+    "text_new_3": {
+      "type": "Text",
+      "props": {
+        "text": "Micron earnings inversion (4× AI memory, not demand collapse)",
+        "variant": "body"
+      }
+    },
+    "text_new_4": {
+      "type": "Text",
+      "props": {
+        "text": "EU MiCA July 1 exchange migration pressure",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text_bridge": {
+      "type": "Text",
+      "props": {
+        "text": "MU earnings cleared the morning's biggest overhang. sub-$60K BTC is a leverage story — Saylor reflexivity, ETF outflows, margin calls. the AI-bid underneath isn't gone. the prediction market flywheel (pUSD supply → volume → $40B Kalshi valuation) is the cleanest manufactured-reality call of the session.",
+        "variant": "body"
+      }
+    }
+  }
+}
