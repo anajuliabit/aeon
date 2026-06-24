@@ -1,0 +1,337 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Cost Report — 2026-06-24",
+        "description": "Last 7 days"
+      },
+      "children": [
+        "summary_grid",
+        "context_note",
+        "sep1",
+        "top_section",
+        "sep2",
+        "actions_section",
+        "sep3",
+        "spike_section",
+        "sep4",
+        "projection_section"
+      ]
+    },
+    "summary_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat_spent",
+        "stat_runs",
+        "stat_wow",
+        "stat_anomalies",
+        "stat_spikes"
+      ]
+    },
+    "stat_spent": {
+      "type": "Stat",
+      "props": {
+        "label": "Spent",
+        "value": "$237.60"
+      },
+      "children": []
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "67"
+      },
+      "children": []
+    },
+    "stat_wow": {
+      "type": "Stat",
+      "props": {
+        "label": "WoW Change",
+        "value": "-55.2%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat_anomalies": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies",
+        "value": "0"
+      },
+      "children": []
+    },
+    "stat_spikes": {
+      "type": "Stat",
+      "props": {
+        "label": "WoW Spikes",
+        "value": "1"
+      },
+      "children": []
+    },
+    "context_note": {
+      "type": "Alert",
+      "props": {
+        "message": "reppo-* cluster absent this week. 30-day projection: $1,018",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "top_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_heading",
+        "top_items"
+      ]
+    },
+    "top_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 by Cost",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "top_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top_1",
+        "top_2",
+        "top_3"
+      ]
+    },
+    "top_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. daily-routine — $44.91 (4 runs)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "top_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. on-chain-monitor — $35.10 (3 runs)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "top_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. heartbeat — $30.42 (8 runs)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "actions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions_heading",
+        "actions_stack"
+      ]
+    },
+    "actions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions This Week",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "actions_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_1",
+        "action_2",
+        "action_3"
+      ]
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_1_title",
+        "action_1_detail"
+      ]
+    },
+    "action_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "sandbox-truncation (ISS-025)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "action_1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Fix aeon.yml output capture (~$11-13/wk wasted on failed runs)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_2_title",
+        "action_2_detail"
+      ]
+    },
+    "action_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "action_2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Cap event history in context (cost: $0.08→$14.57→$20.46 across 3 runs, cache_read 0→9.1M tokens) (~$18/wk)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_3_title",
+        "action_3_detail"
+      ]
+    },
+    "action_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "action_3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Summarize context prefix, 4.6M cache_read per run (~$5.80/wk)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "spike_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "spike_heading",
+        "spike_detail"
+      ]
+    },
+    "spike_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "WoW Spike",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "spike_detail": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review +2.25× ($5.17 → $11.65)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "projection_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "projection_stat",
+        "full_report_link"
+      ]
+    },
+    "projection_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "30-Day Projection",
+        "value": "$1,018"
+      },
+      "children": []
+    },
+    "full_report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "articles/cost-report-2026-06-24.md"
+      },
+      "children": []
+    }
+  }
+}
