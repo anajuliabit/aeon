@@ -511,13 +511,13 @@
   },
   "token-movers": {
     "last_dispatch": "2026-06-24T13:03:27Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-23T13:22:11Z",
-    "total_runs": 38,
-    "total_successes": 23,
+    "last_status": "success",
+    "last_success": "2026-06-24T13:15:27Z",
+    "total_runs": 39,
+    "total_successes": 24,
     "total_failures": 15,
     "consecutive_failures": 0,
-    "success_rate": 0.61,
+    "success_rate": 0.62,
     "last_failed": "2026-06-21T12:14:16Z",
     "last_error": "34cdafd\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"",
     "last_quality_score": 5
