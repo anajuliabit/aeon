@@ -1,0 +1,637 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-06-24"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-verdict",
+        "text-sources",
+        "sep-1",
+        "heading-patch-today",
+        "stack-cve-34910",
+        "sep-2",
+        "stack-cve-67038",
+        "sep-3",
+        "stack-npm-malware",
+        "sep-4",
+        "heading-patch-week",
+        "stack-cve-54350",
+        "sep-5",
+        "stack-ghsa-c39w",
+        "sep-6",
+        "stack-ghsa-qxvg",
+        "sep-7",
+        "stack-cve-55441",
+        "sep-8",
+        "stack-cve-48126",
+        "sep-9",
+        "text-monitor-note"
+      ]
+    },
+    "text-verdict": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 2 actively exploited (1 with Mirai botnet ITW). 5 to schedule.",
+        "variant": "lead"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-patch-today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "stack-cve-34910": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-34910",
+        "badge-34910",
+        "text-34910-kev",
+        "text-34910-epss",
+        "text-34910-cvss",
+        "text-34910-desc",
+        "alert-34910",
+        "text-34910-sisters",
+        "text-34910-upgrade",
+        "text-34910-cisa"
+      ]
+    },
+    "link-34910": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-34910",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-34910"
+      }
+    },
+    "badge-34910": {
+      "type": "Badge",
+      "props": {
+        "text": "Ubiquiti UniFi OS",
+        "variant": "secondary"
+      }
+    },
+    "text-34910-kev": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-06-23",
+        "variant": "caption"
+      }
+    },
+    "text-34910-epss": {
+      "type": "Text",
+      "props": {
+        "text": "EPSS 0.818 (p96)",
+        "variant": "caption"
+      }
+    },
+    "text-34910-cvss": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS not yet assigned",
+        "variant": "caption"
+      }
+    },
+    "text-34910-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Command injection across 30+ UDM/UNAS/Cloud Gateway models. Mirai botnet ITW per pwndefend 6-09; sister KEVs CVE-2026-34909 (path traversal) + CVE-2026-34908 (access control) ship in same firmware."
+      }
+    },
+    "alert-34910": {
+      "type": "Alert",
+      "props": {
+        "title": "Actively Exploited",
+        "message": "Mirai botnet in the wild",
+        "type": "error"
+      }
+    },
+    "text-34910-sisters": {
+      "type": "Text",
+      "props": {
+        "text": "Related CVEs: CVE-2026-34909 (path traversal), CVE-2026-34908 (access control)",
+        "variant": "muted"
+      }
+    },
+    "text-34910-upgrade": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade UniFi OS today: UDM family ≥5.1.12, UDM-Beast ≥5.1.11, UNAS ≥5.1.10, UniFi OS Server ≥5.0.8"
+      }
+    },
+    "text-34910-cisa": {
+      "type": "Text",
+      "props": {
+        "text": "CISA BOD 26-04 due 6-26",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-cve-67038": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-67038",
+        "badge-67038",
+        "text-67038-kev",
+        "text-67038-epss",
+        "text-67038-cvss",
+        "text-67038-desc",
+        "text-67038-models",
+        "text-67038-upgrade",
+        "text-67038-cisa"
+      ]
+    },
+    "link-67038": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2025-67038",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2025-67038"
+      }
+    },
+    "badge-67038": {
+      "type": "Badge",
+      "props": {
+        "text": "Lantronix EDS5000",
+        "variant": "secondary"
+      }
+    },
+    "text-67038-kev": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-06-23",
+        "variant": "caption"
+      }
+    },
+    "text-67038-epss": {
+      "type": "Text",
+      "props": {
+        "text": "EPSS 0.011",
+        "variant": "caption"
+      }
+    },
+    "text-67038-cvss": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS pending",
+        "variant": "caption"
+      }
+    },
+    "text-67038-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Root command injection via username field on the HTTP RPC module"
+      }
+    },
+    "text-67038-models": {
+      "type": "Text",
+      "props": {
+        "text": "Affects EDS5008/5016/5032 on 2.1.0.0R3",
+        "variant": "caption"
+      }
+    },
+    "text-67038-upgrade": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade EDS5000 firmware to ≥2.2.0.0R1 (current shipping release per Lantronix)"
+      }
+    },
+    "text-67038-cisa": {
+      "type": "Text",
+      "props": {
+        "text": "CISA due 6-26",
+        "variant": "muted"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-npm-malware": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-npm",
+        "text-npm-count",
+        "text-npm-packages",
+        "text-npm-target",
+        "alert-npm"
+      ]
+    },
+    "heading-npm": {
+      "type": "Heading",
+      "props": {
+        "text": "npm Malware Advisories (48h)",
+        "level": "h3"
+      }
+    },
+    "text-npm-count": {
+      "type": "Text",
+      "props": {
+        "text": "40 net-new npm type=malware advisories in last 48h",
+        "variant": "lead"
+      }
+    },
+    "text-npm-packages": {
+      "type": "Text",
+      "props": {
+        "text": "Notable packages: vercel-api-client, vitest-cli, chalk-ultra, multer-express, eth_accounts, evmdotjs, web3-token-helper, cursorai-agent, aillmgen"
+      }
+    },
+    "text-npm-target": {
+      "type": "Text",
+      "props": {
+        "text": "Wallet-key/credential typosquats targeting AI + crypto devs",
+        "variant": "muted"
+      }
+    },
+    "alert-npm": {
+      "type": "Alert",
+      "props": {
+        "title": "Immediate Action Required",
+        "message": "Grep npm/yarn locks across repos; unpublish if landed; rotate npm tokens + any wallet keys touched by an affected dev box.",
+        "type": "warning"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-patch-week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "stack-cve-54350": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-54350",
+        "badge-54350",
+        "stat-54350-cvss",
+        "text-54350-epss",
+        "text-54350-poc",
+        "text-54350-desc",
+        "text-54350-upgrade"
+      ]
+    },
+    "link-54350": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-54350",
+        "href": "https://github.com/advisories/GHSA-8qv3-p479-cj62",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-54350": {
+      "type": "Badge",
+      "props": {
+        "text": "@budibase/server (npm)",
+        "variant": "secondary"
+      }
+    },
+    "stat-54350-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "10"
+      }
+    },
+    "text-54350-epss": {
+      "type": "Text",
+      "props": {
+        "text": "EPSS n/a",
+        "variant": "caption"
+      }
+    },
+    "text-54350-poc": {
+      "type": "Text",
+      "props": {
+        "text": "No public PoC",
+        "variant": "caption"
+      }
+    },
+    "text-54350-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Anonymous NoSQL operator injection via published-app query templates"
+      }
+    },
+    "text-54350-upgrade": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade @budibase/server to ≥3.39.12"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-ghsa-c39w": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-ghsa-c39w",
+        "badge-ghsa-c39w",
+        "text-ghsa-c39w-published",
+        "stat-ghsa-c39w-cvss",
+        "text-ghsa-c39w-related",
+        "text-ghsa-c39w-desc",
+        "text-ghsa-c39w-upgrade"
+      ]
+    },
+    "link-ghsa-c39w": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-c39w-43gm-34h5",
+        "href": "https://github.com/advisories/GHSA-c39w-43gm-34h5",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-ghsa-c39w": {
+      "type": "Badge",
+      "props": {
+        "text": "gogs.io/gogs (go)",
+        "variant": "secondary"
+      }
+    },
+    "text-ghsa-c39w-published": {
+      "type": "Text",
+      "props": {
+        "text": "Published 2026-06-23",
+        "variant": "caption"
+      }
+    },
+    "stat-ghsa-c39w-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "10"
+      }
+    },
+    "text-ghsa-c39w-related": {
+      "type": "Text",
+      "props": {
+        "text": "Related issues in coordinated batch: CVE-2026-52806 (rebase --exec injection, CVSS 9.9), CVE-2026-52811 (symlink RCE), plus 6 high severity",
+        "variant": "muted"
+      }
+    },
+    "text-ghsa-c39w-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Path traversal in organization name → RCE through git hooks"
+      }
+    },
+    "text-ghsa-c39w-upgrade": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade gogs to ≥0.14.3"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-ghsa-qxvg": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-ghsa-qxvg",
+        "badge-ghsa-qxvg",
+        "stat-ghsa-qxvg-cvss",
+        "text-ghsa-qxvg-related",
+        "text-ghsa-qxvg-chain",
+        "text-ghsa-qxvg-upgrade"
+      ]
+    },
+    "link-ghsa-qxvg": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-qxvg-h7q2-hcxh",
+        "href": "https://github.com/advisories/GHSA-qxvg-h7q2-hcxh",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-ghsa-qxvg": {
+      "type": "Badge",
+      "props": {
+        "text": "motioneye (pip)",
+        "variant": "secondary"
+      }
+    },
+    "stat-ghsa-qxvg-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.8"
+      }
+    },
+    "text-ghsa-qxvg-related": {
+      "type": "Text",
+      "props": {
+        "text": "Related in same release: GHSA-phv5 (auth bypass), CVE-2026-55488 (path traversal)",
+        "variant": "muted"
+      }
+    },
+    "text-ghsa-qxvg-chain": {
+      "type": "Text",
+      "props": {
+        "text": "Attack chain: LFI → pass-the-hash admin → unsafe restore → unauth action exec (chained RCE)"
+      }
+    },
+    "text-ghsa-qxvg-upgrade": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade motioneye to ≥0.44.0"
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-cve-55441": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-55441",
+        "badge-55441",
+        "stat-55441-cvss",
+        "text-55441-epss",
+        "text-55441-poc",
+        "text-55441-desc",
+        "text-55441-upgrade"
+      ]
+    },
+    "link-55441": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-55441",
+        "href": "https://github.com/advisories/GHSA-77g9-363w-rccq",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-55441": {
+      "type": "Badge",
+      "props": {
+        "text": "mise (rust)",
+        "variant": "secondary"
+      }
+    },
+    "stat-55441-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.6"
+      }
+    },
+    "text-55441-epss": {
+      "type": "Text",
+      "props": {
+        "text": "EPSS n/a",
+        "variant": "caption"
+      }
+    },
+    "text-55441-poc": {
+      "type": "Text",
+      "props": {
+        "text": "No public PoC",
+        "variant": "caption"
+      }
+    },
+    "text-55441-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Arbitrary command exec via task-include files in untrusted config-less repos"
+      }
+    },
+    "text-55441-upgrade": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade mise to ≥2026.6.4"
+      }
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-cve-48126": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-48126",
+        "badge-48126",
+        "stat-48126-cvss",
+        "text-48126-epss",
+        "text-48126-desc",
+        "text-48126-upgrade"
+      ]
+    },
+    "link-48126": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48126",
+        "href": "https://github.com/advisories/GHSA-jc3j-x6pg-4hmv",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-48126": {
+      "type": "Badge",
+      "props": {
+        "text": "algernon (go)",
+        "variant": "secondary"
+      }
+    },
+    "stat-48126-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.2"
+      }
+    },
+    "text-48126-epss": {
+      "type": "Text",
+      "props": {
+        "text": "EPSS 0.003",
+        "variant": "caption"
+      }
+    },
+    "text-48126-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Host header path traversal in --domain mode reads files + runs Lua from parent dir"
+      }
+    },
+    "text-48126-upgrade": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade algernon to ≥1.17.8"
+      }
+    },
+    "sep-9": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text-monitor-note": {
+      "type": "Text",
+      "props": {
+        "text": "No MONITOR tier this cycle — all tracked-stack critical/high have first_patched_version set.",
+        "variant": "muted"
+      }
+    }
+  }
+}
