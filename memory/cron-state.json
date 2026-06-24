@@ -105,14 +105,14 @@
     "success_rate": 1
   },
   "narrative-tracker": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-23T14:15:20Z",
     "total_runs": 55,
     "total_successes": 15,
     "total_failures": 40,
     "consecutive_failures": 0,
     "success_rate": 0.27,
-    "last_dispatch": "2026-06-23T14:04:03Z",
+    "last_dispatch": "2026-06-24T13:53:13Z",
     "last_quality_score": 4,
     "last_failed": "2026-06-21T12:14:56Z",
     "last_error": "46a0bc6\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
