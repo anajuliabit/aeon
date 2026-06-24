@@ -1,0 +1,224 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Analytics"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_summary",
+        "stack_window_stats",
+        "alert_anomalies",
+        "sep1",
+        "heading_critical",
+        "alert_fork_skill_gap",
+        "alert_operator_scorecard",
+        "sep2",
+        "heading_degraded",
+        "alert_cost_report",
+        "alert_vuln_scanner",
+        "alert_security_digest",
+        "alert_more_degraded",
+        "sep3",
+        "heading_top_skills",
+        "stack_top_skills",
+        "sep4",
+        "link_full_report"
+      ]
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "2 scheduled skill(s) didn't run this window — fork-skill-gap",
+        "variant": "lead"
+      }
+    },
+    "stack_window_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_runs",
+        "stat_skills",
+        "stat_success"
+      ]
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs (7d)",
+        "value": "828"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "44"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "34.2%"
+      }
+    },
+    "alert_anomalies": {
+      "type": "Alert",
+      "props": {
+        "title": "Anomalies Detected",
+        "message": "32 anomalies found",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_critical": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 Critical Issues",
+        "level": "h3"
+      }
+    },
+    "alert_fork_skill_gap": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-skill-gap",
+        "message": "SILENT: scheduled `0 21 * * 0` but zero runs in window",
+        "type": "error"
+      }
+    },
+    "alert_operator_scorecard": {
+      "type": "Alert",
+      "props": {
+        "title": "operator-scorecard",
+        "message": "SILENT: scheduled `30 10 * * 1` but zero runs in window",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 Degraded Skills",
+        "level": "h3"
+      }
+    },
+    "alert_cost_report": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "LOW_SUCCESS: 2.6% over 39 runs",
+        "type": "warning"
+      }
+    },
+    "alert_vuln_scanner": {
+      "type": "Alert",
+      "props": {
+        "title": "vuln-scanner",
+        "message": "LOW_SUCCESS: 3.8% over 26 runs",
+        "type": "warning"
+      }
+    },
+    "alert_security_digest": {
+      "type": "Alert",
+      "props": {
+        "title": "security-digest",
+        "message": "LOW_SUCCESS: 13.9% over 36 runs",
+        "type": "warning"
+      }
+    },
+    "alert_more_degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "27 more LOW_SUCCESS skills",
+        "message": "Systemic sandbox-truncation cluster, all cf=0",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_top_skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Skills by Runs",
+        "level": "h3"
+      }
+    },
+    "stack_top_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_btc_levels",
+        "stat_heartbeat",
+        "stat_market_context"
+      ]
+    },
+    "stat_btc_levels": {
+      "type": "Stat",
+      "props": {
+        "label": "btc-levels",
+        "value": "62"
+      }
+    },
+    "stat_heartbeat": {
+      "type": "Stat",
+      "props": {
+        "label": "heartbeat",
+        "value": "49"
+      }
+    },
+    "stat_market_context": {
+      "type": "Stat",
+      "props": {
+        "label": "market-context-refresh",
+        "value": "45"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_full_report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Analytics Report",
+        "href": "articles/skill-analytics-2026-06-24.md",
+        "source": "Skill Analytics"
+      }
+    }
+  }
+}

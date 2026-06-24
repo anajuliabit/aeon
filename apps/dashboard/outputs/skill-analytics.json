@@ -1,71 +1,43 @@
 {
   "version": "1",
-  "generated_at": "2026-06-10T19:19:00Z",
+  "generated_at": "2026-06-24T19:00:00Z",
   "skill": "skill-analytics",
-  "title": "Skill Analytics — 2026-06-10",
+  "title": "Skill Analytics — 2026-06-24",
   "spec": {
     "type": "Stack",
     "props": {"direction": "vertical", "gap": "md"},
     "children": [
-      {"type": "Alert", "props": {"variant": "destructive", "children": "32 anomaly flag(s) raised — 2 SILENT + 30 LOW_SUCCESS (rate-limit cluster artifact, fleet recovered)"}},
-      {"type": "Heading", "props": {"level": 2, "children": "Skill Analytics — 2026-06-10"}},
-      {"type": "Text", "props": {"variant": "muted", "children": "2 scheduled skill(s) didn't run this window — fork-skill-gap, operator-scorecard"}},
+      {"type": "Alert", "props": {"variant": "destructive", "children": "32 anomaly flag(s) raised — 2 SILENT + 30 LOW_SUCCESS. See Anomalies section."}},
+      {"type": "Heading", "props": {"level": 2, "children": "Skill Analytics — 2026-06-24"}},
+      {"type": "Text", "props": {"variant": "muted", "children": "2 scheduled skill(s) didn't run this window — fork-skill-gap"}},
       {"type": "Grid", "props": {"columns": 4, "gap": "sm"}, "children": [
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Total runs"}},
-          {"type": "Heading", "props": {"level": 3, "children": "395"}}
+          {"type": "Heading", "props": {"level": 3, "children": "828"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Active skills"}},
-          {"type": "Heading", "props": {"level": 3, "children": "48"}}
+          {"type": "Heading", "props": {"level": 3, "children": "44"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Success rate"}},
-          {"type": "Heading", "props": {"level": 3, "children": "65%"}}
+          {"type": "Heading", "props": {"level": 3, "children": "34.2%"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Anomalies"}},
           {"type": "Heading", "props": {"level": 3, "children": "32"}}
         ]}}
       ]},
-      {"type": "Heading", "props": {"level": 3, "children": "Anomalies — 🔴 SILENT × 2"}},
+      {"type": "Heading", "props": {"level": 3, "children": "Silent scheduled skills — 🔴 SILENT × 2"}},
       {"type": "Table", "props": {
         "columns": [
-          {"key": "flag", "header": "Flag"},
           {"key": "skill", "header": "Skill"},
-          {"key": "detail", "header": "Detail"},
+          {"key": "schedule", "header": "Schedule"},
           {"key": "action", "header": "Action"}
         ],
         "rows": [
-          {"flag": "🔴 SILENT", "skill": "fork-skill-gap", "detail": "Sun `0 21 * * 0`, missed 2026-06-07 — rate-limit cluster", "action": "confirm fires Sun 2026-06-14"},
-          {"flag": "🔴 SILENT", "skill": "operator-scorecard", "detail": "Mon `30 10 * * 1`, missed 2026-06-08 — rate-limit cluster", "action": "confirm fires Mon 2026-06-15"}
-        ]
-      }},
-      {"type": "Heading", "props": {"level": 3, "children": "Anomalies — 🟠 LOW_SUCCESS × 30 (rate-limit artifact)"}},
-      {"type": "Text", "props": {"variant": "muted", "children": "Claude API cluster 2026-06-06→06-08 caused ~140 failures fleet-wide. All 30 skills have consecutive_failures=0 as of 2026-06-10. Exception: fleet-control last=failure, 56.3% success — manual check warranted."}},
-      {"type": "Table", "props": {
-        "columns": [
-          {"key": "skill", "header": "Skill"},
-          {"key": "runs", "header": "Runs"},
-          {"key": "success", "header": "Success"},
-          {"key": "last", "header": "Last"}
-        ],
-        "rows": [
-          {"skill": "reppo-digest", "runs": "32", "success": "65.6%", "last": "success"},
-          {"skill": "reppo-orchestrator", "runs": "32", "success": "68.8%", "last": "success"},
-          {"skill": "reppo-trading-agent", "runs": "32", "success": "68.8%", "last": "success"},
-          {"skill": "reppo-voter", "runs": "32", "success": "68.8%", "last": "success"},
-          {"skill": "heartbeat", "runs": "23", "success": "65.2%", "last": "success"},
-          {"skill": "fleet-control", "runs": "16", "success": "56.3%", "last": "⚠️ failure"},
-          {"skill": "aixbt-pulse", "runs": "14", "success": "64.3%", "last": "success"},
-          {"skill": "token-movers", "runs": "12", "success": "50.0%", "last": "success"},
-          {"skill": "token-pick", "runs": "11", "success": "72.7%", "last": "success"},
-          {"skill": "token-alert", "runs": "9", "success": "77.8%", "last": "success"},
-          {"skill": "defi-overview", "runs": "9", "success": "77.8%", "last": "success"},
-          {"skill": "market-context-refresh", "runs": "9", "success": "77.8%", "last": "success"},
-          {"skill": "thought-review", "runs": "8", "success": "50.0%", "last": "success"},
-          {"skill": "action-converter", "runs": "8", "success": "62.5%", "last": "success"},
-          {"skill": "reflect", "runs": "8", "success": "62.5%", "last": "success"}
+          {"skill": "fork-skill-gap", "schedule": "0 21 * * 0 (Sun 21:00 UTC)", "action": "check workflow / scheduler"},
+          {"skill": "operator-scorecard", "schedule": "30 10 * * 1 (Mon 10:30 UTC)", "action": "check workflow / scheduler"}
         ]
       }},
       {"type": "Heading", "props": {"level": 3, "children": "Top runners"}},
@@ -76,37 +48,45 @@
           {"key": "runs", "header": "Runs"},
           {"key": "success", "header": "Success"},
           {"key": "last", "header": "Last"},
-          {"key": "exit", "header": "Dominant exit"}
+          {"key": "exit", "header": "Exit"}
         ],
         "rows": [
-          {"rank": "1", "skill": "reppo-digest", "runs": "32", "success": "65.6%", "last": "success", "exit": "uncategorized"},
-          {"rank": "2", "skill": "reppo-orchestrator", "runs": "32", "success": "68.8%", "last": "success", "exit": "uncategorized"},
-          {"rank": "3", "skill": "reppo-trading-agent", "runs": "32", "success": "68.8%", "last": "success", "exit": "uncategorized"},
-          {"rank": "4", "skill": "reppo-voter", "runs": "32", "success": "68.8%", "last": "success", "exit": "uncategorized"},
-          {"rank": "5", "skill": "heartbeat", "runs": "23", "success": "65.2%", "last": "success", "exit": "ok"},
-          {"rank": "6", "skill": "fleet-control", "runs": "16", "success": "56.3%", "last": "failure", "exit": "uncategorized"},
-          {"rank": "7", "skill": "aixbt-pulse", "runs": "14", "success": "64.3%", "last": "success", "exit": "ok"},
-          {"rank": "8", "skill": "token-movers", "runs": "12", "success": "50.0%", "last": "success", "exit": "ok"},
-          {"rank": "9", "skill": "token-pick", "runs": "11", "success": "72.7%", "last": "success", "exit": "ok"},
-          {"rank": "10", "skill": "token-alert", "runs": "9", "success": "77.8%", "last": "success", "exit": "ok"}
+          {"rank": "1", "skill": "btc-levels", "runs": "62", "success": "54.8%", "last": "success", "exit": "uncategorized"},
+          {"rank": "2", "skill": "heartbeat", "runs": "49", "success": "32.7%", "last": "success", "exit": "ok"},
+          {"rank": "3", "skill": "market-context-refresh", "runs": "45", "success": "15.6%", "last": "success", "exit": "ok"},
+          {"rank": "4", "skill": "search-skill", "runs": "40", "success": "15.0%", "last": "success", "exit": "uncategorized"},
+          {"rank": "5", "skill": "cost-report", "runs": "39", "success": "2.6%", "last": "success", "exit": "uncategorized"},
+          {"rank": "6", "skill": "fleet-control", "runs": "39", "success": "30.8%", "last": "success", "exit": "uncategorized"},
+          {"rank": "7", "skill": "narrative-tracker", "runs": "37", "success": "18.9%", "last": "success", "exit": "ok"},
+          {"rank": "8", "skill": "list-digest", "runs": "36", "success": "19.4%", "last": "success", "exit": "ok"},
+          {"rank": "9", "skill": "security-digest", "runs": "36", "success": "13.9%", "last": "success", "exit": "ok"},
+          {"rank": "10", "skill": "agent-buzz", "runs": "32", "success": "21.9%", "last": "success", "exit": "ok"},
+          {"rank": "11", "skill": "skill-health", "runs": "31", "success": "22.6%", "last": "success", "exit": "partial"},
+          {"rank": "12", "skill": "aixbt-pulse", "runs": "30", "success": "43.3%", "last": "success", "exit": "ok"},
+          {"rank": "13", "skill": "goal-tracker", "runs": "30", "success": "23.3%", "last": "success", "exit": "ok"},
+          {"rank": "14", "skill": "reflect", "runs": "30", "success": "23.3%", "last": "success", "exit": "ok"},
+          {"rank": "15", "skill": "action-converter", "runs": "29", "success": "24.1%", "last": "success", "exit": "ok"}
         ]
       }},
-      {"type": "Heading", "props": {"level": 3, "children": "Exit taxonomy (best-effort, from daily logs)"}},
+      {"type": "Heading", "props": {"level": 3, "children": "Exit taxonomy (best-effort, 12 log files scanned)"}},
       {"type": "Table", "props": {
         "columns": [
           {"key": "bucket", "header": "Bucket"},
           {"key": "count", "header": "Count"},
           {"key": "pct", "header": "%"},
-          {"key": "note", "header": "Note"}
+          {"key": "top", "header": "Top skills"}
         ],
         "rows": [
-          {"bucket": "error", "count": "~137", "pct": "~35%", "note": "rate-limit cluster 06-06→06-08"},
-          {"bucket": "ok", "count": "~110", "pct": "~28%", "note": "heartbeat, token-alert, defi-overview, daily-routine, goal-tracker, reflect"},
-          {"bucket": "quiet", "count": "~65", "pct": "~16%", "note": "FLEET_EMPTY ×44, FRESHNESS_NO_CHANGE ×21, NO_CONFIG ×20"},
-          {"bucket": "uncategorized", "count": "~83", "pct": "~21%", "note": "reppo-* chain, morning-brief, evening-recap"},
-          {"bucket": "skip / new_info", "count": "0", "pct": "0%", "note": "none identified"}
+          {"bucket": "ok", "count": "25", "pct": "56.8%", "top": "narrative-tracker, heartbeat, defi-monitor, goal-tracker, reflect…"},
+          {"bucket": "uncategorized", "count": "17", "pct": "38.6%", "top": "btc-levels, search-skill, cost-report, fleet-control, vuln-scanner…"},
+          {"bucket": "partial", "count": "1", "pct": "2.3%", "top": "skill-health"},
+          {"bucket": "skip-other", "count": "1", "pct": "2.3%", "top": "token-pick (TOKEN_PICK_SKIP)"},
+          {"bucket": "skip_unchanged", "count": "0", "pct": "0%", "top": "—"},
+          {"bucket": "new_info", "count": "0", "pct": "0%", "top": "—"},
+          {"bucket": "error", "count": "0", "pct": "0%", "top": "—"}
         ]
-      }}
+      }},
+      {"type": "Text", "props": {"variant": "muted", "children": "Note: 30 LOW_SUCCESS flags reflect systemic sandbox-truncation cluster (output_tokens=0 signature, ISS-019/020/021/024/025) — not individual skill regressions. All skills have consecutive_failures=0 as of 2026-06-24."}}
     ]
   }
 }
