@@ -1,0 +1,586 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers",
+        "description": "2026-06-24 13:08z"
+      },
+      "children": [
+        "summary_text",
+        "sep_1",
+        "market_overview",
+        "indices_grid",
+        "sep_2",
+        "winners_section",
+        "sep_3",
+        "losers_section",
+        "sep_4",
+        "trending_section",
+        "sep_5",
+        "notable_section"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "Tape stabilized post-cascade — 49/100 top-100 alts green, median 24h −0.0%",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "market_overview": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE: Lone large-cap bleeder at −1.6% (7d −12.9%)",
+        "variant": "muted"
+      }
+    },
+    "indices_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "btc_stat",
+        "eth_stat",
+        "sol_stat",
+        "hype_stat"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62.4k",
+        "delta": "+0.4%",
+        "trend": "up"
+      }
+    },
+    "eth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,666",
+        "delta": "+0.9%",
+        "trend": "up"
+      }
+    },
+    "sol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$69.27",
+        "delta": "+0.6%",
+        "trend": "up"
+      }
+    },
+    "hype_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$61.83",
+        "delta": "−1.6%",
+        "trend": "down"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol/Rank",
+          "Status"
+        ],
+        "rows": [
+          [
+            "BEAT (Audiera)",
+            "$1.95",
+            "+10.5%",
+            "+9.2%",
+            "+1.1%",
+            "$60.9M / #95",
+            "TRENDING+UP"
+          ],
+          [
+            "JTO (Jito)",
+            "$0.6844",
+            "+9.8%",
+            "−7.4%",
+            "−1.6%",
+            "$48.5M / #126",
+            ""
+          ],
+          [
+            "LAB",
+            "$17.27",
+            "+9.6%",
+            "+34.2%",
+            "+1.7%",
+            "$50.3M / #22",
+            ""
+          ],
+          [
+            "JUP (Jupiter)",
+            "$0.2178",
+            "+9.2%",
+            "+12.3%",
+            "−1.1%",
+            "$39.7M / #82",
+            ""
+          ],
+          [
+            "DYDX (dYdX)",
+            "$0.1462",
+            "+9.1%",
+            "+18.1%",
+            "−1.8%",
+            "$25.1M / #228",
+            ""
+          ],
+          [
+            "EDGE (edgeX)",
+            "$0.3932",
+            "+8.3%",
+            "+8.5%",
+            "−0.4%",
+            "$7.4M / #211",
+            ""
+          ],
+          [
+            "AAVE",
+            "$76.64",
+            "+6.4%",
+            "+2.2%",
+            "+0.2%",
+            "$200.1M / #61",
+            "TRENDING+UP"
+          ],
+          [
+            "BTSE",
+            "$0.9742",
+            "+6.4%",
+            "−12.9%",
+            "+0.4%",
+            "$3.3M / #195",
+            ""
+          ],
+          [
+            "IP (Story)",
+            "$0.3163",
+            "+5.6%",
+            "+3.2%",
+            "−1.6%",
+            "$33.9M / #245",
+            ""
+          ],
+          [
+            "FARTCOIN",
+            "$0.1291",
+            "+4.9%",
+            "−3.9%",
+            "−0.4%",
+            "$17.2M / #224",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol/Rank",
+          "Status"
+        ],
+        "rows": [
+          [
+            "H (Humanity)",
+            "$0.0731",
+            "−41.9%",
+            "−66.5%",
+            "−4.0%",
+            "$38.9M / #213",
+            "CAPITULATION"
+          ],
+          [
+            "SKYAI",
+            "$0.2825",
+            "−18.5%",
+            "−22.8%",
+            "+0.4%",
+            "$16.4M / #133",
+            ""
+          ],
+          [
+            "UB (Unibase)",
+            "$0.0667",
+            "−14.7%",
+            "−41.0%",
+            "−2.6%",
+            "$41.1M / #187",
+            ""
+          ],
+          [
+            "RE",
+            "$0.7123",
+            "−11.5%",
+            "0.0%",
+            "−3.4%",
+            "$67.8M / #242",
+            "CAPITULATION"
+          ],
+          [
+            "ATOM (Cosmos)",
+            "$1.64",
+            "−5.9%",
+            "−16.9%",
+            "−0.4%",
+            "$34.7M / #74",
+            ""
+          ],
+          [
+            "GWEI (ETHGas)",
+            "$0.1182",
+            "−5.6%",
+            "−4.6%",
+            "+0.5%",
+            "$3.2M / #139",
+            ""
+          ],
+          [
+            "KAG (Kinesis Silver)",
+            "$58.66",
+            "−5.3%",
+            "−16.2%",
+            "−1.7%",
+            "$1.2M / #152",
+            ""
+          ],
+          [
+            "ALGO",
+            "$0.0905",
+            "−4.8%",
+            "−6.2%",
+            "−0.8%",
+            "$47.4M / #78",
+            ""
+          ],
+          [
+            "AKT (Akash)",
+            "$0.6880",
+            "−4.7%",
+            "−19.1%",
+            "−0.5%",
+            "$5.3M / #170",
+            ""
+          ],
+          [
+            "WLD (Worldcoin)",
+            "$0.5394",
+            "−4.5%",
+            "−17.7%",
+            "+1.0%",
+            "$383.2M / #43",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending_heading",
+        "trending_list"
+      ]
+    },
+    "trending_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h3"
+      }
+    },
+    "trending_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend_1",
+        "trend_2",
+        "trend_3",
+        "trend_4",
+        "trend_5",
+        "trend_6",
+        "trend_7"
+      ]
+    },
+    "trend_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "trend_1_text",
+        "trend_1_badge"
+      ]
+    },
+    "trend_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "NES (Nesa) — #532, $0.2782, 24h −16.1%"
+      }
+    },
+    "trend_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+DOWN",
+        "variant": "destructive"
+      }
+    },
+    "trend_2": {
+      "type": "Text",
+      "props": {
+        "text": "RAIN — #13, $0.01606, 24h +1.7%"
+      }
+    },
+    "trend_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "trend_3_text",
+        "trend_3_badge"
+      ]
+    },
+    "trend_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "ARX (Arcium) — #401, $0.2759, 24h −22.6%"
+      }
+    },
+    "trend_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+DOWN",
+        "variant": "destructive"
+      }
+    },
+    "trend_4": {
+      "type": "Text",
+      "props": {
+        "text": "PENGU (Pudgy Penguins) — #117, $0.006180, 24h −1.7%"
+      }
+    },
+    "trend_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "trend_5_text",
+        "trend_5_badge"
+      ]
+    },
+    "trend_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE — #61, $76.15, 24h +5.7%"
+      }
+    },
+    "trend_5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+UP",
+        "variant": "secondary"
+      }
+    },
+    "trend_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "trend_6_text",
+        "trend_6_badge"
+      ]
+    },
+    "trend_6_text": {
+      "type": "Text",
+      "props": {
+        "text": "SLX (Solstice) — #341, $0.2895, 24h +45.1%"
+      }
+    },
+    "trend_6_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PUMP-RISK",
+        "variant": "destructive"
+      }
+    },
+    "trend_7": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "trend_7_text",
+        "trend_7_badge"
+      ]
+    },
+    "trend_7_text": {
+      "type": "Text",
+      "props": {
+        "text": "BEAT (Audiera) — #95, $1.94, 24h +9.0%"
+      }
+    },
+    "trend_7_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+UP",
+        "variant": "secondary"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4",
+        "notable_5"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable_1": {
+      "type": "Alert",
+      "props": {
+        "title": "H (Humanity) Accelerating",
+        "message": "Was −16% morning, now −41.9% with CAPITULATION (vol/mcap 0.29); 7d −66.5% on $36M-exploit + unlock day, full surrender ongoing",
+        "type": "error"
+      }
+    },
+    "notable_2": {
+      "type": "Alert",
+      "props": {
+        "title": "SLX Pump Risk",
+        "message": "SLX +45% at rank #341 — PUMP-RISK, illiquid spike, treat trending placement as noise",
+        "type": "warning"
+      }
+    },
+    "notable_3": {
+      "type": "Alert",
+      "props": {
+        "title": "GWEI Direction Flip",
+        "message": "GWEI direction-flip vs 6-23 — was +14.1% winner yesterday, −5.6% loser today",
+        "type": "info"
+      }
+    },
+    "notable_4": {
+      "type": "Alert",
+      "props": {
+        "title": "BEAT Momentum Bleeding",
+        "message": "BEAT cooled from morning +58.4% to +10.5% but still TRENDING+UP — momentum bleeding, not reversing yet",
+        "type": "info"
+      }
+    },
+    "notable_5": {
+      "type": "Alert",
+      "props": {
+        "title": "JTO Flips Green",
+        "message": "JTO flips green +9.8% — was a 6-22 loser (−8.3%), first SOL-DeFi green print this week",
+        "type": "success"
+      }
+    }
+  }
+}

@@ -1,42 +1,43 @@
-*token movers — 2026-06-23 ~13:12z*
+*token movers — 2026-06-24 13:08z*
 
-_capitulation accelerated post-morning run — 13/100 top alts green, median 24h -4.79%; BTC -4.65%, ETH -6.45%, SOL -7.43% (morning was -1.7/-1.6/-4.8)._
+_tape stabilized post-cascade — 49/100 top-100 alts green, median 24h −0.0%; BTC +0.4% $62.4k, ETH +0.9% $1,666, SOL +0.6% $69.27, HYPE −1.6% $61.83 (7d −12.9% lone large-cap bleeder)._
 
 *top winners (24h)*
-1. DEXE (DeXe) — $23.03  +28.6% / 7d +23.6% / 1h +0.9%  •  $102M / #65  [rolling continuation of 6-22 +76.8% rip]
-2. GWEI (ETHGas) — $0.1258  +19.2% / 7d -9.3% / 1h +5.6%  •  $6M / #138  [accelerated vs morning +14.1%]
-3. RAIN (Rain) — $0.01578  +9.6% / 7d +13.2%  •  $44M / #13  [MAJOR — sole rank-≤20 green]
-4. ZANO — $9.77  +8.8% / 7d -5.9%  •  $1.6M / #199
-5. AWE (AWE Network) — $0.0630  +7.5% / 7d +15.7%  •  $6.5M / #230
-6. VELVET — $0.4748  +6.2% / 7d +30.5%  •  $11M / #170
-7. BEAT (Audiera) — $1.76  +4.2% / 7d -44.8%  •  $16M / #100  [relief bounce]
-8. ALGO (Algorand) — $0.0949  +3.9% / 7d -0.9%  •  $42M / #75
+1. BEAT (Audiera) — $1.95  +10.5% / 7d +9.2% / 1h +1.1%  •  $60.9M / #95  [TRENDING+UP]
+2. JTO (Jito) — $0.6844  +9.8% / 7d −7.4% / 1h −1.6%  •  $48.5M / #126
+3. LAB — $17.27  +9.6% / 7d +34.2% / 1h +1.7%  •  $50.3M / #22
+4. JUP (Jupiter) — $0.2178  +9.2% / 7d +12.3% / 1h −1.1%  •  $39.7M / #82
+5. DYDX (dYdX) — $0.1462  +9.1% / 7d +18.1% / 1h −1.8%  •  $25.1M / #228
+6. EDGE (edgeX) — $0.3932  +8.3% / 7d +8.5% / 1h −0.4%  •  $7.4M / #211
+7. AAVE — $76.64  +6.4% / 7d +2.2% / 1h +0.2%  •  $200.1M / #61  [TRENDING+UP]
+8. BTSE — $0.9742  +6.4% / 7d −12.9% / 1h +0.4%  •  $3.3M / #195
+9. IP (Story) — $0.3163  +5.6% / 7d +3.2% / 1h −1.6%  •  $33.9M / #245
+10. FARTCOIN — $0.1291  +4.9% / 7d −3.9% / 1h −0.4%  •  $17.2M / #224
 
 *top losers (24h)*
-1. UB (Unibase) — $0.0779  -33.6% / 7d -32.6%  •  $38M / #176  [carry from morning -35.7%]
-2. EIGEN (EigenCloud) — $0.2502  -17.0% / 7d +14.3%  •  $51M / #182  [TRENDING+DOWN — 2nd day reversal of 6-22 HIGH 9/10 pick]
-3. VVV (Venice Token) — $13.36  -16.0% / 7d -12.8%  •  $26M / #88  [new vs morning]
-4. H (Humanity) — $0.1229  -14.9% / 7d -38.3%  •  $30M / #152  [carry, continued capitulation]
-5. BILL (Billions Network) — $0.0525  -14.1% / 7d -21.8%  •  $22M / #222  [accelerated from morning -9.5%]
-6. WLD (Worldcoin) — $0.5637  -11.6% / 7d -13.5%  •  $302M / #43  [accelerated from morning -8.7%]
-7. SPX (SPX6900) — $0.3399  -11.0% / 7d -10.6%  •  $11M / #129  [new]
-8. BP (Backpack) — $0.5723  -10.9% / 7d +36.8%  •  $7.3M / #207  [TRENDING+DOWN, giveback continues]
-9. XLM (Stellar) — $0.1918  -10.5% / 7d -13.6%  •  $241M / #16  [MAJOR — rare rank-≤20 -10% day]
-10. BTW (Bitway) — $0.1041  -10.5% / 7d +68.7%  •  $35M / #153  [carry, giveback ongoing]
+1. H (Humanity) — $0.0731  −41.9% / 7d −66.5% / 1h −4.0%  •  $38.9M / #213  [CAPITULATION]
+2. SKYAI — $0.2825  −18.5% / 7d −22.8% / 1h +0.4%  •  $16.4M / #133
+3. UB (Unibase) — $0.0667  −14.7% / 7d −41.0% / 1h −2.6%  •  $41.1M / #187
+4. RE — $0.7123  −11.5% / 7d 0.0% / 1h −3.4%  •  $67.8M / #242  [CAPITULATION]
+5. ATOM (Cosmos) — $1.64  −5.9% / 7d −16.9% / 1h −0.4%  •  $34.7M / #74
+6. GWEI (ETHGas) — $0.1182  −5.6% / 7d −4.6% / 1h +0.5%  •  $3.2M / #139
+7. KAG (Kinesis Silver) — $58.66  −5.3% / 7d −16.2% / 1h −1.7%  •  $1.2M / #152
+8. ALGO — $0.0905  −4.8% / 7d −6.2% / 1h −0.8%  •  $47.4M / #78
+9. AKT (Akash) — $0.6880  −4.7% / 7d −19.1% / 1h −0.5%  •  $5.3M / #170
+10. WLD (Worldcoin) — $0.5394  −4.5% / 7d −17.7% / 1h +1.0%  •  $383.2M / #43
 
 *trending*
-1. ARX (Arcium) — #328, $0.357, 24h -0.9%
-2. SOL — #7, $68.87, 24h -7.3%  [TRENDING+DOWN MAJOR]
-3. BTC — #1, $62,200, 24h -4.4%  [TRENDING+DOWN MAJOR]
-4. PENGU — #114, $0.00629, 24h -8.2%  [TRENDING+DOWN]
-5. AERO (Aerodrome) — #105, $0.509, 24h -6.1%  [TRENDING+DOWN — direction flip vs morning's TRENDING+UP]
-6. HYPE — #10, $62.80, 24h -8.3%  [TRENDING+DOWN MAJOR]
-7. ARB (Arbitrum) — #102, $0.0787, 24h -8.6%  [TRENDING+DOWN]
+1. NES (Nesa) — #532, $0.2782, 24h −16.1%  [TRENDING+DOWN]
+2. RAIN — #13, $0.01606, 24h +1.7%
+3. ARX (Arcium) — #401, $0.2759, 24h −22.6%  [TRENDING+DOWN]
+4. PENGU (Pudgy Penguins) — #117, $0.006180, 24h −1.7%
+5. AAVE — #61, $76.15, 24h +5.7%  [TRENDING+UP]
+6. SLX (Solstice) — #341, $0.2895, 24h +45.1%  [PUMP-RISK]
+7. BEAT (Audiera) — #95, $1.94, 24h +9.0%  [TRENDING+UP]
 
 *notable*
-• tape regime worsened vs morning — BTC -1.7% → -4.65%, top-100 median -2.1% → -4.79%, breadth 25% → 13% green
-• trending list is 13/15 red — capitulation, not chase; ARB/SUI/ONDO/RENDER/EIGEN all trending and down ≥8%
-• AERO direction flip ([TRENDING+UP] morning → [TRENDING+DOWN] now) — single most meaningful reversal
-• SNX entered trending (-4.4%) — ties to 09:00Z aixbt-pulse "protocol unwind cluster" (Synthetix/ENS/Sonic)
-• PENDLE -10.3% new loser — was top winner 6-21 (+6.2%), full giveback in 2 days
-• XLM -10.5% [MAJOR] — uncommon rank-16 -10% session
+• H (Humanity) accelerating — was −16% morning, now −41.9% with CAPITULATION (vol/mcap 0.29); 7d −66.5% on $36M-exploit + unlock day, full surrender ongoing
+• SLX +45% at rank #341 — PUMP-RISK, illiquid spike, treat trending placement as noise
+• GWEI direction-flip vs 6-23 — was +14.1% winner yesterday, −5.6% loser today
+• BEAT cooled from morning +58.4% to +10.5% but still TRENDING+UP — momentum bleeding, not reversing yet
+• JTO flips green +9.8% — was a 6-22 loser (−8.3%), first SOL-DeFi green print this week
