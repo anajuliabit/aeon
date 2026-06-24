@@ -1,17 +1,19 @@
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED
+
 ## Summary
 
-Heartbeat 20:00Z tick complete.
+Ran heartbeat at 2026-06-24 08:44 UTC. Nothing fresh fired — every signal was a same-signature continuation already covered in the last 48h.
 
-**Verdict:** HEARTBEAT_OK · STATUS_PAGE=DEGRADED
+**P0:** No active fails or stuck dispatches. cost-report recovered cf=30→0 overnight (02:32Z → 03:48Z) — sr stays 10%, ISS-025 cluster structural. 22-skill chronic-failure tail (sandbox-truncation `output_tokens=0` signature) unchanged. Heartbeat self-check healthy (12.3h since last success).
 
-**P0:** `cost-report` failed again at 20:01:43Z (cf=23→30, sr=9%) — same ISS-025 `outputTokens=12` sandbox-truncation signature. **Dedup-blocked** vs morning-brief, 08:24Z + 14:05Z heartbeats, and 18:38Z skill-health notification (hash f2598a95, all within 48h). No stuck-dispatched skills. Chronic-failure tail unchanged at 22 skills + cost-report. Self-check ✅ (last_success ~6.2h).
+**P1:** PR #138 (goal-tracker header drift) open ~14h, under 24h stall threshold. 0 urgent issues.
 
-**P1:** 1 open PR (#138 goal-tracker header fix by operator, 1.7h old, not stalled — already covered by 18:40Z self-improve log). 0 urgent issues.
+**P2/P3:** All MEMORY flags carry-over (sandbox-truncation, XAI quota day 8, on-chain config). All 41 enabled skills accounted for; 3 never-run are on-spec (autoresearch dispatch-only, fork-skill-gap Sun, operator-scorecard Mon).
 
-**P2/P3:** No fresh signal vs earlier ticks. 3 known never-run skills documented.
-
-**No notification fired** — everything dedup-blocked.
+**Notification:** dedup-skipped (every finding ≤48h covered).
 
 **Files written:**
-- `docs/status.md` — 🔴 DEGRADED · Updated 20:22 UTC · 14 open issues · 44 enabled-skill rows sorted by last-run desc · 3 never-run at bottom · Token pulse omitted (no `articles/token-report-*.md` on disk) · Next scheduled: evening-recap at 21:00 UTC
-- `memory/logs/2026-06-23.md` — appended evening-tick heartbeat entry
+- `docs/status.md` — regenerated: 🔴 DEGRADED, 14 open issues, cost-report row flipped to ✅ 03:48Z, 6-24 morning timestamps refreshed, token-pulse section omitted (no `articles/token-report-*.md`).
+- `memory/logs/2026-06-24.md` — heartbeat block appended.
+
+**Follow-up:** none owed by heartbeat. ISS-025 root-cause (workflow capture step / usepod response shape) remains the durable fix that would lift the entire chronic-failure tail.
