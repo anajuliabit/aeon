@@ -1,0 +1,185 @@
+{
+  "root": "card-aixbt",
+  "state": {},
+  "elements": {
+    "card-aixbt": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-24 09:00Z"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-crypto",
+        "stack-crypto-items",
+        "sep-1",
+        "heading-tradfi",
+        "stack-tradfi-items",
+        "sep-2",
+        "heading-new",
+        "stack-new-items",
+        "sep-3",
+        "heading-bridge",
+        "text-bridge"
+      ]
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "stack-crypto-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-crypto-1",
+        "text-crypto-2",
+        "text-crypto-3",
+        "text-crypto-4"
+      ]
+    },
+    "text-crypto-1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $62K extreme fear: ETF outflows day 4, DXY bid, CryptoQuant urging Strategy to pause + rebuild cash."
+      }
+    },
+    "text-crypto-2": {
+      "type": "Text",
+      "props": {
+        "text": "EF cuts 20% of staff. Eth Labs (Bitmine + a16z) fills the gap. Aave V4 + USDT deposits signal DeFi layer unaffected."
+      }
+    },
+    "text-crypto-3": {
+      "type": "Text",
+      "props": {
+        "text": "JPY bank-backed stablecoin live on Ethereum. Solana tokenized equities at $380M/day. US CBDC ban cleared Congress."
+      }
+    },
+    "text-crypto-4": {
+      "type": "Text",
+      "props": {
+        "text": "Cardano SecondFi: $20M+ exploit via flawed key generation — cryptographic primitive failure, not a composability hack."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "stack-tradfi-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-tradfi-1",
+        "text-tradfi-2"
+      ]
+    },
+    "text-tradfi-1": {
+      "type": "Text",
+      "props": {
+        "text": "Micron MU -13% named as chip rout driver. Nasdaq -2.2%. AI positioning unwind risk explicit for first time."
+      }
+    },
+    "text-tradfi-2": {
+      "type": "Text",
+      "props": {
+        "text": "US-Iran interim MoU signed — Hormuz restrictions easing, oil toward multi-month lows."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "stack-new-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-new-1",
+        "text-new-2",
+        "text-new-3",
+        "text-new-4"
+      ]
+    },
+    "text-new-1": {
+      "type": "Text",
+      "props": {
+        "text": "EF 20% staff cuts + Eth Labs backed by Bitmine/a16z (governance surface change)"
+      }
+    },
+    "text-new-2": {
+      "type": "Text",
+      "props": {
+        "text": "US CBDC ban cleared Congress + JPY bank stablecoin on Ethereum + Solana $380M tokenized equities"
+      }
+    },
+    "text-new-3": {
+      "type": "Text",
+      "props": {
+        "text": "Cardano SecondFi $20M+ exploit (key generation flaw — pre-deployment cryptographic failure)"
+      }
+    },
+    "text-new-4": {
+      "type": "Text",
+      "props": {
+        "text": "Micron MU -13% explicitly driving chip rout; AI positioning unwind named"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "text-bridge": {
+      "type": "Text",
+      "props": {
+        "text": "Ethereum's neutrality premise just got harder to defend — EF out, Eth Labs (VC-backed, Bitcoin miner money) in. Infra layer ships regardless; upgrade roadmap governance is the live question. Separately: the settlement migration isn't coming — it's running. JPY stablecoin on Ethereum, equities on Solana, CBDC dead in the US. Infrastructure war is Ethereum vs Solana vs Base now, not crypto vs TradFi. Micron MU -13% is the first supply-chain data point hitting the AI capex thesis directly — second window of AI-growth premium deflating (SpaceX $25B bond was prior). BTC at extreme fear with competing signals: oil lower (rate-cut odds up) vs chip rout (AI demand uncertain). The correlation trade is breaking.",
+        "variant": "body"
+      }
+    }
+  }
+}

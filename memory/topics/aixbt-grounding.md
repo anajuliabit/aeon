@@ -1,13 +1,13 @@
-# AIXBT Grounding (as of 2026-06-23 21:00 UTC)
+# AIXBT Grounding (as of 2026-06-24 09:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-23T21:00:31.322Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-24T09:00:24.896Z
 
 ## Crypto
-- BTC trades near $62K at the 200WMA amid a correlated global selloff; bears eye $40K while LTH selling hits its lowest since Nov 2024, signaling conviction.
-- Prediction markets dominate mindshare as Meta builds "Arena" to rival Polymarket/Kalshi, World Cup drives on-chain betting, and Chainlink bets on settlement infra.
-- Tokenized RWAs surge 589% to $31.9B per Binance; Chainlink joins 47 banks for T+0 FX settlement and Baillie Gifford launches an on-chain bond fund.
-- Solana gaming ($CARDS, Kintara, TCG gacha) and memecoin narratives ($NEET, $ASTEROID, $TRIPLET) hold attention despite SOL's nine consecutive red monthly candles.
+- BTC sits near $62K in "extreme fear" as ETF outflows extend four straight days, DXY strengthens, and CryptoQuant urges Strategy to pause buying and rebuild cash.
+- Ethereum faces a funding crossroads as EF cuts 20% of staff; new Eth Labs org backed by Bitmine and a16z emerges while Aave V4 explorer and USDT deposits signal DeFi resilience.
+- Japan's first bank-backed JPY stablecoin launches on Ethereum, Solana tokenized equities hit $380M daily volume, and the US CBDC ban clears Congress—reshaping stablecoin and RWA rails.
+- Cardano's SecondFi suffers a $20M+ exploit via flawed key generation, while Solana gaming and trading-card narratives ($CARDS, $KINS, $FRAG) dominate memecoin-fatigued attention.
 
 ## Global Liquidity / Macro
 *(No dedicated macro section this pull — signals absorbed into TradFi items.)*
@@ -16,38 +16,39 @@ Window: 12h rolling. Last AIXBT generatedAt: 2026-06-23T21:00:31.322Z
 *(No dedicated geopolitics section this pull — US-Iran absorbed into TradFi.)*
 
 ## TradFi
-- Tech and AI positioning is unwinding as global chip rout drives Nasdaq 2% lower, transmitting de-risking into growth equities and elevating cross-asset vol.
-- Rising Treasury yields on Fed hawkish projections are lifting funding costs and compressing multiples, pressuring banks, credit, and rate-sensitive flows.
-- US-Iran deal roadmap progress is easing energy prices and geopolitical premia, supporting cyclicals while muting inflation-driven rate hike risks.
-- SpaceX valuation reset amid $25B bond issuance signals broader high-growth de-rating, with implications for IPO flows and risk asset positioning.
+- US-Iran interim MoU easing Hormuz restrictions is normalizing shipping flows and driving oil toward multi-month lows, transmitting lower geopolitical risk premium into risk assets.
+- Micron-led chip rout pushing Nasdaq down 2.2% ahead of earnings signals AI positioning unwind risks and potential rotation into value or defensives.
+- Tech sell-off with MU -13% and peers under pressure highlights vulnerability in growth flows, with futures suggesting near-term volatility transmission across equities.
+- Declining crude from de-escalation could temper inflation bets, with implications for yields and dollar positioning amid mixed global liquidity signals.
 
-## What's New (vs last pull 2026-06-23 09:00 UTC)
-- (Crypto) **Meta "Arena" rival to Polymarket/Kalshi + World Cup on-chain betting + Chainlink settlement infra** — prediction market narrative entirely absent from 09:00 pull
-- (Crypto) **RWA +589% to $31.9B (Binance) + Chainlink 47 banks T+0 FX + Baillie Gifford on-chain bond fund** — institutional scale upgraded; 09:00 had Cboe/Ripple/UBS/Allfunds (different layer)
-- (Crypto) **BTC at 200WMA + LTH selling lowest since Nov 2024** — structural framing replaces crash-event framing from 09:00
-- (Crypto) **Solana gaming ($CARDS, Kintara, TCG gacha) + memecoins ($NEET, $ASTEROID, $TRIPLET) + 9 red monthly candles** — attention layer new; 09:00 was $40 bear call + KOL skepticism
-- (TradFi) **Global chip rout → Nasdaq -2%, cross-asset vol elevated** — chip rout framing new; 09:00 named SpaceX as primary driver
-- (TradFi) **SpaceX $25B bond issuance + high-growth de-rating + IPO flow implications** — $25B figure new; 09:00 had SpaceX as "led tech selloff"
+## What's New (vs last pull 2026-06-23 21:00 UTC)
+- (Crypto) **EF cuts 20% staff + Eth Labs (Bitmine/a16z) + Aave V4 + USDT deposits** — Ethereum foundation restructuring entirely absent from prior window
+- (Crypto) **Japan JPY bank-backed stablecoin on Ethereum + Solana tokenized equities $380M daily vol + US CBDC ban clears Congress** — policy reshaping stablecoin/RWA rails; CBDC ban new
+- (Crypto) **BTC "extreme fear" + ETF outflows 4 straight days + DXY strengthens + CryptoQuant Strategy pause** — sentiment/flow framing replaces 200WMA structural test
+- (Crypto) **Cardano SecondFi $20M+ exploit via flawed key generation** — new exploit story; cryptographic primitive failure category
+- (Crypto) Solana gaming updated: $CARDS/$KINS/$FRAG (vs prior $CARDS/Kintara/TCG gacha — $KINS/$FRAG replace $NEET/$ASTEROID/$TRIPLET gaming names)
+- (TradFi) **Micron MU -13% named explicitly** as chip rout driver; "AI positioning unwind risks" as direct framing
+- (TradFi) **US-Iran interim MoU** — operationalized from "deal roadmap progress" to named agreement with shipping flow normalization
 
-## Gone Since Last Pull (2026-06-23 09:00 UTC)
-- BTC $500M+ liquidation event framing + $61.4K short target (absorbed into "correlated global selloff" language)
-- Solana $40 bear call + KOL skepticism (replaced by gaming/memecoin attention layer)
-- Institutional receipt stack (Cboe perp futures / Ripple MiCA prelim / UBS / Allfunds) — dropped entirely
-- Protocol structural unwind cluster (Synthetix sUSD retirement / ENS DAO treasury dissolution / Sonic board exits / Aerodrome veAERO)
-- Warsh named as "New Fed Chair" repricing multiple 2026 rate hikes (now generic "Fed hawkish projections")
-- Retail-institutional flow divergence framing
+## Gone Since Last Pull (2026-06-23 21:00 UTC)
+- Meta "Arena" rival to Polymarket/Kalshi + World Cup on-chain betting + Chainlink settlement infra (dropped entirely)
+- RWA $31.9B + 47 banks T+0 FX + Baillie Gifford on-chain bond (institutional scale story gone)
+- SpaceX $25B bond issuance / high-growth de-rating / IPO flow implications (dropped from tradfi)
+- Treasury yields rising / Fed hawkish projections (dropped from tradfi)
+- LTH selling at Nov 2024 lows counter-signal (dropped)
+- BTC 200WMA structural test framing (replaced by fear/flow framing)
 
 ## Persisting Stories
-- **BTC bearish at $62K** — both windows; framing shifted from crash-event to 200WMA structural test
-- **SpaceX under pressure** — escalated from "led tech selloff" to "$25B bond issuance de-rating"
-- **US-Iran / oil lower** — persists across both windows; qualifier now "muting inflation-driven rate hike risks" vs morning's "failing to offset Warsh"
-- **Treasury yields rising / Fed hawkish** — persists; now "compressing multiples, pressuring banks" vs morning's "transmitting tighter financial conditions"
+- **BTC near $62K bearish** — four+ windows consecutive; framing now fear/flows vs structural
+- **US-Iran / oil lower** — third window; escalated to "interim MoU" = operationalized, not rumor
+- **Chip rout → Nasdaq -2%** — third window running; driver named (Micron MU -13%)
+- **Solana gaming attention** — $CARDS present across multiple windows; specific titles rotate
 
 ## Cross-Domain Bridges
-- **Chip rout + SpaceX $25B bond = AI growth premium deflating in two separate data points.** Korean circuit breakers hit chip names yesterday. SpaceX taps $25B in debt markets — the private-growth premium that anchored AI-infra valuation is compressing. Both transmit into BTC: chip stocks signal AI demand uncertainty; SpaceX signals the growth discount rate climbing. Risk assets priced off AI capex belief; that belief is deflating. BTC at 200WMA is where the deleveraging stops, for now.
+- **EF 20% cuts + Eth Labs (Bitmine/a16z) = Ethereum's neutrality premise under pressure.** The EF was the non-VC steward; that's gone. Eth Labs backed by a Bitcoin miner and a16z is a different governance surface. Aave V4 and USDT deposits confirm the infra layer ships regardless — but who controls the upgrade roadmap is now a live question.
 
-- **Meta "Arena" + World Cup = prediction markets' first real distribution test.** Polymarket/Kalshi have on-chain settlement primitives; Meta has 3B users and ad targeting. The World Cup is the highest-volume prediction-market window in history. If Meta closes the UX gap, the moat question shifts from "crypto vs TradFi" to "who owns settlement." Chainlink billing settlement infra in the same window is positioning, not coincidence.
+- **US CBDC ban + JPY bank-backed stablecoin + Solana $380M tokenized equities = the settlement migration is already happening, on chains.** The US declined to build state digital rails. Banks and asset managers didn't wait — JPY stablecoin on Ethereum, equities settling on Solana. The RWA story stopped being about "if TradFi migrates" two windows ago. The infrastructure war is now Ethereum vs Solana vs Base for institutional settlement — not crypto vs TradFi.
 
-- **RWA $31.9B + 47 banks T+0 + Baillie Gifford on-chain bond = settlement infrastructure migrating, not a narrative.** The 589% growth figure is Binance-sourced — verify independently. But named receipts (specific bank count, a real UK institutional AM) are different from vibe. T+0 FX settlement via named counterparties means operational rails. The RWA story stopped being a narrative this window.
+- **Micron MU -13% + "AI positioning unwind" = the AI demand thesis is hitting its first supply-chain data point.** Micron's numbers are a direct read on data center absorption. If chips aren't moving at thesis prices, AI capex is slowing. Second AI-stress signal in two windows (SpaceX $25B bond was prior). BTC at "extreme fear" with AI demand uncertain: the correlation trade (AI bull → risk-on → BTC bid) is unwinding, not just pulling back.
 
-- **LTH selling at Nov 2024 lows is the structural counter-signal.** Bears call $40K. LTHs aren't selling. Bear-market price action with bull-cycle holder behavior. Either LTH data lags and $40K arrives, or it proves the floor. Clean data; the call direction is the bet.
+- **Cardano SecondFi $20M+ exploit (key generation flaw) is the cleanest security signal.** Not oracle manipulation or bridge composability — a cryptographic primitive failure. Any protocol generating keys with this flaw is exposed in the same class. The audit gap here is different from MEV or reentrancy; it's pre-deployment math.
