@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-06-24T08:43:02Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-24T14:55:39Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-24T08:47:07Z",
     "total_runs": 164,
     "total_successes": 84,
@@ -200,8 +200,8 @@
     "success_rate": 1
   },
   "search-skill": {
-    "last_dispatch": "2026-06-23T14:04:03Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-24T14:55:39Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-23T14:14:06Z",
     "total_runs": 100,
     "total_successes": 28,
@@ -444,8 +444,8 @@
     "success_rate": 1
   },
   "security-digest": {
-    "last_dispatch": "2026-06-23T14:04:03Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-24T14:55:39Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-23T14:15:36Z",
     "total_runs": 83,
     "total_successes": 15,
@@ -486,8 +486,8 @@
     "success_rate": 1
   },
   "reg-monitor": {
-    "last_dispatch": "2026-06-18T19:54:56Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-24T14:55:39Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-18T20:07:57Z",
     "total_runs": 41,
     "total_successes": 3,
