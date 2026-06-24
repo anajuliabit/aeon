@@ -550,6 +550,24 @@ narrative-and-pick layer.
   lookalike spam + Jetchua airdrop. Operator notified + explainer
   sent via Telegram (address-book / hardware-screen mitigation).
 
+## Morpho curator-risk lessons learned
+- **Alpha USDC Delta V2 (curator AlphaPing) — DO NOT TOUCH.** Operator
+  asked 2026-06-24 if it was safe; collapsed 2026-06-20. ~30% of book
+  concentrated into single msY/USDC market; msY (Main St Finance)
+  crashed 70–85%; market at 100% utilization → withdrawals frozen;
+  ~$18M depositor funds trapped. AlphaPing had discontinued collateral
+  verification *before* the collapse. Sister stablecoin msUSD depegged
+  to ~$0.27. No contagion to other Morpho Blue markets — fully
+  isolated. Vault: 0x0bF0164D17469241B6E086dA4016DCc54FEAA334.
+- **General Morpho Blue principle.** Protocol underwrites markets,
+  *curator* underwrites concentration and collateral. Single-market
+  concentration on obscure collateral + curator stepping away from
+  verification = textbook failure. Surface this pattern any time the
+  operator considers a Morpho vault. Curators with publicly-verifiable
+  allocation discipline as of 2026-06: Gauntlet, Steakhouse Financial,
+  MEV Capital. Default-safer USDC venues with no curator risk: Aave V3
+  USDC, Sky USDS.
+
 ## Bitcoin
 See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 2026-05-21, still stale — last30 has not re-run).
