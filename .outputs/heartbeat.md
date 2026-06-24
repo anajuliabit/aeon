@@ -2,18 +2,18 @@ HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
 ## Summary
 
-Ran heartbeat at 2026-06-24 08:44 UTC. Nothing fresh fired — every signal was a same-signature continuation already covered in the last 48h.
+**Heartbeat run — 14:57Z afternoon tick:** all P0/P1/P2/P3 findings dedup-blocked vs morning 08:44Z heartbeat (within 48h window). No notification fired.
 
-**P0:** No active fails or stuck dispatches. cost-report recovered cf=30→0 overnight (02:32Z → 03:48Z) — sr stays 10%, ISS-025 cluster structural. 22-skill chronic-failure tail (sandbox-truncation `output_tokens=0` signature) unchanged. Heartbeat self-check healthy (12.3h since last success).
+**Findings:**
+- **P0:** zero `last_status: "failed"`, zero stuck-dispatched >45min, zero `cf≥3`. cost-report cf=0 since overnight 03:48Z recovery (sr 10%, ISS-025 cluster structural). 22-skill chronic-failure tail (sr<0.5) unchanged from morning, all share sandbox-truncation `output_tokens=0` signature.
+- **Self-check:** heartbeat last_success 6.2h ago — healthy.
+- **P1:** 1 open PR (#138 goal-tracker header fix, ~20.3h, under 24h threshold), 0 urgent issues.
+- **P2:** sandbox-truncation systemic, XAI quota recovery (op day 8), operator on-chain config — all carried.
+- **P3:** all 44 enabled skills accounted for. Wednesday-only reg-monitor 14:00Z scheduled but no dispatch yet at 14:57Z (worth watching for delivery), skill-analytics 18:30Z still due.
+- **Positive delta vs morning:** entire 12:00–14:00 afternoon batch landed cleanly (12 skills green).
 
-**P1:** PR #138 (goal-tracker header drift) open ~14h, under 24h stall threshold. 0 urgent issues.
+**Files modified:**
+- `docs/status.md` — regenerated with afternoon batch timestamps (41 skill rows + 3 never-run, 14 open issues unchanged, token-pulse omitted)
+- `memory/logs/2026-06-24.md` — appended afternoon heartbeat entry
 
-**P2/P3:** All MEMORY flags carry-over (sandbox-truncation, XAI quota day 8, on-chain config). All 41 enabled skills accounted for; 3 never-run are on-spec (autoresearch dispatch-only, fork-skill-gap Sun, operator-scorecard Mon).
-
-**Notification:** dedup-skipped (every finding ≤48h covered).
-
-**Files written:**
-- `docs/status.md` — regenerated: 🔴 DEGRADED, 14 open issues, cost-report row flipped to ✅ 03:48Z, 6-24 morning timestamps refreshed, token-pulse section omitted (no `articles/token-report-*.md`).
-- `memory/logs/2026-06-24.md` — heartbeat block appended.
-
-**Follow-up:** none owed by heartbeat. ISS-025 root-cause (workflow capture step / usepod response shape) remains the durable fix that would lift the entire chronic-failure tail.
+**Follow-up:** none (silent run per skill spec; no fresh signal).
