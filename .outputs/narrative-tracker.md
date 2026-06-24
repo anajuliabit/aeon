@@ -1,38 +1,35 @@
-*Narrative Tracker — 2026-06-23*
+*Narrative Tracker — 2026-06-24*
 
 TRANSITIONS
-• NEW: us pro-crypto policy codified ("Bitcoin built in America") — @CheekyCrypto framing it as permanent paradigm shift, institutional momentum stacking on top of Q4 ETF expansion — https://x.com/CheekyCrypto/status/2069204033806758397
-• NEW: AI-displaces-crypto attention meta — @LumixWeb3 "Google Trends doesn't lie" thesis; 9 of 12 threads today are AI-side, only 3 crypto-direct — https://x.com/LumixWeb3/status/2068352215765418203
-• NEW: AI capex rationing (contrarian) — Tencent rationing tokens, Uber burned 2026 AI coding budget in 4mo per @poezhao0605 — first crack in "infinite AI spend" consensus — https://x.com/poezhao0605/status/2069205969641644507
-• NEW: BTC + AI synergy as canonical BTC-maxi framing — agents + optimized mining
-• NEW: Chinese AI > US in real usage (DeepSeek V4) — contrarian to US-dominance assumption
-• PROMOTED: DePIN/GPU compute Rising → Peak — explicit "GitHub AI commits 14x" with named tokens IO/TAO/AKT (@amirsrtp)
-• DEMOTED: AI Agents × RWA Peak → Rising — no explicit "agents buying RWA" thread today, narrative quieted vs 6-22 5↑
-• DEMOTED: Ownership tokens vs points FRONT-RUN → WATCH — absent from cache + supplements, builder traction not visible
-• DEAD: L1 vs AI Token Competition — silence across XAI + WebSearch (was 3 → Cope/FADE 6-22)
-• DEAD: Meme 3.0 — confirmed gone, 0 survivors
+• NEW: macro quad4 / commodity crash bear — @KeithMcCullough "short bitcoin, silver -20% in a month" — real risk-off ammo from 6-23 cascade — https://x.com/KeithMcCullough/status/2069570714420625482
+• NEW: saylor critique / sustainable BTC treasury — @caprioleio "repay debt, become a bitcoin bank" — first contrarian-bear inside the btc-maxi camp — https://x.com/caprioleio/status/2069570575488668027
+• NEW: privacy coins & ZK / proof-of-human — @interlinklabsvn — niche but explicit ZKP framing
+• PROMOTED: CLARITY Act / pro-crypto policy Rising → Peak — @scottmelker "2026 is the big year" — 6-23 generic framing now has a bill name — https://x.com/scottmelker/status/2069493858631925930
+• RESURFACED: hyperliquid + perps as standalone — @0xLuciferNox "3 ETFs already live" — was Peak 6-22, folded 6-23, anchor again 6-24
+• DEAD: AI-displaces-crypto attention meta · BTC+AI synergy · Chinese-AI contrarian · P2P security mesh (Canopy) — all absent from today's signal
 
 REFLEXIVITY ALERT
-• AI-displaces-crypto attention — Google Trends framing IS the reflexive trade; if traders believe AI "won," they rotate into AI-token proxies (TAO/IO/AKT), reinforcing the rotation. story moving outcomes directly.
-• "Bitcoin built in America" — pure policy *framing* as catalyst, no specific bill or EO cited in the cache. narrative is the catalyst; watch for actual text vs vibes.
-• AI capex rationing — INVERSE reflexivity. Tencent + Uber are real fundamentals catching up to AI-infra story. if it gathers steam, bear thesis for compute tokens (TAO/IO/AKT) — same flavor as 6-22 stablecoin-x402 inverse flag.
+• macro quad4 — Hedgeye "short BTC / silver -20%" piggybacks the 6-23 $500M-liq cascade. story manufactures the bear: buy the thesis → short BTC → BTC drops → narrative validates. silver isn't BTC.
+• CLARITY Act — pure framing, no bill text cited. "permanent paradigm shift" language outruns the legislation. sharpening of 6-23 "Bitcoin built in America" reflexivity into a named-bill positioning vehicle.
+• saylor critique — reflexive on $MSTR premium-to-NAV. @caprioleio "save strategy by becoming a bitcoin bank" IS the trade against yield-heavy DATs.
+• ai capex rationing (INVERSE, carry-over) — Slash fintech $80k token burn is a named-co receipt for the 6-23 contrarian-bear call. fundamentals catching the story, not story driving price.
 
 POSITIONS
-• FRONT-RUN: P2P security mesh / Canopy (MS 2 ↑ Bull) — @CNPYNetwork "chains in minutes" builder thread carry-over — bear: niche, never compounds
-• RIDE: DePIN/GPU compute IO/TAO/AKT (MS 5 ↑↑ Bull) — @amirsrtp GitHub-14x signal — bear: 14x metric possibly cherry-picked, commoditization risk
-• RIDE: AI Agents × Compute / DeAI (MS 5 → Bull) — Bittensor/TAO canonical — bear: incentive misalignment unchanged from 6-22
-• RIDE: Stablecoins as rails (MS 4 → Bull, WebSearch supplement) — x402 still scaling; 480k agents/$50M cumulative per Coindesk 6-11 — bear: OFAC/reg
-• RIDE: RWA + on-chain trading (MS 4 ↑ Bull) — @_Pretty_Miraa "strongest institutional" — bear: 3-5y execution lag on $20T forecasts
-• RIDE: US pro-crypto policy "Bitcoin built in America" (MS 4 ↑↑ Bull) — policy momentum real — bear: codification language outpaces actual legislation
-• RIDE: BTC + AI synergy (MS 3 ↑ Bull) — BTC-maxi merging with AI thesis — bear: "AI prints money while you sleep" is cope-adjacent
-• WATCH: AI-displaces-crypto meta (MS 4 ↑ Mixed) — not directly playable but informs rotation
-• WATCH: AI capex rationing (MS 3 ↑ Bear-contrarian) — 1 thread today, needs corroboration before sizing short
-• WATCH: Chinese AI > US (MS 3 ↑ Mixed) — most Chinese AI tokens not tradeable
-• WATCH: Embodied AI/robotics/materials (MS 2 ↑ Bull) — long-tail thesis, copper/uranium-for-robots
+• RIDE: DePIN / AI compute (5 → Peak Bull) — TAO/IO/AKT/FET/Render — @vaultmarco @dens_club — bear: commoditizes long-term — https://x.com/vaultmarco/status/2068695179368997177
+• RIDE: AI agents A2A economy (5 ↑ Peak Bull) — @buying_com "biggest crypto narrative of 2026" — bear: autonomous wallets still vapor
+• RIDE: RWA / tokenization (5 → Peak Bull) — @101Vegeta · BlackRock — bear: 3-5y execution lag on $20T forecasts
+• RIDE: CLARITY Act / pro-crypto policy (4 ↑↑ Peak Bull, PROMOTED) — @scottmelker — bear: codification outpaces actual legislation
+• RIDE: hyperliquid + perps (4 ↑ Peak Bull, RESURFACED) — HYPE 3 ETFs live — bear: HYPE -3.9% 6-22 — story leading price
+• RIDE: stablecoins as Visa/MC rails (4 ↑ Peak Bull) — x402 480k agents / $50M cumulative — bear: OFAC/reg
+• WATCH: macro quad4 short-BTC (4 ↑↑ Rising Bear, NEW) — fade longs / position cash
+• WATCH: saylor critique (3 ↑ Emerging Bear-contrarian, NEW) — MSTR-equity adjacent
+• WATCH: AI capex rationing (3 ↑ Emerging Bear-contrarian) — Slash $80k named receipt
+• WATCH: BTC dominance cracking (3 → Rising Cope-Mixed, RESURFACED) — was DEAD 6-22 / silent 6-23 / hedged today; dominance still 58%
+• WATCH: privacy coins / ZK (2 ↑ Emerging Bull, NEW) — niche, single driver
+• WATCH: embodied AI (2 → Emerging Bull) — long-tail copper/uranium-for-robots
 
 MAP
-Emerging: P2P security mesh, AI capex rationing, Chinese AI > US, embodied AI
-Rising: US pro-crypto policy, BTC+AI synergy, AI-displaces-crypto meta
-Peak: DePIN/compute, AI agents/compute, RWA, stablecoins
-Fading: AI agents × RWA (demoted from Peak)
-Dead: L1 vs AI wars, Meme 3.0
+Emerging: saylor critique · AI capex rationing · privacy coins/ZK · embodied AI
+Rising: BTC dominance cracking · macro quad4 (bear)
+Peak: DePIN/AI compute · AI agents · RWA · CLARITY Act · hyperliquid · stablecoins
+Dead: AI-displaces-crypto meta · BTC+AI synergy · Chinese-AI contrarian · P2P security mesh

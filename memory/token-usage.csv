@@ -512,3 +512,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-24,aixbt-pulse,claude-sonnet-4-6,1461,14400,933765,49137
 2026-06-24,token-pick,claude-opus-4-7,31,18044,1416149,112363
 2026-06-24,token-movers,claude-opus-4-7,72,30630,4436529,109135
+2026-06-24,narrative-tracker,claude-opus-4-7,1092,31569,2180766,168545

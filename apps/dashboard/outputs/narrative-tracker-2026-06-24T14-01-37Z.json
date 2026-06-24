@@ -1,0 +1,1045 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-24"
+      },
+      "children": [
+        "transitions-section",
+        "sep-1",
+        "reflexivity-section",
+        "sep-2",
+        "positions-section",
+        "sep-3",
+        "map-section"
+      ]
+    },
+    "transitions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "transitions-heading",
+        "transitions-items"
+      ]
+    },
+    "transitions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      }
+    },
+    "transitions-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "t-item-1",
+        "t-item-2",
+        "t-item-3",
+        "t-item-4",
+        "t-item-5",
+        "t-item-6"
+      ]
+    },
+    "t-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t1-badge",
+        "t1-text",
+        "t1-link"
+      ]
+    },
+    "t1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "t1-text": {
+      "type": "Text",
+      "props": {
+        "text": "macro quad4 / commodity crash bear — @KeithMcCullough \"short bitcoin, silver -20% in a month\" — real risk-off ammo from 6-23 cascade",
+        "variant": "body"
+      }
+    },
+    "t1-link": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/KeithMcCullough/status/2069570714420625482",
+        "href": "https://x.com/KeithMcCullough/status/2069570714420625482"
+      }
+    },
+    "t-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t2-badge",
+        "t2-text",
+        "t2-link"
+      ]
+    },
+    "t2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "t2-text": {
+      "type": "Text",
+      "props": {
+        "text": "saylor critique / sustainable BTC treasury — @caprioleio \"repay debt, become a bitcoin bank\" — first contrarian-bear inside the btc-maxi camp",
+        "variant": "body"
+      }
+    },
+    "t2-link": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/caprioleio/status/2069570575488668027",
+        "href": "https://x.com/caprioleio/status/2069570575488668027"
+      }
+    },
+    "t-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t3-badge",
+        "t3-text"
+      ]
+    },
+    "t3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "t3-text": {
+      "type": "Text",
+      "props": {
+        "text": "privacy coins & ZK / proof-of-human — @interlinklabsvn — niche but explicit ZKP framing",
+        "variant": "body"
+      }
+    },
+    "t-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t4-badge",
+        "t4-text",
+        "t4-link"
+      ]
+    },
+    "t4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PROMOTED",
+        "variant": "secondary"
+      }
+    },
+    "t4-text": {
+      "type": "Text",
+      "props": {
+        "text": "CLARITY Act / pro-crypto policy Rising → Peak — @scottmelker \"2026 is the big year\" — 6-23 generic framing now has a bill name",
+        "variant": "body"
+      }
+    },
+    "t4-link": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/scottmelker/status/2069493858631925930",
+        "href": "https://x.com/scottmelker/status/2069493858631925930"
+      }
+    },
+    "t-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t5-badge",
+        "t5-text"
+      ]
+    },
+    "t5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RESURFACED",
+        "variant": "outline"
+      }
+    },
+    "t5-text": {
+      "type": "Text",
+      "props": {
+        "text": "hyperliquid + perps as standalone — @0xLuciferNox \"3 ETFs already live\" — was Peak 6-22, folded 6-23, anchor again 6-24",
+        "variant": "body"
+      }
+    },
+    "t-item-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t6-badge",
+        "t6-text"
+      ]
+    },
+    "t6-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEAD",
+        "variant": "destructive"
+      }
+    },
+    "t6-text": {
+      "type": "Text",
+      "props": {
+        "text": "AI-displaces-crypto attention meta · BTC+AI synergy · Chinese-AI contrarian · P2P security mesh (Canopy) — all absent from today's signal",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reflexivity-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reflexivity-heading",
+        "reflexivity-items"
+      ]
+    },
+    "reflexivity-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "REFLEXIVITY ALERT",
+        "level": "h2"
+      }
+    },
+    "reflexivity-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "r-item-1",
+        "r-item-2",
+        "r-item-3",
+        "r-item-4"
+      ]
+    },
+    "r-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r1-badge",
+        "r1-text"
+      ]
+    },
+    "r1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "macro quad4",
+        "variant": "outline"
+      }
+    },
+    "r1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Hedgeye \"short BTC / silver -20%\" piggybacks the 6-23 $500M-liq cascade. story manufactures the bear: buy the thesis → short BTC → BTC drops → narrative validates. silver isn't BTC.",
+        "variant": "body"
+      }
+    },
+    "r-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r2-badge",
+        "r2-text"
+      ]
+    },
+    "r2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CLARITY Act",
+        "variant": "outline"
+      }
+    },
+    "r2-text": {
+      "type": "Text",
+      "props": {
+        "text": "pure framing, no bill text cited. \"permanent paradigm shift\" language outruns the legislation. sharpening of 6-23 \"Bitcoin built in America\" reflexivity into a named-bill positioning vehicle.",
+        "variant": "body"
+      }
+    },
+    "r-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r3-badge",
+        "r3-text"
+      ]
+    },
+    "r3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "saylor critique",
+        "variant": "outline"
+      }
+    },
+    "r3-text": {
+      "type": "Text",
+      "props": {
+        "text": "reflexive on $MSTR premium-to-NAV. @caprioleio \"save strategy by becoming a bitcoin bank\" IS the trade against yield-heavy DATs.",
+        "variant": "body"
+      }
+    },
+    "r-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r4-badge",
+        "r4-text"
+      ]
+    },
+    "r4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ai capex rationing (INVERSE, carry-over)",
+        "variant": "outline"
+      }
+    },
+    "r4-text": {
+      "type": "Text",
+      "props": {
+        "text": "Slash fintech $80k token burn is a named-co receipt for the 6-23 contrarian-bear call. fundamentals catching the story, not story driving price.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "positions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "positions-heading",
+        "ride-heading",
+        "ride-items",
+        "watch-heading",
+        "watch-items"
+      ]
+    },
+    "positions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      }
+    },
+    "ride-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "RIDE",
+        "level": "h3"
+      }
+    },
+    "ride-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ride-1",
+        "ride-2",
+        "ride-3",
+        "ride-4",
+        "ride-5",
+        "ride-6"
+      ]
+    },
+    "ride-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ride1-name",
+        "ride1-strength",
+        "ride1-assets",
+        "ride1-attribution",
+        "ride1-bear",
+        "ride1-link"
+      ]
+    },
+    "ride1-name": {
+      "type": "Text",
+      "props": {
+        "text": "DePIN / AI compute",
+        "variant": "lead"
+      }
+    },
+    "ride1-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "5 → Peak Bull",
+        "variant": "default"
+      }
+    },
+    "ride1-assets": {
+      "type": "Text",
+      "props": {
+        "text": "TAO / IO / AKT / FET / Render",
+        "variant": "caption"
+      }
+    },
+    "ride1-attribution": {
+      "type": "Text",
+      "props": {
+        "text": "@vaultmarco @dens_club",
+        "variant": "muted"
+      }
+    },
+    "ride1-bear": {
+      "type": "Alert",
+      "props": {
+        "title": "Bear case",
+        "message": "commoditizes long-term",
+        "type": "warning"
+      }
+    },
+    "ride1-link": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/vaultmarco/status/2068695179368997177",
+        "href": "https://x.com/vaultmarco/status/2068695179368997177"
+      }
+    },
+    "ride-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ride2-name",
+        "ride2-strength",
+        "ride2-desc",
+        "ride2-attribution",
+        "ride2-bear"
+      ]
+    },
+    "ride2-name": {
+      "type": "Text",
+      "props": {
+        "text": "AI agents A2A economy",
+        "variant": "lead"
+      }
+    },
+    "ride2-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "5 ↑ Peak Bull",
+        "variant": "default"
+      }
+    },
+    "ride2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "@buying_com \"biggest crypto narrative of 2026\"",
+        "variant": "body"
+      }
+    },
+    "ride2-attribution": {
+      "type": "Text",
+      "props": {
+        "text": "@buying_com",
+        "variant": "muted"
+      }
+    },
+    "ride2-bear": {
+      "type": "Alert",
+      "props": {
+        "title": "Bear case",
+        "message": "autonomous wallets still vapor",
+        "type": "warning"
+      }
+    },
+    "ride-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ride3-name",
+        "ride3-strength",
+        "ride3-attribution",
+        "ride3-bear"
+      ]
+    },
+    "ride3-name": {
+      "type": "Text",
+      "props": {
+        "text": "RWA / tokenization",
+        "variant": "lead"
+      }
+    },
+    "ride3-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "5 → Peak Bull",
+        "variant": "default"
+      }
+    },
+    "ride3-attribution": {
+      "type": "Text",
+      "props": {
+        "text": "@101Vegeta · BlackRock",
+        "variant": "muted"
+      }
+    },
+    "ride3-bear": {
+      "type": "Alert",
+      "props": {
+        "title": "Bear case",
+        "message": "3-5y execution lag on $20T forecasts",
+        "type": "warning"
+      }
+    },
+    "ride-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ride4-name",
+        "ride4-strength",
+        "ride4-attribution",
+        "ride4-bear",
+        "ride4-link"
+      ]
+    },
+    "ride4-name": {
+      "type": "Text",
+      "props": {
+        "text": "CLARITY Act / pro-crypto policy",
+        "variant": "lead"
+      }
+    },
+    "ride4-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "4 ↑↑ Peak Bull, PROMOTED",
+        "variant": "default"
+      }
+    },
+    "ride4-attribution": {
+      "type": "Text",
+      "props": {
+        "text": "@scottmelker",
+        "variant": "muted"
+      }
+    },
+    "ride4-bear": {
+      "type": "Alert",
+      "props": {
+        "title": "Bear case",
+        "message": "codification outpaces actual legislation",
+        "type": "warning"
+      }
+    },
+    "ride4-link": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/scottmelker/status/2069493858631925930",
+        "href": "https://x.com/scottmelker/status/2069493858631925930"
+      }
+    },
+    "ride-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ride5-name",
+        "ride5-strength",
+        "ride5-desc",
+        "ride5-bear"
+      ]
+    },
+    "ride5-name": {
+      "type": "Text",
+      "props": {
+        "text": "hyperliquid + perps",
+        "variant": "lead"
+      }
+    },
+    "ride5-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "4 ↑ Peak Bull, RESURFACED",
+        "variant": "default"
+      }
+    },
+    "ride5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE 3 ETFs live",
+        "variant": "body"
+      }
+    },
+    "ride5-bear": {
+      "type": "Alert",
+      "props": {
+        "title": "Bear case",
+        "message": "HYPE -3.9% 6-22 — story leading price",
+        "type": "warning"
+      }
+    },
+    "ride-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ride6-name",
+        "ride6-strength",
+        "ride6-desc",
+        "ride6-bear"
+      ]
+    },
+    "ride6-name": {
+      "type": "Text",
+      "props": {
+        "text": "stablecoins as Visa/MC rails",
+        "variant": "lead"
+      }
+    },
+    "ride6-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "4 ↑ Peak Bull",
+        "variant": "default"
+      }
+    },
+    "ride6-desc": {
+      "type": "Text",
+      "props": {
+        "text": "x402 480k agents / $50M cumulative",
+        "variant": "body"
+      }
+    },
+    "ride6-bear": {
+      "type": "Alert",
+      "props": {
+        "title": "Bear case",
+        "message": "OFAC/reg",
+        "type": "warning"
+      }
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h3"
+      }
+    },
+    "watch-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-1",
+        "watch-2",
+        "watch-3",
+        "watch-4",
+        "watch-5",
+        "watch-6"
+      ]
+    },
+    "watch-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch1-name",
+        "watch1-strength",
+        "watch1-desc"
+      ]
+    },
+    "watch1-name": {
+      "type": "Text",
+      "props": {
+        "text": "macro quad4 short-BTC",
+        "variant": "lead"
+      }
+    },
+    "watch1-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "4 ↑↑ Rising Bear, NEW",
+        "variant": "destructive"
+      }
+    },
+    "watch1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "fade longs / position cash",
+        "variant": "body"
+      }
+    },
+    "watch-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch2-name",
+        "watch2-strength",
+        "watch2-desc"
+      ]
+    },
+    "watch2-name": {
+      "type": "Text",
+      "props": {
+        "text": "saylor critique",
+        "variant": "lead"
+      }
+    },
+    "watch2-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "3 ↑ Emerging Bear-contrarian, NEW",
+        "variant": "destructive"
+      }
+    },
+    "watch2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "MSTR-equity adjacent",
+        "variant": "body"
+      }
+    },
+    "watch-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch3-name",
+        "watch3-strength",
+        "watch3-desc"
+      ]
+    },
+    "watch3-name": {
+      "type": "Text",
+      "props": {
+        "text": "AI capex rationing",
+        "variant": "lead"
+      }
+    },
+    "watch3-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "3 ↑ Emerging Bear-contrarian",
+        "variant": "destructive"
+      }
+    },
+    "watch3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Slash $80k named receipt",
+        "variant": "body"
+      }
+    },
+    "watch-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch4-name",
+        "watch4-strength",
+        "watch4-desc"
+      ]
+    },
+    "watch4-name": {
+      "type": "Text",
+      "props": {
+        "text": "BTC dominance cracking",
+        "variant": "lead"
+      }
+    },
+    "watch4-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "3 → Rising Cope-Mixed, RESURFACED",
+        "variant": "outline"
+      }
+    },
+    "watch4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "was DEAD 6-22 / silent 6-23 / hedged today; dominance still 58%",
+        "variant": "body"
+      }
+    },
+    "watch-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch5-name",
+        "watch5-strength",
+        "watch5-desc"
+      ]
+    },
+    "watch5-name": {
+      "type": "Text",
+      "props": {
+        "text": "privacy coins / ZK",
+        "variant": "lead"
+      }
+    },
+    "watch5-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "2 ↑ Emerging Bull, NEW",
+        "variant": "secondary"
+      }
+    },
+    "watch5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "niche, single driver",
+        "variant": "body"
+      }
+    },
+    "watch-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch6-name",
+        "watch6-strength",
+        "watch6-desc"
+      ]
+    },
+    "watch6-name": {
+      "type": "Text",
+      "props": {
+        "text": "embodied AI",
+        "variant": "lead"
+      }
+    },
+    "watch6-strength": {
+      "type": "Badge",
+      "props": {
+        "text": "2 → Emerging Bull",
+        "variant": "secondary"
+      }
+    },
+    "watch6-desc": {
+      "type": "Text",
+      "props": {
+        "text": "long-tail copper/uranium-for-robots",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "map-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "map-heading",
+        "map-emerging",
+        "map-rising",
+        "map-peak",
+        "map-dead"
+      ]
+    },
+    "map-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      }
+    },
+    "map-emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "emerging-label",
+        "emerging-items"
+      ]
+    },
+    "emerging-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Emerging",
+        "level": "h4"
+      }
+    },
+    "emerging-items": {
+      "type": "Text",
+      "props": {
+        "text": "saylor critique · AI capex rationing · privacy coins/ZK · embodied AI",
+        "variant": "body"
+      }
+    },
+    "map-rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rising-label",
+        "rising-items"
+      ]
+    },
+    "rising-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Rising",
+        "level": "h4"
+      }
+    },
+    "rising-items": {
+      "type": "Text",
+      "props": {
+        "text": "BTC dominance cracking · macro quad4 (bear)",
+        "variant": "body"
+      }
+    },
+    "map-peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "peak-label",
+        "peak-items"
+      ]
+    },
+    "peak-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Peak",
+        "level": "h4"
+      }
+    },
+    "peak-items": {
+      "type": "Text",
+      "props": {
+        "text": "DePIN/AI compute · AI agents · RWA · CLARITY Act · hyperliquid · stablecoins",
+        "variant": "body"
+      }
+    },
+    "map-dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dead-label",
+        "dead-items"
+      ]
+    },
+    "dead-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Dead",
+        "level": "h4"
+      }
+    },
+    "dead-items": {
+      "type": "Text",
+      "props": {
+        "text": "AI-displaces-crypto meta · BTC+AI synergy · Chinese-AI contrarian · P2P security mesh",
+        "variant": "body"
+      }
+    }
+  }
+}
