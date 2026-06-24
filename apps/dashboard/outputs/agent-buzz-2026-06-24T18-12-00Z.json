@@ -1,0 +1,146 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-06-24",
+        "description": "mostly stack-canon talk — MCP/A2A/x402 — with two research drops and two product launches on the side."
+      },
+      "children": [
+        "section_stack",
+        "separator1",
+        "section_research",
+        "separator2",
+        "section_products",
+        "separator3",
+        "note"
+      ]
+    },
+    "section_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stack",
+        "item_joao",
+        "item_zambo"
+      ]
+    },
+    "heading_stack": {
+      "type": "Heading",
+      "props": {
+        "text": "stack canon updates",
+        "level": "h3"
+      }
+    },
+    "item_joao": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@joaomdmoura — MCP for tools, A2A for coordination, CrewAI for orchestration — the layer-cake takes shape.",
+        "href": "https://x.com/joaomdmoura/status/2069450419307479188",
+        "source": "@joaomdmoura"
+      }
+    },
+    "item_zambo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@zambodotdev — x402 enters the canonical stack — autonomous payments alongside MCP, function calling, cascading LLMs.",
+        "href": "https://x.com/zambodotdev/status/2069371192528580614",
+        "source": "@zambodotdev"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_research": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_research",
+        "item_jiqizhixin",
+        "item_razoralign"
+      ]
+    },
+    "heading_research": {
+      "type": "Heading",
+      "props": {
+        "text": "agentic research drops",
+        "level": "h3"
+      }
+    },
+    "item_jiqizhixin": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@jiqizhixin — UIUC/Meta/Stanford pitch code-as-substrate — execution-based verification over prompt-grounded reasoning.",
+        "href": "https://x.com/jiqizhixin/status/2069314517054656680",
+        "source": "@jiqizhixin"
+      }
+    },
+    "item_razoralign": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@razoralign — AutoZyme — 5-agent framework for benchmarking/optimizing scientific software, biorxiv preprint.",
+        "href": "https://x.com/razoralign/status/2069554253228806648",
+        "source": "@razoralign"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_products": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_products",
+        "item_nebula",
+        "item_gateway"
+      ]
+    },
+    "heading_products": {
+      "type": "Heading",
+      "props": {
+        "text": "agent products ship",
+        "level": "h3"
+      }
+    },
+    "item_nebula": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@NebulaAI — agent-PM at $4.50/month — GitHub issues + support + tickets, undercuts SaaS pricing floor.",
+        "href": "https://x.com/NebulaAI/status/2069566686303559901",
+        "source": "@NebulaAI"
+      }
+    },
+    "item_gateway": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@agentgateway — MCP proxies hit scale ceiling — agentgateway pitches a purpose-built data plane for MCP/LLM traffic.",
+        "href": "https://x.com/agentgateway/status/2069527447884730607",
+        "source": "@agentgateway"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "note": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 12 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

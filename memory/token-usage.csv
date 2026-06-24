@@ -517,3 +517,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-24,fleet-control,claude-opus-4-7,13,2575,450846,47819
 2026-06-24,btc-levels,claude-sonnet-4-6,12,6533,535129,42717
 2026-06-24,list-digest,claude-opus-4-7,2164,15395,1251880,101942
+2026-06-24,agent-buzz,claude-opus-4-7,20,10559,818623,40632

@@ -1,22 +1,22 @@
-*Agent Buzz — 2026-06-23*
-_builder day around MCP — one taxonomy paper, four tooling launches, one governance pitch._
+*Agent Buzz — 2026-06-24*
+_mostly stack-canon talk — MCP/A2A/x402 — with two research drops and two product launches on the side._
 
-**MCP landscape gets mapped**
-• @omarsar0 — five-dimension taxonomy of nine open-source agent protocols; sessions standardizing, discovery and policy still open.
-  https://x.com/omarsar0/status/2069066883995758814
+**stack canon updates**
+• @joaomdmoura — MCP for tools, A2A for coordination, CrewAI for orchestration — the layer-cake takes shape.
+  https://x.com/joaomdmoura/status/2069450419307479188
+• @zambodotdev — x402 enters the canonical stack — autonomous payments alongside MCP, function calling, cascading LLMs.
+  https://x.com/zambodotdev/status/2069371192528580614
 
-**MCP tooling stack fills in**
-• @AgenticAIFdn — Skybridge: TS framework defining tools, UI components, and workflows together for ChatGPT/Claude/VS Code MCP clients.
-  https://x.com/AgenticAIFdn/status/2069106935920480459
-• @Talknbot — MCP Bank Protocol lets agents tap large tool ecosystems (AutoCAD, Unreal 900+ tools) without exposing every tool at once.
-  https://x.com/Talknbot/status/2069059782351221125
-• @supernova_io — scoped MCP endpoints so each agent gets only the tokens, APIs, and rules its task needs.
-  https://x.com/supernova_io/status/2068995000298336375
+**agentic research drops**
+• @jiqizhixin — UIUC/Meta/Stanford pitch code-as-substrate — execution-based verification over prompt-grounded reasoning.
+  https://x.com/jiqizhixin/status/2069314517054656680
+• @razoralign — AutoZyme — 5-agent framework for benchmarking/optimizing scientific software, biorxiv preprint.
+  https://x.com/razoralign/status/2069554253228806648
 
-**Production multi-agent + governance**
-• @_vmlops — Microsoft AutoGen: event-driven message-passing, AgentChat API, MCP server support, AgentTool wrapper for multi-agent prod.
-  https://x.com/_vmlops/status/2068992717624115418
-• @suggestionii — wardy_ai for traceable agent actions plus MEA for governed identities/wallets/budgets; agents need ops infra, not just intelligence.
-  https://x.com/suggestionii/status/2069027540509806822
+**agent products ship**
+• @NebulaAI — agent-PM at $4.50/month — GitHub issues + support + tickets, undercuts SaaS pricing floor.
+  https://x.com/NebulaAI/status/2069566686303559901
+• @agentgateway — MCP proxies hit scale ceiling — agentgateway pitches a purpose-built data plane for MCP/LLM traffic.
+  https://x.com/agentgateway/status/2069527447884730607
 
-<!-- _src: xai (cache) · candidates: 10 → kept: 6 -->
+<!-- _src: xai-cache · candidates: 12 → kept: 6_ -->
