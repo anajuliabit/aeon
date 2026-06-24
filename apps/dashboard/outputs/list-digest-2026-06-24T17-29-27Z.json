@@ -1,0 +1,137 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-24"
+      },
+      "children": [
+        "intro-text",
+        "separator-1",
+        "heading-crypto",
+        "stack-tweets",
+        "separator-2",
+        "stack-sources"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "flows + hercules converge: yield is the receipt for fee-bearing activity, not the product. cyril's paywalled longread is the loud outlier.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto / DeFi Researchers (list 1642770456720683008)",
+        "level": "h2"
+      }
+    },
+    "stack-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "link-1",
+        "tweet-2",
+        "link-2",
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "weekly fee scoreboard. 96% of 4,245 token-protocols paid holders zero last week. top 10 composition: 4 perps, 2 dexs, 1 oracle. hyperliquid $11.6M, pump.fun $2.87M, ZINC $2.08M, chainlink $1.13M, aerodrome $1.1M. ZINC at #3 is the sleeper most readers will look up.",
+        "likes": 76,
+        "retweets": 4
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Flowslikeosmo/status/2069541760876048666"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Hercules_Defi",
+        "handle": "Hercules_Defi",
+        "text": "QTs delphi's tori thesis: \"yield shouldn't be where defi starts and ends.\" reads as a rebuttal to point-and-farm UX. yield should be the side-effect of fee-bearing activity, not the product. tracks the flowslikeosmo composition above.",
+        "likes": 62,
+        "retweets": 0
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Hercules_Defi/status/2069509823084028404"
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "long-form x article. body 402-paywalled, can't extract. engagement dwarfs the rest of the list ~3x (116k views vs ~8k median). cyril's territory: model-stack picks + hiring filters. flag for manual read.",
+        "likes": 126,
+        "retweets": 29
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/cyrilXBT/status/2069229177459335502"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-sources",
+        "text-status"
+      ]
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok | path=xai-cache | xai_primary=ok",
+        "variant": "caption"
+      }
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
