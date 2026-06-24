@@ -618,13 +618,13 @@
   },
   "btc-levels": {
     "last_dispatch": "2026-06-24T08:43:02Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-24T04:52:25Z",
-    "total_runs": 131,
-    "total_successes": 71,
+    "last_status": "success",
+    "last_success": "2026-06-24T08:44:59Z",
+    "total_runs": 132,
+    "total_successes": 72,
     "total_failures": 60,
     "consecutive_failures": 0,
-    "success_rate": 0.54,
+    "success_rate": 0.55,
     "last_failed": "2026-06-22T01:45:29Z",
     "last_error": "ard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{\"claude-haiku-4-5-20251001\":{\"inputTokens\":530,"
   },
