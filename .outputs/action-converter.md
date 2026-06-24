@@ -1,29 +1,29 @@
-*5 Actions — 2026-06-23*
-Shape: root-cause ISS-025, stage NEWT pre-cliff short, kill EIGEN pick, seed defi pools, refresh skill-analytics
+*5 Actions — 2026-06-24*
+Shape: Ship PR #138, file NEWT short, patch ISS-025 capture, close EIGEN, log Morpho pattern
 
-1. open probe PR against ISS-025 — instrument cost-report output_tokens=0 path on the claude-sonnet-4-6 dispatch leg
-why: cf=23 today (was 17 last night), same signature as ISS-019/020/021/022/024 — 22 skills sr<0.5 roll up here
-done: branch iss-025-probe pushed, PR linked from memory/issues/ISS-025.md, instruments at least one failing leg
-loop: iss-025-rootcause
+1. Merge or rebase PR #138 (goal-tracker header alignment with MEMORY.md) — open 22h, 24h stall threshold hits next heartbeat tick (08:44Z 6-25).
+why: only open PR, blocks goal-tracker accuracy; merging clears the heartbeat P1 surface for tomorrow.
+done: PR #138 merged or rebased + re-pushed; `gh pr list` returns 0 open.
+loop: pr-138
 
-2. stage NEWT pre-cliff short to .pending-picks/2026-06-23-newt-short.json
-why: 139.58M tokens = 64.9% circ supply unlock 6-24, $11M mcap roughly doubles tomorrow per unlock-monitor
-done: pick json on disk with side=short / entry / invalidation, postprocess-picks.sh picks it up next run
-loop: newt-unlock-cliff
+2. POST NEWT short pick to investiments `/api/picks` — unlock cliff TODAY (139.58M tokens = 64.9% of circ on $11M mcap, supply ~doubles).
+why: morning-brief logged "short staged" 07:00Z; no `.pending-picks/2026-06-24-newt-*.json` filed yet; window closes EOD.
+done: `.pending-picks/2026-06-24-advisor-sttrade-NEWT.json` exists OR /api/picks 200 OK in log.
+loop: newt-unlock-short
 
-3. kill .pending-picks/2026-06-22-token-pick.json EIGEN — invalidation tripped
-why: 13:12Z -17% leg puts spot ~$0.253, under the $0.26 invalidation rail set at yesterday's $0.305 entry
-done: pick file marked status:invalidated, exit recorded in memory/logs/2026-06-23.md
-loop: eigen-pick-reversal
+3. Open PR patching `.github/workflows/aeon.yml` capture step for the ISS-025 cluster — 22 chronic-tail skills share the `output_tokens=0` signature; same shape as ISS-009 fix (assistant text vs Write tool output).
+why: cost-report cf=30→0 overnight is a tactical recovery; durable fix at capture step unblocks reg-monitor 7% / vuln-scanner 7% / skill-analytics 9% tail.
+done: PR opened touching aeon.yml capture step OR ISS-025.md updated with named fix candidate + diff sketch.
+loop: iss-025-capture-fix
 
-4. populate type:pool entries in memory/on-chain-watches.yml — Aave V3 USDC Base + Aerodrome USDC-AERO LP + Moonwell WELL market
-why: defi-monitor 16 days NO_CONFIG, only type:wallet entries exist, blocks contract-state queries entirely
-done: yml has ≥3 type:pool blocks with abi field, defi-monitor exits OK on next cron tick
-loop: defi-monitor-config
+4. Close 6-22 EIGEN HIGH 9/10 pick at $0.258 invalidation — entry $0.305, invalidation rail crossed 6-23 / -17.0% afternoon, 3rd-day reversal confirmed 6-24 -6.7%.
+why: discipline gap — pick still open in tracker despite rail break; clean exit log feeds tomorrow's token-pick rubric.
+done: `memory/topics/crypto.md` has EIGEN entry closed with realized PnL line + `.pending-picks/2026-06-22-token-pick.json` flagged invalidated.
+loop: eigen-invalidation
 
-5. trigger skill-analytics via gh workflow run aeon.yml -f skill=skill-analytics
-why: articles/skill-analytics-*.md at 312h/13d, operator-scorecard FRESHNESS_WARN clock 42/168h, escalates 2026-06-28
-done: fresh articles/skill-analytics-2026-06-23.md written, skill-freshness fingerprint flips
-loop: skill-analytics-stale
+5. Append `Morpho curator-risk pattern` section to `memory/topics/crypto.md` — operator's 17:00Z msY query established the runbook (AlphaPing concentration ~30% in msY/USDC, verification-service handoff before collapse, ~$18M trapped).
+why: same query will repeat next Morpho vault prompt; persist pattern so future answer is 1-shot.
+done: topics/crypto.md has named section with curator-risk checklist + msY case as evidence.
+loop: morpho-curator-runbook
 
-sources: memory=60 lines logs=7 days topics=11 files prs=0 cron_failing=1 mode=OK
+sources: memory=71 logs=7 topics=11 prs=1 cron_failing=0 mode=OK
