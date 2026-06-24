@@ -1,0 +1,73 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-group",
+        "separator1",
+        "headup-alert"
+      ]
+    },
+    "status-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "period-text",
+        "captures-stat",
+        "summary-text"
+      ]
+    },
+    "period-text": {
+      "type": "Text",
+      "props": {
+        "text": "Last 24h",
+        "variant": "muted"
+      }
+    },
+    "captures-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headup-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Unarchived file pending action",
+        "message": "vault/inbox/2026-06-22-1657-reppo-building-comment.md still sitting unarchived (62h, surfaced 3 prior reviews) — archive or act.",
+        "type": "info"
+      }
+    }
+  }
+}
