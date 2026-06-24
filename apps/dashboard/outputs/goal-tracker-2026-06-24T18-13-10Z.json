@@ -1,0 +1,450 @@
+{
+  "root": "root-card",
+  "state": {},
+  "elements": {
+    "root-card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-06-24"
+      },
+      "children": [
+        "summary-heading",
+        "summary-stats",
+        "summary-note",
+        "sep1",
+        "blocked-section",
+        "sep2",
+        "on-track-section",
+        "sep3",
+        "done-section",
+        "sep4",
+        "sources-section"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-at-risk",
+        "stat-attention",
+        "stat-on-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "9"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "4"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "3"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "2"
+      }
+    },
+    "summary-note": {
+      "type": "Text",
+      "props": {
+        "text": "Flat overall, no status changes vs 2026-06-23",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-title",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3"
+      ]
+    },
+    "blocked-title": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "XAI quota recovery",
+        "message": "Waiting on operator top-up since 2026-06-16 (day 8). daily-routine 07:38Z used WebSearch fallback again (xai=skipped). Action: top up Team 3a8b4c1e XAI credits to unblock daily-routine, tweet-roundup, agent-buzz, narrative-tracker"
+      }
+    },
+    "blocked-item-2": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Operator on-chain config completion",
+        "message": "Waiting on Alchemy/Etherscan key (day 8); on-chain-monitor 13:30Z still ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY unset. Action: supply ALCHEMY_API_KEY or ETHERSCAN_API_KEY to lift Base free-tier block"
+      }
+    },
+    "blocked-item-3": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Operator-gated monitors",
+        "message": "defi-monitor day 17 NO_CONFIG (5 wallet entries don't satisfy pool/position type). Action: add `type: pool` and `type: position` entries to memory/on-chain-watches.yml"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-title",
+        "track-item-1",
+        "track-item-2",
+        "track-item-3",
+        "track-item-4"
+      ]
+    },
+    "on-track-title": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "track-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "track-1-title",
+        "track-1-status",
+        "track-1-detail"
+      ]
+    },
+    "track-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "level": "h3"
+      }
+    },
+    "track-1-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 35 activity/14d (→ flat)"
+      }
+    },
+    "track-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report cf=30→0 recovered overnight 03:48Z, but ISS-025 cluster persists structurally; 22-skill chronic tail unchanged",
+        "variant": "caption"
+      }
+    },
+    "track-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "track-2-title",
+        "track-2-status",
+        "track-2-detail"
+      ]
+    },
+    "track-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Stuck skills",
+        "level": "h3"
+      }
+    },
+    "track-2-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 20 activity/14d (→ flat)"
+      }
+    },
+    "track-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "recoveries banked 6-21/6-22, chronic tail rolls up to sandbox-truncation",
+        "variant": "caption"
+      }
+    },
+    "track-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "track-3-title",
+        "track-3-status",
+        "track-3-detail"
+      ]
+    },
+    "track-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "skill-freshness FRESHNESS_WARN",
+        "level": "h3"
+      }
+    },
+    "track-3-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 14 activity/14d (→ flat)"
+      }
+    },
+    "track-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard 336h/14d stale, escalation clock 42/168h, re-emits 2026-06-28",
+        "variant": "caption"
+      }
+    },
+    "track-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "track-4-title",
+        "track-4-status",
+        "track-4-detail"
+      ]
+    },
+    "track-4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "BTC hard levels",
+        "level": "h3"
+      }
+    },
+    "track-4-status": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 4 btc-levels runs today (→ flat)"
+      }
+    },
+    "track-4-detail": {
+      "type": "Text",
+      "props": {
+        "text": "spot $62,409–$62,903, close $62,651, no alerts; $60,500 breakdown still armed",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "done-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done-title",
+        "done-item-1",
+        "done-item-2"
+      ]
+    },
+    "done-title": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h2"
+      }
+    },
+    "done-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done-1-title",
+        "done-1-detail"
+      ]
+    },
+    "done-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "MemoClaw soul-strip PR",
+        "level": "h3"
+      }
+    },
+    "done-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Completed 2026-06-22 (PR #137 merged 15:08Z)",
+        "variant": "caption"
+      }
+    },
+    "done-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done-2-title",
+        "done-2-detail"
+      ]
+    },
+    "done-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "PR backlog",
+        "level": "h3"
+      }
+    },
+    "done-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Completed 2026-06-21 (sustained — 1 open: PR #138 goal-tracker header drift, 20h, under 24h stall threshold)",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-title",
+        "sources-list"
+      ]
+    },
+    "sources-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "source-logs",
+        "source-git",
+        "source-gh-pr",
+        "source-gh-issue",
+        "source-cron"
+      ]
+    },
+    "source-logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs=ok",
+        "variant": "default"
+      }
+    },
+    "source-git": {
+      "type": "Badge",
+      "props": {
+        "text": "git=ok",
+        "variant": "default"
+      }
+    },
+    "source-gh-pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr=ok",
+        "variant": "default"
+      }
+    },
+    "source-gh-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue=ok",
+        "variant": "default"
+      }
+    },
+    "source-cron": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "default"
+      }
+    }
+  }
+}
