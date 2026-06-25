@@ -548,13 +548,13 @@
   },
   "list-digest": {
     "last_dispatch": "2026-06-25T17:26:16Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-24T17:30:15Z",
-    "total_runs": 54,
-    "total_successes": 15,
+    "last_status": "success",
+    "last_success": "2026-06-25T17:32:01Z",
+    "total_runs": 55,
+    "total_successes": 16,
     "total_failures": 39,
     "consecutive_failures": 0,
-    "success_rate": 0.28,
+    "success_rate": 0.29,
     "last_failed": "2026-06-21T14:16:58Z",
     "last_error": "68fc62f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
