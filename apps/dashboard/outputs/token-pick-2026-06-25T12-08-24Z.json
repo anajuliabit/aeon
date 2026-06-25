@@ -1,0 +1,280 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-25"
+      },
+      "children": [
+        "heading_sei",
+        "stack_sei_header",
+        "stack_sei_metrics",
+        "text_score",
+        "text_catalyst",
+        "text_risk_sei",
+        "text_stake_sei",
+        "separator_1",
+        "heading_market",
+        "stack_market_header",
+        "stack_market_odds",
+        "text_fair_value",
+        "text_thesis",
+        "text_risk_market",
+        "text_stake_market",
+        "separator_2",
+        "text_metadata"
+      ]
+    },
+    "heading_sei": {
+      "type": "Heading",
+      "props": {
+        "text": "Token: SEI",
+        "level": "h2"
+      }
+    },
+    "stack_sei_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_sei_high",
+        "badge_sei_score"
+      ]
+    },
+    "badge_sei_high": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "default"
+      }
+    },
+    "badge_sei_score": {
+      "type": "Badge",
+      "props": {
+        "text": "signal 9/10",
+        "variant": "default"
+      }
+    },
+    "stack_sei_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_sei_price",
+        "stat_sei_24h",
+        "stat_sei_7d",
+        "stat_sei_mcap",
+        "stat_sei_vol",
+        "stat_sei_volmcap"
+      ]
+    },
+    "stat_sei_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.0584"
+      }
+    },
+    "stat_sei_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h change",
+        "value": "+8.83%",
+        "trend": "up"
+      }
+    },
+    "stat_sei_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d change",
+        "value": "+7.57%",
+        "trend": "up"
+      }
+    },
+    "stat_sei_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market cap",
+        "value": "$394M"
+      }
+    },
+    "stat_sei_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$78.9M"
+      }
+    },
+    "stat_sei_volmcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol/mcap",
+        "value": "0.20"
+      }
+    },
+    "text_score": {
+      "type": "Text",
+      "props": {
+        "text": "Score: 24h+1, 7d+1, both>5%+2, vol/mcap≥0.20+3, RS vs BTC/ETH+2 = 9/10",
+        "variant": "caption"
+      }
+    },
+    "text_catalyst": {
+      "type": "Text",
+      "props": {
+        "text": "Catalyst: live catalyst stack — Giga upgrade shipping (50× throughput, 200K TPS target), EVM migration completed mid-June, Canary Staked SEI ETF (ticker SEIZ) already trading on US brokerages, Xiaomi-preinstalled wallet rollout live since May 3 with HK/EU pilots in Q2. Today's +8.8% on vol/mcap 0.20 in a red tape (BTC -2.7% / ETH -2.8% 24h) is the strongest relative-strength print in top 250.",
+        "variant": "body"
+      }
+    },
+    "text_risk_sei": {
+      "type": "Alert",
+      "props": {
+        "title": "Risk",
+        "message": "TVL collapsed from ~$626M (Jul 2025) → ~$41.6M (Apr 2026). Price is leading fundamentals — rally is catalyst speculation, not on-chain demand pickup. If Xiaomi pilot numbers underwhelm or ETF flows stay thin, the move retraces.",
+        "type": "warning"
+      }
+    },
+    "text_stake_sei": {
+      "type": "Text",
+      "props": {
+        "text": "Stake: ≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap\nExit: target $0.069 (+18%) / invalidate $0.054 (-7.5%) / time-stop 14d\nVs recent picks: first time (HYPE/SOL/AERO/EIGEN/DEXE/AAVE dedup-cleared)",
+        "variant": "caption"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market: \"Will Bitcoin dip to $57,500 in June?\"",
+        "level": "h2"
+      }
+    },
+    "stack_market_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_market_medium",
+        "badge_market_edge"
+      ]
+    },
+    "badge_market_medium": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      }
+    },
+    "badge_market_edge": {
+      "type": "Badge",
+      "props": {
+        "text": "edge 9pp",
+        "variant": "secondary"
+      }
+    },
+    "stack_market_odds": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_yes_odds",
+        "stat_no_odds",
+        "stat_vol_market",
+        "stat_liq_market",
+        "stat_resolution"
+      ]
+    },
+    "stat_yes_odds": {
+      "type": "Stat",
+      "props": {
+        "label": "YES",
+        "value": "26¢"
+      }
+    },
+    "stat_no_odds": {
+      "type": "Stat",
+      "props": {
+        "label": "NO",
+        "value": "74¢"
+      }
+    },
+    "stat_vol_market": {
+      "type": "Stat",
+      "props": {
+        "label": "24h volume",
+        "value": "$334k"
+      }
+    },
+    "stat_liq_market": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$72k"
+      }
+    },
+    "stat_resolution": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolves",
+        "value": "2026-07-01"
+      }
+    },
+    "text_fair_value": {
+      "type": "Text",
+      "props": {
+        "text": "Fair YES: ~35% (inputs: BTC spot $60,679 sitting only 5.2% above the $57,500 trigger; 7d realized -4.5% with $60,500 close-breakdown level being tested today; touch-based path-dependent — one intraday wick clears it; institutional ETF outflows $1.67B last week / $4.21B over 3 weeks)",
+        "variant": "body"
+      }
+    },
+    "text_thesis": {
+      "type": "Text",
+      "props": {
+        "text": "Thesis: 5 days, touch-based, BTC ~$3k above the trigger with the closest macro tailwind nowhere in sight. Market is underpricing the wick.",
+        "variant": "body"
+      }
+    },
+    "text_risk_market": {
+      "type": "Alert",
+      "props": {
+        "title": "Risk",
+        "message": "Surprise dovish Fed signal or a clean bounce off $60.5k holds the wick at bay; market is short-dated so any single relief day compresses the edge fast.",
+        "type": "warning"
+      }
+    },
+    "text_stake_market": {
+      "type": "Text",
+      "props": {
+        "text": "Stake: ≤0.25% of net worth (MEDIUM) — moonshot sleeve, 1% total cap",
+        "variant": "caption"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_metadata": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: cg=ok, dex=ok (trending = meme/junk, no overlap), poly=ok, x=ok (cache returned no qualified candidates)\n\nIf you take it: log in the dashboard journal (kind=trade) so the advisor tracks it\n\nNot financial advice — pattern-matching only",
+        "variant": "muted"
+      }
+    }
+  }
+}
