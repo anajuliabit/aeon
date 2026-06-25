@@ -1,0 +1,336 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "on-chain alert",
+        "description": "2026-06-25"
+      },
+      "children": [
+        "alert-main",
+        "sep1",
+        "w1-section",
+        "sep2",
+        "w2-section",
+        "sep3",
+        "w4-section",
+        "sep4",
+        "stats-footer",
+        "sep5",
+        "sources-footer"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Address poisoning escalated overnight",
+        "message": "Attacker contract 0xC3236716… planted 3 fake-W1 baits (0x98E57e6799…) under W2 / W4 / W4 within minutes of each real transfer. Now mixing zero-value real-token spoofs with cyrillic ÚSDС clone (previously 6-23 was ÚSDС only). Hardware-screen address verify unchanged."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "w1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "W1 (primary) – base",
+        "level": "h3"
+      }
+    },
+    "w1-tx1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w1-tx1-badge",
+        "w1-tx1-amount",
+        "w1-tx1-link"
+      ]
+    },
+    "w1-tx1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "OUT",
+        "variant": "destructive"
+      }
+    },
+    "w1-tx1-amount": {
+      "type": "Text",
+      "props": {
+        "text": "$7,105 cbBTC → Morpho GeneralAdapter1"
+      }
+    },
+    "w1-tx1-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0x48ce29e90baad21b68383c86bf9e7c00dbb4251e2c313c9f87864aba03f1bbc7"
+      }
+    },
+    "w1-tx2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w1-tx2-badge",
+        "w1-tx2-amount",
+        "w1-tx2-link"
+      ]
+    },
+    "w1-tx2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "IN",
+        "variant": "outline"
+      }
+    },
+    "w1-tx2-amount": {
+      "type": "Text",
+      "props": {
+        "text": "$6,641 cbBTC ← W2"
+      }
+    },
+    "w1-tx2-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0x63562510456e0b701b6327ad9bc9a4849358b315f903207310caf7f869cdf088"
+      }
+    },
+    "w1-tx3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w1-tx3-badge",
+        "w1-tx3-amount",
+        "w1-tx3-link"
+      ]
+    },
+    "w1-tx3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "IN",
+        "variant": "outline"
+      }
+    },
+    "w1-tx3-amount": {
+      "type": "Text",
+      "props": {
+        "text": "$1,115 USDC ← W4"
+      }
+    },
+    "w1-tx3-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0x2985fa252739c97d27b4abc7a2b16b7c74ef67458b95f6ea4a6430d915addbab"
+      }
+    },
+    "w1-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "w1-heading",
+        "w1-tx1",
+        "w1-tx2",
+        "w1-tx3"
+      ]
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "w2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "W2 – base",
+        "level": "h3"
+      }
+    },
+    "w2-tx1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w2-tx1-badge",
+        "w2-tx1-amount",
+        "w2-tx1-link"
+      ]
+    },
+    "w2-tx1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "OUT",
+        "variant": "destructive"
+      }
+    },
+    "w2-tx1-amount": {
+      "type": "Text",
+      "props": {
+        "text": "$6,641 cbBTC → W1"
+      }
+    },
+    "w2-tx1-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0x63562510456e0b701b6327ad9bc9a4849358b315f903207310caf7f869cdf088"
+      }
+    },
+    "w2-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "w2-heading",
+        "w2-tx1"
+      ]
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "w4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "W4 – base",
+        "level": "h3"
+      }
+    },
+    "w4-tx1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w4-tx1-badge",
+        "w4-tx1-amount",
+        "w4-tx1-link"
+      ]
+    },
+    "w4-tx1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "OUT",
+        "variant": "destructive"
+      }
+    },
+    "w4-tx1-amount": {
+      "type": "Text",
+      "props": {
+        "text": "$1,115 USDC → W1"
+      }
+    },
+    "w4-tx1-link": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0x2985fa252739c97d27b4abc7a2b16b7c74ef67458b95f6ea4a6430d915addbab"
+      }
+    },
+    "w4-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "w4-heading",
+        "w4-tx1"
+      ]
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-footer": {
+      "type": "Text",
+      "props": {
+        "text": "5 events on 3 watches",
+        "variant": "muted"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-line1",
+        "sources-line2",
+        "sources-line3",
+        "sources-line4",
+        "sources-line5"
+      ]
+    },
+    "sources-line1": {
+      "type": "Text",
+      "props": {
+        "text": "alchemy=skip(no-key)",
+        "variant": "caption"
+      }
+    },
+    "sources-line2": {
+      "type": "Text",
+      "props": {
+        "text": "etherscan=skip(free-tier-blocks-base)",
+        "variant": "caption"
+      }
+    },
+    "sources-line3": {
+      "type": "Text",
+      "props": {
+        "text": "blockscout=ok",
+        "variant": "caption"
+      }
+    },
+    "sources-line4": {
+      "type": "Text",
+      "props": {
+        "text": "coingecko=skip(blockscout-inline-rate)",
+        "variant": "caption"
+      }
+    },
+    "sources-line5": {
+      "type": "Text",
+      "props": {
+        "text": "last_block→47801591",
+        "variant": "caption"
+      }
+    }
+  }
+}

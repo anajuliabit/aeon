@@ -1,0 +1,27 @@
+# memory/known-addresses.yml
+# Counterparty label dictionary read by on-chain-monitor.
+# Lowercase keys, free-text values. Lookup is exact-match on lowercased address.
+#
+# Seeded 2026-06-25 from observed activity:
+# - Operator wallets (lets cross-watch transfers humanise as "W1/W2/...").
+# - Morpho GeneralAdapter1 on Base (cbBTC leverage bundler — primary DeFi sink for W1).
+# - Address-poisoning attacker infrastructure (lookalike + contract + signers) —
+#   seeded so future runs immediately recognise the same actor and tag PHISHING.
+
+labels:
+  # Operator wallets (Base)
+  "0x98e5f932a264bce0a37f3d87accaab5f5bf7c0a9": "W1 (primary)"
+  "0xf595346efb499f35b390f324d1655b4cd9751d9b": "W2"
+  "0x0f2570ab0638621cd97071fcc9de4a84787531b1": "W3"
+  "0xa958f3856b434445c1fcf54766d9431579e2c454": "W4"
+  "0x3e6385a81386ccf65674c791757b44601209d931": "W5"
+
+  # DeFi protocols (Base)
+  "0xb98c948cfa24072e58935bc004a8a7b376ae746a": "Morpho GeneralAdapter1"
+  "0x0000000000000000000000000000000000000000": "Zero (mint/burn)"
+
+  # Address-poisoning infrastructure (Base) — flagged 2026-06-23, escalated 2026-06-24
+  "0x98e57e6799dcc79d80afc594e4b25a7dc764c0a9": "PHISHING (W1 lookalike)"
+  "0xc3236716cbdc725b518ac0a5d830fbadcfd05032": "PHISHING contract (address-poisoning)"
+  "0x3959e49639d3b1bd9d1746a7971155e94fecf1f6": "PHISHING signer A"
+  "0xcd8b9ab02f720de45e2259798b3c1b708084a264": "PHISHING signer B"
