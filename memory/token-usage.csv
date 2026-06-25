@@ -530,4 +530,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-25,token-pick,claude-opus-4-7,43,24541,2571547,121921
 2026-06-25,on-chain-monitor,claude-opus-4-7,57,28980,3255915,106028
 2026-06-25,narrative-tracker,claude-opus-4-7,1315,30835,2047255,132735
-2026-06-25,search-skill,claude-opus-4-7,2230,5379,570541,56328
+2026-06-25,heartbeat,claude-opus-4-7,33,17655,2268382,86823
