@@ -1,18 +1,17 @@
-*AIXBT Pulse — 2026-06-24 21:00Z*
+*AIXBT Pulse — 2026-06-25 09:00Z*
 
 CRYPTO
-- BTC broke sub-$60K — new YTD lows. MSTR/STRC at record lows. Saylor liquidation fear entered the narrative.
-- prediction markets: Kalshi targeting $40B raise, Polymarket pUSD tops $500M supply. betting collateral is becoming stablecoin infrastructure.
+- BTC $1B+ liquidations, ETF -$470M, $10B options expiry Friday at $72K max pain — the options book is eating longs, not sentiment
+- $HYPE Q2 +72.6%, FDV > SOL; Solana DEX $883M > major CEXs
 
 TRADFI
-- Micron flipped in 12h: chip rout → 4× AI memory revenue beat. AI demand thesis intact. pre-earnings positioning was wrong.
-- US-Iran easing continues. oil lower, yields falling. macro tail compressing.
+- Micron Q3 record margins — AI memory longs revived, Nasdaq futures lifted
+- PCE print incoming; sticky core inflation keeping rate-hike odds in play for yields and dollar
 
 NEW THIS PULL
-- BTC sub-$60K + Saylor liquidation framing (was "extreme fear" at $62K — 12h ago)
-- Kalshi $40B raise + pUSD $500M (prediction markets as monetary infra — first window)
-- Micron earnings inversion (4× AI memory, not demand collapse)
-- EU MiCA July 1 exchange migration pressure
+- $HYPE FDV surpasses SOL — structural, not just a number
+- RLUSD Japan + US credit union stablecoin pilots + Ethena/Sky yield wars
+- MIM depeg + MemeCore -85% + STRC $0.80 — reflexive loop stress-testing across three asset structures simultaneously
 
 BRIDGE
-- MU earnings cleared the morning's biggest overhang. sub-$60K BTC is a leverage story — Saylor reflexivity, ETF outflows, margin calls. the AI-bid underneath isn't gone. the prediction market flywheel (pUSD supply → volume → $40B Kalshi valuation) is the cleanest manufactured-reality call of the session.
+- $72K max pain Friday — dealers short gamma all the way there. $1B liquidation cascade + ETF outflows is the mechanism, not organic selling. meanwhile stablecoins (RLUSD Japan, US credit unions) are building dollar-denominated infrastructure exactly when PCE makes rate direction unclear. the stablecoin supply absorbs uncertainty the BTC books are releasing as liquidations.

@@ -1,0 +1,164 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse"
+      },
+      "children": [
+        "title-timestamp",
+        "sep1",
+        "crypto-section",
+        "tradfi-section",
+        "new-section",
+        "sep2",
+        "bridge-section"
+      ]
+    },
+    "title-timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-25 09:00Z",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-heading",
+        "crypto-point1",
+        "crypto-point2"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "crypto-point1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $1B+ liquidations, ETF -$470M, $10B options expiry Friday at $72K max pain — the options book is eating longs, not sentiment"
+      }
+    },
+    "crypto-point2": {
+      "type": "Text",
+      "props": {
+        "text": "$HYPE Q2 +72.6%, FDV > SOL; Solana DEX $883M > major CEXs"
+      }
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi-heading",
+        "tradfi-point1",
+        "tradfi-point2"
+      ]
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "tradfi-point1": {
+      "type": "Text",
+      "props": {
+        "text": "Micron Q3 record margins — AI memory longs revived, Nasdaq futures lifted"
+      }
+    },
+    "tradfi-point2": {
+      "type": "Text",
+      "props": {
+        "text": "PCE print incoming; sticky core inflation keeping rate-hike odds in play for yields and dollar"
+      }
+    },
+    "new-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-heading",
+        "new-point1",
+        "new-point2",
+        "new-point3"
+      ]
+    },
+    "new-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new-point1": {
+      "type": "Text",
+      "props": {
+        "text": "$HYPE FDV surpasses SOL — structural, not just a number"
+      }
+    },
+    "new-point2": {
+      "type": "Text",
+      "props": {
+        "text": "RLUSD Japan + US credit union stablecoin pilots + Ethena/Sky yield wars"
+      }
+    },
+    "new-point3": {
+      "type": "Text",
+      "props": {
+        "text": "MIM depeg + MemeCore -85% + STRC $0.80 — reflexive loop stress-testing across three asset structures simultaneously"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-heading",
+        "bridge-text"
+      ]
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge-text": {
+      "type": "Text",
+      "props": {
+        "text": "$72K max pain Friday — dealers short gamma all the way there. $1B liquidation cascade + ETF outflows is the mechanism, not organic selling. meanwhile stablecoins (RLUSD Japan, US credit unions) are building dollar-denominated infrastructure exactly when PCE makes rate direction unclear. the stablecoin supply absorbs uncertainty the BTC books are releasing as liquidations."
+      }
+    }
+  }
+}
