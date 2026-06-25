@@ -409,6 +409,10 @@ D1="$(rgm_dir up 55 0.0000125)"; R1="$(D="$D1" bash "$RGM")"
 check "regime uptrend band BULL" "$(printf '%s' "$R1" | jq -r '.band')" "BULL"
 D2="$(rgm_dir down 45 0.0000125)"; R2="$(D="$D2" bash "$RGM")"
 check "regime downtrend band BEAR" "$(printf '%s' "$R2" | jq -r '.band')" "BEAR"
+# Tuning drift guard: downtrend must stay decisively BEAR (score margin under the
+# 35 cutoff). Current downtrend score is 34; assert <=35 so a drift past the cutoff
+# trips the test while real BEAR readings pass.
+check "regime downtrend score <=35" "$(printf '%s' "$R2" | jq -r '.score<=35')" "true"
 D3="$(rgm_dir up 92 0.0000125)"; R3="$(D="$D3" bash "$RGM")"
 check "regime greed<=neutral score" "$(python3 -c "import json,sys;a=json.loads(sys.argv[1]);b=json.loads(sys.argv[2]);print('yes' if a['score']<=b['score'] else 'no')" "$R3" "$R1")" "yes"
 D4="$(rgm_dir up 55 0.0008)"; R4="$(D="$D4" bash "$RGM")"
@@ -417,5 +421,52 @@ D5="$(mktemp -d)"; printf '{"data":[{"value":"50"}]}' > "$D5/fng.json"
 R5="$(D="$D5" bash "$RGM")"; RC5=$?
 check "regime sparse -> UNKNOWN" "$(printf '%s' "$R5" | jq -r '.band')" "UNKNOWN"
 check "regime sparse exit 0" "$RC5" "0"
+
+# Volatility actually exercised: a high-variance series (alternating +/-5% daily
+# closes) has REAL intraday variance, so its volatility sub-signal must be LOWER
+# than the calm linear uptrend fixture (whose smooth ramp pins vol at the cap).
+rgm_dir_vola() { # writes a fresh $D with a high-variance cg-btc series; echoes dir
+  local d; d="$(mktemp -d)"
+  python3 - "$d/cg-btc.json" <<'PY'
+import json,sys
+path=sys.argv[1]
+prices=[]; t=1700000000000; p=100000.0
+for day in range(31):
+    p=p*(1.05 if day%2==0 else 0.95)   # alternating +/-5% day over day
+    for h in range(24):
+        prices.append([t,p]); t+=3600000
+json.dump({"prices":prices},open(path,"w"))
+PY
+  printf '{"data":[{"value":"50"}]}' > "$d/fng.json"
+  printf '[{"coin":"BTC","fundingHourly":0.0000125,"openInterest":1,"markPx":1}]' > "$d/hl-funding.json"
+  echo "$d"
+}
+DV="$(rgm_dir_vola)"; RV="$(D="$DV" bash "$RGM")"
+VOL_HI="$(printf '%s' "$RV" | jq -r '.signals.volatility')"
+VOL_CALM="$(printf '%s' "$R1" | jq -r '.signals.volatility')"
+check "regime high-variance vol < calm vol" \
+  "$(python3 -c "import sys;print('yes' if float(sys.argv[1])<float(sys.argv[2]) else 'no')" "$VOL_HI" "$VOL_CALM")" "yes"
+
+# #1 graceful degradation: corrupt cg-btc (non-numeric closes, jq null) + valid
+# fng+funding must NOT crash. Exit 0, valid JSON, band UNKNOWN or NEUTRAL (momentum
+# can't be computed, so a non-NEUTRAL band is forbidden).
+DC="$(mktemp -d)"
+printf '{"prices":[[1,"abc"],[2,null]]}' > "$DC/cg-btc.json"
+printf '{"data":[{"value":"50"}]}' > "$DC/fng.json"
+printf '[{"coin":"BTC","fundingHourly":0.0000125,"openInterest":1,"markPx":1}]' > "$DC/hl-funding.json"
+RC_OUT="$(D="$DC" bash "$RGM")"; RC_RC=$?
+check "regime corrupt cg-btc exit 0" "$RC_RC" "0"
+check "regime corrupt cg-btc valid JSON" "$(printf '%s' "$RC_OUT" | jq -e . >/dev/null 2>&1 && echo ok)" "ok"
+check "regime corrupt cg-btc band not BULL/BEAR" \
+  "$(printf '%s' "$RC_OUT" | jq -r 'if .band=="UNKNOWN" or .band=="NEUTRAL" then "ok" else "bad" end')" "ok"
+
+# #3 degraded state must NOT read BULL: missing cg-btc (only fng+funding) renormalizes
+# to a risk-ON score, but with momentum absent the band MUST clamp to NEUTRAL.
+DM="$(mktemp -d)"
+printf '{"data":[{"value":"45"}]}' > "$DM/fng.json"
+printf '[{"coin":"BTC","fundingHourly":0.0000125,"openInterest":1,"markPx":1}]' > "$DM/hl-funding.json"
+RM_OUT="$(D="$DM" bash "$RGM")"; RM_RC=$?
+check "regime missing cg-btc exit 0" "$RM_RC" "0"
+check "regime missing cg-btc band NEUTRAL (not BULL)" "$(printf '%s' "$RM_OUT" | jq -r '.band')" "NEUTRAL"
 
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
