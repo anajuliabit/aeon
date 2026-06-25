@@ -392,14 +392,14 @@
     "last_dispatch": "2026-06-22T10:30:07Z"
   },
   "market-context-refresh": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-24T13:14:21Z",
     "total_runs": 89,
     "total_successes": 26,
     "total_failures": 63,
     "consecutive_failures": 0,
     "success_rate": 0.29,
-    "last_dispatch": "2026-06-24T13:03:27Z",
+    "last_dispatch": "2026-06-25T13:01:55Z",
     "last_failed": "2026-06-21T12:14:28Z",
     "last_error": "686fade\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -510,8 +510,8 @@
     "last_error": "1aad75a\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-movers": {
-    "last_dispatch": "2026-06-24T13:03:27Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-25T13:01:55Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-24T13:15:27Z",
     "total_runs": 39,
     "total_successes": 24,
@@ -523,8 +523,8 @@
     "last_quality_score": 5
   },
   "on-chain-monitor": {
-    "last_dispatch": "2026-06-24T13:03:27Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-25T13:01:55Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-24T13:09:00Z",
     "total_runs": 28,
     "total_successes": 19,
@@ -535,8 +535,8 @@
     "last_error": "262d35f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "defi-monitor": {
-    "last_dispatch": "2026-06-24T13:03:27Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-25T13:01:55Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-24T13:04:58Z",
     "total_runs": 34,
     "total_successes": 16,
@@ -617,8 +617,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-06-25T08:41:53Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-25T13:01:55Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-25T08:43:53Z",
     "total_runs": 138,
     "total_successes": 78,
