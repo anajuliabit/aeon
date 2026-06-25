@@ -1,13 +1,14 @@
-Run complete — no alerts fired. Here's the summary:
-
 ## Summary
 
-**BTC spot:** $61,030 | **June 23 UTC close:** $62,652
+**Run completed — no alerts fired.**
 
-**Level checks:**
-- Leverage review (≤$45k): inactive
-- Breakdown (close < $60,500): June 23 close $62,652 — no alert
-- Reclaim $63,500: spot $61,030 < level — no alert (flags armed/false from 16:38Z re-arm)
-- Reclaim $65,900: spot $61,030 < level — no alert
+| Item | Value |
+|------|-------|
+| Spot | $60,679 |
+| Daily close (2026-06-24) | $60,909 |
+| Leverage-review (≤$45k) | ❌ not triggered |
+| Breakdown (close < $60,500) | ❌ not triggered — close $60,909 > threshold |
+| Reclaim $63,500 | ❌ spot below level |
+| Reclaim $65,900 | ❌ spot below level |
 
-**No notification sent** (quiet run per spec). Spot recovered from the day's $60,319 dip but remains below both reclaim levels. If today's UTC close (2026-06-24 00:00Z tomorrow) prints below $60,500, the breakdown alert will fire on the next run. State committed.
+The 2026-06-24 UTC daily close came in at $60,909 — just above the $60,500 breakdown threshold despite the intraday dip to $60,319 flagged in yesterday's memory. Both reclaim flags remain re-armed (false). State and today's log committed.
