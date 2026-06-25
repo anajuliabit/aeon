@@ -1,12 +1,13 @@
-*List Digest — 2026-06-24*
+*List Digest — 2026-06-25*
 
-flows + hercules converge: yield is the receipt for fee-bearing activity, not the product. cyril's paywalled longread is the loud outlier.
+thin defi-list day. flowslikeosmo's yield-stables playbook is the only operator-actionable line; hooeem ships an AI-as-evaluator research workflow; rest is reply fragments.
 
-*Crypto / DeFi Researchers (list 1642770456720683008)*
-- x.com/Flowslikeosmo — weekly fee scoreboard. 96% of 4,245 token-protocols paid holders zero last week. top 10 composition: 4 perps, 2 dexs, 1 oracle. hyperliquid $11.6M, pump.fun $2.87M, ZINC $2.08M, chainlink $1.13M, aerodrome $1.1M. ZINC at #3 is the sleeper most readers will look up. (♥76 ↻4) — [View](https://x.com/Flowslikeosmo/status/2069541760876048666)
-- x.com/Hercules_Defi — QTs delphi's tori thesis: "yield shouldn't be where defi starts and ends." reads as a rebuttal to point-and-farm UX. yield should be the side-effect of fee-bearing activity, not the product. tracks the flowslikeosmo composition above. (♥62 ↻0) — [View](https://x.com/Hercules_Defi/status/2069509823084028404)
-- x.com/cyrilXBT — long-form x article. body 402-paywalled, can't extract. engagement dwarfs the rest of the list ~3x (116k views vs ~8k median). cyril's territory: model-stack picks + hiring filters. flag for manual read. (♥126 ↻29) — [View](https://x.com/cyrilXBT/status/2069229177459335502)
+*Crypto / DeFi Researchers*
+- x.com/Flowslikeosmo — yield ladder for fear-index 22 + market -22% ytd: morpho 25% / ember 12% / avantis 10% (base) / harmonix 9.7% (hyperliquid) / fluid 8.2%, all USDC. plus dca menu of cashflow alts ($HYPE $11.6m, $LINK $1.1m, $AERO $1.1m, $JUP $580k paid last week). caveat from memory: morpho 25% is curator-vault dependent (alphaping ~$18m trap 6-20) (♥34 ↻1 re11) — [View](https://x.com/Flowslikeosmo/status/2069902637865320630)
+- x.com/hooeem — academic-style AI research workflow: question-first, get the model to poke holes, layer in deep-research agents + RAG. positions AI as evaluator-of-claims, not idea-source — opposite of the mainstream "write for me" framing (♥28 ↻3 re7) — [View](https://x.com/hooeem/status/2069898859795349990)
+- x.com/DefiIgnas — backpack still missing EUR / SEPA + a USDC market in EU. friction tax for portugal/EU retail despite MiCA going live July 1 — ceding the regulated lane to competitors (♥4 ↻1) — [View](https://x.com/DefiIgnas/status/2069903981007306841)
+- x.com/Flowslikeosmo — "value alts based on number of holders? good luck." subtweet of the holder-count-as-valuation meta circulating this week (♥7 re2) — [View](https://x.com/Flowslikeosmo/status/2069905015917973578)
 
 ---
-sources: list1=ok | path=xai-cache | xai_primary=ok
+sources: list1=ok(11)
 status: LIST_DIGEST_OK
