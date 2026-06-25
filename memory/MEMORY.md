@@ -37,10 +37,10 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | $0.00358962 +2.38% 6-24 (small bounce on 0.06× vol — near-zero tape, no reclaim of 6-19 $0.00370 pivot) |
-| MAMO    | mamo               | 15%           | $0.00797785 +0.65% 6-24 (holds sub-$0.008 after 6-23 -7.65% rinse, baseline vol 1.03×) |
-| REPPO   | reppo              | 15%           | $0.02335656 +2.91% 6-24 (recovers ~⅓ of 6-23 -9.75% leg on 0.53× vol; still net +36.0% from 6-19 base) |
-| GITLAWB | gitlawb            | 15%           | $0.00005658 -6.04% 6-24 (follow-through fresh local low day after 6-23 rail break; -34.3% from 6-15 top) |
+| WELL    | moonwell-artemis   | 10%           | $0.00337693 -5.95% 6-25 (gives back 6-24 bounce, fresh local low; vol 1.50× 5-day mean) |
+| MAMO    | mamo               | 15%           | $0.00778230 -2.75% 6-25 (slow drip below 6-23 rinse low, sub-$0.008 holding pattern) |
+| REPPO   | reppo              | 15%           | $0.02094174 -10.29% 6-25 (closest to 15% rail with 471bp slack; still net +21.97% from 6-19 base) |
+| GITLAWB | gitlawb            | 15%           | $0.00005408 -4.41% 6-25 (5th consecutive red day, fresh local low; -37.2% from 6-15 top) |
 
 ## Recent Patterns & Issues
 - **Token pick 6-24 AAVE HIGH 8/10 $76.09** — DeFi blue-chip relief: trending #1 CG, only large-cap DeFi green 7d vs BTC -3.0% / ETH -4.9%. Grayscale 6-20 $175 fair-value target + V4 Tokenization Spoke security audit advancing on-chain securities-finance rails. Exit: target $87 / inv $69 / 14d.

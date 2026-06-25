@@ -1,21 +1,20 @@
 ## Summary
 
-Ran `token-alert` for 2026-06-24 (~12:09 UTC).
+Executed `skills/token-alert/SKILL.md` against the canonical Tracked Tokens watchlist (WELL/MAMO/REPPO/GITLAWB).
 
-**Result: TOKEN_ALERT_OK — 0 alerts, no notification fired.**
+**Results (TOKEN_ALERT_OK — 0/12 conditions tripped):**
 
-Prices (CoinGecko keyless, single 200 OK):
-- WELL $0.00358962 (+2.38% 24h, vol $164K = **0.06× mean** $2.755M — vol collapse)
-- MAMO $0.00797785 (+0.65% 24h, vol $862K = 1.03× mean)
-- REPPO $0.02335656 (+2.91% 24h, vol $189K = 0.53× mean)
-- GITLAWB $0.00005658 (-6.04% 24h, vol $339K = 0.71× mean)
+| Token | Price | 24h % (thr) | Vol vs 3×mean | Verdict |
+|-------|-------|-------------|----------------|---------|
+| WELL  | $0.00337693 | -5.95% (10%) | 1.50× (need 3×) | clear |
+| MAMO  | $0.00778230 | -2.75% (15%) | 1.12× | clear |
+| REPPO | $0.02094174 | **-10.29%** (15%) | 0.96× | closest — 471bp slack to rail |
+| GITLAWB | $0.00005408 | -4.41% (15%) | 0.69× | clear, but 5th consecutive red day to fresh local low |
 
-All 4 tokens evaluated across 3 conditions (24h-change / volume-spike / threshold-cross). No 24h rails tripped (max move GITLAWB -6.04%, under its 15% rail). No 3× volume spikes. Threshold-cross skipped — no Floor/Ceiling configured.
-
-Notes: GITLAWB the only token still bleeding (4th red day, follow-through on yesterday's rail break), but on thinning vol (1.26× → 0.71×) — controlled, not capitulation. WELL/MAMO/REPPO green but on near-zero tape — low-conviction relief, not a base. Watchlist median +0.18% (vs yesterday's -11.34%) tracks broader market stabilization (BTC -0.47%/ETH -1.03% today).
+CoinGecko public API responded 200 in one curl call (no WebFetch fallback). Threshold-cross skipped for all tokens (no Floor/Ceiling configured per Tracked Tokens table). No notification sent per spec ("if no anomalies detected, log TOKEN_ALERT_OK and end").
 
 **Files modified:**
-- `memory/logs/2026-06-24.md` — appended full token-alert entry with prices + day-over-day deltas + per-trigger evaluation + rolling 5-vol window math
-- `memory/MEMORY.md` — refreshed "Tracked Tokens" Recent Activity column with 6-24 prints
+- `memory/logs/2026-06-25.md` — appended `### token-alert — ~12:10 UTC` run block with all 4 prices, 1d deltas, 5-window volume mean ratios, alert evaluation, and source-status line.
+- `memory/MEMORY.md` — refreshed Tracked Tokens "Recent Activity" column with 6-25 levels.
 
-**Follow-up:** Today's prices become the baseline for next run; rolling 5-window shifts to (6-17, 6-19, 6-22, 6-23, 6-24).
+**Follow-up watch:** REPPO -10.29% is the closest to a rail (15% downside, 471bp slack). GITLAWB extends its post-rail-break downtrend to a 5th red day / fresh local low (-37.2% from 6-15 top) but stayed under the 15% rail this run.
