@@ -567,11 +567,13 @@ while read -r rec; do
         thesis: ((.title // "advisor call") + " — " + (.action // "")
                  + (if .rationale then " | " + .rationale else "" end))
       }')
-  # Daily picks carry no notionalUsd (server assigns $1k); flag the pick so the
-  # downstream sizing/track-record can apply the regime BEAR long discount.
+  # Daily picks carry no notionalUsd (server assigns a fixed $1k). Annotate with
+  # regimeHalved as a forward hook for future server-side sizing — NOTE: nothing
+  # reads this field yet, so it has no effect on the $1k notional today. The real
+  # variable BEAR exposure rides on short-term trades, which ARE halved above.
   if [ "${REGIME_BAND:-UNKNOWN}" = "BEAR" ] && [ "$SIDE" = "long" ]; then
     PICK="$(printf '%s' "$PICK" | jq -c '.regimeHalved = true')"
-    echo "advisor: regime BEAR — halved long daily pick $SYM (server-assigned notional)"
+    echo "advisor: regime BEAR — flagged long daily pick $SYM (notional server-assigned; flag is a no-op today)"
   fi
   if [ "$DRY" = "1" ]; then
     echo "----- PICK $SYM ($SIDE) -----"; printf '%s\n' "$PICK" | jq .

@@ -40,7 +40,7 @@ overrides the bias toward action:
   The mandatory forward-looking opportunity may be a CONDITIONAL re-entry ("if regime
   flips BULL / BTC reclaims $X"), not a live long. A live new long needs an explicit
   override reason naming what the score misses.
-- **NEUTRAL** (35–60): new risk allowed, high-bar, half-conviction.
+- **NEUTRAL** (36–59): new risk allowed, high-bar, half-conviction.
 - **BULL** (≥60): normal sleeve.
 - **UNKNOWN**: proceed normally (no regime data).
 State the regime band + score in your summary's first sentence.
