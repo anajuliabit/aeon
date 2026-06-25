@@ -469,4 +469,13 @@ RM_OUT="$(D="$DM" bash "$RGM")"; RM_RC=$?
 check "regime missing cg-btc exit 0" "$RM_RC" "0"
 check "regime missing cg-btc band NEUTRAL (not BULL)" "$(printf '%s' "$RM_OUT" | jq -r '.band')" "NEUTRAL"
 
+# --- regime BEAR halves long short-term notionals, leaves shorts ---
+BEAR_IN='{"trades":[{"symbol":"A","side":"long","sizeUsd":1000,"sizePctNet":2.0},{"symbol":"B","side":"short","sizeUsd":800,"sizePctNet":1.6}]}'
+BEAR_OUT="$(printf '%s' "$BEAR_IN" | jq -c '
+  {trades: [ .trades[] | if (.side // "long") == "long"
+    then .sizeUsd = ((.sizeUsd // 0)/2|floor) | .sizePctNet = (((.sizePctNet // 0)*10/2|round)/10) | .regimeHalved=true
+    else . end ]}')"
+check "BEAR halves long sizeUsd"   "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[0].sizeUsd')" "500"
+check "BEAR leaves short sizeUsd"  "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[1].sizeUsd')" "800"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }

@@ -484,6 +484,16 @@ TRADES="$(printf '%s' "$TRADES" | jq -c --argjson budget "$ST_BUDGET" --argjson 
       | (if ((.conviction // "") | ascii_upcase | startswith("HIGH")) then 2 else 1 end) as $w
       | .sizeUsd = (if $wsum > 0 then (($budget * $w / $wsum) | floor) else 0 end)
       | .sizePctNet = (if $total > 0 then (((.sizeUsd / $total) * 1000) | round) / 10 else 0 end) ]}')"
+if [ "${REGIME_BAND:-UNKNOWN}" = "BEAR" ]; then
+  TRADES="$(printf '%s' "$TRADES" | jq -c '
+    {trades: [ .trades[]
+      | if (.side // "long") == "long"
+        then .sizeUsd = ((.sizeUsd // 0) / 2 | floor)
+             | .sizePctNet = (((.sizePctNet // 0) * 10 / 2 | round) / 10)
+             | .regimeHalved = true
+        else . end ]}')"
+  echo "advisor: regime BEAR — halved long short-term notionals"
+fi
 REPORT="$(jq -n --argjson rpt "$REPORT" --argjson st "$TRADES" '$rpt | .shortTermTrades = ($st.trades // [])')"
 echo "advisor: short-term trades — $(printf '%s' "$TRADES" | jq '.trades | length') selected; sized from ${ST_RISK_PCT}% (\$$(printf '%.0f' "$ST_BUDGET")) of net \$$(printf '%.0f' "$ST_TOTAL")"
 
@@ -557,6 +567,12 @@ while read -r rec; do
         thesis: ((.title // "advisor call") + " — " + (.action // "")
                  + (if .rationale then " | " + .rationale else "" end))
       }')
+  # Daily picks carry no notionalUsd (server assigns $1k); flag the pick so the
+  # downstream sizing/track-record can apply the regime BEAR long discount.
+  if [ "${REGIME_BAND:-UNKNOWN}" = "BEAR" ] && [ "$SIDE" = "long" ]; then
+    PICK="$(printf '%s' "$PICK" | jq -c '.regimeHalved = true')"
+    echo "advisor: regime BEAR — halved long daily pick $SYM (server-assigned notional)"
+  fi
   if [ "$DRY" = "1" ]; then
     echo "----- PICK $SYM ($SIDE) -----"; printf '%s\n' "$PICK" | jq .
     STAGED=$((STAGED + 1))
