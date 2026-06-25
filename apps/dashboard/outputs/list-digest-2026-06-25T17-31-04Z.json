@@ -1,0 +1,145 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-25"
+      },
+      "children": [
+        "subtitle",
+        "sep1",
+        "section_heading",
+        "tweet_1",
+        "link_1",
+        "tweet_2",
+        "link_2",
+        "tweet_3",
+        "link_3",
+        "tweet_4",
+        "link_4",
+        "sep2",
+        "status_stack"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "thin defi-list day. flowslikeosmo's yield-stables playbook is the only operator-actionable line; hooeem ships an AI-as-evaluator research workflow; rest is reply fragments.",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto / DeFi Researchers",
+        "level": "h2"
+      }
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "flowslikeosmo",
+        "text": "yield ladder for fear-index 22 + market -22% ytd: morpho 25% / ember 12% / avantis 10% (base) / harmonix 9.7% (hyperliquid) / fluid 8.2%, all USDC. plus dca menu of cashflow alts ($HYPE $11.6m, $LINK $1.1m, $AERO $1.1m, $JUP $580k paid last week). caveat from memory: morpho 25% is curator-vault dependent (alphaping ~$18m trap 6-20)",
+        "likes": 34,
+        "retweets": 1
+      }
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X (11 replies)",
+        "href": "https://x.com/Flowslikeosmo/status/2069902637865320630"
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "academic-style AI research workflow: question-first, get the model to poke holes, layer in deep-research agents + RAG. positions AI as evaluator-of-claims, not idea-source — opposite of the mainstream \"write for me\" framing",
+        "likes": 28,
+        "retweets": 3
+      }
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X (7 replies)",
+        "href": "https://x.com/hooeem/status/2069898859795349990"
+      }
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "backpack still missing EUR / SEPA + a USDC market in EU. friction tax for portugal/EU retail despite MiCA going live July 1 — ceding the regulated lane to competitors",
+        "likes": 4,
+        "retweets": 1
+      }
+    },
+    "link_3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/DefiIgnas/status/2069903981007306841"
+      }
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "flowslikeosmo",
+        "text": "\"value alts based on number of holders? good luck.\" subtweet of the holder-count-as-valuation meta circulating this week",
+        "likes": 7
+      }
+    },
+    "link_4": {
+      "type": "Link",
+      "props": {
+        "label": "View on X (2 replies)",
+        "href": "https://x.com/Flowslikeosmo/status/2069905015917973578"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_status",
+        "text_sources"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(11)",
+        "variant": "caption"
+      }
+    }
+  }
+}

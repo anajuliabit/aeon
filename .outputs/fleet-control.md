@@ -1,13 +1,11 @@
 ## Summary
 
-Executed `fleet-control` skill in Health Check mode (default — `var` empty).
+**Mode:** Health Check (default — empty var).
 
-**Pre-flight:** gh auth OK (account `anajuliabit`), rate limit 4994 remaining (above 50 threshold).
+**Result:** `FLEET_EMPTY` — `memory/instances.json` contains `{"instances": []}`, so no per-instance work to do. Per the SKILL.md spec, this is a **silent stop** (no notification, no state write).
 
-**Registry:** `memory/instances.json` = `{"instances": []}` — no managed instances.
+- Preflight gh auth: ✓ (anajuliabit/GH_TOKEN)
+- Rate limit: 4996 remaining
+- Files modified: `memory/logs/2026-06-25.md` — appended one log block
 
-**Outcome:** `FLEET_EMPTY` — per skill spec, logged to `memory/logs/2026-06-25.md` and stopped silently. No notification sent, no state file update, no registry mutation.
-
-**Files modified:** `memory/logs/2026-06-25.md` (appended health-check entry).
-
-**Follow-up:** None. The skill stays silent on empty-registry runs by design; when the operator registers managed Aeon instances in `memory/instances.json`, subsequent crons (09:00 / 15:00 UTC) will begin classifying and reporting them.
+No notify fired (correct — operator isn't trained to receive a "fleet has zero instances" ping every 6 hours).

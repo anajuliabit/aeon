@@ -1,0 +1,240 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest"
+      },
+      "children": [
+        "date",
+        "verdict",
+        "separator-header",
+        "patch-today-section",
+        "separator-mid",
+        "patch-this-week-section"
+      ]
+    },
+    "date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-25",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "verdict": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 48 net-new npm malware drops, 1 to schedule. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": []
+    },
+    "separator-header": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "patch-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-today-heading",
+        "malware-stat",
+        "malware-details",
+        "clusters-heading",
+        "cluster-hubspot",
+        "cluster-leo",
+        "cluster-spoofs",
+        "npm-feed-link",
+        "audit-alert"
+      ]
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "malware-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Net-new npm malware advisories (last 48h)",
+        "value": "48",
+        "delta": "~24/day sustained"
+      },
+      "children": []
+    },
+    "malware-details": {
+      "type": "Text",
+      "props": {
+        "text": "5 KEV adds this week: Ubiquiti UniFi trio, Lantronix EDS5000, Splunk (all deduped to prior logs, no net-new KEV today)"
+      },
+      "children": []
+    },
+    "clusters-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable clusters:",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "cluster-hubspot": {
+      "type": "Text",
+      "props": {
+        "text": "9× HubSpot-dev typosquats: @su-doughnym/loginui, metrics-js, react-dlb, hubspot-loginui-poc, nabisco, signup-embedder, poc-publish-test-su-doughnym, hs-locale-management, two-factor-prompt-lib"
+      },
+      "children": []
+    },
+    "cluster-leo": {
+      "type": "Text",
+      "props": {
+        "text": "3× leo-* (LeoSDK target): leo-sdk, leo-cron, leo-logger"
+      },
+      "children": []
+    },
+    "cluster-spoofs": {
+      "type": "Text",
+      "props": {
+        "text": "Popular-name spoofs: multer-express, vercel-api-client, markdownlint-cli2-fix, postcss-minify-selector, postcss-minify-selector-parser, vscode-test-web"
+      },
+      "children": []
+    },
+    "npm-feed-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "npm malware feed",
+        "href": "https://github.com/advisories?query=type%3Amalware+ecosystem%3Anpm",
+        "source": "GitHub Advisories"
+      },
+      "children": []
+    },
+    "audit-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Action: Audit lockfiles",
+        "message": "Audit any npm install / lockfile drift since 2026-06-23. On match: uninstall + rotate credentials touched by the install path.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "separator-mid": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "patch-this-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-this-week-heading",
+        "advisory-story",
+        "advisory-meta",
+        "advisory-description",
+        "advisory-impact",
+        "advisory-action"
+      ]
+    },
+    "patch-this-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "advisory-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-7fq5-7wr8-rjwj",
+        "href": "https://github.com/advisories/GHSA-7fq5-7wr8-rjwj",
+        "source": "GitHub Security Advisory"
+      },
+      "children": []
+    },
+    "advisory-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-product",
+        "badge-cvss",
+        "badge-epss",
+        "badge-poc"
+      ]
+    },
+    "badge-product": {
+      "type": "Badge",
+      "props": {
+        "text": "OliveTin (Go)",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "badge-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.004",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-poc": {
+      "type": "Badge",
+      "props": {
+        "text": "No public PoC",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "advisory-description": {
+      "type": "Text",
+      "props": {
+        "text": "Shared text/template.Template instance in service/internal/tpl/templates.go — concurrent tpl.Parse overwrites the tree while another goroutine runs Execute, mixing one user's args into another's template."
+      },
+      "children": []
+    },
+    "advisory-impact": {
+      "type": "Alert",
+      "props": {
+        "title": "Impact",
+        "message": "Cross-user command contamination on any multi-user instance.",
+        "type": "error"
+      },
+      "children": []
+    },
+    "advisory-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Mitigation",
+        "message": "Upgrade OliveTin to ≥3000.13.0 this week.",
+        "type": "warning"
+      },
+      "children": []
+    }
+  }
+}

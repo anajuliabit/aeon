@@ -1,15 +1,12 @@
+Heartbeat complete. No notification sent (every signal is a dedup of items in the last 48h of logs). Status page regenerated with 41 enabled-skill rows refreshed for the midday batch.
+
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
+
 ## Summary
-
-**Heartbeat 2026-06-25 08:43 UTC — HEARTBEAT_OK · STATUS_PAGE=DEGRADED**
-
-All priority checks clean:
-- **P0:** No fresh failures, no stuck dispatches, no cf≥3. 22-skill chronic-tail unchanged (all sandbox-truncation `output_tokens=0` signature). Self-check healthy (12.4h since last heartbeat success).
-- **P1:** 0 open PRs (PR #138 merged 6-24 21:37Z), 0 urgent issues.
-- **P2:** All carried (sandbox-truncation, XAI quota day 9, defi-monitor NO_CONFIG day 18, FRESHNESS_WARN, BTC re-arm).
-- **P3:** All 44 enabled skills accounted for; 3 never-run as expected.
-
-**Dedup:** every finding is same-signature continuation from last 48h logs → no notification fired.
-
-**Files modified:**
-- `docs/status.md` — regenerated (overall 🔴 DEGRADED · 14 open issues · next: github-trending 09:00Z · token-pulse omitted, no token-report article)
-- `memory/logs/2026-06-25.md` — appended heartbeat entry
+- **P0:** Zero failed/stuck/cf≥3 skills. 22 chronic-tail skills sr<0.5 (sandbox-truncation cluster ISS-019/020/021/024/025) unchanged from 08:43Z run → overall 🔴 DEGRADED.
+- **P0 self-check:** heartbeat last_success 6.1h ago, healthy.
+- **P1:** 0 open PRs, 0 urgent issues.
+- **P2/P3:** Same MEMORY.md flags carried; 3 never-run skills (autoresearch on-demand, fork-skill-gap Sun, operator-scorecard Mon) — none overdue.
+- **Modified:** `docs/status.md` (timestamps refreshed for midday batch; 14 open issues unchanged) · `memory/logs/2026-06-25.md` (heartbeat 14:53Z entry appended).
+- **Notification:** none (full dedup).
+- **Next scheduled:** fleet-control at 15:00 UTC.

@@ -1,26 +1,12 @@
-*Security Digest — 2026-06-24*
-Verdict: 2 actively exploited (1 with Mirai botnet ITW). 5 to schedule. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-06-25*
+Verdict: 48 net-new npm malware drops, 1 to schedule. _Sources: KEV, GH Advisory, EPSS_
 
 *PATCH TODAY*
-- [CVE-2026-34910](https://nvd.nist.gov/vuln/detail/CVE-2026-34910) — Ubiquiti UniFi OS · KEV added 2026-06-23 · EPSS 0.818 (p96) · CVSS not yet assigned
-  command injection across 30+ UDM/UNAS/Cloud Gateway models. Mirai botnet ITW per pwndefend 6-09; sister KEVs CVE-2026-34909 (path traversal) + CVE-2026-34908 (access control) ship in same firmware.
-  → upgrade UniFi OS today: UDM family ≥5.1.12, UDM-Beast ≥5.1.11, UNAS ≥5.1.10, UniFi OS Server ≥5.0.8. CISA BOD 26-04 due 6-26.
-- [CVE-2025-67038](https://nvd.nist.gov/vuln/detail/CVE-2025-67038) — Lantronix EDS5000 · KEV added 2026-06-23 · EPSS 0.011 · CVSS pending
-  root command injection via username field on the HTTP RPC module; affects EDS5008/5016/5032 on 2.1.0.0R3.
-  → upgrade EDS5000 firmware to ≥2.2.0.0R1 (current shipping release per Lantronix). CISA due 6-26.
-- 40 net-new npm `type=malware` advisories in last 48h (notable: vercel-api-client, vitest-cli, chalk-ultra, multer-express, eth_accounts, evmdotjs, web3-token-helper, cursorai-agent, aillmgen) — wallet-key/credential typosquats targeting AI + crypto devs.
-  → grep npm/yarn locks across repos; unpublish if landed; rotate npm tokens + any wallet keys touched by an affected dev box.
+- 48 net-new npm malware advisories in last 48h (sustained ~24/day) — 5 KEV adds this week (Ubiquiti UniFi trio + Lantronix EDS5000 + Splunk) all deduped to prior logs, no net-new KEV today.
+  notable clusters: 9× HubSpot-dev typosquats (`@su-doughnym/loginui|metrics-js|react-dlb|hubspot-loginui-poc` + `nabisco` + `signup-embedder` + `poc-publish-test-su-doughnym` + `hs-locale-management` + `two-factor-prompt-lib`); 3× `leo-*` (LeoSDK target: `leo-sdk`/`leo-cron`/`leo-logger`); popular-name spoofs `multer-express`, `vercel-api-client`, `markdownlint-cli2-fix`, `postcss-minify-selector(-parser)`, `vscode-test-web`.
+  → audit any `npm install` / lockfile drift since 2026-06-23 against the [npm malware feed](https://github.com/advisories?query=type%3Amalware+ecosystem%3Anpm); on match: uninstall + rotate credentials touched by the install path.
 
 *PATCH THIS WEEK*
-- [CVE-2026-54350](https://github.com/advisories/GHSA-8qv3-p479-cj62) — @budibase/server (npm) · CVSS 10 · EPSS n/a · no public PoC
-  anonymous NoSQL operator injection via published-app query templates. → upgrade @budibase/server to ≥3.39.12.
-- [GHSA-c39w-43gm-34h5](https://github.com/advisories/GHSA-c39w-43gm-34h5) — gogs.io/gogs (go) · CVSS 10 · plus CVE-2026-52806 (rebase --exec injection, 9.9) + 52811 (symlink RCE) + 6 highs same coordinated batch · published 6-23
-  path traversal in organization name → RCE through git hooks. → upgrade gogs to ≥0.14.3.
-- [GHSA-qxvg-h7q2-hcxh](https://github.com/advisories/GHSA-qxvg-h7q2-hcxh) — motioneye (pip) · CVSS 9.8 · plus GHSA-phv5 (auth bypass) + CVE-2026-55488 (path traversal) same release
-  LFI → pass-the-hash admin → unsafe restore → unauth action exec (chained RCE). → upgrade motioneye to ≥0.44.0.
-- [CVE-2026-55441](https://github.com/advisories/GHSA-77g9-363w-rccq) — mise (rust) · CVSS 8.6 · EPSS n/a · no public PoC
-  arbitrary cmd exec via `task-include` files in untrusted config-less repos. → upgrade mise to ≥2026.6.4.
-- [CVE-2026-48126](https://github.com/advisories/GHSA-jc3j-x6pg-4hmv) — algernon (go) · CVSS 8.2 · EPSS 0.003
-  host header path traversal in --domain mode reads files + runs Lua from parent dir. → upgrade algernon to ≥1.17.8.
-
-_no MONITOR tier this cycle — all tracked-stack critical/high have first_patched_version set._
+- [GHSA-7fq5-7wr8-rjwj](https://github.com/advisories/GHSA-7fq5-7wr8-rjwj) — OliveTin (Go) · CVSS 7.5 · EPSS 0.004 · no public PoC
+  shared `text/template.Template` instance in `service/internal/tpl/templates.go` — concurrent `tpl.Parse` overwrites the tree while another goroutine runs `Execute`, mixing one user's args into another's template. cross-user command contamination on any multi-user instance.
+  → upgrade OliveTin to ≥3000.13.0 this week.
