@@ -1,0 +1,515 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi — 2026-06-25"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_subtitle",
+        "sep1",
+        "heading_tvl",
+        "stat_tvl",
+        "text_tvl_detail",
+        "sep2",
+        "heading_chains",
+        "table_chains",
+        "sep3",
+        "heading_movers",
+        "stack_movers",
+        "sep4",
+        "heading_fees",
+        "table_fees",
+        "sep5",
+        "heading_fees_tvl",
+        "stack_fees_tvl",
+        "sep6",
+        "heading_dex",
+        "stat_dex_vol",
+        "text_dex_detail",
+        "sep7",
+        "heading_stables",
+        "stat_stables",
+        "stack_stables",
+        "sep8",
+        "heading_yield",
+        "stack_yield",
+        "sep9",
+        "heading_incentive",
+        "stack_incentive",
+        "sep10",
+        "text_sources"
+      ]
+    },
+    "text_subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "Mixed: DEX vol +24% rebound, TVL drifts −0.7%, stables flat",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tvl": {
+      "type": "Heading",
+      "props": {
+        "text": "TVL",
+        "level": "h3"
+      }
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "Chain-sum",
+        "value": "$71.38B",
+        "delta": "−0.67%",
+        "trend": "down"
+      }
+    },
+    "text_tvl_detail": {
+      "type": "Text",
+      "props": {
+        "text": "vs 6-24 $71.86B | change_1d null day 8",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_chains": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Chains",
+        "level": "h3"
+      }
+    },
+    "table_chains": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Chain",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "Ethereum",
+            "$37.9B"
+          ],
+          [
+            "BSC",
+            "$5.02B"
+          ],
+          [
+            "Solana",
+            "$4.74B"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_movers": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers — Protocols",
+        "level": "h3"
+      }
+    },
+    "stack_movers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_mover1",
+        "text_mover2",
+        "text_mover3",
+        "text_mover4"
+      ]
+    },
+    "text_mover1": {
+      "type": "Text",
+      "props": {
+        "text": "↑ NAVI Lending +53% ($80M → $123M) on Sui — Lending category, no obvious catalyst"
+      }
+    },
+    "text_mover2": {
+      "type": "Text",
+      "props": {
+        "text": "↔ Mellow Core −23% ($237M → $183M) — full unwind of 6-23 +34% pop; 7d still +36% but the move is gone"
+      }
+    },
+    "text_mover3": {
+      "type": "Text",
+      "props": {
+        "text": "↓ Curve DEX −11% ($1.41B → $1.25B) — broad-DEX TVL down despite +24% volume rebound"
+      }
+    },
+    "text_mover4": {
+      "type": "Text",
+      "props": {
+        "text": "↓ Invesco USTB −12% ($846M → $748M) — RWA outflow on top of −7.9% 7d"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_fees": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees Leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "table_fees": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Protocol",
+          "Fees (24h)",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "Tether",
+            "$16.1M",
+            "flat vs 7d"
+          ],
+          [
+            "2",
+            "Circle USDC",
+            "$6.5M",
+            "flat"
+          ],
+          [
+            "3",
+            "Hyperliquid Perps",
+            "$2.4M",
+            "−4.6% 1d, −19.8% 7d — 2-week sustained spike rolled over"
+          ]
+        ]
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_fees_tvl": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees Beating TVL",
+        "level": "h3"
+      }
+    },
+    "stack_fees_tvl": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_morpho",
+        "text_morpho",
+        "stat_aave",
+        "text_aave",
+        "stat_ondo",
+        "text_ondo"
+      ]
+    },
+    "stat_morpho": {
+      "type": "Stat",
+      "props": {
+        "label": "Morpho Blue",
+        "value": "$6.67B TVL",
+        "delta": "Fees +89% / TVL −5% 7d"
+      }
+    },
+    "text_morpho": {
+      "type": "Text",
+      "props": {
+        "text": "Real lending demand spiking",
+        "variant": "caption"
+      }
+    },
+    "stat_aave": {
+      "type": "Stat",
+      "props": {
+        "label": "Aave V3",
+        "value": "$12B TVL",
+        "delta": "Fees +21% / TVL −3% 7d"
+      }
+    },
+    "text_aave": {
+      "type": "Text",
+      "props": {
+        "text": "Back in the lead (was −0.1% 7d on 6-24, reversal)",
+        "variant": "caption"
+      }
+    },
+    "stat_ondo": {
+      "type": "Stat",
+      "props": {
+        "label": "Ondo Yield Assets",
+        "value": "$2.57B TVL",
+        "delta": "Fees +63% / TVL −2% 7d"
+      }
+    },
+    "text_ondo": {
+      "type": "Text",
+      "props": {
+        "text": "RWA fees flow without deposits",
+        "variant": "caption"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_dex": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX Vol (24h)",
+        "level": "h3"
+      }
+    },
+    "stat_dex_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Volume",
+        "value": "$7.74B",
+        "delta": "+23.9%",
+        "trend": "up"
+      }
+    },
+    "text_dex_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Top: Uniswap V4 $847M (+3%), Uniswap V3 $727M (+77%), PancakeSwap V3 $647M (+42%) — broad bounce, opposite of 6-24's dispersion"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_stables": {
+      "type": "Heading",
+      "props": {
+        "text": "Stables",
+        "level": "h3"
+      }
+    },
+    "stat_stables": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "$312.93B",
+        "delta": "−0.09%",
+        "trend": "down"
+      }
+    },
+    "stack_stables": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stable1",
+        "text_stable2",
+        "text_stable3"
+      ]
+    },
+    "text_stable1": {
+      "type": "Text",
+      "props": {
+        "text": "• BUIDL +1.6% (~$49M BlackRock mint on $3.06B) — institutional flow"
+      }
+    },
+    "text_stable2": {
+      "type": "Text",
+      "props": {
+        "text": "• crvUSD −10.25% (~$22M redemption on $210M) — 3rd day continuous burn-down (6-23 −5.3%, 6-24 −5.2%, 6-25 −10.25%)"
+      }
+    },
+    "text_stable3": {
+      "type": "Text",
+      "props": {
+        "text": "• USD1/WLFI −1.49% (~$72M redemption on $4.80B) — carry from 6-24 −2.06%"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_yield": {
+      "type": "Heading",
+      "props": {
+        "text": "Real Yield (sustainable, ≥$10M)",
+        "level": "h3"
+      }
+    },
+    "stack_yield": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_yield1",
+        "text_yield1",
+        "stat_yield2",
+        "text_yield2",
+        "stat_yield3",
+        "text_yield3"
+      ]
+    },
+    "stat_yield1": {
+      "type": "Stat",
+      "props": {
+        "label": "WETH-USDT uniV3 ETH",
+        "value": "65.6% apyBase",
+        "delta": "+44pp vs 6-24 21.4%"
+      }
+    },
+    "text_yield1": {
+      "type": "Text",
+      "props": {
+        "text": "$76M | 30d mean 40.4%",
+        "variant": "caption"
+      }
+    },
+    "stat_yield2": {
+      "type": "Stat",
+      "props": {
+        "label": "USDC-cbBTC uniV4 ETH",
+        "value": "40.6% apyBase"
+      }
+    },
+    "text_yield2": {
+      "type": "Text",
+      "props": {
+        "text": "$11M | 30d mean 29.2%",
+        "variant": "caption"
+      }
+    },
+    "stat_yield3": {
+      "type": "Stat",
+      "props": {
+        "label": "APYUSD-APXUSD curve ETH",
+        "value": "34.4% apyBase"
+      }
+    },
+    "text_yield3": {
+      "type": "Text",
+      "props": {
+        "text": "$13M | apxUSD pool, depeg pressure (apxUSD −4% on $317M today)",
+        "variant": "caption"
+      }
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_incentive": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive Yield (points / emissions, ≥$25M)",
+        "level": "h3"
+      }
+    },
+    "stack_incentive": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_incentive1",
+        "text_incentive1",
+        "stat_incentive2",
+        "text_incentive2"
+      ]
+    },
+    "stat_incentive1": {
+      "type": "Stat",
+      "props": {
+        "label": "USDC-AERO Aerodrome v1 Base",
+        "value": "42.2% apy via AERO",
+        "delta": "Sharp jump from 25.2% 6-24"
+      }
+    },
+    "text_incentive1": {
+      "type": "Text",
+      "props": {
+        "text": "$26M | Magnitude doubled in 24h",
+        "variant": "caption"
+      }
+    },
+    "stat_incentive2": {
+      "type": "Stat",
+      "props": {
+        "label": "CVXCRV Convex ETH",
+        "value": "29.6% apy via CRV+CVX+FXS"
+      }
+    },
+    "text_incentive2": {
+      "type": "Text",
+      "props": {
+        "text": "$28M | carry from 6-24 28.8%, gradual persistent climb 4d",
+        "variant": "caption"
+      }
+    },
+    "sep10": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: llama_tvl=partial(chain_delta_null_day_8) llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none_",
+        "variant": "muted"
+      }
+    }
+  }
+}
