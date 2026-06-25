@@ -1,0 +1,229 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context Refresh",
+        "description": "2026-06-25"
+      },
+      "children": [
+        "take_alert",
+        "sep1",
+        "prices_section",
+        "sep2",
+        "metrics_section",
+        "sep3",
+        "narrative_section",
+        "sep4",
+        "catalysts_section",
+        "sep5",
+        "hot_market_section"
+      ]
+    },
+    "take_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Take",
+        "message": "Risk-off (Conviction: High)",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prices_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "btc_stat",
+        "eth_stat",
+        "fg_stat"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Bitcoin",
+        "value": "$61,147",
+        "delta": "−2.0%",
+        "trend": "down"
+      }
+    },
+    "eth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Ethereum",
+        "value": "$1,634",
+        "delta": "−1.82%",
+        "trend": "down"
+      }
+    },
+    "fg_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "12 (Extreme Fear)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "breadth_stat",
+        "tvl_stat"
+      ]
+    },
+    "breadth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "4/20"
+      }
+    },
+    "tvl_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "~$71B",
+        "delta": "−0.7%",
+        "trend": "down"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narrative_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "narrative_label",
+        "narrative_content"
+      ]
+    },
+    "narrative_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h4"
+      }
+    },
+    "narrative_content": {
+      "type": "Badge",
+      "props": {
+        "text": "RWA/tokenized assets (rising)",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "catalysts_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "catalysts_label",
+        "catalysts_items"
+      ]
+    },
+    "catalysts_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalysts",
+        "level": "h4"
+      }
+    },
+    "catalysts_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "catalyst1",
+        "catalyst2",
+        "catalyst3"
+      ]
+    },
+    "catalyst1": {
+      "type": "Badge",
+      "props": {
+        "text": "Seoul AI stocks −10% cascade",
+        "variant": "secondary"
+      }
+    },
+    "catalyst2": {
+      "type": "Badge",
+      "props": {
+        "text": "PCE Thursday",
+        "variant": "secondary"
+      }
+    },
+    "catalyst3": {
+      "type": "Badge",
+      "props": {
+        "text": "Expiry June 30",
+        "variant": "secondary"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hot_market_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hot_market_label",
+        "hot_market_content"
+      ]
+    },
+    "hot_market_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h4"
+      }
+    },
+    "hot_market_content": {
+      "type": "Text",
+      "props": {
+        "text": "Sports-only day 5 (no crypto-macro)",
+        "variant": "body"
+      }
+    }
+  }
+}

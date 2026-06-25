@@ -1,7 +1,8 @@
-market context — 2026-06-24
+market context — 2026-06-25
 
-take: chop (conviction medium)
-BTC $62,442 (+0.48%) / ETH $1,667 (+0.93%) · F&G 17 (Extreme Fear — lagging 6-23 crash)
-breadth 10/20 · TVL $71.9B (~flat)
-top narrative: RWA/tokenized assets (rising) — RAIN sole top-20 green 7d +14.25%, 2nd day
-hot market: FIFA sports-only day 4 (no crypto-macro on Polymarket)
+take: risk-off (conviction high)
+BTC $61,147 (−2.0%) / ETH $1,634 (−1.82%) · F&G 12 (Extreme Fear)
+breadth 4/20 · TVL ~$71B (−0.7% 1d)
+top narrative: RWA/tokenized assets (rising)
+catalyst: Seoul AI stocks −10% cascade · PCE Thursday · expiry June 30
+hot market: sports-only day 5 (no crypto-macro)

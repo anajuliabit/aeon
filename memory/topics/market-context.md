@@ -1,72 +1,76 @@
-# Market Context (as of 2026-06-24)
+# Market Context (as of 2026-06-25)
 
-> **Take:** chop — BTC +0.48% dead-cat bounce to $62,442 after yesterday's -4.66% crash; breadth neutral 10/20 green; F&G 23→17 is the index catching up to the 6-23 move, not a fresh deterioration. Conviction: medium.
+> **Take:** risk-off — BTC −2.0% 24h to $61,147 with breadth collapsing to 4/20 green (back to 6-23 crash-day levels) and F&G 12 (Extreme Fear, deepening). Conviction: high.
 
 ## Signal Snapshot
-- BTC $62,442 (+0.48% 24h, -3.60% 7d) · dominance 56.24% (+0.13pp 24h)
-- ETH $1,667 (+0.93% 24h, -5.16% 7d) · ETH/BTC 0.02669
-- SOL $69.32 (+0.71% 24h, -3.89% 7d)
-- Total mcap $2.24T (+0.68% 24h) · DEX vol $6.24B 24h (+3.25% 1d, −5.6% 7d)
-- Breadth: 10/20 green 24h · 2/20 green 7d
-- Fear & Greed: 17 (Extreme Fear) — yesterday 23 (index lagging ~12-24h; reflects 6-23 crash, not fresh selling today)
+- BTC $61,147 (−2.0% 24h, −4.3% 7d) · dominance 56.05% (−0.19pp 24h)
+- ETH $1,634 (−1.82% 24h, −6.2% 7d) · ETH/BTC 0.02673
+- SOL $68.16 (−1.80% 24h, −3.7% 7d)
+- Total mcap $2.19T (−1.70% 24h) · DEX vol $7.74B 24h
+- Breadth: 4/20 green 24h · 5/20 green 7d
+- Fear & Greed: 12 (Extreme Fear) — yesterday 17
 
 ## What Changed Since Last Refresh
-- **Regime flip: risk-off → chop.** BTC bounced $62,055→$62,442 (+$387, +0.62%) and breadth recovered 3/20→10/20 — oversold relief, not risk-on (10/20 is neutral territory, not >14; WELL vol 0.06× mean per token-alert confirms thin tape).
-- **F&G plunged 23→17** — the index is lagging and catching up to yesterday's crash, not a fresh wave of fear today. Both readings are Extreme Fear; directional signal is noise here, not signal.
-- **BTC ETF structural outflows: $1.67B weekly (3rd consecutive week), $4.21B total over 3 weeks** — 10yr Treasury yield sticky ~4.45%, SpaceX IPO crowding out institutional ETF buyers; institutional derisking is the macro anchor.
-- **EF 20% staff cuts + Eth Labs governance changes** (AIXBT pulse 6-24 09:00Z) — negative ETH ecosystem signal on already weak 7d (-5.16% ETH vs -3.60% BTC).
+- **BTC continued lower: $62,442 → $61,147 (−$1,295, −2.1%)** — no bounce follow-through from yesterday's +0.48% dead-cat; risk-off continuation, not stabilization.
+- **Breadth collapsed: 10/20 → 4/20 green** — back to 6-23 crash-day lows; only USDC, HYPE, USDS, Canton positive 24h. Structural deterioration resumed.
+- **F&G: 17 → 12** — fresh deterioration (not index lag this time); Extreme Fear deepening 5 points.
+- **Seoul AI stocks −10% cascade** — semiconductor selloff spreading through global equities into crypto; new macro headwind layered on existing institutional derisking.
+- **Total mcap: $2.24T → $2.19T (−$50B, −2.2%)** — broad capital destruction continues.
 
 ## Active Narratives
-- **RWA / tokenized real-world assets** — phase: rising. Evidence: RAIN +14.25% 7d (sole top-20 token sustaining green across 2 consecutive sell-off days); xStocks TVL +19.6% today ($493M→$588M) per defi-overview; CARDS (Trading Card RWA) +15.28% 24h (CG trending #7).
-- **DeFi blue-chip relief** — phase: emerging. Evidence: AAVE +5.69% 24h (CG trending #4), today's token pick at $76.09 (HIGH 8/10); Grayscale $175 fair-value target + V4 Tokenization Spoke audit advancing; JUP (Solana DEX aggregator) +9.81% trending #8.
-- **AI / decentralized compute** — phase: rising. Evidence: TAO (Bittensor) trending #9 at $220.46; NES (Nesa, AI+privacy inference) trending #0; ARX (Arcium, confidential compute) trending #2; A2A protocol donated to Linux Foundation per 6-24 tweet-roundup. 9/12 narrative-tracker threads AI-side per 6-23 run.
-- **CLARITY Act / US crypto regulatory clarity** — phase: rising. Evidence: 6 weeks to Senate floor vote pre-Aug recess; IBIT (BlackRock BTC ETF) holding $67B AUM despite 3-week outflow pressure — institutional floor intact.
-- **EigenCloud / AI-infra restaking** — phase: fading. Evidence: EIGEN -6.7% 24h (3rd consecutive day of reversal from 6-22 HIGH 9/10 pick at $0.305); now below $0.26 invalidation per 6-24 token-movers; SSV Network TVL -32.5% 1d ($12.2B→$8.2B), cumulative -$4.6B over 48h.
+- **RWA / tokenized assets** — phase: rising. Evidence: RAIN in trending at +8.70% 7d (2nd consecutive day, sole large-cap token with sustained positive 7d momentum); CARDS (Trading Card RWA) +5.81% 24h trending; sector surviving the −2% tape.
+- **Privacy coins / ZK** — phase: emerging. Evidence: ZANO +7.36% 24h trending; ZEC −0.80% 24h (outperforming BTC −2.0%); Extreme Fear environment historically correlates with flight-to-anonymity rotation.
+- **Perp / L1 infra (HYPE)** — phase: peak. Evidence: HYPE +2.26% 24h (sole top-20 non-stable green in a 4/20 breadth tape); but −10.7% 7d signals momentum exhaustion — holding above $62 invalidation by $1.
+- **AI / DePIN** — phase: fading. Evidence: ARX (Arcium, AI inference) −11.16% 24h trending; Seoul AI stocks −10% cascade is direct sector macro headwind; no AI/compute name positive in trending or top-20 movers today.
+- **Cross-chain bridge / interop** — phase: emerging. Evidence: SYN (Synapse) +44.86% 24h trending with no named catalyst — possible narrative rotation from AI sector or technical squeeze; early signal only, unconfirmed.
 
 ## Top DeFi Protocols (TVL, 7d change)
-- Lido: $15.00B (-5.88%)
-- Aave V3: ~$12.1B (carry prior; likely stable — AAVE trending today, DeFiLlama chain-delta API regression day 7)
-- SSV Network: $8.2B (−32.5% 1d, 2nd-day continuation; cumulative ~−$4.6B over 48h — pattern reads as TVL re-measurement, no named exploit)
+- Lido: $14.90B (−5.21%)
+- Aave V3: ~$12.1B (carry prior; DeFiLlama protocols endpoint CEX-heavy today)
+- SSV Network: ~$8.2B (carry prior; anomalous −32.5% 1d 2-day pattern from 6-23/24 — likely TVL re-measurement)
 - LayerZero V2: ~$7.5B (carry prior)
 - WBTC: ~$7.1B (carry prior)
 
-## Chain Flow (top 5 by TVL, 6-24)
-- Ethereum: $38.07B (−0.2% vs 6-23 $38.15B; 7d n/a — chain delta API regression day 7)
-- BSC: $5.05B (stable)
-- Solana: $4.75B (+0.2% vs 6-23 $4.74B)
-- Base: $4.18B (entered top 5 — capital continuing to migrate to Base ecosystem)
-- Bitcoin: $4.12B (entered top 5)
+## Chain Flow (top 5 by TVL, 6-25)
+- Ethereum: $37.70B (−0.97% vs 6-24 $38.07B; 7d delta unavailable — DeFiLlama regression day 8)
+- BSC: $5.01B (−0.79% 1d)
+- Solana: $4.73B (−0.42% 1d)
+- Base: $4.13B (−1.19% 1d)
+- Bitcoin: $4.03B (−2.18% 1d)
 
 ## Stablecoins
-Total: $313.5B (−0.1% vs 6-23 $313.8B). USDT $186.1B · USDC $74.1B · USDS $8.2B · USD1/WLFI $4.75B · USDe $4.48B. USDGO +12.4% (+$83M mint) only material issuer expansion; USD1 −2.06% (−$100M redemption). DAI dropped out of top 5 (replaced by USD1 — structural stablecoin composition shift toward Trump-affiliated issuer).
+Total: ~$313B est. (7d delta unavailable). USDT $186.07B (flat) · USDC $73.80B (−0.4%) · USDS $8.20B (flat) · DAI $4.86B (re-entered top 5 above USD1) · USD1/WLFI $4.73B (−0.4%). Notable: DAI returned above USD1 today — reversal of yesterday's "structural shift" narrative; monitor for durability.
 
-## Trending (CoinGecko, 2026-06-24)
-- **AAVE** — $76.09 +5.69% · DeFi lending blue-chip; today's token pick HIGH 8/10; Grayscale $175 FV target
-- **RAIN** — $0.01606 +1.68% · RWA/prediction markets (Arbitrum); only top-20 token green on both 24h and 7d (+14.25%) for 2nd consecutive day
-- **JUP** — $0.219 +9.81% · Solana DEX aggregator; Solana ecosystem relief bounce
-- **SLX (Solstice)** — $0.289 +45% · unknown small cap ($70M mcap); pump pattern; high-risk, no confirmed catalyst
-- **BEAT (Audiera)** — $1.94 +9.01% · music/audio token (was +58.4% at open — cooling from blow-off)
-- **TAO (Bittensor)** — $220.46 +0.37% · AI/ML compute; prior pick 6-13 $248.76 (−11.4% from entry); structural AI bid holding
-- **SYN (Synapse)** — $0.295 +14.47% · cross-chain bridge; bridge governance rotation
+## Trending (CoinGecko)
+- **SYN (Synapse)** — $0.42 +44.86% · cross-chain bridge; no named catalyst; possible narrative rotation from AI or squeeze
+- **SLX (Solstice)** — $0.37 +28.61% · 2nd consecutive day of elevated move (was +45% 6-24); sustained but still speculative small-cap pump
+- **ZANO** — $10.21 +7.36% · privacy coin; relative outperformer in Extreme Fear environment
+- **JUP (Jupiter)** — $0.23 +3.56% · Solana DEX aggregator; holding positive in broad red tape
+- **CARDS** — $0.31 +5.81% · Trading Card RWA; consistent with RWA narrative sustained
+- **HYPE (Hyperliquid)** — $62.96 +1.60% · perp L1; sole top-20 large-cap non-stable green
+- **RAIN** — $0.016 −1.42% (but +8.70% 7d) · RWA/prediction markets; 2-day trending streak, best 7d in top-20
+- **ARX (Arcium)** — $0.24 −11.16% · AI inference/compute; fading, direct AI stock headwind
+- **M (MemeCore)** — $0.82 −71.14% · full capitulation at meme tier; Extreme Fear signal
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |
 |--------|------|---------|-----------|
-| Will USA win the 2026 FIFA World Cup? | 3.5% | $2.84M | $4.79M |
-| Will Portugal win the 2026 FIFA World Cup? | 7.5% | $2.67M | $4.90M |
-| Will France win the 2026 FIFA World Cup? | 19.5% | $2.54M | $7.39M |
+| Will South Korea win 2026 FIFA World Cup? | 0.15% | $9.5M | $9.1M |
+| Will Bosnia-Herzegovina win 2026 FIFA World Cup? | 0.15% | $8.5M | $15.2M |
+| Will Germany win on 2026-06-25? | 63.05% | $6.6M | $1.2M |
 
-*Day 4 consecutive sports-only — no crypto-macro markets clearing $50k 24h vol gate.*
+*Day 5 consecutive sports-only — no crypto-macro markets clearing $50k 24h vol gate.*
 
 ## Macro Catalysts (next 48h)
-- **BTC ETF outflows (ongoing)** — $4.21B over 3 consecutive weeks; 10yr yield sticky ~4.45%; SpaceX IPO expected to divert institutional allocations. No catalytic reversal until yield outlook shifts or IPO absorption completes.
-- **CLARITY Act** — Senate floor vote ~6 weeks out (pre-Aug recess). Pre-positioning window for RWA/DeFi names building now.
-- **Ethereum ecosystem uncertainty** — EF 20% staff cuts + Eth Labs governance changes (AIXBT 6-24); watch ETH/BTC ratio (0.02669) for further deterioration signal.
-- **Micron (MU) −13%** — AI demand thesis meeting supply-chain reality; potential drag on AI-adjacent tokens (TAO, AKT, IO) if AI-infra sector re-rates further.
+- **Seoul AI stocks −10% cascade** — semiconductor selloff from Seoul spreading through global equities into crypto; TAO/ARX/AI-adjacent tokens direct exposure. Watch whether semis stabilize June 26 to gauge spillover depth.
+- **PCE inflation print (Thursday June 26)** — Fed's preferred inflation measure; Fed held 3.50%–3.75% at June 18 meeting and removed easing language. Hot print = dollar/yield headwind for crypto; soft print = potential relief rally catalyst.
+- **Quarter-end options expiry (June 30)** — amplifier for moves in either direction; large open interest rolls expected. BTC at $61k with $59k as key support level.
+- **BTC ETF outflows: $5.96B over 30 days** — structural institutional derisking continues; June 23 showed first small inflow (+$39.2M via ARKB/MSBT) but too early to call a reversal.
+- **XPL unlock today (June 25)** — 88.89M XPL (~$7.5M ecosystem/growth tranche); 6-14 pick at $0.0888 at risk from unlock supply pressure.
 
 ## Implications for Downstream Skills
-- **token-pick:** AAVE already picked today (8/10 HIGH $76.09 target $87 / inv $69 / 14d). RWA (RAIN) next candidate if 7d momentum extends. Hard stop on new longs until BTC reclaims $64k — 7d breadth at 2/20 is still structurally bearish. EIGEN at invalidation: treat as stopped out.
-- **narrative-tracker:** Add Ethereum ecosystem uncertainty as emerging (EF cuts + Eth Labs). Sustain AI/compute rising (TAO + NES + ARX + A2A→Linux Foundation). Sustain RWA rising (RAIN 2-day streak + xStocks TVL + CARDS trending). Demote EigenCloud: fading → effectively dead.
+- **token-pick:** Hard stop on new longs (risk-off, breadth 4/20, F&G 12). If picking: RAIN relative strength in RWA on sustained 7d. REPPO −10.29% 6-25 is 4.71pp from 15% alert threshold — watch closely. HYPE $62.96 is $0.96 above $62 invalidation — treat as at-risk.
+- **narrative-tracker:** Elevate AI/DePIN to fading (ARX −11%, Seoul AI stocks cascade is direct headwind). Sustain RWA rising (RAIN 2-day trending). Flag SYN/bridge-interop as emerging signal. Privacy coins/ZK emerging in Extreme Fear context — monitor for cluster formation.
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
@@ -94,5 +98,5 @@ Total: $313.5B (−0.1% vs 6-23 $313.8B). USDT $186.1B · USDC $74.1B · USDS $8
 | 2026-06-24 | AAVE | $76.09 | Trending #1 DeFi, only large-cap DeFi green on 7d vs BTC -3.0% / ETH -4.9%. Grayscale 6-20 fair-value report ($175 target on RWA clarity) + V4 Tokenization Spoke security audit advancing on-chain securities finance rails. vmc n/a (large cap). Score 8/10 HIGH. Exit: target $87 / inv $69 / 14d. |
 
 ---
-*Sources — btc/eth/sol/top20: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch + AIXBT Pulse (09:00Z 6-24) + defi-overview (12:13Z 6-24)*
-*Source status: coingecko=ok defillama=ok(chain_7d_delta_unavailable — day 7 regression) fng=ok polymarket=ok(sports-only, no crypto-macro — day 4) websearch=ok*
+*Sources — btc/eth/sol/top20: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch (June 25, 2026)*
+*Source status: coingecko=ok defillama=ok(chain_7d_delta_unavailable — day 8 regression; protocols_endpoint_cex_heavy) fng=ok polymarket=ok(sports-only, no crypto-macro — day 5) websearch=ok*

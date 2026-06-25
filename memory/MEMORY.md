@@ -27,7 +27,7 @@
 ## Active Topics
 - [Fleet status & infrastructure](topics/fleet.md) — PR history, blockers, skill-health patterns through 6-24.
 - [Crypto research](topics/crypto.md) — Narrative evolution, token picks (AAVE added 6-24), Morpho curator-risk lessons, watchlist alerts.
-- [Market context](topics/market-context.md) — 6-24 snapshot: regime **chop** (oversold relief), BTC $62,442 +0.48%, F&G 17 (lagging 6-23 crash).
+- [Market context](topics/market-context.md) — 6-25 snapshot: regime **risk-off** (conviction high), BTC $61,147 −2.0%, F&G 12 (Extreme Fear deepening); breadth 4/20 (back to 6-23 crash-day lows); Seoul AI stocks −10% cascade new macro catalyst.
 - [Capital-2× program](topics/capital-2x-program.md) — North-star spec.
 - [XAI quota state](topics/xai-quota-exhausted.md) — Outage tracker since 6-16.
 - [AIXBT signals](topics/aixbt-grounding.md), [clusters](topics/aixbt-clusters.md), [chains](topics/aixbt-chains.md) — 36 clusters / ~204 chains as of 6-24 21:00Z pulse. Key: BTC sub-$60K (Saylor liquidation fear), Micron earnings 4× AI memory (demand intact), prediction markets $40B+pUSD$500M, EU MiCA July 1.
