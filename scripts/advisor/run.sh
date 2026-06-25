@@ -69,6 +69,17 @@ D="$ROOT/.investiments-cache/advisor"
 WORK="$D/work"
 mkdir -p "$WORK"
 
+# --- Regime gate (deterministic risk-on/off; issue #139) ---
+if [ "${REGIME_DISABLE:-0}" = "1" ]; then
+  REGIME_JSON='{"band":"UNKNOWN","score":null}'
+else
+  REGIME_JSON="$(D="$D" bash "$ROOT/scripts/advisor/regime.sh" 2>/dev/null || echo '{"band":"UNKNOWN","score":null}')"
+fi
+printf '%s' "$REGIME_JSON" > "$D/regime.json"
+REGIME_BAND="$(printf '%s' "$REGIME_JSON" | jq -r '.band // "UNKNOWN"')"
+REGIME_SCORE="$(printf '%s' "$REGIME_JSON" | jq -r '.score // "n/a"')"
+echo "advisor: regime $REGIME_BAND ($REGIME_SCORE/100)"
+
 FINDINGS="$WORK/findings.json"   # accumulator: JSON array of analyst findings
 echo "[]" > "$FINDINGS"
 GAPS=()                          # roles that failed
@@ -263,6 +274,7 @@ for role in $ANALYSTS; do
 $ACCOUNTING_NOTE
 HELD SYMBOLS (from snapshot): ${HELD:-unknown}
 
+$(datablock regime regime.json '.')
 $(role_data "$role")"
   finding="$(complete "$prompt")" || true
   if [ -n "$finding" ] && printf '%s' "$finding" | jq -e '.role' >/dev/null 2>&1; then
@@ -323,6 +335,7 @@ pm_prompt="$(cat "$PROMPTS/portfolio_manager.md")
 $ACCOUNTING_NOTE
 Use generatedAt = \"$NOW_ISO\".
 
+$(datablock regime regime.json '.')
 <<<DATA findings>>>
 $PM_FINDINGS
 <<<END>>>
@@ -352,8 +365,10 @@ REPORT="$(jq -n \
   --argjson used "$USED_JSON" \
   --argjson unavail "${UNAVAIL_JSON:-[]}" \
   --argjson gaps "${GAPS_JSON:-[]}" \
+  --argjson regime "$REGIME_JSON" \
   --arg mi "$MODEL_LABEL" \
   '$rpt
+   | .regime = $regime
    | .findings = (if (.findings // [] | length) > 0 then .findings else $findings end)
    | .debate = (if (.debate.turns // [] | length) > 0 then .debate else $debate end)
    | .dataSources = (.dataSources // {})
@@ -615,10 +630,11 @@ echo "advisor: staged $STB_STAGED short-term trade(s)"
 # Telegram: .summary + the actionable trades (directional recs), so the operator
 # sees the trims/adds/hedges — not just whatever defensive "hold" the PM ranked
 # first. Falls back to an explicit "no trades" line on a purely defensive day.
-TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" '
+TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" --arg band "$REGIME_BAND" --arg score "$REGIME_SCORE" '
   ([.recommendations[]? | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")]) as $trades
   | (.shortTermTrades // []) as $buys
-  | "📊 Advisor (" + $d + "): " + (.summary // "(no summary)") + "\n"
+  | "REGIME: " + $band + " " + $score + "/100\n"
+    + "📊 Advisor (" + $d + "): " + (.summary // "(no summary)") + "\n"
     + (if ($trades | length) == 0
        then "No new trades — defensive stance (see dashboard)."
        else "Potential trades:\n" + ([$trades[0:5][]
