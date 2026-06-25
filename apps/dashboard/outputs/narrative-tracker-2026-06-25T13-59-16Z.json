@@ -1,0 +1,1197 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-25"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-transitions",
+        "stack-transitions",
+        "sep-1",
+        "heading-reflexivity",
+        "alert-reflexivity",
+        "sep-2",
+        "heading-positions",
+        "stack-positions",
+        "sep-3",
+        "heading-map",
+        "stack-map",
+        "sep-4",
+        "text-pattern"
+      ]
+    },
+    "heading-transitions": {
+      "type": "Heading",
+      "props": {
+        "text": "Transitions",
+        "level": "h2"
+      }
+    },
+    "stack-transitions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trans-new-1",
+        "trans-new-2",
+        "trans-new-3",
+        "trans-new-4",
+        "trans-demoted",
+        "trans-dead"
+      ]
+    },
+    "trans-new-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-1",
+        "text-trans-new-1"
+      ]
+    },
+    "badge-new-1": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text-trans-new-1": {
+      "type": "Text",
+      "props": {
+        "text": "prediction markets + tokenized stocks — Meta entry validates the rail; Polymarket $40B+ — @Ifeanyi_gmi",
+        "variant": "body"
+      }
+    },
+    "trans-new-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-2",
+        "text-trans-new-2"
+      ]
+    },
+    "badge-new-2": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text-trans-new-2": {
+      "type": "Text",
+      "props": {
+        "text": "selective-liquidity slate — @NOIRSINGULARIS names TAO/WLD/HYPE/ONDO/PENDLE as the buy-list",
+        "variant": "body"
+      }
+    },
+    "trans-new-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-3",
+        "text-trans-new-3"
+      ]
+    },
+    "badge-new-3": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text-trans-new-3": {
+      "type": "Text",
+      "props": {
+        "text": "value-accruing tokens — @ct_hoppy frames BNB/JUP/HYPE/AERO as revenue-accruing vs governance/memes",
+        "variant": "body"
+      }
+    },
+    "trans-new-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-4",
+        "text-trans-new-4"
+      ]
+    },
+    "badge-new-4": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text-trans-new-4": {
+      "type": "Text",
+      "props": {
+        "text": "asset-specific fundamentals reframe — @SeniorManFM \"BTC = store, ETH = L2 accrual, SOL = adoption\"",
+        "variant": "body"
+      }
+    },
+    "trans-demoted": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-demoted",
+        "text-trans-demoted"
+      ]
+    },
+    "badge-demoted": {
+      "type": "Badge",
+      "props": {
+        "text": "DEMOTED",
+        "variant": "secondary"
+      }
+    },
+    "text-trans-demoted": {
+      "type": "Text",
+      "props": {
+        "text": "DePIN/AI compute Peak → Fading — no standalone driver today; TAO appears only inside slates",
+        "variant": "body"
+      }
+    },
+    "trans-dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stack-dead-header",
+        "text-dead-items"
+      ]
+    },
+    "stack-dead-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-dead",
+        "text-dead-label"
+      ]
+    },
+    "badge-dead": {
+      "type": "Badge",
+      "props": {
+        "text": "DEAD",
+        "variant": "destructive"
+      }
+    },
+    "text-dead-label": {
+      "type": "Text",
+      "props": {
+        "text": "(5 items)",
+        "variant": "caption"
+      }
+    },
+    "text-dead-items": {
+      "type": "Text",
+      "props": {
+        "text": "CLARITY Act (Peak ↑↑ 6-24, 3-day life), Hedgeye macro-quad4 short-BTC (1-day life), Saylor critique (1-day life), BTC-dominance-cracking, privacy coins/ZK. Every bear/contrarian frame from 6-24 collapsed inside 24h.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-reflexivity": {
+      "type": "Heading",
+      "props": {
+        "text": "Reflexivity Alert",
+        "level": "h2"
+      }
+    },
+    "alert-reflexivity": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Reflexivity Alert",
+        "message": ""
+      },
+      "children": [
+        "stack-reflex-items"
+      ]
+    },
+    "stack-reflex-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reflex-item-1",
+        "reflex-item-2"
+      ]
+    },
+    "reflex-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-reflex-1-title",
+        "text-reflex-1-body"
+      ]
+    },
+    "text-reflex-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "Named-slate coordination (2 fresh today)",
+        "variant": "lead"
+      }
+    },
+    "text-reflex-1-body": {
+      "type": "Text",
+      "props": {
+        "text": "@NOIRSINGULARIS TAO/WLD/HYPE/ONDO/PENDLE + @ct_hoppy BNB/JUP/HYPE/AERO published as buyable slates. The frame is the trade. Watch 24-48h cross-correlation in those tickers.",
+        "variant": "body"
+      }
+    },
+    "reflex-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-reflex-2-title",
+        "text-reflex-2-body"
+      ]
+    },
+    "text-reflex-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "AI bubble critique (inverse, sharpened)",
+        "variant": "lead"
+      }
+    },
+    "text-reflex-2-body": {
+      "type": "Text",
+      "props": {
+        "text": "@leadlagreport: \"bubble isn't in AI, it's in the narrative.\" Fundamentals catching the story — Slash $80k token burn 6-24, Micron MU -13%.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-positions": {
+      "type": "Heading",
+      "props": {
+        "text": "Positions",
+        "level": "h2"
+      }
+    },
+    "stack-positions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pos-item-1",
+        "pos-item-2",
+        "pos-item-3",
+        "pos-item-4",
+        "pos-item-5",
+        "pos-item-6",
+        "pos-item-7",
+        "pos-item-8",
+        "pos-item-9",
+        "pos-item-10"
+      ]
+    },
+    "pos-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-1-header",
+        "pos-1-desc",
+        "pos-1-bear"
+      ]
+    },
+    "pos-1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-ride",
+        "text-pos-1-title",
+        "badge-pos-1-level"
+      ]
+    },
+    "badge-ride": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "text-pos-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent infrastructure",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-1-level": {
+      "type": "Badge",
+      "props": {
+        "text": "5 ↑ Peak Bull",
+        "variant": "outline"
+      }
+    },
+    "pos-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "rails+memory+identity+payments fused; Coinbase-for-Agents + x402 480k agents / $50M cumulative",
+        "variant": "body"
+      }
+    },
+    "pos-1-bear": {
+      "type": "Text",
+      "props": {
+        "text": "🐻 mandate-vs-custody still vapor",
+        "variant": "caption"
+      }
+    },
+    "pos-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-2-header",
+        "pos-2-desc",
+        "pos-2-bear"
+      ]
+    },
+    "pos-2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-ride-2",
+        "text-pos-2-title",
+        "badge-pos-2-level"
+      ]
+    },
+    "badge-ride-2": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "text-pos-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "prediction markets + tokenized stocks",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-2-level": {
+      "type": "Badge",
+      "props": {
+        "text": "4 ↑↑ Rising Bull",
+        "variant": "outline"
+      }
+    },
+    "pos-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Meta + Polymarket",
+        "variant": "body"
+      }
+    },
+    "pos-2-bear": {
+      "type": "Text",
+      "props": {
+        "text": "🐻 CFTC v. Kentucky 9-state preemption suit",
+        "variant": "caption"
+      }
+    },
+    "pos-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-3-header",
+        "pos-3-desc",
+        "pos-3-bear"
+      ]
+    },
+    "pos-3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-ride-3",
+        "text-pos-3-title",
+        "badge-pos-3-level"
+      ]
+    },
+    "badge-ride-3": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "text-pos-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "selective-liquidity slate",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-3-level": {
+      "type": "Badge",
+      "props": {
+        "text": "4 ↑ Rising Mixed",
+        "variant": "outline"
+      }
+    },
+    "pos-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "@NOIRSINGULARIS",
+        "variant": "body"
+      }
+    },
+    "pos-3-bear": {
+      "type": "Text",
+      "props": {
+        "text": "🐻 meta-narrative; only playable via the named slate",
+        "variant": "caption"
+      }
+    },
+    "pos-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-4-header",
+        "pos-4-desc",
+        "pos-4-bear"
+      ]
+    },
+    "pos-4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-ride-4",
+        "text-pos-4-title",
+        "badge-pos-4-level"
+      ]
+    },
+    "badge-ride-4": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "text-pos-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "RWA / tokenized real assets",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-4-level": {
+      "type": "Badge",
+      "props": {
+        "text": "5 → Peak Bull",
+        "variant": "outline"
+      }
+    },
+    "pos-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "@OttoSuwen \"only sustainable anchor\"",
+        "variant": "body"
+      }
+    },
+    "pos-4-bear": {
+      "type": "Text",
+      "props": {
+        "text": "🐻 3-5y execution lag on $20T forecasts",
+        "variant": "caption"
+      }
+    },
+    "pos-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-5-header",
+        "pos-5-desc",
+        "pos-5-bear"
+      ]
+    },
+    "pos-5-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-ride-5",
+        "text-pos-5-title",
+        "badge-pos-5-level"
+      ]
+    },
+    "badge-ride-5": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "text-pos-5-title": {
+      "type": "Text",
+      "props": {
+        "text": "stablecoins as rails",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-5-level": {
+      "type": "Badge",
+      "props": {
+        "text": "4 → Peak Bull",
+        "variant": "outline"
+      }
+    },
+    "pos-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "$311B mcap (+50% vs 2025)",
+        "variant": "body"
+      }
+    },
+    "pos-5-bear": {
+      "type": "Text",
+      "props": {
+        "text": "🐻 OFAC/reg",
+        "variant": "caption"
+      }
+    },
+    "pos-item-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-6-header",
+        "pos-6-desc"
+      ]
+    },
+    "pos-6-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-watch",
+        "text-pos-6-title",
+        "badge-pos-6-level"
+      ]
+    },
+    "badge-watch": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "secondary"
+      }
+    },
+    "text-pos-6-title": {
+      "type": "Text",
+      "props": {
+        "text": "asset-specific fundamentals reframe",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-6-level": {
+      "type": "Badge",
+      "props": {
+        "text": "3 ↑ Rising Mixed",
+        "variant": "outline"
+      }
+    },
+    "pos-6-desc": {
+      "type": "Text",
+      "props": {
+        "text": "frame, not catalyst",
+        "variant": "body"
+      }
+    },
+    "pos-item-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-7-header",
+        "pos-7-desc"
+      ]
+    },
+    "pos-7-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-watch-2",
+        "text-pos-7-title",
+        "badge-pos-7-level"
+      ]
+    },
+    "badge-watch-2": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "secondary"
+      }
+    },
+    "text-pos-7-title": {
+      "type": "Text",
+      "props": {
+        "text": "AI bubble critique",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-7-level": {
+      "type": "Badge",
+      "props": {
+        "text": "3 ↑ Rising Bear-contrarian",
+        "variant": "outline"
+      }
+    },
+    "pos-7-desc": {
+      "type": "Text",
+      "props": {
+        "text": "inverse-reflexive",
+        "variant": "body"
+      }
+    },
+    "pos-item-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-8-header",
+        "pos-8-bear"
+      ]
+    },
+    "pos-8-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-watch-3",
+        "text-pos-8-title",
+        "badge-pos-8-level"
+      ]
+    },
+    "badge-watch-3": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "secondary"
+      }
+    },
+    "text-pos-8-title": {
+      "type": "Text",
+      "props": {
+        "text": "value-accruing tokens",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-8-level": {
+      "type": "Badge",
+      "props": {
+        "text": "3 ↑ Emerging Bull",
+        "variant": "outline"
+      }
+    },
+    "pos-8-bear": {
+      "type": "Text",
+      "props": {
+        "text": "🐻 fee-revenue tiny vs market cap",
+        "variant": "caption"
+      }
+    },
+    "pos-item-9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-9-header",
+        "pos-9-desc"
+      ]
+    },
+    "pos-9-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-watch-4",
+        "text-pos-9-title",
+        "badge-pos-9-level"
+      ]
+    },
+    "badge-watch-4": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "secondary"
+      }
+    },
+    "text-pos-9-title": {
+      "type": "Text",
+      "props": {
+        "text": "autonomous economies / physical intelligence",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-9-level": {
+      "type": "Badge",
+      "props": {
+        "text": "3 ↑ Emerging Bull",
+        "variant": "outline"
+      }
+    },
+    "pos-9-desc": {
+      "type": "Text",
+      "props": {
+        "text": "@Airdrop080",
+        "variant": "body"
+      }
+    },
+    "pos-item-10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos-10-header",
+        "pos-10-note"
+      ]
+    },
+    "pos-10-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-watch-5",
+        "text-pos-10-title",
+        "badge-pos-10-level"
+      ]
+    },
+    "badge-watch-5": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "secondary"
+      }
+    },
+    "text-pos-10-title": {
+      "type": "Text",
+      "props": {
+        "text": "DePIN/AI compute",
+        "variant": "lead"
+      }
+    },
+    "badge-pos-10-level": {
+      "type": "Badge",
+      "props": {
+        "text": "4 ↓ Fading",
+        "variant": "outline"
+      }
+    },
+    "pos-10-note": {
+      "type": "Text",
+      "props": {
+        "text": "DEMOTED",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-map": {
+      "type": "Heading",
+      "props": {
+        "text": "Map",
+        "level": "h2"
+      }
+    },
+    "stack-map": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "map-emerging",
+        "map-rising",
+        "map-peak",
+        "map-fading",
+        "map-dead"
+      ]
+    },
+    "map-emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-emerging-header",
+        "map-emerging-items"
+      ]
+    },
+    "map-emerging-header": {
+      "type": "Text",
+      "props": {
+        "text": "Emerging",
+        "variant": "lead"
+      }
+    },
+    "map-emerging-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-map-val-tokens",
+        "badge-map-auto-econ",
+        "badge-map-kaspa"
+      ]
+    },
+    "badge-map-val-tokens": {
+      "type": "Badge",
+      "props": {
+        "text": "value-accruing tokens",
+        "variant": "outline"
+      }
+    },
+    "badge-map-auto-econ": {
+      "type": "Badge",
+      "props": {
+        "text": "autonomous economies",
+        "variant": "outline"
+      }
+    },
+    "badge-map-kaspa": {
+      "type": "Badge",
+      "props": {
+        "text": "kaspa (IGNORE)",
+        "variant": "outline"
+      }
+    },
+    "map-rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-rising-header",
+        "map-rising-items"
+      ]
+    },
+    "map-rising-header": {
+      "type": "Text",
+      "props": {
+        "text": "Rising",
+        "variant": "lead"
+      }
+    },
+    "map-rising-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-map-pred-markets",
+        "badge-map-selective-liq",
+        "badge-map-asset-spec",
+        "badge-map-ai-bubble"
+      ]
+    },
+    "badge-map-pred-markets": {
+      "type": "Badge",
+      "props": {
+        "text": "prediction-markets+stocks",
+        "variant": "outline"
+      }
+    },
+    "badge-map-selective-liq": {
+      "type": "Badge",
+      "props": {
+        "text": "selective-liquidity slate",
+        "variant": "outline"
+      }
+    },
+    "badge-map-asset-spec": {
+      "type": "Badge",
+      "props": {
+        "text": "asset-specific fundamentals",
+        "variant": "outline"
+      }
+    },
+    "badge-map-ai-bubble": {
+      "type": "Badge",
+      "props": {
+        "text": "AI bubble critique",
+        "variant": "outline"
+      }
+    },
+    "map-peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-peak-header",
+        "map-peak-items"
+      ]
+    },
+    "map-peak-header": {
+      "type": "Text",
+      "props": {
+        "text": "Peak",
+        "variant": "lead"
+      }
+    },
+    "map-peak-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-map-ai-agent",
+        "badge-map-rwa",
+        "badge-map-stablecoins"
+      ]
+    },
+    "badge-map-ai-agent": {
+      "type": "Badge",
+      "props": {
+        "text": "AI agent infra",
+        "variant": "default"
+      }
+    },
+    "badge-map-rwa": {
+      "type": "Badge",
+      "props": {
+        "text": "RWA",
+        "variant": "default"
+      }
+    },
+    "badge-map-stablecoins": {
+      "type": "Badge",
+      "props": {
+        "text": "stablecoins",
+        "variant": "default"
+      }
+    },
+    "map-fading": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-fading-header",
+        "map-fading-items"
+      ]
+    },
+    "map-fading-header": {
+      "type": "Text",
+      "props": {
+        "text": "Fading",
+        "variant": "lead"
+      }
+    },
+    "map-fading-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-map-depin"
+      ]
+    },
+    "badge-map-depin": {
+      "type": "Badge",
+      "props": {
+        "text": "DePIN/AI compute",
+        "variant": "outline"
+      }
+    },
+    "map-dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-dead-header",
+        "map-dead-items"
+      ]
+    },
+    "map-dead-header": {
+      "type": "Text",
+      "props": {
+        "text": "Dead",
+        "variant": "lead"
+      }
+    },
+    "map-dead-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-map-clarity",
+        "badge-map-macro",
+        "badge-map-saylor",
+        "badge-map-btc-dom",
+        "badge-map-privacy"
+      ]
+    },
+    "badge-map-clarity": {
+      "type": "Badge",
+      "props": {
+        "text": "CLARITY Act",
+        "variant": "destructive"
+      }
+    },
+    "badge-map-macro": {
+      "type": "Badge",
+      "props": {
+        "text": "macro quad4",
+        "variant": "destructive"
+      }
+    },
+    "badge-map-saylor": {
+      "type": "Badge",
+      "props": {
+        "text": "Saylor critique",
+        "variant": "destructive"
+      }
+    },
+    "badge-map-btc-dom": {
+      "type": "Badge",
+      "props": {
+        "text": "BTC dominance cracking",
+        "variant": "destructive"
+      }
+    },
+    "badge-map-privacy": {
+      "type": "Badge",
+      "props": {
+        "text": "privacy/ZK",
+        "variant": "destructive"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-pattern": {
+      "type": "Text",
+      "props": {
+        "text": "Pattern today: every contrarian/bear frame from 6-24 died within 24h. Signal flips to structure (selective slates, asset-specific theses, revenue-accruing tokens). Prediction markets emerge as the new institutional thread on Meta's entry.",
+        "variant": "body"
+      }
+    }
+  }
+}
