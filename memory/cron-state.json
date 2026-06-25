@@ -168,13 +168,13 @@
   },
   "github-trending": {
     "last_dispatch": "2026-06-25T09:55:27Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-24T10:04:33Z",
-    "total_runs": 57,
-    "total_successes": 29,
+    "last_status": "success",
+    "last_success": "2026-06-25T10:00:13Z",
+    "total_runs": 58,
+    "total_successes": 30,
     "total_failures": 28,
     "consecutive_failures": 0,
-    "success_rate": 0.51,
+    "success_rate": 0.52,
     "last_failed": "2026-06-21T14:16:17Z",
     "last_error": "844e662\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
