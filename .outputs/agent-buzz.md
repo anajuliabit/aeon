@@ -1,22 +1,22 @@
-*Agent Buzz — 2026-06-24*
-_mostly stack-canon talk — MCP/A2A/x402 — with two research drops and two product launches on the side._
+*Agent Buzz — 2026-06-25*
+_mostly MCP integration — broker desks, game engines, the os-thesis — punctuated by two solo studios shipping with real unit economics._
 
-**stack canon updates**
-• @joaomdmoura — MCP for tools, A2A for coordination, CrewAI for orchestration — the layer-cake takes shape.
-  https://x.com/joaomdmoura/status/2069450419307479188
-• @zambodotdev — x402 enters the canonical stack — autonomous payments alongside MCP, function calling, cascading LLMs.
-  https://x.com/zambodotdev/status/2069371192528580614
+**MCP plugs into every surface**
+• @OptimaiNetwork — frames MCP as the layer that makes the internet agent-addressable. integration coverage > model quality.
+  https://x.com/OptimaiNetwork/status/2069796656774533360
+• @indigox — interactive brokers ships native MCP. regulated brokerage just became a directly callable agent surface.
+  https://x.com/indigox/status/2069933447636996303
+• @EngMoElgaraihy — unreal 5.8 ships native MCP plus vibe ue. claude drives procedural worldgen with no plugin code.
+  https://x.com/EngMoElgaraihy/status/2069931925788111306
 
-**agentic research drops**
-• @jiqizhixin — UIUC/Meta/Stanford pitch code-as-substrate — execution-based verification over prompt-grounded reasoning.
-  https://x.com/jiqizhixin/status/2069314517054656680
-• @razoralign — AutoZyme — 5-agent framework for benchmarking/optimizing scientific software, biorxiv preprint.
-  https://x.com/razoralign/status/2069554253228806648
+**Solo studios shipping unit economics**
+• @RoundtableSpace — OpenMontage claims <$1 per agentic-produced video. first concrete cost-per-output number for video agents.
+  https://x.com/RoundtableSpace/status/2069929815994487022
+• @_MaxBlade — CNVS macos multi-agent ide with bidirectional spawn. $20k revenue in 12 days, small but real.
+  https://x.com/_MaxBlade/status/2069930606880772607
 
-**agent products ship**
-• @NebulaAI — agent-PM at $4.50/month — GitHub issues + support + tickets, undercuts SaaS pricing floor.
-  https://x.com/NebulaAI/status/2069566686303559901
-• @agentgateway — MCP proxies hit scale ceiling — agentgateway pitches a purpose-built data plane for MCP/LLM traffic.
-  https://x.com/agentgateway/status/2069527447884730607
+**Agent volume going on-chain**
+• @EvaProtocolBase — base reports 15M agentic txns. evaprotocol argues most lack reasoning, pitches an open debate layer.
+  https://x.com/EvaProtocolBase/status/2069931256717168973
 
-<!-- _src: xai-cache · candidates: 12 → kept: 6_ -->
+<!-- _src: xai-cache · candidates: 14 → kept: 6 -->

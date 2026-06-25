@@ -1,0 +1,158 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-06-25"
+      },
+      "children": [
+        "text_subtitle",
+        "sep_1",
+        "heading_section_1",
+        "stack_section_1",
+        "sep_2",
+        "heading_section_2",
+        "stack_section_2",
+        "sep_3",
+        "heading_section_3",
+        "stack_section_3",
+        "sep_4",
+        "text_footer"
+      ]
+    },
+    "text_subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "mostly MCP integration — broker desks, game engines, the os-thesis — punctuated by two solo studios shipping with real unit economics.",
+        "variant": "muted"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_section_1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP plugs into every surface",
+        "level": "h2"
+      }
+    },
+    "stack_section_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_1",
+        "item_2",
+        "item_3"
+      ]
+    },
+    "item_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@OptimaiNetwork — frames MCP as the layer that makes the internet agent-addressable. integration coverage > model quality.",
+        "href": "https://x.com/OptimaiNetwork/status/2069796656774533360",
+        "source": "X"
+      }
+    },
+    "item_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@indigox — interactive brokers ships native MCP. regulated brokerage just became a directly callable agent surface.",
+        "href": "https://x.com/indigox/status/2069933447636996303",
+        "source": "X"
+      }
+    },
+    "item_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@EngMoElgaraihy — unreal 5.8 ships native MCP plus vibe ue. claude drives procedural worldgen with no plugin code.",
+        "href": "https://x.com/EngMoElgaraihy/status/2069931925788111306",
+        "source": "X"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_section_2": {
+      "type": "Heading",
+      "props": {
+        "text": "Solo studios shipping unit economics",
+        "level": "h2"
+      }
+    },
+    "stack_section_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_4",
+        "item_5"
+      ]
+    },
+    "item_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@RoundtableSpace — OpenMontage claims <$1 per agentic-produced video. first concrete cost-per-output number for video agents.",
+        "href": "https://x.com/RoundtableSpace/status/2069929815994487022",
+        "source": "X"
+      }
+    },
+    "item_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@_MaxBlade — CNVS macos multi-agent ide with bidirectional spawn. $20k revenue in 12 days, small but real.",
+        "href": "https://x.com/_MaxBlade/status/2069930606880772607",
+        "source": "X"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_section_3": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent volume going on-chain",
+        "level": "h2"
+      }
+    },
+    "stack_section_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_6"
+      ]
+    },
+    "item_6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@EvaProtocolBase — base reports 15M agentic txns. evaprotocol argues most lack reasoning, pitches an open debate layer.",
+        "href": "https://x.com/EvaProtocolBase/status/2069931256717168973",
+        "source": "X"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 14 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}
