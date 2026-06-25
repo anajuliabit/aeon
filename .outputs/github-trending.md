@@ -1,25 +1,22 @@
-*GitHub Trending — 2026-06-24*
+*GitHub Trending — 2026-06-25*
 
-*Top pick* — [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage)
-the first credible open-source rival to closed agentic video stacks — 4 days holding the top of trending, fresh release pushed this morning.
+*Top pick* — [apple/container](https://github.com/apple/container)
+apple's first-party linux container runtime for macOS replaces docker desktop's shared-VM model with one lightweight VM per container, optimized for apple silicon — the kind of thing that quietly resets a default on millions of laptops.
+
+*Infra*
+• [apple/container](https://github.com/apple/container) — ★ 1.8k today (42.7k total) · Swift · ACCELERATING
+one VM per container on macOS via the containerization swift package; kills docker desktop's shared-VM blast-radius and rosetta tax.
 
 *AI/ML*
-• [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) — ★ 3.6k today (17k total) · Python · [ACCELERATING]
-fresh release this morning, 4-day trending streak — first open-source counter to Runway/Sora-class video harnesses.
+• [stablyai/orca](https://github.com/stablyai/orca) — ★ 331 today (7.1k total) · TypeScript · ACCELERATING
+ADE for running a fleet of parallel coding agents on desktop and mobile, BYO subscription — one operator orchestrating many, not one IDE per agent.
 
-• [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) — ★ 936 today (201k total) · Python · [RETURNING]
-nous's long-running agent harness — persistent memory + skills, open-weight alternative to closed agent stacks.
-
-• [revfactory/harness](https://github.com/revfactory/harness) — ★ 128 today (7.5k total) · HTML · [ACCELERATING]
-meta-skill that designs agent teams and generates the skills they use — skill-of-skills compounding.
+• [google-labs-code/design.md](https://github.com/google-labs-code/design.md) — ★ 619 today (17.8k total) · TypeScript · ACCELERATING
+YAML front-matter design tokens plus markdown rationale that coding agents read directly; gives the design system a persistent format across sessions instead of re-prompting.
 
 *Devtools*
-• [DeusData/codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) — ★ 1.3k today (13.6k total) · C · [ACCELERATING]
-persistent codebase knowledge graph as MCP server — 158 languages, sub-ms queries, claims 99% fewer tokens vs RAG.
-
-*Web/Apps*
-• [palmier-io/palmier-pro](https://github.com/palmier-io/palmier-pro) — ★ 1.6k today (8.7k total) · Swift · [ACCELERATING]
-cursor-for-video — AI-native swift macOS editor, viral momentum: 8.7k stars in 78 days.
+• [kunchenguid/no-mistakes](https://github.com/kunchenguid/no-mistakes) — ★ 110 today (2.6k total) · Go · ACCELERATING
+intercepts git push into a local gate that runs AI validation in an isolated worktree and only forwards once checks pass; tagline "kill all the slop, raise clean PR".
 
 ---
-sources: trending=ok · gh_api=ok · kept 5/16
+sources: trending=ok · gh_api=ok · kept 4/13

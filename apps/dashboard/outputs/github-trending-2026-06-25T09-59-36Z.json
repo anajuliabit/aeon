@@ -1,0 +1,384 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-25"
+      },
+      "children": [
+        "section-toppick",
+        "sep-1",
+        "section-infra",
+        "sep-2",
+        "section-aiml",
+        "sep-3",
+        "section-devtools",
+        "sep-4",
+        "footer"
+      ]
+    },
+    "section-toppick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-toppick",
+        "item-toppick"
+      ]
+    },
+    "heading-toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "item-toppick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-apple-toppick",
+        "text-apple-toppick-desc"
+      ]
+    },
+    "link-apple-toppick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "apple/container",
+        "href": "https://github.com/apple/container"
+      }
+    },
+    "text-apple-toppick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "apple's first-party linux container runtime for macOS replaces docker desktop's shared-VM model with one lightweight VM per container, optimized for apple silicon — the kind of thing that quietly resets a default on millions of laptops.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-infra",
+        "item-infra-apple"
+      ]
+    },
+    "heading-infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "item-infra-apple": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-apple-infra",
+        "text-apple-infra-desc",
+        "stats-apple-infra"
+      ]
+    },
+    "link-apple-infra": {
+      "type": "StoryLink",
+      "props": {
+        "title": "apple/container",
+        "href": "https://github.com/apple/container"
+      }
+    },
+    "text-apple-infra-desc": {
+      "type": "Text",
+      "props": {
+        "text": "one VM per container on macOS via the containerization swift package; kills docker desktop's shared-VM blast-radius and rosetta tax.",
+        "variant": "body"
+      }
+    },
+    "stats-apple-infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-apple-infra-stars",
+        "badge-swift-1",
+        "badge-accel-1"
+      ]
+    },
+    "text-apple-infra-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1.8k today (42.7k total)",
+        "variant": "caption"
+      }
+    },
+    "badge-swift-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Swift"
+      }
+    },
+    "badge-accel-1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-aiml",
+        "item-aiml-orca",
+        "item-aiml-design"
+      ]
+    },
+    "heading-aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "item-aiml-orca": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-orca",
+        "text-orca-desc",
+        "stats-orca"
+      ]
+    },
+    "link-orca": {
+      "type": "StoryLink",
+      "props": {
+        "title": "stablyai/orca",
+        "href": "https://github.com/stablyai/orca"
+      }
+    },
+    "text-orca-desc": {
+      "type": "Text",
+      "props": {
+        "text": "ADE for running a fleet of parallel coding agents on desktop and mobile, BYO subscription — one operator orchestrating many, not one IDE per agent.",
+        "variant": "body"
+      }
+    },
+    "stats-orca": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-orca-stars",
+        "badge-typescript-1",
+        "badge-accel-2"
+      ]
+    },
+    "text-orca-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 331 today (7.1k total)",
+        "variant": "caption"
+      }
+    },
+    "badge-typescript-1": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "badge-accel-2": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "item-aiml-design": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-design-md",
+        "text-design-desc",
+        "stats-design"
+      ]
+    },
+    "link-design-md": {
+      "type": "StoryLink",
+      "props": {
+        "title": "google-labs-code/design.md",
+        "href": "https://github.com/google-labs-code/design.md"
+      }
+    },
+    "text-design-desc": {
+      "type": "Text",
+      "props": {
+        "text": "YAML front-matter design tokens plus markdown rationale that coding agents read directly; gives the design system a persistent format across sessions instead of re-prompting.",
+        "variant": "body"
+      }
+    },
+    "stats-design": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-design-stars",
+        "badge-typescript-2",
+        "badge-accel-3"
+      ]
+    },
+    "text-design-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 619 today (17.8k total)",
+        "variant": "caption"
+      }
+    },
+    "badge-typescript-2": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "badge-accel-3": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-devtools",
+        "item-devtools-no-mistakes"
+      ]
+    },
+    "heading-devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "item-devtools-no-mistakes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-no-mistakes",
+        "text-no-mistakes-desc",
+        "stats-no-mistakes"
+      ]
+    },
+    "link-no-mistakes": {
+      "type": "StoryLink",
+      "props": {
+        "title": "kunchenguid/no-mistakes",
+        "href": "https://github.com/kunchenguid/no-mistakes"
+      }
+    },
+    "text-no-mistakes-desc": {
+      "type": "Text",
+      "props": {
+        "text": "intercepts git push into a local gate that runs AI validation in an isolated worktree and only forwards once checks pass; tagline \"kill all the slop, raise clean PR\".",
+        "variant": "body"
+      }
+    },
+    "stats-no-mistakes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-no-mistakes-stars",
+        "badge-go",
+        "badge-accel-4"
+      ]
+    },
+    "text-no-mistakes-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 110 today (2.6k total)",
+        "variant": "caption"
+      }
+    },
+    "badge-go": {
+      "type": "Badge",
+      "props": {
+        "text": "Go"
+      }
+    },
+    "badge-accel-4": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/13",
+        "variant": "muted"
+      }
+    }
+  }
+}
