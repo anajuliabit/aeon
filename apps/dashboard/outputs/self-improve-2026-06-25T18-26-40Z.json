@@ -1,0 +1,55 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-action",
+        "text-status",
+        "text-context",
+        "link-pr"
+      ]
+    },
+    "text-action": {
+      "type": "Text",
+      "props": {
+        "text": "Dropped disabled hacker-news-digest entry from skill-evals"
+      }
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "Was STILL_FAIL since 5-31",
+        "variant": "muted"
+      }
+    },
+    "text-context": {
+      "type": "Text",
+      "props": {
+        "text": "Same shape as the monitor-polymarket removal",
+        "variant": "caption"
+      }
+    },
+    "link-pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #146",
+        "href": "https://github.com/anajuliabit/aeon/pull/146"
+      }
+    }
+  }
+}
