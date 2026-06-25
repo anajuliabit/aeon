@@ -1,11 +1,9 @@
 {
-  "last_run_at": "2026-06-24T08:00:00Z",
-  "last_verdict": "FRESHNESS_WARN",
-  "last_flagged_fingerprint": "d522755e4af35478ef8cd44c558f87e1413fb78c",
+  "last_run_at": "2026-06-25T08:43:00Z",
+  "last_verdict": "FRESHNESS_OK",
+  "last_flagged_fingerprint": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
   "consumer_count": 44,
-  "dependency_count": 8,
-  "flagged_count": 1,
-  "first_seen_at": {
-    "operator-scorecard:articles/skill-analytics-*.md": "2026-06-21T14:39:00Z"
-  }
+  "dependency_count": 2,
+  "flagged_count": 0,
+  "first_seen_at": {}
 }
