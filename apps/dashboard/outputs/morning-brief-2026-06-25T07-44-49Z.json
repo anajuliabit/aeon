@@ -1,0 +1,287 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-25"
+      },
+      "children": [
+        "separator-1",
+        "stack-main"
+      ]
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "focus-section",
+        "separator-2",
+        "since-section",
+        "separator-3",
+        "running-section"
+      ]
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-title",
+        "focus-1-detail"
+      ]
+    },
+    "focus-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "1. btc defends $60,500 close",
+        "variant": "body"
+      }
+    },
+    "focus-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "why now: spot $61.8k, only $409 buffer in 6-24 close",
+        "variant": "caption"
+      }
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-title",
+        "focus-2-detail"
+      ]
+    },
+    "focus-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "2. AAVE pick day 2",
+        "variant": "body"
+      }
+    },
+    "focus-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "why now: $76.09 entry vs $69 inv, BTC chop + Aave fees rolled over",
+        "variant": "caption"
+      }
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-detail"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "3. ISS-025 capture-fix PR",
+        "variant": "body"
+      }
+    },
+    "focus-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 22 chronic-tail skills stuck until aeon.yml lands",
+        "variant": "caption"
+      }
+    },
+    "since-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #138 merged 21:37Z (goal-tracker header drift) — open-PR queue empty"
+      }
+    },
+    "since-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-2-text",
+        "since-2-badge"
+      ]
+    },
+    "since-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE staged 12:13Z ($76.09 / target $87 / inv $69 / 14d)"
+      }
+    },
+    "since-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH 8/10",
+        "variant": "secondary"
+      }
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor first clean end-to-end in a week — CFTC v. Kentucky, 9th-state preemption suit"
+      }
+    },
+    "since-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-4-text",
+        "since-4-badge"
+      ]
+    },
+    "since-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest CVE-2026-34910 EPSS 0.818 (Ubiquiti UniFi) — highest of 2026"
+      }
+    },
+    "since-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV PATCH TODAY",
+        "variant": "destructive"
+      }
+    },
+    "since-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-5-text",
+        "since-5-detail"
+      ]
+    },
+    "since-5-text": {
+      "type": "Text",
+      "props": {
+        "text": "stuck: ISS-025 PR not opened; on-chain config day 18; xai quota day 9"
+      }
+    },
+    "since-5-detail": {
+      "type": "Text",
+      "props": {
+        "text": "all operator-gated",
+        "variant": "caption"
+      }
+    },
+    "running-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-item-1",
+        "running-item-2",
+        "running-item-3"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels @ 08:15 UTC (today's UTC close decides breakdown trigger)"
+      }
+    },
+    "running-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 08/14/20 UTC · skill-freshness @ 08:00"
+      }
+    },
+    "running-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 markets batch · 18:00 reflection batch · evening-recap @ 21:00"
+      }
+    }
+  }
+}
