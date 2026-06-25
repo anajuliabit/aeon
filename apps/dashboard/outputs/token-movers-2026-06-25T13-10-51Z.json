@@ -1,0 +1,534 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers — 2026-06-25"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_text",
+        "market_stats",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "trending_section",
+        "sep4",
+        "notable_section"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "chop tilting red, day 2 of the same regime — 27/100 top-100 green, median top-50 −1.4%; BTC −2.0% $61,151 sitting right on the $60,500 reclaim level, HYPE +2.3% the lone large-cap green again",
+        "variant": "lead"
+      }
+    },
+    "market_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_btc",
+        "stat_hype",
+        "stat_green",
+        "stat_median"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$61,151",
+        "delta": "−2.0%",
+        "trend": "down"
+      }
+    },
+    "stat_hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "—",
+        "delta": "+2.3%",
+        "trend": "up"
+      }
+    },
+    "stat_green": {
+      "type": "Stat",
+      "props": {
+        "label": "Top-100 Green",
+        "value": "27/100"
+      }
+    },
+    "stat_median": {
+      "type": "Stat",
+      "props": {
+        "label": "Median Top-50",
+        "value": "—",
+        "delta": "−1.4%",
+        "trend": "down"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Token",
+          "Price",
+          "24h %",
+          "7d %",
+          "1h %",
+          "Vol / Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "1",
+            "CX (Cortex)",
+            "$0.0784",
+            "+47.3%",
+            "+259.8%",
+            "+9.3%",
+            "$1.9M / #261",
+            "PUMP-RISK, BREAKOUT"
+          ],
+          [
+            "2",
+            "BAS (BNB Attestation Service)",
+            "$0.0475",
+            "+12.1%",
+            "+54.1%",
+            "−2.5%",
+            "$37M / #232",
+            "decel from morning +34%"
+          ],
+          [
+            "3",
+            "STABLE",
+            "$0.0373",
+            "+10.2%",
+            "+9.9%",
+            "—",
+            "$18M / #72",
+            "—"
+          ],
+          [
+            "4",
+            "XPL (Plasma)",
+            "$0.0958",
+            "+9.2%",
+            "−7.7%",
+            "+2.7%",
+            "$1.05B / #140",
+            "vol > 4× mcap, extreme rotation"
+          ],
+          [
+            "5",
+            "SEI",
+            "$0.0581",
+            "+9.1%",
+            "+7.0%",
+            "—",
+            "$83M / #115",
+            "—"
+          ],
+          [
+            "6",
+            "AAVE",
+            "$83.15",
+            "+8.6%",
+            "+13.3%",
+            "—",
+            "$470M / #57",
+            "carry from 6-24 HIGH 8/10 pick, day 2"
+          ],
+          [
+            "7",
+            "SKYAI",
+            "$0.305",
+            "+8.5%",
+            "−17.8%",
+            "—",
+            "#132",
+            "—"
+          ],
+          [
+            "8",
+            "AWE (AWE Network)",
+            "$0.0657",
+            "+7.8%",
+            "+20.4%",
+            "—",
+            "#218",
+            "—"
+          ],
+          [
+            "9",
+            "ZANO",
+            "$10.21",
+            "+7.5%",
+            "—",
+            "—",
+            "$2M / #191",
+            "TRENDING+UP"
+          ],
+          [
+            "10",
+            "MORPHO",
+            "$1.78",
+            "+5.9%",
+            "−10.3%",
+            "—",
+            "#61",
+            "—"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Token",
+          "Price",
+          "24h %",
+          "7d %",
+          "1h %",
+          "Vol / Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "H (Humanity)",
+            "$0.0633",
+            "−14.3%",
+            "−74.8%",
+            "−3.5%",
+            "$69M / #234",
+            "CAPITULATION, day 3 post-exploit, vol/mcap 0.59"
+          ],
+          [
+            "2",
+            "KITE",
+            "$0.141",
+            "−11.6%",
+            "−24.7%",
+            "—",
+            "#127",
+            "extends morning −8.6%"
+          ],
+          [
+            "3",
+            "EDGE (edgeX)",
+            "$0.351",
+            "−10.8%",
+            "−1.1%",
+            "—",
+            "#225",
+            "extends morning −6.8%"
+          ],
+          [
+            "4",
+            "PUMP (Pump.fun)",
+            "$0.00127",
+            "−8.5%",
+            "−14.2%",
+            "—",
+            "#107",
+            "—"
+          ],
+          [
+            "5",
+            "THETA",
+            "$0.133",
+            "−8.3%",
+            "−13.7%",
+            "—",
+            "#213",
+            "—"
+          ],
+          [
+            "6",
+            "WLD (Worldcoin)",
+            "$0.499",
+            "−7.5%",
+            "−20.6%",
+            "—",
+            "#45",
+            "4th consecutive red day"
+          ],
+          [
+            "7",
+            "ZRO (LayerZero)",
+            "$0.869",
+            "−7.1%",
+            "−13.0%",
+            "—",
+            "#157",
+            "—"
+          ],
+          [
+            "8",
+            "APYUSD",
+            "$1.12",
+            "−7.1%",
+            "—",
+            "—",
+            "#205",
+            "yield-USD wrapper, NAV stress"
+          ],
+          [
+            "9",
+            "CHZ (Chiliz)",
+            "$0.0185",
+            "−6.8%",
+            "−20.9%",
+            "—",
+            "#174",
+            "—"
+          ],
+          [
+            "10",
+            "PEPE",
+            "$0.0000025",
+            "−6.7%",
+            "−14.5%",
+            "—",
+            "#65",
+            "—"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending_heading",
+        "trending_table"
+      ]
+    },
+    "trending_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Token",
+          "Rank",
+          "Change",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "ZANO",
+            "#191",
+            "+7.5%",
+            "TRENDING+UP"
+          ],
+          [
+            "2",
+            "M (MemeCore)",
+            "#64",
+            "−71.7%",
+            "TRENDING+DOWN, top-100 wipeout carries from morning −76%"
+          ],
+          [
+            "3",
+            "SYN (Synapse)",
+            "#280",
+            "+44.9%",
+            "filtered out of winners — sub-$1M liquidity, PUMP-RISK"
+          ],
+          [
+            "4",
+            "RAIN",
+            "#13",
+            "−1.6%",
+            "—"
+          ],
+          [
+            "5",
+            "BTC",
+            "#1",
+            "−2.4%",
+            "—"
+          ],
+          [
+            "6",
+            "PENGU",
+            "#118",
+            "−2.5%",
+            "—"
+          ],
+          [
+            "7",
+            "CARDS (Collector Crypt)",
+            "#302",
+            "+5.8%",
+            "—"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable_items"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4",
+        "notable_5"
+      ]
+    },
+    "notable_1": {
+      "type": "Alert",
+      "props": {
+        "title": "CX #261 +47% on Microcap Pump",
+        "message": "CX trading on $1.9M vol with 7d +260% — textbook microcap late-pump, PUMP-RISK",
+        "type": "warning"
+      }
+    },
+    "notable_2": {
+      "type": "Alert",
+      "props": {
+        "title": "SYN Trending +44.9% but Illiquid",
+        "message": "SYN trending +44.9% but filtered out for illiquidity — second pump signal of the day, treat with caution",
+        "type": "warning"
+      }
+    },
+    "notable_3": {
+      "type": "Alert",
+      "props": {
+        "title": "Yield-USD Wrappers NAV Stress",
+        "message": "APYUSD ($1.12) + APXUSD ($0.82, filtered into losers tail) both red — yield-USD wrappers running NAV stress",
+        "type": "warning"
+      }
+    },
+    "notable_4": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE day 2 of 6-24 HIGH 8/10 pick +8.6% — only large-cap DeFi holding the bid through a red tape",
+        "variant": "body"
+      }
+    },
+    "notable_5": {
+      "type": "Alert",
+      "props": {
+        "title": "H Day 3 Capitulation",
+        "message": "H day 3 capitulation, vol/mcap 0.59 = forced selling not being absorbed",
+        "type": "error"
+      }
+    }
+  }
+}
