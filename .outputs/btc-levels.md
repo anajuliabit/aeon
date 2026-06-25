@@ -1,11 +1,16 @@
 ## Summary
 
-**btc-levels run — 2026-06-25 ~08:42Z**
+**btc-levels run — 2026-06-25 13:09Z**
 
-- **Spot:** $61,649 | **June 24 UTC close:** $60,909
-- **Leverage-review (≤$45k):** no — spot $16k above trigger
-- **Breakdown alert (close < $60,500):** no — close $60,909 clears threshold by $409
-- **Reclaim $63,500 (flag=false):** no — spot $1,851 below level
-- **Reclaim $65,900 (flag=false):** no — spot $4,251 below level
+- **Spot:** $61,145
+- **2026-06-24 UTC daily close:** $60,909
 
-No alerts fired. Quiet run. State updated and committed (`memory/btc-levels-state.json`, `memory/logs/2026-06-25.md`).
+**Level evaluation:**
+| Level | Threshold | Result |
+|---|---|---|
+| Leverage-review | spot ≤ $45,000 | Clear — $61,145 well above |
+| Breakdown | prev close < $60,500 | Clear — $60,909 > $60,500 |
+| Reclaim $63,500 | spot ≥ $63,500, flag=false | Not triggered |
+| Reclaim $65,900 | spot ≥ $65,900, flag=false | Not triggered |
+
+No alerts fired. No notification sent. State and log committed.
