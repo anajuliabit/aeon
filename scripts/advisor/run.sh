@@ -651,7 +651,7 @@ echo "advisor: staged $STB_STAGED short-term trade(s)"
 TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" --arg band "$REGIME_BAND" --arg score "$REGIME_SCORE" '
   ([.recommendations[]? | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")]) as $trades
   | (.shortTermTrades // []) as $buys
-  | "REGIME: " + $band + " " + $score + "/100\n"
+  | "REGIME: " + $band + (if $score == "n/a" then "" else " " + $score + "/100" end) + "\n"
     + "📊 Advisor (" + $d + "): " + (.summary // "(no summary)") + "\n"
     + (if ($trades | length) == 0
        then "No new trades — defensive stance (see dashboard)."
