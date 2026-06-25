@@ -524,13 +524,13 @@
   },
   "on-chain-monitor": {
     "last_dispatch": "2026-06-25T13:01:55Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-24T13:09:00Z",
-    "total_runs": 28,
-    "total_successes": 19,
+    "last_status": "success",
+    "last_success": "2026-06-25T13:14:01Z",
+    "total_runs": 29,
+    "total_successes": 20,
     "total_failures": 9,
     "consecutive_failures": 0,
-    "success_rate": 0.68,
+    "success_rate": 0.69,
     "last_failed": "2026-06-18T19:05:12Z",
     "last_error": "262d35f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
