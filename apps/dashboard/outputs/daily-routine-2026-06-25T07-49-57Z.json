@@ -1,0 +1,1013 @@
+{
+  "root": "card-daily-routine",
+  "state": {},
+  "elements": {
+    "card-daily-routine": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-06-25"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-overview",
+        "sep-1",
+        "section-winners",
+        "sep-2",
+        "section-losers",
+        "sep-3",
+        "section-trending",
+        "sep-4",
+        "section-notable",
+        "sep-5",
+        "section-tweets",
+        "sep-6",
+        "section-paper",
+        "sep-7",
+        "section-github",
+        "sep-8",
+        "section-hn"
+      ]
+    },
+    "section-overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-overview",
+        "stack-prices",
+        "text-market-stats"
+      ]
+    },
+    "heading-overview": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Overview",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth",
+        "stat-sol",
+        "stat-hype"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$61,801",
+        "delta": "-1.3%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,654",
+        "delta": "-0.9%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$69.30",
+        "delta": "-0.2%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$64.32",
+        "delta": "+3.7%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "text-market-stats": {
+      "type": "Text",
+      "props": {
+        "text": "35/100 top-100 green · median top-50 -0.5% · chop tilting red, no capitulation in majors.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-winners": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-winners",
+        "winner-1",
+        "winner-2",
+        "winner-3",
+        "winner-4",
+        "winner-5"
+      ]
+    },
+    "heading-winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "winner-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w1-title",
+        "w1-stats",
+        "w1-badges"
+      ]
+    },
+    "w1-title": {
+      "type": "Text",
+      "props": {
+        "text": "1. BAS — $0.0460 (+34.3%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "w1-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d +41.9% · $30M vol / #235",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "w1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-pump-risk"
+      ]
+    },
+    "badge-pump-risk": {
+      "type": "Badge",
+      "props": {
+        "text": "PUMP-RISK",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "winner-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w2-title",
+        "w2-stats",
+        "w2-badges"
+      ]
+    },
+    "w2-title": {
+      "type": "Text",
+      "props": {
+        "text": "2. AAVE — $81.46 (+14.0%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "w2-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d +10.9% · $485M / #59",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "w2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-trending-up"
+      ]
+    },
+    "badge-trending-up": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+UP",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "winner-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w3-title",
+        "w3-stats"
+      ]
+    },
+    "w3-title": {
+      "type": "Text",
+      "props": {
+        "text": "3. LAB — $17.87 (+12.7%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "w3-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d +26.8% · $62M / #21",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "winner-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w4-title",
+        "w4-stats",
+        "w4-note"
+      ]
+    },
+    "w4-title": {
+      "type": "Text",
+      "props": {
+        "text": "4. UB — $0.0688 (+11.7%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "w4-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d -40.4% · $46M / #185",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "w4-note": {
+      "type": "Text",
+      "props": {
+        "text": "relief bounce in downtrend",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "winner-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w5-title",
+        "w5-stats"
+      ]
+    },
+    "w5-title": {
+      "type": "Text",
+      "props": {
+        "text": "5. JUP — $0.233 (+11.2%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "w5-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d +25.6% · $85M / #81",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-losers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-losers",
+        "loser-1",
+        "loser-2",
+        "loser-3",
+        "loser-4",
+        "loser-5"
+      ]
+    },
+    "heading-losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "loser-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l1-title",
+        "l1-stats",
+        "l1-note",
+        "l1-badge"
+      ]
+    },
+    "l1-title": {
+      "type": "Text",
+      "props": {
+        "text": "1. M (MemeCore) — $0.681 (-76.1%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "l1-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d -76.9% · $24M / #72",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "l1-note": {
+      "type": "Text",
+      "props": {
+        "text": "TOP-100 WIPEOUT",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "l1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "WIPEOUT",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "loser-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l2-title",
+        "l2-stats",
+        "l2-badge"
+      ]
+    },
+    "l2-title": {
+      "type": "Text",
+      "props": {
+        "text": "2. H — $0.064 (-37.7%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "l2-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d -75.4% · $65M / #233",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "l2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CAPITULATION",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "loser-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l3-title",
+        "l3-stats",
+        "l3-note"
+      ]
+    },
+    "l3-title": {
+      "type": "Text",
+      "props": {
+        "text": "3. BEAT — $1.85 (-30.9%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "l3-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d +12.0% · $61M / #99",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "l3-note": {
+      "type": "Text",
+      "props": {
+        "text": "pump fade (was +58% yesterday morning)",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "loser-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l4-title",
+        "l4-stats"
+      ]
+    },
+    "l4-title": {
+      "type": "Text",
+      "props": {
+        "text": "4. SKYAI — $0.276 (-10.2%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "l4-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d -24.5% · $28M / #135",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "loser-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l5-title",
+        "l5-stats"
+      ]
+    },
+    "l5-title": {
+      "type": "Text",
+      "props": {
+        "text": "5. KITE — $0.148 (-8.6%)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "l5-stats": {
+      "type": "Text",
+      "props": {
+        "text": "7d -20.4% · $22M / #123",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-trending": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-trending",
+        "text-trending"
+      ]
+    },
+    "heading-trending": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-trending": {
+      "type": "Text",
+      "props": {
+        "text": "ZANO, M [-76% wipeout], AAVE [+14% TRENDING+UP], BTC, HYPE, ETH, ARX [-12.2%]",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-notable",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "M MemeCore: rank-#72 -76% in 24h with -77% 7d — full collapse, paired with trending list = surrender",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "BEAT: 6-24 morning +58% → 6-24 afternoon +10% → 6-25 morning -31%. Textbook pump-and-fade",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE +14% [TRENDING+UP] — yesterday's HIGH 8/10 pick still working (target $87)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "BAS rank-#235 +34% on $30M vol — pump-risk, low rank",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-tweets",
+        "tweet-category-crypto",
+        "tweet-category-ai",
+        "tweet-category-dev"
+      ]
+    },
+    "heading-tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet-category-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-crypto-label",
+        "tweet-crypto-text"
+      ]
+    },
+    "tweet-crypto-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "tweet-crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "Ethereum Foundation slashes 20% staff / 40% budget; Vitalik defends as focus play. Binance has <1 week to secure EU license before June 30 cliff. L2 consolidation: Base+Arbitrum+Optimism hold 83% of all L2 DeFi TVL. Fed June minutes hawkish — 9/19 expect a hike this year.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet-category-ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-ai-label",
+        "tweet-ai-text"
+      ]
+    },
+    "tweet-ai-label": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "tweet-ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "Claude Fable 5 + Mythos 5 GA — same model split by safety classifiers (Fable public, Mythos for vetted cyber defenders). $10/$50 per M tokens. Anthropic walked back covert capability limits after researcher backlash.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet-category-dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-dev-label",
+        "tweet-dev-text"
+      ]
+    },
+    "tweet-dev-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "tweet-dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic accused Alibaba of illicit Claude capability extraction (Reuters). GitHub Copilot now ships Fable 5 — Stripe migrated 50M LOC in a day per Anthropic. Claude Agent SDK released with native MCP + sub-agent integration.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-paper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-paper",
+        "paper-story",
+        "paper-desc",
+        "paper-links"
+      ]
+    },
+    "heading-paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "paper-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Are We Ready For An Agent-Native Memory System?",
+        "href": "https://arxiv.org/abs/2606.24775",
+        "score": "↑44 HF daily"
+      },
+      "children": []
+    },
+    "paper-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Survey reframing LLM agent memory as a data-management system: persistent storage, retrieval, update, consolidation, lifecycle governance. Direct read for anyone building long-running agents.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "paper-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link-arxiv-abs",
+        "link-arxiv-pdf"
+      ]
+    },
+    "link-arxiv-abs": {
+      "type": "Link",
+      "props": {
+        "label": "arXiv",
+        "href": "https://arxiv.org/abs/2606.24775"
+      },
+      "children": []
+    },
+    "link-arxiv-pdf": {
+      "type": "Link",
+      "props": {
+        "label": "PDF",
+        "href": "https://arxiv.org/pdf/2606.24775"
+      },
+      "children": []
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-github": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-github",
+        "text-github"
+      ]
+    },
+    "heading-github": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-github": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues across watched repos in the last 24h.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-hn": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-hn",
+        "hn-1",
+        "hn-2",
+        "hn-3",
+        "hn-4",
+        "hn-5"
+      ]
+    },
+    "heading-hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "hn-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-1-link",
+        "hn-1-meta"
+      ]
+    },
+    "hn-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+        "href": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+        "source": "Reuters"
+      },
+      "children": []
+    },
+    "hn-1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "340 pts / 579 comments — first public IP-extraction claim against a Chinese frontier lab",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-2-link",
+        "hn-2-meta"
+      ]
+    },
+    "hn-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OpenAI unveils its first custom chip, built by Broadcom",
+        "href": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
+        "source": "TechCrunch"
+      },
+      "children": []
+    },
+    "hn-2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "663 pts / 373 comments — vertical integration against NVDA + Google TPU",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-3-link",
+        "hn-3-meta"
+      ]
+    },
+    "hn-3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Computer use in Gemini 3.5 Flash",
+        "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+        "source": "Google Blog"
+      },
+      "children": []
+    },
+    "hn-3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "207 pts / 132 comments — cheap-tier computer-use lands; Claude Computer Use no longer alone",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-4-link",
+        "hn-4-meta"
+      ]
+    },
+    "hn-4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR spam today looks like email spam in the early 2000s",
+        "href": "https://www.greptile.com/blog/prs-on-openclaw"
+      },
+      "children": []
+    },
+    "hn-4-meta": {
+      "type": "Text",
+      "props": {
+        "text": "212 pts / 123 comments — AI-bot PR floods on open source, signal/noise problem aging fast",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-5-link",
+        "hn-5-meta"
+      ]
+    },
+    "hn-5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Cloudflare self-managed OAuth for all",
+        "href": "https://blog.cloudflare.com/oauth-for-all/"
+      },
+      "children": []
+    },
+    "hn-5-meta": {
+      "type": "Text",
+      "props": {
+        "text": "123 pts — free OAuth provider, complicates Auth0/Clerk",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,47 +1,45 @@
-*daily routine — 2026-06-24*
+*Daily Routine — 2026-06-25*
 
-_post-cascade stabilization — BTC −0.47%, breadth meh, but BEAT prints +58% and UB extends −37%. tape calmer than 6-23 but not bouncing._
+_BTC -1.3% $61,801 · ETH -0.9% $1,654 · SOL -0.2% $69.30 · HYPE +3.7% $64.32 · 35/100 top-100 green · median top-50 -0.5% · chop tilting red, no capitulation in majors._
 
-*top winners (24h)*
-1. BEAT: $2.68 (+58.4%) · 7d +24.4% · #82 [TRENDING+UP MAJOR]
-2. BTW: $0.101 (+10.4%) · 7d +49.9% · #157 [carry from 6-23]
-3. DYDX: $0.144 (+8.5%) · 7d +13.5%
-4. GRASS: $0.443 (+6.8%) · #136 [TRENDING]
-5. TIBBIR: $0.110 (+6.6%)
-6. FARTCOIN: $0.129 (+4.8%)
-7. JTO: $0.66 (+4.3%)
-8. ZANO: $9.61 (+4.3%)
-9. ETHFI: $0.345 (+4.0%)
-10. AVAX: $6.39 (+3.6%) · #34 [first rank-≤40 green this week]
+*Top Winners (24h)*
+1. BAS — $0.0460 (+34.3%) · 7d +41.9% · $30M vol / #235 [PUMP-RISK]
+2. AAVE — $81.46 (+14.0%) · 7d +10.9% · $485M / #59 [TRENDING+UP]
+3. LAB — $17.87 (+12.7%) · 7d +26.8% · $62M / #21
+4. UB — $0.0688 (+11.7%) · 7d -40.4% · $46M / #185 (relief bounce in downtrend)
+5. JUP — $0.233 (+11.2%) · 7d +25.6% · $85M / #81
 
-*top losers (24h)*
-1. UB: $0.059 (−37.3%) · 7d −49.7% — extends 6-23 −33.6%, full giveback ongoing
-2. H: $0.103 (−16.0%) · 7d −61.4% — unlock day post-$36M exploit
-3. RE: $0.73 (−12.5%)
-4. WLD: $0.524 (−10.6%) · #45 [MAJOR, 3rd day red]
-5. GRAM: $1.56 (−8.8%) · #26 [MAJOR]
-6. EIGEN: $0.244 (−6.7%) — 3rd-day reversal of 6-22 HIGH 9/10 pick, at invalidation
-7. SKYAI −6.7%, B −6.6%, VELVET −6.4%, NIGHT −6.2%, VVV −5.7%, MORPHO −5.3%
+*Top Losers (24h)*
+1. M (MemeCore) — $0.681 (-76.1%) · 7d -76.9% · $24M / #72 — TOP-100 WIPEOUT
+2. H — $0.064 (-37.7%) · 7d -75.4% · $65M / #233 [CAPITULATION]
+3. BEAT — $1.85 (-30.9%) · 7d +12.0% · $61M / #99 — pump fade (was +58% yesterday morning)
+4. SKYAI — $0.276 (-10.2%) · 7d -24.5% · $28M / #135
+5. KITE — $0.148 (-8.6%) · 7d -20.4% · $22M / #123
 
-anchors: BTC $62,571 −0.47%, ETH $1,669 −1.03%, SOL $69.43 −1.13%, HYPE $62.04 −3.19%.
+*Trending*
+ZANO, M [-76% wipeout], AAVE [+14% TRENDING+UP], BTC, HYPE, ETH, ARX [-12.2%]
 
-*tweet roundup*
-*crypto* — Strategy bought 24,869 BTC for $2.01B (top-tier single buy). Bitmine added 101.9k ETH ($236M). institutional accumulation into the dip. SEC published first formal crypto-security classification framework.
-*ai* — Claude outage 6-23 14:02 UTC, peaked at 7,119 down-reports — all models hit, chat + Code. Anthropic split programmatic usage from chat sub limits 6-15: dedicated monthly credit for Agent SDK / GH Actions / 3rd-party. Fable 5 GA at 95% SWE-bench Verified, $10/$50 per M tokens.
-*dev* — Google donated A2A (Agent2Agent) protocol to Linux Foundation — vendor-neutral standard. Eclipse Theia AI IDE launched. Rust CLI proxy claiming 60–90% LLM-token reduction on common dev commands.
+*Notable*
+• M MemeCore: rank-#72 -76% in 24h with -77% 7d — full collapse, paired with trending list = surrender
+• BEAT: 6-24 morning +58% → 6-24 afternoon +10% → 6-25 morning -31%. Textbook pump-and-fade
+• AAVE +14% [TRENDING+UP] — yesterday's HIGH 8/10 pick still working (target $87)
+• BAS rank-#235 +34% on $30M vol — pump-risk, low rank
 
-*paper of the day*
-"AOHP: Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction" — THU-AIR · ↑21
-Android fork treating agents as first-class OS actors — adaptive UI, agent-native runtime, secure information flow. +21% task completion, −51% token cost vs vanilla AOSP. relevant: aeon's whole pain is agents wedged into application-centric OSes.
-https://arxiv.org/abs/2606.23449
+*Tweet Roundup*
+*Crypto:* Ethereum Foundation slashes 20% staff / 40% budget; Vitalik defends as focus play. Binance has <1 week to secure EU license before June 30 cliff. L2 consolidation: Base+Arbitrum+Optimism hold 83% of all L2 DeFi TVL. Fed June minutes hawkish — 9/19 expect a hike this year.
+*AI:* Claude Fable 5 + Mythos 5 GA — same model split by safety classifiers (Fable public, Mythos for vetted cyber defenders). $10/$50 per M tokens. Anthropic walked back covert capability limits after researcher backlash.
+*Dev:* Anthropic accused Alibaba of illicit Claude capability extraction (Reuters). GitHub Copilot now ships Fable 5 — Stripe migrated 50M LOC in a day per Anthropic. Claude Agent SDK released with native MCP + sub-agent integration.
 
-*github issues*
-no new issues across anajuliabit/* — GITHUB_ISSUES_OK.
+*Paper of the Day*
+"Are We Ready For An Agent-Native Memory System?" (↑44 HF daily) — survey reframing LLM agent memory as a data-management system: persistent storage, retrieval, update, consolidation, lifecycle governance. Direct read for anyone building long-running agents.
+[arXiv](https://arxiv.org/abs/2606.24775) · [PDF](https://arxiv.org/pdf/2606.24775)
 
-*hn digest*
-1. [policy] Fired by Google for creating the Workspace CLI (465p/285c) — https://news.ycombinator.com/item?id=48649011
-2. [devtools] FUTO Swipe — new on-device swipe-typing model (485p/147c) — https://news.ycombinator.com/item?id=48648619
-3. [science] The worthlessness of Vitamin D is mildly exaggerated (278p/188c) — https://news.ycombinator.com/item?id=48647486
-4. [security] Vulnerability reports are not special anymore — filippo (224p/120c) — https://news.ycombinator.com/item?id=48653216
-5. [agents] Qwen-AgentWorld: Language World Models for General Agents (69p/14c) — https://news.ycombinator.com/item?id=48654351
-6. [culture] In memory of the man who put red and green squiggles under words (329p/44c) — https://news.ycombinator.com/item?id=48648959
+*GitHub Issues*
+No new issues across watched repos in the last 24h.
+
+*HN Digest*
+1. [Anthropic says Alibaba illicitly extracted Claude AI model capabilities](https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/) (340pts/579c) — first public IP-extraction claim against a Chinese frontier lab. [Discuss](https://news.ycombinator.com/item?id=48664814)
+2. [OpenAI unveils its first custom chip, built by Broadcom](https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/) (663pts/373c) — vertical integration against NVDA + Google TPU. [Discuss](https://news.ycombinator.com/item?id=48663324)
+3. [Computer use in Gemini 3.5 Flash](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/) (207pts/132c) — cheap-tier computer-use lands; Claude Computer Use no longer alone. [Discuss](https://news.ycombinator.com/item?id=48662999)
+4. [PR spam today looks like email spam in the early 2000s](https://www.greptile.com/blog/prs-on-openclaw) (212pts/123c) — AI-bot PR floods on open source, signal/noise problem aging fast. [Discuss](https://news.ycombinator.com/item?id=48660579)
+5. [Cloudflare self-managed OAuth for all](https://blog.cloudflare.com/oauth-for-all/) (123pts) — free OAuth provider, complicates Auth0/Clerk. [Discuss](https://news.ycombinator.com/item?id=48668033)
