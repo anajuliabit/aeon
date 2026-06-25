@@ -385,4 +385,37 @@ PS_WF="$(cd "$(dirname "$0")/../.." && pwd)/.github/workflows/aeon.yml"
 check "workflow has tightened SKILL_MODEL regex" "$(grep -c 's/.*\[ ,{\]model: \*"' "$PS_WF")" "1"
 check "workflow has usepod_model regex"          "$(grep -c 's/.*usepod_model: \*"' "$PS_WF")" "1"
 
+# --- regime.sh: deterministic risk-on/off score from cached data ---
+RGM="$(cd "$(dirname "$0")" && pwd)/regime.sh"
+rgm_dir() { # writes synthetic cache into a fresh $D, echoes the dir
+  local d; d="$(mktemp -d)"
+  # $1 = trend: up|down ; $2 = fng value ; $3 = btc fundingHourly
+  local base=100000 step; [ "$1" = "up" ] && step=800 || step=-800
+  python3 - "$d/cg-btc.json" "$base" "$step" <<'PY'
+import json,sys
+path,base,step=sys.argv[1],float(sys.argv[2]),float(sys.argv[3])
+prices=[]; t=1700000000000
+for day in range(31):
+    p=base+step*day
+    for h in range(24):
+        prices.append([t,p]); t+=3600000
+json.dump({"prices":prices},open(path,"w"))
+PY
+  printf '{"data":[{"value":"%s"}]}' "$2" > "$d/fng.json"
+  printf '[{"coin":"BTC","fundingHourly":%s,"openInterest":1,"markPx":1}]' "$3" > "$d/hl-funding.json"
+  echo "$d"
+}
+D1="$(rgm_dir up 55 0.0000125)"; R1="$(D="$D1" bash "$RGM")"
+check "regime uptrend band BULL" "$(printf '%s' "$R1" | jq -r '.band')" "BULL"
+D2="$(rgm_dir down 45 0.0000125)"; R2="$(D="$D2" bash "$RGM")"
+check "regime downtrend band BEAR" "$(printf '%s' "$R2" | jq -r '.band')" "BEAR"
+D3="$(rgm_dir up 92 0.0000125)"; R3="$(D="$D3" bash "$RGM")"
+check "regime greed<=neutral score" "$(python3 -c "import json,sys;a=json.loads(sys.argv[1]);b=json.loads(sys.argv[2]);print('yes' if a['score']<=b['score'] else 'no')" "$R3" "$R1")" "yes"
+D4="$(rgm_dir up 55 0.0008)"; R4="$(D="$D4" bash "$RGM")"
+check "regime hot-funding lowers score" "$(python3 -c "import json,sys;a=json.loads(sys.argv[1]);b=json.loads(sys.argv[2]);print('yes' if a['score']<b['score'] else 'no')" "$R4" "$R1")" "yes"
+D5="$(mktemp -d)"; printf '{"data":[{"value":"50"}]}' > "$D5/fng.json"
+R5="$(D="$D5" bash "$RGM")"; RC5=$?
+check "regime sparse -> UNKNOWN" "$(printf '%s' "$R5" | jq -r '.band')" "UNKNOWN"
+check "regime sparse exit 0" "$RC5" "0"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
