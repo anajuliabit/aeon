@@ -1,0 +1,541 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-06-25",
+        "description": "Shape: ship sandbox-fix PR, document HYPE cross-slate + phishing kit, log AAVE +7.7%"
+      },
+      "children": [
+        "stack_all"
+      ]
+    },
+    "stack_all": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action_1",
+        "sep_1",
+        "action_2",
+        "sep_2",
+        "action_3",
+        "sep_3",
+        "action_4",
+        "sep_4",
+        "action_5",
+        "sep_5",
+        "footer_section"
+      ]
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h1_title",
+        "badge_1",
+        "text_1_desc",
+        "text_1_why_label",
+        "text_1_why_text",
+        "text_1_done_label",
+        "text_1_done_text",
+        "text_1_loop_label",
+        "badge_1_loop"
+      ]
+    },
+    "h1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. ship `.github/workflows/aeon.yml` capture-step fix as PR",
+        "level": "h3"
+      }
+    },
+    "badge_1": {
+      "type": "Badge",
+      "props": {
+        "text": "In Progress",
+        "variant": "secondary"
+      }
+    },
+    "text_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Patch the heredoc near L600 that reads and truncates skill output; current path loses long stdout and emits `output_tokens=0` in usage JSON. Tag body with ISS-025/019/020/021/024",
+        "variant": "body"
+      }
+    },
+    "text_1_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "text_1_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "22 chronic-tail skills sr<0.5 share the same `output_tokens=0` signature; one capture-path fix clears the cluster",
+        "variant": "body"
+      }
+    },
+    "text_1_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "text_1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR opened against main, body lists the 22-skill tail and links cluster issues",
+        "variant": "body"
+      }
+    },
+    "text_1_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "badge_1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-workflow-capture"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h2_title",
+        "badge_2",
+        "text_2_desc",
+        "text_2_why_label",
+        "text_2_why_text",
+        "text_2_done_label",
+        "text_2_done_text",
+        "text_2_loop_label",
+        "badge_2_loop"
+      ]
+    },
+    "h2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. append HYPE cross-slate consensus block to `memory/topics/crypto.md`",
+        "level": "h3"
+      }
+    },
+    "badge_2": {
+      "type": "Badge",
+      "props": {
+        "text": "In Progress"
+      }
+    },
+    "text_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "@NOIRSINGULARIS selective-liquidity slate (TAO/WLD/HYPE/ONDO/PENDLE) and @ct_hoppy value-accruing slate (BNB/JUP/HYPE/AERO) both publish HYPE; track 24-48h cross-correlation, flag double-bid coordination risk",
+        "variant": "body"
+      }
+    },
+    "text_2_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "text_2_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker 6-25 reflexivity flag #1 — published slates IS the trade, HYPE is the only ticker in both",
+        "variant": "body"
+      }
+    },
+    "text_2_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "text_2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "≥5-bullet entry under a \"HYPE cross-slate\" heading with both handle attributions, slate rosters, and a falsifier",
+        "variant": "body"
+      }
+    },
+    "text_2_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "badge_2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "hype-double-bid-coordination"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h3_title",
+        "stack_3_header",
+        "text_3_desc",
+        "text_3_why_label",
+        "text_3_why_text",
+        "text_3_done_label",
+        "text_3_done_text",
+        "text_3_loop_label",
+        "badge_3_loop"
+      ]
+    },
+    "h3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. add a Morpho cbBTC `type: position` entry to `memory/on-chain-watches.yml`",
+        "level": "h3"
+      }
+    },
+    "stack_3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_3",
+        "stat_3"
+      ]
+    },
+    "badge_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Completed"
+      }
+    },
+    "stat_3": {
+      "type": "Stat",
+      "props": {
+        "label": "cbBTC Supply",
+        "value": "$7,105"
+      }
+    },
+    "text_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "W1→Morpho GeneralAdapter1 $7,105 cbBTC supply confirmed on-chain 6-24 14:51Z, defi-monitor still NO_CONFIG day 18",
+        "variant": "body"
+      }
+    },
+    "text_3_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "text_3_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain activity now names the actual position; ends 18-day NO_CONFIG carry without waiting on operator",
+        "variant": "body"
+      }
+    },
+    "text_3_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "text_3_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "yaml entry committed with market address + collateral=cbBTC + protocol=morpho-blue + label, next defi-monitor run reads it",
+        "variant": "body"
+      }
+    },
+    "text_3_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "badge_3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-monitor-no-config"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h4_title",
+        "stack_4_header",
+        "text_4_desc",
+        "text_4_why_label",
+        "text_4_why_text",
+        "text_4_done_label",
+        "text_4_done_text",
+        "text_4_loop_label",
+        "badge_4_loop"
+      ]
+    },
+    "h4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. log AAVE position update in `memory/topics/crypto.md`",
+        "level": "h3"
+      }
+    },
+    "stack_4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_4",
+        "stat_4_entry",
+        "stat_4_spot"
+      ]
+    },
+    "badge_4": {
+      "type": "Badge",
+      "props": {
+        "text": "Completed"
+      }
+    },
+    "stat_4_entry": {
+      "type": "Stat",
+      "props": {
+        "label": "Entry",
+        "value": "$76.09",
+        "delta": "+7.69%",
+        "trend": "up"
+      }
+    },
+    "stat_4_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Spot",
+        "value": "$81.99"
+      }
+    },
+    "text_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Entry $76.09 (6-24 HIGH 8/10), spot $81.99 (+7.69%), day-2 [TRENDING+UP] in 4/20-breadth tape; decide hold-for-$87 vs trail stop to break-even",
+        "variant": "body"
+      }
+    },
+    "text_4_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "text_4_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "only large-cap DeFi sustaining bid through risk-off; today's UTC close < $60,500 is binary catalyst against",
+        "variant": "body"
+      }
+    },
+    "text_4_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "text_4_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "position note appended with current spot, decision recorded, and BTC-close-conditional unwind rule",
+        "variant": "body"
+      }
+    },
+    "text_4_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "badge_4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "aave-pick-management"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h5_title",
+        "badge_5",
+        "text_5_desc",
+        "text_5_contracts",
+        "text_5_why_label",
+        "text_5_why_text",
+        "text_5_done_label",
+        "text_5_done_text",
+        "text_5_loop_label",
+        "badge_5_loop"
+      ]
+    },
+    "h5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. write `memory/topics/onchain-phishing-patterns.md`",
+        "level": "h3"
+      }
+    },
+    "badge_5": {
+      "type": "Badge",
+      "props": {
+        "text": "Completed"
+      }
+    },
+    "text_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Codify kit progression from 6-23 single cyrillic ÚSDС bait to 6-25 3-bait kit (zero-value real USDC + real cbBTC + value-matched cyrillic ÚSDС)",
+        "variant": "body"
+      }
+    },
+    "text_5_contracts": {
+      "type": "Text",
+      "props": {
+        "text": "Attacker contract: 0xC3236716cbDC725b518AC0A5d830FBaDcfd05032 | Signer EOAs: 0x3959E4… + 0xcd8b9A… | Lookalike: 0x98E57e6799…",
+        "variant": "caption"
+      }
+    },
+    "text_5_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "text_5_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "detection baseline for future on-chain-monitor runs; same kit already escalated twice in 2 days, third escalation likely",
+        "variant": "body"
+      }
+    },
+    "text_5_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "text_5_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "file exists with ≥5 sections (kit-progression timeline, attacker contract methodology, lookalike pattern, cyrillic value-match technique, mitigation rules)",
+        "variant": "body"
+      }
+    },
+    "text_5_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "lead"
+      }
+    },
+    "badge_5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "phishing-kit-postmortem"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_heading",
+        "footer_text"
+      ]
+    },
+    "footer_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h4"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=55 logs=7 topics=11 prs=0 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

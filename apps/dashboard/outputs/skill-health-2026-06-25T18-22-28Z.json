@@ -1,0 +1,334 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-06-25"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_summary",
+        "sep1",
+        "degraded_section",
+        "sep2",
+        "warning_section",
+        "sep3",
+        "no_data_section",
+        "sep4",
+        "healthy_section",
+        "sep5",
+        "summary_stats"
+      ]
+    },
+    "status_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_degraded",
+        "text_systemic"
+      ]
+    },
+    "badge_degraded": {
+      "type": "Badge",
+      "props": {
+        "text": "DEGRADED (27)",
+        "variant": "destructive"
+      }
+    },
+    "text_systemic": {
+      "type": "Text",
+      "props": {
+        "text": "systemic: sandbox-truncation output_tokens=0 — 27 skills, unchanged 24h",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_degraded",
+        "degraded_table",
+        "text_more_degraded"
+      ]
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (top 5 by days-down, all cf=0)",
+        "level": "h3"
+      }
+    },
+    "degraded_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate",
+          "Days Down",
+          "Status"
+        ],
+        "rows": [
+          [
+            "vuln-scanner",
+            "7%",
+            "4d",
+            "WAIT-API (sandbox-truncation) → ISS-018"
+          ],
+          [
+            "skill-evals",
+            "33%",
+            "4d",
+            "INVESTIGATE"
+          ],
+          [
+            "self-improve",
+            "32%",
+            "2d",
+            "INVESTIGATE"
+          ],
+          [
+            "cost-report",
+            "10%",
+            "1.5d",
+            "WAIT-API (sandbox-truncation) → ISS-025"
+          ],
+          [
+            "reg-monitor",
+            "10%",
+            "1d",
+            "INVESTIGATE"
+          ]
+        ]
+      }
+    },
+    "text_more_degraded": {
+      "type": "Text",
+      "props": {
+        "text": "+22 more — see memory/issues/INDEX.md",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "warning_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_warning",
+        "warning_badges"
+      ]
+    },
+    "heading_warning": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 WARNING (5)",
+        "level": "h3"
+      }
+    },
+    "warning_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_defi",
+        "badge_onchain",
+        "badge_token_alert",
+        "badge_token_movers",
+        "badge_token_pick"
+      ]
+    },
+    "badge_defi": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-overview",
+        "variant": "secondary"
+      }
+    },
+    "badge_onchain": {
+      "type": "Badge",
+      "props": {
+        "text": "on-chain-monitor",
+        "variant": "secondary"
+      }
+    },
+    "badge_token_alert": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "secondary"
+      }
+    },
+    "badge_token_movers": {
+      "type": "Badge",
+      "props": {
+        "text": "token-movers",
+        "variant": "secondary"
+      }
+    },
+    "badge_token_pick": {
+      "type": "Badge",
+      "props": {
+        "text": "token-pick",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "no_data_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_no_data",
+        "no_data_badges"
+      ]
+    },
+    "heading_no_data": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "no_data_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_autoresearch",
+        "badge_scorecard",
+        "badge_fork_gap"
+      ]
+    },
+    "badge_autoresearch": {
+      "type": "Badge",
+      "props": {
+        "text": "autoresearch (workflow_dispatch)",
+        "variant": "outline"
+      }
+    },
+    "badge_scorecard": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard (Mon)",
+        "variant": "outline"
+      }
+    },
+    "badge_fork_gap": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-gap (Sun)",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_healthy",
+        "text_healthy"
+      ]
+    },
+    "heading_healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "text_healthy": {
+      "type": "Text",
+      "props": {
+        "text": "9 skills"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_open_issues",
+        "stat_filed",
+        "stat_resolved"
+      ]
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "14"
+      }
+    },
+    "stat_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed this run",
+        "value": "0"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}

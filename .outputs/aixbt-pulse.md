@@ -1,17 +1,18 @@
-*AIXBT Pulse — 2026-06-25 09:00Z*
+*AIXBT Pulse — 2026-06-25 21:00Z*
 
 CRYPTO
-- BTC $1B+ liquidations, ETF -$470M, $10B options expiry Friday at $72K max pain — the options book is eating longs, not sentiment
-- $HYPE Q2 +72.6%, FDV > SOL; Solana DEX $883M > major CEXs
+- BTC $58K — lowest since Sep 2024. 53% of supply underwater. STRC/MSTR unwind fears dominant.
+- Tokenized equities on Solana hit $553M ATH — flipped memecoin volume for the first time. Ondo tokenized SpaceX $10M. Demographic shift live, not projected.
 
 TRADFI
-- Micron Q3 record margins — AI memory longs revived, Nasdaq futures lifted
-- PCE print incoming; sticky core inflation keeping rate-hike odds in play for yields and dollar
+- May PCE core 3.4% YoY confirmed. Higher-for-longer locked. Nasdaq four-day slide — concentration unwind, Apple drags despite Micron beat.
+- China rare earth export curbs escalating trade supply risk for US tech hardware — new this pull.
 
 NEW THIS PULL
-- $HYPE FDV surpasses SOL — structural, not just a number
-- RLUSD Japan + US credit union stablecoin pilots + Ethena/Sky yield wars
-- MIM depeg + MemeCore -85% + STRC $0.80 — reflexive loop stress-testing across three asset structures simultaneously
+- Tokenized equities > memecoins on Solana ($553M ATH) — structural demand shift
+- Kazakhstan SOLZ ETF + Grayscale SOL staking 7% + Kraken-Maple-Aave — institutional rails wiring in during panic
+- China rare earth curbs — new hardware compression vector
+- Oil reversed: Hormuz frictions lift oil vs 09:00's "ceasefire signals press oil lower"
 
 BRIDGE
-- $72K max pain Friday — dealers short gamma all the way there. $1B liquidation cascade + ETF outflows is the mechanism, not organic selling. meanwhile stablecoins (RLUSD Japan, US credit unions) are building dollar-denominated infrastructure exactly when PCE makes rate direction unclear. the stablecoin supply absorbs uncertainty the BTC books are releasing as liquidations.
+- PCE 3.4% + BTC $58K close the MSTR/STRC carry thesis on both legs. The Strategy unwind trade needed cheap capital and BTC catching a bid — neither. Meanwhile institutional SOL access (SOLZ, staking, DeFi rails) is completing on the dip. Retail liquidates into infrastructure institutions are building. That divergence isn't timing noise. It's who owns the next entry.

@@ -1,0 +1,434 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-25"
+      },
+      "children": [
+        "tldr",
+        "headlines-sep",
+        "headlines-section",
+        "notable-sep",
+        "notable-section",
+        "decisions-sep",
+        "decisions-section",
+        "footer"
+      ]
+    },
+    "tldr": {
+      "type": "Text",
+      "props": {
+        "text": "Solid execution day — SEI pick staged, phishing 3-bait kit logged and known-addresses.yml seeded, MEMORY.md consolidated; ISS-025 fix PR still unshipped at 36h",
+        "variant": "lead"
+      }
+    },
+    "headlines-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-title",
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headlines-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-title",
+        "h1-text",
+        "h1-link"
+      ]
+    },
+    "h1-title": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor",
+        "variant": "lead"
+      }
+    },
+    "h1-text": {
+      "type": "Text",
+      "props": {
+        "text": "phishing 3-bait kit (real USDC+cbBTC+cyrillic clone); known-addresses.yml seeded"
+      }
+    },
+    "h1-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/known-addresses.yml",
+        "href": "memory/known-addresses.yml"
+      }
+    },
+    "headline-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-title",
+        "h2-text",
+        "h2-link"
+      ]
+    },
+    "h2-title": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick",
+        "variant": "lead"
+      }
+    },
+    "h2-text": {
+      "type": "Text",
+      "props": {
+        "text": "SEI HIGH 9/10 $0.0584, exit $0.069 / inv $0.054 / 14d"
+      }
+    },
+    "h2-link": {
+      "type": "Link",
+      "props": {
+        "label": ".pending-picks/2026-06-25-token-pick.json",
+        "href": ".pending-picks/2026-06-25-token-pick.json"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-title",
+        "h3-text",
+        "h3-link"
+      ]
+    },
+    "h3-title": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "lead"
+      }
+    },
+    "h3-text": {
+      "type": "Text",
+      "props": {
+        "text": "MCP×broker+game-engine cluster, CNVS $20k/12d, Base 15M agentic txns"
+      }
+    },
+    "h3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OptimaiNetwork on X",
+        "href": "https://x.com/OptimaiNetwork/status/2069796656774533360",
+        "source": "X"
+      }
+    },
+    "headline-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-title",
+        "h4-text",
+        "h4-link"
+      ]
+    },
+    "h4-title": {
+      "type": "Text",
+      "props": {
+        "text": "reflect+goal-tracker",
+        "variant": "lead"
+      }
+    },
+    "h4-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md consolidated; skill-freshness-warn → DONE, 5 stale entries pruned"
+      }
+    },
+    "h4-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/MEMORY.md",
+        "href": "memory/MEMORY.md"
+      }
+    },
+    "headline-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-title",
+        "h5-text"
+      ]
+    },
+    "h5-title": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter",
+        "variant": "lead"
+      }
+    },
+    "h5-text": {
+      "type": "Text",
+      "props": {
+        "text": "5 actions queued (avg 4.2/5): ISS-025 PR, HYPE cross-slate doc, defi-monitor YAML, AAVE update, phishing-patterns topic"
+      }
+    },
+    "notable-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-title",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n1-title",
+        "n1-text"
+      ]
+    },
+    "n1-title": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending",
+        "variant": "lead"
+      }
+    },
+    "n1-text": {
+      "type": "Text",
+      "props": {
+        "text": "4 picks: apple/container (17× avg velocity), stablyai/orca, google-labs-code/design.md, kunchenguid/no-mistakes"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n2-title",
+        "n2-text"
+      ]
+    },
+    "n2-title": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "lead"
+      }
+    },
+    "n2-text": {
+      "type": "Text",
+      "props": {
+        "text": "5 bear frames dead in 24h; 4 NEW rising (prediction-markets, selective-liquidity slate, value-accruing tokens, asset-specific fundamentals)"
+      }
+    },
+    "notable-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n3-title",
+        "n3-text"
+      ]
+    },
+    "n3-title": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "lead"
+      }
+    },
+    "n3-text": {
+      "type": "Text",
+      "props": {
+        "text": "0 net-new KEV first time this week; 48 npm malware (HubSpot ×9 + LeoSDK ×3)"
+      }
+    },
+    "notable-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4-title",
+        "n4-text"
+      ]
+    },
+    "n4-title": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine",
+        "variant": "lead"
+      }
+    },
+    "n4-text": {
+      "type": "Text",
+      "props": {
+        "text": "full clean: token-movers, paper-pick, hn-digest, tweet-roundup (WebSearch fallback)"
+      }
+    },
+    "notable-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n5-title",
+        "n5-text"
+      ]
+    },
+    "n5-title": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest",
+        "variant": "lead"
+      }
+    },
+    "n5-text": {
+      "type": "Text",
+      "props": {
+        "text": "4 new signals; yield-stables playbook aligned with risk-off F&G 12"
+      }
+    },
+    "decisions-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-title",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decisions-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h3"
+      }
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-text",
+        "d1-link"
+      ]
+    },
+    "d1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Merge PR #146 (drop disabled hacker-news-digest from skill-evals)"
+      }
+    },
+    "d1-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/146",
+        "href": "https://github.com/anajuliabit/aeon/pull/146"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "Open ISS-025 capture-step fix PR (queued 6-24 18:14Z — 36h unshipped)"
+      }
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "Top up Team 3a8b4c1e XAI credit (day 10 blocked)"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "Add type:pool/type:position to memory/on-chain-watches.yml (defi-monitor NO_CONFIG day 18)"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "+11 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

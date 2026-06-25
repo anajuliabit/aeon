@@ -1,1 +1,1 @@
-Memory consolidated — 2026-06-24. MEMORY.md pruned (6 → 5 goals, deduplicated 'Recently Cleared'). 7d log window reviewed; sandbox-truncation cluster ISS-019/020/021/024/025 still systemic but cost-report cf=30→0 overnight + reg-monitor first end-to-end clean today. AAVE pick 8/10 $76.09 + Morpho curator-risk principle recorded + BTC sub-$60,500 16:38Z re-armed both reclaim flags. Fleet 6-24 deltas appended to fleet.md.
+Memory consolidated — 2026-06-25

@@ -1,0 +1,339 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-25 21:00Z"
+      },
+      "children": [
+        "crypto-section",
+        "sep-1",
+        "tradfi-section",
+        "sep-2",
+        "new-section",
+        "sep-3",
+        "bridge-section"
+      ]
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-heading",
+        "btc-item",
+        "tokenized-item"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "btc-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-stat",
+        "btc-details-1",
+        "btc-details-2",
+        "btc-details-3"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$58K",
+        "delta": "lowest since Sep 2024"
+      }
+    },
+    "btc-details-1": {
+      "type": "Text",
+      "props": {
+        "text": "53% of supply underwater"
+      }
+    },
+    "btc-details-2": {
+      "type": "Text",
+      "props": {
+        "text": "STRC/MSTR unwind fears dominant"
+      }
+    },
+    "tokenized-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tokenized-stat",
+        "tokenized-details-1",
+        "tokenized-details-2",
+        "tokenized-details-3"
+      ]
+    },
+    "tokenized-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Tokenized equities on Solana",
+        "value": "$553M",
+        "delta": "ATH"
+      }
+    },
+    "tokenized-details-1": {
+      "type": "Text",
+      "props": {
+        "text": "Flipped memecoin volume for the first time"
+      }
+    },
+    "tokenized-details-2": {
+      "type": "Text",
+      "props": {
+        "text": "Ondo tokenized SpaceX $10M"
+      }
+    },
+    "tokenized-details-3": {
+      "type": "Text",
+      "props": {
+        "text": "Demographic shift live, not projected"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi-heading",
+        "pce-item",
+        "nasdaq-details",
+        "china-alert"
+      ]
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "pce-item": {
+      "type": "Stat",
+      "props": {
+        "label": "May PCE core",
+        "value": "3.4%",
+        "delta": "YoY confirmed"
+      }
+    },
+    "nasdaq-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nasdaq-text-1",
+        "nasdaq-text-2"
+      ]
+    },
+    "nasdaq-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Higher-for-longer locked"
+      }
+    },
+    "nasdaq-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "Nasdaq four-day slide — concentration unwind, Apple drags despite Micron beat"
+      }
+    },
+    "china-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "China rare earth export curbs",
+        "message": "Escalating trade supply risk for US tech hardware — new this pull",
+        "type": "warning"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-heading",
+        "new-item-1",
+        "new-item-2",
+        "new-item-3",
+        "new-item-4"
+      ]
+    },
+    "new-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "new-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-1-badge",
+        "new-1-text"
+      ]
+    },
+    "new-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Structural demand shift",
+        "variant": "secondary"
+      }
+    },
+    "new-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Tokenized equities > memecoins on Solana ($553M ATH)"
+      }
+    },
+    "new-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-2-badge",
+        "new-2-text",
+        "new-2-stat"
+      ]
+    },
+    "new-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Institutional infrastructure",
+        "variant": "secondary"
+      }
+    },
+    "new-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Kazakhstan SOLZ ETF + Kraken-Maple-Aave — institutional rails wiring in during panic"
+      }
+    },
+    "new-2-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Grayscale SOL staking",
+        "value": "7%"
+      }
+    },
+    "new-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-3-badge",
+        "new-3-text"
+      ]
+    },
+    "new-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Hardware compression vector",
+        "variant": "secondary"
+      }
+    },
+    "new-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "China rare earth curbs — new hardware compression vector"
+      }
+    },
+    "new-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-4-badge",
+        "new-4-text"
+      ]
+    },
+    "new-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Oil market reversal",
+        "variant": "secondary"
+      }
+    },
+    "new-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "Oil reversed: Hormuz frictions lift oil vs 09:00's \"ceasefire signals press oil lower\""
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-heading",
+        "bridge-content"
+      ]
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge-content": {
+      "type": "Text",
+      "props": {
+        "text": "PCE 3.4% + BTC $58K close the MSTR/STRC carry thesis on both legs. The Strategy unwind trade needed cheap capital and BTC catching a bid — neither. Meanwhile institutional SOL access (SOLZ, staking, DeFi rails) is completing on the dip. Retail liquidates into infrastructure institutions are building. That divergence isn't timing noise. It's who owns the next entry.",
+        "variant": "body"
+      }
+    }
+  }
+}

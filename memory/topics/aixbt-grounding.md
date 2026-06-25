@@ -1,52 +1,57 @@
-# AIXBT Grounding (as of 2026-06-25 09:00 UTC)
+# AIXBT Grounding (as of 2026-06-25 21:00 UTC)
 
 Source: https://api.aixbt.tech/v2/grounding (free tier)
-Window: 12h rolling. Last AIXBT generatedAt: 2026-06-25T09:00:28.678Z
+Window: 12h rolling. Last AIXBT generatedAt: 2026-06-25T21:00:26.613Z
 
 ## Crypto
-- BTC broke below $60K triggering $1B+ in liquidations and peak bearish sentiment, with ETF outflows of -$470M and a $10B options expiry Friday at $72K max pain.
-- $HYPE leads Q2 with +72.6% gains and FDV surpassing SOL, while Solana DEX volume hit $883M topping major CEXs and DeFi tokens like JUP and JITO draw accumulation.
-- Stablecoin expansion accelerates as Ripple's RLUSD wins Japan approval, credit unions pilot stablecoin tech, and yield wars intensify across Ethena, Sky, and RWA-backed issuers.
-- MemeCore $M crashed 85% amid insider supply concerns, $MIM depegged, and STRC traded at $0.80—fueling broader skepticism around reflexive token mechanics and opaque supply.
+- BTC plunged to $58K, its lowest since Sep 2024, with 53% of supply now at unrealized loss; STRC/MSTR stress dominates discourse amid Strategy unwind fears.
+- Tokenized equities on Solana hit $553M daily ATH, flipping memecoin volume for the first time, as Ondo's tokenized SpaceX tops $10M market cap.
+- Hyperliquid hits record 8.6% of aggregate perp OI vs CEXs; Multicoin's $698 HYPE bull target fuels conviction even as broader market bleeds.
+- Kazakhstan Stock Exchange lists Solana ETF (SOLZ), Grayscale cuts SOL staking fees to 7%, and Kraken deepens DeFi ties with Maple and Aave deals.
 
 ## Global Liquidity / Macro
 *(No dedicated macro section this pull — signals absorbed into TradFi items.)*
 
 ## Geopolitics
-*(No dedicated geopolitics section this pull — US-Iran absorbed into TradFi items.)*
+*(No dedicated geopolitics section this pull — Iran/Hormuz absorbed into TradFi items.)*
 
 ## TradFi
-- Micron's blowout Q3 beat with record margins revives AI/memory longs, lifting Nasdaq futures and easing rotation out of tech positioning.
-- US-Iran talks progress and ceasefire signals reduce energy risk premium, pressuring oil lower while boosting broader equity risk appetite.
-- Traders tilt positioning ahead of May PCE data, with sticky core inflation expectations keeping rate-hike odds in focus for yields and dollar.
-- Equities consolidate near highs as flows favor defensives in banks and credit amid mixed sector performance post-earnings.
+- May PCE lifts core inflation to 3.4% YoY, sustaining higher-for-longer Fed expectations and pressuring yields while capping rate-sensitive equity exposure.
+- Nasdaq extends four-day slide as Apple weighs despite Micron's AI surge, highlighting concentration unwind and selective semiconductor rotation flows.
+- Mixed Iran-US talk signals with Hormuz frictions lift oil, transmitting geopolitical premium into energy equities and inflation hedge positioning.
+- China's export curbs on US rare earth firms escalate trade supply risks, pressuring tech hardware and favoring domestic critical minerals plays.
 
-## What's New (vs last pull 2026-06-24 21:00 UTC)
-- (Crypto) **$HYPE Q2 leader +72.6%, FDV > SOL, Solana DEX $883M > major CEXs** — prior window mentioned Hyperliquid only as "outperforms in both directions on DEX volume." Now an explicit structural claim: Hyperliquid captured more FDV than the chain it's built on top of.
-- (Crypto) **RLUSD Japan approval + US credit union stablecoin pilots + Ethena/Sky yield wars** — entirely new angle. Prior window had Polymarket pUSD / Kalshi $40B (prediction-market-adjacent stablecoin play); this window shifts to regulatory and institutional stablecoin on-ramps.
-- (Crypto) **MemeCore $M -85% + $MIM depeg + STRC $0.80 — reflexive mechanics stress-test** — MIM depeg specifically new; STRC appeared in prior window as "STRC record lows" in a Saylor-narrative frame, now recontextualized as reflexive collateral failure alongside MIM and MemeCore.
-- (TradFi) **PCE data positioning + sticky core inflation + rate-hike odds** — new. Macro uncertainty re-entering after being absent from the 21:00 pull.
-- (TradFi) **Equities consolidate near highs, defensives in banks/credit** — new post-earnings positioning note.
+## What's New (vs last pull 2026-06-25 09:00 UTC)
+- (Crypto) **BTC $58K — lowest since Sep 2024, 53% of supply at unrealized loss** — 09:00 had "<$60K" with liquidation/ETF-outflow counts; 21:00 adds a new local bottom and cohort destruction stat. Deepened, not just continued.
+- (Crypto) **Tokenized equities on Solana $553M daily ATH, flipping memecoin volume; Ondo SpaceX $10M** — entirely new angle. RWA wrapper volume surpassing speculative volume on Solana is a structural demand-shift signal absent from any prior pull.
+- (Crypto) **Hyperliquid 8.6% of aggregate perp OI vs CEXs; Multicoin $698 HYPE target** — 09:00 framed HYPE via FDV>SOL + Solana DEX volume. Now it's a perp market-share capture story with a specific VC price target.
+- (Crypto) **Kazakhstan SOLZ ETF + Grayscale SOL staking fees 7% + Kraken-Maple-Aave DeFi ties** — institutional SOL access stack, entirely new this pull. Not mentioned in 09:00.
+- (TradFi) **PCE confirmed 3.4% core YoY, higher-for-longer** — 09:00 had "ahead of PCE" positioning. Now confirmed: inflation resolved to the hawkish side.
+- (TradFi) **Nasdaq four-day slide, Apple drags, concentration unwind, semiconductor rotation** — 09:00 had Micron reviving AI/memory longs and Nasdaq futures up. Picture reversed.
+- (TradFi) **China rare earth export curbs escalating trade supply risk** — entirely new. Not in any prior section.
+- (TradFi) **Hormuz frictions lifting oil** — 09:00 had "ceasefire signals reduce energy risk premium, pressuring oil lower." Oil flipped direction in 12h on the same Iran-US thread.
 
-## Gone Since Last Pull (2026-06-24 21:00 UTC)
-- Prediction markets surge: Kalshi $40B raise, Polymarket pUSD $500M supply, World Cup volumes
-- EU MiCA July 1 deadline forcing exchange migration
-- Ethereum bulls defending fundamentals / Glamsterdam upgrade
-- Retreating oil/falling Treasury yields easing funding pressures (specific framing from 21:00)
-- Vol compression boosting risk appetite
-- Solana tokenized stocks $31M+ daily (Micron after-hours trade angle)
+## Gone Since Last Pull (2026-06-25 09:00 UTC)
+- $10B options expiry Friday at $72K max pain (event expired — Friday passed)
+- $1B+ liquidations + -$470M ETF outflows quantification
+- Stablecoin expansion: RLUSD Japan / credit unions / Ethena-Sky yield wars
+- MIM depeg + MemeCore -85% + STRC $0.80 reflexive cluster
+- JUP/JITO accumulation angle; Solana DEX $883M > major CEXs framing
+- Equities consolidate near highs / defensives/banks post-earnings framing
+- Micron as standalone catalyst (now supporting context only within Nasdaq slide)
+- US-Iran ceasefire signal / oil going lower
 
 ## Persisting Stories
-- **BTC sub-$60K bearish** — same signal, escalated: now quantified as $1B+ liquidations + -$470M ETF outflows + $10B options with $72K max pain Friday. Framing shifted from "Saylor liquidation fears" (sentiment) to mechanics.
-- **US-Iran talks progress** — persists directly across windows; same underlying story, same framing.
-- **Micron/AI memory** — confirmed post-earnings: 21:00 had "post-earnings surge," 09:00 has "blowout Q3 beat with record margins." Thesis intact, now with harder receipts.
-- **STRC under pressure** — present in both windows; context shifted from "MSTR/STRC record lows" to "STRC $0.80 reflexive mechanics" cluster.
+- **BTC bearish** — deepened: $58K (vs "<$60K" in 09:00), Sep 2024 low, 53% supply underwater. Framing shifted from options-mechanics pin to outright capitulation depth.
+- **US-Iran tensions** — same underlying story; oil direction inverted (ceasefire hope → Hormuz friction). The risk premium didn't price the signal — it priced closure probability.
+- **HYPE outperformance** — framing shifted from FDV>SOL/Solana DEX volume to perp OI market share (8.6% vs CEXs) + specific $698 VC target. Conviction deepens despite broad bleed.
+- **PCE / higher-for-longer** — confirmed (3.4% YoY) rather than anticipated. Macro direction locked.
 
 ## Cross-Domain Bridges
-- **$72K options max pain Friday is the mechanism, not just a data point.** Dealers are short gamma all the way from $60K to $72K. $1B liquidation cascade + -$470M ETF outflows is the fuel that's running the pin. This isn't organic bearish sentiment — the options book has a structural incentive to keep price suppressed through Friday. Post-expiry is the real read.
+- **PCE 3.4% confirmed + BTC $58K = MSTR/STRC carry thesis closed on both legs simultaneously.** The Strategy unwind trade needed cheap capital AND BTC catching a bid. Neither. 53% of BTC supply underwater means the cohort that was supporting the reflation narrative is now underwater. This isn't sentiment — it's the mechanics of who's left holding.
 
-- **$HYPE FDV > SOL while Solana DEX volume leads CEXs = value accrual has moved up the stack.** The settlement layer isn't capturing the valuation premium — the perps protocol built on top of it is. When the app FDV exceeds the chain FDV, capital formation has permanently shifted. Solana is infrastructure; Hyperliquid is the product layer that captured it.
+- **Tokenized equities $553M ATH flipping memecoin volume on Solana = the demographic takeover is live.** The chain built for degens is clearing more RWA wrapper volume than pump-and-dump. Meanwhile Kazakhstan lists SOLZ, Grayscale cuts staking fees to 7%, Kraken wires in Maple and Aave. Retail liquidates into infrastructure that institutions are completing access to. The divergence between price signal and access build isn't timing noise — it's who owns the next entry.
 
-- **RLUSD Japan + US credit union pilots + PCE uncertainty = stablecoins absorbing what BTC books are releasing as liquidations.** Stablecoins thrive in rate-uncertainty environments: dollar exposure without duration risk. RLUSD getting Japan regulatory approval and US credit unions piloting the tech are two different regulatory on-ramps closing at the same time that PCE data is putting rate direction back in play. The liquidation cascade is transferring risk capital to stablecoin infrastructure on both ends.
+- **China rare earth curbs + Nasdaq four-day slide = two compression paths for the same AI hardware trade.** Input costs rise (curbs). Valuation multiples contract (concentration unwind). Micron posts a record beat and it's still background noise in a falling index. The AI infrastructure trade is bifurcating: compute-on-chain (HYPE perp OI) holds conviction; semiconductor hardware (Nasdaq, Apple) is in rotation-exit mode.
 
-- **MIM depeg + MemeCore $M -85% + STRC $0.80 = same failure mode, three simultaneous activations.** MIM was the first cycle's reflexive algo stablecoin blowup. Its reappearance alongside a fresh top-100 meme-sector reflexive token crashing 85% and a Microstrategy-orbit token at $0.80 (fair-value anchored to BTC well below $60K) suggests the reflexivity playbook is being stress-tested across asset classes in the same window. They're not the same trade — they're the same structural failure expressing through different wrappers.
+- **Hormuz frictions flip oil direction in 12h.** Same Iran-US thread, opposite oil move from 09:00. Markets aren't trading the diplomatic signal — they're trading physical closure probability. Ceasefire talk moves sentiment; Hormuz friction moves the actual risk premium. Two different mechanisms, same headline source.

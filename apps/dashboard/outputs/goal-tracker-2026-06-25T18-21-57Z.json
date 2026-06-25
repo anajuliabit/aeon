@@ -1,0 +1,335 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-06-25",
+        "description": "5 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 1 done (overall ↑ improving — skill-freshness cleared, others held flat)"
+      },
+      "children": [
+        "status_section",
+        "sep_1",
+        "blocked_section",
+        "sep_2",
+        "on_track_section",
+        "sep_3",
+        "done_section",
+        "sep_4",
+        "sources_section"
+      ]
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_at_risk",
+        "stat_needs_attention",
+        "stat_on_track",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_at_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_needs_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_on_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "2"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "1"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "blocked_heading",
+        "blocked_item_1",
+        "blocked_item_2"
+      ]
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "blocked_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_1_title",
+        "blocked_1_detail",
+        "blocked_1_action_label",
+        "blocked_1_action"
+      ]
+    },
+    "blocked_1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "XAI quota recovery",
+        "level": "h4"
+      }
+    },
+    "blocked_1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator credit top-up for Team 3a8b4c1e since 2026-06-16 (day 10). Prefetched .xai-cache covered narrative-tracker/list-digest today; daily-routine tweet-roundup still on WebSearch fallback.",
+        "variant": "body"
+      }
+    },
+    "blocked_1_action_label": {
+      "type": "Text",
+      "props": {
+        "text": "Action:",
+        "variant": "caption"
+      }
+    },
+    "blocked_1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Top up Team 3a8b4c1e monthly credit",
+        "variant": "body"
+      }
+    },
+    "blocked_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_2_title",
+        "blocked_2_detail",
+        "blocked_2_action_label",
+        "blocked_2_action"
+      ]
+    },
+    "blocked_2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator on-chain config",
+        "level": "h4"
+      }
+    },
+    "blocked_2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator for type: pool/type: position entries + ALCHEMY_API_KEY since 2026-06-08 (defi-monitor NO_CONFIG day 18, key absent day 9). on-chain-monitor still green on Blockscout keyless. Operator did seed memory/known-addresses.yml today — partial progress.",
+        "variant": "body"
+      }
+    },
+    "blocked_2_action_label": {
+      "type": "Text",
+      "props": {
+        "text": "Action:",
+        "variant": "caption"
+      }
+    },
+    "blocked_2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Add type:pool entries to memory/on-chain-watches.yml and set ALCHEMY_API_KEY",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on_track_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "on_track_heading",
+        "on_track_item_1",
+        "on_track_item_2"
+      ]
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "on_track_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_1_title",
+        "on_track_1_detail"
+      ]
+    },
+    "on_track_1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "level": "h4"
+      }
+    },
+    "on_track_1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 35+ activity/14d (→ flat). 22-skill chronic tail unchanged in today's 08:43Z + 14:53Z heartbeats, all sharing output_tokens=0 signature. cost-report cf=0 holds since 6-24 03:48Z recovery (sr still 10%). ISS-025 capture-fix PR flagged by action-converter 6-24 18:14Z (quality 4.6/5) but not yet opened.",
+        "variant": "body"
+      }
+    },
+    "on_track_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_2_title",
+        "on_track_2_detail"
+      ]
+    },
+    "on_track_2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "BTC hard levels",
+        "level": "h4"
+      }
+    },
+    "on_track_2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 35+ activity/14d (→ flat). btc-levels ran 4x today (00:51/04:51/08:42/13:09/16:39Z). Spot range 6-25 $59,317–$61,801, daily close 6-24 $60,909 (above $60,500 breakdown threshold, no alerts fired). Reclaim flags still false (already triggered 6-11/6-15).",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "done_heading",
+        "done_item"
+      ]
+    },
+    "done_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h2"
+      }
+    },
+    "done_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done_1_title",
+        "done_1_detail"
+      ]
+    },
+    "done_1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "skill-freshness FRESHNESS_WARN",
+        "level": "h4"
+      }
+    },
+    "done_1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Cleared 2026-06-25 (skill-analytics ran 6-24, resolving operator-scorecard stale-dep that had persisted since 2026-06-21; skill-freshness 6-25 returned FRESHNESS_OK)",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_detail"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources_detail": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

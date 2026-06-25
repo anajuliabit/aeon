@@ -1,7 +1,7 @@
 {
   "hash": "a7b3f1c9d2e8466891a5c7e3bf48d2e7f6a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2",
-  "last_notified_at": "2026-06-24T18:14:00Z",
-  "last_run_at": "2026-06-24T18:14:00Z",
+  "last_notified_at": "2026-06-25T18:18:00Z",
+  "last_run_at": "2026-06-25T18:18:00Z",
   "classification": {
     "critical": [],
     "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "btc-levels", "cost-report", "daily-routine", "defi-monitor", "evening-recap", "fleet-control", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "morning-brief", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "vuln-scanner"],
@@ -10,5 +10,5 @@
     "healthy_count": 9,
     "no_data": ["autoresearch", "operator-scorecard", "fork-skill-gap"]
   },
-  "systemic": "sandbox-truncation output_tokens=0 — 27 skills share signature; cost-report recovered cf=28→0 at 2026-06-24T03:48Z (ISS-025 structurally still open, sr=0.10)"
+  "systemic": "sandbox-truncation output_tokens=0 — 27 skills share signature; classification unchanged vs 2026-06-24T18:14Z (24h+4min); daily-reminder gate firing per step 5"
 }

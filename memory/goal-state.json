@@ -1,59 +1,35 @@
 {
-  "run_at": "2026-06-24T18:10:00Z",
+  "run_at": "2026-06-25T18:30:00Z",
   "goals": {
     "sandbox-truncation-systemic": {
       "status": "ON_TRACK",
-      "activity_count_14d": 35,
-      "last_activity_date": "2026-06-24",
-      "note": "cost-report cf=30→0 recovered overnight 03:48Z (claude-sonnet-4-6 weekly tick clean); ISS-025 cluster persists structurally — 22-skill chronic tail unchanged in today's 08:44Z + 14:57Z heartbeats. Durable fix at workflow aeon.yml capture step still pending."
+      "activity_count_14d": 38,
+      "last_activity_date": "2026-06-25",
+      "note": "22-skill chronic tail unchanged in today's 08:43Z + 14:53Z heartbeats; all share output_tokens=0 signature. cost-report cf=0 holds since 6-24 03:48Z recovery (sr still 10%). ISS-025 capture-fix PR flagged by action-converter 6-24 18:14Z (quality 4.6/5) but not yet opened."
     },
     "xai-quota-recovery": {
       "status": "BLOCKED",
-      "activity_count_14d": 20,
-      "last_activity_date": "2026-06-24",
-      "note": "Team 3a8b4c1e exhausted since 2026-06-16 (day 8). daily-routine 07:38Z `xai=skipped(sandbox env-expansion blocked)`, tweet-roundup via WebSearch fallback again. Cache hits still covering narrative-tracker/agent-buzz/list-digest. Operator top-up pending."
+      "activity_count_14d": 22,
+      "last_activity_date": "2026-06-25",
+      "note": "Team 3a8b4c1e exhausted since 2026-06-16 (day 10). daily-routine 07:45Z tweet-roundup via WebSearch fallback again. Prefetched .xai-cache covered narrative-tracker 13:51Z + list-digest 17:26Z today (xai primary working for prefetched paths). Operator top-up still pending."
     },
-    "operator-on-chain-config-completion": {
+    "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 16,
-      "last_activity_date": "2026-06-24",
-      "note": "on-chain-monitor 13:30Z probed: ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY unset, COINGECKO_API_KEY len=0 (unchanged from 6-22/6-23 — day 8). Blockscout keyless covered today (5/5 watches, 0 surviving events on quiet day). Etherscan v2 free tier still blocks Base."
-    },
-    "stuck-skills": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 20,
-      "last_activity_date": "2026-06-24",
-      "note": "No new stuck-dispatched today. 6-21/6-22 recoveries still hold (deal-flow, token-alert, fork-cohort). Chronic 22-skill tail unchanged in today's 08:44Z + 14:57Z heartbeats — rolls up to sandbox-truncation goal."
+      "activity_count_14d": 18,
+      "last_activity_date": "2026-06-25",
+      "note": "defi-monitor 21:35Z NO_CONFIG day 18 (no type:pool/position entries in memory/on-chain-watches.yml; only 5 type:wallet entries). on-chain-monitor 13:05Z probe: ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY unset, COINGECKO_API_KEY len=0 (day 9 unchanged). Operator seeded memory/known-addresses.yml today — partial progress; gate otherwise held."
     },
     "skill-freshness-warn": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 14,
-      "last_activity_date": "2026-06-24",
-      "note": "FRESHNESS_NO_CHANGE today — operator-scorecard still on stale articles/skill-analytics-*.md (336h/14d, threshold 192h). Fingerprint d522755e unchanged since 6-21, escalation clock 42h/168h. Re-emits 2026-06-28 if unresolved."
+      "status": "DONE",
+      "activity_count_14d": 16,
+      "last_activity_date": "2026-06-25",
+      "note": "Cleared 2026-06-25 — skill-freshness returned FRESHNESS_OK (skill-analytics ran 6-24 Wednesday, resolving operator-scorecard stale-dep that had persisted since 2026-06-21). Fingerprint d522755e cycle complete."
     },
     "btc-hard-levels": {
       "status": "ON_TRACK",
-      "activity_count_14d": 35,
-      "last_activity_date": "2026-06-24",
-      "note": "btc-levels ran 4x today (01:14/04:51/08:44/12:25 UTC). Spot range $62,409–$62,903, daily close 6-23 $62,651.93. Reclaim 63,500/65,900 already alerted; close > $60,500 — breakdown still armed."
-    },
-    "operator-gated-monitors": {
-      "status": "BLOCKED",
-      "activity_count_14d": 16,
-      "last_activity_date": "2026-06-24",
-      "note": "defi-monitor 17d NO_CONFIG streak today (no type:pool/position entries in memory/on-chain-watches.yml; only seed-comment line 11). on-chain-monitor degraded-but-running on Blockscout keyless. Operator gate unchanged from 6-23."
-    },
-    "memoclaw-soul-strip-pr-pending": {
-      "status": "DONE",
-      "activity_count_14d": 4,
-      "last_activity_date": "2026-06-22",
-      "note": "PR #137 merged 2026-06-22T15:08:20Z — \"soul: remove MemoClaw — dead project\". Goal closed."
-    },
-    "pr-backlog": {
-      "status": "DONE",
-      "activity_count_14d": 14,
-      "last_activity_date": "2026-06-24",
-      "note": "Sustained — gh pr list 1 open today (PR #138 goal-tracker header drift fix, opened 6-23 18:39Z, 20h, under 24h stall threshold). Backlog stayed cleared since 6-21."
+      "activity_count_14d": 37,
+      "last_activity_date": "2026-06-25",
+      "note": "btc-levels ran 5x today (00:51/04:51/08:42/13:09/16:39Z). Spot range $59,317–$61,801; daily close 6-24 $60,909 (above $60,500 breakdown threshold). Reclaim flags 63,500/65,900 already triggered 6-11/6-15. No fresh alerts today."
     }
   }
 }

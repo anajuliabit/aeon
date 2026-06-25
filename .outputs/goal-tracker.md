@@ -1,23 +1,18 @@
-*Goal Tracker — 2026-06-24*
+*Goal Tracker — 2026-06-25*
 
-Summary: 9 goals — 0 at risk, 0 needs attention, 4 on track, 3 blocked, 2 done (→ flat overall, no status changes vs 2026-06-23)
+Summary: 5 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 1 done (overall ↑ improving — skill-freshness cleared, others held flat)
 
 BLOCKED
-• XAI quota recovery — waiting on operator top-up since 2026-06-16 (day 8). daily-routine 07:38Z used WebSearch fallback again (`xai=skipped`)
-  → Action: top up Team 3a8b4c1e XAI credits to unblock daily-routine, tweet-roundup, agent-buzz, narrative-tracker
-• Operator on-chain config completion — waiting on Alchemy/Etherscan key (day 8); on-chain-monitor 13:30Z still `ALCHEMY_API_KEY len=0`, `ETHERSCAN_API_KEY unset`
-  → Action: supply ALCHEMY_API_KEY or ETHERSCAN_API_KEY to lift Base free-tier block
-• Operator-gated monitors — defi-monitor day 17 NO_CONFIG (5 wallet entries don't satisfy pool/position type)
-  → Action: add `type: pool` and `type: position` entries to memory/on-chain-watches.yml
+• XAI quota recovery — waiting on operator credit top-up for Team 3a8b4c1e since 2026-06-16 (day 10). Prefetched .xai-cache covered narrative-tracker/list-digest today; daily-routine tweet-roundup still on WebSearch fallback.
+  → Action: top up Team 3a8b4c1e monthly credit
+• Operator on-chain config — waiting on operator for `type: pool`/`type: position` entries + ALCHEMY_API_KEY since 2026-06-08 (defi-monitor NO_CONFIG day 18, key absent day 9). on-chain-monitor still green on Blockscout keyless. Operator did seed `memory/known-addresses.yml` today — partial progress.
+  → Action: add type:pool entries to memory/on-chain-watches.yml and set ALCHEMY_API_KEY
 
 ON TRACK
-• Sandbox-truncation systemic — 0d idle, 35 activity/14d (→ flat — cost-report cf=30→0 recovered overnight 03:48Z, but ISS-025 cluster persists structurally; 22-skill chronic tail unchanged)
-• Stuck skills — 0d idle, 20 activity/14d (→ flat — recoveries banked 6-21/6-22, chronic tail rolls up to sandbox-truncation)
-• skill-freshness FRESHNESS_WARN — 0d idle, 14 activity/14d (→ flat — operator-scorecard 336h/14d stale, escalation clock 42/168h, re-emits 2026-06-28)
-• BTC hard levels — 0d idle, 4 btc-levels runs today (→ flat — spot $62,409–$62,903, close $62,651, no alerts; $60,500 breakdown still armed)
+• Sandbox-truncation systemic — 0d idle, 35+ activity/14d (→ flat). 22-skill chronic tail unchanged in today's 08:43Z + 14:53Z heartbeats, all sharing output_tokens=0 signature. cost-report cf=0 holds since 6-24 03:48Z recovery (sr still 10%). ISS-025 capture-fix PR flagged by action-converter 6-24 18:14Z (quality 4.6/5) but not yet opened.
+• BTC hard levels — 0d idle, 35+ activity/14d (→ flat). btc-levels ran 4x today (00:51/04:51/08:42/13:09/16:39Z). Spot range 6-25 $59,317–$61,801, daily close 6-24 $60,909 (above $60,500 breakdown threshold, no alerts fired). Reclaim flags still false (already triggered 6-11/6-15).
 
 DONE
-• MemoClaw soul-strip PR — completed 2026-06-22 (PR #137 merged 15:08Z)
-• PR backlog — completed 2026-06-21 (sustained — 1 open: PR #138 goal-tracker header drift, 20h, under 24h stall threshold)
+• skill-freshness FRESHNESS_WARN — cleared 2026-06-25 (skill-analytics ran 6-24, resolving operator-scorecard stale-dep that had persisted since 2026-06-21; skill-freshness 6-25 returned FRESHNESS_OK)
 
 Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
