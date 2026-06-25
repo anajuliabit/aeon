@@ -1,11 +1,15 @@
 ## Summary
 
-**btc-levels run complete — no alerts fired.**
+**BTC Levels run complete — no alerts fired.**
 
-- **Spot:** $59,317 (down from $61,145 at last run)
-- **Previous daily close (Jun 24):** $60,909 — above the $60,500 breakdown threshold, so no breakdown alert
-- **Leverage review (≤$45k):** not triggered — spot well above
-- **Reclaim $63,500 / $65,900:** not triggered — spot below both levels
-- **Re-arm check:** spot $59,317 < $60,500, so reclaim flags stay false (already were false after 6-24's dip)
+| Check | Value | Result |
+|---|---|---|
+| Spot | $59,441 | — |
+| Jun-24 daily close | $60,909 | ≥ $60,500 → no breakdown alert |
+| Leverage-review (≤$45k) | $59,441 | well above → no |
+| Reclaim $63,500 | $59,441 < level | not triggered |
+| Reclaim $65,900 | $59,441 < level | not triggered |
 
-State updated to `lastSpot: 59317` and log appended. Both committed. No notification sent (quiet run is the norm when no levels cross).
+Spot ticked up slightly from $59,317 (last run at 16:39Z) to $59,441. The June 24 close held at $60,909, comfortably above the $60,500 breakdown threshold. The binary signal MEMORY flagged — whether today's (June 25) UTC close lands below $60,500 — won't be visible until midnight UTC when the next CoinGecko daily snapshot captures it.
+
+Files committed: `memory/btc-levels-state.json`, `memory/logs/2026-06-25.md`.
