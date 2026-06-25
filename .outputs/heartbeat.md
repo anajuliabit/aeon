@@ -1,11 +1,15 @@
-Heartbeat tick complete. P0 clean (no fresh failures, no stuck dispatches, no escalating cf), 22-skill chronic-tail unchanged from afternoon, heartbeat self-check healthy (5.3h since last success). PR #138 just crossed 24h stall threshold (~25.6h) but dedup-blocked — operator already has it as today's #1 action from action-converter 18:16Z plus 5 earlier touches in 25h. Regenerated `docs/status.md` (41 enabled-skill rows + 3 never-run, sorted last-run desc, 14 open issues, token-pulse omitted — no recent token-report on disk). No notification fired.
-
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
-
 ## Summary
-- Read `memory/MEMORY.md` + `memory/logs/2026-06-23/24.md` + `memory/cron-state.json` + `memory/issues/INDEX.md` for state.
-- Ran P0/P1/P2/P3 checks: no fresh fails, chronic-tail unchanged, self-check healthy, PR #138 25.6h (over threshold but dedup-blocked), no urgent issues, all 44 enabled skills accounted for.
-- Regenerated `docs/status.md` with evening-batch timestamps (skill-analytics 19:02Z newest); Overall stays 🔴 DEGRADED (chronic-tail sr<0.5).
-- Logged heartbeat entry to `memory/logs/2026-06-24.md`.
-- No notification sent (all findings dedup-blocked per spec — same-signature continuation of items covered in last 48h).
-- Files modified: `docs/status.md`, `memory/logs/2026-06-24.md`.
+
+**Heartbeat 2026-06-25 08:43 UTC — HEARTBEAT_OK · STATUS_PAGE=DEGRADED**
+
+All priority checks clean:
+- **P0:** No fresh failures, no stuck dispatches, no cf≥3. 22-skill chronic-tail unchanged (all sandbox-truncation `output_tokens=0` signature). Self-check healthy (12.4h since last heartbeat success).
+- **P1:** 0 open PRs (PR #138 merged 6-24 21:37Z), 0 urgent issues.
+- **P2:** All carried (sandbox-truncation, XAI quota day 9, defi-monitor NO_CONFIG day 18, FRESHNESS_WARN, BTC re-arm).
+- **P3:** All 44 enabled skills accounted for; 3 never-run as expected.
+
+**Dedup:** every finding is same-signature continuation from last 48h logs → no notification fired.
+
+**Files modified:**
+- `docs/status.md` — regenerated (overall 🔴 DEGRADED · 14 open issues · next: github-trending 09:00Z · token-pulse omitted, no token-report article)
+- `memory/logs/2026-06-25.md` — appended heartbeat entry
