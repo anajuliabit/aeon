@@ -75,6 +75,9 @@ if [ "${REGIME_DISABLE:-0}" = "1" ]; then
 else
   REGIME_JSON="$(D="$D" bash "$ROOT/scripts/advisor/regime.sh" 2>/dev/null || echo '{"band":"UNKNOWN","score":null}')"
 fi
+# Guard: an empty/invalid REGIME_JSON would later abort the whole `jq -n ... --argjson
+# regime "$REGIME_JSON"` report merge. Normalize anything unparseable to UNKNOWN here.
+printf '%s' "$REGIME_JSON" | jq -e . >/dev/null 2>&1 || REGIME_JSON='{"band":"UNKNOWN","score":null}'
 printf '%s' "$REGIME_JSON" > "$D/regime.json"
 REGIME_BAND="$(printf '%s' "$REGIME_JSON" | jq -r '.band // "UNKNOWN"')"
 REGIME_SCORE="$(printf '%s' "$REGIME_JSON" | jq -r '.score // "n/a"')"
@@ -238,6 +241,10 @@ role_data() {
       ;;
     market_macro)
       datablock cg_global cg-global.json '{total_market_cap_usd: .data.total_market_cap.usd, market_cap_pct: .data.market_cap_percentage, market_cap_change_24h: .data.market_cap_change_percentage_24h_usd}'
+      # F7 follow-up (out of regime-gate scope): daily_closes_usd uses the SAME forward
+      # (index-0) every-24th sampling whose last bar can be ~23h stale — fixed in
+      # regime.sh via reverse-anchoring. latest_usd already carries the true last price
+      # here, so the staleness is cosmetic for this block; reconcile when touched next.
       datablock cg_btc cg-btc.json '{daily_closes_usd: ([.prices[]? | .[1]] | [range(0; length; 24) as $i | .[$i]]), latest_usd: (.prices[-1][1]? // null)}'
       datablock fng fng.json '.'
       datablock x_search x-search.json '.'
@@ -485,13 +492,10 @@ TRADES="$(printf '%s' "$TRADES" | jq -c --argjson budget "$ST_BUDGET" --argjson 
       | .sizeUsd = (if $wsum > 0 then (($budget * $w / $wsum) | floor) else 0 end)
       | .sizePctNet = (if $total > 0 then (((.sizeUsd / $total) * 1000) | round) / 10 else 0 end) ]}')"
 if [ "${REGIME_BAND:-UNKNOWN}" = "BEAR" ]; then
-  TRADES="$(printf '%s' "$TRADES" | jq -c '
-    {trades: [ .trades[]
-      | if (.side // "long") == "long"
-        then .sizeUsd = ((.sizeUsd // 0) / 2 | floor)
-             | .sizePctNet = (((.sizePctNet // 0) * 10 / 2 | round) / 10)
-             | .regimeHalved = true
-        else . end ]}')"
+  # Shared filter (scripts/advisor/lib/bear-halve.jq) — one source of truth with
+  # the selftest, and it floors a positive long to >=1 so it can't fall to the
+  # un-gated $1000 default downstream (F6).
+  TRADES="$(printf '%s' "$TRADES" | jq -c -f "$ROOT/scripts/advisor/lib/bear-halve.jq")"
   echo "advisor: regime BEAR — halved long short-term notionals"
 fi
 REPORT="$(jq -n --argjson rpt "$REPORT" --argjson st "$TRADES" '$rpt | .shortTermTrades = ($st.trades // [])')"

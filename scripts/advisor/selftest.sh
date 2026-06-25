@@ -447,6 +447,36 @@ VOL_CALM="$(printf '%s' "$R1" | jq -r '.signals.volatility')"
 check "regime high-variance vol < calm vol" \
   "$(python3 -c "import sys;print('yes' if float(sys.argv[1])<float(sys.argv[2]) else 'no')" "$VOL_HI" "$VOL_CALM")" "yes"
 
+# F2: latest-bar sampling — a NON-24-aligned series (730 points, not a multiple of
+# 24) whose FINAL bar is a sharp crash. The fixed reverse-anchored downsample makes
+# closes[-1] the TRUE last price, so the crash must drag the score materially down
+# (or flip the band to BEAR). Against the OLD index-0 forward sampling the crash bar
+# is never sampled (730 % 24 != 0), so the score would be UNCHANGED — this test
+# FAILS before F1 and PASSES after.
+rgm_dir_crash() { # $1 = "crash" to override the final bar with a -40% crash, else clean
+  local d; d="$(mktemp -d)"
+  python3 - "$d/cg-btc.json" "${1:-clean}" <<'PY'
+import json,sys
+path,mode=sys.argv[1],sys.argv[2]
+prices=[]; t=1700000000000; p=100000.0
+# 730 points total (NOT a multiple of 24) on a steady uptrend.
+N=730
+for i in range(N):
+    p=100000.0+40.0*i           # smooth ramp up
+    prices.append([t,p]); t+=3600000
+if mode=="crash":
+    prices[-1][1]=prices[-1][1]*0.60   # final bar crashes -40%
+json.dump({"prices":prices},open(path,"w"))
+PY
+  printf '{"data":[{"value":"55"}]}' > "$d/fng.json"
+  printf '[{"coin":"BTC","fundingHourly":0.0000125,"openInterest":1,"markPx":1}]' > "$d/hl-funding.json"
+  echo "$d"
+}
+DCL="$(rgm_dir_crash clean)"; RCL="$(D="$DCL" bash "$RGM")"
+DCR="$(rgm_dir_crash crash)"; RCR="$(D="$DCR" bash "$RGM")"
+check "regime latest-bar crash drags score down (F1/F2)" \
+  "$(python3 -c "import json,sys;c=json.loads(sys.argv[1]);x=json.loads(sys.argv[2]);print('yes' if (x['band']=='BEAR' or x['score'] < c['score']-5) else 'no')" "$RCL" "$RCR")" "yes"
+
 # #1 graceful degradation: corrupt cg-btc (non-numeric closes, jq null) + valid
 # fng+funding must NOT crash. Exit 0, valid JSON, band UNKNOWN or NEUTRAL (momentum
 # can't be computed, so a non-NEUTRAL band is forbidden).
@@ -470,12 +500,14 @@ check "regime missing cg-btc exit 0" "$RM_RC" "0"
 check "regime missing cg-btc band NEUTRAL (not BULL)" "$(printf '%s' "$RM_OUT" | jq -r '.band')" "NEUTRAL"
 
 # --- regime BEAR halves long short-term notionals, leaves shorts ---
-BEAR_IN='{"trades":[{"symbol":"A","side":"long","sizeUsd":1000,"sizePctNet":2.0},{"symbol":"B","side":"short","sizeUsd":800,"sizePctNet":1.6}]}'
-BEAR_OUT="$(printf '%s' "$BEAR_IN" | jq -c '
-  {trades: [ .trades[] | if (.side // "long") == "long"
-    then .sizeUsd = ((.sizeUsd // 0)/2|floor) | .sizePctNet = (((.sizePctNet // 0)*10/2|round)/10) | .regimeHalved=true
-    else . end ]}')"
+# Uses the SHARED filter (scripts/advisor/lib/bear-halve.jq) so run.sh and the
+# selftest can't drift apart (F8). F6 floor: a size-1 long halves to 1, NOT 0 —
+# flooring to 0 would let downstream staging substitute the un-gated $1000 default.
+BHJQ="$(cd "$(dirname "$0")" && pwd)/lib/bear-halve.jq"
+BEAR_IN='{"trades":[{"symbol":"A","side":"long","sizeUsd":1000,"sizePctNet":2.0},{"symbol":"B","side":"short","sizeUsd":800,"sizePctNet":1.6},{"symbol":"C","side":"long","sizeUsd":1,"sizePctNet":0.1}]}'
+BEAR_OUT="$(printf '%s' "$BEAR_IN" | jq -c -f "$BHJQ")"
 check "BEAR halves long sizeUsd"   "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[0].sizeUsd')" "500"
 check "BEAR leaves short sizeUsd"  "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[1].sizeUsd')" "800"
+check "BEAR floors size-1 long to 1 (not 0)" "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[2].sizeUsd')" "1"
 
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
