@@ -1,0 +1,43 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "status",
+        "inbox",
+        "context",
+        "conclusion"
+      ]
+    },
+    "status": {
+      "type": "Text",
+      "props": {
+        "text": "No captures in last 24h"
+      }
+    },
+    "inbox": {
+      "type": "Text",
+      "props": {
+        "text": "Inbox file from 6-22 still unarchived (~100h, 9th surface)"
+      }
+    },
+    "context": {
+      "type": "Text",
+      "props": {
+        "text": "Operator-owned, no nudge"
+      }
+    },
+    "conclusion": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "muted"
+      }
+    }
+  }
+}

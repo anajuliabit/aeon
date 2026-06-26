@@ -1,1 +1,1 @@
-🧭 thought review · last 24h · 0 captures, nothing to surface. inbox file from 6-22 still unarchived (8th surfacing). last priorities.md edit 22d ago.
+🧭 thought review · no captures in last 24h. inbox file from 6-22 still unarchived (~100h, 9th surface) — operator-owned, no nudge. nothing to surface.
