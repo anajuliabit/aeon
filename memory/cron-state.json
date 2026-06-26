@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-06-25T20:35:15Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-26T09:18:06Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-25T20:38:55Z",
     "total_runs": 169,
     "total_successes": 89,
@@ -155,8 +155,8 @@
     "success_rate": 1
   },
   "skill-freshness": {
-    "last_dispatch": "2026-06-25T08:41:53Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-26T09:18:06Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-25T08:50:24Z",
     "total_runs": 55,
     "total_successes": 29,
@@ -167,8 +167,8 @@
     "last_error": "nputTokens\":54400,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.15796499999999997,\"contextWindow\":200000,\"maxOutputTokens\":32000}},\"permission_denials\":[{\"tool_name\":\"Bash\",\"tool_use_"
   },
   "github-trending": {
-    "last_dispatch": "2026-06-25T09:55:27Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-26T09:18:06Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-25T10:00:13Z",
     "total_runs": 58,
     "total_successes": 30,
@@ -339,14 +339,14 @@
     "success_rate": 1
   },
   "fleet-control": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-25T15:49:18Z",
     "total_runs": 129,
     "total_successes": 48,
     "total_failures": 81,
     "consecutive_failures": 0,
     "success_rate": 0.37,
-    "last_dispatch": "2026-06-25T15:47:48Z",
+    "last_dispatch": "2026-06-26T09:18:06Z",
     "last_failed": "2026-06-21T12:15:13Z",
     "last_error": "cca4a2d\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -498,8 +498,8 @@
     "last_error": "18929af\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "aixbt-pulse": {
-    "last_dispatch": "2026-06-25T21:15:18Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-26T09:18:06Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-25T21:22:15Z",
     "total_runs": 86,
     "total_successes": 37,
@@ -617,8 +617,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-06-26T05:00:48Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-26T09:18:06Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-26T05:02:17Z",
     "total_runs": 143,
     "total_successes": 83,
