@@ -1,0 +1,216 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse",
+        "description": "2026-06-26 21:00Z"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_crypto",
+        "sep1",
+        "section_macro",
+        "sep2",
+        "section_tradfi",
+        "sep3",
+        "section_new",
+        "sep4",
+        "section_bridge"
+      ]
+    },
+    "section_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_crypto",
+        "crypto_item1",
+        "crypto_item2"
+      ]
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "crypto_item1": {
+      "type": "Text",
+      "props": {
+        "text": "Solana decoupling: tokenized stocks $3B ATH. Memes + gaming + OpenAI \"Sol\" meme driving user growth — SOL is proving multiple demand vectors at once."
+      },
+      "children": []
+    },
+    "crypto_item2": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $60K + MSTR/STRC stress + Ripple CEO fires at Saylor leverage model. The corporate BTC treasury meta is getting stress-tested from inside — first named credible critic, not just bear posting."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_macro": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_macro",
+        "macro_item1"
+      ]
+    },
+    "heading_macro": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO/GEO",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "macro_item1": {
+      "type": "Text",
+      "props": {
+        "text": "US strikes on Iranian targets — Hormuz risk elevated, oil + gold bid. 4th direction flip on US-Iran in 24h. Weekend energy/defense repricing underway."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_tradfi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_tradfi",
+        "tradfi_item1"
+      ]
+    },
+    "heading_tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tradfi_item1": {
+      "type": "Text",
+      "props": {
+        "text": "AI chip names sliding on cost concerns. Nasdaq -4.6% weekly loss. Healthcare rotation to defensives began. Same 12h window as Micron +15% call — thesis reversed."
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_new",
+        "new_item1",
+        "new_item2",
+        "new_item3"
+      ]
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "new_item1": {
+      "type": "Text",
+      "props": {
+        "text": "CeFi-DeFi convergence sprint: Kraken eyes 15% Aave stake, Securitize targets NYSE via SPAC, Ondo 24/7 tokenized stock minting live"
+      },
+      "children": []
+    },
+    "new_item2": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE $319 by 2028 (Multicoin) — prior pull had whale accumulation; now a named long-dated target"
+      },
+      "children": []
+    },
+    "new_item3": {
+      "type": "Text",
+      "props": {
+        "text": "Crude sub-$70 → rebounding post-strike; energy/defense sectors embedding event-risk into weekend"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_bridge": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_bridge",
+        "bridge_text"
+      ]
+    },
+    "heading_bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "bridge_text": {
+      "type": "Text",
+      "props": {
+        "text": "US strikes on Iran + AI chips reversing + BTC at $60K with no bid = three capital camps (commodities, defensives, on-chain) all moving without BTC catching a clean rotation. The $270B stablecoin float didn't rotate in when yields fell — it won't rotate in on a geopolitical bid either. Trigger absent. Meanwhile: three CeFi-DeFi M&A plays + Solana $3B tokenized stocks in one window = supply infra + demand side arrived together. Product is ahead of narrative."
+      },
+      "children": []
+    }
+  }
+}
