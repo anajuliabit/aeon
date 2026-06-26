@@ -501,13 +501,76 @@ check "regime missing cg-btc band NEUTRAL (not BULL)" "$(printf '%s' "$RM_OUT" |
 
 # --- regime BEAR halves long short-term notionals, leaves shorts ---
 # Uses the SHARED filter (scripts/advisor/lib/bear-halve.jq) so run.sh and the
-# selftest can't drift apart (F8). F6 floor: a size-1 long halves to 1, NOT 0 —
-# flooring to 0 would let downstream staging substitute the un-gated $1000 default.
+# selftest can't drift apart. F4: a size-1 long halves DOWN to 0 — dust is dropped,
+# and zero-sized trades are skipped at staging (defensive in a downtrend).
 BHJQ="$(cd "$(dirname "$0")" && pwd)/lib/bear-halve.jq"
 BEAR_IN='{"trades":[{"symbol":"A","side":"long","sizeUsd":1000,"sizePctNet":2.0},{"symbol":"B","side":"short","sizeUsd":800,"sizePctNet":1.6},{"symbol":"C","side":"long","sizeUsd":1,"sizePctNet":0.1}]}'
 BEAR_OUT="$(printf '%s' "$BEAR_IN" | jq -c -f "$BHJQ")"
 check "BEAR halves long sizeUsd"   "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[0].sizeUsd')" "500"
 check "BEAR leaves short sizeUsd"  "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[1].sizeUsd')" "800"
-check "BEAR floors size-1 long to 1 (not 0)" "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[2].sizeUsd')" "1"
+check "BEAR drops size-1 long to 0 (dust)" "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[2].sizeUsd')" "0"
+# F1: bear-halve is case-insensitive on side — an uppercase LONG still halves.
+BCASE="$(printf '%s' '{"trades":[{"symbol":"U","side":"LONG","sizeUsd":1000,"sizePctNet":2.0}]}' | jq -c -f "$BHJQ")"
+check "F1 bear-halve halves uppercase LONG" "$(printf '%s' "$BCASE" | jq -r '.trades[0].sizeUsd')" "500"
+
+# --- risk-size.sh: vol-target + caps + DD de-gross ---
+RSZ="$(cd "$(dirname "$0")" && pwd)/risk-size.sh"
+RS_DIR="$(mktemp -d)"
+cat > "$RS_DIR/cg-markets.json" <<'EOF'
+[{"id":"calm","symbol":"calm","price_change_percentage_24h":5,"price_change_percentage_7d_in_currency":5},
+ {"id":"wild","symbol":"wild","price_change_percentage_24h":40,"price_change_percentage_7d_in_currency":40}]
+EOF
+rsz() { # trades-json ; RISK_NET ; RISK_DD  -> sized trades json
+  printf '%s' "$1" | RISK_NET="$2" RISK_DD="${3:-0}" RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ"
+}
+T2='{"trades":[{"symbol":"CALM","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"WILD","coingeckoId":"wild","side":"long","conviction":"MEDIUM"}]}'
+O2="$(rsz "$T2" 400000 0)"
+check "vol-target calm > wild" "$(printf '%s' "$O2" | jq -r '(.trades[]|select(.symbol=="CALM").sizeUsd) > (.trades[]|select(.symbol=="WILD").sizeUsd)')" "true"
+T1='{"trades":[{"symbol":"CALM","coingeckoId":"calm","side":"long","conviction":"HIGH"}]}'
+O1="$(rsz "$T1" 400000 0)"
+check "per-position cap 1.5pct" "$(printf '%s' "$O1" | jq -r '.trades[0].sizeUsd <= 6000')" "true"
+T5='{"trades":[{"symbol":"A","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"B","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"C","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"D","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"E","coingeckoId":"calm","side":"long","conviction":"HIGH"}]}'
+O5="$(rsz "$T5" 400000 0)"
+check "direction cap long sum <=3pct" "$(printf '%s' "$O5" | jq -r '([.trades[]|select(.side=="long").sizeUsd]|add) <= 12000')" "true"
+# DD de-gross shrinks the BUDGET (not the fixed caps). Use 5 MEDIUM longs at net=40000:
+# budget 5%=2000 split 5 ways = 400 each (< pos-cap 1.5%*40000=600, so budget binds);
+# DD18 halves budget -> ~200 each. DD5 (no trigger) stays ~400.
+TDD='{"trades":[{"symbol":"A","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"B","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"C","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"D","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"E","coingeckoId":"calm","side":"long","conviction":"MEDIUM"}]}'
+DSUM0="$(printf '%s' "$TDD" | RISK_NET=40000 RISK_DD=5  RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ" | jq '[.trades[].sizeUsd]|add')"
+DSUM1="$(printf '%s' "$TDD" | RISK_NET=40000 RISK_DD=18 RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ" | jq '[.trades[].sizeUsd]|add')"
+check "DD18 degrosses budget vs DD5" "$( [ "$DSUM1" -lt "$DSUM0" ] && echo yes )" "yes"
+ODIS="$(printf '%s' "$T1" | RISK_DISABLE=1 RISK_NET=400000 RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ")"
+check "RISK_DISABLE conviction-split uncapped" "$(printf '%s' "$ODIS" | jq -r '.trades[0].sizeUsd')" "20000"
+check "sizePctNet matches sizeUsd" "$(printf '%s' "$O1" | jq -r '.trades[0].sizePctNet == ((.trades[0].sizeUsd/400000*1000)|round)/10')" "true"
+# Bad price (inf-ish vol) must NOT zero a single legit pick — degrades to a positive (capped) size.
+cat > "$RS_DIR/cg-bad.json" <<'EOF'
+[{"id":"bad","symbol":"bad","price_change_percentage_24h":1e9,"price_change_percentage_7d_in_currency":1e9}]
+EOF
+OBAD="$(printf '%s' '{"trades":[{"symbol":"BAD","coingeckoId":"bad","side":"long","conviction":"HIGH"}]}' | RISK_NET=400000 RISK_DD=0 RISK_MKT="$RS_DIR/cg-bad.json" bash "$RSZ")"
+check "bad price does not zero pick" "$(printf '%s' "$OBAD" | jq -r '.trades[0].sizeUsd > 0')" "true"
+# Garbage stdin → valid JSON out (never poisons downstream jq).
+OGARB="$(printf '%s' 'not json {{{' | RISK_NET=400000 RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ")"
+check "garbage stdin -> valid json" "$(printf '%s' "$OGARB" | jq -e 'has("trades")' >/dev/null 2>&1 && echo ok)" "ok"
+
+# F1: mixed-case side ("Long"/"LONG") must still bucket into the direction cap and
+# be normalized to lowercase on output (otherwise it escapes the cap entirely).
+TCASE='{"trades":[{"symbol":"A","coingeckoId":"calm","side":"Long","conviction":"HIGH"},{"symbol":"B","coingeckoId":"calm","side":"LONG","conviction":"HIGH"},{"symbol":"C","coingeckoId":"calm","side":"Long","conviction":"HIGH"},{"symbol":"D","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"E","coingeckoId":"calm","side":"long","conviction":"HIGH"}]}'
+OCASE="$(rsz "$TCASE" 400000 0)"
+check "F1 mixed-case side hits direction cap" "$(printf '%s' "$OCASE" | jq -r '([.trades[].sizeUsd]|add) <= 12000')" "true"
+check "F1 side normalized to lowercase"      "$(printf '%s' "$OCASE" | jq -r '[.trades[].side]|unique|join(",")')" "long"
+# F2: a negative net must never yield negative sizes.
+ONEG="$(rsz "$T1" -5000 0)"
+check "F2 negative net -> no negative size" "$(printf '%s' "$ONEG" | jq -r '[.trades[].sizeUsd]|all(. >= 0)')" "true"
+# F3: a tiny/seed account (sub-$1 per-position cap) is NOT zeroed by the cap.
+OTINY="$(rsz "$T1" 50 0)"
+check "F3 tiny account not zeroed by pos-cap" "$(printf '%s' "$OTINY" | jq -r '.trades[0].sizeUsd > 0')" "true"
+
+# Risk layer is the sizing authority: a 0-sized short-term trade must be SKIPPED at
+# staging, never rewritten to the legacy $1000 default.
+STG='{"shortTermTrades":[{"symbol":"Z","sizeUsd":0,"side":"long"},{"symbol":"P","sizeUsd":3000,"side":"long"}]}'
+# staged set = trades with sizeUsd>0 (the guard); notional = sizeUsd (no 1000 default)
+STAGED="$(printf '%s' "$STG" | jq -c '[.shortTermTrades[] | select((.sizeUsd // 0) > 0) | {symbol, notionalUsd: (.sizeUsd // 0)}]')"
+check "0-size short-term trade skipped" "$(printf '%s' "$STAGED" | jq -r 'length')" "1"
+check "no \$1000 default for risk-sized" "$(printf '%s' "$STAGED" | jq -r '.[0].notionalUsd')" "3000"
 
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
