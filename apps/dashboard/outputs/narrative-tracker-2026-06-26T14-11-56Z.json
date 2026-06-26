@@ -1,0 +1,682 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-26",
+        "description": "Market narrative transitions, reflexivity analysis, and positioning"
+      },
+      "children": [
+        "transitions-section",
+        "sep1",
+        "reflexivity-section",
+        "sep2",
+        "positions-section",
+        "sep3",
+        "map-section"
+      ]
+    },
+    "transitions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "transitions-heading",
+        "transitions-list"
+      ]
+    },
+    "transitions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      }
+    },
+    "transitions-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trans-crypto-narrative",
+        "trans-agentic-finance",
+        "trans-heat-map",
+        "trans-blackrock",
+        "trans-stablecoins",
+        "trans-dead",
+        "trans-metamorphosed"
+      ]
+    },
+    "trans-crypto-narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-crypto",
+        "text-crypto-narrative",
+        "link-benzinga"
+      ]
+    },
+    "badge-new-crypto": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text-crypto-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "crypto needs a new narrative smart-money-sidelined meta — @KobeissiLetter + @AliMartinez frame; H1 close BTC -32% / ETH -47% / MSTR -43%, Coinbase Premium 46d negative streak, 6w ETF outflows $2.92B, USDT dominance +43% to 9.17%. structural, not vibes",
+        "variant": "body"
+      }
+    },
+    "link-benzinga": {
+      "type": "Link",
+      "props": {
+        "label": "https://www.benzinga.com/crypto/cryptocurrency/26/06/60088698",
+        "href": "https://www.benzinga.com/crypto/cryptocurrency/26/06/60088698"
+      }
+    },
+    "trans-agentic-finance": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-agentic",
+        "text-agentic-finance"
+      ]
+    },
+    "badge-new-agentic": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text-agentic-finance": {
+      "type": "Text",
+      "props": {
+        "text": "agentic finance VC cap-tables — @0xsamgreen assembling a16z CSX + Flow Traders + Selini specifically for agentic-finance. signals category formalization, not shipped product",
+        "variant": "body"
+      }
+    },
+    "trans-heat-map": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-heat",
+        "text-heat-map"
+      ]
+    },
+    "badge-new-heat": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text-heat-map": {
+      "type": "Text",
+      "props": {
+        "text": "narrative heat-map / rotation analytics — @DecentralisedA stage tracker (Dormant → Exhausted), explicitly calls RWA leading on substance, AI crowded, restaking/memecoins cooling",
+        "variant": "body"
+      }
+    },
+    "trans-blackrock": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-blackrock",
+        "text-blackrock"
+      ]
+    },
+    "badge-new-blackrock": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "default"
+      }
+    },
+    "text-blackrock": {
+      "type": "Text",
+      "props": {
+        "text": "BlackRock vs JPM narrative-control split (@coinranking) — institutional capital framed as BTC-vs-AI binary",
+        "variant": "body"
+      }
+    },
+    "trans-stablecoins": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-promoted",
+        "text-stablecoins"
+      ]
+    },
+    "badge-promoted": {
+      "type": "Badge",
+      "props": {
+        "text": "PROMOTED",
+        "variant": "secondary"
+      }
+    },
+    "text-stablecoins": {
+      "type": "Text",
+      "props": {
+        "text": "stablecoins-as-rail 4 → 5 — USDT dominance +43% (now 9.17%) is the structural confirm",
+        "variant": "body"
+      }
+    },
+    "trans-dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-dead",
+        "text-dead"
+      ]
+    },
+    "badge-dead": {
+      "type": "Badge",
+      "props": {
+        "text": "DEAD",
+        "variant": "destructive"
+      }
+    },
+    "text-dead": {
+      "type": "Text",
+      "props": {
+        "text": "DEAD (5, ALL inside 24h): selective-liquidity slate (NOIRSINGULARIS TAO/WLD/HYPE/ONDO/PENDLE), asset-specific fundamentals reframe, value-accruing tokens (@ct_hoppy BNB/JUP/HYPE/AERO), autonomous economies / physical intelligence, DePIN/AI compute (was Fading 6-25, gone). every 6-25 NEW rotation frame dead in 24h — 24h-half-life pattern hardens for 2nd consecutive day",
+        "variant": "body"
+      }
+    },
+    "trans-metamorphosed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-metamorphosed",
+        "text-metamorphosed"
+      ]
+    },
+    "badge-metamorphosed": {
+      "type": "Badge",
+      "props": {
+        "text": "METAMORPHOSED",
+        "variant": "secondary"
+      }
+    },
+    "text-metamorphosed": {
+      "type": "Text",
+      "props": {
+        "text": "AI bubble critique (Rising 6-25) → absorbed into broader \"crypto needs new narrative\" meta-bear",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reflexivity-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reflexivity-heading",
+        "reflexivity-items"
+      ]
+    },
+    "reflexivity-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "REFLEXIVITY ALERT",
+        "level": "h2"
+      }
+    },
+    "reflexivity-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reflex-main-alert",
+        "reflex-usdt",
+        "reflex-coinbase",
+        "reflex-kaito"
+      ]
+    },
+    "reflex-main-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "\"crypto needs a new narrative\" is itself the reflexive trade — Kobeissi/Martinez publishing the meta IS what dries the buy side: 46d Coinbase Premium negative + $2.92B ETF outflows + USDT dominance +43% are the receipt of institutions acting on the published thesis. backed by H1 structural numbers, not just twitter"
+      }
+    },
+    "reflex-usdt": {
+      "type": "Text",
+      "props": {
+        "text": "USDT dominance +43% to 9.17% — capital parking IS the reflexive output of \"no clean narrative\" framing",
+        "variant": "body"
+      }
+    },
+    "reflex-coinbase": {
+      "type": "Text",
+      "props": {
+        "text": "Coinbase Ventures playbook citation hardening (@GammaSummit) — @JonathanKing stablecoins + agentic AI now cited as the institutional mandate; Coinbase-for-Agents 6-11 launch + x402 480k agents / $50M cumulative = the rail. the playbook IS the buy-side mandate",
+        "variant": "body"
+      }
+    },
+    "reflex-kaito": {
+      "type": "Text",
+      "props": {
+        "text": "(carry-over) Kaito Yapper EOL → Studio + Polymarket Attention Markets — mindshare measurement layer still mid-transition, affects how anyone quantifies mindshare reliably",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "positions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "positions-heading",
+        "positions-list"
+      ]
+    },
+    "positions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      }
+    },
+    "positions-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pos-fade",
+        "pos-ai-agents",
+        "pos-stablecoins",
+        "pos-rwa",
+        "pos-prediction",
+        "pos-watch",
+        "pos-frontrun"
+      ]
+    },
+    "pos-fade": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-fade",
+        "text-fade"
+      ]
+    },
+    "badge-fade": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "destructive"
+      }
+    },
+    "text-fade": {
+      "type": "Text",
+      "props": {
+        "text": "broad-crypto-narrative-leadership (5 ↑↑ Bear-meta) — H1 close + 46d Premium + ETF outflows; structural data not 24h vibes — short via legacy-narrative proxies (memecoins, restaking) or sit; do NOT short AI agent infra / stablecoin rails / RWA / prediction markets — those held through the meta-bear",
+        "variant": "body"
+      }
+    },
+    "pos-ai-agents": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ride-ai",
+        "text-ai-agents"
+      ]
+    },
+    "badge-ride-ai": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "text-ai-agents": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent infra (5 ↑ Bull) — @buying_com, Coinbase Ventures cited, GraphRAG sub-thread fresh — bear case: mandate-vs-custody still unsolved",
+        "variant": "body"
+      }
+    },
+    "pos-stablecoins": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ride-stable",
+        "text-stablecoins-pos"
+      ]
+    },
+    "badge-ride-stable": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "text-stablecoins-pos": {
+      "type": "Text",
+      "props": {
+        "text": "stablecoins as TradFi-rail (5 ↑ Bull, PROMOTED) — USDT 9.17% dominance + x402 — bear: OFAC reg; rotation-into-USDT can flip on macro",
+        "variant": "body"
+      }
+    },
+    "pos-rwa": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ride-rwa",
+        "text-rwa"
+      ]
+    },
+    "badge-ride-rwa": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "text-rwa": {
+      "type": "Text",
+      "props": {
+        "text": "RWA (5 → Bull) — RWA.xyz $26.7B May; bear: 3-5y execution lag",
+        "variant": "body"
+      }
+    },
+    "pos-prediction": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ride-pred",
+        "text-prediction"
+      ]
+    },
+    "badge-ride-pred": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "text-prediction": {
+      "type": "Text",
+      "props": {
+        "text": "prediction markets + tokenized stocks (4 ↑↑ Bull) — Meta entry framing fresh — bear: CFTC v. Kentucky 9-state preemption suit",
+        "variant": "body"
+      }
+    },
+    "pos-watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-watch",
+        "text-watch"
+      ]
+    },
+    "badge-watch": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "outline"
+      }
+    },
+    "text-watch": {
+      "type": "Text",
+      "props": {
+        "text": "WATCH (4): agentic-finance VC cap-tables, narrative heat-map analytics, VC-rankings/a16z dominance, BlackRock-vs-JPM split",
+        "variant": "body"
+      }
+    },
+    "pos-frontrun": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-frontrun",
+        "text-frontrun"
+      ]
+    },
+    "badge-frontrun": {
+      "type": "Badge",
+      "props": {
+        "text": "FRONT-RUN",
+        "variant": "destructive"
+      }
+    },
+    "text-frontrun": {
+      "type": "Text",
+      "props": {
+        "text": "0 (3rd consecutive day — no emerging+contrarian-edge with named driver)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "map-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "map-heading",
+        "map-items"
+      ]
+    },
+    "map-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      }
+    },
+    "map-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "map-emerging",
+        "map-rising",
+        "map-peak",
+        "map-fading",
+        "map-dead"
+      ]
+    },
+    "map-emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-emerg-label",
+        "map-emerg-text"
+      ]
+    },
+    "map-emerg-label": {
+      "type": "Text",
+      "props": {
+        "text": "Emerging:",
+        "variant": "lead"
+      }
+    },
+    "map-emerg-text": {
+      "type": "Text",
+      "props": {
+        "text": "agentic-finance cap-tables, narrative heat-map, BTC-vs-AI institutional battle",
+        "variant": "body"
+      }
+    },
+    "map-rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-rising-label",
+        "map-rising-text"
+      ]
+    },
+    "map-rising-label": {
+      "type": "Text",
+      "props": {
+        "text": "Rising:",
+        "variant": "lead"
+      }
+    },
+    "map-rising-text": {
+      "type": "Text",
+      "props": {
+        "text": "\"crypto needs new narrative\" meta-bear, prediction markets, VC-rankings/a16z",
+        "variant": "body"
+      }
+    },
+    "map-peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-peak-label",
+        "map-peak-text"
+      ]
+    },
+    "map-peak-label": {
+      "type": "Text",
+      "props": {
+        "text": "Peak:",
+        "variant": "lead"
+      }
+    },
+    "map-peak-text": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent infra, RWA, stablecoins (promoted)",
+        "variant": "body"
+      }
+    },
+    "map-fading": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-fading-label",
+        "map-fading-text"
+      ]
+    },
+    "map-fading-label": {
+      "type": "Text",
+      "props": {
+        "text": "Fading:",
+        "variant": "lead"
+      }
+    },
+    "map-fading-text": {
+      "type": "Text",
+      "props": {
+        "text": "none",
+        "variant": "body"
+      }
+    },
+    "map-dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map-dead-label",
+        "map-dead-text"
+      ]
+    },
+    "map-dead-label": {
+      "type": "Text",
+      "props": {
+        "text": "Dead:",
+        "variant": "lead"
+      }
+    },
+    "map-dead-text": {
+      "type": "Text",
+      "props": {
+        "text": "selective-liquidity slate, asset-specific fundamentals, value-accruing tokens, autonomous economies, AI bubble critique (metamorphosed), DePIN/AI compute",
+        "variant": "body"
+      }
+    }
+  }
+}
