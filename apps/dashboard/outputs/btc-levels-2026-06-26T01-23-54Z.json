@@ -1,0 +1,130 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "BTC Levels"
+      },
+      "children": [
+        "content"
+      ]
+    },
+    "content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "prices",
+        "sep1",
+        "alert",
+        "sep2",
+        "position",
+        "sep3",
+        "disclaimer"
+      ]
+    },
+    "prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "spot_stat",
+        "daily_close_stat"
+      ]
+    },
+    "spot_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$59.5k"
+      },
+      "children": []
+    },
+    "daily_close_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Close (2026-06-25)",
+        "value": "$59,712"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Downtrend Signal",
+        "message": "Daily close $59,712 < $60,500 — downtrend continuation signal per 2026-06-09 advisor levels"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "position": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "position_heading",
+        "review_trigger",
+        "health_factor"
+      ]
+    },
+    "position_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "cbBTC Leveraged Position",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "review_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Review trigger: ≤$45k"
+      },
+      "children": []
+    },
+    "health_factor": {
+      "type": "Text",
+      "props": {
+        "text": "Health Factor ~1.48–1.66 in the $40–$45k band"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "disclaimer": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Not financial advice"
+      },
+      "children": []
+    }
+  }
+}
