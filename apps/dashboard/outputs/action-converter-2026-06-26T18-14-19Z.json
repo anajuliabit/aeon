@@ -1,0 +1,317 @@
+{
+  "root": "root_card",
+  "state": {},
+  "elements": {
+    "root_card": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-06-26"
+      },
+      "children": [
+        "actions_stack"
+      ]
+    },
+    "actions_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action_1",
+        "sep_1",
+        "action_2",
+        "sep_2",
+        "action_3",
+        "sep_3",
+        "action_4",
+        "sep_4",
+        "action_5",
+        "sep_5",
+        "sources"
+      ]
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1_heading",
+        "a1_task",
+        "a1_why",
+        "a1_done",
+        "a1_loop"
+      ]
+    },
+    "a1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. run bash scripts/advisor/selftest.sh post-merge",
+        "level": "h3"
+      }
+    },
+    "a1_task": {
+      "type": "Text",
+      "props": {
+        "text": "run `bash scripts/advisor/selftest.sh` post-merge of PR #147 (advisor hard risk layer #140) and append result to `memory/topics/fleet.md` under an \"advisor sprint\" subsection",
+        "variant": "body"
+      }
+    },
+    "a1_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: operator's first delivery of the 7-issue advisor sprint merged 12:44Z with no review — `CLAUDE.md` flags selftest as the CI gate",
+        "variant": "body"
+      }
+    },
+    "a1_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: selftest exit code logged to topics/fleet.md with PR ref and merge timestamp",
+        "variant": "body"
+      }
+    },
+    "a1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: pr-147-postmerge-verify",
+        "variant": "outline"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2_heading",
+        "a2_task",
+        "a2_why",
+        "a2_done",
+        "a2_loop"
+      ]
+    },
+    "a2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. cut PR patching workflow .github/workflows/aeon.yml",
+        "level": "h3"
+      }
+    },
+    "a2_task": {
+      "type": "Text",
+      "props": {
+        "text": "cut PR patching the workflow `.github/workflows/aeon.yml` capture step — fix the `output_tokens=0` response shape that signs ISS-019/020/021/024/025",
+        "variant": "body"
+      }
+    },
+    "a2_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 22 chronic-tail skills sr<0.5 still lose telemetry every cron tick; day 4 since action-converter flagged the fix at 4.6/5 quality",
+        "variant": "body"
+      }
+    },
+    "a2_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: PR open on github; ISS-025 frontmatter `fix_pr:` field updated",
+        "variant": "body"
+      }
+    },
+    "a2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: iss-025-capture-fix",
+        "variant": "outline"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3_heading",
+        "a3_task",
+        "a3_why",
+        "a3_done",
+        "a3_loop"
+      ]
+    },
+    "a3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. close .pending-picks SEI invalidation",
+        "level": "h3"
+      }
+    },
+    "a3_task": {
+      "type": "Text",
+      "props": {
+        "text": "close `.pending-picks/2026-06-25-token-pick.json` SEI HIGH 9/10 — invalidation $0.054 hit day 1 (intraday $0.054, −10.2% per token-movers 12:31Z); POST close to `/api/picks` and append outcome row to `memory/topics/crypto.md` alongside AAVE day-3 +13.4%",
+        "variant": "body"
+      }
+    },
+    "a3_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: token-pick spec triggers close at invalidation; the side-by-side AAVE vs SEI row is the only carry-forward signal from a 1d stop-out",
+        "variant": "body"
+      }
+    },
+    "a3_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: pick state=closed via api + crypto.md outcome row appended",
+        "variant": "body"
+      }
+    },
+    "a3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: sei-pick-invalidation",
+        "variant": "outline"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4_heading",
+        "a4_task",
+        "a4_why",
+        "a4_done",
+        "a4_loop"
+      ]
+    },
+    "a4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. draft memory/topics/morpho-position.md",
+        "level": "h3"
+      }
+    },
+    "a4_task": {
+      "type": "Text",
+      "props": {
+        "text": "draft `memory/topics/morpho-position.md` covering cbBTC/USDC at LLTV 0.86 / 14% cushion, the no-new-collateral + pay-USDC-instead rule, and the re-margin trigger LLTV <0.80 + BTC reclaim $63,500",
+        "variant": "body"
+      }
+    },
+    "a4_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: operator engaged advisor leverage-freeze rec 6-25 21:08Z + 21:34Z via telegram followup; the decision rule lives in chat history, not on disk",
+        "variant": "body"
+      }
+    },
+    "a4_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: file has 4 sections (position state, decision rule, re-margin trigger, link to crypto.md morpho-curator-risk lesson)",
+        "variant": "body"
+      }
+    },
+    "a4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: morpho-position-runbook",
+        "variant": "outline"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5_heading",
+        "a5_task",
+        "a5_why",
+        "a5_done",
+        "a5_loop"
+      ]
+    },
+    "a5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. prune memory/MEMORY.md duplicate sections",
+        "level": "h3"
+      }
+    },
+    "a5_task": {
+      "type": "Text",
+      "props": {
+        "text": "prune `memory/MEMORY.md` duplicate \"Recently Cleared\" header at line 24 and the redundant Current Goals (sandbox-truncation, XAI quota, on-chain config, BTC hard levels appear before AND after line 10's first Recently Cleared)",
+        "variant": "body"
+      }
+    },
+    "a5_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: file is read by every action-converter + morning-brief + heartbeat run; duplicate goals risk stale-vs-fresh divergence (6-19 vs 6-25 entries already drift inside the file)",
+        "variant": "body"
+      }
+    },
+    "a5_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: MEMORY.md has exactly 1 Current Goals + 1 Recently Cleared section; line count drops ≥15",
+        "variant": "body"
+      }
+    },
+    "a5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: memory-md-dedup",
+        "variant": "outline"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=62 logs=8d topics=11 prs=0 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

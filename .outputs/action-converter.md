@@ -1,29 +1,29 @@
-*5 Actions — 2026-06-25*
-Shape: ship sandbox-fix PR, document HYPE cross-slate + phishing kit, log AAVE +7.7%
+*5 Actions — 2026-06-26*
+Shape: verify PR-#147 selftest, cut ISS-025 PR, close SEI invalidation, document Morpho rule, dedupe MEMORY
 
-1. ship `.github/workflows/aeon.yml` capture-step fix as PR — patch the heredoc near L600 that reads + truncates skill output; current path loses long stdout and emits `output_tokens=0` in usage JSON, tag body with ISS-025/019/020/021/024
-why: 22 chronic-tail skills sr<0.5 share the same `output_tokens=0` signature; one capture-path fix clears the cluster
-done: PR opened against main, body lists the 22-skill tail + links cluster issues
-loop: iss-025-workflow-capture
+1. run `bash scripts/advisor/selftest.sh` post-merge of PR #147 (advisor hard risk layer #140) and append result to `memory/topics/fleet.md` under an "advisor sprint" subsection
+why: operator's first delivery of the 7-issue advisor sprint merged 12:44Z with no review — `CLAUDE.md` flags selftest as the CI gate
+done: selftest exit code logged to topics/fleet.md with PR ref and merge timestamp
+loop: pr-147-postmerge-verify
 
-2. append HYPE cross-slate consensus block to `memory/topics/crypto.md` — @NOIRSINGULARIS selective-liquidity slate (TAO/WLD/HYPE/ONDO/PENDLE) + @ct_hoppy value-accruing slate (BNB/JUP/HYPE/AERO) both publish HYPE; track 24-48h cross-correlation, flag double-bid coordination risk
-why: narrative-tracker 6-25 reflexivity flag #1 — published slates IS the trade, HYPE is the only ticker in both
-done: ≥5-bullet entry under a "HYPE cross-slate" heading with both handle attributions, slate rosters, and a falsifier
-loop: hype-double-bid-coordination
+2. cut PR patching the workflow `.github/workflows/aeon.yml` capture step — fix the `output_tokens=0` response shape that signs ISS-019/020/021/024/025
+why: 22 chronic-tail skills sr<0.5 still lose telemetry every cron tick; day 4 since action-converter flagged the fix at 4.6/5 quality
+done: PR open on github; ISS-025 frontmatter `fix_pr:` field updated
+loop: iss-025-capture-fix
 
-3. add a Morpho cbBTC `type: position` entry to `memory/on-chain-watches.yml` — W1→Morpho GeneralAdapter1 $7,105 cbBTC supply confirmed on-chain 6-24 14:51Z, defi-monitor still NO_CONFIG day 18
-why: on-chain activity now names the actual position; ends 18-day NO_CONFIG carry without waiting on operator
-done: yaml entry committed with market address + collateral=cbBTC + protocol=morpho-blue + label, next defi-monitor run reads it
-loop: defi-monitor-no-config
+3. close `.pending-picks/2026-06-25-token-pick.json` SEI HIGH 9/10 — invalidation $0.054 hit day 1 (intraday $0.054, −10.2% per token-movers 12:31Z); POST close to `/api/picks` and append outcome row to `memory/topics/crypto.md` alongside AAVE day-3 +13.4%
+why: token-pick spec triggers close at invalidation; the side-by-side AAVE vs SEI row is the only carry-forward signal from a 1d stop-out
+done: pick state=closed via api + crypto.md outcome row appended
+loop: sei-pick-invalidation
 
-4. log AAVE position update in `memory/topics/crypto.md` — entry $76.09 (6-24 HIGH 8/10), spot $81.99 (+7.69%), day-2 [TRENDING+UP] in 4/20-breadth tape; decide hold-for-$87 vs trail stop to break-even
-why: only large-cap DeFi sustaining bid through risk-off; today's UTC close < $60,500 is binary catalyst against
-done: position note appended with current spot, decision recorded, and BTC-close-conditional unwind rule
-loop: aave-pick-management
+4. draft `memory/topics/morpho-position.md` covering cbBTC/USDC at LLTV 0.86 / 14% cushion, the no-new-collateral + pay-USDC-instead rule, and the re-margin trigger LLTV <0.80 + BTC reclaim $63,500
+why: operator engaged advisor leverage-freeze rec 6-25 21:08Z + 21:34Z via telegram followup; the decision rule lives in chat history, not on disk
+done: file has 4 sections (position state, decision rule, re-margin trigger, link to crypto.md morpho-curator-risk lesson)
+loop: morpho-position-runbook
 
-5. write `memory/topics/onchain-phishing-patterns.md` — codify kit progression from 6-23 single cyrillic ÚSDС bait to 6-25 3-bait kit (zero-value real USDC + real cbBTC + value-matched cyrillic ÚSDС), attacker contract `0xC3236716cbDC725b518AC0A5d830FBaDcfd05032`, signer EOAs `0x3959E4…` + `0xcd8b9A…`, lookalike `0x98E57e6799…`
-why: detection baseline for future on-chain-monitor runs; same kit already escalated twice in 2 days, third escalation likely
-done: file exists with ≥5 sections (kit-progression timeline, attacker contract methodology, lookalike pattern, cyrillic value-match technique, mitigation rules)
-loop: phishing-kit-postmortem
+5. prune `memory/MEMORY.md` duplicate "Recently Cleared" header at line 24 and the redundant Current Goals (sandbox-truncation, XAI quota, on-chain config, BTC hard levels appear before AND after line 10's first Recently Cleared)
+why: file is read by every action-converter + morning-brief + heartbeat run; duplicate goals risk stale-vs-fresh divergence (6-19 vs 6-25 entries already drift inside the file)
+done: MEMORY.md has exactly 1 Current Goals + 1 Recently Cleared section; line count drops ≥15
+loop: memory-md-dedup
 
-sources: memory=55 logs=7 topics=11 prs=0 cron_failing=0 mode=OK
+sources: memory=62 logs=8d topics=11 prs=0 cron_failing=0 mode=OK
