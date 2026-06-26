@@ -1,0 +1,424 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-06-26",
+        "description": "4 goals • 2 on track • 2 blocked • status flat"
+      },
+      "children": [
+        "summary-stack",
+        "sep-1",
+        "on-track-section",
+        "sep-2",
+        "blocked-section",
+        "sep-3",
+        "sources-section"
+      ]
+    },
+    "summary-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-on-track",
+        "stat-blocked",
+        "stat-at-risk",
+        "stat-needs-attention",
+        "stat-done"
+      ]
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "2"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-needs-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "goal-sandbox-truncation",
+        "goal-btc-levels"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On Track",
+        "level": "h2"
+      }
+    },
+    "goal-sandbox-truncation": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sandbox-title",
+        "sandbox-stats",
+        "sandbox-detail-1",
+        "sandbox-detail-2",
+        "sandbox-detail-3"
+      ]
+    },
+    "sandbox-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "level": "h3"
+      }
+    },
+    "sandbox-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "sandbox-idle",
+        "sandbox-activity"
+      ]
+    },
+    "sandbox-idle": {
+      "type": "Badge",
+      "props": {
+        "text": "0d idle"
+      }
+    },
+    "sandbox-activity": {
+      "type": "Badge",
+      "props": {
+        "text": "40 activity/14d"
+      }
+    },
+    "sandbox-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "Chronic tail trimmed 22→20 today (defi-monitor exited cluster after 13:16Z)",
+        "variant": "body"
+      }
+    },
+    "sandbox-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step fix PR still pending day 3",
+        "variant": "body"
+      }
+    },
+    "sandbox-detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter flagged 6-24 18:14Z at 4.6/5 quality, not yet opened",
+        "variant": "body"
+      }
+    },
+    "goal-btc-levels": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-title",
+        "btc-stats",
+        "btc-detail-1",
+        "btc-detail-2",
+        "btc-detail-3"
+      ]
+    },
+    "btc-title": {
+      "type": "Heading",
+      "props": {
+        "text": "BTC hard levels",
+        "level": "h3"
+      }
+    },
+    "btc-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-idle",
+        "btc-activity"
+      ]
+    },
+    "btc-idle": {
+      "type": "Badge",
+      "props": {
+        "text": "0d idle"
+      }
+    },
+    "btc-activity": {
+      "type": "Badge",
+      "props": {
+        "text": "41 activity/14d"
+      }
+    },
+    "btc-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "Breakdown alert fired 05:02Z (6-25 close $59,712 < $60,500, first qualifying close)",
+        "variant": "body"
+      }
+    },
+    "btc-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "Spot tapped 21-month low $58,115 intraday",
+        "variant": "body"
+      }
+    },
+    "btc-detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "Reclaim flags 63.5k/65.9k both re-armed",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "goal-xai-quota",
+        "goal-on-chain-config"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked",
+        "level": "h2"
+      }
+    },
+    "goal-xai-quota": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "xai-title",
+        "xai-detail-1",
+        "xai-detail-2",
+        "xai-detail-3",
+        "xai-action"
+      ]
+    },
+    "xai-title": {
+      "type": "Heading",
+      "props": {
+        "text": "XAI quota recovery",
+        "level": "h3"
+      }
+    },
+    "xai-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "operator top-up day 11",
+        "variant": "body"
+      }
+    },
+    "xai-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "Team 3a8b4c1e exhausted since 6-16",
+        "variant": "body"
+      }
+    },
+    "xai-detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "WebSearch fallback covers tweet-roundup; prefetched .xai-cache still works for narrative-tracker/list-digest",
+        "variant": "body"
+      }
+    },
+    "xai-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "Nudge operator on monthly-credit top-up — no automation path",
+        "type": "warning"
+      }
+    },
+    "goal-on-chain-config": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-chain-title",
+        "on-chain-detail-1",
+        "on-chain-detail-2",
+        "on-chain-detail-3",
+        "on-chain-action"
+      ]
+    },
+    "on-chain-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator on-chain config",
+        "level": "h3"
+      }
+    },
+    "on-chain-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor NO_CONFIG day 19",
+        "variant": "body"
+      }
+    },
+    "on-chain-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "ALCHEMY_API_KEY len=0 day 10",
+        "variant": "body"
+      }
+    },
+    "on-chain-detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "ETHERSCAN_API_KEY unset",
+        "variant": "body"
+      }
+    },
+    "on-chain-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "Add `type: pool` / `type: position` entries to memory/on-chain-watches.yml and set ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets",
+        "type": "warning"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-grid"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Data Sources",
+        "level": "h3"
+      }
+    },
+    "sources-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "sm"
+      },
+      "children": [
+        "source-logs",
+        "source-git",
+        "source-gh-pr",
+        "source-gh-issue",
+        "source-cron-state"
+      ]
+    },
+    "source-logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs=ok",
+        "variant": "secondary"
+      }
+    },
+    "source-git": {
+      "type": "Badge",
+      "props": {
+        "text": "git=ok",
+        "variant": "secondary"
+      }
+    },
+    "source-gh-pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr=ok",
+        "variant": "secondary"
+      }
+    },
+    "source-gh-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue=ok",
+        "variant": "secondary"
+      }
+    },
+    "source-cron-state": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "secondary"
+      }
+    }
+  }
+}

@@ -1,18 +1,15 @@
-*Goal Tracker — 2026-06-25*
+*Goal Tracker — 2026-06-26*
 
-Summary: 5 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 1 done (overall ↑ improving — skill-freshness cleared, others held flat)
-
-BLOCKED
-• XAI quota recovery — waiting on operator credit top-up for Team 3a8b4c1e since 2026-06-16 (day 10). Prefetched .xai-cache covered narrative-tracker/list-digest today; daily-routine tweet-roundup still on WebSearch fallback.
-  → Action: top up Team 3a8b4c1e monthly credit
-• Operator on-chain config — waiting on operator for `type: pool`/`type: position` entries + ALCHEMY_API_KEY since 2026-06-08 (defi-monitor NO_CONFIG day 18, key absent day 9). on-chain-monitor still green on Blockscout keyless. Operator did seed `memory/known-addresses.yml` today — partial progress.
-  → Action: add type:pool entries to memory/on-chain-watches.yml and set ALCHEMY_API_KEY
+Summary: 4 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 0 done (→ flat, no status changes since 6-25)
 
 ON TRACK
-• Sandbox-truncation systemic — 0d idle, 35+ activity/14d (→ flat). 22-skill chronic tail unchanged in today's 08:43Z + 14:53Z heartbeats, all sharing output_tokens=0 signature. cost-report cf=0 holds since 6-24 03:48Z recovery (sr still 10%). ISS-025 capture-fix PR flagged by action-converter 6-24 18:14Z (quality 4.6/5) but not yet opened.
-• BTC hard levels — 0d idle, 35+ activity/14d (→ flat). btc-levels ran 4x today (00:51/04:51/08:42/13:09/16:39Z). Spot range 6-25 $59,317–$61,801, daily close 6-24 $60,909 (above $60,500 breakdown threshold, no alerts fired). Reclaim flags still false (already triggered 6-11/6-15).
+• Sandbox-truncation systemic — 0d idle, 40 activity/14d (→ flat). Chronic tail trimmed 22→20 today (defi-monitor exited cluster after 13:16Z), but ISS-025 capture-step fix PR still pending day 3 (action-converter flagged 6-24 18:14Z at 4.6/5 quality, not yet opened).
+• BTC hard levels — 0d idle, 41 activity/14d (→ flat). Breakdown alert fired 05:02Z (6-25 close $59,712 < $60,500, first qualifying close); spot tapped 21-month low $58,115 intraday; reclaim flags 63.5k/65.9k both re-armed.
 
-DONE
-• skill-freshness FRESHNESS_WARN — cleared 2026-06-25 (skill-analytics ran 6-24, resolving operator-scorecard stale-dep that had persisted since 2026-06-21; skill-freshness 6-25 returned FRESHNESS_OK)
+BLOCKED
+• XAI quota recovery — operator top-up day 11 (Team 3a8b4c1e exhausted since 6-16). WebSearch fallback covers tweet-roundup; prefetched .xai-cache still works for narrative-tracker/list-digest.
+  → Action: nudge operator on monthly-credit top-up — no automation path.
+• Operator on-chain config — defi-monitor NO_CONFIG day 19; ALCHEMY_API_KEY len=0 day 10, ETHERSCAN_API_KEY unset.
+  → Action: add `type: pool` / `type: position` entries to memory/on-chain-watches.yml and set ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets.
 
 Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
