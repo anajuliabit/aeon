@@ -1,0 +1,177 @@
+{
+  "root": "market-card",
+  "state": {},
+  "elements": {
+    "market-card": {
+      "type": "Card",
+      "props": {
+        "title": "Market Context — 2026-06-26"
+      },
+      "children": [
+        "take-alert",
+        "sep1",
+        "prices-stack",
+        "sep2",
+        "indicators-stack",
+        "sep3",
+        "narrative-section",
+        "sep4",
+        "market-section"
+      ]
+    },
+    "take-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Market Take",
+        "message": "Risk-off deepening (conviction high)",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prices-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "btc-stat",
+        "eth-stat"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$59,081",
+        "delta": "−3.5%",
+        "trend": "down"
+      }
+    },
+    "eth-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,535",
+        "delta": "−6.1%",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "indicators-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "fear-greed-stat",
+        "breadth-stat",
+        "tvl-stat",
+        "dex-stat"
+      ]
+    },
+    "fear-greed-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "13 (Extreme Fear)"
+      }
+    },
+    "breadth-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "4/20"
+      }
+    },
+    "tvl-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$69.7B",
+        "delta": "−2.3% 1d",
+        "trend": "down"
+      }
+    },
+    "dex-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX",
+        "value": "$8.2B"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narrative-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "narrative-heading",
+        "narrative-text"
+      ]
+    },
+    "narrative-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Narrative",
+        "level": "h3"
+      }
+    },
+    "narrative-text": {
+      "type": "Text",
+      "props": {
+        "text": "PCE 4.1% shock (peak) — 21-month BTC low $58,115",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "market-heading",
+        "market-text"
+      ]
+    },
+    "market-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h3"
+      }
+    },
+    "market-text": {
+      "type": "Text",
+      "props": {
+        "text": "sports-only day 6, no crypto macro",
+        "variant": "body"
+      }
+    }
+  }
+}
