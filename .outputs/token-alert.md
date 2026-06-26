@@ -1,20 +1,18 @@
 ## Summary
 
-Executed `skills/token-alert/SKILL.md` against the canonical Tracked Tokens watchlist (WELL/MAMO/REPPO/GITLAWB).
+**Skill:** token-alert (full sweep, no `${var}` override)
+**Verdict:** ✅ **TOKEN_ALERT_OK** — 0 triggers across 4 tokens × 3 conditions, no notification fired.
 
-**Results (TOKEN_ALERT_OK — 0/12 conditions tripped):**
+**Tokens checked** (CG live, single curl, 200):
+- WELL $0.00337204 −3.44% / vol 0.34× mean
+- MAMO $0.00755086 −3.15% / vol 1.23× mean
+- REPPO $0.01998087 −5.24% / vol 0.61× mean (loses $0.02 handle)
+- GITLAWB $0.0000487 −10.27% / vol 0.78× mean (6th red day, **closest to 15% rail — 473bp slack**)
 
-| Token | Price | 24h % (thr) | Vol vs 3×mean | Verdict |
-|-------|-------|-------------|----------------|---------|
-| WELL  | $0.00337693 | -5.95% (10%) | 1.50× (need 3×) | clear |
-| MAMO  | $0.00778230 | -2.75% (15%) | 1.12× | clear |
-| REPPO | $0.02094174 | **-10.29%** (15%) | 0.96× | closest — 471bp slack to rail |
-| GITLAWB | $0.00005408 | -4.41% (15%) | 0.69× | clear, but 5th consecutive red day to fresh local low |
-
-CoinGecko public API responded 200 in one curl call (no WebFetch fallback). Threshold-cross skipped for all tokens (no Floor/Ceiling configured per Tracked Tokens table). No notification sent per spec ("if no anomalies detected, log TOKEN_ALERT_OK and end").
+All 24h moves under per-token thresholds (10/15/15/15%), all volumes under 3.00× rail, threshold-cross skipped for all 4 (no Floor/Ceiling configured).
 
 **Files modified:**
-- `memory/logs/2026-06-25.md` — appended `### token-alert — ~12:10 UTC` run block with all 4 prices, 1d deltas, 5-window volume mean ratios, alert evaluation, and source-status line.
-- `memory/MEMORY.md` — refreshed Tracked Tokens "Recent Activity" column with 6-25 levels.
+- `memory/logs/2026-06-26.md` — appended token-alert section between Skill Freshness and AIXBT Pulse.
+- `memory/MEMORY.md` — refreshed Tracked Tokens recent-activity blurbs (6-25 → 6-26).
 
-**Follow-up watch:** REPPO -10.29% is the closest to a rail (15% downside, 471bp slack). GITLAWB extends its post-rail-break downtrend to a 5th red day / fresh local low (-37.2% from 6-15 top) but stayed under the 15% rail this run.
+**Follow-up:** GITLAWB is the watch item — 6 consecutive red days, sub-473bp from 15% alert rail. Next run rolling window becomes (6-22, 6-23, 6-24, 6-25, 6-26).
