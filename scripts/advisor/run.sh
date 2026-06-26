@@ -509,7 +509,7 @@ if [ "${REGIME_BAND:-UNKNOWN}" = "BEAR" ]; then
 fi
 REPORT="$(jq -n --argjson rpt "$REPORT" --argjson st "$TRADES" --arg dd "$RISK_DD" --arg stp "$ST_RISK_PCT" \
   '$rpt | .shortTermTrades = ($st.trades // []) | .risk = {ddPct: ($dd|tonumber? // 0), budgetPct: ($stp|tonumber? // 5)}')"
-echo "advisor: short-term trades — $(printf '%s' "$TRADES" | jq '.trades | length') selected; sized from ${ST_RISK_PCT}% (\$$(printf '%.0f' "$ST_BUDGET")) of net \$$(printf '%.0f' "$ST_TOTAL")"
+echo "advisor: short-term trades — $(printf '%s' "$TRADES" | jq '.trades | length') selected; ${ST_RISK_PCT}% budget ceiling \$$(printf '%.0f' "$ST_BUDGET") of net \$$(printf '%.0f' "$ST_TOTAL") (risk layer may size below this after vol-target/caps/DD; see per-trade sizeUsd)"
 
 # ---------------------------------------------------------------------------
 # 5. Stage every actionable rec (increase/decrease/hedge with a symbol) as a
