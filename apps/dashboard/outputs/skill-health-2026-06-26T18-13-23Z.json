@@ -1,0 +1,333 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-06-26"
+      },
+      "children": [
+        "heading-status",
+        "alert-systemic",
+        "sep1",
+        "section-degraded",
+        "sep2",
+        "section-warning",
+        "sep3",
+        "section-nodata",
+        "sep4",
+        "section-healthy",
+        "sep5",
+        "section-summary",
+        "note-cli"
+      ]
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "Health Status: DEGRADED (26 skills affected)",
+        "level": "h2"
+      }
+    },
+    "alert-systemic": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Systemic Issue Detected",
+        "message": "Sandbox-truncation (output_tokens=0) — affecting 26+ skills. Root cause: aeon.yml capture step / ISS-025 cluster"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-degraded": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-degraded",
+        "stack-degraded-items",
+        "text-degraded-more"
+      ]
+    },
+    "heading-degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (worst 5 by success rate, cf=0 across fleet today)",
+        "level": "h3"
+      }
+    },
+    "stack-degraded-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-vuln-scanner",
+        "item-reg-monitor",
+        "item-cost-report",
+        "item-skill-analytics",
+        "item-security-digest"
+      ]
+    },
+    "item-vuln-scanner": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner — 7% (29 runs) → ISS-018 (sandbox: missing prefetch shim, distinct from systemic)"
+      }
+    },
+    "item-reg-monitor": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — 10% (42 runs) — see systemic"
+      }
+    },
+    "item-cost-report": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report — 10% (42 runs) → ISS-025 (outputTokens=12 variant)"
+      }
+    },
+    "item-skill-analytics": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics — 11% (47 runs) — see systemic"
+      }
+    },
+    "item-security-digest": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — 21% (86 runs) — see systemic"
+      }
+    },
+    "text-degraded-more": {
+      "type": "Text",
+      "props": {
+        "text": "+21 more — see memory/issues/INDEX.md (incl. search-skill ISS-021, skill-health ISS-024)",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-warning": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-warning",
+        "stack-warning-items"
+      ]
+    },
+    "heading-warning": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 WARNING (6)",
+        "level": "h3"
+      }
+    },
+    "stack-warning-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-morning-brief",
+        "item-token-pick",
+        "item-token-movers",
+        "item-defi-overview",
+        "item-on-chain-monitor",
+        "item-token-alert"
+      ]
+    },
+    "item-morning-brief": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief — 60% (NEW — was DEGRADED, crossed 0.6 boundary)"
+      }
+    },
+    "item-token-pick": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick — 63% → ISS-020"
+      }
+    },
+    "item-token-movers": {
+      "type": "Text",
+      "props": {
+        "text": "token-movers — 63%"
+      }
+    },
+    "item-defi-overview": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview — 68% → ISS-019"
+      }
+    },
+    "item-on-chain-monitor": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor — 70%"
+      }
+    },
+    "item-token-alert": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — 74% → ISS-023"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-nodata",
+        "stack-nodata-items"
+      ]
+    },
+    "heading-nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "stack-nodata-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-autoresearch",
+        "item-fork-skill-gap",
+        "item-operator-scorecard"
+      ]
+    },
+    "item-autoresearch": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch (workflow_dispatch, OK)"
+      }
+    },
+    "item-fork-skill-gap": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap (Sun 6-28)"
+      }
+    },
+    "item-operator-scorecard": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard (Mon 6-29) — DISPATCH-SKILL on schedule"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-healthy": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-healthy",
+        "stat-healthy"
+      ]
+    },
+    "heading-healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "value": "9",
+        "label": "Skills"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-summary",
+        "summary-stats"
+      ]
+    },
+    "heading-summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-open-issues",
+        "stat-resolved",
+        "stat-filed"
+      ]
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "14"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed This Run",
+        "value": "0"
+      }
+    },
+    "note-cli": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "skill-runs CLI denied by sandbox — partial run, cron-state only."
+      }
+    }
+  }
+}
