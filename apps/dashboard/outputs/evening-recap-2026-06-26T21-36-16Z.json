@@ -1,0 +1,347 @@
+{
+  "root": "evening-recap-card",
+  "state": {},
+  "elements": {
+    "evening-recap-card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-26",
+        "description": "strong ship day — PR #147 merged, APE HIGH 9/10 staged, structural meta-bear named; fleet cf=0 across 42 dispatched, ISS-025 fix unshipped day 4"
+      },
+      "children": [
+        "headlines-section",
+        "sep-1",
+        "notable-section",
+        "sep-2",
+        "decisions-section",
+        "sep-3",
+        "footer-text"
+      ]
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "h1-token-pick",
+        "h2-pr147",
+        "h3-narrative",
+        "h4-security",
+        "h5-defi"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "h1-token-pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-title",
+        "h1-details",
+        "h1-file"
+      ]
+    },
+    "h1-title": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick — APE HIGH 9/10 $0.151 staged",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "h1-details": {
+      "type": "Text",
+      "props": {
+        "text": "Yuga control + ApeMars 63% APY + Hyperliquid 5x whale; only sub-rank-200 green in red tape",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "h1-file": {
+      "type": "Link",
+      "props": {
+        "label": ".pending-picks/2026-06-26-token-pick.json",
+        "href": ".pending-picks/2026-06-26-token-pick.json"
+      },
+      "children": []
+    },
+    "h2-pr147": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-title",
+        "h2-details",
+        "h2-link"
+      ]
+    },
+    "h2-title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #147 merged",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "h2-details": {
+      "type": "Text",
+      "props": {
+        "text": "advisor hard risk layer (#140 impl) shipped mid-afternoon; first of 7-issue sprint (#139–#145)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "h2-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/aeonframework/aeon/pull/147",
+        "href": "https://github.com/aeonframework/aeon/pull/147"
+      },
+      "children": []
+    },
+    "h3-narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-title",
+        "h3-details",
+        "h3-file"
+      ]
+    },
+    "h3-title": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — \"crypto needs new narrative\" meta-bear named",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "h3-details": {
+      "type": "Text",
+      "props": {
+        "text": "BTC -32% H1, 46d Coinbase Premium, $2.92B ETF outflows; breaks 24h half-life pattern; stablecoins PROMOTED 4→5",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "h3-file": {
+      "type": "Link",
+      "props": {
+        "label": ".pending-notify/narrative-tracker-msg.md",
+        "href": ".pending-notify/narrative-tracker-msg.md"
+      },
+      "children": []
+    },
+    "h4-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-title",
+        "h4-details",
+        "h4-file"
+      ]
+    },
+    "h4-title": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "h4-details": {
+      "type": "Text",
+      "props": {
+        "text": "2 net-new KEV (Cisco SSRF EPSS 0.51 + PTC Windchill RCE due 6-28), CVSS-10 Go ssh auth bypass re-opens CVE-2024-45337, leo-sdk 5× expansion (15 pkg)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "h4-file": {
+      "type": "Link",
+      "props": {
+        "label": "tmp-secdigest/digest.md",
+        "href": "tmp-secdigest/digest.md"
+      },
+      "children": []
+    },
+    "h5-defi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-title",
+        "h5-details",
+        "h5-file"
+      ]
+    },
+    "h5-title": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "h5-details": {
+      "type": "Text",
+      "props": {
+        "text": "Invesco USTB -28%/-$223M 48h institutional unwind; Aave V3 fees +36% day-3; Uniswap V4 ties V3 share",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "h5-file": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/defi-overview-msg.md",
+        "href": ".tmp/defi-overview-msg.md"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "n1",
+        "n2",
+        "n3",
+        "n4"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "n1": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels — first qualifying close $59,712 < $60,500 fired 05:02Z; spot tapped 21-month low $58,115; F&G 13 day 3",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "n2": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — all sub-skills clean; MNT -15.8% first major-rank wipeout; AAVE day-3 +5.5% holds",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "n3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — 5 keeps: MinerU top (7.9× avg), ai-berkshire (multi-agent Claude value investor)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "n4": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — DEGRADED(26); morning-brief reclassified degraded→warning; 20-skill sandbox tail unchanged",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "d1",
+        "d2",
+        "d3"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "d1": {
+      "type": "Text",
+      "props": {
+        "text": "cut ISS-025 capture-step fix PR — day 4 deferred; 20-skill tail blocked (action-converter 4.6/5 quality)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "d2": {
+      "type": "Text",
+      "props": {
+        "text": "top up XAI quota — day 11, operator-gated",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "d3": {
+      "type": "Text",
+      "props": {
+        "text": "patch CVE-2026-12569 (PTC Windchill RCE) by 2026-06-28 if in scope (CISA deadline)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+14 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

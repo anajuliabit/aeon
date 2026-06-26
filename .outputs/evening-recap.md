@@ -1,24 +1,22 @@
-*Evening Recap — 2026-06-25*
-_TL;DR: Solid execution day — SEI pick staged, phishing 3-bait kit logged and known-addresses.yml seeded, MEMORY.md consolidated; ISS-025 fix PR still unshipped at 36h_
+*Evening Recap — 2026-06-26*
+_TL;DR: strong ship day — PR #147 merged, APE HIGH 9/10 staged, structural meta-bear named; fleet cf=0 across 42 dispatched, ISS-025 fix unshipped day 4_
 
 *Headlines:*
-- on-chain-monitor — phishing 3-bait kit (real USDC+cbBTC+cyrillic clone); known-addresses.yml seeded · memory/known-addresses.yml
-- token-pick — SEI HIGH 9/10 $0.0584, exit $0.069 / inv $0.054 / 14d · .pending-picks/2026-06-25-token-pick.json
-- agent-buzz — MCP×broker+game-engine cluster, CNVS $20k/12d, Base 15M agentic txns · https://x.com/OptimaiNetwork/status/2069796656774533360
-- reflect+goal-tracker — MEMORY.md consolidated; skill-freshness-warn → DONE, 5 stale entries pruned · memory/MEMORY.md
-- action-converter — 5 actions queued (avg 4.2/5): ISS-025 PR, HYPE cross-slate doc, defi-monitor YAML, AAVE update, phishing-patterns topic
+- token-pick — APE HIGH 9/10 $0.151 staged (Yuga control + ApeMars 63% APY + Hyperliquid 5x whale; only sub-rank-200 green in red tape) · .pending-picks/2026-06-26-token-pick.json
+- PR #147 merged — advisor hard risk layer (#140 impl) shipped mid-afternoon; first of 7-issue sprint (#139–#145) · https://github.com/aeonframework/aeon/pull/147
+- narrative-tracker — "crypto needs new narrative" meta-bear (BTC -32% H1, 46d Coinbase Premium, $2.92B ETF outflows) breaks 24h half-life pattern; stablecoins PROMOTED 4→5 · .pending-notify/narrative-tracker-msg.md
+- security-digest — 2 net-new KEV (Cisco SSRF EPSS 0.51 + PTC Windchill RCE due 6-28), CVSS-10 Go ssh auth bypass re-opens CVE-2024-45337, leo-sdk 5× expansion (15 pkg) · tmp-secdigest/digest.md
+- defi-overview — Invesco USTB -28%/-$223M 48h institutional unwind; Aave V3 fees +36% day-3; Uniswap V4 ties V3 share · .tmp/defi-overview-msg.md
 
 *Notable:*
-- github-trending — 4 picks: apple/container (17× avg velocity), stablyai/orca, google-labs-code/design.md, kunchenguid/no-mistakes
-- narrative-tracker — 5 bear frames dead in 24h; 4 NEW rising (prediction-markets, selective-liquidity slate, value-accruing tokens, asset-specific fundamentals)
-- security-digest — 0 net-new KEV first time this week; 48 npm malware (HubSpot ×9 + LeoSDK ×3)
-- daily-routine — full clean: token-movers, paper-pick, hn-digest, tweet-roundup (WebSearch fallback)
-- list-digest — 4 new signals; yield-stables playbook aligned with risk-off F&G 12
+- btc-levels — first qualifying close $59,712 < $60,500 fired 05:02Z; spot tapped 21-month low $58,115; F&G 13 day 3
+- daily-routine — all sub-skills clean; MNT -15.8% first major-rank wipeout; AAVE day-3 +5.5% holds
+- github-trending — 5 keeps: MinerU top (7.9× avg), ai-berkshire (multi-agent Claude value investor)
+- skill-health — DEGRADED(26); morning-brief reclassified degraded→warning; 20-skill sandbox tail unchanged
 
 *Decisions for tomorrow:*
-- Merge PR #146 (drop disabled hacker-news-digest from skill-evals) · https://github.com/anajuliabit/aeon/pull/146
-- Open ISS-025 capture-step fix PR (queued 6-24 18:14Z — 36h unshipped)
-- Top up Team 3a8b4c1e XAI credit (day 10 blocked)
-- Add type:pool/type:position to memory/on-chain-watches.yml (defi-monitor NO_CONFIG day 18)
+- cut ISS-025 capture-step fix PR — day 4 deferred; 20-skill tail blocked (action-converter 4.6/5 quality)
+- top up XAI quota — day 11, operator-gated
+- patch CVE-2026-12569 (PTC Windchill RCE) by 2026-06-28 if in scope (CISA deadline)
 
-_+11 routine runs collapsed · sources: log=ok cron-state=ok_
+_+14 routine runs collapsed · sources: log=ok cron-state=ok_
