@@ -57,11 +57,11 @@ try:
         wsum=sum(ws) or 0
         for t,w in zip(trades,ws):
             t["sizeUsd"]=math.floor(budget*w/wsum) if wsum>0 else 0
-        poscap=net*f("RISK_MAX_POS_PCT",1.5)/100.0*degross
+        poscap=net*f("RISK_MAX_POS_PCT",1.5)/100.0
         for t in trades:
             if t["sizeUsd"]>poscap:
                 t["sizeUsd"]=math.floor(poscap); t["riskNote"]="pos-capped"
-        dircap=net*f("RISK_MAX_DIR_PCT",3.0)/100.0*degross
+        dircap=net*f("RISK_MAX_DIR_PCT",3.0)/100.0
         for side in ("long","short"):
             s=sum(t["sizeUsd"] for t in trades if (t.get("side") or "long")==side)
             if s>dircap and s>0:

@@ -529,8 +529,13 @@ check "per-position cap 1.5pct" "$(printf '%s' "$O1" | jq -r '.trades[0].sizeUsd
 T5='{"trades":[{"symbol":"A","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"B","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"C","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"D","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"E","coingeckoId":"calm","side":"long","conviction":"HIGH"}]}'
 O5="$(rsz "$T5" 400000 0)"
 check "direction cap long sum <=3pct" "$(printf '%s' "$O5" | jq -r '([.trades[]|select(.side=="long").sizeUsd]|add) <= 12000')" "true"
-ODD0="$(rsz "$T1" 40000 5)"; ODD1="$(rsz "$T1" 40000 18)"
-check "DD18 degrosses vs DD5" "$(printf '%s' "$ODD1" | jq -r --argjson a "$(printf '%s' "$ODD0" | jq '.trades[0].sizeUsd')" '.trades[0].sizeUsd < $a')" "true"
+# DD de-gross shrinks the BUDGET (not the fixed caps). Use 5 MEDIUM longs at net=40000:
+# budget 5%=2000 split 5 ways = 400 each (< pos-cap 1.5%*40000=600, so budget binds);
+# DD18 halves budget -> ~200 each. DD5 (no trigger) stays ~400.
+TDD='{"trades":[{"symbol":"A","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"B","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"C","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"D","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"E","coingeckoId":"calm","side":"long","conviction":"MEDIUM"}]}'
+DSUM0="$(printf '%s' "$TDD" | RISK_NET=40000 RISK_DD=5  RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ" | jq '[.trades[].sizeUsd]|add')"
+DSUM1="$(printf '%s' "$TDD" | RISK_NET=40000 RISK_DD=18 RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ" | jq '[.trades[].sizeUsd]|add')"
+check "DD18 degrosses budget vs DD5" "$( [ "$DSUM1" -lt "$DSUM0" ] && echo yes )" "yes"
 ODIS="$(printf '%s' "$T1" | RISK_DISABLE=1 RISK_NET=400000 RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ")"
 check "RISK_DISABLE conviction-split uncapped" "$(printf '%s' "$ODIS" | jq -r '.trades[0].sizeUsd')" "20000"
 check "sizePctNet matches sizeUsd" "$(printf '%s' "$O1" | jq -r '.trades[0].sizePctNet == ((.trades[0].sizeUsd/400000*1000)|round)/10')" "true"
