@@ -1,7 +1,7 @@
 {
   "Wallet 1 (primary)": {
-    "last_block": 47801591,
-    "last_run": "2026-06-25T13:05Z",
+    "last_block": 47843662,
+    "last_run": "2026-06-26T12:26Z",
     "alerted_tx": [
       "0x48ce29e90baad21b68383c86bf9e7c00dbb4251e2c313c9f87864aba03f1bbc7",
       "0x63562510456e0b701b6327ad9bc9a4849358b315f903207310caf7f869cdf088",
@@ -12,8 +12,8 @@
     "median_usd_30d": null
   },
   "Wallet 2": {
-    "last_block": 47801591,
-    "last_run": "2026-06-25T13:05Z",
+    "last_block": 47843662,
+    "last_run": "2026-06-26T12:26Z",
     "alerted_tx": [
       "0x63562510456e0b701b6327ad9bc9a4849358b315f903207310caf7f869cdf088",
       "0x58cb3c113b86bf3b8f14f1c21982f069b0b643f1c794d4c47b05af8c83f4eec9",
@@ -22,8 +22,8 @@
     "median_usd_30d": null
   },
   "Wallet 3": {
-    "last_block": 47801591,
-    "last_run": "2026-06-25T13:05Z",
+    "last_block": 47843662,
+    "last_run": "2026-06-26T12:26Z",
     "alerted_tx": [
       "0xb79fb93223cc1bc8849847e8e9ee6c5eb0dbcb7096d6e932db32e124ccf5c090",
       "0x5fd704ee2d4417d22ffe80ceec62df243b3529948a96f8d03cffbf64257ce58d",
@@ -32,16 +32,16 @@
     "median_usd_30d": null
   },
   "Wallet 4": {
-    "last_block": 47801591,
-    "last_run": "2026-06-25T13:05Z",
+    "last_block": 47843662,
+    "last_run": "2026-06-26T12:26Z",
     "alerted_tx": [
       "0x2985fa252739c97d27b4abc7a2b16b7c74ef67458b95f6ea4a6430d915addbab"
     ],
     "median_usd_30d": null
   },
   "Wallet 5": {
-    "last_block": 47801591,
-    "last_run": "2026-06-25T13:05Z",
+    "last_block": 47843662,
+    "last_run": "2026-06-26T12:26Z",
     "alerted_tx": [],
     "median_usd_30d": null
   }
