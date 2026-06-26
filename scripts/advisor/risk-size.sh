@@ -23,7 +23,9 @@ def conv_mult(c): return 2.0 if str(c or "").upper().startswith("HIGH") else 1.0
 try:
     data=json.loads(os.environ.get("TRADES_IN") or '{"trades":[]}')
     trades=data.get("trades") or []
-    net=f("RISK_NET"); dd=f("RISK_DD"); st_pct=f("ST_RISK_PCT",5)
+    for t in trades:                                         # F1: normalize side once so case/whitespace
+        t["side"]=str(t.get("side") or "long").strip().lower()  # ("Long","SHORT ") can't escape the direction cap / bear-halve
+    net=max(0.0, f("RISK_NET")); dd=f("RISK_DD"); st_pct=f("ST_RISK_PCT",5)  # F2: clamp net>=0 (a negative net must never yield negative sizes)
     disable=os.environ.get("RISK_DISABLE","0")=="1"
     budget=net*st_pct/100.0
     def conviction_split(tr, bud):
@@ -59,9 +61,10 @@ try:
         for t,w in zip(trades,ws):
             t["sizeUsd"]=math.floor(budget*w/wsum) if wsum>0 else 0
         poscap=net*f("RISK_MAX_POS_PCT",1.5)/100.0
-        for t in trades:
-            if t["sizeUsd"]>poscap:
-                t["sizeUsd"]=math.floor(poscap); t["riskNote"]="pos-capped"
+        if poscap>=1:                          # F3: on a tiny/seed account a sub-$1 cap would
+            for t in trades:                   # floor every position to 0 (silent wipeout); skip it there
+                if t["sizeUsd"]>poscap:
+                    t["sizeUsd"]=math.floor(poscap); t["riskNote"]="pos-capped"
         dircap=net*f("RISK_MAX_DIR_PCT",3.0)/100.0
         for side in ("long","short"):
             s=sum(t["sizeUsd"] for t in trades if (t.get("side") or "long")==side)

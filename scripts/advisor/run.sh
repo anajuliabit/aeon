@@ -479,11 +479,16 @@ TRADES="$(printf '%s' "$TRADES" | jq -c --arg held "${HELD_LC:-}" '
 
 # Current drawdown % from the all-time ledger peak (for risk-size DD de-gross).
 # Reuse the notify-drawdown computation; 0 if history is too short/unavailable.
+# F7: current net is taken authoritatively from the snapshot (order-independent),
+# NOT from $h[-1] — /api/history ordering is not guaranteed, so a newest-first
+# response would read the OLDEST point as "current" and mis-state the drawdown.
+# Peak = all-time high including today; DD clamped to >=0 (a new ATH is 0% DD).
+CUR_NET="$(jq -r '.totalUsd // 0' "$D/snapshot.json" 2>/dev/null || echo 0)"
+[ -z "$CUR_NET" ] && CUR_NET=0
 RISK_DD="$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}" "$BASE/api/history" 2>/dev/null \
-  | jq -r '[.[] | select((.totalUsd // 0) > 0)] as $h
-      | if ($h|length) < 2 then 0
-        else (([$h[].totalUsd] | max) as $peak
-              | if $peak > 0 then ($peak - $h[-1].totalUsd)/$peak*100 else 0 end) end' 2>/dev/null || echo 0)"
+  | jq -r --argjson cur "$CUR_NET" '[.[] | (.totalUsd // 0) | select(. > 0)] as $h
+      | (($h + [$cur]) | max) as $peak
+      | if ($peak > 0 and $cur > 0) then ([($peak - $cur)/$peak*100, 0] | max) else 0 end' 2>/dev/null || echo 0)"
 [ -z "$RISK_DD" ] && RISK_DD=0
 echo "advisor: portfolio drawdown ${RISK_DD}%"
 
@@ -500,10 +505,17 @@ ST_BUDGET="$(awk "BEGIN{printf \"%.2f\", ($ST_TOTAL * $ST_RISK_PCT) / 100}")" # 
 TRADES="$(printf '%s' "$TRADES" \
   | RISK_NET="$ST_TOTAL" RISK_DD="$RISK_DD" RISK_MKT="$D/cg-markets.json" ST_RISK_PCT="$ST_RISK_PCT" \
     bash "$ROOT/scripts/advisor/risk-size.sh")"
+# F6: risk-size.sh prints nothing if python3 is missing / the process is OOM-killed.
+# Empty or non-JSON output would crash the --argjson below; fall back to no
+# short-term trades (logged, not silent).
+if ! printf '%s' "$TRADES" | jq -e '.trades' >/dev/null 2>&1; then
+  echo "advisor: risk-size.sh produced no valid output — dropping short-term trades" >&2
+  TRADES='{"trades":[]}'
+fi
 if [ "${REGIME_BAND:-UNKNOWN}" = "BEAR" ]; then
   # Shared filter (scripts/advisor/lib/bear-halve.jq) — one source of truth with
-  # the selftest, and it floors a positive long to >=1 so it can't fall to the
-  # un-gated $1000 default downstream (F6).
+  # the selftest. Halves longs and floors dust to 0; zero-sized trades are then
+  # skipped at staging (the defensive outcome in a downtrend).
   TRADES="$(printf '%s' "$TRADES" | jq -c -f "$ROOT/scripts/advisor/lib/bear-halve.jq")"
   echo "advisor: regime BEAR — halved long short-term notionals"
 fi
@@ -669,7 +681,7 @@ echo "advisor: staged $STB_STAGED short-term trade(s)"
 # Telegram: .summary + the actionable trades (directional recs), so the operator
 # sees the trims/adds/hedges — not just whatever defensive "hold" the PM ranked
 # first. Falls back to an explicit "no trades" line on a purely defensive day.
-TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" --arg band "$REGIME_BAND" --arg score "$REGIME_SCORE" --arg dd "$RISK_DD" '
+TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" --arg band "$REGIME_BAND" --arg score "$REGIME_SCORE" --arg dd "$RISK_DD" --arg stp "$ST_RISK_PCT" '
   ([.recommendations[]? | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")]) as $trades
   | (.shortTermTrades // []) as $buys
   | "REGIME: " + $band + (if $score == "n/a" then "" else " " + $score + "/100" end) + "\n"
@@ -686,7 +698,7 @@ TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" --arg band "$REGIME_BAND" --
        end)
     + "\n\n" + (if ($buys | length) == 0
        then "🎯 Short-term trades: none qualify today."
-       else "🎯 Short-term trades (sized from a 5% short-term sleeve):\n" + ([$buys[]
+       else "🎯 Short-term trades (sized from a " + $stp + "% short-term sleeve):\n" + ([$buys[]
          | "• " + (.conviction // "?") + " " + ((.side // "long") | ascii_upcase) + " " + (.symbol // "?")
            + (if (.sizeUsd // 0) > 0 then " ~$" + (.sizeUsd | tostring) + " (" + ((.sizePctNet // 0) | tostring) + "% net)" else "" end)
            + " · $" + ((.entry // 0) | tostring) + " → $" + ((.target // 0) | tostring)
