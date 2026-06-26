@@ -1,16 +1,14 @@
-*on-chain alert — 2026-06-25*
+## Summary
 
-⚠️ address-poisoning escalated overnight. same attacker contract `0xC3236716…` planted 3 fake-W1 baits (`0x98E57e6799…`) under W2 / W4 / W4 within minutes of each real transfer — now mixing zero-value real-token spoofs with the cyrillic ÚSDС clone (6-23 was ÚSDС only). hardware-screen address verify unchanged.
+**Skill:** on-chain-monitor — **ON_CHAIN_OK** (5/5 watches succeeded, 0 raw events in window, 0 surviving ≥$1k, no notification fired per spec).
 
-*W1 (primary)* (base)
-• UNKNOWN-OUT $7,105 cbBTC → Morpho GeneralAdapter1 — [tx](https://basescan.org/tx/0x48ce29e90baad21b68383c86bf9e7c00dbb4251e2c313c9f87864aba03f1bbc7)
-• UNKNOWN-IN $6,641 cbBTC ← W2 — [tx](https://basescan.org/tx/0x63562510456e0b701b6327ad9bc9a4849358b315f903207310caf7f869cdf088)
-• UNKNOWN-IN $1,115 USDC ← W4 — [tx](https://basescan.org/tx/0x2985fa252739c97d27b4abc7a2b16b7c74ef67458b95f6ea4a6430d915addbab)
+**Window:** 42,071 blocks on Base (last_block 47801591 → 47843662, ≈23.4h). Quiet 24h — no legit wallet activity, attacker dust from 6-25 did not repeat.
 
-*W2* (base)
-• UNKNOWN-OUT $6,641 cbBTC → W1 — [tx](https://basescan.org/tx/0x63562510456e0b701b6327ad9bc9a4849358b315f903207310caf7f869cdf088)
+**Sources:** blockscout=ok (only path used — `ALCHEMY_API_KEY len=0` and `ETHERSCAN_API_KEY unset` carry from day 9→10 of operator top-up window). All 5 wallets' newest token-transfer + transaction blocks are below `last_block`, confirming no new activity.
 
-*W4* (base)
-• UNKNOWN-OUT $1,115 USDC → W1 — [tx](https://basescan.org/tx/0x2985fa252739c97d27b4abc7a2b16b7c74ef67458b95f6ea4a6430d915addbab)
+**Files modified:**
+- `memory/on-chain-state.json` — bumped `last_block` to 47843662 + `last_run` to 2026-06-26T12:26Z for all 5 wallets. `alerted_tx` carried (none older than 7d), `median_usd_30d` still null (<5 samples).
+- `memory/logs/2026-06-26.md` — appended `## on-chain-monitor (2026-06-26T12:26Z)` block with raw=0/kept=0 per-wallet detail, top-block diagnostics, source footer, and ON_CHAIN_OK status line.
+- `memory/on-chain-state.json.tmp` — emptied stale artifact (sandbox blocked `rm` and `mv` even within working dir; file is now a 0-byte stub, not state data).
 
-5 events on 3 watches | sources: alchemy=skip(no-key), etherscan=skip(free-tier-blocks-base), blockscout=ok, coingecko=skip(blockscout-inline-rate) | last_block→47801591
+**Follow-up:** `ALCHEMY_API_KEY`/`ETHERSCAN_API_KEY` operator-top-up still pending (day 10) — Blockscout has kept this skill green but `mv`/`rm` sandbox lockouts in `memory/` keep accumulating `.tmp` artifacts. Worth a workflow-level cleanup or a state.json-only-via-Write convention in the SKILL.md to stop seeding `.tmp` paths the sandbox refuses to clear.

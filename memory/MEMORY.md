@@ -47,10 +47,10 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | $0.00337693 -5.95% 6-25 (gives back 6-24 bounce, fresh local low; vol 1.50× 5-day mean) |
-| MAMO    | mamo               | 15%           | $0.00778230 -2.75% 6-25 (slow drip below 6-23 rinse low, sub-$0.008 holding pattern) |
-| REPPO   | reppo              | 15%           | $0.02094174 -10.29% 6-25 (closest to 15% rail with 471bp slack; still net +21.97% from 6-19 base) |
-| GITLAWB | gitlawb            | 15%           | $0.00005408 -4.41% 6-25 (5th consecutive red day, fresh local low; -37.2% from 6-15 top) |
+| WELL    | moonwell-artemis   | 10%           | $0.00337204 -3.44% 6-26 (pinned at fresh local low, no follow-through to 6-25's -5.95% leg; vol 0.34× 5-day mean) |
+| MAMO    | mamo               | 15%           | $0.00755086 -3.15% 6-26 (drips below $0.0076, 6-day continuous low extension; vol 1.23× 5-day mean — highest absolute vol of window) |
+| REPPO   | reppo              | 15%           | $0.01998087 -5.24% 6-26 (loses $0.02 handle to fresh leg low; still net +16.4% from 6-19 base) |
+| GITLAWB | gitlawb            | 15%           | $0.0000487 -10.27% 6-26 (6th consecutive red day, fresh local low; closest to 15% rail at 473bp slack; -43.4% from 6-15 top) |
 
 ## Recent Patterns & Issues
 - **Today's token-pick 6-25 SEI HIGH 9/10 $0.0584** — Live catalyst stack (Giga upgrade 200K-TPS target, EVM migration mid-June, Canary Staked SEI ETF SEIZ live, Xiaomi wallet preinstall) on strongest RS print in top 250: +8.83% on BTC -2.7%/ETH -2.8% red tape. Exit $0.069 / inv $0.054 / 14d. Market pick: "BTC dip to $57,500 in June" YES 26¢ MEDIUM (fair ~35%, 9pp edge); resolves 2026-07-01.

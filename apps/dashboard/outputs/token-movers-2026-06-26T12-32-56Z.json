@@ -1,0 +1,1009 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers — 2026-06-26 12:31 UTC"
+      },
+      "children": [
+        "header-summary",
+        "sep-1",
+        "winners-heading",
+        "winners-stack",
+        "sep-2",
+        "losers-heading",
+        "losers-stack",
+        "sep-3",
+        "trending-heading",
+        "trending-stack",
+        "sep-4",
+        "notable-heading",
+        "notable-stack"
+      ]
+    },
+    "header-summary": {
+      "type": "Text",
+      "props": {
+        "text": "day 3 risk-off, breakdown confirmed — BTC $59,473 (−2.7%) cleared the $60,500 level, ETH $1,547 (−5.0%), SOL +1.3% the lone large-cap green; 26/100 top alts green, median top-50 −2.1%.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winner-1",
+        "winner-2",
+        "winner-3",
+        "winner-4",
+        "winner-5",
+        "winner-6",
+        "winner-7",
+        "winner-8"
+      ]
+    },
+    "winner-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w1-name",
+        "w1-price",
+        "w1-meta",
+        "w1-tags"
+      ]
+    },
+    "w1-name": {
+      "type": "Text",
+      "props": {
+        "text": "MAGMA (Magma Finance)",
+        "variant": "body"
+      }
+    },
+    "w1-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.611",
+        "delta": "+41.6%",
+        "trend": "up"
+      }
+    },
+    "w1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d +52% / 1h +4.4% • $8.5M / #234",
+        "variant": "caption"
+      }
+    },
+    "w1-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w1-tag-pump",
+        "w1-tag-breakout"
+      ]
+    },
+    "w1-tag-pump": {
+      "type": "Badge",
+      "props": {
+        "text": "PUMP-RISK"
+      }
+    },
+    "w1-tag-breakout": {
+      "type": "Badge",
+      "props": {
+        "text": "BREAKOUT"
+      }
+    },
+    "winner-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w2-name",
+        "w2-price",
+        "w2-meta"
+      ]
+    },
+    "w2-name": {
+      "type": "Text",
+      "props": {
+        "text": "BEAT (Audiera)",
+        "variant": "body"
+      }
+    },
+    "w2-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$2.39",
+        "delta": "+28.2%",
+        "trend": "up"
+      }
+    },
+    "w2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d +21% / 1h −1.3% • $48M / #87",
+        "variant": "caption"
+      }
+    },
+    "winner-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w3-name",
+        "w3-price",
+        "w3-meta",
+        "w3-tags"
+      ]
+    },
+    "w3-name": {
+      "type": "Text",
+      "props": {
+        "text": "UB (Unibase)",
+        "variant": "body"
+      }
+    },
+    "w3-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.0753",
+        "delta": "+20.7%",
+        "trend": "up"
+      }
+    },
+    "w3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d −35% / 1h −3.0% • $26M / #174",
+        "variant": "caption"
+      }
+    },
+    "w3-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w3-tag-fade"
+      ]
+    },
+    "w3-tag-fade": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE"
+      }
+    },
+    "winner-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w4-name",
+        "w4-price",
+        "w4-meta"
+      ]
+    },
+    "w4-name": {
+      "type": "Text",
+      "props": {
+        "text": "TAC",
+        "variant": "body"
+      }
+    },
+    "w4-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.0257",
+        "delta": "+20.7%",
+        "trend": "up"
+      }
+    },
+    "w4-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d +8% / 1h +1.0% • $2.9M / #231",
+        "variant": "caption"
+      }
+    },
+    "winner-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w5-name",
+        "w5-price",
+        "w5-meta",
+        "w5-tags"
+      ]
+    },
+    "w5-name": {
+      "type": "Text",
+      "props": {
+        "text": "LAB",
+        "variant": "body"
+      }
+    },
+    "w5-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$19.94",
+        "delta": "+14.9%",
+        "trend": "up"
+      }
+    },
+    "w5-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d +28% / 1h +2.8% • $32M / #16",
+        "variant": "caption"
+      }
+    },
+    "w5-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w5-tag-major"
+      ]
+    },
+    "w5-tag-major": {
+      "type": "Badge",
+      "props": {
+        "text": "MAJOR"
+      }
+    },
+    "winner-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w6-name",
+        "w6-price",
+        "w6-meta"
+      ]
+    },
+    "w6-name": {
+      "type": "Text",
+      "props": {
+        "text": "B (BUILDon)",
+        "variant": "body"
+      }
+    },
+    "w6-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.239",
+        "delta": "+13.9%",
+        "trend": "up"
+      }
+    },
+    "w6-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d +9% / 1h +1.9% • $7.2M / #142",
+        "variant": "caption"
+      }
+    },
+    "winner-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w7-name",
+        "w7-price",
+        "w7-meta"
+      ]
+    },
+    "w7-name": {
+      "type": "Text",
+      "props": {
+        "text": "VELVET",
+        "variant": "body"
+      }
+    },
+    "w7-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.532",
+        "delta": "+9.7%",
+        "trend": "up"
+      }
+    },
+    "w7-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d +16% / 1h +4.8% • $7.1M / #154",
+        "variant": "caption"
+      }
+    },
+    "winner-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w8-name",
+        "w8-price",
+        "w8-meta",
+        "w8-tags"
+      ]
+    },
+    "w8-name": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE",
+        "variant": "body"
+      }
+    },
+    "w8-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$87.07",
+        "delta": "+6.3%",
+        "trend": "up"
+      }
+    },
+    "w8-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d +19% / 1h +1.0% • $310M / #57",
+        "variant": "caption"
+      }
+    },
+    "w8-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "w8-tag-trending"
+      ]
+    },
+    "w8-tag-trending": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+UP"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "loser-1",
+        "loser-2",
+        "loser-3",
+        "loser-4",
+        "loser-5",
+        "loser-6",
+        "loser-7",
+        "loser-8"
+      ]
+    },
+    "loser-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l1-name",
+        "l1-price",
+        "l1-meta",
+        "l1-tags"
+      ]
+    },
+    "l1-name": {
+      "type": "Text",
+      "props": {
+        "text": "MNT (Mantle)",
+        "variant": "body"
+      }
+    },
+    "l1-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.421",
+        "delta": "−16.3%",
+        "trend": "down"
+      }
+    },
+    "l1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d −20% / 1h +0.1% • $76M / #53",
+        "variant": "caption"
+      }
+    },
+    "l1-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "l1-tag-major"
+      ]
+    },
+    "l1-tag-major": {
+      "type": "Badge",
+      "props": {
+        "text": "MAJOR"
+      }
+    },
+    "loser-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l2-name",
+        "l2-price",
+        "l2-meta"
+      ]
+    },
+    "l2-name": {
+      "type": "Text",
+      "props": {
+        "text": "STRCX (Strategy PP xStock)",
+        "variant": "body"
+      }
+    },
+    "l2-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$74.27",
+        "delta": "−14.0%",
+        "trend": "down"
+      }
+    },
+    "l2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d −20% / 1h +0.5% • $1.1M / #246",
+        "variant": "caption"
+      }
+    },
+    "loser-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l3-name",
+        "l3-price",
+        "l3-meta"
+      ]
+    },
+    "l3-name": {
+      "type": "Text",
+      "props": {
+        "text": "APXUSD",
+        "variant": "body"
+      }
+    },
+    "l3-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.709",
+        "delta": "−13.6%",
+        "trend": "down"
+      }
+    },
+    "l3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d −19% / 1h −0.2% • $15M / #134 (peg fully broken, day 3)",
+        "variant": "caption"
+      }
+    },
+    "loser-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l4-name",
+        "l4-price",
+        "l4-meta"
+      ]
+    },
+    "l4-name": {
+      "type": "Text",
+      "props": {
+        "text": "APYUSD",
+        "variant": "body"
+      }
+    },
+    "l4-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.971",
+        "delta": "−13.2%",
+        "trend": "down"
+      }
+    },
+    "l4-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d −19% / 1h −0.2% • $9.2M / #228",
+        "variant": "caption"
+      }
+    },
+    "loser-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l5-name",
+        "l5-price",
+        "l5-meta"
+      ]
+    },
+    "l5-name": {
+      "type": "Text",
+      "props": {
+        "text": "ZRO (LayerZero)",
+        "variant": "body"
+      }
+    },
+    "l5-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.774",
+        "delta": "−10.9%",
+        "trend": "down"
+      }
+    },
+    "l5-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d −18% / 1h 0.0% • $35M / #168",
+        "variant": "caption"
+      }
+    },
+    "loser-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l6-name",
+        "l6-price",
+        "l6-meta"
+      ]
+    },
+    "l6-name": {
+      "type": "Text",
+      "props": {
+        "text": "SEI",
+        "variant": "body"
+      }
+    },
+    "l6-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.0519",
+        "delta": "−10.2%",
+        "trend": "down"
+      }
+    },
+    "l6-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d −2.7% / 1h −1.0% • $65M / #122",
+        "variant": "caption"
+      }
+    },
+    "loser-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l7-name",
+        "l7-price",
+        "l7-meta"
+      ]
+    },
+    "l7-name": {
+      "type": "Text",
+      "props": {
+        "text": "AERO",
+        "variant": "body"
+      }
+    },
+    "l7-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.462",
+        "delta": "−8.3%",
+        "trend": "down"
+      }
+    },
+    "l7-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d +3% / 1h +0.6% • $39M / #108",
+        "variant": "caption"
+      }
+    },
+    "loser-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l8-name",
+        "l8-price",
+        "l8-meta"
+      ]
+    },
+    "l8-name": {
+      "type": "Text",
+      "props": {
+        "text": "WLD (Worldcoin)",
+        "variant": "body"
+      }
+    },
+    "l8-price": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.464",
+        "delta": "−7.2%",
+        "trend": "down"
+      }
+    },
+    "l8-meta": {
+      "type": "Text",
+      "props": {
+        "text": "7d −23% / 1h 0.0% • $304M / #46",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "trending-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trend-1",
+        "trend-2",
+        "trend-3",
+        "trend-4",
+        "trend-5",
+        "trend-6",
+        "trend-7"
+      ]
+    },
+    "trend-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend-1-name",
+        "trend-1-meta"
+      ]
+    },
+    "trend-1-name": {
+      "type": "Text",
+      "props": {
+        "text": "RAIN",
+        "variant": "body"
+      }
+    },
+    "trend-1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "#13, $0.0156, 24h −1.1%",
+        "variant": "caption"
+      }
+    },
+    "trend-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend-2-name",
+        "trend-2-meta"
+      ]
+    },
+    "trend-2-name": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE (Hyperliquid)",
+        "variant": "body"
+      }
+    },
+    "trend-2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "#10, $62.39, 24h −0.2%",
+        "variant": "caption"
+      }
+    },
+    "trend-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend-3-name",
+        "trend-3-meta"
+      ]
+    },
+    "trend-3-name": {
+      "type": "Text",
+      "props": {
+        "text": "BTC (Bitcoin)",
+        "variant": "body"
+      }
+    },
+    "trend-3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "#1, $59,473, 24h −2.7%",
+        "variant": "caption"
+      }
+    },
+    "trend-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend-4-name",
+        "trend-4-meta",
+        "trend-4-tags"
+      ]
+    },
+    "trend-4-name": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE",
+        "variant": "body"
+      }
+    },
+    "trend-4-meta": {
+      "type": "Text",
+      "props": {
+        "text": "#57, $87.07, 24h +6.3%",
+        "variant": "caption"
+      }
+    },
+    "trend-4-tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "trend-4-tag"
+      ]
+    },
+    "trend-4-tag": {
+      "type": "Badge",
+      "props": {
+        "text": "TRENDING+UP"
+      }
+    },
+    "trend-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend-5-name",
+        "trend-5-meta"
+      ]
+    },
+    "trend-5-name": {
+      "type": "Text",
+      "props": {
+        "text": "ARX (Arcium)",
+        "variant": "body"
+      }
+    },
+    "trend-5-meta": {
+      "type": "Text",
+      "props": {
+        "text": "#403, $0.263, 24h +7.3%",
+        "variant": "caption"
+      }
+    },
+    "trend-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend-6-name",
+        "trend-6-meta"
+      ]
+    },
+    "trend-6-name": {
+      "type": "Text",
+      "props": {
+        "text": "ETH (Ethereum)",
+        "variant": "body"
+      }
+    },
+    "trend-6-meta": {
+      "type": "Text",
+      "props": {
+        "text": "#2, $1,547, 24h −5.0%",
+        "variant": "caption"
+      }
+    },
+    "trend-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend-7-name",
+        "trend-7-meta"
+      ]
+    },
+    "trend-7-name": {
+      "type": "Text",
+      "props": {
+        "text": "CAP",
+        "variant": "body"
+      }
+    },
+    "trend-7-meta": {
+      "type": "Text",
+      "props": {
+        "text": "#497, $0.0240, 24h −7.1%",
+        "variant": "caption"
+      }
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5",
+        "notable-6"
+      ]
+    },
+    "notable-1": {
+      "type": "Alert",
+      "props": {
+        "message": "BTC $60,500 reclaim level lost — 05:02Z close fired the breakdown alert, current spot $59,473 confirms day-3 risk-off",
+        "type": "warning"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "MAGMA #234 +41.6% / 7d +52% on $8.5M vol = late-stage microcap pump, PUMP-RISK",
+        "variant": "body"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "APXUSD / APYUSD yield-USD wrapper depeg deepens day 3 — NAV $0.71 / $0.97, both lost their $1 floors",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "LAB #16 +14.9% / 7d +28% = the only sustained major-rank breakout in a red tape",
+        "variant": "body"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE day 3 +6.3% holds trending — Kraken-Aave stake rumor from morning tweet roundup keeps the bid live",
+        "variant": "body"
+      }
+    },
+    "notable-6": {
+      "type": "Text",
+      "props": {
+        "text": "SEI −10.2% kills yesterday's HIGH 9/10 pick at day 1 (−7% from $0.0584 entry)",
+        "variant": "body"
+      }
+    }
+  }
+}

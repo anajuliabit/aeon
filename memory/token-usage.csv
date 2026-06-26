@@ -534,6 +534,12 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-25,fleet-control,claude-opus-4-7,12,2703,370602,30569
 2026-06-25,btc-levels,claude-sonnet-4-6,8,7478,265815,42492
 2026-06-25,list-digest,claude-opus-4-7,29,11925,1474946,48157
+2026-06-25,self-improve,claude-opus-4-7,48,26268,5085118,127956
 2026-06-25,action-converter,claude-opus-4-7,2053,14263,1192372,87540
 2026-06-25,heartbeat,claude-opus-4-7,14,13896,714115,77004
 2026-06-25,aixbt-pulse,claude-sonnet-4-6,1510,15147,999670,69737
+2026-06-26,btc-levels,claude-sonnet-4-6,1643,4308,305905,24261
+2026-06-26,btc-levels,claude-sonnet-4-6,9,3107,250801,19200
+2026-06-26,daily-routine,claude-opus-4-7,34,29033,2048971,145969
+2026-06-26,aixbt-pulse,claude-sonnet-4-6,837,13765,1001733,46330
+2026-06-26,token-movers,claude-opus-4-7,74,34265,5364291,83356

@@ -1,0 +1,81 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "timeframe_text",
+        "captures_stat",
+        "status_text",
+        "separator",
+        "notes_stack"
+      ]
+    },
+    "timeframe_text": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h",
+        "variant": "caption"
+      }
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "muted"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notes_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "inbox_note",
+        "priorities_note"
+      ]
+    },
+    "inbox_note": {
+      "type": "Text",
+      "props": {
+        "text": "inbox file from 6-22 still unarchived (8th surfacing)",
+        "variant": "body"
+      }
+    },
+    "priorities_note": {
+      "type": "Text",
+      "props": {
+        "text": "last priorities.md edit 22d ago",
+        "variant": "body"
+      }
+    }
+  }
+}

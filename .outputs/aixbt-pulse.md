@@ -1,18 +1,21 @@
-*AIXBT Pulse — 2026-06-25 21:00Z*
+*AIXBT Pulse — 2026-06-26 09:00Z*
 
 CRYPTO
-- BTC $58K — lowest since Sep 2024. 53% of supply underwater. STRC/MSTR unwind fears dominant.
-- Tokenized equities on Solana hit $553M ATH — flipped memecoin volume for the first time. Ondo tokenized SpaceX $10M. Demographic shift live, not projected.
+- BTC $58K — 21-month low. $696M ETF outflows in a single day. Mechanical exit, not sentiment.
+- Hyperliquid: whale accumulation on-chain. Multicoin bull thesis holds.
+- Binance facing EU exit over failed MiCA licence.
+
+STABLECOINS
+- USDT $190B + USDC $80B — $270B sidelined at record. Binance MiCA loss → USDC wins the substitution.
 
 TRADFI
-- May PCE core 3.4% YoY confirmed. Higher-for-longer locked. Nasdaq four-day slide — concentration unwind, Apple drags despite Micron beat.
-- China rare earth export curbs escalating trade supply risk for US tech hardware — new this pull.
+- Micron +15% on ~85% margins. AI equity flows reviving. Bond yields 4.38% lower (softer inflation — inverts prior PCE hawkish read). Precious metals rotation out.
 
 NEW THIS PULL
-- Tokenized equities > memecoins on Solana ($553M ATH) — structural demand shift
-- Kazakhstan SOLZ ETF + Grayscale SOL staking 7% + Kraken-Maple-Aave — institutional rails wiring in during panic
-- China rare earth curbs — new hardware compression vector
-- Oil reversed: Hormuz frictions lift oil vs 09:00's "ceasefire signals press oil lower"
+- Stablecoin $270B record (entirely new)
+- Binance MiCA threat (entirely new)
+- Yields lower to 4.38% — inverts higher-for-longer
+- $696M single-day ETF outflow quantified
 
 BRIDGE
-- PCE 3.4% + BTC $58K close the MSTR/STRC carry thesis on both legs. The Strategy unwind trade needed cheap capital and BTC catching a bid — neither. Meanwhile institutional SOL access (SOLZ, staking, DeFi rails) is completing on the dip. Retail liquidates into infrastructure institutions are building. That divergence isn't timing noise. It's who owns the next entry.
+- The rotation fuel ($270B stablecoins + lower yields) exists. The ignition doesn't. BTC needs its own catalyst, not a yield-move, to flip that capital. Meanwhile: Micron +15% on AI margins — equity holders rotate there. Crypto holders deleverage. Same AI conviction. Two different asset-class exit vectors.
