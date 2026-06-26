@@ -539,5 +539,14 @@ check "DD18 degrosses budget vs DD5" "$( [ "$DSUM1" -lt "$DSUM0" ] && echo yes )
 ODIS="$(printf '%s' "$T1" | RISK_DISABLE=1 RISK_NET=400000 RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ")"
 check "RISK_DISABLE conviction-split uncapped" "$(printf '%s' "$ODIS" | jq -r '.trades[0].sizeUsd')" "20000"
 check "sizePctNet matches sizeUsd" "$(printf '%s' "$O1" | jq -r '.trades[0].sizePctNet == ((.trades[0].sizeUsd/400000*1000)|round)/10')" "true"
+# Bad price (inf-ish vol) must NOT zero a single legit pick — degrades to a positive (capped) size.
+cat > "$RS_DIR/cg-bad.json" <<'EOF'
+[{"id":"bad","symbol":"bad","price_change_percentage_24h":1e9,"price_change_percentage_7d_in_currency":1e9}]
+EOF
+OBAD="$(printf '%s' '{"trades":[{"symbol":"BAD","coingeckoId":"bad","side":"long","conviction":"HIGH"}]}' | RISK_NET=400000 RISK_DD=0 RISK_MKT="$RS_DIR/cg-bad.json" bash "$RSZ")"
+check "bad price does not zero pick" "$(printf '%s' "$OBAD" | jq -r '.trades[0].sizeUsd > 0')" "true"
+# Garbage stdin → valid JSON out (never poisons downstream jq).
+OGARB="$(printf '%s' 'not json {{{' | RISK_NET=400000 RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ")"
+check "garbage stdin -> valid json" "$(printf '%s' "$OGARB" | jq -e 'has("trades")' >/dev/null 2>&1 && echo ok)" "ok"
 
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }

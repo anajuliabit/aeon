@@ -13,6 +13,7 @@ RISK_DD_TRIGGER="${RISK_DD_TRIGGER:-15}" RISK_DD_TRIGGER2="${RISK_DD_TRIGGER2:-2
 RISK_DD_DEGROSS="${RISK_DD_DEGROSS:-0.5}" RISK_DD_DEGROSS2="${RISK_DD_DEGROSS2:-0.25}" \
 RISK_MAX_POS_PCT="${RISK_MAX_POS_PCT:-1.5}" RISK_MAX_DIR_PCT="${RISK_MAX_DIR_PCT:-3.0}" \
 RISK_VOL_FLOOR="${RISK_VOL_FLOOR:-3}" RISK_DEFAULT_VOL="${RISK_DEFAULT_VOL:-12}" \
+RISK_VOL_CEIL="${RISK_VOL_CEIL:-150}" \
 TRADES_IN="$TRADES_IN" python3 <<'PY'
 import os, json, math, sys
 def f(k,d=0.0):
@@ -48,11 +49,11 @@ try:
                 c7=abs(float(m.get("price_change_percentage_7d_in_currency") or 0))
                 vol[cid]=0.5*c24 + 0.5*(c7/math.sqrt(7))
         except Exception: pass
-        floor=f("RISK_VOL_FLOOR",3); dflt=f("RISK_DEFAULT_VOL",12)
+        floor=f("RISK_VOL_FLOOR",3); dflt=f("RISK_DEFAULT_VOL",12); ceil=f("RISK_VOL_CEIL",150)
         ws=[]
         for t in trades:
             v=vol.get(t.get("coingeckoId"), dflt)
-            v=max(floor, v if v>0 else dflt)
+            v=min(ceil, max(floor, v if v>0 else dflt))
             ws.append(conv_mult(t.get("conviction"))/v)
         wsum=sum(ws) or 0
         for t,w in zip(trades,ws):
@@ -74,6 +75,10 @@ try:
         t["sizePctNet"]=round((t["sizeUsd"]/net*1000))/10 if net>0 else 0
     print(json.dumps({"trades":trades}))
 except Exception as e:
-    print(f"risk-size.sh: failed, emitting input unsized: {e}", file=sys.stderr)
-    print(os.environ.get("TRADES_IN") or '{"trades":[]}')
+    print(f"risk-size.sh: failed, emitting safe fallback: {e}", file=sys.stderr)
+    raw=os.environ.get("TRADES_IN") or ""
+    try:
+        json.loads(raw); print(raw)          # valid JSON in → echo through
+    except Exception:
+        print('{"trades":[]}')                # garbage in → guaranteed-valid out
 PY
