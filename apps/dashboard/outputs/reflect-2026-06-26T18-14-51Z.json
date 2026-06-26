@@ -1,0 +1,167 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "reflect",
+        "description": "Memory Consolidation — 2026-06-26"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_memory_lines",
+        "sep1",
+        "section_actions",
+        "section_portfolio",
+        "sep2",
+        "section_status"
+      ]
+    },
+    "stat_memory_lines": {
+      "type": "Stat",
+      "props": {
+        "label": "MEMORY.md Tightened",
+        "value": "52 lines",
+        "delta": "-11 lines"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_actions",
+        "text_actions",
+        "badge_btc",
+        "badge_pr147"
+      ]
+    },
+    "heading_actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions Taken",
+        "level": "h3"
+      }
+    },
+    "text_actions": {
+      "type": "Text",
+      "props": {
+        "text": "Deduped 'Recently Cleared' headers, refreshed for BTC breakdown"
+      }
+    },
+    "badge_btc": {
+      "type": "Badge",
+      "props": {
+        "text": "BTC Breakdown CONFIRMED",
+        "variant": "secondary"
+      }
+    },
+    "badge_pr147": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #147 advisor risk-layer open",
+        "variant": "outline"
+      }
+    },
+    "section_portfolio": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_portfolio",
+        "stat_aave",
+        "text_sei",
+        "text_meta_bear"
+      ]
+    },
+    "heading_portfolio": {
+      "type": "Heading",
+      "props": {
+        "text": "Portfolio Updates",
+        "level": "h3"
+      }
+    },
+    "stat_aave": {
+      "type": "Stat",
+      "props": {
+        "label": "AAVE",
+        "value": "+13.4%",
+        "delta": "day-3 worked",
+        "trend": "up"
+      }
+    },
+    "text_sei": {
+      "type": "Text",
+      "props": {
+        "text": "SEI stopped out day-1",
+        "variant": "caption"
+      }
+    },
+    "text_meta_bear": {
+      "type": "Text",
+      "props": {
+        "text": "Structural meta-bear may break 24h pattern",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_status",
+        "text_xai_quota",
+        "badge_topic_files"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      }
+    },
+    "text_xai_quota": {
+      "type": "Text",
+      "props": {
+        "text": "xai-quota day 11 noted",
+        "variant": "caption"
+      }
+    },
+    "badge_topic_files": {
+      "type": "Badge",
+      "props": {
+        "text": "topic files clean",
+        "variant": "secondary"
+      }
+    }
+  }
+}

@@ -1,1 +1,1 @@
-Memory consolidated — 2026-06-25
+Memory consolidated — 2026-06-26: MEMORY.md tightened 63→52 lines (deduped 'Recently Cleared' headers, refreshed for BTC breakdown CONFIRMED, PR #147 advisor risk-layer open, AAVE +13.4% day-3 worked / SEI stopped out day-1, structural meta-bear may break 24h pattern). xai-quota day 11 noted; topic files clean.
