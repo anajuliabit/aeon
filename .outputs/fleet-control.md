@@ -1,9 +1,16 @@
-Pre-flight passed (gh auth ok, rate_remaining=4988), but `memory/instances.json` has `{"instances": []}` — empty registry. Per spec: log `FLEET_EMPTY` and stop silently without notifying.
+Stopping silently per spec — no notification, no state-file update.
 
 ## Summary
-- **Mode:** Health Check (default, empty var)
-- **Verdict:** `FLEET_EMPTY` — no managed instances registered in `memory/instances.json`
-- **Action:** Appended `FLEET_EMPTY` log entry to `memory/logs/2026-06-26.md`
-- **Notification:** None sent (spec requires silent stop for empty registry)
-- **State file:** Already exists at `memory/state/fleet-control-state.json` with empty instances; no update needed since no run actually notified
-- **Follow-up:** None — operator must populate `memory/instances.json` with managed child instances before fleet-control has anything to monitor
+
+Executed **fleet-control** in default Health Check Mode (var empty).
+
+**Pre-flight results:**
+- gh auth: ok (account `anajuliabit`)
+- rate_remaining: 4908 (well above threshold of 50)
+- Registry `memory/instances.json`: `{"instances": []}` — empty
+
+**Outcome:** `FLEET_EMPTY` — no managed Aeon instances in the registry. Per skill spec, logged to `memory/logs/2026-06-26.md` and stopped silently. No notification sent (spec: "Stop. Do NOT notify"). State file `memory/state/fleet-control-state.json` left untouched (no instances to snapshot).
+
+**Files modified:** `memory/logs/2026-06-26.md` (appended fleet-control entry).
+
+**Follow-up:** None required. If/when the operator spawns child Aeon instances, register them in `memory/instances.json` (with `purpose`, `parent`, `created`, `skills_enabled` fields) and this skill will start producing health checks on its 09:00 / 15:00 UTC cron.
