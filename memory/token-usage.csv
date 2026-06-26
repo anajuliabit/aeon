@@ -543,3 +543,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-26,daily-routine,claude-opus-4-7,34,29033,2048971,145969
 2026-06-26,aixbt-pulse,claude-sonnet-4-6,837,13765,1001733,46330
 2026-06-26,token-movers,claude-opus-4-7,74,34265,5364291,83356
+2026-06-26,defi-monitor,claude-opus-4-7,13,4009,467415,43341
