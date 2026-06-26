@@ -542,4 +542,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-26,btc-levels,claude-sonnet-4-6,9,3107,250801,19200
 2026-06-26,daily-routine,claude-opus-4-7,34,29033,2048971,145969
 2026-06-26,aixbt-pulse,claude-sonnet-4-6,837,13765,1001733,46330
-2026-06-26,on-chain-monitor,claude-opus-4-7,39,16982,2971322,78650
+2026-06-26,token-pick,claude-opus-4-7,1314,25773,2911092,147336

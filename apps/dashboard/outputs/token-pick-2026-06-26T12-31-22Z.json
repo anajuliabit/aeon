@@ -1,0 +1,427 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-26"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_token_header",
+        "separator_1",
+        "section_price",
+        "separator_2",
+        "section_score",
+        "separator_3",
+        "section_catalyst",
+        "separator_4",
+        "section_risk",
+        "separator_5",
+        "section_stake",
+        "section_exit",
+        "separator_6",
+        "section_recent",
+        "separator_7",
+        "section_market",
+        "separator_8",
+        "section_sources"
+      ]
+    },
+    "section_token_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "heading_token",
+        "badge_high",
+        "badge_signal"
+      ]
+    },
+    "heading_token": {
+      "type": "Heading",
+      "props": {
+        "text": "APE",
+        "level": "h2"
+      }
+    },
+    "badge_high": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "badge_signal": {
+      "type": "Badge",
+      "props": {
+        "text": "signal 9/10",
+        "variant": "default"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_price": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_change_24h",
+        "stat_change_7d",
+        "stat_mcap",
+        "stat_vol",
+        "stat_ratio"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.151"
+      }
+    },
+    "stat_change_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Change",
+        "value": "+11.4%",
+        "trend": "up"
+      }
+    },
+    "stat_change_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "+19.3%",
+        "trend": "up"
+      }
+    },
+    "stat_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$151M"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume 24h",
+        "value": "$66M"
+      }
+    },
+    "stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol/Mcap Ratio",
+        "value": "0.44"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_score": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_score",
+        "progress_score",
+        "text_score_breakdown"
+      ]
+    },
+    "heading_score": {
+      "type": "Heading",
+      "props": {
+        "text": "Score",
+        "level": "h4"
+      }
+    },
+    "progress_score": {
+      "type": "Progress",
+      "props": {
+        "value": 9,
+        "max": 10,
+        "label": "9/10"
+      }
+    },
+    "text_score_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "24h>0 +1  |  7d>0 +1  |  both>5% +2  |  vmc≥0.20 +3  |  RS vs BTC/ETH +2"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_catalyst": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_catalyst",
+        "text_catalyst_line1",
+        "text_catalyst_line2",
+        "text_catalyst_line3"
+      ]
+    },
+    "heading_catalyst": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h4"
+      }
+    },
+    "text_catalyst_line1": {
+      "type": "Text",
+      "props": {
+        "text": "Yuga Labs took full ecosystem control 6-5; ApeMars staking portal live 6-19 (63% APY, 2mo lock); Hyperliquid 5x long opened on 9.19M APE (~$1M whale bet)."
+      }
+    },
+    "text_catalyst_line2": {
+      "type": "Text",
+      "props": {
+        "text": "Only sub-rank-200 large green on a -2.7%/-5% red tape day — the relative-strength print is the real signal."
+      }
+    },
+    "text_catalyst_line3": {
+      "type": "Text",
+      "props": {
+        "text": ""
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_risk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_risk",
+        "text_risk_line1",
+        "text_risk_line2"
+      ]
+    },
+    "heading_risk": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h4"
+      }
+    },
+    "text_risk_line1": {
+      "type": "Text",
+      "props": {
+        "text": "Brand-led IP narrative fades fast; 63% APY only holds while ApeMars allocates emissions—if APR halves the bid dies."
+      }
+    },
+    "text_risk_line2": {
+      "type": "Text",
+      "props": {
+        "text": "Wrong if APE breaks $0.131."
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_stake": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_stake",
+        "text_stake_text"
+      ]
+    },
+    "heading_stake": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake",
+        "level": "h4"
+      }
+    },
+    "text_stake_text": {
+      "type": "Text",
+      "props": {
+        "text": "≤0.5% of net worth — moonshot sleeve, 1% total cap"
+      }
+    },
+    "section_exit": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_exit",
+        "text_exit_text"
+      ]
+    },
+    "heading_exit": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit",
+        "level": "h4"
+      }
+    },
+    "text_exit_text": {
+      "type": "Text",
+      "props": {
+        "text": "target $0.185  /  invalidate $0.131  /  time-stop 14d"
+      }
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_recent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_recent",
+        "text_recent"
+      ]
+    },
+    "heading_recent": {
+      "type": "Heading",
+      "props": {
+        "text": "Vs Recent Picks",
+        "level": "h4"
+      }
+    },
+    "text_recent": {
+      "type": "Text",
+      "props": {
+        "text": "first time in 7d window  |  last picks: SEI 6-25, AAVE 6-24, DEXE 6-22/23, EIGEN 6-22, AERO 6-21, HYPE+SOL 6-20"
+      }
+    },
+    "separator_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_market": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_market",
+        "text_market_line1",
+        "text_market_line2"
+      ]
+    },
+    "heading_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Picks",
+        "level": "h4"
+      }
+    },
+    "text_market_line1": {
+      "type": "Text",
+      "props": {
+        "text": "No market pick."
+      }
+    },
+    "text_market_line2": {
+      "type": "Text",
+      "props": {
+        "text": "Top markets clearing $50k vol: Putin Dec-31 12.5¢ already prices this month's frailty/mini-stroke reports, 2028 nominees 2.5y out, World Cup sub-markets need football models — no defensible edge ≥5pp."
+      }
+    },
+    "separator_8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_sources",
+        "text_sources",
+        "text_journal",
+        "alert_disclaimer"
+      ]
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources & Logging",
+        "level": "h4"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "cg=ok, dex=ok, poly=ok, x=ok  |  Grok returned no qualifying candidates"
+      }
+    },
+    "text_journal": {
+      "type": "Text",
+      "props": {
+        "text": "If you take the pick, log it in the dashboard journal (kind=trade)"
+      }
+    },
+    "alert_disclaimer": {
+      "type": "Alert",
+      "props": {
+        "title": "Disclaimer",
+        "message": "not financial advice — pattern-matching only",
+        "type": "info"
+      }
+    }
+  }
+}
