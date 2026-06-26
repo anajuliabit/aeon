@@ -1,0 +1,729 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-06-26",
+        "description": "Verdict: 2 actively exploited, 3 to schedule, 3 to monitor. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "verdict-section",
+        "sep1",
+        "patch-today-heading",
+        "cve-20230",
+        "cve-12569",
+        "npm-leo",
+        "sep2",
+        "patch-week-heading",
+        "golang-crypto",
+        "netflix-lemur",
+        "i18next-vulns",
+        "sep3",
+        "monitor-heading",
+        "chi-advisory",
+        "rekor-cve",
+        "braket-cve"
+      ]
+    },
+    "verdict-section": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Verdict Summary",
+        "message": "2 actively exploited · 3 to schedule · 3 to monitor"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve-20230": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve-20230-link",
+        "cve-20230-product",
+        "cve-20230-dates",
+        "cve-20230-scores",
+        "cve-20230-desc",
+        "cve-20230-action"
+      ]
+    },
+    "cve-20230-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-20230",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-20230",
+        "source": "NVD"
+      }
+    },
+    "cve-20230-product": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-20230-prod-text",
+        "cve-20230-kev-badge"
+      ]
+    },
+    "cve-20230-prod-text": {
+      "type": "Text",
+      "props": {
+        "text": "Cisco Unified CM / SME",
+        "variant": "body"
+      }
+    },
+    "cve-20230-kev-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV",
+        "variant": "destructive"
+      }
+    },
+    "cve-20230-dates": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-06-25 · CISA due 2026-06-28",
+        "variant": "caption"
+      }
+    },
+    "cve-20230-scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-20230-epss",
+        "cve-20230-cvss"
+      ]
+    },
+    "cve-20230-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.512",
+        "delta": "p98.8"
+      }
+    },
+    "cve-20230-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.6"
+      }
+    },
+    "cve-20230-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth SSRF → arbitrary file write → root. Public PoC live (denizhalil 6-12), CISA-ADP flipped poc→active 6-25.",
+        "variant": "body"
+      }
+    },
+    "cve-20230-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Apply cisco-sa-cucm-ssrf advisory today"
+      }
+    },
+    "cve-12569": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve-12569-link",
+        "cve-12569-product",
+        "cve-12569-dates",
+        "cve-12569-scores",
+        "cve-12569-desc",
+        "cve-12569-affected",
+        "cve-12569-action"
+      ]
+    },
+    "cve-12569-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-12569",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-12569",
+        "source": "NVD"
+      }
+    },
+    "cve-12569-product": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-12569-prod-text",
+        "cve-12569-kev-badge"
+      ]
+    },
+    "cve-12569-prod-text": {
+      "type": "Text",
+      "props": {
+        "text": "PTC Windchill / FlexPLM",
+        "variant": "body"
+      }
+    },
+    "cve-12569-kev-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV",
+        "variant": "destructive"
+      }
+    },
+    "cve-12569-dates": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-06-25 · CISA due 2026-06-28",
+        "variant": "caption"
+      }
+    },
+    "cve-12569-scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-12569-epss",
+        "cve-12569-cvss"
+      ]
+    },
+    "cve-12569-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.009"
+      }
+    },
+    "cve-12569-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.3",
+        "delta": "v4.0"
+      }
+    },
+    "cve-12569-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth deserialization → RCE. Active exploitation per CISA.",
+        "variant": "body"
+      }
+    },
+    "cve-12569-affected": {
+      "type": "Text",
+      "props": {
+        "text": "Affects: Windchill ≤13.1.3.0 / FlexPLM ≤13.0.3.0",
+        "variant": "caption"
+      }
+    },
+    "cve-12569-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Apply PTC CS473270 mitigation today"
+      }
+    },
+    "npm-leo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "npm-leo-heading",
+        "npm-leo-stat",
+        "npm-leo-timeline",
+        "npm-leo-packages",
+        "npm-leo-action"
+      ]
+    },
+    "npm-leo-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "npm leo-sdk supply chain — Malware advisories",
+        "level": "h3"
+      }
+    },
+    "npm-leo-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total packages compromised",
+        "value": "15",
+        "delta": "+12 (6-26)"
+      }
+    },
+    "npm-leo-timeline": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-25: 3 packages (leo-sdk, leo-cron, leo-logger) · 2026-06-26: +12 additional packages",
+        "variant": "body"
+      }
+    },
+    "npm-leo-packages": {
+      "type": "Text",
+      "props": {
+        "text": "Remove: leo-sdk · leo-cron · leo-logger · leo-streams · leo-cache · leo-cli · leo-auth · leo-connector-mongo · leo-connector-mysql · leo-connector-elasticsearch · leo-connector-oracle · rstreams-metrics · rstreams-shard-util · serverless-convention · serverless-leo",
+        "variant": "caption"
+      }
+    },
+    "npm-leo-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Remove every leo-* / rstreams-* / serverless-leo dep today; rotate any AWS keys + DB creds touched by those processes"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "golang-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "golang-heading",
+        "golang-stat",
+        "golang-date",
+        "golang-cve-46595",
+        "golang-cve-42508",
+        "golang-other-issues",
+        "golang-epss",
+        "golang-action"
+      ]
+    },
+    "golang-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "golang.org/x/crypto/ssh cluster",
+        "level": "h3"
+      }
+    },
+    "golang-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "CVEs published",
+        "value": "9"
+      }
+    },
+    "golang-date": {
+      "type": "Text",
+      "props": {
+        "text": "Published 2026-06-25 (coordinated golang-announce drop)",
+        "variant": "caption"
+      }
+    },
+    "golang-cve-46595": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "golang-cve-46595-link",
+        "golang-cve-46595-desc"
+      ]
+    },
+    "golang-cve-46595-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-46595",
+        "href": "https://github.com/advisories/GHSA-x527-x647-q7gg",
+        "source": "GitHub Advisory"
+      }
+    },
+    "golang-cve-46595-desc": {
+      "type": "Text",
+      "props": {
+        "text": "verifiedPublicKeyCallback skip enforcement (CVSS 10.0) — bypass of 2024 CVE-2024-45337 fix",
+        "variant": "body"
+      }
+    },
+    "golang-cve-42508": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "golang-cve-42508-link",
+        "golang-cve-42508-desc"
+      ]
+    },
+    "golang-cve-42508-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-42508",
+        "href": "https://github.com/advisories/GHSA-5cgq-3rg8-m6cv",
+        "source": "GitHub Advisory"
+      }
+    },
+    "golang-cve-42508-desc": {
+      "type": "Text",
+      "props": {
+        "text": "knownhosts @revoked bypass",
+        "variant": "body"
+      }
+    },
+    "golang-other-issues": {
+      "type": "Text",
+      "props": {
+        "text": "Additional issues: FIDO/U2F presence-check bypass · agent forwarding leaks constraints",
+        "variant": "body"
+      }
+    },
+    "golang-epss": {
+      "type": "Text",
+      "props": {
+        "text": "All EPSS <0.005 (fresh exploits)",
+        "variant": "caption"
+      }
+    },
+    "golang-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade golang.org/x/crypto to ≥0.52.0 across every Go service"
+      }
+    },
+    "netflix-lemur": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "lemur-heading",
+        "lemur-cve-1",
+        "lemur-cve-2",
+        "lemur-scores",
+        "lemur-detail",
+        "lemur-action"
+      ]
+    },
+    "lemur-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Netflix Lemur (pip)",
+        "level": "h3"
+      }
+    },
+    "lemur-cve-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-55166",
+        "href": "https://github.com/advisories/GHSA-v2wp-frmc-5q3v",
+        "source": "GitHub Advisory"
+      }
+    },
+    "lemur-cve-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48508",
+        "href": "https://github.com/advisories/GHSA-qcqw-jwxc-2hqg",
+        "source": "GitHub Advisory"
+      }
+    },
+    "lemur-scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "lemur-cvss-1",
+        "lemur-cvss-2"
+      ]
+    },
+    "lemur-cvss-1": {
+      "type": "Stat",
+      "props": {
+        "label": "CVE-2026-55166 CVSS",
+        "value": "9.9"
+      }
+    },
+    "lemur-cvss-2": {
+      "type": "Stat",
+      "props": {
+        "label": "CVE-2026-48508 CVSS",
+        "value": "8.8"
+      }
+    },
+    "lemur-detail": {
+      "type": "Text",
+      "props": {
+        "text": "ACME SSRF + creator-equality IDOR → AWS IAM / PKI compromise. AuthZ bypass in StrictRolePermission. No public PoC.",
+        "variant": "body"
+      }
+    },
+    "lemur-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade lemur to ≥1.9.2"
+      }
+    },
+    "i18next-vulns": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "i18next-heading",
+        "i18next-cve-1",
+        "i18next-cve-2",
+        "i18next-scores",
+        "i18next-detail",
+        "i18next-action"
+      ]
+    },
+    "i18next-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "i18next (npm)",
+        "level": "h3"
+      }
+    },
+    "i18next-cve-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48713",
+        "href": "https://github.com/advisories/GHSA-2933-q333-qg83",
+        "source": "GitHub Advisory"
+      }
+    },
+    "i18next-cve-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48714",
+        "href": "https://github.com/advisories/GHSA-f49m-vf83-692w",
+        "source": "GitHub Advisory"
+      }
+    },
+    "i18next-scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "i18next-cvss-1",
+        "i18next-cvss-2"
+      ]
+    },
+    "i18next-cvss-1": {
+      "type": "Stat",
+      "props": {
+        "label": "CVE-2026-48713 CVSS",
+        "value": "9.1"
+      }
+    },
+    "i18next-cvss-2": {
+      "type": "Stat",
+      "props": {
+        "label": "CVE-2026-48714 CVSS",
+        "value": "9.1"
+      }
+    },
+    "i18next-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Prototype pollution via crafted missing-key strings",
+        "variant": "body"
+      }
+    },
+    "i18next-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade i18next-fs-backend ≥2.6.6, i18next-http-middleware ≥3.9.7"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "monitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "chi-advisory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "chi-link",
+        "chi-desc",
+        "chi-versions",
+        "chi-action"
+      ]
+    },
+    "chi-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-rjr7-jggh-pgcp — chi (Go)",
+        "href": "https://github.com/advisories/GHSA-rjr7-jggh-pgcp",
+        "source": "GitHub Advisory"
+      }
+    },
+    "chi-desc": {
+      "type": "Text",
+      "props": {
+        "text": "X-Forwarded-For IP spoofing. No CVE assigned.",
+        "variant": "body"
+      }
+    },
+    "chi-versions": {
+      "type": "Text",
+      "props": {
+        "text": "Status: v5 fix available (5.3.0+) · v1-v4 no fix available",
+        "variant": "caption"
+      }
+    },
+    "chi-action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Bump chi v5 to ≥5.3.0; legacy lines pin behind a trusted proxy"
+      }
+    },
+    "rekor-cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "rekor-link",
+        "rekor-scores",
+        "rekor-desc",
+        "rekor-action"
+      ]
+    },
+    "rekor-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48702 — sigstore Rekor (Go)",
+        "href": "https://github.com/advisories/GHSA-47q9-m4ww-924m",
+        "source": "GitHub Advisory"
+      }
+    },
+    "rekor-scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "rekor-cvss",
+        "rekor-epss"
+      ]
+    },
+    "rekor-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.5"
+      }
+    },
+    "rekor-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.004"
+      }
+    },
+    "rekor-desc": {
+      "type": "Text",
+      "props": {
+        "text": "gzip-bomb OOM in Alpine APK parser",
+        "variant": "body"
+      }
+    },
+    "rekor-action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade rekor to ≥1.5.2"
+      }
+    },
+    "braket-cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "braket-link",
+        "braket-cvss",
+        "braket-desc",
+        "braket-action"
+      ]
+    },
+    "braket-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-9291 — amazon-braket-sdk (pip)",
+        "href": "https://github.com/advisories/GHSA-g697-2xrc-gc46",
+        "source": "GitHub Advisory"
+      }
+    },
+    "braket-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.1"
+      }
+    },
+    "braket-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Insecure pickle.loads()",
+        "variant": "body"
+      }
+    },
+    "braket-action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade to ≥1.117.0"
+      }
+    }
+  }
+}
