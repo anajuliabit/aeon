@@ -7,9 +7,10 @@
 # Auth: CLAUDE_CODE_OAUTH_TOKEN (Claude subscription) or ANTHROPIC_API_KEY in env.
 # Model: CLAUDE_MODEL (default claude-fable-5).
 #
-# Fallback: if the claude CLI is missing or the call fails AND VIRTUALS_API_KEY is
-# set, retries the same prompt through scripts/llm.sh (Virtuals) so a CLI outage
-# degrades to the old backend instead of producing a gap.
+# Fallback: if the claude CLI is missing or the call fails, retry the same prompt
+# through usepod (llm-usepod.sh, funded) when USEPOD_TOKEN is set, else Virtuals
+# (llm.sh). usepod-first because Virtuals tends to run dry; a CLI/limit outage
+# then degrades to a working backend instead of producing a gap.
 #
 # Sandbox note: runs OUTSIDE the Claude sandbox (workflow step with full env),
 # same as llm.sh — env-var auth works directly here.
@@ -30,6 +31,15 @@ if [ -z "${PROMPT//[[:space:]]/}" ]; then
 fi
 
 fallback() {
+  # Prefer usepod (funded, llm-usepod.sh cascades to Virtuals internally) over a
+  # direct Virtuals call. Virtuals has historically run out of credits, so a
+  # Claude outage that fell straight to Virtuals would just fail; usepod first
+  # keeps the chain alive: Claude -> usepod -> (usepod's own Virtuals fallback).
+  if [ -n "${USEPOD_TOKEN:-}" ] && [ -x "$ROOT/scripts/llm-usepod.sh" ]; then
+    echo "llm-claude.sh: falling back to usepod (llm-usepod.sh)" >&2
+    printf '%s' "$PROMPT" | "$ROOT/scripts/llm-usepod.sh"
+    exit $?
+  fi
   if [ -n "${VIRTUALS_API_KEY:-}" ] && [ -x "$ROOT/scripts/llm.sh" ]; then
     echo "llm-claude.sh: falling back to Virtuals (llm.sh)" >&2
     printf '%s' "$PROMPT" | "$ROOT/scripts/llm.sh"
