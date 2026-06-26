@@ -1,0 +1,830 @@
+{
+  "root": "card_defi",
+  "state": {},
+  "elements": {
+    "card_defi": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi — 2026-06-26",
+        "description": "Mixed: DEX vol +4.5%, TVL chain-sum −2.3% on ETH/BTC repricing, stables flat"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_summary",
+        "sep_1",
+        "section_tvl",
+        "sep_2",
+        "section_chains",
+        "sep_3",
+        "section_movers",
+        "sep_4",
+        "section_fees_leaders",
+        "sep_5",
+        "section_fees_beating",
+        "sep_6",
+        "section_dex",
+        "sep_7",
+        "section_stables",
+        "sep_8",
+        "section_yields",
+        "sep_9",
+        "section_incentive",
+        "sep_10",
+        "text_sources"
+      ]
+    },
+    "stack_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_tvl",
+        "stat_dex",
+        "stat_stables"
+      ]
+    },
+    "stat_tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL Chain-Sum",
+        "value": "$69.73B",
+        "delta": "−2.31%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat_dex": {
+      "type": "Stat",
+      "props": {
+        "label": "DEX Vol (24h)",
+        "value": "$8.20B",
+        "delta": "+4.5%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_stables": {
+      "type": "Stat",
+      "props": {
+        "label": "Stables",
+        "value": "$311.86B",
+        "delta": "−0.30%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_tvl": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_tvl",
+        "text_tvl_detail"
+      ]
+    },
+    "heading_tvl": {
+      "type": "Heading",
+      "props": {
+        "text": "TVL",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_tvl_detail": {
+      "type": "Text",
+      "props": {
+        "text": "$69.73B chain-sum (vs 6-25 $71.38B = −2.31%). Chain change_1d null day 9 — DeFiLlama regression carry; chain-sum drop is mostly the ETH −4.5% / BTC −2.1% repricing through ETH's $36.8B layer, not deposit flight.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_chains": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_chains",
+        "stat_eth",
+        "stat_bsc",
+        "stat_sol"
+      ]
+    },
+    "heading_chains": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Chains",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "Ethereum",
+        "value": "$36.83B"
+      },
+      "children": []
+    },
+    "stat_bsc": {
+      "type": "Stat",
+      "props": {
+        "label": "BSC",
+        "value": "$4.97B"
+      },
+      "children": []
+    },
+    "stat_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana",
+        "value": "$4.75B"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_movers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_movers",
+        "mover_hyperithm",
+        "mover_invesco"
+      ]
+    },
+    "heading_movers": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers (protocol — chain deltas blocked day 9)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "mover_hyperithm": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_hyperithm_up",
+        "text_hyperithm_name",
+        "text_hyperithm_detail"
+      ]
+    },
+    "badge_hyperithm_up": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ +13.86%",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text_hyperithm_name": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperithm",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_hyperithm_detail": {
+      "type": "Text",
+      "props": {
+        "text": "$107M → $121M (Risk Curators, 7d +1.8%) — no obvious catalyst, small base",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "mover_invesco": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_invesco_down",
+        "text_invesco_name",
+        "text_invesco_detail"
+      ]
+    },
+    "badge_invesco_down": {
+      "type": "Badge",
+      "props": {
+        "text": "↓ ↔ −16.66%",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "text_invesco_name": {
+      "type": "Text",
+      "props": {
+        "text": "Invesco USTB (RWA)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_invesco_detail": {
+      "type": "Text",
+      "props": {
+        "text": "$749M → $623M — day-2 acceleration (6-25 was −11.5%), cumulative −28% / −$223M over 48h on institutional Treasury-product unwind; matches today's BlackRock $257M-to-Coinbase liquidation flow pattern",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_fees_leaders": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_fees",
+        "stat_tether_fees",
+        "stat_usdc_fees",
+        "stat_hyperliquid_fees",
+        "text_hyperliquid_note"
+      ]
+    },
+    "heading_fees": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees Leaders (24h)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stat_tether_fees": {
+      "type": "Stat",
+      "props": {
+        "label": "Tether",
+        "value": "$16.1M",
+        "delta": "flat 7d"
+      },
+      "children": []
+    },
+    "stat_usdc_fees": {
+      "type": "Stat",
+      "props": {
+        "label": "Circle USDC",
+        "value": "$6.4M",
+        "delta": "flat"
+      },
+      "children": []
+    },
+    "stat_hyperliquid_fees": {
+      "type": "Stat",
+      "props": {
+        "label": "Hyperliquid Perps",
+        "value": "$2.6M",
+        "delta": "+9.8%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "text_hyperliquid_note": {
+      "type": "Text",
+      "props": {
+        "text": "7d back to −2% from yesterday's −19.8% read = sharp 18pp rebound in 24h",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_fees_beating": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fees_beating",
+        "fees_aave",
+        "fees_morpho"
+      ]
+    },
+    "heading_fees_beating": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees Beating TVL",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "fees_aave": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_aave_name",
+        "text_aave_detail"
+      ]
+    },
+    "text_aave_name": {
+      "type": "Text",
+      "props": {
+        "text": "Aave V3",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_aave_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Fees +36% / TVL −4% 7d on $11.6B ($1.35M 24h fees, day-3 reversal climb: −0.1% (6-24) → +21% (6-25) → +36% today)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "fees_morpho": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_morpho_name",
+        "text_morpho_detail"
+      ]
+    },
+    "text_morpho_name": {
+      "type": "Text",
+      "props": {
+        "text": "Morpho Blue",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_morpho_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Fees +62% / TVL −5% 7d on $6.5B ($1.04M 24h fees, carry from 6-25 +89% — real lending demand sustained day-3)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_dex": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_dex",
+        "text_dex_summary",
+        "text_dex_top"
+      ]
+    },
+    "heading_dex": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX Vol (24h)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_dex_summary": {
+      "type": "Text",
+      "props": {
+        "text": "$8.20B (+4.5% 1d, +10.6% 7d)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_dex_top": {
+      "type": "Text",
+      "props": {
+        "text": "Top: Uniswap V3 $707M (−3%), Uniswap V4 $706M (+20%), PancakeSwap V3 $625M (−3%) — V4 reclaims share from V3 day-1",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_7": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_stables": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_stables",
+        "text_stables_total",
+        "stable_usdgo",
+        "stable_usdf",
+        "stable_reusd",
+        "stable_usdt",
+        "stable_buidl"
+      ]
+    },
+    "heading_stables": {
+      "type": "Heading",
+      "props": {
+        "text": "Stables",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_stables_total": {
+      "type": "Text",
+      "props": {
+        "text": "$311.86B (−0.30% vs 6-25 $312.93B)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stable_usdgo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_usdgo_title",
+        "text_usdgo_detail"
+      ]
+    },
+    "text_usdgo_title": {
+      "type": "Text",
+      "props": {
+        "text": "USDGO +7.88%",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_usdgo_detail": {
+      "type": "Text",
+      "props": {
+        "text": "~$60M mint on $757M, day-2 mint carry from +12.4% 6-25",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "stable_usdf": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_usdf_title",
+        "text_usdf_detail"
+      ]
+    },
+    "text_usdf_title": {
+      "type": "Text",
+      "props": {
+        "text": "USDf (Falcon USD) −3.22%",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_usdf_detail": {
+      "type": "Text",
+      "props": {
+        "text": "~$42M redemption on $1.25B, only meaningful issuer contraction",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "stable_reusd": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_reusd_title",
+        "text_reusd_detail"
+      ]
+    },
+    "text_reusd_title": {
+      "type": "Text",
+      "props": {
+        "text": "reUSD −7.69%",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_reusd_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Day-2 small-cap depeg on $167M, carry from −6.6% 6-25 — APYUSD/APXUSD wrappers also broke peg today $0.977/$0.72",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "stable_usdt": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_usdt_title",
+        "text_usdt_detail"
+      ]
+    },
+    "text_usdt_title": {
+      "type": "Text",
+      "props": {
+        "text": "USDT −0.55%",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_usdt_detail": {
+      "type": "Text",
+      "props": {
+        "text": "~$1B drain on $185B, sub-1% but biggest absolute move",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "stable_buidl": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_buidl_title"
+      ]
+    },
+    "text_buidl_title": {
+      "type": "Text",
+      "props": {
+        "text": "BUIDL ~flat after 6-25's institutional mint",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_8": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_yields": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_yields",
+        "yield_wsol",
+        "yield_wbtc",
+        "yield_apyusd",
+        "text_yields_note"
+      ]
+    },
+    "heading_yields": {
+      "type": "Heading",
+      "props": {
+        "text": "Real Yield (sustainable, ≥$10M, filtered)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "yield_wsol": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_wsol_title",
+        "text_wsol_detail"
+      ]
+    },
+    "text_wsol_title": {
+      "type": "Text",
+      "props": {
+        "text": "WSOL-USDC (Raydium AMM, Solana) — 42.75% apyBase",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_wsol_detail": {
+      "type": "Text",
+      "props": {
+        "text": "$10.2M TVL, new, 30d mean 42.3%",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "yield_wbtc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_wbtc_title",
+        "text_wbtc_detail"
+      ]
+    },
+    "text_wbtc_title": {
+      "type": "Text",
+      "props": {
+        "text": "WBTC-USDT (Uniswap V3, ETH) — 40.50% apyBase",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_wbtc_detail": {
+      "type": "Text",
+      "props": {
+        "text": "$11.6M TVL, new today, 30d mean 22.1%",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "yield_apyusd": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_apyusd_title",
+        "text_apyusd_detail"
+      ]
+    },
+    "text_apyusd_title": {
+      "type": "Text",
+      "props": {
+        "text": "APYUSD-APXUSD (Curve, ETH) — 33.79% apyBase",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_apyusd_detail": {
+      "type": "Text",
+      "props": {
+        "text": "$10.9M TVL — both wrappers broke peg today; yield is depeg artifact not real demand",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "text_yields_note": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's leader WETH-USDT Uniswap V3 ETH actually printed 89.4% apyBase today on $73M TVL but failed filter — apyMean30d $42.3 < apy×0.5 ($44.7) tripped the volatility gate. 25pp shoot-up after 44pp 6-25 climb = pool too hot for sustainable label",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_9": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section_incentive": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_incentive",
+        "incentive_cvxcrv",
+        "incentive_usdc_aero",
+        "text_incentive_note"
+      ]
+    },
+    "heading_incentive": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive Yield (points / emissions, ≥$25M)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "incentive_cvxcrv": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_cvxcrv_title",
+        "text_cvxcrv_detail"
+      ]
+    },
+    "text_cvxcrv_title": {
+      "type": "Text",
+      "props": {
+        "text": "CVXCRV (Convex, ETH) — 30.02% apy",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_cvxcrv_detail": {
+      "type": "Text",
+      "props": {
+        "text": "via CRV+CVX+FXS ($27M TVL — day-5 sustained climb 27.0 → 28.1 → 28.8 → 29.6 → 30.02)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "incentive_usdc_aero": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "text_usdc_monad_title",
+        "text_usdc_monad_detail"
+      ]
+    },
+    "text_usdc_monad_title": {
+      "type": "Text",
+      "props": {
+        "text": "USDC (Accountable, Monad) — 11.91% apy",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_usdc_monad_detail": {
+      "type": "Text",
+      "props": {
+        "text": "via Monad incentive token ($46M TVL, mostly base 11.6% + small 0.3% reward sweetener)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "text_incentive_note": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's 42.2% USDC-AERO (Aerodrome v1, Base) cooled to 39.3% AND TVL dipped to $24.4M, missing $25M filter (AERO −9.1% today gave back the bid)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_10": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: llama_tvl=partial(chain_delta_null_day_9) llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none_",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
