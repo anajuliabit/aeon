@@ -510,4 +510,29 @@ check "BEAR halves long sizeUsd"   "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[0
 check "BEAR leaves short sizeUsd"  "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[1].sizeUsd')" "800"
 check "BEAR floors size-1 long to 1 (not 0)" "$(printf '%s' "$BEAR_OUT" | jq -r '.trades[2].sizeUsd')" "1"
 
+# --- risk-size.sh: vol-target + caps + DD de-gross ---
+RSZ="$(cd "$(dirname "$0")" && pwd)/risk-size.sh"
+RS_DIR="$(mktemp -d)"
+cat > "$RS_DIR/cg-markets.json" <<'EOF'
+[{"id":"calm","symbol":"calm","price_change_percentage_24h":5,"price_change_percentage_7d_in_currency":5},
+ {"id":"wild","symbol":"wild","price_change_percentage_24h":40,"price_change_percentage_7d_in_currency":40}]
+EOF
+rsz() { # trades-json ; RISK_NET ; RISK_DD  -> sized trades json
+  printf '%s' "$1" | RISK_NET="$2" RISK_DD="${3:-0}" RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ"
+}
+T2='{"trades":[{"symbol":"CALM","coingeckoId":"calm","side":"long","conviction":"MEDIUM"},{"symbol":"WILD","coingeckoId":"wild","side":"long","conviction":"MEDIUM"}]}'
+O2="$(rsz "$T2" 400000 0)"
+check "vol-target calm > wild" "$(printf '%s' "$O2" | jq -r '(.trades[]|select(.symbol=="CALM").sizeUsd) > (.trades[]|select(.symbol=="WILD").sizeUsd)')" "true"
+T1='{"trades":[{"symbol":"CALM","coingeckoId":"calm","side":"long","conviction":"HIGH"}]}'
+O1="$(rsz "$T1" 400000 0)"
+check "per-position cap 1.5pct" "$(printf '%s' "$O1" | jq -r '.trades[0].sizeUsd <= 6000')" "true"
+T5='{"trades":[{"symbol":"A","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"B","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"C","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"D","coingeckoId":"calm","side":"long","conviction":"HIGH"},{"symbol":"E","coingeckoId":"calm","side":"long","conviction":"HIGH"}]}'
+O5="$(rsz "$T5" 400000 0)"
+check "direction cap long sum <=3pct" "$(printf '%s' "$O5" | jq -r '([.trades[]|select(.side=="long").sizeUsd]|add) <= 12000')" "true"
+ODD0="$(rsz "$T1" 40000 5)"; ODD1="$(rsz "$T1" 40000 18)"
+check "DD18 degrosses vs DD5" "$(printf '%s' "$ODD1" | jq -r --argjson a "$(printf '%s' "$ODD0" | jq '.trades[0].sizeUsd')" '.trades[0].sizeUsd < $a')" "true"
+ODIS="$(printf '%s' "$T1" | RISK_DISABLE=1 RISK_NET=400000 RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ")"
+check "RISK_DISABLE conviction-split uncapped" "$(printf '%s' "$ODIS" | jq -r '.trades[0].sizeUsd')" "20000"
+check "sizePctNet matches sizeUsd" "$(printf '%s' "$O1" | jq -r '.trades[0].sizePctNet == ((.trades[0].sizeUsd/400000*1000)|round)/10')" "true"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
