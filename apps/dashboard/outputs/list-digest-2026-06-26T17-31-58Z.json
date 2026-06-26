@@ -1,0 +1,205 @@
+{
+  "root": "root_card",
+  "state": {},
+  "elements": {
+    "root_card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-26"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "intro_text",
+        "separator1",
+        "section_heading",
+        "tweets_stack",
+        "separator2",
+        "footer_stack"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet day. defiignas spots spark lenders as the LP base for a uni-v4 JIT stable-pool; hooeem rant carries engagement."
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto / DeFi Researchers",
+        "level": "h2"
+      }
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_container",
+        "tweet2_container",
+        "tweet3_container",
+        "tweet4_container"
+      ]
+    },
+    "tweet1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1_card",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "x.com/hooeem",
+        "text": "reads \"crypto is dead\" chatter as the same inversion-tell that ran the super-cycle camp last time; calls violent two-sided pain into a $59k BTC tape",
+        "likes": 118,
+        "retweets": 4
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2070242771521204386"
+      }
+    },
+    "tweet2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2_card",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "x.com/Flowslikeosmo",
+        "text": "open \"most undervalued/misunderstood token?\" prompt; 30-reply crowd-sourced shortlist forming in-thread, worth scraping for sentiment-vs-price-action divergences",
+        "likes": 15,
+        "retweets": 0
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2070190336278987107"
+      }
+    },
+    "tweet3_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3_card",
+        "tweet3_link"
+      ]
+    },
+    "tweet3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround_",
+        "handle": "x.com/Louround_",
+        "text": "QTs Route2FI on generational-wealth playbook decay: prior-gen advice doesn't compound at current asset-price velocities; adapt-or-sidelined frame",
+        "likes": 13,
+        "retweets": 0
+      }
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Louround_/status/2070282752771969289"
+      }
+    },
+    "tweet4_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4_card",
+        "tweet4_link"
+      ]
+    },
+    "tweet4_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "x.com/DefiIgnas",
+        "text": "spark lenders as the LP base for a uni-v4-hooks-as-curve-3pool design; lending APY becomes a function of swap-fee throughput, not just borrow demand — composability flag for capital-under-mandate vaults",
+        "likes": 11,
+        "retweets": 0
+      }
+    },
+    "tweet4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DefiIgnas/status/2070203621912793220"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_text",
+        "status_badge"
+      ]
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok",
+        "variant": "caption"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "outline"
+      }
+    }
+  }
+}
