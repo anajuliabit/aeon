@@ -624,6 +624,13 @@ while read -r b; do
   [ -z "$b" ] && continue
   SYM=$(printf '%s' "$b" | jq -r '.symbol')
   TSIDE=$(printf '%s' "$b" | jq -r '.side // "long"')
+  # Risk layer is the sizing authority: a 0-sized short-term trade is SKIPPED,
+  # never defaulted to $1000. sizeUsd hits 0 in degraded conditions (net=0 →
+  # budget 0, or a sub-$1 per-position cap floors to 0) — exactly where the
+  # legacy `else 1000` fallback would re-inflate an ungated notional.
+  if [ "$(printf '%s' "$b" | jq -r 'if (.sizeUsd // 0) > 0 then "y" else "n" end')" != "y" ]; then
+    echo "advisor: risk — skipped 0-sized short-term trade $SYM"; continue
+  fi
   PICK=$(printf '%s' "$b" | jq -c --arg d "$DATE" '
     (.side // "long") as $side
     | {
@@ -640,7 +647,7 @@ while read -r b; do
                                else null end),
         horizonDays: (.horizonDays // 14),
         conviction: (.conviction // "UNSTATED"),
-        notionalUsd: (if (.sizeUsd // 0) > 0 then .sizeUsd else 1000 end),
+        notionalUsd: (.sizeUsd // 0),
         thesis: (("SHORT-TERM " + ($side | ascii_upcase) + " — ") + (.thesis // ""))
       }')
   if [ "$DRY" = "1" ]; then

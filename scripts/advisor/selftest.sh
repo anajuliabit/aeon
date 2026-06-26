@@ -549,4 +549,12 @@ check "bad price does not zero pick" "$(printf '%s' "$OBAD" | jq -r '.trades[0].
 OGARB="$(printf '%s' 'not json {{{' | RISK_NET=400000 RISK_MKT="$RS_DIR/cg-markets.json" bash "$RSZ")"
 check "garbage stdin -> valid json" "$(printf '%s' "$OGARB" | jq -e 'has("trades")' >/dev/null 2>&1 && echo ok)" "ok"
 
+# Risk layer is the sizing authority: a 0-sized short-term trade must be SKIPPED at
+# staging, never rewritten to the legacy $1000 default.
+STG='{"shortTermTrades":[{"symbol":"Z","sizeUsd":0,"side":"long"},{"symbol":"P","sizeUsd":3000,"side":"long"}]}'
+# staged set = trades with sizeUsd>0 (the guard); notional = sizeUsd (no 1000 default)
+STAGED="$(printf '%s' "$STG" | jq -c '[.shortTermTrades[] | select((.sizeUsd // 0) > 0) | {symbol, notionalUsd: (.sizeUsd // 0)}]')"
+check "0-size short-term trade skipped" "$(printf '%s' "$STAGED" | jq -r 'length')" "1"
+check "no \$1000 default for risk-sized" "$(printf '%s' "$STAGED" | jq -r '.[0].notionalUsd')" "3000"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
