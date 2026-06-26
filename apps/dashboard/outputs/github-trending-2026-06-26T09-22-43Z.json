@@ -1,0 +1,457 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-26"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_top_pick",
+        "sep_1",
+        "section_ai_ml",
+        "sep_2",
+        "section_web_apps",
+        "sep_3",
+        "footer"
+      ]
+    },
+    "section_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_top_pick",
+        "link_mineru_top",
+        "text_mineru_desc"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "link_mineru_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "opendatalab/MinerU",
+        "href": "https://github.com/opendatalab/MinerU"
+      },
+      "children": []
+    },
+    "text_mineru_desc": {
+      "type": "Text",
+      "props": {
+        "text": "A 2-year-old PDF→markdown parser spiking 644 stars in a day — doc ingestion is the bottleneck for grounded agents and this is the most credible OSS pipeline shipping figure extraction + equation parsing today.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_ai_ml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_ai_ml",
+        "repo_mineru",
+        "repo_cyber",
+        "repo_berkshire",
+        "repo_page_agent"
+      ]
+    },
+    "heading_ai_ml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "repo_mineru": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mineru_header",
+        "mineru_desc"
+      ]
+    },
+    "mineru_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "mineru_link",
+        "mineru_stars",
+        "mineru_lang",
+        "mineru_status"
+      ]
+    },
+    "mineru_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "opendatalab/MinerU",
+        "href": "https://github.com/opendatalab/MinerU"
+      },
+      "children": []
+    },
+    "mineru_stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 644 today (70k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "mineru_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "mineru_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "mineru_desc": {
+      "type": "Text",
+      "props": {
+        "text": "turns PDFs and Office docs into LLM-ready markdown/JSON with figure extraction and equation parsing — the missing piece for doc-grounded agents",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo_cyber": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cyber_header",
+        "cyber_desc"
+      ]
+    },
+    "cyber_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cyber_link",
+        "cyber_stars",
+        "cyber_lang",
+        "cyber_status"
+      ]
+    },
+    "cyber_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mukul975/Anthropic-Cybersecurity-Skills",
+        "href": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+      },
+      "children": []
+    },
+    "cyber_stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 571 today (21.5k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "cyber_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "cyber_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "cyber_desc": {
+      "type": "Text",
+      "props": {
+        "text": "817 cyber tactics mapped to MITRE ATT&CK / NIST CSF 2.0 / ATLAS — turn-key skills directory drop-in for security agents",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo_berkshire": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "berkshire_header",
+        "berkshire_desc"
+      ]
+    },
+    "berkshire_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "berkshire_link",
+        "berkshire_stars",
+        "berkshire_lang",
+        "berkshire_status"
+      ]
+    },
+    "berkshire_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "xbtlin/ai-berkshire",
+        "href": "https://github.com/xbtlin/ai-berkshire"
+      },
+      "children": []
+    },
+    "berkshire_stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 309 today (2.6k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "berkshire_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "berkshire_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "berkshire_desc": {
+      "type": "Text",
+      "props": {
+        "text": "multi-agent value-investing harness on Claude Code — orchestrates research, valuation, devil's-advocate per ticker",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "repo_page_agent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "page_agent_header",
+        "page_agent_desc"
+      ]
+    },
+    "page_agent_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "page_agent_link",
+        "page_agent_stars",
+        "page_agent_lang",
+        "page_agent_status"
+      ]
+    },
+    "page_agent_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "alibaba/page-agent",
+        "href": "https://github.com/alibaba/page-agent"
+      },
+      "children": []
+    },
+    "page_agent_stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 163 today (20.1k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "page_agent_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "page_agent_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "page_agent_desc": {
+      "type": "Text",
+      "props": {
+        "text": "in-page JS GUI agent runs inside the browser DOM, no playwright bridge — natural-language web automation without a backend driver",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_web_apps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_web_apps",
+        "repo_trek"
+      ]
+    },
+    "heading_web_apps": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "repo_trek": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trek_header",
+        "trek_desc"
+      ]
+    },
+    "trek_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "trek_link",
+        "trek_stars",
+        "trek_lang",
+        "trek_status"
+      ]
+    },
+    "trek_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mauriceboe/TREK",
+        "href": "https://github.com/mauriceboe/TREK"
+      },
+      "children": []
+    },
+    "trek_stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 241 today (7.1k total)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "trek_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "trek_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "trek_desc": {
+      "type": "Text",
+      "props": {
+        "text": "self-hosted travel planner with real-time collab, SSO, PWA, packing lists, budgets — google-trips replacement that runs on your own server",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 5/16",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
