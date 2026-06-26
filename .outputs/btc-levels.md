@@ -1,17 +1,9 @@
+Quiet run complete. BTC spot is $59,669 with the 2026-06-25 daily close at $59,712 — breakdown already alerted for that close date, no reclaim levels reached, leverage-review trigger not active. No notification sent. State and log committed.
+
 ## Summary
 
-**Run: btc-levels 2026-06-26T16:51Z**
-
-- **Spot:** $60,064.61 (up from last run's $59,462)
-- **Previous UTC daily close (2026-06-25):** $59,712.62
-
-**Level evaluation:**
-| Level | Result |
-|---|---|
-| Leverage review (≤$45k) | Clear — spot well above |
-| Breakdown (close < $60,500) | Close qualifies but `breakdownAlertedForClose` already set to "2026-06-25" — no duplicate |
-| Reclaim $63,500 | No — spot $60,064 < $63,500 |
-| Reclaim $65,900 | No — spot $60,064 < $65,900 |
-| Re-arm reclaim flags | Spot < $60,500 → holds both flags false |
-
-No alerts fired. No notification sent. State updated, log appended, committed.
+- **BTC spot:** $59,669.69
+- **Daily close (2026-06-25):** $59,712.62 (< $60,500 breakdown level)
+- **Alerts evaluated:** breakdown already alerted for 2026-06-25 (no repeat), spot > $45k (no leverage-review), spot < $63,500/$65,900 (no reclaim)
+- **Result:** quiet run — no notification
+- **Files committed:** `memory/btc-levels-state.json` (updatedAt bumped, spot updated), `memory/logs/2026-06-26.md` (20:55Z entry appended)
