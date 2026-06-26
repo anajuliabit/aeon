@@ -156,13 +156,13 @@
   },
   "skill-freshness": {
     "last_dispatch": "2026-06-26T09:18:06Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-25T08:50:24Z",
-    "total_runs": 55,
-    "total_successes": 29,
+    "last_status": "success",
+    "last_success": "2026-06-26T09:23:55Z",
+    "total_runs": 56,
+    "total_successes": 30,
     "total_failures": 26,
     "consecutive_failures": 0,
-    "success_rate": 0.53,
+    "success_rate": 0.54,
     "last_failed": "2026-06-21T14:00:04Z",
     "last_error": "nputTokens\":54400,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.15796499999999997,\"contextWindow\":200000,\"maxOutputTokens\":32000}},\"permission_denials\":[{\"tool_name\":\"Bash\",\"tool_use_"
   },
