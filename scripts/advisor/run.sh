@@ -477,20 +477,29 @@ TRADES="$(printf '%s' "$TRADES" | jq -c --arg held "${HELD_LC:-}" '
                     else (.target // 0) > (.entry) and ((.invalidate // 0) == 0 or (.invalidate < .entry)) end))
     ] | .[0:5]}')"
 
+# Current drawdown % from the all-time ledger peak (for risk-size DD de-gross).
+# Reuse the notify-drawdown computation; 0 if history is too short/unavailable.
+RISK_DD="$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}" "$BASE/api/history" 2>/dev/null \
+  | jq -r '[.[] | select((.totalUsd // 0) > 0)] as $h
+      | if ($h|length) < 2 then 0
+        else (([$h[].totalUsd] | max) as $peak
+              | if $peak > 0 then ($peak - $h[-1].totalUsd)/$peak*100 else 0 end) end' 2>/dev/null || echo 0)"
+[ -z "$RISK_DD" ] && RISK_DD=0
+echo "advisor: portfolio drawdown ${RISK_DD}%"
+
 # Position sizing: split a short-term-risk budget (default 5% of net worth) across
 # the selected trades, conviction-weighted (HIGH = 2× MEDIUM). Deterministic so the
 # dollar amounts are reproducible from the report, not LLM-guessed. Override the
 # budget pct with ST_RISK_PCT.
 ST_RISK_PCT="${ST_RISK_PCT:-5}"
 ST_TOTAL="$(jq -r '.totalUsd // 0' "$D/snapshot.json" 2>/dev/null || echo 0)"
-ST_BUDGET="$(awk "BEGIN{printf \"%.2f\", ($ST_TOTAL * $ST_RISK_PCT) / 100}")"
-TRADES="$(printf '%s' "$TRADES" | jq -c --argjson budget "$ST_BUDGET" --argjson total "$ST_TOTAL" '
-  .trades as $t
-  | ([$t[] | (if ((.conviction // "") | ascii_upcase | startswith("HIGH")) then 2 else 1 end)] | add // 0) as $wsum
-  | {trades: [ $t[]
-      | (if ((.conviction // "") | ascii_upcase | startswith("HIGH")) then 2 else 1 end) as $w
-      | .sizeUsd = (if $wsum > 0 then (($budget * $w / $wsum) | floor) else 0 end)
-      | .sizePctNet = (if $total > 0 then (((.sizeUsd / $total) * 1000) | round) / 10 else 0 end) ]}')"
+ST_BUDGET="$(awk "BEGIN{printf \"%.2f\", ($ST_TOTAL * $ST_RISK_PCT) / 100}")" # (budget now computed inside risk-size.sh)
+# Risk layer (issue #140): DD de-gross + vol-target + per-position + per-direction
+# caps. Runs BEFORE the regime BEAR halving below (defense in depth — both shrink
+# longs in a downtrend). RISK_DISABLE=1 → plain conviction-split fallback.
+TRADES="$(printf '%s' "$TRADES" \
+  | RISK_NET="$ST_TOTAL" RISK_DD="$RISK_DD" RISK_MKT="$D/cg-markets.json" ST_RISK_PCT="$ST_RISK_PCT" \
+    bash "$ROOT/scripts/advisor/risk-size.sh")"
 if [ "${REGIME_BAND:-UNKNOWN}" = "BEAR" ]; then
   # Shared filter (scripts/advisor/lib/bear-halve.jq) — one source of truth with
   # the selftest, and it floors a positive long to >=1 so it can't fall to the
@@ -498,7 +507,8 @@ if [ "${REGIME_BAND:-UNKNOWN}" = "BEAR" ]; then
   TRADES="$(printf '%s' "$TRADES" | jq -c -f "$ROOT/scripts/advisor/lib/bear-halve.jq")"
   echo "advisor: regime BEAR — halved long short-term notionals"
 fi
-REPORT="$(jq -n --argjson rpt "$REPORT" --argjson st "$TRADES" '$rpt | .shortTermTrades = ($st.trades // [])')"
+REPORT="$(jq -n --argjson rpt "$REPORT" --argjson st "$TRADES" --arg dd "$RISK_DD" --arg stp "$ST_RISK_PCT" \
+  '$rpt | .shortTermTrades = ($st.trades // []) | .risk = {ddPct: ($dd|tonumber? // 0), budgetPct: ($stp|tonumber? // 5)}')"
 echo "advisor: short-term trades — $(printf '%s' "$TRADES" | jq '.trades | length') selected; sized from ${ST_RISK_PCT}% (\$$(printf '%.0f' "$ST_BUDGET")) of net \$$(printf '%.0f' "$ST_TOTAL")"
 
 # ---------------------------------------------------------------------------
@@ -652,10 +662,11 @@ echo "advisor: staged $STB_STAGED short-term trade(s)"
 # Telegram: .summary + the actionable trades (directional recs), so the operator
 # sees the trims/adds/hedges — not just whatever defensive "hold" the PM ranked
 # first. Falls back to an explicit "no trades" line on a purely defensive day.
-TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" --arg band "$REGIME_BAND" --arg score "$REGIME_SCORE" '
+TG="$(printf '%s' "$REPORT" | jq -r --arg d "$DATE" --arg band "$REGIME_BAND" --arg score "$REGIME_SCORE" --arg dd "$RISK_DD" '
   ([.recommendations[]? | select(.direction == "increase" or .direction == "decrease" or .direction == "hedge")]) as $trades
   | (.shortTermTrades // []) as $buys
   | "REGIME: " + $band + (if $score == "n/a" then "" else " " + $score + "/100" end) + "\n"
+    + "RISK: DD " + (($dd|tonumber? // 0)|floor|tostring) + "%\n"
     + "📊 Advisor (" + $d + "): " + (.summary // "(no summary)") + "\n"
     + (if ($trades | length) == 0
        then "No new trades — defensive stance (see dashboard)."
