@@ -1,0 +1,188 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief",
+        "description": "2026-06-26"
+      },
+      "children": [
+        "heading-focus",
+        "stack-focus",
+        "separator-1",
+        "heading-since",
+        "stack-since",
+        "separator-2",
+        "heading-running",
+        "stack-running"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "stack-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-btc",
+        "text-sei-aave",
+        "text-iss025"
+      ]
+    },
+    "alert-btc": {
+      "type": "Alert",
+      "props": {
+        "title": "BTC breakdown alert fired",
+        "message": "close $59,712 < $60,500, spot $60,484 retesting — why now: today's close decides next-leg-down or reclaim",
+        "type": "warning"
+      }
+    },
+    "text-sei-aave": {
+      "type": "Text",
+      "props": {
+        "text": "SEI day-1 at $0.0542 invalidation vs AAVE day-3 +13.4% — why now: SEI exit decision before more slippage",
+        "variant": "body"
+      }
+    },
+    "text-iss025": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-fix PR pending day 3 — why now: 22 chronic skills sr<0.5 lose telemetry daily",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "stack-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-since-1",
+        "text-since-2",
+        "text-since-3",
+        "text-since-4",
+        "text-since-5"
+      ]
+    },
+    "text-since-1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC fired first breakdown close — reclaim flags re-armed both legs; ETH leading lower −4.55% 24h",
+        "variant": "body"
+      }
+    },
+    "text-since-2": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE pick day 3 +13.4% from $76.09 entry — only large-cap DeFi sustaining bid through red tape",
+        "variant": "body"
+      }
+    },
+    "text-since-3": {
+      "type": "Text",
+      "props": {
+        "text": "SEI HIGH 9/10 $0.0584 entry now $0.0542, −7.1% underwater at inv level",
+        "variant": "body"
+      }
+    },
+    "text-since-4": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor 6-25: 3 fake-W1 baits planted by attacker `0xC3236716…` — richer kit vs 6-23 single ÚSDС",
+        "variant": "body"
+      }
+    },
+    "text-since-5": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker 6-25: 24h annihilation of all 5 bear/contrarian frames from 6-24",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "stack-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-running-1",
+        "text-running-2",
+        "text-running-3",
+        "text-running-4",
+        "text-running-5"
+      ]
+    },
+    "text-running-1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine + token-movers @ 07:50Z (in flight)",
+        "variant": "body"
+      }
+    },
+    "text-running-2": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse + github-trending + fleet-control @ 09:00Z",
+        "variant": "body"
+      }
+    },
+    "text-running-3": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick @ 11:00Z, defi-overview + token-alert @ 12:00Z",
+        "variant": "body"
+      }
+    },
+    "text-running-4": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor @ 13:00Z, narrative-tracker @ 14:00Z",
+        "variant": "body"
+      }
+    },
+    "text-running-5": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 08/14/20Z, evening-recap @ 20:30Z",
+        "variant": "body"
+      }
+    }
+  }
+}
