@@ -1,16 +1,11 @@
 ## Summary
 
-**btc-levels run — 2026-06-26 09:19Z**
+**btc-levels run — 2026-06-26 12:24Z**
 
-- **Spot:** $60,047.31 (up from $59,827 at the prior 04:00Z run)
-- **Previous daily close (2026-06-25):** $59,712.62
-
-**Alert evaluation:**
-| Check | Result |
-|---|---|
-| Leverage-review (spot ≤ $45k) | Clear — spot $60k >> $45k |
-| Breakdown (close < $60,500) | Already alerted for 2026-06-25 close — no duplicate |
-| Reclaim $63,500 | Spot below $63,500; re-arm condition active (spot < $60,500) |
-| Reclaim $65,900 | Same |
-
-No alerts fired → no notification sent. State and log committed (`9cdf55b`).
+- **Spot:** $59,462.86 | **Daily close (2026-06-25):** $59,712.62
+- **Alerts fired:** none
+  - Leverage-review: spot $59k >> $45k threshold — no trigger
+  - Breakdown: close $59,713 < $60,500, but already alerted for 2026-06-25 in the 05:02Z run — no new alert
+  - Reclaim $63,500 / $65,900: spot well below both levels, re-arm condition (spot < $60,500) holds, flags remain false
+- **State:** updated `memory/btc-levels-state.json`; log appended to `memory/logs/2026-06-26.md`; committed as `09b16f2`
+- **Notification:** none sent (quiet run)
