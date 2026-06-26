@@ -1,4 +1,4 @@
-# AIXBT Clusters (as of 2026-06-24)
+# AIXBT Clusters (as of 2026-06-26)
 
 36 sub-community clusters AIXBT tracks. Each cluster has a description and member archetype. Used when filtering projects/intel/momentum endpoints (paid tier).
 

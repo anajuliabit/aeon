@@ -1,0 +1,358 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-26 09:00Z"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_crypto",
+        "stack_crypto",
+        "sep1",
+        "heading_stablecoins",
+        "stack_stablecoins",
+        "sep2",
+        "heading_tradfi",
+        "stack_tradfi",
+        "sep3",
+        "heading_new",
+        "stack_new",
+        "sep4",
+        "heading_bridge",
+        "stack_bridge"
+      ]
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "stack_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto_btc",
+        "crypto_hyperliquid",
+        "crypto_binance"
+      ]
+    },
+    "crypto_btc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_btc",
+        "text_btc_outflow",
+        "text_btc_sentiment"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$58K",
+        "delta": "21-month low",
+        "trend": "down"
+      }
+    },
+    "text_btc_outflow": {
+      "type": "Text",
+      "props": {
+        "text": "$696M ETF outflows in a single day",
+        "variant": "body"
+      }
+    },
+    "text_btc_sentiment": {
+      "type": "Text",
+      "props": {
+        "text": "Mechanical exit, not sentiment",
+        "variant": "caption"
+      }
+    },
+    "crypto_hyperliquid": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid: whale accumulation on-chain. Multicoin bull thesis holds.",
+        "variant": "body"
+      }
+    },
+    "crypto_binance": {
+      "type": "Alert",
+      "props": {
+        "title": "Binance MiCA",
+        "message": "EU exit over failed MiCA licence",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_stablecoins": {
+      "type": "Heading",
+      "props": {
+        "text": "STABLECOINS",
+        "level": "h2"
+      }
+    },
+    "stack_stablecoins": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_stablecoin_volumes",
+        "stat_total_sideline",
+        "text_usdc_substitution"
+      ]
+    },
+    "stack_stablecoin_volumes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_usdt",
+        "stat_usdc"
+      ]
+    },
+    "stat_usdt": {
+      "type": "Stat",
+      "props": {
+        "label": "USDT",
+        "value": "$190B"
+      }
+    },
+    "stat_usdc": {
+      "type": "Stat",
+      "props": {
+        "label": "USDC",
+        "value": "$80B"
+      }
+    },
+    "stat_total_sideline": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Sidelined",
+        "value": "$270B",
+        "delta": "record high",
+        "trend": "up"
+      }
+    },
+    "text_usdc_substitution": {
+      "type": "Text",
+      "props": {
+        "text": "Binance MiCA loss → USDC wins the substitution",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tradfi": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "stack_tradfi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_micron",
+        "stack_yields",
+        "text_metals"
+      ]
+    },
+    "stack_micron": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_micron",
+        "text_micron_margins"
+      ]
+    },
+    "stat_micron": {
+      "type": "Stat",
+      "props": {
+        "label": "Micron",
+        "value": "+15%",
+        "trend": "up"
+      }
+    },
+    "text_micron_margins": {
+      "type": "Text",
+      "props": {
+        "text": "~85% margins. AI equity flows reviving.",
+        "variant": "body"
+      }
+    },
+    "stack_yields": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_yields",
+        "text_yields_context"
+      ]
+    },
+    "stat_yields": {
+      "type": "Stat",
+      "props": {
+        "label": "Bond Yields",
+        "value": "4.38%",
+        "delta": "lower",
+        "trend": "down"
+      }
+    },
+    "text_yields_context": {
+      "type": "Text",
+      "props": {
+        "text": "Softer inflation — inverts prior PCE hawkish read",
+        "variant": "caption"
+      }
+    },
+    "text_metals": {
+      "type": "Text",
+      "props": {
+        "text": "Precious metals rotation out",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "stack_new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_new1",
+        "badge_new2",
+        "badge_new3",
+        "badge_new4"
+      ]
+    },
+    "badge_new1": {
+      "type": "Badge",
+      "props": {
+        "text": "Stablecoin $270B record (entirely new)",
+        "variant": "default"
+      }
+    },
+    "badge_new2": {
+      "type": "Badge",
+      "props": {
+        "text": "Binance MiCA threat (entirely new)",
+        "variant": "default"
+      }
+    },
+    "badge_new3": {
+      "type": "Badge",
+      "props": {
+        "text": "Yields lower to 4.38% — inverts higher-for-longer",
+        "variant": "default"
+      }
+    },
+    "badge_new4": {
+      "type": "Badge",
+      "props": {
+        "text": "$696M single-day ETF outflow quantified",
+        "variant": "default"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "stack_bridge": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_bridge1",
+        "text_bridge2",
+        "text_bridge3"
+      ]
+    },
+    "text_bridge1": {
+      "type": "Text",
+      "props": {
+        "text": "The rotation fuel ($270B stablecoins + lower yields) exists. The ignition doesn't. BTC needs its own catalyst, not a yield-move, to flip that capital.",
+        "variant": "body"
+      }
+    },
+    "text_bridge2": {
+      "type": "Text",
+      "props": {
+        "text": "Meanwhile: Micron +15% on AI margins — equity holders rotate there. Crypto holders deleverage.",
+        "variant": "body"
+      }
+    },
+    "text_bridge3": {
+      "type": "Text",
+      "props": {
+        "text": "Same AI conviction. Two different asset-class exit vectors.",
+        "variant": "body"
+      }
+    }
+  }
+}
