@@ -1,0 +1,429 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers",
+        "description": "2026-06-27 10:34Z"
+      },
+      "children": [
+        "summary",
+        "sep1",
+        "winners-section",
+        "sep2",
+        "losers-section",
+        "sep3",
+        "trending-section",
+        "sep4",
+        "notable-section"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "Broad bounce after 3-day risk-off — 79/100 top coins green, median top-50 +1.5%; BTC +2.0% $60,225 still under the $60.5k breakdown line, ETH +3.3% $1,580, AAVE day-4 +10.9% the standout",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol",
+          "Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "VELVET (Velvet)",
+            "$1.33",
+            "+127.2%",
+            "+185.4%",
+            "+3.1%",
+            "$57M",
+            "#96",
+            "TRENDING+UP BREAKOUT"
+          ],
+          [
+            "SLX (Solstice)",
+            "$0.4753",
+            "+28.8%",
+            "+130.8%",
+            "+3.4%",
+            "$224M",
+            "#234",
+            "BREAKOUT"
+          ],
+          [
+            "SYRUP (Maple Finance)",
+            "$0.1484",
+            "+28.4%",
+            "+9.2%",
+            "−1.5%",
+            "$38M",
+            "#182",
+            ""
+          ],
+          [
+            "PIEVERSE",
+            "$0.7529",
+            "+21.2%",
+            "+5.4%",
+            "+2.6%",
+            "$21M",
+            "#163",
+            ""
+          ],
+          [
+            "GRASS",
+            "$0.5122",
+            "+19.2%",
+            "+23.6%",
+            "+1.0%",
+            "$33M",
+            "#132",
+            "TRENDING+UP"
+          ],
+          [
+            "WIF (dogwifhat)",
+            "$0.1705",
+            "+18.9%",
+            "+4.9%",
+            "+1.3%",
+            "$93M",
+            "#187",
+            ""
+          ],
+          [
+            "BSV (Bitcoin SV)",
+            "$12.51",
+            "+15.1%",
+            "+5.6%",
+            "+2.6%",
+            "$16M",
+            "#143",
+            ""
+          ],
+          [
+            "UB (Unibase)",
+            "$0.0828",
+            "+13.7%",
+            "+9.2%",
+            "−1.7%",
+            "$18M",
+            "#166",
+            ""
+          ],
+          [
+            "AAVE",
+            "$95.74",
+            "+10.9%",
+            "+28.2%",
+            "−0.3%",
+            "$518M",
+            "#51",
+            "TRENDING+UP"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "losers-table"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol",
+          "Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "LAB",
+            "$16.89",
+            "−16.4%",
+            "+39.9%",
+            "−7.1%",
+            "$34M",
+            "#22",
+            "TRENDING+DOWN"
+          ],
+          [
+            "AWE (AWE Network)",
+            "$0.0595",
+            "−15.3%",
+            "+10.4%",
+            "−2.1%",
+            "$7.9M",
+            "#232",
+            ""
+          ],
+          [
+            "BTW (Bitway)",
+            "$0.0850",
+            "−14.2%",
+            "−36.8%",
+            "+0.9%",
+            "$22M",
+            "#177",
+            ""
+          ],
+          [
+            "DATA (Data Network)",
+            "$0.3095",
+            "−7.1%",
+            "+2.5%",
+            "+0.8%",
+            "$72M",
+            "#242",
+            ""
+          ],
+          [
+            "DEXE",
+            "$21.75",
+            "−6.4%",
+            "+40.4%",
+            "+4.7%",
+            "$23M",
+            "#64",
+            ""
+          ],
+          [
+            "ULTIMA",
+            "$1,876",
+            "−6.1%",
+            "−9.5%",
+            "−0.9%",
+            "$11M",
+            "#194",
+            ""
+          ],
+          [
+            "APE (ApeCoin)",
+            "$0.1414",
+            "−5.7%",
+            "+1.3%",
+            "+0.7%",
+            "$36M",
+            "#203",
+            ""
+          ],
+          [
+            "M (MemeCore)",
+            "$0.8348",
+            "−4.1%",
+            "−70.5%",
+            "−1.6%",
+            "$13M",
+            "#63",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending-heading",
+        "trending-table"
+      ]
+    },
+    "trending-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Rank",
+          "Price",
+          "24h",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "VELVET",
+            "#99",
+            "$1.31",
+            "+143.8%",
+            "TRENDING+UP BREAKOUT"
+          ],
+          [
+            "PENGU (Pudgy Penguins)",
+            "#119",
+            "$0.00623",
+            "+5.5%",
+            ""
+          ],
+          [
+            "CAP",
+            "#431",
+            "$0.0324",
+            "+38.9%",
+            "PUMP-RISK"
+          ],
+          [
+            "AAVE",
+            "#51",
+            "$96.08",
+            "+9.8%",
+            "TRENDING+UP"
+          ],
+          [
+            "FET (ASI Alliance)",
+            "#115",
+            "$0.1797",
+            "+8.2%",
+            ""
+          ],
+          [
+            "BTC",
+            "#1",
+            "$60,221",
+            "+1.1%",
+            ""
+          ],
+          [
+            "LAB",
+            "#22",
+            "$17.15",
+            "−14.4%",
+            "TRENDING+DOWN"
+          ]
+        ]
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-lab",
+        "notable-velvet",
+        "notable-cap",
+        "notable-aave"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-lab": {
+      "type": "Alert",
+      "props": {
+        "title": "LAB Mega-Reversal",
+        "message": "Top winner at 07:25Z this morning (+10.3%) flipped to top loser (−16.4%) in ~3h; rank #22 capitulation, 1h −7.1% bleed still running",
+        "type": "warning"
+      }
+    },
+    "notable-velvet": {
+      "type": "Alert",
+      "props": {
+        "title": "VELVET Breakout Confirmed",
+        "message": "VELVET +127% / 7d +185% on $57M vol — accelerated from morning's +77.4%, [TRENDING+UP][BREAKOUT] confirmed (only sub-rank-100 with both tags)",
+        "type": "info"
+      }
+    },
+    "notable-cap": {
+      "type": "Alert",
+      "props": {
+        "title": "CAP Pump Risk",
+        "message": "CAP #431 +38.9% trending — [PUMP-RISK] microcap, $10M vol, no fundamentals catalyst surfaced",
+        "type": "warning"
+      }
+    },
+    "notable-aave": {
+      "type": "Alert",
+      "props": {
+        "title": "AAVE Day-4 Rally",
+        "message": "AAVE day-4 +10.9% on Kraken-stake-$385M rumor — entry $76 → $95.74 = +25.9% on the 6-24 HIGH 8/10 pick, live bid persists",
+        "type": "success"
+      }
+    }
+  }
+}
