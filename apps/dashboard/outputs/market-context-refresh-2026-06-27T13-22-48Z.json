@@ -1,0 +1,186 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "market-context-refresh"
+      },
+      "children": [
+        "heading-date",
+        "stack-take",
+        "sep-1",
+        "stack-prices",
+        "stat-fng",
+        "sep-2",
+        "stack-breadth",
+        "stat-tvl",
+        "sep-3",
+        "text-narrative",
+        "sep-4",
+        "stack-hotmarket"
+      ]
+    },
+    "heading-date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-06-27",
+        "level": "h3"
+      }
+    },
+    "stack-take": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-take",
+        "badge-conviction"
+      ]
+    },
+    "text-take": {
+      "type": "Text",
+      "props": {
+        "text": "take: post-expiry bear bounce",
+        "variant": "body"
+      }
+    },
+    "badge-conviction": {
+      "type": "Badge",
+      "props": {
+        "text": "conviction medium"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$60,329",
+        "delta": "+2.1%",
+        "trend": "up"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,584",
+        "delta": "+3.2%",
+        "trend": "up"
+      }
+    },
+    "stat-fng": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "15 (Extreme Fear)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-breadth": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "progress-breadth-24h",
+        "progress-breadth-7d"
+      ]
+    },
+    "progress-breadth-24h": {
+      "type": "Progress",
+      "props": {
+        "label": "breadth 24h: 18/20",
+        "value": 90,
+        "max": 100
+      }
+    },
+    "progress-breadth-7d": {
+      "type": "Progress",
+      "props": {
+        "label": "breadth 7d: 2/20",
+        "value": 10,
+        "max": 100
+      }
+    },
+    "stat-tvl": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$70.74B",
+        "delta": "+1.4%",
+        "trend": "up"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "top narrative: \"crypto needs new narrative\" meta-bear (rising, day 3 test)",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-hotmarket": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-hotmarket-q",
+        "progress-portugal",
+        "text-hotmarket-note"
+      ]
+    },
+    "text-hotmarket-q": {
+      "type": "Text",
+      "props": {
+        "text": "hot market: \"Will Portugal win 2026-06-27?\" — YES",
+        "variant": "body"
+      }
+    },
+    "progress-portugal": {
+      "type": "Progress",
+      "props": {
+        "label": "odds",
+        "value": 49.5,
+        "max": 100
+      }
+    },
+    "text-hotmarket-note": {
+      "type": "Text",
+      "props": {
+        "text": "sports-only day 7",
+        "variant": "caption"
+      }
+    }
+  }
+}

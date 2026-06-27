@@ -1,72 +1,71 @@
-# Market Context (as of 2026-06-26)
+# Market Context (as of 2026-06-27)
 
-> **Take:** risk-off (deepening) — BTC −3.5% 24h tapping 21-month low $58,115 with breadth 4/20 green and PCE 4.1% macro shock killing rate-cut expectations. Conviction: high.
+> **Take:** post-expiry bear bounce — BTC +2.1% to $60,329 with 18/20 breadth green 24h after $10.5B Deribit options expiry cleared the $60K strike overhang; but F&G 15 Extreme Fear and 2/20 green 7d confirm no regime change. Conviction: medium.
 
 ## Signal Snapshot
-- BTC $59,081 (−3.50% 24h, −5.84% 7d) · dominance 55.72% (−0.33pp 24h)
-- ETH $1,535 (−6.14% 24h, −9.29% 7d) · ETH/BTC 0.02598
-- SOL $68.77 (+0.84% 24h, +0.58% 7d)
-- Total mcap ~$2.13T (−2.7% 24h) · DEX vol $8.20B 24h · DeFi TVL $69.73B (−2.3% 1d)
-- Breadth: 4/20 green 24h · 3/20 green 7d
-- Fear & Greed: 13 (Extreme Fear) — yesterday 12
+- BTC $60,329 (+2.13% 24h, −5.12% 7d) · dominance 55.82% (+0.10pp 24h)
+- ETH $1,584 (+3.21% 24h, −8.15% 7d) · ETH/BTC 0.02627
+- SOL $72.13 (+4.84% 24h, +0.96% 7d)
+- Total mcap $2.167T (+0.65% 24h) · DEX vol $8.19B 24h · DeFi TVL $70.74B (+1.4% 1d, −3.5% 7d)
+- Breadth: 18/20 green 24h · 2/20 green 7d
+- Fear & Greed: 15 (Extreme Fear) — yesterday 13
 
 ## What Changed Since Last Refresh
-- **BTC broke $60,500 and tapped 21-month low $58,115 (June 25)** — now $59,081; reclaim flags re-armed; structural breakdown confirmed below prior support cluster.
-- **PCE 4.1% (3-year high, released June 25)** — Fed's preferred inflation gauge came in hot; erased all residual rate-cut pricing; dollar/yield headwind sharpened. This is the new dominant macro driver replacing Seoul AI cascade.
-- **ETH accelerating vs BTC: ETH −6.1% 24h vs BTC −3.5%** — ETH/BTC slid 0.02673→0.02598 (−2.8%); ETH −9.29% 7d leads all large-cap declines.
-- **$1.48B crypto liquidation cascade in 24h** — leverage flush concurrent with PCE print and $60K level breach.
-- **$10B Bitcoin options expiry today (June 26)** — most bullish call options now OTM after recent decline; resolution may remove near-term overhang.
+- **BTC reclaimed $60K from $58,115 21-month low (+2.1%)** — $10.5B Deribit options expiry June 26 cleared the $60K strike overhang; post-opex relief bounce. Reclaim flags still armed (breakdown alert fired 2nd consecutive day 6-27 01:15Z; need close >$60,500 to reset).
+- **Breadth 4/20 → 18/20 green 24h** — most dramatic single-session breadth flip in this leg; driven by post-opex squeeze not new inflows; 7d breadth unchanged at 2/20 (SOL +0.96% and RAIN +7.96% only).
+- **Record $1.79B single-day ETF outflow (June 26)** — per AIXBT bridge call 09:00Z; breaks prior June single-day high ($696M June 25); June cumulative now ~$3.6B+. STRC mNAV breach concurrent = institutional BTC bid mechanics stressed, not just price weakness.
+- **Clarity Act stall past July 4** — bipartisan crypto market structure bill unlikely to pass deadline; adds regulatory overhang to the macro headwind stack.
 
 ## Active Narratives
-- **PCE/macro tightening shock** — phase: peak. Evidence: PCE 4.1% 3-year high (June 25), ETF outflows $469M single day June 24 ($5.4B cumulative June), F&G 13 Extreme Fear 3rd consecutive day.
-- **SOL relative decoupling** — phase: rising. Evidence: SOL +0.84% 24h vs BTC −3.5%, sole top-10 non-stable green; SOL +0.58% 7d vs BTC −5.84% 7d — only large-cap holding positive 7d.
-- **RWA / tokenized assets** — phase: rising. Evidence: RAIN +8.14% 7d, trending top 7 for 3rd consecutive day, only large-cap with sustained positive 7d in Extreme Fear environment.
-- **BTC capitulation exhaustion** — phase: emerging. Evidence: $58,115 21-month low touch + technical rebound to $59,081; $10B options expiry today flushes OTM call overhang; $1.48B liquidation cascade typical of capitulation-phase flush.
-- **ETH structural underperformance** — phase: fading. Evidence: ETH/BTC 0.02598 (new cycle low from 0.02673); ETH −9.29% 7d deepest of any top-10 asset; no ETH-specific catalyst offsetting BTC macro headwinds.
+- **"Crypto needs new narrative" / smart-money sidelined** — phase: rising. Evidence: BTC −32% H1, ETH −47% H1, 46d Coinbase Premium negative streak, ~$3.6B June ETF outflows, USDT dominance +43% to 9.17%; structural meta-bear now on day 3 persistence test (breaks 24h half-life pattern if it holds through 6-28).
+- **AI agent infrastructure (rails + wallets + payments)** — phase: peak. Evidence: Coinbase-for-Agents live, x402 480k agents / $50M cumulative (265% weekly tx growth March→June); Coinbase Ventures stated playbook "stablecoins + agentic AI."
+- **Stablecoins as TradFi rails** — phase: peak. Evidence: USDT dominance +43% to 9.17%; stablecoin total mcap $312.46B; x402 Foundation (Visa/Stripe/Anthropic/AWS/Google/Circle/Solana) live.
+- **RWA / tokenized assets** — phase: peak. Evidence: RAIN +7.96% 7d (sole non-stable positive 7d in top 20); Ethena USDtb −20.71% 1d = Treasury-wrapper unwind continues (broadens from Invesco USTB 48h −28%); institutional RWA repositioning, not collapse.
+- **Post-opex technical recovery** — phase: emerging. Evidence: BTC +2.1% 24h on post-$10.5B expiry day; 18/20 breadth confirms broad relief; single-day duration only — no fundamental driver; watch June 27 close vs $60,500.
 
 ## Top DeFi Protocols (TVL, 7d change)
-- Lido: $14.06B (−7.57%)
-- Aave V3: $11.56B (−5.02%)
-- SSV Network: $7.63B (−38.70%) — likely TVL re-measurement, carry from 6-23/24 anomalous pattern
-- LayerZero V2: $7.36B (−2.73%)
-- WBTC: $6.77B (−5.15%)
+- Lido: $14.38B (−7.36%)
+- Aave V3: $11.90B (−4.00%) — day-4 fee reversal: fees −35% 1d wipes 6-26's +36% spike (lending demand was transient)
+- SSV Network: $7.81B (−38.53%) — likely re-measurement artifact (carry from 6-23/24 anomaly)
+- LayerZero V2: $7.36B (−2.24%)
+- WBTC: $6.87B (−5.28%)
 
-## Chain Flow (top 5 by TVL, est. from partial chain data)
-- Ethereum: $36.86B (est. −2.2% from prior $37.70B)
-- BSC: $4.95B (est. −1.2% from prior $5.01B)
-- Solana: $4.73B (flat vs prior $4.73B — consistent with SOL price outperformance)
-- Base: $4.02B (est. −2.7% from prior $4.13B)
-- Bitcoin: $3.91B (est. −3.0% from prior $4.03B)
+## Chain Flow (top 5 by TVL, 7d delta unavailable — day 10 of DeFiLlama chain_change regression)
+- Ethereum: $37.7B (+2.2% vs 6-26 $36.86B — ETH price-driven recovery)
+- BSC: $4.97B (flat vs 6-26 $4.95B)
+- Solana: $4.82B (+1.9% vs 6-26 $4.73B)
+- Tron: $4.44B (re-entered top-5; Base $4.08B just below)
+- Base: $4.08B (+1.5% vs 6-26 $4.02B)
 
 ## Stablecoins
-Total: ~$312B est. (flat — USDT essentially unchanged, USDC −0.1%). USDT $185.03B · USDC $73.72B · USDS $8.24B · DAI $4.84B · USD1/WLFI $4.71B. Combined top-5 share of total crypto mcap ~14.6%.
+Total: $312.46B (−0.14% 1d, −0.33% 7d). USDT $184.9B · USDC $73.9B · USDS $8.2B · DAI $4.8B · USD1 $4.7B · USDe $4.5B. Combined total share of crypto mcap ~14.4%.
 
 ## Trending (CoinGecko)
-- **BTC** — $59,081 −3.36% · trending as attention focuses on 21-month low break
-- **ETH** — $1,535 −6.12% · largest single-day large-cap decline in current leg
-- **BNB** — $555 −1.27% · relative outperformer vs ETH
-- **ADA** — $0.143 −3.44% · rotation watch into lower-cap L1s
-- **ZEC (Zcash)** — $396 −3.71% · privacy coin; Extreme Fear environment keeps some attention
-- **RAIN** — $0.0156 −1.16% · RWA; holding relative strength through red tape for 3rd day
-- **HYPE** — $61.46 −2.61% · broke $62 invalidation from prior token-pick entry
+- **VELVET** — #96, +127% 24h / +185% 7d · BREAKOUT confirmed; Trade.xyz pre-IPO terminal catalyst; 10:34Z token-movers top winner
+- **BTC** — $60,329 +2.13% · post-opex reclaim; attention on $60,500 close threshold
+- **SOL** — $72.13 +4.84% · sole top-10 positive 7d; trending day 2
+- **LAB** — #22, mega-reversal: +10.3% at morning → −16.4% by midday; 7d still +40%
+- **AAVE** — #51, +10.9% · TRENDING+UP day-4 carry from 6-24 HIGH 8/10 pick (+25.9% on entry)
+- **TAO** — #41 · Bittensor AI/decentralized-compute bid; persistent trending
+- **HYPE** — #10 · L1 perp infra; Bitwise $114M HYPE stake surfaced in AIXBT pulse
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |
 |--------|------|---------|-----------|
-| Will USA win 2026 FIFA World Cup? | 3.05% | $2.8M | $3.1M |
+| Will Portugal win on 2026-06-27? | 49.5% | $2.6M | $1.1M |
 
-*Day 6 consecutive sports-only — no crypto-macro markets clearing the $50k 24h vol gate.*
+*Day 7 consecutive sports-only — no crypto-macro markets clearing the $50k 24h vol gate.*
 
 ## Macro Catalysts (next 48h)
-- **PCE 4.1% shock (released June 25)** — 3-year high; Fed 3.50%–3.75% hold now locked in with zero near-term cut probability. Sustained dollar/yield headwind for all risk assets; crypto direct exposure.
-- **$10B Bitcoin options expiry today (June 26)** — most call options OTM after recent decline; resolution historically associated with post-expiry directional move. Watch close relative to $58,115 low.
-- **BTC close vs $58,115 21-month low** — tonight's UTC close is binary: close above = capitulation-wick narrative; close below = breakdown continuation targeting $55K range.
-- **Cumulative June ETF outflows $5.4B** — $469M single-day June 24; structural institutional derisking; inflow reversal needed to change regime.
-- **Quarter-end rebalancing (June 30)** — 4 days out; institutional rebalancing amplifier; large open interest rolls expected.
+- **Post-$10.5B Deribit options expiry relief bounce** — expiry cleared June 26; today's BTC +2.1% is the directional move. Watch June 27 UTC close vs $60,500: close above = breakdown re-arm candidate; close below = 3rd consecutive sub-$60,500 close extends the breakdown.
+- **Record $1.79B single-day ETF outflow (June 26)** — June cumulative now ~$3.6B+; institutional derisking accelerating, not plateauing. STRC mNAV < 1 concurrent = dual institutional stress signal.
+- **PCE 4.1% macro shadow (June 25 print)** — still the dominant macro driver; no rate-cut pricing; dollar/yield headwind structural until next CPI/PCE print (July cycle).
+- **Clarity Act July 4 deadline at risk** — bipartisan crypto market structure bill stalled in political gridlock; regulatory certainty narrative loses a near-term catalyst.
+- **Quarter-end rebalancing (June 30, 3 days out)** — institutional portfolio rebalancing; risk asset sells remain probable given Q2 performance (BTC −32% H1, ETH −47% H1).
 
 ## Implications for Downstream Skills
-- **token-pick:** Hard stop on new BTC/ETH longs. SOL is the only large-cap with positive 7d and 24h — relative strength thesis earns attention. HYPE invalidated at $61.46 (broke $62 floor from 6-20 entry). RAIN multi-day hold through Extreme Fear qualifies as RWA rising pick if fresh catalyst emerges. Watch BTC post-opex close vs $58,115.
-- **narrative-tracker:** PCE 4.1% is the new structural macro bear catalyst — longer half-life than Seoul AI cascade (fundamental, not reactive). Elevate SOL decoupling to rising; monitor ETH/BTC 0.02598 for capitulation-bottom signal. ETH structural underperform is a narrative, not just a delta.
+- **token-pick:** Bounce creates RS opportunities — SOL ecosystem (sole positive 7d large-cap) and AAVE day-4 momentum. Avoid chasing 24h green that's pure opex squeeze; look for 3-session hold. BTC $60K reclaim ≠ breakdown cleared — need close >$60,500 to change positioning.
+- **narrative-tracker:** "Crypto needs new narrative" meta-bear enters day 3 persistence test today at 13:30Z run — if it holds, the 24h half-life pattern is formally broken. Post-opex emerging narrative should be classified dead if BTC closes below $60,500 again.
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
@@ -93,7 +92,9 @@ Total: ~$312B est. (flat — USDT essentially unchanged, USDC −0.1%). USDT $18
 | 2026-06-23 | DEXE | $22.98 | DAO-governance rotation — sole large-cap green on risk-off day (BTC -6.6% / ETH -8.3% 7d). KCEX listing + "Dexelization" DAO-Studio framing + $1.7B platform TVL. mcap $1.08B (rank 65), vmc 0.09. Score 7/10 HIGH. Risk: 51.5% supply locked (FDV/mcap 2.1×) Q4 unlock cliff; $22.98 near $24.12 intraday high mirrors 6-03 wick reversal. Exit: target $28 / inv $19 / 14d. |
 | 2026-06-24 | AAVE | $76.09 | Trending #1 DeFi, only large-cap DeFi green on 7d vs BTC -3.0% / ETH -4.9%. Grayscale 6-20 fair-value report ($175 target on RWA clarity) + V4 Tokenization Spoke security audit advancing on-chain securities finance rails. vmc n/a (large cap). Score 8/10 HIGH. Exit: target $87 / inv $69 / 14d. |
 | 2026-06-25 | SEI | $0.0584 | Giga upgrade 200K TPS target, EVM migration mid-June, Canary Staked SEI ETF SEIZ trading on US brokerages, Xiaomi wallet preinstall HK/EU pilots; +8.83% 24h on BTC −2.7%/ETH −2.8% red tape; strongest RS print in top 250; vmc 0.20; score 9/10 HIGH. Exit: $0.069 / inv $0.054 / 14d. |
+| 2026-06-26 | APE | $0.151 | Yuga Labs full ecosystem control 6-5, ApeMars staking portal live 6-19 (63% APY, 2mo lock), Hyperliquid 5x long whale ($1M, 9.19M APE); only sub-rank-200 large-cap green on red tape (+11.4% 24h / +19.3% 7d); score 9/10 HIGH. Exit: $0.185 / inv $0.131 / 14d. |
+| 2026-06-27 | SLX | $0.4753 | Solana institutional delta-neutral protocol with USX stablecoin; Binance + Upbit (6-1) + CoinEx (6-3) listings drove 7d climb; NEW ATH printed 12:20Z today; vmc 1.94 ($223M vol on $114M mc); score 9/10 HIGH. Exit: $0.60 / inv $0.38 / 14d. Market: "Will Ukraine recapture Crimea by Dec 31?" BUY NO 87¢ (fair YES ~3%, 13¢ overprices tail; edge ~10pp HIGH). |
 
 ---
-*Sources — btc/eth/sol/top20: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch (June 26, 2026)*
-*Source status: coingecko=ok defillama=ok(chain_7d_delta_unavailable — partial chain endpoint; protocols_top5_ok) fng=ok polymarket=ok(sports-only, no crypto-macro — day 6) websearch=ok*
+*Sources — btc/eth/sol/top20: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket · macro: WebSearch (June 27, 2026)*
+*Source status: coingecko=ok defillama=ok(chain_7d_delta_unavailable — day 10; protocols_top5_ok; dex_total_ok) fng=ok polymarket=ok(sports-only, no crypto-macro — day 7) websearch=ok*
