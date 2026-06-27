@@ -1,10 +1,19 @@
-Heartbeat complete. No notification — all findings are last-48h continuations.
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
+## Summary
 
-**Summary**
-- P0 fleet clean (cf=0 across 42 dispatched); chronic 20-skill tail unchanged (sandbox-truncation cluster ISS-019/020/021/024/025); heartbeat self-check healthy (~12h since last success).
-- P1: 0 open PRs (PR #147 advisor risk-layer merged), 0 urgent issues, 14 open issues pre-existing.
-- P2/P3: all carries (sandbox cluster day 9, XAI quota day 12, on-chain config day 20, BTC breakdown day 2 confirmed); 3 never-run skills are scheduled-future, not missing.
-- Files: regenerated `docs/status.md` (41 skill rows sorted last-run desc + 3 never-run; 14 open issues); appended heartbeat block to `memory/logs/2026-06-27.md`.
-- Dedup hit on every finding → no `./notify` fired.
+Ran the full heartbeat sweep for the 14:00 UTC tick. All findings are same-signature continuations of items already in last-48h logs — no notification fired.
+
+**Checks**
+- **P0 failed/stuck/cf≥3:** none. Fleet cf=0 across all 42 dispatched skills.
+- **P0 chronic (sr<0.5):** 20-skill tail unchanged from this morning's 08:18Z hb — same sandbox-truncation `output_tokens=0` cluster (vuln-scanner 7% / reg-monitor 10% / cost-report 10% / skill-analytics 11% / security-digest 21% / ... / agent-buzz 48%). ISS-019/020/021/024/025 systemic.
+- **P0 self-check:** heartbeat last_success ~6.2h ago — healthy.
+- **P1:** 0 open PRs, 0 urgent issues, 14 pre-existing open issues.
+- **P2:** sandbox-truncation day 9, XAI quota day 12 (BLOCKED), defi-monitor NO_CONFIG day 20, BTC breakdown CONFIRMED day 2 — all carried.
+- **P3:** all 44 enabled skills accounted for; 3 never-run on expected workflow_dispatch or pending-cron paths.
+
+**Files**
+- `docs/status.md` — regenerated with afternoon timestamps for the 12:00 batch + market-context-refresh + narrative-tracker + 09:00 cluster. Overall 🔴 DEGRADED (chronic tail), Next: vuln-scanner 16:00 UTC.
+- `memory/logs/2026-06-27.md` — appended 14:30Z heartbeat entry.
+
+**Follow-up:** ISS-025 capture-step PR still day-5 unshipped; chronic 20-skill telemetry tail keeps bleeding until merged.
