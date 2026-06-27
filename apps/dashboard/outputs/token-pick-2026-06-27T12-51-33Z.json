@@ -1,0 +1,326 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-27"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-slx",
+        "badge-slx",
+        "stack-slx-stats",
+        "text-score",
+        "heading-catalyst",
+        "text-catalyst",
+        "heading-risk",
+        "text-risk",
+        "heading-stake",
+        "text-stake",
+        "heading-exit",
+        "text-exit",
+        "heading-recent",
+        "text-recent",
+        "separator-1",
+        "heading-market",
+        "badge-market",
+        "text-odds",
+        "text-volume",
+        "text-resolves",
+        "heading-fair",
+        "text-fair",
+        "heading-thesis",
+        "text-thesis",
+        "heading-risk-market",
+        "text-risk-market",
+        "heading-stake-market",
+        "text-stake-market",
+        "separator-2",
+        "stack-footer"
+      ]
+    },
+    "heading-slx": {
+      "type": "Heading",
+      "props": {
+        "text": "SLX",
+        "level": "h2"
+      }
+    },
+    "badge-slx": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH signal 9/10"
+      }
+    },
+    "stack-slx-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-24h",
+        "stat-7d",
+        "stat-mcap",
+        "stat-vol",
+        "text-ratio",
+        "text-score-details"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.475"
+      }
+    },
+    "stat-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h change",
+        "value": "+28.8%",
+        "trend": "up"
+      }
+    },
+    "stat-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d change",
+        "value": "+130.8%",
+        "trend": "up"
+      }
+    },
+    "stat-mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "mcap",
+        "value": "$115M"
+      }
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h vol",
+        "value": "$224M"
+      }
+    },
+    "text-ratio": {
+      "type": "Text",
+      "props": {
+        "text": "v/m ratio: 1.94"
+      }
+    },
+    "text-score-details": {
+      "type": "Text",
+      "props": {
+        "text": "Score: 24h+1, 7d+1, both>5%+2, v/m≥0.20+3, RS vs BTC/ETH+2 = 9/10",
+        "variant": "caption"
+      }
+    },
+    "heading-catalyst": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      }
+    },
+    "text-catalyst": {
+      "type": "Text",
+      "props": {
+        "text": "solana institutional delta-neutral protocol with USX stablecoin; binance trading event + upbit (6-1) / coinex (6-3) listings drove the 7d climb; printed new ATH 12:20Z today, breaking out clean."
+      }
+    },
+    "heading-risk": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "text-risk": {
+      "type": "Text",
+      "props": {
+        "text": "parabolic into a new ATH on +130% 7d — failed breakouts on this profile typically retrace -25-40%. liquidity concentrated on binance/upbit, retail-thin off-cex."
+      }
+    },
+    "heading-stake": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake",
+        "level": "h3"
+      }
+    },
+    "text-stake": {
+      "type": "Text",
+      "props": {
+        "text": "≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap"
+      }
+    },
+    "heading-exit": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit",
+        "level": "h3"
+      }
+    },
+    "text-exit": {
+      "type": "Text",
+      "props": {
+        "text": "target $0.60 / invalidate $0.38 / time-stop 14d"
+      }
+    },
+    "heading-recent": {
+      "type": "Heading",
+      "props": {
+        "text": "Recent picks comparison",
+        "level": "h3"
+      }
+    },
+    "text-recent": {
+      "type": "Text",
+      "props": {
+        "text": "first time. AAVE (6-24) day-4 +25.7% on entry still riding; APE (6-26) flat day-1."
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market: \"Will Ukraine recapture Crimean territory by Dec 31, 2026?\"",
+        "level": "h2"
+      }
+    },
+    "badge-market": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH edge ~10pp"
+      }
+    },
+    "text-odds": {
+      "type": "Text",
+      "props": {
+        "text": "Current odds: YES 13¢ / NO 87¢"
+      }
+    },
+    "text-volume": {
+      "type": "Text",
+      "props": {
+        "text": "24h volume: $145k"
+      }
+    },
+    "text-resolves": {
+      "type": "Text",
+      "props": {
+        "text": "Resolves: 2026-12-31"
+      }
+    },
+    "heading-fair": {
+      "type": "Heading",
+      "props": {
+        "text": "Fair valuation",
+        "level": "h3"
+      }
+    },
+    "text-fair": {
+      "type": "Text",
+      "props": {
+        "text": "Fair YES: ~3% (inputs: 11+ years of contested Russian control with zero successful Ukrainian Crimea ops; Sevastopol BSF base heavily defended; war momentum keeps peninsular control firm)"
+      }
+    },
+    "heading-thesis": {
+      "type": "Heading",
+      "props": {
+        "text": "Thesis",
+        "level": "h3"
+      }
+    },
+    "text-thesis": {
+      "type": "Text",
+      "props": {
+        "text": "13¢ overprices tail scenarios (peace deal that concedes Crimea, Russian state collapse) with no observable lead indicators in the 6-month window. action — BUY NO at 87¢ for +15% to par."
+      }
+    },
+    "heading-risk-market": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "text-risk-market": {
+      "type": "Text",
+      "props": {
+        "text": "Trump-brokered ceasefire that puts Crimea on the table, or an asymmetric Ukrainian Black Sea ops breakthrough."
+      }
+    },
+    "heading-stake-market": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake",
+        "level": "h3"
+      }
+    },
+    "text-stake-market": {
+      "type": "Text",
+      "props": {
+        "text": "≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-sources",
+        "text-journal",
+        "alert-disclaimer"
+      ]
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: cg=ok, dex=ok, poly=ok, x=ok",
+        "variant": "caption"
+      }
+    },
+    "text-journal": {
+      "type": "Text",
+      "props": {
+        "text": "if you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it",
+        "variant": "caption"
+      }
+    },
+    "alert-disclaimer": {
+      "type": "Alert",
+      "props": {
+        "message": "not financial advice — pattern-matching only",
+        "type": "info"
+      }
+    }
+  }
+}

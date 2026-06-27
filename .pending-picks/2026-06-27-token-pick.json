@@ -1,0 +1,12 @@
+{
+  "source": "token-pick",
+  "symbol": "SLX",
+  "coingeckoId": "solstice",
+  "side": "long",
+  "entryPriceUsd": 0.4753,
+  "targetPriceUsd": 0.60,
+  "invalidationPriceUsd": 0.38,
+  "horizonDays": 14,
+  "conviction": "HIGH (9/10)",
+  "thesis": "Solana institutional delta-neutral protocol (USX stablecoin) broke out to new ATH at 12:20Z 6-27 on the back of Binance trading event + Upbit (6-1) / CoinEx (6-3) listings; v/m 1.94 = real turnover, not just price. Wrong if it gives back the breakout zone — failed breakouts on parabolic +130% 7d moves typically retrace -25-40% to the prior range."
+}
