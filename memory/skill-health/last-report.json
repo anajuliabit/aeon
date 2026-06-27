@@ -1,14 +1,17 @@
 {
-  "hash": "b8c4f2a0e3d9577a02b6d8f4c059e3f8a7b9c0d1e2f3a4b5c6d7e8f9b1c2d3e4",
-  "last_notified_at": "2026-06-26T18:00:00Z",
-  "last_run_at": "2026-06-26T18:00:00Z",
+  "hash": "81dbbe4f755864823a7b5e6025872f5af8f2e45ac866306c569d177e4009a1e6",
+  "last_notified_at": "2026-06-27T18:10:00Z",
+  "last_run_at": "2026-06-27T18:10:00Z",
   "classification": {
     "critical": [],
-    "degraded": ["vuln-scanner", "reg-monitor", "cost-report", "skill-analytics", "security-digest", "list-digest", "search-skill", "market-context-refresh", "narrative-tracker", "skill-health", "goal-tracker", "self-improve", "action-converter", "skill-evals", "reflect", "fleet-control", "evening-recap", "thought-review", "aixbt-pulse", "agent-buzz", "defi-monitor", "heartbeat", "github-trending", "skill-freshness", "daily-routine", "btc-levels"],
+    "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "fleet-control", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "vuln-scanner"],
     "flapping": [],
-    "warning": ["morning-brief", "token-pick", "token-movers", "defi-overview", "on-chain-monitor", "token-alert"],
+    "warning": ["btc-levels", "daily-routine", "defi-overview", "morning-brief", "on-chain-monitor", "token-alert", "token-movers", "token-pick"],
     "healthy_count": 9,
-    "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
+    "no_data": ["fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "sandbox-truncation output_tokens=0 — 26+ non-HEALTHY skills share signature (ISS-019/020/021/024/025 cluster + tail). Diff vs 2026-06-25T18:18Z: morning-brief degraded→warning (sr 0.6 boundary crossed); rest unchanged"
+  "systemic": "sandbox-truncation output_tokens=0 — 24 DEGRADED + 8 WARNING share signature (ISS-019/020/021/024/025 cluster + chronic tail). Diff vs 2026-06-26T18:00Z: btc-levels degraded→warning (sr 0.61), daily-routine degraded→warning (sr 0.60); autoresearch removed from NO DATA (workflow_dispatch only)",
+  "open_issues": 14,
+  "resolved_this_run": 0,
+  "filed_this_run": 0
 }

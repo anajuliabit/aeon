@@ -1,0 +1,249 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "skill health — 2026-06-27"
+      },
+      "children": [
+        "alert_systemic",
+        "separator_1",
+        "stack_metrics",
+        "separator_2",
+        "heading_degraded",
+        "table_degraded",
+        "text_more_degraded",
+        "separator_3",
+        "heading_no_data",
+        "stack_no_data",
+        "separator_4",
+        "heading_healthy",
+        "badge_healthy",
+        "separator_5",
+        "heading_summary",
+        "stack_summary"
+      ]
+    },
+    "alert_systemic": {
+      "type": "Alert",
+      "props": {
+        "title": "SYSTEMIC ISSUE DETECTED",
+        "message": "sandbox-truncation with output_tokens=0 affecting 24 skills",
+        "type": "warning"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_degraded",
+        "stat_no_data",
+        "stat_healthy"
+      ]
+    },
+    "stat_degraded": {
+      "type": "Stat",
+      "props": {
+        "label": "Degraded / Flapping",
+        "value": "24",
+        "trend": "down"
+      }
+    },
+    "stat_no_data": {
+      "type": "Stat",
+      "props": {
+        "label": "No Data",
+        "value": "2"
+      }
+    },
+    "stat_healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "9",
+        "trend": "up"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "Degraded / Flapping (24)",
+        "level": "h2"
+      }
+    },
+    "table_degraded": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate",
+          "Days Down",
+          "Action"
+        ],
+        "rows": [
+          [
+            "skill-evals",
+            "33%",
+            "6d",
+            "INVESTIGATE"
+          ],
+          [
+            "cost-report",
+            "10%",
+            "3d",
+            "INVESTIGATE → ISS-025"
+          ],
+          [
+            "reg-monitor",
+            "10%",
+            "3d",
+            "INVESTIGATE"
+          ],
+          [
+            "skill-analytics",
+            "11%",
+            "3d",
+            "INVESTIGATE"
+          ],
+          [
+            "self-improve",
+            "33%",
+            "2d",
+            "INVESTIGATE"
+          ]
+        ]
+      }
+    },
+    "text_more_degraded": {
+      "type": "Text",
+      "props": {
+        "text": "+19 more — see memory/issues/INDEX.md for complete list",
+        "variant": "muted"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_no_data": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data (2)",
+        "level": "h2"
+      }
+    },
+    "stack_no_data": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_scorecard",
+        "text_gap",
+        "text_dispatch"
+      ]
+    },
+    "text_scorecard": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard (next Mon 06-29)"
+      }
+    },
+    "text_gap": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap (next Sun 06-28)"
+      }
+    },
+    "text_dispatch": {
+      "type": "Text",
+      "props": {
+        "text": "→ DISPATCH-SKILL",
+        "variant": "muted"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "Healthy",
+        "level": "h2"
+      }
+    },
+    "badge_healthy": {
+      "type": "Badge",
+      "props": {
+        "text": "9 healthy skills",
+        "variant": "default"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "stack_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_improved",
+        "stat_open_issues",
+        "stat_resolved",
+        "stat_filed"
+      ]
+    },
+    "text_improved": {
+      "type": "Text",
+      "props": {
+        "text": "Improved: btc-levels + daily-routine moved DEGRADED→WARNING (sr crossed 0.6)"
+      }
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "14"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    },
+    "stat_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed This Run",
+        "value": "0"
+      }
+    }
+  }
+}
