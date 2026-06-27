@@ -1,0 +1,414 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-27",
+        "description": "Solid ship day — vuln disclosure dual-channeled + PR #148 opened, but ISS-025 is 5 days stale and the meta-bear broke the 24h half-life rule"
+      },
+      "children": [
+        "headlines-section",
+        "sep1",
+        "notable-section",
+        "sep2",
+        "decisions-section",
+        "sep3",
+        "footer"
+      ]
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hl-heading",
+        "hl-vuln-scanner",
+        "hl-pr148"
+      ]
+    },
+    "hl-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "hl-vuln-scanner": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-vuln-text",
+        "hl-vuln-link"
+      ]
+    },
+    "hl-vuln-text": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner — dep PR #442 opened on Agent-Reach (yt-dlp/requests/python-dotenv bumps); CWE-88 yt-dlp shell-injection deferred to .pending-disclosure/ (PVR blocked)",
+        "variant": "body"
+      }
+    },
+    "hl-vuln-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Panniantong/Agent-Reach/pull/442",
+        "href": "https://github.com/Panniantong/Agent-Reach/pull/442"
+      }
+    },
+    "hl-pr148": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-pr148-text",
+        "hl-pr148-link"
+      ]
+    },
+    "hl-pr148-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #148 — operator opened agent-buzz prefetch mode:Top+min_likes:5 fix, direct follow-on to today's cache-quality flag",
+        "variant": "body"
+      }
+    },
+    "hl-pr148-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/148",
+        "href": "https://github.com/anajuliabit/aeon/pull/148"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-skill-health",
+        "notable-narrative",
+        "notable-security",
+        "notable-token-pick",
+        "notable-defi"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-skill-health": {
+      "type": "Alert",
+      "props": {
+        "title": "skill-health",
+        "message": "btc-levels + daily-routine degraded→warning (sr ≥0.6), net −2 DEGRADED; notification fired on hash change",
+        "type": "warning"
+      }
+    },
+    "notable-narrative": {
+      "type": "Alert",
+      "props": {
+        "title": "narrative-tracker",
+        "message": "meta-bear day 2 PERSISTED: $1.79B record ETF outflow + STRC mNAV<1 = 24h half-life rule broken",
+        "type": "warning"
+      }
+    },
+    "notable-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-security-text",
+        "notable-cve-badge",
+        "notable-pnpm-badge"
+      ]
+    },
+    "notable-security-text": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — litellm CVE-2026-42208 EPSS 0.834 (3rd PATCH-TODAY 2026, supply-chain cred-stealer wheel via semantic-router)",
+        "variant": "body"
+      }
+    },
+    "notable-cve-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-42208 EPSS 0.834",
+        "variant": "destructive"
+      }
+    },
+    "notable-pnpm-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "pnpm 9-CVE cluster",
+        "variant": "destructive"
+      }
+    },
+    "notable-token-pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-token-text",
+        "stat-slx",
+        "stat-crimea",
+        "token-file"
+      ]
+    },
+    "notable-token-text": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick",
+        "variant": "lead"
+      }
+    },
+    "stat-slx": {
+      "type": "Stat",
+      "props": {
+        "label": "SLX",
+        "value": "$0.4753",
+        "delta": "HIGH 9/10",
+        "trend": "up"
+      }
+    },
+    "stat-crimea": {
+      "type": "Stat",
+      "props": {
+        "label": "Crimea",
+        "value": "87¢",
+        "delta": "NO"
+      }
+    },
+    "token-file": {
+      "type": "Text",
+      "props": {
+        "text": "Staged: .pending-picks/2026-06-27-token-pick.json",
+        "variant": "caption"
+      }
+    },
+    "notable-defi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-defi-text",
+        "defi-aave-stat",
+        "defi-dex-stat",
+        "defi-ethena-stat"
+      ]
+    },
+    "notable-defi-text": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview",
+        "variant": "lead"
+      }
+    },
+    "defi-aave-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Aave V3 day-4",
+        "value": "−35%",
+        "trend": "down"
+      }
+    },
+    "defi-dex-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "V3 DEX share reclaim",
+        "value": "$818M vs $546M",
+        "trend": "up"
+      }
+    },
+    "defi-ethena-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Ethena USDtb",
+        "value": "−21%",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-1-badge",
+        "decision-1-text"
+      ]
+    },
+    "decision-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025 · day 5",
+        "variant": "secondary"
+      }
+    },
+    "decision-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "ship capture-fix PR — unshipped, blocks 20-skill telemetry tail",
+        "variant": "body"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-2-badge",
+        "decision-2-text"
+      ]
+    },
+    "decision-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CWE-88",
+        "variant": "destructive"
+      }
+    },
+    "decision-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "escalate Agent-Reach — PVR blocked, needs out-of-band contact (.pending-disclosure/)",
+        "variant": "body"
+      }
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-3-badge",
+        "decision-3-text"
+      ]
+    },
+    "decision-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "XAI quota · day 12",
+        "variant": "secondary"
+      }
+    },
+    "decision-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "top-up — BLOCKED, fallback degraded",
+        "variant": "body"
+      }
+    },
+    "decision-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-4-badge",
+        "decision-4-text"
+      ]
+    },
+    "decision-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-monitor · day 20",
+        "variant": "secondary"
+      }
+    },
+    "decision-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "seed pool/position entries in on-chain-watches.yml + Alchemy/Etherscan keys (NO_CONFIG)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-collapsed",
+        "footer-sources"
+      ]
+    },
+    "footer-collapsed": {
+      "type": "Text",
+      "props": {
+        "text": "+19 routine runs collapsed",
+        "variant": "muted"
+      }
+    },
+    "footer-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
