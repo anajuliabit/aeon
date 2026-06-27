@@ -1,11 +1,16 @@
 ## Summary
 
-Quiet run — no alerts fired.
+**btc-levels run complete — 2026-06-27 16:16Z**
 
-- **Spot:** $60,225 (down slightly from prior run's $60,400)
-- **June 26 daily close:** $59,982 (< $60,500 breakdown level, but already alerted at 01:15Z — no re-alert)
-- **Leverage-review trigger** (≤ $45k): not triggered
-- **Breakdown alert**: already fired for the 2026-06-26 close — held suppressed per state
-- **Reclaim $63,500 / $65,900**: not reached
+| Data point | Value |
+|---|---|
+| Spot | $60,668 (+$443 vs prior run at 12:42Z) |
+| June 26 daily close | $59,981 (< $60,500 breakdown threshold) |
 
-State and log committed. No notification sent.
+**Level evaluation:**
+- Leverage-review (≤$45k): not triggered — spot well above band
+- Breakdown close alert: already fired for June 26 close at 01:15Z today — no repeat
+- Reclaim $63,500: not reached (spot $60,668 < $63,500)
+- Reclaim $65,900: not reached
+
+**No notification sent.** Quiet run — this is the 5th consecutive silent btc-levels check today (breakdown already alerted this morning). State and log committed.
