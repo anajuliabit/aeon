@@ -392,13 +392,13 @@
     "last_dispatch": "2026-06-22T10:30:07Z"
   },
   "market-context-refresh": {
-    "last_status": "dispatched",
-    "last_success": "2026-06-26T13:22:28Z",
-    "total_runs": 91,
-    "total_successes": 28,
+    "last_status": "success",
+    "last_success": "2026-06-27T13:23:27Z",
+    "total_runs": 92,
+    "total_successes": 29,
     "total_failures": 63,
     "consecutive_failures": 0,
-    "success_rate": 0.31,
+    "success_rate": 0.32,
     "last_dispatch": "2026-06-27T13:13:27Z",
     "last_failed": "2026-06-21T12:14:28Z",
     "last_error": "686fade\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
