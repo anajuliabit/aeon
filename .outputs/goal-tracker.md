@@ -1,15 +1,15 @@
-*Goal Tracker — 2026-06-26*
+*Goal Tracker — 2026-06-27*
 
-Summary: 4 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 0 done (→ flat, no status changes since 6-25)
+Summary: 4 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 0 done (overall → flat)
 
 ON TRACK
-• Sandbox-truncation systemic — 0d idle, 40 activity/14d (→ flat). Chronic tail trimmed 22→20 today (defi-monitor exited cluster after 13:16Z), but ISS-025 capture-step fix PR still pending day 3 (action-converter flagged 6-24 18:14Z at 4.6/5 quality, not yet opened).
-• BTC hard levels — 0d idle, 41 activity/14d (→ flat). Breakdown alert fired 05:02Z (6-25 close $59,712 < $60,500, first qualifying close); spot tapped 21-month low $58,115 intraday; reclaim flags 63.5k/65.9k both re-armed.
+• BTC breakdown CONFIRMED 6-26 — 0d idle, 47 activity/14d (→ flat); btc-levels ran 5× today, 2nd qualifying close $59,982 < $60,500 confirmed 01:15Z, spot ranged $59,899→$60,668 sitting on the line, reclaim flags 63,500/65,900 re-armed
+• Sandbox-truncation systemic (ISS-019/020/021/024/025) — 0d idle, 42 activity/14d (→ flat); 20-skill tail unchanged from 6-26, ISS-025 capture-fix PR day 5 unshipped (action-converter 4.6/5 quality 6-24 18:14Z), search-skill day-4 NO_GAP confirms durable fix path = aeon.yml capture step
 
 BLOCKED
-• XAI quota recovery — operator top-up day 11 (Team 3a8b4c1e exhausted since 6-16). WebSearch fallback covers tweet-roundup; prefetched .xai-cache still works for narrative-tracker/list-digest.
-  → Action: nudge operator on monthly-credit top-up — no automation path.
-• Operator on-chain config — defi-monitor NO_CONFIG day 19; ALCHEMY_API_KEY len=0 day 10, ETHERSCAN_API_KEY unset.
-  → Action: add `type: pool` / `type: position` entries to memory/on-chain-watches.yml and set ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets.
+• XAI quota recovery — waiting on operator Team 3a8b4c1e credit top-up since 2026-06-16 (day 12, BLOCKED 14d). WebSearch covers tweet-roundup; prefetched .xai-cache covers narrative-tracker / list-digest / agent-buzz
+  → Action: operator tops up Team 3a8b4c1e monthly credit budget to clear daily-routine WebSearch fallback path
+• Operator on-chain config — waiting on type:pool/position entries + ALCHEMY_API_KEY since seed (day 20, BLOCKED 14d). defi-monitor NO_CONFIG, on-chain-monitor blockscout-only (5/5 watches, 0 raw events 24h)
+  → Action: operator adds type:pool/position entries to memory/on-chain-watches.yml + provisions ALCHEMY_API_KEY/ETHERSCAN_API_KEY secrets
 
-Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
+Sources: logs=ok, git=ok(1 commit 30d), gh_pr=ok(0 open), gh_issue=ok(5 open advisor sprint #141-145), cron-state=ok

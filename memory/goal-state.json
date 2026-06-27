@@ -1,29 +1,29 @@
 {
-  "run_at": "2026-06-26T18:10:00Z",
+  "run_at": "2026-06-27T18:30:00Z",
   "goals": {
     "sandbox-truncation-systemic": {
       "status": "ON_TRACK",
-      "activity_count_14d": 40,
-      "last_activity_date": "2026-06-26",
-      "note": "Today's 09:19Z + 14:05Z heartbeats: chronic tail trimmed 22→21→20 skills as defi-monitor flipped to sr=50% after 13:16Z success (cluster structurally unchanged otherwise). ISS-025 capture-step fix PR still pending day 3 (action-converter flagged 6-24 18:14Z at 4.6/5 quality). search-skill 14:08Z confirmed NO_GAP day 3 — durable fix path is the aeon.yml capture-step PR, not external skill swap. 22-skill output_tokens=0 signature unchanged (ISS-019/020/021/024/025 cluster)."
+      "activity_count_14d": 42,
+      "last_activity_date": "2026-06-27",
+      "note": "08:18Z + 14:30Z heartbeats: 20-skill chronic tail unchanged from 6-26 14:05Z (vuln-scanner 7% / reg-monitor 10% / cost-report 10% / skill-analytics 11% / security-digest 21% worst; defi-monitor 51% stays outside cluster). All share output_tokens=0 sandbox-truncation signature (cluster ISS-019/020/021/024/025). ISS-025 capture-step fix PR still pending day 5 (action-converter flagged 6-24 18:14Z at 4.6/5 quality, not opened — morning-brief 07:22Z surfaced). search-skill 14:50Z day-4 NO_GAP confirms durable fix path = aeon.yml capture step, not external skill. vuln-scanner 16:18Z ISS-018 sandbox-binary block reconfirmed 3rd run, osv-api REST workaround stable."
     },
     "xai-quota-recovery": {
       "status": "BLOCKED",
-      "activity_count_14d": 24,
-      "last_activity_date": "2026-06-26",
-      "note": "Team 3a8b4c1e exhausted since 2026-06-16 (day 11). daily-routine 08:00Z tweet-roundup via WebSearch fallback again. Prefetched .xai-cache covered narrative-tracker 14:04Z fresh pull (4 x_search calls, grok-4-1-fast) — XAI primary still works for prefetched paths. Operator top-up still pending."
+      "activity_count_14d": 26,
+      "last_activity_date": "2026-06-27",
+      "note": "Team 3a8b4c1e exhausted since 2026-06-16 (day 12). daily-routine 07:25Z tweet-roundup via WebSearch fallback day 12 (.xai-cache empty for that path). Prefetched .xai-cache covered narrative-tracker 13:59Z (3 x_search), list-digest 17:16Z (cache hit), agent-buzz (cache hit) — XAI primary still working for prefetched paths. Operator top-up still pending."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 20,
-      "last_activity_date": "2026-06-26",
-      "note": "defi-monitor 13:16Z NO_CONFIG day 19 (no type:pool/position entries in memory/on-chain-watches.yml; only 5 type:wallet entries). on-chain-monitor 12:32Z probe: ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY unset, COINGECKO_API_KEY len=0 (day 10 unchanged). 6-25 attacker dust did not repeat in today's 24h window — quiet log. known-addresses.yml unchanged from 6-25 seed."
+      "activity_count_14d": 22,
+      "last_activity_date": "2026-06-27",
+      "note": "defi-monitor 13:30Z NO_CONFIG day 20 (5 type:wallet entries only, zero type:pool/type:position). on-chain-monitor 12:43Z probe: ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY chain-paywalled (8453), COINGECKO_API_KEY len=0. blockscout keyless fallback held for 5/5 watches, 0 raw events in 43,740-block window — extends 6-26 quiet thread to ~48h post-address-poisoning. known-addresses.yml unchanged from 6-25 seed."
     },
     "btc-hard-levels": {
       "status": "ON_TRACK",
-      "activity_count_14d": 41,
-      "last_activity_date": "2026-06-26",
-      "note": "Breakdown alert FIRED 05:02Z — 6-25 daily close $59,712 < $60,500 first qualifying close; breakdownAlertedForClose=2026-06-25 set. btc-levels ran 4× today (05:02/09:19/12:24/post-12:24Z follow-ups). Market-context-refresh 13:22Z: BTC tapped 21-month low $58,115 intraday, F&G 13 (Extreme Fear deepening). Reclaim flags 63,500/65,900 both already triggered 6-11/6-15 and now re-armed since spot < $60,500. Skill spec working as designed — no fresh notification needed past the 05:02Z trip."
+      "activity_count_14d": 47,
+      "last_activity_date": "2026-06-27",
+      "note": "btc-levels ran 5× today (01:15Z fired breakdown alert — 6-26 daily close $59,982 < $60,500 = 2nd qualifying sub-threshold close, breakdownAlertedForClose=2026-06-26 set; 04:44Z/08:19Z/12:42Z/16:16Z all no-new-alert per spec). Spot ranged $59,899→$60,668 across the day, sitting on the line. Reclaim flags 63,500/65,900 both re-armed. market-context-refresh 13:23Z: regime post-expiry bear bounce, F&G 15 +2 from 13, 18/20 breadth flip 24h. Skill working as designed — no fresh notification past the 01:15Z trip."
     }
   }
 }
