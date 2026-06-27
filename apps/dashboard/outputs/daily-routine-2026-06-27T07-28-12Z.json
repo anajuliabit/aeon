@@ -1,0 +1,757 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-06-27"
+      },
+      "children": [
+        "header_stack",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "trending_section",
+        "sep4",
+        "tweets_section",
+        "sep5",
+        "paper_section",
+        "sep6",
+        "issues_section",
+        "sep7",
+        "hn_section"
+      ]
+    },
+    "header_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tape_text",
+        "metrics_row"
+      ]
+    },
+    "tape_text": {
+      "type": "Text",
+      "props": {
+        "text": "tape steadies after 3d risk-off",
+        "variant": "muted"
+      }
+    },
+    "metrics_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth",
+        "stat_breadth",
+        "stat_median"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "-0.3%",
+        "trend": "down"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "+0.2%",
+        "trend": "up"
+      }
+    },
+    "stat_breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth (top-100)",
+        "value": "44/100 green"
+      }
+    },
+    "stat_median": {
+      "type": "Stat",
+      "props": {
+        "label": "Median top-50",
+        "value": "+0.2%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Price",
+          "24h %",
+          "7d %",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "VELVET",
+            "$0.878",
+            "+77.4%",
+            "+94%",
+            "TRENDING+UP BREAKOUT"
+          ],
+          [
+            "2",
+            "SLX",
+            "$0.467",
+            "+25.4%",
+            "+151%",
+            "BREAKOUT"
+          ],
+          [
+            "3",
+            "SYRUP",
+            "$0.144",
+            "+19.6%",
+            "",
+            "reverses yest's -7.3%"
+          ],
+          [
+            "4",
+            "BSV",
+            "$12.51",
+            "+14.6%",
+            "",
+            ""
+          ],
+          [
+            "5",
+            "WIF",
+            "$0.167",
+            "+13.6%",
+            "",
+            ""
+          ],
+          [
+            "6",
+            "GRASS",
+            "$0.501",
+            "+10.9%",
+            "+21%",
+            ""
+          ],
+          [
+            "7",
+            "AAVE",
+            "$95.64",
+            "+10.4%",
+            "+28%",
+            "day-4 of 6-24 HIGH pick still bid"
+          ],
+          [
+            "8",
+            "LAB",
+            "$20.28",
+            "+10.3%",
+            "+68%",
+            "MAJOR"
+          ],
+          [
+            "9",
+            "INJ",
+            "$4.94",
+            "+10.0%",
+            "",
+            ""
+          ],
+          [
+            "10",
+            "SKYAI",
+            "$0.346",
+            "+9.9%",
+            "",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Price",
+          "24h %",
+          "7d %",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "M (MemeCore)",
+            "$0.710",
+            "-15.3%",
+            "-75%",
+            "dead-cat exhausted"
+          ],
+          [
+            "2",
+            "BTW",
+            "$0.0851",
+            "-13.7%",
+            "",
+            ""
+          ],
+          [
+            "3",
+            "BEAT",
+            "$2.10",
+            "-12.0%",
+            "",
+            "day-4 pump-cycle reversal"
+          ],
+          [
+            "4",
+            "TAC",
+            "$0.0226",
+            "-11.2%",
+            "",
+            ""
+          ],
+          [
+            "5",
+            "DATA",
+            "$0.313",
+            "-10.3%",
+            "",
+            ""
+          ],
+          [
+            "6",
+            "BDX",
+            "$0.0829",
+            "-8.9%",
+            "",
+            ""
+          ],
+          [
+            "7",
+            "AWE",
+            "$0.0663",
+            "-7.7%",
+            "",
+            "reverses yest's +13.9%"
+          ],
+          [
+            "8",
+            "DEXE",
+            "$20.87",
+            "-7.1%",
+            "+32%",
+            ""
+          ],
+          [
+            "9",
+            "ETHFI",
+            "$0.353",
+            "-7.1%",
+            "",
+            "reverses yest's +8.3%"
+          ],
+          [
+            "10",
+            "SKY",
+            "$0.0490",
+            "-5.5%",
+            "",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending_heading",
+        "trending_badges"
+      ]
+    },
+    "trending_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h3"
+      }
+    },
+    "trending_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_velvet",
+        "badge_pengu",
+        "badge_kled",
+        "badge_cap",
+        "badge_lab",
+        "badge_arx",
+        "badge_btc"
+      ]
+    },
+    "badge_velvet": {
+      "type": "Badge",
+      "props": {
+        "text": "VELVET"
+      }
+    },
+    "badge_pengu": {
+      "type": "Badge",
+      "props": {
+        "text": "PENGU"
+      }
+    },
+    "badge_kled": {
+      "type": "Badge",
+      "props": {
+        "text": "KLED (#729 +83.5% PUMP-RISK)"
+      }
+    },
+    "badge_cap": {
+      "type": "Badge",
+      "props": {
+        "text": "CAP"
+      }
+    },
+    "badge_lab": {
+      "type": "Badge",
+      "props": {
+        "text": "LAB"
+      }
+    },
+    "badge_arx": {
+      "type": "Badge",
+      "props": {
+        "text": "ARX"
+      }
+    },
+    "badge_btc": {
+      "type": "Badge",
+      "props": {
+        "text": "BTC"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_heading",
+        "crypto_stack",
+        "ai_stack",
+        "dev_stack"
+      ]
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "crypto_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto_label",
+        "crypto_text"
+      ]
+    },
+    "crypto_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "crypto_text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC tapped lowest since Sept 2024 then rebounded to $59.7k; another $1B futures wiped on 6-26. H1 closed deep red (validates the structural meta-bear). Binance MiCA-fail EU exit live.",
+        "variant": "body"
+      }
+    },
+    "ai_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_label",
+        "ai_text"
+      ]
+    },
+    "ai_label": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "ai_text": {
+      "type": "Text",
+      "props": {
+        "text": "OpenAI shipped GPT-5.6 Sol behind US-government user vetting; Anthropic Mythos released only to \"trusted US orgs\" via parallel federal gate. Anthropic confidentially filed IPO at $965B val on $65B Series H.",
+        "variant": "body"
+      }
+    },
+    "dev_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev_label",
+        "dev_text"
+      ]
+    },
+    "dev_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "dev_text": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic Claude Agent SDK shipped with native MCP + sub-agents. Salesforce open-sourced Agent Script toolchain (parser/linter/compiler/LSP, Apache 2.0). AutoGen v0.4 forked into AG2 by v0.2 maintainers.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_item"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper_link",
+        "paper_desc"
+      ]
+    },
+    "paper_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents",
+        "href": "https://arxiv.org/abs/2606.24551",
+        "source": "ArXiv",
+        "score": "↑25"
+      }
+    },
+    "paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "matched-execution-layer benchmark that separates interaction modality from task/state/verifier confounds. Directly relevant to agent infra choices.",
+        "variant": "caption"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues_heading",
+        "issues_text"
+      ]
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "issues_text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues across anajuliabit repos in last 24h (operator's 7-issue advisor sprint #139–#145 from 6-25 still open, no fresh adds)",
+        "variant": "body"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_heading",
+        "hn1_item",
+        "hn2_item",
+        "hn3_item",
+        "hn4_item",
+        "hn5_item"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn1_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn1_link",
+        "hn1_desc"
+      ]
+    },
+    "hn1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "U.S. gov will decide who gets GPT-5.6",
+        "href": "https://news.ycombinator.com/item?id=48690101",
+        "source": "HN",
+        "score": "975 pts / 1034 comments"
+      }
+    },
+    "hn1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "frontier model gated by federal review",
+        "variant": "caption"
+      }
+    },
+    "hn2_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn2_link",
+        "hn2_desc"
+      ]
+    },
+    "hn2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Previewing GPT-5.6 Sol",
+        "href": "https://news.ycombinator.com/item?id=48689028",
+        "source": "HN",
+        "score": "955 pts / 592 comments"
+      }
+    },
+    "hn2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "OpenAI's next-gen",
+        "variant": "caption"
+      }
+    },
+    "hn3_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn3_link",
+        "hn3_desc"
+      ]
+    },
+    "hn3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "US allows Anthropic Mythos to \"trusted\" orgs",
+        "href": "https://news.ycombinator.com/item?id=48692995",
+        "source": "HN",
+        "score": "372 pts / 376 comments"
+      }
+    },
+    "hn3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Semafor, parallel federal gate",
+        "variant": "caption"
+      }
+    },
+    "hn4_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn4_link",
+        "hn4_desc"
+      ]
+    },
+    "hn4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AWS Lambda MicroVMs",
+        "href": "https://news.ycombinator.com/item?id=48642510",
+        "source": "HN",
+        "score": "314 pts / 180 comments"
+      }
+    },
+    "hn4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "isolated sandboxes with full lifecycle control",
+        "variant": "caption"
+      }
+    },
+    "hn5_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn5_link",
+        "hn5_desc"
+      ]
+    },
+    "hn5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Show HN: Smart model routing in Claude/Codex/Cursor",
+        "href": "https://news.ycombinator.com/item?id=48688700",
+        "source": "HN",
+        "score": "164 pts / 96 comments"
+      }
+    },
+    "hn5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "workweave/router",
+        "variant": "caption"
+      }
+    }
+  }
+}

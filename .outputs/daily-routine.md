@@ -1,45 +1,47 @@
-*Daily Routine — 2026-06-26*
+*Daily Routine — 2026-06-27*
+_tape steadies after 3d risk-off: BTC -0.3% / ETH +0.2% / breadth 44/100 top-100 green / median top-50 +0.2%_
 
-_BTC -2.1% $60,504 (sitting on the $60,500 close-breakdown line) · ETH -4.5% $1,579 · SOL +1.9% $70.63 · HYPE +1.0% $64.46 · 33/100 top-100 green · median top-50 -0.75% · day 3 risk-off, ETH-led_
+*Top 10 Winners (24h)*
+1. VELVET: $0.878 (+77.4%) — 7d +94% [TRENDING+UP][BREAKOUT]
+2. SLX: $0.467 (+25.4%) — 7d +151% [BREAKOUT]
+3. SYRUP: $0.144 (+19.6%) — reverses yest's -7.3%
+4. BSV: $12.51 (+14.6%)
+5. WIF: $0.167 (+13.6%)
+6. GRASS: $0.501 (+10.9%) — 7d +21%
+7. AAVE: $95.64 (+10.4%) — 7d +28%, day-4 of 6-24 HIGH pick still bid
+8. LAB: $20.28 (+10.3%) — 7d +68% [MAJOR]
+9. INJ: $4.94 (+10.0%)
+10. SKYAI: $0.346 (+9.9%)
 
-*Top Winners (24h)*
-1. BEAT — $2.39 (+27.1%) · 7d +20.8% · $49M / #88 (24h roundtrip 4th day, pump-fade-pump cycle)
-2. M (MemeCore) — $0.864 (+22.9%) · 7d -70.6% · $30M / #61 — dead-cat bounce off the -76% wipeout
-3. APE — $0.152 (+15.6%) · 7d +16.9% · $51M / #196
-4. AWE — $0.071 (+13.9%) · 7d +35.3% · $12M / #204
-5. JTO — $0.757 (+12.8%) · 7d +7.4% · $83M / #119
+*Top 10 Losers (24h)*
+1. M (MemeCore): $0.710 (-15.3%) — 7d -75%, dead-cat exhausted
+2. BTW: $0.0851 (-13.7%)
+3. BEAT: $2.10 (-12.0%) — day-4 pump-cycle reversal
+4. TAC: $0.0226 (-11.2%)
+5. DATA: $0.313 (-10.3%)
+6. BDX: $0.0829 (-8.9%)
+7. AWE: $0.0663 (-7.7%) — reverses yest's +13.9%
+8. DEXE: $20.87 (-7.1%) — 7d +32%
+9. ETHFI: $0.353 (-7.1%) — reverses yest's +8.3%
+10. SKY: $0.0490 (-5.5%)
 
-*Top Losers (24h)*
-1. MNT (Mantle) — $0.429 (-15.8%) · 7d -18.7% · $69M / #52 — first major-rank to crack
-2. EDGE — $0.315 (-14.0%) · 7d -6.3% · $10M / #244 (extends 6-25)
-3. APYUSD — $0.977 (-13.2%) · 7d -18.6% · $8M / #229 — yield-USD wrapper lost $1 peg
-4. APXUSD — $0.716 (-13.2%) · 7d -18.9% · $15M / #135 — sister wrapper, day-3 unwind
-5. AERO — $0.479 (-9.1%) · 7d +10.1% · $44M / #107 — gives back the 42.2% USDC-AERO bid
-
-*Trending*
-ARX, AAVE [+5.5% day-3 of pick holds], BTC, HYPE, CARDS, SOL, PI
-
-*Notable*
-• APYUSD + APXUSD both broke peg today — yield-USD wrapper unwind. defi-overview 6-25 flagged the apxUSD/reUSD depeg pressure; today it tore
-• BTC $60,504 = $4 above the close-breakdown level. Today's UTC close is the binary signal
-• ETH -4.5% vs BTC -2.1% — ETH/BTC degrades day 4. SEI -5.5% kills the 6-25 HIGH 9/10 pick day 1
-• AAVE day 3 +5.5%, only large-cap surviving chop, +18.6% from 6-24 entry
-• MNT -15.8% rank-#52 = broad-cap contagion entering large-cap
+*Trending:* VELVET, PENGU, KLED (#729 +83.5% PUMP-RISK), CAP, LAB, ARX, BTC
 
 *Tweet Roundup*
-*Crypto:* Kraken in talks to buy 15% of Aave at $385M val (post-KelpDAO April rebuild — corroborates AAVE bid). Taiko L2 halted after bridge exploit, TAIKO -30%. BlackRock dumped $257M into Coinbase (2,700 BTC + 53k ETH). Uniswap + Spark building shared stablecoin FX rails for banks/fintechs.
-*AI:* 12 frontier releases shipped in first 2w of June across Anthropic/OpenAI/Google/Meta/Alibaba/DeepSeek/Tencent/Baidu/ByteDance/Mistral/Zhipu. Claude for Legal carries 90+ legal agents; Claude for Finance 10 inside Cowork/Code/Managed Agents.
-*Dev:* Emdash launched — agentic dev env orchestrating Claude Code + Gemini + Codex in parallel. Raindrop Workshop open-sources local agent debug across TS/Python/Rust/Go. MCP load-bearing across Claude Agent SDK, LangGraph, OpenClaw.
+*Crypto:* BTC tapped lowest since Sept 2024 then rebounded to $59.7k; another $1B futures wiped on 6-26. H1 closed deep red (validates the structural meta-bear). Binance MiCA-fail EU exit live.
+*AI:* OpenAI shipped GPT-5.6 Sol behind US-government user vetting; Anthropic Mythos released only to "trusted US orgs" via parallel federal gate. Anthropic confidentially filed IPO at $965B val on $65B Series H.
+*Dev:* Anthropic Claude Agent SDK shipped with native MCP + sub-agents. Salesforce open-sourced Agent Script toolchain (parser/linter/compiler/LSP, Apache 2.0). AutoGen v0.4 forked into AG2 by v0.2 maintainers.
 
 *Paper of the Day*
-"The Verification Horizon: No Silver Bullet for Coding Agent Rewards" (↑12 HF daily) — autopsy of why coding-agent reward signals decay: pass@k flatters easy tasks, unit-test rewards reward overfitting, LLM-as-judge drifts under distribution shift.
-[arXiv](https://arxiv.org/abs/2606.26300)
+"GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents" ↑25 — matched-execution-layer benchmark that separates interaction modality from task/state/verifier confounds. Directly relevant to agent infra choices.
+https://arxiv.org/abs/2606.24551
 
 *GitHub Issues*
-7 new on anajuliabit/aeon — all operator-filed advisor refinements (Brier calibration, base-rate + bear case, hard risk layer, regime gate, momentum-chasing guardrail). 0 external.
+- No new issues across anajuliabit repos in last 24h (operator's 7-issue advisor sprint #139–#145 from 6-25 still open, no fresh adds)
 
 *HN Digest*
-1. [Entire Herculaneum scroll read for the first time](https://scrollprize.org/firstscroll) (1242pts) — first whole burned ancient scroll AI-decoded. [Discuss](https://news.ycombinator.com/item?id=48675179)
-2. [Apple raises MacBook + iPad prices](https://www.reuters.com/world/asia-pacific/apple-raises-prices-macbooks-ipads-memory-costs-skyrocket-2026-06-25/) (700pts/1008c) — memory costs cascading into consumer hw. [Discuss](https://news.ycombinator.com/item?id=48672732)
-3. ['Papers please' era of the internet will decimate privacy](https://expression.fire.org/p/the-papers-please-era-of-the-internet) (648pts) — FIRE on age-verification creep. [Discuss](https://news.ycombinator.com/item?id=48679608)
-4. [Show HN: OpenKnowledge – open-source AI-first Obsidian/Notion](https://github.com/inkeep/open-knowledge) (261pts) — competes the personal-memory stack. [Discuss](https://news.ycombinator.com/item?id=48675435)
+1. [U.S. gov will decide who gets GPT-5.6](https://news.ycombinator.com/item?id=48690101) (975pts/1034c) — frontier model gated by federal review
+2. [Previewing GPT-5.6 Sol](https://news.ycombinator.com/item?id=48689028) (955pts/592c) — OpenAI's next-gen
+3. [US allows Anthropic Mythos to "trusted" orgs](https://news.ycombinator.com/item?id=48692995) (372pts/376c) — Semafor, parallel federal gate
+4. [AWS Lambda MicroVMs](https://news.ycombinator.com/item?id=48642510) (314pts/180c) — isolated sandboxes with full lifecycle control
+5. [Show HN: Smart model routing in Claude/Codex/Cursor](https://news.ycombinator.com/item?id=48688700) (164pts/96c) — workweave/router
