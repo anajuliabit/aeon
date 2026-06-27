@@ -1,17 +1,7 @@
+Skill executed: **SEARCH_SKILL_NO_GAP** (day 4). All four gap-derivation sources came up dry — failing skills trace to known infra root causes (ISS-018/019/020/021/024/025), the only qualifying-category open issue (ISS-024) is an existing-skill quality bug rather than a capability gap, MEMORY.md has no Next Priorities, and log grep surfaces only infra noise. Per spec, no search, no install, no notify — log-only.
+
 ## Summary
-
-**Mode:** SEARCH_SKILL_NO_GAP — day 3 of streak (6-24 + 6-25 + 6-26).
-
-**What ran:** Step 1 only. All four derivation paths produced no concrete capability word:
-- **(a) Failing skills:** 22 chronic-tail (sr<0.5, cf=0) all share the `output_tokens=0` sandbox-truncation signature → workflow infra, not capability gap. vuln-scanner's ISS-018 already had its candidate (davila7/claude-code-templates@vulnerability-scanner) surfaced 6-22 — re-notifying same UNTRUSTED candidate would train operator to ignore.
-- **(b) Open issues:** Only ISS-024 (skill-health, quality-regression) is in the qualifying category set; skill-health is an internal skill we already have.
-- **(c) MEMORY priorities:** All infra (sandbox-truncation, XAI quota, on-chain config, BTC levels). None capability-gap shaped.
-- **(d) 7d log grep:** Same `missing-secret` / `missing prefetch-vuln-scanner.sh` / `missing fenced reppo-plan` noise as 6-09 → 6-25 runs.
-
-**Exit:** silent per spec — no notification, no catalog search, no install.
-
-**Files modified:**
-- `memory/logs/2026-06-26.md` — appended `## search-skill` block with full derivation detail.
-- `memory/MEMORY.md` — updated Recent Patterns line from "6-25 day 2" → "6-26 day 3".
-
-**Follow-up:** Durable fix path is the ISS-025 capture-step PR at `aeon.yml` (action-converter flagged 4.6/5 quality 6-24 18:14Z, still unopened day 3), not an external skill swap.
+- Read `skills/search-skill/SKILL.md`, `memory/MEMORY.md`, `memory/cron-state.json`, `memory/issues/INDEX.md`, and grep'd 7d of logs for capability-gap signals.
+- Exited at step 1 with **SEARCH_SKILL_NO_GAP** — no concrete capability word derivable from any of sources (a)–(d).
+- Appended `## search-skill` entry to `memory/logs/2026-06-27.md` with mode, rationale, and per-source breakdown.
+- No notification sent (silent on NO_GAP per spec). No follow-ups needed.
