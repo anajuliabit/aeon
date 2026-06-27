@@ -1,0 +1,505 @@
+{
+  "root": "card-security-digest",
+  "state": {},
+  "elements": {
+    "card-security-digest": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-06-27",
+        "description": "Verdict: 1 actively exploited (litellm wheel · EPSS 0.834) + 38 npm malware net-new, 5 to schedule, 1 to monitor. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "sep-1",
+        "patch-today-section",
+        "sep-2",
+        "patch-week-section",
+        "sep-3",
+        "monitor-section"
+      ]
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-patch-today",
+        "cve-42208-stack",
+        "npm-malware-stack"
+      ]
+    },
+    "heading-patch-today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve-42208-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-42208",
+        "badge-42208",
+        "text-42208-pkg",
+        "text-42208-detail",
+        "text-42208-action"
+      ]
+    },
+    "link-42208": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-42208 — litellm",
+        "href": "https://github.com/advisories/GHSA-r75f-5x8p-qvmc",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-42208": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.834 / p99.65 · supply-chain credential-stealer wheel",
+        "variant": "destructive"
+      }
+    },
+    "text-42208-pkg": {
+      "type": "Text",
+      "props": {
+        "text": "litellm (pip)",
+        "variant": "caption"
+      }
+    },
+    "text-42208-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Version 1.82.8 shipped a malicious litellm_init.pth that auto-executes on python startup and exfiltrates AWS/GCP/Azure credentials, SSH keys, Kubernetes configs, and crypto wallets to models.litellm.cloud. semantic-router 0.1.8–0.1.14 resolved to it via unbounded transitive pin (GHSA-98x5-vq43-vc5p, 2026-06-26).",
+        "variant": "body"
+      }
+    },
+    "text-42208-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade litellm to ≥1.83.7 (+ semantic-router ≥0.1.15), grep site-packages/litellm_init.pth, rotate any credentials reachable from environments that ran the affected install.",
+        "variant": "caption"
+      }
+    },
+    "npm-malware-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-npm-malware",
+        "badge-npm-malware",
+        "text-npm-burst",
+        "text-npm-packages-1",
+        "text-npm-packages-2",
+        "text-npm-action"
+      ]
+    },
+    "heading-npm-malware": {
+      "type": "Heading",
+      "props": {
+        "text": "npm malware — 38 net-new",
+        "level": "h3"
+      }
+    },
+    "badge-npm-malware": {
+      "type": "Badge",
+      "props": {
+        "text": "post-dedup 6-25/6-26",
+        "variant": "destructive"
+      }
+    },
+    "text-npm-burst": {
+      "type": "Text",
+      "props": {
+        "text": "43-minute malware burst (2026-06-26T05:05–05:48Z): weavedb-base + 4 sibling spoofs, ai-node-relay + ai-node-agent twins, hexo-shoka-swiper + hexo-deployer-wrangler, pino-zod ↔ zod-pino spoof pair, atlassian-forge-skills brand-spoof (matches 6-25 HubSpot pattern — enterprise dev-tooling target now in 3rd vendor), pump-stream-logger + pump-laserstream-parser variants.",
+        "variant": "body"
+      }
+    },
+    "text-npm-packages-1": {
+      "type": "Text",
+      "props": {
+        "text": "June 25 leftovers: tesco-help, pathfix, easy-time-format ↔ easy-time666 twin, boardflow, ts-grok, loadninja-shared, atlassian-forge-skills, and 9 additional packages.",
+        "variant": "caption"
+      }
+    },
+    "text-npm-packages-2": {
+      "type": "Text",
+      "props": {
+        "text": "Check GitHub Advisory type=malware feed since 2026-06-25 for complete list.",
+        "variant": "caption"
+      }
+    },
+    "text-npm-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ grep package-lock/pnpm-lock/yarn.lock against type=malware feed since 6-25; on match, remove package and rotate all credentials exposed to that install.",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-patch-week",
+        "cve-49257-stack",
+        "cve-incus-stack",
+        "cve-49252-stack",
+        "cve-53519-stack",
+        "cve-pnpm-stack"
+      ]
+    },
+    "heading-patch-week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "cve-49257-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-49257",
+        "badge-49257",
+        "text-49257-pkg",
+        "text-49257-detail",
+        "text-49257-action"
+      ]
+    },
+    "link-49257": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49257 — mcp-pinot-server",
+        "href": "https://github.com/advisories/GHSA-73cv-556c-w3g6",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-49257": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 10.0 · EPSS 0.005",
+        "variant": "destructive"
+      }
+    },
+    "text-49257-pkg": {
+      "type": "Text",
+      "props": {
+        "text": "mcp-pinot-server (pip)",
+        "variant": "caption"
+      }
+    },
+    "text-49257-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Default oauth_enabled=False combined with 0.0.0.0 bind enables unauthenticated tool invocation on any deployment.",
+        "variant": "body"
+      }
+    },
+    "text-49257-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade mcp-pinot to ≥3.1.0; meantime bind to 127.0.0.1 and enable oauth.",
+        "variant": "caption"
+      }
+    },
+    "cve-incus-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-incus",
+        "badge-incus",
+        "text-incus-cves",
+        "text-incus-detail",
+        "text-incus-action"
+      ]
+    },
+    "link-incus": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Incus 7-CVE Go cluster — CVE-2026-48749/50/51/52/53/55 + 48769",
+        "href": "https://github.com/advisories/GHSA-2q3f-q5pq-g8wv",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-incus": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.9 each · coordinated release 2026-06-26T18:30–19:13Z",
+        "variant": "destructive"
+      }
+    },
+    "text-incus-cves": {
+      "type": "Text",
+      "props": {
+        "text": "incus (Go)",
+        "variant": "caption"
+      }
+    },
+    "text-incus-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Symlink AFW chain on host via crafted images (rootfs/, exec-output, templates/), restricted-project bypass enabling arbitrary command execution, arbitrary file write via trusted image hash, and S3 multipart path traversal.",
+        "variant": "body"
+      }
+    },
+    "text-incus-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade incus to ≥7.2.0.",
+        "variant": "caption"
+      }
+    },
+    "cve-49252-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-49252",
+        "badge-49252",
+        "text-49252-pkg",
+        "text-49252-detail",
+        "text-49252-action"
+      ]
+    },
+    "link-49252": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49252 — @deepstream/server",
+        "href": "https://github.com/advisories/GHSA-9v98-6g37-x9g6",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-49252": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.9 · EPSS 0.003",
+        "variant": "destructive"
+      }
+    },
+    "text-49252-pkg": {
+      "type": "Text",
+      "props": {
+        "text": "@deepstream/server (npm)",
+        "variant": "caption"
+      }
+    },
+    "text-49252-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Prototype pollution vulnerability.",
+        "variant": "body"
+      }
+    },
+    "text-49252-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade @deepstream/server to ≥10.0.5.",
+        "variant": "caption"
+      }
+    },
+    "cve-53519-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-53519",
+        "badge-53519",
+        "text-53519-pkg",
+        "text-53519-detail",
+        "text-53519-action"
+      ]
+    },
+    "link-53519": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-53519 — nezhahq/nezha",
+        "href": "https://github.com/advisories/GHSA-5c25-7vpj-9mqh",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-53519": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.1 · EPSS 0.005",
+        "variant": "destructive"
+      }
+    },
+    "text-53519-pkg": {
+      "type": "Text",
+      "props": {
+        "text": "nezhahq/nezha (Go)",
+        "variant": "caption"
+      }
+    },
+    "text-53519-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Pre-auth path traversal via /dashboard.. prefix confusion leaks jwt_secret_key, enabling full authentication bypass once exploited.",
+        "variant": "body"
+      }
+    },
+    "text-53519-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade nezha to ≥2.0.13.",
+        "variant": "caption"
+      }
+    },
+    "cve-pnpm-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pnpm",
+        "badge-pnpm",
+        "text-pnpm-pkg",
+        "text-pnpm-detail",
+        "text-pnpm-action"
+      ]
+    },
+    "link-pnpm": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pnpm 9-CVE cluster — CVE-2026-55700/55698/55697/55487/50015/50016 + 3 unnumbered",
+        "href": "https://github.com/advisories/GHSA-v23m-ccfg-pq9h",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-pnpm": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS max 8.8 · published 2026-06-26 → 2026-06-27",
+        "variant": "destructive"
+      }
+    },
+    "text-pnpm-pkg": {
+      "type": "Text",
+      "props": {
+        "text": "pnpm (npm)",
+        "variant": "caption"
+      }
+    },
+    "text-pnpm-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Multiple vulnerabilities: lockfile spoof, manifest-identity spoof, patch-remove path traversal, and configDependencies env-lockfile execution. Package manager itself becomes a supply-chain attack surface.",
+        "variant": "body"
+      }
+    },
+    "text-pnpm-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade pnpm to ≥10.34.4 (v10) or ≥11.5.3 (v11).",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-monitor",
+        "ghsa-q6xx-stack"
+      ]
+    },
+    "heading-monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "ghsa-q6xx-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-q6xx",
+        "badge-q6xx",
+        "text-q6xx-pkg",
+        "text-q6xx-detail",
+        "text-q6xx-action"
+      ]
+    },
+    "link-q6xx": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-q6xx-5vr8-p898 — nezhahq/nezha",
+        "href": "https://github.com/advisories/GHSA-q6xx-5vr8-p898",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-q6xx": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet · affects 1.14.13–1.14.14",
+        "variant": "secondary"
+      }
+    },
+    "text-q6xx-pkg": {
+      "type": "Text",
+      "props": {
+        "text": "nezhahq/nezha (Go)",
+        "variant": "caption"
+      }
+    },
+    "text-q6xx-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Cross-tenant terminal and file-manager session hijack via WebSocket stream UUID with no ownership check.",
+        "variant": "body"
+      }
+    },
+    "text-q6xx-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ restrict admin/operator UI to trusted IPs until fix lands.",
+        "variant": "caption"
+      }
+    }
+  }
+}

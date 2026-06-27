@@ -1,30 +1,25 @@
-*Security Digest — 2026-06-26*
-Verdict: 2 actively exploited, 3 to schedule, 3 to monitor. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-06-27*
+Verdict: 1 actively exploited (litellm wheel · EPSS 0.834) + 38 npm malware net-new, 5 to schedule, 1 to monitor. _Sources: KEV, GH Advisory, EPSS_
 
 *PATCH TODAY*
-- [CVE-2026-20230](https://nvd.nist.gov/vuln/detail/CVE-2026-20230) — Cisco Unified CM / SME · KEV added 2026-06-25 · EPSS 0.512/p98.8 · CVSS 8.6
-  unauth SSRF → arbitrary file write → root. public PoC live (denizhalil 6-12), CISA-ADP flipped poc→active 6-25. CISA due 2026-06-28.
-  → apply cisco-sa-cucm-ssrf advisory today.
-- [CVE-2026-12569](https://nvd.nist.gov/vuln/detail/CVE-2026-12569) — PTC Windchill / FlexPLM · KEV added 2026-06-25 · EPSS 0.009 · CVSS 9.3 (v4.0)
-  unauth deserialization → RCE. active exploitation per CISA. affects Windchill ≤13.1.3.0 / FlexPLM ≤13.0.3.0.
-  → apply PTC CS473270 mitigation today (CISA due 2026-06-28).
-- npm **leo-sdk supply chain — 15-package wave** (malware advisories) · 6-25: 3 (leo-sdk/cron/logger) · 6-26: +12 (leo-streams / leo-cache / leo-cli / leo-auth / leo-connector-{mongo,mysql,elasticsearch,oracle} / rstreams-{metrics,shard-util} / serverless-{convention,leo})
-  → remove every `leo-*` / `rstreams-*` / `serverless-leo` dep today; rotate any AWS keys + DB creds touched by those processes.
+- [CVE-2026-42208](https://github.com/advisories/GHSA-r75f-5x8p-qvmc) — litellm (pip) · EPSS 0.834 / p99.65 · CVSS — · supply-chain credential-stealer wheel
+  1.82.8 shipped a malicious `litellm_init.pth` that auto-executes on python startup and exfiltrates AWS/GCP/Azure creds + SSH keys + k8s configs + crypto wallets to `models.litellm.cloud`. semantic-router 0.1.8–0.1.14 resolved to it via unbounded transitive pin ([GHSA-98x5-vq43-vc5p](https://github.com/advisories/GHSA-98x5-vq43-vc5p), 6-26).
+  → upgrade litellm to ≥1.83.7 (+ semantic-router ≥0.1.15), grep `site-packages/litellm_init.pth`, rotate any creds reachable from environments that ran the affected install.
+- npm malware **38 net-new** (6-25 + 6-26 windows, post-dedup vs 6-25/6-26 logs) — weavedb-base + 4 sibling spoofs in one 43min burst (2026-06-26T05:05–05:48Z), ai-node-relay + ai-node-agent twins, hexo-shoka-swiper + hexo-deployer-wrangler, pino-zod ↔ zod-pino spoof pair, atlassian-forge-skills brand-spoof (matches 6-25 HubSpot @su-doughnym pattern — enterprise dev-tooling target now in 3rd vendor), pump-stream-logger + pump-laserstream-parser variants; 6-25 leftovers tesco-help / pathfix / easy-time-format ↔ easy-time666 twin / boardflow / ts-grok / loadninja-shared / atlassian-forge-skills / 9 more.
+  → grep package-lock/pnpm-lock/yarn.lock against [type=malware feed since 6-25](https://github.com/advisories?query=type%3Amalware+published%3A%3E%3D2026-06-25); on hit, remove + rotate creds exposed to that install.
 
 *PATCH THIS WEEK*
-- **golang.org/x/crypto/ssh cluster — 9 CVEs published 2026-06-25** (coordinated golang-announce drop). top: [CVE-2026-46595](https://github.com/advisories/GHSA-x527-x647-q7gg) verifiedPublicKeyCallback skip enforcement (CVSS 10.0, bypass of 2024 CVE-2024-45337 fix); [CVE-2026-42508](https://github.com/advisories/GHSA-5cgq-3rg8-m6cv) knownhosts `@revoked` bypass; FIDO/U2F presence-check bypass; agent forwarding leaks constraints. all EPSS <0.005 (fresh).
-  → upgrade golang.org/x/crypto to ≥0.52.0 across every Go service.
-- [CVE-2026-55166](https://github.com/advisories/GHSA-v2wp-frmc-5q3v) + [CVE-2026-48508](https://github.com/advisories/GHSA-qcqw-jwxc-2hqg) — Netflix Lemur (pip) · CVSS 9.9 + 8.8 · no public PoC
-  ACME SSRF + creator-equality IDOR → AWS IAM / PKI compromise; plus authz bypass in StrictRolePermission.
-  → upgrade lemur to ≥1.9.2.
-- [CVE-2026-48713](https://github.com/advisories/GHSA-2933-q333-qg83) + [CVE-2026-48714](https://github.com/advisories/GHSA-f49m-vf83-692w) — i18next (npm) · CVSS 9.1×2
-  prototype pollution via crafted missing-key strings.
-  → upgrade i18next-fs-backend ≥2.6.6, i18next-http-middleware ≥3.9.7.
+- [CVE-2026-49257](https://github.com/advisories/GHSA-73cv-556c-w3g6) — mcp-pinot-server (pip) · CVSS 10.0 · EPSS 0.005
+  Default `oauth_enabled=False` + 0.0.0.0 bind = unauth tool invocation on any deployment. → upgrade mcp-pinot to ≥3.1.0; meantime bind to 127.0.0.1 + enable oauth.
+- **Incus 7-CVE Go cluster** ([CVE-2026-48749](https://github.com/advisories/GHSA-2q3f-q5pq-g8wv)/50/51/52/53/55 + 48769) · CVSS 9.9 each · coordinated security release 2026-06-26T18:30–19:13Z
+  Symlink AFW chain on host via crafted images (`rootfs/`, `exec-output`, `templates/`), restricted-project bypass → arbitrary command execution, arbitrary file write via trusted image hash, S3 multipart path traversal. → upgrade incus to ≥7.2.0.
+- [CVE-2026-49252](https://github.com/advisories/GHSA-9v98-6g37-x9g6) — @deepstream/server (npm) · CVSS 9.9 · EPSS 0.003
+  Prototype pollution. → upgrade @deepstream/server to ≥10.0.5.
+- [CVE-2026-53519](https://github.com/advisories/GHSA-5c25-7vpj-9mqh) — nezhahq/nezha (Go) · CVSS 9.1 · EPSS 0.005
+  Pre-auth path traversal via `/dashboard..` prefix confusion leaks `jwt_secret_key` = full auth bypass once exploited. → upgrade nezha to ≥2.0.13.
+- **pnpm 9-CVE cluster** ([CVE-2026-55700](https://github.com/advisories/GHSA-v23m-ccfg-pq9h)/55698/55697/55487/50015/50016 + 3 unnumbered GHSAs) · CVSS max 8.8 · published 2026-06-26 → 2026-06-27
+  Lockfile spoof + manifest-identity spoof + patch-remove path traversal + configDependencies env-lockfile execution — package manager itself as the supply-chain attack surface. → upgrade pnpm to ≥10.34.4 (v10) or ≥11.5.3 (v11).
 
 *MONITOR*
-- [GHSA-rjr7-jggh-pgcp](https://github.com/advisories/GHSA-rjr7-jggh-pgcp) — chi (Go) X-Forwarded-For IP spoofing · no CVE · v5 fix 5.3.0, v1-v4 no fix
-  → bump chi v5 to ≥5.3.0; legacy lines pin behind a trusted proxy.
-- [CVE-2026-48702](https://github.com/advisories/GHSA-47q9-m4ww-924m) — sigstore Rekor (Go) · CVSS 7.5 · EPSS 0.004
-  gzip-bomb OOM in Alpine APK parser. → upgrade rekor to ≥1.5.2.
-- [CVE-2026-9291](https://github.com/advisories/GHSA-g697-2xrc-gc46) — amazon-braket-sdk (pip) · CVSS 7.1
-  insecure pickle.loads(). → upgrade to ≥1.117.0.
+- [GHSA-q6xx-5vr8-p898](https://github.com/advisories/GHSA-q6xx-5vr8-p898) — nezhahq/nezha (Go) · CVSS — · no fix yet · affects 1.14.13–1.14.14
+  Cross-tenant terminal + file-manager session hijack via WebSocket stream UUID with no ownership check. → restrict admin/operator UI to trusted IPs until fix lands.
