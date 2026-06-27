@@ -1,0 +1,185 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Vuln Scanner — Panniantong/Agent-Reach"
+      },
+      "children": [
+        "vuln_header",
+        "high_vuln_alert",
+        "separator1",
+        "dep_cves_section",
+        "separator2",
+        "scanner_status"
+      ]
+    },
+    "vuln_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Vulnerability Findings",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "high_vuln_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "HIGH: argv injection into yt-dlp via library API",
+        "message": "Remote Code Execution on pinned version 2025.5.22. Status: drafted but not published. PVR disabled, SECURITY.md offers no fallback contact. Draft sits in `.pending-disclosure/` for out-of-band escalation."
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "dep_cves_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dep_heading",
+        "dep_cves_stat",
+        "pr_link",
+        "dep_breakdown"
+      ]
+    },
+    "dep_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dependency CVEs",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "dep_cves_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "CVEs shipped in lockfile-only PR",
+        "value": "3"
+      },
+      "children": []
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #442",
+        "href": "https://github.com/Panniantong/Agent-Reach/pull/442"
+      },
+      "children": []
+    },
+    "dep_breakdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dep_item1",
+        "dep_item2",
+        "dep_item3"
+      ]
+    },
+    "dep_item1": {
+      "type": "Text",
+      "props": {
+        "text": "yt-dlp: 5 advisories"
+      },
+      "children": []
+    },
+    "dep_item2": {
+      "type": "Text",
+      "props": {
+        "text": "requests: 1 advisory"
+      },
+      "children": []
+    },
+    "dep_item3": {
+      "type": "Text",
+      "props": {
+        "text": "python-dotenv: 1 advisory"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "scanner_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "scanner_heading",
+        "scanner_results",
+        "scanner_note"
+      ]
+    },
+    "scanner_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scanner Status",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "scanner_results": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_semgrep",
+        "badge_trufflehog",
+        "badge_osv"
+      ]
+    },
+    "badge_semgrep": {
+      "type": "Badge",
+      "props": {
+        "text": "semgrep: fail",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "badge_trufflehog": {
+      "type": "Badge",
+      "props": {
+        "text": "trufflehog: fail",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "badge_osv": {
+      "type": "Badge",
+      "props": {
+        "text": "osv: ok (via-api)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "scanner_note": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox blocks binaries; OSV REST + manual audit covered it.",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

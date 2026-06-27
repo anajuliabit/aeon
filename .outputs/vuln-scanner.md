@@ -1,2 +1,2 @@
-*Vuln Scanner — vercel/eve*
-Manual audit only — scanner binaries missing (ISS-018). Examined dependency tree (axios 1.16.1, jose 6.2.3) for known CVEs via manual search but rate‑limited; basic security posture review found no obvious code-flow vulnerabilities. SECURITY.md present (responsible.disclosure@vercel.com). Scanners: semgrep=fail, trufflehog=fail, osv-scanner=fail.
+*Vuln Scanner — Panniantong/Agent-Reach*
+1 code-level HIGH (argv injection into yt-dlp via library API — RCE on the pinned 2025.5.22) drafted but not published: PVR disabled, SECURITY.md offers no fallback contact. Draft sits in `.pending-disclosure/` for out-of-band escalation. 3 dep CVEs shipped as lockfile-only PR [#442](https://github.com/Panniantong/Agent-Reach/pull/442) (yt-dlp 5 advisories, requests 1, python-dotenv 1). Scanners: semgrep=fail trufflehog=fail osv=ok(via-api) — sandbox blocks binaries, OSV REST + manual audit covered it.

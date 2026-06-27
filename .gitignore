@@ -53,6 +53,11 @@ node_modules/
 # Stale artifacts
 .external-work
 .vuln-scan/
+.vuln-scan-work/
+
+# Private vulnerability disclosure drafts (drafts for findings with no safe
+# channel — must never be committed to public main; see skills/vuln-scanner)
+.pending-disclosure/
 
 # Playwright MCP scratch (screenshots, snapshots, console logs)
 .playwright-mcp/

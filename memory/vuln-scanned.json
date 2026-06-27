@@ -26,5 +26,21 @@
       "slither": "n/a"
     },
     "notes": "manual audit only — scanner binaries missing (ISS-018). Examined dependency tree (axios 1.16.1, jose 6.2.3, etc.) for known CVEs via manual web search but rate-limited; basic security posture review found no obvious code-flow vulnerabilities. SECURITY.md present with PVR email contact."
+  },
+  {
+    "repo": "Panniantong/Agent-Reach",
+    "scanned_at": "2026-06-27T16:18:00Z",
+    "findings": 4,
+    "channel": "mixed-pvr-deferred+public-pr-deps",
+    "scanner_status": {
+      "semgrep": "fail",
+      "trufflehog": "fail",
+      "osv-binary": "fail",
+      "osv-api": "ok",
+      "slither": "n/a"
+    },
+    "pr_url": "https://github.com/Panniantong/Agent-Reach/pull/442",
+    "pending_disclosure": ".pending-disclosure/Panniantong-Agent-Reach-2026-06-27T161800Z.md",
+    "notes": "1 code-level finding (HIGH CWE-88 argv injection in agent_reach/transcribe.py download_audio — no -- separator before user-controlled URL passed to yt-dlp; reachable from library/MCP/agent API) drafted but NOT published because PVR is disabled on the repo (HTTP 403 on POST /security-advisories/reports) and SECURITY.md offers only the GitHub PVR link with no fallback contact. Draft saved to .pending-disclosure/ for operator to escalate out-of-band. 3 dep CVEs (yt-dlp×5, requests×1, python-dotenv×1; pytest dev-only deferred for major-bump risk) shipped as single lockfile-only public PR #442 — already-disclosed CVEs route via the public-PR channel per skill matrix."
   }
 ]
