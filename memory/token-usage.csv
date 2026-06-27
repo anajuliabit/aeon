@@ -566,4 +566,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-27,list-digest,claude-opus-4-7,40,10618,2189599,69881
 2026-06-27,agent-buzz,claude-opus-4-7,34,23566,1909849,64091
 2026-06-27,reflect,claude-opus-4-7,26,22401,1403609,157516
-2026-06-27,btc-levels,claude-sonnet-4-6,11,5282,411141,51225
+2026-06-27,heartbeat,claude-opus-4-7,13742,13803,993951,134839

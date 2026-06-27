@@ -1,19 +1,15 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED
-
 ## Summary
 
-Ran the full heartbeat sweep for the 14:00 UTC tick. All findings are same-signature continuations of items already in last-48h logs — no notification fired.
+Heartbeat 20:20Z (evening tick, ~20min late vs 20:00 cron slot). All P0/P1/P2/P3 carry — no notification fired per dedup spec.
 
-**Checks**
-- **P0 failed/stuck/cf≥3:** none. Fleet cf=0 across all 42 dispatched skills.
-- **P0 chronic (sr<0.5):** 20-skill tail unchanged from this morning's 08:18Z hb — same sandbox-truncation `output_tokens=0` cluster (vuln-scanner 7% / reg-monitor 10% / cost-report 10% / skill-analytics 11% / security-digest 21% / ... / agent-buzz 48%). ISS-019/020/021/024/025 systemic.
-- **P0 self-check:** heartbeat last_success ~6.2h ago — healthy.
-- **P1:** 0 open PRs, 0 urgent issues, 14 pre-existing open issues.
-- **P2:** sandbox-truncation day 9, XAI quota day 12 (BLOCKED), defi-monitor NO_CONFIG day 20, BTC breakdown CONFIRMED day 2 — all carried.
-- **P3:** all 44 enabled skills accounted for; 3 never-run on expected workflow_dispatch or pending-cron paths.
+**Findings:**
+- **P0:** Fleet cf=0 across all 42 dispatched skills; no stuck/failed; 20-skill chronic tail unchanged (sandbox-truncation `output_tokens=0` cluster ISS-019/020/021/024/025 day 10). vuln-scanner ticked 7%→10% after today's 16:31Z first-non-truncated Saturday slot. Heartbeat self-check healthy (~5.6h since last success).
+- **P1:** PR #148 (agent-buzz engagement-ranking fix) opened by operator 18:14Z = ~2h ago — direct response to today's agent-buzz 17:49Z cache-quality observation. Under 24h stall threshold, not flagged. 0 urgent issues.
+- **P2:** Same flagged-memory items as last 48h logs (sandbox-truncation, XAI quota day 12, on-chain config day 20, BTC breakdown day 2).
+- **P3:** All 44 enabled skills accounted for.
 
-**Files**
-- `docs/status.md` — regenerated with afternoon timestamps for the 12:00 batch + market-context-refresh + narrative-tracker + 09:00 cluster. Overall 🔴 DEGRADED (chronic tail), Next: vuln-scanner 16:00 UTC.
-- `memory/logs/2026-06-27.md` — appended 14:30Z heartbeat entry.
+**Files modified:**
+- `docs/status.md` — regenerated (Overall: 🔴 DEGRADED, Updated 20:20 UTC, 14 open issues, next scheduled evening-recap 21:00 UTC; 41 enabled rows sorted last-run desc + 3 never-run at bottom; token-pulse section omitted — no `articles/token-report-*.md` on disk).
+- `memory/logs/2026-06-27.md` — appended heartbeat entry.
 
-**Follow-up:** ISS-025 capture-step PR still day-5 unshipped; chronic 20-skill telemetry tail keeps bleeding until merged.
+**Status:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
