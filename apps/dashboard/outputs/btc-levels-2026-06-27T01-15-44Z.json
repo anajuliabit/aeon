@@ -1,0 +1,126 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC Levels"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "grid_prices",
+        "alert_downtrend",
+        "stack_context",
+        "separator1",
+        "stack_position",
+        "text_disclaimer"
+      ]
+    },
+    "grid_prices": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_spot",
+        "stat_daily"
+      ]
+    },
+    "stat_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$59.9k"
+      }
+    },
+    "stat_daily": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Close",
+        "value": "$59,982"
+      }
+    },
+    "alert_downtrend": {
+      "type": "Alert",
+      "props": {
+        "title": "Downtrend Continuation",
+        "message": "Daily close $59,982 < $60,500 — 2nd consecutive close below the breakdown level",
+        "type": "warning"
+      }
+    },
+    "stack_context": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_reference"
+      ]
+    },
+    "text_reference": {
+      "type": "Text",
+      "props": {
+        "text": "June 25 close $59,712 alerted yesterday",
+        "variant": "caption"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_position": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_position_label",
+        "text_trigger",
+        "text_hf"
+      ]
+    },
+    "text_position_label": {
+      "type": "Text",
+      "props": {
+        "text": "Leveraged cbBTC position:",
+        "variant": "lead"
+      }
+    },
+    "text_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Review trigger at ≤$45k",
+        "variant": "body"
+      }
+    },
+    "text_hf": {
+      "type": "Text",
+      "props": {
+        "text": "HF ≈1.48–1.66 in the $40–45k band",
+        "variant": "body"
+      }
+    },
+    "text_disclaimer": {
+      "type": "Text",
+      "props": {
+        "text": "Not financial advice",
+        "variant": "muted"
+      }
+    }
+  }
+}

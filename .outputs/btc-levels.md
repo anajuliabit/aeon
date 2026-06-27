@@ -1,9 +1,1 @@
-Quiet run complete. BTC spot is $59,669 with the 2026-06-25 daily close at $59,712 — breakdown already alerted for that close date, no reclaim levels reached, leverage-review trigger not active. No notification sent. State and log committed.
-
-## Summary
-
-- **BTC spot:** $59,669.69
-- **Daily close (2026-06-25):** $59,712.62 (< $60,500 breakdown level)
-- **Alerts evaluated:** breakdown already alerted for 2026-06-25 (no repeat), spot > $45k (no leverage-review), spot < $63,500/$65,900 (no reclaim)
-- **Result:** quiet run — no notification
-- **Files committed:** `memory/btc-levels-state.json` (updatedAt bumped, spot updated), `memory/logs/2026-06-26.md` (20:55Z entry appended)
+₿ BTC levels: spot $59.9k. ⚠️ Daily close $59,982 < $60,500 — downtrend continuation, 2nd consecutive close below the breakdown level (June 25 close $59,712 alerted yesterday). Leveraged cbBTC position: review trigger at ≤$45k, HF ≈1.48–1.66 in the $40–45k band. Not financial advice.
