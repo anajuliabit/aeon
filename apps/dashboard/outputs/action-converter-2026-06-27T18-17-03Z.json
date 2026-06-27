@@ -1,0 +1,286 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-06-27",
+        "description": "Ship ISS-025 fix, escalate Agent-Reach disclosure, patch prefetch-xai, codify Morpho rule, seed pool config"
+      },
+      "children": [
+        "action1",
+        "sep1",
+        "action2",
+        "sep2",
+        "action3",
+        "sep3",
+        "action4",
+        "sep4",
+        "action5",
+        "sep5",
+        "sources"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h1",
+        "why1",
+        "done1",
+        "badge1"
+      ]
+    },
+    "h1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Branch + open the aeon.yml capture-step patch as a PR",
+        "level": "h3"
+      }
+    },
+    "why1": {
+      "type": "Text",
+      "props": {
+        "text": "why: 5-day unshipped fix bleeds telemetry across 20 sr<0.5 chronic-tail skills; root-cause known since 6-24 18:14Z",
+        "variant": "body"
+      }
+    },
+    "done1": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened against main, body links ISS-025/019/020/021",
+        "variant": "body"
+      }
+    },
+    "badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-capture-fix",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h2",
+        "why2",
+        "done2",
+        "badge2"
+      ]
+    },
+    "h2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Draft maintainer outreach for Panniantong/Agent-Reach CWE-88 finding into .pending-disclosure/outreach.md",
+        "level": "h3"
+      }
+    },
+    "why2": {
+      "type": "Text",
+      "props": {
+        "text": "why: vuln-scanner 16:18Z deferred after PVR HTTP 403; 43k-star public repo with reachable RCE-shape path",
+        "variant": "body"
+      }
+    },
+    "done2": {
+      "type": "Text",
+      "props": {
+        "text": "done: .pending-disclosure/outreach.md exists with handle + DM body",
+        "variant": "body"
+      }
+    },
+    "badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "panniantong-vuln-disclosure",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h3",
+        "why3",
+        "done3",
+        "badge3"
+      ]
+    },
+    "h3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Patch scripts/prefetch-xai.sh to route 1 of 4 agent-buzz sub-queries to mode:\"Top\" + min_likes:50",
+        "level": "h3"
+      }
+    },
+    "why3": {
+      "type": "Text",
+      "props": {
+        "text": "why: today's agent-buzz log capped engagement floor at 13 likes / followers:null; single Top leg restores signal-scoring",
+        "variant": "body"
+      }
+    },
+    "done3": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened touching scripts/prefetch-xai.sh",
+        "variant": "body"
+      }
+    },
+    "badge3": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz-cache-quality",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h4",
+        "why4",
+        "done4",
+        "badge4"
+      ]
+    },
+    "h4": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Codify the 6-26 Morpho-Blue leverage rule into memory/topics/crypto.md",
+        "level": "h3"
+      }
+    },
+    "why4": {
+      "type": "Text",
+      "props": {
+        "text": "why: durable policy from Telegram Q&A persists in chat scrollback only; next Morpho action needs a canonical reference",
+        "variant": "body"
+      }
+    },
+    "done4": {
+      "type": "Text",
+      "props": {
+        "text": "done: crypto.md has section \"Morpho-Blue leverage policy\" with both rules + 6-26 source line",
+        "variant": "body"
+      }
+    },
+    "badge4": {
+      "type": "Badge",
+      "props": {
+        "text": "morpho-leverage-rule-doc",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h5",
+        "why5",
+        "done5",
+        "badge5"
+      ]
+    },
+    "h5": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Seed memory/on-chain-watches.yml with 3 PROPOSED type: pool / type: position entries",
+        "level": "h3"
+      }
+    },
+    "why5": {
+      "type": "Text",
+      "props": {
+        "text": "why: defi-monitor NO_CONFIG day 20; concrete candidates from today's defi-overview land the operator review",
+        "variant": "body"
+      }
+    },
+    "done5": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/on-chain-watches.yml has 3 PROPOSED-prefixed entries with TVL/yield context",
+        "variant": "body"
+      }
+    },
+    "badge5": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-monitor-no-config",
+        "variant": "outline"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_data"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_data": {
+      "type": "Text",
+      "props": {
+        "text": "memory=50L logs=7d topics=11 prs=0 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

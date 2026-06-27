@@ -1,29 +1,29 @@
-*5 Actions — 2026-06-26*
-Shape: verify PR-#147 selftest, cut ISS-025 PR, close SEI invalidation, document Morpho rule, dedupe MEMORY
+*5 Actions — 2026-06-27*
+Shape: Ship ISS-025 fix, escalate Agent-Reach disclosure, patch prefetch-xai, codify Morpho rule, seed pool config
 
-1. run `bash scripts/advisor/selftest.sh` post-merge of PR #147 (advisor hard risk layer #140) and append result to `memory/topics/fleet.md` under an "advisor sprint" subsection
-why: operator's first delivery of the 7-issue advisor sprint merged 12:44Z with no review — `CLAUDE.md` flags selftest as the CI gate
-done: selftest exit code logged to topics/fleet.md with PR ref and merge timestamp
-loop: pr-147-postmerge-verify
-
-2. cut PR patching the workflow `.github/workflows/aeon.yml` capture step — fix the `output_tokens=0` response shape that signs ISS-019/020/021/024/025
-why: 22 chronic-tail skills sr<0.5 still lose telemetry every cron tick; day 4 since action-converter flagged the fix at 4.6/5 quality
-done: PR open on github; ISS-025 frontmatter `fix_pr:` field updated
+1. Branch + open the aeon.yml capture-step patch as a PR — identify the step zeroing output_tokens, write the structural fix, push to a feat branch, open against main.
+why: 5-day unshipped fix bleeds telemetry across 20 sr<0.5 chronic-tail skills; root-cause known since 6-24 18:14Z
+done: PR opened against main, body links ISS-025/019/020/021
 loop: iss-025-capture-fix
 
-3. close `.pending-picks/2026-06-25-token-pick.json` SEI HIGH 9/10 — invalidation $0.054 hit day 1 (intraday $0.054, −10.2% per token-movers 12:31Z); POST close to `/api/picks` and append outcome row to `memory/topics/crypto.md` alongside AAVE day-3 +13.4%
-why: token-pick spec triggers close at invalidation; the side-by-side AAVE vs SEI row is the only carry-forward signal from a 1d stop-out
-done: pick state=closed via api + crypto.md outcome row appended
-loop: sei-pick-invalidation
+2. Draft maintainer outreach for Panniantong/Agent-Reach CWE-88 finding into .pending-disclosure/outreach.md — pull maintainer handle from gh API, write 6-line DM body naming agent_reach/transcribe.py:81-94 + safe-channel ask.
+why: vuln-scanner 16:18Z deferred after PVR HTTP 403; 43k-star public repo with reachable RCE-shape path
+done: .pending-disclosure/outreach.md exists with handle + DM body
+loop: panniantong-vuln-disclosure
 
-4. draft `memory/topics/morpho-position.md` covering cbBTC/USDC at LLTV 0.86 / 14% cushion, the no-new-collateral + pay-USDC-instead rule, and the re-margin trigger LLTV <0.80 + BTC reclaim $63,500
-why: operator engaged advisor leverage-freeze rec 6-25 21:08Z + 21:34Z via telegram followup; the decision rule lives in chat history, not on disk
-done: file has 4 sections (position state, decision rule, re-margin trigger, link to crypto.md morpho-curator-risk lesson)
-loop: morpho-position-runbook
+3. Patch scripts/prefetch-xai.sh to route 1 of 4 agent-buzz sub-queries to mode:"Top" + min_likes:50 — preserve 3 Latest legs for chronological tail.
+why: today's agent-buzz log capped engagement floor at 13 likes / followers:null; single Top leg restores signal-scoring
+done: PR opened touching scripts/prefetch-xai.sh
+loop: agent-buzz-cache-quality
 
-5. prune `memory/MEMORY.md` duplicate "Recently Cleared" header at line 24 and the redundant Current Goals (sandbox-truncation, XAI quota, on-chain config, BTC hard levels appear before AND after line 10's first Recently Cleared)
-why: file is read by every action-converter + morning-brief + heartbeat run; duplicate goals risk stale-vs-fresh divergence (6-19 vs 6-25 entries already drift inside the file)
-done: MEMORY.md has exactly 1 Current Goals + 1 Recently Cleared section; line count drops ≥15
-loop: memory-md-dedup
+4. Codify the 6-26 Morpho-Blue leverage rule into memory/topics/crypto.md as a named subsection — pay USDC don't add cbBTC at LLTV 0.86 in extreme fear; re-margin trigger LLTV<0.80 AND BTC reclaim >$63,500.
+why: durable policy from Telegram Q&A persists in chat scrollback only; next Morpho action needs a canonical reference
+done: crypto.md has section "Morpho-Blue leverage policy" with both rules + 6-26 source line
+loop: morpho-leverage-rule-doc
 
-sources: memory=62 logs=8d topics=11 prs=0 cron_failing=0 mode=OK
+5. Seed memory/on-chain-watches.yml with 3 PROPOSED type: pool / type: position entries — Morpho-Blue cbBTC/USDC position, USDC-AERO Slipstream pool, Aave V3 cbBTC supply position — commented for operator review.
+why: defi-monitor NO_CONFIG day 20; concrete candidates from today's defi-overview land the operator review
+done: memory/on-chain-watches.yml has 3 PROPOSED-prefixed entries with TVL/yield context
+loop: defi-monitor-no-config
+
+sources: memory=50L logs=7d topics=11 prs=0 cron_failing=0 mode=OK
