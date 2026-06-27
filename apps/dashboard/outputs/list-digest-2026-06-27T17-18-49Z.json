@@ -1,0 +1,115 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-06-27"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-summary",
+        "sep-1",
+        "heading-list",
+        "stack-tweet-1",
+        "stack-tweet-2",
+        "sep-2",
+        "text-metadata"
+      ]
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "slow day on the curated DeFi list — 2 real signals out of 10. only one with substance: @Flowslikeosmo's theo S2 math.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "heading-list": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi/Crypto curated list (1642770456720683008)",
+        "level": "h3"
+      }
+    },
+    "stack-tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "theo S2 boost vault: 11% APY sthUSD as floor, points as upside. FDV scenarios $200M→$1B map to 17%–41% annualized over 6mo. genesis vault ($100M) reportedly filled <24h; highest-leverage leg (pendle YT on sthUSD) is still locked.",
+        "likes": 20,
+        "retweets": 2
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Flowslikeosmo/status/2070582378209415586"
+      }
+    },
+    "stack-tweet-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "QT of musk's \"overhaul the algorithm\" complaint with a 34-day-gap screenshot. off-thesis for a crypto list; reads as feed-quality meta.",
+        "likes": 37,
+        "retweets": 2
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/hooeem/status/2070608571012923664"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "text-metadata": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(2 signal / 10 raw)\nstatus: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

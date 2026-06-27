@@ -1,13 +1,11 @@
-*List Digest — 2026-06-26*
+*List Digest — 2026-06-27*
 
-quiet day. defiignas spots spark lenders as the LP base for a uni-v4 JIT stable-pool; hooeem rant carries engagement.
+slow day on the curated DeFi list — 2 real signals out of 10. only one with substance: @Flowslikeosmo's theo S2 math.
 
-*Crypto / DeFi Researchers*
-- x.com/hooeem — reads "crypto is dead" chatter as the same inversion-tell that ran the super-cycle camp last time; calls violent two-sided pain into a $59k BTC tape (♥ 118, ↻ 4) — [View](https://x.com/hooeem/status/2070242771521204386)
-- x.com/Flowslikeosmo — open "most undervalued/misunderstood token?" prompt; 30-reply crowd-sourced shortlist forming in-thread, worth scraping for sentiment-vs-price-action divergences (♥ 15, ↻ 0) — [View](https://x.com/Flowslikeosmo/status/2070190336278987107)
-- x.com/Louround_ — QTs Route2FI on generational-wealth playbook decay: prior-gen advice doesn't compound at current asset-price velocities; adapt-or-sidelined frame (♥ 13, ↻ 0) — [View](https://x.com/Louround_/status/2070282752771969289)
-- x.com/DefiIgnas — spark lenders as the LP base for a uni-v4-hooks-as-curve-3pool design; lending APY becomes a function of swap-fee throughput, not just borrow demand — composability flag for capital-under-mandate vaults (♥ 11, ↻ 0) — [View](https://x.com/DefiIgnas/status/2070203621912793220)
+*DeFi/Crypto curated list (1642770456720683008)*
+- x.com/Flowslikeosmo — theo S2 boost vault: 11% APY sthUSD as floor, points as upside. FDV scenarios $200M→$1B map to 17%–41% annualized over 6mo. genesis vault ($100M) reportedly filled <24h; highest-leverage leg (pendle YT on sthUSD) is still locked. (♥ 20, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2070582378209415586)
+- x.com/hooeem — QT of musk's "overhaul the algorithm" complaint with a 34-day-gap screenshot. off-thesis for a crypto list; reads as feed-quality meta. (♥ 37, ↻ 2) — [View](https://x.com/hooeem/status/2070608571012923664)
 
 ---
-sources: list1=ok
+sources: 1642770456720683008=ok(2 signal / 10 raw)
 status: LIST_DIGEST_OK

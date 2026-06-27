@@ -563,3 +563,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-27,security-digest,claude-opus-4-7,63,40215,5859358,191722
 2026-06-27,fleet-control,claude-opus-4-7,12,3417,430883,58347
 2026-06-27,vuln-scanner,claude-opus-4-7,107,56836,11355979,226167
+2026-06-27,list-digest,claude-opus-4-7,40,10618,2189599,69881
