@@ -1,12 +1,17 @@
 ## Summary
 
-**BTC Levels run — 2026-06-27 04:44Z**
+**btc-levels run — 2026-06-27 08:19Z**
 
-| Check | Value | Result |
-|---|---|---|
-| Spot | $60,296 | Above $45k → no leverage-review trigger |
-| June 26 daily close | $59,982 (< $60,500) | Already alerted this run cycle (state: `breakdownAlertedForClose = "2026-06-26"`) |
-| Reclaim $63,500 | Spot $60,296 < $63,500 | No alert |
-| Reclaim $65,900 | Spot $60,296 < $65,900 | No alert |
+**Data fetched:**
+- Spot: $60,399.61 (2026-06-27 ~08:18 UTC)
+- Previous UTC daily close: $59,981.83 (close of 2026-06-26)
 
-**No notification sent** — quiet run. Spot ticked up ~$397 since the 01:15Z run ($59,899 → $60,296) but remains below the breakdown level. The June 26 close breakdown was already reported. State and log committed.
+**Level evaluation:**
+| Level | Result |
+|---|---|
+| Spot ≤ $45,000 (leverage review) | No — spot $60,400 |
+| Close < $60,500 (breakdown) | Already alerted for 2026-06-26 close — no new alert |
+| Spot ≥ $63,500 (reclaim) | No — spot $60,400 |
+| Spot ≥ $65,900 (reclaim confirmed) | No — spot $60,400 |
+
+No alerts fired → no notification sent. State updated, committed.
