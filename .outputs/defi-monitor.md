@@ -1,13 +1,10 @@
 ## Summary
 
-**defi-monitor** — `DEFI_MONITOR_OK (NO_CONFIG — day 19)`. No notification sent.
+**defi-monitor — DEFI_MONITOR_OK (NO_CONFIG — day 20)**
 
-- Read `memory/on-chain-watches.yml`: 5 `type: wallet` entries on Base, **zero** `type: pool` / `type: position` entries.
-- Skill operates on `type: pool` / `type: position` only → nothing to query, no state to compare, no alerts.
-- Per skill spec ("If no DeFi positions configured, log DEFI_MONITOR_OK and end") — appended a single status block to `memory/logs/2026-06-26.md` and exited.
+- Read `memory/on-chain-watches.yml`: 5 `type: wallet` entries (Base, routed to `on-chain-monitor`). Zero `type: pool` / `type: position` entries.
+- Per skill spec, with no DeFi positions configured: log DEFI_MONITOR_OK and end.
+- No notification fired (silent OK per spec).
+- Logged to `memory/logs/2026-06-27.md` (carries the day-20 NO_CONFIG goal from MEMORY.md — needs operator to add `type: pool` / `type: position` entries for Morpho cbBTC leverage market, etc.).
 
-**Files modified:** `memory/logs/2026-06-26.md` (appended 6-line `## defi-monitor` block at end).
-
-**Follow-up (operator-gated, carried 19 days from MEMORY goal):**
-- Add `type: pool` entries to `on-chain-watches.yml` for the Morpho cbBTC leverage market + any REPPO/MAMO LP positions once the exact market/vault addresses are confirmed on-chain.
-- Same blocker is also tracked alongside `ALCHEMY_API_KEY len=0` / `ETHERSCAN_API_KEY null` on the on-chain-monitor side.
+Files modified: `memory/logs/2026-06-27.md` (appended defi-monitor block). No PR opened, no follow-up needed beyond the standing operator-config goal already tracked in `MEMORY.md`.
