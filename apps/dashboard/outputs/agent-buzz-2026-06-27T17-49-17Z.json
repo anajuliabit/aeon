@@ -1,0 +1,142 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz"
+      },
+      "children": [
+        "date_heading",
+        "lead_text",
+        "section1_heading",
+        "stack_section1",
+        "separator1",
+        "section2_heading",
+        "stack_section2",
+        "separator2",
+        "footer_text"
+      ]
+    },
+    "date_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Buzz — 2026-06-27",
+        "level": "h2"
+      }
+    },
+    "lead_text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet builder day. MCP moving from spec to practice: receipt fields proposed, local-vision setups, throughput claims. one benchmark says tool use is still where models break.",
+        "variant": "lead"
+      }
+    },
+    "section1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP plumbing fills in",
+        "level": "h3"
+      }
+    },
+    "stack_section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_daedalus",
+        "link_gilleland",
+        "link_nnewera"
+      ]
+    },
+    "link_daedalus": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@DaedalusAgents — proposes MCP expose receipts at the protocol layer: authorizer, scope, spend cap, idempotency key, artifact hash.",
+        "href": "https://x.com/DaedalusAgents/status/2070658280423039084",
+        "source": "X"
+      }
+    },
+    "link_gilleland": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@GillelandKristi — routes vision through a local Qwen3-vl:4b via MCP. keeps image input, cuts token cost.",
+        "href": "https://x.com/GillelandKristi/status/2070657592855072994",
+        "source": "X"
+      }
+    },
+    "link_nnewera": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@nnewera3 — fere_ai MCP server has processed >10M autonomous agent actions for Claude/ChatGPT crypto trading.",
+        "href": "https://x.com/nnewera3/status/2070658029473681578",
+        "source": "X"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Capability + product check",
+        "level": "h3"
+      }
+    },
+    "stack_section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_ainativef",
+        "link_internetmfer",
+        "link_dolphin"
+      ]
+    },
+    "link_ainativef": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@AINativeF — OpenBioRQ benchmark exposes \"agentic collapse\": models fail at tool use on open biomedical questions.",
+        "href": "https://x.com/AINativeF/status/2070657714334880240",
+        "source": "X"
+      }
+    },
+    "link_internetmfer": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@internetmfer — bankrbot outperforming virtuals_io by volume; MetaMask reportedly exploring agentic automations.",
+        "href": "https://x.com/internetmfer/status/2070658231152914571",
+        "source": "X"
+      }
+    },
+    "link_dolphin": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@DolphinRoadster — Hermes Agent v0.17.0 ships async sub-agents and mixture-of-agents docs.",
+        "href": "https://x.com/DolphinRoadster/status/2070658263608365170",
+        "source": "X"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 12 → kept: 6",
+        "variant": "muted"
+      }
+    }
+  }
+}

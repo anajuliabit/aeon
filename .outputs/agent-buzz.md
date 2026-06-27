@@ -1,22 +1,20 @@
-*Agent Buzz — 2026-06-26*
-_anthropic blueprint surfaces, MCP primers proliferate, agent-ops research starts to bite — quiet builder day._
+*Agent Buzz — 2026-06-27*
+_quiet builder day. MCP moving from spec to practice: receipt fields proposed, local-vision setups, throughput claims. one benchmark says tool use is still where models break._
 
-**anthropic agent stack guidance**
-• @0xCodez — 33-pager claims hierarchical multi-agent outscores single by 90.2% on complex tasks across 5 named architectures
-  https://x.com/0xCodez/status/2070128010317930527
-• @kingdom314159 — new claude-code-setup plugin auto-wires hooks, skills, MCP servers, and sub-agents in one install
-  https://x.com/kingdom314159/status/2070295299856502860
+**MCP plumbing fills in**
+• @DaedalusAgents — proposes MCP expose receipts at the protocol layer: authorizer, scope, spend cap, idempotency key, artifact hash.
+  https://x.com/DaedalusAgents/status/2070658280423039084
+• @GillelandKristi — routes vision through a local Qwen3-vl:4b via MCP. keeps image input, cuts token cost.
+  https://x.com/GillelandKristi/status/2070657592855072994
+• @nnewera3 — fere_ai MCP server has processed >10M autonomous agent actions for Claude/ChatGPT crypto trading.
+  https://x.com/nnewera3/status/2070658029473681578
 
-**MCP curriculum drops**
-• @femke_plantinga — frames the 2026 agent stack as 7 pillars: MCP, agent loops, skills, single/multi, agentic rag, memory, hitl
-  https://x.com/femke_plantinga/status/2070069580521693562
-• @ParamSiddh — free 10+ project MCP guide covering tools, apis, databases — open MCP curriculum keeps stacking
-  https://x.com/ParamSiddh/status/2070180648611119470
+**Capability + product check**
+• @AINativeF — OpenBioRQ benchmark exposes "agentic collapse": models fail at tool use on open biomedical questions.
+  https://x.com/AINativeF/status/2070657714334880240
+• @internetmfer — bankrbot outperforming virtuals_io by volume; MetaMask reportedly exploring agentic automations.
+  https://x.com/internetmfer/status/2070658231152914571
+• @DolphinRoadster — Hermes Agent v0.17.0 ships async sub-agents and mixture-of-agents docs.
+  https://x.com/DolphinRoadster/status/2070658263608365170
 
-**guarded agent ops**
-• @RobertTLange — argues bottleneck shifted from capability to operating-env design; EurekAgent paper gives 4 design dims + secure containers
-  https://x.com/RobertTLange/status/2070186892167979192
-• @heyhardik_ — guarded MCP agent shipped with dynamic tool discovery, runtime guardrails, human approval, and audit logging
-  https://x.com/heyhardik_/status/2070259457179935231
-
-<!-- _src: xai · candidates: 13 → kept: 6_ -->
+_src: xai-cache · candidates: 12 → kept: 6_
