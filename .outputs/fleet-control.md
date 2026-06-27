@@ -1,16 +1,20 @@
-Stopping silently per spec — no notification, no state-file update.
+The task is a single short stop (empty registry → log and exit). No multi-step tracking needed.
 
 ## Summary
 
-Executed **fleet-control** in default Health Check Mode (var empty).
+Ran `fleet-control` in Health Check Mode (default — no `var` supplied).
 
-**Pre-flight results:**
-- gh auth: ok (account `anajuliabit`)
-- rate_remaining: 4908 (well above threshold of 50)
-- Registry `memory/instances.json`: `{"instances": []}` — empty
+**Pre-flight checks:** gh auth OK (anajuliabit, repo+workflow scopes), rate-limit remaining 4994, registry loaded.
 
-**Outcome:** `FLEET_EMPTY` — no managed Aeon instances in the registry. Per skill spec, logged to `memory/logs/2026-06-26.md` and stopped silently. No notification sent (spec: "Stop. Do NOT notify"). State file `memory/state/fleet-control-state.json` left untouched (no instances to snapshot).
+**Outcome:** `memory/instances.json` contains `{"instances": []}` — no managed Aeon children registered. Per the skill's empty-registry branch, this is a **silent stop**: log `FLEET_EMPTY` and skip notification.
 
-**Files modified:** `memory/logs/2026-06-26.md` (appended fleet-control entry).
+**Files modified:**
+- `memory/logs/2026-06-27.md` — appended `## fleet-control (health check)` entry with verdict `FLEET_EMPTY`, sizes, sources, and status `FLEET_EMPTY`.
 
-**Follow-up:** None required. If/when the operator spawns child Aeon instances, register them in `memory/instances.json` (with `purpose`, `parent`, `created`, `skills_enabled` fields) and this skill will start producing health checks on its 09:00 / 15:00 UTC cron.
+**Files unchanged:**
+- `memory/instances.json` — no instances to update.
+- `memory/state/fleet-control-state.json` — last_full_summary_date stays unset until a notify-worthy run.
+
+**No notification sent** (per spec — operator isn't trained to ignore empty-fleet pings).
+
+**Follow-up:** none required from this skill. Whenever a child instance is spawned/registered, add it to `memory/instances.json` and the next 09:00 or 15:00 UTC tick will start tracking it.
