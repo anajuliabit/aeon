@@ -1,0 +1,170 @@
+{
+  "root": "card-aixbt-pulse",
+  "state": {},
+  "elements": {
+    "card-aixbt-pulse": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-27 09:00Z"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-crypto",
+        "crypto-content",
+        "sep-1",
+        "heading-macro",
+        "macro-content",
+        "sep-2",
+        "heading-new",
+        "new-content",
+        "sep-3",
+        "heading-bridge",
+        "bridge-content"
+      ]
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h3"
+      }
+    },
+    "crypto-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-item",
+        "mica-item"
+      ]
+    },
+    "btc-item": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $58K lows. Record $1.79B weekly ETF outflows, BlackRock-led. F&G 15. STRC breaks par + mNAV < 1 — the institutional BTC thesis is cracking on both legs."
+      }
+    },
+    "mica-item": {
+      "type": "Text",
+      "props": {
+        "text": "MiCA July 1: Binance EU position closures in 4 days. OKX capturing the flow. CLARITY Act 60% on Kalshi."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-macro": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO / TRADFI",
+        "level": "h3"
+      }
+    },
+    "macro-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "chips-item",
+        "hormuz-item"
+      ]
+    },
+    "chips-item": {
+      "type": "Text",
+      "props": {
+        "text": "AI chips weak + Nasdaq rotating to healthcare and small caps. Same read as yesterday."
+      }
+    },
+    "hormuz-item": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz oil inverted in 12h: crude bid at 21:00, crude falling at 09:00 on tanker resumption. Same event, opposite outcome — zero transmission to BTC."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h3"
+      }
+    },
+    "new-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-item-1",
+        "new-item-2",
+        "new-item-3",
+        "new-item-4"
+      ]
+    },
+    "new-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "STRC breaks par + mNAV < 1 (threshold breach — prior was stress, now it's broken)"
+      }
+    },
+    "new-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "Bitwise stakes $114M in HYPE (thesis → execution; prior was $319/2028 price target)"
+      }
+    },
+    "new-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "Solana $250M USDC minted + $W/$JTO setups (different demand vector than yest's $3B tokenized stocks)"
+      }
+    },
+    "new-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "Small-cap + equal-weight outperforming mega-caps + VIX contained (new breadth signal)"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-bridge": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h3"
+      }
+    },
+    "bridge-content": {
+      "type": "Text",
+      "props": {
+        "text": "STRC mNAV < 1 + $1.79B ETF outflows hitting simultaneously breaks the institutional BTC bid mechanics — not a dip, a model failure. Solana $250M USDC mint at the same moment is the rotation receipt."
+      }
+    }
+  }
+}
