@@ -1,24 +1,18 @@
-*GitHub Trending — 2026-06-26*
+*GitHub Trending — 2026-06-27*
 
-*Top pick* — [opendatalab/MinerU](https://github.com/opendatalab/MinerU)
-A 2-year-old PDF→markdown parser spiking 644 stars in a day — doc ingestion is the bottleneck for grounded agents and this is the most credible OSS pipeline shipping figure extraction + equation parsing today.
+*Top pick* — [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach)
+one dependency lets an agent read the four loudest public feeds — Twitter, Reddit, YouTube, GitHub — without per-source scraper plumbing.
 
 *AI/ML*
-• [opendatalab/MinerU](https://github.com/opendatalab/MinerU) — ★ 644 today (70k total) · Python · [RETURNING]
-turns PDFs and Office docs into LLM-ready markdown/JSON with figure extraction and equation parsing — the missing piece for doc-grounded agents
+• [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) — ★ 1.2k today (42.8k total) · Python · [ACCELERATING]
+drop-in agent eyes across Twitter, Reddit, YouTube, GitHub. no per-source plumbing per agent.
 
-• [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) — ★ 571 today (21.5k total) · Python · [ACCELERATING]
-817 cyber tactics mapped to MITRE ATT&CK / NIST CSF 2.0 / ATLAS — turn-key skills directory drop-in for security agents
+• [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) — ★ 243 today (1.4k total) · Python · [ACCELERATING]
+official AWS MCP servers + skills + plugins, not community ports. versioning and IAM scoped properly.
 
-• [xbtlin/ai-berkshire](https://github.com/xbtlin/ai-berkshire) — ★ 309 today (2.6k total) · Python · [ACCELERATING]
-multi-agent value-investing harness on Claude Code — orchestrates research, valuation, devil's-advocate per ticker
-
-• [alibaba/page-agent](https://github.com/alibaba/page-agent) — ★ 163 today (20.1k total) · TypeScript · [RETURNING]
-in-page JS GUI agent runs inside the browser DOM, no playwright bridge — natural-language web automation without a backend driver
-
-*Web/Apps*
-• [mauriceboe/TREK](https://github.com/mauriceboe/TREK) — ★ 241 today (7.1k total) · TypeScript · [ACCELERATING]
-self-hosted travel planner with real-time collab, SSO, PWA, packing lists, budgets — google-trips replacement that runs on your own server
+*Infra*
+• [simplex-chat/simplex-chat](https://github.com/simplex-chat/simplex-chat) — ★ 432 today (13.0k total) · Haskell · [RETURNING]
+v6.5.5 ships anonymous-credential supporter badges. reputation without identity on the only messenger that holds no user IDs.
 
 ---
-sources: trending=ok · gh_api=ok · kept 5/16
+sources: trending=ok · gh_api=ok · kept 3/17

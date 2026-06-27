@@ -1,0 +1,278 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-27"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_top_pick",
+        "sep_1",
+        "section_aiml",
+        "sep_2",
+        "section_infra",
+        "sep_3",
+        "text_sources"
+      ]
+    },
+    "section_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_top_pick",
+        "story_panniantong_1",
+        "text_desc_1"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "story_panniantong_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Panniantong/Agent-Reach",
+        "href": "https://github.com/Panniantong/Agent-Reach"
+      }
+    },
+    "text_desc_1": {
+      "type": "Text",
+      "props": {
+        "text": "one dependency lets an agent read the four loudest public feeds — Twitter, Reddit, YouTube, GitHub — without per-source scraper plumbing."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_aiml",
+        "aiml_item_1",
+        "aiml_item_2"
+      ]
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story_aiml_1",
+        "meta_aiml_1",
+        "desc_aiml_1"
+      ]
+    },
+    "story_aiml_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Panniantong/Agent-Reach",
+        "href": "https://github.com/Panniantong/Agent-Reach",
+        "source": "Python"
+      }
+    },
+    "meta_aiml_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_aiml_1",
+        "badge_status_aiml_1"
+      ]
+    },
+    "text_stars_aiml_1": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1.2k today (42.8k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_status_aiml_1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc_aiml_1": {
+      "type": "Text",
+      "props": {
+        "text": "drop-in agent eyes across Twitter, Reddit, YouTube, GitHub. no per-source plumbing per agent."
+      }
+    },
+    "aiml_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story_aiml_2",
+        "meta_aiml_2",
+        "desc_aiml_2"
+      ]
+    },
+    "story_aiml_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aws/agent-toolkit-for-aws",
+        "href": "https://github.com/aws/agent-toolkit-for-aws",
+        "source": "Python"
+      }
+    },
+    "meta_aiml_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_aiml_2",
+        "badge_status_aiml_2"
+      ]
+    },
+    "text_stars_aiml_2": {
+      "type": "Text",
+      "props": {
+        "text": "★ 243 today (1.4k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_status_aiml_2": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc_aiml_2": {
+      "type": "Text",
+      "props": {
+        "text": "official AWS MCP servers + skills + plugins, not community ports. versioning and IAM scoped properly."
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_infra",
+        "infra_item_1"
+      ]
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "infra_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story_infra_1",
+        "meta_infra_1",
+        "desc_infra_1"
+      ]
+    },
+    "story_infra_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "simplex-chat/simplex-chat",
+        "href": "https://github.com/simplex-chat/simplex-chat",
+        "source": "Haskell"
+      }
+    },
+    "meta_infra_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_stars_infra_1",
+        "badge_status_infra_1"
+      ]
+    },
+    "text_stars_infra_1": {
+      "type": "Text",
+      "props": {
+        "text": "★ 432 today (13.0k total)",
+        "variant": "caption"
+      }
+    },
+    "badge_status_infra_1": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "desc_infra_1": {
+      "type": "Text",
+      "props": {
+        "text": "v6.5.5 ships anonymous-credential supporter badges. reputation without identity on the only messenger that holds no user IDs."
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/17",
+        "variant": "muted"
+      }
+    }
+  }
+}
