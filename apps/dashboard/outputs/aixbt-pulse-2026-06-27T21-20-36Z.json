@@ -1,0 +1,280 @@
+{
+  "root": "card-aixbt-pulse",
+  "state": {},
+  "elements": {
+    "card-aixbt-pulse": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-27 21:00Z"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-section",
+        "sep1",
+        "tradfi-section",
+        "sep2",
+        "new-pull-section",
+        "sep3",
+        "bridge-section"
+      ]
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-heading",
+        "btc-item",
+        "solana-item"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h2"
+      }
+    },
+    "btc-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-stat",
+        "btc-badge",
+        "btc-desc"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$60K"
+      }
+    },
+    "btc-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "extreme fear",
+        "variant": "destructive"
+      }
+    },
+    "btc-desc": {
+      "type": "Text",
+      "props": {
+        "text": "3 consecutive red quarters looming, STRC preferred-share fallout eroding Strategy trust. Bounce didn't fix the mechanics.",
+        "variant": "body"
+      }
+    },
+    "solana-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "solana-stat",
+        "solana-desc"
+      ]
+    },
+    "solana-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana Daily DEX Volume",
+        "value": "$553M",
+        "delta": "ATH"
+      }
+    },
+    "solana-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Aave/Morpho racing to accept tokenized stocks as DeFi collateral.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi-heading",
+        "oil-item",
+        "yields-item"
+      ]
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h2"
+      }
+    },
+    "oil-item": {
+      "type": "Text",
+      "props": {
+        "text": "Oil below pre-conflict despite US strikes on Iranian missile sites. Hormuz tanker traffic resumed fast enough to cancel the crude premium.",
+        "variant": "body"
+      }
+    },
+    "yields-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yields-stats-grid",
+        "yields-desc"
+      ]
+    },
+    "yields-stats-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "yields-stat",
+        "vix-stat"
+      ]
+    },
+    "yields-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "10-year yield",
+        "value": "4.37%"
+      }
+    },
+    "vix-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "VIX",
+        "value": "18.5"
+      }
+    },
+    "yields-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Dipped on GDP upward revision + Fed hold. Healthcare + lower oil cushioning equities.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-pull-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-pull-heading",
+        "solana-summer-item",
+        "grayscale-item",
+        "micron-item"
+      ]
+    },
+    "new-pull-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h2"
+      }
+    },
+    "solana-summer-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "solana-summer-badge",
+        "solana-summer-text"
+      ]
+    },
+    "solana-summer-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Solana summer",
+        "variant": "secondary"
+      }
+    },
+    "solana-summer-text": {
+      "type": "Text",
+      "props": {
+        "text": "Narrative surfaced — Ansem-linked memecoin pumps, Pump.fun trench activity back.",
+        "variant": "body"
+      }
+    },
+    "grayscale-item": {
+      "type": "Text",
+      "props": {
+        "text": "Grayscale naming CLARITY Act as the institutional protocol flow catalyst (named actor, not just Kalshi odds).",
+        "variant": "body"
+      }
+    },
+    "micron-item": {
+      "type": "Text",
+      "props": {
+        "text": "Micron rally fade → chip-led Nasdaq de-risking (prior was directional continuation, now has a named catalyst).",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-heading",
+        "bridge-text"
+      ]
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h2"
+      }
+    },
+    "bridge-text": {
+      "type": "Text",
+      "props": {
+        "text": "Quarterly close June 30 + STRC preferred-share fallout = structured selling regardless of intraday BTC bid. \"Eroding trust\" is softer framing than this morning's \"mNAV < 1 breach\" — same mechanic. Meanwhile Solana $553M DEX ATH + Aave/Morpho tokenized-equity collateral push = the rotation has infrastructure behind it now, not just a narrative.",
+        "variant": "body"
+      }
+    }
+  }
+}
