@@ -1,0 +1,679 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-27",
+        "description": "Crypto narrative positions, reflexivity alerts, and regime shifts"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "transitions_section",
+        "sep_1",
+        "reflexivity_section",
+        "sep_2",
+        "positions_section",
+        "sep_3",
+        "map_section",
+        "sep_4",
+        "pattern_section"
+      ]
+    },
+    "transitions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_transitions",
+        "trans_persisted",
+        "trans_resurfaced",
+        "trans_new_hype",
+        "trans_new_longcycle",
+        "trans_new_base",
+        "trans_dead"
+      ]
+    },
+    "h_transitions": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      }
+    },
+    "trans_persisted": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans_p_badge",
+        "trans_p_text"
+      ]
+    },
+    "trans_p_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PERSISTED",
+        "variant": "default"
+      }
+    },
+    "trans_p_text": {
+      "type": "Text",
+      "props": {
+        "text": "\"Crypto needs new narrative\" meta-bear (NEW 6-26 5↑↑) — 24h half-life rule BROKEN day 2. NEW structural confirms: $1.79B ETF outflows record (single day), BTC tapped $58k (Sept-2024 low), STRC mNAV<1 (institutional bid mechanics breaking), F&G 15 = 4th day Extreme Fear, MiCA July 1 EU closures pending. Reactive bears died in 24h; this one is hardening into a regime.",
+        "variant": "body"
+      }
+    },
+    "trans_resurfaced": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans_r_badge",
+        "trans_r_text"
+      ]
+    },
+    "trans_r_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RESURFACED",
+        "variant": "secondary"
+      }
+    },
+    "trans_r_text": {
+      "type": "Text",
+      "props": {
+        "text": "Selective-liquidity slate (DEAD 6-26 after 24h life) — @NOIRSINGULARIS same exact TAO/WLD/HYPE/ONDO/PENDLE ticker list returns. NOT noise this time: Bitwise just took $114M HYPE stake = institutional receipt under the meta-bear. The slate is the playable shape if you're not exiting crypto outright.",
+        "variant": "body"
+      }
+    },
+    "trans_new_hype": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans_h_badge",
+        "trans_h_text"
+      ]
+    },
+    "trans_h_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "outline"
+      }
+    },
+    "trans_h_text": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE-as-perp-vertical (@trevor_flipper \"perps = business vertical I was most bullish on outside AI\") + Bitwise $114M stake same day = builder/institutional alignment.",
+        "variant": "body"
+      }
+    },
+    "trans_new_longcycle": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans_lc_badge",
+        "trans_lc_text"
+      ]
+    },
+    "trans_lc_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "outline"
+      }
+    },
+    "trans_lc_text": {
+      "type": "Text",
+      "props": {
+        "text": "Long-cycle 2027-29 / $500k BTC (@3orovik) — cope-shaped counter-frame; matters because it shows where bag-holders are anchoring.",
+        "variant": "body"
+      }
+    },
+    "trans_new_base": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans_b_badge",
+        "trans_b_text"
+      ]
+    },
+    "trans_b_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "outline"
+      }
+    },
+    "trans_b_text": {
+      "type": "Text",
+      "props": {
+        "text": "Base ecosystem = onchain-trading + tokenized-RWA leader (@jessepollak) — discount native-shill but Coinbase x402 stack + Base RWA pipeline is the receipt.",
+        "variant": "body"
+      }
+    },
+    "trans_dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trans_d_badge",
+        "trans_d_text"
+      ]
+    },
+    "trans_d_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEAD",
+        "variant": "destructive"
+      }
+    },
+    "trans_d_text": {
+      "type": "Text",
+      "props": {
+        "text": "\"BTC vs AI institutional battle\" (NEW 6-26 Emerging Mixed) — absorbed into meta-bear; framing without portfolio actions doesn't survive.",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reflexivity_section": {
+      "type": "Alert",
+      "props": {
+        "title": "REFLEXIVITY ALERT",
+        "type": "warning"
+      },
+      "children": [
+        "reflexivity_stack"
+      ]
+    },
+    "reflexivity_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reflex_1",
+        "reflex_2",
+        "reflex_3"
+      ]
+    },
+    "reflex_1": {
+      "type": "Text",
+      "props": {
+        "text": "STRC mNAV < 1 + $1.79B ETF outflows simultaneously — the institutional BTC bid model (mNAV>1 buyback flywheel + ETF accumulation) is now broken in BOTH legs same day. Not a dip; a mechanism failure. This is the structural backing the meta-bear needed.",
+        "variant": "body"
+      }
+    },
+    "reflex_2": {
+      "type": "Text",
+      "props": {
+        "text": "Solana $250M USDC mint — capital pre-positioning under stablecoin sidelines while waiting for shape. USDT dominance shift carries; USDC mint = rotation receipt, not exit.",
+        "variant": "body"
+      }
+    },
+    "reflex_3": {
+      "type": "Text",
+      "props": {
+        "text": "Bitwise $114M HYPE stake — institutional product team picks ONE name from the dead \"selective-liquidity slate\" 24h after death. The slate is reflexively reviving because PMs need somewhere to deploy that isn't broad-crypto FADE.",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "positions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_positions",
+        "pos_frontrun",
+        "pos_ride",
+        "pos_fade",
+        "pos_watch",
+        "pos_ignore"
+      ]
+    },
+    "h_positions": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      }
+    },
+    "pos_frontrun": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_fr_badge",
+        "pos_fr_text"
+      ]
+    },
+    "pos_fr_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FRONT-RUN (0)",
+        "variant": "outline"
+      }
+    },
+    "pos_fr_text": {
+      "type": "Text",
+      "props": {
+        "text": "4th consecutive day. No Emerging+contrarian-edge with named driver clears the bar.",
+        "variant": "body"
+      }
+    },
+    "pos_ride": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_ride_badge",
+        "pos_ride_items"
+      ]
+    },
+    "pos_ride_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE (5)",
+        "variant": "secondary"
+      }
+    },
+    "pos_ride_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ride_1",
+        "ride_2",
+        "ride_3",
+        "ride_4",
+        "ride_5"
+      ]
+    },
+    "ride_1": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent infra (5 ↑ Peak Bull) — x402 480k agents / $50M cumulative / 265% wkly tx growth since Mar; Anthropic Mythos/Stripe Claude Fable 5 50M-line migration TODAY harden the rail.",
+        "variant": "body"
+      }
+    },
+    "ride_2": {
+      "type": "Text",
+      "props": {
+        "text": "Stablecoins-as-rails (5 ↑ Peak Bull) — Solana $250M USDC mint today; USDT dom carry from 6-26.",
+        "variant": "body"
+      }
+    },
+    "ride_3": {
+      "type": "Text",
+      "props": {
+        "text": "RWA (5 → Peak Bull) — @OttoSuwen + RWA.xyz $26.7B distributed sustained; +185.8% YTD 2025.",
+        "variant": "body"
+      }
+    },
+    "ride_4": {
+      "type": "Text",
+      "props": {
+        "text": "Prediction markets (4 ↑↑ Rising Bull) — Polymarket $40B+ + Meta entry framing carry.",
+        "variant": "body"
+      }
+    },
+    "ride_5": {
+      "type": "Text",
+      "props": {
+        "text": "Selective-liquidity slate TAO/WLD/HYPE/ONDO/PENDLE (4 ↑ Rising Mixed RESURFACE) — Bitwise $114M HYPE = institutional confirm; play named tickers, NOT the index.",
+        "variant": "body"
+      }
+    },
+    "pos_fade": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_fade_badge",
+        "pos_fade_text"
+      ]
+    },
+    "pos_fade_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE (1)",
+        "variant": "destructive"
+      }
+    },
+    "pos_fade_text": {
+      "type": "Text",
+      "props": {
+        "text": "broad-crypto-narrative-leadership (5 ↑↑ Bear-meta structural) — short legacy meta proxies (memecoins, restaking); 4 RIDE narratives survived day 1 of meta-bear and now day 2 — do NOT short them.",
+        "variant": "body"
+      }
+    },
+    "pos_watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_watch_badge",
+        "pos_watch_items"
+      ]
+    },
+    "pos_watch_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH (3)",
+        "variant": "outline"
+      }
+    },
+    "pos_watch_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch_1",
+        "watch_2",
+        "watch_3"
+      ]
+    },
+    "watch_1": {
+      "type": "Text",
+      "props": {
+        "text": "cycle-2027/$500k-BTC long-dated cope (counter-frame matters)",
+        "variant": "body"
+      }
+    },
+    "watch_2": {
+      "type": "Text",
+      "props": {
+        "text": "Base-as-RWA-leader (Pollak native-shill discount)",
+        "variant": "body"
+      }
+    },
+    "watch_3": {
+      "type": "Text",
+      "props": {
+        "text": "agentic-finance VC cap tables (carry from 6-26, no shipped product)",
+        "variant": "body"
+      }
+    },
+    "pos_ignore": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_ignore_badge",
+        "pos_ignore_items"
+      ]
+    },
+    "pos_ignore_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "IGNORE",
+        "variant": "outline"
+      }
+    },
+    "pos_ignore_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ignore_1",
+        "ignore_2"
+      ]
+    },
+    "ignore_1": {
+      "type": "Text",
+      "props": {
+        "text": "quantum-resistance (@quipnetwork single-token shill)",
+        "variant": "body"
+      }
+    },
+    "ignore_2": {
+      "type": "Text",
+      "props": {
+        "text": "AI-eating-crypto generational-bet (folded into meta-bear), AI-slop debate / Figma / China-AI (non-crypto)",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "map_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_map",
+        "map_emerging",
+        "map_rising",
+        "map_peak",
+        "map_fading",
+        "map_dead"
+      ]
+    },
+    "h_map": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      }
+    },
+    "map_emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_e_label",
+        "map_e_text"
+      ]
+    },
+    "map_e_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Emerging",
+        "variant": "outline"
+      }
+    },
+    "map_e_text": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE-as-perp-vertical (NEW)",
+        "variant": "body"
+      }
+    },
+    "map_rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_r_label",
+        "map_r_text"
+      ]
+    },
+    "map_r_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Rising",
+        "variant": "secondary"
+      }
+    },
+    "map_r_text": {
+      "type": "Text",
+      "props": {
+        "text": "meta-bear \"crypto needs new narrative\" (PERSISTED day 2), selective-liquidity slate (RESURFACED), prediction markets, long-cycle-2027 cope (NEW), Base-RWA-leader (NEW)",
+        "variant": "body"
+      }
+    },
+    "map_peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_p_label",
+        "map_p_text"
+      ]
+    },
+    "map_p_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Peak",
+        "variant": "default"
+      }
+    },
+    "map_p_text": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent infra, RWA, stablecoins",
+        "variant": "body"
+      }
+    },
+    "map_fading": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_f_label",
+        "map_f_text"
+      ]
+    },
+    "map_f_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Fading",
+        "variant": "outline"
+      }
+    },
+    "map_f_text": {
+      "type": "Text",
+      "props": {
+        "text": "0",
+        "variant": "body"
+      }
+    },
+    "map_dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_d_label",
+        "map_d_text"
+      ]
+    },
+    "map_d_label": {
+      "type": "Badge",
+      "props": {
+        "text": "Dead",
+        "variant": "destructive"
+      }
+    },
+    "map_d_text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC-vs-AI-institutional-battle (24h life), and the day-old DEAD-6 carry",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pattern_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_pattern",
+        "pattern_text"
+      ]
+    },
+    "h_pattern": {
+      "type": "Heading",
+      "props": {
+        "text": "Pattern read",
+        "level": "h3"
+      }
+    },
+    "pattern_text": {
+      "type": "Text",
+      "props": {
+        "text": "meta-bear breaking 24h rule = regime change candidate, not noise. Watch 6-28 for 3rd-day persistence + whether RIDE-5 hold a 6th day under the bear.",
+        "variant": "lead"
+      }
+    }
+  }
+}
