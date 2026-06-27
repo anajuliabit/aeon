@@ -1,0 +1,523 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi Overview",
+        "description": "2026-06-27"
+      },
+      "children": [
+        "summary-badge",
+        "tvl-stat",
+        "sep-1",
+        "chains-section",
+        "sep-2",
+        "movers-section",
+        "sep-3",
+        "fees-leaders-section",
+        "sep-4",
+        "fees-beating-section",
+        "sep-5",
+        "reversal-section",
+        "sep-6",
+        "dex-volume-section",
+        "sep-7",
+        "stables-section",
+        "sep-8",
+        "real-yield-section",
+        "sep-9",
+        "incentive-yield-section",
+        "sep-10",
+        "aero-note",
+        "sep-11",
+        "sources-text"
+      ]
+    },
+    "summary-badge": {
+      "type": "Text",
+      "props": {
+        "text": "Mixed: TVL drifts up, DEX vol cools -6%, stables flat.",
+        "variant": "lead"
+      }
+    },
+    "tvl-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$70.74B",
+        "delta": "+0.3% 24h / -3.5% 7d",
+        "trend": "up"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "chains-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "chains-heading",
+        "chains-table"
+      ]
+    },
+    "chains-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Chains",
+        "level": "h3"
+      }
+    },
+    "chains-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Chain",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "Ethereum",
+            "$37.7B"
+          ],
+          [
+            "BSC",
+            "$4.97B"
+          ],
+          [
+            "Solana",
+            "$4.82B"
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "movers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "movers-heading",
+        "mover-maple",
+        "mover-ethena"
+      ]
+    },
+    "movers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers — Protocols",
+        "level": "h3"
+      }
+    },
+    "mover-maple": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mover-maple-title",
+        "mover-maple-desc"
+      ]
+    },
+    "mover-maple-title": {
+      "type": "Text",
+      "props": {
+        "text": "↑ Maple +12% ($2.12B → $2.37B, Lending)"
+      }
+    },
+    "mover-maple-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Private-credit deposits accelerating, fees +886% 7d on $411k 24h confirms real lending demand",
+        "variant": "caption"
+      }
+    },
+    "mover-ethena": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mover-ethena-title",
+        "mover-ethena-desc"
+      ]
+    },
+    "mover-ethena-title": {
+      "type": "Text",
+      "props": {
+        "text": "↓ Ethena USDtb -21% ($928M → $736M, RWA)"
+      }
+    },
+    "mover-ethena-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Treasury-wrapper redemption day-3; unwind broadening from Invesco USTB (-28% 48h) to Ethena",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "fees-leaders-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fees-leaders-heading",
+        "fees-leaders-table"
+      ]
+    },
+    "fees-leaders-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees Leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "fees-leaders-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Protocol",
+          "24h Fees",
+          "vs 7d avg"
+        ],
+        "rows": [
+          [
+            "Tether",
+            "$16.1M",
+            "flat"
+          ],
+          [
+            "Circle USDC",
+            "$6.4M",
+            "-0.9%"
+          ],
+          [
+            "Hyperliquid Perps",
+            "$2.7M",
+            "+25%"
+          ]
+        ]
+      }
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "fees-beating-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fees-beating-heading",
+        "fees-beating-item-1",
+        "fees-beating-item-2"
+      ]
+    },
+    "fees-beating-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees Beating TVL (7d)",
+        "level": "h3"
+      }
+    },
+    "fees-beating-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fees-beating-item-1-title",
+        "fees-beating-item-1-desc"
+      ]
+    },
+    "fees-beating-item-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "• Uniswap V3 — fees +124% / TVL -4.9%"
+      }
+    },
+    "fees-beating-item-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "V3 fees re-accelerate, flips yesterday's V4-ties-V3 share leak",
+        "variant": "caption"
+      }
+    },
+    "fees-beating-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fees-beating-item-2-title",
+        "fees-beating-item-2-desc"
+      ]
+    },
+    "fees-beating-item-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "• Hyperliquid HLP — fees +63% / TVL -2.2%"
+      }
+    },
+    "fees-beating-item-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Perps fee flow lifts vault yield without deposit growth",
+        "variant": "caption"
+      }
+    },
+    "sep-5": {
+      "type": "Separator"
+    },
+    "reversal-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reversal-heading",
+        "reversal-body"
+      ]
+    },
+    "reversal-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "↔ Day-4 Reversal",
+        "level": "h3"
+      }
+    },
+    "reversal-body": {
+      "type": "Text",
+      "props": {
+        "text": "Aave V3 fees -35% 1d, -12.8% 7d wipes yesterday's +36% day-3 demand spike. Morpho Blue same: -53% 1d, day-3 carry burnt. Lending-demand fade real."
+      }
+    },
+    "sep-6": {
+      "type": "Separator"
+    },
+    "dex-volume-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dex-volume-heading",
+        "dex-volume-stat",
+        "dex-volume-breakdown"
+      ]
+    },
+    "dex-volume-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX Volume (24h)",
+        "level": "h3"
+      }
+    },
+    "dex-volume-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total DEX Volume",
+        "value": "$8.19B",
+        "delta": "-6.2% / +46% 7d",
+        "trend": "down"
+      }
+    },
+    "dex-volume-breakdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dex-vol-item-1",
+        "dex-vol-item-2",
+        "dex-vol-item-3"
+      ]
+    },
+    "dex-vol-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "Uniswap V3 — $818M (+15.6%, +144% 7d)"
+      }
+    },
+    "dex-vol-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "PancakeSwap V3 — $647M"
+      }
+    },
+    "dex-vol-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "Uniswap V4 — $546M (-37.5%, V4-V3 share flip)"
+      }
+    },
+    "sep-7": {
+      "type": "Separator"
+    },
+    "stables-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stables-heading",
+        "stables-stat",
+        "stables-detail"
+      ]
+    },
+    "stables-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stablecoins",
+        "level": "h3"
+      }
+    },
+    "stables-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Stablecoin Supply",
+        "value": "$312.5B",
+        "delta": "-0.14% 24h"
+      }
+    },
+    "stables-detail": {
+      "type": "Text",
+      "props": {
+        "text": "USDGO (Paxos GDN) +12% to $850M only notable net mint; USDTB -19.9% mirrors Ethena USDtb above",
+        "variant": "caption"
+      }
+    },
+    "sep-8": {
+      "type": "Separator"
+    },
+    "real-yield-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "real-yield-heading",
+        "real-yield-filter",
+        "real-yield-item-1",
+        "real-yield-item-2",
+        "real-yield-item-3"
+      ]
+    },
+    "real-yield-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Real Yield",
+        "level": "h3"
+      }
+    },
+    "real-yield-filter": {
+      "type": "Text",
+      "props": {
+        "text": "Sustainable, ≥$10M (filtered)",
+        "variant": "caption"
+      }
+    },
+    "real-yield-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "• WETH-USDT (Uniswap V3, ETH) — 36% apyBase ($75M TVL)"
+      }
+    },
+    "real-yield-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "• USDC-CBBTC (Uniswap V4, ETH) — 36% apyBase ($10M TVL)"
+      }
+    },
+    "real-yield-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "• WSOL-USDC (Raydium AMM, SOL) — 35% apyBase ($10M TVL)"
+      }
+    },
+    "sep-9": {
+      "type": "Separator"
+    },
+    "incentive-yield-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "incentive-yield-heading",
+        "incentive-yield-filter",
+        "incentive-yield-item-1",
+        "incentive-yield-item-2"
+      ]
+    },
+    "incentive-yield-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive Yield",
+        "level": "h3"
+      }
+    },
+    "incentive-yield-filter": {
+      "type": "Text",
+      "props": {
+        "text": "Points / emissions, ≥$25M (filtered)",
+        "variant": "caption"
+      }
+    },
+    "incentive-yield-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "• CVXCRV (Convex, ETH) — 24% apy via CRV/CVX/FXS rewards ($27M TVL)"
+      }
+    },
+    "incentive-yield-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "• USDC (Accountable, Monad) — 12% apy via ACC rewards ($46M TVL)"
+      }
+    },
+    "sep-10": {
+      "type": "Separator"
+    },
+    "aero-note": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's 39% USDC-AERO Slipstream pool slipped to $24.9M TVL — just under the $25M filter; yield held but capital exited.",
+        "variant": "muted"
+      }
+    },
+    "sep-11": {
+      "type": "Separator"
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: llama_tvl=ok llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none",
+        "variant": "caption"
+      }
+    }
+  }
+}
