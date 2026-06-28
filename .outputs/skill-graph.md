@@ -1,1 +1,1 @@
-*Skill Graph updated* — RETIRED_SKILLS: -4 | SHARED_STATE_EDGES: 195->9. PR: https://github.com/anajuliabit/aeon/pull/129
+*Skill Graph updated* — NEW_SKILLS: +68 | ENABLED_DELTA: -2 | DEPENDS_ON: 4->5 | SHARED_STATE: 9->36. 191 skills (42 enabled) across 5 categories. PR: https://github.com/anajuliabit/aeon/pull/149
