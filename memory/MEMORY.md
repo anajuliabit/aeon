@@ -11,7 +11,7 @@
 - **AAVE 6-24 HIGH 8/10 pick worked** — $76.09 → $86.33 by 6-26 morning (+13.4%) on Kraken-stake-$385M-rumor live bid; [TRENDING+UP] day-3. Confirms Aave V3 fees day-3 reversal -0.1% → +21% → +36% 7d through 6-26.
 - **SEI 6-25 HIGH 9/10 pick stopped out day 1** — entry $0.0584 → $0.0542 intraday 6-26 (-7.2%, hit invalidation). Giga 200K-TPS / EVM-migration / ETF / Xiaomi-wallet catalyst stack didn't survive the risk-off tape.
 - **PR #138 merged 6-24 21:37Z** — goal-tracker header drift fix. Queue empty until PR #147 (advisor hard-risk-layer #140 impl) opened 6-26 12:44Z by operator — first of 7-issue advisor sprint (#139–#145 filed 6-25).
-- **token-alert 5 clean CG days through 6-26** (ISS-023 closed 6-22) — no rail-break across WELL/MAMO/REPPO/GITLAWB; GITLAWB closest at 473bp slack on 15% rail.
+- **token-alert 7 clean CG days through 6-28** (ISS-023 closed 6-22) — no rail-break across WELL/MAMO/REPPO/GITLAWB; 6-28 watchlist green for first time since 6-22 (median +1.51%), GITLAWB ends 7-day red streak (+5.38%, first elevated-vol upside print 1.27× day-prior).
 - **on-chain-monitor 6-26 quiet 24h** — zero raw events post-6-25 address-poisoning escalation (3 fake-W1 baits planted under W2/W4 by `0xC3236716…`, attacker iterated within 48h). Dust did not repeat; legitimate W1↔Morpho/W2/W4 activity also paused. `known-addresses.yml` seeded 6-25 (5 op wallets + Morpho GA1 + phishing infra).
 
 ## Fleet Health Overview
@@ -34,10 +34,10 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | $0.00337204 -3.44% 6-26 (pinned at fresh local low, vol 0.34× 5-day mean) |
-| MAMO    | mamo               | 15%           | $0.00755086 -3.15% 6-26 (6-day continuous low extension; vol 1.23× mean — highest absolute vol of window) |
-| REPPO   | reppo              | 15%           | $0.01998087 -5.24% 6-26 (lost $0.02 handle; net +16.4% from 6-19 base) |
-| GITLAWB | gitlawb            | 15%           | $0.0000487 -10.27% 6-26 (6th consecutive red day; closest to 15% rail at 473bp slack; -43.4% from 6-15 top) |
+| WELL    | moonwell-artemis   | 10%           | $0.00340074 +1.10% 6-28 (2nd consecutive green, vol $72K = 0.05× mean — weakest vol print of 2026 watchlist run) |
+| MAMO    | mamo               | 15%           | $0.00788301 +0.96% 6-28 (2nd consecutive green after 6-day low extension; holds above $0.00785, vol 0.87× mean) |
+| REPPO   | reppo              | 15%           | $0.02106098 +1.92% 6-28 (3rd consecutive green, reclaims $0.02 with bid thinning vol 0.29×; net +22.7% from 6-19 base) |
+| GITLAWB | gitlawb            | 15%           | $0.00005011 +5.38% 6-28 (1st green after 7-day red streak; reclaims $0.00005; first elevated-vol upside print 1.27× day-prior) |
 
 ## Recent Patterns & Issues
 - **Today's 6-26 12:25Z token-pick APE HIGH 9/10 $0.151** — Yuga Labs ecosystem control 6-5, ApeMars staking 63% APY 6-19, Hyperliquid $1M whale 5x long; only sub-rank-200 large-cap green on red tape (+11.4% 24h / +19.3% 7d). Exit $0.185 / inv $0.131 / 14d. Market: SKIPPED (only 4 markets clear $50k vol post-football, no defensible ±10% fair value).
