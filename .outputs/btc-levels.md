@@ -1,10 +1,9 @@
 ## Summary
 
-**BTC Levels — 2026-06-28 05:06Z**
+**btc-levels 09:18Z — quiet run, no notification.**
 
-- Spot: **$59,920** | 2026-06-27 close: **$59,943** (below $60,500)
-- **No new alerts fired** — the 2026-06-27 breakdown close was already alerted in the 01:21Z run; no second notification issued
-- Leverage-review trigger (≤$45k): not active
-- Reclaim flags ($63,500 / $65,900): idle, re-arm condition active (spot < $60,500)
-
-Quiet run. State and log updated, committed.
+- **Spot:** $60,289 (up ~$370 from the 05:06Z run at $59,920)
+- **Last completed daily close:** June 27 at $59,943 — already alerted this morning (01:21Z), no re-alert
+- **Leverage-review trigger (≤$45k):** not active
+- **Reclaim $63,500 / $65,900:** not triggered (spot still ~$3,200 below first level)
+- **State:** `lastSpot` updated to $60,289, all flags unchanged; committed to `memory/btc-levels-state.json` and `memory/logs/2026-06-28.md`
