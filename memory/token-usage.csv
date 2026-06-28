@@ -575,3 +575,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-28,skill-freshness,claude-sonnet-4-6,30,31044,2410519,109960
 2026-06-28,token-pick,claude-opus-4-7,55,23787,3787023,141524
 2026-06-28,on-chain-monitor,claude-opus-4-7,18825,33163,3133404,171517
+2026-06-28,market-context-refresh,claude-sonnet-4-6,1833,28404,1010822,78787

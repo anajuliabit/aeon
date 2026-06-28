@@ -1,0 +1,162 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "market-context-refresh",
+        "description": "2026-06-28"
+      },
+      "children": [
+        "take-section",
+        "prices-section",
+        "sep-1",
+        "metrics-section",
+        "sep-2",
+        "narrative-section",
+        "sep-3",
+        "hot-market-section"
+      ]
+    },
+    "take-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "take-badge",
+        "conviction-text"
+      ]
+    },
+    "take-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "risk-off",
+        "variant": "destructive"
+      }
+    },
+    "conviction-text": {
+      "type": "Text",
+      "props": {
+        "text": "Conviction: high",
+        "variant": "lead"
+      }
+    },
+    "prices-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "btc-stat",
+        "eth-stat"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$60,024",
+        "delta": "−0.58%",
+        "trend": "down"
+      }
+    },
+    "eth-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,578",
+        "delta": "−0.42%",
+        "trend": "down"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fg-text",
+        "breadth-text",
+        "tvl-stat"
+      ]
+    },
+    "fg-text": {
+      "type": "Text",
+      "props": {
+        "text": "F&G: 18 (Extreme Fear)",
+        "variant": "body"
+      }
+    },
+    "breadth-text": {
+      "type": "Text",
+      "props": {
+        "text": "Breadth: 6/20",
+        "variant": "body"
+      }
+    },
+    "tvl-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$70.40B",
+        "delta": "−3.9% 7d",
+        "trend": "down"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narrative-section": {
+      "type": "Alert",
+      "props": {
+        "title": "Top Narrative",
+        "message": "structural meta-bear (rising — day 3+ persistent)",
+        "type": "warning"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hot-market-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hot-market-heading",
+        "hot-market-text"
+      ]
+    },
+    "hot-market-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Hot Market",
+        "level": "h4"
+      }
+    },
+    "hot-market-text": {
+      "type": "Text",
+      "props": {
+        "text": "\"Will Argentina win 2026 FIFA World Cup?\" YES 20.4%"
+      }
+    }
+  }
+}
