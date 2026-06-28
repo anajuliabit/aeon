@@ -1,16 +1,16 @@
 ## Summary
 
-**BTC Levels run — 2026-06-28T12:17Z — quiet run, no notification.**
+**btc-levels 16:36Z — quiet run, no notification sent.**
 
-| Reading | Value |
-|---|---|
-| Spot | $60,213 |
-| 2026-06-27 daily close | $59,943 (< $60,500) |
+- **Spot:** $59,596 (down $617 from the 12:17Z run's $60,213)
+- **2026-06-27 UTC daily close:** $59,943 (< $60,500 breakdown level)
 
 **Level checks:**
-- **Leverage-review (≤$45k):** No — spot $60,213
-- **Breakdown close (<$60,500):** Close qualifies, but already alerted for the 2026-06-27 close in the 01:21Z run — no repeat
-- **Reclaim $63,500:** No — spot below level
-- **Reclaim $65,900:** No — spot below level
+| Check | Result |
+|---|---|
+| Spot ≤ $45,000 (leverage-review) | No — spot $59,596 >> $45k |
+| Daily close < $60,500 (breakdown) | Already alerted for 2026-06-27 close — skip |
+| Spot ≥ $63,500 (reclaim) | No |
+| Spot ≥ $65,900 (reclaim) | No |
 
-No alerts fired. State updated with fresh spot price, flags unchanged. Files committed.
+Spot is back below $60k and the re-arm condition (spot < $60,500) is active for reclaim flags, but they're already false. State updated and committed.
