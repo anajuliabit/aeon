@@ -1,0 +1,412 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending"
+      },
+      "children": [
+        "date_heading",
+        "sep1",
+        "top_pick_section",
+        "sep2",
+        "aiml_section",
+        "sep3",
+        "web_section",
+        "sep4",
+        "source_status"
+      ]
+    },
+    "date_heading": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-28",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top_pick_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top_pick_label",
+        "cognee_top",
+        "cognee_top_desc"
+      ]
+    },
+    "top_pick_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h4"
+      }
+    },
+    "cognee_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "topoteretes/cognee",
+        "href": "https://github.com/topoteretes/cognee"
+      }
+    },
+    "cognee_top_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Agent memory is the next infra primitive after RAG — cognee shipped v1.2.2 on 6-26 and the trending page caught up today.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aiml_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml_heading",
+        "cognee_aiml_item",
+        "ppt_master_item",
+        "open_gen_ai_item"
+      ]
+    },
+    "aiml_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "cognee_aiml_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cognee_aiml_header",
+        "cognee_aiml_meta",
+        "cognee_aiml_desc"
+      ]
+    },
+    "cognee_aiml_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cognee_aiml_link",
+        "cognee_status_badge"
+      ]
+    },
+    "cognee_aiml_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "topoteretes/cognee",
+        "href": "https://github.com/topoteretes/cognee"
+      }
+    },
+    "cognee_status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      }
+    },
+    "cognee_aiml_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cognee_stars",
+        "cognee_lang"
+      ]
+    },
+    "cognee_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "780",
+        "delta": "24k total"
+      }
+    },
+    "cognee_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "cognee_aiml_desc": {
+      "type": "Text",
+      "props": {
+        "text": "persistent knowledge-graph engine for agents — v1.2.2 release 6-26 drives a 33× spike vs 23/d historical baseline.",
+        "variant": "body"
+      }
+    },
+    "ppt_master_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ppt_header",
+        "ppt_meta",
+        "ppt_desc"
+      ]
+    },
+    "ppt_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ppt_link",
+        "ppt_badge"
+      ]
+    },
+    "ppt_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "hugohe3/ppt-master",
+        "href": "https://github.com/hugohe3/ppt-master"
+      }
+    },
+    "ppt_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "ppt_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ppt_stars",
+        "ppt_lang"
+      ]
+    },
+    "ppt_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "589",
+        "delta": "33k total"
+      }
+    },
+    "ppt_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "ppt_desc": {
+      "type": "Text",
+      "props": {
+        "text": "generates editable .pptx with native shapes, voiced speaker notes, and template-following — not images of slides, real PowerPoint.",
+        "variant": "body"
+      }
+    },
+    "open_gen_ai_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "open_gen_header",
+        "open_gen_meta",
+        "open_gen_desc"
+      ]
+    },
+    "open_gen_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "open_gen_link",
+        "open_gen_badge"
+      ]
+    },
+    "open_gen_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Anil-matcha/Open-Generative-AI",
+        "href": "https://github.com/Anil-matcha/Open-Generative-AI"
+      }
+    },
+    "open_gen_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "open_gen_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "open_gen_stars",
+        "open_gen_lang"
+      ]
+    },
+    "open_gen_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "255",
+        "delta": "22k total"
+      }
+    },
+    "open_gen_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "JavaScript",
+        "variant": "secondary"
+      }
+    },
+    "open_gen_desc": {
+      "type": "Text",
+      "props": {
+        "text": "self-hosted MIT frontend over 200 image+video models (Flux, Kling, Sora, Veo) — single pane, no content filters layer.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "web_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "web_heading",
+        "open_seo_item"
+      ]
+    },
+    "web_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      }
+    },
+    "open_seo_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "seo_header",
+        "seo_meta",
+        "seo_desc"
+      ]
+    },
+    "seo_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "seo_link",
+        "seo_badge"
+      ]
+    },
+    "seo_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "every-app/open-seo",
+        "href": "https://github.com/every-app/open-seo"
+      }
+    },
+    "seo_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "seo_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "seo_stars",
+        "seo_lang"
+      ]
+    },
+    "seo_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "239",
+        "delta": "3.6k total"
+      }
+    },
+    "seo_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "seo_desc": {
+      "type": "Text",
+      "props": {
+        "text": "open-source Semrush/Ahrefs alternative — day-2 after borderline 2.4× yesterday, today 8× the historical baseline.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "source_status": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/20",
+        "variant": "caption"
+      }
+    }
+  }
+}
