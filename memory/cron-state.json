@@ -11,14 +11,14 @@
     "last_success": "2026-05-21T12:33:53Z"
   },
   "defi-overview": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-27T12:52:33Z",
     "total_runs": 57,
     "total_successes": 39,
     "total_failures": 18,
     "consecutive_failures": 0,
     "success_rate": 0.68,
-    "last_dispatch": "2026-06-27T12:41:08Z",
+    "last_dispatch": "2026-06-28T12:15:56Z",
     "last_failed": "2026-06-21T12:14:19Z",
     "last_error": "b5650a1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -44,14 +44,14 @@
     "last_error": "041e064\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-pick": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-27T12:52:36Z",
     "total_runs": 57,
     "total_successes": 36,
     "total_failures": 21,
     "consecutive_failures": 0,
     "success_rate": 0.63,
-    "last_dispatch": "2026-06-27T12:41:08Z",
+    "last_dispatch": "2026-06-28T12:15:56Z",
     "last_failed": "2026-06-21T12:14:38Z",
     "last_error": "cb4accf\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
@@ -179,8 +179,8 @@
     "last_error": "844e662\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-alert": {
-    "last_dispatch": "2026-06-27T12:41:08Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-28T12:15:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-27T12:43:12Z",
     "total_runs": 47,
     "total_successes": 35,
@@ -510,8 +510,8 @@
     "last_error": "1aad75a\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-movers": {
-    "last_dispatch": "2026-06-27T12:41:08Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-28T12:15:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-27T12:48:38Z",
     "total_runs": 42,
     "total_successes": 27,
@@ -617,8 +617,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-06-28T09:14:21Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-28T12:15:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-28T09:18:48Z",
     "total_runs": 156,
     "total_successes": 96,
