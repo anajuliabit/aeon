@@ -1,16 +1,14 @@
+Heartbeat complete.
+
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
+
 ## Summary
 
-Heartbeat ran clean — no notification fired (all findings are same-signature continuations already covered in the last 48h of logs).
+Ran the heartbeat skill (afternoon 14:00 UTC tick, 15min late). All findings dedup-clean against last 48h logs → no notification fired.
 
-**Findings (all P0 dedup-skipped):**
-- ✅ No failed/stuck skills, no cf≥3
-- ⚠️ Chronic tail unchanged: 20 skills with sr<0.5 sharing the `output_tokens=0` sandbox-truncation signature (ISS-019/020/021/024/025 cluster, day 10)
-- ✅ Self-check: heartbeat last_success 13h ago (well under 36h gate)
-- 1 open PR (#148 fix(agent-buzz), 15h old, under stall threshold); 15 open issues incl NEW ISS-026 (heartbeat missing_pattern, filed by skill-evals at 06:47Z this morning — surfaced via that skill's own notification, no duplicate fire)
-- Carried-context flags: BTC breakdown day 3 confirmed (6-27 close $59,943 < $60,500), XAI quota day 13, on-chain config day 21, sandbox truncation day 10
+- **P0:** 0 failed / 0 stuck / 0 cf≥3. Chronic sr<0.5 tail unchanged (20 skills, all output_tokens=0 sandbox-truncation cluster ISS-019/020/021/024/025). Self-check healthy (last_success ~5h ago).
+- **P1:** PR #148 (agent-buzz fix) open ~20h, under 24h stall. 0 urgent issues.
+- **P2:** sandbox-truncation day 10 / XAI quota day 13 / BTC breakdown day 3 (spot $60,213 still pinned <$60,500) / on-chain config day 21 — all carried.
+- **P3:** all 44 enabled skills accounted for; 3 never-run (autoresearch workflow_dispatch + fork-skill-gap 21:00Z + operator-scorecard Mon 10:30Z).
 
-**Files updated:**
-- `docs/status.md` — regenerated with 🔴 DEGRADED overall, 41 enabled skill rows + 3 never-run, 15 open issues (ISS-026 added), updated timestamp 2026-06-28 09:15 UTC, next scheduled token-alert 12:00. Token Pulse section omitted (no `articles/token-report-*.md` exists).
-- `memory/logs/2026-06-28.md` — appended heartbeat entry with full P0–P3 checks + dedup audit.
-
-**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
+Files: regenerated `docs/status.md` (41 enabled-skill rows sorted last-run desc + 3 never-run sunk; 15 open issues; midday timestamps refreshed; token-pulse section omitted — no `articles/token-report-*.md` on disk). Logged to `memory/logs/2026-06-28.md`. Next scheduled: fleet-control at 15:00 UTC.
