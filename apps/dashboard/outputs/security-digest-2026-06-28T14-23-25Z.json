@@ -1,0 +1,433 @@
+{
+  "root": "card_security_digest",
+  "state": {},
+  "elements": {
+    "card_security_digest": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-06-28",
+        "description": "Verdict: nothing urgent today. 4 to schedule, 1 to monitor. KEV adds: 0 net-new (3rd zero-cadence day)."
+      },
+      "children": [
+        "verdict_sources",
+        "heading_patch_this_week",
+        "cve1_stack",
+        "cve2_stack",
+        "cve3_stack",
+        "cve4_stack",
+        "separator1",
+        "heading_monitor",
+        "cve5_stack"
+      ]
+    },
+    "verdict_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "caption"
+      }
+    },
+    "heading_patch_this_week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "cve1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve1_link",
+        "cve1_product",
+        "cve1_scores",
+        "cve1_poc",
+        "cve1_desc",
+        "cve1_action"
+      ]
+    },
+    "cve1_link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-48788",
+        "href": "https://github.com/advisories/GHSA-4c8j-mgm4-qqvp"
+      }
+    },
+    "cve1_product": {
+      "type": "Text",
+      "props": {
+        "text": "Remark42 (Go)",
+        "variant": "lead"
+      }
+    },
+    "cve1_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cve1_cvss",
+        "cve1_epss"
+      ]
+    },
+    "cve1_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.2"
+      }
+    },
+    "cve1_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.003"
+      }
+    },
+    "cve1_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "no public PoC",
+        "variant": "outline"
+      }
+    },
+    "cve1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Image proxy at `/api/v1/img` trusts the remote `Content-Type` to accept, then sniffs bytes to serve — HTML/JS body claiming `image/png` lands as XSS on remark42's origin.",
+        "variant": "body"
+      }
+    },
+    "cve1_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade remark42 to ≥1.16.0"
+      }
+    },
+    "cve2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve2_title",
+        "cve2_links",
+        "cve2_product",
+        "cve2_scores",
+        "cve2_desc",
+        "cve2_action"
+      ]
+    },
+    "cve2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "gonic 3-CVE cluster",
+        "level": "h3"
+      }
+    },
+    "cve2_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve2_link1",
+        "cve2_link2",
+        "cve2_link3"
+      ]
+    },
+    "cve2_link1": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-49340",
+        "href": "https://github.com/advisories/GHSA-4gxv-p5g5-j7w7"
+      }
+    },
+    "cve2_link2": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-49339",
+        "href": "https://github.com/advisories/GHSA-2fp4-5v5c-4448"
+      }
+    },
+    "cve2_link3": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-49338",
+        "href": "https://github.com/advisories/GHSA-hmgp-w9jm-vp95"
+      }
+    },
+    "cve2_product": {
+      "type": "Text",
+      "props": {
+        "text": "go.senan.xyz/gonic",
+        "variant": "lead"
+      }
+    },
+    "cve2_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cve2_cvss",
+        "cve2_epss"
+      ]
+    },
+    "cve2_cvss": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 8.1 / 7.1 / 7.1"
+      }
+    },
+    "cve2_epss": {
+      "type": "Text",
+      "props": {
+        "text": "EPSS ~0.002 each"
+      }
+    },
+    "cve2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Any authenticated Subsonic user gets arbitrary file write via `createPlaylist` (unreachable guard + no path containment, creates dirs with `0o777`) + path-traversal read + IDOR delete of any user's playlist.",
+        "variant": "body"
+      }
+    },
+    "cve2_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade gonic to ≥0.21.0"
+      }
+    },
+    "cve3_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve3_link",
+        "cve3_product",
+        "cve3_scores",
+        "cve3_poc",
+        "cve3_desc",
+        "cve3_action"
+      ]
+    },
+    "cve3_link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-49291",
+        "href": "https://github.com/advisories/GHSA-2r68-g678-7qr3"
+      }
+    },
+    "cve3_product": {
+      "type": "Text",
+      "props": {
+        "text": "mcp-memory-service (pip)",
+        "variant": "lead"
+      }
+    },
+    "cve3_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cve3_cvss",
+        "cve3_epss"
+      ]
+    },
+    "cve3_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.1"
+      }
+    },
+    "cve3_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.003"
+      }
+    },
+    "cve3_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "no public PoC",
+        "variant": "outline"
+      }
+    },
+    "cve3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "MCP `/mcp` endpoint gates `tools/call` on OAuth `read` scope only, then dispatches mutating tools — `store_memory` / `delete_memory` callable from read-only clients. REST routes correctly require `write`; the MCP path is the bypass.",
+        "variant": "body"
+      }
+    },
+    "cve3_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade mcp-memory-service to ≥10.65.3"
+      }
+    },
+    "cve4_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve4_link",
+        "cve4_product",
+        "cve4_severity",
+        "cve4_epss",
+        "cve4_desc",
+        "cve4_action"
+      ]
+    },
+    "cve4_link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-48797",
+        "href": "https://github.com/advisories/GHSA-f65r-h4g3-3h9h"
+      }
+    },
+    "cve4_product": {
+      "type": "Text",
+      "props": {
+        "text": "backpropagate (pip)",
+        "variant": "lead"
+      }
+    },
+    "cve4_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "severity critical",
+        "variant": "destructive"
+      }
+    },
+    "cve4_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.003"
+      }
+    },
+    "cve4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "`backprop ui --auth user:pass` and `--share` documented as the security controls; the wiring is missing — UI exposes dataset upload, model load, training control, GGUF export, HF Hub push with no auth on either path.",
+        "variant": "body"
+      }
+    },
+    "cve4_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action Required",
+        "message": "Upgrade backpropagate to ≥1.2.0; until then bind to 127.0.0.1 only"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "cve5_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve5_link",
+        "cve5_product",
+        "cve5_meta",
+        "cve5_affects",
+        "cve5_desc",
+        "cve5_action"
+      ]
+    },
+    "cve5_link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-c6v2-3ffm-vcmc",
+        "href": "https://github.com/advisories/GHSA-c6v2-3ffm-vcmc"
+      }
+    },
+    "cve5_product": {
+      "type": "Text",
+      "props": {
+        "text": "nebula-mesh (Go)",
+        "variant": "lead"
+      }
+    },
+    "cve5_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cve5_cvss",
+        "cve5_status"
+      ]
+    },
+    "cve5_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.8"
+      }
+    },
+    "cve5_status": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "outline"
+      }
+    },
+    "cve5_affects": {
+      "type": "Text",
+      "props": {
+        "text": "Affects ≤0.3.4",
+        "variant": "caption"
+      }
+    },
+    "cve5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Web UI `/ui/*` skipped the per-operator CA scoping applied to the JSON API — any non-admin operator (e.g. self-registered / OIDC) can block, delete, or read any other operator's hosts and networks.",
+        "variant": "body"
+      }
+    },
+    "cve5_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Restrict UI to trusted operators until patch lands; treat self-registration / OIDC as admin-equivalent meantime"
+      }
+    }
+  }
+}
