@@ -1,0 +1,398 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse"
+      },
+      "children": [
+        "header",
+        "crypto_section",
+        "sep1",
+        "tradfi_section",
+        "sep2",
+        "new_section",
+        "sep3",
+        "bridge_section"
+      ]
+    },
+    "header": {
+      "type": "Heading",
+      "props": {
+        "text": "AIXBT Pulse — 2026-06-28 09:00Z",
+        "level": "h2"
+      }
+    },
+    "crypto_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto_title",
+        "crypto_items"
+      ]
+    },
+    "crypto_title": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h3"
+      }
+    },
+    "crypto_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "btc_item",
+        "cz_item",
+        "solana_item",
+        "tokenized_item"
+      ]
+    },
+    "btc_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc_stat1",
+        "btc_stat2",
+        "btc_stat3",
+        "btc_text"
+      ]
+    },
+    "btc_stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$60K"
+      }
+    },
+    "btc_stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "18"
+      }
+    },
+    "btc_stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "Weekly ETF Outflows",
+        "value": "$1.79B"
+      }
+    },
+    "btc_text": {
+      "type": "Text",
+      "props": {
+        "text": "Analysts calling \"mildest drawdown on record\" and Q3-Q4 bottom"
+      }
+    },
+    "cz_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cz_text1",
+        "cz_text2"
+      ]
+    },
+    "cz_text1": {
+      "type": "Text",
+      "props": {
+        "text": "CZ proposing to fork Bitcoin + freeze Satoshi's 1M BTC"
+      }
+    },
+    "cz_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Garlinghouse criticism; MSTR sell-pressure debates keep supply narratives live"
+      }
+    },
+    "solana_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "solana_stat",
+        "solana_text"
+      ]
+    },
+    "solana_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Solana Memecoin Cycle",
+        "value": "261x returns on-chain"
+      }
+    },
+    "solana_text": {
+      "type": "Text",
+      "props": {
+        "text": "pump.fun airdrop speculation reviving"
+      }
+    },
+    "tokenized_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tokenized_text",
+        "usd1_stat"
+      ]
+    },
+    "tokenized_text": {
+      "type": "Text",
+      "props": {
+        "text": "Tokenized equities on Binance, Backpack, OKX"
+      }
+    },
+    "usd1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "USD1",
+        "value": "$4.7B",
+        "delta": "Third-largest stablecoin"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi_title",
+        "tradfi_items"
+      ]
+    },
+    "tradfi_title": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h3"
+      }
+    },
+    "tradfi_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hormuz_item",
+        "ai_item"
+      ]
+    },
+    "hormuz_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hormuz_text1",
+        "hormuz_stat1",
+        "hormuz_stat2",
+        "hormuz_text2"
+      ]
+    },
+    "hormuz_text1": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz fully de-escalated: tanker traffic resumed"
+      }
+    },
+    "hormuz_stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Oil Price",
+        "value": "$72",
+        "delta": "Pre-war levels"
+      }
+    },
+    "hormuz_stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "VIX",
+        "value": "18"
+      }
+    },
+    "hormuz_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Dollar weakening; carry improving"
+      }
+    },
+    "ai_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_text1",
+        "ai_text2"
+      ]
+    },
+    "ai_text1": {
+      "type": "Text",
+      "props": {
+        "text": "AI chip weakness persists → Nasdaq de-risking"
+      }
+    },
+    "ai_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Healthcare/small-cap rotation accelerates"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_title",
+        "new_badge",
+        "new_items"
+      ]
+    },
+    "new_title": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h3"
+      }
+    },
+    "new_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW SIGNALS",
+        "variant": "destructive"
+      }
+    },
+    "new_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_item1",
+        "new_item2",
+        "new_item3"
+      ]
+    },
+    "new_item1": {
+      "type": "Text",
+      "props": {
+        "text": "CZ Satoshi-fork proposal (brand new supply/governance angle — zero prior precedent)"
+      }
+    },
+    "new_item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new_item2_stat",
+        "new_item2_text"
+      ]
+    },
+    "new_item2_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "USD1",
+        "value": "$4.7B",
+        "delta": "#3 stablecoin"
+      }
+    },
+    "new_item2_text": {
+      "type": "Text",
+      "props": {
+        "text": "Trump-aligned DeFi, no prior mention",
+        "variant": "caption"
+      }
+    },
+    "new_item3": {
+      "type": "Text",
+      "props": {
+        "text": "Dollar-negative Hormuz transmission now explicit (prior: oil/inflation only)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge_title",
+        "bridge_alert",
+        "bridge_text1",
+        "bridge_text2"
+      ]
+    },
+    "bridge_title": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h3"
+      }
+    },
+    "bridge_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Simultaneous Governance Attacks",
+        "message": "CZ's fork proposal + USD1 $4.7B are two simultaneous governance attacks on BTC's base-layer legitimacy in the same 12h window — not a supply debate, an attempt to manufacture consensus."
+      }
+    },
+    "bridge_text1": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz is fully priced with zero tail-risk budget left"
+      }
+    },
+    "bridge_text2": {
+      "type": "Text",
+      "props": {
+        "text": "The next tanker headline hits a market that forgot to worry"
+      }
+    }
+  }
+}
