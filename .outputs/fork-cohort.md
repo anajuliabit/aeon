@@ -1,14 +1,18 @@
-*Fork Cohort — 2026-06-21 — aaronjmars/aeon*
-COLD START: 186 forks, 32 running (first scan)
+*Fork Cohort — 2026-06-28 — aaronjmars/aeon*
+LEVELED_UP: 14 forks crossed POWER threshold
 
-Of 80 scanned (186 total), 32 ran in the last 7 days (40%). POWER 15 · ACTIVE 17 · STALE 9 · COLD 39.
+Of 80 scanned (193 total), 33 ran in the last 7 days (41%). POWER 27 · ACTIVE 6 · STALE 9 · COLD 38.
 
-New running forks (POWER):
-- @tomscaria — tomscaria/aeon (56 skills enabled)
-- @Boodszw — Boodszw/Boodszw_Bread (16 skills)
-- @taekwonv89 — taekwonv89/aeon (16 skills)
-- @0xMal0u — 0xMal0u/aeon (11 skills)
-- @chxoky — chxoky/aeon (11 skills)
-... and 10 more POWER, 17 ACTIVE
+Leveled up to POWER:
+- @yindaqiu, @TakamiyaZee, @ashneil12, @sparkleware, @zszkey — added skills (now 6 each)
+- @gitlumen-team, @aeoncity-hub, @beijiangqukuailian, @UIZorrot, @Damoncrypto — added skills (now 6 each)
+- @sinfronterasai — revived from STALE + reached POWER (6 skills)
+- @clawhunter — cold start to POWER (6 skills)
+- @stefrogovskyi, @Marr554 — new forks at POWER (6 and 20 skills)
 
-Full report: articles/fork-cohort-2026-06-21.md
+Went stale (worth a check-in):
+- @anomit — last run 13d ago (was POWER)
+- @wrenwealth — last run 13d ago (was POWER)
+- @usiclabs — last run 13d ago (was ACTIVE)
+
+Full report: articles/fork-cohort-2026-06-28.md

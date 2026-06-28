@@ -1,0 +1,203 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Cohort — 2026-06-28",
+        "description": "aaronjmars/aeon fork activity report"
+      },
+      "children": [
+        "stat_leveled",
+        "stack_overview",
+        "sep1",
+        "section_leveled_heading",
+        "stack_leveled",
+        "sep2",
+        "section_stale_heading",
+        "stack_stale",
+        "sep3",
+        "link_report"
+      ]
+    },
+    "stat_leveled": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks crossed POWER threshold",
+        "value": "14"
+      }
+    },
+    "stack_overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_overview_header",
+        "grid_overview"
+      ]
+    },
+    "text_overview_header": {
+      "type": "Text",
+      "props": {
+        "text": "Of 80 scanned (193 total), 33 ran in the last 7 days (41%)"
+      }
+    },
+    "grid_overview": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "badge_power",
+        "badge_active",
+        "badge_stale",
+        "badge_cold"
+      ]
+    },
+    "badge_power": {
+      "type": "Badge",
+      "props": {
+        "text": "POWER 27",
+        "variant": "default"
+      }
+    },
+    "badge_active": {
+      "type": "Badge",
+      "props": {
+        "text": "ACTIVE 6",
+        "variant": "secondary"
+      }
+    },
+    "badge_stale": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE 9",
+        "variant": "outline"
+      }
+    },
+    "badge_cold": {
+      "type": "Badge",
+      "props": {
+        "text": "COLD 38",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_leveled_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Leveled up to POWER",
+        "level": "h3"
+      }
+    },
+    "stack_leveled": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_leveled_1",
+        "text_leveled_2",
+        "text_leveled_3",
+        "text_leveled_4",
+        "text_leveled_5"
+      ]
+    },
+    "text_leveled_1": {
+      "type": "Text",
+      "props": {
+        "text": "@yindaqiu, @TakamiyaZee, @ashneil12, @sparkleware, @zszkey — added skills (now 6 each)"
+      }
+    },
+    "text_leveled_2": {
+      "type": "Text",
+      "props": {
+        "text": "@gitlumen-team, @aeoncity-hub, @beijiangqukuailian, @UIZorrot, @Damoncrypto — added skills (now 6 each)"
+      }
+    },
+    "text_leveled_3": {
+      "type": "Text",
+      "props": {
+        "text": "@sinfronterasai — revived from STALE + reached POWER (6 skills)"
+      }
+    },
+    "text_leveled_4": {
+      "type": "Text",
+      "props": {
+        "text": "@clawhunter — cold start to POWER (6 skills)"
+      }
+    },
+    "text_leveled_5": {
+      "type": "Text",
+      "props": {
+        "text": "@stefrogovskyi, @Marr554 — new forks at POWER (6 and 20 skills)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_stale_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Went stale (worth a check-in)",
+        "level": "h3"
+      }
+    },
+    "stack_stale": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_stale_1",
+        "text_stale_2",
+        "text_stale_3"
+      ]
+    },
+    "text_stale_1": {
+      "type": "Text",
+      "props": {
+        "text": "@anomit — last run 13d ago (was POWER)"
+      }
+    },
+    "text_stale_2": {
+      "type": "Text",
+      "props": {
+        "text": "@wrenwealth — last run 13d ago (was POWER)"
+      }
+    },
+    "text_stale_3": {
+      "type": "Text",
+      "props": {
+        "text": "@usiclabs — last run 13d ago (was ACTIVE)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_report": {
+      "type": "Link",
+      "props": {
+        "label": "Full report",
+        "href": "articles/fork-cohort-2026-06-28.md"
+      }
+    }
+  }
+}

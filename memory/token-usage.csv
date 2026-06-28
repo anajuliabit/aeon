@@ -582,4 +582,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-28,list-digest,claude-opus-4-7,32,12694,1591838,49246
 2026-06-28,agent-buzz,claude-opus-4-7,19,13273,870956,63711
 2026-06-28,reflect,claude-opus-4-7,43,24617,4140518,194036
-2026-06-28,skill-update-check,claude-sonnet-4-6,7,2768,277370,61132
+2026-06-28,fork-cohort,claude-sonnet-4-6,36,49965,2380980,98095
