@@ -574,3 +574,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-28,daily-routine,claude-opus-4-7,73,23483,6964293,204073
 2026-06-28,skill-freshness,claude-sonnet-4-6,30,31044,2410519,109960
 2026-06-28,token-pick,claude-opus-4-7,55,23787,3787023,141524
+2026-06-28,defi-monitor,claude-opus-4-7,11,1671,274119,35379
