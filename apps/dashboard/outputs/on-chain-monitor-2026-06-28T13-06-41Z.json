@@ -1,0 +1,222 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "on-chain alert — 2026-06-28"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_tldr",
+        "sep_1",
+        "heading_w1",
+        "stack_w1_events",
+        "sep_2",
+        "heading_w3",
+        "stack_w3_events",
+        "sep_3",
+        "text_footer"
+      ]
+    },
+    "text_tldr": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: W1 received ~$33.5k REPPO from W3 then routed equal amount into the REPPO staking contract — operator wallet rotation, no exit.",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_w1": {
+      "type": "Heading",
+      "props": {
+        "text": "Wallet 1 (primary) (base)",
+        "level": "h2"
+      }
+    },
+    "stack_w1_events": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "event_w1_1",
+        "event_w1_2",
+        "event_w1_3"
+      ]
+    },
+    "event_w1_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_w1_1",
+        "link_w1_1"
+      ]
+    },
+    "text_w1_1": {
+      "type": "Text",
+      "props": {
+        "text": "UNKNOWN-IN $33.5k REPPO ← W3"
+      }
+    },
+    "link_w1_1": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0x94dfeb04f1338225277078b259558f35f98c3a65852d609a01fee8756e66bee8"
+      }
+    },
+    "event_w1_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_w1_2",
+        "link_w1_2"
+      ]
+    },
+    "text_w1_2": {
+      "type": "Text",
+      "props": {
+        "text": "UNKNOWN-OUT $33.5k REPPO → 0xc81F...68E8 (REPPO staking)"
+      }
+    },
+    "link_w1_2": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0x096389a8439f6f8dec70f25ddc7bc9be22b7453728414b68d1e3400cda8fbbf5"
+      }
+    },
+    "event_w1_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_w1_3",
+        "link_w1_3"
+      ]
+    },
+    "text_w1_3": {
+      "type": "Text",
+      "props": {
+        "text": "UNKNOWN-OUT $6.6k USDC → Morpho GA1 (steakUSDC vault deposit)"
+      }
+    },
+    "link_w1_3": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0xba5c8a9dabd3324b2dca7127a5ce2745d7b7f1a16b5f7173c8ef8be7b201171c"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_w3": {
+      "type": "Heading",
+      "props": {
+        "text": "Wallet 3 (base)",
+        "level": "h2"
+      }
+    },
+    "stack_w3_events": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "event_w3_1",
+        "event_w3_2"
+      ]
+    },
+    "event_w3_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_w3_1",
+        "link_w3_1"
+      ]
+    },
+    "text_w3_1": {
+      "type": "Text",
+      "props": {
+        "text": "UNKNOWN-OUT $33.5k REPPO → W1"
+      }
+    },
+    "link_w3_1": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0x94dfeb04f1338225277078b259558f35f98c3a65852d609a01fee8756e66bee8"
+      }
+    },
+    "event_w3_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_w3_2",
+        "link_w3_2"
+      ]
+    },
+    "text_w3_2": {
+      "type": "Text",
+      "props": {
+        "text": "UNKNOWN-IN $28.2k REPPO ← 0xc81F...68E8 (REPPO staking withdraw)"
+      }
+    },
+    "link_w3_2": {
+      "type": "Link",
+      "props": {
+        "label": "tx",
+        "href": "https://basescan.org/tx/0x8529290de558fd2b272547228d478d7e337410104ec366a8e184c28fa0c814fb"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "5 events on 2 watches | sources: blockscout=ok, coingecko=ok, alchemy=skipped(no_key), etherscan=skipped(chain_paywalled) | last_block→47930872",
+        "variant": "caption"
+      }
+    }
+  }
+}
