@@ -612,3 +612,36 @@ See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 
 ### Theo S2 boost vault (NEW carry-watch — list-digest 6-27)
 @Flowslikeosmo surfaced theo S2 boost vault math on the curated DeFi list: 11% APY sthUSD floor + points upside; FDV $200M→$1B implies 17%-41% annualized over 6mo; genesis $100M filled <24h; highest-leverage leg pendle YT on sthUSD still locked. First surfacing on the list — observation only, not in tracked-token watchlist yet. Worth watching if list members repost the pendle YT opening.
+
+## 2026-06-28 update — meta-bear day 3 persists, VELVET pick, breadth collapse, on-chain REPPO stake migration
+
+### Picks ledger updates
+- **VELVET (Velvet Capital) — 6-28 12:17Z HIGH 11/10 $1.72** (+33.62% 24h / +272.29% 7d). Catalyst stack: June 3 Trade.xyz unified-terminal integration → June 10 pre-IPO synthetic exposure (SpaceX/OpenAI/Anthropic) via Velvet X → late-June Aerodrome routing partnership; today retests $1.83 ATH on the Aerodrome leg. Score breakdown 11/10 (vmc 0.107, RS +272% vs BTC −6.3% 7d). Risk: July ~10 vesting cliff hits ~12d out (early-backer 1y 15% + team 3y 20% supply). Exit $2.20 / inv $1.32 / 10d (pre-unlock exit).
+- **SLX 6-27 HIGH 9/10 pick day-1 +13.8% on entry by 6-28 morning** — $0.4753 → $0.541 morning → $0.522 afternoon = +9.8% by midday; held above ATH on Binance trading event continuation.
+- **AAVE 6-24 HIGH 8/10 pick day-5 +17.8% on entry** — gave back from peak +25.9% day-4 ($95.74 → ~$89.66); cumulative still profitable but profit-taking active.
+- **APE 6-26 HIGH 9/10 pick day-3 -7.3% on entry** — $0.151 → $0.140; Yuga Labs / ApeMars / Hyperliquid-whale catalyst stack didn't survive meta-bear tape. Invalidation tail extends.
+- **Market (6-28):** SKIPPED — Putin-out-EOY 3rd consecutive day no fresh catalyst; Crimea-recapture dedup-blocked; World Cup $83M vol but no defensible football fair value per spec.
+
+### Narrative tracker — meta-bear day 3+ structural confirms
+- **"Crypto needs new narrative" meta-bear PERSISTED day 3** — past 24h half-life rule for the 2nd consecutive day. Receipts: Bitcoin ETF 13-day net outflow streak longest ever, total assets $107.8B → $82.8B (−23% 6w); F&G 18 day-4 Extreme Fear; breadth collapsed 18/20 → 6/20 green 24h post-opex bounce fully erased. Regime locked.
+- **Sui Seal MPC framework shipped 6-28** — supply-side response to AI-agent mandate-vs-custody bear case: secures autonomous agent transactions without key exposure. Counters the "agent fund management isn't custody, it's mandate" risk narrative directly. Operator-thesis-relevant.
+- **CZ proposes BTC fork to freeze Satoshi's 1M BTC** — governance attack disguised as supply debate; needs social consensus, CZ has Binance institutional weight to manufacture it. Tracked under STRC mNAV<1 carry — twin actors reshaping BTC base-money legitimacy same 12h window.
+- **Tokenized equities now CEX-led** — Binance/Backpack/OKX named (prior cycle was Aave/Morpho DeFi framing). USD1 hits $4.7B = 3rd-largest stablecoin. Distribution pivoted off DeFi rails to CEX rails inside one week — RWA fading-from-DeFi-into-CEX is the actual transition.
+- **Ondo+Virtuals+Treasures 6-27 ship 430 tokenized stocks to 40k+ AI agents** — first product fusing RWA + agent-infra MS5 RIDE clusters. On-thesis for Sherwood; validates rotation-into-agent-rails persists even on broad bear tape.
+- **0 FRONT-RUN 5 consecutive days** — no contrarian Emerging edge; meta-bear dominant frame, playable longs all RIDE-tier.
+
+### DeFi protocol-side flags 6-28
+- **xStocks -59% 1d** ($579M → $235M) extends 3-day institutional Treasury/equity-wrapper unwind (Invesco USTB -28% 48h cumulative, Ethena USDtb -21% 6-27). Sector-wide RWA-wrapper redemption pressure.
+- **Hyperliquid Perps fees -66% 1d reverses 6-27 HLP bid.** 1-day flow reversal — HLP positioning was transient.
+- **Aave V3 fees day-4 fully unwound** (4-day arc: -0.1 → +21 → +36 → -35 → flat). Lending demand spike was a 2-day burst, not regime.
+- **Watchlist signals 6-28:** WELL/MAMO/REPPO/GITLAWB all green for first time since 6-22 (median +1.51%); GITLAWB ends 7-day red streak +5.38%, first elevated-vol upside print 1.27× day-prior. REPPO net +22.7% from 6-19 base; MAMO holds $0.00785.
+
+### On-chain — REPPO stake migration 6-28
+- **W3 → W1 1.58M REPPO stake migration** in 20-minute burst 2026-06-27T13:28–13:48Z (caught by 6-28 12:43Z window). W3 (operator's REPPO accumulation wallet) withdrew 1.33M REPPO + claimed 137 VIRTUAL from staking contract `0xc81F...68E8`; combined with existing balance; transferred 1.58M to W1; W1 immediately re-staked the full 1.58M back into the same contract. **Net: REPPO position migrated W3 stake → W1 stake, no protocol exit.** Recommend adding label "REPPO staking" to `known-addresses.yml` next consolidation pass.
+- **W1 6,595 USDC → Morpho Steakhouse Prime Instant vault (steakUSDC)** same window — continues on-thesis institutional-USDC yield-vault accumulation pattern. Steakhouse Financial is one of the explicitly trustworthy curators per the Morpho curator-risk lessons (vs AlphaPing's Alpha USDC Delta V2 disaster).
+- First non-zero on-chain activity since 6-25 address-poisoning escalation — quiet thread ~72h, attacker dust didn't repeat.
+
+### Reflexivity flags 6-28 (new + strengthened carry)
+1. **"Mildest drawdown on record" framing arriving day 4 of Extreme Fear is manufactured bottom-calling** — receipts (F&G 18, $1.79B weekly ETF outflows, 19/100 breadth, BlackRock $257M-to-Coinbase weekly) don't support framing. "Q3-Q4 bottom" thesis embedded in AIXBT narrative → becomes the bid it's predicting. Watch for actual ETF inflow reversal before updating.
+2. **Hormuz fully de-escalated, oil $72, dollar weakening, VIX 18** — repricing load-bearing in current risk-on stack. Next tanker headline hits a market with no tail-risk budget left.
+3. **(STRENGTHENED carry) AI agent rail-shipped proof** — Sui Seal MPC adds custody-primitive to the receipt list (Stripe Claude Fable 5 50M-line migration + Salesforce Agent Script OSS + x402 480k agents / $50M cumulative / 265% wkly tx growth). Bull thesis with structural receipts compounding even as broad crypto fades.
