@@ -1,0 +1,91 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Evals — SKILL_EVALS_REGRESSED"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_section",
+        "action_alert",
+        "article_link",
+        "heartbeat_note"
+      ]
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_new_fail",
+        "stat_fixed",
+        "stat_still_failing",
+        "stat_coverage"
+      ]
+    },
+    "stat_new_fail": {
+      "type": "Stat",
+      "props": {
+        "label": "New fails",
+        "value": "1"
+      }
+    },
+    "stat_fixed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fixed",
+        "value": "1"
+      }
+    },
+    "stat_still_failing": {
+      "type": "Stat",
+      "props": {
+        "label": "Still failing",
+        "value": "2"
+      }
+    },
+    "stat_coverage": {
+      "type": "Stat",
+      "props": {
+        "label": "Coverage",
+        "value": "27%"
+      }
+    },
+    "action_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Top Action",
+        "message": "Schedule skill-evals after 21:00 UTC — timing false-fails on log-based skills (ISS-026)",
+        "type": "warning"
+      }
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "articles/skill-evals-2026-06-28.md",
+        "href": "articles/skill-evals-2026-06-28.md"
+      }
+    },
+    "heartbeat_note": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat: missing_pattern:heartbeat|Heartbeat|HEARTBEAT (timing artefact — pre-08:00 UTC dispatch)",
+        "variant": "muted"
+      }
+    }
+  }
+}
