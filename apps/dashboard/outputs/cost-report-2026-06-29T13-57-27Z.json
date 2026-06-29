@@ -1,0 +1,282 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Cost Report — 2026-06-29 (last 7 days)"
+      },
+      "children": [
+        "stack_summary",
+        "sep1",
+        "section_top3",
+        "sep2",
+        "section_actions",
+        "sep3",
+        "section_anomalies",
+        "sep4",
+        "section_projection"
+      ]
+    },
+    "stack_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_stats",
+        "alert_summary"
+      ]
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_spent",
+        "stat_runs",
+        "stat_wow",
+        "stat_anomalies"
+      ]
+    },
+    "stat_spent": {
+      "type": "Stat",
+      "props": {
+        "label": "Spent",
+        "value": "$595.75"
+      }
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "113"
+      }
+    },
+    "stat_wow": {
+      "type": "Stat",
+      "props": {
+        "label": "WoW",
+        "value": "+199.5%",
+        "trend": "up"
+      }
+    },
+    "stat_anomalies": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies",
+        "value": "14"
+      }
+    },
+    "alert_summary": {
+      "type": "Alert",
+      "props": {
+        "message": "Prior week suppressed by sandbox failures; projected monthly burn ~$2,553",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_top3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top3",
+        "table_top3"
+      ]
+    },
+    "heading_top3": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 by Cost",
+        "level": "h2"
+      }
+    },
+    "table_top3": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Cost",
+          "Runs"
+        ],
+        "rows": [
+          [
+            "daily-routine",
+            "$104.53",
+            "8"
+          ],
+          [
+            "on-chain-monitor",
+            "$54.75",
+            "4"
+          ],
+          [
+            "security-digest",
+            "$48.93",
+            "4"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_actions",
+        "stack_action_items",
+        "alert_combined"
+      ]
+    },
+    "heading_actions": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions This Week",
+        "level": "h2"
+      }
+    },
+    "stack_action_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_1",
+        "action_2",
+        "action_3"
+      ]
+    },
+    "action_1": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor → rename `usepod_model` → `model:` in aeon.yml to activate Haiku (~$51.83/wk savings)"
+      }
+    },
+    "action_2": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick → same usepod_model drift fix (~$33.16/wk)"
+      }
+    },
+    "action_3": {
+      "type": "Text",
+      "props": {
+        "text": "token-movers → same usepod_model drift fix (~$21.94/wk)"
+      }
+    },
+    "alert_combined": {
+      "type": "Alert",
+      "props": {
+        "title": "Combined savings",
+        "message": "~$107/wk ($456/mo) from a 3-line aeon.yml edit",
+        "type": "success"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_anomalies": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_anomalies",
+        "alert_anomalies",
+        "text_sandbox",
+        "text_aixbt"
+      ]
+    },
+    "heading_anomalies": {
+      "type": "Heading",
+      "props": {
+        "text": "Anomalies",
+        "level": "h2"
+      }
+    },
+    "alert_anomalies": {
+      "type": "Alert",
+      "props": {
+        "message": "13 WoW spikes flagged",
+        "type": "warning"
+      }
+    },
+    "text_sandbox": {
+      "type": "Text",
+      "props": {
+        "text": "10 are ISS-019/020/021/025 sandbox artifacts (prior output=0), not real growth",
+        "variant": "muted"
+      }
+    },
+    "text_aixbt": {
+      "type": "Text",
+      "props": {
+        "text": "1 per-run anomaly: aixbt-pulse 2026-06-24 output spike (+2.4σ)"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_projection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_projection",
+        "stat_projection",
+        "text_dominated",
+        "link_full"
+      ]
+    },
+    "heading_projection": {
+      "type": "Heading",
+      "props": {
+        "text": "30-Day Projection",
+        "level": "h2"
+      }
+    },
+    "stat_projection": {
+      "type": "Stat",
+      "props": {
+        "label": "Projected monthly burn",
+        "value": "$2,553.20"
+      }
+    },
+    "text_dominated": {
+      "type": "Text",
+      "props": {
+        "text": "Dominated by cache-heavy Opus skills",
+        "variant": "muted"
+      }
+    },
+    "link_full": {
+      "type": "Link",
+      "props": {
+        "label": "Full report",
+        "href": "articles/cost-report-2026-06-29.md"
+      }
+    }
+  }
+}
