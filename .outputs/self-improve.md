@@ -1,1 +1,1 @@
-self-improve: agent-buzz prefetch now ranks by engagement (mode:Top + min_likes:5) — fixes uniformly-low-engagement candidates (0-13 likes, followers:null) flagged in today's run. PR: https://github.com/anajuliabit/aeon/pull/148
+self-improve: renamed usepod_model → model in aeon.yml for 5 skills (token-pick / token-movers / on-chain-monitor / defi-overview / defi-monitor) — they were running on Opus instead of intended Haiku. Cost-report 6-29 flagged this as the top optimization, ~$107/wk / $456/mo savings. PR: https://github.com/anajuliabit/aeon/pull/150
