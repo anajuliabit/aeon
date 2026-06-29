@@ -1,16 +1,14 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote `docs/status.md`
 
 ## Summary
+Ran heartbeat at 20:30 UTC (evening tick, 30min late).
 
-Ran the heartbeat skill. Findings, all dedup-suppressed against the last 48h of logs (no notification fired):
+**P0:** fork-skill-digest STUCK ~26h carry (dedup-blocked across 3 prior hb ticks); chronic 20-skill `output_tokens=0` tail unchanged (ISS-019/020/021/024/025 cluster); self-check healthy (last_success ~5h24m ago).
 
-- **P0 stuck:** `fork-skill-digest` still in `dispatched` state since 2026-06-28T18:38Z (~20h) — already surfaced in 6-28 20:18Z + 6-29 08:47Z hb ticks.
-- **P0 chronic (sr<0.5):** 19-skill tail unchanged from morning tick — same `output_tokens=0` sandbox-truncation cluster (ISS-019/020/021/024/025) since 6-19.
-- **P0 self-check:** heartbeat last_success ~6h10min ago, healthy.
-- **P1:** 1 open PR (#149 docs(skill-graph), ~22h, just under 24h stall threshold). 0 urgent issues. 15 open issues unchanged.
-- **P2:** BTC sub-$60.5k day 4, sandbox-truncation day 11, XAI quota day 14, on-chain config day 22 — all carried.
-- **P3:** operator-scorecard Mon 10:30Z slot missed again (recurring scheduler-side gap; never-run since enabled).
+**P1:** 2 open PRs — #149 (docs(skill-graph), ~27h, crossed 24h threshold but already surfaced 3× this 48h window via 15:04Z hb / morning-brief / action-converter); #150 (fix(aeon.yml) opened by self-improve 18:16Z, fresh). 15 open issues unchanged.
 
-Status page regenerated as 🔴 DEGRADED (15 open issues, fork-skill-digest 🕸 stuck, chronic tail). 41 enabled-skill rows sorted last-run desc + 3 never-run (autoresearch, fork-skill-gap, operator-scorecard). Token pulse section omitted — no `articles/token-report-*.md` on disk. Next scheduled: skill-security-scan at 16:00 UTC.
+**P2/P3:** carries unchanged (XAI day 14, on-chain config day 22, BTC breakdown day 4, operator-scorecard Mon slot missed).
 
-Files modified: `docs/status.md`, `memory/logs/2026-06-29.md`.
+Every finding dedup-blocked → **no notification fired**.
+
+Files written: `docs/status.md` (40 enabled-skill rows + 3 never-run; fleet-control dropped per disabled status; weekly-review promoted to top), appended heartbeat block to `memory/logs/2026-06-29.md`. Next scheduled: evening-recap / thought-review / aixbt-pulse at 21:00 UTC.
