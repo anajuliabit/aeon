@@ -1,16 +1,16 @@
 {
-  "hash": "81dbbe4f755864823a7b5e6025872f5af8f2e45ac866306c569d177e4009a1e6",
-  "last_notified_at": "2026-06-27T18:10:00Z",
-  "last_run_at": "2026-06-28T18:08:47Z",
+  "hash": "992a90ed71e20eedbf058a33f453e94047e5e090d2dbaef8d360916b3cbf8c62",
+  "last_notified_at": "2026-06-29T17:45:00Z",
+  "last_run_at": "2026-06-29T17:45:00Z",
   "classification": {
     "critical": [],
-    "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "fleet-control", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "vuln-scanner"],
+    "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "vuln-scanner"],
     "flapping": [],
     "warning": ["btc-levels", "daily-routine", "defi-overview", "morning-brief", "on-chain-monitor", "token-alert", "token-movers", "token-pick"],
     "healthy_count": 9,
     "no_data": ["fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "sandbox-truncation output_tokens=0 — 24 DEGRADED + 8 WARNING share signature (ISS-019/020/021/024/025 cluster + chronic tail). Diff vs 2026-06-27T18:10Z: classification unchanged (24h same hash); skill-runs unavailable this run (sandbox), cron-state-only classification",
+  "systemic": "sandbox-truncation output_tokens=0 — 23 DEGRADED + 8 WARNING share signature (ISS-019/020/021/024/025 cluster). Diff vs 2026-06-27T18:10Z: fleet-control dropped (disabled in aeon.yml); classification otherwise identical. skill-runs blocked by sandbox (SKILL_HEALTH_PARTIAL), cron-state-only classification",
   "open_issues": 15,
   "resolved_this_run": 0,
   "filed_this_run": 0
