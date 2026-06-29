@@ -1,12 +1,8 @@
 ## Summary
 
-**btc-levels run — 2026-06-29 05:13Z**
+Quiet run — no alerts.
 
-- **Spot**: $59,402 (down from $59,228 at last run)
-- **Previous daily close (2026-06-28)**: $59,612 — sub-$60,500 again, but already alerted for this close date
-- **Alerts fired**: none (quiet run)
-  - Leverage-review: no ($59k >> $45k floor)
-  - Breakdown: close qualifies but was alerted in the 01:22Z run; no re-fire
-  - Reclaims $63,500 / $65,900: re-arm flags already false, spot still deep below
-
-State file updated, log appended, committed.
+- **Spot**: $59,779 | **June 28 close**: $59,612 (4th consecutive sub-$60,500 close)
+- Breakdown alert for 2026-06-28 was already filed on the previous run → no duplicate
+- Leverage-review (≤$45k): no | Reclaims ($63.5k / $65.9k): no
+- State + log updated and committed
