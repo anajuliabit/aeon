@@ -593,4 +593,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-29,unlock-monitor,claude-opus-4-7,4145,24880,2969882,93542
 2026-06-29,token-alert,claude-opus-4-7,14,7834,636240,73576
 2026-06-29,cost-report,claude-sonnet-4-6,20068,38494,1966151,90409
-2026-06-29,heartbeat,claude-opus-4-7,13,19699,739342,114314
+2026-06-29,deal-flow,claude-opus-4-7,1325,25273,1557298,141940

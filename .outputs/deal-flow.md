@@ -1,37 +1,37 @@
-*Deal Flow — 2026-06-22*
+*Deal Flow — 2026-06-29*
 
-**Read:** capital this week piled into inference + compute (baseten 2.6× in 5 months, hydra host pulls nvidia + founders fund into a bare-metal GPU Series A) while two adjacencies got cross-camp validation — morpho's $175M from paradigm + a16z + ribbit puts fintech money inside a DeFi credit protocol, and ripple bought into flutterwave at $3.2B to wire RLUSD onto african payment rails.
+**Read:** capital clustered hard on AI inference for a 2nd straight week — Groq $650M closed 6-22 back-to-back with Baseten's $1.5B last week, two non-Nvidia inference stacks bid in 7 days. on-thesis prints were small and precise: Patronus eval-as-observability, Orthogonal x402 service discovery. crypto headline noise (Kalshi rumored to seek at $40B vs $22B prior) — not yet closed, so off the list.
 
-1. **Baseten** — AI inference serving infra
-   $1.5B Series E @ $13B post (UP 2.6× vs $5B Jan) | Lead: Spark / Sands / Altimeter / Wellington / Conviction
-   *Why it matters:* second mega-round in 5 months at 2.6× the prior mark, split-priced — inference compute is now a category arms race separate from training.
+1. **Mirendil** — frontier model lab built by ex-Anthropic researchers; trains models that automate AI R&D
+   $200M seed @ ~$1B post (UP n/a, new co) | Lead: a16z + Kleiner Perkins; Nvidia participated
+   *Why it matters:* one of the largest seeds on record at unicorn pricing — Nvidia on a seed cap table is strategic compute-allocation lock from day zero, not a financial check.
 
-2. **Morpho** — onchain credit protocol on ethereum + base
-   $175M @ ~$2B post (n/d vs prior) | Lead: Paradigm / a16z crypto / Ribbit Capital
-   *Why it matters:* first fintech-grade VC (ribbit) co-leading a DeFi credit round alongside paradigm + a16z — open-credit framing pulls TradFi money on-chain.
+2. **General Intuition** — gameplay-data world model training AI agents for virtual + physical environments
+   $320M Series A @ $2.3B post (UP, prior raise was $134M seed Oct 2025) | Lead: Khosla Ventures; Bezos + Schmidt + General Catalyst participated
+   *Why it matters:* proprietary action-labels embedded in 100M+ hours of Medal gameplay clips — a dataset moat competitors structurally can't replicate, priced at embodied-AI seed-to-A pace without robotics CAPEX.
 
-3. **Hydra Host** — bare-metal GPU platform for distributed AI compute
-   $100M Series A (n/d post) | Lead: Kindred Ventures; Founders Fund, Nvidia, ARK, Comcast, 10x Founders
-   *Why it matters:* nvidia + founders fund anchoring a $100M Series A says decentralized-GPU thesis (io.net / akash / render territory) is being front-run from inside the silicon supply chain.
+3. **Groq** — LPU-based AI inference cloud, post-Nvidia $20B licensing pivot
+   $650M growth (n/d) | Lead: Disruptive + Infinitum
+   *Why it matters:* second mega-check into a non-Nvidia inference stack in 7 days. Groq pivoting from chip-vendor to neocloud + LPX co-distribution after Nvidia bought the tech license — capital paying to keep an inference-CAPEX alternative alive.
 
-4. **Flutterwave** — africa cross-border payments infra
-   undisclosed Series E @ $3.2B post (n/d vs prior) | Lead: Ripple (strategic, alongside existing Series E investors)
-   *Why it matters:* first time a stablecoin issuer takes equity in a regional payments giant to wire its stablecoin (RLUSD) into corporate corridors — payment-rail M&A pattern, not a portfolio bet.
+4. **Assort Health** — AI agent for patient scheduling, intake, referrals, payments
+   $120M Series C @ $1.2B post (UP, magnitude n/d) | Lead: Menlo Ventures
+   *Why it matters:* first US healthcare-admin agent to clear the unicorn line. Menlo paying for procurement-side distribution into health systems already wired to vendor onboarding — the agent is the wedge, not the product.
 
-5. **Pramaana Labs** — formal verification for AI systems
-   $27M seed (n/d post) | Lead: Khosla Ventures
-   *Why it matters:* $27M is ~9× a normal seed — pricing in that agent-correctness becomes a regulatory + liability concern before LLMs ship into safety-critical work.
+5. **Taktile** — AI decisioning platform for regulated financial workflows (underwriting, AML)
+   $110M Series C (n/d) | Lead: Goldman Sachs Alternatives
+   *Why it matters:* Goldman Sachs Alternatives leading a Series C in agentic FI decisioning = strategic distribution bet, not a fund return-profile bet. Underwriting is the bank-licensable surface area for agent autonomy.
 
-6. **Odyssey** — world-model AI for spatial / video generation
-   $310M Series B @ $1.45B post (n/d vs prior) | Lead: Natural Capital; Amazon, AMD Ventures, Google Ventures, EQT, IQT, SignalRank
-   *Why it matters:* world models now have their own investor cohort separate from frontier-LLM bets — three hyperscaler venture arms in one round.
+6. **Patronus AI** — simulated digital worlds to stress-test agent workflows
+   $50M Series B (n/d; total funding now $70M) | Lead: Greenfield Partners; Lightspeed + Notable + Datadog + Samsung
+   *Why it matters:* Datadog on the cap table = eval-as-observability becoming a separate vendor layer, not a feature inside the labs. Revenue grew 15× YoY at the same time frontier labs added agent stress-testing as a procurement line.
 
-7. **Ent.AI** — AI-workspace security platform
-   $100M seed (n/d post) | Lead: Decibel Partners; Sequoia, Craft, Felicis, IQT, Shield Capital, Crosspoint
-   *Why it matters:* $100M seed with sequoia + IQT + shield in the syndicate is a pre-revenue national-security bet on agent-on-workspace data leakage.
+7. **Hang Ten Systems** — AI-native enterprise services for agentic code generation
+   $32M seed (n/d) | Lead: Mayfield; Aramco Ventures + angels
+   *Why it matters:* Vishal Sikka (ex-Infosys CEO) launching against the IT-services category his old company defined — Siemens Gamesa + Fresenius as launch customers means the bet is on services-substitution at procurement layer, not greenfield SaaS.
 
-8. **Sarvam** — sovereign indian LLMs + agent infra
-   $234M @ $1.5B post (UP from ~$41M prior) | Lead: HCLTech (corporate strategic)
-   *Why it matters:* HCL writes the lead check — non-US AI capital now routes through national champions, not pure VC syndicates.
+8. **Orthogonal** — x402 payment orchestration + agent service discovery layer
+   $4.3M seed (n/d) | Lead: Pantera Capital
+   *Why it matters:* Pantera taking solo lead on x402 vendor infra — the protocol Coinbase + AWS + Anthropic + Circle endorsed in Q1 now has a dedicated commercial layer. Service discovery is the genuinely missing piece — agents finding APIs they weren't pre-wired to.
 
-*Sources:* crunchbase=ok, techcrunch=ok, cryptorank=ok (partial paywall), crypto-fundraising=ok, aift=fail (not fetched), websearch=ok | candidates=~32 → kept=8
+*Sources:* crunchbase=ok, techcrunch=ok, techstartups=ok, crypto-fundraising=ok, coindesk=ok, bloomberg=ok, aift=fail(403) | candidates=~30 → kept=8

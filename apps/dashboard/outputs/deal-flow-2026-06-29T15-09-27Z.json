@@ -1,0 +1,316 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Deal Flow — 2026-06-29"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_intro",
+        "sep_1",
+        "heading_deal1",
+        "text_deal1_desc",
+        "text_deal1_funding",
+        "text_deal1_why",
+        "sep_2",
+        "heading_deal2",
+        "text_deal2_desc",
+        "text_deal2_funding",
+        "text_deal2_why",
+        "sep_3",
+        "heading_deal3",
+        "text_deal3_desc",
+        "text_deal3_funding",
+        "text_deal3_why",
+        "sep_4",
+        "heading_deal4",
+        "text_deal4_desc",
+        "text_deal4_funding",
+        "text_deal4_why",
+        "sep_5",
+        "heading_deal5",
+        "text_deal5_desc",
+        "text_deal5_funding",
+        "text_deal5_why",
+        "sep_6",
+        "heading_deal6",
+        "text_deal6_desc",
+        "text_deal6_funding",
+        "text_deal6_why",
+        "sep_7",
+        "heading_deal7",
+        "text_deal7_desc",
+        "text_deal7_funding",
+        "text_deal7_why",
+        "sep_8",
+        "heading_deal8",
+        "text_deal8_desc",
+        "text_deal8_funding",
+        "text_deal8_why",
+        "sep_final",
+        "text_sources"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Read: capital clustered hard on AI inference for a 2nd straight week — Groq $650M closed 6-22 back-to-back with Baseten's $1.5B last week, two non-Nvidia inference stacks bid in 7 days. on-thesis prints were small and precise: Patronus eval-as-observability, Orthogonal x402 service discovery. crypto headline noise (Kalshi rumored to seek at $40B vs $22B prior) — not yet closed, so off the list."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_deal1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Mirendil",
+        "level": "h2"
+      }
+    },
+    "text_deal1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Frontier model lab built by ex-Anthropic researchers; trains models that automate AI R&D"
+      }
+    },
+    "text_deal1_funding": {
+      "type": "Text",
+      "props": {
+        "text": "$200M seed @ ~$1B post (UP n/a, new co) | Lead: a16z + Kleiner Perkins; Nvidia participated"
+      }
+    },
+    "text_deal1_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: one of the largest seeds on record at unicorn pricing — Nvidia on a seed cap table is strategic compute-allocation lock from day zero, not a financial check."
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_deal2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. General Intuition",
+        "level": "h2"
+      }
+    },
+    "text_deal2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Gameplay-data world model training AI agents for virtual + physical environments"
+      }
+    },
+    "text_deal2_funding": {
+      "type": "Text",
+      "props": {
+        "text": "$320M Series A @ $2.3B post (UP, prior raise was $134M seed Oct 2025) | Lead: Khosla Ventures; Bezos + Schmidt + General Catalyst participated"
+      }
+    },
+    "text_deal2_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: proprietary action-labels embedded in 100M+ hours of Medal gameplay clips — a dataset moat competitors structurally can't replicate, priced at embodied-AI seed-to-A pace without robotics CAPEX."
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_deal3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Groq",
+        "level": "h2"
+      }
+    },
+    "text_deal3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "LPU-based AI inference cloud, post-Nvidia $20B licensing pivot"
+      }
+    },
+    "text_deal3_funding": {
+      "type": "Text",
+      "props": {
+        "text": "$650M growth (n/d) | Lead: Disruptive + Infinitum"
+      }
+    },
+    "text_deal3_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: second mega-check into a non-Nvidia inference stack in 7 days. Groq pivoting from chip-vendor to neocloud + LPX co-distribution after Nvidia bought the tech license — capital paying to keep an inference-CAPEX alternative alive."
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_deal4": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Assort Health",
+        "level": "h2"
+      }
+    },
+    "text_deal4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent for patient scheduling, intake, referrals, payments"
+      }
+    },
+    "text_deal4_funding": {
+      "type": "Text",
+      "props": {
+        "text": "$120M Series C @ $1.2B post (UP, magnitude n/d) | Lead: Menlo Ventures"
+      }
+    },
+    "text_deal4_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: first US healthcare-admin agent to clear the unicorn line. Menlo paying for procurement-side distribution into health systems already wired to vendor onboarding — the agent is the wedge, not the product."
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_deal5": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Taktile",
+        "level": "h2"
+      }
+    },
+    "text_deal5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "AI decisioning platform for regulated financial workflows (underwriting, AML)"
+      }
+    },
+    "text_deal5_funding": {
+      "type": "Text",
+      "props": {
+        "text": "$110M Series C (n/d) | Lead: Goldman Sachs Alternatives"
+      }
+    },
+    "text_deal5_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Goldman Sachs Alternatives leading a Series C in agentic FI decisioning = strategic distribution bet, not a fund return-profile bet. Underwriting is the bank-licensable surface area for agent autonomy."
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_deal6": {
+      "type": "Heading",
+      "props": {
+        "text": "6. Patronus AI",
+        "level": "h2"
+      }
+    },
+    "text_deal6_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Simulated digital worlds to stress-test agent workflows"
+      }
+    },
+    "text_deal6_funding": {
+      "type": "Text",
+      "props": {
+        "text": "$50M Series B (n/d; total funding now $70M) | Lead: Greenfield Partners; Lightspeed + Notable + Datadog + Samsung"
+      }
+    },
+    "text_deal6_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Datadog on the cap table = eval-as-observability becoming a separate vendor layer, not a feature inside the labs. Revenue grew 15× YoY at the same time frontier labs added agent stress-testing as a procurement line."
+      }
+    },
+    "sep_7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_deal7": {
+      "type": "Heading",
+      "props": {
+        "text": "7. Hang Ten Systems",
+        "level": "h2"
+      }
+    },
+    "text_deal7_desc": {
+      "type": "Text",
+      "props": {
+        "text": "AI-native enterprise services for agentic code generation"
+      }
+    },
+    "text_deal7_funding": {
+      "type": "Text",
+      "props": {
+        "text": "$32M seed (n/d) | Lead: Mayfield; Aramco Ventures + angels"
+      }
+    },
+    "text_deal7_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Vishal Sikka (ex-Infosys CEO) launching against the IT-services category his old company defined — Siemens Gamesa + Fresenius as launch customers means the bet is on services-substitution at procurement layer, not greenfield SaaS."
+      }
+    },
+    "sep_8": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_deal8": {
+      "type": "Heading",
+      "props": {
+        "text": "8. Orthogonal",
+        "level": "h2"
+      }
+    },
+    "text_deal8_desc": {
+      "type": "Text",
+      "props": {
+        "text": "x402 payment orchestration + agent service discovery layer"
+      }
+    },
+    "text_deal8_funding": {
+      "type": "Text",
+      "props": {
+        "text": "$4.3M seed (n/d) | Lead: Pantera Capital"
+      }
+    },
+    "text_deal8_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Pantera taking solo lead on x402 vendor infra — the protocol Coinbase + AWS + Anthropic + Circle endorsed in Q1 now has a dedicated commercial layer. Service discovery is the genuinely missing piece — agents finding APIs they weren't pre-wired to."
+      }
+    },
+    "sep_final": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: crunchbase=ok, techcrunch=ok, techstartups=ok, crypto-fundraising=ok, coindesk=ok, bloomberg=ok, aift=fail(403) | candidates=~30 → kept=8",
+        "variant": "caption"
+      }
+    }
+  }
+}
