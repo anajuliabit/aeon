@@ -1,18 +1,21 @@
-*GitHub Trending — 2026-06-27*
+*GitHub Trending — 2026-06-28*
 
-*Top pick* — [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach)
-one dependency lets an agent read the four loudest public feeds — Twitter, Reddit, YouTube, GitHub — without per-source scraper plumbing.
+*Top pick* — [topoteretes/cognee](https://github.com/topoteretes/cognee)
+Agent memory is the next infra primitive after RAG — cognee shipped v1.2.2 on 6-26 and the trending page caught up today.
 
 *AI/ML*
-• [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) — ★ 1.2k today (42.8k total) · Python · [ACCELERATING]
-drop-in agent eyes across Twitter, Reddit, YouTube, GitHub. no per-source plumbing per agent.
+• [topoteretes/cognee](https://github.com/topoteretes/cognee) — ★ 780 today (24k total) · Python · [RETURNING]
+persistent knowledge-graph engine for agents — v1.2.2 release 6-26 drives a 33× spike vs 23/d historical baseline.
 
-• [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) — ★ 243 today (1.4k total) · Python · [ACCELERATING]
-official AWS MCP servers + skills + plugins, not community ports. versioning and IAM scoped properly.
+• [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) — ★ 589 today (33k total) · Python · [ACCELERATING]
+generates editable .pptx with native shapes, voiced speaker notes, and template-following — not images of slides, real PowerPoint.
 
-*Infra*
-• [simplex-chat/simplex-chat](https://github.com/simplex-chat/simplex-chat) — ★ 432 today (13.0k total) · Haskell · [RETURNING]
-v6.5.5 ships anonymous-credential supporter badges. reputation without identity on the only messenger that holds no user IDs.
+• [Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) — ★ 255 today (22k total) · JavaScript · [ACCELERATING]
+self-hosted MIT frontend over 200 image+video models (Flux, Kling, Sora, Veo) — single pane, no content filters layer.
+
+*Web/Apps*
+• [every-app/open-seo](https://github.com/every-app/open-seo) — ★ 239 today (3.6k total) · TypeScript · [ACCELERATING]
+open-source Semrush/Ahrefs alternative — day-2 after borderline 2.4× yesterday, today 8× the historical baseline.
 
 ---
-sources: trending=ok · gh_api=ok · kept 3/17
+sources: trending=ok · gh_api=ok · kept 4/20

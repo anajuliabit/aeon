@@ -1,17 +1,15 @@
-*Skill Health — 2026-06-26*
-HEALTH: DEGRADED(26) [systemic: sandbox-truncation `output_tokens=0` — 26+ skills, root cause = aeon.yml capture step / ISS-025 cluster]
+## Summary
 
-🟡 DEGRADED (worst 5 by success rate, cf=0 across fleet today)
-- vuln-scanner — 7% (29 runs) → ISS-018 (sandbox: missing prefetch shim, distinct from systemic)
-- reg-monitor — 10% (42 runs) — see systemic
-- cost-report — 10% (42 runs) → ISS-025 (outputTokens=12 variant)
-- skill-analytics — 11% (47 runs) — see systemic
-- security-digest — 21% (86 runs) — see systemic
-+21 more — see memory/issues/INDEX.md (incl. search-skill ISS-021, skill-health ISS-024)
+Ran skill-health audit per `skills/skill-health/SKILL.md`. Classification matched the 2026-06-27T18:10Z snapshot exactly: **0 CRITICAL · 0 FLAPPING · 24 DEGRADED · 8 WARNING · 9 HEALTHY · 2 NO_DATA**.
 
-🟠 WARNING (6): morning-brief 60% (NEW — was DEGRADED, crossed 0.6 boundary), token-pick 63% → ISS-020, token-movers 63%, defi-overview 68% → ISS-019, on-chain-monitor 70%, token-alert 74% → ISS-023
-⚪ NO DATA (3): autoresearch (workflow_dispatch, OK), fork-skill-gap (Sun 6-28), operator-scorecard (Mon 6-29) — DISPATCH-SKILL on schedule
-🟢 HEALTHY: 9
+**Notify gate:** hash unchanged AND only 23h58m since last notify → **suppressed**. No `./notify` call.
 
-Open issues: 14 · Resolved this run: 0 · Filed this run: 0
-Note: skill-runs CLI denied by sandbox — partial run, cron-state only.
+**Issue reconciliation:** 0 new CRITICAL/FLAPPING → no filings. No DEGRADED skill crossed to HEALTHY → no resolutions. Open issues 14→15 (ISS-026 filed by skill-evals earlier today).
+
+**Partial-data note:** `./scripts/skill-runs` was sandbox-denied. Logged `SKILL_HEALTH_PARTIAL`; cron-state-only classification this run.
+
+**Files:**
+- `memory/skill-health/last-report.json` — updated `last_run_at`; hash + `last_notified_at` preserved; `open_issues` 14→15.
+- `memory/logs/2026-06-28.md` — appended `### skill-health — 18:08Z` block with NOOP + PARTIAL + reconciliation lines.
+
+**Follow-up:** the next 18:00 UTC tick will cross the 24h threshold → daily-reminder notify will fire even with unchanged state.

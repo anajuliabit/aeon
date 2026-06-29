@@ -1,20 +1,22 @@
-*Agent Buzz — 2026-06-27*
-_quiet builder day. MCP moving from spec to practice: receipt fields proposed, local-vision setups, throughput claims. one benchmark says tool use is still where models break._
+*Agent Buzz — 2026-06-28*
+_Quiet builder day — MCP locking in as the inter-agent layer, two runtime architecture takes, plus a $320M world-model raise on the side._
 
-**MCP plumbing fills in**
-• @DaedalusAgents — proposes MCP expose receipts at the protocol layer: authorizer, scope, spend cap, idempotency key, artifact hash.
-  https://x.com/DaedalusAgents/status/2070658280423039084
-• @GillelandKristi — routes vision through a local Qwen3-vl:4b via MCP. keeps image input, cuts token cost.
-  https://x.com/GillelandKristi/status/2070657592855072994
-• @nnewera3 — fere_ai MCP server has processed >10M autonomous agent actions for Claude/ChatGPT crypto trading.
-  https://x.com/nnewera3/status/2070658029473681578
+**MCP as the inter-agent standard**
+• @Truntr_ — Google's L3 spec names MCP+A2A the inter-agent protocol layer — Anthropic's spec gets cross-lab endorsement.
+  https://x.com/Truntr_/status/2070962009504383282
+• @imaxxs — MCP defines tool-call wiring but leaves authority escalation undefined — the gap where multi-agent systems break.
+  https://x.com/imaxxs/status/2070906921092268396
+• @freeCodeCamp — Free handbook on building MCP servers as a structured way to gate multi-agent access to internal data.
+  https://x.com/freeCodeCamp/status/2070900490674536556
 
-**Capability + product check**
-• @AINativeF — OpenBioRQ benchmark exposes "agentic collapse": models fail at tool use on open biomedical questions.
-  https://x.com/AINativeF/status/2070657714334880240
-• @internetmfer — bankrbot outperforming virtuals_io by volume; MetaMask reportedly exploring agentic automations.
-  https://x.com/internetmfer/status/2070658231152914571
-• @DolphinRoadster — Hermes Agent v0.17.0 ships async sub-agents and mixture-of-agents docs.
-  https://x.com/DolphinRoadster/status/2070658263608365170
+**Agent runtime experiments**
+• @kay_myg — 3-tier monitoring layer that detects multi-agent drift mid-run and self-corrects without halting the task thread.
+  https://x.com/kay_myg/status/2070981472933269992
+• @realdosaygo — Argues agents should drive web state via semantic DOM affordances, not screenshots and brittle selectors.
+  https://x.com/realdosaygo/status/2071019301247586377
 
-_src: xai-cache · candidates: 12 → kept: 6_
+**Training-data bets**
+• @OwenGregorian — General Intuition raised $320M to train world models on billions of gameplay clips for agentic perception/action.
+  https://x.com/OwenGregorian/status/2071018773016952958
+
+<!-- _src: xai · candidates: 10 → kept: 6_ -->

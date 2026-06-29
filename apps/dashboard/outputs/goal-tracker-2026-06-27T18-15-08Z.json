@@ -1,0 +1,421 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-06-27",
+        "description": "4 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 0 done (overall → flat)"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "summary-stats",
+        "separator-1",
+        "on-track-heading",
+        "btc-goal",
+        "sandbox-goal",
+        "separator-2",
+        "blocked-heading",
+        "xai-goal",
+        "config-goal",
+        "separator-3",
+        "sources-card"
+      ]
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-risk",
+        "stat-attention",
+        "stat-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "4"
+      }
+    },
+    "stat-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At risk",
+        "value": "0"
+      }
+    },
+    "stat-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs attention",
+        "value": "0"
+      }
+    },
+    "stat-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On track",
+        "value": "2"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "btc-goal": {
+      "type": "Card",
+      "props": {
+        "title": "BTC breakdown CONFIRMED 6-26"
+      },
+      "children": [
+        "btc-content"
+      ]
+    },
+    "btc-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-meta",
+        "btc-detail-1",
+        "btc-detail-2",
+        "btc-detail-3"
+      ]
+    },
+    "btc-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "btc-idle",
+        "btc-activity",
+        "btc-trend"
+      ]
+    },
+    "btc-idle": {
+      "type": "Stat",
+      "props": {
+        "label": "Idle",
+        "value": "0d"
+      }
+    },
+    "btc-activity": {
+      "type": "Stat",
+      "props": {
+        "label": "Activity/14d",
+        "value": "47"
+      }
+    },
+    "btc-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "flat",
+        "variant": "outline"
+      }
+    },
+    "btc-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels ran 5× today, 2nd qualifying close $59,982 < $60,500 confirmed 01:15Z"
+      }
+    },
+    "btc-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "spot ranged $59,899→$60,668 sitting on the line"
+      }
+    },
+    "btc-detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "reclaim flags 63,500/65,900 re-armed"
+      }
+    },
+    "sandbox-goal": {
+      "type": "Card",
+      "props": {
+        "title": "Sandbox-truncation systemic (ISS-019/020/021/024/025)"
+      },
+      "children": [
+        "sandbox-content"
+      ]
+    },
+    "sandbox-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sandbox-meta",
+        "sandbox-detail-1",
+        "sandbox-detail-2"
+      ]
+    },
+    "sandbox-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "sandbox-idle",
+        "sandbox-activity",
+        "sandbox-trend"
+      ]
+    },
+    "sandbox-idle": {
+      "type": "Stat",
+      "props": {
+        "label": "Idle",
+        "value": "0d"
+      }
+    },
+    "sandbox-activity": {
+      "type": "Stat",
+      "props": {
+        "label": "Activity/14d",
+        "value": "42"
+      }
+    },
+    "sandbox-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "flat",
+        "variant": "outline"
+      }
+    },
+    "sandbox-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "20-skill tail unchanged from 6-26, ISS-025 capture-fix PR day 5 unshipped (action-converter 4.6/5 quality 6-24 18:14Z)"
+      }
+    },
+    "sandbox-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill day-4 NO_GAP confirms durable fix path = aeon.yml capture step"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "xai-goal": {
+      "type": "Card",
+      "props": {
+        "title": "XAI quota recovery"
+      },
+      "children": [
+        "xai-content"
+      ]
+    },
+    "xai-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "xai-status",
+        "xai-detail-1",
+        "xai-detail-2",
+        "xai-action-heading",
+        "xai-action"
+      ]
+    },
+    "xai-status": {
+      "type": "Alert",
+      "props": {
+        "message": "Waiting on operator Team 3a8b4c1e credit top-up since 2026-06-16 (day 12, BLOCKED 14d)",
+        "type": "warning"
+      }
+    },
+    "xai-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "WebSearch covers tweet-roundup"
+      }
+    },
+    "xai-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "Prefetched .xai-cache covers narrative-tracker / list-digest / agent-buzz"
+      }
+    },
+    "xai-action-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action",
+        "level": "h4"
+      }
+    },
+    "xai-action": {
+      "type": "Text",
+      "props": {
+        "text": "Operator tops up Team 3a8b4c1e monthly credit budget to clear daily-routine WebSearch fallback path"
+      }
+    },
+    "config-goal": {
+      "type": "Card",
+      "props": {
+        "title": "Operator on-chain config"
+      },
+      "children": [
+        "config-content"
+      ]
+    },
+    "config-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "config-status",
+        "config-detail-1",
+        "config-detail-2",
+        "config-action-heading",
+        "config-action"
+      ]
+    },
+    "config-status": {
+      "type": "Alert",
+      "props": {
+        "message": "Waiting on type:pool/position entries + ALCHEMY_API_KEY since seed (day 20, BLOCKED 14d)",
+        "type": "warning"
+      }
+    },
+    "config-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor NO_CONFIG"
+      }
+    },
+    "config-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor blockscout-only (5/5 watches, 0 raw events 24h)"
+      }
+    },
+    "config-action-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action",
+        "level": "h4"
+      }
+    },
+    "config-action": {
+      "type": "Text",
+      "props": {
+        "text": "Operator adds type:pool/position entries to memory/on-chain-watches.yml + provisions ALCHEMY_API_KEY/ETHERSCAN_API_KEY secrets"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-card": {
+      "type": "Card",
+      "props": {
+        "title": "Sources"
+      },
+      "children": [
+        "sources-list"
+      ]
+    },
+    "sources-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-logs",
+        "sources-git",
+        "sources-gh-pr",
+        "sources-gh-issue",
+        "sources-cron"
+      ]
+    },
+    "sources-logs": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok"
+      }
+    },
+    "sources-git": {
+      "type": "Text",
+      "props": {
+        "text": "git=ok(1 commit 30d)"
+      }
+    },
+    "sources-gh-pr": {
+      "type": "Text",
+      "props": {
+        "text": "gh_pr=ok(0 open)"
+      }
+    },
+    "sources-gh-issue": {
+      "type": "Text",
+      "props": {
+        "text": "gh_issue=ok(5 open advisor sprint #141-145)"
+      }
+    },
+    "sources-cron": {
+      "type": "Text",
+      "props": {
+        "text": "cron-state=ok"
+      }
+    }
+  }
+}

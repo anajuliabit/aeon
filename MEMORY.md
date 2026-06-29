@@ -1,0 +1,52 @@
+# Long-term Memory
+*Last consolidated: 2026-06-27*
+
+## Current Goals
+- **Sandbox-truncation systemic** — ISS-019/020/021/024/025 cluster (defi-overview, token-pick, search-skill, skill-health, cost-report). 20-skill chronic tail sr<0.5 shares `output_tokens=0` signature. Durable fix at workflow `aeon.yml` capture step still pending: action-converter flagged a 4.6/5-quality PR on 6-24 18:14Z, **day 5 unshipped** (surfaced in morning-brief 6-25 + 6-26 + 6-27).
+- **XAI quota recovery** — Team 3a8b4c1e monthly credit limit exhausted 6-16 (**day 12**). WebSearch fallback covers daily-routine, tweet-roundup, narrative-tracker; XAI primary still works via prefetched paths (list-digest 6-27 cache hit, narrative-tracker 6-27 cache hit, agent-buzz 6-27 cache hit). Operator top-up pending. *[BLOCKED]*
+- **Operator on-chain config** — `memory/on-chain-watches.yml` seeded with 5 Base wallets. defi-monitor still NO_CONFIG **day 20** (needs `type: pool` / `type: position` entries). on-chain-monitor green via Blockscout keyless but `ALCHEMY_API_KEY len=0` + `ETHERSCAN_API_KEY null`. *[BLOCKED — partial]*
+- **BTC breakdown CONFIRMED day 2** — 6-26 close $59,982 < $60,500 = 2nd qualifying sub-threshold close (alert fired 6-27 01:15Z). Today's spot ranged $59,899→$60,668 across 4 btc-levels runs; tape steadied/bounced 18/20 green 24h on post-$10.5B Deribit options expiry clear; F&G 15 (+2 from 13). Reclaim flags still armed — need close >$60,500 to reset, >$63,500/$65,900 for reclaim trips. Today's UTC close decides 3rd-day persistence.
+
+## Recently Cleared
+- **AAVE 6-24 HIGH 8/10 pick day-4 holding** — $76 → $95.74 (+25.9% on entry) on Kraken-stake-$385M-rumor live bid; [TRENDING+UP] through risk-off + bounce alike. Persistent through 4 sessions.
+- **APE 6-26 HIGH 9/10 pick day-1 weak → -6.4% midday** — entry $0.151, intraday $0.141 by token-movers 10:34Z. ApeMars/Hyperliquid-whale catalyst not surviving the meta-bear tape. Watch invalidation rule on 6-28.
+- **SLX 6-27 HIGH 9/10 pick** — Solstice $0.4753, Solana institutional delta-neutral, NEW ATH 12:20Z, Binance trading event + Upbit/CoinEx listings. Exit $0.60 / inv $0.38 / 14d.
+- **PR #147 merged** between 6-26 evening and 6-27 morning — advisor hard-risk-layer #140 (first of 7-issue advisor sprint #139–#145). 0 open PRs as of 6-27 14:30Z.
+- **vuln-scanner 6-27 dual-channel ship** — Panniantong/Agent-Reach (★43k Python): 1 code HIGH (CWE-88 yt-dlp argv injection in `transcribe.py:81-94`) PVR disabled on repo → `.pending-disclosure/` for operator escalation; 1 dep CVE bundle PR #442 (yt-dlp 5 HIGH CVEs, requests, python-dotenv).
+- **on-chain-monitor 48h quiet thread** — zero raw events on 5 Base wallets across 12:49Z run; extends 6-26 quiet thread post-6-25 address-poisoning escalation. Dust did not repeat.
+- **token-alert 6th clean CG day** (ISS-023 closed 6-22) — no rail-break across WELL/MAMO/REPPO/GITLAWB; closest GITLAWB at 1,335bp slack on 15% rail.
+
+## Fleet Health Overview
+- **Skill-health 6-26 18:00Z snapshot:** 9 healthy · 26 degraded · 6 warning · 0 critical · 3 no_data (autoresearch, fork-skill-gap, operator-scorecard). morning-brief degraded→warning since 6-25 (sr 0.6 boundary). Sandbox-truncation `output_tokens=0` cluster carries; cost-report cf=0 holds since 6-24 03:48Z (sr 10% structural).
+- **Heartbeat 6-27 08:18Z + 14:30Z: 🔴 DEGRADED** — fleet cf=0 across all 42 dispatched; chronic-failure tail 20 skills sr<0.5. Worst: vuln-scanner 7% / reg-monitor 10% / cost-report 10% / skill-analytics 11% / security-digest 21% / list-digest 30% / search-skill 30% / narrative-tracker 32% / skill-health 32%.
+- **Open issues: 14** (4 critical sandbox cluster ISS-019/020/021/025 + 7 high + 3 medium). 13 resolved historically.
+- **PR backlog: 0 open** — PR #147 merged between 6-26 evening + 6-27 morning; 6 of 7 advisor sprint issues (#139, #141–#145) still open (no fresh PRs filed 6-27).
+- **chain:investment-advisor** failed 6-08, off status table per spec (long-standing).
+
+## Active Topics
+- [Fleet status & infrastructure](topics/fleet.md) — PR history, blockers, skill-health patterns.
+- [Crypto research](topics/crypto.md) — Narrative evolution, token picks (SLX 6-27 HIGH 9/10 fresh, AAVE 6-24 +25.9% day-4 holding, APE 6-26 day-1 fade, SEI 6-25 stopped out), Morpho curator-risk + operator leverage-freeze guidance, watchlist alerts.
+- [Market context](topics/market-context.md) — 6-27 snapshot: post-opex bear bounce (conviction medium), BTC $60,329 (+2.1% 24h) under $60,500 line, breadth 4→18/20 green 24h, F&G 15 Extreme Fear day 4; record $1.79B single-day ETF outflow 6-26.
+- [Capital-2× program](topics/capital-2x-program.md) — North-star spec.
+- [XAI quota state](topics/xai-quota-exhausted.md) — Outage tracker since 6-16 (day 12).
+- [AIXBT signals](topics/aixbt-grounding.md), [clusters](topics/aixbt-clusters.md), [chains](topics/aixbt-chains.md) — 36 clusters / ~205 chains as of 6-27 09:00Z. Key: STRC mNAV<1 + $1.79B record ETF outflow simultaneously breaks institutional BTC bid mechanics (not dip, mechanism failure); Bitwise $114M HYPE under DEAD-narrative-slate = institutional receipt resurrects @NOIRSINGULARIS TAO/WLD/HYPE/ONDO/PENDLE thesis 24h post-death.
+
+## Tracked Tokens
+Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
+
+| Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
+|---------|--------------------|---------------|-----------------|
+| WELL    | moonwell-artemis   | 10%           | $0.00335599 -0.43% 6-27 (2nd consecutive pinned-at-low day, vol 0.16× 5-day mean) |
+| MAMO    | mamo               | 15%           | $0.00782378 +3.76% 6-27 (first green after 6-day low extension, reclaims $0.0078; vol 1.09× mean) |
+| REPPO   | reppo              | 15%           | $0.02066389 +3.83% 6-27 (reclaims $0.02 handle; net +20.4% from 6-19 base; vol 0.36× mean) |
+| GITLAWB | gitlawb            | 15%           | $0.0000474 -1.65% 6-27 (7th consecutive red day to fresh local low; -44.9% from 6-15 top) |
+
+## Recent Patterns & Issues
+- **6-27 12:46Z token-pick SLX HIGH 9/10 $0.4753** — Solana institutional delta-neutral protocol with USX stablecoin, Binance trading event + Upbit/CoinEx listings, NEW ATH 12:20Z, v/m 1.94 = $223M turnover on $114M mc = real money moving. Exit $0.60 / inv $0.38 / 14d. Market: Crimea NO at 87¢ HIGH +15% to par. VELVET 10/10 raw rejected on parabolic entry (10x in 24d + July 10 unlock 9.2% of mcap).
+- **META-BEAR PERSISTED DAY 2 6-27 with NEW structural confirms** — "Crypto needs new narrative" (@KobeissiLetter + @AliMartinez + @DasEvas1 "SpaceX/OpenAI/Anthropic ate generational bet" variant) carried day 2 with $1.79B record single-day ETF outflow + BTC tapped $58k Sept-2024 low + STRC mNAV<1 + F&G 15 day-4. **24h half-life rule for reactive bear narratives BROKEN** by structural backing. Regime change candidate, not noise. Watch 6-28 for 3rd-day persistence. 4 RIDE narratives held: AI agent infra (Stripe Fable 5 50M-line + Salesforce Agent Script OSS receipts), stablecoins (Solana $250M USDC mint rotation receipt), RWA (+185.8% YTD 2025), prediction markets. 0 FRONT-RUN 4 consecutive days. **Selective-liquidity slate RESURFACED** 24h post-death on Bitwise $114M HYPE stake = institutional receipt; play named tickers HYPE/TAO/WLD/ONDO/PENDLE, NOT the index.
+- **defi-overview 6-27:** Aave V3 fees **-35% 1d / -12.75% 7d wipes 6-26's +36% day-3 spike** (lending demand transient; 4-day arc -0.1→+21→+36→-35). V3 reclaims share from V4 ($818M vs $546M, day-1 V4 leak reverses). Ethena USDtb -20.71% broadens RWA-Treasury unwind from Invesco USTB (which is now -28%/-$223M 48h cumulative). Maple +11.67% TVL on +886% 7d fees = real private-credit demand. Stables $312.46B flat. USDC-AERO 39.77% Slipstream pool slipped just under $25M TVL filter (was 39.3% incentive 6-26).
+- **security-digest 6-27 cred-stealer + EOQ disclosure cadence:** **CVE-2026-42208 litellm EPSS 0.834 = 3rd PATCH-TODAY trigger of 2026** — uniquely a supply-chain compromised wheel (1.82.8 ships `litellm_init.pth` credential stealer; semantic-router pulled it transitively). Operator action: audit `site-packages/litellm_init.pth` + rotate AWS/GCP/Azure/SSH/k8s creds + crypto wallets. **Incus 7-CVE Go coordinated drop 6-26** (2nd consecutive day single-ecosystem 5+ CVE release after 6-25 Go x/crypto/ssh 9-CVE) = end-of-Q2 coordinated disclosure cadence. **pnpm 9-advisory cluster** = npm package manager itself as attack surface (lockfile/manifest/env-lockfile attacks). **KEV 2-day zero-cadence** (6-26 + 6-27) completes 6-25 burst cooldown. CVE-2026-49257 mcp-pinot CVSS 10.0 (default oauth_enabled=False + 0.0.0.0 bind).
+- **3 NEW reflexivity flags 6-27 (narrative-tracker):** (1) STRC mNAV<1 + $1.79B record ETF outflow = institutional BTC bid mechanics broken in BOTH legs same day, mechanism failure not dip — this IS the structural backing that broke the meta-bear's 24h half-life; (2) Bitwise $114M HYPE stake under DEAD slate = institutional product team picks ONE from dead narrative 24h after death = slate reflexively reviving on real $$$ allocation; (3) Solana $250M USDC mint = same datapoint reads two ways (rotation receipt constructive for Solana / sideline parking bearish for crypto risk-on) — stablecoin float is the staging ground regardless. Plus strengthened carry: AI agent rail-shipped proof (Stripe Fable 5 + Salesforce Agent Script + x402 480k agents / 265% wkly tx growth).
+- **agent-buzz 6-27 MCP plumbing fills in** — @DaedalusAgents proposes MCP expose receipts at protocol layer (authorizer/scope/spend cap/idempotency/artifact hash) — **directly parallels Sherwood "agent fund management isn't custody — it's mandate" thesis from soul/SOUL.md** (independent X-side echo of same primitive). fere_ai 10M+ MCP agent actions (Claude/ChatGPT crypto trading) extends Base 15M agentic txns datapoint from 6-25. OpenBioRQ "agentic collapse" benchmark = open agent-eval surface to watch.
+- **search-skill 6-27 SEARCH_SKILL_NO_GAP day 4** — fleet capability-complete on external-skill axis at 192 installed skills. Failures are infra (ISS-025 capture step), not gaps. Stop noise-filing new gap reports unless cron-state failure mode changes.
+- **list-digest 6-27 theo S2 signal surfaced** — @Flowslikeosmo S2 boost vault math (11% APY sthUSD floor + points upside, FDV $200M→$1B = 17%-41% annualized 6mo, genesis $100M filled <24h, highest-leverage leg pendle YT on sthUSD still locked). First time on curated DeFi list; observation only, not tracked-token candidate yet.

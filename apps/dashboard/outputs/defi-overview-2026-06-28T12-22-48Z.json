@@ -1,0 +1,380 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "DeFi Overview — 2026-06-28",
+        "description": "Mixed: TVL holds +0.3%, DEX vol −47% on Sunday tape, stables flat"
+      },
+      "children": [
+        "stack-tvl",
+        "sep-1",
+        "heading-chains",
+        "table-chains",
+        "sep-2",
+        "heading-movers",
+        "text-movers",
+        "text-movers-note",
+        "sep-3",
+        "heading-fees",
+        "table-fees",
+        "text-fees-beats-tvl-note",
+        "text-aave-analysis",
+        "text-hyperliquid",
+        "sep-4",
+        "heading-dex",
+        "stat-dex",
+        "table-dex",
+        "text-v3v4-flip",
+        "sep-5",
+        "heading-stables",
+        "stat-stables",
+        "text-avalon",
+        "sep-6",
+        "heading-real-yield",
+        "table-real-yield",
+        "sep-7",
+        "heading-incentive",
+        "table-incentive",
+        "text-incentive-note",
+        "sep-8",
+        "text-sources"
+      ]
+    },
+    "stack-tvl": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-tvl-value",
+        "stat-tvl-24h",
+        "stat-tvl-7d"
+      ]
+    },
+    "stat-tvl-value": {
+      "type": "Stat",
+      "props": {
+        "label": "TVL",
+        "value": "$70.40B"
+      }
+    },
+    "stat-tvl-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h change",
+        "value": "+0.3%",
+        "trend": "up"
+      }
+    },
+    "stat-tvl-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d change",
+        "value": "-3.9%",
+        "trend": "down"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-chains": {
+      "type": "Heading",
+      "props": {
+        "text": "Top chains",
+        "level": "h3"
+      }
+    },
+    "table-chains": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Chain",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "Ethereum",
+            "$37.6B"
+          ],
+          [
+            "BSC",
+            "$4.92B"
+          ],
+          [
+            "Solana",
+            "$4.80B"
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-movers": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers — protocols",
+        "level": "h3"
+      }
+    },
+    "text-movers": {
+      "type": "Text",
+      "props": {
+        "text": "↓ xStocks −59% ($580M → $235M, RWA) — 3rd day of RWA-wrapper unwind: USTB 6-26, USDtb 6-27, xStocks 6-28"
+      }
+    },
+    "text-movers-note": {
+      "type": "Text",
+      "props": {
+        "text": "(no UP protocol cleared |1d|≥10% AND tvl≥$100M filter; chains_1d unavailable in /v2/chains — section dropped)",
+        "variant": "muted"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-fees": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "table-fees": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Protocol",
+          "24h Fees",
+          "1d change",
+          "7d vs avg"
+        ],
+        "rows": [
+          [
+            "Tether",
+            "$16.0M",
+            "−1%",
+            "flat"
+          ],
+          [
+            "Circle USDC",
+            "$6.42M",
+            "flat",
+            "flat"
+          ],
+          [
+            "Canton",
+            "$1.82M",
+            "−8%",
+            "—"
+          ]
+        ]
+      }
+    },
+    "text-fees-beats-tvl-note": {
+      "type": "Text",
+      "props": {
+        "text": "Fees beating TVL: none cleared filter (24h≥$500k AND fees_c7d>+20% AND TVL_c7d<+5%) — drop section",
+        "variant": "muted"
+      }
+    },
+    "text-aave-analysis": {
+      "type": "Text",
+      "props": {
+        "text": "Aave V3 fees day-4 confirmation: −7.95% 1d, −12% 7d, −24% 1m — Tuesday's +36% spike fully unwound (6-26 +36 → 6-27 −12 → 6-28 −24 1m). Morpho Blue −5% 7d, −31% 1m — same lending-demand-was-transient pattern.",
+        "variant": "caption"
+      }
+    },
+    "text-hyperliquid": {
+      "type": "Text",
+      "props": {
+        "text": "Hyperliquid Perps fees collapse: $914k 24h (−66% 1d, −16% 7d) — reverses 6-27's \"+25% vs 7d\" HLP fee bid; weekend perps freeze.",
+        "variant": "caption"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-dex": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX vol (24h)",
+        "level": "h3"
+      }
+    },
+    "stat-dex": {
+      "type": "Stat",
+      "props": {
+        "label": "Total DEX Volume",
+        "value": "$4.34B",
+        "delta": "−47% 1d, −19% 7d",
+        "trend": "down"
+      }
+    },
+    "table-dex": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "DEX/Pool",
+          "Volume",
+          "1d change"
+        ],
+        "rows": [
+          [
+            "Uniswap V4",
+            "$628M",
+            "−6%"
+          ],
+          [
+            "Kalshi",
+            "$378M",
+            "−11%"
+          ],
+          [
+            "Aerodrome Slipstream",
+            "$288M",
+            "−48%"
+          ]
+        ]
+      }
+    },
+    "text-v3v4-flip": {
+      "type": "Text",
+      "props": {
+        "text": "V3/V4 share flip reverses: Uniswap V3 $251M (−69% 1d) vs V4 $628M — V4 back on top by $377M. 6-27's V3-leads-V4-by-$272M was a Saturday distribution effect, not a structural reclaim.",
+        "variant": "caption"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-stables": {
+      "type": "Heading",
+      "props": {
+        "text": "Stables",
+        "level": "h3"
+      }
+    },
+    "stat-stables": {
+      "type": "Stat",
+      "props": {
+        "label": "Stables market cap",
+        "value": "$312.4B",
+        "delta": "+0.2% 1d, −0.4% 7d",
+        "trend": "neutral"
+      }
+    },
+    "text-avalon": {
+      "type": "Text",
+      "props": {
+        "text": "Avalon USDa −21% ($271M → $214M, crypto-backed) — BTC-collateralized stable redemption extends leverage-unwind theme (matches operator's cbBTC/USDC freeze guidance from 6-26 Q&A)",
+        "variant": "caption"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-real-yield": {
+      "type": "Heading",
+      "props": {
+        "text": "Real yield (sustainable, ≥$10M, filtered)",
+        "level": "h3"
+      }
+    },
+    "table-real-yield": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Pool",
+          "APY Base",
+          "TVL",
+          "Chain"
+        ],
+        "rows": [
+          [
+            "WSOL-USDC (Raydium AMM)",
+            "31.8%",
+            "$10.5M",
+            "Solana"
+          ],
+          [
+            "ALPHAUSDCDELTAV2 (Morpho Blue)",
+            "25.2%",
+            "$22.2M",
+            "ETH"
+          ],
+          [
+            "MFONE (Midas RWA)",
+            "16.1%",
+            "$70.5M",
+            "ETH"
+          ]
+        ]
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-incentive": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive yield (points / emissions, ≥$25M)",
+        "level": "h3"
+      }
+    },
+    "table-incentive": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Pool",
+          "APY via rewards",
+          "TVL",
+          "Chain"
+        ],
+        "rows": [
+          [
+            "USDC-AERO (Aerodrome v1)",
+            "39.1% via $AERO rewards",
+            "$25.1M",
+            "Base"
+          ],
+          [
+            "CVXCRV (Convex)",
+            "16.4% via $CRV/$CVX/$FXS rewards",
+            "$27.3M",
+            "ETH"
+          ]
+        ]
+      }
+    },
+    "text-incentive-note": {
+      "type": "Text",
+      "props": {
+        "text": "USDC-AERO back above filter (6-27 slipped to $24.85M)",
+        "variant": "muted"
+      }
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: llama_tvl=ok llama_dex=ok llama_fees=ok llama_stables=ok llama_yields=ok | var: none",
+        "variant": "muted"
+      }
+    }
+  }
+}

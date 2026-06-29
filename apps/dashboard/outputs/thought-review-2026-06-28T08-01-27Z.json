@@ -1,0 +1,50 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "time-text",
+        "captures-text",
+        "status-text"
+      ]
+    },
+    "time-text": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "captures-text": {
+      "type": "Text",
+      "props": {
+        "text": "0 captures"
+      },
+      "children": []
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

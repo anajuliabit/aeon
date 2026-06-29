@@ -1,0 +1,546 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Movers — 2026-06-28"
+      },
+      "children": [
+        "market_overview",
+        "sep1",
+        "top_winners_section",
+        "sep2",
+        "top_losers_section",
+        "sep3",
+        "trending_section",
+        "sep4",
+        "notable_section"
+      ]
+    },
+    "market_overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "snapshot_desc",
+        "key_prices"
+      ]
+    },
+    "snapshot_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Tilted red — 36/100 top-100 green (up from morning 19/100, partial recovery from day's risk-off open), median top-50 −0.9%. Filter kept 176/250.",
+        "variant": "body"
+      }
+    },
+    "key_prices": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "btc",
+        "eth",
+        "sol",
+        "bnb",
+        "hype"
+      ]
+    },
+    "btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$60,216"
+      }
+    },
+    "eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,579",
+        "delta": "−0.1%",
+        "trend": "down"
+      }
+    },
+    "sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$71.75",
+        "delta": "+0.2%",
+        "trend": "up"
+      }
+    },
+    "bnb": {
+      "type": "Stat",
+      "props": {
+        "label": "BNB",
+        "value": "$555.60",
+        "delta": "−1.2%",
+        "trend": "down"
+      }
+    },
+    "hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$63.04",
+        "delta": "+0.1%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top_winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_title",
+        "winners_table"
+      ]
+    },
+    "winners_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol",
+          "Rank",
+          "Status"
+        ],
+        "rows": [
+          [
+            "VELVET (Velvet)",
+            "$1.71",
+            "+33.0%",
+            "+271%",
+            "+8.0%",
+            "$77M",
+            "#85",
+            "TRENDING+UP BREAKOUT"
+          ],
+          [
+            "CX (Cortex)",
+            "$0.0779",
+            "+21.4%",
+            "+202%",
+            "+5.3%",
+            "$1.5M",
+            "#232",
+            "BREAKOUT MICROCAP"
+          ],
+          [
+            "PUMP (Pump.fun)",
+            "$0.001472",
+            "+12.5%",
+            "−0.9%",
+            "−1.8%",
+            "$93M",
+            "#94",
+            "TRENDING+UP"
+          ],
+          [
+            "SLX (Solstice)",
+            "$0.522",
+            "+10.6%",
+            "+177%",
+            "−2.6%",
+            "$198M",
+            "#216",
+            ""
+          ],
+          [
+            "BAS (BNB Attestation Service)",
+            "$0.0432",
+            "+7.9%",
+            "+37%",
+            "+3.8%",
+            "$24M",
+            "#246",
+            ""
+          ],
+          [
+            "GWEI (ETHGas)",
+            "$0.142",
+            "+7.2%",
+            "+40%",
+            "+3.5%",
+            "$5.9M",
+            "#133",
+            ""
+          ],
+          [
+            "EIGEN (EigenCloud)",
+            "$0.237",
+            "+6.1%",
+            "−12%",
+            "−1.9%",
+            "$32M",
+            "#178",
+            ""
+          ],
+          [
+            "SPX (SPX6900)",
+            "$0.347",
+            "+4.9%",
+            "−5.8%",
+            "+0.9%",
+            "$6.9M",
+            "#127",
+            ""
+          ],
+          [
+            "BMX (BitMart)",
+            "$0.332",
+            "+4.0%",
+            "+6%",
+            "+0.7%",
+            "$9.6M",
+            "#240",
+            ""
+          ],
+          [
+            "DEXE",
+            "$22.39",
+            "+3.9%",
+            "+59%",
+            "+0.6%",
+            "$12M",
+            "#63",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top_losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_title",
+        "losers_table"
+      ]
+    },
+    "losers_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol",
+          "Rank",
+          "Status"
+        ],
+        "rows": [
+          [
+            "SKYAI",
+            "$0.184",
+            "−49.5%",
+            "−46%",
+            "+4.7%",
+            "$50M",
+            "#175",
+            "CAPITULATION"
+          ],
+          [
+            "BTW (Bitway)",
+            "$0.0624",
+            "−27.1%",
+            "−48%",
+            "−6.2%",
+            "$17M",
+            "#206",
+            "CAPITULATION"
+          ],
+          [
+            "M (MemeCore)",
+            "$0.683",
+            "−19.8%",
+            "−76%",
+            "−1.2%",
+            "$11M",
+            "#71",
+            ""
+          ],
+          [
+            "币安人生 (BinanceLife)",
+            "$0.607",
+            "−16.2%",
+            "−14%",
+            "−0.8%",
+            "$64M",
+            "#93",
+            ""
+          ],
+          [
+            "KITE",
+            "$0.127",
+            "−10.6%",
+            "−23%",
+            "−1.1%",
+            "$35M",
+            "#134",
+            ""
+          ],
+          [
+            "AAVE",
+            "$89.50",
+            "−7.0%",
+            "+21%",
+            "+1.1%",
+            "$300M",
+            "#56",
+            ""
+          ],
+          [
+            "XPL (Plasma)",
+            "$0.0985",
+            "−6.7%",
+            "+3%",
+            "flat",
+            "$43M",
+            "#141",
+            ""
+          ],
+          [
+            "BP (Backpack)",
+            "$0.511",
+            "−6.6%",
+            "−32%",
+            "+0.7%",
+            "$2.3M",
+            "#215",
+            ""
+          ],
+          [
+            "B (BUILDon)",
+            "$0.220",
+            "−5.9%",
+            "+0.3%",
+            "−1.5%",
+            "$5.1M",
+            "#152",
+            ""
+          ],
+          [
+            "ZEC (Zcash)",
+            "$385.57",
+            "−5.4%",
+            "−15%",
+            "+0.5%",
+            "$222M",
+            "#15",
+            "MAJOR"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending_title",
+        "trending_table",
+        "trending_note"
+      ]
+    },
+    "trending_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h3"
+      }
+    },
+    "trending_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "Rank",
+          "Price",
+          "24h",
+          "Status"
+        ],
+        "rows": [
+          [
+            "DEUS (XMAQUINA)",
+            "#932",
+            "$0.0299",
+            "+12.8%",
+            "MICROCAP"
+          ],
+          [
+            "BTC",
+            "#1",
+            "$60,245",
+            "+0.0%",
+            ""
+          ],
+          [
+            "PUMP (Pump.fun)",
+            "#94",
+            "$0.001484",
+            "+13.7%",
+            "TRENDING+UP"
+          ],
+          [
+            "PENGU (Pudgy Penguins)",
+            "#118",
+            "$0.00626",
+            "+0.1%",
+            ""
+          ],
+          [
+            "SYN (Synapse)",
+            "#278",
+            "$0.467",
+            "+33.4%",
+            "PUMP-RISK"
+          ],
+          [
+            "VELVET",
+            "#85",
+            "$1.71",
+            "+26.3%",
+            "TRENDING+UP BREAKOUT"
+          ],
+          [
+            "HYPE (Hyperliquid)",
+            "#10",
+            "$63.16",
+            "−0.4%",
+            "MAJOR"
+          ]
+        ]
+      }
+    },
+    "trending_note": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "ANSEM #305 trending row showing +44334% — CoinGecko aggregator outlier, excluded."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_title",
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4",
+        "notable_5",
+        "notable_6"
+      ]
+    },
+    "notable_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable_1": {
+      "type": "Text",
+      "props": {
+        "text": "VELVET sub-rank-100 BREAKOUT day-3 — $1.33 → $1.71 today on $77M vol; 7d +271%; July-10 unlock 9.2% of mcap still the structural risk against the move.",
+        "variant": "body"
+      }
+    },
+    "notable_2": {
+      "type": "Text",
+      "props": {
+        "text": "SYN #278 +33.4% trending — PUMP-RISK, no surfaced catalyst.",
+        "variant": "body"
+      }
+    },
+    "notable_3": {
+      "type": "Text",
+      "props": {
+        "text": "CX Cortex #232 +21.4% (7d +202%) — fresh sub-rank-250 BREAKOUT on $1.5M vol; MICROCAP, read with skepticism.",
+        "variant": "body"
+      }
+    },
+    "notable_4": {
+      "type": "Text",
+      "props": {
+        "text": "SKYAI capitulation extends −43% → −49.5% (day-2 wipeout on $50M vol = 26% of mcap traded).",
+        "variant": "body"
+      }
+    },
+    "notable_5": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE 6-24 HIGH 8/10 pick day-5 gives back −7%, still +17.8% on $76 entry; 7d +21%.",
+        "variant": "body"
+      }
+    },
+    "notable_6": {
+      "type": "Text",
+      "props": {
+        "text": "Breadth firmed 19 → 36/100 green since morning but tape stays tilted red — partial cover, not reversal.",
+        "variant": "body"
+      }
+    }
+  }
+}

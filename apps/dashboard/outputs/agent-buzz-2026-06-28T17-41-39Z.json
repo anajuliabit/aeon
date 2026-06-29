@@ -1,0 +1,162 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-06-28",
+        "description": "Quiet builder day — MCP locking in as the inter-agent layer, two runtime architecture takes, plus a $320M world-model raise on the side."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_1",
+        "sep_1",
+        "section_2",
+        "sep_2",
+        "section_3",
+        "sep_3",
+        "metadata"
+      ]
+    },
+    "section_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_1",
+        "story_1_1",
+        "story_1_2",
+        "story_1_3"
+      ]
+    },
+    "heading_1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP as the inter-agent standard",
+        "level": "h3"
+      }
+    },
+    "story_1_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Google's L3 spec names MCP+A2A the inter-agent protocol layer — Anthropic's spec gets cross-lab endorsement.",
+        "href": "https://x.com/Truntr_/status/2070962009504383282",
+        "source": "@Truntr_"
+      }
+    },
+    "story_1_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MCP defines tool-call wiring but leaves authority escalation undefined — the gap where multi-agent systems break.",
+        "href": "https://x.com/imaxxs/status/2070906921092268396",
+        "source": "@imaxxs"
+      }
+    },
+    "story_1_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Free handbook on building MCP servers as a structured way to gate multi-agent access to internal data.",
+        "href": "https://x.com/freeCodeCamp/status/2070900490674536556",
+        "source": "@freeCodeCamp"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_2",
+        "story_2_1",
+        "story_2_2"
+      ]
+    },
+    "heading_2": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent runtime experiments",
+        "level": "h3"
+      }
+    },
+    "story_2_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "3-tier monitoring layer that detects multi-agent drift mid-run and self-corrects without halting the task thread.",
+        "href": "https://x.com/kay_myg/status/2070981472933269992",
+        "source": "@kay_myg"
+      }
+    },
+    "story_2_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Argues agents should drive web state via semantic DOM affordances, not screenshots and brittle selectors.",
+        "href": "https://x.com/realdosaygo/status/2071019301247586377",
+        "source": "@realdosaygo"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_3",
+        "story_3_1"
+      ]
+    },
+    "heading_3": {
+      "type": "Heading",
+      "props": {
+        "text": "Training-data bets",
+        "level": "h3"
+      }
+    },
+    "story_3_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "General Intuition raised $320M to train world models on billions of gameplay clips for agentic perception/action.",
+        "href": "https://x.com/OwenGregorian/status/2071018773016952958",
+        "source": "@OwenGregorian"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 10 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

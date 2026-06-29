@@ -1,16 +1,13 @@
-## Summary
+*on-chain alert — 2026-06-28*
+TL;DR: W1 received ~$33.5k REPPO from W3 then routed equal amount into the REPPO staking contract — operator wallet rotation, no exit.
 
-**Skill:** on-chain-monitor — `${var}=""` (all 5 watches)
-**Status:** `ON_CHAIN_OK` (n_watches=5, n_raw=0, n_dropped=0) · no notification per spec
+*Wallet 1 (primary)* (base)
+• UNKNOWN-IN $33.5k REPPO ← W3 — [tx](https://basescan.org/tx/0x94dfeb04f1338225277078b259558f35f98c3a65852d609a01fee8756e66bee8)
+• UNKNOWN-OUT $33.5k REPPO → 0xc81F...68E8 (REPPO staking) — [tx](https://basescan.org/tx/0x096389a8439f6f8dec70f25ddc7bc9be22b7453728414b68d1e3400cda8fbbf5)
+• UNKNOWN-OUT $6.6k USDC → Morpho GA1 (steakUSDC vault deposit) — [tx](https://basescan.org/tx/0xba5c8a9dabd3324b2dca7127a5ce2745d7b7f1a16b5f7173c8ef8be7b201171c)
 
-**Window:** Base block 47,843,662 → 47,887,402 (43,740 blocks, ≈24h 16m from 2026-06-26T12:26Z → 2026-06-27T12:42Z).
+*Wallet 3* (base)
+• UNKNOWN-OUT $33.5k REPPO → W1 — [tx](https://basescan.org/tx/0x94dfeb04f1338225277078b259558f35f98c3a65852d609a01fee8756e66bee8)
+• UNKNOWN-IN $28.2k REPPO ← 0xc81F...68E8 (REPPO staking withdraw) — [tx](https://basescan.org/tx/0x8529290de558fd2b272547228d478d7e337410104ec366a8e184c28fa0c814fb)
 
-**Source path:** Blockscout keyless (Alchemy unset; Etherscan v2 keyless returns "Free API not supported for chainid=8453"). All 5 wallets pulled via `/transactions` + `/token-transfers` + `/internal-transactions`. Every endpoint's newest item predates state's `last_block` → zero raw events in window across all 5 watches. Extends the 6-26 "zero activity post-address-poisoning escalation" quiet thread to ~48h.
-
-**Files modified:**
-- `memory/on-chain-state.json` — `last_block` 47,843,662 → 47,887,402 and `last_run` 2026-06-27T12:42Z on all 5 watches (`alerted_tx` lists unchanged, all entries <7d & well under 200 cap).
-- `memory/logs/2026-06-27.md` — per-watch breakdown appended.
-
-**Untracked:** `.notify-sent-hashes`, `notify` — pre-existing, unrelated to this run.
-
-**Follow-up:** `ALCHEMY_API_KEY` still missing (would unlock unified asset-transfer fetch and remove the Etherscan paywall headwind) — `[BLOCKED — partial]` carry from MEMORY.md unchanged.
+5 events on 2 watches | sources: blockscout=ok, coingecko=ok, alchemy=skipped(no_key), etherscan=skipped(chain_paywalled) | last_block→47930872

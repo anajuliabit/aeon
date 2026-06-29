@@ -1,0 +1,412 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-28"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tldr",
+        "sep1",
+        "section_headlines",
+        "sep2",
+        "section_notable",
+        "sep3",
+        "section_decisions",
+        "sep4",
+        "footer"
+      ]
+    },
+    "tldr": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: productive signal day — VELVET 11/10 pick staged, ISS-026 filed, fork-cohort leveled 14 forks, first on-chain activity in 72h; two PRs stalling",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_title",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5"
+      ]
+    },
+    "h_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "h1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1_badge",
+        "h1_text",
+        "h1_link"
+      ]
+    },
+    "h1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "token-pick"
+      }
+    },
+    "h1_text": {
+      "type": "Text",
+      "props": {
+        "text": "VELVET HIGH 11/10 $1.72 fresh pick staged, target $2.20, inv $1.32, 10d",
+        "variant": "body"
+      }
+    },
+    "h1_link": {
+      "type": "Link",
+      "props": {
+        "label": ".pending-picks/2026-06-28-token-pick.json",
+        "href": ".pending-picks/2026-06-28-token-pick.json"
+      }
+    },
+    "h2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2_badge",
+        "h2_text",
+        "h2_link"
+      ]
+    },
+    "h2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-evals",
+        "variant": "destructive"
+      }
+    },
+    "h2_text": {
+      "type": "Text",
+      "props": {
+        "text": "REGRESSED; ISS-026 filed: heartbeat false-fail (evals before 08:00 UTC morning tick)",
+        "variant": "body"
+      }
+    },
+    "h2_link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "h3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3_badge",
+        "h3_text",
+        "h3_link"
+      ]
+    },
+    "h3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort"
+      }
+    },
+    "h3_text": {
+      "type": "Text",
+      "props": {
+        "text": "LEVELED_UP 14 forks to POWER threshold",
+        "variant": "body"
+      }
+    },
+    "h3_link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/fork-cohort-2026-06-28.md",
+        "href": "articles/fork-cohort-2026-06-28.md"
+      }
+    },
+    "h4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4_badge",
+        "h4_text",
+        "h4_link"
+      ]
+    },
+    "h4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "on-chain-monitor"
+      }
+    },
+    "h4_text": {
+      "type": "Text",
+      "props": {
+        "text": "first non-zero in ~72h: W3→W1 1.58M REPPO stake migration + W1 6,595 USDC→steakUSDC",
+        "variant": "body"
+      }
+    },
+    "h4_link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/on-chain-state.json",
+        "href": "memory/on-chain-state.json"
+      }
+    },
+    "h5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5_badge",
+        "h5_text",
+        "h5_link"
+      ]
+    },
+    "h5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect"
+      }
+    },
+    "h5_text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md consolidated + crypto/fleet/xai-quota topic files updated",
+        "variant": "body"
+      }
+    },
+    "h5_link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/MEMORY.md",
+        "href": "memory/MEMORY.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n_title",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ]
+    },
+    "n_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "n1": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels ×6 — breakdown alert 01:21Z (3rd qualifying sub-$60,500 close); 5 quiet follow-runs",
+        "variant": "body"
+      }
+    },
+    "n2": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — breadth 79→19/100 green (sharpest risk-off reversion of week); VELVET BREAKOUT day-2 holds",
+        "variant": "body"
+      }
+    },
+    "n3": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — meta-bear day 3 STRUCTURAL (ETF 13-day outflow longest-ever); Sui Seal MPC ships as custody answer; HYPE-perp promoted Rising",
+        "variant": "body"
+      }
+    },
+    "n4": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest — STUCK: GH run cancelled 18:38Z, dispatched status stranded ~1h40m",
+        "variant": "body"
+      }
+    },
+    "n5": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — 0 net-new KEV day 3; AI-tooling auth-bypass (mcp-memory-service, backpropagate) pattern emerging",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d_title",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6"
+      ]
+    },
+    "d_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "d1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1_text",
+        "d1_link"
+      ]
+    },
+    "d1_text": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #148 fix(agent-buzz) — 26h stalled",
+        "variant": "body"
+      }
+    },
+    "d1_link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/148",
+        "href": "https://github.com/anajuliabit/aeon/pull/148"
+      }
+    },
+    "d2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2_text",
+        "d2_link"
+      ]
+    },
+    "d2_text": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #149 docs(skill-graph) — 3h fresh",
+        "variant": "body"
+      }
+    },
+    "d2_link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/149",
+        "href": "https://github.com/anajuliabit/aeon/pull/149"
+      }
+    },
+    "d3": {
+      "type": "Text",
+      "props": {
+        "text": "re-dispatch fork-skill-digest — Sunday run cancelled, stranded dispatched status",
+        "variant": "body"
+      }
+    },
+    "d4": {
+      "type": "Text",
+      "props": {
+        "text": "ship ISS-025 capture-step fix — day 7 unshipped, 20-skill sr<0.5 chronic tail",
+        "variant": "body"
+      }
+    },
+    "d5": {
+      "type": "Text",
+      "props": {
+        "text": "top-up XAI quota — day 13 BLOCKED (operator action)",
+        "variant": "body"
+      }
+    },
+    "d6": {
+      "type": "Text",
+      "props": {
+        "text": "add type:pool/position entries to on-chain-watches.yml — defi-monitor NO_CONFIG day 21",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "+24 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

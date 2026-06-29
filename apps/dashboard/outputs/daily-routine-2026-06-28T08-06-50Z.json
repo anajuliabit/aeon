@@ -1,0 +1,734 @@
+{
+  "root": "card-daily-routine",
+  "state": {},
+  "elements": {
+    "card-daily-routine": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-06-28"
+      },
+      "children": [
+        "market-overview",
+        "sep-1",
+        "winners-heading",
+        "winners-table",
+        "sep-2",
+        "losers-heading",
+        "losers-table",
+        "sep-3",
+        "tweet-heading",
+        "tweet-stack",
+        "sep-4",
+        "paper-heading",
+        "paper-story",
+        "sep-5",
+        "github-heading",
+        "github-text",
+        "sep-6",
+        "hn-heading",
+        "hn-items-stack"
+      ]
+    },
+    "market-overview": {
+      "type": "Text",
+      "props": {
+        "text": "Tape rolls back over after yesterday's bounce — 19/100 top-100 green, BTC $60,117 -0.55% / ETH $1,573 -0.63%. Risk-off resumes day 1 of weekend.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "VELVET",
+            "$1.55",
+            "+86%",
+            "+217%",
+            "$89M",
+            "#88",
+            "Sub-rank-100 day-2 BREAKOUT extends"
+          ],
+          [
+            "BEAT",
+            "$2.84",
+            "+35%",
+            "+61%",
+            "$36M",
+            "#74",
+            "Fresh major-rank move"
+          ],
+          [
+            "SLX",
+            "$0.541",
+            "+20%",
+            "+191%",
+            "$162M",
+            "#213",
+            "Day-2 of yest's HIGH 9/10 pick (+14% on entry)"
+          ],
+          [
+            "PUMP",
+            "$0.00149",
+            "+14%",
+            "—",
+            "$66M",
+            "#93",
+            "Pump.fun reflexive bid"
+          ],
+          [
+            "BAS",
+            "$0.0438",
+            "+13%",
+            "—",
+            "$20M",
+            "#242",
+            ""
+          ],
+          [
+            "DEXE",
+            "$22.53",
+            "+8%",
+            "+54%",
+            "$12M",
+            "#63",
+            ""
+          ],
+          [
+            "KAITO",
+            "$0.578",
+            "+8%",
+            "+24%",
+            "$24M",
+            "#205",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "SKYAI",
+            "$0.196",
+            "-43%",
+            "-44%",
+            "$43M",
+            "#169",
+            "Capitulation"
+          ],
+          [
+            "BTW",
+            "$0.068",
+            "-19%",
+            "-33%",
+            "$17M",
+            "#199",
+            "4th red day extending"
+          ],
+          [
+            "LAB",
+            "$17.84",
+            "-12%",
+            "+21%",
+            "$42M",
+            "#20",
+            "Mega-reversal continues (yest -16%)"
+          ],
+          [
+            "KITE",
+            "$0.128",
+            "-10%",
+            "-24%",
+            "$33M",
+            "#133",
+            ""
+          ],
+          [
+            "ZEC",
+            "$385.58",
+            "-6%",
+            "-18%",
+            "$207M",
+            "#15",
+            ""
+          ],
+          [
+            "AAVE",
+            "$90.49",
+            "-5%",
+            "+20%",
+            "$287M",
+            "#56",
+            "6-24 HIGH 8/10 pick gives back, still +19% on entry"
+          ],
+          [
+            "APE",
+            "$0.140",
+            "-5%",
+            "—",
+            "$18M",
+            "#204",
+            "6-26 HIGH 9/10 pick day-3 fade"
+          ]
+        ]
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "tweet-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet-crypto-section",
+        "tweet-ai-section",
+        "tweet-dev-section"
+      ]
+    },
+    "tweet-crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-crypto-badge",
+        "tweet-crypto-text"
+      ]
+    },
+    "tweet-crypto-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Crypto",
+        "variant": "secondary"
+      }
+    },
+    "tweet-crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC tapped $58k Sept-2024 low then rebound $59.7k, another $1B futures wiped; CZ blames AI/macro/4y-cycle; BlackRock 2700 BTC + 53k ETH to Coinbase ($257M) — institutional unwind cadence persists."
+      }
+    },
+    "tweet-ai-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-ai-badge",
+        "tweet-ai-text"
+      ]
+    },
+    "tweet-ai-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "AI",
+        "variant": "secondary"
+      }
+    },
+    "tweet-ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "GPT-5.4 + 5.4 Pro shipped (native CUA, 1M context); Anthropic confidentially IPO-filed at $965B val on $65B Series H (>OpenAI); US banned Anthropic Fable-5 + Mythos-5 exports while Z.ai dropped GLM-5.2 open weights same day."
+      }
+    },
+    "tweet-dev-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-dev-badge",
+        "tweet-dev-text"
+      ]
+    },
+    "tweet-dev-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Dev",
+        "variant": "secondary"
+      }
+    },
+    "tweet-dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "Google joined Eclipse Foundation; NVIDIA Cosmos 3 Super + Nano; Zyphra ZAYA1-8B trained on AMD Instinct (escapes NVIDIA pipeline); Rust kernel support officially stable in Linux 7.0-rc5."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper-story": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper-link",
+        "paper-desc"
+      ]
+    },
+    "paper-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
+        "href": "https://huggingface.co/papers/2606.26790",
+        "source": "arXiv 2606.26790, HF ↑35"
+      }
+    },
+    "paper-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Distillation framework built for RL agents — directly load-bearing for the advisor sprint (#141 forced fine-grained probabilities + Brier calibration) and any agent that learns from its own trajectories.",
+        "variant": "caption"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues 6-27 → 6-28. Advisor sprint #141–#145 still open from 6-25, no fresh adds."
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn-items-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "hn-1",
+        "hn-2",
+        "hn-3",
+        "hn-4",
+        "hn-5"
+      ]
+    },
+    "hn-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-1-header",
+        "hn-1-links",
+        "hn-1-meta"
+      ]
+    },
+    "hn-1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-1-pts",
+        "hn-1-title"
+      ]
+    },
+    "hn-1-pts": {
+      "type": "Badge",
+      "props": {
+        "text": "784 pts"
+      }
+    },
+    "hn-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Anonymous GitHub account mass-dropping undisclosed 0-days",
+        "level": "h4"
+      }
+    },
+    "hn-1-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-1-github",
+        "hn-1-hn"
+      ]
+    },
+    "hn-1-github": {
+      "type": "Link",
+      "props": {
+        "label": "GitHub",
+        "href": "https://github.com/bikini/exploitarium"
+      }
+    },
+    "hn-1-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN Discussion",
+        "href": "https://news.ycombinator.com/item?id=48698617"
+      }
+    },
+    "hn-1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "Supply-chain disclosure-meta",
+        "variant": "caption"
+      }
+    },
+    "hn-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-2-header",
+        "hn-2-links",
+        "hn-2-meta"
+      ]
+    },
+    "hn-2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-2-pts",
+        "hn-2-title"
+      ]
+    },
+    "hn-2-pts": {
+      "type": "Badge",
+      "props": {
+        "text": "755 pts"
+      }
+    },
+    "hn-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "DSpark: speculative decoding accelerates LLM inference",
+        "level": "h4"
+      }
+    },
+    "hn-2-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-2-github",
+        "hn-2-hn"
+      ]
+    },
+    "hn-2-github": {
+      "type": "Link",
+      "props": {
+        "label": "DeepSeek GitHub",
+        "href": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf"
+      }
+    },
+    "hn-2-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN Discussion",
+        "href": "https://news.ycombinator.com/item?id=48696585"
+      }
+    },
+    "hn-2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "DeepSeek paper, parallels HF JetSpec ↑69",
+        "variant": "caption"
+      }
+    },
+    "hn-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-3-header",
+        "hn-3-links",
+        "hn-3-meta"
+      ]
+    },
+    "hn-3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-3-pts",
+        "hn-3-title"
+      ]
+    },
+    "hn-3-pts": {
+      "type": "Badge",
+      "props": {
+        "text": "218 pts"
+      }
+    },
+    "hn-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Asian AI startups launch mythos-like models",
+        "level": "h4"
+      }
+    },
+    "hn-3-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-3-tc",
+        "hn-3-hn"
+      ]
+    },
+    "hn-3-tc": {
+      "type": "Link",
+      "props": {
+        "label": "TechCrunch",
+        "href": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/"
+      }
+    },
+    "hn-3-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN Discussion",
+        "href": "https://news.ycombinator.com/item?id=48697958"
+      }
+    },
+    "hn-3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "Export-ban side-effect: open weights filling the gated lane",
+        "variant": "caption"
+      }
+    },
+    "hn-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-4-header",
+        "hn-4-links",
+        "hn-4-meta"
+      ]
+    },
+    "hn-4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-4-pts",
+        "hn-4-title"
+      ]
+    },
+    "hn-4-pts": {
+      "type": "Badge",
+      "props": {
+        "text": "159 pts"
+      }
+    },
+    "hn-4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Ford hired AI and sacked humans. it backfired",
+        "level": "h4"
+      }
+    },
+    "hn-4-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-4-ind",
+        "hn-4-hn"
+      ]
+    },
+    "hn-4-ind": {
+      "type": "Link",
+      "props": {
+        "label": "The Independent",
+        "href": "https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html"
+      }
+    },
+    "hn-4-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN Discussion",
+        "href": "https://news.ycombinator.com/item?id=48703968"
+      }
+    },
+    "hn-4-meta": {
+      "type": "Text",
+      "props": {
+        "text": "Early displacement-reversal datapoint",
+        "variant": "caption"
+      }
+    },
+    "hn-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-5-header",
+        "hn-5-links",
+        "hn-5-meta"
+      ]
+    },
+    "hn-5-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-5-pts",
+        "hn-5-title"
+      ]
+    },
+    "hn-5-pts": {
+      "type": "Badge",
+      "props": {
+        "text": "145 pts"
+      }
+    },
+    "hn-5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Post-Mythos Cybersecurity",
+        "level": "h4"
+      }
+    },
+    "hn-5-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-5-ceph",
+        "hn-5-hn"
+      ]
+    },
+    "hn-5-ceph": {
+      "type": "Link",
+      "props": {
+        "label": "Cephalosec Blog",
+        "href": "https://cephalosec.com/blog/cybersecurity-in-the-post-mythos-era-keep-calm-and-carry-on/"
+      }
+    },
+    "hn-5-hn": {
+      "type": "Link",
+      "props": {
+        "label": "HN Discussion",
+        "href": "https://news.ycombinator.com/item?id=48698559"
+      }
+    },
+    "hn-5-meta": {
+      "type": "Text",
+      "props": {
+        "text": "Security ops in the post-mythos restricted-access era",
+        "variant": "caption"
+      }
+    }
+  }
+}

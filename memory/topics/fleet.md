@@ -801,3 +801,46 @@ state: what was built, recurring blockers, and health.
   appears (hyperliquid + BTC dominance returning from DEAD).
 - **PR #138 (goal-tracker header drift fix)** open ~24h, under
   24h stall threshold per heartbeat. No urgent issues.
+
+## 2026-06-28 fleet deltas
+
+- **ISS-026 NEW (high, prompt-bug).** Filed by skill-evals 08:00Z run —
+  heartbeat false-fail on missing_pattern because skill-evals dispatches
+  before 08:00 UTC morning tick, captures pre-tick stale state of
+  log-based skills (heartbeat / token-alert / skill-health). Recommended
+  fix: schedule skill-evals after 21:00 UTC to capture full-day signal.
+  Coverage dipped 12/44 (27%, −5pp). Action queued on action-converter.
+- **PR #148 (fix agent-buzz x_search engagement ranking)** crossed 24h
+  stall window (opened 6-27 18:14Z, ~24h+ as of 14:15Z hb). Operator-
+  owned, direct follow-on to 6-27 agent-buzz cache-quality observation.
+  Watch for merge before 6-29 morning hb.
+- **ISS-025 capture-fix PR DAY 6 UNSHIPPED.** action-converter flagged
+  4.6/5-quality PR on 6-24 18:14Z; surfaced in morning-brief 6-25 →
+  6-26 → 6-27 → 6-28 (4 consecutive). Chronic 20-skill tail keeps
+  bleeding `output_tokens=0`. Operator has not picked this up despite
+  4 morning-brief surfaces — could be capacity-limited or deprioritized
+  vs advisor sprint (#141–#145).
+- **on-chain-monitor REPPO stake migration captured 13:03Z** — first
+  non-zero on-chain-monitor run since 6-25 address-poisoning quiet
+  thread (~72h). W3→W1 1.58M REPPO stake migration + W1 USDC→Morpho
+  steakUSDC vault. Operationally validates the curl→WebFetch fallback
+  + ID-keyed CoinGecko pricing path for token-transfers. Recommend
+  adding `0xc81F...68E8` as "REPPO staking" in known-addresses.yml.
+  Detail in [[crypto]] on-chain section.
+- **defi-monitor NO_CONFIG day 21.** Operator config drift unchanged.
+  ALCHEMY_API_KEY len=0; ETHERSCAN_API_KEY null. on-chain-watches.yml
+  has 5 `type: wallet` entries, zero `type: pool` / `type: position`
+  needed by defi-monitor.
+- **Skill-health 6-27 18:10Z snapshot:** 24 DEGRADED + 8 WARNING + 9
+  HEALTHY + 0 CRITICAL + 2 NO_DATA. Diff vs 6-26: btc-levels
+  degraded→warning + daily-routine degraded→warning (both crossed
+  0.6 sr line); −2 degraded. Hash 81dbbe4f changed → notification
+  fired. Sandbox-truncation cluster (ISS-019/020/021/024/025 + chronic
+  tail) still day 11 (since 6-19 first flag).
+- **6-28 14:15Z hb:** 20-skill chronic tail unchanged from 09:18Z; some
+  per-skill sr drift (vuln-scanner 7→10%, agent-buzz 48→49%, etc.) but
+  classification stable. 1 open PR (#148), 15 open issues (ISS-026 add).
+- **6-28 watchlist green-day** — token-alert TOKEN_ALERT_OK 7th
+  consecutive clean CG day; whole canonical watchlist green for first
+  time since 6-22 (median +1.51%); GITLAWB +5.38% ends 7-day red streak
+  with first elevated-vol upside print 1.27× day-prior.

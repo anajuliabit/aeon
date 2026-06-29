@@ -1,15 +1,15 @@
-*Goal Tracker — 2026-06-26*
+*Goal Tracker — 2026-06-28*
 
-Summary: 4 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 0 done (→ flat, no status changes since 6-25)
+Summary: 4 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 0 done (overall → flat)
 
 ON TRACK
-• Sandbox-truncation systemic — 0d idle, 40 activity/14d (→ flat). Chronic tail trimmed 22→20 today (defi-monitor exited cluster after 13:16Z), but ISS-025 capture-step fix PR still pending day 3 (action-converter flagged 6-24 18:14Z at 4.6/5 quality, not yet opened).
-• BTC hard levels — 0d idle, 41 activity/14d (→ flat). Breakdown alert fired 05:02Z (6-25 close $59,712 < $60,500, first qualifying close); spot tapped 21-month low $58,115 intraday; reclaim flags 63.5k/65.9k both re-armed.
+• Sandbox-truncation systemic — 0d idle, 50 activity/14d (→ flat) — ISS-025 capture-step PR day 6 unshipped; chronic 20-skill tail still cf=0 across heartbeats; search-skill day 5 NO_GAP
+• BTC breakdown CONFIRMED 6-26 05:02Z — 0d idle, 52 activity/14d (→ flat) — btc-levels ran 4× today, breakdown alert fired 01:21Z on 6-27 close $59,943 (3rd qualifying sub-$60.5k close); F&G 18 Extreme Fear day 4
 
 BLOCKED
-• XAI quota recovery — operator top-up day 11 (Team 3a8b4c1e exhausted since 6-16). WebSearch fallback covers tweet-roundup; prefetched .xai-cache still works for narrative-tracker/list-digest.
-  → Action: nudge operator on monthly-credit top-up — no automation path.
-• Operator on-chain config — defi-monitor NO_CONFIG day 19; ALCHEMY_API_KEY len=0 day 10, ETHERSCAN_API_KEY unset.
-  → Action: add `type: pool` / `type: position` entries to memory/on-chain-watches.yml and set ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets.
+• XAI quota recovery — waiting on operator Team 3a8b4c1e top-up since 2026-06-16 (day 13); WebSearch fallback covering daily-routine tweet-roundup, prefetched .xai-cache covering narrative-tracker/list-digest/agent-buzz
+  → Action: Operator top up XAI Team 3a8b4c1e monthly credit
+• Operator on-chain config — waiting on `type: pool`/`type: position` entries + ALCHEMY/ETHERSCAN keys (defi-monitor NO_CONFIG day 21); Blockscout keyless still carrying on-chain-monitor
+  → Action: Add `type: pool` / `type: position` entries to memory/on-chain-watches.yml
 
-Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
+Sources: logs=ok, git=ok(1 commit/14d, PR-driven flow), gh_pr=ok(2 open), gh_issue=ok(5 open advisor sprint), cron-state=ok

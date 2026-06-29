@@ -1,18 +1,21 @@
-*AIXBT Pulse — 2026-06-27 09:00Z*
+*AIXBT Pulse — 2026-06-28 21:00Z*
 
 CRYPTO
-- BTC $58K lows. Record $1.79B weekly ETF outflows, BlackRock-led. F&G 15. STRC breaks par + mNAV < 1 — the institutional BTC thesis is cracking on both legs.
-- MiCA July 1: Binance EU position closures in 4 days. OKX capturing the flow. CLARITY Act 60% on Kalshi.
+- $ANSEM 630x → $100M+ mcap on Solana; SOL trenches memecoin cycle named
+- Strategy mNAV<1 for the first time — BTC leverage stress test running live
 
-MACRO / TRADFI
-- AI chips weak + Nasdaq rotating to healthcare and small caps. Same read as yesterday.
-- Hormuz oil inverted in 12h: crude bid at 21:00, crude falling at 09:00 on tanker resumption. Same event, opposite outcome — zero transmission to BTC.
+MACRO / GEO
+- (absorbed into TradFi this pull)
+
+TRADFI
+- US strikes Iran post-Hormuz drone attacks — full re-escalation (09:00 said de-escalated)
+- CPI>4% + new Fed chair holds → yields anchored, liquidity easing off the table
+- Russia fuel export bans + EU sanctions compound energy supply shock
 
 NEW THIS PULL
-- STRC breaks par + mNAV < 1 (threshold breach — prior was stress, now it's broken)
-- Bitwise stakes $114M in HYPE (thesis → execution; prior was $319/2028 price target)
-- Solana $250M USDC minted + $W/$JTO setups (different demand vector than yest's $3B tokenized stocks)
-- Small-cap + equal-weight outperforming mega-caps + VIX contained (new breadth signal)
+- Strategy mNAV<1 (first time ever)
+- ETH exits global top-100 assets
+- Hormuz: de-escalated → active strikes, 12h full reversal
 
 BRIDGE
-STRC mNAV < 1 + $1.79B ETF outflows hitting simultaneously breaks the institutional BTC bid mechanics — not a dip, a model failure. Solana $250M USDC mint at the same moment is the rotation receipt.
+- Hormuz was priced clean at 09:00 — oil $72, carry improving, zero tail budget. By 21:00 it's US strikes + Russia fuel bans simultaneously. Uncovered position on energy. Strategy mNAV going sub-1 the same evening is the BTC leverage mechanism in technical stress for the first time. ETH exiting the top-100 with CPI above 4% and no cut isn't a price event — it's a legitimacy marker, and Solana just claimed that space.

@@ -1,0 +1,633 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-28"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-section",
+        "sep1",
+        "since-section",
+        "sep2",
+        "watch-section",
+        "sep3",
+        "running-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-items"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-title",
+        "focus-1-stat",
+        "focus-1-detail1",
+        "focus-1-detail2"
+      ]
+    },
+    "focus-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "BTC breakdown day 3",
+        "variant": "lead"
+      }
+    },
+    "focus-1-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Close (6-27)",
+        "value": "$59,943"
+      }
+    },
+    "focus-1-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "3rd consecutive sub-$60,500"
+      }
+    },
+    "focus-1-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "Today's UTC close decides 4th-red or reclaim attempt",
+        "variant": "caption"
+      }
+    },
+    "focus-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-title",
+        "focus-2-stat",
+        "focus-2-detail1",
+        "focus-2-detail2"
+      ]
+    },
+    "focus-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "Ondo + Virtuals + Treasures",
+        "variant": "lead"
+      }
+    },
+    "focus-2-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Tokenized stocks",
+        "value": "430"
+      }
+    },
+    "focus-2-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "Deployed to 40k+ AI agents"
+      }
+    },
+    "focus-2-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "Shipped Friday — fuses RWA + agent-infra clusters in one product; on-thesis for Sherwood",
+        "variant": "caption"
+      }
+    },
+    "focus-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-detail1",
+        "focus-3-detail2"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-fix — day 6 unshipped",
+        "variant": "lead"
+      }
+    },
+    "focus-3-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "20-skill telemetry tail bleeds another day"
+      }
+    },
+    "focus-3-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #148 patches agent-buzz signal, not structural truncation",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "since-items"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4",
+        "since-5"
+      ]
+    },
+    "since-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-1-title",
+        "since-1-stat",
+        "since-1-detail1",
+        "since-1-detail2"
+      ]
+    },
+    "since-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "BTC breakdown alert",
+        "variant": "lead"
+      }
+    },
+    "since-1-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "6-27 close",
+        "value": "$59,943"
+      }
+    },
+    "since-1-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "Alert fired 01:21Z"
+      }
+    },
+    "since-1-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "Day 3 of sub-$60,500",
+        "variant": "caption"
+      }
+    },
+    "since-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-2-title",
+        "since-2-detail1",
+        "since-2-detail2"
+      ]
+    },
+    "since-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals regression",
+        "variant": "lead"
+      }
+    },
+    "since-2-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "Filed ISS-026: heartbeat false-fail when evals runs before 08:00 morning tick"
+      }
+    },
+    "since-2-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "Recommended fix: move evals after 21:00",
+        "variant": "caption"
+      }
+    },
+    "since-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-3-title",
+        "since-3-detail1",
+        "since-3-detail2",
+        "since-3-stat"
+      ]
+    },
+    "since-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #148 fix(agent-buzz)",
+        "variant": "lead"
+      }
+    },
+    "since-3-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "Opened 6-27 18:14Z by operator"
+      }
+    },
+    "since-3-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "Mode: Top + min_likes: 5 on x_search"
+      }
+    },
+    "since-3-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Addresses",
+        "value": "48% sr regression"
+      }
+    },
+    "since-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-4-title",
+        "since-4-detail1",
+        "since-4-detail2",
+        "since-4-stat1",
+        "since-4-stat2"
+      ]
+    },
+    "since-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "Meta-bear sentiment",
+        "variant": "lead"
+      }
+    },
+    "since-4-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "\"Crypto needs new narrative\" — persisted day 2"
+      }
+    },
+    "since-4-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "Broke 24h reactive-bear half-life"
+      }
+    },
+    "since-4-stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "ETF outflow",
+        "value": "$1.79B"
+      }
+    },
+    "since-4-stat2": {
+      "type": "Text",
+      "props": {
+        "text": "strc mnav < 1, F&G 15 (day 4)",
+        "variant": "caption"
+      }
+    },
+    "since-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-5-title",
+        "since-5-aave",
+        "since-5-ape"
+      ]
+    },
+    "since-5-title": {
+      "type": "Text",
+      "props": {
+        "text": "Token picks performance",
+        "variant": "lead"
+      }
+    },
+    "since-5-aave": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE 6-24 pick still printing +25.9% on entry day-4 (Kraken-stake bid)"
+      }
+    },
+    "since-5-ape": {
+      "type": "Text",
+      "props": {
+        "text": "APE 6-26 pick -6% day-2"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-heading",
+        "watch-content"
+      ]
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch-title",
+        "watch-detail1",
+        "watch-detail2"
+      ]
+    },
+    "watch-title": {
+      "type": "Text",
+      "props": {
+        "text": "Ondo + Virtuals + Treasures",
+        "variant": "lead"
+      }
+    },
+    "watch-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "430 tokenized stocks live to 40k+ AI agents on Ethereum + Solana"
+      }
+    },
+    "watch-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "First concrete shipped product where RWA + agent-infra clusters compound; potential teardown candidate for Sherwood thesis-fit",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-content"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today (Sunday-specifics)",
+        "level": "h2"
+      }
+    },
+    "running-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-subsection1",
+        "running-subsection2",
+        "running-subsection3"
+      ]
+    },
+    "running-subsection1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-h3-1",
+        "running-schedule-1"
+      ]
+    },
+    "running-h3-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Sunday-only skills",
+        "level": "h3"
+      }
+    },
+    "running-schedule-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-graph-time",
+        "fork-skill-digest-time",
+        "fork-cohort-time",
+        "skill-update-check-time"
+      ]
+    },
+    "skill-graph-time": {
+      "type": "Text",
+      "props": {
+        "text": "skill-graph — 17:00"
+      }
+    },
+    "fork-skill-digest-time": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest — 18:30"
+      }
+    },
+    "fork-cohort-time": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort — 19:00"
+      }
+    },
+    "skill-update-check-time": {
+      "type": "Text",
+      "props": {
+        "text": "skill-update-check — 19:00 (sun-only)"
+      }
+    },
+    "running-subsection2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-h3-2",
+        "running-schedule-2"
+      ]
+    },
+    "running-h3-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Daily cadence",
+        "level": "h3"
+      }
+    },
+    "running-schedule-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heartbeat-time",
+        "aixbt-pulse-time",
+        "token-cluster-time",
+        "narrative-tracker-time",
+        "evening-recap-time"
+      ]
+    },
+    "heartbeat-time": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat — 08:00, 14:00, 20:00"
+      }
+    },
+    "aixbt-pulse-time": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse — 09:00, 21:00"
+      }
+    },
+    "token-cluster-time": {
+      "type": "Text",
+      "props": {
+        "text": "token cluster — 12:00"
+      }
+    },
+    "narrative-tracker-time": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — 13:30"
+      }
+    },
+    "evening-recap-time": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap — 21:00"
+      }
+    },
+    "running-subsection3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-h3-3",
+        "self-improve-status"
+      ]
+    },
+    "running-h3-3": {
+      "type": "Heading",
+      "props": {
+        "text": "Self-improvement",
+        "level": "h3"
+      }
+    },
+    "self-improve-status": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve OFF today (every-other-day parity = odd days)"
+      }
+    }
+  }
+}

@@ -571,3 +571,77 @@ narrative-and-pick layer.
 ## Bitcoin
 See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 2026-05-21, still stale — last30 has not re-run).
+
+## 2026-06-27 update — meta-bear day 2 confirms structural, AAVE +25.9% holds, SLX pick
+
+### Picks ledger updates
+- **SLX (Solstice) — 6-27 12:46Z HIGH 9/10 $0.4753.** Solana institutional delta-neutral protocol with USX stablecoin. Binance trading event + Upbit (6-1) / CoinEx (6-3) listings drove +130.8% 7d climb; NEW ATH 12:20Z ~26min before pick. v/m 1.94 = $223M turnover on $114M mc. Catalyst is mechanical (CEX flow). Exit $0.60 / inv $0.38 / 14d. VELVET 10/10 raw was rejected on parabolic entry (already 10x in 24d $0.09→$0.90→$1.33 + July 10 unlock 9.2% of mcap).
+- **AAVE 6-24 HIGH 8/10 pick day-4 +25.9% holding** — $76 → $95.66 (07:25Z) → $95.74 (10:34Z) on Kraken-stake-$385M-rumor live bid; TRENDING+UP through risk-off + post-opex bounce both. Persistent multi-session strength.
+- **APE 6-26 HIGH 9/10 pick day-1 weak → -6.4% midday** — entry $0.151 → $0.146 -0.8% morning → $0.141 -6.4% by 10:34Z. ApeMars 63% APY + Hyperliquid $1M-whale catalyst not surviving meta-bear tape. Watch invalidation rule on 6-28.
+- **SEI 6-25 HIGH 9/10 stopped out day 1** (carry) — entry $0.0584 → $0.0542 6-26 hit invalidation (-7.2%).
+
+### Predictions market (6-27 token-pick)
+- **Crimea NO at 87¢ — HIGH +15pp to par.** Fair YES ~3% (11+ years contested Russian control, zero successful Ukrainian Crimea ops, Sevastopol BSF heavily defended). 13¢ overprices tail scenarios with no observable lead indicators in 6mo window. 24h vol $145k clears gate. Risks: Trump-brokered ceasefire that puts Crimea on table, or asymmetric Ukrainian Black Sea breakthrough.
+
+### Narrative tracker — meta-bear day 2 + reflexivity flags
+- **"Crypto needs new narrative" meta-bear PERSISTED day 2** (5 ↑↑ Rising Bear-meta STRUCTURAL) — backbone @KobeissiLetter + @AliMartinez carry + today's @DasEvas1 "SpaceX/OpenAI/Anthropic ate generational bet" variant. **NEW structural confirms:** $1.79B record single-day ETF outflow (6-26), BTC tapped $58k Sept-2024 low + bounced $59.7k, STRC mNAV<1, F&G 15 day-4. **24h half-life rule for reactive bear narratives BROKEN.** Regime change candidate, not noise. Watch 6-28 for 3rd-day persistence.
+- **Selective-liquidity slate RESURFACED 24h post-death** — @NOIRSINGULARIS same exact ticker list TAO/WLD/HYPE/ONDO/PENDLE returns + Bitwise $114M HYPE stake same day = institutional receipt. Position: play **named tickers** under meta-bear, NOT the index.
+- **HYPE-as-perp-vertical NEW** (3 ↑ Emerging Bull RIDE-on-name) — @trevor_flipper "perps most bullish vertical outside AI" + Bitwise $114M HYPE = builder+institutional alignment same day.
+- **Base-as-onchain-leader + RWA-rails NEW** (3 ↑ Emerging Bull WATCH) — @jessepollak quoting @XenBH; native-shill discount but x402 + Base RWA pipeline real.
+- **Long-cycle 2027-29 / $500k BTC NEW cope counter-frame** — @3orovik; tracking because it shows bag-holder anchoring under meta-bear.
+- **STRUCTURAL longs all persist (5-day streak):** AI agent infra (Stripe Fable 5 50M-line migration + Salesforce Agent Script OSS today — operator-tier compound bull receipts), stablecoins (Solana $250M USDC mint today = rotation receipt), RWA (+185.8% YTD 2025 most profitable narrative), prediction markets (Polymarket $40B+).
+- **0 FRONT-RUN 4 consecutive days** — no contrarian Emerging edge in this market; meta-bear is dominant frame, playable longs all already RIDE-tier.
+
+### Reflexivity flags 6-27 (3 NEW + 1 strengthened)
+1. **STRC mNAV < 1 + $1.79B record ETF outflow SAME DAY** — institutional BTC bid mechanics (STRC strategy mNAV>1 buyback flywheel + ETF accumulation as twin pillars) broken in BOTH legs same day. Not a dip, mechanism failure. THIS is the structural backing that broke the 6-26 meta-bear's 24h half-life. Self-reinforcing: meta-bear → smart money sidelined → no bid → STRC mNAV drops → forced-seller signal → more outflows. Multi-week timeframe risk.
+2. **Bitwise $114M HYPE under DEAD slate** — institutional product team picks ONE name from dead "selective-liquidity slate" 24h after death. Slate reflexively reviving because PMs need somewhere that isn't broad-crypto FADE. Watch other 4 slate tickers (TAO/WLD/ONDO/PENDLE) for follow-on institutional flow.
+3. **Solana $250M USDC mint same day as USDT-dom-shift bear read** — same datapoint reads two ways. Rotation receipt (constructive Solana ecosystem) or sideline parking (bearish crypto risk-on). Both simultaneously = no clear narrative yet, but stablecoin float is staging ground regardless.
+4. **(STRENGTHENED carry) AI agent rail-shipped proof** — Stripe Claude Fable 5 used to migrate 50M-line codebase in 1 day (operator-tier agent-rail capability) + Salesforce Agent Script open-source Apache 2.0 today + x402 480k agents / 265% wkly tx growth since March. Narrative + shipped infra both flowing same direction. Inverse of #1: bull thesis with real receipts.
+
+### DeFi protocol-side flags 6-27
+- **Aave V3 day-4 fee reversal -35% 1d wipes 6-26's +36% day-3 spike** (4-day arc: -0.1 → +21 → +36 → -35). Lending demand spike WAS transient. Morpho Blue fees -53% 1d, day-3 carry burnt.
+- **Uniswap V3 reclaims share from V4** ($818M +15.6% 1d vs V4 $546M -37.5% 1d) — 6-26's V3≈V4 tie inverts; V4 production rollout still leaking liquidity back to V3.
+- **Ethena USDtb -20.71% RWA-Treasury unwind broadens** — joins Invesco USTB (now -28%/-$223M 48h cumulative). RWA Treasury-wrapper sector under institutional redemption pressure; small-cap yield-USD wrappers (APXUSD $0.71, APYUSD $0.97) still broken from 6-26.
+- **Maple +11.67% TVL on +886% 7d fees on $411k 24h** = real private-credit deposit demand counter-cycle to TradFi-RWA unwind. Differentiates institutional appetite (private credit OK, Treasury wrappers redeeming).
+
+### Watchlist signals (token-alert 6-27)
+- WELL pinned-at-low 2 consecutive days ($0.00336, vol 0.16× 5-day mean — drying up).
+- MAMO first green day after 6-day low extension (+3.76% 6-27 reclaims $0.0078; vol still 1.09× mean = highest absolute of window).
+- REPPO reclaims $0.02 handle (+3.83% 6-27; net +20.4% from 6-19 base).
+- GITLAWB 7th consecutive red day to fresh local low ($0.0000474, -44.9% from 6-15 top); closest to 15% rail at 1,335bp slack.
+
+### Theo S2 boost vault (NEW carry-watch — list-digest 6-27)
+@Flowslikeosmo surfaced theo S2 boost vault math on the curated DeFi list: 11% APY sthUSD floor + points upside; FDV $200M→$1B implies 17%-41% annualized over 6mo; genesis $100M filled <24h; highest-leverage leg pendle YT on sthUSD still locked. First surfacing on the list — observation only, not in tracked-token watchlist yet. Worth watching if list members repost the pendle YT opening.
+
+## 2026-06-28 update — meta-bear day 3 persists, VELVET pick, breadth collapse, on-chain REPPO stake migration
+
+### Picks ledger updates
+- **VELVET (Velvet Capital) — 6-28 12:17Z HIGH 11/10 $1.72** (+33.62% 24h / +272.29% 7d). Catalyst stack: June 3 Trade.xyz unified-terminal integration → June 10 pre-IPO synthetic exposure (SpaceX/OpenAI/Anthropic) via Velvet X → late-June Aerodrome routing partnership; today retests $1.83 ATH on the Aerodrome leg. Score breakdown 11/10 (vmc 0.107, RS +272% vs BTC −6.3% 7d). Risk: July ~10 vesting cliff hits ~12d out (early-backer 1y 15% + team 3y 20% supply). Exit $2.20 / inv $1.32 / 10d (pre-unlock exit).
+- **SLX 6-27 HIGH 9/10 pick day-1 +13.8% on entry by 6-28 morning** — $0.4753 → $0.541 morning → $0.522 afternoon = +9.8% by midday; held above ATH on Binance trading event continuation.
+- **AAVE 6-24 HIGH 8/10 pick day-5 +17.8% on entry** — gave back from peak +25.9% day-4 ($95.74 → ~$89.66); cumulative still profitable but profit-taking active.
+- **APE 6-26 HIGH 9/10 pick day-3 -7.3% on entry** — $0.151 → $0.140; Yuga Labs / ApeMars / Hyperliquid-whale catalyst stack didn't survive meta-bear tape. Invalidation tail extends.
+- **Market (6-28):** SKIPPED — Putin-out-EOY 3rd consecutive day no fresh catalyst; Crimea-recapture dedup-blocked; World Cup $83M vol but no defensible football fair value per spec.
+
+### Narrative tracker — meta-bear day 3+ structural confirms
+- **"Crypto needs new narrative" meta-bear PERSISTED day 3** — past 24h half-life rule for the 2nd consecutive day. Receipts: Bitcoin ETF 13-day net outflow streak longest ever, total assets $107.8B → $82.8B (−23% 6w); F&G 18 day-4 Extreme Fear; breadth collapsed 18/20 → 6/20 green 24h post-opex bounce fully erased. Regime locked.
+- **Sui Seal MPC framework shipped 6-28** — supply-side response to AI-agent mandate-vs-custody bear case: secures autonomous agent transactions without key exposure. Counters the "agent fund management isn't custody, it's mandate" risk narrative directly. Operator-thesis-relevant.
+- **CZ proposes BTC fork to freeze Satoshi's 1M BTC** — governance attack disguised as supply debate; needs social consensus, CZ has Binance institutional weight to manufacture it. Tracked under STRC mNAV<1 carry — twin actors reshaping BTC base-money legitimacy same 12h window.
+- **Tokenized equities now CEX-led** — Binance/Backpack/OKX named (prior cycle was Aave/Morpho DeFi framing). USD1 hits $4.7B = 3rd-largest stablecoin. Distribution pivoted off DeFi rails to CEX rails inside one week — RWA fading-from-DeFi-into-CEX is the actual transition.
+- **Ondo+Virtuals+Treasures 6-27 ship 430 tokenized stocks to 40k+ AI agents** — first product fusing RWA + agent-infra MS5 RIDE clusters. On-thesis for Sherwood; validates rotation-into-agent-rails persists even on broad bear tape.
+- **0 FRONT-RUN 5 consecutive days** — no contrarian Emerging edge; meta-bear dominant frame, playable longs all RIDE-tier.
+
+### DeFi protocol-side flags 6-28
+- **xStocks -59% 1d** ($579M → $235M) extends 3-day institutional Treasury/equity-wrapper unwind (Invesco USTB -28% 48h cumulative, Ethena USDtb -21% 6-27). Sector-wide RWA-wrapper redemption pressure.
+- **Hyperliquid Perps fees -66% 1d reverses 6-27 HLP bid.** 1-day flow reversal — HLP positioning was transient.
+- **Aave V3 fees day-4 fully unwound** (4-day arc: -0.1 → +21 → +36 → -35 → flat). Lending demand spike was a 2-day burst, not regime.
+- **Watchlist signals 6-28:** WELL/MAMO/REPPO/GITLAWB all green for first time since 6-22 (median +1.51%); GITLAWB ends 7-day red streak +5.38%, first elevated-vol upside print 1.27× day-prior. REPPO net +22.7% from 6-19 base; MAMO holds $0.00785.
+
+### On-chain — REPPO stake migration 6-28
+- **W3 → W1 1.58M REPPO stake migration** in 20-minute burst 2026-06-27T13:28–13:48Z (caught by 6-28 12:43Z window). W3 (operator's REPPO accumulation wallet) withdrew 1.33M REPPO + claimed 137 VIRTUAL from staking contract `0xc81F...68E8`; combined with existing balance; transferred 1.58M to W1; W1 immediately re-staked the full 1.58M back into the same contract. **Net: REPPO position migrated W3 stake → W1 stake, no protocol exit.** Recommend adding label "REPPO staking" to `known-addresses.yml` next consolidation pass.
+- **W1 6,595 USDC → Morpho Steakhouse Prime Instant vault (steakUSDC)** same window — continues on-thesis institutional-USDC yield-vault accumulation pattern. Steakhouse Financial is one of the explicitly trustworthy curators per the Morpho curator-risk lessons (vs AlphaPing's Alpha USDC Delta V2 disaster).
+- First non-zero on-chain activity since 6-25 address-poisoning escalation — quiet thread ~72h, attacker dust didn't repeat.
+
+### Reflexivity flags 6-28 (new + strengthened carry)
+1. **"Mildest drawdown on record" framing arriving day 4 of Extreme Fear is manufactured bottom-calling** — receipts (F&G 18, $1.79B weekly ETF outflows, 19/100 breadth, BlackRock $257M-to-Coinbase weekly) don't support framing. "Q3-Q4 bottom" thesis embedded in AIXBT narrative → becomes the bid it's predicting. Watch for actual ETF inflow reversal before updating.
+2. **Hormuz fully de-escalated, oil $72, dollar weakening, VIX 18** — repricing load-bearing in current risk-on stack. Next tanker headline hits a market with no tail-risk budget left.
+3. **(STRENGTHENED carry) AI agent rail-shipped proof** — Sui Seal MPC adds custody-primitive to the receipt list (Stripe Claude Fable 5 50M-line migration + Salesforce Agent Script OSS + x402 480k agents / $50M cumulative / 265% wkly tx growth). Bull thesis with structural receipts compounding even as broad crypto fades.

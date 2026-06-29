@@ -1,0 +1,214 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AIXBT Pulse — 2026-06-28 21:00Z"
+      },
+      "children": [
+        "crypto-section",
+        "sep1",
+        "macro-section",
+        "sep2",
+        "tradfi-section",
+        "sep3",
+        "new-section",
+        "sep4",
+        "bridge-section"
+      ]
+    },
+    "crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crypto-heading",
+        "crypto-item1",
+        "crypto-item2"
+      ]
+    },
+    "crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRYPTO",
+        "level": "h3"
+      }
+    },
+    "crypto-item1": {
+      "type": "Text",
+      "props": {
+        "text": "$ANSEM 630x → $100M+ mcap on Solana; SOL trenches memecoin cycle named",
+        "variant": "body"
+      }
+    },
+    "crypto-item2": {
+      "type": "Alert",
+      "props": {
+        "title": "Strategy mNAV<1",
+        "message": "First time ever — BTC leverage stress test running live",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "macro-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "macro-heading",
+        "macro-text"
+      ]
+    },
+    "macro-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MACRO / GEO",
+        "level": "h3"
+      }
+    },
+    "macro-text": {
+      "type": "Text",
+      "props": {
+        "text": "(absorbed into TradFi this pull)",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tradfi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tradfi-heading",
+        "tradfi-item1",
+        "tradfi-item2",
+        "tradfi-item3"
+      ]
+    },
+    "tradfi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRADFI",
+        "level": "h3"
+      }
+    },
+    "tradfi-item1": {
+      "type": "Alert",
+      "props": {
+        "title": "US strikes Iran",
+        "message": "Post-Hormuz drone attacks — full re-escalation (09:00 said de-escalated)",
+        "type": "error"
+      }
+    },
+    "tradfi-item2": {
+      "type": "Text",
+      "props": {
+        "text": "CPI>4% + new Fed chair holds → yields anchored, liquidity easing off the table",
+        "variant": "body"
+      }
+    },
+    "tradfi-item3": {
+      "type": "Text",
+      "props": {
+        "text": "Russia fuel export bans + EU sanctions compound energy supply shock",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-heading",
+        "new-item1",
+        "new-item2",
+        "new-item3"
+      ]
+    },
+    "new-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW THIS PULL",
+        "level": "h3"
+      }
+    },
+    "new-item1": {
+      "type": "Badge",
+      "props": {
+        "text": "Strategy mNAV<1 (first time ever)",
+        "variant": "destructive"
+      }
+    },
+    "new-item2": {
+      "type": "Badge",
+      "props": {
+        "text": "ETH exits global top-100 assets",
+        "variant": "secondary"
+      }
+    },
+    "new-item3": {
+      "type": "Badge",
+      "props": {
+        "text": "Hormuz: de-escalated → active strikes, 12h full reversal",
+        "variant": "destructive"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "bridge-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bridge-heading",
+        "bridge-text"
+      ]
+    },
+    "bridge-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BRIDGE",
+        "level": "h3"
+      }
+    },
+    "bridge-text": {
+      "type": "Text",
+      "props": {
+        "text": "Hormuz was priced clean at 09:00 — oil $72, carry improving, zero tail budget. By 21:00 it's US strikes + Russia fuel bans simultaneously. Uncovered position on energy. Strategy mNAV going sub-1 the same evening is the BTC leverage mechanism in technical stress for the first time. ETH exiting the top-100 with CPI above 4% and no cut isn't a price event — it's a legitimacy marker, and Solana just claimed that space.",
+        "variant": "body"
+      }
+    }
+  }
+}

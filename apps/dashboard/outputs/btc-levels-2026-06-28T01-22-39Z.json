@@ -1,0 +1,80 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC levels"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_spot",
+        "stat_daily",
+        "sep1",
+        "alert_signal",
+        "text_position",
+        "sep2",
+        "text_disclaimer"
+      ]
+    },
+    "stat_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot",
+        "value": "$60,009"
+      }
+    },
+    "stat_daily": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily close",
+        "value": "$59,943",
+        "delta": "2026-06-27"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_signal": {
+      "type": "Alert",
+      "props": {
+        "title": "Downtrend continuation signal",
+        "message": "Daily close $59,943 < $60,500 threshold — 2nd consecutive qualifying close",
+        "type": "warning"
+      }
+    },
+    "text_position": {
+      "type": "Text",
+      "props": {
+        "text": "leveraged cbBTC position: not in review band (review trigger ≤$45k)",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_disclaimer": {
+      "type": "Text",
+      "props": {
+        "text": "not financial advice",
+        "variant": "caption"
+      }
+    }
+  }
+}

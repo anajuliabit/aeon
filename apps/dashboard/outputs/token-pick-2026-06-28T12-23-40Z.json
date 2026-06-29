@@ -1,0 +1,232 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Pick — 2026-06-28"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "velvet-heading",
+        "signal-badges",
+        "price-text",
+        "mcap-vol-text",
+        "score-heading",
+        "score-text",
+        "catalyst-heading",
+        "catalyst-text",
+        "risk-heading",
+        "risk-text",
+        "stake-heading",
+        "stake-text",
+        "exit-heading",
+        "exit-text",
+        "recent-heading",
+        "recent-text",
+        "separator-1",
+        "market-heading",
+        "market-status",
+        "market-details",
+        "separator-2",
+        "sources-text",
+        "footer-1",
+        "footer-2"
+      ]
+    },
+    "velvet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "VELVET",
+        "level": "h2"
+      }
+    },
+    "signal-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-high",
+        "badge-signal"
+      ]
+    },
+    "badge-high": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "badge-signal": {
+      "type": "Badge",
+      "props": {
+        "text": "signal 11/10",
+        "variant": "default"
+      }
+    },
+    "price-text": {
+      "type": "Text",
+      "props": {
+        "text": "Price: $1.72 (+33.6% 24h / +272% 7d)",
+        "variant": "lead"
+      }
+    },
+    "mcap-vol-text": {
+      "type": "Text",
+      "props": {
+        "text": "mcap $725M | vol $77M (vmc 0.11)",
+        "variant": "body"
+      }
+    },
+    "score-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Score breakdown",
+        "level": "h3"
+      }
+    },
+    "score-text": {
+      "type": "Text",
+      "props": {
+        "text": "24h+1, 7d+1, both>5%+2, CG-trending+2, vmc≥0.10+2, RS vs BTC -6.3% / ETH -8.7% on 7d (VELVET +272%) +2, DexScreener cross-confirm $24M+ Base/BSC pair vol +1 = 11/10",
+        "variant": "caption"
+      }
+    },
+    "catalyst-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Catalyst",
+        "level": "h3"
+      }
+    },
+    "catalyst-text": {
+      "type": "Text",
+      "props": {
+        "text": "Velvet Capital ran $1.4k→$1.83 ATH 6-12 on June 3 Trade.xyz unified-terminal integration + June 10 launch of synthetic pre-IPO exposure ($SPACEX/$OPENAI/$ANTHROPIC) via Velvet X; today retests ATH on Aerodrome-routing Base partnership.",
+        "variant": "body"
+      }
+    },
+    "risk-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Risk",
+        "level": "h3"
+      }
+    },
+    "risk-text": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "July ~10 cliff hits — early-backer 1y vesting (15% supply) + team multi-yr vesting (20%) start unlocking ~12 days out; wrong if price loses $1.32 breakout base before unlock or if Velvet X pre-IPO product gets a securities-law flag from US regulators."
+      }
+    },
+    "stake-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stake",
+        "level": "h3"
+      }
+    },
+    "stake-text": {
+      "type": "Text",
+      "props": {
+        "text": "≤0.5% of net worth (HIGH) — moonshot sleeve, 1% total cap",
+        "variant": "body"
+      }
+    },
+    "exit-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Exit",
+        "level": "h3"
+      }
+    },
+    "exit-text": {
+      "type": "Text",
+      "props": {
+        "text": "target $2.20 / invalidate $1.32 / time-stop 10d (pre-unlock exit)",
+        "variant": "body"
+      }
+    },
+    "recent-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Vs recent picks",
+        "level": "h3"
+      }
+    },
+    "recent-text": {
+      "type": "Text",
+      "props": {
+        "text": "first time. 7d window clean (SOL/AERO 6-21, EIGEN 6-22, DEXE 6-23, AAVE 6-24, SEI 6-25, APE 6-26, SLX 6-27).",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market",
+        "level": "h2"
+      }
+    },
+    "market-status": {
+      "type": "Badge",
+      "props": {
+        "text": "SKIPPED",
+        "variant": "secondary"
+      }
+    },
+    "market-details": {
+      "type": "Text",
+      "props": {
+        "text": "Putin out by Dec 31 YES 13¢ ($526k 24h vol) considered 3rd day — fair ~6-7% per stable health-speculation baseline, edge ~6pp MEDIUM but no fresh catalyst to justify the re-look. Crimea-recapture market dedup-blocked (6-27 SLX-day pick). World Cup $83M vol but no defensible football fair value. Hunter-Biden 2028 Dem 0.7¢ already at fair, edge <1pp. No market clears the 5pp-edge + fresh-catalyst bar today.",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: cg=ok, dex=ok, poly=ok, x=ok (no qualifying candidates)",
+        "variant": "caption"
+      }
+    },
+    "footer-1": {
+      "type": "Text",
+      "props": {
+        "text": "if you take a pick: log it in the dashboard journal (kind=trade) so the advisor tracks it",
+        "variant": "caption"
+      }
+    },
+    "footer-2": {
+      "type": "Text",
+      "props": {
+        "text": "not financial advice — pattern-matching only",
+        "variant": "muted"
+      }
+    }
+  }
+}

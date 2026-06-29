@@ -1,0 +1,677 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker — 2026-06-28"
+      },
+      "children": [
+        "transitions_section",
+        "sep_1",
+        "reflexivity_section",
+        "sep_2",
+        "positions_section",
+        "sep_3",
+        "map_section"
+      ]
+    },
+    "transitions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "transitions_heading",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ]
+    },
+    "transitions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      }
+    },
+    "t1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t1_badge",
+        "t1_text",
+        "t1_link"
+      ]
+    },
+    "t1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "t1_text": {
+      "type": "Text",
+      "props": {
+        "text": "Revenue-tokens / cash-flow frame — @ItsBitcoinWorld + @wacy_time1 \"$HYPE leads with perps dominance and massive buybacks\" — first explicit \"revenue mattering more this cycle\" frame"
+      }
+    },
+    "t1_link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/ItsBitcoinWorld/status/2070427969408188794",
+        "href": "https://x.com/ItsBitcoinWorld/status/2070427969408188794"
+      }
+    },
+    "t2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t2_badge",
+        "t2_text",
+        "t2_link"
+      ]
+    },
+    "t2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "t2_text": {
+      "type": "Text",
+      "props": {
+        "text": "Inference-cost bottleneck — @johniosifov \"inference costs are quietly eating the gross margins, funding rounds keep coming, inference bills keep scaling\" — first VC contrarian on AI unit economics"
+      }
+    },
+    "t2_link": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/johniosifov/status/2071019948382527797",
+        "href": "https://x.com/johniosifov/status/2071019948382527797"
+      }
+    },
+    "t3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t3_badge",
+        "t3_text"
+      ]
+    },
+    "t3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "t3_text": {
+      "type": "Text",
+      "props": {
+        "text": "ETH L2s \"The Surge\" accumulation — @leigh0x1A4 \"$1,550 = 69% below ATH, Surge in motion\" — contrarian builder take"
+      }
+    },
+    "t4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t4_badge",
+        "t4_text"
+      ]
+    },
+    "t4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "t4_text": {
+      "type": "Text",
+      "props": {
+        "text": "Local/on-device AI agents — @nkokkalis (Pi founder) — single-driver edge case, tracking"
+      }
+    },
+    "t5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t5_badge",
+        "t5_text"
+      ]
+    },
+    "t5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PROMOTED",
+        "variant": "default"
+      }
+    },
+    "t5_text": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE-perp-vertical (3 ↑ Emerging → 4 ↑ Rising) — @MhagamaFau31375 \"holding $57+ while everything bleeds, PayPal live, Rainbow embedded\" + Bitwise $114M carry — only token-specific bid surviving meta-bear"
+      }
+    },
+    "t6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t6_badge",
+        "t6_text"
+      ]
+    },
+    "t6_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEMOTED",
+        "variant": "destructive"
+      }
+    },
+    "t6_text": {
+      "type": "Text",
+      "props": {
+        "text": "Selective-liquidity slate (TAO/WLD/HYPE/ONDO/PENDLE) — DEAD again, 2nd 24h-life cycle in 4 days; HYPE absorbed into revenue-tokens cluster"
+      }
+    },
+    "t7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t7_badge",
+        "t7_text"
+      ]
+    },
+    "t7_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEAD",
+        "variant": "destructive"
+      }
+    },
+    "t7_text": {
+      "type": "Text",
+      "props": {
+        "text": "Base-as-onchain-leader (Pollak shill 6-27 didn't carry); Agentic-finance VC cap tables (no fresh @0xsamgreen)"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reflexivity_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reflex_heading",
+        "reflex_alert",
+        "reflex_1",
+        "reflex_2",
+        "reflex_3"
+      ]
+    },
+    "reflex_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "REFLEXIVITY ALERT",
+        "level": "h2"
+      }
+    },
+    "reflex_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Meta-bear narrative dynamics",
+        "type": "warning"
+      }
+    },
+    "reflex_1": {
+      "type": "Text",
+      "props": {
+        "text": "Meta-bear \"crypto needs new narrative\" day 3 — Bitcoin ETF outflow streak 13 days longest-ever, total assets $107.8B → $82.8B (-23% in 6w). Narrative feeding outflows feeding narrative."
+      }
+    },
+    "reflex_2": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent infra — Sui Seal MPC shipped TODAY directly addressing the mandate-vs-custody bear case. Supply-side adapting to the strongest objection in real time."
+      }
+    },
+    "reflex_3": {
+      "type": "Text",
+      "props": {
+        "text": "Revenue-tokens frame — HYPE holding $57 while everything bleeds IS the frame's evidence. Reflexive: price action manufactures the cash-flow narrative."
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "positions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "positions_heading",
+        "pos_1",
+        "pos_2",
+        "pos_3",
+        "pos_4",
+        "pos_5",
+        "pos_6",
+        "pos_7",
+        "pos_8"
+      ]
+    },
+    "positions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      }
+    },
+    "pos_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_1_badge",
+        "pos_1_text"
+      ]
+    },
+    "pos_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FRONT-RUN",
+        "variant": "default"
+      }
+    },
+    "pos_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "Inference-cost bottleneck (2 ↑ Emerging Bear) — @johniosifov — early, contrarian, no consensus, no token thesis yet"
+      }
+    },
+    "pos_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_2_badge",
+        "pos_2_text",
+        "pos_2_bear"
+      ]
+    },
+    "pos_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "pos_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent infra (5 ↑ Peak Bull) — Sui Seal MPC + x402 480k agents / 265% wkly tx"
+      }
+    },
+    "pos_2_bear": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: AI-eating-crypto framing risk",
+        "variant": "caption"
+      }
+    },
+    "pos_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_3_badge",
+        "pos_3_text",
+        "pos_3_bear"
+      ]
+    },
+    "pos_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "pos_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "Stablecoins (5 → Peak Bull) — USDT dom 9.17% / $311B mcap"
+      }
+    },
+    "pos_3_bear": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: rotation flips on macro",
+        "variant": "caption"
+      }
+    },
+    "pos_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_4_badge",
+        "pos_4_text",
+        "pos_4_bear"
+      ]
+    },
+    "pos_4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "pos_4_text": {
+      "type": "Text",
+      "props": {
+        "text": "RWA (5 → Peak Bull) — Securitize $400M raise today"
+      }
+    },
+    "pos_4_bear": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: 3-5y execution lag on $20T forecasts",
+        "variant": "caption"
+      }
+    },
+    "pos_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_5_badge",
+        "pos_5_text",
+        "pos_5_bear"
+      ]
+    },
+    "pos_5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "pos_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "Prediction markets (4 ↑↑ Rising Bull) — Polymarket $40B+"
+      }
+    },
+    "pos_5_bear": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: CFTC v. Kentucky 9-state preemption suit",
+        "variant": "caption"
+      }
+    },
+    "pos_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_6_badge",
+        "pos_6_text",
+        "pos_6_bear"
+      ]
+    },
+    "pos_6_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RIDE",
+        "variant": "default"
+      }
+    },
+    "pos_6_text": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE-perp / revenue-tokens (4 ↑ Rising Bull) — Bitwise $114M + price action + PayPal/Rainbow"
+      }
+    },
+    "pos_6_bear": {
+      "type": "Text",
+      "props": {
+        "text": "Bear: HYPE-specific concentration; perps are infra not asset",
+        "variant": "caption"
+      }
+    },
+    "pos_7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_7_badge",
+        "pos_7_text"
+      ]
+    },
+    "pos_7_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "destructive"
+      }
+    },
+    "pos_7_text": {
+      "type": "Text",
+      "props": {
+        "text": "Broad-crypto (under meta-bear day 3 PERSISTED) — record ETF outflow streak — the structural data deserves the bid"
+      }
+    },
+    "pos_8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pos_8_badge",
+        "pos_8_text"
+      ]
+    },
+    "pos_8_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "destructive"
+      }
+    },
+    "pos_8_text": {
+      "type": "Text",
+      "props": {
+        "text": "Selective-liquidity slate — DEAD 2nd time in 4d, reflexive revival pattern not playable"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "map_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "map_heading",
+        "map_grid"
+      ]
+    },
+    "map_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MAP",
+        "level": "h2"
+      }
+    },
+    "map_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "map_emerging",
+        "map_rising",
+        "map_peak",
+        "map_fading"
+      ]
+    },
+    "map_emerging": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_emerging_h",
+        "map_emerging_text"
+      ]
+    },
+    "map_emerging_h": {
+      "type": "Heading",
+      "props": {
+        "text": "Emerging",
+        "level": "h3"
+      }
+    },
+    "map_emerging_text": {
+      "type": "Text",
+      "props": {
+        "text": "revenue-tokens, inference-cost bottleneck, ETH L2s Surge, local AI agents, VC AI concentration (~80% of all dollars)"
+      }
+    },
+    "map_rising": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_rising_h",
+        "map_rising_text"
+      ]
+    },
+    "map_rising_h": {
+      "type": "Heading",
+      "props": {
+        "text": "Rising",
+        "level": "h3"
+      }
+    },
+    "map_rising_text": {
+      "type": "Text",
+      "props": {
+        "text": "meta-bear, prediction markets, HYPE-perp/revenue-tokens"
+      }
+    },
+    "map_peak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_peak_h",
+        "map_peak_text"
+      ]
+    },
+    "map_peak_h": {
+      "type": "Heading",
+      "props": {
+        "text": "Peak",
+        "level": "h3"
+      }
+    },
+    "map_peak_text": {
+      "type": "Text",
+      "props": {
+        "text": "AI agent infra, stablecoins, RWA"
+      }
+    },
+    "map_fading": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "map_fading_h",
+        "map_fading_text"
+      ]
+    },
+    "map_fading_h": {
+      "type": "Heading",
+      "props": {
+        "text": "Fading",
+        "level": "h3"
+      }
+    },
+    "map_fading_text": {
+      "type": "Text",
+      "props": {
+        "text": "selective-liquidity slate, long-cycle 2027-29 cope"
+      }
+    }
+  }
+}
