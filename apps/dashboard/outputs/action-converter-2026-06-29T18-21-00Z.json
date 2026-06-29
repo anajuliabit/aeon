@@ -1,0 +1,373 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-06-29"
+      },
+      "children": [
+        "intro-text",
+        "sep-1",
+        "action-1",
+        "sep-2",
+        "action-2",
+        "sep-3",
+        "action-3",
+        "sep-4",
+        "action-4",
+        "sep-5",
+        "action-5",
+        "sep-6",
+        "sources-section"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "Daily action queue: Land ISS-025 redirect, review PR #149, unstick fork-skill-digest, edit skill-evals cron, pin VELVET unlock rule",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-title",
+        "a1-details",
+        "a1-why",
+        "a1-done",
+        "a1-loop"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Land ISS-025 redirect",
+        "level": "h3"
+      }
+    },
+    "a1-details": {
+      "type": "Text",
+      "props": {
+        "text": "Land the `.github/workflows/aeon.yml` capture-block redirect that pins Claude's stdout to `${RUN_DIR}/output.txt` before the STATUS_PAGE pipeline clobbers it — root cause for ISS-019/020/021/024/025 across the 20-skill chronic-tail (cost-report 10% / vuln-scanner 10% / reg-monitor 10% worst)."
+      }
+    },
+    "a1-why": {
+      "type": "Text",
+      "props": {
+        "text": "⚠ day 6 unshipped; ISS-025 blocks 20 sub-50%-sr skills; fix flagged 4.6/5 quality 2026-06-24 18:14Z, surfaced in 5 consecutive morning-briefs without operator pickup",
+        "variant": "caption"
+      }
+    },
+    "a1-done": {
+      "type": "Text",
+      "props": {
+        "text": "✓ branch pushed with the redirect committed in `.github/workflows/aeon.yml` and a PR opened against `main`",
+        "variant": "caption"
+      }
+    },
+    "a1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-capture-fix",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-title",
+        "a2-details",
+        "a2-why",
+        "a2-done",
+        "a2-loop"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Review and merge PR #149",
+        "level": "h3"
+      }
+    },
+    "a2-details": {
+      "type": "Text",
+      "props": {
+        "text": "Review and merge PR #149 (`docs(skill-graph): NEW_SKILLS +68, SHARED_STATE 9→36`) opened 2026-06-28T17:15Z by anajuliabit on branch `skill-graph/2026-06-28`; at ~24h it just crossed the open-PR stall threshold flagged in heartbeat 08:47Z."
+      }
+    },
+    "a2-why": {
+      "type": "Text",
+      "props": {
+        "text": "⚠ only open PR in the fleet; docs payload regenerates the skill-graph dep map +68 skills wider; merge unblocks the next graph publication and clears the P1 PR carry",
+        "variant": "caption"
+      }
+    },
+    "a2-done": {
+      "type": "Text",
+      "props": {
+        "text": "✓ PR #149 either merged into `main` or marked `REQUEST_CHANGES` with a concrete diff comment",
+        "variant": "caption"
+      }
+    },
+    "a2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-149-review",
+        "variant": "secondary"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-title",
+        "a3-details",
+        "a3-why",
+        "a3-done",
+        "a3-loop"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Unstick fork-skill-digest",
+        "level": "h3"
+      }
+    },
+    "a3-details": {
+      "type": "Text",
+      "props": {
+        "text": "Unstick `fork-skill-digest` in `memory/cron-state.json` by clearing the stale `last_status: dispatched` row stranded since 2026-06-28T18:38:01Z (per heartbeat 08:47Z `gh run list` showed conclusion=cancelled at 18:38:03Z but the state row never updated)."
+      }
+    },
+    "a3-why": {
+      "type": "Text",
+      "props": {
+        "text": "⚠ weekly Sunday slot was cancelled mid-dispatch ~14h ago; stranded row will mask a real outage when next Sunday tick (7-05 18:30Z) fires against it",
+        "variant": "caption"
+      }
+    },
+    "a3-done": {
+      "type": "Text",
+      "props": {
+        "text": "✓ `cron-state.json` entry for `fork-skill-digest` shows `last_status: cancelled` (or `success`) with no `dispatched` value pre-dating last_success",
+        "variant": "caption"
+      }
+    },
+    "a3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-digest-stuck",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-title",
+        "a4-details",
+        "a4-why",
+        "a4-done",
+        "a4-loop"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Edit skill-evals cron",
+        "level": "h3"
+      }
+    },
+    "a4-details": {
+      "type": "Text",
+      "props": {
+        "text": "Edit `aeon.yml:319` to move the `skill-evals` cron from `0 6 * * 0` to `0 22 * * 0`, killing ISS-026's heartbeat false-fail timing artefact (filed 2026-06-28; cause: skill-evals runs at 06:00 Sun, captures pre-08:00-tick stale state of log-based skills like heartbeat/token-alert/skill-health)."
+      }
+    },
+    "a4-why": {
+      "type": "Text",
+      "props": {
+        "text": "⚠ ISS-026 queued day 1; current Sun-06:00 slot generates `SKILL_EVALS_REGRESSED 12/44 coverage` false-fail every Sunday morning (last instance 2026-06-28 06:47Z); one-line cron edit",
+        "variant": "caption"
+      }
+    },
+    "a4-done": {
+      "type": "Text",
+      "props": {
+        "text": "✓ line 319 in `aeon.yml` reads `schedule: \"0 22 * * 0\"` for `skill-evals` and PR opened against `main`",
+        "variant": "caption"
+      }
+    },
+    "a4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-026-evals-timing",
+        "variant": "secondary"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-title",
+        "a5-details",
+        "a5-why",
+        "a5-done",
+        "a5-loop"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Pin VELVET unlock rule",
+        "level": "h3"
+      }
+    },
+    "a5-details": {
+      "type": "Text",
+      "props": {
+        "text": "Pin the VELVET pre-July-10 unlock-cliff exit rule into `memory/topics/crypto.md` with entry $1.72, target $2.20, invalidation $1.32, 9-day window, 15% early-backer + 20% team vesting cliff (per MEMORY.md Recently Cleared; daily-routine 08:50Z has spot $1.67 day-2 stall, -2.9% on entry after Saturday's +33% intraday peak)."
+      }
+    },
+    "a5-why": {
+      "type": "Text",
+      "props": {
+        "text": "⚠ HIGH 11/10 pick, 35%-supply cliff 9 days out, no documented exit rule in any topic file; momentum decel already showing day-2",
+        "variant": "caption"
+      }
+    },
+    "a5-done": {
+      "type": "Text",
+      "props": {
+        "text": "✓ new `## VELVET pre-unlock rule` subsection in `memory/topics/crypto.md` with entry/target/stop levels, cliff date 2026-07-10, and a size-down trigger if spot < $1.50 pre-cliff",
+        "variant": "caption"
+      }
+    },
+    "a5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "velvet-pre-unlock",
+        "variant": "secondary"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-title",
+        "sources-grid"
+      ]
+    },
+    "sources-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Metadata",
+        "level": "h4"
+      }
+    },
+    "sources-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-memory",
+        "stat-logs",
+        "stat-topics",
+        "stat-prs",
+        "stat-cron",
+        "stat-mode"
+      ]
+    },
+    "stat-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory",
+        "value": "53 lines"
+      }
+    },
+    "stat-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "8 days (6-22→6-29)"
+      }
+    },
+    "stat-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "11"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Open PRs",
+        "value": "1"
+      }
+    },
+    "stat-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron Failing",
+        "value": "0"
+      }
+    },
+    "stat-mode": {
+      "type": "Stat",
+      "props": {
+        "label": "Mode",
+        "value": "OK"
+      }
+    }
+  }
+}
