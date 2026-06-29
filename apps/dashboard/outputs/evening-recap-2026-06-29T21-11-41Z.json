@@ -1,0 +1,227 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-06-29"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tldr_alert",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "footer_text"
+      ]
+    },
+    "tldr_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "TL;DR",
+        "message": "heavy ship day — cost-fix PR #150 opened (-$456/mo), weekly sr recovered 22→88%, ISS-025 still day-7 unshipped",
+        "type": "info"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_h2",
+        "headline_1",
+        "headline_2",
+        "headline_3",
+        "headline_4",
+        "headline_5"
+      ]
+    },
+    "headlines_h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — opened PR #150 fix(aeon.yml) usepod_model→model",
+        "href": "https://github.com/anajuliabit/aeon/pull/150",
+        "source": "GitHub PR"
+      }
+    },
+    "headline_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cost-report — $595.75/7d, ~$2,553/mo projected, 14 anomalies (10 artefact, 3 genuine)",
+        "href": "articles/cost-report-2026-06-29.md"
+      }
+    },
+    "headline_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "weekly-review — sr 22%→88% this week; top action: merge ISS-025 PR by 2026-07-04",
+        "href": "articles/weekly-review-2026-06-29.md"
+      }
+    },
+    "headline_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "weekly-shiplog — 23 commits/23 PRs merged, +3,176/-442 lines",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-06-29.md"
+      }
+    },
+    "headline_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "external-feature — wired validate-config tests into aaronjmars/aeon CI (untriggered since #546)",
+        "href": "https://github.com/aaronjmars/aeon/pull/560"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_h2",
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4",
+        "notable_5"
+      ]
+    },
+    "notable_h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_1": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow — 8 deals kept (Mon batch); Mirendil $200M seed @ $1B (a16z+Kleiner+Nvidia); AI inference mega-week #2"
+      }
+    },
+    "notable_2": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — 100% malware-driven first time of 2026; Polymarket CLOB + Crossmint wallet SDK brandjacked same day"
+      }
+    },
+    "notable_3": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels ×6 — breakdown alert 01:21Z (4th sub-$60,500 close); spot $60,318 at 20:30Z near reclaim line"
+      }
+    },
+    "notable_4": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor — DEGRADED (defillama+dropstab failed); BEAT 2.3× vol-proxy top leverage of the week"
+      }
+    },
+    "notable_5": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — 23 DEGRADED / 8 WARNING / 9 healthy; notify fired on fleet-control removal hash change"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_h2",
+        "decision_1",
+        "decision_2",
+        "decision_3",
+        "decision_4"
+      ]
+    },
+    "decisions_h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision_1": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #149 docs(skill-graph) — 27h+ stall, anajuliabit's PR"
+      }
+    },
+    "decision_2": {
+      "type": "Text",
+      "props": {
+        "text": "review + merge PR #150 fix(aeon.yml) — cost fix opened ~2h ago"
+      }
+    },
+    "decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "land ISS-025 capture-fix — day 7 unshipped, 19-skill chronic tail still bleeds"
+      }
+    },
+    "decision_4": {
+      "type": "Text",
+      "props": {
+        "text": "unstick fork-skill-digest — dispatched 2026-06-28T18:38Z, 26h+ stranded \"dispatched\""
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "+14 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
