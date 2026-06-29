@@ -589,4 +589,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-29,external-feature,claude-opus-4-7,64,15649,5091817,123439
 2026-06-29,btc-levels,claude-sonnet-4-6,12,5847,396327,26073
 2026-06-29,btc-levels,claude-sonnet-4-6,12,4205,382441,23961
-2026-06-29,heartbeat,claude-opus-4-7,83,30387,7972224,189982
+2026-06-29,daily-routine,claude-opus-4-7,1364,30156,3617057,200350

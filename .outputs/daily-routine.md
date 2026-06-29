@@ -1,40 +1,48 @@
-*Daily Routine — 2026-06-28*
+*Daily Routine — 2026-06-29*
 
-tape rolls back over after yest's bounce — 19/100 top-100 green, btc $60,117 -0.55% / eth $1,573 -0.63%. risk-off resumes day 1 of weekend.
+tape stays bearish — 23/82 top-100 green (filtered), btc $59,782 -0.9% / 7d -6.8% (4th day pinned sub-$60.5k breakdown), eth $1,572 -0.5%, sol $72.63 +1.0%. weekend risk-off day 2.
 
 *Top Winners (24h)*
-1. VELVET $1.55 +86% / 7d +217% • $89M / #88 — sub-rank-100 day-2 BREAKOUT extends
-2. BEAT $2.84 +35% / 7d +61% • $36M / #74 — fresh major-rank move
-3. SLX $0.541 +20% / 7d +191% • $162M / #213 — day-2 of yest's HIGH 9/10 pick (+14% on entry)
-4. PUMP $0.00149 +14% • $66M / #93 — pump.fun reflexive bid
-5. BAS $0.0438 +13% • $20M / #242
-6. DEXE $22.53 +8% / 7d +54% • $12M / #63
-7. KAITO $0.578 +8% / 7d +24% • $24M / #205
+1. TAC $0.0417 +94% / 7d +112% • $7.8M / #173 [PUMP-RISK]
+2. RAVE $0.519 +82% / 7d +93% • $65M / #213 [PUMP-RISK]
+3. GWEI (ETHGas) $0.192 +43% / 7d +79% • $27M / #116 [BREAKOUT]
+4. BinanceLife $0.710 +38% / 7d +1.9% • $59M / #85 — REVERSAL from yest -16%
+5. BAS $0.0487 +16% / 7d +57% • $12M / #226 [BREAKOUT] day-3 holds
+6. UB $0.0957 +13% / 7d -32% • $14M / #143
+7. CX (Cortex) $0.0742 +10.7% / 7d +63% • $1.8M / #245 [MICROCAP]
+8. DYDX $0.163 +7% / 7d +34% • $8.7M / #204
+9. WIF $0.182 +6.3% • $59M / #177
+10. PYTH $0.0363 +6.3% • $17M / #137
 
 *Top Losers (24h)*
-1. SKYAI $0.196 -43% / 7d -44% • $43M / #169 — capitulation
-2. BTW $0.068 -19% / 7d -33% • $17M / #199 — 4th red day extending
-3. LAB $17.84 -12% / 7d +21% • $42M / #20 — mega-reversal continues (yest -16%)
-4. KITE $0.128 -10% / 7d -24% • $33M / #133
-5. ZEC $385.58 -6% / 7d -18% • $207M / #15
-6. AAVE $90.49 -5% / 7d +20% • $287M / #56 — 6-24 HIGH 8/10 pick gives back, still +19% on entry
-7. APE $0.140 -5% • $18M / #204 — 6-26 HIGH 9/10 pick day-3 fade
+1. SKYAI $0.132 -31% / 7d -65% • $68M / #212 — capitulation day-3 (-65% wk)
+2. BTW $0.051 -24% / 7d -47% • $16M / #242 — 6th red day
+3. M (MemeCore) $0.588 -15% / 7d -80% • $14M / #76
+4. LAB $15.28 -14% • $32M / #22 [MAJOR] — top-20 distribution day-3
+5. KITE $0.117 -10.5% / 7d -30% • $36M / #138
+6. BEAT $2.63 -6.6% • $25M / #80 — REVERSAL from yest +35%
+7. WLD $0.425 -6.6% / 7d -34% • $160M / #50
+8. EIGEN $0.231 -6.4% / 7d -23% • $22M / #182 — REVERSAL from yest +6%
+9. SYRUP $0.136 -6.3% • $17M / #191
+10. PUMP $0.00142 -5.2% • $93M / #95 — REVERSAL from yest +14%
+
+VELVET +3.9% only — pick day-2 stalls after +33% saturday, $1.67 vs $1.72 entry. AAVE -0.7%, still +19% on $76 entry (6-24 pick day-6).
 
 *Tweet Roundup*
-*Crypto:* btc tapped $58k sept-2024 low then rebound $59.7k, another $1B futures wiped; cz blames AI/macro/4y-cycle; blackrock 2700 BTC + 53k ETH to coinbase ($257M) — institutional unwind cadence persists.
-*AI:* gpt-5.4 + 5.4 pro shipped (native CUA, 1M context); anthropic confidentially IPO-filed at $965B val on $65B series H (>OpenAI); US banned anthropic fable-5 + mythos-5 exports while Z.ai dropped GLM-5.2 open weights same day.
-*Dev:* google joined eclipse foundation; nvidia cosmos 3 super + nano; zyphra ZAYA1-8B trained on AMD instinct (escapes nvidia pipeline); rust kernel support officially stable in linux 7.0-rc5.
+*crypto:* spot BTC ETFs tracking worst month ever ($4B june outflows confirmed); BlackRock dropped another 2,700 BTC + 53k ETH to Coinbase; Ink L2 (Kraken) signed multi-year OP Enterprise managed = Optimism now running Ink's mainnet prod.
+*ai:* GPT-5.6 Sol preview shipped 6-28. Anthropic Fable-5 + Mythos-5 export ban carries day 2; GLM 5.2 now beating Claude in semgrep's cyber benchmarks = the open-weights cyber gap is closing fast (HN #1 today). Anthropic shipped Claude Agent SDK (TS + Python, native MCP).
+*dev:* Rust officially at production scale — half of companies running it (Stack Overflow 2026, 82% admiration). Claude Code 46% "most loved" in Feb dev survey.
 
 *Paper of the Day*
-"OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning" — arXiv 2606.26790, HF ↑35. distillation framework built for RL agents — directly load-bearing for the advisor sprint (#141 forced fine-grained probabilities + brier calibration) and any agent that learns from its own trajectories.
-https://huggingface.co/papers/2606.26790
+"Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments" — ↑18. capability eval beyond the home-distribution env (where most reported agent scores live). load-bearing for the advisor sprint #142 net-of-cost paper grading.
+https://arxiv.org/abs/2606.14397
 
 *GitHub Issues*
-no new issues 6-27 → 6-28. advisor sprint #141–#145 still open from 6-25, no fresh adds.
+no new issues 6-28 → 6-29. advisor sprint #141–#145 still open from 6-25.
 
 *HN Digest*
-1. [Anonymous GitHub account mass-dropping undisclosed 0-days](https://github.com/bikini/exploitarium) (784pts) — supply-chain disclosure-meta. https://news.ycombinator.com/item?id=48698617
-2. [DSpark: speculative decoding accelerates LLM inference](https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf) (755pts) — deepseek paper, parallels HF JetSpec ↑69. https://news.ycombinator.com/item?id=48696585
-3. [Asian AI startups launch mythos-like models](https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/) (218pts) — export-ban side-effect: open weights filling the gated lane. https://news.ycombinator.com/item?id=48697958
-4. [Ford hired AI and sacked humans. it backfired](https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html) (159pts) — early displacement-reversal datapoint. https://news.ycombinator.com/item?id=48703968
-5. [Post-Mythos Cybersecurity](https://cephalosec.com/blog/cybersecurity-in-the-post-mythos-era-keep-calm-and-carry-on/) (145pts) — security ops in the post-mythos restricted-access era. https://news.ycombinator.com/item?id=48698559
+1. [GLM 5.2 beats Claude in cyber benchmarks](https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/) (804p) — open weights closing the gap post-Mythos-export-ban day 2. https://news.ycombinator.com/item?id=48709670
+2. [The KIDS Act would require age checks to get online](https://www.eff.org/deeplinks/2026/06/kids-act-would-require-age-checks-get-online) (466p) — pairs with day's [attribution of speech essay](https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026) (400p). https://news.ycombinator.com/item?id=48706560
+3. [I used Claude Code to get a second opinion on my MRI](https://antoine.fi/mri-analysis-using-claude-code-opus) (424p) — agent application outside the codebase. https://news.ycombinator.com/item?id=48708941
+4. [Professor denounces mass AI fraud at Brown](https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html) (394p) — pairs with yest's Ford-AI-backfired displacement datapoint. https://news.ycombinator.com/item?id=48708991
+5. [Tokenmaxxing is dead, long live tokenmaxxing](https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing) (148p) — agent token economics shift. https://news.ycombinator.com/item?id=48708795
