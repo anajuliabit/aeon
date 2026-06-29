@@ -604,10 +604,10 @@
   },
   "unlock-monitor": {
     "last_dispatch": "2026-06-29T10:19:16Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-22T10:42:10Z",
-    "total_runs": 2,
-    "total_successes": 2,
+    "last_status": "success",
+    "last_success": "2026-06-29T10:28:13Z",
+    "total_runs": 3,
+    "total_successes": 3,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
