@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { Run, SkillOutput, AnalyticsData } from '../lib/types'
 import { timeAgo } from '../lib/utils'
 import { SpecNode } from './SpecNode'
@@ -24,16 +24,58 @@ export function RightPanel({ runs, outputs, feedLoading, analyticsData, onViewRu
   const [showFullLogs, setShowFullLogs] = useState(false)
   const [collapsed, setCollapsed] = useState(false)
 
-  // Restore the collapsed state on mount (set in an effect, not the initializer,
-  // to avoid an SSR/client hydration mismatch).
+  // Resizable width. MIN is the original fixed size; WIDE is the double-click
+  // snap target; MAX caps how far a drag can grow it (also clamped to the
+  // viewport at drag time so it never starves the main column).
+  const MIN_W = 288, WIDE_W = 560, MAX_W = 760
+  const [width, setWidth] = useState(MIN_W)
+  // Mirror width into a ref so the pointerup handler persists the FINAL value
+  // (event-listener closures would otherwise capture a stale `width`).
+  const widthRef = useRef(MIN_W)
+  const dragRef = useRef<{ startX: number; startW: number } | null>(null)
+  const setW = (w: number) => { widthRef.current = w; setWidth(w) }
+
+  // Restore the collapsed state + saved width on mount (set in an effect, not the
+  // initializer, to avoid an SSR/client hydration mismatch).
   useEffect(() => {
     if (localStorage.getItem('aeon-panel-collapsed') === '1') setCollapsed(true)
+    const saved = Number(localStorage.getItem('aeon-panel-width'))
+    if (saved >= MIN_W) setW(Math.min(saved, MAX_W, window.innerWidth - 360))
   }, [])
 
   const toggleCollapsed = (next: boolean) => {
     setCollapsed(next)
     try { localStorage.setItem('aeon-panel-collapsed', next ? '1' : '0') } catch {}
   }
+
+  const maxWidth = () => Math.min(MAX_W, window.innerWidth - 360)
+  const persistWidth = () => { try { localStorage.setItem('aeon-panel-width', String(widthRef.current)) } catch {} }
+
+  // The panel lives on the RIGHT, so dragging the left-edge handle leftwards
+  // (smaller clientX) must GROW it: startW + (startX - clientX).
+  const onResizeMove = (e: PointerEvent) => {
+    const d = dragRef.current
+    if (!d) return
+    setW(Math.max(MIN_W, Math.min(maxWidth(), d.startW + (d.startX - e.clientX))))
+  }
+  const onResizeEnd = () => {
+    dragRef.current = null
+    document.body.style.cursor = ''
+    document.body.style.userSelect = ''
+    window.removeEventListener('pointermove', onResizeMove)
+    window.removeEventListener('pointerup', onResizeEnd)
+    persistWidth()
+  }
+  const onResizeStart = (e: React.PointerEvent) => {
+    e.preventDefault()
+    dragRef.current = { startX: e.clientX, startW: width }
+    document.body.style.cursor = 'col-resize'
+    document.body.style.userSelect = 'none'
+    window.addEventListener('pointermove', onResizeMove)
+    window.addEventListener('pointerup', onResizeEnd)
+  }
+  // Double-click the handle to snap between WIDE and MIN.
+  const onResizeToggle = () => { setW(width >= WIDE_W ? MIN_W : Math.min(WIDE_W, maxWidth())); persistWidth() }
 
   const viewRunLogs = async (run: Run) => {
     setSelectedRun(run); setRunLogs(''); setRunSummary(''); setShowFullLogs(false); setLogsLoading(true); setRightTab('runs')
@@ -68,7 +110,18 @@ export function RightPanel({ runs, outputs, feedLoading, analyticsData, onViewRu
   }
 
   return (
-    <div className="w-[288px] border-l border-[rgba(250,250,250,0.10)] flex flex-col shrink-0 bg-aeon-panel">
+    <div style={{ width }} className="relative border-l border-[rgba(250,250,250,0.10)] flex flex-col shrink-0 bg-aeon-panel">
+      {/* Drag-to-resize handle on the left edge. Double-click snaps wide/narrow. */}
+      <div
+        onPointerDown={onResizeStart}
+        onDoubleClick={onResizeToggle}
+        title="Drag to resize · double-click to toggle wide"
+        aria-label="Resize panel"
+        className="group absolute left-0 inset-y-0 z-20 w-2 -translate-x-1/2 cursor-col-resize flex items-center justify-center"
+      >
+        <span className="h-8 w-px bg-[rgba(250,250,250,0.14)] group-hover:bg-eva-orange group-active:bg-eva-orange transition-colors" />
+      </div>
+
       <div className="h-12 border-b border-[rgba(250,250,250,0.10)] flex items-center px-3 gap-1 shrink-0">
         {(['feed', 'runs', 'analytics'] as const).map(tab => (
           <button key={tab} onClick={() => { setRightTab(tab); if (tab === 'analytics') onFetchAnalytics() }}
