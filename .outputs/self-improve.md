@@ -1,1 +1,1 @@
-self-improve: dropped disabled hacker-news-digest entry from skill-evals — was STILL_FAIL since 5-31, same shape as the monitor-polymarket removal. PR: https://github.com/anajuliabit/aeon/pull/146
+self-improve: agent-buzz prefetch now ranks by engagement (mode:Top + min_likes:5) — fixes uniformly-low-engagement candidates (0-13 likes, followers:null) flagged in today's run. PR: https://github.com/anajuliabit/aeon/pull/148

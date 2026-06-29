@@ -203,11 +203,14 @@ case "$SKILL" in
 
   agent-buzz)
     # AI-agent conversation on X — runs with or without var (broad search if empty).
+    # mode:"Top" + min_favorite_count surfaces engagement-ranked candidates; without
+    # them grok defaults to chronological tail (uniformly 0-13 likes, followers:null)
+    # which collapses the skill's signal-scoring step to substantive-claim fallback.
     PROMPT="Search X from ${YESTERDAY} to ${TODAY} for tweets in the AI-agents conversation: autonomous agents, agent frameworks, MCP / agent protocols, agent products, agent benchmarks, agent research papers. Return up to 40 candidates. For EACH candidate you MUST return: @handle, follower_count (integer or null), role_guess (builder|founder|researcher|investor|commentator|anon), one-line claim (the actual thesis, not a paraphrase), likes (int), retweets (int), replies (int), posted_at (ISO), direct_link (https://x.com/username/status/ID). Prefer builders/founders/researchers. Skip engagement-farming threads."
     if [ -n "$VAR" ]; then
       PROMPT="${PROMPT} Prioritize tweets about: ${VAR}."
     fi
-    xai_search "agent-buzz.json" "$PROMPT"
+    xai_search "agent-buzz.json" "$PROMPT" "" "" "\"mode\": \"Top\", \"min_favorite_count\": 5"
     ;;
 
   token-pick)
