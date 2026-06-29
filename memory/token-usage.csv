@@ -596,4 +596,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-29,security-digest,claude-opus-4-7,58,24204,3097710,98927
 2026-06-29,skill-security-scan,claude-opus-4-7,1270,25478,2517089,156067
 2026-06-29,list-digest,claude-opus-4-7,14,7607,575516,69413
-2026-06-29,goal-tracker,claude-opus-4-7,24,16793,1531089,75062
+2026-06-29,reflect,claude-opus-4-7,39,20204,3017264,264416

@@ -645,3 +645,42 @@ See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 1. **"Mildest drawdown on record" framing arriving day 4 of Extreme Fear is manufactured bottom-calling** — receipts (F&G 18, $1.79B weekly ETF outflows, 19/100 breadth, BlackRock $257M-to-Coinbase weekly) don't support framing. "Q3-Q4 bottom" thesis embedded in AIXBT narrative → becomes the bid it's predicting. Watch for actual ETF inflow reversal before updating.
 2. **Hormuz fully de-escalated, oil $72, dollar weakening, VIX 18** — repricing load-bearing in current risk-on stack. Next tanker headline hits a market with no tail-risk budget left.
 3. **(STRENGTHENED carry) AI agent rail-shipped proof** — Sui Seal MPC adds custody-primitive to the receipt list (Stripe Claude Fable 5 50M-line migration + Salesforce Agent Script OSS + x402 480k agents / $50M cumulative / 265% wkly tx growth). Bull thesis with structural receipts compounding even as broad crypto fades.
+
+## 2026-06-29 update — BTC breakdown day 4 CONFIRMED, watchlist reversal, deal-flow Mon batch
+
+### Picks ledger updates (day-N status)
+- **VELVET 6-28 HIGH 11/10 day-2 stalls** — $1.72 → $1.67 = -2.9% on entry. Day-2 stalls after Saturday's +33% — momentum decel before 10d pre-July-10 unlock window. Exit $2.20 / inv $1.32 unchanged.
+- **SLX 6-27 HIGH 9/10 day-2 +15.1% on entry** — $0.4753 → $0.547. Held above ATH 2nd day, Binance trading event continuation.
+- **AAVE 6-24 HIGH 8/10 day-6 +19% on entry** — $76 → $90.75. Gave back from peak +25.9% day-4 on profit-taking; still profitable.
+- **APE 6-26 HIGH 9/10 day-3 -7.3% on entry** — outside top mover bands today; invalidation tail extends. ApeMars/Hyperliquid-whale stack didn't survive meta-bear tape.
+
+### Tape pulse 6-29
+- Weekend bear day-2 — 23/82 top-100 green (after exclusions), median top-50 negative. BTC $59,228–$59,779 intraday (4th day sub-$60.5k breakdown line; today's UTC close decides 5th-red or reclaim).
+- **Fresh small-cap parabolics:** TAC +94% / RAVE +82% / GWEI +43% / BAS +16% (PUMP-RISK regime, all <#150 rank, vol ranges $8M–$65M).
+- **Capitulation deepening:** SKYAI -31% day-3 cumulative -65% wk; BTW -24% 6th red day; M MemeCore -15% 7d -80%; LAB -14% top-20 distribution day-3.
+- **REVERSALS off yesterday's bid:** BEAT -6.6% (was +35%), EIGEN -6.4% (was +6%), PUMP -5.2% (was +14%). Single-day risk-on bids not surviving 24h.
+
+### Watchlist 6-29 reversal (TOKEN_ALERT_OK 8th clean CG day)
+- **Reverses 6-28's whole-green relief** — median 24h -2.13%, 1-green/3-red.
+- WELL +0.51% lone green (3rd consecutive green, vol 2.62× day-prior = first real bid of week; still 0.20× of 5-day mean — bounce remains structurally weak).
+- MAMO -0.22% snaps 2-day streak (vol 0.77× of mean).
+- REPPO -2.95% snaps 3-day streak below $0.02 wobble line; vol 0.34× of mean = fade is participation-shallow.
+- GITLAWB -4.07% fully gives back 6-28 +5.38% pop; $0.00005 reclaim handle lost; vol 0.83× day-prior = bid didn't follow through.
+
+### Deal-flow 6-29 themes
+- **AI inference mega-week #2 back-to-back** — Groq $650M week after Baseten $1.5B (last week); capital paying twice in 7d to keep a non-Nvidia inference stack alive.
+- **Mirendil $200M seed @ $1B post-money** (a16z + Kleiner Perkins, Nvidia participating). Ex-Anthropic founders — one of the largest AI seeds on record at unicorn pricing.
+- **Agent-thesis primitives priced small + precise:** Patronus eval-as-observability (Datadog on cap-table), Orthogonal x402 service discovery (Pantera solo-lead), Hang Ten enterprise-services-as-code (ex-Infosys CEO).
+- **First US healthcare-admin agent unicorn:** Assort Health $1.2B (Menlo); Goldman Sachs Alternatives-led Series C: Taktile $110M (underwriting = bank-licensable agent surface).
+- General Intuition $320M gameplay-clip world-model raise (training-data bets surface).
+
+### Macro/structural carry
+- **Bitcoin ETF 13-day outflow streak (longest ever, $107.8B → $82.8B = −23% 6w)** — confirms meta-bear day 4 structural.
+- **Jordi Visser attribution:** BTC weakness = Q-end rebal + shorts + institutional skepticism (validates rebalancing focus going into 6-30).
+- **Tweet-roundup 6-29:** spot BTC ETFs tracking worst month on record ($4B June outflows); BlackRock dropped 2,700 BTC + 53k ETH to Coinbase = institutional unwind cadence persists week-over-week; Ink L2 → OP Enterprise Fully Managed (OP Labs now running Ink mainnet prod infra).
+- **Unlock-monitor 6-29 Mon batch:** 8 tiered events shipped. **BEAT** 2.3× 24h vol-proxy ($51.6M cliff, 7.32% supply on $752M mcap, $23.5M/day token, 30d +114.7%) = only event with audible liquidity strain. Insider cliffs (ENA team / SUI early-contrib) land on day-4 sub-$60.5k tape + quarter-end rebal tomorrow — asymmetric short of the market-asleep ones over BEAT-fade size.
+
+### Security-side flag (security-digest 6-29)
+- **0 reviewed-critical 4th consecutive day** AND 0 reviewed-high net-new post-dedup. **First time of 2026 the digest is 100% malware-driven** — no CVE-class severity contributors.
+- Brandjack moves to centerstage: **Polymarket CLOB SDK targeted** (first prediction-market-narrative-aligned attack — $14.4B/wk volume target) + **Crossmint wallet SDK targeted** (Web3 wallet credential-theft vector) + **4-pkg auth-domain campaign published in 1 minute** (largest single-minute coordinated cluster of 2026). **Operator pattern: treat brandjack of any hot-project SDK as the new default supply-chain threat vector.**
+- 0 net-new KEV adds 4th consecutive day (6-26/27/28/29).

@@ -844,3 +844,35 @@ state: what was built, recurring blockers, and health.
   consecutive clean CG day; whole canonical watchlist green for first
   time since 6-22 (median +1.51%); GITLAWB +5.38% ends 7-day red streak
   with first elevated-vol upside print 1.27× day-prior.
+
+## 2026-06-29 entry
+
+### PRs
+- **PR #148 fix(agent-buzz) MERGED 2026-06-29T00:17Z** — ~30h from open (6-27 18:14Z) to merge. `mode:"Latest"` → `mode:"Top"` + `min_likes:5` switch in `scripts/prefetch-xai.sh`. agent-buzz cron-state sr 49% → 50% the same morning; full effect needs 5–7 days of fresh runs to register in skill-health.
+- **PR #149 docs(skill-graph) by anajuliabit OPEN** — opened 2026-06-28T17:15Z; under 24h at morning hb (~15.5h), approaching but not crossing 24h stall at 15:04 hb (~22h). Watch carry next reflect.
+- **aaronjmars/aeon PR #560 OPEN (sister-fleet ship)** — wired existing `scripts/validate-config.test.js` (7 fixture tests for the checkout-ordering invariant from #546) into `.github/workflows/ci-tests.yml`. Proactive gap-fix; tests shipped without CI gate. Branch `ai/ci-validate-config-tests` via fork `anajuliabit/aeon-fork` (`anajuliabit/aeon` already exists as unrelated repo).
+
+### Fleet health
+- **skill-health 6-28 18:08Z snapshot (24h hash unchanged):** 9 healthy · 24 degraded · 8 warning · 0 critical · 2 no_data. Same as 6-27 — classification stable. Open issues: 15 (4 critical sandbox cluster ISS-019/020/021/025 + 1 sandbox-limitation ISS-018 + 7 high prompt-bug/quality-regression + 3 medium).
+- **Heartbeat 6-29 08:47Z + 15:04Z: HEARTBEAT_OK, STATUS_PAGE=DEGRADED** — fleet cf=0. Chronic-failure tail unchanged: 19 skills sr<0.5 sharing `output_tokens=0` sandbox-truncation signature. Worst: reg-monitor 10% / cost-report 11% / skill-analytics 11% / vuln-scanner 10%. agent-buzz now sits on cluster boundary at 50% post-PR #148 merge.
+- **fork-skill-digest STUCK ~20h** carry — dispatched 2026-06-28T18:38:01Z, `last_status: dispatched`, last_success 2026-06-21T18:57:04Z (weekly Sun slot). Carried from 6-28 20:18Z + 6-29 08:47Z hb ticks within 48h dedup window.
+- **operator-scorecard Mon slot missed again** — scheduled Mon 10:30Z, no cron-state entry; never-run since enabled. Same condition flagged each prior Monday — scheduler-side gap, not skill-side.
+
+### Skill-security-scan 6-29 (Mon slot)
+- **`SECURITY_SCAN_NOCHANGE`** — 4 PERSISTENT HIGH, 0 NEW, 0 RESOLVED. Identical line set as 2026-06-22; finding #4 stable at `aeon.yml:812` for 2nd consecutive scan. `scan.sh` blocked by sandbox approval gate 5th consecutive run since 2026-05-25 — fallback inline_grep_fallback per SKILL.md step 4.
+- HIGH findings: `.github/workflows/aeon.yml` L86 (`inputs.skill` → `run:`), L94 + L96 + L812 (downstream `steps.skill.outputs.name` / `steps.work.outputs.label` chain). Workflow_dispatch / workflow_call require repo write access → low real risk; canonical fix is `env:` indirection (pattern shown in article).
+
+### Cost-report 6-29 (Mon slot)
+- **$595.75 last-7d / 113 runs / 14 anomalies / ⚠ ~$2,553/mo projected.** ↑199.5% WoW (prior window suppressed by widespread `output_tokens=0` sandbox failures, so the spike is largely artefact).
+- 14 anomalies: 1 per-run (aixbt-pulse 2026-06-24 output spike +2.4σ), 13 WoW spikes — 10 attributed to ISS-019/020/021/025 sandbox-truncation artifact, 3 genuine: vuln-scanner 21.5× / reflect 3.0× / token-movers+token-pick `usepod_model` drift.
+- **Optimization queued:** rename `usepod_model` → `model:` in `aeon.yml` for on-chain-monitor / token-pick / token-movers = ~$107/wk / $456/mo combined savings.
+
+### Weekly shiplog 6-29 (Mon slot)
+- 23 commits / 23 PRs merged / 1 issue closed last week on aaronjmars/aeon.
+- Themes: Cron state and votable health move into GitHub Issues; Phylax becomes the pre-install verdict for external skills; The dashboard stops surfacing Dependabot.
+- Stats: +3,176 / −442 lines, 87 files, contributors: aaronjmars, usephylax, SamsShow, clawhunter, anajuliabit, vigilcodes, dependabot[bot].
+
+### ISS-026 status (heartbeat false-fail timing artefact)
+- Detected 2026-06-28 08:00Z by skill-evals run.
+- Recommended fix: move skill-evals dispatch after 21:00 UTC so it captures post-tick state of log-based skills (heartbeat/token-alert/skill-health) instead of pre-tick stale state.
+- Action queued in action-converter q4u4 backlog; awaiting operator pickup.

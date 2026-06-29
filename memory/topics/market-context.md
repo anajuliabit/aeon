@@ -1,19 +1,18 @@
-# Market Context (as of 2026-06-28)
+# Market Context (as of 2026-06-29)
 
-> **Take:** risk-off — breadth collapsed 18/20 → 6/20 in 24h as the post-opex relief bounce fully erases; BTC pinned at $60,024, 4th day below the $60,500 breakdown level. Conviction: high.
+> **Take:** risk-off persists — 4th sub-$60,500 BTC close confirmed (6-28 $59,612), tonight's 6-29 UTC close decides 5th-red or reclaim attempt; breadth 23/82 green; quarter-end rebalancing tomorrow (June 30) adds structural sell pressure. Conviction: high.
 
 ## Signal Snapshot
-- BTC $60,024 (−0.58% 24h, −6.39% 7d) · dominance 55.81% (−0.01pp 24h)
-- ETH $1,578 (−0.42% 24h, −8.48% 7d) · ETH/BTC 0.02629
-- SOL $71.54 (−0.95% 24h, −2.72% 7d)
-- Total mcap $2.156T (−0.67% 24h) · DEX vol $4.34B 24h (Sunday tape) · DeFi TVL $70.40B (−3.9% 7d)
-- Breadth: 6/20 green 24h · 2/20 green 7d (FIGR +0.94%, RAIN +7.95%)
-- Fear & Greed: 18 (Extreme Fear) — yesterday 15
+- BTC $59,408 (−0.9% 24h, −6.8% 7d) — intra-day range $59,228–$59,779
+- ETH $1,572 (−0.5% 24h) · SOL $72.63 (+1.0% 24h)
+- HYPE $62.40 (−1.4% 24h)
+- Breadth: 23/82 green top-100 (after stables/wrapped/staked/sub-$1M-vol exclusions); median top-50 negative
+- Fear & Greed: 18 (Extreme Fear) — day 4
 
 ## What Changed Since Last Refresh
-- **Breadth collapsed 18/20 → 6/20 green 24h** — post-opex relief bounce (6-27) fully erased in one session; all 6 green names are stablecoins or micro-signal (TRX, FIGR, LEO, CC); no large-cap risk-on asset in the green. Regime relabeled from "post-expiry bear bounce" back to structural risk-off.
-- **BTC sub-$60,500 4th consecutive day** — 3rd qualifying close was $59,943 (breakdown alert fired 01:21Z); 4th close tracking near $60K. Need close >$60,500 to begin disarming; >$63,500 / $65,900 for reclaim trips.
-- **Quarter-end rebalancing 2 days out (June 30)** — institutional portfolio rebalancing; risk-asset sells likely given Q2 performance (BTC −32% H1, ETH −47% H1); adds structural sell flow to an already bearish tape.
+- **BTC breakdown EXTENDED to day 4** — 6-28 close $59,612 = 4th consecutive sub-$60,500 (alert fired 6-29 01:21Z). Spot held the line through morning (range $59,228–$59,779) but afternoon back below $60k. Tonight's UTC close is the regime gate.
+- **Quarter-end rebalancing tomorrow (June 30)** — Q2 books closing, BTC −32% H1 / ETH −47% H1 forces risk reduction; expect Monday-open sell flow on top of already-bearish tape.
+- **Sister-fleet ship: aaronjmars/aeon PR #560** — wired existing `scripts/validate-config.test.js` (7 fixture tests for checkout-ordering invariant) into ci-tests.yml; logged at top of today's daily log.
 
 ## Active Narratives
 - **Structural meta-bear / "crypto needs new narrative"** — phase: rising (persisting). Evidence: Breadth 6/20, F&G 18 Extreme Fear day 4, ETF ~$5B cumulative June outflows, BTC −6.4%/ETH −8.5% 7d; meta-bear now day 3+ and persisting past 24h half-life (confirmed 6-27).
@@ -39,14 +38,21 @@
 ## Stablecoins
 Total: $312.46B (≈ flat 1d, −0.38% 7d). USDT $184.9B · USDC $73.8B · USDS $8.2B · DAI $4.8B · USD1 $4.7B · USDe $4.45B. Combined top-6 share of crypto mcap ~14.5%.
 
-## Trending (CoinGecko)
-- **AAVE** — #56, score 14; trending day-5; DeFi-as-agent-rail bid; $76 entry P&L now +17.8% (from peak +25.9% day-4)
-- **LIT (Lighter)** — #110, score 11; new entry; perp DEX on Arbitrum; no confirmed fresh catalyst today
-- **FET** — #120, score 10; Artificial Superintelligence Alliance; AI/decentralized-compute bid; aligns with Anthropic export-ban → open-weights-lane narrative (Asian models stepping in per 6-28 AIXBT)
-- **SLX** — #212, score 9; 6-27 HIGH 9/10 pick day-2; +10.6% 24h, +9.8% on entry ($0.4753 → $0.522); Binance/Upbit/CoinEx delta-neutral Solana protocol
-- **SOL** — #7, score 8; −0.95% 24h; Solana structural outperformance vs ETH/BNB persists (SOL −2.72% 7d vs ETH −8.48% 7d)
-- **BTC** — #1, score 7; −0.58% 24h; attention on tonight's UTC close vs $60,500
-- **VELVET** — #83, score 4; 6-28 HIGH 11/10 pick $1.72; trending day-4; ATH retest on Trade.xyz pre-IPO synthetics + Aerodrome routing
+## Trending (CoinGecko, 6-29)
+- **TAC** #173 +94% (PUMP-RISK, 7d +112%, $7.8M vol — parabolic small-cap)
+- **RAVE** #213 +82% (TRENDING+UP PUMP-RISK, 7d +93%, $65M vol)
+- **GWEI ETHGas** #116 +43% (BREAKOUT 7d +79%)
+- **VELVET** #86 +3.9% (6-28 HIGH 11/10 pick day-2 stalls, -2.9% on entry)
+- **SLX** #208 -0.7% / -3.5% intraday (6-27 HIGH 9/10 pick day-2, +15.1% on entry — held above $0.547)
+- **SOL** #7 +1.0% (only large-cap green; outperformance continues)
+- **BTC** #1 -0.9% (attention on tonight's UTC close vs $60,500)
+
+## Open picks
+- VELVET (6-28 entry $1.72): $1.67 = -2.9%, day-2 stalls after Sat's +33%; 9d to pre-July-10 unlock cliff
+- SLX (6-27 entry $0.4753): $0.547 = +15.1%, day-2
+- AAVE (6-24 entry $76): $90.75 = +19% day-6, gave back from peak +25.9%
+- APE (6-26 entry $0.151): not in top mover bands today; invalidation tail extends from day-3 -7.3%
+- SEI (6-25): stopped out day-1 at $0.0542 (-7.2%)
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |
