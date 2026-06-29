@@ -1,0 +1,337 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-06-29"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_verdict",
+        "stat_compromises",
+        "text_sources",
+        "sep_1",
+        "heading_patch",
+        "alert_advisory_1",
+        "stack_details_1",
+        "alert_advisory_2",
+        "stack_details_2",
+        "alert_advisory_3",
+        "stack_details_3",
+        "text_other_malware",
+        "sep_2",
+        "heading_kev",
+        "stat_net_new",
+        "stat_weekly_carry",
+        "stat_top_epss_1",
+        "stat_top_epss_2",
+        "sep_3",
+        "heading_reviewed",
+        "stat_critical_48h",
+        "text_high_48h"
+      ]
+    },
+    "text_verdict": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 3 npm supply-chain compromises today, 0 net-new KEV (day 4), 0 tracked-stack adds after dedup.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stat_compromises": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply Chain Compromises (today)",
+        "value": "3"
+      },
+      "children": []
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV ok, GH Advisory ok, EPSS ok",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_patch": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "alert_advisory_1": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Malware: crossmint-wallets-sdk",
+        "message": "Brandjack of Crossmint's wallet SDK. Sibling @epsteinlovekids483/crossmint-wallets-sdk-pentest (GHSA-x7jg-w433-8q2r) published same minute — 2-pkg campaign targeting Web3 devs. Published 02:21 UTC"
+      },
+      "children": []
+    },
+    "stack_details_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_1",
+        "badge_pkg_1",
+        "text_recommendation_1"
+      ]
+    },
+    "link_ghsa_1": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-7rfm-v32j-2583",
+        "href": "https://github.com/advisories/GHSA-7rfm-v32j-2583"
+      },
+      "children": []
+    },
+    "badge_pkg_1": {
+      "type": "Badge",
+      "props": {
+        "text": "crossmint-wallets-sdk (npm)",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "text_recommendation_1": {
+      "type": "Text",
+      "props": {
+        "text": "Remove crossmint-wallets-sdk from any project lockfile; rotate every wallet/API/SSH/cloud secret on machines that ran npm i; pin to vendor's actual @crossmint/* packages.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "alert_advisory_2": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Malware: polymarket-clob-math",
+        "message": "Brandjack of Polymarket's CLOB SDK math util. Polymarket = $14.4B weekly volume target — credential stealer hits trading bots / market-maker stacks. Published 03:18 UTC"
+      },
+      "children": []
+    },
+    "stack_details_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_2",
+        "badge_pkg_2",
+        "text_recommendation_2"
+      ]
+    },
+    "link_ghsa_2": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-3q5w-m6wr-5jp2",
+        "href": "https://github.com/advisories/GHSA-3q5w-m6wr-5jp2"
+      },
+      "children": []
+    },
+    "badge_pkg_2": {
+      "type": "Badge",
+      "props": {
+        "text": "polymarket-clob-math (npm)",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "text_recommendation_2": {
+      "type": "Text",
+      "props": {
+        "text": "Remove the package; rotate Polymarket API keys + any wallet privkey on the host; verify real Polymarket SDKs are scoped under @polymarket/*.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "alert_advisory_3": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Malware: authmatrix + 3 siblings",
+        "message": "Coordinated 4-package auth-domain squat published 14:00 UTC (1 minute). Same-minute publish = single attacker, fishing for auth-stack maintainers."
+      },
+      "children": []
+    },
+    "stack_details_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stack_ghas_siblings",
+        "text_recommendation_3"
+      ]
+    },
+    "stack_ghas_siblings": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_3a",
+        "link_ghsa_3b",
+        "link_ghsa_3c",
+        "link_ghsa_3d"
+      ]
+    },
+    "link_ghsa_3a": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-qr38-fjw7-r54v (authmatrix)",
+        "href": "https://github.com/advisories/GHSA-qr38-fjw7-r54v"
+      },
+      "children": []
+    },
+    "link_ghsa_3b": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-m936-8h93-fqm9 (authsessionbridge)",
+        "href": "https://github.com/advisories/GHSA-m936-8h93-fqm9"
+      },
+      "children": []
+    },
+    "link_ghsa_3c": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-5xwj-q4j9-v44q (ssr-auth-sync)",
+        "href": "https://github.com/advisories/GHSA-5xwj-q4j9-v44q"
+      },
+      "children": []
+    },
+    "link_ghsa_3d": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-53ph-27qg-w52c (auth-state-service)",
+        "href": "https://github.com/advisories/GHSA-53ph-27qg-w52c"
+      },
+      "children": []
+    },
+    "text_recommendation_3": {
+      "type": "Text",
+      "props": {
+        "text": "Grep lockfiles for authmatrix, authsessionbridge, ssr-auth-sync, auth-state-service; if hit, remove + rotate session/JWT secrets + any OAuth client secrets stored on the build host.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_other_malware": {
+      "type": "Text",
+      "props": {
+        "text": "Other malware net-new today: gx-npm-* (3-pkg brandjack), ts-einkle* (3-pkg), @vpms/design-system, vkzmn, hunsterx-package, velocityfix, unsafe-malicious-package, quirky-token, swift-parse-stream, path-internal-util — 21 total npm malware GHSAs in 48h, all 6-29-published, none in tracked deps. Full list in log.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_kev": {
+      "type": "Heading",
+      "props": {
+        "text": "KEV status",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat_net_new": {
+      "type": "Stat",
+      "props": {
+        "label": "Net-new KEV (4th consecutive zero-cadence day)",
+        "value": "0"
+      },
+      "children": []
+    },
+    "stat_weekly_carry": {
+      "type": "Stat",
+      "props": {
+        "label": "Weekly carry",
+        "value": "6",
+        "delta": "Lantronix + 3× Ubiquiti UniFi + Cisco CUCM + PTC Windchill"
+      },
+      "children": []
+    },
+    "stat_top_epss_1": {
+      "type": "Stat",
+      "props": {
+        "label": "Top EPSS: CVE-2026-34910 (Ubiquiti)",
+        "value": "0.786",
+        "delta": "p99.5"
+      },
+      "children": []
+    },
+    "stat_top_epss_2": {
+      "type": "Stat",
+      "props": {
+        "label": "CVE-2026-20230 (Cisco) — slipped below 0.5 PATCH-TODAY threshold",
+        "value": "0.417",
+        "delta": "p98.5"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_reviewed": {
+      "type": "Heading",
+      "props": {
+        "text": "Reviewed advisories",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat_critical_48h": {
+      "type": "Stat",
+      "props": {
+        "label": "Critical (48h)",
+        "value": "0"
+      },
+      "children": []
+    },
+    "text_high_48h": {
+      "type": "Text",
+      "props": {
+        "text": "High (48h): 3 — all 3 pnpm (GHSA-qrv3-253h-g69c / GHSA-72r4-9c5j-mj57 / GHSA-fr4h-3cph-29xv) already covered in 6-27/6-28 digests, deduped.",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
