@@ -1,29 +1,29 @@
 {
-  "run_at": "2026-06-28T18:00:00Z",
+  "run_at": "2026-06-29T17:10:00Z",
   "goals": {
     "sandbox-truncation-systemic": {
       "status": "ON_TRACK",
-      "activity_count_14d": 50,
-      "last_activity_date": "2026-06-28",
-      "note": "20-skill chronic tail unchanged across 09:15Z + 14:15Z heartbeats today (vuln-scanner 10% / reg-monitor 10% / cost-report 10% / skill-analytics 11% / security-digest 22% worst; defi-monitor 53% lifts out of cluster on NO_CONFIG OK path). All share output_tokens=0 sandbox-truncation signature (cluster ISS-019/020/021/024/025). ISS-025 capture-step fix PR day 6 unshipped (action-converter flagged 6-24 18:14Z at 4.6/5 quality, not opened — morning-brief 08:02Z surfaced). search-skill 14:50Z day-5 NO_GAP. skill-evals filed NEW ISS-026 (heartbeat false-fail timing artefact, prompt-bug category). PR #149 docs(skill-graph) opened today by anajuliabit 17:17Z (orthogonal, doesn't address truncation)."
+      "activity_count_14d": 236,
+      "last_activity_date": "2026-06-29",
+      "note": "Mentioned every day of the 14d window (peak 6-24 at 28 hits/day, 6-29 at 16). ISS-019/020/021/024/025 cluster all still open per memory/issues/INDEX.md. Status holds ON_TRACK per rules (activity_count_14d >= 2 AND days_since_last_activity <= 7). Carry: ISS-025 capture-step fix PR day 7 unshipped — action-converter flagged 6-24 18:14Z 4.6/5 quality, never opened. Today's 19-skill chronic tail (cost-report 11% / reg-monitor 10% / skill-analytics 11% / vuln-scanner 10% / security-digest 23% / search-skill 31% / market-context-refresh 32% / list-digest 33% / narrative-tracker 33% / skill-health 33% / goal-tracker 35% / self-improve 35% / action-converter 35% / reflect 37% / skill-evals 38% / fleet-control 40% / evening-recap 44% / thought-review 46% / aixbt-pulse 47%) — all share `output_tokens=0` sandbox-truncation signature, unchanged from 6-28 20:18Z heartbeat."
     },
     "xai-quota-recovery": {
       "status": "BLOCKED",
-      "activity_count_14d": 28,
-      "last_activity_date": "2026-06-28",
-      "note": "Team 3a8b4c1e exhausted since 2026-06-16 (day 13). daily-routine 08:01Z tweet-roundup via WebSearch fallback day 13 (.xai-cache empty for that path). Prefetched .xai-cache covered narrative-tracker 14:18Z (4 x_search 36 url_citations), list-digest 17:08Z (cache hit), agent-buzz 17:38Z (cache hit). XAI primary still working for prefetched paths. Operator top-up still pending."
+      "activity_count_14d": 203,
+      "last_activity_date": "2026-06-29",
+      "note": "Operator top-up day 14 since 2026-06-16 exhaustion. WebSearch fallback covered daily-routine tweet-roundup 08:50Z today (websearch=ok ×3, xai=skipped per quota exhaustion day 14). Prefetched .xai-cache hits carried list-digest 16:55Z (8.3KB cache, 5 sources / 6 x_search calls / 3213 output_tokens). PR #148 fix(agent-buzz) merged 2026-06-29T00:17Z — addressed cache-quality (mode:Top + min_likes:5), orthogonal to credit-balance issue. Operator action required."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 25,
-      "last_activity_date": "2026-06-28",
-      "note": "defi-monitor 12:52Z NO_CONFIG day 21 (5 type:wallet entries only, zero type:pool/type:position). on-chain-monitor 13:03Z first non-zero run since 6-25 — ALCHEMY_API_KEY env-blocked, ETHERSCAN_API_KEY chain-paywalled (8453); Blockscout keyless held + WebFetch fallback for 4 token-transfer fetches. W3→W1 1.58M REPPO stake migration + W1 6,595 USDC into Steakhouse Prime Instant vault captured. known-addresses.yml unchanged from 6-25 seed; counterparty 0xc81F...68E8 REPPO-staking pending next consolidation."
+      "activity_count_14d": 244,
+      "last_activity_date": "2026-06-29",
+      "note": "defi-monitor NO_CONFIG day 22 since first flag; on-chain-watches.yml unchanged from 6-25 seed (5 type:wallet entries only, zero type:pool or type:position). on-chain-monitor primary path still env-blocked (ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null on chain 8453); Blockscout keyless + curl→WebFetch fallback durable but limited to token transfers. Operator action required — both config and key top-up."
     },
-    "btc-hard-levels": {
+    "btc-breakdown-confirmed-day-3": {
       "status": "ON_TRACK",
-      "activity_count_14d": 52,
-      "last_activity_date": "2026-06-28",
-      "note": "btc-levels ran 5× today (01:21Z fired breakdown alert — 6-27 daily close $59,943 < $60,500 = 3rd qualifying sub-threshold close, breakdownAlertedForClose=2026-06-27 set; 05:06Z/09:18Z/12:17Z/16:36Z all no-new-alert per spec, spot ranged $59,596→$60,289). Reclaim flags 63,500/65,900 both re-armed. market-context-refresh 14:00Z: regime risk-off, F&G 18 Extreme Fear day 4, breadth 6/20 24h post-opex bounce erased. Skill working as designed — no fresh notification past 01:21Z trip."
+      "activity_count_14d": 187,
+      "last_activity_date": "2026-06-29",
+      "note": "Goal renamed from prior `btc-hard-levels` slug. btc-levels skill fired 5× today: 01:21Z ⚠️ breakdown alert for 6-28 close $59,612 = 4th consecutive sub-$60,500 close (breakdownAlertedForClose=2026-06-28 set); 05:13Z spot $59,402, 09:25Z $59,779, 13:48Z $59,408, 16:26Z $59,580 — all quiet sub-$60.5k pin. Reclaim flags $63,500 / $65,900 stay re-armed. Quarter-end rebalancing 6-30 likely adds Monday-open sell pressure. Skill working as designed — no fresh notification past 01:21Z trip."
     }
   }
 }
