@@ -592,3 +592,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-29,daily-routine,claude-opus-4-7,1364,30156,3617057,200350
 2026-06-29,unlock-monitor,claude-opus-4-7,4145,24880,2969882,93542
 2026-06-29,token-alert,claude-opus-4-7,14,7834,636240,73576
+2026-06-29,btc-levels,claude-sonnet-4-6,2192,5390,292958,33373
