@@ -1,0 +1,56 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_period",
+        "stat_captures",
+        "text_inbox",
+        "text_status"
+      ]
+    },
+    "badge_period": {
+      "type": "Badge",
+      "props": {
+        "text": "last 24h",
+        "variant": "outline"
+      }
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "text_inbox": {
+      "type": "Text",
+      "props": {
+        "text": "Inbox cold since 2026-06-21 (~8 days)",
+        "variant": "muted"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "muted"
+      }
+    }
+  }
+}
