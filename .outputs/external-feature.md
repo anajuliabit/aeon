@@ -1,0 +1,1 @@
+external-feature: aaronjmars/aeon — wired scripts/validate-config.test.js into ci-tests.yml so a regression to the analyzeCheckout validator surfaces on PRs. PR: https://github.com/aaronjmars/aeon/pull/560
