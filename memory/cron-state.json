@@ -308,14 +308,14 @@
   },
   "cost-report": {
     "last_dispatch": "2026-06-29T08:44:46Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-24T03:48:06Z",
-    "total_runs": 42,
+    "total_runs": 43,
     "total_successes": 4,
-    "total_failures": 38,
-    "consecutive_failures": 0,
-    "success_rate": 0.1,
-    "last_failed": "2026-06-24T02:32:10Z",
+    "total_failures": 39,
+    "consecutive_failures": 1,
+    "success_rate": 0.09,
+    "last_failed": "2026-06-29T09:15:19Z",
     "last_error": "\"outputTokens\":12,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.000589,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-sonnet-4-6\":{\"inputTokens\":15,\""
   },
   "skill-security-scan": {
