@@ -594,4 +594,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-29,token-alert,claude-opus-4-7,14,7834,636240,73576
 2026-06-29,cost-report,claude-sonnet-4-6,20068,38494,1966151,90409
 2026-06-29,security-digest,claude-opus-4-7,58,24204,3097710,98927
-2026-06-29,btc-levels,claude-sonnet-4-6,12,4316,429601,39500
+2026-06-29,skill-security-scan,claude-opus-4-7,1270,25478,2517089,156067

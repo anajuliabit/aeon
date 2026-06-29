@@ -1,22 +1,16 @@
-Per SKILL.md step 14, no notification fires on a no-delta run — emitting the exit status to stdout instead.
-
-```
-SECURITY_SCAN_NOCHANGE
-```
+`SECURITY_SCAN_NOCHANGE`
 
 ## Summary
 
-Ran `skill-security-scan` over the full corpus (228 files: 191 SKILL.md + 9 workflows + 19 repo scripts + 8 advisor scripts + 1 companion script). `scan.sh` execution is still blocked by the sandbox approval gate, so I used the inline-Grep fallback over `scan.sh`'s HIGH/MEDIUM/LOW pattern library plus a manual GitHub Actions script-injection audit of every `${{ }}` expression in `run:` blocks — never silently skipped, per SKILL.md step 4.
+Ran the security scan skill against the full corpus (229 files: 192 SKILL.md + 9 workflows + 19 repo scripts + 8 advisor scripts + 1 companion script). `scan.sh` execution blocked by sandbox approval gate (5th consecutive run since 2026-05-25); fell back to inline Grep over the HIGH/MEDIUM/LOW pattern library + manual `${{ }}` interpolation audit of every `run:` block per SKILL.md step 4.
 
-**Finding set:** identical to 2026-06-15. 4 PERSISTENT HIGH (all `.github/workflows/aeon.yml`: L86, L94, L96, and L812 — the latter line-drifted from L849 last cycle). Workflow_dispatch/workflow_call-gated → low real risk; same anti-pattern documented since baseline. `chain-runner.yml` ISS-017 fix (env: `_CHAIN` indirection) holds at both sites. `messages.yml` 2026-04-11 incident pattern fully addressed across every site. Obfuscation sweep clean. `selftest.sh:31`'s `rm -rf /` is still the documented defensive fixture (case-allowlist defaults to `hold`).
+**Result: 4 PERSISTENT HIGH, 0 NEW, 0 RESOLVED** — identical finding set to 2026-06-22, with the canonical workflow-injection-chain HIGHs in `.github/workflows/aeon.yml` at L86/94/96/812. Finding #4 held at `:812` for the 2nd consecutive scan (no line drift this week). Obfuscation sweep clean. `chain-runner.yml` / `messages.yml` / `replicate-oneoff.yml` env: indirection holds.
 
-**Delta:** 0 NEW HIGH, 0 RESOLVED HIGH → `SECURITY_SCAN_NOCHANGE`.
+Files created/modified:
+- `articles/security-scan-2026-06-29.md` — full ATTENTION report with per-finding remediation + canonical env-indirection fix snippet
+- `memory/state/security-scan.json` — fingerprint set persisted for next-run delta
+- `memory/logs/2026-06-29.md` — `### skill-security-scan` log section appended
 
-**Files created/modified:**
-- `articles/security-scan-2026-06-22.md` — full report (verdict, persistent findings table, remediation snippet, downstream-same-chain informational sites, per-file table, fingerprint appendix)
-- `memory/state/security-scan.json` — refreshed snapshot (now records the L812 line drift on finding #4)
-- `memory/logs/2026-06-22.md` — appended `### skill-security-scan` section
+Notification: skipped per spec (no NEW HIGH, no RESOLVED HIGH). No issues filed/closed.
 
-**Issues filed/closed:** none. **Notify:** skipped (silence is correct per SKILL.md step 14 — no NEW HIGH, no RESOLVED HIGH).
-
-**Follow-up actions for operator:** the canonical-4 aeon.yml HIGH findings remain unfixed and would close cleanly in one small PR by applying the same `env:` indirection pattern already used by `chain-runner.yml` and `messages.yml` (concrete snippet in the report). Same rebind closes the ~10 downstream same-chain sites in `aeon.yml` listed in the report's informational table.
+Follow-up: the 4-HIGH anti-pattern in `aeon.yml` remains unfixed at week 5 — apply env: `_INPUT_SKILL` / `_LABEL` indirection to fully resolve.
