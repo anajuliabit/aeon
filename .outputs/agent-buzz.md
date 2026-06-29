@@ -1,22 +1,18 @@
-*Agent Buzz — 2026-06-28*
-_Quiet builder day — MCP locking in as the inter-agent layer, two runtime architecture takes, plus a $320M world-model raise on the side._
+*Agent Buzz — 2026-06-29*
+_Quiet builder day. MCP hardening dominates — heartbeat patterns, injection filtering, attack-surface framing. Two agent-runtime ships on the side._
 
-**MCP as the inter-agent standard**
-• @Truntr_ — Google's L3 spec names MCP+A2A the inter-agent protocol layer — Anthropic's spec gets cross-lab endorsement.
-  https://x.com/Truntr_/status/2070962009504383282
-• @imaxxs — MCP defines tool-call wiring but leaves authority escalation undefined — the gap where multi-agent systems break.
-  https://x.com/imaxxs/status/2070906921092268396
-• @freeCodeCamp — Free handbook on building MCP servers as a structured way to gate multi-agent access to internal data.
-  https://x.com/freeCodeCamp/status/2070900490674536556
+**MCP production hardening**
+• @DataScienceDojo — Production MCP needs heartbeat + fan-out plus programmatic context injection; date and history inference fails without it.
+  https://x.com/DataScienceDojo/status/2071292570127257994
+• @collabnix — agentic-press ships a reference arch with MCP injection filtering and audit logging — security primitives, not glue code.
+  https://x.com/collabnix/status/2071143369821356329
+• @lyrie_ai — Tool-using agents move the threat boundary outside the model — MCP side effects, not jailbreaks.
+  https://x.com/lyrie_ai/status/2071183397024571669
 
-**Agent runtime experiments**
-• @kay_myg — 3-tier monitoring layer that detects multi-agent drift mid-run and self-corrects without halting the task thread.
-  https://x.com/kay_myg/status/2070981472933269992
-• @realdosaygo — Argues agents should drive web state via semantic DOM affordances, not screenshots and brittle selectors.
-  https://x.com/realdosaygo/status/2071019301247586377
+**Agent runtime ships**
+• @kuldeep_s_s — Workload-aligned memory (temporal graphs, conservative consolidation) beats universal designs across 12 systems and 5 benchmarks.
+  https://x.com/kuldeep_s_s/status/2071204553211752896
+• @sgnagnarella — Google Cloud agent observability now GA — default OpenTelemetry tracing and GCS storage for deployed agents and MCP servers.
+  https://x.com/sgnagnarella/status/2071281853777027234
 
-**Training-data bets**
-• @OwenGregorian — General Intuition raised $320M to train world models on billions of gameplay clips for agentic perception/action.
-  https://x.com/OwenGregorian/status/2071018773016952958
-
-<!-- _src: xai · candidates: 10 → kept: 6_ -->
+<!-- _src: xai-cache · candidates: 10 → kept: 5_ -->
