@@ -1,0 +1,14 @@
+{
+  "skill": "btc-levels",
+  "last_analyzed": "2026-06-29T20:31:47Z",
+  "quality_score": 3,
+  "assessment": "Monitoring task completed successfully; current BTC data reported with no alerts. Appropriate for a quiet run, but limited substantive analysis.",
+  "flags": [],
+  "avg_score": 3,
+  "history": [
+    {
+      "date": "2026-06-29",
+      "score": 3
+    }
+  ]
+}
