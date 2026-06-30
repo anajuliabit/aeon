@@ -167,8 +167,8 @@
     "last_error": "nputTokens\":54400,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.15796499999999997,\"contextWindow\":200000,\"maxOutputTokens\":32000}},\"permission_denials\":[{\"tool_name\":\"Bash\",\"tool_use_"
   },
   "github-trending": {
-    "last_dispatch": "2026-06-29T10:19:16Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-30T10:09:13Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-29T10:25:59Z",
     "total_runs": 62,
     "total_successes": 34,
