@@ -1,28 +1,21 @@
-*Morning Brief — 2026-06-29*
+*Morning Brief — 2026-06-30*
 
 *Focus today*
-1. btc breakdown day 4 — why now: 6-28 close $59,612, q-end tomorrow forces rebal flows
-2. iss-025 capture-fix day 7 unshipped — why now: 20-skill tail still bleeds output_tokens=0
-3. velvet pick day-1 — why now: $1.72 entry, exit $2.20 / inv $1.32 / 9d pre-july-10 unlock
+1. BTC q-end + breakdown day 5 — why now: 6-29 close $60,160 = 5th sub-$60,500; quarter-end TODAY forces rebal flow
+2. PR #150 review + merge — why now: $456/mo savings, 5-line `usepod_model`→`model` rename, opened ~13h ago
+3. ISS-025 capture-step fix — why now: day 7 unshipped, weekly-review hard date 2026-07-04, 20-skill chronic tail still bleeds
 
 *Since yesterday*
-- pr #148 fix(agent-buzz) merged 00:17Z overnight — top→latest + min_likes:5 live
-- btc 4th consecutive sub-$60,500 close ($59,612); spot $59,228 morning, $59,402 05:13Z
-- on-chain-monitor first non-zero in ~72h — w3→w1 1.58m reppo stake migration + w1 6,595 usdc into steakhouse prime instant vault
-- fork-cohort leveled-up 14 forks past POWER threshold; aaronjmars/aeon PR #560 opened (validate-config tests wired into ci)
-
-*Watch*
-- jordi visser attributes btc weakness to q-end rebalancing + shorts + institutional skepticism — validates focus #1 framing
+- 01:16Z ⚠ btc-levels: 5th consecutive sub-$60,500 close ($60,160) — alert fired, leverage-review clear
+- PR #150 fix(aeon.yml) opened by self-improve — 5 skills running on Opus instead of intended Haiku
+- Weekly-review: 88% sr (vs 22% prior week) — scheduler self-healed via PR #128 usepod gateway propagation, no fresh patch
+- PR #149 docs(skill-graph) ~38h stall — crossed 24h threshold ~14h ago, still needs review
+- Reflect pruned MEMORY.md 53→43 lines; ISS-026 (skill-evals timing) still queued, ISS-025 day 7
 
 *Running today*
-- cost-report @ 07:00 UTC (weekly)
-- daily-routine @ 07:00 UTC
-- skill-freshness @ 08:00 UTC
-- weekly-shiplog @ 09:00 UTC (weekly)
-- github-trending @ 09:00 UTC
-- unlock-monitor @ 10:00 UTC (weekly)
-- token-alert + token-pick @ 12:00 UTC
-- search-skill + security-digest + deal-flow @ 14:00 UTC (deal-flow weekly)
-- skill-security-scan @ 16:00 UTC (weekly)
-- weekly-review @ 19:00 UTC
-- evening-recap + thought-review @ 21:00 UTC
+- daily-routine 07:00 UTC (concurrent), skill-freshness 08:00, heartbeat 08:00/14:00/20:00
+- token batch 12:00–12:40 UTC (token-alert, token-movers, on-chain-monitor, defi-monitor)
+- search-skill + security-digest 14:00 UTC
+- list-digest 17:00, agent-buzz 17:30
+- evening cluster 18:00 UTC (skill-health, goal-tracker, reflect, action-converter)
+- evening-recap + thought-review 21:00 UTC; btc-levels every 4h at :15
