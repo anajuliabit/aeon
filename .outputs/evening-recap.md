@@ -1,24 +1,24 @@
-*Evening Recap — 2026-06-29*
-_TL;DR: heavy ship day — cost-fix PR #150 opened (-$456/mo), weekly sr recovered 22→88%, ISS-025 still day-7 unshipped_
+*Evening Recap — 2026-06-30*
+_TL;DR: watch day — SimpleHelp CVE-2026-48558 CVSS 10.0 due 7-02 + WELL vol 3.83× both need follow-through; 2 PRs stalled, 0 ships._
 
 *Headlines:*
-- self-improve — opened PR #150 fix(aeon.yml) usepod_model→model · https://github.com/anajuliabit/aeon/pull/150
-- cost-report — $595.75/7d, ~$2,553/mo projected, 14 anomalies (10 artefact, 3 genuine) · articles/cost-report-2026-06-29.md
-- weekly-review — sr 22%→88% this week; top action: merge ISS-025 PR by 2026-07-04 · articles/weekly-review-2026-06-29.md
-- weekly-shiplog — 23 commits/23 PRs merged, +3,176/-442 lines · https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-06-29.md
-- external-feature — wired validate-config tests into aaronjmars/aeon CI (untriggered since #546) · https://github.com/aaronjmars/aeon/pull/560
+- skill-freshness — FRESHNESS_OK: 44 consumers / 0 flagged · articles/skill-freshness-2026-06-30.md
+- github-trending — 4 picks; fake-star rule codified (1:6 fork ratio + wrong language = confident drop) · .outputs/github-trending.md
+- daily-routine — 45/100 breadth; VELVET+SLX day-3 unwind; GPT-5.5 + BlackRock+Ethena ENA $100M · .outputs/daily-routine.md
+- list-digest — Pi2Day 2026: Pi's 18M+ KYC repackaged as dev infra · https://x.com/Hercules_Defi/status/2071729733851893906
 
 *Notable:*
-- deal-flow — 8 deals kept (Mon batch); Mirendil $200M seed @ $1B (a16z+Kleiner+Nvidia); AI inference mega-week #2
-- security-digest — 100% malware-driven first time of 2026; Polymarket CLOB + Crossmint wallet SDK brandjacked same day
-- btc-levels ×6 — breakdown alert 01:21Z (4th sub-$60,500 close); spot $60,318 at 20:30Z near reclaim line
-- unlock-monitor — DEGRADED (defillama+dropstab failed); BEAT 2.3× vol-proxy top leverage of the week
-- skill-health — 23 DEGRADED / 8 WARNING / 9 healthy; notify fired on fleet-control removal hash change
+- token-alert — WELL vol 3.83× (first 3×+ in rolling window), red tape −2.28%; accumulation vs forced supply
+- security-digest — SimpleHelp CVE-2026-48558 CVSS 10.0 KEV CISA due 7-02; autotel-* 18-pkg MCP brandjack in 10.5h (largest of 48h)
+- btc-levels ×5 — ⚠️ 01:16Z: day-5 sub-$60.5k; spot $58.2–$59.7k pinned; reclaim $63.5k/$65.9k
+- agent-buzz — 6 picks; Stripe agent-to-agent sale claim net-new; framework launches → plumbing
+- action-converter — 5 actions queued: merge PR #150 / draft ISS-025 / merge PR #149 / VELVET close
 
 *Decisions for tomorrow:*
-- merge PR #149 docs(skill-graph) — 27h+ stall, anajuliabit's PR
-- review + merge PR #150 fix(aeon.yml) — cost fix opened ~2h ago
-- land ISS-025 capture-fix — day 7 unshipped, 19-skill chronic tail still bleeds
-- unstick fork-skill-digest — dispatched 2026-06-28T18:38Z, 26h+ stranded "dispatched"
+- merge PR #150 usepod_model→model: $456/mo savings, 5-line diff, 26h+ stall · https://github.com/anajuliabit/aeon/pull/150
+- merge PR #149 docs(skill-graph): 51h+ stall · https://github.com/anajuliabit/aeon/pull/149
+- patch SimpleHelp CVE-2026-48558: CISA BOD 26-04 due 2026-07-02 (2d out)
+- draft ISS-025 capture-step PR: deadline 2026-07-04 (4d), 19-skill tail bleeding
+- close VELVET pick: entry $1.72 → spot ~$1.50 (−12.8%), 10d to unlock cliff 7-10
 
-_+14 routine runs collapsed · sources: log=ok cron-state=ok_
+_+9 routine collapsed · sources: log=ok cron-state=ok_
