@@ -1,13 +1,11 @@
 ## Summary
 
-**btc-levels run — 2026-06-30T08:51Z**
+Quiet run. No alerts fired.
 
-- **Spot**: $59,180 (down from $59,443 on prior run)
-- **June 29 close**: $60,159.63 — 5th consecutive sub-$60,500 close
-- **Leverage-review trigger (≤$45k)**: clear
-- **Breakdown alert**: June 29 close already alerted at 01:16Z — no duplicate
-- **Reclaim $63,500 / $65,900**: not reached
-- **Result**: quiet run, no notification sent
-- **State + log committed** to main
+- **Spot:** $58,474 (down from $59,180 at last run)
+- **Previous close (2026-06-29):** $60,160 — already alerted at 01:16Z today
+- **Leverage-review ($45k):** clear
+- **Breakdown (<$60,500):** 5th consecutive sub-$60,500 close, but this close was already alerted — no duplicate
+- **Reclaims ($63,500/$65,900):** not triggered
 
-Quarter-end rebalancing today (June 30) adds structural sell pressure. Tonight's UTC close is the watch — a 6th red close below $60,500 will fire a new breakdown alert; a reclaim above $60,500 clears the flag.
+BTC continues to slide through the quarter-end session, now printing a fresh intraday low at $58.5k — ~$2k below the 01:16Z spot. No new level crossings. State and log committed.
