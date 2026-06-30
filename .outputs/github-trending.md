@@ -1,18 +1,22 @@
-*GitHub Trending — 2026-06-29*
+*GitHub Trending — 2026-06-30*
 
-*Top pick* — [DeusData/codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp)
-biggest mover of the day at 13× normal velocity and a direct successor to yesterday's cognee top pick — agent-memory infra keeps stacking trending hits. note: anonymous "DeusData" org, kick the tires before you wire it in.
+*Top pick* — [browser-use/video-use](https://github.com/browser-use/video-use)
+browser-use org turns its agent-driving stack on video editing — 967 stars in a day on a repo that hasn't been pushed in 46 days. organic catalyst, not a release pump.
 
 *AI/ML*
-• [DeusData/codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) — ★ 2.2kt today (20.7k total) · C · [ACCELERATING]
-indexes 158 languages into a persistent graph as a single static binary with sub-ms queries — credible alternative to grep-via-shell for agent codebase memory
+• [browser-use/video-use](https://github.com/browser-use/video-use) — ★ 967 today (12k total) · Python · [ACCELERATING]
+no release, no recent commit — surging on the browser-use brand in the agent-tooling lane.
 
-• [Robbyant/lingbot-map](https://github.com/Robbyant/lingbot-map) — ★ 372 today (8.5k total) · Python · [ACCELERATING]
-streaming video → 3D scene reconstruction in a single forward pass — no per-scene optimization the classic photogrammetry stack needs
+• [0xNyk/council-of-high-intelligence](https://github.com/0xNyk/council-of-high-intelligence) — ★ 331 today (2.2k total) · Shell · [RETURNING]
+one `/council` slash command spins 18 named-thinker personas across multi-vendor LLMs into structured deliberation rounds.
 
-*Devtools*
-• [altic-dev/FluidVoice](https://github.com/altic-dev/FluidVoice) — ★ 365 today (4.0k total) · Swift · [RETURNING]
-local whisper-based macOS dictation ships v1.6.1 yesterday — replaces Apple's network-bound dictation without a subscription
+*Infra*
+• [logto-io/logto](https://github.com/logto-io/logto) — ★ 158 today (13k total) · TypeScript · [RETURNING]
+self-hosted OIDC/OAuth-2.1 with multi-tenancy + SSO + RBAC built-in — open Auth0/WorkOS alternative, v1.41.0 shipped today.
+
+*Web/Apps*
+• [refactoringhq/tolaria](https://github.com/refactoringhq/tolaria) — ★ 280 today (18k total) · TypeScript · [ACCELERATING]
+markdown knowledge-base desktop ships 9+ alpha cuts in a single day — Obsidian-shaped but pre-1.0 iteration cadence is the signal.
 
 ---
-sources: trending=ok · gh_api=ok · kept 3/13
+sources: trending=ok · gh_api=ok · kept 4/15

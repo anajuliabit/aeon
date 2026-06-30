@@ -1,0 +1,409 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-30"
+      },
+      "children": [
+        "heading-top-pick",
+        "sep-1",
+        "stack-top-pick",
+        "sep-2",
+        "heading-ai-ml",
+        "stack-ai-ml",
+        "sep-3",
+        "heading-infra",
+        "stack-infra",
+        "sep-4",
+        "heading-web-apps",
+        "stack-web-apps",
+        "sep-5",
+        "text-sources"
+      ]
+    },
+    "heading-top-pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h2"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-top-pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link-top-pick",
+        "badges-top-pick",
+        "text-top-pick-stats",
+        "text-top-pick-desc"
+      ]
+    },
+    "link-top-pick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "browser-use/video-use",
+        "href": "https://github.com/browser-use/video-use"
+      }
+    },
+    "badges-top-pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-python-1",
+        "badge-accelerating-1"
+      ]
+    },
+    "badge-python-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge-accelerating-1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "text-top-pick-stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 967 today (12k total)",
+        "variant": "lead"
+      }
+    },
+    "text-top-pick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "browser-use org turns its agent-driving stack on video editing — 967 stars in a day on a repo that hasn't been pushed in 46 days. organic catalyst, not a release pump.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-ai-ml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      }
+    },
+    "stack-ai-ml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-video-use",
+        "repo-council"
+      ]
+    },
+    "repo-video-use": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-video-use",
+        "badges-video-use",
+        "text-video-use-stats",
+        "text-video-use-desc"
+      ]
+    },
+    "link-video-use": {
+      "type": "StoryLink",
+      "props": {
+        "title": "browser-use/video-use",
+        "href": "https://github.com/browser-use/video-use"
+      }
+    },
+    "badges-video-use": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-python-2",
+        "badge-accelerating-2"
+      ]
+    },
+    "badge-python-2": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge-accelerating-2": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "text-video-use-stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 967 today (12k total)",
+        "variant": "caption"
+      }
+    },
+    "text-video-use-desc": {
+      "type": "Text",
+      "props": {
+        "text": "no release, no recent commit — surging on the browser-use brand in the agent-tooling lane.",
+        "variant": "body"
+      }
+    },
+    "repo-council": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-council",
+        "badges-council",
+        "text-council-stats",
+        "text-council-desc"
+      ]
+    },
+    "link-council": {
+      "type": "StoryLink",
+      "props": {
+        "title": "0xNyk/council-of-high-intelligence",
+        "href": "https://github.com/0xNyk/council-of-high-intelligence"
+      }
+    },
+    "badges-council": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-shell",
+        "badge-returning-1"
+      ]
+    },
+    "badge-shell": {
+      "type": "Badge",
+      "props": {
+        "text": "Shell",
+        "variant": "secondary"
+      }
+    },
+    "badge-returning-1": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      }
+    },
+    "text-council-stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 331 today (2.2k total)",
+        "variant": "caption"
+      }
+    },
+    "text-council-desc": {
+      "type": "Text",
+      "props": {
+        "text": "one `/council` slash command spins 18 named-thinker personas across multi-vendor LLMs into structured deliberation rounds.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h2"
+      }
+    },
+    "stack-infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-logto"
+      ]
+    },
+    "repo-logto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-logto",
+        "badges-logto",
+        "text-logto-stats",
+        "text-logto-desc"
+      ]
+    },
+    "link-logto": {
+      "type": "StoryLink",
+      "props": {
+        "title": "logto-io/logto",
+        "href": "https://github.com/logto-io/logto"
+      }
+    },
+    "badges-logto": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-typescript-1",
+        "badge-returning-2"
+      ]
+    },
+    "badge-typescript-1": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "badge-returning-2": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      }
+    },
+    "text-logto-stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 158 today (13k total)",
+        "variant": "caption"
+      }
+    },
+    "text-logto-desc": {
+      "type": "Text",
+      "props": {
+        "text": "self-hosted OIDC/OAuth-2.1 with multi-tenancy + SSO + RBAC built-in — open Auth0/WorkOS alternative, v1.41.0 shipped today.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-web-apps": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h2"
+      }
+    },
+    "stack-web-apps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-tolaria"
+      ]
+    },
+    "repo-tolaria": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-tolaria",
+        "badges-tolaria",
+        "text-tolaria-stats",
+        "text-tolaria-desc"
+      ]
+    },
+    "link-tolaria": {
+      "type": "StoryLink",
+      "props": {
+        "title": "refactoringhq/tolaria",
+        "href": "https://github.com/refactoringhq/tolaria"
+      }
+    },
+    "badges-tolaria": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-typescript-2",
+        "badge-accelerating-3"
+      ]
+    },
+    "badge-typescript-2": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "badge-accelerating-3": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "text-tolaria-stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 280 today (18k total)",
+        "variant": "caption"
+      }
+    },
+    "text-tolaria-desc": {
+      "type": "Text",
+      "props": {
+        "text": "markdown knowledge-base desktop ships 9+ alpha cuts in a single day — Obsidian-shaped but pre-1.0 iteration cadence is the signal.",
+        "variant": "body"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/15",
+        "variant": "muted"
+      }
+    }
+  }
+}
