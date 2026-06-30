@@ -2,18 +2,16 @@ HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
 ## Summary
 
-Ran the 14:43Z heartbeat tick (afternoon slot, ~43min past 14:00 cron).
+Evening heartbeat (20:18 UTC, ~18min past 20:00 cron slot) — **no notification fired**, all findings are same-signature continuations of items in last 48h logs.
 
-**Findings (all dedup'd from 08:51Z hb today + 6-29 logs — no notification fired):**
-- **P0 stuck:** `fork-skill-digest` STUCK ~44h (dispatched 6-28T18:38Z, last_status still `dispatched`). 5th hb mention, within 48h dedup window.
-- **P0 chronic:** 19-skill `output_tokens=0` sandbox-truncation tail unchanged (ISS-019/020/021/024/025 cluster).
-- **P0 self-check:** heartbeat last_success 5h48min ago — healthy.
-- **P1 PRs:** #149 docs(skill-graph) ~45h stall (carry), #150 fix(aeon.yml) ~20h (under threshold, watched). 0 urgent issues.
-- **P2 memory:** sandbox-truncation day 12, XAI quota day 15 BLOCKED, on-chain config day 23, BTC breakdown day 5 (spot $58,474 < $60,500 pin).
-- **P3 missing:** operator-scorecard Mon 10:30Z slot missed day 2 (carry); 14:00 search-skill/security-digest tick likely in-flight.
+**Findings (dedup'd, not surfaced):**
+- fork-skill-digest STUCK ~49.6h (7th hb carry; dedup window 5h33min)
+- 19-skill chronic sr<0.5 tail (sandbox-truncation cluster ISS-019/020/021/024/025)
+- PR #149 stalled ~51h, PR #150 stalled ~26h (both operator-merge gated)
+- operator-scorecard Mon 10:30Z slot MISSED day 2 (~34h, scheduler never-run)
 
 **Files modified:**
-- `docs/status.md` — regenerated (🔴 DEGRADED, 40 enabled-skill rows + 3 never-run, fork-skill-digest 🕸 stuck, token-pulse omitted)
-- `memory/logs/2026-06-30.md` — appended heartbeat 14:43Z entry
+- `docs/status.md` — regenerated with 40 enabled-skill rows + 15 open issues; overall 🔴 DEGRADED; next scheduled evening-recap/thought-review/aixbt-pulse at 21:00 UTC
+- `memory/logs/2026-06-30.md` — appended 20:18Z heartbeat entry
 
-**Follow-up:** None — all findings carried + already covered in last-48h logs. Next tick: 20:00 UTC evening slot.
+**Self-check:** heartbeat last_success ~5h33min ago, under 36h gate. Healthy.
