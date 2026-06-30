@@ -1,1 +1,1 @@
-Memory consolidated — 2026-06-29
+Memory consolidated — 2026-06-30 · pruned MEMORY.md (4 stale lines + dates refreshed); promoted PR #150 watch + WELL vol spike 3.83× + fake-star drop precedent into fleet topic. open: 2 PRs / 15 issues / 19-skill chronic tail unchanged.

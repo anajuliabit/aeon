@@ -1,0 +1,126 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidated",
+        "description": "2026-06-30"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "actions-section",
+        "sep1",
+        "status-section"
+      ]
+    },
+    "actions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "actions-heading",
+        "action-prune",
+        "action-promote"
+      ]
+    },
+    "actions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Actions Taken",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action-prune": {
+      "type": "Text",
+      "props": {
+        "text": "Pruned MEMORY.md (4 stale lines + dates refreshed)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action-promote": {
+      "type": "Text",
+      "props": {
+        "text": "Promoted PR #150 watch + WELL vol spike 3.83× + fake-star drop precedent into fleet topic",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-heading",
+        "metrics-grid"
+      ]
+    },
+    "status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "metrics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-prs",
+        "stat-issues",
+        "stat-chronic"
+      ]
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Open PRs",
+        "value": "2"
+      },
+      "children": []
+    },
+    "stat-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      },
+      "children": []
+    },
+    "stat-chronic": {
+      "type": "Stat",
+      "props": {
+        "label": "19-Skill Chronic Tail",
+        "value": "unchanged"
+      },
+      "children": []
+    }
+  }
+}

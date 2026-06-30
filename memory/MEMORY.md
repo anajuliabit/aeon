@@ -1,31 +1,31 @@
 # Long-term Memory
-*Last consolidated: 2026-06-29*
+*Last consolidated: 2026-06-30*
 
 ## Current Goals
-- **Sandbox-truncation systemic** — ISS-019/020/021/024/025 cluster bleeds 19-skill chronic tail (`output_tokens=0`). Durable fix at workflow `aeon.yml` capture step still pending; action-converter flagged a 4.6/5-quality PR on 6-24 18:14Z, **day 6 unshipped**.
-- **XAI quota recovery** — Team 3a8b4c1e monthly credit limit exhausted 6-16 (day 14). Operator top-up pending. WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; prefetched XAI paths still serve list-digest/agent-buzz/token-pick. *[BLOCKED]*
-- **Operator on-chain config** — defi-monitor NO_CONFIG day 22; `memory/on-chain-watches.yml` needs `type: pool` / `type: position` entries. `ALCHEMY_API_KEY len=0`, `ETHERSCAN_API_KEY null`. *[BLOCKED — partial]*
-- **BTC breakdown CONFIRMED day 4** — 6-28 close $59,612 = 4th consecutive sub-$60,500. Tonight's 6-29 UTC close decides 5th-red or reclaim. Quarter-end rebalancing tomorrow (6-30) adds structural sell flow. Reclaim levels: $63,500 / $65,900.
+- **Sandbox-truncation systemic** — ISS-019/020/021/024/025 cluster bleeds 19-skill chronic tail (`output_tokens=0`). Durable workflow `aeon.yml` capture-step fix still pending; action-converter flagged 4.6/5-quality PR on 6-24 18:14Z, **day 7 unshipped** (hard surface deadline weekly-review 2026-07-04).
+- **XAI quota recovery** — Team 3a8b4c1e monthly credit limit exhausted 6-16 (**day 15**). Operator top-up pending. WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; prefetched XAI paths still serve list-digest/agent-buzz/token-pick. *[BLOCKED]*
+- **Operator on-chain config** — defi-monitor NO_CONFIG day 23; `memory/on-chain-watches.yml` needs `type: pool` / `type: position` entries. `ALCHEMY_API_KEY len=0`, `ETHERSCAN_API_KEY null`. *[BLOCKED — partial]*
+- **BTC breakdown day 5 confirmed** — 6-29 close $60,160 = 5th consecutive sub-$60,500. Quarter-end TODAY 6-30 adds structural sell flow; tonight's UTC close decides 6th-red or reclaim. Reclaim levels: $63,500 / $65,900. Spot pinned $58.2k–$59.7k all day 6-30.
 
 ## Recently Cleared (last 48h)
-- **PR #148 fix(agent-buzz) MERGED 2026-06-29T00:17Z** — ~30h from open. agent-buzz cron-state sr 49% → 50%; full effect needs 5–7 days.
-- **on-chain REPPO stake migration captured 6-28** — W3→W1 1.58M REPPO stake migration + W1 6,595 USDC → Morpho Steakhouse Prime Instant (steakUSDC). First non-zero on-chain-monitor in ~72h.
-- **aaronjmars/aeon PR #560 opened** — sister-fleet proactive gap-fix wiring `validate-config.test.js` into ci-tests.yml.
-- **Watchlist 6-29 reversal** — 1-green/3-red flips 6-28 whole-green relief. TOKEN_ALERT_OK 8th clean CG day. Median 24h -2.13%.
+- **WELL volume spike 3.83×** alerted 6-30 12:11Z — first 3×+ print of the 6-day watchlist run, on red tape (-2.28%). Either accumulation or forced supply hitting bid — next 2 closes confirm direction.
+- **github-trending 6-30 fake-star drop** — msitarzewski/agency-agents 119.8k stars / 1:6 fork ratio / Shell language for "AI agency" project = inorganic-star-farm. New precedent: drop with confidence on >100k Shell-language repos with anomalous fork ratios.
+- **KEV zero-cadence streak ENDED at 4 days** — SimpleHelp CVE-2026-48558 added 6-29 (CVSS 10.0 + PoC + IOCs + CISA BOD 26-04 due 2026-07-02 = PATCH TODAY). Brandjacks now riding agent-infra narrative (ai-sdk-ollama, autotel-* 18-pkg cluster).
+- **PR #150 fix(aeon.yml) opened 6-29 18:17Z** — rename `usepod_model` → `model:` for on-chain-monitor / token-pick / token-movers, ~$456/mo savings. 5-line diff by self-improve. Under 24h stall at 14:43Z 6-30 hb (~20h).
 
 ## Fleet Health
-- **skill-health 6-28 18:08Z snapshot:** 9 healthy · 24 degraded · 8 warning · 0 critical · 2 no_data (operator-scorecard, fork-skill-gap). 24h hash unchanged. See [[fleet]] for chronic tail.
-- **Open issues: 15** — 4 critical sandbox cluster + 8 high + 3 medium. ISS-026 (heartbeat false-fail timing) detected 6-28, action queued. 13 resolved historically.
-- **Open PRs: 1** — #149 docs(skill-graph) opened 6-28 17:15Z, ~22h at last hb (under stall threshold).
-- **fork-skill-digest STUCK ~20h+** carry — dispatched 6-28 18:38Z, never resolved. Within 48h dedup window.
+- **skill-health 6-29 17:45Z snapshot:** 9 healthy · 23 degraded · 8 warning · 0 critical · 2 no_data (operator-scorecard, fork-skill-gap). Hash 992a90ed; fleet-control dropped (disabled). 15 open issues, 0 filed/resolved this run. See [[fleet]] for chronic tail.
+- **Open issues: 15** — 4 critical sandbox cluster (ISS-019/020/021/025) + 1 sandbox-limitation (ISS-018) + 7 high + 3 medium incl ISS-026 (heartbeat false-fail timing, action queued).
+- **Open PRs: 2** — #149 docs(skill-graph) opened 6-28 17:15Z (**~45h+ stuck day 2**); #150 fix(aeon.yml) opened 6-29 18:17Z (under 24h stall but approaching).
+- **fork-skill-digest STUCK ~44h+** carry — dispatched 2026-06-28T18:38Z, never resolved. Within 48h dedup window through 6-30 14:43Z hb; crosses threshold next tick.
 
 ## Active Topics
-- [Fleet status & infrastructure](topics/fleet.md) — PR history, blockers, skill-health, 6-29 entry (PR #148 merge, cost-report, security-scan, weekly-shiplog).
-- [Crypto research](topics/crypto.md) — Narrative evolution, token picks (VELVET day-2 -2.9%, SLX day-2 +15.1%, AAVE day-6 +19%, APE day-3 -7.3%, SEI stopped-out), Morpho curator-risk + operator leverage-freeze guidance, watchlist alerts, 6-29 BTC breakdown day-4 + deal-flow Mon batch.
-- [Market context](topics/market-context.md) — 6-29 snapshot: BTC $59.2–$59.8k, breadth 23/82, F&G 18 day-4, quarter-end rebal tomorrow.
+- [Fleet status & infrastructure](topics/fleet.md) — PR history, blockers, skill-health, 6-30 entry (PR #150 fresh, WELL vol spike, github-trending fake-star precedent).
+- [Crypto research](topics/crypto.md) — Narrative evolution, token picks (VELVET day-3 -12.8%, SLX day-3 +7.3%, AAVE day-7, APE day-4 invalidating, SEI stopped-out), Morpho curator-risk + operator leverage-freeze guidance, watchlist alerts, 6-30 BTC breakdown day-5 + WELL vol spike on red tape.
+- [Market context](topics/market-context.md) — 6-30 snapshot: BTC $58.2–$59.7k pinned, breadth 45/100, F&G 18 day-5, quarter-end TODAY.
 - [Capital-2× program](topics/capital-2x-program.md) — North-star spec.
-- [XAI quota state](topics/xai-quota-exhausted.md) — Outage tracker since 6-16 (day 14); PR #148 merged 6-29.
-- [AIXBT signals](topics/aixbt-grounding.md), [clusters](topics/aixbt-clusters.md), [chains](topics/aixbt-chains.md) — 36 clusters / ~205 chains as of 6-28 21:00Z. Key 6-28: ANSEM 630x to $100M+ mcap dominating SOL trenches mindshare + Strategy mNAV<1 first time + ETH exits global top-100 + Hormuz re-escalation REVERSAL (US strikes on Iran).
+- [XAI quota state](topics/xai-quota-exhausted.md) — Outage tracker since 6-16 (**day 15**); PR #148 merged 6-29.
+- [AIXBT signals](topics/aixbt-grounding.md), [clusters](topics/aixbt-clusters.md), [chains](topics/aixbt-chains.md) — 36 clusters / ~205 chains as of 6-28 21:00Z.
 
 ## Tracked Tokens
 Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
@@ -38,6 +38,8 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 | GITLAWB | gitlawb            | 15%           | $0.00004851 +0.92% 6-30 (fractional reclaim, $0.00005 handle still capping; vol 0.75× baseline, weakest in window) |
 
 ## Recurring patterns (durable)
-- **Meta-bear "crypto needs new narrative" persisting day 4** — broke 24h half-life rule day 3 + 4. Structural backing: BTC ETF 13-day net outflow streak (longest ever, $107.8B → $82.8B = −23% 6w), F&G 18 day-4, breadth 23/82. Regime locked through Monday open. STRUCTURAL longs persist (6-day streak): AI agent infra, stablecoins, RWA via CEX rails, prediction markets.
-- **Brandjacking is the new default supply-chain vector** — security-digest 6-29: 0 reviewed-critical 4th day, 100% malware-driven for first time of 2026. Attackers picking real high-value target SDKs (Polymarket CLOB, Crossmint wallet) + 4-pkg auth-domain campaign in 1 minute. Treat any hot-project SDK brandjack as default threat.
-- **search-skill SEARCH_SKILL_NO_GAP day 6** — fleet capability-complete on external-skill axis. Failures are infra (ISS-025 capture step), not gaps. Stop noise-filing new gap reports unless cron-state failure mode changes.
+- **Meta-bear "crypto needs new narrative" persisting day 5** — broke 24h half-life day 3+4+5. Structural backing: BTC ETF outflow streak ($107.8B → $82.8B = −23% 6w, June worst month on record at $4-5B outflows incl IBIT $3.3B), F&G 18 day-5, breadth recovering 23/82 → 45/100 today. Quarter-end TODAY adds structural sell flow. STRUCTURAL longs persist (7-day streak): AI agent infra, stablecoins, RWA via CEX rails, prediction markets.
+- **Brandjacking is the new default supply-chain vector** — security-digest 6-30: 0 reviewed-critical 4th day, 100% malware-driven. Attackers now ride agent-infra narrative (ai-sdk-ollama = Vercel AI SDK + Ollama brandjack; 18-pkg autotel-* OTel+MCP cluster in 10.5h window — largest single-namespace coordinated brandjack of 48h). 100% of 154 malware advisories npm; pip/crates/go contribute zero. Treat any hot-project SDK brandjack as default threat.
+- **search-skill SEARCH_SKILL_NO_GAP day 7** — fleet capability-complete on external-skill axis. Failures are infra (ISS-025 capture step), not gaps. Stop noise-filing new gap reports unless cron-state failure mode changes.
+- **operator-scorecard Mon 10:30Z slot perpetually MISSED** — scheduler-side never-run gap, flagged every Monday hb. Not skill-side. Carry indefinitely until scheduler patch.
+- **Fake-star pattern** (new 6-30 precedent) — drop with confidence when: >100k stars + 1:6 (or worse) fork ratio + Shell language tag for non-shell project + unknown maintainer provenance. Anchored on msitarzewski/agency-agents drop, complements 6-28 anomalyco/opencode precedent.

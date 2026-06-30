@@ -876,3 +876,35 @@ state: what was built, recurring blockers, and health.
 - Detected 2026-06-28 08:00Z by skill-evals run.
 - Recommended fix: move skill-evals dispatch after 21:00 UTC so it captures post-tick state of log-based skills (heartbeat/token-alert/skill-health) instead of pre-tick stale state.
 - Action queued in action-converter q4u4 backlog; awaiting operator pickup.
+
+## 2026-06-30 entry
+
+### PRs
+- **PR #150 fix(aeon.yml) `usepod_model` → `model:` OPEN** — opened 6-29 18:17Z by anajuliabit, 5-line diff for on-chain-monitor / token-pick / token-movers. ~$107/wk / $456/mo savings. Under 24h stall at 14:43Z 6-30 hb (~20h), approaching threshold. Queued in morning-brief 07:48Z focus #2.
+- **PR #149 docs(skill-graph) STUCK day 2** — opened 6-28 17:15Z, ~45h+ at 14:43Z 6-30 hb. Crossed 24h stall threshold ~21h earlier; surfaced in morning-brief 07:48Z focus #1 + action-converter 6-29 18:22Z (dedup-blocked, no separate stalled-PR notification).
+- **fork-skill-digest STUCK ~44h+** carry — dispatched 6-28 18:38Z, `last_status: dispatched`, last_success 6-21 18:57Z weekly Sun slot. 5 prior hb mentions; within 48h dedup window through 14:43Z 6-30; crosses threshold next tick.
+
+### Fleet health
+- **skill-health 6-29 17:45Z snapshot:** 9 healthy · 23 degraded · 8 warning · 0 critical · 2 no_data (operator-scorecard, fork-skill-gap). Hash 992a90ed; fleet-control dropped (now disabled in aeon.yml). 15 open issues, 0 filed/resolved this run.
+- **Heartbeat 6-30 08:51Z + 14:43Z: HEARTBEAT_OK, STATUS_PAGE=DEGRADED** — fleet cf=0. 19-skill chronic-failure tail unchanged: reg-monitor 10% / vuln-scanner 10% / cost-report 11% / skill-analytics 11% / security-digest 24% worst. agent-buzz 51% holds out of cluster post-PR #148 merge. fleet-control re-entered chronic at 40% before being disabled.
+- **operator-scorecard Mon 10:30Z perpetually missed** — 6-29 Monday tick now ~28h+ past with no dispatch as of 14:43Z 6-30 hb. Same scheduler-side gap flagged every prior Monday — carry indefinitely until scheduler patch.
+
+### WELL volume spike (token-alert 12:11Z)
+- **WELL $0.00334006 -2.28% on vol $3.68M = 3.83× of $961K 5d mean — first 3×+ print of the 6-day watchlist run**, but on a red tape print. Snaps the 3-day green streak on quarter-end sell flow.
+- Read as **accumulation OR forced supply hitting a bid** — direction confirms on next 2 closes. Previous 6-day low-vol regime broken in the opposite direction of price relief.
+- Next-run baseline shifts $961K → $1.020M; comparable 3× spike tomorrow needs $3.06M+.
+
+### github-trending 6-30 (4 picks)
+- **browser-use/video-use** (top pick · ACCELERATING · 967 today · 12.3k total · Python; org expansion from web→video editing, agent-tooling meta-narrative day 3)
+- **0xNyk/council-of-high-intelligence** (RETURNING · 331 today · 2.2k total · Shell; `/council` Claude Code slash command runs 18 named-thinker AI personas across multi-vendor LLMs — structured-debate-as-judgment primitive)
+- **logto-io/logto** (RETURNING · 158 today · 13k total · TypeScript; v1.41.0 released 6-30 08:09Z = release-driven spike; open Auth0/WorkOS alternative)
+- **refactoringhq/tolaria** (ACCELERATING · 280 today · 17.8k total · TypeScript; pre-1.0 alpha, 9 alpha cuts in single day = ship-cadence-as-signal)
+- **Fake-star drop precedent** — msitarzewski/agency-agents 119.8k stars Shell repo dropped with confidence on: 1:6 fork ratio (vs typical 1:30-1:50) + Shell language tag for "AI agency" + unknown maintainer + 459/d sustained 8mo on cheesy description. New rule: >100k stars + anomalous fork ratio + wrong language tag = inorganic-star-farm.
+
+### security-digest 6-30 14:50Z
+- **KEV zero-cadence streak ENDED at 4 days** — SimpleHelp CVE-2026-48558 added 6-29: CVSS 10.0 + horizon3.ai PoC + TaskWeaver/Djinn intrusion chain documented + CISA BOD 26-04 hard due 2026-07-02 = PATCH TODAY.
+- **Brandjacks ride agent-infra narrative**: GHSA-m9j7-x8ww-5jwr ai-sdk-ollama@0.13.1 (Vercel AI SDK + Ollama brandjack); 18-pkg autotel-* cluster (autotel-mcp/cli/web/vitest/backends/etc, 10.5h single-author window = largest single-namespace coordinated brandjack of 48h).
+- 100% of 154 malware advisories npm; pip/crates/go contribute zero — npm remains sole supply-chain attack surface.
+
+### list-digest 6-30
+- 1 signal: Hercules_Defi Pi2Day 2026 announcements (SoloHost local AI + Pi Sign-in OAuth + PiVerify KYC-as-a-service over 18M+ Pi-verified accounts). Pi's KYC reach is a real distribution asset; framing finally moved from mining-gimmick to infra play. Execution unproven.
