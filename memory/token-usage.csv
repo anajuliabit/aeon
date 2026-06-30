@@ -607,4 +607,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-30,github-trending,claude-opus-4-7,30,20933,1356362,95290
 2026-06-30,token-alert,claude-opus-4-7,31,13263,1414708,49611
 2026-06-30,btc-levels,claude-sonnet-4-6,8,4795,244360,28930
-2026-06-30,heartbeat,claude-opus-4-7,12,13616,616708,103034
+2026-06-30,security-digest,claude-opus-4-7,56,24674,3300771,109299
