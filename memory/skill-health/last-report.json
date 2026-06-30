@@ -1,7 +1,7 @@
 {
-  "hash": "992a90ed71e20eedbf058a33f453e94047e5e090d2dbaef8d360916b3cbf8c62",
-  "last_notified_at": "2026-06-29T17:45:00Z",
-  "last_run_at": "2026-06-29T17:45:00Z",
+  "hash": "1ff18e842395b0b2cfd4d9d0cbd4c309219d414988128e3ae65c0b5097503259",
+  "last_notified_at": "2026-06-30T18:08:16Z",
+  "last_run_at": "2026-06-30T18:08:16Z",
   "classification": {
     "critical": [],
     "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "vuln-scanner"],
@@ -10,7 +10,7 @@
     "healthy_count": 9,
     "no_data": ["fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "sandbox-truncation output_tokens=0 — 23 DEGRADED + 8 WARNING share signature (ISS-019/020/021/024/025 cluster). Diff vs 2026-06-27T18:10Z: fleet-control dropped (disabled in aeon.yml); classification otherwise identical. skill-runs blocked by sandbox (SKILL_HEALTH_PARTIAL), cron-state-only classification",
+  "systemic": "sandbox-truncation output_tokens=0 — 23 DEGRADED + 8 WARNING share signature (ISS-019/020/021/024/025 cluster). Classification byte-identical to 2026-06-29T17:45Z report; daily-cadence notify (24h elapsed). skill-runs blocked by sandbox (SKILL_HEALTH_PARTIAL), cron-state-only classification",
   "open_issues": 15,
   "resolved_this_run": 0,
   "filed_this_run": 0
