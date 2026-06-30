@@ -1,0 +1,67 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-06-30"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "well_stat",
+        "volume_stat",
+        "separator",
+        "trigger_heading",
+        "trigger_text"
+      ]
+    },
+    "well_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "WELL",
+        "value": "$0.00334006",
+        "delta": "-2.16%",
+        "trend": "down"
+      }
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$3.68M",
+        "delta": "3.83× 5-day avg $961K",
+        "trend": "up"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trigger_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trigger",
+        "level": "h3"
+      }
+    },
+    "trigger_text": {
+      "type": "Text",
+      "props": {
+        "text": "volume spike — first 3×+ print in the rolling window. Vol-starved 6-day stretch (mean $961K, low $73K on 6-28) snapped on a red-tape print, not a green one. Bid is finally showing up; tape direction lags.",
+        "variant": "body"
+      }
+    }
+  }
+}

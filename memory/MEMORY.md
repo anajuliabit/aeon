@@ -32,10 +32,10 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | $0.00341798 +0.51% 6-29 (3rd consecutive green, vol 2.62× day-prior $73K — first real bid of week, still 0.20× of 5-day mean) |
-| MAMO    | mamo               | 15%           | $0.00786596 -0.22% 6-29 (snaps 2-day green streak; vol 0.77× of mean) |
-| REPPO   | reppo              | 15%           | $0.02043912 -2.95% 6-29 (snaps 3-day green streak below $0.02 wobble line; vol 0.34× of mean) |
-| GITLAWB | gitlawb            | 15%           | $0.00004807 -4.07% 6-29 (fully gives back 6-28 +5.38% pop; $0.00005 reclaim handle lost; vol 0.83× day-prior) |
+| WELL    | moonwell-artemis   | 10%           | $0.00334006 -2.28% 6-30 (snaps 3-day green streak on quarter-end sell flow; **vol $3.68M = 3.83× of 5-day mean $961K — VOLUME SPIKE TRIGGER**, first 3×+ print in the rolling window, red tape direction) |
+| MAMO    | mamo               | 15%           | $0.00768748 -2.27% 6-30 (2nd consecutive red, lowest print of 6-day watchlist run; vol 0.98× baseline) |
+| REPPO   | reppo              | 15%           | $0.02081359 +1.83% 6-30 (modest reclaim toward $0.021 wobble line; vol 0.85× baseline, drought persists) |
+| GITLAWB | gitlawb            | 15%           | $0.00004851 +0.92% 6-30 (fractional reclaim, $0.00005 handle still capping; vol 0.75× baseline, weakest in window) |
 
 ## Recurring patterns (durable)
 - **Meta-bear "crypto needs new narrative" persisting day 4** — broke 24h half-life rule day 3 + 4. Structural backing: BTC ETF 13-day net outflow streak (longest ever, $107.8B → $82.8B = −23% 6w), F&G 18 day-4, breadth 23/82. Regime locked through Monday open. STRUCTURAL longs persist (6-day streak): AI agent infra, stablecoins, RWA via CEX rails, prediction markets.
