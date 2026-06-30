@@ -1,0 +1,118 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC Levels"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-current-spot",
+        "alert-consecutive-closes",
+        "text-downtrend",
+        "text-cbbtc-position",
+        "text-quarter-end",
+        "sep-1",
+        "text-reclaim-label",
+        "stack-reclaim-levels",
+        "sep-2",
+        "alert-disclaimer"
+      ]
+    },
+    "stat-current-spot": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC Spot Price",
+        "value": "$59,700"
+      }
+    },
+    "alert-consecutive-closes": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "5th consecutive sub-$60,500 daily close",
+        "message": "2026-06-29 close: $60,160 < $60,500"
+      }
+    },
+    "text-downtrend": {
+      "type": "Text",
+      "props": {
+        "text": "Downtrend continuation confirmed per 2026-06-09 advisor levels"
+      }
+    },
+    "text-cbbtc-position": {
+      "type": "Text",
+      "props": {
+        "text": "Leveraged cbBTC position: review trigger at ≤$45k, current spot clear"
+      }
+    },
+    "text-quarter-end": {
+      "type": "Text",
+      "props": {
+        "text": "Quarter-end rebalancing flow (6-30) is a known headwind"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-reclaim-label": {
+      "type": "Text",
+      "props": {
+        "text": "Reclaim Levels (unchanged):",
+        "variant": "lead"
+      }
+    },
+    "stack-reclaim-levels": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-reclaim-1",
+        "stat-reclaim-2"
+      ]
+    },
+    "stat-reclaim-1": {
+      "type": "Stat",
+      "props": {
+        "label": "Level 1",
+        "value": "$63,500"
+      }
+    },
+    "stat-reclaim-2": {
+      "type": "Stat",
+      "props": {
+        "label": "Level 2",
+        "value": "$65,900"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-disclaimer": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Not financial advice"
+      }
+    }
+  }
+}
