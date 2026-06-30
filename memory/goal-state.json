@@ -1,29 +1,29 @@
 {
-  "run_at": "2026-06-29T17:10:00Z",
+  "run_at": "2026-06-30T17:00:00Z",
   "goals": {
     "sandbox-truncation-systemic": {
       "status": "ON_TRACK",
-      "activity_count_14d": 236,
-      "last_activity_date": "2026-06-29",
-      "note": "Mentioned every day of the 14d window (peak 6-24 at 28 hits/day, 6-29 at 16). ISS-019/020/021/024/025 cluster all still open per memory/issues/INDEX.md. Status holds ON_TRACK per rules (activity_count_14d >= 2 AND days_since_last_activity <= 7). Carry: ISS-025 capture-step fix PR day 7 unshipped — action-converter flagged 6-24 18:14Z 4.6/5 quality, never opened. Today's 19-skill chronic tail (cost-report 11% / reg-monitor 10% / skill-analytics 11% / vuln-scanner 10% / security-digest 23% / search-skill 31% / market-context-refresh 32% / list-digest 33% / narrative-tracker 33% / skill-health 33% / goal-tracker 35% / self-improve 35% / action-converter 35% / reflect 37% / skill-evals 38% / fleet-control 40% / evening-recap 44% / thought-review 46% / aixbt-pulse 47%) — all share `output_tokens=0` sandbox-truncation signature, unchanged from 6-28 20:18Z heartbeat."
+      "activity_count_14d": 314,
+      "last_activity_date": "2026-06-30",
+      "note": "19-skill chronic tail unchanged from 6-29 → 6-30 hb cluster (reg-monitor 10% / vuln-scanner 10% / cost-report 11% / skill-analytics 11% / security-digest 24% as worst — all share `output_tokens=0` sandbox-truncation signature, cluster ISS-019/020/021/024/025). action-converter flagged 4.6/5-quality capture-step PR on 6-24 18:14Z — now **day 7 unshipped** per morning-brief 07:48Z focus item #3 (hard date 2026-07-04 weekly-review). Status rule met (activity >= 2 AND days_since <= 7) — activity is observation cadence, not actual fix progress; trend flat vs prior 236 (+33% in gray zone between flat ±25% and improving ≥50%)."
     },
     "xai-quota-recovery": {
       "status": "BLOCKED",
-      "activity_count_14d": 203,
-      "last_activity_date": "2026-06-29",
-      "note": "Operator top-up day 14 since 2026-06-16 exhaustion. WebSearch fallback covered daily-routine tweet-roundup 08:50Z today (websearch=ok ×3, xai=skipped per quota exhaustion day 14). Prefetched .xai-cache hits carried list-digest 16:55Z (8.3KB cache, 5 sources / 6 x_search calls / 3213 output_tokens). PR #148 fix(agent-buzz) merged 2026-06-29T00:17Z — addressed cache-quality (mode:Top + min_likes:5), orthogonal to credit-balance issue. Operator action required."
+      "activity_count_14d": 255,
+      "last_activity_date": "2026-06-30",
+      "note": "Operator top-up day 15 since 2026-06-16 exhaustion. WebSearch fallback covered daily-routine tweet-roundup 07:54Z (websearch=ok ×3, xai=skipped per quota exhaustion day 15). Prefetched `.xai-cache` hits carried list-digest (1 signal — Hercules_Defi Pi2Day 2026). PR #148 fix(agent-buzz) merged 2026-06-29T00:17Z addressed cache-quality (mode:Top + min_likes:5), orthogonal to credit-balance. Activity 203 → 255 = +25.6%, flat trend. Operator action remains the only unblock."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 244,
-      "last_activity_date": "2026-06-29",
-      "note": "defi-monitor NO_CONFIG day 22 since first flag; on-chain-watches.yml unchanged from 6-25 seed (5 type:wallet entries only, zero type:pool or type:position). on-chain-monitor primary path still env-blocked (ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null on chain 8453); Blockscout keyless + curl→WebFetch fallback durable but limited to token transfers. Operator action required — both config and key top-up."
+      "activity_count_14d": 286,
+      "last_activity_date": "2026-06-30",
+      "note": "defi-monitor NO_CONFIG day 23 since first flag; on-chain-watches.yml unchanged from 6-25 seed (5 type:wallet entries only, zero type:pool or type:position). on-chain-monitor primary path still env-blocked (ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null on chain 8453); Blockscout keyless + curl→WebFetch fallback durable but limited to token transfers. Activity 244 → 286 = +17%, flat trend. Operator action required — both config and key top-up."
     },
-    "btc-breakdown-confirmed-day-3": {
+    "btc-breakdown-confirmed-day-4": {
       "status": "ON_TRACK",
-      "activity_count_14d": 187,
-      "last_activity_date": "2026-06-29",
-      "note": "Goal renamed from prior `btc-hard-levels` slug. btc-levels skill fired 5× today: 01:21Z ⚠️ breakdown alert for 6-28 close $59,612 = 4th consecutive sub-$60,500 close (breakdownAlertedForClose=2026-06-28 set); 05:13Z spot $59,402, 09:25Z $59,779, 13:48Z $59,408, 16:26Z $59,580 — all quiet sub-$60.5k pin. Reclaim flags $63,500 / $65,900 stay re-armed. Quarter-end rebalancing 6-30 likely adds Monday-open sell pressure. Skill working as designed — no fresh notification past 01:21Z trip."
+      "activity_count_14d": 451,
+      "last_activity_date": "2026-06-30",
+      "note": "Goal slug rolled from day-3 to day-4 (title incremented in MEMORY.md but body still references 6-28 close; operator-owned text, not touched). btc-levels fired 5× today: 01:16Z ⚠️ breakdown alert for 6-29 close $60,160 = 5th consecutive sub-$60,500 (breakdownAlertedForClose=2026-06-29 set); 04:51Z quiet $59,443; 08:51Z quiet $59,180; 12:58Z quiet $58,474; 16:32Z quiet $58,212. Reclaim flags $63,500 / $65,900 stay re-armed. Quarter-end TODAY 6-30 adds structural sell flow; tonight's UTC close decides 6th-red or reclaim. Activity 187 → 451 (jump partly keyword-bleed across the renamed slug), status flat ON_TRACK. Skill working as designed."
     }
   }
 }

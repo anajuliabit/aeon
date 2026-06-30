@@ -1,0 +1,217 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-06-30"
+      },
+      "children": [
+        "summary-line",
+        "sep1",
+        "ontrack-section",
+        "sep2",
+        "blocked-section",
+        "sep3",
+        "sources-section"
+      ]
+    },
+    "summary-line": {
+      "type": "Text",
+      "props": {
+        "text": "Summary: 4 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 0 done (overall → flat)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "ontrack-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ontrack-heading",
+        "goal1",
+        "goal2"
+      ]
+    },
+    "ontrack-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "goal1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal1-title",
+        "goal1-metrics"
+      ]
+    },
+    "goal1-title": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation systemic"
+      }
+    },
+    "goal1-metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 314 activity/14d (→ flat, was ON TRACK)",
+        "variant": "caption"
+      }
+    },
+    "goal2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal2-title",
+        "goal2-metrics"
+      ]
+    },
+    "goal2-title": {
+      "type": "Text",
+      "props": {
+        "text": "BTC breakdown CONFIRMED day 4"
+      }
+    },
+    "goal2-metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 451 activity/14d (→ flat, was ON TRACK)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked1",
+        "blocked2"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked1-title",
+        "blocked1-details",
+        "blocked1-action"
+      ]
+    },
+    "blocked1-title": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota recovery"
+      }
+    },
+    "blocked1-details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator credit top-up since 2026-06-16 (day 15)",
+        "variant": "caption"
+      }
+    },
+    "blocked1-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "notify operator to top up team 3a8b4c1e XAI credits.",
+        "type": "warning"
+      }
+    },
+    "blocked2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked2-title",
+        "blocked2-details",
+        "blocked2-action"
+      ]
+    },
+    "blocked2-title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config"
+      }
+    },
+    "blocked2-details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator config + key top-up since 2026-06-08 (day 23)",
+        "variant": "caption"
+      }
+    },
+    "blocked2-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "notify operator — provision Alchemy/Etherscan keys, add pool/position entries to on-chain-watches.yml.",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
