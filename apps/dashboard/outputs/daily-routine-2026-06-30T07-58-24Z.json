@@ -1,0 +1,684 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-06-30"
+      },
+      "children": [
+        "market-summary",
+        "sep-1",
+        "top-winners-heading",
+        "top-winners-table",
+        "sep-2",
+        "top-losers-heading",
+        "top-losers-table",
+        "sep-3",
+        "trending-heading",
+        "trending-section",
+        "sep-4",
+        "notable-heading",
+        "notable-section",
+        "sep-5",
+        "paper-heading",
+        "paper-item",
+        "sep-6",
+        "tweets-heading",
+        "tweets-section",
+        "sep-7",
+        "github-heading",
+        "github-text",
+        "sep-8",
+        "hn-heading",
+        "hn-items"
+      ]
+    },
+    "market-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-text",
+        "summary-stats"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "breadth firming, leadership rotates — 45/100 top-100 green (vs 23/82 yest), median top-50 −0.4%. 5th day pinned sub-$60.5k, quarter-end today. yest's winners getting unwound on the same tape.",
+        "variant": "lead"
+      }
+    },
+    "summary-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth",
+        "stat-sol",
+        "stat-hype"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$59,430",
+        "delta": "−0.9% (7d −5.5%)",
+        "trend": "down"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,590",
+        "delta": "+0.7%",
+        "trend": "up"
+      }
+    },
+    "stat-sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$73.93",
+        "delta": "+2.2%",
+        "trend": "up"
+      }
+    },
+    "stat-hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$65.53",
+        "delta": "+4.7%",
+        "trend": "up"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top-winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "top-winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h%",
+          "7d%",
+          "Market Cap",
+          "Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "TAC",
+            "$0.0592",
+            "+93.8%",
+            "+197%",
+            "$38M",
+            "#139",
+            "BREAKOUT, PUMP-RISK"
+          ],
+          [
+            "SYN",
+            "$0.541",
+            "+39.5%",
+            "+98%",
+            "$154M",
+            "#230",
+            "BREAKOUT, PUMP-RISK"
+          ],
+          [
+            "CX",
+            "$0.097",
+            "+37.4%",
+            "+96%",
+            "$1.6M",
+            "#202",
+            "BREAKOUT, MICROCAP"
+          ],
+          [
+            "BTW",
+            "$0.0708",
+            "+36.1%",
+            "−20%",
+            "$20M",
+            "#196",
+            "FADE, PUMP-RISK"
+          ],
+          [
+            "RE",
+            "$0.727",
+            "+15.4%",
+            "−11%",
+            "$2.57B",
+            "#237",
+            "FADE"
+          ],
+          [
+            "UB",
+            "$0.110",
+            "+15.2%",
+            "+21%",
+            "$45M",
+            "#138",
+            ""
+          ],
+          [
+            "H",
+            "$0.069",
+            "+15.2%",
+            "−44%",
+            "$32M",
+            "#220",
+            "FADE"
+          ],
+          [
+            "ADI",
+            "$5.66",
+            "+12.6%",
+            "+29%",
+            "$13M",
+            "#83",
+            ""
+          ],
+          [
+            "LIT",
+            "$1.92",
+            "+12.2%",
+            "+26%",
+            "$45M",
+            "#106",
+            ""
+          ],
+          [
+            "BEAT",
+            "$2.76",
+            "+9.6%",
+            "+60%",
+            "$21M",
+            "#77",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top-losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "top-losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h%",
+          "7d%",
+          "Market Cap",
+          "Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "GWEI",
+            "$0.149",
+            "−16.7%",
+            "+24%",
+            "$48M",
+            "#129",
+            "FADE"
+          ],
+          [
+            "SKYAI",
+            "$0.115",
+            "−13.9%",
+            "−65%",
+            "$34M",
+            "#233",
+            ""
+          ],
+          [
+            "VELVET",
+            "$1.50",
+            "−13.7%",
+            "+211%",
+            "$37M",
+            "#91",
+            ""
+          ],
+          [
+            "SLX",
+            "$0.510",
+            "−11.4%",
+            "+164%",
+            "$163M",
+            "#222",
+            ""
+          ],
+          [
+            "JTO",
+            "$0.755",
+            "−9.9%",
+            "",
+            "$57M",
+            "#121",
+            ""
+          ],
+          [
+            "GRASS",
+            "$0.467",
+            "−8.5%",
+            "",
+            "$37M",
+            "#136",
+            ""
+          ],
+          [
+            "EIGEN",
+            "$0.216",
+            "−7.3%",
+            "",
+            "$21M",
+            "#191",
+            ""
+          ],
+          [
+            "PI",
+            "$0.113",
+            "−7.1%",
+            "",
+            "$16M",
+            "#59",
+            ""
+          ],
+          [
+            "ETHFI",
+            "$0.323",
+            "−6.5%",
+            "",
+            "$24M",
+            "#133",
+            ""
+          ],
+          [
+            "AKT",
+            "$0.608",
+            "−6.2%",
+            "",
+            "$6M",
+            "#178",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-1",
+        "badge-2",
+        "badge-3",
+        "badge-4",
+        "badge-5",
+        "badge-6",
+        "badge-7"
+      ]
+    },
+    "badge-1": {
+      "type": "Badge",
+      "props": {
+        "text": "AI Gensyn #471 +48%",
+        "variant": "default"
+      }
+    },
+    "badge-2": {
+      "type": "Badge",
+      "props": {
+        "text": "ANSEM #439 +12.7%",
+        "variant": "default"
+      }
+    },
+    "badge-3": {
+      "type": "Badge",
+      "props": {
+        "text": "LIT #107 +12.1%",
+        "variant": "default"
+      }
+    },
+    "badge-4": {
+      "type": "Badge",
+      "props": {
+        "text": "SYN #229 +39.9%",
+        "variant": "default"
+      }
+    },
+    "badge-5": {
+      "type": "Badge",
+      "props": {
+        "text": "RE #238 +14.1%",
+        "variant": "default"
+      }
+    },
+    "badge-6": {
+      "type": "Badge",
+      "props": {
+        "text": "SOL #7 +2.1%",
+        "variant": "default"
+      }
+    },
+    "badge-7": {
+      "type": "Badge",
+      "props": {
+        "text": "GRAM #26 −0.4%",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "notable-1": {
+      "type": "Alert",
+      "props": {
+        "title": "VELVET HIGH",
+        "message": "11/10 day-3 unwind: −13.7% to $1.50 = −12.8% on $1.72 entry, gives back the +33% pop. 9.2%-of-mcap unlock Jul-10 (10d out).",
+        "type": "warning"
+      }
+    },
+    "notable-2": {
+      "type": "Alert",
+      "props": {
+        "title": "SLX HIGH",
+        "message": "9/10 day-3 unwind: $0.510 = +7.3% on $0.475 entry (was +15.1% yest).",
+        "type": "info"
+      }
+    },
+    "notable-3": {
+      "type": "Alert",
+      "props": {
+        "title": "TAC Parabolic",
+        "message": "day-2 (+94 yest, +94 today, 7d +197%) — PUMP-RISK extends.",
+        "type": "warning"
+      }
+    },
+    "notable-4": {
+      "type": "Alert",
+      "props": {
+        "title": "GWEI Flip",
+        "message": "flips from yest +7% winner to top loser −17%.",
+        "type": "warning"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-item": {
+      "type": "StoryLink",
+      "props": {
+        "title": "TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents",
+        "href": "https://arxiv.org/abs/2606.28480",
+        "source": "Chen et al · ↑32",
+        "score": "120 real-world terminal tasks, 5 families; Claude Code + Opus 4.8 max reasoning tops at 65.8% — eval of the exact harness Aeon runs in."
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweets-crypto",
+        "tweets-ai",
+        "tweets-dev"
+      ]
+    },
+    "tweets-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-crypto-h",
+        "tweets-crypto-text"
+      ]
+    },
+    "tweets-crypto-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "tweets-crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "BlackRock+Ethena integration → ENA +8% on $100M liquidity facility for tokenized money-market fund. Tom Lee tags weakness as Q-end window dressing; Bitmine added $43M ETH (smallest since May).",
+        "variant": "body"
+      }
+    },
+    "tweets-ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-ai-h",
+        "tweets-ai-text"
+      ]
+    },
+    "tweets-ai-h": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "tweets-ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "GPT-5.5 shipped (2× GPT-5.4 cost, SOTA agentic coding/CU). Project Glasswing scaled 50→150 orgs across 15 countries. Claude Managed Agents run inside user-controlled sandbox with private MCP.",
+        "variant": "body"
+      }
+    },
+    "tweets-dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-dev-h",
+        "tweets-dev-text"
+      ]
+    },
+    "tweets-dev-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "tweets-dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "Claude Agent SDK consolidates MCP as default tool layer. NVIDIA RTX Spark Superchip — 128GB unified, 1 petaflop on a workstation laptop.",
+        "variant": "body"
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues last 24h.",
+        "variant": "body"
+      }
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-1",
+        "hn-2",
+        "hn-3",
+        "hn-4"
+      ]
+    },
+    "hn-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Qwen 3.6 27B sweet spot for local dev",
+        "href": "https://quesma.com/blog/qwen-36-is-awesome/",
+        "source": "HN (864p/594c)",
+        "score": "open-weights local-dev SKU at 27B. Asia-models cluster day 3 post-Mythos export ban."
+      }
+    },
+    "hn-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SCOTUS rules geofence warrants need constitutional protection",
+        "href": "https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision",
+        "source": "HN (512p/242c)",
+        "score": "same court week as the EU-US data transfer blow-up; surveillance jurisprudence reshaping."
+      }
+    },
+    "hn-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Rocketlab acquires Iridium",
+        "href": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully",
+        "source": "HN (397p/261c)",
+        "score": "vertical roll-up: launch + LEO constellation under one cap table."
+      }
+    },
+    "hn-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Ornith-1.0 open-source self-improving agentic coding",
+        "href": "https://github.com/deepreinforce-ai/Ornith-1",
+        "source": "HN (198p/39c)",
+        "score": "open weights + self-improvement loop on coding axis."
+      }
+    }
+  }
+}

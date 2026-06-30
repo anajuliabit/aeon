@@ -1,48 +1,53 @@
-*Daily Routine — 2026-06-29*
+*Daily Routine — 2026-06-30*
 
-tape stays bearish — 23/82 top-100 green (filtered), btc $59,782 -0.9% / 7d -6.8% (4th day pinned sub-$60.5k breakdown), eth $1,572 -0.5%, sol $72.63 +1.0%. weekend risk-off day 2.
+_breadth firming, leadership rotates — 45/100 top-100 green (vs 23/82 yest), median top-50 −0.4%. BTC $59,430 −0.9% / 7d −5.5% (5th day pinned sub-$60.5k, quarter-end today). ETH $1,590 +0.7%, SOL $73.93 +2.2%, HYPE $65.53 +4.7%. yest's winners getting unwound on the same tape._
 
 *Top Winners (24h)*
-1. TAC $0.0417 +94% / 7d +112% • $7.8M / #173 [PUMP-RISK]
-2. RAVE $0.519 +82% / 7d +93% • $65M / #213 [PUMP-RISK]
-3. GWEI (ETHGas) $0.192 +43% / 7d +79% • $27M / #116 [BREAKOUT]
-4. BinanceLife $0.710 +38% / 7d +1.9% • $59M / #85 — REVERSAL from yest -16%
-5. BAS $0.0487 +16% / 7d +57% • $12M / #226 [BREAKOUT] day-3 holds
-6. UB $0.0957 +13% / 7d -32% • $14M / #143
-7. CX (Cortex) $0.0742 +10.7% / 7d +63% • $1.8M / #245 [MICROCAP]
-8. DYDX $0.163 +7% / 7d +34% • $8.7M / #204
-9. WIF $0.182 +6.3% • $59M / #177
-10. PYTH $0.0363 +6.3% • $17M / #137
+1. TAC — $0.0592 +93.8% / 7d +197% • $38M / #139 [BREAKOUT, PUMP-RISK]
+2. SYN (Synapse) — $0.541 +39.5% / 7d +98% • $154M / #230 [BREAKOUT, PUMP-RISK]
+3. CX (Cortex) — $0.097 +37.4% / 7d +96% • $1.6M / #202 [BREAKOUT, MICROCAP]
+4. BTW (Bitway) — $0.0708 +36.1% / 7d −20% • $20M / #196 [FADE, PUMP-RISK]
+5. RE — $0.727 +15.4% / 7d −11% • $2.57B / #237 [FADE]
+6. UB (Unibase) — $0.110 +15.2% / 7d +21% • $45M / #138
+7. H (Humanity) — $0.069 +15.2% / 7d −44% • $32M / #220 [FADE]
+8. ADI — $5.66 +12.6% / 7d +29% • $13M / #83
+9. LIT (Lighter) — $1.92 +12.2% / 7d +26% • $45M / #106
+10. BEAT (Audiera) — $2.76 +9.6% / 7d +60% • $21M / #77
 
 *Top Losers (24h)*
-1. SKYAI $0.132 -31% / 7d -65% • $68M / #212 — capitulation day-3 (-65% wk)
-2. BTW $0.051 -24% / 7d -47% • $16M / #242 — 6th red day
-3. M (MemeCore) $0.588 -15% / 7d -80% • $14M / #76
-4. LAB $15.28 -14% • $32M / #22 [MAJOR] — top-20 distribution day-3
-5. KITE $0.117 -10.5% / 7d -30% • $36M / #138
-6. BEAT $2.63 -6.6% • $25M / #80 — REVERSAL from yest +35%
-7. WLD $0.425 -6.6% / 7d -34% • $160M / #50
-8. EIGEN $0.231 -6.4% / 7d -23% • $22M / #182 — REVERSAL from yest +6%
-9. SYRUP $0.136 -6.3% • $17M / #191
-10. PUMP $0.00142 -5.2% • $93M / #95 — REVERSAL from yest +14%
+1. GWEI (ETHGas) — $0.149 −16.7% / 7d +24% • $48M / #129 [FADE]
+2. SKYAI — $0.115 −13.9% / 7d −65% • $34M / #233
+3. VELVET — $1.50 −13.7% / 7d +211% • $37M / #91
+4. SLX (Solstice) — $0.510 −11.4% / 7d +164% • $163M / #222
+5. JTO (Jito) — $0.755 −9.9% • $57M / #121
+6. GRASS — $0.467 −8.5% • $37M / #136
+7. EIGEN — $0.216 −7.3% • $21M / #191
+8. PI — $0.113 −7.1% • $16M / #59
+9. ETHFI — $0.323 −6.5% • $24M / #133
+10. AKT (Akash) — $0.608 −6.2% • $6M / #178
 
-VELVET +3.9% only — pick day-2 stalls after +33% saturday, $1.67 vs $1.72 entry. AAVE -0.7%, still +19% on $76 entry (6-24 pick day-6).
+*Trending*
+AI Gensyn #471 +48% · ANSEM #439 +12.7% · LIT #107 +12.1% · SYN #229 +39.9% · RE #238 +14.1% · SOL #7 +2.1% · GRAM (prev Toncoin) #26 −0.4%
 
-*Tweet Roundup*
-*crypto:* spot BTC ETFs tracking worst month ever ($4B june outflows confirmed); BlackRock dropped another 2,700 BTC + 53k ETH to Coinbase; Ink L2 (Kraken) signed multi-year OP Enterprise managed = Optimism now running Ink's mainnet prod.
-*ai:* GPT-5.6 Sol preview shipped 6-28. Anthropic Fable-5 + Mythos-5 export ban carries day 2; GLM 5.2 now beating Claude in semgrep's cyber benchmarks = the open-weights cyber gap is closing fast (HN #1 today). Anthropic shipped Claude Agent SDK (TS + Python, native MCP).
-*dev:* Rust officially at production scale — half of companies running it (Stack Overflow 2026, 82% admiration). Claude Code 46% "most loved" in Feb dev survey.
+*Notable*
+• VELVET HIGH 11/10 day-3 unwind: −13.7% to $1.50 = −12.8% on $1.72 entry, gives back the +33% pop. 9.2%-of-mcap unlock Jul-10 (10d out).
+• SLX HIGH 9/10 day-3 unwind: $0.510 = +7.3% on $0.475 entry (was +15.1% yest).
+• TAC parabolic day-2 (+94 yest, +94 today, 7d +197%) — PUMP-RISK extends.
+• GWEI flips from yest +7% winner to top loser −17%.
 
 *Paper of the Day*
-"Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments" — ↑18. capability eval beyond the home-distribution env (where most reported agent scores live). load-bearing for the advisor sprint #142 net-of-cost paper grading.
-https://arxiv.org/abs/2606.14397
+"TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents" — Chen et al · ↑32. 120 real-world terminal tasks, 5 families; Claude Code + Opus 4.8 max reasoning tops at 65.8% — eval of the exact harness Aeon runs in. [arxiv.org/abs/2606.28480](https://arxiv.org/abs/2606.28480)
+
+*Tweet Roundup*
+*crypto:* BlackRock+Ethena integration → ENA +8% on $100M liquidity facility for tokenized money-market fund. Tom Lee tags weakness as Q-end window dressing; Bitmine added $43M ETH (smallest since May).
+*ai:* GPT-5.5 shipped (2× GPT-5.4 cost, SOTA agentic coding/CU). Project Glasswing scaled 50→150 orgs across 15 countries. Claude Managed Agents run inside user-controlled sandbox with private MCP.
+*dev:* Claude Agent SDK consolidates MCP as default tool layer. NVIDIA RTX Spark Superchip — 128GB unified, 1 petaflop on a workstation laptop.
 
 *GitHub Issues*
-no new issues 6-28 → 6-29. advisor sprint #141–#145 still open from 6-25.
+No new issues last 24h.
 
 *HN Digest*
-1. [GLM 5.2 beats Claude in cyber benchmarks](https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/) (804p) — open weights closing the gap post-Mythos-export-ban day 2. https://news.ycombinator.com/item?id=48709670
-2. [The KIDS Act would require age checks to get online](https://www.eff.org/deeplinks/2026/06/kids-act-would-require-age-checks-get-online) (466p) — pairs with day's [attribution of speech essay](https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026) (400p). https://news.ycombinator.com/item?id=48706560
-3. [I used Claude Code to get a second opinion on my MRI](https://antoine.fi/mri-analysis-using-claude-code-opus) (424p) — agent application outside the codebase. https://news.ycombinator.com/item?id=48708941
-4. [Professor denounces mass AI fraud at Brown](https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html) (394p) — pairs with yest's Ford-AI-backfired displacement datapoint. https://news.ycombinator.com/item?id=48708991
-5. [Tokenmaxxing is dead, long live tokenmaxxing](https://12gramsofcarbon.com/p/agentics-tech-things-tokenmaxxing) (148p) — agent token economics shift. https://news.ycombinator.com/item?id=48708795
+1. [Qwen 3.6 27B sweet spot for local dev](https://quesma.com/blog/qwen-36-is-awesome/) (864p/594c) — open-weights local-dev SKU at 27B. Asia-models cluster day 3 post-Mythos export ban.
+2. [SCOTUS rules geofence warrants need constitutional protection](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) (512p/242c) — same court week as the EU-US data transfer blow-up; surveillance jurisprudence reshaping.
+3. [Rocketlab acquires Iridium](https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully) (397p/261c) — vertical roll-up: launch + LEO constellation under one cap table.
+4. [Ornith-1.0 open-source self-improving agentic coding](https://github.com/deepreinforce-ai/Ornith-1) (198p/39c) — open weights + self-improvement loop on coding axis.
