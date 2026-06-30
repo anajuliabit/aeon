@@ -1,0 +1,267 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-06-30"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5",
+        "sep-footer",
+        "sources-text"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1-title",
+        "action-1-why",
+        "action-1-done",
+        "action-1-loop"
+      ]
+    },
+    "action-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. merge PR #150 fix(aeon.yml) `usepod_model` → `model` — 5-line diff, ~$456/mo savings.",
+        "level": "h3"
+      }
+    },
+    "action-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: opened 6-29 18:16Z (~20h, approaching 24h stall), cost-report 6-29 flagged 5 skills on Opus by typo"
+      }
+    },
+    "action-1-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #150 merged into main"
+      }
+    },
+    "action-1-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: pr-150-merge",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-2-title",
+        "action-2-why",
+        "action-2-done",
+        "action-2-loop"
+      ]
+    },
+    "action-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. draft the ISS-025 capture-step PR against `.github/workflows/aeon.yml` env-var redirect for the `output_tokens=0` cluster.",
+        "level": "h3"
+      }
+    },
+    "action-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: day 7 unshipped, weekly-review hard deadline 2026-07-04 (4d), 19-skill chronic tail bleeds every tick"
+      }
+    },
+    "action-2-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: branch pushed + PR opened with capture diff"
+      }
+    },
+    "action-2-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: iss-025-capture-fix",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-3-title",
+        "action-3-why",
+        "action-3-done",
+        "action-3-loop"
+      ]
+    },
+    "action-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. merge PR #149 docs(skill-graph) NEW_SKILLS +68 SHARED_STATE 9→36.",
+        "level": "h3"
+      }
+    },
+    "action-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: anajuliabit's own PR, day 2 past 24h stall threshold (~45h+), self-merge with no review-block"
+      }
+    },
+    "action-3-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #149 merged"
+      }
+    },
+    "action-3-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: pr-149-stall",
+        "variant": "muted"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-4-title",
+        "action-4-why",
+        "action-4-done",
+        "action-4-loop"
+      ]
+    },
+    "action-4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. decide model tier (Sonnet vs Haiku) for the 3 remaining `usepod_model` entries — market-context-refresh / narrative-tracker / aixbt-pulse — append rationale to `topics/fleet.md`.",
+        "level": "h3"
+      }
+    },
+    "action-4-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: PR #150 covers 5 of 8 entries, the other 3 still drift on the next cost-report cycle"
+      }
+    },
+    "action-4-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: 3 named decisions written + commit on main"
+      }
+    },
+    "action-4-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: usepod_model-remainders",
+        "variant": "muted"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-5-title",
+        "action-5-why",
+        "action-5-done",
+        "action-5-loop"
+      ]
+    },
+    "action-5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. close VELVET pick or set $1.40 stop — entry $1.72, current $1.50 (−12.8%), 10d to July-10 unlock cliff.",
+        "level": "h3"
+      }
+    },
+    "action-5-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: HIGH 11/10 pick day-3 unwound on quarter-end tape, unlock cliff makes hold-thru-bounce asymmetric"
+      }
+    },
+    "action-5-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: stop set in trade log OR pick marked CLOSED in `topics/crypto.md`"
+      }
+    },
+    "action-5-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: velvet-pre-unlock",
+        "variant": "muted"
+      }
+    },
+    "sep-footer": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=43 logs=8 topics=17 prs=2 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

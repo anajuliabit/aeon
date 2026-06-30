@@ -1,29 +1,29 @@
-*5 Actions — 2026-06-29*
-Shape: Land ISS-025 redirect, review PR #149, unstick fork-skill-digest, edit skill-evals cron, pin VELVET unlock rule
+*5 Actions — 2026-06-30*
+Shape: Ship PR #150 + #149, draft ISS-025 capture PR, close VELVET pre-unlock
 
-1. Land the `.github/workflows/aeon.yml` capture-block redirect that pins Claude's stdout to `${RUN_DIR}/output.txt` before the STATUS_PAGE pipeline clobbers it — root cause for ISS-019/020/021/024/025 across the 20-skill chronic-tail (cost-report 10% / vuln-scanner 10% / reg-monitor 10% worst).
-why: day 6 unshipped; ISS-025 blocks 20 sub-50%-sr skills; fix flagged 4.6/5 quality 2026-06-24 18:14Z, surfaced in 5 consecutive morning-briefs without operator pickup
-done: branch pushed with the redirect committed in `.github/workflows/aeon.yml` and a PR opened against `main`
+1. merge PR #150 fix(aeon.yml) `usepod_model` → `model` — 5-line diff, ~$456/mo savings.
+why: opened 6-29 18:16Z (~20h, approaching 24h stall), cost-report 6-29 flagged 5 skills on Opus by typo
+done: PR #150 merged into main
+loop: pr-150-merge
+
+2. draft the ISS-025 capture-step PR against `.github/workflows/aeon.yml` env-var redirect for the `output_tokens=0` cluster.
+why: day 7 unshipped, weekly-review hard deadline 2026-07-04 (4d), 19-skill chronic tail bleeds every tick
+done: branch pushed + PR opened with capture diff
 loop: iss-025-capture-fix
 
-2. Review and merge PR #149 (`docs(skill-graph): NEW_SKILLS +68, SHARED_STATE 9→36`) opened 2026-06-28T17:15Z by anajuliabit on branch `skill-graph/2026-06-28`; at ~24h it just crossed the open-PR stall threshold flagged in heartbeat 08:47Z.
-why: only open PR in the fleet; docs payload regenerates the skill-graph dep map +68 skills wider; merge unblocks the next graph publication and clears the P1 PR carry
-done: PR #149 either merged into `main` or marked `REQUEST_CHANGES` with a concrete diff comment
-loop: pr-149-review
+3. merge PR #149 docs(skill-graph) NEW_SKILLS +68 SHARED_STATE 9→36.
+why: anajuliabit's own PR, day 2 past 24h stall threshold (~45h+), self-merge with no review-block
+done: PR #149 merged
+loop: pr-149-stall
 
-3. Unstick `fork-skill-digest` in `memory/cron-state.json` by clearing the stale `last_status: dispatched` row stranded since 2026-06-28T18:38:01Z (per heartbeat 08:47Z `gh run list` showed conclusion=cancelled at 18:38:03Z but the state row never updated).
-why: weekly Sunday slot was cancelled mid-dispatch ~14h ago; stranded row will mask a real outage when next Sunday tick (7-05 18:30Z) fires against it
-done: `cron-state.json` entry for `fork-skill-digest` shows `last_status: cancelled` (or `success`) with no `dispatched` value pre-dating last_success
-loop: fork-skill-digest-stuck
+4. decide model tier (Sonnet vs Haiku) for the 3 remaining `usepod_model` entries — market-context-refresh / narrative-tracker / aixbt-pulse — append rationale to `topics/fleet.md`.
+why: PR #150 covers 5 of 8 entries, the other 3 still drift on the next cost-report cycle
+done: 3 named decisions written + commit on main
+loop: usepod_model-remainders
 
-4. Edit `aeon.yml:319` to move the `skill-evals` cron from `0 6 * * 0` to `0 22 * * 0`, killing ISS-026's heartbeat false-fail timing artefact (filed 2026-06-28; cause: skill-evals runs at 06:00 Sun, captures pre-08:00-tick stale state of log-based skills like heartbeat/token-alert/skill-health).
-why: ISS-026 queued day 1; current Sun-06:00 slot generates `SKILL_EVALS_REGRESSED 12/44 coverage` false-fail every Sunday morning (last instance 2026-06-28 06:47Z); one-line cron edit
-done: line 319 in `aeon.yml` reads `schedule: "0 22 * * 0"` for `skill-evals` and PR opened against `main`
-loop: iss-026-evals-timing
-
-5. Pin the VELVET pre-July-10 unlock-cliff exit rule into `memory/topics/crypto.md` with entry $1.72, target $2.20, invalidation $1.32, 9-day window, 15% early-backer + 20% team vesting cliff (per MEMORY.md Recently Cleared; daily-routine 08:50Z has spot $1.67 day-2 stall, -2.9% on entry after Saturday's +33% intraday peak).
-why: HIGH 11/10 pick, 35%-supply cliff 9 days out, no documented exit rule in any topic file; momentum decel already showing day-2
-done: new `## VELVET pre-unlock rule` subsection in `memory/topics/crypto.md` with entry/target/stop levels, cliff date 2026-07-10, and a size-down trigger if spot < $1.50 pre-cliff
+5. close VELVET pick or set $1.40 stop — entry $1.72, current $1.50 (−12.8%), 10d to July-10 unlock cliff.
+why: HIGH 11/10 pick day-3 unwound on quarter-end tape, unlock cliff makes hold-thru-bounce asymmetric
+done: stop set in trade log OR pick marked CLOSED in `topics/crypto.md`
 loop: velvet-pre-unlock
 
-sources: memory=53L logs=8d (6-22→6-29) topics=11 prs=1 open cron_failing=0 mode=OK
+sources: memory=43 logs=8 topics=17 prs=2 cron_failing=0 mode=OK
