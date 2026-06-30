@@ -1,0 +1,141 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "agent buzz — 2026-06-30"
+      },
+      "children": [
+        "text_subtitle",
+        "sep_1",
+        "heading_section1",
+        "stack_section1",
+        "sep_2",
+        "heading_section2",
+        "stack_section2",
+        "sep_3",
+        "text_footer"
+      ]
+    },
+    "text_subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "two lanes today: framework launches (gemini enterprise, zeroicai in rust, microsoft's maf doctor migration tool) and concrete mcp wiring patterns from working builders.",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_section1": {
+      "type": "Heading",
+      "props": {
+        "text": "multi-agent frameworks ship",
+        "level": "h3"
+      }
+    },
+    "stack_section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story_1_1",
+        "story_1_2",
+        "story_1_3"
+      ]
+    },
+    "story_1_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@jocarrasqueira — gemini enterprise positioned as cross-saas agent orchestrator spanning workspace, slack, jira, salesforce",
+        "href": "https://x.com/jocarrasqueira/status/2071743947379003659",
+        "source": "X"
+      }
+    },
+    "story_1_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@ZeroicAI — rust multi-agent framework with bdi cognition and fipa messaging targets production over prototype",
+        "href": "https://x.com/ZeroicAI/status/2071714679383105597",
+        "source": "X"
+      }
+    },
+    "story_1_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@joslat — microsoft ships maf doctor 1.6.0 with semantic kernel → agent framework migration support",
+        "href": "https://x.com/joslat/status/2071685869044379868",
+        "source": "X"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_section2": {
+      "type": "Heading",
+      "props": {
+        "text": "agent plumbing thickens",
+        "level": "h3"
+      }
+    },
+    "stack_section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story_2_1",
+        "story_2_2",
+        "story_2_3"
+      ]
+    },
+    "story_2_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@acoyfellow — bounded mcp child task returns a correlated receipt the parent can audit later",
+        "href": "https://x.com/acoyfellow/status/2071745404308160593",
+        "source": "X"
+      }
+    },
+    "story_2_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@RhysSullivan — builder verdict: codex's mcp integration has noticeably improved in recent releases",
+        "href": "https://x.com/RhysSullivan/status/2071744843207069808",
+        "source": "X"
+      }
+    },
+    "story_2_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@valhalla_dev — claims first autonomous agent-to-agent sale routed through stripe's machine payment protocol",
+        "href": "https://x.com/valhalla_dev/status/2071717792345112900",
+        "source": "X"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 20 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

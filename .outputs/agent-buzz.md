@@ -1,18 +1,20 @@
-*Agent Buzz — 2026-06-29*
-_Quiet builder day. MCP hardening dominates — heartbeat patterns, injection filtering, attack-surface framing. Two agent-runtime ships on the side._
+*agent buzz — 2026-06-30*
+_two lanes today: framework launches (gemini enterprise, zeroicai in rust, microsoft's maf doctor migration tool) and concrete mcp wiring patterns from working builders._
 
-**MCP production hardening**
-• @DataScienceDojo — Production MCP needs heartbeat + fan-out plus programmatic context injection; date and history inference fails without it.
-  https://x.com/DataScienceDojo/status/2071292570127257994
-• @collabnix — agentic-press ships a reference arch with MCP injection filtering and audit logging — security primitives, not glue code.
-  https://x.com/collabnix/status/2071143369821356329
-• @lyrie_ai — Tool-using agents move the threat boundary outside the model — MCP side effects, not jailbreaks.
-  https://x.com/lyrie_ai/status/2071183397024571669
+*multi-agent frameworks ship*
+• @jocarrasqueira — gemini enterprise positioned as cross-saas agent orchestrator spanning workspace, slack, jira, salesforce
+  https://x.com/jocarrasqueira/status/2071743947379003659
+• @ZeroicAI — rust multi-agent framework with bdi cognition and fipa messaging targets production over prototype
+  https://x.com/ZeroicAI/status/2071714679383105597
+• @joslat — microsoft ships maf doctor 1.6.0 with semantic kernel → agent framework migration support
+  https://x.com/joslat/status/2071685869044379868
 
-**Agent runtime ships**
-• @kuldeep_s_s — Workload-aligned memory (temporal graphs, conservative consolidation) beats universal designs across 12 systems and 5 benchmarks.
-  https://x.com/kuldeep_s_s/status/2071204553211752896
-• @sgnagnarella — Google Cloud agent observability now GA — default OpenTelemetry tracing and GCS storage for deployed agents and MCP servers.
-  https://x.com/sgnagnarella/status/2071281853777027234
+*agent plumbing thickens*
+• @acoyfellow — bounded mcp child task returns a correlated receipt the parent can audit later
+  https://x.com/acoyfellow/status/2071745404308160593
+• @RhysSullivan — builder verdict: codex's mcp integration has noticeably improved in recent releases
+  https://x.com/RhysSullivan/status/2071744843207069808
+• @valhalla_dev — claims first autonomous agent-to-agent sale routed through stripe's machine payment protocol
+  https://x.com/valhalla_dev/status/2071717792345112900
 
-<!-- _src: xai-cache · candidates: 10 → kept: 5_ -->
+_src: xai-cache · candidates: 20 → kept: 6_
