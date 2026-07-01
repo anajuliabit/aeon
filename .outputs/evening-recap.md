@@ -1,24 +1,28 @@
-*Evening Recap — 2026-06-30*
-_TL;DR: watch day — SimpleHelp CVE-2026-48558 CVSS 10.0 due 7-02 + WELL vol 3.83× both need follow-through; 2 PRs stalled, 0 ships._
+*Evening Recap — 2026-07-01*
+_TL;DR: one PR shipped (ISS-026), confluent brandjack opens enterprise-infra vertical, 12:00 UTC batch dead since 6-28 — 3 PRs stacked, ISS-025 deadline 3 days out_
 
 *Headlines:*
-- skill-freshness — FRESHNESS_OK: 44 consumers / 0 flagged · articles/skill-freshness-2026-06-30.md
-- github-trending — 4 picks; fake-star rule codified (1:6 fork ratio + wrong language = confident drop) · .outputs/github-trending.md
-- daily-routine — 45/100 breadth; VELVET+SLX day-3 unwind; GPT-5.5 + BlackRock+Ethena ENA $100M · .outputs/daily-routine.md
-- list-digest — Pi2Day 2026: Pi's 18M+ KYC repackaged as dev infra · https://x.com/Hercules_Defi/status/2071729733851893906
+- self-improve — PR #151 (skill-evals 06→22 UTC, resolves ISS-026) · https://github.com/anajuliabit/aeon/pull/151
+- security-digest — Confluent Kafka first enterprise-data-infra brandjack; Fission 9-CVE Go no-patch · .tmp/security-digest/msg.md
+- skill-analytics — 3 anomalies; 12:00 UTC batch confirmed stopped since 6-28 · articles/skill-analytics-2026-07-01.md
+- daily-routine — Anthropic ship cluster (Sonnet 5 + stego + Mythos lift); BTC day-6 $58.4k pin · .outputs/daily-routine.md
+- reg-monitor — Stop Lawmakers Act 5-4 committee; CFTC event-contracts NPRM published · .tmp/reg-monitor/msg.md
 
 *Notable:*
-- token-alert — WELL vol 3.83× (first 3×+ in rolling window), red tape −2.28%; accumulation vs forced supply
-- security-digest — SimpleHelp CVE-2026-48558 CVSS 10.0 KEV CISA due 7-02; autotel-* 18-pkg MCP brandjack in 10.5h (largest of 48h)
-- btc-levels ×5 — ⚠️ 01:16Z: day-5 sub-$60.5k; spot $58.2–$59.7k pinned; reclaim $63.5k/$65.9k
-- agent-buzz — 6 picks; Stripe agent-to-agent sale claim net-new; framework launches → plumbing
-- action-converter — 5 actions queued: merge PR #150 / draft ISS-025 / merge PR #149 / VELVET close
+- btc-levels ×6 — breakdown 00:19Z (6th red $58,551); tape $58.4–59.9k through close
+- heartbeat ×3 — HEARTBEAT_OK; fork-skill-digest stuck ~74h, no re-alert
+- github-trending — 4 picks (google/agents-cli top); 2 fake-star drops · .outputs/github-trending.md
+- skill-health — DEGRADED(23), hash 1ff18e84 byte-identical to 6-30; daily-cadence notify fired
+- action-converter — 5 actions: ISS-025 · VELVET hedge · PR #150 · BTC day-6 · scorecard cron
 
 *Decisions for tomorrow:*
-- merge PR #150 usepod_model→model: $456/mo savings, 5-line diff, 26h+ stall · https://github.com/anajuliabit/aeon/pull/150
-- merge PR #149 docs(skill-graph): 51h+ stall · https://github.com/anajuliabit/aeon/pull/149
-- patch SimpleHelp CVE-2026-48558: CISA BOD 26-04 due 2026-07-02 (2d out)
-- draft ISS-025 capture-step PR: deadline 2026-07-04 (4d), 19-skill tail bleeding
-- close VELVET pick: entry $1.72 → spot ~$1.50 (−12.8%), 10d to unlock cliff 7-10
+- merge PR #150 (usepod_model→model, 51h stall, $456/mo bleed) https://github.com/anajuliabit/aeon/pull/150
+- merge PR #149 (docs(skill-graph), 76h stall) https://github.com/anajuliabit/aeon/pull/149
+- draft ISS-025 capture-step PR — hard deadline 2026-07-04, 3d out, 19-skill tail
+- operator-scorecard Mon 10:30Z — MISSED day-3, wontfix or patch?
+- XAI quota top-up — day 16 BLOCKED
 
-_+9 routine collapsed · sources: log=ok cron-state=ok_
+*Blockers:*
+- fork-skill-digest — dispatched ~74h stuck, last success 6-21; next tick Sun 7-05
+
+_+9 routine runs collapsed · sources: log=ok cron-state=ok_
