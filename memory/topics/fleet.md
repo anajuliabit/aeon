@@ -908,3 +908,52 @@ state: what was built, recurring blockers, and health.
 
 ### list-digest 6-30
 - 1 signal: Hercules_Defi Pi2Day 2026 announcements (SoloHost local AI + Pi Sign-in OAuth + PiVerify KYC-as-a-service over 18M+ Pi-verified accounts). Pi's KYC reach is a real distribution asset; framing finally moved from mining-gimmick to infra play. Execution unproven.
+
+## 2026-07-01 entry
+
+### PRs
+- **PR #150 fix(aeon.yml) `usepod_model` → `model:`** — opened 6-29 18:17Z, **~44h stall as of 14:13Z hb** (crossed 24h threshold 6-30 evening ~20h ago). 5-line diff, ~$107/wk / $456/mo savings for on-chain-monitor/token-pick/token-movers. Surfaced in morning-brief 7-01 07:03Z focus #1 + 4 hb ticks + 6-30 action-converter action-1 → dedup-blocked. Operator-merge gated.
+- **PR #149 docs(skill-graph)** — opened 6-28 17:15Z, **~69h stall day 3**. Same dedup-blocked pattern.
+- **fork-skill-digest STUCK ~68h+** — dispatched 6-28 18:38Z, `last_status: dispatched`, last_success 6-21 18:57Z. 8 prior hb mentions. Crossed 48h dedup window; next Sunday 7-05 tick will attempt fresh dispatch.
+
+### Fleet health
+- **skill-health 6-30 18:08Z snapshot:** 9 healthy · 23 degraded · 8 warning · 0 critical · 2 no_data. Hash 1ff18e84 (vs 992a90ed 6-29); classification byte-identical, daily-cadence notify fired at 24h23min elapsed. 15 open issues unchanged.
+- **Heartbeat 7-01 08:32Z + 14:13Z: HEARTBEAT_OK, STATUS_PAGE=DEGRADED** — fleet cf=0. 19-skill chronic tail sr<0.5 unchanged. Worst: reg-monitor 10% / vuln-scanner 10% / cost-report 11% / skill-analytics 11% / security-digest 24%. All share `output_tokens=0` sandbox-truncation signature (cluster ISS-019/020/021/024/025). agent-buzz 52% holds out of cluster post-PR #148 merge.
+- **operator-scorecard Mon 10:30Z slot MISSED day 3** — 6-29 Monday tick ~51h past with no dispatch. Same scheduler-side never-run gap.
+
+### BTC breakdown day 6 CONFIRMED
+- **btc-levels 00:19Z fired ⚠️ breakdown alert** for 6-30 close $58,551 = 6th consecutive sub-$60,500. Quiet ticks 05:12Z $59,155 / 08:32Z $58,552 / 12:18Z $58,432 / 17:03Z $59,846 — spot pinned sub-reclaim ($63.5k / $65.9k).
+- First sub-$60k print since 2024; 50% below Oct-2025 $126k ATH.
+
+### WELL vol-spike resolves BEARISH
+- 6-30 vol spike 3.83× on -2.28% red print (either accumulation OR supply-hitting-bid) → 7-01 12:18Z **decays to 2.30× on -1.02% close** = **supply-hitting-bid confirmed**. Bid absorbed offers but couldn't drive a green print. Structural pattern noted; one more sub-$0.0033 close = trend-follow signal.
+
+### github-trending 7-01 (4 picks)
+- **google/agents-cli** (top pick · ACCELERATING · 445 today · 4.5k · Python; 3 releases in past week; Google first-party CLI + `skills/` directory primitive for agents on Google Cloud — same shape as Anthropic Agent SDK from 6-28; **skills-as-primitive convergence signal across major vendors**)
+- **ogulcancelik/herdr** (ACCELERATING · 486 today · 9.2k · Rust; terminal-native agent multiplexer — Rust tmux-shaped answer for many coding-agent panes side-by-side, first devtool in this niche to hit trending)
+- **usestrix/strix** (ACCELERATING · 515 today · 28.5k · Python; AI pentest agent, borderline drop yesterday reconsidered on today's 6× baseline vs 1.5× yest)
+- **facebook/astryx** (RETURNING · 364 today · 2k · TypeScript; v0.1.2 6-29; Meta first-party open design system explicitly "agent-ready" — 1st-party framework declaring agents as 1st-class UI-consumer)
+- **Fake-star drops (2)**: msitarzewski/agency-agents day-2 same pattern; **NEW diegosouzapw/OmniRoute** (TypeScript + rapid semver v3.8.42/139d + 1:6.3 fork ratio + brand-list description name-dropping Claude Code/Codex/Cursor/Cline/Copilot = new fake-star sub-pattern).
+
+### Anthropic ship-day cluster (hn-digest 7-01)
+- 3 of top-5 HN stories Anthropic-branded — biggest single-day HN presence in 30d log.
+- **Claude Code steganographic prompt-marking disclosure** (1908p) — direct on aeon runtime; proxy/gateway routing implication (gateway.provider=direct in aeon.yml, but usepod/bankr/virtuals gateways would see markers).
+- **Claude Sonnet 5** (1098p) — 80.4% Terminal-Bench beats Opus 4.7 launch score; 63.2% agentic coding vs Opus 4.8's 69.2%; 97% of Opus at ~15% cost; $2/$10 intro thru 8-31. "Most agentic Sonnet."
+- **DoC lifts Mythos 5 export controls** (646p) — fully reverses 6-16 trusted-orgs restriction. Anthropic-Mythos-quota thread CLOSED (different event from XAI Elon x.ai quota, still day 16 unblocked).
+- Claude Science ships same day (477p). Nano Banana 2 Lite (Google, 367p) as non-Anthropic AI balance.
+
+### security-digest 7-01 (Fission cluster + brandjack vertical expansion)
+- **Fission Go 9-CVE coordinated disclosure batch** (4 crit CVSS 9.9 + 5 high on `<=1.23.0`, podspec injection / node escape / cross-namespace / cluster-takeover, 8-min window) — largest single-project no-patch Go advisory cluster of 2026. Plus Fulcio CVE-2026-49478 CVSS 8.7 no-fix (SSRF + JWKS substitution → K8s SA token leak) + Cedar authz-bypass CVSS 8.8 no-fix. **Reviewed-CVE side now 100% no-patch.**
+- Brandjacks: LiveKit Agents SDK, **Confluent Kafka JS (1st enterprise-data-infra target after 4 days AI-infra-only)**, chai-as-promised pair, agent-starter-pack (Google Cloud). Confluent = new brandjack vertical.
+- **KEV net-new: 0** — day-2 zero-cadence since SimpleHelp 6-29. Total this-week: 3 (SimpleHelp + Windchill/Cisco Unified CM from 6-25).
+
+### reg-monitor 7-01 (post-recovery batch)
+- **Stop Lawmakers from Predicting Act passed House Admin Committee 5-4** (bipartisan Budzinski/Smith companion; penalty ≥$2k or 10% trade + net-profit forfeiture; Speaker Johnson + Trump backing). Direct hit on prediction-market coverage.
+- **CFTC Data Reporting for Event Contracts NPRM** (doc 2026-13239, fresh 7-01) — moves fully-collateralized contracts out of 2017 no-action-letter regime into codified parts 15–18/17/18. **Most material CFTC action on prediction markets since Kalshi-Selig letter.** Standard 60d comment window ~2026-08-30 close.
+- CFTC+SEC Portfolio/Cross-Margining Joint NPRM (2026-06-30, crypto-derivative cross-margining unlock).
+- MiCA transition officially expired 7-01 (no fresh primary source to link).
+
+### list-digest 7-01
+- **$LIT (Lighter) thesis top signal** — @Flowslikeosmo: 17.9M/yr buyback-burn vs 7.5M/yr staking emit ≈ 2.4× net-supply shrink if revenue holds; first on-chain burn drops post-Q2 close; P/S 13.5×, P/F 10×, 30d fees +38.5%. 1st surfacing on curated DeFi flow this week.
+- $LNQ (Linq) small-cap AI-compute infra bet; watchlist candidate.
+- **DEX-supremacy meta being questioned** in curator screens (Flowslikeosmo shortlist RAIL/NXM/STON/YB/AQUA/OPINION/MOR/CAPX notably DEX-light) = macro read for token-pick / narrative-tracker.

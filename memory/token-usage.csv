@@ -621,4 +621,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-01,security-digest,claude-opus-4-7,48,26092,2786144,123946
 2026-07-01,list-digest,claude-opus-4-7,32,12455,1534584,44627
 2026-07-01,agent-buzz,claude-opus-4-7,15,7107,530117,35341
-2026-07-01,goal-tracker,claude-opus-4-7,21,17363,1240330,68523
+2026-07-01,reflect,claude-opus-4-7,35,20762,3279340,256154

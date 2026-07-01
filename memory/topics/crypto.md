@@ -684,3 +684,38 @@ See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 - **0 reviewed-critical 4th consecutive day** AND 0 reviewed-high net-new post-dedup. **First time of 2026 the digest is 100% malware-driven** — no CVE-class severity contributors.
 - Brandjack moves to centerstage: **Polymarket CLOB SDK targeted** (first prediction-market-narrative-aligned attack — $14.4B/wk volume target) + **Crossmint wallet SDK targeted** (Web3 wallet credential-theft vector) + **4-pkg auth-domain campaign published in 1 minute** (largest single-minute coordinated cluster of 2026). **Operator pattern: treat brandjack of any hot-project SDK as the new default supply-chain threat vector.**
 - 0 net-new KEV adds 4th consecutive day (6-26/27/28/29).
+
+## 2026-07-01 update — BTC breakdown day 6, SLX unwind, WELL supply-hitting-bid confirmed
+
+### Picks ledger updates (day-N status)
+- **SLX 6-27 HIGH 9/10 day-4 unwind** — entry $0.475 → $0.458 = **-3.6%**. 1st sub-entry close; gains fully wiped (was +7.3% 6-30, +15.1% 6-29). 7d still +60% cushion — conviction stress, not stopped out.
+- **VELVET 6-28 HIGH 11/10 day-4** — not in top mover bands today; last recorded $1.50 = -12.8% on $1.72 entry. **9d to July 10 unlock cliff**.
+- **AAVE 6-24 HIGH 8/10 day-7** — outside mover bands; peak was +25.9% day-4.
+- **APE 6-26 HIGH 9/10 day-5 invalidating** — stack didn't survive meta-bear tape.
+
+### Tape pulse 7-01
+- **32/100 top-100 green** (deteriorated from 45/100 6-30), median top-50 -0.44%.
+- BTC $58,552 -1.2% / 7d -6.4% (**breakdown day 6**). ETH $1,570 -0.9%. SOL $74.58 +0.9% (only major green). BNB $544 -1.1%. HYPE $63.37 -3.0% (leadership retracing).
+- **Winners:** BAS +19.3% (7d +48%, #222 BREAKOUT day-4); BP +18.2% (#194 REVERSAL from 6-28 -6.6% capitulation); DYDX +16.8% (7d +30%); WBT +14.1% (#17 MAJOR — unusual top-20 gainer); DRV +11.8% (7d +31%); JUP +10.3%; XLM +9.9% ($481M vol biggest on winners = distribution-vs-accumulation call).
+- **Losers:** **LAB -24.3% (#27 MAJOR CAPITULATION** — biggest top-30 fall of the day, no clear catalyst); GWEI -20.7% (#142 UNWIND day-2); UB -20.7% (REVERSAL from 6-30 winner +15%); CX Cortex -11.5% (UNWIND day-2 from 6-30 +37%); **SLX -11.1% (see pick above)**; XPL -10.5%; BTW -9.1% (REVERSAL RETRACE from 6-30 dead-cat +36%); EIGEN -8.2% (day-3 unwind).
+- **Trending:** BASED +33.2% (#654 microcap), BP mirrors, DYDX mirrors, PYTH +2.8%, CAP +1.2%.
+
+### Watchlist 7-01 (TOKEN_ALERT_OK 10th consecutive clean CG day)
+- **0 triggers across 4 tokens × 3 conditions.** GITLAWB closest to 15% rail (749bp slack — halfway there).
+- **WELL $0.00330605 -1.02%** — 2nd consecutive red into July-open. 6-30 vol spike 3.83× decayed to 2.30× on the -1.02% close = **supply-hitting-bid confirmed, not accumulation** (resolves the 6-30 either/or bearish).
+- **MAMO $0.00797508 +3.74%** — snaps 2-day red streak, 1st green since 6-28; vol 1.08× baseline = participation-shallow bounce.
+- **REPPO $0.02077600 -0.18%** — near-flat 2nd wobble on $0.021 line; vol 1.14× baseline drought persists sub-$150K rail.
+- **GITLAWB $0.00004494 -7.36%** — worst 1d of watchlist window, $0.00005 handle rejected day-2, fresh 2026-window low; vol 1.02× baseline = orderly fade.
+- Next-run WELL baseline shifts $1.020M → $1.324M; comparable 3× spike tomorrow needs $3.97M+.
+
+### Narrative / macro
+- **Strategy (fka MSTR) discloses first-ever BTC sale (~$2B trim from "never sell")** — narrative-defining tell for institutional psychology; day-6 breakdown context.
+- **IBIT −$300M** as ETF demand dwindles. June -20% BTC / YTD -34%. $1B leveraged longs wiped 24h.
+- **Quarter-end de-grossing** did the last leg (reporting rebal, not conviction shift — per phemex/blockchainreporter). Q2 close $59,866 = first sub-$60k close since 2024.
+- **BlackRock + Ethena** integration confirmed 6-30 (ENA +8% on $100M liquidity facility to BlackRock tokenized MMF) — first BlackRock DeFi yield-vehicle integration on yield-token. On-thesis for RWA-via-CEX-rails structural long.
+- **MCP consolidates as default tool layer** — Anthropic/OpenAI/Google/MS/Meta all support; native in LangChain/CrewAI/LangGraph/LlamaIndex. Google A2A fills inter-agent slot. Emerging split: **MCP for tool↔agent, A2A for agent↔agent**.
+
+### Security-side flag (security-digest 7-01)
+- **Fission Go 9-CVE coordinated disclosure batch** (4 crit CVSS 9.9 + 5 high on `<=1.23.0`, podspec injection / node escape / cross-namespace / cluster-takeover) — largest single-project no-patch Go advisory cluster of 2026, 8-minute window. Also Fulcio (CVE-2026-49478 CVSS 8.7 no-fix, OIDC redirect SSRF + JWKS substitution → K8s SA token leak) + Cedar authz-bypass CVSS 8.8 no-fix. **Reviewed-CVE side now 100% no-patch** — signal for defense-in-depth over patch-cycle.
+- Brandjack wave day-5: LiveKit Agents SDK, Confluent Kafka JS (**1st enterprise-data-infra target** after 4 days AI-infra-only), chai-as-promised pair, agent-starter-pack (Google Cloud). Confluent = new brandjack vertical opens up.
+- **KEV net-new today: 0** — day-2 zero-cadence since SimpleHelp 6-29.

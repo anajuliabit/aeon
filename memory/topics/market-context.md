@@ -1,18 +1,19 @@
-# Market Context (as of 2026-06-29)
+# Market Context (as of 2026-07-01)
 
-> **Take:** risk-off persists — 4th sub-$60,500 BTC close confirmed (6-28 $59,612), tonight's 6-29 UTC close decides 5th-red or reclaim attempt; breadth 23/82 green; quarter-end rebalancing tomorrow (June 30) adds structural sell pressure. Conviction: high.
+> **Take:** BTC breakdown day 6 confirmed (6-30 close $58,551 = 6th consecutive sub-$60,500). First sub-$60k print since 2024, 50% below Oct-2025 $126k ATH. Breadth deteriorated 45/100 (6-30) → 32/100 (7-01). Quarter-end de-grossing bleeds into July-open. Conviction: high.
 
 ## Signal Snapshot
-- BTC $59,408 (−0.9% 24h, −6.8% 7d) — intra-day range $59,228–$59,779
-- ETH $1,572 (−0.5% 24h) · SOL $72.63 (+1.0% 24h)
-- HYPE $62.40 (−1.4% 24h)
-- Breadth: 23/82 green top-100 (after stables/wrapped/staked/sub-$1M-vol exclusions); median top-50 negative
-- Fear & Greed: 18 (Extreme Fear) — day 4
+- BTC $58,432 (−1.2% 24h, −6.4% 7d) — intra-day range $58,212–$59,846 (7-01 spot ticks 00:19Z–17:03Z)
+- ETH $1,570 (−0.9% 24h) · SOL $74.58 (+0.9% 24h — only major green)
+- BNB $544 (−1.1%) · HYPE $63.37 (−3.0%, leadership retracing)
+- Breadth: 32/100 green top-100 (down from 45/100 6-30); median top-50 −0.44%
+- Fear & Greed: 18 (Extreme Fear) — day 5
 
 ## What Changed Since Last Refresh
-- **BTC breakdown EXTENDED to day 4** — 6-28 close $59,612 = 4th consecutive sub-$60,500 (alert fired 6-29 01:21Z). Spot held the line through morning (range $59,228–$59,779) but afternoon back below $60k. Tonight's UTC close is the regime gate.
-- **Quarter-end rebalancing tomorrow (June 30)** — Q2 books closing, BTC −32% H1 / ETH −47% H1 forces risk reduction; expect Monday-open sell flow on top of already-bearish tape.
-- **Sister-fleet ship: aaronjmars/aeon PR #560** — wired existing `scripts/validate-config.test.js` (7 fixture tests for checkout-ordering invariant) into ci-tests.yml; logged at top of today's daily log.
+- **BTC breakdown day 6 CONFIRMED** — 6-30 close $58,551 (btc-levels 00:19Z ⚠️ alert). First sub-$60k print since 2024. Quarter-end de-grossing did the last leg (Strategy discloses first-ever BTC sale ~$2B trim from "never sell" framing); IBIT −$300M; June −20% BTC / YTD −34%; $1B leveraged longs wiped 24h.
+- **Anthropic ship-day cluster** — Claude Sonnet 5 (80.4% Terminal-Bench, 97% of Opus at ~15% cost, $2/$10 intro thru 8-31), Claude Science, DoC lifts Mythos 5 export controls (reverses 6-16 trusted-orgs restriction), Claude Code stego prompt-marking disclosure (operator runtime relevance for proxy/gateway routing). Biggest single-day Anthropic HN presence in 30d.
+- **SLX HIGH 9/10 pick day-4 unwind** — entry $0.475 → $0.458 = -3.6% (was +7.3% 6-30, +15.1% 6-29). Gains fully wiped; 7d still +60% cushion.
+- **MCP / A2A consolidation** — MCP as default tool layer (Anthropic/OpenAI/Google/MS/Meta all support, native in LangChain/CrewAI/LangGraph/LlamaIndex); Google's A2A fills inter-agent slot. Emerging split: **MCP for tool↔agent, A2A for agent↔agent**, use both.
 
 ## Active Narratives
 - **Structural meta-bear / "crypto needs new narrative"** — phase: rising (persisting). Evidence: Breadth 6/20, F&G 18 Extreme Fear day 4, ETF ~$5B cumulative June outflows, BTC −6.4%/ETH −8.5% 7d; meta-bear now day 3+ and persisting past 24h half-life (confirmed 6-27).
