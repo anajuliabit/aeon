@@ -1,0 +1,508 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-01"
+      },
+      "children": [
+        "stack_pulse",
+        "separator_1",
+        "heading_winners",
+        "table_winners",
+        "separator_2",
+        "heading_losers",
+        "table_losers",
+        "separator_3",
+        "heading_tweets",
+        "text_xai_note",
+        "stack_tweets",
+        "separator_4",
+        "heading_paper",
+        "storylink_paper",
+        "text_paper_details",
+        "separator_5",
+        "heading_issues",
+        "alert_issues",
+        "separator_6",
+        "heading_hn",
+        "grid_hn"
+      ]
+    },
+    "stack_pulse": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_pulse_header",
+        "text_pulse_context",
+        "grid_prices"
+      ]
+    },
+    "text_pulse_header": {
+      "type": "Text",
+      "props": {
+        "text": "Pulse: 32/100 top-100 green (down from 45/100 yest), median top-50 −0.44%",
+        "variant": "lead"
+      }
+    },
+    "text_pulse_context": {
+      "type": "Text",
+      "props": {
+        "text": "6th consecutive sub-$60,500 close, breakdown extends day-6",
+        "variant": "muted"
+      }
+    },
+    "grid_prices": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "sm"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth",
+        "stat_sol",
+        "stat_bnb",
+        "stat_hype"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$58,552",
+        "delta": "−1.2% (7d: −6.4%)",
+        "trend": "down"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,570",
+        "delta": "−0.9%",
+        "trend": "down"
+      }
+    },
+    "stat_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$74.58",
+        "delta": "+0.9%",
+        "trend": "up"
+      }
+    },
+    "stat_bnb": {
+      "type": "Stat",
+      "props": {
+        "label": "BNB",
+        "value": "$544",
+        "delta": "−1.1%",
+        "trend": "down"
+      }
+    },
+    "stat_hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$63.37",
+        "delta": "−3.0%",
+        "trend": "down"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h %",
+          "7d %",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "BAS",
+            "$0.0482",
+            "+19.3%",
+            "+48%",
+            "#222",
+            "BREAKOUT day-4"
+          ],
+          [
+            "BP",
+            "$0.618",
+            "+18.2%",
+            "—",
+            "#194",
+            "REVERSAL from 6-28 −6.6% capitulation"
+          ],
+          [
+            "DYDX",
+            "$0.188",
+            "+16.8%",
+            "+30%",
+            "#191",
+            "—"
+          ],
+          [
+            "WBT",
+            "$53.89",
+            "+14.1%",
+            "—",
+            "#17",
+            "MAJOR"
+          ],
+          [
+            "DRV",
+            "$0.113",
+            "+11.8%",
+            "+31%",
+            "#237",
+            "—"
+          ],
+          [
+            "BSV",
+            "$13.83",
+            "+11.8%",
+            "+22%",
+            "#137",
+            "—"
+          ],
+          [
+            "M",
+            "$0.762",
+            "+10.4%",
+            "−73%",
+            "#65",
+            "DEADCAT"
+          ],
+          [
+            "JUP",
+            "$0.226",
+            "+10.3%",
+            "—",
+            "#80",
+            "—"
+          ],
+          [
+            "XLM",
+            "$0.199",
+            "+9.9%",
+            "—",
+            "#15",
+            "MAJOR — $481M vol biggest on page"
+          ],
+          [
+            "BTSE",
+            "$0.867",
+            "+8.7%",
+            "—",
+            "#206",
+            "—"
+          ]
+        ]
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h %",
+          "7d %",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "LAB",
+            "$10.66",
+            "−24.3%",
+            "−33%",
+            "#27",
+            "MAJOR CAPITULATION — biggest top-30 fall"
+          ],
+          [
+            "GWEI",
+            "$0.114",
+            "−20.7%",
+            "—",
+            "#142",
+            "UNWIND day-2 from 6-30 −16.7%"
+          ],
+          [
+            "UB",
+            "$0.080",
+            "−20.7%",
+            "+31%",
+            "#168",
+            "REVERSAL from 6-30 +15%"
+          ],
+          [
+            "CX",
+            "$0.088",
+            "−11.5%",
+            "+67%",
+            "#216",
+            "UNWIND day-2 from 6-30 +37%"
+          ],
+          [
+            "SLX",
+            "$0.458",
+            "−11.1%",
+            "+60%",
+            "#244",
+            "HIGH 9/10 pick day-4 — entry $0.475 now −3.6%, gains wiped"
+          ],
+          [
+            "XPL",
+            "$0.090",
+            "−10.5%",
+            "—",
+            "#145",
+            "—"
+          ],
+          [
+            "BTW",
+            "$0.064",
+            "−9.1%",
+            "−37%",
+            "#207",
+            "REVERSAL from 6-30 dead-cat +36%"
+          ],
+          [
+            "CHZ",
+            "$0.017",
+            "−8.7%",
+            "—",
+            "#177",
+            "—"
+          ],
+          [
+            "EIGEN",
+            "$0.198",
+            "−8.2%",
+            "−20%",
+            "#200",
+            "—"
+          ],
+          [
+            "H",
+            "$0.066",
+            "−7.2%",
+            "−36%",
+            "#226",
+            "—"
+          ]
+        ]
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "text_xai_note": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota exhausted day 16 — WebSearch fallback",
+        "variant": "muted"
+      }
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_crypto",
+        "text_crypto",
+        "heading_ai",
+        "text_ai",
+        "heading_dev",
+        "text_dev"
+      ]
+    },
+    "heading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "crypto",
+        "level": "h3"
+      }
+    },
+    "text_crypto": {
+      "type": "Text",
+      "props": {
+        "text": "BTC sub-$60k first time since 2024, 50% below Oct-2025 $126k ATH. Strategy (fka MSTR) discloses first-ever BTC sale (~$2B trim from \"never sell\" — narrative-defining). IBIT sheds $300M, June −20% BTC / YTD −34%, $1B leveraged longs wiped 24h. Quarter-end de-grossing did the last leg — reporting rebal, not conviction shift.",
+        "variant": "body"
+      }
+    },
+    "heading_ai": {
+      "type": "Heading",
+      "props": {
+        "text": "ai",
+        "level": "h3"
+      }
+    },
+    "text_ai": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic ships Claude Sonnet 5 ($2/$10 intro thru 8-31, then $3/$15). 80.4% Terminal-Bench beats Opus 4.7 launch, 63.2% agentic coding vs Opus 4.8's 69.2%, ~97% of Opus on terminal at ~15% cost. \"Most agentic Sonnet.\" Claude Science ships same day. DoC LIFTS Fable 5 / Mythos 5 export controls — 6-16 trusted-orgs restriction fully reversed, 15-day thread closed.",
+        "variant": "body"
+      }
+    },
+    "heading_dev": {
+      "type": "Heading",
+      "props": {
+        "text": "dev",
+        "level": "h3"
+      }
+    },
+    "text_dev": {
+      "type": "Text",
+      "props": {
+        "text": "MCP consolidates as default tool layer — Anthropic/OpenAI/Google/MS/Meta all support, native in LangChain/CrewAI/LangGraph/LlamaIndex. Google's A2A fills the inter-agent slot (negotiation/delegation across framework boundaries). Emerging split: MCP for tool↔agent, A2A for agent↔agent.",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "storylink_paper": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Dockerless: Environment-Free Program Verifier for Coding Agents",
+        "href": "https://arxiv.org/abs/2606.28436",
+        "source": "arXiv"
+      }
+    },
+    "text_paper_details": {
+      "type": "Text",
+      "props": {
+        "text": "HF ↑73. Removes docker sandbox from coding-agent eval loops — env-free verifier makes CI/verifier cheaper and portable. On the eval-side thread: TUA-Bench (6-30) → Gauntlet (6-29) → OPID (6-28) → Verification Horizon (6-27) → today.",
+        "variant": "caption"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "alert_issues": {
+      "type": "Alert",
+      "props": {
+        "title": "No Issues Last 24h",
+        "message": "P0=0 P1=0 P2=0 P3=0 (user:anajuliabit)",
+        "type": "success"
+      }
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "grid_hn": {
+      "type": "Grid",
+      "props": {
+        "columns": 1,
+        "gap": "md"
+      },
+      "children": [
+        "hn_1",
+        "hn_2",
+        "hn_3",
+        "hn_4"
+      ]
+    },
+    "hn_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Claude Code steganographically marking requests",
+        "href": "https://news.ycombinator.com/item?id=48734373",
+        "source": "HN (1908p) — thereallo.dev"
+      }
+    },
+    "hn_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Claude Sonnet 5",
+        "href": "https://news.ycombinator.com/item?id=48736605",
+        "source": "HN (1098p) — ship day, 80.4% Terminal-Bench"
+      }
+    },
+    "hn_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Commerce lifts export controls on Fable 5 & Mythos 5",
+        "href": "https://news.ycombinator.com/item?id=48740771",
+        "source": "HN (646p) — 6-16 restriction reversed"
+      }
+    },
+    "hn_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Nano Banana 2 Lite",
+        "href": "https://news.ycombinator.com/item?id=48735444",
+        "source": "HN (367p) — Google image-model line adds lite tier"
+      }
+    }
+  }
+}

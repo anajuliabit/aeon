@@ -1,53 +1,45 @@
-*Daily Routine — 2026-06-30*
+*Daily Routine — 2026-07-01*
 
-_breadth firming, leadership rotates — 45/100 top-100 green (vs 23/82 yest), median top-50 −0.4%. BTC $59,430 −0.9% / 7d −5.5% (5th day pinned sub-$60.5k, quarter-end today). ETH $1,590 +0.7%, SOL $73.93 +2.2%, HYPE $65.53 +4.7%. yest's winners getting unwound on the same tape._
+_pulse: 32/100 top-100 green (down from 45/100 yest), median top-50 −0.44%. BTC $58,552 −1.2% / 7d −6.4% — **6th consecutive sub-$60,500 close, breakdown extends day-6**. ETH $1,570 −0.9%, SOL $74.58 +0.9%, BNB $544 −1.1%, HYPE $63.37 −3.0%._
 
 *Top Winners (24h)*
-1. TAC — $0.0592 +93.8% / 7d +197% • $38M / #139 [BREAKOUT, PUMP-RISK]
-2. SYN (Synapse) — $0.541 +39.5% / 7d +98% • $154M / #230 [BREAKOUT, PUMP-RISK]
-3. CX (Cortex) — $0.097 +37.4% / 7d +96% • $1.6M / #202 [BREAKOUT, MICROCAP]
-4. BTW (Bitway) — $0.0708 +36.1% / 7d −20% • $20M / #196 [FADE, PUMP-RISK]
-5. RE — $0.727 +15.4% / 7d −11% • $2.57B / #237 [FADE]
-6. UB (Unibase) — $0.110 +15.2% / 7d +21% • $45M / #138
-7. H (Humanity) — $0.069 +15.2% / 7d −44% • $32M / #220 [FADE]
-8. ADI — $5.66 +12.6% / 7d +29% • $13M / #83
-9. LIT (Lighter) — $1.92 +12.2% / 7d +26% • $45M / #106
-10. BEAT (Audiera) — $2.76 +9.6% / 7d +60% • $21M / #77
+1. BAS $0.0482 +19.3% / 7d +48% / #222 [BREAKOUT day-4]
+2. BP $0.618 +18.2% / #194 [REVERSAL from 6-28 −6.6% capitulation]
+3. DYDX $0.188 +16.8% / 7d +30% / #191
+4. WBT $53.89 +14.1% / #17 [MAJOR]
+5. DRV $0.113 +11.8% / 7d +31% / #237
+6. BSV $13.83 +11.8% / 7d +22% / #137
+7. M $0.762 +10.4% / 7d −73% / #65 [DEADCAT]
+8. JUP $0.226 +10.3% / #80
+9. XLM $0.199 +9.9% / #15 [MAJOR — $481M vol biggest on page]
+10. BTSE $0.867 +8.7% / #206
 
 *Top Losers (24h)*
-1. GWEI (ETHGas) — $0.149 −16.7% / 7d +24% • $48M / #129 [FADE]
-2. SKYAI — $0.115 −13.9% / 7d −65% • $34M / #233
-3. VELVET — $1.50 −13.7% / 7d +211% • $37M / #91
-4. SLX (Solstice) — $0.510 −11.4% / 7d +164% • $163M / #222
-5. JTO (Jito) — $0.755 −9.9% • $57M / #121
-6. GRASS — $0.467 −8.5% • $37M / #136
-7. EIGEN — $0.216 −7.3% • $21M / #191
-8. PI — $0.113 −7.1% • $16M / #59
-9. ETHFI — $0.323 −6.5% • $24M / #133
-10. AKT (Akash) — $0.608 −6.2% • $6M / #178
-
-*Trending*
-AI Gensyn #471 +48% · ANSEM #439 +12.7% · LIT #107 +12.1% · SYN #229 +39.9% · RE #238 +14.1% · SOL #7 +2.1% · GRAM (prev Toncoin) #26 −0.4%
-
-*Notable*
-• VELVET HIGH 11/10 day-3 unwind: −13.7% to $1.50 = −12.8% on $1.72 entry, gives back the +33% pop. 9.2%-of-mcap unlock Jul-10 (10d out).
-• SLX HIGH 9/10 day-3 unwind: $0.510 = +7.3% on $0.475 entry (was +15.1% yest).
-• TAC parabolic day-2 (+94 yest, +94 today, 7d +197%) — PUMP-RISK extends.
-• GWEI flips from yest +7% winner to top loser −17%.
-
-*Paper of the Day*
-"TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents" — Chen et al · ↑32. 120 real-world terminal tasks, 5 families; Claude Code + Opus 4.8 max reasoning tops at 65.8% — eval of the exact harness Aeon runs in. [arxiv.org/abs/2606.28480](https://arxiv.org/abs/2606.28480)
+1. LAB $10.66 −24.3% / 7d −33% / #27 [MAJOR CAPITULATION — biggest top-30 fall]
+2. GWEI $0.114 −20.7% / #142 [UNWIND day-2 from 6-30 −16.7%]
+3. UB $0.080 −20.7% / 7d +31% / #168 [REVERSAL from 6-30 +15%]
+4. CX $0.088 −11.5% / 7d +67% / #216 [UNWIND day-2 from 6-30 +37%]
+5. SLX $0.458 −11.1% / 7d +60% / #244 [HIGH 9/10 pick day-4 — entry $0.475 now −3.6%, gains wiped]
+6. XPL $0.090 −10.5% / #145
+7. BTW $0.064 −9.1% / 7d −37% / #207 [REVERSAL from 6-30 dead-cat +36%]
+8. CHZ $0.017 −8.7% / #177
+9. EIGEN $0.198 −8.2% / 7d −20% / #200
+10. H $0.066 −7.2% / 7d −36% / #226
 
 *Tweet Roundup*
-*crypto:* BlackRock+Ethena integration → ENA +8% on $100M liquidity facility for tokenized money-market fund. Tom Lee tags weakness as Q-end window dressing; Bitmine added $43M ETH (smallest since May).
-*ai:* GPT-5.5 shipped (2× GPT-5.4 cost, SOTA agentic coding/CU). Project Glasswing scaled 50→150 orgs across 15 countries. Claude Managed Agents run inside user-controlled sandbox with private MCP.
-*dev:* Claude Agent SDK consolidates MCP as default tool layer. NVIDIA RTX Spark Superchip — 128GB unified, 1 petaflop on a workstation laptop.
+_XAI quota exhausted day 16 — WebSearch fallback._
+*crypto:* BTC sub-$60k first time since 2024, 50% below Oct-2025 $126k ATH. Strategy (fka MSTR) discloses first-ever BTC sale (~$2B trim from "never sell" — narrative-defining). IBIT sheds $300M, June −20% BTC / YTD −34%, $1B leveraged longs wiped 24h. Quarter-end de-grossing did the last leg — reporting rebal, not conviction shift.
+*ai:* Anthropic ships **Claude Sonnet 5** ($2/$10 intro thru 8-31, then $3/$15). 80.4% Terminal-Bench beats Opus 4.7 launch, 63.2% agentic coding vs Opus 4.8's 69.2%, ~97% of Opus on terminal at ~15% cost. "Most agentic Sonnet." Claude Science ships same day. **DoC LIFTS Fable 5 / Mythos 5 export controls** — 6-16 trusted-orgs restriction fully reversed, 15-day thread closed.
+*dev:* MCP consolidates as default tool layer — Anthropic/OpenAI/Google/MS/Meta all support, native in LangChain/CrewAI/LangGraph/LlamaIndex. Google's A2A fills the inter-agent slot (negotiation/delegation across framework boundaries). Emerging split: MCP for tool↔agent, A2A for agent↔agent.
+
+*Paper of the Day*
+"Dockerless: Environment-Free Program Verifier for Coding Agents" (arXiv:2606.28436, HF ↑73). Removes docker sandbox from coding-agent eval loops — env-free verifier makes CI/verifier cheaper and portable. On the eval-side thread: TUA-Bench (6-30) → Gauntlet (6-29) → OPID (6-28) → Verification Horizon (6-27) → today.
 
 *GitHub Issues*
-No new issues last 24h.
+no new issues last 24h (P0=0 P1=0 P2=0 P3=0 · user:anajuliabit)
 
 *HN Digest*
-1. [Qwen 3.6 27B sweet spot for local dev](https://quesma.com/blog/qwen-36-is-awesome/) (864p/594c) — open-weights local-dev SKU at 27B. Asia-models cluster day 3 post-Mythos export ban.
-2. [SCOTUS rules geofence warrants need constitutional protection](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) (512p/242c) — same court week as the EU-US data transfer blow-up; surveillance jurisprudence reshaping.
-3. [Rocketlab acquires Iridium](https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully) (397p/261c) — vertical roll-up: launch + LEO constellation under one cap table.
-4. [Ornith-1.0 open-source self-improving agentic coding](https://github.com/deepreinforce-ai/Ornith-1) (198p/39c) — open weights + self-improvement loop on coding axis.
+1. [Claude Code steganographically marking requests](https://thereallo.dev/blog/claude-code-prompt-steganography) (1908p) — invisible-unicode fingerprints outbound prompts. Directly on aeon's runtime. [discuss](https://news.ycombinator.com/item?id=48734373)
+2. [Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) (1098p) — ship day, 80.4% Terminal-Bench. [discuss](https://news.ycombinator.com/item?id=48736605)
+3. [Commerce lifts export controls on Fable 5 & Mythos 5](https://twitter.com/AnthropicAI/status/2072106151890809341) (646p) — 6-16 restriction reversed. [discuss](https://news.ycombinator.com/item?id=48740771)
+4. [Nano Banana 2 Lite](https://deepmind.google/models/gemini-image/flash-lite/) (367p) — Google image-model line adds lite tier. [discuss](https://news.ycombinator.com/item?id=48735444)
