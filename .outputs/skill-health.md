@@ -1,18 +1,16 @@
-*Skill Health — 2026-06-30*
-HEALTH: DEGRADED(23) — same hash as 6-29 17:45Z, daily-cadence ping
-[systemic: sandbox-truncation output_tokens=0 — 23 DEGRADED + 8 WARNING share signature, ISS-019/020/021/024/025 cluster, capture-step fix day 8 unshipped]
+*skill-health — 2026-07-01*
+HEALTH: DEGRADED(23) — daily-cadence tick, classification byte-identical to 6-30 18:08Z (hash 1ff18e84)
 
-🟡 DEGRADED top-5 (sr worst)
-- reg-monitor — 38/42 fails (10% sr) — WAIT-API (sandbox-truncation)
-- vuln-scanner — 27/30 fails (10% sr) — WAIT-API (sandbox-truncation) → ISS-018
-- cost-report — 41/46 fails (11% sr) — WAIT-API (sandbox-truncation) → ISS-025
-- skill-analytics — 42/47 fails (11% sr) — WAIT-API (sandbox-truncation)
-- security-digest — 68/90 fails (24% sr) — WAIT-API (sandbox-truncation)
-+18 more — see memory/issues/INDEX.md (entire chronic tail shares the ISS-025 capture-step signature)
+systemic: sandbox-truncation `output_tokens=0` — 23 DEGRADED + 8 WARNING share signature. cluster ISS-019/020/021/024/025 unshipped day 13, weekly-review hard date 2026-07-04 in 3d.
 
-🟠 WARNING (8): btc-levels, daily-routine, defi-overview, morning-brief, on-chain-monitor, token-alert, token-movers, token-pick
-⚪ NO DATA (2): fork-skill-gap, operator-scorecard — DISPATCH-SKILL (Sunday-cron skills, will write state next dispatch)
-🟢 HEALTHY: 9 (unlock-monitor, deal-flow, skill-security-scan, fork-cohort, skill-update-check, weekly-review, weekly-shiplog, fork-skill-digest, skill-graph)
+🟡 DEGRADED (23, worst sr):
+- vuln-scanner 10% · cost-report 11% · skill-analytics 11% · reg-monitor 12% · security-digest 25%
+- +18 more, all same signature — see memory/issues/INDEX.md
+
+🟠 WARNING (8, sr 63–76%): defi-overview, morning-brief, daily-routine, token-alert, token-movers, token-pick, on-chain-monitor, btc-levels
+
+⚪ NO DATA (2): operator-scorecard (Mon 10:30Z slot MISSED day 3, scheduler-side gap), fork-skill-gap (weekly Sun 21:00Z, next 2026-07-05)
+
+🟢 HEALTHY: 9
 
 Open issues: 15 · Filed this run: 0 · Resolved this run: 0
-Note: skill-runs blocked by sandbox → cron-state-only classification (SKILL_HEALTH_PARTIAL)

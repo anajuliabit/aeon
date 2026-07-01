@@ -1,0 +1,412 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health",
+        "description": "2026-07-01 health report"
+      },
+      "children": [
+        "status-heading",
+        "metadata-text",
+        "systemic-alert",
+        "separator-1",
+        "stats-grid",
+        "separator-2",
+        "degraded-section",
+        "separator-3",
+        "warning-section",
+        "separator-4",
+        "no-data-section",
+        "separator-5",
+        "healthy-section",
+        "separator-6",
+        "issues-footer"
+      ]
+    },
+    "status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HEALTH: DEGRADED(23)",
+        "level": "h2"
+      }
+    },
+    "metadata-text": {
+      "type": "Text",
+      "props": {
+        "text": "Daily-cadence tick, classification byte-identical to 6-30 18:08Z (hash 1ff18e84)",
+        "variant": "muted"
+      }
+    },
+    "systemic-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Systemic Issue: sandbox-truncation",
+        "message": "output_tokens=0 — 23 DEGRADED + 8 WARNING share signature. Cluster ISS-019/020/021/024/025 unshipped day 13, weekly-review hard date 2026-07-04 in 3d."
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-degraded",
+        "stat-warning",
+        "stat-no-data",
+        "stat-healthy",
+        "stat-open-issues"
+      ]
+    },
+    "stat-degraded": {
+      "type": "Stat",
+      "props": {
+        "label": "Degraded",
+        "value": "23"
+      }
+    },
+    "stat-warning": {
+      "type": "Stat",
+      "props": {
+        "label": "Warning",
+        "value": "8"
+      }
+    },
+    "stat-no-data": {
+      "type": "Stat",
+      "props": {
+        "label": "No Data",
+        "value": "2"
+      }
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "9"
+      }
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "degraded-list",
+        "degraded-note"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (23, worst sr)",
+        "level": "h3"
+      }
+    },
+    "degraded-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "degraded-skill-1",
+        "degraded-skill-2",
+        "degraded-skill-3",
+        "degraded-skill-4",
+        "degraded-skill-5"
+      ]
+    },
+    "degraded-skill-1": {
+      "type": "Badge",
+      "props": {
+        "text": "vuln-scanner 10%",
+        "variant": "destructive"
+      }
+    },
+    "degraded-skill-2": {
+      "type": "Badge",
+      "props": {
+        "text": "cost-report 11%",
+        "variant": "destructive"
+      }
+    },
+    "degraded-skill-3": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-analytics 11%",
+        "variant": "destructive"
+      }
+    },
+    "degraded-skill-4": {
+      "type": "Badge",
+      "props": {
+        "text": "reg-monitor 12%",
+        "variant": "destructive"
+      }
+    },
+    "degraded-skill-5": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest 25%",
+        "variant": "destructive"
+      }
+    },
+    "degraded-note": {
+      "type": "Text",
+      "props": {
+        "text": "+18 more, all same signature — see memory/issues/INDEX.md",
+        "variant": "caption"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "warning-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "warning-heading",
+        "warning-list"
+      ]
+    },
+    "warning-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 WARNING (8, sr 63–76%)",
+        "level": "h3"
+      }
+    },
+    "warning-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "warning-skill-1",
+        "warning-skill-2",
+        "warning-skill-3",
+        "warning-skill-4",
+        "warning-skill-5",
+        "warning-skill-6",
+        "warning-skill-7",
+        "warning-skill-8"
+      ]
+    },
+    "warning-skill-1": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-overview",
+        "variant": "secondary"
+      }
+    },
+    "warning-skill-2": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief",
+        "variant": "secondary"
+      }
+    },
+    "warning-skill-3": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "secondary"
+      }
+    },
+    "warning-skill-4": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "secondary"
+      }
+    },
+    "warning-skill-5": {
+      "type": "Badge",
+      "props": {
+        "text": "token-movers",
+        "variant": "secondary"
+      }
+    },
+    "warning-skill-6": {
+      "type": "Badge",
+      "props": {
+        "text": "token-pick",
+        "variant": "secondary"
+      }
+    },
+    "warning-skill-7": {
+      "type": "Badge",
+      "props": {
+        "text": "on-chain-monitor",
+        "variant": "secondary"
+      }
+    },
+    "warning-skill-8": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels",
+        "variant": "secondary"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-heading",
+        "no-data-list"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (2)",
+        "level": "h3"
+      }
+    },
+    "no-data-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no-data-item-1",
+        "no-data-item-2"
+      ]
+    },
+    "no-data-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard (Mon 10:30Z slot MISSED day 3, scheduler-side gap)",
+        "variant": "body"
+      }
+    },
+    "no-data-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap (weekly Sun 21:00Z, next 2026-07-05)",
+        "variant": "body"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-stat"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "9"
+      }
+    },
+    "separator-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issues-heading",
+        "issues-open",
+        "issues-filed",
+        "issues-resolved"
+      ]
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      }
+    },
+    "issues-open": {
+      "type": "Text",
+      "props": {
+        "text": "Open issues: 15",
+        "variant": "body"
+      }
+    },
+    "issues-filed": {
+      "type": "Text",
+      "props": {
+        "text": "Filed this run: 0",
+        "variant": "body"
+      }
+    },
+    "issues-resolved": {
+      "type": "Text",
+      "props": {
+        "text": "Resolved this run: 0",
+        "variant": "body"
+      }
+    }
+  }
+}
