@@ -1,15 +1,13 @@
+Done. Quiet run — no alerts fired.
+
 ## Summary
 
-**btc-levels run — 2026-07-01 17:03Z**
+**BTC data fetched:** spot $59,957 / Jun 30 close $58,551 (2 of 3 data points from CoinGecko).
 
-- **Spot:** $59,846 (up from $58,432 at 12:18Z)
-- **Last daily close:** $58,550.75 (Jun 30 UTC)
-- **Alerts fired:** none
+**Level evaluation:**
+- Leverage-review (≤$45k): not triggered — spot well above
+- Breakdown alert (close < $60,500 on 2026-06-30): already alerted — `breakdownAlertedForClose` is "2026-06-30", no repeat
+- Reclaim $63,500: not triggered — spot $59,957 < $63,500
+- Reclaim $65,900: not triggered
 
-Level check:
-- Leverage trigger (≤$45k): not active
-- Breakdown (close < $60,500): close is $58,550 — condition met, but Jun 30 was already alerted at 00:19Z; no re-fire
-- Reclaim $63,500: spot $59,846 below level, not met
-- Reclaim $65,900: not met
-
-BTC has bounced ~$1,400 from the 12:18Z read ($58,432 → $59,846), still well below the $63,500 stabilization level. State updated (spot), log appended, both committed.
+No notification sent. State updated with new spot price ($59,957), log appended, and both committed.
