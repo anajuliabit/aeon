@@ -1,1 +1,11 @@
-₿ BTC levels: spot $58.5k. ⚠️ Jun 30 close $58.6k < $60,500 — 6th consecutive sub-$60,500 close. downtrend continuation per 2026-06-09 advisor levels. leveraged cbBTC review trigger at ≤$45k (HF ~1.48–1.66 in the $40–45k band, worse than ~1.48 below $40k). reclaim levels: $63.5k → $65.9k. not financial advice.
+## Summary
+
+**BTC price fetched:** spot $59,155 (up from $58,533 at the 00:19Z run), June 30 UTC daily close $58,551.
+
+**Level evaluation:**
+- Leverage-review trigger (≤$45k): not active
+- Breakdown alert (<$60,500 close): close date "2026-06-30" already alerted — no new notification
+- Reclaim $63,500: spot $59,155 < threshold — no alert
+- Reclaim $65,900: spot $59,155 < threshold — no alert
+
+**No notification sent** — quiet run. State updated with new spot price, log appended, committed.
