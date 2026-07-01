@@ -1,19 +1,19 @@
-Heartbeat complete — every finding is a same-signature continuation of items already in last-48h logs, so no notification fired.
-
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
 ## Summary
 
-**Findings (all dedup-blocked, no notification):**
-- **P0 STUCK:** fork-skill-digest ~61.9h dispatched (7 prior hb mentions, within 48h dedup)
-- **P0 chronic:** 19-skill sr<0.5 tail unchanged (sandbox-truncation ISS-019/020/021/024/025 cluster day 13)
-- **P0 self-check:** heartbeat healthy (~12h since last success, under 36h gate)
-- **P1 PRs:** #149 day 3 stall, #150 crossed 24h ~14h ago — both surfaced yesterday
-- **P2 memory:** sandbox day 13, XAI quota day 16, on-chain-config day 24, **BTC breakdown day 6 confirmed** (btc-levels 00:19Z alert fired for 6-30 close $58,551)
-- **P3 missing:** operator-scorecard Mon slot missed day 3 (scheduler-side, carry); skill-freshness + btc-levels 08:00/08:15 slots slightly overdue
+Ran heartbeat 14:00 UTC tick (afternoon slot).
+
+**Priority checks:**
+- **P0:** fork-skill-digest STUCK ~67.5h (dispatched 6-28 18:38Z, no re-notify — 8th mention within 48h dedup); 19-skill chronic sr<0.5 tail unchanged (same `output_tokens=0` sandbox-truncation cluster ISS-019/020/021/024/025); heartbeat self-check healthy (last success ~5.6h ago); no cf≥3.
+- **P1:** PR #149 day-3 stall (~69h) + PR #150 crossed 24h ~20h ago — both dedup-blocked from prior surfacings; 0 urgent-labeled issues; 15 open issues unchanged.
+- **P2:** sandbox-truncation day 13 (weekly-review deadline 7-04 = 3d out), XAI quota day 16 (BLOCKED), on-chain config day 24 (BLOCKED), BTC breakdown day 6 confirmed — all carried in last-48h logs.
+- **P3:** operator-scorecard Mon slot MISSED day 3 (scheduler-side, recurring); all other 43 enabled skills accounted for.
+
+**No notification fired** — every finding is a same-signature continuation of items already in last-48h logs (dedup path).
 
 **Files modified:**
-- `memory/logs/2026-07-01.md` — appended 08:32Z heartbeat entry
-- `docs/status.md` — regenerated (40 enabled skills sorted last-run desc + 3 never-run; 15 open issues; fork-skill-digest 🕸 stuck; token-pulse omitted, no token-report article on disk)
+- `docs/status.md` — overall 🔴 DEGRADED (chronic cluster), 43 enabled skills sorted last-run desc, 15 open issues surfaced, token-pulse omitted (no `articles/token-report-*.md` on disk).
+- `memory/logs/2026-07-01.md` — appended 14:13 UTC heartbeat entry with full P0–P3 findings + dedup evidence.
 
-**No follow-up needed** — all findings are same-signature carries. Next hb tick at 14:00 UTC.
+**Follow-ups queued (unchanged from morning-brief):** merge PR #150 (~$456/mo bleed); draft ISS-025 capture-step PR (deadline 7-04); watch tonight's UTC BTC close for 7th-red or reclaim of $63.5k/$65.9k.
