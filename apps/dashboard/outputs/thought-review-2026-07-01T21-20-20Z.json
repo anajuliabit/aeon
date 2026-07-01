@@ -1,0 +1,114 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Thought Review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_period",
+        "stats_row",
+        "separator1",
+        "inbox_section",
+        "separator2",
+        "conclusion"
+      ]
+    },
+    "text_period": {
+      "type": "Text",
+      "props": {
+        "text": "Last 24h",
+        "variant": "muted"
+      }
+    },
+    "stats_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_captures",
+        "stat_stale"
+      ]
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "stat_stale": {
+      "type": "Stat",
+      "props": {
+        "label": "Stale Notes",
+        "value": "1"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "inbox_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "inbox_heading",
+        "inbox_detail1",
+        "inbox_detail2"
+      ]
+    },
+    "inbox_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Inbox Status",
+        "level": "h3"
+      }
+    },
+    "inbox_detail1": {
+      "type": "Text",
+      "props": {
+        "text": "Stale note from 2026-06-22 (~220h unarchived)",
+        "variant": "body"
+      }
+    },
+    "inbox_detail2": {
+      "type": "Text",
+      "props": {
+        "text": "19th review surfacing this note",
+        "variant": "caption"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "conclusion": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "muted"
+      }
+    }
+  }
+}
