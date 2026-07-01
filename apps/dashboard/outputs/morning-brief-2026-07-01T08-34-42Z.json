@@ -1,0 +1,340 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-01"
+      },
+      "children": [
+        "section-focus",
+        "sep-1",
+        "section-since",
+        "sep-2",
+        "section-watch",
+        "sep-3",
+        "section-running"
+      ]
+    },
+    "section-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-title",
+        "focus-1-reason"
+      ]
+    },
+    "focus-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "1. merge PR #150 fix(aeon.yml)",
+        "variant": "lead"
+      }
+    },
+    "focus-1-reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 5-line rename, ~$456/mo bleed, day-3 stall"
+      }
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-title",
+        "focus-2-reason"
+      ]
+    },
+    "focus-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "2. draft ISS-025 capture-step PR",
+        "variant": "lead"
+      }
+    },
+    "focus-2-reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: hard deadline 2026-07-04, 3d out, 19-skill tail bleeds"
+      }
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-reason"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "3. BTC breakdown day-6 confirmed",
+        "variant": "lead"
+      }
+    },
+    "focus-3-reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 6-30 close $58,551, today's UTC close decides 7th-red or reclaim"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Alert",
+      "props": {
+        "title": "00:19Z btc-levels ⚠ breakdown",
+        "message": "6th sub-$60,500 close $58,551 vs $60,160 prior; spot $59,155 05:12Z",
+        "type": "warning"
+      }
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #150 ~37h stalled (crossed 24h ~13h ago); PR #149 docs(skill-graph) day-3 ~63h stall"
+      }
+    },
+    "since-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-item-3-velvet",
+        "since-item-3-slx"
+      ]
+    },
+    "since-item-3-velvet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-item-3-velvet-stat",
+        "since-item-3-velvet-note"
+      ]
+    },
+    "since-item-3-velvet-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "VELVET (day-4 unwind)",
+        "value": "$1.72",
+        "delta": "-12.8%",
+        "trend": "down"
+      }
+    },
+    "since-item-3-velvet-note": {
+      "type": "Text",
+      "props": {
+        "text": "9d to July 10 unlock cliff",
+        "variant": "caption"
+      }
+    },
+    "since-item-3-slx": {
+      "type": "Stat",
+      "props": {
+        "label": "SLX",
+        "delta": "+7.3%",
+        "trend": "up"
+      }
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "WELL vol-spike 3.83× on red tape — direction confirms next 2 closes"
+      }
+    },
+    "since-item-5": {
+      "type": "Alert",
+      "props": {
+        "title": "SimpleHelp CVE-2026-48558",
+        "message": "CVSS 10.0 KEV due 2026-07-02 (not aeon-patch, tracking only)",
+        "type": "warning"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-heading",
+        "watch-btc-stat",
+        "watch-note"
+      ]
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC Q2 close",
+        "value": "$59,866"
+      }
+    },
+    "watch-note": {
+      "type": "Text",
+      "props": {
+        "text": "first sub-$60k close since 2024; quarter-end de-grossing lifts today, relief-bounce setup — implication for focus #3 (7th-red vs $63.5k reclaim decision)"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-weekly-group",
+        "running-daily-group"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-weekly-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-weekly-label",
+        "running-item-1",
+        "running-item-2",
+        "running-item-3"
+      ]
+    },
+    "running-weekly-label": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly (Wed):",
+        "variant": "lead"
+      }
+    },
+    "running-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor @ 14:00Z"
+      }
+    },
+    "running-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics @ 18:30Z"
+      }
+    },
+    "running-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve @ 18:00Z (every-other-day, odd date)"
+      }
+    },
+    "running-daily-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-daily-label",
+        "running-daily-list"
+      ]
+    },
+    "running-daily-label": {
+      "type": "Text",
+      "props": {
+        "text": "Daily crons:",
+        "variant": "lead"
+      }
+    },
+    "running-daily-list": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine, github-trending, token-alert, search-skill, security-digest, list-digest, agent-buzz, heartbeat×3, skill-freshness, goal-tracker, skill-health, reflect, action-converter, evening-recap, thought-review×2, btc-levels×6"
+      }
+    }
+  }
+}
