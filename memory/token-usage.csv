@@ -623,4 +623,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-01,agent-buzz,claude-opus-4-7,15,7107,530117,35341
 2026-07-01,action-converter,claude-opus-4-7,30,20689,2069950,93558
 2026-07-01,skill-analytics,claude-sonnet-4-6,27,44080,1989722,108002
-2026-07-01,btc-levels,claude-sonnet-4-6,11,3843,377272,43043
+2026-07-01,heartbeat,claude-opus-4-7,13881,14972,1107297,111187
