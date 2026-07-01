@@ -1,0 +1,276 @@
+{
+  "root": "card_reg_monitor",
+  "state": {},
+  "elements": {
+    "card_reg_monitor": {
+      "type": "Card",
+      "props": {
+        "title": "Reg Monitor",
+        "description": "2026-07-01"
+      },
+      "children": [
+        "summary",
+        "alert_data",
+        "sep1",
+        "heading_act",
+        "act_item",
+        "sep2",
+        "heading_watch",
+        "watch_items",
+        "sep3",
+        "footer"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "1 to act on, 5 to watch",
+        "variant": "lead"
+      }
+    },
+    "alert_data": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "⚠ partial: cftc RSS 404, backfilled via press-page + federal register"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_act": {
+      "type": "Heading",
+      "props": {
+        "text": "ACT",
+        "level": "h2"
+      }
+    },
+    "act_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "act_storylink",
+        "act_details",
+        "act_timeline",
+        "act_impact"
+      ]
+    },
+    "act_storylink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Stop Lawmakers from Predicting Act — passed House Admin 5-4",
+        "href": "https://www.washingtontimes.com/news/2026/jun/24/house-committee-advances-bill-ban-lawmakers-government-related-bets/",
+        "source": "US federal · passed committee"
+      }
+    },
+    "act_details": {
+      "type": "Text",
+      "props": {
+        "text": "steil (R-Wis.) bill bars members/spouses/dependents from wagering on political/policy events. sports and unrelated markets untouched. penalty ≥$2k or 10% of trade + net-profit forfeiture. speaker johnson + trump backing, echoes april senate rule.",
+        "variant": "body"
+      }
+    },
+    "act_timeline": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ full house floor vote next",
+        "variant": "caption"
+      }
+    },
+    "act_impact": {
+      "type": "Text",
+      "props": {
+        "text": "📊 shrinks political-outcome volume on kalshi/polymarket. sports and econ contracts untouched.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_watch": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h2"
+      }
+    },
+    "watch_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "watch_1",
+        "watch_2",
+        "watch_3",
+        "watch_4",
+        "watch_5"
+      ]
+    },
+    "watch_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_1_link",
+        "watch_1_text"
+      ]
+    },
+    "watch_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC event-contract data reporting NPRM",
+        "href": "https://www.federalregister.gov/documents/2026/07/01/2026-13239/data-reporting-requirements-for-certain-event-contracts",
+        "source": "US federal · proposed rule"
+      }
+    },
+    "watch_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "moves fully-collateralized event contracts out of the 2017 no-action-letter regime into codified parts 15-18/17/18 reporting. every DCM listing prediction contracts — kalshi, kalshiEX, forecastEx — now under a real reporting regime. 8y of opacity ends.",
+        "variant": "body"
+      }
+    },
+    "watch_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_2_link",
+        "watch_2_text"
+      ]
+    },
+    "watch_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC/SEC joint portfolio + cross-margining NPRM",
+        "href": "https://www.federalregister.gov/documents/2026/06/30/2026-13182/joint-request-for-comment-on-further-implementation-of-portfolio-margining-and-cross-margining-of",
+        "source": "US federal · proposed rule"
+      }
+    },
+    "watch_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "cross-agency alignment of margining across securities/derivatives regimes. would unlock crypto-derivative cross-margining if it lands.",
+        "variant": "body"
+      }
+    },
+    "watch_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_3_link",
+        "watch_3_text"
+      ]
+    },
+    "watch_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC 24/7 + perpetuals NPRM (energy commodities first round)",
+        "href": "https://www.federalregister.gov/documents/2026/06/25/2026-12784/request-for-comment-on-the-extension-of-standard-futures-contracts-to-247-trading-and-on-perpetual",
+        "source": "US federal · proposed rule"
+      }
+    },
+    "watch_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "first round scope is energy, but this is the vehicle cftc will use to bring perpetuals to US-regulated venues.",
+        "variant": "body"
+      }
+    },
+    "watch_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_4_link",
+        "watch_4_text"
+      ]
+    },
+    "watch_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OCC permitted payment stablecoin AML/CFT NPRM",
+        "href": "https://www.federalregister.gov/documents/2026/06/24/2026-12692/permitted-payment-stablecoin-issuer-anti-money-launderingcountering-the-financing-of-terrorism-and",
+        "source": "US federal · proposed rule"
+      }
+    },
+    "watch_4_text": {
+      "type": "Text",
+      "props": {
+        "text": "OCC-side companion to the fincen/fdic PPSI rules already tracked. genius act implementation for national-bank stablecoin issuers.",
+        "variant": "body"
+      }
+    },
+    "watch_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_5_link",
+        "watch_5_text"
+      ]
+    },
+    "watch_5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "FinCEN Huione Group scope expansion NPRM",
+        "href": "https://www.federalregister.gov/documents/2026/06/25/2026-12794/definition-of-huione-group-a-financial-institution-operating-outside-the-united-states-of-primary",
+        "source": "US federal · proposed rule"
+      }
+    },
+    "watch_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "adds H-Pay Service PLC to the huione money-laundering designation, defines \"successor entity.\" huione was the biggest exposed on-chain ML pipe.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_sources",
+        "footer_scoring"
+      ]
+    },
+    "footer_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: federal-register=ok · sec=ok · cftc=fail(RSS 404, backfilled) · websearch=ok · congress=skip",
+        "variant": "caption"
+      }
+    },
+    "footer_scoring": {
+      "type": "Text",
+      "props": {
+        "text": "6 developments scored, 1 act / 5 watch / 0 context",
+        "variant": "caption"
+      }
+    }
+  }
+}

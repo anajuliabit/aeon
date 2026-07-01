@@ -1,37 +1,28 @@
-*reg monitor — 2026-06-24*
-4 act / 4 watch · cftc-state preemption war widens, first active crypto etf, celsius civil closure.
+*Reg Monitor — 2026-07-01*
+1 to act on, 5 to watch. house admin advanced the lawmaker prediction-market ban 5-4, cftc quietly codified 8y of event-contract no-action letters into a real reporting regime. ⚠ partial: cftc RSS 404, backfilled via press-page + federal register.
 
 *ACT*
-• [CFTC Sues Kentucky](https://www.cftc.gov/PressRoom/PressReleases/9260-26) — US federal · litigation
-  CFTC filed in federal court 6-23 seeking to enjoin KY's 14.25% excise on DCM event-contract notional + KY's state-court suits vs Kalshi/Polymarket. 9th state CFTC has sued (MN/IL/RI/NM/KY on table).
-  ⏰ no schedule yet; reply window typically ~21d
-  📊 prediction-market angle: directly defends Kalshi/Polymarket sports contracts under federal preemption. A loss flips the entire state-DCM perimeter — tradeable as the regime question itself.
-
-• [SEC approves NYSE Arca active crypto ETF](https://www.federalregister.gov/documents/2026/06/17/2026-12160/self-regulatory-organizations-nyse-arca-inc-order-granting-approval-of-a-proposed-rule-change-as) — US federal · final order
-  Order granted 6-17 approving NYSE Arca rule change to list T. Rowe Price's actively-managed crypto ETF. First active (non-passive) crypto product cleared by SEC.
-  📊 prediction-market angle: rerates "SEC approves spot/active crypto ETF for X" markets across alts — managers can now hold a basket, not just BTC/ETH spot.
-
-• [CFTC closes Celsius civil action vs Mashinsky](https://www.cftc.gov/PressRoom/PressReleases/9256-26) — US federal · consent order
-  SDNY entered consent order 6-18: permanent anti-fraud injunction + permanent trading + registration bans. Civil bookend to the May-2025 criminal 12yr / $48.4M forfeiture.
-  📊 angle: closes the playbook on the 2022-cycle CEX-yield-fraud archetype.
-
-• [Curtis-Schiff Prediction Markets Are Gambling Act](https://www.curtis.senate.gov/press-releases/curtis-schiff-introduce-bipartisan-legislation-to-ban-sports-prediction-market-contracts/) — US federal · bill introduced
-  Bipartisan (R-UT + D-CA) bill to prohibit any CFTC-registered DCM from listing contracts that resemble a sports bet or casino-style game. Joins BETS OFF (S.4115/H.R.7955) cluster — gaming lobby + state AGs pushing same direction CFTC is litigating against.
-  📊 angle: if any of this cluster moves out of committee, sports-event-contract TAM is the directly priced thing.
+• [Stop Lawmakers from Predicting Act — passed House Admin 5-4](https://www.washingtontimes.com/news/2026/jun/24/house-committee-advances-bill-ban-lawmakers-government-related-bets/) — US federal · passed committee
+  steil (R-Wis.) bill bars members/spouses/dependents from wagering on political/policy events. sports and unrelated markets untouched. penalty ≥$2k or 10% of trade + net-profit forfeiture. speaker johnson + trump backing, echoes april senate rule.
+  ⏰ full house floor vote next
+  📊 shrinks political-outcome volume on kalshi/polymarket. sports and econ contracts untouched.
 
 *WATCH*
-• [24X National Exchange — tokenized securities live](https://www.federalregister.gov/documents/2026/06/22/2026-12403/self-regulatory-organizations-24x-national-exchange-llc-notice-of-filing-and-immediate-effectiveness) — US federal · immediate effectiveness
-  SEC notice 6-22, rule change effective on filing. tokenized-securities exchange now operational under SRO framework.
+• [CFTC event-contract data reporting NPRM](https://www.federalregister.gov/documents/2026/07/01/2026-13239/data-reporting-requirements-for-certain-event-contracts) — US federal · proposed rule
+  moves fully-collateralized event contracts out of the 2017 no-action-letter regime into codified parts 15-18/17/18 reporting. every DCM listing prediction contracts — kalshi, kalshiEX, forecastEx — now under a real reporting regime. 8y of opacity ends.
 
-• [SEC+CFTC joint NPRM — re-defining "swap" / "security-based swap"](https://www.federalregister.gov/documents/2026/06/24/2026-12743/joint-request-for-comment-on-further-definition-of-swap-and-security-based-swap-and-on-alternative) — US federal · RFC
-  joint reopen of the core derivative definitions, hooked to "innovative products + alternative compliance." perpetuals + event contracts sit inside this debate.
+• [CFTC/SEC joint portfolio + cross-margining NPRM](https://www.federalregister.gov/documents/2026/06/30/2026-13182/joint-request-for-comment-on-further-implementation-of-portfolio-margining-and-cross-margining-of) — US federal · proposed rule
+  cross-agency alignment of margining across securities/derivatives regimes. would unlock crypto-derivative cross-margining if it lands.
 
-• [FinCEN+banking agencies — GENIUS Act stablecoin CIP NPRM](https://www.federalregister.gov/documents/2026/06/22/2026-12460/permitted-payment-stablecoin-issuer-customer-identification-program) — US federal · NPRM
-  proposed customer-id rules for permitted payment stablecoin issuers. last week's OCC AML/CFT NPRM (FR 2026-12692) is the parallel track.
+• [CFTC 24/7 + perpetuals NPRM (energy commodities first round)](https://www.federalregister.gov/documents/2026/06/25/2026-12784/request-for-comment-on-the-extension-of-standard-futures-contracts-to-247-trading-and-on-perpetual) — US federal · proposed rule
+  first round scope is energy, but this is the vehicle cftc will use to bring perpetuals to US-regulated venues.
 
-• [CFTC RFC — 24/7 trading + perpetual energy contracts](https://www.cftc.gov/PressRoom/PressReleases/9259-26) — US federal · RFC
-  perpetuals + round-the-clock listing model now formally on the table for non-crypto commodities. confirms the Kalshi BTCPERP-approval (5-29) wasn't a one-off.
+• [OCC permitted payment stablecoin AML/CFT NPRM](https://www.federalregister.gov/documents/2026/06/24/2026-12692/permitted-payment-stablecoin-issuer-anti-money-launderingcountering-the-financing-of-terrorism-and) — US federal · proposed rule
+  OCC-side companion to the fincen/fdic PPSI rules already tracked. genius act implementation for national-bank stablecoin issuers.
+
+• [FinCEN Huione Group scope expansion NPRM](https://www.federalregister.gov/documents/2026/06/25/2026-12794/definition-of-huione-group-a-financial-institution-operating-outside-the-united-states-of-primary) — US federal · proposed rule
+  adds H-Pay Service PLC to the huione money-laundering designation, defines "successor entity." huione was the biggest exposed on-chain ML pipe.
 
 —
-sources: federal-register=ok · sec=ok · cftc=ok(rss 404 → html ok) · websearch=ok · congress=skip
-14 scored · 4 act / 4 watch / 0 context
+sources: federal-register=ok · sec=ok · cftc=fail(RSS 404, backfilled) · websearch=ok · congress=skip
+6 developments scored, 1 act / 5 watch / 0 context
