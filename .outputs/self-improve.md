@@ -1,1 +1,1 @@
-self-improve: renamed usepod_model → model in aeon.yml for 5 skills (token-pick / token-movers / on-chain-monitor / defi-overview / defi-monitor) — they were running on Opus instead of intended Haiku. Cost-report 6-29 flagged this as the top optimization, ~$107/wk / $456/mo savings. PR: https://github.com/anajuliabit/aeon/pull/150
+self-improve: moved skill-evals Sun 06:00Z → 22:00Z to fix ISS-026 heartbeat false-fail (evals ran before heartbeat's ~08:00 morning tick). PR: https://github.com/anajuliabit/aeon/pull/151
