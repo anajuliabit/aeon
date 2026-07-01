@@ -1,0 +1,433 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-01",
+        "description": "Supply-chain compromises and critical vulnerabilities"
+      },
+      "children": [
+        "verdict_text",
+        "sep1",
+        "patch_heading",
+        "patch_stack",
+        "sep2",
+        "monitor_heading",
+        "monitor_stack",
+        "sep3",
+        "kev_section"
+      ]
+    },
+    "verdict_text": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 3 supply-chain compromises to purge now, 3 to monitor (Fission node-escape cluster, no fix yet). Sources: KEV, GH Advisory, EPSS",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "patch_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_item_1",
+        "patch_item_2",
+        "patch_item_3"
+      ]
+    },
+    "patch_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_1_link",
+        "patch_1_meta",
+        "patch_1_desc",
+        "patch_1_action"
+      ]
+    },
+    "patch_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-gf82-j362-r5f6 — livekit-agents (npm) · malware",
+        "href": "https://github.com/advisories/GHSA-gf82-j362-r5f6",
+        "source": "GitHub Advisory"
+      }
+    },
+    "patch_1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "Real package: @livekit/agents",
+        "variant": "caption"
+      }
+    },
+    "patch_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "LiveKit Agents SDK brandjack. Extends agent-infra brandjack thread (day 5: ai-sdk-ollama, autotel-18, now LiveKit + Google-Cloud agent-starter-pack)."
+      }
+    },
+    "patch_1_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Uninstall livekit-agents; rotate any tokens/creds exposed at install-time.",
+        "type": "error"
+      }
+    },
+    "patch_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_2_link",
+        "patch_2_meta",
+        "patch_2_desc",
+        "patch_2_action"
+      ]
+    },
+    "patch_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-j28m-58xp-3wgh — confluent-kafka-javascript (npm) · malware",
+        "href": "https://github.com/advisories/GHSA-j28m-58xp-3wgh",
+        "source": "GitHub Advisory"
+      }
+    },
+    "patch_2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "Real package: @confluentinc/kafka-javascript",
+        "variant": "caption"
+      }
+    },
+    "patch_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Confluent's Kafka client brandjack. First enterprise-data-infra brandjack of the 48h wave (prior 4 days were AI-infra only)."
+      }
+    },
+    "patch_2_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Uninstall; rotate broker credentials.",
+        "type": "error"
+      }
+    },
+    "patch_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_3_link_a",
+        "patch_3_link_b",
+        "patch_3_desc",
+        "patch_3_action"
+      ]
+    },
+    "patch_3_link_a": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-4wm6-vmww-2544 — chai-as-persisted (npm) · malware",
+        "href": "https://github.com/advisories/GHSA-4wm6-vmww-2544",
+        "source": "GitHub Advisory"
+      }
+    },
+    "patch_3_link_b": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-m282-3m8c-qjwj — chai-as-assured (npm) · malware",
+        "href": "https://github.com/advisories/GHSA-m282-3m8c-qjwj",
+        "source": "GitHub Advisory"
+      }
+    },
+    "patch_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "chai-as-promised brandjack pair, published same-window 15:56–15:59Z."
+      }
+    },
+    "patch_3_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Uninstall both; use chai-as-promised; rotate CI install-time secrets.",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "monitor_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_item_1",
+        "monitor_item_2",
+        "monitor_item_3"
+      ]
+    },
+    "monitor_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_1_link",
+        "monitor_1_severity",
+        "monitor_1_desc",
+        "monitor_1_vulns",
+        "monitor_1_action"
+      ]
+    },
+    "monitor_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-m63v-2g9w-2w6v (+ 8 siblings) — fission (Go) · 9 CVEs",
+        "href": "https://github.com/advisories/GHSA-m63v-2g9w-2w6v",
+        "source": "GitHub Advisory"
+      }
+    },
+    "monitor_1_severity": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_1_badge_cvss",
+        "monitor_1_badge_status",
+        "monitor_1_badge_epss"
+      ]
+    },
+    "monitor_1_badge_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "4× CVSS 9.9 crit + 5 high",
+        "variant": "destructive"
+      }
+    },
+    "monitor_1_badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "No fix yet",
+        "variant": "destructive"
+      }
+    },
+    "monitor_1_badge_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS ≤0.003",
+        "variant": "secondary"
+      }
+    },
+    "monitor_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Coordinated 9-CVE disclosure batch on github.com/fission/fission ≤ 1.23.0."
+      }
+    },
+    "monitor_1_vulns": {
+      "type": "Text",
+      "props": {
+        "text": "Vulnerabilities: podspec injection, node escape, cross-namespace EnvRef, MessageQueueTrigger secret materialization, cluster takeover."
+      }
+    },
+    "monitor_1_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Track upstream; isolate Fission control plane and RBAC-block user PodSpec paths until patch ships.",
+        "type": "warning"
+      }
+    },
+    "monitor_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_2_link",
+        "monitor_2_severity",
+        "monitor_2_desc",
+        "monitor_2_action"
+      ]
+    },
+    "monitor_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-f5mr-q85p-6hh6 — sigstore/fulcio (Go)",
+        "href": "https://github.com/advisories/GHSA-f5mr-q85p-6hh6",
+        "source": "GitHub Advisory"
+      }
+    },
+    "monitor_2_severity": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_2_badge_cvss",
+        "monitor_2_badge_status"
+      ]
+    },
+    "monitor_2_badge_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.7",
+        "variant": "destructive"
+      }
+    },
+    "monitor_2_badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "No fix",
+        "variant": "destructive"
+      }
+    },
+    "monitor_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "OIDC redirect SSRF + JWKS substitution → K8s SA token leak on meta-issuer paths, ≤ 1.8.5."
+      }
+    },
+    "monitor_2_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Track; disable meta-issuer discovery on any deployed Fulcio issuer.",
+        "type": "warning"
+      }
+    },
+    "monitor_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_3_link",
+        "monitor_3_severity",
+        "monitor_3_desc",
+        "monitor_3_action"
+      ]
+    },
+    "monitor_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-g4w6-vmgf-xqvx — @cedar-policy/authorization-for-expressjs (npm)",
+        "href": "https://github.com/advisories/GHSA-g4w6-vmgf-xqvx",
+        "source": "GitHub Advisory"
+      }
+    },
+    "monitor_3_severity": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_3_badge_cvss",
+        "monitor_3_badge_status"
+      ]
+    },
+    "monitor_3_badge_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.8",
+        "variant": "destructive"
+      }
+    },
+    "monitor_3_badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "No fix",
+        "variant": "destructive"
+      }
+    },
+    "monitor_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Authz bypass via query-string manipulation, ≤ 0.2.0."
+      }
+    },
+    "monitor_3_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Track; add pre-Cedar query-param whitelist in Express middleware.",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "kev_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "kev_heading",
+        "kev_stats"
+      ]
+    },
+    "kev_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "KEV Summary",
+        "level": "h3"
+      }
+    },
+    "kev_stats": {
+      "type": "Text",
+      "props": {
+        "text": "KEV week: 0 net-new since SimpleHelp CVE-2026-48558 (6-29) — day-2 zero-cadence. Reviewed CVEs 48h: 100% no-patch (Fission 9-CVE batch, Fulcio, Cedar, Adonis bodyparser, OpenBabel). Supply-chain: 15 net-new npm malware in 8h — agent-infra brandjack still dominant (LiveKit + Google-Cloud agent-starter-pack extend yesterday's ai-sdk-ollama + autotel-18 thread). 0 pip/crates/Go malware in 48h — npm remains 100% of supply-chain surface."
+      }
+    }
+  }
+}
