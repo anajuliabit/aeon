@@ -1,0 +1,179 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC Levels"
+      },
+      "children": [
+        "grid_prices",
+        "separator_1",
+        "alert_close",
+        "text_downtrend",
+        "section_liquidation",
+        "separator_2",
+        "section_reclaim",
+        "text_disclaimer"
+      ]
+    },
+    "grid_prices": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_spot",
+        "stat_close"
+      ]
+    },
+    "stat_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$58.5k"
+      },
+      "children": []
+    },
+    "stat_close": {
+      "type": "Stat",
+      "props": {
+        "label": "Jun 30 Close",
+        "value": "$58.6k"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert_close": {
+      "type": "Alert",
+      "props": {
+        "title": "Price Action Alert",
+        "message": "$58.6k < $60,500 — 6th consecutive sub-$60,500 close",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "text_downtrend": {
+      "type": "Text",
+      "props": {
+        "text": "Downtrend continuation per 2026-06-09 advisor levels",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "section_liquidation": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_liquidation",
+        "text_cbbtc_trigger",
+        "text_hf_detail"
+      ]
+    },
+    "heading_liquidation": {
+      "type": "Heading",
+      "props": {
+        "text": "Liquidation Risk",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_cbbtc_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Leveraged cbBTC review trigger at ≤$45k",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_hf_detail": {
+      "type": "Text",
+      "props": {
+        "text": "HF: ~1.48–1.66 in the $40–45k band; worse than ~1.48 below $40k",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_reclaim": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_reclaim",
+        "stack_levels"
+      ]
+    },
+    "heading_reclaim": {
+      "type": "Heading",
+      "props": {
+        "text": "Reclaim Levels",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_levels": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_63k5",
+        "text_arrow",
+        "badge_65k9"
+      ]
+    },
+    "badge_63k5": {
+      "type": "Badge",
+      "props": {
+        "text": "$63.5k",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "text_arrow": {
+      "type": "Text",
+      "props": {
+        "text": "→",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "badge_65k9": {
+      "type": "Badge",
+      "props": {
+        "text": "$65.9k",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "text_disclaimer": {
+      "type": "Text",
+      "props": {
+        "text": "Not financial advice",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
