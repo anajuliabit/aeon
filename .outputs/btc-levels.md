@@ -1,11 +1,8 @@
 ## Summary
 
-**BTC price fetched:** spot $59,155 (up from $58,533 at the 00:19Z run), June 30 UTC daily close $58,551.
+**btc-levels run — 2026-07-01T08:32Z — quiet**
 
-**Level evaluation:**
-- Leverage-review trigger (≤$45k): not active
-- Breakdown alert (<$60,500 close): close date "2026-06-30" already alerted — no new notification
-- Reclaim $63,500: spot $59,155 < threshold — no alert
-- Reclaim $65,900: spot $59,155 < threshold — no alert
-
-**No notification sent** — quiet run. State updated with new spot price, log appended, committed.
+- **Spot**: $58,552 | **Jun 30 close**: $58,551 (7th consecutive sub-$60,500 close)
+- **No alerts fired**: breakdown for 2026-06-30 already alerted at 00:19Z; spot well below reclaim levels ($63.5k / $65.9k); leverage trigger clear (spot > $45k)
+- **State updated**: `lastSpot` refreshed; all flags unchanged
+- **Committed**: `memory/btc-levels-state.json` + `memory/logs/2026-07-01.md`
