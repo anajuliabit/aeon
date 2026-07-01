@@ -1,8 +1,10 @@
 ## Summary
 
-**btc-levels run — 2026-07-01T08:32Z — quiet**
+**btc-levels run — 2026-07-01 ~12:18Z**
 
-- **Spot**: $58,552 | **Jun 30 close**: $58,551 (7th consecutive sub-$60,500 close)
-- **No alerts fired**: breakdown for 2026-06-30 already alerted at 00:19Z; spot well below reclaim levels ($63.5k / $65.9k); leverage trigger clear (spot > $45k)
-- **State updated**: `lastSpot` refreshed; all flags unchanged
-- **Committed**: `memory/btc-levels-state.json` + `memory/logs/2026-07-01.md`
+- Spot: **$58,432** | Jun 30 close: **$58,551** (day 6 sub-$60,500)
+- No alerts fired:
+  - Leverage trigger: inactive (spot $58,432 >> $45k threshold)
+  - Breakdown: Jun 30 close already alerted at 00:19Z — deduped
+  - Reclaim $63,500 / $65,900: both still far above spot
+- State updated (spot refreshed to $58,432), log entry appended, both committed.
