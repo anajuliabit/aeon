@@ -1,0 +1,266 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Analytics — 2026-07-01",
+        "description": "Scheduled skills monitoring report"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_stats",
+        "sep1",
+        "anomalies_section",
+        "sep2",
+        "critical_section",
+        "sep3",
+        "degraded_section",
+        "sep4",
+        "top_runs_section",
+        "sep5",
+        "comparison_section",
+        "sep6",
+        "full_report_link"
+      ]
+    },
+    "summary_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_runs",
+        "stat_skills",
+        "stat_success",
+        "stat_missed"
+      ]
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs (7d)",
+        "value": "~270"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "42"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "99.6%"
+      }
+    },
+    "stat_missed": {
+      "type": "Stat",
+      "props": {
+        "label": "Didn't Run",
+        "value": "2",
+        "delta": "fork-skill-gap, operator-scorecard"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "anomalies_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "anomalies_heading",
+        "anomalies_badge"
+      ]
+    },
+    "anomalies_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Anomalies",
+        "level": "h3"
+      }
+    },
+    "anomalies_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "3 anomalies detected",
+        "variant": "destructive"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "critical_heading",
+        "alert_fork_skill_gap",
+        "alert_operator_scorecard"
+      ]
+    },
+    "critical_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Critical Issues",
+        "level": "h3"
+      }
+    },
+    "alert_fork_skill_gap": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-skill-gap — SILENT",
+        "message": "Scheduled `0 21 * * 0` (Sunday slot), zero runs in window",
+        "type": "error"
+      }
+    },
+    "alert_operator_scorecard": {
+      "type": "Alert",
+      "props": {
+        "title": "operator-scorecard — SILENT",
+        "message": "Scheduled `30 10 * * 1` (Mon 10:30Z), perpetually missed (scheduler-side, known gap)",
+        "type": "error"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "degraded_heading",
+        "alert_cost_report"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Degraded Issues",
+        "level": "h3"
+      }
+    },
+    "alert_cost_report": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report — LOW_SUCCESS",
+        "message": "29% success rate over 7 runs (2 success, 1 failure, 4 cancelled)",
+        "type": "warning"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "top_runs_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top_runs_heading",
+        "top_runs_btc",
+        "top_runs_heartbeat",
+        "top_runs_thought"
+      ]
+    },
+    "top_runs_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top by Runs",
+        "level": "h3"
+      }
+    },
+    "top_runs_btc": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels — 47 runs",
+        "variant": "body"
+      }
+    },
+    "top_runs_heartbeat": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat — 23 runs",
+        "variant": "body"
+      }
+    },
+    "top_runs_thought": {
+      "type": "Text",
+      "props": {
+        "text": "thought-review — 15 runs",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "comparison_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "comparison_heading",
+        "comparison_stat"
+      ]
+    },
+    "comparison_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "vs Last Run (6-24)",
+        "level": "h3"
+      }
+    },
+    "comparison_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate This Window",
+        "value": "99.6%",
+        "delta": "+65.4%",
+        "trend": "up"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "full_report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Skill Analytics Report",
+        "href": "articles/skill-analytics-2026-07-01.md",
+        "source": "Skill Analytics"
+      }
+    }
+  }
+}

@@ -1,19 +1,18 @@
-*Skill Analytics — 2026-06-24*
-2 scheduled skill(s) didn't run this window — fork-skill-gap
+*Skill Analytics — 2026-07-01*
+2 scheduled skill(s) didn't run this window — fork-skill-gap, operator-scorecard
 
-Window: last 7d · 828 runs · 44 skills · 34.2% success
-Anomalies: 32
+Window: last 7d · ~270 runs · 42 skills · 99.6% success
+Anomalies: 3
 
 🔴 Critical:
-- fork-skill-gap — SILENT: scheduled `0 21 * * 0` but zero runs in window
-- operator-scorecard — SILENT: scheduled `30 10 * * 1` but zero runs in window
+- fork-skill-gap — SILENT: scheduled `0 21 * * 0`, zero runs in window (Sunday slot)
+- operator-scorecard — SILENT: scheduled `30 10 * * 1`, Mon 10:30Z perpetually missed (scheduler-side, known gap)
 
 🟠 Degraded:
-- cost-report — LOW_SUCCESS: 2.6% over 39 runs
-- vuln-scanner — LOW_SUCCESS: 3.8% over 26 runs
-- security-digest — LOW_SUCCESS: 13.9% over 36 runs
-(+27 more LOW_SUCCESS — systemic sandbox-truncation cluster, all cf=0)
+- cost-report — LOW_SUCCESS: 29% over 7 runs (2 success, 1 failure, 4 cancelled)
 
-Top by runs: btc-levels (62), heartbeat (49), market-context-refresh (45)
+Top by runs: btc-levels (47), heartbeat (23), thought-review (15)
 
-Full: articles/skill-analytics-2026-06-24.md
+vs last run (6-24): 99.6% vs 34.2% — sandbox-truncation cluster cleared for this window
+
+Full: articles/skill-analytics-2026-07-01.md
