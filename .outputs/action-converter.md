@@ -1,29 +1,29 @@
-*5 Actions — 2026-06-30*
-Shape: Ship PR #150 + #149, draft ISS-025 capture PR, close VELVET pre-unlock
+*5 Actions — 2026-07-01*
+Shape: break ISS-025 tail, comment PR #150, hedge VELVET, annotate BTC day-7, audit scorecard cron
 
-1. merge PR #150 fix(aeon.yml) `usepod_model` → `model` — 5-line diff, ~$456/mo savings.
-why: opened 6-29 18:16Z (~20h, approaching 24h stall), cost-report 6-29 flagged 5 skills on Opus by typo
-done: PR #150 merged into main
-loop: pr-150-merge
-
-2. draft the ISS-025 capture-step PR against `.github/workflows/aeon.yml` env-var redirect for the `output_tokens=0` cluster.
-why: day 7 unshipped, weekly-review hard deadline 2026-07-04 (4d), 19-skill chronic tail bleeds every tick
-done: branch pushed + PR opened with capture diff
+1. prototype ISS-025 capture-step patch: instrument `.github/workflows/aeon.yml` capture step for reg-monitor (sr=10%, worst of chronic tail) with `tee` to `.outputs/reg-monitor.md` in parallel with the existing stdout capture, dispatch via `gh workflow run aeon.yml -f skill=reg-monitor`, then diff resulting `.outputs/reg-monitor.md` against cron-state `output_tokens` for the same run.
+why: hard deadline 2026-07-04 in 3 days, 19-skill chronic tail bleeding `output_tokens=0` day 13, `open+ISS-025-PR` blocked by novelty gate.
+done: dispatch run completes; `.outputs/reg-monitor.md` non-empty AND cron-state entry has `output_tokens>0` in same run id.
 loop: iss-025-capture-fix
 
-3. merge PR #149 docs(skill-graph) NEW_SKILLS +68 SHARED_STATE 9→36.
-why: anajuliabit's own PR, day 2 past 24h stall threshold (~45h+), self-merge with no review-block
-done: PR #149 merged
-loop: pr-149-stall
-
-4. decide model tier (Sonnet vs Haiku) for the 3 remaining `usepod_model` entries — market-context-refresh / narrative-tracker / aixbt-pulse — append rationale to `topics/fleet.md`.
-why: PR #150 covers 5 of 8 entries, the other 3 still drift on the next cost-report cycle
-done: 3 named decisions written + commit on main
-loop: usepod_model-remainders
-
-5. close VELVET pick or set $1.40 stop — entry $1.72, current $1.50 (−12.8%), 10d to July-10 unlock cliff.
-why: HIGH 11/10 pick day-3 unwound on quarter-end tape, unlock cliff makes hold-thru-bounce asymmetric
-done: stop set in trade log OR pick marked CLOSED in `topics/crypto.md`
+2. hedge VELVET pre-unlock: POST `2026-07-01-advisor-manual-velvet-hedge` short pick to investiments `/api/picks` with $1.20 spot + $1.72 entry invalidation, thesis "day-4 -12.8% unwind, 9d to 2026-07-10 unlock cliff, no reclaim signal".
+why: 9 days to unlock cliff, entry $1.72 already -12.8%, no reclaim signal, unlock overhang loads distribution risk into thin tape.
+done: `/api/picks` POST returns 200; pick id `2026-07-01-advisor-manual-velvet-hedge` visible in investiments feed.
 loop: velvet-pre-unlock
 
-sources: memory=43 logs=8 topics=17 prs=2 cron_failing=0 mode=OK
+3. comment on PR #150 via `gh pr comment 150 --body "@aaronjmars — 5-line diff (usepod_model→model), day 3 stall, $456/mo bleed continuing until merge"`.
+why: day-3 operator-merge gate on $456/mo cost bleed, silent since 6-29 18:17Z, comment forces attention.
+done: `gh pr view 150 --json comments` shows new comment; body hash registered in `.notify-sent-hashes`.
+loop: pr-150-merge
+
+4. annotate `memory/topics/crypto.md` with BTC day-6 (6-30 close $58,551 = 6th sub-$60,500) → day-7 checkpoint, $63.5k/$65.9k reclaim invalidation, feed daily advisor 13:00Z prompt directly.
+why: quarter-end sell flow bled into July-open, 12:18Z pin $58,432, tonight's UTC close decides 7th-red vs reclaim.
+done: `memory/topics/crypto.md` contains new "BTC day-6/7 checkpoint" section with reclaim levels + directional bias, committed to main.
+loop: btc-breakdown-day-6
+
+5. audit `.github/workflows/operator-scorecard.yml` cron trigger — Mon 10:30Z slot missed 3 consecutive weeks (6-15/6-22/6-29). If cron broken or workflow disabled, open patch PR; else file ISS with `gh run list --workflow=operator-scorecard.yml` evidence.
+why: 3-week scheduler-side never-run gap, silent since first miss, blocks weekly agent-health + community-growth verdict.
+done: PR opened fixing cron trigger OR new ISS filed with `gh run list` history attached.
+loop: operator-scorecard-schedule-gap
+
+sources: memory=46 logs=7 topics=17 prs=2 cron_failing=0 mode=OK

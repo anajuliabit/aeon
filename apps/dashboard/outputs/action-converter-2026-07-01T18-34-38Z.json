@@ -1,0 +1,438 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-01",
+        "description": "break ISS-025 tail, comment PR #150, hedge VELVET, annotate BTC day-7, audit scorecard cron"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action1",
+        "sep1",
+        "action2",
+        "sep2",
+        "action3",
+        "sep3",
+        "action4",
+        "sep4",
+        "action5",
+        "sep5",
+        "footer"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_a1",
+        "desc_a1",
+        "why_h1",
+        "why_a1",
+        "done_h1",
+        "done_a1",
+        "loop_h1",
+        "loop_a1"
+      ]
+    },
+    "h_a1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Prototype ISS-025 capture-step patch",
+        "level": "h3"
+      }
+    },
+    "desc_a1": {
+      "type": "Text",
+      "props": {
+        "text": "Instrument `.github/workflows/aeon.yml` capture step for reg-monitor (sr=10%, worst of chronic tail) with `tee` to `.outputs/reg-monitor.md` in parallel with the existing stdout capture, dispatch via `gh workflow run aeon.yml -f skill=reg-monitor`, then diff resulting `.outputs/reg-monitor.md` against cron-state `output_tokens` for the same run.",
+        "variant": "body"
+      }
+    },
+    "why_h1": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "why_a1": {
+      "type": "Text",
+      "props": {
+        "text": "Hard deadline 2026-07-04 in 3 days, 19-skill chronic tail bleeding `output_tokens=0` day 13, `open+ISS-025-PR` blocked by novelty gate.",
+        "variant": "body"
+      }
+    },
+    "done_h1": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "done_a1": {
+      "type": "Text",
+      "props": {
+        "text": "Dispatch run completes; `.outputs/reg-monitor.md` non-empty AND cron-state entry has `output_tokens>0` in same run id.",
+        "variant": "body"
+      }
+    },
+    "loop_h1": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "loop_a1": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-capture-fix",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_a2",
+        "desc_a2",
+        "why_h2",
+        "why_a2",
+        "done_h2",
+        "done_a2",
+        "loop_h2",
+        "loop_a2"
+      ]
+    },
+    "h_a2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Hedge VELVET pre-unlock",
+        "level": "h3"
+      }
+    },
+    "desc_a2": {
+      "type": "Text",
+      "props": {
+        "text": "POST `2026-07-01-advisor-manual-velvet-hedge` short pick to investiments `/api/picks` with $1.20 spot + $1.72 entry invalidation, thesis \"day-4 -12.8% unwind, 9d to 2026-07-10 unlock cliff, no reclaim signal\".",
+        "variant": "body"
+      }
+    },
+    "why_h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "why_a2": {
+      "type": "Text",
+      "props": {
+        "text": "9 days to unlock cliff, entry $1.72 already -12.8%, no reclaim signal, unlock overhang loads distribution risk into thin tape.",
+        "variant": "body"
+      }
+    },
+    "done_h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "done_a2": {
+      "type": "Text",
+      "props": {
+        "text": "`/api/picks` POST returns 200; pick id `2026-07-01-advisor-manual-velvet-hedge` visible in investiments feed.",
+        "variant": "body"
+      }
+    },
+    "loop_h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "loop_a2": {
+      "type": "Badge",
+      "props": {
+        "text": "velvet-pre-unlock",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_a3",
+        "desc_a3",
+        "why_h3",
+        "why_a3",
+        "done_h3",
+        "done_a3",
+        "loop_h3",
+        "loop_a3"
+      ]
+    },
+    "h_a3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Comment on PR #150",
+        "level": "h3"
+      }
+    },
+    "desc_a3": {
+      "type": "Text",
+      "props": {
+        "text": "Comment via `gh pr comment 150 --body \"@aaronjmars — 5-line diff (usepod_model→model), day 3 stall, $456/mo bleed continuing until merge\"`.",
+        "variant": "body"
+      }
+    },
+    "why_h3": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "why_a3": {
+      "type": "Text",
+      "props": {
+        "text": "Day-3 operator-merge gate on $456/mo cost bleed, silent since 6-29 18:17Z, comment forces attention.",
+        "variant": "body"
+      }
+    },
+    "done_h3": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "done_a3": {
+      "type": "Text",
+      "props": {
+        "text": "`gh pr view 150 --json comments` shows new comment; body hash registered in `.notify-sent-hashes`.",
+        "variant": "body"
+      }
+    },
+    "loop_h3": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "loop_a3": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-150-merge",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_a4",
+        "desc_a4",
+        "why_h4",
+        "why_a4",
+        "done_h4",
+        "done_a4",
+        "loop_h4",
+        "loop_a4"
+      ]
+    },
+    "h_a4": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Annotate BTC day-7",
+        "level": "h3"
+      }
+    },
+    "desc_a4": {
+      "type": "Text",
+      "props": {
+        "text": "Annotate `memory/topics/crypto.md` with BTC day-6 (6-30 close $58,551 = 6th sub-$60,500) → day-7 checkpoint, $63.5k/$65.9k reclaim invalidation, feed daily advisor 13:00Z prompt directly.",
+        "variant": "body"
+      }
+    },
+    "why_h4": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "why_a4": {
+      "type": "Text",
+      "props": {
+        "text": "Quarter-end sell flow bled into July-open, 12:18Z pin $58,432, tonight's UTC close decides 7th-red vs reclaim.",
+        "variant": "body"
+      }
+    },
+    "done_h4": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "done_a4": {
+      "type": "Text",
+      "props": {
+        "text": "`memory/topics/crypto.md` contains new \"BTC day-6/7 checkpoint\" section with reclaim levels + directional bias, committed to main.",
+        "variant": "body"
+      }
+    },
+    "loop_h4": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "loop_a4": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-breakdown-day-6",
+        "variant": "secondary"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_a5",
+        "desc_a5",
+        "why_h5",
+        "why_a5",
+        "done_h5",
+        "done_a5",
+        "loop_h5",
+        "loop_a5"
+      ]
+    },
+    "h_a5": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Audit scorecard cron",
+        "level": "h3"
+      }
+    },
+    "desc_a5": {
+      "type": "Text",
+      "props": {
+        "text": "Audit `.github/workflows/operator-scorecard.yml` cron trigger — Mon 10:30Z slot missed 3 consecutive weeks (6-15/6-22/6-29). If cron broken or workflow disabled, open patch PR; else file ISS with `gh run list --workflow=operator-scorecard.yml` evidence.",
+        "variant": "body"
+      }
+    },
+    "why_h5": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "why_a5": {
+      "type": "Text",
+      "props": {
+        "text": "3-week scheduler-side never-run gap, silent since first miss, blocks weekly agent-health + community-growth verdict.",
+        "variant": "body"
+      }
+    },
+    "done_h5": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "done_a5": {
+      "type": "Text",
+      "props": {
+        "text": "PR opened fixing cron trigger OR new ISS filed with `gh run list` history attached.",
+        "variant": "body"
+      }
+    },
+    "loop_h5": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop",
+        "level": "h4"
+      }
+    },
+    "loop_a5": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard-schedule-gap",
+        "variant": "secondary"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: memory=46 logs=7 topics=17 prs=2 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
