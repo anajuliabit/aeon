@@ -1,10 +1,14 @@
-Logged NO_GAP day 7 to `memory/logs/2026-06-30.md`. No notification sent (silent per spec).
-
 ## Summary
 
-Executed `skills/search-skill/SKILL.md`. Exit mode: **SEARCH_SKILL_NO_GAP** (day 7).
+Executed `skills/search-skill/SKILL.md`. **Exit: SEARCH_SKILL_NO_GAP (day 8)** — extends the 6-24 → 6-30 streak.
 
-- **Gap derivation:** all four sources (cron-state, issues, priorities, log signals) failed to yield a concrete capability word. The chronic-tail skills with sr<0.6 (reg-monitor 10% → thought-review 48%) all share the `output_tokens=0` sandbox-truncation signature (cluster ISS-019/020/021/024/025) — infrastructure failure mode, not capability gap. cf=0 fleet-wide; failure mode unchanged from prior 6 NO_GAP runs.
-- **Per spec:** no catalog search, no notification, no install. Logged only.
-- **Files modified:** `memory/logs/2026-06-30.md` (appended `## search-skill` block).
-- **Follow-ups:** none from this skill. ISS-025 capture-step fix (day 7 unshipped) remains the durable blocker on the chronic tail — tracked by weekly-review.
+**Step 1 gap-derivation** all 4 sources dry:
+- (a) cf≥2 clause empty (fleet cf=0); sr<0.6 matches 24 skills, but every one carries `output_tokens=0` sandbox-truncation signature (ISS-019/020/021/024/025) — MEMORY.md durable rule says stop noise-filing unless failure mode changes; it hasn't
+- (b) only ISS-024 (skill-health quality-regression) matches issue category filter — internal `missing_pattern` bug, not solvable by installing an external skill
+- (c) MEMORY.md has no "Next Priorities" section (only "Current Goals", all infra/secret/operator blockers — not external-capability gaps)
+- (d) recent-log grep hits are commit-message noise, no concrete capability-word signals
+
+Per spec § Notify + § Constraints, silent on NO_GAP — **no notification fired, no catalog searched, no install attempted, no article written**.
+
+**Files changed:** `memory/logs/2026-07-01.md` (appended `## search-skill` block per Step 8).
+**Follow-up:** none — carry pattern continues; reconsider only when cron-state failure signature changes or a new capability-gap surfaces in memory.
