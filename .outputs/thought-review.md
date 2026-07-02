@@ -1,1 +1,1 @@
-🧭 thought review · no captures in last 24h. inbox unchanged (day-11, 20 reviews). last real capture 2026-06-21.
+🧭 thought review · last 24h · 0 captures. nothing to surface. inbox 1 file, 231h unarchived (operator-owned).
