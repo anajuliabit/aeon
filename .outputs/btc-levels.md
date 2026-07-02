@@ -1,13 +1,18 @@
-Quiet run complete. No alerts fired.
+Done.
 
 ## Summary
 
-**BTC spot:** $61,528.66 (+1.3% from the 08:26Z run at $60,274)
+**Run: 2026-07-02 17:14Z — quiet**
 
-**Levels checked:**
-- Leverage-review (≤$45k): clear — $61.5k is well above
-- Breakdown (Jul-01 close $59,979.90 < $60,500): already alerted for that date, no repeat
-- Reclaim $63,500: spot $61,528 still below, no alert
-- Reclaim $65,900: same, no alert
+- **Spot:** $61,649.80 (up from $61,528 at last run 13:07Z)
+- **Last close (2026-07-01):** $59,979.90 — 7th consecutive sub-$60,500, already alerted at 01:17Z today
 
-**No notification sent.** State updated (`memory/btc-levels-state.json`) and log appended (`memory/logs/2026-07-02.md`). Both committed.
+**Level checks:**
+| Level | Status |
+|---|---|
+| Spot ≤ $45,000 (leverage-review) | Clear — no alert |
+| Daily close < $60,500 (Jul-01) | Already alerted — no duplicate |
+| Spot ≥ $63,500 (reclaim) | Not reached — no alert |
+| Spot ≥ $65,900 (reclaim confirmed) | Not reached — no alert |
+
+No notification sent (quiet run). State and log committed.
