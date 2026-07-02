@@ -139,6 +139,17 @@ fi
 REPORT=$(printf '%s' "$REPORT" | jq --arg ts "$NOW_ISO" '.generatedAt = $ts
   | .disclaimer = (.disclaimer // "Not financial advice. For informational purposes only.")')
 
+# Deterministic vesting-policy enforcement (mirrors run.sh): REPPO is a standing
+# conviction hold — a REPPO "decrease" action is reframed as optional, and its
+# thesis says so; MAMO/WELL partial-sale actions get the sell-100% reminder.
+REPORT=$(printf '%s' "$REPORT" | jq -c '
+  .actions = [(.actions // [])[]
+    | if (.symbol // "" | ascii_upcase) == "REPPO" and .direction == "decrease" then
+        .thesis = "OPTIONAL (policy: REPPO conviction hold; profit-taking only) — " + (.thesis // "")
+      elif ((.symbol // "" | ascii_upcase) as $s | ($s == "MAMO" or $s == "WELL")) and .direction == "decrease" then
+        .thesis = ((.thesis // "") + " [policy: sell 100% of every MAMO/WELL unlock on claim.]")
+      else . end]')
+
 if [ "$DRY" = "1" ]; then
   echo "----- WEEKLY REPORT (dry) -----"; printf '%s\n' "$REPORT" | jq .
   exit 0

@@ -387,6 +387,23 @@ REPORT="$(jq -n \
 
 echo "advisor: report assembled"
 
+# Deterministic vesting-policy enforcement (prompt alone has proven insufficient
+# — 2026-07-02 report still pushed a HIGH-urgency REPPO trim). Policy:
+#   - REPPO is a conviction hold: any REPPO "decrease" rec is demoted to LOW
+#     urgency and reframed as optional profit-taking; never dropped (the
+#     operator still sees it), never HIGH/MEDIUM.
+#   - MAMO/WELL unlocks are always sold 100%: annotate any partial-sale rec.
+REPORT="$(printf '%s' "$REPORT" | jq -c '
+  .recommendations = [(.recommendations // [])[]
+    | if (.symbol // "" | ascii_upcase) == "REPPO" and .direction == "decrease" then
+        .urgency = "low"
+        | .title = "OPTIONAL (policy: REPPO conviction hold) — " + (.title // "")
+        | .rationale = ((.rationale // "") + " [policy filter: REPPO is a standing conviction hold (~$100M mcap thesis); trims are optional profit-taking only, never portfolio-driven.]")
+      elif ((.symbol // "" | ascii_upcase) as $s | ($s == "MAMO" or $s == "WELL")) and .direction == "decrease" then
+        .rationale = ((.rationale // "") + " [policy: standing order is sell 100% of every MAMO/WELL unlock on claim — partial-sale suggestions notwithstanding.]")
+      else . end]')"
+echo "advisor: vesting policy filter applied"
+
 # ---------------------------------------------------------------------------
 # 5a. Short-term trades — fundamentals + news + momentum, LONG or SHORT, sized
 #     to the ≤1% moonshot sleeve. Three stages (all OUTSIDE the LLM's tool-less
