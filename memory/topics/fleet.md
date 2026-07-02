@@ -957,3 +957,50 @@ state: what was built, recurring blockers, and health.
 - **$LIT (Lighter) thesis top signal** — @Flowslikeosmo: 17.9M/yr buyback-burn vs 7.5M/yr staking emit ≈ 2.4× net-supply shrink if revenue holds; first on-chain burn drops post-Q2 close; P/S 13.5×, P/F 10×, 30d fees +38.5%. 1st surfacing on curated DeFi flow this week.
 - $LNQ (Linq) small-cap AI-compute infra bet; watchlist candidate.
 - **DEX-supremacy meta being questioned** in curator screens (Flowslikeosmo shortlist RAIL/NXM/STON/YB/AQUA/OPINION/MOR/CAPX notably DEX-light) = macro read for token-pick / narrative-tracker.
+
+## 2026-07-02 entry
+
+### PRs — batch merge day
+- **PR #150 fix(aeon.yml) `usepod_model` → `model:` MERGED 13:20:07Z** — 5-line diff shipped after ~68h stall; unblocks on-chain-monitor/token-pick/token-movers from `output_tokens=0` truncation root cause. **12:00 UTC batch (6 skills stopped dispatching 6-28) should recover on Fri 7-03 tick — first live test of the fix.** ~$456/mo bleed halted.
+- **PR #151 fix(aeon.yml) skill-evals cron Sun `0 6 * * 0` → `0 22 * * 0` MERGED 13:20:37Z** — ISS-026 fix ships. Heartbeat/skill-health/fork-skill-digest/skill-update-check/fork-skill-gap ticks now land before Sunday eval reads. Issue file needs INDEX flip open→resolved.
+- **PR #149 docs(skill-graph) STILL STALLED ~94h day-4** — dedup-blocked, operator-merge gated. Only PR left in the stack post-batch.
+
+### fork-skill-digest carries
+- STUCK ~93h dispatched row (6-28 18:38Z → last_success 6-21 18:57Z weekly Sun slot). Next Sun 7-05 fresh tick.
+
+### BTC breakdown day 7 CONFIRMED + first material bounce
+- **btc-levels 01:17Z fired ⚠️ breakdown alert** for 7-01 close $59,979.90 = **7th consecutive sub-$60,500 close**. 05:11Z spot $60,752 = first close-window print back at the $60k handle of the streak; 13:07Z $61,528 = first material touch of the breakdown line in 7 days; 17:14Z $61,650 pins the reclaim attempt below $63.5k/$65.9k rails. **Tonight's UTC close decides day-8-red or first-reclaim.**
+- June ETF net −$4.51B = **worst month ever** (IBIT −$212M on 6-30, SpaceX-IPO rotation cited); DXY reversal off local highs; July historical avg +7.25% / median +8.16% (July-relief base case).
+
+### Fleet health
+- **skill-health 6-30 18:08Z snapshot unchanged** (daily-cadence tick 7-01 18:30Z byte-identical hash 1ff18e84): 9 healthy · 23 degraded · 8 warning · 0 critical · 2 no_data. 15 open issues; ISS-026 fix-shipped via PR #151 but INDEX still Open.
+- Heartbeat 08:26Z + 15:29Z **HEARTBEAT_OK** — fleet cf=0. 19-skill chronic tail sr<0.5 unchanged from 7-01 (all `output_tokens=0` sandbox-truncation signature cluster ISS-019/020/021/024/025). agent-buzz 52% + defi-monitor 53% stay above cluster boundary.
+- **operator-scorecard Mon 10:30Z slot MISSED day 4** — 6-29 Monday tick ~101h past no dispatch. Scheduler-side never-run gap carries.
+
+### watchlist — whole-green day (first since 6-28)
+- +5.19% median 1d across 4 tokens. **WELL 3rd close post-6-30 vol spike confirms direction UP not distribution** — reverses 7-01 "supply-hitting-bid" thesis to **washout-then-reversal**. **REPPO vol-trigger 3.16× rail** on $0.021 wobble-line reclaim ($294K vs $93K baseline drought) — 4-day base snaps, participation finally arrives. WELL 1.55× decay. MAMO 2nd green clears $0.0083 first time since 6-27 on 0.99× baseline. GITLAWB +8.03% snaps "worst 1d" pattern but on 0.88× shrinking vol = participation-shallow bounce.
+
+### daily-routine 7-02 (tape flip)
+- **81/100 breadth** (up from 32/100 6-30 = biggest single-day swing in 30d window). Winners **M MemeCore +65.8% MAJOR MEAN-REVERT** (7d -76% → +83% swing week = post-capitulation shakeout day-2), RIF +36.4%, GWEI +20.5% mean-revert, **LIT +15.3% BREAKOUT day-2 7d +29%** (Flowslikeosmo tokenomics thesis 7-01 playing out on tape — buyback-burn math becoming a live-market read), SYN +14.3%, PENDLE +12.5%, MORPHO +8.5%. Losers **VELVET −60.1% #138 CAPITULATION** (HIGH 11/10 pick day-5 fully blown: entry $1.97 → $0.62 = **−68.5% blown position**; 8d to July-10 unlock priced 8d early — market did not wait), TAC −38.2% (7d +77% breakout fully unwound), DYDX −29.1% (was yest #3 winner +16.8%), LAB −14.4% day-2 CAPITULATION MAJOR.
+
+### security-digest 7-02 (brandjack extends to testing arm + pattern inversion)
+- **CVE-2026-45659 SharePoint added KEV 7-01** — only fresh KEV entry this week; 4 total this-week (SimpleHelp 6-29 + Windchill/Cisco Unified CM 6-25 all dedup-carried).
+- **This-week: 4 major CVEs (patched):** GHSA-84hp-mqvj-3p8h mcp-memory-service CVSS 9.8+PoC unauth doc-API RCE ≥10.67.1; GHSA-xr65-5cpm-g36x/CVE-2026-44935 rancher/fleet Go 9.9 cross-namespace secret disclosure; GHSA-mhc6-2gfq-xx62/CVE-2026-44939 rancher Go 9.6 YAML command injection; GHSA-9mm9-rqhj-j5mx/CVE-2026-49987 repomix npm 8.8+PoC --remote-branch arg-injection RCE.
+- **Brandjack extends to testing-framework arm** — `vitest-agent` (Vitest+agent brand), 3-pkg Tailwind cluster (tailwind-animates + animatecss-postcss-plugin + tailwind-typography-stylecss all published 7-02). Extends the pattern (AI-infra 6-30 → enterprise-data-infra 7-01 → testing-framework 7-02).
+- **Pattern inversion vs 7-01** — GH `patched_versions: null` cascade → all-patched-today. **API field lags advisory-page reality; WebFetch on advisory pages is canonical.** Codify: don't trust the JSON field for triage.
+- **MCP/agent-infra 5-advisory 48h window** — mcp-memory-service + @apify/actors-mcp-server + auth-fetch-mcp + neuro-cortex-memory (**CLAUDE_PROJECT_DIR RCE — worth tracking, direct Claude Code adjacency**) + vitest-agent brandjack.
+
+### hn-digest 7-02
+- **"For first time, a cell built from scratch grows and divides"** (844p, Quanta) — synthetic biology milestone.
+- **"Physical disc production ending Jan 2028 for PlayStation"** (703p) — end-of-media-era cultural marker.
+- **"ZCode — Harness for GLM-5.2"** (377p, z.ai) — **Chinese-model agentic-harness axis extends** the skills-as-primitive convergence (google/agents-cli 7-01 + Anthropic Agent SDK 6-28 + ASPIRE paper 7-02 + ZCode/GLM-5.2 = **day-3 convergence with 4 provider artifacts including a Chinese lab**).
+- **"Cloudflare Monetization Gateway via x402"** (290p) — HTTP 402 payment-rail behind CF, "charge for any resource" — micropayment infrastructure durable signal for aeon apps that could paywall through CF's rail.
+
+### list-digest 7-02
+- **@Flowslikeosmo doubles down** — Flare 2-lanes (interoperable assets + confidential compute, implicit no-vote on AVS/DA optionality) + $LIT tokenomics-alignment overhaul (2nd surfacing this week). Tokenomics-as-team-seriousness filter now durable-tracked caller (adds $LIT to memory/topics/crypto.md's SLX/VELVET SLX/VELVET filter).
+
+### paper-pick 7-02
+- **MemSyco-Bench (arXiv 2607.01071, HF ↑17)** — memory sycophancy in agents; direct aeon-runtime hit (memory-consolidation quality risk). Continues eval-side thread Dockerless (7-01) → TUA-Bench (6-30) → Gauntlet (6-29) → OPID (6-28) → Verification Horizon (6-27).
+
+### reg-monitor day-1 tick surfaced 7-02 (via daily-routine)
+- **CFTC Event Contracts NPRM** carries — comment window closes ~2026-07-27 (T-25d), **biggest prediction-market action since Kalshi-Selig letter**.

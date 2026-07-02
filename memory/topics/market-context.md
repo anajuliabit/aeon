@@ -1,19 +1,26 @@
-# Market Context (as of 2026-07-01)
+# Market Context (as of 2026-07-02)
 
-> **Take:** BTC breakdown day 6 confirmed (6-30 close $58,551 = 6th consecutive sub-$60,500). First sub-$60k print since 2024, 50% below Oct-2025 $126k ATH. Breadth deteriorated 45/100 (6-30) → 32/100 (7-01). Quarter-end de-grossing bleeds into July-open. Conviction: high.
+> **Take:** BTC breakdown day 7 CONFIRMED (7-01 close $59,979.90 = 7th sub-$60,500) → first material bounce day. Spot climbed $60,752 → $61,650 across the tape; 13:07Z 3.0% intraday from $60,276 = first touch of the breakdown line in 7 days. Breadth flipped 32/100 → **81/100** = biggest single-day swing in 30d window. Whole-green watchlist (+5.19% median). July-relief base case in play (historical avg +7.25%). Tonight's UTC close decides day-8-red or first-reclaim ($63.5k / $65.9k rails still gate). Conviction: medium-high; regime pivot signal but no reclaim yet.
 
 ## Signal Snapshot
-- BTC $58,432 (−1.2% 24h, −6.4% 7d) — intra-day range $58,212–$59,846 (7-01 spot ticks 00:19Z–17:03Z)
-- ETH $1,570 (−0.9% 24h) · SOL $74.58 (+0.9% 24h — only major green)
-- BNB $544 (−1.1%) · HYPE $63.37 (−3.0%, leadership retracing)
-- Breadth: 32/100 green top-100 (down from 45/100 6-30); median top-50 −0.44%
-- Fear & Greed: 18 (Extreme Fear) — day 5
+- BTC $60,276–$61,650 intraday (+3.0% 24h, −2.5% 7d) — 7-02 spot ticks 01:17Z alert → 17:14Z $61,650
+- ETH $1,618 (+3.0% 24h) · SOL $78.14 (+4.8% — **leadership on the bounce**)
+- BNB $549.68 (+1.0%) · HYPE $63.20 (−0.3%, **leadership NOT participating — divergence**)
+- Breadth: **81/100 green top-100** (was 32/100 6-30 = biggest single-day swing in 30d); median top-50 +1.6%
+- Fear & Greed: last read 18 Extreme Fear day-5 (WebSearch not refreshed intraday 7-02)
 
 ## What Changed Since Last Refresh
-- **BTC breakdown day 6 CONFIRMED** — 6-30 close $58,551 (btc-levels 00:19Z ⚠️ alert). First sub-$60k print since 2024. Quarter-end de-grossing did the last leg (Strategy discloses first-ever BTC sale ~$2B trim from "never sell" framing); IBIT −$300M; June −20% BTC / YTD −34%; $1B leveraged longs wiped 24h.
-- **Anthropic ship-day cluster** — Claude Sonnet 5 (80.4% Terminal-Bench, 97% of Opus at ~15% cost, $2/$10 intro thru 8-31), Claude Science, DoC lifts Mythos 5 export controls (reverses 6-16 trusted-orgs restriction), Claude Code stego prompt-marking disclosure (operator runtime relevance for proxy/gateway routing). Biggest single-day Anthropic HN presence in 30d.
-- **SLX HIGH 9/10 pick day-4 unwind** — entry $0.475 → $0.458 = -3.6% (was +7.3% 6-30, +15.1% 6-29). Gains fully wiped; 7d still +60% cushion.
-- **MCP / A2A consolidation** — MCP as default tool layer (Anthropic/OpenAI/Google/MS/Meta all support, native in LangChain/CrewAI/LangGraph/LlamaIndex); Google's A2A fills inter-agent slot. Emerging split: **MCP for tool↔agent, A2A for agent↔agent**, use both.
+- **BTC breakdown day 7 CONFIRMED → first material bounce** — 7-01 close $59,979.90 (btc-levels 01:17Z ⚠️); 7-02 tape flip 05:11Z $60,752 → 13:07Z $61,528 → 17:14Z $61,650 = first close-window print back at $60k of the streak. Sustained break above $61-62k opens $65k door; failure retests $57-58k.
+- **June ETF net −$4.51B = worst month ever** (IBIT −$212M on 6-30, SpaceX-IPO rotation cited). DXY reversal off local highs helping.
+- **VELVET HIGH 11/10 pick FULLY BLOWN day-5 CAPITULATION −60.1%** — entry $1.97 → $0.62 = **−68.5% blown**. July-10 unlock priced 8d early. Position closed.
+- **LIT +15.3% BREAKOUT day-2, 7d +29%** — Flowslikeosmo tokenomics buyback-burn thesis (surfaced list-digest 7-01) playing out on tape. Live-market read.
+- **REPPO watchlist VOLUME SPIKE TRIGGER 3.16×** — 4-day vol drought base ($56K–$122K) snapped ($294K vs $93K baseline), price clears $0.021 wobble line. WELL 3rd close post-6-30 spike confirms direction UP (reverses supply-hitting-bid thesis to washout-then-reversal).
+- **PR #150 + #151 both MERGED 7-02 13:20Z** — $456/mo cost fix (usepod_model→model) + ISS-026 skill-evals cron 06→22 UTC Sunday. Should unblock 12:00 UTC batch (6 skills dark since 6-28) on Fri 7-03 tick.
+- **Sonnet 5 developer-preference 82% inside Claude Code** (Anthropic internal). 92.4% SWE-bench vs Opus 4.6's 80.8%. Anthropic-race-to-IPO framing.
+- **Skills-as-primitive convergence day-3 with 4 provider artifacts** — Anthropic Agent SDK (6-28) + google/agents-cli (7-01) + ASPIRE robotics paper (7-02) + **z.ai ZCode/GLM-5.2** (HN 7-02 377p, Chinese-lab entrant). Cross-vendor durable pattern.
+- **Brandjack wave extends to testing-framework arm** — vitest-agent + 3-pkg Tailwind cluster on 7-02 (was AI-infra 6-30 → enterprise-data-infra Confluent 7-01 → testing-framework 7-02). Confluent + Vitest = 3rd/4th brandjack vertical opens.
+- **Cloudflare x402 Monetization Gateway shipped** (HN 7-02 290p) — HTTP 402 payment-rail behind CF, "charge for any resource" — micropayment infrastructure durable signal for aeon-hosted apps.
+- **CFTC Event Contracts NPRM doc 2026-13239** (fresh 7-01) — moves fully-collateralized contracts out of 2017 no-action-letter regime, comment window closes ~2026-07-27 (T-25d), **biggest prediction-market action since Kalshi-Selig letter**.
 
 ## Active Narratives
 - **Structural meta-bear / "crypto needs new narrative"** — phase: rising (persisting). Evidence: Breadth 6/20, F&G 18 Extreme Fear day 4, ETF ~$5B cumulative June outflows, BTC −6.4%/ETH −8.5% 7d; meta-bear now day 3+ and persisting past 24h half-life (confirmed 6-27).

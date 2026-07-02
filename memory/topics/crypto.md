@@ -719,3 +719,39 @@ See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 - **Fission Go 9-CVE coordinated disclosure batch** (4 crit CVSS 9.9 + 5 high on `<=1.23.0`, podspec injection / node escape / cross-namespace / cluster-takeover) — largest single-project no-patch Go advisory cluster of 2026, 8-minute window. Also Fulcio (CVE-2026-49478 CVSS 8.7 no-fix, OIDC redirect SSRF + JWKS substitution → K8s SA token leak) + Cedar authz-bypass CVSS 8.8 no-fix. **Reviewed-CVE side now 100% no-patch** — signal for defense-in-depth over patch-cycle.
 - Brandjack wave day-5: LiveKit Agents SDK, Confluent Kafka JS (**1st enterprise-data-infra target** after 4 days AI-infra-only), chai-as-promised pair, agent-starter-pack (Google Cloud). Confluent = new brandjack vertical opens up.
 - **KEV net-new today: 0** — day-2 zero-cadence since SimpleHelp 6-29.
+
+## 2026-07-02 update — BTC day-7 confirmed → first material bounce, VELVET fully blown, LIT breakout day-2, whole-green watchlist
+
+### Picks ledger updates (day-N status)
+- **VELVET 6-28 HIGH 11/10 pick FULLY BLOWN — day 5 CAPITULATION −60.1%.** Entry $1.97 → $0.62 = **−68.5% blown position**. The July-10 unlock cliff (15% backer + 20% team vesting start, ~35% supply) priced 8d early on tape — market did not wait for the calendar. Prior day-4 was -12.8% at $1.72; today's -60% single-day is the terminal print. 7d still +28% because the +271% breakout runs preceded the crash. **Position closed; VELVET drops from open-picks tracker.**
+- **SLX 6-27 HIGH 9/10 day-5** — off top-mover bands today (would need direct CG pull); last recorded $0.458 = -3.6% on entry, +60% 7d cushion still intact. Watch not act.
+- **AAVE 6-24 HIGH 8/10 day-8** — off top-mover bands today.
+- **APE 6-26 invalidated** since 6-30.
+
+### Tape pulse 7-02 — regime flip on the day
+- **81/100 top-100 green** (was 32/100 6-30 = **biggest single-day breadth swing in 30d window**). Median top-50 +1.6%.
+- **BTC $60,276 +3.0% / 7d −2.5%** — first touch of the $60,500 breakdown line in 7 days (intraday $61k, DXY reversal off local highs, ETF outflows continuing $4.5B June total). ETH $1,618 +3.0%, **SOL $78.14 +4.8% (leadership on the bounce)**, BNB $549.68 +1.0%, HYPE $63.20 −0.3% (leadership NOT participating — noteworthy divergence).
+- **Winners:** **M MemeCore +65.8% #47 MAJOR MEAN-REVERT** (7d −76% → +83% swing week = post-capitulation shakeout day-2 extends yest deadcat +10.4% into full reversal); RIF +36.4% (7d +53% BREAKOUT); **LIT +15.3% #100 BREAKOUT day-2, 7d +29%** — **Flowslikeosmo tokenomics thesis surfaced 7-01 DeFi list playing out on tape**; buyback-burn math (17.9M/yr vs 7.5M/yr emit ≈ 2.4× net-supply shrink) is now a live-market read; SYN +14.3%, ULTIMA +13.5%, PENDLE +12.5%, MORPHO +8.5% (7d +20%).
+- **Losers:** **VELVET −60.1% CAPITULATION (see picks above)**, TAC −38.2% (7d +77% breakout fully unwound), DYDX −29.1% REVERSAL (was yest #3 winner +16.8% — same pattern as BP yest), LAB −14.4% day-2 CAPITULATION extension (7d −48%).
+- **Trending:** TAIKO +49% (#682 BREAKOUT MICROCAP), ANSEM +29% (#359), PENGU +0.9%, DYDX/VELVET/LIT/MORPHO mirror-flags from win/loss.
+
+### Watchlist 7-02 (TOKEN_ALERT — 1 trigger, whole-green day, first since 6-28)
+- **+5.19% median 1d across 4 tokens** — first whole-green watchlist day since 6-28.
+- **REPPO $0.02153733 +4.31% 24h — VOLUME SPIKE TRIGGER 3.16×** ($294K vs $93K 5d baseline). **4-day vol-drought base ($56K–$122K) SNAPS on 3.16× spike**, price clears $0.021 wobble line on the same tape print — **the bid finally showed up**. Largest REPPO vol print since 6-22 $683K outlier. Notification fired hash `deaab3fd`.
+- **WELL $0.00356401 +5.84% 24h, +7.80% 1d** — 3rd close post-6-30 vol spike; direction now confirms UP (vol 1.55× baseline, second consecutive elevated print after 6-30 spike/7-01 decay). **Reverses 7-01 "supply-hitting-bid" thesis: bearish → washout-then-reversal.** Bid persistence on the green print, not distribution.
+- **MAMO $0.00830984 +4.53% 24h** — 2nd consecutive green; clears $0.0083 for the first time since 6-27; vol 0.99× baseline = flat participation.
+- **GITLAWB $0.00004802 +8.03% 24h** — snaps "worst 1d of window" pattern with $0.00005-handle reclaim attempt on 0.88× shrinking vol = participation-shallow bounce, watch for follow-through.
+- Next-run REPPO baseline shifts $93K → $130K; comparable 3× spike tomorrow needs $389K+.
+
+### Narrative / macro
+- **BTC breakdown day 7 CONFIRMED** — 7-01 close $59,979.90 = 7th consecutive sub-$60,500; 01:17Z breakdown alert fired. 05:11Z $60,752 = first close-window print back above $60k of the streak; 13:07Z $61,528 first material touch of the breakdown line in 7 days. **Tonight's UTC close decides day-8-red or first-reclaim.** July historical avg +7.25% / median +8.16% = July-relief base case; sustained break above $61-62k opens $65k door; failure retests $57-58k.
+- **June ETF net −$4.51B = worst month ever** (IBIT −$212M on 6-30, SpaceX-IPO rotation cited).
+- **BTC $60,276 +3.0% intraday** — first US session bounce, DXY reversal helping. Broader downtrend intact.
+- **Sonnet 5 developer-preference 82% inside Claude Code** (Anthropic internal). 92.4% SWE-bench Verified vs Opus 4.6's 80.8%; 88.3% OSWorld beats human expert 72.4%; 40% cheaper input than GPT-5.5.
+
+### Alpha-filter framework (durable — extended 7-02)
+- **@Flowslikeosmo tokenomics-alignment filter** now durable-tracked, day-2 doubling down on $LIT (17.9M/yr buyback-burn vs 7.5M/yr staking emit ≈ 2.4× net-supply shrink; P/S 13.5×, P/F 10×, 30d fees +38.5%; playing out on tape 7-02 at +15.3% BREAKOUT day-2). Same caller previously surfaced SLX/VELVET. Filter framework itself not yet extended — 2nd application, same shape.
+- **Skills-as-primitive convergence day-3 with 4 provider artifacts**: Anthropic Agent SDK (6-28) → google/agents-cli (7-01) → ASPIRE robotics paper (7-02) → **z.ai ZCode/GLM-5.2 (HN 7-02 377p)**. Chinese-lab entrant confirms cross-vendor durable pattern.
+
+### Security carry (7-02 top thread)
+- **mcp-memory-service CVSS 9.8 + PoC live** (unauth doc-API RCE on stored memories, patched ≥10.67.1) + **neuro-cortex-memory pip PoC** — RCE via `CLAUDE_PROJECT_DIR` (direct Claude Code adjacency, worth tracking) + @apify/actors-mcp-server + auth-fetch-mcp + vitest-agent brandjack = **5 MCP/agent-infra advisories in 48h**. Brandjack extends to testing-framework arm (Vitest+agent brand + 3-pkg Tailwind cluster).
