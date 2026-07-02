@@ -1,7 +1,7 @@
 {
-  "hash": "1ff18e842395b0b2cfd4d9d0cbd4c309219d414988128e3ae65c0b5097503259",
-  "last_notified_at": "2026-07-01T18:30:00Z",
-  "last_run_at": "2026-07-01T18:30:00Z",
+  "hash": "0cedcccb2b12b3e2df9adeaaa68f51b0e510357a2a9687489ef582c2a81e938f",
+  "last_notified_at": "2026-07-02T18:53:00Z",
+  "last_run_at": "2026-07-02T18:53:00Z",
   "classification": {
     "critical": [],
     "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "vuln-scanner"],
@@ -10,7 +10,7 @@
     "healthy_count": 9,
     "no_data": ["fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "sandbox-truncation output_tokens=0 — 23 DEGRADED + 8 WARNING share signature (cluster ISS-019/020/021/024/025). Classification byte-identical to 2026-06-30T18:08Z report; daily-cadence notify (24h+22m elapsed). No skill at cf≥3; no CRITICAL, no FLAPPING; nothing to file or resolve. skill-runs sandbox-blocked (SKILL_HEALTH_PARTIAL); cron-state-only classification",
+  "systemic": "sandbox-truncation output_tokens=0 — 23 DEGRADED + 8 WARNING share signature (cluster ISS-019/020/021/024/025 day-14, hard deadline 07-04 T-2d). Classification byte-identical to 2026-06-30 + 2026-07-01 reports; 24h+22m daily-cadence notify. skill-runs sandbox-blocked (SKILL_HEALTH_PARTIAL); cron-state-only classification. No skill at cf≥3; no CRITICAL, no FLAPPING; nothing to file or resolve. PR #150 (usepod_model→model, ISS-025 root cause) + PR #151 (skill-evals cron 06→22 UTC, ISS-026) merged 2026-07-02T13:20Z — next 12:00Z tick will test whether root-cause fix clears the sandbox-truncation cluster.",
   "open_issues": 15,
   "resolved_this_run": 0,
   "filed_this_run": 0

@@ -1,0 +1,667 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-02"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "section_degraded",
+        "sep2",
+        "section_warning",
+        "sep3",
+        "section_nodata",
+        "sep4",
+        "section_healthy",
+        "sep5",
+        "section_summary"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: DEGRADED (23 skills affected)",
+        "message": "Systemic issue: sandbox-truncation (output_tokens=0). Cluster: ISS-019/020/021/024/025. Hard deadline: 07-04 T-2d",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "section_degraded": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_degraded",
+        "text_degraded_note",
+        "degraded_1",
+        "degraded_2",
+        "degraded_3",
+        "degraded_4",
+        "degraded_5"
+      ]
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (23 total; top 5 by days-since-success)",
+        "level": "h2"
+      }
+    },
+    "text_degraded_note": {
+      "type": "Text",
+      "props": {
+        "text": "+18 additional degraded skills — see memory/issues/INDEX.md",
+        "variant": "muted"
+      }
+    },
+    "degraded_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1_name",
+        "d1_stats",
+        "d1_issue"
+      ]
+    },
+    "d1_name": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "lead"
+      }
+    },
+    "d1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "Success rate 10% (30 runs) · 5 days down"
+      }
+    },
+    "d1_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "FIX CONFIG → ISS-018 (missing prefetch shim, distinct root cause)",
+        "variant": "destructive"
+      }
+    },
+    "degraded_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2_name",
+        "d2_stats",
+        "d2_issue"
+      ]
+    },
+    "d2_name": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh",
+        "variant": "lead"
+      }
+    },
+    "d2_stats": {
+      "type": "Text",
+      "props": {
+        "text": "Success rate 32% (93 runs) · 4 days down"
+      }
+    },
+    "d2_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API → systemic",
+        "variant": "outline"
+      }
+    },
+    "degraded_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d3_name",
+        "d3_stats",
+        "d3_issue"
+      ]
+    },
+    "d3_name": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "lead"
+      }
+    },
+    "d3_stats": {
+      "type": "Text",
+      "props": {
+        "text": "Success rate 33% (60 runs) · 4 days down"
+      }
+    },
+    "d3_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API → systemic",
+        "variant": "outline"
+      }
+    },
+    "degraded_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d4_name",
+        "d4_stats",
+        "d4_issue"
+      ]
+    },
+    "d4_name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals",
+        "variant": "lead"
+      }
+    },
+    "d4_stats": {
+      "type": "Text",
+      "props": {
+        "text": "Success rate 38% (13 runs) · 4 days down"
+      }
+    },
+    "d4_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API → systemic",
+        "variant": "outline"
+      }
+    },
+    "degraded_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d5_name",
+        "d5_stats",
+        "d5_issue"
+      ]
+    },
+    "d5_name": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse",
+        "variant": "lead"
+      }
+    },
+    "d5_stats": {
+      "type": "Text",
+      "props": {
+        "text": "Success rate 47% (92 runs) · 4 days down"
+      }
+    },
+    "d5_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API → systemic",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "section_warning": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_warning",
+        "text_warning_note",
+        "warning_grid"
+      ]
+    },
+    "heading_warning": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 WARNING (8 skills, systemic signature)",
+        "level": "h2"
+      }
+    },
+    "text_warning_note": {
+      "type": "Text",
+      "props": {
+        "text": "All 8 skills share the same systemic signature",
+        "variant": "muted"
+      }
+    },
+    "warning_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "w1",
+        "w2",
+        "w3",
+        "w4",
+        "w5",
+        "w6",
+        "w7",
+        "w8"
+      ]
+    },
+    "w1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w1_name",
+        "w1_progress"
+      ]
+    },
+    "w1_name": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert"
+      }
+    },
+    "w1_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 77,
+        "label": "77%"
+      }
+    },
+    "w2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w2_name",
+        "w2_progress"
+      ]
+    },
+    "w2_name": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor"
+      }
+    },
+    "w2_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 72,
+        "label": "72%"
+      }
+    },
+    "w3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w3_name",
+        "w3_progress"
+      ]
+    },
+    "w3_name": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview"
+      }
+    },
+    "w3_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 69,
+        "label": "69%"
+      }
+    },
+    "w4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w4_name",
+        "w4_progress"
+      ]
+    },
+    "w4_name": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels"
+      }
+    },
+    "w4_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 67,
+        "label": "67%"
+      }
+    },
+    "w5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w5_name",
+        "w5_progress"
+      ]
+    },
+    "w5_name": {
+      "type": "Text",
+      "props": {
+        "text": "token-movers"
+      }
+    },
+    "w5_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 65,
+        "label": "65%"
+      }
+    },
+    "w6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w6_name",
+        "w6_progress"
+      ]
+    },
+    "w6_name": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief"
+      }
+    },
+    "w6_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 64,
+        "label": "64%"
+      }
+    },
+    "w7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w7_name",
+        "w7_progress"
+      ]
+    },
+    "w7_name": {
+      "type": "Text",
+      "props": {
+        "text": "token-pick"
+      }
+    },
+    "w7_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 64,
+        "label": "64%"
+      }
+    },
+    "w8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w8_name",
+        "w8_progress"
+      ]
+    },
+    "w8_name": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine"
+      }
+    },
+    "w8_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 63,
+        "label": "63%"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "section_nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_nodata",
+        "nodata_1",
+        "nodata_2"
+      ]
+    },
+    "heading_nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA",
+        "level": "h2"
+      }
+    },
+    "nodata_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nd1_name",
+        "nd1_info"
+      ]
+    },
+    "nd1_name": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "lead"
+      }
+    },
+    "nd1_info": {
+      "type": "Text",
+      "props": {
+        "text": "Last run: Sun 21:00Z · Next scheduled: 7-05",
+        "variant": "caption"
+      }
+    },
+    "nodata_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nd2_name",
+        "nd2_info"
+      ]
+    },
+    "nd2_name": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "lead"
+      }
+    },
+    "nd2_info": {
+      "type": "Text",
+      "props": {
+        "text": "Last run: Mon 10:30Z day-4 · Scheduler-side gap · Status: DISPATCH-SKILL",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "section_healthy": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_healthy",
+        "healthy_count"
+      ]
+    },
+    "heading_healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h2"
+      }
+    },
+    "healthy_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy skills",
+        "value": "9"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "section_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_summary",
+        "summary_issues",
+        "summary_pr",
+        "summary_fixes",
+        "summary_classification"
+      ]
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "summary_issues": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_open",
+        "stat_filed",
+        "stat_resolved"
+      ]
+    },
+    "stat_open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "15"
+      }
+    },
+    "stat_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed today",
+        "value": "0"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved today",
+        "value": "0"
+      }
+    },
+    "summary_pr": {
+      "type": "Text",
+      "props": {
+        "text": "PR #150 + #151 merged 07-02 13:20Z"
+      }
+    },
+    "summary_fixes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fix_1",
+        "fix_2",
+        "fix_3"
+      ]
+    },
+    "fix_1": {
+      "type": "Text",
+      "props": {
+        "text": "✓ usepod_model→model fix (ISS-025 root cause)",
+        "variant": "caption"
+      }
+    },
+    "fix_2": {
+      "type": "Text",
+      "props": {
+        "text": "✓ skill-evals cron 06→22 UTC (ISS-026)",
+        "variant": "caption"
+      }
+    },
+    "fix_3": {
+      "type": "Text",
+      "props": {
+        "text": "🔄 Queued for testing at next 12:00Z tick",
+        "variant": "caption"
+      }
+    },
+    "summary_classification": {
+      "type": "Text",
+      "props": {
+        "text": "Classification byte-identical to 06-30 + 07-01 reports · 24h+22m daily-cadence notify",
+        "variant": "muted"
+      }
+    }
+  }
+}
