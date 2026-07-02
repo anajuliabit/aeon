@@ -1,0 +1,805 @@
+{
+  "root": "card-daily",
+  "state": {},
+  "elements": {
+    "card-daily": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-02"
+      },
+      "children": [
+        "stack-all"
+      ]
+    },
+    "stack-all": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "pulse-section",
+        "sep-1",
+        "winners-section",
+        "sep-2",
+        "losers-section",
+        "sep-3",
+        "tweets-section",
+        "sep-4",
+        "paper-section",
+        "sep-5",
+        "issues-section",
+        "sep-6",
+        "hn-section"
+      ]
+    },
+    "pulse-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pulse-h",
+        "pulse-grid",
+        "pulse-details"
+      ]
+    },
+    "pulse-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Pulse",
+        "level": "h2"
+      }
+    },
+    "pulse-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat-top100",
+        "stat-btc",
+        "stat-eth",
+        "stat-sol",
+        "stat-bnb"
+      ]
+    },
+    "stat-top100": {
+      "type": "Stat",
+      "props": {
+        "label": "Top-100",
+        "value": "81/100",
+        "delta": "+49 (was 32 yesterday)",
+        "trend": "up"
+      }
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$60,276",
+        "delta": "+3.0% (24h) / −2.5% (7d)",
+        "trend": "up"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,618",
+        "delta": "+3.0%",
+        "trend": "up"
+      }
+    },
+    "stat-sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$78.14",
+        "delta": "+4.8%",
+        "trend": "up"
+      }
+    },
+    "stat-bnb": {
+      "type": "Stat",
+      "props": {
+        "label": "BNB",
+        "value": "$549.68",
+        "delta": "+1.0%",
+        "trend": "up"
+      }
+    },
+    "pulse-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pulse-median",
+        "pulse-narrative"
+      ]
+    },
+    "pulse-median": {
+      "type": "Text",
+      "props": {
+        "text": "Median top-50: +1.6%",
+        "variant": "body"
+      }
+    },
+    "pulse-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Touches $60,500 line for first time in 7d. Breakdown day still on but tape is bouncing. HYPE $63.20 −0.3%.",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-h",
+        "winners-table"
+      ]
+    },
+    "winners-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "M",
+            "$1.25",
+            "+65.8%",
+            "+83%",
+            "#47",
+            "MAJOR MEAN-REVERT—extends yest +10.4% deadcat into full reversal"
+          ],
+          [
+            "2",
+            "RIF",
+            "$0.131",
+            "+36.4%",
+            "+53%",
+            "#218",
+            "BREAKOUT"
+          ],
+          [
+            "3",
+            "GWEI",
+            "$0.138",
+            "+20.5%",
+            "",
+            "#135",
+            "MEAN-REVERT from yest −20.7%"
+          ],
+          [
+            "4",
+            "LIT",
+            "$2.17",
+            "+15.3%",
+            "+29%",
+            "#100",
+            "BREAKOUT—Flowslikeosmo tokenomics thesis 7-01 playing out"
+          ],
+          [
+            "5",
+            "SYN",
+            "$0.550",
+            "+14.3%",
+            "+58%",
+            "#226",
+            ""
+          ],
+          [
+            "6",
+            "ULTIMA",
+            "$2036",
+            "+13.5%",
+            "",
+            "#185",
+            ""
+          ],
+          [
+            "7",
+            "PENDLE",
+            "$1.48",
+            "+12.5%",
+            "",
+            "#141",
+            ""
+          ],
+          [
+            "8",
+            "UB",
+            "$0.089",
+            "+11.8%",
+            "",
+            "#154",
+            "MEAN-REVERT from yest −20.7%"
+          ],
+          [
+            "9",
+            "B",
+            "$0.235",
+            "+11.3%",
+            "",
+            "#147",
+            ""
+          ],
+          [
+            "10",
+            "MORPHO",
+            "$2.10",
+            "+8.5%",
+            "+20%",
+            "#55",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-h",
+        "losers-table"
+      ]
+    },
+    "losers-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Token",
+          "Price",
+          "24h",
+          "7d",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "VELVET",
+            "$0.62",
+            "−60.1%",
+            "+28%",
+            "#138",
+            "CAPITULATION—HIGH 11/10 pick blown, entry $1.97→$0.62=−69%, market priced July-10 unlock 8d early"
+          ],
+          [
+            "2",
+            "TAC",
+            "$0.037",
+            "−38.2%",
+            "+77%",
+            "#184",
+            "FADE—7d breakout fully unwound"
+          ],
+          [
+            "3",
+            "DYDX",
+            "$0.132",
+            "−29.1%",
+            "",
+            "#240",
+            "REVERSAL—yest #3 winner +16.8% given back"
+          ],
+          [
+            "4",
+            "LAB",
+            "$9.12",
+            "−14.4%",
+            "−48%",
+            "#33",
+            "CAPITULATION day-2 MAJOR"
+          ],
+          [
+            "5",
+            "WLD",
+            "$0.369",
+            "−5.4%",
+            "−28%",
+            "#57",
+            ""
+          ],
+          [
+            "6",
+            "CC",
+            "$0.139",
+            "−5.3%",
+            "",
+            "#21",
+            "MAJOR"
+          ],
+          [
+            "7",
+            "KITE",
+            "$0.105",
+            "−4.5%",
+            "",
+            "#142",
+            ""
+          ],
+          [
+            "8",
+            "BP",
+            "$0.599",
+            "−3.1%",
+            "",
+            "#197",
+            "REVERSAL—yest #2 winner +18.2%"
+          ],
+          [
+            "9",
+            "GNO",
+            "$102.30",
+            "−2.5%",
+            "",
+            "#137",
+            ""
+          ],
+          [
+            "10",
+            "TWT",
+            "$0.357",
+            "−2.3%",
+            "",
+            "#200",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets-h",
+        "tweets-alert",
+        "tweets-crypto",
+        "tweets-ai",
+        "tweets-dev"
+      ]
+    },
+    "tweets-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweets-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "XAI quota exhausted day 17—WebSearch fallback.",
+        "type": "info"
+      }
+    },
+    "tweets-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-badge",
+        "crypto-text"
+      ]
+    },
+    "crypto-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "crypto",
+        "variant": "secondary"
+      }
+    },
+    "crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC bounces to $60,500 in first US session (+3% intraday, briefly touched $61k), DXY reversal helping. Traders framing July as \"relief\" base case—historical July avg +7.25% return. Broader downtrend intact; ETF outflows continue after $4.5B June bleed.",
+        "variant": "body"
+      }
+    },
+    "tweets-ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai-badge",
+        "ai-text"
+      ]
+    },
+    "ai-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ai",
+        "variant": "secondary"
+      }
+    },
+    "ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sonnet 5 developer-preference 82% over Sonnet 4.6 inside Claude Code—biggest single adoption tell of the week. 92.4% SWE-bench Verified, 88.3% OSWorld-Verified (beats human baseline 72.4%), 40% cheaper input than GPT-5.5 and beats it on every comparable benchmark. TechCrunch frames as \"cheaper way to run agents.\"",
+        "variant": "body"
+      }
+    },
+    "tweets-dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev-badge",
+        "dev-text"
+      ]
+    },
+    "dev-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "dev",
+        "variant": "secondary"
+      }
+    },
+    "dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "MCP crossed 97M monthly SDK downloads (Python + TypeScript) by Feb 2026—donated to Linux Foundation's Agentic AI Foundation Dec 2025. A2A (Google) joined LF June 2025. Split is durable: MCP = vertical tool↔agent, A2A = horizontal agent↔agent.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-h",
+        "paper-link",
+        "paper-desc",
+        "paper-alert",
+        "paper-runner"
+      ]
+    },
+    "paper-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MemSyco-Bench: Benchmarking Sycophancy in Agent Memory",
+        "href": "https://arxiv.org/abs/2607.01071",
+        "source": "arXiv:2607.01071",
+        "score": "HF ↑17"
+      }
+    },
+    "paper-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Benchmarks how retrieved memories cause agents to over-align with the user at the cost of factual accuracy.",
+        "variant": "body"
+      }
+    },
+    "paper-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Direct Aeon Runtime Hit",
+        "message": "Failure mode most likely to bleed into MEMORY.md consolidation.",
+        "type": "warning"
+      }
+    },
+    "paper-runner": {
+      "type": "Text",
+      "props": {
+        "text": "Runner-up: ASPIRE (↑7) skills-as-primitive day-3 (after Google Agents CLI, Anthropic Agent SDK).",
+        "variant": "muted"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues-h",
+        "issues-text"
+      ]
+    },
+    "issues-h": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "issues-text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues last 24h (P0=0 P1=0 P2=0 P3=0 · user:anajuliabit)",
+        "variant": "body"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "hn-h",
+        "hn-item-1-group",
+        "hn-item-2-group",
+        "hn-item-3-group",
+        "hn-item-4-group"
+      ]
+    },
+    "hn-h": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn-item-1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-item-1",
+        "hn-item-1-meta"
+      ]
+    },
+    "hn-item-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "For first time, a cell built from scratch grows and divides",
+        "href": "https://www.quantamagazine.org/for-the-first-time-a-cell-built-from-scratch-grows-and-divides-20260701/",
+        "source": "Quanta Magazine",
+        "score": "844p / 275c"
+      }
+    },
+    "hn-item-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-item-1-text",
+        "hn-item-1-discuss"
+      ]
+    },
+    "hn-item-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Synthetic biology milestone.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-1-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "discuss",
+        "href": "https://news.ycombinator.com/item?id=48747304"
+      }
+    },
+    "hn-item-2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-item-2",
+        "hn-item-2-meta"
+      ]
+    },
+    "hn-item-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Physical disc production ending Jan 2028 for PlayStation",
+        "href": "https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/",
+        "source": "PlayStation Blog",
+        "score": "703p / 698c"
+      }
+    },
+    "hn-item-2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-item-2-text",
+        "hn-item-2-discuss"
+      ]
+    },
+    "hn-item-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "End-of-media-era signal.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-2-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "discuss",
+        "href": "https://news.ycombinator.com/item?id=48745456"
+      }
+    },
+    "hn-item-3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-item-3",
+        "hn-item-3-meta"
+      ]
+    },
+    "hn-item-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ZCode — Harness for GLM-5.2",
+        "href": "https://zcode.z.ai/en",
+        "source": "z.ai",
+        "score": "377p / 286c"
+      }
+    },
+    "hn-item-3-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-item-3-text",
+        "hn-item-3-discuss"
+      ]
+    },
+    "hn-item-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "Chinese-model + agentic-harness axis extends.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-3-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "discuss",
+        "href": "https://news.ycombinator.com/item?id=48753715"
+      }
+    },
+    "hn-item-4-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-item-4",
+        "hn-item-4-meta"
+      ]
+    },
+    "hn-item-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Cloudflare Monetization Gateway via x402",
+        "href": "https://blog.cloudflare.com/monetization-gateway/",
+        "source": "Cloudflare Blog",
+        "score": "290p / 207c"
+      }
+    },
+    "hn-item-4-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hn-item-4-text",
+        "hn-item-4-discuss"
+      ]
+    },
+    "hn-item-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "HTTP 402 payment rail behind CF, charge for any resource.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-4-discuss": {
+      "type": "Link",
+      "props": {
+        "label": "discuss",
+        "href": "https://news.ycombinator.com/item?id=48746914"
+      }
+    }
+  }
+}
