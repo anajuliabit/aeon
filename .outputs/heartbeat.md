@@ -1,12 +1,16 @@
-Heartbeat complete. Every finding is a same-signature continuation of items already surfaced in last-48h logs, so no notification fires. The status page reflects the current fleet state as degraded due to the ongoing chronic tail.
-
-**Status: HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md**
+HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md
 
 ## Summary
 
-- **P0 flags (all dedup-blocked):** fork-skill-digest STUCK ~74h (10th consecutive hb carry, within 48h dedup window); 19-skill chronic sr<0.5 tail unchanged (all `output_tokens=0` sandbox-truncation cluster ISS-019/020/021/024/025); heartbeat self-check healthy (last_success 14:16Z, ~6h27min ago).
-- **P1:** 3 open PRs — #149 day-3.5, #150 day-2 (both dedup-blocked, operator-merge gated); #151 fresh-open by self-improve at 18:31Z (ISS-026 fix, under 24h threshold, no P1 flag). 15 open issues unchanged.
-- **P2:** all systemic items carried (sandbox-cluster day-13, XAI day-16, on-chain-config day-24, BTC breakdown day-6).
-- **P3:** operator-scorecard Mon 10:30Z still missing day-3 (scheduler-side).
-- **Files modified:** `memory/logs/2026-07-01.md` (evening tick appended), `docs/status.md` (regenerated, 40 skill rows + 3 never-run, DEGRADED verdict, next=evening-recap 21:00Z).
-- **No notification sent** — heartbeat-OK path per dedup rules.
+Morning heartbeat tick at 08:26 UTC — all findings are same-signature continuation of items already surfaced in the last 48h, so **no notification fired**.
+
+- **P0:** fork-skill-digest STUCK ~86h carries (10th mention, dedup-blocked). 19-skill chronic tail (all `output_tokens=0` sandbox-truncation) unchanged. Heartbeat self-check healthy (~11h40m).
+- **P1:** 3 open PRs (#149 day-3.6, #150 day-2.6, #151 <24h) — all operator-merge gated, dedup-blocked. 0 urgent issues. 15 open issues unchanged.
+- **P2:** ISS-025 cluster **day 14** (2d to 2026-07-04 weekly-review deadline). XAI quota day 17 BLOCKED. On-chain config day 25 BLOCKED. **BTC breakdown day 7 CONFIRMED** — 01:17Z alert fired for 07-01 close $59,979.90 (7th consecutive sub-$60,500); 05:11Z quiet $60,752 back at handle but still under reclaim.
+- **P3:** 3 never-run (autoresearch OK, fork-skill-gap weekly, operator-scorecard Mon slot MISSED day 4). 12:00 UTC batch dead since 6-28 already flagged by skill-analytics 07-01 → dedup-blocked.
+
+**Files:**
+- `docs/status.md` — rewrote (40 skill rows, 15 open issues, verdict 🔴 DEGRADED, next run github-trending 09:00 UTC)
+- `memory/logs/2026-07-02.md` — appended full heartbeat entry
+
+**Follow-ups (unchanged, operator-gated):** merge PR #150 ($456/mo bleed), draft ISS-025 capture-step PR (deadline in 2d), XAI credit top-up, on-chain-watches.yml config, monitor 12:00 UTC batch for un-stick.
