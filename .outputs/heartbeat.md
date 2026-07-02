@@ -1,16 +1,17 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md
+Heartbeat run complete.
 
 ## Summary
 
-Morning heartbeat tick at 08:26 UTC — all findings are same-signature continuation of items already surfaced in the last 48h, so **no notification fired**.
+**Status:** HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
-- **P0:** fork-skill-digest STUCK ~86h carries (10th mention, dedup-blocked). 19-skill chronic tail (all `output_tokens=0` sandbox-truncation) unchanged. Heartbeat self-check healthy (~11h40m).
-- **P1:** 3 open PRs (#149 day-3.6, #150 day-2.6, #151 <24h) — all operator-merge gated, dedup-blocked. 0 urgent issues. 15 open issues unchanged.
-- **P2:** ISS-025 cluster **day 14** (2d to 2026-07-04 weekly-review deadline). XAI quota day 17 BLOCKED. On-chain config day 25 BLOCKED. **BTC breakdown day 7 CONFIRMED** — 01:17Z alert fired for 07-01 close $59,979.90 (7th consecutive sub-$60,500); 05:11Z quiet $60,752 back at handle but still under reclaim.
-- **P3:** 3 never-run (autoresearch OK, fork-skill-gap weekly, operator-scorecard Mon slot MISSED day 4). 12:00 UTC batch dead since 6-28 already flagged by skill-analytics 07-01 → dedup-blocked.
+**Findings (all dedup-blocked, no notification fired):**
+- **P0** — fork-skill-digest STUCK ~93h (same signature carry from 11 prior hbs); 19-skill sandbox-truncation chronic tail unchanged; heartbeat self-check healthy (7h since last success)
+- **P1** — Down from 3 open PRs to 1: **PRs #150 + #151 merged 13:20Z** (usepod_model→model cost fix + ISS-026 skill-evals cron move); PR #149 docs(skill-graph) day-3.9 stall dedup-blocked
+- **P2** — sandbox-truncation systemic day 14 (T-2d to weekly-review deadline), XAI quota day 17, on-chain config day 25, BTC breakdown day-7 with 07-02 risk-on rotation (breadth 81/100, REPPO vol-trigger 3.16×) all carried
+- **P3** — 12:00 UTC batch still 4d dead (PR #150 merge removes root cause, next Fri tick will test); operator-scorecard Mon slot missed day-4; 14:00 UTC batch 90min overdue but under 2× interval
 
-**Files:**
-- `docs/status.md` — rewrote (40 skill rows, 15 open issues, verdict 🔴 DEGRADED, next run github-trending 09:00 UTC)
-- `memory/logs/2026-07-02.md` — appended full heartbeat entry
+**Files touched:**
+- `docs/status.md` — regenerated (overall 🔴 DEGRADED · 15 open issues · next run list-digest 17:00 UTC · 43 skill rows, token-alert 13:10Z promoted to top)
+- `memory/logs/2026-07-02.md` — appended 15:29Z heartbeat entry
 
-**Follow-ups (unchanged, operator-gated):** merge PR #150 ($456/mo bleed), draft ISS-025 capture-step PR (deadline in 2d), XAI credit top-up, on-chain-watches.yml config, monitor 12:00 UTC batch for un-stick.
+**No notification sent** — every open finding was already covered in the last-48h log window; the PR #150/#151 merges are resolution events, not attention flags.
