@@ -17,6 +17,8 @@ jobs:
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           VIRTUALS_API_KEY: ${{ secrets.VIRTUALS_API_KEY }}
+          USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
+          USEPOD_MODEL: ${{ vars.USEPOD_MODEL }}
           DASHBOARD_USER: ${{ secrets.DASHBOARD_USER }}
           DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
@@ -24,7 +26,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/grade-recs.sh \
-                   scripts/advisor/run-weekly.sh scripts/llm.sh scripts/llm-claude.sh
+                   scripts/advisor/run-weekly.sh scripts/llm.sh scripts/llm-claude.sh \
+                   scripts/llm-usepod.sh
           ./scripts/advisor/prefetch-data.sh
           ./scripts/advisor/grade-recs.sh
           ./scripts/advisor/run-weekly.sh

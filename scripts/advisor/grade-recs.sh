@@ -109,11 +109,12 @@ while [ "$d" -le "$LOOKBACK_DAYS" ]; do
       MATURE_DATE=$(date -u -d "@$MATURE_S" +%Y-%m-%d 2>/dev/null || date -u -r "$MATURE_S" +%Y-%m-%d)
       T1=$(printf '%s' "$HISTORY" | jq --arg d1 "$MATURE_DATE" -r '[.[] | select(.date >= $d1)] | first.totalUsd // empty' 2>/dev/null || true)
       if [ -n "$T0" ] && [ -n "$T1" ]; then
-        # Required growth over the horizon on the 2x trajectory: 2^(horizon/568)
-        # (568-day runway 2026-06-09 → 2027-12-31; grading approximation).
+        # Required growth over the horizon on the $1M-by-2028-12-31 trajectory:
+        # (1M/336948)^(horizon/934) (934-day runway 2026-06-10 → 2028-12-31;
+        # grading approximation, matches investiments /api/performance pace).
         VERDICT=$(python3 -c "
 actual = $T1/$T0 - 1
-needed = 2 ** ($HORIZON/568) - 1
+needed = (1000000/336948) ** ($HORIZON/934) - 1
 print('hit' if actual >= needed else 'miss' if actual < needed - 0.05 else 'neutral')")
         RESULT="$VERDICT"
         PCT=$(python3 -c "print(($T1/$T0 - 1)*100)")

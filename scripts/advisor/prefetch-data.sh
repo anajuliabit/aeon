@@ -108,7 +108,10 @@ if [ -n "${DASHBOARD_PASSWORD:-}" ]; then
   done
   MACC=$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}" "$BASE/api/advisor/scorecard" 2>/dev/null | jq -c '.accuracy // {}' 2>/dev/null || echo '{}')
   MJOURNAL=$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}" "$BASE/api/journal?days=14" 2>/dev/null | jq -c '[.[]? | {ts, kind, text, symbol}]' 2>/dev/null || echo '[]')
-  jq -n --argjson reports "$MEM_REPORTS" --argjson acc "$MACC" --argjson journal "$MJOURNAL" '{pastReports: $reports, scorecardAccuracy: $acc, operatorJournal: $journal}' > "$D/advisor-memory.json" && echo "ok advisor-memory.json ($(printf '%s' "$MEM_REPORTS" | jq 'length') past reports, $(printf '%s' "$MJOURNAL" | jq 'length') journal entries)"
+  # Measured pick track record (win rate / alpha by conviction bucket) so the
+  # advisor can calibrate its own conviction labels against observed outcomes.
+  MTRACK=$(curl -fsS --max-time 30 -H "Authorization: Basic ${AUTH}" "$BASE/api/track-record" 2>/dev/null | jq -c '{totalPicks, gradedPicks, winRate, avgAlphaPct, byConviction, paper}' 2>/dev/null || echo '{}')
+  jq -n --argjson reports "$MEM_REPORTS" --argjson acc "$MACC" --argjson journal "$MJOURNAL" --argjson track "$MTRACK" '{pastReports: $reports, scorecardAccuracy: $acc, operatorJournal: $journal, pickTrackRecord: $track}' > "$D/advisor-memory.json" && echo "ok advisor-memory.json ($(printf '%s' "$MEM_REPORTS" | jq 'length') past reports, $(printf '%s' "$MJOURNAL" | jq 'length') journal entries)"
 else
   echo "advisor-prefetch: no DASHBOARD_PASSWORD, skipping advisor-memory"
 fi
