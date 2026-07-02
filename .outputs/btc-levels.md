@@ -1,13 +1,1 @@
-Done. Quiet run — no alerts fired.
-
-## Summary
-
-**BTC data fetched:** spot $59,957 / Jun 30 close $58,551 (2 of 3 data points from CoinGecko).
-
-**Level evaluation:**
-- Leverage-review (≤$45k): not triggered — spot well above
-- Breakdown alert (close < $60,500 on 2026-06-30): already alerted — `breakdownAlertedForClose` is "2026-06-30", no repeat
-- Reclaim $63,500: not triggered — spot $59,957 < $63,500
-- Reclaim $65,900: not triggered
-
-No notification sent. State updated with new spot price ($59,957), log appended, and both committed.
+₿ BTC levels: spot $59.9k. ⚠️ Jul-01 close $60.0k < $60,500 — 7th consecutive sub-$60,500 close, downtrend continuation per 2026-06-09 advisor levels. Leveraged cbBTC: review trigger is at ≤$45k (HF ~1.48–1.66 in the $40–45k band). Not financial advice.
