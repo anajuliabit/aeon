@@ -1,0 +1,84 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-badges",
+        "inbox-info",
+        "last-capture"
+      ]
+    },
+    "status-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-no-captures",
+        "badge-unchanged"
+      ]
+    },
+    "badge-no-captures": {
+      "type": "Badge",
+      "props": {
+        "text": "No captures in last 24h",
+        "variant": "default"
+      }
+    },
+    "badge-unchanged": {
+      "type": "Badge",
+      "props": {
+        "text": "Inbox unchanged",
+        "variant": "outline"
+      }
+    },
+    "inbox-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-days",
+        "stat-reviews"
+      ]
+    },
+    "stat-days": {
+      "type": "Stat",
+      "props": {
+        "label": "Days",
+        "value": "11"
+      }
+    },
+    "stat-reviews": {
+      "type": "Stat",
+      "props": {
+        "label": "Reviews",
+        "value": "20"
+      }
+    },
+    "last-capture": {
+      "type": "Text",
+      "props": {
+        "text": "Last real capture: 2026-06-21",
+        "variant": "muted"
+      }
+    }
+  }
+}
