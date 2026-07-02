@@ -1,0 +1,392 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-02"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_verdict",
+        "sep_1",
+        "heading_today",
+        "stack_today",
+        "sep_2",
+        "heading_week",
+        "stack_week"
+      ]
+    },
+    "alert_verdict": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "1 actively exploited, 2 supply-chain live, 5 to schedule. Agent-infra & MCP dominate. Sources: KEV, GH Advisory, EPSS"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "stack_today": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_cve_45659",
+        "item_ghsa_w2r4",
+        "item_ghsa_3cr6"
+      ]
+    },
+    "item_cve_45659": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_cve_45659",
+        "badge_cve_45659",
+        "text_cve_45659_detail",
+        "text_cve_45659_patch"
+      ]
+    },
+    "link_cve_45659": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-45659 — Microsoft SharePoint Server",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-45659",
+        "source": "KEV added 2026-07-01",
+        "score": "CVSS 9.6"
+      }
+    },
+    "badge_cve_45659": {
+      "type": "Badge",
+      "props": {
+        "text": "Actively exploited · BOD 26-04 due 2026-07-04",
+        "variant": "destructive"
+      }
+    },
+    "text_cve_45659_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Deserialization RCE, authorized-attacker. Exploited per CISA.",
+        "variant": "caption"
+      }
+    },
+    "text_cve_45659_patch": {
+      "type": "Text",
+      "props": {
+        "text": "Patch: SharePoint 2016 ≥16.0.5552.1002 / 2019 ≥16.0.10417.20128 / Subscription ≥16.0.19725.20280",
+        "variant": "caption"
+      }
+    },
+    "item_ghsa_w2r4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_w2r4",
+        "badge_ghsa_w2r4",
+        "text_ghsa_w2r4_detail",
+        "text_ghsa_w2r4_action"
+      ]
+    },
+    "link_ghsa_w2r4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-w2r4-4x6j-3h5x — vitest-agent (npm)",
+        "href": "https://github.com/advisories/GHSA-w2r4-4x6j-3h5x",
+        "source": "Malware · agent-infra brandjack"
+      }
+    },
+    "badge_ghsa_w2r4": {
+      "type": "Badge",
+      "props": {
+        "text": "Full host compromise on install",
+        "variant": "destructive"
+      }
+    },
+    "text_ghsa_w2r4_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Extends agent-infra brandjack wave into testing frameworks (day 6).",
+        "variant": "caption"
+      }
+    },
+    "text_ghsa_w2r4_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Uninstall vitest-agent; rotate every secret from a clean machine.",
+        "variant": "caption"
+      }
+    },
+    "item_ghsa_3cr6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_3cr6",
+        "badge_ghsa_3cr6",
+        "text_ghsa_3cr6_detail",
+        "text_ghsa_3cr6_action"
+      ]
+    },
+    "link_ghsa_3cr6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-3cr6-gpr8-pjfm — tailwind-animates + kin (npm)",
+        "href": "https://github.com/advisories/GHSA-3cr6-gpr8-pjfm",
+        "source": "Malware · Tailwind cluster"
+      }
+    },
+    "badge_ghsa_3cr6": {
+      "type": "Badge",
+      "props": {
+        "text": "3-pkg same-day publish cluster",
+        "variant": "destructive"
+      }
+    },
+    "text_ghsa_3cr6_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Packages: tailwind-animates, animatecss-postcss-plugin, tailwind-typography-stylecss.",
+        "variant": "caption"
+      }
+    },
+    "text_ghsa_3cr6_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Grep package-lock; block install of Tailwind look-alikes.",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "stack_week": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_ghsa_84hp",
+        "item_ghsa_xr65",
+        "item_ghsa_mhc6",
+        "item_ghsa_62q6",
+        "item_ghsa_9mm9"
+      ]
+    },
+    "item_ghsa_84hp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_84hp",
+        "text_ghsa_84hp_detail",
+        "text_ghsa_84hp_patch"
+      ]
+    },
+    "link_ghsa_84hp": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-84hp-mqvj-3p8h — mcp-memory-service (pip)",
+        "href": "https://github.com/advisories/GHSA-84hp-mqvj-3p8h",
+        "source": "Public PoC",
+        "score": "CVSS 9.8"
+      }
+    },
+    "text_ghsa_84hp_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Missing auth on document API — unauth read/write/delete of every stored memory.",
+        "variant": "caption"
+      }
+    },
+    "text_ghsa_84hp_patch": {
+      "type": "Text",
+      "props": {
+        "text": "Patch: Upgrade mcp-memory-service ≥10.67.1",
+        "variant": "caption"
+      }
+    },
+    "item_ghsa_xr65": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_xr65",
+        "text_ghsa_xr65_detail",
+        "text_ghsa_xr65_patch"
+      ]
+    },
+    "link_ghsa_xr65": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-xr65-5cpm-g36x — rancher/fleet (Go)",
+        "href": "https://github.com/advisories/GHSA-xr65-5cpm-g36x",
+        "source": "No PoC",
+        "score": "CVSS 9.9"
+      }
+    },
+    "text_ghsa_xr65_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Cross-namespace secret disclosure via unvalidated `valuesFrom`.",
+        "variant": "caption"
+      }
+    },
+    "text_ghsa_xr65_patch": {
+      "type": "Text",
+      "props": {
+        "text": "Patch: Upgrade Fleet ≥0.15.2 / 0.14.6 / 0.13.11 / 0.12.15",
+        "variant": "caption"
+      }
+    },
+    "item_ghsa_mhc6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_mhc6",
+        "text_ghsa_mhc6_detail",
+        "text_ghsa_mhc6_patch"
+      ]
+    },
+    "link_ghsa_mhc6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-mhc6-2gfq-xx62 — rancher (Go)",
+        "href": "https://github.com/advisories/GHSA-mhc6-2gfq-xx62",
+        "source": "EPSS 0.011",
+        "score": "CVSS 9.6"
+      }
+    },
+    "text_ghsa_mhc6_detail": {
+      "type": "Text",
+      "props": {
+        "text": "YAML command injection at cluster import.",
+        "variant": "caption"
+      }
+    },
+    "text_ghsa_mhc6_patch": {
+      "type": "Text",
+      "props": {
+        "text": "Patch: Upgrade Rancher ≥2.14.2 / 2.13.6 / 2.12.10 / 2.11.14 / 2.10.12",
+        "variant": "caption"
+      }
+    },
+    "item_ghsa_62q6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_62q6",
+        "text_ghsa_62q6_detail",
+        "text_ghsa_62q6_patch"
+      ]
+    },
+    "link_ghsa_62q6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-62q6-4hv4-vjrw — ghost (npm)",
+        "href": "https://github.com/advisories/GHSA-62q6-4hv4-vjrw",
+        "source": "No PoC",
+        "score": "CVSS 9.6"
+      }
+    },
+    "text_ghsa_62q6_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Cache-poisoning XSS via `x-ghost-preview` header.",
+        "variant": "caption"
+      }
+    },
+    "text_ghsa_62q6_patch": {
+      "type": "Text",
+      "props": {
+        "text": "Patch: Upgrade Ghost ≥6.37.0",
+        "variant": "caption"
+      }
+    },
+    "item_ghsa_9mm9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_ghsa_9mm9",
+        "text_ghsa_9mm9_detail",
+        "text_ghsa_9mm9_patch"
+      ]
+    },
+    "link_ghsa_9mm9": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-9mm9-rqhj-j5mx — repomix (npm)",
+        "href": "https://github.com/advisories/GHSA-9mm9-rqhj-j5mx",
+        "source": "Public PoC",
+        "score": "CVSS 8.8"
+      }
+    },
+    "text_ghsa_9mm9_detail": {
+      "type": "Text",
+      "props": {
+        "text": "`--remote-branch` argument-injection RCE in the AI-coding packer.",
+        "variant": "caption"
+      }
+    },
+    "text_ghsa_9mm9_patch": {
+      "type": "Text",
+      "props": {
+        "text": "Patch: Upgrade repomix ≥1.14.1",
+        "variant": "caption"
+      }
+    }
+  }
+}

