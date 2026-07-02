@@ -27,10 +27,10 @@ Canonical watchlist per `skills/token-alert/SKILL.md` format (PR #55).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | $0.00330605 -1.75% 7-01 (2nd consecutive red; 6-30 vol spike 3.83× decayed to 2.30× on red close = **supply-hitting-bid confirmed**, not accumulation) |
-| MAMO    | mamo               | 15%           | $0.00797508 +3.82% 7-01 (snaps 2-day red streak; 1st green since 6-28, vol 1.08× baseline = participation-shallow bounce) |
-| REPPO   | reppo              | 15%           | $0.02077600 +0.03% 7-01 (wobbles $0.021 line 2nd day; vol 1.14× baseline drought persists sub-$150K rail) |
-| GITLAWB | gitlawb            | 15%           | $0.00004494 -7.51% 7-01 (worst 1d of window, $0.00005 handle rejected day-2, fresh 2026-window low; vol 1.02× baseline = orderly fade) |
+| WELL    | moonwell-artemis   | 10%           | $0.00356401 +5.84% 7-02 (3rd close post-6-30 vol spike; direction confirms up = **washout-then-reversal**, updates 7-01 supply-hitting-bid thesis; vol 1.55× baseline) |
+| MAMO    | mamo               | 15%           | $0.00830984 +4.53% 7-02 (2nd consecutive green; clears $0.0083 for first time since 6-27; vol 0.99× baseline = flat participation) |
+| REPPO   | reppo              | 15%           | $0.02153733 +4.31% 7-02 (breaks $0.021 wobble line on **vol spike 3.16×** — 4-day drought base snaps, largest print since 6-22; TRIGGER FIRED) |
+| GITLAWB | gitlawb            | 15%           | $0.00004802 +8.03% 7-02 (snaps "worst 1d" pattern, $0.00005 handle reclaim attempt; vol 0.88× baseline = participation-shallow bounce, watch for follow-through) |
 
 ## Recurring patterns (durable)
 - **Meta-bear "crypto needs new narrative" day 6** — broke 24h half-life days 3–6. Structural: BTC ETF outflow streak, F&G 18 day-5, breadth 45→32/100 (7-01 deteriorated), quarter-end de-grossing carried into July-open. STRUCTURAL longs persist (7-day streak): AI agent infra, stablecoins, RWA via CEX rails, prediction markets.
