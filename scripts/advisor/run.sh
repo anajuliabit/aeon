@@ -455,6 +455,7 @@ $NEWS
 <<<END>>>
 $(datablock FUNDAMENTALS_protocols protocols.json '[.[]? | {name, symbol, tvl, change_1d, change_7d}] | sort_by(-(.tvl // 0)) | .[0:60]')
 $(datablock FUNDAMENTALS_fees fees.json '{protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:40]}')
+$(datablock TRACK_RECORD advisor-memory.json '.pickTrackRecord // {}')
 $(datablock fng fng.json '.')"
   TRADES="$(complete "$st_prompt")" || true
   if [ -z "$TRADES" ] || ! printf '%s' "$TRADES" | jq -e '.trades' >/dev/null 2>&1; then
