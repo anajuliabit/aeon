@@ -1,0 +1,121 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-07-02"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-text",
+        "separator-1",
+        "defi-heading",
+        "tweet-stack-1",
+        "tweet-stack-2",
+        "separator-2",
+        "sources-text"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "single-list day: @flowslikeosmo runs the tokenomics-alignment thesis twice — flare's builder-lanes and a $LIT holder-value overhaul.",
+        "variant": "lead"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "defi-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi",
+        "level": "h3"
+      }
+    },
+    "tweet-stack-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "flare thesis compresses to two lanes that convert infra spend into product: interoperable assets + confidential compute. everything else on the AVS/DA shopping list is optionality without a customer. quote of @FlareDevHub hackathon.",
+        "likes": 19,
+        "retweets": 2
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2072440125351698767"
+      }
+    },
+    "tweet-stack-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "same caller behind SLX/VELVET now grading tokenomics revisions as a \"team seriousness\" signal, not marketing. $LIT team routing value back to holders. codifies the alpha filter memory has been carrying since SLX.",
+        "likes": 13,
+        "retweets": 0
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2072435196415328640"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(10) | status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,13 +1,11 @@
-*List Digest — 2026-07-01*
+*List Digest — 2026-07-02*
 
-DeFi list slow tape: Flowslikeosmo dominates with $LIT burn math + a rare screen of non-DEX quality names.
+single-list day: @flowslikeosmo runs the tokenomics-alignment thesis twice — flare's builder-lanes and a $LIT holder-value overhaul.
 
 *DeFi*
-- x.com/Flowslikeosmo — $LIT burns > emissions math: implied ~17.9M/yr buyback-burn vs new 7.5M/yr staking emit ≈ 2.4× net-supply shrink if revenue holds. First on-chain burn post-Q2 close; P/S 13.5x, P/F 10x, 30d fees +38.5%. One of the few tokens with directly-mathable float compression. (♥110, ↻8) — [View](https://x.com/Flowslikeosmo/status/2072077475203670049)
-- x.com/Flowslikeosmo — Screen of names passing a tight quality filter: $RAIL (privacy), $NXM (insurance), $STON (TON DEX), $YB (~1.4x P/F, $109M TVL), $AQUA (Stellar non-EVM moat), $OPINION (100% rev capture), $MOR (dAI infra), $CAPX. Read: DEX-supremacy meta being questioned — DEXs largely absent from the shortlist. (♥27, ↻4) — [View](https://x.com/Flowslikeosmo/status/2072031142354579738)
-- x.com/crypto_linn — Contrarian BD read for early protocols: cold DMs > broadcast; one clear DM to the right person routinely beats months of noise. Underweighted vs the current post-and-pray playbook. (♥35, replies 17) — [View](https://x.com/crypto_linn/status/2072033679027863637)
-- x.com/cyrilXBT — LinqProtocol thesis: $LNQ as escrow/settlement token for a decentralized compute marketplace. Long the infra layer (compute/memory/data/agents/sandboxes) over model companies. Small-cap AI-compute play worth a watchlist slot. (♥11) — [View](https://x.com/cyrilXBT/status/2072029268323013091)
+- x.com/Flowslikeosmo — flare thesis compresses to two lanes that convert infra spend into product: interoperable assets + confidential compute. everything else on the AVS/DA shopping list is optionality without a customer. quote of @FlareDevHub hackathon. (♥ 19, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2072440125351698767)
+- x.com/Flowslikeosmo — same caller behind SLX/VELVET now grading tokenomics revisions as a "team seriousness" signal, not marketing. $LIT team routing value back to holders. codifies the alpha filter memory has been carrying since SLX. (♥ 13, ↻ 0) — [View](https://x.com/Flowslikeosmo/status/2072435196415328640)
 
 ---
-sources: list1642770456720683008=ok(12)
+sources: list1=ok(10)
 status: LIST_DIGEST_OK
