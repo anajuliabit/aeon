@@ -1,29 +1,41 @@
 {
-  "run_at": "2026-07-01T17:15:00Z",
+  "run_at": "2026-07-02T18:53:13Z",
   "goals": {
     "sandbox-truncation-systemic": {
       "status": "ON_TRACK",
-      "activity_count_14d": 280,
-      "last_activity_date": "2026-07-01",
-      "note": "19-skill chronic tail unchanged from 6-30→7-01 (reg-monitor 10% / vuln-scanner 10% / cost-report 11% / skill-analytics 11% / security-digest 24% as worst — all `output_tokens=0` signature, cluster ISS-019/020/021/024/025). action-converter flagged 4.6/5-quality capture-step PR on 6-24 18:14Z — **day 7 unshipped** per 07-01 07:03Z morning-brief focus #2 (hard date 2026-07-04 weekly-review = 3d out). Activity 314→280 = -11% within ±25% band → flat trend. Status rule met (activity ≥2 AND days_since ≤7) but activity is observation cadence not fix progress — mechanical ON_TRACK preserved."
+      "activity_count_14d": 330,
+      "last_activity_date": "2026-07-02",
+      "note": "19-skill chronic tail unchanged from 07-01→07-02 15:29Z hb (reg-monitor 12% / vuln-scanner 10% / cost-report 11% / skill-analytics 13% / security-digest 25% worst — cluster ISS-019/020/021/024/025 `output_tokens=0` signature). action-converter capture-step aeon.yml PR unshipped **day 8** since 6-24 18:14Z 4.6/5-quality flag; hard weekly-review deadline 2026-07-04 = T-2d out (per 08:32Z morning-brief focus #2). PR #150 merge today removes ONE root-cause vector (usepod_model→model rename unblocks on-chain-monitor/token-pick/token-movers cost path) but not the capture-step tail. Activity 280→330 = +18% within ±25% band → flat trend. Status rule met (activity ≥2 AND days_since ≤7). Mechanical ON_TRACK preserved — observation cadence, not fix progress."
+    },
+    "pr-150-fix-aeon-yml": {
+      "status": "DONE",
+      "activity_count_14d": 55,
+      "last_activity_date": "2026-07-02",
+      "note": "PR #150 MERGED 2026-07-02T13:20:07Z by operator (batch-merged alongside #151 at 13:20:37Z). 5-line `usepod_model`→`model:` rename in aeon.yml delivered ~$456/mo (~$107/wk) cost savings for on-chain-monitor / token-pick / token-movers. Cleared **~68h stall** (opened 6-29 18:17Z, crossed 24h threshold 6-30 evening, ~92h at merge). Moved to MEMORY.md `## Recently Cleared` per skill spec § step 7. Next 12:00 UTC ticks Fri 07-03 will test the fix on live cron."
+    },
+    "pr-149-docs-skill-graph": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 50,
+      "last_activity_date": "2026-07-02",
+      "note": "New tracked slug — PR #149 opened 2026-06-28T17:15:47Z, still OPEN as of 07-02 18:53Z (~97h35min stall, day-4.1). Operator-merge gated; updatedAt refreshed 2026-07-02T16:58:10Z (kept warm). Activity mentions steady across last-5-day heartbeat/morning-brief batch (6-28→07-02) — days_since_last_activity=0. No blocker signal (dedup-blocked in every hb since 6-29 15:04Z but not marked BLOCKED — it's operator-attention-gated, not infra-blocked). Status rule met."
     },
     "xai-quota-recovery": {
       "status": "BLOCKED",
-      "activity_count_14d": 102,
-      "last_activity_date": "2026-07-01",
-      "note": "Operator team-credit top-up **day 15+** since 2026-06-16 exhaustion (07-01 07:03Z morning-brief + 08:32Z + 14:13Z hbs cite day 16). WebSearch fallback covered daily-routine tweet-roundup (xai=skipped ×3). Prefetched `.xai-cache` still serves agent-buzz (07-01 17:30Z 2 kept from 8 candidates: ModelScope + omarsar0), list-digest, token-pick. PR #148 mode:Top+min_likes:5 orthogonal to credit-balance. Activity 255→102 = drop reflects narrower keyword recall not thread wind-down; status unchanged BLOCKED — operator action remains only unblock."
+      "activity_count_14d": 185,
+      "last_activity_date": "2026-07-02",
+      "note": "Operator team-credit top-up **day 17** since 2026-06-16 exhaustion (07-02 08:32Z morning-brief cites day 17, 15:29Z hb same). WebSearch fallback covered daily-routine tweet-roundup today (xai=skipped per quota). Prefetched `.xai-cache` still serves agent-buzz/list-digest/token-pick. Activity 102→185 = +81% ≥50% (would classify improving mechanically) but status unchanged BLOCKED — the rise is broader keyword recall (grep matched .xai-cache paths + XAI mentions in morning-brief/hb), not blocker resolution. Operator credit top-up remains only unblock."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 174,
-      "last_activity_date": "2026-07-01",
-      "note": "defi-monitor NO_CONFIG **day 23+** since first flag (07-01 08:32Z + 14:13Z hbs cite day 24); on-chain-watches.yml unchanged from 6-25 seed (5 type:wallet entries only, zero type:pool / type:position). on-chain-monitor primary path env-blocked (ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null on chain 8453); Blockscout keyless + curl→WebFetch fallback durable but limited to token transfers. Activity 286→174 = -39% in gray zone; status unchanged BLOCKED — flat trend. Operator action required: config + key top-up."
+      "activity_count_14d": 285,
+      "last_activity_date": "2026-07-02",
+      "note": "defi-monitor NO_CONFIG **day 25** since first flag (07-02 15:29Z hb cites day 25). on-chain-watches.yml unchanged from 6-25 seed (5 type:wallet entries only, zero type:pool / type:position). on-chain-monitor primary path still env-blocked (ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null on chain 8453). PR #150 merge today fixes the model-name rename for on-chain-monitor but does NOT resolve the config/keys gap. Activity 174→285 = +64% ≥50% (would classify improving mechanically) but status unchanged BLOCKED — rise reflects broader keyword surface (on-chain-monitor cron gap noise from 12:00 UTC dead batch + PR #150 mentions), not config progress. Operator action still required: watchlist entries + Alchemy/Etherscan key top-up."
     },
-    "btc-breakdown-day-5-confirmed": {
+    "btc-breakdown-day-6-confirmed": {
       "status": "ON_TRACK",
-      "activity_count_14d": 233,
-      "last_activity_date": "2026-07-01",
-      "note": "Rolled from prior slug `btc-breakdown-confirmed-day-4` — title incremented in MEMORY.md to `day 5 confirmed` (body still references 6-29 close $60,160 as 5th sub-$60,500; operator-owned text, not touched). Per 07-01 logs: 6-30 close $58,551 = **6th consecutive sub-$60,500** (00:19Z btc-levels fired ⚠ breakdown day-6 alert; today ticks 05:12 $59,155 · 08:32 $58,552 · 12:18 $58,432 · 17:03 $59,846 all sub-reclaim $63.5k/$65.9k). btc-levels fired 5× today, working as designed. Activity 451→233 partly reflects tightened keyword recall vs prior slug-rename bleed; status flat ON_TRACK."
+      "activity_count_14d": 211,
+      "last_activity_date": "2026-07-02",
+      "note": "Rolled from prior slug `btc-breakdown-day-5-confirmed`. MEMORY.md title unchanged (`day 6 CONFIRMED`) per skill spec § step 7 `do not reorder, rephrase, or rewrite the user's goal text` — but reality has advanced to **day 7 confirmed** (btc-levels 01:17Z today fired ⚠ breakdown alert for 07-01 close $59,979.90 = 7th consecutive sub-$60,500 close; today ticks 05:11Z $60,752 / 08:26Z $60,275 / 13:07Z $61,528 / 17:14Z $61,650 — first sub-reclaim ticks above $60k of the streak but still sub $63.5k/$65.9k reclaim). btc-levels ran 5× today, working as designed. Activity 233→211 = -9% within ±25% → flat ON_TRACK."
     }
   }
 }

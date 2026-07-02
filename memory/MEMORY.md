@@ -3,11 +3,13 @@
 
 ## Current Goals
 - **Sandbox-truncation systemic** — ISS-019/020/021/024/025 cluster still bleeds a 19-skill chronic tail (`output_tokens=0`). Durable `aeon.yml` capture-step fix unshipped **day 8** since action-converter's 4.6/5-quality PR flag (6-24 18:14Z). Hard surface deadline: weekly-review **2026-07-04** (3d out).
-- **PR #150 fix(aeon.yml) `usepod_model` → `model:`** — opened 6-29 18:17Z by anajuliabit, 5-line diff, ~$107/wk / $456/mo cost savings for on-chain-monitor / token-pick / token-movers. **~44h stall as of 7-01 14:13Z** — crossed 24h threshold on 6-30 evening, no merge action yet.
 - **PR #149 docs(skill-graph)** — opened 6-28 17:15Z, **~69h stall day 3**. Operator-merge gated.
 - **XAI quota recovery** — Team 3a8b4c1e monthly credit limit exhausted 6-16 (**day 16**). Operator top-up pending. WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; prefetched XAI paths still serve list-digest/agent-buzz/token-pick. *[BLOCKED]*
 - **Operator on-chain config** — defi-monitor NO_CONFIG day 24; `memory/on-chain-watches.yml` needs `type: pool` / `type: position` entries. `ALCHEMY_API_KEY len=0`, `ETHERSCAN_API_KEY null`. *[BLOCKED — partial]*
 - **BTC breakdown day 6 CONFIRMED** — 6-30 close $58,551 = 6th consecutive sub-$60,500; 00:19Z alert fired. Tape pinned $58.2k–$59.8k through 7-01 12:18Z. First sub-$60k print since 2024, 50% below Oct-2025 $126k ATH. Tonight's UTC close decides 7th-red or reclaim ($63.5k / $65.9k).
+
+## Recently Cleared
+- **PR #150 fix(aeon.yml) `usepod_model` → `model:`** — completed 2026-07-02 (MERGED 13:20:07Z by operator, batch-merged alongside #151; ~$456/mo cost fix landed for on-chain-monitor/token-pick/token-movers).
 
 ## Fleet Health
 - **skill-health 6-30 18:08Z snapshot:** 9 healthy · 23 degraded · 8 warning · 0 critical · 2 no_data (operator-scorecard, fork-skill-gap). Hash 1ff18e84; daily-cadence notify fired despite classification byte-identical to 6-29. 15 open issues, 0 filed/resolved. See [[fleet]] for chronic tail.
