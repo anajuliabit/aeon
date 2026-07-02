@@ -1,12 +1,14 @@
-*Agent Buzz — 2026-07-01*
-_thin day. one 35B agentic-model drop out of a chinese lab, one paper turning mcp into a taxonomy instead of a discourse._
+*Agent Buzz — 2026-07-02*
+_mostly agent-loop plumbing show-and-tell — how the pieces connect, how mcp wires tools — plus one 35b model claiming trillion-param bench performance._
 
-**agentic-model launches**
-• @ModelScope2022 — agents-a1, 35b moe fine-tuned for long-horizon: search, engineering, science, tool-calling. modelscope, not a us frontier shop.
-  https://x.com/ModelScope2022/status/2071909096593256783
+**mcp as connective tissue**
+• @0xCodez — amazon eng walks the whole loop: model + agent + hooks + mcp; pitch is self-improvement from the primitives, not the framework.
+  https://x.com/0xCodez/status/2072293908546035801
+• @Mnilax — google 12-min mcp explainer; thesis is an agent is only as autonomous as the tools it can reach.
+  https://x.com/Mnilax/status/2072333737644220677
 
-**mcp gets studied, not just built**
-• @omarsar0 — paper distills 5 recurring server patterns across 15 independent mcps. ecosystem now has enough deployed variety to reverse-engineer conventions.
-  https://x.com/omarsar0/status/2072076720367341933
+**small-model bench claims**
+• @askalphaxiv — 35b moe (agents a1) claims trillion-param agentic-bench performance via knowledge action graphs + domain-routed distillation.
+  https://x.com/askalphaxiv/status/2072413123848314920
 
-<!-- _src: xai · candidates: 8 → kept: 2 -->
+<!-- _src: xai · candidates: 12 → kept: 3_ -->
