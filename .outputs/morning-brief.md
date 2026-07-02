@@ -1,22 +1,17 @@
-*Morning Brief — 2026-07-01*
+*Morning Brief — 2026-07-02*
 
 *Focus today*
-1. merge PR #150 fix(aeon.yml) — why now: 5-line rename, ~$456/mo bleed, day-3 stall
-2. draft ISS-025 capture-step PR — why now: hard deadline 2026-07-04, 3d out, 19-skill tail bleeds
-3. BTC breakdown day-6 confirmed — why now: 6-30 close $58,551, today's UTC close decides 7th-red or reclaim
+1. btc day-7 confirmed, first $60k reclaim on tape — why now: 05:11z $60,752 tests day-8 decision
+2. iss-025 sandbox-truncation pr unshipped day 9 — why now: weekly-review deadline 07-04, t-2d
+3. 3-pr stack #149/#150/#151 all merge-gated — why now: $456/mo bleeds daily, self-improve throttled
 
 *Since yesterday*
-- 00:19Z btc-levels ⚠ breakdown (6th sub-$60,500 close $58,551 vs $60,160 prior; spot $59,155 05:12Z)
-- PR #150 ~37h stalled (crossed 24h ~13h ago); PR #149 docs(skill-graph) day-3 ~63h stall
-- VELVET day-4 unwind, -12.8% from $1.72 entry, 9d to July 10 unlock cliff; SLX still +7.3%
-- WELL vol-spike 3.83× on red tape — direction confirms next 2 closes
-- SimpleHelp CVE-2026-48558 CVSS 10.0 KEV due 2026-07-02 (not aeon-patch, tracking only)
-
-*Watch*
-- BTC Q2 close $59,866 = first sub-$60k close since 2024; quarter-end de-grossing lifts today, relief-bounce setup — implication for focus #3 (7th-red vs $63.5k reclaim decision)
+- btc: jul-01 close $59,979.90 (7th sub-$60,500, 01:17z breakdown alert fired); 05:11z spot $60,752 = first reclaim of $60k in the run; june etf net −$4.51b worst month ever, ibit −$212m 6-30
+- pr #151 opened 18:31z (self-improve → iss-026 skill-evals sun 06→22 utc); stack now 3 = at throttle gate
+- skill-analytics 3 anomalies: 12:00 utc batch (token-movers/pick, defi-overview/monitor, on-chain, market-context) dead since 6-28
+- security: fission 9-cve coordinated no-fix batch (largest single-project no-patch go cluster of 2026); confluent kafka js brandjack = first enterprise-data-infra target of wave
+- well 3.83×→2.30× vol decay on −1.75% = supply-hitting-bid confirmed; slx pick day-4 flat (−3.6% from $0.475 entry)
 
 *Running today*
-- reg-monitor @ 14:00Z (Wed weekly)
-- skill-analytics @ 18:30Z (Wed weekly)
-- self-improve @ 18:00Z (every-other-day, odd date)
-- daily crons: daily-routine, github-trending, token-alert, search-skill, security-digest, list-digest, agent-buzz, heartbeat×3, skill-freshness, goal-tracker, skill-health, reflect, action-converter, evening-recap, thought-review×2, btc-levels×6
+- daily set only; no thursday-specific weekly slots
+- btc-levels 08:15z next — decides if $60k reclaim holds through 12:00 tape

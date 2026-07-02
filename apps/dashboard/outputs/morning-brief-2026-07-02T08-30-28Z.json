@@ -1,0 +1,256 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-02"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-focus",
+        "separator-1",
+        "section-yesterday",
+        "separator-2",
+        "section-running"
+      ]
+    },
+    "section-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "focus-stack"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-main",
+        "focus-1-why"
+      ]
+    },
+    "focus-1-main": {
+      "type": "Text",
+      "props": {
+        "text": "btc day-7 confirmed, first $60k reclaim on tape",
+        "variant": "lead"
+      }
+    },
+    "focus-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 05:11z $60,752 tests day-8 decision",
+        "variant": "muted"
+      }
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-main",
+        "focus-2-why"
+      ]
+    },
+    "focus-2-main": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025 sandbox-truncation pr unshipped day 9",
+        "variant": "lead"
+      }
+    },
+    "focus-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: weekly-review deadline 07-04, t-2d",
+        "variant": "muted"
+      }
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-main",
+        "focus-3-why"
+      ]
+    },
+    "focus-3-main": {
+      "type": "Text",
+      "props": {
+        "text": "3-pr stack #149/#150/#151 all merge-gated",
+        "variant": "lead"
+      }
+    },
+    "focus-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: $456/mo bleeds daily, self-improve throttled",
+        "variant": "muted"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-yesterday",
+        "yesterday-stack"
+      ]
+    },
+    "heading-yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "yesterday-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yesterday-1",
+        "yesterday-2",
+        "yesterday-3",
+        "yesterday-4",
+        "yesterday-5"
+      ]
+    },
+    "yesterday-1": {
+      "type": "Text",
+      "props": {
+        "text": "btc: jul-01 close $59,979.90 (7th sub-$60,500, 01:17z breakdown alert fired); 05:11z spot $60,752 = first reclaim of $60k in the run; june etf net −$4.51b worst month ever, ibit −$212m 6-30",
+        "variant": "body"
+      }
+    },
+    "yesterday-2": {
+      "type": "Text",
+      "props": {
+        "text": "pr #151 opened 18:31z (self-improve → iss-026 skill-evals sun 06→22 utc); stack now 3 = at throttle gate",
+        "variant": "body"
+      }
+    },
+    "yesterday-3": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics 3 anomalies: 12:00 utc batch (token-movers/pick, defi-overview/monitor, on-chain, market-context) dead since 6-28",
+        "variant": "body"
+      }
+    },
+    "yesterday-4": {
+      "type": "Text",
+      "props": {
+        "text": "security: fission 9-cve coordinated no-fix batch (largest single-project no-patch go cluster of 2026); confluent kafka js brandjack = first enterprise-data-infra target of wave",
+        "variant": "body"
+      }
+    },
+    "yesterday-5": {
+      "type": "Text",
+      "props": {
+        "text": "well 3.83×→2.30× vol decay on −1.75% = supply-hitting-bid confirmed; slx pick day-4 flat (−3.6% from $0.475 entry)",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-running",
+        "running-stack"
+      ]
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-1",
+        "running-2"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "daily set only; no thursday-specific weekly slots",
+        "variant": "body"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels 08:15z next — decides if $60k reclaim holds through 12:00 tape",
+        "variant": "body"
+      }
+    }
+  }
+}
