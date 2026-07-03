@@ -1,3 +1,11 @@
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
-Ran the heartbeat skill for the 2026-07-02 20:14 UTC evening tick. All P0/P1/P2/P3 findings are same-signature continuations of items already surfaced within the last 48h (fork-skill-digest STUCK ~97h — 12 prior hbs; 19-skill sandbox-truncation chronic tail unchanged; PR #149 day-4.1 stall; BTC day-7 bounce carried; on-chain config day 25; operator-scorecard scheduler-side gap day 4; 12:00 UTC batch dead — PR #150 merge removed root cause, first live test Fri 07-03 12:00Z T-16h). No new notification fired. Regenerated `docs/status.md` (40 enabled-skill rows + 3 never-run, sorted last-run desc, fork-skill-digest marked 🕸 stuck, token-pulse omitted — no article on disk). Logged heartbeat entry to `memory/logs/2026-07-02.md`.
+## Summary
+Ran heartbeat (08:30 UTC morning tick, ~30min past 08:00 cron slot). All findings dedup against last 48h logs — **no notification fired**.
+
+**P0**: fork-skill-digest STUCK ~110h (13th carry); 18-skill chronic tail unchanged (thought-review 50%→51% exited cluster overnight); self-check healthy.
+**P1**: 1 open PR #149 day-4.6 stall (dedup); 0 urgent issues; 15 open issues unchanged.
+**P2**: sandbox-truncation ISS-025 cluster day 15 (**weekly-review deadline T-1d — TIGHT**); XAI day 18 BLOCKED; on-chain config day 26 BLOCKED. **Material new fact**: BTC 07-02 UTC close $61,487 broke the 7-day sub-$60,500 breakdown streak — btc-levels 01:24Z cleared `breakdownAlertedForClose`, resolving 07-02 21:35Z "tonight's close decides" prediction as first-reclaim. Silent per skill spec (only $63.5k/$65.9k trigger reclaim alerts).
+**P3**: 12:00 UTC batch first live test T-3.5h (PR #150 merge); operator-scorecard MISSED day 5; morning 07:00Z slot 90min overdue, under 2× interval — not flagged.
+
+Files modified: `docs/status.md` (regenerated — 🔴 DEGRADED, 43 skills, 15 issues, token-pulse omitted), `memory/logs/2026-07-03.md` (heartbeat entry appended). Next scheduled: github-trending + aixbt-pulse at 09:00 UTC.
