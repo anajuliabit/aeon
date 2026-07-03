@@ -1,9 +1,16 @@
 ## Summary
 
-Quiet run. No alerts fired.
+**BTC Levels — 2026-07-03 08:30Z**
 
-- **Spot:** $61,463 — well above the $45k leverage-review trigger
-- **July 2 close:** $61,487 — above $60,500, no breakdown signal
-- **Reclaim levels ($63.5k / $65.9k):** not reached yet
+- **Spot:** $61,729.78
+- **July 2 daily close:** $61,487.30
 
-State updated: `lastDailyCloseDate` advanced to `2026-07-02`. Log appended and committed.
+**Level checks:**
+| Level | Threshold | Result |
+|---|---|---|
+| Leverage review trigger | spot ≤ $45,000 | clear |
+| Breakdown signal | close < $60,500 | clear ($61,487 ≥ $60,500) |
+| Reclaim $63,500 | spot ≥ $63,500 | not reached |
+| Reclaim $65,900 | spot ≥ $65,900 | not reached |
+
+No alerts fired — no notification sent. State and log committed.
