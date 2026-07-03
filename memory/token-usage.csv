@@ -641,4 +641,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-03,security-digest,claude-opus-4-7,364,37510,2585582,140600
 2026-07-03,btc-levels,claude-sonnet-4-6,9,11312,325789,43067
 2026-07-03,reflect,claude-opus-4-7,52,30251,4693716,194696
-2026-07-03,btc-levels,claude-sonnet-4-6,11,6145,398167,48495
+2026-07-03,thought-review,claude-opus-4-7,22,9614,1157636,59097
