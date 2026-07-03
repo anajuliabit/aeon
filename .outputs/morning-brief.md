@@ -1,17 +1,23 @@
-*Morning Brief — 2026-07-02*
+*Morning Brief — 2026-07-03*
 
 *Focus today*
-1. btc day-7 confirmed, first $60k reclaim on tape — why now: 05:11z $60,752 tests day-8 decision
-2. iss-025 sandbox-truncation pr unshipped day 9 — why now: weekly-review deadline 07-04, t-2d
-3. 3-pr stack #149/#150/#151 all merge-gated — why now: $456/mo bleeds daily, self-improve throttled
+1. BTC — day-8 red or breakdown clears — why now: spot $61.3k held two quiet ticks, tonight's UTC close decides
+2. 12:00 UTC batch first live test — why now: 6 skills dark 5d, PR #150 fix first tick today
+3. ISS-025 capture-step PR — why now: self-set weekly-review deadline T-1d, unshipped day 10
 
 *Since yesterday*
-- btc: jul-01 close $59,979.90 (7th sub-$60,500, 01:17z breakdown alert fired); 05:11z spot $60,752 = first reclaim of $60k in the run; june etf net −$4.51b worst month ever, ibit −$212m 6-30
-- pr #151 opened 18:31z (self-improve → iss-026 skill-evals sun 06→22 utc); stack now 3 = at throttle gate
-- skill-analytics 3 anomalies: 12:00 utc batch (token-movers/pick, defi-overview/monitor, on-chain, market-context) dead since 6-28
-- security: fission 9-cve coordinated no-fix batch (largest single-project no-patch go cluster of 2026); confluent kafka js brandjack = first enterprise-data-infra target of wave
-- well 3.83×→2.30× vol decay on −1.75% = supply-hitting-bid confirmed; slx pick day-4 flat (−3.6% from $0.475 entry)
+- PR #150 + #151 merged 7-02 13:20Z — 2/3 stack cleared; $456/mo bleed halted + ISS-026 skill-evals cron fix shipped
+- BTC first-bounce day: breadth 32→81/100 (biggest 30d swing), watchlist whole-green +5.19% median
+- REPPO vol-trigger 3.16× at 13:07Z — 4-day drought base snaps, $0.021 wobble line reclaimed
+- reflect rewrote MEMORY.md 42L→45L; VELVET pick closed −68.5%; 3 new durable patterns codified (brandjack testing-arm, skills-as-primitive day-3, GHSA field lag)
+- PR #149 docs(skill-graph) day-5 stall — operator-merge gated
 
 *Running today*
-- daily set only; no thursday-specific weekly slots
-- btc-levels 08:15z next — decides if $60k reclaim holds through 12:00 tape
+- skill-freshness / heartbeat @ 08:00 UTC
+- github-trending @ 09:00 UTC
+- token-alert + 6-skill dark-batch relight @ 12:00 UTC
+- search-skill / security-digest @ 14:00 UTC
+- btc-levels @ 04:15 / 08:15 / 12:15 / 16:15 / 20:15 UTC
+- list-digest @ 17:00 UTC · agent-buzz @ 17:30 UTC
+- goal-tracker / skill-health / reflect / action-converter / self-improve @ 18:00 UTC
+- evening-recap / thought-review @ 21:00 UTC
