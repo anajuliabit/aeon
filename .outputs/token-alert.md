@@ -1,7 +1,7 @@
-*Token Alert — 2026-07-02*
+*Token Alert — 2026-07-03*
 
-REPPO: $0.02153733 (+4.31% 24h)
-Volume: $293,918 (3.16× 5-day mean $92,932)
-Trigger: volume-spike breaks 4-day drought base ($56K–$121K window); price reclaims $0.021 wobble line on the tape
+GITLAWB: $0.00006133 (up 27.38% 24h)
+Volume: $487,839 (1.76× 5d avg $277.6K)
+Trigger: 24h change +27.38% ≥ 15% token threshold — snaps the $0.00005 handle after day-2 reclaim attempt, first material breakout of the watchlist window (prev 1d high +8.03% on 7-02).
 
-Watchlist context: whole-green day — WELL +5.84% ($0.003564, vol 1.55×), MAMO +4.53% ($0.008310, vol 0.99×), GITLAWB +8.03% ($0.00004802, vol 0.88×). None cross their 24h rails. REPPO the only vol-spike trigger.
+Watchlist context: WELL +1.16% flat / MAMO +1.29% flat / REPPO +10.85% (near 15% rail, vol 1.72× — day-2 of vol-drought break). GITLAWB the only >threshold move.

@@ -637,3 +637,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-03,btc-levels,claude-sonnet-4-6,11,10450,434948,49100
 2026-07-03,btc-levels,claude-sonnet-4-6,10,8337,317905,27633
 2026-07-03,daily-routine,claude-opus-4-7,1132,23203,3675285,112687
+2026-07-03,token-alert,claude-opus-4-7,27,11259,1084155,93186
