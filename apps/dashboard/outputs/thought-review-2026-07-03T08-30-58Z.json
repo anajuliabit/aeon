@@ -1,0 +1,58 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 Thought Review",
+        "description": "Last 24h"
+      },
+      "children": [
+        "content_stack"
+      ]
+    },
+    "content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "captures_stat",
+        "status_section"
+      ]
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nothing_surface",
+        "inbox_info"
+      ]
+    },
+    "nothing_surface": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface"
+      }
+    },
+    "inbox_info": {
+      "type": "Text",
+      "props": {
+        "text": "Inbox: 1 file, 256h unarchived (operator-owned)",
+        "variant": "caption"
+      }
+    }
+  }
+}
