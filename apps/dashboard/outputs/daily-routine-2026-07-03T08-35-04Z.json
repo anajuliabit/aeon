@@ -1,0 +1,530 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-03"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-pulse",
+        "sep-1",
+        "section-winners",
+        "sep-2",
+        "section-losers",
+        "sep-3",
+        "section-tweets",
+        "sep-4",
+        "section-paper",
+        "sep-5",
+        "section-github",
+        "sep-6",
+        "section-hn"
+      ]
+    },
+    "section-pulse": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pulse-heading",
+        "pulse-status",
+        "pulse-grid"
+      ]
+    },
+    "pulse-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Pulse",
+        "level": "h2"
+      }
+    },
+    "pulse-status": {
+      "type": "Text",
+      "props": {
+        "text": "83/100 top-100 green, median top-50 +2.12% — day-2 of bounce. Spot ETF flip +$222M breaks 10d outflow streak. TD Sequential buy on BTC/ETH/XRP/SOL.",
+        "variant": "muted"
+      }
+    },
+    "pulse-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth",
+        "stat-sol",
+        "stat-hype",
+        "stat-bnb",
+        "stat-top100"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$61,715",
+        "delta": "+2.3% (7d +2.0%)",
+        "trend": "up"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,718",
+        "delta": "+6.1%",
+        "trend": "up"
+      }
+    },
+    "stat-sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$81.03",
+        "delta": "+3.7%",
+        "trend": "up"
+      }
+    },
+    "stat-hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$67.48",
+        "delta": "+6.8%",
+        "trend": "up"
+      }
+    },
+    "stat-bnb": {
+      "type": "Stat",
+      "props": {
+        "label": "BNB",
+        "value": "$561",
+        "delta": "+2.1%",
+        "trend": "up"
+      }
+    },
+    "stat-top100": {
+      "type": "Stat",
+      "props": {
+        "label": "Top-100 Median",
+        "value": "+2.12%",
+        "trend": "up"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-winners": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Symbol",
+          "Price",
+          "Δ 24h",
+          "Market Cap / Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "MAGMA",
+            "$0.573",
+            "+48.0%",
+            "$109M / #253"
+          ],
+          [
+            "2",
+            "NEX (Nexus)",
+            "$2.69e-6",
+            "+45.4%",
+            "$161M / #194"
+          ],
+          [
+            "3",
+            "M (MemeCore)",
+            "$1.76",
+            "+37.7%",
+            "day-2 continuation, 7d +99%"
+          ],
+          [
+            "4",
+            "FARTCOIN",
+            "$0.168",
+            "+19.0%",
+            "7d +39%"
+          ],
+          [
+            "5",
+            "WLD (Worldcoin)",
+            "$0.418",
+            "+13.3%",
+            "—"
+          ],
+          [
+            "6",
+            "UNI",
+            "$3.19",
+            "+12.7%",
+            "$1.98B / #43"
+          ],
+          [
+            "7",
+            "SKY",
+            "$0.0593",
+            "+12.3%",
+            "7d +14%"
+          ],
+          [
+            "8",
+            "MANA",
+            "$0.0694",
+            "+9.4%",
+            "—"
+          ],
+          [
+            "9",
+            "RAY (Raydium)",
+            "$0.720",
+            "+9.0%",
+            "7d +18%"
+          ],
+          [
+            "10",
+            "XPL (Plasma)",
+            "$0.0997",
+            "+8.1%",
+            "—"
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-losers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "losers-heading",
+        "losers-table"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Symbol",
+          "Price",
+          "Δ 24h",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "VELVET",
+            "$0.448",
+            "-22.5%",
+            "day-2 dead-cat, position closed 7-02"
+          ],
+          [
+            "2",
+            "LAB",
+            "$7.66",
+            "-17.2%",
+            "day-3 capitulation, 7d -58%"
+          ],
+          [
+            "3",
+            "GWEI (ETHGas)",
+            "$0.124",
+            "-9.9%",
+            "reversal from yest +20.5%"
+          ],
+          [
+            "4",
+            "TAC",
+            "$0.0344",
+            "-7.3%",
+            "7d breakout unwinds"
+          ],
+          [
+            "5",
+            "LIT (Lighter)",
+            "$2.05",
+            "-5.5%",
+            "mean-revert from 7-02 +15.3% breakout"
+          ],
+          [
+            "6",
+            "MORPHO",
+            "$1.99",
+            "-5.2%",
+            "reversal from yest +8.5%"
+          ],
+          [
+            "7",
+            "JTO",
+            "$0.754",
+            "-5.0%",
+            "—"
+          ],
+          [
+            "8",
+            "KAITO",
+            "$0.576",
+            "-4.8%",
+            "—"
+          ],
+          [
+            "9",
+            "FF (Falcon Finance)",
+            "$0.0616",
+            "-4.3%",
+            "—"
+          ],
+          [
+            "10",
+            "HBAR",
+            "$0.071",
+            "-3.0%",
+            "$3.1B / #28"
+          ]
+        ]
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets-heading",
+        "tweet-crypto",
+        "tweet-ai",
+        "tweet-dev"
+      ]
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweet-crypto": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Crypto",
+        "handle": "crypto-analyst",
+        "text": "$61.8k the gate — clean above opens $63k, failure retests $59k. Spot ETF flip +$222M breaks 10-day outflow streak (BTC + ETH +$29M same day). TD Sequential buy prints across the beta names."
+      }
+    },
+    "tweet-ai": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AI",
+        "handle": "ai-analyst",
+        "text": "Sonnet 5 day-4 of ship-cycle — $2/$10 promo through Aug-31 then $3/$15. Framed as Anthropic's most direct IPO-prep tell: Opus-4.8-adjacent capability at Sonnet pricing. Agentic-first, chat second is now the industry read."
+      }
+    },
+    "tweet-dev": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Dev",
+        "handle": "dev-analyst",
+        "text": "Podman v6.0.0 + Immich 3.0 shipped same window. Self-host stack keeps compounding — the sovereignty/on-prem vibe is louder than a year ago. CNCF-incubated container tool is the durable read."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-paper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper-heading",
+        "paper-story",
+        "paper-note"
+      ]
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents",
+        "href": "https://arxiv.org/abs/2607.02255",
+        "source": "arXiv 2607.02255",
+        "score": "HF ↑28"
+      }
+    },
+    "paper-note": {
+      "type": "Text",
+      "props": {
+        "text": "Memory as a contract about what each future decision is allowed to see. Direct aeon-runtime hit — memory/logs/ is exactly the surface being benchmarked. Day-2 of the memory-eval thread (MemSyco 7-02 → AgenticSTS 7-03).",
+        "variant": "caption"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-github": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "github-heading",
+        "github-text"
+      ]
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (@anajuliabit, 24h window).",
+        "variant": "body"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-hn": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-heading",
+        "hn-1",
+        "hn-2",
+        "hn-3",
+        "hn-4",
+        "hn-5"
+      ]
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Virginia bans sale of geolocation data",
+        "href": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/virginia-bans-sale-of-geolocation-data",
+        "source": "HN",
+        "score": "733p / 120c — first US state-level ban on selling geo data"
+      }
+    },
+    "hn-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Podman v6.0.0",
+        "href": "https://blog.podman.io/2026/07/introducing-podman-v6-0-0/",
+        "source": "HN",
+        "score": "504p / 202c — CNCF container tool major"
+      }
+    },
+    "hn-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "LUKS suspend stopped wiping keys since Linux 6.9",
+        "href": "https://mathstodon.xyz/@iblech/116769502749142438",
+        "source": "HN",
+        "score": "457p / 200c — kernel regression, disk-encryption keys survive suspend in RAM"
+      }
+    },
+    "hn-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Immich 3.0",
+        "href": "https://github.com/immich-app/immich/discussions/29439",
+        "source": "HN",
+        "score": "372p / 178c — self-hosted photo stack major"
+      }
+    },
+    "hn-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Right to Local Intelligence",
+        "href": "https://righttointelligence.org/",
+        "source": "HN",
+        "score": "203p / 70c — policy push for on-device model access"
+      }
+    }
+  }
+}
