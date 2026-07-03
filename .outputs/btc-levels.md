@@ -1,5 +1,9 @@
+Skill complete. Quiet run — no notification sent.
+
 ## Summary
 
-Quiet run. Spot $61,465.57 (down slightly from $61,649 at 17:14Z). Jul-01 close $59,979.90 — still the only completed close, already alerted. No level crossings: spot well above the $45k leverage trigger, below the $63.5k reclaim rail, breakdown already marked for Jul-01. No notification sent.
-
-Tonight's UTC midnight close will determine whether the 7-consecutive-sub-$60,500 streak extends to day 8 or spot reclaims — $63.5k and $65.9k are the rails to watch.
+- **Spot:** $61,493 (from CoinGecko `.prices[-1]`)
+- **Previous close:** $61,487 on 2026-07-01 (derived from 2026-07-02 00:00 UTC snapshot) — above the $60,500 breakdown threshold
+- **Alerts fired:** none (leverage-review: spot > $45k; breakdown: close ≥ $60,500; reclaim $63.5k/$65.9k: spot too low)
+- **State change:** `breakdownAlertedForClose` cleared from `"2026-07-01"` → `null` since the latest close for that date shows ≥ $60,500
+- **Files:** `memory/btc-levels-state.json` updated, `memory/logs/2026-07-03.md` created, both committed.
