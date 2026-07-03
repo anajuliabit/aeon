@@ -1,15 +1,17 @@
-*Skill Health — 2026-07-02*
-HEALTH: DEGRADED(23)  [systemic: sandbox-truncation `output_tokens=0` — 23 DEG + 8 WARN share signature · cluster ISS-019/020/021/024/025 day-14, hard deadline 07-04 T-2d]
+## Summary
 
-🟡 DEGRADED (top 5 by days-since-success desc; +18 more — see memory/issues/INDEX.md)
-- vuln-scanner — sr 10% (30 runs), 5d down — FIX CONFIG → ISS-018 (missing prefetch shim, distinct root cause)
-- market-context-refresh — sr 32% (93 runs), 4d down — WAIT-API → systemic
-- narrative-tracker — sr 33% (60 runs), 4d down — WAIT-API → systemic
-- skill-evals — sr 38% (13 runs), 4d down — WAIT-API → systemic
-- aixbt-pulse — sr 47% (92 runs), 4d down — WAIT-API → systemic
+Ran skill-health at 2026-07-03T18:18Z (18:00 UTC cron tick).
 
-🟠 WARNING: 8 (token-alert 77% · on-chain-monitor 72% · defi-overview 69% · btc-levels 67% · token-movers 65% · morning-brief 64% · token-pick 64% · daily-routine 63%) — all share systemic signature
-⚪ NO DATA: fork-skill-gap (Sun 21:00Z, next 7-05) · operator-scorecard (Mon 10:30Z day-4 scheduler-side gap) — DISPATCH-SKILL
-🟢 HEALTHY: 9
+**Classification** (cron-state-only; `./scripts/skill-runs` sandbox-blocked → SKILL_HEALTH_PARTIAL):
+- **0 CRITICAL · 0 FLAPPING · 23 DEGRADED · 8 WARNING · 9 HEALTHY · 2 NO_DATA** — byte-identical to 2026-06-30 / 07-01 / 07-02 reports (5th consecutive same-hash daily tick).
+- Systemic: 23 DEGRADED + 8 WARNING all share `output_tokens=0` sandbox-truncation signature (cluster ISS-019/020/021/024/025 day-15, weekly-review hard deadline 2026-07-04 = T-1d).
 
-Open issues: 15 · Filed 0 · Resolved 0. Classification byte-identical to 06-30 + 07-01 reports; 24h+22m daily-cadence notify. PR #150 + #151 merged 07-02 13:20Z — usepod_model→model fix (ISS-025 root cause) + skill-evals cron 06→22 UTC (ISS-026) queued for next 12:00Z tick to test.
+**Notify gate: NOOP** — hash unchanged AND `now (18:18:34Z) − last_notified (2026-07-02T18:53:00Z) = 23h25min < 24h`. No `./notify` call fired.
+
+**Issue reconciliation:** 0 filed, 0 resolved. No skill at cf≥3; no CRITICAL/FLAPPING; nothing to file. No DEGRADED→HEALTHY transitions on any open-issue `affected_skills`. 15 open issues unchanged (ISS-026 fix shipped via PR #151 merge but INDEX row still Open — memory-flush follow-up).
+
+**Files modified:**
+- `memory/skill-health/last-report.json` (last_run_at updated, last_notified_at preserved)
+- `memory/logs/2026-07-03.md` (skill-health NOOP entry appended)
+
+**Follow-ups:** ISS-025 capture-step fix still unshipped at T-1d (weekly-review deadline 2026-07-04); 12:00 UTC batch remained dark today post PR #150 (heartbeat 15:29Z: deeper scheduler/YAML issue than just `usepod_model`); ISS-026 INDEX row needs resolve-flip in next memory-flush.
