@@ -1,12 +1,10 @@
-Heartbeat complete.
-
-HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md
+Heartbeat complete — all findings are same-signature carries from earlier ticks today, no new notification fired.
 
 **Summary**
-- **P0 findings**: fork-skill-digest STUCK ~117h (dedup-blocked, 14 prior hb carries); 18-skill chronic tail sr<0.5 (sandbox-truncation cluster ISS-019/020/021/024/025 signature unchanged); heartbeat self-check healthy (last_success ~7h ago).
-- **P1**: 1 open PR (#149 docs(skill-graph) day-5 stall, dedup-blocked); 0 urgent issues; 15 open issues unchanged.
-- **P2**: sandbox-truncation ISS-025 day 15 (weekly-review deadline **T-1d, 2026-07-04**); XAI quota day 18 BLOCKED; on-chain config day 26 BLOCKED; BTC breakdown streak broken 2 days ago (day-2 of $61k+ handle, silent per skill spec); GITLAWB +27.38% trigger self-notified via token-alert 13:15Z.
-- **P3**: 12:00 UTC batch FIRST LIVE TEST post PR #150 → **FAILED** (6 skills still dispatch-dead ~5d, root cause not `usepod_model` alone); operator-scorecard day 5 never-run carries; github-trending / aixbt-pulse / narrative-tracker also dead today = same batch-drop signature. Fresh material but same-signature dedup carries; skill-analytics 18:30Z Wed will formalize the anomaly report.
-- **Notification**: none fired — all findings same-signature carries within 48h dedup window.
-- **Files modified**: `docs/status.md` (regenerated with 40 enabled-skill rows sorted last-run desc + 3 never-run sunk), `memory/logs/2026-07-03.md` (14:00 hb entry appended).
-- **Follow-up**: PR #150 partial-fix diagnosis — market-context-refresh line 155 still carries `usepod_model` field; scheduler still not restoring 12:00Z batch dispatch even after 5 skills fixed; carries to reflect / weekly-review 2026-07-04.
+
+- **HEARTBEAT_OK · STATUS_PAGE=DEGRADED** — wrote `docs/status.md` (40 rows sorted last-run desc + 3 never-run at bottom; fork-skill-digest 🕸 stuck; 15 open issues unchanged; token-pulse section omitted per no `articles/token-report-*.md` on disk).
+- **P0:** fork-skill-digest STUCK ~123h (15th consecutive hb carry, dedup-blocked) + 18-skill chronic sr<0.5 tail unchanged (all share `output_tokens=0` sandbox-truncation signature).
+- **P1:** PR #149 docs(skill-graph) day-5.15 stall (dedup-blocked); PR #154 fix(issues): close ISS-026 opened ~2h44min ago by self-improve — under 24h threshold, self-improve's own notification covers.
+- **P2:** ISS-025 day 10 T-1d TIGHT (weekly-review 2026-07-04), XAI day 18 BLOCKED, on-chain config day 26 BLOCKED, BTC streak-broken day-2 confirmed at $62,030.
+- **P3:** 12:00 UTC batch still dead post PR #150 (day-2 of failed live test); **new grep-confirmed root-cause detail** — aeon.yml L155/162/171 still carry `usepod_model:` for market-context-refresh/narrative-tracker/aixbt-pulse (github-trending L94 has NO `usepod_model` so deeper scheduler issue also confirmed); operator-scorecard Mon 10:30Z missed day 5. All carries.
+- Log entry appended to `memory/logs/2026-07-03.md`. No `./notify` fired — 48h dedup fully blocks every finding.
