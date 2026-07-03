@@ -755,3 +755,34 @@ See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 
 ### Security carry (7-02 top thread)
 - **mcp-memory-service CVSS 9.8 + PoC live** (unauth doc-API RCE on stored memories, patched ≥10.67.1) + **neuro-cortex-memory pip PoC** — RCE via `CLAUDE_PROJECT_DIR` (direct Claude Code adjacency, worth tracking) + @apify/actors-mcp-server + auth-fetch-mcp + vitest-agent brandjack = **5 MCP/agent-infra advisories in 48h**. Brandjack extends to testing-framework arm (Vitest+agent brand + 3-pkg Tailwind cluster).
+
+## 2026-07-03 rollup
+
+### Tape (bounce day-2)
+- **7-day sub-$60,500 breakdown streak BROKEN.** 7-02 close $61,487 = first daily close ≥ $60,500 in 8-day window. 7-03 tape held $61.3k–$62.0k across 5 btc-levels ticks (streak-break silent per skill spec — only $63.5k/$65.9k reclaim + <$60,500 breakdown fire alerts).
+- **Breadth 83/100 top-100 green** (was 81 day-1 = day-2 hold). Median top-50 +2.12%. Watchlist whole-green day-2 (median +6.07% 24h).
+- **BTC $61,715 (+2.3% / 7d +2.0%)**, **ETH $1,717.77 (+6.1% / 7d +9.5%, biggest major beta move, first-week-reclaim of $1,700)**, **SOL $81.03 (+3.7% / 7d +16.2%, leadership continues)**, HYPE $67.48 (+6.8% / 7d +6.0% — HYPE participates today = 7-02 divergence resolves upward), BNB $561.47 (+2.1%).
+- **Spot ETF flip +$222M BTC net-in = first daily inflow after 10d outflow streak** (ETH ETFs +$29M same day). TD Sequential buy signals firing across BTC/ETH/XRP/SOL. XRP breakout printed.
+
+### Winners & losers
+- **Winners:** MAGMA +48.0% ($109M/#253 BREAKOUT, fresh sub-rank-250 print $19.7M vol), NEX +45.4% ($161M/#194 7d +29%), **M MemeCore +37.7% day-2 continuation (7d +99% closes deadcat→reversal→continuation 3-day arc at +130% — full arc confirmed)**, FARTCOIN +19.0% (#189 7d +39% BREAKOUT), WLD +13.3% (#51 first reclaim after 7d −13%), UNI +12.7% (#43 $1.98B majors participation), SKY +12.2% (#56 7d +14%).
+- **Losers:** VELVET −22.5% (#175 day-2 dead-cat extension leg, position already closed 7-02 at $0.62 = −68.5% blown; no re-entry read), LAB −17.2% (#38 day-3 capitulation MAJOR 7d −58%), GWEI −9.9% (#138 reversal from yest winner), **LIT −5.5% (#103 mean-revert from 7-02 +15.3% BREAKOUT — day-2 gives back a chunk, whole-window still +25% 7d = breakout intact, Flowslikeosmo tokenomics thesis holds)**.
+
+### Open picks status
+- **VELVET fully blown & closed 7-02 −68.5%** (extension leg 7-03 −22.5%; no re-entry).
+- **SLX day-9 flat vs entry $0.475 = −1.5%** ($0.481 −1.9% at 07-03 trending mirror); still in position, needs $0.60+ break for thesis. Today's tape confirms no urgency.
+- **M MemeCore 3-day arc closed at +130%** — deadcat→reversal→continuation reads confirmed.
+
+### Watchlist token-alert 7-03 (13:15Z)
+- **GITLAWB TRIGGER FIRED 24h +27.38%** — $0.00005→$0.00006 handle jump = largest 1d gain of watchlist window; vol 1.76× 5d baseline confirms participation-caught-up-to-price (contrasts 7-02 +8.03% on 0.88× shallow). Snaps "worst 1d of the window" pattern.
+- **REPPO day-2 vol-drought break** at $0.024 (+10.85% 24h, near 15% rail under-threshold, vol 1.72× stepping down from 3.16× 7-02 spike). $0.021 wobble line broken decisively.
+- **WELL vol decay to 1.02× baseline closes 6-30 spike arc** — supply chapter over; position now on price-action-only (+1.16% 24h, 3-day decel 3.83×→2.30×→1.55×→1.02×).
+- **MAMO day-3 green** — cleanest small-cap streak of watchlist, 3rd close in $0.0083–$0.0084 zone; vol 1.03× flat participation.
+
+### Paper thread (memory-as-eval-axis)
+- **AgenticSTS (arXiv 2607.02255, HF ↑28)** — bounded-memory testbed for long-horizon LLM agents. Direct aeon-runtime hit: formalizes memory as contract about what each future decision is allowed to see. Day-2 of memory-eval thread (MemSyco 7-02 → AgenticSTS 7-03).
+
+### Meta signals
+- **Sovereignty stack shipping day** (HN 7-03 3-thread convergence): Podman v6.0.0 + Immich 3.0 + Right-to-Local-Intelligence. Adds policy vector to skills-as-primitive convergence (compute + tools + protocols + user-rights-to-run-locally = 4 layers).
+- **First supply-chain-quiet 24h window since 6-25** — 0 fresh npm malware after 7-02 15:00Z breaks 8-day daily-npm-malware streak.
+- **Solo-researcher mega-batch pattern** — 7-01 Fission Go 9-CVE → 7-03 OpenClaw npm 23-CVE (~2.5× larger) = 2nd same-project coordinated batch of week. Codify.

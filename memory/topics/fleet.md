@@ -1004,3 +1004,45 @@ state: what was built, recurring blockers, and health.
 
 ### reg-monitor day-1 tick surfaced 7-02 (via daily-routine)
 - **CFTC Event Contracts NPRM** carries — comment window closes ~2026-07-27 (T-25d), **biggest prediction-market action since Kalshi-Selig letter**.
+
+## 2026-07-03 entry
+
+### PRs & merges
+- **#149 docs(skill-graph)** — day-5 stall (~118h), only PR in stack after 7-02 batch-merge. Operator-merge gated.
+- **PR #150 was PARTIAL fix** — 12:00 UTC batch first live test 7-03 FAILED. 6 skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh) still dark ~5.2d since 6-28. Additional dead slots 7-03: github-trending 09:00Z + aixbt-pulse 09:00Z + narrative-tracker 13:30Z. Deeper scheduler/YAML issue remains (possibly `market-context-refresh` line 155 still carries `usepod_model` field). Wed skill-analytics 18:30Z will formalize the anomaly.
+- **ISS-026 fix (PR #151) shipped 7-02 but INDEX still Open** — memory-flush follow-up carries.
+
+### Skill-health snapshot
+- **7-02 18:53Z byte-identical 3rd day** — 0 critical · 23 degraded · 8 warning · 9 healthy · 2 no_data. Systemic: `output_tokens=0` cluster ISS-019/020/021/024/025 day-10 since action-converter 6-24 flag; **weekly-review hard deadline 07-04 = T-1d, TIGHT**.
+- **18-skill chronic tail** (was 19 at 7-02 — thought-review 50%→51% exits cluster): vuln-scanner 10% / cost-report 11% / reg-monitor 12% / skill-analytics 13% / security-digest 26% / market-context-refresh 32% / narrative-tracker 33% / search-skill 34% / skill-health 36% / list-digest 37% / self-improve 37% / action-converter 38% / goal-tracker 38% / skill-evals 38% / reflect 39% / fleet-control 40% / evening-recap 46% / aixbt-pulse 47%.
+- fork-skill-digest STUCK ~117h carry — next Sun 7-05 fresh dispatch attempt.
+- operator-scorecard Mon 10:30Z MISSED **day 5** — scheduler-side never-run gap, carry.
+
+### security-digest 7-03
+- **1 TODAY / 5 THIS-WEEK / 0 MONITOR**. Notable:
+  - **9router npm 9.8** hardcoded default JWT fallback secret `9router-default-secret-change-me` + public PoC = worst config default of year candidate.
+  - **fast-mcp-telegram pip 9.4** bearer-token path traversal → 0.19.1 (MCP-adjacent, day-7 of agent-infra brandjack thread).
+  - **zebrad rust 9.3** P2SH sigop undercount = Zcash consensus divergence (chain-split miners for fee cost) → 4.5.0.
+  - **electerm npm 8.8** cmd injection via malicious SSH/SFTP filenames → 3.11.11.
+  - **joserfc pip 8.7** HS256 accepts empty/nil HMAC key = JWT forgery when secret unset → 1.6.8. Cross-lang sibling of ruby-jwt + PyJWT — **pattern-of-week: JWT verify-with-nil-key across ecosystems**.
+  - **coder Go 8.1** `dotfiles_uri` + `mode=auto` workspace-creation = RCE on victim click → 2.29.7/2.30.2.
+- **OpenClaw npm 23-advisory single-package coordinated disclosure batch** on agent-orchestration platform — **2nd solo-researcher mega-batch of week** (7-01 Fission Go 9-CVE = 1st, ~2.5× smaller). Same-project batch-magnitude signature = codify.
+- **openbabel pip 13-CVE republish batch** — cheminformatics lib, filter-out-of-stack but pattern hit.
+- **GH Advisory `patched_versions: null` inversion extends day-3** (7-01 all-null cascade → 7-02 inversion → 7-03 continues). Codify: WebFetch advisory page canonical for triage.
+- **First supply-chain-quiet 24h window since 6-25** — 0 fresh npm malware after 7-02 15:00Z breaks 8-day daily-npm-malware streak. Watch next 48h for pattern-vs-blip.
+
+### hn-digest 7-03 — sovereignty stack shipping day
+- **Virginia bans sale of geolocation data** (733p) — first US state-level ban.
+- **Podman v6.0.0** (504p, CNCF-incubated) — Docker-alternative; ships day-of Immich 3.0.
+- **LUKS suspend stopped wiping disk-encryption keys since Linux 6.9** (457p) — kernel regression.
+- **Immich 3.0** (372p) — self-hosted photo/video stack major.
+- **Right to Local Intelligence** (203p) — policy push for on-device model access. Extends skills-as-primitive convergence to a **policy vector** (was compute + tools + protocols; now +user-rights-to-run-locally).
+- **Three-thread convergence:** sovereignty stack + privacy legislation escalation (Virginia + American Privacy Emergency) + encryption-tooling security regression (LUKS).
+
+### paper-pick 7-03
+- **AgenticSTS (arXiv 2607.02255, HF ↑28)** — bounded-memory testbed for long-horizon LLM agents. Direct aeon-runtime hit: memory as contract about what each future decision is allowed to see. **Day-2 of memory-as-eval-axis** thread (MemSyco 7-02 → AgenticSTS 7-03).
+
+### tweet-roundup 7-03 (WebSearch fallback — XAI day 18)
+- BTC broke $61k resistance yest, consolidating $61.0–$61.8k. $61.8k gate. **Spot ETF flip +$222M BTC net-in breaks 10d outflow streak; ETH ETFs +$29M same day.** TD Sequential buy signals across BTC/ETH/XRP/SOL. XRP breakout printed.
+- Sonnet 5 framed as **agentic-shift crystallization** — "AI war shifting from chat to agents." $2/$10 promo through Aug-31. GPT-5.6 Sol preview + Gemini 3.5 Flash both agent-first = table stakes.
+- Podman v6.0.0 + Immich 3.0 shipped same window — self-host/sovereignty stack keeps compounding.
