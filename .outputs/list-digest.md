@@ -1,10 +1,11 @@
-*List Digest — 2026-07-02*
+*List Digest — 2026-07-03*
 
-single-list day: @flowslikeosmo runs the tokenomics-alignment thesis twice — flare's builder-lanes and a $LIT holder-value overhaul.
+@Flowslikeosmo runs the tokenomics-alignment thesis twice — Venice/VVV dual-structure critique + Mantle H1 issuer-distribution bull case.
 
 *DeFi*
-- x.com/Flowslikeosmo — flare thesis compresses to two lanes that convert infra spend into product: interoperable assets + confidential compute. everything else on the AVS/DA shopping list is optionality without a customer. quote of @FlareDevHub hackathon. (♥ 19, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2072440125351698767)
-- x.com/Flowslikeosmo — same caller behind SLX/VELVET now grading tokenomics revisions as a "team seriousness" signal, not marketing. $LIT team routing value back to holders. codifies the alpha filter memory has been carrying since SLX. (♥ 13, ↻ 0) — [View](https://x.com/Flowslikeosmo/status/2072435196415328640)
+- x.com/Flowslikeosmo — Mantle H1 was distribution, not TVL: 155 tokenized stocks, SpaceX $SPCXx onchain same-day as its IPO, Franklin Templeton $USPXx via xStocks — H2 gate is another SpaceX-sized issuer, else market is right to fade RWA. (♥ 46, ↻ 16) — [View](https://x.com/Flowslikeosmo/status/2072727129335517241)
+- x.com/Flowslikeosmo — Venice/VVV "dual-structure" is bull case for equity (8.98% + $VVV grant + 8yr ATM warrant), not tokens (0.3%/yr buyback, editable); 5 prior blowups cited (Axelar/Vertex/Padre/Iron Fish/EOS) — tell is Erik already ran the no-company version himself with FOX. (♥ 46, ↻ 3) — [View](https://x.com/Flowslikeosmo/status/2072777875372274042)
+- x.com/crypto_linn — QT of her own 2025 prediction thread with self-audit line ("if you disregard the 95% of things linn got wrong") — calibration integrity from a directional caller, worth more than any single pick. (♥ 16, ↻ 1) — [View](https://x.com/crypto_linn/status/2072718692593332478)
 
 ---
 sources: list1=ok(10)
