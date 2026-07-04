@@ -1,25 +1,29 @@
-*Evening Recap — 2026-07-03*
-_TL;DR: one closure PR filed, 12:00 batch confirmed broken post-fix, ISS-025 deadline lands tomorrow — three decisions need a human._
+*Evening Recap — 2026-07-04*
+_TL;DR: busy ship day — all core crons fired and vuln-scanner broke its 7-day silence, but the T-0 ISS-025 capture-step PR deadline passed unshipped_
 
 *Headlines:*
-- self-improve — ISS-026 closed (INDEX + frontmatter flipped, PR #151 was the fix but closure was missing) · https://github.com/anajuliabit/aeon/pull/154
+- vuln-scanner — VULN_SCAN_CLEAN on chrome-devtools-mcp, 7d silence broken · articles/vuln-scan-2026-07-04.md
+- security-digest — 14 npm malware (wave resumed) + dulwich RCE-via-clone public PoC, highest this-week · hash 554105a5
+- github-trending — cross-lab plumbing as 6th skills-as-primitive layer (openai/codex-plugin-cc) · .outputs/github-trending.md
+- reflect — MEMORY.md 48L→56L, 14 new items (SLX thesis broken, Anthropic S-1, dulwich, cross-lab layer) · memory/MEMORY.md
+- skill-health — DEGRADED(23) 24h notify fired; ISS-025 day-11 T-0 self-set deadline passed · docs/status.md
 
 *Notable:*
-- 12:00 UTC batch — FAILED first live test post PR #150; token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh dark 5d; deeper YAML root cause unresolved (market-context-refresh L155 candidate)
-- token-alert — GITLAWB +27.38% 24h trigger fired; watchlist whole-green day-2 (median +6.07%); REPPO day-2 vol-drought break at $0.024
-- security-digest — 9router CVSS 9.8 (hardcoded JWT fallback secret + public PoC, patched 0.4.45); 5 patches this week; first supply-chain-quiet 24h window since 6-25
-- reflect — MEMORY.md 53L→47L; 4 durable patterns codified: solo-researcher mega-batch, sovereignty stack shipping day, memory as eval axis, supply-chain-quiet signal
-- daily-routine — bounce day-2: 83/100 breadth, ETH +6.1% first-week-reclaim of $1,700, spot ETF +$222M breaks 10d outflow streak; M MemeCore 3-day arc closed at +130%
+- token-alert — GITLAWB +23.21% day-2 trigger fired, vol 2.27× participation-confirmed · hash b3611d7f
+- daily-routine — bounce day-4 holds (BTC $62,443, SLX -22.8% open pick thesis broken) · .outputs/daily-routine.md
+- list-digest — ARB 10%-fee Robinhood/Orbit anchor, flagged as token-pick/defi-overview seed 7-05
+- action-converter — 5 actions OK (ISS-025 PR · SLX recut · GITLAWB log · cross-lab codify · WELL update)
+- agent-buzz — 10→6 kept, first shill-swarm dedup live catch (GenLayer pair ×0.5 modifier)
 
 *Decisions for tomorrow:*
-- merge PR #149 — docs(skill-graph), day-5 stall (~118h), operator-merge gated
-- merge PR #154 — ISS-026 closure, INDEX row still Open until merged
-- weekly-review ISS-025 capture-step — self-set deadline 2026-07-04, day 10 unshipped
-- 12:00 batch root cause — PR #150 partial; diagnose market-context-refresh L155 + wider scheduler/YAML gap
+- SLX recut: open HIGH 9/10 pick $0.363 (-23.6% vs $0.475 entry, day-10 thesis broken — capital-2x)
+- Merge PR #154 (~29h, past 24h threshold) — https://github.com/anajuliabit/aeon/pull/154
+- Merge PR #149 (~141h day-5.87 stall) — https://github.com/anajuliabit/aeon/pull/149
+- Ship aeon.yml capture-step PR (L155/162/171 usepod_model→model) before Mon weekly-review
 
 *Blockers:*
-- fork-skill-digest — STUCK ~120h dispatched; next fresh tick Sun 7-05
-- XAI quota — day 18, operator top-up required
-- on-chain config — defi-monitor NO_CONFIG day 26, ALCHEMY/ETHERSCAN keys absent
+- 12:00 UTC batch — dead day-3 (6 skills ~6.1d stale, PR #150 partial fix)
+- fork-skill-digest — STUCK ~145h (Sun 7-05 fresh dispatch ~23h out)
+- aixbt-pulse — MISSED 09:00Z today, day-1 at 2× interval threshold
 
-_+16 routine runs collapsed · sources: log=ok cron-state=ok_
+_+9 routine runs collapsed · sources: log=ok cron-state=ok_

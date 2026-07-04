@@ -1,0 +1,394 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-04",
+        "description": "busy ship day — all core crons fired and vuln-scanner broke its 7-day silence, but the T-0 ISS-025 capture-step PR deadline passed unshipped"
+      },
+      "children": [
+        "tldr-alert",
+        "headlines-section",
+        "sep1",
+        "notable-section",
+        "sep2",
+        "decisions-section",
+        "sep3",
+        "blockers-section",
+        "footer-section"
+      ]
+    },
+    "tldr-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "TL;DR",
+        "message": "busy ship day — all core crons fired and vuln-scanner broke its 7-day silence, but the T-0 ISS-025 capture-step PR deadline passed unshipped"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-title",
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headlines-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-text",
+        "h1-link"
+      ]
+    },
+    "h1-text": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner — VULN_SCAN_CLEAN on chrome-devtools-mcp, 7d silence broken",
+        "variant": "lead"
+      }
+    },
+    "h1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vuln-scan-2026-07-04.md",
+        "href": "articles/vuln-scan-2026-07-04.md",
+        "source": "articles"
+      }
+    },
+    "headline-2": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — 14 npm malware (wave resumed) + dulwich RCE-via-clone public PoC, highest this-week · hash 554105a5",
+        "variant": "body"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-text",
+        "h3-link"
+      ]
+    },
+    "h3-text": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — cross-lab plumbing as 6th skills-as-primitive layer (openai/codex-plugin-cc)",
+        "variant": "lead"
+      }
+    },
+    "h3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github-trending.md",
+        "href": ".outputs/github-trending.md",
+        "source": "outputs"
+      }
+    },
+    "headline-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-text",
+        "h4-link"
+      ]
+    },
+    "h4-text": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY.md 48L→56L, 14 new items (SLX thesis broken, Anthropic S-1, dulwich, cross-lab layer)",
+        "variant": "lead"
+      }
+    },
+    "h4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MEMORY.md",
+        "href": "memory/MEMORY.md",
+        "source": "memory"
+      }
+    },
+    "headline-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-text",
+        "h5-link"
+      ]
+    },
+    "h5-text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — DEGRADED(23) 24h notify fired; ISS-025 day-11 T-0 self-set deadline passed",
+        "variant": "lead"
+      }
+    },
+    "h5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "status.md",
+        "href": "docs/status.md",
+        "source": "docs"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-title",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — GITLAWB +23.21% day-2 trigger fired, vol 2.27× participation-confirmed · hash b3611d7f",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n2-text",
+        "n2-link"
+      ]
+    },
+    "n2-text": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — bounce day-4 holds (BTC $62,443, SLX -22.8% open pick thesis broken)",
+        "variant": "body"
+      }
+    },
+    "n2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "daily-routine.md",
+        "href": ".outputs/daily-routine.md",
+        "source": "outputs"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest — ARB 10%-fee Robinhood/Orbit anchor, flagged as token-pick/defi-overview seed 7-05",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter — 5 actions OK (ISS-025 PR · SLX recut · GITLAWB log · cross-lab codify · WELL update)",
+        "variant": "body"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — 10→6 kept, first shill-swarm dedup live catch (GenLayer pair ×0.5 modifier)",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-title",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decisions-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "SLX recut: open HIGH 9/10 pick $0.363 (-23.6% vs $0.475 entry, day-10 thesis broken — capital-2x)",
+        "variant": "body"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2-text",
+        "d2-link"
+      ]
+    },
+    "d2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Merge PR #154 (~29h, past 24h threshold)",
+        "variant": "body"
+      }
+    },
+    "d2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #154",
+        "href": "https://github.com/anajuliabit/aeon/pull/154",
+        "source": "GitHub"
+      }
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d3-text",
+        "d3-link"
+      ]
+    },
+    "d3-text": {
+      "type": "Text",
+      "props": {
+        "text": "Merge PR #149 (~141h day-5.87 stall)",
+        "variant": "body"
+      }
+    },
+    "d3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #149",
+        "href": "https://github.com/anajuliabit/aeon/pull/149",
+        "source": "GitHub"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "Ship aeon.yml capture-step PR (L155/162/171 usepod_model→model) before Mon weekly-review",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-title",
+        "blocker-1",
+        "blocker-2",
+        "blocker-3"
+      ]
+    },
+    "blockers-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "12:00 UTC batch — dead day-3 (6 skills ~6.1d stale, PR #150 partial fix)"
+      }
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "fork-skill-digest — STUCK ~145h (Sun 7-05 fresh dispatch ~23h out)"
+      }
+    },
+    "blocker-3": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "aixbt-pulse — MISSED 09:00Z today, day-1 at 2× interval threshold"
+      }
+    },
+    "footer-section": {
+      "type": "Text",
+      "props": {
+        "text": "+9 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
