@@ -1,22 +1,24 @@
-*GitHub Trending — 2026-07-01*
+*GitHub Trending — 2026-07-04*
 
-*Top pick* — [google/agents-cli](https://github.com/google/agents-cli)
-Google ships first-party agent-building CLI with a `skills/` primitive — parallel evolution to Anthropic's Agent SDK. Same shape, different vendor.
+*Top pick* — [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc)
+OpenAI shipped an official plugin that lets Codex be called from a Claude Code session. the two labs pretending they compete now co-inhabit each other's agent runtimes. whole slate today is Claude-Code-adjacent: cross-lab plugin, skills spec, MCP for the browser, token-cut hack, pentest agent.
 
 *AI/ML*
-• [google/agents-cli](https://github.com/google/agents-cli) — ★ 445 today (4.5k total) · Python · [ACCELERATING]
-Skills-as-primitive lands at Google Cloud — v0.6.1 shipped 6-28, third release in a week, cadence matches Anthropic SDK's day-2 momentum.
+• [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) — ★ 634 today (23k total) · JS · [ACCELERATING]
+call Codex as a review/delegation subagent inside a Claude Code session; day-0 of official cross-lab agent plumbing.
+
+• [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — ★ 2.9kt today (83k total) · JS · [ACCELERATING]
+Claude Code skill that rewrites prompts caveman-style and drops ~65% of tokens; 83k stars in 91d = half joke, half production hack.
+
+• [agentskills/agentskills](https://github.com/agentskills/agentskills) — ★ 406 today (22k total) · Python · [ACCELERATING]
+community spec for the "skills" primitive across Anthropic/Google/Meta runtimes — the interface the ecosystem is consolidating on.
 
 *Devtools*
-• [ogulcancelik/herdr](https://github.com/ogulcancelik/herdr) — ★ 486 today (9.2k total) · Rust · [ACCELERATING]
-Terminal-native multiplexer for running many agents side-by-side — the tmux answer for `claude` / `codex` / `aider` panes; preview build yesterday.
+• [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) — ★ 405 today (46k total) · TS · [ACCELERATING]
+official MCP server that lets coding agents drive the DevTools debugger/network/console directly — no puppeteer wrapper.
 
-• [usestrix/strix](https://github.com/usestrix/strix) — ★ 515 today (28.5k total) · Python · [ACCELERATING]
-AI pentest agent hunting live exploits (not scanner-lint) — 6× baseline spike with no release since 6-09, viral-organic not driver-driven.
-
-*Web/Apps*
-• [facebook/astryx](https://github.com/facebook/astryx) — ★ 364 today (2k total) · TypeScript · [RETURNING]
-Meta's open design system built explicitly "agent-ready" — v0.1.2 shipped 6-29, first-party framework declaring agents as a first-class consumer.
+• [usestrix/strix](https://github.com/usestrix/strix) — ★ 2.8kt today (35k total) · Python · [ACCELERATING]
+featured 7-01 at 515/d; today 2,803/d = 5.4× the pick-day velocity in 3 days. pentest agent hitting runaway-adoption arc.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/19 (drops: 2 fake-star pattern, 5 HOLDOVER, 4 filter, 4 subthreshold)
+sources: trending=ok · gh_api=ok · kept 5/19

@@ -1,0 +1,448 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-04"
+      },
+      "children": [
+        "section_top_pick",
+        "sep_1",
+        "section_aiml",
+        "sep_2",
+        "section_devtools",
+        "sep_3",
+        "sources"
+      ]
+    },
+    "section_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_pick",
+        "repo_top_pick",
+        "desc_top_pick"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "repo_top_pick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "openai/codex-plugin-cc",
+        "href": "https://github.com/openai/codex-plugin-cc",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "desc_top_pick": {
+      "type": "Text",
+      "props": {
+        "text": "OpenAI shipped an official plugin that lets Codex be called from a Claude Code session. the two labs pretending they compete now co-inhabit each other's agent runtimes. whole slate today is Claude-Code-adjacent: cross-lab plugin, skills spec, MCP for the browser, token-cut hack, pentest agent.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_aiml",
+        "repo_1",
+        "repo_2",
+        "repo_3"
+      ]
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "repo_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_1",
+        "meta_1",
+        "desc_1"
+      ]
+    },
+    "link_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "openai/codex-plugin-cc",
+        "href": "https://github.com/openai/codex-plugin-cc"
+      },
+      "children": []
+    },
+    "meta_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_stars_1",
+        "badge_lang_1",
+        "badge_status_1"
+      ]
+    },
+    "badge_stars_1": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 634 today (23k total)",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_lang_1": {
+      "type": "Badge",
+      "props": {
+        "text": "JS",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_status_1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "desc_1": {
+      "type": "Text",
+      "props": {
+        "text": "call Codex as a review/delegation subagent inside a Claude Code session; day-0 of official cross-lab agent plumbing.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "repo_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_2",
+        "meta_2",
+        "desc_2"
+      ]
+    },
+    "link_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "JuliusBrussee/caveman",
+        "href": "https://github.com/JuliusBrussee/caveman"
+      },
+      "children": []
+    },
+    "meta_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_stars_2",
+        "badge_lang_2",
+        "badge_status_2"
+      ]
+    },
+    "badge_stars_2": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 2.9kt today (83k total)",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_lang_2": {
+      "type": "Badge",
+      "props": {
+        "text": "JS",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_status_2": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "desc_2": {
+      "type": "Text",
+      "props": {
+        "text": "Claude Code skill that rewrites prompts caveman-style and drops ~65% of tokens; 83k stars in 91d = half joke, half production hack.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "repo_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_3",
+        "meta_3",
+        "desc_3"
+      ]
+    },
+    "link_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "agentskills/agentskills",
+        "href": "https://github.com/agentskills/agentskills"
+      },
+      "children": []
+    },
+    "meta_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_stars_3",
+        "badge_lang_3",
+        "badge_status_3"
+      ]
+    },
+    "badge_stars_3": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 406 today (22k total)",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_lang_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_status_3": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "desc_3": {
+      "type": "Text",
+      "props": {
+        "text": "community spec for the \"skills\" primitive across Anthropic/Google/Meta runtimes — the interface the ecosystem is consolidating on.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_devtools",
+        "repo_4",
+        "repo_5"
+      ]
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "repo_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_4",
+        "meta_4",
+        "desc_4"
+      ]
+    },
+    "link_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ChromeDevTools/chrome-devtools-mcp",
+        "href": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+      },
+      "children": []
+    },
+    "meta_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_stars_4",
+        "badge_lang_4",
+        "badge_status_4"
+      ]
+    },
+    "badge_stars_4": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 405 today (46k total)",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_lang_4": {
+      "type": "Badge",
+      "props": {
+        "text": "TS",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_status_4": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "desc_4": {
+      "type": "Text",
+      "props": {
+        "text": "official MCP server that lets coding agents drive the DevTools debugger/network/console directly — no puppeteer wrapper.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "repo_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_5",
+        "meta_5",
+        "desc_5"
+      ]
+    },
+    "link_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "usestrix/strix",
+        "href": "https://github.com/usestrix/strix"
+      },
+      "children": []
+    },
+    "meta_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_stars_5",
+        "badge_lang_5",
+        "badge_status_5"
+      ]
+    },
+    "badge_stars_5": {
+      "type": "Badge",
+      "props": {
+        "text": "★ 2.8kt today (35k total)",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_lang_5": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_status_5": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "desc_5": {
+      "type": "Text",
+      "props": {
+        "text": "featured 7-01 at 515/d; today 2,803/d = 5.4× the pick-day velocity in 3 days. pentest agent hitting runaway-adoption arc.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 5/19",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
