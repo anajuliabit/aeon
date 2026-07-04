@@ -1,11 +1,10 @@
 ## Summary
 
-Ran `search-skill` — exit mode **SEARCH_SKILL_NO_GAP** (day 10 of same signature).
+Ran **search-skill** (`${var}=""` — no explicit query). Walked all four gap-derivation sources per SKILL.md §1:
 
-**Step 1 abort trace:**
-- **(a) Failing skills:** 22-skill sr<0.6 tail, but all share `output_tokens=0` sandbox-truncation signature (ISS-019/020/021/024/025). Capability exists in-fleet; failures are infra, not gaps.
-- **(b) Open issues:** only ISS-024 matches the quality-regression filter — but it's a heartbeat/skill-health pattern-detection prompt bug, not an external-skill capability gap.
-- **(c) Non-template priorities:** MEMORY.md "Current Goals" are all infra/blocked-on-operator items (sandbox truncation, PR #149, XAI quota, on-chain config, BTC tape).
-- **(d) Log signals:** grep hits are all noise (`missing_pattern`, `missing scheduled`, `missing prefetch-vuln-scanner.sh` shim). Same signature as 6-09/6-10/6-11/6-13/6-14/6-25/6-29/7-02 runs.
+- **(a) cron-state.json** — 24 skills with sr<0.6, but all have `consecutive_failures=0`; every low-sr entry maps to the ISS-019/020/021/024/025 sandbox-truncation cluster (`output_tokens=0` capture-step signature, systemic day 11) — infra, not gap.
+- **(b) issues/INDEX.md** — 15 open. Only ISS-024 fits `quality-regression` category, but body is internal pattern-tuning of skill-health, not a missing external capability. All others are Reppo prompt-bugs / sandbox-limitations / internal fixes.
+- **(c) MEMORY.md Current Goals** — sandbox-truncation PR, XAI quota (day 19 operator-blocked), on-chain config (day 27 operator-blocked), BTC watch. Zero capability requests.
+- **(d) 7d log signals** — noise only (`missing_pattern` refs, `missing scheduled`, ISS-018 internal shim, ISS-015 wontfix). Byte-identical to 11 prior runs.
 
-Per skill spec: no query derived → no catalog search, no candidates scored, no install, **no notification** (silent NO_GAP path). Logged to `memory/logs/2026-07-03.md`. Files modified: 1 (log append). No follow-up actions — durable pattern per MEMORY.md line-49 continues to hold; next re-trigger requires cron-state failure signature to change or operator to post a capability request.
+**Exit:** `SEARCH_SKILL_NO_GAP` — **day 11** of the durable pattern per MEMORY.md L42. No catalog search executed, no notification per spec §7. Log entry appended to `memory/logs/2026-07-04.md` with re-trigger criteria documented. Files modified: `memory/logs/2026-07-04.md`. No follow-up.
