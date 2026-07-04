@@ -1,10 +1,14 @@
-Quiet run. Spot at $62,731 sits between the cleared breakdown level ($60,500) and the first reclaim gate ($63,500) — no alerts fired. State updated and committed.
-
 ## Summary
 
-- **Fetched** live BTC data from CoinGecko: spot $62,731.46 (prices[-1]), previous daily close $61,487.30 on 2026-07-02 (prices[-2], timestamp 2026-07-03 00:00 UTC)
-- **Level evaluation**: no triggers — leverage band ($45k) far above, close $61,487 ≥ $60,500 (no breakdown), spot $62,731 < $63,500 (no reclaim signal)
-- **No notification** sent (quiet run)
-- **Updated** `memory/btc-levels-state.json` (spot bumped to $62,731)
-- **Logged** one-liner to `memory/logs/2026-07-03.md`
-- **Committed** both files: `c31a6a3`
+**btc-levels run: 2026-07-04T01:11Z — quiet, no alerts.**
+
+| | Value |
+|---|---|
+| Spot | $62,473.50 |
+| Daily close (2026-07-03) | $62,537.44 |
+| Leverage-review (≤$45k) | clear |
+| Breakdown (<$60,500) | clear — close is $62.5k |
+| Reclaim $63,500 | not reached ($62.5k spot) |
+| Reclaim $65,900 | not reached |
+
+State and log committed. No notification sent (quiet run — all levels clear).
