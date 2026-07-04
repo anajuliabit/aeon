@@ -1,0 +1,213 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Vuln Scanner",
+        "description": "ChromeDevTools/chrome-devtools-mcp"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack-summary",
+        "sep-1",
+        "heading-vuln",
+        "stack-vuln-details",
+        "sep-2",
+        "heading-scanners",
+        "stack-scanner-status",
+        "alert-sandbox",
+        "sep-3",
+        "heading-report",
+        "link-report",
+        "text-dedup"
+      ]
+    },
+    "stack-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-reviewed",
+        "stat-confirmed"
+      ]
+    },
+    "stat-reviewed": {
+      "type": "Stat",
+      "props": {
+        "label": "Candidates Reviewed",
+        "value": "1"
+      }
+    },
+    "stat-confirmed": {
+      "type": "Stat",
+      "props": {
+        "label": "Confirmed",
+        "value": "0"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-vuln": {
+      "type": "Heading",
+      "props": {
+        "text": "Vulnerability Details",
+        "level": "h3"
+      }
+    },
+    "stack-vuln-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badges-vuln",
+        "text-package",
+        "text-deps",
+        "text-conclusion"
+      ]
+    },
+    "badges-vuln": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ghsa",
+        "badge-severity"
+      ]
+    },
+    "badge-ghsa": {
+      "type": "Badge",
+      "props": {
+        "text": "GHSA-8988-4f7v-96qf",
+        "variant": "secondary"
+      }
+    },
+    "badge-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "moderate DoS",
+        "variant": "outline"
+      }
+    },
+    "text-package": {
+      "type": "Text",
+      "props": {
+        "text": "@opentelemetry/core@1.30.1 — DoS via W3C Baggage"
+      }
+    },
+    "text-deps": {
+      "type": "Text",
+      "props": {
+        "text": "Dependency path: lighthouse → @sentry/node"
+      }
+    },
+    "text-conclusion": {
+      "type": "Text",
+      "props": {
+        "text": "Dropped. chrome-devtools-mcp ships no SENTRY_DSN, so the vulnerable Baggage-parse path never runs.",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-scanners": {
+      "type": "Heading",
+      "props": {
+        "text": "Scanner Status",
+        "level": "h3"
+      }
+    },
+    "stack-scanner-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-semgrep",
+        "badge-trufflehog",
+        "badge-osv"
+      ]
+    },
+    "badge-semgrep": {
+      "type": "Badge",
+      "props": {
+        "text": "semgrep: fail",
+        "variant": "destructive"
+      }
+    },
+    "badge-trufflehog": {
+      "type": "Badge",
+      "props": {
+        "text": "trufflehog: fail",
+        "variant": "destructive"
+      }
+    },
+    "badge-osv": {
+      "type": "Badge",
+      "props": {
+        "text": "osv: ok (api)",
+        "variant": "default"
+      }
+    },
+    "alert-sandbox": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Scanner Limitations",
+        "message": "semgrep and trufflehog blocked by sandbox per ISS-018. osv-api is the only surviving leg."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-report": {
+      "type": "Heading",
+      "props": {
+        "text": "Report",
+        "level": "h3"
+      }
+    },
+    "link-report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vuln-scan-2026-07-04",
+        "href": "articles/vuln-scan-2026-07-04.md"
+      }
+    },
+    "text-dedup": {
+      "type": "Text",
+      "props": {
+        "text": "dedup appended",
+        "variant": "caption"
+      }
+    }
+  }
+}
