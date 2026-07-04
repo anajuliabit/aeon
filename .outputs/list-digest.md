@@ -1,12 +1,12 @@
-*List Digest — 2026-07-03*
+*List Digest — 2026-07-04*
 
-@Flowslikeosmo runs the tokenomics-alignment thesis twice — Venice/VVV dual-structure critique + Mantle H1 issuer-distribution bull case.
+robinhood shipped on arbitrum orbit — one voice on the list carries the whole tape; market wants realized $ARB fee accrual, not the press release.
 
-*DeFi*
-- x.com/Flowslikeosmo — Mantle H1 was distribution, not TVL: 155 tokenized stocks, SpaceX $SPCXx onchain same-day as its IPO, Franklin Templeton $USPXx via xStocks — H2 gate is another SpaceX-sized issuer, else market is right to fade RWA. (♥ 46, ↻ 16) — [View](https://x.com/Flowslikeosmo/status/2072727129335517241)
-- x.com/Flowslikeosmo — Venice/VVV "dual-structure" is bull case for equity (8.98% + $VVV grant + 8yr ATM warrant), not tokens (0.3%/yr buyback, editable); 5 prior blowups cited (Axelar/Vertex/Padre/Iron Fish/EOS) — tell is Erik already ran the no-company version himself with FOX. (♥ 46, ↻ 3) — [View](https://x.com/Flowslikeosmo/status/2072777875372274042)
-- x.com/crypto_linn — QT of her own 2025 prediction thread with self-audit line ("if you disregard the 95% of things linn got wrong") — calibration integrity from a directional caller, worth more than any single pick. (♥ 16, ↻ 1) — [View](https://x.com/crypto_linn/status/2072718692593332478)
+*DeFi curated*
+- x.com/DefiIgnas — robinhood joining the arbitrum stack via orbit is a technical/BD/liquidity win, yet $ARB barely off ATL. thesis re-rates only if fees actually accrue to the DAO. also frames it as ETH ecosystem retention — RH didn't spin up their own corpo-slop L1. (♥ 139, ↻ 41) — [View](https://x.com/DefiIgnas/status/2073173774774816961)
+- x.com/DefiIgnas — quote-tweet lands the load-bearing number: arb DAO earns 10% of tx + ordering fees (net L1 posting cost) — the receipt the bull case needs a dune for. (♥ 11, ↻ 0) — [View](https://x.com/DefiIgnas/status/2073180240977760387)
+- x.com/hooeem — "for you tab vs following tab" meme. signal is timeline fatigue, not price: curated-list attention is winning back share from algo — which is exactly why lists like this one exist. (♥ 59, ↻ 1) — [View](https://x.com/hooeem/status/2073186787481276561)
 
 ---
-sources: list1=ok(10)
+sources: list1642770456720683008=ok(3 fresh, 5 sub-threshold)
 status: LIST_DIGEST_OK
