@@ -1,14 +1,15 @@
-# Market Context (as of 2026-07-03)
+# Market Context (as of 2026-07-04)
 
-> **Take:** 7-day sub-$60,500 breakdown streak BROKEN — 7-02 close $61,487 = first daily close ≥ $60,500 in the 8-day window. 7-03 day-2 hold: spot $61.3k → $62.0k across 4 ticks, breadth **83/100** top-100 green (was 81 day-1). Spot ETF flip **+$222M BTC net-in = first daily inflow after 10d outflow streak** (ETH ETFs +$29M same day). ETH first-week-reclaim of $1,700 (+6.1%). SOL leadership continues (+3.7%, 7d +16.2%). $63.5k / $65.9k rails still gate for real reclaim. Streak-break silent per btc-levels spec (only $63.5k/$65.9k reclaim + <$60,500 breakdown fire alerts). Conviction: medium-high; regime pivot signal solidifying, still no rail-reclaim.
+> **Take:** Bounce day-4 holds — spot $62,558 (12:40Z) above $60,500 breakdown line day-4 post 7-02 streak-break; breadth taper 63/89 top-100 green (~71%, was 83/100 day-2), median top-50 +1.28% (was +2.12%). ETH extends $1,700 reclaim to $1,754 (+2.2% / 7d +11.25%). SOL 7d +14.4% leadership continues day-3. HYPE +6.6% breakout. **GRAM (ex-TON) +7.8% #22 first major-rank breakout of window.** $63.5k reclaim rail ~$942 away, $65.9k full-reclaim gate still much further; breakdown/reclaim signals silent per btc-levels spec. Conviction: medium; regime pivot solidifying but momentum tapering, no rail-reclaim. **SLX day-10 THESIS BROKEN** at -23.6% vs entry (open pick).
 
 ## Signal Snapshot
-- BTC $61,463–$62,030 intraday (+2.3% 24h, +2.0% 7d) — 7-03 spot ticks 01:24Z $61,493 → 16:58Z $62,030 (5 quiet btc-levels runs post-streak-break)
-- ETH $1,717.77 (+6.1% 24h, +9.5% 7d — **biggest major beta move**, first reclaim of $1,700 in a week)
-- SOL $81.03 (+3.7%, 7d +16.2% — **leadership on the bounce continues**)
-- BNB $561.47 (+2.1%) · HYPE $67.48 (+6.8%, 7d +6.0% — **HYPE participates today = 7-02 divergence resolves upward**)
-- Breadth: **83/100 green top-100** (was 81 day-1 = day-2 hold), median top-50 +2.12%
-- Fear & Greed: last read 18 Extreme Fear (not refreshed intraday 7-03)
+- BTC $62,443 12:40Z (+1.15% 24h, +3.6% 7d) — 7-04 btc-levels ticks 01:11Z $62,473 → 04:53Z $62,665 → 09:53Z $62,432 → 12:40Z $62,558 → 16:39Z $62,856 (5 quiet runs day-4)
+- ETH $1,754 (+2.2% 24h, +11.25% 7d — extends first-week-reclaim past $1,750)
+- SOL $82.40 (+1.66%, 7d +14.4% — leadership day-3 continues)
+- BNB $568.53 (+1.27%) · HYPE $71.53 (+6.6% breakout, biggest major move today parallel 7-03 +6.8%)
+- GRAM $1.80 (+7.8%, #22) — first major-rank breakout of window
+- Breadth: **63/89 top-100 green (~71%)** = day-3 tapered from 83/100 day-2, median top-50 +1.28%
+- Fear & Greed: last read 18 Extreme Fear (not refreshed intraday 7-04)
 
 ## What Changed Since Last Refresh (7-02 → 7-03)
 - **7-day breakdown streak BROKEN → day-2 of reclaim** — 7-02 close $61,487 = first daily close ≥ $60,500 in the 8-day window (btc-levels 01:24Z quiet run cleared `breakdownAlertedForClose` → null; 05:10Z + 08:30Z + 13:16Z + 16:58Z all quiet holds).
