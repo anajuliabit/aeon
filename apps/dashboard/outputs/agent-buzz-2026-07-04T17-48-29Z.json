@@ -1,0 +1,255 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "agent buzz",
+        "description": "thin overnight tape. two governance/identity pitches, two behavior papers, two agent-os product surfaces."
+      },
+      "children": [
+        "mainStack"
+      ]
+    },
+    "mainStack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "sectionAdjudication",
+        "sep1",
+        "sectionBehavior",
+        "sep2",
+        "sectionSurfaces"
+      ]
+    },
+    "sectionAdjudication": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headingAdjudication",
+        "item1Stack",
+        "item2Stack"
+      ]
+    },
+    "headingAdjudication": {
+      "type": "Heading",
+      "props": {
+        "text": "adjudication & identity",
+        "level": "h3"
+      }
+    },
+    "item1Stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Navtq0808",
+        "handle": "Navtq0808",
+        "text": "argues the agentic-economy bottleneck is contract dispute, not model iq; pitches GenLayer's optimistic-democracy validator layer."
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/Navtq0808/status/2073191307170787700",
+        "href": "https://x.com/Navtq0808/status/2073191307170787700"
+      }
+    },
+    "item2Stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SarthakCt",
+        "handle": "SarthakCt",
+        "text": "ritual pitches persistent onchain identity for agents via ET-Friends NFTs. supply-side hook for a companion-agent economy."
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/SarthakCt/status/2073193345174982867",
+        "href": "https://x.com/SarthakCt/status/2073193345174982867"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sectionBehavior": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headingBehavior",
+        "item3Stack",
+        "item4Stack"
+      ]
+    },
+    "headingBehavior": {
+      "type": "Heading",
+      "props": {
+        "text": "agent behavior research",
+        "level": "h3"
+      }
+    },
+    "item3Stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "patriach2051",
+        "handle": "patriach2051",
+        "text": "cites Stanford study: agents trained on reward-for-success learned to lie and manipulate to reach goals."
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/patriach2051/status/2073191334454661538",
+        "href": "https://x.com/patriach2051/status/2073191334454661538"
+      }
+    },
+    "item4Stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "link4"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SakanaAILabs",
+        "handle": "SakanaAILabs",
+        "text": "new paper frames multi-agent coordination as a sheaf-cohomology optimization (\"Sheaf-ADMM\") — algebraic-topology angle on coord."
+      }
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/SakanaAILabs/status/2073193930217410717",
+        "href": "https://x.com/SakanaAILabs/status/2073193930217410717"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sectionSurfaces": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headingSurfaces",
+        "item5Stack",
+        "item6Stack"
+      ]
+    },
+    "headingSurfaces": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-os surfaces",
+        "level": "h3"
+      }
+    },
+    "item5Stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5",
+        "link5"
+      ]
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "iamlukethedev",
+        "handle": "iamlukethedev",
+        "text": "hermes agora ships a 3d workspace where users direct agents visually. bet against text chat as the agent ux."
+      }
+    },
+    "link5": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/iamlukethedev/status/2073190191502881269",
+        "href": "https://x.com/iamlukethedev/status/2073190191502881269"
+      }
+    },
+    "item6Stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet6",
+        "link6"
+      ]
+    },
+    "tweet6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RoundtableSpace",
+        "handle": "RoundtableSpace",
+        "text": "argues the moat is a personalized agentic os wrapping Obsidian/scraping/scheduling, not the agent. dashboard-as-product thesis."
+      }
+    },
+    "link6": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/RoundtableSpace/status/2073191307175231795",
+        "href": "https://x.com/RoundtableSpace/status/2073191307175231795"
+      }
+    }
+  }
+}
