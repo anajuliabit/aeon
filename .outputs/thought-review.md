@@ -1,1 +1,1 @@
-thought review · 0 captures in last 24h, all noise. nothing to surface. inbox unchanged day-12.
+🧭 thought review · last 24h · no captures in window. inbox holdover from 6-22 still there (~292h).
