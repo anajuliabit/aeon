@@ -1,45 +1,48 @@
-*Daily Routine — 2026-07-03*
+*Daily Routine — 2026-07-04*
 
-pulse: 83/100 top-100 green, median top-50 +2.12% — day-2 of bounce. BTC $61,715 +2.3% / 7d +2.0%, reclaims $61k; spot ETF flip +$222M breaks 10d outflow streak. ETH $1,718 +6.1%, SOL $81.03 +3.7%, HYPE $67.48 +6.8%, BNB $561 +2.1%. TD Sequential buy on BTC/ETH/XRP/SOL.
+_bounce day-3 · 63/89 top-100 green · median top-50 +1.28% · BTC $62,443 +1.15% (7d +3.6%, day-3 above $60,500 breakdown line, $63.5k rail still gates) · ETH $1,754 +2.2% (extends first-week-reclaim past $1,700 to $1,750) · SOL $82 +1.7% (leadership 7d +14%) · HYPE $71.5 +6.6% breakout · BNB $569 +1.3%_
 
-*Top 10 Winners (24h)*
-1. MAGMA — $0.573 (+48.0%) $109M/#253
-2. NEX (Nexus) — $2.69e-6 (+45.4%) $161M/#194
-3. M (MemeCore) — $1.76 (+37.7%) day-2 continuation, 7d +99%
-4. FARTCOIN — $0.168 (+19.0%) 7d +39%
-5. WLD (Worldcoin) — $0.418 (+13.3%)
-6. UNI — $3.19 (+12.7%) $1.98B/#43
-7. SKY — $0.0593 (+12.3%) 7d +14%
-8. MANA — $0.0694 (+9.4%)
-9. RAY (Raydium) — $0.720 (+9.0%) 7d +18%
-10. XPL (Plasma) — $0.0997 (+8.1%)
+*Top Winners (24h)*
+1. ANSEM +106.6% ($96M/#205) — dust-conversion recent-launch; already trending
+2. VELVET +36.0% ($26M/#143) — day-3 reversal from -68.5% blow-up (closed pick 7-02, no re-entry, dead-cat leg extends)
+3. MAGMA +27.3% ($25M/#220) — day-2 continuation from yest +48%, 7d +55%
+4. GWEI +15.8% (#135) — reversal from yest -9.9% loser
+5. NEX +14.5% (#180) — day-2 continuation from yest +45.4%
+6. Ultima +13.6% (#171)
+7. Grass +11.2% (#124)
+8. ETHFI +11.2% (#127)
+9. BONK +11.1% (#113)
+10. XTZ +10.4% (#140)
 
-*Top 10 Losers (24h)*
-1. VELVET — $0.448 (-22.5%) day-2 dead-cat, position closed 7-02
-2. LAB — $7.66 (-17.2%) day-3 capitulation, 7d -58%
-3. GWEI (ETHGas) — $0.124 (-9.9%) reversal from yest +20.5%
-4. TAC — $0.0344 (-7.3%) 7d breakout unwinds
-5. LIT (Lighter) — $2.05 (-5.5%) mean-revert from 7-02 +15.3% breakout
-6. MORPHO — $1.99 (-5.2%) reversal from yest +8.5%
-7. JTO — $0.754 (-5.0%)
-8. KAITO — $0.576 (-4.8%)
-9. FF (Falcon Finance) — $0.0616 (-4.3%)
-10. HBAR — $0.071 (-3.0%) $3.1B/#28
+*Top Losers (24h)*
+1. **SLX Solstice -22.8% ($0.363, #289) — HIGH 9/10 pick from 6-24 breaks $0.475 entry to -23.6%; day-10 thesis BROKEN, needs recut** ⚠️
+2. CX Cortex -14.4% ($852K/#228) — day-3 capitulation, 7d still +30%
+3. B BUILDon -14.1% (#163)
+4. TAC -13.0% (#206) — day-2 unwind, 7d +33% breakout still intact
+5. **VVV Venice -8.8% (#95) — day-2 of @Flowslikeosmo tokenomics-alignment bear thesis playing out** (list-digest 7-03)
+6. RIF -8.7% (#239)
+7. M MemeCore -6.3% (#41) — mean-revert after 3-day +130% arc closed
+8. BTW -6.0% (#222)
+9. TWT -5.2% (#209)
+10. DATA -4.6% (#247)
 
 *Tweet Roundup*
-*crypto:* $61.8k the gate — clean above opens $63k, failure retests $59k. Spot ETF flip +$222M breaks 10-day outflow streak (BTC + ETH +$29M same day). TD Sequential buy prints across the beta names.
-*ai:* Sonnet 5 day-4 of ship-cycle — $2/$10 promo through Aug-31 then $3/$15. Framed as Anthropic's most direct IPO-prep tell: Opus-4.8-adjacent capability at Sonnet pricing. Agentic-first, chat second is now the industry read.
-*dev:* Podman v6.0.0 + Immich 3.0 shipped same window. Self-host stack keeps compounding — the sovereignty/on-prem vibe is louder than a year ago. CNCF-incubated container tool is the durable read.
+*Crypto:* **CLARITY Act 7-04 symbolic-signing MISSED** — Senate on recess until 7-13, no floor time before Aug. **June jobs 57k missed / unemp 4.2%** = Fed rate-hike odds down. eToro invests in Extended (onchain derivs) — brokers race into DeFi.
+*AI:* **Anthropic S-1 draft filed confidentially** post $65B Series H → $965B valuation surpassing OpenAI. OpenAI IPO filing next weeks, Sept 2026 potential. Blackstone $30B Japan AI DCs, Qualcomm buys Modular $4B.
+*Dev:* Rust in Linux kernel now stable. K8s 1.35 In-Place Pod Resource Updates GA. Bun 3x faster than Node going mainstream.
 
 *Paper of the Day*
-"AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents" — arXiv 2607.02255 (HF ↑28). Memory as a contract about what each future decision is allowed to see. Direct aeon-runtime hit — `memory/logs/` is exactly the surface being benchmarked. Day-2 of the memory-eval thread (MemSyco 7-02 → AgenticSTS 7-03). https://arxiv.org/abs/2607.02255
+**"SkillCoach: Self-Evolving Rubrics for Evaluating and Enhancing Agentic Skill-Use"** ↑14 — direct aeon-runtime hit on skill-evals surface (ISS-026 tracker closure shipped 7-03); self-evolving rubrics = the missing loop between skill-health degradation and repair. HF slate hasn't rotated (still 7-03 batch at 07:40Z), so SkillCoach is the strongest unpicked candidate; AutoMem ↑7 (memory as cognitive skill, day-3 of memory-eval thread) is the alt.
+https://huggingface.co/papers
 
 *GitHub Issues*
-No new issues (@anajuliabit, 24h window).
+- 0 fresh issues 2026-07-03T08:36Z → 07-04T07:40Z (P0/P1/P2/P3 all zero)
 
 *HN Digest*
-1. [Virginia bans sale of geolocation data](https://www.hunton.com/privacy-and-cybersecurity-law-blog/virginia-bans-sale-of-geolocation-data) (733p/120c) — first US state-level ban on selling geo data.
-2. [Podman v6.0.0](https://blog.podman.io/2026/07/introducing-podman-v6-0-0/) (504p/202c) — CNCF container tool major.
-3. [LUKS suspend stopped wiping keys since Linux 6.9](https://mathstodon.xyz/@iblech/116769502749142438) (457p/200c) — kernel regression, disk-encryption keys survive suspend in RAM.
-4. [Immich 3.0](https://github.com/immich-app/immich/discussions/29439) (372p/178c) — self-hosted photo stack major.
-5. [Right to Local Intelligence](https://righttointelligence.org/) (203p/70c) — policy push for on-device model access.
+1. [Costco is the anti-Amazon](https://phenomenalworld.org/analysis/the-anti-amazon/) (387pts) — distribution-model teardown, physical-scale-as-moat vs everything-store
+2. [Espionage Against the European Parliament](https://citizenlab.ca/research/member-of-committee-investigating-spyware-hacked-with-pegasus/) (343pts) — Pegasus hits a spyware-investigation committee member (metadata as the tell)
+3. [Jamesob's guide to running SOTA LLMs locally](https://github.com/jamesob/local-llm) (326pts) — extends sovereignty-stack thread day-2 (was Podman/Immich/Right-to-Local-Intelligence 7-03)
+4. [Performance per dollar getting faster/cheaper](https://www.wafer.ai/blog/glm52-amd) (214pts) — GLM-5.2 on AMD, z.ai continues 7-02 ship-day arc
+5. [CVE severity spike around Claude Mythos Preview](https://epoch.ai/data-insights/cve-severity-spike) (90pts) — dataset shows crit-CVE bump timed to model release; aeon-adjacent tell for security-digest baseline
+
+_source: coingecko=ok (242KB live) · hn-algolia=ok (25KB) · hf-papers=ok (425KB, slate 7-03 unrotated) · gh=ok (0 hits) · websearch=ok ×3 (xai=skipped day 19)_
