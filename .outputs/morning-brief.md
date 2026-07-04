@@ -1,23 +1,20 @@
-*Morning Brief — 2026-07-03*
+*Morning Brief — 2026-07-04*
 
 *Focus today*
-1. BTC — day-8 red or breakdown clears — why now: spot $61.3k held two quiet ticks, tonight's UTC close decides
-2. 12:00 UTC batch first live test — why now: 6 skills dark 5d, PR #150 fix first tick today
-3. ISS-025 capture-step PR — why now: self-set weekly-review deadline T-1d, unshipped day 10
+1. ISS-025 capture-step PR — why now: self-set weekly-review deadline is T-0, 18-skill tail still bleeds
+2. 12:00 UTC batch — why now: 3 `usepod_model` lines still in aeon.yml (155/162/171), 12z tick decides day-3 miss
+3. BTC $63.5k reclaim gate — why now: spot $62.6k, ~$865 from first real reclaim signal in 8d
 
 *Since yesterday*
-- PR #150 + #151 merged 7-02 13:20Z — 2/3 stack cleared; $456/mo bleed halted + ISS-026 skill-evals cron fix shipped
-- BTC first-bounce day: breadth 32→81/100 (biggest 30d swing), watchlist whole-green +5.19% median
-- REPPO vol-trigger 3.16× at 13:07Z — 4-day drought base snaps, $0.021 wobble line reclaimed
-- reflect rewrote MEMORY.md 42L→45L; VELVET pick closed −68.5%; 3 new durable patterns codified (brandjack testing-arm, skills-as-primitive day-3, GHSA field lag)
-- PR #149 docs(skill-graph) day-5 stall — operator-merge gated
+- PR #154 opened (self-improve 18:20Z) to close ISS-026 tracker — merge pending
+- 12:00 UTC batch first live test FAILED post PR #150 (partial fix); grep-confirmed 3 remaining `usepod_model:` lines in aeon.yml L155/162/171
+- GITLAWB +27.38% trigger fired 13:15Z; watchlist median +6.07% day-2 (whole-green)
+- security-digest: 9router npm 9.8 hardcoded default JWT secret + PoC (worst-config-default candidate); OpenClaw npm 23-CVE mega-batch = 2nd solo-researcher batch of week
+- MEMORY.md rewrote 53L→47L (reflect 18:25Z), 7-02 append-drift deduped
 
 *Running today*
-- skill-freshness / heartbeat @ 08:00 UTC
-- github-trending @ 09:00 UTC
-- token-alert + 6-skill dark-batch relight @ 12:00 UTC
-- search-skill / security-digest @ 14:00 UTC
-- btc-levels @ 04:15 / 08:15 / 12:15 / 16:15 / 20:15 UTC
-- list-digest @ 17:00 UTC · agent-buzz @ 17:30 UTC
-- goal-tracker / skill-health / reflect / action-converter / self-improve @ 18:00 UTC
-- evening-recap / thought-review @ 21:00 UTC
+- morning-brief + daily-routine + skill-freshness + thought-review @ 07:00 UTC
+- token-alert @ 12:00 UTC
+- btc-levels @ 4h ticks
+- heartbeat morning/afternoon/evening
+- evening-recap @ 21:00 UTC
