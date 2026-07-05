@@ -1,11 +1,9 @@
 ## Summary
 
-Run complete — no alerts fired.
+**btc-levels run — 2026-07-05T00:17Z**
 
-- **Spot:** $63,198.36 (up from $62,856 at 16:39Z run)
-- **Last close:** 2026-07-03 $62,537.44 — above the $60,500 breakdown line (day-5 of reclaim)
-- **$63,500 reclaim gate:** ~$302 away — closest it's been, but not crossed yet
-- **$65,900 gate:** still distant
-- **Leverage trigger (≤$45k):** not in play
-
-State and log committed. Next 4h tick at ~00:15Z UTC.
+- **Spot:** $63,001 | **Last daily close:** $62,537 (July 3)
+- API at 00:17 UTC doesn't yet carry the July 4 close (only 17 min past midnight); July 5 00:00 snapshot absent
+- All levels clear: no leverage band, no breakdown, $499 below $63,500 reclaim
+- **No alerts fired** — quiet run
+- State + log committed (`a807fd2`)
