@@ -1,0 +1,57 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "thought review",
+        "description": "Last 24 hours"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_captures",
+        "text_status",
+        "separator",
+        "alert_inbox"
+      ]
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "muted"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_inbox": {
+      "type": "Alert",
+      "props": {
+        "title": "Inbox Note",
+        "message": "reppo comment from 2026-06-22 — still unarchived, day 13",
+        "type": "info"
+      }
+    }
+  }
+}
