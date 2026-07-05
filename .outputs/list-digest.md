@@ -1,12 +1,11 @@
-*List Digest — 2026-07-04*
+*List Digest — 2026-07-05*
 
-robinhood shipped on arbitrum orbit — one voice on the list carries the whole tape; market wants realized $ARB fee accrual, not the press release.
+DeFi list flags Vitalik's new ETH roadmap as bullish-on-paper / bearish-on-tape: 2028+ payoff invites Tempo/Canton to eat RWA lunch meanwhile.
 
-*DeFi curated*
-- x.com/DefiIgnas — robinhood joining the arbitrum stack via orbit is a technical/BD/liquidity win, yet $ARB barely off ATL. thesis re-rates only if fees actually accrue to the DAO. also frames it as ETH ecosystem retention — RH didn't spin up their own corpo-slop L1. (♥ 139, ↻ 41) — [View](https://x.com/DefiIgnas/status/2073173774774816961)
-- x.com/DefiIgnas — quote-tweet lands the load-bearing number: arb DAO earns 10% of tx + ordering fees (net L1 posting cost) — the receipt the bull case needs a dune for. (♥ 11, ↻ 0) — [View](https://x.com/DefiIgnas/status/2073180240977760387)
-- x.com/hooeem — "for you tab vs following tab" meme. signal is timeline fatigue, not price: curated-list attention is winning back share from algo — which is exactly why lists like this one exist. (♥ 59, ↻ 1) — [View](https://x.com/hooeem/status/2073186787481276561)
+*DeFi*
+- x.com/DefiIgnas — Vitalik roadmap (L1 reclaims exec from L2s, privacy, quantum, sub-sec finality) hits every ETH bear except tokenomics — but Merge slippage math says 2028+ delivery is real risk while Tempo/Canton nibble RWA/institutional adoption. (♥ 318, ↻ 21) — [View](https://x.com/DefiIgnas/status/2073480431887056958)
+- x.com/cyrilXBT — "60 Claude Opus 4.8 workflows" pitch: gap between *using* and *running* the model is where overnight bug-sweep PRs, wallet-scanners, content pipelines live. Cursor/CC-native automation is now the influencer meme. (♥ 119, ↻ 23) — [View](https://x.com/cyrilXBT/status/2073476435541651866)
 
 ---
-sources: list1642770456720683008=ok(3 fresh, 5 sub-threshold)
+sources: list1642770456720683008=ok(10)
 status: LIST_DIGEST_OK
