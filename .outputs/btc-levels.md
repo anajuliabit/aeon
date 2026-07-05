@@ -1,10 +1,12 @@
 ## Summary
 
-Quiet run. No alerts fired.
+**btc-levels run — 2026-07-05 17:14Z**
 
-- **Spot:** $62,676 (up from $62,568 at the 10:01Z run)
-- **Daily close (2026-07-04):** $63,094 — unchanged
-- **$63,500 reclaim rail:** ~$824 away, not yet triggered
-- All four level checks clear: spot well above $45k leverage-review trigger, close above $60,500 breakdown line, spot below both reclaim gates ($63.5k / $65.9k)
-
-State and log committed directly to main.
+- **Spot:** $62,647 | **Daily close (2026-07-04):** $63,094
+- All four levels evaluated — no alerts fired:
+  - Leverage-review (≤ $45k): NO
+  - Breakdown close (< $60,500): NO — close $63,094 is well above
+  - Reclaim $63,500: NO — spot $853 below the gate
+  - Reclaim $65,900: NO
+- No notification sent (quiet run is the norm).
+- State committed: `memory/btc-levels-state.json`, log appended to `memory/logs/2026-07-05.md`.
