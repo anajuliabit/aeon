@@ -1,10 +1,10 @@
+Executed search-skill: **SEARCH_SKILL_NO_GAP day 12** (byte-identical continuation of the 11-run streak, 6-09 → 7-04).
+
 ## Summary
+Ran search-skill (`${var}=""`). All four §1 gap sources dry — no capability word derivable:
+- **(a) cron-state:** 22 chronic-tail skills sr<0.6, all cf=0, all share `output_tokens=0` sandbox-truncation signature (ISS-019/020/021/024/025 infra cluster, not capability).
+- **(b) issues:** 15 open — only ISS-024 category-qualifies (quality-regression) but body is internal skill-quality regression sharing same cluster signature, not external gap.
+- **(c) MEMORY.md:** infra PRs + operator-blocked (XAI day 20, on-chain day 28) + market-data — no external-skill request.
+- **(d) 7d log grep:** matches all noise (`missing_pattern` / `missing scheduled` / internal-shim / wontfix REDDIT).
 
-Ran **search-skill** (`${var}=""` — no explicit query). Walked all four gap-derivation sources per SKILL.md §1:
-
-- **(a) cron-state.json** — 24 skills with sr<0.6, but all have `consecutive_failures=0`; every low-sr entry maps to the ISS-019/020/021/024/025 sandbox-truncation cluster (`output_tokens=0` capture-step signature, systemic day 11) — infra, not gap.
-- **(b) issues/INDEX.md** — 15 open. Only ISS-024 fits `quality-regression` category, but body is internal pattern-tuning of skill-health, not a missing external capability. All others are Reppo prompt-bugs / sandbox-limitations / internal fixes.
-- **(c) MEMORY.md Current Goals** — sandbox-truncation PR, XAI quota (day 19 operator-blocked), on-chain config (day 27 operator-blocked), BTC watch. Zero capability requests.
-- **(d) 7d log signals** — noise only (`missing_pattern` refs, `missing scheduled`, ISS-018 internal shim, ISS-015 wontfix). Byte-identical to 11 prior runs.
-
-**Exit:** `SEARCH_SKILL_NO_GAP` — **day 11** of the durable pattern per MEMORY.md L42. No catalog search executed, no notification per spec §7. Log entry appended to `memory/logs/2026-07-04.md` with re-trigger criteria documented. Files modified: `memory/logs/2026-07-04.md`. No follow-up.
+Per MEMORY.md L49 durable pattern, silent exit — no notification, no catalog queries, no install, no PR. Log entry appended to `memory/logs/2026-07-05.md`. Fleet remains capability-complete on external-skill axis; failures are infra (ISS-025 capture step), not gaps.
