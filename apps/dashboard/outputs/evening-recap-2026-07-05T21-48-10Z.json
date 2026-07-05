@@ -1,0 +1,258 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-05"
+      },
+      "children": [
+        "tldr-text",
+        "sep1",
+        "headlines-section",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "decisions-section",
+        "sep4",
+        "blockers-section",
+        "sep5",
+        "footer-text"
+      ]
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve shipped the 12:00 batch unblock (PR #156), fork-skill-digest's 168h stuck carry resolved — two persistent items off the board.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headline-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — PR #156 removes usepod_model lines, unblocks 12:00 batch (6 skills day-5 dark)",
+        "href": "https://github.com/anajuliabit/aeon/pull/156",
+        "source": "GitHub"
+      }
+    },
+    "headline-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fork-cohort — 201 forks, 15 POWER drops (systematic default-config shed)",
+        "href": "articles/fork-cohort-2026-07-05.md"
+      }
+    },
+    "headline-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github-trending — alibaba/page-agent top; skills-as-primitive d7 multi-region (Alibaba+MS, 6 labs)",
+        "href": ".outputs/github-trending.md"
+      }
+    },
+    "headline-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "daily-routine — bounce day-5 tapers (38/75), SLX catastrophic -46%, GITLAWB reversal",
+        "href": ".outputs/daily-routine.md"
+      }
+    },
+    "headline-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "list-digest — Vitalik 2028+ ETH roadmap bearish-on-tape; Tempo/Canton invited to eat RWA lunch",
+        "href": "https://x.com/DefiIgnas/status/2073480431887056958",
+        "source": "X"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-title",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest — 168h stuck carry resolved; Sun re-tick succeeded 21:06Z (first attempt failed 20:18Z)"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — GITLAWB -17.25% reversal fires, snaps 2-day trigger streak"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — heartbeat + skill-freshness DEGRADED→WARNING, skill-graph HEALTHY; 5-day streak broken"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY.md 57L→56L, 9 durable patterns added, topic files updated"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-title",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4",
+        "decision-5"
+      ]
+    },
+    "decisions-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "decision-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Merge PR #156 — unblocks 12:00 batch (top priority)",
+        "href": "https://github.com/anajuliabit/aeon/pull/156"
+      }
+    },
+    "decision-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Merge or close PR #149 (168h stall, #155 may supersede)",
+        "href": "https://github.com/anajuliabit/aeon/pull/149"
+      }
+    },
+    "decision-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Merge PR #154 (ISS-026 INDEX flip, 51h stall)",
+        "href": "https://github.com/anajuliabit/aeon/pull/154"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "SLX recut — day-11 -46% vs $0.475 entry, operator call required"
+      }
+    },
+    "decision-5": {
+      "type": "Text",
+      "props": {
+        "text": "Ship ISS-025 capture-step PR before Mon 19:00Z weekly-review"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-title",
+        "blocker-1",
+        "blocker-2",
+        "blocker-3"
+      ]
+    },
+    "blockers-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h3"
+      }
+    },
+    "blocker-1": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse — dark day-2, last_success 6-28T21:21Z, twice-daily 09/21 broken"
+      }
+    },
+    "blocker-2": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota — exhausted day-20, operator top-up pending"
+      }
+    },
+    "blocker-3": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config — day-28 (ALCHEMY/ETHERSCAN absent)"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+18 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

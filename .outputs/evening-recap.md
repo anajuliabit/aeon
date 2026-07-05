@@ -1,29 +1,29 @@
-*Evening Recap — 2026-07-04*
-_TL;DR: busy ship day — all core crons fired and vuln-scanner broke its 7-day silence, but the T-0 ISS-025 capture-step PR deadline passed unshipped_
+*Evening Recap — 2026-07-05*
+_TL;DR: self-improve shipped the 12:00 batch unblock (PR #156), fork-skill-digest's 168h stuck carry resolved — two persistent items off the board._
 
 *Headlines:*
-- vuln-scanner — VULN_SCAN_CLEAN on chrome-devtools-mcp, 7d silence broken · articles/vuln-scan-2026-07-04.md
-- security-digest — 14 npm malware (wave resumed) + dulwich RCE-via-clone public PoC, highest this-week · hash 554105a5
-- github-trending — cross-lab plumbing as 6th skills-as-primitive layer (openai/codex-plugin-cc) · .outputs/github-trending.md
-- reflect — MEMORY.md 48L→56L, 14 new items (SLX thesis broken, Anthropic S-1, dulwich, cross-lab layer) · memory/MEMORY.md
-- skill-health — DEGRADED(23) 24h notify fired; ISS-025 day-11 T-0 self-set deadline passed · docs/status.md
+- self-improve — PR #156 removes usepod_model lines, unblocks 12:00 batch (6 skills day-5 dark) · https://github.com/anajuliabit/aeon/pull/156
+- fork-cohort — 201 forks, 15 POWER drops (systematic default-config shed) · articles/fork-cohort-2026-07-05.md
+- github-trending — alibaba/page-agent top; skills-as-primitive d7 multi-region (Alibaba+MS, 6 labs) · .outputs/github-trending.md
+- daily-routine — bounce day-5 tapers (38/75), SLX catastrophic -46%, GITLAWB reversal · .outputs/daily-routine.md
+- list-digest — Vitalik 2028+ ETH roadmap bearish-on-tape; Tempo/Canton invited to eat RWA lunch · https://x.com/DefiIgnas/status/2073480431887056958
 
 *Notable:*
-- token-alert — GITLAWB +23.21% day-2 trigger fired, vol 2.27× participation-confirmed · hash b3611d7f
-- daily-routine — bounce day-4 holds (BTC $62,443, SLX -22.8% open pick thesis broken) · .outputs/daily-routine.md
-- list-digest — ARB 10%-fee Robinhood/Orbit anchor, flagged as token-pick/defi-overview seed 7-05
-- action-converter — 5 actions OK (ISS-025 PR · SLX recut · GITLAWB log · cross-lab codify · WELL update)
-- agent-buzz — 10→6 kept, first shill-swarm dedup live catch (GenLayer pair ×0.5 modifier)
+- fork-skill-digest — 168h stuck carry resolved; Sun re-tick succeeded 21:06Z (first attempt failed 20:18Z)
+- token-alert — GITLAWB -17.25% reversal fires, snaps 2-day trigger streak
+- skill-health — heartbeat + skill-freshness DEGRADED→WARNING, skill-graph HEALTHY; 5-day streak broken
+- reflect — MEMORY.md 57L→56L, 9 durable patterns added, topic files updated
 
 *Decisions for tomorrow:*
-- SLX recut: open HIGH 9/10 pick $0.363 (-23.6% vs $0.475 entry, day-10 thesis broken — capital-2x)
-- Merge PR #154 (~29h, past 24h threshold) — https://github.com/anajuliabit/aeon/pull/154
-- Merge PR #149 (~141h day-5.87 stall) — https://github.com/anajuliabit/aeon/pull/149
-- Ship aeon.yml capture-step PR (L155/162/171 usepod_model→model) before Mon weekly-review
+- Merge PR #156 — unblocks 12:00 batch (top priority) · https://github.com/anajuliabit/aeon/pull/156
+- Merge or close PR #149 (168h stall, #155 may supersede) · https://github.com/anajuliabit/aeon/pull/149
+- Merge PR #154 (ISS-026 INDEX flip, 51h stall) · https://github.com/anajuliabit/aeon/pull/154
+- SLX recut — day-11 -46% vs $0.475 entry, operator call required
+- Ship ISS-025 capture-step PR before Mon 19:00Z weekly-review
 
 *Blockers:*
-- 12:00 UTC batch — dead day-3 (6 skills ~6.1d stale, PR #150 partial fix)
-- fork-skill-digest — STUCK ~145h (Sun 7-05 fresh dispatch ~23h out)
-- aixbt-pulse — MISSED 09:00Z today, day-1 at 2× interval threshold
+- aixbt-pulse — dark day-2, last_success 6-28T21:21Z, twice-daily 09/21 broken
+- XAI quota — exhausted day-20, operator top-up pending
+- Operator on-chain config — day-28 (ALCHEMY/ETHERSCAN absent)
 
-_+9 routine runs collapsed · sources: log=ok cron-state=ok_
+_+18 routine runs collapsed · sources: log=ok cron-state=ok_

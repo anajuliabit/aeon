@@ -662,4 +662,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-05,reflect,claude-opus-4-7,30,35504,2273636,105411
 2026-07-05,fork-cohort,claude-sonnet-4-6,30,24448,1252251,63537
 2026-07-05,fork-skill-digest,claude-sonnet-4-6,34,36917,2771679,94756
-2026-07-05,thought-review,claude-opus-4-7,16,5160,627701,39928
+2026-07-05,evening-recap,claude-sonnet-4-6,16,15093,1138791,75168
