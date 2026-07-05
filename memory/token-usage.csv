@@ -658,3 +658,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-05,github-trending,claude-opus-4-7,34,22775,1959262,156564
 2026-07-05,token-alert,claude-opus-4-7,25,12022,1183551,48917
 2026-07-05,security-digest,claude-opus-4-7,57,14952,3159312,97452
+2026-07-05,skill-graph,claude-opus-4-7,183,63077,17045903,172569

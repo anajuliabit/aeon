@@ -1,0 +1,83 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "skill-graph updated"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "grid-stats",
+        "separator-1",
+        "link-pr"
+      ]
+    },
+    "grid-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-mapped",
+        "stat-enabled",
+        "stat-depends",
+        "stat-shared"
+      ]
+    },
+    "stat-mapped": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills mapped",
+        "value": "191",
+        "delta": "+68",
+        "trend": "up"
+      }
+    },
+    "stat-enabled": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled",
+        "value": "43"
+      }
+    },
+    "stat-depends": {
+      "type": "Stat",
+      "props": {
+        "label": "Depends on",
+        "value": "5"
+      }
+    },
+    "stat-shared": {
+      "type": "Stat",
+      "props": {
+        "label": "Shared state",
+        "value": "21"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-pr": {
+      "type": "Link",
+      "props": {
+        "label": "View PR #155",
+        "href": "https://github.com/anajuliabit/aeon/pull/155"
+      }
+    }
+  }
+}
