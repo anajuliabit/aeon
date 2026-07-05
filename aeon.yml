@@ -151,15 +151,14 @@ skills:
     {
       enabled: true,
       schedule: "0 13 * * *",
-      model: "claude-sonnet-4-6",
-      usepod_model: "claude-haiku-4-5-20251001"
+      model: "claude-sonnet-4-6"
     } # fetch live crypto macro data, update memory
   btc-levels: { enabled: true, schedule: "15 */4 * * *", model: "claude-sonnet-4-6" } # BTC vs 2026-06-09 advisor hard levels for leveraged cbBTC (40-45k review band, <60.5k daily close, 63.5k/65.9k reclaim); alerts on crossings only, silent otherwise
   narrative-tracker:
     {
       enabled: true,
       schedule: "30 13 * * *",
-      usepod_model: "claude-haiku-4-5-20251001"
+      model: "claude-haiku-4-5-20251001"
     } # track rising/peaking/fading narratives
   polymarket-comments: { enabled: false, schedule: "0 13 * * *" } # top comments from trending Polymarket markets
   unlock-monitor: { enabled: true, schedule: "0 10 * * 1" } # weekly token unlock/vesting tracker
@@ -167,8 +166,7 @@ skills:
     {
       enabled: true,
       schedule: "0 9,21 * * *",
-      model: "claude-sonnet-4-6",
-      usepod_model: "claude-haiku-4-5-20251001"
+      model: "claude-sonnet-4-6"
     } # twice daily — AIXBT free grounding endpoint: cross-domain market pulse (crypto/macro/tradfi/geopolitics) with taxonomy refresh
 
   # --- Afternoon (2 PM UTC) ---
