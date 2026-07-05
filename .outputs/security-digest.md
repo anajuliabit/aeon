@@ -1,24 +1,10 @@
-*Security Digest — 2026-07-04*
-Verdict: 14 npm malware (supply-chain wave resumed, 24h quiet window closed). 4 to schedule. 1 to monitor. _Sources: KEV, GH Advisory, EPSS_
+## Summary
 
-*PATCH TODAY*
-- npm malware · [5-pkg TS/API-node-utility batch](https://github.com/advisories/GHSA-84mg-p866-528x) same-minute 07-03 16:06Z (typescript-util-core, ts-node-utils, api-node-utils, api-ts-utils, web-api-node)
-  → yank any workspace/lockfile hits; rotate creds exposed during install.
-- npm malware · [4-pkg SQL/DB batch](https://github.com/advisories/GHSA-9f9w-wg5j-m53j) same-minute 07-03 15:59Z (@sql-trigger/nodesql, @sql-access/nodesql, @sqlite-node/createsql, @node-cloud/create) extends 7-02 db-utility cluster
-  → yank; rotate DB creds.
-- npm malware · [decode-sdks pair 15:37Z](https://github.com/advisories/GHSA-gv37-287r-g9vx) (decode-sdks + @jacobtan/decode-sdk) + 3 singleton stragglers (@lodash-en/lodash-en, @antoncarlos1/nodelamp, alder_morrgan)
-  → yank; rotate.
+Ran `security-digest` skill (2026-07-05 14:48 UTC). **Result: SECURITY_DIGEST_OK — all 3 tiers empty, no notification sent.**
 
-*PATCH THIS WEEK*
-- [CVE-2026-52726](https://github.com/advisories/GHSA-gfhv-vqv2-4544) — dulwich (pip) · CVSS 7.5 · EPSS 0.004 · *public PoC* · RCE via cloned repo writing `.git/hooks`, no user interaction
-  → upgrade dulwich to ≥1.2.5.
-- [CVE-2026-49250](https://github.com/advisories/GHSA-525m-7f82-2mf7) — @conform-to/dom (npm) · CVSS 8.7 · CPU-exhaustion DoS via many unique form fields
-  → upgrade @conform-to/dom to ≥1.19.4.
-- [CVE-2026-49360](https://github.com/advisories/GHSA-rh62-j648-g5qc) — recce (pip) · CVSS 7.8 · unauth SQL exec + local file R/W on DuckDB backend
-  → upgrade recce to ≥1.50.0.
-- [CVE-2026-49253](https://github.com/advisories/GHSA-38j7-23hf-9mhc) — electerm (npm) · CVSS 7.1 · malicious SSH server → arbitrary file write (Zmodem/Trzsz)
-  → covered by yesterday's electerm ≥3.11.11 upgrade.
-
-*MONITOR*
-- [GHSA-6g2f-w7g3-77vf](https://github.com/advisories/GHSA-6g2f-w7g3-77vf) — 9router (npm) · CVSS 7.5 · *no patch* · incomplete-fix bypass of CVE-2026-46339 via Host header
-  → header-based access control isn't trustable; block proxied ingress until vendor ships.
+- **KEV (last 7d):** 2 entries (CVE-2026-45659 SharePoint dateAdded 7-01, CVE-2026-48558 SimpleHelp dateAdded 6-29) — both dedup vs 2-day log window, already surfaced in 6-30/7-01/7-02/7-04 digests. Day-3 KEV-quiet window.
+- **GH Advisory Database:** **Hard freeze ~65+h** — nothing published since 2026-07-02T21:14:38Z. 48h query window returns **0 advisories across all types** (reviewed critical + high + malware). Confirmed via `gh api /advisories?sort=published` returning first result at 7-02 21:14Z. US Independence Day + weekend holiday-freeze on GHAD publishing pipeline; expect Mon backlog wave.
+- **EPSS:** 2 KEV CVEs scored (0.032/p87 SharePoint, 0.012/p63 SimpleHelp) — both dedup, neither ≥ 0.5.
+- **Sources:** kev=ok · gh=ok (empty result is real freeze, not fetch failure) · epss=ok.
+- **Notable pattern:** first zero-advisories-48h window in digest's tracking history. **Holiday-freeze cascade day-3** — GHAD frozen + HF papers slate un-rotated + CLARITY Act signing MISSED = 3 discrete supply-side holiday effects same day. **9-day npm brandjack wave enters day-1 dormancy** (last malware 7-03 16:06Z); watch for wave resumption Mon on GHAD un-freeze. **dulwich pip CVE-2026-52726 RCE-via-clone** remains highest carry-over operational item from 7-04 (fix 1.2.5, public PoC, `.git/hooks` auto-exec).
+- **Files:** appended log entry to `memory/logs/2026-07-05.md`. No notification per skill spec (all-tiers-empty branch).
