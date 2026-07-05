@@ -1,24 +1,27 @@
-*GitHub Trending — 2026-07-04*
+*GitHub Trending — 2026-07-05*
 
-*Top pick* — [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc)
-OpenAI shipped an official plugin that lets Codex be called from a Claude Code session. the two labs pretending they compete now co-inhabit each other's agent runtimes. whole slate today is Claude-Code-adjacent: cross-lab plugin, skills spec, MCP for the browser, token-cut hack, pentest agent.
+*Top pick* — [alibaba/page-agent](https://github.com/alibaba/page-agent)
+First Chinese-lab entry into the agent-runtime layer stack — Anthropic/OpenAI/Google/Meta convergence goes multi-region on day-7 of the skills-as-primitive thread.
 
 *AI/ML*
-• [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) — ★ 634 today (23k total) · JS · [ACCELERATING]
-call Codex as a review/delegation subagent inside a Claude Code session; day-0 of official cross-lab agent plumbing.
+• [alibaba/page-agent](https://github.com/alibaba/page-agent) — ★ 742t (23k total) · TS · [ACCELERATING]
+In-page GUI agent running *inside* the webpage instead of driving Chrome from outside — inverts the chrome-devtools-mcp pattern.
 
-• [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — ★ 2.9kt today (83k total) · JS · [ACCELERATING]
-Claude Code skill that rewrites prompts caveman-style and drops ~65% of tokens; 83k stars in 91d = half joke, half production hack.
+• [Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily) — ★ 718t (16k total) · Rust · [ACCELERATING]
+Meeting assistant that transcribes/summarises locally in Rust — never uploads audio; extends sovereignty-stack thread day-4.
 
-• [agentskills/agentskills](https://github.com/agentskills/agentskills) — ★ 406 today (22k total) · Python · [ACCELERATING]
-community spec for the "skills" primitive across Anthropic/Google/Meta runtimes — the interface the ecosystem is consolidating on.
+• [dotnet/skills](https://github.com/dotnet/skills) — ★ 59t (3.9k total) · C# · [ACCELERATING]
+Microsoft's official skills registry for .NET agents — first-party Redmond entering skills-as-primitive convergence day-7.
 
 *Devtools*
-• [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) — ★ 405 today (46k total) · TS · [ACCELERATING]
-official MCP server that lets coding agents drive the DevTools debugger/network/console directly — no puppeteer wrapper.
+• [ogulcancelik/herdr](https://github.com/ogulcancelik/herdr) — ★ 707t (12k total) · Rust · [ACCELERATING]
+Terminal multiplexer for parallel agent sessions — each pane is a separate LLM you can herd, tmux-shaped.
 
-• [usestrix/strix](https://github.com/usestrix/strix) — ★ 2.8kt today (35k total) · Python · [ACCELERATING]
-featured 7-01 at 515/d; today 2,803/d = 5.4× the pick-day velocity in 3 days. pentest agent hitting runaway-adoption arc.
+• [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) — ★ 69t (12k total) · C# · [ACCELERATING]
+MCP server exposing Unity Editor's asset+script pipeline to agents — extends MCP-momentum thread into game-engine territory.
+
+• [crynta/terax-ai](https://github.com/crynta/terax-ai) — ★ 62t (8.2k total) · TS · [ACCELERATING]
+7MB terminal-first AI workspace — the anti-VS-Code, ships as a single lightweight TUI binary.
 
 ---
-sources: trending=ok · gh_api=ok · kept 5/19
+sources: trending=ok · gh_api=ok · kept 6/18
