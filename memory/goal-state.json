@@ -1,41 +1,53 @@
 {
-  "run_at": "2026-07-04T14:30:00Z",
+  "run_at": "2026-07-05T18:21:00Z",
   "goals": {
     "sandbox-truncation-systemic": {
       "status": "ON_TRACK",
-      "activity_count_14d": 347,
-      "last_activity_date": "2026-07-04",
-      "note": "Chronic tail day-11 (was day-9 prior run) unshipped; hard weekly-review deadline **2026-07-04 = T-0 TODAY** per morning-brief 07:00Z focus tri #1 + heartbeat 09:54Z + 14:16Z P2 flag. 18-skill tail (vuln-scanner 10% → aixbt-pulse 47%) all share `output_tokens=0` sandbox-truncation signature ISS-019/020/021/024/025. Activity 299→347 = +16% within ±25% → flat. Status rule met (activity ≥2 AND days_since ≤7). Mechanical ON_TRACK preserved — observation cadence, not fix progress. Real state: T-0 deadline, no PR shipped yet. Weekly-review Mon 07-06 will formalize the miss unless self-improve tick 07-04 or 07-05 authors follow-up PR against aeon.yml L155/162/171."
-    },
-    "pr-149-docs-skill-graph": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 86,
-      "last_activity_date": "2026-07-04",
-      "note": "PR #149 opened 2026-06-28T17:15:47Z, still OPEN as of 07-04 14:16Z (~141h ago, day-5.87 stall — per hb 14:16Z). Operator-merge gated; updatedAt refreshed 2026-07-02T16:58:10Z (dedup-blocked in every hb + morning-brief since 6-29 15:04Z). Activity 66→86 = +30% (over ±25% band but under ≥50% improving threshold → flat per spec gap). No blocker_signal — operator-attention-gated, not infra-blocked. US Independence Day = operator merge likely stays pending through 7-05 morning at earliest. Status rule met."
+      "activity_count_14d": 343,
+      "last_activity_date": "2026-07-05",
+      "note": "Day 12 unshipped (was day 11 prior run). Self-set weekly-review Mon 07-06 deadline now T-1. Morning-brief 07:15Z surfaced as focus tri #1 for 2nd consecutive day; action-converter 7-04 18:52Z ranked 'open aeon.yml capture-step PR' q5/u5 top action but PR still not authored. 18-skill chronic tail unchanged (byte-identical 6th day per hb 07-05 10:01Z + 14:47Z). Activity 347→343 = -1% within ±25% → flat. Status ON_TRACK preserved mechanically (activity ≥2 AND days_since ≤7) — observation cadence, not fix progress. Weekly-review Mon 07-06 19:00Z will formalize the miss unless a follow-up PR ships 07-05 evening or 07-06 morning against aeon.yml L155/162/171."
     },
     "12-00-utc-batch-first-live-test-7-03": {
       "status": "ON_TRACK",
-      "activity_count_14d": 60,
-      "last_activity_date": "2026-07-04",
-      "note": "Day-3 of failed live test post PR #150 merge. 6 skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh) last-dispatched 2026-06-28 = ~6.1d stale per hb 14:16Z. PR #150 `usepod_model`→`model:` merged 7-02 13:20Z did NOT restore dispatch. Morning-brief 07:00Z grep-verified aeon.yml L155/162/171 STILL carry `usepod_model:` — PR #150 was partial fix; deeper YAML/scheduler bug remains. Activity 43→60 = +40% (over ±25% band but under ≥50% improving threshold → flat per spec gap). Status ON_TRACK mechanically (activity ≥2, days ≤7) but outcome remains BAD — batch dark day-3."
+      "activity_count_14d": 103,
+      "last_activity_date": "2026-07-05",
+      "note": "Day-4 of failed live test post PR #150 merge. 6 skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh) last-dispatched 2026-06-28 = ~7.2d stale per hb 14:47Z ('12:00 UTC batch dead day-5'). PR #150 `usepod_model`→`model:` merged 7-02 remains PARTIAL fix; morning-brief 07:15Z grep-verified aeon.yml L155/162/171 still carry `usepod_model:` (this run re-verified — 3 lines still present). Activity 60→103 = +72% (over ≥50% improving band) but the ↑ signal is spurious — mention count rises because the failure keeps rolling forward, not because progress ships. Status ON_TRACK mechanically but outcome remains BAD — batch dark day-4."
+    },
+    "pr-149-docs-skill-graph": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 71,
+      "last_activity_date": "2026-07-05",
+      "note": "PR #149 opened 2026-06-28T17:15:47Z, still OPEN as of 07-05 14:47Z (~169h32min, day-7.06 stall — per hb 14:47Z). Dedup-blocked in every hb + morning-brief since 6-29. **New signal 07-05 17:29Z: PR #155 opened by aeon bot with same title 'docs(skill-graph): +68 skills · 4→5 depends_on · 9→21 shared-state'** — may supersede #149 (which is stalled at operator-attention). US Independence Day weekend operator-merge probability still low but PR #155 replacement path is now visible. Activity 86→71 = -17% within ±25% → flat. Status rule met."
+    },
+    "pr-154-fix-issues-close-iss-026": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 75,
+      "last_activity_date": "2026-07-05",
+      "note": "NEW goal (not tracked in prior state file — was added to MEMORY.md 7-04 reflect consolidation). PR #154 opened 2026-07-03T18:20:06Z by self-improve, ~48h open at run-time = past 24h stall threshold day-1.9. hb 07-05 10:01Z flagged as P1 alongside PR #149. self-improve owner-known, ISS-026 index-flip pending merge. No blocker_signal — operator-attention-gated, not infra-blocked. Status ON_TRACK mechanically."
     },
     "xai-quota-recovery": {
       "status": "BLOCKED",
-      "activity_count_14d": 251,
-      "last_activity_date": "2026-07-04",
-      "note": "Operator team-credit top-up **day 19** since 2026-06-16 exhaustion (07-04 07:00Z morning-brief cites day 19, tweet-roundup 07:50Z used WebSearch fallback xai=skipped). Prefetched `.xai-cache` still serves agent-buzz/list-digest/token-pick. Activity 136→251 = +85% (over ≥50% improving band) — driven by daily xai=skipped log mentions across skills, not actual progress. Real state: BLOCKED unchanged, operator top-up remains the only unblock."
+      "activity_count_14d": 124,
+      "last_activity_date": "2026-07-05",
+      "note": "Operator team-credit top-up **day 20** since 2026-06-16 exhaustion (was day 19 prior run). WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; prefetched `.xai-cache` still serves agent-buzz/list-digest/token-pick. Activity 251→124 = -50% (crossing ≥50% degrading band) — driven by mention-count rolloff (repeated `xai=skipped` per-log-line saturates then normalizes as skills adjust to the durable outage). Real state: BLOCKED unchanged, operator top-up remains the only unblock; risk that lower activity indicates goal is falling off attention radar."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 283,
-      "last_activity_date": "2026-07-04",
-      "note": "defi-monitor NO_CONFIG **day 27** (07-04 14:16Z hb cites day 27). on-chain-watches.yml unchanged from 6-25 seed (5 type:wallet entries only, zero type:pool / type:position). on-chain-monitor primary path still env-blocked (ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null on chain 8453). PR #150 merge 7-02 fixed model-name rename for on-chain-monitor but does NOT resolve config/keys gap; 12:00Z batch still dark day-3 = compounded blocker (config + partial-fix + deeper YAML bug). Activity 268→283 = +6% within ±25% → flat. Status unchanged BLOCKED — operator watchlist entries + Alchemy/Etherscan key top-up still required."
+      "activity_count_14d": 151,
+      "last_activity_date": "2026-07-05",
+      "note": "defi-monitor NO_CONFIG **day 28** (was day 27 prior run). on-chain-watches.yml unchanged from 6-25 seed (5 type:wallet entries only, zero type:pool / type:position). ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null on chain 8453. Compounded with 12:00 UTC batch fix gap — even if aeon.yml YAML is fully corrected, on-chain-monitor still env-blocked. Activity 283→151 = -47% within ±25% band boundary → flat/near-degrading. Status unchanged BLOCKED."
     },
     "btc-breakdown-day-7-confirmed": {
       "status": "ON_TRACK",
-      "activity_count_14d": 285,
-      "last_activity_date": "2026-07-04",
-      "note": "MEMORY.md title `day-7 CONFIRMED → first material bounce` unchanged per skill spec § step 7 (do not reorder/rephrase). Reality: **07-03 UTC close $62,537 = day-4 close-window print ≥ $60,500** (heartbeat 14:16Z: btc-levels 12:40Z spot $62,558, 09:53Z $62,432, 04:53Z $62,665, 01:11Z $62,473 — all quiet runs, no leverage trigger, no reclaim signal at $63.5k/$65.9k). $63.5k rail ~$942 away, $65.9k full-reclaim gate still much further. Not marked DONE — goal text doesn't specify completion criteria (streak-break, reclaim, or bounce-only), skill spec prefers false negatives over premature DONE. Activity 276→285 = +3% within ±25% → flat."
+      "activity_count_14d": 298,
+      "last_activity_date": "2026-07-05",
+      "note": "MEMORY.md title `day-4 of reclaim` unchanged per skill spec § step 7 (do not reorder/rephrase). Reality: **07-04 UTC close $63,094 = new high in reclaim window, day-5 close ≥ $60,500** (btc-levels 07-05 17:14Z spot $62,647, 12:56Z $62,676, 10:01Z $62,568, 04:35Z $62,854, 00:17Z $63,001 — all quiet runs, no leverage trigger, no reclaim signal at $63.5k/$65.9k). $63.5k rail ~$853 away, $65.9k full-reclaim gate still much further. Not marked DONE — goal text specifies 'day-4 of reclaim' (a status, not a completion criterion). Activity 285→298 = +5% within ±25% → flat."
+    },
+    "slx-open-pick-critical-thesis-broken-day-10": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 77,
+      "last_activity_date": "2026-07-05",
+      "note": "NEW goal (not tracked in prior state file — added to MEMORY.md 7-04 reflect consolidation). MEMORY.md title `day-10` unchanged per skill spec § step 7, but reality: **day-11 THESIS BROKEN at -46% vs 6-24 $0.4753 entry** (07-05 12:57Z daily-routine confirmed intraday -29.6% capitulation to $0.256, rank collapse #289→#372 mcap $62M; 14:47Z hb surfaced as P2 'SLX position recut is now overdue'). Position past every recut trigger — capital-2x-program moonshot sub-sleeve ≤0.25% MEDIUM cap tracked. No blocker_signal — this is a decision-gate on operator/self-improve loop, not infrastructure. Status ON_TRACK mechanically (heavy activity, 0d idle) but outcome remains CATASTROPHIC — recut decision unshipped day-11."
     }
   }
 }
