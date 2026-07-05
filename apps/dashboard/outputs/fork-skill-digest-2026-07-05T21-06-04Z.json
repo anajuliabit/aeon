@@ -1,0 +1,203 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest — 2026-07-05"
+      },
+      "children": [
+        "text-main",
+        "sep1",
+        "section-context",
+        "sep2",
+        "section-flip",
+        "sep3",
+        "section-model",
+        "sep4",
+        "section-customizer",
+        "sep5",
+        "link-report"
+      ]
+    },
+    "text-main": {
+      "type": "Text",
+      "props": {
+        "text": "77 forks disable action-converter (upstream defaults on) — fleet is voting it as noise",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-context": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-context",
+        "grid-context"
+      ]
+    },
+    "heading-context": {
+      "type": "Heading",
+      "props": {
+        "text": "Scan Results",
+        "level": "h3"
+      }
+    },
+    "grid-context": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-active",
+        "stat-configured"
+      ]
+    },
+    "stat-active": {
+      "type": "Stat",
+      "props": {
+        "label": "Active forks scanned",
+        "value": "79"
+      }
+    },
+    "stat-configured": {
+      "type": "Stat",
+      "props": {
+        "label": "Configured",
+        "value": "78"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-flip": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-flip",
+        "stat-converter",
+        "stat-search",
+        "stat-security"
+      ]
+    },
+    "heading-flip": {
+      "type": "Heading",
+      "props": {
+        "text": "Flip disable (upstream on → fleet off)",
+        "level": "h3"
+      }
+    },
+    "stat-converter": {
+      "type": "Stat",
+      "props": {
+        "label": "action-converter",
+        "value": "77 forks (99%)"
+      }
+    },
+    "stat-search": {
+      "type": "Stat",
+      "props": {
+        "label": "search-skill",
+        "value": "77 forks (99%)"
+      }
+    },
+    "stat-security": {
+      "type": "Stat",
+      "props": {
+        "label": "security-digest",
+        "value": "77 forks (99%)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-model": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-model",
+        "stat-model"
+      ]
+    },
+    "heading-model": {
+      "type": "Heading",
+      "props": {
+        "text": "Model consensus",
+        "level": "h3"
+      }
+    },
+    "stat-model": {
+      "type": "Stat",
+      "props": {
+        "label": "smithery-manifest → claude-sonnet-4-6",
+        "value": "34 forks"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-customizer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-customizer",
+        "stat-customizer"
+      ]
+    },
+    "heading-customizer": {
+      "type": "Heading",
+      "props": {
+        "text": "Heaviest customizer",
+        "level": "h3"
+      }
+    },
+    "stat-customizer": {
+      "type": "Stat",
+      "props": {
+        "label": "SahilParikh03/aeon",
+        "value": "176 overrides (meta)"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "https://github.com/aaronjmars/aeon/blob/main/articles/fork-skill-digest-2026-07-05.md"
+      }
+    }
+  }
+}
