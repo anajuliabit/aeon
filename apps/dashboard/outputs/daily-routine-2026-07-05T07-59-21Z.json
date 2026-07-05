@@ -1,0 +1,718 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-05"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "overview_text",
+        "sep_1",
+        "winners_heading",
+        "winners_table",
+        "sep_2",
+        "losers_heading",
+        "losers_table",
+        "sep_3",
+        "trending_heading",
+        "trending_text",
+        "sep_4",
+        "notable_heading",
+        "notable_stack",
+        "sep_5",
+        "tweets_heading",
+        "tweets_stack",
+        "sep_6",
+        "paper_heading",
+        "paper_section",
+        "sep_7",
+        "issues_heading",
+        "issues_text",
+        "sep_8",
+        "hn_heading",
+        "hn_stack"
+      ]
+    },
+    "overview_text": {
+      "type": "Text",
+      "props": {
+        "text": "mixed tape — 38/75 top-100 filtered green (~51%), median top-50 +0.02% = day-5 bounce loses steam. BTC $62,871 +0.56% day-5 above $60,500, ETH $1,766 +0.52% holds $1,750, SOL $80.52 -2.39% day-1 pullback breaks 4-day leadership, HYPE $68.45 -4.23% gives back yest's breakout. ADA +9.9% (#16) + BCH +6.18% (#24) = MAJOR-tier rotation. Filter kept 180/250.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "Price",
+          "24h %",
+          "7d %",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "LAB",
+            "$16.52",
+            "+81.4%",
+            "-4.6%",
+            "$138M",
+            "#22",
+            "MAJOR TRENDING+UP FADE"
+          ],
+          [
+            "ULTIMA",
+            "$2,985",
+            "+27.9%",
+            "+59%",
+            "$10M",
+            "#144",
+            "BREAKOUT"
+          ],
+          [
+            "GRX Chain",
+            "$11.58",
+            "+17.1%",
+            "+17%",
+            "$9M",
+            "#261",
+            ""
+          ],
+          [
+            "BTW Bitway",
+            "$0.069",
+            "+16.0%",
+            "-3%",
+            "$12M",
+            "#199",
+            ""
+          ],
+          [
+            "ETHFI Ether.fi",
+            "$0.427",
+            "+14.0%",
+            "+24%",
+            "$94M",
+            "#120",
+            ""
+          ],
+          [
+            "A Vaulta",
+            "$0.075",
+            "+12.9%",
+            "+24%",
+            "$16M",
+            "#228",
+            ""
+          ],
+          [
+            "币安人生",
+            "$0.765",
+            "+10.7%",
+            "+51%",
+            "$41M",
+            "#84",
+            "BREAKOUT"
+          ],
+          [
+            "ADA",
+            "$0.192",
+            "+9.9%",
+            "+33%",
+            "$797M",
+            "#16",
+            "MAJOR BREAKOUT"
+          ],
+          [
+            "EIGEN",
+            "$0.229",
+            "+6.9%",
+            "-3%",
+            "$31M",
+            "#190",
+            ""
+          ],
+          [
+            "BCH",
+            "$239.89",
+            "+6.2%",
+            "+24%",
+            "$155M",
+            "#24",
+            "MAJOR"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "Price",
+          "24h %",
+          "7d %",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "SLX Solstice",
+            "$0.256",
+            "-29.6%",
+            "-46%",
+            "$92M",
+            "#372",
+            "CAPITULATION"
+          ],
+          [
+            "VELVET",
+            "$0.497",
+            "-17.7%",
+            "-68%",
+            "$37M",
+            "#165",
+            "CAPITULATION"
+          ],
+          [
+            "ANSEM",
+            "$0.303",
+            "-13.0%",
+            "+471%",
+            "$64M",
+            "#224",
+            ""
+          ],
+          [
+            "M MemeCore",
+            "$1.41",
+            "-12.3%",
+            "+99%",
+            "$16M",
+            "#44",
+            ""
+          ],
+          [
+            "VVV Venice",
+            "$11.52",
+            "-9.6%",
+            "-13%",
+            "$47M",
+            "#102",
+            ""
+          ],
+          [
+            "BP Backpack",
+            "$0.542",
+            "-7.5%",
+            "",
+            "$3M",
+            "#217",
+            ""
+          ],
+          [
+            "GRASS",
+            "$0.521",
+            "-6.5%",
+            "",
+            "$28M",
+            "#127",
+            ""
+          ],
+          [
+            "PUMP",
+            "$0.001515",
+            "-5.7%",
+            "",
+            "$38M",
+            "#93",
+            ""
+          ],
+          [
+            "SKY",
+            "$0.055",
+            "-5.0%",
+            "",
+            "$7M",
+            "#59",
+            ""
+          ],
+          [
+            "HYPE",
+            "$68.45",
+            "-4.2%",
+            "+10%",
+            "$304M",
+            "#10",
+            "MAJOR"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "trending_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "trending_text": {
+      "type": "Text",
+      "props": {
+        "text": "LAB (mirror), ANSEM (mirror loser), HYPE (mirror), BTC $62,871, SOL (mirror -2.4%), VELVET (mirror), LIT $2.25 +3% (#97), NEAR $1.95 -1.4% (#38), SLX (mirror #372 -27%), VVV (mirror), MON $0.020 +0.5% (#147)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "notable_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_1",
+        "notable_2",
+        "notable_3"
+      ]
+    },
+    "notable_1": {
+      "type": "Text",
+      "props": {
+        "text": "• SLX HIGH 9/10 open pick 6-24 entry $0.475 → $0.256 = -46% vs entry (day-11), rank #289→#372, mcap $62M. Past every recut trigger.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable_2": {
+      "type": "Text",
+      "props": {
+        "text": "• LAB +81% MAJOR #22 = biggest large-cap of window; 7d -4.6% = [FADE] relief bounce, not sustained.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable_3": {
+      "type": "Text",
+      "props": {
+        "text": "• ADA +9.9% MAJOR #16 fresh 7d +33% breakout — first ADA on winners since bounce day-1.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup (WebSearch — XAI day 20)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_crypto",
+        "tweets_ai",
+        "tweets_dev"
+      ]
+    },
+    "tweets_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets_crypto_heading",
+        "tweets_crypto_text"
+      ]
+    },
+    "tweets_crypto_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweets_crypto_text": {
+      "type": "Text",
+      "props": {
+        "text": "CLARITY Act 7-4 signing MISSED day-2; Solana RWA ATH $3.41B = RWA rotates onto SOL rails; MiCA closes with 244 EU-authorized firms; June jobs 57k miss keeps Fed rate-cut path alive.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets_ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets_ai_heading",
+        "tweets_ai_text"
+      ]
+    },
+    "tweets_ai_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweets_ai_text": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic ships Claude Science (auditable artifacts) + Claude Tag (team) — post-Sonnet-5 cadence; Fable 5 redeployed 7-01 + new cybersecurity classifier; GPT-5.6 (Sol/Terra/Luna) still gated to ~20 US-gov orgs (day-9).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets_dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets_dev_heading",
+        "tweets_dev_text"
+      ]
+    },
+    "tweets_dev_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweets_dev_text": {
+      "type": "Text",
+      "props": {
+        "text": "Biome Rust ESLint+Prettier claims 56× speedup — Rust-in-toolchain durable; year-of-2026 dev-tool consensus = local AI + browser automation + privacy-first.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "paper_link",
+        "paper_desc"
+      ]
+    },
+    "paper_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+        "href": "https://arxiv.org/abs/2607.02512",
+        "source": "arXiv 2607.02512"
+      },
+      "children": []
+    },
+    "paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "HF ↑74 top of board. Frames LLMs as programmed fuzzy functions — the shape of every skill here (SKILL.md = program, model = fuzzy execution). Re-lands ↑63→↑74; slate un-rotated day-3, dedup vs SkillCoach/AgenticSTS.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "issues_text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (0 fresh since 2026-07-04T07:51Z)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "hn_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_1",
+        "hn_2",
+        "hn_3",
+        "hn_4",
+        "hn_5"
+      ]
+    },
+    "hn_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_1_link",
+        "hn_1_desc"
+      ]
+    },
+    "hn_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Claude Code session/cache leakage",
+        "href": "https://github.com/anthropics/claude-code/issues/74066",
+        "score": "289"
+      },
+      "children": []
+    },
+    "hn_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "direct aeon-runtime hit; workspace-instance boundary bug.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_2_link",
+        "hn_2_desc"
+      ]
+    },
+    "hn_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GPT-5.5 Codex reasoning-token clustering degradation",
+        "href": "https://github.com/openai/codex/issues/30364",
+        "score": "245"
+      },
+      "children": []
+    },
+    "hn_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "eval-quality axis day-4.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_3_link",
+        "hn_3_desc"
+      ]
+    },
+    "hn_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Better Models: Worse Tools",
+        "href": "https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/",
+        "score": "152"
+      },
+      "children": []
+    },
+    "hn_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Ronacher: tool-quality gap widens as models lift.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_4_link",
+        "hn_4_desc"
+      ]
+    },
+    "hn_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Leaking YouTube creators' private videos",
+        "href": "https://javoriuski.com/post/youtube",
+        "score": "588"
+      },
+      "children": []
+    },
+    "hn_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "privacy thread day-3.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_5_link",
+        "hn_5_desc"
+      ]
+    },
+    "hn_5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Meta's Un-Stable Signature",
+        "href": "https://hackerfactor.com/blog/index.php?/archives/1098-Metas-Un-Stable-Signature.html",
+        "score": "72"
+      },
+      "children": []
+    },
+    "hn_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "stego-marking extends Mythos thread.",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
