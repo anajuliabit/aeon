@@ -580,6 +580,7 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-28,narrative-tracker,claude-opus-4-7,2689,36244,3873887,158825
 2026-06-28,fleet-control,claude-opus-4-7,14,3233,525404,57000
 2026-06-28,btc-levels,claude-sonnet-4-6,9,4717,352608,45764
+2026-06-28,skill-graph,claude-opus-4-7,103,43636,7473255,125421
 2026-06-28,list-digest,claude-opus-4-7,32,12694,1591838,49246
 2026-06-28,agent-buzz,claude-opus-4-7,19,13273,870956,63711
 2026-06-28,reflect,claude-opus-4-7,43,24617,4140518,194036
