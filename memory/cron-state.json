@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-07-05T20:42:44Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-06T14:33:27Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-05T20:49:41Z",
     "total_runs": 199,
     "total_successes": 119,
@@ -200,8 +200,8 @@
     "success_rate": 1
   },
   "search-skill": {
-    "last_dispatch": "2026-07-05T14:45:52Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-06T14:33:27Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-05T14:48:05Z",
     "total_runs": 112,
     "total_successes": 40,
@@ -445,8 +445,8 @@
     "success_rate": 1
   },
   "security-digest": {
-    "last_dispatch": "2026-07-05T14:45:52Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-06T14:33:27Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-05T14:50:43Z",
     "total_runs": 95,
     "total_successes": 27,
@@ -458,8 +458,8 @@
     "last_error": "638b1f9\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "deal-flow": {
-    "last_dispatch": "2026-06-29T15:01:36Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-06T14:33:27Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-29T15:10:16Z",
     "total_runs": 3,
     "total_successes": 3,
