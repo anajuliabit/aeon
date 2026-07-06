@@ -1,29 +1,23 @@
-*Evening Recap — 2026-07-04*
-_TL;DR: busy ship day — all core crons fired and vuln-scanner broke its 7-day silence, but the T-0 ISS-025 capture-step PR deadline passed unshipped_
+*Evening Recap — 2026-07-06*
+_TL;DR: two PRs merged and a best-ever 99.6% sr week — 0/4 SMART actions slipped and SLX recut sits untouched day 12, net wash_
 
 *Headlines:*
-- vuln-scanner — VULN_SCAN_CLEAN on chrome-devtools-mcp, 7d silence broken · articles/vuln-scan-2026-07-04.md
-- security-digest — 14 npm malware (wave resumed) + dulwich RCE-via-clone public PoC, highest this-week · hash 554105a5
-- github-trending — cross-lab plumbing as 6th skills-as-primitive layer (openai/codex-plugin-cc) · .outputs/github-trending.md
-- reflect — MEMORY.md 48L→56L, 14 new items (SLX thesis broken, Anthropic S-1, dulwich, cross-lab layer) · memory/MEMORY.md
-- skill-health — DEGRADED(23) 24h notify fired; ISS-025 day-11 T-0 self-set deadline passed · docs/status.md
+- [weekly-review] — 99.6% sr (+11.6pp), 7 PRs merged, 3 issues resolved; 0/4 SMART actions slipped verbatim · articles/weekly-review-2026-07-06.md
+- [PR #156 MERGED] — `usepod_model:` dead lines removed aeon.yml L155/162/171; unblocks 12:00 UTC batch (dark 8d) · https://github.com/anajuliabit/aeon/pull/156
+- [PR #154 MERGED] — ISS-026 closed, heartbeat missing_pattern INDEX flip done · https://github.com/anajuliabit/aeon/pull/154
+- [deal-flow] — Venice AI $65M @ $1B unicorn (Dragonfly + Coinbase Ventures lead, $70M ARR); strategics took megaround leads · .tmp/deal-flow/msg.md
+- [unlock-monitor] — $PUMP CRISIS: 82.5B tokens $135M cliff (1.8× vol, 21.35% supply expand) — fade-pump · .tmp/unlock-monitor/msg.md
 
 *Notable:*
-- token-alert — GITLAWB +23.21% day-2 trigger fired, vol 2.27× participation-confirmed · hash b3611d7f
-- daily-routine — bounce day-4 holds (BTC $62,443, SLX -22.8% open pick thesis broken) · .outputs/daily-routine.md
-- list-digest — ARB 10%-fee Robinhood/Orbit anchor, flagged as token-pick/defi-overview seed 7-05
-- action-converter — 5 actions OK (ISS-025 PR · SLX recut · GITLAWB log · cross-lab codify · WELL update)
-- agent-buzz — 10→6 kept, first shill-swarm dedup live catch (GenLayer pair ×0.5 modifier)
+- [skill-security-scan] — NOCHANGE, 4 persistent HIGH (workflow_dispatch L86/94/96/812) · articles/security-scan-2026-07-06.md
+- [btc-levels ×2] — $63,500 reclaim confirmed 01:29Z; $63,801 hold 17:23Z, next gate $65,900
+- [skill-health] — 21 DEGRADED day 13, ISS-025 systemic unchanged; notify cadence fired
+- [list-digest] — @Flowslikeosmo CARDS -46% self-audit mirrors open SLX position magnitude exactly
+- [action-converter] — 5 actions: ISS-025 capture-step PR, SLX recut, cron-gap, PR #149 retire, MEMORY flip
 
 *Decisions for tomorrow:*
-- SLX recut: open HIGH 9/10 pick $0.363 (-23.6% vs $0.475 entry, day-10 thesis broken — capital-2x)
-- Merge PR #154 (~29h, past 24h threshold) — https://github.com/anajuliabit/aeon/pull/154
-- Merge PR #149 (~141h day-5.87 stall) — https://github.com/anajuliabit/aeon/pull/149
-- Ship aeon.yml capture-step PR (L155/162/171 usepod_model→model) before Mon weekly-review
+- PR #149 vs #155 (docs(skill-graph)): day-8 stall vs day-2 supersede — merge one, close the other · https://github.com/anajuliabit/aeon/pull/149
+- SLX day-12 -46% vs entry $0.4753 → $0.256: recut or close?
+- ISS-025 capture-step (aeon.yml:479-493): weekly-review deadline slipped T-0; route to self-improve by 7-07 12:00Z
 
-*Blockers:*
-- 12:00 UTC batch — dead day-3 (6 skills ~6.1d stale, PR #150 partial fix)
-- fork-skill-digest — STUCK ~145h (Sun 7-05 fresh dispatch ~23h out)
-- aixbt-pulse — MISSED 09:00Z today, day-1 at 2× interval threshold
-
-_+9 routine runs collapsed · sources: log=ok cron-state=ok_
+_+5 routine runs collapsed · sources: log=ok cron-state=ok_

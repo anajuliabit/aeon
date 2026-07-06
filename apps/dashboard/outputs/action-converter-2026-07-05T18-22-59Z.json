@@ -1,0 +1,737 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-05",
+        "description": "Skill: action-converter"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action1",
+        "sep1",
+        "action2",
+        "sep2",
+        "action3",
+        "sep3",
+        "action4",
+        "sep4",
+        "action5",
+        "sep5",
+        "sources"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-title",
+        "a1-desc",
+        "a1-why-section",
+        "a1-done-section",
+        "a1-loop"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Author `.github/workflows/aeon.yml` capture-step patch (L479-493)",
+        "level": "h2"
+      }
+    },
+    "a1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Replace `cp .result` overwrite with `cat`-fallback preserving Write-tool output. Open PR referencing ISS-025 before Mon 07-06 19:00Z weekly-review.",
+        "variant": "body"
+      }
+    },
+    "a1-why-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-why-h",
+        "a1-why-t"
+      ]
+    },
+    "a1-why-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "a1-why-t": {
+      "type": "Text",
+      "props": {
+        "text": "sandbox-truncation systemic day 12; 07-04 self-set deadline blew; 18-skill sr<0.5 tail bleeds until landed.",
+        "variant": "body"
+      }
+    },
+    "a1-done-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-done-h",
+        "a1-done-badges"
+      ]
+    },
+    "a1-done-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "a1-done-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-b1",
+        "a1-b2",
+        "a1-b3"
+      ]
+    },
+    "a1-b1": {
+      "type": "Badge",
+      "props": {
+        "text": "PR opened",
+        "variant": "default"
+      }
+    },
+    "a1-b2": {
+      "type": "Badge",
+      "props": {
+        "text": "workflow diff visible",
+        "variant": "default"
+      }
+    },
+    "a1-b3": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025 referenced",
+        "variant": "default"
+      }
+    },
+    "a1-loop": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-loop-label",
+        "a1-loop-badge"
+      ]
+    },
+    "a1-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "caption"
+      }
+    },
+    "a1-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-capture-fix",
+        "variant": "secondary"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-title",
+        "a2-desc",
+        "a2-why-section",
+        "a2-done-section",
+        "a2-loop"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Delete `usepod_model:` remnants at `aeon.yml:155/162/171`",
+        "level": "h2"
+      }
+    },
+    "a2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Delete three lines in token-pick, token-movers, and market-context-refresh sections. Open PR to complete PR #150 partial fix.",
+        "variant": "body"
+      }
+    },
+    "a2-why-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-why-h",
+        "a2-why-t"
+      ]
+    },
+    "a2-why-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "a2-why-t": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch day-5 dark since 6-28; grep-confirmed by 07-05 morning-brief; 6 skills bleed until swept.",
+        "variant": "body"
+      }
+    },
+    "a2-done-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-done-h",
+        "a2-done-badges"
+      ]
+    },
+    "a2-done-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "a2-done-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-b1",
+        "a2-b2"
+      ]
+    },
+    "a2-b1": {
+      "type": "Badge",
+      "props": {
+        "text": "PR opened",
+        "variant": "default"
+      }
+    },
+    "a2-b2": {
+      "type": "Badge",
+      "props": {
+        "text": "grep 'usepod_model:' returns 0 hits",
+        "variant": "default"
+      }
+    },
+    "a2-loop": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-loop-label",
+        "a2-loop-badge"
+      ]
+    },
+    "a2-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "caption"
+      }
+    },
+    "a2-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "12:00-utc-batch-fix",
+        "variant": "secondary"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-title",
+        "a3-stat",
+        "a3-desc",
+        "a3-why-section",
+        "a3-done-section",
+        "a3-loop"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Book SLX HIGH 9/10 6-24 entry as closed loss",
+        "level": "h2"
+      }
+    },
+    "a3-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "SLX Entry → Close",
+        "value": "$0.4753 → $0.256",
+        "delta": "-46%",
+        "trend": "down"
+      }
+    },
+    "a3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Close loss in `memory/topics/crypto.md` picks table, replace MEMORY.md line-12 CRITICAL row with CLOSED row.",
+        "variant": "body"
+      }
+    },
+    "a3-why-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-why-h",
+        "a3-why-t"
+      ]
+    },
+    "a3-why-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "a3-why-t": {
+      "type": "Text",
+      "props": {
+        "text": "day-11 past every recut trigger per 12:57Z token-movers CATASTROPHIC top-of-losers rank-collapse #289→#372; carrying is denialism.",
+        "variant": "body"
+      }
+    },
+    "a3-done-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-done-h",
+        "a3-done-badges"
+      ]
+    },
+    "a3-done-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "a3-done-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-b1",
+        "a3-b2"
+      ]
+    },
+    "a3-b1": {
+      "type": "Badge",
+      "props": {
+        "text": "crypto.md picks table appended with $0.256 close",
+        "variant": "default"
+      }
+    },
+    "a3-b2": {
+      "type": "Badge",
+      "props": {
+        "text": "MEMORY.md line-12 flipped to CLOSED",
+        "variant": "default"
+      }
+    },
+    "a3-loop": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-loop-label",
+        "a3-loop-badge"
+      ]
+    },
+    "a3-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "caption"
+      }
+    },
+    "a3-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "slx-recut-blown",
+        "variant": "secondary"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-title",
+        "a4-alert",
+        "a4-desc",
+        "a4-why-section",
+        "a4-done-section",
+        "a4-loop"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Upgrade dulwich to ≥1.2.5 for CVE-2026-52726",
+        "level": "h2"
+      }
+    },
+    "a4-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "CVE-2026-52726 RCE via clone",
+        "message": "CVSS 7.5 with public PoC. `.git/hooks` auto-exec on next git command.",
+        "type": "error"
+      }
+    },
+    "a4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Grep `dulwich` across repo (requirements*, pyproject*, package-lock indirect deps). If any pin <1.2.5, open PR upgrading to 1.2.5.",
+        "variant": "body"
+      }
+    },
+    "a4-why-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-why-h",
+        "a4-why-t"
+      ]
+    },
+    "a4-why-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "a4-why-t": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.5 with public PoC + `.git/hooks` auto-exec on next git command; MEMORY.md L46 flagged highest THIS-WEEK op priority.",
+        "variant": "body"
+      }
+    },
+    "a4-done-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-done-h",
+        "a4-done-text"
+      ]
+    },
+    "a4-done-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "a4-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "grep returns 0 hits OR PR opened bumping dulwich to ≥1.2.5",
+        "variant": "body"
+      }
+    },
+    "a4-loop": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-loop-label",
+        "a4-loop-badge"
+      ]
+    },
+    "a4-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "caption"
+      }
+    },
+    "a4-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "dulwich-rce-carry",
+        "variant": "secondary"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-title",
+        "a5-desc",
+        "a5-why-section",
+        "a5-done-section",
+        "a5-loop"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Extend `memory/MEMORY.md` line-40 with multi-region cross-lab evidence",
+        "level": "h2"
+      }
+    },
+    "a5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Append durable pattern with day-7 multi-region cross-lab evidence: Microsoft (dotnet/skills) + Alibaba (alibaba/page-agent) joining Anthropic/OpenAI/Google/Meta (5 labs · 2 regions · 7 layers).",
+        "variant": "body"
+      }
+    },
+    "a5-why-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-why-h",
+        "a5-why-t"
+      ]
+    },
+    "a5-why-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      }
+    },
+    "a5-why-t": {
+      "type": "Text",
+      "props": {
+        "text": "10:30Z github-trending 5/6 whole-slate agent-runtime shape confirms ecosystem convergence, not lab-specific; line-40 stales without today's update.",
+        "variant": "body"
+      }
+    },
+    "a5-done-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-done-h",
+        "a5-done-text"
+      ]
+    },
+    "a5-done-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Done",
+        "level": "h4"
+      }
+    },
+    "a5-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md line-40 mentions Microsoft + Alibaba + multi-region + 7 layers, git diff visible.",
+        "variant": "body"
+      }
+    },
+    "a5-loop": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-loop-label",
+        "a5-loop-badge"
+      ]
+    },
+    "a5-loop-label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "caption"
+      }
+    },
+    "a5-loop-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-md-line-40",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-h",
+        "sources-grid"
+      ]
+    },
+    "sources-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "src-memory",
+        "src-logs",
+        "src-topics",
+        "src-prs",
+        "src-cron",
+        "src-mode"
+      ]
+    },
+    "src-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory",
+        "value": "56"
+      }
+    },
+    "src-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "7d"
+      }
+    },
+    "src-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "17"
+      }
+    },
+    "src-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "3"
+      }
+    },
+    "src-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron Failing",
+        "value": "0"
+      }
+    },
+    "src-mode": {
+      "type": "Badge",
+      "props": {
+        "text": "Mode: OK",
+        "variant": "default"
+      }
+    }
+  }
+}

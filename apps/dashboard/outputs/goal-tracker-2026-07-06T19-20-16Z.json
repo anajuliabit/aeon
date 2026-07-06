@@ -1,0 +1,494 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-06"
+      },
+      "children": [
+        "summary",
+        "sep1",
+        "on_track_section",
+        "sep2",
+        "blocked_section",
+        "sep3",
+        "done_section",
+        "sep4",
+        "sources"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "8 goals — 0 at risk, 0 needs attention, 5 on track, 2 blocked, 1 done (overall ↑ improving)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "on_track_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on_track_heading",
+        "ot_g1",
+        "ot_g2",
+        "ot_g3",
+        "ot_g4",
+        "ot_g5"
+      ]
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "ot_g1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g1_title",
+        "ot_g1_metrics",
+        "ot_g1_detail"
+      ]
+    },
+    "ot_g1_title": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation systemic day 12",
+        "variant": "body"
+      }
+    },
+    "ot_g1_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 338 activity/14d (flat)",
+        "variant": "caption"
+      }
+    },
+    "ot_g1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "day 13 real, weekly-review T-0 ~4h out, capture-step PR still un-authored",
+        "variant": "caption"
+      }
+    },
+    "ot_g2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g2_title_row",
+        "ot_g2_metrics",
+        "ot_g2_pr156_row"
+      ]
+    },
+    "ot_g2_title_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g2_title",
+        "ot_g2_pr150"
+      ]
+    },
+    "ot_g2_title": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch — day-5 of failed live test post",
+        "variant": "body"
+      }
+    },
+    "ot_g2_pr150": {
+      "type": "Link",
+      "props": {
+        "label": "PR #150",
+        "href": "#pr/150"
+      }
+    },
+    "ot_g2_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 117 activity/14d (flat mention)",
+        "variant": "caption"
+      }
+    },
+    "ot_g2_pr156_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g2_pr156",
+        "ot_g2_pr156_detail"
+      ]
+    },
+    "ot_g2_pr156": {
+      "type": "Link",
+      "props": {
+        "label": "PR #156",
+        "href": "#pr/156"
+      }
+    },
+    "ot_g2_pr156_detail": {
+      "type": "Text",
+      "props": {
+        "text": "MERGED 15:45Z ships aeon.yml usepod_model fix, monday 12:00Z tick = first observable validation",
+        "variant": "caption"
+      }
+    },
+    "ot_g3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g3_title_row",
+        "ot_g3_metrics",
+        "ot_g3_pr155_row"
+      ]
+    },
+    "ot_g3_title_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g3_pr149",
+        "ot_g3_title"
+      ]
+    },
+    "ot_g3_pr149": {
+      "type": "Link",
+      "props": {
+        "label": "PR #149",
+        "href": "#pr/149"
+      }
+    },
+    "ot_g3_title": {
+      "type": "Text",
+      "props": {
+        "text": "docs(skill-graph)",
+        "variant": "body"
+      }
+    },
+    "ot_g3_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 95 activity/14d (flat; day-8.2 stall)",
+        "variant": "caption"
+      }
+    },
+    "ot_g3_pr155_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g3_pr155",
+        "ot_g3_pr155_detail"
+      ]
+    },
+    "ot_g3_pr155": {
+      "type": "Link",
+      "props": {
+        "label": "PR #155",
+        "href": "#pr/155"
+      }
+    },
+    "ot_g3_pr155_detail": {
+      "type": "Text",
+      "props": {
+        "text": "opened 07-05 17:29Z likely supersedes",
+        "variant": "caption"
+      }
+    },
+    "ot_g4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g4_title",
+        "ot_g4_badge",
+        "ot_g4_metrics",
+        "ot_g4_detail"
+      ]
+    },
+    "ot_g4_title": {
+      "type": "Text",
+      "props": {
+        "text": "BTC bounce day-5 above $60,500 breakdown line",
+        "variant": "body"
+      }
+    },
+    "ot_g4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ improving",
+        "variant": "secondary"
+      }
+    },
+    "ot_g4_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 520 activity/14d",
+        "variant": "caption"
+      }
+    },
+    "ot_g4_detail": {
+      "type": "Text",
+      "props": {
+        "text": "day-6 with $63,500 reclaim alert FIRED 01:29Z, $65.9k gate still open",
+        "variant": "caption"
+      }
+    },
+    "ot_g5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g5_title_row",
+        "ot_g5_metrics",
+        "ot_g5_detail"
+      ]
+    },
+    "ot_g5_title_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ot_g5_title",
+        "ot_g5_badge"
+      ]
+    },
+    "ot_g5_title": {
+      "type": "Text",
+      "props": {
+        "text": "SLX open pick DAY-11 — recut overdue",
+        "variant": "body"
+      }
+    },
+    "ot_g5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CATASTROPHIC",
+        "variant": "destructive"
+      }
+    },
+    "ot_g5_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 92 activity/14d (flat)",
+        "variant": "caption"
+      }
+    },
+    "ot_g5_detail": {
+      "type": "Text",
+      "props": {
+        "text": "day-12 real, -46% vs entry, recut decision unshipped",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_heading",
+        "bl_g1",
+        "bl_g2"
+      ]
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "bl_g1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bl_g1_title",
+        "bl_g1_status",
+        "bl_g1_action"
+      ]
+    },
+    "bl_g1_title": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota recovery",
+        "variant": "body"
+      }
+    },
+    "bl_g1_status": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator team-credit top-up since 2026-06-16 (day 21)",
+        "variant": "caption"
+      }
+    },
+    "bl_g1_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action",
+        "message": "Ping operator to top up Team 3a8b4c1e monthly credit"
+      }
+    },
+    "bl_g2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bl_g2_title",
+        "bl_g2_status",
+        "bl_g2_action"
+      ]
+    },
+    "bl_g2_title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config day 28",
+        "variant": "body"
+      }
+    },
+    "bl_g2_status": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator config + API keys (day 29)",
+        "variant": "caption"
+      }
+    },
+    "bl_g2_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action",
+        "message": "Seed `memory/on-chain-watches.yml` with type:pool/type:position entries and set ALCHEMY_API_KEY / ETHERSCAN_API_KEY"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done_heading",
+        "d_g1"
+      ]
+    },
+    "done_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h2"
+      }
+    },
+    "d_g1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d_g1_title_row",
+        "d_g1_detail"
+      ]
+    },
+    "d_g1_title_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d_g1_pr154",
+        "d_g1_action",
+        "d_g1_issue"
+      ]
+    },
+    "d_g1_pr154": {
+      "type": "Link",
+      "props": {
+        "label": "PR #154",
+        "href": "#pr/154"
+      }
+    },
+    "d_g1_action": {
+      "type": "Text",
+      "props": {
+        "text": "fix(issues) close",
+        "variant": "body"
+      }
+    },
+    "d_g1_issue": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-026",
+        "href": "#issue/026"
+      }
+    },
+    "d_g1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "merged 2026-07-06 15:35Z (moved to Recently Cleared)",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

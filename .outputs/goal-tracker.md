@@ -1,17 +1,21 @@
-*Goal Tracker — 2026-07-04*
+*Goal Tracker — 2026-07-06*
 
-Summary: 6 goals — 0 at risk, 0 needs attention, 4 on track, 2 blocked, 0 done (overall → flat)
-
-BLOCKED
-• XAI quota recovery — operator top-up team 3a8b4c1e day 19 since 2026-06-16 (activity 136→251 ↑ but blocker unchanged)
-  → Action: Top up XAI team 3a8b4c1e monthly credits — 3 daily-loop skills still xai=skipped.
-• Operator on-chain config — defi-monitor NO_CONFIG day 27, ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null (activity 268→283 flat)
-  → Action: Add `type: pool` / `type: position` entries to `memory/on-chain-watches.yml` and top up Alchemy + Etherscan keys.
+Summary: 8 goals — 0 at risk, 0 needs attention, 5 on track, 2 blocked, 1 done (overall ↑ improving)
 
 ON TRACK
-• Sandbox-truncation systemic — 0d idle, 347 activity/14d (299→347 flat). Self-set weekly-review hard deadline = **T-0 TODAY**, PR unshipped; mechanical ON_TRACK on observation cadence, not fix progress.
-• 12:00 UTC batch first live test — 0d idle, 60 activity/14d (43→60 flat). Batch STILL dark day-3 post PR #150 merge; grep-verified 3× `usepod_model:` still at aeon.yml L155/162/171.
-• PR #149 docs(skill-graph) — 0d idle, 86 activity/14d (66→86 flat). Day-6 stall since 2026-06-28T17:15Z; US Independence Day = operator merge likely stays pending through 7-05 morning.
-• BTC 7-day breakdown streak BROKEN → day-2 of reclaim — 0d idle, 285 activity/14d (276→285 flat). MEMORY.md title frozen per skill spec § step 7; reality is day-4 close ≥ $60,500 (07-03 close $62,537), $63.5k / $65.9k reclaim gates still unfired.
+• Sandbox-truncation systemic day 12 — 0d idle, 338 activity/14d (flat; day 13 real, weekly-review T-0 ~4h out, capture-step PR still un-authored)
+• 12:00 UTC batch — day-5 of failed live test post PR #150 — 0d idle, 117 activity/14d (flat mention; PR #156 MERGED 15:45Z ships aeon.yml usepod_model fix, monday 12:00Z tick = first observable validation)
+• PR #149 docs(skill-graph) — 0d idle, 95 activity/14d (flat; day-8.2 stall, PR #155 opened 07-05 17:29Z likely supersedes)
+• BTC bounce day-5 above $60,500 breakdown line — 0d idle, 520 activity/14d (↑ improving; day-6 with $63,500 reclaim alert FIRED 01:29Z, $65.9k gate still open)
+• SLX open pick DAY-11 CATASTROPHIC — recut overdue — 0d idle, 92 activity/14d (flat; day-12 real, -46% vs entry, recut decision unshipped)
+
+BLOCKED
+• XAI quota recovery — waiting on operator team-credit top-up since 2026-06-16 (day 21)
+  → Action: Ping operator to top up Team 3a8b4c1e monthly credit
+• Operator on-chain config day 28 — waiting on operator config + API keys (day 29)
+  → Action: Seed `memory/on-chain-watches.yml` with type:pool/type:position entries and set ALCHEMY_API_KEY / ETHERSCAN_API_KEY
+
+DONE
+• PR #154 fix(issues) close ISS-026 — merged 2026-07-06 15:35Z (moved to Recently Cleared)
 
 Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok

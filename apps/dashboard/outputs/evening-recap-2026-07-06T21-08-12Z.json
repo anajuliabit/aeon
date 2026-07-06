@@ -1,0 +1,429 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-06"
+      },
+      "children": [
+        "tldr",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "footer"
+      ]
+    },
+    "tldr": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: two PRs merged and a best-ever 99.6% sr week — 0/4 SMART actions slipped and SLX recut sits untouched day 12, net wash",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_heading",
+        "headline1",
+        "headline2",
+        "headline3",
+        "headline4",
+        "headline5"
+      ]
+    },
+    "headlines_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "headline1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h1_badge",
+        "h1_link"
+      ]
+    },
+    "h1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "weekly-review",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "h1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "99.6% sr (+11.6pp), 7 PRs merged, 3 issues resolved; 0/4 SMART actions slipped verbatim",
+        "href": "articles/weekly-review-2026-07-06.md",
+        "source": "articles"
+      },
+      "children": []
+    },
+    "headline2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h2_badge",
+        "h2_link"
+      ]
+    },
+    "h2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #156 MERGED",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "h2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "`usepod_model:` dead lines removed aeon.yml L155/162/171; unblocks 12:00 UTC batch (dark 8d)",
+        "href": "https://github.com/anajuliabit/aeon/pull/156",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "headline3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h3_badge",
+        "h3_link"
+      ]
+    },
+    "h3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #154 MERGED",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "h3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ISS-026 closed, heartbeat missing_pattern INDEX flip done",
+        "href": "https://github.com/anajuliabit/aeon/pull/154",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "headline4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h4_badge",
+        "h4_link"
+      ]
+    },
+    "h4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "deal-flow",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "h4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Venice AI $65M @ $1B unicorn (Dragonfly + Coinbase Ventures lead, $70M ARR); strategics took megaround leads",
+        "href": ".tmp/deal-flow/msg.md",
+        "source": "deal-flow"
+      },
+      "children": []
+    },
+    "headline5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h5_badge",
+        "h5_link"
+      ]
+    },
+    "h5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "unlock-monitor",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "h5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "$PUMP CRISIS: 82.5B tokens $135M cliff (1.8× vol, 21.35% supply expand) — fade-pump",
+        "href": ".tmp/unlock-monitor/msg.md",
+        "source": "unlock-monitor"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable1",
+        "notable2",
+        "notable3",
+        "notable4",
+        "notable5"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "notable1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n1_badge",
+        "n1_link"
+      ]
+    },
+    "n1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-security-scan",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "n1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NOCHANGE, 4 persistent HIGH (workflow_dispatch L86/94/96/812)",
+        "href": "articles/security-scan-2026-07-06.md",
+        "source": "articles"
+      },
+      "children": []
+    },
+    "notable2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n2_badge",
+        "n2_text"
+      ]
+    },
+    "n2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels ×2",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "n2_text": {
+      "type": "Text",
+      "props": {
+        "text": "$63,500 reclaim confirmed 01:29Z; $63,801 hold 17:23Z, next gate $65,900"
+      },
+      "children": []
+    },
+    "notable3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n3_badge",
+        "n3_text"
+      ]
+    },
+    "n3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "n3_text": {
+      "type": "Text",
+      "props": {
+        "text": "21 DEGRADED day 13, ISS-025 systemic unchanged; notify cadence fired"
+      },
+      "children": []
+    },
+    "notable4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n4_badge",
+        "n4_text"
+      ]
+    },
+    "n4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "list-digest",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "n4_text": {
+      "type": "Text",
+      "props": {
+        "text": "@Flowslikeosmo CARDS -46% self-audit mirrors open SLX position magnitude exactly"
+      },
+      "children": []
+    },
+    "notable5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "n5_badge",
+        "n5_text"
+      ]
+    },
+    "n5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "action-converter",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "n5_text": {
+      "type": "Text",
+      "props": {
+        "text": "5 actions: ISS-025 capture-step PR, SLX recut, cron-gap, PR #149 retire, MEMORY flip"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_heading",
+        "decision1",
+        "decision2",
+        "decision3"
+      ]
+    },
+    "decisions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "decision1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #149 vs #155 (docs(skill-graph)): day-8 stall vs day-2 supersede — merge one, close the other",
+        "href": "https://github.com/anajuliabit/aeon/pull/149",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "decision2": {
+      "type": "Text",
+      "props": {
+        "text": "SLX day-12 -46% vs entry $0.4753 → $0.256: recut or close?"
+      },
+      "children": []
+    },
+    "decision3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step (aeon.yml:479-493): weekly-review deadline slipped T-0; route to self-improve by 7-07 12:00Z"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "+5 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "skill-health — 2026-07-06"
+      },
+      "children": [
+        "status-alert",
+        "sep1",
+        "degraded-section",
+        "sep2",
+        "no-data-section",
+        "sep3",
+        "healthy-section",
+        "sep4",
+        "delta-section",
+        "sep5",
+        "issues-section"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: DEGRADED(21)",
+        "message": "Systemic: output_tokens=0 sandbox-truncation day-13, 21 skills share signature (ISS-019/020/021/025 cluster). hash unchanged from 07-05; notifying on 24h cadence.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "skill1",
+        "skill2",
+        "skill3",
+        "skill4",
+        "cost-report-item",
+        "more-items-text"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DEGRADED (21, worst first by dark-days then sr)",
+        "level": "h2"
+      }
+    },
+    "skill1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skill1-name",
+        "skill1-sr",
+        "skill1-dark",
+        "skill1-status"
+      ]
+    },
+    "skill1-name": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh",
+        "variant": "lead"
+      }
+    },
+    "skill1-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "32%"
+      }
+    },
+    "skill1-dark": {
+      "type": "Text",
+      "props": {
+        "text": "8d dark",
+        "variant": "body"
+      }
+    },
+    "skill1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "FIX-CONFIG (PR #156 pending)",
+        "variant": "secondary"
+      }
+    },
+    "skill2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skill2-name",
+        "skill2-sr",
+        "skill2-dark",
+        "skill2-status"
+      ]
+    },
+    "skill2-name": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "lead"
+      }
+    },
+    "skill2-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "33%"
+      }
+    },
+    "skill2-dark": {
+      "type": "Text",
+      "props": {
+        "text": "8d dark",
+        "variant": "body"
+      }
+    },
+    "skill2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "FIX-CONFIG (PR #156 pending)",
+        "variant": "secondary"
+      }
+    },
+    "skill3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skill3-name",
+        "skill3-sr",
+        "skill3-dark",
+        "skill3-status"
+      ]
+    },
+    "skill3-name": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor",
+        "variant": "lead"
+      }
+    },
+    "skill3-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "53%"
+      }
+    },
+    "skill3-dark": {
+      "type": "Text",
+      "props": {
+        "text": "8d dark",
+        "variant": "body"
+      }
+    },
+    "skill3-status": {
+      "type": "Badge",
+      "props": {
+        "text": "FIX-CONFIG (PR #156 pending)",
+        "variant": "secondary"
+      }
+    },
+    "skill4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skill4-name",
+        "skill4-sr",
+        "skill4-dark",
+        "skill4-status"
+      ]
+    },
+    "skill4-name": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse",
+        "variant": "lead"
+      }
+    },
+    "skill4-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "47%"
+      }
+    },
+    "skill4-dark": {
+      "type": "Text",
+      "props": {
+        "text": "8d dark-slot",
+        "variant": "body"
+      }
+    },
+    "skill4-status": {
+      "type": "Badge",
+      "props": {
+        "text": "INVESTIGATE",
+        "variant": "destructive"
+      }
+    },
+    "cost-report-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cost-name",
+        "cost-sr",
+        "cost-status"
+      ]
+    },
+    "cost-name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "cost-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "11%"
+      }
+    },
+    "cost-status": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API → ISS-025",
+        "variant": "secondary"
+      }
+    },
+    "more-items-text": {
+      "type": "Text",
+      "props": {
+        "text": "+16 more: reg-monitor 12%, vuln-scanner 13%, skill-analytics 13%, security-digest 29%, search-skill 36%, skill-health 37%, self-improve/action-converter/goal-tracker 40%, list-digest 41%, reflect 41%, skill-evals 43%, evening-recap 48%, thought-review 54%, agent-buzz 55%, github-trending 58% — see memory/issues/INDEX.md",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no-data-heading",
+        "no-data-text"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "no-data-text": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL (scheduler gap; operator-scorecard chronic Mon 10:30Z miss day 7)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-text"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HEALTHY (8)",
+        "level": "h3"
+      }
+    },
+    "healthy-text": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor, deal-flow, skill-security-scan, fork-cohort, skill-update-check, weekly-review, weekly-shiplog, skill-graph",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "delta-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "delta-heading",
+        "delta-text"
+      ]
+    },
+    "delta-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Delta 07-05→07-06",
+        "level": "h3"
+      }
+    },
+    "delta-text": {
+      "type": "Text",
+      "props": {
+        "text": "DEGRADED byte-identical; fork-skill-digest un-stuck (168h+ carry resolved via Sun 21:07Z retry) HEALTHY→WARNING sr=0.75; healthy_count 9→8. PR #156 opened 07-05 18:23Z addresses 12:00 batch usepod_model config bug. ISS-025 capture-step PR still un-authored at T-0 to weekly-review 19:00Z deadline.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "issues-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues-heading",
+        "issues-stats"
+      ]
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues Summary",
+        "level": "h3"
+      }
+    },
+    "issues-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "issues-open",
+        "issues-filed",
+        "issues-resolved"
+      ]
+    },
+    "issues-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "12"
+      }
+    },
+    "issues-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed this run",
+        "value": "0"
+      }
+    },
+    "issues-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}

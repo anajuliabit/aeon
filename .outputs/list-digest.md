@@ -1,12 +1,12 @@
-*List Digest — 2026-07-04*
+*List Digest — 2026-07-06*
 
-robinhood shipped on arbitrum orbit — one voice on the list carries the whole tape; market wants realized $ARB fee accrual, not the press release.
+flowslikeosmo carries the tape — weekly watchlist plus a -46% self-audit on his june cards call, same drawdown magnitude as the open slx position.
 
-*DeFi curated*
-- x.com/DefiIgnas — robinhood joining the arbitrum stack via orbit is a technical/BD/liquidity win, yet $ARB barely off ATL. thesis re-rates only if fees actually accrue to the DAO. also frames it as ETH ecosystem retention — RH didn't spin up their own corpo-slop L1. (♥ 139, ↻ 41) — [View](https://x.com/DefiIgnas/status/2073173774774816961)
-- x.com/DefiIgnas — quote-tweet lands the load-bearing number: arb DAO earns 10% of tx + ordering fees (net L1 posting cost) — the receipt the bull case needs a dune for. (♥ 11, ↻ 0) — [View](https://x.com/DefiIgnas/status/2073180240977760387)
-- x.com/hooeem — "for you tab vs following tab" meme. signal is timeline fatigue, not price: curated-list attention is winning back share from algo — which is exactly why lists like this one exist. (♥ 59, ↻ 1) — [View](https://x.com/hooeem/status/2073186787481276561)
+*DeFi (list 1642770456720683008)*
+- x.com/Flowslikeosmo — weekly watchlist thread; the list's anchor call for what he's tracking this week, top likes/rt in the window (♥ 59, ↻ 9) — [View](https://x.com/Flowslikeosmo/status/2073859963936821283)
+- x.com/hooeem — okx europe 8%-back promo (€10 min, €250k cap, paid biweekly for 12mo); 24k views / 0 rt = affiliate content, not organic signal (♥ 52, ↻ 0) — [View](https://x.com/hooeem/status/2073851513554817425)
+- x.com/Flowslikeosmo — self-audit qt of his own june $CARDS call, -46% since post; product ≠ token when the trade has played out (♥ 30, ↻ 0) — [View](https://x.com/Flowslikeosmo/status/2073859462213857509)
 
 ---
-sources: list1642770456720683008=ok(3 fresh, 5 sub-threshold)
+sources: DeFi=ok(10)
 status: LIST_DIGEST_OK

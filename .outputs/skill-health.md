@@ -1,16 +1,17 @@
-*Skill Health — 2026-07-04*
-HEALTH: DEGRADED(23) [systemic: output_tokens=0 sandbox-truncation — 23 skills, cluster ISS-019/020/021/024/025 day-11 · weekly-review self-set deadline T-0 TODAY]
+skill-health — 2026-07-06
+HEALTH: DEGRADED(21) — systemic: output_tokens=0 sandbox-truncation day-13, 21 skills share signature (ISS-019/020/021/025 cluster). hash unchanged from 07-05; notifying on 24h cadence.
 
-🟡 DEGRADED (23) — top-5 by days-since-success
-- aixbt-pulse — sr 47% · 6d down · WAIT-API (output_tokens=0)
-- defi-monitor — sr 53% · 6d down · WAIT-API (output_tokens=0)
-- market-context-refresh — sr 32% · 6d down · WAIT-API (output_tokens=0)
-- narrative-tracker — sr 33% · 6d down · WAIT-API (output_tokens=0)
-- skill-evals — sr 38% · 6d down · WAIT-API (output_tokens=0)
-+18 more (all output_tokens=0) — see memory/issues/INDEX.md
+DEGRADED (21, worst first by dark-days then sr):
+- market-context-refresh 32% sr, 8d dark — FIX-CONFIG (PR #156 pending)
+- narrative-tracker 33% sr, 8d dark — FIX-CONFIG (PR #156 pending)
+- defi-monitor 53% sr, 8d dark — FIX-CONFIG (PR #156 pending)
+- aixbt-pulse 47% sr, 8d dark-slot — INVESTIGATE
+- cost-report 11% sr — WAIT-API → ISS-025
+- +16 more (reg-monitor 12%, vuln-scanner 13%, skill-analytics 13%, security-digest 29%, search-skill 36%, skill-health 37%, self-improve/action-converter/goal-tracker 40%, list-digest 41%, reflect 41%, skill-evals 43%, evening-recap 48%, thought-review 54%, agent-buzz 55%, github-trending 58%) — see memory/issues/INDEX.md
 
-🟠 WARNING (8): btc-levels, daily-routine, defi-overview, morning-brief, on-chain-monitor, token-alert, token-movers, token-pick — 12:00 UTC batch 6-of-8 last-dispatched 2026-06-28 (~6d stale, PR #150 partial fix; aeon.yml L155/162/171 still carry usepod_model)
-⚪ NO DATA (2): fork-skill-gap (weekly Sun), operator-scorecard (Mon 10:30 — day-5 missed) — DISPATCH-SKILL
-🟢 HEALTHY: 9
+NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL (scheduler gap; operator-scorecard chronic Mon 10:30Z miss day 7)
+HEALTHY: 8 (unlock-monitor, deal-flow, skill-security-scan, fork-cohort, skill-update-check, weekly-review, weekly-shiplog, skill-graph)
 
-Open issues: 15 · Resolved this run: 0 · Filed this run: 0
+Delta 07-05→07-06: DEGRADED byte-identical; fork-skill-digest un-stuck (168h+ carry resolved via Sun 21:07Z retry) HEALTHY→WARNING sr=0.75; healthy_count 9→8. PR #156 opened 07-05 18:23Z addresses 12:00 batch usepod_model config bug. ISS-025 capture-step PR still un-authored at T-0 to weekly-review 19:00Z deadline.
+
+Open issues: 12 · Filed this run: 0 · Resolved this run: 0

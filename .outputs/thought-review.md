@@ -1,1 +1,1 @@
-🧭 thought review · last 24h · 0 captures. nothing to surface. inbox note (reppo comment, 2026-06-22) still unarchived day 13.
+🧭 thought review · last 24h · 0 captures. nothing to surface. last real capture 2026-06-21, ~15.6d cold.

@@ -1,0 +1,705 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-06"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5",
+        "sep-5",
+        "stats-section"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-heading",
+        "a1-desc",
+        "a1-why-block",
+        "a1-done-block",
+        "a1-loop"
+      ]
+    },
+    "a1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Author aeon.yml:479-493 chain-runner capture-step patch",
+        "level": "h3"
+      }
+    },
+    "a1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Open a PR with fenced-block-in-assistant-text swap. Closes ISS-025 (root cause per PR #150 / PR #156 downstream fixes).",
+        "variant": "body"
+      }
+    },
+    "a1-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-why-label",
+        "a1-why-text"
+      ]
+    },
+    "a1-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "outline"
+      }
+    },
+    "a1-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "Entire 18-skill sr<0.5 chronic tail traces to this one Write-tool→CLI-result overwrite; day 12 of unshipped fix; 19:00Z weekly-review deadline just passed.",
+        "variant": "body"
+      }
+    },
+    "a1-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-done-label",
+        "a1-done-text"
+      ]
+    },
+    "a1-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "outline"
+      }
+    },
+    "a1-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR URL opened against main with diff at aeon.yml:479-493 + closes ISS-025 in body.",
+        "variant": "body"
+      }
+    },
+    "a1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-capture-fix",
+        "variant": "secondary"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-heading",
+        "a2-stats-row",
+        "a2-why-block",
+        "a2-done-block",
+        "a2-loop"
+      ]
+    },
+    "a2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Close SLX pick in memory/topics/crypto.md",
+        "level": "h3"
+      }
+    },
+    "a2-stats-row": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "a2-stat-price",
+        "a2-stat-entry",
+        "a2-stat-loss",
+        "a2-stat-days"
+      ]
+    },
+    "a2-stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Exit price",
+        "value": "$0.256"
+      }
+    },
+    "a2-stat-entry": {
+      "type": "Stat",
+      "props": {
+        "label": "Entry price",
+        "value": "$0.4753"
+      }
+    },
+    "a2-stat-loss": {
+      "type": "Stat",
+      "props": {
+        "label": "Drawdown",
+        "value": "-46%",
+        "trend": "down"
+      }
+    },
+    "a2-stat-days": {
+      "type": "Stat",
+      "props": {
+        "label": "Hold",
+        "value": "day-12"
+      }
+    },
+    "a2-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-why-label",
+        "a2-why-text"
+      ]
+    },
+    "a2-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "outline"
+      }
+    },
+    "a2-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "HIGH 9/10 6-24 entry past every recut trigger; intraday -29.6% capitulation + rank #372 = thesis broken, book the loss.",
+        "variant": "body"
+      }
+    },
+    "a2-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-done-label",
+        "a2-done-text"
+      ]
+    },
+    "a2-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "outline"
+      }
+    },
+    "a2-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "crypto.md picks table shows SLX row status=CLOSED with final drawdown line + exit price. Stops daily 'recut overdue' resurface.",
+        "variant": "body"
+      }
+    },
+    "a2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: slx-recut-blown",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-heading",
+        "a3-desc",
+        "a3-dispatches",
+        "a3-why-block",
+        "a3-done-block",
+        "a3-loop"
+      ]
+    },
+    "a3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Diagnose 07-06 fleet-wide morning-slot cron gap",
+        "level": "h3"
+      }
+    },
+    "a3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Probe GitHub Actions dispatch queue for 07/08/09/12/13Z slots that produced 0 skill runs today.",
+        "variant": "body"
+      }
+    },
+    "a3-dispatches": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-disp-label",
+        "a3-disp-list"
+      ]
+    },
+    "a3-disp-label": {
+      "type": "Text",
+      "props": {
+        "text": "Dispatches so far:",
+        "variant": "muted"
+      }
+    },
+    "a3-disp-list": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor 11:00Z · btc-levels 01:28Z · hb 14:33Z (catch-up) · hb self-set 20:00Z re-eval tick ~40min out",
+        "variant": "body"
+      }
+    },
+    "a3-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-why-label",
+        "a3-why-text"
+      ]
+    },
+    "a3-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "outline"
+      }
+    },
+    "a3-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "Only 3 dispatches so far today (unlock-monitor 11:00Z / btc-levels 01:28Z / hb 14:33Z catch-up); hb self-set 20:00Z re-eval tick is ~40min out.",
+        "variant": "body"
+      }
+    },
+    "a3-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-done-label",
+        "a3-done-text"
+      ]
+    },
+    "a3-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "outline"
+      }
+    },
+    "a3-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause logged to memory/topics/fleet.md (queued-late vs holiday-cron catch-up vs sandbox skip) with gh api /repos/.../actions/runs evidence.",
+        "variant": "body"
+      }
+    },
+    "a3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: fleet-morning-slot-gap-07-06",
+        "variant": "secondary"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-heading",
+        "a4-stats-row",
+        "a4-why-block",
+        "a4-done-block",
+        "a4-loop"
+      ]
+    },
+    "a4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Retire PR #149 (docs skill-graph, day-8 stall, ~193h open)",
+        "level": "h3"
+      }
+    },
+    "a4-stats-row": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "a4-stat-skills",
+        "a4-stat-depends",
+        "a4-stat-shared",
+        "a4-stat-superseded"
+      ]
+    },
+    "a4-stat-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills in #155",
+        "value": "+68"
+      }
+    },
+    "a4-stat-depends": {
+      "type": "Stat",
+      "props": {
+        "label": "depends_on",
+        "value": "4→5"
+      }
+    },
+    "a4-stat-shared": {
+      "type": "Stat",
+      "props": {
+        "label": "shared_state",
+        "value": "9→21"
+      }
+    },
+    "a4-stat-superseded": {
+      "type": "Stat",
+      "props": {
+        "label": "Superseded by",
+        "value": "PR #155"
+      }
+    },
+    "a4-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-why-label",
+        "a4-why-text"
+      ]
+    },
+    "a4-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "outline"
+      }
+    },
+    "a4-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "Two open PRs from same skill = reviewer confusion; PR #155 (day-0 fresh run) supersedes #149's payload; queue cleanup.",
+        "variant": "body"
+      }
+    },
+    "a4-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-done-label",
+        "a4-done-text"
+      ]
+    },
+    "a4-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "outline"
+      }
+    },
+    "a4-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "gh pr close 149 --comment 'superseded by #155' executed.",
+        "variant": "body"
+      }
+    },
+    "a4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-149-supersede",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-heading",
+        "a5-prs",
+        "a5-why-block",
+        "a5-done-block",
+        "a5-loop"
+      ]
+    },
+    "a5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Flip PR #154 & #156 from Current Goals to Recently Cleared",
+        "level": "h3"
+      }
+    },
+    "a5-prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-pr-154",
+        "a5-pr-156"
+      ]
+    },
+    "a5-pr-154": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-pr-154-label",
+        "a5-pr-154-text"
+      ]
+    },
+    "a5-pr-154-label": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #154",
+        "variant": "secondary"
+      }
+    },
+    "a5-pr-154-text": {
+      "type": "Text",
+      "props": {
+        "text": "fix(issues) close ISS-026, merged 15:35Z",
+        "variant": "body"
+      }
+    },
+    "a5-pr-156": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-pr-156-label",
+        "a5-pr-156-text"
+      ]
+    },
+    "a5-pr-156-label": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #156",
+        "variant": "secondary"
+      }
+    },
+    "a5-pr-156-text": {
+      "type": "Text",
+      "props": {
+        "text": "fix(aeon.yml) usepod_model cleanup, merged 15:45Z",
+        "variant": "body"
+      }
+    },
+    "a5-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-why-label",
+        "a5-why-text"
+      ]
+    },
+    "a5-why-label": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "outline"
+      }
+    },
+    "a5-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "4h post-merge, downstream skills (goal-tracker/hb/action-converter) still read stale goal rows; the 12:00 UTC batch fix + ISS-026 INDEX bookkeeping are both durably resolved.",
+        "variant": "body"
+      }
+    },
+    "a5-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-done-label",
+        "a5-done-text"
+      ]
+    },
+    "a5-done-label": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "outline"
+      }
+    },
+    "a5-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md diff moves 2 rows out of Current Goals with merge timestamps recorded.",
+        "variant": "body"
+      }
+    },
+    "a5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: memory-md-consolidation",
+        "variant": "secondary"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-header",
+        "stats-grid"
+      ]
+    },
+    "stats-header": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources & Status",
+        "level": "h4"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "md"
+      },
+      "children": [
+        "stat-memory",
+        "stat-logs",
+        "stat-topics",
+        "stat-prs",
+        "stat-cron",
+        "stat-mode"
+      ]
+    },
+    "stat-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory",
+        "value": "56L"
+      }
+    },
+    "stat-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "7d"
+      }
+    },
+    "stat-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "11"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "2"
+      }
+    },
+    "stat-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron failing",
+        "value": "0"
+      }
+    },
+    "stat-mode": {
+      "type": "Stat",
+      "props": {
+        "label": "Mode",
+        "value": "OK"
+      }
+    }
+  }
+}

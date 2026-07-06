@@ -1,0 +1,170 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve",
+        "description": "Closed 12-day usepod_model loop with major cost reduction and model decision"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-achievement",
+        "achievement-text",
+        "sep-1",
+        "cost-heading",
+        "cost-stat",
+        "cost-caption",
+        "sep-2",
+        "changes-heading",
+        "changes-list",
+        "sep-3",
+        "links-stack",
+        "decision-alert"
+      ]
+    },
+    "heading-achievement": {
+      "type": "Heading",
+      "props": {
+        "text": "Loop Closed: L155/162/171 usepod_model",
+        "level": "h2"
+      }
+    },
+    "achievement-text": {
+      "type": "Text",
+      "props": {
+        "text": "12-day optimization cycle completed"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cost-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Cost Reduction",
+        "level": "h3"
+      }
+    },
+    "cost-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "narrative-tracker (renamed to Haiku)",
+        "value": "$2.50/week",
+        "delta": "-94.5%",
+        "trend": "down"
+      }
+    },
+    "cost-caption": {
+      "type": "Text",
+      "props": {
+        "text": "Previous: ~$46/week • Top-4 cost driver across all skills",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PR #156 Changes",
+        "level": "h3"
+      }
+    },
+    "changes-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change-1-text",
+        "change-2-text",
+        "change-3-text",
+        "change-4-text"
+      ]
+    },
+    "change-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "• Renamed narrative-tracker to Haiku"
+      }
+    },
+    "change-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "• market-context-refresh + aixbt-pulse dead-line removal"
+      }
+    },
+    "change-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "• Explicit Sonnet kept for other workflows"
+      }
+    },
+    "change-4-text": {
+      "type": "Badge",
+      "props": {
+        "text": "Top-4 cost driver",
+        "variant": "secondary"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "links-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-156-link",
+        "pr-150-text"
+      ]
+    },
+    "pr-156-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #156",
+        "href": "https://github.com/anajuliabit/aeon/pull/156",
+        "source": "GitHub"
+      }
+    },
+    "pr-150-text": {
+      "type": "Text",
+      "props": {
+        "text": "Completes deferred Sonnet-vs-Haiku decision from PR #150",
+        "variant": "caption"
+      }
+    },
+    "decision-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "title": "Decision Completed",
+        "message": "Sonnet-vs-Haiku model selection resolved across all affected skills"
+      }
+    }
+  }
+}

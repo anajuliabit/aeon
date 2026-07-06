@@ -1,0 +1,96 @@
+{
+  "root": "card-1",
+  "state": {},
+  "elements": {
+    "card-1": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Graph updated"
+      },
+      "children": [
+        "stack-1"
+      ]
+    },
+    "stack-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack-stats",
+        "separator-1",
+        "summary-text",
+        "pr-link"
+      ]
+    },
+    "stack-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-new",
+        "stat-enabled",
+        "stat-depends",
+        "stat-shared"
+      ]
+    },
+    "stat-new": {
+      "type": "Stat",
+      "props": {
+        "label": "NEW_SKILLS",
+        "value": "68",
+        "delta": "+68",
+        "trend": "up"
+      }
+    },
+    "stat-enabled": {
+      "type": "Stat",
+      "props": {
+        "label": "ENABLED_DELTA",
+        "value": "-2",
+        "trend": "down"
+      }
+    },
+    "stat-depends": {
+      "type": "Stat",
+      "props": {
+        "label": "DEPENDS_ON",
+        "value": "5",
+        "delta": "4 → 5",
+        "trend": "up"
+      }
+    },
+    "stat-shared": {
+      "type": "Stat",
+      "props": {
+        "label": "SHARED_STATE",
+        "value": "36",
+        "delta": "9 → 36",
+        "trend": "up"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "191 skills (42 enabled) across 5 categories"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #149",
+        "href": "https://github.com/anajuliabit/aeon/pull/149",
+        "source": "GitHub"
+      }
+    }
+  }
+}

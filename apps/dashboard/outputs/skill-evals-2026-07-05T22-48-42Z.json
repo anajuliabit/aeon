@@ -1,0 +1,96 @@
+{
+  "root": "card_skill_evals",
+  "state": {},
+  "elements": {
+    "card_skill_evals": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Evals"
+      },
+      "children": [
+        "badge_status",
+        "metrics_stack",
+        "separator_1",
+        "action_stack",
+        "article_link"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "SKILL_EVALS_RECOVERED",
+        "variant": "success"
+      }
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_fail",
+        "stat_fixed",
+        "stat_coverage"
+      ]
+    },
+    "stat_fail": {
+      "type": "Stat",
+      "props": {
+        "label": "New fails",
+        "value": "0"
+      }
+    },
+    "stat_fixed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fixed",
+        "value": "3"
+      }
+    },
+    "stat_coverage": {
+      "type": "Stat",
+      "props": {
+        "label": "Coverage",
+        "value": "28%"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_action",
+        "text_action"
+      ]
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Top action",
+        "level": "h3"
+      }
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Add evals.json entry for skill-freshness — articles/skill-freshness-*.md, pattern FRESHNESS_OK|FRESHNESS_NO_CHANGE"
+      }
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "articles/skill-evals-2026-07-05.md",
+        "href": "articles/skill-evals-2026-07-05.md"
+      }
+    }
+  }
+}

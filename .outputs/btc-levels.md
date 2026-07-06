@@ -1,10 +1,12 @@
 ## Summary
 
-Quiet run. No alerts fired.
+**BTC Levels run — 2026-07-06 21:04Z**
 
-- **Spot:** $62,676 (up from $62,568 at the 10:01Z run)
-- **Daily close (2026-07-04):** $63,094 — unchanged
-- **$63,500 reclaim rail:** ~$824 away, not yet triggered
-- All four level checks clear: spot well above $45k leverage-review trigger, close above $60,500 breakdown line, spot below both reclaim gates ($63.5k / $65.9k)
-
-State and log committed directly to main.
+- **Spot:** $63,773 | **Daily close (2026-07-05):** $63,546
+- **No alerts fired** — all four thresholds clear:
+  - Leverage band ($45k): not triggered (spot $18,773 above)
+  - Breakdown ($60,500 daily close): not triggered (close $3,046 above)
+  - Reclaim $63,500: already alerted this cycle (`reclaim63500Alerted=true` from 01:29Z run)
+  - Reclaim $65,900: not yet (spot $2,127 short)
+- No notification sent (quiet run per spec).
+- State and log committed (`chore(btc-levels): 21:04Z quiet run`).

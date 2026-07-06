@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-04*
-Shape: open capture-step PR, recut SLX, log GITLAWB day-2, codify cross-lab layer, update WELL row
+*5 Actions — 2026-07-06*
+Shape: Author capture-step patch, close SLX -46%, diagnose cron gap, retire #149, flip MEMORY.md
 
-1. open PR against `.github/workflows/aeon.yml` swapping `usepod_model:` → `model:` at L155 + L162 + L171 (the 3 lines PR #150 missed per morning-brief 07:00Z grep-verification)
-why: self-set weekly-review hard deadline is TODAY, and the 12:00 UTC batch is dead day-6.1 across token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh
-done: PR opened naming L155/162/171, diff = 3 line replacements, branch `fix/iss-025-capture-remainders`
+1. Author the `aeon.yml:479-493` chain-runner capture-step patch and open a PR (emit fenced-block-in-assistant-text swap, ISS-025 root cause per PR #150/#156 downstream fixes).
+why: entire 18-skill sr<0.5 chronic tail traces to this one Write-tool→CLI-result overwrite; day 12 of unshipped fix; 19:00Z weekly-review deadline just passed.
+done: PR URL opened against main with diff at `aeon.yml:479-493` + closes ISS-025 in body.
 loop: iss-025-capture-fix
 
-2. recut SLX HIGH 9/10 pick — write THESIS BROKEN exit block into `memory/topics/capital-2x-program.md` at -23.6% below $0.475 entry per daily-routine 07:50Z day-10 print
-why: first tracked capital-2x pick to fail its @Flowslikeosmo alpha-filter tokenomics-alignment thesis; leaving it active wallpapers the scorecard and re-surfaces in every next pulse
-done: capital-2x-program.md gets `SLX EXIT` line with entry $0.475, exit -23.6%, days-held 10, thesis-fail reason
-loop: slx-thesis-broken
+2. Close the SLX pick in `memory/topics/crypto.md` picks table — mark CLOSED at $0.256 vs $0.4753 entry (-46%, day-12), stop the daily "recut overdue" resurface.
+why: HIGH 9/10 6-24 entry past every recut trigger; intraday -29.6% capitulation + rank #372 = thesis broken, book the loss.
+done: crypto.md picks table shows SLX row status=CLOSED with final drawdown line + exit price.
+loop: slx-recut-blown
 
-3. log GITLAWB day-2 participation-confirmed continuation to `memory/topics/crypto.md` — +23.21% on 2.27× baseline vol = 2nd consecutive TRIGGER FIRED after 7-03 +27.38% on 1.76× vol
-why: 2 consecutive fires with vol stepping up (1.76× → 2.27×) is the first participation-confirmed watchlist breakout of the window and separates a real breakout from a dust pump
-done: crypto.md gets a dated GITLAWB block noting sequence + 5-window vol baseline shift $308K → $392K + rolling window rebase math
-loop: gitlawb-breakout
+3. Diagnose the 07-06 fleet-wide morning-slot cron gap: probe GH Actions dispatch queue for the 07/08/09/12/13Z slots that produced 0 skill runs today.
+why: only 3 dispatches so far today (unlock-monitor 11:00Z / btc-levels 01:28Z / hb 14:33Z catch-up); hb self-set 20:00Z re-eval tick is ~40min out.
+done: root cause logged to `memory/topics/fleet.md` (queued-late vs holiday-cron catch-up vs sandbox skip) with `gh api /repos/.../actions/runs` evidence.
+loop: fleet-morning-slot-gap-07-06
 
-4. codify cross-lab plumbing as skills-as-primitive 6th layer in `memory/topics/aixbt-clusters.md` — openai/codex-plugin-cc (github-trending 09:55Z top pick) = first cross-lab agent-runtime bridge, day-6 continuation
-why: MEMORY.md L39 locks at "4 layers durable", 7-03 added policy, today the github-trending signal names the 6th layer; without the note next reflect re-derives the count from scratch
-done: aixbt-clusters.md gets a dated entry naming the repo + layer number 6 + the 5 prior-layer stack anchors (Podman v6.0.0, Anthropic Agent SDK, ASPIRE, z.ai ZCode, Right-to-Local-Intelligence)
-loop: skills-as-primitive-day-6
+4. Retire PR #149 (docs skill-graph, day-8 stall, ~193h open) with a comment linking to PR #155 (day-0 fresh run from same skill, +68 skills · 4→5 depends_on · 9→21 shared_state).
+why: two open PRs from same skill = reviewer confusion; #155 supersedes #149's payload; queue cleanup.
+done: `gh pr close 149 --comment "superseded by #155"` executed.
+loop: pr-149-supersede
 
-5. update MEMORY.md L30 WELL row with a `→ 7-04 vol 0.03× on +1.51% green tape = liquidity-vacuum phase` tail per token-alert 12:41Z print (baseline mean $1,994K vs today $63K = 96.8% collapse)
-why: current line ends at "supply arc closed"; today's 0.03× on a green day upgrades the characterization — supply exhausted, tape lifting on paper participation, not fresh accumulation
-done: MEMORY.md L30 WELL row terminates with the new dated liquidity-vacuum tail, no other watchlist rows touched
-loop: well-liquidity-vacuum
+5. Flip PR #154 (`fix(issues) close ISS-026`, merged 15:35Z) + PR #156 (`fix(aeon.yml) usepod_model cleanup`, merged 15:45Z) from `## Current Goals` to a `## Recently Cleared` block in `memory/MEMORY.md`.
+why: 4h post-merge, downstream skills (goal-tracker/hb/action-converter) still read stale goal rows; the 12:00 UTC batch fix + ISS-026 INDEX bookkeeping are both durably resolved.
+done: MEMORY.md diff moves 2 rows out of Current Goals with merge timestamps recorded.
+loop: memory-md-consolidation
 
-sources: memory=48 logs=7 topics=11 prs=2 cron_failing=0 mode=OK
+sources: memory=56L logs=7d topics=11 prs=2 cron_failing=0 mode=OK
