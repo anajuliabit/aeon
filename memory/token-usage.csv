@@ -669,4 +669,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-06,unlock-monitor,claude-opus-4-7,531,14263,820609,90677
 2026-07-06,deal-flow,claude-opus-4-7,660,23828,1442390,69731
 2026-07-06,skill-security-scan,claude-opus-4-7,40,27919,2840324,148836
-2026-07-06,goal-tracker,claude-opus-4-7,90,21174,872424,126234
+2026-07-06,reflect,claude-opus-4-7,55,26240,5800943,221876

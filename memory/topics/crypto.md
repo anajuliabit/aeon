@@ -832,3 +832,21 @@ See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 - **9-day npm brandjack wave enters day-1 dormancy** — last malware advisory 7-03T16:06Z; wave paused for holiday-freeze. Not durable pause — 7-03 15:35Z hypothesis rejected within 32min when 14 fresh npm advisories dropped in 3 same-minute clusters. Watch Mon 7-06 resumption.
 - **dulwich pip CVE-2026-52726 RCE-via-clone remains highest THIS-WEEK operational priority** — CVSS 7.5, git library writing `.git/hooks` on clone, public PoC + no user interaction. Fix 1.2.5.
 - **VULN_SCAN_CLEAN 7-04 16:50Z on chrome-devtools-mcp v1.5.0** (partial-scan) — osv-api durable single-surviving scanner leg per ISS-018 (3rd of 4 runs same tool-status matrix).
+
+## 2026-07-06 rollup — BTC reclaim $63.5k confirmed, PR #156 + #154 merged, holiday-freeze day-4 tail
+
+### Picks ledger updates (day-N status)
+- **SLX 6-24 HIGH 9/10 pick — DAY-12 CATASTROPHIC — recut STILL overdue.** No fresh CG print today (token-alert not yet run 7-06). Last data 7-05 $0.256 = -46% vs $0.4753 entry, rank #372, mcap $62M. Position past every recut trigger; carries as top follow-up unchanged from 7-05 daily-routine surface.
+- **VELVET/M/GITLAWB** — no fresh price signal today.
+
+### Tape pulse 7-06 — reclaim day-1, hold-above-gate
+- **BTC $63.5k RECLAIM CONFIRMED 7-06 01:29Z** — btc-levels fired first `reclaimAlerted` (state file flip `reclaim63500Alerted=true`), spot $63,595 / daily close $63,546 (2026-07-05). This is the **first material stabilization signal** after 8-day breakdown streak (6-24 → 7-01) + 5-day above-breakdown-line hold (7-01 → 7-05) + reclaim day-6.
+- 7-06 btc-levels ticks: $63,595 (01:29Z first reclaim alert) → $63,801 (17:23Z quiet — above gate, no further alert until $65.9k full-reclaim).
+- Bounce breadth trajectory: 32 (day-1) → 81 (day-2) → 83 (day-3) → 71 (day-4) → 51 (day-5) → hold-above-gate day-6 (no daily-routine 7-06 as of consolidation).
+- **Next gate: $65,900 full-reclaim.** Below-$60,500 re-trip would re-arm breakdown alert.
+
+### Meta signals
+- **PR #156 MERGED 7-06 15:45Z** — `aeon.yml` L155/162/171 fix (self-improve 7-05 18:23Z author → operator merge next morning). Unblocks 12:00 UTC batch dark since 6-28. Demonstrates action-converter → self-improve → PR-merge chain closes on infra-cleanup when call-out is precise (specific file paths + line numbers).
+- **PR #154 MERGED 7-06 15:35Z** — ISS-026 close. INDEX flip pending reconciliation.
+- **PR #149 vs #155 supersede-decision** — #149 (6-28, day-8 stall) vs #155 (7-05, day-2). Same title/scope, different diff magnitudes (#155 +68 · 4→5 depends_on · 9→21 shared-state vs #149 +68 · 9→36 shared-state). Operator pick pending Monday reopens.
+- **Holiday-freeze cascade tail day-4** — GHAD HARD FREEZE ~89h at 7-06 14:36Z security-digest — 4th day without publication. Expected resumption Mon 7-06 US East Coast business start (which is happening around consolidation time). Wave-resumption watch continues.

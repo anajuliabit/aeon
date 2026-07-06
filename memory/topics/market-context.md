@@ -1,6 +1,6 @@
-# Market Context (as of 2026-07-05)
+# Market Context (as of 2026-07-06)
 
-> **Take:** Bounce day-5 tapers — spot $62,647 (17:14Z) day-5 above $60,500 breakdown line; breadth trajectory 83→71→**51** day-3→5 with median top-50 flat **+0.02%** (was +1.28%). **SOL -2.4% breaks 4-day leadership**, **HYPE -4.2% gives back yest breakout**; **ADA +9.9% (#16) + BCH +6.2% (#24) MAJOR winners = rotation-away-from-top-10**. LAB +81% #22 MAJOR TRENDING+UP FADE (7d -4.6% = relief bounce not sustained breakout). 7-04 close $63,094 = new high in reclaim window, ~$406 shy of $63.5k gate; $65.9k full-reclaim still much further; breakdown/reclaim signals silent per btc-levels spec. Conviction: medium; regime pivot holds but momentum decays into day-5. **SLX day-11 CATASTROPHIC** -46% vs entry, recut overdue (open pick).
+> **Take:** BTC **$63.5k RECLAIM CONFIRMED 7-06 01:29Z** (btc-levels first `reclaim63500Alerted=true` fire, spot $63,595 / daily close $63,546). Bounce day-6 — 8-day breakdown streak (6-24 → 7-01) + 5-day above-breakdown-line hold (7-01 → 7-05) resolves into first gate-cross. 7-06 quiet ticks $63,595 → $63,801 (17:23Z) hold above gate. Next gate $65,900 full-reclaim; below-$60,500 re-trip re-arms breakdown alert. **SLX day-12 CATASTROPHIC** -46% vs entry, recut STILL overdue. Conviction: medium+ (regime pivot holds AND first reclaim signal fires on Day 6 — reads as valid bounce, not counter-trend).
 
 ## Signal Snapshot
 - BTC $62,871 12:40Z data pull (+0.56% 24h, +5% 7d) — 7-05 btc-levels ticks 00:17Z $63,001 → 04:35Z $62,854 → 10:01Z $62,568 → 12:56Z $62,676 → 17:14Z $62,647 (5 quiet runs day-5)
@@ -11,6 +11,14 @@
 - BCH (+6.2%, #24, 7d +24%) — MAJOR carry
 - Breadth: **38/75 top-100 green (~51%)** = tapered from 71% day-4 / 83% day-2, median top-50 **flat +0.02%**
 - Fear & Greed: last read 18 Extreme Fear (stale)
+
+## What Changed 7-05 → 7-06
+- **BTC $63.5k RECLAIM ALERT FIRED 7-06 01:29Z** — first stabilization signal after 15+ days of breakdown+hold. `reclaim63500Alerted=true` flipped in state file. Bounce day-6 resolves into first gate-cross. Next gate: $65,900 full-reclaim.
+- 7-06 quiet ticks confirm hold: $63,595 → $63,801 (17:23Z), above gate through the day.
+- **PR #156 MERGED 7-06 15:45Z** — `aeon.yml` L155/162/171 usepod_model fix (self-improve authored 7-05 18:23Z). Unblocks 12:00 UTC batch dark since 6-28. Chain closes: 12-day log-noise → action-converter top-rank → self-improve PR → next-morning operator merge.
+- **PR #154 MERGED 7-06 15:35Z** — ISS-026 close (INDEX flip pending).
+- **fork-skill-digest un-stuck** (168h+ stuck resolved) — Sun 7-05 21:06Z retry after 20:18Z initial fail. cf=0, sr=75%. 19 consecutive hb surfaces cleared.
+- **Holiday-freeze cascade day-4** — GHAD HARD FREEZE ~89h at 7-06 14:36Z security-digest; expected US East Coast Monday-morning resumption watching for backlog wave (npm brandjack + dulwich + fresh 7-04/7-05/7-06-am).
 
 ## What Changed Since Last Refresh (7-04 → 7-05)
 - **Bounce day-5 tapers into decay** — 83→71→51 breadth trajectory, median top-50 flat vs +1.28% yest / +2.12% day-2. Momentum decay is now the story.
