@@ -88,9 +88,16 @@ $(filecache macro macro-upcoming.json '.')"
 SLEEVE_CAP=$(printf '%s' "$SIZING" | jq -r 'if .quarterKellyPctOfNet != null then ([.quarterKellyPctOfNet, 20] | min) else 20 end' 2>/dev/null || echo 20)
 case "$SLEEVE_CAP" in (*[!0-9.]*|"") SLEEVE_CAP=20 ;; esac
 validate() { # report-json -> prints violation list (empty = valid)
+  # Numeric-levels rule exempts the vesting-policy lane: MAMO/WELL/REPPO
+  # "decrease" actions are unlock-schedule-driven (claim-and-sell), not
+  # price-triggered — demanding entry/exit there just burns a retry LLM call
+  # every week (observed 2026-07-06).
   printf '%s' "$1" | jq -r --argjson cap "$SLEEVE_CAP" '
     [ (if (.actions | length) > 3 then "more than 3 actions" else empty end),
       (.actions[]? | select(.entry == null or .exit == null or .invalidate == null)
+        | select((((.symbol // "" | ascii_upcase) as $s
+                   | ($s == "MAMO" or $s == "WELL" or $s == "REPPO"))
+                  and .direction == "decrease") | not)
         | "action \"\(.thesis[0:40])\" missing numeric entry/exit/invalidate"),
       (.actions[]? | select((.sleevePctAfter // 99) > $cap)
         | "action \"\(.thesis[0:40])\" exceeds the \($cap)% sleeve cap"),

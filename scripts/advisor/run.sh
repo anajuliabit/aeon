@@ -60,6 +60,15 @@ select_backend() {
 select_backend
 PROMPTS="$ROOT/advisor/prompts"
 
+# --- PM review committee (Option C: analysts stay single-model; a multi-model
+# usepod committee only reviews/synthesizes at the PM stage). Fully gated behind
+# ADVISOR_PM_COMMITTEE — default 0 => zero behavior change (single-model PM).
+# USEPOD_COMMITTEE_MODELS is a CSV validated against the live usepod catalog
+# (available: llama-4, qwen-3.5, deepseek-v3.2, mistral-small-4, glm-5.1).
+PM_COMMITTEE="${ADVISOR_PM_COMMITTEE:-0}"
+USEPOD_COMMITTEE_MODELS="${USEPOD_COMMITTEE_MODELS:-deepseek-v3.2,qwen-3.5,llama-4}"
+COMMITTEE_MAX_TIME="${COMMITTEE_MAX_TIME:-90}"   # per-member curl --max-time (seconds)
+
 # Shared accounting note injected into every agent prompt so the gross-vs-net
 # difference isn't mistaken for a data discrepancy (see investiments reconcile()).
 ACCOUNTING_NOTE='PORTFOLIO ACCOUNTING (do NOT report as a discrepancy): snapshot.totalUsd is NET worth = analytics.grossAssetsUsd minus analytics.totalLiabilitiesUsd. analytics.assets and allocation are GROSS (positive holdings only; loans excluded), so they sum to MORE than totalUsd by exactly analytics.totalLiabilitiesUsd (your debt). This gap is expected and already reconciled — never flag it as unresolved.
@@ -155,6 +164,85 @@ complete() {
   fi
   rm -f "$errf"
   return 1
+}
+
+# now_ms: current epoch milliseconds, portable across GNU (%3N) and BSD/macOS
+# date (which lacks %N — falls back to whole-second precision). Best-effort; used
+# only for committee latency accounting.
+now_ms() {
+  local t; t="$(date +%s%3N 2>/dev/null || true)"
+  case "$t" in ""|*[!0-9]*) echo "$(( $(date +%s) * 1000 ))" ;; *) echo "$t" ;; esac
+}
+
+# complete_usepod_model: like complete(), but PINS the usepod backend to a single
+# model for this one call (per-call USEPOD_MODEL) and disables the Virtuals
+# fallback (NO_VIRTUALS_FALLBACK=1) so the output is attributable to exactly that
+# model. Does NOT touch the global $LLM / complete(). Args: model, prompt.
+# Prints validated JSON on success; nothing + return 1 on failure.
+complete_usepod_model() {
+  local model="$1" prompt="$2"
+  local raw json errf
+  errf="$(mktemp)"
+  raw="$(printf '%s' "$prompt" \
+    | USEPOD_MODEL="$model" NO_VIRTUALS_FALLBACK=1 USEPOD_MAX_TIME="$COMMITTEE_MAX_TIME" \
+      "$ROOT/scripts/llm-usepod.sh" 2>"$errf" || true)"
+  json="$(printf '%s' "$raw" | extract_json)"
+  if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
+    rm -f "$errf"; printf '%s' "$json"; return 0
+  fi
+  raw="$(printf '%s\n\nReturn ONLY valid JSON, no prose.' "$prompt" \
+    | USEPOD_MODEL="$model" NO_VIRTUALS_FALLBACK=1 USEPOD_MAX_TIME="$COMMITTEE_MAX_TIME" \
+      "$ROOT/scripts/llm-usepod.sh" 2>>"$errf" || true)"
+  json="$(printf '%s' "$raw" | extract_json)"
+  if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
+    rm -f "$errf"; printf '%s' "$json"; return 0
+  fi
+  if [ -s "$errf" ]; then
+    echo "advisor: committee member $model failed — $(tr '\n' ' ' < "$errf" | head -c 300)" >&2
+  fi
+  rm -f "$errf"
+  return 1
+}
+
+# committee_pm: fan the SAME pm_prompt out to each USEPOD_COMMITTEE_MODELS member
+# in PARALLEL (& + wait), one tempfile per member ($WORK/pm-member-<i>.json).
+# A member that times out or returns invalid/empty JSON is recorded ok:false with
+# empty recommendations (excluded from quorum downstream) — the run never fails.
+# Echoes a members[] JSON array: [{model, ok, latencyMs, recommendations[]}].
+committee_pm() {
+  local prompt="$1"
+  local -a models
+  IFS=',' read -r -a models <<< "$USEPOD_COMMITTEE_MODELS"
+  local i=0
+  for m in "${models[@]}"; do
+    m="$(printf '%s' "$m" | tr -d '[:space:]')"
+    [ -z "$m" ] && continue
+    (
+      t0="$(now_ms)"
+      out="$(complete_usepod_model "$m" "$prompt")"; rc=$?
+      ms=$(( $(now_ms) - t0 ))
+      if [ "$rc" -eq 0 ] && [ -n "$out" ] && printf '%s' "$out" | jq -e '.recommendations' >/dev/null 2>&1; then
+        jq -n --arg model "$m" --argjson lat "$ms" --argjson rec "$out" \
+          '{model:$model, ok:true, latencyMs:$lat, recommendations:($rec.recommendations // [])}' \
+          > "$WORK/pm-member-$i.json"
+      else
+        jq -n --arg model "$m" --argjson lat "$ms" \
+          '{model:$model, ok:false, latencyMs:$lat, recommendations:[]}' \
+          > "$WORK/pm-member-$i.json"
+      fi
+    ) &
+    i=$((i + 1))
+  done
+  wait
+  # Reassemble in launch order; skip any member file that failed to write.
+  local members='[]' j=0
+  while [ "$j" -lt "$i" ]; do
+    if [ -f "$WORK/pm-member-$j.json" ] && jq -e . "$WORK/pm-member-$j.json" >/dev/null 2>&1; then
+      members="$(jq -c --slurpfile mf "$WORK/pm-member-$j.json" '. + $mf' <<< "$members")"
+    fi
+    j=$((j + 1))
+  done
+  printf '%s' "$members"
 }
 
 # POST helper (skipped in DRY_RUN). Args: path, json-body
@@ -351,16 +439,72 @@ $PM_DEBATE
 <<<END>>>
 $(datablock memory advisor-memory.json '.')"
 
-REPORT="$(complete "$pm_prompt")" || true
-if [ -z "$REPORT" ] || ! printf '%s' "$REPORT" | jq -e '.summary' >/dev/null 2>&1; then
-  echo "advisor: PM gap — synthesizing minimal report"
-  REPORT=$(jq -n --arg ts "$NOW_ISO" --arg mi "$MODEL_LABEL" '{
-    generatedAt: $ts, summary: "Report generation incomplete; see findings.",
-    recommendations: [], findings: [], debate: {turns: []},
-    modelInfo: {analysts: $mi, pm: $mi},
-    dataSources: {used: [], unavailable: []}, gaps: [],
-    disclaimer: "Not financial advice. For informational purposes only."
-  }')
+# PM attribution defaults to the single-model label (a JSON string). The committee
+# branch overrides PM_INFO_JSON (a {committee,chair,quorum} object) and sets
+# COMMITTEE_JSON (the {members,consensus,dissent} block attached to the report).
+PM_INFO_JSON="$(jq -n --arg m "$MODEL_LABEL" '$m')"
+COMMITTEE_JSON=""
+
+# single_model_pm: the historical PM path — one complete() call; minimal report on
+# failure. Sets REPORT. Used when the committee is off OR degraded (<2 members ok).
+single_model_pm() {
+  REPORT="$(complete "$pm_prompt")" || true
+  if [ -z "$REPORT" ] || ! printf '%s' "$REPORT" | jq -e '.summary' >/dev/null 2>&1; then
+    echo "advisor: PM gap — synthesizing minimal report"
+    REPORT=$(jq -n --arg ts "$NOW_ISO" --arg mi "$MODEL_LABEL" '{
+      generatedAt: $ts, summary: "Report generation incomplete; see findings.",
+      recommendations: [], findings: [], debate: {turns: []},
+      modelInfo: {analysts: $mi, pm: $mi},
+      dataSources: {used: [], unavailable: []}, gaps: [],
+      disclaimer: "Not financial advice. For informational purposes only."
+    }')
+  fi
+}
+
+if [ "$PM_COMMITTEE" = "1" ] && [ -n "${USEPOD_TOKEN:-}" ]; then
+  echo "advisor: PM committee enabled — models: $USEPOD_COMMITTEE_MODELS"
+  MEMBERS="$(committee_pm "$pm_prompt")"
+  OK_N="$(printf '%s' "$MEMBERS" | jq '[.[] | select(.ok==true)] | length' 2>/dev/null || echo 0)"
+  TOTAL_N="$(printf '%s' "$MEMBERS" | jq 'length' 2>/dev/null || echo 0)"
+  echo "advisor: committee — ${OK_N:-0}/${TOTAL_N:-0} member(s) ok"
+  if [ "${OK_N:-0}" -ge 2 ]; then
+    # Quorum: ⌈N/2⌉ over the OK members, overridable via ADVISOR_COMMITTEE_QUORUM.
+    QUORUM="${ADVISOR_COMMITTEE_QUORUM:-$(( (OK_N + 1) / 2 ))}"
+    echo "advisor: committee quorum $QUORUM of $OK_N ok"
+    AGG="$(printf '%s' "$MEMBERS" | jq -c --argjson quorum "$QUORUM" -f "$ROOT/scripts/advisor/lib/pm-quorum.jq" 2>/dev/null || echo '')"
+    if [ -z "$AGG" ] || ! printf '%s' "$AGG" | jq -e '.consensus' >/dev/null 2>&1; then
+      echo "advisor: committee aggregation failed — single-model PM fallback"; GAPS+=("committee-degraded")
+      single_model_pm
+    else
+      # Deterministic skeleton: summary synthesized from consensus (NOT any single
+      # model). Downstream staging/vesting/short-term all read .recommendations.
+      REPORT="$(jq -n --arg ts "$NOW_ISO" --argjson agg "$AGG" --argjson q "$QUORUM" --argjson n "$OK_N" '
+        ($agg.consensus) as $cons | ($agg.dissent) as $dis
+        | {
+            generatedAt: $ts,
+            summary: ("PM committee (" + ($n|tostring) + " models, quorum " + ($q|tostring) + "): "
+              + (if ($cons|length)==0 then "no consensus call"
+                 else ($cons|length|tostring) + " consensus call(s) — "
+                   + ([$cons[] | ((.direction // "hold")|ascii_upcase) + " " + (.symbol // "portfolio")] | join(", "))
+                 end)
+              + (if ($dis|length)>0 then "; " + ($dis|length|tostring) + " dissenting idea(s)." else "." end)),
+            recommendations: $cons,
+            findings: [], debate: {turns: []},
+            dataSources: {used: [], unavailable: []}, gaps: [],
+            disclaimer: "Not financial advice. For informational purposes only."
+          }')"
+      COMMITTEE_JSON="$(jq -n --argjson members "$MEMBERS" --argjson agg "$AGG" \
+        '{members:$members, consensus:$agg.consensus, dissent:$agg.dissent}')"
+      PM_INFO_JSON="$(printf '%s' "$USEPOD_COMMITTEE_MODELS" \
+        | jq -R --argjson q "$QUORUM" '{committee: (split(",")|map(gsub("^\\s+|\\s+$";""))|map(select(length>0))), chair: null, quorum: $q}')"
+      echo "advisor: committee synthesized — $(printf '%s' "$AGG" | jq '.consensus|length') consensus, $(printf '%s' "$AGG" | jq '.dissent|length') dissent"
+    fi
+  else
+    echo "advisor: committee degraded (<2 members ok) — single-model PM fallback"; GAPS+=("committee-degraded")
+    single_model_pm
+  fi
+else
+  single_model_pm
 fi
 
 # Merge accumulated findings/debate/gaps/dataSources so the POSTed report is always complete.
@@ -374,6 +518,7 @@ REPORT="$(jq -n \
   --argjson gaps "${GAPS_JSON:-[]}" \
   --argjson regime "$REGIME_JSON" \
   --arg mi "$MODEL_LABEL" \
+  --argjson pmInfo "$PM_INFO_JSON" \
   '$rpt
    | .regime = $regime
    | .findings = (if (.findings // [] | length) > 0 then .findings else $findings end)
@@ -382,8 +527,13 @@ REPORT="$(jq -n \
    | .dataSources.used = (if (.dataSources.used // [] | length) > 0 then .dataSources.used else $used end)
    | .dataSources.unavailable = (if (.dataSources.unavailable // [] | length) > 0 then .dataSources.unavailable else $unavail end)
    | .gaps = (if (.gaps // [] | length) > 0 then .gaps else $gaps end)
-   | .modelInfo = {analysts: $mi, pm: $mi}
+   | .modelInfo = {analysts: $mi, pm: $pmInfo}
    | .disclaimer = (.disclaimer // "Not financial advice. For informational purposes only.")')"
+
+# Attach the committee block (members + consensus + dissent) when the committee ran.
+if [ -n "$COMMITTEE_JSON" ]; then
+  REPORT="$(jq -n --argjson rpt "$REPORT" --argjson c "$COMMITTEE_JSON" '$rpt | .committee = $c')"
+fi
 
 echo "advisor: report assembled"
 
@@ -607,7 +757,10 @@ while read -r rec; do
         targetPriceUsd: null,
         invalidationPriceUsd: $invOK,
         horizonDays: (.horizonDays // 30),
-        conviction: "UNSTATED",
+        conviction: (if .urgency == "high" then "HIGH"
+                     elif .urgency == "medium" then "MEDIUM"
+                     elif .urgency == "low" then "LOW"
+                     else "UNSTATED" end),
         thesis: ((.title // "advisor call") + " — " + (.action // "")
                  + (if .rationale then " | " + .rationale else "" end))
       }')
