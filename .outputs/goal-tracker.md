@@ -1,17 +1,19 @@
-*Goal Tracker — 2026-07-04*
+*Goal Tracker — 2026-07-05*
 
-Summary: 6 goals — 0 at risk, 0 needs attention, 4 on track, 2 blocked, 0 done (overall → flat)
+8 goals — 0 at risk · 0 needs attention · 6 on track · 2 blocked · 0 done · overall → flat (12:00 UTC batch activity ↑72% but outcome BAD, XAI ↓50% goal-attention decay, 2 new goals since prior run: PR #154 + SLX)
 
-BLOCKED
-• XAI quota recovery — operator top-up team 3a8b4c1e day 19 since 2026-06-16 (activity 136→251 ↑ but blocker unchanged)
-  → Action: Top up XAI team 3a8b4c1e monthly credits — 3 daily-loop skills still xai=skipped.
-• Operator on-chain config — defi-monitor NO_CONFIG day 27, ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null (activity 268→283 flat)
-  → Action: Add `type: pool` / `type: position` entries to `memory/on-chain-watches.yml` and top up Alchemy + Etherscan keys.
+*BLOCKED*
+• Operator on-chain config — day-28, 151 activity/14d (was 283, → flat/-47%). Blocker: watchlist entries + Alchemy/Etherscan keys missing.
+  → Action: Prompt operator — add `type: pool`/`type: position` to memory/on-chain-watches.yml + top up ALCHEMY_API_KEY.
+• XAI quota recovery — day-20, 124 activity/14d (was 251, ↓ degrading -50%). Blocker: Team 3a8b4c1e monthly credit exhausted 6-16.
+  → Action: Ping operator — top up XAI monthly credit (falls off attention).
 
-ON TRACK
-• Sandbox-truncation systemic — 0d idle, 347 activity/14d (299→347 flat). Self-set weekly-review hard deadline = **T-0 TODAY**, PR unshipped; mechanical ON_TRACK on observation cadence, not fix progress.
-• 12:00 UTC batch first live test — 0d idle, 60 activity/14d (43→60 flat). Batch STILL dark day-3 post PR #150 merge; grep-verified 3× `usepod_model:` still at aeon.yml L155/162/171.
-• PR #149 docs(skill-graph) — 0d idle, 86 activity/14d (66→86 flat). Day-6 stall since 2026-06-28T17:15Z; US Independence Day = operator merge likely stays pending through 7-05 morning.
-• BTC 7-day breakdown streak BROKEN → day-2 of reclaim — 0d idle, 285 activity/14d (276→285 flat). MEMORY.md title frozen per skill spec § step 7; reality is day-4 close ≥ $60,500 (07-03 close $62,537), $63.5k / $65.9k reclaim gates still unfired.
+*ON TRACK*
+• Sandbox-truncation systemic — 0d idle, 343 activity/14d (→ flat, mechanical only; T-1 to weekly-review 07-06 self-set deadline, PR still unshipped day 12).
+• 12:00 UTC batch failed live test post PR #150 — 0d idle, 103 activity/14d (↑ +72%, outcome BAD: 6 skills dark day-4, grep-confirmed aeon.yml L155/162/171 still `usepod_model:`).
+• PR #149 docs(skill-graph) — 0d idle, 71 activity/14d (→ flat, day-7 stall ~169h; PR #155 same title opened 07-05 17:29Z may supersede).
+• PR #154 fix(issues) close ISS-026 — 0d idle, 75 activity/14d (new goal, day-1.9 open past 24h threshold).
+• BTC breakdown BROKEN → day-4 of reclaim — 0d idle, 298 activity/14d (→ flat, spot $62,647 17:14Z day-5 ≥ $60,500, $63.5k rail ~$853 away).
+• SLX open pick CRITICAL — 0d idle, 77 activity/14d (new goal, thesis broken day-11 at -46% vs $0.475 entry, position recut overdue).
 
-Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
+Sources: logs=ok · git=ok · gh_pr=ok · gh_issue=ok · cron-state=ok

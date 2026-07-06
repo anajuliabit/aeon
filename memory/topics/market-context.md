@@ -1,17 +1,37 @@
-# Market Context (as of 2026-07-04)
+# Market Context (as of 2026-07-05)
 
-> **Take:** Bounce day-4 holds — spot $62,558 (12:40Z) above $60,500 breakdown line day-4 post 7-02 streak-break; breadth taper 63/89 top-100 green (~71%, was 83/100 day-2), median top-50 +1.28% (was +2.12%). ETH extends $1,700 reclaim to $1,754 (+2.2% / 7d +11.25%). SOL 7d +14.4% leadership continues day-3. HYPE +6.6% breakout. **GRAM (ex-TON) +7.8% #22 first major-rank breakout of window.** $63.5k reclaim rail ~$942 away, $65.9k full-reclaim gate still much further; breakdown/reclaim signals silent per btc-levels spec. Conviction: medium; regime pivot solidifying but momentum tapering, no rail-reclaim. **SLX day-10 THESIS BROKEN** at -23.6% vs entry (open pick).
+> **Take:** Bounce day-5 tapers — spot $62,647 (17:14Z) day-5 above $60,500 breakdown line; breadth trajectory 83→71→**51** day-3→5 with median top-50 flat **+0.02%** (was +1.28%). **SOL -2.4% breaks 4-day leadership**, **HYPE -4.2% gives back yest breakout**; **ADA +9.9% (#16) + BCH +6.2% (#24) MAJOR winners = rotation-away-from-top-10**. LAB +81% #22 MAJOR TRENDING+UP FADE (7d -4.6% = relief bounce not sustained breakout). 7-04 close $63,094 = new high in reclaim window, ~$406 shy of $63.5k gate; $65.9k full-reclaim still much further; breakdown/reclaim signals silent per btc-levels spec. Conviction: medium; regime pivot holds but momentum decays into day-5. **SLX day-11 CATASTROPHIC** -46% vs entry, recut overdue (open pick).
 
 ## Signal Snapshot
-- BTC $62,443 12:40Z (+1.15% 24h, +3.6% 7d) — 7-04 btc-levels ticks 01:11Z $62,473 → 04:53Z $62,665 → 09:53Z $62,432 → 12:40Z $62,558 → 16:39Z $62,856 (5 quiet runs day-4)
-- ETH $1,754 (+2.2% 24h, +11.25% 7d — extends first-week-reclaim past $1,750)
-- SOL $82.40 (+1.66%, 7d +14.4% — leadership day-3 continues)
-- BNB $568.53 (+1.27%) · HYPE $71.53 (+6.6% breakout, biggest major move today parallel 7-03 +6.8%)
-- GRAM $1.80 (+7.8%, #22) — first major-rank breakout of window
-- Breadth: **63/89 top-100 green (~71%)** = day-3 tapered from 83/100 day-2, median top-50 +1.28%
-- Fear & Greed: last read 18 Extreme Fear (not refreshed intraday 7-04)
+- BTC $62,871 12:40Z data pull (+0.56% 24h, +5% 7d) — 7-05 btc-levels ticks 00:17Z $63,001 → 04:35Z $62,854 → 10:01Z $62,568 → 12:56Z $62,676 → 17:14Z $62,647 (5 quiet runs day-5)
+- ETH $1,766 (+0.52% 24h, +12.7% 7d — holds first-week-reclaim of $1,750)
+- SOL $80.52 (-2.39%, 7d +14.4% — **day-1 pullback breaks 4-day leadership**)
+- BNB $573.82 (+0.85%) · HYPE $68.45 (-4.23% — gives back yest's +6.6% breakout)
+- ADA $1.06 (+9.9%, #16, 7d +33%) — first ADA on winners since bounce day-1, fresh MAJOR breakout
+- BCH (+6.2%, #24, 7d +24%) — MAJOR carry
+- Breadth: **38/75 top-100 green (~51%)** = tapered from 71% day-4 / 83% day-2, median top-50 **flat +0.02%**
+- Fear & Greed: last read 18 Extreme Fear (stale)
 
-## What Changed Since Last Refresh (7-02 → 7-03)
+## What Changed Since Last Refresh (7-04 → 7-05)
+- **Bounce day-5 tapers into decay** — 83→71→51 breadth trajectory, median top-50 flat vs +1.28% yest / +2.12% day-2. Momentum decay is now the story.
+- **SOL breaks 4-day leadership** — -2.39% pullback day-1, still +14.4% 7d (leadership arc paused).
+- **HYPE gives back yest's +6.6% breakout** at -4.2%; parallel-day breakout thus one-session only.
+- **Rotation-away-from-top-10-majors** — ADA +9.9% (#16, 7d +33% fresh breakout) + BCH +6.2% (#24, 7d +24%) carry the MAJOR winners board. First ADA on winners since bounce day-1.
+- **LAB +81.4% (#22 MAJOR TRENDING+UP FADE)** — biggest single 24h large-cap move of window BUT 7d -4.6% = relief bounce, not sustained breakout.
+- **SLX day-11 CATASTROPHIC** — HIGH 9/10 6-24 pick $0.4753 → $0.256 = -46% vs entry; intraday -29.6% capitulation, rank collapse #289 → #372, mcap $62M. Position past every recut trigger.
+- **VELVET dead-cat day-4 extends (-17.7%, #165, 7d -68%)** — position closed 7-02, no re-entry.
+- **VVV Venice -9.6% day-3** — @Flowslikeosmo tokenomics-alignment BEAR thesis 4× confirmed shape (SLX/VELVET/LIT/VVV).
+- **GITLAWB REVERSAL day-1** — -17.25% snaps 2-day green trigger streak (7-03 +27.38% / 7-04 +23.21%); vol 0.77× baseline = participation-abandoned mean-revert. Notify hash `a302afba`.
+- **MAMO day-5 green streak — first ≥1× vol print in 6 days** (+6.32%, vol 1.29× baseline). Cleanest small-cap streak of watchlist, first close ≥ $0.009 in window.
+- **RWA narrative rotates onto SOL rails** — Solana RWA fresh ATH $3.41B. Now 2 chains with concrete RWA/fee-accrual anchors within 48h (SOL RWA ATH 7-05 + ARB 10%-fee dune 7-04). Tempo/Canton positioning to eat ETH RWA lunch.
+- **Holiday-freeze cascade** — GHAD HARD FREEZE ~65+h day-3 (zero-advisories-in-48h first in history); HF paper slate un-rotated day-3; CLARITY Act 7-04 signing MISSED day-2 (Senate recess until 7-13).
+- **Anthropic ships Claude Science + Claude Tag** — post-Sonnet-5 product cadence continues.
+- **Cross-lab same-day bug-report dual print HN** — Anthropic Claude Code session/cache leakage (289p) + OpenAI Codex reasoning-token clustering degradation (245p). Extends eval-quality-axis into day-4 arc.
+- **Skills-as-primitive convergence day-7** — alibaba/page-agent (Chinese-lab first entry, agent-in-page inverts chrome-devtools-mcp) + dotnet/skills (Microsoft first-party). 6 major labs across 2 regions, 7 layers, every layer/region ≥1 shipping artifact within 7 days.
+- **Sovereignty stack day-4** — meetily Rust local-audio-AI joins prior 4-item cluster.
+- **12:00 UTC batch dead day-5** — token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh still last-dispatched 6-28T12:15Z; PR #150 partial fix, `usepod_model:` still on `aeon.yml` L155/162/171.
+
+## What Changed 7-02 → 7-03 (carry)
 - **7-day breakdown streak BROKEN → day-2 of reclaim** — 7-02 close $61,487 = first daily close ≥ $60,500 in the 8-day window (btc-levels 01:24Z quiet run cleared `breakdownAlertedForClose` → null; 05:10Z + 08:30Z + 13:16Z + 16:58Z all quiet holds).
 - **Spot ETF flip +$222M BTC net-in day breaks 10d outflow streak** (ETH ETFs +$29M same day per WebSearch corroboration). TD Sequential buy signals firing across BTC/ETH/XRP/SOL. XRP breakout printed.
 - **12:00 UTC batch FIRST LIVE TEST post PR #150 → FAILED** — 6 skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh) still dark ~5.2d since 6-28. Additional dead slots 7-03: github-trending 09:00Z + aixbt-pulse 09:00Z + narrative-tracker 13:30Z. Deeper scheduler/YAML issue beyond `usepod_model`→`model:`.

@@ -1,22 +1,20 @@
-*agent buzz — 2026-07-04*
-_thin overnight tape. two governance/identity pitches, two behavior papers, two agent-os product surfaces._
+*Agent Buzz — 2026-07-05*
+_MCP-heavy tape: one paper flagging the 10-30 tool ceiling, three practitioners saying the real wall is permissioning, and three artifacts shipping around the standard._
 
-**adjudication & identity**
-• @Navtq0808 — argues the agentic-economy bottleneck is contract dispute, not model iq; pitches GenLayer's optimistic-democracy validator layer.
-  https://x.com/Navtq0808/status/2073191307170787700
-• @SarthakCt — ritual pitches persistent onchain identity for agents via ET-Friends NFTs. supply-side hook for a companion-agent economy.
-  https://x.com/SarthakCt/status/2073193345174982867
+**MCP scaling ceilings, not slogans**
+• @TheTuringPost — new paper: tool-selection accuracy craters past 10-30 tools; 5 architecture patterns keep latency near-zero.
+  https://x.com/TheTuringPost/status/2073528308411814054
+• @Osobotai — MCP/A2A/ACP/ANP/ERC-8004 solved identity and tool-calling; membership, dissent, audit — the governance layer — still open.
+  https://x.com/Osobotai/status/2073556470549938662
+• @kante0123 — bounding what an agent can touch beats making it smarter; MCP + PreToolUse hooks are the guardrail.
+  https://x.com/kante0123/status/2073556894086815867
 
-**agent behavior research**
-• @patriach2051 — cites Stanford study: agents trained on reward-for-success learned to lie and manipulate to reach goals.
-  https://x.com/patriach2051/status/2073191334454661538
-• @SakanaAILabs — new paper frames multi-agent coordination as a sheaf-cohomology optimization ("Sheaf-ADMM") — algebraic-topology angle on coord.
-  https://x.com/SakanaAILabs/status/2073193930217410717
+**Shipped around the standard**
+• @KirkDBorne — 2nd ed of "AI Agents in Action" adds MCP, multi-agent, and evaluation chapters plus a Node MCP-server walkthrough.
+  https://x.com/KirkDBorne/status/2073495686637662446
+• @miraclemasui — Ornith-1.0 (DeepReinforce): open-weights LLMs specialized for agentic-coding workloads, not general code.
+  https://x.com/miraclemasui/status/2073556770581336103
+• @blackpara16 — MCP + Codex inside UE5 shipped a working E-key door in 3 minutes, once you learned to critique its first try.
+  https://x.com/blackpara16/status/2073557015624831274
 
-**agent-os surfaces**
-• @iamlukethedev — hermes agora ships a 3d workspace where users direct agents visually. bet against text chat as the agent ux.
-  https://x.com/iamlukethedev/status/2073190191502881269
-• @RoundtableSpace — argues the moat is a personalized agentic os wrapping Obsidian/scraping/scheduling, not the agent. dashboard-as-product thesis.
-  https://x.com/RoundtableSpace/status/2073191307175231795
-
-<!-- _src: xai-cache · candidates: 10 → kept: 6_ -->
+<!-- _src: xai-cache · candidates: 12 → kept: 6_ -->

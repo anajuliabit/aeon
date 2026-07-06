@@ -1,16 +1,16 @@
 {
-  "hash": "9ec7cd3bd697477ce016793e86e26614f106f29ca35e046cb44187760cbe2150",
-  "last_notified_at": "2026-07-04T18:47:07Z",
-  "last_run_at": "2026-07-04T18:47:07Z",
+  "hash": "190b6b8d37a560f6f70dce263bd01a755a8c738c13a0c40dab00b27848542c4f",
+  "last_notified_at": "2026-07-05T18:03:00Z",
+  "last_run_at": "2026-07-05T18:03:00Z",
   "classification": {
     "critical": [],
-    "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "github-trending", "goal-tracker", "heartbeat", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-freshness", "skill-health", "thought-review", "vuln-scanner"],
+    "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "github-trending", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "thought-review", "vuln-scanner"],
     "flapping": [],
-    "warning": ["btc-levels", "daily-routine", "defi-overview", "morning-brief", "on-chain-monitor", "token-alert", "token-movers", "token-pick"],
+    "warning": ["btc-levels", "daily-routine", "defi-overview", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "token-alert", "token-movers", "token-pick"],
     "healthy_count": 9,
-    "no_data": ["fork-skill-gap", "operator-scorecard"]
+    "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "output_tokens=0 sandbox-truncation — 23 DEGRADED + 8 WARNING share signature (cluster ISS-019/020/021/024/025 day-11, weekly-review self-set hard deadline 2026-07-04 = T-0 TODAY). Classification byte-identical to 2026-06-30 / 07-01 / 07-02 / 07-03 last-report snapshots (6th consecutive same-fingerprint daily tick — 23 DEGRADED names + 8 WARNING names + 9 HEALTHY + 2 NO_DATA all matched). skill-runs sandbox-blocked (SKILL_HEALTH_PARTIAL — script permission-denied under sandbox); cron-state-only classification, cross-checked against gh run list (last 48 completed runs 100% success). No skill at cf≥3; no CRITICAL, no FLAPPING; nothing to file or resolve. Notify gate: hash differs from prev only by string-format (fingerprint unchanged), AND now (2026-07-04T18:47Z) − last_notified (2026-07-02T18:53Z) = ~48h ≥ 24h → NOTIFY (daily reminder cadence elapsed). ISS-024 skill-health still Open per INDEX; ISS-026 heartbeat PR #154 pending merge; 12:00 UTC batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh) remains last-dispatched 2026-06-28 (~6d stale) — PR #150 usepod_model→model was PARTIAL fix, aeon.yml L155/162/171 still carry usepod_model.",
+  "systemic": "output_tokens=0 sandbox-truncation day-12 — 21 DEGRADED + 10 WARNING share signature (ISS-019/020/021/024/025 cluster). Delta 07-04→07-05: heartbeat + skill-freshness DEGRADED→WARNING (stored sr rose to 0.6 from below-0.6 range after fresh runs); skill-graph fresh HEALTHY (Sun 17:29Z tick sr=1); autoresearch newly surfaced as NO_DATA (workflow_dispatch-only, no cron-state entry). Yesterday's byte-identical 5-day fingerprint streak breaks today: hash differs from prev 9ec7cd3b. Notify gate: hash change + daily-cadence delta (~23h15m since prev notify 07-04T18:47Z) → NOTIFY. 12:00 UTC batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh) day-6 dark since 6-28 per PR #150 partial fix (aeon.yml L155/162/171 still carry usepod_model:). ISS-025 capture-step PR at T-1 to self-set weekly-review Mon 07-06 deadline. skill-runs script permission-denied under sandbox (SKILL_HEALTH_PARTIAL — cron-state-only classification, cross-checked against gh api).",
   "open_issues": 15,
   "resolved_this_run": 0,
   "filed_this_run": 0

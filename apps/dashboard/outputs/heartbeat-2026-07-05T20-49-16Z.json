@@ -1,0 +1,140 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "System health checkpoint"
+      },
+      "children": [
+        "timestamp",
+        "failure_alert",
+        "failure_details",
+        "divider1",
+        "fix_section",
+        "divider2",
+        "status"
+      ]
+    },
+    "timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "hb 20:44Z",
+        "variant": "lead"
+      }
+    },
+    "failure_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-skill-digest failed",
+        "message": "Failed at 20:18Z",
+        "type": "error"
+      }
+    },
+    "failure_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fail_context",
+        "fail_timing",
+        "fail_cf",
+        "fail_next"
+      ]
+    },
+    "fail_context": {
+      "type": "Text",
+      "props": {
+        "text": "Sunday re-tick after 168h stuck",
+        "variant": "body"
+      }
+    },
+    "fail_timing": {
+      "type": "Text",
+      "props": {
+        "text": "Errored 31min after 19:47Z dispatch",
+        "variant": "body"
+      }
+    },
+    "fail_cf": {
+      "type": "Text",
+      "props": {
+        "text": "cf=1",
+        "variant": "caption"
+      }
+    },
+    "fail_next": {
+      "type": "Text",
+      "props": {
+        "text": "Next slot 7d out",
+        "variant": "body"
+      }
+    },
+    "divider1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fix_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fix_label",
+        "pr_link",
+        "fix_detail_lines",
+        "fix_impact"
+      ]
+    },
+    "fix_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Pending fix",
+        "level": "h3"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #156: fix(aeon.yml)",
+        "href": "https://github.com/aeon/aeon/pull/156",
+        "source": "self-improve",
+        "score": "18:23Z"
+      }
+    },
+    "fix_detail_lines": {
+      "type": "Text",
+      "props": {
+        "text": "Kills dead usepod_model on L155/162/171",
+        "variant": "body"
+      }
+    },
+    "fix_impact": {
+      "type": "Text",
+      "props": {
+        "text": "Merge unblocks 12:00 UTC batch (dark day-5)",
+        "variant": "body"
+      }
+    },
+    "divider2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status": {
+      "type": "Badge",
+      "props": {
+        "text": "docs/status.md → DEGRADED",
+        "variant": "destructive"
+      }
+    }
+  }
+}

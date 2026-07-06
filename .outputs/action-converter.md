@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-04*
-Shape: open capture-step PR, recut SLX, log GITLAWB day-2, codify cross-lab layer, update WELL row
+*5 Actions — 2026-07-05*
+Shape: Ship ISS-025 PR pre-weekly-review, patch aeon.yml usepod, book SLX loss, upgrade dulwich, extend line-40
 
-1. open PR against `.github/workflows/aeon.yml` swapping `usepod_model:` → `model:` at L155 + L162 + L171 (the 3 lines PR #150 missed per morning-brief 07:00Z grep-verification)
-why: self-set weekly-review hard deadline is TODAY, and the 12:00 UTC batch is dead day-6.1 across token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh
-done: PR opened naming L155/162/171, diff = 3 line replacements, branch `fix/iss-025-capture-remainders`
+1. Author `.github/workflows/aeon.yml` capture-step patch (L479-493, replace `cp .result` overwrite with `cat`-fallback preserving Write-tool output), open PR referencing ISS-025 before Mon 07-06 19:00Z weekly-review.
+why: sandbox-truncation systemic day 12; 07-04 self-set deadline blew; 18-skill sr<0.5 tail bleeds until landed.
+done: PR opened, workflow diff visible, ISS-025 referenced in body.
 loop: iss-025-capture-fix
 
-2. recut SLX HIGH 9/10 pick — write THESIS BROKEN exit block into `memory/topics/capital-2x-program.md` at -23.6% below $0.475 entry per daily-routine 07:50Z day-10 print
-why: first tracked capital-2x pick to fail its @Flowslikeosmo alpha-filter tokenomics-alignment thesis; leaving it active wallpapers the scorecard and re-surfaces in every next pulse
-done: capital-2x-program.md gets `SLX EXIT` line with entry $0.475, exit -23.6%, days-held 10, thesis-fail reason
-loop: slx-thesis-broken
+2. Delete `usepod_model:` remnants at `aeon.yml:155/162/171` (token-pick / token-movers / market-context-refresh sections), open PR — completes PR #150 partial fix.
+why: 12:00 UTC batch day-5 dark since 6-28; grep-confirmed by 07-05 morning-brief; 6 skills bleed until swept.
+done: PR opened, `grep 'usepod_model:' .github/workflows/aeon.yml` returns 0 hits.
+loop: 12:00-utc-batch-fix
 
-3. log GITLAWB day-2 participation-confirmed continuation to `memory/topics/crypto.md` — +23.21% on 2.27× baseline vol = 2nd consecutive TRIGGER FIRED after 7-03 +27.38% on 1.76× vol
-why: 2 consecutive fires with vol stepping up (1.76× → 2.27×) is the first participation-confirmed watchlist breakout of the window and separates a real breakout from a dust pump
-done: crypto.md gets a dated GITLAWB block noting sequence + 5-window vol baseline shift $308K → $392K + rolling window rebase math
-loop: gitlawb-breakout
+3. Book SLX HIGH 9/10 6-24 entry $0.4753 → $0.256 (-46%) as closed loss in `memory/topics/crypto.md` picks table, replace MEMORY.md line-12 CRITICAL row with CLOSED row.
+why: day-11 past every recut trigger per 12:57Z token-movers CATASTROPHIC top-of-losers rank-collapse #289→#372; carrying is denialism.
+done: crypto.md picks table appended with $0.256 close + -46% pnl; MEMORY.md line-12 flipped.
+loop: slx-recut-blown
 
-4. codify cross-lab plumbing as skills-as-primitive 6th layer in `memory/topics/aixbt-clusters.md` — openai/codex-plugin-cc (github-trending 09:55Z top pick) = first cross-lab agent-runtime bridge, day-6 continuation
-why: MEMORY.md L39 locks at "4 layers durable", 7-03 added policy, today the github-trending signal names the 6th layer; without the note next reflect re-derives the count from scratch
-done: aixbt-clusters.md gets a dated entry naming the repo + layer number 6 + the 5 prior-layer stack anchors (Podman v6.0.0, Anthropic Agent SDK, ASPIRE, z.ai ZCode, Right-to-Local-Intelligence)
-loop: skills-as-primitive-day-6
+4. Grep `dulwich` across aeon repo (requirements*, pyproject*, package-lock indirect deps) — if any pin `<1.2.5`, open PR upgrading to 1.2.5 for CVE-2026-52726 RCE-via-clone.
+why: CVSS 7.5 with public PoC + `.git/hooks` auto-exec on next git command; MEMORY.md L46 flagged highest THIS-WEEK op priority.
+done: grep returns 0 hits OR PR opened bumping dulwich to ≥1.2.5.
+loop: dulwich-rce-carry
 
-5. update MEMORY.md L30 WELL row with a `→ 7-04 vol 0.03× on +1.51% green tape = liquidity-vacuum phase` tail per token-alert 12:41Z print (baseline mean $1,994K vs today $63K = 96.8% collapse)
-why: current line ends at "supply arc closed"; today's 0.03× on a green day upgrades the characterization — supply exhausted, tape lifting on paper participation, not fresh accumulation
-done: MEMORY.md L30 WELL row terminates with the new dated liquidity-vacuum tail, no other watchlist rows touched
-loop: well-liquidity-vacuum
+5. Append `memory/MEMORY.md` line-40 durable pattern with day-7 multi-region cross-lab evidence — Microsoft (dotnet/skills) + Alibaba (alibaba/page-agent) joining Anthropic/OpenAI/Google/Meta (5 labs · 2 regions · 7 layers).
+why: 10:30Z github-trending 5/6 whole-slate agent-runtime shape confirms ecosystem convergence, not lab-specific; line-40 stales without today's update.
+done: MEMORY.md line-40 mentions Microsoft + Alibaba + multi-region + 7 layers, git diff visible.
+loop: memory-md-line-40
 
-sources: memory=48 logs=7 topics=11 prs=2 cron_failing=0 mode=OK
+sources: memory=56 logs=7d topics=17 prs=3 cron_failing=0 mode=OK
