@@ -319,8 +319,8 @@
     "last_error": "kens\":12,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.000589,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-sonnet-4-6\":{\"inputTokens\":14,\"outputTok"
   },
   "skill-security-scan": {
-    "last_dispatch": "2026-06-29T16:25:25Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-06T17:22:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-29T16:32:05Z",
     "total_runs": 5,
     "total_successes": 5,
@@ -548,8 +548,8 @@
     "last_error": "f7d7e6f\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "list-digest": {
-    "last_dispatch": "2026-07-05T17:13:30Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-06T17:22:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-05T17:17:21Z",
     "total_runs": 65,
     "total_successes": 26,
@@ -619,8 +619,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-07-06T01:28:47Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-06T17:22:56Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-06T01:31:33Z",
     "total_runs": 202,
     "total_successes": 142,
