@@ -1,0 +1,258 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-06",
+        "description": "Author capture-step patch, close SLX -46%, diagnose cron gap, retire #149, flip MEMORY.md"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5",
+        "sep-5",
+        "sources"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-1",
+        "why-1",
+        "done-1",
+        "loop-1"
+      ]
+    },
+    "h-1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Author chain-runner capture-step patch",
+        "level": "h3"
+      }
+    },
+    "why-1": {
+      "type": "Text",
+      "props": {
+        "text": "why: entire 18-skill sr<0.5 chronic tail traces to this one Write-tool→CLI-result overwrite; day 12 of unshipped fix; 19:00Z weekly-review deadline just passed.",
+        "variant": "body"
+      }
+    },
+    "done-1": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR URL opened against main with diff at aeon.yml:479-493 + closes ISS-025 in body.",
+        "variant": "body"
+      }
+    },
+    "loop-1": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-capture-fix",
+        "variant": "outline"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-2",
+        "why-2",
+        "done-2",
+        "loop-2"
+      ]
+    },
+    "h-2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Close SLX pick (-46%)",
+        "level": "h3"
+      }
+    },
+    "why-2": {
+      "type": "Text",
+      "props": {
+        "text": "why: HIGH 9/10 6-24 entry past every recut trigger; intraday -29.6% capitulation + rank #372 = thesis broken, book the loss.",
+        "variant": "body"
+      }
+    },
+    "done-2": {
+      "type": "Text",
+      "props": {
+        "text": "done: crypto.md picks table shows SLX row status=CLOSED with final drawdown line + exit price at $0.256 vs $0.4753 entry (day-12).",
+        "variant": "body"
+      }
+    },
+    "loop-2": {
+      "type": "Badge",
+      "props": {
+        "text": "slx-recut-blown",
+        "variant": "outline"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-3",
+        "why-3",
+        "done-3",
+        "loop-3"
+      ]
+    },
+    "h-3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Diagnose 07-06 fleet-wide morning-slot cron gap",
+        "level": "h3"
+      }
+    },
+    "why-3": {
+      "type": "Text",
+      "props": {
+        "text": "why: only 3 dispatches so far today (unlock-monitor 11:00Z / btc-levels 01:28Z / hb 14:33Z catch-up); hb self-set 20:00Z re-eval tick is ~40min out.",
+        "variant": "body"
+      }
+    },
+    "done-3": {
+      "type": "Text",
+      "props": {
+        "text": "done: root cause logged to memory/topics/fleet.md (queued-late vs holiday-cron catch-up vs sandbox skip) with gh api /repos/.../actions/runs evidence.",
+        "variant": "body"
+      }
+    },
+    "loop-3": {
+      "type": "Badge",
+      "props": {
+        "text": "fleet-morning-slot-gap-07-06",
+        "variant": "outline"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-4",
+        "why-4",
+        "done-4",
+        "loop-4"
+      ]
+    },
+    "h-4": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Retire PR #149, link to PR #155",
+        "level": "h3"
+      }
+    },
+    "why-4": {
+      "type": "Text",
+      "props": {
+        "text": "why: two open PRs from same skill = reviewer confusion; #155 supersedes #149's payload (day-8 stall, ~193h open); queue cleanup. #155 has +68 skills · 4→5 depends_on · 9→21 shared_state.",
+        "variant": "body"
+      }
+    },
+    "done-4": {
+      "type": "Text",
+      "props": {
+        "text": "done: gh pr close 149 --comment \"superseded by #155\" executed.",
+        "variant": "body"
+      }
+    },
+    "loop-4": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-149-supersede",
+        "variant": "outline"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-5",
+        "why-5",
+        "done-5",
+        "loop-5"
+      ]
+    },
+    "h-5": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Flip PR #154 and #156 from Current Goals to Recently Cleared",
+        "level": "h3"
+      }
+    },
+    "why-5": {
+      "type": "Text",
+      "props": {
+        "text": "why: 4h post-merge (PR #154 merged 15:35Z, PR #156 merged 15:45Z), downstream skills (goal-tracker/hb/action-converter) still read stale goal rows; the 12:00 UTC batch fix + ISS-026 INDEX bookkeeping are both durably resolved.",
+        "variant": "body"
+      }
+    },
+    "done-5": {
+      "type": "Text",
+      "props": {
+        "text": "done: MEMORY.md diff moves 2 rows out of Current Goals to \"Recently Cleared\" block with merge timestamps recorded.",
+        "variant": "body"
+      }
+    },
+    "loop-5": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-md-consolidation",
+        "variant": "outline"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=56L logs=7d topics=11 prs=2 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
