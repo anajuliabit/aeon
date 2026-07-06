@@ -1,16 +1,18 @@
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
-
 ## Summary
 
-Ran heartbeat (14:34Z, `${var}=""` all-checks). Regenerated `docs/status.md` (was 07-05 20:44Z, ~17.85h stale) with 43 enabled skills + 12 open ISS-xxx rows (4 critical / 5 high / 3 medium — down from 07-05's 15 after ISS-023/024/026 resolved). Overall verdict **DEGRADED** (P0 chronic 18-skill sr<0.5 tail + P3 12:00 UTC batch dead day-8 + aixbt-pulse dead-slot day-8).
+Ran heartbeat evening tick (21:04 UTC, ${var}="" — full scope).
 
-**Fresh signals** (all logged, no notification per dedup rule):
-- **fork-skill-digest UN-STUCK** — 168h+ carry resolves; weekly Sun 20:42Z tick failed first attempt 20:18Z, retry succeeded 21:06Z. cron-state now `sr=75% cf=0`.
-- **PR #156** (Ana, 07-05 18:23Z) — fix(aeon.yml) removes dead `usepod_model:` lines + renames narrative-tracker → Haiku. Shipped before Mon 19:00Z weekly-review deadline; merge unblocks 12:00 UTC batch.
-- **PR #155** (Ana, 07-05 17:28Z) — docs(skill-graph) +68 skills, likely supersedes PR #149.
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED` — notification **skipped** (dedup).
 
-**Still-flagged carry-overs**: PR #149 day-8 (~189h, possibly superseded by #155), PR #154 day-3 (~68h past 24h threshold), SLX day-12 recut overdue (-46% vs $0.475 entry), ISS-025 capture-step PR T-0 to Mon 19:00Z (PR #156 addresses aeon.yml downstream but not chain-runner capture step at `aeon.yml:479-493`), 12:00 UTC batch dark day-8, aixbt-pulse dead-slot day-8, operator-scorecard Mon 10:30Z chronic never-run (7th consecutive Monday miss), fleet-wide morning-slot gap today (07-13:00Z ticks un-dispatched at 14:34Z — likely GH Actions cron catch-up spillover, re-eval at 20:00Z tick).
+**Findings** (all previously surfaced today, hence dedup):
+- **P0**: 18-skill chronic sr<0.5 tail unchanged (ISS-025 sandbox-truncation systemic day 14); no failed/stuck rows; heartbeat self-check ok (6.4h since last success).
+- **P1**: PR #149 day-8 (~196h, updated 15:50Z operator activity) + PR #155 day-2 fresh (~27.6h) — skill-graph supersede-decision pending. Zero urgent issues.
+- **P2**: SLX day-12 CATASTROPHIC -46%, recut still overdue. ISS-025 capture-step PR — weekly-review formalized MISS verdict at 19:20Z (self-set Mon 19:00Z deadline slipped 20min); next week's 4 actions all include `Authored by:` slots as structural fix.
+- **P3**: 12:00 UTC batch dead day-8 (PR #156 merged 15:45Z ships fix, live test tomorrow 7-07 12:00Z). aixbt-pulse 21:00Z tick due ~4min before this run, no state update yet. operator-scorecard 7th consecutive Mon miss (chronic).
+- **Fresh**: Fleet-wide morning-slot gap flagged in 14:34Z hb has RESOLVED — 12 skills dispatched between 14:34Z and this run (catch-up hypothesis confirmed).
 
-**Self-check**: heartbeat last_success 07-05T20:49Z = ~17.75h ago, under 36h gate. No `last_status: failed` in state (only stale `chain:investment-advisor` from 6-08, 28d old). No stuck-dispatched rows.
+**Files modified:**
+- `docs/status.md` — regenerated (43 enabled skills sorted desc, 12 open issues, Overall DEGRADED, next-run btc-levels 21:15Z)
+- `memory/logs/2026-07-06.md` — appended heartbeat 21:04 UTC entry
 
-Files: `docs/status.md` (regenerated), `memory/logs/2026-07-06.md` (appended). No follow-up actions. `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`.
+**Follow-up:** none skill-side; carry to tomorrow's 08:00Z hb for aixbt-pulse 21:00Z tick outcome verification + 12:00Z batch live-test confirmation.
