@@ -20,6 +20,10 @@ jobs:
           USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
           USEPOD_MODEL: ${{ vars.USEPOD_MODEL }}
           ADVISOR_LLM: ${{ vars.ADVISOR_LLM }}
+          # PM review committee (Option C) — off by default; no new secret required.
+          ADVISOR_PM_COMMITTEE: ${{ vars.ADVISOR_PM_COMMITTEE }}
+          ADVISOR_COMMITTEE_QUORUM: ${{ vars.ADVISOR_COMMITTEE_QUORUM }}
+          USEPOD_COMMITTEE_MODELS: ${{ vars.USEPOD_COMMITTEE_MODELS || 'deepseek-v3.2,qwen-3.5,llama-4' }}
           DASHBOARD_USER: ${{ secrets.DASHBOARD_USER }}
           DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
