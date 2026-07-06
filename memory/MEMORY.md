@@ -5,11 +5,13 @@
 - **Sandbox-truncation systemic day 12** — ISS-019/020/021/024/025 cluster bleeds an 18-skill chronic tail (`output_tokens=0`). Durable `aeon.yml` capture-step fix unshipped; self-set weekly-review Mon 7-06 deadline is **T-1**. Action-converter 7-04 ranked capture-step PR q5/u5 top action but PR not authored — tomorrow 19:00Z weekly-review formalizes miss unless self-improve authors today.
 - **12:00 UTC batch — day-5 of failed live test post PR #150** — 6 skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh) dark ~7.9d since 6-28. `usepod_model:` still on `aeon.yml` L155/162/171 (grep-confirmed 7-05 14:47Z hb).
 - **PR #149 docs(skill-graph)** — opened 6-28 17:15Z, **~165h day-7 stall** at 7-05 14:47Z. Sunday + US Independence Day weekend → operator merge unlikely.
-- **PR #154 fix(issues) close ISS-026** — opened 7-03 18:20Z by self-improve, ~44h day-2 open (past 24h stall threshold). INDEX flip pending merge.
-- **XAI quota recovery** — Team 3a8b4c1e monthly credit exhausted 6-16 (**day 20**). Operator top-up pending. WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; prefetched paths serve list-digest/agent-buzz/token-pick. *[BLOCKED]*
-- **Operator on-chain config day 28** — defi-monitor NO_CONFIG; `memory/on-chain-watches.yml` needs `type: pool` / `type: position` entries. `ALCHEMY_API_KEY len=0`, `ETHERSCAN_API_KEY null`. *[BLOCKED — partial]*
+- **XAI quota recovery** — Team 3a8b4c1e monthly credit exhausted 6-16 (**day 20**). Operator top-up pending. WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; prefetched paths serve list-digest/agent-buzz/token-pick. *[BLOCKED — waiting on operator team-credit top-up since 2026-06-16]*
+- **Operator on-chain config day 28** — defi-monitor NO_CONFIG; `memory/on-chain-watches.yml` needs `type: pool` / `type: position` entries. `ALCHEMY_API_KEY len=0`, `ETHERSCAN_API_KEY null`. *[BLOCKED — waiting on operator config + API keys]*
 - **BTC bounce day-5 above $60,500 breakdown line** — 7-05 ticks $63,001 (00:17Z) → $62,854 (04:35Z) → $62,568 (10:01Z) → $62,676 (12:56Z) → $62,647 (17:14Z); 7-04 close $63,094 = new high in reclaim window, ~$406 shy of $63.5k reclaim gate. Momentum tapering day-3 → day-5. $65.9k full-reclaim gate still much further.
 - **SLX open pick DAY-11 CATASTROPHIC — recut overdue** — HIGH 9/10 6-24 entry $0.4753 → 7-05 $0.256 = **-46% vs entry** (intraday -29.6% capitulation, rank collapse #289 → #372, mcap $62M). CG simple-price verified. Position past every recut trigger; surfaced as top follow-up in 7-05 daily-routine.
+
+## Recently Cleared
+- **PR #154 fix(issues) close ISS-026** — completed 2026-07-06 (merged 15:35Z, day-3 stall closed; INDEX flip shipped).
 
 ## Fleet Health
 - **skill-health snapshot byte-identical 6th consecutive day** (last run 7-04 18:47Z: 0 critical · 23 degraded · 8 warning · 9 healthy · 2 no_data). 15 open issues; ISS-026 pending PR #154 merge for INDEX resolved-flip.
