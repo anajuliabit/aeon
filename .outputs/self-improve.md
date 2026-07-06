@@ -1,1 +1,1 @@
-self-improve: closed ISS-026 in issue tracker — PR #151 shipped 7-02 but INDEX still marked it Open. Stale-tracker signal cleared from heartbeat. PR: https://github.com/anajuliabit/aeon/pull/154
+self-improve: closed the 12-day L155/162/171 usepod_model loop. PR #156 — narrative-tracker rename to Haiku (~$46/wk → ~$2.50/wk, cost-report top-4 driver), market-context-refresh + aixbt-pulse dead-line removal (explicit Sonnet kept). Completes PR #150's deferred Sonnet-vs-Haiku decision. https://github.com/anajuliabit/aeon/pull/156
