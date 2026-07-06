@@ -607,7 +607,10 @@ while read -r rec; do
         targetPriceUsd: null,
         invalidationPriceUsd: $invOK,
         horizonDays: (.horizonDays // 30),
-        conviction: "UNSTATED",
+        conviction: (if .urgency == "high" then "HIGH"
+                     elif .urgency == "medium" then "MEDIUM"
+                     elif .urgency == "low" then "LOW"
+                     else "UNSTATED" end),
         thesis: ((.title // "advisor call") + " — " + (.action // "")
                  + (if .rationale then " | " + .rationale else "" end))
       }')
