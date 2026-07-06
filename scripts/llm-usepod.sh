@@ -12,6 +12,17 @@
 # is set, retries the same prompt through scripts/llm.sh (Virtuals), mirroring
 # llm-claude.sh, so an outage degrades instead of producing a gap.
 #
+# NO_VIRTUALS_FALLBACK=1 disables that Virtuals fallback: on any failure the
+# script returns non-zero WITHOUT retrying through Virtuals. The PM committee sets
+# this so a member's output stays attributable to exactly one usepod model
+# (a silent Virtuals fallback would poison per-model attribution).
+#
+# Cost control: USEPOD_MAX_PRICE_INPUT / USEPOD_MAX_PRICE_OUTPUT (if set) become
+# X-Pod-Max-Price-Input / X-Pod-Max-Price-Output request headers — usepod is a
+# marketplace with per-operator pricing plus a centralized-router fallback, so
+# these ceilings cap spend (and the fallback risk) on committee calls.
+# USEPOD_MAX_TIME overrides the per-request curl timeout (default 180s).
+#
 # Security: the token is in the URL, so ALL emitted text is piped through redact()
 # before reaching stderr. Never enable `set -x` here (it would print the URL).
 set -uo pipefail
@@ -39,6 +50,10 @@ if [ -z "${PROMPT//[[:space:]]/}" ]; then
 fi
 
 fallback() {
+  if [ "${NO_VIRTUALS_FALLBACK:-0}" = "1" ]; then
+    echo "llm-usepod.sh: NO_VIRTUALS_FALLBACK set — not falling back to Virtuals" >&2
+    exit 1
+  fi
   if [ -n "${VIRTUALS_API_KEY:-}" ] && [ -x "$ROOT/scripts/llm.sh" ]; then
     echo "llm-usepod.sh: falling back to Virtuals (llm.sh)" >&2
     printf '%s' "$PROMPT" | "$ROOT/scripts/llm.sh"
@@ -56,12 +71,22 @@ ENDPOINT="$PROXY_BASE/$USEPOD_TOKEN/v1/chat/completions"
 BODY=$(jq -n --arg model "$MODEL" --arg content "$PROMPT" \
   '{model: $model, messages: [{role: "user", content: $content}]}')
 
+MAXTIME="${USEPOD_MAX_TIME:-180}"
+
+# Optional per-operator price ceilings (marketplace cost guard). Built as an array
+# so an unset ceiling adds no header. The `[@]+...` guard keeps this safe under
+# `set -u` with an empty array (bash 3.2 on macOS included).
+PRICE_HEADERS=()
+[ -n "${USEPOD_MAX_PRICE_INPUT:-}" ]  && PRICE_HEADERS+=(-H "X-Pod-Max-Price-Input: ${USEPOD_MAX_PRICE_INPUT}")
+[ -n "${USEPOD_MAX_PRICE_OUTPUT:-}" ] && PRICE_HEADERS+=(-H "X-Pod-Max-Price-Output: ${USEPOD_MAX_PRICE_OUTPUT}")
+
 # Up to 3 attempts with backoff; transient gateway errors must not kill a run.
 ATTEMPTS="${LLM_ATTEMPTS:-3}"
 attempt=1
 while :; do
-  RESP=$(curl -sS --max-time 180 -X POST "$ENDPOINT" \
+  RESP=$(curl -sS --max-time "$MAXTIME" -X POST "$ENDPOINT" \
     -H "Content-Type: application/json" \
+    ${PRICE_HEADERS[@]+"${PRICE_HEADERS[@]}"} \
     -d "$BODY" 2> >(redact >&2)) || RESP=""
 
   if [ -n "$RESP" ]; then

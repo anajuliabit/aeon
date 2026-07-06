@@ -573,4 +573,110 @@ STAGED="$(printf '%s' "$STG" | jq -c '[.shortTermTrades[] | select((.sizeUsd // 
 check "0-size short-term trade skipped" "$(printf '%s' "$STAGED" | jq -r 'length')" "1"
 check "no \$1000 default for risk-sized" "$(printf '%s' "$STAGED" | jq -r '.[0].notionalUsd')" "3000"
 
+# --- PM committee: deterministic quorum aggregator (shared lib/pm-quorum.jq) ---
+# Three canned members (all ok) vote. BTC/increase has 3 supporters => consensus;
+# ETH/decrease (deepseek only) and SOL/increase (qwen only) are single-member =>
+# dissent, never dropped. Most-conservative urgency = min(high,med,low)=low;
+# level = median(67000,66000,65000)=66000; consensusPct = 3/3 = 100.
+PMQ="$(cd "$(dirname "$0")" && pwd)/lib/pm-quorum.jq"
+CMEMBERS='[
+ {"model":"deepseek-v3.2","ok":true,"latencyMs":1200,"recommendations":[
+   {"symbol":"BTC","direction":"increase","urgency":"high","level":67000,"title":"Add BTC"},
+   {"symbol":"ETH","direction":"decrease","urgency":"medium","level":3500,"title":"Trim ETH"}]},
+ {"model":"qwen-3.5","ok":true,"latencyMs":1500,"recommendations":[
+   {"symbol":"BTC","direction":"increase","urgency":"medium","level":66000,"title":"BTC add"},
+   {"symbol":"SOL","direction":"increase","urgency":"low","level":150,"title":"SOL"}]},
+ {"model":"llama-4","ok":true,"latencyMs":900,"recommendations":[
+   {"symbol":"btc","direction":"increase","urgency":"low","level":65000,"title":"btc"}]}]'
+# Quorum = ceil(N/2) over ok members; N=3 -> 2.
+CN=$(printf '%s' "$CMEMBERS" | jq '[.[]|select(.ok==true)]|length')
+CQUORUM=$(( (CN + 1) / 2 ))
+check "committee quorum ceil(3/2)=2" "$CQUORUM" "2"
+CAGG=$(printf '%s' "$CMEMBERS" | jq -c --argjson quorum "$CQUORUM" -f "$PMQ")
+check "quorum picks 1 consensus"        "$(printf '%s' "$CAGG" | jq -r '.consensus|length')" "1"
+check "quorum consensus is BTC"         "$(printf '%s' "$CAGG" | jq -r '.consensus[0].symbol')" "BTC"
+check "quorum most-conservative urgency"  "$(printf '%s' "$CAGG" | jq -r '.consensus[0].urgency')" "low"
+check "quorum median level"             "$(printf '%s' "$CAGG" | jq -r '.consensus[0].level')" "66000"
+check "quorum consensusPct 100"         "$(printf '%s' "$CAGG" | jq -r '.consensus[0].consensusPct')" "100"
+check "quorum support lists 3 models"   "$(printf '%s' "$CAGG" | jq -r '.consensus[0].support|length')" "3"
+check "quorum keeps single-member as dissent (not dropped)" "$(printf '%s' "$CAGG" | jq -r '.dissent|length')" "2"
+check "quorum dissent has ETH + SOL"    "$(printf '%s' "$CAGG" | jq -r '[.dissent[].symbol]|sort|join(",")')" "ETH,SOL"
+# Raising the quorum above the max support (3) yields zero consensus, all dissent.
+CAGG3=$(printf '%s' "$CMEMBERS" | jq -c --argjson quorum 4 -f "$PMQ")
+check "quorum too-high -> no consensus" "$(printf '%s' "$CAGG3" | jq -r '.consensus|length')" "0"
+check "quorum too-high -> all dissent"  "$(printf '%s' "$CAGG3" | jq -r '.dissent|length')" "3"
+
+# --- PM committee: degradation path (<2 ok members) falls back to single-model ---
+# Mirrors run.sh: OK_N = ok members; OK_N < 2 => "degrade" (single-model PM path).
+DMEMBERS='[{"model":"a","ok":true,"latencyMs":10,"recommendations":[]},
+ {"model":"b","ok":false,"latencyMs":0,"recommendations":[]},
+ {"model":"c","ok":false,"latencyMs":0,"recommendations":[]}]'
+DOKN=$(printf '%s' "$DMEMBERS" | jq '[.[]|select(.ok==true)]|length')
+check "committee counts only ok members" "$DOKN" "1"
+check "committee <2 ok -> degrade path" "$([ "$DOKN" -ge 2 ] && echo committee || echo degrade)" "degrade"
+GMEMBERS='[{"model":"a","ok":true,"latencyMs":10,"recommendations":[]},
+ {"model":"b","ok":true,"latencyMs":20,"recommendations":[]}]'
+GOKN=$(printf '%s' "$GMEMBERS" | jq '[.[]|select(.ok==true)]|length')
+check "committee >=2 ok -> committee path" "$([ "$GOKN" -ge 2 ] && echo committee || echo degrade)" "committee"
+
+# --- PM committee: report.committee block shape ---
+# Mirrors the run.sh assembly: {members,consensus,dissent}; members carry
+# model/ok/latencyMs/recommendations.
+CJSON=$(jq -n --argjson members "$CMEMBERS" --argjson agg "$CAGG" \
+  '{members:$members, consensus:$agg.consensus, dissent:$agg.dissent}')
+check "committee block has members/consensus/dissent" \
+  "$(printf '%s' "$CJSON" | jq -r 'has("members") and has("consensus") and has("dissent")')" "true"
+check "committee members carry model/ok/latencyMs/recommendations" \
+  "$(printf '%s' "$CJSON" | jq -r '.members[0]|(has("model") and has("ok") and has("latencyMs") and has("recommendations"))')" "true"
+# modelInfo.pm shape when committee is on: {committee[],chair,quorum}.
+PMI=$(printf '%s' "deepseek-v3.2,qwen-3.5,llama-4" | jq -R --argjson q 2 \
+  '{committee:(split(",")|map(gsub("^\\s+|\\s+$";""))|map(select(length>0))), chair:null, quorum:$q}')
+check "modelInfo.pm committee has 3 models" "$(printf '%s' "$PMI" | jq -r '.committee|length')" "3"
+check "modelInfo.pm chair null (no phase 2)" "$(printf '%s' "$PMI" | jq -r '.chair')" "null"
+check "modelInfo.pm quorum recorded"        "$(printf '%s' "$PMI" | jq -r '.quorum')" "2"
+
+# --- llm-usepod.sh: NO_VIRTUALS_FALLBACK emits NO Virtuals call (offline stub) ---
+# Token unset + a stub Virtuals llm.sh that TOUCHES a sentinel if invoked. With
+# NO_VIRTUALS_FALLBACK=1 the script must exit non-zero, print nothing, and NEVER
+# call the stub (sentinel absent) — preserving per-model attribution.
+NV_DIR="$(cd "$(dirname "$0")/.." && pwd)"   # scripts/
+NV_TMP="$(mktemp -d)"; mkdir -p "$NV_TMP/scripts"
+cp "$NV_DIR/llm-usepod.sh" "$NV_TMP/scripts/llm-usepod.sh"
+cat > "$NV_TMP/scripts/llm.sh" <<EOF
+#!/usr/bin/env bash
+cat >/dev/null
+touch "$NV_TMP/virtuals-was-called"
+echo '{"ok":"virtuals-stub"}'
+EOF
+chmod +x "$NV_TMP/scripts/llm.sh" "$NV_TMP/scripts/llm-usepod.sh"
+NV_OUT="$(USEPOD_TOKEN='' VIRTUALS_API_KEY='present' NO_VIRTUALS_FALLBACK=1 bash "$NV_TMP/scripts/llm-usepod.sh" 'ping' 2>/dev/null)"; NV_RC=$?
+check "NO_VIRTUALS_FALLBACK exits non-zero" "$NV_RC" "1"
+check "NO_VIRTUALS_FALLBACK emits no stdout" "$NV_OUT" ""
+check "NO_VIRTUALS_FALLBACK makes no Virtuals call" \
+  "$([ -f "$NV_TMP/virtuals-was-called" ] && echo called || echo none)" "none"
+# Control: WITHOUT the flag, the same setup DOES fall back to Virtuals (sentinel set).
+CTRL_TMP="$(mktemp -d)"; mkdir -p "$CTRL_TMP/scripts"
+cp "$NV_DIR/llm-usepod.sh" "$CTRL_TMP/scripts/llm-usepod.sh"
+cat > "$CTRL_TMP/scripts/llm.sh" <<EOF
+#!/usr/bin/env bash
+cat >/dev/null
+echo '{"ok":"virtuals-stub"}'
+EOF
+chmod +x "$CTRL_TMP/scripts/llm.sh" "$CTRL_TMP/scripts/llm-usepod.sh"
+CTRL_OUT="$(USEPOD_TOKEN='' VIRTUALS_API_KEY='present' bash "$CTRL_TMP/scripts/llm-usepod.sh" 'ping' 2>/dev/null)"
+check "without flag, fallback still reaches Virtuals" "$CTRL_OUT" '{"ok":"virtuals-stub"}'
+
+# --- llm-usepod.sh: optional price-ceiling headers built only when env set ---
+# The header-array construction lives in llm-usepod.sh; assert the exact array
+# logic here (curl is never invoked offline). Empty env -> no headers.
+build_price_headers() { # returns count of header tokens
+  local PRICE_HEADERS=()
+  [ -n "${USEPOD_MAX_PRICE_INPUT:-}" ]  && PRICE_HEADERS+=(-H "X-Pod-Max-Price-Input: ${USEPOD_MAX_PRICE_INPUT}")
+  [ -n "${USEPOD_MAX_PRICE_OUTPUT:-}" ] && PRICE_HEADERS+=(-H "X-Pod-Max-Price-Output: ${USEPOD_MAX_PRICE_OUTPUT}")
+  printf '%s' "${#PRICE_HEADERS[@]}"
+}
+check "no price ceilings -> 0 header tokens" "$(USEPOD_MAX_PRICE_INPUT='' USEPOD_MAX_PRICE_OUTPUT='' build_price_headers)" "0"
+check "both ceilings -> 4 header tokens"     "$(USEPOD_MAX_PRICE_INPUT=5 USEPOD_MAX_PRICE_OUTPUT=8 build_price_headers)" "4"
+check "one ceiling -> 2 header tokens"       "$(USEPOD_MAX_PRICE_INPUT=5 USEPOD_MAX_PRICE_OUTPUT='' build_price_headers)" "2"
+
 [ "$FAIL" -eq 0 ] && echo "selftest: ALL PASS" || { echo "selftest: FAILURES"; exit 1; }
