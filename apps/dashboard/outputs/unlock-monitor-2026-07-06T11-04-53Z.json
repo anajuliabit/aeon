@@ -1,0 +1,766 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Unlock Monitor — week of 2026-07-06"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "event_block",
+        "sep_1",
+        "crisis_block",
+        "sep_2",
+        "strain_block",
+        "sep_3",
+        "digestible_block",
+        "sep_4",
+        "trivial_block",
+        "sep_5",
+        "forced_block",
+        "sep_6",
+        "supply_read_block",
+        "sources_block"
+      ]
+    },
+    "event_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "event_heading",
+        "event_content"
+      ]
+    },
+    "event_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "This week's real event",
+        "level": "h2"
+      }
+    },
+    "event_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pump_badge",
+        "event_text_1",
+        "event_text_2"
+      ]
+    },
+    "pump_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "$PUMP",
+        "variant": "destructive"
+      }
+    },
+    "event_text_1": {
+      "type": "Text",
+      "props": {
+        "text": "12-month cliff expires. ~$135M / 1.8× daily vol, team+investor slice at zero cost basis. tape up 14% into it. fade the pump.",
+        "variant": "lead"
+      }
+    },
+    "event_text_2": {
+      "type": "Text",
+      "props": {
+        "text": "Cliff pattern: weakness usually starts ~30d prior, peak vol on the date, recovery 10–14d after. market isn't respecting it on tape yet.",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "crisis_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crisis_heading",
+        "crisis_item_pump"
+      ]
+    },
+    "crisis_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRISIS (>2.4× vol after recipient override)",
+        "level": "h2"
+      }
+    },
+    "crisis_item_pump": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pump_crisis_card"
+      ]
+    },
+    "pump_crisis_card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pump_crisis_heading",
+        "pump_crisis_stats",
+        "pump_crisis_text"
+      ]
+    },
+    "pump_crisis_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "$PUMP",
+        "level": "h3"
+      }
+    },
+    "pump_crisis_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "pump_stat_tokens",
+        "pump_stat_supply",
+        "pump_stat_30d",
+        "pump_stat_vol"
+      ]
+    },
+    "pump_stat_tokens": {
+      "type": "Stat",
+      "props": {
+        "label": "Cliff tokens",
+        "value": "82.5B"
+      }
+    },
+    "pump_stat_supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply expansion",
+        "value": "21.35%"
+      }
+    },
+    "pump_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d change",
+        "value": "+14.4%",
+        "trend": "up"
+      }
+    },
+    "pump_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h volume",
+        "value": "$74.9M"
+      }
+    },
+    "pump_crisis_text": {
+      "type": "Text",
+      "props": {
+        "text": "Cliff expiry this week · team+investor · 1.8× base vol → CRISIS after override",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "strain_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "strain_heading",
+        "red_item"
+      ]
+    },
+    "strain_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "STRAIN (1.0×–2.4×)",
+        "level": "h2"
+      }
+    },
+    "red_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "red_heading",
+        "red_stats",
+        "red_text"
+      ]
+    },
+    "red_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "$RED",
+        "level": "h3"
+      }
+    },
+    "red_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "red_stat_date",
+        "red_stat_tokens",
+        "red_stat_value",
+        "red_stat_vol",
+        "red_stat_mcap",
+        "red_stat_30d"
+      ]
+    },
+    "red_stat_date": {
+      "type": "Stat",
+      "props": {
+        "label": "Date",
+        "value": "Mon Jul 6"
+      }
+    },
+    "red_stat_tokens": {
+      "type": "Stat",
+      "props": {
+        "label": "Tokens",
+        "value": "40.85M"
+      }
+    },
+    "red_stat_value": {
+      "type": "Stat",
+      "props": {
+        "label": "Value",
+        "value": "$4.05M"
+      }
+    },
+    "red_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume ratio",
+        "value": "0.96× (borderline)"
+      }
+    },
+    "red_stat_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market cap",
+        "value": "$44M"
+      }
+    },
+    "red_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d change",
+        "value": "+5.3%",
+        "trend": "up"
+      }
+    },
+    "red_text": {
+      "type": "Text",
+      "props": {
+        "text": "Recipient mixed → market asleep. Thin book + neutral tape.",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "digestible_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "digestible_heading",
+        "linea_item",
+        "apt_item"
+      ]
+    },
+    "digestible_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DIGESTIBLE (0.3×–1.0×)",
+        "level": "h2"
+      }
+    },
+    "linea_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "linea_heading",
+        "linea_stats",
+        "linea_text"
+      ]
+    },
+    "linea_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "$LINEA",
+        "level": "h3"
+      }
+    },
+    "linea_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "linea_stat_value",
+        "linea_stat_supply",
+        "linea_stat_vol",
+        "linea_stat_30d"
+      ]
+    },
+    "linea_stat_value": {
+      "type": "Stat",
+      "props": {
+        "label": "Value",
+        "value": "$2.68M"
+      }
+    },
+    "linea_stat_supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply expansion",
+        "value": "4.47%"
+      }
+    },
+    "linea_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume ratio",
+        "value": "0.29×"
+      }
+    },
+    "linea_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d change",
+        "value": "+0.5%"
+      }
+    },
+    "linea_text": {
+      "type": "Text",
+      "props": {
+        "text": "Linear cadence dampens the single-day. Market asleep on the supply %.",
+        "variant": "body"
+      }
+    },
+    "apt_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "apt_heading",
+        "apt_stats",
+        "apt_text"
+      ]
+    },
+    "apt_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "$APT",
+        "level": "h3"
+      }
+    },
+    "apt_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "apt_stat_date",
+        "apt_stat_tokens",
+        "apt_stat_value",
+        "apt_stat_frequency",
+        "apt_stat_vol",
+        "apt_stat_30d"
+      ]
+    },
+    "apt_stat_date": {
+      "type": "Stat",
+      "props": {
+        "label": "Date",
+        "value": "Sat Jul 12"
+      }
+    },
+    "apt_stat_tokens": {
+      "type": "Stat",
+      "props": {
+        "label": "Tokens",
+        "value": "11.31M"
+      }
+    },
+    "apt_stat_value": {
+      "type": "Stat",
+      "props": {
+        "label": "Value",
+        "value": "~$7M"
+      }
+    },
+    "apt_stat_frequency": {
+      "type": "Stat",
+      "props": {
+        "label": "Frequency",
+        "value": "Monthly"
+      }
+    },
+    "apt_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume ratio",
+        "value": "0.23×"
+      }
+    },
+    "apt_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d change",
+        "value": "+5.5%",
+        "trend": "up"
+      }
+    },
+    "apt_text": {
+      "type": "Text",
+      "props": {
+        "text": "Foundation/investor/community/core recipients. Absorbable. Investor slice runs.",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trivial_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trivial_heading",
+        "io_item",
+        "hype_item"
+      ]
+    },
+    "trivial_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRIVIAL (flagged for pattern only)",
+        "level": "h2"
+      }
+    },
+    "io_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "io_heading",
+        "io_stats",
+        "io_text"
+      ]
+    },
+    "io_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "$IO",
+        "level": "h3"
+      }
+    },
+    "io_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "io_stat_date",
+        "io_stat_tokens",
+        "io_stat_value",
+        "io_stat_vol",
+        "io_stat_30d"
+      ]
+    },
+    "io_stat_date": {
+      "type": "Stat",
+      "props": {
+        "label": "Date",
+        "value": "Jul 11"
+      }
+    },
+    "io_stat_tokens": {
+      "type": "Stat",
+      "props": {
+        "label": "Tokens",
+        "value": "13.29M"
+      }
+    },
+    "io_stat_value": {
+      "type": "Stat",
+      "props": {
+        "label": "Value",
+        "value": "$2.34M"
+      }
+    },
+    "io_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume ratio",
+        "value": "0.23×"
+      }
+    },
+    "io_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d change",
+        "value": "+31%",
+        "trend": "up"
+      }
+    },
+    "io_text": {
+      "type": "Text",
+      "props": {
+        "text": "Absorbable, but +31% run into a scheduled unlock is textbook. One to watch, not one to short.",
+        "variant": "body"
+      }
+    },
+    "hype_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hype_heading",
+        "hype_stats",
+        "hype_text"
+      ]
+    },
+    "hype_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "$HYPE",
+        "level": "h3"
+      }
+    },
+    "hype_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "hype_stat_scheduled",
+        "hype_stat_ratio",
+        "hype_stat_liquidity"
+      ]
+    },
+    "hype_stat_scheduled": {
+      "type": "Stat",
+      "props": {
+        "label": "Scheduled",
+        "value": "$32.4M"
+      }
+    },
+    "hype_stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Market cap ratio",
+        "value": "<0.5%"
+      }
+    },
+    "hype_stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity profile",
+        "value": "Top-10"
+      }
+    },
+    "hype_text": {
+      "type": "Text",
+      "props": {
+        "text": "Linear cadence. Absorbable at top-10 liquidity.",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forced_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forced_heading",
+        "ftx_item",
+        "mtgox_item"
+      ]
+    },
+    "forced_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "FORCED",
+        "level": "h2"
+      }
+    },
+    "ftx_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ftx_heading",
+        "ftx_text"
+      ]
+    },
+    "ftx_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "FTX",
+        "level": "h3"
+      }
+    },
+    "ftx_text": {
+      "type": "Text",
+      "props": {
+        "text": "Next tranche record date Jun 16, distributions commence Jul 31 (outside this week). Reserve cut from $2.4B → $1.8B. Next issue's problem.",
+        "variant": "body"
+      }
+    },
+    "mtgox_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mtgox_heading",
+        "mtgox_text"
+      ]
+    },
+    "mtgox_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Mt. Gox",
+        "level": "h3"
+      }
+    },
+    "mtgox_text": {
+      "type": "Text",
+      "props": {
+        "text": "Deadline extended to Oct 31. Kicked again. Not this week.",
+        "variant": "body"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "supply_read_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "supply_read_heading",
+        "supply_read_text"
+      ]
+    },
+    "supply_read_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Supply read",
+        "level": "h2"
+      }
+    },
+    "supply_read_text": {
+      "type": "Text",
+      "props": {
+        "text": "The week is one event: pump's 12-month cliff unwind. 1.8× vol on the base metric, team+investor recipient, tape running up into it — the fade-pump setup written in the textbook. Everything else absorbs. Red is the only small-cap where the ratio flirts with strain, and even there the tape is flat enough that \"asleep\" beats \"priced-in.\" Court-ordered supply lands next issue.",
+        "variant": "body"
+      }
+    },
+    "sources_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "tokenomist=partial, defillama=fail(403), cryptorank=partial, coingecko=ok, cryip=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
