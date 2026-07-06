@@ -34,4 +34,4 @@
 | ISS-015 | vibecoding-digest can't reach Reddit — prefetch + WebFetch both blocked | high | wontfix — vibecoding-digest + reddit-digest disabled (Reddit API unavailable to operator) | 2026-06-03 |
 | ISS-023 | token-alert: missing_pattern — pattern not found in live-day log | high | — | 2026-07-05 |
 | ISS-024 | skill-health: missing_pattern — 26 consecutive failures, 0.26 success_rate | high | — | 2026-07-05 |
-| ISS-026 | heartbeat: missing_pattern (timing — skill-evals dispatched before 08:00 UTC morning tick) | high | skill-evals rescheduled to 22:00 UTC (see ISS-026 aeon.yml comment) | 2026-07-05 |
+| ISS-026 | heartbeat: missing_pattern (timing — skill-evals dispatched before 08:00 UTC morning tick) | high | https://github.com/aeonframework/aeon/pull/151 | 2026-07-02 |
