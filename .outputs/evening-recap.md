@@ -1,29 +1,23 @@
-*Evening Recap — 2026-07-05*
-_TL;DR: self-improve shipped the 12:00 batch unblock (PR #156), fork-skill-digest's 168h stuck carry resolved — two persistent items off the board._
+*Evening Recap — 2026-07-06*
+_TL;DR: two PRs merged and a best-ever 99.6% sr week — 0/4 SMART actions slipped and SLX recut sits untouched day 12, net wash_
 
 *Headlines:*
-- self-improve — PR #156 removes usepod_model lines, unblocks 12:00 batch (6 skills day-5 dark) · https://github.com/anajuliabit/aeon/pull/156
-- fork-cohort — 201 forks, 15 POWER drops (systematic default-config shed) · articles/fork-cohort-2026-07-05.md
-- github-trending — alibaba/page-agent top; skills-as-primitive d7 multi-region (Alibaba+MS, 6 labs) · .outputs/github-trending.md
-- daily-routine — bounce day-5 tapers (38/75), SLX catastrophic -46%, GITLAWB reversal · .outputs/daily-routine.md
-- list-digest — Vitalik 2028+ ETH roadmap bearish-on-tape; Tempo/Canton invited to eat RWA lunch · https://x.com/DefiIgnas/status/2073480431887056958
+- [weekly-review] — 99.6% sr (+11.6pp), 7 PRs merged, 3 issues resolved; 0/4 SMART actions slipped verbatim · articles/weekly-review-2026-07-06.md
+- [PR #156 MERGED] — `usepod_model:` dead lines removed aeon.yml L155/162/171; unblocks 12:00 UTC batch (dark 8d) · https://github.com/anajuliabit/aeon/pull/156
+- [PR #154 MERGED] — ISS-026 closed, heartbeat missing_pattern INDEX flip done · https://github.com/anajuliabit/aeon/pull/154
+- [deal-flow] — Venice AI $65M @ $1B unicorn (Dragonfly + Coinbase Ventures lead, $70M ARR); strategics took megaround leads · .tmp/deal-flow/msg.md
+- [unlock-monitor] — $PUMP CRISIS: 82.5B tokens $135M cliff (1.8× vol, 21.35% supply expand) — fade-pump · .tmp/unlock-monitor/msg.md
 
 *Notable:*
-- fork-skill-digest — 168h stuck carry resolved; Sun re-tick succeeded 21:06Z (first attempt failed 20:18Z)
-- token-alert — GITLAWB -17.25% reversal fires, snaps 2-day trigger streak
-- skill-health — heartbeat + skill-freshness DEGRADED→WARNING, skill-graph HEALTHY; 5-day streak broken
-- reflect — MEMORY.md 57L→56L, 9 durable patterns added, topic files updated
+- [skill-security-scan] — NOCHANGE, 4 persistent HIGH (workflow_dispatch L86/94/96/812) · articles/security-scan-2026-07-06.md
+- [btc-levels ×2] — $63,500 reclaim confirmed 01:29Z; $63,801 hold 17:23Z, next gate $65,900
+- [skill-health] — 21 DEGRADED day 13, ISS-025 systemic unchanged; notify cadence fired
+- [list-digest] — @Flowslikeosmo CARDS -46% self-audit mirrors open SLX position magnitude exactly
+- [action-converter] — 5 actions: ISS-025 capture-step PR, SLX recut, cron-gap, PR #149 retire, MEMORY flip
 
 *Decisions for tomorrow:*
-- Merge PR #156 — unblocks 12:00 batch (top priority) · https://github.com/anajuliabit/aeon/pull/156
-- Merge or close PR #149 (168h stall, #155 may supersede) · https://github.com/anajuliabit/aeon/pull/149
-- Merge PR #154 (ISS-026 INDEX flip, 51h stall) · https://github.com/anajuliabit/aeon/pull/154
-- SLX recut — day-11 -46% vs $0.475 entry, operator call required
-- Ship ISS-025 capture-step PR before Mon 19:00Z weekly-review
+- PR #149 vs #155 (docs(skill-graph)): day-8 stall vs day-2 supersede — merge one, close the other · https://github.com/anajuliabit/aeon/pull/149
+- SLX day-12 -46% vs entry $0.4753 → $0.256: recut or close?
+- ISS-025 capture-step (aeon.yml:479-493): weekly-review deadline slipped T-0; route to self-improve by 7-07 12:00Z
 
-*Blockers:*
-- aixbt-pulse — dark day-2, last_success 6-28T21:21Z, twice-daily 09/21 broken
-- XAI quota — exhausted day-20, operator top-up pending
-- Operator on-chain config — day-28 (ALCHEMY/ETHERSCAN absent)
-
-_+18 routine runs collapsed · sources: log=ok cron-state=ok_
+_+5 routine runs collapsed · sources: log=ok cron-state=ok_

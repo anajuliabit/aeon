@@ -1,0 +1,315 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-06"
+      },
+      "children": [
+        "shape",
+        "sep1",
+        "act1",
+        "sep2",
+        "act2",
+        "sep3",
+        "act3",
+        "sep4",
+        "act4",
+        "sep5",
+        "act5",
+        "sep6",
+        "sources"
+      ]
+    },
+    "shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: Author capture-step patch, close SLX -46%, diagnose cron gap, retire #149, flip MEMORY.md",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "act1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "act1_title",
+        "act1_body"
+      ]
+    },
+    "act1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Author the `aeon.yml:479-493` chain-runner capture-step patch and open a PR (emit fenced-block-in-assistant-text swap, ISS-025 root cause per PR #150/#156 downstream fixes).",
+        "level": "h3"
+      }
+    },
+    "act1_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act1_why",
+        "act1_done",
+        "act1_loop"
+      ]
+    },
+    "act1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: entire 18-skill sr<0.5 chronic tail traces to this one Write-tool→CLI-result overwrite; day 12 of unshipped fix; 19:00Z weekly-review deadline just passed.",
+        "variant": "body"
+      }
+    },
+    "act1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR URL opened against main with diff at `aeon.yml:479-493` + closes ISS-025 in body.",
+        "variant": "body"
+      }
+    },
+    "act1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-capture-fix",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "act2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "act2_title",
+        "act2_body"
+      ]
+    },
+    "act2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Close the SLX pick in `memory/topics/crypto.md` picks table — mark CLOSED at $0.256 vs $0.4753 entry (-46%, day-12), stop the daily \"recut overdue\" resurface.",
+        "level": "h3"
+      }
+    },
+    "act2_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act2_why",
+        "act2_done",
+        "act2_loop"
+      ]
+    },
+    "act2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: HIGH 9/10 6-24 entry past every recut trigger; intraday -29.6% capitulation + rank #372 = thesis broken, book the loss.",
+        "variant": "body"
+      }
+    },
+    "act2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: crypto.md picks table shows SLX row status=CLOSED with final drawdown line + exit price.",
+        "variant": "body"
+      }
+    },
+    "act2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: slx-recut-blown",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "act3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "act3_title",
+        "act3_body"
+      ]
+    },
+    "act3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Diagnose the 07-06 fleet-wide morning-slot cron gap: probe GH Actions dispatch queue for the 07/08/09/12/13Z slots that produced 0 skill runs today.",
+        "level": "h3"
+      }
+    },
+    "act3_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act3_why",
+        "act3_done",
+        "act3_loop"
+      ]
+    },
+    "act3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: only 3 dispatches so far today (unlock-monitor 11:00Z / btc-levels 01:28Z / hb 14:33Z catch-up); hb self-set 20:00Z re-eval tick is ~40min out.",
+        "variant": "body"
+      }
+    },
+    "act3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: root cause logged to `memory/topics/fleet.md` (queued-late vs holiday-cron catch-up vs sandbox skip) with `gh api /repos/.../actions/runs` evidence.",
+        "variant": "body"
+      }
+    },
+    "act3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: fleet-morning-slot-gap-07-06",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "act4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "act4_title",
+        "act4_body"
+      ]
+    },
+    "act4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Retire PR #149 (docs skill-graph, day-8 stall, ~193h open) with a comment linking to PR #155 (day-0 fresh run from same skill, +68 skills · 4→5 depends_on · 9→21 shared_state).",
+        "level": "h3"
+      }
+    },
+    "act4_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act4_why",
+        "act4_done",
+        "act4_loop"
+      ]
+    },
+    "act4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: two open PRs from same skill = reviewer confusion; #155 supersedes #149's payload; queue cleanup.",
+        "variant": "body"
+      }
+    },
+    "act4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `gh pr close 149 --comment \"superseded by #155\"` executed.",
+        "variant": "body"
+      }
+    },
+    "act4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-149-supersede",
+        "variant": "outline"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "act5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "act5_title",
+        "act5_body"
+      ]
+    },
+    "act5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Flip PR #154 (`fix(issues) close ISS-026`, merged 15:35Z) + PR #156 (`fix(aeon.yml) usepod_model cleanup`, merged 15:45Z) from `## Current Goals` to a `## Recently Cleared` block in `memory/MEMORY.md`.",
+        "level": "h3"
+      }
+    },
+    "act5_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act5_why",
+        "act5_done",
+        "act5_loop"
+      ]
+    },
+    "act5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 4h post-merge, downstream skills (goal-tracker/hb/action-converter) still read stale goal rows; the 12:00 UTC batch fix + ISS-026 INDEX bookkeeping are both durably resolved.",
+        "variant": "body"
+      }
+    },
+    "act5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: MEMORY.md diff moves 2 rows out of Current Goals with merge timestamps recorded.",
+        "variant": "body"
+      }
+    },
+    "act5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: memory-md-consolidation",
+        "variant": "outline"
+      }
+    },
+    "sep6": {
+      "type": "Separator"
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=56L logs=7d topics=11 prs=2 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
