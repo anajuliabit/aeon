@@ -1,22 +1,27 @@
-*GitHub Trending — 2026-07-01*
+*GitHub Trending — 2026-07-05*
 
-*Top pick* — [google/agents-cli](https://github.com/google/agents-cli)
-Google ships first-party agent-building CLI with a `skills/` primitive — parallel evolution to Anthropic's Agent SDK. Same shape, different vendor.
+*Top pick* — [alibaba/page-agent](https://github.com/alibaba/page-agent)
+First Chinese-lab entry into the agent-runtime layer stack — Anthropic/OpenAI/Google/Meta convergence goes multi-region on day-7 of the skills-as-primitive thread.
 
 *AI/ML*
-• [google/agents-cli](https://github.com/google/agents-cli) — ★ 445 today (4.5k total) · Python · [ACCELERATING]
-Skills-as-primitive lands at Google Cloud — v0.6.1 shipped 6-28, third release in a week, cadence matches Anthropic SDK's day-2 momentum.
+• [alibaba/page-agent](https://github.com/alibaba/page-agent) — ★ 742t (23k total) · TS · [ACCELERATING]
+In-page GUI agent running *inside* the webpage instead of driving Chrome from outside — inverts the chrome-devtools-mcp pattern.
+
+• [Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily) — ★ 718t (16k total) · Rust · [ACCELERATING]
+Meeting assistant that transcribes/summarises locally in Rust — never uploads audio; extends sovereignty-stack thread day-4.
+
+• [dotnet/skills](https://github.com/dotnet/skills) — ★ 59t (3.9k total) · C# · [ACCELERATING]
+Microsoft's official skills registry for .NET agents — first-party Redmond entering skills-as-primitive convergence day-7.
 
 *Devtools*
-• [ogulcancelik/herdr](https://github.com/ogulcancelik/herdr) — ★ 486 today (9.2k total) · Rust · [ACCELERATING]
-Terminal-native multiplexer for running many agents side-by-side — the tmux answer for `claude` / `codex` / `aider` panes; preview build yesterday.
+• [ogulcancelik/herdr](https://github.com/ogulcancelik/herdr) — ★ 707t (12k total) · Rust · [ACCELERATING]
+Terminal multiplexer for parallel agent sessions — each pane is a separate LLM you can herd, tmux-shaped.
 
-• [usestrix/strix](https://github.com/usestrix/strix) — ★ 515 today (28.5k total) · Python · [ACCELERATING]
-AI pentest agent hunting live exploits (not scanner-lint) — 6× baseline spike with no release since 6-09, viral-organic not driver-driven.
+• [CoplayDev/unity-mcp](https://github.com/CoplayDev/unity-mcp) — ★ 69t (12k total) · C# · [ACCELERATING]
+MCP server exposing Unity Editor's asset+script pipeline to agents — extends MCP-momentum thread into game-engine territory.
 
-*Web/Apps*
-• [facebook/astryx](https://github.com/facebook/astryx) — ★ 364 today (2k total) · TypeScript · [RETURNING]
-Meta's open design system built explicitly "agent-ready" — v0.1.2 shipped 6-29, first-party framework declaring agents as a first-class consumer.
+• [crynta/terax-ai](https://github.com/crynta/terax-ai) — ★ 62t (8.2k total) · TS · [ACCELERATING]
+7MB terminal-first AI workspace — the anti-VS-Code, ships as a single lightweight TUI binary.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/19 (drops: 2 fake-star pattern, 5 HOLDOVER, 4 filter, 4 subthreshold)
+sources: trending=ok · gh_api=ok · kept 6/18

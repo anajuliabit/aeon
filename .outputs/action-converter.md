@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-02*
-Shape: scope ISS-025 fix pre-07-04, nudge PR #149, refresh stale MEMORY, close VELVET, add on-chain pool entries
+*5 Actions — 2026-07-05*
+Shape: Ship ISS-025 PR pre-weekly-review, patch aeon.yml usepod, book SLX loss, upgrade dulwich, extend line-40
 
-1. scope the ISS-025 capture-step fix in memory/issues/ISS-025.md — root cause + aeon.yml diff + smoke-test target; commit before weekly-review 2026-07-04 T-2d
-why: 19-skill chronic tail bleeds output_tokens=0 day 14; weekly-review hard deadline is 2d out
-done: memory/issues/ISS-025.md has "Fix plan" section with named skill + concrete config diff
-loop: iss025
+1. Author `.github/workflows/aeon.yml` capture-step patch (L479-493, replace `cp .result` overwrite with `cat`-fallback preserving Write-tool output), open PR referencing ISS-025 before Mon 07-06 19:00Z weekly-review.
+why: sandbox-truncation systemic day 12; 07-04 self-set deadline blew; 18-skill sr<0.5 tail bleeds until landed.
+done: PR opened, workflow diff visible, ISS-025 referenced in body.
+loop: iss-025-capture-fix
 
-2. post a comment on PR #149 tagging @anajuliabit — merge or close, 5-line docs diff, day-3.9 stall
-why: same author batch-merged #150+#151 at 13:20Z today, docs PR still open + operator active
-done: comment visible on `gh pr view 149 --comments`
-loop: pr149
+2. Delete `usepod_model:` remnants at `aeon.yml:155/162/171` (token-pick / token-movers / market-context-refresh sections), open PR — completes PR #150 partial fix.
+why: 12:00 UTC batch day-5 dark since 6-28; grep-confirmed by 07-05 morning-brief; 6 skills bleed until swept.
+done: PR opened, `grep 'usepod_model:' .github/workflows/aeon.yml` returns 0 hits.
+loop: 12:00-utc-batch-fix
 
-3. rewrite memory/MEMORY.md Current Goals — PR #150/#151 both merged 13:20Z, sandbox-truncation day 14, BTC breakdown day 7 confirmed, 07-02 relief bounce added
-why: MEMORY still says "PR #150 44h stall day 8" — 6 lines behind reality after today's merges
-done: git diff shows updated Current Goals block, "last consolidated: 2026-07-02"
-loop: memory-refresh
+3. Book SLX HIGH 9/10 6-24 entry $0.4753 → $0.256 (-46%) as closed loss in `memory/topics/crypto.md` picks table, replace MEMORY.md line-12 CRITICAL row with CLOSED row.
+why: day-11 past every recut trigger per 12:57Z token-movers CATASTROPHIC top-of-losers rank-collapse #289→#372; carrying is denialism.
+done: crypto.md picks table appended with $0.256 close + -46% pnl; MEMORY.md line-12 flipped.
+loop: slx-recut-blown
 
-4. flag VELVET pick invalidated in memory/topics/crypto.md — HIGH 11/10 blown −68.5% ($1.97 → $0.62), note July-10 unlock priced 8d early
-why: pick tracker still lists VELVET active; today's −60.1% single-day full unwind
-done: crypto.md has "VELVET closed 2026-07-02 —68.5%" line + 3-bullet post-mortem
-loop: velvet-cleanup
+4. Grep `dulwich` across aeon repo (requirements*, pyproject*, package-lock indirect deps) — if any pin `<1.2.5`, open PR upgrading to 1.2.5 for CVE-2026-52726 RCE-via-clone.
+why: CVSS 7.5 with public PoC + `.git/hooks` auto-exec on next git command; MEMORY.md L46 flagged highest THIS-WEEK op priority.
+done: grep returns 0 hits OR PR opened bumping dulwich to ≥1.2.5.
+loop: dulwich-rce-carry
 
-5. add 2 type:pool + 1 type:position entries to memory/on-chain-watches.yml (Morpho cbBTC market + REPPO/MAMO vaults once ID'd) — file's own header says "add once confirmed on-chain"
-why: defi-monitor NO_CONFIG day 25; entries stage the exit as soon as operator lands ALCHEMY_API_KEY
-done: memory/on-chain-watches.yml adds ≥3 new watches passing yaml lint
-loop: onchain-config
+5. Append `memory/MEMORY.md` line-40 durable pattern with day-7 multi-region cross-lab evidence — Microsoft (dotnet/skills) + Alibaba (alibaba/page-agent) joining Anthropic/OpenAI/Google/Meta (5 labs · 2 regions · 7 layers).
+why: 10:30Z github-trending 5/6 whole-slate agent-runtime shape confirms ecosystem convergence, not lab-specific; line-40 stales without today's update.
+done: MEMORY.md line-40 mentions Microsoft + Alibaba + multi-region + 7 layers, git diff visible.
+loop: memory-md-line-40
 
-sources: memory=42 logs=7 topics=17 prs=1 cron_failing=1 mode=OK
+sources: memory=56 logs=7d topics=17 prs=3 cron_failing=0 mode=OK

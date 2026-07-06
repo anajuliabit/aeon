@@ -1,0 +1,538 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-04"
+      },
+      "children": [
+        "verdict_section",
+        "sources_line",
+        "sep1",
+        "patch_today_section",
+        "sep2",
+        "patch_week_section",
+        "sep3",
+        "monitor_section"
+      ]
+    },
+    "verdict_section": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: 14 npm malware (supply-chain wave resumed, 24h quiet window closed). 4 to schedule. 1 to monitor.",
+        "variant": "lead"
+      }
+    },
+    "sources_line": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch_today_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_today_heading",
+        "batch1_card",
+        "batch2_card",
+        "batch3_card"
+      ]
+    },
+    "patch_today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h3"
+      }
+    },
+    "batch1_card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "batch1_link",
+        "batch1_timestamp",
+        "batch1_packages",
+        "batch1_action"
+      ]
+    },
+    "batch1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "5-pkg TS/API-node-utility batch",
+        "href": "https://github.com/advisories/GHSA-84mg-p866-528x",
+        "source": "npm malware"
+      }
+    },
+    "batch1_timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "Same-minute 07-03 16:06Z",
+        "variant": "caption"
+      }
+    },
+    "batch1_packages": {
+      "type": "Text",
+      "props": {
+        "text": "typescript-util-core, ts-node-utils, api-node-utils, api-ts-utils, web-api-node",
+        "variant": "caption"
+      }
+    },
+    "batch1_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Yank any workspace/lockfile hits; rotate creds exposed during install."
+      }
+    },
+    "batch2_card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "batch2_link",
+        "batch2_timestamp",
+        "batch2_extends",
+        "batch2_packages",
+        "batch2_action"
+      ]
+    },
+    "batch2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "4-pkg SQL/DB batch",
+        "href": "https://github.com/advisories/GHSA-9f9w-wg5j-m53j",
+        "source": "npm malware"
+      }
+    },
+    "batch2_timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "Same-minute 07-03 15:59Z",
+        "variant": "caption"
+      }
+    },
+    "batch2_extends": {
+      "type": "Text",
+      "props": {
+        "text": "Extends 7-02 db-utility cluster",
+        "variant": "muted"
+      }
+    },
+    "batch2_packages": {
+      "type": "Text",
+      "props": {
+        "text": "@sql-trigger/nodesql, @sql-access/nodesql, @sqlite-node/createsql, @node-cloud/create",
+        "variant": "caption"
+      }
+    },
+    "batch2_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Yank; rotate DB creds."
+      }
+    },
+    "batch3_card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "batch3_link",
+        "batch3_timestamp",
+        "batch3_pair",
+        "batch3_stragglers",
+        "batch3_action"
+      ]
+    },
+    "batch3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "decode-sdks pair",
+        "href": "https://github.com/advisories/GHSA-gv37-287r-g9vx",
+        "source": "npm malware"
+      }
+    },
+    "batch3_timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "15:37Z",
+        "variant": "caption"
+      }
+    },
+    "batch3_pair": {
+      "type": "Text",
+      "props": {
+        "text": "Pair: decode-sdks, @jacobtan/decode-sdk",
+        "variant": "caption"
+      }
+    },
+    "batch3_stragglers": {
+      "type": "Text",
+      "props": {
+        "text": "3 singleton stragglers: @lodash-en/lodash-en, @antoncarlos1/nodelamp, alder_morrgan",
+        "variant": "caption"
+      }
+    },
+    "batch3_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Yank; rotate."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch_week_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_week_heading",
+        "cve1_card",
+        "cve2_card",
+        "cve3_card",
+        "cve4_card"
+      ]
+    },
+    "patch_week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h3"
+      }
+    },
+    "cve1_card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve1_link",
+        "cve1_package",
+        "cve1_metrics",
+        "cve1_desc",
+        "cve1_action"
+      ]
+    },
+    "cve1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-52726",
+        "href": "https://github.com/advisories/GHSA-gfhv-vqv2-4544"
+      }
+    },
+    "cve1_package": {
+      "type": "Badge",
+      "props": {
+        "text": "dulwich (pip)",
+        "variant": "secondary"
+      }
+    },
+    "cve1_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve1_cvss",
+        "cve1_epss",
+        "cve1_poc"
+      ]
+    },
+    "cve1_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.5"
+      }
+    },
+    "cve1_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.004"
+      }
+    },
+    "cve1_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "public PoC",
+        "variant": "destructive"
+      }
+    },
+    "cve1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "RCE via cloned repo writing `.git/hooks`, no user interaction",
+        "variant": "body"
+      }
+    },
+    "cve1_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade dulwich to ≥1.2.5."
+      }
+    },
+    "cve2_card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve2_link",
+        "cve2_package",
+        "cve2_metric",
+        "cve2_desc",
+        "cve2_action"
+      ]
+    },
+    "cve2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49250",
+        "href": "https://github.com/advisories/GHSA-525m-7f82-2mf7"
+      }
+    },
+    "cve2_package": {
+      "type": "Badge",
+      "props": {
+        "text": "@conform-to/dom (npm)",
+        "variant": "secondary"
+      }
+    },
+    "cve2_metric": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.7"
+      }
+    },
+    "cve2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "CPU-exhaustion DoS via many unique form fields",
+        "variant": "body"
+      }
+    },
+    "cve2_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade @conform-to/dom to ≥1.19.4."
+      }
+    },
+    "cve3_card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve3_link",
+        "cve3_package",
+        "cve3_metric",
+        "cve3_desc",
+        "cve3_action"
+      ]
+    },
+    "cve3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49360",
+        "href": "https://github.com/advisories/GHSA-rh62-j648-g5qc"
+      }
+    },
+    "cve3_package": {
+      "type": "Badge",
+      "props": {
+        "text": "recce (pip)",
+        "variant": "secondary"
+      }
+    },
+    "cve3_metric": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.8"
+      }
+    },
+    "cve3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth SQL exec + local file R/W on DuckDB backend",
+        "variant": "body"
+      }
+    },
+    "cve3_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade recce to ≥1.50.0."
+      }
+    },
+    "cve4_card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve4_link",
+        "cve4_package",
+        "cve4_metric",
+        "cve4_desc",
+        "cve4_action"
+      ]
+    },
+    "cve4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49253",
+        "href": "https://github.com/advisories/GHSA-38j7-23hf-9mhc"
+      }
+    },
+    "cve4_package": {
+      "type": "Badge",
+      "props": {
+        "text": "electerm (npm)",
+        "variant": "secondary"
+      }
+    },
+    "cve4_metric": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.1"
+      }
+    },
+    "cve4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Malicious SSH server → arbitrary file write (Zmodem/Trzsz)",
+        "variant": "body"
+      }
+    },
+    "cve4_action": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "message": "Covered by yesterday's electerm ≥3.11.11 upgrade."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "monitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_heading",
+        "monitor_item"
+      ]
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h3"
+      }
+    },
+    "monitor_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor_link",
+        "monitor_package",
+        "monitor_metrics",
+        "monitor_desc",
+        "monitor_action"
+      ]
+    },
+    "monitor_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-6g2f-w7g3-77vf",
+        "href": "https://github.com/advisories/GHSA-6g2f-w7g3-77vf"
+      }
+    },
+    "monitor_package": {
+      "type": "Badge",
+      "props": {
+        "text": "9router (npm)",
+        "variant": "secondary"
+      }
+    },
+    "monitor_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_cvss",
+        "monitor_patch_status"
+      ]
+    },
+    "monitor_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.5"
+      }
+    },
+    "monitor_patch_status": {
+      "type": "Badge",
+      "props": {
+        "text": "no patch",
+        "variant": "destructive"
+      }
+    },
+    "monitor_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Incomplete-fix bypass of CVE-2026-46339 via Host header",
+        "variant": "body"
+      }
+    },
+    "monitor_action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Header-based access control isn't trustable; block proxied ingress until vendor ships."
+      }
+    }
+  }
+}

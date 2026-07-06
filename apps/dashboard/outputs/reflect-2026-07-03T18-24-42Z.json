@@ -1,0 +1,513 @@
+{
+  "root": "card_reflect",
+  "state": {},
+  "elements": {
+    "card_reflect": {
+      "type": "Card",
+      "props": {
+        "title": "reflect — Memory Consolidated 2026-07-03",
+        "description": "Daily consolidation: deduped drift, market breakout, system failures, patterns emerging"
+      },
+      "children": [
+        "section_memory",
+        "sep_1",
+        "section_market",
+        "sep_2",
+        "section_systems",
+        "sep_3",
+        "section_watchlist",
+        "sep_4",
+        "section_patterns",
+        "sep_5",
+        "section_tracking"
+      ]
+    },
+    "section_memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_memory",
+        "stat_memory_before",
+        "stat_memory_after",
+        "stat_memory_dedup",
+        "text_memory_note"
+      ]
+    },
+    "heading_memory": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory Management",
+        "level": "h3"
+      }
+    },
+    "stat_memory_before": {
+      "type": "Stat",
+      "props": {
+        "label": "MEMORY.md before",
+        "value": "53L"
+      }
+    },
+    "stat_memory_after": {
+      "type": "Stat",
+      "props": {
+        "label": "MEMORY.md after",
+        "value": "47L"
+      }
+    },
+    "stat_memory_dedup": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines deduped from 7-02 drift",
+        "value": "7L"
+      }
+    },
+    "text_memory_note": {
+      "type": "Text",
+      "props": {
+        "text": "Consolidation complete — rewritten and deduplicated",
+        "variant": "caption"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_market": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_market",
+        "grid_btc",
+        "grid_eth_sol",
+        "grid_etf"
+      ]
+    },
+    "heading_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Movements — Key Breakouts",
+        "level": "h3"
+      }
+    },
+    "grid_btc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_btc_breakout",
+        "stat_btc_7day",
+        "stat_btc_close_7_02",
+        "stat_btc_range_today"
+      ]
+    },
+    "text_btc_breakout": {
+      "type": "Text",
+      "props": {
+        "text": "BTC 7-day breakdown streak BROKEN",
+        "variant": "lead"
+      }
+    },
+    "stat_btc_7day": {
+      "type": "Stat",
+      "props": {
+        "label": "First close ≥$60,500 in days",
+        "value": "8d"
+      }
+    },
+    "stat_btc_close_7_02": {
+      "type": "Stat",
+      "props": {
+        "label": "7-02 close",
+        "value": "$61,487"
+      }
+    },
+    "stat_btc_range_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Day-2 hold range (today)",
+        "value": "$61.3k–$62.0k"
+      }
+    },
+    "grid_eth_sol": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_eth_reclaim",
+        "text_sol_leadership"
+      ]
+    },
+    "stat_eth_reclaim": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH first-week-reclaim",
+        "value": "$1,700"
+      }
+    },
+    "text_sol_leadership": {
+      "type": "Text",
+      "props": {
+        "text": "SOL leadership continues",
+        "variant": "body"
+      }
+    },
+    "grid_etf": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_etf_note",
+        "stat_etf_net_in",
+        "text_etf_streak_break"
+      ]
+    },
+    "text_etf_note": {
+      "type": "Text",
+      "props": {
+        "text": "ETF Activity",
+        "variant": "body"
+      }
+    },
+    "stat_etf_net_in": {
+      "type": "Stat",
+      "props": {
+        "label": "Net inflow (breakout)",
+        "value": "+$222M"
+      }
+    },
+    "text_etf_streak_break": {
+      "type": "Text",
+      "props": {
+        "text": "Breaks 10-day outflow streak",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_systems": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_systems",
+        "alert_batch_failure",
+        "text_batch_details",
+        "stat_skills_dark",
+        "stat_dead_slots"
+      ]
+    },
+    "heading_systems": {
+      "type": "Heading",
+      "props": {
+        "text": "System Status",
+        "level": "h3"
+      }
+    },
+    "alert_batch_failure": {
+      "type": "Alert",
+      "props": {
+        "title": "12:00 UTC batch — First live test FAILED",
+        "message": "Post PR #150 deployment failure",
+        "type": "error"
+      }
+    },
+    "text_batch_details": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause deeper than usepod_model→model change. Wed skill-analytics 18:30Z will formalize investigation.",
+        "variant": "caption"
+      }
+    },
+    "stat_skills_dark": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills dark since 6-28",
+        "value": "6"
+      }
+    },
+    "stat_dead_slots": {
+      "type": "Stat",
+      "props": {
+        "label": "Additional dead slots",
+        "value": "3"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_watchlist": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_watchlist",
+        "grid_gitlawb",
+        "grid_watchlist_overall",
+        "grid_well_memcore"
+      ]
+    },
+    "heading_watchlist": {
+      "type": "Heading",
+      "props": {
+        "text": "Watchlist Performance",
+        "level": "h3"
+      }
+    },
+    "grid_gitlawb": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_gitlawb_title",
+        "stat_gitlawb_gain",
+        "text_gitlawb_note"
+      ]
+    },
+    "text_gitlawb_title": {
+      "type": "Text",
+      "props": {
+        "text": "GITLAWB",
+        "variant": "lead"
+      }
+    },
+    "stat_gitlawb_gain": {
+      "type": "Stat",
+      "props": {
+        "label": "1d gain (trigger fired)",
+        "value": "+27.38%",
+        "trend": "up"
+      }
+    },
+    "text_gitlawb_note": {
+      "type": "Text",
+      "props": {
+        "text": "Largest 1d gain of watchlist window",
+        "variant": "caption"
+      }
+    },
+    "grid_watchlist_overall": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_watchlist_day2",
+        "stat_watchlist_median"
+      ]
+    },
+    "text_watchlist_day2": {
+      "type": "Text",
+      "props": {
+        "text": "Watchlist whole-green day-2",
+        "variant": "body"
+      }
+    },
+    "stat_watchlist_median": {
+      "type": "Stat",
+      "props": {
+        "label": "Median gain",
+        "value": "+6.07%",
+        "trend": "up"
+      }
+    },
+    "grid_well_memcore": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_well_vol",
+        "stat_memcore_arc"
+      ]
+    },
+    "stat_well_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "WELL vol (closes 6-30 spike arc)",
+        "value": "1.02×"
+      }
+    },
+    "stat_memcore_arc": {
+      "type": "Stat",
+      "props": {
+        "label": "M MemeCore 3-day arc",
+        "value": "+130%",
+        "trend": "up"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_patterns": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_patterns",
+        "text_patterns_intro",
+        "badge_researcher_batch",
+        "badge_sovereignty_stack",
+        "badge_memory_eval",
+        "badge_supply_chain_quiet",
+        "text_xai_note"
+      ]
+    },
+    "heading_patterns": {
+      "type": "Heading",
+      "props": {
+        "text": "New Durable Patterns",
+        "level": "h3"
+      }
+    },
+    "text_patterns_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Emerging trends across skill runs and market activity:",
+        "variant": "body"
+      }
+    },
+    "badge_researcher_batch": {
+      "type": "Badge",
+      "props": {
+        "text": "Solo-researcher mega-batch: Fission 7-01 9-CVE + OpenClaw 7-03 23-CVE (coordinated)",
+        "variant": "outline"
+      }
+    },
+    "badge_sovereignty_stack": {
+      "type": "Badge",
+      "props": {
+        "text": "Sovereignty stack shipping day: Podman + Immich + Right-to-Local-Intelligence",
+        "variant": "outline"
+      }
+    },
+    "badge_memory_eval": {
+      "type": "Badge",
+      "props": {
+        "text": "Memory-as-eval-axis: MemSyco → AgenticSTS day-2",
+        "variant": "outline"
+      }
+    },
+    "badge_supply_chain_quiet": {
+      "type": "Badge",
+      "props": {
+        "text": "First supply-chain-quiet 24h window since 6-25 (breaks 8-day npm-malware streak)",
+        "variant": "outline"
+      }
+    },
+    "text_xai_note": {
+      "type": "Text",
+      "props": {
+        "text": "Watch closely — malware drought may be temporary.",
+        "variant": "caption"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_tracking": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_tracking",
+        "grid_tracking_items"
+      ]
+    },
+    "heading_tracking": {
+      "type": "Heading",
+      "props": {
+        "text": "Active Tracking",
+        "level": "h3"
+      }
+    },
+    "grid_tracking_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_xai_day",
+        "badge_onchain_day",
+        "badge_iss025",
+        "badge_pr149",
+        "alert_9router"
+      ]
+    },
+    "badge_xai_day": {
+      "type": "Badge",
+      "props": {
+        "text": "XAI: day 17→18",
+        "variant": "secondary"
+      }
+    },
+    "badge_onchain_day": {
+      "type": "Badge",
+      "props": {
+        "text": "On-chain: day 25→26",
+        "variant": "secondary"
+      }
+    },
+    "badge_iss025": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025: T-1d TIGHT",
+        "variant": "destructive"
+      }
+    },
+    "badge_pr149": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #149: day-5 stall",
+        "variant": "outline"
+      }
+    },
+    "alert_9router": {
+      "type": "Alert",
+      "props": {
+        "title": "9router security finding",
+        "message": "9.8 hardcoded default JWT = worst-config-default-of-year candidate",
+        "type": "warning"
+      }
+    }
+  }
+}

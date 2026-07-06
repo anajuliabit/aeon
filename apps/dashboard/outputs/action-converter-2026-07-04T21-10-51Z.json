@@ -1,0 +1,637 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-04"
+      },
+      "children": [
+        "shape_section",
+        "sep_1",
+        "action_1",
+        "sep_2",
+        "action_2",
+        "sep_3",
+        "action_3",
+        "sep_4",
+        "action_4",
+        "sep_5",
+        "action_5",
+        "sep_6",
+        "sources_section"
+      ]
+    },
+    "shape_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shape_label",
+        "shape_badges"
+      ]
+    },
+    "shape_label": {
+      "type": "Text",
+      "props": {
+        "text": "Shape:",
+        "variant": "muted"
+      }
+    },
+    "shape_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_pr",
+        "badge_slx",
+        "badge_gitlawb",
+        "badge_crosslab",
+        "badge_well"
+      ]
+    },
+    "badge_pr": {
+      "type": "Badge",
+      "props": {
+        "text": "open capture-step PR",
+        "variant": "default"
+      }
+    },
+    "badge_slx": {
+      "type": "Badge",
+      "props": {
+        "text": "recut SLX",
+        "variant": "default"
+      }
+    },
+    "badge_gitlawb": {
+      "type": "Badge",
+      "props": {
+        "text": "log GITLAWB day-2",
+        "variant": "default"
+      }
+    },
+    "badge_crosslab": {
+      "type": "Badge",
+      "props": {
+        "text": "codify cross-lab layer",
+        "variant": "default"
+      }
+    },
+    "badge_well": {
+      "type": "Badge",
+      "props": {
+        "text": "update WELL row",
+        "variant": "default"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1_desc",
+        "a1_why_group",
+        "a1_done_group",
+        "a1_loop_group"
+      ]
+    },
+    "a1_desc": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Open PR against `.github/workflows/aeon.yml`",
+        "level": "h3"
+      }
+    },
+    "a1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Swapping usepod_model: → model: at L155 + L162 + L171 (the 3 lines PR #150 missed per morning-brief 07:00Z grep-verification)",
+        "variant": "body"
+      }
+    },
+    "a1_why_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_why_label",
+        "a1_why_text"
+      ]
+    },
+    "a1_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a1_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "self-set weekly-review hard deadline is TODAY, and the 12:00 UTC batch is dead day-6.1 across token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh",
+        "variant": "body"
+      }
+    },
+    "a1_done_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_done_label",
+        "a1_done_text"
+      ]
+    },
+    "a1_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "muted"
+      }
+    },
+    "a1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR opened naming L155/162/171, diff = 3 line replacements, branch `fix/iss-025-capture-remainders`",
+        "variant": "body"
+      }
+    },
+    "a1_loop_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_loop_label",
+        "a1_loop_badge"
+      ]
+    },
+    "a1_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a1_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-capture-fix",
+        "variant": "secondary"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2_desc",
+        "a2_why_group",
+        "a2_done_group",
+        "a2_loop_group"
+      ]
+    },
+    "a2_desc": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Recut SLX HIGH 9/10 pick",
+        "level": "h3"
+      }
+    },
+    "a2_why_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_why_label",
+        "a2_why_text"
+      ]
+    },
+    "a2_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a2_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "first tracked capital-2x pick to fail its @Flowslikeosmo alpha-filter tokenomics-alignment thesis; leaving it active wallpapers the scorecard and re-surfaces in every next pulse",
+        "variant": "body"
+      }
+    },
+    "a2_done_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_done_label",
+        "a2_done_text"
+      ]
+    },
+    "a2_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "muted"
+      }
+    },
+    "a2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "capital-2x-program.md gets SLX EXIT line with entry $0.475, exit -23.6%, days-held 10, thesis-fail reason written to memory/topics/capital-2x-program.md at -23.6% below $0.475 entry per daily-routine 07:50Z day-10 print",
+        "variant": "body"
+      }
+    },
+    "a2_loop_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_loop_label",
+        "a2_loop_badge"
+      ]
+    },
+    "a2_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a2_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "slx-thesis-broken",
+        "variant": "secondary"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3_desc",
+        "a3_why_group",
+        "a3_done_group",
+        "a3_loop_group"
+      ]
+    },
+    "a3_desc": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Log GITLAWB day-2 participation-confirmed continuation",
+        "level": "h3"
+      }
+    },
+    "a3_why_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_why_label",
+        "a3_why_text"
+      ]
+    },
+    "a3_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a3_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "2 consecutive fires with vol stepping up (1.76× → 2.27×) is the first participation-confirmed watchlist breakout of the window and separates a real breakout from a dust pump",
+        "variant": "body"
+      }
+    },
+    "a3_done_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_done_label",
+        "a3_done_text"
+      ]
+    },
+    "a3_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "muted"
+      }
+    },
+    "a3_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "crypto.md gets a dated GITLAWB block noting sequence + 5-window vol baseline shift $308K → $392K + rolling window rebase math. +23.21% on 2.27× baseline vol = 2nd consecutive TRIGGER FIRED after 7-03 +27.38% on 1.76× vol",
+        "variant": "body"
+      }
+    },
+    "a3_loop_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_loop_label",
+        "a3_loop_badge"
+      ]
+    },
+    "a3_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a3_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "gitlawb-breakout",
+        "variant": "secondary"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4_desc",
+        "a4_why_group",
+        "a4_done_group",
+        "a4_loop_group"
+      ]
+    },
+    "a4_desc": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Codify cross-lab plumbing as skills-as-primitive 6th layer",
+        "level": "h3"
+      }
+    },
+    "a4_why_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_why_label",
+        "a4_why_text"
+      ]
+    },
+    "a4_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a4_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md L39 locks at \"4 layers durable\", 7-03 added policy, today the github-trending signal names the 6th layer; without the note next reflect re-derives the count from scratch",
+        "variant": "body"
+      }
+    },
+    "a4_done_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_done_label",
+        "a4_done_text"
+      ]
+    },
+    "a4_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "muted"
+      }
+    },
+    "a4_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-clusters.md gets a dated entry naming the repo + layer number 6 + the 5 prior-layer stack anchors (Podman v6.0.0, Anthropic Agent SDK, ASPIRE, z.ai ZCode, Right-to-Local-Intelligence). openai/codex-plugin-cc (github-trending 09:55Z top pick) = first cross-lab agent-runtime bridge, day-6 continuation",
+        "variant": "body"
+      }
+    },
+    "a4_loop_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_loop_label",
+        "a4_loop_badge"
+      ]
+    },
+    "a4_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a4_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skills-as-primitive-day-6",
+        "variant": "secondary"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5_desc",
+        "a5_why_group",
+        "a5_done_group",
+        "a5_loop_group"
+      ]
+    },
+    "a5_desc": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Update MEMORY.md L30 WELL row",
+        "level": "h3"
+      }
+    },
+    "a5_why_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_why_label",
+        "a5_why_text"
+      ]
+    },
+    "a5_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "muted"
+      }
+    },
+    "a5_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "current line ends at \"supply arc closed\"; today's 0.03× on a green day upgrades the characterization — supply exhausted, tape lifting on paper participation, not fresh accumulation",
+        "variant": "body"
+      }
+    },
+    "a5_done_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_done_label",
+        "a5_done_text"
+      ]
+    },
+    "a5_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "muted"
+      }
+    },
+    "a5_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md L30 WELL row terminates with new dated liquidity-vacuum tail: → 7-04 vol 0.03× on +1.51% green tape = liquidity-vacuum phase per token-alert 12:41Z print (baseline mean $1,994K vs today $63K = 96.8% collapse). No other watchlist rows touched",
+        "variant": "body"
+      }
+    },
+    "a5_loop_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_loop_label",
+        "a5_loop_badge"
+      ]
+    },
+    "a5_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "Loop:",
+        "variant": "muted"
+      }
+    },
+    "a5_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "well-liquidity-vacuum",
+        "variant": "secondary"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_label",
+        "sources_text"
+      ]
+    },
+    "sources_label": {
+      "type": "Text",
+      "props": {
+        "text": "Sources:",
+        "variant": "muted"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "memory=48 logs=7 topics=11 prs=2 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

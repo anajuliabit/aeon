@@ -1,0 +1,465 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-04"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5",
+        "sep-final",
+        "footer"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-action-1",
+        "desc-1",
+        "why-label-1",
+        "why-1",
+        "done-label-1",
+        "done-1",
+        "badge-1"
+      ]
+    },
+    "h-action-1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Open PR against .github/workflows/aeon.yml",
+        "level": "h3"
+      }
+    },
+    "desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "Swapping usepod_model: → model: at L155 + L162 + L171 (the 3 lines PR #150 missed per morning-brief 07:00Z grep-verification)",
+        "variant": "body"
+      }
+    },
+    "why-label-1": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "why-1": {
+      "type": "Text",
+      "props": {
+        "text": "Self-set weekly-review hard deadline is TODAY, and the 12:00 UTC batch is dead day-6.1 across token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh",
+        "variant": "body"
+      }
+    },
+    "done-label-1": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "done-1": {
+      "type": "Text",
+      "props": {
+        "text": "PR opened naming L155/162/171, diff = 3 line replacements, branch fix/iss-025-capture-remainders",
+        "variant": "body"
+      }
+    },
+    "badge-1": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-capture-fix",
+        "variant": "secondary"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-action-2",
+        "desc-2",
+        "why-label-2",
+        "why-2",
+        "done-label-2",
+        "done-2",
+        "badge-2"
+      ]
+    },
+    "h-action-2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Recut SLX HIGH 9/10 pick",
+        "level": "h3"
+      }
+    },
+    "desc-2": {
+      "type": "Text",
+      "props": {
+        "text": "Write THESIS BROKEN exit block into memory/topics/capital-2x-program.md at -23.6% below $0.475 entry per daily-routine 07:50Z day-10 print",
+        "variant": "body"
+      }
+    },
+    "why-label-2": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "why-2": {
+      "type": "Text",
+      "props": {
+        "text": "First tracked capital-2x pick to fail its @Flowslikeosmo alpha-filter tokenomics-alignment thesis; leaving it active wallpapers the scorecard and re-surfaces in every next pulse",
+        "variant": "body"
+      }
+    },
+    "done-label-2": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "done-2": {
+      "type": "Text",
+      "props": {
+        "text": "capital-2x-program.md gets SLX EXIT line with entry $0.475, exit -23.6%, days-held 10, thesis-fail reason",
+        "variant": "body"
+      }
+    },
+    "badge-2": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: slx-thesis-broken",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-action-3",
+        "desc-3",
+        "why-label-3",
+        "why-3",
+        "done-label-3",
+        "done-3",
+        "badge-3"
+      ]
+    },
+    "h-action-3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Log GITLAWB day-2 participation-confirmed continuation",
+        "level": "h3"
+      }
+    },
+    "desc-3": {
+      "type": "Text",
+      "props": {
+        "text": "Log to memory/topics/crypto.md — +23.21% on 2.27× baseline vol = 2nd consecutive TRIGGER FIRED after 7-03 +27.38% on 1.76× vol",
+        "variant": "body"
+      }
+    },
+    "why-label-3": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "why-3": {
+      "type": "Text",
+      "props": {
+        "text": "2 consecutive fires with vol stepping up (1.76× → 2.27×) is the first participation-confirmed watchlist breakout of the window and separates a real breakout from a dust pump",
+        "variant": "body"
+      }
+    },
+    "done-label-3": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "done-3": {
+      "type": "Text",
+      "props": {
+        "text": "crypto.md gets a dated GITLAWB block noting sequence + 5-window vol baseline shift $308K → $392K + rolling window rebase math",
+        "variant": "body"
+      }
+    },
+    "badge-3": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: gitlawb-breakout",
+        "variant": "secondary"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-action-4",
+        "desc-4",
+        "why-label-4",
+        "why-4",
+        "done-label-4",
+        "done-4",
+        "badge-4"
+      ]
+    },
+    "h-action-4": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Codify cross-lab plumbing as skills-as-primitive 6th layer",
+        "level": "h3"
+      }
+    },
+    "desc-4": {
+      "type": "Text",
+      "props": {
+        "text": "Codify in memory/topics/aixbt-clusters.md — openai/codex-plugin-cc (github-trending 09:55Z top pick) = first cross-lab agent-runtime bridge, day-6 continuation",
+        "variant": "body"
+      }
+    },
+    "why-label-4": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "why-4": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md L39 locks at \"4 layers durable\", 7-03 added policy, today the github-trending signal names the 6th layer; without the note next reflect re-derives the count from scratch",
+        "variant": "body"
+      }
+    },
+    "done-label-4": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "done-4": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-clusters.md gets a dated entry naming the repo + layer number 6 + the 5 prior-layer stack anchors: Podman v6.0.0, Anthropic Agent SDK, ASPIRE, z.ai ZCode, Right-to-Local-Intelligence",
+        "variant": "body"
+      }
+    },
+    "badge-4": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: skills-as-primitive-day-6",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-action-5",
+        "desc-5",
+        "why-label-5",
+        "why-5",
+        "done-label-5",
+        "done-5",
+        "badge-5"
+      ]
+    },
+    "h-action-5": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Update MEMORY.md L30 WELL row",
+        "level": "h3"
+      }
+    },
+    "desc-5": {
+      "type": "Text",
+      "props": {
+        "text": "Update with → 7-04 vol 0.03× on +1.51% green tape = liquidity-vacuum phase tail per token-alert 12:41Z print (baseline mean $1,994K vs today $63K = 96.8% collapse)",
+        "variant": "body"
+      }
+    },
+    "why-label-5": {
+      "type": "Text",
+      "props": {
+        "text": "Why:",
+        "variant": "lead"
+      }
+    },
+    "why-5": {
+      "type": "Text",
+      "props": {
+        "text": "Current line ends at \"supply arc closed\"; today's 0.03× on a green day upgrades the characterization — supply exhausted, tape lifting on paper participation, not fresh accumulation",
+        "variant": "body"
+      }
+    },
+    "done-label-5": {
+      "type": "Text",
+      "props": {
+        "text": "Done:",
+        "variant": "lead"
+      }
+    },
+    "done-5": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md L30 WELL row terminates with the new dated liquidity-vacuum tail, no other watchlist rows touched",
+        "variant": "body"
+      }
+    },
+    "badge-5": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: well-liquidity-vacuum",
+        "variant": "secondary"
+      }
+    },
+    "sep-final": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "footer-heading",
+        "footer-grid"
+      ]
+    },
+    "footer-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources consulted",
+        "level": "h4"
+      }
+    },
+    "footer-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-memory",
+        "stat-logs",
+        "stat-topics",
+        "stat-prs",
+        "stat-cron",
+        "stat-mode"
+      ]
+    },
+    "stat-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory",
+        "value": "48"
+      }
+    },
+    "stat-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "7"
+      }
+    },
+    "stat-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "11"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "2"
+      }
+    },
+    "stat-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron failing",
+        "value": "0"
+      }
+    },
+    "stat-mode": {
+      "type": "Badge",
+      "props": {
+        "text": "mode=OK",
+        "variant": "default"
+      }
+    }
+  }
+}

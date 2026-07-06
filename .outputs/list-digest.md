@@ -1,11 +1,11 @@
-*List Digest — 2026-07-02*
+*List Digest — 2026-07-05*
 
-single-list day: @flowslikeosmo runs the tokenomics-alignment thesis twice — flare's builder-lanes and a $LIT holder-value overhaul.
+DeFi list flags Vitalik's new ETH roadmap as bullish-on-paper / bearish-on-tape: 2028+ payoff invites Tempo/Canton to eat RWA lunch meanwhile.
 
 *DeFi*
-- x.com/Flowslikeosmo — flare thesis compresses to two lanes that convert infra spend into product: interoperable assets + confidential compute. everything else on the AVS/DA shopping list is optionality without a customer. quote of @FlareDevHub hackathon. (♥ 19, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2072440125351698767)
-- x.com/Flowslikeosmo — same caller behind SLX/VELVET now grading tokenomics revisions as a "team seriousness" signal, not marketing. $LIT team routing value back to holders. codifies the alpha filter memory has been carrying since SLX. (♥ 13, ↻ 0) — [View](https://x.com/Flowslikeosmo/status/2072435196415328640)
+- x.com/DefiIgnas — Vitalik roadmap (L1 reclaims exec from L2s, privacy, quantum, sub-sec finality) hits every ETH bear except tokenomics — but Merge slippage math says 2028+ delivery is real risk while Tempo/Canton nibble RWA/institutional adoption. (♥ 318, ↻ 21) — [View](https://x.com/DefiIgnas/status/2073480431887056958)
+- x.com/cyrilXBT — "60 Claude Opus 4.8 workflows" pitch: gap between *using* and *running* the model is where overnight bug-sweep PRs, wallet-scanners, content pipelines live. Cursor/CC-native automation is now the influencer meme. (♥ 119, ↻ 23) — [View](https://x.com/cyrilXBT/status/2073476435541651866)
 
 ---
-sources: list1=ok(10)
+sources: list1642770456720683008=ok(10)
 status: LIST_DIGEST_OK

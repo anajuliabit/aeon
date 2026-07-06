@@ -1,0 +1,232 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-05"
+      },
+      "children": [
+        "section_focus",
+        "separator_1",
+        "section_since",
+        "separator_2",
+        "section_running"
+      ]
+    },
+    "section_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_1_title",
+        "focus_1_reason"
+      ]
+    },
+    "focus_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "1. iss-025 capture-step PR",
+        "variant": "lead"
+      }
+    },
+    "focus_1_reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: T-1 to weekly-review Mon, 07-04 deadline blew unshipped",
+        "variant": "body"
+      }
+    },
+    "focus_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_2_title",
+        "focus_2_reason"
+      ]
+    },
+    "focus_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "2. 12:00 UTC batch fix",
+        "variant": "lead"
+      }
+    },
+    "focus_2_reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: day-4 dark, aeon.yml L155/162/171 still `usepod_model`",
+        "variant": "body"
+      }
+    },
+    "focus_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_3_title",
+        "focus_3_reason"
+      ]
+    },
+    "focus_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "3. fork-skill-digest 21:00Z Sun tick",
+        "variant": "lead"
+      }
+    },
+    "focus_3_reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: ~150h stuck, fresh dispatch attempt",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_since",
+        "since_item_1",
+        "since_item_2",
+        "since_item_3",
+        "since_item_4",
+        "since_item_5"
+      ]
+    },
+    "heading_since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner broke 7d silence 16:50Z: VULN_SCAN_CLEAN on chrome-devtools-mcp; osv-api = durable single-surviving leg per ISS-018 (3rd of 4 runs same tool-status matrix)",
+        "variant": "body"
+      }
+    },
+    "since_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "reflect wrote MEMORY.md 48→56L + action-converter shipped 5 actions q4.4/5 (top q5/u5: open capture-step PR) — action stated, PR not authored",
+        "variant": "body"
+      }
+    },
+    "since_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "BTC close 07-04 $63,094 = new high in reclaim window, day-5 ≥ $60,500 breakdown line; $406 shy of $63.5k gate",
+        "variant": "body"
+      }
+    },
+    "since_item_4": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending Claude-Code-adjacent whole-slate: openai/codex-plugin-cc top = first cross-lab codex↔claude-code bridge; skills-as-primitive day-6 with cross-lab plumbing as 6th layer",
+        "variant": "body"
+      }
+    },
+    "since_item_5": {
+      "type": "Text",
+      "props": {
+        "text": "SLX -23.6% vs 6-24 entry day-11, no recut ship (capital-2x tracked, moonshot sleeve)",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_running",
+        "running_item_1",
+        "running_item_2",
+        "running_item_3",
+        "running_item_4"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest @ 21:00 UTC (fresh weekly tick, ~150h stuck)",
+        "variant": "body"
+      }
+    },
+    "running_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort + skill-update-check @ 19:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap @ 21:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running_item_4": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals @ 22:00 UTC",
+        "variant": "body"
+      }
+    }
+  }
+}

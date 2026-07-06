@@ -1,0 +1,249 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-07-05"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-gitlawb",
+        "sep-1",
+        "section-watchlist"
+      ]
+    },
+    "section-gitlawb": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-gitlawb",
+        "stat-gitlawb",
+        "text-volume",
+        "text-trigger"
+      ]
+    },
+    "h-gitlawb": {
+      "type": "Heading",
+      "props": {
+        "text": "GITLAWB",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat-gitlawb": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.00006231",
+        "delta": "-17.25%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "text-volume": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: $301K (0.77× baseline)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger: 24h change -17.25% ≥ 15% rail — day-1 reversal after 2 consecutive green trigger fires (7-03 +27.38%, 7-04 +23.21%). vol steps down 698K → 301K = participation exits before price could stick.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-watchlist": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-watchlist",
+        "grid-watchlist"
+      ]
+    },
+    "h-watchlist": {
+      "type": "Heading",
+      "props": {
+        "text": "Watchlist under-rail",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "grid-watchlist": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "well-item",
+        "mamo-item",
+        "reppo-item"
+      ]
+    },
+    "well-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "well-name",
+        "well-stat",
+        "well-vol",
+        "well-note"
+      ]
+    },
+    "well-name": {
+      "type": "Badge",
+      "props": {
+        "text": "WELL",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "well-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.00370281",
+        "delta": "-1.31%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "well-vol": {
+      "type": "Text",
+      "props": {
+        "text": "Vol: 0.24× baseline",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "well-note": {
+      "type": "Text",
+      "props": {
+        "text": "post-supply-arc vacuum extends day-6",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "mamo-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mamo-name",
+        "mamo-stat",
+        "mamo-vol",
+        "mamo-note"
+      ]
+    },
+    "mamo-name": {
+      "type": "Badge",
+      "props": {
+        "text": "MAMO",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "mamo-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.00928867",
+        "delta": "+6.32%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "mamo-vol": {
+      "type": "Text",
+      "props": {
+        "text": "Vol: 1.29× baseline",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "mamo-note": {
+      "type": "Text",
+      "props": {
+        "text": "day-5 green, first ≥$0.009 close of window",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "reppo-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reppo-name",
+        "reppo-stat",
+        "reppo-vol",
+        "reppo-note"
+      ]
+    },
+    "reppo-name": {
+      "type": "Badge",
+      "props": {
+        "text": "REPPO",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "reppo-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.02392203",
+        "delta": "+1.09%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "reppo-vol": {
+      "type": "Text",
+      "props": {
+        "text": "Vol: 1.07× baseline",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "reppo-note": {
+      "type": "Text",
+      "props": {
+        "text": "flat print, day-2 breather",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-04",
+        "description": "6 goals — 0 at risk, 0 needs attention, 4 on track, 2 blocked, 0 done (overall → flat)"
+      },
+      "children": [
+        "summary-grid",
+        "sep1",
+        "blocked-section",
+        "sep2",
+        "on-track-section",
+        "sep3",
+        "sources-text"
+      ]
+    },
+    "summary-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-at-risk",
+        "stat-needs-attn",
+        "stat-on-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "6"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-needs-attn": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "4"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item-1",
+        "blocked-item-2"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-1-badge",
+        "blocked-1-details",
+        "blocked-1-action"
+      ]
+    },
+    "blocked-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "XAI quota recovery",
+        "variant": "destructive"
+      }
+    },
+    "blocked-1-details": {
+      "type": "Text",
+      "props": {
+        "text": "operator top-up team 3a8b4c1e day 19 since 2026-06-16 (activity 136→251 ↑ but blocker unchanged)"
+      }
+    },
+    "blocked-1-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action",
+        "message": "Top up XAI team 3a8b4c1e monthly credits — 3 daily-loop skills still xai=skipped."
+      }
+    },
+    "blocked-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-2-badge",
+        "blocked-2-details",
+        "blocked-2-action"
+      ]
+    },
+    "blocked-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Operator on-chain config",
+        "variant": "destructive"
+      }
+    },
+    "blocked-2-details": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor NO_CONFIG day 27, ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null (activity 268→283 flat)"
+      }
+    },
+    "blocked-2-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action",
+        "message": "Add `type: pool` / `type: position` entries to `memory/on-chain-watches.yml` and top up Alchemy + Etherscan keys."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-item-1",
+        "on-track-item-2",
+        "on-track-item-3",
+        "on-track-item-4"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on-track-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-1-badge",
+        "on-track-1-details"
+      ]
+    },
+    "on-track-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "variant": "outline"
+      }
+    },
+    "on-track-1-details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 347 activity/14d (299→347 flat). Self-set weekly-review hard deadline = T-0 TODAY, PR unshipped; mechanical ON_TRACK on observation cadence, not fix progress."
+      }
+    },
+    "on-track-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-2-badge",
+        "on-track-2-details"
+      ]
+    },
+    "on-track-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "12:00 UTC batch first live test",
+        "variant": "outline"
+      }
+    },
+    "on-track-2-details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 60 activity/14d (43→60 flat). Batch STILL dark day-3 post PR #150 merge; grep-verified 3× `usepod_model:` still at aeon.yml L155/162/171."
+      }
+    },
+    "on-track-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-3-badge",
+        "on-track-3-details"
+      ]
+    },
+    "on-track-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #149 docs(skill-graph)",
+        "variant": "outline"
+      }
+    },
+    "on-track-3-details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 86 activity/14d (66→86 flat). Day-6 stall since 2026-06-28T17:15Z; US Independence Day = operator merge likely stays pending through 7-05 morning."
+      }
+    },
+    "on-track-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-4-badge",
+        "on-track-4-details"
+      ]
+    },
+    "on-track-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "BTC 7-day breakdown streak BROKEN → day-2 of reclaim",
+        "variant": "outline"
+      }
+    },
+    "on-track-4-details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 285 activity/14d (276→285 flat). MEMORY.md title frozen per skill spec § step 7; reality is day-4 close ≥ $60,500 (07-03 close $62,537), $63.5k / $65.9k reclaim gates still unfired."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

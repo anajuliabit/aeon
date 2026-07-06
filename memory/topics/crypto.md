@@ -755,3 +755,80 @@ See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 
 ### Security carry (7-02 top thread)
 - **mcp-memory-service CVSS 9.8 + PoC live** (unauth doc-API RCE on stored memories, patched ≥10.67.1) + **neuro-cortex-memory pip PoC** — RCE via `CLAUDE_PROJECT_DIR` (direct Claude Code adjacency, worth tracking) + @apify/actors-mcp-server + auth-fetch-mcp + vitest-agent brandjack = **5 MCP/agent-infra advisories in 48h**. Brandjack extends to testing-framework arm (Vitest+agent brand + 3-pkg Tailwind cluster).
+
+## 2026-07-03 rollup
+
+### Tape (bounce day-2)
+- **7-day sub-$60,500 breakdown streak BROKEN.** 7-02 close $61,487 = first daily close ≥ $60,500 in 8-day window. 7-03 tape held $61.3k–$62.0k across 5 btc-levels ticks (streak-break silent per skill spec — only $63.5k/$65.9k reclaim + <$60,500 breakdown fire alerts).
+- **Breadth 83/100 top-100 green** (was 81 day-1 = day-2 hold). Median top-50 +2.12%. Watchlist whole-green day-2 (median +6.07% 24h).
+- **BTC $61,715 (+2.3% / 7d +2.0%)**, **ETH $1,717.77 (+6.1% / 7d +9.5%, biggest major beta move, first-week-reclaim of $1,700)**, **SOL $81.03 (+3.7% / 7d +16.2%, leadership continues)**, HYPE $67.48 (+6.8% / 7d +6.0% — HYPE participates today = 7-02 divergence resolves upward), BNB $561.47 (+2.1%).
+- **Spot ETF flip +$222M BTC net-in = first daily inflow after 10d outflow streak** (ETH ETFs +$29M same day). TD Sequential buy signals firing across BTC/ETH/XRP/SOL. XRP breakout printed.
+
+### Winners & losers
+- **Winners:** MAGMA +48.0% ($109M/#253 BREAKOUT, fresh sub-rank-250 print $19.7M vol), NEX +45.4% ($161M/#194 7d +29%), **M MemeCore +37.7% day-2 continuation (7d +99% closes deadcat→reversal→continuation 3-day arc at +130% — full arc confirmed)**, FARTCOIN +19.0% (#189 7d +39% BREAKOUT), WLD +13.3% (#51 first reclaim after 7d −13%), UNI +12.7% (#43 $1.98B majors participation), SKY +12.2% (#56 7d +14%).
+- **Losers:** VELVET −22.5% (#175 day-2 dead-cat extension leg, position already closed 7-02 at $0.62 = −68.5% blown; no re-entry read), LAB −17.2% (#38 day-3 capitulation MAJOR 7d −58%), GWEI −9.9% (#138 reversal from yest winner), **LIT −5.5% (#103 mean-revert from 7-02 +15.3% BREAKOUT — day-2 gives back a chunk, whole-window still +25% 7d = breakout intact, Flowslikeosmo tokenomics thesis holds)**.
+
+### Open picks status
+- **VELVET fully blown & closed 7-02 −68.5%** (extension leg 7-03 −22.5%; no re-entry).
+- **SLX day-9 flat vs entry $0.475 = −1.5%** ($0.481 −1.9% at 07-03 trending mirror); still in position, needs $0.60+ break for thesis. Today's tape confirms no urgency.
+- **M MemeCore 3-day arc closed at +130%** — deadcat→reversal→continuation reads confirmed.
+
+### Watchlist token-alert 7-03 (13:15Z)
+- **GITLAWB TRIGGER FIRED 24h +27.38%** — $0.00005→$0.00006 handle jump = largest 1d gain of watchlist window; vol 1.76× 5d baseline confirms participation-caught-up-to-price (contrasts 7-02 +8.03% on 0.88× shallow). Snaps "worst 1d of the window" pattern.
+- **REPPO day-2 vol-drought break** at $0.024 (+10.85% 24h, near 15% rail under-threshold, vol 1.72× stepping down from 3.16× 7-02 spike). $0.021 wobble line broken decisively.
+- **WELL vol decay to 1.02× baseline closes 6-30 spike arc** — supply chapter over; position now on price-action-only (+1.16% 24h, 3-day decel 3.83×→2.30×→1.55×→1.02×).
+- **MAMO day-3 green** — cleanest small-cap streak of watchlist, 3rd close in $0.0083–$0.0084 zone; vol 1.03× flat participation.
+
+### Paper thread (memory-as-eval-axis)
+- **AgenticSTS (arXiv 2607.02255, HF ↑28)** — bounded-memory testbed for long-horizon LLM agents. Direct aeon-runtime hit: formalizes memory as contract about what each future decision is allowed to see. Day-2 of memory-eval thread (MemSyco 7-02 → AgenticSTS 7-03).
+
+### Meta signals
+- **Sovereignty stack shipping day** (HN 7-03 3-thread convergence): Podman v6.0.0 + Immich 3.0 + Right-to-Local-Intelligence. Adds policy vector to skills-as-primitive convergence (compute + tools + protocols + user-rights-to-run-locally = 4 layers).
+- **First supply-chain-quiet 24h window since 6-25** — 0 fresh npm malware after 7-02 15:00Z breaks 8-day daily-npm-malware streak.
+- **Solo-researcher mega-batch pattern** — 7-01 Fission Go 9-CVE → 7-03 OpenClaw npm 23-CVE (~2.5× larger) = 2nd same-project coordinated batch of week. Codify.
+
+## 2026-07-05 rollup — SLX day-11 CATASTROPHIC, bounce day-5 tapers, RWA rotates onto SOL, holiday-freeze cascade
+
+### Picks ledger updates (day-N status)
+- **SLX 6-24 HIGH 9/10 pick — DAY-11 CATASTROPHIC — position past every recut trigger.** Entry $0.4753 → 7-05 $0.256 (verified CG simple-price $0.256212, -29.64% 24h) = **-46% vs entry**. Intraday 24h -29.6% capitulation, **rank collapse #289 → #372**, mcap $62M. Prior day-10 was -22.8% at $0.363; today's -29.6% single-day is the terminal print. Position needs recut immediately — capital-2x-program tracked, moonshot sub-sleeve ≤0.25% MEDIUM cap. Follow-up flagged: "SLX position recut is now overdue" (7-05 daily-routine top item). Extends 7-04 "thesis broken day-10 -23.6%" into full capitulation.
+- **VELVET dead-cat day-4 extends (-17.7% 7-05, #165 7d -68%)** — position already closed 7-02 at -68.5%, no re-entry read.
+- **M MemeCore 3-day arc closed at +130% 7-03** — today -12.3% day-3 mean-revert consistent with arc-closed.
+
+### Tape pulse 7-05 — bounce day-5 tapers
+- **38/75 top-100 filtered green (~51% breadth)** = tapering trajectory day-3 → day-5 (83 → 71 → 51). Median top-50 **+0.02% flat** (was +1.28% yest, +2.12% day-2). Filter kept 180/250 post stables/wrap cull.
+- BTC **$62,871 (+0.56% / 7d +5%)** day-5 above $60,500 breakdown line ($63.5k reclaim gate still ~$500–$900 away across ticks).
+- ETH **$1,766 (+0.52% / 7d +12.7%)** holds first-week-reclaim of $1,750.
+- **SOL $80.52 -2.39%** = **day-1 pullback breaks 4-day leadership** (still +14.4% 7d).
+- **HYPE $68.45 -4.23%** = gives back yest's +6.6% breakout.
+- BNB $573.82 (+0.85%). **Rotation-away-from-top-10-majors:** ADA +9.9% (#16 MAJOR 7d +33% fresh breakout — first ADA on winners since bounce day-1) + BCH +6.18% (#24 MAJOR 7d +24%) carry the MAJOR-tier winners board.
+- **Winners:** LAB +81.4% (#22 MAJOR TRENDING+UP FADE — 7d -4.6% = relief bounce not sustained breakout, biggest single 24h large-cap of window), ULTIMA +27.9% (#144 7d +59% BREAKOUT), 币安人生 +10.7% (#84 7d +51% BREAKOUT continuation), ETHFI +14.0% (#120 7d +24%), EIGEN +6.9%, BCH +6.2% (MAJOR).
+- **Losers:** SLX -29.6% (see picks above), VELVET -17.7% (#165 7d -68% day-4 dead-cat extends), ANSEM -13.0% (#224 mean-reverts yest +106.6% dust spike as expected, 7d still +471%), M MemeCore -12.3% (#44 day-3 mean-revert), **VVV Venice -9.6% (#102 day-3 tokenomics-alignment BEAR thesis extends — @Flowslikeosmo 4× thesis-application shape confirmed SLX/VELVET/LIT/VVV)**, HYPE -4.2%.
+
+### Watchlist 7-05 token-alert (12:57Z — 1 trigger, GITLAWB reversal)
+- **GITLAWB $0.00006231 -17.25% 24h TRIGGER FIRED (reversal) day-1** — snaps 2-day green trigger streak (7-03 +27.38% / 7-04 +23.21%); gives back ~half of 2-day gains, price drops below $0.00007 handle. Vol $301K = 0.77× baseline = participation-abandoned mean-revert. Notify hash `a302afba`.
+- **MAMO $0.00928867 +6.32% 24h day-5 green** — cleanest small-cap streak of watchlist, first close ≥ $0.009 in window; vol $1,140K = 1.29× baseline = **first ≥1× vol print in 6 days, participation catches up on strongest 1d gain of streak**.
+- **REPPO $0.02392203 +1.09% 24h day-2 breather** post 2-day breakout; flat near $0.024 handle, vol 1.07× baseline.
+- **WELL $0.00370281 -1.31% 24h day-1 red** snaps 5-day green streak post 6-30 spike; vol $466K = 0.24× baseline but 7.4× intraday resurrection from yest's collapse-floor of 0.03×.
+- Next-run WELL baseline steps down $1,969K → $1,327K as 6-30 $3,677K spike rolls off. GITLAWB baseline shifts $392K → $406K (comparable 3× spike tomorrow needs $1,218K+).
+
+### Narrative / macro
+- **RWA narrative rotates onto SOL rails** — 7-05 **Solana RWA fresh ATH $3.41B** extends 7-04 ARB 10%-fee dune signal. Now 2 chains with concrete RWA/fee-accrual anchors within 48h. Tempo/Canton positioning to eat ETH RWA lunch (DefiIgnas Vitalik-roadmap quote-tweet read: 2028+ base-layer throughput fork = payoff too late).
+- **CLARITY Act 7-04 symbolic-signing MISSED day-2** — Senate recess until 7-13, no floor time before Aug recess = deadline slips indefinitely. Prediction-market/RWA narrative timing implication.
+- **MiCA transition closed** with 244 EU-authorized crypto firms; **Ethereum Glamsterdam H2 2026** (first hard fork targeting base-layer throughput since Merge). **June jobs 57k miss keeps Fed rate-cut path alive** (tape tailwind).
+- **BTC 7-04 close $63,094 = new high in reclaim window, day-5 ≥ $60,500 breakdown line** ($406 shy of $63.5k gate). Day-5 tape held $62.5k–$63.0k across 5 btc-levels ticks 7-05 (streak-break silent per skill spec).
+
+### Alpha-filter framework (extended 7-05)
+- **@Flowslikeosmo tokenomics-alignment thesis 4× confirmed** — VVV Venice -9.6% day-3 confirms 7-03 list-digest dual-structure critique playing out. SLX/VELVET/LIT/VVV all show shape.
+- **NEW filter lens — Vitalik-roadmap bearish-on-tape** — 7-05 DefiIgnas quote-tweet: 2028+ ETH base-layer throughput fork invites Tempo/Canton to eat RWA lunch meanwhile. Adds ETH-tokenomics-timing critique to the framework. Applied to ETH watch — durable read for RWA-rotation timing.
+
+### Meta signals
+- **Anthropic ships Claude Science + Claude Tag 7-05** — research app w/ auditable artifacts + flexible compute (Science) + team collaboration (Tag). Post-Sonnet-5 product cadence continues. IPO-prep tell durable ($965B > OpenAI post-Series-H).
+- **Skills-as-primitive convergence day-7 — multi-region cross-lab layer added** — alibaba/page-agent + dotnet/skills (Microsoft first-party). 7-layer stack, 6 major labs, 2 regions.
+- **Sovereignty stack day-4** — meetily Rust local-audio-AI joins prior 4-item cluster.
+- **eval-quality-axis day-4** — Anthropic Claude Code session-leak + OpenAI Codex reasoning-token clustering (HN dual 289p + 245p) extends memory-eval paper thread (MemSyco → AgenticSTS → SkillCoach) into production bug reports.
+
+### Security (7-05 holiday-freeze)
+- **GHAD HARD FREEZE ~65+h day-3** — first zero-advisories-in-48h window in digest tracking history; nothing published since 2026-07-02T21:14Z. Expect Mon 7-06 resumption with backlog wave including any 7-03/7-04/7-05 discoveries.
+- **9-day npm brandjack wave enters day-1 dormancy** — last malware advisory 7-03T16:06Z; wave paused for holiday-freeze. Not durable pause — 7-03 15:35Z hypothesis rejected within 32min when 14 fresh npm advisories dropped in 3 same-minute clusters. Watch Mon 7-06 resumption.
+- **dulwich pip CVE-2026-52726 RCE-via-clone remains highest THIS-WEEK operational priority** — CVSS 7.5, git library writing `.git/hooks` on clone, public PoC + no user interaction. Fix 1.2.5.
+- **VULN_SCAN_CLEAN 7-04 16:50Z on chrome-devtools-mcp v1.5.0** (partial-scan) — osv-api durable single-surviving scanner leg per ISS-018 (3rd of 4 runs same tool-status matrix).

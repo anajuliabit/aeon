@@ -1,0 +1,629 @@
+{
+  "root": "card-dealflow",
+  "state": {},
+  "elements": {
+    "card-dealflow": {
+      "type": "Card",
+      "props": {
+        "title": "Deal Flow — 2026-07-06"
+      },
+      "children": [
+        "intro-text",
+        "sep-1",
+        "deal-1",
+        "sep-2",
+        "deal-2",
+        "sep-3",
+        "deal-3",
+        "sep-4",
+        "deal-4",
+        "sep-5",
+        "deal-5",
+        "sep-6",
+        "deal-6",
+        "sep-7",
+        "deal-7",
+        "sep-8",
+        "deal-8",
+        "sep-9",
+        "sources"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "strategics led the megarounds — Aramco into Together AI at 2.5× val, National Grid Ventures anchoring $1.75B into AI-compute energy, Blackstone + Airbus into European drone autonomy. meanwhile crypto VCs priced Venice AI as a $1B private-inference unicorn on its first external raise, and THEA anchored a Solana coordination layer for behavioral-AI risk markets.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deal-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d1-title",
+        "d1-desc",
+        "d1-meta",
+        "d1-leads",
+        "d1-why"
+      ]
+    },
+    "d1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Venice AI",
+        "level": "h3"
+      }
+    },
+    "d1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "private, surveillance-free access to 200+ AI models",
+        "variant": "body"
+      }
+    },
+    "d1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-funding",
+        "d1-valuation",
+        "d1-status"
+      ]
+    },
+    "d1-funding": {
+      "type": "Stat",
+      "props": {
+        "label": "Series A",
+        "value": "$65M"
+      }
+    },
+    "d1-valuation": {
+      "type": "Stat",
+      "props": {
+        "label": "Post",
+        "value": "$1B"
+      }
+    },
+    "d1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "UP • first external raise",
+        "variant": "default"
+      }
+    },
+    "d1-leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Dragonfly (Coinbase Ventures, North Island co)",
+        "variant": "caption"
+      }
+    },
+    "d1-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: dragonfly + coinbase ventures pricing a private-inference unicorn on first external raise; $70M ARR, 3.5M users — crypto VCs underwriting inference sovereignty, not integration.",
+        "variant": "lead"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deal-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d2-title",
+        "d2-desc",
+        "d2-meta",
+        "d2-leads",
+        "d2-why"
+      ]
+    },
+    "d2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Together AI",
+        "level": "h3"
+      }
+    },
+    "d2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "cloud for training and running open-source AI models",
+        "variant": "body"
+      }
+    },
+    "d2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d2-funding",
+        "d2-valuation",
+        "d2-status"
+      ]
+    },
+    "d2-funding": {
+      "type": "Stat",
+      "props": {
+        "label": "Series C",
+        "value": "$800M"
+      }
+    },
+    "d2-valuation": {
+      "type": "Stat",
+      "props": {
+        "label": "Post",
+        "value": "$8.3B"
+      }
+    },
+    "d2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "UP 2.5× vs $3.3B",
+        "variant": "default"
+      }
+    },
+    "d2-leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Aramco Ventures (Vista Equity, General Catalyst co)",
+        "variant": "caption"
+      }
+    },
+    "d2-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: saudi sovereign wealth fronting a US neocloud at 2.5× val in 17 months — open-source AI infra is now oil-money capex, not the vc syndicate that led feb 2025.",
+        "variant": "lead"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deal-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d3-title",
+        "d3-desc",
+        "d3-meta",
+        "d3-leads",
+        "d3-why"
+      ]
+    },
+    "d3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Quantum Systems",
+        "level": "h3"
+      }
+    },
+    "d3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "German defense drones for surveillance and autonomous ops",
+        "variant": "body"
+      }
+    },
+    "d3-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d3-funding",
+        "d3-valuation"
+      ]
+    },
+    "d3-funding": {
+      "type": "Stat",
+      "props": {
+        "label": "Series D",
+        "value": "$1.2B"
+      }
+    },
+    "d3-valuation": {
+      "type": "Stat",
+      "props": {
+        "label": "Post",
+        "value": "~$8B"
+      }
+    },
+    "d3-leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Blackstone, Airbus, Advent, Noteus",
+        "variant": "caption"
+      }
+    },
+    "d3-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: PE + strategic, not VC — Europe pricing defense autonomy as sovereign infra, second euro-defense mega-round of Q3 in the drone stack.",
+        "variant": "lead"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deal-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d4-title",
+        "d4-desc",
+        "d4-meta",
+        "d4-leads",
+        "d4-why"
+      ]
+    },
+    "d4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Dominion Dynamics",
+        "level": "h3"
+      }
+    },
+    "d4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Arctic surveillance drones + command-and-control software",
+        "variant": "body"
+      }
+    },
+    "d4-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d4-funding",
+        "d4-valuation"
+      ]
+    },
+    "d4-funding": {
+      "type": "Stat",
+      "props": {
+        "label": "Series A",
+        "value": "$100M"
+      }
+    },
+    "d4-valuation": {
+      "type": "Stat",
+      "props": {
+        "label": "Post",
+        "value": "$400M"
+      }
+    },
+    "d4-leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Georgian, Valor, Lakestar, Bessemer",
+        "variant": "caption"
+      }
+    },
+    "d4-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: first North American peer-sovereignty defense Series A at 4× post/raise — Bessemer + Lakestar underwriting the Arctic autonomy stack under peer pressure to euro drone rounds.",
+        "variant": "lead"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deal-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d5-title",
+        "d5-desc",
+        "d5-meta",
+        "d5-leads",
+        "d5-why"
+      ]
+    },
+    "d5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Twelve Labs",
+        "level": "h3"
+      }
+    },
+    "d5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "video-understanding AI that indexes and searches archive footage",
+        "variant": "body"
+      }
+    },
+    "d5-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d5-funding",
+        "d5-valuation"
+      ]
+    },
+    "d5-funding": {
+      "type": "Stat",
+      "props": {
+        "label": "Series B",
+        "value": "$100M"
+      }
+    },
+    "d5-valuation": {
+      "type": "Stat",
+      "props": {
+        "label": "Post",
+        "value": ">$1B"
+      }
+    },
+    "d5-leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: NEA, Naver Ventures (Amazon strategic co)",
+        "variant": "caption"
+      }
+    },
+    "d5-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: amazon in as strategic, not integration — hyperscaler multimodal race widens from text to video-search stakes, alongside veo/sora.",
+        "variant": "lead"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deal-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d6-title",
+        "d6-desc",
+        "d6-meta",
+        "d6-leads",
+        "d6-why"
+      ]
+    },
+    "d6-title": {
+      "type": "Heading",
+      "props": {
+        "text": "THEA",
+        "level": "h3"
+      }
+    },
+    "d6-desc": {
+      "type": "Text",
+      "props": {
+        "text": "behavioral-AI settlement layer on Solana for real-time risk markets",
+        "variant": "body"
+      }
+    },
+    "d6-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d6-funding"
+      ]
+    },
+    "d6-funding": {
+      "type": "Stat",
+      "props": {
+        "label": "Strategic",
+        "value": "$8M"
+      }
+    },
+    "d6-leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Maven 11, Spartan Group, Manifold, Hack VC, Fischer8",
+        "variant": "caption"
+      }
+    },
+    "d6-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: first coordination-layer AI raise on Solana at crypto-tier-1s — SOL adds a settlement rail for risk-market AI to answer Base's x402 agentic-payment beachhead.",
+        "variant": "lead"
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deal-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d7-title",
+        "d7-desc",
+        "d7-meta",
+        "d7-leads",
+        "d7-why"
+      ]
+    },
+    "d7-title": {
+      "type": "Heading",
+      "props": {
+        "text": "8090 Solutions",
+        "level": "h3"
+      }
+    },
+    "d7-desc": {
+      "type": "Text",
+      "props": {
+        "text": "enterprise software built with coordinated AI agents",
+        "variant": "body"
+      }
+    },
+    "d7-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d7-funding"
+      ]
+    },
+    "d7-funding": {
+      "type": "Stat",
+      "props": {
+        "label": "Growth",
+        "value": "$135M"
+      }
+    },
+    "d7-leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Salesforce Ventures",
+        "variant": "caption"
+      }
+    },
+    "d7-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: salesforce ventures fronting a coordination-agents play that could compete its own einstein layer — Chamath as founder-CEO, operator-side not investor-side.",
+        "variant": "lead"
+      }
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deal-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d8-title",
+        "d8-desc",
+        "d8-meta",
+        "d8-leads",
+        "d8-why"
+      ]
+    },
+    "d8-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Joulent",
+        "level": "h3"
+      }
+    },
+    "d8-desc": {
+      "type": "Text",
+      "props": {
+        "text": "energy infra for AI and compute-intensive industries",
+        "variant": "body"
+      }
+    },
+    "d8-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "d8-funding"
+      ]
+    },
+    "d8-funding": {
+      "type": "Stat",
+      "props": {
+        "label": "Strategic",
+        "value": "$1.75B"
+      }
+    },
+    "d8-leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: National Grid Ventures",
+        "variant": "caption"
+      }
+    },
+    "d8-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: utility capital entering the AI stack directly — energy priced as a stack component, not a supplier, at mega-round scale.",
+        "variant": "lead"
+      }
+    },
+    "sep-9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: crunchbase=ok, techcrunch=ok, techstartups=ok, crypto-fundraising=ok, cryptorank=partial(paywall), aift=fail(june-only) | candidates=~32 → kept=8",
+        "variant": "caption"
+      }
+    }
+  }
+}

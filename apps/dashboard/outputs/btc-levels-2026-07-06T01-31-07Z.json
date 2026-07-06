@@ -1,0 +1,76 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC Levels"
+      },
+      "children": [
+        "stat-spot",
+        "sep-1",
+        "text-signal",
+        "stat-daily",
+        "sep-2",
+        "text-leverage",
+        "stat-next",
+        "sep-3",
+        "alert-disclaimer"
+      ]
+    },
+    "stat-spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$63,600"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-signal": {
+      "type": "Text",
+      "props": {
+        "text": "✅ Spot reclaims $63,500 — first stabilization signal per 2026-06-09 advisor levels. Daily close $63,546 (2026-07-05) also clears the gate.",
+        "variant": "lead"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-leverage": {
+      "type": "Text",
+      "props": {
+        "text": "Leverage-review trigger at ≤$45k (HF ~1.48–1.66 in the $40–45k band); not in play at current spot.",
+        "variant": "body"
+      }
+    },
+    "stat-next": {
+      "type": "Stat",
+      "props": {
+        "label": "Next Gate",
+        "value": "$65,900"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-disclaimer": {
+      "type": "Alert",
+      "props": {
+        "message": "Not financial advice.",
+        "type": "info"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-captures",
+        "badge-noise",
+        "text-surface",
+        "text-status"
+      ]
+    },
+    "stat-captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures (24h)",
+        "value": "0"
+      }
+    },
+    "badge-noise": {
+      "type": "Badge",
+      "props": {
+        "text": "all noise",
+        "variant": "secondary"
+      }
+    },
+    "text-surface": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface",
+        "variant": "muted"
+      }
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "Inbox unchanged · day-12",
+        "variant": "caption"
+      }
+    }
+  }
+}

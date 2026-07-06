@@ -1,11 +1,11 @@
 ---
 name: xai-quota-exhausted
-description: X.AI monthly credit limit hit, blocking 10+ XAI-dependent skills (day 17 of outage as of 2026-07-02)
+description: X.AI monthly credit limit hit, blocking 10+ XAI-dependent skills (day 18 of outage as of 2026-07-03)
 metadata:
   type: project
 ---
 
-Team 3a8b4c1e monthly credit limit reached 2026-06-16 (day 17 as of 2026-07-02), blocking:
+Team 3a8b4c1e monthly credit limit reached 2026-06-16 (day 18 as of 2026-07-03), blocking:
 - token-pick
 - agent-buzz
 - list-digest

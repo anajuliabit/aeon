@@ -1,0 +1,154 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Cohort",
+        "description": "2026-07-05 — aaronjmars/aeon"
+      },
+      "children": [
+        "alert_dropped",
+        "sep1",
+        "stack_content"
+      ]
+    },
+    "alert_dropped": {
+      "type": "Alert",
+      "props": {
+        "title": "DROPPED_FROM_POWER x15",
+        "message": "Default-config forks fell below threshold; 4 new forks debuted active.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_overview",
+        "grid_stats",
+        "sep2",
+        "text_narrative",
+        "sep3",
+        "report_link"
+      ]
+    },
+    "text_overview": {
+      "type": "Text",
+      "props": {
+        "text": "Of 201 forks, 36 ran in the last 7 days (45% of scanned 80).",
+        "variant": "body"
+      }
+    },
+    "grid_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_power",
+        "stat_active",
+        "stat_stale",
+        "stat_cold"
+      ]
+    },
+    "stat_power": {
+      "type": "Stat",
+      "props": {
+        "label": "POWER",
+        "value": "12",
+        "delta": "-15",
+        "trend": "down"
+      }
+    },
+    "stat_active": {
+      "type": "Stat",
+      "props": {
+        "label": "ACTIVE",
+        "value": "24",
+        "delta": "+18",
+        "trend": "up"
+      }
+    },
+    "stat_stale": {
+      "type": "Stat",
+      "props": {
+        "label": "STALE",
+        "value": "8"
+      }
+    },
+    "stat_cold": {
+      "type": "Stat",
+      "props": {
+        "label": "COLD",
+        "value": "36"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_n1",
+        "text_n2",
+        "text_n3",
+        "text_n4"
+      ]
+    },
+    "text_n1": {
+      "type": "Text",
+      "props": {
+        "text": "15 forks lost POWER status — all ran this week but show only 4 enabled skills now vs 5-6 prior. Pattern is uniform across default-config forks; custom-skill forks (enzoonchain 7, taekwonv89 16, tomscaria 56) held.",
+        "variant": "body"
+      }
+    },
+    "text_n2": {
+      "type": "Text",
+      "props": {
+        "text": "penguinxbt debuted straight to POWER (7 skills).",
+        "variant": "body"
+      }
+    },
+    "text_n3": {
+      "type": "Text",
+      "props": {
+        "text": "Damoncrypto fell off the top-80 push list.",
+        "variant": "body"
+      }
+    },
+    "text_n4": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fork-cohort-2026-07-05",
+        "href": "articles/fork-cohort-2026-07-05.md",
+        "source": "Full Report"
+      }
+    }
+  }
+}

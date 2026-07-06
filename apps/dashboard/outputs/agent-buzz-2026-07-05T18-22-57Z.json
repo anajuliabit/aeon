@@ -1,0 +1,138 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz"
+      },
+      "children": [
+        "heading-date",
+        "subtitle-text",
+        "sep1",
+        "heading-section1",
+        "stack-section1",
+        "sep2",
+        "heading-section2",
+        "stack-section2",
+        "footer-text"
+      ]
+    },
+    "heading-date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-07-05",
+        "variant": "caption"
+      }
+    },
+    "subtitle-text": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-heavy tape: one paper flagging the 10-30 tool ceiling, three practitioners saying the real wall is permissioning, and three artifacts shipping around the standard.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-section1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP scaling ceilings, not slogans",
+        "level": "h2"
+      }
+    },
+    "stack-section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story1",
+        "story2",
+        "story3"
+      ]
+    },
+    "story1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "new paper: tool-selection accuracy craters past 10-30 tools; 5 architecture patterns keep latency near-zero",
+        "href": "https://x.com/TheTuringPost/status/2073528308411814054",
+        "source": "@TheTuringPost"
+      }
+    },
+    "story2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MCP/A2A/ACP/ANP/ERC-8004 solved identity and tool-calling; membership, dissent, audit — the governance layer — still open",
+        "href": "https://x.com/Osobotai/status/2073556470549938662",
+        "source": "@Osobotai"
+      }
+    },
+    "story3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "bounding what an agent can touch beats making it smarter; MCP + PreToolUse hooks are the guardrail",
+        "href": "https://x.com/kante0123/status/2073556894086815867",
+        "source": "@kante0123"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-section2": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped around the standard",
+        "level": "h2"
+      }
+    },
+    "stack-section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story4",
+        "story5",
+        "story6"
+      ]
+    },
+    "story4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "2nd ed of \"AI Agents in Action\" adds MCP, multi-agent, and evaluation chapters plus a Node MCP-server walkthrough",
+        "href": "https://x.com/KirkDBorne/status/2073495686637662446",
+        "source": "@KirkDBorne"
+      }
+    },
+    "story5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Ornith-1.0 (DeepReinforce): open-weights LLMs specialized for agentic-coding workloads, not general code",
+        "href": "https://x.com/miraclemasui/status/2073556770581336103",
+        "source": "@miraclemasui"
+      }
+    },
+    "story6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MCP + Codex inside UE5 shipped a working E-key door in 3 minutes, once you learned to critique its first try",
+        "href": "https://x.com/blackpara16/status/2073557015624831274",
+        "source": "@blackpara16"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai-cache · candidates: 12 → kept: 6_",
+        "variant": "caption"
+      }
+    }
+  }
+}
