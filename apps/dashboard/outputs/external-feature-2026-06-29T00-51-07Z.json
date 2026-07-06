@@ -1,0 +1,62 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "external-feature"
+      },
+      "children": [
+        "repo_heading",
+        "details_stack",
+        "separator",
+        "pr_link"
+      ]
+    },
+    "repo_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      }
+    },
+    "details_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "what_done",
+        "purpose"
+      ]
+    },
+    "what_done": {
+      "type": "Text",
+      "props": {
+        "text": "Wired scripts/validate-config.test.js into ci-tests.yml"
+      }
+    },
+    "purpose": {
+      "type": "Text",
+      "props": {
+        "text": "Regression to the analyzeCheckout validator now surfaces on PRs"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #560",
+        "href": "https://github.com/aaronjmars/aeon/pull/560",
+        "source": "GitHub"
+      }
+    }
+  }
+}

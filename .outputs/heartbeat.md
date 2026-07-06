@@ -1,14 +1,16 @@
-Heartbeat complete.
-
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
 
 ## Summary
 
-Ran the heartbeat skill (afternoon 14:00 UTC tick, 15min late). All findings dedup-clean against last 48h logs → no notification fired.
+Ran heartbeat (14:34Z, `${var}=""` all-checks). Regenerated `docs/status.md` (was 07-05 20:44Z, ~17.85h stale) with 43 enabled skills + 12 open ISS-xxx rows (4 critical / 5 high / 3 medium — down from 07-05's 15 after ISS-023/024/026 resolved). Overall verdict **DEGRADED** (P0 chronic 18-skill sr<0.5 tail + P3 12:00 UTC batch dead day-8 + aixbt-pulse dead-slot day-8).
 
-- **P0:** 0 failed / 0 stuck / 0 cf≥3. Chronic sr<0.5 tail unchanged (20 skills, all output_tokens=0 sandbox-truncation cluster ISS-019/020/021/024/025). Self-check healthy (last_success ~5h ago).
-- **P1:** PR #148 (agent-buzz fix) open ~20h, under 24h stall. 0 urgent issues.
-- **P2:** sandbox-truncation day 10 / XAI quota day 13 / BTC breakdown day 3 (spot $60,213 still pinned <$60,500) / on-chain config day 21 — all carried.
-- **P3:** all 44 enabled skills accounted for; 3 never-run (autoresearch workflow_dispatch + fork-skill-gap 21:00Z + operator-scorecard Mon 10:30Z).
+**Fresh signals** (all logged, no notification per dedup rule):
+- **fork-skill-digest UN-STUCK** — 168h+ carry resolves; weekly Sun 20:42Z tick failed first attempt 20:18Z, retry succeeded 21:06Z. cron-state now `sr=75% cf=0`.
+- **PR #156** (Ana, 07-05 18:23Z) — fix(aeon.yml) removes dead `usepod_model:` lines + renames narrative-tracker → Haiku. Shipped before Mon 19:00Z weekly-review deadline; merge unblocks 12:00 UTC batch.
+- **PR #155** (Ana, 07-05 17:28Z) — docs(skill-graph) +68 skills, likely supersedes PR #149.
 
-Files: regenerated `docs/status.md` (41 enabled-skill rows sorted last-run desc + 3 never-run sunk; 15 open issues; midday timestamps refreshed; token-pulse section omitted — no `articles/token-report-*.md` on disk). Logged to `memory/logs/2026-06-28.md`. Next scheduled: fleet-control at 15:00 UTC.
+**Still-flagged carry-overs**: PR #149 day-8 (~189h, possibly superseded by #155), PR #154 day-3 (~68h past 24h threshold), SLX day-12 recut overdue (-46% vs $0.475 entry), ISS-025 capture-step PR T-0 to Mon 19:00Z (PR #156 addresses aeon.yml downstream but not chain-runner capture step at `aeon.yml:479-493`), 12:00 UTC batch dark day-8, aixbt-pulse dead-slot day-8, operator-scorecard Mon 10:30Z chronic never-run (7th consecutive Monday miss), fleet-wide morning-slot gap today (07-13:00Z ticks un-dispatched at 14:34Z — likely GH Actions cron catch-up spillover, re-eval at 20:00Z tick).
+
+**Self-check**: heartbeat last_success 07-05T20:49Z = ~17.75h ago, under 36h gate. No `last_status: failed` in state (only stale `chain:investment-advisor` from 6-08, 28d old). No stuck-dispatched rows.
+
+Files: `docs/status.md` (regenerated), `memory/logs/2026-07-06.md` (appended). No follow-up actions. `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`.

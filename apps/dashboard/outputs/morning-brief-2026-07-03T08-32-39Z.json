@@ -1,0 +1,284 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-03"
+      },
+      "children": [
+        "focus_section",
+        "sep1",
+        "yesterday_section",
+        "sep2",
+        "running_section"
+      ]
+    },
+    "focus_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_heading",
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "focus_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_1_title",
+        "focus_1_desc"
+      ]
+    },
+    "focus_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "1. BTC — day-8 red or breakdown clears",
+        "variant": "lead"
+      }
+    },
+    "focus_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "why now: spot $61.3k held two quiet ticks, tonight's UTC close decides",
+        "variant": "caption"
+      }
+    },
+    "focus_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_2_title",
+        "focus_2_desc"
+      ]
+    },
+    "focus_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "2. 12:00 UTC batch first live test",
+        "variant": "lead"
+      }
+    },
+    "focus_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 6 skills dark 5d, PR #150 fix first tick today",
+        "variant": "caption"
+      }
+    },
+    "focus_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_3_title",
+        "focus_3_desc"
+      ]
+    },
+    "focus_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "3. ISS-025 capture-step PR",
+        "variant": "lead"
+      }
+    },
+    "focus_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "why now: self-set weekly-review deadline T-1d, unshipped day 10",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "yesterday_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yesterday_heading",
+        "yesterday_item_1",
+        "yesterday_item_2",
+        "yesterday_item_3",
+        "yesterday_item_4"
+      ]
+    },
+    "yesterday_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "yesterday_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #150 + #151 merged 7-02 13:20Z — 2/3 stack cleared; $456/mo bleed halted + ISS-026 skill-evals cron fix shipped",
+        "variant": "body"
+      }
+    },
+    "yesterday_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "BTC first-bounce day: breadth 32→81/100 (biggest 30d swing), watchlist whole-green +5.19% median",
+        "variant": "body"
+      }
+    },
+    "yesterday_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "REPPO vol-trigger 3.16× at 13:07Z — 4-day drought base snaps, $0.021 wobble line reclaimed",
+        "variant": "body"
+      }
+    },
+    "yesterday_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "yesterday_4_1",
+        "yesterday_4_2"
+      ]
+    },
+    "yesterday_4_1": {
+      "type": "Text",
+      "props": {
+        "text": "reflect rewrote MEMORY.md 42L→45L; VELVET pick closed −68.5%; 3 new durable patterns codified (brandjack testing-arm, skills-as-primitive day-3, GHSA field lag)",
+        "variant": "body"
+      }
+    },
+    "yesterday_4_2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #149 docs(skill-graph) day-5 stall — operator-merge gated",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running_heading",
+        "running_tasks_stack"
+      ]
+    },
+    "running_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running_tasks_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "task_1",
+        "task_2",
+        "task_3",
+        "task_4",
+        "task_5",
+        "task_6",
+        "task_7",
+        "task_8"
+      ]
+    },
+    "task_1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness / heartbeat @ 08:00 UTC",
+        "variant": "caption"
+      }
+    },
+    "task_2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00 UTC",
+        "variant": "caption"
+      }
+    },
+    "task_3": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert + 6-skill dark-batch relight @ 12:00 UTC",
+        "variant": "caption"
+      }
+    },
+    "task_4": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill / security-digest @ 14:00 UTC",
+        "variant": "caption"
+      }
+    },
+    "task_5": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels @ 04:15 / 08:15 / 12:15 / 16:15 / 20:15 UTC",
+        "variant": "caption"
+      }
+    },
+    "task_6": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest @ 17:00 UTC · agent-buzz @ 17:30 UTC",
+        "variant": "caption"
+      }
+    },
+    "task_7": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker / skill-health / reflect / action-converter / self-improve @ 18:00 UTC",
+        "variant": "caption"
+      }
+    },
+    "task_8": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap / thought-review @ 21:00 UTC",
+        "variant": "caption"
+      }
+    }
+  }
+}

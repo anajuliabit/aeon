@@ -1,0 +1,343 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-06-29"
+      },
+      "children": [
+        "heading_top_pick",
+        "stack_top_pick",
+        "sep1",
+        "heading_aiml",
+        "stack_aiml",
+        "sep2",
+        "heading_devtools",
+        "stack_devtools",
+        "sep3",
+        "text_sources"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h3"
+      }
+    },
+    "stack_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_top_pick",
+        "text_top_pick_context",
+        "text_top_pick_desc",
+        "stack_top_pick_meta",
+        "text_top_pick_warning"
+      ]
+    },
+    "link_top_pick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "DeusData/codebase-memory-mcp",
+        "href": "https://github.com/DeusData/codebase-memory-mcp",
+        "source": "GitHub"
+      }
+    },
+    "text_top_pick_context": {
+      "type": "Text",
+      "props": {
+        "text": "Biggest mover of the day at 13× normal velocity and a direct successor to yesterday's cognee top pick — agent-memory infra keeps stacking trending hits.",
+        "variant": "body"
+      }
+    },
+    "text_top_pick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Indexes 158 languages into a persistent graph as a single static binary with sub-ms queries — credible alternative to grep-via-shell for agent codebase memory",
+        "variant": "body"
+      }
+    },
+    "stack_top_pick_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_top_pick_stars",
+        "badge_top_pick_lang",
+        "badge_top_pick_status"
+      ]
+    },
+    "stat_top_pick_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today / total",
+        "value": "2.2k / 20.7k"
+      }
+    },
+    "badge_top_pick_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "C"
+      }
+    },
+    "badge_top_pick_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "text_top_pick_warning": {
+      "type": "Alert",
+      "props": {
+        "message": "Anonymous \"DeusData\" org — kick the tires before you wire it in.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "stack_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "item_aiml_1",
+        "item_aiml_2"
+      ]
+    },
+    "item_aiml_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_aiml_1",
+        "text_aiml_1_desc",
+        "stack_aiml_1_meta"
+      ]
+    },
+    "link_aiml_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "DeusData/codebase-memory-mcp",
+        "href": "https://github.com/DeusData/codebase-memory-mcp",
+        "source": "GitHub"
+      }
+    },
+    "text_aiml_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Indexes 158 languages into a persistent graph as a single static binary with sub-ms queries — credible alternative to grep-via-shell for agent codebase memory",
+        "variant": "body"
+      }
+    },
+    "stack_aiml_1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_aiml_1_stars",
+        "badge_aiml_1_lang",
+        "badge_aiml_1_status"
+      ]
+    },
+    "stat_aiml_1_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today / total",
+        "value": "2.2k / 20.7k"
+      }
+    },
+    "badge_aiml_1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "C"
+      }
+    },
+    "badge_aiml_1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "item_aiml_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_aiml_2",
+        "text_aiml_2_desc",
+        "stack_aiml_2_meta"
+      ]
+    },
+    "link_aiml_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Robbyant/lingbot-map",
+        "href": "https://github.com/Robbyant/lingbot-map",
+        "source": "GitHub"
+      }
+    },
+    "text_aiml_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Streaming video → 3D scene reconstruction in a single forward pass — no per-scene optimization the classic photogrammetry stack needs",
+        "variant": "body"
+      }
+    },
+    "stack_aiml_2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_aiml_2_stars",
+        "badge_aiml_2_lang",
+        "badge_aiml_2_status"
+      ]
+    },
+    "stat_aiml_2_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today / total",
+        "value": "372 / 8.5k"
+      }
+    },
+    "badge_aiml_2_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "badge_aiml_2_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "stack_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_devtools_1"
+      ]
+    },
+    "item_devtools_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_devtools_1",
+        "text_devtools_1_desc",
+        "stack_devtools_1_meta"
+      ]
+    },
+    "link_devtools_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "altic-dev/FluidVoice",
+        "href": "https://github.com/altic-dev/FluidVoice",
+        "source": "GitHub"
+      }
+    },
+    "text_devtools_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Local whisper-based macOS dictation ships v1.6.1 yesterday — replaces Apple's network-bound dictation without a subscription",
+        "variant": "body"
+      }
+    },
+    "stack_devtools_1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_devtools_1_stars",
+        "badge_devtools_1_lang",
+        "badge_devtools_1_status"
+      ]
+    },
+    "stat_devtools_1_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today / total",
+        "value": "365 / 4.0k"
+      }
+    },
+    "badge_devtools_1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Swift"
+      }
+    },
+    "badge_devtools_1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: trending=ok · gh_api=ok · kept 3/13",
+        "variant": "muted"
+      }
+    }
+  }
+}

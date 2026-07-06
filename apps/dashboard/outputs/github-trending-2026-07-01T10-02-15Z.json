@@ -1,0 +1,351 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-01"
+      },
+      "children": [
+        "top-pick-section",
+        "sep-1",
+        "aiml-section",
+        "sep-2",
+        "devtools-section",
+        "sep-3",
+        "webapps-section",
+        "sep-4",
+        "sources-info"
+      ]
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-pick-label",
+        "top-pick-repo",
+        "top-pick-desc"
+      ]
+    },
+    "top-pick-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "top-pick-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "google/agents-cli",
+        "href": "https://github.com/google/agents-cli",
+        "source": "GitHub"
+      }
+    },
+    "top-pick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Google ships first-party agent-building CLI with a skills/ primitive — parallel evolution to Anthropic's Agent SDK. Same shape, different vendor.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aiml-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml-heading",
+        "aiml-item-1"
+      ]
+    },
+    "aiml-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-1-repo",
+        "aiml-1-meta",
+        "aiml-1-desc"
+      ]
+    },
+    "aiml-1-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "google/agents-cli",
+        "href": "https://github.com/google/agents-cli",
+        "score": "★ 445 today (4.5k total)",
+        "source": "GitHub"
+      }
+    },
+    "aiml-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-1-lang",
+        "aiml-1-status"
+      ]
+    },
+    "aiml-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "aiml-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "[ACCELERATING]",
+        "variant": "secondary"
+      }
+    },
+    "aiml-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Skills-as-primitive lands at Google Cloud — v0.6.1 shipped 6-28, third release in a week, cadence matches Anthropic SDK's day-2 momentum.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtools-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools-heading",
+        "devtools-item-1",
+        "devtools-item-2"
+      ]
+    },
+    "devtools-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-1-repo",
+        "devtools-1-meta",
+        "devtools-1-desc"
+      ]
+    },
+    "devtools-1-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ogulcancelik/herdr",
+        "href": "https://github.com/ogulcancelik/herdr",
+        "score": "★ 486 today (9.2k total)",
+        "source": "GitHub"
+      }
+    },
+    "devtools-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-1-lang",
+        "devtools-1-status"
+      ]
+    },
+    "devtools-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust"
+      }
+    },
+    "devtools-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "[ACCELERATING]",
+        "variant": "secondary"
+      }
+    },
+    "devtools-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Terminal-native multiplexer for running many agents side-by-side — the tmux answer for claude / codex / aider panes; preview build yesterday.",
+        "variant": "body"
+      }
+    },
+    "devtools-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-2-repo",
+        "devtools-2-meta",
+        "devtools-2-desc"
+      ]
+    },
+    "devtools-2-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "usestrix/strix",
+        "href": "https://github.com/usestrix/strix",
+        "score": "★ 515 today (28.5k total)",
+        "source": "GitHub"
+      }
+    },
+    "devtools-2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-2-lang",
+        "devtools-2-status"
+      ]
+    },
+    "devtools-2-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "devtools-2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "[ACCELERATING]",
+        "variant": "secondary"
+      }
+    },
+    "devtools-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "AI pentest agent hunting live exploits (not scanner-lint) — 6× baseline spike with no release since 6-09, viral-organic not driver-driven.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "webapps-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "webapps-heading",
+        "webapps-item-1"
+      ]
+    },
+    "webapps-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      }
+    },
+    "webapps-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "webapps-1-repo",
+        "webapps-1-meta",
+        "webapps-1-desc"
+      ]
+    },
+    "webapps-1-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "facebook/astryx",
+        "href": "https://github.com/facebook/astryx",
+        "score": "★ 364 today (2k total)",
+        "source": "GitHub"
+      }
+    },
+    "webapps-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "webapps-1-lang",
+        "webapps-1-status"
+      ]
+    },
+    "webapps-1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "webapps-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "[RETURNING]",
+        "variant": "secondary"
+      }
+    },
+    "webapps-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Meta's open design system built explicitly \"agent-ready\" — v0.1.2 shipped 6-29, first-party framework declaring agents as a first-class consumer.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-info": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/19 (drops: 2 fake-star pattern, 5 HOLDOVER, 4 filter, 4 subthreshold)",
+        "variant": "muted"
+      }
+    }
+  }
+}

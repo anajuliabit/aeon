@@ -1,14 +1,8 @@
-*Fork Cohort — 2026-06-21 — aaronjmars/aeon*
-COLD START: 186 forks, 32 running (first scan)
+*Fork Cohort — 2026-07-05 — aaronjmars/aeon*
+DROPPED_FROM_POWER x15 — default-config forks fell below threshold; 4 new forks debuted active.
 
-Of 80 scanned (186 total), 32 ran in the last 7 days (40%). POWER 15 · ACTIVE 17 · STALE 9 · COLD 39.
+Of 201 forks, 36 ran in the last 7 days (45% of scanned 80). POWER 12 (-15) · ACTIVE 24 (+18) · STALE 8 · COLD 36.
 
-New running forks (POWER):
-- @tomscaria — tomscaria/aeon (56 skills enabled)
-- @Boodszw — Boodszw/Boodszw_Bread (16 skills)
-- @taekwonv89 — taekwonv89/aeon (16 skills)
-- @0xMal0u — 0xMal0u/aeon (11 skills)
-- @chxoky — chxoky/aeon (11 skills)
-... and 10 more POWER, 17 ACTIVE
+15 forks lost POWER status — all ran this week but show only 4 enabled skills now vs 5-6 prior. Pattern is uniform across default-config forks; custom-skill forks (enzoonchain 7, taekwonv89 16, tomscaria 56) held. penguinxbt debuted straight to POWER (7 skills). Damoncrypto fell off the top-80 push list.
 
-Full report: articles/fork-cohort-2026-06-21.md
+Full report: articles/fork-cohort-2026-07-05.md

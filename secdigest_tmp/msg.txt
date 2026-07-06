@@ -1,0 +1,24 @@
+*Security Digest — 2026-07-04*
+Verdict: 14 npm malware (supply-chain wave resumed, 24h quiet window closed). 4 to schedule. 1 to monitor. _Sources: KEV, GH Advisory, EPSS_
+
+*PATCH TODAY*
+- npm malware · [5-pkg TS/API-node-utility batch](https://github.com/advisories/GHSA-84mg-p866-528x) same-minute 07-03 16:06Z (typescript-util-core, ts-node-utils, api-node-utils, api-ts-utils, web-api-node)
+  → yank any workspace/lockfile hits; rotate creds exposed during install.
+- npm malware · [4-pkg SQL/DB batch](https://github.com/advisories/GHSA-9f9w-wg5j-m53j) same-minute 07-03 15:59Z (@sql-trigger/nodesql, @sql-access/nodesql, @sqlite-node/createsql, @node-cloud/create) extends 7-02 db-utility cluster
+  → yank; rotate DB creds.
+- npm malware · [decode-sdks pair 15:37Z](https://github.com/advisories/GHSA-gv37-287r-g9vx) (decode-sdks + @jacobtan/decode-sdk) + 3 singleton stragglers (@lodash-en/lodash-en, @antoncarlos1/nodelamp, alder_morrgan)
+  → yank; rotate.
+
+*PATCH THIS WEEK*
+- [CVE-2026-52726](https://github.com/advisories/GHSA-gfhv-vqv2-4544) — dulwich (pip) · CVSS 7.5 · EPSS 0.004 · *public PoC* · RCE via cloned repo writing `.git/hooks`, no user interaction
+  → upgrade dulwich to ≥1.2.5.
+- [CVE-2026-49250](https://github.com/advisories/GHSA-525m-7f82-2mf7) — @conform-to/dom (npm) · CVSS 8.7 · CPU-exhaustion DoS via many unique form fields
+  → upgrade @conform-to/dom to ≥1.19.4.
+- [CVE-2026-49360](https://github.com/advisories/GHSA-rh62-j648-g5qc) — recce (pip) · CVSS 7.8 · unauth SQL exec + local file R/W on DuckDB backend
+  → upgrade recce to ≥1.50.0.
+- [CVE-2026-49253](https://github.com/advisories/GHSA-38j7-23hf-9mhc) — electerm (npm) · CVSS 7.1 · malicious SSH server → arbitrary file write (Zmodem/Trzsz)
+  → covered by yesterday's electerm ≥3.11.11 upgrade.
+
+*MONITOR*
+- [GHSA-6g2f-w7g3-77vf](https://github.com/advisories/GHSA-6g2f-w7g3-77vf) — 9router (npm) · CVSS 7.5 · *no patch* · incomplete-fix bypass of CVE-2026-46339 via Host header
+  → header-based access control isn't trustable; block proxied ingress until vendor ships.

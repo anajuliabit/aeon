@@ -1,0 +1,138 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-05"
+      },
+      "children": [
+        "lead-text",
+        "sep1",
+        "defi-section-heading",
+        "tweets-container",
+        "sep2",
+        "metadata-section"
+      ]
+    },
+    "lead-text": {
+      "type": "Text",
+      "props": {
+        "text": "DeFi list flags Vitalik's new ETH roadmap as bullish-on-paper / bearish-on-tape: 2028+ payoff invites Tempo/Canton to eat RWA lunch meanwhile.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "defi-section-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi",
+        "level": "h2"
+      }
+    },
+    "tweets-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1-wrapper",
+        "tweet2-wrapper"
+      ]
+    },
+    "tweet1-wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1-card",
+        "tweet1-link"
+      ]
+    },
+    "tweet1-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "Vitalik roadmap (L1 reclaims exec from L2s, privacy, quantum, sub-sec finality) hits every ETH bear except tokenomics — but Merge slippage math says 2028+ delivery is real risk while Tempo/Canton nibble RWA/institutional adoption.",
+        "likes": 318,
+        "retweets": 21
+      }
+    },
+    "tweet1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DefiIgnas/status/2073480431887056958"
+      }
+    },
+    "tweet2-wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2-card",
+        "tweet2-link"
+      ]
+    },
+    "tweet2-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "\"60 Claude Opus 4.8 workflows\" pitch: gap between *using* and *running* the model is where overnight bug-sweep PRs, wallet-scanners, content pipelines live. Cursor/CC-native automation is now the influencer meme.",
+        "likes": 119,
+        "retweets": 23
+      }
+    },
+    "tweet2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2073476435541651866"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-text",
+        "status-text"
+      ]
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1642770456720683008=ok(10)",
+        "variant": "caption"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

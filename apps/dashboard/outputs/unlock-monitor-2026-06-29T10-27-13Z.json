@@ -1,0 +1,874 @@
+{
+  "root": "card-unlock",
+  "state": {},
+  "elements": {
+    "card-unlock": {
+      "type": "Card",
+      "props": {
+        "title": "Unlock Monitor — week of 2026-06-29",
+        "description": "BEAT unlocks Jul 1 at ~$52M (7.32% supply, 2.3× daily vol) into a 30d +114.7% rip. fade the pump."
+      },
+      "children": [
+        "strain-heading",
+        "beat-stack",
+        "sep1",
+        "digestible-heading",
+        "ena-stack",
+        "sui-stack",
+        "tree-stack",
+        "kite-stack",
+        "eigen-stack",
+        "ff-stack",
+        "q-stack",
+        "sep2",
+        "trivial-heading",
+        "trivial-stack",
+        "sep3",
+        "forced-heading",
+        "forced-text",
+        "sep4",
+        "supply-heading",
+        "supply-text",
+        "sep5",
+        "sources-heading",
+        "sources-stack"
+      ]
+    },
+    "strain-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "STRAIN (1.0×–2.4×)",
+        "level": "h2"
+      }
+    },
+    "beat-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "beat-name",
+        "beat-datetime",
+        "beat-metrics",
+        "beat-note"
+      ]
+    },
+    "beat-name": {
+      "type": "Heading",
+      "props": {
+        "text": "BEAT",
+        "level": "h3"
+      }
+    },
+    "beat-datetime": {
+      "type": "Text",
+      "props": {
+        "text": "Tue Jul 1 03:00 UTC",
+        "variant": "caption"
+      }
+    },
+    "beat-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "beat-supply",
+        "beat-cliff",
+        "beat-recipient",
+        "beat-volume",
+        "beat-perf"
+      ]
+    },
+    "beat-supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply",
+        "value": "7.32%"
+      }
+    },
+    "beat-cliff": {
+      "type": "Stat",
+      "props": {
+        "label": "Cliff",
+        "value": "$51.6M"
+      }
+    },
+    "beat-recipient": {
+      "type": "Badge",
+      "props": {
+        "text": "Recipient: unspecified",
+        "variant": "outline"
+      }
+    },
+    "beat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume Ratio (24h vol)",
+        "value": "2.3× ($23.5M)"
+      }
+    },
+    "beat-perf": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+114.7%",
+        "trend": "up",
+        "delta": "+114.7%"
+      }
+    },
+    "beat-note": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "beat-rec",
+        "beat-analysis"
+      ]
+    },
+    "beat-rec": {
+      "type": "Badge",
+      "props": {
+        "text": "fade pump",
+        "variant": "destructive"
+      }
+    },
+    "beat-analysis": {
+      "type": "Text",
+      "props": {
+        "text": "borderline crisis; only event that audibly leverages liquidity this week",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "digestible-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DIGESTIBLE (0.3×–1.0×, after recipient bumps)",
+        "level": "h2"
+      }
+    },
+    "ena-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ena-name",
+        "ena-datetime",
+        "ena-metrics",
+        "ena-note"
+      ]
+    },
+    "ena-name": {
+      "type": "Heading",
+      "props": {
+        "text": "ENA",
+        "level": "h3"
+      }
+    },
+    "ena-datetime": {
+      "type": "Text",
+      "props": {
+        "text": "Wed Jul 2 11:00",
+        "variant": "caption"
+      }
+    },
+    "ena-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ena-supply",
+        "ena-cliff",
+        "ena-recipient",
+        "ena-volume",
+        "ena-perf-30d",
+        "ena-perf-7d"
+      ]
+    },
+    "ena-supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply",
+        "value": "1.01%"
+      }
+    },
+    "ena-cliff": {
+      "type": "Stat",
+      "props": {
+        "label": "Cliff",
+        "value": "$7.1M"
+      }
+    },
+    "ena-recipient": {
+      "type": "Badge",
+      "props": {
+        "text": "core contributors",
+        "variant": "outline"
+      }
+    },
+    "ena-volume": {
+      "type": "Text",
+      "props": {
+        "text": "0.07× vol (bumped trivial→digestible on insider recipient)",
+        "variant": "caption"
+      }
+    },
+    "ena-perf-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+10%",
+        "trend": "up"
+      }
+    },
+    "ena-perf-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "−16.9%",
+        "trend": "down"
+      }
+    },
+    "ena-note": {
+      "type": "Text",
+      "props": {
+        "text": "market asleep on team-side dilution; StablecoinX nasdaq overhang already softening tape",
+        "variant": "muted"
+      }
+    },
+    "sui-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sui-name",
+        "sui-datetime",
+        "sui-metrics",
+        "sui-note"
+      ]
+    },
+    "sui-name": {
+      "type": "Heading",
+      "props": {
+        "text": "SUI",
+        "level": "h3"
+      }
+    },
+    "sui-datetime": {
+      "type": "Text",
+      "props": {
+        "text": "Tue Jul 1",
+        "variant": "caption"
+      }
+    },
+    "sui-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sui-supply",
+        "sui-cliff",
+        "sui-recipient",
+        "sui-volume",
+        "sui-perf"
+      ]
+    },
+    "sui-supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply",
+        "value": "0.34%"
+      }
+    },
+    "sui-cliff": {
+      "type": "Stat",
+      "props": {
+        "label": "Cliff",
+        "value": "$9.5M"
+      }
+    },
+    "sui-recipient": {
+      "type": "Badge",
+      "props": {
+        "text": "mixed: 4M community / 7.65M early contributors / 2.07M mysten treasury",
+        "variant": "outline"
+      }
+    },
+    "sui-volume": {
+      "type": "Text",
+      "props": {
+        "text": "0.04× vol (bumped on insider slice)",
+        "variant": "caption"
+      }
+    },
+    "sui-perf": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+22.9%",
+        "trend": "up"
+      }
+    },
+    "sui-note": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "sui-rec",
+        "sui-analysis"
+      ]
+    },
+    "sui-rec": {
+      "type": "Badge",
+      "props": {
+        "text": "fade pump",
+        "variant": "destructive"
+      }
+    },
+    "sui-analysis": {
+      "type": "Text",
+      "props": {
+        "text": "on the early-contrib piece",
+        "variant": "muted"
+      }
+    },
+    "tree-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tree-name",
+        "tree-datetime",
+        "tree-metrics",
+        "tree-note"
+      ]
+    },
+    "tree-name": {
+      "type": "Heading",
+      "props": {
+        "text": "TREE",
+        "level": "h3"
+      }
+    },
+    "tree-datetime": {
+      "type": "Text",
+      "props": {
+        "text": "Mon Jun 29 03:00",
+        "variant": "caption"
+      }
+    },
+    "tree-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tree-supply",
+        "tree-cliff",
+        "tree-volume",
+        "tree-perf"
+      ]
+    },
+    "tree-supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply",
+        "value": "24.56%"
+      }
+    },
+    "tree-cliff": {
+      "type": "Stat",
+      "props": {
+        "label": "Cliff",
+        "value": "$1.6M"
+      }
+    },
+    "tree-volume": {
+      "type": "Text",
+      "props": {
+        "text": "0.35× vol",
+        "variant": "caption"
+      }
+    },
+    "tree-perf": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+33%",
+        "trend": "up"
+      }
+    },
+    "tree-note": {
+      "type": "Text",
+      "props": {
+        "text": "market asleep on structural dilution; absolute $ tiny, supply expansion is the largest of the week",
+        "variant": "muted"
+      }
+    },
+    "kite-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "kite-name",
+        "kite-datetime",
+        "kite-metrics",
+        "kite-note"
+      ]
+    },
+    "kite-name": {
+      "type": "Heading",
+      "props": {
+        "text": "KITE",
+        "level": "h3"
+      }
+    },
+    "kite-datetime": {
+      "type": "Text",
+      "props": {
+        "text": "Tue Jul 1 03:00",
+        "variant": "caption"
+      }
+    },
+    "kite-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kite-supply",
+        "kite-cliff",
+        "kite-volume",
+        "kite-perf-30d",
+        "kite-perf-7d"
+      ]
+    },
+    "kite-supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply",
+        "value": "4.68%"
+      }
+    },
+    "kite-cliff": {
+      "type": "Stat",
+      "props": {
+        "label": "Cliff",
+        "value": "$13.3M"
+      }
+    },
+    "kite-volume": {
+      "type": "Text",
+      "props": {
+        "text": "0.40× vol",
+        "variant": "caption"
+      }
+    },
+    "kite-perf-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+38.9%",
+        "trend": "up"
+      }
+    },
+    "kite-perf-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+28%",
+        "trend": "up"
+      }
+    },
+    "kite-note": {
+      "type": "Text",
+      "props": {
+        "text": "absorbable while momentum holds",
+        "variant": "muted"
+      }
+    },
+    "eigen-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "eigen-name",
+        "eigen-datetime",
+        "eigen-metrics",
+        "eigen-note"
+      ]
+    },
+    "eigen-name": {
+      "type": "Heading",
+      "props": {
+        "text": "EIGEN",
+        "level": "h3"
+      }
+    },
+    "eigen-datetime": {
+      "type": "Text",
+      "props": {
+        "text": "Tue Jul 1 11:00",
+        "variant": "caption"
+      }
+    },
+    "eigen-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "eigen-supply",
+        "eigen-cliff",
+        "eigen-volume",
+        "eigen-perf"
+      ]
+    },
+    "eigen-supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply",
+        "value": "4.63%"
+      }
+    },
+    "eigen-cliff": {
+      "type": "Stat",
+      "props": {
+        "label": "Cliff",
+        "value": "$8.4M"
+      }
+    },
+    "eigen-volume": {
+      "type": "Text",
+      "props": {
+        "text": "0.40× vol",
+        "variant": "caption"
+      }
+    },
+    "eigen-perf": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+4.8%",
+        "trend": "up"
+      }
+    },
+    "eigen-note": {
+      "type": "Text",
+      "props": {
+        "text": "absorbable",
+        "variant": "muted"
+      }
+    },
+    "ff-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ff-name",
+        "ff-datetime",
+        "ff-metrics",
+        "ff-note"
+      ]
+    },
+    "ff-name": {
+      "type": "Heading",
+      "props": {
+        "text": "FF",
+        "level": "h3"
+      }
+    },
+    "ff-datetime": {
+      "type": "Text",
+      "props": {
+        "text": "Mon Jun 29 03:00",
+        "variant": "caption"
+      }
+    },
+    "ff-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ff-supply",
+        "ff-cliff",
+        "ff-volume"
+      ]
+    },
+    "ff-supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply",
+        "value": "5.26%"
+      }
+    },
+    "ff-cliff": {
+      "type": "Text",
+      "props": {
+        "text": "~$12M at $0.10 spot (article snapped at $4M / $75M mcap, $236M live)",
+        "variant": "caption"
+      }
+    },
+    "ff-volume": {
+      "type": "Text",
+      "props": {
+        "text": "0.32× vol",
+        "variant": "caption"
+      }
+    },
+    "ff-note": {
+      "type": "Text",
+      "props": {
+        "text": "−87% from ATH — priced in",
+        "variant": "muted"
+      }
+    },
+    "q-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "q-name",
+        "q-datetime",
+        "q-metrics",
+        "q-note"
+      ]
+    },
+    "q-name": {
+      "type": "Heading",
+      "props": {
+        "text": "Q",
+        "level": "h3"
+      }
+    },
+    "q-datetime": {
+      "type": "Text",
+      "props": {
+        "text": "Wed Jul 2 03:00",
+        "variant": "caption"
+      }
+    },
+    "q-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "q-supply",
+        "q-cliff",
+        "q-volume",
+        "q-perf"
+      ]
+    },
+    "q-supply": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply",
+        "value": "3.87%"
+      }
+    },
+    "q-cliff": {
+      "type": "Stat",
+      "props": {
+        "label": "Cliff",
+        "value": "$2.7M"
+      }
+    },
+    "q-volume": {
+      "type": "Text",
+      "props": {
+        "text": "0.88× vol",
+        "variant": "caption"
+      }
+    },
+    "q-perf": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "−6.8%",
+        "trend": "down"
+      }
+    },
+    "q-note": {
+      "type": "Text",
+      "props": {
+        "text": "digestible high-end",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trivial-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TRIVIAL (dropped from headline)",
+        "level": "h2"
+      }
+    },
+    "trivial-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trivial-tokens",
+        "trivial-description"
+      ]
+    },
+    "trivial-tokens": {
+      "type": "Text",
+      "props": {
+        "text": "NIGHT, B2, GUN, OPN, ICNT, LA, POWER",
+        "variant": "body"
+      }
+    },
+    "trivial-description": {
+      "type": "Text",
+      "props": {
+        "text": "all sub-$5M cliffs below 0.3× absorption; small-cap noise, no recipient flag elevates them",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forced-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "FORCED",
+        "level": "h2"
+      }
+    },
+    "forced-text": {
+      "type": "Text",
+      "props": {
+        "text": "none this week. FTX next tranche scheduled Jul 31 (record-date passed Jun 16). Mt. Gox slipped to Oct 31."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "supply-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Supply read",
+        "level": "h2"
+      }
+    },
+    "supply-text": {
+      "type": "Text",
+      "props": {
+        "text": "the only event that actually leverages the order book is BEAT — 2.3× the daily volume on a token that just ran +115% in 30d. classic pre-cliff bid-then-dump. Everything else is digestible by ratio, but ENA and SUI both ship into insider buckets (core contributors / early contributors) on a tape that just printed a 4th sub-$60.5k BTC close with quarter-end rebalancing tomorrow — the asymmetric trade is shorting the asleep ones, not sizing the BEAT fade. TREE's 24.56% supply expansion is structurally the loudest move of the week, just at a $1.6M absolute that the float won't feel."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "sources",
+        "level": "h2"
+      }
+    },
+    "sources-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-tokenomist",
+        "sources-defillama",
+        "sources-cryptorank",
+        "sources-dropstab",
+        "sources-coingecko"
+      ]
+    },
+    "sources-tokenomist": {
+      "type": "Badge",
+      "props": {
+        "text": "tokenomist = ok",
+        "variant": "secondary"
+      }
+    },
+    "sources-defillama": {
+      "type": "Badge",
+      "props": {
+        "text": "defillama = fail(403)",
+        "variant": "destructive"
+      }
+    },
+    "sources-cryptorank": {
+      "type": "Badge",
+      "props": {
+        "text": "cryptorank = ok(partial-paywall)",
+        "variant": "secondary"
+      }
+    },
+    "sources-dropstab": {
+      "type": "Badge",
+      "props": {
+        "text": "dropstab = fail(no-future-dates)",
+        "variant": "destructive"
+      }
+    },
+    "sources-coingecko": {
+      "type": "Badge",
+      "props": {
+        "text": "coingecko = ok",
+        "variant": "secondary"
+      }
+    }
+  }
+}

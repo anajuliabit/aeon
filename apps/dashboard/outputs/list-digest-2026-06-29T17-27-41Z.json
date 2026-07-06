@@ -1,0 +1,91 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-29",
+        "description": "quiet curated list; only Flowslikeosmo's weekly watchlist carries signal."
+      },
+      "children": [
+        "section-curated"
+      ]
+    },
+    "section-curated": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-curated",
+        "tweet-flowslikeosmo",
+        "tweet-link",
+        "separator-1",
+        "status-section"
+      ]
+    },
+    "heading-curated": {
+      "type": "Heading",
+      "props": {
+        "text": "Curated DeFi/Crypto List",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet-flowslikeosmo": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "week-ahead book rotated into revenue-print perps/AMM ($HYPE/$AERO/$PENDLE/$VELO) conditioned on NFP/PCE/GDP + Warsh speech — quarter-end positioning into July data prints, not buying the June dip",
+        "likes": 42,
+        "retweets": 5
+      },
+      "children": []
+    },
+    "tweet-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2071351938546041050"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-text",
+        "status-badge"
+      ]
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(1 signal / 5 raw — 4 dropped as low-engagement replies)",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      },
+      "children": []
+    }
+  }
+}

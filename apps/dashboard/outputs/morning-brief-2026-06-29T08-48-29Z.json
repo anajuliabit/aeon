@@ -1,0 +1,220 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-29"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "text_focus_1",
+        "text_focus_2",
+        "text_focus_3",
+        "separator_1",
+        "heading_yesterday",
+        "text_yesterday_1",
+        "text_yesterday_2",
+        "text_yesterday_3",
+        "text_yesterday_4",
+        "separator_2",
+        "heading_watch",
+        "text_watch",
+        "separator_3",
+        "heading_running",
+        "stack_running"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "text_focus_1": {
+      "type": "Text",
+      "props": {
+        "text": "btc breakdown day 4 — why now: 6-28 close $59,612, q-end tomorrow forces rebal flows"
+      }
+    },
+    "text_focus_2": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025 capture-fix day 7 unshipped — why now: 20-skill tail still bleeds output_tokens=0"
+      }
+    },
+    "text_focus_3": {
+      "type": "Text",
+      "props": {
+        "text": "velvet pick day-1 — why now: $1.72 entry, exit $2.20 / inv $1.32 / 9d pre-july-10 unlock"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "text_yesterday_1": {
+      "type": "Text",
+      "props": {
+        "text": "pr #148 fix(agent-buzz) merged 00:17Z overnight — top→latest + min_likes:5 live"
+      }
+    },
+    "text_yesterday_2": {
+      "type": "Text",
+      "props": {
+        "text": "btc 4th consecutive sub-$60,500 close ($59,612); spot $59,228 morning, $59,402 05:13Z"
+      }
+    },
+    "text_yesterday_3": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-monitor first non-zero in ~72h — w3→w1 1.58m reppo stake migration + w1 6,595 usdc into steakhouse prime instant vault"
+      }
+    },
+    "text_yesterday_4": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort leveled-up 14 forks past POWER threshold; aaronjmars/aeon PR #560 opened (validate-config tests wired into ci)"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "text_watch": {
+      "type": "Text",
+      "props": {
+        "text": "jordi visser attributes btc weakness to q-end rebalancing + shorts + institutional skepticism — validates focus #1 framing"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "stack_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_running_1",
+        "text_running_2",
+        "text_running_3",
+        "text_running_4",
+        "text_running_5",
+        "text_running_6",
+        "text_running_7",
+        "text_running_8",
+        "text_running_9",
+        "text_running_10",
+        "text_running_11"
+      ]
+    },
+    "text_running_1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report @ 07:00 UTC (weekly)"
+      }
+    },
+    "text_running_2": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine @ 07:00 UTC"
+      }
+    },
+    "text_running_3": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness @ 08:00 UTC"
+      }
+    },
+    "text_running_4": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog @ 09:00 UTC (weekly)"
+      }
+    },
+    "text_running_5": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00 UTC"
+      }
+    },
+    "text_running_6": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor @ 10:00 UTC (weekly)"
+      }
+    },
+    "text_running_7": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert + token-pick @ 12:00 UTC"
+      }
+    },
+    "text_running_8": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill + security-digest + deal-flow @ 14:00 UTC (deal-flow weekly)"
+      }
+    },
+    "text_running_9": {
+      "type": "Text",
+      "props": {
+        "text": "skill-security-scan @ 16:00 UTC (weekly)"
+      }
+    },
+    "text_running_10": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review @ 19:00 UTC"
+      }
+    },
+    "text_running_11": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review @ 21:00 UTC"
+      }
+    }
+  }
+}

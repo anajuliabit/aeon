@@ -1,0 +1,21 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 Thought Review"
+      },
+      "children": [
+        "text_content"
+      ]
+    },
+    "text_content": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h · 0 captures. nothing to surface."
+      }
+    }
+  }
+}

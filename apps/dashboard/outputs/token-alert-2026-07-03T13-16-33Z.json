@@ -1,0 +1,100 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-07-03"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_volume",
+        "alert_trigger",
+        "sep1",
+        "text_watchlist_header",
+        "table_watchlist"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "GITLAWB",
+        "value": "$0.00006133",
+        "delta": "+27.38%",
+        "trend": "up"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$487,839",
+        "delta": "1.76× 5d avg ($277.6K)"
+      }
+    },
+    "alert_trigger": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "Trigger",
+        "message": "24h change +27.38% ≥ 15% token threshold — snaps the $0.00005 handle after day-2 reclaim attempt, first material breakout of the watchlist window (prev 1d high +8.03% on 7-02)."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_watchlist_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Watchlist Context",
+        "level": "h3"
+      }
+    },
+    "table_watchlist": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "24h Change",
+          "Status"
+        ],
+        "rows": [
+          [
+            "GITLAWB",
+            "+27.38%",
+            "Trigger alert (>15% threshold)"
+          ],
+          [
+            "WELL",
+            "+1.16%",
+            "Flat"
+          ],
+          [
+            "MAMO",
+            "+1.29%",
+            "Flat"
+          ],
+          [
+            "REPPO",
+            "+10.85%",
+            "Near 15% rail, vol 1.72×"
+          ]
+        ]
+      }
+    }
+  }
+}

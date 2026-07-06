@@ -1,0 +1,351 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health"
+      },
+      "children": [
+        "date_info",
+        "status_badge",
+        "systemic_issue",
+        "separator_1",
+        "section_degraded",
+        "separator_2",
+        "section_warning",
+        "separator_3",
+        "section_nodata",
+        "separator_4",
+        "section_healthy",
+        "separator_5",
+        "section_summary",
+        "note_partial"
+      ]
+    },
+    "date_info": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-30 — same hash as 6-29 17:45Z, daily-cadence ping",
+        "variant": "caption"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEGRADED (23 skills)",
+        "variant": "destructive"
+      }
+    },
+    "systemic_issue": {
+      "type": "Alert",
+      "props": {
+        "title": "Systemic Issue",
+        "message": "sandbox-truncation — output_tokens=0 — 23 DEGRADED + 8 WARNING share signature. Issue cluster: ISS-019/020/021/024/025. Capture-step fix — Day 8 unshipped",
+        "type": "warning"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_degraded": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_degraded",
+        "degraded_intro",
+        "skill_regmonitor",
+        "skill_vulnscanner",
+        "skill_costreport",
+        "skill_analytics",
+        "skill_secdigest",
+        "degraded_tail"
+      ]
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (top 5)",
+        "level": "h3"
+      }
+    },
+    "degraded_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Ranked by success rate (worst first):",
+        "variant": "caption"
+      }
+    },
+    "skill_regmonitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "regmonitor_title",
+        "regmonitor_stats"
+      ]
+    },
+    "regmonitor_title": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "lead"
+      }
+    },
+    "regmonitor_stats": {
+      "type": "Text",
+      "props": {
+        "text": "38/42 fails (10% sr) — WAIT-API (sandbox-truncation)"
+      }
+    },
+    "skill_vulnscanner": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vulnscanner_title",
+        "vulnscanner_stats"
+      ]
+    },
+    "vulnscanner_title": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "lead"
+      }
+    },
+    "vulnscanner_stats": {
+      "type": "Text",
+      "props": {
+        "text": "27/30 fails (10% sr) — WAIT-API (sandbox-truncation) → ISS-018"
+      }
+    },
+    "skill_costreport": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "costreport_title",
+        "costreport_stats"
+      ]
+    },
+    "costreport_title": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "costreport_stats": {
+      "type": "Text",
+      "props": {
+        "text": "41/46 fails (11% sr) — WAIT-API (sandbox-truncation) → ISS-025"
+      }
+    },
+    "skill_analytics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "analytics_title",
+        "analytics_stats"
+      ]
+    },
+    "analytics_title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "lead"
+      }
+    },
+    "analytics_stats": {
+      "type": "Text",
+      "props": {
+        "text": "42/47 fails (11% sr) — WAIT-API (sandbox-truncation)"
+      }
+    },
+    "skill_secdigest": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "secdigest_title",
+        "secdigest_stats"
+      ]
+    },
+    "secdigest_title": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "lead"
+      }
+    },
+    "secdigest_stats": {
+      "type": "Text",
+      "props": {
+        "text": "68/90 fails (24% sr) — WAIT-API (sandbox-truncation)"
+      }
+    },
+    "degraded_tail": {
+      "type": "Text",
+      "props": {
+        "text": "+18 more — see memory/issues/INDEX.md (entire chronic tail shares the ISS-025 capture-step signature)",
+        "variant": "muted"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_warning": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_warning",
+        "warning_list"
+      ]
+    },
+    "heading_warning": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 WARNING (8)",
+        "level": "h3"
+      }
+    },
+    "warning_list": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels, daily-routine, defi-overview, morning-brief, on-chain-monitor, token-alert, token-movers, token-pick"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_nodata",
+        "nodata_text"
+      ]
+    },
+    "heading_nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (2)",
+        "level": "h3"
+      }
+    },
+    "nodata_text": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap, operator-scorecard — DISPATCH-SKILL (Sunday-cron skills, will write state next dispatch)"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_healthy": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_healthy",
+        "healthy_list"
+      ]
+    },
+    "heading_healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY (9)",
+        "level": "h3"
+      }
+    },
+    "healthy_list": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor, deal-flow, skill-security-scan, fork-cohort, skill-update-check, weekly-review, weekly-shiplog, fork-skill-digest, skill-graph"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_open_issues",
+        "stat_filed",
+        "stat_resolved"
+      ]
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "15"
+      }
+    },
+    "stat_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed this run",
+        "value": "0"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    },
+    "note_partial": {
+      "type": "Alert",
+      "props": {
+        "title": "Classification Note",
+        "message": "skill-runs blocked by sandbox → cron-state-only classification (SKILL_HEALTH_PARTIAL)",
+        "type": "info"
+      }
+    }
+  }
+}

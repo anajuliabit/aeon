@@ -1,0 +1,469 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest",
+        "description": "2026-07-03"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict-alert",
+        "sep1",
+        "heading-patch-today",
+        "cve-49352-stack",
+        "sep2",
+        "heading-patch-week",
+        "cve-52830-stack",
+        "cve-52735-stack",
+        "cve-49255-stack",
+        "cve-49852-stack",
+        "cve-44454-stack",
+        "sep3",
+        "footer-text"
+      ]
+    },
+    "verdict-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Verdict",
+        "message": "1 to patch today (public PoC + public secret), 5 to schedule. Sources: KEV ok, GH Advisory ok, EPSS ok"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-patch-today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve-49352-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-49352-link",
+        "cve-49352-badges",
+        "cve-49352-desc",
+        "cve-49352-action"
+      ]
+    },
+    "cve-49352-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49352",
+        "href": "https://github.com/advisories/GHSA-jphh-m39h-6gwx",
+        "source": "GitHub Advisory"
+      }
+    },
+    "cve-49352-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-49352-product",
+        "badge-49352-cvss",
+        "badge-49352-poc",
+        "badge-49352-kev"
+      ]
+    },
+    "badge-49352-product": {
+      "type": "Badge",
+      "props": {
+        "text": "9router (npm)",
+        "variant": "default"
+      }
+    },
+    "badge-49352-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.8",
+        "variant": "destructive"
+      }
+    },
+    "badge-49352-poc": {
+      "type": "Badge",
+      "props": {
+        "text": "public PoC",
+        "variant": "destructive"
+      }
+    },
+    "badge-49352-kev": {
+      "type": "Badge",
+      "props": {
+        "text": "not in KEV",
+        "variant": "outline"
+      }
+    },
+    "cve-49352-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Hardcoded default JWT fallback secret `9router-default-secret-change-me` = auth bypass. Advisory ships full token-forgery PoC.",
+        "variant": "body"
+      }
+    },
+    "cve-49352-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade 9router to ≥0.4.45 today; require `JWT_SECRET` at startup; rotate any tokens issued under the default.",
+        "variant": "lead"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-patch-week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "cve-52830-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-52830-link",
+        "cve-52830-badges",
+        "cve-52830-desc",
+        "cve-52830-action"
+      ]
+    },
+    "cve-52830-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-52830",
+        "href": "https://github.com/advisories/GHSA-rxw2-pc8j-vxwm",
+        "source": "GitHub Advisory"
+      }
+    },
+    "cve-52830-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-52830-product",
+        "badge-52830-cvss",
+        "badge-52830-poc"
+      ]
+    },
+    "badge-52830-product": {
+      "type": "Badge",
+      "props": {
+        "text": "fast-mcp-telegram (pip)",
+        "variant": "default"
+      }
+    },
+    "badge-52830-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.4",
+        "variant": "destructive"
+      }
+    },
+    "badge-52830-poc": {
+      "type": "Badge",
+      "props": {
+        "text": "public PoC",
+        "variant": "destructive"
+      }
+    },
+    "cve-52830-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Bearer-token path traversal (`../fast-mcp-telegram/telegram`) bypasses reserved session guard = unauth Telegram takeover on default session file.",
+        "variant": "body"
+      }
+    },
+    "cve-52830-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade fast-mcp-telegram to ≥0.19.1.",
+        "variant": "lead"
+      }
+    },
+    "cve-52735-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-52735-link",
+        "cve-52735-badges",
+        "cve-52735-desc",
+        "cve-52735-action"
+      ]
+    },
+    "cve-52735-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-52735",
+        "href": "https://github.com/advisories/GHSA-gf9r-m956-97qx",
+        "source": "GitHub Advisory"
+      }
+    },
+    "cve-52735-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-52735-product",
+        "badge-52735-cvss"
+      ]
+    },
+    "badge-52735-product": {
+      "type": "Badge",
+      "props": {
+        "text": "zebrad (rust)",
+        "variant": "default"
+      }
+    },
+    "badge-52735-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.3",
+        "variant": "destructive"
+      }
+    },
+    "cve-52735-desc": {
+      "type": "Text",
+      "props": {
+        "text": "P2SH sigop undercount in pure-Rust disabled-opcode parser = Zcash consensus divergence; any tx broadcaster chain-splits Zebra miners.",
+        "variant": "body"
+      }
+    },
+    "cve-52735-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade zebrad ≥4.5.0 and zebra-script ≥7.0.0.",
+        "variant": "lead"
+      }
+    },
+    "cve-49255-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-49255-link",
+        "cve-49255-badges",
+        "cve-49255-desc",
+        "cve-49255-action"
+      ]
+    },
+    "cve-49255-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49255",
+        "href": "https://github.com/advisories/GHSA-v5ff-xmfp-p245",
+        "source": "GitHub Advisory"
+      }
+    },
+    "cve-49255-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-49255-product",
+        "badge-49255-cvss"
+      ]
+    },
+    "badge-49255-product": {
+      "type": "Badge",
+      "props": {
+        "text": "electerm (npm)",
+        "variant": "default"
+      }
+    },
+    "badge-49255-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.8",
+        "variant": "destructive"
+      }
+    },
+    "cve-49255-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Command injection via crafted SSH/SFTP filenames through rmrf/mv/cp = RCE as desktop user; bash + PowerShell both hit.",
+        "variant": "body"
+      }
+    },
+    "cve-49255-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade electerm to ≥3.11.11.",
+        "variant": "lead"
+      }
+    },
+    "cve-49852-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-49852-link",
+        "cve-49852-badges",
+        "cve-49852-desc",
+        "cve-49852-action"
+      ]
+    },
+    "cve-49852-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49852",
+        "href": "https://github.com/advisories/GHSA-gg9x-qcx2-xmrh",
+        "source": "GitHub Advisory"
+      }
+    },
+    "cve-49852-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-49852-product",
+        "badge-49852-cvss"
+      ]
+    },
+    "badge-49852-product": {
+      "type": "Badge",
+      "props": {
+        "text": "joserfc (pip)",
+        "variant": "default"
+      }
+    },
+    "badge-49852-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.7",
+        "variant": "destructive"
+      }
+    },
+    "cve-49852-desc": {
+      "type": "Text",
+      "props": {
+        "text": "HS256/384/512 verify accepts empty/nil HMAC key → JWT forgery whenever secret sourced from unset env. Cross-lang sibling of ruby-jwt CVE-2026-45363 + PyJWT.",
+        "variant": "body"
+      }
+    },
+    "cve-49852-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade joserfc to ≥1.6.8.",
+        "variant": "lead"
+      }
+    },
+    "cve-44454-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-44454-link",
+        "cve-44454-badges",
+        "cve-44454-desc",
+        "cve-44454-action"
+      ]
+    },
+    "cve-44454-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-44454",
+        "href": "https://github.com/advisories/GHSA-m3cr-vc2j-pm27",
+        "source": "GitHub Advisory"
+      }
+    },
+    "cve-44454-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-44454-product",
+        "badge-44454-cvss"
+      ]
+    },
+    "badge-44454-product": {
+      "type": "Badge",
+      "props": {
+        "text": "coder (Go)",
+        "variant": "default"
+      }
+    },
+    "badge-44454-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.1",
+        "variant": "destructive"
+      }
+    },
+    "cve-44454-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Crafted `dotfiles_uri` URL param + `mode=auto` workspace creation = RCE on victim click; v1 EOL.",
+        "variant": "body"
+      }
+    },
+    "cve-44454-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade coder v2 to ≥2.29.7 (ESR) or ≥2.30.2 (mainline); migrate off v1.",
+        "variant": "lead"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "23-advisory OpenClaw single-package cluster (npm 9.3-6.5, fixed 2026.4.29) + Fission-style 13-CVE openbabel batch (pip, old CVE-2022-* republish) omitted — pattern signal, niche reach.",
+        "variant": "caption"
+      }
+    }
+  }
+}

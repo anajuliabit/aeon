@@ -26,8 +26,9 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/advisor/notify-vesting.sh scripts/advisor/notify-drawdown.sh scripts/advisor/notify-yield-delta.sh scripts/llm.sh scripts/llm-claude.sh scripts/llm-usepod.sh
+          chmod +x scripts/advisor/prefetch-data.sh scripts/advisor/run.sh scripts/advisor/grade-recs.sh scripts/advisor/notify-vesting.sh scripts/advisor/notify-drawdown.sh scripts/advisor/notify-yield-delta.sh scripts/llm.sh scripts/llm-claude.sh scripts/llm-usepod.sh
           ./scripts/advisor/prefetch-data.sh
+          ./scripts/advisor/grade-recs.sh || echo "::warning::grade-recs failed"
           ./scripts/advisor/run.sh
           ./scripts/advisor/notify-vesting.sh || echo "::warning::notify-vesting failed"
           ./scripts/advisor/notify-drawdown.sh || echo "::warning::notify-drawdown failed"

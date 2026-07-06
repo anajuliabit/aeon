@@ -1,0 +1,290 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "skill health",
+        "description": "2026-06-29"
+      },
+      "children": [
+        "status_alert",
+        "sep1",
+        "degraded_section",
+        "sep2",
+        "no_data_section",
+        "sep3",
+        "status_summary",
+        "sep4",
+        "issues_section",
+        "sep5",
+        "diff_note"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: DEGRADED (23)",
+        "message": "Systemic: sandbox-truncation output_tokens=0 day 12 [ISS-019/020/021/024/025]",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "degraded_table",
+        "more_note"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (worst 5 by sr)",
+        "level": "h3"
+      }
+    },
+    "degraded_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate",
+          "Schedule",
+          "Status",
+          "Issue Link"
+        ],
+        "rows": [
+          [
+            "reg-monitor",
+            "10% (4/42)",
+            "weekly Wed slot",
+            "WAIT-API",
+            "ISS cluster"
+          ],
+          [
+            "vuln-scanner",
+            "10% (3/30)",
+            "weekly Sat slot",
+            "WAIT-API",
+            "ISS cluster"
+          ],
+          [
+            "cost-report",
+            "11% (5/46)",
+            "last ok 2026-06-29 13:59Z",
+            "WAIT-API",
+            "ISS-025"
+          ],
+          [
+            "skill-analytics",
+            "11% (5/47)",
+            "weekly Wed slot",
+            "WAIT-API",
+            "ISS cluster"
+          ],
+          [
+            "security-digest",
+            "24% (21/89)",
+            "last ok 2026-06-29 15:10Z",
+            "WAIT-API",
+            "ISS cluster"
+          ]
+        ]
+      }
+    },
+    "more_note": {
+      "type": "Text",
+      "props": {
+        "text": "+18 more — see memory/issues/INDEX.md",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "no_data_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no_data_heading",
+        "no_data_items",
+        "no_data_status"
+      ]
+    },
+    "no_data_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (2)",
+        "level": "h3"
+      }
+    },
+    "no_data_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "no_data_1",
+        "no_data_2"
+      ]
+    },
+    "no_data_1": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "outline"
+      }
+    },
+    "no_data_2": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "outline"
+      }
+    },
+    "no_data_status": {
+      "type": "Text",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_heading",
+        "status_grid"
+      ]
+    },
+    "status_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Summary",
+        "level": "h3"
+      }
+    },
+    "status_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "warning_stat",
+        "healthy_stat",
+        "degraded_stat"
+      ]
+    },
+    "warning_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "🟠 Warnings",
+        "value": "8"
+      }
+    },
+    "healthy_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "🟢 Healthy",
+        "value": "9"
+      }
+    },
+    "degraded_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "🟡 Degraded",
+        "value": "23"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues_heading",
+        "issues_grid"
+      ]
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues Tracking",
+        "level": "h3"
+      }
+    },
+    "issues_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "open_issues_stat",
+        "resolved_issues_stat",
+        "filed_issues_stat"
+      ]
+    },
+    "open_issues_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    },
+    "resolved_issues_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    },
+    "filed_issues_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed",
+        "value": "0"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "diff_note": {
+      "type": "Alert",
+      "props": {
+        "title": "Comparison vs 2026-06-27",
+        "message": "fleet-control dropped (now disabled in aeon.yml). Underlying tail unchanged — 4th day with no movement on the ISS-025 capture-step fix.",
+        "type": "warning"
+      }
+    }
+  }
+}

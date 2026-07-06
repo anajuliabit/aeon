@@ -1,0 +1,240 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-04"
+      },
+      "children": [
+        "shape",
+        "sep-1",
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5",
+        "sep-2",
+        "sources"
+      ]
+    },
+    "shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: open capture-step PR, recut SLX, log GITLAWB day-2, codify cross-lab layer, update WELL row",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-desc",
+        "a1-why",
+        "a1-done",
+        "a1-loop"
+      ]
+    },
+    "a1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "1. open PR against `.github/workflows/aeon.yml` swapping `usepod_model:` → `model:` at L155 + L162 + L171 (the 3 lines PR #150 missed per morning-brief 07:00Z grep-verification)",
+        "variant": "lead"
+      }
+    },
+    "a1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: self-set weekly-review hard deadline is TODAY, and the 12:00 UTC batch is dead day-6.1 across token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh"
+      }
+    },
+    "a1-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened naming L155/162/171, diff = 3 line replacements, branch `fix/iss-025-capture-remainders`"
+      }
+    },
+    "a1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-capture-fix",
+        "variant": "secondary"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-desc",
+        "a2-why",
+        "a2-done",
+        "a2-loop"
+      ]
+    },
+    "a2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "2. recut SLX HIGH 9/10 pick — write THESIS BROKEN exit block into `memory/topics/capital-2x-program.md` at -23.6% below $0.475 entry per daily-routine 07:50Z day-10 print",
+        "variant": "lead"
+      }
+    },
+    "a2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: first tracked capital-2x pick to fail its @Flowslikeosmo alpha-filter tokenomics-alignment thesis; leaving it active wallpapers the scorecard and re-surfaces in every next pulse"
+      }
+    },
+    "a2-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: capital-2x-program.md gets `SLX EXIT` line with entry $0.475, exit -23.6%, days-held 10, thesis-fail reason"
+      }
+    },
+    "a2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: slx-thesis-broken",
+        "variant": "secondary"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-desc",
+        "a3-why",
+        "a3-done",
+        "a3-loop"
+      ]
+    },
+    "a3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "3. log GITLAWB day-2 participation-confirmed continuation to `memory/topics/crypto.md` — +23.21% on 2.27× baseline vol = 2nd consecutive TRIGGER FIRED after 7-03 +27.38% on 1.76× vol",
+        "variant": "lead"
+      }
+    },
+    "a3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 2 consecutive fires with vol stepping up (1.76× → 2.27×) is the first participation-confirmed watchlist breakout of the window and separates a real breakout from a dust pump"
+      }
+    },
+    "a3-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: crypto.md gets a dated GITLAWB block noting sequence + 5-window vol baseline shift $308K → $392K + rolling window rebase math"
+      }
+    },
+    "a3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: gitlawb-breakout",
+        "variant": "secondary"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-desc",
+        "a4-why",
+        "a4-done",
+        "a4-loop"
+      ]
+    },
+    "a4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "4. codify cross-lab plumbing as skills-as-primitive 6th layer in `memory/topics/aixbt-clusters.md` — openai/codex-plugin-cc (github-trending 09:55Z top pick) = first cross-lab agent-runtime bridge, day-6 continuation",
+        "variant": "lead"
+      }
+    },
+    "a4-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: MEMORY.md L39 locks at \"4 layers durable\", 7-03 added policy, today the github-trending signal names the 6th layer; without the note next reflect re-derives the count from scratch"
+      }
+    },
+    "a4-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: aixbt-clusters.md gets a dated entry naming the repo + layer number 6 + the 5 prior-layer stack anchors (Podman v6.0.0, Anthropic Agent SDK, ASPIRE, z.ai ZCode, Right-to-Local-Intelligence)"
+      }
+    },
+    "a4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: skills-as-primitive-day-6",
+        "variant": "secondary"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-desc",
+        "a5-why",
+        "a5-done",
+        "a5-loop"
+      ]
+    },
+    "a5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "5. update MEMORY.md L30 WELL row with a `→ 7-04 vol 0.03× on +1.51% green tape = liquidity-vacuum phase` tail per token-alert 12:41Z print (baseline mean $1,994K vs today $63K = 96.8% collapse)",
+        "variant": "lead"
+      }
+    },
+    "a5-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: current line ends at \"supply arc closed\"; today's 0.03× on a green day upgrades the characterization — supply exhausted, tape lifting on paper participation, not fresh accumulation"
+      }
+    },
+    "a5-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: MEMORY.md L30 WELL row terminates with the new dated liquidity-vacuum tail, no other watchlist rows touched"
+      }
+    },
+    "a5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: well-liquidity-vacuum",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=48 logs=7 topics=11 prs=2 cron_failing=0 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}

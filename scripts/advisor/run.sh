@@ -387,6 +387,23 @@ REPORT="$(jq -n \
 
 echo "advisor: report assembled"
 
+# Deterministic vesting-policy enforcement (prompt alone has proven insufficient
+# — 2026-07-02 report still pushed a HIGH-urgency REPPO trim). Policy:
+#   - REPPO is a conviction hold: any REPPO "decrease" rec is demoted to LOW
+#     urgency and reframed as optional profit-taking; never dropped (the
+#     operator still sees it), never HIGH/MEDIUM.
+#   - MAMO/WELL unlocks are always sold 100%: annotate any partial-sale rec.
+REPORT="$(printf '%s' "$REPORT" | jq -c '
+  .recommendations = [(.recommendations // [])[]
+    | if (.symbol // "" | ascii_upcase) == "REPPO" and .direction == "decrease" then
+        .urgency = "low"
+        | .title = "OPTIONAL (policy: REPPO conviction hold) — " + (.title // "")
+        | .rationale = ((.rationale // "") + " [policy filter: REPPO is a standing conviction hold (~$100M mcap thesis); trims are optional profit-taking only, never portfolio-driven.]")
+      elif ((.symbol // "" | ascii_upcase) as $s | ($s == "MAMO" or $s == "WELL")) and .direction == "decrease" then
+        .rationale = ((.rationale // "") + " [policy: standing order is sell 100% of every MAMO/WELL unlock on claim — partial-sale suggestions notwithstanding.]")
+      else . end]')"
+echo "advisor: vesting policy filter applied"
+
 # ---------------------------------------------------------------------------
 # 5a. Short-term trades — fundamentals + news + momentum, LONG or SHORT, sized
 #     to the ≤1% moonshot sleeve. Three stages (all OUTSIDE the LLM's tool-less
@@ -455,6 +472,7 @@ $NEWS
 <<<END>>>
 $(datablock FUNDAMENTALS_protocols protocols.json '[.[]? | {name, symbol, tvl, change_1d, change_7d}] | sort_by(-(.tvl // 0)) | .[0:60]')
 $(datablock FUNDAMENTALS_fees fees.json '{protocols: [.protocols[]? | {name, total24h, total7d}] | .[0:40]}')
+$(datablock TRACK_RECORD advisor-memory.json '.pickTrackRecord // {}')
 $(datablock fng fng.json '.')"
   TRADES="$(complete "$st_prompt")" || true
   if [ -z "$TRADES" ] || ! printf '%s' "$TRADES" | jq -e '.trades' >/dev/null 2>&1; then
@@ -589,7 +607,10 @@ while read -r rec; do
         targetPriceUsd: null,
         invalidationPriceUsd: $invOK,
         horizonDays: (.horizonDays // 30),
-        conviction: "UNSTATED",
+        conviction: (if .urgency == "high" then "HIGH"
+                     elif .urgency == "medium" then "MEDIUM"
+                     elif .urgency == "low" then "LOW"
+                     else "UNSTATED" end),
         thesis: ((.title // "advisor call") + " — " + (.action // "")
                  + (if .rationale then " | " + .rationale else "" end))
       }')

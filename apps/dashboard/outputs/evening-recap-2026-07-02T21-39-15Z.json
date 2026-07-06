@@ -1,0 +1,236 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-02",
+        "description": "Two root-cause PRs merged + BTC day-7 first bounce, but ISS-025 deadline T-2d and PR #149 at day-4 still need a human"
+      },
+      "children": [
+        "headlines-section",
+        "sep1",
+        "notable-section",
+        "sep2",
+        "decisions-section",
+        "sep3",
+        "footer-section"
+      ]
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-title",
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headlines-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "headline-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #150/#151 — $456/mo bleed halted + ISS-026 timing fixed, both merged 13:20Z",
+        "href": "https://github.com/anajuliabit/aeon/pull/150",
+        "source": "GitHub"
+      }
+    },
+    "headline-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "reflect — 3 durable patterns codified (brandjack testing-arm, skills-as-primitive day-3, GH Advisory JSON lag); MEMORY.md 42→45L",
+        "href": "memory/MEMORY.md",
+        "source": "Memory"
+      }
+    },
+    "headline-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "list-digest — @Flowslikeosmo $LIT filter hit #2; +15.3% day-2 breakout live on tape",
+        "href": "https://x.com/Flowslikeosmo/status/2072435196415328640",
+        "source": "Twitter"
+      }
+    },
+    "headline-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "daily-routine — breadth 32→81/100 biggest 30d swing; VELVET −68.5% closed; LIT breakout day-2",
+        "href": ".outputs/daily-routine.md",
+        "source": "Outputs"
+      }
+    },
+    "headline-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness — FRESHNESS_OK 43 consumers / 0 flagged",
+        "href": "articles/skill-freshness-2026-07-02.md",
+        "source": "Articles"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-title",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "[token-alert] — REPPO vol 3.16× trigger fired; WELL washout-then-reversal confirmed on 3rd close",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Alert",
+      "props": {
+        "title": "Security Digest",
+        "message": "5 MCP/agent-infra advisories 48h; neuro-cortex-memory CLAUDE_PROJECT_DIR RCE in batch",
+        "type": "warning"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "[btc-levels ×5] — 01:17Z day-7 breakdown alert fired; tape flipped to $61.6k intraday",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Alert",
+      "props": {
+        "title": "Skill Health",
+        "message": "DEGRADED(23) 3rd consecutive day; 07-03 12:00Z first live test of PR #150 fix",
+        "type": "warning"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "[heartbeat ×3] — HEARTBEAT_OK all 3; 1 open PR, 15 issues unchanged",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-title",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decisions-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "decision-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Merge PR #149 (day-4, ~100h open)",
+        "href": "https://github.com/anajuliabit/aeon/pull/149",
+        "source": "GitHub"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "Ship ISS-025 capture-step PR — weekly-review deadline 07-04 T-2d, day-9 unshipped",
+        "variant": "body"
+      }
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "Flip ISS-026 INDEX row to resolved (PR #151 merged but INDEX still Open)",
+        "variant": "body"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "Watch 07-03 12:00Z batch — first live test for 6 skills dark since 6-28",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-line1",
+        "footer-line2"
+      ]
+    },
+    "footer-line1": {
+      "type": "Text",
+      "props": {
+        "text": "+11 routine runs collapsed",
+        "variant": "caption"
+      }
+    },
+    "footer-line2": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

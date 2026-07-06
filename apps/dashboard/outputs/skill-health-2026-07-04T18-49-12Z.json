@@ -1,0 +1,410 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-07-04"
+      },
+      "children": [
+        "status-alert",
+        "sep1",
+        "degraded-section",
+        "sep2",
+        "warning-section",
+        "sep3",
+        "nodata-section",
+        "sep4",
+        "health-stats",
+        "sep5",
+        "issue-counts"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: DEGRADED (23)",
+        "message": "Systemic: output_tokens=0 sandbox-truncation — 23 skills affected · cluster ISS-019/020/021/024/025 day-11 · weekly-review self-set deadline T-0 TODAY",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deg-title",
+        "deg-list"
+      ]
+    },
+    "deg-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Degraded (23) — Top 5 by Days Since Success",
+        "level": "h3"
+      }
+    },
+    "deg-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-aixbt",
+        "skill-defi",
+        "skill-market",
+        "skill-narrative",
+        "skill-evals",
+        "deg-more-text"
+      ]
+    },
+    "skill-aixbt": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse — sr 47% · 6d down · WAIT-API (output_tokens=0)",
+        "variant": "body"
+      }
+    },
+    "skill-defi": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor — sr 53% · 6d down · WAIT-API (output_tokens=0)",
+        "variant": "body"
+      }
+    },
+    "skill-market": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh — sr 32% · 6d down · WAIT-API (output_tokens=0)",
+        "variant": "body"
+      }
+    },
+    "skill-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — sr 33% · 6d down · WAIT-API (output_tokens=0)",
+        "variant": "body"
+      }
+    },
+    "skill-evals": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals — sr 38% · 6d down · WAIT-API (output_tokens=0)",
+        "variant": "body"
+      }
+    },
+    "deg-more-text": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-more-count",
+        "deg-more-link"
+      ]
+    },
+    "deg-more-count": {
+      "type": "Text",
+      "props": {
+        "text": "+18 more (all output_tokens=0)",
+        "variant": "caption"
+      }
+    },
+    "deg-more-link": {
+      "type": "Link",
+      "props": {
+        "label": "see memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "warning-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "warn-title",
+        "warn-meta",
+        "warn-badges"
+      ]
+    },
+    "warn-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Warning (8)",
+        "level": "h3"
+      }
+    },
+    "warn-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "warn-batch",
+        "warn-pr",
+        "warn-config"
+      ]
+    },
+    "warn-batch": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch 6-of-8 last-dispatched 2026-06-28 (~6d stale)",
+        "variant": "caption"
+      }
+    },
+    "warn-pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #150 partial fix",
+        "href": "#/pr/150"
+      }
+    },
+    "warn-config": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml L155/162/171 still carry usepod_model",
+        "variant": "caption"
+      }
+    },
+    "warn-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "warn-btc",
+        "warn-daily",
+        "warn-defi",
+        "warn-morning",
+        "warn-onchain",
+        "warn-token-alert",
+        "warn-token-movers",
+        "warn-token-pick"
+      ]
+    },
+    "warn-btc": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels",
+        "variant": "secondary"
+      }
+    },
+    "warn-daily": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "secondary"
+      }
+    },
+    "warn-defi": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-overview",
+        "variant": "secondary"
+      }
+    },
+    "warn-morning": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief",
+        "variant": "secondary"
+      }
+    },
+    "warn-onchain": {
+      "type": "Badge",
+      "props": {
+        "text": "on-chain-monitor",
+        "variant": "secondary"
+      }
+    },
+    "warn-token-alert": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "secondary"
+      }
+    },
+    "warn-token-movers": {
+      "type": "Badge",
+      "props": {
+        "text": "token-movers",
+        "variant": "secondary"
+      }
+    },
+    "warn-token-pick": {
+      "type": "Badge",
+      "props": {
+        "text": "token-pick",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "nodata-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata-title",
+        "nodata-items"
+      ]
+    },
+    "nodata-title": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data (2)",
+        "level": "h3"
+      }
+    },
+    "nodata-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nodata-fork",
+        "nodata-scorecard",
+        "nodata-action"
+      ]
+    },
+    "nodata-fork": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap (weekly Sun)",
+        "variant": "body"
+      }
+    },
+    "nodata-scorecard": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard (Mon 10:30 — day-5 missed)",
+        "variant": "body"
+      }
+    },
+    "nodata-action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "health-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-healthy",
+        "stat-degraded",
+        "stat-warning",
+        "stat-nodata"
+      ]
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "9"
+      }
+    },
+    "stat-degraded": {
+      "type": "Stat",
+      "props": {
+        "label": "Degraded",
+        "value": "23",
+        "trend": "down"
+      }
+    },
+    "stat-warning": {
+      "type": "Stat",
+      "props": {
+        "label": "Warning",
+        "value": "8",
+        "trend": "down"
+      }
+    },
+    "stat-nodata": {
+      "type": "Stat",
+      "props": {
+        "label": "No Data",
+        "value": "2",
+        "trend": "down"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issue-counts": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-open",
+        "stat-resolved",
+        "stat-filed"
+      ]
+    },
+    "stat-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "15"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed This Run",
+        "value": "0"
+      }
+    }
+  }
+}

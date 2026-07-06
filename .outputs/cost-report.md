@@ -1,17 +1,20 @@
-*Cost Report — 2026-06-24 (last 7 days)*
+*Cost Report — 2026-06-29 (last 7 days)*
 
-Spent $237.60 across 67 runs (↓55.2% WoW — reppo-* cluster absent this week); 0 anomalies, 1 WoW spike; projected monthly burn ~$1,018 ⚠
+Spent $595.75 across 113 runs (↑199.5% WoW — prior week suppressed by sandbox failures); 14 anomalies, projected monthly burn ~$2,553 ⚠
 
 Top 3 by cost:
-1. daily-routine — $44.91 (4 runs)
-2. on-chain-monitor — $35.10 (3 runs)
-3. heartbeat — $30.42 (8 runs)
+1. daily-routine — $104.53 (8 runs)
+2. on-chain-monitor — $54.75 (4 runs)
+3. security-digest — $48.93 (4 runs)
 
 Actions this week:
-• sandbox-truncation (ISS-025) → fix aeon.yml output capture (~$11-13/wk wasted on failed runs)
-• on-chain-monitor → cap event history in context (cost: $0.08→$14.57→$20.46 across 3 runs, cache_read 0→9.1M tokens) (~$18/wk)
-• weekly-review → summarize context prefix, 4.6M cache_read per run (~$5.80/wk)
+• on-chain-monitor → rename `usepod_model` → `model:` in aeon.yml to activate Haiku (~$51.83/wk savings)
+• token-pick → same usepod_model drift fix (~$33.16/wk)
+• token-movers → same usepod_model drift fix (~$21.94/wk)
+Combined: ~$107/wk ($456/mo) from a 3-line aeon.yml edit
 
-WoW spike: weekly-review +2.25× ($5.17 → $11.65)
-30-day projection: $1,018
-Full: articles/cost-report-2026-06-24.md
+⚠ 13 WoW spikes flagged — 10 are ISS-019/020/021/025 sandbox artifacts (prior output=0), not real growth
+1 per-run anomaly: aixbt-pulse 2026-06-24 output spike (+2.4σ)
+
+30-day projection: $2,553.20 (dominated by cache-heavy Opus skills)
+Full: articles/cost-report-2026-06-29.md

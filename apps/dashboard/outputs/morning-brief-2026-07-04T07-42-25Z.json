@@ -1,0 +1,201 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-04"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "focus-heading",
+        "focus-stack",
+        "sep1",
+        "yesterday-heading",
+        "yesterday-stack",
+        "sep2",
+        "running-heading",
+        "running-stack"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "focus-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step PR — why now: self-set weekly-review deadline is T-0, 18-skill tail still bleeds"
+      },
+      "children": []
+    },
+    "focus-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch — why now: 3 `usepod_model` lines still in aeon.yml (155/162/171), 12z tick decides day-3 miss"
+      },
+      "children": []
+    },
+    "focus-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $63.5k reclaim gate — why now: spot $62.6k, ~$865 from first real reclaim signal in 8d"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "yesterday-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "yesterday-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yesterday-item-1",
+        "yesterday-item-2",
+        "yesterday-item-3",
+        "yesterday-item-4",
+        "yesterday-item-5"
+      ]
+    },
+    "yesterday-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #154 opened (self-improve 18:20Z) to close ISS-026 tracker — merge pending"
+      },
+      "children": []
+    },
+    "yesterday-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch first live test FAILED post PR #150 (partial fix); grep-confirmed 3 remaining `usepod_model:` lines in aeon.yml L155/162/171"
+      },
+      "children": []
+    },
+    "yesterday-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "GITLAWB +27.38% trigger fired 13:15Z; watchlist median +6.07% day-2 (whole-green)"
+      },
+      "children": []
+    },
+    "yesterday-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest: 9router npm 9.8 hardcoded default JWT secret + PoC (worst-config-default candidate); OpenClaw npm 23-CVE mega-batch = 2nd solo-researcher batch of week"
+      },
+      "children": []
+    },
+    "yesterday-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md rewrote 53L→47L (reflect 18:25Z), 7-02 append-drift deduped"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "running-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-item-1",
+        "running-item-2",
+        "running-item-3",
+        "running-item-4",
+        "running-item-5"
+      ]
+    },
+    "running-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief + daily-routine + skill-freshness + thought-review @ 07:00 UTC"
+      },
+      "children": []
+    },
+    "running-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert @ 12:00 UTC"
+      },
+      "children": []
+    },
+    "running-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels @ 4h ticks"
+      },
+      "children": []
+    },
+    "running-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat morning/afternoon/evening"
+      },
+      "children": []
+    },
+    "running-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap @ 21:00 UTC"
+      },
+      "children": []
+    }
+  }
+}

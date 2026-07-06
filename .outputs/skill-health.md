@@ -1,16 +1,16 @@
-*skill health — 2026-06-27*
-HEALTH: DEGRADED(24) [systemic: sandbox-truncation output_tokens=0 — 24 skills]
+*Skill Health — 2026-07-05*
+HEALTH: DEGRADED · systemic: output_tokens=0 sandbox-truncation day-12 (ISS-025 cluster) · 21 DEGRADED + 10 WARNING share signature
 
-🟡 DEGRADED / FLAPPING (24)
-- skill-evals — 33% sr · 6d down — INVESTIGATE
-- cost-report — 10% sr · 3d down — INVESTIGATE → ISS-025
-- reg-monitor — 10% sr · 3d down — INVESTIGATE
-- skill-analytics — 11% sr · 3d down — INVESTIGATE
-- self-improve — 33% sr · 2d down — INVESTIGATE
-+19 more — see memory/issues/INDEX.md
+🟡 top DEGRADED (worst 5, sr):
+- cost-report 11% · 6d dark · ISS-025
+- reg-monitor 12% · 4d · ISS-025
+- skill-analytics 13% · 4d · ISS-025
+- vuln-scanner 13% · 1d · ISS-018
+- security-digest 28% · 0d · ISS-025
++16 more DEGRADED · 10 WARNING · see memory/issues/INDEX.md
 
-⚪ NO DATA (2): operator-scorecard (next Mon 06-29), fork-skill-gap (next Sun 06-28) — DISPATCH-SKILL
-🟢 HEALTHY: 9
+Delta 07-04→07-05: heartbeat + skill-freshness DEGRADED→WARNING (fresh runs bumped stored sr to 0.6). skill-graph fresh HEALTHY (Sun 17:29Z tick sr=1). 5-day byte-identical fingerprint streak breaks.
 
-improved: btc-levels + daily-routine moved DEGRADED→WARNING (sr crossed 0.6).
-open issues: 14 · resolved this run: 0 · filed this run: 0
+12:00 UTC batch day-6 dark (aeon.yml L155/162/171 still `usepod_model:`). ISS-025 capture-step PR T-1 to weekly-review Mon 07-06 self-set deadline.
+
+Open issues: 15 · filed: 0 · resolved: 0

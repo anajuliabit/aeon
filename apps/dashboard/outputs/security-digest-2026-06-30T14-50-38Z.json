@@ -1,0 +1,520 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-06-30",
+        "description": "Verdict: 1 actively exploited (KEV new), 2 supply-chain campaigns to scrub, 1 to monitor."
+      },
+      "children": [
+        "sources-stack",
+        "sep1",
+        "patch-section",
+        "sep2",
+        "monitor-section"
+      ]
+    },
+    "sources-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-kev",
+        "badge-gh",
+        "badge-epss"
+      ]
+    },
+    "badge-kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV ok",
+        "variant": "default"
+      }
+    },
+    "badge-gh": {
+      "type": "Badge",
+      "props": {
+        "text": "GH Advisory ok",
+        "variant": "default"
+      }
+    },
+    "badge-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS ok",
+        "variant": "default"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-patch",
+        "alert-patch",
+        "cve1-stack",
+        "cve2-stack",
+        "cve3-stack"
+      ]
+    },
+    "heading-patch": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "alert-patch": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Critical vulnerabilities",
+        "message": "Require immediate patching"
+      }
+    },
+    "cve1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve1-title",
+        "cve1-badges",
+        "cve1-desc",
+        "cve1-deadline",
+        "cve1-action"
+      ]
+    },
+    "cve1-title": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link-cve1",
+        "badge-cve1-product"
+      ]
+    },
+    "link-cve1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48558",
+        "href": "https://github.com/advisories/GHSA-m93h-gjv2-fmq2",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-cve1-product": {
+      "type": "Badge",
+      "props": {
+        "text": "SimpleHelp",
+        "variant": "secondary"
+      }
+    },
+    "cve1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cve1-kev",
+        "badge-cve1-cvss",
+        "badge-cve1-epss",
+        "badge-cve1-poc"
+      ]
+    },
+    "badge-cve1-kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV added 2026-06-29",
+        "variant": "destructive"
+      }
+    },
+    "badge-cve1-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 10.0",
+        "variant": "destructive"
+      }
+    },
+    "badge-cve1-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.01",
+        "variant": "default"
+      }
+    },
+    "badge-cve1-poc": {
+      "type": "Badge",
+      "props": {
+        "text": "PoC + IOCs published (horizon3.ai)",
+        "variant": "destructive"
+      }
+    },
+    "cve1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "OIDC auth bypass — identity tokens accepted without signature verification. Unauth attacker forges a token, gets a full technician session, can also bypass MFA.",
+        "variant": "body"
+      }
+    },
+    "cve1-deadline": {
+      "type": "Text",
+      "props": {
+        "text": "CISA BOD 26-04 due 2026-07-02.",
+        "variant": "caption"
+      }
+    },
+    "cve1-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade SimpleHelp to ≥5.5.16 (or 6.0 GA) today. If exposed, hunt for TaskWeaver/Djinn intrusion IOCs.",
+        "variant": "body"
+      }
+    },
+    "cve2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve2-title",
+        "cve2-badges",
+        "cve2-desc1",
+        "cve2-desc2",
+        "cve2-action"
+      ]
+    },
+    "cve2-title": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link-cve2",
+        "badge-cve2-product"
+      ]
+    },
+    "link-cve2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-m9j7-x8ww-5jwr",
+        "href": "https://github.com/advisories/GHSA-m9j7-x8ww-5jwr",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-cve2-product": {
+      "type": "Badge",
+      "props": {
+        "text": "ai-sdk-ollama@0.13.1 (npm)",
+        "variant": "secondary"
+      }
+    },
+    "cve2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cve2-brandjack",
+        "badge-cve2-cvss"
+      ]
+    },
+    "badge-cve2-brandjack": {
+      "type": "Badge",
+      "props": {
+        "text": "malware brandjack of Vercel ai-sdk + Ollama",
+        "variant": "destructive"
+      }
+    },
+    "badge-cve2-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS n/a",
+        "variant": "default"
+      }
+    },
+    "cve2-desc1": {
+      "type": "Text",
+      "props": {
+        "text": "Hot-target SDK squat — Vercel ai-sdk family + Ollama runtime are core agent-infra primitives. Narrative-aligned target (agent infra is one of the structural longs).",
+        "variant": "body"
+      }
+    },
+    "cve2-desc2": {
+      "type": "Text",
+      "props": {
+        "text": "Major supply-chain risk targeting agent infrastructure dependencies.",
+        "variant": "caption"
+      }
+    },
+    "cve2-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Remove ai-sdk-ollama; rotate any creds reachable from machines that installed it. Pin to @ai-sdk/openai / @ai-sdk/anthropic verified namespaces only.",
+        "variant": "body"
+      }
+    },
+    "cve3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve3-title",
+        "cve3-meta",
+        "cve3-packages",
+        "cve3-desc1",
+        "cve3-desc2",
+        "cve3-action"
+      ]
+    },
+    "cve3-title": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link-cve3",
+        "badge-cve3-count"
+      ]
+    },
+    "link-cve3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "autotel-* npm cluster",
+        "href": "https://github.com/advisories/GHSA-3wmg-66hp-xhv9",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-cve3-count": {
+      "type": "Badge",
+      "props": {
+        "text": "18 packages",
+        "variant": "destructive"
+      }
+    },
+    "cve3-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-cve3-campaign",
+        "stat-cve3-duration"
+      ]
+    },
+    "stat-cve3-campaign": {
+      "type": "Stat",
+      "props": {
+        "label": "Campaign",
+        "value": "single-author"
+      }
+    },
+    "stat-cve3-duration": {
+      "type": "Stat",
+      "props": {
+        "label": "Window",
+        "value": "6-29 16:51Z → 6-30 03:21Z (10.5h)"
+      }
+    },
+    "cve3-packages": {
+      "type": "Text",
+      "props": {
+        "text": "Packages: autotel-mcp, autotel-cli, autotel-web, autotel-vitest, autotel-backends, autotel-cloudflare, autotel-devtools, autotel-tanstack, autotel-mongoose, autotel-pact, autotel-plugins, autotel-playwright, autotel-sentry, autotel-subscribers, autotel-drizzle, autotel-hono, autotel-eventcatalog, autotel-mcp-instrumentation",
+        "variant": "caption"
+      }
+    },
+    "cve3-desc1": {
+      "type": "Text",
+      "props": {
+        "text": "Largest single-namespace coordinated brandjack of the 48h window — OpenTelemetry-adjacent observability naming + MCP riff.",
+        "variant": "body"
+      }
+    },
+    "cve3-desc2": {
+      "type": "Text",
+      "props": {
+        "text": "Brandjacking-as-default-vector pattern persisting day 2.",
+        "variant": "caption"
+      }
+    },
+    "cve3-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Audit npm installs for any autotel-* package; remove + rotate creds if present. None of these are legit.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-monitor",
+        "alert-monitor",
+        "cve4-stack"
+      ]
+    },
+    "heading-monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "alert-monitor": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Track for patched release; no fix available yet"
+      }
+    },
+    "cve4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve4-title",
+        "cve4-badges",
+        "cve4-desc1",
+        "cve4-desc2",
+        "cve4-desc3",
+        "cve4-action"
+      ]
+    },
+    "cve4-title": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link-cve4-advisory",
+        "link-cve4-cve",
+        "badge-cve4-product"
+      ]
+    },
+    "link-cve4-advisory": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-q2m9-6jp9-c6mc",
+        "href": "https://github.com/advisories/GHSA-q2m9-6jp9-c6mc",
+        "source": "GitHub Advisory"
+      }
+    },
+    "link-cve4-cve": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-44840",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-44840"
+      }
+    },
+    "badge-cve4-product": {
+      "type": "Badge",
+      "props": {
+        "text": "dgraph-io/dgraph (Go)",
+        "variant": "secondary"
+      }
+    },
+    "cve4-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cve4-cvss",
+        "badge-cve4-epss",
+        "badge-cve4-nofix",
+        "badge-cve4-affects"
+      ]
+    },
+    "badge-cve4-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5",
+        "variant": "destructive"
+      }
+    },
+    "badge-cve4-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS unset",
+        "variant": "outline"
+      }
+    },
+    "badge-cve4-nofix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "outline"
+      }
+    },
+    "badge-cve4-affects": {
+      "type": "Badge",
+      "props": {
+        "text": "affects ≤25.3.3",
+        "variant": "default"
+      }
+    },
+    "cve4-desc1": {
+      "type": "Text",
+      "props": {
+        "text": "DQL injection in checkUserPassword GraphQL query — password interpolated via fmt.Sprintf into a checkpwd() DQL string without escaping.",
+        "variant": "body"
+      }
+    },
+    "cve4-desc2": {
+      "type": "Text",
+      "props": {
+        "text": "Double-quote breaks out and appends arbitrary DQL. Auth required (login-time).",
+        "variant": "body"
+      }
+    },
+    "cve4-desc3": {
+      "type": "Text",
+      "props": {
+        "text": "No patched release available yet.",
+        "variant": "caption"
+      }
+    },
+    "cve4-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Track GHSA-q2m9-6jp9-c6mc; keep GraphQL admin off public ingress.",
+        "variant": "body"
+      }
+    }
+  }
+}

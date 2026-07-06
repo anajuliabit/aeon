@@ -1,0 +1,334 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-06-29"
+      },
+      "children": [
+        "summary-section",
+        "sep1",
+        "blocked-section",
+        "sep2",
+        "on-track-section",
+        "sep3",
+        "sources-section"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-text",
+        "stats-grid"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "4 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 0 done (overall → flat)",
+        "variant": "lead"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-at-risk",
+        "stat-attention",
+        "stat-on-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "4"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "2"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-goal1",
+        "blocked-goal2"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked",
+        "level": "h2"
+      }
+    },
+    "blocked-goal1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-g1-title",
+        "blocked-g1-details",
+        "blocked-g1-action"
+      ]
+    },
+    "blocked-g1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "XAI Quota Recovery",
+        "level": "h3"
+      }
+    },
+    "blocked-g1-details": {
+      "type": "Text",
+      "props": {
+        "text": "Operator top-up day 14, .xai-cache prefetch covers narrative-tracker / list-digest / agent-buzz; daily-routine on websearch fallback day 14",
+        "variant": "body"
+      }
+    },
+    "blocked-g1-action": {
+      "type": "Alert",
+      "props": {
+        "message": "Top up team 3a8b4c1e xai credit",
+        "type": "warning"
+      }
+    },
+    "blocked-goal2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-g2-title",
+        "blocked-g2-details",
+        "blocked-g2-action"
+      ]
+    },
+    "blocked-g2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator On-Chain Config",
+        "level": "h3"
+      }
+    },
+    "blocked-g2-details": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor NO_CONFIG day 22, on-chain-watches.yml carries 5 type:wallet entries and zero type:pool / type:position",
+        "variant": "body"
+      }
+    },
+    "blocked-g2-action": {
+      "type": "Alert",
+      "props": {
+        "message": "Add type:pool + type:position entries to memory/on-chain-watches.yml",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-goal1",
+        "on-track-goal2"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On Track",
+        "level": "h2"
+      }
+    },
+    "on-track-goal1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-g1-title",
+        "on-track-g1-details"
+      ]
+    },
+    "on-track-g1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Sandbox-Truncation Systemic",
+        "level": "h3"
+      }
+    },
+    "on-track-g1-details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, daily mentions across all 14d (→ flat); iss-025 capture-fix PR day 7 unshipped, 19-skill chronic tail sr<0.5 unchanged",
+        "variant": "body"
+      }
+    },
+    "on-track-goal2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-g2-title",
+        "on-track-g2-details",
+        "on-track-g2-stat"
+      ]
+    },
+    "on-track-g2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "BTC Breakdown Confirmed (Day 3)",
+        "level": "h3"
+      }
+    },
+    "on-track-g2-details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, btc-levels firing daily (→ flat); 4th consecutive sub-$60.5k close, alert fired 01:21Z today",
+        "variant": "body"
+      }
+    },
+    "on-track-g2-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC Close (6-28)",
+        "value": "$59,612"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources-heading",
+        "sources-logs",
+        "sources-git",
+        "sources-pr",
+        "sources-issue",
+        "sources-cron"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources-logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs = ok",
+        "variant": "default"
+      }
+    },
+    "sources-git": {
+      "type": "Badge",
+      "props": {
+        "text": "git = ok (1 chore commit in 30d)",
+        "variant": "default"
+      }
+    },
+    "sources-pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr = ok",
+        "variant": "default"
+      }
+    },
+    "sources-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue = ok",
+        "variant": "default"
+      }
+    },
+    "sources-cron": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state = skipped (no goal depends on a single skill's health)",
+        "variant": "outline"
+      }
+    }
+  }
+}

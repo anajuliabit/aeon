@@ -1,0 +1,31 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 Thought Review",
+        "description": "last 24h"
+      },
+      "children": [
+        "stat-captures",
+        "text-assessment"
+      ]
+    },
+    "stat-captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "text-assessment": {
+      "type": "Text",
+      "props": {
+        "text": "All noise. Nothing to surface.",
+        "variant": "muted"
+      }
+    }
+  }
+}

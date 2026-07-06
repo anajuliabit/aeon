@@ -1,0 +1,421 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-03"
+      },
+      "children": [
+        "summary_heading",
+        "summary_stats",
+        "overall_trend",
+        "separator_1",
+        "blocked_heading",
+        "blocked_goal_1",
+        "blocked_goal_2",
+        "separator_2",
+        "on_track_heading",
+        "on_track_goal_1",
+        "on_track_goal_2",
+        "on_track_goal_3",
+        "on_track_goal_4",
+        "separator_3",
+        "sources_heading",
+        "sources_details"
+      ]
+    },
+    "summary_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "summary_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_risk",
+        "stat_attention",
+        "stat_track",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "6"
+      }
+    },
+    "stat_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "4"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "overall_trend": {
+      "type": "Text",
+      "props": {
+        "text": "Overall: flat",
+        "variant": "muted"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked",
+        "level": "h2"
+      }
+    },
+    "blocked_goal_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_1_header",
+        "blocked_1_details",
+        "blocked_1_action"
+      ]
+    },
+    "blocked_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_1_name",
+        "blocked_1_badge"
+      ]
+    },
+    "blocked_1_name": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota recovery",
+        "variant": "lead"
+      }
+    },
+    "blocked_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "BLOCKED",
+        "variant": "destructive"
+      }
+    },
+    "blocked_1_details": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator Team 3a8b4c1e monthly credit top-up since 2026-06-16 (day 18); 136 activity/14d flat",
+        "variant": "body"
+      }
+    },
+    "blocked_1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Operator top-up Team 3a8b4c1e at console.x.ai billing to restore live XAI paths for daily-routine/tweet-roundup/narrative-tracker",
+        "variant": "caption"
+      }
+    },
+    "blocked_goal_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_2_header",
+        "blocked_2_details",
+        "blocked_2_action"
+      ]
+    },
+    "blocked_2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_2_name",
+        "blocked_2_badge"
+      ]
+    },
+    "blocked_2_name": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config",
+        "variant": "lead"
+      }
+    },
+    "blocked_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "BLOCKED",
+        "variant": "destructive"
+      }
+    },
+    "blocked_2_details": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator to populate memory/on-chain-watches.yml + ALCHEMY_API_KEY/ETHERSCAN_API_KEY, defi-monitor NO_CONFIG day 26; 268 activity/14d flat",
+        "variant": "body"
+      }
+    },
+    "blocked_2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Operator add `type: pool` / `type: position` entries to memory/on-chain-watches.yml and set ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets",
+        "variant": "caption"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On Track",
+        "level": "h2"
+      }
+    },
+    "on_track_goal_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_1_header",
+        "on_track_1_details"
+      ]
+    },
+    "on_track_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_1_name",
+        "on_track_1_badge"
+      ]
+    },
+    "on_track_1_name": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "variant": "lead"
+      }
+    },
+    "on_track_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ON TRACK",
+        "variant": "default"
+      }
+    },
+    "on_track_1_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 299 activity/14d (flat); action-converter capture-step aeon.yml PR unshipped day 9, weekly-review hard deadline 2026-07-04 = T-1d, 18-skill chronic tail `output_tokens=0`",
+        "variant": "body"
+      }
+    },
+    "on_track_goal_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_2_header",
+        "on_track_2_details"
+      ]
+    },
+    "on_track_2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_2_name",
+        "on_track_2_badge"
+      ]
+    },
+    "on_track_2_name": {
+      "type": "Text",
+      "props": {
+        "text": "PR #149 docs(skill-graph)",
+        "variant": "lead"
+      }
+    },
+    "on_track_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ON TRACK",
+        "variant": "default"
+      }
+    },
+    "on_track_2_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 66 activity/14d (flat); ~123h stall day-5.1, operator-merge gated (updatedAt refreshed 7-02 16:58Z)",
+        "variant": "body"
+      }
+    },
+    "on_track_goal_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_3_header",
+        "on_track_3_details"
+      ]
+    },
+    "on_track_3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_3_name",
+        "on_track_3_badge"
+      ]
+    },
+    "on_track_3_name": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch first live test 7-03",
+        "variant": "lead"
+      }
+    },
+    "on_track_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ON TRACK",
+        "variant": "default"
+      }
+    },
+    "on_track_3_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 43 activity/14d (new); 12:00Z tick fired but 6-skill batch still dark post-PR-150 merge = partial fix, deeper YAML/scheduler root cause remains",
+        "variant": "body"
+      }
+    },
+    "on_track_goal_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_4_header",
+        "on_track_4_details"
+      ]
+    },
+    "on_track_4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_4_name",
+        "on_track_4_badge"
+      ]
+    },
+    "on_track_4_name": {
+      "type": "Text",
+      "props": {
+        "text": "BTC breakdown day-7 CONFIRMED → first material bounce",
+        "variant": "lead"
+      }
+    },
+    "on_track_4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ON TRACK",
+        "variant": "default"
+      }
+    },
+    "on_track_4_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 276 activity/14d (flat); 7-02 close $61,487 broke sub-$60.5k streak (day-8 NOT red), 7-03 spot $61,715 +2.3%, breadth 83/100 day-2; $63.5k / $65.9k reclaim still gates",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources_details": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,11 +1,10 @@
 ## Summary
 
-Ran `skills/search-skill/SKILL.md` end-to-end on 2026-06-28. Exited at step 1 (gap derivation) with **SEARCH_SKILL_NO_GAP — day 5** of the streak, no notification per spec.
+Ran `search-skill` (2026-07-06, `${var}=""` inference mode). Walked step-1's four gap sources; all dry → **SEARCH_SKILL_NO_GAP day 13**.
 
-**What I checked:**
-- (a) `cron-state.json`: 24 chronic-tail skills with sr<0.5, all `cf=0`, all sharing the `output_tokens=0` sandbox-truncation signature → cluster ISS-019/020/021/024/025 (infra, not capability gap).
-- (b) `memory/issues/INDEX.md`: 15 open. Filtered to qualifying categories `{missing-secret, api-change, permanent-limitation, quality-regression}` → only ISS-024 (skill-health), which is an internal capability already covered with a sandbox-truncation root cause. New ISS-026 today is `prompt-bug` — disqualified.
-- (c) `MEMORY.md`: no "Next Priorities" section; "Current Goals" are all infra (sandbox-truncation, XAI quota blocked, on-chain-config secret gap, BTC level alerts) — none capability-shaped.
-- (d) 7d log grep: same noise as prior runs (`missing-secret`, `missing prefetch`, `missing_pattern`, `missing fenced reppo-plan` — all infra).
+- **(a) cron-state:** 22 low-sr entries, all `consecutive_failures=0`, every one traces to the ISS-019/020/021/025 sandbox capture-step truncation cluster (`output_tokens=0` signature). Infra, not capability.
+- **(b) issues/INDEX.md:** open count 15→12 (ISS-023/024/026 resolved 7-05); **qualifying-category count 1→0** — the one prior `quality-regression` (ISS-024) resolved yest, so today has zero external-skill capability requests in the qualifying set.
+- **(c) MEMORY.md:** no "Next Priorities" section; Current Goals L4–L13 are all internal-infra / operator-blocked / market / position-management.
+- **(d) 7d log grep:** only noise (`missing_pattern` ISS refs, internal prefetch shim, resolved secret, operator-blocked config).
 
-No concrete capability word derivable → catalogs not searched, no candidates scored, no install, no notify. Log entry appended to `memory/logs/2026-06-28.md` under `## search-skill`. Files modified: `memory/logs/2026-06-28.md`. Follow-up: stays silent until either cron-state failure mode shifts from infra-truncation to capability-shaped, a qualifying-category issue is filed, or MEMORY.md gains a capability-shaped Next Priority.
+Cron-state failure mode unchanged from durable pattern (MEMORY.md L52). No query built, no catalogs hit, no install, no notify — silent exit per spec §7. Appended step-8 log entry to `memory/logs/2026-07-06.md`. No follow-up actions; ISS-025 capture-step fix remains the load-bearing item, tracked under other skills (action-converter / goal-tracker / reflect) — not this one's lane.

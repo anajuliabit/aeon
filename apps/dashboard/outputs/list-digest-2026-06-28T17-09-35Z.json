@@ -1,0 +1,226 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-06-28"
+      },
+      "children": [
+        "intro_text",
+        "sep1",
+        "list_heading",
+        "tweets_container",
+        "sep2",
+        "footer_container"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet alpha day — cyrilXBT's AI workflows win volume, but 0xTindorr's STRC deadlock + Flowslikeosmo's ETHFI rewrite are the actual reads.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "list_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto/DeFi Alpha (list 1642770456720683008)",
+        "level": "h2"
+      }
+    },
+    "tweets_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_stack",
+        "tweet2_stack",
+        "tweet3_stack",
+        "tweet4_stack",
+        "tweet5_stack"
+      ]
+    },
+    "tweet1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1_card",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "notebookLM + gemini + obsidian \"second brain\" loop. tops list volume but it's productivity content, not crypto alpha — cyrilXBT = workflow channel on this list, weight him accordingly.",
+        "likes": 120,
+        "retweets": 26
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2070824217617355229"
+      }
+    },
+    "tweet2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2_card",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "claude code upgrade tool that auto-installs hooks/skills/MCP/subagents. directly relevant to aeon's own fleet hygiene — worth a look before next aeon.yml audit.",
+        "likes": 92,
+        "retweets": 12
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2070796831320351010"
+      }
+    },
+    "tweet3_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3_card",
+        "tweet3_link"
+      ]
+    },
+    "tweet3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xTindorr",
+        "handle": "0xTindorr",
+        "text": "STRC flywheel stopped, ELI5 cut-loss tree on strategy's preferred-stock product. real solvency-wobble read: if the discount holds, BTC-selling risk on $MSTR's yield wrapper is on the table.",
+        "likes": 107,
+        "retweets": 9
+      }
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/0xTindorr/status/2070792358673916294"
+      }
+    },
+    "tweet4_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4_card",
+        "tweet4_link"
+      ]
+    },
+    "tweet4_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "ETHFI re-rated: not a dead LRT but a 3-product financial-services stack CT hasn't priced. contrarian bull case worth checking against defillama before next watchlist pass.",
+        "likes": 50,
+        "retweets": 9
+      }
+    },
+    "tweet4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2070959351280664684"
+      }
+    },
+    "tweet5_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5_card",
+        "tweet5_link"
+      ]
+    },
+    "tweet5_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Hercules_Defi",
+        "handle": "Hercules_Defi",
+        "text": "$14.4B combined weekly volume on kalshi+polymarket, $10.8B sports alone since world cup kickoff. prediction-markets RIDE narrative is now a measurable cash-flow regime, not a thesis.",
+        "likes": 73,
+        "retweets": 1
+      }
+    },
+    "tweet5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Hercules_Defi/status/2070830706935353692"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "source_text",
+        "status_badge"
+      ]
+    },
+    "source_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list-1642770456720683008=ok(12)",
+        "variant": "caption"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}

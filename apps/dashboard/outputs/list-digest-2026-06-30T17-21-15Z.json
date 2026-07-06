@@ -1,0 +1,125 @@
+{
+  "root": "root_card",
+  "state": {},
+  "elements": {
+    "root_card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-06-30"
+      },
+      "children": [
+        "intro_text",
+        "sep1",
+        "list_heading",
+        "tweet_stack",
+        "chatter_note",
+        "sep2",
+        "footer_section"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "curated DeFi list went quiet today. only signal: hercules_defi on Pi2Day 2026. Pi pivots from mobile-mining gimmick toward dev/identity infra.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "list_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi/Crypto curated list",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweetcard",
+        "tweet_link",
+        "metrics_text"
+      ]
+    },
+    "tweetcard": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Hercules_Defi",
+        "handle": "Hercules_Defi",
+        "text": "Pi2Day 2026 announcements ship SoloHost (local AI apps on Pi Desktop), Pi Sign-in (Pi-account OAuth for third-party apps), PiVerify (KYC-as-a-service over the 18M+ verified Pi network across 200+ countries). QT of the Pi Core Team thread. the long-mocked mining gimmick is being repackaged as a distribution moat for identity + AI rails; execution still TBD but the KYC reach is genuinely rare in crypto.",
+        "likes": 59,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Hercules_Defi/status/2071729733851893906"
+      },
+      "children": []
+    },
+    "metrics_text": {
+      "type": "Text",
+      "props": {
+        "text": "💬 11 replies",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "chatter_note": {
+      "type": "Text",
+      "props": {
+        "text": "rest of list ran 0–1 like reply chatter today; nothing else clears the signal floor.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "source_text",
+        "status_text"
+      ]
+    },
+    "source_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(1 signal / 9 dropped low-engagement chatter)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

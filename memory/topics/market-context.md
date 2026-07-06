@@ -1,19 +1,53 @@
-# Market Context (as of 2026-06-28)
+# Market Context (as of 2026-07-05)
 
-> **Take:** risk-off — breadth collapsed 18/20 → 6/20 in 24h as the post-opex relief bounce fully erases; BTC pinned at $60,024, 4th day below the $60,500 breakdown level. Conviction: high.
+> **Take:** Bounce day-5 tapers — spot $62,647 (17:14Z) day-5 above $60,500 breakdown line; breadth trajectory 83→71→**51** day-3→5 with median top-50 flat **+0.02%** (was +1.28%). **SOL -2.4% breaks 4-day leadership**, **HYPE -4.2% gives back yest breakout**; **ADA +9.9% (#16) + BCH +6.2% (#24) MAJOR winners = rotation-away-from-top-10**. LAB +81% #22 MAJOR TRENDING+UP FADE (7d -4.6% = relief bounce not sustained breakout). 7-04 close $63,094 = new high in reclaim window, ~$406 shy of $63.5k gate; $65.9k full-reclaim still much further; breakdown/reclaim signals silent per btc-levels spec. Conviction: medium; regime pivot holds but momentum decays into day-5. **SLX day-11 CATASTROPHIC** -46% vs entry, recut overdue (open pick).
 
 ## Signal Snapshot
-- BTC $60,024 (−0.58% 24h, −6.39% 7d) · dominance 55.81% (−0.01pp 24h)
-- ETH $1,578 (−0.42% 24h, −8.48% 7d) · ETH/BTC 0.02629
-- SOL $71.54 (−0.95% 24h, −2.72% 7d)
-- Total mcap $2.156T (−0.67% 24h) · DEX vol $4.34B 24h (Sunday tape) · DeFi TVL $70.40B (−3.9% 7d)
-- Breadth: 6/20 green 24h · 2/20 green 7d (FIGR +0.94%, RAIN +7.95%)
-- Fear & Greed: 18 (Extreme Fear) — yesterday 15
+- BTC $62,871 12:40Z data pull (+0.56% 24h, +5% 7d) — 7-05 btc-levels ticks 00:17Z $63,001 → 04:35Z $62,854 → 10:01Z $62,568 → 12:56Z $62,676 → 17:14Z $62,647 (5 quiet runs day-5)
+- ETH $1,766 (+0.52% 24h, +12.7% 7d — holds first-week-reclaim of $1,750)
+- SOL $80.52 (-2.39%, 7d +14.4% — **day-1 pullback breaks 4-day leadership**)
+- BNB $573.82 (+0.85%) · HYPE $68.45 (-4.23% — gives back yest's +6.6% breakout)
+- ADA $1.06 (+9.9%, #16, 7d +33%) — first ADA on winners since bounce day-1, fresh MAJOR breakout
+- BCH (+6.2%, #24, 7d +24%) — MAJOR carry
+- Breadth: **38/75 top-100 green (~51%)** = tapered from 71% day-4 / 83% day-2, median top-50 **flat +0.02%**
+- Fear & Greed: last read 18 Extreme Fear (stale)
 
-## What Changed Since Last Refresh
-- **Breadth collapsed 18/20 → 6/20 green 24h** — post-opex relief bounce (6-27) fully erased in one session; all 6 green names are stablecoins or micro-signal (TRX, FIGR, LEO, CC); no large-cap risk-on asset in the green. Regime relabeled from "post-expiry bear bounce" back to structural risk-off.
-- **BTC sub-$60,500 4th consecutive day** — 3rd qualifying close was $59,943 (breakdown alert fired 01:21Z); 4th close tracking near $60K. Need close >$60,500 to begin disarming; >$63,500 / $65,900 for reclaim trips.
-- **Quarter-end rebalancing 2 days out (June 30)** — institutional portfolio rebalancing; risk-asset sells likely given Q2 performance (BTC −32% H1, ETH −47% H1); adds structural sell flow to an already bearish tape.
+## What Changed Since Last Refresh (7-04 → 7-05)
+- **Bounce day-5 tapers into decay** — 83→71→51 breadth trajectory, median top-50 flat vs +1.28% yest / +2.12% day-2. Momentum decay is now the story.
+- **SOL breaks 4-day leadership** — -2.39% pullback day-1, still +14.4% 7d (leadership arc paused).
+- **HYPE gives back yest's +6.6% breakout** at -4.2%; parallel-day breakout thus one-session only.
+- **Rotation-away-from-top-10-majors** — ADA +9.9% (#16, 7d +33% fresh breakout) + BCH +6.2% (#24, 7d +24%) carry the MAJOR winners board. First ADA on winners since bounce day-1.
+- **LAB +81.4% (#22 MAJOR TRENDING+UP FADE)** — biggest single 24h large-cap move of window BUT 7d -4.6% = relief bounce, not sustained breakout.
+- **SLX day-11 CATASTROPHIC** — HIGH 9/10 6-24 pick $0.4753 → $0.256 = -46% vs entry; intraday -29.6% capitulation, rank collapse #289 → #372, mcap $62M. Position past every recut trigger.
+- **VELVET dead-cat day-4 extends (-17.7%, #165, 7d -68%)** — position closed 7-02, no re-entry.
+- **VVV Venice -9.6% day-3** — @Flowslikeosmo tokenomics-alignment BEAR thesis 4× confirmed shape (SLX/VELVET/LIT/VVV).
+- **GITLAWB REVERSAL day-1** — -17.25% snaps 2-day green trigger streak (7-03 +27.38% / 7-04 +23.21%); vol 0.77× baseline = participation-abandoned mean-revert. Notify hash `a302afba`.
+- **MAMO day-5 green streak — first ≥1× vol print in 6 days** (+6.32%, vol 1.29× baseline). Cleanest small-cap streak of watchlist, first close ≥ $0.009 in window.
+- **RWA narrative rotates onto SOL rails** — Solana RWA fresh ATH $3.41B. Now 2 chains with concrete RWA/fee-accrual anchors within 48h (SOL RWA ATH 7-05 + ARB 10%-fee dune 7-04). Tempo/Canton positioning to eat ETH RWA lunch.
+- **Holiday-freeze cascade** — GHAD HARD FREEZE ~65+h day-3 (zero-advisories-in-48h first in history); HF paper slate un-rotated day-3; CLARITY Act 7-04 signing MISSED day-2 (Senate recess until 7-13).
+- **Anthropic ships Claude Science + Claude Tag** — post-Sonnet-5 product cadence continues.
+- **Cross-lab same-day bug-report dual print HN** — Anthropic Claude Code session/cache leakage (289p) + OpenAI Codex reasoning-token clustering degradation (245p). Extends eval-quality-axis into day-4 arc.
+- **Skills-as-primitive convergence day-7** — alibaba/page-agent (Chinese-lab first entry, agent-in-page inverts chrome-devtools-mcp) + dotnet/skills (Microsoft first-party). 6 major labs across 2 regions, 7 layers, every layer/region ≥1 shipping artifact within 7 days.
+- **Sovereignty stack day-4** — meetily Rust local-audio-AI joins prior 4-item cluster.
+- **12:00 UTC batch dead day-5** — token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh still last-dispatched 6-28T12:15Z; PR #150 partial fix, `usepod_model:` still on `aeon.yml` L155/162/171.
+
+## What Changed 7-02 → 7-03 (carry)
+- **7-day breakdown streak BROKEN → day-2 of reclaim** — 7-02 close $61,487 = first daily close ≥ $60,500 in the 8-day window (btc-levels 01:24Z quiet run cleared `breakdownAlertedForClose` → null; 05:10Z + 08:30Z + 13:16Z + 16:58Z all quiet holds).
+- **Spot ETF flip +$222M BTC net-in day breaks 10d outflow streak** (ETH ETFs +$29M same day per WebSearch corroboration). TD Sequential buy signals firing across BTC/ETH/XRP/SOL. XRP breakout printed.
+- **12:00 UTC batch FIRST LIVE TEST post PR #150 → FAILED** — 6 skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh) still dark ~5.2d since 6-28. Additional dead slots 7-03: github-trending 09:00Z + aixbt-pulse 09:00Z + narrative-tracker 13:30Z. Deeper scheduler/YAML issue beyond `usepod_model`→`model:`.
+- **Winners:** MAGMA +48.0% ($109M/#253 BREAKOUT, fresh sub-rank-250 print $19.7M vol), NEX +45.4% ($161M/#194 7d +29%), **M MemeCore +37.7% day-2 continuation (7d +99% closes deadcat→reversal→continuation 3-day arc at +130%)**, FARTCOIN +19.0% (#189 7d +39% BREAKOUT), WLD +13.3% (#51 first reclaim after 7d −13%), UNI +12.7% (#43 $1.98B majors participation), SKY +12.2% (#56 7d +14%).
+- **Losers:** VELVET −22.5% (#175 day-2 dead-cat extension leg, position already closed 7-02 at $0.62 = −68.5% blown; no re-entry), LAB −17.2% (#38 day-3 capitulation MAJOR, 7d −58%), GWEI −9.9% (#138 reversal from yest winner), **LIT −5.5% (#103 mean-revert from 7-02 +15.3% BREAKOUT — day-2 gives back a chunk, whole-window still +25% 7d = breakout intact)**.
+- **GITLAWB TRIGGER FIRED 13:15Z 24h +27.38%** — $0.00005→$0.00006 handle jump, largest 1d gain of watchlist window; vol 1.76× baseline confirms participation-caught-up-to-price (contrasts 7-02 +8.03% on 0.88× shallow). Watchlist whole-green day-2 (median +6.07% 24h). REPPO day-2 vol-drought break at $0.024 (+10.85%, vol 1.72× stepping down from 3.16× spike). WELL vol decay to 1.02× closes 6-30 spike arc — supply chapter over, position on price-action-only now.
+- **Sovereignty stack shipping day** — HN 7-03 3-thread convergence: Podman v6.0.0 (504p CNCF-incubated runtime) + Immich 3.0 (372p self-hosted photos consumer) + **Right-to-Local-Intelligence** (203p policy push for on-device model access). Adds **policy vector** to skills-as-primitive convergence (was compute + tools + protocols; now +user-rights-to-run-locally).
+- **First supply-chain-quiet 24h window since 6-25** — 0 fresh npm malware after 7-02 15:00Z breaks 8-day daily-npm-malware streak. Watch next 48h for pattern-vs-blip.
+- **9router hardcoded default JWT fallback + public PoC + public secret string `9router-default-secret-change-me`** = worst config default of year candidate; PoC + secret both in advisory = zero attacker research needed.
+- **OpenClaw npm 23-advisory single-package coordinated disclosure batch** = 2nd solo-researcher mega-batch of the week (7-01 Fission Go 9-CVE = 1st, ~2.5× smaller). Pattern extension: same-project batch-magnitude coordinated disclosure signature.
+- **AgenticSTS paper ↑28 (arXiv 2607.02255)** — bounded-memory testbed direct aeon-runtime hit; day-2 of memory-eval thread (MemSyco 7-02 → AgenticSTS 7-03).
+- **PR #150 + #151 merged 7-02 13:20Z carries** — $456/mo cost fix + ISS-026 skill-evals cron 06→22 UTC. First live 12:00 UTC test 7-03 FAILED (deeper root cause).
+- **Sonnet 5 dev-preference 82% inside Claude Code** — 92.4% SWE-bench vs Opus 4.6 80.8%. Anthropic-race-to-IPO framing carries.
+- **Brandjack wave extends to testing-framework arm** — vitest-agent + 3-pkg Tailwind cluster on 7-02 (was AI-infra 6-30 → enterprise-data-infra Confluent 7-01 → testing-framework 7-02). Confluent + Vitest = 3rd/4th brandjack vertical opens.
+- **Cloudflare x402 Monetization Gateway shipped** (HN 7-02 290p) — HTTP 402 payment-rail behind CF, "charge for any resource" — micropayment infrastructure durable signal for aeon-hosted apps.
+- **CFTC Event Contracts NPRM doc 2026-13239** (fresh 7-01) — moves fully-collateralized contracts out of 2017 no-action-letter regime, comment window closes ~2026-07-27 (T-25d), **biggest prediction-market action since Kalshi-Selig letter**.
 
 ## Active Narratives
 - **Structural meta-bear / "crypto needs new narrative"** — phase: rising (persisting). Evidence: Breadth 6/20, F&G 18 Extreme Fear day 4, ETF ~$5B cumulative June outflows, BTC −6.4%/ETH −8.5% 7d; meta-bear now day 3+ and persisting past 24h half-life (confirmed 6-27).
@@ -39,14 +73,21 @@
 ## Stablecoins
 Total: $312.46B (≈ flat 1d, −0.38% 7d). USDT $184.9B · USDC $73.8B · USDS $8.2B · DAI $4.8B · USD1 $4.7B · USDe $4.45B. Combined top-6 share of crypto mcap ~14.5%.
 
-## Trending (CoinGecko)
-- **AAVE** — #56, score 14; trending day-5; DeFi-as-agent-rail bid; $76 entry P&L now +17.8% (from peak +25.9% day-4)
-- **LIT (Lighter)** — #110, score 11; new entry; perp DEX on Arbitrum; no confirmed fresh catalyst today
-- **FET** — #120, score 10; Artificial Superintelligence Alliance; AI/decentralized-compute bid; aligns with Anthropic export-ban → open-weights-lane narrative (Asian models stepping in per 6-28 AIXBT)
-- **SLX** — #212, score 9; 6-27 HIGH 9/10 pick day-2; +10.6% 24h, +9.8% on entry ($0.4753 → $0.522); Binance/Upbit/CoinEx delta-neutral Solana protocol
-- **SOL** — #7, score 8; −0.95% 24h; Solana structural outperformance vs ETH/BNB persists (SOL −2.72% 7d vs ETH −8.48% 7d)
-- **BTC** — #1, score 7; −0.58% 24h; attention on tonight's UTC close vs $60,500
-- **VELVET** — #83, score 4; 6-28 HIGH 11/10 pick $1.72; trending day-4; ATH retest on Trade.xyz pre-IPO synthetics + Aerodrome routing
+## Trending (CoinGecko, 6-29)
+- **TAC** #173 +94% (PUMP-RISK, 7d +112%, $7.8M vol — parabolic small-cap)
+- **RAVE** #213 +82% (TRENDING+UP PUMP-RISK, 7d +93%, $65M vol)
+- **GWEI ETHGas** #116 +43% (BREAKOUT 7d +79%)
+- **VELVET** #86 +3.9% (6-28 HIGH 11/10 pick day-2 stalls, -2.9% on entry)
+- **SLX** #208 -0.7% / -3.5% intraday (6-27 HIGH 9/10 pick day-2, +15.1% on entry — held above $0.547)
+- **SOL** #7 +1.0% (only large-cap green; outperformance continues)
+- **BTC** #1 -0.9% (attention on tonight's UTC close vs $60,500)
+
+## Open picks
+- VELVET (6-28 entry $1.72): $1.67 = -2.9%, day-2 stalls after Sat's +33%; 9d to pre-July-10 unlock cliff
+- SLX (6-27 entry $0.4753): $0.547 = +15.1%, day-2
+- AAVE (6-24 entry $76): $90.75 = +19% day-6, gave back from peak +25.9%
+- APE (6-26 entry $0.151): not in top mover bands today; invalidation tail extends from day-3 -7.3%
+- SEI (6-25): stopped out day-1 at $0.0542 (-7.2%)
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |

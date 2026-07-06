@@ -801,3 +801,248 @@ state: what was built, recurring blockers, and health.
   appears (hyperliquid + BTC dominance returning from DEAD).
 - **PR #138 (goal-tracker header drift fix)** open ~24h, under
   24h stall threshold per heartbeat. No urgent issues.
+
+## 2026-06-28 fleet deltas
+
+- **ISS-026 NEW (high, prompt-bug).** Filed by skill-evals 08:00Z run —
+  heartbeat false-fail on missing_pattern because skill-evals dispatches
+  before 08:00 UTC morning tick, captures pre-tick stale state of
+  log-based skills (heartbeat / token-alert / skill-health). Recommended
+  fix: schedule skill-evals after 21:00 UTC to capture full-day signal.
+  Coverage dipped 12/44 (27%, −5pp). Action queued on action-converter.
+- **PR #148 (fix agent-buzz x_search engagement ranking)** crossed 24h
+  stall window (opened 6-27 18:14Z, ~24h+ as of 14:15Z hb). Operator-
+  owned, direct follow-on to 6-27 agent-buzz cache-quality observation.
+  Watch for merge before 6-29 morning hb.
+- **ISS-025 capture-fix PR DAY 6 UNSHIPPED.** action-converter flagged
+  4.6/5-quality PR on 6-24 18:14Z; surfaced in morning-brief 6-25 →
+  6-26 → 6-27 → 6-28 (4 consecutive). Chronic 20-skill tail keeps
+  bleeding `output_tokens=0`. Operator has not picked this up despite
+  4 morning-brief surfaces — could be capacity-limited or deprioritized
+  vs advisor sprint (#141–#145).
+- **on-chain-monitor REPPO stake migration captured 13:03Z** — first
+  non-zero on-chain-monitor run since 6-25 address-poisoning quiet
+  thread (~72h). W3→W1 1.58M REPPO stake migration + W1 USDC→Morpho
+  steakUSDC vault. Operationally validates the curl→WebFetch fallback
+  + ID-keyed CoinGecko pricing path for token-transfers. Recommend
+  adding `0xc81F...68E8` as "REPPO staking" in known-addresses.yml.
+  Detail in [[crypto]] on-chain section.
+- **defi-monitor NO_CONFIG day 21.** Operator config drift unchanged.
+  ALCHEMY_API_KEY len=0; ETHERSCAN_API_KEY null. on-chain-watches.yml
+  has 5 `type: wallet` entries, zero `type: pool` / `type: position`
+  needed by defi-monitor.
+- **Skill-health 6-27 18:10Z snapshot:** 24 DEGRADED + 8 WARNING + 9
+  HEALTHY + 0 CRITICAL + 2 NO_DATA. Diff vs 6-26: btc-levels
+  degraded→warning + daily-routine degraded→warning (both crossed
+  0.6 sr line); −2 degraded. Hash 81dbbe4f changed → notification
+  fired. Sandbox-truncation cluster (ISS-019/020/021/024/025 + chronic
+  tail) still day 11 (since 6-19 first flag).
+- **6-28 14:15Z hb:** 20-skill chronic tail unchanged from 09:18Z; some
+  per-skill sr drift (vuln-scanner 7→10%, agent-buzz 48→49%, etc.) but
+  classification stable. 1 open PR (#148), 15 open issues (ISS-026 add).
+- **6-28 watchlist green-day** — token-alert TOKEN_ALERT_OK 7th
+  consecutive clean CG day; whole canonical watchlist green for first
+  time since 6-22 (median +1.51%); GITLAWB +5.38% ends 7-day red streak
+  with first elevated-vol upside print 1.27× day-prior.
+
+## 2026-06-29 entry
+
+### PRs
+- **PR #148 fix(agent-buzz) MERGED 2026-06-29T00:17Z** — ~30h from open (6-27 18:14Z) to merge. `mode:"Latest"` → `mode:"Top"` + `min_likes:5` switch in `scripts/prefetch-xai.sh`. agent-buzz cron-state sr 49% → 50% the same morning; full effect needs 5–7 days of fresh runs to register in skill-health.
+- **PR #149 docs(skill-graph) by anajuliabit OPEN** — opened 2026-06-28T17:15Z; under 24h at morning hb (~15.5h), approaching but not crossing 24h stall at 15:04 hb (~22h). Watch carry next reflect.
+- **aaronjmars/aeon PR #560 OPEN (sister-fleet ship)** — wired existing `scripts/validate-config.test.js` (7 fixture tests for the checkout-ordering invariant from #546) into `.github/workflows/ci-tests.yml`. Proactive gap-fix; tests shipped without CI gate. Branch `ai/ci-validate-config-tests` via fork `anajuliabit/aeon-fork` (`anajuliabit/aeon` already exists as unrelated repo).
+
+### Fleet health
+- **skill-health 6-28 18:08Z snapshot (24h hash unchanged):** 9 healthy · 24 degraded · 8 warning · 0 critical · 2 no_data. Same as 6-27 — classification stable. Open issues: 15 (4 critical sandbox cluster ISS-019/020/021/025 + 1 sandbox-limitation ISS-018 + 7 high prompt-bug/quality-regression + 3 medium).
+- **Heartbeat 6-29 08:47Z + 15:04Z: HEARTBEAT_OK, STATUS_PAGE=DEGRADED** — fleet cf=0. Chronic-failure tail unchanged: 19 skills sr<0.5 sharing `output_tokens=0` sandbox-truncation signature. Worst: reg-monitor 10% / cost-report 11% / skill-analytics 11% / vuln-scanner 10%. agent-buzz now sits on cluster boundary at 50% post-PR #148 merge.
+- **fork-skill-digest STUCK ~20h** carry — dispatched 2026-06-28T18:38:01Z, `last_status: dispatched`, last_success 2026-06-21T18:57:04Z (weekly Sun slot). Carried from 6-28 20:18Z + 6-29 08:47Z hb ticks within 48h dedup window.
+- **operator-scorecard Mon slot missed again** — scheduled Mon 10:30Z, no cron-state entry; never-run since enabled. Same condition flagged each prior Monday — scheduler-side gap, not skill-side.
+
+### Skill-security-scan 6-29 (Mon slot)
+- **`SECURITY_SCAN_NOCHANGE`** — 4 PERSISTENT HIGH, 0 NEW, 0 RESOLVED. Identical line set as 2026-06-22; finding #4 stable at `aeon.yml:812` for 2nd consecutive scan. `scan.sh` blocked by sandbox approval gate 5th consecutive run since 2026-05-25 — fallback inline_grep_fallback per SKILL.md step 4.
+- HIGH findings: `.github/workflows/aeon.yml` L86 (`inputs.skill` → `run:`), L94 + L96 + L812 (downstream `steps.skill.outputs.name` / `steps.work.outputs.label` chain). Workflow_dispatch / workflow_call require repo write access → low real risk; canonical fix is `env:` indirection (pattern shown in article).
+
+### Cost-report 6-29 (Mon slot)
+- **$595.75 last-7d / 113 runs / 14 anomalies / ⚠ ~$2,553/mo projected.** ↑199.5% WoW (prior window suppressed by widespread `output_tokens=0` sandbox failures, so the spike is largely artefact).
+- 14 anomalies: 1 per-run (aixbt-pulse 2026-06-24 output spike +2.4σ), 13 WoW spikes — 10 attributed to ISS-019/020/021/025 sandbox-truncation artifact, 3 genuine: vuln-scanner 21.5× / reflect 3.0× / token-movers+token-pick `usepod_model` drift.
+- **Optimization queued:** rename `usepod_model` → `model:` in `aeon.yml` for on-chain-monitor / token-pick / token-movers = ~$107/wk / $456/mo combined savings.
+
+### Weekly shiplog 6-29 (Mon slot)
+- 23 commits / 23 PRs merged / 1 issue closed last week on aaronjmars/aeon.
+- Themes: Cron state and votable health move into GitHub Issues; Phylax becomes the pre-install verdict for external skills; The dashboard stops surfacing Dependabot.
+- Stats: +3,176 / −442 lines, 87 files, contributors: aaronjmars, usephylax, SamsShow, clawhunter, anajuliabit, vigilcodes, dependabot[bot].
+
+### ISS-026 status (heartbeat false-fail timing artefact)
+- Detected 2026-06-28 08:00Z by skill-evals run.
+- Recommended fix: move skill-evals dispatch after 21:00 UTC so it captures post-tick state of log-based skills (heartbeat/token-alert/skill-health) instead of pre-tick stale state.
+- Action queued in action-converter q4u4 backlog; awaiting operator pickup.
+
+## 2026-06-30 entry
+
+### PRs
+- **PR #150 fix(aeon.yml) `usepod_model` → `model:` OPEN** — opened 6-29 18:17Z by anajuliabit, 5-line diff for on-chain-monitor / token-pick / token-movers. ~$107/wk / $456/mo savings. Under 24h stall at 14:43Z 6-30 hb (~20h), approaching threshold. Queued in morning-brief 07:48Z focus #2.
+- **PR #149 docs(skill-graph) STUCK day 2** — opened 6-28 17:15Z, ~45h+ at 14:43Z 6-30 hb. Crossed 24h stall threshold ~21h earlier; surfaced in morning-brief 07:48Z focus #1 + action-converter 6-29 18:22Z (dedup-blocked, no separate stalled-PR notification).
+- **fork-skill-digest STUCK ~44h+** carry — dispatched 6-28 18:38Z, `last_status: dispatched`, last_success 6-21 18:57Z weekly Sun slot. 5 prior hb mentions; within 48h dedup window through 14:43Z 6-30; crosses threshold next tick.
+
+### Fleet health
+- **skill-health 6-29 17:45Z snapshot:** 9 healthy · 23 degraded · 8 warning · 0 critical · 2 no_data (operator-scorecard, fork-skill-gap). Hash 992a90ed; fleet-control dropped (now disabled in aeon.yml). 15 open issues, 0 filed/resolved this run.
+- **Heartbeat 6-30 08:51Z + 14:43Z: HEARTBEAT_OK, STATUS_PAGE=DEGRADED** — fleet cf=0. 19-skill chronic-failure tail unchanged: reg-monitor 10% / vuln-scanner 10% / cost-report 11% / skill-analytics 11% / security-digest 24% worst. agent-buzz 51% holds out of cluster post-PR #148 merge. fleet-control re-entered chronic at 40% before being disabled.
+- **operator-scorecard Mon 10:30Z perpetually missed** — 6-29 Monday tick now ~28h+ past with no dispatch as of 14:43Z 6-30 hb. Same scheduler-side gap flagged every prior Monday — carry indefinitely until scheduler patch.
+
+### WELL volume spike (token-alert 12:11Z)
+- **WELL $0.00334006 -2.28% on vol $3.68M = 3.83× of $961K 5d mean — first 3×+ print of the 6-day watchlist run**, but on a red tape print. Snaps the 3-day green streak on quarter-end sell flow.
+- Read as **accumulation OR forced supply hitting a bid** — direction confirms on next 2 closes. Previous 6-day low-vol regime broken in the opposite direction of price relief.
+- Next-run baseline shifts $961K → $1.020M; comparable 3× spike tomorrow needs $3.06M+.
+
+### github-trending 6-30 (4 picks)
+- **browser-use/video-use** (top pick · ACCELERATING · 967 today · 12.3k total · Python; org expansion from web→video editing, agent-tooling meta-narrative day 3)
+- **0xNyk/council-of-high-intelligence** (RETURNING · 331 today · 2.2k total · Shell; `/council` Claude Code slash command runs 18 named-thinker AI personas across multi-vendor LLMs — structured-debate-as-judgment primitive)
+- **logto-io/logto** (RETURNING · 158 today · 13k total · TypeScript; v1.41.0 released 6-30 08:09Z = release-driven spike; open Auth0/WorkOS alternative)
+- **refactoringhq/tolaria** (ACCELERATING · 280 today · 17.8k total · TypeScript; pre-1.0 alpha, 9 alpha cuts in single day = ship-cadence-as-signal)
+- **Fake-star drop precedent** — msitarzewski/agency-agents 119.8k stars Shell repo dropped with confidence on: 1:6 fork ratio (vs typical 1:30-1:50) + Shell language tag for "AI agency" + unknown maintainer + 459/d sustained 8mo on cheesy description. New rule: >100k stars + anomalous fork ratio + wrong language tag = inorganic-star-farm.
+
+### security-digest 6-30 14:50Z
+- **KEV zero-cadence streak ENDED at 4 days** — SimpleHelp CVE-2026-48558 added 6-29: CVSS 10.0 + horizon3.ai PoC + TaskWeaver/Djinn intrusion chain documented + CISA BOD 26-04 hard due 2026-07-02 = PATCH TODAY.
+- **Brandjacks ride agent-infra narrative**: GHSA-m9j7-x8ww-5jwr ai-sdk-ollama@0.13.1 (Vercel AI SDK + Ollama brandjack); 18-pkg autotel-* cluster (autotel-mcp/cli/web/vitest/backends/etc, 10.5h single-author window = largest single-namespace coordinated brandjack of 48h).
+- 100% of 154 malware advisories npm; pip/crates/go contribute zero — npm remains sole supply-chain attack surface.
+
+### list-digest 6-30
+- 1 signal: Hercules_Defi Pi2Day 2026 announcements (SoloHost local AI + Pi Sign-in OAuth + PiVerify KYC-as-a-service over 18M+ Pi-verified accounts). Pi's KYC reach is a real distribution asset; framing finally moved from mining-gimmick to infra play. Execution unproven.
+
+## 2026-07-01 entry
+
+### PRs
+- **PR #150 fix(aeon.yml) `usepod_model` → `model:`** — opened 6-29 18:17Z, **~44h stall as of 14:13Z hb** (crossed 24h threshold 6-30 evening ~20h ago). 5-line diff, ~$107/wk / $456/mo savings for on-chain-monitor/token-pick/token-movers. Surfaced in morning-brief 7-01 07:03Z focus #1 + 4 hb ticks + 6-30 action-converter action-1 → dedup-blocked. Operator-merge gated.
+- **PR #149 docs(skill-graph)** — opened 6-28 17:15Z, **~69h stall day 3**. Same dedup-blocked pattern.
+- **fork-skill-digest STUCK ~68h+** — dispatched 6-28 18:38Z, `last_status: dispatched`, last_success 6-21 18:57Z. 8 prior hb mentions. Crossed 48h dedup window; next Sunday 7-05 tick will attempt fresh dispatch.
+
+### Fleet health
+- **skill-health 6-30 18:08Z snapshot:** 9 healthy · 23 degraded · 8 warning · 0 critical · 2 no_data. Hash 1ff18e84 (vs 992a90ed 6-29); classification byte-identical, daily-cadence notify fired at 24h23min elapsed. 15 open issues unchanged.
+- **Heartbeat 7-01 08:32Z + 14:13Z: HEARTBEAT_OK, STATUS_PAGE=DEGRADED** — fleet cf=0. 19-skill chronic tail sr<0.5 unchanged. Worst: reg-monitor 10% / vuln-scanner 10% / cost-report 11% / skill-analytics 11% / security-digest 24%. All share `output_tokens=0` sandbox-truncation signature (cluster ISS-019/020/021/024/025). agent-buzz 52% holds out of cluster post-PR #148 merge.
+- **operator-scorecard Mon 10:30Z slot MISSED day 3** — 6-29 Monday tick ~51h past with no dispatch. Same scheduler-side never-run gap.
+
+### BTC breakdown day 6 CONFIRMED
+- **btc-levels 00:19Z fired ⚠️ breakdown alert** for 6-30 close $58,551 = 6th consecutive sub-$60,500. Quiet ticks 05:12Z $59,155 / 08:32Z $58,552 / 12:18Z $58,432 / 17:03Z $59,846 — spot pinned sub-reclaim ($63.5k / $65.9k).
+- First sub-$60k print since 2024; 50% below Oct-2025 $126k ATH.
+
+### WELL vol-spike resolves BEARISH
+- 6-30 vol spike 3.83× on -2.28% red print (either accumulation OR supply-hitting-bid) → 7-01 12:18Z **decays to 2.30× on -1.02% close** = **supply-hitting-bid confirmed**. Bid absorbed offers but couldn't drive a green print. Structural pattern noted; one more sub-$0.0033 close = trend-follow signal.
+
+### github-trending 7-01 (4 picks)
+- **google/agents-cli** (top pick · ACCELERATING · 445 today · 4.5k · Python; 3 releases in past week; Google first-party CLI + `skills/` directory primitive for agents on Google Cloud — same shape as Anthropic Agent SDK from 6-28; **skills-as-primitive convergence signal across major vendors**)
+- **ogulcancelik/herdr** (ACCELERATING · 486 today · 9.2k · Rust; terminal-native agent multiplexer — Rust tmux-shaped answer for many coding-agent panes side-by-side, first devtool in this niche to hit trending)
+- **usestrix/strix** (ACCELERATING · 515 today · 28.5k · Python; AI pentest agent, borderline drop yesterday reconsidered on today's 6× baseline vs 1.5× yest)
+- **facebook/astryx** (RETURNING · 364 today · 2k · TypeScript; v0.1.2 6-29; Meta first-party open design system explicitly "agent-ready" — 1st-party framework declaring agents as 1st-class UI-consumer)
+- **Fake-star drops (2)**: msitarzewski/agency-agents day-2 same pattern; **NEW diegosouzapw/OmniRoute** (TypeScript + rapid semver v3.8.42/139d + 1:6.3 fork ratio + brand-list description name-dropping Claude Code/Codex/Cursor/Cline/Copilot = new fake-star sub-pattern).
+
+### Anthropic ship-day cluster (hn-digest 7-01)
+- 3 of top-5 HN stories Anthropic-branded — biggest single-day HN presence in 30d log.
+- **Claude Code steganographic prompt-marking disclosure** (1908p) — direct on aeon runtime; proxy/gateway routing implication (gateway.provider=direct in aeon.yml, but usepod/bankr/virtuals gateways would see markers).
+- **Claude Sonnet 5** (1098p) — 80.4% Terminal-Bench beats Opus 4.7 launch score; 63.2% agentic coding vs Opus 4.8's 69.2%; 97% of Opus at ~15% cost; $2/$10 intro thru 8-31. "Most agentic Sonnet."
+- **DoC lifts Mythos 5 export controls** (646p) — fully reverses 6-16 trusted-orgs restriction. Anthropic-Mythos-quota thread CLOSED (different event from XAI Elon x.ai quota, still day 16 unblocked).
+- Claude Science ships same day (477p). Nano Banana 2 Lite (Google, 367p) as non-Anthropic AI balance.
+
+### security-digest 7-01 (Fission cluster + brandjack vertical expansion)
+- **Fission Go 9-CVE coordinated disclosure batch** (4 crit CVSS 9.9 + 5 high on `<=1.23.0`, podspec injection / node escape / cross-namespace / cluster-takeover, 8-min window) — largest single-project no-patch Go advisory cluster of 2026. Plus Fulcio CVE-2026-49478 CVSS 8.7 no-fix (SSRF + JWKS substitution → K8s SA token leak) + Cedar authz-bypass CVSS 8.8 no-fix. **Reviewed-CVE side now 100% no-patch.**
+- Brandjacks: LiveKit Agents SDK, **Confluent Kafka JS (1st enterprise-data-infra target after 4 days AI-infra-only)**, chai-as-promised pair, agent-starter-pack (Google Cloud). Confluent = new brandjack vertical.
+- **KEV net-new: 0** — day-2 zero-cadence since SimpleHelp 6-29. Total this-week: 3 (SimpleHelp + Windchill/Cisco Unified CM from 6-25).
+
+### reg-monitor 7-01 (post-recovery batch)
+- **Stop Lawmakers from Predicting Act passed House Admin Committee 5-4** (bipartisan Budzinski/Smith companion; penalty ≥$2k or 10% trade + net-profit forfeiture; Speaker Johnson + Trump backing). Direct hit on prediction-market coverage.
+- **CFTC Data Reporting for Event Contracts NPRM** (doc 2026-13239, fresh 7-01) — moves fully-collateralized contracts out of 2017 no-action-letter regime into codified parts 15–18/17/18. **Most material CFTC action on prediction markets since Kalshi-Selig letter.** Standard 60d comment window ~2026-08-30 close.
+- CFTC+SEC Portfolio/Cross-Margining Joint NPRM (2026-06-30, crypto-derivative cross-margining unlock).
+- MiCA transition officially expired 7-01 (no fresh primary source to link).
+
+### list-digest 7-01
+- **$LIT (Lighter) thesis top signal** — @Flowslikeosmo: 17.9M/yr buyback-burn vs 7.5M/yr staking emit ≈ 2.4× net-supply shrink if revenue holds; first on-chain burn drops post-Q2 close; P/S 13.5×, P/F 10×, 30d fees +38.5%. 1st surfacing on curated DeFi flow this week.
+- $LNQ (Linq) small-cap AI-compute infra bet; watchlist candidate.
+- **DEX-supremacy meta being questioned** in curator screens (Flowslikeosmo shortlist RAIL/NXM/STON/YB/AQUA/OPINION/MOR/CAPX notably DEX-light) = macro read for token-pick / narrative-tracker.
+
+## 2026-07-02 entry
+
+### PRs — batch merge day
+- **PR #150 fix(aeon.yml) `usepod_model` → `model:` MERGED 13:20:07Z** — 5-line diff shipped after ~68h stall; unblocks on-chain-monitor/token-pick/token-movers from `output_tokens=0` truncation root cause. **12:00 UTC batch (6 skills stopped dispatching 6-28) should recover on Fri 7-03 tick — first live test of the fix.** ~$456/mo bleed halted.
+- **PR #151 fix(aeon.yml) skill-evals cron Sun `0 6 * * 0` → `0 22 * * 0` MERGED 13:20:37Z** — ISS-026 fix ships. Heartbeat/skill-health/fork-skill-digest/skill-update-check/fork-skill-gap ticks now land before Sunday eval reads. Issue file needs INDEX flip open→resolved.
+- **PR #149 docs(skill-graph) STILL STALLED ~94h day-4** — dedup-blocked, operator-merge gated. Only PR left in the stack post-batch.
+
+### fork-skill-digest carries
+- STUCK ~93h dispatched row (6-28 18:38Z → last_success 6-21 18:57Z weekly Sun slot). Next Sun 7-05 fresh tick.
+
+### BTC breakdown day 7 CONFIRMED + first material bounce
+- **btc-levels 01:17Z fired ⚠️ breakdown alert** for 7-01 close $59,979.90 = **7th consecutive sub-$60,500 close**. 05:11Z spot $60,752 = first close-window print back at the $60k handle of the streak; 13:07Z $61,528 = first material touch of the breakdown line in 7 days; 17:14Z $61,650 pins the reclaim attempt below $63.5k/$65.9k rails. **Tonight's UTC close decides day-8-red or first-reclaim.**
+- June ETF net −$4.51B = **worst month ever** (IBIT −$212M on 6-30, SpaceX-IPO rotation cited); DXY reversal off local highs; July historical avg +7.25% / median +8.16% (July-relief base case).
+
+### Fleet health
+- **skill-health 6-30 18:08Z snapshot unchanged** (daily-cadence tick 7-01 18:30Z byte-identical hash 1ff18e84): 9 healthy · 23 degraded · 8 warning · 0 critical · 2 no_data. 15 open issues; ISS-026 fix-shipped via PR #151 but INDEX still Open.
+- Heartbeat 08:26Z + 15:29Z **HEARTBEAT_OK** — fleet cf=0. 19-skill chronic tail sr<0.5 unchanged from 7-01 (all `output_tokens=0` sandbox-truncation signature cluster ISS-019/020/021/024/025). agent-buzz 52% + defi-monitor 53% stay above cluster boundary.
+- **operator-scorecard Mon 10:30Z slot MISSED day 4** — 6-29 Monday tick ~101h past no dispatch. Scheduler-side never-run gap carries.
+
+### watchlist — whole-green day (first since 6-28)
+- +5.19% median 1d across 4 tokens. **WELL 3rd close post-6-30 vol spike confirms direction UP not distribution** — reverses 7-01 "supply-hitting-bid" thesis to **washout-then-reversal**. **REPPO vol-trigger 3.16× rail** on $0.021 wobble-line reclaim ($294K vs $93K baseline drought) — 4-day base snaps, participation finally arrives. WELL 1.55× decay. MAMO 2nd green clears $0.0083 first time since 6-27 on 0.99× baseline. GITLAWB +8.03% snaps "worst 1d" pattern but on 0.88× shrinking vol = participation-shallow bounce.
+
+### daily-routine 7-02 (tape flip)
+- **81/100 breadth** (up from 32/100 6-30 = biggest single-day swing in 30d window). Winners **M MemeCore +65.8% MAJOR MEAN-REVERT** (7d -76% → +83% swing week = post-capitulation shakeout day-2), RIF +36.4%, GWEI +20.5% mean-revert, **LIT +15.3% BREAKOUT day-2 7d +29%** (Flowslikeosmo tokenomics thesis 7-01 playing out on tape — buyback-burn math becoming a live-market read), SYN +14.3%, PENDLE +12.5%, MORPHO +8.5%. Losers **VELVET −60.1% #138 CAPITULATION** (HIGH 11/10 pick day-5 fully blown: entry $1.97 → $0.62 = **−68.5% blown position**; 8d to July-10 unlock priced 8d early — market did not wait), TAC −38.2% (7d +77% breakout fully unwound), DYDX −29.1% (was yest #3 winner +16.8%), LAB −14.4% day-2 CAPITULATION MAJOR.
+
+### security-digest 7-02 (brandjack extends to testing arm + pattern inversion)
+- **CVE-2026-45659 SharePoint added KEV 7-01** — only fresh KEV entry this week; 4 total this-week (SimpleHelp 6-29 + Windchill/Cisco Unified CM 6-25 all dedup-carried).
+- **This-week: 4 major CVEs (patched):** GHSA-84hp-mqvj-3p8h mcp-memory-service CVSS 9.8+PoC unauth doc-API RCE ≥10.67.1; GHSA-xr65-5cpm-g36x/CVE-2026-44935 rancher/fleet Go 9.9 cross-namespace secret disclosure; GHSA-mhc6-2gfq-xx62/CVE-2026-44939 rancher Go 9.6 YAML command injection; GHSA-9mm9-rqhj-j5mx/CVE-2026-49987 repomix npm 8.8+PoC --remote-branch arg-injection RCE.
+- **Brandjack extends to testing-framework arm** — `vitest-agent` (Vitest+agent brand), 3-pkg Tailwind cluster (tailwind-animates + animatecss-postcss-plugin + tailwind-typography-stylecss all published 7-02). Extends the pattern (AI-infra 6-30 → enterprise-data-infra 7-01 → testing-framework 7-02).
+- **Pattern inversion vs 7-01** — GH `patched_versions: null` cascade → all-patched-today. **API field lags advisory-page reality; WebFetch on advisory pages is canonical.** Codify: don't trust the JSON field for triage.
+- **MCP/agent-infra 5-advisory 48h window** — mcp-memory-service + @apify/actors-mcp-server + auth-fetch-mcp + neuro-cortex-memory (**CLAUDE_PROJECT_DIR RCE — worth tracking, direct Claude Code adjacency**) + vitest-agent brandjack.
+
+### hn-digest 7-02
+- **"For first time, a cell built from scratch grows and divides"** (844p, Quanta) — synthetic biology milestone.
+- **"Physical disc production ending Jan 2028 for PlayStation"** (703p) — end-of-media-era cultural marker.
+- **"ZCode — Harness for GLM-5.2"** (377p, z.ai) — **Chinese-model agentic-harness axis extends** the skills-as-primitive convergence (google/agents-cli 7-01 + Anthropic Agent SDK 6-28 + ASPIRE paper 7-02 + ZCode/GLM-5.2 = **day-3 convergence with 4 provider artifacts including a Chinese lab**).
+- **"Cloudflare Monetization Gateway via x402"** (290p) — HTTP 402 payment-rail behind CF, "charge for any resource" — micropayment infrastructure durable signal for aeon apps that could paywall through CF's rail.
+
+### list-digest 7-02
+- **@Flowslikeosmo doubles down** — Flare 2-lanes (interoperable assets + confidential compute, implicit no-vote on AVS/DA optionality) + $LIT tokenomics-alignment overhaul (2nd surfacing this week). Tokenomics-as-team-seriousness filter now durable-tracked caller (adds $LIT to memory/topics/crypto.md's SLX/VELVET SLX/VELVET filter).
+
+### paper-pick 7-02
+- **MemSyco-Bench (arXiv 2607.01071, HF ↑17)** — memory sycophancy in agents; direct aeon-runtime hit (memory-consolidation quality risk). Continues eval-side thread Dockerless (7-01) → TUA-Bench (6-30) → Gauntlet (6-29) → OPID (6-28) → Verification Horizon (6-27).
+
+### reg-monitor day-1 tick surfaced 7-02 (via daily-routine)
+- **CFTC Event Contracts NPRM** carries — comment window closes ~2026-07-27 (T-25d), **biggest prediction-market action since Kalshi-Selig letter**.
+
+## 2026-07-03 entry
+
+### PRs & merges
+- **#149 docs(skill-graph)** — day-5 stall (~118h), only PR in stack after 7-02 batch-merge. Operator-merge gated.
+- **PR #150 was PARTIAL fix** — 12:00 UTC batch first live test 7-03 FAILED. 6 skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh) still dark ~5.2d since 6-28. Additional dead slots 7-03: github-trending 09:00Z + aixbt-pulse 09:00Z + narrative-tracker 13:30Z. Deeper scheduler/YAML issue remains (possibly `market-context-refresh` line 155 still carries `usepod_model` field). Wed skill-analytics 18:30Z will formalize the anomaly.
+- **ISS-026 fix (PR #151) shipped 7-02 but INDEX still Open** — memory-flush follow-up carries.
+
+### Skill-health snapshot
+- **7-02 18:53Z byte-identical 3rd day** — 0 critical · 23 degraded · 8 warning · 9 healthy · 2 no_data. Systemic: `output_tokens=0` cluster ISS-019/020/021/024/025 day-10 since action-converter 6-24 flag; **weekly-review hard deadline 07-04 = T-1d, TIGHT**.
+- **18-skill chronic tail** (was 19 at 7-02 — thought-review 50%→51% exits cluster): vuln-scanner 10% / cost-report 11% / reg-monitor 12% / skill-analytics 13% / security-digest 26% / market-context-refresh 32% / narrative-tracker 33% / search-skill 34% / skill-health 36% / list-digest 37% / self-improve 37% / action-converter 38% / goal-tracker 38% / skill-evals 38% / reflect 39% / fleet-control 40% / evening-recap 46% / aixbt-pulse 47%.
+- fork-skill-digest STUCK ~117h carry — next Sun 7-05 fresh dispatch attempt.
+- operator-scorecard Mon 10:30Z MISSED **day 5** — scheduler-side never-run gap, carry.
+
+### security-digest 7-03
+- **1 TODAY / 5 THIS-WEEK / 0 MONITOR**. Notable:
+  - **9router npm 9.8** hardcoded default JWT fallback secret `9router-default-secret-change-me` + public PoC = worst config default of year candidate.
+  - **fast-mcp-telegram pip 9.4** bearer-token path traversal → 0.19.1 (MCP-adjacent, day-7 of agent-infra brandjack thread).
+  - **zebrad rust 9.3** P2SH sigop undercount = Zcash consensus divergence (chain-split miners for fee cost) → 4.5.0.
+  - **electerm npm 8.8** cmd injection via malicious SSH/SFTP filenames → 3.11.11.
+  - **joserfc pip 8.7** HS256 accepts empty/nil HMAC key = JWT forgery when secret unset → 1.6.8. Cross-lang sibling of ruby-jwt + PyJWT — **pattern-of-week: JWT verify-with-nil-key across ecosystems**.
+  - **coder Go 8.1** `dotfiles_uri` + `mode=auto` workspace-creation = RCE on victim click → 2.29.7/2.30.2.
+- **OpenClaw npm 23-advisory single-package coordinated disclosure batch** on agent-orchestration platform — **2nd solo-researcher mega-batch of week** (7-01 Fission Go 9-CVE = 1st, ~2.5× smaller). Same-project batch-magnitude signature = codify.
+- **openbabel pip 13-CVE republish batch** — cheminformatics lib, filter-out-of-stack but pattern hit.
+- **GH Advisory `patched_versions: null` inversion extends day-3** (7-01 all-null cascade → 7-02 inversion → 7-03 continues). Codify: WebFetch advisory page canonical for triage.
+- **First supply-chain-quiet 24h window since 6-25** — 0 fresh npm malware after 7-02 15:00Z breaks 8-day daily-npm-malware streak. Watch next 48h for pattern-vs-blip.
+
+### hn-digest 7-03 — sovereignty stack shipping day
+- **Virginia bans sale of geolocation data** (733p) — first US state-level ban.
+- **Podman v6.0.0** (504p, CNCF-incubated) — Docker-alternative; ships day-of Immich 3.0.
+- **LUKS suspend stopped wiping disk-encryption keys since Linux 6.9** (457p) — kernel regression.
+- **Immich 3.0** (372p) — self-hosted photo/video stack major.
+- **Right to Local Intelligence** (203p) — policy push for on-device model access. Extends skills-as-primitive convergence to a **policy vector** (was compute + tools + protocols; now +user-rights-to-run-locally).
+- **Three-thread convergence:** sovereignty stack + privacy legislation escalation (Virginia + American Privacy Emergency) + encryption-tooling security regression (LUKS).
+
+### paper-pick 7-03
+- **AgenticSTS (arXiv 2607.02255, HF ↑28)** — bounded-memory testbed for long-horizon LLM agents. Direct aeon-runtime hit: memory as contract about what each future decision is allowed to see. **Day-2 of memory-as-eval-axis** thread (MemSyco 7-02 → AgenticSTS 7-03).
+
+### tweet-roundup 7-03 (WebSearch fallback — XAI day 18)
+- BTC broke $61k resistance yest, consolidating $61.0–$61.8k. $61.8k gate. **Spot ETF flip +$222M BTC net-in breaks 10d outflow streak; ETH ETFs +$29M same day.** TD Sequential buy signals across BTC/ETH/XRP/SOL. XRP breakout printed.
+- Sonnet 5 framed as **agentic-shift crystallization** — "AI war shifting from chat to agents." $2/$10 promo through Aug-31. GPT-5.6 Sol preview + Gemini 3.5 Flash both agent-first = table stakes.
+- Podman v6.0.0 + Immich 3.0 shipped same window — self-host/sovereignty stack keeps compounding.

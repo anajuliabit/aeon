@@ -1,0 +1,257 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-06-28"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_text",
+        "stats_grid",
+        "sep1",
+        "on_track_heading",
+        "goal_sandbox",
+        "goal_btc",
+        "sep2",
+        "blocked_heading",
+        "goal_xai",
+        "action_xai",
+        "goal_config",
+        "action_config",
+        "sep3",
+        "sources_text"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "Summary: 4 goals — 0 at risk, 0 needs attention, 2 on track, 2 blocked, 0 done (overall → flat)",
+        "variant": "lead"
+      }
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "sm"
+      },
+      "children": [
+        "stat_total",
+        "stat_risk",
+        "stat_attention",
+        "stat_ontrack",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "4"
+      }
+    },
+    "stat_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_ontrack": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "2"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "goal_sandbox": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sandbox_title",
+        "sandbox_details"
+      ]
+    },
+    "sandbox_title": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "variant": "lead"
+      }
+    },
+    "sandbox_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 50 activity/14d (→ flat) — ISS-025 capture-step PR day 6 unshipped; chronic 20-skill tail still cf=0 across heartbeats; search-skill day 5 NO_GAP",
+        "variant": "body"
+      }
+    },
+    "goal_btc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc_title",
+        "btc_details"
+      ]
+    },
+    "btc_title": {
+      "type": "Text",
+      "props": {
+        "text": "BTC breakdown CONFIRMED 6-26 05:02Z",
+        "variant": "lead"
+      }
+    },
+    "btc_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 52 activity/14d (→ flat) — btc-levels ran 4× today, breakdown alert fired 01:21Z on 6-27 close $59,943 (3rd qualifying sub-$60.5k close); F&G 18 Extreme Fear day 4",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "goal_xai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "xai_title",
+        "xai_details"
+      ]
+    },
+    "xai_title": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota recovery",
+        "variant": "lead"
+      }
+    },
+    "xai_details": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on operator Team 3a8b4c1e top-up since 2026-06-16 (day 13); WebSearch fallback covering daily-routine tweet-roundup, prefetched .xai-cache covering narrative-tracker/list-digest/agent-buzz",
+        "variant": "body"
+      }
+    },
+    "action_xai": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "Operator top up XAI Team 3a8b4c1e monthly credit",
+        "type": "warning"
+      }
+    },
+    "goal_config": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "config_title",
+        "config_details"
+      ]
+    },
+    "config_title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config",
+        "variant": "lead"
+      }
+    },
+    "config_details": {
+      "type": "Text",
+      "props": {
+        "text": "Waiting on `type: pool`/`type: position` entries + ALCHEMY/ETHERSCAN keys (defi-monitor NO_CONFIG day 21); Blockscout keyless still carrying on-chain-monitor",
+        "variant": "body"
+      }
+    },
+    "action_config": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "Add `type: pool` / `type: position` entries to memory/on-chain-watches.yml",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok(1 commit/14d, PR-driven flow), gh_pr=ok(2 open), gh_issue=ok(5 open advisor sprint), cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

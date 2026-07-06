@@ -1,0 +1,141 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog — 2026-06-29"
+      },
+      "children": [
+        "narrative",
+        "sep1",
+        "themes_heading",
+        "themes_stack",
+        "sep2",
+        "stats_heading",
+        "stats_grid",
+        "sep3",
+        "story_link"
+      ]
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon stopped trusting its own filesystem this week: cron state and health priorities now live in GitHub Issues, and a new pre-install security verdict has to clear before any external skill reaches the agent.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "themes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Themes",
+        "level": "h3"
+      }
+    },
+    "themes_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme_1",
+        "theme_2",
+        "theme_3"
+      ]
+    },
+    "theme_1": {
+      "type": "Text",
+      "props": {
+        "text": "Cron state and votable health move into GitHub Issues"
+      }
+    },
+    "theme_2": {
+      "type": "Text",
+      "props": {
+        "text": "Phylax becomes the pre-install verdict for external skills"
+      }
+    },
+    "theme_3": {
+      "type": "Text",
+      "props": {
+        "text": "The dashboard stops surfacing Dependabot"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Changes",
+        "level": "h3"
+      }
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_commits",
+        "stat_prs",
+        "stat_additions",
+        "stat_deletions"
+      ]
+    },
+    "stat_commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits",
+        "value": "23"
+      }
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "23"
+      }
+    },
+    "stat_additions": {
+      "type": "Stat",
+      "props": {
+        "label": "Additions",
+        "value": "+3,176"
+      }
+    },
+    "stat_deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "Deletions",
+        "value": "−442"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "story_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Weekly Shiplog",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-06-29.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

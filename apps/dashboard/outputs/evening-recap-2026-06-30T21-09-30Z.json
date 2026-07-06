@@ -1,0 +1,226 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap",
+        "description": "2026-06-30"
+      },
+      "children": [
+        "tldr",
+        "sep1",
+        "headlines_group",
+        "sep2",
+        "notable_group",
+        "sep3",
+        "decisions_group",
+        "sep4",
+        "footer"
+      ]
+    },
+    "tldr": {
+      "type": "Alert",
+      "props": {
+        "title": "TL;DR",
+        "message": "watch day — SimpleHelp CVE-2026-48558 CVSS 10.0 due 7-02 + WELL vol 3.83× both need follow-through; 2 PRs stalled, 0 ships.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "headlines_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_h2",
+        "hl1",
+        "hl2",
+        "hl3",
+        "hl4"
+      ]
+    },
+    "headlines_h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "hl1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-freshness",
+        "href": "articles/skill-freshness-2026-06-30.md",
+        "source": "FRESHNESS_OK: 44 consumers / 0 flagged"
+      }
+    },
+    "hl2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github-trending",
+        "href": ".outputs/github-trending.md",
+        "source": "4 picks; fake-star rule codified (1:6 fork ratio + wrong language = confident drop)"
+      }
+    },
+    "hl3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "daily-routine",
+        "href": ".outputs/daily-routine.md",
+        "source": "45/100 breadth; VELVET+SLX day-3 unwind; GPT-5.5 + BlackRock+Ethena ENA $100M"
+      }
+    },
+    "hl4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "list-digest: Pi2Day 2026 — Pi's 18M+ KYC repackaged as dev infra",
+        "href": "https://x.com/Hercules_Defi/status/2071729733851893906",
+        "source": "X / Hercules_Defi"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_h2",
+        "nb1",
+        "nb2",
+        "nb3",
+        "nb4",
+        "nb5"
+      ]
+    },
+    "notable_h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "nb1": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — WELL vol 3.83× (first 3×+ in rolling window), red tape −2.28%; accumulation vs forced supply",
+        "variant": "body"
+      }
+    },
+    "nb2": {
+      "type": "Alert",
+      "props": {
+        "title": "security-digest: SimpleHelp CVE-2026-48558",
+        "message": "CVSS 10.0 KEV CISA due 7-02; autotel-* 18-pkg MCP brandjack in 10.5h (largest of 48h)",
+        "type": "error"
+      }
+    },
+    "nb3": {
+      "type": "Alert",
+      "props": {
+        "title": "btc-levels ×5",
+        "message": "⚠️ 01:16Z: day-5 sub-$60.5k; spot $58.2–$59.7k pinned; reclaim $63.5k/$65.9k",
+        "type": "warning"
+      }
+    },
+    "nb4": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — 6 picks; Stripe agent-to-agent sale claim net-new; framework launches → plumbing",
+        "variant": "body"
+      }
+    },
+    "nb5": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter — 5 actions queued: merge PR #150 / draft ISS-025 / merge PR #149 / VELVET close",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_h2",
+        "dec1",
+        "dec2",
+        "dec3",
+        "dec4",
+        "dec5"
+      ]
+    },
+    "decisions_h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "dec1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Merge PR #150: usepod_model→model",
+        "href": "https://github.com/anajuliabit/aeon/pull/150",
+        "source": "$456/mo savings, 5-line diff, 26h+ stall"
+      }
+    },
+    "dec2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Merge PR #149: docs(skill-graph)",
+        "href": "https://github.com/anajuliabit/aeon/pull/149",
+        "source": "51h+ stall"
+      }
+    },
+    "dec3": {
+      "type": "Text",
+      "props": {
+        "text": "Patch SimpleHelp CVE-2026-48558: CISA BOD 26-04 due 2026-07-02 (2d out)",
+        "variant": "body"
+      }
+    },
+    "dec4": {
+      "type": "Text",
+      "props": {
+        "text": "Draft ISS-025 capture-step PR: deadline 2026-07-04 (4d), 19-skill tail bleeding",
+        "variant": "body"
+      }
+    },
+    "dec5": {
+      "type": "Text",
+      "props": {
+        "text": "Close VELVET pick: entry $1.72 → spot ~$1.50 (−12.8%), 10d to unlock cliff 7-10",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "+9 routine collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

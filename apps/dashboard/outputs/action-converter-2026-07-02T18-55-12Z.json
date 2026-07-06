@@ -1,0 +1,294 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-02"
+      },
+      "children": [
+        "heading-shape",
+        "sep-1",
+        "stack-actions",
+        "sep-2",
+        "text-sources"
+      ]
+    },
+    "heading-shape": {
+      "type": "Text",
+      "props": {
+        "text": "scope ISS-025 fix pre-07-04, nudge PR #149, refresh stale MEMORY, close VELVET, add on-chain pool entries",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-title",
+        "a1-details",
+        "a1-why",
+        "a1-done",
+        "a1-badge"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. scope ISS-025 capture-step fix in memory/issues/ISS-025.md",
+        "level": "h3"
+      }
+    },
+    "a1-details": {
+      "type": "Text",
+      "props": {
+        "text": "root cause + aeon.yml diff + smoke-test target; commit before weekly-review 2026-07-04 T-2d"
+      }
+    },
+    "a1-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 19-skill chronic tail bleeds output_tokens=0 day 14; weekly-review hard deadline is 2d out",
+        "variant": "muted"
+      }
+    },
+    "a1-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: memory/issues/ISS-025.md has \"Fix plan\" section with named skill + concrete config diff",
+        "variant": "muted"
+      }
+    },
+    "a1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "iss025"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-title",
+        "a2-details",
+        "a2-why",
+        "a2-done",
+        "a2-badge"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. post a comment on PR #149 tagging @anajuliabit",
+        "level": "h3"
+      }
+    },
+    "a2-details": {
+      "type": "Text",
+      "props": {
+        "text": "merge or close, 5-line docs diff, day-3.9 stall"
+      }
+    },
+    "a2-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: same author batch-merged #150+#151 at 13:20Z today, docs PR still open + operator active",
+        "variant": "muted"
+      }
+    },
+    "a2-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: comment visible on `gh pr view 149 --comments`",
+        "variant": "muted"
+      }
+    },
+    "a2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "pr149"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-title",
+        "a3-details",
+        "a3-why",
+        "a3-done",
+        "a3-badge"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. rewrite memory/MEMORY.md Current Goals",
+        "level": "h3"
+      }
+    },
+    "a3-details": {
+      "type": "Text",
+      "props": {
+        "text": "PR #150/#151 both merged 13:20Z, sandbox-truncation day 14, BTC breakdown day 7 confirmed, 07-02 relief bounce added"
+      }
+    },
+    "a3-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: MEMORY still says \"PR #150 44h stall day 8\" — 6 lines behind reality after today's merges",
+        "variant": "muted"
+      }
+    },
+    "a3-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: git diff shows updated Current Goals block, \"last consolidated: 2026-07-02\"",
+        "variant": "muted"
+      }
+    },
+    "a3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-refresh"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-title",
+        "a4-details",
+        "a4-why",
+        "a4-done",
+        "a4-badge"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. flag VELVET pick invalidated in memory/topics/crypto.md",
+        "level": "h3"
+      }
+    },
+    "a4-details": {
+      "type": "Text",
+      "props": {
+        "text": "HIGH 11/10 blown −68.5% ($1.97 → $0.62), note July-10 unlock priced 8d early"
+      }
+    },
+    "a4-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: pick tracker still lists VELVET active; today's −60.1% single-day full unwind",
+        "variant": "muted"
+      }
+    },
+    "a4-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: crypto.md has \"VELVET closed 2026-07-02 —68.5%\" line + 3-bullet post-mortem",
+        "variant": "muted"
+      }
+    },
+    "a4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "velvet-cleanup"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-title",
+        "a5-details",
+        "a5-why",
+        "a5-done",
+        "a5-badge"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. add 2 type:pool + 1 type:position entries to memory/on-chain-watches.yml",
+        "level": "h3"
+      }
+    },
+    "a5-details": {
+      "type": "Text",
+      "props": {
+        "text": "Morpho cbBTC market + REPPO/MAMO vaults once ID'd — file's own header says \"add once confirmed on-chain\""
+      }
+    },
+    "a5-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: defi-monitor NO_CONFIG day 25; entries stage the exit as soon as operator lands ALCHEMY_API_KEY",
+        "variant": "muted"
+      }
+    },
+    "a5-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: memory/on-chain-watches.yml adds ≥3 new watches passing yaml lint",
+        "variant": "muted"
+      }
+    },
+    "a5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "onchain-config"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=42 logs=7 topics=17 prs=1 cron_failing=1 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

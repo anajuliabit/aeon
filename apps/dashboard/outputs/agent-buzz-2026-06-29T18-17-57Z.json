@@ -1,0 +1,145 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "2026-06-29"
+      },
+      "children": [
+        "subtitle",
+        "sep1",
+        "mcp-section",
+        "sep2",
+        "runtime-section",
+        "sep3",
+        "footer"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet builder day. MCP hardening dominates — heartbeat patterns, injection filtering, attack-surface framing. Two agent-runtime ships on the side.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "mcp-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP production hardening",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "mcp-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "mcp-heading",
+        "story-mcp-1",
+        "story-mcp-2",
+        "story-mcp-3"
+      ]
+    },
+    "story-mcp-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Production MCP needs heartbeat + fan-out plus programmatic context injection; date and history inference fails without it.",
+        "href": "https://x.com/DataScienceDojo/status/2071292570127257994",
+        "source": "@DataScienceDojo"
+      },
+      "children": []
+    },
+    "story-mcp-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "agentic-press ships a reference arch with MCP injection filtering and audit logging — security primitives, not glue code.",
+        "href": "https://x.com/collabnix/status/2071143369821356329",
+        "source": "@collabnix"
+      },
+      "children": []
+    },
+    "story-mcp-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Tool-using agents move the threat boundary outside the model — MCP side effects, not jailbreaks.",
+        "href": "https://x.com/lyrie_ai/status/2071183397024571669",
+        "source": "@lyrie_ai"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "runtime-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent runtime ships",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "runtime-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "runtime-heading",
+        "story-runtime-1",
+        "story-runtime-2"
+      ]
+    },
+    "story-runtime-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Workload-aligned memory (temporal graphs, conservative consolidation) beats universal designs across 12 systems and 5 benchmarks.",
+        "href": "https://x.com/kuldeep_s_s/status/2071204553211752896",
+        "source": "@kuldeep_s_s"
+      },
+      "children": []
+    },
+    "story-runtime-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Google Cloud agent observability now GA — default OpenTelemetry tracing and GCS storage for deployed agents and MCP servers.",
+        "href": "https://x.com/sgnagnarella/status/2071281853777027234",
+        "source": "@sgnagnarella"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 10 → kept: 5",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

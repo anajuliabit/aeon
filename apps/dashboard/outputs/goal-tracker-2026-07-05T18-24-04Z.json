@@ -1,0 +1,453 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-05"
+      },
+      "children": [
+        "stats_summary",
+        "overall_status",
+        "sep1",
+        "blocked_heading",
+        "blocked_stack",
+        "sep2",
+        "on_track_heading",
+        "on_track_stack",
+        "sep3",
+        "sources_info"
+      ]
+    },
+    "stats_summary": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_total_goals",
+        "stat_at_risk",
+        "stat_needs_attention",
+        "stat_on_track",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_total_goals": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "8"
+      }
+    },
+    "stat_at_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_needs_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_on_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "6"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "overall_status": {
+      "type": "Text",
+      "props": {
+        "text": "Overall → flat (12:00 UTC batch activity ↑72% but outcome BAD, XAI ↓50% goal-attention decay, 2 new goals since prior run: PR #154 + SLX)",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "blocked_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_item_1",
+        "blocked_item_2"
+      ]
+    },
+    "blocked_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_1_title",
+        "blocked_1_metrics",
+        "blocked_1_blocker",
+        "blocked_1_action"
+      ]
+    },
+    "blocked_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config",
+        "variant": "lead"
+      }
+    },
+    "blocked_1_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "day-28, 151 activity/14d (was 283, → flat/-47%)",
+        "variant": "caption"
+      }
+    },
+    "blocked_1_blocker": {
+      "type": "Alert",
+      "props": {
+        "title": "Blocker",
+        "message": "watchlist entries + Alchemy/Etherscan keys missing",
+        "type": "warning"
+      }
+    },
+    "blocked_1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Prompt operator — add `type: pool`/`type: position` to memory/on-chain-watches.yml + top up ALCHEMY_API_KEY.",
+        "variant": "body"
+      }
+    },
+    "blocked_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_2_title",
+        "blocked_2_metrics",
+        "blocked_2_blocker",
+        "blocked_2_action"
+      ]
+    },
+    "blocked_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota recovery",
+        "variant": "lead"
+      }
+    },
+    "blocked_2_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "day-20, 124 activity/14d (was 251, ↓ degrading -50%)",
+        "variant": "caption"
+      }
+    },
+    "blocked_2_blocker": {
+      "type": "Alert",
+      "props": {
+        "title": "Blocker",
+        "message": "Team 3a8b4c1e monthly credit exhausted 6-16",
+        "type": "warning"
+      }
+    },
+    "blocked_2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Ping operator — top up XAI monthly credit (falls off attention).",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "on_track_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on_track_1",
+        "on_track_2",
+        "on_track_3",
+        "on_track_4",
+        "on_track_5",
+        "on_track_6"
+      ]
+    },
+    "on_track_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_1_title",
+        "on_track_1_metrics",
+        "on_track_1_details"
+      ]
+    },
+    "on_track_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "variant": "lead"
+      }
+    },
+    "on_track_1_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 343 activity/14d (→ flat, mechanical only)",
+        "variant": "caption"
+      }
+    },
+    "on_track_1_details": {
+      "type": "Text",
+      "props": {
+        "text": "T-1 to weekly-review 07-06 self-set deadline, PR still unshipped day 12",
+        "variant": "body"
+      }
+    },
+    "on_track_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_2_title",
+        "on_track_2_metrics",
+        "on_track_2_alert"
+      ]
+    },
+    "on_track_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch failed live test post PR #150",
+        "variant": "lead"
+      }
+    },
+    "on_track_2_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 103 activity/14d (↑ +72%)",
+        "variant": "caption"
+      }
+    },
+    "on_track_2_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Outcome BAD",
+        "message": "6 skills dark day-4, grep-confirmed aeon.yml L155/162/171 still `usepod_model:`",
+        "type": "error"
+      }
+    },
+    "on_track_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_3_title",
+        "on_track_3_metrics",
+        "on_track_3_details"
+      ]
+    },
+    "on_track_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #149 docs(skill-graph)",
+        "variant": "lead"
+      }
+    },
+    "on_track_3_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 71 activity/14d (→ flat)",
+        "variant": "caption"
+      }
+    },
+    "on_track_3_details": {
+      "type": "Text",
+      "props": {
+        "text": "day-7 stall ~169h; PR #155 same title opened 07-05 17:29Z may supersede",
+        "variant": "body"
+      }
+    },
+    "on_track_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_4_title",
+        "on_track_4_metrics",
+        "on_track_4_badge",
+        "on_track_4_details"
+      ]
+    },
+    "on_track_4_title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #154 fix(issues) close ISS-026",
+        "variant": "lead"
+      }
+    },
+    "on_track_4_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 75 activity/14d",
+        "variant": "caption"
+      }
+    },
+    "on_track_4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW GOAL",
+        "variant": "secondary"
+      }
+    },
+    "on_track_4_details": {
+      "type": "Text",
+      "props": {
+        "text": "day-1.9 open past 24h threshold",
+        "variant": "body"
+      }
+    },
+    "on_track_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_5_title",
+        "on_track_5_metrics",
+        "on_track_5_details"
+      ]
+    },
+    "on_track_5_title": {
+      "type": "Text",
+      "props": {
+        "text": "BTC breakdown BROKEN → day-4 of reclaim",
+        "variant": "lead"
+      }
+    },
+    "on_track_5_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 298 activity/14d (→ flat)",
+        "variant": "caption"
+      }
+    },
+    "on_track_5_details": {
+      "type": "Text",
+      "props": {
+        "text": "spot $62,647 17:14Z day-5 ≥ $60,500, $63.5k rail ~$853 away",
+        "variant": "body"
+      }
+    },
+    "on_track_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_6_title",
+        "on_track_6_metrics",
+        "on_track_6_badge",
+        "on_track_6_alert"
+      ]
+    },
+    "on_track_6_title": {
+      "type": "Text",
+      "props": {
+        "text": "SLX open pick CRITICAL",
+        "variant": "lead"
+      }
+    },
+    "on_track_6_metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 77 activity/14d",
+        "variant": "caption"
+      }
+    },
+    "on_track_6_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW GOAL",
+        "variant": "secondary"
+      }
+    },
+    "on_track_6_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Thesis broken",
+        "message": "day-11 at -46% vs $0.475 entry, position recut overdue",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_info": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok · git=ok · gh_pr=ok · gh_issue=ok · cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

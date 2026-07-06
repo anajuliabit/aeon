@@ -1,0 +1,153 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "BTC Levels"
+      },
+      "children": [
+        "alert_warning",
+        "sep1",
+        "price_stats",
+        "sep2",
+        "leverage_section",
+        "sep3",
+        "market_context",
+        "sep4",
+        "disclaimer"
+      ]
+    },
+    "alert_warning": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Downtrend Continuation",
+        "message": "June 28 close $59,612 closed below $60,500 resistance — 4th consecutive qualifying close per 2026-06-09 advisor levels"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_spot",
+        "stat_close",
+        "stat_resistance"
+      ]
+    },
+    "stat_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$59.2k"
+      }
+    },
+    "stat_close": {
+      "type": "Stat",
+      "props": {
+        "label": "June 28 Close",
+        "value": "$59,612"
+      }
+    },
+    "stat_resistance": {
+      "type": "Stat",
+      "props": {
+        "label": "Resistance",
+        "value": "$60,500"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "leverage_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_leverage",
+        "text_trigger",
+        "text_hf_details"
+      ]
+    },
+    "heading_leverage": {
+      "type": "Heading",
+      "props": {
+        "text": "cbBTC Leverage Review",
+        "level": "h3"
+      }
+    },
+    "text_trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger at ≤$45k",
+        "variant": "lead"
+      }
+    },
+    "text_hf_details": {
+      "type": "Text",
+      "props": {
+        "text": "HF ~1.48–1.66 in $40–45k band; below $40k worse than ~1.48",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_context": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_rebalancing",
+        "text_pressure"
+      ]
+    },
+    "text_rebalancing": {
+      "type": "Text",
+      "props": {
+        "text": "Quarter-end rebalancing tomorrow",
+        "variant": "body"
+      }
+    },
+    "text_pressure": {
+      "type": "Text",
+      "props": {
+        "text": "Adds structural sell pressure",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "disclaimer": {
+      "type": "Badge",
+      "props": {
+        "text": "Not financial advice",
+        "variant": "outline"
+      }
+    }
+  }
+}

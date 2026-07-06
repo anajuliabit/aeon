@@ -1,0 +1,187 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve",
+        "description": "Optimized model configuration to reduce costs"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-change",
+        "sep-1",
+        "text-change",
+        "text-issue",
+        "text-skills-label",
+        "grid-skills",
+        "sep-2",
+        "heading-impact",
+        "text-flagged",
+        "stack-savings",
+        "sep-3",
+        "heading-pr",
+        "story-pr"
+      ]
+    },
+    "heading-change": {
+      "type": "Heading",
+      "props": {
+        "text": "Configuration Change",
+        "level": "h3"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-change": {
+      "type": "Text",
+      "props": {
+        "text": "Renamed usepod_model → model in aeon.yml",
+        "variant": "body"
+      }
+    },
+    "text-issue": {
+      "type": "Text",
+      "props": {
+        "text": "Issue: Skills were running on Opus instead of intended Haiku",
+        "variant": "body"
+      }
+    },
+    "text-skills-label": {
+      "type": "Text",
+      "props": {
+        "text": "Affected skills:",
+        "variant": "caption"
+      }
+    },
+    "grid-skills": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "sm"
+      },
+      "children": [
+        "badge-1",
+        "badge-2",
+        "badge-3",
+        "badge-4",
+        "badge-5"
+      ]
+    },
+    "badge-1": {
+      "type": "Badge",
+      "props": {
+        "text": "token-pick",
+        "variant": "secondary"
+      }
+    },
+    "badge-2": {
+      "type": "Badge",
+      "props": {
+        "text": "token-movers",
+        "variant": "secondary"
+      }
+    },
+    "badge-3": {
+      "type": "Badge",
+      "props": {
+        "text": "on-chain-monitor",
+        "variant": "secondary"
+      }
+    },
+    "badge-4": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-overview",
+        "variant": "secondary"
+      }
+    },
+    "badge-5": {
+      "type": "Badge",
+      "props": {
+        "text": "defi-monitor",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Cost Impact",
+        "level": "h3"
+      }
+    },
+    "text-flagged": {
+      "type": "Text",
+      "props": {
+        "text": "Cost-report 6-29 flagged this as the top optimization",
+        "variant": "muted"
+      }
+    },
+    "stack-savings": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-weekly",
+        "stat-monthly"
+      ]
+    },
+    "stat-weekly": {
+      "type": "Stat",
+      "props": {
+        "label": "Weekly Savings",
+        "value": "~$107"
+      }
+    },
+    "stat-monthly": {
+      "type": "Stat",
+      "props": {
+        "label": "Monthly Savings",
+        "value": "$456"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-pr": {
+      "type": "Heading",
+      "props": {
+        "text": "Pull Request",
+        "level": "h3"
+      }
+    },
+    "story-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon PR #150",
+        "href": "https://github.com/anajuliabit/aeon/pull/150",
+        "source": "GitHub"
+      }
+    }
+  }
+}

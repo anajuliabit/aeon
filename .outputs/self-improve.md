@@ -1,1 +1,1 @@
-self-improve: dropped disabled hacker-news-digest entry from skill-evals — was STILL_FAIL since 5-31, same shape as the monitor-polymarket removal. PR: https://github.com/anajuliabit/aeon/pull/146
+self-improve: closed the 12-day L155/162/171 usepod_model loop. PR #156 — narrative-tracker rename to Haiku (~$46/wk → ~$2.50/wk, cost-report top-4 driver), market-context-refresh + aixbt-pulse dead-line removal (explicit Sonnet kept). Completes PR #150's deferred Sonnet-vs-Haiku decision. https://github.com/anajuliabit/aeon/pull/156

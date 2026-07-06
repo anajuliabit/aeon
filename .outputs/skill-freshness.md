@@ -1,22 +1,21 @@
-All three writes are done. The skill ran successfully with no notification (FRESHNESS_NO_CHANGE — fingerprint identical to yesterday's clean run).
+Done. Here's the summary:
 
 ## Summary
 
-**skill-freshness — 2026-06-28 — FRESHNESS_NO_CHANGE**
+**Skill:** skill-freshness | **Date:** 2026-07-05 | **Verdict:** ✅ FRESHNESS_OK
 
-**What was audited:**
-- 44 enabled skills parsed from `aeon.yml`
-- `chains: {}` → 0 explicit chain dependencies
-- 2 implicit cross-skill dependencies extracted after filtering self-references:
-  1. `operator-scorecard` ← `articles/skill-analytics-2026-06-24.md` (~90h old, weekly threshold 192h) → **OK**
-  2. `token-pick` ← `memory/topics/market-context.md` (daily producer, topics threshold 168h) → **OK**
-- ~10 paths skipped (implicit refs to disabled-producer articles: heartbeat, repo-pulse, token-report, tweet-allocator, etc.)
+**Audit results:**
+- 43 enabled consumers parsed from `aeon.yml` (unchanged from prior run)
+- 0 explicit chain deps (`chains: {}` — none active)
+- 10 implicit references discovered across enabled SKILL.md files; 7 filtered as self-references; **3 surviving cross-skill deps:**
+  1. `token-pick` → `memory/topics/market-context.md` (market-context-refresh, daily) — present ✓
+  2. `vuln-scanner` → `.outputs/github-trending.md` (github-trending, daily) — present ✓
+  3. `fork-skill-gap` → `memory/topics/fork-cohort-state.json` (fork-cohort, weekly) — present ✓
+- All files on disk; mtime fidelity note: GitHub Actions checkout resets all mtimes to clone time (~10:00 UTC), so staleness is only catchable via MISSING files — none today
 
-**Verdict:** ✅ FRESHNESS_OK — no staleness detected
-
-**Notification:** Suppressed — fingerprint `da39a3ee...` is identical to yesterday's run and last run was within 7 days. Will re-emit after 7 consecutive unchanged days.
+**Dedup:** fingerprint identical to 2026-07-04 (`da39a3ee`, 0 flagged rows), last run 24h ago (<7d window) — notification suppressed
 
 **Files written:**
-- `articles/skill-freshness-2026-06-28.md`
-- `memory/topics/skill-freshness-state.json` (updated `last_run_at` to 2026-06-28T09:22:17Z)
-- `memory/logs/2026-06-28.md` (appended skill-freshness block)
+- `articles/skill-freshness-2026-07-05.md`
+- `memory/topics/skill-freshness-state.json` (updated `last_run_at`)
+- `memory/logs/2026-07-05.md` (log entry appended)

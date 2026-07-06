@@ -1,0 +1,790 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-06-29"
+      },
+      "children": [
+        "section_market_overview",
+        "sep1",
+        "section_winners",
+        "sep2",
+        "section_losers",
+        "sep3",
+        "section_picks",
+        "sep4",
+        "section_tweets",
+        "sep5",
+        "section_paper",
+        "sep6",
+        "section_github",
+        "sep7",
+        "section_hn"
+      ]
+    },
+    "section_market_overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_market",
+        "text_market_intro",
+        "stack_market_stats"
+      ]
+    },
+    "heading_market": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Overview",
+        "level": "h2"
+      }
+    },
+    "text_market_intro": {
+      "type": "Text",
+      "props": {
+        "text": "tape stays bearish — 23/82 top-100 green (filtered). weekend risk-off day 2. BTC at 4th day pinned sub-$60.5k breakdown."
+      }
+    },
+    "stack_market_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth",
+        "stat_sol"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$59,782",
+        "delta": "-0.9% (7d -6.8%)",
+        "trend": "down"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,572",
+        "delta": "-0.5%",
+        "trend": "down"
+      }
+    },
+    "stat_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$72.63",
+        "delta": "+1.0%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_winners": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_winners",
+        "table_winners"
+      ]
+    },
+    "heading_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "TAC",
+            "$0.0417",
+            "+94%",
+            "+112%",
+            "$7.8M",
+            "#173",
+            "PUMP-RISK"
+          ],
+          [
+            "2",
+            "RAVE",
+            "$0.519",
+            "+82%",
+            "+93%",
+            "$65M",
+            "#213",
+            "PUMP-RISK"
+          ],
+          [
+            "3",
+            "GWEI",
+            "$0.192",
+            "+43%",
+            "+79%",
+            "$27M",
+            "#116",
+            "BREAKOUT"
+          ],
+          [
+            "4",
+            "BinanceLife",
+            "$0.710",
+            "+38%",
+            "+1.9%",
+            "$59M",
+            "#85",
+            "REVERSAL from yest -16%"
+          ],
+          [
+            "5",
+            "BAS",
+            "$0.0487",
+            "+16%",
+            "+57%",
+            "$12M",
+            "#226",
+            "BREAKOUT day-3 holds"
+          ],
+          [
+            "6",
+            "UB",
+            "$0.0957",
+            "+13%",
+            "-32%",
+            "$14M",
+            "#143",
+            ""
+          ],
+          [
+            "7",
+            "CX",
+            "$0.0742",
+            "+10.7%",
+            "+63%",
+            "$1.8M",
+            "#245",
+            "MICROCAP"
+          ],
+          [
+            "8",
+            "DYDX",
+            "$0.163",
+            "+7%",
+            "+34%",
+            "$8.7M",
+            "#204",
+            ""
+          ],
+          [
+            "9",
+            "WIF",
+            "$0.182",
+            "+6.3%",
+            "—",
+            "$59M",
+            "#177",
+            ""
+          ],
+          [
+            "10",
+            "PYTH",
+            "$0.0363",
+            "+6.3%",
+            "—",
+            "$17M",
+            "#137",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_losers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_losers",
+        "table_losers"
+      ]
+    },
+    "heading_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "SKYAI",
+            "$0.132",
+            "-31%",
+            "-65%",
+            "$68M",
+            "#212",
+            "capitulation day-3 (-65% wk)"
+          ],
+          [
+            "2",
+            "BTW",
+            "$0.051",
+            "-24%",
+            "-47%",
+            "$16M",
+            "#242",
+            "6th red day"
+          ],
+          [
+            "3",
+            "M",
+            "$0.588",
+            "-15%",
+            "-80%",
+            "$14M",
+            "#76",
+            "MemeCore"
+          ],
+          [
+            "4",
+            "LAB",
+            "$15.28",
+            "-14%",
+            "—",
+            "$32M",
+            "#22",
+            "MAJOR — top-20 distribution day-3"
+          ],
+          [
+            "5",
+            "KITE",
+            "$0.117",
+            "-10.5%",
+            "-30%",
+            "$36M",
+            "#138",
+            ""
+          ],
+          [
+            "6",
+            "BEAT",
+            "$2.63",
+            "-6.6%",
+            "—",
+            "$25M",
+            "#80",
+            "REVERSAL from yest +35%"
+          ],
+          [
+            "7",
+            "WLD",
+            "$0.425",
+            "-6.6%",
+            "-34%",
+            "$160M",
+            "#50",
+            ""
+          ],
+          [
+            "8",
+            "EIGEN",
+            "$0.231",
+            "-6.4%",
+            "-23%",
+            "$22M",
+            "#182",
+            "REVERSAL from yest +6%"
+          ],
+          [
+            "9",
+            "SYRUP",
+            "$0.136",
+            "-6.3%",
+            "—",
+            "$17M",
+            "#191",
+            ""
+          ],
+          [
+            "10",
+            "PUMP",
+            "$0.00142",
+            "-5.2%",
+            "—",
+            "$93M",
+            "#95",
+            "REVERSAL from yest +14%"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_picks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_picks",
+        "text_velvet",
+        "text_aave"
+      ]
+    },
+    "heading_picks": {
+      "type": "Heading",
+      "props": {
+        "text": "Pick Updates",
+        "level": "h2"
+      }
+    },
+    "text_velvet": {
+      "type": "Text",
+      "props": {
+        "text": "VELVET +3.9% only — pick day-2 stalls after +33% saturday, $1.67 vs $1.72 entry."
+      }
+    },
+    "text_aave": {
+      "type": "Text",
+      "props": {
+        "text": "AAVE -0.7%, still +19% on $76 entry (6-24 pick day-6)."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_tweets",
+        "subheading_crypto",
+        "text_crypto_1",
+        "text_crypto_2",
+        "text_crypto_3",
+        "subheading_ai",
+        "text_ai_1",
+        "text_ai_2",
+        "text_ai_3",
+        "text_ai_4",
+        "subheading_dev",
+        "text_dev_1",
+        "text_dev_2"
+      ]
+    },
+    "heading_tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "subheading_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "crypto",
+        "level": "h3"
+      }
+    },
+    "text_crypto_1": {
+      "type": "Text",
+      "props": {
+        "text": "spot BTC ETFs tracking worst month ever ($4B june outflows confirmed); BlackRock dropped another 2,700 BTC + 53k ETH to Coinbase"
+      }
+    },
+    "text_crypto_2": {
+      "type": "Text",
+      "props": {
+        "text": "Ink L2 (Kraken) signed multi-year OP Enterprise managed = Optimism now running Ink's mainnet prod"
+      }
+    },
+    "text_crypto_3": {
+      "type": "Text",
+      "props": {
+        "text": ""
+      }
+    },
+    "subheading_ai": {
+      "type": "Heading",
+      "props": {
+        "text": "ai",
+        "level": "h3"
+      }
+    },
+    "text_ai_1": {
+      "type": "Text",
+      "props": {
+        "text": "GPT-5.6 Sol preview shipped 6-28"
+      }
+    },
+    "text_ai_2": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic Fable-5 + Mythos-5 export ban carries day 2"
+      }
+    },
+    "text_ai_3": {
+      "type": "Text",
+      "props": {
+        "text": "GLM 5.2 now beating Claude in semgrep's cyber benchmarks = the open-weights cyber gap is closing fast (HN #1 today)"
+      }
+    },
+    "text_ai_4": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic shipped Claude Agent SDK (TS + Python, native MCP)"
+      }
+    },
+    "subheading_dev": {
+      "type": "Heading",
+      "props": {
+        "text": "dev",
+        "level": "h3"
+      }
+    },
+    "text_dev_1": {
+      "type": "Text",
+      "props": {
+        "text": "Rust officially at production scale — half of companies running it (Stack Overflow 2026, 82% admiration)"
+      }
+    },
+    "text_dev_2": {
+      "type": "Text",
+      "props": {
+        "text": "Claude Code 46% \"most loved\" in Feb dev survey"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_paper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_paper",
+        "storylink_paper",
+        "text_paper_desc"
+      ]
+    },
+    "heading_paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "storylink_paper": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Running the Gauntlet: Re-evaluating the Capabilities of Agents Beyond Familiar Environments",
+        "href": "https://arxiv.org/abs/2606.14397",
+        "source": "arXiv",
+        "score": "↑18"
+      }
+    },
+    "text_paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "capability eval beyond the home-distribution env (where most reported agent scores live). load-bearing for the advisor sprint #142 net-of-cost paper grading"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_github": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_github",
+        "text_github"
+      ]
+    },
+    "heading_github": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "text_github": {
+      "type": "Text",
+      "props": {
+        "text": "no new issues 6-28 → 6-29. advisor sprint #141–#145 still open from 6-25"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_hn": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_hn",
+        "hn_item_1",
+        "hn_item_2",
+        "hn_item_3",
+        "hn_item_4",
+        "hn_item_5"
+      ]
+    },
+    "heading_hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_hn_1",
+        "text_hn_1_meta",
+        "text_hn_1_desc"
+      ]
+    },
+    "storylink_hn_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GLM 5.2 beats Claude in cyber benchmarks",
+        "href": "https://news.ycombinator.com/item?id=48709670",
+        "source": "Semgrep / HN",
+        "score": "804"
+      }
+    },
+    "text_hn_1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "804 points",
+        "variant": "caption"
+      }
+    },
+    "text_hn_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "open weights closing the gap post-Mythos-export-ban day 2"
+      }
+    },
+    "hn_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_hn_2",
+        "text_hn_2_meta",
+        "text_hn_2_desc"
+      ]
+    },
+    "storylink_hn_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The KIDS Act would require age checks to get online",
+        "href": "https://news.ycombinator.com/item?id=48706560",
+        "source": "EFF / HN",
+        "score": "466"
+      }
+    },
+    "text_hn_2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "466 points",
+        "variant": "caption"
+      }
+    },
+    "text_hn_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "pairs with day's attribution of speech essay"
+      }
+    },
+    "hn_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_hn_3",
+        "text_hn_3_meta",
+        "text_hn_3_desc"
+      ]
+    },
+    "storylink_hn_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "I used Claude Code to get a second opinion on my MRI",
+        "href": "https://news.ycombinator.com/item?id=48708941",
+        "source": "HN",
+        "score": "424"
+      }
+    },
+    "text_hn_3_meta": {
+      "type": "Text",
+      "props": {
+        "text": "424 points",
+        "variant": "caption"
+      }
+    },
+    "text_hn_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "agent application outside the codebase"
+      }
+    },
+    "hn_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_hn_4",
+        "text_hn_4_meta",
+        "text_hn_4_desc"
+      ]
+    },
+    "storylink_hn_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Professor denounces mass AI fraud at Brown",
+        "href": "https://news.ycombinator.com/item?id=48708991",
+        "source": "El País / HN",
+        "score": "394"
+      }
+    },
+    "text_hn_4_meta": {
+      "type": "Text",
+      "props": {
+        "text": "394 points",
+        "variant": "caption"
+      }
+    },
+    "text_hn_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "pairs with yest's Ford-AI-backfired displacement datapoint"
+      }
+    },
+    "hn_item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_hn_5",
+        "text_hn_5_meta",
+        "text_hn_5_desc"
+      ]
+    },
+    "storylink_hn_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Tokenmaxxing is dead, long live tokenmaxxing",
+        "href": "https://news.ycombinator.com/item?id=48708795",
+        "source": "HN",
+        "score": "148"
+      }
+    },
+    "text_hn_5_meta": {
+      "type": "Text",
+      "props": {
+        "text": "148 points",
+        "variant": "caption"
+      }
+    },
+    "text_hn_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "agent token economics shift"
+      }
+    }
+  }
+}

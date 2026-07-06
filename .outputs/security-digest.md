@@ -1,16 +1,15 @@
-*Security Digest — 2026-06-28*
-Verdict: nothing urgent today. 4 to schedule, 1 to monitor. KEV adds: 0 net-new (3rd zero-cadence day). _Sources: KEV, GH Advisory, EPSS_
+## Summary
 
-*PATCH THIS WEEK*
-- [CVE-2026-48788](https://github.com/advisories/GHSA-4c8j-mgm4-qqvp) — Remark42 (Go) · CVSS 8.2 · EPSS 0.003 · no public PoC
-  Image proxy at `/api/v1/img` trusts the remote `Content-Type` to accept, then sniffs bytes to serve — HTML/JS body claiming `image/png` lands as XSS on remark42's origin. → upgrade remark42 to ≥1.16.0.
-- **gonic 3-CVE cluster** ([CVE-2026-49340](https://github.com/advisories/GHSA-4gxv-p5g5-j7w7) / [49339](https://github.com/advisories/GHSA-2fp4-5v5c-4448) / [49338](https://github.com/advisories/GHSA-hmgp-w9jm-vp95)) — go.senan.xyz/gonic · CVSS 8.1 / 7.1 / 7.1 · EPSS ~0.002 each
-  Any authenticated Subsonic user gets arbitrary file write via `createPlaylist` (unreachable guard + no path containment, creates dirs with `0o777`) + path-traversal read + IDOR delete of any user's playlist. → upgrade gonic to ≥0.21.0.
-- [CVE-2026-49291](https://github.com/advisories/GHSA-2r68-g678-7qr3) — mcp-memory-service (pip) · CVSS 8.1 · EPSS 0.003 · no public PoC
-  MCP `/mcp` endpoint gates `tools/call` on OAuth `read` scope only, then dispatches mutating tools — `store_memory` / `delete_memory` callable from read-only clients. REST routes correctly require `write`; the MCP path is the bypass. → upgrade mcp-memory-service to ≥10.65.3.
-- [CVE-2026-48797](https://github.com/advisories/GHSA-f65r-h4g3-3h9h) — backpropagate (pip) · severity critical · CVSS — · EPSS 0.003
-  `backprop ui --auth user:pass` and `--share` documented as the security controls; the wiring is missing — UI exposes dataset upload, model load, training control, GGUF export, HF Hub push with no auth on either path. → upgrade backpropagate to ≥1.2.0; until then bind to 127.0.0.1 only.
+**SECURITY_DIGEST_OK** — all 3 tiers empty; no notification sent per skill spec.
 
-*MONITOR*
-- [GHSA-c6v2-3ffm-vcmc](https://github.com/advisories/GHSA-c6v2-3ffm-vcmc) — nebula-mesh (Go) · CVSS 8.8 · no fix yet · affects ≤0.3.4
-  Web UI `/ui/*` skipped the per-operator CA scoping applied to the JSON API — any non-admin operator (e.g. self-registered / OIDC) can block, delete, or read any other operator's hosts and networks. → restrict UI to trusted operators until patch lands; treat self-registration / OIDC as admin-equivalent meantime.
+**Sources:**
+- **KEV:** ok (public curl succeeded, 1631 total entries). 2 dateAdded ≥ 2026-06-29 — CVE-2026-45659 Microsoft SharePoint (added 07-01) and CVE-2026-48558 SimpleHelp OIDC auth-bypass (added 06-29). Both surfaced in 4+ prior digests → dedup drop.
+- **GH Advisory Database:** ok fetch, empty payload. **HARD FREEZE day-4** — nothing published since 2026-07-02T21:14Z (last entry GHSA-rh62-j648-g5qc). 0 advisories across critical / high / malware in 48h window. Holiday-freeze extends from 7-03 through Mon 7-06 US morning; resumption expected today.
+- **EPSS:** ok. CVE-2026-45659 = 0.032 / p87; CVE-2026-48558 = 0.012 / p63. Both dedup. 0 CVEs ≥ 0.5.
+
+**Files modified:**
+- `memory/logs/2026-07-06.md` — appended `### security-digest` block with tier counts, source status, KEV-quiet-day-4 and GHAD-freeze-day-4 notables, dulwich CVE-2026-52726 carry-over reminder.
+
+**Follow-up:**
+- Monitor GHAD un-freeze — Mon 7-06 US business hours (few hours out) expected to bring backlog wave including any 7-03/7-04/7-05/7-06-am discoveries. Next scheduled digest run will re-scan and surface the wave.
+- **dulwich CVE-2026-52726 pip RCE-via-clone** (fix 1.2.5, public PoC, no user interaction) stands unresolved as day-2 highest carry-over from 7-04, not re-surfaced under 2-day dedup rule.

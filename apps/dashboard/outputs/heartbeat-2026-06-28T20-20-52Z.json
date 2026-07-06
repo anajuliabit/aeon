@@ -1,0 +1,86 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_main",
+        "separator_1",
+        "stack_details"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-skill-digest — STUCK",
+        "message": "Dispatched 2026-06-28 18:38Z, no result ~1h40m later. GitHub Actions shows the run cancelled. Weekly Sunday slot's dispatched row never flipped. Last success: 2026-06-21. Re-dispatch needed.",
+        "type": "error"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_dispatch",
+        "stat_duration",
+        "text_run_status",
+        "text_slot_status",
+        "stat_last_success",
+        "text_action"
+      ]
+    },
+    "stat_dispatch": {
+      "type": "Stat",
+      "props": {
+        "label": "Dispatched",
+        "value": "2026-06-28 18:38Z"
+      }
+    },
+    "stat_duration": {
+      "type": "Stat",
+      "props": {
+        "label": "Without response",
+        "value": "~1h40m"
+      }
+    },
+    "text_run_status": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub Actions run status: cancelled"
+      }
+    },
+    "text_slot_status": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly Sunday slot status: dispatched row never flipped"
+      }
+    },
+    "stat_last_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last success",
+        "value": "2026-06-21"
+      }
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action required: re-dispatch needed",
+        "variant": "lead"
+      }
+    }
+  }
+}

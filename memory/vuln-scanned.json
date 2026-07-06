@@ -42,5 +42,19 @@
     "pr_url": "https://github.com/Panniantong/Agent-Reach/pull/442",
     "pending_disclosure": ".pending-disclosure/Panniantong-Agent-Reach-2026-06-27T161800Z.md",
     "notes": "1 code-level finding (HIGH CWE-88 argv injection in agent_reach/transcribe.py download_audio — no -- separator before user-controlled URL passed to yt-dlp; reachable from library/MCP/agent API) drafted but NOT published because PVR is disabled on the repo (HTTP 403 on POST /security-advisories/reports) and SECURITY.md offers only the GitHub PVR link with no fallback contact. Draft saved to .pending-disclosure/ for operator to escalate out-of-band. 3 dep CVEs (yt-dlp×5, requests×1, python-dotenv×1; pytest dev-only deferred for major-bump risk) shipped as single lockfile-only public PR #442 — already-disclosed CVEs route via the public-PR channel per skill matrix."
+  },
+  {
+    "repo": "ChromeDevTools/chrome-devtools-mcp",
+    "scanned_at": "2026-07-04T16:50:00Z",
+    "findings": 0,
+    "channel": "clean-audit-partial-scan",
+    "scanner_status": {
+      "semgrep": "fail",
+      "trufflehog": "fail",
+      "osv-binary": "fail",
+      "osv-api": "ok",
+      "slither": "n/a"
+    },
+    "notes": "1 osv candidate reviewed (@opentelemetry/core 1.30.1 GHSA-8988-4f7v-96qf moderate DoS via W3C Baggage propagation, CVSS A:L only) — dropped: reaches via lighthouse@13.4.0 → @sentry/node@^9.28.1 → @opentelemetry/core@1.30.1, no SENTRY_DSN configured in chrome-devtools-mcp so Baggage-parse path unreachable in default usage, fix requires upstream chain bump to @sentry/node v10+. SECURITY.md points to Chromium security process; PVR channel proven working (2 patched advisories in 30d). Semgrep/Trufflehog blocked by sandbox per ISS-018."
   }
 ]

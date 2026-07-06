@@ -1,0 +1,347 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-03"
+      },
+      "children": [
+        "tldr-section",
+        "sep-1",
+        "headlines-section",
+        "sep-2",
+        "notable-section",
+        "sep-3",
+        "decisions-section",
+        "sep-4",
+        "blockers-section",
+        "sep-5",
+        "footer-section"
+      ]
+    },
+    "tldr-section": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: one closure PR filed, 12:00 batch confirmed broken post-fix, ISS-025 deadline lands tomorrow — three decisions need a human.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-title",
+        "headline-1"
+      ]
+    },
+    "headlines-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — ISS-026 closed (INDEX + frontmatter flipped, PR #151 was the fix but closure was missing)",
+        "href": "https://github.com/anajuliabit/aeon/pull/154",
+        "source": "PR #154"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "notable-title",
+        "notable-batch",
+        "notable-token-alert",
+        "notable-security",
+        "notable-reflect",
+        "notable-routine"
+      ]
+    },
+    "notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-batch": {
+      "type": "Alert",
+      "props": {
+        "title": "12:00 UTC batch — FAILED",
+        "message": "First live test post PR #150; token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh dark 5d; deeper YAML root cause unresolved (market-context-refresh L155 candidate)",
+        "type": "error"
+      }
+    },
+    "notable-token-alert": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "token-alert-title",
+        "token-alert-stat",
+        "token-alert-text-1",
+        "token-alert-text-2"
+      ]
+    },
+    "token-alert-title": {
+      "type": "Heading",
+      "props": {
+        "text": "token-alert",
+        "level": "h3"
+      }
+    },
+    "token-alert-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "GITLAWB 24h",
+        "value": "+27.38%",
+        "trend": "up"
+      }
+    },
+    "token-alert-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger fired; watchlist whole-green day-2 (median +6.07%)"
+      }
+    },
+    "token-alert-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "REPPO day-2 vol-drought break at $0.024"
+      }
+    },
+    "notable-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "security-title",
+        "security-text-1",
+        "security-text-2",
+        "security-text-3"
+      ]
+    },
+    "security-title": {
+      "type": "Heading",
+      "props": {
+        "text": "security-digest",
+        "level": "h3"
+      }
+    },
+    "security-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "9router CVSS 9.8 (hardcoded JWT fallback secret + public PoC, patched 0.4.45)"
+      }
+    },
+    "security-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "5 patches this week"
+      }
+    },
+    "security-text-3": {
+      "type": "Text",
+      "props": {
+        "text": "First supply-chain-quiet 24h window since 6-25"
+      }
+    },
+    "notable-reflect": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reflect-title",
+        "reflect-text"
+      ]
+    },
+    "reflect-title": {
+      "type": "Heading",
+      "props": {
+        "text": "reflect",
+        "level": "h3"
+      }
+    },
+    "reflect-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md 53L→47L; 4 durable patterns codified: solo-researcher mega-batch, sovereignty stack shipping day, memory as eval axis, supply-chain-quiet signal"
+      }
+    },
+    "notable-routine": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "routine-title",
+        "routine-text-1",
+        "routine-text-2"
+      ]
+    },
+    "routine-title": {
+      "type": "Heading",
+      "props": {
+        "text": "daily-routine",
+        "level": "h3"
+      }
+    },
+    "routine-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "bounce day-2: 83/100 breadth, ETH +6.1% first-week-reclaim of $1,700, spot ETF +$222M breaks 10d outflow streak"
+      }
+    },
+    "routine-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "M MemeCore 3-day arc closed at +130%"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-title",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decisions-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #149 — docs(skill-graph), day-5 stall (~118h), operator-merge gated"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #154 — ISS-026 closure, INDEX row still Open until merged"
+      }
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review ISS-025 capture-step — self-set deadline 2026-07-04, day 10 unshipped"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 batch root cause — PR #150 partial; diagnose market-context-refresh L155 + wider scheduler/YAML gap"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-title",
+        "blocker-1",
+        "blocker-2",
+        "blocker-3"
+      ]
+    },
+    "blockers-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-skill-digest",
+        "message": "STUCK ~120h dispatched; next fresh tick Sun 7-05",
+        "type": "warning"
+      }
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "title": "XAI quota",
+        "message": "day 18, operator top-up required",
+        "type": "warning"
+      }
+    },
+    "blocker-3": {
+      "type": "Alert",
+      "props": {
+        "title": "on-chain config",
+        "message": "defi-monitor NO_CONFIG day 26, ALCHEMY/ETHERSCAN keys absent",
+        "type": "warning"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-section": {
+      "type": "Text",
+      "props": {
+        "text": "+16 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

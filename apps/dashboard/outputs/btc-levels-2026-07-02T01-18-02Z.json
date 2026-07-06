@@ -1,0 +1,179 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "BTC Levels",
+        "description": "Spot price and downtrend indicators"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "spot-row",
+        "alert-warning",
+        "sep1",
+        "price-levels",
+        "sep2",
+        "cbbtc-box",
+        "sep3",
+        "disclaimer-text"
+      ]
+    },
+    "spot-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "spot-price",
+        "recent-close"
+      ]
+    },
+    "spot-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$59.9k"
+      }
+    },
+    "recent-close": {
+      "type": "Stat",
+      "props": {
+        "label": "Jul-01 Close",
+        "value": "$60.0k"
+      }
+    },
+    "alert-warning": {
+      "type": "Alert",
+      "props": {
+        "title": "Downtrend Signal",
+        "message": "Jul-01 close $60.0k < $60,500 resistance. 7th consecutive sub-$60,500 close indicating downtrend continuation per 2026-06-09 advisor levels.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price-levels": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "levels-heading",
+        "level-grid"
+      ]
+    },
+    "levels-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Price Levels",
+        "level": "h3"
+      }
+    },
+    "level-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "current-spot",
+        "resistance-level"
+      ]
+    },
+    "current-spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Spot",
+        "value": "$59.9k",
+        "trend": "down"
+      }
+    },
+    "resistance-level": {
+      "type": "Stat",
+      "props": {
+        "label": "Resistance",
+        "value": "$60.5k"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cbbtc-box": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cbbtc-heading",
+        "cbbtc-details"
+      ]
+    },
+    "cbbtc-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Leveraged cbBTC",
+        "level": "h3"
+      }
+    },
+    "cbbtc-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trigger-alert",
+        "hf-text"
+      ]
+    },
+    "trigger-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Review Trigger",
+        "message": "At or below $45k",
+        "type": "warning"
+      }
+    },
+    "hf-text": {
+      "type": "Text",
+      "props": {
+        "text": "Health Factor ~1.48–1.66 in the $40–45k band",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "disclaimer-text": {
+      "type": "Text",
+      "props": {
+        "text": "Not financial advice",
+        "variant": "muted"
+      }
+    }
+  }
+}

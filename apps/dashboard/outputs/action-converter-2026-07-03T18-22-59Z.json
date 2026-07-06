@@ -1,0 +1,395 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-03"
+      },
+      "children": [
+        "shape_desc",
+        "sep_1",
+        "action_1",
+        "sep_a",
+        "action_2",
+        "sep_b",
+        "action_3",
+        "sep_c",
+        "action_4",
+        "sep_d",
+        "action_5",
+        "sep_2",
+        "sources"
+      ]
+    },
+    "shape_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: root-cause 12:00 batch, close ISS-026, capture watchlist reversal, prune MEMORY dupes",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1_title",
+        "a1_why_label",
+        "a1_why_text",
+        "a1_done_label",
+        "a1_done_text",
+        "a1_loop"
+      ]
+    },
+    "a1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Grep aeon.yml for remaining usepod_model fields (L155/L162/L171 confirmed, market-context-refresh block at L150) and open follow-up PR clearing every hit.",
+        "level": "h3"
+      }
+    },
+    "a1_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a1_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "12:00Z batch first live test failed today post PR #150; 6 skills stale 5d; weekly-review hard date 2026-07-04 is T-1d."
+      }
+    },
+    "a1_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR opened titled fix(aeon.yml): remaining usepod_model fields with grep-verified zero-hit diff over all 43 skills."
+      }
+    },
+    "a1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "12:00-batch-still-dead",
+        "variant": "outline"
+      }
+    },
+    "sep_a": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2_title",
+        "a2_why_label",
+        "a2_why_text",
+        "a2_done_label",
+        "a2_done_text",
+        "a2_loop"
+      ]
+    },
+    "a2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Flip ISS-026 to Resolved in memory/issues/INDEX.md (row L21) and set status: resolved, resolved_at: 2026-07-02T13:20:37Z, fix_pr: 151 in memory/issues/ISS-026.md frontmatter.",
+        "level": "h3"
+      }
+    },
+    "a2_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a2_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #151 merged 7-02 13:20Z fixed the skill-evals cron but INDEX still lists ISS-026 Open — false-flag in every heartbeat and skill-health run since."
+      }
+    },
+    "a2_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "commit chore(issues): resolve ISS-026 after PR #151 merge — INDEX diff plus frontmatter update, ISS-026 present in Resolved table."
+      }
+    },
+    "a2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-026-index-flip",
+        "variant": "outline"
+      }
+    },
+    "sep_b": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3_title",
+        "a3_content",
+        "a3_why_label",
+        "a3_why_text",
+        "a3_done_label",
+        "a3_done_text",
+        "a3_items",
+        "a3_loop"
+      ]
+    },
+    "a3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Append a ## 2026-07-03 watchlist whole-green day-2 block to memory/topics/crypto.md",
+        "level": "h3"
+      }
+    },
+    "a3_content": {
+      "type": "Text",
+      "props": {
+        "text": "GITLAWB +27.38% snap (token-alert 13:15Z), REPPO $0.024 vol-drought clear at 1.72× baseline, WELL washout-reversal day-3 direction confirmed UP",
+        "variant": "body"
+      }
+    },
+    "a3_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a3_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "fresh watchlist-wide reversal today; capture the token+percent+volume triplet before reflect/memory-flush loses the 24h shape."
+      }
+    },
+    "a3_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a3_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "crypto.md diff shows dated section with three bullets, each carrying the token, the percent, and the volume ratio."
+      }
+    },
+    "a3_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_item1",
+        "a3_item2",
+        "a3_item3"
+      ]
+    },
+    "a3_item1": {
+      "type": "Badge",
+      "props": {
+        "text": "GITLAWB +27.38%",
+        "variant": "secondary"
+      }
+    },
+    "a3_item2": {
+      "type": "Badge",
+      "props": {
+        "text": "REPPO $0.024 vol 1.72×",
+        "variant": "secondary"
+      }
+    },
+    "a3_item3": {
+      "type": "Badge",
+      "props": {
+        "text": "WELL washout-reversal UP",
+        "variant": "secondary"
+      }
+    },
+    "a3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "watchlist-whole-green-day-2",
+        "variant": "outline"
+      }
+    },
+    "sep_c": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4_title",
+        "a4_why_label",
+        "a4_why_text",
+        "a4_done_label",
+        "a4_done_text",
+        "a4_loop"
+      ]
+    },
+    "a4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Prune duplicated Current Goals bullets in memory/MEMORY.md (sandbox-truncation on L5+L10, PR #149 on L6+L11) and update the weekly-review countdown to T-1d.",
+        "level": "h3"
+      }
+    },
+    "a4_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a4_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md loads into every skill context; the L5/L10 + L6/L11 duplicates waste tokens and one carries a stale T-2d countdown that is now T-1d."
+      }
+    },
+    "a4_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a4_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "git diff shows a collapsed Current Goals list with one entry per topic and the accurate T-1d annotation."
+      }
+    },
+    "a4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-md-consolidation",
+        "variant": "outline"
+      }
+    },
+    "sep_d": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5_title",
+        "a5_why_label",
+        "a5_why_text",
+        "a5_done_label",
+        "a5_done_text",
+        "a5_loop"
+      ]
+    },
+    "a5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Inspect .github/workflows/*.yml for the operator-scorecard Monday 10:30Z cron slot; either identify the never-run root cause or annotate MEMORY as scheduler-side confirmed with the workflow-file line as evidence.",
+        "level": "h3"
+      }
+    },
+    "a5_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a5_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "5-day chronic gap has been carried indefinitely without hard evidence of scheduler-side — find the file line or falsify the assumption."
+      }
+    },
+    "a5_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a5_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "either GitHub issue filed with the exact workflow-file line and observed vs expected cron, or MEMORY.md pattern updated with the file:line evidence and confirmed-scheduler-side note."
+      }
+    },
+    "a5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard-schedule-gap",
+        "variant": "outline"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=54 logs=7 topics=11 prs=1 cron_failing=1 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}

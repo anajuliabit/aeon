@@ -15,10 +15,7 @@
 | ISS-020 | token-pick 6 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | token-pick |
 | ISS-021 | search-skill 4 consecutive failures — sandbox timeout/cost truncation | critical | sandbox-limitation | 2026-06-19 | search-skill |
 | ISS-022 | monitor-polymarket: missing_pattern — disabled skill causing churn in evals | high | prompt-bug | 2026-06-21 | monitor-polymarket |
-| ISS-023 | token-alert: missing_pattern — pattern not found in live-day log | high | prompt-bug | 2026-06-21 | token-alert |
-| ISS-024 | skill-health: missing_pattern — 26 consecutive failures, 0.26 success_rate | high | quality-regression | 2026-06-21 | skill-health |
 | ISS-025 | cost-report 6 consecutive failures — weekly tick truncated at outputTokens=12 | critical | sandbox-limitation | 2026-06-22 | cost-report |
-| ISS-026 | heartbeat: missing_pattern (timing — skill-evals dispatched before 08:00 UTC morning tick) | high | prompt-bug | 2026-06-28 | heartbeat |
 
 ## Resolved
 
@@ -35,3 +32,6 @@
 | ISS-014 | Reppo platform metadata POST fails HTTP 500 Internal Server Error — transient platform-side fault | medium | platform self-healed (no PR) | 2026-05-30 |
 | ISS-017 | chain-runner.yml interpolates `${{ inputs.chain }}` directly into `run:` shell blocks at lines 41 + 416 (2026-04-11 incident pattern class) | high | env: indirection (focus/iss-017-chain-runner-env) | 2026-06-03 |
 | ISS-015 | vibecoding-digest can't reach Reddit — prefetch + WebFetch both blocked | high | wontfix — vibecoding-digest + reddit-digest disabled (Reddit API unavailable to operator) | 2026-06-03 |
+| ISS-023 | token-alert: missing_pattern — pattern not found in live-day log | high | — | 2026-07-05 |
+| ISS-024 | skill-health: missing_pattern — 26 consecutive failures, 0.26 success_rate | high | — | 2026-07-05 |
+| ISS-026 | heartbeat: missing_pattern (timing — skill-evals dispatched before 08:00 UTC morning tick) | high | https://github.com/aeonframework/aeon/pull/151 | 2026-07-02 |

@@ -1,0 +1,224 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-06-30"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "stack-focus",
+        "sep-1",
+        "heading-since",
+        "stack-since",
+        "sep-2",
+        "heading-running",
+        "stack-running"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "1. BTC q-end + breakdown day 5 — why now: 6-29 close $60,160 = 5th sub-$60,500; quarter-end TODAY forces rebal flow",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "2. PR #150 review + merge — why now: $456/mo savings, 5-line `usepod_model`→`model` rename, opened ~13h ago",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "3. ISS-025 capture-step fix — why now: day 7 unshipped, weekly-review hard date 2026-07-04, 20-skill chronic tail still bleeds",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4",
+        "since-5"
+      ]
+    },
+    "since-1": {
+      "type": "Alert",
+      "props": {
+        "title": "01:16Z btc-levels",
+        "message": "5th consecutive sub-$60,500 close ($60,160) — alert fired, leverage-review clear",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "since-2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #150 fix(aeon.yml) opened by self-improve — 5 skills running on Opus instead of intended Haiku",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-3": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly-review: 88% sr (vs 22% prior week) — scheduler self-healed via PR #128 usepod gateway propagation, no fresh patch",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-4": {
+      "type": "Text",
+      "props": {
+        "text": "PR #149 docs(skill-graph) ~38h stall — crossed 24h threshold ~14h ago, still needs review",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-5": {
+      "type": "Text",
+      "props": {
+        "text": "Reflect pruned MEMORY.md 53→43 lines; ISS-026 (skill-evals timing) still queued, ISS-025 day 7",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-1",
+        "running-2",
+        "running-3",
+        "running-4",
+        "running-5",
+        "running-6"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine 07:00 UTC (concurrent), skill-freshness 08:00, heartbeat 08:00/14:00/20:00",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "token batch 12:00–12:40 UTC (token-alert, token-movers, on-chain-monitor, defi-monitor)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill + security-digest 14:00 UTC",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-4": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest 17:00, agent-buzz 17:30",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-5": {
+      "type": "Text",
+      "props": {
+        "text": "evening cluster 18:00 UTC (skill-health, goal-tracker, reflect, action-converter)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-6": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review 21:00 UTC; btc-levels every 4h at :15",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-02"
+      },
+      "children": [
+        "summary_line",
+        "sep1",
+        "blocked_section",
+        "sep2",
+        "on_track_section",
+        "sep3",
+        "done_section",
+        "sep4",
+        "sources_text"
+      ]
+    },
+    "summary_line": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_at_risk",
+        "stat_attention",
+        "stat_on_track",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "6"
+      }
+    },
+    "stat_at_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_on_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "3"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "1"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_heading",
+        "blocked_item_1",
+        "blocked_item_2"
+      ]
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked_item_1": {
+      "type": "Alert",
+      "props": {
+        "title": "XAI quota recovery",
+        "message": "Waiting on operator team-credit top-up since 2026-06-16 (day 17).\nAction: Ping operator to top up XAI Team 3a8b4c1e monthly credit",
+        "type": "warning"
+      }
+    },
+    "blocked_item_2": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator on-chain config",
+        "message": "Waiting on memory/on-chain-watches.yml pool/position entries + ALCHEMY_API_KEY (day 25).\nAction: Ask operator to add type: pool / type: position entries + top up ALCHEMY_API_KEY / ETHERSCAN_API_KEY",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "on_track_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on_track_heading",
+        "on_track_item_1",
+        "on_track_item_2",
+        "on_track_item_3"
+      ]
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on_track_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot1_title",
+        "ot1_details",
+        "ot1_action"
+      ]
+    },
+    "ot1_title": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "variant": "lead"
+      }
+    },
+    "ot1_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~330 activity/14d (flat vs prior 280 → ON TRACK). Weekly-review hard deadline 2026-07-04 = T-2d.",
+        "variant": "body"
+      }
+    },
+    "ot1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Ship the action-converter capture-step aeon.yml PR before Fri weekly-review deadline",
+        "variant": "caption"
+      }
+    },
+    "on_track_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot2_title",
+        "ot2_details",
+        "ot2_action"
+      ]
+    },
+    "ot2_title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #149 docs(skill-graph)",
+        "variant": "lead"
+      }
+    },
+    "ot2_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~50 activity/14d (new); day-4.1 stall, operator-merge gated",
+        "variant": "body"
+      }
+    },
+    "ot2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Request operator merge review on PR #149",
+        "variant": "caption"
+      }
+    },
+    "on_track_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot3_title",
+        "ot3_details",
+        "ot3_action"
+      ]
+    },
+    "ot3_title": {
+      "type": "Text",
+      "props": {
+        "text": "BTC breakdown day 6 CONFIRMED",
+        "variant": "lead"
+      }
+    },
+    "ot3_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~211 activity/14d (flat). Reality now day-7 confirmed (07-01 close $59,979.90 = 7th sub-$60,500; btc-levels 01:17Z alert fired).",
+        "variant": "body"
+      }
+    },
+    "ot3_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Watch tonight's UTC close for day-8-red or first $60,500 reclaim of the streak",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done_heading",
+        "done_item_1"
+      ]
+    },
+    "done_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h3"
+      }
+    },
+    "done_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done1_title",
+        "done1_details"
+      ]
+    },
+    "done1_title": {
+      "type": "Text",
+      "props": {
+        "text": "PR #150 fix(aeon.yml) usepod_model → model:",
+        "variant": "lead"
+      }
+    },
+    "done1_details": {
+      "type": "Text",
+      "props": {
+        "text": "Completed 2026-07-02 (MERGED 13:20:07Z, ~$456/mo cost fix landed for on-chain-monitor / token-pick / token-movers). Moved to Recently Cleared in MEMORY.md.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

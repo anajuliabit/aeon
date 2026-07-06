@@ -1,0 +1,80 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_action",
+        "stack_issue",
+        "text_reason",
+        "storylink_pr"
+      ]
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Moved skill-evals Sun 06:00Z → 22:00Z",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stack_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_to_fix",
+        "badge_issue"
+      ]
+    },
+    "text_to_fix": {
+      "type": "Text",
+      "props": {
+        "text": "to fix",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "badge_issue": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-026",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text_reason": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat false-fail (evals ran before heartbeat's ~08:00 morning tick)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "storylink_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #151",
+        "href": "https://github.com/anajuliabit/aeon/pull/151",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

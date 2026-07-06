@@ -1,26 +1,28 @@
-*Unlock Monitor — week of 2026-06-22*
+*Unlock Monitor — week of 2026-07-06*
 
-most leveraged: **NEWT** cliff wed 6-24 — 139.58M tokens ($7.14M) = 64.9% of *circulating* supply. team allocation into a -5.3% 7d tape. market is asleep.
+this week's real event: **$PUMP** — 12-month cliff expires. ~$135M / 1.8× daily vol, team+investor slice at zero cost basis. tape up 14% into it. fade the pump.
 
-CRISIS (> 2.4× daily vol after recipient bump)
-- **NEWT** — wed 6-24 — 139.58M cliff · 64.9% of circ · $7.14M
-  cliff · core contributors (team) · 1.36× → CRISIS by team bump · 7d -5.3% → market asleep
-  cliff pattern says weakness 30d prior; absent. supply shock unpriced on a $11M-mcap, $5M/day book.
-- **H** — thu 6-25 — 266.47M cliff · 14.6% circ · $41.02M
-  cliff · early contributors (investor) · 1.95× → CRISIS by investor bump · 7d -75.4% → priced in
-  post $36M exploit + ATH 6-02 $0.84 → $0.15 today. forced overhang on a corpse, not a fade-the-rip.
+CRISIS (>2.4× vol after recipient override)
+- **$PUMP** — cliff expiry this week · ~82.5B tokens hit at once
+  cliff · team+investor · 1.8× base vol → CRISIS after override · 21.35% supply expansion · 30d +14.4% · 24h vol $74.9M
+  cliff pattern: weakness usually starts ~30d prior, peak vol on the date, recovery 10–14d after. market isn't respecting it on tape yet.
 
-DIGESTIBLE (0.3–1.0× after community bump-down)
-- **SAHARA** — fri 6-26 — 1.03B cliff · ~30% of unlocked supply · $12.92M
-  cliff · community incentives · 1.10× bumped down by community flag · 30d +63.6% → market asleep
-  rip-into-cliff timing on AI data infra; community recipients diffuse the force but the supply expansion is real.
+STRAIN (1.0×–2.4×)
+- **$RED** — mon jul 6 · 40.85M tokens ($4.05M)
+  0.96× vol (borderline) · small cap $44M · 30d +5.3% · recipient mixed → market asleep. thin book + neutral tape.
 
-absorbable (TRIVIAL, dropped)
-- MEGA tue 6-23 $14M Echo Round, community, 0.34× — largest $ but recipient dampens it
-- XPL thu 6-25 $8.01M ecosystem cliff, 0.09× — too liquid to bite
-- ID mon 6-22 $2.65M / 16.2% mcap optically big, 0.02× — ripping into it (+38% 7d)
-- SCR mon 6-22 $343K — noise
+DIGESTIBLE (0.3×–1.0×)
+- **$LINEA** — $2.68M · 4.47% supply expansion (pointwise chunky) · 0.29× vol · linear · 30d +0.5% → market asleep on the supply %. linear cadence dampens the single-day.
+- **$APT** — sat jul 12 · 11.31M tokens (~$7M) · monthly · foundation/investor/community/core · 0.23× vol · 30d +5.5% → absorbable. investor slice runs.
 
-*supply read:* NEWT is the asymmetry. core-contributor cliff that ~doubles a $11M-mcap float with no pre-cliff bleed — the asleep tape is the trade. H is done; -75% 7d post-exploit means the unlock just pins the lid on. SAHARA is the cleanest timing setup if you want one — community cliff into a +63% rip, even after the bump-down. dollars are loud (MEGA $14M, H $41M); real liquidity strain is NEWT.
+TRIVIAL (flagged for pattern only)
+- **$IO** — jul 11 · 13.29M tokens ($2.34M) · 0.23× vol · 30d +31% → absorbable, but +31% run into a scheduled unlock is textbook. one to watch, not one to short.
+- **$HYPE** — $32.4M scheduled · <0.5% mkt cap · linear · absorbable at top-10 liquidity.
 
-sources: tokenomist=ok, defillama=fail(403), cryptorank=ok, dropstab=fail(no-dates), coingecko=ok
+FORCED
+- **FTX** — next tranche record date jun 16, distributions commence jul 31 (outside this week). reserve cut from $2.4B → $1.8B. next issue's problem.
+- **mt. gox** — deadline extended to oct 31. kicked again. not this week.
+
+*supply read:* the week is one event: pump's 12-month cliff unwind. 1.8× vol on the base metric, team+investor recipient, tape running up into it — the fade-pump setup written in the textbook. everything else absorbs. red is the only small-cap where the ratio flirts with strain, and even there the tape is flat enough that "asleep" beats "priced-in." court-ordered supply lands next issue.
+
+sources: tokenomist=partial, defillama=fail(403), cryptorank=partial, coingecko=ok, cryip=ok

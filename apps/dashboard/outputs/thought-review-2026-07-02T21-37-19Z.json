@@ -1,0 +1,101 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "content_stack"
+      ]
+    },
+    "content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "meta_row",
+        "captures_row",
+        "inbox_row"
+      ]
+    },
+    "meta_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "period_text"
+      ]
+    },
+    "period_text": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h",
+        "variant": "caption"
+      }
+    },
+    "captures_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "captures_stat",
+        "status_text"
+      ]
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "captures",
+        "value": "0"
+      }
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "muted"
+      }
+    },
+    "inbox_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "files_stat",
+        "hours_stat",
+        "owned_badge"
+      ]
+    },
+    "files_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "inbox files",
+        "value": "1"
+      }
+    },
+    "hours_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "unarchived",
+        "value": "231h"
+      }
+    },
+    "owned_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-owned"
+      }
+    }
+  }
+}

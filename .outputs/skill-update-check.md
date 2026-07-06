@@ -1,8 +1,5 @@
-`skills.lock` does not exist in this repository — no imported skills are tracked. Per the skill spec, I logged `SKILL_UPDATE_CHECK_NO_LOCK` to `memory/logs/2026-06-21.md` and stopped without sending a notification.
+`skills.lock` does not exist, so there are no imported skills to audit. Logged `SKILL_UPDATE_CHECK_NO_LOCK` to `memory/logs/2026-07-05.md` and stopped — no notification sent, per spec.
 
 ## Summary
 
-- **Action:** Ran skill-update-check in AUDIT mode.
-- **Result:** `skills.lock` not found at repo root — no imported skills are being tracked.
-- **Logged:** `SKILL_UPDATE_CHECK_NO_LOCK: skills.lock not found — no imported skills tracked` appended to `memory/logs/2026-06-21.md`.
-- **Notification:** Suppressed (per spec — only notify on CRITICAL/HIGH/MEDIUM drift findings).
+`skill-update-check` ran in AUDIT mode. `skills.lock` was not found at the repo root, which means no external skills are currently tracked for upstream drift monitoring. Logged the result to today's log; no report file written and no notification sent.

@@ -1,2 +1,4 @@
-*Vuln Scanner — Panniantong/Agent-Reach*
-1 code-level HIGH (argv injection into yt-dlp via library API — RCE on the pinned 2025.5.22) drafted but not published: PVR disabled, SECURITY.md offers no fallback contact. Draft sits in `.pending-disclosure/` for out-of-band escalation. 3 dep CVEs shipped as lockfile-only PR [#442](https://github.com/Panniantong/Agent-Reach/pull/442) (yt-dlp 5 advisories, requests 1, python-dotenv 1). Scanners: semgrep=fail trufflehog=fail osv=ok(via-api) — sandbox blocks binaries, OSV REST + manual audit covered it.
+*Vuln Scanner — ChromeDevTools/chrome-devtools-mcp*
+clean audit. 1 candidate reviewed, 0 confirmed. `@opentelemetry/core@1.30.1` (GHSA-8988-4f7v-96qf, moderate DoS via W3C Baggage) reaches through `lighthouse → @sentry/node`, but chrome-devtools-mcp ships no `SENTRY_DSN` so the vulnerable Baggage-parse path never runs. dropped.
+scanners: semgrep=fail, trufflehog=fail, osv=ok (api). semgrep/trufflehog blocked by sandbox per ISS-018 — osv-api the only surviving leg.
+report: `articles/vuln-scan-2026-07-04.md`. dedup appended.

@@ -1,0 +1,71 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "thin day. one 35B agentic-model drop out of a chinese lab, one paper turning mcp into a taxonomy instead of a discourse."
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section1-heading",
+        "tweet1",
+        "separator1",
+        "section2-heading",
+        "tweet2"
+      ]
+    },
+    "section1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "agentic-model launches",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ModelScope2022",
+        "handle": "@ModelScope2022",
+        "text": "agents-a1, 35b moe fine-tuned for long-horizon: search, engineering, science, tool-calling. modelscope, not a us frontier shop.\n\nhttps://x.com/ModelScope2022/status/2071909096593256783"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp gets studied, not just built",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "omarsar0",
+        "handle": "@omarsar0",
+        "text": "paper distills 5 recurring server patterns across 15 independent mcps. ecosystem now has enough deployed variety to reverse-engineer conventions.\n\nhttps://x.com/omarsar0/status/2072076720367341933"
+      },
+      "children": []
+    }
+  }
+}

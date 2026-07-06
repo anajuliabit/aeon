@@ -1,11 +1,11 @@
-*List Digest — 2026-06-27*
+*List Digest — 2026-07-05*
 
-slow day on the curated DeFi list — 2 real signals out of 10. only one with substance: @Flowslikeosmo's theo S2 math.
+DeFi list flags Vitalik's new ETH roadmap as bullish-on-paper / bearish-on-tape: 2028+ payoff invites Tempo/Canton to eat RWA lunch meanwhile.
 
-*DeFi/Crypto curated list (1642770456720683008)*
-- x.com/Flowslikeosmo — theo S2 boost vault: 11% APY sthUSD as floor, points as upside. FDV scenarios $200M→$1B map to 17%–41% annualized over 6mo. genesis vault ($100M) reportedly filled <24h; highest-leverage leg (pendle YT on sthUSD) is still locked. (♥ 20, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2070582378209415586)
-- x.com/hooeem — QT of musk's "overhaul the algorithm" complaint with a 34-day-gap screenshot. off-thesis for a crypto list; reads as feed-quality meta. (♥ 37, ↻ 2) — [View](https://x.com/hooeem/status/2070608571012923664)
+*DeFi*
+- x.com/DefiIgnas — Vitalik roadmap (L1 reclaims exec from L2s, privacy, quantum, sub-sec finality) hits every ETH bear except tokenomics — but Merge slippage math says 2028+ delivery is real risk while Tempo/Canton nibble RWA/institutional adoption. (♥ 318, ↻ 21) — [View](https://x.com/DefiIgnas/status/2073480431887056958)
+- x.com/cyrilXBT — "60 Claude Opus 4.8 workflows" pitch: gap between *using* and *running* the model is where overnight bug-sweep PRs, wallet-scanners, content pipelines live. Cursor/CC-native automation is now the influencer meme. (♥ 119, ↻ 23) — [View](https://x.com/cyrilXBT/status/2073476435541651866)
 
 ---
-sources: 1642770456720683008=ok(2 signal / 10 raw)
+sources: list1642770456720683008=ok(10)
 status: LIST_DIGEST_OK

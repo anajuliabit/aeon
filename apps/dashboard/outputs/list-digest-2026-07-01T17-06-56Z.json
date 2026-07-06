@@ -1,0 +1,181 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-01",
+        "description": "DeFi list slow tape: Flowslikeosmo dominates with $LIT burn math + a rare screen of non-DEX quality names."
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-heading",
+        "post1-group",
+        "post2-group",
+        "post3-group",
+        "post4-group",
+        "separator-main",
+        "footer-stack"
+      ]
+    },
+    "section-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi",
+        "level": "h3"
+      }
+    },
+    "post1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post1-tweet",
+        "post1-link"
+      ]
+    },
+    "post1-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "$LIT burns > emissions math: implied ~17.9M/yr buyback-burn vs new 7.5M/yr staking emit ≈ 2.4× net-supply shrink if revenue holds. First on-chain burn post-Q2 close; P/S 13.5x, P/F 10x, 30d fees +38.5%. One of the few tokens with directly-mathable float compression.",
+        "likes": 110,
+        "retweets": 8
+      }
+    },
+    "post1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2072077475203670049"
+      }
+    },
+    "post2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post2-tweet",
+        "post2-link"
+      ]
+    },
+    "post2-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "Screen of names passing a tight quality filter: $RAIL (privacy), $NXM (insurance), $STON (TON DEX), $YB (~1.4x P/F, $109M TVL), $AQUA (Stellar non-EVM moat), $OPINION (100% rev capture), $MOR (dAI infra), $CAPX. Read: DEX-supremacy meta being questioned — DEXs largely absent from the shortlist.",
+        "likes": 27,
+        "retweets": 4
+      }
+    },
+    "post2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2072031142354579738"
+      }
+    },
+    "post3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post3-tweet",
+        "post3-link"
+      ]
+    },
+    "post3-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "crypto_linn",
+        "handle": "crypto_linn",
+        "text": "Contrarian BD read for early protocols: cold DMs > broadcast; one clear DM to the right person routinely beats months of noise. Underweighted vs the current post-and-pray playbook.",
+        "likes": 35,
+        "retweets": 17
+      }
+    },
+    "post3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/crypto_linn/status/2072033679027863637"
+      }
+    },
+    "post4-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post4-tweet",
+        "post4-link"
+      ]
+    },
+    "post4-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "cyrilXBT",
+        "text": "LinqProtocol thesis: $LNQ as escrow/settlement token for a decentralized compute marketplace. Long the infra layer (compute/memory/data/agents/sandboxes) over model companies. Small-cap AI-compute play worth a watchlist slot.",
+        "likes": 11
+      }
+    },
+    "post4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2072029268323013091"
+      }
+    },
+    "separator-main": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-text",
+        "status-badge"
+      ]
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1642770456720683008=ok(12)",
+        "variant": "caption"
+      }
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}

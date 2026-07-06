@@ -1,0 +1,113 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-04"
+      },
+      "children": [
+        "intro-text",
+        "sep1",
+        "curated-heading",
+        "tweets-stack",
+        "sep2",
+        "footer-stack"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "robinhood shipped on arbitrum orbit — one voice on the list carries the whole tape; market wants realized $ARB fee accrual, not the press release.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "curated-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi curated",
+        "level": "h2"
+      }
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "robinhood joining the arbitrum stack via orbit is a technical/BD/liquidity win, yet $ARB barely off ATL. thesis re-rates only if fees actually accrue to the DAO. also frames it as ETH ecosystem retention — RH didn't spin up their own corpo-slop L1.",
+        "likes": 139,
+        "retweets": 41
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "quote-tweet lands the load-bearing number: arb DAO earns 10% of tx + ordering fees (net L1 posting cost) — the receipt the bull case needs a dune for.",
+        "likes": 11,
+        "retweets": 0
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "\"for you tab vs following tab\" meme. signal is timeline fatigue, not price: curated-list attention is winning back share from algo — which is exactly why lists like this one exist.",
+        "likes": 59,
+        "retweets": 1
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-text",
+        "status-badge"
+      ]
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1642770456720683008=ok(3 fresh, 5 sub-threshold)",
+        "variant": "caption"
+      }
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}

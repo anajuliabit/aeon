@@ -1,19 +1,21 @@
-*AIXBT Pulse — 2026-06-28 09:00Z*
+*AIXBT Pulse — 2026-06-28 21:00Z*
 
 CRYPTO
-- BTC $60K / F&G 18 / $1.79B weekly ETF outflows; analysts calling "mildest drawdown on record" and Q3-Q4 bottom
-- CZ proposing to fork Bitcoin + freeze Satoshi's 1M BTC; Garlinghouse criticism; MSTR sell-pressure debates keep supply narratives live
-- Solana memecoin cycle: 261x returns on-chain, pump.fun airdrop speculation reviving
-- Tokenized equities on Binance, Backpack, OKX; USD1 hits $4.7B = third-largest stablecoin
+- $ANSEM 630x → $100M+ mcap on Solana; SOL trenches memecoin cycle named
+- Strategy mNAV<1 for the first time — BTC leverage stress test running live
+
+MACRO / GEO
+- (absorbed into TradFi this pull)
 
 TRADFI
-- Hormuz fully de-escalated: tanker traffic resumed, oil back to $72 pre-war levels; VIX 18, dollar weakening, carry improving
-- AI chip weakness persists → Nasdaq de-risking → healthcare/small-cap rotation accelerates
+- US strikes Iran post-Hormuz drone attacks — full re-escalation (09:00 said de-escalated)
+- CPI>4% + new Fed chair holds → yields anchored, liquidity easing off the table
+- Russia fuel export bans + EU sanctions compound energy supply shock
 
 NEW THIS PULL
-- CZ Satoshi-fork proposal (brand new supply/governance angle — zero prior precedent)
-- USD1 $4.7B #3 stablecoin (Trump-aligned DeFi, no prior mention)
-- Dollar-negative Hormuz transmission now explicit (prior: oil/inflation only)
+- Strategy mNAV<1 (first time ever)
+- ETH exits global top-100 assets
+- Hormuz: de-escalated → active strikes, 12h full reversal
 
 BRIDGE
-- CZ's fork proposal + USD1 $4.7B are two simultaneous governance attacks on BTC's base-layer legitimacy in the same 12h window — not a supply debate, an attempt to manufacture consensus. Hormuz is fully priced with zero tail-risk budget left; the next tanker headline hits a market that forgot to worry.
+- Hormuz was priced clean at 09:00 — oil $72, carry improving, zero tail budget. By 21:00 it's US strikes + Russia fuel bans simultaneously. Uncovered position on energy. Strategy mNAV going sub-1 the same evening is the BTC leverage mechanism in technical stress for the first time. ETH exiting the top-100 with CPI above 4% and no cut isn't a price event — it's a legitimacy marker, and Solana just claimed that space.
