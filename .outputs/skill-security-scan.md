@@ -2,15 +2,15 @@
 
 ## Summary
 
-Ran the security scan skill against the full corpus (229 files: 192 SKILL.md + 9 workflows + 19 repo scripts + 8 advisor scripts + 1 companion script). `scan.sh` execution blocked by sandbox approval gate (5th consecutive run since 2026-05-25); fell back to inline Grep over the HIGH/MEDIUM/LOW pattern library + manual `${{ }}` interpolation audit of every `run:` block per SKILL.md step 4.
+- **Scope:** full corpus (`${var}` empty) — 231 files: 191 SKILL.md + 9 workflows + 30 repo scripts + 1 companion script
+- **Scanner mode:** `inline_grep_fallback` — `scan.sh --all --json` blocked by sandbox approval gate (6th consecutive run on this path). Grep swept full HIGH/MEDIUM/LOW pattern library + manual `${{ }}`-in-`run:` audit; never silently skipped.
+- **Counts:** 4 HIGH · 15 MEDIUM · 4 LOW after filtering — byte-identical to 2026-06-29 snapshot
+- **Delta:** 0 NEW · 0 RESOLVED · 4 PERSISTENT HIGH (canonical `aeon.yml` workflow_dispatch chain at L86/L94/L96/L812; `:812` held for 3rd consecutive scan)
+- **Obfuscation sweep:** clean across all 5 axes
+- **Report written:** `articles/security-scan-2026-07-06.md`
+- **State updated:** `memory/state/security-scan.json` (7-06 timestamp + skill-count adjustment 192→191)
+- **Log appended:** `memory/logs/2026-07-06.md` — `### skill-security-scan` section
+- **Issues:** none filed (no NEW HIGH), none closed (no RESOLVED HIGH)
+- **Notification:** skipped per spec §14 (silence is correct when nothing has changed)
 
-**Result: 4 PERSISTENT HIGH, 0 NEW, 0 RESOLVED** — identical finding set to 2026-06-22, with the canonical workflow-injection-chain HIGHs in `.github/workflows/aeon.yml` at L86/94/96/812. Finding #4 held at `:812` for the 2nd consecutive scan (no line drift this week). Obfuscation sweep clean. `chain-runner.yml` / `messages.yml` / `replicate-oneoff.yml` env: indirection holds.
-
-Files created/modified:
-- `articles/security-scan-2026-06-29.md` — full ATTENTION report with per-finding remediation + canonical env-indirection fix snippet
-- `memory/state/security-scan.json` — fingerprint set persisted for next-run delta
-- `memory/logs/2026-06-29.md` — `### skill-security-scan` log section appended
-
-Notification: skipped per spec (no NEW HIGH, no RESOLVED HIGH). No issues filed/closed.
-
-Follow-up: the 4-HIGH anti-pattern in `aeon.yml` remains unfixed at week 5 — apply env: `_INPUT_SKILL` / `_LABEL` indirection to fully resolve.
+**Carry** — the env-indirection remediation for the 4 aeon.yml sites has not been shipped in 5 consecutive scans; still an accepted anti-pattern (workflow_dispatch/workflow_call gated → repo write access required → low real risk), not a regression.
