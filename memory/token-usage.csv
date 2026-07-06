@@ -666,4 +666,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-05,skill-evals,claude-sonnet-4-6,21,19100,1148656,56671
 2026-07-06,btc-levels,claude-sonnet-4-6,12,5644,397228,25656
 2026-07-06,unlock-monitor,claude-opus-4-7,531,14263,820609,90677
-2026-07-06,search-skill,claude-opus-4-7,4397,5728,323930,63159
+2026-07-06,security-digest,claude-opus-4-7,45,10277,2106021,77070
