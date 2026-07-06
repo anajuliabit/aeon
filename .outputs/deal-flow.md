@@ -1,37 +1,37 @@
-*Deal Flow — 2026-06-29*
+*Deal Flow — 2026-07-06*
 
-**Read:** capital clustered hard on AI inference for a 2nd straight week — Groq $650M closed 6-22 back-to-back with Baseten's $1.5B last week, two non-Nvidia inference stacks bid in 7 days. on-thesis prints were small and precise: Patronus eval-as-observability, Orthogonal x402 service discovery. crypto headline noise (Kalshi rumored to seek at $40B vs $22B prior) — not yet closed, so off the list.
+*Read:* strategics led the megarounds — Aramco into Together AI at 2.5× val, National Grid Ventures anchoring $1.75B into AI-compute energy, Blackstone + Airbus into European drone autonomy. meanwhile crypto VCs priced Venice AI as a $1B private-inference unicorn on its first external raise, and THEA anchored a Solana coordination layer for behavioral-AI risk markets.
 
-1. **Mirendil** — frontier model lab built by ex-Anthropic researchers; trains models that automate AI R&D
-   $200M seed @ ~$1B post (UP n/a, new co) | Lead: a16z + Kleiner Perkins; Nvidia participated
-   *Why it matters:* one of the largest seeds on record at unicorn pricing — Nvidia on a seed cap table is strategic compute-allocation lock from day zero, not a financial check.
+1. **Venice AI** — private, surveillance-free access to 200+ AI models
+   $65M Series A @ $1B post (UP, first external raise) | Lead: Dragonfly (Coinbase Ventures, North Island co)
+   *Why it matters:* dragonfly + coinbase ventures pricing a private-inference unicorn on first external raise; $70M ARR, 3.5M users — crypto VCs underwriting inference sovereignty, not integration.
 
-2. **General Intuition** — gameplay-data world model training AI agents for virtual + physical environments
-   $320M Series A @ $2.3B post (UP, prior raise was $134M seed Oct 2025) | Lead: Khosla Ventures; Bezos + Schmidt + General Catalyst participated
-   *Why it matters:* proprietary action-labels embedded in 100M+ hours of Medal gameplay clips — a dataset moat competitors structurally can't replicate, priced at embodied-AI seed-to-A pace without robotics CAPEX.
+2. **Together AI** — cloud for training and running open-source AI models
+   $800M Series C @ $8.3B post (UP 2.5× vs $3.3B Feb 2025) | Lead: Aramco Ventures (Vista Equity, General Catalyst co)
+   *Why it matters:* saudi sovereign wealth fronting a US neocloud at 2.5× val in 17 months — open-source AI infra is now oil-money capex, not the vc syndicate that led feb 2025.
 
-3. **Groq** — LPU-based AI inference cloud, post-Nvidia $20B licensing pivot
-   $650M growth (n/d) | Lead: Disruptive + Infinitum
-   *Why it matters:* second mega-check into a non-Nvidia inference stack in 7 days. Groq pivoting from chip-vendor to neocloud + LPX co-distribution after Nvidia bought the tech license — capital paying to keep an inference-CAPEX alternative alive.
+3. **Quantum Systems** — German defense drones for surveillance and autonomous ops
+   $1.2B Series D @ ~$8B post (n/d vs prior) | Lead: Blackstone, Airbus, Advent, Noteus
+   *Why it matters:* PE + strategic, not VC — Europe pricing defense autonomy as sovereign infra, second euro-defense mega-round of Q3 in the drone stack.
 
-4. **Assort Health** — AI agent for patient scheduling, intake, referrals, payments
-   $120M Series C @ $1.2B post (UP, magnitude n/d) | Lead: Menlo Ventures
-   *Why it matters:* first US healthcare-admin agent to clear the unicorn line. Menlo paying for procurement-side distribution into health systems already wired to vendor onboarding — the agent is the wedge, not the product.
+4. **Dominion Dynamics** — Arctic surveillance drones + command-and-control software
+   $100M Series A @ $400M post (n/d vs prior) | Lead: Georgian, Valor, Lakestar, Bessemer
+   *Why it matters:* first North American peer-sovereignty defense Series A at 4× post/raise — Bessemer + Lakestar underwriting the Arctic autonomy stack under peer pressure to euro drone rounds.
 
-5. **Taktile** — AI decisioning platform for regulated financial workflows (underwriting, AML)
-   $110M Series C (n/d) | Lead: Goldman Sachs Alternatives
-   *Why it matters:* Goldman Sachs Alternatives leading a Series C in agentic FI decisioning = strategic distribution bet, not a fund return-profile bet. Underwriting is the bank-licensable surface area for agent autonomy.
+5. **Twelve Labs** — video-understanding AI that indexes and searches archive footage
+   $100M Series B @ >$1B post (n/d) | Lead: NEA, Naver Ventures (Amazon strategic co)
+   *Why it matters:* amazon in as strategic, not integration — hyperscaler multimodal race widens from text to video-search stakes, alongside veo/sora.
 
-6. **Patronus AI** — simulated digital worlds to stress-test agent workflows
-   $50M Series B (n/d; total funding now $70M) | Lead: Greenfield Partners; Lightspeed + Notable + Datadog + Samsung
-   *Why it matters:* Datadog on the cap table = eval-as-observability becoming a separate vendor layer, not a feature inside the labs. Revenue grew 15× YoY at the same time frontier labs added agent stress-testing as a procurement line.
+6. **THEA** — behavioral-AI settlement layer on Solana for real-time risk markets
+   $8M strategic (n/d val) | Lead: Maven 11, Spartan Group, Manifold, Hack VC, Fischer8
+   *Why it matters:* first coordination-layer AI raise on Solana at crypto-tier-1s — SOL adds a settlement rail for risk-market AI to answer Base's x402 agentic-payment beachhead.
 
-7. **Hang Ten Systems** — AI-native enterprise services for agentic code generation
-   $32M seed (n/d) | Lead: Mayfield; Aramco Ventures + angels
-   *Why it matters:* Vishal Sikka (ex-Infosys CEO) launching against the IT-services category his old company defined — Siemens Gamesa + Fresenius as launch customers means the bet is on services-substitution at procurement layer, not greenfield SaaS.
+7. **8090 Solutions** — enterprise software built with coordinated AI agents
+   $135M growth (n/d val) | Lead: Salesforce Ventures
+   *Why it matters:* salesforce ventures fronting a coordination-agents play that could compete its own einstein layer — Chamath as founder-CEO, operator-side not investor-side.
 
-8. **Orthogonal** — x402 payment orchestration + agent service discovery layer
-   $4.3M seed (n/d) | Lead: Pantera Capital
-   *Why it matters:* Pantera taking solo lead on x402 vendor infra — the protocol Coinbase + AWS + Anthropic + Circle endorsed in Q1 now has a dedicated commercial layer. Service discovery is the genuinely missing piece — agents finding APIs they weren't pre-wired to.
+8. **Joulent** — energy infra for AI and compute-intensive industries
+   $1.75B strategic (n/d val) | Lead: National Grid Ventures
+   *Why it matters:* utility capital entering the AI stack directly — energy priced as a stack component, not a supplier, at mega-round scale.
 
-*Sources:* crunchbase=ok, techcrunch=ok, techstartups=ok, crypto-fundraising=ok, coindesk=ok, bloomberg=ok, aift=fail(403) | candidates=~30 → kept=8
+*Sources:* crunchbase=ok, techcrunch=ok, techstartups=ok, crypto-fundraising=ok, cryptorank=partial(paywall), aift=fail(june-only) | candidates=~32 → kept=8
