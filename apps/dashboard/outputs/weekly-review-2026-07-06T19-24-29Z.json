@@ -1,0 +1,158 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review — 2026-07-06"
+      },
+      "children": [
+        "sep1",
+        "action-section",
+        "sep2",
+        "health-section",
+        "sep3",
+        "full-review"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-title",
+        "action-alert"
+      ]
+    },
+    "action-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Action",
+        "level": "h3"
+      }
+    },
+    "action-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-025: Chain-runner capture-step PR",
+        "message": "Author the deep ISS-025 chain-runner capture-step PR against aeon.yml:479-493 via self-improve. Deadline: 07-13 (day-19 systemic waits).",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "health-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health-title",
+        "health-note",
+        "health-grid",
+        "action-deficit-alert"
+      ]
+    },
+    "health-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Health",
+        "level": "h3"
+      }
+    },
+    "health-note": {
+      "type": "Text",
+      "props": {
+        "text": "Best-ever week",
+        "variant": "lead"
+      }
+    },
+    "health-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-skill-runs",
+        "stat-issues",
+        "stat-prs",
+        "stat-btc",
+        "stat-actions"
+      ]
+    },
+    "stat-skill-runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Skill runs ok",
+        "value": "305/306",
+        "trend": "up"
+      }
+    },
+    "stat-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Issues resolved",
+        "value": "3"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs merged",
+        "value": "7"
+      }
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC reclaimed",
+        "value": "$63,500"
+      }
+    },
+    "stat-actions": {
+      "type": "Stat",
+      "props": {
+        "label": "SMART actions shipped",
+        "value": "0/4",
+        "trend": "down"
+      }
+    },
+    "action-deficit-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Action list gap",
+        "message": "0 of 4 SMART actions from last review shipped. Action list needs an author-routing slot.",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full-review": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full review",
+        "href": "articles/weekly-review-2026-07-06.md",
+        "source": "Weekly Review"
+      }
+    }
+  }
+}
