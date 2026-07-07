@@ -1,0 +1,102 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_closed_issue",
+        "section_routing_note"
+      ]
+    },
+    "section_closed_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_closed",
+        "stack_issue_details"
+      ]
+    },
+    "heading_closed": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Closed",
+        "level": "h3"
+      }
+    },
+    "stack_issue_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss022",
+        "text_issue_desc",
+        "link_resolution"
+      ]
+    },
+    "badge_iss022": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-022",
+        "variant": "default"
+      }
+    },
+    "text_issue_desc": {
+      "type": "Text",
+      "props": {
+        "text": "monitor-polymarket eval churn — PR #130 shipped 6-22, INDEX flip lagged 15 days"
+      }
+    },
+    "link_resolution": {
+      "type": "Link",
+      "props": {
+        "label": "Resolution: PR #160",
+        "href": "https://github.com/anajuliabit/aeon/pull/160"
+      }
+    },
+    "section_routing_note": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_routing",
+        "alert_routing"
+      ]
+    },
+    "heading_routing": {
+      "type": "Heading",
+      "props": {
+        "text": "Routing Note",
+        "level": "h3"
+      }
+    },
+    "alert_routing": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-025 capture-step assignment conflict",
+        "message": "Target in .github/workflows/aeon.yml is hard-forbidden by self-improve SKILL.md. Logged for next weekly-review to re-route.",
+        "type": "warning"
+      }
+    }
+  }
+}
