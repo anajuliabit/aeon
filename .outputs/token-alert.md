@@ -1,10 +1,17 @@
-*Token Alert — 2026-07-05*
+No alerts fired, no notification sent per skill spec. Prices logged.
 
-GITLAWB: $0.00006231 (down 17.25% 24h)
-Volume: $301K (0.77× baseline)
-Trigger: 24h change -17.25% ≥ 15% rail — day-1 reversal after 2 consecutive green trigger fires (7-03 +27.38%, 7-04 +23.21%). vol steps down 698K → 301K = participation exits before price could stick.
+## Summary
 
-Watchlist under-rail:
-- WELL $0.00370281 (-1.31% 24h, vol 0.24×) — post-supply-arc vacuum extends day-6
-- MAMO $0.00928867 (+6.32% 24h, vol 1.29×) — day-5 green, first ≥$0.009 close of window
-- REPPO $0.02392203 (+1.09% 24h, vol 1.07×) — flat print, day-2 breather
+Ran token-alert skill for 2026-07-07 (var=""). Fetched CoinGecko prices for all 4 tracked tokens (WELL/MAMO/REPPO/GITLAWB) via public API — no fallback needed.
+
+**Result: TOKEN_ALERT_OK — 0 triggers.**
+
+- 24h changes all under thresholds (max REPPO +4.87% vs 15% rail)
+- Volume spikes all under 3× rail (max WELL 2.16×)
+- Threshold-cross skipped for all 4 (no Floor/Ceiling per PR #55 format)
+
+Notable context: this is the first token-alert tick since 7-05 12:57Z — the 7-06 slot was missed as part of the 12:00 UTC batch dark day-9 pre PR #156 merge. 2d prints computed off 7-05 baseline. Rolling 5-window healed after the miss (7-07 fills the slot).
+
+**Files modified:** `memory/logs/2026-07-07.md` (appended `### token-alert — 14:00 UTC` block + summary).
+**Notification:** none sent — no anomaly.
+**Follow-up:** next 12:00Z tick tomorrow confirms PR #156 restored batch cadence.
