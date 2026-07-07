@@ -1,16 +1,19 @@
+Done. Quiet run — no alerts fired.
+
 ## Summary
 
-**BTC Levels run — 2026-07-07 08:53 UTC**
+**btc-levels 13:55 UTC — 2026-07-07**
 
-- **Spot:** $63,011 (CoinGecko current price)
+- **Spot:** $63,116 (down ~$105 from 08:53Z read)
 - **Daily close (2026-07-06):** $64,072
+- **Alerts fired:** none
 
-**Level evaluation — no alerts fired:**
-| Level | Threshold | Status |
+Level checks:
+| Level | Check | Result |
 |---|---|---|
-| Leverage-review | ≤ $45,000 | Clear — spot $63k »> $45k |
-| Breakdown | close < $60,500 | Clear — close $64,072 ≥ $60,500 |
-| Reclaim $63,500 | already alerted (true) | No new alert; spot $63,011 < $63,500, flag stays armed |
-| Reclaim $65,900 | spot ≥ $65,900 | Not reached |
+| ≤$45k leverage-review | $63,116 ≤ $45k? | No |
+| Daily close < $60,500 breakdown | $64,072 < $60,500? | No |
+| Spot ≥ $63,500 reclaim | $63,116 ≥ $63,500? (already alerted) | No new fire |
+| Spot ≥ $65,900 reclaim | $63,116 ≥ $65,900? | No |
 
-Quiet run. State and log updated and committed.
+State updated, log appended, committed. No notification sent (quiet run is the norm).
