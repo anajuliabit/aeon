@@ -1,1 +1,1 @@
-🧭 thought review · last 24h · 0 captures. nothing to surface.
+thought review · 0 captures in last 24h, all noise. nothing to surface.
