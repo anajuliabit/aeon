@@ -1,4 +1,14 @@
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED` — regenerated `docs/status.md` (43 skills sorted by last_success desc + 12 open issues) and appended log entry to `memory/logs/2026-07-07.md`.
+Heartbeat complete.
 
 ## Summary
-Ran the heartbeat skill (no `${var}` — full checks). **No failed / no stuck / no cf≥3 rows** in `memory/cron-state.json`; chronic tail (18 skills sr<0.5) all map to the known **ISS-025 sandbox-truncation systemic cluster (day 14)**. **Self-check ok** — heartbeat last_success 2026-07-06T21:08Z (~11.75h ago). P1: **PR #149** ~209h day-9 stall, **PR #155** supersede day-2 open. P2: **SLX pick day-13 -46% CATASTROPHIC, recut still overdue**; **ISS-025 capture-step PR** un-authored day-14 — weekly-review formalized MISS verdict on 7-06 19:20Z and restructured next 7-day actions with `Authored by:` slots (deadline reset 2026-07-13). P3: **12:00 UTC batch dead day-9** (PR #156 merged 7-06 15:45Z — today's 12:00Z tick is live test of the fix); **aixbt-pulse dead-slot day-9 CONFIRMED** (7-06 21:00Z tick missed, per yest's carry); **operator-scorecard 7th consecutive Monday miss** (chronic scheduler gap). Fresh: **morning-slot 7-07 partial** — 07:00Z batch + 08:00Z skill-freshness un-dispatched at 08:53Z; same catch-up-gap pattern as 7-06 (which resolved post-14:34Z), re-verify at next hb. **Notification skipped** (byte-identical to 7-06 21:04Z hb + reflect + weekly-review + skill-health + action-converter surfaces per 48h dedup). Files: `docs/status.md` (rewritten), `memory/logs/2026-07-07.md` (heartbeat entry appended). Follow-ups: (a) 12:00Z live-test verification at 14:00Z hb; (b) morning-batch catch-up verification at 14:00Z hb; (c) SLX recut + ISS-025 capture-step PR remain overdue on operator/self-improve routing.
+
+Ran heartbeat skill (all-areas). All findings byte-identical to prior 7-07 runs (08:53Z hb + 18:32-42Z evening batch) — dedup applies, notification skipped.
+
+- **P0**: no failed / no stuck skills; 18-skill chronic sr<0.5 tail (ISS-019/020/021/025 sandbox-truncation systemic day-14); all cf=0; heartbeat self-check ok (~11.5h since last success).
+- **P1**: PR #155 docs(skill-graph) ~74.9h day-3 stall (supersede-dup after PR #149 merged 7-06T21:26Z — action-converter routed close). Fresh **PR #160 fix(issues) close ISS-022** opened by operator 18:38Z (~1h51min ago, under 24h — positive signal, not stalled). Zero urgent-labeled issues.
+- **P2**: SLX open pick day-13 catastrophic -46% (recut still overdue); ISS-025 capture-step PR day-15 unshipped (weekly-review 7-06 formalized MISS + `Authored by:` restructure, deadline reset to 2026-07-13; self-improve 18:32Z run is first routing test).
+- **P3**: 12:00Z batch dark day-10 CONFIRMED via 18:32Z action-converter tick-poll gap analysis (132min drop, batch tick NEVER polled — scheduler-side never-run, not PR #156 config failure). aixbt-pulse dead-slot day-9 CONFIRMED. operator-scorecard Mon chronic 7th miss.
+
+Files modified: `docs/status.md` (regenerated wholesale — 43 enabled skills, 12 open issues, overall DEGRADED), `memory/logs/2026-07-07.md` (heartbeat 20:29Z entry).
+
+Verdict: `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`.
