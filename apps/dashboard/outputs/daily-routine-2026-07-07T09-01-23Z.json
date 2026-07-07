@@ -1,0 +1,823 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-07"
+      },
+      "children": [
+        "market-split",
+        "market-tickers",
+        "reclaim-note",
+        "sep1",
+        "winners-heading",
+        "winners-table",
+        "sep2",
+        "losers-heading",
+        "losers-table",
+        "sep3",
+        "notable-section",
+        "sep4",
+        "tweets-section",
+        "sep5",
+        "paper-section",
+        "sep6",
+        "hn-section",
+        "sep7",
+        "followup-section"
+      ]
+    },
+    "market-split": {
+      "type": "Text",
+      "props": {
+        "text": "split tape — 43/100 top-100 green, median top-50 -0.3%",
+        "variant": "lead"
+      }
+    },
+    "market-tickers": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth",
+        "stat-sol",
+        "stat-bnb",
+        "stat-hype"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$63,015",
+        "delta": "+0.3%",
+        "trend": "up"
+      }
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,769",
+        "delta": "+0.3%",
+        "trend": "up"
+      }
+    },
+    "stat-sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$81.36",
+        "delta": "+1.2%",
+        "trend": "up"
+      }
+    },
+    "stat-bnb": {
+      "type": "Stat",
+      "props": {
+        "label": "BNB",
+        "value": "$576.87",
+        "delta": "-0.5%",
+        "trend": "down"
+      }
+    },
+    "stat-hype": {
+      "type": "Stat",
+      "props": {
+        "label": "Hype",
+        "value": "$70.81",
+        "delta": "+1.0%",
+        "trend": "up"
+      }
+    },
+    "reclaim-note": {
+      "type": "Text",
+      "props": {
+        "text": "reclaim-$63.5k holds day-2",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Token",
+          "Price",
+          "24h %",
+          "7d %",
+          "1h %",
+          "Cap / Rank",
+          "Status"
+        ],
+        "rows": [
+          [
+            "1",
+            "TAC",
+            "$0.044",
+            "+47.2%",
+            "-27.2%",
+            "+37.5%",
+            "$8M / #159",
+            "TRENDING+UP FADE"
+          ],
+          [
+            "2",
+            "RIF (Rootstock)",
+            "$0.136",
+            "+26.9%",
+            "+85.1%",
+            "",
+            "$18M / #218",
+            "BREAKOUT"
+          ],
+          [
+            "3",
+            "EDGE (edgeX)",
+            "$0.324",
+            "+23.2%",
+            "+11.1%",
+            "",
+            "$17M / #243",
+            ""
+          ],
+          [
+            "4",
+            "ANSEM (Black Bull)",
+            "$0.414",
+            "+20.6%",
+            "+232%",
+            "",
+            "$66M / #186",
+            "TRENDING+UP BREAKOUT"
+          ],
+          [
+            "5",
+            "GROVE",
+            "$0.029",
+            "+13.2%",
+            "",
+            "",
+            "$1M / #165",
+            "TRENDING+UP"
+          ],
+          [
+            "6",
+            "MON (Monad)",
+            "$0.025",
+            "+11.1%",
+            "+32.8%",
+            "",
+            "$157M / #136",
+            "TRENDING+UP"
+          ],
+          [
+            "7",
+            "DEXE",
+            "$27.99",
+            "+8.4%",
+            "+22.1%",
+            "",
+            "$43M / #58",
+            ""
+          ],
+          [
+            "8",
+            "JTO (Jito)",
+            "$0.774",
+            "+7.6%",
+            "",
+            "",
+            "$59M / #119",
+            ""
+          ],
+          [
+            "9",
+            "SYRUP (Maple)",
+            "$0.175",
+            "+7.0%",
+            "+23.7%",
+            "",
+            "$21M / #167",
+            ""
+          ],
+          [
+            "10",
+            "BEAT (Audiera)",
+            "$2.64",
+            "+6.9%",
+            "",
+            "",
+            "$16M / #77",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Token",
+          "Price",
+          "24h %",
+          "7d %",
+          "Cap / Rank",
+          "Status"
+        ],
+        "rows": [
+          [
+            "1",
+            "B (BUILDon)",
+            "$0.167",
+            "-24.7%",
+            "-22.8%",
+            "$16M / #193",
+            ""
+          ],
+          [
+            "2",
+            "LAB",
+            "$14.46",
+            "-12.9%",
+            "",
+            "$60M / #24",
+            ""
+          ],
+          [
+            "3",
+            "BONK",
+            "$0.00000426",
+            "-10.6%",
+            "",
+            "$122M / #121",
+            "TRENDING+DOWN CAPITULATION"
+          ],
+          [
+            "4",
+            "UB (Unibase)",
+            "$0.098",
+            "-9.0%",
+            "",
+            "$9M / #147",
+            ""
+          ],
+          [
+            "5",
+            "VELVET",
+            "$0.480",
+            "-8.3%",
+            "-69.6%",
+            "$13M / #170",
+            ""
+          ],
+          [
+            "6",
+            "GWEI (ETHGas)",
+            "$0.129",
+            "-7.6%",
+            "-18%",
+            "$5M / #141",
+            ""
+          ],
+          [
+            "7",
+            "VVV (Venice)",
+            "$10.89",
+            "-5.8%",
+            "-17.5%",
+            "$37M / #103",
+            "TRENDING+DOWN"
+          ],
+          [
+            "8",
+            "CC (Canton)",
+            "$0.134",
+            "-5.7%",
+            "",
+            "$11M / #21",
+            ""
+          ],
+          [
+            "9",
+            "GRAM (prev. Toncoin)",
+            "$1.66",
+            "-5.2%",
+            "",
+            "$147M / #26",
+            ""
+          ],
+          [
+            "10",
+            "HBAR (Hedera)",
+            "$0.071",
+            "-4.5%",
+            "",
+            "$64M / #30",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-items"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "ANSEM breakout 7d +232% on trending pole — MICROCAP+PUMP-RISK despite rank #186."
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "BONK CAPITULATION — 10.6% down on 25%+ mcap-vol turnover."
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "RIF +85% 7d BREAKOUT — sub-$100M Rootstock infra layer, sustained multi-day."
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "VVV -5.8% day-1 after 7-05 unicorn round — sell-the-news reversion."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets-heading",
+        "tweets-crypto",
+        "tweets-ai",
+        "tweets-dev"
+      ]
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweets-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-crypto-label",
+        "tweet-1",
+        "tweet-2",
+        "tweet-3",
+        "tweet-4"
+      ]
+    },
+    "tweets-crypto-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Crypto",
+        "variant": "default"
+      }
+    },
+    "tweet-1": {
+      "type": "Text",
+      "props": {
+        "text": "spot btc ETFs snap 10-day loser streak with $221.7M inflow."
+      }
+    },
+    "tweet-2": {
+      "type": "Text",
+      "props": {
+        "text": "Ripple fully MiCA-compliant across 30 EEA countries."
+      }
+    },
+    "tweet-3": {
+      "type": "Text",
+      "props": {
+        "text": "Summer.fi $6M exploit → SUMR -18%."
+      }
+    },
+    "tweet-4": {
+      "type": "Text",
+      "props": {
+        "text": "Bitmine +$74M ETH, Saylor sells 3,588 BTC for $216M pref dividends."
+      }
+    },
+    "tweets-ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-ai-label",
+        "tweet-5",
+        "tweet-6",
+        "tweet-7"
+      ]
+    },
+    "tweets-ai-label": {
+      "type": "Badge",
+      "props": {
+        "text": "AI",
+        "variant": "default"
+      }
+    },
+    "tweet-5": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic ships Claude Sonnet 5 (most agentic Sonnet — plans, tools, autonomous)."
+      }
+    },
+    "tweet-6": {
+      "type": "Text",
+      "props": {
+        "text": "OAI announces custom Jalapeño inference chip."
+      }
+    },
+    "tweet-7": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic S-1 confidential @ $965B > OAI."
+      }
+    },
+    "tweets-dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-dev-label",
+        "tweet-8",
+        "tweet-9",
+        "tweet-10"
+      ]
+    },
+    "tweets-dev-label": {
+      "type": "Badge",
+      "props": {
+        "text": "Dev",
+        "variant": "default"
+      }
+    },
+    "tweet-8": {
+      "type": "Text",
+      "props": {
+        "text": "Emdash agentic-dev-env orchestrates Claude Code + Gemini + Codex in parallel."
+      }
+    },
+    "tweet-9": {
+      "type": "Text",
+      "props": {
+        "text": "Bun 3× Node.js going mainstream."
+      }
+    },
+    "tweet-10": {
+      "type": "Text",
+      "props": {
+        "text": "Apple to open-source Foundation Models framework this summer."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-heading",
+        "paper-title",
+        "paper-desc",
+        "paper-links"
+      ]
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-title": {
+      "type": "Text",
+      "props": {
+        "text": "\"LLM-as-a-Verifier: A General-Purpose Verification Framework\" — Kwok/Li/Atreya · HF ↑5",
+        "variant": "lead"
+      }
+    },
+    "paper-desc": {
+      "type": "Text",
+      "props": {
+        "text": "verification as new scaling axis — expected value over scoring-token logits, not discrete judge scores. direct hit on aeon's eval-quality thread day-6."
+      }
+    },
+    "paper-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "paper-link-1",
+        "paper-link-2"
+      ]
+    },
+    "paper-link-1": {
+      "type": "Link",
+      "props": {
+        "label": "Read",
+        "href": "https://arxiv.org/abs/2607.05391"
+      }
+    },
+    "paper-link-2": {
+      "type": "Link",
+      "props": {
+        "label": "PDF",
+        "href": "https://arxiv.org/pdf/2607.05391"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-heading",
+        "hn-items"
+      ]
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "hn-item-1",
+        "hn-item-2",
+        "hn-item-3",
+        "hn-item-4",
+        "hn-item-5"
+      ]
+    },
+    "hn-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-1",
+        "hn-desc-1"
+      ]
+    },
+    "hn-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GLM 5.2 and the coming AI margin collapse",
+        "href": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
+        "source": "AI",
+        "score": "387pts · 238c"
+      }
+    },
+    "hn-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "open-weights closing on frontier while inference cost drops.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-2",
+        "hn-desc-2"
+      ]
+    },
+    "hn-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "A global workspace in language models",
+        "href": "https://www.anthropic.com/research/global-workspace",
+        "source": "AI",
+        "score": "360pts · 134c"
+      }
+    },
+    "hn-desc-2": {
+      "type": "Text",
+      "props": {
+        "text": "anthropic on info-geometric attribution across transformer layers.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-3",
+        "hn-desc-3"
+      ]
+    },
+    "hn-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CoMaps – FOSS offline maps",
+        "href": "https://www.comaps.app/",
+        "source": "Infra",
+        "score": "527pts · 108c"
+      }
+    },
+    "hn-desc-3": {
+      "type": "Text",
+      "props": {
+        "text": "sovereignty-stack thread extends: local audio → local maps.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-4",
+        "hn-desc-4"
+      ]
+    },
+    "hn-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Januscape KVM/x86 escape (CVE-2026-53359)",
+        "href": "https://github.com/V4bel/Januscape",
+        "source": "Security",
+        "score": "107pts · 35c"
+      }
+    },
+    "hn-desc-4": {
+      "type": "Text",
+      "props": {
+        "text": "full PoC published; hypervisor break.",
+        "variant": "caption"
+      }
+    },
+    "hn-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-5",
+        "hn-desc-5"
+      ]
+    },
+    "hn-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kani: model checker for Rust",
+        "href": "https://arxiv.org/abs/2607.01504",
+        "source": "Dev",
+        "score": "142pts · 7c"
+      }
+    },
+    "hn-desc-5": {
+      "type": "Text",
+      "props": {
+        "text": "formal verification for rust hits arxiv.",
+        "variant": "caption"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "followup-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "followup-heading",
+        "followup-1",
+        "followup-2"
+      ]
+    },
+    "followup-heading": {
+      "type": "Text",
+      "props": {
+        "text": "follow-up:",
+        "variant": "lead"
+      }
+    },
+    "followup-1": {
+      "type": "Text",
+      "props": {
+        "text": "SLX day-13 catastrophic -46% vs $0.4753 entry — recut still overdue."
+      }
+    },
+    "followup-2": {
+      "type": "Text",
+      "props": {
+        "text": "GH issues: 0 new (24h clean)."
+      }
+    }
+  }
+}
