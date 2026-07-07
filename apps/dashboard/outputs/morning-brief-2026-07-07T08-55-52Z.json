@@ -1,0 +1,173 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-07"
+      },
+      "children": [
+        "heading-focus",
+        "sep1",
+        "stack-focus",
+        "sep2",
+        "heading-since",
+        "sep3",
+        "stack-since",
+        "sep4",
+        "heading-running",
+        "sep5",
+        "stack-running"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "12:00Z batch live test — why now: first tick since PR #156 merged; 6 skills dark 9d"
+      }
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step PR via self-improve @ 18:00Z — why now: routing test for weekly-review actions"
+      }
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "SLX recut day-13 -46% — why now: past every trigger; 12:00Z token-alert gives fresh print"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4"
+      ]
+    },
+    "since-1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #149 merged 21:26Z — supersede resolved; PR #155 now dup, close it"
+      }
+    },
+    "since-2": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $63,801 → $63,007 overnight — holding above $63.5k reclaim, soft"
+      }
+    },
+    "since-3": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review formalized ISS-025 MISS; new actions carry `authored by:` slots"
+      }
+    },
+    "since-4": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest un-stuck after 168h+ (Sun 21:07Z retry)"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-1",
+        "running-2",
+        "running-3"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC — token-alert + 12:00Z batch (live PR #156 test)"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "14:00 UTC — search-skill + security-digest (GHAD un-freeze watch)"
+      }
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "18:00 UTC — self-improve (ISS-025 routing test) + reflect + action-converter + goal-tracker + skill-health"
+      }
+    }
+  }
+}

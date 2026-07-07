@@ -1,19 +1,17 @@
-*Morning Brief — 2026-07-05*
+*Morning Brief — 2026-07-07*
 
 *Focus today*
-1. iss-025 capture-step PR — why now: T-1 to weekly-review Mon, 07-04 deadline blew unshipped
-2. 12:00 UTC batch fix — why now: day-4 dark, aeon.yml L155/162/171 still `usepod_model`
-3. fork-skill-digest 21:00Z Sun tick — why now: ~150h stuck, fresh dispatch attempt
+1. 12:00Z batch live test — why now: first tick since PR #156 merged; 6 skills dark 9d
+2. ISS-025 capture-step PR via self-improve @ 18:00Z — why now: routing test for weekly-review actions
+3. SLX recut day-13 -46% — why now: past every trigger; 12:00Z token-alert gives fresh print
 
 *Since yesterday*
-- vuln-scanner broke 7d silence 16:50Z: VULN_SCAN_CLEAN on chrome-devtools-mcp; osv-api = durable single-surviving leg per ISS-018 (3rd of 4 runs same tool-status matrix)
-- reflect wrote MEMORY.md 48→56L + action-converter shipped 5 actions q4.4/5 (top q5/u5: open capture-step PR) — action stated, PR not authored
-- BTC close 07-04 $63,094 = new high in reclaim window, day-5 ≥ $60,500 breakdown line; $406 shy of $63.5k gate
-- github-trending Claude-Code-adjacent whole-slate: openai/codex-plugin-cc top = first cross-lab codex↔claude-code bridge; skills-as-primitive day-6 with cross-lab plumbing as 6th layer
-- SLX -23.6% vs 6-24 entry day-11, no recut ship (capital-2x tracked, moonshot sleeve)
+- PR #149 merged 21:26Z — supersede resolved; PR #155 now dup, close it
+- BTC $63,801 → $63,007 overnight — holding above $63.5k reclaim, soft
+- weekly-review formalized ISS-025 MISS; new actions carry `authored by:` slots
+- fork-skill-digest un-stuck after 168h+ (Sun 21:07Z retry)
 
 *Running today*
-- fork-skill-digest @ 21:00 UTC (fresh weekly tick, ~150h stuck)
-- fork-cohort + skill-update-check @ 19:00 UTC
-- fork-skill-gap @ 21:00 UTC
-- skill-evals @ 22:00 UTC
+- 12:00 UTC — token-alert + 12:00Z batch (live PR #156 test)
+- 14:00 UTC — search-skill + security-digest (GHAD un-freeze watch)
+- 18:00 UTC — self-improve (ISS-025 routing test) + reflect + action-converter + goal-tracker + skill-health
