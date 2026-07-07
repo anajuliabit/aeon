@@ -1,19 +1,14 @@
-Done. Quiet run — no alerts fired.
+Done. Quiet run.
 
 ## Summary
 
-**btc-levels 13:55 UTC — 2026-07-07**
+**BTC spot**: $63,957.92 (up ~$841 from the 13:55Z run at $63,116).  
+**Daily close (2026-07-06)**: $64,072.30.
 
-- **Spot:** $63,116 (down ~$105 from 08:53Z read)
-- **Daily close (2026-07-06):** $64,072
-- **Alerts fired:** none
+All four level checks clear — no alerts fired:
+- Leverage-review (≤$45k): not triggered
+- Breakdown (<$60,500 close): not triggered
+- Reclaim $63,500: already flagged `true`, no re-arm (spot > $60,500 floor)
+- Reclaim $65,900: not triggered (next gate is $65,900; spot $63,958 falls short)
 
-Level checks:
-| Level | Check | Result |
-|---|---|---|
-| ≤$45k leverage-review | $63,116 ≤ $45k? | No |
-| Daily close < $60,500 breakdown | $64,072 < $60,500? | No |
-| Spot ≥ $63,500 reclaim | $63,116 ≥ $63,500? (already alerted) | No new fire |
-| Spot ≥ $65,900 reclaim | $63,116 ≥ $65,900? | No |
-
-State updated, log appended, committed. No notification sent (quiet run is the norm).
+No notification sent. State and log committed to main.
