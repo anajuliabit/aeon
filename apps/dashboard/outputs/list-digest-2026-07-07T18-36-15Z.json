@@ -1,0 +1,128 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-07"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_signal",
+        "sep1",
+        "heading_defi",
+        "stack_tweet1",
+        "stack_tweet2",
+        "text_lowsignal",
+        "sep2",
+        "text_status"
+      ]
+    },
+    "text_signal": {
+      "type": "Text",
+      "props": {
+        "text": "One signal: flowslikeosmo repriced ETH long-term off vitalik's lean-ethereum roadmap. Everything else is holiday chatter.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_defi": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Research",
+        "level": "h3"
+      }
+    },
+    "stack_tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "Reads lean-ethereum as a psychology reprice, not fundamentals catalyst; concrete bets are privacy ($RAIL / $ZAMA / $TORN) + STARK-native scaling ($STRK cleanest thematic fit while Base still eats capital, no token)",
+        "likes": 39,
+        "retweets": 2
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Flowslikeosmo/status/2074236984080695347"
+      }
+    },
+    "stack_tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "Bukowski's style-as-answer quote; 7k views on 28 likes = list read it silently",
+        "likes": 28,
+        "retweets": 1
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/hooeem/status/2074238159458816476"
+      }
+    },
+    "text_lowsignal": {
+      "type": "Text",
+      "props": {
+        "text": "Otherwise: 8 low-signal posts (@cyrilXBT 4th-of-July chatter, one-word replies from @Flowslikeosmo / @DefiIgnas / @hooeem)",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: 1642770456720683008=ok(10) | Status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,12 +1,13 @@
-*List Digest — 2026-07-06*
+*List Digest — 2026-07-07*
 
-flowslikeosmo carries the tape — weekly watchlist plus a -46% self-audit on his june cards call, same drawdown magnitude as the open slx position.
+one signal: flowslikeosmo repriced ETH long-term off vitalik's lean-ethereum roadmap. everything else is holiday chatter.
 
-*DeFi (list 1642770456720683008)*
-- x.com/Flowslikeosmo — weekly watchlist thread; the list's anchor call for what he's tracking this week, top likes/rt in the window (♥ 59, ↻ 9) — [View](https://x.com/Flowslikeosmo/status/2073859963936821283)
-- x.com/hooeem — okx europe 8%-back promo (€10 min, €250k cap, paid biweekly for 12mo); 24k views / 0 rt = affiliate content, not organic signal (♥ 52, ↻ 0) — [View](https://x.com/hooeem/status/2073851513554817425)
-- x.com/Flowslikeosmo — self-audit qt of his own june $CARDS call, -46% since post; product ≠ token when the trade has played out (♥ 30, ↻ 0) — [View](https://x.com/Flowslikeosmo/status/2073859462213857509)
+*DeFi Research*
+- x.com/Flowslikeosmo — reads lean-ethereum as a psychology reprice, not fundamentals catalyst; concrete bets are privacy ($RAIL / $ZAMA / $TORN) + STARK-native scaling ($STRK cleanest thematic fit while Base still eats capital, no token) (♥ 39, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2074236984080695347)
+- x.com/hooeem — bukowski's style-as-answer quote; 7k views on 28 likes = list read it silently (♥ 28, ↻ 1) — [View](https://x.com/hooeem/status/2074238159458816476)
+
+otherwise: 8 low-signal posts (@cyrilXBT 4th-of-July chatter, one-word replies from @Flowslikeosmo / @DefiIgnas / @hooeem).
 
 ---
-sources: DeFi=ok(10)
+sources: 1642770456720683008=ok(10)
 status: LIST_DIGEST_OK
