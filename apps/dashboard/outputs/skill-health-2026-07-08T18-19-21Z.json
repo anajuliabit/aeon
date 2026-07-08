@@ -1,0 +1,179 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-07-08"
+      },
+      "children": [
+        "heading_status",
+        "alert_degraded",
+        "sep1",
+        "heading_degraded",
+        "table_degraded",
+        "sep2",
+        "heading_no_data",
+        "text_no_data",
+        "sep3",
+        "heading_summary",
+        "grid_stats"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "HEALTH: DEGRADED(21)",
+        "level": "h2"
+      }
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "Sandbox Truncation Issue",
+        "message": "Day-15: 21 skills share output_tokens=0 signature. Issue cluster: ISS-019/020/021/025",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "Degraded Skills (5 of 21, +16 more)",
+        "level": "h3"
+      }
+    },
+    "table_degraded": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate",
+          "Staleness",
+          "Issue"
+        ],
+        "rows": [
+          [
+            "market-context-refresh",
+            "32%",
+            "10d stale",
+            "INVESTIGATE (output_tokens=0)"
+          ],
+          [
+            "defi-monitor",
+            "53%",
+            "10d stale",
+            "INVESTIGATE (output_tokens=0)"
+          ],
+          [
+            "aixbt-pulse",
+            "47%",
+            "10d stale",
+            "INVESTIGATE (output_tokens=0)"
+          ],
+          [
+            "narrative-tracker",
+            "33%",
+            "10d stale",
+            "INVESTIGATE (output_tokens=0)"
+          ],
+          [
+            "cost-report",
+            "11%",
+            "9d stale",
+            "INVESTIGATE (output_tokens=0) → ISS-025"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_no_data": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data (3)",
+        "level": "h3"
+      }
+    },
+    "text_no_data": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "grid_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_healthy",
+        "stat_degraded",
+        "stat_no_data",
+        "stat_open_issues",
+        "stat_resolved"
+      ]
+    },
+    "stat_healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "8"
+      }
+    },
+    "stat_degraded": {
+      "type": "Stat",
+      "props": {
+        "label": "Degraded",
+        "value": "21"
+      }
+    },
+    "stat_no_data": {
+      "type": "Stat",
+      "props": {
+        "label": "No Data",
+        "value": "3"
+      }
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "11"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    }
+  }
+}
