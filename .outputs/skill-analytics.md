@@ -1,18 +1,15 @@
-*Skill Analytics — 2026-07-01*
-2 scheduled skill(s) didn't run this window — fork-skill-gap, operator-scorecard
+*Skill Analytics — 2026-07-08*
+11 scheduled skill(s) didn't run this window — 12:00 UTC batch cluster dark for 10 days (8 skills, ISS-027), Monday scheduler gaps (3 skills)
 
-Window: last 7d · ~270 runs · 42 skills · 99.6% success
-Anomalies: 3
+Window: last 7d · 236 runs · 30 skills · 100% GH-success
+Anomalies: 11
 
-🔴 Critical:
-- fork-skill-gap — SILENT: scheduled `0 21 * * 0`, zero runs in window (Sunday slot)
-- operator-scorecard — SILENT: scheduled `30 10 * * 1`, Mon 10:30Z perpetually missed (scheduler-side, known gap)
+🔴 Critical (SILENT × 11):
+- token-movers, on-chain-monitor, defi-monitor, defi-overview, token-pick, market-context-refresh, narrative-tracker — 10 days dark (ISS-027 12:00 UTC batch cluster; PR #156 merged 7-06 but scheduler-side gap persists)
+- aixbt-pulse — 10 days dark (dead-slot + XAI quota blocked, day-10)
+- operator-scorecard — never run (8+ week chronic Monday miss)
+- weekly-shiplog, cost-report — missed July 7 (scheduler gap)
 
-🟠 Degraded:
-- cost-report — LOW_SUCCESS: 29% over 7 runs (2 success, 1 failure, 4 cancelled)
+Top by runs: btc-levels (50), heartbeat (26), thought-review (16)
 
-Top by runs: btc-levels (47), heartbeat (23), thought-review (15)
-
-vs last run (6-24): 99.6% vs 34.2% — sandbox-truncation cluster cleared for this window
-
-Full: articles/skill-analytics-2026-07-01.md
+Full: articles/skill-analytics-2026-07-08.md

@@ -1,0 +1,206 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Analytics"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "date_heading",
+        "summary_text",
+        "sep1",
+        "metrics_stack",
+        "anomalies_text",
+        "sep2",
+        "critical_alert",
+        "critical_items_stack",
+        "sep3",
+        "top_heading",
+        "top_stack",
+        "sep4",
+        "full_link"
+      ]
+    },
+    "date_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-07-08",
+        "level": "h3"
+      }
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "11 scheduled skill(s) didn't run this window — 12:00 UTC batch cluster dark for 10 days (8 skills, ISS-027), Monday scheduler gaps (3 skills)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_window",
+        "stat_runs",
+        "stat_skills",
+        "stat_success"
+      ]
+    },
+    "stat_window": {
+      "type": "Stat",
+      "props": {
+        "label": "Window",
+        "value": "last 7d"
+      }
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "236"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "30"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "GH-success",
+        "value": "100%"
+      }
+    },
+    "anomalies_text": {
+      "type": "Text",
+      "props": {
+        "text": "Anomalies: 11"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "critical_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 Critical",
+        "message": "SILENT × 11",
+        "type": "error"
+      }
+    },
+    "critical_items_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical_1",
+        "critical_2",
+        "critical_3",
+        "critical_4"
+      ]
+    },
+    "critical_1": {
+      "type": "Text",
+      "props": {
+        "text": "token-movers, on-chain-monitor, defi-monitor, defi-overview, token-pick, market-context-refresh, narrative-tracker — 10 days dark (ISS-027 12:00 UTC batch cluster; PR #156 merged 7-06 but scheduler-side gap persists)"
+      }
+    },
+    "critical_2": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse — 10 days dark (dead-slot + XAI quota blocked, day-10)"
+      }
+    },
+    "critical_3": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard — never run (8+ week chronic Monday miss)"
+      }
+    },
+    "critical_4": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog, cost-report — missed July 7 (scheduler gap)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "top_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top by runs",
+        "level": "h4"
+      }
+    },
+    "top_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc",
+        "stat_heartbeat",
+        "stat_thought"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "btc-levels",
+        "value": "50"
+      }
+    },
+    "stat_heartbeat": {
+      "type": "Stat",
+      "props": {
+        "label": "heartbeat",
+        "value": "26"
+      }
+    },
+    "stat_thought": {
+      "type": "Stat",
+      "props": {
+        "label": "thought-review",
+        "value": "16"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "full_link": {
+      "type": "Link",
+      "props": {
+        "label": "Full: articles/skill-analytics-2026-07-08.md",
+        "href": "articles/skill-analytics-2026-07-08.md"
+      }
+    }
+  }
+}
