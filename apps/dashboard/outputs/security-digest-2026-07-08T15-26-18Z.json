@@ -1,0 +1,1029 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-08",
+        "description": "Verdict: 4 fresh KEV entries end a 4-day quiet window, 5 to schedule, 3 to monitor. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "section_patch_today",
+        "sep1",
+        "section_patch_week",
+        "sep2",
+        "section_monitor"
+      ]
+    },
+    "section_patch_today": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_today",
+        "item_cve_48282",
+        "item_cve_55255",
+        "item_npm_malware"
+      ]
+    },
+    "heading_today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item_cve_48282": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title_48282",
+        "meta_48282",
+        "desc_48282",
+        "action_48282"
+      ]
+    },
+    "title_48282": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_48282",
+        "badge_coldusion"
+      ]
+    },
+    "link_48282": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48282",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-48282",
+        "source": "NVD"
+      },
+      "children": []
+    },
+    "badge_coldusion": {
+      "type": "Badge",
+      "props": {
+        "text": "Adobe ColdFusion",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "meta_48282": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "kev_48282",
+        "epss_48282",
+        "cvss_48282"
+      ]
+    },
+    "kev_48282": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-07-07",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "epss_48282": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.032",
+        "delta": "p87"
+      },
+      "children": []
+    },
+    "cvss_48282": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS n/a",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "desc_48282": {
+      "type": "Text",
+      "props": {
+        "text": "Path traversal → arbitrary code execution. Exploited per CISA.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_48282": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Apply Adobe emergency bulletin today on any ColdFusion instance."
+      },
+      "children": []
+    },
+    "item_cve_55255": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title_55255",
+        "meta_55255",
+        "desc_55255",
+        "action_55255"
+      ]
+    },
+    "title_55255": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_55255",
+        "badge_langflow"
+      ]
+    },
+    "link_55255": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-55255",
+        "href": "https://github.com/advisories/GHSA-qrpv-q767-xqq2",
+        "source": "GitHub Advisory"
+      },
+      "children": []
+    },
+    "badge_langflow": {
+      "type": "Badge",
+      "props": {
+        "text": "langflow (pip)",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "meta_55255": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "kev_55255",
+        "epss_55255",
+        "cvss_55255"
+      ]
+    },
+    "kev_55255": {
+      "type": "Text",
+      "props": {
+        "text": "KEV added 2026-07-07",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "epss_55255": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.004"
+      },
+      "children": []
+    },
+    "cvss_55255": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.4"
+      },
+      "children": []
+    },
+    "desc_55255": {
+      "type": "Text",
+      "props": {
+        "text": "IDOR on /api/v1/responses — authenticated attacker runs any user's flow. PoC in advisory.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_55255": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Upgrade langflow to ≥1.9.1 today."
+      },
+      "children": []
+    },
+    "item_npm_malware": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_npm",
+        "desc_npm",
+        "typosquats_list",
+        "action_npm"
+      ]
+    },
+    "heading_npm": {
+      "type": "Heading",
+      "props": {
+        "text": "npm malware surge",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "desc_npm": {
+      "type": "Text",
+      "props": {
+        "text": "240 new advisories in 48h (post-holiday brand-jack backlog flushes). All confirmed malicious.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "typosquats_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "typosquat_nodemon",
+        "typosquat_vite",
+        "typosquat_tailwind",
+        "typosquat_mci"
+      ]
+    },
+    "typosquat_nodemon": {
+      "type": "Badge",
+      "props": {
+        "text": "nodemon-node",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "typosquat_vite": {
+      "type": "Badge",
+      "props": {
+        "text": "vite-json-pwa",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "typosquat_tailwind": {
+      "type": "Badge",
+      "props": {
+        "text": "tailwindcss-effector",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "typosquat_mci": {
+      "type": "Badge",
+      "props": {
+        "text": "mci-sdk",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "action_npm": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Audit npm installs from 2026-07-06 forward; rotate creds exposed to fresh unfamiliar deps."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_patch_week": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_week",
+        "item_9router",
+        "item_langroid",
+        "item_better_auth",
+        "item_decompress",
+        "item_cilium"
+      ]
+    },
+    "heading_week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item_9router": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title_9router",
+        "meta_9router",
+        "desc_9router",
+        "action_9router"
+      ]
+    },
+    "title_9router": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_9router",
+        "badge_9router"
+      ]
+    },
+    "link_9router": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-qvfm-67h2-2qfx",
+        "href": "https://github.com/advisories/GHSA-qvfm-67h2-2qfx",
+        "source": "GitHub Advisory"
+      },
+      "children": []
+    },
+    "badge_9router": {
+      "type": "Badge",
+      "props": {
+        "text": "9router (npm)",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "meta_9router": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cvss_9router_primary",
+        "cvss_9router_secondary"
+      ]
+    },
+    "cvss_9router_primary": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.9 (GHSA-qvfm)"
+      },
+      "children": []
+    },
+    "cvss_9router_secondary": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "10.0 (GHSA-vjc7)"
+      },
+      "children": []
+    },
+    "desc_9router": {
+      "type": "Text",
+      "props": {
+        "text": "Credential theft + DB takeover + unauth CRUD on /api/providers. Two criticals same package. No patch yet.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_9router": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Drop 9router pending upstream fix; audit deploys using it now."
+      },
+      "children": []
+    },
+    "item_langroid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title_langroid",
+        "meta_langroid",
+        "desc_langroid",
+        "action_langroid"
+      ]
+    },
+    "title_langroid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_langroid",
+        "badge_langroid"
+      ]
+    },
+    "link_langroid": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-q9p7-wqxg-mrhc",
+        "href": "https://github.com/advisories/GHSA-q9p7-wqxg-mrhc",
+        "source": "GitHub Advisory"
+      },
+      "children": []
+    },
+    "badge_langroid": {
+      "type": "Badge",
+      "props": {
+        "text": "langroid (pip)",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "meta_langroid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cvss_langroid",
+        "cves_langroid"
+      ]
+    },
+    "cvss_langroid": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "10.0"
+      },
+      "children": []
+    },
+    "cves_langroid": {
+      "type": "Text",
+      "props": {
+        "text": "3 criticals (CVE-2026-54769/55615/54760) · no patch yet",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "desc_langroid": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox escape → RCE via TableChatAgent eval(). Also Cypher injection in Neo4jChatAgent + SQL blocklist bypass.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_langroid": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Drop langroid pending upstream fix; rotate DB creds if it touched them."
+      },
+      "children": []
+    },
+    "item_better_auth": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title_better_auth",
+        "meta_better_auth",
+        "desc_better_auth",
+        "action_better_auth"
+      ]
+    },
+    "title_better_auth": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_better_auth",
+        "badge_better_auth"
+      ]
+    },
+    "link_better_auth": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-pw9m-5jxm-xr6h",
+        "href": "https://github.com/advisories/GHSA-pw9m-5jxm-xr6h",
+        "source": "GitHub Advisory"
+      },
+      "children": []
+    },
+    "badge_better_auth": {
+      "type": "Badge",
+      "props": {
+        "text": "better-auth (npm)",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "meta_better_auth": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cvss_better_auth_range",
+        "cluster_better_auth"
+      ]
+    },
+    "cvss_better_auth_range": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.6 / 9.1"
+      },
+      "children": []
+    },
+    "cluster_better_auth": {
+      "type": "Text",
+      "props": {
+        "text": "13-CVE cluster · fix 1.6.11",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "desc_better_auth": {
+      "type": "Text",
+      "props": {
+        "text": "OAuth refresh-token replay + SSO SSRF + alg=none default + oidc-provider bugs. One package, many holes.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_better_auth": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Upgrade better-auth to ≥1.6.11 across all apps using it."
+      },
+      "children": []
+    },
+    "item_decompress": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title_decompress",
+        "meta_decompress",
+        "desc_decompress",
+        "action_decompress"
+      ]
+    },
+    "title_decompress": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_decompress",
+        "badge_decompress"
+      ]
+    },
+    "link_decompress": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-mp2f-45pm-3cg9",
+        "href": "https://github.com/advisories/GHSA-mp2f-45pm-3cg9",
+        "source": "GitHub Advisory"
+      },
+      "children": []
+    },
+    "badge_decompress": {
+      "type": "Badge",
+      "props": {
+        "text": "decompress (npm)",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "meta_decompress": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cve_decompress",
+        "cvss_decompress",
+        "status_decompress"
+      ]
+    },
+    "cve_decompress": {
+      "type": "Text",
+      "props": {
+        "text": "CVE-2026-53486",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "cvss_decompress": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.1"
+      },
+      "children": []
+    },
+    "status_decompress": {
+      "type": "Text",
+      "props": {
+        "text": "no EPSS",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "desc_decompress": {
+      "type": "Text",
+      "props": {
+        "text": "Zip-slip in archive extraction. Original decompress unpatched (EOL); maintained fork carries the fix.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_decompress": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Swap decompress → @xhmikosr/decompress ≥10.2.1 (10.x) or ≥11.1.3 (11.x)."
+      },
+      "children": []
+    },
+    "item_cilium": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title_cilium",
+        "meta_cilium",
+        "desc_cilium",
+        "action_cilium"
+      ]
+    },
+    "title_cilium": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_cilium",
+        "badge_cilium"
+      ]
+    },
+    "link_cilium": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-3fcv-jvfp-m4q9",
+        "href": "https://github.com/advisories/GHSA-3fcv-jvfp-m4q9",
+        "source": "GitHub Advisory"
+      },
+      "children": []
+    },
+    "badge_cilium": {
+      "type": "Badge",
+      "props": {
+        "text": "cilium (Go)",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "meta_cilium": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cve_cilium",
+        "cvss_cilium"
+      ]
+    },
+    "cve_cilium": {
+      "type": "Text",
+      "props": {
+        "text": "CVE-2026-49445",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "cvss_cilium": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.2"
+      },
+      "children": []
+    },
+    "desc_cilium": {
+      "type": "Text",
+      "props": {
+        "text": "Local Envoy admin socket → info disclosure + cluster disruption. Backport lines shipped.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_cilium": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Upgrade cilium to ≥1.19.2 (or 1.18.8 / 1.17.14)."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_monitor",
+        "item_goploy",
+        "item_zcash",
+        "item_open_webui"
+      ]
+    },
+    "heading_monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item_goploy": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title_goploy",
+        "meta_goploy",
+        "desc_goploy",
+        "action_goploy"
+      ]
+    },
+    "title_goploy": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_goploy",
+        "badge_goploy"
+      ]
+    },
+    "link_goploy": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-26rh-24rg-j3vv",
+        "href": "https://github.com/advisories/GHSA-26rh-24rg-j3vv",
+        "source": "GitHub Advisory"
+      },
+      "children": []
+    },
+    "badge_goploy": {
+      "type": "Badge",
+      "props": {
+        "text": "goploy (Go)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "meta_goploy": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cvss_goploy",
+        "cves_goploy"
+      ]
+    },
+    "cvss_goploy": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.6"
+      },
+      "children": []
+    },
+    "cves_goploy": {
+      "type": "Text",
+      "props": {
+        "text": "CVE-2026-53552 + 53553 · no fix yet",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "desc_goploy": {
+      "type": "Text",
+      "props": {
+        "text": "Cross-namespace IDOR + RCE + path-traversal file read.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_goploy": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Track for patched release; don't expose goploy admin."
+      },
+      "children": []
+    },
+    "item_zcash": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "title_zcash",
+        "meta_zcash",
+        "desc_zcash",
+        "action_zcash"
+      ]
+    },
+    "title_zcash": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_zcash",
+        "badge_zcash_crates"
+      ]
+    },
+    "link_zcash": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-ww9q-8r59-xv46",
+        "href": "https://github.com/advisories/GHSA-ww9q-8r59-xv46",
+        "source": "GitHub Advisory"
+      },
+      "children": []
+    },
+    "badge_zcash_crates": {
+      "type": "Badge",
+      "props": {
+        "text": "halo2_gadgets / orchard / zebrad (crates.io)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "meta_zcash": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cve_zcash",
+        "cvss_zcash"
+      ]
+    },
+    "cve_zcash": {
+      "type": "Text",
+      "props": {
+        "text": "CVE-2026-54496",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "cvss_zcash": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.3"
+      },
+      "children": []
+    },
+    "desc_zcash": {
+      "type": "Text",
+      "props": {
+        "text": "Zcash Orchard Action circuit soundness break in halo2_gadgets scalar mult. Fixes: halo2_gadgets 0.5.0, orchard 0.14.0, zcash_primitives 0.28.0.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_zcash": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade only if consuming these crates (niche outside Zcash tooling)."
+      },
+      "children": []
+    },
+    "item_open_webui": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_webui",
+        "meta_webui",
+        "desc_webui",
+        "action_webui"
+      ]
+    },
+    "heading_webui": {
+      "type": "Heading",
+      "props": {
+        "text": "open-webui (pip) XSS/RCE cluster",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "meta_webui": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "cvss_webui_range",
+        "date_webui"
+      ]
+    },
+    "cvss_webui_range": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.3–8.5"
+      },
+      "children": []
+    },
+    "date_webui": {
+      "type": "Text",
+      "props": {
+        "text": "all published 2026-07-07",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "desc_webui": {
+      "type": "Text",
+      "props": {
+        "text": "8 issues: stored XSS via iframe embeds + unescaped markdown → account takeover + RCE via functions.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_webui": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Track open-webui deployments; upgrade at next planned window."
+      },
+      "children": []
+    }
+  }
+}
