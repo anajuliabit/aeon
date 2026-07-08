@@ -1,0 +1,293 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-08",
+        "description": "7 goals — 0 at risk, 0 needs attention, 4 on track, 2 blocked, 1 done (overall → flat)"
+      },
+      "children": [
+        "stat_summary",
+        "sep1",
+        "blocked_section",
+        "sep2",
+        "ontrack_section",
+        "sep3",
+        "done_section",
+        "sep4",
+        "sources"
+      ]
+    },
+    "stat_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_at_risk",
+        "stat_needs_attention",
+        "stat_on_track",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_at_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_needs_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_on_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "4"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "1"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_blocked",
+        "alert_xai",
+        "alert_onchain"
+      ]
+    },
+    "heading_blocked": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "alert_xai": {
+      "type": "Alert",
+      "props": {
+        "title": "XAI quota recovery",
+        "message": "Day 23 since 2026-06-16 exhaustion. Action: operator top-up Team 3a8b4c1e credit",
+        "type": "warning"
+      }
+    },
+    "alert_onchain": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator on-chain config",
+        "message": "Day 31 — defi-monitor NO_CONFIG, ALCHEMY/ETHERSCAN keys null. Action: operator add type:pool + type:position entries to on-chain-watches.yml, populate ALCHEMY_API_KEY + ETHERSCAN_API_KEY",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ontrack_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_ontrack",
+        "goal_sandbox",
+        "goal_batch",
+        "goal_btc",
+        "goal_slx"
+      ]
+    },
+    "heading_ontrack": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "goal_sandbox": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal_sandbox_title",
+        "goal_sandbox_details"
+      ]
+    },
+    "goal_sandbox_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "level": "h3"
+      }
+    },
+    "goal_sandbox_details": {
+      "type": "Text",
+      "props": {
+        "text": "Day 15 — 0d idle, 335 activity/14d (was 346, → flat). Chain-runner capture-step PR still un-authored. T-5 to weekly-review deadline 2026-07-13.",
+        "variant": "body"
+      }
+    },
+    "goal_batch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal_batch_title",
+        "goal_batch_details"
+      ]
+    },
+    "goal_batch_title": {
+      "type": "Heading",
+      "props": {
+        "text": "12:00 UTC batch",
+        "level": "h3"
+      }
+    },
+    "goal_batch_details": {
+      "type": "Text",
+      "props": {
+        "text": "Day-5 of failed live test post PR #150 — 0d idle, 117 activity/14d (was 138, → flat). PR #156 fix shipped but 8-skill 6-28 cluster (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) still scheduler-side never-run 10 days running.",
+        "variant": "body"
+      }
+    },
+    "goal_btc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal_btc_title",
+        "goal_btc_details"
+      ]
+    },
+    "goal_btc_title": {
+      "type": "Heading",
+      "props": {
+        "text": "BTC bounce",
+        "level": "h3"
+      }
+    },
+    "goal_btc_details": {
+      "type": "Text",
+      "props": {
+        "text": "Day-5 above $60,500 breakdown line — 0d idle, 273 activity/14d (was 253, → flat). 7-08 spot slipped back below $63.5k gate ($61,975 at 16:54Z) but well above $60.5k floor. reclaim63500Alerted holds. $65,900 full-reclaim gate untouched.",
+        "variant": "body"
+      }
+    },
+    "goal_slx": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal_slx_title",
+        "goal_slx_alert",
+        "goal_slx_details"
+      ]
+    },
+    "goal_slx_title": {
+      "type": "Heading",
+      "props": {
+        "text": "SLX open pick",
+        "level": "h3"
+      }
+    },
+    "goal_slx_alert": {
+      "type": "Badge",
+      "props": {
+        "text": "DAY-11 CATASTROPHIC",
+        "variant": "destructive"
+      }
+    },
+    "goal_slx_details": {
+      "type": "Text",
+      "props": {
+        "text": "Recut overdue — 0d idle, 116 activity/14d (was 114, → flat). Day-14 -46% vs entry $0.4753 → last CG print $0.256 (7-05). daily-routine + heartbeat flagged P2 for 5th consecutive day. Decision-gate, not infra.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_done",
+        "goal_pr149"
+      ]
+    },
+    "heading_done": {
+      "type": "Heading",
+      "props": {
+        "text": "DONE",
+        "level": "h2"
+      }
+    },
+    "goal_pr149": {
+      "type": "Text",
+      "props": {
+        "text": "PR #149 docs(skill-graph) — completed 2026-07-06",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=shallow, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
