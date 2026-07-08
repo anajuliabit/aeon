@@ -1,6 +1,19 @@
-# Market Context (as of 2026-07-07)
+# Market Context (as of 2026-07-08)
 
-> **Take:** BTC **RECLAIM $63.5k DAY-2 HOLDING** — 7-06 daily close $64,072 = first daily close above $63.5k gate (post-reclaim high). 7-07 ticks $63,007 → $63,958 all above gate. Bounce day-7 with reclaim confirmed on-tape and **BTC ETFs +$221.7M snap 10-day loser streak** (biggest 2mo daily haul) = 3-signal alignment (spot + close + flow). Next gate $65,900 full-reclaim; below-$60,500 re-trip re-arms breakdown alert. **SLX day-13 CATASTROPHIC** -46% vs entry, recut STILL overdue (3rd consecutive daily-routine surface). Conviction: medium+ → medium-high (regime pivot holds, first close-above-gate lands, ETF flow flips positive — reads as multi-signal validation not counter-trend blip).
+> **Take:** BTC **reclaim day-3 SOFTENS** — 7-07 daily close $63,351 = close day-2 above $63.5k gate (down from 7-06 $64,072 first-close-above). 7-08 spot ticks $61,995 → $62,049 → $61,975 = **all above $60.5k floor but below $63.5k reclaim gate on spot**. `reclaim63500Alerted=true` holds (no re-arm, spot > floor). Bounce day-8 loses spot-above-gate but keeps close-above-gate. 3-signal alignment (spot + close + flow) softens to close-only. **Watchlist-wide risk-off 7-08** — GITLAWB CAPITULATION rail-trip (-23.07%, day-3 completes 7-05 reversal), MAMO 6-day green streak SNAPPED (-6.79% sharpest 1d), REPPO breakout give-back (-13.19%), WELL flat (-1.34% day-3 red on 2.15× vol). **SLX day-14 CATASTROPHIC** -46% vs entry, recut STILL overdue (4th consecutive surface). Conviction: medium-high → medium (regime holds on close but spot softens; tape-side risk-off aligns).
+
+## What Changed 7-07 → 7-08
+- **BTC spot slipped below $63.5k gate 7-08** — first spot-below-gate print in 3 days. Close still above (7-07 daily close $63,351 = close day-2 above). Alert state holds (no re-arm — spot > $60.5k floor).
+- **Watchlist-wide risk-off day** — GITLAWB CAPITULATION rail-trip (-23.07%, first below $0.00005 handle since 7-03/7-04 pump-window), MAMO 6-day green streak SNAPPED (-6.79%), REPPO breakout give-back (-13.19%). Only WELL held vol strength (2.15× baseline).
+- **12:00 UTC batch dark day-11 CONFIRMED** — 7-08 12:00Z tick again caught up at 12:54Z (token-alert + btc-levels only); 6-skill batch still last_dispatch 6-28. ISS-027 filed 7-07.
+- **PR #155 + PR #160 both MERGED 7-08** — open PR list empty. #155 supersede-candidate shipped 13:22Z; #160 operator ISS-022 INDEX flip 13:31Z. Open issues 12 → 11.
+- **aixbt-pulse dead-slot day-10 CONFIRMED** — 7-08 09:00Z tick MISSED. State file ~260h stale = 10.8× interval.
+- **Skills-as-primitive convergence day-9** — addyosmani/agent-skills 72k stars @ 143d + TencentCloud/CubeSandbox = 2nd Chinese-lab entry in 4 days.
+- **Claude Code as consumer-AI-app substrate (NEW pattern 7-08)** — ai-job-search viral template + claude-video slash-command + CodexBar cost-viz bar. Substrate-becomes-platform.
+- **Sovereignty stack day-7** — pocket-tts (Kyutai) adds local audio *generation* to complement local audio *capture* (meetily 7-05).
+- **npm brand-jack wave day-1** — 240 malware advisories in 48h (~4× baseline). Post-holiday backlog flush pattern.
+- **4 fresh KEV entries 7-07 ended 4-day KEV-quiet window** — Adobe ColdFusion, Langflow, JoomShaper + Joomlack.
+- **SLX day-14 CATASTROPHIC** — 4th consecutive stale surface (no fresh CG print since 7-05 12:59Z). Weekly-review operator-slot targets recut, deadline 7-13.
 
 ## What Changed 7-06 → 7-07
 - **BTC daily close $64,072 for 7-06 = first close above $63.5k gate** — turns intraday reclaim alert (fired 7-06 01:29Z) into on-tape confirmation. Bounce arc: breakdown (8d) → hold-above-line (5d) → reclaim (6d) → **daily close breakout (day-7)**.

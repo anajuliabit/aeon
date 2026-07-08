@@ -896,3 +896,50 @@ See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 - **Kani Rust model checker HN 142pts** — formal-verification tool, extends Rust-in-toolchain thread. Extends 7-04 Rust-in-Linux-kernel signal.
 - **GHAD un-freeze wave watch** — post Mon 7-06 US business hours, backlog expected to include 7-03/7-04/7-05/7-06-am discoveries + npm brandjack resumption. Not yet reflected in security-digest since 7-06 14:36Z (skill hasn't run 7-07 as of consolidation).
 - **dulwich pip CVE-2026-52726 RCE-via-clone carry-over unresolved day-3** — highest THIS-WEEK operational priority still stands.
+
+## 2026-07-08 rollup
+
+### Watchlist — risk-off day, 1 rail-trip
+Prices from token-alert 12:54Z (7-08 12:00Z batch caught up at 12:54Z, still dark day-11).
+- **WELL $0.00361005 -1.34% 24h** — day-3 red near $0.00361 handle; vol $3,077K = **2.15× baseline**, back-to-back ≥$2M print extends 7-07's 6.14× resurrection. Only watchlist token holding vol strength.
+- **MAMO $0.00869137 -7.28% 24h REVERSAL** — snaps 6-day green streak with sharpest 1d drop of window; first close < $0.009 since streak began; vol $880K = 0.96× flat = **sellers didn't step back for reversal** (participation-flat capitulation shape).
+- **REPPO $0.02221340 -13.92% 24h** — breakout give-back, snaps 7-07 breakout-resumption back through $0.025 handle to $0.022; vol $121K = 0.62× exhale = sellers taking profit into thin book. Rail-miss by 1.08pp (92.8% of 15% rail).
+- **GITLAWB $0.00004425 -23.07% 24h CAPITULATION (rail-tripped)** — day-3 red extends 7-05 reversal; first print below $0.00005 handle since 7-03/7-04 pump-window opened; vol $435K = 0.94× flat = sellers finishing not rebuilding. Alert fired, hash `57a231e7`.
+- **Arc**: 7-05 GITLAWB reversal (-17.25%) → 7-07 extension (-2.91%) → 7-08 capitulation (-23.07%) = pump-window fully given back over 3 days on baseline-flat vol. MAMO 6-day streak snap adjacent = watchlist-wide risk-off shape.
+
+### BTC tape — softens day-3 into arc
+- **7-07 daily close $63,351** — close day-2 above $63.5k gate (7-06 close $64,072 was first). Gate holds on close basis.
+- **7-08 spot ticks $61,995 (09:03Z) → $62,049 (12:53Z) → $61,975 (16:54Z)** — all above $60.5k breakdown floor but **below $63.5k reclaim gate on spot**. `reclaim63500Alerted=true` holds (no re-arm, spot > $60.5k floor).
+- Bounce day-8: close-above-gate day-2 but spot-drift-below. 3-signal alignment (spot + close + flow) softens to close-only.
+- Next gate $65.9k full-reclaim (~$3.9k above spot). Re-arm floor $60.5k (~$1.5k below spot).
+
+### SLX pick — day-14 CATASTROPHIC, 4th surface
+- HIGH 9/10 6-24 pick $0.4753 → last CG print 7-05 12:59Z $0.256 = **-46% vs entry**.
+- No fresh CG print 7-06/7-07/7-08 (token-alert scope doesn't cover SLX; 3rd consecutive stale day).
+- Position past every recut trigger. Surfaced as top follow-up in daily-routine 7-05/7-06/7-07 + reflect 7-06/7-07/7-08 = 4 consecutive days.
+- Weekly-review 7-06 action-list `Authored by: operator × 1` slot targets this. Deadline 7-13.
+
+### Meta signals (extended 7-08)
+- **addyosmani/agent-skills 72k stars @ 143d** — Chrome-lead cross-domain skills library, highest baseline yet. Skills-as-primitive convergence day-9.
+- **TencentCloud/CubeSandbox (Rust)** — 2nd Chinese-lab entry to agent-runtime layer in 4 days (after alibaba/page-agent 7-05). Multi-region cross-lab layer stack extends.
+- **Claude Code as consumer-AI-app substrate (NEW)** — MadsLorentzen/ai-job-search (22× baseline template) + bradautomates/claude-video (`/watch` extension) + steipete/CodexBar (cost-visibility bar). Substrate-becomes-platform tell.
+- **pocket-tts (Kyutai, RETURNING)** — sovereignty stack day-7 (audio *generation* to complement 7-05 meetily audio *capture*).
+
+### Security (7-08 post-freeze wave)
+- **npm brand-jack wave day-1** — 240 malware advisories in 48h (~4× baseline). nodemon-node typosquat + vite-json-pwa + tailwindcss-effector + tailwind-animator-scroll + mci-sdk families + testing packages. Post-holiday backlog flush pattern matches HF-papers 7-05 + GHAD 7-06 recovery.
+- **4 fresh KEV entries 7-07 ended 4-day KEV-quiet window** — Adobe ColdFusion path-traversal-RCE, Langflow IDOR authz-bypass, JoomShaper + Joomlack Page Builder file-upload-RCE. Post-holiday CISA batch.
+- **better-auth cluster (~13 CVEs single package, fix 1.6.11)** — 2 critical + ~11 high (OAuth refresh-replay, SSO SSRF, alg=none default, XSS, SCIM takeover). Coordinated advisory batch.
+- **langroid pip cluster (3 critical LLM-agent-framework CVEs)** — RCE via eval() + Cypher injection + SQL blocklist bypass. LLM-tooling supply chain now live-target axis (Langflow adjacent).
+- **9router (npm) 3-CVE cluster day-2** — 2× CVSS 10.0 credential theft, no upstream patch. Follow-up disclosure batch from pre-freeze 7-02.
+- **cilium 3-line backport (CVE-2026-49445)** — Envoy admin socket; container-networking upstream prioritizing responsible-disclosure Mondays post-holiday.
+
+### Regulatory
+- **CFTC v. Vernon / Argent Capital release 9264-26** — $14M pool fraud complaint, crypto-tangential enforcement (7-07).
+- **CLARITY Act H.R. 3633 senate stall** — missed 7-04 signing target; Senate returns 7-13 → ~3-week decision window before Aug recess ~8-01.
+- **SEC Regulation Crypto safe harbor RIN 3235-AN38** — expected proposed rule this month per SEC agenda.
+
+### Fleet-side (crypto-adjacent)
+- **PR #155 docs(skill-graph) MERGED 7-08 13:22Z** — supersede-candidate shipped, day-3 stall ended.
+- **PR #160 fix(issues) close ISS-022 MERGED 7-08 13:31Z** — operator INDEX flip; open issues 12 → 11.
+- **12:00 UTC batch dark day-11** — ISS-027 codified. Only token-alert + btc-levels catch up (~53min late). 6-skill batch still last_dispatch 6-28.
+- **aixbt-pulse dead-slot day-10** — 7-08 09:00Z tick MISSED. State file last_success 6-28T21:21Z (~260h = 10.8× interval).
