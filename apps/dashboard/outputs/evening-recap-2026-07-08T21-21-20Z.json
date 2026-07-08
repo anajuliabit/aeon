@@ -1,0 +1,390 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-08",
+        "description": "TL;DR: 2 PRs merged and security-digest fired 4 KEVs + npm brand-jack wave — good day at the content layer, but 12:00Z batch dark d11 and SLX recut overdue are the open debt"
+      },
+      "children": [
+        "headlines-heading",
+        "headlines-stack",
+        "separator-1",
+        "notable-heading",
+        "notable-stack",
+        "separator-2",
+        "decisions-heading",
+        "decisions-stack",
+        "separator-3",
+        "footer-text"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headlines-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5"
+      ]
+    },
+    "h1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-badge",
+        "h1-text",
+        "h1-link"
+      ]
+    },
+    "h1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PRs",
+        "variant": "default"
+      }
+    },
+    "h1-text": {
+      "type": "Text",
+      "props": {
+        "text": "#155 docs(skill-graph) + #160 fix(ISS-022) both merged 7-08 13:22–13:31Z · open issues 12→11",
+        "variant": "body"
+      }
+    },
+    "h1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/aeonframework/aeon/pull/155",
+        "href": "https://github.com/aeonframework/aeon/pull/155"
+      }
+    },
+    "h2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-badge",
+        "h2-text"
+      ]
+    },
+    "h2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "default"
+      }
+    },
+    "h2-text": {
+      "type": "Text",
+      "props": {
+        "text": "11 silent scheduled anomalies named (12:00Z batch d11 + Mon slots) · articles/skill-analytics-2026-07-08.md",
+        "variant": "body"
+      }
+    },
+    "h3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-badge",
+        "h3-text"
+      ]
+    },
+    "h3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "default"
+      }
+    },
+    "h3-text": {
+      "type": "Text",
+      "props": {
+        "text": "7 repos shipped: addyosmani/agent-skills 72k, ai-job-search 22×, CubeSandbox 2nd Chinese-lab · .outputs/github-trending.md",
+        "variant": "body"
+      }
+    },
+    "h4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-badge",
+        "h4-text"
+      ]
+    },
+    "h4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "destructive"
+      }
+    },
+    "h4-text": {
+      "type": "Text",
+      "props": {
+        "text": "4 KEVs post-holiday flush (Adobe ColdFusion RCE, Langflow authz-bypass) + 240 npm malware advisories day-1 · .tmp/security-digest/msg.md",
+        "variant": "body"
+      }
+    },
+    "h5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-badge",
+        "h5-text"
+      ]
+    },
+    "h5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect",
+        "variant": "default"
+      }
+    },
+    "h5-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md 77L→61L, 5 state changes (PRs merged, BTC softens, watchlist risk-off) · memory/topics/crypto.md +58L",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ]
+    },
+    "n1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n1-badge",
+        "n1-alert"
+      ]
+    },
+    "n1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "destructive"
+      }
+    },
+    "n1-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "GITLAWB -23.07% alert fired, watchlist-wide risk-off (MAMO streak snap, REPPO give-back)",
+        "type": "warning"
+      }
+    },
+    "n2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n2-badge",
+        "n2-text"
+      ]
+    },
+    "n2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "default"
+      }
+    },
+    "n2-text": {
+      "type": "Text",
+      "props": {
+        "text": "CFTC v. Vernon enforcement + CLARITY senate stall + SEC Reg Crypto watch",
+        "variant": "body"
+      }
+    },
+    "n3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n3-badge",
+        "n3-text"
+      ]
+    },
+    "n3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "action-converter",
+        "variant": "default"
+      }
+    },
+    "n3-text": {
+      "type": "Text",
+      "props": {
+        "text": "5 actions (avg Q4.2): aeon.yml audit, ISS-025 route, ISS-027 + ISS-028 file, SLX archive",
+        "variant": "body"
+      }
+    },
+    "n4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4-badge",
+        "n4-text"
+      ]
+    },
+    "n4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health",
+        "variant": "destructive"
+      }
+    },
+    "n4-text": {
+      "type": "Text",
+      "props": {
+        "text": "21 DEGRADED, 11 WARNING, notification after 47h cadence",
+        "variant": "body"
+      }
+    },
+    "n5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n5-badge",
+        "n5-text"
+      ]
+    },
+    "n5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "list-digest",
+        "variant": "default"
+      }
+    },
+    "n5-text": {
+      "type": "Text",
+      "props": {
+        "text": "@DeFi_Cheetah stablecoin-card essay top pick",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d1",
+        "d2",
+        "d3"
+      ]
+    },
+    "d1": {
+      "type": "Text",
+      "props": {
+        "text": "Author ISS-025 capture-step PR against `.github/workflows/aeon.yml` — self-improve rule-5 blocked, operator direct-author required by 7-13",
+        "variant": "body"
+      }
+    },
+    "d2": {
+      "type": "Text",
+      "props": {
+        "text": "Decide SLX recut: last print $0.256 (7-05), -46% vs entry $0.4753, 5th consecutive surface, deadline 7-13",
+        "variant": "body"
+      }
+    },
+    "d3": {
+      "type": "Text",
+      "props": {
+        "text": "Audit `.github/workflows/aeon.yml` scheduler: 3 dead-slot patterns (12:00Z batch d11, aixbt-pulse d10, operator-scorecard d8) share dispatch-layer root cause",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+7 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

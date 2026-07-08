@@ -1,29 +1,23 @@
-*Evening Recap — 2026-07-07*
-_TL;DR: curation solid and ISS-027 codified the 10-day batch dead-slot — SLX -46% recut and aixbt-pulse day-9 both carry unresolved_
+*Evening Recap — 2026-07-08*
+_TL;DR: 2 PRs merged and security-digest fired 4 KEVs + npm brand-jack wave — good day at the content layer, but 12:00Z batch dark d11 and SLX recut overdue are the open debt_
 
 *Headlines:*
-- reflect — MEMORY.md 68L→55L; 6 changes: PR #149 DONE, BTC daily close confirmed, batch day-10 dark, ETF flow flip · memory/MEMORY.md
-- action-converter — ISS-027 filed (12:00Z scheduler 2-day gap = pattern); 5 leverage actions · .tmp/action-converter/msg.md
-- daily-routine — BONK CAPITULATION, RIF BREAKOUT, Sonnet 5, Ripple MiCA-complete, Summer.fi $6M exploit · notification 0ff7cbc2
-- goal-tracker — PR #149 logged DONE (merged 7-06 21:26Z); goals updated · notification 9e877a73
-- PR #160 — operator opened fix(issues) ISS-022 close · https://github.com/anajuliabit/aeon/pull/160
+- [PRs] — #155 docs(skill-graph) + #160 fix(ISS-022) both merged 7-08 13:22–13:31Z · open issues 12→11 · https://github.com/aeonframework/aeon/pull/155
+- [skill-analytics] — 11 silent scheduled anomalies named (12:00Z batch d11 + Mon slots) · articles/skill-analytics-2026-07-08.md
+- [github-trending] — 7 repos shipped: addyosmani/agent-skills 72k, ai-job-search 22×, CubeSandbox 2nd Chinese-lab · .outputs/github-trending.md
+- [security-digest] — 4 KEVs post-holiday flush (Adobe ColdFusion RCE, Langflow authz-bypass) + 240 npm malware advisories day-1 · .tmp/security-digest/msg.md
+- [reflect] — MEMORY.md 77L→61L, 5 state changes (PRs merged, BTC softens, watchlist risk-off) · memory/topics/crypto.md +58L
 
 *Notable:*
-- btc-levels ×6 — $63.7–64.0k range, reclaim day-2 holding, all clear
-- list-digest — @Flowslikeosmo lean-ETH reprice + @hooeem culture pick · sent
-- agent-buzz — "MCP absorbs into the tool" 1 cluster, 2 tweets · sent
-- morning-brief — 3 focus items: 12:00Z batch test, ISS-025 routing, SLX recut
-- self-improve — dispatched + succeeded 18:39:52Z (ISS-025 routing test); no log entry
+- [token-alert] — GITLAWB -23.07% alert fired, watchlist-wide risk-off (MAMO streak snap, REPPO give-back)
+- [reg-monitor] — CFTC v. Vernon enforcement + CLARITY senate stall + SEC Reg Crypto watch
+- [action-converter] — 5 actions (avg Q4.2): aeon.yml audit, ISS-025 route, ISS-027 + ISS-028 file, SLX archive
+- [skill-health] — 21 DEGRADED, 11 WARNING, notification after 47h cadence
+- [list-digest] — @DeFi_Cheetah stablecoin-card essay top pick
 
 *Decisions for tomorrow:*
-- verify self-improve 18:39Z authored ISS-025 capture-step PR (action-converter #2 verdict open)
-- close PR #155 supersede-dup (`gh pr close 155`) · https://github.com/anajuliabit/aeon/pull/155
-- merge PR #160 (operator-opened 7-07 18:38Z, ISS-022 close) · https://github.com/anajuliabit/aeon/pull/160
+- Author ISS-025 capture-step PR against `.github/workflows/aeon.yml` — self-improve rule-5 blocked, operator direct-author required by 7-13
+- Decide SLX recut: last print $0.256 (7-05), -46% vs entry $0.4753, 5th consecutive surface, deadline 7-13
+- Audit `.github/workflows/aeon.yml` scheduler: 3 dead-slot patterns (12:00Z batch d11, aixbt-pulse d10, operator-scorecard d8) share dispatch-layer root cause
 
-*Blockers:*
-- self-improve — ran without logging (cron-state success 18:39:52Z, no log entry)
-- batch 6 — day-10 dark (ISS-027 filed; token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh; last_dispatch 6-28)
-- aixbt-pulse — dead-slot day-9 (last_success 6-28T21:21Z ~236h stale)
-- SLX — -46% vs entry $0.4753, recut overdue day-13
-
-_+4 collapsed (heartbeat ×2, thought-review, skill-freshness) · sources: log=ok cron-state=ok_
+_+7 routine runs collapsed · sources: log=ok cron-state=ok_
