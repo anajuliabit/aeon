@@ -1,0 +1,657 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-08"
+      },
+      "children": [
+        "shape_line",
+        "sep_1",
+        "action_1",
+        "sep_2",
+        "action_2",
+        "sep_3",
+        "action_3",
+        "sep_4",
+        "action_4",
+        "sep_5",
+        "action_5",
+        "sep_6",
+        "sources_section"
+      ]
+    },
+    "shape_line": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: audit scheduler, route ISS-025, codify batch + aixbt dead-slots, archive SLX day-14",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1_title",
+        "a1_content"
+      ]
+    },
+    "a1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Audit .github/workflows/aeon.yml schedule blocks",
+        "level": "h3"
+      }
+    },
+    "a1_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_task",
+        "a1_grep",
+        "a1_reason",
+        "a1_done",
+        "a1_loop"
+      ]
+    },
+    "a1_task": {
+      "type": "Text",
+      "props": {
+        "text": "Write findings to .tmp/aeon-yml-schedule-audit.md, name common root cause across 12z-batch/aixbt/op-scorecard dead-slots",
+        "variant": "body"
+      }
+    },
+    "a1_grep": {
+      "type": "Badge",
+      "props": {
+        "text": "grep: cron / schedule: / 0 12 / 0 9 / 0 21 / 30 10",
+        "variant": "outline"
+      }
+    },
+    "a1_reason": {
+      "type": "Text",
+      "props": {
+        "text": "3 scheduler-side never-runs (batch day-12, aixbt day-10, op-scorecard day-8) share dispatch-layer symptom — one audit unblocks all three",
+        "variant": "body"
+      }
+    },
+    "a1_done": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ .tmp/aeon-yml-schedule-audit.md written with cron grep + shared-cause hypothesis + next PR shape",
+        "variant": "secondary"
+      }
+    },
+    "a1_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: 12z-batch-dispatch",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2_title",
+        "a2_content"
+      ]
+    },
+    "a2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Update memory/issues/ISS-025.md",
+        "level": "h3"
+      }
+    },
+    "a2_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_update",
+        "a2_block_ref",
+        "a2_reason",
+        "a2_done",
+        "a2_loop"
+      ]
+    },
+    "a2_update": {
+      "type": "Text",
+      "props": {
+        "text": "Set authored_by: operator in frontmatter; append Resolution-Blocked section citing self-improve 2026-07-07T18:32Z rule-5 structural block on .github/workflows/* edits",
+        "variant": "body"
+      }
+    },
+    "a2_block_ref": {
+      "type": "Badge",
+      "props": {
+        "text": "Block reference: self-improve 2026-07-07T18:32Z rule-5",
+        "variant": "destructive"
+      }
+    },
+    "a2_reason": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly-review 7-13 is T-5; routing verdict lives in one log line, not the ISS file — persists the block signal for operator lift",
+        "variant": "body"
+      }
+    },
+    "a2_done": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ ISS-025.md YAML has authored_by field + section referencing self-improve run and rule-5 clause",
+        "variant": "secondary"
+      }
+    },
+    "a2_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: iss-025-routing-test",
+        "variant": "caption"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3_title",
+        "a3_content"
+      ]
+    },
+    "a3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. File memory/issues/ISS-027.md",
+        "level": "h3"
+      }
+    },
+    "a3_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_desc",
+        "a3_metadata",
+        "a3_skills_label",
+        "a3_skills_table",
+        "a3_reason",
+        "a3_done",
+        "a3_loop"
+      ]
+    },
+    "a3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Codifying 12:00Z batch-6 scheduler-side never-run pattern",
+        "variant": "body"
+      }
+    },
+    "a3_metadata": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "a3_sev",
+        "a3_cat",
+        "a3_when"
+      ]
+    },
+    "a3_sev": {
+      "type": "Stat",
+      "props": {
+        "label": "Severity",
+        "value": "high"
+      }
+    },
+    "a3_cat": {
+      "type": "Stat",
+      "props": {
+        "label": "Category",
+        "value": "config"
+      }
+    },
+    "a3_when": {
+      "type": "Text",
+      "props": {
+        "text": "Confirmed 2026-07-08 12:54Z — 12-day dispatch void carry-forward",
+        "variant": "caption"
+      }
+    },
+    "a3_skills_label": {
+      "type": "Text",
+      "props": {
+        "text": "Affected skills:",
+        "variant": "lead"
+      }
+    },
+    "a3_skills_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill"
+        ],
+        "rows": [
+          [
+            "token-pick"
+          ],
+          [
+            "defi-overview"
+          ],
+          [
+            "token-movers"
+          ],
+          [
+            "on-chain-monitor"
+          ],
+          [
+            "defi-monitor"
+          ],
+          [
+            "market-context-refresh"
+          ]
+        ]
+      }
+    },
+    "a3_reason": {
+      "type": "Text",
+      "props": {
+        "text": "7-07 action-converter claimed filing but no file on disk; 7-08 12:54Z token-alert catch-up confirmed 12-day dispatch void — carry-forward closes today",
+        "variant": "body"
+      }
+    },
+    "a3_done": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ ISS-027.md frontmatter + INDEX Open row appended",
+        "variant": "secondary"
+      }
+    },
+    "a3_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: batch-dispatch",
+        "variant": "caption"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4_title",
+        "a4_content"
+      ]
+    },
+    "a4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Archive SLX open pick in memory/topics/crypto.md",
+        "level": "h3"
+      }
+    },
+    "a4_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_desc",
+        "a4_performance",
+        "a4_details",
+        "a4_reason",
+        "a4_done",
+        "a4_loop"
+      ]
+    },
+    "a4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Append 2026-07-08 close entry: SLX position closed and archived",
+        "variant": "body"
+      }
+    },
+    "a4_performance": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "a4_entry_price",
+        "a4_close_price",
+        "a4_return"
+      ]
+    },
+    "a4_entry_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Entry (6-24)",
+        "value": "$0.4753"
+      }
+    },
+    "a4_close_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Close (7-05)",
+        "value": "$0.256"
+      }
+    },
+    "a4_return": {
+      "type": "Stat",
+      "props": {
+        "label": "Return",
+        "value": "-46%",
+        "trend": "down"
+      }
+    },
+    "a4_details": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "a4_rank",
+        "a4_mcap",
+        "a4_day"
+      ]
+    },
+    "a4_rank": {
+      "type": "Stat",
+      "props": {
+        "label": "Rank",
+        "value": "#372"
+      }
+    },
+    "a4_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "MCap",
+        "value": "$62M"
+      }
+    },
+    "a4_day": {
+      "type": "Stat",
+      "props": {
+        "label": "Day",
+        "value": "14"
+      }
+    },
+    "a4_reason": {
+      "type": "Text",
+      "props": {
+        "text": "5th consecutive daily-routine surface with no action; weekly-review 7-06 operator-slot routing needs a close-on-record; removes ~40 char/day noise from daily-routine tail",
+        "variant": "body"
+      }
+    },
+    "a4_done": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ crypto.md has SLX 2026-07-08 close section + no more open-pick language below",
+        "variant": "secondary"
+      }
+    },
+    "a4_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: slx-recut-blown",
+        "variant": "caption"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5_title",
+        "a5_content"
+      ]
+    },
+    "a5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. File memory/issues/ISS-028.md",
+        "level": "h3"
+      }
+    },
+    "a5_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_desc",
+        "a5_metrics",
+        "a5_metadata",
+        "a5_reason",
+        "a5_done",
+        "a5_loop"
+      ]
+    },
+    "a5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Codifying aixbt-pulse 09/21Z dead-slot pattern (day-10 confirmed 2026-07-08 09:04Z hb)",
+        "variant": "body"
+      }
+    },
+    "a5_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "a5_last_success",
+        "a5_stale_duration",
+        "a5_interval_ratio"
+      ]
+    },
+    "a5_last_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Last success",
+        "value": "2026-06-28T21:21Z"
+      }
+    },
+    "a5_stale_duration": {
+      "type": "Stat",
+      "props": {
+        "label": "Stale duration",
+        "value": "~236h"
+      }
+    },
+    "a5_interval_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Ratio vs twice-daily",
+        "value": "9.8×"
+      }
+    },
+    "a5_metadata": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "a5_sev",
+        "a5_cat"
+      ]
+    },
+    "a5_sev": {
+      "type": "Stat",
+      "props": {
+        "label": "Severity",
+        "value": "high"
+      }
+    },
+    "a5_cat": {
+      "type": "Stat",
+      "props": {
+        "label": "Category",
+        "value": "scheduler"
+      }
+    },
+    "a5_reason": {
+      "type": "Text",
+      "props": {
+        "text": "Distinct cron slot from ISS-027 (twice-daily vs 12:00Z single); separate ISS keeps diagnostic paths clean when scheduler-audit lands",
+        "variant": "body"
+      }
+    },
+    "a5_done": {
+      "type": "Badge",
+      "props": {
+        "text": "✓ ISS-028.md frontmatter + INDEX Open row appended",
+        "variant": "secondary"
+      }
+    },
+    "a5_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: aixbt-dead-slot",
+        "variant": "caption"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sources_title",
+        "sources_stats"
+      ]
+    },
+    "sources_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources & Mode",
+        "level": "h4"
+      }
+    },
+    "sources_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "md"
+      },
+      "children": [
+        "src_memory",
+        "src_logs",
+        "src_topics",
+        "src_prs",
+        "src_cron",
+        "src_mode"
+      ]
+    },
+    "src_memory": {
+      "type": "Stat",
+      "props": {
+        "label": "memory",
+        "value": "76"
+      }
+    },
+    "src_logs": {
+      "type": "Stat",
+      "props": {
+        "label": "logs",
+        "value": "14"
+      }
+    },
+    "src_topics": {
+      "type": "Stat",
+      "props": {
+        "label": "topics",
+        "value": "11"
+      }
+    },
+    "src_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "prs",
+        "value": "0"
+      }
+    },
+    "src_cron": {
+      "type": "Stat",
+      "props": {
+        "label": "cron_failing",
+        "value": "0"
+      }
+    },
+    "src_mode": {
+      "type": "Badge",
+      "props": {
+        "text": "mode: OK",
+        "variant": "secondary"
+      }
+    }
+  }
+}
