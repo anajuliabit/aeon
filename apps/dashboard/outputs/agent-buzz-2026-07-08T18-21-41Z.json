@@ -1,0 +1,59 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-08",
+        "description": "quiet day on x. two concrete signals through a lot of self-promo: a benchmark position and a failure-mode read on 2026 autonomy."
+      },
+      "children": [
+        "section-heading",
+        "tweets-stack",
+        "metadata"
+      ]
+    },
+    "section-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-stack reality check",
+        "level": "h3"
+      }
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet2"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Teksart",
+        "handle": "Teksart",
+        "text": "sonnet 5 63.2% vs opus 4.8 69.2% on anthropic agentic coding bench; mid-tier pricing = prod default.\nhttps://x.com/Teksart/status/2074637738263933137"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "giannoklein",
+        "handle": "giannoklein",
+        "text": "full autonomy not shipping 2026 — identity drifts, memory outgrows value, self-grading bias; human still needed in audit seat.\nhttps://x.com/giannoklein/status/2074636662970409214"
+      }
+    },
+    "metadata": {
+      "type": "Text",
+      "props": {
+        "text": "Source: xai-cache · Candidates: 11 → Kept: 2",
+        "variant": "caption"
+      }
+    }
+  }
+}

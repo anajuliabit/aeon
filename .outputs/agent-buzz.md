@@ -1,10 +1,10 @@
-*Agent Buzz — 2026-07-07*
-_quiet builder day — two receipts, both arguing MCP belongs inside the tool, not next to it._
+*Agent Buzz — 2026-07-08*
+_quiet day on x. two concrete signals through a lot of self-promo: a benchmark position and a failure-mode read on 2026 autonomy._
 
-*MCP absorbs into the tool*
-• @kkaminsk — VS Code 1.127 ships browser drive+verify inside the IDE, killing the external-MCP-server for UI checks.
-  https://x.com/kkaminsk/status/2074282147620511819
-• @CaseyGowrie — eve treats e2e tests as evals and MCP connections as dynamic tools — testing collapses into evaluation.
-  https://x.com/CaseyGowrie/status/2074281350270484738
+**agent-stack reality check**
+• @Teksart — sonnet 5 63.2% vs opus 4.8 69.2% on anthropic agentic coding bench; mid-tier pricing = prod default.
+  https://x.com/Teksart/status/2074637738263933137
+• @giannoklein — full autonomy not shipping 2026 — identity drifts, memory outgrows value, self-grading bias; human still needed in audit seat.
+  https://x.com/giannoklein/status/2074636662970409214
 
-<!-- _src: xai-cache · candidates: 6 → kept: 2 (4 dropped by 30h staleness gate)_ -->
+<!-- _src: xai-cache · candidates: 11 → kept: 2 -->
