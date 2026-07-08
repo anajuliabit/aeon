@@ -1,0 +1,229 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Reg Monitor — 2026-07-08"
+      },
+      "children": [
+        "summary-text",
+        "sep1",
+        "act-section",
+        "sep2",
+        "watch-section",
+        "sep3",
+        "context-section",
+        "sep4",
+        "footer-text"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet week on primary sources. 1 fresh cftc action (crypto-tangential), clarity act enters decision week, sec regulation crypto safe harbor expected to drop this month.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "act-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "act-heading",
+        "act-item-1"
+      ]
+    },
+    "act-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ACT",
+        "level": "h2"
+      }
+    },
+    "act-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act-link-1",
+        "act-meta-1",
+        "act-desc-1",
+        "act-badge-1"
+      ]
+    },
+    "act-link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC v. Vernon / Argent Capital (release 9264-26)",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9264-26",
+        "source": "CFTC"
+      }
+    },
+    "act-meta-1": {
+      "type": "Text",
+      "props": {
+        "text": "us federal · complaint filed 2026-07-07",
+        "variant": "caption"
+      }
+    },
+    "act-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "cftc alleges $14m commodity pool fraud spanning equity index futures, options, and crypto assets over march 2022 → feb 2026; false sworn testimony charged. seeks restitution, disgorgement, trading + registration bans. e.d.n.c."
+      }
+    },
+    "act-badge-1": {
+      "type": "Badge",
+      "props": {
+        "text": "litigation, no comment deadline",
+        "variant": "default"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-heading",
+        "watch-item-1"
+      ]
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h2"
+      }
+    },
+    "watch-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch-link-1",
+        "watch-meta-1",
+        "watch-desc-1",
+        "watch-timeline",
+        "watch-note"
+      ]
+    },
+    "watch-link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CLARITY Act (H.R. 3633) — senate stall",
+        "href": "https://www.coindesk.com/policy/2026/07/05/clarity-and-congress-s-summer-break-state-of-crypto",
+        "source": "CoinDesk"
+      }
+    },
+    "watch-meta-1": {
+      "type": "Text",
+      "props": {
+        "text": "us federal · passed house / stuck at 60-vote cloture",
+        "variant": "caption"
+      }
+    },
+    "watch-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "missed the white house's july 4 signing target. three unresolved fights: crypto ethics + insider-trading disclosure, section 604 law-enforcement carveout, stablecoin yield. senate returns 2026-07-13; ~3 weeks to august recess."
+      }
+    },
+    "watch-timeline": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ decision window closes ~2026-08-01 (august recess)",
+        "variant": "caption"
+      }
+    },
+    "watch-note": {
+      "type": "Text",
+      "props": {
+        "text": "📊 prediction market angle: passage draws the cftc-vs-sec line that kalshi/polymarket sit inside — indirect but load-bearing."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "context-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "context-heading",
+        "context-item-1"
+      ]
+    },
+    "context-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CONTEXT",
+        "level": "h2"
+      }
+    },
+    "context-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context-link-1",
+        "context-desc-1"
+      ]
+    },
+    "context-link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SEC \"Regulation Crypto\" safe harbor (RIN 3235-AN38)",
+        "href": "https://decrypt.co/372980/sec-crypto-safe-harbor-introduced-soon-this-month",
+        "source": "Decrypt"
+      }
+    },
+    "context-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "expected proposed rule this month; covers tokenized securities + defi with exemptions for sub-$5m startups, sub-$75m raises, and tokens past active managerial control."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: federal-register=ok · sec=ok · cftc=ok · websearch=ok · congress=skip\n3 developments included, 1 act / 1 watch / 1 context",
+        "variant": "muted"
+      }
+    }
+  }
+}

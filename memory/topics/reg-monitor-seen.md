@@ -28,3 +28,6 @@ https://www.federalregister.gov/documents/2026/06/30/2026-13182/joint-request-fo
 https://www.federalregister.gov/documents/2026/06/25/2026-12784/request-for-comment-on-the-extension-of-standard-futures-contracts-to-247-trading-and-on-perpetual
 https://www.federalregister.gov/documents/2026/06/24/2026-12692/permitted-payment-stablecoin-issuer-anti-money-launderingcountering-the-financing-of-terrorism-and
 https://www.federalregister.gov/documents/2026/06/25/2026-12794/definition-of-huione-group-a-financial-institution-operating-outside-the-united-states-of-primary
+https://www.cftc.gov/PressRoom/PressReleases/9264-26
+https://www.coindesk.com/policy/2026/07/05/clarity-and-congress-s-summer-break-state-of-crypto
+https://decrypt.co/372980/sec-crypto-safe-harbor-introduced-soon-this-month
