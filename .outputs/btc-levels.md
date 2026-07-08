@@ -1,14 +1,13 @@
-Quiet run. No alerts fired.
+Done. Quiet run — no alerts fired.
 
 ## Summary
 
-**BTC levels check — 2026-07-08T09:03Z**
+**Fetched:** BTC spot $62,049.68 / July 7 UTC daily close $63,351.37 (via CoinGecko).
 
-| | Value | Level | Result |
-|---|---|---|---|
-| Spot | $61,995.89 | ≤ $45k trigger | ✗ no alert |
-| Jul-7 close | $63,351.37 | < $60,500 breakdown | ✗ no alert |
-| Reclaim $63.5k | spot $61,995 | ≥ $63,500 + flag=false | ✗ no alert (flag already set; no re-arm since spot > $60.5k) |
-| Reclaim $65.9k | spot $61,995 | ≥ $65,900 + flag=false | ✗ no alert |
+**Level checks:**
+- Leverage-review (≤ $45k): clear
+- Breakdown (close < $60,500): clear — close $63,351 well above floor
+- Reclaim $63,500: spot slipped back below gate ($62,049 < $63,500), but flag stays armed (`reclaim63500Alerted=true`); no re-arm until spot breaches $60,500
+- Reclaim $65,900: still $3,850 away
 
-Spot dropped ~$1.7k from prior run ($63,691 → $61,995) but remains well above all risk thresholds. State updated and committed; no notification sent.
+**No notification sent.** State updated + committed (`memory/btc-levels-state.json`, `memory/logs/2026-07-08.md`). Next gate to watch: $65,900 full-reclaim.
