@@ -1,0 +1,105 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-08"
+      },
+      "children": [
+        "summary_text",
+        "sep_1",
+        "heading_defi",
+        "tweets_stack",
+        "sep_2",
+        "footer_text"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "@DeFi_Cheetah owns the day — stablecoin-card self-custody essay + KAST float thesis. everyone else single-digit likes."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_defi": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi research",
+        "level": "h3"
+      }
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFi_Cheetah",
+        "handle": "@DeFi_Cheetah",
+        "text": "self-custody protects the money, not the spending rail: WaveCrest / Wirecard / FTX / Argent-Kulipa all burned non-custodial-card users historically",
+        "likes": 25,
+        "retweets": 1
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFi_Cheetah",
+        "handle": "@DeFi_Cheetah",
+        "text": "KAST earns interchange + T-bill yield on disbursement float; peers earn only on card-use → structural yield advantage as long as unspent balances sit",
+        "likes": 18,
+        "retweets": 0
+      }
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround_",
+        "handle": "@Louround_",
+        "text": "$DOT one-day -85% wick from months ago just filled; token already 92% off ATH → wick-fill is low-liquidity noise, not a bottom signal",
+        "likes": 8,
+        "retweets": 0
+      }
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "thesaint_",
+        "handle": "@thesaint_",
+        "text": "Backpack ≈ BNB 2020: captive-exchange-token accumulation frame (quote of @backpack_daily, no elaboration)",
+        "likes": 9,
+        "retweets": 0
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(8) | status: LIST_DIGEST_OK",
+        "variant": "muted"
+      }
+    }
+  }
+}
