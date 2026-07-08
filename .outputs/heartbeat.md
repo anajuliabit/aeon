@@ -1,14 +1,11 @@
-Heartbeat complete.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
-## Summary
+**Findings (all deduped, notification skipped per 48h window):**
+- **P0 chronic tail unchanged** — 18-skill sr<0.5 cluster (ISS-019/020/021/025 sandbox-truncation systemic day-16). No `last_status: failed` rows, no stuck-dispatched rows, all `consecutive_failures = 0`. Self-check ok (last hb 12.5h ago).
+- **P1** PR #155 day-3 stall (~63.6h, supersede-dup after PR #149 merged 7-06); PR #160 operator activity 14.5h old under 24h threshold; zero urgent issues.
+- **P2** SLX day-14 catastrophic -46%; ISS-025 capture-step PR day-16 unshipped (deadline 7-13).
+- **P3** 12:00Z batch dark day-11; aixbt-pulse dead-slot day-10 CONFIRMED (7-08 09:00Z tick not in run list); operator-scorecard Mon 7-06 miss day-8.
 
-Ran heartbeat skill (all-areas). All findings byte-identical to prior 7-07 runs (08:53Z hb + 18:32-42Z evening batch) — dedup applies, notification skipped.
+**Status page:** `docs/status.md` regenerated — 43 enabled skills sorted by last_success desc (evening-recap 22:03Z now tops; was stale in prior render), 3 never-run rows at bottom, 12 open issues, verdict DEGRADED, next-run pointer token-alert @ 12:00Z.
 
-- **P0**: no failed / no stuck skills; 18-skill chronic sr<0.5 tail (ISS-019/020/021/025 sandbox-truncation systemic day-14); all cf=0; heartbeat self-check ok (~11.5h since last success).
-- **P1**: PR #155 docs(skill-graph) ~74.9h day-3 stall (supersede-dup after PR #149 merged 7-06T21:26Z — action-converter routed close). Fresh **PR #160 fix(issues) close ISS-022** opened by operator 18:38Z (~1h51min ago, under 24h — positive signal, not stalled). Zero urgent-labeled issues.
-- **P2**: SLX open pick day-13 catastrophic -46% (recut still overdue); ISS-025 capture-step PR day-15 unshipped (weekly-review 7-06 formalized MISS + `Authored by:` restructure, deadline reset to 2026-07-13; self-improve 18:32Z run is first routing test).
-- **P3**: 12:00Z batch dark day-10 CONFIRMED via 18:32Z action-converter tick-poll gap analysis (132min drop, batch tick NEVER polled — scheduler-side never-run, not PR #156 config failure). aixbt-pulse dead-slot day-9 CONFIRMED. operator-scorecard Mon chronic 7th miss.
-
-Files modified: `docs/status.md` (regenerated wholesale — 43 enabled skills, 12 open issues, overall DEGRADED), `memory/logs/2026-07-07.md` (heartbeat 20:29Z entry).
-
-Verdict: `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`.
+**Delta vs 7-07 20:29Z hb:** day-N counter ticks only (SLX 13→14, batch d10→d11, aixbt-pulse d9→d10, ISS-025 d15→d16). No fresh signal.
