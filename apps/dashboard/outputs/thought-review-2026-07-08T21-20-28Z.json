@@ -1,0 +1,66 @@
+{
+  "root": "card-thought-review",
+  "state": {},
+  "elements": {
+    "card-thought-review": {
+      "type": "Card",
+      "props": {
+        "title": "thought review",
+        "description": "inbox and priority status"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-summary",
+        "sep-1",
+        "stat-inbox",
+        "text-file-details",
+        "sep-2",
+        "alert-refresh"
+      ]
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "no captures in last 24h. nothing to surface."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stat-inbox": {
+      "type": "Stat",
+      "props": {
+        "label": "inbox",
+        "value": "1 file"
+      }
+    },
+    "text-file-details": {
+      "type": "Text",
+      "props": {
+        "text": "6-22 reppo-building-comment (~381h, operator-owned)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "alert-refresh": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md refresh needed",
+        "message": "last reviewed 6-04 (34 days ago) — worth a refresh",
+        "type": "info"
+      }
+    }
+  }
+}
