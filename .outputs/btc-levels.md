@@ -1,12 +1,14 @@
+Quiet run. No alerts fired.
+
 ## Summary
 
-**BTC Levels run — 2026-07-07 20:30 UTC**
+**BTC levels check — 2026-07-08T09:03Z**
 
-- **Spot:** $63,692 | **Daily close (2026-07-06):** $64,072
-- **Alerts fired:** none
-  - Leverage-review (≤$45k): clear
-  - Breakdown (<$60,500 close): clear — close $64,072 well above gate
-  - Reclaim $63,500: already alerted (flag set 2026-07-06); not re-armed (spot > $60,500 floor)
-  - Reclaim $65,900: not yet — spot ~$2,208 below next gate
-- **No notification sent** (quiet run, norm)
-- **Files committed:** `memory/btc-levels-state.json`, `memory/logs/2026-07-07.md`
+| | Value | Level | Result |
+|---|---|---|---|
+| Spot | $61,995.89 | ≤ $45k trigger | ✗ no alert |
+| Jul-7 close | $63,351.37 | < $60,500 breakdown | ✗ no alert |
+| Reclaim $63.5k | spot $61,995 | ≥ $63,500 + flag=false | ✗ no alert (flag already set; no re-arm since spot > $60.5k) |
+| Reclaim $65.9k | spot $61,995 | ≥ $65,900 + flag=false | ✗ no alert |
+
+Spot dropped ~$1.7k from prior run ($63,691 → $61,995) but remains well above all risk thresholds. State updated and committed; no notification sent.
