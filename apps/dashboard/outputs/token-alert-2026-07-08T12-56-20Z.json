@@ -1,0 +1,99 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-07-08"
+      },
+      "children": [
+        "token-heading",
+        "stats-stack",
+        "separator-1",
+        "analysis-stack"
+      ]
+    },
+    "token-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GITLAWB",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-volume"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00004425",
+        "delta": "-23.07%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$435K",
+        "delta": "0.94× 5d baseline"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "analysis-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trigger-text",
+        "context-text",
+        "volume-analysis-text"
+      ]
+    },
+    "trigger-text": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger: 24h -23.07% breaches 15% rail — day-4 give-back from 7-03/7-04 back-to-back triggers capitulates.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "context-text": {
+      "type": "Text",
+      "props": {
+        "text": "First print below $0.00005 handle since the pump window opened.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "volume-analysis-text": {
+      "type": "Text",
+      "props": {
+        "text": "Vol flat = sellers finishing, not fresh participation.",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
