@@ -1,9 +1,23 @@
-# Market Context (as of 2026-07-06)
+# Market Context (as of 2026-07-07)
 
-> **Take:** BTC **$63.5k RECLAIM CONFIRMED 7-06 01:29Z** (btc-levels first `reclaim63500Alerted=true` fire, spot $63,595 / daily close $63,546). Bounce day-6 — 8-day breakdown streak (6-24 → 7-01) + 5-day above-breakdown-line hold (7-01 → 7-05) resolves into first gate-cross. 7-06 quiet ticks $63,595 → $63,801 (17:23Z) hold above gate. Next gate $65,900 full-reclaim; below-$60,500 re-trip re-arms breakdown alert. **SLX day-12 CATASTROPHIC** -46% vs entry, recut STILL overdue. Conviction: medium+ (regime pivot holds AND first reclaim signal fires on Day 6 — reads as valid bounce, not counter-trend).
+> **Take:** BTC **RECLAIM $63.5k DAY-2 HOLDING** — 7-06 daily close $64,072 = first daily close above $63.5k gate (post-reclaim high). 7-07 ticks $63,007 → $63,958 all above gate. Bounce day-7 with reclaim confirmed on-tape and **BTC ETFs +$221.7M snap 10-day loser streak** (biggest 2mo daily haul) = 3-signal alignment (spot + close + flow). Next gate $65,900 full-reclaim; below-$60,500 re-trip re-arms breakdown alert. **SLX day-13 CATASTROPHIC** -46% vs entry, recut STILL overdue (3rd consecutive daily-routine surface). Conviction: medium+ → medium-high (regime pivot holds, first close-above-gate lands, ETF flow flips positive — reads as multi-signal validation not counter-trend blip).
+
+## What Changed 7-06 → 7-07
+- **BTC daily close $64,072 for 7-06 = first close above $63.5k gate** — turns intraday reclaim alert (fired 7-06 01:29Z) into on-tape confirmation. Bounce arc: breakdown (8d) → hold-above-line (5d) → reclaim (6d) → **daily close breakout (day-7)**.
+- **BTC ETFs snap 10-day loser streak +$221.7M** — biggest 2mo daily haul, first inflow print since gate-cross. 3-signal alignment: spot + daily close + flow.
+- **12:00 UTC batch STILL DARK day-10 despite PR #156 merge** — 7-07 12:00Z tick failed to dispatch batch 6 (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh). Only token-alert + btc-levels fired at 13:54Z catch-up. Root cause deeper than L155/162/171 `usepod_model:` drift; batch-dispatch layer needs audit.
+- **PR #149 docs(skill-graph) MERGED 7-06 21:26Z** — day-8 stall ended post-holiday-weekend Monday evening. PR #155 (supersede-candidate) now orphaned.
+- **Aixbt-pulse dead-slot day-9 CONFIRMED** — 7-07 09:00Z tick missed. State file last_success 6-28T21:21Z (~236h = 9.8× interval).
+- **Weekly-review 7-06 19:20Z formalized MISS on ISS-025 deadline** — 0/4 SMART actions from 6-29 review shipped; restructured next-7d actions with `Authored by:` routing slots. Test-run of routing hypothesis live this week (deadline 7-13).
+- **BONK CAPITULATION -10.6%** on 25%+ mcap-vol turnover (7-07 daily-routine) — first MAJOR-cap capitulation of the reclaim window.
+- **VVV Venice -5.8% day-1 sell-the-news** post 7-05 unicorn round.
+- **Ripple fully MiCA-compliant across 30 EEA countries** — institutional-rails narrative day-1 momentum.
+- **Summer.fi $6M exploit → SUMR -18%** — single-protocol DeFi tail-risk event in the middle of bull-tape reclaim.
+- **Anthropic global-workspace paper HN 360pts** + **LLM-as-a-Verifier HF ↑5** + **GLM 5.2 HN 387pts** + **CoMaps FOSS offline maps HN 527pts** + **OAI Jalapeño chip announce** — eval-quality-axis d6 + sovereignty-stack d6 + Anthropic-vs-OAI IPO race counter-tells all extend.
 
 ## Signal Snapshot
-- BTC $62,871 12:40Z data pull (+0.56% 24h, +5% 7d) — 7-05 btc-levels ticks 00:17Z $63,001 → 04:35Z $62,854 → 10:01Z $62,568 → 12:56Z $62,676 → 17:14Z $62,647 (5 quiet runs day-5)
+- BTC 7-07 daily close (7-06) $64,072 = **first daily close above $63.5k gate**. Spot 7-07 ticks $63,007–$63,958 hold above gate all day.
+- BTC $62,871 7-05 data pull (+0.56% 24h, +5% 7d)
 - ETH $1,766 (+0.52% 24h, +12.7% 7d — holds first-week-reclaim of $1,750)
 - SOL $80.52 (-2.39%, 7d +14.4% — **day-1 pullback breaks 4-day leadership**)
 - BNB $573.82 (+0.85%) · HYPE $68.45 (-4.23% — gives back yest's +6.6% breakout)

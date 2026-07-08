@@ -1,0 +1,511 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-07-08"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-toppick",
+        "toppick-link",
+        "toppick-desc",
+        "sep-1",
+        "heading-aiml",
+        "stack-aiml",
+        "sep-2",
+        "heading-devtools",
+        "stack-devtools",
+        "sep-3",
+        "heading-webapp",
+        "stack-webapp",
+        "sep-4",
+        "text-footer"
+      ]
+    },
+    "heading-toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h2"
+      }
+    },
+    "toppick-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "addyosmani/agent-skills",
+        "href": "https://github.com/addyosmani/agent-skills",
+        "score": "★ 1.3k today (72.6k total)"
+      }
+    },
+    "toppick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Chrome-lead publishes production skills library for coding agents. 72k stars in 143 days at a 508/d sustained baseline. Skills-as-primitive is now cross-lab AND cross-domain, not lab-specific plumbing.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      }
+    },
+    "stack-aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-cubesandbox",
+        "repo-pockettts"
+      ]
+    },
+    "repo-cubesandbox": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-cubesandbox",
+        "meta-cubesandbox",
+        "desc-cubesandbox"
+      ]
+    },
+    "link-cubesandbox": {
+      "type": "StoryLink",
+      "props": {
+        "title": "TencentCloud/CubeSandbox",
+        "href": "https://github.com/TencentCloud/CubeSandbox",
+        "score": "★ 664 today (8.6k total)"
+      }
+    },
+    "meta-cubesandbox": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-rust",
+        "badge-cubesandbox-accel"
+      ]
+    },
+    "badge-rust": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "secondary"
+      }
+    },
+    "badge-cubesandbox-accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "desc-cubesandbox": {
+      "type": "Text",
+      "props": {
+        "text": "tencent first-party sandbox for AI agents — 2nd Chinese-lab entry to the agent-runtime layer stack in 4 days.",
+        "variant": "caption"
+      }
+    },
+    "repo-pockettts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pockettts",
+        "meta-pockettts",
+        "desc-pockettts"
+      ]
+    },
+    "link-pockettts": {
+      "type": "StoryLink",
+      "props": {
+        "title": "kyutai-labs/pocket-tts",
+        "href": "https://github.com/kyutai-labs/pocket-tts",
+        "score": "★ 531 today (6.4k total)"
+      }
+    },
+    "meta-pockettts": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-python-1",
+        "badge-pockettts-ret"
+      ]
+    },
+    "badge-python-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge-pockettts-ret": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      }
+    },
+    "desc-pockettts": {
+      "type": "Text",
+      "props": {
+        "text": "CPU-only TTS from Kyutai — sovereignty stack extends into local speech generation after local audio capture (meetily 7-05).",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      }
+    },
+    "stack-devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-agentskills-dev",
+        "repo-claudevideo",
+        "repo-officecli",
+        "repo-codexbar"
+      ]
+    },
+    "repo-agentskills-dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-agentskills-dev",
+        "meta-agentskills-dev",
+        "desc-agentskills-dev"
+      ]
+    },
+    "link-agentskills-dev": {
+      "type": "StoryLink",
+      "props": {
+        "title": "addyosmani/agent-skills",
+        "href": "https://github.com/addyosmani/agent-skills",
+        "score": "★ 1.3k today (72.6k total)"
+      }
+    },
+    "meta-agentskills-dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-js",
+        "badge-agentskills-accel"
+      ]
+    },
+    "badge-js": {
+      "type": "Badge",
+      "props": {
+        "text": "JS",
+        "variant": "secondary"
+      }
+    },
+    "badge-agentskills-accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "desc-agentskills-dev": {
+      "type": "Text",
+      "props": {
+        "text": "chrome-lead-published skills lib for coding agents — most-starred skills entry to date at a 508/d sustained baseline.",
+        "variant": "caption"
+      }
+    },
+    "repo-claudevideo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-claudevideo",
+        "meta-claudevideo",
+        "desc-claudevideo"
+      ]
+    },
+    "link-claudevideo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "bradautomates/claude-video",
+        "href": "https://github.com/bradautomates/claude-video",
+        "score": "★ 965 today (5.6k total)"
+      }
+    },
+    "meta-claudevideo": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-python-2",
+        "badge-claudevideo-accel"
+      ]
+    },
+    "badge-python-2": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge-claudevideo-accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "desc-claudevideo": {
+      "type": "Text",
+      "props": {
+        "text": "adds video modality to Claude via `/watch` — download + frame-extract + transcribe pipeline handed to the model.",
+        "variant": "caption"
+      }
+    },
+    "repo-officecli": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-officecli",
+        "meta-officecli",
+        "desc-officecli"
+      ]
+    },
+    "link-officecli": {
+      "type": "StoryLink",
+      "props": {
+        "title": "iOfficeAI/OfficeCLI",
+        "href": "https://github.com/iOfficeAI/OfficeCLI",
+        "score": "★ 893 today (10.7k total)"
+      }
+    },
+    "meta-officecli": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-csharp",
+        "badge-officecli-accel"
+      ]
+    },
+    "badge-csharp": {
+      "type": "Badge",
+      "props": {
+        "text": "C#",
+        "variant": "secondary"
+      }
+    },
+    "badge-officecli-accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "desc-officecli": {
+      "type": "Text",
+      "props": {
+        "text": "single-binary Office suite for agents to read/write Word/Excel/PowerPoint — no Office install needed.",
+        "variant": "caption"
+      }
+    },
+    "repo-codexbar": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-codexbar",
+        "meta-codexbar",
+        "desc-codexbar"
+      ]
+    },
+    "link-codexbar": {
+      "type": "StoryLink",
+      "props": {
+        "title": "steipete/CodexBar",
+        "href": "https://github.com/steipete/CodexBar",
+        "score": "★ 376 today (17.2k total)"
+      }
+    },
+    "meta-codexbar": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-swift",
+        "badge-codexbar-accel"
+      ]
+    },
+    "badge-swift": {
+      "type": "Badge",
+      "props": {
+        "text": "Swift",
+        "variant": "secondary"
+      }
+    },
+    "badge-codexbar-accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "desc-codexbar": {
+      "type": "Text",
+      "props": {
+        "text": "macOS menu bar showing Claude Code + Codex usage without login — cost-visibility primitive at the desktop layer.",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-webapp": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h2"
+      }
+    },
+    "stack-webapp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-aijobsearch"
+      ]
+    },
+    "repo-aijobsearch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-aijobsearch",
+        "meta-aijobsearch",
+        "desc-aijobsearch"
+      ]
+    },
+    "link-aijobsearch": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MadsLorentzen/ai-job-search",
+        "href": "https://github.com/MadsLorentzen/ai-job-search",
+        "score": "★ 2.5k today (12.7k total)"
+      }
+    },
+    "meta-aijobsearch": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ts",
+        "badge-aijobsearch-accel"
+      ]
+    },
+    "badge-ts": {
+      "type": "Badge",
+      "props": {
+        "text": "TS",
+        "variant": "secondary"
+      }
+    },
+    "badge-aijobsearch-accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "desc-aijobsearch": {
+      "type": "Text",
+      "props": {
+        "text": "fork-and-fill Claude Code template for job hunting — highest-velocity today, viral consumer-app moment on Claude Code.",
+        "variant": "caption"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 7/13",
+        "variant": "muted"
+      }
+    }
+  }
+}

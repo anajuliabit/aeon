@@ -1,17 +1,24 @@
-skill-health — 2026-07-06
-HEALTH: DEGRADED(21) — systemic: output_tokens=0 sandbox-truncation day-13, 21 skills share signature (ISS-019/020/021/025 cluster). hash unchanged from 07-05; notifying on 24h cadence.
+Skill complete. Fleet health unchanged from yesterday — notify gate correctly suppressed the duplicate alert.
 
-DEGRADED (21, worst first by dark-days then sr):
-- market-context-refresh 32% sr, 8d dark — FIX-CONFIG (PR #156 pending)
-- narrative-tracker 33% sr, 8d dark — FIX-CONFIG (PR #156 pending)
-- defi-monitor 53% sr, 8d dark — FIX-CONFIG (PR #156 pending)
-- aixbt-pulse 47% sr, 8d dark-slot — INVESTIGATE
-- cost-report 11% sr — WAIT-API → ISS-025
-- +16 more (reg-monitor 12%, vuln-scanner 13%, skill-analytics 13%, security-digest 29%, search-skill 36%, skill-health 37%, self-improve/action-converter/goal-tracker 40%, list-digest 41%, reflect 41%, skill-evals 43%, evening-recap 48%, thought-review 54%, agent-buzz 55%, github-trending 58%) — see memory/issues/INDEX.md
+## Summary
 
-NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL (scheduler gap; operator-scorecard chronic Mon 10:30Z miss day 7)
-HEALTHY: 8 (unlock-monitor, deal-flow, skill-security-scan, fork-cohort, skill-update-check, weekly-review, weekly-shiplog, skill-graph)
+Ran `skills/skill-health/SKILL.md` at 2026-07-07T18:34Z.
 
-Delta 07-05→07-06: DEGRADED byte-identical; fork-skill-digest un-stuck (168h+ carry resolved via Sun 21:07Z retry) HEALTHY→WARNING sr=0.75; healthy_count 9→8. PR #156 opened 07-05 18:23Z addresses 12:00 batch usepod_model config bug. ISS-025 capture-step PR still un-authored at T-0 to weekly-review 19:00Z deadline.
+**Classification** (43 enabled skills):
+- 0 CRITICAL · 21 DEGRADED · 11 WARNING · 8 HEALTHY · 3 NO_DATA
+- Byte-identical to 07-06 snapshot (hash `190b6b8d…` unchanged)
 
-Open issues: 12 · Filed this run: 0 · Resolved this run: 0
+**Notify gate**: NOOP — hash unchanged AND 23h18m < 24h cadence since prev notify (07-06T19:16:19Z). No `./notify` call per spec §5.
+
+**Issue reconciliation** (INDEX.md exists, guard clear):
+- 0 filings (no CRITICAL/FLAPPING skills)
+- 0 resolutions (no open-issue affected_skills flipped to HEALTHY — vuln-scanner/search-skill/cost-report still DEGRADED; defi-overview/token-pick sitting at WARNING, not HEALTHY)
+- Open issues stay at 12
+
+**Notable systemic**: ISS-019/020/021/025 sandbox-truncation `output_tokens=0` day-14; ISS-025 capture-step PR day-15 unshipped (weekly-review 07-06 formalized MISS, deadline reset 07-13). 12:00Z batch live-test post PR #156 is PARTIAL — only token-alert caught up (14:00Z, 2h late, success); the six Haiku skills still show `last_dispatch=2026-06-28` in cron-state.
+
+**Files modified**:
+- `memory/skill-health/last-report.json` — bumped `last_run_at`; kept `hash`/`last_notified_at`/`classification`; refreshed `systemic` narrative to day-14 with batch verdict
+- `memory/logs/2026-07-07.md` — appended `### skill-health — 18:34 UTC` block with `SKILL_HEALTH_NOOP` line + summary
+
+**Follow-up**: re-verify 12:00Z batch on 07-08; aixbt-pulse dead-slot day-9 watch.

@@ -1,0 +1,109 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "quiet builder day — two receipts, both arguing MCP belongs inside the tool, not next to it."
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_1",
+        "items_stack",
+        "footer"
+      ]
+    },
+    "heading_1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP absorbs into the tool",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "items_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_1",
+        "item_2"
+      ]
+    },
+    "item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "link_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@kkaminsk",
+        "text": "VS Code 1.127 ships browser drive+verify inside the IDE, killing the external-MCP-server for UI checks."
+      },
+      "children": []
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/kkaminsk/status/2074282147620511819",
+        "href": "https://x.com/kkaminsk/status/2074282147620511819"
+      },
+      "children": []
+    },
+    "item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_2",
+        "link_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@CaseyGowrie",
+        "text": "eve treats e2e tests as evals and MCP connections as dynamic tools — testing collapses into evaluation."
+      },
+      "children": []
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/CaseyGowrie/status/2074281350270484738",
+        "href": "https://x.com/CaseyGowrie/status/2074281350270484738"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 6 → kept: 2 (4 dropped by 30h staleness gate)",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

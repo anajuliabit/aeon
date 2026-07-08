@@ -1,14 +1,13 @@
-Done. Quiet run.
+Done. Quiet run — no alerts fired.
 
 ## Summary
 
-**BTC spot**: $63,957.92 (up ~$841 from the 13:55Z run at $63,116).  
-**Daily close (2026-07-06)**: $64,072.30.
+**Fetched:** BTC spot $62,049.68 / July 7 UTC daily close $63,351.37 (via CoinGecko).
 
-All four level checks clear — no alerts fired:
-- Leverage-review (≤$45k): not triggered
-- Breakdown (<$60,500 close): not triggered
-- Reclaim $63,500: already flagged `true`, no re-arm (spot > $60,500 floor)
-- Reclaim $65,900: not triggered (next gate is $65,900; spot $63,958 falls short)
+**Level checks:**
+- Leverage-review (≤ $45k): clear
+- Breakdown (close < $60,500): clear — close $63,351 well above floor
+- Reclaim $63,500: spot slipped back below gate ($62,049 < $63,500), but flag stays armed (`reclaim63500Alerted=true`); no re-arm until spot breaches $60,500
+- Reclaim $65,900: still $3,850 away
 
-No notification sent. State and log committed to main.
+**No notification sent.** State updated + committed (`memory/btc-levels-state.json`, `memory/logs/2026-07-08.md`). Next gate to watch: $65,900 full-reclaim.

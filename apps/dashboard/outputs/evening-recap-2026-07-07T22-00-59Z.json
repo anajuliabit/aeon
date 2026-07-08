@@ -1,0 +1,321 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-07"
+      },
+      "children": [
+        "heading-main",
+        "tldr",
+        "sep1",
+        "section-headlines",
+        "sep2",
+        "section-notable",
+        "sep3",
+        "section-decisions",
+        "sep4",
+        "section-blockers",
+        "sep5",
+        "footer"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Evening Recap — 2026-07-07",
+        "level": "h1"
+      }
+    },
+    "tldr": {
+      "type": "Text",
+      "props": {
+        "text": "curation solid and ISS-027 codified the 10-day batch dead-slot — SLX -46% recut and aixbt-pulse day-9 both carry unresolved",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-title",
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headline-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "reflect — MEMORY.md 68L→55L; 6 changes: PR #149 DONE, BTC daily close confirmed, batch day-10 dark, ETF flow flip",
+        "href": "memory/MEMORY.md"
+      }
+    },
+    "headline-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "action-converter — ISS-027 filed (12:00Z scheduler 2-day gap = pattern); 5 leverage actions",
+        "href": ".tmp/action-converter/msg.md"
+      }
+    },
+    "headline-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "daily-routine — BONK CAPITULATION, RIF BREAKOUT, Sonnet 5, Ripple MiCA-complete, Summer.fi $6M exploit",
+        "href": "notification 0ff7cbc2"
+      }
+    },
+    "headline-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "goal-tracker — PR #149 logged DONE (merged 7-06 21:26Z); goals updated",
+        "href": "notification 9e877a73"
+      }
+    },
+    "headline-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #160 — operator opened fix(issues) ISS-022 close",
+        "href": "https://github.com/anajuliabit/aeon/pull/160"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-title",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels ×6 — $63.7–64.0k range, reclaim day-2 holding, all clear",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest — @Flowslikeosmo lean-ETH reprice + @hooeem culture pick · sent",
+        "variant": "body"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — \"MCP absorbs into the tool\" 1 cluster, 2 tweets · sent",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief — 3 focus items: 12:00Z batch test, ISS-025 routing, SLX recut",
+        "variant": "body"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve — dispatched + succeeded 18:39:52Z (ISS-025 routing test); no log entry",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-title",
+        "decision-1",
+        "decision-2",
+        "decision-3"
+      ]
+    },
+    "decisions-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "verify self-improve 18:39Z authored ISS-025 capture-step PR (action-converter #2 verdict open)",
+        "variant": "body"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "decision-2-text",
+        "decision-2-link"
+      ]
+    },
+    "decision-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "close PR #155 supersede-dup (gh pr close 155)",
+        "variant": "body"
+      }
+    },
+    "decision-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "PR #155",
+        "href": "https://github.com/anajuliabit/aeon/pull/155"
+      }
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "decision-3-text",
+        "decision-3-link"
+      ]
+    },
+    "decision-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #160 (operator-opened 7-07 18:38Z, ISS-022 close)",
+        "variant": "body"
+      }
+    },
+    "decision-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "PR #160",
+        "href": "https://github.com/anajuliabit/aeon/pull/160"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-blockers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-title",
+        "blocker-1",
+        "blocker-2",
+        "blocker-3",
+        "blocker-4"
+      ]
+    },
+    "blockers-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "self-improve",
+        "message": "ran without logging (cron-state success 18:39:52Z, no log entry)",
+        "type": "warning"
+      }
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "title": "batch 6",
+        "message": "day-10 dark (ISS-027 filed; token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh; last_dispatch 6-28)",
+        "type": "error"
+      }
+    },
+    "blocker-3": {
+      "type": "Alert",
+      "props": {
+        "title": "aixbt-pulse",
+        "message": "dead-slot day-9 (last_success 6-28T21:21Z ~236h stale)",
+        "type": "error"
+      }
+    },
+    "blocker-4": {
+      "type": "Alert",
+      "props": {
+        "title": "SLX",
+        "message": "-46% vs entry $0.4753, recut overdue day-13",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "+4 collapsed (heartbeat ×2, thought-review, skill-freshness) · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

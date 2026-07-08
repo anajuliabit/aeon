@@ -850,3 +850,49 @@ See [[last30-bitcoin]] for the 30-day narrative snapshot (baseline
 - **PR #154 MERGED 7-06 15:35Z** — ISS-026 close. INDEX flip pending reconciliation.
 - **PR #149 vs #155 supersede-decision** — #149 (6-28, day-8 stall) vs #155 (7-05, day-2). Same title/scope, different diff magnitudes (#155 +68 · 4→5 depends_on · 9→21 shared-state vs #149 +68 · 9→36 shared-state). Operator pick pending Monday reopens.
 - **Holiday-freeze cascade tail day-4** — GHAD HARD FREEZE ~89h at 7-06 14:36Z security-digest — 4th day without publication. Expected resumption Mon 7-06 US East Coast business start (which is happening around consolidation time). Wave-resumption watch continues.
+
+## 2026-07-07 rollup — reclaim holds day-2, 12:00Z batch STILL DARK, ETF flow flip
+
+### Picks ledger updates (day-N status)
+- **SLX day-13 CATASTROPHIC — recut STILL overdue.** No fresh CG print again 7-07 (token-alert scope only covers 4 tracked WELL/MAMO/REPPO/GITLAWB). Position stands at -46% vs $0.4753 entry per last 7-05 print. Third consecutive daily-routine surface where recut is called overdue and no action taken. Weekly-review 7-06 19:20Z restructured next-week actions with `Authored by:` slots — SLX close pathway routed operator × 1.
+- **VELVET/M** — no fresh price signal today (both position-closed pre-7-07, no re-entry).
+
+### Tape pulse 7-07 — reclaim day-2 holding above gate
+- **BTC 7-07 ticks:** $63,946 (01:22Z) → $63,007 (05:33Z) → $63,011 (08:53Z) → $63,116 (13:55Z) → $63,958 (16:31Z). All ticks above $63.5k reclaim gate (state `reclaim63500Alerted=true` set 7-06 01:29Z, no re-arm, spot > $60,500 floor).
+- **7-06 daily close $64,072 = FIRST DAILY CLOSE ABOVE $63.5k GATE** — turns the intraday alert into on-tape confirmation. Bounce arc: breakdown (8d) → hold-above-line (5d) → reclaim (6d) → daily close breakout (day-7).
+- **BTC ETFs +$221.7M snap 10-day loser streak** — 7-07 biggest 2mo daily haul, first inflow print since gate-cross. 3-signal alignment: spot + daily close + flow.
+- **Daily-routine 7-07 08:57Z tape**: 43/100 top-100 green, median top-50 -0.3% (mild weakness). Filter kept ~180/250 after stables/liquidity. Winners: TAC +47%, RIF +27% BREAKOUT (7d +85%), EDGE +23%, ANSEM +21% (TRENDING+UP BREAKOUT 7d +232%), GROVE +13%, MON +11%, DEXE +8%, JTO +7.6%, SYRUP +7%, BEAT +7%. Losers: BUILDon -25%, LAB -13% (#24 MAJOR), **BONK -10.6% CAPITULATION+TRENDING+DOWN** (first MAJOR-cap capitulation of reclaim window), UB -9%, VELVET -8.3% (7d -70% capitulation carry-through), GWEI -7.6%, VVV -5.8% day-1 sell-the-news reversion after 7-05 Venice unicorn round, CC Canton -5.7%, GRAM -5.2%, HBAR -4.5%.
+- **VVV day-1 sell-the-news** after 7-05 Venice AI $65M @ $1B unicorn round (private-inference play). Fits Anthropic ship-day-then-mean-revert shape.
+
+### Watchlist 7-07 token-alert (14:00Z — 0 triggers)
+- **WELL $0.00364437 +1.60% 24h** (day-2 red vs 7-05 but 24h green print inside 2d red; vol $2,862K = 2.16× baseline **6.14× intraday resurrection**, first ≥$2M print since 7-02).
+- **MAMO $0.00932410 +1.82% 24h day-6 green** — cleanest small-cap streak of watchlist extends, first sustained close ≥ $0.009; vol $841K = 0.90× baseline exhale after yest 1.29× catch-up.
+- **REPPO $0.02558824 +4.87% 24h** — breakout resumes day-1 post 2-day breather, fresh push above $0.025 handle; vol $191K = 1.05× flat.
+- **GITLAWB $0.00005721 -2.91% 24h day-2 reversal** give-back extends at slower pace; vol $588K = 1.45× baseline **participation-selling extends** the give-back.
+- Rolling 5-window healed (7-06 miss rolled out; 7-07 rolled in). Next-run baselines: WELL $1,429K, MAMO $913K, REPPO $196K, GITLAWB $465K.
+
+### Narrative / macro
+- **Ripple fully MiCA-compliant across 30 EEA countries** (7-07) — first mega-exchange to complete full MiCA transition post-244-firm authorization window (7-05 MiCA closed). Institutional-rails narrative day-1 momentum.
+- **Bitmine +$74M ETH, Saylor sells 3,588 BTC for $216M pref-stock dividends** — bullish accumulation + treasury-rotation dual print continues corporate-treasury thread.
+- **Summer.fi $6M exploit → SUMR -18%** — DeFi tail-risk still live in bull-tape reclaim. Single-protocol event; watch for wave-adjacency (protocol-of-protocols cascade absent so far).
+- **RWA rotates onto SOL rails** carry-forward from 7-05 (Solana RWA fresh ATH $3.41B + ARB 10%-fee dune 7-04 = 2 chains with concrete RWA/fee-accrual anchors within 48h).
+
+### Alpha-filter framework (extended 7-07)
+- **@Flowslikeosmo tokenomics-alignment thesis 5× confirmed** — VVV -5.8% day-1 sell-the-news post 7-05 Venice unicorn round adds a 5th datapoint alongside SLX/VELVET/LIT/VVV prior 4×. New shape: filter now applies to primary-round-driven price runs, not just tokenomics-launch-time drift.
+
+### Meta signals (extended 7-07)
+- **Anthropic global-workspace paper HN 360pts** — info-geometric attribution across transformer layers. HN take mixed (promotional framing, real underlying paper). Adds interpretability angle to Anthropic ship-day compounding.
+- **LLM-as-a-Verifier arXiv 2607.05391 HF ↑5 7-07** (Kwok/Li/Atreya) — verification-as-scaling-axis via expected value over scoring-token logits (not discrete judge scores). Eval-quality-axis day-6 extension.
+- **GLM 5.2 HN 387pts** — open-weights closing on frontier while inference cost drops. Sovereignty-stack + local-LLM narrative extension.
+- **CoMaps FOSS offline maps HN 527pts** — sovereignty stack day-6 (audio + maps).
+- **OAI custom Jalapeño inference chip announced** — counter-tell to Anthropic S-1 IPO-prep pattern; own-silicon layer joining the AI vertical-integration race.
+- **Anthropic ships Claude Sonnet 5 (most agentic — plans, tools, autonomous)** — post-Sonnet-5 product cadence carries into 7-07.
+- **Emdash agentic-dev-env orchestrating Claude Code + Gemini + Codex in parallel** — extends skills-as-primitive convergence with orchestrator-layer for cross-lab agents. Day-8 layer stack holds.
+- **Bun 3× Node.js going mainstream** — JS-runtime consolidation narrative durable.
+- **Apple to open-source Foundation Models framework this summer** — first Apple entry into open-model releases; sovereignty-stack orthogonal (BYO-model for consumer OS).
+
+### Security (7-07 post-freeze)
+- **Januscape KVM/x86 escape CVE-2026-53359 HN 107pts** — full PoC published, hypervisor break. First fresh critical CVE post GHAD un-freeze.
+- **Kani Rust model checker HN 142pts** — formal-verification tool, extends Rust-in-toolchain thread. Extends 7-04 Rust-in-Linux-kernel signal.
+- **GHAD un-freeze wave watch** — post Mon 7-06 US business hours, backlog expected to include 7-03/7-04/7-05/7-06-am discoveries + npm brandjack resumption. Not yet reflected in security-digest since 7-06 14:36Z (skill hasn't run 7-07 as of consolidation).
+- **dulwich pip CVE-2026-52726 RCE-via-clone carry-over unresolved day-3** — highest THIS-WEEK operational priority still stands.

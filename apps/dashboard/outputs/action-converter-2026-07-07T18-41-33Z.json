@@ -1,0 +1,487 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-07"
+      },
+      "children": [
+        "shape-line",
+        "sep1",
+        "action1",
+        "sep2",
+        "action2",
+        "sep3",
+        "action3",
+        "sep4",
+        "action4",
+        "sep5",
+        "action5",
+        "sep6",
+        "sources"
+      ]
+    },
+    "shape-line": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: diagnose 12z tick drop, verify routing test, close SLX, prune MEMORY dupes, retire #155",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1-title",
+        "a1-desc",
+        "a1-why-block",
+        "a1-done-block",
+        "a1-loop"
+      ]
+    },
+    "a1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Trace the 12:00Z tick miss and file ISS-027",
+        "level": "h3"
+      }
+    },
+    "a1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "gh run list shows tick-poll gap 11:41Z→13:54Z (132min) on 7-07, same shape as 7-06 morning-slot cascade."
+      }
+    },
+    "a1-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-why-label",
+        "a1-why-text"
+      ]
+    },
+    "a1-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a1-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #156 shipped clean but 6 batch skills 10d dark — root cause is scheduler drop pattern, not chain-runner truncation."
+      }
+    },
+    "a1-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-done-label",
+        "a1-done-text"
+      ]
+    },
+    "a1-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a1-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027 filed under memory/issues/ OR aeon.yml tick-cron patch PR opened against main."
+      }
+    },
+    "a1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "12z-tick-drop",
+        "variant": "outline"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2-title",
+        "a2-desc",
+        "a2-why-block",
+        "a2-done-block",
+        "a2-loop"
+      ]
+    },
+    "a2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Verify self-improve 18:32Z routing test",
+        "level": "h3"
+      }
+    },
+    "a2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "grep run journal for PR authored against aeon.yml:479-493 (ISS-025 chain-runner capture step); log verdict SELF_IMPROVE_ROUTED_ISS025=yes|no to today's log."
+      }
+    },
+    "a2-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-why-label",
+        "a2-why-text"
+      ]
+    },
+    "a2-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a2-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review 7-06 19:20Z formalized MISS and restructured with Authored by: slots — self-improve NOW is the structural routing test."
+      }
+    },
+    "a2-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-done-label",
+        "a2-done-text"
+      ]
+    },
+    "a2-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a2-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "log entry names PR number (if authored) or explicit no-PR verdict, both cases carry to tomorrow's action list."
+      }
+    },
+    "a2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-routing-test",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3-title",
+        "a3-desc",
+        "a3-why-block",
+        "a3-done-block",
+        "a3-loop"
+      ]
+    },
+    "a3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Move SLX pick from open to closed",
+        "level": "h3"
+      }
+    },
+    "a3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Realize -46% at $0.256 (day-13 vs $0.4753 entry) in memory/topics/crypto.md to end the 14th consecutive daily-routine \"recut overdue\" surface."
+      }
+    },
+    "a3-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-why-label",
+        "a3-why-text"
+      ]
+    },
+    "a3-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a3-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "6 daily-routine surfaces, zero operator action; tape mirror @Flowslikeosmo CARDS -46% self-audit confirms thesis-broken."
+      }
+    },
+    "a3-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-done-label",
+        "a3-done-text"
+      ]
+    },
+    "a3-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a3-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "grep -c \"SLX.*open\" memory/topics/crypto.md returns 0; new \"closed 2026-07-07\" row present."
+      }
+    },
+    "a3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "slx-recut-blown",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4-title",
+        "a4-desc",
+        "a4-why-block",
+        "a4-done-block",
+        "a4-loop"
+      ]
+    },
+    "a4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Prune MEMORY.md duplicated Current Goals block",
+        "level": "h3"
+      }
+    },
+    "a4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Remove shadowed L4-L11 block post-7-06-reflect canonical block; bump Last consolidated header to 2026-07-07."
+      }
+    },
+    "a4-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-why-label",
+        "a4-why-text"
+      ]
+    },
+    "a4-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a4-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "every skill reads MEMORY.md — dup goals bleed context cost, downstream dedup misbehaves, Last consolidated line lies."
+      }
+    },
+    "a4-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-done-label",
+        "a4-done-text"
+      ]
+    },
+    "a4-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a4-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "wc -l memory/MEMORY.md drops ~7 lines; single \"sandbox-truncation systemic\" hit in Current Goals."
+      }
+    },
+    "a4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-md-dup-goals",
+        "variant": "outline"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5-title",
+        "a5-desc",
+        "a5-why-block",
+        "a5-done-block",
+        "a5-loop"
+      ]
+    },
+    "a5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Close PR #155",
+        "level": "h3"
+      }
+    },
+    "a5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Close with comment \"supersede resolved — PR #149 merged 2026-07-06T21:26Z\"."
+      }
+    },
+    "a5-why-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-why-label",
+        "a5-why-text"
+      ]
+    },
+    "a5-why-label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a5-why-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #149 merged 7-06T21:26Z landed skill-graph canonical — #155 heartbeat-pings P1 every tick since 7-05 for zero payload."
+      }
+    },
+    "a5-done-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-done-label",
+        "a5-done-text"
+      ]
+    },
+    "a5-done-label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a5-done-text": {
+      "type": "Text",
+      "props": {
+        "text": "gh pr view 155 --json state returns \"CLOSED\"."
+      }
+    },
+    "a5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-155-supersede",
+        "variant": "outline"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=68L logs=7d topics=11 prs=1 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
