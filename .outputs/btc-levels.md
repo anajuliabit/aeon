@@ -1,10 +1,8 @@
 ## Summary
 
-- **Spot:** $62,347.72 | **Daily close (2026-07-08):** $62,248.93
-- All four alert thresholds evaluated — none triggered:
-  - Leverage-review (≤$45k): clear
-  - Breakdown (close < $60,500): close at $62,248 is above floor
-  - Reclaim $63,500: spot still below gate; re-arm floor ($60,500) not breached so flag stays `true`
-  - Reclaim $65,900: spot still well below
-- No notification sent (quiet run).
-- State and log committed (`c9506d9`).
+**btc-levels 05:12Z — quiet run, no alerts.**
+
+- Spot: $62,402.92 (+$55 from 01:16Z run)
+- Daily close (2026-07-08): $62,248.93
+- All levels clear: above $45k leverage band, above $60.5k breakdown floor, below $63.5k reclaim gate (flag still armed), below $65.9k full-reclaim gate
+- State and log committed.
