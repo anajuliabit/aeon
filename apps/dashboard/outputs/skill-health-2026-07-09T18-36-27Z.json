@@ -1,0 +1,250 @@
+{
+  "root": "card_health",
+  "state": {},
+  "elements": {
+    "card_health": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health",
+        "description": "2026-07-09"
+      },
+      "children": [
+        "alert_degraded",
+        "sep1",
+        "stats_section",
+        "sep2",
+        "degraded_heading",
+        "degraded_table",
+        "skill_more_link",
+        "sep3",
+        "status_breakdown",
+        "sep4",
+        "notes_section"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "title": "DEGRADED(21)",
+        "message": "Systemic: output_tokens=0 sandbox-truncation day-17 — 21 skills, ISS-019/020/021/025 cluster",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_degraded_count",
+        "stat_healthy_count",
+        "stat_no_data_count",
+        "stat_open_issues"
+      ]
+    },
+    "stat_degraded_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Degraded/Flapping",
+        "value": "21"
+      }
+    },
+    "stat_healthy_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "8"
+      }
+    },
+    "stat_no_data_count": {
+      "type": "Stat",
+      "props": {
+        "label": "No Data",
+        "value": "3"
+      }
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "11"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 Degraded/Flapping",
+        "level": "h3"
+      }
+    },
+    "degraded_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate",
+          "Last Success",
+          "Status"
+        ],
+        "rows": [
+          [
+            "market-context-refresh",
+            "32%",
+            "6-28 (11d)",
+            "WAIT-INFRA (batch-dark)"
+          ],
+          [
+            "narrative-tracker",
+            "33%",
+            "6-28 (11d)",
+            "WAIT-INFRA (batch-dark)"
+          ],
+          [
+            "aixbt-pulse",
+            "47%",
+            "6-28 (11d)",
+            "WAIT-INFRA (dead-slot d11)"
+          ],
+          [
+            "cost-report",
+            "11%",
+            "6-29 (10d)",
+            "WAIT-INFRA → ISS-025"
+          ],
+          [
+            "vuln-scanner",
+            "13%",
+            "7-04 (5d)",
+            "WAIT-INFRA → ISS-018"
+          ]
+        ]
+      }
+    },
+    "skill_more_link": {
+      "type": "Link",
+      "props": {
+        "label": "+16 more — see memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_breakdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no_data_section",
+        "healthy_section"
+      ]
+    },
+    "no_data_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no_data_heading",
+        "no_data_list"
+      ]
+    },
+    "no_data_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ No Data",
+        "level": "h3"
+      }
+    },
+    "no_data_list": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard",
+        "variant": "body"
+      }
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "healthy_heading",
+        "healthy_count"
+      ]
+    },
+    "healthy_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 Healthy",
+        "level": "h3"
+      }
+    },
+    "healthy_count": {
+      "type": "Badge",
+      "props": {
+        "text": "8 skills",
+        "variant": "secondary"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note_1",
+        "note_2",
+        "note_3"
+      ]
+    },
+    "note_1": {
+      "type": "Text",
+      "props": {
+        "text": "Classification byte-identical to 7-08 18:20Z (day-15→17 counter only).",
+        "variant": "caption"
+      }
+    },
+    "note_2": {
+      "type": "Text",
+      "props": {
+        "text": "12:00Z batch dark d12, aixbt-pulse d11, ISS-025 capture-step PR d17. Weekly-review 2026-07-13 T-4.",
+        "variant": "caption"
+      }
+    },
+    "note_3": {
+      "type": "Text",
+      "props": {
+        "text": "Filed: 0 · Resolved: 0",
+        "variant": "caption"
+      }
+    }
+  }
+}
