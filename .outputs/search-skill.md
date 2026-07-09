@@ -1,7 +1,3 @@
-Skill executed. Exit mode **SEARCH_SKILL_NO_GAP** (day 15 of streak). Log entry appended to `memory/logs/2026-07-08.md`; no notify, no search, no article per skill spec.
-
 ## Summary
-- **What ran:** search-skill (`var=""`), full step-1 derivation across all four sources.
-- **Result:** SEARCH_SKILL_NO_GAP — no concrete capability word derivable. Fleet failures are infra-shape (sandbox output_tokens=0 truncation, ISS-019/020/021/025 cluster day-15), not gap-shape.
-- **Files modified:** `memory/logs/2026-07-08.md` (append only).
-- **Follow-up:** none. Continuation of the durable NO_GAP pattern anchored in `MEMORY.md → Recurring patterns`.
+
+Ran search-skill (var=""). Walked all four §1 gap-derivation sources; all returned the same NO_GAP signature as the prior 15 runs — chronic infra failures (ISS-019/020/021/025 sandbox-truncation `output_tokens=0` cluster + ISS-027 scheduler dark-slot for 12:00Z batch), zero open issues in `{missing-secret, api-change, permanent-limitation, quality-regression}` categories, no capability-word request in MEMORY.md priorities or last-7d logs. Exit mode **SEARCH_SKILL_NO_GAP day 16**. Per spec §5+§7: no catalog search, no `./add-skill` call, no notification, log only. Files modified: `memory/logs/2026-07-09.md`. Follow-up: none skill-side; re-trigger when fleet failure signature changes (non `output_tokens=0`) or operator posts an explicit capability request.
