@@ -1,0 +1,386 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-09"
+      },
+      "children": [
+        "tldr_alert",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "blockers_section",
+        "sep5",
+        "footer_text"
+      ]
+    },
+    "tldr_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "self-improve routing test landed PR #161; batch-dark scope broadened to 09:00Z slot for the first time"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline_title",
+        "headline_item1"
+      ]
+    },
+    "headline_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline_text1",
+        "headline_link1"
+      ]
+    },
+    "headline_text1": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve — PR #161 opened: reduce search-skill daily→weekly (Mon 14:00 UTC), targets ISS-021 sr=0.37",
+        "variant": "body"
+      }
+    },
+    "headline_link1": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/161",
+        "href": "https://github.com/anajuliabit/aeon/pull/161"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_title",
+        "notable_item1",
+        "notable_item2",
+        "notable_item3",
+        "notable_item4",
+        "notable_item5"
+      ]
+    },
+    "notable_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_item1": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat ×3 — batch-dark extension d1 confirmed; 11:38Z tick dispatched 0 skills; github-trending 09:00Z first miss (ISS-027 scope widens)",
+        "variant": "body"
+      }
+    },
+    "notable_item2": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — Nuclio Go CVE-2026-52831 CVSS 10.0 PoC (cron→RCE); npm brand-jack d2: 27 fresh, AI cluster sharpens (myclaude-code + clavue family)",
+        "variant": "body"
+      }
+    },
+    "notable_item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_item3_text",
+        "notable_item3_stats"
+      ]
+    },
+    "notable_item3_text": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — LAB capitulation d2 top signal",
+        "variant": "body"
+      }
+    },
+    "notable_item3_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "notable_lab_stat",
+        "notable_slx_stat",
+        "notable_vol_mcap_stat"
+      ]
+    },
+    "notable_lab_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "LAB",
+        "value": "-59.4%",
+        "trend": "down"
+      }
+    },
+    "notable_slx_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "SLX",
+        "value": "$0.174",
+        "delta": "-63%",
+        "trend": "down"
+      }
+    },
+    "notable_vol_mcap_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "vol/mcap",
+        "value": "0.81"
+      }
+    },
+    "notable_item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_health_header",
+        "notable_health_grid",
+        "notable_health_footer"
+      ]
+    },
+    "notable_health_header": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health",
+        "variant": "lead"
+      }
+    },
+    "notable_health_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "notable_degraded_stat",
+        "notable_warning_stat",
+        "notable_healthy_stat"
+      ]
+    },
+    "notable_degraded_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Degraded",
+        "value": "21"
+      }
+    },
+    "notable_warning_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Warning",
+        "value": "11"
+      }
+    },
+    "notable_healthy_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "8"
+      }
+    },
+    "notable_health_footer": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step d17 unshipped; notification fired",
+        "variant": "caption"
+      }
+    },
+    "notable_item5": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY.md 61L→64L; 6 state changes: BTC arc broken, SLX -63%, LAB cascade, npm brand-jack d2, LLM-agent-framework d3",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_title",
+        "decisions_item1",
+        "decisions_item2",
+        "decisions_item3",
+        "decisions_item4"
+      ]
+    },
+    "decisions_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions_item1": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #161 (reduce search-skill cadence, targets ISS-021 sr=0.37)",
+        "variant": "body"
+      }
+    },
+    "decisions_item2": {
+      "type": "Text",
+      "props": {
+        "text": "author ISS-025 capture-step PR against .github/workflows/aeon.yml (T-4 to 7-13; operator-direct-author, rule-5 block)",
+        "variant": "body"
+      }
+    },
+    "decisions_item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decisions_item3_text",
+        "decisions_slx_stats",
+        "decisions_item3_footer"
+      ]
+    },
+    "decisions_item3_text": {
+      "type": "Text",
+      "props": {
+        "text": "SLX recut",
+        "variant": "lead"
+      }
+    },
+    "decisions_slx_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "decisions_slx_current",
+        "decisions_slx_entry",
+        "decisions_slx_day"
+      ]
+    },
+    "decisions_slx_current": {
+      "type": "Stat",
+      "props": {
+        "label": "Current",
+        "value": "$0.174",
+        "delta": "-63%",
+        "trend": "down"
+      }
+    },
+    "decisions_slx_entry": {
+      "type": "Stat",
+      "props": {
+        "label": "Entry",
+        "value": "$0.4753"
+      }
+    },
+    "decisions_slx_day": {
+      "type": "Stat",
+      "props": {
+        "label": "Day",
+        "value": "15"
+      }
+    },
+    "decisions_item3_footer": {
+      "type": "Text",
+      "props": {
+        "text": "T-4 to weekly-review 7-13",
+        "variant": "caption"
+      }
+    },
+    "decisions_item4": {
+      "type": "Text",
+      "props": {
+        "text": "create ISS-025.md + ISS-028.md (12z batch dark + aixbt-pulse d11; 3rd consecutive uncreated carry)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blockers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers_title",
+        "blockers_item1"
+      ]
+    },
+    "blockers_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blockers_item1": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "self-improve — ran 18:36Z without log entry (low-severity; PR #161 confirms success)"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "+9 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
