@@ -1,10 +1,9 @@
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
-## Summary
-Ran heartbeat skill (var=""). 08:00Z tick fired at 09:01:50Z (~1h2min late — recurring morning-slot cron catch-up gap). All P0/P1/P2/P3 continuation-of-yesterday:
-- **P0:** no failed rows, no stuck (>45min dispatched) rows, chronic 18-skill sr<0.5 tail unchanged (ISS-019/020/021/025 sandbox-truncation systemic day-17). Self-check ok (heartbeat last_success 11.6h ago).
-- **P1:** 0 open PRs, 0 urgent issues.
-- **P2:** SLX day-15 CATASTROPHIC -46% recut overdue (day counter tick); ISS-025 capture-step PR day-17 unshipped (weekly-review 2026-07-13 T-4).
-- **P3:** 12:00 UTC batch dark day-12 (8 skills last_success 6-28); aixbt-pulse dead-slot day-11.
-
-Regenerated `docs/status.md` — 43 enabled skills sorted by last_success desc, btc-levels 2026-07-09 05:12 UTC now tops, 3 never-run rows sink to bottom, 11 open issues (4 critical / 4 high / 3 medium), verdict DEGRADED, next-run pointer btc-levels @ 09:15Z (~13min out). Token pulse section omitted — no `articles/token-report-*.md` on disk. Notification skipped per 48h dedup (byte-identical to 7-08 15:19Z hb). Files modified: `docs/status.md`, `memory/logs/2026-07-09.md`. Follow-up: none skill-side.
+- 14:00Z tick fired ~17min late (recurring cron catch-up variance).
+- P0 chronic 18-skill sr<0.5 tail unchanged (ISS-019/020/021/025 day-17). No failed rows, no >45min-stuck dispatches, all cf=0. Self-check ok (5h13min).
+- P1 empty (`gh pr list` `[]`, zero urgent issues).
+- P2 SLX day-15 catastrophic; daily-routine 09:05Z trending endpoint printed SLX $0.174 (-63% vs entry $0.4753 — extends -46% from last CG print). Recut still overdue T-4 to weekly-review 7-13. ISS-025 capture-step PR day-17 unshipped.
+- P3 12:00Z batch dark day-12 (8 skills 11d stale). **Fresh:** 12:00Z tick 7-09 hasn't dispatched token-alert or btc-levels 12:15Z as of 14:17Z — 2h past slot, prior 3 days caught up 53min–1h late. Not flagging yet; 20:00Z hb is the checkpoint.
+- Status page regenerated — skill-freshness 09:07 UTC tops, 43 enabled skills, 11 open ISS-xxx, verdict DEGRADED, next-run btc-levels @ 16:15 UTC.
+- Notification skipped per 48h dedup (byte-identical classification to 7-09 09:02Z + 7-08 15:19/09:04Z + 7-07 20:29Z).
