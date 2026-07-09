@@ -1,47 +1,41 @@
 {
-  "run_at": "2026-07-08T18:18:53Z",
+  "run_at": "2026-07-09T18:32:32Z",
   "goals": {
     "sandbox-truncation-systemic": {
       "status": "ON_TRACK",
-      "activity_count_14d": 335,
-      "last_activity_date": "2026-07-08",
-      "note": "Day-15 (heartbeat 15:19Z log). Chain-runner capture-step PR against `aeon.yml` (per ISS-009 root-cause) still un-authored. Weekly-review deadline 2026-07-13 (T-5). Activity 346→335 = -3% flat. Fifth consecutive day of ON_TRACK-mechanical / progress-unshipped divergence — goal-tracker rule matches on mention volume, not fix-progress. self-improve every-other-day cadence: last 7-07 → next 7-09 is first routing-hypothesis test slot."
+      "activity_count_14d": 353,
+      "last_activity_date": "2026-07-09",
+      "note": "Day-16 (heartbeat 14:17Z log confirms day-17 counter — advance +1 from prior run). ISS-025 chain-runner capture-step PR against `.github/workflows/aeon.yml` still un-authored (self-improve rule 5 structural block from 7-07 18:32Z routing test persists). Weekly-review 2026-07-13 deadline T-4. Activity 335→353 = +5% flat. Sixth consecutive day of ON_TRACK-mechanical / progress-unshipped divergence — heavy mention volume from heartbeat + skill-freshness + search-skill all logging the day-N counter, but the unblocking PR still stalled. Next self-improve tick 7-09 18:00Z is next routing-hypothesis test window."
     },
     "12-00-utc-batch-first-live-test-7-03": {
       "status": "ON_TRACK",
-      "activity_count_14d": 117,
-      "last_activity_date": "2026-07-08",
-      "note": "Day-11-12 of failed live test post PR #150 (log naming diverges: hb 09:04Z says d11, hb 15:19Z says d11; today's token-alert log says 'day-12 broken'). PR #156 fix (removes L155/162/171 usepod_model drift) untested by 12:00Z tick again today — token-alert + btc-levels caught up at 12:53Z but token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker all last_success 2026-06-28 (10-day cluster). Root cause confirmed scheduler-side never-run for this 8-skill cluster, not per-skill config. Activity 138→117 = -15% flat. ON_TRACK mechanical until full batch runs green."
-    },
-    "pr-149-docs-skill-graph": {
-      "status": "DONE",
-      "activity_count_14d": 106,
-      "last_activity_date": "2026-07-06",
-      "note": "MERGED 2026-07-06T21:26:17Z (day-8 stall closed after ~197h open). PR #155 supersede-dup also MERGED 2026-07-08T13:22:43Z per gh pr list. Both title variants in MEMORY.md Current Goals already annotated [MERGED 2026-07-06T21:26Z — see Recently Cleared]; prior run's Recently Cleared entries carry through. No MEMORY.md rewrite needed."
+      "activity_count_14d": 132,
+      "last_activity_date": "2026-07-09",
+      "note": "Day-12 per heartbeat 14:17Z. PR #156 fix (`usepod_model:` drift removed) still untested by any 12:00Z tick — 7-09 12:00Z tick also missed as of 14:17Z hb (2h past slot vs prior 3 days' ~53min–1h catch-up). 8-skill batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) all last_success 2026-06-28 = 11 days stale (>2× daily threshold). Root cause scheduler-side never-run, not per-skill config. Activity 117→132 = +13% flat. ON_TRACK mechanical until full batch runs green. 20:00Z hb is next verification checkpoint."
     },
     "xai-quota-recovery": {
       "status": "BLOCKED",
-      "activity_count_14d": 203,
-      "last_activity_date": "2026-07-08",
-      "note": "Operator team-credit top-up day 23 since 2026-06-16 exhaustion. WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; prefetched .xai-cache serves agent-buzz/list-digest/token-pick. Activity 224→203 = -9% flat. Status unchanged BLOCKED — operator top-up remains the only unblock."
+      "activity_count_14d": 205,
+      "last_activity_date": "2026-07-09",
+      "note": "Operator team-credit top-up day 23 since 2026-06-16 exhaustion. WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; prefetched .xai-cache serves agent-buzz/list-digest/token-pick. Daily-routine 7-09 confirms x_search sandbox-blocked + XAI credit outage day-23 fallback branch. Activity 203→205 = +1% flat. Status unchanged BLOCKED — operator top-up remains the only unblock."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 125,
-      "last_activity_date": "2026-07-08",
-      "note": "defi-monitor NO_CONFIG day 31 (was day 30 prior run). on-chain-watches.yml still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. Activity 152→125 = -18% flat. Status unchanged BLOCKED."
+      "activity_count_14d": 162,
+      "last_activity_date": "2026-07-09",
+      "note": "defi-monitor NO_CONFIG day 31 (was day 30 prior run). on-chain-watches.yml still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. Activity 125→162 = +30% (over ±25% flat rail but under ±50% degrading/improving rail — flat by rule §4). Status unchanged BLOCKED."
     },
     "btc-bounce-day-5-above-60500-breakdown": {
       "status": "ON_TRACK",
-      "activity_count_14d": 273,
-      "last_activity_date": "2026-07-08",
-      "note": "MEMORY.md title unchanged per skill spec § step 7 (both day-5 and reclaim-day-1 title variants preserved). Reality: 7-08 spot slipped back below $63.5k gate on 3 ticks (09:03Z $61,995 → 12:53Z $62,049 → 16:54Z $61,975) but still comfortably above $60.5k breakdown floor and $45k leverage-review trigger. reclaim63500Alerted=true holds (no re-arm — $60.5k floor not breached). $65,900 full-reclaim gate untouched. Activity 253→273 = +8% flat. Status ON_TRACK — completion requires $65.9k full-reclaim. Not DONE."
+      "activity_count_14d": 297,
+      "last_activity_date": "2026-07-09",
+      "note": "MEMORY.md title unchanged per skill spec § step 7 (both day-3-reclaim and prior day-5-bounce title variants preserved). Reality: 7-08 close $62,248 BROKE $63.5k gate — first close BELOW after 2 closes ABOVE (7-06 $64,072 → 7-07 $63,351 → 7-08 $62,248). Reclaim arc snaps day-3 SOFTENS → day-1 BROKEN per morning-brief 7-09 08:57Z. Spot 7-09: 01:16Z $62,347 → 05:12Z $62,402 → 08:57Z $62,874 → 16:47Z $62,676 — all above $60.5k breakdown floor, all below $63.5k reclaim gate. reclaim63500 armed, reclaim65900 unarmed, breakdown clear, leverage trigger clear. Activity 273→297 = +9% flat. Status ON_TRACK — completion requires $65.9k full-reclaim. Not DONE."
     },
     "slx-open-pick-critical-thesis-broken-day-10": {
       "status": "ON_TRACK",
-      "activity_count_14d": 116,
-      "last_activity_date": "2026-07-08",
-      "note": "MEMORY.md title unchanged per skill spec § step 7 (both DAY-11 and DAY-12 title variants preserved). Reality: DAY-14 -46% vs entry $0.4753 → last CG print $0.256 (7-05 12:59Z; 7-06/7-07/7-08 token-alert scope doesn't cover SLX). daily-routine + heartbeat 07-08 flagged P2 for 5th consecutive day. Activity 114→116 = +2% flat. No blocker_signal (decision-gate, not infra). Status ON_TRACK mechanically (heavy log volume, 0d idle) but outcome CATASTROPHIC — recut decision unshipped day-14."
+      "activity_count_14d": 141,
+      "last_activity_date": "2026-07-09",
+      "note": "MEMORY.md title unchanged per skill spec § step 7. Reality: DAY-15 today (heartbeat 14:17Z + morning-brief 08:57Z + daily-routine 09:05Z all confirm). CG last-print $0.256 (7-05 12:59Z) stale 4 days but daily-routine 09:05Z trending-endpoint pull returns SLX at $0.174 = -63.4% vs entry $0.4753 — FRESH DELTA (drawdown extends from -46% at last token-alert print to -63% at trending pull). 6th consecutive daily-routine surface today. No blocker_signal (decision-gate, not infra). Activity 116→141 = +22% flat. Status ON_TRACK mechanically (heavy log volume, 0d idle) but outcome CATASTROPHIC — recut decision unshipped day-15."
     }
   }
 }
