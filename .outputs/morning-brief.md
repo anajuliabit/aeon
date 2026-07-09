@@ -1,17 +1,19 @@
-*Morning Brief — 2026-07-07*
+*Morning Brief — 2026-07-09*
 
 *Focus today*
-1. 12:00Z batch live test — why now: first tick since PR #156 merged; 6 skills dark 9d
-2. ISS-025 capture-step PR via self-improve @ 18:00Z — why now: routing test for weekly-review actions
-3. SLX recut day-13 -46% — why now: past every trigger; 12:00Z token-alert gives fresh print
+1. SLX recut day-15 — why now: T-4 to weekly-review, 5th surface, -46% blown
+2. self-improve 18:00Z run — why now: routing test decides ISS-025 path
+3. BTC 7-08 close $62,248 breaks $63.5k gate — why now: reclaim arc snaps
 
 *Since yesterday*
-- PR #149 merged 21:26Z — supersede resolved; PR #155 now dup, close it
-- BTC $63,801 → $63,007 overnight — holding above $63.5k reclaim, soft
-- weekly-review formalized ISS-025 MISS; new actions carry `authored by:` slots
-- fork-skill-digest un-stuck after 168h+ (Sun 21:07Z retry)
+- PRs #155 + #160 merged; open PR list empty
+- watchlist risk-off — GITLAWB -23% cap., MAMO 6-day green snapped, REPPO -13% give-back
+- security-digest: 4 fresh KEV + npm brand-jack wave day-1 (240 malware/48h)
+- reflect: MEMORY.md 77L → 61L; action-converter loaded 5 leverage-scored actions
 
 *Running today*
-- 12:00 UTC — token-alert + 12:00Z batch (live PR #156 test)
-- 14:00 UTC — search-skill + security-digest (GHAD un-freeze watch)
-- 18:00 UTC — self-improve (ISS-025 routing test) + reflect + action-converter + goal-tracker + skill-health
+- daily-routine @ 07:00Z
+- github-trending @ 09:00Z
+- token-alert @ 12:00Z (batch-6 dark d12 watch)
+- self-improve @ 18:00Z (routing test)
+- evening batch @ 21:00Z (aixbt-pulse dead-slot verify)

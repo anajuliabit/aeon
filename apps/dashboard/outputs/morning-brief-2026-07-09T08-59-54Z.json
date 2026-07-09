@@ -1,0 +1,357 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-09"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-section",
+        "sep-1",
+        "since-section",
+        "sep-2",
+        "running-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-main",
+        "focus-1-why"
+      ]
+    },
+    "focus-1-main": {
+      "type": "Text",
+      "props": {
+        "text": "1. SLX recut day-15",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "focus-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: T-4 to weekly-review, 5th surface, -46% blown",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-main",
+        "focus-2-why"
+      ]
+    },
+    "focus-2-main": {
+      "type": "Text",
+      "props": {
+        "text": "2. self-improve 18:00Z run",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "focus-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: routing test decides ISS-025 path",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-main",
+        "focus-3-why"
+      ]
+    },
+    "focus-3-main": {
+      "type": "Text",
+      "props": {
+        "text": "3. BTC 7-08 close $62,248 breaks $63.5k gate",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "focus-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why now: reclaim arc snaps",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "since-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "PRs #155 + #160 merged; open PR list empty",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-2-main",
+        "since-2-detail"
+      ]
+    },
+    "since-2-main": {
+      "type": "Text",
+      "props": {
+        "text": "watchlist risk-off",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "GITLAWB -23% cap., MAMO 6-day green snapped, REPPO -13% give-back",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "since-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-3-main",
+        "since-3-detail"
+      ]
+    },
+    "since-3-main": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest: 4 fresh KEV + npm brand-jack wave day-1",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "240 malware/48h",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "since-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-4-main",
+        "since-4-detail"
+      ]
+    },
+    "since-4-main": {
+      "type": "Text",
+      "props": {
+        "text": "reflect: MEMORY.md 77L → 61L",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-4-detail": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter loaded 5 leverage-scored actions",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "running-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-item-1",
+        "running-item-2",
+        "running-item-3",
+        "running-item-4",
+        "running-item-5"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "running-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine @ 07:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-3-main",
+        "running-3-detail"
+      ]
+    },
+    "running-3-main": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert @ 12:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "batch-6 dark d12 watch",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "running-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve @ 18:00Z (routing test)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-5-main",
+        "running-5-detail"
+      ]
+    },
+    "running-5-main": {
+      "type": "Text",
+      "props": {
+        "text": "evening batch @ 21:00Z",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-5-detail": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse dead-slot verify",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
