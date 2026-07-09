@@ -1,0 +1,110 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-07-09"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_main",
+        "sep1",
+        "heading_section",
+        "tweet1",
+        "link1",
+        "tweet2",
+        "link2",
+        "sep2",
+        "text_meta"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Only 5 protocols net-positive after emissions per x.com/Flowslikeosmo — GMX 6.6×, LINK 1.9×, PUMP 1.6×, CAKE 1.4×, AERO 1.2×",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_section": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Research List",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "net-token-value-flow after dilution: only 5 protocols net-positive past month (GMX 6.6× / LINK 1.9× / PUMP 1.6× / CAKE 1.4× / AERO 1.2×); XRP worst outlier at -35,542× on the tail. NTVF > fees/rev is the frame.",
+        "likes": 32,
+        "retweets": 2
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2074960722480820257"
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "Grok 4.5 hands-on: Gemma-on-Cerebras-level latency; Grok > GPT > Claude on speed. Inference-speed lead decoupling from the ASIC-chip race (cf. OAI Jalapeño 7-07).",
+        "likes": 20,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2074958336953290887"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_meta": {
+      "type": "Text",
+      "props": {
+        "text": "Status: LIST_DIGEST_OK | Sources: 1642770456720683008=ok(6)",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

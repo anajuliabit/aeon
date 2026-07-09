@@ -1,13 +1,11 @@
-*List Digest — 2026-07-08*
+*List Digest — 2026-07-09*
 
-@DeFi_Cheetah owns the day — stablecoin-card self-custody essay + KAST float thesis. everyone else single-digit likes.
+Only 5 protocols net-positive after emissions per x.com/Flowslikeosmo — GMX 6.6×, LINK 1.9×, PUMP 1.6×, CAKE 1.4×, AERO 1.2×.
 
-*DeFi research*
-- x.com/DeFi_Cheetah — self-custody protects the money, not the spending rail: WaveCrest / Wirecard / FTX / Argent-Kulipa all burned non-custodial-card users historically (♥25, ↻1) — [View](https://x.com/DeFi_Cheetah/status/2074582092130947523)
-- x.com/DeFi_Cheetah — KAST earns interchange + T-bill yield on disbursement float; peers earn only on card-use → structural yield advantage as long as unspent balances sit (♥18, ↻0) — [View](https://x.com/DeFi_Cheetah/status/2074569289647235570)
-- x.com/Louround_ — $DOT one-day -85% wick from months ago just filled; token already 92% off ATH → wick-fill is low-liquidity noise, not a bottom signal (♥8, ↻0) — [View](https://x.com/Louround_/status/2074595568937304125)
-- x.com/thesaint_ — Backpack ≈ BNB 2020: captive-exchange-token accumulation frame (quote of @backpack_daily, no elaboration) (♥9, ↻0) — [View](https://x.com/thesaint_/status/2074572063751225813)
+*DeFi Research List*
+- x.com/Flowslikeosmo — net-token-value-flow after dilution: only 5 protocols net-positive past month (GMX 6.6× / LINK 1.9× / PUMP 1.6× / CAKE 1.4× / AERO 1.2×); XRP worst outlier at -35,542× on the tail. NTVF > fees/rev is the frame. (♥ 32, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2074960722480820257)
+- x.com/DeFiMinty — Grok 4.5 hands-on: Gemma-on-Cerebras-level latency; Grok > GPT > Claude on speed. Inference-speed lead decoupling from the ASIC-chip race (cf. OAI Jalapeño 7-07). (♥ 20, ↻ 0) — [View](https://x.com/DeFiMinty/status/2074958336953290887)
 
 ---
-sources: list1=ok(8)
+sources: 1642770456720683008=ok(6)
 status: LIST_DIGEST_OK
