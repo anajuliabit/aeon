@@ -1,15 +1,14 @@
 ## Summary
 
-Ran btc-levels skill at 16:47Z. Fetched BTC price data from CoinGecko:
+**BTC Levels — 2026-07-09 20:28Z**
 
-- **Spot:** $62,676.51 (`.prices[-1][1]`)
-- **Previous UTC daily close:** $62,248.93 (2026-07-08)
+- **Spot**: $63,241.33 (+$565 from prior 16:47Z run)
+- **Previous daily close**: $62,248.93 (2026-07-08)
 
-Level evaluation — no alerts:
-- Spot $62,677 > $45,000 → leverage-review trigger clear
-- Close $62,249 > $60,500 → no breakdown alert, `breakdownAlertedForClose` stays null
-- Spot < $63,500 → `reclaim63500Alerted` (already true) unchanged, no new alert
-- Spot < $65,900 → `reclaim65900Alerted` false, no trigger
-- Spot > $60,500 → no re-arm of reclaim flags
+**Level evaluation — no alerts fired:**
+- Leverage trigger (≤$45k): clear
+- Breakdown (close <$60,500): clear — close $62,248 > $60,500
+- Reclaim $63,500: armed (`reclaim63500Alerted=true`); spot $63,241 is $258 below the gate, not yet crossed; re-arm requires spot < $60,500
+- Reclaim $65,900: unarmed, spot well below
 
-No notification sent (quiet run). State updated and log appended; both committed.
+No notification sent. State and log committed.
