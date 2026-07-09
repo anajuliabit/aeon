@@ -1,0 +1,942 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-09",
+        "description": "Market overview, top movers, notable updates, and digest"
+      },
+      "children": [
+        "market-section",
+        "sep1",
+        "winners-section",
+        "sep2",
+        "losers-section",
+        "sep3",
+        "notable-section",
+        "sep4",
+        "tweets-section",
+        "sep5",
+        "paper-section",
+        "sep6",
+        "github-section",
+        "sep7",
+        "hn-section",
+        "sep8",
+        "followup-section"
+      ]
+    },
+    "market-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "market-heading",
+        "market-summary",
+        "market-stats"
+      ]
+    },
+    "market-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Overview",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "market-summary": {
+      "type": "Text",
+      "props": {
+        "text": "62/77 top-100 green, median top-50 +1.0%",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "market-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "sm"
+      },
+      "children": [
+        "stat-btc",
+        "stat-eth",
+        "stat-sol",
+        "stat-bnb",
+        "stat-hype"
+      ]
+    },
+    "stat-btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62,875",
+        "delta": "+1.4%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,753",
+        "delta": "+1.1%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$78.08",
+        "delta": "+1.0%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-bnb": {
+      "type": "Stat",
+      "props": {
+        "label": "BNB",
+        "value": "$572",
+        "delta": "+1.9%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$68.07",
+        "delta": "0%",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Vol/MCap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "NEX",
+            "$0.0000035",
+            "+32.0%",
+            "+87%",
+            "$12M",
+            "#161",
+            "PUMP-RISK BREAKOUT"
+          ],
+          [
+            "2",
+            "ARB",
+            "$0.086",
+            "+12.9%",
+            "+11.4%",
+            "$94M",
+            "#97",
+            "TRENDING+UP"
+          ],
+          [
+            "3",
+            "EIGEN",
+            "$0.252",
+            "+11.1%",
+            "+27.7%",
+            "$47M",
+            "#172",
+            "BREAKOUT"
+          ],
+          [
+            "4",
+            "GRASS",
+            "$0.386",
+            "+11.0%",
+            "-18.6%",
+            "$45M",
+            "#148",
+            "FADE"
+          ],
+          [
+            "5",
+            "MANA",
+            "$0.075",
+            "+10.9%",
+            "+17.9%",
+            "$26M",
+            "#205",
+            ""
+          ],
+          [
+            "6",
+            "SKY",
+            "$0.058",
+            "+10.0%",
+            "",
+            "$15M",
+            "#55",
+            ""
+          ],
+          [
+            "7",
+            "APE",
+            "$0.161",
+            "+9.7%",
+            "+12.0%",
+            "$69M",
+            "#193",
+            ""
+          ],
+          [
+            "8",
+            "VVV (Venice)",
+            "$11.36",
+            "+9.1%",
+            "-12.4%",
+            "$38M",
+            "#100",
+            "FADE"
+          ],
+          [
+            "9",
+            "VELVET",
+            "$0.430",
+            "+8.2%",
+            "-41.6%",
+            "$10M",
+            "#177",
+            "FADE"
+          ],
+          [
+            "10",
+            "KAITO",
+            "$0.682",
+            "+8.0%",
+            "",
+            "$125M",
+            "#189",
+            ""
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "losers-table"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Vol/MCap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "LAB",
+            "$1.18",
+            "-59.4%",
+            "-87.1%",
+            "$297M vol",
+            "#119",
+            "TRENDING+DOWN CAPITULATION"
+          ],
+          [
+            "2",
+            "M (MemeCore)",
+            "$1.19",
+            "-15.9%",
+            "",
+            "$14M",
+            "#47",
+            "MAJOR"
+          ],
+          [
+            "3",
+            "UB (Unibase)",
+            "$0.071",
+            "-14.0%",
+            "-20.8%",
+            "$9M",
+            "#181",
+            ""
+          ],
+          [
+            "4",
+            "SYRUP (Maple)",
+            "$0.158",
+            "-11.0%",
+            "",
+            "$21M",
+            "#176",
+            ""
+          ],
+          [
+            "5",
+            "GWEI (ETHGas)",
+            "$0.086",
+            "-9.1%",
+            "-37.1%",
+            "$8M",
+            "#178",
+            ""
+          ],
+          [
+            "6",
+            "BEAT (Audiera)",
+            "$2.19",
+            "-7.0%",
+            "-23.4%",
+            "$17M",
+            "#90",
+            ""
+          ],
+          [
+            "7",
+            "TEL (Telcoin)",
+            "$0.0023",
+            "-6.5%",
+            "",
+            "$1M",
+            "#155",
+            ""
+          ],
+          [
+            "8",
+            "XTZ (Tezos)",
+            "$0.238",
+            "-4.1%",
+            "",
+            "$11M",
+            "#144",
+            ""
+          ],
+          [
+            "9",
+            "ULTIMA",
+            "$2366",
+            "-3.8%",
+            "",
+            "$10M",
+            "#166",
+            ""
+          ],
+          [
+            "10",
+            "GENIUS",
+            "$0.353",
+            "-3.4%",
+            "",
+            "$12M",
+            "#234",
+            ""
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-lab",
+        "notable-nex",
+        "notable-rotation",
+        "notable-velvet"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "notable-lab": {
+      "type": "Text",
+      "props": {
+        "text": "LAB CAPITULATION day-2 — yesterday -12.9% → today -59.4%, 7d -87%. Vol $297M vs $368M mcap = 0.81 turnover. Fresh cascade.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable-nex": {
+      "type": "Text",
+      "props": {
+        "text": "NEX #161 +32% on 7d +87% — PUMP-RISK + BREAKOUT juxtaposed.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable-rotation": {
+      "type": "Text",
+      "props": {
+        "text": "SYRUP + BEAT flipped from yesterday's winners to today's losers. Rotation.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "notable-velvet": {
+      "type": "Text",
+      "props": {
+        "text": "VELVET dead-cat +8.2% on 7d -41.6% — bounce day, not a reclaim.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets-heading",
+        "tweets-crypto",
+        "tweets-ai",
+        "tweets-dev"
+      ]
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweets-crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-crypto-heading",
+        "tweets-crypto-1",
+        "tweets-crypto-2",
+        "tweets-crypto-3",
+        "tweets-crypto-4"
+      ]
+    },
+    "tweets-crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweets-crypto-1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC slipped to $61.9k -2.2% overnight on US-Iran strike headlines.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets-crypto-2": {
+      "type": "Text",
+      "props": {
+        "text": "Spot BTC ETFs snap 10d outflow streak with $221.7M inflow — largest since May.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets-crypto-3": {
+      "type": "Text",
+      "props": {
+        "text": "Bitmine +40k ETH ($71.6M) chasing 5% of supply.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets-crypto-4": {
+      "type": "Text",
+      "props": {
+        "text": "RBI backs full crypto prohibition. Tether to issue USDT natively on Bitcoin via RGB v0.11.1.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets-ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-ai-heading",
+        "tweets-ai-1",
+        "tweets-ai-2",
+        "tweets-ai-3"
+      ]
+    },
+    "tweets-ai-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweets-ai-1": {
+      "type": "Text",
+      "props": {
+        "text": "OAI ships GPT-Live (concurrent listen/speak); GPT-5.6 public 7-10.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets-ai-2": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic extends Claude Fable 5 promo through 7-12; Cowork on web+mobile + M365 write tools.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets-ai-3": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic-Google-Broadcom multi-gigawatt compute deal.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets-dev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets-dev-heading",
+        "tweets-dev-1",
+        "tweets-dev-2",
+        "tweets-dev-3"
+      ]
+    },
+    "tweets-dev-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweets-dev-1": {
+      "type": "Text",
+      "props": {
+        "text": "Cloudflare ships global consensus system.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets-dev-2": {
+      "type": "Text",
+      "props": {
+        "text": "Grok 4.5 lands.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweets-dev-3": {
+      "type": "Text",
+      "props": {
+        "text": "Chatto open-sourced. GH Copilot CLI adds sandbox approvals.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-heading",
+        "paper-link",
+        "paper-description"
+      ]
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "paper-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "RoboDojo: A Unified Sim-and-Real Benchmark for Generalist Robot Manipulation",
+        "href": "https://arxiv.org/abs/2607.04434",
+        "source": "arXiv",
+        "score": "92"
+      },
+      "children": []
+    },
+    "paper-description": {
+      "type": "Text",
+      "props": {
+        "text": "Robotics eval-consolidation moment — sim + real in one harness. Physical-agent analog to what LLM benchmarks went through 2023-24. Tracks aeon eval-quality axis day-7.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "github-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github-heading",
+        "github-text"
+      ]
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "anajuliabit/aeon: 0 new in 24h (5 open advisor issues from 6-25 carry)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "hn-heading",
+        "hn-item-1",
+        "hn-item-2",
+        "hn-item-3",
+        "hn-item-4",
+        "hn-item-5"
+      ]
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "hn-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-1-story",
+        "hn-1-context",
+        "hn-1-hn-link"
+      ]
+    },
+    "hn-1-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Chatto open-sourced",
+        "href": "https://www.hmans.dev/blog/chatto-is-open-source",
+        "source": "hmans.dev",
+        "score": "956"
+      },
+      "children": []
+    },
+    "hn-1-context": {
+      "type": "Text",
+      "props": {
+        "text": "Chat scenes as data",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-1-hn-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48833116"
+      },
+      "children": []
+    },
+    "hn-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-2-story",
+        "hn-2-hn-link"
+      ]
+    },
+    "hn-2-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "John Deere right-to-repair FTC settlement",
+        "href": "https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02",
+        "source": "AP News",
+        "score": "778"
+      },
+      "children": []
+    },
+    "hn-2-hn-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48838876"
+      },
+      "children": []
+    },
+    "hn-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-3-story",
+        "hn-3-context",
+        "hn-3-hn-link"
+      ]
+    },
+    "hn-3-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GPT-Live",
+        "href": "https://openai.com/index/introducing-gpt-live/",
+        "source": "OpenAI",
+        "score": "696"
+      },
+      "children": []
+    },
+    "hn-3-context": {
+      "type": "Text",
+      "props": {
+        "text": "Real-time voice, listen+speak concurrent",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-3-hn-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48834405"
+      },
+      "children": []
+    },
+    "hn-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-4-story",
+        "hn-4-hn-link"
+      ]
+    },
+    "hn-4-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Grok 4.5",
+        "href": "https://x.ai/news/grok-4-5",
+        "source": "x.ai",
+        "score": "619"
+      },
+      "children": []
+    },
+    "hn-4-hn-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48835111"
+      },
+      "children": []
+    },
+    "hn-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn-5-story",
+        "hn-5-context",
+        "hn-5-hn-link"
+      ]
+    },
+    "hn-5-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Signal from noise in coding evals",
+        "href": "https://openai.com/index/separating-signal-from-noise-coding-evaluations/",
+        "source": "OpenAI",
+        "score": "213"
+      },
+      "children": []
+    },
+    "hn-5-context": {
+      "type": "Text",
+      "props": {
+        "text": "OAI on benchmark-quality; direct hit on eval-quality thread",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "hn-5-hn-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48837396"
+      },
+      "children": []
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "followup-section": {
+      "type": "Alert",
+      "props": {
+        "title": "Follow-up: SLX Status",
+        "message": "SLX day-15 CATASTROPHIC — CG trending prints $0.174 (vs $0.256 last CG 7-05, entry $0.4753) = -63% vs entry. Recut STILL overdue. ISS-025 capture-step PR day-17; weekly-review 7-13 T-4.",
+        "type": "warning"
+      },
+      "children": []
+    }
+  }
+}

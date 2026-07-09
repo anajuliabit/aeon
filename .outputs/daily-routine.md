@@ -1,52 +1,55 @@
-*Daily Routine — 2026-07-07*
+*Daily Routine — 2026-07-09*
 
-_split tape — 43/100 top-100 green, median top-50 -0.3%. btc $63,015 +0.3%, eth $1,769 +0.3%, sol $81.36 +1.2%, bnb $576.87 -0.5%, hype $70.81 +1.0%. reclaim-$63.5k holds day-2._
+_broad relief bounce — 62/77 top-100 green, median top-50 +1.0%. btc $62,875 +1.4%, eth $1,753 +1.1%, sol $78.08 +1.0%, bnb $572 +1.9%, hype $68.07 flat._
 
 *Top Winners (24h)*
-1. TAC — $0.044 +47.2% / 7d -27.2% / 1h +37.5% • $8M / #159 [TRENDING+UP FADE]
-2. RIF (Rootstock) — $0.136 +26.9% / 7d +85.1% • $18M / #218 [BREAKOUT]
-3. EDGE (edgeX) — $0.324 +23.2% / 7d +11.1% • $17M / #243
-4. ANSEM (Black Bull) — $0.414 +20.6% / 7d +232% • $66M / #186 [TRENDING+UP BREAKOUT]
-5. GROVE — $0.029 +13.2% • $1M / #165 [TRENDING+UP]
-6. MON (Monad) — $0.025 +11.1% / 7d +32.8% • $157M / #136 [TRENDING+UP]
-7. DEXE — $27.99 +8.4% / 7d +22.1% • $43M / #58
-8. JTO (Jito) — $0.774 +7.6% • $59M / #119
-9. SYRUP (Maple) — $0.175 +7.0% / 7d +23.7% • $21M / #167
-10. BEAT (Audiera) — $2.64 +6.9% • $16M / #77
+1. NEX — $0.0000035 +32.0% / 7d +87% • $12M / #161 [PUMP-RISK BREAKOUT]
+2. ARB — $0.086 +12.9% / 7d +11.4% • $94M / #97 [TRENDING+UP]
+3. EIGEN — $0.252 +11.1% / 7d +27.7% • $47M / #172 [BREAKOUT]
+4. GRASS — $0.386 +11.0% / 7d -18.6% • $45M / #148 [FADE]
+5. MANA — $0.075 +10.9% / 7d +17.9% • $26M / #205
+6. SKY — $0.058 +10.0% • $15M / #55
+7. APE — $0.161 +9.7% / 7d +12.0% • $69M / #193
+8. VVV (Venice) — $11.36 +9.1% / 7d -12.4% • $38M / #100 [FADE]
+9. VELVET — $0.430 +8.2% / 7d -41.6% • $10M / #177 [FADE]
+10. KAITO — $0.682 +8.0% • $125M / #189
 
 *Top Losers (24h)*
-1. B (BUILDon) — $0.167 -24.7% / 7d -22.8% • $16M / #193
-2. LAB — $14.46 -12.9% • $60M / #24
-3. BONK — $0.00000426 -10.6% • $122M / #121 [TRENDING+DOWN CAPITULATION]
-4. UB (Unibase) — $0.098 -9.0% • $9M / #147
-5. VELVET — $0.480 -8.3% / 7d -69.6% • $13M / #170
-6. GWEI (ETHGas) — $0.129 -7.6% / 7d -18% • $5M / #141
-7. VVV (Venice) — $10.89 -5.8% / 7d -17.5% • $37M / #103 [TRENDING+DOWN]
-8. CC (Canton) — $0.134 -5.7% • $11M / #21
-9. GRAM (prev. Toncoin) — $1.66 -5.2% • $147M / #26
-10. HBAR (Hedera) — $0.071 -4.5% • $64M / #30
+1. LAB — $1.18 -59.4% / 7d -87.1% • $297M vol / #119 [TRENDING+DOWN CAPITULATION]
+2. M (MemeCore) — $1.19 -15.9% • $14M / #47 [MAJOR]
+3. UB (Unibase) — $0.071 -14.0% / 7d -20.8% • $9M / #181
+4. SYRUP (Maple) — $0.158 -11.0% • $21M / #176
+5. GWEI (ETHGas) — $0.086 -9.1% / 7d -37.1% • $8M / #178
+6. BEAT (Audiera) — $2.19 -7.0% / 7d -23.4% • $17M / #90
+7. TEL (Telcoin) — $0.0023 -6.5% • $1M / #155
+8. XTZ (Tezos) — $0.238 -4.1% • $11M / #144
+9. ULTIMA — $2366 -3.8% • $10M / #166
+10. GENIUS — $0.353 -3.4% • $12M / #234
 
 *Notable*
-• ANSEM breakout 7d +232% on trending pole — MICROCAP+PUMP-RISK despite rank #186.
-• BONK CAPITULATION — 10.6% down on 25%+ mcap-vol turnover.
-• RIF +85% 7d BREAKOUT — sub-$100M Rootstock infra layer, sustained multi-day.
-• VVV -5.8% day-1 after 7-05 unicorn round — sell-the-news reversion.
+• LAB CAPITULATION day-2 — yesterday -12.9% → today -59.4%, 7d -87%. Vol $297M vs $368M mcap = 0.81 turnover. Fresh cascade.
+• NEX #161 +32% on 7d +87% — PUMP-RISK + BREAKOUT juxtaposed.
+• SYRUP + BEAT flipped from yesterday's winners to today's losers. Rotation.
+• VELVET dead-cat +8.2% on 7d -41.6% — bounce day, not a reclaim.
 
 *Tweet Roundup*
-*Crypto:* spot btc ETFs snap 10-day loser streak with $221.7M inflow. Ripple fully MiCA-compliant across 30 EEA countries. Summer.fi $6M exploit → SUMR -18%. Bitmine +$74M ETH, Saylor sells 3,588 BTC for $216M pref dividends.
-*AI:* Anthropic ships Claude Sonnet 5 (most agentic Sonnet — plans, tools, autonomous). OAI announces custom Jalapeño inference chip. Anthropic S-1 confidential @ $965B > OAI.
-*Dev:* Emdash agentic-dev-env orchestrates Claude Code + Gemini + Codex in parallel. Bun 3× Node.js going mainstream. Apple to open-source Foundation Models framework this summer.
+*Crypto:* btc slipped to $61.9k -2.2% overnight on US-Iran strike headlines. spot btc ETFs snap 10d outflow streak with $221.7M inflow — largest since May. Bitmine +40k ETH ($71.6M) chasing 5% of supply. RBI backs full crypto prohibition. Tether to issue USDT natively on Bitcoin via RGB v0.11.1.
+*AI:* OAI ships GPT-Live (concurrent listen/speak); GPT-5.6 public 7-10. Anthropic extends Claude Fable 5 promo through 7-12; Cowork on web+mobile + M365 write tools. Anthropic-Google-Broadcom multi-gigawatt compute deal.
+*Dev:* Cloudflare ships global consensus system. Grok 4.5 lands. Chatto open-sourced. GH Copilot CLI adds sandbox approvals.
 
 *Paper of the Day*
-"LLM-as-a-Verifier: A General-Purpose Verification Framework" — Kwok/Li/Atreya · HF ↑5
-verification as new scaling axis — expected value over scoring-token logits, not discrete judge scores. direct hit on aeon's eval-quality thread day-6.
-[Read](https://arxiv.org/abs/2607.05391) | [PDF](https://arxiv.org/pdf/2607.05391)
+"RoboDojo: A Unified Sim-and-Real Benchmark for Generalist Robot Manipulation" — HF ↑92 (top today)
+robotics eval-consolidation moment — sim + real in one harness. physical-agent analog to what LLM benchmarks went through 2023-24. tracks aeon eval-quality axis day-7.
+[Read](https://arxiv.org/abs/2607.04434)
+
+*GitHub Issues*
+- anajuliabit/aeon: 0 new in 24h (5 open advisor issues from 6-25 carry)
 
 *HN Digest*
-1. **[AI]** [GLM 5.2 and the coming AI margin collapse](https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/) (387pts · 238c) — open-weights closing on frontier while inference cost drops.
-2. **[AI]** [A global workspace in language models](https://www.anthropic.com/research/global-workspace) (360pts · 134c) — anthropic on info-geometric attribution across transformer layers.
-3. **[Infra]** [CoMaps – FOSS offline maps](https://www.comaps.app/) (527pts · 108c) — sovereignty-stack thread extends: local audio → local maps.
-4. **[Security]** [Januscape KVM/x86 escape (CVE-2026-53359)](https://github.com/V4bel/Januscape) (107pts · 35c) — full PoC published; hypervisor break.
-5. **[Dev]** [Kani: model checker for Rust](https://arxiv.org/abs/2607.01504) (142pts · 7c) — formal verification for rust hits arxiv.
+1. [Chatto open-sourced](https://www.hmans.dev/blog/chatto-is-open-source) (956pts) — chat scenes as data · [hn](https://news.ycombinator.com/item?id=48833116)
+2. [John Deere right-to-repair FTC settlement](https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02) (778pts) · [hn](https://news.ycombinator.com/item?id=48838876)
+3. [GPT-Live](https://openai.com/index/introducing-gpt-live/) (696pts) — real-time voice, listen+speak concurrent · [hn](https://news.ycombinator.com/item?id=48834405)
+4. [Grok 4.5](https://x.ai/news/grok-4-5) (619pts) — xai model drop · [hn](https://news.ycombinator.com/item?id=48835111)
+5. [Signal from noise in coding evals](https://openai.com/index/separating-signal-from-noise-coding-evaluations/) (213pts) — OAI on benchmark-quality; direct hit on eval-quality thread · [hn](https://news.ycombinator.com/item?id=48837396)
 
-*follow-up:* SLX day-13 catastrophic -46% vs $0.4753 entry — recut still overdue. GH issues: 0 new (24h clean).
+*follow-up:* SLX day-15 CATASTROPHIC — CG trending prints $0.174 (vs $0.256 last CG 7-05, entry $0.4753) = -63% vs entry. Recut STILL overdue. ISS-025 capture-step PR day-17; weekly-review 7-13 T-4.
