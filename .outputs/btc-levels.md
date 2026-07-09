@@ -1,11 +1,10 @@
 ## Summary
 
-BTC levels run complete — no alerts fired.
-
-- **Spot:** $61,972 (stable vs prior 16:54Z run)
-- **Jul-7 daily close:** $63,351 (above $60,500 breakdown floor — no downtrend alert)
-- **Leverage-review trigger (≤$45k):** not active
-- **Reclaim $63,500:** flag stays true, no re-arm (spot above $60,500 floor)
-- **Reclaim $65,900:** not triggered
-
-State updated and committed. No notification sent (quiet run per spec).
+- **Spot:** $62,347.72 | **Daily close (2026-07-08):** $62,248.93
+- All four alert thresholds evaluated — none triggered:
+  - Leverage-review (≤$45k): clear
+  - Breakdown (close < $60,500): close at $62,248 is above floor
+  - Reclaim $63,500: spot still below gate; re-arm floor ($60,500) not breached so flag stays `true`
+  - Reclaim $65,900: spot still well below
+- No notification sent (quiet run).
+- State and log committed (`c9506d9`).
