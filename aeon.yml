@@ -177,7 +177,7 @@ skills:
   deep-research: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand only — set var to research topic
   last30: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — cross-platform 30-day social research
   paper-pick: { enabled: false, schedule: "0 14 * * *" }
-  search-skill: { enabled: true, schedule: "0 14 * * *" }
+  search-skill: { enabled: true, schedule: "0 14 * * 1" } # weekly Mon 14:00 UTC — reduced from daily 2026-07-09 after 15+ consecutive SEARCH_SKILL_NO_GAP days; fleet capability-complete on external-skill axis per MEMORY.md durable pattern. Weekly cadence still catches novel gaps within 7d.
 
   security-digest: { enabled: true, schedule: "0 14 * * *" }
   idea-capture: { enabled: false, schedule: "0 14 * * *" }
