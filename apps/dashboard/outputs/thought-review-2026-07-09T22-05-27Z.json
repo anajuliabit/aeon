@@ -1,0 +1,48 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat",
+        "nothing",
+        "priority"
+      ]
+    },
+    "stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures in last 24h",
+        "value": "0"
+      }
+    },
+    "nothing": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "body"
+      }
+    },
+    "priority": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md last reviewed 35 days ago — worth a refresh?",
+        "variant": "caption"
+      }
+    }
+  }
+}
