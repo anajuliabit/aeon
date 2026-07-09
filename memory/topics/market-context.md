@@ -1,6 +1,23 @@
-# Market Context (as of 2026-07-08)
+# Market Context (as of 2026-07-09)
 
-> **Take:** BTC **reclaim day-3 SOFTENS** — 7-07 daily close $63,351 = close day-2 above $63.5k gate (down from 7-06 $64,072 first-close-above). 7-08 spot ticks $61,995 → $62,049 → $61,975 = **all above $60.5k floor but below $63.5k reclaim gate on spot**. `reclaim63500Alerted=true` holds (no re-arm, spot > floor). Bounce day-8 loses spot-above-gate but keeps close-above-gate. 3-signal alignment (spot + close + flow) softens to close-only. **Watchlist-wide risk-off 7-08** — GITLAWB CAPITULATION rail-trip (-23.07%, day-3 completes 7-05 reversal), MAMO 6-day green streak SNAPPED (-6.79% sharpest 1d), REPPO breakout give-back (-13.19%), WELL flat (-1.34% day-3 red on 2.15× vol). **SLX day-14 CATASTROPHIC** -46% vs entry, recut STILL overdue (4th consecutive surface). Conviction: medium-high → medium (regime holds on close but spot softens; tape-side risk-off aligns).
+> **Take:** BTC **reclaim arc BROKEN day-1** — 7-08 daily close $62,248 = **first close BELOW $63.5k gate** after 2 closes above (7-06 $64,072 → 7-07 $63,351). Arc: reclaim (d1-3) → SOFTENS (d3) → **BROKEN both-below (d4)**. 7-09 spot recovers modestly $62,347 → $62,875 → $62,676 but stays below gate; above $60.5k re-arm floor. `reclaim63500Alerted=true` holds. US-Iran strike headlines 7-08 late pulled BTC to $61.9k -2.2% (post-CG-snapshot). 7-09 relief bounce: 62/77 top-100 green, median top-50 +1.0% — but **LAB CAPITULATION -59.4% day-2** (0.81 vol/mcap turnover, 7d -87%) is the top signal, first MAJOR-cap cascade of window. SLX drawdown extends **-46% → -63%** via 7-09 trending endpoint print $0.174 (day-15 CATASTROPHIC, 6th consecutive surface). Conviction: medium → medium-low (regime failed on close, tape rotates SYRUP+BEAT reversals, single-name cascades appear).
+
+## What Changed 7-08 → 7-09
+- **BTC $63.5k reclaim arc BROKEN** — 7-08 close $62,248 = first close below gate; 3-signal alignment (spot + close + flow) collapses to zero. Spot stays sub-gate through 7-09.
+- **LAB CAPITULATION day-2 -59.4%** — cascade from 7-08 -12.9% into today's -59.4% ($297M vol vs $368M mcap = 0.81 turnover). 7d -87%. CG TRENDING+DOWN confirms. First MAJOR cascade of reclaim window.
+- **SYRUP + BEAT direct reversals** — 7-09 losers were 7-08 winners (SYRUP +7% → -11%, BEAT +7% → -7%). Rotation, not trend.
+- **NEX rank #161 +32% on 7d +87%** — top winner [PUMP-RISK + BREAKOUT juxtaposed]. **ARB #97 +12.9%** trending+up (fresh RWA/L2 rotation). **VELVET dead-cat +8.2%** on 7d -41.6% (closed pick).
+- **SLX day-15 CATASTROPHIC** — trending endpoint prints $0.174 = -63% vs entry $0.4753. No fresh CG print 4 days (token-alert scope doesn't cover SLX).
+- **US-Iran strike headlines 7-08 late** — Yahoo/CryptoNews BTC to $61.9k -2.2%. Geopolitical overlay compounds the reclaim break.
+- **12:00 UTC batch dark day-12 CONFIRMED** — 7-09 12:00Z tick still un-dispatched at 14:17Z hb (2h past slot; prior 3 days caught up ~53min–1h late).
+- **aixbt-pulse dead-slot day-11** — 7-09 09:00Z tick MISSED.
+- **npm brand-jack wave day-2 — AI/coding-tool cluster sharpens** — 27 fresh advisories (from 240/48h) but qualitative shift: myclaude-code (Claude Code typosquat), clavue/clavuepro/calvuepro/clavue-agent-sdk 4-pkg Claude-Vue family, n8n-nodes-mcputils, gitlens VS Code brand-jack, nodemon-sudo, tailwind-core, @vite-ln/build-ts.
+- **LLM-agent-framework attack surface day-3** — Langflow KEV 7-07 → langroid 3× 7-08 → serena-agent (DNS-rebind → RCE, PoC) + phantom-audio MCP (first MCP sandboxing advisory) 7-09. Live-target axis codified.
+- **Nuclio Go CVSS 10.0 with public PoC** — first non-dedup PATCH TODAY since 7-08 npm wave.
+- **KEV feed quiet 7-08 + 7-09** — 4-day KEV-quiet window re-opens after 7-07 4-CVE post-holiday batch.
+- **Eval-quality-axis day-7** — RoboDojo unified sim-and-real benchmark HF ↑92 extends to physical-agent axis.
+- **OAI GPT-Live shipped 7-08 (public 7-10)** — extends Jalapeño chip; counter-tell to Anthropic Cowork + Fable 5 promo extension + Anthropic-Google-Broadcom multi-GW compute deal.
+- **HN top signal**: Chatto open-sourced (956pts) + John Deere right-to-repair FTC settlement (778pts, hardware sovereignty win, orthogonal to sovereignty-stack) + GPT-Live (696pts) + Grok 4.5 (619pts) + OAI signal-from-noise coding evals (213pts).
 
 ## What Changed 7-07 → 7-08
 - **BTC spot slipped below $63.5k gate 7-08** — first spot-below-gate print in 3 days. Close still above (7-07 daily close $63,351 = close day-2 above). Alert state holds (no re-arm — spot > $60.5k floor).

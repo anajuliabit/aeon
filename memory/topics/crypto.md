@@ -943,3 +943,42 @@ Prices from token-alert 12:54Z (7-08 12:00Z batch caught up at 12:54Z, still dar
 - **PR #160 fix(issues) close ISS-022 MERGED 7-08 13:31Z** — operator INDEX flip; open issues 12 → 11.
 - **12:00 UTC batch dark day-11** — ISS-027 codified. Only token-alert + btc-levels catch up (~53min late). 6-skill batch still last_dispatch 6-28.
 - **aixbt-pulse dead-slot day-10** — 7-08 09:00Z tick MISSED. State file last_success 6-28T21:21Z (~260h = 10.8× interval).
+
+## 2026-07-09 rollup
+
+### BTC reclaim arc BROKEN — day-4 both-below gate
+- **7-08 daily close $62,248 = first close BELOW $63.5k gate** after 2 closes above (7-06 $64,072 → 7-07 $63,351). Arc: reclaim (d1-3) → SOFTENS spot-below-close-above (d3) → **BROKEN both-below (d4)**.
+- **7-09 spot recovers modestly but stays sub-gate**: $62,347 (01:16Z) → $62,402 (05:12Z) → $62,874 (08:57Z) → $62,676 (16:47Z). Above $60.5k re-arm floor. `reclaim63500Alerted=true` holds.
+- **US-Iran strike headlines 7-08 late** pulled BTC to $61.9k -2.2% overnight (Yahoo/CryptoNews). Post-CG-snapshot slice. Geopolitical overlay on the reclaim break.
+- ETF flow flip (+$221.7M 7-07) still on-tape but not extended by 7-08 flows.
+
+### 7-09 daily-routine tape — relief bounce partial, LAB CAPITULATION top signal
+- Pulse: 62/77 top-100 green (median top-50 +1.0%). BTC $62,875 +1.4%, ETH $1,753 +1.1%, SOL $78.08 +1.0%, BNB $572 +1.9%, HYPE $68.07 flat. Broad relief bounce vs 7-08 tape-side risk-off — but geopolitical strike overlay drags overnight.
+- **Winners:** NEX #161 +32% / 7d +87% [PUMP-RISK + BREAKOUT juxtaposed] · ARB #97 +12.9% / 7d +11.4% [TRENDING+UP — appears CG trending + top winners = strongest positive signal] · EIGEN #172 +11.1% / 7d +27.7% [BREAKOUT] · GRASS #148 +11.0% / 7d -18.6% [FADE] · MANA #205 +10.9% · SKY #55 +10.0% · APE #193 +9.7% · VVV #100 +9.1% / 7d -12.4% [FADE — sell-the-news continues from 7-05 Venice unicorn round] · **VELVET #177 +8.2% / 7d -41.6%** [FADE dead-cat bounce, closed at -68.5%] · KAITO #189 +8.0%.
+- **Losers — LAB CAPITULATION day-2 top signal:** LAB #119 -59.4% / 7d -87.1% · $297M vol vs $368M mcap = **0.81 turnover** = 3.2× CAPITULATION proxy · **first MAJOR-cap cascade of reclaim window**. Yesterday LAB -12.9%; today's -59.4% = ~-64% cumulative 48h. CG TRENDING+DOWN confirms.
+- **Direct reversals:** SYRUP -11% (was 7-08 #9 winner at +7%) · BEAT -7% (was 7-08 #10 winner at +7%) · GWEI -9.1% / 7d -37.1% day-2 red extends 7-08's -7.6%.
+- **Others:** M MemeCore -15.9% [MAJOR profit-taking from closed +130% pick] · UB -14.0% · TEL -6.5% · XTZ -4.1%.
+
+### SLX day-15 CATASTROPHIC — drawdown extends -46% → -63%
+- Trending endpoint 7-09 09:05Z prints **SLX at $0.174** (below memory's last-print $0.256 from 7-05).
+- **-63% vs entry $0.4753 (6-24 HIGH 9/10)**. Fresh delta since 7-08 (7-08 reflect noted -46% from last CG print, but no fresh CG print since 7-05 12:59Z because token-alert scope doesn't cover SLX).
+- Weekly-review action-list `Authored by: operator × 1` slot targets recut. Deadline 7-13 (T-4). Position past every recut trigger for 15 days.
+
+### Meta signals — eval-quality axis, Anthropic/OAI ship race, hardware sovereignty
+- **RoboDojo unified sim-and-real benchmark for generalist robot manipulation** (HuggingFace ↑92, arxiv 2607.04434) — eval-quality-axis day-7, robotics eval-consolidation moment. Extends thread (MemSyco → AgenticSTS → SkillCoach → Anthropic+OAI bugs → LLM-as-a-Verifier → RoboDojo) to physical-agent axis.
+- **OAI GPT-Live shipped 7-08 (public 7-10)** + Grok 4.5 released — model-cadence competition intensifies.
+- **Anthropic Cowork on web+mobile + M365 write tools** + **Anthropic-Google-Broadcom multi-GW compute partnership** + **Fable 5 promo extended through 7-12** — Anthropic ship-day compounding + IPO-prep tell extends 7-08.
+- **John Deere right-to-repair FTC settlement HN 778pts** — hardware sovereignty win, orthogonal to sovereignty-stack thread (local runtime + capture + generation + maps + user-rights).
+- **HN top-5:** Chatto open-sourced (956pts) · John Deere R2R (778) · GPT-Live (696) · Grok 4.5 (619) · OAI signal-from-noise coding evals (213).
+
+### Security — 7-09 security-digest
+- **Nuclio Go CVE-2026-52831 CVSS 10.0 with published PoC** — cron-trigger event injection → K8s CronJob shell → root RCE. First non-dedup PATCH TODAY since 7-08 npm wave. Fix ≥1.16.4.
+- **npm brand-jack wave day-2 — 27 fresh advisories in 24h (from 240/48h yesterday)** — qualitative shift to **AI/coding-tool cluster**: myclaude-code (Claude Code typosquat), clavue/clavuepro/calvuepro/clavue-agent-sdk 4-pkg Claude-Vue mashup family, n8n-nodes-mcputils, gitlens VS Code brand-jack, nodemon-sudo (extends 7-08 nodemon-node family), tailwind-core (extends tailwindcss-*), @vite-ln/build-ts (extends vite-json-pwa). Volume tapers ~37%, targets sharpen.
+- **LLM-agent-framework attack surface day-3** — Langflow KEV → langroid pip 3× 7-08 → **serena-agent (CVSS 8.3 unauth Flask on port 24282 → DNS-rebind → memory-poison → `subprocess.Popen(shell=True)` RCE + PoC) + phantom-audio MCP (CVSS 7.7 first MCP tool sandboxing advisory in digest window)** 7-09. Third-day appearance = live-target axis.
+- **PATCH THIS WEEK:** Joro Go 9.6 (unauth plugin upload → RCE), @better-auth/sso 9.6 (SSRF, cluster continuation), skipper Go 8.7 (OPA bypass with PoC), lxml_html_clean pip 8.2 (`javascript:` URL bypass).
+- **KEV feed quiet 7-08 + 7-09** — 4-day KEV-quiet re-opens after 7-07 4-CVE post-holiday batch (ColdFusion / Langflow / JoomShaper / Joomlack).
+
+### Fleet-side (crypto-adjacent)
+- **12:00 UTC batch dark day-12** — 7-09 12:00Z tick still un-dispatched at 14:17Z hb (2h past slot). 20:00Z hb will verify extension.
+- **aixbt-pulse dead-slot day-11** — 7-09 09:00Z tick MISSED. State file ~283h stale.
+- **ISS-025 capture-step PR day-17** unshipped. Weekly-review 7-13 T-4. Self-improve 7-09 18:00Z tick is next routing-hypothesis test window.
