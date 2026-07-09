@@ -1,1 +1,1 @@
-self-improve: closed ISS-022 (monitor-polymarket eval churn) — PR #130 shipped 6-22, INDEX flip lagged 15 days. PR: https://github.com/anajuliabit/aeon/pull/160. routing note: today's assigned ISS-025 capture-step target is in .github/workflows/aeon.yml — hard-forbidden by self-improve SKILL.md; logged for next weekly-review to re-route.
+self-improve: reduce search-skill daily→weekly (Mon 14:00Z) after 15-day NO_GAP streak — PR: https://github.com/anajuliabit/aeon/pull/161

@@ -1,0 +1,75 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve",
+        "description": "Adjusted search-skill scheduling based on reliability streak"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "details",
+        "sep",
+        "pr_link"
+      ]
+    },
+    "details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_text",
+        "schedule_badge",
+        "condition_text"
+      ]
+    },
+    "action_text": {
+      "type": "Text",
+      "props": {
+        "text": "Reduce search-skill from daily to weekly",
+        "variant": "lead"
+      }
+    },
+    "schedule_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Mon 14:00Z",
+        "variant": "secondary"
+      }
+    },
+    "condition_text": {
+      "type": "Text",
+      "props": {
+        "text": "Triggered after 15-day NO_GAP streak",
+        "variant": "caption"
+      }
+    },
+    "sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #161: Schedule optimization",
+        "href": "https://github.com/anajuliabit/aeon/pull/161",
+        "source": "GitHub"
+      }
+    }
+  }
+}
