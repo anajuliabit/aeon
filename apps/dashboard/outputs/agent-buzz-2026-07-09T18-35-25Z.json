@@ -1,0 +1,281 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-09",
+        "description": "protocol/paper day: MCP spec crystallizes, two COLM'26 acceptances on skill and env training, two tells on how agents get compute and pay."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_mcp",
+        "sep_1",
+        "section_colm",
+        "sep_2",
+        "section_compute",
+        "footer"
+      ]
+    },
+    "section_mcp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_mcp",
+        "item_1",
+        "item_2"
+      ]
+    },
+    "heading_mcp": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP spec crystallizes",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "link_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "jianw851",
+        "handle": "@jianw851",
+        "text": "MCP-as-USB-C frame is winning: every tool integration read as a compatibility problem, not a per-app build."
+      },
+      "children": []
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View on Twitter",
+        "href": "https://x.com/jianw851/status/2074887412841668746"
+      },
+      "children": []
+    },
+    "item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "link_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AgenticAIFdn",
+        "handle": "@AgenticAIFdn",
+        "text": "MCP 2026-07-28 spec: stateless core, ID-JAG enterprise auth, defined feature lifecycle. Enterprise-agent gap closes."
+      },
+      "children": []
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View on Twitter",
+        "href": "https://x.com/AgenticAIFdn/status/2074998991792599272"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_colm": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_colm",
+        "item_3",
+        "item_4"
+      ]
+    },
+    "heading_colm": {
+      "type": "Heading",
+      "props": {
+        "text": "COLM'26 agent-training papers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3",
+        "link_3"
+      ]
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "jmuiuc",
+        "handle": "@jmuiuc",
+        "text": "SkillFoundry: heterogeneous scientific resources compiled into validated agent skills; genomics workflow benchmarks."
+      },
+      "children": []
+    },
+    "link_3": {
+      "type": "Link",
+      "props": {
+        "label": "View on Twitter",
+        "href": "https://x.com/jmuiuc/status/2074999509009219641"
+      },
+      "children": []
+    },
+    "item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_4",
+        "link_4"
+      ]
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "YuhangZhou2",
+        "handle": "@YuhangZhou2",
+        "text": "SandMLE: synthetic multi-agent MLE environments for on-policy RL on coding agents — training without real-project cost."
+      },
+      "children": []
+    },
+    "link_4": {
+      "type": "Link",
+      "props": {
+        "label": "View on Twitter",
+        "href": "https://x.com/YuhangZhou2/status/2074991883605234058"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_compute": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_compute",
+        "item_5",
+        "item_6"
+      ]
+    },
+    "heading_compute": {
+      "type": "Heading",
+      "props": {
+        "text": "Test-time compute + agent payments",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_5",
+        "link_5"
+      ]
+    },
+    "tweet_5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cryptopunk7213",
+        "handle": "@cryptopunk7213",
+        "text": "axis moved: agentic-bench wins come from test-time compute at cheap per-token cost, not bigger training runs."
+      },
+      "children": []
+    },
+    "link_5": {
+      "type": "Link",
+      "props": {
+        "label": "View on Twitter",
+        "href": "https://x.com/cryptopunk7213/status/2074993127161479199"
+      },
+      "children": []
+    },
+    "item_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_6",
+        "link_6"
+      ]
+    },
+    "tweet_6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "kasmiyouness1",
+        "handle": "@kasmiyouness1",
+        "text": "Cloudflare x402: agents pay for web resources at the transport layer. Monetization pivots eyeballs → machine-callers."
+      },
+      "children": []
+    },
+    "link_6": {
+      "type": "Link",
+      "props": {
+        "label": "View on Twitter",
+        "href": "https://x.com/kasmiyouness1/status/2074999720859128221"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai-cache · candidates: 22 → kept: 6",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
