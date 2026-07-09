@@ -1,0 +1,670 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest",
+        "description": "2026-07-09"
+      },
+      "children": [
+        "alert-verdict",
+        "sep1",
+        "section-today",
+        "sep2",
+        "section-week",
+        "sep3",
+        "section-monitor"
+      ]
+    },
+    "alert-verdict": {
+      "type": "Alert",
+      "props": {
+        "title": "Verdict",
+        "message": "1 actively exploited (Nuclio 10.0, public PoC) + npm malware wave day-2. 5 to schedule, 3 to monitor. Sources: KEV, GH Advisory, EPSS",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-today": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-today",
+        "cve-52831",
+        "npm-malware"
+      ]
+    },
+    "heading-today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h3"
+      }
+    },
+    "cve-52831": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-52831",
+        "badges-52831",
+        "text-desc-52831",
+        "text-action-52831"
+      ]
+    },
+    "link-52831": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-52831 — nuclio (Go)",
+        "href": "https://github.com/advisories/GHSA-v5px-423j-pf7p",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badges-52831": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-10",
+        "badge-poc-public-1"
+      ]
+    },
+    "badge-cvss-10": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 10.0",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-public-1": {
+      "type": "Badge",
+      "props": {
+        "text": "public PoC",
+        "variant": "destructive"
+      }
+    },
+    "text-desc-52831": {
+      "type": "Text",
+      "props": {
+        "text": "Unsanitized cron-trigger headers/body injected into K8s CronJob shell → root RCE."
+      }
+    },
+    "text-action-52831": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade nuclio to ≥1.16.4 today.",
+        "variant": "lead"
+      }
+    },
+    "npm-malware": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-npm",
+        "text-npm-desc",
+        "text-npm-packages",
+        "text-npm-action"
+      ]
+    },
+    "heading-npm": {
+      "type": "Heading",
+      "props": {
+        "text": "npm malware wave day-2",
+        "level": "h4"
+      }
+    },
+    "text-npm-desc": {
+      "type": "Text",
+      "props": {
+        "text": "27 fresh advisories in 24h; AI/coding-tool brand-jack cluster"
+      }
+    },
+    "text-npm-packages": {
+      "type": "Text",
+      "props": {
+        "text": "myclaude-code, clavue, clavue-agent-sdk, calvuepro, clavuepro, n8n-nodes-mcputils, gitlens, nodemon-sudo, tailwind-core, @vite-ln/build-ts — Claude Code / n8n / Vue / nodemon / Tailwind typosquats."
+      }
+    },
+    "text-npm-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ audit last 24h npm installs; rotate any creds exposed to these packages.",
+        "variant": "lead"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-week": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-week",
+        "cve-53649",
+        "cve-53513",
+        "cve-50197",
+        "cve-49471",
+        "cve-49825"
+      ]
+    },
+    "heading-week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h3"
+      }
+    },
+    "cve-53649": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-53649",
+        "badges-53649",
+        "text-desc-53649",
+        "text-action-53649"
+      ]
+    },
+    "link-53649": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-53649 — joro (Go)",
+        "href": "https://github.com/advisories/GHSA-xqhv-chqm-fhcc",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badges-53649": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-96-1",
+        "badge-poc-none-1"
+      ]
+    },
+    "badge-cvss-96-1": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.6",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-none-1": {
+      "type": "Badge",
+      "props": {
+        "text": "no public PoC",
+        "variant": "secondary"
+      }
+    },
+    "text-desc-53649": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth cross-origin plugin upload via loopback API lacking CORS → RCE."
+      }
+    },
+    "text-action-53649": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade joro past commit 5c0ca35db828 (2026-06-01).",
+        "variant": "lead"
+      }
+    },
+    "cve-53513": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-53513",
+        "badges-53513",
+        "text-desc-53513",
+        "text-action-53513"
+      ]
+    },
+    "link-53513": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-53513 — @better-auth/sso (npm)",
+        "href": "https://github.com/advisories/GHSA-5rr4-8452-hf4v",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badges-53513": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-96-2",
+        "badge-poc-none-2"
+      ]
+    },
+    "badge-cvss-96-2": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.6",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-none-2": {
+      "type": "Badge",
+      "props": {
+        "text": "no PoC",
+        "variant": "secondary"
+      }
+    },
+    "text-desc-53513": {
+      "type": "Text",
+      "props": {
+        "text": "OIDC endpoint URL unvalidated on provider registration → SSRF to internal services, potential account takeover."
+      }
+    },
+    "text-action-53513": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade to ≥1.6.11.",
+        "variant": "lead"
+      }
+    },
+    "cve-50197": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-50197",
+        "badges-50197",
+        "text-desc-50197",
+        "text-action-50197"
+      ]
+    },
+    "link-50197": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-50197 — skipper (Go)",
+        "href": "https://github.com/advisories/GHSA-659f-rgp5-w4wf",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badges-50197": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-87",
+        "badge-poc-public-2"
+      ]
+    },
+    "badge-cvss-87": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.7",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-public-2": {
+      "type": "Badge",
+      "props": {
+        "text": "public PoC",
+        "variant": "destructive"
+      }
+    },
+    "text-desc-50197": {
+      "type": "Text",
+      "props": {
+        "text": "`opaAuthorizeRequestWithBody` skips OPA on `Transfer-Encoding: chunked` / HTTP/2."
+      }
+    },
+    "text-action-50197": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade skipper to ≥0.26.10.",
+        "variant": "lead"
+      }
+    },
+    "cve-49471": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-49471",
+        "badges-49471",
+        "text-desc-49471",
+        "text-action-49471"
+      ]
+    },
+    "link-49471": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49471 — serena-agent (pip)",
+        "href": "https://github.com/advisories/GHSA-37h2-6p4f-mp3q",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badges-49471": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-83",
+        "badge-poc-public-3"
+      ]
+    },
+    "badge-cvss-83": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.3",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-public-3": {
+      "type": "Badge",
+      "props": {
+        "text": "public PoC",
+        "variant": "destructive"
+      }
+    },
+    "text-desc-49471": {
+      "type": "Text",
+      "props": {
+        "text": "LLM coding agent's unauth Flask dashboard on port 24282 → DNS-rebind → memory-poison → `subprocess.Popen(shell=True)` RCE."
+      }
+    },
+    "text-action-49471": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade serena-agent to ≥1.5.2.",
+        "variant": "lead"
+      }
+    },
+    "cve-49825": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-49825",
+        "badges-49825",
+        "text-desc-49825",
+        "text-action-49825"
+      ]
+    },
+    "link-49825": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-49825 — lxml_html_clean (pip)",
+        "href": "https://github.com/advisories/GHSA-4jhm-jv67-739f",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badges-49825": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-82",
+        "badge-poc-none-3"
+      ]
+    },
+    "badge-cvss-82": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.2",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-none-3": {
+      "type": "Badge",
+      "props": {
+        "text": "no PoC",
+        "variant": "secondary"
+      }
+    },
+    "text-desc-49825": {
+      "type": "Text",
+      "props": {
+        "text": "`Cleaner` doesn't strip `javascript:` URLs from namespaced URL attributes → XSS bypass."
+      }
+    },
+    "text-action-49825": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade lxml_html_clean to ≥0.4.5.",
+        "variant": "lead"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-monitor",
+        "monitor-52vm",
+        "monitor-836r",
+        "monitor-fqf6"
+      ]
+    },
+    "heading-monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h3"
+      }
+    },
+    "monitor-52vm": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-52vm",
+        "badges-52vm",
+        "text-desc-52vm",
+        "text-action-52vm"
+      ]
+    },
+    "link-52vm": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-52vm-mxx8-f227 — phantom-audio (pip)",
+        "href": "https://github.com/advisories/GHSA-52vm-mxx8-f227",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badges-52vm": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-77",
+        "badge-nofix"
+      ]
+    },
+    "badge-cvss-77": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.7",
+        "variant": "secondary"
+      }
+    },
+    "badge-nofix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix line yet",
+        "variant": "outline"
+      }
+    },
+    "text-desc-52vm": {
+      "type": "Text",
+      "props": {
+        "text": "Unconfined MCP tool paths → arb file write + decode-bomb DoS."
+      }
+    },
+    "text-action-52vm": {
+      "type": "Text",
+      "props": {
+        "text": "→ watch MCP tool sandboxing pattern.",
+        "variant": "lead"
+      }
+    },
+    "monitor-836r": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-836r",
+        "link-2wc2",
+        "badges-836r",
+        "text-desc-836r",
+        "text-action-836r"
+      ]
+    },
+    "link-836r": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-836r-79rf-4m37 — soupsieve (pip)",
+        "href": "https://github.com/advisories/GHSA-836r-79rf-4m37",
+        "source": "GitHub Advisory"
+      }
+    },
+    "link-2wc2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-2wc2-fm75-p42x — soupsieve (pip)",
+        "href": "https://github.com/advisories/GHSA-2wc2-fm75-p42x",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badges-836r": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-75-1",
+        "badge-cvss-75-2"
+      ]
+    },
+    "badge-cvss-75-1": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5",
+        "variant": "secondary"
+      }
+    },
+    "badge-cvss-75-2": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5",
+        "variant": "secondary"
+      }
+    },
+    "text-desc-836r": {
+      "type": "Text",
+      "props": {
+        "text": "ReDoS + memory exhaustion in BeautifulSoup selector dep."
+      }
+    },
+    "text-action-836r": {
+      "type": "Text",
+      "props": {
+        "text": "→ pin scrapers to patched line when released.",
+        "variant": "lead"
+      }
+    },
+    "monitor-fqf6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-fqf6",
+        "badge-silent",
+        "text-desc-fqf6",
+        "text-action-fqf6"
+      ]
+    },
+    "link-fqf6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-fqf6-gxhh-2xhw — uucore (rust)",
+        "href": "https://github.com/advisories/GHSA-fqf6-gxhh-2xhw",
+        "source": "GitHub Advisory"
+      }
+    },
+    "badge-silent": {
+      "type": "Badge",
+      "props": {
+        "text": "silent data loss",
+        "variant": "destructive"
+      }
+    },
+    "text-desc-fqf6": {
+      "type": "Text",
+      "props": {
+        "text": "`--suffix` alone doesn't enable backup mode in cp/mv/install/ln (silent divergence from GNU)."
+      }
+    },
+    "text-action-fqf6": {
+      "type": "Text",
+      "props": {
+        "text": "→ watch for uutils patch.",
+        "variant": "lead"
+      }
+    }
+  }
+}
