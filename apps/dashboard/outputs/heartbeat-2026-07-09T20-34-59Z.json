@@ -1,0 +1,313 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "System status report — 20:00z"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_scheduler",
+        "sep1",
+        "section_missed",
+        "sep2",
+        "section_pr",
+        "sep3",
+        "section_status",
+        "sep4",
+        "section_deduped"
+      ]
+    },
+    "section_scheduler": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_scheduler",
+        "text_batch",
+        "alert_catchup"
+      ]
+    },
+    "heading_scheduler": {
+      "type": "Heading",
+      "props": {
+        "text": "Scheduler",
+        "level": "h3"
+      }
+    },
+    "text_batch": {
+      "type": "Text",
+      "props": {
+        "text": "Batch scheduled 12:00z — dark extension d1"
+      }
+    },
+    "alert_catchup": {
+      "type": "Alert",
+      "props": {
+        "title": "Catch-up tick fired at 11:38z",
+        "message": "Dispatched 0 skills (scheduler malfunction detected)",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_missed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_missed",
+        "stack_missed_items",
+        "text_iss027_ref"
+      ]
+    },
+    "heading_missed": {
+      "type": "Heading",
+      "props": {
+        "text": "Missed Tasks (Today)",
+        "level": "h3"
+      }
+    },
+    "stack_missed_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_token_alert",
+        "item_github"
+      ]
+    },
+    "item_token_alert": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_token_alert",
+        "badge_1215z"
+      ]
+    },
+    "text_token_alert": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert + btc-levels"
+      }
+    },
+    "badge_1215z": {
+      "type": "Badge",
+      "props": {
+        "text": "12:15z",
+        "variant": "secondary"
+      }
+    },
+    "item_github": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_github",
+        "badge_0900z"
+      ]
+    },
+    "text_github": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending"
+      }
+    },
+    "badge_0900z": {
+      "type": "Badge",
+      "props": {
+        "text": "09:00z",
+        "variant": "secondary"
+      }
+    },
+    "text_iss027_ref": {
+      "type": "Text",
+      "props": {
+        "text": "iss-027: scope broadens to daily slots that previously caught up ~1h late",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_pr": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_pr",
+        "storylink_pr",
+        "text_pr_status"
+      ]
+    },
+    "heading_pr": {
+      "type": "Heading",
+      "props": {
+        "text": "In Flight",
+        "level": "h3"
+      }
+    },
+    "storylink_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #161: search-skill daily→weekly fix",
+        "href": "#161",
+        "source": "GitHub"
+      }
+    },
+    "text_pr_status": {
+      "type": "Text",
+      "props": {
+        "text": "Opened 18:35z — 1h52 old, not stalled",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_status",
+        "alert_status",
+        "link_status"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Page",
+        "level": "h3"
+      }
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "Status page regenerated",
+        "message": "Verdict degraded",
+        "type": "warning"
+      }
+    },
+    "link_status": {
+      "type": "Link",
+      "props": {
+        "label": "View docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_deduped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_deduped",
+        "text_dedup_note",
+        "stack_issues"
+      ]
+    },
+    "heading_deduped": {
+      "type": "Heading",
+      "props": {
+        "text": "48h-Deduped Carry",
+        "level": "h3"
+      }
+    },
+    "text_dedup_note": {
+      "type": "Text",
+      "props": {
+        "text": "Issues and metrics carried forward with deduplication window 48h",
+        "variant": "caption"
+      }
+    },
+    "stack_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_slx",
+        "stat_iss025",
+        "stat_aixbt",
+        "stat_sandbox"
+      ]
+    },
+    "stat_slx": {
+      "type": "Stat",
+      "props": {
+        "label": "slx",
+        "value": "-63%",
+        "delta": "d15",
+        "trend": "down"
+      }
+    },
+    "stat_iss025": {
+      "type": "Stat",
+      "props": {
+        "label": "iss-025",
+        "value": "d17"
+      }
+    },
+    "stat_aixbt": {
+      "type": "Stat",
+      "props": {
+        "label": "aixbt",
+        "value": "d11"
+      }
+    },
+    "stat_sandbox": {
+      "type": "Stat",
+      "props": {
+        "label": "sandbox-truncation",
+        "value": "d17"
+      }
+    }
+  }
+}
