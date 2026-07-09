@@ -1,0 +1,310 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter"
+      },
+      "children": [
+        "heading-title",
+        "text-shape",
+        "sep1",
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5",
+        "sep2",
+        "heading-sources",
+        "text-sources"
+      ]
+    },
+    "heading-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5 Actions — 2026-07-09",
+        "level": "h2"
+      }
+    },
+    "text-shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: route iss-025 authoring, draft rule-5 relax pr, close slx day-15, codify iss-027/028",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-1",
+        "heading-1",
+        "why-1",
+        "done-1",
+        "loop-1"
+      ]
+    },
+    "badge-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 1",
+        "variant": "default"
+      }
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Update memory/issues/ISS-025.md with routing_decision: operator-direct-author + blocked_by: self-improve-rule-5; cross-link entry in memory/topics/fleet.md",
+        "level": "h3"
+      }
+    },
+    "why-1": {
+      "type": "Text",
+      "props": {
+        "text": "why: T-4 to weekly-review 2026-07-13; 7-07 self-improve run confirmed structural rule-5 block on workflow-file edits, no re-route persisted",
+        "variant": "body"
+      }
+    },
+    "done-1": {
+      "type": "Text",
+      "props": {
+        "text": "done: ISS-025.md frontmatter has routing_decision + blocked_by fields; fleet.md has iss-025-authoring-block entry",
+        "variant": "body"
+      }
+    },
+    "loop-1": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-routing-decision",
+        "variant": "secondary"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-2",
+        "heading-2",
+        "why-2",
+        "done-2",
+        "loop-2"
+      ]
+    },
+    "badge-2": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 2",
+        "variant": "default"
+      }
+    },
+    "heading-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Draft PR against skills/self-improve/SKILL.md rule 5 to whitelist .github/workflows/aeon.yml chain-runner capture-step edits (lines 561-575 per 7-07 self-improve log correction)",
+        "level": "h3"
+      }
+    },
+    "why-2": {
+      "type": "Text",
+      "props": {
+        "text": "why: parallel unblock path — if operator prefers rule-relax over direct-author, PR is ready for T-4 weekly-review",
+        "variant": "body"
+      }
+    },
+    "done-2": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR draft opened citing ISS-009 root_cause + ISS-025 blocked-authoring loop, adding rule 5a whitelist",
+        "variant": "body"
+      }
+    },
+    "loop-2": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-routing-decision-alt",
+        "variant": "secondary"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-3",
+        "heading-3",
+        "why-3",
+        "done-3",
+        "loop-3"
+      ]
+    },
+    "badge-3": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 3",
+        "variant": "default"
+      }
+    },
+    "heading-3": {
+      "type": "Heading",
+      "props": {
+        "text": "Stamp SLX open pick CLOSED in memory/topics/crypto.md — entry $0.4753 → last CG $0.256 (-46% day-15) + trending $0.174 (-63%); move from open-picks to closed",
+        "level": "h3"
+      }
+    },
+    "why-3": {
+      "type": "Text",
+      "props": {
+        "text": "why: 6th consecutive daily-routine surface, position past every recut trigger, T-4 weekly-review deadline, no fresh CG print 4 days",
+        "variant": "body"
+      }
+    },
+    "done-3": {
+      "type": "Text",
+      "props": {
+        "text": "done: SLX section marked CLOSED with 15-day drawdown verdict; entry appears in closed-picks list",
+        "variant": "body"
+      }
+    },
+    "loop-3": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: slx-recut-blown",
+        "variant": "secondary"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-4",
+        "heading-4",
+        "why-4",
+        "done-4",
+        "loop-4"
+      ]
+    },
+    "badge-4": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 4",
+        "variant": "default"
+      }
+    },
+    "heading-4": {
+      "type": "Heading",
+      "props": {
+        "text": "Create memory/issues/ISS-027.md (12z batch dark scheduler never-run, 8-skill 6-28 cluster) + ISS-028.md (aixbt-pulse dead-slot d11 twice-daily 09/21Z); add rows to INDEX.md Open table",
+        "level": "h3"
+      }
+    },
+    "why-4": {
+      "type": "Text",
+      "props": {
+        "text": "why: 7-08 action-converter claimed filing but files don't exist; d12 + d11 loops need codified diagnostic-path separation",
+        "variant": "body"
+      }
+    },
+    "done-4": {
+      "type": "Text",
+      "props": {
+        "text": "done: two YAML-frontmatter issue files exist; INDEX.md has 2 new Open rows citing affected_skills",
+        "variant": "body"
+      }
+    },
+    "loop-4": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-027-iss-028-codify",
+        "variant": "secondary"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-5",
+        "heading-5",
+        "why-5",
+        "done-5",
+        "loop-5"
+      ]
+    },
+    "badge-5": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 5",
+        "variant": "default"
+      }
+    },
+    "heading-5": {
+      "type": "Heading",
+      "props": {
+        "text": "Poll memory/cron-state.json at 20:00Z heartbeat for 8-skill 6-28 cluster; write verdict into ISS-027.md observation log",
+        "level": "h3"
+      }
+    },
+    "why-5": {
+      "type": "Text",
+      "props": {
+        "text": "why: 7-09 12:00Z tick still un-dispatched at 14:17Z (2h past slot); 20:00Z is codification checkpoint before end-of-day",
+        "variant": "body"
+      }
+    },
+    "done-5": {
+      "type": "Text",
+      "props": {
+        "text": "done: ISS-027.md has 7-09 12:00Z outcome line (dispatched-catch-up | missed → d13 extension)",
+        "variant": "body"
+      }
+    },
+    "loop-5": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: 12z-batch-dark",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "memory=61 logs=14 topics=11 prs=0 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-08*
-Shape: audit scheduler, route ISS-025, codify batch + aixbt dead-slots, archive SLX day-14
+*5 Actions — 2026-07-09*
+Shape: route iss-025 authoring, draft rule-5 relax pr, close slx day-15, codify iss-027/028
 
-1. audit `.github/workflows/aeon.yml` schedule blocks (grep `cron`/`schedule:`/`0 12`/`0 9`/`0 21`/`30 10`); write findings to `.tmp/aeon-yml-schedule-audit.md`, name common root cause across 12z-batch/aixbt/op-scorecard dead-slots
-why: 3 scheduler-side never-runs (batch day-12, aixbt day-10, op-scorecard day-8) share dispatch-layer symptom — one audit unblocks all three
-done: `.tmp/aeon-yml-schedule-audit.md` written with cron grep + shared-cause hypothesis + next PR shape
-loop: 12z-batch-dispatch
+1. Update memory/issues/ISS-025.md with routing_decision: operator-direct-author + blocked_by: self-improve-rule-5; cross-link entry in memory/topics/fleet.md
+why: T-4 to weekly-review 2026-07-13; 7-07 self-improve run confirmed structural rule-5 block on workflow-file edits, no re-route persisted
+done: ISS-025.md frontmatter has routing_decision + blocked_by fields; fleet.md has iss-025-authoring-block entry
+loop: iss-025-routing-decision
 
-2. update `memory/issues/ISS-025.md` — set `authored_by: operator` in frontmatter, append Resolution-Blocked section citing self-improve 2026-07-07T18:32Z rule-5 structural block on `.github/workflows/*` edits
-why: weekly-review 7-13 is T-5; routing verdict lives in one log line, not the ISS file — persists the block signal for operator lift
-done: `ISS-025.md` YAML has `authored_by: operator` field + section referencing self-improve run and rule-5 clause
-loop: iss-025-routing-test
+2. Draft PR against skills/self-improve/SKILL.md rule 5 to whitelist .github/workflows/aeon.yml chain-runner capture-step edits (lines 561-575 per 7-07 self-improve log correction)
+why: parallel unblock path — if operator prefers rule-relax over direct-author, PR is ready for T-4 weekly-review
+done: PR draft opened citing ISS-009 root_cause + ISS-025 blocked-authoring loop, adding rule 5a whitelist
+loop: iss-025-routing-decision-alt
 
-3. file `memory/issues/ISS-027.md` codifying 12:00Z batch-6 scheduler-side never-run pattern; add Open row to `INDEX.md`; category `config`, severity `high`, affected_skills = [token-pick, defi-overview, token-movers, on-chain-monitor, defi-monitor, market-context-refresh]
-why: 7-07 action-converter claimed filing but no file on disk; 7-08 12:54Z token-alert catch-up confirmed 12-day dispatch void — carry-forward closes today
-done: `ISS-027.md` frontmatter + INDEX Open row appended
-loop: batch-dispatch
-
-4. archive SLX open pick in `memory/topics/crypto.md` — append 2026-07-08 close entry: 6-24 entry $0.4753 → 7-05 last CG print $0.256 = -46% recut-overdue day-14, rank #372, mcap $62M, position past every trigger
-why: 5th consecutive daily-routine surface with no action; weekly-review 7-06 operator-slot routing needs a close-on-record; removes ~40 char/day noise from daily-routine tail
-done: crypto.md has SLX 2026-07-08 close section + no more open-pick language for SLX below that line
+3. Stamp SLX open pick CLOSED in memory/topics/crypto.md — entry $0.4753 → last CG $0.256 (-46% day-15) + trending $0.174 (-63%); move from open-picks to closed
+why: 6th consecutive daily-routine surface, position past every recut trigger, T-4 weekly-review deadline, no fresh CG print 4 days
+done: SLX section marked CLOSED with 15-day drawdown verdict; entry appears in closed-picks list
 loop: slx-recut-blown
 
-5. file `memory/issues/ISS-028.md` codifying aixbt-pulse 09/21Z dead-slot pattern (day-10 confirmed 7-08 09:04Z hb; last_success 2026-06-28T21:21Z ~236h stale = 9.8× twice-daily interval); add Open row to `INDEX.md`
-why: distinct cron slot from ISS-027 (twice-daily vs 12:00Z single); separate ISS keeps diagnostic paths clean when scheduler-audit lands
-done: `ISS-028.md` frontmatter + INDEX Open row appended
-loop: aixbt-dead-slot
+4. Create memory/issues/ISS-027.md (12z batch dark scheduler never-run, 8-skill 6-28 cluster) + ISS-028.md (aixbt-pulse dead-slot d11 twice-daily 09/21Z); add rows to INDEX.md Open table
+why: 7-08 action-converter claimed filing but files don't exist; d12 + d11 loops need codified diagnostic-path separation
+done: two YAML-frontmatter issue files exist; INDEX.md has 2 new Open rows citing affected_skills
+loop: iss-027-iss-028-codify
 
-sources: memory=76 logs=14 topics=11 prs=0 cron_failing=0 mode=OK
+5. Poll memory/cron-state.json at 20:00Z heartbeat for 8-skill 6-28 cluster; write verdict into ISS-027.md observation log
+why: 7-09 12:00Z tick still un-dispatched at 14:17Z (2h past slot); 20:00Z is codification checkpoint before end-of-day
+done: ISS-027.md has 7-09 12:00Z outcome line (dispatched-catch-up | missed → d13 extension)
+loop: 12z-batch-dark
+
+sources: memory=61 logs=14 topics=11 prs=0 cron_failing=0 mode=OK
