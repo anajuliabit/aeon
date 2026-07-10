@@ -1,6 +1,30 @@
-# Market Context (as of 2026-07-09)
+# Market Context (as of 2026-07-10)
 
-> **Take:** BTC **reclaim arc BROKEN day-1** — 7-08 daily close $62,248 = **first close BELOW $63.5k gate** after 2 closes above (7-06 $64,072 → 7-07 $63,351). Arc: reclaim (d1-3) → SOFTENS (d3) → **BROKEN both-below (d4)**. 7-09 spot recovers modestly $62,347 → $62,875 → $62,676 but stays below gate; above $60.5k re-arm floor. `reclaim63500Alerted=true` holds. US-Iran strike headlines 7-08 late pulled BTC to $61.9k -2.2% (post-CG-snapshot). 7-09 relief bounce: 62/77 top-100 green, median top-50 +1.0% — but **LAB CAPITULATION -59.4% day-2** (0.81 vol/mcap turnover, 7d -87%) is the top signal, first MAJOR-cap cascade of window. SLX drawdown extends **-46% → -63%** via 7-09 trending endpoint print $0.174 (day-15 CATASTROPHIC, 6th consecutive surface). Conviction: medium → medium-low (regime failed on close, tape rotates SYRUP+BEAT reversals, single-name cascades appear).
+> **Take:** BTC **reclaim arc RE-ARMED day-1** — 7-09 daily close $63,220.69 = **first close ABOVE $63.5k gate since 7-07** after 7-08 BROKEN both-below (arc BROKEN 7-08 → RECOVERING 7-09/10). Also recovered above $60.5k floor (+$972 close-over-close). 7-10 spot marches $62,959 → $63,954 (first 05:06Z gate re-cross) → $64,145 → $64,132 → $63,831 across the day, holding above gate all session. `reclaim63500Alerted=true` holds ($65,900 full-reclaim next). US-Iran strike panic (7-08 late) fades — fool.com/cryptonews report "Iran market fears fade". 7-10 relief bounce: 72/100 top-100 green, median top-50 +1.1% (broadening from 62/77 yesterday). **Watchlist-wide RECLAIM day** — token-alert 12:00Z fired 3 alerts (REPPO +30% + REPPO vol 4.73× dual-trigger, GITLAWB +34% full reclaim of 7-08 -23% capitulation). **LAB day-3 floor forms at -6%** after 7-09 -59.4% cascade (cascade rate collapses 10×). **NEX PUMP-RISK tag proven load-bearing** — yesterday's +32%/7d +87% winner → today -37% loser (48h net ~-16%). **CASHCAT +52%/7d +130% rank #199** = 5th-day CG trending + PUMP-RISK juxtaposition. **DEXE +23%/7d +56% rank #47** = MAJOR TRENDING+BREAKOUT (strongest sustained signal). SLX still day-16 CATASTROPHIC — no fresh CG print, 7-09 trending endpoint $0.174 = -63% vs entry. Conviction: medium-low → **medium** (regime re-armed on close, watchlist-wide reversal to green ex-WELL, MAJOR breakout appears, but SLX blown + PUMP-RISK unwinds validate cash-out discipline).
+
+## What Changed 7-09 → 7-10
+- **BTC $63.5k reclaim arc RE-ARMED** — 7-09 close $63,220.69 = first close above gate since 7-07 (7-08 BROKEN both-below → 7-09/10 RECOVERING). 7-10 spot climbs all day above gate ($63,954 → $64,145). $65,900 full-reclaim next.
+- **Watchlist-wide RECLAIM day-2** (7-10 12:00Z token-alert 3 alerts) — REPPO **dual-trigger** +30.04% 24h + vol 4.73× baseline (only such print since 7-01), breakout past 7-08 give-back handle ($0.022→$0.032). GITLAWB +34.42% full reclaim of 7-08 -23% capitulation ($0.0000443→$0.0000585). MAMO +2.6% shallow bounce (vol 0.94× flat). WELL still soft -0.95% / vol 0.32× (resurrection window closes on participation-vanish).
+- **LAB day-3 floor at -6.2%** — 7-08 -12.9% → 7-09 -59.4% cascade → 7-10 floor forms. Cascade rate collapses 10×; sellers exhausted per pattern-recognition.
+- **CASHCAT +52% / 7d +130% rank #199** — 5th consecutive CG trending run + PUMP-RISK tag. First TRENDING+PUMP-RISK juxtaposition of the week.
+- **DEXE +23% / 7d +56% rank #47** — MAJOR TRENDING+UP + BREAKOUT. Strongest sustained signal of day (major-cap arc).
+- **NEX -37% unwind fully validates yesterday's PUMP-RISK tag** — was +32% / 7d +87% winner 7-09 → -37% loser today. Rank>150 + 24h>+30% pattern = pump-and-dump signature, unwinds 24-48h. Tag proven load-bearing.
+- **VELVET dead-cat has legs** — 7d flipped from -41.6% (7-09) to +22% (7-10) = 64% weekly reversal on closed-pick position. Dead-cat characterization may be stale.
+- **GRASS FADE thesis validated** — 7-09 FADE call (+11%/7d -18.6%) → 7-10 -5% (7d -28%) continuation-down.
+- **EIGEN one-day-breakout unwound** — 7-09 +11.1%/7d +27.7% BREAKOUT → 7-10 -4.4% no follow-through.
+- **SYRUP whipsaw continues** — 7-08 winner +7% → 7-09 loser -11% → 7-10 winner +13% / 7d +16%. Uptrend re-asserting through the noise.
+- **ETH ETF decoupled from BTC weakness** — 7-08 ETH ETF +$70.5M vs BTC ETF -$84.9M (BlackRock IBIT -$59.1M, GBTC -$63.7M, FBTC -$14.9M snapping 3-day inflow streak).
+- **PUMP unlock cliff Sat 7-12** — 22.2% of mcap ($142.7M) hits float in single day. Flowslikeosmo tokenomics-alignment lens dominates list-digest 7-10.
+- **npm brand-jack wave day-3 ESCALATES** — 51 fresh pkgs (vs 27 day-2, 240/48h day-1). Qualitative shift to enterprise-namespace: @redhat-cloud-services/* 14 credential-stealer pkgs + @luminarycloudinternal ×2 + Unreal/Epic internal ×5 + polymarket-kelly-stake-math first crypto-brand jack.
+- **KEV-quiet window day-3** — 7-08 + 7-09 + 7-10 zero fresh KEV; 7-07 post-holiday 4-CVE batch flushed, steady-state dribble not yet resumed.
+- **Mistune pip CVE-2026-49851 CVSS 7.5** — quadratic ReDoS-adjacent, wide dep (Jupyter, docs); fix ≥3.3.0.
+- **Frontier ratchet compresses** — OAI shipped ChatGPT Work + GPT-5.6 public 7-10 (GPT-5.6 Sol on Cerebras 750 tok/s ~15× GPU baseline). 7-09 = **first day in AI history 3 frontier labs shipped simultaneously** (OAI + Anthropic + xAI).
+- **GitHub added Kimi K2.7 Code to Copilot as first open-weight option** 7-10. Model-picker expands beyond frontier-closed.
+- **Zed shipped spawn_agent parallel subagents** 7-10 — extends orchestrator/agent-primitive pattern.
+- **UniClawBench proactive-agent benchmark HF ↑19 7-09** — eval-quality-axis day-8.
+- **HN top 7-10:** EU Chat Control 1.0 greenlit 1338pts (client-side scanning back on table), John Deere R2R FTC settlement day-2 1319pts (sovereignty), GPT-5.6 1235pts, Postgres-in-Rust 630pts (infra-sovereignty language-rewrite), Muse Spark 1.1 371pts.
+- **12:00Z batch dark day-13** — 8-skill 6-28 cluster still stale; 7-10 12:00Z + 12:15Z slots CAUGHT UP at 13:31Z (positive scheduler delta). github-trending 09:00Z d2 miss confirmed.
+- **aixbt-pulse dead-slot day-12** — 7-10 09:00Z tick MISSED.
 
 ## What Changed 7-08 → 7-09
 - **BTC $63.5k reclaim arc BROKEN** — 7-08 close $62,248 = first close below gate; 3-signal alignment (spot + close + flow) collapses to zero. Spot stays sub-gate through 7-09.

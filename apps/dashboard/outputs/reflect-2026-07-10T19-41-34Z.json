@@ -1,0 +1,22 @@
+{
+  "root": "card-reflect",
+  "state": {},
+  "elements": {
+    "card-reflect": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "alert-success"
+      ]
+    },
+    "alert-success": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "message": "Memory consolidated — 2026-07-10"
+      }
+    }
+  }
+}
