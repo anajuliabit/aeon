@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-09*
-Shape: route iss-025 authoring, draft rule-5 relax pr, close slx day-15, codify iss-027/028
+*5 Actions — 2026-07-10*
+Shape: Ship ISS-025 PR, recut SLX, fire pending security-digest, refresh tracked-tokens, root-cause 12z batch.
 
-1. Update memory/issues/ISS-025.md with routing_decision: operator-direct-author + blocked_by: self-improve-rule-5; cross-link entry in memory/topics/fleet.md
-why: T-4 to weekly-review 2026-07-13; 7-07 self-improve run confirmed structural rule-5 block on workflow-file edits, no re-route persisted
-done: ISS-025.md frontmatter has routing_decision + blocked_by fields; fleet.md has iss-025-authoring-block entry
-loop: iss-025-routing-decision
+1. Open capture-step PR against `.github/workflows/aeon.yml` chain-runner — direct-author path since self-improve rule 5 blocks workflow-file edits.
+why: 18-day ISS-025 blocks 18-skill chronic tail; weekly-review 2026-07-13 T-3; every day slipped extends counter.
+done: PR opened against main, ISS-025 referenced in body, capture-step diff visible.
+loop: iss-025-capture-step
 
-2. Draft PR against skills/self-improve/SKILL.md rule 5 to whitelist .github/workflows/aeon.yml chain-runner capture-step edits (lines 561-575 per 7-07 self-improve log correction)
-why: parallel unblock path — if operator prefers rule-relax over direct-author, PR is ready for T-4 weekly-review
-done: PR draft opened citing ISS-009 root_cause + ISS-025 blocked-authoring loop, adding rule 5a whitelist
-loop: iss-025-routing-decision-alt
+2. Publish SLX day-16 recut verdict (close vs hold vs scale-down at $0.174) to `memory/topics/crypto.md`.
+why: HIGH 9/10 pick -63% via trending endpoint, no CG print 5 days, weekly-review 2026-07-13 T-3, 7 daily surfaces.
+done: Dated block in `memory/topics/crypto.md` with verdict + delta from entry $0.4753.
+loop: slx-recut
 
-3. Stamp SLX open pick CLOSED in memory/topics/crypto.md — entry $0.4753 → last CG $0.256 (-46% day-15) + trending $0.174 (-63%); move from open-picks to closed
-why: 6th consecutive daily-routine surface, position past every recut trigger, T-4 weekly-review deadline, no fresh CG print 4 days
-done: SLX section marked CLOSED with 15-day drawdown verdict; entry appears in closed-picks list
-loop: slx-recut-blown
+3. Run `./notify -f .tmp/security-digest/msg.md` (hash `8793aa39`, 1823 chars) to ship today's already-drafted digest.
+why: msg prepared 14:20Z; @redhat-cloud-services scope-jack + Nuclio CVSS 10 PoC are fresh day-3 signals.
+done: `./notify` exits 0, hash `8793aa39` registered in `.notify-sent-hashes`.
+loop: security-digest-pending
 
-4. Create memory/issues/ISS-027.md (12z batch dark scheduler never-run, 8-skill 6-28 cluster) + ISS-028.md (aixbt-pulse dead-slot d11 twice-daily 09/21Z); add rows to INDEX.md Open table
-why: 7-08 action-converter claimed filing but files don't exist; d12 + d11 loops need codified diagnostic-path separation
-done: two YAML-frontmatter issue files exist; INDEX.md has 2 new Open rows citing affected_skills
-loop: iss-027-iss-028-codify
+4. Refresh `memory/MEMORY.md` Tracked Tokens rows with 7-10 12:00Z token-alert prints.
+why: table shows 7-08 stale row; REPPO dual-rail (+30% + vol 4.73×) + GITLAWB reclaim absent.
+done: Recent Activity column reflects 7-10 12:00Z prices per token-alert log block.
+loop: tracked-tokens-refresh
 
-5. Poll memory/cron-state.json at 20:00Z heartbeat for 8-skill 6-28 cluster; write verdict into ISS-027.md observation log
-why: 7-09 12:00Z tick still un-dispatched at 14:17Z (2h past slot); 20:00Z is codification checkpoint before end-of-day
-done: ISS-027.md has 7-09 12:00Z outcome line (dispatched-catch-up | missed → d13 extension)
-loop: 12z-batch-dark
+5. Root-cause 12:00Z 8-skill batch dispatch failure — write chain-config vs cron-slot vs YAML-nesting vs dispatcher-matcher disambiguation to `memory/topics/fleet.md`.
+why: batch-dark day-13, PR #156 merged 7-06 but 7-07→7-10 all misfire; ISS-027 codified but rootless.
+done: Section in `memory/topics/fleet.md` names which of 4 categories with `gh run list` receipts.
+loop: iss-027-batch-rootcause
 
-sources: memory=61 logs=14 topics=11 prs=0 cron_failing=0 mode=OK
+sources: memory=64 logs=14 topics=11 prs=0 cron_failing=0 mode=OK

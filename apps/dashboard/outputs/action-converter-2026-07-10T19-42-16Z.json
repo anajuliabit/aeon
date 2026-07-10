@@ -1,0 +1,265 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-10"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shape_text",
+        "sep1",
+        "action1_stack",
+        "action2_stack",
+        "action3_stack",
+        "action4_stack",
+        "action5_stack",
+        "sep2",
+        "footer_text"
+      ]
+    },
+    "shape_text": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: Ship ISS-025 PR, recut SLX, fire pending security-digest, refresh tracked-tokens, root-cause 12z batch.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_heading",
+        "action1_why",
+        "action1_done",
+        "action1_loop"
+      ]
+    },
+    "action1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Open capture-step PR against `.github/workflows/aeon.yml` chain-runner — direct-author path since self-improve rule 5 blocks workflow-file edits.",
+        "level": "h3"
+      }
+    },
+    "action1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 18-day ISS-025 blocks 18-skill chronic tail; weekly-review 2026-07-13 T-3; every day slipped extends counter.",
+        "variant": "body"
+      }
+    },
+    "action1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened against main, ISS-025 referenced in body, capture-step diff visible.",
+        "variant": "body"
+      }
+    },
+    "action1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-capture-step",
+        "variant": "secondary"
+      }
+    },
+    "action2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_heading",
+        "action2_why",
+        "action2_done",
+        "action2_loop"
+      ]
+    },
+    "action2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Publish SLX day-16 recut verdict (close vs hold vs scale-down at $0.174) to `memory/topics/crypto.md`.",
+        "level": "h3"
+      }
+    },
+    "action2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: HIGH 9/10 pick -63% via trending endpoint, no CG print 5 days, weekly-review 2026-07-13 T-3, 7 daily surfaces.",
+        "variant": "body"
+      }
+    },
+    "action2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Dated block in `memory/topics/crypto.md` with verdict + delta from entry $0.4753.",
+        "variant": "body"
+      }
+    },
+    "action2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "slx-recut",
+        "variant": "secondary"
+      }
+    },
+    "action3_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_heading",
+        "action3_why",
+        "action3_done",
+        "action3_loop"
+      ]
+    },
+    "action3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Run `./notify -f .tmp/security-digest/msg.md` (hash `8793aa39`, 1823 chars) to ship today's already-drafted digest.",
+        "level": "h3"
+      }
+    },
+    "action3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: msg prepared 14:20Z; @redhat-cloud-services scope-jack + Nuclio CVSS 10 PoC are fresh day-3 signals.",
+        "variant": "body"
+      }
+    },
+    "action3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `./notify` exits 0, hash `8793aa39` registered in `.notify-sent-hashes`.",
+        "variant": "body"
+      }
+    },
+    "action3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest-pending",
+        "variant": "secondary"
+      }
+    },
+    "action4_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_heading",
+        "action4_why",
+        "action4_done",
+        "action4_loop"
+      ]
+    },
+    "action4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Refresh `memory/MEMORY.md` Tracked Tokens rows with 7-10 12:00Z token-alert prints.",
+        "level": "h3"
+      }
+    },
+    "action4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: table shows 7-08 stale row; REPPO dual-rail (+30% + vol 4.73×) + GITLAWB reclaim absent.",
+        "variant": "body"
+      }
+    },
+    "action4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Recent Activity column reflects 7-10 12:00Z prices per token-alert log block.",
+        "variant": "body"
+      }
+    },
+    "action4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "tracked-tokens-refresh",
+        "variant": "secondary"
+      }
+    },
+    "action5_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_heading",
+        "action5_why",
+        "action5_done",
+        "action5_loop"
+      ]
+    },
+    "action5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Root-cause 12:00Z 8-skill batch dispatch failure — write chain-config vs cron-slot vs YAML-nesting vs dispatcher-matcher disambiguation to `memory/topics/fleet.md`.",
+        "level": "h3"
+      }
+    },
+    "action5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: batch-dark day-13, PR #156 merged 7-06 but 7-07→7-10 all misfire; ISS-027 codified but rootless.",
+        "variant": "body"
+      }
+    },
+    "action5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Section in `memory/topics/fleet.md` names which of 4 categories with `gh run list` receipts.",
+        "variant": "body"
+      }
+    },
+    "action5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-027-batch-rootcause",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=64 logs=14 topics=11 prs=0 cron_failing=0 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}
