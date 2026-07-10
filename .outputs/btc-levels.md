@@ -1,12 +1,13 @@
+Run complete. No alerts fired.
+
 ## Summary
 
-**BTC Levels — 08:39Z | Quiet run, no alerts**
+**BTC spot:** $64,131.73 | **Jul-9 daily close:** $63,220.69
 
-- **Spot:** $64,145.12 (up from $63,954 at 05:06Z)
-- **Jul-9 daily close:** $63,220.69 (above the $60,500 floor — no breakdown)
-- **Leverage review band** (≤$45k): not triggered
-- **Breakdown** (<$60,500 close): not triggered; flag stays null
-- **Reclaim $63,500**: already alerted in a prior cycle; spot still above but no re-arm (would need to dip below $60,500 first)
-- **Reclaim $65,900**: spot $64,145 — still ~$1,755 short of the next trigger
+Level checks:
+- Leverage-review (≤ $45k): clear — spot $64.1k
+- Breakdown (close < $60.5k): clear — close $63.2k above floor
+- Reclaim $63,500: spot above gate but `reclaim63500Alerted=true` already; re-arm requires dip below $60,500
+- Reclaim $65,900: spot $64.1k, still ~$1,768 below trigger
 
-No notification sent. State and log committed.
+No notification sent. State updated and committed (`ffaffc1`). Next trigger to watch: spot crosses $65,900 for full stabilization confirmation, or spot drops below $60,500 to re-arm the reclaim flags.
