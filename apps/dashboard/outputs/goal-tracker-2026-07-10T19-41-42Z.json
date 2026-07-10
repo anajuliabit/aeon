@@ -1,0 +1,244 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-07-10 — 6 goals: 4 on track, 2 blocked, 0 at risk, 0 done. Overall flat (no status transitions vs 7-09 run)."
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_row",
+        "sep1",
+        "heading_on_track",
+        "goal1_stack",
+        "goal2_stack",
+        "goal3_stack",
+        "goal4_stack",
+        "sep2",
+        "heading_blocked",
+        "blocked1_alert",
+        "blocked2_alert",
+        "sep3",
+        "heading_sources",
+        "sources_text"
+      ]
+    },
+    "summary_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_total",
+        "stat_on_track",
+        "stat_blocked",
+        "stat_at_risk",
+        "stat_done"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "6"
+      }
+    },
+    "stat_on_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "4"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "2"
+      }
+    },
+    "stat_at_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_on_track": {
+      "type": "Heading",
+      "props": {
+        "text": "On Track (4)",
+        "level": "h2"
+      }
+    },
+    "goal1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal1_title",
+        "goal1_details"
+      ]
+    },
+    "goal1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Sandbox-truncation systemic",
+        "level": "h3"
+      }
+    },
+    "goal1_details": {
+      "type": "Text",
+      "props": {
+        "text": "Day-18 — 0d idle, 359/14d. ISS-025 capture-step PR still un-authored behind self-improve rule-5 workflow-file block. Weekly-review 7-13 T-3. PR #161 landed as parallel-path #2, doesn't fix capture-step. Self-improve OFF today (odd-day cron); next routing-hypothesis window 7-11 18:00Z.",
+        "variant": "body"
+      }
+    },
+    "goal2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal2_title",
+        "goal2_details"
+      ]
+    },
+    "goal2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "12:00 UTC batch DARK",
+        "level": "h3"
+      }
+    },
+    "goal2_details": {
+      "type": "Text",
+      "props": {
+        "text": "Day-13 — 0d idle, ~369/14d. Positive delta today: token-alert 12:00Z + btc-levels 12:15Z slots caught up 13:31Z (~76-91min late); token-alert fired 3 alerts (REPPO dual-rail, GITLAWB reclaim). 8-skill 6-28 cluster still 12d stale. Scope broadening day-2 confirmed on github-trending 09:00Z d2 miss.",
+        "variant": "body"
+      }
+    },
+    "goal3_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal3_title",
+        "goal3_details"
+      ]
+    },
+    "goal3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "BTC $63.5k reclaim arc",
+        "level": "h3"
+      }
+    },
+    "goal3_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 298/14d. Arc RE-ARMED: 7-09 close $63,220.69 crossed gate + 7-10 spot $63,831–$64,145 continues up-arc. reclaim63500Alerted holds. $65.9k full-reclaim next trigger (~$2,068 above). 72/100 top-100 green.",
+        "variant": "body"
+      }
+    },
+    "goal4_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal4_title",
+        "goal4_details"
+      ]
+    },
+    "goal4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "SLX open pick — DAY-16 CATASTROPHIC",
+        "level": "h3"
+      }
+    },
+    "goal4_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 209/14d. 7-09 trending endpoint $0.174 = -63% vs entry $0.4753. 7th consecutive daily-routine surface. Weekly-review 7-13 T-3 remains recut deadline.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_blocked": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked (2)",
+        "level": "h2"
+      }
+    },
+    "blocked1_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "XAI quota recovery",
+        "message": "Waiting on operator team-credit top-up since 2026-06-16 (day-25). WebSearch + prefetch cache still cover primary paths. Action: escalate top-up ETA to operator via priority Telegram ping.",
+        "type": "warning"
+      }
+    },
+    "blocked2_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator on-chain config",
+        "message": "Waiting on operator config + API keys since ~2026-06-08 (day-33). ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null, on-chain-watches.yml still 5 type:wallet only. Action: escalate ALCHEMY + ETHERSCAN keys + type:pool/position entries to operator.",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h2"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
