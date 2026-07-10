@@ -1,0 +1,171 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief",
+        "description": "2026-07-10"
+      },
+      "children": [
+        "section-focus",
+        "sep1",
+        "section-yesterday",
+        "sep2",
+        "section-running"
+      ]
+    },
+    "section-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "focus-item1",
+        "focus-item2",
+        "focus-item3"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item1": {
+      "type": "Text",
+      "props": {
+        "text": "1. iss-025 capture-step pr — why now: weekly-review t-3, day-17 un-authored",
+        "variant": "body"
+      }
+    },
+    "focus-item2": {
+      "type": "Text",
+      "props": {
+        "text": "2. slx recut day-16 — why now: -63% via trending, 7th surface today",
+        "variant": "body"
+      }
+    },
+    "focus-item3": {
+      "type": "Text",
+      "props": {
+        "text": "3. btc $63.5k re-cross — why now: 05:06z spot $63,954 first cross since 7-08 close broke it",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-yesterday",
+        "yesterday-item1",
+        "yesterday-item2",
+        "yesterday-item3",
+        "yesterday-item4",
+        "yesterday-item5"
+      ]
+    },
+    "heading-yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "yesterday-item1": {
+      "type": "Text",
+      "props": {
+        "text": "pr #161 merged 22:02z: search-skill daily → weekly. parallel unblock landed, not the iss-025 fix",
+        "variant": "body"
+      }
+    },
+    "yesterday-item2": {
+      "type": "Text",
+      "props": {
+        "text": "batch-dark broadens to 09:00z github-trending slot (d1 miss); token-alert 12:00z now d11",
+        "variant": "body"
+      }
+    },
+    "yesterday-item3": {
+      "type": "Text",
+      "props": {
+        "text": "lab -59.4% capitulation d2 top signal (0.81 vol/mcap, 7d -87%); syrup+beat direct-reverse yesterday's winners",
+        "variant": "body"
+      }
+    },
+    "yesterday-item4": {
+      "type": "Text",
+      "props": {
+        "text": "npm brand-jack ai/coding-tool day-2: myclaude-code + clavue 4-pkg family + gitlens brand-jack; nuclio go cvss 10.0 with poc",
+        "variant": "body"
+      }
+    },
+    "yesterday-item5": {
+      "type": "Text",
+      "props": {
+        "text": "reflect memory 61l → 64l; kev-quiet re-opens 4-day window",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-running",
+        "running-item1",
+        "running-item2",
+        "running-item3"
+      ]
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-item1": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 08/14/20z; github-trending @ 09:00z (d2 miss test); token-alert @ 12:00z (batch-dark d13 verify)",
+        "variant": "body"
+      }
+    },
+    "running-item2": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 14:00z; list-digest @ 17:00z; agent-buzz @ 17:30z",
+        "variant": "body"
+      }
+    },
+    "running-item3": {
+      "type": "Text",
+      "props": {
+        "text": "evening batch @ 18:00z (goal-tracker + skill-health + reflect + action-converter); evening-recap @ 21:00z",
+        "variant": "body"
+      }
+    }
+  }
+}
