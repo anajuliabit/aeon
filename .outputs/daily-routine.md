@@ -1,55 +1,46 @@
-*Daily Routine — 2026-07-09*
+*Daily Routine — 2026-07-10*
 
-_broad relief bounce — 62/77 top-100 green, median top-50 +1.0%. btc $62,875 +1.4%, eth $1,753 +1.1%, sol $78.08 +1.0%, bnb $572 +1.9%, hype $68.07 flat._
+_relief bounce — 72/100 top-100 green, median top-50 +1.1%; btc $64.1k +1.8%, eth $1.78k +1.6%. NEX pump unwinds -37% (was +32% yesterday), LAB floors at -6% after -59% cascade._
 
-*Top Winners (24h)*
-1. NEX — $0.0000035 +32.0% / 7d +87% • $12M / #161 [PUMP-RISK BREAKOUT]
-2. ARB — $0.086 +12.9% / 7d +11.4% • $94M / #97 [TRENDING+UP]
-3. EIGEN — $0.252 +11.1% / 7d +27.7% • $47M / #172 [BREAKOUT]
-4. GRASS — $0.386 +11.0% / 7d -18.6% • $45M / #148 [FADE]
-5. MANA — $0.075 +10.9% / 7d +17.9% • $26M / #205
-6. SKY — $0.058 +10.0% • $15M / #55
-7. APE — $0.161 +9.7% / 7d +12.0% • $69M / #193
-8. VVV (Venice) — $11.36 +9.1% / 7d -12.4% • $38M / #100 [FADE]
-9. VELVET — $0.430 +8.2% / 7d -41.6% • $10M / #177 [FADE]
-10. KAITO — $0.682 +8.0% • $125M / #189
+*Top 10 Winners (24h)*
+1. CASHCAT $0.155 +52.0% (7d +130%) [TRENDING+UP · PUMP-RISK] · #199
+2. VELVET $0.555 +32.5% (7d +22%) · #147
+3. DEXE $35.25 +23.1% (7d +56%) [TRENDING+UP · BREAKOUT · MAJOR] · #47
+4. TIBBIR $0.120 +14.7% (7d +15%) · #234
+5. SYRUP $0.179 +13.2% (7d +16%) · #161
+6. MORPHO $2.29 +11.2% (7d +14%) [MAJOR] · #51
+7. SENT $0.0152 +9.5% · #248
+8. ARB $0.0937 +8.8% (7d +20%) [TRENDING+UP] · #95
+9. IOTA $0.0398 +7.9% · #176
+10. B (BUILDon) $0.161 +7.1% (7d -35%) · #192
 
-*Top Losers (24h)*
-1. LAB — $1.18 -59.4% / 7d -87.1% • $297M vol / #119 [TRENDING+DOWN CAPITULATION]
-2. M (MemeCore) — $1.19 -15.9% • $14M / #47 [MAJOR]
-3. UB (Unibase) — $0.071 -14.0% / 7d -20.8% • $9M / #181
-4. SYRUP (Maple) — $0.158 -11.0% • $21M / #176
-5. GWEI (ETHGas) — $0.086 -9.1% / 7d -37.1% • $8M / #178
-6. BEAT (Audiera) — $2.19 -7.0% / 7d -23.4% • $17M / #90
-7. TEL (Telcoin) — $0.0023 -6.5% • $1M / #155
-8. XTZ (Tezos) — $0.238 -4.1% • $11M / #144
-9. ULTIMA — $2366 -3.8% • $10M / #166
-10. GENIUS — $0.353 -3.4% • $12M / #234
-
-*Notable*
-• LAB CAPITULATION day-2 — yesterday -12.9% → today -59.4%, 7d -87%. Vol $297M vs $368M mcap = 0.81 turnover. Fresh cascade.
-• NEX #161 +32% on 7d +87% — PUMP-RISK + BREAKOUT juxtaposed.
-• SYRUP + BEAT flipped from yesterday's winners to today's losers. Rotation.
-• VELVET dead-cat +8.2% on 7d -41.6% — bounce day, not a reclaim.
+*Top 10 Losers (24h)*
+1. NEX $0.00000236 -37.0% (7d -9%) · #210 — pump-risk unwind
+2. EDGE $0.412 -16.3% (7d +55%) · #207 — sharp give-back
+3. GWEI $0.077 -10.9% (7d -38%) · #191
+4. BDX $0.0899 -7.4% · #86
+5. LDO $0.306 -5.8% · #144
+6. ULTIMA $2218 -5.0% · #173
+7. GRASS $0.368 -5.0% (7d -28%) · #149
+8. EIGEN $0.242 -4.4% · #177
+9. ETHFI $0.401 -4.2% · #118
+10. AERO $0.520 -3.7% · #105
 
 *Tweet Roundup*
-*Crypto:* btc slipped to $61.9k -2.2% overnight on US-Iran strike headlines. spot btc ETFs snap 10d outflow streak with $221.7M inflow — largest since May. Bitmine +40k ETH ($71.6M) chasing 5% of supply. RBI backs full crypto prohibition. Tether to issue USDT natively on Bitcoin via RGB v0.11.1.
-*AI:* OAI ships GPT-Live (concurrent listen/speak); GPT-5.6 public 7-10. Anthropic extends Claude Fable 5 promo through 7-12; Cowork on web+mobile + M365 write tools. Anthropic-Google-Broadcom multi-gigawatt compute deal.
-*Dev:* Cloudflare ships global consensus system. Grok 4.5 lands. Chatto open-sourced. GH Copilot CLI adds sandbox approvals.
+*Crypto:* btc held near $63k despite mid-east headlines; eth ETF decoupled +$70.5M inflow vs btc ETF -$84.9M outflow (snapped 3-day inflow streak). Aave shipped Stable Vaults for fintech wallets. CFTC's Selig pushed Clarity Act on Congress.
+*AI:* OAI shipped ChatGPT Work + GPT-5.6 public today — direct answer to Claude Cowork. GPT-5.6 Sol runs on Cerebras at 750 tok/s (~15× GPU baseline). First day 3 frontier labs (OAI GPT-5.6 Sol/Terra/Luna, Anthropic Fable 5 + Sonnet 5, xAI Grok 4.5) all shipped simultaneously.
+*Dev:* GitHub added Kimi K2.7 Code to Copilot as first open-weight option; OAI dropped gpt-realtime-2.1 with 25% lower p95 latency; Zed shipped spawn_agent for parallel subagents.
 
 *Paper of the Day*
-"RoboDojo: A Unified Sim-and-Real Benchmark for Generalist Robot Manipulation" — HF ↑92 (top today)
-robotics eval-consolidation moment — sim + real in one harness. physical-agent analog to what LLM benchmarks went through 2023-24. tracks aeon eval-quality axis day-7.
-[Read](https://arxiv.org/abs/2607.04434)
+"UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks" — HF ↑19 (7-09). Extends eval-quality-axis day-8 — yesterday's RoboDojo (robotics eval consolidation) → today's proactive-agent benchmark.
+[arxiv 2607.08768](https://arxiv.org/abs/2607.08768)
 
 *GitHub Issues*
-- anajuliabit/aeon: 0 new in 24h (5 open advisor issues from 6-25 carry)
+No new issues in 24h.
 
 *HN Digest*
-1. [Chatto open-sourced](https://www.hmans.dev/blog/chatto-is-open-source) (956pts) — chat scenes as data · [hn](https://news.ycombinator.com/item?id=48833116)
-2. [John Deere right-to-repair FTC settlement](https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02) (778pts) · [hn](https://news.ycombinator.com/item?id=48838876)
-3. [GPT-Live](https://openai.com/index/introducing-gpt-live/) (696pts) — real-time voice, listen+speak concurrent · [hn](https://news.ycombinator.com/item?id=48834405)
-4. [Grok 4.5](https://x.ai/news/grok-4-5) (619pts) — xai model drop · [hn](https://news.ycombinator.com/item?id=48835111)
-5. [Signal from noise in coding evals](https://openai.com/index/separating-signal-from-noise-coding-evaluations/) (213pts) — OAI on benchmark-quality; direct hit on eval-quality thread · [hn](https://news.ycombinator.com/item?id=48837396)
-
-*follow-up:* SLX day-15 CATASTROPHIC — CG trending prints $0.174 (vs $0.256 last CG 7-05, entry $0.4753) = -63% vs entry. Recut STILL overdue. ISS-025 capture-step PR day-17; weekly-review 7-13 T-4.
+1. [EU Parliament greenlights Chat Control 1.0](https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/) — 1338pts · client-side scanning back on the EU legislative table.
+2. [John Deere R2R FTC settlement](https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02) — 1319pts · hardware-sovereignty win (day-2, HN cross-post from 7-09).
+3. [GPT-5.6](https://openai.com/index/gpt-5-6/) — 1235pts · frontier drop.
+4. [Postgres rewritten in Rust — 100% regression tests pass](https://github.com/malisper/pgrust) — 630pts.
+5. [Muse Spark 1.1](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/) — 371pts · Meta model API.

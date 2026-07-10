@@ -1,0 +1,406 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-10"
+      },
+      "children": [
+        "market_summary",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "tweet_section",
+        "sep4",
+        "paper_section",
+        "sep5",
+        "github_section",
+        "sep6",
+        "hn_section"
+      ]
+    },
+    "market_summary": {
+      "type": "Text",
+      "props": {
+        "text": "relief bounce — 72/100 top-100 green, median top-50 +1.1%; btc $64.1k +1.8%, eth $1.78k +1.6%. NEX pump unwinds -37% (was +32% yesterday), LAB floors at -6% after -59% cascade.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_title",
+        "winner_1",
+        "winner_2",
+        "winner_3",
+        "winner_4",
+        "winner_5",
+        "winner_6",
+        "winner_7",
+        "winner_8",
+        "winner_9",
+        "winner_10"
+      ]
+    },
+    "winners_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winner_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. CASHCAT $0.155 +52.0% (7d +130%) [TRENDING+UP · PUMP-RISK] · #199"
+      }
+    },
+    "winner_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. VELVET $0.555 +32.5% (7d +22%) · #147"
+      }
+    },
+    "winner_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. DEXE $35.25 +23.1% (7d +56%) [TRENDING+UP · BREAKOUT · MAJOR] · #47"
+      }
+    },
+    "winner_4": {
+      "type": "Text",
+      "props": {
+        "text": "4. TIBBIR $0.120 +14.7% (7d +15%) · #234"
+      }
+    },
+    "winner_5": {
+      "type": "Text",
+      "props": {
+        "text": "5. SYRUP $0.179 +13.2% (7d +16%) · #161"
+      }
+    },
+    "winner_6": {
+      "type": "Text",
+      "props": {
+        "text": "6. MORPHO $2.29 +11.2% (7d +14%) [MAJOR] · #51"
+      }
+    },
+    "winner_7": {
+      "type": "Text",
+      "props": {
+        "text": "7. SENT $0.0152 +9.5% · #248"
+      }
+    },
+    "winner_8": {
+      "type": "Text",
+      "props": {
+        "text": "8. ARB $0.0937 +8.8% (7d +20%) [TRENDING+UP] · #95"
+      }
+    },
+    "winner_9": {
+      "type": "Text",
+      "props": {
+        "text": "9. IOTA $0.0398 +7.9% · #176"
+      }
+    },
+    "winner_10": {
+      "type": "Text",
+      "props": {
+        "text": "10. B (BUILDon) $0.161 +7.1% (7d -35%) · #192"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_title",
+        "loser_1",
+        "loser_2",
+        "loser_3",
+        "loser_4",
+        "loser_5",
+        "loser_6",
+        "loser_7",
+        "loser_8",
+        "loser_9",
+        "loser_10"
+      ]
+    },
+    "losers_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "loser_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. NEX $0.00000236 -37.0% (7d -9%) · #210 — pump-risk unwind"
+      }
+    },
+    "loser_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. EDGE $0.412 -16.3% (7d +55%) · #207 — sharp give-back"
+      }
+    },
+    "loser_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. GWEI $0.077 -10.9% (7d -38%) · #191"
+      }
+    },
+    "loser_4": {
+      "type": "Text",
+      "props": {
+        "text": "4. BDX $0.0899 -7.4% · #86"
+      }
+    },
+    "loser_5": {
+      "type": "Text",
+      "props": {
+        "text": "5. LDO $0.306 -5.8% · #144"
+      }
+    },
+    "loser_6": {
+      "type": "Text",
+      "props": {
+        "text": "6. ULTIMA $2218 -5.0% · #173"
+      }
+    },
+    "loser_7": {
+      "type": "Text",
+      "props": {
+        "text": "7. GRASS $0.368 -5.0% (7d -28%) · #149"
+      }
+    },
+    "loser_8": {
+      "type": "Text",
+      "props": {
+        "text": "8. EIGEN $0.242 -4.4% · #177"
+      }
+    },
+    "loser_9": {
+      "type": "Text",
+      "props": {
+        "text": "9. ETHFI $0.401 -4.2% · #118"
+      }
+    },
+    "loser_10": {
+      "type": "Text",
+      "props": {
+        "text": "10. AERO $0.520 -3.7% · #105"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_title",
+        "tweet_crypto_heading",
+        "tweet_crypto",
+        "tweet_ai_heading",
+        "tweet_ai",
+        "tweet_dev_heading",
+        "tweet_dev"
+      ]
+    },
+    "tweet_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "tweet_crypto_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "tweet_crypto": {
+      "type": "Text",
+      "props": {
+        "text": "btc held near $63k despite mid-east headlines; eth ETF decoupled +$70.5M inflow vs btc ETF -$84.9M outflow (snapped 3-day inflow streak). Aave shipped Stable Vaults for fintech wallets. CFTC's Selig pushed Clarity Act on Congress."
+      }
+    },
+    "tweet_ai_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "tweet_ai": {
+      "type": "Text",
+      "props": {
+        "text": "OAI shipped ChatGPT Work + GPT-5.6 public today — direct answer to Claude Cowork. GPT-5.6 Sol runs on Cerebras at 750 tok/s (~15× GPU baseline). First day 3 frontier labs (OAI GPT-5.6 Sol/Terra/Luna, Anthropic Fable 5 + Sonnet 5, xAI Grok 4.5) all shipped simultaneously."
+      }
+    },
+    "tweet_dev_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "tweet_dev": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub added Kimi K2.7 Code to Copilot as first open-weight option; OAI dropped gpt-realtime-2.1 with 25% lower p95 latency; Zed shipped spawn_agent for parallel subagents."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_title",
+        "paper_item"
+      ]
+    },
+    "paper_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper_item": {
+      "type": "StoryLink",
+      "props": {
+        "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+        "href": "https://arxiv.org/abs/2607.08768",
+        "source": "HF ↑19 (7-09). Extends eval-quality-axis day-8 — yesterday's RoboDojo (robotics eval consolidation) → today's proactive-agent benchmark."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "github_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github_title",
+        "github_text"
+      ]
+    },
+    "github_title": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "github_text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues in 24h."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_title",
+        "hn_1",
+        "hn_2",
+        "hn_3",
+        "hn_4",
+        "hn_5"
+      ]
+    },
+    "hn_title": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "EU Parliament greenlights Chat Control 1.0",
+        "href": "https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/",
+        "source": "1338 pts · client-side scanning back on the EU legislative table"
+      }
+    },
+    "hn_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "John Deere R2R FTC settlement",
+        "href": "https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02",
+        "source": "1319 pts · hardware-sovereignty win (day-2, HN cross-post from 7-09)"
+      }
+    },
+    "hn_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GPT-5.6",
+        "href": "https://openai.com/index/gpt-5-6/",
+        "source": "1235 pts · frontier drop"
+      }
+    },
+    "hn_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Postgres rewritten in Rust — 100% regression tests pass",
+        "href": "https://github.com/malisper/pgrust",
+        "source": "630 pts"
+      }
+    },
+    "hn_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Muse Spark 1.1",
+        "href": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+        "source": "371 pts · Meta model API"
+      }
+    }
+  }
+}
