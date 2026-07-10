@@ -1,0 +1,393 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap",
+        "description": "2026-07-10"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tl-dr-text",
+        "sep-1",
+        "headlines-section",
+        "sep-2",
+        "notable-section",
+        "sep-3",
+        "decisions-section",
+        "sep-4",
+        "blockers-section",
+        "sep-5",
+        "footer-text"
+      ]
+    },
+    "tl-dr-text": {
+      "type": "Text",
+      "props": {
+        "text": "Triple-alert watchlist day — REPPO dual-rail and GITLAWB reclaim both fired, but security-digest notify never left the sandbox",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "headlines-stack"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headlines-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-1-group",
+        "headline-2-group",
+        "headline-3-group",
+        "headline-4-group"
+      ]
+    },
+    "headline-1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-1-text",
+        "headline-1-link"
+      ]
+    },
+    "headline-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert — 3 triggers: REPPO +30% / vol 4.73× (dual-rail, first since 7-01) + GITLAWB +34% reclaim of 7-08 cap",
+        "variant": "body"
+      }
+    },
+    "headline-1-link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/token-alert/msg.md",
+        "href": ".tmp/token-alert/msg.md"
+      }
+    },
+    "headline-2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-2-alert",
+        "headline-2-link-with-hash"
+      ]
+    },
+    "headline-2-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "security-digest",
+        "message": "npm brand-jack day-3: 51 fresh pkgs, @redhat-cloud-services 14 cred-stealers; notify BLOCKED sandbox gate",
+        "type": "warning"
+      }
+    },
+    "headline-2-link-with-hash": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-2-link",
+        "headline-2-hash"
+      ]
+    },
+    "headline-2-link": {
+      "type": "Link",
+      "props": {
+        "label": ".tmp/security-digest/msg.md",
+        "href": ".tmp/security-digest/msg.md"
+      }
+    },
+    "headline-2-hash": {
+      "type": "Text",
+      "props": {
+        "text": "(hash 8793aa39)",
+        "variant": "caption"
+      }
+    },
+    "headline-3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-3-text",
+        "headline-3-link"
+      ]
+    },
+    "headline-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine — 72/100 green; DEXE MAJOR BREAKOUT rank #47; CASHCAT PUMP-RISK 5th trending day; NEX -37% unwind validates tag",
+        "variant": "body"
+      }
+    },
+    "headline-3-link": {
+      "type": "Link",
+      "props": {
+        "label": ".outputs/daily-routine.md",
+        "href": ".outputs/daily-routine.md"
+      }
+    },
+    "headline-4-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-4-text",
+        "headline-4-link"
+      ]
+    },
+    "headline-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY 64L→66L; BTC arc BROKEN→RE-ARMED; market-context.md What-Changed 19 bullets",
+        "variant": "body"
+      }
+    },
+    "headline-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/MEMORY.md",
+        "href": "memory/MEMORY.md"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-stack"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels ×6 — spot ranged $62.9k→$64.1k; all levels clear; reclaim63500Alerted=true holds; $65.9k next",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief — 3 focus items: ISS-025 PR T-3, SLX day-16 -63%, BTC gate re-cross",
+        "variant": "body"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest — PUMP Sat 7-12 unlock cliff: 22.2% mcap ($142.7M) single-day float",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz — MCP-becomes-infra: WebMCP-in-Chrome + Axon terminal + 10MB solana shell 31-tools",
+        "variant": "body"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — day-18; classification 9-day streak unchanged; NOTIFY fired; 11 open issues",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decisions-stack"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-1",
+        "decision-2",
+        "decision-3"
+      ]
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "send security-digest: ./notify -f .tmp/security-digest/msg.md (hash 8793aa39)",
+        "variant": "body"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step PR: self-improve 7-11 18:00Z next routing test; weekly-review 7-13 T-3",
+        "variant": "body"
+      }
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "SLX recut: day-16 CATASTROPHIC -63% vs $0.4753 entry; operator call due by 7-13",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-heading",
+        "blockers-stack"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blockers-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker-1",
+        "blocker-2"
+      ]
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "github-trending",
+        "message": "09:00Z slot d2 dark; 7-11 is d3 verify · last_dispatch 2026-07-08T09:02Z",
+        "type": "error"
+      }
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "title": "12:00Z batch (8 skills)",
+        "message": "dark day-13; last_success 2026-06-28 (ISS-027)",
+        "type": "error"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+7 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
