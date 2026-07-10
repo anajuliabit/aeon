@@ -1,0 +1,115 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert — 2026-07-10"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "reppo-section",
+        "separator-1",
+        "gitlawb-section"
+      ]
+    },
+    "reppo-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reppo-badge",
+        "reppo-stat",
+        "reppo-volume",
+        "reppo-trigger"
+      ]
+    },
+    "reppo-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "REPPO",
+        "variant": "default"
+      }
+    },
+    "reppo-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.03233",
+        "delta": "+30.04%",
+        "trend": "up"
+      }
+    },
+    "reppo-volume": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: $762K (4.73× 5d average)"
+      }
+    },
+    "reppo-trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger: breakout past $0.025 give-back handle to $0.032 print + participation caught up. rail-cleared on both change AND volume the same tick.",
+        "variant": "caption"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "gitlawb-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "gitlawb-badge",
+        "gitlawb-stat",
+        "gitlawb-volume",
+        "gitlawb-trigger"
+      ]
+    },
+    "gitlawb-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "GITLAWB",
+        "variant": "default"
+      }
+    },
+    "gitlawb-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.0000585",
+        "delta": "+34.42%",
+        "trend": "up"
+      }
+    },
+    "gitlawb-volume": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: $935K (1.86× 5d average)"
+      }
+    },
+    "gitlawb-trigger": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger: full reclaim of the pump-window handle after 7-08 capitulation -23%; watchlist-wide risk-off snaps day-2 with the sharpest reversal of the four.",
+        "variant": "caption"
+      }
+    }
+  }
+}
