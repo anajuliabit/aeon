@@ -1,7 +1,7 @@
 {
-  "hash": "ad92b55a1087ce1a6169fe9ddb47c3a0101b97a3d450cb7dda55706e52340612",
-  "last_notified_at": "2026-07-09T18:34:00Z",
-  "last_run_at": "2026-07-09T18:34:00Z",
+  "hash": "40dd9dc2fd55e707d62150c0e368548367320bfddaab3763f83068a2788ea03c",
+  "last_notified_at": "2026-07-10T19:37:34Z",
+  "last_run_at": "2026-07-10T19:37:34Z",
   "classification": {
     "critical": [],
     "degraded": ["action-converter", "agent-buzz", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "github-trending", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "thought-review", "vuln-scanner"],
@@ -10,7 +10,7 @@
     "healthy_count": 8,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "output_tokens=0 sandbox-truncation day-17 — 21 DEGRADED share signature (ISS-019/020/021/025 cluster). Classification byte-identical to 2026-07-08T18:20Z run: same 21 DEGRADED, 11 WARNING, 8 HEALTHY, 3 NO DATA. Hash ad92b55a vs prev 6f808f12 — only day-N counter flipped (15→17). Notify gate: prev_notify 2026-07-08T18:20:00Z, ~24h14m elapsed > 24h cadence AND hash differs → NOTIFY fired. Issues: 0 CRITICAL/FLAPPING → 0 filings; ISS-018 vuln-scanner DEGRADED, ISS-019 defi-overview WARNING, ISS-020 token-pick WARNING, ISS-021 search-skill DEGRADED, ISS-025 cost-report DEGRADED — none HEALTHY → 0 resolutions. Open issues count unchanged at 11. 12:00 UTC batch dark day-12 (batch skills token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh + narrative-tracker/aixbt-pulse still show last_success 6-28 = ~11d stale). ISS-025 capture-step PR (`.github/workflows/aeon.yml` chain-runner) day-17 unshipped; weekly-review 2026-07-13 deadline T-4. aixbt-pulse dead-slot day-11.",
+  "systemic": "output_tokens=0 sandbox-truncation day-18 — 21 DEGRADED share signature (ISS-019/020/021/025 cluster). Classification byte-identical to 2026-07-09T18:34:00Z run: same 21 DEGRADED, 11 WARNING, 8 HEALTHY, 3 NO DATA. Hash 40dd9dc2 vs prev ad92b55a — only day-N counter flipped (17→18). Notify gate: prev_notify 2026-07-09T18:34:00Z, ~25h03m elapsed > 24h cadence AND hash differs → NOTIFY fired. Issues: 0 CRITICAL/FLAPPING → 0 filings; ISS-018 vuln-scanner DEGRADED, ISS-019 defi-overview WARNING, ISS-020 token-pick WARNING, ISS-021 search-skill DEGRADED, ISS-025 cost-report DEGRADED — none HEALTHY → 0 resolutions. Open issues count unchanged at 11. 12:00 UTC batch dark day-13: 8 batch skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) still show last_success 6-28. Positive delta today: token-alert 12:00Z + btc-levels 12:15Z slots CAUGHT UP at 13:31Z (~76-91min late) — 12:00Z-adjacent batch-dark scope contracts, token-alert d1→OK. Fresh scheduler miss: github-trending 09:00Z slot d2 confirmed. ISS-025 capture-step PR (`.github/workflows/aeon.yml` chain-runner) day-18 unshipped; weekly-review 2026-07-13 deadline T-3. aixbt-pulse dead-slot day-12. skill-runs fallback unavailable this run (bash approval gate) — classification cron-state-only, log SKILL_HEALTH_PARTIAL.",
   "open_issues": 11,
   "resolved_this_run": 0,
   "filed_this_run": 0

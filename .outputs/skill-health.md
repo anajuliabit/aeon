@@ -1,17 +1,15 @@
-*Skill Health — 2026-07-09*
-HEALTH: DEGRADED(21) [systemic: output_tokens=0 sandbox-truncation day-17 — 21 skills, ISS-019/020/021/025 cluster]
+*Skill Health — 2026-07-10*
+HEALTH: DEGRADED(21)  [systemic: output_tokens=0 sandbox-truncation day-18 — 21 skills, ISS-019/020/021/025]
 
-🟡 DEGRADED / FLAPPING (21)
-- market-context-refresh — sr 32% · last_success 6-28 (11d) — WAIT-INFRA (batch-dark)
-- narrative-tracker — sr 33% · last_success 6-28 (11d) — WAIT-INFRA (batch-dark)
-- aixbt-pulse — sr 47% · last_success 6-28 (11d) — WAIT-INFRA (dead-slot d11)
-- cost-report — sr 11% · last_success 6-29 (10d) — WAIT-INFRA → ISS-025
-- vuln-scanner — sr 13% · last_success 7-04 (5d) — WAIT-INFRA → ISS-018
-- +16 more — see memory/issues/INDEX.md
+🟡 DEGRADED
+- cost-report — 11% sr — WAIT-API → ISS-025
+- vuln-scanner — 13% sr — WAIT-API → ISS-018
+- reg-monitor — 14% sr — WAIT-API
+- skill-analytics — 14% sr — WAIT-API
+- security-digest — 31% sr — WAIT-API
++16 more — see memory/issues/INDEX.md
 
-⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard
-🟢 HEALTHY: 8
+⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL
+🟢 HEALTHY: 8 · WARNING: 11
 
-Classification byte-identical to 7-08 18:20Z (day-15→17 counter only). 12:00Z batch dark d12, aixbt-pulse d11, ISS-025 capture-step PR d17. Weekly-review 2026-07-13 T-4.
-
-Open issues: 11 · Filed: 0 · Resolved: 0
+Open issues: 11 · Resolved this run: 0 · Filed: 0

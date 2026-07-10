@@ -1,0 +1,253 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-10"
+      },
+      "children": [
+        "status_badge",
+        "systemic_alert",
+        "separator1",
+        "degraded_section",
+        "no_data_section",
+        "separator2",
+        "summary_section",
+        "issues_section"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEGRADED",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "systemic_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Systemic Issue",
+        "message": "output_tokens=0 sandbox-truncation day-18 — 21 skills affected by ISS-019/020/021/025"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "degraded_table",
+        "degraded_more"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Degraded Skills",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "degraded_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate",
+          "Status"
+        ],
+        "rows": [
+          [
+            "cost-report",
+            "11%",
+            "WAIT-API → ISS-025"
+          ],
+          [
+            "vuln-scanner",
+            "13%",
+            "WAIT-API → ISS-018"
+          ],
+          [
+            "reg-monitor",
+            "14%",
+            "WAIT-API"
+          ],
+          [
+            "skill-analytics",
+            "14%",
+            "WAIT-API"
+          ],
+          [
+            "security-digest",
+            "31%",
+            "WAIT-API"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "degraded_more": {
+      "type": "Text",
+      "props": {
+        "text": "+16 more — see memory/issues/INDEX.md",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "no_data_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "no_data_content"
+      ]
+    },
+    "no_data_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no_data_heading",
+        "no_data_text"
+      ]
+    },
+    "no_data_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "No Data (3)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "no_data_text": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_heading",
+        "summary_stats"
+      ]
+    },
+    "summary_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "summary_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_healthy",
+        "stat_warning"
+      ]
+    },
+    "stat_healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy",
+        "value": "8"
+      },
+      "children": []
+    },
+    "stat_warning": {
+      "type": "Stat",
+      "props": {
+        "label": "Warning",
+        "value": "11"
+      },
+      "children": []
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues_heading",
+        "issues_grid"
+      ]
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "issues_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "issue_stat1",
+        "issue_stat2",
+        "issue_stat3"
+      ]
+    },
+    "issue_stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Open",
+        "value": "11"
+      },
+      "children": []
+    },
+    "issue_stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      },
+      "children": []
+    },
+    "issue_stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed",
+        "value": "0"
+      },
+      "children": []
+    }
+  }
+}
