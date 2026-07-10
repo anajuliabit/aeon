@@ -1,0 +1,130 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "quiet MCP-infra day. chrome, terminal, and solana all shipped MCP surfaces; side thread on model fit and framework choice."
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section1",
+        "separator",
+        "section2",
+        "footer"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "tweet1",
+        "tweet2",
+        "tweet3"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP quietly becomes infra",
+        "level": "h2"
+      }
+    },
+    "tweet1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "webmcp in chrome lets sites expose in-browser tools to agents directly. no DOM scraping.",
+        "href": "https://x.com/csanchez/status/2075282752262303986",
+        "source": "@csanchez"
+      }
+    },
+    "tweet2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "terminal agents shipping secure-by-default MCP support; axon MCP server layered on top.",
+        "href": "https://x.com/Seierk1/status/2075131384528568432",
+        "source": "@Seierk1"
+      }
+    },
+    "tweet3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "10MB solana shell ships 31 MCP tools. local agent tooling shrinking, not bloating.",
+        "href": "https://x.com/clawddevs/status/2075368213756457154",
+        "source": "@clawddevs"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading2",
+        "tweet4",
+        "tweet5",
+        "tweet6"
+      ]
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Fit beats size",
+        "level": "h2"
+      }
+    },
+    "tweet4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "4B local model beats 7B on agent workflows when host + tools + model align. params aren't the axis.",
+        "href": "https://x.com/AgenticAIFdn/status/2075339309192741234",
+        "source": "@AgenticAIFdn"
+      }
+    },
+    "tweet5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fixed problems: make/n8n. fluid systems: crewAI/langGraph + shared memory.",
+        "href": "https://x.com/ifioknkem/status/2075259860472451520",
+        "source": "@ifioknkem"
+      }
+    },
+    "tweet6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "agentlens: coding-agent eval via formal verification + LLM-written trajectory reviews.",
+        "href": "https://x.com/AINativeF/status/2075368417151144096",
+        "source": "@AINativeF"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 11 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

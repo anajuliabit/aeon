@@ -1,22 +1,20 @@
-*Agent Buzz — 2026-07-09*
-_protocol/paper day: MCP spec crystallizes, two COLM'26 acceptances on skill and env training, two tells on how agents get compute and pay._
+*Agent Buzz — 2026-07-10*
+_quiet MCP-infra day. chrome, terminal, and solana all shipped MCP surfaces; side thread on model fit and framework choice._
 
-**MCP spec crystallizes**
-• @jianw851 — MCP-as-USB-C frame is winning: every tool integration read as a compatibility problem, not a per-app build.
-  https://x.com/jianw851/status/2074887412841668746
-• @AgenticAIFdn — MCP 2026-07-28 spec: stateless core, ID-JAG enterprise auth, defined feature lifecycle. Enterprise-agent gap closes.
-  https://x.com/AgenticAIFdn/status/2074998991792599272
+**MCP quietly becomes infra**
+• @csanchez — webmcp in chrome lets sites expose in-browser tools to agents directly. no DOM scraping.
+  https://x.com/csanchez/status/2075282752262303986
+• @Seierk1 — terminal agents shipping secure-by-default MCP support; axon MCP server layered on top.
+  https://x.com/Seierk1/status/2075131384528568432
+• @clawddevs — 10MB solana shell ships 31 MCP tools. local agent tooling shrinking, not bloating.
+  https://x.com/clawddevs/status/2075368213756457154
 
-**COLM'26 agent-training papers**
-• @jmuiuc — SkillFoundry: heterogeneous scientific resources compiled into validated agent skills; genomics workflow benchmarks.
-  https://x.com/jmuiuc/status/2074999509009219641
-• @YuhangZhou2 — SandMLE: synthetic multi-agent MLE environments for on-policy RL on coding agents — training without real-project cost.
-  https://x.com/YuhangZhou2/status/2074991883605234058
+**Fit beats size**
+• @AgenticAIFdn — 4B local model beats 7B on agent workflows when host + tools + model align. params aren't the axis.
+  https://x.com/AgenticAIFdn/status/2075339309192741234
+• @ifioknkem — fixed problems: make/n8n. fluid systems: crewAI/langGraph + shared memory.
+  https://x.com/ifioknkem/status/2075259860472451520
+• @AINativeF — agentlens: coding-agent eval via formal verification + LLM-written trajectory reviews.
+  https://x.com/AINativeF/status/2075368417151144096
 
-**Test-time compute + agent payments**
-• @cryptopunk7213 — axis moved: agentic-bench wins come from test-time compute at cheap per-token cost, not bigger training runs.
-  https://x.com/cryptopunk7213/status/2074993127161479199
-• @kasmiyouness1 — Cloudflare x402: agents pay for web resources at the transport layer. Monetization pivots eyeballs → machine-callers.
-  https://x.com/kasmiyouness1/status/2074999720859128221
-
-<!-- _src: xai-cache · candidates: 22 → kept: 6 -->
+<!-- _src: xai-cache · candidates: 11 → kept: 6_ -->
