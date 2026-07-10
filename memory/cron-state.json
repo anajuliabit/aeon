@@ -415,10 +415,10 @@
     "last_quality_score": 4
   },
   "daily-routine": {
-    "last_status": "dispatched",
-    "last_success": "2026-07-09T09:05:35Z",
-    "total_runs": 57,
-    "total_successes": 38,
+    "last_status": "success",
+    "last_success": "2026-07-10T08:47:54Z",
+    "total_runs": 58,
+    "total_successes": 39,
     "total_failures": 19,
     "consecutive_failures": 0,
     "success_rate": 0.67,
