@@ -1,14 +1,15 @@
 ## Summary
 
-**BTC Levels — 2026-07-09 20:28Z**
+**btc-levels run complete — no alerts fired.**
 
-- **Spot**: $63,241.33 (+$565 from prior 16:47Z run)
-- **Previous daily close**: $62,248.93 (2026-07-08)
+**Price data (2026-07-10 ~01:08Z):**
+- Spot: **$62,959.61**
+- July 9 daily close: **$63,220.69** (recovered from July 8's $62,248.93)
 
-**Level evaluation — no alerts fired:**
-- Leverage trigger (≤$45k): clear
-- Breakdown (close <$60,500): clear — close $62,248 > $60,500
-- Reclaim $63,500: armed (`reclaim63500Alerted=true`); spot $63,241 is $258 below the gate, not yet crossed; re-arm requires spot < $60,500
-- Reclaim $65,900: unarmed, spot well below
+**Level checks:**
+- Leverage-review (≤$45k): clear
+- Breakdown (close < $60,500): clear — July 9 close came in well above the floor
+- Reclaim $63,500: spot $62,959.61 still below gate; flag already set from prior run, no re-arm (spot > $60,500)
+- Reclaim $65,900: spot below gate
 
-No notification sent. State and log committed.
+The July 9 close at $63,220.69 partially reverses the July 8 breakdown ($62,248.93), but spot hasn't reclaimed $63,500 yet. No notification sent. State and log committed.
