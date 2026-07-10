@@ -1,0 +1,251 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-10"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "intro-text",
+        "sep1",
+        "defi-section",
+        "sep2",
+        "footer-stack"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "$PUMP's Sat 7-12 unlock cliff is the story: 22.2% of mcap ($142.7M) hits the float in a single day, tokenomics-alignment lens dominates.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "defi-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "list-heading",
+        "tweet1-group",
+        "tweet2-group",
+        "tweet3-group",
+        "tweet4-group",
+        "tweet5-group"
+      ]
+    },
+    "list-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Research List",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "$PUMP prints $72M monthly fees but the market's pricing the Sat 7-12 cliff (22.2% of mcap in one day). Daily holder rev $437K vs daily unlock pressure $722K until the gap narrows.",
+        "likes": 73,
+        "retweets": 10
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2075293946893467947"
+      },
+      "children": []
+    },
+    "tweet2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround_",
+        "handle": "Louround_",
+        "text": "Companion critique to the $PUMP frame. $70M rev over 2yrs isn't tokenomics if the token doesn't capture it. Names lock-for-buyback + lend-for-packs as the missing utility layer.",
+        "likes": 16,
+        "retweets": 1
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Louround_/status/2075293966770360421"
+      },
+      "children": []
+    },
+    "tweet3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "QT of x.com/1x_tech NEO robot-hands demo with a reflex-meme dismissal. Tokenomics guy defaults to humor over analysis; the humanoid demo crossed the crypto-silo membrane.",
+        "likes": 21,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2075350893021769823"
+      },
+      "children": []
+    },
+    "tweet4-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "link4"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "Bearish thesis on continued open-weight releases. Post-training hits a ceiling; new weights need compute; decentralized-training coordination becomes urgent well before the wall lands.",
+        "likes": 18,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2075338985673502953"
+      },
+      "children": []
+    },
+    "tweet5-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5",
+        "link5"
+      ]
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "Frontier-model dependence is a one-way ratchet. Once complex workflows collapse to prompts, paying for access starts to look cheap. Moat mechanism, not marketing.",
+        "likes": 15,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link5": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2075349939035545696"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-text",
+        "status-text"
+      ]
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(5)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

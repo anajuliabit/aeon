@@ -1,11 +1,14 @@
-*List Digest — 2026-07-09*
+*List Digest — 2026-07-10*
 
-Only 5 protocols net-positive after emissions per x.com/Flowslikeosmo — GMX 6.6×, LINK 1.9×, PUMP 1.6×, CAKE 1.4×, AERO 1.2×.
+$PUMP's Sat 7-12 unlock cliff is the story: 22.2% of mcap ($142.7M) hits the float in a single day, tokenomics-alignment lens dominates.
 
 *DeFi Research List*
-- x.com/Flowslikeosmo — net-token-value-flow after dilution: only 5 protocols net-positive past month (GMX 6.6× / LINK 1.9× / PUMP 1.6× / CAKE 1.4× / AERO 1.2×); XRP worst outlier at -35,542× on the tail. NTVF > fees/rev is the frame. (♥ 32, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2074960722480820257)
-- x.com/DeFiMinty — Grok 4.5 hands-on: Gemma-on-Cerebras-level latency; Grok > GPT > Claude on speed. Inference-speed lead decoupling from the ASIC-chip race (cf. OAI Jalapeño 7-07). (♥ 20, ↻ 0) — [View](https://x.com/DeFiMinty/status/2074958336953290887)
+- x.com/Flowslikeosmo — $PUMP prints $72M monthly fees but the market's pricing the Sat 7-12 cliff (22.2% of mcap in one day). Daily holder rev $437K vs daily unlock pressure $722K until the gap narrows. (♥ 73, ↻ 10) — [View](https://x.com/Flowslikeosmo/status/2075293946893467947)
+- x.com/Louround_ — Companion critique to the $PUMP frame. $70M rev over 2yrs isn't tokenomics if the token doesn't capture it. Names lock-for-buyback + lend-for-packs as the missing utility layer. (♥ 16, ↻ 1) — [View](https://x.com/Louround_/status/2075293966770360421)
+- x.com/hooeem — QT of x.com/1x_tech NEO robot-hands demo with a reflex-meme dismissal. Tokenomics guy defaults to humor over analysis; the humanoid demo crossed the crypto-silo membrane. (♥ 21, ↻ 0) — [View](https://x.com/hooeem/status/2075350893021769823)
+- x.com/DeFiMinty — Bearish thesis on continued open-weight releases. Post-training hits a ceiling; new weights need compute; decentralized-training coordination becomes urgent well before the wall lands. (♥ 18, ↻ 0) — [View](https://x.com/DeFiMinty/status/2075338985673502953)
+- x.com/hooeem — Frontier-model dependence is a one-way ratchet. Once complex workflows collapse to prompts, paying for access starts to look cheap. Moat mechanism, not marketing. (♥ 15, ↻ 0) — [View](https://x.com/hooeem/status/2075349939035545696)
 
 ---
-sources: 1642770456720683008=ok(6)
+sources: 1642770456720683008=ok(5)
 status: LIST_DIGEST_OK
