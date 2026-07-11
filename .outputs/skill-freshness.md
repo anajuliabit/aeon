@@ -1,20 +1,12 @@
-Done. Here's the run summary:
-
 ## Summary
 
-**skill-freshness — 2026-07-10 | ✅ FRESHNESS_OK | FRESHNESS_NO_CHANGE**
+Ran `skill-freshness` for 2026-07-11. Results:
 
-- Audited 43 enabled skills, 5 cross-skill dependencies tracked (no active chains)
-- All 5 dependencies scored **OK** — on-disk mtimes reflect today's `git checkout` (~08:38 UTC), so all files read as <1m old
-- Flagged fingerprint (`da39a3ee`) unchanged from yesterday's run (2026-07-09); notification suppressed per dedup rule — re-emits after 7-day window
+**Verdict: ✅ FRESHNESS_OK → FRESHNESS_NO_CHANGE (notification suppressed)**
 
-**Tracked dependencies (all OK):**
-| Consumer | Dependency | Producer cadence | Severity |
-|---|---|---|---|
-| token-pick | `memory/topics/market-context.md` | daily | ✅ OK |
-| vuln-scanner | `.outputs/github-trending.md` | daily | ✅ OK |
-| fork-skill-gap | `memory/topics/fork-cohort-state.json` | weekly | ✅ OK |
-| operator-scorecard | `articles/skill-analytics-2026-07-08.md` | weekly | ✅ OK |
-| operator-scorecard | `articles/project-lens-2026-06-22.md` | on_demand | ✅ OK |
+- Audited 43 enabled skills, found 5 cross-skill dependencies, 0 flagged
+- All 5 deps pass: `market-context.md` (token-pick), `.outputs/github-trending.md` (vuln-scanner), `fork-cohort-state.json` (fork-skill-gap), `skill-analytics-2026-07-08.md` (operator-scorecard), `project-lens-2026-06-22.md` (operator-scorecard/on_demand)
+- Fingerprint identical to 2026-07-10 (`da39a3ee`) — no notify per dedup rule; re-emits on 2026-07-17 if still unchanged
+- **Key caveat documented**: github-trending is dark d3 (~71h real staleness on `.outputs/github-trending.md`) and the 8-skill batch-dark cluster (d13) are both masked by checkout mtime reset — both are already tracked by skill-health/heartbeat under ISS-025/ISS-027
 
-**Files written:** `articles/skill-freshness-2026-07-10.md`, `memory/topics/skill-freshness-state.json`, `memory/logs/2026-07-10.md` (appended).
+**Files written:** `articles/skill-freshness-2026-07-11.md`, `memory/topics/skill-freshness-state.json`, `memory/logs/2026-07-11.md`
