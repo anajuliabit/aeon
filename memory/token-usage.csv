@@ -708,3 +708,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-10,evening-recap,claude-sonnet-4-6,11,12937,725632,84746
 2026-07-11,daily-routine,claude-opus-4-7,72,35529,4983457,94000
 2026-07-11,github-trending,claude-opus-4-7,2223,33224,2795950,103668
+2026-07-11,btc-levels,claude-sonnet-4-6,11,5153,432023,41735
