@@ -1,0 +1,350 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-11"
+      },
+      "children": [
+        "alert-main",
+        "sep-1",
+        "section-degraded",
+        "sep-2",
+        "section-nodata",
+        "sep-3",
+        "section-healthy",
+        "sep-4",
+        "section-deltas",
+        "sep-5",
+        "section-iss025",
+        "sep-6",
+        "section-summary"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "HEALTH: DEGRADED(21)",
+        "message": "21 skills affected — systemic: output_tokens=0 sandbox-truncation day-19"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-degraded": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-degraded",
+        "skill-cost-report",
+        "skill-vuln-scanner",
+        "skill-analytics",
+        "skill-reg-monitor",
+        "skill-more-17"
+      ]
+    },
+    "heading-degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED / FLAPPING (21)",
+        "level": "h3"
+      }
+    },
+    "skill-cost-report": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report — sr=0.11 (7d), last_success 6-29 — WAIT-API (sandbox-truncation) → ISS-025",
+        "variant": "body"
+      }
+    },
+    "skill-vuln-scanner": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner — sr=0.16, last_success 7-11 16:26Z — WAIT-API (sandbox-truncation) → ISS-018",
+        "variant": "body"
+      }
+    },
+    "skill-analytics": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics — sr=0.14, last_success 7-08 — WAIT-API (sandbox-truncation)",
+        "variant": "body"
+      }
+    },
+    "skill-reg-monitor": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — sr=0.14, last_success 7-08 — WAIT-API (sandbox-truncation)",
+        "variant": "body"
+      }
+    },
+    "skill-more-17": {
+      "type": "Text",
+      "props": {
+        "text": "+17 more (search-skill/security-digest/list-digest/agent-buzz/etc. — see memory/issues/INDEX.md)",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-nodata",
+        "nodata-list"
+      ]
+    },
+    "heading-nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "nodata-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nodata-1",
+        "nodata-2",
+        "nodata-3",
+        "nodata-reason"
+      ]
+    },
+    "nodata-1": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch",
+        "variant": "body"
+      }
+    },
+    "nodata-2": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "body"
+      }
+    },
+    "nodata-3": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "body"
+      }
+    },
+    "nodata-reason": {
+      "type": "Text",
+      "props": {
+        "text": "Reason: DISPATCH-SKILL",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-healthy": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-healthy",
+        "stat-healthy"
+      ]
+    },
+    "heading-healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "value": "8"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-deltas": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-deltas",
+        "delta-1",
+        "delta-2",
+        "delta-3",
+        "delta-4",
+        "delta-5"
+      ]
+    },
+    "heading-deltas": {
+      "type": "Heading",
+      "props": {
+        "text": "Deltas since 7-10 19:37Z",
+        "level": "h3"
+      }
+    },
+    "delta-1": {
+      "type": "Text",
+      "props": {
+        "text": "09:00Z github-trending caught up 09:47Z — ends d3-dark test window as caught-up, no codification.",
+        "variant": "body"
+      }
+    },
+    "delta-2": {
+      "type": "Text",
+      "props": {
+        "text": "12:00Z token-alert + 12:15Z btc-levels caught up 12:39Z under operator invocation. 0 alerts.",
+        "variant": "body"
+      }
+    },
+    "delta-3": {
+      "type": "Text",
+      "props": {
+        "text": "12:00Z 8-skill batch cluster still dark d14 (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse, last_success 6-28).",
+        "variant": "body"
+      }
+    },
+    "delta-4": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse dead-slot d13 — 09:00Z tick missed, 6 consecutive twice-daily misses since 7-08.",
+        "variant": "body"
+      }
+    },
+    "delta-5": {
+      "type": "Text",
+      "props": {
+        "text": "Classification signature byte-identical to 7-10 19:37Z (10-day streak). Hash day-N flip 40dd9dc2→12f8bbcf.",
+        "variant": "body"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-iss025": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-iss025",
+        "iss-detail-1",
+        "iss-detail-2",
+        "iss-detail-3"
+      ]
+    },
+    "heading-iss025": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-025 Status",
+        "level": "h3"
+      }
+    },
+    "iss-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "capture-step PR against `.github/workflows/aeon.yml` chain-runner day-19 unshipped.",
+        "variant": "body"
+      }
+    },
+    "iss-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review 2026-07-13 T-2.",
+        "variant": "body"
+      }
+    },
+    "iss-detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve 18:00Z tick tonight is the last rule-5 routing-hypothesis test window before the T-2 gate.",
+        "variant": "body"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-summary",
+        "stat-open-issues",
+        "stat-resolved",
+        "stat-filed"
+      ]
+    },
+    "heading-summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "11"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed this run",
+        "value": "0"
+      }
+    }
+  }
+}
