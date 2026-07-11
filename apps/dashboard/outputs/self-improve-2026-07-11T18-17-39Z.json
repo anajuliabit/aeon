@@ -1,0 +1,36 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "main",
+        "resolution",
+        "pr"
+      ]
+    },
+    "main": {
+      "type": "Text",
+      "props": {
+        "text": "Tightened daily-routine XAI fallback rules to cover quota-exhausted / sandbox env-strip / API-error paths (was only handling 'key unset')."
+      }
+    },
+    "resolution": {
+      "type": "Text",
+      "props": {
+        "text": "26-day working-practice-gap-vs-skill-file resolved."
+      }
+    },
+    "pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR: https://github.com/anajuliabit/aeon/pull/162",
+        "href": "https://github.com/anajuliabit/aeon/pull/162"
+      }
+    }
+  }
+}

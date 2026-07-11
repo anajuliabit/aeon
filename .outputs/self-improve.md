@@ -1,1 +1,1 @@
-self-improve: reduce search-skill daily→weekly (Mon 14:00Z) after 15-day NO_GAP streak — PR: https://github.com/anajuliabit/aeon/pull/161
+self-improve: tightened daily-routine XAI fallback rules to cover quota-exhausted / sandbox env-strip / API-error paths (was only handling 'key unset'). 26-day working-practice-gap-vs-skill-file resolved. PR: https://github.com/anajuliabit/aeon/pull/162
