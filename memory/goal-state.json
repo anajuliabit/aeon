@@ -1,41 +1,41 @@
 {
-  "run_at": "2026-07-10T18:38:00Z",
+  "run_at": "2026-07-11T18:14:20Z",
   "goals": {
     "sandbox-truncation-systemic": {
       "status": "ON_TRACK",
-      "activity_count_14d": 359,
-      "last_activity_date": "2026-07-10",
-      "note": "Day-18 per heartbeat 08:39Z + 15:59Z + morning-brief 07:00Z. ISS-025 chain-runner capture-step PR against `.github/workflows/aeon.yml` still un-authored (self-improve rule 5 workflow-file structural block from 7-07 18:32Z routing test persists). Weekly-review 2026-07-13 deadline T-3. PR #161 merged 7-09 22:02Z (search-skill daily→weekly cron fix) landed as parallel-path #2 mitigation but does NOT fix the capture-step. Activity 353→359 = +1.7% flat. Self-improve OFF today (every-other-day cron `0 18 1/2 * *` fired 7-09 = odd; 7-10 = even = no); next self-improve routing-hypothesis window = 7-11 18:00Z. Seventh consecutive day of ON_TRACK-mechanical / progress-unshipped divergence — heavy log volume from heartbeat + skill-freshness + morning-brief + reflect all logging the day-N counter, but unblocking PR still stalled behind rule-5 block."
+      "activity_count_14d": 394,
+      "last_activity_date": "2026-07-11",
+      "note": "Day-19 today per heartbeat 08:09Z + 14:11Z + morning-brief 07:00Z. ISS-025 chain-runner capture-step PR against `.github/workflows/aeon.yml` still un-authored — self-improve rule 5 workflow-file structural block persists from 7-07 routing test. Weekly-review 2026-07-13 deadline T-2. 18:00Z self-improve tick tonight is next routing-hypothesis test window (every-other-day cron: 7-09 odd fired = 7-11 odd fires today). Activity 359→394 = +9.7% flat. Eighth consecutive day of ON_TRACK-mechanical / progress-unshipped divergence — heavy log volume from heartbeat + skill-freshness + morning-brief + reflect all logging the day-N counter, but unblocking PR still stalled behind rule-5 block. Mechanical status ON_TRACK per goal-tracker rules (activity ≥ 2, days_since ≤ 7); outcome-status is stalled."
     },
     "12-00-utc-batch-first-live-test-7-03": {
       "status": "ON_TRACK",
-      "activity_count_14d": 369,
-      "last_activity_date": "2026-07-10",
-      "note": "Day-13 per heartbeat + morning-brief. **Fresh positive delta today:** token-alert 12:00Z + btc-levels 12:15Z slots CAUGHT UP at 13:31Z (~76-91min late); token-alert fired 3 alerts (REPPO dual-rail +30% + vol 4.73×, GITLAWB +34% reclaim of 7-08 capitulation) = watchlist-wide reclaim day-2. Token-alert is a daily-scheduled skill in the 12:00Z-adjacent batch — d1 dark from 7-09 partially reverses today. **But** the 8-skill batch-dark cluster (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) all still last_success 2026-06-28 = 12 days stale (well past 2× flag gate). **Scope broadening confirmed d2:** github-trending 09:00Z d2 miss confirmed via `gh run list` (zero runs between 08:38Z morning batch and 13:31Z catch-up window; last_dispatch holds at 2026-07-08T09:02Z). Root cause remains scheduler-side per-slot never-run, above per-skill config. Self-improve blocked by rule 5 on workflow-file class (ISS-025 same-primitive). Activity ~132→369 methodology-broadened flat by rule §4. ON_TRACK mechanical until full batch runs green."
+      "activity_count_14d": 170,
+      "last_activity_date": "2026-07-11",
+      "note": "Day-14 per heartbeat + morning-brief. token-alert 12:00Z + btc-levels 12:15Z slots CAUGHT UP at 12:39Z under operator invocation (token-alert 0/12 checks = TOKEN_ALERT_OK, btc-levels spot $64,101 no alerts). Confirms slot-level, not skill-level block. **But** the 8-skill batch-dark cluster (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) all still last_success 2026-06-28 = 13 days stale (well past 2× flag gate). aixbt-pulse dead-slot day-13 — 09:00Z tick missed today = 6 consecutive twice-daily misses since 7-08. Activity 369→170 = methodology narrower today (removed advisor/paper/hn overloaded terms), call flat. Root cause remains scheduler-side per-slot never-run, above per-skill config. Self-improve blocked by rule 5 on workflow-file class (ISS-025 same-primitive). ON_TRACK mechanical until full batch runs green."
     },
     "xai-quota-recovery": {
       "status": "BLOCKED",
-      "activity_count_14d": 149,
-      "last_activity_date": "2026-07-10",
-      "note": "Operator team-credit top-up day-25 since 2026-06-16 exhaustion. Daily-routine 2026-07-10 confirms XAI x_search sandbox-blocked + credit outage day-25 fallback branch (WebSearch used for tweet roundup instead). Prefetched `.xai-cache/` bridges agent-buzz (11966 bytes, 11 candidates) + list-digest (10479 bytes, 5 tweets) without hitting live x.ai. Full graceful degradation continues — no skill has failed on-tape because of XAI outage. Activity 205→149 = methodology diff (narrower today's keyword set) but no status shift; call flat. Blocker persists: operator top-up remains only unblock."
+      "activity_count_14d": 229,
+      "last_activity_date": "2026-07-11",
+      "note": "Operator team-credit top-up day-26 since 2026-06-16 exhaustion. Daily-routine 2026-07-11 08:14Z confirms XAI x_search skipped again + WebSearch fallback used for crypto/AI/dev tweet roundup. Prefetched `.xai-cache/` bridges list-digest (cache hit at `.xai-cache/list-digest-1642770456720683008.json`) + agent-buzz without hitting live x.ai. Full graceful degradation continues — no skill has failed on-tape because of XAI outage. Activity 149→229 = +54% but methodology broadened (added `virtuals` alias); call flat. Blocker persists: operator top-up remains only unblock."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 41,
-      "last_activity_date": "2026-07-10",
-      "note": "defi-monitor NO_CONFIG day-33 (was day-32 prior run). on-chain-watches.yml still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. Activity 162→41 = methodology narrower today; call flat. Status unchanged BLOCKED — operator config + API keys remain only unblock."
+      "activity_count_14d": 198,
+      "last_activity_date": "2026-07-11",
+      "note": "defi-monitor NO_CONFIG day-34 (was day-33 prior run). `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. Activity 41→198 = +383% methodology broadened (added defi-monitor + on-chain-watches aliases); call flat. Status unchanged BLOCKED — operator config + API keys remain only unblock."
     },
     "btc-bounce-day-5-above-60500-breakdown": {
       "status": "ON_TRACK",
-      "activity_count_14d": 298,
-      "last_activity_date": "2026-07-10",
-      "note": "MEMORY.md title unchanged per skill spec § step 7 (arc-BROKEN framing preserved; today's reality is arc-RECOVERING but rule §7 forbids rephrase). **Fresh positive delta:** 7-09 daily close $63,220.69 recovered above $60,500 floor ($62,248 → $63,221 = +$972 close-over-close). 7-10 spot 01:16Z $62,959 → 05:06Z $63,954 (first cross ABOVE $63,500 gate since 7-08 close broke arc) → 08:39Z $64,145 → 13:32Z $64,131 → 18:35Z $63,831. Reclaim arc RE-ARMED per daily-routine 08:47Z (`7-09 close crossed gate = arc re-armed`). reclaim63500Alerted=true holds (no re-arm since spot never dipped below $60,500 floor). $65,900 full-reclaim next trigger (~$2,068 above 18:35Z spot). Broad-tape green — daily-routine 72/100 top-100 green (up from 62% yesterday). Activity 297→298 = flat. Status ON_TRACK — completion requires $65.9k full-reclaim, not achieved. Not DONE."
+      "activity_count_14d": 389,
+      "last_activity_date": "2026-07-11",
+      "note": "MEMORY.md title unchanged per skill spec § step 7 (arc-RE-ARMED-day-1 framing preserved from 7-10 reflect; today is day-2). btc-levels 09:49Z spot $64,119 + 12:41Z $64,101 + 17:18Z $64,176 all above $63.5k gate; reclaim63500Alerted=true holds all day. $65,900 full-reclaim = next trigger (~$1,724 above 17:18Z spot). Broad-tape pulse fades from 7-10 72%/+1.1% relief to 69.6%/+0.02% mixed today (relief-bounce tail). Activity 298→389 = +30%, likely methodology drift (broader OR pattern); call flat. Status ON_TRACK — completion requires $65,900 full-reclaim + close-confirmation, not achieved. Not DONE."
     },
     "slx-open-pick-critical-thesis-broken-day-10": {
       "status": "ON_TRACK",
-      "activity_count_14d": 209,
-      "last_activity_date": "2026-07-10",
-      "note": "MEMORY.md title unchanged per skill spec § step 7. Reality: DAY-16 today (heartbeat 08:39Z + 15:59Z + morning-brief 07:00Z all confirm counter advance). Last CG token-alert print $0.256 (7-05 12:59Z) stale 5 days but yesterday's daily-routine trending endpoint pull $0.174 = -63.4% vs entry $0.4753 stands as fresh delta (7th consecutive daily-routine surface today — no fresh SLX trending pull in today's daily-routine output but reference/day-count preserved). token-alert scope doesn't cover SLX. No blocker_signal (decision-gate, not infra). Activity 141→209 = methodology-broader today, call flat. Weekly-review 2026-07-13 T-3 deadline remains gate for `Authored by: operator × 1` recut slot. Status ON_TRACK mechanically (heavy log volume, 0d idle) but outcome CATASTROPHIC — recut decision unshipped day-16."
+      "activity_count_14d": 205,
+      "last_activity_date": "2026-07-11",
+      "note": "MEMORY.md title unchanged per skill spec § step 7. Reality: DAY-17 today (heartbeat 08:09Z + 14:11Z + morning-brief 07:00Z all confirm counter advance). Last CG token-alert print $0.256 (7-05 12:59Z, 6d stale — token-alert scope doesn't cover SLX). Daily-routine 7-10 trending endpoint pull $0.174 = -63.4% vs entry $0.4753 stands. token-alert scope doesn't cover SLX. No blocker_signal (decision-gate, not infra). Activity 209→205 = flat. Weekly-review 2026-07-13 T-2 deadline remains gate for `Authored by: operator × 1` recut slot. Status ON_TRACK mechanically (heavy log volume, 0d idle) but outcome CATASTROPHIC — recut decision unshipped day-17."
     }
   }
 }

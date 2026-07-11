@@ -1,0 +1,294 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-11",
+        "description": "6 goals — 4 on track, 2 blocked (overall → flat)"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "separator-1",
+        "heading-blocked",
+        "card-xai",
+        "card-onchain",
+        "separator-2",
+        "heading-ontrack",
+        "card-sandbox",
+        "card-batch",
+        "card-btc",
+        "card-slx",
+        "separator-3",
+        "text-sources"
+      ]
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-blocked": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "card-xai": {
+      "type": "Card",
+      "props": {
+        "title": "XAI quota recovery",
+        "description": "Waiting on operator team-credit top-up since 2026-06-16 (day 26)"
+      },
+      "children": [
+        "stack-xai"
+      ]
+    },
+    "stack-xai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-xai-action",
+        "text-xai-impact"
+      ]
+    },
+    "text-xai-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Ping operator on Team 3a8b4c1e top-up",
+        "variant": "body"
+      }
+    },
+    "text-xai-impact": {
+      "type": "Text",
+      "props": {
+        "text": "Day-26 outage blocks live x_search",
+        "variant": "caption"
+      }
+    },
+    "card-onchain": {
+      "type": "Card",
+      "props": {
+        "title": "Operator on-chain config (day 33)",
+        "description": "Waiting on operator on-chain-watches.yml + API keys since 2026-06-08"
+      },
+      "children": [
+        "stack-onchain"
+      ]
+    },
+    "stack-onchain": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-onchain-action1",
+        "text-onchain-action2"
+      ]
+    },
+    "text-onchain-action1": {
+      "type": "Text",
+      "props": {
+        "text": "Action: Populate memory/on-chain-watches.yml with type:pool entries",
+        "variant": "body"
+      }
+    },
+    "text-onchain-action2": {
+      "type": "Text",
+      "props": {
+        "text": "Set ALCHEMY_API_KEY + ETHERSCAN_API_KEY",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-ontrack": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "card-sandbox": {
+      "type": "Card",
+      "props": {
+        "title": "Sandbox-truncation systemic (day 18)",
+        "description": "0d idle, ~394 activity/14d (→ flat)"
+      },
+      "children": [
+        "stack-sandbox"
+      ]
+    },
+    "stack-sandbox": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-sandbox-detail"
+      ]
+    },
+    "text-sandbox-detail": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step PR day-19 unshipped",
+        "variant": "caption"
+      }
+    },
+    "card-batch": {
+      "type": "Card",
+      "props": {
+        "title": "12:00 UTC batch DARK (day 13)",
+        "description": "0d idle, ~170 activity/14d (→ flat)"
+      },
+      "children": [
+        "stack-batch"
+      ]
+    },
+    "stack-batch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-batch-detail1",
+        "text-batch-detail2"
+      ]
+    },
+    "text-batch-detail1": {
+      "type": "Text",
+      "props": {
+        "text": "8-skill 6-28 cluster stale d14",
+        "variant": "caption"
+      }
+    },
+    "text-batch-detail2": {
+      "type": "Text",
+      "props": {
+        "text": "Token-alert caught up under operator invocation",
+        "variant": "caption"
+      }
+    },
+    "card-btc": {
+      "type": "Card",
+      "props": {
+        "title": "BTC $63.5k reclaim arc RE-ARMED (day 1)",
+        "description": "0d idle, ~389 activity/14d (→ flat)"
+      },
+      "children": [
+        "stack-btc"
+      ]
+    },
+    "stack-btc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-btc-spot",
+        "stat-btc-target",
+        "text-btc-gap"
+      ]
+    },
+    "stat-btc-spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Current spot",
+        "value": "$64,176",
+        "trend": "up"
+      }
+    },
+    "stat-btc-target": {
+      "type": "Stat",
+      "props": {
+        "label": "Full-reclaim target",
+        "value": "$65,900"
+      }
+    },
+    "text-btc-gap": {
+      "type": "Text",
+      "props": {
+        "text": "~$1,724 above; holds above gate",
+        "variant": "caption"
+      }
+    },
+    "card-slx": {
+      "type": "Card",
+      "props": {
+        "title": "SLX open pick (day 16)"
+      },
+      "children": [
+        "stack-slx"
+      ]
+    },
+    "stack-slx": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-slx-status",
+        "text-slx-metrics",
+        "text-slx-action"
+      ]
+    },
+    "badge-slx-status": {
+      "type": "Badge",
+      "props": {
+        "text": "CATASTROPHIC",
+        "variant": "destructive"
+      }
+    },
+    "text-slx-metrics": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, ~205 activity/14d (→ flat)",
+        "variant": "caption"
+      }
+    },
+    "text-slx-action": {
+      "type": "Text",
+      "props": {
+        "text": "Recut still overdue; weekly-review T-2",
+        "variant": "caption"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
