@@ -1,0 +1,456 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest",
+        "description": "2026-07-11"
+      },
+      "children": [
+        "verdict-stats",
+        "sources-alert",
+        "sep1",
+        "patch-today-section",
+        "sep2",
+        "patch-week-section",
+        "sep3",
+        "other-malware-section"
+      ]
+    },
+    "verdict-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-patch-today",
+        "stat-patch-week"
+      ]
+    },
+    "stat-patch-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Patch today",
+        "value": "3"
+      }
+    },
+    "stat-patch-week": {
+      "type": "Stat",
+      "props": {
+        "label": "Schedule this week",
+        "value": "5"
+      }
+    },
+    "sources-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Sources: KEV ok, GH Advisory ok, EPSS ok"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-today-heading",
+        "cve-56291",
+        "cve-59wg",
+        "cve-99j7"
+      ]
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve-56291": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-56291-link-group",
+        "cve-56291-desc",
+        "cve-56291-action"
+      ]
+    },
+    "cve-56291-link-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-cve-56291",
+        "link-cve-48939"
+      ]
+    },
+    "link-cve-56291": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-56291",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-56291"
+      }
+    },
+    "link-cve-48939": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-48939",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-48939"
+      }
+    },
+    "cve-56291-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Balbooa Forms + iCagenda (Joomla ext) · KEV added 2026-07-10 · EPSS 0.008 / 0.015. Same-day KEV pair, both unauth arbitrary file upload → PHP RCE. Joomla ecosystem, not tracked stack — awareness item.",
+        "variant": "body"
+      }
+    },
+    "cve-56291-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "If joomla is deployed: disable Balbooa Forms + iCagenda extensions until vendor patch; assume post-compromise if admin panel was public."
+      }
+    },
+    "cve-59wg": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-59wg-link",
+        "cve-59wg-badge",
+        "cve-59wg-desc",
+        "cve-59wg-action"
+      ]
+    },
+    "cve-59wg-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-59wg-mh66-248p +5",
+        "href": "https://github.com/advisories/GHSA-59wg-mh66-248p"
+      }
+    },
+    "cve-59wg-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "cve-59wg-desc": {
+      "type": "Text",
+      "props": {
+        "text": "polymarket + polygon 6-pkg brand-jack (npm) · published 2026-07-10 16:12Z. Day-2 escalation of yesterday's polymarket-kelly-stake-math. Minute-clustered publish: polymarket-gamma-apis, polymarket-trader-apis, polymarket-apis, polygon-gamma-apis, polygon-gama-apis. Wallet/api-key stealer targeting polymarket devs + polygon L2 tooling.",
+        "variant": "body"
+      }
+    },
+    "cve-59wg-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Grep lockfiles for those 6 names; if hit, remove + rotate polymarket api keys + wallet privkeys + polygon rpc creds. Real SDKs live under @polymarket/*."
+      }
+    },
+    "cve-99j7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-99j7-link",
+        "cve-99j7-badge",
+        "cve-99j7-desc",
+        "cve-99j7-action"
+      ]
+    },
+    "cve-99j7-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-99j7-fhr2-xfj4",
+        "href": "https://github.com/advisories/GHSA-99j7-fhr2-xfj4"
+      }
+    },
+    "cve-99j7-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "cve-99j7-desc": {
+      "type": "Text",
+      "props": {
+        "text": "exploration (crates.io) · removed for malicious code · published 2026-07-10. First tracked-stack malware crossover beyond npm this window. 1 version published 2026-06-02, yanked ~1h later, no evidence of usage per Socket. Brand-jack wave day-4 signal.",
+        "variant": "body"
+      }
+    },
+    "cve-99j7-action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Grep Cargo.lock for exploration; likely clean, log the check."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-week-heading",
+        "cve-54088",
+        "cve-54072",
+        "cve-54174",
+        "cve-49866",
+        "cve-54063"
+      ]
+    },
+    "patch-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "cve-54088": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-54088-link-group",
+        "cve-54088-desc",
+        "cve-54088-action"
+      ]
+    },
+    "cve-54088-link-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-cve-54088",
+        "link-cve-54089"
+      ]
+    },
+    "link-cve-54088": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-54088",
+        "href": "https://github.com/advisories/GHSA-m93h-4hw7-5qcm"
+      }
+    },
+    "link-cve-54089": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-54089",
+        "href": "https://github.com/advisories/GHSA-xqp3-jq6g-x3qm"
+      }
+    },
+    "cve-54088-desc": {
+      "type": "Text",
+      "props": {
+        "text": "filebrowser/v2 (Go) · critical pre-auth RCE + CVSS 9.1 auth-bypass · EPSS 0.005 / 0.003. Command injection via auth-hook shell substitution + proxy-header forgery. Self-hosted go admin, wide deploy.",
+        "variant": "body"
+      }
+    },
+    "cve-54088-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade filebrowser past 2.63.18."
+      }
+    },
+    "cve-54072": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-54072-link",
+        "cve-54072-desc",
+        "cve-54072-action"
+      ]
+    },
+    "cve-54072-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-54072",
+        "href": "https://github.com/advisories/GHSA-h29v-hj44-q8cv"
+      }
+    },
+    "cve-54072-desc": {
+      "type": "Text",
+      "props": {
+        "text": "authorizerdev/authorizer (Go) · CVSS 9.3. Unvalidated redirect_uri in /authorize leaks oauth2 tokens to attacker url.",
+        "variant": "body"
+      }
+    },
+    "cve-54072-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade authorizer past commit bd3f5baf6d3d (2026-04-09)."
+      }
+    },
+    "cve-54174": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-54174-link",
+        "cve-54174-desc",
+        "cve-54174-action"
+      ]
+    },
+    "cve-54174-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-54174",
+        "href": "https://github.com/advisories/GHSA-fpg8-7664-jc5q"
+      }
+    },
+    "cve-54174-desc": {
+      "type": "Text",
+      "props": {
+        "text": "chainguard apko + melange (Go) · CVSS 8.3. Incomplete package integrity verification allows data-section substitution. Build-tooling supply-chain.",
+        "variant": "body"
+      }
+    },
+    "cve-54174-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "apko ≥1.2.9, melange ≥0.50.4."
+      }
+    },
+    "cve-49866": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-49866-link",
+        "cve-49866-desc",
+        "cve-49866-action"
+      ]
+    },
+    "cve-49866-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-49866",
+        "href": "https://github.com/advisories/GHSA-cwc9-cp4j-mcvv"
+      }
+    },
+    "cve-49866-desc": {
+      "type": "Text",
+      "props": {
+        "text": "@libp2p/gossipsub (npm) · CVSS 7.5 · EPSS 0.004. CPU dos via oversized IHAVE/IWANT control arrays. Wide dep in web3 / ipfs / p2p stacks.",
+        "variant": "body"
+      }
+    },
+    "cve-49866-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade @libp2p/gossipsub ≥16.0.0."
+      }
+    },
+    "cve-54063": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-54063-link",
+        "cve-54063-desc",
+        "cve-54063-action"
+      ]
+    },
+    "cve-54063-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-54063",
+        "href": "https://github.com/advisories/GHSA-h69g-9hx6-f3v4"
+      }
+    },
+    "cve-54063-desc": {
+      "type": "Text",
+      "props": {
+        "text": "xuri/excelize/v2 (Go) · CVSS 7.5 · EPSS 0.006. Unbounded row-index allocation in worksheet parser → oom/panic. Widely-used xlsx lib.",
+        "variant": "body"
+      }
+    },
+    "cve-54063-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade excelize/v2 ≥2.11.0."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "other-malware-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "other-heading",
+        "other-desc"
+      ]
+    },
+    "other-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Other net-new malware (not in tracked stack)",
+        "level": "h2"
+      }
+    },
+    "other-desc": {
+      "type": "Text",
+      "props": {
+        "text": "5-pkg 16:24Z enterprise-brand-jack (@higherlogic, @amtrav, @genie-auth, @att-ebiz, visa-cli-tools), type-atob/type-plint/type-elint typo cluster (20:33-37Z), authvaultx + auth-next-gen (7-11 00:07Z). Yesterday's @redhat-cloud-services 14-pkg wave already logged; deduped.",
+        "variant": "body"
+      }
+    }
+  }
+}
