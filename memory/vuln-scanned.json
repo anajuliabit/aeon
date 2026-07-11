@@ -56,5 +56,20 @@
       "slither": "n/a"
     },
     "notes": "1 osv candidate reviewed (@opentelemetry/core 1.30.1 GHSA-8988-4f7v-96qf moderate DoS via W3C Baggage propagation, CVSS A:L only) — dropped: reaches via lighthouse@13.4.0 → @sentry/node@^9.28.1 → @opentelemetry/core@1.30.1, no SENTRY_DSN configured in chrome-devtools-mcp so Baggage-parse path unreachable in default usage, fix requires upstream chain bump to @sentry/node v10+. SECURITY.md points to Chromium security process; PVR channel proven working (2 patched advisories in 30d). Semgrep/Trufflehog blocked by sandbox per ISS-018."
+  },
+  {
+    "repo": "wonderwhy-er/DesktopCommanderMCP",
+    "scanned_at": "2026-07-11T16:35:00Z",
+    "findings": 6,
+    "channel": "public-pr-deps",
+    "scanner_status": {
+      "semgrep": "fail",
+      "trufflehog": "fail",
+      "osv-binary": "fail",
+      "osv-api": "ok",
+      "slither": "n/a"
+    },
+    "pr_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP/pull/578",
+    "notes": "osv-api batch (1039 lockfile entries) surfaced 34 pkgs with disclosed advisories. 3 direct-dep bumps shipped via single lockfile-only PR #578 patching 6 GHSAs: @modelcontextprotocol/sdk 1.25.1→1.29.0 (GHSA-345p HIGH cross-client leak + GHSA-8r9q HIGH ReDoS), markdown-it 14.1.0→14.3.0 (GHSA-38c4 + GHSA-6v5v MODERATE ReDoS/quadratic-DoS), file-type 21.2.0→21.3.4 (GHSA-5v7r + GHSA-j47w MODERATE DoS). Bonus: markdown-it bump also carries linkify-it 5.0.0→5.0.2 fixing GHSA-22p9 HIGH ReDoS as a transitive side-effect. 30 transitive-only vuln pkgs (hono 31-advisory chain, basic-ftp CRITICAL path-traversal via get-uri/md-to-pdf, tar 7-HIGH via sharp's node-pre-gyp, minimatch/picomatch/ws/tmp/etc.) deferred — coordinated upstream chain-bumps out of scope for lockfile-only PR. **Unusual disclosure context noted:** upstream SECURITY.md publicly downgrades security priority ('not currently our top priority'), directs vulnerability reports to public GitHub Issues (unusual — normally private channel), documents known bypasses (symlink dir-restriction, command-substitution). Zero code-level audit performed — sandbox blocks semgrep/trufflehog per ISS-018 and maintainer's own SECURITY.md pre-declares command-blocking and directory-restriction bypasses as accepted limitations (Docker-isolation is their recommended containment). Zero PVR route needed (all findings dep-CVE public-PR class). Selected from github-trending 2026-07-11 slate (25× baseline spike on wonderwhy-er/DesktopCommanderMCP)."
   }
 ]

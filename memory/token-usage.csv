@@ -710,3 +710,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-11,github-trending,claude-opus-4-7,2223,33224,2795950,103668
 2026-07-11,token-alert,claude-opus-4-7,22,16955,1229924,75904
 2026-07-11,security-digest,claude-opus-4-7,84,38014,6248414,110250
+2026-07-11,vuln-scanner,claude-opus-4-7,82,45319,9962865,157108

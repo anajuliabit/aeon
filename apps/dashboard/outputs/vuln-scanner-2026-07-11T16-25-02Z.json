@@ -1,0 +1,510 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Vuln Scanner — wonderwhy-er/DesktopCommanderMCP"
+      },
+      "children": [
+        "stat_findings",
+        "separator_1",
+        "heading_direct_deps",
+        "stack_deps",
+        "separator_2",
+        "heading_transitive",
+        "dep_linkify",
+        "separator_3",
+        "heading_pr",
+        "stack_pr_info",
+        "separator_4",
+        "heading_deferred",
+        "text_deferred",
+        "separator_5",
+        "heading_audit",
+        "alert_audit",
+        "separator_6",
+        "heading_scanners",
+        "table_scanners"
+      ]
+    },
+    "stat_findings": {
+      "type": "Stat",
+      "props": {
+        "label": "Confirmed dep-cve findings",
+        "value": "6",
+        "delta": "across 3 direct deps"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_direct_deps": {
+      "type": "Heading",
+      "props": {
+        "text": "Direct Dependencies",
+        "level": "h3"
+      }
+    },
+    "stack_deps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dep_sdk",
+        "dep_markdown",
+        "dep_filetype"
+      ]
+    },
+    "dep_sdk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dep_sdk_title",
+        "dep_sdk_version",
+        "dep_sdk_issues"
+      ]
+    },
+    "dep_sdk_title": {
+      "type": "Text",
+      "props": {
+        "text": "@modelcontextprotocol/sdk",
+        "variant": "lead"
+      }
+    },
+    "dep_sdk_version": {
+      "type": "Badge",
+      "props": {
+        "text": "1.25.1 → 1.29.0",
+        "variant": "outline"
+      }
+    },
+    "dep_sdk_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dep_sdk_issue1",
+        "dep_sdk_issue2"
+      ]
+    },
+    "dep_sdk_issue1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_high_sdk1",
+        "text_sdk_issue1"
+      ]
+    },
+    "badge_high_sdk1": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "text_sdk_issue1": {
+      "type": "Text",
+      "props": {
+        "text": "cross-client leak GHSA-345p",
+        "variant": "caption"
+      }
+    },
+    "dep_sdk_issue2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_high_sdk2",
+        "text_sdk_issue2"
+      ]
+    },
+    "badge_high_sdk2": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "text_sdk_issue2": {
+      "type": "Text",
+      "props": {
+        "text": "ReDoS GHSA-8r9q",
+        "variant": "caption"
+      }
+    },
+    "dep_markdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dep_markdown_title",
+        "dep_markdown_version",
+        "dep_markdown_issues"
+      ]
+    },
+    "dep_markdown_title": {
+      "type": "Text",
+      "props": {
+        "text": "markdown-it",
+        "variant": "lead"
+      }
+    },
+    "dep_markdown_version": {
+      "type": "Badge",
+      "props": {
+        "text": "14.1.0 → 14.3.0",
+        "variant": "outline"
+      }
+    },
+    "dep_markdown_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dep_markdown_issue1",
+        "dep_markdown_issue2"
+      ]
+    },
+    "dep_markdown_issue1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_moderate_md1",
+        "text_markdown_issue1"
+      ]
+    },
+    "badge_moderate_md1": {
+      "type": "Badge",
+      "props": {
+        "text": "MODERATE",
+        "variant": "secondary"
+      }
+    },
+    "text_markdown_issue1": {
+      "type": "Text",
+      "props": {
+        "text": "ReDoS",
+        "variant": "caption"
+      }
+    },
+    "dep_markdown_issue2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_moderate_md2",
+        "text_markdown_issue2"
+      ]
+    },
+    "badge_moderate_md2": {
+      "type": "Badge",
+      "props": {
+        "text": "MODERATE",
+        "variant": "secondary"
+      }
+    },
+    "text_markdown_issue2": {
+      "type": "Text",
+      "props": {
+        "text": "quadratic-DoS",
+        "variant": "caption"
+      }
+    },
+    "dep_filetype": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dep_filetype_title",
+        "dep_filetype_version",
+        "dep_filetype_issues"
+      ]
+    },
+    "dep_filetype_title": {
+      "type": "Text",
+      "props": {
+        "text": "file-type",
+        "variant": "lead"
+      }
+    },
+    "dep_filetype_version": {
+      "type": "Badge",
+      "props": {
+        "text": "21.2.0 → 21.3.4",
+        "variant": "outline"
+      }
+    },
+    "dep_filetype_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dep_filetype_issue1",
+        "dep_filetype_issue2"
+      ]
+    },
+    "dep_filetype_issue1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_moderate_ft1",
+        "text_filetype_issue1"
+      ]
+    },
+    "badge_moderate_ft1": {
+      "type": "Badge",
+      "props": {
+        "text": "MODERATE",
+        "variant": "secondary"
+      }
+    },
+    "text_filetype_issue1": {
+      "type": "Text",
+      "props": {
+        "text": "ASF infinite loop",
+        "variant": "caption"
+      }
+    },
+    "dep_filetype_issue2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_moderate_ft2",
+        "text_filetype_issue2"
+      ]
+    },
+    "badge_moderate_ft2": {
+      "type": "Badge",
+      "props": {
+        "text": "MODERATE",
+        "variant": "secondary"
+      }
+    },
+    "text_filetype_issue2": {
+      "type": "Text",
+      "props": {
+        "text": "ZIP bomb",
+        "variant": "caption"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_transitive": {
+      "type": "Heading",
+      "props": {
+        "text": "Bonus: Transitive Fix",
+        "level": "h3"
+      }
+    },
+    "dep_linkify": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dep_linkify_title",
+        "dep_linkify_version",
+        "dep_linkify_issue"
+      ]
+    },
+    "dep_linkify_title": {
+      "type": "Text",
+      "props": {
+        "text": "linkify-it",
+        "variant": "lead"
+      }
+    },
+    "dep_linkify_version": {
+      "type": "Badge",
+      "props": {
+        "text": "5.0.0 → 5.0.2",
+        "variant": "outline"
+      }
+    },
+    "dep_linkify_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_high_linkify",
+        "text_linkify_issue"
+      ]
+    },
+    "badge_high_linkify": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "text_linkify_issue": {
+      "type": "Text",
+      "props": {
+        "text": "ReDoS GHSA-22p9",
+        "variant": "caption"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_pr": {
+      "type": "Heading",
+      "props": {
+        "text": "Disclosure",
+        "level": "h3"
+      }
+    },
+    "stack_pr_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_pr",
+        "text_pr_details"
+      ]
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #578",
+        "href": "https://github.com/wonderwhy-er/DesktopCommanderMCP/pull/578"
+      }
+    },
+    "text_pr_details": {
+      "type": "Text",
+      "props": {
+        "text": "lockfile-only, semver-compatible, no source changes",
+        "variant": "caption"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_deferred": {
+      "type": "Heading",
+      "props": {
+        "text": "Deferred (Transitive-only)",
+        "level": "h3"
+      }
+    },
+    "text_deferred": {
+      "type": "Text",
+      "props": {
+        "text": "30 transitive-only vuln pkgs: hono 31-advisory chain, basic-ftp CRITICAL, tar 7-HIGH, minimatch/picomatch/ws/tmp — need coordinated upstream chain-bumps",
+        "variant": "body"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_audit": {
+      "type": "Heading",
+      "props": {
+        "text": "Code-level Audit",
+        "level": "h3"
+      }
+    },
+    "alert_audit": {
+      "type": "Alert",
+      "props": {
+        "title": "Zero code-level audit",
+        "message": "Scanner binaries sandbox-blocked (ISS-018) and upstream SECURITY.md publicly downgrades security ('not currently our top priority') + pre-declares command-blocking/dir-restriction bypasses as accepted (Docker containment recommended).",
+        "type": "warning"
+      }
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_scanners": {
+      "type": "Heading",
+      "props": {
+        "text": "Scanner Status",
+        "level": "h3"
+      }
+    },
+    "table_scanners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Scanner",
+          "Status"
+        ],
+        "rows": [
+          [
+            "semgrep",
+            "fail"
+          ],
+          [
+            "trufflehog",
+            "fail"
+          ],
+          [
+            "osv-binary",
+            "fail"
+          ],
+          [
+            "osv-api",
+            "ok"
+          ]
+        ]
+      }
+    }
+  }
+}
