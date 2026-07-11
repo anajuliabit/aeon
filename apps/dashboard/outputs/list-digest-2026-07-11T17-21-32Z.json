@@ -1,0 +1,109 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-07-11"
+      },
+      "children": [
+        "summary_text",
+        "separator1",
+        "heading_defi",
+        "tweet1",
+        "link1",
+        "tweet2",
+        "link2",
+        "separator2",
+        "metadata_stack"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "single-list dry day — flowslikeosmo's skin-in-game qt is the one live signal; rest is an okx paid promo and thin replies.",
+        "variant": "body"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_defi": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Research List",
+        "level": "h3"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "qt of x.com/RangerAI_tech on $HOOD: \"gotta have skin in the game.\" tokenomics-alignment lens continues — alignment as the moat, not marketing.",
+        "likes": 40,
+        "retweets": 4
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2075682471446786194"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "okx paid promo pushing the eu-mica cut-off: post-1 july, non-mica exchanges illegal across the eea; 8% deposit bonus through 31 july. ad on top of a real regulatory gate.",
+        "likes": 16,
+        "retweets": 0
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2075686896127394136"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "sources_badge",
+        "status_badge"
+      ]
+    },
+    "sources_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(2)",
+        "variant": "secondary"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}
