@@ -1,0 +1,537 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-11"
+      },
+      "children": [
+        "pulse_section",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "tweets_section",
+        "sep4",
+        "paper_section",
+        "sep5",
+        "issues_section",
+        "sep6",
+        "hn_section"
+      ]
+    },
+    "pulse_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pulse_heading",
+        "pulse_status",
+        "pulse_stats",
+        "pulse_altcoins"
+      ]
+    },
+    "pulse_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Pulse",
+        "level": "h2"
+      }
+    },
+    "pulse_status": {
+      "type": "Text",
+      "props": {
+        "text": "Mixed — 128/184 green (69.6%), median top-50 +0.02%",
+        "variant": "lead"
+      }
+    },
+    "pulse_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$64.1k",
+        "delta": "+0.2% (7d +2.7%)",
+        "trend": "up"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1.80k",
+        "delta": "+1.4%",
+        "trend": "up"
+      }
+    },
+    "pulse_altcoins": {
+      "type": "Text",
+      "props": {
+        "text": "SOL -1.1%, HYPE -2.5%. LAB day-4 cascade re-arms -32% (was -6% floor yesterday), VELVET dead-cat FAILS -20% (was +22% yesterday), MORPHO one-day breakout unwinds -8%.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change",
+          "Details"
+        ],
+        "rows": [
+          [
+            "CASHCAT",
+            "$0.201",
+            "+36%",
+            "day-6 trending, PUMP-RISK+MAJOR-VOL, mcap $199M"
+          ],
+          [
+            "BEAT",
+            "$2.86",
+            "+32%",
+            "audiera rank #71, 7d -2.4% whipsaw high"
+          ],
+          [
+            "TIBBIR",
+            "$0.145",
+            "+20%",
+            "ribbita by virtuals, 7d +34%"
+          ],
+          [
+            "B",
+            "$0.187",
+            "+16%",
+            "BUILDon rank #177, 7d -15% dead-cat"
+          ],
+          [
+            "VIRTUAL",
+            "$0.61",
+            "+14%",
+            "7d +7%, vol $202M rank #113"
+          ],
+          [
+            "GRASS",
+            "$0.415",
+            "+14%",
+            "reversal from FADE thesis d1-d2, 7d still -26%"
+          ],
+          [
+            "ZANO",
+            "$9.66",
+            "+13%",
+            "7d +6%"
+          ],
+          [
+            "UB",
+            "$0.076",
+            "+9%",
+            "unibase"
+          ],
+          [
+            "BP",
+            "$0.60",
+            "+7.5%",
+            "backpack token"
+          ],
+          [
+            "M",
+            "$1.29",
+            "+7.5%",
+            "memecore rank #44, 7d -19%"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "Change",
+          "Details"
+        ],
+        "rows": [
+          [
+            "LAB",
+            "$0.77",
+            "-32%",
+            "capitulation d4, -91% 7d, vol $113M rank #145; MEMORY \"floor at -6%\" invalidated"
+          ],
+          [
+            "GWEI",
+            "$0.060",
+            "-21%",
+            "ETHGas continues, -58% 7d"
+          ],
+          [
+            "VELVET",
+            "$0.43",
+            "-20%",
+            "dead-cat fails, 7d flips +22% → -22% overnight"
+          ],
+          [
+            "MORPHO",
+            "$2.08",
+            "-8%",
+            "one-day breakout unwind (7-09 +11% winner → today -8%)"
+          ],
+          [
+            "KAITO",
+            "$0.61",
+            "-8%",
+            "7d -2%"
+          ],
+          [
+            "EDGE",
+            "$0.39",
+            "-8%",
+            "edgeX still 7d +50%"
+          ],
+          [
+            "BDX",
+            "$0.090",
+            "-7%",
+            "beldex"
+          ],
+          [
+            "VVV",
+            "$10.62",
+            "-6%",
+            "venice token continues weak, 7d -16%"
+          ],
+          [
+            "PUMP",
+            "$0.00143",
+            "-5%",
+            "pre-unlock (22.2% mcap hits float Sat 7-12)"
+          ],
+          [
+            "APE",
+            "$0.157",
+            "-4%",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_heading",
+        "crypto_subsection",
+        "ai_subsection",
+        "dev_subsection"
+      ]
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "crypto_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto_subheading",
+        "crypto_text"
+      ]
+    },
+    "crypto_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "crypto_text": {
+      "type": "Text",
+      "props": {
+        "text": "Market cap $2.28T (+$0.03T), fear/greed 23→26 easing; SK Hynix tokenized shares live on Telegram Wallet/Backpack/Ondo; ESMA warns crypto firms of MiCA-phishing wave; regulation overtakes geopolitics as narrative driver.",
+        "variant": "body"
+      }
+    },
+    "ai_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_subheading",
+        "ai_text"
+      ]
+    },
+    "ai_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "ai_text": {
+      "type": "Text",
+      "props": {
+        "text": "GPT-5.6 Sol Ultra publishes proof of the Cycle Double Cover Conjecture (HN 439pts); OpenAI ChatGPT Work + Sites feature ships (prompt → spreadsheet/deck/web app); Anthropic Claude task helper leaves desktop → mobile handoff + scheduled jobs beta (Max first).",
+        "variant": "body"
+      }
+    },
+    "dev_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev_subheading",
+        "dev_text"
+      ]
+    },
+    "dev_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "dev_text": {
+      "type": "Text",
+      "props": {
+        "text": "GLM-5.2 running on slow hardware hits HN #2 (849pts) — open-weight local runtime sovereignty; NVIDIA Build hosts GLM-5.2 endpoint; Z.ai launches ZCode to challenge Cursor/Claude Code/Copilot; Kimi K2.7 Code now in Copilot picker.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_item",
+        "paper_desc"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper_item": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents",
+        "href": "https://huggingface.co/papers/2607.08716",
+        "source": "Wu et al., 2607.08716"
+      }
+    },
+    "paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Separate memory agent runs alongside unmodified action agent, injects reminders on demand. +8.3pp Terminal-Bench, +6.8pp τ²-Bench. Directly relevant to Aeon's chronic memory/log pattern.",
+        "variant": "caption"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues_heading",
+        "issues_text"
+      ]
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "issues_text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues in operator repos since 6-25 (5 open advisor tickets #141-#145 chronic).",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_heading",
+        "hn_stack"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_1",
+        "hn_2",
+        "hn_3",
+        "hn_4",
+        "hn_5"
+      ]
+    },
+    "hn_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Apple sues OpenAI, accuses ex-employees of trade-secret theft",
+        "href": "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/",
+        "score": "975pts, 490c"
+      }
+    },
+    "hn_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Show HN: GLM-5.2 running on my slow computer",
+        "href": "https://github.com/JustVugg/colibri",
+        "source": "open-weight local runtime",
+        "score": "849pts, 210c"
+      }
+    },
+    "hn_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "QuadRF can spot drones and see WiFi through my wall",
+        "href": "https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/",
+        "score": "549pts"
+      }
+    },
+    "hn_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GPT-5.6 Sol Ultra: proof of the Cycle Double Cover Conjecture",
+        "href": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf",
+        "source": "AI-does-math frontier",
+        "score": "439pts, 357c"
+      }
+    },
+    "hn_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Good Tools Are Invisible",
+        "href": "https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/",
+        "source": "gingerbill/odin",
+        "score": "409pts"
+      }
+    }
+  }
+}

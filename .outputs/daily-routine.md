@@ -1,46 +1,45 @@
-*Daily Routine — 2026-07-10*
+*Daily Routine — 2026-07-11*
 
-_relief bounce — 72/100 top-100 green, median top-50 +1.1%; btc $64.1k +1.8%, eth $1.78k +1.6%. NEX pump unwinds -37% (was +32% yesterday), LAB floors at -6% after -59% cascade._
+_pulse mixed — 128/184 green (69.6%), median top-50 +0.02%; btc $64.1k +0.2% (7d +2.7%), eth $1.80k +1.4%; sol -1.1%, hype -2.5%. LAB day-4 cascade re-arms -32% (was -6% floor yesterday), VELVET dead-cat FAILS -20% (was +22% yesterday), MORPHO one-day breakout unwinds -8%._
 
 *Top 10 Winners (24h)*
-1. CASHCAT $0.155 +52.0% (7d +130%) [TRENDING+UP · PUMP-RISK] · #199
-2. VELVET $0.555 +32.5% (7d +22%) · #147
-3. DEXE $35.25 +23.1% (7d +56%) [TRENDING+UP · BREAKOUT · MAJOR] · #47
-4. TIBBIR $0.120 +14.7% (7d +15%) · #234
-5. SYRUP $0.179 +13.2% (7d +16%) · #161
-6. MORPHO $2.29 +11.2% (7d +14%) [MAJOR] · #51
-7. SENT $0.0152 +9.5% · #248
-8. ARB $0.0937 +8.8% (7d +20%) [TRENDING+UP] · #95
-9. IOTA $0.0398 +7.9% · #176
-10. B (BUILDon) $0.161 +7.1% (7d -35%) · #192
+1. CASHCAT $0.201 (+36%) — day-6 trending, PUMP-RISK+MAJOR-VOL, mcap $199M
+2. BEAT $2.86 (+32%) — audiera rank #71, 7d -2.4% whipsaw high
+3. TIBBIR $0.145 (+20%) — ribbita by virtuals, 7d +34%
+4. B $0.187 (+16%) — BUILDon rank #177, 7d -15% dead-cat
+5. VIRTUAL $0.61 (+14%) — 7d +7%, vol $202M rank #113
+6. GRASS $0.415 (+14%) — reversal from FADE thesis d1-d2, 7d still -26%
+7. ZANO $9.66 (+13%) — 7d +6%
+8. UB $0.076 (+9%) — unibase
+9. BP $0.60 (+7.5%) — backpack token
+10. M $1.29 (+7.5%) — memecore rank #44, 7d -19%
 
 *Top 10 Losers (24h)*
-1. NEX $0.00000236 -37.0% (7d -9%) · #210 — pump-risk unwind
-2. EDGE $0.412 -16.3% (7d +55%) · #207 — sharp give-back
-3. GWEI $0.077 -10.9% (7d -38%) · #191
-4. BDX $0.0899 -7.4% · #86
-5. LDO $0.306 -5.8% · #144
-6. ULTIMA $2218 -5.0% · #173
-7. GRASS $0.368 -5.0% (7d -28%) · #149
-8. EIGEN $0.242 -4.4% · #177
-9. ETHFI $0.401 -4.2% · #118
-10. AERO $0.520 -3.7% · #105
+1. LAB $0.77 (-32%) — capitulation d4, -91% 7d, vol $113M rank #145; MEMORY "floor at -6%" invalidated
+2. GWEI $0.060 (-21%) — ETHGas continues, -58% 7d
+3. VELVET $0.43 (-20%) — dead-cat fails, 7d flips +22% → -22% overnight
+4. MORPHO $2.08 (-8%) — one-day breakout unwind (7-09 +11% winner → today -8%)
+5. KAITO $0.61 (-8%) — 7d -2%
+6. EDGE $0.39 (-8%) — edgeX still 7d +50%
+7. BDX $0.090 (-7%) — beldex
+8. VVV $10.62 (-6%) — venice token continues weak, 7d -16%
+9. PUMP $0.00143 (-5%) — pre-unlock (22.2% mcap hits float Sat 7-12)
+10. APE $0.157 (-4%)
 
 *Tweet Roundup*
-*Crypto:* btc held near $63k despite mid-east headlines; eth ETF decoupled +$70.5M inflow vs btc ETF -$84.9M outflow (snapped 3-day inflow streak). Aave shipped Stable Vaults for fintech wallets. CFTC's Selig pushed Clarity Act on Congress.
-*AI:* OAI shipped ChatGPT Work + GPT-5.6 public today — direct answer to Claude Cowork. GPT-5.6 Sol runs on Cerebras at 750 tok/s (~15× GPU baseline). First day 3 frontier labs (OAI GPT-5.6 Sol/Terra/Luna, Anthropic Fable 5 + Sonnet 5, xAI Grok 4.5) all shipped simultaneously.
-*Dev:* GitHub added Kimi K2.7 Code to Copilot as first open-weight option; OAI dropped gpt-realtime-2.1 with 25% lower p95 latency; Zed shipped spawn_agent for parallel subagents.
+*Crypto:* market cap $2.28T (+$0.03T), fear/greed 23→26 easing; SK Hynix tokenized shares live on Telegram Wallet/Backpack/Ondo; ESMA warns crypto firms of MiCA-phishing wave; regulation overtakes geopolitics as narrative driver.
+*AI:* GPT-5.6 Sol Ultra publishes proof of the Cycle Double Cover Conjecture (HN 439pts); OpenAI ChatGPT Work + Sites feature ships (prompt → spreadsheet/deck/web app); Anthropic Claude task helper leaves desktop → mobile handoff + scheduled jobs beta (Max first).
+*Dev:* GLM-5.2 running on slow hardware hits HN #2 (849pts) — open-weight local runtime sovereignty; NVIDIA Build hosts GLM-5.2 endpoint; Z.ai launches ZCode to challenge Cursor/Claude Code/Copilot; Kimi K2.7 Code now in Copilot picker.
 
 *Paper of the Day*
-"UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks" — HF ↑19 (7-09). Extends eval-quality-axis day-8 — yesterday's RoboDojo (robotics eval consolidation) → today's proactive-agent benchmark.
-[arxiv 2607.08768](https://arxiv.org/abs/2607.08768)
+"Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents" (Wu et al., 2607.08716) — separate memory agent runs alongside unmodified action agent, injects reminders on demand. +8.3pp Terminal-Bench, +6.8pp τ²-Bench. Directly relevant to Aeon's chronic memory/log pattern. https://huggingface.co/papers/2607.08716
 
 *GitHub Issues*
-No new issues in 24h.
+- No new issues in operator repos since 6-25 (5 open advisor tickets #141-#145 chronic).
 
 *HN Digest*
-1. [EU Parliament greenlights Chat Control 1.0](https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/) — 1338pts · client-side scanning back on the EU legislative table.
-2. [John Deere R2R FTC settlement](https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02) — 1319pts · hardware-sovereignty win (day-2, HN cross-post from 7-09).
-3. [GPT-5.6](https://openai.com/index/gpt-5-6/) — 1235pts · frontier drop.
-4. [Postgres rewritten in Rust — 100% regression tests pass](https://github.com/malisper/pgrust) — 630pts.
-5. [Muse Spark 1.1](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/) — 371pts · Meta model API.
+1. [Apple sues OpenAI, accuses ex-employees of trade-secret theft](https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/) (975pts, 490c)
+2. [Show HN: GLM-5.2 running on my slow computer](https://github.com/JustVugg/colibri) (849pts, 210c) — open-weight local runtime
+3. [QuadRF can spot drones and see WiFi through my wall](https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/) (549pts)
+4. [GPT-5.6 Sol Ultra: proof of the Cycle Double Cover Conjecture](https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf) (439pts, 357c) — AI-does-math frontier
+5. [Good Tools Are Invisible](https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/) (409pts) — gingerbill/odin
