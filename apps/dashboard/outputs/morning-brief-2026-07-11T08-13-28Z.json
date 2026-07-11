@@ -1,0 +1,237 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-11"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "focus-section",
+        "sep-1",
+        "since-yesterday-section",
+        "sep-2",
+        "watch-section",
+        "sep-3",
+        "running-today-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "1. iss-025 capture-step pr day-19 — why now: weekly-review t-2, self-improve 18:00z routing test tonight",
+        "variant": "body"
+      }
+    },
+    "focus-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "2. slx recut day-17 (-63%) — why now: weekly-review 7-13 t-2 recut deadline",
+        "variant": "body"
+      }
+    },
+    "focus-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "3. pump unlock t-1 sat 7-12 — why now: 82.5b tokens ~$135m hits float, 2× recent daily volume",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since-yesterday-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-yesterday-heading",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "since-yesterday-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "btc arc re-armed: 7-10 held above $63.5k gate all day; 7-11 spot $64.0k–$64.2k tracking above",
+        "variant": "body"
+      }
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "watchlist reclaim day-2: reppo +30% + vol 4.73× dual-rail, gitlawb +34% (12:00z catch-up 13:31z, 3 alerts)",
+        "variant": "body"
+      }
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "reflect: memory 64l→66l; skill-health notify 17→18 (9-day byte-identical streak); action-converter 5 loops",
+        "variant": "body"
+      }
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "npm brand-jack day-3 escalated: 51 fresh pkgs, @redhat-cloud-services enterprise-namespace shift",
+        "variant": "body"
+      }
+    },
+    "since-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest 14:20z msg prepared-not-delivered (interactive-session sandbox gate; action-converter loop 3)",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-heading",
+        "watch-item-1"
+      ]
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "pump detail sharpens focus #3: insiders \"deeply underwater\" from $0.004 ico, sell-to-cut-losses risk high",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-item-1",
+        "running-item-2",
+        "running-item-3",
+        "running-item-4",
+        "running-item-5",
+        "running-item-6"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today (sat)",
+        "level": "h2"
+      }
+    },
+    "running-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "morning batch @ 07:00z, skill-freshness + heartbeat @ 08:00z",
+        "variant": "body"
+      }
+    },
+    "running-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00z (d3 verify), token-alert @ 12:00z (batch-dark d14 verify), btc-levels every 4h at :15",
+        "variant": "body"
+      }
+    },
+    "running-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat + security-digest @ 14:00z, vuln-scanner @ 16:00z (sat-only)",
+        "variant": "body"
+      }
+    },
+    "running-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest @ 17:00z, agent-buzz @ 17:30z",
+        "variant": "body"
+      }
+    },
+    "running-item-5": {
+      "type": "Text",
+      "props": {
+        "text": "evening batch @ 18:00z (goal-tracker + skill-health + reflect + action-converter + self-improve odd-day)",
+        "variant": "body"
+      }
+    },
+    "running-item-6": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 20:00z, evening-recap + thought-review @ 21:00z",
+        "variant": "body"
+      }
+    }
+  }
+}
