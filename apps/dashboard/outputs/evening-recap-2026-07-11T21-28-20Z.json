@@ -1,0 +1,307 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-11",
+        "description": "TL;DR: heavy ship day — PR #578 external + PR #162 codifies rule-5 block; ISS-025 needs operator lift by weekly-review T-2"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_headlines",
+        "sep1",
+        "section_notable",
+        "sep2",
+        "section_decisions",
+        "sep3",
+        "section_blockers",
+        "sep4",
+        "section_footer"
+      ]
+    },
+    "section_headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_headlines",
+        "headlines_stack"
+      ]
+    },
+    "heading_headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headlines_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline_1",
+        "headline_2"
+      ]
+    },
+    "headline_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vuln-scanner — PR #578 to wonderwhy-er/DesktopCommanderMCP: 6+1 GHSAs patched via lockfile bump",
+        "href": "https://github.com/wonderwhy-er/DesktopCommanderMCP/pull/578"
+      }
+    },
+    "headline_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve — PR #162 opened (XAI fallback tightening daily-routine); ISS-025 rule-5 block CODIFIED — operator-only path",
+        "href": "https://github.com/anajuliabit/aeon/pull/162"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_notable",
+        "notable_stack"
+      ]
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4",
+        "notable_5"
+      ]
+    },
+    "notable_1": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — 09:00Z d3-dark slot caught up 09:47Z (no codification); 6/6 picks agent-adjacent, skills-primitive convergence day-11",
+        "variant": "body"
+      }
+    },
+    "notable_2": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — 3 PATCH TODAY (Joomla KEV RCE pair + polymarket 6-pkg brand-jack day-2 + crates.io crossover); 5 PATCH THIS WEEK",
+        "variant": "body"
+      }
+    },
+    "notable_3": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY 66L→67L; PATTERN-INVALIDATION DAY added (4 heuristics broken same session); 10 stale carries pruned",
+        "variant": "body"
+      }
+    },
+    "notable_4": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health — NOTIFY fired (hash 12f8bbcf; 21 DEGRADED · 10-day byte-identical streak; ISS-025 sr<0.5 tail d19)",
+        "variant": "body"
+      }
+    },
+    "notable_5": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter — 5 loops avg 4.4/5: iss-025 125 · slx-recut 125 · pump-unlock-t-1 100 · invalidations 80 · batch-diagnostic 60",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_decisions",
+        "decisions_stack"
+      ]
+    },
+    "heading_decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision_1",
+        "decision_2",
+        "decision_3",
+        "decision_4"
+      ]
+    },
+    "decision_1": {
+      "type": "Text",
+      "props": {
+        "text": "review/merge PR #162 (XAI fallback; stall gate opens 7-12 18:16Z)",
+        "variant": "body"
+      }
+    },
+    "decision_2": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review T-2: operator direct-author .github/workflows/aeon.yml:479-493 capture-step fix or relax rule-5 (ISS-025 sole path)",
+        "variant": "body"
+      }
+    },
+    "decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review T-2: SLX recut — day-17 -63% open pick, operator-owned",
+        "variant": "body"
+      }
+    },
+    "decision_4": {
+      "type": "Text",
+      "props": {
+        "text": "PUMP unlock T-0 Sat 7-12: 22.2% mcap ($142.7M) hits float — position decision",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_blockers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_blockers",
+        "blockers_stack"
+      ]
+    },
+    "heading_blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blockers_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker_1",
+        "blocker_2",
+        "blocker_3",
+        "blocker_4"
+      ]
+    },
+    "blocker_1": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-025 d19",
+        "message": "capture-step fix unshipped; rule-5 blocks self-improve; operator-only path",
+        "type": "error"
+      }
+    },
+    "blocker_2": {
+      "type": "Alert",
+      "props": {
+        "title": "batch-dark d14 (ISS-027)",
+        "message": "8-skill cluster last_success 2026-06-28; slot-level scheduler block",
+        "type": "warning"
+      }
+    },
+    "blocker_3": {
+      "type": "Alert",
+      "props": {
+        "title": "aixbt-pulse dead-slot d13",
+        "message": "6 consecutive twice-daily misses; 21:00Z tick tonight pending",
+        "type": "warning"
+      }
+    },
+    "blocker_4": {
+      "type": "Alert",
+      "props": {
+        "title": "XAI quota d26",
+        "message": "Team 3a8b4c1e top-up pending",
+        "type": "info"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_text"
+      ]
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "+17 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

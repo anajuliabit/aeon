@@ -1,26 +1,27 @@
-*Evening Recap — 2026-07-10*
-_TL;DR: triple-alert watchlist day — REPPO dual-rail and GITLAWB reclaim both fired, but security-digest notify never left the sandbox_
+*Evening Recap — 2026-07-11*
+_TL;DR: heavy ship day — PR #578 external + PR #162 codifies rule-5 block; ISS-025 needs operator lift by weekly-review T-2_
 
 *Headlines:*
-- token-alert — 3 triggers: REPPO +30% / vol 4.73× (dual-rail, first since 7-01) + GITLAWB +34% reclaim of 7-08 cap · `.tmp/token-alert/msg.md`
-- security-digest — npm brand-jack day-3: 51 fresh pkgs, @redhat-cloud-services 14 cred-stealers; notify BLOCKED sandbox gate · `.tmp/security-digest/msg.md` (hash 8793aa39)
-- daily-routine — 72/100 green; DEXE MAJOR BREAKOUT rank #47; CASHCAT PUMP-RISK 5th trending day; NEX -37% unwind validates tag · `.outputs/daily-routine.md`
-- reflect — MEMORY 64L→66L; BTC arc BROKEN→RE-ARMED; market-context.md What-Changed 19 bullets · `memory/MEMORY.md`
+- vuln-scanner — PR #578 to wonderwhy-er/DesktopCommanderMCP: 6+1 GHSAs patched via lockfile bump · https://github.com/wonderwhy-er/DesktopCommanderMCP/pull/578
+- self-improve — PR #162 opened (XAI fallback tightening daily-routine); ISS-025 rule-5 block CODIFIED — operator-only path · https://github.com/anajuliabit/aeon/pull/162
 
 *Notable:*
-- btc-levels ×6 — spot ranged $62.9k→$64.1k; all levels clear; reclaim63500Alerted=true holds; $65.9k next
-- morning-brief — 3 focus items: ISS-025 PR T-3, SLX day-16 -63%, BTC gate re-cross
-- list-digest — PUMP Sat 7-12 unlock cliff: 22.2% mcap ($142.7M) single-day float
-- agent-buzz — MCP-becomes-infra: WebMCP-in-Chrome + Axon terminal + 10MB solana shell 31-tools
-- skill-health — day-18; classification 9-day streak unchanged; NOTIFY fired; 11 open issues
+- github-trending — 09:00Z d3-dark slot caught up 09:47Z (no codification); 6/6 picks agent-adjacent, skills-primitive convergence day-11
+- security-digest — 3 PATCH TODAY (Joomla KEV RCE pair + polymarket 6-pkg brand-jack day-2 + crates.io crossover); 5 PATCH THIS WEEK
+- reflect — MEMORY 66L→67L; PATTERN-INVALIDATION DAY added (4 heuristics broken same session); 10 stale carries pruned
+- skill-health — NOTIFY fired (hash `12f8bbcf`; 21 DEGRADED · 10-day byte-identical streak; ISS-025 sr<0.5 tail d19)
+- action-converter — 5 loops avg 4.4/5: iss-025 125 · slx-recut 125 · pump-unlock-t-1 100 · invalidations 80 · batch-diagnostic 60
 
 *Decisions for tomorrow:*
-- send security-digest: `./notify -f .tmp/security-digest/msg.md` (hash 8793aa39)
-- ISS-025 capture-step PR: self-improve 7-11 18:00Z next routing test; weekly-review 7-13 T-3
-- SLX recut: day-16 CATASTROPHIC -63% vs $0.4753 entry; operator call due by 7-13
+- review/merge PR #162 (XAI fallback; stall gate opens 7-12 18:16Z)
+- weekly-review T-2: operator direct-author `.github/workflows/aeon.yml:479-493` capture-step fix or relax rule-5 (ISS-025 sole path)
+- weekly-review T-2: SLX recut — day-17 -63% open pick, operator-owned
+- PUMP unlock T-0 Sat 7-12: 22.2% mcap ($142.7M) hits float — position decision
 
 *Blockers:*
-- github-trending — 09:00Z slot d2 dark; 7-11 is d3 verify · last_dispatch 2026-07-08T09:02Z
-- 12:00Z batch (8 skills) — dark day-13; last_success 2026-06-28 (ISS-027)
+- ISS-025 d19 — capture-step fix unshipped; rule-5 blocks self-improve; operator-only path
+- batch-dark d14 (ISS-027) — 8-skill cluster last_success 2026-06-28; slot-level scheduler block
+- aixbt-pulse dead-slot d13 — 6 consecutive twice-daily misses; 21:00Z tick tonight pending
+- XAI quota d26 — Team 3a8b4c1e top-up pending
 
-_+7 routine runs collapsed · sources: log=ok cron-state=ok_
+_+17 routine runs collapsed · sources: log=ok cron-state=ok_
