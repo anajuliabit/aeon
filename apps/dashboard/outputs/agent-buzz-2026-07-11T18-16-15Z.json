@@ -1,0 +1,168 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-11",
+        "description": "mcp went institutional today — first vendor cert dropped, coinbase defi mcp shipped, x402 rails framed as necessary. skills-as-primitive resurfaced beside it."
+      },
+      "children": [
+        "section_institutional",
+        "separator_1",
+        "section_skills",
+        "separator_2",
+        "section_benchmarks",
+        "separator_3",
+        "meta_note"
+      ]
+    },
+    "section_institutional": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_institutional",
+        "tweet_agenticai",
+        "tweet_jnix",
+        "tweet_brian"
+      ]
+    },
+    "heading_institutional": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp goes institutional",
+        "level": "h3"
+      }
+    },
+    "tweet_agenticai": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AgenticAIFdn",
+        "handle": "@AgenticAIFdn",
+        "text": "first vendor-neutral mcp cert (MCPA); legitimacy layer above the protocol, not a new capability",
+        "href": "https://x.com/AgenticAIFdn/status/2075657332453769494"
+      }
+    },
+    "tweet_jnix": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Jnix2007",
+        "handle": "@Jnix2007",
+        "text": "coinbase mcp ships: agents open accounts and move funds natively; first crypto-rail mcp from a fiat gateway",
+        "href": "https://x.com/Jnix2007/status/2075611105020592516"
+      }
+    },
+    "tweet_brian": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BrianRoemmele",
+        "handle": "@BrianRoemmele",
+        "text": "mcp + x402 becomes the agent-transaction rail; businesses without either endpoint go dark to agents",
+        "href": "https://x.com/BrianRoemmele/status/2075718569351082468"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_skills",
+        "tweet_ruhani",
+        "tweet_riley"
+      ]
+    },
+    "heading_skills": {
+      "type": "Heading",
+      "props": {
+        "text": "skills as atomic primitive",
+        "level": "h3"
+      }
+    },
+    "tweet_ruhani": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Ruhani_xyz",
+        "handle": "@Ruhani_xyz",
+        "text": "skills as tokenized atomic units; capability itself becomes the settlement layer above agent+harness",
+        "href": "https://x.com/Ruhani_xyz/status/2075614735425499463"
+      }
+    },
+    "tweet_riley": {
+      "type": "TweetCard",
+      "props": {
+        "author": "rileywestreel",
+        "handle": "@rileywestreel",
+        "text": "mcp gives data access, skills give execution; prompt engineering replaced by context engineering",
+        "href": "https://x.com/rileywestreel/status/2075590421271470311"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_benchmarks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_benchmarks",
+        "tweet_zhong",
+        "tweet_treaves"
+      ]
+    },
+    "heading_benchmarks": {
+      "type": "Heading",
+      "props": {
+        "text": "benchmarks + coherence papers",
+        "level": "h3"
+      }
+    },
+    "tweet_zhong": {
+      "type": "TweetCard",
+      "props": {
+        "author": "zhongshsh33",
+        "handle": "@zhongshsh33",
+        "text": "AgentWebBench (ICML 2026): coordination benchmark for A2A/MCP/WebMCP, fills the metric-shaped hole in the agentic-web stack",
+        "href": "https://x.com/zhongshsh33/status/2075604358813696199"
+      }
+    },
+    "tweet_treaves": {
+      "type": "TweetCard",
+      "props": {
+        "author": "T_Reaves14",
+        "handle": "@T_Reaves14",
+        "text": "Soft-Cache: human-supervisable coherence protocol for persistent agent fleets (paper + github); memory hygiene primitive",
+        "href": "https://x.com/T_Reaves14/status/2075699372587716830"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "meta_note": {
+      "type": "Text",
+      "props": {
+        "text": "Source: xai-cache · Candidates: 12 → Kept: 7",
+        "variant": "caption"
+      }
+    }
+  }
+}
