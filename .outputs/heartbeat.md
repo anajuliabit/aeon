@@ -1,5 +1,12 @@
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED` — regenerated `docs/status.md`. Notification skipped per 48h dedup (classification signature byte-identical to 15:59Z hb — day counters unchanged mid-evening, evening batch delivered via own-skill notify paths, skill-health 19:37Z day-N NOTIFY already fired, reflect delivered "Memory consolidated" notify). Log appended to `memory/logs/2026-07-10.md`.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
 ## Summary
+Ran heartbeat 08:00Z tick (dispatched 08:09Z, ~9min late). P0/P1/P2/P3 all continuation-of-7-10-20:52Z hb: no failed rows, no stuck dispatched, all cf=0, chronic 18-skill sr<0.5 tail unchanged (ISS-019/020/021/025 sandbox-truncation **day-19**). Self-check ok (11h13m ago). PR list empty, zero urgent issues.
 
-Ran heartbeat skill (var=""). 20:00Z tick dispatched at 20:51:38Z (~52min late). P0/P1/P2/P3 all continuation-of-afternoon; no failed skills, no stuck rows, all cf=0. Self-check ok (last_success 4h46min ago). 0 open PRs, 0 urgent issues, 11 open issues (4 critical / 4 high / 3 medium). Chronic ~18-skill sr<0.5 sandbox-truncation tail day-18. Fresh delta: evening batch fired 19:35Z (~1h35min late) with all 4 skills successful; skill-health day-N hash flip 17→18 (classification byte-identical 9-day streak); reflect consolidated MEMORY.md 64L→66L; PUMP 7-12 unlock cliff surfaced via list-digest; MCP-becomes-infra cluster via agent-buzz. github-trending 09:00Z d2 miss confirmed. Regenerated `docs/status.md` — action-converter 19:43 UTC now tops list, verdict DEGRADED, next-run evening-recap @ 21:00Z (~8min out). Files: `docs/status.md`, `memory/logs/2026-07-10.md`.
+**Day counters advance mechanically overnight:** SLX **d17** (weekly-review **T-2**), batch dark **d14**, aixbt-pulse dead-slot **d13** (7-10 21:00Z tick MISSED per cron-state), ISS-025 **d19**, XAI **d26**, operator on-chain **d34**, PUMP unlock **T-1** (Sat 7-12 22.2% mcap catalyst).
+
+**Skill classification signature byte-identical** to 7-10 20:52Z hb — 48h dedup applies, notification skipped.
+
+Regenerated `docs/status.md` — 43 enabled skills sorted by last_success desc, evening-recap 2026-07-10 21:59 UTC tops list, 11 open issues (4 critical / 4 high / 3 medium), verdict DEGRADED, next-run pointer github-trending @ 09:00 UTC (~51min out, pivotal d3 codification checkpoint).
+
+Files modified: `docs/status.md`, `memory/logs/2026-07-11.md`.
