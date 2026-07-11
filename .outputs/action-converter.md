@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-10*
-Shape: Ship ISS-025 PR, recut SLX, fire pending security-digest, refresh tracked-tokens, root-cause 12z batch.
+*5 Actions — 2026-07-11*
+Shape: Author ISS-025 fix, postmortem SLX, flag PUMP unlock, patch pattern-invalidations, bisect batch scheduler.
 
-1. Open capture-step PR against `.github/workflows/aeon.yml` chain-runner — direct-author path since self-improve rule 5 blocks workflow-file edits.
-why: 18-day ISS-025 blocks 18-skill chronic tail; weekly-review 2026-07-13 T-3; every day slipped extends counter.
-done: PR opened against main, ISS-025 referenced in body, capture-step diff visible.
+1. Commit chain-runner capture-step fix (`.github/workflows/aeon.yml:479-493`) to a branch and open PR — preserve orchestrator's Write-tool output over CLI `.result` cp per ISS-009 root-cause.
+why: day-19 sandbox-truncation systemic tail, weekly-review 2026-07-13 T-2, self-improve rule-5 blocks self-authoring — operator-direct-author only path left.
+done: PR open with aeon.yml:479-493 diff preserving Write-tool output; ISS-025 fix_pr link populated.
 loop: iss-025-capture-step
 
-2. Publish SLX day-16 recut verdict (close vs hold vs scale-down at $0.174) to `memory/topics/crypto.md`.
-why: HIGH 9/10 pick -63% via trending endpoint, no CG print 5 days, weekly-review 2026-07-13 T-3, 7 daily surfaces.
-done: Dated block in `memory/topics/crypto.md` with verdict + delta from entry $0.4753.
+2. Draft SLX recut postmortem to `memory/topics/crypto.md`: entry $0.4753 → daily-routine $0.174 (-63.4%), 7 consecutive trending-endpoint surfaces, past every recut trigger, closed-pick decision anchor.
+why: day-17 CATASTROPHIC, weekly-review T-2 last hygiene gate before position rolls week-4, HIGH 9/10 6-24 pick review-slot owner.
+done: `memory/topics/crypto.md` diff appends "SLX postmortem" section with entry/exit/pct/date/decision bullets.
 loop: slx-recut
 
-3. Run `./notify -f .tmp/security-digest/msg.md` (hash `8793aa39`, 1823 chars) to ship today's already-drafted digest.
-why: msg prepared 14:20Z; @redhat-cloud-services scope-jack + Nuclio CVSS 10 PoC are fresh day-3 signals.
-done: `./notify` exits 0, hash `8793aa39` registered in `.notify-sent-hashes`.
-loop: security-digest-pending
+3. Stage PUMP unlock cliff catalyst to `memory/topics/market-context.md` — 22.2% mcap (~$143M) hits float Sat 7-12, insiders vested from $0.004 ICO ($0.0015 today = -60%+), 2× recent daily volume, pre-derisking already firing (PUMP -5% today).
+why: T-1 date-anchored supply event, Flowslikeosmo tokenomics lens, list-digest 7-10 top catalyst, carry-loop from 7-10 action-converter.
+done: `memory/topics/market-context.md` diff appends "PUMP 7-12 unlock" section with mcap/date/insider-basis bullets.
+loop: pump-unlock-cliff-t-1
 
-4. Refresh `memory/MEMORY.md` Tracked Tokens rows with 7-10 12:00Z token-alert prints.
-why: table shows 7-08 stale row; REPPO dual-rail (+30% + vol 4.73×) + GITLAWB reclaim absent.
-done: Recent Activity column reflects 7-10 12:00Z prices per token-alert log block.
-loop: tracked-tokens-refresh
+4. Amend `memory/topics/crypto.md` with 4 pattern-invalidations from today's daily-routine — LAB floor thesis (d4 -32% re-arms cascade, 7d -91%), VELVET dead-cat (7d +22% → -22% overnight), CASHCAT PUMP-RISK 24-48h decay (d6 sustained +36%), GRASS FADE (d3 meme rescue +14%).
+why: 4 same-day durable-pattern breaks; unpatched they carry stale predictions into narrative-tracker + list-digest cycles all week.
+done: `memory/topics/crypto.md` diff includes ≥4 bullets naming each token + invalidation + 7-11 date.
+loop: lab-velvet-cashcat-grass-invalidations
 
-5. Root-cause 12:00Z 8-skill batch dispatch failure — write chain-config vs cron-slot vs YAML-nesting vs dispatcher-matcher disambiguation to `memory/topics/fleet.md`.
-why: batch-dark day-13, PR #156 merged 7-06 but 7-07→7-10 all misfire; ISS-027 codified but rootless.
-done: Section in `memory/topics/fleet.md` names which of 4 categories with `gh run list` receipts.
-loop: iss-027-batch-rootcause
+5. Bisect `.github/workflows/aeon.yml` scheduler for ISS-027 — diff cron-block YAML for 8 dark-batch skills (token-pick / defi-overview / token-movers / on-chain-monitor / defi-monitor / market-context-refresh / narrative-tracker / aixbt-pulse) vs firing token-alert/btc-levels; write differentiator to `memory/topics/fleet.md`.
+why: batch-dark day-14, 7-10 12:00Z catch-up doesn't fix scheduler root; 8-skill last_success 2026-06-28 = ~13d stale.
+done: `memory/topics/fleet.md` gets ISS-027 diagnostic section naming YAML differentiator (chain-config / cron slot / matcher).
+loop: iss-027-batch-diagnostic
 
-sources: memory=64 logs=14 topics=11 prs=0 cron_failing=0 mode=OK
+sources: memory=73 logs=14 topics=11 prs=0 cron_failing=0 mode=OK
