@@ -1,0 +1,215 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-11"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_toppick",
+        "link_superpowers_top",
+        "desc_toppick",
+        "sep1",
+        "heading_aiml",
+        "stack_aiml",
+        "sep2",
+        "heading_devtools",
+        "stack_devtools",
+        "sep3",
+        "text_sources"
+      ]
+    },
+    "heading_toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "link_superpowers_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "obra/superpowers",
+        "href": "https://github.com/obra/superpowers"
+      }
+    },
+    "desc_toppick": {
+      "type": "Text",
+      "props": {
+        "text": "4 skills-library repos trending the same day; obra's is the framework-and-methodology layer under the libraries.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "stack_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml_1_link",
+        "aiml_1_desc",
+        "aiml_2_link",
+        "aiml_2_desc",
+        "aiml_3_link",
+        "aiml_3_desc",
+        "aiml_4_link",
+        "aiml_4_desc"
+      ]
+    },
+    "aiml_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mattpocock/skills",
+        "href": "https://github.com/mattpocock/skills",
+        "source": "Shell · ★ 1,712 today (165k total) · [ACCELERATING]"
+      }
+    },
+    "aiml_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "matt pocock ships his `.claude` directory as a curated skills lib; skills-primitive convergence hits 4 concurrent trenders.",
+        "variant": "body"
+      }
+    },
+    "aiml_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "obra/superpowers",
+        "href": "https://github.com/obra/superpowers",
+        "source": "Shell · ★ 1,013 today (252k total) · [ACCELERATING]"
+      }
+    },
+    "aiml_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "jesse vincent's agentic-skills framework at 252k stars, highest-baseline skills artifact on the trending page today.",
+        "variant": "body"
+      }
+    },
+    "aiml_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "google-labs-code/stitch-skills",
+        "href": "https://github.com/google-labs-code/stitch-skills",
+        "source": "TS · ★ 117 today (6.9k total) · [RETURNING]"
+      }
+    },
+    "aiml_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "google labs ships skills lib for stitch mcp server, cross-lab entry to the skills-open-standard convergence.",
+        "variant": "body"
+      }
+    },
+    "aiml_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "TencentCloud/TencentDB-Agent-Memory",
+        "href": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+        "source": "TS · ★ 123 today (8.4k total) · [ACCELERATING]"
+      }
+    },
+    "aiml_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "fully-local 4-tier long-term memory pipeline, zero external api deps; sovereignty-stack + 3rd chinese-lab agent-runtime entry.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "stack_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools_1_link",
+        "devtools_1_desc",
+        "devtools_2_link",
+        "devtools_2_desc"
+      ]
+    },
+    "devtools_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "wonderwhy-er/DesktopCommanderMCP",
+        "href": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "source": "TS · ★ 328 today (7.6k total) · [RETURNING]"
+      }
+    },
+    "devtools_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "mcp server hands claude terminal + fs + diff-edit control; 25× baseline spike extends mcp-becomes-infra pattern.",
+        "variant": "body"
+      }
+    },
+    "devtools_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "davila7/claude-code-templates",
+        "href": "https://github.com/davila7/claude-code-templates",
+        "source": "Python · ★ 118 today (29k total) · [ACCELERATING]"
+      }
+    },
+    "devtools_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "cli for configuring and monitoring claude code, dev-facing observability layer on the claude code substrate.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 6/19",
+        "variant": "caption"
+      }
+    }
+  }
+}

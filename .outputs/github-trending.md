@@ -1,31 +1,27 @@
-*GitHub Trending — 2026-07-08*
+*GitHub Trending — 2026-07-11*
 
-*Top pick* — [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)
-Chrome-lead publishes production skills library for coding agents. 72k stars in 143 days at a 508/d sustained baseline. Skills-as-primitive is now cross-lab AND cross-domain, not lab-specific plumbing.
+*Top pick* — [obra/superpowers](https://github.com/obra/superpowers)
+4 skills-library repos trending the same day; obra's is the framework-and-methodology layer under the libraries.
 
 *AI/ML*
-• [TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox) — ★ 664 today (8.6k total) · Rust · [ACCELERATING]
-tencent first-party sandbox for AI agents — 2nd Chinese-lab entry to the agent-runtime layer stack in 4 days.
+• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 1,712 today (165k total) · Shell · [ACCELERATING]
+matt pocock ships his `.claude` directory as a curated skills lib; skills-primitive convergence hits 4 concurrent trenders.
 
-• [kyutai-labs/pocket-tts](https://github.com/kyutai-labs/pocket-tts) — ★ 531 today (6.4k total) · Python · [RETURNING]
-CPU-only TTS from Kyutai — sovereignty stack extends into local speech generation after local audio capture (meetily 7-05).
+• [obra/superpowers](https://github.com/obra/superpowers) — ★ 1,013 today (252k total) · Shell · [ACCELERATING]
+jesse vincent's agentic-skills framework at 252k stars, highest-baseline skills artifact on the trending page today.
+
+• [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) — ★ 117 today (6.9k total) · TS · [RETURNING]
+google labs ships skills lib for stitch mcp server, cross-lab entry to the skills-open-standard convergence.
+
+• [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) — ★ 123 today (8.4k total) · TS · [ACCELERATING]
+fully-local 4-tier long-term memory pipeline, zero external api deps; sovereignty-stack + 3rd chinese-lab agent-runtime entry.
 
 *Devtools*
-• [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ★ 1.3k today (72.6k total) · JS · [ACCELERATING]
-chrome-lead-published skills lib for coding agents — most-starred skills entry to date at a 508/d sustained baseline.
+• [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) — ★ 328 today (7.6k total) · TS · [RETURNING]
+mcp server hands claude terminal + fs + diff-edit control; 25× baseline spike extends mcp-becomes-infra pattern.
 
-• [bradautomates/claude-video](https://github.com/bradautomates/claude-video) — ★ 965 today (5.6k total) · Python · [ACCELERATING]
-adds video modality to Claude via `/watch` — download + frame-extract + transcribe pipeline handed to the model.
-
-• [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) — ★ 893 today (10.7k total) · C# · [ACCELERATING]
-single-binary Office suite for agents to read/write Word/Excel/PowerPoint — no Office install needed.
-
-• [steipete/CodexBar](https://github.com/steipete/CodexBar) — ★ 376 today (17.2k total) · Swift · [ACCELERATING]
-macOS menu bar showing Claude Code + Codex usage without login — cost-visibility primitive at the desktop layer.
-
-*Web/Apps*
-• [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) — ★ 2.5k today (12.7k total) · TS · [ACCELERATING]
-fork-and-fill Claude Code template for job hunting — highest-velocity today, viral consumer-app moment on Claude Code.
+• [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) — ★ 118 today (29k total) · Python · [ACCELERATING]
+cli for configuring and monitoring claude code, dev-facing observability layer on the claude code substrate.
 
 ---
-sources: trending=ok · gh_api=ok · kept 7/13
+sources: trending=ok · gh_api=ok · kept 6/19
