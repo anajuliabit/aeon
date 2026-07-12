@@ -1,23 +1,18 @@
-*Skill Health — 2026-07-11*
-HEALTH: DEGRADED(21) [systemic: output_tokens=0 sandbox-truncation day-19 — 21 skills]
+*skill health · 2026-07-12*
+HEALTH: DEGRADED(21) — systemic output_tokens=0 truncation, 21 skills share signature (ISS-019/020/021/025 cluster day-20)
 
-🟡 DEGRADED / FLAPPING (21)
-- cost-report — sr=0.11 (7d), last_success 6-29 — WAIT-API (sandbox-truncation) → ISS-025
-- vuln-scanner — sr=0.16, last_success 7-11 16:26Z — WAIT-API (sandbox-truncation) → ISS-018
-- skill-analytics — sr=0.14, last_success 7-08 — WAIT-API (sandbox-truncation)
-- reg-monitor — sr=0.14, last_success 7-08 — WAIT-API (sandbox-truncation)
-- +17 more (search-skill/security-digest/list-digest/agent-buzz/etc. — see memory/issues/INDEX.md)
+🟡 DEGRADED (21, top 5 by staleness):
+- defi-monitor — 53% (n=38), 14d stale — WAIT-API (sandbox-truncation) → ISS-019 cluster
+- market-context-refresh — 32% (n=93), 14d stale — WAIT-API → ISS-019 cluster
+- narrative-tracker — 33% (n=60), 14d stale — WAIT-API → ISS-019 cluster
+- aixbt-pulse — 47% (n=92), 14d stale — WAIT-API → ISS-019 cluster
+- cost-report — 11% (n=46), 13d stale — WAIT-API → ISS-025
++16 more sr<0.6 tail — see memory/issues/INDEX.md
+
+⚫ WARNING (10): sr<0.8 tail — btc-levels, daily-routine, defi-overview, fork-skill-digest, heartbeat, morning-brief, on-chain-monitor, skill-freshness, token-movers, token-pick
 
 ⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL
-🟢 HEALTHY: 8
+🟢 HEALTHY: 9 (+1 vs 7-11: token-alert 78%→80% promoted)
 
-deltas since 7-10 19:37Z:
-- 09:00Z github-trending caught up 09:47Z — ends d3-dark test window as caught-up, no codification.
-- 12:00Z token-alert + 12:15Z btc-levels caught up 12:39Z under operator invocation. 0 alerts.
-- 12:00Z 8-skill batch cluster still dark d14 (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse, last_success 6-28).
-- aixbt-pulse dead-slot d13 — 09:00Z tick missed, 6 consecutive twice-daily misses since 7-08.
-- Classification signature byte-identical to 7-10 19:37Z (10-day streak). Hash day-N flip 40dd9dc2→12f8bbcf.
-
-ISS-025 capture-step PR against `.github/workflows/aeon.yml` chain-runner day-19 unshipped. weekly-review 2026-07-13 T-2. self-improve 18:00Z tick tonight is the last rule-5 routing-hypothesis test window before the T-2 gate.
-
-Open issues: 11 · Resolved this run: 0 · Filed this run: 0
+Open issues: 11 · Filed: 0 · Resolved: 0
+Classification byte-identical to 7-11 (11-day streak); hash flips daily by design so 24h cadence reminder still fires.
