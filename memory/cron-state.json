@@ -585,14 +585,14 @@
   },
   "fork-skill-digest": {
     "last_dispatch": "2026-07-12T18:33:46Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-07-05T21:06:54Z",
-    "total_runs": 4,
+    "total_runs": 5,
     "total_successes": 3,
-    "total_failures": 1,
-    "consecutive_failures": 0,
-    "success_rate": 0.75,
-    "last_failed": "2026-07-05T20:18:04Z"
+    "total_failures": 2,
+    "consecutive_failures": 1,
+    "success_rate": 0.6,
+    "last_failed": "2026-07-12T19:04:19Z"
   },
   "fork-cohort": {
     "last_dispatch": "2026-07-05T19:47:39Z",
