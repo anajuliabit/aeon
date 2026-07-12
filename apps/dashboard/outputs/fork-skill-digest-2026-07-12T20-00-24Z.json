@@ -1,0 +1,178 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Skill Digest",
+        "description": "2026-07-12"
+      },
+      "children": [
+        "main-finding",
+        "stats-section",
+        "separator-1",
+        "disable-section",
+        "separator-2",
+        "insights",
+        "full-report"
+      ]
+    },
+    "main-finding": {
+      "type": "Alert",
+      "props": {
+        "message": "70+ forks disable action-converter (upstream defaults on) — fleet is voting it as noise",
+        "type": "info"
+      },
+      "children": []
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-header",
+        "stats-grid"
+      ]
+    },
+    "stats-header": {
+      "type": "Heading",
+      "props": {
+        "text": "Scanning Stats",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-configured"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Active Forks Scanned",
+        "value": "75"
+      },
+      "children": []
+    },
+    "stat-configured": {
+      "type": "Stat",
+      "props": {
+        "label": "Configured",
+        "value": "73"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "disable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "disable-header",
+        "disable-table"
+      ]
+    },
+    "disable-header": {
+      "type": "Heading",
+      "props": {
+        "text": "Skills with Highest Disable Rate",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "disable-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Forks Disabled",
+          "Percentage"
+        ],
+        "rows": [
+          [
+            "action-converter",
+            "~71",
+            "97%"
+          ],
+          [
+            "search-skill",
+            "~71",
+            "97%"
+          ],
+          [
+            "security-digest",
+            "~69",
+            "95%"
+          ],
+          [
+            "github-trending",
+            "~67",
+            "92%"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "insights": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-skills",
+        "customizer"
+      ]
+    },
+    "new-skills": {
+      "type": "Text",
+      "props": {
+        "text": "New fork-only skills: swarm-ai-research/atlas + atlas-layers + atlas-improve",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "customizer": {
+      "type": "Text",
+      "props": {
+        "text": "Heaviest customizer: Svector-anu/skopos-aeon (22 overrides, crypto)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "full-report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Fork Skill Digest Report",
+        "href": "https://github.com/aaronjmars/aeon/blob/main/articles/fork-skill-digest-2026-07-12.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

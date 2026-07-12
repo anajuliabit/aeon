@@ -1,53 +1,39 @@
 {
-  "last_run": "2026-07-05",
+  "last_run": "2026-07-12",
   "target_repo": "aaronjmars/aeon",
-  "n_active": 79,
-  "n_configured": 78,
+  "n_active": 75,
+  "n_configured": 73,
   "n_template": 0,
-  "n_unreadable": 1,
+  "n_unreadable": 2,
   "buckets": {
     "DEFAULT_FLIP_ENABLE": [],
     "DEFAULT_FLIP_DISABLE": [
-      {"skill": "action-converter", "forks": 77, "pct": 0.99},
-      {"skill": "search-skill", "forks": 77, "pct": 0.99},
-      {"skill": "security-digest", "forks": 77, "pct": 0.99},
-      {"skill": "deal-flow", "forks": 76, "pct": 0.97},
-      {"skill": "defi-overview", "forks": 76, "pct": 0.97},
-      {"skill": "goal-tracker", "forks": 76, "pct": 0.97},
-      {"skill": "reflect", "forks": 76, "pct": 0.97},
-      {"skill": "unlock-monitor", "forks": 76, "pct": 0.97},
-      {"skill": "autoresearch", "forks": 75, "pct": 0.96},
-      {"skill": "github-trending", "forks": 75, "pct": 0.96},
-      {"skill": "reg-monitor", "forks": 75, "pct": 0.96},
-      {"skill": "self-improve", "forks": 75, "pct": 0.96},
-      {"skill": "skill-evals", "forks": 75, "pct": 0.96},
-      {"skill": "vuln-scanner", "forks": 75, "pct": 0.96},
-      {"skill": "list-digest", "forks": 74, "pct": 0.95},
-      {"skill": "agent-buzz", "forks": 73, "pct": 0.94},
-      {"skill": "cost-report", "forks": 73, "pct": 0.94},
-      {"skill": "skill-graph", "forks": 73, "pct": 0.94},
-      {"skill": "token-pick", "forks": 73, "pct": 0.94},
-      {"skill": "skill-health", "forks": 72, "pct": 0.92},
-      {"skill": "token-movers", "forks": 72, "pct": 0.92},
-      {"skill": "fork-cohort", "forks": 71, "pct": 0.91},
-      {"skill": "skill-analytics", "forks": 71, "pct": 0.91},
-      {"skill": "narrative-tracker", "forks": 69, "pct": 0.88},
-      {"skill": "aixbt-pulse", "forks": 68, "pct": 0.87},
-      {"skill": "defi-monitor", "forks": 48, "pct": 0.62},
-      {"skill": "token-alert", "forks": 44, "pct": 0.56}
+      {"skill": "action-converter", "forks": 71, "pct": 0.97},
+      {"skill": "search-skill", "forks": 71, "pct": 0.97},
+      {"skill": "security-digest", "forks": 69, "pct": 0.95},
+      {"skill": "github-trending", "forks": 67, "pct": 0.92},
+      {"skill": "goal-tracker", "forks": 49, "pct": 0.67},
+      {"skill": "narrative-tracker", "forks": 46, "pct": 0.63},
+      {"skill": "skill-health", "forks": 45, "pct": 0.62},
+      {"skill": "defi-overview", "forks": 43, "pct": 0.59},
+      {"skill": "token-pick", "forks": 41, "pct": 0.56},
+      {"skill": "reflect", "forks": 38, "pct": 0.52},
+      {"skill": "self-improve", "forks": 37, "pct": 0.51}
     ],
-    "MODEL_CONSENSUS": [
-      {"skill": "smithery-manifest", "model": "claude-sonnet-4-6", "forks": 34}
-    ],
+    "MODEL_CONSENSUS": [],
     "VAR_HOTSPOT": [],
     "EMERGING": []
   },
-  "fork_only_skills": [],
+  "fork_only_skills": [
+    {"fork": "swarm-ai-research/aeon-atlas", "skill": "atlas"},
+    {"fork": "swarm-ai-research/aeon-atlas", "skill": "atlas-layers"},
+    {"fork": "swarm-ai-research/aeon-atlas", "skill": "atlas-improve"}
+  ],
   "fingerprints": [
-    {"fork": "SahilParikh03/aeon", "total_overrides": 176, "dominant_category": "meta"},
-    {"fork": "mnemedb/aeon", "total_overrides": 174, "dominant_category": "meta"},
-    {"fork": "NASTYZUNI/aeon", "total_overrides": 174, "dominant_category": "meta"},
-    {"fork": "dannysrod/aeon", "total_overrides": 174, "dominant_category": "meta"},
-    {"fork": "daxaur/aeon", "total_overrides": 174, "dominant_category": "meta"}
+    {"fork": "Svector-anu/skopos-aeon", "total_overrides": 22, "dominant_category": "crypto"},
+    {"fork": "alpenflow/aeon", "total_overrides": 21, "dominant_category": "meta"},
+    {"fork": "Marr554/aeon", "total_overrides": 17, "dominant_category": "content"},
+    {"fork": "swarm-ai-research/aeon-atlas", "total_overrides": 15, "dominant_category": "fork-only"},
+    {"fork": "tomscaria/aeon", "total_overrides": 14, "dominant_category": "mixed"}
   ]
 }

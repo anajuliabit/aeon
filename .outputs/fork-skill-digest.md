@@ -1,16 +1,16 @@
-*Fork Skill Digest — 2026-07-05*
-77 forks disable action-converter (upstream defaults on) — fleet is voting it as noise
+*Fork Skill Digest — 2026-07-12*
+70+ forks disable action-converter (upstream defaults on) — fleet is voting it as noise
 
-Scanned 79 active forks; 78 are configured.
+Scanned 75 active forks; 73 are configured.
 
 Flip disable (upstream on → fleet off):
-- action-converter — 77 forks (99%)
-- search-skill — 77 forks (99%)
-- security-digest — 77 forks (99%)
+- action-converter — ~71 forks (97%)
+- search-skill — ~71 forks (97%)
+- security-digest — ~69 forks (95%)
+- github-trending — ~67 forks (92%)
 
-Model consensus:
-- smithery-manifest → claude-sonnet-4-6 (34 forks)
+New fork-only skills: swarm-ai-research/atlas + atlas-layers + atlas-improve
 
-Heaviest customizer: SahilParikh03/aeon (176 overrides, meta)
+Heaviest customizer: Svector-anu/skopos-aeon (22 overrides, crypto)
 
-Full report: https://github.com/aaronjmars/aeon/blob/main/articles/fork-skill-digest-2026-07-05.md
+Full report: https://github.com/aaronjmars/aeon/blob/main/articles/fork-skill-digest-2026-07-12.md
