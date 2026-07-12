@@ -982,3 +982,56 @@ Prices from token-alert 12:54Z (7-08 12:00Z batch caught up at 12:54Z, still dar
 - **12:00 UTC batch dark day-12** — 7-09 12:00Z tick still un-dispatched at 14:17Z hb (2h past slot). 20:00Z hb will verify extension.
 - **aixbt-pulse dead-slot day-11** — 7-09 09:00Z tick MISSED. State file ~283h stale.
 - **ISS-025 capture-step PR day-17** unshipped. Weekly-review 7-13 T-4. Self-improve 7-09 18:00Z tick is next routing-hypothesis test window.
+
+## 2026-07-12 highlights
+
+### Tape + arcs
+- **34% green top-100 median top-50 -0.33%** — fades hard from 7-11 69.6%/+0.02% relief-tail (7-10 was 72%/+1.1% peak). Broadening participation of 7-10 relief-bounce fully drains into scattered movers.
+- **BTC arc day-3 close is confirmation candle** — 7-12 spot band $63,941 (09:08Z) → $63,972 (12:40Z) → $64,130 (16:29Z) holds above $63.5k gate; `reclaim63500Alerted=true` holds; $65,900 full-reclaim next (~$1,770 above 16:29Z spot). 7d +1.53% supports soft-fade arc.
+- **SOL/HYPE rotation-out DEEPENS day-2 asymmetric** — SOL -1.83% continuation (7d flat -4.94%), HYPE +0.84% partial reversal (from -2.5%). JTO/ZRO in losers confirm SOL-ecosystem MEV/L2-messaging weakness.
+
+### Reference-case zero-arc
+- **LAB day-5 -34.94% / 7d -96.93%** — 5-day cumulative loss ~99% (0.03× 7d value). Pattern: 7-08 -13% → 7-09 -59% → 7-10 -6% ("floor" per pattern-recognition) → 7-11 -32% (invalidated floor) → 7-12 -34.9%. `-59%/day sellers-exhaust d3 floor` heuristic **failed on 5 days of data**. Reference case for in-progress -95% zero-arcs. LAB #4 trending endpoint (TRENDING+DOWN confirmed).
+- **B (BUILDon) day-2 dead-cat INVALIDATES** — 7-11 day-2 top-winner (+16.22%) → today -27.29% (CAPITULATION, vol/mcap 0.66 over 0.25 gate). Same 1-day-breakout-unwind but sharper. VELVET's 1-day-lifespan was not an anomaly.
+
+### One-day-breakout-unwind pattern durable at n=5
+- **BEAT -21.38%** (reverses 7-11 +32.42% solo-breakout; 7d -2.37% → -18.44% = 16-pt reversal) — joins EIGEN/NEX/MORPHO.
+- **TIBBIR -10.55%** (reverses 7-11 +20.46% day-2 top-winner; 7d still positive but momentum broken) — 5th instance.
+- Pattern: "breakout must hold day-2 to be trusted" holds across 5 instances. EIGEN (7-09→7-10 +11%→-4%), NEX (7-09→7-10 +32%→-37%), MORPHO (7-10→7-11 +11%→-8%), BEAT (7-11→7-12 +32%→-21%), TIBBIR (7-11→7-12 +20%→-10.5%).
+
+### Pattern-recognition heuristics — 7-12 updates
+- **CASHCAT PUMP-RISK 24-48h decay RE-VALIDATES** — trending day-7 but drops out of top-10 winners with -1.2%. 7-11 was heuristic-invalidation-day (+36% sustained), 7-12 reverts. Heuristic viable at n>1, not deterministic at n=1.
+- **WELL "participation-vanish → floor" heuristic INVALIDATED** — 6.35× intraday vol resurrection ($2,266K, strongest print since 7-08 $3,077K) on -2.97% red print = distribution shape, not floor. Rhymes-but-inverts 7-05→7-07 accumulation shape. MEMORY read for WELL revises to "distribution-with-return" per today's resurrection on red.
+
+### DEXE fresh BREAKOUT (watchlist-add candidate)
+- Rank #42 +14.98% / 7d +75.30% / 1h +2.65% • vol $76M · mcap $1.95B · [BREAKOUT MAJOR-ish]
+- First fresh sub-#50 BREAKOUT in a week; 7d sustained not flash; mid-cap credible. Governance/DEX-aggregator narrative. DEXE also trending endpoint (winner+trending = strong signal).
+- **Add to watchlist next reflect cycle if move sustains.**
+
+### Watchlist arc: reclaim → give-back → rail-breach
+- **7-10 watchlist-wide RECLAIM day-2** (3 alerts fired) — REPPO dual-rail +30.04% + vol 4.73× (only such print since 7-01), GITLAWB +34.42% full reclaim of 7-08 -23% capitulation, MAMO +2.6% shallow bounce, WELL -0.95% soft.
+- **7-11 GIVE-BACK day-1** (0 alerts, all under 15% rail) — REPPO -9.99% ~1/3 of 7-10 gains back (vol 2.69× elevated but 1/4 of 7-10 = orderly profit-take); GITLAWB -9.18% ~1/3 back (vol 0.49× half of 7-10 = participation falls with price); MAMO +3.94% day-2 continuation; WELL -0.44% day-5 red vol 0.26× (participation-vanish → floor threshold approaching).
+- **7-12 GITLAWB SECOND-LEG rings 15% rail** — 24h **-19.49%** breaches (1 alert fired). Extends 7-11 -9.18% with fresh -19% cascade; compound 2-day ~-28% fully reverses 7-10 +34% reclaim back below pre-reclaim $0.0000443 handle. Vol 1.02× flat (0.86× 5d baseline) = participation-steady-selling not capitulation.
+- **REPPO stalls flat -0.09%** — decouples from GITLAWB cascade; vol 1.06× baseline (post-breakout tail rolls into baseline lifting mean 2.5× from prior window). Day-2 give-back arrested near $0.029.
+- **MAMO bounce fades flat -0.57%** — day-3 flatlines, first 24h red since bounce began; vol 0.90× flat.
+- **WELL vol resurrection on red = distribution shape** — see pattern-recognition update above.
+
+### PUMP unlock day-0 FIRING TODAY
+- 82.5B tokens / 22.2% mcap / ~$135M (2× daily vol) hits float single day.
+- Pre-derisked -2.4%/24h -7.9%/7d at $0.00140; week's build -5% 7-11 + -2.4% 7-12 = ~-7.5% cumulative pre-derisking.
+- Buybacks burned 42% supply counterbalance; futures OI surged pre-event = leveraged positioning risk.
+- Insiders "deeply underwater" from $0.004 ICO (-65% today).
+- Flowslikeosmo tokenomics-alignment lens dominated 7-10 list-digest; fresh 7-12 corroboration from Noxa/Robinhood immutable-launch thesis.
+- Post-event dynamics = tomorrow's daily-routine surface.
+
+### Noxa Fun / Robinhood immutable-launch axis (NEW)
+- **@Flowslikeosmo 7-12 list-digest** — $5.36M of $5.58M monthly fees in last week alone (96% concentration = the tell); immutable → verifiable → rumor dies same day.
+- **@thesaint_ 7-12** — "airdrops dead / project farming users = new meta"; alignment via aligned participation (project pays users not speculators).
+- Same tokenomics-alignment axis, two angles: Flowslikeosmo = alignment via architecture, thesaint_ = alignment via aligned participation.
+- **2-operator convergence same day** (previously solo-Flowslikeosmo). Extends SLX/VELVET/LIT/VVV/PUMP lineage.
+
+### Fleet-side (crypto-adjacent)
+- **12:00 UTC batch dark day-15** — 7-12 12:00Z slot catch-up partial: token-alert 12:47Z + btc-levels 12:40Z under operator invocation; broader 8-skill batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) still last_success 2026-06-28.
+- **aixbt-pulse dead-slot day-14** — 7-11 21:00Z tick MISSED (7 consecutive twice-daily slots missed since 7-08). 7-12 21:00Z = break-vs-continue test.
+- **ISS-025 capture-step PR day-20** unshipped; weekly-review 7-13 **T-1**. Rule-5 structural block CODIFIED; operator direct-author sole path.
+- **SLX open pick day-18 CATASTROPHIC** — no fresh CG print (last $0.256 on 7-05 12:59Z, 7d stale); daily-routine 7-10 trending endpoint $0.174 = -63.4% vs $0.4753 entry stands. Weekly-review 7-13 T-1 deadline.

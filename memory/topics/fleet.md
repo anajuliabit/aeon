@@ -1046,3 +1046,58 @@ state: what was built, recurring blockers, and health.
 - BTC broke $61k resistance yest, consolidating $61.0–$61.8k. $61.8k gate. **Spot ETF flip +$222M BTC net-in breaks 10d outflow streak; ETH ETFs +$29M same day.** TD Sequential buy signals across BTC/ETH/XRP/SOL. XRP breakout printed.
 - Sonnet 5 framed as **agentic-shift crystallization** — "AI war shifting from chat to agents." $2/$10 promo through Aug-31. GPT-5.6 Sol preview + Gemini 3.5 Flash both agent-first = table stakes.
 - Podman v6.0.0 + Immich 3.0 shipped same window — self-host/sovereignty stack keeps compounding.
+
+## 2026-07-12 fleet snapshot
+
+### State roll-up (14:16Z heartbeat)
+- **43 enabled skills, verdict DEGRADED, 11 open issues** (4 critical / 4 high / 3 medium — ISS-005/007/009/010/011/016/018/019/020/021/025).
+- **Chronic ~17-skill sr<0.5 tail unchanged** — ISS-019/020/021/025 sandbox-truncation systemic day-20: cost-report 0.11, skill-analytics 0.14, reg-monitor 0.14, vuln-scanner 0.16, security-digest 0.32, market-context-refresh 0.32, narrative-tracker 0.33, search-skill 0.37, fleet-control 0.40, skill-health 0.41, self-improve 0.43, goal-tracker 0.43, action-converter 0.43, skill-evals 0.43, reflect 0.45, list-digest 0.45, aixbt-pulse 0.47.
+- **skill-health hash `12f8bbcf`** (day-N 18→19 flip; classification byte-identical **10-day streak**).
+- **skill-graph NO_CHANGE day-7** — 191/43/5/0/0/21 identical vs 2026-07-05 baseline. Silent-exit path taken. Stable-architecture streak week-1 confirmed.
+
+### Batch-dark + dead-slot state
+- **12:00 UTC batch dark day-15** — 8 batch skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) still last_success 2026-06-28. **7-12 slot catch-up partial**: token-alert dispatched 12:39Z + succeeded 12:47Z (fired 1 alert GITLAWB -19.49%) + btc-levels 12:40Z under operator invocation. Same slot-level-not-skill-level pattern as 7-10 13:31Z + 7-11 12:39Z. Broader 8-skill batch remains dark. Per ISS-027.
+- **aixbt-pulse dead-slot day-14** — 7-11 21:00Z tick MISSED (7 consecutive twice-daily slots missed since 7-08 09:00Z). 7-12 21:00Z = break-vs-continue test.
+- **operator-scorecard chronic Mon 10:30Z miss** — 8 consecutive Monday misses through 7-06; next tick Mon 7-13 **T-1**.
+- **weekly-shiplog + cost-report Mon 7-06 miss** — 13d gap = 1.86× 7d interval, approaching 2× threshold; 7-13 Mon tick is next slot.
+
+### Weekly-review deadline T-1 (Mon 2026-07-13) — twin gate
+- (a) **SLX open pick day-18 CATASTROPHIC recut** — no fresh CG print (last $0.256 on 7-05 12:59Z, 7d stale); daily-routine 7-10 trending endpoint $0.174 = -63.4% vs $0.4753 entry stands. Operator-owned slot per weekly-review action-list.
+- (b) **ISS-025 capture-step PR against `.github/workflows/aeon.yml` chain-runner day-20 unshipped** — rule-5 workflow-file structural block CODIFIED through 7-11 self-improve routing test (PR #162 authored `fix(daily-routine)` XAI-fallback tightening instead — adjacent target). Operator direct-author sole path per goal-tracker + skill-health + action-converter + reflect 7-11 consensus.
+- Next self-improve tick 7-13 18:00Z (post-deadline).
+
+### GH Actions morning-slot cron catch-up pattern durable
+- 7-06/07/08/09/10/11/12 all show 08:00Z + 12:00Z + 14:00Z + evening ticks firing ~9min–2h late.
+- 7-12 confirmed: thought-review 08:58Z + heartbeat 08:59Z + morning-brief 09:01Z + skill-freshness 09:07Z + daily-routine 09:08Z (~2h late), github-trending 10:46Z (~1h46min late), token-alert 12:47Z (~47min late), btc-levels 12:40Z (~25min late), heartbeat 14:16Z (~16min late), security-digest 14:20Z, skill-graph 17:36Z (Sun, ~36min late), agent-buzz 17:37Z, list-digest 17:36Z.
+- Recurring, expected — not skill-side.
+
+### github-trending 7-12 4-pick slate (all agent-runtime-adjacent OR sovereignty-of-infra)
+- **malisper/pgrust** TOP — Rust rewrite of Postgres, 774 today (28.7× baseline), passes 46k+ pg regression queries, WIP branch 300× faster on analytics (2× slower than ClickHouse on clickbench), disk-compatible pg 18.3, AI-assisted-development topic. Novel sovereignty-of-infra day-11 database rail.
+- **wonderwhy-er/DesktopCommanderMCP** HOLDOVER 909 today (2.8× DoD, 25×→70× baseline). MCP-becomes-infra day-3.
+- **google-labs-code/stitch-skills** HOLDOVER 340 today (3× DoD jump 117→340). Skills-primitive convergence day-12 — framework-fades-libraries-hold split.
+- **anthropics/claude-cookbooks** RETURNING 219 today (4.87× baseline); recent adds (Sentry-triage scheduled agent 6-09, roadtrip_planner managed agents 6-30, agentic-search benchmark reproduction 6-30, coordinator-pattern big-plan/small-execute 7-02). Anthropic-official agent-primitive curation day-1 NEW.
+- Dropped 20: 5 mature always-trending + C++ cluster of 4 + 2 HOLDOVER fade/same-story (obra/superpowers 740 below 916/d baseline; davila7/claude-code-templates same-story).
+
+### security-digest 7-12 VERDICT-FLIP DAY
+- **First "nothing urgent today" verdict in last 5 runs** — genuinely earned by simultaneous KEV-quiet + malware-quiet + no-fresh-critical, not dedupe erasure.
+- **npm malware wave d5-QUIET** — 0 fresh pkgs published after 7-11 14:22Z digest; 52+h genuine pause after 4-day escalation (7-08 240 → 7-09 27 → 7-10 51 → 7-11 polymarket brand-jack + safeinstall-cli).
+- **KEV feed 1.5-day quiet** since 7-10 Balbooa/iCagenda pair.
+- **PATCH THIS WEEK (3):** SiYuan Go 5-CVE cluster (CVE-2026-54069 unauth admin api + 3× stored-xss→rce 9.9 + CVE-2026-54070 bazaar readme xss 7.1; one commit `2d5d72223df4` fixes all; 34k-star self-hosted note app). TSDProxy Go GHSA-g936-7jqj-mwv8 CVSS 9.0 (internal proxy auth token forwarded → mgmt-api escalation on tailscale-adjacent reverse proxy, upgrade to `1.4.4-0.20260603142855-434819b4421e`). safeinstall-cli npm GHSA-xrmc-c5cg-rv7x CVSS 8.8 (supply-chain-defense tool's own agent guard has shell parsing bypass; **meta-signal worse than CVSS 8.8**; upgrade ≥0.10.2; extends chai-defender / tailwind-animate-v4 typosquat / polymarket brand-jack lineage).
+- **MONITOR (2):** babeldoc pip CVE-2026-54071 CVSS 7.8 pickle-deserialization RCE via CMap parser (no fix, all ≤0.6.2). clauster pip GHSA-h4g2-xfmw-q2c9 config-default unauth dashboard on non-loopback (no fix, ≤0.2.1).
+
+### agent-buzz 7-12 (mcp production hardening dominates)
+- @elliot1one contract-drift → gates.
+- @gautham_city_ MCP+oauth long-running loops.
+- @h100envy swe-agent 12.5% swe-bench = ACI-ceiling argument (architecturally-adjacent to Aeon's skill-primitive layering).
+- @DerekColley_ Shanghai 35b agents-a1 MoE matches 1T-scale = **4th Chinese-lab agent-runtime primitive** (joins TencentDB-Agent-Memory + alibaba/page-agent + CubeSandbox at n=4).
+- @KirkDBorne 574-page agentic-patterns book.
+- @shenli3514 awesome-agent-infra list.
+
+### list-digest 7-12 — 2-operator alignment-lens convergence
+- @Flowslikeosmo Noxa/Robinhood immutable-launch thesis ($5.36M of $5.58M monthly fees in last week alone; trust as architecture).
+- @thesaint_ "airdrops dead / project farming users = new meta".
+- Same tokenomics-alignment axis, two angles (architecture-alignment vs aligned-participation). 2-operator convergence same day (previously solo-Flowslikeosmo).
+
+### Blocked (waiting on operator)
+- **XAI quota recovery day-27** — Team 3a8b4c1e monthly credit exhausted 6-16. WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; prefetched paths serve list-digest/agent-buzz/token-pick.
+- **Operator on-chain config day-35** — defi-monitor NO_CONFIG; `memory/on-chain-watches.yml` needs `type: pool` / `type: position` entries. `ALCHEMY_API_KEY len=0`, `ETHERSCAN_API_KEY null`.
