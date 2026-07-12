@@ -1,0 +1,334 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Cohort — 2026-07-12",
+        "description": "aaronjmars/aeon"
+      },
+      "children": [
+        "stat-leveled",
+        "sep-1",
+        "stack-overview",
+        "sep-2",
+        "heading-leveled",
+        "text-leveled-note",
+        "grid-leveled",
+        "text-bbridgeers",
+        "sep-3",
+        "heading-stale",
+        "table-stale",
+        "sep-4",
+        "heading-new",
+        "table-new",
+        "sep-5",
+        "link-report"
+      ]
+    },
+    "stat-leveled": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks leveled up to POWER",
+        "value": "17",
+        "delta": "+17",
+        "trend": "up"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-overview",
+        "stack-status"
+      ]
+    },
+    "text-overview": {
+      "type": "Text",
+      "props": {
+        "text": "Of 209 forks, 37 ran in the last 7 days (46% of scanned)"
+      }
+    },
+    "stack-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-power",
+        "badge-active",
+        "badge-stale",
+        "badge-cold"
+      ]
+    },
+    "badge-power": {
+      "type": "Badge",
+      "props": {
+        "text": "POWER: 31"
+      }
+    },
+    "badge-active": {
+      "type": "Badge",
+      "props": {
+        "text": "ACTIVE: 6"
+      }
+    },
+    "badge-stale": {
+      "type": "Badge",
+      "props": {
+        "text": "STALE: 8"
+      }
+    },
+    "badge-cold": {
+      "type": "Badge",
+      "props": {
+        "text": "COLD: 35"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-leveled": {
+      "type": "Heading",
+      "props": {
+        "text": "Leveled up to POWER",
+        "level": "h3"
+      }
+    },
+    "text-leveled-note": {
+      "type": "Text",
+      "props": {
+        "text": "16 from ACTIVE + 1 from COLD — all added skills this week",
+        "variant": "caption"
+      }
+    },
+    "grid-leveled": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "sm"
+      },
+      "children": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8",
+        "b9",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16"
+      ]
+    },
+    "b1": {
+      "type": "Badge",
+      "props": {
+        "text": "@TakamiyaZee"
+      }
+    },
+    "b2": {
+      "type": "Badge",
+      "props": {
+        "text": "@yindaqiu"
+      }
+    },
+    "b3": {
+      "type": "Badge",
+      "props": {
+        "text": "@gitlumen-team"
+      }
+    },
+    "b4": {
+      "type": "Badge",
+      "props": {
+        "text": "@lawbworld-tech"
+      }
+    },
+    "b5": {
+      "type": "Badge",
+      "props": {
+        "text": "@clawhunter"
+      }
+    },
+    "b6": {
+      "type": "Badge",
+      "props": {
+        "text": "@zszkey"
+      }
+    },
+    "b7": {
+      "type": "Badge",
+      "props": {
+        "text": "@pezetel"
+      }
+    },
+    "b8": {
+      "type": "Badge",
+      "props": {
+        "text": "@aeoncity-hub"
+      }
+    },
+    "b9": {
+      "type": "Badge",
+      "props": {
+        "text": "@freezerboi"
+      }
+    },
+    "b10": {
+      "type": "Badge",
+      "props": {
+        "text": "@ashneil12"
+      }
+    },
+    "b11": {
+      "type": "Badge",
+      "props": {
+        "text": "@sparkleware"
+      }
+    },
+    "b12": {
+      "type": "Badge",
+      "props": {
+        "text": "@sinfronterasai"
+      }
+    },
+    "b13": {
+      "type": "Badge",
+      "props": {
+        "text": "@damo-nu11"
+      }
+    },
+    "b14": {
+      "type": "Badge",
+      "props": {
+        "text": "@nigelon11"
+      }
+    },
+    "b15": {
+      "type": "Badge",
+      "props": {
+        "text": "@UIZorrot"
+      }
+    },
+    "b16": {
+      "type": "Badge",
+      "props": {
+        "text": "@beijiangqukuailian"
+      }
+    },
+    "text-bbridgeers": {
+      "type": "Text",
+      "props": {
+        "text": "@BBridgeers — skopos-aeon (6 skills enabled, back from COLD)",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-stale": {
+      "type": "Heading",
+      "props": {
+        "text": "Went stale (worth a check-in)",
+        "level": "h3"
+      }
+    },
+    "table-stale": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Fork",
+          "Status"
+        ],
+        "rows": [
+          [
+            "@penguinxbt",
+            "Last run 11d ago (dropped from POWER)"
+          ],
+          [
+            "@usepaxterapp, @stefrogovskyi, @AmithKumar1",
+            "10–13d quiet"
+          ]
+        ]
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "New running forks",
+        "level": "h3"
+      }
+    },
+    "table-new": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Fork",
+          "Skills"
+        ],
+        "rows": [
+          [
+            "@Svector-anu",
+            "12"
+          ],
+          [
+            "@Aluma",
+            "22"
+          ],
+          [
+            "@aeonbookai",
+            "5"
+          ],
+          [
+            "@abhirajprasad",
+            "—"
+          ]
+        ]
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "articles/fork-cohort-2026-07-12.md",
+        "source": "Fork Cohort"
+      }
+    }
+  }
+}
