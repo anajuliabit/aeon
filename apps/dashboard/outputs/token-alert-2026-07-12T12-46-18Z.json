@@ -1,0 +1,113 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert",
+        "description": "2026-07-12"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price-section",
+        "separator-1",
+        "trigger-section"
+      ]
+    },
+    "price-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-gitlawb",
+        "stats-stack"
+      ]
+    },
+    "heading-gitlawb": {
+      "type": "Heading",
+      "props": {
+        "text": "GITLAWB",
+        "level": "h2"
+      }
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-price",
+        "stat-volume",
+        "badge-volume-ratio"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.00004172",
+        "delta": "-19.49%",
+        "trend": "down"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$469K"
+      }
+    },
+    "badge-volume-ratio": {
+      "type": "Badge",
+      "props": {
+        "text": "0.86x average",
+        "variant": "outline"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trigger-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trigger-alert",
+        "analysis-text"
+      ]
+    },
+    "trigger-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Trigger",
+        "message": "-19% breach of 15% rail",
+        "type": "warning"
+      }
+    },
+    "analysis-text": {
+      "type": "Text",
+      "props": {
+        "text": "Second-leg give-back extends 7-11 -9%, fully reverses 7-10 +34% reclaim back below the pre-reclaim handle. Participation flat (vol 1.02x 7-11).",
+        "variant": "body"
+      }
+    }
+  }
+}
