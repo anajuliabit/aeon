@@ -1,14 +1,12 @@
 ## Summary
 
-**btc-levels run — 2026-07-12 08:56Z**
+**btc-levels 12:40Z run — no alerts.**
 
-| | |
-|---|---|
-| Spot | $63,946.83 |
-| Daily close (2026-07-11) | $63,892.79 |
-| Leverage-review (≤$45k) | Clear |
-| Breakdown close (<$60,500) | Clear |
-| Reclaim $63,500 | Already alerted (armed, spot above gate; $60,500 re-arm not triggered) |
-| Reclaim $65,900 | Not yet — ~$1,953 away |
+- **Spot:** $63,972.02 (+$25 vs 08:56Z tick)
+- **Daily close (2026-07-11):** $63,892.79 — well above $60,500 breakdown level
+- **Leverage-review trigger** (≤$45k): not active
+- **Breakdown** (<$60,500 close): not triggered
+- **Reclaim $63,500**: already flagged true — no re-alert
+- **Reclaim $65,900**: spot ~$1,928 below trigger — not reached
 
-No alerts fired. No notification sent. State and log committed (`b13ca37`).
+BTC arc day-3 holds with spot steady above the $63.5k reclaim gate. Next trigger is $65,900 full-reclaim confirmation (~$1,928 away). No notification sent.
