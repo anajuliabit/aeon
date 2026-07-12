@@ -213,8 +213,8 @@
     "last_error": "6dcbbd2\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "goal-tracker": {
-    "last_dispatch": "2026-07-11T18:11:47Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-12T18:33:46Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-11T18:17:39Z",
     "total_runs": 107,
     "total_successes": 46,
@@ -225,8 +225,8 @@
     "last_error": "3d5a0c3\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-health": {
-    "last_dispatch": "2026-07-11T18:11:47Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-12T18:33:46Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-11T18:17:30Z",
     "total_runs": 113,
     "total_successes": 46,
@@ -237,8 +237,8 @@
     "last_error": "ad46c6b\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "reflect": {
-    "last_dispatch": "2026-07-11T18:11:47Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-12T18:33:46Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-11T18:19:55Z",
     "total_runs": 103,
     "total_successes": 46,
@@ -249,8 +249,8 @@
     "last_error": "5b6c18a\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "action-converter": {
-    "last_dispatch": "2026-07-11T18:11:47Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-12T18:33:46Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-11T18:20:35Z",
     "total_runs": 109,
     "total_successes": 47,
@@ -584,8 +584,8 @@
     "last_error": "f830df7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "fork-skill-digest": {
-    "last_dispatch": "2026-07-05T20:42:44Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-12T18:33:46Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-05T21:06:54Z",
     "total_runs": 4,
     "total_successes": 3,
