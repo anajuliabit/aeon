@@ -1,0 +1,225 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-07-12"
+      },
+      "children": [
+        "summary-line",
+        "sep0",
+        "stats-grid",
+        "sep1",
+        "blocked-section",
+        "sep2",
+        "on-track-section",
+        "sep3",
+        "sources-text"
+      ]
+    },
+    "summary-line": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "summary-text",
+        "degrading-badge"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "6 goals — 0 at risk, 0 needs attention, 2 on track, 4 blocked, 0 done",
+        "variant": "lead"
+      }
+    },
+    "degrading-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↓ degrading",
+        "variant": "destructive"
+      }
+    },
+    "sep0": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "sm"
+      },
+      "children": [
+        "stat-total",
+        "stat-at-risk",
+        "stat-attention",
+        "stat-on-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "6"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "2"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "4"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3",
+        "blocked-item-4"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Alert",
+      "props": {
+        "title": "Sandbox-truncation systemic day 19",
+        "message": "self-improve rule 5 codified 7-11 (workflow-file class), 0d idle, 404 activity/14d (was ON TRACK ↓)\nAction: author `.github/workflows/aeon.yml` chain-runner capture-step PR before mon 2026-07-13 weekly-review.",
+        "type": "warning"
+      }
+    },
+    "blocked-item-2": {
+      "type": "Alert",
+      "props": {
+        "title": "12:00 UTC batch DARK day-14",
+        "message": "ISS-027 scheduler-side never-run, same rule 5 primitive, 0d idle, 345 activity/14d (was ON TRACK ↓)\nAction: author aeon.yml scheduler fix for 12:00Z slot batch (8-skill cluster still 6-28 last_success).",
+        "type": "warning"
+      }
+    },
+    "blocked-item-3": {
+      "type": "Alert",
+      "props": {
+        "title": "XAI quota recovery day-26",
+        "message": "waiting on operator team-credit top-up since 2026-06-16, 0d idle, 236 activity/14d (flat)\nAction: top up XAI team 3a8b4c1e credit; PR #162 hardens fallback, quota still exhausted.",
+        "type": "warning"
+      }
+    },
+    "blocked-item-4": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator on-chain config day 34",
+        "message": "waiting on operator config + API keys, 0d idle, 157 activity/14d (flat)\nAction: configure `memory/on-chain-watches.yml` pool/position + set ALCHEMY_API_KEY/ETHERSCAN_API_KEY.",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-item-1",
+        "on-track-item-2"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on-track-item-1": {
+      "type": "Alert",
+      "props": {
+        "title": "BTC $63.5k reclaim arc RE-ARMED day-2 holds",
+        "message": "0d idle, 900 activity/14d (flat)",
+        "type": "success"
+      }
+    },
+    "on-track-item-2": {
+      "type": "Alert",
+      "props": {
+        "title": "SLX open pick DAY-17 CATASTROPHIC",
+        "message": "0d idle, 292 activity/14d (flat)",
+        "type": "success"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
