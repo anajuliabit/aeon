@@ -1,0 +1,592 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-12"
+      },
+      "children": [
+        "market_summary",
+        "sep1",
+        "winners_heading",
+        "winners_table",
+        "sep2",
+        "losers_heading",
+        "losers_table",
+        "sep3",
+        "tweets_heading",
+        "tweets_crypto_section",
+        "tweets_ai_section",
+        "tweets_dev_section",
+        "sep4",
+        "paper_heading",
+        "paper_stack",
+        "sep5",
+        "issues_heading",
+        "issues_text",
+        "sep6",
+        "hn_heading",
+        "hn_stack"
+      ]
+    },
+    "market_summary": {
+      "type": "Text",
+      "props": {
+        "text": "tape fades — 25/73 top-100 green (down hard from 7-11's 69.6%), median top-50 -0.3%. BTC $63,941 -0.4% / 7d +1.5% (~$183 below 7-11 spot, still above $63.5k gate), ETH $1,803 +0.2%, BNB $573 -0.9%, SOL $76.64 -1.83% / 7d -4.94% (rotation-out extends), HYPE $67 +0.8%, DOGE $0.073 -1.6%. LAB day-5 cascade continues. filter kept 178/250.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Market Cap",
+          "Rank",
+          "Tags"
+        ],
+        "rows": [
+          [
+            "DEXE (DeXe)",
+            "$41.62",
+            "+15.0%",
+            "+75.3%",
+            "+2.6%",
+            "$76M",
+            "#42",
+            "BREAKOUT"
+          ],
+          [
+            "ULTIMA",
+            "$2,616",
+            "+13.3%",
+            "-11.6%",
+            "",
+            "$10M",
+            "#151",
+            "FADE"
+          ],
+          [
+            "ETHFI (Ether.fi)",
+            "$0.432",
+            "+6.3%",
+            "+3.4%",
+            "",
+            "$31M",
+            "#114",
+            ""
+          ],
+          [
+            "ARB (Arbitrum)",
+            "$0.0963",
+            "+6.1%",
+            "+22.5%",
+            "",
+            "$127M",
+            "#93",
+            ""
+          ],
+          [
+            "BMX (BitMart)",
+            "$0.330",
+            "+5.5%",
+            "-1.4%",
+            "",
+            "$9.7M",
+            "#249",
+            ""
+          ],
+          [
+            "ZANO",
+            "$10.18",
+            "+5.4%",
+            "+12.7%",
+            "",
+            "$1.5M",
+            "#196",
+            ""
+          ],
+          [
+            "ZEC (Zcash)",
+            "$525",
+            "+4.9%",
+            "+14.9%",
+            "",
+            "$287M",
+            "#14",
+            "MAJOR"
+          ],
+          [
+            "KAITO",
+            "$0.668",
+            "+4.7%",
+            "+10.6%",
+            "",
+            "$24M",
+            "#191",
+            ""
+          ],
+          [
+            "STABLE",
+            "$0.0372",
+            "+4.5%",
+            "+5.6%",
+            "",
+            "$15M",
+            "#71",
+            ""
+          ],
+          [
+            "币安人生",
+            "$0.706",
+            "+4.2%",
+            "-6.2%",
+            "",
+            "$11M",
+            "#86",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank",
+          "Tags/Notes"
+        ],
+        "rows": [
+          [
+            "LAB",
+            "$0.495",
+            "-34.9%",
+            "-96.9%",
+            "$99M",
+            "#190",
+            "CAPITULATION TRENDING+DOWN day-5 cascade"
+          ],
+          [
+            "B (BUILDon)",
+            "$0.132",
+            "-27.3%",
+            "-37.5%",
+            "$87M",
+            "#220",
+            "CAPITULATION"
+          ],
+          [
+            "BEAT (Audiera)",
+            "$2.28",
+            "-21.4%",
+            "-18.4%",
+            "$29M",
+            "#87",
+            "reverses 7-11 +32% solo-breakout"
+          ],
+          [
+            "TIBBIR (Virtuals)",
+            "$0.130",
+            "-10.5%",
+            "+12.6%",
+            "$1.5M",
+            "#223",
+            "reverses 7-11 day-2 win"
+          ],
+          [
+            "AWE",
+            "$0.0606",
+            "-9.5%",
+            "+6.7%",
+            "$5.4M",
+            "#237",
+            ""
+          ],
+          [
+            "KITE",
+            "$0.113",
+            "-7.5%",
+            "-6.5%",
+            "$13M",
+            "#135",
+            ""
+          ],
+          [
+            "ZRO (LayerZero)",
+            "$0.885",
+            "-5.8%",
+            "-2.8%",
+            "$19M",
+            "#132",
+            ""
+          ],
+          [
+            "IOTA",
+            "$0.0382",
+            "-5.2%",
+            "flat",
+            "$8M",
+            "#183",
+            ""
+          ],
+          [
+            "UB (Unibase)",
+            "$0.0727",
+            "-5.1%",
+            "-23.2%",
+            "$5.9M",
+            "#176",
+            ""
+          ],
+          [
+            "JTO (Jito)",
+            "$0.593",
+            "-5.0%",
+            "-19.8%",
+            "$24M",
+            "#133",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "tweets_crypto_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_crypto_label",
+        "tweets_crypto_text"
+      ]
+    },
+    "tweets_crypto_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "tweets_crypto_text": {
+      "type": "Text",
+      "props": {
+        "text": "PUMP unlock day-0 today — 82.5B tokens ($135M) hits float; buybacks burned 42% of supply, futures OI surged pre-event; PUMP spot -2.4% / 7d -7.9% at $0.00140 pre-derisked. Week's cliff: $RAIN $796M (7-11), $PUMP $135M (7-12), $ADI $40M, $HYPE $30M.",
+        "variant": "body"
+      }
+    },
+    "tweets_ai_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_ai_label",
+        "tweets_ai_text"
+      ]
+    },
+    "tweets_ai_label": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "tweets_ai_text": {
+      "type": "Text",
+      "props": {
+        "text": "GPT-5.6 Sol/Terra/Luna GA'd 7-09 (default ChatGPT); Sol Ultra proved Cycle Double Cover Conjecture using 64 parallel subagents. Anthropic Claude Fable 5 back after export-control block, 80.3% SWE-Bench Pro at $10/$50 per 1M. Fortune: Anthropic overtook OpenAI on revenue (7-07). JADEPUFFER — first fully autonomous AI ransomware, Sysdig teardown same day.",
+        "variant": "body"
+      }
+    },
+    "tweets_dev_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_dev_label",
+        "tweets_dev_text"
+      ]
+    },
+    "tweets_dev_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "tweets_dev_text": {
+      "type": "Text",
+      "props": {
+        "text": "Bun 1.3 lands Bun.SQL — unified API across MySQL/MariaDB/PostgreSQL/SQLite. VS Code 1.110 adds agent plugins + agentic browser tools that verify their own changes. Copilot CLI ↔ Claude via MCP.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_primary_link",
+        "paper_primary_desc",
+        "paper_secondary_link",
+        "paper_secondary_desc"
+      ]
+    },
+    "paper_primary_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning",
+        "href": "https://arxiv.org/abs/2607.08758",
+        "source": "arXiv"
+      }
+    },
+    "paper_primary_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Treats scientific ideas as inheritable objects with GenomeDiff records for mutation/inheritance/import. 1,961 lineage traces + 1,085 Idea Genome objects across 10 domains. Strongest LLM-scientist reaches only 27.3% exact accuracy on lineage; structured context reshuffles rankings instead of helping uniformly.",
+        "variant": "caption"
+      }
+    },
+    "paper_secondary_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "UniClawBench",
+        "href": "https://arxiv.org/abs/2607.08768",
+        "source": "arXiv"
+      }
+    },
+    "paper_secondary_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Runner-up (↑26) — eval-quality axis day-10.",
+        "variant": "caption"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "issues_text": {
+      "type": "Text",
+      "props": {
+        "text": "no new issues (chronic pool = 10 open, 17-100d idle)",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "hn_item_1",
+        "hn_item_2",
+        "hn_item_3",
+        "hn_item_4",
+        "hn_item_5"
+      ]
+    },
+    "hn_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_1_link",
+        "hn_1_desc"
+      ]
+    },
+    "hn_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Prefer strict tables in SQLite",
+        "href": "https://evanhahn.com/prefer-strict-tables-in-sqlite/",
+        "score": "280"
+      }
+    },
+    "hn_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "type-affinity kill-list, \"it'll drift\" applies",
+        "variant": "caption"
+      }
+    },
+    "hn_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_2_link"
+      ]
+    },
+    "hn_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Nvidia/CoreWeave/Nebius circular financing of the GPU boom",
+        "href": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+        "score": "253"
+      }
+    },
+    "hn_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_3_link",
+        "hn_3_desc"
+      ]
+    },
+    "hn_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Show HN: Ant — JS runtime and ecosystem",
+        "href": "https://antjs.org",
+        "score": "260"
+      }
+    },
+    "hn_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "bun-adjacent",
+        "variant": "caption"
+      }
+    },
+    "hn_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_4_link",
+        "hn_4_desc"
+      ]
+    },
+    "hn_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Mesh LLM: distributed AI computing on iroh",
+        "href": "https://www.iroh.computer/blog/mesh-llm",
+        "score": "243"
+      }
+    },
+    "hn_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "sovereignty stack extends onto p2p rails",
+        "variant": "caption"
+      }
+    },
+    "hn_item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_5_link",
+        "hn_5_desc"
+      ]
+    },
+    "hn_5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "An agent in 100 lines of Lisp",
+        "href": "https://thebeach.dev/posts/lisp-agent/",
+        "score": "139"
+      }
+    },
+    "hn_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "minimalist agent-primitive",
+        "variant": "caption"
+      }
+    }
+  }
+}

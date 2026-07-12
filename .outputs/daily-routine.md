@@ -1,45 +1,45 @@
-*Daily Routine — 2026-07-11*
+*Daily Routine — 2026-07-12*
 
-_pulse mixed — 128/184 green (69.6%), median top-50 +0.02%; btc $64.1k +0.2% (7d +2.7%), eth $1.80k +1.4%; sol -1.1%, hype -2.5%. LAB day-4 cascade re-arms -32% (was -6% floor yesterday), VELVET dead-cat FAILS -20% (was +22% yesterday), MORPHO one-day breakout unwinds -8%._
+_tape fades — 25/73 top-100 green (down hard from 7-11's 69.6%), median top-50 -0.3%. BTC $63,941 -0.4% / 7d +1.5% (~$183 below 7-11 spot, still above $63.5k gate), ETH $1,803 +0.2%, BNB $573 -0.9%, SOL $76.64 -1.83% / 7d -4.94% (rotation-out extends), HYPE $67 +0.8%, DOGE $0.073 -1.6%. LAB day-5 cascade continues. filter kept 178/250._
 
-*Top 10 Winners (24h)*
-1. CASHCAT $0.201 (+36%) — day-6 trending, PUMP-RISK+MAJOR-VOL, mcap $199M
-2. BEAT $2.86 (+32%) — audiera rank #71, 7d -2.4% whipsaw high
-3. TIBBIR $0.145 (+20%) — ribbita by virtuals, 7d +34%
-4. B $0.187 (+16%) — BUILDon rank #177, 7d -15% dead-cat
-5. VIRTUAL $0.61 (+14%) — 7d +7%, vol $202M rank #113
-6. GRASS $0.415 (+14%) — reversal from FADE thesis d1-d2, 7d still -26%
-7. ZANO $9.66 (+13%) — 7d +6%
-8. UB $0.076 (+9%) — unibase
-9. BP $0.60 (+7.5%) — backpack token
-10. M $1.29 (+7.5%) — memecore rank #44, 7d -19%
+*Top Winners (24h)*
+1. DEXE (DeXe) — $41.62 +15.0% / 7d +75.3% / 1h +2.6% • $76M / #42 [BREAKOUT]
+2. ULTIMA — $2,616 +13.3% / 7d -11.6% • $10M / #151 [FADE]
+3. ETHFI (Ether.fi) — $0.432 +6.3% / 7d +3.4% • $31M / #114
+4. ARB (Arbitrum) — $0.0963 +6.1% / 7d +22.5% • $127M / #93
+5. BMX (BitMart) — $0.330 +5.5% / 7d -1.4% • $9.7M / #249
+6. ZANO — $10.18 +5.4% / 7d +12.7% • $1.5M / #196
+7. ZEC (Zcash) — $525 +4.9% / 7d +14.9% • $287M / #14 [MAJOR]
+8. KAITO — $0.668 +4.7% / 7d +10.6% • $24M / #191
+9. STABLE — $0.0372 +4.5% / 7d +5.6% • $15M / #71
+10. 币安人生 — $0.706 +4.2% / 7d -6.2% • $11M / #86
 
-*Top 10 Losers (24h)*
-1. LAB $0.77 (-32%) — capitulation d4, -91% 7d, vol $113M rank #145; MEMORY "floor at -6%" invalidated
-2. GWEI $0.060 (-21%) — ETHGas continues, -58% 7d
-3. VELVET $0.43 (-20%) — dead-cat fails, 7d flips +22% → -22% overnight
-4. MORPHO $2.08 (-8%) — one-day breakout unwind (7-09 +11% winner → today -8%)
-5. KAITO $0.61 (-8%) — 7d -2%
-6. EDGE $0.39 (-8%) — edgeX still 7d +50%
-7. BDX $0.090 (-7%) — beldex
-8. VVV $10.62 (-6%) — venice token continues weak, 7d -16%
-9. PUMP $0.00143 (-5%) — pre-unlock (22.2% mcap hits float Sat 7-12)
-10. APE $0.157 (-4%)
+*Top Losers (24h)*
+1. LAB — $0.495 **-34.9% / 7d -96.9%** • $99M / #190 [CAPITULATION TRENDING+DOWN] day-5 cascade
+2. B (BUILDon) — $0.132 -27.3% / 7d -37.5% • $87M / #220 [CAPITULATION]
+3. BEAT (Audiera) — $2.28 -21.4% / 7d -18.4% • $29M / #87 — reverses 7-11 +32% solo-breakout
+4. TIBBIR (Virtuals) — $0.130 -10.5% / 7d +12.6% • $1.5M / #223 — reverses 7-11 day-2 win
+5. AWE — $0.0606 -9.5% / 7d +6.7% • $5.4M / #237
+6. KITE — $0.113 -7.5% / 7d -6.5% • $13M / #135
+7. ZRO (LayerZero) — $0.885 -5.8% / 7d -2.8% • $19M / #132
+8. IOTA — $0.0382 -5.2% / 7d flat • $8M / #183
+9. UB (Unibase) — $0.0727 -5.1% / 7d -23.2% • $5.9M / #176
+10. JTO (Jito) — $0.593 -5.0% / 7d -19.8% • $24M / #133
 
 *Tweet Roundup*
-*Crypto:* market cap $2.28T (+$0.03T), fear/greed 23→26 easing; SK Hynix tokenized shares live on Telegram Wallet/Backpack/Ondo; ESMA warns crypto firms of MiCA-phishing wave; regulation overtakes geopolitics as narrative driver.
-*AI:* GPT-5.6 Sol Ultra publishes proof of the Cycle Double Cover Conjecture (HN 439pts); OpenAI ChatGPT Work + Sites feature ships (prompt → spreadsheet/deck/web app); Anthropic Claude task helper leaves desktop → mobile handoff + scheduled jobs beta (Max first).
-*Dev:* GLM-5.2 running on slow hardware hits HN #2 (849pts) — open-weight local runtime sovereignty; NVIDIA Build hosts GLM-5.2 endpoint; Z.ai launches ZCode to challenge Cursor/Claude Code/Copilot; Kimi K2.7 Code now in Copilot picker.
+*Crypto:* PUMP unlock day-0 today — 82.5B tokens ($135M) hits float; buybacks burned 42% of supply, futures OI surged pre-event; PUMP spot -2.4% / 7d -7.9% at $0.00140 pre-derisked. Week's cliff: $RAIN $796M (7-11), $PUMP $135M (7-12), $ADI $40M, $HYPE $30M.
+*AI:* GPT-5.6 Sol/Terra/Luna GA'd 7-09 (default ChatGPT); Sol Ultra proved Cycle Double Cover Conjecture using 64 parallel subagents. Anthropic Claude Fable 5 back after export-control block, 80.3% SWE-Bench Pro at $10/$50 per 1M. Fortune: Anthropic overtook OpenAI on revenue (7-07). JADEPUFFER — first fully autonomous AI ransomware, Sysdig teardown same day.
+*Dev:* Bun 1.3 lands Bun.SQL — unified API across MySQL/MariaDB/PostgreSQL/SQLite. VS Code 1.110 adds agent plugins + agentic browser tools that verify their own changes. Copilot CLI ↔ Claude via MCP.
 
 *Paper of the Day*
-"Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents" (Wu et al., 2607.08716) — separate memory agent runs alongside unmodified action agent, injects reminders on demand. +8.3pp Terminal-Bench, +6.8pp τ²-Bench. Directly relevant to Aeon's chronic memory/log pattern. https://huggingface.co/papers/2607.08716
+"Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning" (2607.08758) — treats scientific ideas as inheritable objects with GenomeDiff records for mutation/inheritance/import. 1,961 lineage traces + 1,085 Idea Genome objects across 10 domains. Strongest LLM-scientist reaches only 27.3% exact accuracy on lineage; structured context reshuffles rankings instead of helping uniformly. Runner-up: UniClawBench (2607.08768, ↑26) — eval-quality axis day-10.
 
 *GitHub Issues*
-- No new issues in operator repos since 6-25 (5 open advisor tickets #141-#145 chronic).
+- no new issues (chronic pool = 10 open, 17-100d idle)
 
 *HN Digest*
-1. [Apple sues OpenAI, accuses ex-employees of trade-secret theft](https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/) (975pts, 490c)
-2. [Show HN: GLM-5.2 running on my slow computer](https://github.com/JustVugg/colibri) (849pts, 210c) — open-weight local runtime
-3. [QuadRF can spot drones and see WiFi through my wall](https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/) (549pts)
-4. [GPT-5.6 Sol Ultra: proof of the Cycle Double Cover Conjecture](https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf) (439pts, 357c) — AI-does-math frontier
-5. [Good Tools Are Invisible](https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/) (409pts) — gingerbill/odin
+1. [Prefer strict tables in SQLite](https://evanhahn.com/prefer-strict-tables-in-sqlite/) (280pts) — type-affinity kill-list, "it'll drift" applies
+2. [Nvidia/CoreWeave/Nebius circular financing of the GPU boom](https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom) (253pts)
+3. [Show HN: Ant — JS runtime and ecosystem](https://antjs.org) (260pts) — bun-adjacent
+4. [Mesh LLM: distributed AI computing on iroh](https://www.iroh.computer/blog/mesh-llm) (243pts) — sovereignty stack extends onto p2p rails
+5. [An agent in 100 lines of Lisp](https://thebeach.dev/posts/lisp-agent/) (139pts) — minimalist agent-primitive
