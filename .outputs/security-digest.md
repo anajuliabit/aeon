@@ -1,32 +1,21 @@
-*Security Digest — 2026-07-11*
-Verdict: 3 to patch today (2 KEV Joomla + polymarket brand-jack day-2), 5 to schedule. _Sources: KEV ok, GH Advisory ok, EPSS ok_
-
-*PATCH TODAY*
-- [CVE-2026-56291](https://nvd.nist.gov/vuln/detail/CVE-2026-56291) + [CVE-2026-48939](https://nvd.nist.gov/vuln/detail/CVE-2026-48939) — Balbooa Forms + iCagenda (Joomla ext) · KEV added 2026-07-10 · EPSS 0.008 / 0.015
-  same-day KEV pair, both unauth arbitrary file upload → PHP RCE. joomla ecosystem, not tracked stack — awareness item.
-  → if joomla is deployed: disable Balbooa Forms + iCagenda extensions until vendor patch; assume post-compromise if admin panel was public.
-- [GHSA-59wg-mh66-248p +5](https://github.com/advisories/GHSA-59wg-mh66-248p) — polymarket + polygon 6-pkg brand-jack (npm) · type=malware · published 2026-07-10 16:12Z
-  day-2 escalation of yesterday's polymarket-kelly-stake-math. minute-clustered publish: polymarket-gamma-apis, polymarket-trader-apis, polymarket-apis, polygon-gamma-apis, polygon-gama-apis. wallet/api-key stealer targeting polymarket devs + polygon L2 tooling.
-  → grep lockfiles for those 6 names; if hit, remove + rotate polymarket api keys + wallet privkeys + polygon rpc creds. real sdks live under `@polymarket/*`.
-- [GHSA-99j7-fhr2-xfj4](https://github.com/advisories/GHSA-99j7-fhr2-xfj4) — `exploration` (crates.io) · removed for malicious code · published 2026-07-10
-  first tracked-stack malware crossover beyond npm this window. 1 version published 2026-06-02, yanked ~1h later, no evidence of usage per Socket. brand-jack wave day-4 signal.
-  → grep Cargo.lock for `exploration`; likely clean, log the check.
+*Security Digest — 2026-07-12*
+Verdict: nothing urgent today. 3 to schedule, 2 to monitor. _Sources: KEV, GH Advisory, EPSS_
 
 *PATCH THIS WEEK*
-- [CVE-2026-54088](https://github.com/advisories/GHSA-m93h-4hw7-5qcm) + [CVE-2026-54089](https://github.com/advisories/GHSA-xqp3-jq6g-x3qm) — filebrowser/v2 (Go) · critical pre-auth RCE + CVSS 9.1 auth-bypass · EPSS 0.005 / 0.003
-  command injection via auth-hook shell substitution + proxy-header forgery. self-hosted go admin, wide deploy.
-  → upgrade filebrowser past 2.63.18.
-- [CVE-2026-54072](https://github.com/advisories/GHSA-h29v-hj44-q8cv) — authorizerdev/authorizer (Go) · CVSS 9.3
-  unvalidated `redirect_uri` in `/authorize` leaks oauth2 tokens to attacker url.
-  → upgrade authorizer past commit bd3f5baf6d3d (2026-04-09).
-- [CVE-2026-54174](https://github.com/advisories/GHSA-fpg8-7664-jc5q) — chainguard apko + melange (Go) · CVSS 8.3
-  incomplete package integrity verification allows data-section substitution. build-tooling supply-chain.
-  → apko ≥1.2.9, melange ≥0.50.4.
-- [CVE-2026-49866](https://github.com/advisories/GHSA-cwc9-cp4j-mcvv) — @libp2p/gossipsub (npm) · CVSS 7.5 · EPSS 0.004
-  cpu dos via oversized IHAVE/IWANT control arrays. wide dep in web3 / ipfs / p2p stacks.
-  → upgrade @libp2p/gossipsub ≥16.0.0.
-- [CVE-2026-54063](https://github.com/advisories/GHSA-h69g-9hx6-f3v4) — xuri/excelize/v2 (Go) · CVSS 7.5 · EPSS 0.006
-  unbounded row-index allocation in worksheet parser → oom/panic. widely-used xlsx lib.
-  → upgrade excelize/v2 ≥2.11.0.
+- [siyuan-note 5-cve go dump](https://github.com/advisories/GHSA-hvr9-72v2-fff3) — siyuan-note/siyuan/kernel · 4 critical + 2 high coordinated 7-10 disclosure · CVSS up to 9.9 · EPSS ≤ 0.006 · no PoC referenced
+  unauth admin api via chrome-extension origin allowlist (CVE-2026-54069) anchors the batch, plus 3× stored-xss → rce 9.9 (CVE-2026-50551 / -54158 / -54067) + bazaar readme xss 7.1 (-54070). 34k-star self-hosted note app, filebrowser-class blast radius.
+  → upgrade kernel past commit 2d5d72223df4 (2026-06-28).
+- [GHSA-g936-7jqj-mwv8](https://github.com/advisories/GHSA-g936-7jqj-mwv8) — almeidapaulopt/tsdproxy (go) · CVSS 9.0 · no cve assigned · no PoC referenced
+  internal proxy auth token forwarded to backend services enables management-api escalation. tailscale-adjacent reverse proxy.
+  → upgrade to 1.4.4-0.20260603142855-434819b4421e.
+- [GHSA-xrmc-c5cg-rv7x](https://github.com/advisories/GHSA-xrmc-c5cg-rv7x) — safeinstall-cli (npm) · CVSS 8.8 · no cve · no PoC referenced
+  safeinstall agent-guard shell parser misses raw package execution. a supply-chain-defense tool with a bypass in its own guardrail — the tell is worse than the CVSS.
+  → upgrade to ≥0.10.2.
 
-_Other net-new malware not in tracked stack: 5-pkg 16:24Z enterprise-brand-jack (@higherlogic, @amtrav, @genie-auth, @att-ebiz, visa-cli-tools), type-atob/type-plint/type-elint typo cluster (20:33-37Z), authvaultx + auth-next-gen (7-11 00:07Z). Yesterday's @redhat-cloud-services 14-pkg wave already logged; deduped._
+*MONITOR*
+- [CVE-2026-54071](https://github.com/advisories/GHSA-m8gf-v64p-gfmg) — babeldoc (pip) · CVSS 7.8 · EPSS n/a · no fix yet
+  pickle deserialization in babeldoc/pdfminer/cmapdb.py CMap parser → arbitrary code exec on load. pdf tool used in academic + llm ingest pipelines.
+  → track ≥0.6.3; do not parse untrusted pdfs meanwhile.
+- [GHSA-h4g2-xfmw-q2c9](https://github.com/advisories/GHSA-h4g2-xfmw-q2c9) — clauster (pip) · no CVSS · no fix
+  non-loopback deployments serve dashboard unauthenticated when auth.enabled is unset. config-default trap, not a code bug.
+  → set `auth.enabled: true` or bind to loopback.

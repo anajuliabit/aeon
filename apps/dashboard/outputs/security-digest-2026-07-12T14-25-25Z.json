@@ -1,0 +1,406 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-12"
+      },
+      "children": [
+        "verdict-text",
+        "sep1",
+        "patch-section",
+        "sep2",
+        "monitor-section"
+      ]
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: nothing urgent today. 3 to schedule, 2 to monitor. Sources: KEV, GH Advisory, EPSS",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-heading",
+        "patch-item-1",
+        "patch-item-2",
+        "patch-item-3"
+      ]
+    },
+    "patch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "patch-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch-1-title",
+        "patch-1-meta",
+        "patch-1-desc",
+        "patch-1-fix"
+      ]
+    },
+    "patch-1-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "siyuan-note 5-cve go dump",
+        "href": "https://github.com/advisories/GHSA-hvr9-72v2-fff3",
+        "source": "siyuan-note/siyuan/kernel"
+      }
+    },
+    "patch-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "patch-1-severity",
+        "patch-1-cvss",
+        "patch-1-epss"
+      ]
+    },
+    "patch-1-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "4 critical + 2 high",
+        "variant": "destructive"
+      }
+    },
+    "patch-1-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.9",
+        "variant": "secondary"
+      }
+    },
+    "patch-1-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS ≤0.006",
+        "variant": "outline"
+      }
+    },
+    "patch-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth admin API via chrome-extension origin allowlist (CVE-2026-54069) anchors the batch, plus 3× stored-XSS → RCE 9.9 (CVE-2026-50551 / -54158 / -54067) + bazaar readme XSS 7.1 (-54070). 34k-star self-hosted note app, filebrowser-class blast radius.",
+        "variant": "body"
+      }
+    },
+    "patch-1-fix": {
+      "type": "Alert",
+      "props": {
+        "title": "Remediation",
+        "message": "Upgrade kernel past commit 2d5d72223df4 (2026-06-28)",
+        "type": "info"
+      }
+    },
+    "patch-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch-2-title",
+        "patch-2-meta",
+        "patch-2-desc",
+        "patch-2-fix"
+      ]
+    },
+    "patch-2-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-g936-7jqj-mwv8",
+        "href": "https://github.com/advisories/GHSA-g936-7jqj-mwv8",
+        "source": "almeidapaulopt/tsdproxy (go)"
+      }
+    },
+    "patch-2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "patch-2-cvss",
+        "patch-2-cve",
+        "patch-2-poc"
+      ]
+    },
+    "patch-2-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.0",
+        "variant": "destructive"
+      }
+    },
+    "patch-2-cve": {
+      "type": "Badge",
+      "props": {
+        "text": "No CVE assigned",
+        "variant": "outline"
+      }
+    },
+    "patch-2-poc": {
+      "type": "Badge",
+      "props": {
+        "text": "No PoC referenced",
+        "variant": "outline"
+      }
+    },
+    "patch-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Internal proxy auth token forwarded to backend services enables management-API escalation. Tailscale-adjacent reverse proxy.",
+        "variant": "body"
+      }
+    },
+    "patch-2-fix": {
+      "type": "Alert",
+      "props": {
+        "title": "Remediation",
+        "message": "Upgrade to 1.4.4-0.20260603142855-434819b4421e",
+        "type": "info"
+      }
+    },
+    "patch-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch-3-title",
+        "patch-3-meta",
+        "patch-3-desc",
+        "patch-3-fix"
+      ]
+    },
+    "patch-3-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-xrmc-c5cg-rv7x",
+        "href": "https://github.com/advisories/GHSA-xrmc-c5cg-rv7x",
+        "source": "safeinstall-cli (npm)"
+      }
+    },
+    "patch-3-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "patch-3-cvss",
+        "patch-3-cve",
+        "patch-3-poc"
+      ]
+    },
+    "patch-3-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.8",
+        "variant": "destructive"
+      }
+    },
+    "patch-3-cve": {
+      "type": "Badge",
+      "props": {
+        "text": "No CVE",
+        "variant": "outline"
+      }
+    },
+    "patch-3-poc": {
+      "type": "Badge",
+      "props": {
+        "text": "No PoC referenced",
+        "variant": "outline"
+      }
+    },
+    "patch-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Safeinstall agent-guard shell parser misses raw package execution. A supply-chain-defense tool with a bypass in its own guardrail — the tell is worse than the CVSS.",
+        "variant": "body"
+      }
+    },
+    "patch-3-fix": {
+      "type": "Alert",
+      "props": {
+        "title": "Remediation",
+        "message": "Upgrade to ≥0.10.2",
+        "type": "info"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-heading",
+        "monitor-item-1",
+        "monitor-item-2"
+      ]
+    },
+    "monitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "monitor-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-1-title",
+        "monitor-1-meta",
+        "monitor-1-desc",
+        "monitor-1-action"
+      ]
+    },
+    "monitor-1-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-54071 — babeldoc",
+        "href": "https://github.com/advisories/GHSA-m8gf-v64p-gfmg",
+        "source": "babeldoc (pip)"
+      }
+    },
+    "monitor-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-1-cvss",
+        "monitor-1-epss",
+        "monitor-1-status"
+      ]
+    },
+    "monitor-1-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.8",
+        "variant": "secondary"
+      }
+    },
+    "monitor-1-epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS n/a",
+        "variant": "outline"
+      }
+    },
+    "monitor-1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "No fix yet",
+        "variant": "destructive"
+      }
+    },
+    "monitor-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Pickle deserialization in babeldoc/pdfminer/cmapdb.py CMap parser → arbitrary code execution on load. PDF tool used in academic + LLM ingest pipelines.",
+        "variant": "body"
+      }
+    },
+    "monitor-1-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Track ≥0.6.3; do not parse untrusted PDFs meanwhile",
+        "type": "warning"
+      }
+    },
+    "monitor-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-2-title",
+        "monitor-2-meta",
+        "monitor-2-desc",
+        "monitor-2-action"
+      ]
+    },
+    "monitor-2-title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-h4g2-xfmw-q2c9 — clauster",
+        "href": "https://github.com/advisories/GHSA-h4g2-xfmw-q2c9",
+        "source": "clauster (pip)"
+      }
+    },
+    "monitor-2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "monitor-2-status"
+      ]
+    },
+    "monitor-2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "No fix",
+        "variant": "destructive"
+      }
+    },
+    "monitor-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Non-loopback deployments serve dashboard unauthenticated when auth.enabled is unset. Config-default trap, not a code bug.",
+        "variant": "body"
+      }
+    },
+    "monitor-2-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Set `auth.enabled: true` or bind to loopback",
+        "type": "warning"
+      }
+    }
+  }
+}
