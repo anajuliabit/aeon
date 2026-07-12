@@ -1,12 +1,19 @@
+Done. Quiet run.
+
+**Spot $64,130 / close 2026-07-11 $63,892.79 — no alerts fired.**
+
+Level check:
+- Leverage-review (≤$45k): clear
+- Breakdown (close < $60,500): clear — close $63,892 well above floor
+- Reclaim $63,500: already alerted (`reclaim63500Alerted=true`); re-arm condition (spot < $60,500) not met
+- Reclaim $65,900: spot $64,130 < $65,900 — ~$1,770 away
+
+BTC arc holds day-3 soft. State updated and committed.
+
 ## Summary
 
-**btc-levels 12:40Z run — no alerts.**
-
-- **Spot:** $63,972.02 (+$25 vs 08:56Z tick)
-- **Daily close (2026-07-11):** $63,892.79 — well above $60,500 breakdown level
-- **Leverage-review trigger** (≤$45k): not active
-- **Breakdown** (<$60,500 close): not triggered
-- **Reclaim $63,500**: already flagged true — no re-alert
-- **Reclaim $65,900**: spot ~$1,928 below trigger — not reached
-
-BTC arc day-3 holds with spot steady above the $63.5k reclaim gate. Next trigger is $65,900 full-reclaim confirmation (~$1,928 away). No notification sent.
+- Fetched CoinGecko `market_chart?days=2` — spot $64,130.18, close 2026-07-11 $63,892.79
+- All 4 levels evaluated: no alerts fired
+- Updated `memory/btc-levels-state.json` (spot bumped from $63,972 → $64,130)
+- Appended one-liner to `memory/logs/2026-07-12.md`
+- Committed both files (`bc7d7a9`)
