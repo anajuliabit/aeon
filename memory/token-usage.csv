@@ -723,3 +723,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-12,skill-graph,claude-opus-4-7,79,34408,6976646,138212
 2026-07-12,reflect,claude-opus-4-7,29,47886,3330789,160571
 2026-07-12,fork-cohort,claude-sonnet-4-6,34,28946,1961033,92311
+2026-07-12,btc-levels,claude-sonnet-4-6,13,5747,588925,51872
