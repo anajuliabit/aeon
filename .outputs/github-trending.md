@@ -1,27 +1,22 @@
-*GitHub Trending — 2026-07-11*
+*GitHub Trending — 2026-07-12*
 
-*Top pick* — [obra/superpowers](https://github.com/obra/superpowers)
-4 skills-library repos trending the same day; obra's is the framework-and-methodology layer under the libraries.
+*Top pick* — [malisper/pgrust](https://github.com/malisper/pgrust)
+Rust rewrite of Postgres from an 83d-old project passing 46k+ real pg regression tests — the "rewrite it in Rust" meme now has receipts.
 
-*AI/ML*
-• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 1,712 today (165k total) · Shell · [ACCELERATING]
-matt pocock ships his `.claude` directory as a curated skills lib; skills-primitive convergence hits 4 concurrent trenders.
-
-• [obra/superpowers](https://github.com/obra/superpowers) — ★ 1,013 today (252k total) · Shell · [ACCELERATING]
-jesse vincent's agentic-skills framework at 252k stars, highest-baseline skills artifact on the trending page today.
-
-• [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) — ★ 117 today (6.9k total) · TS · [RETURNING]
-google labs ships skills lib for stitch mcp server, cross-lab entry to the skills-open-standard convergence.
-
-• [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) — ★ 123 today (8.4k total) · TS · [ACCELERATING]
-fully-local 4-tier long-term memory pipeline, zero external api deps; sovereignty-stack + 3rd chinese-lab agent-runtime entry.
+*Infra*
+• [malisper/pgrust](https://github.com/malisper/pgrust) — ★ 774t today (2.2k total) · Rust · [ACCELERATING]
+Postgres rewrite in Rust, thread-per-connection instead of process-per-connection, WIP branch runs 300× faster than pg on analytical workloads.
 
 *Devtools*
-• [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) — ★ 328 today (7.6k total) · TS · [RETURNING]
-mcp server hands claude terminal + fs + diff-edit control; 25× baseline spike extends mcp-becomes-infra pattern.
+• [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) — ★ 909t today (7.8k total) · TS · [HOLDOVER]
+Claude terminal + fs-search + diff-edit via MCP; 909 today vs 328 yesterday = 70× historical baseline, MCP-as-infra thesis day-3.
 
-• [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) — ★ 118 today (29k total) · Python · [ACCELERATING]
-cli for configuring and monitoring claude code, dev-facing observability layer on the claude code substrate.
+*AI/ML*
+• [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) — ★ 340t today (7.2k total) · TS · [HOLDOVER]
+Google Labs library speaking the Skills open standard, cross-lab targets Antigravity/Gemini CLI/Claude Code/Cursor; 3× yesterday's daily rate.
+
+• [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) — ★ 219t today (48k total) · Jupyter · [RETURNING]
+Anthropic-official recipes; recent adds cover managed-agent patterns, agentic-search benchmark reproduction, big-plan/small-execute cost cookbook.
 
 ---
-sources: trending=ok · gh_api=ok · kept 6/19
+sources: trending=ok · gh_api=ok · kept 4/24
