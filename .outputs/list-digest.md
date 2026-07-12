@@ -1,11 +1,11 @@
-*List Digest — 2026-07-11*
+*List Digest — 2026-07-12*
 
-single-list dry day — flowslikeosmo's skin-in-game qt is the one live signal; rest is an okx paid promo and thin replies.
+single-list day: flowslikeosmo on noxa's immutable-launch thesis + thesaint_ closing the airdrop era — same tokenomics-alignment axis.
 
 *DeFi Research List*
-- x.com/Flowslikeosmo — qt of x.com/RangerAI_tech on $HOOD: "gotta have skin in the game." tokenomics-alignment lens continues — alignment as the moat, not marketing. (♥ 40, ↻ 4) — [View](https://x.com/Flowslikeosmo/status/2075682471446786194)
-- x.com/hooeem — okx paid promo pushing the eu-mica cut-off: post-1 july, non-mica exchanges illegal across the eea; 8% deposit bonus through 31 july. ad on top of a real regulatory gate. (♥ 16, ↻ 0) — [View](https://x.com/hooeem/status/2075686896127394136)
+- x.com/Flowslikeosmo — noxa fun booked $5.36M of $5.58M monthly fees in the last week (~96%); immutable/no-team-control launch means the "malicious contract" fud was killed in a day. positioning: trust as architecture, not marketing — same alignment lens as the $PUMP/SLX/VELVET reads. (♥ 19, replies 8) — [View](https://x.com/Flowslikeosmo/status/2076030374979735880)
+- x.com/thesaint_ — "airdrops are dead. yt worst r/r for yield farming. project farming users is the new meta." quote of caplabslimited; rhymes with flowslikeosmo's noxa read — aligned participation over extractive-yield. (♥ 8, replies 3) — [View](https://x.com/thesaint_/status/2076031771439661166)
 
 ---
-sources: 1642770456720683008=ok(2)
+sources: 1642770456720683008=ok(2 signal items of 10 fetched; 8 thin replies dropped below 2.0 quiet gate)
 status: LIST_DIGEST_OK

@@ -1,0 +1,111 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-12",
+        "description": "single-list day: flowslikeosmo on noxa's immutable-launch thesis + thesaint_ closing the airdrop era — same tokenomics-alignment axis."
+      },
+      "children": [
+        "heading-list",
+        "items-stack",
+        "sep-main",
+        "footer-text"
+      ]
+    },
+    "heading-list": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Research List",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "items-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item1-container",
+        "item2-container"
+      ]
+    },
+    "item1-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item1-tweet",
+        "item1-link"
+      ]
+    },
+    "item1-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "noxa fun booked $5.36M of $5.58M monthly fees in the last week (~96%); immutable/no-team-control launch means the \"malicious contract\" fud was killed in a day. positioning: trust as architecture, not marketing — same alignment lens as the $PUMP/SLX/VELVET reads. (♥ 19, replies 8)",
+        "likes": 19
+      },
+      "children": []
+    },
+    "item1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2076030374979735880"
+      },
+      "children": []
+    },
+    "item2-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item2-tweet",
+        "item2-link"
+      ]
+    },
+    "item2-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "thesaint_",
+        "handle": "@thesaint_",
+        "text": "\"airdrops are dead. yt worst r/r for yield farming. project farming users is the new meta.\" quote of caplabslimited; rhymes with flowslikeosmo's noxa read — aligned participation over extractive-yield. (♥ 8, replies 3)",
+        "likes": 8
+      },
+      "children": []
+    },
+    "item2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/thesaint_/status/2076031771439661166"
+      },
+      "children": []
+    },
+    "sep-main": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(2 signal items of 10 fetched; 8 thin replies dropped below 2.0 quiet gate)\nstatus: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
