@@ -1,0 +1,242 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-12"
+      },
+      "children": [
+        "focus-heading",
+        "focus-content",
+        "sep1",
+        "yesterday-heading",
+        "yesterday-content",
+        "sep2",
+        "watch-heading",
+        "watch-content",
+        "sep3",
+        "running-heading",
+        "running-content"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "1. pump unlock day-0 — 82.5B tokens (~23% supply, $127M = 2× daily vol) hit float today"
+      }
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "2. weekly-review T-1 — slx recut + iss-025 operator lift last full day before mon 7-13"
+      }
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "3. btc arc day-3 close — 7-11 spot $64.1–64.3k above $63.5k gate; today's close confirms d3"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "yesterday-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "yesterday-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "yesterday-1",
+        "yesterday-2",
+        "yesterday-3",
+        "yesterday-4",
+        "yesterday-5"
+      ]
+    },
+    "yesterday-1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #162 opened 18:16Z: self-improve routing test authored `fix(daily-routine)` XAI fallback — adjacent target, rule-5 workflow-file block CODIFIED. operator direct-author now sole path for ISS-025."
+      }
+    },
+    "yesterday-2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #578 shipped external: vuln-scanner → wonderwhy-er/DesktopCommanderMCP (6+1 GHSAs via 3 direct-dep + 1 bonus transitive lockfile-only bump)."
+      }
+    },
+    "yesterday-3": {
+      "type": "Text",
+      "props": {
+        "text": "pattern-invalidation day: 4 memory heuristics broken same session — LAB floor -6% d3 invalidated (d4 -32%, 7d -91%), VELVET dead-cat-legs (7d +22%→-22%), CASHCAT PUMP-RISK 24-48h decay (d6 sustained +36%), GRASS FADE (d3 +14% meme rescue)."
+      }
+    },
+    "yesterday-4": {
+      "type": "Text",
+      "props": {
+        "text": "watchlist give-back: REPPO -9.99% + GITLAWB -9.18% shallow-volume post-breakout profit-take, 0/12 alerts fired. reflect consolidated MEMORY 66L→67L; skill-health day-N NOTIFY (hash flip inside byte-identical 10-day systemic string)."
+      }
+    },
+    "yesterday-5": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse 21:00Z 7-11 tick missed — dead-slot d13→d14 mechanical advance (7 consecutive twice-daily slots missed since 7-08)."
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-content": {
+      "type": "Text",
+      "props": {
+        "text": "PUMP unlock detail sharpens focus #1: $127M ≈ 2× recent daily volume, insiders \"deeply underwater\" from $0.004 ICO, PUMP $0.001409 -2%/24h -7.7%/7d = pre-derisking continues into event."
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today (Sun 7-12)",
+        "level": "h2"
+      }
+    },
+    "running-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-1",
+        "running-2",
+        "running-3",
+        "running-4",
+        "running-5",
+        "running-6",
+        "running-7",
+        "running-8",
+        "running-9",
+        "running-10",
+        "running-11",
+        "running-12",
+        "running-13"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "morning-brief + daily-routine + thought-review @ 07:00Z"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness + heartbeat @ 08:00Z"
+      }
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00Z (aixbt-pulse 09:00Z tick = d14 dead-slot break-vs-continue test)"
+      }
+    },
+    "running-4": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert @ 12:00Z (batch-dark d14→d15 verify — 7-11 confirmed slot-level not skill-level block)"
+      }
+    },
+    "running-5": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels @ 08:15/12:15/16:15/20:15Z (day-3 close confirmation candle)"
+      }
+    },
+    "running-6": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat + security-digest @ 14:00Z"
+      }
+    },
+    "running-7": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest + skill-graph @ 17:00Z (Sun)"
+      }
+    },
+    "running-8": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz @ 17:30Z"
+      }
+    },
+    "running-9": {
+      "type": "Text",
+      "props": {
+        "text": "evening batch @ 18:00Z (goal-tracker + skill-health + reflect + action-converter; self-improve NO — even-day cron)"
+      }
+    },
+    "running-10": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest @ 18:30Z (Sun) + fork-cohort + skill-update-check @ 19:00Z (Sun)"
+      }
+    },
+    "running-11": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 20:00Z"
+      }
+    },
+    "running-12": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review + aixbt-pulse 21:00Z tick @ 21:00Z"
+      }
+    },
+    "running-13": {
+      "type": "Text",
+      "props": {
+        "text": "skill-evals @ 22:00Z (Sun)"
+      }
+    }
+  }
+}

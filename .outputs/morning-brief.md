@@ -1,24 +1,31 @@
-*Morning Brief — 2026-07-11*
+*Morning Brief — 2026-07-12*
 
 *Focus today*
-1. iss-025 capture-step pr day-19 — why now: weekly-review t-2, self-improve 18:00z routing test tonight
-2. slx recut day-17 (-63%) — why now: weekly-review 7-13 t-2 recut deadline
-3. pump unlock t-1 sat 7-12 — why now: 82.5b tokens ~$135m hits float, 2× recent daily volume
+1. pump unlock day-0 — 82.5B tokens (~23% supply, $127M = 2× daily vol) hit float today
+2. weekly-review T-1 — slx recut + iss-025 operator lift last full day before mon 7-13
+3. btc arc day-3 close — 7-11 spot $64.1–64.3k above $63.5k gate; today's close confirms d3
 
 *Since yesterday*
-- btc arc re-armed: 7-10 held above $63.5k gate all day; 7-11 spot $64.0k–$64.2k tracking above
-- watchlist reclaim day-2: reppo +30% + vol 4.73× dual-rail, gitlawb +34% (12:00z catch-up 13:31z, 3 alerts)
-- reflect: memory 64l→66l; skill-health notify 17→18 (9-day byte-identical streak); action-converter 5 loops
-- npm brand-jack day-3 escalated: 51 fresh pkgs, @redhat-cloud-services enterprise-namespace shift
-- security-digest 14:20z msg prepared-not-delivered (interactive-session sandbox gate; action-converter loop 3)
+- PR #162 opened 18:16Z: self-improve routing test authored `fix(daily-routine)` XAI fallback — adjacent target, rule-5 workflow-file block CODIFIED. operator direct-author now sole path for ISS-025.
+- PR #578 shipped external: vuln-scanner → wonderwhy-er/DesktopCommanderMCP (6+1 GHSAs via 3 direct-dep + 1 bonus transitive lockfile-only bump).
+- pattern-invalidation day: 4 memory heuristics broken same session — LAB floor -6% d3 invalidated (d4 -32%, 7d -91%), VELVET dead-cat-legs (7d +22%→-22%), CASHCAT PUMP-RISK 24-48h decay (d6 sustained +36%), GRASS FADE (d3 +14% meme rescue).
+- watchlist give-back: REPPO -9.99% + GITLAWB -9.18% shallow-volume post-breakout profit-take, 0/12 alerts fired. reflect consolidated MEMORY 66L→67L; skill-health day-N NOTIFY (hash flip inside byte-identical 10-day systemic string).
+- aixbt-pulse 21:00Z 7-11 tick missed — dead-slot d13→d14 mechanical advance (7 consecutive twice-daily slots missed since 7-08).
 
 *Watch*
-- pump detail sharpens focus #3: insiders "deeply underwater" from $0.004 ico, sell-to-cut-losses risk high
+- PUMP unlock detail sharpens focus #1: $127M ≈ 2× recent daily volume, insiders "deeply underwater" from $0.004 ICO, PUMP $0.001409 -2%/24h -7.7%/7d = pre-derisking continues into event.
 
-*Running today* (sat)
-- morning batch @ 07:00z, skill-freshness + heartbeat @ 08:00z
-- github-trending @ 09:00z (d3 verify), token-alert @ 12:00z (batch-dark d14 verify), btc-levels every 4h at :15
-- heartbeat + security-digest @ 14:00z, vuln-scanner @ 16:00z (sat-only)
-- list-digest @ 17:00z, agent-buzz @ 17:30z
-- evening batch @ 18:00z (goal-tracker + skill-health + reflect + action-converter + self-improve odd-day)
-- heartbeat @ 20:00z, evening-recap + thought-review @ 21:00z
+*Running today (Sun 7-12)*
+- morning-brief + daily-routine + thought-review @ 07:00Z
+- skill-freshness + heartbeat @ 08:00Z
+- github-trending @ 09:00Z (aixbt-pulse 09:00Z tick = d14 dead-slot break-vs-continue test)
+- token-alert @ 12:00Z (batch-dark d14→d15 verify — 7-11 confirmed slot-level not skill-level block)
+- btc-levels @ 08:15/12:15/16:15/20:15Z (day-3 close confirmation candle)
+- heartbeat + security-digest @ 14:00Z
+- list-digest + skill-graph @ 17:00Z (Sun)
+- agent-buzz @ 17:30Z
+- evening batch @ 18:00Z (goal-tracker + skill-health + reflect + action-converter; self-improve NO — even-day cron)
+- fork-skill-digest @ 18:30Z (Sun) + fork-cohort + skill-update-check @ 19:00Z (Sun)
+- heartbeat @ 20:00Z
+- evening-recap + thought-review + aixbt-pulse 21:00Z tick @ 21:00Z
+- skill-evals @ 22:00Z (Sun)
