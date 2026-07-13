@@ -1,11 +1,12 @@
-*List Digest — 2026-07-12*
+*List Digest — 2026-07-13*
 
-single-list day: flowslikeosmo on noxa's immutable-launch thesis + thesaint_ closing the airdrop era — same tokenomics-alignment axis.
+one list, one substantive read — Louround on hyperliquid's moat; hooeem drifts off-topic; Flowslikeosmo goes quiet.
 
-*DeFi Research List*
-- x.com/Flowslikeosmo — noxa fun booked $5.36M of $5.58M monthly fees in the last week (~96%); immutable/no-team-control launch means the "malicious contract" fud was killed in a day. positioning: trust as architecture, not marketing — same alignment lens as the $PUMP/SLX/VELVET reads. (♥ 19, replies 8) — [View](https://x.com/Flowslikeosmo/status/2076030374979735880)
-- x.com/thesaint_ — "airdrops are dead. yt worst r/r for yield farming. project farming users is the new meta." quote of caplabslimited; rhymes with flowslikeosmo's noxa read — aligned participation over extractive-yield. (♥ 8, replies 3) — [View](https://x.com/thesaint_/status/2076031771439661166)
+*Crypto/DeFi list*
+- x.com/Louround_ — Lighter framed as revenue-not-mindshare challenger to Hyperliquid, Robinhood integration flagged as the wedge cracking the perp-DEX moat (♥ 64, ↻ 6) — [View](https://x.com/Louround_/status/2076408365547471248)
+- x.com/hooeem — 5-tweet side-hustle thread (Substack, upcycled furniture, YouTube adsense), off-topic for a crypto list — feed-drift not conviction (♥ 59, ↻ 2) — [View](https://x.com/hooeem/status/2076427679549493339)
+- x.com/Flowslikeosmo — "this is what early feels like" image drop, no context — sparse day after last week's SLX/PUMP/immutable-launch runs (♥ 10) — [View](https://x.com/Flowslikeosmo/status/2076434896411562115)
 
 ---
-sources: 1642770456720683008=ok(2 signal items of 10 fetched; 8 thin replies dropped below 2.0 quiet gate)
+sources: list1=ok(7)
 status: LIST_DIGEST_OK
