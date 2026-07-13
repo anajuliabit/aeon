@@ -1,45 +1,55 @@
-*Daily Routine — 2026-07-12*
+*Daily Routine — 2026-07-13*
 
-_tape fades — 25/73 top-100 green (down hard from 7-11's 69.6%), median top-50 -0.3%. BTC $63,941 -0.4% / 7d +1.5% (~$183 below 7-11 spot, still above $63.5k gate), ETH $1,803 +0.2%, BNB $573 -0.9%, SOL $76.64 -1.83% / 7d -4.94% (rotation-out extends), HYPE $67 +0.8%, DOGE $0.073 -1.6%. LAB day-5 cascade continues. filter kept 178/250._
+_tape fades deeper — 27/100 top-100 green (vs 7-12 34%, 7-11 69.6%), median top-50 -0.60%. **BTC $62,985 -1.35% broke below $63.5k gate**. ETH $1,786 -0.64%, SOL $76.36 -0.10% / 7d -4.84%, HYPE $65.28 -2.41% / 7d -8.11% (rotation-out re-deepens). filter 191/250._
 
-*Top Winners (24h)*
-1. DEXE (DeXe) — $41.62 +15.0% / 7d +75.3% / 1h +2.6% • $76M / #42 [BREAKOUT]
-2. ULTIMA — $2,616 +13.3% / 7d -11.6% • $10M / #151 [FADE]
-3. ETHFI (Ether.fi) — $0.432 +6.3% / 7d +3.4% • $31M / #114
-4. ARB (Arbitrum) — $0.0963 +6.1% / 7d +22.5% • $127M / #93
-5. BMX (BitMart) — $0.330 +5.5% / 7d -1.4% • $9.7M / #249
-6. ZANO — $10.18 +5.4% / 7d +12.7% • $1.5M / #196
-7. ZEC (Zcash) — $525 +4.9% / 7d +14.9% • $287M / #14 [MAJOR]
-8. KAITO — $0.668 +4.7% / 7d +10.6% • $24M / #191
-9. STABLE — $0.0372 +4.5% / 7d +5.6% • $15M / #71
-10. 币安人生 — $0.706 +4.2% / 7d -6.2% • $11M / #86
+*btc arc BROKEN* — spot below $63.5k gate first time since 7-10 reclaim. still above $60.5k floor so `reclaim63500Alerted=true` holds (re-arm sub-$60,500). arc day-3 confirmation candle **fails** unless today's daily close reclaims.
 
-*Top Losers (24h)*
-1. LAB — $0.495 **-34.9% / 7d -96.9%** • $99M / #190 [CAPITULATION TRENDING+DOWN] day-5 cascade
-2. B (BUILDon) — $0.132 -27.3% / 7d -37.5% • $87M / #220 [CAPITULATION]
-3. BEAT (Audiera) — $2.28 -21.4% / 7d -18.4% • $29M / #87 — reverses 7-11 +32% solo-breakout
-4. TIBBIR (Virtuals) — $0.130 -10.5% / 7d +12.6% • $1.5M / #223 — reverses 7-11 day-2 win
-5. AWE — $0.0606 -9.5% / 7d +6.7% • $5.4M / #237
-6. KITE — $0.113 -7.5% / 7d -6.5% • $13M / #135
-7. ZRO (LayerZero) — $0.885 -5.8% / 7d -2.8% • $19M / #132
-8. IOTA — $0.0382 -5.2% / 7d flat • $8M / #183
-9. UB (Unibase) — $0.0727 -5.1% / 7d -23.2% • $5.9M / #176
-10. JTO (Jito) — $0.593 -5.0% / 7d -19.8% • $24M / #133
+*Top 10 Winners (24h)*
+1. XEC (eCash) #210 +35.9% / 7d +32% • $56M mcap $140M [MAJOR privacy]
+2. DCR (Decred) #140 +35.1% / 7d +35% • $15M mcap $260M [MAJOR privacy]
+3. VELVET #147 +31.65% / 7d +9.2% — reverses 7-11 dead-cat invalidation
+4. KITE #129 +19.5% • $69M — rescues from 7-12 losers
+5. BEAT #76 +16.4% — third leg up-down-up
+6. DEXE #39 $46.69 +15.3% / 7d +85% • $148M mcap $2.18B [BREAKOUT d2 sustains, fresh ATH]
+7. JTO #128 +11.4% — bounces from 7-12 SOL-eco losers
+8. BILL #234 +9.3%
+9. PUMP #91 +8.35% / 7d -9% — **post-unlock bounce, event=local-low validates**
+10. ADI #72 +8.0% / 7d +21% — 7-9 $40M unlock still ridden
 
-*Tweet Roundup*
-*Crypto:* PUMP unlock day-0 today — 82.5B tokens ($135M) hits float; buybacks burned 42% of supply, futures OI surged pre-event; PUMP spot -2.4% / 7d -7.9% at $0.00140 pre-derisked. Week's cliff: $RAIN $796M (7-11), $PUMP $135M (7-12), $ADI $40M, $HYPE $30M.
-*AI:* GPT-5.6 Sol/Terra/Luna GA'd 7-09 (default ChatGPT); Sol Ultra proved Cycle Double Cover Conjecture using 64 parallel subagents. Anthropic Claude Fable 5 back after export-control block, 80.3% SWE-Bench Pro at $10/$50 per 1M. Fortune: Anthropic overtook OpenAI on revenue (7-07). JADEPUFFER — first fully autonomous AI ransomware, Sysdig teardown same day.
-*Dev:* Bun 1.3 lands Bun.SQL — unified API across MySQL/MariaDB/PostgreSQL/SQLite. VS Code 1.110 adds agent plugins + agentic browser tools that verify their own changes. Copilot CLI ↔ Claude via MCP.
+*Top 10 Losers (24h)*
+1. LAB #239 -21.21% / 7d **-97.91%** — d6 cascade, ~99% cumulative
+2. GWEI #250 -14.55% / 7d -63%
+3. TIBBIR #242 -12.5% — d2 unwind
+4. PI #69 -11.8% / 7d -24%
+5. RIF #229 -9.0%
+6. LIT #94 -8.94% — Flowslikeosmo axis breaks
+7. BP #216 -7.29%
+8. ARB #95 -6.1% / 7d +17.15% — 7-12 near-BREAKOUT stalls
+9. STX #133 -5.93%
+10. VIRTUAL #119 -5.18%
 
-*Paper of the Day*
-"Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning" (2607.08758) — treats scientific ideas as inheritable objects with GenomeDiff records for mutation/inheritance/import. 1,961 lineage traces + 1,085 Idea Genome objects across 10 domains. Strongest LLM-scientist reaches only 27.3% exact accuracy on lineage; structured context reshuffles rankings instead of helping uniformly. Runner-up: UniClawBench (2607.08768, ↑26) — eval-quality axis day-10.
+(CASHCAT -13% dropped; 7d +108815% = CG aggregator artifact.)
 
-*GitHub Issues*
-- no new issues (chronic pool = 10 open, 17-100d idle)
+*Trending:* CASHDOG #557 (+4432% aggregator glitch), CASHCAT/DEXE/ADI/UNI/LAB/ANSEM/LIT/BILL/SLX/NEAR/GRAM/PI/PENGU. **SLX #571 $0.1425 -9.6% = -70% vs 6-24 entry $0.4753** (worse than 7-12 $0.174) — weekly-review **T-0 today** catches this.
 
-*HN Digest*
-1. [Prefer strict tables in SQLite](https://evanhahn.com/prefer-strict-tables-in-sqlite/) (280pts) — type-affinity kill-list, "it'll drift" applies
-2. [Nvidia/CoreWeave/Nebius circular financing of the GPU boom](https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom) (253pts)
-3. [Show HN: Ant — JS runtime and ecosystem](https://antjs.org) (260pts) — bun-adjacent
-4. [Mesh LLM: distributed AI computing on iroh](https://www.iroh.computer/blog/mesh-llm) (243pts) — sovereignty stack extends onto p2p rails
-5. [An agent in 100 lines of Lisp](https://thebeach.dev/posts/lisp-agent/) (139pts) — minimalist agent-primitive
+*Signals vs MEMORY:*
+- **LAB d6** — 7d -97.91% / cumulative ~99%. -95% zero-arc extends.
+- **BEAT third leg (7-11 +32 → 7-12 -21 → 7-13 +16)** — invalidates own one-day-unwind slot (n=5→n=4); pattern still holds on EIGEN/NEX/MORPHO/TIBBIR.
+- **HYPE rotation-out re-deepens** — 7-12 head-fake reversed. SOL 7d -4.84% continuation.
+- **DEXE d2 BREAKOUT fresh ATH** — 73% weekly on-chain-driven, 18x/5mo; watchlist-add confirmed.
+- **PUMP post-unlock bounce +8.35%** — event=local-low holds; $400M buybacks / 41.8% burned intraday-1 win.
+- **XEC + DCR privacy top-2** — connects to Bitcoin "eCash" fork proposal 2026-08-21 activation (XEC is eCash impl); first-time-privacy-narrative top-2.
+
+*Tweet Roundup (WebSearch fallback, XAI d28):*
+- **Crypto:** DEXE 73% weekly fresh ATH; PUMP event=local-low validates ($400M buybacks / 41.8% burned); BTC "eCash" hard-fork 2026-08-21 = chain-split risk (XEC #1 today aligns); Kendrick BTC $64k "screaming buy" on Strategy STRC thesis.
+- **AI:** Anthropic Cowork mobile+web (Max beta thru Aug 5); Claude in MS Foundry GA; Sonnet 5 default $2/$10 per 1M w/ 1M ctx; $47B ARR May-26. Grok Build CLI uploads entire repo + .env to xAI GCS by default. GPT-5.6 migration 2.2x faster 27% cheaper.
+- **Dev:** Claude Code 33k baseline vs OpenCode 7k (HN 563pts) — 4.7x but batches multi-step wins on total. GhostLock stack-UAF in all Linux distros 15y (HN 246pts).
+
+*Paper of the Day:* "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading" (arxiv 2607.08964, HF ↑28) — direct Aeon-adjacent, agent-runtime benchmark w/ dense-reward grading. Runner-up: **UniClawBench day-4 in top-10** (↑30 up from ↑26) — eval-quality axis d11.
+
+*GitHub Issues:* no new issues (chronic 10-item pool unchanged — advisor + memoclaw).
+
+*HN Digest (top 3):*
+1. Claude Code sends 33k tokens vs OpenCode 7k (563pts/315c) — direct Aeon operator relevance
+2. Grok CLI wire analysis — uploads entire repo + .env to xAI GCS (466pts)
+3. GhostLock stack-UAF in all Linux distros 15y old (246pts)
