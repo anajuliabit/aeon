@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-06",
+  "generated_at": "2026-07-13",
   "scope": "full corpus",
   "scanner_mode": "inline_grep_fallback",
-  "scanner_mode_reason": "scan.sh execution blocked by sandbox approval gate (same as 2026-05-25, 2026-06-01, 2026-06-15, 2026-06-22, 2026-06-29 runs); inline Grep over scan.sh's HIGH/MEDIUM/LOW pattern library + manual GitHub Actions script-injection audit of every ${{ }} expression in run: blocks, per SKILL.md step 4 sandbox fallback. Never silently skipped.",
+  "scanner_mode_reason": "scan.sh execution blocked by sandbox approval gate (7th consecutive scan: 2026-05-25, 06-01, 06-15, 06-22, 06-29, 07-06, 07-13); inline Grep over scan.sh's HIGH/MEDIUM/LOW pattern library + manual GitHub Actions script-injection audit of every ${{ }} expression in run: blocks + obfuscation sweep, per SKILL.md step 4 sandbox fallback. Never silently skipped.",
   "exit_status": "SECURITY_SCAN_NOCHANGE",
   "delta_summary": {
     "new_high": 0,
@@ -10,19 +10,19 @@
     "persistent_high": 4,
     "new_medium": 0,
     "new_low": 0,
-    "delta_note": "Byte-for-byte identical finding set to 2026-06-29. Canonical-4 aeon.yml workflow_dispatch-chain HIGH findings persist at L86/L94/L96/L812 (3rd consecutive scan with :812 held — no line drift). chain-runner.yml ISS-017 env: indirection fix held (L41 + L368). messages.yml 2026-04-11 incident-class fix held across every site (L612-616, L684-685, L838-863). Obfuscation sweep clean. Skill count 192 → 191 SKILL.md files (1 removed since last scan); scripts/ tree grew 27 → 30 (3 new scripts under scripts/advisor/ or scripts/). No new HIGH from any of the added/removed surfaces."
+    "delta_note": "Byte-for-byte identical finding set to 2026-07-06. Canonical-4 aeon.yml workflow_dispatch-chain HIGH findings persist at L86/L94/L96/L812 (:812 held across 4 consecutive scans — no line drift). chain-runner.yml ISS-017 env: indirection fix held (L41 + L368). messages.yml 2026-04-11 incident-class fix held across every site (L612-616, L684-685, L838-863). Obfuscation sweep clean. Skill count 191 → 191 (unchanged), workflows 9 → 9 (unchanged), scripts 30 → 30 (unchanged). Companion-script count moved 1→2 due to widened walk into skills/skill-health/tests/ (smoke.sh at depth 3, previously excluded) — no new HIGH surfaces introduced by the widened scope."
   },
   "counts": {
-    "files_scanned": 231,
+    "files_scanned": 232,
     "skill_md_scanned": 191,
     "workflows_scanned": 9,
     "repo_scripts_scanned": 30,
-    "companion_scripts_scanned": 1,
+    "companion_scripts_scanned": 2,
     "high_post_filter": 4,
     "medium_post_filter": 15,
     "low_post_filter": 4
   },
-  "note": "No NEW HIGH findings this run. No RESOLVED HIGH findings this run. All four aeon.yml HIGH findings PERSISTENT (workflow_dispatch-gated, low real risk, accepted as anti-pattern). Obfuscation sweep clean (no zero-width/bidi/fromCharCode/base64-to-shell/SSRF-webhook hosts). selftest.sh:31 rm -rf / is the defensive test fixture (allowlist case defaults to hold), never executed. selftest.sh:220, :252 eval is internal helper extraction from same-repo files (trusted source). ~80 SKILL.md curl-with-secret matches all inside fenced code blocks (documentation, not execution path) — post code-fence downgrade they are MEDIUM, not HIGH. monitor-runners/SKILL.md:74,77 eval inside markdown code fence and controlled loop variable — MEDIUM after fence downgrade, no real risk. skill-triage/SKILL.md:182 documents `eval $(...)` inside a code-fence example row — MEDIUM after fence downgrade. All prompt-override matches in SKILL.md security notes are defensive documentation (agent instructed to REJECT such content) — held as documentation per baseline seed rule spirit.",
+  "note": "No NEW HIGH findings this run. No RESOLVED HIGH findings this run. All four aeon.yml HIGH findings PERSISTENT (workflow_dispatch-gated, low real risk, accepted as anti-pattern). Fix remains structurally blocked by self-improve rule 5 (no .github/workflows/ edits from self-improve tick) → operator direct-author only. Obfuscation sweep clean (no zero-width/bidi/fromCharCode/base64-to-shell/SSRF-webhook hosts in active code). selftest.sh:31 rm -rf / is the defensive test fixture (allowlist case defaults to hold), never executed. selftest.sh:220, :252 eval is internal helper extraction from same-repo files (trusted source). scripts/eval-audit pattern hits are POSIX-ERE false positives — the word 'eval' appears in comments and echo strings, never as command execution. ~80 SKILL.md curl-with-secret matches all inside fenced code blocks (documentation, not execution path) — post code-fence downgrade they are MEDIUM, not HIGH. monitor-runners/SKILL.md:74,77 eval inside markdown code fence and controlled loop variable — MEDIUM after fence downgrade, no real risk. skill-triage/SKILL.md:182 documents `eval $(...)` inside a code-fence example row — MEDIUM after fence downgrade. All 10 prompt-override matches in SKILL.md security notes (sparkleware-catalog:283, research-brief:111, fork-release-tracker:247, soul-builder:229, repo-actions:268, last30:171, skill-triage:292, deep-research:80, ecosystem-pulse:388, competitor-launch-radar:424) are defensive documentation (agent instructed to REJECT such content) — held as documentation per baseline seed rule spirit.",
   "real_high_findings_after_filtering": [
     {
       "file": ".github/workflows/aeon.yml",
@@ -58,7 +58,7 @@
       "severity": "high",
       "fingerprint": "aeon.yml:812:steps.work.outputs.label",
       "delta": "PERSISTENT",
-      "note": "Held at :812 for 3rd consecutive scan (2026-06-22, 2026-06-29, 2026-07-06 all at :812; was :849 at 2026-06-15, :725 at 06-01, :718 at baseline). No line drift this run. Same anti-pattern, derived from steps.skill.outputs.name -> inputs.skill."
+      "note": "Held at :812 for 4th consecutive scan (2026-06-22, 06-29, 07-06, 07-13 all at :812; was :849 at 2026-06-15, :725 at 06-01, :718 at baseline). No line drift this run. Same anti-pattern, derived from steps.skill.outputs.name -> inputs.skill."
     }
   ],
   "downstream_same_chain_sites_informational": [
@@ -83,18 +83,26 @@
     {"file": ".github/workflows/replicate-oneoff.yml", "note": "L52-55 + L78 env: indirection. Safe."},
     {"file": ".github/workflows/investment-advisor.yml", "note": "Cron-only, no inputs, no injection surface."},
     {"file": ".github/workflows/weekly-conviction.yml", "note": "Cron-only, no inputs, no injection surface."},
-    {"file": ".github/workflows/ci-packs-json.yml", "note": "No ${{ }} -> run: injection."},
-    {"file": ".github/workflows/ci-skills-json.yml", "note": "No ${{ }} -> run: injection."},
+    {"file": ".github/workflows/ci-packs-json.yml", "note": "No ${{ }} anywhere — no injection surface."},
+    {"file": ".github/workflows/ci-skills-json.yml", "note": "No ${{ }} anywhere — no injection surface."},
     {"file": ".github/workflows/sync-upstream.yml", "note": "L66/73-75 step outputs all internal (sync/upstream-$(date) + numeric counts). Safe."},
     {"file": "scripts/advisor/selftest.sh", "line": 31, "note": "rm -rf / defensive test fixture (allowlist case defaults to hold). Never executed. real_risk: false."},
-    {"file": "scripts/advisor/selftest.sh", "line": "220,252", "note": "eval used to extract internal helper functions from same-repo run.sh / llm-usepod.sh for unit testing — trusted-source content, not external data path."}
+    {"file": "scripts/advisor/selftest.sh", "line": "220,252", "note": "eval used to extract internal helper functions from same-repo run.sh / llm-usepod.sh for unit testing — trusted-source content, not external data path."},
+    {"file": "scripts/eval-audit", "line": "2,7,10,186,238,271", "note": "POSIX-ERE `eval[[:space:]]` false-positives — the word 'eval' appears in comments and echo strings (e.g. '# eval-audit — audit eval coverage'), never as command execution. real_risk: false."},
+    {"file": "skills/skill-health/tests/smoke.sh", "note": "Static validator; no eval/rm -rf //curl $VAR/base64 -d matches on this run. Companion script at depth 3 — newly included in the widened walk vs prior 1-count baseline."}
   ],
   "obfuscation_sweep": {
     "zero_width_unicode": "clean",
     "bidi_override": "clean",
     "fromCharCode": "clean (only appears in scan.sh's SKILL.md pattern library documentation)",
-    "base64_decode_to_shell": "clean (all base64 -d decodes gh-api content endpoints or an aeon.yml Telegram chunk built from jq JSON, no pipe-to-shell anywhere)",
+    "base64_decode_to_shell": "clean (aeon.yml:343 chunks a jq-built JSON Telegram payload back into text; scripts/fork-cohort-run.sh:92 + scripts/sync-upstream.sh:49 decode gh api /contents responses; none pipe to a shell)",
     "ssrf_webhook_hosts": "clean (one historical README/article mention of ngrok as tunnel example; no active code uses any flagged host)"
   },
-  "medium_low_persistent_note": "All base64 -d matches decode GitHub API contents responses (API returns base64) or aeon.yml:343 chunked Telegram message into a jq-built JSON payload. None pipe to a shell -> no decode-then-execute. Path-traversal/force-push MEDIUM matches are documentation or internally-computed non-user-controllable step outputs. Unchanged from 2026-06-29. ~80 SKILL.md curl-with-secret MEDIUM matches all inside fenced code blocks (documentation, not execution path). git push --force-with-lease at aeon.yml:819 and messages.yml:876 is the safe force-push variant (uses --force-with-lease, not --force) — MEDIUM pattern `git push --force` regex matches the substring but --force-with-lease is the intended, safe form."
+  "medium_low_persistent_note": "All base64 -d matches decode GitHub API contents responses (API returns base64) or chunk a Telegram message into a jq-built JSON payload. None pipe to a shell -> no decode-then-execute. Path-traversal/force-push MEDIUM matches are documentation or internally-computed non-user-controllable step outputs. Unchanged from 2026-07-06. ~80 SKILL.md curl-with-secret MEDIUM matches all inside fenced code blocks (documentation, not execution path). git push --force-with-lease at aeon.yml:819 and messages.yml:876 is the safe force-push variant (uses --force-with-lease, not --force) — MEDIUM pattern `git push --force` regex matches the substring but --force-with-lease is the intended, safe form.",
+  "findings": [
+    {"file": ".github/workflows/aeon.yml", "line": 86, "pattern": "inputs.skill interpolated into run: block", "severity": "high", "fingerprint": "aeon.yml:86:inputs.skill"},
+    {"file": ".github/workflows/aeon.yml", "line": 94, "pattern": "steps.skill.outputs.name interpolated into run: block", "severity": "high", "fingerprint": "aeon.yml:94:steps.skill.outputs.name"},
+    {"file": ".github/workflows/aeon.yml", "line": 96, "pattern": "steps.skill.outputs.name interpolated into run: block", "severity": "high", "fingerprint": "aeon.yml:96:steps.skill.outputs.name"},
+    {"file": ".github/workflows/aeon.yml", "line": 812, "pattern": "steps.work.outputs.label interpolated into run: block", "severity": "high", "fingerprint": "aeon.yml:812:steps.work.outputs.label"}
+  ]
 }
