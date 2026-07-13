@@ -307,8 +307,8 @@
     "success_rate": 1
   },
   "cost-report": {
-    "last_dispatch": "2026-07-13T11:21:56Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-07-13T16:08:40Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-29T13:59:10Z",
     "total_runs": 48,
     "total_successes": 5,
@@ -319,8 +319,8 @@
     "last_error": "eadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.0006050000000000001,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-sonnet-4-6\":{\"inputTokens\":24624,\"outputTok"
   },
   "skill-security-scan": {
-    "last_dispatch": "2026-07-06T17:22:56Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-13T16:08:40Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-06T17:29:41Z",
     "total_runs": 6,
     "total_successes": 6,
