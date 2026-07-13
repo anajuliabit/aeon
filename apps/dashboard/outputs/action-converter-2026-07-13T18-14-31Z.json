@@ -1,0 +1,339 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-13"
+      },
+      "children": [
+        "heading-main",
+        "stack-actions",
+        "sep-final",
+        "sources-section"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "5 Actions — 2026-07-13",
+        "level": "h2"
+      }
+    },
+    "stack-actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-1",
+        "text-1-desc",
+        "text-1-why",
+        "text-1-done",
+        "badge-1-loop"
+      ]
+    },
+    "badge-1": {
+      "type": "Badge",
+      "props": {
+        "text": "1. pin capture-step spec",
+        "variant": "default"
+      }
+    },
+    "text-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "pin `.github/workflows/aeon.yml:479-495` chain-runner env-indirection diff into `articles/weekly-review-2026-07-13.md` under a `## Operator direct-author gate` heading, cite ISS-025 d21 + `:812` 4-scan line-anchor stability from 7-13 skill-security-scan"
+      }
+    },
+    "text-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: rule-5 workflow-file class 21-day block; weekly-review 19:00Z T-0 is the copy-paste-ready gate for operator direct-author",
+        "variant": "muted"
+      }
+    },
+    "text-1-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `articles/weekly-review-2026-07-13.md` contains `## Operator direct-author gate` section with the env: block diff",
+        "variant": "muted"
+      }
+    },
+    "badge-1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-capture-step",
+        "variant": "outline"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-2",
+        "text-2-desc",
+        "text-2-why",
+        "text-2-done",
+        "badge-2-loop"
+      ]
+    },
+    "badge-2": {
+      "type": "Badge",
+      "props": {
+        "text": "2. settle SLX",
+        "variant": "destructive"
+      }
+    },
+    "text-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "settle SLX as CATASTROPHIC-closed under a `## Closed picks` section in `memory/topics/capital-2x-program.md` — cite $0.4753 → $0.1425 = -70% via 7-13 daily-routine trending endpoint, 19-day duration, moonshot sub-sleeve"
+      }
+    },
+    "text-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: SLX d19 -70% is the worst pick outcome in program history; T-0 weekly-review gates capital-book hygiene",
+        "variant": "muted"
+      }
+    },
+    "text-2-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `memory/topics/capital-2x-program.md` `## Closed picks` section has SLX row with numeric close + %-vs-entry",
+        "variant": "muted"
+      }
+    },
+    "badge-2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: slx-recut-t-0",
+        "variant": "outline"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-3",
+        "text-3-desc",
+        "text-3-why",
+        "text-3-done",
+        "badge-3-loop"
+      ]
+    },
+    "badge-3": {
+      "type": "Badge",
+      "props": {
+        "text": "3. rebase PR #162",
+        "variant": "default"
+      }
+    },
+    "text-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "rebase `fix/self-improve-2026-07-11` on `main` and push to `origin` to clear PR #162 CONFLICTING state, then request a review decision in the 19:00Z weekly-review tick"
+      }
+    },
+    "text-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: PR crossed 24h stall gate 7-12 20:34Z + branch is CONFLICTING = review cannot merge even if approved; blocks XAI-fallback graceful-degradation shipping",
+        "variant": "muted"
+      }
+    },
+    "text-3-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `gh pr view 162 --json mergeable` returns `MERGEABLE`",
+        "variant": "muted"
+      }
+    },
+    "badge-3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-162-resolve-conflict",
+        "variant": "outline"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-4",
+        "text-4-desc",
+        "text-4-why",
+        "text-4-done",
+        "badge-4-loop"
+      ]
+    },
+    "badge-4": {
+      "type": "Badge",
+      "props": {
+        "text": "4. write ISS-027",
+        "variant": "default"
+      }
+    },
+    "text-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "write `memory/issues/ISS-027.md` with YAML frontmatter (id ISS-027, status open, severity high, category config, detected_by heartbeat, detected_at 2026-06-28, affected_skills [token-pick, defi-overview, token-movers, on-chain-monitor, defi-monitor, market-context-refresh, narrative-tracker, aixbt-pulse]) and add its row to `memory/issues/INDEX.md`"
+      }
+    },
+    "text-4-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 5-run action-converter carry (7-07/7-08/7-09/7-12) failed to file; batch-dark d16 today; skill-health cannot reference without frontmatter",
+        "variant": "muted"
+      }
+    },
+    "text-4-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `memory/issues/ISS-027.md` exists with valid frontmatter; `memory/issues/INDEX.md` open table has an ISS-027 row",
+        "variant": "muted"
+      }
+    },
+    "badge-4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-027-file",
+        "variant": "outline"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-5",
+        "text-5-desc",
+        "text-5-why",
+        "text-5-done",
+        "badge-5-loop"
+      ]
+    },
+    "badge-5": {
+      "type": "Badge",
+      "props": {
+        "text": "5. insert DEXE row",
+        "variant": "default"
+      }
+    },
+    "text-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "insert a DEXE row into `memory/MEMORY.md` `## Tracked Tokens` — CoinGecko id `dexe`, 15% 24h threshold, `$46.69 +15.3% 24h 7-13 day-2 BREAKOUT sustains fresh ATH (7d +85%, governance/DEX-aggregator, 18x/5mo per 7-12 AMBCrypto)`"
+      }
+    },
+    "text-5-why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: 7-13 daily-routine day-2 confirmation ($46.69 +15.3%, 7d +85%); token-alert cannot monitor until the MEMORY row exists; yesterday's `append+DEXE` did not land",
+        "variant": "muted"
+      }
+    },
+    "text-5-done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `memory/MEMORY.md` `## Tracked Tokens` table has a 5th row starting with `DEXE`",
+        "variant": "muted"
+      }
+    },
+    "badge-5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: dexe-watchlist-add",
+        "variant": "outline"
+      }
+    },
+    "sep-final": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-sources",
+        "text-sources"
+      ]
+    },
+    "heading-sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "memory=72L logs=15 topics=11 prs=1 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
