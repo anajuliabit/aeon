@@ -1,11 +1,21 @@
-Quiet run complete. No alerts fired.
+Done. Here's the run summary:
 
 ## Summary
 
-- **Spot:** $62,685 (down ~$1,216 from last run's $63,901)
-- **Daily close (2026-07-12):** $63,746 — above all levels
-- **Leverage-review (≤$45k):** no
-- **Breakdown (close < $60,500):** no
-- **Reclaim $63,500:** flag already armed (`reclaim63500Alerted=true`); spot has slipped back below $63,500 but re-arm only triggers on a sub-$60,500 print
-- **Reclaim $65,900:** ~$3,215 away, flag still false
-- No notification sent. State and log committed.
+**BTC Levels — 2026-07-13 ~19:30Z**
+
+- **Spot:** $62,157 (down from $62,685 at 04:46Z)
+- **Daily close (2026-07-12):** $63,746
+
+**Level checks — all quiet:**
+
+| Level | Result |
+|---|---|
+| ≤ $45,000 leverage-review | Clear — spot $17k above |
+| Close < $60,500 breakdown | Clear — close $63,746 above |
+| Spot ≥ $63,500 reclaim | Spot below gate; flag already armed (`reclaim63500Alerted=true`), re-arm only on sub-$60,500 dip |
+| Spot ≥ $65,900 reclaim | Clear — $5,343 gap |
+
+**0 alerts fired → no notification sent.** State updated and committed (`memory/btc-levels-state.json` + `memory/logs/2026-07-13.md`).
+
+BTC arc remains broken intraday; today's daily close (not yet confirmed) will determine whether the arc re-establishes or closes.

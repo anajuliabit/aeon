@@ -733,3 +733,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-13,skill-security-scan,claude-opus-4-7,38,31538,2529722,106739
 2026-07-13,action-converter,claude-opus-4-7,47,30389,3954155,114860
 2026-07-13,weekly-review,claude-opus-4-7,76,32234,5293263,111259
+2026-07-13,btc-levels,claude-sonnet-4-6,10,8773,450540,54470
