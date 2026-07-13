@@ -1031,7 +1031,26 @@ Prices from token-alert 12:54Z (7-08 12:00Z batch caught up at 12:54Z, still dar
 - **2-operator convergence same day** (previously solo-Flowslikeosmo). Extends SLX/VELVET/LIT/VVV/PUMP lineage.
 
 ### Fleet-side (crypto-adjacent)
-- **12:00 UTC batch dark day-15** — 7-12 12:00Z slot catch-up partial: token-alert 12:47Z + btc-levels 12:40Z under operator invocation; broader 8-skill batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) still last_success 2026-06-28.
-- **aixbt-pulse dead-slot day-14** — 7-11 21:00Z tick MISSED (7 consecutive twice-daily slots missed since 7-08). 7-12 21:00Z = break-vs-continue test.
-- **ISS-025 capture-step PR day-20** unshipped; weekly-review 7-13 **T-1**. Rule-5 structural block CODIFIED; operator direct-author sole path.
+- **12:00 UTC batch dark day-16** — 7-13 12:00Z slot verify pending; 7-10/11/12 all showed slot-level not skill-level catch-up under operator invocation; broader 8-skill batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) still last_success 2026-06-28.
+- **aixbt-pulse dead-slot day-15** — 7-12 21:00Z tick MISSED (8 consecutive twice-daily slots missed since 7-08). 7-13 21:00Z = break-vs-continue test.
+- **ISS-025 capture-step PR day-21** unshipped; weekly-review 7-13 **T-0 TODAY**. Rule-5 structural block CODIFIED; operator direct-author sole path.
+
+### 2026-07-13 — DEXE watchlist-add candidate + XEC/DCR privacy first-time top-2 + LAB day-6 reference-case zero-arc
+- **DEXE d2 BREAKOUT sustains fresh ATH** — $46.69 rank #39 +15.3% / 7d +85% $148M vol / $2.18B mcap. WebSearch AMBCrypto: 73% weekly on-chain-driven; ChangeNOW listing 7-10 broke multi-year resistance +25%; AI-governance-DAO angle; 18x over 5 months. **Watchlist-add candidate CONFIRMED** for next reflect cycle (first sub-#50 fresh BREAKOUT in a week + d2 sustains + fresh ATH pushed into $46+ territory).
+- **XEC (eCash) + DCR (Decred) privacy first-time top-2** — XEC #210 +35.9% / 7d +32% $56M mcap $140M + DCR #140 +35.1% / 7d +35% $15M mcap $260M = dual-privacy-token top-2 same day, first in memory. XEC = eCash Bitcoin implementation; WebSearch: **Bitcoin eCash hard-fork proposal targets 2026-08-21 activation, chain-split risk**. Two-privacy-token top-2 connects to that catalyst. Watch as narrative candidate.
+- **LAB -95% zero-arc reference case day-6** — 7-08 -13 → 7-09 -59 → 7-10 -6 → 7-11 -32 → 7-12 -34.9 → 7-13 -21.21% / 7d -97.91% / cumulative ~99%. `-59%/day sellers-exhaust d3-floor` heuristic 0/6. First fully-documented -95% zero-arc in memory; use as reference class for future -95% projections.
+- **BEAT third-leg up-down-up INVALIDATES own one-day-breakout-unwind slot** — 7-11 +32 → 7-12 -21 → 7-13 +16. Pattern drops n=5 → n=4 (still holds on EIGEN/NEX/MORPHO/TIBBIR). Joins B (BUILDon 7-11 +16 → 7-12 -27.3%) as dead-cat-with-legs exception; both are "breakout unwinds day-2 but recovers day-3" alternates.
+- **PUMP post-unlock bounce +8.35% intraday-1 validates event=local-low** — pre-derisked -3.4% into event, buybacks $400M cumulative / 41.8% supply burned counterbalance; insiders still deeply underwater from $0.004 ICO (-62% cumulative). crypto.news framing: "unlock damage is mostly done in advance, event=local low." Needs day-2+ hold for durability of pattern.
+- **VELVET reverses 7-11 dead-cat invalidation** — +31.65% / 7d +9.2%. 7-11 was thesis-dead at 7d +22%→-22% overnight; 7-13 recovers back to positive 7d = pattern-reversal at n=2 (VELVET n=1 alternate is now n=2).
+- **HYPE rotation-out re-deepens day-3** — 7-12 head-fake fully reversed. -2.41% / 7d -8.11% (up from -6.97% on 7-12). L1-alt weakness thesis holds firmer on HYPE than 7-12 partial-reversal read suggested.
+- **SLX day-19 CATASTROPHIC** — trending endpoint $0.1425 = **-70% vs $0.4753 entry** (further deterioration from 7-12 $0.174). Weekly-review T-0 today deadline gates recut authoring. Reference case for future 6/24-vintage HIGH-conviction picks going -70% inside 3 weeks.
+
+### 2026-07-13 — Unlock-monitor week signals
+- **UNLOCK_MONITOR_DEGRADED** — defillama 403 + dropstab empty-snapshot (2+ sources failed rule). 4 events shipped (2 CRISIS, 0 STRAIN, 2 DIGESTIBLE).
+- **DBR headline CRISIS Jul 17** — $10.13M / 5.53× daily vol / likely investor recipient / 30d +4.1% flat tape = **market asleep**; asymmetric downside signal. Post-event trend crystallizes durability of "asleep-cliff-drawdown" heuristic.
+- **CONX CRISIS-degenerate Jul 13** — $28.67M / 456× daily vol / $5M mcap = low-liquidity trap; skill's tier framework degenerate at this mcap-vs-supply ratio, unlock 5.7× mcap.
+- **STRK DIGESTIBLE Jul 15** — $3.90M / 0.41× / monthly cliff pattern known (market has 15 prior data points).
+- **SOLV DIGESTIBLE Jul 13** — $1.10M / 0.32× pointwise but MC:FDV 0.18 = 82% forward dilution watch (watchlist for reflect cycle).
+- **FTX creditor distribution Jul 31 target** — record date Jun 16 passed = next-week unlock-monitor 7-20 tick surfaces as FORCED (out of scope this week).
+- Quietest week since 6-15 baseline — $68.29M across 31 projects vs $200M last week; no team-cliff megaevents like PUMP 7-12.
 - **SLX open pick day-18 CATASTROPHIC** — no fresh CG print (last $0.256 on 7-05 12:59Z, 7d stale); daily-routine 7-10 trending endpoint $0.174 = -63.4% vs $0.4753 entry stands. Weekly-review 7-13 T-1 deadline.
