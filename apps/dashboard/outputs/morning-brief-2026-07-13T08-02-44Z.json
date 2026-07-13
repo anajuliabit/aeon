@@ -1,0 +1,269 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-13"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-section",
+        "sep1",
+        "since-section",
+        "sep2",
+        "watch-section",
+        "sep3",
+        "running-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-h",
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review T-0 — SLX d19 recut, ISS-025 capture-step, PR #162 decision converge today",
+        "variant": "body"
+      }
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $63.5k gate broke overnight — spot $62,685 at 04:46Z, ~$1.5k drop in 8h",
+        "variant": "body"
+      }
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "PUMP unlock post-event verdict — 82.5B / $127M hit float 7-12, today's tape crystalizes",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-h",
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4",
+        "since-5"
+      ]
+    },
+    "since-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC 20:33Z $64,169 → 04:46Z $62,685 (-$1,484); reclaim63500 flag armed, floor $60,500 still holds",
+        "variant": "body"
+      }
+    },
+    "since-2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #162 crossed 24h stall gate at 20:34Z hb (~26h old, no reviewDecision, empty statusCheckRollup)",
+        "variant": "body"
+      }
+    },
+    "since-3": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker 18:43Z DEGRADING: 2 goals ON_TRACK→BLOCKED (sandbox-truncation + 12-00 batch); rule-5 workflow-file block CODIFIED",
+        "variant": "body"
+      }
+    },
+    "since-4": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert 12:47Z: GITLAWB -19.49% rang the 15% rail; compound 2-day -28% reverses 7-10 +34% reclaim",
+        "variant": "body"
+      }
+    },
+    "since-5": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest VERDICT-FLIP first \"nothing urgent\" in 5 runs; skill-graph NO_CHANGE d7 = week-1 stable-architecture; fork-cohort LEVELED_UP 17",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch-h",
+        "watch-content"
+      ]
+    },
+    "watch-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-content": {
+      "type": "Text",
+      "props": {
+        "text": "PUMP $127M ≈ 2× daily vol · CryptoSlate framing \"fair-launch stress test\" — sharpens focus #3; today's daily-routine + list-digest carry the verdict",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-h",
+        "running-1",
+        "running-2",
+        "running-3",
+        "running-4",
+        "running-5",
+        "running-6",
+        "running-7",
+        "running-8",
+        "running-9",
+        "running-10"
+      ]
+    },
+    "running-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today (Mon 7-13)",
+        "level": "h2"
+      }
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report @ 07:00 UTC (Mon-only)",
+        "variant": "body"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "morning batch (morning-brief, daily-routine, thought-review, skill-freshness, hb) @ 07:00–08:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog + github-trending @ 09:00 UTC (Mon-only shiplog)",
+        "variant": "body"
+      }
+    },
+    "running-4": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard @ 10:30 UTC (Mon-only, 9-week chronic-miss break-vs-continue)",
+        "variant": "body"
+      }
+    },
+    "running-5": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert + btc-levels @ 12:00 UTC (batch-dark d16 slot verify)",
+        "variant": "body"
+      }
+    },
+    "running-6": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest + hb @ 14:00 UTC",
+        "variant": "body"
+      }
+    },
+    "running-7": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest + agent-buzz @ 17:00–17:30 UTC",
+        "variant": "body"
+      }
+    },
+    "running-8": {
+      "type": "Text",
+      "props": {
+        "text": "evening batch (goal-tracker, skill-health, reflect, action-converter, self-improve) @ 18:00 UTC — odd-day self-improve fires",
+        "variant": "body"
+      }
+    },
+    "running-9": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review @ 19:00 UTC — T-0 GATE",
+        "variant": "body"
+      }
+    },
+    "running-10": {
+      "type": "Text",
+      "props": {
+        "text": "hb @ 20:00 UTC; evening-recap + thought-review + aixbt-pulse @ 21:00 UTC (d15 dead-slot test)",
+        "variant": "body"
+      }
+    }
+  }
+}
