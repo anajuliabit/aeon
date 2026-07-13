@@ -1,1 +1,1 @@
-self-improve: reduce search-skill daily→weekly (Mon 14:00Z) after 15-day NO_GAP streak — PR: https://github.com/anajuliabit/aeon/pull/161
+self-improve: skill-security-scan SKILL.md step 4 now names sandbox-blocked as the dominant scanner-fallback trigger (7 consecutive runs since 2026-05-25). same prompt-tightening pattern as PR #162. PR: https://github.com/anajuliabit/aeon/pull/163
