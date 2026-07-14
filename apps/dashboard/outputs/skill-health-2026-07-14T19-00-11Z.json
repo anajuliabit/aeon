@@ -1,0 +1,591 @@
+{
+  "root": "health-card",
+  "state": {},
+  "elements": {
+    "health-card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-14",
+        "description": "19 skills affected by systemic output_tokens=0 sandbox-truncation (d22)"
+      },
+      "children": [
+        "critical-alert",
+        "health-status-stack"
+      ]
+    },
+    "critical-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "CRITICAL (1)",
+        "message": "Systemic issue: output_tokens=0 sandbox-truncation affecting 19 skills"
+      }
+    },
+    "health-status-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical-section",
+        "sep1",
+        "degraded-section",
+        "sep2",
+        "no-data-section",
+        "sep3",
+        "healthy-section",
+        "sep4",
+        "positive-delta-section",
+        "sep5",
+        "summary-section"
+      ]
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "critical-heading",
+        "cost-report-item"
+      ]
+    },
+    "critical-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL",
+        "level": "h3"
+      }
+    },
+    "cost-report-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cost-report-name",
+        "cost-report-sr",
+        "cost-report-down",
+        "cost-report-status",
+        "cost-report-issue"
+      ]
+    },
+    "cost-report-name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "cost-report-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "SR",
+        "value": "0.10"
+      }
+    },
+    "cost-report-down": {
+      "type": "Badge",
+      "props": {
+        "text": "15d down",
+        "variant": "destructive"
+      }
+    },
+    "cost-report-status": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API",
+        "variant": "outline"
+      }
+    },
+    "cost-report-issue": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-025",
+        "href": "memory/issues/ISS-025.md"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "degraded-heading",
+        "deg-item1",
+        "deg-item2",
+        "deg-item3",
+        "deg-item4",
+        "deg-item5",
+        "degraded-more"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (18)",
+        "level": "h3"
+      }
+    },
+    "deg-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg1-name",
+        "deg1-sr",
+        "deg1-dark",
+        "deg1-action"
+      ]
+    },
+    "deg1-name": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh",
+        "variant": "body"
+      }
+    },
+    "deg1-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "SR",
+        "value": "0.32"
+      }
+    },
+    "deg1-dark": {
+      "type": "Badge",
+      "props": {
+        "text": "16d dark",
+        "variant": "secondary"
+      }
+    },
+    "deg1-action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "outline"
+      }
+    },
+    "deg-item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg2-name",
+        "deg2-sr",
+        "deg2-dark",
+        "deg2-action"
+      ]
+    },
+    "deg2-name": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "body"
+      }
+    },
+    "deg2-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "SR",
+        "value": "0.33"
+      }
+    },
+    "deg2-dark": {
+      "type": "Badge",
+      "props": {
+        "text": "16d dark",
+        "variant": "secondary"
+      }
+    },
+    "deg2-action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "outline"
+      }
+    },
+    "deg-item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg3-name",
+        "deg3-sr",
+        "deg3-dark",
+        "deg3-note",
+        "deg3-action"
+      ]
+    },
+    "deg3-name": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse",
+        "variant": "body"
+      }
+    },
+    "deg3-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "SR",
+        "value": "0.47"
+      }
+    },
+    "deg3-dark": {
+      "type": "Badge",
+      "props": {
+        "text": "16d dark",
+        "variant": "secondary"
+      }
+    },
+    "deg3-note": {
+      "type": "Badge",
+      "props": {
+        "text": "dead-slot d17",
+        "variant": "outline"
+      }
+    },
+    "deg3-action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "outline"
+      }
+    },
+    "deg-item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg4-name",
+        "deg4-sr",
+        "deg4-dark",
+        "deg4-action"
+      ]
+    },
+    "deg4-name": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor",
+        "variant": "body"
+      }
+    },
+    "deg4-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "SR",
+        "value": "0.53"
+      }
+    },
+    "deg4-dark": {
+      "type": "Badge",
+      "props": {
+        "text": "16d dark",
+        "variant": "secondary"
+      }
+    },
+    "deg4-action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "outline"
+      }
+    },
+    "deg-item5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "deg5-name",
+        "deg5-sr",
+        "deg5-action"
+      ]
+    },
+    "deg5-name": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "body"
+      }
+    },
+    "deg5-sr": {
+      "type": "Stat",
+      "props": {
+        "label": "SR",
+        "value": "0.14"
+      }
+    },
+    "deg5-action": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API",
+        "variant": "outline"
+      }
+    },
+    "degraded-more": {
+      "type": "Link",
+      "props": {
+        "label": "+ 13 more degraded skills",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "no-data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "no-data-heading",
+        "nodata-stack"
+      ]
+    },
+    "no-data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "nodata-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "nodata1",
+        "nodata2",
+        "nodata3",
+        "nodata-action"
+      ]
+    },
+    "nodata1": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch (on-demand)",
+        "variant": "body"
+      }
+    },
+    "nodata2": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-gap",
+        "variant": "body"
+      }
+    },
+    "nodata3": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "body"
+      }
+    },
+    "nodata-action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-stat"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills running normally",
+        "value": "9"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "positive-delta-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "positive-heading",
+        "positive-details",
+        "promoted-github",
+        "promoted-thought"
+      ]
+    },
+    "positive-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "↗ Positive Delta (d1)",
+        "level": "h3"
+      }
+    },
+    "positive-details": {
+      "type": "Text",
+      "props": {
+        "text": "2 promoted DEGRADED→WARNING after successful runs today lifted success rate across 0.60 boundary. No new issues filed, none resolved.",
+        "variant": "body"
+      }
+    },
+    "promoted-github": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "github-name",
+        "github-progress"
+      ]
+    },
+    "github-name": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending",
+        "variant": "body"
+      }
+    },
+    "github-progress": {
+      "type": "Progress",
+      "props": {
+        "value": 60,
+        "max": 100,
+        "label": "42/70 = 0.60"
+      }
+    },
+    "promoted-thought": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "thought-name",
+        "thought-progress"
+      ]
+    },
+    "thought-name": {
+      "type": "Text",
+      "props": {
+        "text": "thought-review",
+        "variant": "body"
+      }
+    },
+    "thought-progress": {
+      "type": "Progress",
+      "props": {
+        "value": 60,
+        "max": 100,
+        "label": "66/110 = 0.60"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "summary-heading",
+        "summary-stats"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-open",
+        "stat-resolved",
+        "stat-filed"
+      ]
+    },
+    "stat-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "11"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed This Run",
+        "value": "0"
+      }
+    }
+  }
+}
