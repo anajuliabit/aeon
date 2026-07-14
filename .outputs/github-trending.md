@@ -1,22 +1,22 @@
-*GitHub Trending — 2026-07-12*
+*github trending — 2026-07-14*
 
-*Top pick* — [malisper/pgrust](https://github.com/malisper/pgrust)
-Rust rewrite of Postgres from an 83d-old project passing 46k+ real pg regression tests — the "rewrite it in Rust" meme now has receipts.
+*top pick* — [Dicklesworthstone/destructive_command_guard](https://github.com/Dicklesworthstone/destructive_command_guard)
+the primitive most agent runtimes are still shipping without — a rust hook that refuses `rm -rf`, force-push, hard-reset before the agent invokes them. v0.6.6 landed today with a critical guard-bypass fix and path-scoped allowlist enforcement.
 
-*Infra*
-• [malisper/pgrust](https://github.com/malisper/pgrust) — ★ 774t today (2.2k total) · Rust · [ACCELERATING]
-Postgres rewrite in Rust, thread-per-connection instead of process-per-connection, WIP branch runs 300× faster than pg on analytical workloads.
+*devtools*
+• [Dicklesworthstone/destructive_command_guard](https://github.com/Dicklesworthstone/destructive_command_guard) — ★ 1,295 today (4k total) · Rust · [ACCELERATING]
+rust hooks that block destructive git/shell before an agent runs them; v0.6.6 shipped today with a critical guard-bypass fix.
 
-*Devtools*
-• [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) — ★ 909t today (7.8k total) · TS · [HOLDOVER]
-Claude terminal + fs-search + diff-edit via MCP; 909 today vs 328 yesterday = 70× historical baseline, MCP-as-infra thesis day-3.
+• [Nutlope/hallmark](https://github.com/Nutlope/hallmark) — ★ 794 today (5.6k total) · CSS · [ACCELERATING]
+design guardrails packaged as a claude-code/cursor/codex skill — refuses default gradients + neon; 11× baseline on organic signal, 40d since last commit.
 
-*AI/ML*
-• [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) — ★ 340t today (7.2k total) · TS · [HOLDOVER]
-Google Labs library speaking the Skills open standard, cross-lab targets Antigravity/Gemini CLI/Claude Code/Cursor; 3× yesterday's daily rate.
+*ai/ml*
+• [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) — ★ 1,153 today (22k total) · Python · [ACCELERATING]
+hku data-science lab's llm trading-agent stack — mcp + multi-agent + backtesting; today's PR #534 added a longbridge data loader.
 
-• [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) — ★ 219t today (48k total) · Jupyter · [RETURNING]
-Anthropic-official recipes; recent adds cover managed-agent patterns, agentic-search benchmark reproduction, big-plan/small-execute cost cookbook.
+*web/apps*
+• [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) — ★ 1,229 today (68k total) · TypeScript · [ACCELERATING]
+open-source capcut alternative, no cloud upload, no watermark — 6.9× baseline with no fresh release = social-signal wave, not a shipping catalyst.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/24
+sources: trending=ok · gh_api=ok · kept 4/11
