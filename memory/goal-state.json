@@ -1,53 +1,41 @@
 {
-  "run_at": "2026-07-13T18:07:00Z",
+  "run_at": "2026-07-14T18:55:00Z",
   "goals": {
-    "sandbox-truncation-systemic": {
+    "weekly-review-t-0-consolidated": {
       "status": "BLOCKED",
-      "activity_count_14d": 476,
-      "last_activity_date": "2026-07-13",
-      "note": "Day 19/20 today per today's log line-13 focus-1 (weekly-review T-0 gate). MEMORY.md dup bullet reflects mid-consolidation state. Rule-5 workflow-file class block CODIFIED since 7-11 self-improve routing test (PR #162 authored fix(daily-routine) XAI-fallback tightening, not aeon.yml capture-step). Weekly-review 2026-07-13 T-0 = TODAY. Operator direct-author sole path per goal-tracker+skill-health+action-converter+reflect 7-11 consensus, held through 7-12 morning-brief + heartbeat + 18:41Z action-converter (submit-capture-step-PR = top-scored loop 125). Status BLOCKED holds. Activity 404→476 = +18% flat."
+      "activity_count_14d": 517,
+      "last_activity_date": "2026-07-14",
+      "note": "Consolidated goal per 2026-07-13 MEMORY rewrite — merges prior sandbox-truncation-systemic + weekly-review-deadline-2026-07-13 + slx-open-pick-critical-thesis-broken into single 'Weekly-review T-0' bullet. Deadline (7-13 19:00Z) passed — weekly-review DID ship (19:56Z article + 4 SMART actions) but underlying tri-gate (SLX d21 CATASTROPHIC recut unshipped, ISS-025 capture-step PR against .github/workflows/aeon.yml chain-runner day-22 unshipped, PR #162 day-3 stalled ~69h no reviewDecision empty statusCheckRollup) all persist. Rule-5 workflow-file class structural block CODIFIED since 7-11 self-improve routing-test — operator direct-author is sole path. PR #163 authored 7-13 by self-improve as SKILL.md-editable rule-5-clean, but does not touch capture-step. ISS-025 operator deadline 7-16 = T-2 today per 7-13 weekly-review action #1 priority 20. Status BLOCKED holds. Activity 476→517 = +9% flat."
     },
-    "12-00-utc-batch-first-live-test-7-03": {
+    "12-00-utc-batch-dark-day-17": {
       "status": "BLOCKED",
-      "activity_count_14d": 370,
-      "last_activity_date": "2026-07-13",
-      "note": "Day 14/15 today; MEMORY.md carries dup bullet. 8-skill batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) last_success 2026-06-28 per cron-state.json = ~15d stale. Slot-level catch-ups (7-10/11/12 token-alert 12:00Z + btc-levels 12:15Z under operator invocation) hold but batch-level dark. aixbt-pulse dead-slot day-14 confirmed. Same rule-5 primitive as ISS-025 — needs same operator direct-author lift. Status BLOCKED holds. Activity 345→370 = +7% flat."
+      "activity_count_14d": 390,
+      "last_activity_date": "2026-07-14",
+      "note": "Day 17 today; MEMORY.md carries *[BLOCKED — same rule-5 workflow-file primitive as ISS-025; requires operator direct-author of aeon.yml scheduler fix]* annotation. 8-skill batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) last_success 2026-06-28 = ~16d stale per cron-state.json. Slot-level catch-ups (7-10/11/12/13/14 token-alert 12:00Z + btc-levels 12:15Z under operator invocation) hold but batch-level dark. aixbt-pulse dead-slot day-17 (10th consecutive twice-daily miss since 7-08 09:00Z, next tick 21:00Z 7-14). Same rule-5 primitive as ISS-025 — needs same operator direct-author lift. Status BLOCKED holds. Activity 370→390 = +5% flat."
     },
-    "xai-quota-recovery": {
+    "xai-quota-recovery-day-29": {
       "status": "BLOCKED",
-      "activity_count_14d": 210,
-      "last_activity_date": "2026-07-13",
-      "note": "Operator team-credit top-up day-27/28 since 2026-06-16 Team 3a8b4c1e exhaustion. Full graceful degradation continues on-tape: WebSearch fallback covers daily-routine/tweet-roundup/narrative-tracker; `.xai-cache/` prefetch bridges list-digest+agent-buzz+token-pick. PR #162 (opened 7-11 18:16Z) hardens fallback rules for quota/sandbox/error paths; still OPEN awaiting review. Status BLOCKED holds — operator top-up remains only unblock for quota itself. Activity 236→210 = -11% flat."
+      "activity_count_14d": 216,
+      "last_activity_date": "2026-07-14",
+      "note": "Operator team-credit top-up day-29 since 2026-06-16 Team 3a8b4c1e exhaustion. Full graceful degradation continues on-tape: WebSearch fallback covers daily-routine (4 queries 7-14 all clean 200) / tweet-roundup / narrative-tracker; `.xai-cache/` prefetch bridges list-digest + agent-buzz + token-pick. PR #162 (opened 7-11 18:16Z) hardens fallback rules for quota/sandbox/error paths; still OPEN awaiting operator merge decision (~69h stalled). Status BLOCKED holds — operator top-up remains only unblock for quota itself. Activity 210→216 = +3% flat."
     },
-    "operator-on-chain-config": {
+    "operator-on-chain-config-day-37": {
       "status": "BLOCKED",
-      "activity_count_14d": 127,
-      "last_activity_date": "2026-07-12",
-      "note": "defi-monitor NO_CONFIG day 34/35 (MEMORY.md carries dup bullet). `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. 1d idle (no 7-13 log mention). Status BLOCKED holds. Activity 157→127 = -19% flat (within methodology band)."
-    },
-    "btc-bounce-day-5-above-60500-breakdown": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 798,
+      "activity_count_14d": 69,
       "last_activity_date": "2026-07-13",
-      "note": "MEMORY.md dup bullets frame arc as day-2 holds AND day-3 close. Reality per today's 04:46Z btc-levels: spot $62,685 slipped ~$1,216 BELOW $63,500 gate overnight (7-12 20:33Z $64,169 → 7-13 04:46Z $62,685 = -$1,484 in ~8h). 7-12 daily close $63,746 confirmed day-3 candle (worked); intraday breakdown 6h later VOIDS day-4 extension. reclaim63500Alerted=true holds (re-arm only on sub-$60,500 dip; spot still ~$2.2k above floor). $65,900 full-reclaim ~$3,215 above spot (up from ~$1,770 yesterday evening — gap widened by $1,485). Status ON_TRACK mechanically (activity 798, 0d idle) but tape has degraded — flag not tripped, arc extension aborted. Not DONE (never hit $65,900). Activity 900→798 = -11% flat."
+      "note": "defi-monitor NO_CONFIG day 37 (MEMORY.md line 8 carries *[BLOCKED — waiting on operator config + API keys]* annotation). `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. 1d idle (no 7-14 log mention — no fresh defi-monitor dispatch). Status BLOCKED holds. Activity 127→69 = -46% (approaches degrading edge but under 50% threshold — flat)."
     },
-    "slx-open-pick-critical-thesis-broken-day-10": {
+    "btc-63500-reclaim-arc-closed": {
       "status": "ON_TRACK",
-      "activity_count_14d": 219,
-      "last_activity_date": "2026-07-13",
-      "note": "MEMORY.md title stale (DAY-17 CATASTROPHIC) vs today's reality: DAY-19 per today's log line-37 weekly-review T-0 gate. No fresh CG print (last $0.256 on 7-05 12:59Z, 8d stale — token-alert scope doesn't cover SLX). Daily-routine 7-10 trending endpoint pull $0.174 = -63.4% vs entry $0.4753 stands unchanged. Weekly-review 2026-07-13 T-0 = TODAY = last decision window for recut. 7-12 18:41Z action-converter surfaced `mark SLX closed` as loop-score 100 (2nd highest). Status ON_TRACK mechanically (heavy log volume, 0d idle) but outcome BROKEN — recut decision unshipped day-19. Activity 292→219 = -25% flat (at edge). No blocker_signal (decision-gate, not infra)."
+      "activity_count_14d": 462,
+      "last_activity_date": "2026-07-14",
+      "note": "MEMORY.md line 9 goal states arc BROKEN 7-13 and asks 'today's 7-13 daily close = arc closes vs re-establishes.' 7-14 btc-levels 01:02Z confirms 2026-07-13 daily close $62,242 = arc CLOSED (first sub-$63,500 daily close since 7-10 reclaim; daily-routine 07:22Z + morning-brief 07:00Z + 08:38Z heartbeat + 14:00Z heartbeat all cite ARC CLOSED). Spot $63,917 reclaimed $63,500 intraday per 13:30Z btc-levels but reclaim63500Alerted=true holds (re-arm only on sub-$60,500 dip). $65,900 full-reclaim ~$1,983 above spot. Status ON_TRACK mechanically (462 activity, 0d idle) — market observation resolved but per SKILL constraint 'prefer false negatives over false positives' not marked DONE (arc closure is neutral market signal, not a completion of a target-hit goal). MEMORY line 9 goal ripe for Recently Cleared move on next reflect cycle. Prior activity 798→462 = -42% flat (under 50% degrading threshold). Trend: flat."
     },
-    "weekly-review-deadline-2026-07-13": {
+    "pump-unlock-post-event-bounce-dies-d2": {
       "status": "ON_TRACK",
-      "activity_count_14d": 190,
-      "last_activity_date": "2026-07-13",
-      "note": "NEW goal (appeared in 7-12 MEMORY.md rewrite as bullet 7). Deadline is TODAY (Mon 2026-07-13). Twin gate: (a) SLX d19 recut + (b) ISS-025 capture-step PR against .github/workflows/aeon.yml chain-runner. Both paths require operator direct-author per codified rule-5 workflow-file block. Next self-improve tick 7-13 18:00Z (post-deadline). Status ON_TRACK — activity concentrated, deadline is today. Trend: new."
-    },
-    "pump-unlock-day-0-firing-today-7-12": {
-      "status": "ON_TRACK",
-      "activity_count_14d": 154,
-      "last_activity_date": "2026-07-13",
-      "note": "NEW goal (7-12 MEMORY.md bullet 8). Event fired 2026-07-12: 82.5B tokens / 22.2% mcap / ~$135M (2× daily vol) hit float single day. Pre-derisking on-time: -2.4%/24h -7.9%/7d at $0.00140 per daily-routine 09:08Z 7-12 (week's build: -5% 7-11 + -2.4% 7-12). Buybacks burned 42% supply as counterbalance; futures OI surged = leveraged positioning. Insiders ~$0.004 ICO underwater -65%. Post-event dynamics = today's daily-routine surface. Status ON_TRACK — event passed, watch window active. Not DONE (no explicit completion signal per skill spec — prefer false-neg). Trend: new."
+      "activity_count_14d": 168,
+      "last_activity_date": "2026-07-14",
+      "note": "MEMORY.md line 10 goal says 'PUMP unlock post-event bounce validates event=local-low' as thesis. 7-14 daily-routine verdict: bounce dies d2 — 7-13 +8.35% intraday-1 bounce → 7-14 -3.29% / 7d -12.4%. Event=local-low pattern fails at d2 for PUMP specifically per today's daily-routine signal-vs-MEMORY block — buyback-vs-supply-shock verdict tilts supply-shock. Insiders 'deeply underwater' thesis holds. Not DONE (no completion per SKILL spec — thesis fails, observation continues). Prior activity 154→168 = +9% flat. Status ON_TRACK. Trend: flat."
     }
   }
 }
