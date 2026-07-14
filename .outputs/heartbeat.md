@@ -1,6 +1,20 @@
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
-Regenerated `docs/status.md` (43 enabled skills sorted last-run-desc; cost-report ❌ failed 20:15Z tops the list; overall verdict 🔴 DEGRADED). Notification **skipped** — every P0/P1/P2/P3 finding already surfaced in the last 48h logs (morning-brief 07:00Z, daily-routine 07:22Z, skill-health 18:12Z NOTIFY, action-converter 18:15Z, weekly-review 19:56Z). The 20:15Z cost-report fresh fail is a mechanical cf-advance (3→5) of the CRITICAL classification skill-health already notified at 18:12Z; no unique dedup key.
-
 ## Summary
-Ran heartbeat skill (var=""). Read `memory/MEMORY.md` + 2 recent logs + `memory/cron-state.json` + `memory/issues/INDEX.md` + `aeon.yml`. Regenerated `docs/status.md` with 43 enabled skills sorted by last-run desc, cost-report failed row at top, 11 open issues (4 critical / 4 high / 3 medium), next-run pointer `aixbt-pulse @ 21:00 UTC` (~15min out). Verdict 🔴 DEGRADED driven by cost-report P0 fresh failure (ISS-025 signature) + chronic 16-skill sr<0.5 tail + 4 critical open issues. No Token Pulse section (no `articles/token-report-*.md` on disk). Notification skipped per 48h dedup — all findings already logged this session. Appended heartbeat entry + summary to `memory/logs/2026-07-13.md`. Files modified: `docs/status.md`, `memory/logs/2026-07-13.md`. Follow-up: none skill-side; downstream — (i) 21:00Z aixbt-pulse d15 dead-slot break-vs-continue test; (ii) 7-14 07:00Z Mon-only cost-report retry; (iii) operator PR #162 decision by 7-14 and ISS-025 capture-step PR by 7-16 per weekly-review handoff.
+
+Ran the `heartbeat` skill per `skills/heartbeat/SKILL.md`.
+
+**Findings (all dedup'd against last-48h logs — no notification sent):**
+- **P0 cost-report STUCK** — `last_status: dispatched` at 2026-07-13T20:44Z (~12h stale, past 45min threshold), cf held at 5, sr=0.10. Signature matches ISS-025 sandbox-truncation family — already surfaced by 7-13 skill-health CRITICAL(1) NOTIFY, morning-brief, weekly-review, and 20:45Z hb. Fresh dispatch never reported completion; mechanical variation of already-notified pattern.
+- **P0 self-check ok** — heartbeat last_success ~11h47m ago (under 36h gate).
+- **P1** — PR #162 stalled 62.4h CONFLICTING (weekly-review action #2 deadline = today); PR #163 fresh 14.5h (under 24h); zero urgent issues.
+- **P2** — SLX day-20, ISS-025 day-22, BTC arc CLOSED (7-13 daily close $62,242 = first sub-$63.5k daily close since arc opened) — flagged for reflect cycle.
+- **P3** — batch-dark d17, aixbt-pulse dead-slot d16, weekly-shiplog + operator-scorecard Mon 7-13 miss — all chronic. Morning batch 7-14 07:00Z not yet dispatched at 08:38Z but under 2h-late band (within durable morning-slot catch-up pattern).
+
+**Actions taken:**
+- Regenerated `docs/status.md` wholesale: **DEGRADED** verdict, 43 enabled skills sorted by last-run desc, cost-report now shows as 🕸 stuck (yesterday it was ❌ failed), 11 open issues, next-run pointer github-trending @ 09:00 UTC. Token pulse omitted (no `articles/token-report-*.md` on disk).
+- Logged findings + actions to `memory/logs/2026-07-14.md`.
+
+**Notification skipped** per 48h dedup — every finding is a mechanical continuation of already-notified state; no fresh classification signal.
+
+**Files modified:** `docs/status.md`, `memory/logs/2026-07-14.md`.
