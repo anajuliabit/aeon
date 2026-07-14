@@ -74,13 +74,13 @@
     "success_rate": 1
   },
   "agent-buzz": {
-    "last_status": "dispatched",
-    "last_success": "2026-07-13T18:10:40Z",
-    "total_runs": 76,
-    "total_successes": 45,
+    "last_status": "success",
+    "last_success": "2026-07-14T17:53:38Z",
+    "total_runs": 77,
+    "total_successes": 46,
     "total_failures": 31,
     "consecutive_failures": 0,
-    "success_rate": 0.59,
+    "success_rate": 0.6,
     "last_dispatch": "2026-07-14T17:46:35Z",
     "last_failed": "2026-06-21T14:17:01Z",
     "last_error": "65a2697\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
