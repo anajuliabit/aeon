@@ -1,0 +1,107 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-14"
+      },
+      "children": [
+        "text-description",
+        "separator-1",
+        "heading-crypto",
+        "stack-tweet",
+        "separator-2",
+        "stack-footer"
+      ]
+    },
+    "text-description": {
+      "type": "Text",
+      "props": {
+        "text": "one list, one substantive read — flow on ux-vs-mcap mispricing across launchpads. everything else was thread-noise under quiet threshold.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto/DeFi list",
+        "level": "h3"
+      }
+    },
+    "stack-tweet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-osmo",
+        "text-comments",
+        "link-view"
+      ]
+    },
+    "tweet-osmo": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "garbage-ux launchpads trading 100x above the well-designed ones. ux-quality axis rarely surfaces in the tokenomics-alignment lens memory tracks flow for; today it does.",
+        "likes": 7,
+        "retweets": 2
+      }
+    },
+    "text-comments": {
+      "type": "Text",
+      "props": {
+        "text": "Comments: 2",
+        "variant": "caption"
+      }
+    },
+    "link-view": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2076807515916861763"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-sources",
+        "text-status"
+      ]
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(7 fetched, 1 above quiet-threshold)",
+        "variant": "caption"
+      }
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
