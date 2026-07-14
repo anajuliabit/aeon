@@ -1,28 +1,25 @@
-*Morning Brief — 2026-07-13*
+*morning brief — 2026-07-14*
 
-*Focus today*
-1. weekly-review T-0 — SLX d19 recut, ISS-025 capture-step, PR #162 decision converge today
-2. BTC $63.5k gate broke overnight — spot $62,685 at 04:46Z, ~$1.5k drop in 8h
-3. PUMP unlock post-event verdict — 82.5B / $127M hit float 7-12, today's tape crystalizes
+*focus today*
+1. pr #162 decision — deadline today per weekly-review, ~66h stalled CONFLICTING, no reviewDecision
+2. investment advisor 7-day cancellation — weekly-review's new durable pattern, self-improve investigates 7-15
+3. btc arc closed on 7-13 $62,242 close — today's close vs $60,500 breakdown floor is next gate
 
-*Since yesterday*
-- BTC 20:33Z $64,169 → 04:46Z $62,685 (-$1,484); reclaim63500 flag armed, floor $60,500 still holds
-- PR #162 crossed 24h stall gate at 20:34Z hb (~26h old, no reviewDecision, empty statusCheckRollup)
-- goal-tracker 18:43Z DEGRADING: 2 goals ON_TRACK→BLOCKED (sandbox-truncation + 12-00 batch); rule-5 workflow-file block CODIFIED
-- token-alert 12:47Z: GITLAWB -19.49% rang the 15% rail; compound 2-day -28% reverses 7-10 +34% reclaim
-- security-digest VERDICT-FLIP first "nothing urgent" in 5 runs; skill-graph NO_CHANGE d7 = week-1 stable-architecture; fork-cohort LEVELED_UP 17
+*since yesterday*
+- weekly-review 19:56Z shipped 4 SMART actions + articles/weekly-review-2026-07-13.md; closed-loop audit 0/4 shipped on target
+- btc daily close $62,242 confirmed below $63,500 gate (arc closes; spot $62,478 = ~$1,978 above $60,500 breakdown floor)
+- cost-report escalated DEGRADED→CRITICAL (cf 0→5 same day; ISS-025 signature; skill-health hash flip 87f9fc6b → 1e03913e)
+- PR #163 authored by 7-13 self-improve (skill-security-scan sandbox-block docs; SKILL.md-editable, rule-5-clean)
+- investment advisor 7-consec-day cancellation surfaced by weekly-review — undocumented in MEMORY, invisible to skill-health
 
-*Watch*
-- PUMP $127M ≈ 2× daily vol · CryptoSlate framing "fair-launch stress test" — sharpens focus #3; today's daily-routine + list-digest carry the verdict
+*watch*
+- btc 7d forecast $58,115–$65,631 (coindcx) — under $60,500 today triggers breakdown alert for focus #3
 
-*Running today (Mon 7-13)*
-- cost-report @ 07:00 UTC (Mon-only)
-- morning batch (morning-brief, daily-routine, thought-review, skill-freshness, hb) @ 07:00–08:00 UTC
-- weekly-shiplog + github-trending @ 09:00 UTC (Mon-only shiplog)
-- operator-scorecard @ 10:30 UTC (Mon-only, 9-week chronic-miss break-vs-continue)
-- token-alert + btc-levels @ 12:00 UTC (batch-dark d16 slot verify)
-- security-digest + hb @ 14:00 UTC
-- list-digest + agent-buzz @ 17:00–17:30 UTC
-- evening batch (goal-tracker, skill-health, reflect, action-converter, self-improve) @ 18:00 UTC — odd-day self-improve fires
-- weekly-review @ 19:00 UTC — T-0 GATE
-- hb @ 20:00 UTC; evening-recap + thought-review + aixbt-pulse @ 21:00 UTC (d15 dead-slot test)
+*running today*
+- morning batch (this) 07:00 UTC · skill-freshness 08:00 · heartbeat 08/14/20 UTC
+- github-trending 09:00 · btc-levels 05:15/09:15/13:15/17:15/21:15 UTC
+- token-alert 12:00 (batch-dark d17 slot verify)
+- security-digest 14:00 (npm-malware d7 quiet-vs-resurface test)
+- list-digest 17:00 · agent-buzz 17:30
+- evening batch 18:00 (goal-tracker / skill-health / reflect / action-converter — NO self-improve, even-day cron skips)
+- evening-recap 21:00 · thought-review 21:00 · aixbt-pulse 21:00 (d16 dead-slot break-vs-continue)
