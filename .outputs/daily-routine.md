@@ -1,55 +1,47 @@
-*Daily Routine — 2026-07-13*
+*daily routine — 2026-07-14*
 
-_tape fades deeper — 27/100 top-100 green (vs 7-12 34%, 7-11 69.6%), median top-50 -0.60%. **BTC $62,985 -1.35% broke below $63.5k gate**. ETH $1,786 -0.64%, SOL $76.36 -0.10% / 7d -4.84%, HYPE $65.28 -2.41% / 7d -8.11% (rotation-out re-deepens). filter 191/250._
+_tape: 34/100 top-100 green, median top-50 -0.60%. flat shape from 7-13, deeper 7d bleed._
+btc $62,602 -0.6% / 7d -1.09% — **arc closed**: 7-13 daily close $62,242 failed $63.5k gate. d4 breakdown holds. eth $1,785 flat, sol $75.19 -1.58% / 7d -7.71%, hype $63.71 -2.78% / 7d **-10.11%** (rotation-out d3 deepens), ada 7d -11.62% new deep-weakness.
 
-*btc arc BROKEN* — spot below $63.5k gate first time since 7-10 reclaim. still above $60.5k floor so `reclaim63500Alerted=true` holds (re-arm sub-$60,500). arc day-3 confirmation candle **fails** unless today's daily close reclaims.
+*top winners (24h)*
+1. DRV $0.180 +51% / 7d +62% $14M vol — derive protocol governance, options DEX, 25% fees→buybacks
+2. BILL +16.6% / 7d +30.6% $46M vol (repeats)
+3. BDX +12.8% $783M mcap
+4. RIF +9.0% (reverses 7-13 loser)
+5. CVX +8.4% / CRV +8.0% $57M vol — curve pair sync
+6. B +8% / 7d -35% — second dead-cat leg (7-11 +16 → 7-12 -27 → 7-14 +8)
+7. ENA +5.8% / 7d +8.5% $104M vol (trending)
+8. INJ +5.4% / 7d +5.1% $69M vol (trending)
+9. EDGE +5.1% / VVV +4.9%
 
-*Top 10 Winners (24h)*
-1. XEC (eCash) #210 +35.9% / 7d +32% • $56M mcap $140M [MAJOR privacy]
-2. DCR (Decred) #140 +35.1% / 7d +35% • $15M mcap $260M [MAJOR privacy]
-3. VELVET #147 +31.65% / 7d +9.2% — reverses 7-11 dead-cat invalidation
-4. KITE #129 +19.5% • $69M — rescues from 7-12 losers
-5. BEAT #76 +16.4% — third leg up-down-up
-6. DEXE #39 $46.69 +15.3% / 7d +85% • $148M mcap $2.18B [BREAKOUT d2 sustains, fresh ATH]
-7. JTO #128 +11.4% — bounces from 7-12 SOL-eco losers
-8. BILL #234 +9.3%
-9. PUMP #91 +8.35% / 7d -9% — **post-unlock bounce, event=local-low validates**
-10. ADI #72 +8.0% / 7d +21% — 7-9 $40M unlock still ridden
+*top losers (24h)*
+1. **DCR -24.02%** / 7d +9.1% — mega reversal from 7-13 #2 winner +35.1%
+2. PI -14.5% / 7d -34.5% $34M vol cascade
+3. KITE -12.8% (dead-cat from 7-13 +19.5%)
+4. **XEC -11.66%** / 7d +12% — privacy pair reverses w/ DCR d2
+5. GRASS -10% / 7d -33%
+6. **DEXE -7.5%** / 7d +51.6% $90M vol — first breakout red print after ATH d3
+7. SPX -7.1% / H -6.9% / APE -5.5% / ETHFI -5.3% / BAT -5.2% / TAO -4.5%
 
-*Top 10 Losers (24h)*
-1. LAB #239 -21.21% / 7d **-97.91%** — d6 cascade, ~99% cumulative
-2. GWEI #250 -14.55% / 7d -63%
-3. TIBBIR #242 -12.5% — d2 unwind
-4. PI #69 -11.8% / 7d -24%
-5. RIF #229 -9.0%
-6. LIT #94 -8.94% — Flowslikeosmo axis breaks
-7. BP #216 -7.29%
-8. ARB #95 -6.1% / 7d +17.15% — 7-12 near-BREAKOUT stalls
-9. STX #133 -5.93%
-10. VIRTUAL #119 -5.18%
+*trending signals*
+- **LAB #286 -24.18% cascade d7** — extends -95% zero-arc reference case, cumulative ~99.4%. `-59%/day sellers-exhaust` heuristic 0/7
+- **XEC+DCR privacy top-2 d2 FAILS** — first-time-dual-privacy-winner pattern reverses hard. 7d still green for both. one-day-narrative-flip
+- **DEXE d3 first red print** — 2-day ATH bounce cools -7.5%, 7d +51.6% intact. watchlist-add flag holds
+- **PUMP -3.29% / 7d -12.4%** — post-unlock bounce d2 fails, no durable rescue. buyback-vs-supply-shock verdict tilts supply-shock
+- macro overlay per coindesk 7-14: "traders lift july fed rate hike bets ahead of inflation report + warsh testimony; 2y treasury highest since early last year; oil upswing + us-iran tensions" — explains today's -2% majors
 
-(CASHCAT -13% dropped; 7d +108815% = CG aggregator artifact.)
+*tweet roundup (websearch, xai d29)*
+*crypto:* fed-hike-bets front-run cpi + warsh testimony = 2y yield ripping, oil bid on iran tensions, majors -2%. decred technicians call multi-month downtrend break (before today's -24% reversal — tape doesn't care about the chartists). PUMP unlock d2 post-event verdict: bounce didn't hold.
+*ai:* anthropic **claude reflect dashboard** in beta on Free/Pro/Max (web + desktop) — usage-analytics visualizing topics/peak-hour/work-habits. claude for government beta starts july. claude cowork cloud + mobile continues (max beta thru aug 5). fable 5 + mythos 5 export controls lifted 7-1.
+*dev:* clawk (HN 191pts) — disposable linux vm for coding agents = direct aeon-adjacent primitive. "building/shipping mac apps without ever opening xcode" HN top slot (454pts) — dev productivity thread.
 
-*Trending:* CASHDOG #557 (+4432% aggregator glitch), CASHCAT/DEXE/ADI/UNI/LAB/ANSEM/LIT/BILL/SLX/NEAR/GRAM/PI/PENGU. **SLX #571 $0.1425 -9.6% = -70% vs 6-24 entry $0.4753** (worse than 7-12 $0.174) — weekly-review **T-0 today** catches this.
+*paper of the day*
+"ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory" (arxiv 2607.10350, HF ↑61) — direct aeon-axis alignment: agent-OS + lifelong-multi-modal-memory maps to aeon's memory/skills/logs primitive. runner-up: "Weak-to-Strong Generalization via Direct On-Policy Distillation" (2607.05394, ↑40) — anthropic-adjacent alignment research.
 
-*Signals vs MEMORY:*
-- **LAB d6** — 7d -97.91% / cumulative ~99%. -95% zero-arc extends.
-- **BEAT third leg (7-11 +32 → 7-12 -21 → 7-13 +16)** — invalidates own one-day-unwind slot (n=5→n=4); pattern still holds on EIGEN/NEX/MORPHO/TIBBIR.
-- **HYPE rotation-out re-deepens** — 7-12 head-fake reversed. SOL 7d -4.84% continuation.
-- **DEXE d2 BREAKOUT fresh ATH** — 73% weekly on-chain-driven, 18x/5mo; watchlist-add confirmed.
-- **PUMP post-unlock bounce +8.35%** — event=local-low holds; $400M buybacks / 41.8% burned intraday-1 win.
-- **XEC + DCR privacy top-2** — connects to Bitcoin "eCash" fork proposal 2026-08-21 activation (XEC is eCash impl); first-time-privacy-narrative top-2.
+*github issues*
+- no new issues in tracked repos (chronic 10-item pool unchanged)
 
-*Tweet Roundup (WebSearch fallback, XAI d28):*
-- **Crypto:** DEXE 73% weekly fresh ATH; PUMP event=local-low validates ($400M buybacks / 41.8% burned); BTC "eCash" hard-fork 2026-08-21 = chain-split risk (XEC #1 today aligns); Kendrick BTC $64k "screaming buy" on Strategy STRC thesis.
-- **AI:** Anthropic Cowork mobile+web (Max beta thru Aug 5); Claude in MS Foundry GA; Sonnet 5 default $2/$10 per 1M w/ 1M ctx; $47B ARR May-26. Grok Build CLI uploads entire repo + .env to xAI GCS by default. GPT-5.6 migration 2.2x faster 27% cheaper.
-- **Dev:** Claude Code 33k baseline vs OpenCode 7k (HN 563pts) — 4.7x but batches multi-step wins on total. GhostLock stack-UAF in all Linux distros 15y (HN 246pts).
-
-*Paper of the Day:* "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading" (arxiv 2607.08964, HF ↑28) — direct Aeon-adjacent, agent-runtime benchmark w/ dense-reward grading. Runner-up: **UniClawBench day-4 in top-10** (↑30 up from ↑26) — eval-quality axis d11.
-
-*GitHub Issues:* no new issues (chronic 10-item pool unchanged — advisor + memoclaw).
-
-*HN Digest (top 3):*
-1. Claude Code sends 33k tokens vs OpenCode 7k (563pts/315c) — direct Aeon operator relevance
-2. Grok CLI wire analysis — uploads entire repo + .env to xAI GCS (466pts)
-3. GhostLock stack-UAF in all Linux distros 15y old (246pts)
+*hn digest (top 3)*
+1. [Building/shipping Mac and iOS apps without opening Xcode](https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/) (454pts/196c)
+2. [Show HN: Clawk – disposable linux vm for coding agents](https://github.com/clawkwork/clawk) (191pts/150c) — direct aeon-adjacent
+3. [Japan recovers up to 90% of lithium from EV batteries](https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/) (411pts/99c)
