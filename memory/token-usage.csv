@@ -739,4 +739,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-14,skill-freshness,claude-sonnet-4-6,36,36482,2638686,87854
 2026-07-14,github-trending,claude-opus-4-7,50,26887,3763365,105994
 2026-07-14,token-alert,claude-opus-4-7,29,17623,1495013,94048
-2026-07-14,heartbeat,claude-opus-4-7,20,18838,1327910,104782
+2026-07-14,security-digest,claude-opus-4-7,57,28639,3553995,91819

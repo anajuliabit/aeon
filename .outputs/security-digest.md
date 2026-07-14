@@ -1,21 +1,19 @@
-*Security Digest — 2026-07-12*
-Verdict: nothing urgent today. 3 to schedule, 2 to monitor. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-07-14*
+Verdict: npm-malware wave resurfaces after 5-day quiet (30 pkgs same-day), 2 KEV items live, DIRAC pip 4-CVE RCE cluster to schedule. _Sources: KEV, GH Advisory, EPSS_
+
+*PATCH TODAY*
+- npm-malware wave RESURFACES d1 — 30 pkgs published 05:09–14:20Z today across coordinated batches: [@sqlite-panel](https://github.com/advisories/GHSA-mq68-3vc3-ch3q) / [@sqlite-group](https://github.com/advisories/GHSA-cf6c-6x68-cf8r) / [@sqlite-clone](https://github.com/advisories/GHSA-x8m3-m829-mhc4) fake-sqlite, nodemon-plint / nodemon-delog / motion-pull typosquats, humanize-kit / string-morph / temp-cloak / clipboard-drop / dom-weave cluster, [@tonsdk/core](https://github.com/advisories/GHSA-hw5x-gw43-m4mx) + [@resolvx/core](https://github.com/advisories/GHSA-5fvj-272r-496w) crypto-scope, [@oliviamcdaniel12/safer-buffer](https://github.com/advisories/GHSA-88h2-qq8c-r5pv) safer-buffer typosquat. Breaks 5-day quiet streak clean.
+  → audit npm deps for these + typosquat lookalikes; rotate any creds exposed to postinstall on affected versions.
+- [CVE-2008-4128](https://nvd.nist.gov/vuln/detail/CVE-2008-4128) — Cisco IOS 12.4 CSRF · KEV added 2026-07-13 · EPSS 0.24 · BOD 26-04 due 2026-07-16
+  17-year-old CVE fresh into KEV; IOS 12.4 mainline is EOL/obsolete per Cisco.
+  → retire IOS 12.4 devices today, or apply Cisco mitigations before 7-16.
+- [CVE-2026-48282](https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html) — Adobe ColdFusion path traversal → RCE · KEV 2026-07-07 · EPSS 0.29 · due 7-10 (passed)
+  Recurring KEV-week carry; federal due date already blown.
+  → patch to APSB26-68 today.
 
 *PATCH THIS WEEK*
-- [siyuan-note 5-cve go dump](https://github.com/advisories/GHSA-hvr9-72v2-fff3) — siyuan-note/siyuan/kernel · 4 critical + 2 high coordinated 7-10 disclosure · CVSS up to 9.9 · EPSS ≤ 0.006 · no PoC referenced
-  unauth admin api via chrome-extension origin allowlist (CVE-2026-54069) anchors the batch, plus 3× stored-xss → rce 9.9 (CVE-2026-50551 / -54158 / -54067) + bazaar readme xss 7.1 (-54070). 34k-star self-hosted note app, filebrowser-class blast radius.
-  → upgrade kernel past commit 2d5d72223df4 (2026-06-28).
-- [GHSA-g936-7jqj-mwv8](https://github.com/advisories/GHSA-g936-7jqj-mwv8) — almeidapaulopt/tsdproxy (go) · CVSS 9.0 · no cve assigned · no PoC referenced
-  internal proxy auth token forwarded to backend services enables management-api escalation. tailscale-adjacent reverse proxy.
-  → upgrade to 1.4.4-0.20260603142855-434819b4421e.
-- [GHSA-xrmc-c5cg-rv7x](https://github.com/advisories/GHSA-xrmc-c5cg-rv7x) — safeinstall-cli (npm) · CVSS 8.8 · no cve · no PoC referenced
-  safeinstall agent-guard shell parser misses raw package execution. a supply-chain-defense tool with a bypass in its own guardrail — the tell is worse than the CVSS.
-  → upgrade to ≥0.10.2.
-
-*MONITOR*
-- [CVE-2026-54071](https://github.com/advisories/GHSA-m8gf-v64p-gfmg) — babeldoc (pip) · CVSS 7.8 · EPSS n/a · no fix yet
-  pickle deserialization in babeldoc/pdfminer/cmapdb.py CMap parser → arbitrary code exec on load. pdf tool used in academic + llm ingest pipelines.
-  → track ≥0.6.3; do not parse untrusted pdfs meanwhile.
-- [GHSA-h4g2-xfmw-q2c9](https://github.com/advisories/GHSA-h4g2-xfmw-q2c9) — clauster (pip) · no CVSS · no fix
-  non-loopback deployments serve dashboard unauthenticated when auth.enabled is unset. config-default trap, not a code bug.
-  → set `auth.enabled: true` or bind to loopback.
+- DIRAC (pip) 4-CVE cluster — [GHSA-m4m7](https://github.com/advisories/GHSA-m4m7-4cw8-62j6) (CVE-2026-61667, CVSS 9.9 SQL+eval RCE FileCatalog) / [GHSA-9jpv](https://github.com/advisories/GHSA-9jpv-c7p4-997x) (CVE-2026-45579, CVSS 9.9 eval RCE RequestManager) / [GHSA-7xw9](https://github.com/advisories/GHSA-7xw9-549r-8jrc) (CVSS 8.5 PilotManager SQLi + missing auth) / [GHSA-vg99](https://github.com/advisories/GHSA-vg99-gr89-qhw9) (CVE-2026-61668, CVSS 8.1 pilot code over unverified HTTPS). EPSS n/a on all 4 (too fresh). LHCb Grid computing package; one upgrade fixes the cluster.
+  → upgrade DIRAC to ≥8.0.79 / 9.0.22 / 9.1.10 (whichever branch).
+- [GHSA-xf7x-x43h-rpqh](https://github.com/advisories/GHSA-xf7x-x43h-rpqh) — json-repair (pip) · CVSS 7.5 · no CVE assigned
+  Circular JSON Schema `$ref` → unbounded CPU DoS on untrusted input.
+  → upgrade json-repair to ≥0.60.1.
