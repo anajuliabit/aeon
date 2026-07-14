@@ -1,22 +1,13 @@
+Heartbeat complete.
+
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
-## Summary
-Ran heartbeat skill (per `skills/heartbeat/SKILL.md`, var=""). 14:00Z tick fired ~68min late (within durable 9min–2h catch-up band).
+**P0** cost-report STUCK d2 extends to ~47.4h (last_status=dispatched from 7-13 20:44Z, cf=5, sr=0.10, ISS-025 sandbox-truncation family) — dedup applies (skill-health 18:58Z CRITICAL(1) reaffirm + 5 prior hbs/morning-briefs today). Chronic 16-skill sr<0.5 tail all cf=0. Heartbeat self-check ok (~4h56m).
 
-**P0:** cost-report STUCK d2 — `last_status: dispatched` at 2026-07-13T20:44:24Z = ~42h stale (was ~12h at 08:38Z hb), cf=5, sr=0.10, ISS-025 sandbox-truncation family. Mechanical continuation of already-notified CRITICAL — dedup applies. Self-check ok (~6h25m).
+**P1** PR #162 stalled ~74h CONFLICTING (operator deadline T-0 today per weekly-review action #2); PR #163 crossed 24h stall gate at 18:09Z (~2h ago) — first crossing since PR #162's 7-12 20:34Z, but action-converter 18:15Z already surfaced as active loop `pr-163-pre-stall-merge` score 80 with explicit timestamp. Zero urgent issues.
 
-**P1:** PR #162 stalled ~69h CONFLICTING (weekly-review action #2 operator deadline TODAY); PR #163 21h old approaches 24h gate at 18:09Z (~3h out — not flagged). Zero urgent issues.
+**P2/P3** all chronic (batch-dark d17, aixbt-pulse dead-slot d17 with 21:00Z break-vs-continue test ~52min out, weekly-shiplog + operator-scorecard Mon 7-13 miss).
 
-**P2:** SLX d21 −70%, ISS-025 d22 (T-2 to operator deadline), BTC arc CLOSED (spot $63,917 reclaimed $63.5k intraday per 13:30Z btc-levels, reclaim63500Alerted=true holds) — all in 48h logs.
+**Positive events:** evening batch 18:00Z fired cleanly (reflect/skill-health/action-converter/goal-tracker; self-improve expected-skip per even-day cron); security-digest 14:00Z resolved-fired at 15:17Z (77min-late-within-band, closes 15:08Z hb watch); agent-buzz + list-digest + btc-levels + skill-health 18:58Z all fired ok.
 
-**P3:** 12:00Z batch-dark d17, aixbt-pulse dead-slot d17 (09:00Z 7-14 confirmed missed = 10th consecutive slot), security-digest 14:00Z pending 68min late (under band, not flagged — watch 20:00Z hb), weekly-shiplog + operator-scorecard Mon 7-13 miss — all chronic.
-
-**Positive:** Morning batch confirmed dispatched (08:38Z hb "watch 14:00Z" flag resolved positive — 5/5 morning skills landed 7-14 08:37Z); github-trending 10:32Z + token-alert 13:33Z + btc-levels 13:31Z all fired ok.
-
-**Status page:** regenerated `docs/status.md` wholesale — 43 enabled skills sorted last-run-desc, **8 rows now 7-14 (was 1 at 08:38Z hb)**, cost-report 20:44 UTC 🕸 stuck unchanged, 11 open issues (4 critical/4 high/3 medium), verdict **DEGRADED**, next-run pointer list-digest @ 17:00 UTC. Token pulse omitted (no `articles/token-report-*.md` on disk).
-
-**Notification skipped** per 48h dedup — every finding already logged.
-
-**Files modified:** `docs/status.md`, `memory/logs/2026-07-14.md`.
-
-**Follow-ups:** operator PR #162 decision T-0 today; ISS-025 capture-step PR T-2; watch 20:00Z hb for security-digest fire-vs-miss; 21:00Z aixbt-pulse d17 dead-slot test; PR #163 crosses 24h gate ~18:09Z.
+**Notification skipped** — every finding dedup'd against last-48h logs. Regenerated `docs/status.md` (43 enabled skills sorted last-run-desc; 15 rows now 7-14, +7 fresh vs 15:08Z hb; cost-report 🕸 stuck unchanged; 11 open issues; verdict DEGRADED; next run btc-levels @ 20:15 UTC ~7min out; token pulse omitted — no `articles/token-report-*.md` on disk). Logged findings to `memory/logs/2026-07-14.md`.
