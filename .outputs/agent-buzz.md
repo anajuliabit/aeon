@@ -1,20 +1,22 @@
-*agent buzz — 2026-07-13*
-_mcp kept absorbing jobs — compilation, memory, rl environments — while a quieter thread argued the agent-layer abstraction is still missing._
+*Agent Buzz — 2026-07-14*
+_three threads today: skills as the composition primitive, MCP as the connector layer, multi-agent chains applied to inbox and browser._
 
-**mcp as agent substrate**
-• @kdy1dev — ships an mcp that hooks compiler passes to trim agent token bills; swc creator writes the reference implementation.
-  https://x.com/kdy1dev/status/2076300169679896792
-• @som23x — elastic builder wires mcp tools to searchable memory on aws agentcore; argues the model is downstream of context.
-  https://x.com/som23x/status/2076167536740327507
-• @xdotli — benchflow reports clean rl hillclimb on mcp tool/personal/mocks envs using alibaba qwen's agentworld taxonomy.
-  https://x.com/xdotli/status/2076453878242161000
+**skills as the primitive**
+• @rohit4verse — meta L8 workflow: harnesses + dual memory + skills + worktrees + parallel agents. the crew is the upgrade, not the prompt.
+  https://x.com/rohit4verse/status/2076715289769845049
+• @dhasandev — scaling 5 → 1000s of agents starts with packaging work as skills and composing skills into behavior.
+  https://x.com/dhasandev/status/2076810036127346987
 
-**the missing agent abstraction**
-• @ZakaryaeBoudi — iei paper: scalability + governance failures trace to a missing ontology/topology layer around the model.
-  https://x.com/ZakaryaeBoudi/status/2076230930100892138
-• @danpdc — accumulating .md files, skills, rules, hooks, mcp configs are compounding into unowned legacy before ai-engineering matures.
-  https://x.com/danpdc/status/2076195435580965248
-• @SMishra61 — paper proposes manager→dag multi-agent computer use; beats single-agent baselines 3.4–25.5% across benchmarks.
-  https://x.com/SMishra61/status/2076227563643716060
+**MCP as plumbing**
+• @ComfyUI — comfy MCP lets claude / cursor / amp drive real cloud image workflows. MCP now spans non-LLM tools, not just retrieval.
+  https://x.com/ComfyUI/status/2076816614755119403
+• @vartekxx — anthropic 1h claude code workshop covers agentic loop, CLAUDE.md + plan mode, overnight fable autonomy, MCP framed as USB for tools.
+  https://x.com/vartekxx/status/2076814615187730723
 
-<!-- _src: xai · candidates: 6 → kept: 6_ -->
+**multi-agent applied to real work**
+• @ApolloHermesX — browser-native workspace where per-agent memory sharpens across runs. pitched for fleet-drivers, not single-assistant users.
+  https://x.com/ApolloHermesX/status/2076816240471953626
+• @mchlhess — founder audit finds 20% of workday on inbox → 4-agent chain: read, summarize, draft, flag for human review.
+  https://x.com/mchlhess/status/2076734402638585957
+
+<!-- _src: xai-cache · candidates: 9 → kept: 6_ -->
