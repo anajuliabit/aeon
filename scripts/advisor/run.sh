@@ -68,6 +68,12 @@ PROMPTS="$ROOT/advisor/prompts"
 PM_COMMITTEE="${ADVISOR_PM_COMMITTEE:-0}"
 USEPOD_COMMITTEE_MODELS="${USEPOD_COMMITTEE_MODELS:-deepseek-v3.2,qwen-3.5,llama-4}"
 COMMITTEE_MAX_TIME="${COMMITTEE_MAX_TIME:-90}"   # per-member curl --max-time (seconds)
+# Retry-attempts for committee members: default 1 (fail-fast). llm-usepod.sh
+# would otherwise retry 3× with 15/30s backoffs (up to 315s per call variant, and
+# complete_usepod_model makes two variants on failure → ~10.5min per stuck member),
+# which repeatedly blew the workflow's 20-min timeout — quorum tolerates <N ok
+# members via single-model fallback, so extra retries here just eat run budget.
+COMMITTEE_LLM_ATTEMPTS="${COMMITTEE_LLM_ATTEMPTS:-1}"
 
 # Shared accounting note injected into every agent prompt so the gross-vs-net
 # difference isn't mistaken for a data discrepancy (see investiments reconcile()).
@@ -185,6 +191,7 @@ complete_usepod_model() {
   errf="$(mktemp)"
   raw="$(printf '%s' "$prompt" \
     | USEPOD_MODEL="$model" NO_VIRTUALS_FALLBACK=1 USEPOD_MAX_TIME="$COMMITTEE_MAX_TIME" \
+      LLM_ATTEMPTS="$COMMITTEE_LLM_ATTEMPTS" \
       "$ROOT/scripts/llm-usepod.sh" 2>"$errf" || true)"
   json="$(printf '%s' "$raw" | extract_json)"
   if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
@@ -192,6 +199,7 @@ complete_usepod_model() {
   fi
   raw="$(printf '%s\n\nReturn ONLY valid JSON, no prose.' "$prompt" \
     | USEPOD_MODEL="$model" NO_VIRTUALS_FALLBACK=1 USEPOD_MAX_TIME="$COMMITTEE_MAX_TIME" \
+      LLM_ATTEMPTS="$COMMITTEE_LLM_ATTEMPTS" \
       "$ROOT/scripts/llm-usepod.sh" 2>>"$errf" || true)"
   json="$(printf '%s' "$raw" | extract_json)"
   if [ -n "$json" ] && printf '%s' "$json" | jq -e . >/dev/null 2>&1; then
