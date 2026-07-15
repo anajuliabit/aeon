@@ -1,22 +1,22 @@
-*Agent Buzz — 2026-07-14*
-_three threads today: skills as the composition primitive, MCP as the connector layer, multi-agent chains applied to inbox and browser._
+*Agent Buzz — 2026-07-15*
+_quiet builder day: skills clustered as the composition primitive, benchmarks called gamed, small-MoE agents closing on frontier — production maturation, not model-size chase._
 
-**skills as the primitive**
-• @rohit4verse — meta L8 workflow: harnesses + dual memory + skills + worktrees + parallel agents. the crew is the upgrade, not the prompt.
-  https://x.com/rohit4verse/status/2076715289769845049
-• @dhasandev — scaling 5 → 1000s of agents starts with packaging work as skills and composing skills into behavior.
-  https://x.com/dhasandev/status/2076810036127346987
+**Skills as agent primitive**
+• @AnakiTech — EvoSkill auto-creates transferable skills from agent errors; +15.7% SealQA / +11.4% OfficeQA, base model untouched
+  https://x.com/AnakiTech/status/2077107824425869482
+• @chenzeling4 — nature-skills packs 17 research skills (bilingual polish, figures, 3-perspective peer review) for Claude Code / Codex
+  https://x.com/chenzeling4/status/2077106612742021531
 
-**MCP as plumbing**
-• @ComfyUI — comfy MCP lets claude / cursor / amp drive real cloud image workflows. MCP now spans non-LLM tools, not just retrieval.
-  https://x.com/ComfyUI/status/2076816614755119403
-• @vartekxx — anthropic 1h claude code workshop covers agentic loop, CLAUDE.md + plan mode, overnight fable autonomy, MCP framed as USB for tools.
-  https://x.com/vartekxx/status/2076814615187730723
+**Benchmarks called gamed**
+• @WhodeyAI — Berkeley: 7 of 8 major agent benchmarks scored ~100% by agents that solved nothing
+  https://x.com/WhodeyAI/status/2077109863297974614
+• @initc3org — IC3 Paper Agents: trading agents without on-chain proof + hard stops are unaudited fund managers
+  https://x.com/initc3org/status/2077079130739241415
 
-**multi-agent applied to real work**
-• @ApolloHermesX — browser-native workspace where per-agent memory sharpens across runs. pitched for fleet-drivers, not single-assistant users.
-  https://x.com/ApolloHermesX/status/2076816240471953626
-• @mchlhess — founder audit finds 20% of workday on inbox → 4-agent chain: read, summarize, draft, flag for human review.
-  https://x.com/mchlhess/status/2076734402638585957
+**Small MoE closes on frontier**
+• @yesnoerror — Mach-Mind-4-Flash (35B MoE, 3B active) matches 10–30× larger models via 3-stage RL + distillation
+  https://x.com/yesnoerror/status/2077136790322909450
+• @DumbEinstein — Sonnet 5 near-Opus on OSWorld / BrowseComp at lower token cost — production agentic economics shifting
+  https://x.com/DumbEinstein/status/2077116248345989455
 
-<!-- _src: xai-cache · candidates: 9 → kept: 6_ -->
+<!-- _src: xai-cache · candidates: 11 → kept: 6 -->

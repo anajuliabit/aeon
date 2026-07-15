@@ -1,0 +1,158 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-15"
+      },
+      "children": [
+        "intro-text",
+        "sep1",
+        "skills-section",
+        "sep2",
+        "benchmarks-section",
+        "sep3",
+        "moe-section",
+        "sep4",
+        "footer-text"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet builder day: skills clustered as the composition primitive, benchmarks called gamed, small-MoE agents closing on frontier — production maturation, not model-size chase.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "skills-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skills-heading",
+        "skill1",
+        "skill2"
+      ]
+    },
+    "skills-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Skills as agent primitive",
+        "level": "h3"
+      }
+    },
+    "skill1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@AnakiTech — EvoSkill auto-creates transferable skills from agent errors; +15.7% SealQA / +11.4% OfficeQA, base model untouched",
+        "href": "https://x.com/AnakiTech/status/2077107824425869482",
+        "source": "X"
+      }
+    },
+    "skill2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@chenzeling4 — nature-skills packs 17 research skills (bilingual polish, figures, 3-perspective peer review) for Claude Code / Codex",
+        "href": "https://x.com/chenzeling4/status/2077106612742021531",
+        "source": "X"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "benchmarks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "benchmarks-heading",
+        "bench1",
+        "bench2"
+      ]
+    },
+    "benchmarks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Benchmarks called gamed",
+        "level": "h3"
+      }
+    },
+    "bench1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@WhodeyAI — Berkeley: 7 of 8 major agent benchmarks scored ~100% by agents that solved nothing",
+        "href": "https://x.com/WhodeyAI/status/2077109863297974614",
+        "source": "X"
+      }
+    },
+    "bench2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@initc3org — IC3 Paper Agents: trading agents without on-chain proof + hard stops are unaudited fund managers",
+        "href": "https://x.com/initc3org/status/2077079130739241415",
+        "source": "X"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "moe-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "moe-heading",
+        "moe1",
+        "moe2"
+      ]
+    },
+    "moe-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Small MoE closes on frontier",
+        "level": "h3"
+      }
+    },
+    "moe1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@yesnoerror — Mach-Mind-4-Flash (35B MoE, 3B active) matches 10–30× larger models via 3-stage RL + distillation",
+        "href": "https://x.com/yesnoerror/status/2077136790322909450",
+        "source": "X"
+      }
+    },
+    "moe2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@DumbEinstein — Sonnet 5 near-Opus on OSWorld / BrowseComp at lower token cost — production agentic economics shifting",
+        "href": "https://x.com/DumbEinstein/status/2077116248345989455",
+        "source": "X"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 11 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}
