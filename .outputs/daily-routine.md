@@ -1,47 +1,47 @@
-*daily routine — 2026-07-14*
+*Daily Routine — 2026-07-15*
 
-_tape: 34/100 top-100 green, median top-50 -0.60%. flat shape from 7-13, deeper 7d bleed._
-btc $62,602 -0.6% / 7d -1.09% — **arc closed**: 7-13 daily close $62,242 failed $63.5k gate. d4 breakdown holds. eth $1,785 flat, sol $75.19 -1.58% / 7d -7.71%, hype $63.71 -2.78% / 7d **-10.11%** (rotation-out d3 deepens), ada 7d -11.62% new deep-weakness.
+_risk-on returns — 60/76 filtered top-100 green, median top-50 +2.04% (reversal from 7-14 34%/-0.60%). soft june CPI (core 2.6% vs 2.8% exp) guts fed-hike bets, BTC $64.5k, ETH +5% $1,873. BTC arc REOPENS via 7-14 daily close $64,977 (first close above $63.5k gate since 7-10)._
 
-*top winners (24h)*
-1. DRV $0.180 +51% / 7d +62% $14M vol — derive protocol governance, options DEX, 25% fees→buybacks
-2. BILL +16.6% / 7d +30.6% $46M vol (repeats)
-3. BDX +12.8% $783M mcap
-4. RIF +9.0% (reverses 7-13 loser)
-5. CVX +8.4% / CRV +8.0% $57M vol — curve pair sync
-6. B +8% / 7d -35% — second dead-cat leg (7-11 +16 → 7-12 -27 → 7-14 +8)
-7. ENA +5.8% / 7d +8.5% $104M vol (trending)
-8. INJ +5.4% / 7d +5.1% $69M vol (trending)
-9. EDGE +5.1% / VVV +4.9%
+*Top 10 Winners (24h)*
+1. KAITO $0.78 +17.5% / 7d +20% · $52M vol · #174 — momentum, no catalyst
+2. PUMP $0.00165 +13.5% / 7d +7% · $119M vol — event=local-low re-validates d3
+3. PI $0.084 +13.1% / 7d -18.5% [FADE]
+4. GNO $124 +12.7% / 7d +19%
+5. XEC $6.51e-6 +12.2% / 7d +27% — DCR/XEC pair whipsaws back green d3
+6. SPX $0.38 +10.7%
+7. CC (Canton) $0.14 +9.5% · #21 mid-cap
+8. ZEC $552 +9.2% / 7d +16% [MAJOR · $507M vol]
+9. DCR $13.25 +8.3% / 7d +20% — pair-flip round-trip closes
+10. VIRTUAL $0.60 +7.8%
 
-*top losers (24h)*
-1. **DCR -24.02%** / 7d +9.1% — mega reversal from 7-13 #2 winner +35.1%
-2. PI -14.5% / 7d -34.5% $34M vol cascade
-3. KITE -12.8% (dead-cat from 7-13 +19.5%)
-4. **XEC -11.66%** / 7d +12% — privacy pair reverses w/ DCR d2
-5. GRASS -10% / 7d -33%
-6. **DEXE -7.5%** / 7d +51.6% $90M vol — first breakout red print after ATH d3
-7. SPX -7.1% / H -6.9% / APE -5.5% / ETHFI -5.3% / BAT -5.2% / TAO -4.5%
+*Top 10 Losers (24h)*
+1. CASHCAT $0.13 -31.9% · $76M vol [CAPITULATION]
+2. VELVET $0.53 -16.8% / 7d +32% [FADE]
+3. DRV $0.147 -14.6% / 7d +35% — one-day-breakout-unwind at n=5 (7-14 was #1 +51%)
+4. BDX $0.089 -12.0%
+5. DEXE $37.58 -10.3% / 7d +34% — breakout d4 bigger red, 7d intact
+6. EDGE $0.39 -6.7%
+7. AWE $0.062 -4.5%
+8. VVV $10.61 -4.1%
+9. EIGEN $0.23 -4.1%
+10. BSV $13.41 -3.9%
 
-*trending signals*
-- **LAB #286 -24.18% cascade d7** — extends -95% zero-arc reference case, cumulative ~99.4%. `-59%/day sellers-exhaust` heuristic 0/7
-- **XEC+DCR privacy top-2 d2 FAILS** — first-time-dual-privacy-winner pattern reverses hard. 7d still green for both. one-day-narrative-flip
-- **DEXE d3 first red print** — 2-day ATH bounce cools -7.5%, 7d +51.6% intact. watchlist-add flag holds
-- **PUMP -3.29% / 7d -12.4%** — post-unlock bounce d2 fails, no durable rescue. buyback-vs-supply-shock verdict tilts supply-shock
-- macro overlay per coindesk 7-14: "traders lift july fed rate hike bets ahead of inflation report + warsh testimony; 2y treasury highest since early last year; oil upswing + us-iran tensions" — explains today's -2% majors
+*Tweet Roundup*
+*Crypto:* soft june CPI (core 2.6% vs 2.8% exp) collapses fed-hike bets, september cut fully priced. BTC $64.7k / ETH +5% $1,873 / XRP +3.4%. june CEX spot +15.3% to $1.11T (first monthly rise in 5mo), RWA perp record $311B. ETH+SOL ETF filings add institutional momentum.
+*AI:* meta muse spark 1.1 shipped 7-9 — 1M-context, native primary/subagent orchestration, MCP + skills, $1.25/$4.25 per Mtok. GPT-5.6 GA 7-9 after 2-week gated white-house safety preview. claude fable 5 tops SWE-Bench Pro at 80.3%; claude code weekly limits 50% higher through 7-19; browser built into claude code.
+*Dev:* DuneSlide (CVE-2026-50548/9, CVSS 9.8) — prompt-injection escapes cursor sandbox to OS RCE on ingested payload; fixed in cursor 3.0. separate windows RCE via `git.exe` in project root disclosed 12-15-2025 still unpatched 6mo later. agent-safety-guardrail rail extends yesterday's destructive_command_guard trending.
 
-*tweet roundup (websearch, xai d29)*
-*crypto:* fed-hike-bets front-run cpi + warsh testimony = 2y yield ripping, oil bid on iran tensions, majors -2%. decred technicians call multi-month downtrend break (before today's -24% reversal — tape doesn't care about the chartists). PUMP unlock d2 post-event verdict: bounce didn't hold.
-*ai:* anthropic **claude reflect dashboard** in beta on Free/Pro/Max (web + desktop) — usage-analytics visualizing topics/peak-hour/work-habits. claude for government beta starts july. claude cowork cloud + mobile continues (max beta thru aug 5). fable 5 + mythos 5 export controls lifted 7-1.
-*dev:* clawk (HN 191pts) — disposable linux vm for coding agents = direct aeon-adjacent primitive. "building/shipping mac apps without ever opening xcode" HN top slot (454pts) — dev productivity thread.
+*Paper of the Day*
+"Metacognition in LLMs: Foundations, Progress, and Opportunities" — Liu et al · HF ↑13. self-knowledge is the load-bearing gap for agent loops; direct axis for aeon-style memory / self-review skills.
+[Read](https://arxiv.org/abs/2607.11881) | [PDF](https://arxiv.org/pdf/2607.11881)
 
-*paper of the day*
-"ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory" (arxiv 2607.10350, HF ↑61) — direct aeon-axis alignment: agent-OS + lifelong-multi-modal-memory maps to aeon's memory/skills/logs primitive. runner-up: "Weak-to-Strong Generalization via Direct On-Policy Distillation" (2607.05394, ↑40) — anthropic-adjacent alignment research.
+*GitHub Issues*
+GITHUB_ISSUES_OK — 0 fresh in last 24h across scope (chronic 10-item pool unchanged).
 
-*github issues*
-- no new issues in tracked repos (chronic 10-item pool unchanged)
-
-*hn digest (top 3)*
-1. [Building/shipping Mac and iOS apps without opening Xcode](https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/) (454pts/196c)
-2. [Show HN: Clawk – disposable linux vm for coding agents](https://github.com/clawkwork/clawk) (191pts/150c) — direct aeon-adjacent
-3. [Japan recovers up to 90% of lithium from EV batteries](https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/) (411pts/99c)
+*HN Digest*
+1. [Bonsai 27B: 27B-class model on a phone](https://prismml.com/news/bonsai-27b) (567pts) — on-device LLM tier crossing
+   [Discuss](https://news.ycombinator.com/item?id=48910545)
+2. [How to stop Claude from saying load-bearing](https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing) (519pts) — claude-code operator writing critique
+   [Discuss](https://news.ycombinator.com/item?id=48905248)
+3. [Cursor 0day: full disclosure only protection left](https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left) (345pts) — windows git.exe RCE unpatched 6mo, agent-safety rail
+   [Discuss](https://news.ycombinator.com/item?id=48910676)

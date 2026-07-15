@@ -1,0 +1,583 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-15"
+      },
+      "children": [
+        "market-overview",
+        "sep1",
+        "winners-section",
+        "sep2",
+        "losers-section",
+        "sep3",
+        "tweets-section",
+        "sep4",
+        "paper-section",
+        "sep5",
+        "github-section",
+        "sep6",
+        "hn-section"
+      ]
+    },
+    "market-overview": {
+      "type": "Text",
+      "props": {
+        "text": "risk-on returns — 60/76 filtered top-100 green, median top-50 +2.04% (reversal from 7-14 34%/-0.60%). soft june CPI (core 2.6% vs 2.8% exp) guts fed-hike bets, BTC $64.5k, ETH +5% $1,873. BTC arc REOPENS via 7-14 daily close $64,977 (first close above $63.5k gate since 7-10).",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "winners-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners-heading",
+        "winners-table"
+      ]
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Volume",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "KAITO",
+            "$0.78",
+            "+17.5%",
+            "+20%",
+            "$52M",
+            "#174 momentum, no catalyst"
+          ],
+          [
+            "2",
+            "PUMP",
+            "$0.00165",
+            "+13.5%",
+            "+7%",
+            "$119M",
+            "event=local-low re-validates d3"
+          ],
+          [
+            "3",
+            "PI",
+            "$0.084",
+            "+13.1%",
+            "-18.5%",
+            "—",
+            "FADE"
+          ],
+          [
+            "4",
+            "GNO",
+            "$124",
+            "+12.7%",
+            "+19%",
+            "—",
+            "—"
+          ],
+          [
+            "5",
+            "XEC",
+            "$6.51e-6",
+            "+12.2%",
+            "+27%",
+            "—",
+            "DCR/XEC pair whipsaws back green d3"
+          ],
+          [
+            "6",
+            "SPX",
+            "$0.38",
+            "+10.7%",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "7",
+            "CC (Canton)",
+            "$0.14",
+            "+9.5%",
+            "—",
+            "—",
+            "#21 mid-cap"
+          ],
+          [
+            "8",
+            "ZEC",
+            "$552",
+            "+9.2%",
+            "+16%",
+            "$507M",
+            "MAJOR"
+          ],
+          [
+            "9",
+            "DCR",
+            "$13.25",
+            "+8.3%",
+            "+20%",
+            "—",
+            "pair-flip round-trip closes"
+          ],
+          [
+            "10",
+            "VIRTUAL",
+            "$0.60",
+            "+7.8%",
+            "—",
+            "—",
+            "—"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "losers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers-heading",
+        "losers-table"
+      ]
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Volume",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "CASHCAT",
+            "$0.13",
+            "-31.9%",
+            "—",
+            "$76M",
+            "CAPITULATION"
+          ],
+          [
+            "2",
+            "VELVET",
+            "$0.53",
+            "-16.8%",
+            "+32%",
+            "—",
+            "FADE"
+          ],
+          [
+            "3",
+            "DRV",
+            "$0.147",
+            "-14.6%",
+            "+35%",
+            "—",
+            "one-day-breakout-unwind at n=5 (7-14 was #1 +51%)"
+          ],
+          [
+            "4",
+            "BDX",
+            "$0.089",
+            "-12.0%",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "5",
+            "DEXE",
+            "$37.58",
+            "-10.3%",
+            "+34%",
+            "—",
+            "breakout d4 bigger red, 7d intact"
+          ],
+          [
+            "6",
+            "EDGE",
+            "$0.39",
+            "-6.7%",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "7",
+            "AWE",
+            "$0.062",
+            "-4.5%",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "8",
+            "VVV",
+            "$10.61",
+            "-4.1%",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "9",
+            "EIGEN",
+            "$0.23",
+            "-4.1%",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "10",
+            "BSV",
+            "$13.41",
+            "-3.9%",
+            "—",
+            "—",
+            "—"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets-heading",
+        "crypto-subsection",
+        "ai-subsection",
+        "dev-subsection"
+      ]
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "crypto-subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto-badge",
+        "crypto-text"
+      ]
+    },
+    "crypto-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Crypto",
+        "variant": "default"
+      }
+    },
+    "crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "soft june CPI (core 2.6% vs 2.8% exp) collapses fed-hike bets, september cut fully priced. BTC $64.7k / ETH +5% $1,873 / XRP +3.4%. june CEX spot +15.3% to $1.11T (first monthly rise in 5mo), RWA perp record $311B. ETH+SOL ETF filings add institutional momentum."
+      }
+    },
+    "ai-subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai-badge",
+        "ai-text"
+      ]
+    },
+    "ai-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "AI",
+        "variant": "default"
+      }
+    },
+    "ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "meta muse spark 1.1 shipped 7-9 — 1M-context, native primary/subagent orchestration, MCP + skills, $1.25/$4.25 per Mtok. GPT-5.6 GA 7-9 after 2-week gated white-house safety preview. claude fable 5 tops SWE-Bench Pro at 80.3%; claude code weekly limits 50% higher through 7-19; browser built into claude code."
+      }
+    },
+    "dev-subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev-badge",
+        "dev-text"
+      ]
+    },
+    "dev-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Dev",
+        "variant": "default"
+      }
+    },
+    "dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "DuneSlide (CVE-2026-50548/9, CVSS 9.8) — prompt-injection escapes cursor sandbox to OS RCE on ingested payload; fixed in cursor 3.0. separate windows RCE via git.exe in project root disclosed 12-15-2025 still unpatched 6mo later. agent-safety-guardrail rail extends yesterday's destructive_command_guard trending."
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "paper-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper-heading",
+        "paper-story",
+        "paper-summary",
+        "paper-pdf"
+      ]
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Metacognition in LLMs: Foundations, Progress, and Opportunities",
+        "href": "https://arxiv.org/abs/2607.11881",
+        "source": "Liu et al · HF ↑13"
+      }
+    },
+    "paper-summary": {
+      "type": "Text",
+      "props": {
+        "text": "self-knowledge is the load-bearing gap for agent loops; direct axis for aeon-style memory / self-review skills.",
+        "variant": "caption"
+      }
+    },
+    "paper-pdf": {
+      "type": "Link",
+      "props": {
+        "label": "PDF",
+        "href": "https://arxiv.org/pdf/2607.11881"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "github-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github-heading",
+        "github-text"
+      ]
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "GITHUB_ISSUES_OK — 0 fresh in last 24h across scope (chronic 10-item pool unchanged)."
+      }
+    },
+    "sep6": {
+      "type": "Separator"
+    },
+    "hn-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-heading",
+        "hn-item1",
+        "hn-item2",
+        "hn-item3"
+      ]
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn1-story",
+        "hn1-summary",
+        "hn1-link"
+      ]
+    },
+    "hn1-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Bonsai 27B: 27B-class model on a phone",
+        "href": "https://prismml.com/news/bonsai-27b",
+        "source": "Hacker News",
+        "score": "567 pts"
+      }
+    },
+    "hn1-summary": {
+      "type": "Text",
+      "props": {
+        "text": "on-device LLM tier crossing",
+        "variant": "caption"
+      }
+    },
+    "hn1-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48910545"
+      }
+    },
+    "hn-item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn2-story",
+        "hn2-summary",
+        "hn2-link"
+      ]
+    },
+    "hn2-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "How to stop Claude from saying load-bearing",
+        "href": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+        "source": "Hacker News",
+        "score": "519 pts"
+      }
+    },
+    "hn2-summary": {
+      "type": "Text",
+      "props": {
+        "text": "claude-code operator writing critique",
+        "variant": "caption"
+      }
+    },
+    "hn2-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48905248"
+      }
+    },
+    "hn-item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn3-story",
+        "hn3-summary",
+        "hn3-link"
+      ]
+    },
+    "hn3-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Cursor 0day: full disclosure only protection left",
+        "href": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+        "source": "Hacker News",
+        "score": "345 pts"
+      }
+    },
+    "hn3-summary": {
+      "type": "Text",
+      "props": {
+        "text": "windows git.exe RCE unpatched 6mo, agent-safety rail",
+        "variant": "caption"
+      }
+    },
+    "hn3-link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48910676"
+      }
+    }
+  }
+}
