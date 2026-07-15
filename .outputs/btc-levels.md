@@ -1,11 +1,24 @@
+Clean run, committed. Here's what happened:
+
 ## Summary
 
-Ran btc-levels skill. Fetched CoinGecko data: **spot $64,577** / **2026-07-13 close $62,242**.
+**BTC data fetched (CoinGecko, 2026-07-15 05:57Z):**
+- Spot: $64,747
+- Daily close 2026-07-14: $64,977
 
-Level evaluation — no alerts fired:
-- Leverage-review (≤$45k): clear ($64,577 well above)
-- Breakdown close (<$60,500): clear ($62,242 > $60,500)
-- Reclaim $63,500: already alerted (`reclaim63500Alerted=true`; re-arm only on sub-$60,500 dip)
-- Reclaim $65,900: not yet reached ($64,577 < $65,900 — about $1,323 away)
+**Level evaluations:**
+| Level | Check | Result |
+|---|---|---|
+| Spot ≤ $45,000 (leverage-review) | $64,747 > $45,000 | No alert |
+| Daily close < $60,500 (breakdown) | $64,977 > $60,500 | No alert |
+| Reclaim $63,500 | Already alerted (`reclaim63500Alerted: true`) | No alert |
+| Reclaim $65,900 | $64,747 < $65,900 — not yet | No alert |
 
-No notification sent (quiet run). Updated `memory/btc-levels-state.json` and appended log entry to `memory/logs/2026-07-14.md`, committed both.
+**No alerts fired.** No notification sent (quiet run is the norm).
+
+**Files updated:**
+- `memory/btc-levels-state.json` — updated spot, daily close, close date to 2026-07-14
+- `memory/logs/2026-07-15.md` — created with one-line entry
+- Committed as `d33d8f2`
+
+**Next gate to watch:** spot ≥ $65,900 for stabilization-confirmed alert (~$1,153 above current spot).
