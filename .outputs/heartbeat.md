@@ -1,13 +1,16 @@
-Heartbeat complete.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED` — regenerated `docs/status.md` and logged findings to `memory/logs/2026-07-15.md`. Notification **skipped** per 48h dedup gate — every finding already surfaced.
 
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
+**08:00Z tick fired ~25min late** (within durable morning-slot catch-up band).
 
-**P0** cost-report STUCK d2 extends to ~47.4h (last_status=dispatched from 7-13 20:44Z, cf=5, sr=0.10, ISS-025 sandbox-truncation family) — dedup applies (skill-health 18:58Z CRITICAL(1) reaffirm + 5 prior hbs/morning-briefs today). Chronic 16-skill sr<0.5 tail all cf=0. Heartbeat self-check ok (~4h56m).
+**Findings (all dedup'd):**
+- **P0** — cost-report **STUCK ~35h41m** (`dispatched` at 2026-07-13T20:44Z, cf=5, sr=0.10, ~16d since last_success). ISS-025 sandbox-truncation family. Escalation channel = skill-health 7-14 18:58Z CRITICAL(1) reaffirm. Chronic ~16-skill sr<0.5 tail all cf=0 (sandbox-truncation day-23).
+- **P0 self-check** — heartbeat last_success ~12h11m ago, well under 36h gate.
+- **P1** — PR #162 stalled ~86h CONFLICTING, **T-0 (7-14) → T+1 deadline-missed rollover** (weekly-review action #2, mechanical). PR #163 stalled ~38h CONFLICTING, past 24h gate (~14h ago), approaches 48h at 18:09Z 7-15 (~10h out). Zero urgent issues.
+- **P3** — batch-dark d18, **aixbt-pulse dead-slot d18 confirmed** (21:00Z 7-14 tick missed, 11th consecutive twice-daily slot miss since 7-08 09:00Z — d17 break-vs-continue resolves **CONTINUE**), weekly-shiplog/operator-scorecard Mon 7-13 miss.
 
-**P1** PR #162 stalled ~74h CONFLICTING (operator deadline T-0 today per weekly-review action #2); PR #163 crossed 24h stall gate at 18:09Z (~2h ago) — first crossing since PR #162's 7-12 20:34Z, but action-converter 18:15Z already surfaced as active loop `pr-163-pre-stall-merge` score 80 with explicit timestamp. Zero urgent issues.
+**Positive** — btc-levels 05:58Z 7-15 fired ok (spot $64,747, above $63,500 gate); evening batch 7-14 (evening-recap 21:19Z + thought-review 21:18Z) landed cleanly.
 
-**P2/P3** all chronic (batch-dark d17, aixbt-pulse dead-slot d17 with 21:00Z break-vs-continue test ~52min out, weekly-shiplog + operator-scorecard Mon 7-13 miss).
+**Status page:** 43 skills sorted last-run-desc, **1 row now 7-15** (btc-levels 05:58Z tops) + 15 rows 7-14, cost-report 🕸 stuck unchanged, 11 open issues (4 critical / 4 high / 3 medium), verdict **DEGRADED**, next-run pointer **github-trending @ 09:00 UTC** (~35min out).
 
-**Positive events:** evening batch 18:00Z fired cleanly (reflect/skill-health/action-converter/goal-tracker; self-improve expected-skip per even-day cron); security-digest 14:00Z resolved-fired at 15:17Z (77min-late-within-band, closes 15:08Z hb watch); agent-buzz + list-digest + btc-levels + skill-health 18:58Z all fired ok.
-
-**Notification skipped** — every finding dedup'd against last-48h logs. Regenerated `docs/status.md` (43 enabled skills sorted last-run-desc; 15 rows now 7-14, +7 fresh vs 15:08Z hb; cost-report 🕸 stuck unchanged; 11 open issues; verdict DEGRADED; next run btc-levels @ 20:15 UTC ~7min out; token pulse omitted — no `articles/token-report-*.md` on disk). Logged findings to `memory/logs/2026-07-14.md`.
+## Summary
+Ran heartbeat skill per `skills/heartbeat/SKILL.md` (var=""). Every P0/P1/P2/P3 finding dedup'd against last-48h logs — notification skipped. Files modified: `docs/status.md` (regenerated wholesale) + `memory/logs/2026-07-15.md` (appended heartbeat section). Output: `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`. Follow-up: none skill-side; downstream — 09:00Z github-trending + aixbt-pulse d18 12th-consecutive-slot test (~35min out); 18:00Z self-improve odd-day tick picks up CLAUDE.md rule-5 + Investment Advisor investigation; operator PR #162 T+1 deadline-missed + ISS-025 T-1 tomorrow 7-16.
