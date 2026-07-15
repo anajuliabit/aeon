@@ -1,0 +1,126 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-07-15"
+      },
+      "children": [
+        "text-intro",
+        "sep1",
+        "heading-crypto",
+        "stack-posts",
+        "sep2",
+        "text-footer"
+      ]
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "quiet on the tracked list — 2 substantive posts, everything else thread noise under single-digit likes.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "heading-crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto/DeFi list",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack-posts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "post-stack-1",
+        "post-stack-2"
+      ]
+    },
+    "post-stack-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post1",
+        "link1"
+      ]
+    },
+    "post1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "LLM wake/sleep-phase paper: fast-learn weights get consolidated into a frozen \"teacher\" snapshot; dreaming phase generates synthetic samples, filters for actual improvement. maps 1:1 onto the memory/skills split agent frameworks are already converging on",
+        "likes": 29,
+        "retweets": 3
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2077161176375443933"
+      },
+      "children": []
+    },
+    "post-stack-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "post2",
+        "link2"
+      ]
+    },
+    "post2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "cozy-timeline moment: reading posts from accounts you trust reacting to posts from accounts they trust. reads as low-key rebuttal to the recycled-vids/vagueposting default mode of the feed",
+        "likes": 43,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2077155063307309480"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(2) — status: LIST_DIGEST_OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
