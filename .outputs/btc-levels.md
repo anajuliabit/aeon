@@ -1,11 +1,14 @@
 ## Summary
 
-Quiet run. No alerts fired.
+**btc-levels 16:47Z run complete.**
 
-- **Spot**: $65,262 (up ~$723 from the 08:25Z run at $64,539)
-- **Daily close (2026-07-14)**: $64,977 — above the $60,500 breakdown threshold, no breakdown signal
-- **Leverage-review band** ($45k): inactive, spot is $20k above it
-- **Reclaim $63,500**: already alerted (`reclaim63500Alerted=true`), no re-arm until spot dips below $60,500
-- **Reclaim $65,900**: still pending — spot is $638 away. This is the next gate to watch
+- **Spot:** $64,869 (down ~$393 from 13:43Z run)
+- **Daily close 2026-07-14:** $64,977 (above $60,500 floor — no breakdown)
 
-State and log committed. No notification sent — quiet runs are the norm.
+Level evaluations:
+- Leverage-review (≤$45k): clear
+- Breakdown close (<$60,500): clear — 7-14 close $64,977
+- Reclaim $63,500: `reclaim63500Alerted=true` holds; re-arm only on sub-$60,500 dip
+- Reclaim $65,900: spot $64,869 is ~$1,031 short of the gate
+
+No alerts fired. No notification sent. State and log committed (`2f2a934`). Full-reclaim $65,900 remains the next gate to watch.
