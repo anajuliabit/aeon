@@ -1,0 +1,234 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve: Investment Advisor Fix Shipped"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "problem_section",
+        "sep1",
+        "timeline_section",
+        "sep2",
+        "solution_section",
+        "sep3",
+        "impact_section",
+        "sep4",
+        "status_section"
+      ]
+    },
+    "problem_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_problem",
+        "text_problem",
+        "stat_cancelled"
+      ]
+    },
+    "heading_problem": {
+      "type": "Heading",
+      "props": {
+        "text": "Problem",
+        "level": "h3"
+      }
+    },
+    "text_problem": {
+      "type": "Text",
+      "props": {
+        "text": "fail-fast committee retries in investment-advisor workflow were causing a 20-min timeout that cancelled runs",
+        "variant": "body"
+      }
+    },
+    "stat_cancelled": {
+      "type": "Stat",
+      "props": {
+        "label": "Cancelled runs (7-07 to 7-13)",
+        "value": "8 of 9"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "timeline_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_timeline",
+        "timeline_item1",
+        "timeline_item2",
+        "timeline_item3"
+      ]
+    },
+    "heading_timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline",
+        "level": "h3"
+      }
+    },
+    "timeline_item1": {
+      "type": "Text",
+      "props": {
+        "text": "7-07 to 7-13: All scheduled runs cancelled",
+        "variant": "body"
+      }
+    },
+    "timeline_item2": {
+      "type": "Text",
+      "props": {
+        "text": "7-14: Single successful run",
+        "variant": "body"
+      }
+    },
+    "timeline_item3": {
+      "type": "Text",
+      "props": {
+        "text": "7-15: Cancelled again at 15:15Z after committee spent 10.5 min on 2 stuck members",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "solution_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_solution",
+        "text_solution",
+        "text_solution_detail"
+      ]
+    },
+    "heading_solution": {
+      "type": "Heading",
+      "props": {
+        "text": "Solution",
+        "level": "h3"
+      }
+    },
+    "text_solution": {
+      "type": "Text",
+      "props": {
+        "text": "Set LLM_ATTEMPTS=1 for committee members via new COMMITTEE_LLM_ATTEMPTS environment variable",
+        "variant": "body"
+      }
+    },
+    "text_solution_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Prevents stuck members from consuming excessive retry time",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "impact_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_impact",
+        "stat_latency"
+      ]
+    },
+    "heading_impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Expected Impact",
+        "level": "h3"
+      }
+    },
+    "stat_latency": {
+      "type": "Stat",
+      "props": {
+        "label": "Worst-case stuck-member latency",
+        "value": "3 min",
+        "delta": "-71%",
+        "trend": "down"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_badges",
+        "link_pr"
+      ]
+    },
+    "status_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_clean",
+        "badge_closes"
+      ]
+    },
+    "badge_clean": {
+      "type": "Badge",
+      "props": {
+        "text": "rule-5 clean (script-side)",
+        "variant": "default"
+      }
+    },
+    "badge_closes": {
+      "type": "Badge",
+      "props": {
+        "text": "Closes weekly-review #4 (deadline 7-16)",
+        "variant": "outline"
+      }
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #164",
+        "href": "https://github.com/anajuliabit/aeon/pull/164"
+      }
+    }
+  }
+}
