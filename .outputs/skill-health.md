@@ -1,20 +1,19 @@
-*skill health — 2026-07-14*
-HEALTH: CRITICAL(1)  [systemic: output_tokens=0 sandbox-truncation d22 — 19 skills]
+*Skill Health — 2026-07-15*
+HEALTH: CRITICAL(1) [systemic: output_tokens=0 sandbox-truncation d23 — 18 skills]
 
-🔴 CRITICAL (1)
-- cost-report — cf=5, 15d down, sr=0.10 — WAIT-API (sandbox truncation) → ISS-025
+🔴 CRITICAL
+- cost-report — cf=5, 16d down, ~46h stuck at dispatched — WAIT-API (outputTokens truncation) → ISS-025 (operator PR T-1 tomorrow)
 
-🟡 DEGRADED (18)
-- market-context-refresh — sr 0.32, 16d dark — DISPATCH-SKILL
-- narrative-tracker — sr 0.33, 16d dark — DISPATCH-SKILL
-- aixbt-pulse — sr 0.47, 16d dark (dead-slot d17) — DISPATCH-SKILL
-- defi-monitor — sr 0.53, 16d dark — DISPATCH-SKILL
-- reg-monitor — sr 0.14 — WAIT-API
-- +13 more — see memory/issues/INDEX.md
+🟡 DEGRADED (17)
+- aixbt-pulse — sr=0.47, 17d — systemic
+- defi-monitor — sr=0.53, 17d — systemic
+- market-context-refresh — sr=0.32, 17d — systemic
+- narrative-tracker — sr=0.33, 17d — systemic
+- skill-analytics — sr=0.14, 7d — systemic
++12 more — see memory/issues/INDEX.md
 
-⚪ NO DATA (3): autoresearch (on-demand), fork-skill-gap, operator-scorecard — DISPATCH-SKILL
+⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL
 🟢 HEALTHY: 9
 
-positive delta d1: 2 promoted DEGRADED→WARNING (github-trending 42/70=0.60, thought-review 66/110=0.60) after successful runs today lifted sr from <0.60 across 0.60 boundary. no new open issues filed, none resolved.
-
-open issues: 11 · resolved this run: 0 · filed this run: 0
+Δ vs prev: agent-buzz DEGRADED→WARNING (47/78=0.6025 crosses 0.60 boundary)
+Open issues: 11 · Resolved this run: 0 · Filed: 0
