@@ -1,21 +1,19 @@
-Token-alert skill executed. All 4 tokens under threshold, no notification per skill gate.
+Log entry written. All 4 tokens under 24h thresholds, no volume spike, no threshold-cross configured — silent TOKEN_ALERT_OK per skill spec. Emitting the final summary.
 
 ## Summary
+Ran **token-alert** skill (var=""). Parsed 4 tracked tokens from `memory/MEMORY.md` (WELL/MAMO/REPPO/GITLAWB). Fetched CoinGecko `simple/price` in a single unauth curl (200, 394B, 109ms — 23rd consecutive clean CG day). Live prints:
 
-Ran `skills/token-alert/SKILL.md` (var=""). Parsed 4 tracked tokens from MEMORY.md (WELL/MAMO/REPPO/GITLAWB). CoinGecko simple/price returned 200 (390B, 73ms) — **22nd consecutive clean CG day**, no WebFetch fallback needed.
+| Token | Price | 24h % | 24h Vol | vs 5w baseline | Rail % |
+|-------|-------|-------|---------|----------------|--------|
+| WELL | $0.00366518 | +0.08% | $101K | 0.08× ($1,285K mean) | 1% |
+| MAMO | $0.00944674 | +1.94% | $1,034K | 1.15× ($900K) | 13% |
+| REPPO | $0.02665346 | -6.74% | $287K | 0.68× ($422K) | 45% |
+| GITLAWB | $0.00003895 | **+13.36%** | $396K | 0.75× ($525K) | **89%** |
 
-**Prices:**
-- WELL $0.00365313 -0.76% 24h · vol $198,070 = 0.11× 5d baseline ($1,818K)
-- MAMO $0.00926407 +2.14% 24h · vol $922,121 = 1.04× baseline ($884K)
-- REPPO $0.02761996 +7.17% 24h · vol $85,029 = 0.19× baseline ($444K)
-- GITLAWB $0.00003453 -11.97% 24h · vol $326,834 = 0.57× baseline ($578K)
+**Status: TOKEN_ALERT_OK** — 0/12 checks fire (0/4 24h thresholds, 0/4 volume spikes vs 3× rail, 4/4 threshold-cross skipped per no Floor/Ceiling in config). Notification **skipped** per skill step 3 gate. GITLAWB closest to firing at 89% of 15% rail — second-consecutive day approaching rail (7-14 -11.97% fade → 7-15 +13.36% green = opposite-side approach). 15% rail intact on all 4 for a 2-run streak.
 
-**Alert eval:** all 24h changes under threshold (10%/15%/15%/15%) · all vol multiples under 3× rail · threshold-cross skipped (no Floor/Ceiling configured). **Status: TOKEN_ALERT_OK** — 0/12 checks fire. Notification **skipped** per skill step 3 gate.
+Body-pattern verdict: **7-15 whipsaw-into-rail-from-opposite-side day** — GITLAWB grinds back green without hot bid (exhaustion validates), REPPO's 7-14 bounce mean-reverts confirming mechanical shape, MAMO first million-print day-5 sustainable, WELL 0.08× vol on flat print = strongest participation-vanish yet. REPPO/GITLAWB opposite-direction for third session (decoupling extends).
 
-**Body-pattern (exhaustion day):** GITLAWB give-back continues (-17.24% log-to-log) but the 15% rail doesn't ring — day-3 cascade-vs-exhaustion binary tilts exhaustion on 0.57× baseline vol. REPPO bounces +7.17% off flat on 0.19× vol (mechanical snap-back, decouples further from GITLAWB). MAMO extends day-4 bounce shape flat. WELL reverses to +6.22% log-to-log on 0.11× vol = strongest participation-vanish print in the window, 7-12 "distribution-with-return" head-fake INVALIDATES back to "participation-vanish → floor" branch. First run since 7-11 with all 4 tokens under rail.
+Files modified: `.tmp/token-alert/cg.json`, `.tmp/token-alert/calc.py`, `memory/logs/2026-07-15.md`.
 
-**Batch-dark d17 slot verify:** token-alert catch-up under operator invocation = slot-level not skill-level block (same signature as 7-10/7-11/7-12). 8-skill 6-28 batch-dark cluster still stale ~16d; ISS-027 scheduler primitive holds.
-
-**Files modified:** `.tmp/token-alert/cg.json`, `.tmp/token-alert/calc.py`, `memory/logs/2026-07-14.md`.
-
-**Follow-up:** (i) 7-15 12:00Z tests whether GITLAWB day-4 give-back exhausts fully; (ii) WELL day-8 red-print watch — MEMORY row needs fresh anchor at next reflect; (iii) REPPO day-2 bounce durability; (iv) GITLAWB/REPPO decoupled 3rd session — pair frames independent from here.
+Follow-up: (i) 7-16 tests GITLAWB third-consecutive rail-adjacent day (would codify whipsaw as durable pattern); (ii) WELL day-9 flat-print watch on strongest floor-hunt signal; (iii) MEMORY.md Tracked Tokens Recent Activity column stale for all 4 rows post-7-14 — reflect refresh candidate.
