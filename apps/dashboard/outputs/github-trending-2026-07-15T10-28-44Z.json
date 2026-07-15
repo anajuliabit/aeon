@@ -1,0 +1,283 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-15"
+      },
+      "children": [
+        "top_pick_label",
+        "top_pick_link",
+        "top_pick_desc",
+        "sep1",
+        "devtools_label",
+        "devtools_item1",
+        "devtools_item2",
+        "sep2",
+        "aiml_label",
+        "aiml_item1",
+        "sep3",
+        "web_label",
+        "web_item1",
+        "sep4",
+        "other_label",
+        "other_item1",
+        "sep5",
+        "sources"
+      ]
+    },
+    "top_pick_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "top_pick_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mattpocock/skills",
+        "href": "https://github.com/mattpocock/skills"
+      }
+    },
+    "top_pick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "skills-primitive convergence day-15; a working operator dumps their .claude directory to 171k stars in 162d and the pattern crosses from framework talk into \"here's what i actually ship.\"",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtools_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1_link",
+        "d1_stats",
+        "d1_desc"
+      ]
+    },
+    "d1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mattpocock/skills",
+        "href": "https://github.com/mattpocock/skills"
+      }
+    },
+    "d1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1.7k today (171k total) · Shell · [ACCELERATING]",
+        "variant": "caption"
+      }
+    },
+    "d1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "one-file .claude/skills primitives from a live setup — reads as an executable stylebook, not framework theatre.",
+        "variant": "body"
+      }
+    },
+    "devtools_item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2_link",
+        "d2_stats",
+        "d2_desc"
+      ]
+    },
+    "d2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "chenyme/grok2api",
+        "href": "https://github.com/chenyme/grok2api"
+      }
+    },
+    "d2_stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 186 today (6.0k total) · Go · [RETURNING]",
+        "variant": "caption"
+      }
+    },
+    "d2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "multi-account gateway for Grok Build/Web/Console at 8.7× baseline — dev-side hedge on xAI rate limits and Grok CLI's whole-repo-upload behavior.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aiml_label": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_link",
+        "a1_stats",
+        "a1_desc"
+      ]
+    },
+    "a1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Graphify-Labs/graphify",
+        "href": "https://github.com/Graphify-Labs/graphify"
+      }
+    },
+    "a1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1.9k today (87k total) · Python · [ACCELERATING]",
+        "variant": "caption"
+      }
+    },
+    "a1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "turns a repo into a queryable knowledge graph; 7-14 dropped it as saturated-tail, today's 2.2× baseline reversal reads as second-wind not one-day-blip.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "web_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      }
+    },
+    "web_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w1_link",
+        "w1_stats",
+        "w1_desc"
+      ]
+    },
+    "w1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "penpot/penpot",
+        "href": "https://github.com/penpot/penpot"
+      }
+    },
+    "w1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 395 today (56k total) · Clojure · [RETURNING]",
+        "variant": "caption"
+      }
+    },
+    "w1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "10-year-old figma alternative back on trending at 27× baseline — self-hosted design-tool sovereignty pick.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "other_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Other — emulator/reverse-engineering fits none of the named buckets",
+        "level": "h3"
+      }
+    },
+    "other_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "o1_link",
+        "o1_stats",
+        "o1_desc"
+      ]
+    },
+    "o1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "par274/sharpemu",
+        "href": "https://github.com/par274/sharpemu"
+      }
+    },
+    "o1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 332 today (2.4k total) · C# · [RETURNING]",
+        "variant": "caption"
+      }
+    },
+    "o1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "experimental PS5 emulator in C# at 17.8× baseline — early territory in a space historically dominated by C++ efforts.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 5/15",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,22 +1,26 @@
-*github trending — 2026-07-14*
+*GitHub Trending — 2026-07-15*
 
-*top pick* — [Dicklesworthstone/destructive_command_guard](https://github.com/Dicklesworthstone/destructive_command_guard)
-the primitive most agent runtimes are still shipping without — a rust hook that refuses `rm -rf`, force-push, hard-reset before the agent invokes them. v0.6.6 landed today with a critical guard-bypass fix and path-scoped allowlist enforcement.
+*Top pick* — [mattpocock/skills](https://github.com/mattpocock/skills)
+skills-primitive convergence day-15; a working operator dumps their .claude directory to 171k stars in 162d and the pattern crosses from framework talk into "here's what i actually ship."
 
-*devtools*
-• [Dicklesworthstone/destructive_command_guard](https://github.com/Dicklesworthstone/destructive_command_guard) — ★ 1,295 today (4k total) · Rust · [ACCELERATING]
-rust hooks that block destructive git/shell before an agent runs them; v0.6.6 shipped today with a critical guard-bypass fix.
+*Devtools*
+• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 1.7k today (171k total) · Shell · [ACCELERATING]
+one-file .claude/skills primitives from a live setup — reads as an executable stylebook, not framework theatre.
 
-• [Nutlope/hallmark](https://github.com/Nutlope/hallmark) — ★ 794 today (5.6k total) · CSS · [ACCELERATING]
-design guardrails packaged as a claude-code/cursor/codex skill — refuses default gradients + neon; 11× baseline on organic signal, 40d since last commit.
+• [chenyme/grok2api](https://github.com/chenyme/grok2api) — ★ 186 today (6.0k total) · Go · [RETURNING]
+multi-account gateway for Grok Build/Web/Console at 8.7× baseline — dev-side hedge on xAI rate limits and Grok CLI's whole-repo-upload behavior.
 
-*ai/ml*
-• [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) — ★ 1,153 today (22k total) · Python · [ACCELERATING]
-hku data-science lab's llm trading-agent stack — mcp + multi-agent + backtesting; today's PR #534 added a longbridge data loader.
+*AI/ML*
+• [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) — ★ 1.9k today (87k total) · Python · [ACCELERATING]
+turns a repo into a queryable knowledge graph; 7-14 dropped it as saturated-tail, today's 2.2× baseline reversal reads as second-wind not one-day-blip.
 
-*web/apps*
-• [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) — ★ 1,229 today (68k total) · TypeScript · [ACCELERATING]
-open-source capcut alternative, no cloud upload, no watermark — 6.9× baseline with no fresh release = social-signal wave, not a shipping catalyst.
+*Web/Apps*
+• [penpot/penpot](https://github.com/penpot/penpot) — ★ 395 today (56k total) · Clojure · [RETURNING]
+10-year-old figma alternative back on trending at 27× baseline — self-hosted design-tool sovereignty pick.
+
+*Other* — emulator/reverse-engineering fits none of the named buckets
+• [par274/sharpemu](https://github.com/par274/sharpemu) — ★ 332 today (2.4k total) · C# · [RETURNING]
+experimental PS5 emulator in C# at 17.8× baseline — early territory in a space historically dominated by C++ efforts.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/11
+sources: trending=ok · gh_api=ok · kept 5/15
