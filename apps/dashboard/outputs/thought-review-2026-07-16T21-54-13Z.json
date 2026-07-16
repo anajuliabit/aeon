@@ -1,0 +1,63 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "meta_stack",
+        "separator",
+        "refresh_alert"
+      ]
+    },
+    "meta_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "period_text",
+        "captures_stat",
+        "status_badge"
+      ]
+    },
+    "period_text": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h",
+        "variant": "muted"
+      }
+    },
+    "captures_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "captures",
+        "value": "0"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "outline"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "refresh_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "priorities.md last reviewed 42 days ago — worth a refresh"
+      }
+    }
+  }
+}
