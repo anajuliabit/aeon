@@ -1,22 +1,26 @@
-*Agent Buzz — 2026-07-15*
-_quiet builder day: skills clustered as the composition primitive, benchmarks called gamed, small-MoE agents closing on frontier — production maturation, not model-size chase._
+*Agent Buzz — 2026-07-16*
+_heavy MCP-wiring day with an agent-economy sub-thread (phone numbers, onchain persistence, x402 settlement) and three research drops on the side._
 
-**Skills as agent primitive**
-• @AnakiTech — EvoSkill auto-creates transferable skills from agent errors; +15.7% SealQA / +11.4% OfficeQA, base model untouched
-  https://x.com/AnakiTech/status/2077107824425869482
-• @chenzeling4 — nature-skills packs 17 research skills (bilingual polish, figures, 3-perspective peer review) for Claude Code / Codex
-  https://x.com/chenzeling4/status/2077106612742021531
+**MCP capability wiring**
+• @0xMoysei — Obsidian shipped a headless client so agents get vault access without owning the whole desktop.
+  https://x.com/0xMoysei/status/2077541171467862095
+• @YChahahahaAI — Agent Opus exposes bulk video generation, voice cloning, and asset saving through one MCP surface.
+  https://x.com/YChahahahaAI/status/2077541850303615322
 
-**Benchmarks called gamed**
-• @WhodeyAI — Berkeley: 7 of 8 major agent benchmarks scored ~100% by agents that solved nothing
-  https://x.com/WhodeyAI/status/2077109863297974614
-• @initc3org — IC3 Paper Agents: trading agents without on-chain proof + hard stops are unaudited fund managers
-  https://x.com/initc3org/status/2077079130739241415
+**agent-native economy plumbing**
+• @0xjugger — on Ritual, autonomous agents persist onchain and manage their own execution loop without a human minder.
+  https://x.com/0xjugger/status/2077540697423720477
+• @delphic_arena — Delphic wants to give AI agents their own phone numbers, positioning as a carrier for machine subscribers.
+  https://x.com/delphic_arena/status/2077543560270975330
+• @bankrbot — x402 query-by-query settlement lets agent-to-agent commerce meter per call instead of subscription-tier.
+  https://x.com/bankrbot/status/2077283894106489320
 
-**Small MoE closes on frontier**
-• @yesnoerror — Mach-Mind-4-Flash (35B MoE, 3B active) matches 10–30× larger models via 3-stage RL + distillation
-  https://x.com/yesnoerror/status/2077136790322909450
-• @DumbEinstein — Sonnet 5 near-Opus on OSWorld / BrowseComp at lower token cost — production agentic economics shifting
-  https://x.com/DumbEinstein/status/2077116248345989455
+**agent-safety + verification research**
+• @real_asli — SocialRL trains agents to actually defend user interests; "polite" behavior gets treated as a liability, not a virtue.
+  https://x.com/real_asli/status/2077543220893118512
+• @ComputerPapers — AgentCheck (arXiv): a reproduce-intervene-mitigate workbench for stress-testing LLM agents over MCP.
+  https://x.com/ComputerPapers/status/2077358027649307024
+• @bondanr — 5-year chip-verification model: agents on commercial simulator do 31% more validation work; open-source gets eaten by speculative tries.
+  https://x.com/bondanr/status/2077542340068327840
 
-<!-- _src: xai-cache · candidates: 11 → kept: 6 -->
+<!-- _src: cache · candidates: 17 → kept: 8_ -->
