@@ -762,3 +762,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-16,security-digest,claude-opus-4-7,49,28654,3254048,89305
 2026-07-16,agent-buzz,claude-opus-4-7,21,18024,1217241,78381
 2026-07-16,reflect,claude-opus-4-7,60,37904,6156923,142972
+2026-07-16,btc-levels,claude-sonnet-4-6,14,7072,652619,60784
