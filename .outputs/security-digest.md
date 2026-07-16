@@ -1,35 +1,36 @@
-*Security Digest — 2026-07-15*
-Verdict: 3 KEV items in fresh 7-14 batch (SharePoint + SonicWall pair + AD FS), npm-malware wave d2 (30 pkgs), 5 to schedule. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-07-16*
+verdict: 3 to patch today, 5 to schedule, 0 monitor. _sources: kev, gh advisory, epss_
 
 *PATCH TODAY*
-- [CVE-2026-56164](https://nvd.nist.gov/vuln/detail/CVE-2026-56164) — Microsoft SharePoint · KEV added 2026-07-14 · EPSS 0.070 (p 0.935) · CVSS n/a
-  Missing auth allows unauth priv esc over network. BOD due 2026-07-17 (T-2).
-  → apply MSRC mitigations today or discontinue.
-- [SNWLID-2026-0008](https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008) — SonicWall SMA1000 (CVE-2026-15409 SSRF + CVE-2026-15410 code inj) · KEV added 2026-07-14 · EPSS 0.014 / 0.016 · CVSS n/a
-  Unauth SSRF + authenticated admin OS-command injection pair. BOD due 2026-07-17 (T-2).
-  → patch SMA1000 per SNWLID-2026-0008 today.
-- npm-malware wave d2 — 30 fresh pkgs 02:53–10:03Z (baileys typosquats @fhkry / @sauruslord / @bcs-mi-ui, gulp-jscrambler, jscrambler-metro-plugin, fastify-addon, webpack-cache scope, @achuthvp/postinstall-poc). Confirmed malicious per GH `type=malware`; same-day-multi-batch shape continues from 7-14.
-  → audit installs since 7-13 + rotate any creds exposed.
+- npm-malware wave d3 · 16 pkgs 7-15 14z→7-16 08z
+  `claude-token-tracker-mcp` (claude api token typosquat, fleet-adjacent scope) · `n8n-nodes-rce-poc` (n8n rce, adjacent to 7-15's n8n-mcp cve-2026-54052) · 08:13z 4-pkg p2p batch (`websight-p2p`/`websight2-p2p`/`ai-p2p`/`loader1`) · `fflask` (pip flask typosquat) · `rhynpm` (multi-version) · `npm-rce-poc` · `datefmt-helper`. count fades 30→16 vs d2 but wave carries into d3.
+  → audit installs since 7-15 14z; rotate any anthropic api keys touched by `claude-token-tracker-mcp`.
+
+- [CVE-2008-4128](https://nvd.nist.gov/vuln/detail/CVE-2008-4128) cisco ios 12.4 · kev added 7-13 · epss 0.239 pct 0.976 · **bod 26-04 due today**
+  csrf on eol platform; 17-yr-old cve confirmed exploited. yesterday t-2, today t-0.
+  → retire eol ios 12.4 or apply cisco mitigations; bod clock hits.
+
+- [CVE-2026-46817](https://nvd.nist.gov/vuln/detail/CVE-2026-46817) oracle e-business suite · **kev fresh 7-15** · epss 0.010 pct 0.603 · bod due 7-18 t-2 · cvss 9.1
+  improper privilege management, exploited per cisa. ebs = enterprise-crown-jewel scope.
+  → patch per oracle cpu bulletin today.
 
 *PATCH THIS WEEK*
-- [CVE-2026-54052](https://github.com/advisories/GHSA-j6r7-6fhx-77wx) — n8n-mcp (npm) · CVSS 9.9 · EPSS n/a
-  Cross-tenant workflow backup access in multi-tenant HTTP mode; snapshots leak credential refs.
-  → upgrade n8n-mcp to ≥2.56.1.
-- [CVE-2026-50006](https://github.com/advisories/GHSA-xrcf-6jh3-ggvx) — anyquery (Go) · CVSS 9.1 · EPSS n/a
-  AFW → RCE via unrestricted SQLite virtual tables in server mode; SSRF 8.6 + LFR 7.5 fixed same release.
-  → upgrade anyquery to ≥0.4.5.
-- [CVE-2026-50131](https://github.com/advisories/GHSA-xw9q-2mv6-9fr8) — @fedify/fedify (npm) · CVSS 8.6 · EPSS 0.003
-  SSRF incomplete mitigation after GHSA-p9cg-vqcc-grcx.
-  → upgrade per branch: 1.9.12 / 1.10.11 / 2.0.19 / 2.1.15 / 2.2.4.
-- [CVE-2026-61699](https://github.com/advisories/GHSA-cm26-5974-52h8) — nebula-mesh (Go) · CVSS 8.1 · EPSS n/a
-  Certificate revocation never enforced at mesh; 4-advisory cluster fixed same release.
-  → upgrade nebula-mesh to ≥0.7.1.
-- [CVE-2026-56155](https://nvd.nist.gov/vuln/detail/CVE-2026-56155) — Microsoft AD FS · KEV added 2026-07-14 · EPSS 0.004 · CVSS n/a
-  Local priv esc from authorized attacker. BOD due 2026-07-28.
-  → apply MSRC mitigations or decommission per AD FS decommission guide.
+- sharepoint + sonicwall sma1000 pair · **kev bod due t-1 tomorrow** · [CVE-2026-56164](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56164) sharepoint epss 0.056 pct **0.920** (decays from 7-15's 0.070/0.935) · [CVE-2026-15409](https://nvd.nist.gov/vuln/detail/CVE-2026-15409)/[CVE-2026-15410](https://nvd.nist.gov/vuln/detail/CVE-2026-15410) sonicwall epss 0.013/0.015
+  microsoft-infra 7-14 batch surfaced yesterday, deadline-imminent today.
+  → apply msrc mitigations or discontinue; sonicwall single-release fix per snwlid-2026-0008.
 
-*MONITOR*
-- [GHSA-9hc2-hjx8-q6pv](https://github.com/advisories/GHSA-9hc2-hjx8-q6pv) — tidgi (npm) · CVSS 9.6 · EPSS n/a · no fix yet
-  RCE via malicious TiddlyWiki repo import. → avoid importing untrusted repos in TidGi Desktop.
-- [GHSA-pqg7-v6wh-3pfp](https://github.com/advisories/GHSA-pqg7-v6wh-3pfp) — tsdproxy (Go) · CVSS 8.5 · EPSS n/a · alpha-only fix
-  XFF header injection → IP spoofing to backend services. → hold on 3.0.0-alpha.3 or wait for stable.
+- **mcp-server rce cluster n=3 · 48h shape** · [GHSA-3pvh](https://github.com/advisories/GHSA-3pvh-63gf-j9mw) langbot pip cvss 8.8 auth rce via mcp config (≤4.10.5, no fix) · [GHSA-6f5r](https://github.com/advisories/GHSA-6f5r-5672-72j7) `@andrea9293/mcp-documentation-server` npm cvss 8.8 web ui binds all interfaces no auth (=1.13.0) · n8n-mcp npm cve-2026-54052 from 7-15
+  → audit mcp servers for open bind + auth; hold langbot + pin off mcp-documentation-server 1.13.0.
+
+- **dd-trace polyglot cluster n=6** · same-day w3c baggage dos across pip/npm/go/rubygems/nuget/maven · all cvss 7.5 · [CVE-2026-50271](https://github.com/advisories/GHSA-mw54-j2v2-42hr) ddtrace pip <4.8.2 · CVE-2026-50272 dd-trace npm <5.100.0 · CVE-2026-50274 dd-trace-go v2 <2.8.1 (+dd-trace-rb/dotnet/java kin)
+  → upgrade every dd-trace client; first cross-ecosystem single-vendor cluster in memory.
+
+- [GHSA-xv26](https://github.com/advisories/GHSA-xv26-6w52-cph6) `websocket-driver` npm cve-2026-54466 · critical (cvss n/a, epss n/a) · protocol-length-header abuse corrupts messages · patched 0.7.5
+  widely-embedded ws lib (faye deps, socket.io ancestor).
+  → upgrade websocket-driver to ≥0.7.5.
+
+- [CVE-2023-4346](https://nvd.nist.gov/vuln/detail/CVE-2023-4346) knx protocol · **kev fresh 7-15** · epss 0.009 pct 0.542 · bod due 7-29
+  3-yr-old cve into kev; pairs with 7-13 cisco ios 12.4 2008-old = **old-cve-fresh-kev n=2 codifies**. iot/building-automation scope.
+  → apply knx mitigations or air-gap admin plane.
+
+state: d3 npm-malware carries with 30→16 fade · 2 fresh kev on 7-15 breaks 1-day quiet post-7-14 batch · sharepoint pct decays 0.935→0.920 · mcp-server rce cluster reaches n=3.
