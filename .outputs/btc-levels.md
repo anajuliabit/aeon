@@ -1,16 +1,9 @@
-Done. Quiet run — no alerts fired.
-
 ## Summary
 
-**BTC Levels run — 2026-07-15 ~20:34Z**
-
-| | |
-|---|---|
-| **Spot** | $64,985 |
-| **Daily close (2026-07-14)** | $64,977 |
-| **Leverage-review (≤$45k)** | ✅ Not triggered |
-| **Breakdown (<$60,500 close)** | ✅ Clear ($64,977 well above) |
-| **Reclaim $63,500** | Already alerted — flag stays true |
-| **Reclaim $65,900** | Still pending — spot $915 below gate |
-
-No notifications sent. State and log committed. Next watch: `reclaim65900Alerted` fires if spot reaches $65,900.
+- **Spot:** $64,579 | **Previous daily close (2026-07-15):** $64,722
+- **Leverage trigger (≤$45k):** not active — spot well above band
+- **Breakdown alert (<$60,500 close):** not triggered — close $64,722 is healthy
+- **Reclaim $63,500:** already alerted (flag stays set; re-arms only below $60,500)
+- **Reclaim $65,900:** not yet reached — $1,321 gap remaining
+- **Alerts fired:** none — quiet run, no notification sent
+- **Committed:** `memory/btc-levels-state.json` and `memory/logs/2026-07-16.md`

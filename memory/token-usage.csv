@@ -755,3 +755,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-15,skill-analytics,claude-sonnet-4-6,32,47075,2715858,112376
 2026-07-15,heartbeat,claude-opus-4-7,13927,21078,2267451,125477
 2026-07-15,evening-recap,claude-sonnet-4-6,13,16846,957731,97519
+2026-07-16,btc-levels,claude-sonnet-4-6,9,2807,252467,17841
