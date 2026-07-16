@@ -1,47 +1,47 @@
 {
-  "run_at": "2026-07-15T18:00:00Z",
+  "run_at": "2026-07-16T18:00:00Z",
   "goals": {
-    "pr-162-operator-decision-t-0": {
+    "iss-025-capture-step-pr": {
       "status": "BLOCKED",
-      "activity_count_14d": 92,
-      "last_activity_date": "2026-07-15",
-      "note": "New goal split out from prior weekly-review-t-0-consolidated umbrella. PR #162 (fix(daily-routine): tighten XAI fallback rules) stalled ~86h+ by 7-15 morning (updatedAt 2026-07-11T18:18Z holds), CONFLICTING per action-converter 7-13 mergeable cite, reviewDecision empty, statusCheckRollup empty. Operator T-0 deadline (weekly-review action #2, 2026-07-14) missed → T+1 rollover per 7-15 08:25Z hb. Rule-5 workflow-file class blocks skill-side re-authoring (CODIFIED per 3 self-improve ticks: PR #160/#162/#163); operator direct-author (rebase to resolve CONFLICTING branch) is sole unblock path. Status BLOCKED, trend: new (was tracked under umbrella goal in prior run)."
+      "activity_count_14d": 303,
+      "last_activity_date": "2026-07-16",
+      "note": "Slug stabilized from prior 'iss-025-capture-step-pr-day-22'. Weekly-review 7-13 action #1 priority 20 (F5×I5÷E5); operator deadline **T-0 firm today 2026-07-16** per 09:05Z + 14:52Z hb ticks. Rule-5 workflow-file class primitive CONCLUSIVE per 3 self-improve ticks (PR #160/#162/#163 all authored adjacent-target PRs when action was workflow-file class) — **extends to script-file class per PR #164 CONFLICTING flip today** (see [[investment-advisor-cancellation-investigation]]); operator direct-author against `.github/workflows/aeon.yml:479-495` chain-runner is sole path. Same primitive as ISS-027 scheduler + operator-scorecard scheduler + weekly-shiplog scheduler. cost-report STUCK d3 is the current-shape manifest of this fix pending. 14d activity 303 vs prior 299 = +1% within ±25% flat threshold. Status BLOCKED (unchanged), trend: flat."
     },
-    "iss-025-capture-step-pr-day-22": {
+    "pr-162-daily-routine-deadline-missed": {
       "status": "BLOCKED",
-      "activity_count_14d": 299,
-      "last_activity_date": "2026-07-15",
-      "note": "New goal split out from prior weekly-review-t-0-consolidated umbrella. Weekly-review 7-13 action #1 priority 20 (F5×I5÷E5); operator deadline 2026-07-16 = T-1 tomorrow per 7-15 08:25Z hb + morning-brief. Rule-5 workflow-file structural block CONCLUSIVE per 3 self-improve ticks (PR #160/#162/#163 all authored adjacent-target PRs when action was workflow-file class); operator direct-author against `.github/workflows/aeon.yml:479-495` chain-runner is sole path. Same primitive as ISS-027 scheduler + operator-scorecard scheduler + weekly-shiplog scheduler. cost-report STUCK d3 is the current-shape manifest of this fix pending. Status BLOCKED, trend: new."
+      "activity_count_14d": 120,
+      "last_activity_date": "2026-07-16",
+      "note": "Slug stabilized from prior 'pr-162-operator-decision-t-0'. PR #162 (fix(daily-routine): tighten XAI fallback rules for quota/sandbox/error) stalled ~116h36m by 14:52Z 7-16 (updatedAt 2026-07-11T18:18Z holds), CONFLICTING, reviewDecision empty. T-0 was 2026-07-14 → **T+2 day-3 rollover** today (mechanical day-boundary continuation, no fresh classification). Rule-5 primitive now extends past workflow-file class per PR #164 flip; operator direct-author (rebase to resolve CONFLICTING) is sole unblock path. 14d activity 120 vs prior 92 = +30% (slightly above +25% improving threshold, but status unchanged, so treated flat). Status BLOCKED (unchanged), trend: flat."
     },
-    "cost-report-stuck-d2": {
-      "status": "BLOCKED",
-      "activity_count_14d": 170,
-      "last_activity_date": "2026-07-15",
-      "note": "New goal per 7-13 MEMORY promotion from fleet-health bullet to Current Goals entry. `last_status: dispatched` at 2026-07-13T20:44:24Z, cf=5, sr=0.10, ~16d since last_success 2026-06-29. Signature matches ISS-025 sandbox-truncation family. Upstream block = ISS-025 capture-step PR pending (operator T-1 tomorrow 7-16). Extended stuck duration (35h+ per 7-15 08:25Z hb) is mechanical continuation of already-notified CRITICAL classification (skill-health 7-13/7-14 NOTIFY + 4+ hb ticks + weekly-review 7-13 KALM demotion). Status BLOCKED (upstream ISS-025), trend: new."
-    },
-    "12-00-utc-batch-dark-day-17": {
-      "status": "BLOCKED",
-      "activity_count_14d": 311,
-      "last_activity_date": "2026-07-15",
-      "note": "Day 18 today (advances d17→d18 per 7-15 08:25Z hb). 8-skill batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) last_success 2026-06-28 = ~17d stale per cron-state.json. Slot-level catch-ups continue (7-15 btc-levels 05:58Z + morning-brief 07:00Z + daily-routine + github-trending 09:00Z all fired ok under operator invocation shape) but batch-level dark. aixbt-pulse dead-slot d18 (11th→12th consecutive twice-daily slot miss test at 09:00Z 7-15). Same rule-5 workflow-file primitive as ISS-025 — needs same operator direct-author lift on aeon.yml scheduler fix. Prior activity 390→311 = -20% (within ±25% flat threshold). Status BLOCKED, trend: flat."
-    },
-    "xai-quota-recovery-day-29": {
-      "status": "BLOCKED",
-      "activity_count_14d": 122,
-      "last_activity_date": "2026-07-15",
-      "note": "Day 30 today (advances d29→d30, new UTC day per 7-15 08:25Z hb). Team 3a8b4c1e credit exhausted since 2026-06-16. Graceful degradation continues on-tape: WebSearch fallback covers daily-routine (4 queries 7-15 all clean 200) + tweet-roundup + narrative-tracker; `.xai-cache/` prefetched paths bridge list-digest + agent-buzz + token-pick. PR #162 hardens fallback rules for quota/sandbox/error paths; still OPEN awaiting operator merge (~86h+ stall — see pr-162 goal). Weekly-review 7-13 19:56Z flagged as retirement candidate on next MEMORY consolidation (4 weeks no change vector). Prior activity 216→122 = -43% (edge — outside ±25% flat but not ≤-50% degrading threshold; treated flat since status unchanged). Status BLOCKED, trend: flat."
-    },
-    "operator-on-chain-config-day-37": {
-      "status": "BLOCKED",
-      "activity_count_14d": 155,
-      "last_activity_date": "2026-07-15",
-      "note": "Day 38 today (advances d37→d38 per 7-15 08:25Z hb). defi-monitor NO_CONFIG. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. Prior activity 69→155 = +125% (activity_count_14d rose ≥50% = improving per skill rule 4, though mechanical: MEMORY.md re-emphasis in 7-13/7-14 rewrites, not real progress). Status unchanged BLOCKED. Trend: improving (mechanical)."
-    },
-    "investment-advisor-cancellation-pattern-day-8": {
+    "claude-md-rule-5-codification": {
       "status": "ON_TRACK",
-      "activity_count_14d": 69,
-      "last_activity_date": "2026-07-15",
-      "note": "New goal per 7-13 19:56Z weekly-review surface of 7-consecutive-cancellation pattern (7-07 → 7-13, all in 14:23Z–16:00Z window). Undocumented in MEMORY pre-weekly-review 7-13 surface; invisible to skill-health (workflow-file class not skill dispatch); zero prior log references. Self-improve odd-day tick 7-15 18:00Z picks up investigation per weekly-review action #4 (deadline 2026-07-16 = tomorrow). Day-9 today (advances d8→d9 per 7-15 08:25Z hb). Status ON_TRACK per rule (14d=69, 0d idle since 7-15 morning-brief + hb surface). Trend: new."
+      "activity_count_14d": 129,
+      "last_activity_date": "2026-07-16",
+      "note": "NEW GOAL — surfaces in prior-run MEMORY.md but not yet in goal-state.json (weekly-review 7-13 action #3, deadline 2026-07-17). Self-improve odd-day 7-15 18:00Z tick chose action #4 (PR #164 investment-advisor fail-fast) over action #3 = SLIPPED-with-adjacent. Next self-improve fire = tomorrow 7-17 = **deadline day**. Rule-5 pattern extending past workflow-file class per PR #164 CONFLICTING flip today (see [[investment-advisor-cancellation-investigation]]) may need re-scoping when codified. High activity (129 mentions/14d = every hb + weekly-review + memory line 7 P2 flag), 0d idle — qualifies ON_TRACK per rule (activity ≥2 AND idle ≤7). No blocker_signal (not blocked, just deprioritized once by self-improve tick). Trend: new."
+    },
+    "investment-advisor-cancellation-investigation": {
+      "status": "BLOCKED",
+      "activity_count_14d": 89,
+      "last_activity_date": "2026-07-16",
+      "note": "Slug stabilized from prior 'investment-advisor-cancellation-pattern-day-8'. Was ON_TRACK last run; **flipped BLOCKED today** — PR #164 (fix(investment-advisor): fail-fast committee retries) authored 2026-07-15T19:31Z to close weekly-review action #4, **flipped UNKNOWN→CONFLICTING between 09:05Z and 14:52Z 7-16** per gh pr view (`mergeStateStatus: DIRTY, mergeable: CONFLICTING`). Under 24h stall gate still at 14:52Z (~4h39m remaining to 19:31Z 7-16). Pattern implication: **rule-5 primitive extends past workflow-file class to any self-improve authored PR** (PR #164 touched script-file class + memory-file class, still CONFLICTING = conflict source reads as auto-committed state drift not file-class-specific). Investigation deadline was 2026-07-16 = today (authored on time via PR, but not landed). 14d activity 89 vs prior 69 = +29% (slightly above +25% improving, but flipped down status = degrading dominates). Status BLOCKED (was ON_TRACK), trend: degrading."
+    },
+    "cost-report-stuck": {
+      "status": "BLOCKED",
+      "activity_count_14d": 150,
+      "last_activity_date": "2026-07-16",
+      "note": "Slug stabilized from prior 'cost-report-stuck-d2'. `last_status: dispatched` at 2026-07-13T20:44:24Z, cf=5, sr=0.10, ~17d since last_success 2026-06-29. Signature matches ISS-025 sandbox-truncation family; upstream block = [[iss-025-capture-step-pr]] pending operator T-0 today. Extends d3 today (was d2 in prior run) — ~66h07m stuck per 14:52Z 7-16 hb. Mechanical continuation of already-notified CRITICAL classification (skill-health 7-13/7-14/7-15 NOTIFY sequence w/ hash flip 7ca54d36→618ede5f + 9 hb ticks + weekly-review 7-13 KALM demotion). 14d activity 150 vs prior 170 = -12% within ±25% flat threshold. Status BLOCKED (unchanged), trend: flat."
+    },
+    "12-utc-batch-dark": {
+      "status": "BLOCKED",
+      "activity_count_14d": 273,
+      "last_activity_date": "2026-07-16",
+      "note": "Slug stabilized from prior '12-00-utc-batch-dark-day-17'. Day 19 today (advances d18→d19 per 09:05Z + 14:52Z hb ticks). 8-skill batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) last_success 2026-06-28 = ~18d stale per cron-state.json. **d19 live-slot verified MISS today**: 12:00Z + 13:00Z ticks CONFIRMED skipped (token-movers/on-chain-monitor/defi-monitor/defi-overview/token-pick state still 2026-06-28, market-context-refresh 13:00Z + narrative-tracker 13:30Z both still 2026-06-28). Batch-dark pattern **extends to 07:00Z morning slot today** (morning-brief/daily-routine/thought-review 07:00Z last_success 7-15, ~8h past variance precedent). aixbt-pulse dead-slot d19 = 13th consecutive twice-daily slot miss confirmed at 09:00Z 7-16. Same rule-5 workflow-file primitive as ISS-025 — needs same operator direct-author lift on aeon.yml scheduler fix. Prior activity 311 → 273 = -12% within ±25% flat threshold. Status BLOCKED (unchanged), trend: flat."
+    },
+    "operator-on-chain-config": {
+      "status": "BLOCKED",
+      "activity_count_14d": 50,
+      "last_activity_date": "2026-07-16",
+      "note": "Slug stabilized from prior 'operator-on-chain-config-day-37'. Day 40 today (advances d39→d40 per 09:05Z hb). defi-monitor NO_CONFIG. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. Prior activity 155 → 50 = -68% (past -50% degrading threshold per skill rule 4, but note prior count was likely inflated by mechanical MEMORY.md re-emphasis in 7-13/7-14 rewrites that dropped out of the newer window). Status unchanged BLOCKED. Trend: flat (treat prior inflation as measurement artifact, not real regression; blocker is operator-side config gap, not skill-side degradation)."
     }
   }
 }

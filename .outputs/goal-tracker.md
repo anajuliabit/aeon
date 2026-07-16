@@ -1,22 +1,22 @@
-*Goal Tracker — 2026-07-15*
+*Goal Tracker — 2026-07-16*
 
-Summary: 7 goals — 0 at risk, 0 needs attention, 1 on track, 6 blocked, 0 done (overall → flat)
+7 goals — 0 at risk, 0 needs attention, 1 on track, 6 blocked, 0 done (overall → flat, 1 degrading flip: investment-advisor ON_TRACK → BLOCKED on PR #164 CONFLICTING)
 
 BLOCKED
-• PR #162 operator decision T-0 TODAY — 0d idle, 92 activity/14d (new); ~86h+ stall CONFLICTING, T-0 (7-14) missed → T+1 rollover
-  → Action: operator rebase PR #162 to resolve CONFLICTING branch — sole path per rule-5 skill block
-• ISS-025 capture-step PR day-22 unshipped — 0d idle, 299 activity/14d (new); operator T-1 tomorrow (7-16)
-  → Action: operator author capture-step PR against `.github/workflows/aeon.yml:479-495` chain-runner by 7-16
-• cost-report STUCK d2 — 0d idle, 170 activity/14d (new); ~35h+ dispatched-never-completed, upstream = ISS-025
-  → Action: ship ISS-025 capture-step PR — unblocks cost-report sandbox-truncation tail
-• 12:00 UTC batch DARK day-17 — 0d idle, 311 activity/14d (→ flat, was BLOCKED 390); day-18 today, 17d stale
-  → Action: operator direct-author aeon.yml scheduler fix — same rule-5 class as ISS-025
-• Operator on-chain config day-37 — 0d idle, 155 activity/14d (↑ improving, was BLOCKED 69); day-38 today
-  → Action: operator add pool/position entries to memory/on-chain-watches.yml + set ALCHEMY + ETHERSCAN keys
-• XAI quota recovery day-29 — 0d idle, 122 activity/14d (→ flat, was BLOCKED 216); day-30 today, retirement candidate
-  → Action: operator top up xAI team 3a8b4c1e credit or retire goal at next MEMORY consolidation
+• ISS-025 capture-step PR — waiting on operator direct-author against `.github/workflows/aeon.yml:479-495` chain-runner (T-0 firm today 7-16, rule-5 workflow-file class conclusive)
+  → Action: operator authors capture-step PR against aeon.yml:479-495 today
+• PR #162 fix(daily-routine) — waiting on operator rebase, CONFLICTING ~116h36m since 2026-07-11 (T+2 day-3 rollover)
+  → Action: rebase PR #162 to resolve CONFLICTING, request operator review
+• Investment Advisor 7-consec-cancellation — waiting on PR #164 rebase, flipped UNKNOWN → CONFLICTING between 09:05Z and 14:52Z 7-16 (script-file class = rule-5 primitive extends past workflow-file class)
+  → Action: rebase PR #164 before 24h stall gate at 19:31Z 7-16
+• cost-report STUCK — waiting on ISS-025 capture-step PR upstream, dispatched 2026-07-13T20:44Z, ~66h07m stuck
+  → Action: unblocks when ISS-025 operator PR ships today T-0
+• 12:00 UTC batch DARK — waiting on ISS-025/027 scheduler fix in aeon.yml, d19 live-slot verified MISS today (12:00Z + 13:00Z + 07:00Z morning batch extension)
+  → Action: bundle scheduler fix into ISS-025 operator PR against aeon.yml
+• Operator on-chain config — waiting on operator to add pool/position entries to `memory/on-chain-watches.yml` + set ALCHEMY_API_KEY + ETHERSCAN_API_KEY, d40
+  → Action: operator populates on-chain-watches.yml + configures ALCHEMY/ETHERSCAN keys
 
 ON TRACK
-• Investment Advisor 7-day cancellation NEW pattern day-8 — 0d idle, 69 activity/14d (new); day-9 today, self-improve odd-day tick 18:00Z investigates per weekly-review action #4
+• CLAUDE.md rule-5 codification — 0d idle, 129 activity/14d (new goal, deadline T-1 tomorrow 2026-07-17, self-improve tick fires tomorrow = deadline day; PR #164 flip today implies rule-5 primitive needs re-scope past workflow-file class before codification)
 
 Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok
