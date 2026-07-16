@@ -1,14 +1,15 @@
-Run complete. No alerts fired:
-
-- **Spot**: $64,097 — well above the $45k leverage-review trigger
-- **Daily close (2026-07-15)**: $64,722 — above the $60,500 breakdown threshold
-- **Reclaim $63,500**: already flagged true, no re-arm needed (spot hasn't dipped below $60,500)
-- **Reclaim $65,900**: not yet reached ($64,097 vs $65,900 gate — $1,803 short)
-
-State and log committed. No notification sent.
-
 ## Summary
-- Fetched BTC price from CoinGecko: spot $64,097, daily close $64,722 (2026-07-15)
-- Evaluated all four levels — zero crossings, no alerts
-- Updated `memory/btc-levels-state.json` and `memory/logs/2026-07-16.md`
-- Committed state (`fd70eee`)
+
+Ran `btc-levels` skill at 12:51Z on 2026-07-16.
+
+**Data fetched:** CoinGecko `market_chart?days=2&interval=daily`
+- Spot: **$63,905** (current)
+- Previous daily close: **$64,722** (close of 2026-07-15)
+
+**Level evaluation — all clear:**
+- Leverage-review trigger (≤$45k): spot $63,905 → not triggered
+- Breakdown signal (close < $60,500): close $64,722 → not triggered
+- Reclaim $63,500: already alerted this cycle (`reclaim63500Alerted=true`) → no re-alert
+- Reclaim $65,900: spot $63,905 < $65,900 → not triggered
+
+**No notification sent.** State and log committed (`c5274b2`). BTC is holding above the $63,500 gate with $65,900 full-stabilization confirmation still ~$2k away.
