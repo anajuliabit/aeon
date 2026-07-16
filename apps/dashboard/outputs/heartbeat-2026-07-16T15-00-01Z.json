@@ -1,0 +1,390 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat 14:52Z",
+        "description": "System operations status report"
+      },
+      "children": [
+        "alert-status",
+        "sep1",
+        "section-prs",
+        "sep2",
+        "section-batch",
+        "sep3",
+        "section-blockers",
+        "sep4",
+        "next-action"
+      ]
+    },
+    "alert-status": {
+      "type": "Alert",
+      "props": {
+        "title": "Status: 🔴 DEGRADED",
+        "message": "11 open issues detected",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-prs",
+        "pr-164",
+        "pr-all-status"
+      ]
+    },
+    "heading-prs": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Issues",
+        "level": "h2"
+      }
+    },
+    "pr-164": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-164-title",
+        "pr-164-badges",
+        "pr-164-detail"
+      ]
+    },
+    "pr-164-title": {
+      "type": "Heading",
+      "props": {
+        "text": "PR #164",
+        "level": "h3"
+      }
+    },
+    "pr-164-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-pr164-unknown",
+        "text-arrow",
+        "badge-pr164-conflicting"
+      ]
+    },
+    "badge-pr164-unknown": {
+      "type": "Badge",
+      "props": {
+        "text": "UNKNOWN",
+        "variant": "default"
+      }
+    },
+    "text-arrow": {
+      "type": "Text",
+      "props": {
+        "text": "→",
+        "variant": "body"
+      }
+    },
+    "badge-pr164-conflicting": {
+      "type": "Badge",
+      "props": {
+        "text": "CONFLICTING",
+        "variant": "destructive"
+      }
+    },
+    "pr-164-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Flipped at ~19h20m ago (under 24h stall gate, 4h39m to gate)",
+        "variant": "caption"
+      }
+    },
+    "pr-all-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-all-intro",
+        "pr-badges-row",
+        "pr-root-cause"
+      ]
+    },
+    "pr-all-intro": {
+      "type": "Text",
+      "props": {
+        "text": "All 3 self-improve authored PRs now CONFLICTING:",
+        "variant": "lead"
+      }
+    },
+    "pr-badges-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-pr162",
+        "badge-pr163",
+        "badge-pr164"
+      ]
+    },
+    "badge-pr162": {
+      "type": "Badge",
+      "props": {
+        "text": "#162 CONFLICTING",
+        "variant": "destructive"
+      }
+    },
+    "badge-pr163": {
+      "type": "Badge",
+      "props": {
+        "text": "#163 CONFLICTING",
+        "variant": "destructive"
+      }
+    },
+    "badge-pr164": {
+      "type": "Badge",
+      "props": {
+        "text": "#164 CONFLICTING",
+        "variant": "destructive"
+      }
+    },
+    "pr-root-cause": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: rule-5 primitive extends past workflow-file class",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-batch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-batch",
+        "batch-morning",
+        "batch-dark"
+      ]
+    },
+    "heading-batch": {
+      "type": "Heading",
+      "props": {
+        "text": "Batch Issues",
+        "level": "h2"
+      }
+    },
+    "batch-morning": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "batch-morning-badge",
+        "batch-morning-skills",
+        "batch-morning-detail"
+      ]
+    },
+    "batch-morning-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "07:00Z Morning Batch MISSED today",
+        "variant": "destructive"
+      }
+    },
+    "batch-morning-skills": {
+      "type": "Text",
+      "props": {
+        "text": "Skills: morning-brief, daily-routine, thought-review",
+        "variant": "caption"
+      }
+    },
+    "batch-morning-detail": {
+      "type": "Text",
+      "props": {
+        "text": "7h52m past slot (exceeds 83min variance precedent). Last success: 7-15",
+        "variant": "muted"
+      }
+    },
+    "batch-dark": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "batch-dark-badge",
+        "batch-dark-detail"
+      ]
+    },
+    "batch-dark-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "batch-dark d19 extends to morning slot",
+        "variant": "outline"
+      }
+    },
+    "batch-dark-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Live-confirmed 12:00Z + 13:00Z skips today",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-blockers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-blockers",
+        "blocker-cost-report",
+        "blocker-aixbt-pulse",
+        "blocker-iss025"
+      ]
+    },
+    "heading-blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers & Dedup",
+        "level": "h2"
+      }
+    },
+    "blocker-cost-report": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker-cost-name",
+        "blocker-cost-stat"
+      ]
+    },
+    "blocker-cost-name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "blocker-cost-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Status",
+        "value": "Stuck d3 (~66h)"
+      }
+    },
+    "blocker-aixbt-pulse": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker-aixbt-name",
+        "blocker-aixbt-status"
+      ]
+    },
+    "blocker-aixbt-name": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse",
+        "variant": "lead"
+      }
+    },
+    "blocker-aixbt-status": {
+      "type": "Badge",
+      "props": {
+        "text": "dead-slot d19",
+        "variant": "secondary"
+      }
+    },
+    "blocker-iss025": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker-iss-name",
+        "blocker-iss-status"
+      ]
+    },
+    "blocker-iss-name": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025",
+        "variant": "lead"
+      }
+    },
+    "blocker-iss-status": {
+      "type": "Badge",
+      "props": {
+        "text": "T-0 firm today",
+        "variant": "outline"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "next-action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "next-heading",
+        "next-detail"
+      ]
+    },
+    "next-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Next",
+        "level": "h3"
+      }
+    },
+    "next-detail": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels @ 16:15Z",
+        "variant": "body"
+      }
+    }
+  }
+}
