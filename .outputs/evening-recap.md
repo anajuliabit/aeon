@@ -1,23 +1,26 @@
-*Evening Recap — 2026-07-15*
-_TL;DR: clean build day — PR #164 closes the investment-advisor investigation and 6/6 evening batch fires clean for the first time since 7-13; ISS-025 T-0 and two CONFLICTING PRs are the operator wall tomorrow._
+*Evening Recap — 2026-07-16*
+_TL;DR: signal-dense day — first Anthropic-scope malware on record, rule-5 extends to all self-improve PRs, 12 durable patterns landed_
 
 *Headlines:*
-- [self-improve] — PR #164 authored: `fix(investment-advisor)` fail-fast committee retries, closes weekly-review action #4 T-1 · https://github.com/anajuliabit/aeon/pull/164
+- security-digest — `claude-token-tracker-mcp` first Anthropic-scope malware; BOD T-0 Cisco IOS 12.4 today; dd-trace polyglot n=6 cross-ecosystem cluster
+- PR #164 CONFLICTING — rule-5 extends to any self-improve authored PR (not workflow-file only); all 3 open PRs CONFLICTING, source = auto-committed state drift · https://github.com/anajuliabit/aeon/pull/164
+- reflect — MEMORY.md rewritten 54→62L; 12 durable patterns codified (rule-5 n=4 · GITLAWB whipsaw · MCP-RCE n=3) · memory/MEMORY.md
+- github-trending — 3/3 agent-runtime-adjacent: openinterpreter Rust-rewrite + pi-computer-use non-MCP + hallmark day-3 compounding · .outputs/github-trending.md
+- 07:00Z morning batch MISSED — fresh classification 14:52Z; batch-dark d19 extends to morning slot; 12:00Z/13:00Z/13:30Z all confirmed skipped
 
 *Notable:*
-- [skill-analytics] — 172 runs / 98.1% success, article + dashboard written · `articles/skill-analytics-2026-07-15.md`
-- [security-digest] — 4 fresh KEV 7-14 (SharePoint + AD FS + SonicWall pair) + npm-malware wave d2 confirmed 30 pkgs; NOTIFY sent
-- [reg-monitor] — first NOTIFY since 7-08; 2 ACT: CFTC Michigan emergency-stay + SDNY denies KalshiEX injunction
-- [skill-health] — NOTIFY fired, DEGRADED tail contracts 18→17, agent-buzz crosses WARNING boundary
-- [reflect] — MEMORY.md 67L→53L, XAI quota goal retired (day-30), 5 topic files refreshed
+- agent-buzz — 8 tweets / 3 clusters (MCP wiring · agent-economy · safety research); MCP dominates 5/8
+- action-converter — 5 loops: ISS-025 T-0 (125) · PR#163/164 rebase (100/80) · CLAUDE.md rule-5 rescope (100) · PR#162 close (80)
+- token-alert — GITLAWB 3-session round-trip whipsaw n=1 codifies; 15% rail 3-run streak
+- btc-levels ×6 — $63.9–$64.6K, $63,500 gate holds
 
 *Decisions for tomorrow:*
-- author ISS-025 capture-step PR against `.github/workflows/aeon.yml:479-495` — T-0 tomorrow 7-16 (weekly-review action #1, priority 20)
-- review + merge PR #164 before it stalls — rule-5 workflow-file class, first self-improve success this cycle · https://github.com/anajuliabit/aeon/pull/164
-- rebase or close PR #162 CONFLICTING (~99h stall, T+1 day-2) · https://github.com/anajuliabit/aeon/pull/162
-- review PR #163 before 72h hits 18:09Z 7-16 · https://github.com/anajuliabit/aeon/pull/163
+- ISS-025 T-0 slipped → T+1 — author capture-step PR against `aeon.yml:479-495`
+- Merge or rebase PR #163 — 72h+ stall CONFLICTING · https://github.com/anajuliabit/aeon/pull/163
+- Decide PR #162 close + PR #164 rebase · https://github.com/anajuliabit/aeon/pull/162
 
 *Blockers:*
-- [cost-report] — STUCK ~48h dispatched, cf=5, ISS-025 T-0 tomorrow unblocks
+- cost-report — STUCK d3 ~72h+ (`dispatched` 7-13 20:44Z, cf=5, sr=0.10, ISS-025)
+- SharePoint CVE-2026-56164 + SonicWall pair — BOD T-0 tomorrow 7-17
 
-_+12 routine outputs collapsed · sources: log=ok cron-state=ok_
+_+4 routine collapsed (skill-freshness · skill-health · list-digest · goal-tracker) · sources: log=ok cron-state=ok_
