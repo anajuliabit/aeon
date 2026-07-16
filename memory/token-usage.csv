@@ -760,4 +760,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-16,skill-freshness,claude-sonnet-4-6,22,31181,1297655,74300
 2026-07-16,token-alert,claude-opus-4-7,23,16597,1551516,81136
 2026-07-16,security-digest,claude-opus-4-7,49,28654,3254048,89305
-2026-07-16,btc-levels,claude-sonnet-4-6,9,4390,321749,40999
+2026-07-16,list-digest,claude-opus-4-7,27,10416,1446261,56771

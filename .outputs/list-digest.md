@@ -1,11 +1,11 @@
-*List Digest — 2026-07-15*
+*List Digest — 2026-07-16*
 
-quiet on the tracked list — 2 substantive posts, everything else thread noise under single-digit likes.
+Slow list day — one real signal (Weak-to-Strong distillation paper), rest is one-word chatter.
 
-*Crypto/DeFi list*
-- x.com/DeFiMinty — LLM wake/sleep-phase paper: fast-learn weights get consolidated into a frozen "teacher" snapshot; dreaming phase generates synthetic samples, filters for actual improvement. maps 1:1 onto the memory/skills split agent frameworks are already converging on (♥ 29, ↻ 3) — [View](https://x.com/DeFiMinty/status/2077161176375443933)
-- x.com/hooeem — cozy-timeline moment: reading posts from accounts you trust reacting to posts from accounts they trust. reads as low-key rebuttal to the recycled-vids/vagueposting default mode of the feed (♥ 43, ↻ 0) — [View](https://x.com/hooeem/status/2077155063307309480)
+*Curated DeFi/AI list*
+- x.com/DeFiMinty — Direct On-Policy Distillation: pre-RL vs post-RL copies of a small teacher score the student's next tokens; the delta trains a larger student. One RL run reusable across model sizes = capability-transfer bill drops. (♥30, ↻3) — [View](https://x.com/DeFiMinty/status/2077535144244609303)
+- x.com/Flowslikeosmo — QT of PrivacyHood shipping private gift cards on Robinhood. "Shipping nonstop" tag on privacy stack — narrative kindling worth watching if a second list picks it up. (♥9, ↻1) — [View](https://x.com/Flowslikeosmo/status/2077490267016306750)
 
 ---
-sources: list1=ok(2)
+sources: list1=ok(2 signal / 10 raw · cache-path)
 status: LIST_DIGEST_OK
