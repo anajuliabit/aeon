@@ -1,0 +1,382 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-16"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-text",
+        "separator-0",
+        "action-1-section",
+        "separator-1",
+        "action-2-section",
+        "separator-2",
+        "action-3-section",
+        "separator-3",
+        "action-4-section",
+        "separator-4",
+        "action-5-section",
+        "separator-5",
+        "footer-text"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "operator ISS-025 T-0 PR, rebase #163/#164 before stall gates, close #162, re-scope rule-5",
+        "variant": "lead"
+      }
+    },
+    "separator-0": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-1-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1-badge",
+        "action-1-heading",
+        "action-1-details"
+      ]
+    },
+    "action-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 1",
+        "variant": "default"
+      }
+    },
+    "action-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator: open a PR editing `.github/workflows/aeon.yml:479-495` to fix ISS-025 capture-step outputTokens truncation (deadline T-0 today).",
+        "level": "h3"
+      }
+    },
+    "action-1-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1-why",
+        "action-1-done",
+        "action-1-loop"
+      ]
+    },
+    "action-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: unblocks cost-report STUCK d3 + 8-skill batch-dark d19 + sandbox-truncation family day-24; weekly-review 7-13 action #1 priority 20.",
+        "variant": "body"
+      }
+    },
+    "action-1-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened against main touching aeon.yml lines 479-495 with a chain-runner capture-step diff.",
+        "variant": "body"
+      }
+    },
+    "action-1-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: iss-025-capture-step-t0",
+        "variant": "caption"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-2-badge",
+        "action-2-heading",
+        "action-2-details"
+      ]
+    },
+    "action-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 2",
+        "variant": "default"
+      }
+    },
+    "action-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Rebase PR #163 `fix/self-improve-2026-07-13` onto main and land before the 18:09Z 72h stall gate.",
+        "level": "h3"
+      }
+    },
+    "action-2-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-2-why",
+        "action-2-done",
+        "action-2-loop"
+      ]
+    },
+    "action-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: CONFLICTING at ~68h and ~3h from 72h gate; doc-only skill-security-scan patch, rule-5 clean, ready to ship.",
+        "variant": "body"
+      }
+    },
+    "action-2-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #163 merged into main, or explicit rebase commit pushed with mergeStateStatus flipping off DIRTY.",
+        "variant": "body"
+      }
+    },
+    "action-2-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: pr-163-rebase",
+        "variant": "caption"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-3-badge",
+        "action-3-heading",
+        "action-3-details"
+      ]
+    },
+    "action-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 3",
+        "variant": "default"
+      }
+    },
+    "action-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Add a \"Skill authoring boundaries\" section to CLAUDE.md codifying rule-5 across workflow + script class (T-1 tomorrow).",
+        "level": "h3"
+      }
+    },
+    "action-3-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-3-why",
+        "action-3-done",
+        "action-3-loop"
+      ]
+    },
+    "action-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: PR #164 CONFLICTING flip today extends rule-5 past workflow-file class to script-file class; codification must re-scope before 7-17.",
+        "variant": "body"
+      }
+    },
+    "action-3-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: commit lands section in CLAUDE.md naming PRs #160/#162/#163/#164 as the 4-tick evidence base.",
+        "variant": "body"
+      }
+    },
+    "action-3-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: claude-md-rule5-rescope",
+        "variant": "caption"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-4-badge",
+        "action-4-heading",
+        "action-4-details"
+      ]
+    },
+    "action-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 4",
+        "variant": "default"
+      }
+    },
+    "action-4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Close PR #162 `fix/self-improve-2026-07-11` as superseded — CONFLICTING day-5, XAI fallback logic already advanced past its diff.",
+        "level": "h3"
+      }
+    },
+    "action-4-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-4-why",
+        "action-4-done",
+        "action-4-loop"
+      ]
+    },
+    "action-4-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: T+2 deadline-missed day-3 rollover; keeping it open masks the pipeline health signal and blocks the next self-improve cycle.",
+        "variant": "body"
+      }
+    },
+    "action-4-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #162 closed with a comment naming the T+2 slip + supersession by later XAI fallback commits.",
+        "variant": "body"
+      }
+    },
+    "action-4-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: pr-162-close",
+        "variant": "caption"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-5-badge",
+        "action-5-heading",
+        "action-5-details"
+      ]
+    },
+    "action-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 5",
+        "variant": "default"
+      }
+    },
+    "action-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Rebase PR #164 `fix/self-improve-2026-07-15` onto main before the 19:31Z 24h stall gate.",
+        "level": "h3"
+      }
+    },
+    "action-5-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-5-why",
+        "action-5-done",
+        "action-5-loop"
+      ]
+    },
+    "action-5-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: CONFLICTING at ~19h20m from auto-committed state drift on `memory/token-usage.csv` + `.outputs/self-improve-*.json`; rule-5 script-class extension test.",
+        "variant": "body"
+      }
+    },
+    "action-5-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #164 rebased and pushed before 19:31Z, or explicit close decision recorded in the PR thread.",
+        "variant": "body"
+      }
+    },
+    "action-5-loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: pr-164-rebase",
+        "variant": "caption"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=54 logs=8 topics=8 prs=3 cron_failing=1 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}
