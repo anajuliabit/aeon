@@ -1,19 +1,20 @@
-Log entry written. All 4 tokens under 24h thresholds, no volume spike, no threshold-cross configured — silent TOKEN_ALERT_OK per skill spec. Emitting the final summary.
+Log written. All checks in the sweep are 0-firing, so no `./notify` call per skill spec.
 
 ## Summary
-Ran **token-alert** skill (var=""). Parsed 4 tracked tokens from `memory/MEMORY.md` (WELL/MAMO/REPPO/GITLAWB). Fetched CoinGecko `simple/price` in a single unauth curl (200, 394B, 109ms — 23rd consecutive clean CG day). Live prints:
 
-| Token | Price | 24h % | 24h Vol | vs 5w baseline | Rail % |
-|-------|-------|-------|---------|----------------|--------|
-| WELL | $0.00366518 | +0.08% | $101K | 0.08× ($1,285K mean) | 1% |
-| MAMO | $0.00944674 | +1.94% | $1,034K | 1.15× ($900K) | 13% |
-| REPPO | $0.02665346 | -6.74% | $287K | 0.68× ($422K) | 45% |
-| GITLAWB | $0.00003895 | **+13.36%** | $396K | 0.75× ($525K) | **89%** |
+Ran `skills/token-alert/SKILL.md` (var=""). Fetched CG `simple/price` for the 4 tokens in MEMORY.md's Tracked Tokens table — 200, 395B, ~100ms, no WebFetch fallback needed (24th consecutive clean CG day). Early dispatch under operator invocation ahead of the 12:00Z scheduled slot (6-consecutive-day catch-up pattern).
 
-**Status: TOKEN_ALERT_OK** — 0/12 checks fire (0/4 24h thresholds, 0/4 volume spikes vs 3× rail, 4/4 threshold-cross skipped per no Floor/Ceiling in config). Notification **skipped** per skill step 3 gate. GITLAWB closest to firing at 89% of 15% rail — second-consecutive day approaching rail (7-14 -11.97% fade → 7-15 +13.36% green = opposite-side approach). 15% rail intact on all 4 for a 2-run streak.
+**Result: `TOKEN_ALERT_OK` — 0/12 checks fire, notification skipped.**
 
-Body-pattern verdict: **7-15 whipsaw-into-rail-from-opposite-side day** — GITLAWB grinds back green without hot bid (exhaustion validates), REPPO's 7-14 bounce mean-reverts confirming mechanical shape, MAMO first million-print day-5 sustainable, WELL 0.08× vol on flat print = strongest participation-vanish yet. REPPO/GITLAWB opposite-direction for third session (decoupling extends).
+| Token | Price | 24h | % of rail | Vol vs 5-window baseline |
+|-------|-------|-----|-----------|--------------------------|
+| WELL | $0.00354860 | -2.25% | 22% (10% rail) | $127K / $690K = **0.18×** |
+| MAMO | $0.00920656 | -1.18% | 8% (15% rail) | $912K / $931K = **0.98×** (first exact-baseline print in window) |
+| REPPO | $0.02550609 | -3.45% | 23% (15% rail) | $140K / $456K = **0.31×** (fresh window-low participation on fade d2) |
+| GITLAWB | $0.00003428 | -9.70% | 65% (15% rail) | $328K / $518K = **0.63×** |
 
-Files modified: `.tmp/token-alert/cg.json`, `.tmp/token-alert/calc.py`, `memory/logs/2026-07-15.md`.
+Notable arc: **GITLAWB round-trip whipsaw closes in 3 sessions (n=1 codified)** — 7-14 -11.97% (80% rail fade) → 7-15 +13.36% (89% rail green) → 7-16 -9.70% (65% rail fade); today's -12.00% log-to-log fade gives back essentially all of yesterday's +12.80% pop, both legs printed under-baseline participation = mechanical shape. REPPO fade-back-to-trend continuation d2 below $0.0275 gate validates 7-15's mean-reversion framing. 15% rail intact on all 4 for third-consecutive run.
 
-Follow-up: (i) 7-16 tests GITLAWB third-consecutive rail-adjacent day (would codify whipsaw as durable pattern); (ii) WELL day-9 flat-print watch on strongest floor-hunt signal; (iii) MEMORY.md Tracked Tokens Recent Activity column stale for all 4 rows post-7-14 — reflect refresh candidate.
+**Files modified:** `.tmp/token-alert/cg.json`, `.tmp/token-alert/calc.py`, `memory/logs/2026-07-16.md`.
+
+**Follow-up:** next 7-17 12:00Z tick tests GITLAWB whipsaw → n=2 vs post-round-trip base-building, REPPO fade-back-to-trend d3, MAMO day-6 pause-at-mean inflection, WELL day-10 participation-vanish (MEMORY row anchor stale on window-roll — reflect refresh candidate).
