@@ -1,7 +1,7 @@
 {
   "hash": "618ede5f177457d7ef3b569b700523f80179703930246cf6ad771914433aa6b7",
   "last_notified_at": "2026-07-15T19:27:31Z",
-  "last_run_at": "2026-07-15T19:27:31Z",
+  "last_run_at": "2026-07-16T18:48:39Z",
   "classification": {
     "critical": ["cost-report"],
     "degraded": ["action-converter", "aixbt-pulse", "defi-monitor", "evening-recap", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner"],
@@ -10,7 +10,7 @@
     "healthy_count": 9,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "output_tokens=0 sandbox-truncation day-23 — 18 skills share signature (cost-report CRITICAL + 17 DEGRADED). Prev hash 7ca54d36, current 618ede5f — differs because agent-buzz crossed sr=0.60 boundary DEGRADED→WARNING after today's 18:04Z success (47/78=0.6025 > 0.60 strict). Notify gate: 24h29min elapsed since prev_notify 2026-07-14T18:58:31Z (past 24h cadence) AND hash differs → NOTIFY fires. Chronic sandbox-truncation tail contracts 18→17 DEGRADED (1 promoted, no new escalations). CRITICAL cost-report last_status still 'dispatched' at 2026-07-13T20:44:24Z (~46h stuck — mechanical continuation, matches ISS-025 signature family) → 0 filings (same-signature branch per rule 4). No skills newly HEALTHY that appear in any open issue affected_skills → 0 resolutions. Open issues count unchanged at 11 (ISS-005/007/009/010/011/016/018/019/020/021/025). 12:00 UTC batch dark day-18: 8 batch skills (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) still last_success 2026-06-28 (~17d). aixbt-pulse dead-slot day-18 (11 consecutive twice-daily slots missed since 7-08 09:00Z). ISS-025 capture-step PR against .github/workflows/aeon.yml chain-runner day-23 unshipped; weekly-review 7-13 flagged operator deadline 2026-07-16 = T-1 tomorrow. skill-runs unavailable this run (sandbox blocks the wrapper) — SKILL_HEALTH_PARTIAL, cron-state only.",
+  "systemic": "output_tokens=0 sandbox-truncation day-24 — 18 skills share signature (cost-report CRITICAL + 17 DEGRADED). Classification byte-identical to prev 7-15 19:27Z report (same 1 CRITICAL / 17 DEGRADED / 0 flapping / 13 WARNING / 9 HEALTHY / 3 NO_DATA membership). Notify gate: hash unchanged AND delta since prev_notify = 23h21m08s (2026-07-15T19:27:31Z → 2026-07-16T18:48:39Z), under 24h cadence → NOOP. Zero filings (cost-report CRITICAL already covered by ISS-025 same-signature match), zero resolutions (no HEALTHY skill appears in any open issue's affected_skills). Open issues unchanged at 11 (ISS-005/007/009/010/011/016/018/019/020/021/025). Chronic 12:00 UTC batch dark day-19 continues (8-skill 6-28 cluster: token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse). aixbt-pulse dead-slot day-19 (13th consecutive twice-daily slot missed since 7-08 09:00Z per 09:05Z 7-16 hb tick). ISS-025 capture-step PR against .github/workflows/aeon.yml chain-runner **T-0 firm today 7-16** per weekly-review 7-13 action #1 operator deadline. skill-runs wrapper unavailable this run (sandbox blocked the invocation) — SKILL_HEALTH_PARTIAL, cron-state only. state-change-gated notification working as designed: sandbox-truncation tail has been flat 18-skill signature for 24h → operator not paged.",
   "open_issues": 11,
   "resolved_this_run": 0,
   "filed_this_run": 0
