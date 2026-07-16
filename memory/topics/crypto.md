@@ -5,16 +5,21 @@ Daily market context lives in [[market-context]] (refreshed each cycle);
 daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
-## Recent durable patterns (2026-07-15)
+## Recent durable patterns (2026-07-16)
 
 - **One-day-breakout-unwind at n=5** — MORPHO/EIGEN/NEX/TIBBIR/DRV. "Breakout must hold day-2 to be trusted." BEAT/B are the n=2 dead-cat-with-legs exception cluster (up-down-up).
 - **LAB -95% zero-arc reference case** — 7-day cumulative ~99.4%; `-59%/day sellers-exhaust d3-floor` heuristic 0/7. Use as reference class for future -95% projections.
 - **PUMP event=local-low, 2-step-forward-1-step-back shape** — 7-13 +8.35% → 7-14 -3.29% → 7-15 +13.45%; validates for high-supply-shock unlocks with a d2 pause. Revises 7-14 supply-shock verdict; buyback thesis regains footing.
-- **DCR/XEC pair-flip round-trip closes in 3 days (whipsaw-shape candidate n=1)** — 7-13 top-2 → 7-14 bottom → 7-15 top-2 (both privacy leaders). Pattern: privacy-narrative rotation may present as whipsaw not sustained.
-- **DEXE breakout** — 7-11→7-12→7-13 fresh ATH → 7-14 -7.5% → 7-15 -10.29%; 7d +33.6% intact but d4 second-red bigger than d3 = momentum breaking. Watchlist-add flag holds pending d5.
+- **DCR/XEC pair-flip round-trip 3 days (whipsaw-shape candidate n=1)** — 7-13 top-2 → 7-14 bottom → 7-15 top-2 (both privacy leaders). Pattern: privacy-narrative rotation may present as whipsaw not sustained.
+- **GITLAWB round-trip whipsaw n=1 CODIFIES** (7-16 close) — single-token 3-session round-trip 7-14 -11.97% (80% rail) → 7-15 +13.36% (89% rail) → 7-16 -9.70% (65% rail); log-to-log -12.00% gives back essentially all of 7-15's +12.80% pop; both legs participation-thin ($328K vs $518K mean = 0.63×; 7-15 leg 0.75×). Same mechanic as DCR/XEC pair-flip pattern but on a single token = whipsaw-is-participation-thin-on-both-legs codifies as durable diagnostic.
+- **REPPO fade-back-to-trend continuation d2 confirms** — 7-14 +7.17% bounce (mechanical) → 7-15 -6.74% below $0.0275 gate → 7-16 -3.45% continuation; vol fresh window-low 0.31× baseline. Mean-reversion framing: bounces are the mechanical prints, fade is the trend. n=2 for the pattern.
+- **MAMO day-6 pause-at-mean** — 7-16 -1.18% vol 0.98× baseline = first exact-baseline print in window; sustainable-shape from day-5 first-million-print holds cleanly at mean. Participation returns to mean without distribution risk.
+- **WELL day-10 participation-vanish extends** — 7-16 -2.25% vol 0.18× baseline (optical improvement off 7-15 0.08× floor as 7-08 spike drops from 5-window). Real print $100K-neighborhood floor holds. Floor-hunt branch confirms; distribution-with-return branch invalidates.
+- **DEXE breakout** — 7-11→7-13 fresh ATH → 7-14 -7.5% → 7-15 -10.29%; 7d +33.6% intact but d4 second-red bigger than d3 = momentum breaking. Watchlist-add flag holds pending d5+ recovery vs continued unwind.
 - **HYPE rotation-out** — 7-12 → 7-14 continuous deepening (7d -6.97% → -10.11%) → 7-15 fully unwinds (-1.71%). Rotation-out signal invalidates in one CPI-cools session.
-- **Tracked-token whipsaw arc** — WELL day-9 participation-vanish (0.08× baseline vol) on flat 24h = floor-hunt not distribution-with-return. GITLAWB rail-approach whipsaw (7-14 -11.97% 80% of rail → 7-15 +13.36% 89% of rail from opposite side) tilts cascade-vs-exhaustion binary to EXHAUSTION. MAMO d5 sustainable-shape confirms (first million-print in 5-window). REPPO one-day-mean-reversion of 7-14 bounce validates (fades below $0.0275 gate).
-- **SLX pick day-22 terminal** at -70% ($0.1425 vs $0.4753 entry) — weekly-review 7-13 closed T-0 as goal step-5 out-of-scope; operator-owned surface only.
+- **SLX pick day-23 terminal** at -70% ($0.1425 vs $0.4753 entry) — weekly-review 7-13 closed T-0 as goal step-5 out-of-scope; operator-owned surface only.
+
+
 
 ## Narrative tracker
 - **FADE: Perp DEX / Hyperliquid.** Demoted Peak→Fading 2026-06-05.

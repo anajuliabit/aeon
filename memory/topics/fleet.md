@@ -5,24 +5,25 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
-## Current health snapshot (2026-07-15)
+## Current health snapshot (2026-07-16)
 
-- **skill-health 7-14 18:58Z hash 7ca54d36** — 1 CRITICAL (cost-report) · 18 DEGRADED · 12 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues (ISS-005/007/009/010/011/016/018/019/020/021/025). Chronic sandbox-truncation family day-23.
-- **cost-report STUCK ~42h+** — `last_status: dispatched` since 2026-07-13T20:44:24Z, cf=5, sr=0.10, 16d since last_success 2026-06-29. Signature = ISS-025 outputTokens sandbox truncation.
-- **Chronic sr<0.5 tail (~16 skills)** — cost-report 0.10, skill-analytics 0.14, reg-monitor 0.14, vuln-scanner 0.16, market-context-refresh 0.32, security-digest 0.33, narrative-tracker 0.33, search-skill 0.37, fleet-control 0.40, skill-health 0.42, self-improve 0.44, action-converter/goal-tracker 0.45, reflect 0.46, list-digest/skill-evals/aixbt-pulse 0.47. All cf=0 except cost-report cf=5. All map to ISS-019/020/021/025 sandbox-truncation.
-- **12:00 UTC batch DARK day-18** — 8-skill 6-28 cluster (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) last_success 2026-06-28 (~17d stale). Scheduler-side per ISS-027. Partial slot-level catch-ups continue via operator-invocation for token-alert/btc-levels.
-- **aixbt-pulse dead-slot day-18** — 12th consecutive twice-daily slot miss since 7-08 09:00Z; 9:00Z 7-15 confirmed missed. Same ISS-027 scheduler primitive class.
-- **weekly-shiplog + operator-scorecard chronic Mon miss** — weekly-shiplog last_success 2026-06-29 (~16d), operator-scorecard never-run. Same scheduler-side primitive.
-- **Open PRs stalled:**
-  - **PR #162** `fix(daily-routine): tighten XAI fallback rules` (7-11) — 4d+ stall, CONFLICTING, reviewDecision empty. Weekly-review 7-13 action #2 T-0 was 7-14; **now T+1 deadline-missed day-2**. Rule-5 workflow-file block does not apply (SKILL.md-class); stall is on operator review.
-  - **PR #163** `fix(skill-security-scan): document sandbox-blocked` (7-13) — approaches 48h stall gate at 18:09Z 7-15. Rule-5 clean.
-- **Same-day self-improve authoring — structural block on workflow-file class CONCLUSIVE** — 3 self-improve ticks (PR #160/#162/#163) all authored adjacent-target PRs when the assigned action was `.github/workflows/` class. Rule 5 forbids workflow-file edits. Operator direct-author is the sole path for aeon.yml scheduler/capture-step class (ISS-025, ISS-027 scheduler, operator-scorecard scheduler, weekly-shiplog scheduler all share this primitive).
-- **Investment Advisor 7-consecutive-cancellation NEW pattern (weekly-review 7-13 surface)** — 7-07 → 7-13 all in 14:23Z–16:00Z window. Invisible to skill-health (workflow-file class, not skill dispatch). Self-improve 7-15 18:00Z odd-day tick assigned to investigate per weekly-review action #4 (deadline 2026-07-16).
+- **skill-health 7-15 19:27Z hash 618ede5f** — 1 CRITICAL (cost-report) · 18 DEGRADED · 12 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues (ISS-005/007/009/010/011/016/018/019/020/021/025). Chronic sandbox-truncation family day-24.
+- **cost-report STUCK d3 ~66h+** — `last_status: dispatched` since 2026-07-13T20:44:24Z, cf=5, sr=0.10, 17d since last_success 2026-06-29. Signature = ISS-025 outputTokens sandbox truncation.
+- **Chronic sr<0.5 tail (17 skills)** — cost-report 0.10, skill-analytics 0.16, reg-monitor 0.16, vuln-scanner 0.16, market-context-refresh 0.32, security-digest 0.34, narrative-tracker 0.33, search-skill 0.37, fleet-control 0.40, skill-health 0.43, action-converter/self-improve/goal-tracker 0.45, reflect 0.47, list-digest/skill-evals/aixbt-pulse 0.47/0.48. All cf=0 except cost-report cf=5. All map to ISS-019/020/021/025 sandbox-truncation.
+- **12:00 UTC batch DARK day-19** — 8-skill 6-28 cluster (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) last_success 2026-06-28 (~18d stale). Scheduler-side per ISS-027. **Pattern extends to morning slot 7-16** — 07:00Z tick MISSED today (morning-brief/daily-routine/thought-review 07:00-half last_success 7-15, ~7h52m past 83min variance precedent); skill-freshness fired at 09:20Z under 08:00Z tick catch-up = targeted 07:00Z-tick miss not full-morning-cluster.
+- **aixbt-pulse dead-slot day-19** — 13th consecutive twice-daily slot miss since 7-08 09:00Z; 09:00Z 7-16 confirmed missed. Same ISS-027 scheduler primitive class.
+- **weekly-shiplog + operator-scorecard chronic Mon miss** — weekly-shiplog last_success 2026-06-29 (~17d), operator-scorecard never-run. Same scheduler-side primitive.
+- **Open PRs — all 3 CONFLICTING (rule-5 primitive extension):**
+  - **PR #164** `fix(investment-advisor): fail-fast committee retries` (7-15 19:31Z) — self-improve authored per weekly-review action #4. Flipped UNKNOWN→CONFLICTING at 7-16 14:52Z hb (~19h20m). **Script-file class** (touched `scripts/advisor/run.sh` + `.outputs/` + `memory/logs/` + `memory/token-usage.csv`) not workflow-file class = **rule-5 primitive extends past workflow-file class to any self-improve authored PR**. Under 24h stall gate until 19:31Z 7-16.
+  - **PR #163** `fix(skill-security-scan): document sandbox-blocked` (7-13) — ~68h stall at 14:52Z hb, past 48h stall gate; approaches 72h at 18:09Z 7-16. CONFLICTING. Rule-5 clean pre-extension.
+  - **PR #162** `fix(daily-routine): tighten XAI fallback rules` (7-11) — ~117h stall, CONFLICTING, reviewDecision empty. Weekly-review 7-13 action #2 T-0 was 7-14; **now T+2 deadline-missed day-3**. SKILL.md-class; stall is on operator review.
+- **Rule-5 primitive EXTENDS past workflow-file class (n=4)** — PR #160 (workflow) + PR #162 (SKILL.md) + PR #163 (SKILL.md) + PR #164 (scripts/) all CONFLICTING or authored adjacent. Conflict source reads as **auto-committed state drift** (self-improve authored PR based on stale state; main advances with new log rows/token-usage rows/self-improve outputs between authorship and merge attempt) not file-class-specific. Operator direct-author is the sole reliable path for any self-improve output.
+- **Investment Advisor 7-consecutive-cancellation investigation CLOSED via PR #164** — 7-15 19:31Z. First cross-week weekly-review action closed via self-improve authored PR since PR #160 flipped ISS-022 on 7-06/7-07. Investigation-authorship signal shipped-on-target (T-1); PR now CONFLICTING but investigation output landed.
 - **Weekly-review 2026-07-13 actions** (deadlines):
-  - #1 Operator direct-author ISS-025 capture-step PR against `.github/workflows/aeon.yml:479-495` by **2026-07-16 T-1 tomorrow**.
-  - #2 Operator decide PR #162 by 2026-07-14 T-0 — **SLIPPED, day-2 into T+1**.
-  - #3 Self-improve codifies rule-5 in CLAUDE.md by 2026-07-17.
-  - #4 Self-improve investigates Investment Advisor cancellation by 2026-07-16.
+  - #1 Operator direct-author ISS-025 capture-step PR against `.github/workflows/aeon.yml:479-495` by **2026-07-16 T-0 firm today**.
+  - #2 Operator decide PR #162 by 2026-07-14 — **SLIPPED T+2 day-3**.
+  - #3 Self-improve codifies rule-5 in CLAUDE.md by 2026-07-17 T-1. **Re-scope needed** per rule-5 extension past workflow-file class.
+  - #4 Self-improve investigates Investment Advisor cancellation by 2026-07-16 — **SHIPPED-ON-TARGET via PR #164 authored 7-15 19:31Z**.
 
 ## Infrastructure built (PRs)
 | PR | Date | What |
