@@ -1,26 +1,18 @@
-*GitHub Trending — 2026-07-15*
+*GitHub Trending — 2026-07-16*
 
-*Top pick* — [mattpocock/skills](https://github.com/mattpocock/skills)
-skills-primitive convergence day-15; a working operator dumps their .claude directory to 171k stars in 162d and the pattern crosses from framework talk into "here's what i actually ship."
+*Top pick* — [openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)
+open interpreter rewritten from python to rust in one release cycle. three releases in 24 hours, targeting deepseek/kimi/qwen through ACP. the OG coding agent picking sides in the low-cost-open-model bet.
 
 *Devtools*
-• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 1.7k today (171k total) · Shell · [ACCELERATING]
-one-file .claude/skills primitives from a live setup — reads as an executable stylebook, not framework theatre.
-
-• [chenyme/grok2api](https://github.com/chenyme/grok2api) — ★ 186 today (6.0k total) · Go · [RETURNING]
-multi-account gateway for Grok Build/Web/Console at 8.7× baseline — dev-side hedge on xAI rate limits and Grok CLI's whole-repo-upload behavior.
+• [openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter) — ★ 299 today (66k total) · Rust · RETURNING
+python era ended this week — three rust releases (v0.0.23–v0.0.25) shipped 7-14/7-15, ACP + deepseek/kimi/qwen topics on the repo.
 
 *AI/ML*
-• [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) — ★ 1.9k today (87k total) · Python · [ACCELERATING]
-turns a repo into a queryable knowledge graph; 7-14 dropped it as saturated-tail, today's 2.2× baseline reversal reads as second-wind not one-day-blip.
+• [injaneity/pi-computer-use](https://github.com/injaneity/pi-computer-use) — ★ 103 today (1.4k total) · TypeScript · DEBUT
+87d-old pi extension for macos/windows UI control — accessibility + screen-recording backed, positioned against MCP for the "no direct integration exists" case.
 
-*Web/Apps*
-• [penpot/penpot](https://github.com/penpot/penpot) — ★ 395 today (56k total) · Clojure · [RETURNING]
-10-year-old figma alternative back on trending at 27× baseline — self-hosted design-tool sovereignty pick.
-
-*Other* — emulator/reverse-engineering fits none of the named buckets
-• [par274/sharpemu](https://github.com/par274/sharpemu) — ★ 332 today (2.4k total) · C# · [RETURNING]
-experimental PS5 emulator in C# at 17.8× baseline — early territory in a space historically dominated by C++ efforts.
+• [Nutlope/hallmark](https://github.com/Nutlope/hallmark) — ★ 1,277 today (9.7k total) · CSS · HOLDOVER
+day-3 compounding on a 40d-idle repo: 794 → 1,015 → 1,277 today. not the release-driven kind of trending.
 
 ---
-sources: trending=ok · gh_api=ok · kept 5/15
+sources: trending=ok · gh_api=ok · kept 3/14

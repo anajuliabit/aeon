@@ -1,0 +1,267 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-16"
+      },
+      "children": [
+        "section-top-pick",
+        "separator-1",
+        "section-devtools",
+        "separator-2",
+        "section-aiml",
+        "separator-3",
+        "footer-status"
+      ]
+    },
+    "section-top-pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-top-pick",
+        "top-pick-link",
+        "top-pick-desc"
+      ]
+    },
+    "heading-top-pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h3"
+      }
+    },
+    "top-pick-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "openinterpreter/openinterpreter",
+        "href": "https://github.com/openinterpreter/openinterpreter",
+        "score": "★ 299 today"
+      }
+    },
+    "top-pick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "open interpreter rewritten from python to rust in one release cycle. three releases in 24 hours, targeting deepseek/kimi/qwen through ACP. the OG coding agent picking sides in the low-cost-open-model bet.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-devtools",
+        "devtools-item-1"
+      ]
+    },
+    "heading-devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-link-1",
+        "devtools-desc-1",
+        "devtools-tags-1"
+      ]
+    },
+    "devtools-link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "openinterpreter/openinterpreter",
+        "href": "https://github.com/openinterpreter/openinterpreter",
+        "score": "★ 299 today (66k total)"
+      }
+    },
+    "devtools-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "python era ended this week — three rust releases (v0.0.23–v0.0.25) shipped 7-14/7-15, ACP + deepseek/kimi/qwen topics on the repo.",
+        "variant": "body"
+      }
+    },
+    "devtools-tags-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-rust",
+        "badge-returning"
+      ]
+    },
+    "badge-rust": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "secondary"
+      }
+    },
+    "badge-returning": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-aiml",
+        "aiml-item-1",
+        "aiml-item-2"
+      ]
+    },
+    "heading-aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-link-1",
+        "aiml-desc-1",
+        "aiml-tags-1"
+      ]
+    },
+    "aiml-link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "injaneity/pi-computer-use",
+        "href": "https://github.com/injaneity/pi-computer-use",
+        "score": "★ 103 today (1.4k total)"
+      }
+    },
+    "aiml-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "87d-old pi extension for macos/windows UI control — accessibility + screen-recording backed, positioned against MCP for the \"no direct integration exists\" case.",
+        "variant": "body"
+      }
+    },
+    "aiml-tags-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-typescript",
+        "badge-debut"
+      ]
+    },
+    "badge-typescript": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "badge-debut": {
+      "type": "Badge",
+      "props": {
+        "text": "DEBUT",
+        "variant": "outline"
+      }
+    },
+    "aiml-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml-link-2",
+        "aiml-desc-2",
+        "aiml-tags-2"
+      ]
+    },
+    "aiml-link-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Nutlope/hallmark",
+        "href": "https://github.com/Nutlope/hallmark",
+        "score": "★ 1,277 today (9.7k total)"
+      }
+    },
+    "aiml-desc-2": {
+      "type": "Text",
+      "props": {
+        "text": "day-3 compounding on a 40d-idle repo: 794 → 1,015 → 1,277 today. not the release-driven kind of trending.",
+        "variant": "body"
+      }
+    },
+    "aiml-tags-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-css",
+        "badge-holdover"
+      ]
+    },
+    "badge-css": {
+      "type": "Badge",
+      "props": {
+        "text": "CSS",
+        "variant": "secondary"
+      }
+    },
+    "badge-holdover": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "outline"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-status": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/14",
+        "variant": "caption"
+      }
+    }
+  }
+}
