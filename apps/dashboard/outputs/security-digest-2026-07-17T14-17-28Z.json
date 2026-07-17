@@ -1,0 +1,757 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-17"
+      },
+      "children": [
+        "verdict-summary",
+        "separator-1",
+        "patch-today-section",
+        "separator-2",
+        "patch-week-section"
+      ]
+    },
+    "verdict-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict-text",
+        "bod-alert"
+      ]
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "3 to patch today, 5 to schedule, 0 monitor.",
+        "variant": "lead"
+      }
+    },
+    "bod-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "BOD T-0 TODAY",
+        "message": "SharePoint CVE-2026-56164 + SonicWall SMA1000 pair CVE-2026-15409/-15410 (deadline hits today)"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-today-heading",
+        "fortinet-cve",
+        "sharepoint-cve",
+        "npm-malware-wave"
+      ]
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "fortinet-cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fortinet-title",
+        "fortinet-links",
+        "fortinet-metadata",
+        "fortinet-desc",
+        "fortinet-action"
+      ]
+    },
+    "fortinet-title": {
+      "type": "Heading",
+      "props": {
+        "text": "CVE-2026-39808 + CVE-2026-25089 — Fortinet FortiSandbox / Cloud / PaaS",
+        "level": "h3"
+      }
+    },
+    "fortinet-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fortinet-link-1",
+        "fortinet-link-2"
+      ]
+    },
+    "fortinet-link-1": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-39808",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-39808"
+      }
+    },
+    "fortinet-link-2": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-25089",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-25089"
+      }
+    },
+    "fortinet-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-fresh-kev-1",
+        "epss-1",
+        "bod-due-1"
+      ]
+    },
+    "badge-fresh-kev-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Fresh KEV added 2026-07-16",
+        "variant": "secondary"
+      }
+    },
+    "epss-1": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.842 pct 0.997 + 0.361 pct 0.983",
+        "variant": "destructive"
+      }
+    },
+    "bod-due-1": {
+      "type": "Badge",
+      "props": {
+        "text": "BOD due 2026-07-19 (T-2)",
+        "variant": "outline"
+      }
+    },
+    "fortinet-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth OS command injection pair via crafted HTTP. 39808 is top EPSS today."
+      }
+    },
+    "fortinet-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Apply Fortinet PSIRT firmware today (single fix bundle covers pair)."
+      }
+    },
+    "sharepoint-cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sharepoint-title",
+        "sharepoint-link",
+        "sharepoint-metadata",
+        "sharepoint-desc",
+        "sharepoint-action"
+      ]
+    },
+    "sharepoint-title": {
+      "type": "Heading",
+      "props": {
+        "text": "CVE-2026-58644 — Microsoft SharePoint",
+        "level": "h3"
+      }
+    },
+    "sharepoint-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-58644",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-58644"
+      }
+    },
+    "sharepoint-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-fresh-kev-2",
+        "epss-2",
+        "bod-due-2"
+      ]
+    },
+    "badge-fresh-kev-2": {
+      "type": "Badge",
+      "props": {
+        "text": "Fresh KEV added 2026-07-16",
+        "variant": "secondary"
+      }
+    },
+    "epss-2": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.015 pct 0.707",
+        "variant": "destructive"
+      }
+    },
+    "bod-due-2": {
+      "type": "Badge",
+      "props": {
+        "text": "BOD due 2026-07-19 (T-2)",
+        "variant": "outline"
+      }
+    },
+    "sharepoint-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Deserialization of untrusted data, unauth network RCE. Second SharePoint KEV in 4 days (56164 on 7-14 is the T-0-today crossing above)."
+      }
+    },
+    "sharepoint-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Apply MSRC mitigations today or discontinue exposed instances."
+      }
+    },
+    "npm-malware-wave": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm-title",
+        "npm-timeline",
+        "npm-standout-heading",
+        "npm-standouts",
+        "npm-notable-pkg",
+        "npm-action"
+      ]
+    },
+    "npm-title": {
+      "type": "Heading",
+      "props": {
+        "text": "npm-malware wave d4",
+        "level": "h3"
+      }
+    },
+    "npm-timeline": {
+      "type": "Text",
+      "props": {
+        "text": "13 fresh pkgs 7-16 14z → 7-17 05z (fade 16 → 13 continues from d3 30 → 16, wave still active)"
+      }
+    },
+    "npm-standout-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Standout packages:",
+        "level": "h4"
+      }
+    },
+    "npm-standouts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pkg-anthropic",
+        "pkg-claude-tracker",
+        "pkg-monogrok",
+        "pkg-chai-const",
+        "pkg-chai-thread",
+        "pkg-ai-pro",
+        "pkg-theta",
+        "pkg-chain",
+        "pkg-terminal-mascot",
+        "pkg-awesome-terminal",
+        "pkg-px8my"
+      ]
+    },
+    "pkg-anthropic": {
+      "type": "Badge",
+      "props": {
+        "text": "anthropic-claude-latest — 2nd direct-Anthropic-scope typosquat",
+        "variant": "destructive"
+      }
+    },
+    "pkg-claude-tracker": {
+      "type": "Badge",
+      "props": {
+        "text": "claude-token-tracker-mcp — published 05:39Z 7-17",
+        "variant": "destructive"
+      }
+    },
+    "pkg-monogrok": {
+      "type": "Badge",
+      "props": {
+        "text": "monogrok — grok typosquat",
+        "variant": "destructive"
+      }
+    },
+    "pkg-chai-const": {
+      "type": "Badge",
+      "props": {
+        "text": "chai-as-const — chai test-lib typosquat",
+        "variant": "destructive"
+      }
+    },
+    "pkg-chai-thread": {
+      "type": "Badge",
+      "props": {
+        "text": "chai-as-thread — chai test-lib typosquat",
+        "variant": "destructive"
+      }
+    },
+    "pkg-ai-pro": {
+      "type": "Badge",
+      "props": {
+        "text": "ai-pro-sdk — SDK typosquat",
+        "variant": "destructive"
+      }
+    },
+    "pkg-theta": {
+      "type": "Badge",
+      "props": {
+        "text": "theta-sdk-js — SDK typosquat",
+        "variant": "destructive"
+      }
+    },
+    "pkg-chain": {
+      "type": "Badge",
+      "props": {
+        "text": "chain-sdk-js — SDK typosquat",
+        "variant": "destructive"
+      }
+    },
+    "pkg-terminal-mascot": {
+      "type": "Badge",
+      "props": {
+        "text": "terminal-mascot",
+        "variant": "destructive"
+      }
+    },
+    "pkg-awesome-terminal": {
+      "type": "Badge",
+      "props": {
+        "text": "awesome-terminal",
+        "variant": "destructive"
+      }
+    },
+    "pkg-px8my": {
+      "type": "Badge",
+      "props": {
+        "text": "px8my — 55-version dump",
+        "variant": "destructive"
+      }
+    },
+    "npm-notable-pkg": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "anthropic-claude-latest is the 2nd direct-Anthropic-scope typosquat after claude-token-tracker-mcp (published 05:39Z 7-17)"
+      }
+    },
+    "npm-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Audit npm installs since 7-16 14z; rotate ANTHROPIC_API_KEY on any host that touched anthropic-claude-latest or claude-token-tracker-mcp."
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-week-heading",
+        "envoy-cve",
+        "mcp-cve",
+        "nuclio-cve",
+        "systeminformation-cve",
+        "django-cve"
+      ]
+    },
+    "patch-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "envoy-cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "envoy-title",
+        "envoy-link",
+        "envoy-metadata",
+        "envoy-desc",
+        "envoy-action"
+      ]
+    },
+    "envoy-title": {
+      "type": "Heading",
+      "props": {
+        "text": "CVE-2026-53713 — envoy gateway (Go)",
+        "level": "h3"
+      }
+    },
+    "envoy-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-wcrf-9vrr-854f",
+        "href": "https://github.com/advisories/GHSA-wcrf-9vrr-854f"
+      }
+    },
+    "envoy-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-envoy",
+        "badge-poc-envoy"
+      ]
+    },
+    "badge-cvss-envoy": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.1",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-envoy": {
+      "type": "Badge",
+      "props": {
+        "text": "No public PoC",
+        "variant": "outline"
+      }
+    },
+    "envoy-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Auth bypass via Lua in EnvoyExtensionPolicy → secret disclosure."
+      }
+    },
+    "envoy-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade to ≥1.8.1 (or ≥1.7.4 on 1.7.x)."
+      }
+    },
+    "mcp-cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mcp-title",
+        "mcp-link",
+        "mcp-metadata",
+        "mcp-cves-text",
+        "mcp-hardening-note",
+        "mcp-action"
+      ]
+    },
+    "mcp-title": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP Python SDK 3-CVE cluster",
+        "level": "h3"
+      }
+    },
+    "mcp-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-vj7q-gjh5-988w",
+        "href": "https://github.com/advisories/GHSA-vj7q-gjh5-988w"
+      }
+    },
+    "mcp-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-mcp",
+        "badge-poc-mcp"
+      ]
+    },
+    "badge-cvss-mcp": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.6 / 7.1 / 7.6",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-mcp": {
+      "type": "Badge",
+      "props": {
+        "text": "No PoC",
+        "variant": "outline"
+      }
+    },
+    "mcp-cves-text": {
+      "type": "Text",
+      "props": {
+        "text": "CVE-2026-59950: WebSocket Host/Origin unvalidated (fix ≥1.28.1). CVE-2026-52869: HTTP session auth bypass (fix ≥1.27.2). CVE-2026-52870: cross-client task cancel (fix ≥1.27.2)."
+      }
+    },
+    "mcp-hardening-note": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-server hardening rail extends n=4 in 72h (7-15 langbot/mcp-documentation-server/n8n-mcp + 7-16 mcp Python SDK).",
+        "variant": "caption"
+      }
+    },
+    "mcp-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade mcp to ≥1.28.1 (covers all three)."
+      }
+    },
+    "nuclio-cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "nuclio-title",
+        "nuclio-link",
+        "nuclio-metadata",
+        "nuclio-desc",
+        "nuclio-action"
+      ]
+    },
+    "nuclio-title": {
+      "type": "Heading",
+      "props": {
+        "text": "CVE-2026-52833 — nuclio (Go)",
+        "level": "h3"
+      }
+    },
+    "nuclio-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-3v79-m2cg-89ww",
+        "href": "https://github.com/advisories/GHSA-3v79-m2cg-89ww"
+      }
+    },
+    "nuclio-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-nuclio",
+        "badge-poc-nuclio"
+      ]
+    },
+    "badge-cvss-nuclio": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.0",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-nuclio": {
+      "type": "Badge",
+      "props": {
+        "text": "No PoC",
+        "variant": "outline"
+      }
+    },
+    "nuclio-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unsanitized runtimeAttributes.repositories → Groovy build.gradle → build-time RCE."
+      }
+    },
+    "nuclio-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade nuclio to ≥1.16.5."
+      }
+    },
+    "systeminformation-cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "systeminformation-title",
+        "systeminformation-link",
+        "systeminformation-metadata",
+        "systeminformation-desc",
+        "systeminformation-action"
+      ]
+    },
+    "systeminformation-title": {
+      "type": "Heading",
+      "props": {
+        "text": "CVE-2026-50289 — systeminformation (npm)",
+        "level": "h3"
+      }
+    },
+    "systeminformation-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-5xpp-75jx-m839",
+        "href": "https://github.com/advisories/GHSA-5xpp-75jx-m839"
+      }
+    },
+    "systeminformation-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-systeminformation",
+        "badge-poc-systeminformation"
+      ]
+    },
+    "badge-cvss-systeminformation": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS v4 8.7",
+        "variant": "destructive"
+      }
+    },
+    "badge-poc-systeminformation": {
+      "type": "Badge",
+      "props": {
+        "text": "No PoC",
+        "variant": "outline"
+      }
+    },
+    "systeminformation-desc": {
+      "type": "Text",
+      "props": {
+        "text": "OS command injection in networkInterfaces() via interfaces(5) source-directive path on Linux. Widely-embedded lib."
+      }
+    },
+    "systeminformation-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade past 5.31.6."
+      }
+    },
+    "django-cve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "django-title",
+        "django-link",
+        "django-metadata",
+        "django-desc",
+        "django-action"
+      ]
+    },
+    "django-title": {
+      "type": "Heading",
+      "props": {
+        "text": "django-haystack (pip)",
+        "level": "h3"
+      }
+    },
+    "django-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-r3hx-x5rh-p9vv",
+        "href": "https://github.com/advisories/GHSA-r3hx-x5rh-p9vv"
+      }
+    },
+    "django-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-cvss-django",
+        "badge-nocve-django",
+        "badge-poc-django"
+      ]
+    },
+    "badge-cvss-django": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS v4 8.7",
+        "variant": "destructive"
+      }
+    },
+    "badge-nocve-django": {
+      "type": "Badge",
+      "props": {
+        "text": "No CVE",
+        "variant": "outline"
+      }
+    },
+    "badge-poc-django": {
+      "type": "Badge",
+      "props": {
+        "text": "No PoC",
+        "variant": "outline"
+      }
+    },
+    "django-desc": {
+      "type": "Text",
+      "props": {
+        "text": "RCE via eval() in Elasticsearch result deserialization."
+      }
+    },
+    "django-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade to ≥3.4.0."
+      }
+    }
+  }
+}

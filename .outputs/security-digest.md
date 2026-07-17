@@ -1,36 +1,24 @@
-*Security Digest — 2026-07-16*
-verdict: 3 to patch today, 5 to schedule, 0 monitor. _sources: kev, gh advisory, epss_
+*Security Digest — 2026-07-17*
+Verdict: 3 to patch today, 5 to schedule, 0 monitor. **BOD T-0 today**: SharePoint CVE-2026-56164 + SonicWall SMA1000 pair CVE-2026-15409/-15410 (deadline hits today). _Sources: KEV, GH Advisory, EPSS_
 
 *PATCH TODAY*
-- npm-malware wave d3 · 16 pkgs 7-15 14z→7-16 08z
-  `claude-token-tracker-mcp` (claude api token typosquat, fleet-adjacent scope) · `n8n-nodes-rce-poc` (n8n rce, adjacent to 7-15's n8n-mcp cve-2026-54052) · 08:13z 4-pkg p2p batch (`websight-p2p`/`websight2-p2p`/`ai-p2p`/`loader1`) · `fflask` (pip flask typosquat) · `rhynpm` (multi-version) · `npm-rce-poc` · `datefmt-helper`. count fades 30→16 vs d2 but wave carries into d3.
-  → audit installs since 7-15 14z; rotate any anthropic api keys touched by `claude-token-tracker-mcp`.
-
-- [CVE-2008-4128](https://nvd.nist.gov/vuln/detail/CVE-2008-4128) cisco ios 12.4 · kev added 7-13 · epss 0.239 pct 0.976 · **bod 26-04 due today**
-  csrf on eol platform; 17-yr-old cve confirmed exploited. yesterday t-2, today t-0.
-  → retire eol ios 12.4 or apply cisco mitigations; bod clock hits.
-
-- [CVE-2026-46817](https://nvd.nist.gov/vuln/detail/CVE-2026-46817) oracle e-business suite · **kev fresh 7-15** · epss 0.010 pct 0.603 · bod due 7-18 t-2 · cvss 9.1
-  improper privilege management, exploited per cisa. ebs = enterprise-crown-jewel scope.
-  → patch per oracle cpu bulletin today.
+- [CVE-2026-39808](https://nvd.nist.gov/vuln/detail/CVE-2026-39808) + [CVE-2026-25089](https://nvd.nist.gov/vuln/detail/CVE-2026-25089) — Fortinet FortiSandbox / Cloud / PaaS · **fresh KEV added 2026-07-16** · EPSS **0.842 pct 0.997** + 0.361 pct 0.983 · BOD due 2026-07-19 (T-2)
+  Unauth OS command injection pair via crafted HTTP. 39808 is top EPSS today.
+  → apply Fortinet PSIRT firmware today (single fix bundle covers pair).
+- [CVE-2026-58644](https://nvd.nist.gov/vuln/detail/CVE-2026-58644) — Microsoft SharePoint · fresh KEV added 2026-07-16 · EPSS 0.015 pct 0.707 · BOD due 2026-07-19 (T-2)
+  Deserialization of untrusted data, unauth network RCE. Second SharePoint KEV in 4 days (56164 on 7-14 is the T-0-today crossing above).
+  → apply MSRC mitigations today or discontinue exposed instances.
+- **npm-malware wave d4** — 13 fresh pkgs 7-16 14z → 7-17 05z (fade 16 → 13 continues from d3 30 → 16, wave still active). Standouts: **`anthropic-claude-latest`** = **2nd direct-Anthropic-scope typosquat** in memory (after 7-16 `claude-token-tracker-mcp`, published 05:39Z 7-17), `monogrok` (grok typosquat), `chai-as-const` + `chai-as-thread` (chai test-lib pair), `ai-pro-sdk` / `theta-sdk-js` / `chain-sdk-js` (SDK typosquats), `terminal-mascot` + `awesome-terminal`, `px8my` (55-version dump).
+  → audit npm installs since 7-16 14z; rotate `ANTHROPIC_API_KEY` on any host that touched `anthropic-claude-latest` or `claude-token-tracker-mcp`.
 
 *PATCH THIS WEEK*
-- sharepoint + sonicwall sma1000 pair · **kev bod due t-1 tomorrow** · [CVE-2026-56164](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56164) sharepoint epss 0.056 pct **0.920** (decays from 7-15's 0.070/0.935) · [CVE-2026-15409](https://nvd.nist.gov/vuln/detail/CVE-2026-15409)/[CVE-2026-15410](https://nvd.nist.gov/vuln/detail/CVE-2026-15410) sonicwall epss 0.013/0.015
-  microsoft-infra 7-14 batch surfaced yesterday, deadline-imminent today.
-  → apply msrc mitigations or discontinue; sonicwall single-release fix per snwlid-2026-0008.
-
-- **mcp-server rce cluster n=3 · 48h shape** · [GHSA-3pvh](https://github.com/advisories/GHSA-3pvh-63gf-j9mw) langbot pip cvss 8.8 auth rce via mcp config (≤4.10.5, no fix) · [GHSA-6f5r](https://github.com/advisories/GHSA-6f5r-5672-72j7) `@andrea9293/mcp-documentation-server` npm cvss 8.8 web ui binds all interfaces no auth (=1.13.0) · n8n-mcp npm cve-2026-54052 from 7-15
-  → audit mcp servers for open bind + auth; hold langbot + pin off mcp-documentation-server 1.13.0.
-
-- **dd-trace polyglot cluster n=6** · same-day w3c baggage dos across pip/npm/go/rubygems/nuget/maven · all cvss 7.5 · [CVE-2026-50271](https://github.com/advisories/GHSA-mw54-j2v2-42hr) ddtrace pip <4.8.2 · CVE-2026-50272 dd-trace npm <5.100.0 · CVE-2026-50274 dd-trace-go v2 <2.8.1 (+dd-trace-rb/dotnet/java kin)
-  → upgrade every dd-trace client; first cross-ecosystem single-vendor cluster in memory.
-
-- [GHSA-xv26](https://github.com/advisories/GHSA-xv26-6w52-cph6) `websocket-driver` npm cve-2026-54466 · critical (cvss n/a, epss n/a) · protocol-length-header abuse corrupts messages · patched 0.7.5
-  widely-embedded ws lib (faye deps, socket.io ancestor).
-  → upgrade websocket-driver to ≥0.7.5.
-
-- [CVE-2023-4346](https://nvd.nist.gov/vuln/detail/CVE-2023-4346) knx protocol · **kev fresh 7-15** · epss 0.009 pct 0.542 · bod due 7-29
-  3-yr-old cve into kev; pairs with 7-13 cisco ios 12.4 2008-old = **old-cve-fresh-kev n=2 codifies**. iot/building-automation scope.
-  → apply knx mitigations or air-gap admin plane.
-
-state: d3 npm-malware carries with 30→16 fade · 2 fresh kev on 7-15 breaks 1-day quiet post-7-14 batch · sharepoint pct decays 0.935→0.920 · mcp-server rce cluster reaches n=3.
+- [CVE-2026-53713](https://github.com/advisories/GHSA-wcrf-9vrr-854f) — envoy gateway (Go) · CVSS **9.1** · EPSS n/a · no public PoC
+  Auth bypass via Lua in EnvoyExtensionPolicy → secret disclosure. → upgrade to ≥1.8.1 (or ≥1.7.4 on 1.7.x).
+- [MCP Python SDK 3-CVE cluster](https://github.com/advisories/GHSA-vj7q-gjh5-988w) — mcp (pip) · CVSS 7.6 / 7.1 / 7.6 · no PoC
+  CVE-2026-59950 WebSocket Host/Origin unvalidated (fix ≥1.28.1), CVE-2026-52869 HTTP session auth bypass + CVE-2026-52870 cross-client task cancel (both fix ≥1.27.2). → upgrade mcp to ≥1.28.1 (covers all three). **MCP-server hardening rail extends n=4** in 72h (7-15 langbot/mcp-documentation-server/n8n-mcp + 7-16 mcp Python SDK).
+- [CVE-2026-52833](https://github.com/advisories/GHSA-3v79-m2cg-89ww) — nuclio (Go) · CVSS 8.0 · no PoC
+  Unsanitized `runtimeAttributes.repositories` → Groovy `build.gradle` → build-time RCE. → upgrade nuclio to ≥1.16.5.
+- [CVE-2026-50289](https://github.com/advisories/GHSA-5xpp-75jx-m839) — systeminformation (npm) · CVSS v4 **8.7** · no PoC
+  OS command injection in `networkInterfaces()` via `interfaces(5)` source-directive path on Linux. Widely-embedded lib. → upgrade past 5.31.6.
+- [django-haystack](https://github.com/advisories/GHSA-r3hx-x5rh-p9vv) — django-haystack (pip) · CVSS v4 **8.7** · no CVE · no PoC
+  RCE via `eval()` in Elasticsearch result deserialization. → upgrade to ≥3.4.0.
