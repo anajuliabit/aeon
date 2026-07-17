@@ -1,16 +1,9 @@
-Quiet run. BTC spot at $63,233.70, daily close 2026-07-16 at $63,788.93 — all four alert levels clear:
-
-- Spot ≤ $45,000 (leverage review): not triggered
-- Close < $60,500 (breakdown): not triggered ($63,788 > $60,500)
-- Reclaim $63,500: already flagged (`reclaim63500Alerted=true`); re-arm needs spot < $60,500, not met
-- Reclaim $65,900: not triggered ($63,233 is $2,666 below gate)
-
-No notification sent. State and log committed.
-
 ## Summary
 
-- Fetched BTC price from CoinGecko: spot $63,233.70, close 2026-07-16 $63,788.93
-- Evaluated all four alert levels — none triggered
-- Updated `memory/btc-levels-state.json` with new spot and timestamp
-- Appended 12:18Z entry to `memory/logs/2026-07-17.md`
-- Committed both files (`2bb3e52`)
+Run complete. No alerts fired.
+
+- **Spot:** $63,485.24 (up $252 from 12:18Z run at $63,234)
+- **Daily close (2026-07-16):** $63,788.93 — unchanged, well above $60,500 breakdown gate
+- **Level checks:** all clear — spot $18k above leverage-review trigger ($45k), close above breakdown gate ($60.5k), `reclaim63500Alerted` already `true` (spot $15 below the $63,500 gate but flag stays armed until re-arm condition of spot < $60,500 is met), `reclaim65900Alerted` false but spot $2,415 below that gate
+- **No notification sent** (quiet run is the norm)
+- State and log committed to main
