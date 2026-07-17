@@ -1,10 +1,24 @@
+Done. Here's the run summary:
+
 ## Summary
 
-**skill-freshness** ran for 2026-07-16. Results:
+**skill-freshness — 2026-07-17**
 
-- **Verdict:** ✅ `FRESHNESS_OK` — 43 enabled skills audited, 11 dependencies checked across 7 consumers, 0 flagged.
-- **Status:** `FRESHNESS_NO_CHANGE` — fingerprint identical to yesterday's run (sha1=`da39a3ee`, all deps within threshold), last run ~24h ago (within 7-day re-emit window). No notification sent.
-- **Consumers with deps:** aixbt-pulse (3), skill-security-scan (3), fork-skill-gap (1), market-context-refresh (1), reg-monitor (1), unlock-monitor (1), vuln-scanner (1).
-- **Observer notes (not flagged, no consumer):** `cost-report` and `weekly-shiplog` both remain STALE at ~408h / 17 days — same band as yesterday, root cause ISS-027 scheduler miss.
+**Verdict: ✅ FRESHNESS_OK** — 43 enabled skills audited, 11 cross-skill dependencies checked, 0 flagged.
 
-Files written: `articles/skill-freshness-2026-07-16.md`, `memory/topics/skill-freshness-state.json`, appended `memory/logs/2026-07-16.md`.
+**What was checked:**
+- `chains: {}` → zero explicit `consume:` edges
+- 7 consumers with detectable upstream file dependencies:
+  - `aixbt-pulse` ← 3 `memory/topics/` AIXBT files (OK)
+  - `fork-skill-gap` ← `memory/topics/fork-cohort-state.json` (OK)
+  - `market-context-refresh` ← `memory/topics/market-context.md` (OK)
+  - `reg-monitor` ← `memory/topics/reg-monitor-seen.md` (OK)
+  - `skill-security-scan` ← `memory/state/security-scan.json` + 2 articles (OK)
+  - `unlock-monitor` ← `memory/state/unlock-monitor-seen.json` (OK)
+  - `vuln-scanner` ← `.outputs/github-trending.md` (OK)
+
+**Observer notes (not flagged — no enabled consumer reads these):** `cost-report` and `weekly-shiplog` are both ~18 days stale by filename date (STALE band, ISS-027 Monday-slot miss). `skill-health` owns those.
+
+**No notification sent** — FRESHNESS_OK is always silent.
+
+**Files written:** `articles/skill-freshness-2026-07-17.md`, `memory/topics/skill-freshness-state.json`, `memory/logs/2026-07-17.md`

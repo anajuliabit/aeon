@@ -766,4 +766,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-16,evening-recap,claude-sonnet-4-6,1662,16835,2779900,98304
 2026-07-17,btc-levels,claude-sonnet-4-6,12,3782,394904,23668
 2026-07-17,btc-levels,claude-sonnet-4-6,11,6210,365097,26536
-2026-07-17,heartbeat,claude-opus-4-7,13921,26345,1395880,117620
+2026-07-17,skill-freshness,claude-sonnet-4-6,24,29103,1878427,112452
