@@ -1,0 +1,127 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-main",
+        "sep-1",
+        "heading-prs",
+        "stack-prs",
+        "sep-2",
+        "heading-detail",
+        "text-technical",
+        "sep-3",
+        "heading-recommendation",
+        "text-recommendation"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "3+ open PRs all conflicting past stall gates. Skipping to avoid more debt."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-prs": {
+      "type": "Heading",
+      "props": {
+        "text": "Conflicting PRs",
+        "level": "h3"
+      }
+    },
+    "stack-prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-pr162",
+        "badge-pr163",
+        "badge-pr164"
+      ]
+    },
+    "badge-pr162": {
+      "type": "Badge",
+      "props": {
+        "text": "#162",
+        "variant": "outline"
+      }
+    },
+    "badge-pr163": {
+      "type": "Badge",
+      "props": {
+        "text": "#163",
+        "variant": "outline"
+      }
+    },
+    "badge-pr164": {
+      "type": "Badge",
+      "props": {
+        "text": "#164",
+        "variant": "outline"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-detail": {
+      "type": "Heading",
+      "props": {
+        "text": "Technical Details",
+        "level": "h3"
+      }
+    },
+    "text-technical": {
+      "type": "Text",
+      "props": {
+        "text": "rule-5 primitive n=4 (auto-committed state drift)",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-recommendation": {
+      "type": "Heading",
+      "props": {
+        "text": "Recommendation",
+        "level": "h3"
+      }
+    },
+    "text-recommendation": {
+      "type": "Text",
+      "props": {
+        "text": "Operator direct-author remains only reliable path.",
+        "variant": "body"
+      }
+    }
+  }
+}

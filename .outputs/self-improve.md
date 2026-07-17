@@ -1,1 +1,1 @@
-self-improve: reduce search-skill daily→weekly (Mon 14:00Z) after 15-day NO_GAP streak — PR: https://github.com/anajuliabit/aeon/pull/161
+self-improve: 3+ open PRs (#162/#163/#164), all CONFLICTING past stall gates. skipping to avoid more debt. rule-5 primitive n=4 (auto-committed state drift). operator direct-author remains only reliable path.
