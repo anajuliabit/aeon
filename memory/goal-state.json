@@ -1,47 +1,59 @@
 {
-  "run_at": "2026-07-16T18:00:00Z",
+  "run_at": "2026-07-17T18:55:00Z",
   "goals": {
     "iss-025-capture-step-pr": {
       "status": "BLOCKED",
-      "activity_count_14d": 303,
-      "last_activity_date": "2026-07-16",
-      "note": "Slug stabilized from prior 'iss-025-capture-step-pr-day-22'. Weekly-review 7-13 action #1 priority 20 (F5×I5÷E5); operator deadline **T-0 firm today 2026-07-16** per 09:05Z + 14:52Z hb ticks. Rule-5 workflow-file class primitive CONCLUSIVE per 3 self-improve ticks (PR #160/#162/#163 all authored adjacent-target PRs when action was workflow-file class) — **extends to script-file class per PR #164 CONFLICTING flip today** (see [[investment-advisor-cancellation-investigation]]); operator direct-author against `.github/workflows/aeon.yml:479-495` chain-runner is sole path. Same primitive as ISS-027 scheduler + operator-scorecard scheduler + weekly-shiplog scheduler. cost-report STUCK d3 is the current-shape manifest of this fix pending. 14d activity 303 vs prior 299 = +1% within ±25% flat threshold. Status BLOCKED (unchanged), trend: flat."
+      "activity_count_14d": 333,
+      "last_activity_date": "2026-07-17",
+      "note": "T-0 was 2026-07-16 → **T+1 day-2 miss rollover today 7-17** (mechanical day-boundary crossing at 00:00Z 7-17 without operator PR-creation event during 7-16 window; surfaced by 09:18Z 7-17 hb as day-2 deadline-slip event). Rule-5 workflow-file class blocks self-improve routing; operator direct-author against `.github/workflows/aeon.yml:479-495` chain-runner is sole path (same primitive as ISS-027 scheduler + operator-scorecard + weekly-shiplog). cost-report STUCK d4 ~89h44m is current-shape manifest. 14d activity 333 vs prior 303 = +10% within ±25% flat threshold. Status BLOCKED (unchanged), trend: flat."
     },
-    "pr-162-daily-routine-deadline-missed": {
+    "rule-5-primitive-extends": {
       "status": "BLOCKED",
-      "activity_count_14d": 120,
-      "last_activity_date": "2026-07-16",
-      "note": "Slug stabilized from prior 'pr-162-operator-decision-t-0'. PR #162 (fix(daily-routine): tighten XAI fallback rules for quota/sandbox/error) stalled ~116h36m by 14:52Z 7-16 (updatedAt 2026-07-11T18:18Z holds), CONFLICTING, reviewDecision empty. T-0 was 2026-07-14 → **T+2 day-3 rollover** today (mechanical day-boundary continuation, no fresh classification). Rule-5 primitive now extends past workflow-file class per PR #164 flip; operator direct-author (rebase to resolve CONFLICTING) is sole unblock path. 14d activity 120 vs prior 92 = +30% (slightly above +25% improving threshold, but status unchanged, so treated flat). Status BLOCKED (unchanged), trend: flat."
+      "activity_count_14d": 174,
+      "last_activity_date": "2026-07-17",
+      "note": "NEW GOAL — split out from prior iss-025 entry as separate MEMORY.md line 6 goal 7-16 18:05Z reflect. Rule-5 primitive extends past workflow-file class per PR #164 CONFLICTING flip 7-16 14:52Z (script-file class + memory-file class + auto-committed state files) — conflict source reads as **auto-committed state drift**, not file-class-specific. All 3 self-improve authored PRs in flight (#162/#163/#164) CONFLICTING confirms n=4 extension. Blocker signal: pattern is itself a blocker on self-improve routing. Codification re-scope needed (see [[claude-md-rule-5-codification]]). Trend: new."
+    },
+    "pr-164-conflicting": {
+      "status": "BLOCKED",
+      "activity_count_14d": 58,
+      "last_activity_date": "2026-07-17",
+      "note": "Slug from prior 'investment-advisor-cancellation-investigation'. PR #164 (fix(investment-advisor): fail-fast committee retries) created 2026-07-15T19:31:08Z, CONFLICTING d2 today (was d1 in prior run at 14:52Z 7-16 CONFLICTING flip). ~43h stall by 14:10Z 7-17 hb (24h gate crossed 19:31Z 7-16, +18h39m past). Weekly-review action #4 authored-on-target (T-1) but not-landed — first cross-week weekly-review action delivered via self-improve authored PR. Operator rebase-or-close is sole unblock path per rule-5 primitive extension n=4. 14d activity 58 vs prior 89 = -35% (outside ±25% flat threshold but under -50% degrading — treated flat per status-unchanged). Status BLOCKED (unchanged), trend: flat."
+    },
+    "pr-162-deadline-missed-day-4": {
+      "status": "BLOCKED",
+      "activity_count_14d": 163,
+      "last_activity_date": "2026-07-17",
+      "note": "Slug stabilized from prior 'pr-162-daily-routine-deadline-missed'. PR #162 (fix(daily-routine): tighten XAI fallback rules) created 2026-07-11T18:16:34Z = ~140h old at 14:10Z 7-17 hb, CONFLICTING, reviewDecision empty. T-0 was 2026-07-14 → **T+3 day-4 rollover today 7-17** (mechanical continuation from T+2 day-3 in prior run). Rule-5 primitive extends past workflow-file class per PR #164 flip; operator direct-author (rebase to resolve CONFLICTING) is sole unblock path. 14d activity 163 vs prior 120 = +36% (outside ±25% flat but under +50% improving — treated flat per status-unchanged). Status BLOCKED (unchanged), trend: flat."
+    },
+    "pr-163-stall-past-72h": {
+      "status": "BLOCKED",
+      "activity_count_14d": 96,
+      "last_activity_date": "2026-07-17",
+      "note": "NEW GOAL — split out as separate MEMORY.md line 9 goal 7-16 18:05Z reflect (was embedded in prior 'PR rows' aggregation). PR #163 (fix(skill-security-scan): document sandbox-blocked as expected scanner failure mode) created 2026-07-13T18:09:19Z = ~96h old at 14:10Z 7-17 hb, past 72h stall gate crossed 2026-07-16T18:09Z (+24h01m past), CONFLICTING, reviewDecision empty. SKILL.md-class (rule-5 clean pre-extension). Operator rebase is sole unblock path. Trend: new."
     },
     "claude-md-rule-5-codification": {
       "status": "ON_TRACK",
       "activity_count_14d": 129,
-      "last_activity_date": "2026-07-16",
-      "note": "NEW GOAL — surfaces in prior-run MEMORY.md but not yet in goal-state.json (weekly-review 7-13 action #3, deadline 2026-07-17). Self-improve odd-day 7-15 18:00Z tick chose action #4 (PR #164 investment-advisor fail-fast) over action #3 = SLIPPED-with-adjacent. Next self-improve fire = tomorrow 7-17 = **deadline day**. Rule-5 pattern extending past workflow-file class per PR #164 CONFLICTING flip today (see [[investment-advisor-cancellation-investigation]]) may need re-scoping when codified. High activity (129 mentions/14d = every hb + weekly-review + memory line 7 P2 flag), 0d idle — qualifies ON_TRACK per rule (activity ≥2 AND idle ≤7). No blocker_signal (not blocked, just deprioritized once by self-improve tick). Trend: new."
-    },
-    "investment-advisor-cancellation-investigation": {
-      "status": "BLOCKED",
-      "activity_count_14d": 89,
-      "last_activity_date": "2026-07-16",
-      "note": "Slug stabilized from prior 'investment-advisor-cancellation-pattern-day-8'. Was ON_TRACK last run; **flipped BLOCKED today** — PR #164 (fix(investment-advisor): fail-fast committee retries) authored 2026-07-15T19:31Z to close weekly-review action #4, **flipped UNKNOWN→CONFLICTING between 09:05Z and 14:52Z 7-16** per gh pr view (`mergeStateStatus: DIRTY, mergeable: CONFLICTING`). Under 24h stall gate still at 14:52Z (~4h39m remaining to 19:31Z 7-16). Pattern implication: **rule-5 primitive extends past workflow-file class to any self-improve authored PR** (PR #164 touched script-file class + memory-file class, still CONFLICTING = conflict source reads as auto-committed state drift not file-class-specific). Investigation deadline was 2026-07-16 = today (authored on time via PR, but not landed). 14d activity 89 vs prior 69 = +29% (slightly above +25% improving, but flipped down status = degrading dominates). Status BLOCKED (was ON_TRACK), trend: degrading."
+      "last_activity_date": "2026-07-17",
+      "note": "Weekly-review 7-13 action #3 (self-improve authors addition to CLAUDE.md under Skill authoring boundaries section). T-1 in prior run → **T-0 firm today 7-17** (mechanical day-boundary rollover, self-improve fires 18:00Z 7-17 evening batch = deadline day). Rule-5 extension per PR #164 CONFLICTING flip 7-16 14:52Z requires re-scope: routing rule is broader than workflow-file-only (auto-committed state drift is the actual conflict source, per [[rule-5-primitive-extends]]). Self-improve is expected to author against re-scope content per 14:52Z + 20:52Z 7-16 hb + 09:18Z 7-17 hb flags. High activity, 0d idle — qualifies ON_TRACK per rule (activity ≥2 AND idle ≤7). No fresh blocker_signal. 14d activity 129 vs prior 129 = 0% flat. Status ON_TRACK (unchanged), trend: flat."
     },
     "cost-report-stuck": {
       "status": "BLOCKED",
-      "activity_count_14d": 150,
-      "last_activity_date": "2026-07-16",
-      "note": "Slug stabilized from prior 'cost-report-stuck-d2'. `last_status: dispatched` at 2026-07-13T20:44:24Z, cf=5, sr=0.10, ~17d since last_success 2026-06-29. Signature matches ISS-025 sandbox-truncation family; upstream block = [[iss-025-capture-step-pr]] pending operator T-0 today. Extends d3 today (was d2 in prior run) — ~66h07m stuck per 14:52Z 7-16 hb. Mechanical continuation of already-notified CRITICAL classification (skill-health 7-13/7-14/7-15 NOTIFY sequence w/ hash flip 7ca54d36→618ede5f + 9 hb ticks + weekly-review 7-13 KALM demotion). 14d activity 150 vs prior 170 = -12% within ±25% flat threshold. Status BLOCKED (unchanged), trend: flat."
+      "activity_count_14d": 222,
+      "last_activity_date": "2026-07-17",
+      "note": "Slug from prior. `last_status: dispatched` at 2026-07-13T20:44:24Z, cf=5, sr=0.10, ~18d since last_success 2026-06-29T13:59Z. Signature matches ISS-025 sandbox-truncation family; upstream block = [[iss-025-capture-step-pr]] T+1 day-2 slip. **Extends d4 today** (was d3 in prior run) — ~89h44m stuck per 14:10Z 7-17 hb. Mechanical continuation of already-notified CRITICAL classification (skill-health 7-13/7-14/7-15 NOTIFY sequence + 12+ hb ticks + weekly-review 7-13 KALM demotion). 14d activity 222 vs prior 150 = +48% (outside ±25% but under +50% — treated flat per status-unchanged). Status BLOCKED (unchanged), trend: flat."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
-      "activity_count_14d": 273,
-      "last_activity_date": "2026-07-16",
-      "note": "Slug stabilized from prior '12-00-utc-batch-dark-day-17'. Day 19 today (advances d18→d19 per 09:05Z + 14:52Z hb ticks). 8-skill batch (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) last_success 2026-06-28 = ~18d stale per cron-state.json. **d19 live-slot verified MISS today**: 12:00Z + 13:00Z ticks CONFIRMED skipped (token-movers/on-chain-monitor/defi-monitor/defi-overview/token-pick state still 2026-06-28, market-context-refresh 13:00Z + narrative-tracker 13:30Z both still 2026-06-28). Batch-dark pattern **extends to 07:00Z morning slot today** (morning-brief/daily-routine/thought-review 07:00Z last_success 7-15, ~8h past variance precedent). aixbt-pulse dead-slot d19 = 13th consecutive twice-daily slot miss confirmed at 09:00Z 7-16. Same rule-5 workflow-file primitive as ISS-025 — needs same operator direct-author lift on aeon.yml scheduler fix. Prior activity 311 → 273 = -12% within ±25% flat threshold. Status BLOCKED (unchanged), trend: flat."
+      "activity_count_14d": 289,
+      "last_activity_date": "2026-07-17",
+      "note": "Slug stabilized. Day 20 today (advances d19→d20 per 09:18Z + 14:10Z hb ticks new UTC day). 8-skill batch last_success 2026-06-28. **d20 live-slot verified MISS today** at 12:00Z + 12:20Z + 12:40Z + 13:00Z + 13:30Z ticks across 8-skill cluster while token-alert + btc-levels fired cleanly at same 12:00Z slot = per-skill scheduler blockage confirmed (per-skill, not per-slot). **Batch-dark extends to 07:00Z morning slot dead-slot d2 today** (morning-brief/daily-routine/thought-review 07:00Z 2nd-consec miss = dead-slot class forms FRESH CLASSIFICATION per 09:18Z 7-17 hb). aixbt-pulse dead-slot d20 = 15th consecutive twice-daily slot miss confirmed. Same rule-5 primitive as ISS-025 — needs same operator direct-author lift on aeon.yml scheduler fix. 14d activity 289 vs prior 273 = +6% within ±25% flat threshold. Status BLOCKED (unchanged), trend: flat."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 50,
-      "last_activity_date": "2026-07-16",
-      "note": "Slug stabilized from prior 'operator-on-chain-config-day-37'. Day 40 today (advances d39→d40 per 09:05Z hb). defi-monitor NO_CONFIG. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. Prior activity 155 → 50 = -68% (past -50% degrading threshold per skill rule 4, but note prior count was likely inflated by mechanical MEMORY.md re-emphasis in 7-13/7-14 rewrites that dropped out of the newer window). Status unchanged BLOCKED. Trend: flat (treat prior inflation as measurement artifact, not real regression; blocker is operator-side config gap, not skill-side degradation)."
+      "activity_count_14d": 78,
+      "last_activity_date": "2026-07-17",
+      "note": "Slug stabilized. Day 41 today (advances d40→d41 per 09:18Z hb new UTC day). defi-monitor NO_CONFIG. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. 14d activity 78 vs prior 50 = +56% (crosses +50% improving threshold per skill rule 4). Note: prior count was noted as low-artifact from measurement (window rolled off inflated 7-13/7-14 mechanical MEMORY.md re-emphasis); +56% reads as normal-tracking reversion, not real regression/improvement. Status unchanged BLOCKED. Trend: flat (treat prior artifact as measurement noise; blocker is operator-side config gap, not skill-side change)."
     }
   }
 }
