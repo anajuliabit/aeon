@@ -773,3 +773,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-17,agent-buzz,claude-opus-4-7,30,16043,1223346,57020
 2026-07-17,reflect,claude-opus-4-7,63,26714,6665940,152226
 2026-07-17,heartbeat,claude-opus-4-7,36,23271,3077906,119579
+2026-07-17,btc-levels,claude-sonnet-4-6,17,7770,846454,51447
