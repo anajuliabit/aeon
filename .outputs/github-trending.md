@@ -1,18 +1,22 @@
-*GitHub Trending — 2026-07-16*
+*GitHub Trending — 2026-07-17*
 
-*Top pick* — [openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)
-open interpreter rewritten from python to rust in one release cycle. three releases in 24 hours, targeting deepseek/kimi/qwen through ACP. the OG coding agent picking sides in the low-cost-open-model bet.
-
-*Devtools*
-• [openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter) — ★ 299 today (66k total) · Rust · RETURNING
-python era ended this week — three rust releases (v0.0.23–v0.0.25) shipped 7-14/7-15, ACP + deepseek/kimi/qwen topics on the repo.
+*Top pick* — [PrismML-Eng/Bonsai-demo](https://github.com/PrismML-Eng/Bonsai-demo)
+1-bit / ternary quantized 27b that fits on a modern iphone with no memory offload. if the numbers hold, first serious bitnet-scale drop with a public demo.
 
 *AI/ML*
-• [injaneity/pi-computer-use](https://github.com/injaneity/pi-computer-use) — ★ 103 today (1.4k total) · TypeScript · DEBUT
-87d-old pi extension for macos/windows UI control — accessibility + screen-recording backed, positioned against MCP for the "no direct integration exists" case.
+• [PrismML-Eng/Bonsai-demo](https://github.com/PrismML-Eng/Bonsai-demo) — ★ 196 today (1.6k total) · Shell · [RETURNING]
+bonsai-27b packs to ~1.125 bits/weight; runs across llama.cpp, mlx, cuda, metal, vulkan with vision + tool-calling.
 
-• [Nutlope/hallmark](https://github.com/Nutlope/hallmark) — ★ 1,277 today (9.7k total) · CSS · HOLDOVER
-day-3 compounding on a 40d-idle repo: 794 → 1,015 → 1,277 today. not the release-driven kind of trending.
+• [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) — ★ 656 today (27k total) · Python · [ACCELERATING]
+crossed from 1.3× baseline yesterday to 4.9× today — lifelong-tutoring multi-agent+rag stack, same lab as vibe-trading.
+
+*Web/Apps*
+• [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut) — ★ 3.5k today (74k total) · TypeScript · [RETURNING]
+invalidates yesterday's peak-then-fade verdict: 7-14 1.2k → 7-15 4.3k → 7-16 1.6k → 7-17 3.5k = day-4 bounce-back, not decay.
+
+*Devtools*
+• [ibelick/ui-skills](https://github.com/ibelick/ui-skills) — ★ 178 today (4.5k total) · TypeScript · [RETURNING]
+skills-primitive rail extends to n=5 — design-engineering variant, same executable-directory shape as mattpocock/skills.
 
 ---
-sources: trending=ok · gh_api=ok · kept 3/14
+sources: trending=ok · gh_api=ok · kept 4/17
