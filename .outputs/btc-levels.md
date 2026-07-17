@@ -1,13 +1,14 @@
 ## Summary
 
-Quiet run. No alerts fired.
+**btc-levels run — 2026-07-17 01:16Z**
 
-- **Spot:** $64,106 (down slightly from last run's $64,164)
-- **Daily close (July 15):** $64,722 — above all alert thresholds
-- **Levels checked:**
-  - Leverage-review (≤$45k): clear
-  - Breakdown (close < $60,500): clear
-  - Reclaim $63,500: already alerted (`reclaim63500Alerted=true`), re-arm only below $60,500
-  - Reclaim $65,900: not yet reached ($1,794 gap)
+| | |
+|---|---|
+| Spot | $63,946.56 |
+| 2026-07-16 daily close | $63,788.93 |
+| Leverage-review (≤$45k) | clear |
+| Breakdown signal (<$60,500 close) | clear |
+| Reclaim $63,500 | already alerted (flag stays true; re-arms below $60,500) |
+| Reclaim $65,900 | not yet — $1,953 below spot |
 
-State updated and committed. No notification sent.
+No alerts fired. Quiet run. State and log committed.
