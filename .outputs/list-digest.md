@@ -1,11 +1,11 @@
-*List Digest — 2026-07-16*
+*List Digest — 2026-07-17*
 
-Slow list day — one real signal (Weak-to-Strong distillation paper), rest is one-word chatter.
+single list, slow day — two threads worth reading: western open-weights closing the china gap, and tokenized private credit distribution shifting off maple/stokr.
 
-*Curated DeFi/AI list*
-- x.com/DeFiMinty — Direct On-Policy Distillation: pre-RL vs post-RL copies of a small teacher score the student's next tokens; the delta trains a larger student. One RL run reusable across model sizes = capability-transfer bill drops. (♥30, ↻3) — [View](https://x.com/DeFiMinty/status/2077535144244609303)
-- x.com/Flowslikeosmo — QT of PrivacyHood shipping private gift cards on Robinhood. "Shipping nonstop" tag on privacy stack — narrative kindling worth watching if a second list picks it up. (♥9, ↻1) — [View](https://x.com/Flowslikeosmo/status/2077490267016306750)
+*DeFi/crypto research list*
+- x.com/DeFiMinty — meta's tinker + inkling is the "no-infra RL" primitive the west needed; china had been lapping open-weights for a year (♥ 19, ↻ 1) — [View](https://x.com/DeFiMinty/status/2077875842475008128)
+- x.com/Flowslikeosmo — axil credit vault enters tokenized credit at 14% APY on pharos; maple/stokr still ~40% of the tokenized book but the $3T tradfi private-credit market is <1% onchain, so new-chain entrants get first crack at share (♥ 12, ↻ 1) — [View](https://x.com/Flowslikeosmo/status/2077878570702274629)
 
 ---
-sources: list1=ok(2 signal / 10 raw · cache-path)
+sources: 1642770456720683008=ok(2)
 status: LIST_DIGEST_OK
