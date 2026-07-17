@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-16*
-Shape: operator ISS-025 T-0 PR, rebase #163/#164 before stall gates, close #162, re-scope rule-5
+*5 Actions — 2026-07-17*
+Shape: commit iss-025 fix, codify rule-5, kill 3 stalled self-improve PRs
 
-1. Operator: open a PR editing `.github/workflows/aeon.yml:479-495` to fix ISS-025 capture-step outputTokens truncation (deadline T-0 today).
-why: unblocks cost-report STUCK d3 + 8-skill batch-dark d19 + sandbox-truncation family day-24; weekly-review 7-13 action #1 priority 20.
-done: PR opened against main touching aeon.yml lines 479-495 with a chain-runner capture-step diff.
-loop: iss-025-capture-step-t0
+1. commit capture-step fix directly to main against `.github/workflows/aeon.yml:479-495` — bypass self-improve entirely (rule-5 n=4 confirms all authored PRs CONFLICT).
+why: unblocks cost-report STUCK d4 ~90h + 16 sr<0.5 skills; ISS-025 T+1 day-2 slipped yesterday.
+done: commit on main + next cost-report scheduled run reports success.
+loop: iss-025-capture-step
 
-2. Rebase PR #163 `fix/self-improve-2026-07-13` onto main and land before the 18:09Z 72h stall gate.
-why: CONFLICTING at ~68h and ~3h from 72h gate; doc-only skill-security-scan patch, rule-5 clean, ready to ship.
-done: PR #163 merged into main, or explicit rebase commit pushed with mergeStateStatus flipping off DIRTY.
-loop: pr-163-rebase
+2. add "Skill authoring boundaries" section to `CLAUDE.md` codifying rule-5 primitive as auto-committed state drift, citing PR #164 script-file-class flip as n=4 evidence.
+why: weekly-review action #3 T-0 today; self-improve fires 18:00Z 7-17 with re-scope content already surfaced in reflect.
+done: PR opened touching only CLAUDE.md with the new section.
+loop: claude-md-rule5-codify
 
-3. Add a "Skill authoring boundaries" section to CLAUDE.md codifying rule-5 across workflow + script class (T-1 tomorrow).
-why: PR #164 CONFLICTING flip today extends rule-5 past workflow-file class to script-file class; codification must re-scope before 7-17.
-done: commit lands section in CLAUDE.md naming PRs #160/#162/#163/#164 as the 4-tick evidence base.
-loop: claude-md-rule5-rescope
+3. close PR #164 via `gh pr close 164` and hand-author replacement investment-advisor fail-fast fix against `scripts/advisor/run.sh`.
+why: ~42h old, CONFLICTING d1, past 24h stall gate ~18h — rebase is futile against auto-committed state drift.
+done: PR #164 closed + hand-authored replacement PR opened mergeable clean.
+loop: pr-164-close
 
-4. Close PR #162 `fix/self-improve-2026-07-11` as superseded — CONFLICTING day-5, XAI fallback logic already advanced past its diff.
-why: T+2 deadline-missed day-3 rollover; keeping it open masks the pipeline health signal and blocks the next self-improve cycle.
-done: PR #162 closed with a comment naming the T+2 slip + supersession by later XAI fallback commits.
-loop: pr-162-close
+4. supersede PR #162 with hand-authored daily-routine XAI-fallback fix — `gh pr close 162` then open replacement.
+why: ~140h old T+3 day-4, oldest CONFLICTING, same rule-5 drift root — no rebase path survives.
+done: PR #162 closed + replacement PR mergeable clean.
+loop: pr-162-supersede
 
-5. Rebase PR #164 `fix/self-improve-2026-07-15` onto main before the 19:31Z 24h stall gate.
-why: CONFLICTING at ~19h20m from auto-committed state drift on `memory/token-usage.csv` + `.outputs/self-improve-*.json`; rule-5 script-class extension test.
-done: PR #164 rebased and pushed before 19:31Z, or explicit close decision recorded in the PR thread.
-loop: pr-164-rebase
+5. close PR #163 via `gh pr close 163` — 96h+ stall on doc-only skill-security-scan sandbox note.
+why: 72h+24h past gate, doc-only impact = lowest cost to kill; re-author after cost-report unsticks.
+done: PR #163 closed.
+loop: pr-163-close
 
-sources: memory=54 logs=8 topics=8 prs=3 cron_failing=1 mode=OK
+sources: memory=59 logs=8 topics=11 prs=3 cron_failing=1 mode=OK

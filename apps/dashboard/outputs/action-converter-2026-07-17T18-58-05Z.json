@@ -1,0 +1,428 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter"
+      },
+      "children": [
+        "header_date",
+        "shape_line",
+        "sep_1",
+        "action_1",
+        "action_2",
+        "action_3",
+        "action_4",
+        "action_5",
+        "sep_sources",
+        "sources_line"
+      ]
+    },
+    "header_date": {
+      "type": "Heading",
+      "props": {
+        "text": "5 Actions — 2026-07-17",
+        "level": "h2"
+      }
+    },
+    "shape_line": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: commit iss-025 fix, codify rule-5, kill 3 stalled self-improve PRs",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_1",
+        "heading_1",
+        "details_1"
+      ]
+    },
+    "badge_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 1",
+        "variant": "default"
+      }
+    },
+    "heading_1": {
+      "type": "Heading",
+      "props": {
+        "text": "commit capture-step fix directly to main",
+        "level": "h3"
+      }
+    },
+    "details_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file_1",
+        "note_1",
+        "why_1",
+        "done_1",
+        "loop_1"
+      ]
+    },
+    "file_1": {
+      "type": "Text",
+      "props": {
+        "text": "Target: .github/workflows/aeon.yml:479-495",
+        "variant": "caption"
+      }
+    },
+    "note_1": {
+      "type": "Text",
+      "props": {
+        "text": "bypass self-improve entirely (rule-5 n=4 confirms all authored PRs CONFLICT)",
+        "variant": "body"
+      }
+    },
+    "why_1": {
+      "type": "Text",
+      "props": {
+        "text": "why: unblocks cost-report STUCK d4 ~90h + 16 sr<0.5 skills; ISS-025 T+1 day-2 slipped yesterday",
+        "variant": "body"
+      }
+    },
+    "done_1": {
+      "type": "Text",
+      "props": {
+        "text": "done: commit on main + next cost-report scheduled run reports success",
+        "variant": "body"
+      }
+    },
+    "loop_1": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-capture-step",
+        "variant": "outline"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_2",
+        "heading_2",
+        "details_2"
+      ]
+    },
+    "badge_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 2",
+        "variant": "default"
+      }
+    },
+    "heading_2": {
+      "type": "Heading",
+      "props": {
+        "text": "add \"Skill authoring boundaries\" section to CLAUDE.md",
+        "level": "h3"
+      }
+    },
+    "details_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file_2",
+        "note_2",
+        "why_2",
+        "done_2",
+        "loop_2"
+      ]
+    },
+    "file_2": {
+      "type": "Text",
+      "props": {
+        "text": "Target: CLAUDE.md",
+        "variant": "caption"
+      }
+    },
+    "note_2": {
+      "type": "Text",
+      "props": {
+        "text": "codifying rule-5 primitive as auto-committed state drift, citing PR #164 script-file-class flip as n=4 evidence",
+        "variant": "body"
+      }
+    },
+    "why_2": {
+      "type": "Text",
+      "props": {
+        "text": "why: weekly-review action #3 T-0 today; self-improve fires 18:00Z 7-17 with re-scope content already surfaced in reflect",
+        "variant": "body"
+      }
+    },
+    "done_2": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR opened touching only CLAUDE.md with the new section",
+        "variant": "body"
+      }
+    },
+    "loop_2": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: claude-md-rule5-codify",
+        "variant": "outline"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_3",
+        "heading_3",
+        "details_3"
+      ]
+    },
+    "badge_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 3",
+        "variant": "default"
+      }
+    },
+    "heading_3": {
+      "type": "Heading",
+      "props": {
+        "text": "close PR #164 and hand-author replacement",
+        "level": "h3"
+      }
+    },
+    "details_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cmd_3",
+        "target_3",
+        "why_3",
+        "done_3",
+        "loop_3"
+      ]
+    },
+    "cmd_3": {
+      "type": "Text",
+      "props": {
+        "text": "Command: gh pr close 164",
+        "variant": "caption"
+      }
+    },
+    "target_3": {
+      "type": "Text",
+      "props": {
+        "text": "hand-author replacement investment-advisor fail-fast fix against scripts/advisor/run.sh",
+        "variant": "body"
+      }
+    },
+    "why_3": {
+      "type": "Text",
+      "props": {
+        "text": "why: ~42h old, CONFLICTING d1, past 24h stall gate ~18h — rebase is futile against auto-committed state drift",
+        "variant": "body"
+      }
+    },
+    "done_3": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #164 closed + hand-authored replacement PR opened mergeable clean",
+        "variant": "body"
+      }
+    },
+    "loop_3": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-164-close",
+        "variant": "outline"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_4",
+        "heading_4",
+        "details_4"
+      ]
+    },
+    "badge_4": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 4",
+        "variant": "default"
+      }
+    },
+    "heading_4": {
+      "type": "Heading",
+      "props": {
+        "text": "supersede PR #162 with hand-authored fix",
+        "level": "h3"
+      }
+    },
+    "details_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cmd_4",
+        "target_4",
+        "why_4",
+        "done_4",
+        "loop_4"
+      ]
+    },
+    "cmd_4": {
+      "type": "Text",
+      "props": {
+        "text": "Command: gh pr close 162, then open replacement",
+        "variant": "caption"
+      }
+    },
+    "target_4": {
+      "type": "Text",
+      "props": {
+        "text": "daily-routine XAI-fallback fix",
+        "variant": "body"
+      }
+    },
+    "why_4": {
+      "type": "Text",
+      "props": {
+        "text": "why: ~140h old T+3 day-4, oldest CONFLICTING, same rule-5 drift root — no rebase path survives",
+        "variant": "body"
+      }
+    },
+    "done_4": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #162 closed + replacement PR mergeable clean",
+        "variant": "body"
+      }
+    },
+    "loop_4": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-162-supersede",
+        "variant": "outline"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_5",
+        "heading_5",
+        "details_5"
+      ]
+    },
+    "badge_5": {
+      "type": "Badge",
+      "props": {
+        "text": "Action 5",
+        "variant": "default"
+      }
+    },
+    "heading_5": {
+      "type": "Heading",
+      "props": {
+        "text": "close PR #163",
+        "level": "h3"
+      }
+    },
+    "details_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cmd_5",
+        "reason_5",
+        "why_5",
+        "done_5",
+        "loop_5"
+      ]
+    },
+    "cmd_5": {
+      "type": "Text",
+      "props": {
+        "text": "Command: gh pr close 163",
+        "variant": "caption"
+      }
+    },
+    "reason_5": {
+      "type": "Text",
+      "props": {
+        "text": "96h+ stall on doc-only skill-security-scan sandbox note",
+        "variant": "body"
+      }
+    },
+    "why_5": {
+      "type": "Text",
+      "props": {
+        "text": "why: 72h+24h past gate, doc-only impact = lowest cost to kill; re-author after cost-report unsticks",
+        "variant": "body"
+      }
+    },
+    "done_5": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #163 closed",
+        "variant": "body"
+      }
+    },
+    "loop_5": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-163-close",
+        "variant": "outline"
+      }
+    },
+    "sep_sources": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources_line": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=59 logs=8 topics=11 prs=3 cron_failing=1 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}
