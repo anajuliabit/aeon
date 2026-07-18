@@ -1,24 +1,20 @@
 ## Summary
 
-Executed `skills/skill-health/SKILL.md` on 43 enabled skills (parsed from `aeon.yml`).
+Ran `skill-health` per `skills/skill-health/SKILL.md` at 18:14:05Z 7-18.
 
-**Classification (byte-identical to 7-16 18:48Z + 7-15 19:27Z — 48h flat):**
-- **CRITICAL(1):** cost-report (cf=5, stuck ~90h, ~18d since success)
-- **DEGRADED(17):** all sharing ISS-025 `output_tokens=0 sandbox-truncation d25` signature — reg-monitor/vuln-scanner/skill-analytics 16%, market-context-refresh 32%, narrative-tracker 33%, security-digest 35%, search-skill 37%, skill-health/self 43%, self-improve/goal-tracker/action-converter/reflect/skill-evals/aixbt-pulse 45–47%, list-digest 49%, defi-monitor/evening-recap 53–54%
-- **FLAPPING(0)** · **WARNING(13)** · **HEALTHY(9)** · **NO_DATA(3)** (all workflow_dispatch/Mon-Sun, expected)
+**Classification (byte-identical to prev 7-17 18:55Z report):**
+- 1 CRITICAL: cost-report (cf=5, sr=0.10, ~19d stuck)
+- 17 DEGRADED: sandbox-truncation family day-26
+- 0 FLAPPING · 13 WARNING · 9 HEALTHY · 3 NO_DATA (autoresearch/fork-skill-gap/operator-scorecard)
 
-**Systemic:** single callout for 18-skill sandbox-truncation family.
+**Notify gate:** hash unchanged (`b4d66e6c`) AND delta since prev notify = **23h18m47s < 24h** → **NOOP**, no `./notify` call per SKILL step 5.
 
-**Issue reconciliation:** cost-report CRITICAL already covered by ISS-025 (same root cause) → **0 filings, 0 resolutions**; open issues unchanged at 11.
+**Issues:** cost-report CRITICAL covered by ISS-025 same-signature → 0 filings, 0 resolutions. 11 open issues unchanged.
 
-**Notify gate:** 47h27m since prev_notify > 24h cadence → **NOTIFY** (daily-reminder, not new signal).
-
-**Delivery:** `./notify` bash blocked in sandbox → direct-write to `.pending-notify/1752778518.md` for postprocess-notify.sh pickup. Status `SKILL_HEALTH_PARTIAL` (skill-runs wrapper unavailable, cron-state only per fallback clause).
+**Skill-runs wrapper:** sandbox-denied → `SKILL_HEALTH_PARTIAL`, cron-state only.
 
 **Files modified:**
-- `memory/skill-health/last-report.json` — hash + timestamps refreshed, classification snapshot preserved
-- `.tmp/skill-health/msg.md` — notify body
-- `.pending-notify/1752778518.md` — delivery payload
-- `memory/logs/2026-07-17.md` — appended run entry + summary
+- `memory/skill-health/last-report.json` — `last_run_at` → 18:14:05Z, `last_notified_at` preserved
+- `memory/logs/2026-07-18.md` — appended `SKILL_HEALTH_NOOP` entry + summary
 
-**Follow-up:** 7-18 18:00Z slot tests whether 48h-flat signature extends to 72h-flat (would firm sandbox-truncation as structurally-stable degradation).
+**Follow-up:** 7-19 tick elapses the 24h daily-reminder cadence gate → will NOTIFY that run regardless of hash. Operator direct-author on ISS-025 capture-step PR remains the sole lever to flip the 18-skill sandbox-truncation family.
