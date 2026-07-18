@@ -782,3 +782,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-18,vuln-scanner,claude-opus-4-7,168,72773,19590440,196633
 2026-07-18,list-digest,claude-opus-4-7,26,8985,1157888,38824
 2026-07-18,reflect,claude-opus-4-7,30,36153,2289115,105897
+2026-07-18,btc-levels,claude-sonnet-4-6,3540,9129,461244,29221

@@ -1,7 +1,12 @@
-Run complete. No alerts fired.
+Quiet run complete.
 
-**Summary:**
-- Fetched BTC price from CoinGecko: spot **$64,292** / prev daily close **$63,926** (2026-07-16 close)
-- All four levels evaluated — none triggered: spot well above $45k leverage-review band; close above $60.5k breakdown threshold; $63.5k reclaim already flagged (re-arms only sub-$60.5k); $65.9k not yet reached
-- No notification sent (quiet run)
-- State updated and committed; corrected `lastDailyCloseDate` from `"2026-07-17"` to `"2026-07-16"` (the 00:00 UTC July 17 snapshot is the close of July 16)
+## Summary
+
+- **Fetched** BTC price via CoinGecko: spot **$64,649** · previous UTC daily close **$63,926** (2026-07-17)
+- **Evaluated all levels** — none triggered:
+  - Leverage-review ($45k): clear by $19k
+  - Breakdown close ($60.5k): close $63,926 well above
+  - Reclaim $63,500: already alerted, re-arms only below $60,500
+  - Reclaim $65,900: spot $64,649 — not yet reached
+- **No notification sent** (quiet run, expected)
+- **Committed** updated `memory/btc-levels-state.json` (close date advances to 2026-07-17, spot updated to $64,649) and log entry to `memory/logs/2026-07-18.md`
