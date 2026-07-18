@@ -1,0 +1,387 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-18"
+      },
+      "children": [
+        "section_toppick",
+        "sep1",
+        "section_aiml",
+        "sep2",
+        "section_devtools",
+        "sep3",
+        "section_infra",
+        "sep4",
+        "section_sources"
+      ]
+    },
+    "section_toppick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_toppick",
+        "text_toppick",
+        "link_copilot_intro"
+      ]
+    },
+    "heading_toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_toppick": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub ships a first-party SDK for embedding the Copilot Agent into apps — the namespace Claude Code owns just got a direct incumbent alternative with rust + java parity in the same release cycle.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link_copilot_intro": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github/copilot-sdk",
+        "href": "https://github.com/github/copilot-sdk",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_aiml",
+        "repo_copilot"
+      ]
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo_copilot": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_copilot",
+        "meta_copilot",
+        "detail_copilot"
+      ]
+    },
+    "link_copilot": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github/copilot-sdk",
+        "href": "https://github.com/github/copilot-sdk",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "meta_copilot": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_copilot_today",
+        "stat_copilot_total",
+        "badge_copilot_java",
+        "badge_copilot_status"
+      ]
+    },
+    "stat_copilot_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "233",
+        "delta": "17.9×",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_copilot_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "9.8k"
+      },
+      "children": []
+    },
+    "badge_copilot_java": {
+      "type": "Badge",
+      "props": {
+        "text": "Java",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_copilot_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "detail_copilot": {
+      "type": "Text",
+      "props": {
+        "text": "v1.0.7 shipped across rust + java 7-16 15:22Z; today's 233 = 17.9× yesterday's 13 = catalyst spike confirms watchlist call.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_devtools",
+        "repo_crg"
+      ]
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo_crg": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_crg",
+        "meta_crg",
+        "detail_crg"
+      ]
+    },
+    "link_crg": {
+      "type": "StoryLink",
+      "props": {
+        "title": "tirth8205/code-review-graph",
+        "href": "https://github.com/tirth8205/code-review-graph",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "meta_crg": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_crg_today",
+        "stat_crg_total",
+        "badge_crg_python",
+        "badge_crg_status"
+      ]
+    },
+    "stat_crg_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "74"
+      },
+      "children": []
+    },
+    "stat_crg_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "19.9k"
+      },
+      "children": []
+    },
+    "badge_crg_python": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_crg_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "detail_crg": {
+      "type": "Text",
+      "props": {
+        "text": "persistent local knowledge-graph for MCP + claude-code; v2.3.7 released today 00:33Z, aimed at context-window burn on large codebases.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_infra",
+        "repo_turbovec"
+      ]
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo_turbovec": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_turbovec",
+        "meta_turbovec",
+        "detail_turbovec"
+      ]
+    },
+    "link_turbovec": {
+      "type": "StoryLink",
+      "props": {
+        "title": "RyanCodrai/turbovec",
+        "href": "https://github.com/RyanCodrai/turbovec",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "meta_turbovec": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_turbovec_today",
+        "stat_turbovec_total",
+        "badge_turbovec_rust",
+        "badge_turbovec_status"
+      ]
+    },
+    "stat_turbovec_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Today",
+        "value": "280"
+      },
+      "children": []
+    },
+    "stat_turbovec_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "13.4k"
+      },
+      "children": []
+    },
+    "badge_turbovec_rust": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge_turbovec_status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "detail_turbovec": {
+      "type": "Text",
+      "props": {
+        "text": "SIMD-quantized (AVX512 + NEON) nearest-neighbor index with python bindings — 38d-idle repo spikes today with no release = viral moment against faiss for rag stacks.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_sources"
+      ]
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/14",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
