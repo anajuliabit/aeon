@@ -1,0 +1,56 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "thought review"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-summary",
+        "stat-captures",
+        "separator-1",
+        "alert-refresh"
+      ]
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Last 24h: nothing to surface",
+        "variant": "body"
+      }
+    },
+    "stat-captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-refresh": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md worth a refresh",
+        "message": "Last reviewed 44 days ago",
+        "type": "info"
+      }
+    }
+  }
+}
