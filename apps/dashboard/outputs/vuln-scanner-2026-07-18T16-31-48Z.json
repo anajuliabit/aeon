@@ -1,0 +1,192 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "vuln-scanner: tirth8205/code-review-graph"
+      },
+      "children": [
+        "stats_header",
+        "sep_1",
+        "findings_heading",
+        "findings_stack",
+        "sep_2",
+        "scanner_heading",
+        "scanner_status"
+      ]
+    },
+    "stats_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_findings"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "GitHub Stars",
+        "value": "20,000"
+      }
+    },
+    "stat_findings": {
+      "type": "Stat",
+      "props": {
+        "label": "Confirmed Findings",
+        "value": "2"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "findings_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Security Findings",
+        "level": "h2"
+      }
+    },
+    "findings_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "finding_1_container",
+        "finding_2_container"
+      ]
+    },
+    "finding_1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "finding_1",
+        "finding_1_link"
+      ]
+    },
+    "finding_1": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Code-Level: PVR – Prompt Injection Vulnerability (GHSA-chjm-935c-cx8p)",
+        "message": "_sanitize_name() — the prompt-injection defense named in SECURITY.md — only strips ASCII 0x00–0x1F. Tag chars (U+E0000–U+E007F), bidi overrides, zero-width joiners pass through into every downstream LLM (Claude Code, Cursor, Copilot). First MCP-symbol-flow finding in scanner history."
+      }
+    },
+    "finding_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View Advisory GHSA-chjm-935c-cx8p",
+        "href": "https://github.com/tirth8205/code-review-graph/security/advisories/GHSA-chjm-935c-cx8p"
+      }
+    },
+    "finding_2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "finding_2",
+        "finding_2_link"
+      ]
+    },
+    "finding_2": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Dependency Audit: 10 Recommended Prod-Path Bumps (Issue #665)",
+        "message": "Severity breakdown: mcp (3× HIGH), python-multipart (2× HIGH), pyjwt (HIGH – HS256 confusion), urllib3 (2× HIGH), cryptography (HIGH – bundled OpenSSL), and 5 additional dependencies. Filed as issue (not PR) because uv unavailable in sandbox; hand-editing uv.lock breaks the wheel-hash pin."
+      }
+    },
+    "finding_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View Issue #665",
+        "href": "https://github.com/tirth8205/code-review-graph/issues/665"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "scanner_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scanner Status",
+        "level": "h2"
+      }
+    },
+    "scanner_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_semgrep",
+        "badge_trufflehog",
+        "badge_osv_binary",
+        "badge_osv_api",
+        "badge_slither",
+        "text_secrets"
+      ]
+    },
+    "badge_semgrep": {
+      "type": "Badge",
+      "props": {
+        "text": "semgrep: fail",
+        "variant": "destructive"
+      }
+    },
+    "badge_trufflehog": {
+      "type": "Badge",
+      "props": {
+        "text": "trufflehog: fail",
+        "variant": "destructive"
+      }
+    },
+    "badge_osv_binary": {
+      "type": "Badge",
+      "props": {
+        "text": "osv-binary: fail (ISS-018 d32)",
+        "variant": "destructive"
+      }
+    },
+    "badge_osv_api": {
+      "type": "Badge",
+      "props": {
+        "text": "osv-api: ok",
+        "variant": "secondary"
+      }
+    },
+    "badge_slither": {
+      "type": "Badge",
+      "props": {
+        "text": "slither: n/a",
+        "variant": "outline"
+      }
+    },
+    "text_secrets": {
+      "type": "Text",
+      "props": {
+        "text": "verified-secrets: NOT swept – recorded, not claimed clean",
+        "variant": "caption"
+      }
+    }
+  }
+}
