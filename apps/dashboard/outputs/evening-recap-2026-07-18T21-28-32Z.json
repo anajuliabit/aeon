@@ -1,0 +1,494 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-18"
+      },
+      "children": [
+        "headline-section",
+        "sep-1",
+        "notable-section",
+        "sep-2",
+        "decisions-section",
+        "sep-3",
+        "blockers-section",
+        "sep-4",
+        "final-note"
+      ]
+    },
+    "headline-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hl-title",
+        "hl-tldr",
+        "hl-1",
+        "hl-2",
+        "hl-3",
+        "hl-4",
+        "hl-5"
+      ]
+    },
+    "hl-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "hl-tldr": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: heavy intel day — first real-package supply-chain compromise + first MCP-symbol-flow PVR both land, morning-batch recovers, all 6 goals still locked operator-side",
+        "variant": "lead"
+      }
+    },
+    "hl-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl1-badge",
+        "hl1-text",
+        "hl1-link"
+      ]
+    },
+    "hl1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "vuln-scanner",
+        "variant": "secondary"
+      }
+    },
+    "hl1-text": {
+      "type": "Text",
+      "props": {
+        "text": "PVR GHSA-chjm-935c-cx8p filed (MCP-symbol-flow-invisible-Unicode, 1st LLM-tool-integration advisory in history) + dep-CVE issue #665"
+      }
+    },
+    "hl1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/tirth8205/code-review-graph/issues/665",
+        "href": "https://github.com/tirth8205/code-review-graph/issues/665"
+      }
+    },
+    "hl-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl2-badge",
+        "hl2-text"
+      ]
+    },
+    "hl2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "destructive"
+      }
+    },
+    "hl2-text": {
+      "type": "Text",
+      "props": {
+        "text": "@injectivelabs/sdk-ts@1.20.21 first confirmed real-package compromise, 10-day live window, wallet-credential stealer"
+      }
+    },
+    "hl-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl3-badge",
+        "hl3-text"
+      ]
+    },
+    "hl3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect",
+        "variant": "secondary"
+      }
+    },
+    "hl3-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md 54L→55L, 13 patterns codified (vendor-scope-typosquat n=6+, improvement-PR-queue-locks-self-improve, high-EPSS regime n=2)"
+      }
+    },
+    "hl-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl4-badge",
+        "hl4-text",
+        "hl4-stat"
+      ]
+    },
+    "hl4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "secondary"
+      }
+    },
+    "hl4-text": {
+      "type": "Text",
+      "props": {
+        "text": "copilot-sdk confirms 7-17 watchlist call; watchlist-call-resolves n=1 NEW"
+      }
+    },
+    "hl4-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Growth",
+        "value": "17.9×"
+      }
+    },
+    "hl-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl5-badge",
+        "hl5-text",
+        "hl5-stat"
+      ]
+    },
+    "hl5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "secondary"
+      }
+    },
+    "hl5-text": {
+      "type": "Text",
+      "props": {
+        "text": "07:00Z morning-batch dead-slot d2 breaks (1st fire since 7-15); Kimi K3 cross-signal"
+      }
+    },
+    "hl5-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "XEC Breakout",
+        "value": "+23.8%",
+        "trend": "up"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "not-title",
+        "not-1",
+        "not-2",
+        "not-3",
+        "not-4",
+        "not-5"
+      ]
+    },
+    "not-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "not-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not1-badge",
+        "not1-text",
+        "not1-stat"
+      ]
+    },
+    "not1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "goal-tracker",
+        "variant": "destructive"
+      }
+    },
+    "not1-text": {
+      "type": "Text",
+      "props": {
+        "text": "rule-5 codification flips ON_TRACK→BLOCKED, 6 operator actions proposed"
+      }
+    },
+    "not1-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Status",
+        "value": "6/6 BLOCKED"
+      }
+    },
+    "not-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not2-badge",
+        "not2-text",
+        "not2-stat"
+      ]
+    },
+    "not2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "action-converter",
+        "variant": "secondary"
+      }
+    },
+    "not2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Top actions: push iss-025 patch, retire pr-queue, commit rule-5 section"
+      }
+    },
+    "not2-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Avg Rating",
+        "value": "4.6/5"
+      }
+    },
+    "not-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not3-badge",
+        "not3-text",
+        "not3-stat"
+      ]
+    },
+    "not3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "secondary"
+      }
+    },
+    "not3-text": {
+      "type": "Text",
+      "props": {
+        "text": "MCP tool-shape debate + agent-validation clusters"
+      }
+    },
+    "not3-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Posts",
+        "value": "5"
+      }
+    },
+    "not-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not4-badge",
+        "not4-text",
+        "not4-stat"
+      ]
+    },
+    "not4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief",
+        "variant": "secondary"
+      }
+    },
+    "not4-text": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025, PRs #162/#163/#164, rule-5; 07:00Z recovery confirmed"
+      }
+    },
+    "not4-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Focus Items",
+        "value": "3"
+      }
+    },
+    "not-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not5-badge",
+        "not5-text",
+        "not5-stat"
+      ]
+    },
+    "not5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "secondary"
+      }
+    },
+    "not5-text": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's 2/12 (WELL + GITLAWB) unwind clean within 24h"
+      }
+    },
+    "not5-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Alerts",
+        "value": "0/12"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dec-title",
+        "dec-1",
+        "dec-2",
+        "dec-3"
+      ]
+    },
+    "dec-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      }
+    },
+    "dec-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dec1-text",
+        "dec1-link"
+      ]
+    },
+    "dec1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Rebase or close PR #162/#163/#164 — all CONFLICTING past stall gates (~171h/~123h/~74h), locks self-improve exit-gate"
+      }
+    },
+    "dec1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/162",
+        "href": "https://github.com/anajuliabit/aeon/pull/162"
+      }
+    },
+    "dec-2": {
+      "type": "Text",
+      "props": {
+        "text": "Direct-author ISS-025 capture-step PR against aeon.yml:479-495 — unblocks cost-report + 9-skill 12:00Z cluster"
+      }
+    },
+    "dec-3": {
+      "type": "Text",
+      "props": {
+        "text": "Direct-author CLAUDE.md rule-5 section — T+1 slip, unblocks 7-19 self-improve exit-gate"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "block-title",
+        "block-1",
+        "block-2"
+      ]
+    },
+    "block-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "block-1": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "STUCK d5 ~120h, cf=5, last_dispatch 7-13T20:44Z · ISS-025",
+        "type": "error"
+      }
+    },
+    "block-2": {
+      "type": "Alert",
+      "props": {
+        "title": "12:00Z cluster",
+        "message": "9 skills dark d21, last_success 2026-06-28 · ISS-025 root cause",
+        "type": "error"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "final-note": {
+      "type": "Text",
+      "props": {
+        "text": "+12 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
