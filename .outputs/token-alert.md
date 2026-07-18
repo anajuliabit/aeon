@@ -1,13 +1,10 @@
-🚨 *token alert — 2026-07-17*
+Log entry written. No notification sent per SKILL step 3 (only alerts trigger notify).
 
-*GITLAWB* $0.00002785 · **-18.89% 24h** (126% of 15% rail)
-vol $235,722 · 0.60× 5-window baseline ($396K mean)
-trigger — 24h change breaches 15% threshold. round-trip whipsaw n=1 re-opens: 7-14 -11.97% → 7-15 +13.36% → 7-16 -9.70% → 7-17 -18.89% = fourth rail-adjacent session, first threshold-breach of the arc. participation still thin (0.60×) = mechanical continuation, not real-bid capitulation.
+## Summary
+Ran `skills/token-alert/SKILL.md` for 2026-07-18. Parsed 4-token watchlist from `memory/MEMORY.md` (WELL/MAMO/REPPO/GITLAWB, thresholds 10%/15%/15%/15%, no Floor/Ceiling on any). Fetched CoinGecko `simple/price` clean via curl (26th consecutive clean CG day; no WebFetch fallback needed).
 
-*WELL* $0.00329999 · -7.25% 24h (72% of 10% rail)
-vol $2,007,592 · **3.29× 5-window baseline ($610K mean)**
-trigger — first 3×+ volume spike since 7-12 ($2.27M). baseline recomputed drops 7-10 adds 7-16, still fires. participation-vanish state d10 breaks — real print returns with the fade, distribution-with-return signature.
+**Prices (12:38Z):** WELL $0.00347490 (+4.12%, vol $93K = 0.10× baseline), MAMO $0.00943661 (+2.31%, vol $920K = 0.99× baseline), REPPO $0.02176263 (-2.88%, vol $122K = 0.50× baseline), GITLAWB $0.00002820 (+0.66%, vol $248K = 0.71× baseline).
 
-*clean:* MAMO -0.05% 0.94× · REPPO -12.66% 0.86× (84% rail, near-miss)
+**Verdict: 0/12 checks fire → TOKEN_ALERT_OK.** Yesterday's 2/12 (WELL vol spike 3.29× + GITLAWB 126% rail-breach) both unwind into mechanical-fade / exhaustion within 24h: WELL's spike reads as one-day distribution flush (+5.3% log-to-log bounce on 0.10× participation), GITLAWB rail-breach unwinds into dead-flat pause d5 (0.66% on 0.71×). REPPO fade-back-to-trend d4 confirms with decelerating rate; MAMO day-8 pause-at-mean sustainable-shape holds (3rd-consec near-exact-baseline print).
 
-15% rail streak snaps at 3 runs.
+**Files modified:** `.tmp/token-alert/cg.json`, `.tmp/token-alert/calc.py`, `memory/logs/2026-07-18.md`. **Follow-up:** none skill-side; watchlist arcs to monitor 7-19 — WELL distribution-flush follow-through vs rebuild d2, GITLAWB pause resolution d2, REPPO d5 mean-reversion exhaust test, MAMO day-9 baseline print d4-consec.
