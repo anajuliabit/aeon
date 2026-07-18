@@ -1,11 +1,14 @@
-Heartbeat run complete.
+Heartbeat run complete. Silent NOOP — no `./notify` call, per skill spec 48h-dedup gate.
 
-`HEARTBEAT_OK · STATUS_PAGE=DEGRADED` — 14:00Z tick fired ~8min late (cleanest slot of the day). All P0/P1/P2/P3 findings dedup vs 48h logs → notification skipped per skill spec.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
-**P0:** cost-report STUCK d5 ~113h24m (ISS-025 sandbox-truncation, +5h since 09:08Z tick) + 15-skill sr<0.5 chronic tail day-26 (reflect ticks 0.47→0.48, drops off boundary).
+- **20:00Z tick fired ~25min late** (3rd hb of the UTC day after 09:08Z + 14:08Z).
+- **P0:** cost-report STUCK d5 extends ~119h41m (mechanical +6h17m vs 14:08Z tick) + 15-skill sr<0.5 sandbox-truncation tail day-26 — all dedup vs 14+ prior hb ticks + morning-brief + evening batch.
+- **P1:** PRs #162/#163/#164 all CONFLICTING past stall gates (~170h/~122h/~73h) — mechanical timer-continuations, dedup. 0 urgent issues.
+- **P2:** MEMORY.md lines 5-10 all captured in today's goal-tracker 6-BLOCKED sweep — dedup.
+- **P3:** 12:00Z 9-skill cluster dead-slot day-21 + aixbt-pulse dead-slot d21 (21:00Z tick pending, ~35min out) + weekly-shiplog / operator-scorecard / fork-skill-gap chronic — all dedup.
+- **Fresh signals:** evening batch 7-18 fired cleanly full-cluster (skill-health/agent-buzz/goal-tracker/action-converter/reflect all within 2-9min of 18:12Z dispatch, self-improve skipped per even-day cadence). Reflect rewrote MEMORY.md 54L→55L. Neither notify-worthy.
+- **Status page:** wrote `docs/status.md` wholesale, 43 enabled skills sorted last-run desc, next scheduled forward `evening-recap at 21:00 UTC`, token pulse omitted (no articles/token-report-*.md).
 
-**P1:** 3 self-improve PRs (#164 ~66h, #163 ~120h, #162 ~164h) all CONFLICTING mergeable=UNKNOWN, past their stall gates. 0 urgent issues.
-
-**Fresh signals:** morning-batch fully recovered (all 3 morning skills fired by 09:20Z — resolves 09:08Z hb watch, not a fresh classification). 13:00/13:30/14:00Z afternoon slots all dark at 14:08Z (mechanical continuation of 12:00Z-cluster + security-digest still in catch-up band).
-
-**Files modified:** `docs/status.md` (overall 🔴 DEGRADED, 11 open issues, 43 enabled skills sorted by last-run desc, next scheduled = btc-levels 16:15Z, token pulse section omitted — no article present), `memory/logs/2026-07-18.md` log entry.
+## Summary
+Ran heartbeat per skills/heartbeat/SKILL.md (var="", full scan). All P0/P1/P2/P3 findings full-dedup vs 48h logs, silent NOOP per skill spec — no `./notify` call. Regenerated `docs/status.md` (overall 🔴 DEGRADED, 11 open issues, evening-recap next up at 21:00Z). Files modified: `docs/status.md`, `memory/logs/2026-07-18.md`. Follow-ups: 21:00Z evening slot (aixbt-pulse d21 tests d22 rollover), 7-19 08:00Z hb (morning-batch durable-recover test), 7-19 self-improve odd-day (2-consec exit-gate skip test).
