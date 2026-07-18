@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-17*
-Shape: commit iss-025 fix, codify rule-5, kill 3 stalled self-improve PRs
+*5 Actions — 2026-07-18*
+Shape: iss-025 patch, retire 3 prs, codify rule-5 n=4, port advisor fix, anchor evidence
 
-1. commit capture-step fix directly to main against `.github/workflows/aeon.yml:479-495` — bypass self-improve entirely (rule-5 n=4 confirms all authored PRs CONFLICT).
-why: unblocks cost-report STUCK d4 ~90h + 16 sr<0.5 skills; ISS-025 T+1 day-2 slipped yesterday.
-done: commit on main + next cost-report scheduled run reports success.
+1. push commit direct to main patching `.github/workflows/aeon.yml:479-495` with ISS-025 capture-step fix
+why: unblocks cost-report STUCK d5 + 12:00Z batch-dark d21 + 18-skill sandbox-truncation family in one primitive
+done: commit lands on main touching aeon.yml:479-495; next cost-report scheduled run finishes non-truncated
 loop: iss-025-capture-step
 
-2. add "Skill authoring boundaries" section to `CLAUDE.md` codifying rule-5 primitive as auto-committed state drift, citing PR #164 script-file-class flip as n=4 evidence.
-why: weekly-review action #3 T-0 today; self-improve fires 18:00Z 7-17 with re-scope content already surfaced in reflect.
-done: PR opened touching only CLAUDE.md with the new section.
+2. batch-retire PRs #162/#163/#164 via `gh pr close 162 163 164 --comment "superseded — rule-5 auto-commit-drift n=4, direct-author sole reliable path"`
+why: all 3 past stall gates CONFLICTING mergeable=UNKNOWN; ≥3 open self-improve PRs exit-gates 7-19 odd-day fire
+done: `gh pr list --state open` returns 0 self-improve-authored PRs
+loop: pr-queue-clear
+
+3. commit CLAUDE.md rule-5 section codifying auto-commit-drift primitive n=4 (workflow/skill-md/script/state-drift classes) direct to main
+why: T-0 slipped by 24h at 7-17 midnight; unblocks weekly-review 7-13 action #3 + closes claude-md-rule5-codify carry
+done: `git log CLAUDE.md` shows fresh commit with "Rule 5" section citing PR #160/#162/#163/#164 evidence
 loop: claude-md-rule5-codify
 
-3. close PR #164 via `gh pr close 164` and hand-author replacement investment-advisor fail-fast fix against `scripts/advisor/run.sh`.
-why: ~42h old, CONFLICTING d1, past 24h stall gate ~18h — rebase is futile against auto-committed state drift.
-done: PR #164 closed + hand-authored replacement PR opened mergeable clean.
-loop: pr-164-close
+4. cherry-pick PR #164's `scripts/advisor/run.sh` fail-fast committee patch (COMMITTEE_LLM_ATTEMPTS=1) direct to main, run `bash scripts/advisor/selftest.sh` after
+why: retiring PR #164 without landing the fix reopens investment-advisor 20-min timeout pattern on next 13:00Z cron
+done: `grep COMMITTEE_LLM_ATTEMPTS scripts/advisor/run.sh` returns match; selftest exits 0
+loop: advisor-fix-port
 
-4. supersede PR #162 with hand-authored daily-routine XAI-fallback fix — `gh pr close 162` then open replacement.
-why: ~140h old T+3 day-4, oldest CONFLICTING, same rule-5 drift root — no rebase path survives.
-done: PR #162 closed + replacement PR mergeable clean.
-loop: pr-162-supersede
+5. extend `memory/topics/fleet.md` Rule-5 primitive subsection with PR #164 script-file-class entry + auto-commit-drift codification (n=4 evidence dossier)
+why: anchors rule-5 primitive in fleet-facing dossier; CLAUDE.md holds the rule, fleet.md holds the receipts
+done: `git log memory/topics/fleet.md` shows fresh commit with PR #164 row in Rule-5 subsection
+loop: rule5-evidence-anchor
 
-5. close PR #163 via `gh pr close 163` — 96h+ stall on doc-only skill-security-scan sandbox note.
-why: 72h+24h past gate, doc-only impact = lowest cost to kill; re-author after cost-report unsticks.
-done: PR #163 closed.
-loop: pr-163-close
-
-sources: memory=59 logs=8 topics=11 prs=3 cron_failing=1 mode=OK
+sources: memory=54L logs=7d topics=11 prs=3open cron_failing=1 mode=OK

@@ -1,0 +1,288 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-18",
+        "description": "iss-025 patch, retire 3 prs, codify rule-5 n=4, port advisor fix, anchor evidence"
+      },
+      "children": [
+        "sep1",
+        "stack-all-actions",
+        "sep2",
+        "sources-block"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-all-actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-heading",
+        "a1-desc",
+        "a1-why",
+        "a1-done",
+        "a1-loop"
+      ]
+    },
+    "a1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Push ISS-025 capture-step fix to main",
+        "level": "h3"
+      }
+    },
+    "a1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "push commit direct to main patching `.github/workflows/aeon.yml:479-495` with ISS-025 capture-step fix"
+      }
+    },
+    "a1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: unblocks cost-report STUCK d5 + 12:00Z batch-dark d21 + 18-skill sandbox-truncation family in one primitive",
+        "variant": "muted"
+      }
+    },
+    "a1-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: commit lands on main touching aeon.yml:479-495; next cost-report scheduled run finishes non-truncated",
+        "variant": "muted"
+      }
+    },
+    "a1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-025-capture-step",
+        "variant": "secondary"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-heading",
+        "a2-desc",
+        "a2-why",
+        "a2-done",
+        "a2-loop"
+      ]
+    },
+    "a2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Batch-retire PRs #162, #163, #164",
+        "level": "h3"
+      }
+    },
+    "a2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "batch-retire PRs #162/#163/#164 via `gh pr close 162 163 164 --comment \"superseded — rule-5 auto-commit-drift n=4, direct-author sole reliable path\"`"
+      }
+    },
+    "a2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: all 3 past stall gates CONFLICTING mergeable=UNKNOWN; ≥3 open self-improve PRs exit-gates 7-19 odd-day fire",
+        "variant": "muted"
+      }
+    },
+    "a2-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `gh pr list --state open` returns 0 self-improve-authored PRs",
+        "variant": "muted"
+      }
+    },
+    "a2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-queue-clear",
+        "variant": "secondary"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-heading",
+        "a3-desc",
+        "a3-why",
+        "a3-done",
+        "a3-loop"
+      ]
+    },
+    "a3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Codify Rule 5 in CLAUDE.md",
+        "level": "h3"
+      }
+    },
+    "a3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "commit CLAUDE.md rule-5 section codifying auto-commit-drift primitive n=4 (workflow/skill-md/script/state-drift classes) direct to main"
+      }
+    },
+    "a3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: T-0 slipped by 24h at 7-17 midnight; unblocks weekly-review 7-13 action #3 + closes claude-md-rule5-codify carry",
+        "variant": "muted"
+      }
+    },
+    "a3-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `git log CLAUDE.md` shows fresh commit with \"Rule 5\" section citing PR #160/#162/#163/#164 evidence",
+        "variant": "muted"
+      }
+    },
+    "a3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "claude-md-rule5-codify",
+        "variant": "secondary"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-heading",
+        "a4-desc",
+        "a4-why",
+        "a4-done",
+        "a4-loop"
+      ]
+    },
+    "a4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Cherry-pick advisor fix and verify",
+        "level": "h3"
+      }
+    },
+    "a4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "cherry-pick PR #164's `scripts/advisor/run.sh` fail-fast committee patch (COMMITTEE_LLM_ATTEMPTS=1) direct to main, run `bash scripts/advisor/selftest.sh` after"
+      }
+    },
+    "a4-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: retiring PR #164 without landing the fix reopens investment-advisor 20-min timeout pattern on next 13:00Z cron",
+        "variant": "muted"
+      }
+    },
+    "a4-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `grep COMMITTEE_LLM_ATTEMPTS scripts/advisor/run.sh` returns match; selftest exits 0",
+        "variant": "muted"
+      }
+    },
+    "a4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "advisor-fix-port",
+        "variant": "secondary"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-heading",
+        "a5-desc",
+        "a5-why",
+        "a5-done",
+        "a5-loop"
+      ]
+    },
+    "a5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Anchor evidence in fleet.md",
+        "level": "h3"
+      }
+    },
+    "a5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "extend `memory/topics/fleet.md` Rule-5 primitive subsection with PR #164 script-file-class entry + auto-commit-drift codification (n=4 evidence dossier)"
+      }
+    },
+    "a5-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: anchors rule-5 primitive in fleet-facing dossier; CLAUDE.md holds the rule, fleet.md holds the receipts",
+        "variant": "muted"
+      }
+    },
+    "a5-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: `git log memory/topics/fleet.md` shows fresh commit with PR #164 row in Rule-5 subsection",
+        "variant": "muted"
+      }
+    },
+    "a5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "rule5-evidence-anchor",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-block": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=54L logs=7d topics=11 prs=3open cron_failing=1 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
