@@ -1,17 +1,13 @@
+Done. Quiet run — no alerts fired.
+
 ## Summary
 
-**BTC Levels Monitor — 2026-07-18 09:08Z**
-
-Data fetched from CoinGecko:
-- **Spot:** $63,938 (`.prices[-1]`)
-- **Previous daily close (2026-07-17):** $63,926 (`.prices[-2]`, 2026-07-18T00:00Z snapshot)
-
-**Level evaluation — no alerts fired:**
-- Leverage-review (≤$45k): clear — spot $18.9k above trigger
-- Breakdown (close <$60.5k): clear — close $63,926 well above
-- Reclaim $63.5k: `reclaim63500Alerted=true` already set (re-arms only sub-$60.5k)
-- Reclaim $65.9k: not reached ($63,938 < $65,900)
-
-**No notification sent** (quiet run — norm).
-
-State updated (`lastDailyCloseDate` advanced to 2026-07-17), log entry appended, committed.
+- **Spot:** $64,079 (up from $63,938 at 09:08Z)
+- **Previous UTC daily close:** $63,926 (2026-07-17)
+- **Levels checked:**
+  - Leverage-review ≤$45k: no — spot well above
+  - Breakdown close < $60,500: no — close $63,926 is clear
+  - Reclaim $63,500: already alerted (`reclaim63500Alerted=true`), re-arms only sub-$60,500
+  - Reclaim $65,900: not reached
+- **No notification sent** — all clear, quiet run
+- **Committed:** `memory/btc-levels-state.json` + `memory/logs/2026-07-18.md`
