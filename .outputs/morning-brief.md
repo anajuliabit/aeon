@@ -1,24 +1,20 @@
-*Morning Brief — 2026-07-15*
+*morning brief — 2026-07-18*
 
-*Focus today*
-1. self-improve 18:00Z — Investment Advisor 7-day cancellation investigation — why now: last odd-day fire before weekly-review 7-16 deadline
-2. PR #162 deadline blown d1 — why now: T-0 slipped yesterday, ~85h stale, operator-direct-author only
-3. ISS-025 capture-step PR T-1 — why now: 7-16 deadline, workflow-file class blocks skill authoring
+*focus today*
+1. iss-025 capture-step pr — cost-report stuck d5 ~120h, sandbox-truncation tail extends daily
+2. kill 3 stalled prs #162/#163/#164 — locks self-improve, blocked rule-5 codification yesterday
+3. claude.md rule-5 section — T+1 slip, codifies auto-commit-drift n=4 (operator-authored path)
 
-*Since yesterday*
-- weekly-review action #2 slipped: PR #162 T-0 unmet, mergeable UNKNOWN, no update since 7-11 18:18Z (~85h)
-- BTC 7-14 daily close $64,977 = $63.5k reclaim confirmed; spot $64,747 at 05:57Z; $65,900 full-reclaim ~$1,153 above spot
-- cost-report STUCK extends ~42h → ~57h dispatched-never-completed; same ISS-025 sandbox-truncation family
-- PR #163 stall ~44h; SKILL.md-editable class (rule-5-clean), no external gating — approaches 48h gate
-- x402 Foundation formal Linux Foundation launch (Visa+Mastercard+Ripple backing, 75M tx / $24M / 30d) — MCP-becomes-infra thesis reinforcement, not focus-changing
+*since yesterday*
+- self-improve exit-gate on rule-5 T-0 = first-ever skip on a codification deadline day (3+ open prs threshold hit)
+- 18:00Z evening batch fired cleanly full-cluster 5-skill (goal-tracker + skill-health + reflect + action-converter + self-improve exit-gate skip)
+- security-digest logged fortinet fortisandbox pair CVE-2026-39808/-25089 EPSS 0.842 = first ≥0.5 in memory; BOD due today
+- reflect rewrote memory.md 59L → 54L; gitlawb whipsaw-then-continuation codifies (4-session shape, day-4 rail-breach -18.89%); WELL distribution-with-return on 3.29× vol spike
+- btc arc softens through the day 63,946 → 62,859 → 63,485 → 64,133; reclaim63500 armed, re-arm sub-60,500
 
-*Running today*
-- 07:00Z morning batch: this brief + daily-routine + thought-review
-- 09:00Z github-trending / btc-levels @ :15 (09:15/13:15/17:15/21:15)
-- 12:00Z token-alert
-- 14:00Z security-digest + reg-monitor (Wed cadence)
-- 17:00Z list-digest / 17:30Z agent-buzz
-- 18:00Z goal-tracker + skill-health + reflect + action-converter + **self-improve** (odd-day fires)
-- 18:30Z skill-analytics (Wed)
-- 21:00Z evening-recap + thought-review
-- heartbeat @ 08:00 / 14:00 / 20:00Z
+*running today*
+- heartbeat @ 08:00Z — tests morning-batch dead-slot d3 vs today's fire
+- token-alert @ 12:00Z — gitlawb d5 continuation/exhaustion, WELL distribution-with-return d2, reppo d4
+- security-digest @ 14:00Z — npm-malware wave d5 (breaks single-digits or 10+ new-baseline), anthropic-scope typosquat n=3 test
+- vuln-scanner @ 16:00Z (sat-weekly)
+- 18:00Z evening batch — self-improve skips (even-day cadence), next fire 7-19
