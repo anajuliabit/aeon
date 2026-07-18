@@ -5,32 +5,35 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
-## Current health snapshot (2026-07-17)
+## Current health snapshot (2026-07-18)
 
-- **skill-health 7-16 18:48Z hash 618ede5f (NOOP)** — 1 CRITICAL (cost-report) · 17 DEGRADED · 13 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues (ISS-005/007/009/010/011/016/018/019/020/021/025). Sandbox-truncation family **day-25** (18-skill signature byte-identical through 7-16 NOOP).
-- **cost-report STUCK d4 ~89h+** — `last_status: dispatched` since 2026-07-13T20:44:24Z, cf=5, sr=0.10, ~18d since last_success 2026-06-29. Signature = ISS-025 outputTokens sandbox truncation. Escalated to CRITICAL(1) via skill-health 7-13/14/15 NOTIFY sequence + morning-brief 7-13/14/15 + weekly-review 7-13 KALM demotion + 15+ hb ticks + action-converter loop `iss-025-capture-step-t0`.
-- **Chronic sr<0.5 tail (17 skills)** — cost-report 0.10, skill-analytics 0.16, reg-monitor 0.16, vuln-scanner 0.16, market-context-refresh 0.32, narrative-tracker 0.33, security-digest 0.35, search-skill 0.37, fleet-control 0.40, skill-health 0.43, self-improve 0.45, goal-tracker/action-converter 0.46, reflect/skill-evals/aixbt-pulse 0.47, list-digest 0.49. All cf=0 except cost-report cf=5. All map to ISS-019/020/021/025 sandbox-truncation.
-- **12:00 UTC batch DARK day-20 confirmed live 7-17** — 8-skill 6-28 cluster (token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse) missed 12:00Z/12:20Z/12:40Z/13:00Z/13:30Z slots. token-alert + btc-levels fired cleanly at same 12:00Z slot = **per-skill scheduler blockage confirmed** (per-skill, not per-slot). Scheduler-side per ISS-027.
-- **07:00Z morning-batch dead-slot forms 7-17** — 2nd-consecutive miss (morning-brief/daily-routine/thought-review 07:00-half last_success 7-15). Same ISS-027 primitive class as 12:00Z batch-dark. FRESH CLASSIFICATION at 09:18Z 7-17 hb (contingency-resolved from 7-16 fresh-signal).
-- **aixbt-pulse dead-slot day-20** — 15th consecutive twice-daily slot miss since 7-08 09:00Z; 09:00Z 7-17 confirmed missed. Same ISS-027 scheduler primitive.
-- **weekly-shiplog + operator-scorecard chronic Mon miss** — weekly-shiplog last_success 2026-06-29 (~18d), operator-scorecard never-run. Same scheduler-side primitive.
-- **Open PRs — all 3 CONFLICTING (rule-5 primitive extension):**
-  - **PR #164** `fix(investment-advisor): fail-fast committee retries` (7-15 19:31Z) — self-improve authored per weekly-review action #4. Flipped UNKNOWN→CONFLICTING at 7-16 14:52Z hb. **Script-file class** (touched `scripts/advisor/run.sh` + `.outputs/` + `memory/logs/` + `memory/token-usage.csv`) not workflow-file class = **rule-5 primitive extends past workflow-file class**. Past 24h stall gate since 19:31Z 7-16 (~42h at 14:00Z 7-17 hb).
-  - **PR #163** `fix(skill-security-scan): document sandbox-blocked` (7-13) — ~96h at 14:00Z 7-17, past 72h stall gate crossed 18:09Z 7-16. CONFLICTING. Rule-5 clean pre-extension.
-  - **PR #162** `fix(daily-routine): tighten XAI fallback rules` (7-11) — ~140h, CONFLICTING. Weekly-review 7-13 action #2 T-0 was 7-14; **now T+3 deadline-missed day-4**. SKILL.md-class; stall on operator review.
-- **Rule-5 primitive EXTENDS past workflow-file class (n=4)** — PR #160 (workflow) + PR #162 (SKILL.md) + PR #163 (SKILL.md) + PR #164 (scripts/) all CONFLICTING or authored adjacent. Conflict source reads as **auto-committed state drift** (self-improve authored PR based on stale state; main advances with new log rows/token-usage rows/self-improve outputs between authorship and merge attempt) not file-class-specific. Operator direct-author is the sole reliable path for any self-improve output. CLAUDE.md rule-5 codification T-0 firm today 7-17 (self-improve fires 18:00Z = deadline day; re-scope needed).
-- **Weekly-review 2026-07-13 actions** (7-17 status):
-  - #1 Operator direct-author ISS-025 capture-step PR by 2026-07-16 — **SLIPPED T+1 day-2** (00:00Z 7-17 crossed without PR-creation event).
-  - #2 Operator decide PR #162 by 2026-07-14 — **SLIPPED T+3 day-4**.
-  - #3 Self-improve codifies rule-5 in CLAUDE.md by 2026-07-17 **T-0 firm today** — re-scope needed per rule-5 extension.
-  - #4 Self-improve investigates Investment Advisor cancellation by 2026-07-16 — **SHIPPED-ON-TARGET via PR #164** (authored 7-15 19:31Z T-1; PR now CONFLICTING but investigation output landed).
+- **skill-health 7-16 18:48Z hash 618ede5f (NOOP)** still authoritative (7-17 skill-health SKILL_HEALTH_NOOP dedup). 1 CRITICAL (cost-report) · 17 DEGRADED · 13 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues (ISS-005/007/009/010/011/016/018/019/020/021/025). Sandbox-truncation family **day-26** (rolled d25→d26 at 00:00Z UTC 7-17→7-18 boundary).
+- **cost-report STUCK d5 ~113h** — `last_status: dispatched` since 2026-07-13T20:44:24Z, cf=5, sr=0.10, ~19d since last_success 2026-06-29. ISS-025 sandbox-truncation signature. Escalated across 13+ hb ticks + skill-health 7-13/14/15 NOTIFY + morning-brief 7-13/14/15/18 + weekly-review 7-13 KALM demotion + action-converter loop `iss-025-capture-step-t0`. Operator direct-author against `.github/workflows/aeon.yml:479-495` is sole unblock path.
+- **Chronic sr<0.5 tail (15 skills at 14:08Z 7-18 hb)** — cost-report 0.10, skill-analytics 0.16, reg-monitor 0.16, vuln-scanner 0.16, market-context-refresh 0.32, narrative-tracker 0.33, security-digest 0.35, search-skill 0.37, skill-health 0.44, self-improve 0.46, goal-tracker 0.46, action-converter 0.46, skill-evals 0.47, aixbt-pulse 0.47, list-digest 0.49. (reflect ticks 0.47→0.48 after successful 7-17 fire = drops off sub-0.5 tail; fleet-control 0.40 disabled per aeon.yml line 320.) All cf=0 except cost-report cf=5. All map to ISS-019/020/021/025 sandbox-truncation family day-26.
+- **12:00 UTC batch DARK day-21** — 9-skill 6-28 cluster (defi-overview/defi-monitor/on-chain-monitor/token-pick/token-movers/narrative-tracker/market-context-refresh + aixbt-pulse cluster-adj) still frozen. token-alert + btc-levels fired cleanly at same 12:00Z slot 7-18 (26th consec clean-CG day) = **per-skill scheduler blockage** (per-skill, not per-slot). Scheduler-side per ISS-027.
+- **07:00Z morning-batch dead-slot d2 BROKE 7-18** — daily-routine 07:25Z + morning-brief 07:22Z + thought-review 07:21Z + heartbeat 09:12Z + skill-freshness 09:17Z + github-trending 09:15Z all fired in catch-up band (partial-slot recovery only, not durable-recover; single-fire). Positive delta vs 20:03Z 7-17 hb prediction of d3 extension. Resolves 7-17 fresh-classification.
+- **aixbt-pulse dead-slot d21** — 16th consecutive twice-daily slot miss since 7-08 09:00Z; 09:00Z 7-18 confirmed missed. Same ISS-027 scheduler primitive.
+- **weekly-shiplog + operator-scorecard chronic Mon miss** — weekly-shiplog last_success 2026-06-29 (~19d), 3 Mondays missed (7-06 + 7-13 + 7-20 tests next), operator-scorecard never-run. Same scheduler-side primitive.
+- **Open PRs — all 3 CONFLICTING past stall gates (rule-5 primitive extension n=4):**
+  - **PR #164** `fix(investment-advisor): fail-fast committee retries` (7-15 19:31Z) — self-improve authored per weekly-review action #4. Past 24h stall gate since 19:31Z 7-16. ~66h37m at 14:08Z 7-18. Script-file class = rule-5 extends past workflow-file.
+  - **PR #163** `fix(skill-security-scan): document sandbox-blocked` (7-13) — past 72h stall gate crossed 18:09Z 7-16. ~120h at 14:08Z 7-18. SKILL.md class.
+  - **PR #162** `fix(daily-routine): tighten XAI fallback rules` (7-11) — **T+4 day-5** deadline-missed (T-0 was 7-14). ~164h at 14:08Z 7-18. SKILL.md class; stall on operator review.
+- **Rule-5 primitive EXTENDS past workflow-file class (n=4)** — PR #160 (workflow) + PR #162 (SKILL.md) + PR #163 (SKILL.md) + PR #164 (scripts/). Conflict source reads as **auto-committed state drift** (self-improve authored PR based on stale state; main advances with new log rows/token-usage rows/self-improve outputs between authorship and merge attempt) not file-class-specific. Operator direct-author is sole reliable path for any self-improve output.
+- **Improvement-PR-queue-locks-self-improve NEW 7-17 18:00Z** — self-improve exit-gated on 3+ open PRs (PR #162/#163/#164 all CONFLICTING). First-ever skip on codification-deadline day (rule-5 T-0 firm 7-17 slipped). 7-19 fire (odd-day, next scheduled self-improve) tests whether 2-consec exit-gate pattern establishes.
+- **Weekly-review 2026-07-13 actions** (7-18 status):
+  - #1 Operator direct-author ISS-025 capture-step PR by 2026-07-16 — **SLIPPED T+2 day-3**.
+  - #2 Operator decide PR #162 by 2026-07-14 — **SLIPPED T+4 day-5**.
+  - #3 Self-improve codifies rule-5 in CLAUDE.md by 2026-07-17 — **SLIPPED T+1** (self-improve exit-gated 7-17 18:00Z; operator direct-author is fallback path).
+  - #4 Self-improve investigates Investment Advisor cancellation by 2026-07-16 — **SHIPPED-ON-TARGET via PR #164** (authored 7-15 19:31Z T-1; PR CONFLICTING but investigation output landed).
 
-## Positive events 7-15 → 7-17
+## Positive events 7-15 → 7-18
 
-- **BTC $63.5k reclaim arc REOPENED** — 7-14 daily close $64,977 (first close above gate since 7-13's $62,242 arc-close); 7-15 daily close $64,722 confirms d2; 7-16 spot $63,905–$64,579 holds; 7-17 spot slips to $62,859 09:17Z but `reclaim63500Alerted=true` intact.
-- **btc-levels 24h+ chain preserved through 7-15/16/17** — overnight ticks 21:19Z/01:16Z/04:30Z clean; midday 09:17Z/12:18Z/16:47Z clean; `reclaim63500Alerted=true` intact.
-- **Evening batch 7-16 fired cleanly full-cluster** (evening-recap 21:58Z + thought-review 21:54Z; TL;DR "signal-dense day — first Anthropic-scope malware on record, rule-5 extends to all self-improve PRs, 12 durable patterns landed").
-- **CoinGecko 25 consecutive clean days post-ISS-023 recovery** — token-alert 7-17 confirmed 25th clean day (single 200 fetch, no WebFetch fallback).
+- **07:00Z morning-batch dead-slot d2 BROKE 7-18** — 6 skills fired in catch-up band (daily-routine/morning-brief/thought-review/heartbeat/skill-freshness/github-trending). Positive delta vs 20:03Z 7-17 prediction of d3 extension.
+- **BTC $63.5k reclaim arc REOPENED then softens** — 7-14 close $64,977 (first close above gate) → 7-15 $64,722 confirms d2 → 7-16 all-day above → 7-17 slips $62,859-$63,485 intraday but `reclaim63500Alerted=true` holds → 7-18 $63,916-$64,292 (re-arm sub-$60,500 only).
+- **btc-levels 24h+ chain preserved through 7-15→7-18** — 6+ clean ticks (05:48Z/09:08Z/12:38Z/~16:15Z on 7-18 alone; corrected `lastDailyCloseDate` per skill spec).
+- **Evening batch 7-17 fired cleanly full-cluster** (goal-tracker + skill-health + reflect + action-converter + self-improve exit-gate skip).
+- **CoinGecko 26 consecutive clean days post-ISS-023 recovery** — token-alert 7-18 confirmed 26th clean day (single 200 fetch on `simple/price` batch).
+- **vuln-scanner PVR filed on tirth8205/code-review-graph** — GHSA-chjm-935c-cx8p triage (LOW · CWE-1039/CWE-176 · `_sanitize_name()` Unicode bypass in MCP prompt-injection defense) + public issue #665 (10 prod-path dep-CVE bumps · uv-locked repo = first ecosystem-native-tooling-unavailable case in 6-run history). First LLM-tool-integration finding via PVR in Aeon vuln-scanner history — expands taxonomy past dep-CVE + argv-injection into MCP-symbol-flow class.
 
 ## Infrastructure built (PRs)
 | PR | Date | What |

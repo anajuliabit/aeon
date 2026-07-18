@@ -5,20 +5,23 @@ Daily market context lives in [[market-context]] (refreshed each cycle);
 daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
-## Recent durable patterns (2026-07-17)
+## Recent durable patterns (2026-07-18)
 
 - **One-day-breakout-unwind at n=5** — MORPHO/EIGEN/NEX/TIBBIR/DRV. "Breakout must hold day-2 to be trusted." BEAT/B are the n=2 dead-cat-with-legs exception cluster (up-down-up).
 - **LAB -95% zero-arc reference case** — 7-day cumulative ~99.4%; `-59%/day sellers-exhaust d3-floor` heuristic 0/7. Use as reference class for future -95% projections.
-- **PUMP event=local-low, 2-step-forward-1-step-back shape** — 7-13 +8.35% → 7-14 -3.29% → 7-15 +13.45%; validates for high-supply-shock unlocks with a d2 pause. Revises 7-14 supply-shock verdict; buyback thesis regains footing.
-- **DCR/XEC pair-flip round-trip 3 days (whipsaw-shape candidate n=1)** — 7-13 top-2 → 7-14 bottom → 7-15 top-2 (both privacy leaders). Pattern: privacy-narrative rotation may present as whipsaw not sustained.
-- **GITLAWB whipsaw-then-continuation n=1 CODIFIES** (7-17 close, revises 7-16 "round-trip whipsaw" verdict) — 4-session shape 7-14 -11.97% (80% rail) → 7-15 +13.36% (89% rail) → 7-16 -9.70% (65% rail) → **7-17 -18.89% (126% rail-breach)**; whipsaw did NOT hold as terminal, day-4 breaks to fade side with rail-breach on baseline-only 0.60× participation. All 4 sessions printed under-baseline (0.63/0.75/0.63/0.60×) = mechanical across full arc, no real-bid ever showed. Pattern class updates from "round-trip whipsaw" to **whipsaw-then-continuation** (mechanical whipsaw resolving into trend-fade on day 4). Revises 7-16 "round-trip closes" call — 3-session shape was interim.
-- **REPPO fade-back-to-trend continuation d3 confirms** — 7-14 +7.17% bounce → 7-15 -6.74% → 7-16 -3.45% → 7-17 -12.56% (84% rail, near-miss on 15% threshold; would fire at 10%). Vol doubles vs yesterday (2.03×) but still 0.86× baseline = trend-decay with fresh sellers, no capitulation bid. Pattern extends to n=3 sessions.
-- **MAMO day-7 pause-at-mean sustainable-shape holds** — 7-17 +0.14% vol 0.94× baseline = second-consecutive near-exact-baseline print (d6 was 0.98×). Weakest 24h print in sweep (1% of rail); mean-anchored, no distribution risk.
-- **WELL day-10 participation-vanish BREAKS → distribution-with-return** (7-17) — 7-17 -7.25% vol **3.29× baseline** ($2,008K vs $610K mean) = first 3×+ vol spike since 7-12; heavy prints return on downside after 9 days of vanishing participation = **late-cycle distribution shape**. Floor-hunt branch resolves into distribution. Sellers finally show up.
+- **PUMP event=local-low, 2-step-forward-1-step-back shape** — 7-13 +8.35% → 7-14 -3.29% → 7-15 +13.45%; validates for high-supply-shock unlocks with a d2 pause.
+- **DCR/XEC pair-flip round-trip 3 days (whipsaw-shape candidate n=1)** — 7-13 top-2 → 7-14 bottom → 7-15 top-2 (both privacy leaders). Privacy-narrative rotation may present as whipsaw not sustained.
+- **GITLAWB whipsaw-then-continuation-then-pause 5-session closes** (7-18) — 7-14 -11.97% (0.63×) → 7-15 +13.36% (0.75×) → 7-16 -9.70% (0.63×) → 7-17 -18.89% (126% rail-breach, 0.60×) → 7-18 +0.66% dead-flat (0.71×). All 5 sessions under-baseline (5-day mean 0.66× participation) = mechanical across full arc. **Rail-breach n=1 single-session isolate** confirms: whipsaw-then-continuation-then-pause is the terminal shape.
+- **REPPO fade-back-to-trend continuation d4 with decelerating rate** (7-18) — 7-15 -12.66% → 7-16 -4.31% → 7-17 -12.66% → 7-18 -2.31% log-to-log = fade decelerates as participation thins (0.50× baseline d4). Mechanical mean-reversion pattern completes its d4 exhaust.
+- **MAMO day-8 pause-at-mean sustainable-shape holds** (7-18) — 3rd-consecutive near-exact-baseline print (0.94× / 0.99× / 0.99×) = cleanest signature yet. Weakest 24h print in sweep (15% of rail); mean-anchored, no distribution risk.
+- **WELL distribution-with-return d1 → thin-bid mechanical bounce** (7-18) — 7-17 3.29× vol spike ($2,008K) reads as one-day distribution flush; 7-18 +5.3% log-to-log bounce on **0.10× participation** ($93K new window-low) = NOT real re-accumulation. Distribution-then-bounce shape favors fade continuation, not rebuild.
 - **DEXE breakout** — 7-11→7-13 fresh ATH → 7-14 -7.5% → 7-15 -10.29%; 7d +33.6% intact but d4 second-red bigger than d3 = momentum breaking. Watchlist-add flag holds pending d5+ recovery vs continued unwind.
-- **HYPE rotation-out** — 7-12 → 7-14 continuous deepening (7d -6.97% → -10.11%) → 7-15 fully unwinds (-1.71%). Rotation-out signal invalidates in one CPI-cools session.
-- **SLX pick day-24 terminal** at -70% ($0.1425 vs $0.4753 entry) — weekly-review 7-13 closed T-0 as goal step-5 out-of-scope; operator-owned surface only.
-- **BTC $63.5k reclaim arc REOPENED d2** — 7-15 daily close $64,722 (second consecutive close above gate since 7-14 $64,977 reclaim); 7-16 spot $63,905–$64,579 holds. 7-17 spot slips to $62,859 09:17Z below reclaim gate but `reclaim63500Alerted=true` intact (re-arm sub-$60,500 only); $65,900 full-reclaim gate $3,040 above spot at midday.
+- **HYPE rotation-out** — 7-12 → 7-14 continuous deepening → 7-15 fully unwinds (-1.71%). Rotation-out signal invalidates in one CPI-cools session.
+- **SLX pick day-25 terminal** at -70% ($0.1425 vs $0.4753 entry) — weekly-review 7-13 closed T-0 as goal step-5 out-of-scope; operator-owned surface only.
+- **BTC $63.5k arc REOPENED then softens** — 7-14 close $64,977 (reclaim); 7-15 close $64,722 confirms d2; 7-16 spot $63,905-$64,579 holds; 7-17 slips $62,859-$63,485; 7-18 spot $63,916-$64,292. `reclaim63500Alerted=true` intact (re-arm sub-$60,500 only); $65,900 full-reclaim gate ~$1,600 above spot.
+- **XEC BREAKOUT candidate 7-18** — 24h +23.8% AND 7d +63.0% qualifies clean-breakout tag; low-mid-cap #185 = watch d2 hold vs one-day-breakout-unwind pattern n=5.
+- **BONK CAPITULATION 7-18** — high-vol dump extends 7d -26.8% drawdown. Watch for LAB -95% zero-arc reference-adjacent behavior.
+- **CoinGecko 26 consecutive clean days post-ISS-023 recovery** (through 7-18 token-alert 12:38Z) — single 200 fetch on `simple/price` batch, no WebFetch fallback.
 
 
 

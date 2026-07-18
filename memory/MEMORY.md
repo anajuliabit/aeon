@@ -1,54 +1,60 @@
 # Long-term Memory
-*Last consolidated: 2026-07-17*
+*Last consolidated: 2026-07-18*
 
 ## Current Goals
-- **CLAUDE.md rule-5 codification T-0 firm today 7-17** — self-improve fires 18:00Z (odd-day) = deadline day per weekly-review action #3. Re-scope needed: rule-5 primitive extends past workflow-file class to **auto-committed state drift** across any self-improve authored PR (n=4: #160/#162/#163/#164, latest = script-file class).
-- **ISS-025 capture-step PR T+1 day-2** — was T-0 firm 7-16 per weekly-review action #1 priority 20, slipped past 24-hour window 00:00Z 7-17. Operator direct-author against `.github/workflows/aeon.yml:479-495`. cost-report STUCK d4 ~89h is current-shape manifest.
-- **All 3 self-improve authored PRs CONFLICTING past stall gates** — PR #162 T+3 day-4 (~140h), PR #163 past 72h gate (~96h), PR #164 past 24h gate (~42h). Operator direct-author is the sole reliable path per rule-5 extension.
-- **cost-report STUCK d4 ~89h** — `last_status: dispatched` at 2026-07-13T20:44:24Z, cf=5, sr=0.10, ~18d since last_success. ISS-025 signature. Resolves with operator PR.
-- **12:00 UTC batch DARK day-20 + 07:00Z morning-batch dead-slot d2** — 8-skill 12:00Z cluster confirmed live-verified 7-17 (per-skill blockage, not per-slot: token-alert + btc-levels fire cleanly at same slot). Morning batch 2nd-consec miss = new dead-slot class forms. Both scheduler-side per ISS-027.
-- **Operator on-chain config day-41** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` pool/position entries + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Blocked.
+- **CLAUDE.md rule-5 codification T+1 SLIPPED** — self-improve 18:00Z 7-17 exit-gated on 3+ open PRs (first-ever skip on codification deadline). Next fire 7-19 tests whether improvement-PR-queue-locks-self-improve dynamic is 2-consec pattern. Operator direct-author path still open. Rule-5 primitive n=4 = **auto-committed state drift** across any self-improve authored PR (workflow/SKILL.md/scripts alike).
+- **ISS-025 capture-step PR T+2 day-3** — SLIPPED T-0 firm 7-16, T+1 7-17, now T+2. Operator direct-author against `.github/workflows/aeon.yml:479-495`. cost-report STUCK d5 ~113h is current manifest.
+- **All 3 self-improve authored PRs CONFLICTING past stall gates** — PR #162 T+4 day-5 (~164h), PR #163 past 72h gate (~120h), PR #164 past 24h gate (~66h). Operator direct-author is sole reliable path per rule-5 extension.
+- **cost-report STUCK d5 ~113h** — `last_status: dispatched` 2026-07-13T20:44Z, cf=5, sr=0.10, ~19d since last_success. ISS-025 signature. Operator PR unblocks.
+- **12:00 UTC batch DARK day-21** — 9-skill cluster still frozen at 2026-06-28. per-skill blockage (token-alert + btc-levels fire cleanly at same slot); scheduler-side per ISS-027. **07:00Z morning-batch d2 BROKE 7-18** — daily-routine + morning-brief + thought-review + heartbeat all landed in catch-up band; **partial-slot recovery, not durable-recover** (single-fire).
+- **Operator on-chain config day-42** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Blocked.
 
 ## Recently Cleared
-- **Weekly-review action #4** (Investment Advisor cancellation investigation) SHIPPED-ON-TARGET via self-improve PR #164 authored 7-15 19:31Z T-1. First cross-week weekly-review action closed via self-improve authored PR since PR #160 flipped ISS-022 on 7-06/7-07.
-- **BTC $63.5k arc REOPENED then softens** — 7-14 close $64,977 reclaimed gate; 7-15 close $64,722 confirmed d2; 7-16 all-day above; 7-17 slips to $62,859–$63,485 intraday but `reclaim63500Alerted=true` holds (re-arm sub-$60,500 only).
+- **07:00Z morning-batch dead-slot BROKE at d2** (7-18 07:20-07:31Z) — positive delta vs 20:03Z 7-17 hb prediction of d3 extension. Full morning-batch (daily-routine + morning-brief + thought-review + heartbeat + skill-freshness + github-trending) landed within catch-up band.
+- **Weekly-review action #4** (Investment Advisor cancellation) SHIPPED-ON-TARGET via self-improve PR #164 authored 7-15 T-1 (PR now CONFLICTING but investigation output landed).
+- **BTC $63.5k arc REOPENED then softens** — reclaim gate armed since 7-14 close $64,977; 7-15/16 confirm; 7-17/18 intraday $62,859-$64,292 slips but `reclaim63500Alerted=true` holds (re-arm sub-$60,500 only).
 
 ## Fleet Health
-See [[fleet]] for full snapshot. 2026-07-16 18:48Z hash 618ede5f NOOP: 1 CRITICAL (cost-report) / 17 DEGRADED / 13 WARNING / 9 HEALTHY / 3 NO_DATA. 11 open issues (4 critical / 4 high / 3 medium). Sandbox-truncation family day-25. aixbt-pulse dead-slot d20 (15th consecutive slot miss). weekly-shiplog + operator-scorecard chronic Mon miss.
+See [[fleet]] for full snapshot. Last skill-health hash 618ede5f (7-16 18:48Z NOOP): 1 CRITICAL (cost-report) / 17 DEGRADED / 13 WARNING / 9 HEALTHY / 3 NO_DATA. 11 open issues (4 critical / 4 high / 3 medium). Sandbox-truncation family **day-26**. aixbt-pulse dead-slot **d21**. weekly-shiplog + operator-scorecard chronic Mon miss.
 
 ## Active Topics
 - [Fleet status & infrastructure](topics/fleet.md) — PRs, health snapshot, blockers, rule-5 extension.
-- [Crypto research](topics/crypto.md) — Narratives, picks, durable patterns (breakout-unwind n=5 · LAB -95% zero-arc reference · PUMP 2-step-shape · GITLAWB whipsaw-then-continuation CODIFIES · WELL distribution-with-return · DEXE momentum breaking · BTC arc reopens then softens).
+- [Crypto research](topics/crypto.md) — Narratives, picks, durable patterns (breakout-unwind n=5 · LAB -95% zero-arc · PUMP 2-step-shape · GITLAWB whipsaw-continuation-pause 5-session closes · WELL distribution-with-return d1 thin-bid bounce · REPPO fade d4 decelerates · BTC arc reopens then softens).
 - [Market context](topics/market-context.md) — Baseline snapshot; refreshed each cycle.
 - [Capital-2× program](topics/capital-2x-program.md) — North-star spec; SLX -70% terminal (operator-owned).
 - [XAI quota state](topics/xai-quota-exhausted.md) — Retired reference; cache-prefetch primary path.
-- [AIXBT signals](topics/aixbt-grounding.md), [clusters](topics/aixbt-clusters.md), [chains](topics/aixbt-chains.md) — 36 clusters / ~205 chains as of 6-28 21:00Z (aixbt-pulse dead-slot day-20 = state frozen).
+- [AIXBT signals](topics/aixbt-grounding.md), [clusters](topics/aixbt-clusters.md), [chains](topics/aixbt-chains.md) — 36 clusters / ~205 chains as of 6-28 21:00Z (aixbt-pulse dead-slot d21 = state frozen).
 
 ## Tracked Tokens
-Canonical watchlist per `skills/token-alert/SKILL.md` format. Anchors refreshed per 7-17 12:00Z token-alert (2/12 checks fire — WELL vol spike + GITLAWB 24h rail-breach).
+Canonical watchlist per `skills/token-alert/SKILL.md`. Anchors refreshed per 7-18 12:38Z print (0/12 checks fire → yesterday's 2/12 unwinds cleanly to zero-alerts within 24h — both signals resolve mechanical-fade / exhaustion).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | 7-17 -7.25%, vol **3.29× baseline** = first 3×+ vol spike since 7-12; 9d participation-vanish BREAKS = **distribution-with-return classification** |
-| MAMO    | mamo               | 15%           | 7-17 +0.14%, vol 0.94× baseline = day-7 **pause-at-mean sustainable-shape** (2nd-consec near-baseline print) |
-| REPPO   | reppo              | 15%           | 7-17 -12.56% (84% of rail, near-miss); **fade-back-to-trend continuation d3 confirms** (7-15/16/17 cascade) |
-| GITLAWB | gitlawb            | 15%           | 7-17 -18.89% = **126% rail-breach**; 4-session **whipsaw-then-continuation CODIFIES** (7-14→7-17 all under-baseline 0.60–0.75×) |
+| WELL    | moonwell-artemis   | 10%           | 7-18 +4.12%, vol **0.10× baseline** ($93K new window-low) = distribution-flush exhausts within 24h; +5.3% log-to-log bounce reads as **thin-bid mechanical rebound**, not real re-accumulation |
+| MAMO    | mamo               | 15%           | 7-18 +2.31%, vol 0.99× = **day-8 sustainable-shape holds** (3rd-consec exact-baseline print, cleanest signature yet) |
+| REPPO   | reppo              | 15%           | 7-18 -2.88%, vol 0.50× = **fade-back-to-trend d4 confirms with decelerating rate** (-12.66% → -4.31% → -12.66% → -2.31% log-to-log; mean-reversion exhausts) |
+| GITLAWB | gitlawb            | 15%           | 7-18 +0.66%, vol 0.71× = **dead-flat pause d5 closes 5-session whipsaw-then-continuation-then-pause arc** (all under-baseline: 0.63/0.75/0.63/0.60/0.71×) |
 
 ## Recurring patterns (durable)
 - **One-day-breakout-unwind n=5** (MORPHO/EIGEN/NEX/TIBBIR/DRV) — breakout must hold d2. BEAT/B n=2 dead-cat-with-legs exception.
 - **LAB -95% zero-arc reference case** — 7d cumulative ~99.4%; sellers-exhaust heuristic 0/7.
-- **GITLAWB whipsaw-then-continuation n=1 CODIFIES** — mechanical whipsaw resolves into trend-fade on day-4 rail-breach. Revises 7-16 "round-trip" verdict.
+- **GITLAWB whipsaw-then-continuation-then-pause 5-session closes** — mechanical whipsaw → trend-fade → dead-flat pause; entire arc under-baseline (5-day mean 0.66×). Rail-breach n=1 single-session isolate.
 - **Rule-5 primitive extends past workflow-file class (n=4)** — conflict source = **auto-committed state drift**, not file-class-specific. Operator direct-author is sole reliable path for any self-improve output.
-- **Skills-primitive convergence day-17 n=5** — stitch-skills (7-13) · hallmark (7-14) · mattpocock/skills (7-15) · hallmark HOLDOVER + mattpocock day-2 (7-16) · ui-skills (7-17). Library-shape survivors only; 0 framework-shape survived.
-- **Small-MoE-frontier-close cluster n=3** — Meta Muse Spark 1.1 + Sonnet 5 near-Opus + Bonsai-27B ~1.125 bits/weight fits-on-iPhone (7-17). Production-economics shift + on-device-inference axis.
-- **Anthropic-scope-typosquat pattern n=2 CODIFIES** — `claude-token-tracker-mcp` (7-16) + `anthropic-claude-latest` (7-17 <24h gap). Ecosystem-adjacent adversaries pattern-targeting Anthropic API namespace with sustained cadence. `monogrok` (7-16) = grok-scope typosquat n=1 = second AI-lab typosquat rail.
-- **MCP-server hardening rail n=4 in 72h** — langbot pip + mcp-documentation-server npm + n8n-mcp npm + MCP Python SDK 3-CVE cluster. Durable weekly rail confirms.
-- **Package-clusters durable pattern n=5** — 7-13 SiYuan Go 5-CVE + 7-14 DIRAC pip 4-CVE + 7-15 nebula-mesh Go 4-CVE + 7-16 dd-trace 6-lang polyglot + 7-17 MCP Python SDK 3-CVE. Single-repo-multi-advisory single-release-fix shape confirms as durable weekly cluster.
-- **First ≥0.5 EPSS in security-digest history** (7-17) — CVE-2026-39808 Fortinet FortiSandbox 0.842 pct 0.997. Active-exploitation signal materially stronger than any recent KEV item.
-- **Old-CVE-fresh-KEV n=2** — 2008 Cisco IOS 12.4 + 2023 KNX Protocol. Long-tail EOL/legacy stacks getting fresh KEV = active exploitation.
-- **Agent-safety-guardrail rail n=3** — 7-14 destructive_command_guard + 7-15 Cursor DuneSlide 0day + 7-16 pi-computer-use accessibility-primitive.
-- **Rust-rewrite-of-python-classics n=1** (7-16) — openinterpreter Python→Rust in 24h; targets ACP + deepseek/kimi/qwen = low-cost-open-model bet.
-- **Non-MCP-primitive n=1** (7-16) — pi-computer-use README positions against MCP ("when only interface is app on screen"). Names MCP-becomes-infra's edge case.
-- **npm-malware wave d4** — fade 30→16→13 = rate-cools 3rd consec day but doesn't fall off. d5 single-digit = wave breaks; 10+ = new-baseline regime.
-- **SharePoint EPSS 2-day plateau at 0.056/0.920** = **percentile-cools-then-plateaus shape** — fresh-KEV EPSS decay curve non-monotonic, hits floor ~48h.
-- **search-skill SEARCH_SKILL_NO_GAP day 21** — fleet capability-complete on external-skill axis. Failures = infra (ISS-025/027), not gaps.
+- **Improvement-PR-queue-locks-self-improve NEW** — 7-17 18:00Z self-improve exit-gated on 3+ open PRs (first-ever codification-deadline skip). 7-19 fire tests 2-consec pattern.
+- **Skills-primitive convergence rail day-18 as gap** — 17-day continuous run 7-13→7-17 (stitch-skills · hallmark · mattpocock/skills · ui-skills). First break 7-18. Tomorrow tests concludes-vs-intermittent.
+- **Small-MoE-frontier-close cluster n=3** — Meta Muse Spark 1.1 + Sonnet 5 near-Opus + Bonsai-27B ~1.125 bits/weight fits-on-iPhone. 7-27 Kimi K3 open weights extends to n=4 if ships.
+- **Vendor-scope-typosquat pattern n=6+** (7-18 CODIFIES, generalizes from Anthropic-scope n=2) — Replit + Sui/Mysten + AWS×2 + Proton crates.io **4 first-appearance scopes in single day** + SYFT ACP + EdgeCommons npm scope-families + axios pair + trongrid pip pair. Broadens across ecosystems, not slowing.
+- **First real-package supply-chain compromise n=1 NEW** — `@injectivelabs/sdk-ts@1.20.21` wallet-credential stealer (published 2026-07-08, **10-day live-exposure window**, hooks `PrivateKey.fromMnemonic`/`fromHex`, base64 exfil as grpc-web POST). Top-40 crypto project = high blast-radius. First confirmed real-package compromise vs typosquats-only prior 4 weeks.
+- **First-party-incumbent-alternative-to-Anthropic-scope n=1 NEW** — github/copilot-sdk v1.0.7 (7-16 15:22Z) Java+Rust parity = legitimate-incumbent-competition targeting `claude-*` namespace Claude Code holds. Distinct from adversarial typosquat rail.
+- **MCP-server hardening rail n=5 in 96h** — langbot pip + mcp-documentation-server npm + n8n-mcp npm + MCP Python SDK 3-CVE cluster + Prompty pip/npm/rust/nuget. Durable weekly rail confirms.
+- **Cross-ecosystem-single-repo cluster n=6 durable weekly rail** — 7-13 SiYuan Go 5-CVE + 7-14 DIRAC pip 4-CVE + 7-15 nebula-mesh Go 4-CVE + 7-16 dd-trace 6-lang polyglot + 7-17 MCP Python SDK 3-CVE + 7-18 Prompty pip/npm/rust/nuget. Parallel to MCP-hardening rail.
+- **High-EPSS regime n=2 consec days** — 7-17 CVE-2026-39808 Fortinet FortiSandbox 0.842 pct 0.997 (first ≥0.5 in memory) + 7-18 CVE-2026-27771 gitea Go 0.407 pct 0.985 (2nd ≥0.4). Active-exploitation signal materially stronger than baseline holds day-2.
+- **npm-malware wave regime-break at d5=22** — reverses 3-day fade 30→16→13→**22**; single-digit d5 prediction fails. d6 tests regime-break vs d5-anomaly.
+- **MCP-symbol-flow-invisible-Unicode class n=1 NEW** (7-18) — vuln-scanner tirth8205/code-review-graph PVR GHSA-chjm-935c-cx8p: `_sanitize_name()` ASCII 0x00-0x1F strip leaves Tag chars U+E0000-U+E007F + BiDi overrides intact through 30 MCP tools into downstream LLMs. **First LLM-tool-integration finding via PVR** in Aeon vuln-scanner history — expands taxonomy past dep-CVE + argv-injection.
+- **Watchlist-call-resolves n=1 NEW** — github-trending 7-17 drop of copilot-sdk ("watch for future fresh-release spike") resolves 7-18 at 17.9× jump. First cross-day self-resolving watchlist annotation. Suggests skill-side watch-notes are durable-actionable.
+- **Consumer-tool viral-tail day-5 convergence n=2** — hallmark 4-day monotonic-compounding peaks day-4 (3,372) then fades day-5 (-56%); OpenCut oscillating-viral settles day-5 (-70%). **5-day terminal for consumer-tool category** (monotonic + oscillating both cap same).
+- **HKUDS-cluster n=4 pattern firms soft→firm** (7-14 → 7-18) — Vibe-Trading + DeepTutor 5-consecutive-day trending presence. Lab-momentum-as-signal confirmed.
+- **Old-CVE-fresh-KEV n=2** — 2008 Cisco IOS 12.4 + 2023 KNX Protocol. Long-tail EOL/legacy = active exploitation.
+- **Agent-safety-guardrail rail n=3** — destructive_command_guard + Cursor DuneSlide 0day + pi-computer-use accessibility.
+- **SharePoint EPSS 2-day plateau at 0.056/0.920** = percentile-cools-then-plateaus shape.
+- **search-skill SEARCH_SKILL_NO_GAP day 22** — fleet capability-complete on external-skill axis. Failures = infra (ISS-025/027), not gaps.
