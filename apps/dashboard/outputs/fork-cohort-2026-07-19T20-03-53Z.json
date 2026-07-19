@@ -1,0 +1,272 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Fork Cohort",
+        "description": "2026-07-19 — aaronjmars/aeon"
+      },
+      "children": [
+        "alert_stale",
+        "sep1",
+        "stats_section",
+        "sep2",
+        "went_stale_section",
+        "sep3",
+        "dropped_section",
+        "sep4",
+        "new_forks_section",
+        "sep5",
+        "fleet_section",
+        "sep6",
+        "report_link"
+      ]
+    },
+    "alert_stale": {
+      "type": "Alert",
+      "props": {
+        "title": "WENT_STALE",
+        "message": "2 active forks went quiet",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_section": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_recent",
+        "stat_scanned",
+        "stat_power",
+        "stat_active",
+        "stat_stale",
+        "stat_cold"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Forks",
+        "value": "209"
+      }
+    },
+    "stat_recent": {
+      "type": "Stat",
+      "props": {
+        "label": "Ran (Last 7d)",
+        "value": "35",
+        "delta": "43.8% of 80 scanned"
+      }
+    },
+    "stat_scanned": {
+      "type": "Stat",
+      "props": {
+        "label": "Scanned",
+        "value": "80"
+      }
+    },
+    "stat_power": {
+      "type": "Stat",
+      "props": {
+        "label": "POWER",
+        "value": "27"
+      }
+    },
+    "stat_active": {
+      "type": "Stat",
+      "props": {
+        "label": "ACTIVE",
+        "value": "8"
+      }
+    },
+    "stat_stale": {
+      "type": "Stat",
+      "props": {
+        "label": "STALE",
+        "value": "10"
+      }
+    },
+    "stat_cold": {
+      "type": "Stat",
+      "props": {
+        "label": "COLD",
+        "value": "35"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "went_stale_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "went_stale_heading",
+        "went_stale_table"
+      ]
+    },
+    "went_stale_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Went stale (worth a check-in)",
+        "level": "h3"
+      }
+    },
+    "went_stale_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Fork",
+          "Last Run",
+          "Previous Status",
+          "Skills"
+        ],
+        "rows": [
+          [
+            "@Aluma",
+            "8.6d ago",
+            "POWER",
+            "22"
+          ],
+          [
+            "@BBridgeers",
+            "11.3d ago",
+            "POWER",
+            "6"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "dropped_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dropped_heading",
+        "dropped_fork_1"
+      ]
+    },
+    "dropped_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dropped from POWER",
+        "level": "h3"
+      }
+    },
+    "dropped_fork_1": {
+      "type": "Text",
+      "props": {
+        "text": "@aeonbookai — aeonTemplate (enabled skills 5→4, still ACTIVE, runs today)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new_forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_forks_heading",
+        "new_fork_1"
+      ]
+    },
+    "new_forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New running forks",
+        "level": "h3"
+      }
+    },
+    "new_fork_1": {
+      "type": "Text",
+      "props": {
+        "text": "@maredek-bot (was cold, 4 skills, runs today)",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleet_heading",
+        "fleet_change_1",
+        "fleet_change_2"
+      ]
+    },
+    "fleet_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet",
+        "level": "h3"
+      }
+    },
+    "fleet_change_1": {
+      "type": "Text",
+      "props": {
+        "text": "VibeSan7/aeon deleted (was POWER)",
+        "variant": "body"
+      }
+    },
+    "fleet_change_2": {
+      "type": "Text",
+      "props": {
+        "text": "skopos-aeon → svectors-lab (Svector-anu, POWER 15 skills)",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "report_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "articles/fork-cohort-2026-07-19.md",
+        "source": "aeon"
+      }
+    }
+  }
+}
