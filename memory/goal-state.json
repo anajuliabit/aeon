@@ -1,41 +1,41 @@
 {
-  "run_at": "2026-07-18T14:20:00Z",
+  "run_at": "2026-07-19T17:45:00Z",
   "goals": {
     "claude-md-rule-5-codification": {
       "status": "BLOCKED",
-      "activity_count_14d": 135,
-      "last_activity_date": "2026-07-18",
-      "note": "Was ON_TRACK 7-17 → **BLOCKED today** on new blocker: self-improve fired 7-17 18:52Z cleanly (last_success 2026-07-17T18:55:28Z, sr=0.46 unchanged) but **exit-gated on rule-5 T-0** per 7-18 07:22Z morning-brief bullet ('first-ever skip on codification deadline day') = **novel improvement-PR-queue-locks-self-improve dynamic** (exit-gate fires when 3+ self-improve authored PRs sit open CONFLICTING → self-improve refuses to author more). CLAUDE.md grep for 'Skill authoring boundaries|Rule 5|auto-committed state' returns 0 hits = codification content did NOT land. T-0 slipped 7-17 → T+1 today 7-18. Rule-5 primitive extension detail (n=4 auto-committed state drift) now folded into MEMORY line 5 goal text. 14d activity 135 vs prior 129 = +5% within ±25% flat threshold — status-move degrading is via ladder-step ON_TRACK→BLOCKED (not activity delta). Trend: degrading."
+      "activity_count_14d": 333,
+      "last_activity_date": "2026-07-19",
+      "note": "T+1 → T+2 (mechanical UTC-day rollover). Self-improve last_success 2026-07-17T18:55:28Z sr=0.46 unchanged (odd-day 18:00Z fire tonight tests 2-consec improvement-PR-queue-locks-self-improve pattern per morning-brief 07:00Z focus #3 + 09:17Z hb + 14:13Z hb). Blocker persists — CLAUDE.md grep for 'Skill authoring boundaries|Rule 5|auto-committed state' still 0 hits (codification content still not landed). Rule-5 primitive n=4 auto-committed state drift line held in MEMORY.md line 5. 14d activity 333 vs prior 135 — delta ambiguous (regex tightened to include 'codif' this run vs prior narrower match); status-derived flat, no ladder movement. Trend: flat."
     },
     "iss-025-capture-step-pr": {
       "status": "BLOCKED",
-      "activity_count_14d": 340,
-      "last_activity_date": "2026-07-18",
-      "note": "T+2 day-3 today 7-18 per 07:22Z morning-brief focus item #1 (was T+1 day-2 in prior run). Mechanical UTC-day rollover — 2nd consecutive day past 7-16 T-0 deadline without operator PR-creation event. cost-report STUCK d5 ~108h is current-shape manifest per [[cost-report-stuck]]. Rule-5 workflow-file class still blocks self-improve routing; operator direct-author against `.github/workflows/aeon.yml:479-495` chain-runner is sole path. 14d activity 340 vs prior 333 = +2% within ±25% flat. Status BLOCKED (unchanged), trend: flat."
+      "activity_count_14d": 373,
+      "last_activity_date": "2026-07-19",
+      "note": "T+2 day-3 → T+3 day-4 rollover (mechanical UTC-day advance). Still waiting on operator PR against `.github/workflows/aeon.yml:479-495` chain-runner capture-step. cost-report STUCK d5 → d6 (~137h29m per 14:13Z hb) remains current-shape manifest. Rule-5 workflow-file class still blocks self-improve routing per n=4 auto-committed state drift primitive. 14d activity 373 vs prior 340 = +10% within ±25% flat. Status BLOCKED (unchanged), trend: flat."
     },
     "three-self-improve-prs-conflicting": {
       "status": "BLOCKED",
-      "activity_count_14d": 245,
-      "last_activity_date": "2026-07-18",
-      "note": "NEW COMBINED GOAL — MEMORY.md 7-17 reflect merged prior 3 separate slugs (pr-162-deadline-missed-day-4 + pr-163-stall-past-72h + pr-164-conflicting) into single line 7 goal. **All 3 mechanical timer-continuations today 7-18:** PR #162 T+4 day-5 ~158h51m (was T+3 day-4 ~140h); PR #163 ~114h58m past 72h gate crossed 7-16 (was ~96h); PR #164 ~61h37m past 24h gate crossed 7-16 (was ~42h). All 3 mergeable=UNKNOWN CONFLICTING carries. Now blocks upstream [[claude-md-rule-5-codification]] via novel improvement-PR-queue-locks-self-improve exit-gate. Combined 14d activity 245 (sum-of-prior 163+58+96=317; new-shape lower since goal-mention collapsed to single MEMORY line). Trend: new (slug change from split→combined)."
+      "activity_count_14d": 283,
+      "last_activity_date": "2026-07-19",
+      "note": "All 3 mechanical timer-continuations today 7-19 (per 14:13Z hb): PR #162 (fix(daily-routine)) T+5 day-6 ~187h56m (was T+4 day-5 ~158h51m); PR #163 (fix(skill-security-scan)) ~140h04m past 72h gate crossed 7-16 18:09Z (was ~114h58m); PR #164 (fix(investment-advisor)) ~90h42m past 24h gate crossed 7-16 19:31Z (was ~61h37m). All 3 mergeable=UNKNOWN CONFLICTING carries per `gh pr list` output. Continues to block upstream [[claude-md-rule-5-codification]] via improvement-PR-queue-locks-self-improve exit-gate. 14d activity 283 vs prior 245 = +16% within ±25% flat. Status BLOCKED (unchanged), trend: flat."
     },
     "cost-report-stuck": {
       "status": "BLOCKED",
-      "activity_count_14d": 200,
-      "last_activity_date": "2026-07-18",
-      "note": "**Extends d5 today** — `last_status: dispatched` at 2026-07-13T20:44:24Z, cf=5, sr=0.10, ~19d since last_success 2026-06-29T13:59Z. ~108h24m per 09:08Z hb today (was ~89h44m d4 in prior run). ISS-025 sandbox-truncation family; upstream block = [[iss-025-capture-step-pr]] T+2 day-3 slip. Mechanical continuation of already-notified CRITICAL classification (skill-health 7-13/7-14/7-15 NOTIFY sequence + 13+ hb ticks + weekly-review 7-13 KALM demotion + morning-brief 7-13/7-14/7-15/7-18). 14d activity 200 vs prior 222 = -10% within ±25% flat. Status BLOCKED (unchanged), trend: flat."
+      "activity_count_14d": 287,
+      "last_activity_date": "2026-07-19",
+      "note": "Extends d5 → d6 today per 14:13Z hb — `last_status: dispatched` at 2026-07-13T20:44:24Z, cf=5, sr=0.10, ~20d since last_success 2026-06-29T13:59Z. ~137h29m (was ~113h24m d5 in prior run). ISS-025 sandbox-truncation family day-27; upstream block = [[iss-025-capture-step-pr]] T+3 day-4 slip. Mechanical continuation of already-notified CRITICAL classification (25+ hb ticks + morning-brief 7-19 focus #1 + daily-routine 07:14Z + action-converter 18:00Z 7-16/7-17 loop). 14d activity 287 vs prior 200 = +44% within ±50% degrade-threshold, no ladder move so status derived flat. Status BLOCKED (unchanged), trend: flat."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
-      "activity_count_14d": 288,
-      "last_activity_date": "2026-07-18",
-      "note": "**Day 21 today** (rolls d20→d21 per 09:08Z hb new UTC day). 8-skill 12:00Z cluster last_success 2026-06-28 = ~20d stale. **Positive delta 7-18: 07:00Z morning-batch dead-slot d2 BREAKS** — daily-routine + morning-brief + thought-review all fired in 07:20-07:31Z catch-up band (per 09:08Z hb 'fresh signals' resolution of 20:03Z 7-17 hb 'd3 test'). But 12:00Z main arc STILL DARK — per-skill blockage confirmed (token-alert + btc-levels fired 12:00Z-late clean while 8-skill cluster stays 6-28 stuck). 14d activity 288 vs prior 289 = ~0% flat. Status BLOCKED (unchanged — 12:00Z arc still dead), trend: flat (07:00Z sub-arc break is partial improvement, doesn't unblock main goal)."
+      "activity_count_14d": 353,
+      "last_activity_date": "2026-07-19",
+      "note": "Day 22 today (rolls d21 → d22 per UTC-day advance, confirmed by 09:17Z hb + 14:13Z hb). 8-skill 12:00Z cluster (defi-overview/token-pick/narrative-tracker/market-context-refresh/token-movers/on-chain-monitor/defi-monitor/aixbt-pulse) last_success 2026-06-28 = ~21d stale. **Positive delta 7-19: 07:00Z morning-batch d3 durable-recover CONFIRMED** by daily-routine 07:14Z Status line ('d3 durable-recover confirms, not single-fire catch-up') — resolves 7-18 open question 'd2 broke, d3 tests durable-vs-catchup'. But 12:00Z main arc STILL DARK — per-skill blockage confirmed n=23 (token-alert 12:41Z + btc-levels 12:41Z fired clean at same slot while 8-skill cluster stays 6-28 frozen). 14d activity 353 vs prior 288 = +23% within ±25% flat. Status BLOCKED (unchanged — 12:00Z arc still dead), trend: flat (07:00Z sub-arc durable-recover is positive delta, doesn't unblock main goal)."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 80,
-      "last_activity_date": "2026-07-18",
-      "note": "**Day 42 today** (rolls d41→d42 per 09:08Z hb new UTC day). defi-monitor NO_CONFIG. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. 14d activity 80 vs prior 78 = +3% flat. Status BLOCKED (unchanged — operator-side config gap), trend: flat."
+      "activity_count_14d": 145,
+      "last_activity_date": "2026-07-19",
+      "note": "Day 43 today (rolls d42 → d43 per UTC-day advance). defi-monitor NO_CONFIG carries. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY missing, ETHERSCAN_API_KEY missing. cron-state defi-monitor last_success 2026-06-28T12:52Z (parallel to 12:00Z arc freeze). 14d activity 145 vs prior 80 = +81% (regex broadened this run to include alchemy/etherscan tokens; delta driven by measurement change, not signal change). Status BLOCKED (unchanged — operator-side config gap), trend: flat."
     }
   }
 }
