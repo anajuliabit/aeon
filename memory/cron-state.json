@@ -298,10 +298,10 @@
   },
   "skill-update-check": {
     "last_dispatch": "2026-07-19T19:46:20Z",
-    "last_status": "dispatched",
-    "last_success": "2026-07-12T19:47:34Z",
-    "total_runs": 7,
-    "total_successes": 7,
+    "last_status": "success",
+    "last_success": "2026-07-19T19:47:49Z",
+    "total_runs": 8,
+    "total_successes": 8,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
