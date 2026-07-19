@@ -1,0 +1,164 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "mcp moved from debate to substrate today — two architecture takes, three vertical products (identity/payments/forensics) shipping over it."
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section1",
+        "sep1",
+        "section2",
+        "sep2",
+        "section3",
+        "meta"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h1",
+        "link1",
+        "link2"
+      ]
+    },
+    "h1": {
+      "type": "Heading",
+      "props": {
+        "text": "agent architecture primitives",
+        "level": "h3"
+      }
+    },
+    "link1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@0xCodila — the think→act→observe→reflect→retry loop from a phd student is the blueprint every modern agent still recycles",
+        "href": "https://x.com/0xCodila/status/2078626859424592212",
+        "source": "X"
+      }
+    },
+    "link2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@DataScienceDojo — production-agent stack is three layers: tools (do), mcp (connect), skills (reuse); resists collapsing them",
+        "href": "https://x.com/DataScienceDojo/status/2078571778897489954",
+        "source": "X"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h2",
+        "link3",
+        "link4"
+      ]
+    },
+    "h2": {
+      "type": "Heading",
+      "props": {
+        "text": "substrate arguments",
+        "level": "h3"
+      }
+    },
+    "link3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@0xCristal — apis were designed for humans; mcp retrofits them for llm tool-chaining without rewriting every endpoint",
+        "href": "https://x.com/0xCristal/status/2078504169695031727",
+        "source": "X"
+      }
+    },
+    "link4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@MamJayDev — vercel-labs agent-skills (SKILL.md) run the same repeatable task across 70+ frameworks; spec-shaped, not framework-code",
+        "href": "https://x.com/MamJayDev/status/2078627103843795057",
+        "source": "X"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h3",
+        "link5",
+        "link6",
+        "link7"
+      ]
+    },
+    "h3": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp-native verticals",
+        "level": "h3"
+      }
+    },
+    "link5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@GetYourHood — uhood exposes mcp tools for agent-owned feed/profile/thread/search; on-chain identity as an agent primitive",
+        "href": "https://x.com/GetYourHood/status/2078630738811834401",
+        "source": "X"
+      }
+    },
+    "link6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@trycustos — mcp makes any page/api payable in stablecoins at the edge; missing half is treasury rules for safe agent spend",
+        "href": "https://x.com/trycustos/status/2078629957291688099",
+        "source": "X"
+      }
+    },
+    "link7": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@H1DR4_agent — h1dr4 1.2 adds on-chain crime registry tracing + disposable workers over mcp/websocket; forensics as agent surface",
+        "href": "https://x.com/H1DR4_agent/status/2078613115202068625",
+        "source": "X"
+      }
+    },
+    "meta": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai-cache · candidates: 12 → kept: 7",
+        "variant": "caption"
+      }
+    }
+  }
+}

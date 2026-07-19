@@ -1,18 +1,24 @@
-*Agent Buzz — 2026-07-18*
-_quiet AI-agent day — MCP tool-shape debate carries, one coding-agent benchmark drop on the side._
+*Agent Buzz — 2026-07-19*
+_mcp moved from debate to substrate today — two architecture takes, three vertical products (identity/payments/forensics) shipping over it._
 
-**MCP tool-shape debate**
-• @RhysSullivan — MCP `executor` exposes only `execute`; argues for top-level `search_{linear|notion}` tools instead.
-  https://x.com/RhysSullivan/status/2078232405413183856
-• @ai_fudosan_ai — prefers agmsg (bash + sqlite3 for agent messaging) over tmux-bridge's Node/MCP dependency.
-  https://x.com/ai_fudosan_ai/status/2078234119230955709
-• @dillon_mulroy — not app/UI shape; agent consumption via API direct or exposed through codemode MCP.
-  https://x.com/dillon_mulroy/status/2078254530081296868
+**agent architecture primitives**
+• @0xCodila — the think→act→observe→reflect→retry loop from a phd student is the blueprint every modern agent still recycles
+  https://x.com/0xCodila/status/2078626859424592212
+• @DataScienceDojo — production-agent stack is three layers: tools (do), mcp (connect), skills (reuse); resists collapsing them
+  https://x.com/DataScienceDojo/status/2078571778897489954
 
-**Agent-validation surface**
-• @ArtificialAnlys — further coding-agent benchmarks live on Artificial Analysis.
-  https://x.com/ArtificialAnlys/status/2078230243261947987
-• @rnagulapalle — fetchsandbox: runnable API sandboxes so agents prove integrations actually work.
-  https://x.com/rnagulapalle/status/2078267255389839599
+**substrate arguments**
+• @0xCristal — apis were designed for humans; mcp retrofits them for llm tool-chaining without rewriting every endpoint
+  https://x.com/0xCristal/status/2078504169695031727
+• @MamJayDev — vercel-labs agent-skills (SKILL.md) run the same repeatable task across 70+ frameworks; spec-shaped, not framework-code
+  https://x.com/MamJayDev/status/2078627103843795057
 
-<!-- _src: xai-cache · candidates: 6 → kept: 5_ -->
+**mcp-native verticals**
+• @GetYourHood — uhood exposes mcp tools for agent-owned feed/profile/thread/search; on-chain identity as an agent primitive
+  https://x.com/GetYourHood/status/2078630738811834401
+• @trycustos — mcp makes any page/api payable in stablecoins at the edge; missing half is treasury rules for safe agent spend
+  https://x.com/trycustos/status/2078629957291688099
+• @H1DR4_agent — h1dr4 1.2 adds on-chain crime registry tracing + disposable workers over mcp/websocket; forensics as agent surface
+  https://x.com/H1DR4_agent/status/2078613115202068625
+
+<!-- _src: xai-cache · candidates: 12 → kept: 7 -->
