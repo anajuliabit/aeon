@@ -1,0 +1,215 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve",
+        "description": "18:00Z 7-19 — PR backlog & gating conflict"
+      },
+      "children": [
+        "stat_prs",
+        "sep1",
+        "section_prs",
+        "sep2",
+        "section_issue",
+        "sep3",
+        "section_pattern",
+        "sep4",
+        "section_action"
+      ]
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Improvement PRs",
+        "value": "3"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_prs",
+        "pr_164",
+        "pr_163",
+        "pr_162"
+      ]
+    },
+    "heading_prs": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Queue",
+        "level": "h3"
+      }
+    },
+    "pr_164": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_164",
+        "text_164"
+      ]
+    },
+    "badge_164": {
+      "type": "Badge",
+      "props": {
+        "text": "#164",
+        "variant": "default"
+      }
+    },
+    "text_164": {
+      "type": "Text",
+      "props": {
+        "text": "T+4 day-5"
+      }
+    },
+    "pr_163": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_163",
+        "text_163"
+      ]
+    },
+    "badge_163": {
+      "type": "Badge",
+      "props": {
+        "text": "#163",
+        "variant": "default"
+      }
+    },
+    "text_163": {
+      "type": "Text",
+      "props": {
+        "text": "past 72h gate"
+      }
+    },
+    "pr_162": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_162",
+        "text_162"
+      ]
+    },
+    "badge_162": {
+      "type": "Badge",
+      "props": {
+        "text": "#162",
+        "variant": "default"
+      }
+    },
+    "text_162": {
+      "type": "Text",
+      "props": {
+        "text": "past 24h gate ~day-9"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_gate"
+      ]
+    },
+    "alert_gate": {
+      "type": "Alert",
+      "props": {
+        "title": "Gating Conflict",
+        "message": "Gate-skipped per SKILL step 1. All 3 PRs have conflicting past stall gates per rule-5 extension. improvement-PR-queue-locks-self-improve dynamic active.",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_pattern": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_pattern",
+        "text_pattern"
+      ]
+    },
+    "heading_pattern": {
+      "type": "Heading",
+      "props": {
+        "text": "Pattern Detected",
+        "level": "h3"
+      }
+    },
+    "text_pattern": {
+      "type": "Text",
+      "props": {
+        "text": "2-consec pattern: 7-17 first-ever codification skip → 7-19 confirms"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_action",
+        "alert_action"
+      ]
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Required Action",
+        "level": "h3"
+      }
+    },
+    "alert_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator Direct-Author",
+        "message": "Operator direct-author is the sole path forward",
+        "type": "info"
+      }
+    }
+  }
+}

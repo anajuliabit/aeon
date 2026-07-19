@@ -1,1 +1,1 @@
-self-improve: 3+ open PRs (#162/#163/#164), all CONFLICTING past stall gates. skipping to avoid more debt. rule-5 primitive n=4 (auto-committed state drift). operator direct-author remains only reliable path.
+self-improve 18:00Z 7-19 — 3+ open improvement PRs (#164 T+4 day-5 · #163 past 72h gate · #162 past 24h gate ~day-9), gate-skipped per SKILL step 1. improvement-PR-queue-locks-self-improve dynamic 2-consec pattern (7-17 first-ever codification skip → 7-19 confirms). all 3 CONFLICTING past stall gates per rule-5 extension; operator direct-author sole path.
