@@ -1,27 +1,24 @@
-*Evening Recap — 2026-07-18*
-_TL;DR: heavy intel day — first real-package supply-chain compromise + first MCP-symbol-flow PVR both land, morning-batch recovers, all 6 goals still locked operator-side_
+*Evening Recap — 2026-07-19*
+_TL;DR: full-deck fire day — reflect codified 11 patterns, self-improve queue-lock n=2 established; all 6 goals remain frozen pending operator_
 
 *Headlines:*
-- [vuln-scanner] — PVR GHSA-chjm-935c-cx8p filed (MCP-symbol-flow-invisible-Unicode, 1st LLM-tool-integration advisory in history) + dep-CVE issue #665 · https://github.com/tirth8205/code-review-graph/issues/665
-- [security-digest] — @injectivelabs/sdk-ts@1.20.21 first confirmed real-package compromise, 10-day live window, wallet-credential stealer · .pending-notify/1784384293.md
-- [reflect] — MEMORY.md 54L→55L, 13 patterns codified (vendor-scope-typosquat n=6+, improvement-PR-queue-locks-self-improve, high-EPSS regime n=2) · memory/MEMORY.md
-- [github-trending] — copilot-sdk 17.9× jump confirms 7-17 watchlist call; watchlist-call-resolves n=1 NEW · .outputs/github-trending.md
-- [daily-routine] — 07:00Z morning-batch dead-slot d2 breaks (1st fire since 7-15); XEC BREAKOUT +23.8%, Kimi K3 cross-signal · .tmp/daily-routine/msg.md
+- reflect — 11 new durable patterns + 5 revisions; memory 60L→63L · memory/MEMORY.md
+- fork-skill-digest — 11 DEFAULT_FLIP_DISABLE signals at 3-week persistence threshold; fleet ↓14 to 61 forks · articles/fork-skill-digest-2026-07-19.md
+- fork-cohort — WENT_STALE: Aluma/aeon (8.6d) + BBridgeers/aeon (11.3d) · articles/fork-cohort-2026-07-19.md
+- PR #165 docs(skill-graph): shared_state 21→27, opened 17:38Z · https://github.com/anajuliabit/aeon/pull/165
 
 *Notable:*
-- [goal-tracker] — 6/6 BLOCKED, rule-5 codification flips ON_TRACK→BLOCKED, 6 operator actions proposed
-- [action-converter] — 5 actions avg 4.6/5 (top: push iss-025 patch, retire pr-queue, commit rule-5 section)
-- [agent-buzz] — MCP tool-shape debate + agent-validation clusters, 5 posts surfaced
-- [morning-brief] — 3 focus items (iss-025, PRs #162/#163/#164, rule-5), 07:00Z recovery confirmed
-- [token-alert] — 0/12; yesterday's 2/12 (WELL + GITLAWB) unwind clean within 24h
+- self-improve — improvement-PR-queue-locks-self-improve 2-consec; exit-gate fires again on odd-day 18:00Z (7-17 was first)
+- daily-routine — 07:00Z morning-batch d3 durable-recover confirmed; BUILDon +61.5% breakout + BTC ETF 10-day outflow snap $221.7M flagged
+- security-digest — nothing urgent today; KEV d3 zero-cadence (first 3-consec-zero in memory) + npm-malware wave d6=0 arc closes
+- github-trending — lingbot-map 6.0× baseline TOP PICK (feed-forward 3D foundation model, kills bundle-adjustment)
+- goal-tracker + action-converter — 6/6 BLOCKED flat; iss-025-capture-step top-scored at 125
 
 *Decisions for tomorrow:*
-- rebase or close PR #162/#163/#164 — all CONFLICTING past stall gates (~171h/~123h/~74h), locks self-improve exit-gate · https://github.com/anajuliabit/aeon/pull/162
-- direct-author ISS-025 capture-step PR against aeon.yml:479-495 — unblocks cost-report + 9-skill 12:00Z cluster
-- direct-author CLAUDE.md rule-5 section — T+1 slip, unblocks 7-19 self-improve exit-gate
+- close or rebase PR #162/163/164 (CONFLICTING; operator direct-author per rule-5 primitive n=4)
+- author ISS-025 capture-step PR against aeon.yml:479-495 — unblocks cost-report + 15-skill sandbox-truncation family day-27
 
 *Blockers:*
-- [cost-report] — STUCK d5 ~120h, cf=5, last_dispatch 7-13T20:44Z · ISS-025
-- [12:00Z cluster] — 9 skills dark d21, last_success 2026-06-28 · ISS-025 root cause
+- cost-report — stuck dispatched d6 ~143h · ISS-025 (cf=5, sr=0.10)
 
-_+12 routine runs collapsed · sources: log=ok cron-state=ok_
+_+13 routine runs collapsed · sources: log=ok cron-state=ok_
