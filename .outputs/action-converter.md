@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-18*
-Shape: iss-025 patch, retire 3 prs, codify rule-5 n=4, port advisor fix, anchor evidence
+*5 Actions — 2026-07-19*
+Shape: stage iss-025 patch, abandon 3-PR queue, paste rule-5, backport #164 diff, write supply-chain topic
 
-1. push commit direct to main patching `.github/workflows/aeon.yml:479-495` with ISS-025 capture-step fix
-why: unblocks cost-report STUCK d5 + 12:00Z batch-dark d21 + 18-skill sandbox-truncation family in one primitive
-done: commit lands on main touching aeon.yml:479-495; next cost-report scheduled run finishes non-truncated
+1. stage `fix/iss-025-capture-step` branch with capture-step insert against `.github/workflows/aeon.yml:479-495`, open PR
+why: single primitive resolves sandbox-truncation family d27 + cost-report d6 + 12:00Z batch d21 + morning-batch — top-leverage today
+done: `gh pr view <n> --json mergeable` returns MERGEABLE
 loop: iss-025-capture-step
 
-2. batch-retire PRs #162/#163/#164 via `gh pr close 162 163 164 --comment "superseded — rule-5 auto-commit-drift n=4, direct-author sole reliable path"`
-why: all 3 past stall gates CONFLICTING mergeable=UNKNOWN; ≥3 open self-improve PRs exit-gates 7-19 odd-day fire
-done: `gh pr list --state open` returns 0 self-improve-authored PRs
+2. abandon PR queue — `gh pr close 162 163 164 --comment "rebase-unsafe past stall gate; reopen with fresh cherry-pick"`
+why: 3 CONFLICTING self-improve PRs exit-gate 18:00Z self-improve tick tonight — pre-empts 2-consec skip pattern
+done: `gh pr list --state open` shows 0 self-improve-authored PRs
 loop: pr-queue-clear
 
-3. commit CLAUDE.md rule-5 section codifying auto-commit-drift primitive n=4 (workflow/skill-md/script/state-drift classes) direct to main
-why: T-0 slipped by 24h at 7-17 midnight; unblocks weekly-review 7-13 action #3 + closes claude-md-rule5-codify carry
-done: `git log CLAUDE.md` shows fresh commit with "Rule 5" section citing PR #160/#162/#163/#164 evidence
+3. paste rule-5 section into `CLAUDE.md` with PR #160/#162/#163/#164 evidence rows for auto-committed state drift n=4
+why: T+2 SLIPPED codification unblocks self-improve for future cycles and closes weekly-review 7-13 action #3
+done: `grep -c "Rule 5" CLAUDE.md` returns ≥1 and evidence table lists 4 PR rows
 loop: claude-md-rule5-codify
 
-4. cherry-pick PR #164's `scripts/advisor/run.sh` fail-fast committee patch (COMMITTEE_LLM_ATTEMPTS=1) direct to main, run `bash scripts/advisor/selftest.sh` after
-why: retiring PR #164 without landing the fix reopens investment-advisor 20-min timeout pattern on next 13:00Z cron
-done: `grep COMMITTEE_LLM_ATTEMPTS scripts/advisor/run.sh` returns match; selftest exits 0
+4. backport PR #164 committee fail-fast retry diff to `scripts/advisor/run.sh` on main, verify `bash scripts/advisor/selftest.sh`
+why: only touches advisor/, side-steps rule-5 CONFLICTING while landing the 20-min committee timeout fix cleanly
+done: `bash scripts/advisor/selftest.sh` exits 0 with `COMMITTEE_LLM_ATTEMPTS` honoured
 loop: advisor-fix-port
 
-5. extend `memory/topics/fleet.md` Rule-5 primitive subsection with PR #164 script-file-class entry + auto-commit-drift codification (n=4 evidence dossier)
-why: anchors rule-5 primitive in fleet-facing dossier; CLAUDE.md holds the rule, fleet.md holds the receipts
-done: `git log memory/topics/fleet.md` shows fresh commit with PR #164 row in Rule-5 subsection
-loop: rule5-evidence-anchor
+5. write `memory/topics/supply-chain.md` with vendor-scope-typosquat n=6+ / real-package n=1 (@injectivelabs/sdk-ts) / first-party-incumbent n=1 (copilot-sdk) subsections
+why: MEMORY.md line 46-48 patterns need a durable topic file surviving future consolidation trims, cross-links from crypto.md
+done: file exists with ≥3 named subsections + linked from MEMORY.md Active Topics
+loop: supply-chain-topic-anchor
 
-sources: memory=54L logs=7d topics=11 prs=3open cron_failing=1 mode=OK
+sources: memory=60 logs=7 topics=11 prs=4 cron_failing=1 mode=OK
