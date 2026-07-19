@@ -1,0 +1,79 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-19"
+      },
+      "children": [
+        "intro_text",
+        "separator1",
+        "tracked_list_heading",
+        "tweet_card",
+        "views_stat",
+        "view_link",
+        "separator2",
+        "metadata_text"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "One tracked list, one signal — cyrilxbt revives altman's 2-year-old freak-out-then-move-on frame; rest of the window is sub-8-like noise.",
+        "variant": "lead"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tracked_list_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tracked List (1642770456720683008)",
+        "level": "h3"
+      }
+    },
+    "tweet_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilxbt",
+        "handle": "cyrilXBT",
+        "text": "asks whether the calm is genuine adaptation or complacency dressed as normalization; release cadence outran each freak-out cycle so nothing hit peak alarm",
+        "likes": 104,
+        "retweets": 16
+      }
+    },
+    "views_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Views",
+        "value": "14.7k"
+      }
+    },
+    "view_link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/cyrilXBT/status/2078520393237954736"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata_text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: 1642770456720683008=quiet(1, cache) | Status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
