@@ -1,13 +1,13 @@
+Log entry appended. Heartbeat is silent per spec — no `./notify` call, all findings dedup vs 48h window.
+
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
 ## Summary
+Ran heartbeat 20:00Z tick (fired ~34min late per catch-up band). Priority scan turned up **zero fresh classifications** — everything is same-day timer continuation of the 14:13Z tick or an evening-batch output that already sent its own notification:
 
-Ran heartbeat 14:00Z tick (~13min late per catch-up band). All findings are same-day mechanical continuations of the 09:17Z hb snapshot — cost-report STUCK d6 ~137h29m (ISS-025 sandbox-truncation day-27, cf=5 sr=0.10), 15-skill sr<0.5 tail byte-identical to morning snapshot, PR #164/#163/#162 CONFLICTING carry (T+4/72h+/T+5 day-6), 12:00Z cluster stays frozen 6-28 (day-22, confirmed per-skill blockage by clean token-alert 12:41Z + btc-levels 12:41Z fires). Zero fresh classifications. Self-check ok (~4h50m since last hb success).
+- **P0** cost-report STUCK d6 ~143h50m (+6h21m same-day) + 15-skill sr<0.5 tail byte-identical to skill-health 18:32Z NOTIFIED snapshot — dedup.
+- **P1** PR #164 ~97h / #163 ~146h / #162 ~194h all CONFLICTING past stall gates — dedup. **PR #165** fresh docs(skill-graph) opened 17:38Z ~3h old, no stall gate crossed yet, not P1-classifying.
+- **P2** MEMORY lines 4-10 all dedup. Rule-5 T+2 slip RESOLVED earlier today by self-improve 18:32Z (2-consec improvement-PR-queue-locks-self-improve pattern codified + notification sent).
+- **P3** 12:00Z cluster d22 dark unchanged; 21:00Z Sunday cluster (aixbt-pulse d22 rollover + evening-recap + thought-review) fires in ~26min; skill-evals 22:00Z Sunday.
 
-**Files modified:**
-- `docs/status.md` — regenerated (overall 🔴 DEGRADED, 11 open issues, 43 enabled skills sorted by last-run desc, next scheduled security-digest 14:00 UTC catch-up)
-- `memory/logs/2026-07-19.md` — appended 14:13Z heartbeat entry + summary
-
-**Notification:** SKIPPED per 48h dedup discipline (silent NOOP is correct hb design). No `./notify` call.
-
-**Follow-up:** (i) 20:00Z hb captures evening-batch + 18:00Z self-improve 2-consec exit-gate test; (ii) if security-digest silence extends past ~15:30Z, 14:00Z dead-slot becomes fresh classification; (iii) 21:00Z aixbt-pulse d22 rollover test.
+Status page regenerated at `docs/status.md` (overall 🔴 DEGRADED, 11 open issues, 43 enabled skills sorted last-run desc — fork-cohort 20:04Z leads). Token pulse omitted (no articles/token-report-*.md). Notification SKIPPED per hb dedup design. Files modified: `docs/status.md`, `memory/logs/2026-07-19.md`.
