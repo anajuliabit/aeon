@@ -1,0 +1,277 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "fork-skill-digest",
+        "description": "2026-07-19 · Fleet health & customization report"
+      },
+      "children": [
+        "fleet_section",
+        "sep1",
+        "signals_section",
+        "sep2",
+        "new_skills_section",
+        "sep3",
+        "customizer_section",
+        "sep4",
+        "status_section"
+      ]
+    },
+    "fleet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_fleet",
+        "stat_forks",
+        "text_drop_note"
+      ]
+    },
+    "h_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h3"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Active forks",
+        "value": "61",
+        "delta": "-14",
+        "trend": "down"
+      }
+    },
+    "text_drop_note": {
+      "type": "Text",
+      "props": {
+        "text": "Largest single-week drop in tracking history",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "signals_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_signals",
+        "text_signals_meta",
+        "table_signals",
+        "text_signals_note"
+      ]
+    },
+    "h_signals": {
+      "type": "Heading",
+      "props": {
+        "text": "Stable Signals (DEFAULT_FLIP_DISABLE)",
+        "level": "h3"
+      }
+    },
+    "text_signals_meta": {
+      "type": "Text",
+      "props": {
+        "text": "11 signals stable",
+        "variant": "caption"
+      }
+    },
+    "table_signals": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Stability"
+        ],
+        "rows": [
+          [
+            "action-converter",
+            "98%"
+          ],
+          [
+            "search-skill",
+            "97%"
+          ],
+          [
+            "security-digest",
+            "93%"
+          ],
+          [
+            "github-trending",
+            "90%"
+          ],
+          [
+            "goal-tracker",
+            "86%"
+          ],
+          [
+            "narrative-tracker/defi-overview",
+            "83%"
+          ],
+          [
+            "token-pick",
+            "81%"
+          ],
+          [
+            "reflect",
+            "79%"
+          ],
+          [
+            "skill-health/self-improve",
+            "76%"
+          ]
+        ]
+      }
+    },
+    "text_signals_note": {
+      "type": "Text",
+      "props": {
+        "text": "All 11 held ≥50% for 3+ consecutive weeks — persistent fleet preference",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "new_skills_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_new",
+        "text_new_meta",
+        "grid_new_skills"
+      ]
+    },
+    "h_new": {
+      "type": "Heading",
+      "props": {
+        "text": "New Fork-Only Skills",
+        "level": "h3"
+      }
+    },
+    "text_new_meta": {
+      "type": "Text",
+      "props": {
+        "text": "9 new skills across 5 forks (vs 3 last week)",
+        "variant": "caption"
+      }
+    },
+    "grid_new_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_skill1",
+        "badge_skill2",
+        "badge_skill3",
+        "badge_skill4",
+        "badge_skill5",
+        "badge_skill6"
+      ]
+    },
+    "badge_skill1": {
+      "type": "Badge",
+      "props": {
+        "text": "peng-scout/peng-pulse",
+        "variant": "default"
+      }
+    },
+    "badge_skill2": {
+      "type": "Badge",
+      "props": {
+        "text": "lawb-pool-monitor",
+        "variant": "default"
+      }
+    },
+    "badge_skill3": {
+      "type": "Badge",
+      "props": {
+        "text": "mine-bean",
+        "variant": "default"
+      }
+    },
+    "badge_skill4": {
+      "type": "Badge",
+      "props": {
+        "text": "github-upstream-tracker",
+        "variant": "default"
+      }
+    },
+    "badge_skill5": {
+      "type": "Badge",
+      "props": {
+        "text": "money-radar/lead-finder",
+        "variant": "default"
+      }
+    },
+    "badge_skill6": {
+      "type": "Badge",
+      "props": {
+        "text": "vch-program/vch-plan-review",
+        "variant": "default"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "customizer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_customizer",
+        "text_customizer"
+      ]
+    },
+    "h_customizer": {
+      "type": "Heading",
+      "props": {
+        "text": "Heaviest Customizer",
+        "level": "h3"
+      }
+    },
+    "text_customizer": {
+      "type": "Text",
+      "props": {
+        "text": "Aluma/aeon (~22 overrides, dev/security dominant)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_status"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "FORK_SKILL_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}
