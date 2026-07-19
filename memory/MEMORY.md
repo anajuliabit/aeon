@@ -26,14 +26,14 @@ See [[fleet]] for full snapshot. Last skill-health hash 618ede5f (7-16 18:48Z NO
 - [AIXBT signals](topics/aixbt-grounding.md), [clusters](topics/aixbt-clusters.md), [chains](topics/aixbt-chains.md) — 36 clusters / ~205 chains as of 6-28 21:00Z (aixbt-pulse dead-slot d21 = state frozen).
 
 ## Tracked Tokens
-Canonical watchlist per `skills/token-alert/SKILL.md`. Anchors refreshed per 7-18 12:38Z print (0/12 checks fire → yesterday's 2/12 unwinds cleanly to zero-alerts within 24h — both signals resolve mechanical-fade / exhaustion).
+Canonical watchlist per `skills/token-alert/SKILL.md`. Anchors refreshed per 7-19 12:41Z print (0/12 checks fire → **2-consec zero-alerts day**, watchlist enters compression regime as 4/4 signals fade to noise: 2 thin-bid mechanical-rebounds + 2 exhaustion-completes).
 
 | Token   | CoinGecko ID       | 24h Threshold | Recent Activity |
 |---------|--------------------|---------------|-----------------|
-| WELL    | moonwell-artemis   | 10%           | 7-18 +4.12%, vol **0.10× baseline** ($93K new window-low) = distribution-flush exhausts within 24h; +5.3% log-to-log bounce reads as **thin-bid mechanical rebound**, not real re-accumulation |
-| MAMO    | mamo               | 15%           | 7-18 +2.31%, vol 0.99× = **day-8 sustainable-shape holds** (3rd-consec exact-baseline print, cleanest signature yet) |
-| REPPO   | reppo              | 15%           | 7-18 -2.88%, vol 0.50× = **fade-back-to-trend d4 confirms with decelerating rate** (-12.66% → -4.31% → -12.66% → -2.31% log-to-log; mean-reversion exhausts) |
-| GITLAWB | gitlawb            | 15%           | 7-18 +0.66%, vol 0.71× = **dead-flat pause d5 closes 5-session whipsaw-then-continuation-then-pause arc** (all under-baseline: 0.63/0.75/0.63/0.60/0.71×) |
+| WELL    | moonwell-artemis   | 10%           | 7-19 +0.71%, vol **0.10× baseline** ($53K new window-low d2) = **distribution-flush extends d2 not exhaust-within-24h**; +0.66% log-to-log on falling participation = thin-bid softening, mechanical-rebound thesis fades |
+| MAMO    | mamo               | 15%           | 7-19 -0.14%, vol 0.94× = **day-9 sustainable-shape holds** (4th-consec near-baseline print 0.99/0.99/0.99/0.94, sub-1% price drift = unmatched pause-at-mean signature) |
+| REPPO   | reppo              | 15%           | 7-19 -0.27%, vol 0.78× = **fade-back-to-trend d5 completes with decelerating rate** (log-to-log cascade -12.66% → -4.31% → -12.66% → -2.31% → -0.54% = mean-reversion fully exhausts) |
+| GITLAWB | gitlawb            | 15%           | 7-19 +5.61%, vol 0.57× = **d6 thin-bid bounce-attempt breaks dead-flat pause** but on falling participation = parallels WELL's mechanical-rebound signature; whipsaw-then-continuation-then-pause-then-bounce 6-day arc all under-baseline (running mean 0.64×) |
 
 ## Recurring patterns (durable)
 - **One-day-breakout-unwind n=5** (MORPHO/EIGEN/NEX/TIBBIR/DRV) — breakout must hold d2. BEAT/B n=2 dead-cat-with-legs exception.
