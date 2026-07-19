@@ -795,3 +795,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-19,fork-cohort,claude-sonnet-4-6,69,68848,5274019,136979
 2026-07-19,heartbeat,claude-opus-4-7,13922,20152,1558846,138781
 2026-07-19,evening-recap,claude-sonnet-4-6,15,10754,1139241,91710
+2026-07-19,skill-evals,claude-sonnet-4-6,19,19870,959822,55391

@@ -1,17 +1,20 @@
-Skill-evals complete. No notification sent (verdict is `SKILL_EVALS_OK` — silence is the correct signal).
+Verdict is SKILL_EVALS_OK, so no notification is sent per spec. Done.
 
 ## Summary
 
-**Verdict: SKILL_EVALS_OK** — 0 new failures, 0 fixed, 12 stable.
+**Verdict: SKILL_EVALS_OK**
 
-**What was checked (12 skills in evals.json):**
-- `heartbeat`, `token-alert`, `skill-health` → all PASS (today's `memory/logs/2026-07-12.md` has all required patterns, 17k+ words)
-- `cost-report` → PASS (856 words, patterns match; `articles/cost-report-2026-06-29.md` is 13d old vs 14d stale threshold — barely inside limit, next tick Mon 7-13)
-- `changelog` → STALE/STABLE (115d old, disabled — same as prior run)
-- 7 disabled skills (repo-pulse, push-recap, fork-fleet, repo-article, repo-actions, deep-research, rss-digest) → NO_OUTPUT/STABLE
+All 12 skills evaluated against `evals.json`. Key findings:
 
-**Coverage:** 12/43 (28%) — unchanged from 2026-07-05. 39 enabled skills still have no eval spec.
+- **3 PASS:** heartbeat, token-alert, skill-health — all log-based patterns found in today's `memory/logs/2026-07-19.md` (18,115 words)
+- **1 PASS→STALE:** cost-report — last article is 2026-06-29 (20d ago; 2× weekly threshold = 14d). Assertions still pass on the existing file. ISS-025 (critical) already open — no new issue filed
+- **1 STALE (stable):** changelog — 122d old, disabled; unchanged from prior
+- **7 NO_OUTPUT (stable):** repo-pulse, push-recap, fork-fleet, repo-article, repo-actions, deep-research, rss-digest — all disabled, unchanged
 
-**Article written:** `articles/skill-evals-2026-07-12.md`  
-**Log appended:** `memory/logs/2026-07-12.md`  
-**Issues filed/closed:** none
+**Coverage:** 12/43 (28%) — unchanged. eval-audit blocked by sandbox; in-memory fallback used.
+
+**Files created/modified:**
+- `articles/skill-evals-2026-07-19.md` — created
+- `memory/logs/2026-07-19.md` — log entry appended
+
+**No notification sent** (SKILL_EVALS_OK verdict → silence is the correct signal). Top action queue item: Investigate cost-report staleness (ISS-025 already tracked).
