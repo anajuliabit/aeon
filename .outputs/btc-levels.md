@@ -1,13 +1,14 @@
-Done. Quiet run — no alerts fired.
-
 ## Summary
 
-**BTC spot:** $64,615 | **Close (2026-07-18):** $64,793
+Ran btc-levels. CoinGecko returned 3 price points cleanly via curl.
 
-All four levels clear:
-- Leverage-review (≤$45k): $19,615 above trigger — no alert
-- Breakdown close (<$60.5k): $4,293 above floor — no alert
-- Reclaim $63,500: already alerted (`reclaim63500Alerted=true`), re-arm only below $60,500 — no alert
-- Reclaim $65,900: spot ~$1,285 below trigger — no alert
+- **Spot:** $64,455 (as of ~20:33 UTC)
+- **Previous daily close:** $64,793 (2026-07-18)
 
-State updated, log appended, both files committed.
+**Level check:**
+- Leverage-review (≤ $45k): clear — spot $19,455 above trigger
+- Breakdown (close < $60,500): clear — close $4,293 above floor
+- Reclaim $63,500: already alerted (`reclaim63500Alerted=true`), no re-arm (spot > $60,500)
+- Reclaim $65,900: spot $1,445 below trigger, not yet
+
+No alerts fired → no notification sent. State and log committed.
