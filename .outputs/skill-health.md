@@ -1,20 +1,19 @@
-## Summary
+*Skill Health — 2026-07-19*
+HEALTH: CRITICAL(1) · systemic: output_tokens=0 sandbox-truncation day-27 — 18 skills
 
-Ran `skill-health` per `skills/skill-health/SKILL.md` at 18:14:05Z 7-18.
+🔴 CRITICAL
+- cost-report — cf=5, ~20d down — INVESTIGATE (sandbox-truncation) → ISS-025
 
-**Classification (byte-identical to prev 7-17 18:55Z report):**
-- 1 CRITICAL: cost-report (cf=5, sr=0.10, ~19d stuck)
-- 17 DEGRADED: sandbox-truncation family day-26
-- 0 FLAPPING · 13 WARNING · 9 HEALTHY · 3 NO_DATA (autoresearch/fork-skill-gap/operator-scorecard)
+🟡 DEGRADED (17)
+- aixbt-pulse — 47%, 21d cold — see systemic
+- defi-monitor — 53%, 21d cold — see systemic
+- market-context-refresh — 32%, 21d cold — see systemic
+- narrative-tracker — 33%, 21d cold — see systemic
+- search-skill — 37%, 10d cold — see systemic → ISS-021
++12 more (action-converter · evening-recap · goal-tracker · list-digest · reflect · reg-monitor · security-digest · self-improve · skill-analytics · skill-evals · skill-health · vuln-scanner) — see memory/issues/INDEX.md
 
-**Notify gate:** hash unchanged (`b4d66e6c`) AND delta since prev notify = **23h18m47s < 24h** → **NOOP**, no `./notify` call per SKILL step 5.
+⚪ NO DATA (3): autoresearch · fork-skill-gap · operator-scorecard — DISPATCH-SKILL
+🟢 HEALTHY: 9
 
-**Issues:** cost-report CRITICAL covered by ISS-025 same-signature → 0 filings, 0 resolutions. 11 open issues unchanged.
-
-**Skill-runs wrapper:** sandbox-denied → `SKILL_HEALTH_PARTIAL`, cron-state only.
-
-**Files modified:**
-- `memory/skill-health/last-report.json` — `last_run_at` → 18:14:05Z, `last_notified_at` preserved
-- `memory/logs/2026-07-18.md` — appended `SKILL_HEALTH_NOOP` entry + summary
-
-**Follow-up:** 7-19 tick elapses the 24h daily-reminder cadence gate → will NOTIFY that run regardless of hash. Operator direct-author on ISS-025 capture-step PR remains the sole lever to flip the 18-skill sandbox-truncation family.
+Open issues: 11 · Filed: 0 · Resolved: 0
+Classification byte-identical to prev 7-18 18:14Z (3rd-consec no-delta). Notify fires per 24h cadence (~47.6h since last).

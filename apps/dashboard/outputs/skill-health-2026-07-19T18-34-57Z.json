@@ -1,0 +1,291 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-19"
+      },
+      "children": [
+        "header-stack",
+        "sep-1",
+        "critical-section",
+        "sep-2",
+        "degraded-section",
+        "sep-3",
+        "nodata-healthy-row",
+        "sep-4",
+        "footer-section"
+      ]
+    },
+    "header-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-alert",
+        "status-text"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "CRITICAL",
+        "message": "output_tokens=0 sandbox-truncation day-27 — 18 skills affected",
+        "type": "error"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "HEALTH: CRITICAL(1) · systemic: output_tokens=0 sandbox-truncation day-27 — 18 skills"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "critical-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical-heading",
+        "critical-item"
+      ]
+    },
+    "critical-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 CRITICAL",
+        "level": "h3"
+      }
+    },
+    "critical-item": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report — cf=5, ~20d down — INVESTIGATE (sandbox-truncation) → ISS-025"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded-heading",
+        "degraded-items"
+      ]
+    },
+    "degraded-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (17)",
+        "level": "h3"
+      }
+    },
+    "degraded-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg-1",
+        "deg-2",
+        "deg-3",
+        "deg-4",
+        "deg-5",
+        "deg-more"
+      ]
+    },
+    "deg-1": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse — 47%, 21d cold — see systemic"
+      }
+    },
+    "deg-2": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor — 53%, 21d cold — see systemic"
+      }
+    },
+    "deg-3": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh — 32%, 21d cold — see systemic"
+      }
+    },
+    "deg-4": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — 33%, 21d cold — see systemic"
+      }
+    },
+    "deg-5": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill — 37%, 10d cold — see systemic → ISS-021"
+      }
+    },
+    "deg-more": {
+      "type": "Text",
+      "props": {
+        "text": "+12 more: action-converter · evening-recap · goal-tracker · list-digest · reflect · reg-monitor · security-digest · self-improve · skill-analytics · skill-evals · skill-health · vuln-scanner — see memory/issues/INDEX.md"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "nodata-healthy-row": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "lg"
+      },
+      "children": [
+        "nodata-stack",
+        "healthy-stack"
+      ]
+    },
+    "nodata-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata-heading",
+        "nodata-skills",
+        "nodata-action"
+      ]
+    },
+    "nodata-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "nodata-skills": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch · fork-skill-gap · operator-scorecard"
+      }
+    },
+    "nodata-action": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL"
+      }
+    },
+    "healthy-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy-heading",
+        "healthy-count"
+      ]
+    },
+    "healthy-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy-count": {
+      "type": "Stat",
+      "props": {
+        "value": "9",
+        "label": "Skills"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "footer-heading",
+        "footer-stats",
+        "footer-note"
+      ]
+    },
+    "footer-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues & Activity",
+        "level": "h3"
+      }
+    },
+    "footer-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-open",
+        "stat-filed",
+        "stat-resolved"
+      ]
+    },
+    "stat-open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "11"
+      }
+    },
+    "stat-filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed",
+        "value": "0"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved",
+        "value": "0"
+      }
+    },
+    "footer-note": {
+      "type": "Text",
+      "props": {
+        "text": "Classification byte-identical to prev 7-18 18:14Z (3rd-consec no-delta). Notify fires per 24h cadence (~47.6h since last).",
+        "variant": "caption"
+      }
+    }
+  }
+}
