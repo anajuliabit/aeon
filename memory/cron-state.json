@@ -179,8 +179,8 @@
     "last_error": "844e662\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "token-alert": {
-    "last_dispatch": "2026-07-18T12:36:58Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-19T12:39:44Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-18T12:41:37Z",
     "total_runs": 65,
     "total_successes": 53,
@@ -619,8 +619,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-07-19T09:16:34Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-19T12:39:44Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-19T09:18:44Z",
     "total_runs": 266,
     "total_successes": 206,
