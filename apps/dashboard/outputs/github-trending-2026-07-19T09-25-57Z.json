@@ -1,0 +1,359 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-19"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-pick-section",
+        "sep1",
+        "aiml-section",
+        "sep2",
+        "devtools-section",
+        "sep3",
+        "status-text"
+      ]
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top-pick-label",
+        "top-pick-link",
+        "top-pick-desc"
+      ]
+    },
+    "top-pick-label": {
+      "type": "Text",
+      "props": {
+        "text": "Top pick",
+        "variant": "lead"
+      }
+    },
+    "top-pick-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Robbyant/lingbot-map",
+        "href": "https://github.com/Robbyant/lingbot-map"
+      }
+    },
+    "top-pick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "first serious feed-forward 3D foundation model — 20 fps on 10k+ frame streams, kills the per-scene bundle-adjustment loop the dust3r/mast3r lineage still runs.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aiml-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml-heading",
+        "aiml-repo1",
+        "aiml-repo2"
+      ]
+    },
+    "aiml-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml-repo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml1-link",
+        "aiml1-meta-row",
+        "aiml1-desc"
+      ]
+    },
+    "aiml1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Robbyant/lingbot-map",
+        "href": "https://github.com/Robbyant/lingbot-map"
+      }
+    },
+    "aiml1-meta-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml1-stars",
+        "aiml1-lang",
+        "aiml1-status"
+      ]
+    },
+    "aiml1-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 831 today (13k total)",
+        "variant": "caption"
+      }
+    },
+    "aiml1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "aiml1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "aiml1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "arxiv preprint + huggingface weights + flashinfer paged-kv streaming; geometric context transformer replaces iterative optimization.",
+        "variant": "body"
+      }
+    },
+    "aiml-repo2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml2-link",
+        "aiml2-meta-row",
+        "aiml2-desc"
+      ]
+    },
+    "aiml2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "lyogavin/airllm",
+        "href": "https://github.com/lyogavin/airllm"
+      }
+    },
+    "aiml2-meta-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml2-stars",
+        "aiml2-lang",
+        "aiml2-status"
+      ]
+    },
+    "aiml2-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 161 today (23k total)",
+        "variant": "caption"
+      }
+    },
+    "aiml2-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Jupyter"
+      }
+    },
+    "aiml2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "aiml2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "3yo repo returns at 7.8× baseline on 70b-inference-on-4gb-gpu; parallels bonsai-27b fits-on-iphone rail as china-lab edge-inference push.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtools-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools-heading",
+        "devtools-repo1",
+        "devtools-repo2"
+      ]
+    },
+    "devtools-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools-repo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools1-link",
+        "devtools1-meta-row",
+        "devtools1-desc"
+      ]
+    },
+    "devtools1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "KnockOutEZ/wigolo",
+        "href": "https://github.com/KnockOutEZ/wigolo"
+      }
+    },
+    "devtools1-meta-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools1-stars",
+        "devtools1-lang",
+        "devtools1-status"
+      ]
+    },
+    "devtools1-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 203 today (1.4k total)",
+        "variant": "caption"
+      }
+    },
+    "devtools1-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "devtools1-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "devtools1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "mcp-server for local-first web-search/crawl — $0/query vs exa/tavily/firecrawl, pushed 09:14z today on v0.2.0 propagation from 7-17.",
+        "variant": "body"
+      }
+    },
+    "devtools-repo2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools2-link",
+        "devtools2-meta-row",
+        "devtools2-desc"
+      ]
+    },
+    "devtools2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MoonshotAI/kimi-cli",
+        "href": "https://github.com/MoonshotAI/kimi-cli"
+      }
+    },
+    "devtools2-meta-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools2-stars",
+        "devtools2-lang",
+        "devtools2-status"
+      ]
+    },
+    "devtools2-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 65 today (9.6k total)",
+        "variant": "caption"
+      }
+    },
+    "devtools2-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "devtools2-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "devtools2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "moonshot enters the claude-code/codex agent-cli race with v1.49.0 3 days ago; kimi k3 open weights on 7-27 = watchlist adjacency.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/11",
+        "variant": "muted"
+      }
+    }
+  }
+}

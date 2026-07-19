@@ -1,19 +1,21 @@
-*GitHub Trending — 2026-07-18*
+*GitHub Trending — 2026-07-19*
 
-*Top pick* — [github/copilot-sdk](https://github.com/github/copilot-sdk)
-GitHub ships a first-party SDK for embedding the Copilot Agent into apps — the namespace Claude Code owns just got a direct incumbent alternative with rust + java parity in the same release cycle.
+*Top pick* — [Robbyant/lingbot-map](https://github.com/Robbyant/lingbot-map)
+first serious feed-forward 3D foundation model — 20 fps on 10k+ frame streams, kills the per-scene bundle-adjustment loop the dust3r/mast3r lineage still runs.
 
 *AI/ML*
-• [github/copilot-sdk](https://github.com/github/copilot-sdk) — ★ 233 today (9.8k total) · Java · [ACCELERATING]
-v1.0.7 shipped across rust + java 7-16 15:22Z; today's 233 = 17.9× yesterday's 13 = catalyst spike confirms watchlist call.
+• [Robbyant/lingbot-map](https://github.com/Robbyant/lingbot-map) — ★ 831 today (13k total) · Python · [ACCELERATING]
+arxiv preprint + huggingface weights + flashinfer paged-kv streaming; geometric context transformer replaces iterative optimization.
+
+• [lyogavin/airllm](https://github.com/lyogavin/airllm) — ★ 161 today (23k total) · Jupyter · [RETURNING]
+3yo repo returns at 7.8× baseline on 70b-inference-on-4gb-gpu; parallels bonsai-27b fits-on-iphone rail as china-lab edge-inference push.
 
 *Devtools*
-• [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) — ★ 74 today (19.9k total) · Python · [RETURNING]
-persistent local knowledge-graph for MCP + claude-code; v2.3.7 released today 00:33Z, aimed at context-window burn on large codebases.
+• [KnockOutEZ/wigolo](https://github.com/KnockOutEZ/wigolo) — ★ 203 today (1.4k total) · TypeScript · [RETURNING]
+mcp-server for local-first web-search/crawl — $0/query vs exa/tavily/firecrawl, pushed 09:14z today on v0.2.0 propagation from 7-17.
 
-*Infra*
-• [RyanCodrai/turbovec](https://github.com/RyanCodrai/turbovec) — ★ 280 today (13.4k total) · Rust · [RETURNING]
-SIMD-quantized (AVX512 + NEON) nearest-neighbor index with python bindings — 38d-idle repo spikes today with no release = viral moment against faiss for rag stacks.
+• [MoonshotAI/kimi-cli](https://github.com/MoonshotAI/kimi-cli) — ★ 65 today (9.6k total) · Python · [RETURNING]
+moonshot enters the claude-code/codex agent-cli race with v1.49.0 3 days ago; kimi k3 open weights on 7-27 = watchlist adjacency.
 
 ---
-sources: trending=ok · gh_api=ok · kept 3/14
+sources: trending=ok · gh_api=ok · kept 4/11
