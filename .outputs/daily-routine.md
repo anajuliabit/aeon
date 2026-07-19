@@ -1,57 +1,49 @@
-*Daily Routine — 2026-07-18*
+*Daily Routine — 2026-07-19*
 
-_60/100 top coins green, top-50 median +0.36% — mixed tape, alt rotation into ADA/CRO majors while low-caps do the heavy lifting._
+_Pulse: 51/100 top-100 green, top-50 median +0.06% — flat/mixed tape, big-cap fatigue. BTC $64,657 (brief $65k break faded), ETH $1,867, SOL $76.03, BNB $568.76, HYPE $60.80. Kept 121/250._
 
 *Top Winners (24h)*
-1. XEC (eCash) — $0.00000841  +23.8% / 7d +63.0%  •  $101M / #185  [BREAKOUT]
-2. VVV (Venice Token) — $11.51  +14.0% / 7d +7.5%  •  $33M / #99
-3. EDGE (edgeX) — $0.4433  +12.4% / 7d +18.0%  •  $7.7M / #196
-4. BTW (Bitway) — $0.06509  +10.6% / 7d +2.4%  •  $10M / #211  [MICROCAP]
-5. UB (Unibase) — $0.08842  +7.6% / 7d +19.0%  •  $11M / #153
-6. TRUMP — $1.62  +5.2% / 7d +0.9%  •  $109M / #117
-7. CRO (Cronos) — $0.0607  +4.9% / 7d +8.9%  •  $22M / #33
-8. ADA (Cardano) — $0.166  +4.5% / 7d -0.6%  •  $393M / #18  [MAJOR]
+1. B (BUILDon) — $0.1836 +61.5% / 7d +41% • $50M / #176 [BREAKOUT]
+2. TAG (TAGGER) — $0.00118 +23.6% / 7d +24% • $5M / #225 [BREAKOUT MICROCAP]
+3. TRAC (OriginTrail) — $0.298 +14.7% / 7d +12% • $7M / #222
+4. KAITO — $0.921 +12.5% / 7d +37% • $34M / #155
+5. ALLO (Allora) — $0.463 +12.1% / 7d +34% • $46M / #247
+6. BTW (Bitway) — $0.0662 +5.8% / 7d +10% • $10M / #209
+7. NEO — $2.04 +5.4% / 7d +4.5% • $36M / #211
+8. PI (Pi Network) — $0.0861 +4.8% / 7d -12% • $12M / #68
+9. ZEC (Zcash) — $559 +4.4% / 7d +8.9% • $224M / #14 [MAJOR]
+10. XEC (eCash) — $0.0000087 +4.1% / 7d +69% • $100M / #183
 
 *Top Losers (24h)*
-1. KITE — $0.1084  -10.6% / 7d -10.5%  •  $85M / #142  [CAPITULATION]
-2. STABLE — $0.0354  -10.4% / 7d -0.4%  •  $16M / #71
-3. BONK — $0.00000299  -9.4% / 7d -26.8%  •  $57M / #140  [CAPITULATION]
-4. TRAC (OriginTrail) — $0.259  -8.8%  •  $9.4M / #234
-5. BEAT (Audiera) — $2.34  -7.4% / 7d -15.6%  •  $6.2M / #84
-6. ADI — $6.54  -7.2% / 7d +3.9%  •  $6.3M / #75
-7. DCR (Decred) — $12.39  -6.1% / 7d +10.8%  •  $1.8M / #155
-8. KAITO — $0.826  -5.7% / 7d +35.0%  •  $52M / #170  [FADE]
+1. BONK — $0.0000028 -6.2% / 7d -30% • $61M / #143
+2. ONDO — $0.350 -5.8% / 7d +7.5% • $162M / #44
+3. LDO (Lido) — $0.356 -4.1% / 7d +16% • $25M / #130
+4. BDX (Beldex) — $0.0821 -3.9% / 7d -5.6% • $14M / #90
+5. ADI — $6.29 -3.8% / 7d -3.7% • $5M / #76
+6. AERO — $0.453 -3.6% / 7d -12% • $27M / #110
+7. XPL (Plasma) — $0.0818 -3.1% / 7d -10% • $29M / #160
+8. DEXE — $34.50 -3.0% / 7d -13% • $55M / #49
+9. MANA (Decentraland) — $0.0696 -2.9% / 7d -4.5% • $9M / #216
+10. ZBCN (Zebec) — $0.00195 -3.0% / 7d -10% • $11M / #173
 
-*Trending:* ADI, PENGU, HYPE, CASHCAT, ANSEM, ONDO, TOSHI (+12% only trending-up).
+*Trending:* LAB (#394, -6.6% — the -95% zero-arc case flickers), PENGU, CASHCAT, LTC, GRAM (ex-Toncoin), VIRTUAL, CRED (+24.8%).
+
+*Notable*
+• BUILDon +61.5% AND +41% 7d = clean BREAKOUT. XEC extends d2 hold on +69% 7d (sustained-shape, not one-day-unwind). KAITO reverses 7-18 FADE (-5.7% → +12.5%). BONK CAPITULATION d3, 7d -30%. Losing side compressed — all under 7% = flat-with-outlier-winners tape.
 
 *Tweet Roundup*
-*Crypto:* BTC $63.9k / ETH $1,866 — 6th day of Iran airstrikes dulls risk. DeFiTuna Solana pool hit for $580k. Visa VSP enterprise stablecoin rails (USDC/USDG, 15k banks). Ondo + SBI tokenize Japanese stocks via JPYSC.
-*AI:* OpenAI ships GPT-5.6 (Sol/Terra/Luna) + ChatGPT Work agent. Meta Muse Spark 1.1 tightens tool-use. Kimi K3 lands 57.1 AA, 2.8T params, 1M ctx, open weights due 7-27. First ARC-AGI-3 Milestone winners announced.
-*Dev:* Anaconda acquires Kilo (model-independent AI coding assistant, stays open source). Linus vs kernel-devs on Sashiko agentic review. Pocket ID + Tinyauth go OpenID-compatible.
+*Crypto:* BTC's brief $65k hold faded on 6th day of Iran airstrikes; ETH +7% weekly leads BTC's +2%. US spot BTC ETFs snap 10-day outflow streak with $221.7M in — biggest daily haul in 2 months. FHFA orders Fannie/Freddie to count crypto as mortgage asset; Better+Coinbase issue first Fannie-backed crypto mortgage.
+*AI:* Moonshot Kimi K3 lands — 2.8T params open MoE, 1M ctx, Kimi Delta Attention, beats Fable 5 + GPT-5.6 Sol on Arena front-end coding, edges Opus 4.8 in text ranking at 40% lower cost. Open weights ship 7-27. Anthropic accuses Chinese labs of industrial-scale distillation from US frontier models.
+*Dev:* Anaconda-Kilo acquisition holds (7-18 signal, model-independent AI coding, stays OSS). VS Code 1.110 agent plugins live (skills + tools + hooks bundle installable from Extensions). OpenTofu 10M downloads, Valkey 700+ contributors.
 
 *Paper of the Day*
-"LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget" — Zhou et al · ↑105
-Closes the gap between million-token inference and 256k RL post-training — matters for any agent whose trajectory accumulates tool outputs, docs, and prior decisions.
-[Read](https://arxiv.org/abs/2607.14952) | [PDF](https://arxiv.org/pdf/2607.14952)
+"Rethinking the Evaluation of Harness Evolution for Agents" (2607.12227, 5↑) — argues harness-search benchmarks over-report gains because they don't hold matched feedback + inference budgets against task-level search baselines. Directly aeon-thesis: same rebuke applies to self-improve loops that grade themselves on the same benchmark they optimize. Runner-up: LongStraw compounds d2 (105↑ → 174↑ overnight, +65% surge) — 2M-ctx RL under fixed GPU budget continues to dominate the week's leaderboard.
 
 *GitHub Issues*
-No new issues in 24h across owner scope.
+No new issues (anajuliabit scope, since 7-18 07:25Z).
 
 *HN Digest*
-_Quiet AI-tooling day — Kimi K3 pelican teardown leads, enterprise-AI harm and an exoplanet round it out._
-
-1. **[AI]** [Kimi K3 and the pelican benchmark](https://simonwillison.net/2026/Jul/16/kimi-k3/) — 319 pts · 168 comments
-   simonw benchmarks K3 vs Opus/Sonnet/Fable via SVG-pelican-on-bicycle; 85-token hidden system prompt inferred from token counts.
-   [Discuss](https://news.ycombinator.com/item?id=48947717)
-
-2. **[AI-harm]** [Kaiser nurses say AI + surveillance make care worse](https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/) — 481 pts · 307 comments
-   Nurses fear long-call performance reviews; Kaiser denies AHT is a metric — semantic dodge flagged in comments.
-   [Discuss](https://news.ycombinator.com/item?id=48952880)
-
-3. **[Science]** [First atmosphere on Earth-like planet in habitable zone](https://www.bbc.com/news/articles/cy4kdd1e0ejo) — 435 pts · 256 comments
-   48 light years, plausible near-term probe target; NASA exoplanet catalog live.
-   [Discuss](https://news.ycombinator.com/item?id=48947560)
-
-4. **[Security]** [TP-Link Kasa cams leaked home GPS via unauth UDP for 6 years](https://github.com/BadChemical/IoT-Vulnerability-Research-Public/blob/main/TP-Link_Kasa_EC71/Kasa_EC71.md) — 95 pts · 21 comments
-   2 CVEs, vendor beta patch bricked test device, factory reset doesn't clear prior-owner data.
-   [Discuss](https://news.ycombinator.com/item?id=48952565)
+1. [LG monitors silently install software via Windows Update](videocardz.com) (1094 pts, 560 comments) — trust-breaker
+2. [GPT-5.6 closes 30-year gap in convex optimization](reddit.com/r/math) (546 pts, 349 comments) — AI hits research-math
+3. [Setting up your spare Mac for Claude Code to control](github.io) (216 pts, 147 comments) — aeon-adjacent runbook
+4. [Speech Recognition + TTS under 500kb](moonshine/micro) (402 pts, 46 comments) — moonshine-ai edge-compute artifact
