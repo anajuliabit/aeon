@@ -1,0 +1,223 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "skill health",
+        "description": "2026-07-20"
+      },
+      "children": [
+        "status_alert",
+        "critical_section",
+        "separator_1",
+        "degraded_section",
+        "separator_2",
+        "nodata_section",
+        "separator_3",
+        "healthy_section",
+        "separator_4",
+        "summary_section"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: CRITICAL(1)",
+        "message": "systemic: 18 skills output_tokens=0 sandbox-truncation d28",
+        "type": "error"
+      }
+    },
+    "critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical_badge",
+        "critical_item"
+      ]
+    },
+    "critical_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴 CRITICAL",
+        "variant": "destructive"
+      }
+    },
+    "critical_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cost_report_name",
+        "cost_report_details"
+      ]
+    },
+    "cost_report_name": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "cost_report_details": {
+      "type": "Text",
+      "props": {
+        "text": "cf=10, 21d down (last_success 2026-06-29), mon-weekly 07z tick missed n=3 (7-6/7-13/7-20), scheduler picked up 12:57z batch → WAIT-API → ISS-025",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator"
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_badge",
+        "degraded_items",
+        "degraded_more_link"
+      ]
+    },
+    "degraded_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 DEGRADED (17, top 5 by days-cold)",
+        "variant": "secondary"
+      }
+    },
+    "degraded_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deg_1",
+        "deg_2",
+        "deg_3",
+        "deg_4",
+        "deg_5"
+      ]
+    },
+    "deg_1": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse — 47% sr, 22d cold (dead-slot d23) → WAIT-API → ISS-025-family"
+      }
+    },
+    "deg_2": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor — 53% sr, 22d cold (12z batch-dark) → WAIT-API → ISS-025-family"
+      }
+    },
+    "deg_3": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh — 32% sr, 22d cold (12z batch-dark) → WAIT-API → ISS-025-family"
+      }
+    },
+    "deg_4": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker — 33% sr, 22d cold (12z batch-dark) → WAIT-API → ISS-025-family"
+      }
+    },
+    "deg_5": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — 16% sr, 5d cold → WAIT-API → ISS-025-family"
+      }
+    },
+    "degraded_more_link": {
+      "type": "Link",
+      "props": {
+        "label": "+12 more — see memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "separator_2": {
+      "type": "Separator"
+    },
+    "nodata_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata_badge",
+        "nodata_dispatch"
+      ]
+    },
+    "nodata_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "variant": "outline"
+      }
+    },
+    "nodata_dispatch": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard → DISPATCH-SKILL"
+      }
+    },
+    "separator_3": {
+      "type": "Separator"
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy_badge"
+      ]
+    },
+    "healthy_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟢 HEALTHY: 9",
+        "variant": "default"
+      }
+    },
+    "separator_4": {
+      "type": "Separator"
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "summary_issues",
+        "summary_note"
+      ]
+    },
+    "summary_issues": {
+      "type": "Text",
+      "props": {
+        "text": "open issues: 11 · filed: 0 · resolved: 0"
+      }
+    },
+    "summary_note": {
+      "type": "Text",
+      "props": {
+        "text": "classification byte-identical to 7-19 18:32z (4th-consec no-delta run, notify fires on 24h daily-reminder cadence)",
+        "variant": "caption"
+      }
+    }
+  }
+}
