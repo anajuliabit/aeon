@@ -1,0 +1,143 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-20"
+      },
+      "children": [
+        "text_intro",
+        "sep1",
+        "list_label",
+        "tweet1_stack",
+        "tweet2_stack",
+        "sep2",
+        "status_section"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "one list · one real signal — flowslikeosmo posts week watchlist heavy on ZRO/PUMP; hooeem image spikes wordless."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "list_label": {
+      "type": "Text",
+      "props": {
+        "text": "private list · 1642770456720683008",
+        "variant": "muted"
+      }
+    },
+    "tweet1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet1_engagement",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "week watchlist: OVER/APEX/PENDLE/YB/VIRTUAL/ZRO/PUMP/SUSHI/JUP/AERO — ZRO already -4.2% into today's investor-cliff print (unlock-monitor CRISIS mon jul 20), PUMP printed +22.3% today per daily-routine 08z",
+        "likes": 42,
+        "retweets": 2
+      }
+    },
+    "tweet1_engagement": {
+      "type": "Text",
+      "props": {
+        "text": "replies: 16",
+        "variant": "caption"
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2078977434414874634"
+      }
+    },
+    "tweet2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "tweet2_engagement",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "image-only, 6.4k views on zero text = list-side pull for the handle not the payload",
+        "likes": 45,
+        "retweets": 0
+      }
+    },
+    "tweet2_engagement": {
+      "type": "Text",
+      "props": {
+        "text": "replies: 4",
+        "variant": "caption"
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2078970710878212130"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status_text",
+        "source_text"
+      ]
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    },
+    "source_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(10, cache)",
+        "variant": "caption"
+      }
+    }
+  }
+}
