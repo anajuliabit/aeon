@@ -1,14 +1,18 @@
+Committed. Quiet run — no alerts fired.
+
 ## Summary
 
-**btc-levels 16:47Z run complete.**
+**BTC levels check — 2026-07-20 16:50Z**
 
-- **Spot:** $64,869 (down ~$393 from 13:43Z run)
-- **Daily close 2026-07-14:** $64,977 (above $60,500 floor — no breakdown)
+- **Spot:** $65,393.71 (up ~$830 from the 04:52Z run)
+- **Prev daily close (2026-07-18):** $64,679.77
 
-Level evaluations:
-- Leverage-review (≤$45k): clear
-- Breakdown close (<$60,500): clear — 7-14 close $64,977
-- Reclaim $63,500: `reclaim63500Alerted=true` holds; re-arm only on sub-$60,500 dip
-- Reclaim $65,900: spot $64,869 is ~$1,031 short of the gate
+**Level evaluations:**
+| Level | Status |
+|---|---|
+| Spot ≤ $45,000 (leverage review) | Clear — $65,393 well above |
+| Daily close < $60,500 (breakdown) | Clear — $64,679 above threshold |
+| Reclaim $63,500 | Already alerted (`reclaim63500Alerted = true`) |
+| Reclaim $65,900 | Not yet — spot is $506 short |
 
-No alerts fired. No notification sent. State and log committed (`2f2a934`). Full-reclaim $65,900 remains the next gate to watch.
+No alerts fired; no notification sent. Spot is approaching the $65,900 confirmation level — the next run(s) will be the watch.

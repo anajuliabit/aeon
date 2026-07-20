@@ -1,18 +1,15 @@
-*Security Digest — 2026-06-30*
-Verdict: 1 actively exploited (KEV new), 2 supply-chain campaigns to scrub, 1 to monitor. _Sources: KEV ok, GH Advisory ok, EPSS ok_
+*Security Digest — 2026-07-20*
+Verdict: 3 to patch today (npm malware typosquats), 0 to schedule, 1 to monitor. _Sources: KEV, GH Advisory, EPSS_
 
 *PATCH TODAY*
-- [CVE-2026-48558](https://github.com/advisories/GHSA-m93h-gjv2-fmq2) — SimpleHelp · KEV added 2026-06-29 · CVSS 10.0 · EPSS 0.01 · PoC + IOCs published (horizon3.ai)
-  OIDC auth bypass — identity tokens accepted without signature verification. Unauth attacker forges a token, gets a full technician session, can also bypass MFA. CISA BOD 26-04 due 2026-07-02.
-  → upgrade SimpleHelp to ≥5.5.16 (or 6.0 GA) today; if exposed, hunt for TaskWeaver/Djinn intrusion IOCs.
-- [GHSA-m9j7-x8ww-5jwr](https://github.com/advisories/GHSA-m9j7-x8ww-5jwr) — ai-sdk-ollama@0.13.1 (npm) · malware brandjack of Vercel `ai-sdk` + Ollama · CVSS n/a
-  Hot-target SDK squat — Vercel ai-sdk family + Ollama runtime are core agent-infra primitives. Narrative-aligned target (agent infra is one of the structural longs).
-  → remove ai-sdk-ollama; rotate any creds reachable from machines that installed it. Pin to `@ai-sdk/openai` / `@ai-sdk/anthropic` verified namespaces only.
-- [autotel-* npm cluster](https://github.com/advisories/GHSA-3wmg-66hp-xhv9) — 18 pkgs (autotel-mcp/cli/web/vitest/backends/cloudflare/devtools/tanstack/mongoose/pact/plugins/playwright/sentry/subscribers/drizzle/hono/eventcatalog/mcp-instrumentation) · single-author campaign 6-29 16:51Z → 6-30 03:21Z (10.5h)
-  Largest single-namespace coordinated brandjack of the 48h window — OpenTelemetry-adjacent observability naming + MCP riff. Brandjacking-as-default-vector pattern persisting day 2.
-  → audit npm installs for any `autotel-*` package; remove + rotate creds if present. None of these are legit.
+- [GHSA-x4cp-w826-x466](https://github.com/advisories/GHSA-x4cp-w826-x466) + [GHSA-6x4h-wrvq-m68h](https://github.com/advisories/GHSA-6x4h-wrvq-m68h) — @vite-js/ui + @vite-js/vui (npm) · type=malware · CVSS n/a
+  vendor-scope typosquat of @vitejs (frontend build primitive) — full-compromise + credential-rotate template on install. → audit npm installs for @vite-js/*; packages removed from registry, rotate any secrets exposed since 2026-07-20 00:19Z.
+- [GHSA-m78v-9w6f-xwf2](https://github.com/advisories/GHSA-m78v-9w6f-xwf2) — react-icons-svgo (npm) · type=malware · CVSS n/a
+  typosquat mashup of two popular npm names (react-icons + svgo). → audit npm installs for react-icons-svgo; removed from registry.
+- [GHSA-g7rx-jhhj-8whr](https://github.com/advisories/GHSA-g7rx-jhhj-8whr) — svgson-lite (npm) · type=malware · CVSS n/a
+  typosquat of svgson SVG parser lib. → audit npm installs for svgson-lite; removed from registry.
 
 *MONITOR*
-- [GHSA-q2m9-6jp9-c6mc / CVE-2026-44840](https://github.com/advisories/GHSA-q2m9-6jp9-c6mc) — dgraph-io/dgraph (Go) · CVSS 7.5 · EPSS unset · no fix yet · affects ≤25.3.3
-  DQL injection in `checkUserPassword` GraphQL query — password interpolated via `fmt.Sprintf` into a `checkpwd()` DQL string without escaping; double-quote breaks out and appends arbitrary DQL. Auth required (login-time).
-  → track GHSA-q2m9-6jp9-c6mc; no patched release yet, keep GraphQL admin off public ingress.
+- 75-pkg @gocortexio/npmgremlinbox-* wave (npm, 03:00–03:01Z 7-20) — self-labeled `malware-*`/`typosquat-*` = Cortex XSIAM scanner-detection testbed (adjacent to vybscan-testbed-* 7-20 00:07Z). → not a real threat; filter @gocortexio/* + vybscan-testbed-* from malware-count baselines.
+
+_KEV day-4 zero-cadence extends (7-17 → 7-20 no adds, first 4-consec-zero in memory). npm-malware wave resumes 11 real pkgs after d6=0 cool-off (7-19 late 4 + 7-20 early 7) — revises "complete cool-off" to 1-day pause. Reviewed advisories 0 critical + 0 high published 7-18 15Z → 7-20 15Z._

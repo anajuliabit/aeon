@@ -5,6 +5,30 @@ Daily market context lives in [[market-context]] (refreshed each cycle);
 daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
+## Recent durable patterns (2026-07-19)
+
+- **One-day-breakout-unwind at n=5** — MORPHO/EIGEN/NEX/TIBBIR/DRV. "Breakout must hold day-2 to be trusted." BEAT/B are the n=2 dead-cat-with-legs exception cluster (up-down-up).
+- **LAB -95% zero-arc reference case** — 7-day cumulative ~99.4%; `-59%/day sellers-exhaust d3-floor` heuristic 0/7. Use as reference class for future -95% projections.
+- **PUMP event=local-low, 2-step-forward-1-step-back shape** — 7-13 +8.35% → 7-14 -3.29% → 7-15 +13.45%; validates for high-supply-shock unlocks with a d2 pause.
+- **DCR/XEC pair-flip round-trip 3 days (whipsaw-shape candidate n=1)** — 7-13 top-2 → 7-14 bottom → 7-15 top-2 (both privacy leaders). Privacy-narrative rotation may present as whipsaw not sustained.
+- **GITLAWB whipsaw-continuation-pause-bounce 6-day arc under-baseline** (7-19 d6) — 7-14 -11.97% (0.63×) → 7-15 +13.36% (0.75×) → 7-16 -9.70% (0.63×) → 7-17 -18.89% (126% rail-breach, 0.60×) → 7-18 +0.66% dead-flat (0.71×) → 7-19 +5.61% thin-bid bounce (0.57×). All 6 sessions under-baseline (6-day running mean 0.64× participation) = mechanical across full arc. **Rail-breach n=1 single-session isolate**; d6 bounce on falling participation = thin-bid, not real bid — parallels WELL's mechanical-rebound signature.
+- **REPPO fade-back-to-trend completes with decelerating rate d5** (7-19) — 7-15 -12.66% → 7-16 -4.31% → 7-17 -12.66% → 7-18 -2.31% → 7-19 -0.54% log-to-log = mean-reversion exhausts fully at d5. Mechanical mean-reversion pattern prints clean tail.
+- **MAMO day-9 pause-at-mean sustainable-shape holds** (7-19) — 4th-consecutive near-baseline print (0.94× / 0.99× / 0.99× / 0.99×) = cleanest signature yet with sub-1% price drift on baseline vol. Weakest 24h print in sweep (1% of rail); mean-anchored, no distribution risk. Band tightens as MAMO's rail-adjacent participation compresses.
+- **WELL distribution-flush extends d2 not exhaust-within-24h** (7-19) — 7-17 3.29× vol spike ($2,008K) reads as one-day distribution flush; 7-18 mechanical-bounce hypothesis (bid returns within 24h) fails on 7-19: participation halves again to **$53K = new window-low, 0.10× baseline d2**. Distribution-flush thesis extends d2, mechanical-rebound thesis fades as bid stays absent.
+- **DEXE breakout** — 7-11→7-13 fresh ATH → 7-14 -7.5% → 7-15 -10.29%; 7d +33.6% intact but d4 second-red bigger than d3 = momentum breaking. Watchlist-add flag holds pending d5+ recovery vs continued unwind.
+- **HYPE rotation-out** — 7-12 → 7-14 continuous deepening → 7-15 fully unwinds (-1.71%). Rotation-out signal invalidates in one CPI-cools session.
+- **SLX pick day-25 terminal** at -70% ($0.1425 vs $0.4753 entry) — weekly-review 7-13 closed T-0 as goal step-5 out-of-scope; operator-owned surface only.
+- **BTC $63.5k arc softens then recovers** — 7-14 close $64,977 (reclaim); 7-15 close $64,722 confirms d2; 7-16 spot $63,905-$64,579 holds; 7-17 slips $62,859-$63,485; 7-18 close $64,793; 7-19 spot $64,357-$64,737 through the day. `reclaim63500Alerted=true` intact (re-arm sub-$60,500 only); $65,900 full-reclaim gate ~$1,300-1,500 above spot.
+- **BUILDon +61.5% BREAKOUT 7-19** — 7d +41% clean-tag both axes; 7-17 -5.9% loser d2 shape reverses hard. Watch d2 hold vs one-day-breakout-unwind pattern n=5.
+- **XEC breakout d2 hold confirms sustainable-shape 7-19** — 7-17 +23.8% BREAKOUT candidate; 7-19 +4.1% + 7d +69% = d2 hold confirms sustained-shape, **one-day-breakout-unwind pattern n=5 doesn't apply** to this instance (7d compounds instead of unwinds).
+- **BONK CAPITULATION d3 7-19** — 7-17 -9.4% → 7-19 -6.2% 24h; 7d cumulative -30% deepens from -27% = drawdown extends. LAB -95% zero-arc reference-adjacent watch.
+- **KAITO FADE-tag-24h-misfire n=1 NEW 7-19** — 7-18 daily-routine FADE tag on KAITO -5.7% reverses 24h later +12.5% (7d +37% recovery). Watchlist reliability signal cuts both directions (n=1 mirror of watchlist-call-resolves).
+- **BTC ETF regime-shift signal 7-19** — US spot BTC ETFs snap 10-day outflow streak with $221.7M inflow = biggest daily haul in 2 months + FHFA orders Fannie/Freddie count crypto as mortgage asset + Better+Coinbase issue first Fannie-backed crypto mortgage = institutional-onramp firms.
+- **Watchlist compression regime 7-19** — 2-consec-day-zero-alerts on full mechanical resolve (WELL d2 flush-extends + MAMO d9 baseline-hold + REPPO d5 mean-reversion-completes + GITLAWB d6 thin-bid-bounce). 4/4 signals fade to noise; watchlist enters compression regime = no real re-accumulation candidates.
+- **CoinGecko 27 consecutive clean days post-ISS-023 recovery** (through 7-19 token-alert 12:41Z) — single 200 fetch on `simple/price` batch, no WebFetch fallback.
+
+
+
 ## Narrative tracker
 - **FADE: Perp DEX / Hyperliquid.** Demoted Peak→Fading 2026-06-05.
   HYPE −8.65% intraday on 6-05, 7d green-hold finally broke (was
@@ -1070,3 +1094,11 @@ Prices from token-alert 12:54Z (7-08 12:00Z batch caught up at 12:54Z, still dar
 - **Macro overlay 7-14 = Fed-hike-bets front-running** — coindesk: traders lift July Fed rate hike bets ahead of inflation report + Warsh testimony; 2y treasury yield highest since early last year; oil upswing + US-Iran tensions; majors -2%+ in 24h. Explains today's tape breakdown at BTC/majors level; not skill-specific.
 - **token-alert 7-14 watchlist arc = exhaustion day** — 0/12 checks fire; 15% rail intact on all 4 tokens for first time since 7-11. GITLAWB fades under rail without repeating breach (-11.97% / 0.57× baseline = exhaustion not capitulation); REPPO bounces +7.17% off flat on 0.19× vol (mechanical mean-reversion decouples from GITLAWB d3); MAMO day-4 bounce flat +2.14%; WELL +6.22% log-to-log on **0.11× vol participation-vanish** — 7-12 6.35× resurrection reads as one-day head-fake, "distribution-with-return" INVALIDATES back to "participation-vanish → floor" branch.
 - **Weekly-review 7-13 T-0 executed** — SLX terminal at -70% closed as goal step-5 out-of-scope (position management outside skill scope). 4 SMART actions shipped. Investment Advisor 7-consec-cancellation surfaced as new durable pattern (undocumented pre-surface, invisible to skill-health as workflow-file class).
+
+### 2026-07-15 → 2026-07-17 — arc reopens, GITLAWB whipsaw resolves, WELL distribution surfaces
+- **BTC arc REOPENED** — 7-14 daily close $64,977 (first close above $63,500 gate since 7-13 arc-closed at $62,242); 7-15 close $64,722 confirms d2 above-gate; 7-16 spot $63,905–$64,579 all-day above $63,500; 7-17 spot slips to $62,859 at 09:17Z, later ticks up to $63,485 at 16:47Z. `reclaim63500Alerted=true` intact throughout (re-arm sub-$60,500 only). $65,900 full-reclaim gate remains next trigger.
+- **GITLAWB 4-session whipsaw-then-continuation CODIFIES** — 7-14 -11.97%/80% rail → 7-15 +13.36%/89% rail → 7-16 -9.70%/65% rail → **7-17 -18.89%/126% rail-breach** on 0.60× baseline participation. All 4 sessions under-baseline (0.63/0.75/0.63/0.60×). Pattern class updates from "round-trip whipsaw" to **whipsaw-then-continuation** — mechanical whipsaw resolves into trend-fade on day-4. Revises 7-16 "round-trip closes" call as interim.
+- **WELL distribution-with-return classification** (7-17) — 9-day participation-vanish state BREAKS with 3.29× baseline vol spike ($2,008K vs $610K mean) on -7.25% 24h = late-cycle distribution shape (heavy prints return on downside). First 3×+ vol print since 7-12. Floor-hunt branch resolves into distribution.
+- **REPPO fade-back-to-trend continuation d3 confirms** — 7-15 -6.74% → 7-16 -3.45% → 7-17 -12.56% (84% of 15% rail, near-miss). Vol 2.03× vs yesterday but 0.86× baseline = trend-decay with fresh sellers, no capitulation.
+- **MAMO day-7 pause-at-mean sustainable-shape** — 7-16 -1.18%/0.98× → 7-17 +0.14%/0.94× = second-consecutive near-exact-baseline. Weakest 24h print in sweep, mean-anchored.
+- **Weekly-review action closure** — action #4 SHIPPED-ON-TARGET via self-improve PR #164 (7-15 19:31Z T-1); first cross-week weekly-review action closed via self-improve authored PR since PR #160 flipped ISS-022 on 7-06/7-07. PR now CONFLICTING per rule-5 extension but investigation output landed.

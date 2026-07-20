@@ -1,0 +1,173 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "new_section",
+        "sep1",
+        "unchanged_section"
+      ]
+    },
+    "new_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_badge",
+        "pr164"
+      ]
+    },
+    "new_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟢 New",
+        "variant": "default"
+      }
+    },
+    "pr164": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr164_link",
+        "pr164_author",
+        "pr164_action",
+        "pr164_investigation"
+      ]
+    },
+    "pr164_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #164: fix(investment-advisor): fail-fast committee retries to stop 20-min timeout cancellations",
+        "href": "https://github.com/aeon/aeon/pull/164"
+      }
+    },
+    "pr164_author": {
+      "type": "Text",
+      "props": {
+        "text": "Authored by self-improve at 19:31Z"
+      }
+    },
+    "pr164_action": {
+      "type": "Text",
+      "props": {
+        "text": "Closing weekly-review action #4 T-1"
+      }
+    },
+    "pr164_investigation": {
+      "type": "Text",
+      "props": {
+        "text": "investment-advisor 7-consec-cancellation investigation d10 → PR"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "unchanged_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "unchanged_badge",
+        "stuck_list",
+        "dedup_note"
+      ]
+    },
+    "unchanged_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴 Unchanged",
+        "variant": "destructive"
+      }
+    },
+    "stuck_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cost_report",
+        "pr162",
+        "pr163"
+      ]
+    },
+    "cost_report": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report STUCK d3 (~48h)"
+      }
+    },
+    "pr162": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr162_link",
+        "pr162_status"
+      ]
+    },
+    "pr162_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #162",
+        "href": "https://github.com/aeon/aeon/pull/162"
+      }
+    },
+    "pr162_status": {
+      "type": "Text",
+      "props": {
+        "text": "T+1 day-2 (~99h stall)",
+        "variant": "caption"
+      }
+    },
+    "pr163": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr163_link",
+        "pr163_status"
+      ]
+    },
+    "pr163_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #163",
+        "href": "https://github.com/aeon/aeon/pull/163"
+      }
+    },
+    "pr163_status": {
+      "type": "Text",
+      "props": {
+        "text": "past 48h gate (~50h)",
+        "variant": "caption"
+      }
+    },
+    "dedup_note": {
+      "type": "Text",
+      "props": {
+        "text": "all dedup",
+        "variant": "muted"
+      }
+    }
+  }
+}

@@ -1,24 +1,24 @@
 {
-  "last_run": "2026-07-12",
+  "last_run": "2026-07-19",
   "target_repo": "aaronjmars/aeon",
-  "n_active": 75,
-  "n_configured": 73,
-  "n_template": 0,
-  "n_unreadable": 2,
+  "n_active": 61,
+  "n_configured": 58,
+  "n_template": 2,
+  "n_unreadable": 1,
   "buckets": {
     "DEFAULT_FLIP_ENABLE": [],
     "DEFAULT_FLIP_DISABLE": [
-      {"skill": "action-converter", "forks": 71, "pct": 0.97},
-      {"skill": "search-skill", "forks": 71, "pct": 0.97},
-      {"skill": "security-digest", "forks": 69, "pct": 0.95},
-      {"skill": "github-trending", "forks": 67, "pct": 0.92},
-      {"skill": "goal-tracker", "forks": 49, "pct": 0.67},
-      {"skill": "narrative-tracker", "forks": 46, "pct": 0.63},
-      {"skill": "skill-health", "forks": 45, "pct": 0.62},
-      {"skill": "defi-overview", "forks": 43, "pct": 0.59},
-      {"skill": "token-pick", "forks": 41, "pct": 0.56},
-      {"skill": "reflect", "forks": 38, "pct": 0.52},
-      {"skill": "self-improve", "forks": 37, "pct": 0.51}
+      {"skill": "action-converter", "forks": 57, "pct": 0.98},
+      {"skill": "search-skill", "forks": 56, "pct": 0.97},
+      {"skill": "security-digest", "forks": 54, "pct": 0.93},
+      {"skill": "github-trending", "forks": 52, "pct": 0.90},
+      {"skill": "goal-tracker", "forks": 50, "pct": 0.86},
+      {"skill": "narrative-tracker", "forks": 48, "pct": 0.83},
+      {"skill": "defi-overview", "forks": 48, "pct": 0.83},
+      {"skill": "token-pick", "forks": 47, "pct": 0.81},
+      {"skill": "reflect", "forks": 46, "pct": 0.79},
+      {"skill": "skill-health", "forks": 44, "pct": 0.76},
+      {"skill": "self-improve", "forks": 44, "pct": 0.76}
     ],
     "MODEL_CONSENSUS": [],
     "VAR_HOTSPOT": [],
@@ -27,13 +27,22 @@
   "fork_only_skills": [
     {"fork": "swarm-ai-research/aeon-atlas", "skill": "atlas"},
     {"fork": "swarm-ai-research/aeon-atlas", "skill": "atlas-layers"},
-    {"fork": "swarm-ai-research/aeon-atlas", "skill": "atlas-improve"}
+    {"fork": "swarm-ai-research/aeon-atlas", "skill": "atlas-improve"},
+    {"fork": "penguinxbt/aeon", "skill": "peng-scout"},
+    {"fork": "penguinxbt/aeon", "skill": "peng-pulse"},
+    {"fork": "lawbworld-tech/aeon", "skill": "lawb-pool-monitor"},
+    {"fork": "damo-nu11/aeon-minebean", "skill": "mine-bean"},
+    {"fork": "ether-btc/aeon", "skill": "github-upstream-tracker"},
+    {"fork": "Da6hkin/aeon", "skill": "money-radar"},
+    {"fork": "Da6hkin/aeon", "skill": "lead-finder"},
+    {"fork": "Aluma/aeon", "skill": "vch-program"},
+    {"fork": "Aluma/aeon", "skill": "vch-plan-review"}
   ],
   "fingerprints": [
-    {"fork": "Svector-anu/skopos-aeon", "total_overrides": 22, "dominant_category": "crypto"},
-    {"fork": "alpenflow/aeon", "total_overrides": 21, "dominant_category": "meta"},
-    {"fork": "Marr554/aeon", "total_overrides": 17, "dominant_category": "content"},
-    {"fork": "swarm-ai-research/aeon-atlas", "total_overrides": 15, "dominant_category": "fork-only"},
-    {"fork": "tomscaria/aeon", "total_overrides": 14, "dominant_category": "mixed"}
+    {"fork": "Aluma/aeon", "total_overrides": 22, "dominant_category": "dev/security"},
+    {"fork": "Svector-anu/svectors-lab", "total_overrides": 18, "dominant_category": "crypto"},
+    {"fork": "Da6hkin/aeon", "total_overrides": 17, "dominant_category": "content"},
+    {"fork": "Marr554/aeon", "total_overrides": 15, "dominant_category": "content"},
+    {"fork": "enuno/noesis-aeon", "total_overrides": 14, "dominant_category": "meta"}
   ]
 }

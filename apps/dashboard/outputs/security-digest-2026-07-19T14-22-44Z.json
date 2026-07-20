@@ -1,0 +1,388 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest",
+        "description": "2026-07-19"
+      },
+      "children": [
+        "verdict-stack",
+        "sep1",
+        "sources-stack",
+        "sep2",
+        "patch-heading",
+        "patch-items",
+        "sep3",
+        "monitor-heading",
+        "monitor-items"
+      ]
+    },
+    "verdict-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "verdict-text"
+      ]
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict: nothing urgent today. 3 to schedule, 1 to monitor.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-label",
+        "sources-badges"
+      ]
+    },
+    "sources-label": {
+      "type": "Text",
+      "props": {
+        "text": "Sources",
+        "variant": "caption"
+      }
+    },
+    "sources-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "kev-badge",
+        "gh-badge",
+        "epss-badge"
+      ]
+    },
+    "kev-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV: 0 net-new (day-3 zero-cadence)"
+      }
+    },
+    "gh-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "GH Advisory: 0 malware (wave breaks after d5=22)"
+      }
+    },
+    "epss-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h3"
+      }
+    },
+    "patch-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "vuln1",
+        "vuln2",
+        "vuln3"
+      ]
+    },
+    "vuln1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vuln1-links",
+        "vuln1-pkg",
+        "vuln1-scores",
+        "vuln1-poc",
+        "vuln1-desc",
+        "vuln1-action"
+      ]
+    },
+    "vuln1-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "vuln1-link1",
+        "vuln1-link2"
+      ]
+    },
+    "vuln1-link1": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-rwxx-mrjm-wc2m",
+        "href": "https://github.com/advisories/GHSA-rwxx-mrjm-wc2m"
+      }
+    },
+    "vuln1-link2": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-8wr5-jm2h-8r4f",
+        "href": "https://github.com/advisories/GHSA-8wr5-jm2h-8r4f"
+      }
+    },
+    "vuln1-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "vllm (pip)",
+        "variant": "secondary"
+      }
+    },
+    "vuln1-scores": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.5 + 7.5  ·  EPSS 0.003",
+        "variant": "body"
+      }
+    },
+    "vuln1-poc": {
+      "type": "Text",
+      "props": {
+        "text": "No public PoC",
+        "variant": "caption"
+      }
+    },
+    "vuln1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Same-day DoS pair — ReDoS in structured_outputs.regex (xgrammar/outlines backends compile without timeout) + remote DoS via invalid recovered token reinjection.",
+        "variant": "body"
+      }
+    },
+    "vuln1-action": {
+      "type": "Alert",
+      "props": {
+        "message": "Upgrade vllm to ≥0.24.0 (single bump covers both).",
+        "type": "warning"
+      }
+    },
+    "vuln2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vuln2-link",
+        "vuln2-pkg",
+        "vuln2-scores",
+        "vuln2-poc",
+        "vuln2-desc",
+        "vuln2-action"
+      ]
+    },
+    "vuln2-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-q38v-wp89-2w55",
+        "href": "https://github.com/advisories/GHSA-q38v-wp89-2w55"
+      }
+    },
+    "vuln2-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "sh (pip)",
+        "variant": "secondary"
+      }
+    },
+    "vuln2-scores": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.9  ·  EPSS n/a",
+        "variant": "body"
+      }
+    },
+    "vuln2-poc": {
+      "type": "Text",
+      "props": {
+        "text": "No public PoC",
+        "variant": "caption"
+      }
+    },
+    "vuln2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "_uid fails to drop supplementary groups → incomplete privilege drop. Widely-embedded subprocess wrapper; defense-in-depth erosion for anything spawning children as a lower-privileged uid.",
+        "variant": "body"
+      }
+    },
+    "vuln2-action": {
+      "type": "Alert",
+      "props": {
+        "message": "Upgrade sh to ≥2.2.4.",
+        "type": "warning"
+      }
+    },
+    "vuln3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vuln3-link",
+        "vuln3-pkg",
+        "vuln3-scores",
+        "vuln3-poc",
+        "vuln3-desc",
+        "vuln3-action"
+      ]
+    },
+    "vuln3-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-2v2f-mvfg-ph56",
+        "href": "https://github.com/advisories/GHSA-2v2f-mvfg-ph56"
+      }
+    },
+    "vuln3-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "meta-ads-mcp (pip)",
+        "variant": "secondary"
+      }
+    },
+    "vuln3-scores": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.4",
+        "variant": "body"
+      }
+    },
+    "vuln3-poc": {
+      "type": "Text",
+      "props": {
+        "text": "EPSS n/a",
+        "variant": "caption"
+      }
+    },
+    "vuln3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "X-Pipeboard-Token header auth bypass reuses operator meta token. Same-package sibling to yesterday's CVE-2026-54549 SSRF (fixed by same version bump).",
+        "variant": "body"
+      }
+    },
+    "vuln3-action": {
+      "type": "Alert",
+      "props": {
+        "message": "Upgrade meta-ads-mcp to ≥1.0.115.",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h3"
+      }
+    },
+    "monitor-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "vuln4"
+      ]
+    },
+    "vuln4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "vuln4-link",
+        "vuln4-pkg",
+        "vuln4-severity",
+        "vuln4-scores",
+        "vuln4-desc",
+        "vuln4-action"
+      ]
+    },
+    "vuln4-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-r95q-fp26-h3hc",
+        "href": "https://github.com/advisories/GHSA-r95q-fp26-h3hc"
+      }
+    },
+    "vuln4-pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "@tak-ps/cloudtak (npm)",
+        "variant": "secondary"
+      }
+    },
+    "vuln4-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "high"
+      }
+    },
+    "vuln4-scores": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS n/a  ·  Fix: 13.10.0",
+        "variant": "body"
+      }
+    },
+    "vuln4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Authenticated full-read SSRF in /api/esri* routes — user-controlled URL fetched with no IP classification.",
+        "variant": "body"
+      }
+    },
+    "vuln4-action": {
+      "type": "Alert",
+      "props": {
+        "message": "Upgrade if CloudTAK is in your fleet; otherwise watch.",
+        "type": "info"
+      }
+    }
+  }
+}

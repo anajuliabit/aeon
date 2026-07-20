@@ -1,19 +1,23 @@
-Log entry written. All 4 tokens under 24h thresholds, no volume spike, no threshold-cross configured — silent TOKEN_ALERT_OK per skill spec. Emitting the final summary.
+0/12 checks fire — no notification per skill spec. Result logged.
 
 ## Summary
-Ran **token-alert** skill (var=""). Parsed 4 tracked tokens from `memory/MEMORY.md` (WELL/MAMO/REPPO/GITLAWB). Fetched CoinGecko `simple/price` in a single unauth curl (200, 394B, 109ms — 23rd consecutive clean CG day). Live prints:
 
-| Token | Price | 24h % | 24h Vol | vs 5w baseline | Rail % |
-|-------|-------|-------|---------|----------------|--------|
-| WELL | $0.00366518 | +0.08% | $101K | 0.08× ($1,285K mean) | 1% |
-| MAMO | $0.00944674 | +1.94% | $1,034K | 1.15× ($900K) | 13% |
-| REPPO | $0.02665346 | -6.74% | $287K | 0.68× ($422K) | 45% |
-| GITLAWB | $0.00003895 | **+13.36%** | $396K | 0.75× ($525K) | **89%** |
+Ran `token-alert` skill (scheduled 12:00Z slot, fired ~60min late per catch-up band — batch-dark **day-23** rollover; band widens vs 7-19's 41min on mon-load-day). Parsed 4 tracked tokens from `memory/MEMORY.md` (WELL/MAMO/REPPO/GITLAWB); no `${var}` override; no Floor/Ceiling columns → threshold-cross skipped for all 4. Single unauth CoinGecko `simple/price` curl returned 200 clean — **28th consecutive clean CG day** post-ISS-023 recovery.
 
-**Status: TOKEN_ALERT_OK** — 0/12 checks fire (0/4 24h thresholds, 0/4 volume spikes vs 3× rail, 4/4 threshold-cross skipped per no Floor/Ceiling in config). Notification **skipped** per skill step 3 gate. GITLAWB closest to firing at 89% of 15% rail — second-consecutive day approaching rail (7-14 -11.97% fade → 7-15 +13.36% green = opposite-side approach). 15% rail intact on all 4 for a 2-run streak.
+**Prices (12:57Z):**
+- WELL $0.00349747 · -0.15% 24h · vol $66K (**0.14× baseline**)
+- MAMO $0.00953722 · +0.97% 24h · vol $901K (**0.97× baseline**)
+- REPPO $0.02137660 · -0.73% 24h · vol $58K (**0.30× baseline**)
+- GITLAWB $0.00002674 · **-10.59%** 24h · vol $243K (**0.88× baseline**)
 
-Body-pattern verdict: **7-15 whipsaw-into-rail-from-opposite-side day** — GITLAWB grinds back green without hot bid (exhaustion validates), REPPO's 7-14 bounce mean-reverts confirming mechanical shape, MAMO first million-print day-5 sustainable, WELL 0.08× vol on flat print = strongest participation-vanish yet. REPPO/GITLAWB opposite-direction for third session (decoupling extends).
+**Result: 0/12 checks fire = `TOKEN_ALERT_OK`, no notify sent** (extends 7-18 → 7-19 → 7-20 to **3-consec zero-alerts day, watchlist compression regime durable d2**).
 
-Files modified: `.tmp/token-alert/cg.json`, `.tmp/token-alert/calc.py`, `memory/logs/2026-07-15.md`.
+**Notable signals** (all sub-threshold, log-only):
+- **GITLAWB thin-bid-rebound-then-fade-back-cliff n=1 confirms** — yesterday's +5.61% bounce reverses -10.51% within 24h on **rising** volume (1.38× yesterday) = 7-19's "watch d7 for follow-through vs fade-back" call resolves as volume-confirmed distribution. Closest miss by 4.4pt vs 15% threshold.
+- **MAMO pause-at-mean day-10** signature holds (5th-consec near-baseline vol 0.97×); +1.22% l2l breaks 4-consec sub-1% price streak.
+- **REPPO exhaustion-drought d6** — vol cliff-drops 0.78× → 0.30× as 5-day mean-reversion cascade terminates.
+- **WELL distribution-drought d3** — vol lifts fractionally off d2 window-low but stays 0.14× baseline.
 
-Follow-up: (i) 7-16 tests GITLAWB third-consecutive rail-adjacent day (would codify whipsaw as durable pattern); (ii) WELL day-9 flat-print watch on strongest floor-hunt signal; (iii) MEMORY.md Tracked Tokens Recent Activity column stale for all 4 rows post-7-14 — reflect refresh candidate.
+**Files modified:** `.tmp/token-alert/cg.json`, `.tmp/token-alert/compute.py`, `memory/logs/2026-07-20.md`.
+
+**Follow-up:** GITLAWB cliff-hold d2 test tomorrow; REPPO d7 baseline-low-vs-re-accumulation; WELL 3rd-consec low-vol band; MAMO pause-at-mean d11 fracture-or-revert; reflect cycle codifies thin-bid-rebound-then-fade-back-cliff n=1 as inverted [[one-day-breakout-unwind]] mirror.

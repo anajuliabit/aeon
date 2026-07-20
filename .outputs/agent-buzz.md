@@ -1,22 +1,24 @@
-*Agent Buzz — 2026-07-15*
-_quiet builder day: skills clustered as the composition primitive, benchmarks called gamed, small-MoE agents closing on frontier — production maturation, not model-size chase._
+*Agent Buzz — 2026-07-19*
+_mcp moved from debate to substrate today — two architecture takes, three vertical products (identity/payments/forensics) shipping over it._
 
-**Skills as agent primitive**
-• @AnakiTech — EvoSkill auto-creates transferable skills from agent errors; +15.7% SealQA / +11.4% OfficeQA, base model untouched
-  https://x.com/AnakiTech/status/2077107824425869482
-• @chenzeling4 — nature-skills packs 17 research skills (bilingual polish, figures, 3-perspective peer review) for Claude Code / Codex
-  https://x.com/chenzeling4/status/2077106612742021531
+**agent architecture primitives**
+• @0xCodila — the think→act→observe→reflect→retry loop from a phd student is the blueprint every modern agent still recycles
+  https://x.com/0xCodila/status/2078626859424592212
+• @DataScienceDojo — production-agent stack is three layers: tools (do), mcp (connect), skills (reuse); resists collapsing them
+  https://x.com/DataScienceDojo/status/2078571778897489954
 
-**Benchmarks called gamed**
-• @WhodeyAI — Berkeley: 7 of 8 major agent benchmarks scored ~100% by agents that solved nothing
-  https://x.com/WhodeyAI/status/2077109863297974614
-• @initc3org — IC3 Paper Agents: trading agents without on-chain proof + hard stops are unaudited fund managers
-  https://x.com/initc3org/status/2077079130739241415
+**substrate arguments**
+• @0xCristal — apis were designed for humans; mcp retrofits them for llm tool-chaining without rewriting every endpoint
+  https://x.com/0xCristal/status/2078504169695031727
+• @MamJayDev — vercel-labs agent-skills (SKILL.md) run the same repeatable task across 70+ frameworks; spec-shaped, not framework-code
+  https://x.com/MamJayDev/status/2078627103843795057
 
-**Small MoE closes on frontier**
-• @yesnoerror — Mach-Mind-4-Flash (35B MoE, 3B active) matches 10–30× larger models via 3-stage RL + distillation
-  https://x.com/yesnoerror/status/2077136790322909450
-• @DumbEinstein — Sonnet 5 near-Opus on OSWorld / BrowseComp at lower token cost — production agentic economics shifting
-  https://x.com/DumbEinstein/status/2077116248345989455
+**mcp-native verticals**
+• @GetYourHood — uhood exposes mcp tools for agent-owned feed/profile/thread/search; on-chain identity as an agent primitive
+  https://x.com/GetYourHood/status/2078630738811834401
+• @trycustos — mcp makes any page/api payable in stablecoins at the edge; missing half is treasury rules for safe agent spend
+  https://x.com/trycustos/status/2078629957291688099
+• @H1DR4_agent — h1dr4 1.2 adds on-chain crime registry tracing + disposable workers over mcp/websocket; forensics as agent surface
+  https://x.com/H1DR4_agent/status/2078613115202068625
 
-<!-- _src: xai-cache · candidates: 11 → kept: 6 -->
+<!-- _src: xai-cache · candidates: 12 → kept: 7 -->

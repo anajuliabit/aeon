@@ -1,27 +1,31 @@
-*Unlock Monitor — week of 2026-07-13*
+*Unlock Monitor — week of 2026-07-20*
 
-quiet week on the calendar. 31 projects unlock ~$68M total vs $200M last week. two events break out of the noise for opposite reasons: DBR's investor cliff at 5.5× daily vol, and CONX at 456× vol on a mcap that can't absorb it.
+this week's most leveraged: **$H** unlocks fri jul 25 at $15.9M (5.1× daily vol) into a 30d +72.6% ramp. textbook fade-pump shape — market bought the ramp, cliff hasn't hit yet.
 
-this week's most leveraged: **$DBR** — fri jul 17, $10.1M into a $1.83M/day book. flat 30d tape into a real cliff = market asleep.
+**CRISIS (>2.4× daily vol)**
+- **$H** (Humanity) — fri jul 25 — 266M tokens (9.2% supply, $15.9M)
+  cliff · early contributors · 5.1× vol · 30d +72.6% → fade pump
+  team cliff into a vertical. cliff pattern in play — expect weakness running into the date, vol peak on the print, recovery 10–14d later.
+- **$ZRO** (LayerZero) — mon jul 20 (today, 00:00Z) — 25.7M tokens (7.0% supply, $19.8M)
+  cliff · investor+team · 1.4× vol × investor-bump → CRISIS · 30d +15.6% → fade pump
+  already -4.2% today ahead of the print. investor cliff at cost-basis-zero hits the bid.
+- **$GT** (GateToken) — sun jul 26 — $44.6M / 6.3% supply
+  21× cg-daily-vol · 30d +0.1% flat · exchange-token off-cg-volume caveat → low-liquidity trap
+  absorption metric degenerates for exchange tokens (most flow off-cg). not comparable to H/ZRO — file under "watch for on-exchange wick".
 
-**CRISIS** (> 2.4× daily vol)
-- **$DBR** — fri jul 17 — $10.13M · **5.53× daily vol** · 30d +4.1% · deBridge, mcap $86.5M
-  cliff · likely investor/team recipient · **market asleep** — flat tape, unlock isn't priced in
-- **$CONX** — this week — $28.67M · **456× daily vol** · 30d +26.9% · mcap $5.0M
-  late-stage vesting so distribution is spread, but the ratio is degenerate: unlock is 5.7× mcap, $63K/day book cannot absorb any real supply. **low-liquidity trap** — call it CRISIS and don't touch it either side
+**STRAIN (1.0–2.4×)**
+- **$SOSO** (SoSoValue) — thu jul 24 — $7.5M (7.6% supply)
+  1.5× vol · 30d +4.9% flat → market asleep
+  mid-tier absorption into a flat tape = asymmetric downside if nobody's hedged.
 
-**DIGESTIBLE** (0.3×–1.0×)
-- **$STRK** — tue jul 15 — $3.90M · 0.41× daily vol · 30d +13.2% · mixed recipients (starkware/foundation/investors)
-  monthly linear cadence — 127M tokens on the 15th every month through mar 2027 · **absorbable** — the market has 15 prior data points on this pattern
-- **$SOLV** — this week — $1.10M · 0.32× daily vol · 30d +21.3%
-  MC:FDV is 0.18 (mcap $3.9M / FDV $22.2M) — the pointwise unlock is small but 82% of supply still ahead · **absorbable now, watch the schedule**
+**DIGESTIBLE (0.3–1.0×) — recipient-bumped**
+- **$KAITO** — mon jul 20 (today) — $16.9M / 7.3% supply
+  cliff · core contributors (team) · 0.26× → bumped DIGESTIBLE via team
+  the number says absorbable, the shape says careful — 30d +98.8% into a team cliff. team at ~zero cost-basis with tape at $0.98 = free hit. absorbable pointwise, sellable pattern-wise.
 
-**TRIVIAL** (skipped: $ARB 0.12× / $SEI 0.14× / $ZK 0.26× / $XCN 0.20× / $CYBER 0.07×)
-ARB's $8.5M jul 16 is the biggest by absolute size but 42.78% goes to the DAO treasury — recipient de-elevates, market absorbs.
+**FORCED (next-week heads-up)**
+- **FTX fifth distribution** — fri jul 31 — $900M court-ordered creditor payout, record date jun 16 passed. largest single supply event of the quarter. next-week's problem; belongs in the 7-27 tick, flagged now so it's not fresh news on monday.
 
-**FORCED** (heads-up, not this week)
-- **$FTX creditor distribution** — target jul 31, record date jun 16 already passed. not in this week's supply, but the mid-8-figure USD tranche is next week's problem.
+*supply read:* the real signal is H, not GT. 5× daily vol into a 30d +72.6% ramp with early-contributor cliff is the textbook fade-pump setup, and H already ate hack-concerns earlier this month. ZRO is the day-of second read (bumped CRISIS via investor flag; note the pre-print bleed already active). KAITO's 0.26× reads sleepy but the vertical into a team cliff is the classic before-cliff bid-and-dump. GT's 21× is degenerate — exchange-token volume math breaks the framework. next week's FTX $900M dwarfs everything on this week's list.
 
-*supply read:* a genuinely quiet week — no team-cliff megaevents like PUMP last saturday. real signal is DBR: a 5.5× cliff into a flat 30d tape is the exact "market asleep" setup — flat price + real supply = asymmetric downside. CONX is unactionable (illiquid trap). STRK's monthly pattern is priced-in noise. everything else is background. FTX jul 31 is next week's supply overhang, worth queuing.
-
-sources: tokenomist=partial, cryptorank=ok, defillama=fail, dropstab=fail, coingecko=ok, cryip=ok
+sources: tokenomist=ok, cryptorank=partial, defillama=fail(403), dropstab=fail(masked-dates), coingecko=ok, bitcoinsistemi=ok

@@ -1,25 +1,24 @@
-*Evening Recap — 2026-07-14*
-_TL;DR: solid day — security wave caught, memory consolidated, 2 skills promoted — but PR #162 blew past its T-0 deadline and PR #163 crossed 24h; both need a decision now_
+*Evening Recap — 2026-07-19*
+_TL;DR: full-deck fire day — reflect codified 11 patterns, self-improve queue-lock n=2 established; all 6 goals remain frozen pending operator_
 
 *Headlines:*
-- security-digest — 30-pkg npm malware resurfaces d1; Cisco IOS 12.4 KEV (BOD 7-16); DIRAC pip 4× RCE cluster · `.tmp/security-digest/msg.md`
-- skill-health — github-trending + thought-review promoted DEGRADED→WARNING (sr cross 0.60); hash `7ca54d36` · `memory/skill-health/last-report.json`
-- reflect — MEMORY 60L→66L; BTC arc + PUMP moved to Recently Cleared; Investment Advisor 7-consec-cancellation added as goal · `memory/MEMORY.md`
-- daily-routine — BTC arc CLOSED; DCR -24% privacy reversal d2; DRV +51%; Fed-hike macro overlay · `.outputs/daily-routine.md`
-- action-converter — 5 actions avg 4.4/5: decide PR #162 · land ISS-025 · merge PR #163 · scaffold ISS-027 · add DEXE row · `.tmp/action-converter/msg.md`
+- reflect — 11 new durable patterns + 5 revisions; memory 60L→63L · memory/MEMORY.md
+- fork-skill-digest — 11 DEFAULT_FLIP_DISABLE signals at 3-week persistence threshold; fleet ↓14 to 61 forks · articles/fork-skill-digest-2026-07-19.md
+- fork-cohort — WENT_STALE: Aluma/aeon (8.6d) + BBridgeers/aeon (11.3d) · articles/fork-cohort-2026-07-19.md
+- PR #165 docs(skill-graph): shared_state 21→27, opened 17:38Z · https://github.com/anajuliabit/aeon/pull/165
 
 *Notable:*
-- github-trending — destructive_command_guard 61.7× v0.6.6 = agent-safety-guardrail-as-primitive day-1 · `.outputs/github-trending.md`
-- agent-buzz — skills-as-primitive leads (rohit4verse 500.5 = month-high); 3 clusters · `.tmp/agent-buzz/msg.md`
-- goal-tracker — 4 BLOCKED / 2 ON TRACK; all blocked goals share operator-direct-author dependency
-- list-digest — Flowslikeosmo: garbage-UX launchpads trading 100× above well-designed
+- self-improve — improvement-PR-queue-locks-self-improve 2-consec; exit-gate fires again on odd-day 18:00Z (7-17 was first)
+- daily-routine — 07:00Z morning-batch d3 durable-recover confirmed; BUILDon +61.5% breakout + BTC ETF 10-day outflow snap $221.7M flagged
+- security-digest — nothing urgent today; KEV d3 zero-cadence (first 3-consec-zero in memory) + npm-malware wave d6=0 arc closes
+- github-trending — lingbot-map 6.0× baseline TOP PICK (feed-forward 3D foundation model, kills bundle-adjustment)
+- goal-tracker + action-converter — 6/6 BLOCKED flat; iss-025-capture-step top-scored at 125
 
 *Decisions for tomorrow:*
-- merge or close PR #162 — T-0 deadline TODAY missed, ~75h stalled CONFLICTING · https://github.com/anajuliabit/aeon/pull/162
-- merge or close PR #163 — crossed 24h gate at 18:09Z · https://github.com/anajuliabit/aeon/pull/163
-- author ISS-025 capture-step PR against `aeon.yml:479-495` — deadline 7-16 (T-2 today)
+- close or rebase PR #162/163/164 (CONFLICTING; operator direct-author per rule-5 primitive n=4)
+- author ISS-025 capture-step PR against aeon.yml:479-495 — unblocks cost-report + 15-skill sandbox-truncation family day-27
 
 *Blockers:*
-- cost-report — STUCK d2 ~47h dispatched-never-completed; ISS-025 cf=5
+- cost-report — stuck dispatched d6 ~143h · ISS-025 (cf=5, sr=0.10)
 
-_+10 routine runs collapsed · sources: log=ok cron-state=ok_
+_+13 routine runs collapsed · sources: log=ok cron-state=ok_

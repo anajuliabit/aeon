@@ -1,47 +1,52 @@
-*Daily Routine — 2026-07-15*
+*Daily Routine — 2026-07-20*
 
-_risk-on returns — 60/76 filtered top-100 green, median top-50 +2.04% (reversal from 7-14 34%/-0.60%). soft june CPI (core 2.6% vs 2.8% exp) guts fed-hike bets, BTC $64.5k, ETH +5% $1,873. BTC arc REOPENS via 7-14 daily close $64,977 (first close above $63.5k gate since 7-10)._
+_tilted red — 26/100 top-100 green (down from 51 yesterday = clean risk-off shift), top-50 median flat. BTC $64,190 (-0.8%), ETH $1,862 (-0.3%), SOL $76.00 (-0.2%), BNB $566 (-0.5%), HYPE $60.72 flat. Filter kept 183/250._
 
-*Top 10 Winners (24h)*
-1. KAITO $0.78 +17.5% / 7d +20% · $52M vol · #174 — momentum, no catalyst
-2. PUMP $0.00165 +13.5% / 7d +7% · $119M vol — event=local-low re-validates d3
-3. PI $0.084 +13.1% / 7d -18.5% [FADE]
-4. GNO $124 +12.7% / 7d +19%
-5. XEC $6.51e-6 +12.2% / 7d +27% — DCR/XEC pair whipsaws back green d3
-6. SPX $0.38 +10.7%
-7. CC (Canton) $0.14 +9.5% · #21 mid-cap
-8. ZEC $552 +9.2% / 7d +16% [MAJOR · $507M vol]
-9. DCR $13.25 +8.3% / 7d +20% — pair-flip round-trip closes
-10. VIRTUAL $0.60 +7.8%
+*Top Winners (24h)*
+1. B (BUILDon) $0.230 +24.4% / 7d +118% [BREAKOUT d2 HOLD, breaks one-day-unwind pattern n=5]
+2. PUMP $0.00201 +22.3% / 7d +33% • $148M vol / #76 [TRENDING]
+3. PI $0.0986 +14.4% / 7d +13% • $41M / #64
+4. ADI $6.91 +10.0% / 7d -2%
+5. JTO $0.599 +9.9% / 7d -7%
+6. TAG (TAGGER) $0.00120 +4.6% / 7d +28% [MICROCAP]
+7. KAITO $0.955 +3.7% / 7d +44% [FADE-tag reversal d2, 7d extends +37→+44%]
+8. SNX $0.228 +2.9%
+9. PYTH $0.0499 +2.8%
+10. JUP $0.196 +2.7% / 7d -3%
 
-*Top 10 Losers (24h)*
-1. CASHCAT $0.13 -31.9% · $76M vol [CAPITULATION]
-2. VELVET $0.53 -16.8% / 7d +32% [FADE]
-3. DRV $0.147 -14.6% / 7d +35% — one-day-breakout-unwind at n=5 (7-14 was #1 +51%)
-4. BDX $0.089 -12.0%
-5. DEXE $37.58 -10.3% / 7d +34% — breakout d4 bigger red, 7d intact
-6. EDGE $0.39 -6.7%
-7. AWE $0.062 -4.5%
-8. VVV $10.61 -4.1%
-9. EIGEN $0.23 -4.1%
-10. BSV $13.41 -3.9%
+*Top Losers (24h)*
+1. TRAC (OriginTrail) $0.314 -10.0% / 7d +19% [unwind reversal from yesterday's +14.7%]
+2. AKT $0.509 -6.0% / 7d -13%
+3. BinanceLife $0.652 -5.8%
+4. TIBBIR (Ribbita) $0.108 -5.7%
+5. XEC (eCash) $0.00000791 -5.7% / 7d +12% [d2 breakout unwinds, pattern n=6]
+6. WLD $0.358 -5.0% / 7d -15%
+7. ZEC $531.56 -4.9% [MAJOR #14]
+8. FIL $0.709 -4.7%
+9. TRUMP $1.56 -4.5%
+10. KAIA $0.0314 -4.4%
+
+*Trending*
+BANK (Lorenzo Protocol) +110% #269, PI, PUMP, PENGU, CASHCAT +26% #344, ADI, ACE +116% #964 microcap, ANSEM, LIT, TLM.
+
+*Notable*
+• BUILDon +24.4% d2 hold = one-day-breakout-unwind pattern n=5 breaks; 7d +118% clean continuation. KAITO FADE-tag 24h-misfire (7-18) fully reverses: 7d +37% → +44%. TRAC +14.7% → -10.0% and XEC +4.1% → -5.7% both add to unwind class. BONK +2.6% dead-cat after 3d capitulation.
 
 *Tweet Roundup*
-*Crypto:* soft june CPI (core 2.6% vs 2.8% exp) collapses fed-hike bets, september cut fully priced. BTC $64.7k / ETH +5% $1,873 / XRP +3.4%. june CEX spot +15.3% to $1.11T (first monthly rise in 5mo), RWA perp record $311B. ETH+SOL ETF filings add institutional momentum.
-*AI:* meta muse spark 1.1 shipped 7-9 — 1M-context, native primary/subagent orchestration, MCP + skills, $1.25/$4.25 per Mtok. GPT-5.6 GA 7-9 after 2-week gated white-house safety preview. claude fable 5 tops SWE-Bench Pro at 80.3%; claude code weekly limits 50% higher through 7-19; browser built into claude code.
-*Dev:* DuneSlide (CVE-2026-50548/9, CVSS 9.8) — prompt-injection escapes cursor sandbox to OS RCE on ingested payload; fixed in cursor 3.0. separate windows RCE via `git.exe` in project root disclosed 12-15-2025 still unpatched 6mo later. agent-safety-guardrail rail extends yesterday's destructive_command_guard trending.
+*Crypto:* Kimi K3 2.8T open-MoE release triggers BTC/ETH slide (DeepSeek-shock echo) — open weights ship 7-27 d7 out. BTC ETFs $273M net over 2 weeks breaks 8-week $8B+ outflow streak, but scale still "peanuts" (Coindesk). BlackRock IBIT led $132.3M 7-17 net-inflow day; ETH ETFs $36.7M same day.
+*AI:* Qwen 3.8 launches 2.4T MoE multimodal claiming "second only to Fable 5" — **china-lab edge-inference cluster n=3** (airllm + kimi-cli + Qwen 3.8). Claude Fable 5 counterexample to Jacobian Conjecture (Alpöge) — LLM-solves-open-math n=2 with yesterday's GPT-5.6 convex-opt 30-yr gap, but Fable claim under active technical challenge (properness condition). Apple Intelligence registered in mainland China with Qwen backing (CAC 7-15).
+*Dev:* Claude Code v2.1.181 runs on Bun's Rust port (10% faster startup) — Bun being rewritten Zig→Rust using dozens of parallel Claude Code sessions = meta-aeon signal. Code Review multi-agent pipeline lands with 5 review levels (Low → Ultra). Agent View fleet dashboard + /goal command + Opus 4.8 default + plugin ecosystem all shipped.
 
 *Paper of the Day*
-"Metacognition in LLMs: Foundations, Progress, and Opportunities" — Liu et al · HF ↑13. self-knowledge is the load-bearing gap for agent loops; direct axis for aeon-style memory / self-review skills.
-[Read](https://arxiv.org/abs/2607.11881) | [PDF](https://arxiv.org/pdf/2607.11881)
+"xHC: Expanded Hyper-Connections" (33↑, 2607.14530) — expands Transformer residual stream into N parallel streams; Manifold-Constrained HC stabilizes training. Architecture-primitive extending memory scaling past width/depth. Runner-ups: Xiaomi-Robotics-1 100K-hr VLA (32↑, HN #12 cross-signal), Cura 1T agentic healthcare (31↑), Loopie looped-MoE 20B/2B-active (24↑, small-MoE-frontier rail-adjacent).
 
 *GitHub Issues*
-GITHUB_ISSUES_OK — 0 fresh in last 24h across scope (chronic 10-item pool unchanged).
+No new issues since 07:14Z yesterday.
 
 *HN Digest*
-1. [Bonsai 27B: 27B-class model on a phone](https://prismml.com/news/bonsai-27b) (567pts) — on-device LLM tier crossing
-   [Discuss](https://news.ycombinator.com/item?id=48910545)
-2. [How to stop Claude from saying load-bearing](https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing) (519pts) — claude-code operator writing critique
-   [Discuss](https://news.ycombinator.com/item?id=48905248)
-3. [Cursor 0day: full disclosure only protection left](https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left) (345pts) — windows git.exe RCE unpatched 6mo, agent-safety rail
-   [Discuss](https://news.ycombinator.com/item?id=48910676)
+1. [Show HN: $120k bowling center → $1,600 in ESP32s](https://news.ycombinator.com/item?id=48968606) (2143pts) — hardware-hack porn
+2. [Qwen 3.8](https://news.ycombinator.com/item?id=48966120) (864pts, 588 cmts) — Alibaba 2.4T MoE
+3. [Claude Code uses Bun written in Rust now](https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/) (496pts) — meta-aeon runtime shift
+4. [Claude Fable produced a counterexample to the Jacobian Conjecture](https://news.ycombinator.com/item?id=48973869) (330pts) — LLM-open-math n=2
+
+_source-status: cg_markets=ok, cg_trending=ok, hf_papers=ok, hn_algolia=ok, xai=blocked(sandbox), websearch=ok, gh_search=ok(0 issues)_

@@ -1,0 +1,307 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-15"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5",
+        "sep-5",
+        "metadata"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1-title",
+        "action-1-task",
+        "action-1-why",
+        "action-1-done",
+        "action-1-loop"
+      ]
+    },
+    "action-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Unstick PR #162",
+        "level": "h3"
+      }
+    },
+    "action-1-task": {
+      "type": "Text",
+      "props": {
+        "text": "Rebase branch `fix/self-improve-2026-07-11` onto `main`, force-push, then merge or request review."
+      }
+    },
+    "action-1-why": {
+      "type": "Text",
+      "props": {
+        "text": "T+1 past weekly-review action #2 deadline (7-14); ~100h stalled; SKILL.md-editable class rebase clears the conflict.",
+        "variant": "muted"
+      }
+    },
+    "action-1-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done when",
+        "message": "`gh pr view 162 --json mergeable` returns MERGEABLE and PR is merged or has fresh reviewDecision.",
+        "type": "info"
+      }
+    },
+    "action-1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-162-unstick",
+        "variant": "secondary"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-2-title",
+        "action-2-task",
+        "action-2-why",
+        "action-2-done",
+        "action-2-loop"
+      ]
+    },
+    "action-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Commit ISS-025 capture-step patch",
+        "level": "h3"
+      }
+    },
+    "action-2-task": {
+      "type": "Text",
+      "props": {
+        "text": "Commit ISS-025 capture-step patch to `.github/workflows/aeon.yml:479-495` chain-runner block and open a PR."
+      }
+    },
+    "action-2-why": {
+      "type": "Text",
+      "props": {
+        "text": "T-1 to weekly-review action #1 (7-16); unblocks 23-day sandbox-truncation family + cost-report STUCK 72h + 12:00Z batch-dark d18.",
+        "variant": "muted"
+      }
+    },
+    "action-2-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done when",
+        "message": "`gh pr list --search \"capture-step\"` returns a new PR against `.github/workflows/aeon.yml` output-tokens block.",
+        "type": "info"
+      }
+    },
+    "action-2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-commit",
+        "variant": "secondary"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-3-title",
+        "action-3-task",
+        "action-3-why",
+        "action-3-done",
+        "action-3-loop"
+      ]
+    },
+    "action-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Ship PR #163",
+        "level": "h3"
+      }
+    },
+    "action-3-task": {
+      "type": "Text",
+      "props": {
+        "text": "Merge or sign-off `fix/self-improve-2026-07-13` before it drifts further past the 48h stall gate."
+      }
+    },
+    "action-3-why": {
+      "type": "Text",
+      "props": {
+        "text": "SKILL.md-editable rule-5-clean docs fix; crossed 48h gate at 18:09Z 7-15 (~90min ago); fleet's first same-week self-improve success candidate.",
+        "variant": "muted"
+      }
+    },
+    "action-3-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done when",
+        "message": "`gh pr view 163 --json state,mergeable` shows MERGED or MERGEABLE with a review comment.",
+        "type": "info"
+      }
+    },
+    "action-3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-163-ship",
+        "variant": "secondary"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-4-title",
+        "action-4-task",
+        "action-4-why",
+        "action-4-done",
+        "action-4-loop"
+      ]
+    },
+    "action-4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Draft ISS-027 issue file",
+        "level": "h3"
+      }
+    },
+    "action-4-task": {
+      "type": "Text",
+      "props": {
+        "text": "Draft `memory/issues/ISS-027.md` with YAML frontmatter (id, title, status, severity, category, detected_by, affected_skills, root_cause) for scheduler-side never-run primitive."
+      }
+    },
+    "action-4-why": {
+      "type": "Text",
+      "props": {
+        "text": "6+ run carry-failure closes; skill-health/heartbeat gain frontmatter cross-reference for batch-dark d18 + aixbt-pulse dead-slot d18 + weekly-shiplog/operator-scorecard Mon-miss.",
+        "variant": "muted"
+      }
+    },
+    "action-4-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done when",
+        "message": "`test -f memory/issues/ISS-027.md && grep -Ec \"^(id|status|severity|category|affected_skills|root_cause):\" memory/issues/ISS-027.md` returns ≥6.",
+        "type": "info"
+      }
+    },
+    "action-4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-027-draft",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-5-title",
+        "action-5-task",
+        "action-5-why",
+        "action-5-done",
+        "action-5-loop"
+      ]
+    },
+    "action-5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Register DEXE in token table",
+        "level": "h3"
+      }
+    },
+    "action-5-task": {
+      "type": "Text",
+      "props": {
+        "text": "Register DEXE in `memory/MEMORY.md` Tracked Tokens table with CoinGecko id `dexe`, 15% 24h threshold, and d4-second-red-bigger anchor."
+      }
+    },
+    "action-5-why": {
+      "type": "Text",
+      "props": {
+        "text": "4-run carry-failure; captures unwind baseline before 7d +33.6% breaks (was +51.6% two days ago); token-alert gains 5th tracked entry with fresh BREAKOUT-fading shape.",
+        "variant": "muted"
+      }
+    },
+    "action-5-done": {
+      "type": "Alert",
+      "props": {
+        "title": "Done when",
+        "message": "`grep -A1 \"^| DEXE\" memory/MEMORY.md` returns the new row.",
+        "type": "info"
+      }
+    },
+    "action-5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: dexe-register",
+        "variant": "secondary"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=66 logs=8 topics=11 prs=2 cron_failing=1 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

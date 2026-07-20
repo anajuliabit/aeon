@@ -1,0 +1,138 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-16"
+      },
+      "children": [
+        "intro",
+        "separator1",
+        "section-heading",
+        "items-stack",
+        "separator2",
+        "metadata"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "Slow list day — one real signal (Weak-to-Strong distillation paper), rest is one-word chatter.",
+        "variant": "muted"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Curated DeFi/AI list",
+        "level": "h3"
+      }
+    },
+    "items-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item1",
+        "item2"
+      ]
+    },
+    "item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "Direct On-Policy Distillation: pre-RL vs post-RL copies of a small teacher score the student's next tokens; the delta trains a larger student. One RL run reusable across model sizes = capability-transfer bill drops.",
+        "likes": 30,
+        "retweets": 3
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2077535144244609303"
+      }
+    },
+    "item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "QT of PrivacyHood shipping private gift cards on Robinhood. \"Shipping nonstop\" tag on privacy stack — narrative kindling worth watching if a second list picks it up.",
+        "likes": 9,
+        "retweets": 1
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2077490267016306750"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "source-text",
+        "status-text"
+      ]
+    },
+    "source-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(2 signal / 10 raw · cache-path)",
+        "variant": "caption"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-19"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "stack-focus-items",
+        "separator-1",
+        "heading-since",
+        "stack-since-items",
+        "separator-2",
+        "heading-running",
+        "stack-running-items"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "stack-focus-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025 capture-step pr — why now: cost-report d6 rollover, sandbox-truncation family day-27"
+      }
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "kill or rebase pr #162/#163/#164 — why now: 18:00z self-improve tests 2-consec exit-gate"
+      }
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "claude.md rule-5 section — why now: T+2 slip, unblocks self-improve for future cycles"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "stack-since-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4"
+      ]
+    },
+    "since-1": {
+      "type": "Text",
+      "props": {
+        "text": "07:00z morning-batch d2 broke; evening batch fired clean full-cluster (self-improve skipped even-day)"
+      }
+    },
+    "since-2": {
+      "type": "Text",
+      "props": {
+        "text": "reflect codified 13 patterns: first real-package compromise (@injectivelabs/sdk-ts 10-day live), copilot-sdk 17.9× jump, high-EPSS regime n=2 (fortinet 0.842 → gitea 0.407)"
+      }
+    },
+    "since-3": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner PVR ghsa-chjm-935c-cx8p — first MCP-symbol-flow-invisible-unicode class finding"
+      }
+    },
+    "since-4": {
+      "type": "Text",
+      "props": {
+        "text": "btc softens then recovers (63,946 → 62,859 → 64,793 close); reclaim63500 armed intact"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "stack-running-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-1",
+        "running-2",
+        "running-3",
+        "running-4",
+        "running-5"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve @ 18:00z (odd-day, 2-consec exit-gate test)"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 08/14/20z (morning-batch d3 durable-recover test)"
+      }
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending @ 09:00z (skills-primitive rail d19 concludes-vs-intermittent)"
+      }
+    },
+    "running-4": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert @ 12:00z (WELL/MAMO/REPPO/GITLAWB continuation arcs)"
+      }
+    },
+    "running-5": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort + skill-graph + skill-update-check + fork-skill-digest + skill-evals @ Sunday slots"
+      }
+    }
+  }
+}

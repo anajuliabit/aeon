@@ -1,2 +1,9 @@
-*Vuln Scanner — wonderwhy-er/DesktopCommanderMCP*
-6 confirmed dep-cve findings across 3 direct deps: `@modelcontextprotocol/sdk` 1.25.1→1.29.0 (2 HIGH — cross-client leak GHSA-345p + ReDoS GHSA-8r9q), `markdown-it` 14.1.0→14.3.0 (2 MODERATE ReDoS/quadratic-DoS), `file-type` 21.2.0→21.3.4 (2 MODERATE — ASF infinite loop + ZIP bomb). Bonus transitive fix: `linkify-it` 5.0.0→5.0.2 (HIGH ReDoS GHSA-22p9). Disclosed via public PR #578 — lockfile-only, semver-compatible, no source changes. 30 transitive-only vuln pkgs deferred (hono 31-advisory chain, basic-ftp CRITICAL, tar 7-HIGH, minimatch/picomatch/ws/tmp) — need coordinated upstream chain-bumps. Zero code-level audit: scanner binaries sandbox-blocked (ISS-018) and upstream SECURITY.md publicly downgrades security ("not currently our top priority") + pre-declares command-blocking/dir-restriction bypasses as accepted (Docker containment recommended). Scanners: semgrep=fail, trufflehog=fail, osv-binary=fail, osv-api=ok.
+*vuln-scanner — tirth8205/code-review-graph*
+
+20k-star python mcp code-review tool. 2 confirmed findings.
+
+1 code-level → **PVR [GHSA-chjm-935c-cx8p](https://github.com/tirth8205/code-review-graph/security/advisories/GHSA-chjm-935c-cx8p)**: `_sanitize_name()` — the prompt-injection defense named in `SECURITY.md` — strips ASCII 0x00–0x1F only. tag chars (U+E0000–U+E007F), bidi overrides, zero-width joiners pass through into every downstream llm (claude code / cursor / copilot decode them). first mcp-symbol-flow finding in scanner history.
+
+1 dep audit → **public [issue #665](https://github.com/tirth8205/code-review-graph/issues/665)**: 10 prod-path bumps recommended (mcp 3× HIGH, python-multipart 2× HIGH, pyjwt HIGH HS256 confusion, urllib3 2× HIGH, cryptography HIGH bundled openssl, +5). filed as issue not pr because uv unavailable in sandbox → hand-editing uv.lock breaks the wheel-hash pin.
+
+scanners: semgrep=fail, trufflehog=fail, osv-binary=fail (ISS-018 d32), osv-api=ok, slither=n/a. verified-secrets NOT swept — recorded, not claimed clean.

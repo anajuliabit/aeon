@@ -1,3 +1,8 @@
+Ran skills/search-skill/SKILL.md. Exit mode **SEARCH_SKILL_NO_GAP** — silent, log-only, no catalogs queried, no notify.
+
 ## Summary
 
-Ran search-skill (var=""). Walked all four §1 gap-derivation sources; all returned the same NO_GAP signature as the prior 15 runs — chronic infra failures (ISS-019/020/021/025 sandbox-truncation `output_tokens=0` cluster + ISS-027 scheduler dark-slot for 12:00Z batch), zero open issues in `{missing-secret, api-change, permanent-limitation, quality-regression}` categories, no capability-word request in MEMORY.md priorities or last-7d logs. Exit mode **SEARCH_SKILL_NO_GAP day 16**. Per spec §5+§7: no catalog search, no `./add-skill` call, no notification, log only. Files modified: `memory/logs/2026-07-09.md`. Follow-up: none skill-side; re-trigger when fleet failure signature changes (non `output_tokens=0`) or operator posts an explicit capability request.
+- **Result:** SEARCH_SKILL_NO_GAP (durability rail d22 → **d23**). All 4 gap-derivation sources dry — failing skills all trace to ISS-025/027 sandbox-truncation infra (not capability gaps), 0/11 open issues in target categories, no "Next Priorities" section in MEMORY.md, 0 recent log signals. Step-1 gate exit before any catalog fan-out per SKILL.md.
+- **Files modified:** `memory/logs/2026-07-20.md` (log entry + Summary block appended), `memory/MEMORY.md` line 65 (d22 → d23 durability counter).
+- **Notified:** no (silent per SKILL.md NO_GAP branch — correct behavior; prevents training operator to ignore this channel).
+- **Follow-up:** next mon-weekly tick 2026-07-27 14:00Z; d23 rail confirms external-skill axis is capability-saturated — forward motion is operator-side (ISS-025 PR, rule-5 codification, on-chain config unblock), not more installs.

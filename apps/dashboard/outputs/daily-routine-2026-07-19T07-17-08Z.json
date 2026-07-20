@@ -1,0 +1,657 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-19"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pulse_section",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "trending_section",
+        "sep4",
+        "notable_section",
+        "sep5",
+        "tweets_section",
+        "sep6",
+        "paper_section",
+        "sep7",
+        "github_section",
+        "sep8",
+        "hn_section"
+      ]
+    },
+    "pulse_section": {
+      "type": "Text",
+      "props": {
+        "text": "Pulse: 51/100 top-100 green, top-50 median +0.06% — flat/mixed tape, big-cap fatigue. BTC $64,657 (brief $65k break faded), ETH $1,867, SOL $76.03, BNB $568.76, HYPE $60.80. Kept 121/250.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "B (BUILDon)",
+            "$0.1836",
+            "+61.5%",
+            "+41%",
+            "$50M",
+            "#176",
+            "BREAKOUT"
+          ],
+          [
+            "2",
+            "TAG (TAGGER)",
+            "$0.00118",
+            "+23.6%",
+            "+24%",
+            "$5M",
+            "#225",
+            "BREAKOUT MICROCAP"
+          ],
+          [
+            "3",
+            "TRAC (OriginTrail)",
+            "$0.298",
+            "+14.7%",
+            "+12%",
+            "$7M",
+            "#222",
+            ""
+          ],
+          [
+            "4",
+            "KAITO",
+            "$0.921",
+            "+12.5%",
+            "+37%",
+            "$34M",
+            "#155",
+            ""
+          ],
+          [
+            "5",
+            "ALLO (Allora)",
+            "$0.463",
+            "+12.1%",
+            "+34%",
+            "$46M",
+            "#247",
+            ""
+          ],
+          [
+            "6",
+            "BTW (Bitway)",
+            "$0.0662",
+            "+5.8%",
+            "+10%",
+            "$10M",
+            "#209",
+            ""
+          ],
+          [
+            "7",
+            "NEO",
+            "$2.04",
+            "+5.4%",
+            "+4.5%",
+            "$36M",
+            "#211",
+            ""
+          ],
+          [
+            "8",
+            "PI (Pi Network)",
+            "$0.0861",
+            "+4.8%",
+            "-12%",
+            "$12M",
+            "#68",
+            ""
+          ],
+          [
+            "9",
+            "ZEC (Zcash)",
+            "$559",
+            "+4.4%",
+            "+8.9%",
+            "$224M",
+            "#14",
+            "MAJOR"
+          ],
+          [
+            "10",
+            "XEC (eCash)",
+            "$0.0000087",
+            "+4.1%",
+            "+69%",
+            "$100M",
+            "#183",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank"
+        ],
+        "rows": [
+          [
+            "1",
+            "BONK",
+            "$0.0000028",
+            "-6.2%",
+            "-30%",
+            "$61M",
+            "#143"
+          ],
+          [
+            "2",
+            "ONDO",
+            "$0.350",
+            "-5.8%",
+            "+7.5%",
+            "$162M",
+            "#44"
+          ],
+          [
+            "3",
+            "LDO (Lido)",
+            "$0.356",
+            "-4.1%",
+            "+16%",
+            "$25M",
+            "#130"
+          ],
+          [
+            "4",
+            "BDX (Beldex)",
+            "$0.0821",
+            "-3.9%",
+            "-5.6%",
+            "$14M",
+            "#90"
+          ],
+          [
+            "5",
+            "ADI",
+            "$6.29",
+            "-3.8%",
+            "-3.7%",
+            "$5M",
+            "#76"
+          ],
+          [
+            "6",
+            "AERO",
+            "$0.453",
+            "-3.6%",
+            "-12%",
+            "$27M",
+            "#110"
+          ],
+          [
+            "7",
+            "XPL (Plasma)",
+            "$0.0818",
+            "-3.1%",
+            "-10%",
+            "$29M",
+            "#160"
+          ],
+          [
+            "8",
+            "DEXE",
+            "$34.50",
+            "-3.0%",
+            "-13%",
+            "$55M",
+            "#49"
+          ],
+          [
+            "9",
+            "MANA (Decentraland)",
+            "$0.0696",
+            "-2.9%",
+            "-4.5%",
+            "$9M",
+            "#216"
+          ],
+          [
+            "10",
+            "ZBCN (Zebec)",
+            "$0.00195",
+            "-3.0%",
+            "-10%",
+            "$11M",
+            "#173"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending_heading",
+        "trending_text"
+      ]
+    },
+    "trending_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending_text": {
+      "type": "Text",
+      "props": {
+        "text": "LAB (#394, -6.6% — the -95% zero-arc case flickers), PENGU, CASHCAT, LTC, GRAM (ex-Toncoin), VIRTUAL, CRED (+24.8%)",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable_bullet1",
+        "notable_bullet2",
+        "notable_bullet3",
+        "notable_bullet4"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_bullet1": {
+      "type": "Text",
+      "props": {
+        "text": "BUILDon +61.5% AND +41% 7d = clean BREAKOUT. XEC extends d2 hold on +69% 7d (sustained-shape, not one-day-unwind). KAITO reverses 7-18 FADE (-5.7% → +12.5%). BONK CAPITULATION d3, 7d -30%. Losing side compressed — all under 7% = flat-with-outlier-winners tape.",
+        "variant": "body"
+      }
+    },
+    "notable_bullet2": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "body"
+      }
+    },
+    "notable_bullet3": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "body"
+      }
+    },
+    "notable_bullet4": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_heading",
+        "crypto_heading",
+        "crypto_bullet1",
+        "crypto_bullet2",
+        "crypto_bullet3",
+        "ai_heading",
+        "ai_bullet1",
+        "ai_bullet2",
+        "dev_heading",
+        "dev_bullet1",
+        "dev_bullet2",
+        "dev_bullet3"
+      ]
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "crypto_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "crypto_bullet1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC's brief $65k hold faded on 6th day of Iran airstrikes; ETH +7% weekly leads BTC's +2%.",
+        "variant": "body"
+      }
+    },
+    "crypto_bullet2": {
+      "type": "Text",
+      "props": {
+        "text": "US spot BTC ETFs snap 10-day outflow streak with $221.7M in — biggest daily haul in 2 months.",
+        "variant": "body"
+      }
+    },
+    "crypto_bullet3": {
+      "type": "Text",
+      "props": {
+        "text": "FHFA orders Fannie/Freddie to count crypto as mortgage asset; Better+Coinbase issue first Fannie-backed crypto mortgage.",
+        "variant": "body"
+      }
+    },
+    "ai_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "ai_bullet1": {
+      "type": "Text",
+      "props": {
+        "text": "Moonshot Kimi K3 lands — 2.8T params open MoE, 1M ctx, Kimi Delta Attention, beats Fable 5 + GPT-5.6 Sol on Arena front-end coding, edges Opus 4.8 in text ranking at 40% lower cost. Open weights ship 7-27.",
+        "variant": "body"
+      }
+    },
+    "ai_bullet2": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic accuses Chinese labs of industrial-scale distillation from US frontier models.",
+        "variant": "body"
+      }
+    },
+    "dev_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "dev_bullet1": {
+      "type": "Text",
+      "props": {
+        "text": "Anaconda-Kilo acquisition holds (7-18 signal, model-independent AI coding, stays OSS).",
+        "variant": "body"
+      }
+    },
+    "dev_bullet2": {
+      "type": "Text",
+      "props": {
+        "text": "VS Code 1.110 agent plugins live (skills + tools + hooks bundle installable from Extensions).",
+        "variant": "body"
+      }
+    },
+    "dev_bullet3": {
+      "type": "Text",
+      "props": {
+        "text": "OpenTofu 10M downloads, Valkey 700+ contributors.",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_main_link",
+        "paper_main_desc",
+        "paper_runner_up_text"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper_main_link": {
+      "type": "Link",
+      "props": {
+        "label": "Rethinking the Evaluation of Harness Evolution for Agents",
+        "href": "https://arxiv.org/abs/2607.12227"
+      }
+    },
+    "paper_main_desc": {
+      "type": "Text",
+      "props": {
+        "text": "(2607.12227, 5↑) — argues harness-search benchmarks over-report gains because they don't hold matched feedback + inference budgets against task-level search baselines. Directly aeon-thesis: same rebuke applies to self-improve loops that grade themselves on the same benchmark they optimize.",
+        "variant": "body"
+      }
+    },
+    "paper_runner_up_text": {
+      "type": "Text",
+      "props": {
+        "text": "Runner-up: LongStraw compounds d2 (105↑ → 174↑ overnight, +65% surge) — 2M-ctx RL under fixed GPU budget continues to dominate the week's leaderboard.",
+        "variant": "body"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "github_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github_heading",
+        "github_text"
+      ]
+    },
+    "github_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "github_text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (anajuliabit scope, since 7-18 07:25Z)",
+        "variant": "body"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_heading",
+        "hn_item1",
+        "hn_item2",
+        "hn_item3",
+        "hn_item4"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn_item1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "LG monitors silently install software via Windows Update",
+        "href": "https://videocardz.com",
+        "source": "videocardz.com",
+        "score": "1094 pts, 560 comments"
+      }
+    },
+    "hn_item2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GPT-5.6 closes 30-year gap in convex optimization",
+        "href": "https://reddit.com/r/math",
+        "source": "reddit.com/r/math",
+        "score": "546 pts, 349 comments"
+      }
+    },
+    "hn_item3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Setting up your spare Mac for Claude Code to control",
+        "href": "https://github.io",
+        "source": "github.io",
+        "score": "216 pts, 147 comments"
+      }
+    },
+    "hn_item4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Speech Recognition + TTS under 500kb",
+        "href": "https://moonshine-ai.dev/micro",
+        "source": "moonshine-ai",
+        "score": "402 pts, 46 comments"
+      }
+    }
+  }
+}

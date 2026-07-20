@@ -1,26 +1,29 @@
-*GitHub Trending — 2026-07-15*
+*GitHub Trending — 2026-07-20*
 
-*Top pick* — [mattpocock/skills](https://github.com/mattpocock/skills)
-skills-primitive convergence day-15; a working operator dumps their .claude directory to 171k stars in 162d and the pattern crosses from framework talk into "here's what i actually ship."
-
-*Devtools*
-• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 1.7k today (171k total) · Shell · [ACCELERATING]
-one-file .claude/skills primitives from a live setup — reads as an executable stylebook, not framework theatre.
-
-• [chenyme/grok2api](https://github.com/chenyme/grok2api) — ★ 186 today (6.0k total) · Go · [RETURNING]
-multi-account gateway for Grok Build/Web/Console at 8.7× baseline — dev-side hedge on xAI rate limits and Grok CLI's whole-repo-upload behavior.
+*Top pick* — [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+one endpoint fronting 268 providers · 500+ models · kimi k3 already wired 7 days before open-weights ship 7-27 = pre-launch integration.
 
 *AI/ML*
-• [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) — ★ 1.9k today (87k total) · Python · [ACCELERATING]
-turns a repo into a queryable knowledge graph; 7-14 dropped it as saturated-tail, today's 2.2× baseline reversal reads as second-wind not one-day-blip.
+• [topoteretes/cognee](https://github.com/topoteretes/cognee) — ★ 303 today (28k total) · Python · [RETURNING]
+persistent AI-agent memory as self-hosted knowledge-graph engine — cross-session recall without vendor context walls.
+
+• [kvcache-ai/ktransformers](https://github.com/kvcache-ai/ktransformers) — ★ 360 today (19k total) · Python · [RETURNING]
+runs huge MoEs on mixed CPU+GPU by pinning hot experts on GPU — 400B+ models on prosumer boxes.
+
+• [handy-computer/transcribe.cpp](https://github.com/handy-computer/transcribe.cpp) — ★ 401 today (1k total) · C++ · [RETURNING]
+one ggml build across whisper + parakeet + moonshine + qwen3-asr + cohere-transcribe + 11 more — 60+ variants under one binary w/ Metal/Vulkan/CUDA backends.
+
+*Devtools*
+• [1jehuang/jcode](https://github.com/1jehuang/jcode) — ★ 235 today (9k total) · Rust · [RETURNING]
+rust cli agent w/ embedded semantic memory + swarm coordination + self-modification — claims 14ms TTFF ~245× faster than claude code.
+
+*Infra*
+• [oblien/openship](https://github.com/oblien/openship) — ★ 1,719 today (4k total) · TypeScript · [RETURNING]
+push-to-deploy self-host w/ zero yaml/pipelines + built-in postgres/redis/mail/cdn + MCP protocol native.
 
 *Web/Apps*
-• [penpot/penpot](https://github.com/penpot/penpot) — ★ 395 today (56k total) · Clojure · [RETURNING]
-10-year-old figma alternative back on trending at 27× baseline — self-hosted design-tool sovereignty pick.
-
-*Other* — emulator/reverse-engineering fits none of the named buckets
-• [par274/sharpemu](https://github.com/par274/sharpemu) — ★ 332 today (2.4k total) · C# · [RETURNING]
-experimental PS5 emulator in C# at 17.8× baseline — early territory in a space historically dominated by C++ efforts.
+• [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) — ★ 439 today (1k total) · Rust · [RETURNING]
+tokio-rs ships a rust web framework where `$(...)` markers dual-render server + client — kills the API-layer + separate frontend bundle in one primitive.
 
 ---
-sources: trending=ok · gh_api=ok · kept 5/15
+sources: trending=ok · gh_api=ok · kept 7/20

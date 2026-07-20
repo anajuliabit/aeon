@@ -40,7 +40,13 @@ for TOPIC in "crypto OR bitcoin OR ethereum OR DeFi" "artificial intelligence OR
 done
 ```
 
-If `XAI_API_KEY` is not set, fall back to WebSearch for each topic and summarize the top 3-5 results per topic instead.
+Fall back to **WebSearch** for each topic when any of these apply — do not retry the XAI curl:
+- `XAI_API_KEY` is not set, OR
+- the sandbox strips `$XAI_API_KEY` from the curl header (per `CLAUDE.md` sandbox note — no prefetch case exists for daily-routine), OR
+- the API returns an error (HTTP 429, 401/403, quota-exhausted / credit-out), OR
+- `memory/MEMORY.md` flags XAI as quota-exhausted or otherwise unavailable — trust the memory signal, skip the curl attempt entirely.
+
+Note at the top of the tweet-roundup log line: "XAI x_search skipped — <reason>; WebSearch fallback used" so downstream skills can see the source path.
 
 For each topic, write 2-3 bullet points capturing the gist. Include links.
 

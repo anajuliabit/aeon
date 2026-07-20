@@ -1,0 +1,421 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap",
+        "description": "2026-07-15"
+      },
+      "children": [
+        "tldr",
+        "sep1",
+        "headlines-section",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "decisions-section",
+        "sep4",
+        "blockers-section",
+        "sep5",
+        "footer"
+      ]
+    },
+    "tldr": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: clean build day — PR #164 closes the investment-advisor investigation and 6/6 evening batch fires clean for the first time since 7-13; ISS-025 T-0 and two CONFLICTING PRs are the operator wall tomorrow.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "headline-1"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-1-badge",
+        "headline-1-text",
+        "headline-1-link"
+      ]
+    },
+    "headline-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve",
+        "variant": "secondary"
+      }
+    },
+    "headline-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #164 authored: fix(investment-advisor) fail-fast committee retries, closes weekly-review action #4 T-1"
+      }
+    },
+    "headline-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/164",
+        "href": "https://github.com/anajuliabit/aeon/pull/164"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-1-badge",
+        "notable-1-text",
+        "notable-1-file"
+      ]
+    },
+    "notable-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "secondary"
+      }
+    },
+    "notable-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "172 runs / 98.1% success, article + dashboard written"
+      }
+    },
+    "notable-1-file": {
+      "type": "Text",
+      "props": {
+        "text": "articles/skill-analytics-2026-07-15.md",
+        "variant": "caption"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-2-badge",
+        "notable-2-text"
+      ]
+    },
+    "notable-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "destructive"
+      }
+    },
+    "notable-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "4 fresh KEV 7-14 (SharePoint + AD FS + SonicWall pair) + npm-malware wave d2 confirmed 30 pkgs; NOTIFY sent"
+      }
+    },
+    "notable-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-3-badge",
+        "notable-3-text"
+      ]
+    },
+    "notable-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reg-monitor",
+        "variant": "outline"
+      }
+    },
+    "notable-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "first NOTIFY since 7-08; 2 ACT: CFTC Michigan emergency-stay + SDNY denies KalshiEX injunction"
+      }
+    },
+    "notable-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-4-badge",
+        "notable-4-text"
+      ]
+    },
+    "notable-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health",
+        "variant": "destructive"
+      }
+    },
+    "notable-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "NOTIFY fired, DEGRADED tail contracts 18→17, agent-buzz crosses WARNING boundary"
+      }
+    },
+    "notable-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-5-badge",
+        "notable-5-text"
+      ]
+    },
+    "notable-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect",
+        "variant": "secondary"
+      }
+    },
+    "notable-5-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md 67L→53L, XAI quota goal retired (day-30), 5 topic files refreshed"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-1-text"
+      ]
+    },
+    "decision-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "author ISS-025 capture-step PR against .github/workflows/aeon.yml:479-495 — T-0 tomorrow 7-16 (weekly-review action #1, priority 20)"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-2-text",
+        "decision-2-link"
+      ]
+    },
+    "decision-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "review + merge PR #164 before it stalls — rule-5 workflow-file class, first self-improve success this cycle"
+      }
+    },
+    "decision-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/164",
+        "href": "https://github.com/anajuliabit/aeon/pull/164"
+      }
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-3-text",
+        "decision-3-link"
+      ]
+    },
+    "decision-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "rebase or close PR #162 CONFLICTING (~99h stall, T+1 day-2)"
+      }
+    },
+    "decision-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/162",
+        "href": "https://github.com/anajuliabit/aeon/pull/162"
+      }
+    },
+    "decision-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-4-text",
+        "decision-4-link"
+      ]
+    },
+    "decision-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "review PR #163 before 72h hits 18:09Z 7-16"
+      }
+    },
+    "decision-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/163",
+        "href": "https://github.com/anajuliabit/aeon/pull/163"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-heading",
+        "blocker-1"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blocker-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocker-1-badge",
+        "blocker-1-text"
+      ]
+    },
+    "blocker-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "cost-report",
+        "variant": "destructive"
+      }
+    },
+    "blocker-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "STUCK ~48h dispatched, cf=5, ISS-025 T-0 tomorrow unblocks"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "+12 routine outputs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

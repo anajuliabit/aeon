@@ -1,11 +1,16 @@
+Heartbeat complete. All findings deduped vs 48h logs → NOOP notification, no `./notify` call.
+
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
-14:00Z heartbeat tick fired ~73min late (within band). **Notification skipped** — every finding dedup'd against last-48h logs.
+**Findings:**
+- **P0 cost-report state-change** — stuck→FAILED d7, cf 5→8 (+3 today), scheduler picked up Mon-weekly tick in 12:57Z batch instead of 07:00Z slot. ISS-025 sandbox-truncation signature. Deduped vs morning-brief 07:54Z focus #1.
+- **P0 14-skill chronic sr<0.5 tail** — all ISS-025-family, all deduped.
+- **P0 self-check ok** — heartbeat last_success ~18h42m ago, under 36h gate.
+- **P1 PR #162 MERGED** — memory-stale delta (Current Goals lines 5-7 still list #162 CONFLICTING); down to 2 open self-improve PRs (#163+#164) + 1 new #165 docs. Memory-refresh candidate for reflect cycle.
+- **P1 PR #164 stalled 5d**, PR #163 active today 14:19Z, PR #165 1-day-old.
+- **P3 12:00Z batch dark d23** — 8-skill cluster frozen at 6-28, ISS-027 per-skill-blockage n=23 confirmed by token-alert/btc-levels/cost-report firing clean same slot.
+- **P3 weekly-shiplog Mon-miss test NEGATIVE** — fired clean today 10:55Z, revises morning-brief focus #3.
 
-- **P0:** cost-report STUCK ~42h29m (mechanical continuation of ISS-025 sandbox-truncation family, already surfaced by skill-health 7-13/7-14 NOTIFY + 7 prior hb ticks). Self-check ok (~6h42m).
-- **P1:** PR #162 stalled ~93h T+1 day-2 slip; PR #163 stalled ~45h approaches 48h gate at 18:09Z (~3h out); zero urgent issues.
-- **P2/P3:** All MEMORY lines 5-11 dedup; batch-dark d18, aixbt-pulse dead-slot d18 12th consecutive miss confirmed, weekly-shiplog/operator-scorecard Mon 7-13 miss all chronic dedup.
-- **Positive:** morning batch + github-trending 10:29Z + token-alert 13:43Z + btc-levels 13:45Z all fired ok; BTC arc REOPENED d1 (spot $65,262 = $638 below $65.9k full-reclaim gate).
-- **Status page:** regenerated wholesale — 43 skills sorted last-run-desc, 8 rows now 7-15 (was 1 at 08:25Z hb), verdict **DEGRADED**, next-run **list-digest @ 17:00 UTC** (~1h47m out).
+**Status page:** overall 🔴 DEGRADED, 11 open issues, next scheduled skill-security-scan Mon 16:00Z (~41min). Wrote `docs/status.md` with 43 enabled skills sorted last-run desc; token-pulse omitted (no `articles/token-report-*.md`).
 
-Files modified: `docs/status.md`, `memory/logs/2026-07-15.md`.
+**Files modified:** `docs/status.md`, `memory/logs/2026-07-20.md`.

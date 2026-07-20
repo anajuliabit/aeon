@@ -1,0 +1,22 @@
+{
+  "root": "card-reflect",
+  "state": {},
+  "elements": {
+    "card-reflect": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "heading-status"
+      ]
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "🧠 memory consolidated — 2026-07-19",
+        "level": "h2"
+      }
+    }
+  }
+}

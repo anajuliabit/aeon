@@ -1,0 +1,124 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-18",
+        "description": "Quiet across the tracked list"
+      },
+      "children": [
+        "status-section",
+        "separator1",
+        "metrics-section",
+        "separator2",
+        "tracking-section"
+      ]
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "status-label",
+        "status-badge"
+      ]
+    },
+    "status-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status:",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "metrics-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "tweets-stat",
+        "likes-stat",
+        "retweets-stat"
+      ]
+    },
+    "tweets-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Tweets",
+        "value": "10"
+      },
+      "children": []
+    },
+    "likes-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Top Likes",
+        "value": "4"
+      },
+      "children": []
+    },
+    "retweets-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Retweets",
+        "value": "0"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tracking-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cross-list-text",
+        "lists-tracked-text"
+      ]
+    },
+    "cross-list-text": {
+      "type": "Text",
+      "props": {
+        "text": "Cross-list signal: No",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "lists-tracked-text": {
+      "type": "Text",
+      "props": {
+        "text": "Lists tracked: 1",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
