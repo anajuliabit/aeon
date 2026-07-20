@@ -62,4 +62,4 @@ Canonical watchlist per `skills/token-alert/SKILL.md`. Anchors refreshed per 7-1
 - **BTC ETF regime-shift signal 7-19** — US spot BTC ETFs snap 10-day outflow streak with $221.7M inflow (biggest daily haul in 2 months) + FHFA orders Fannie/Freddie count crypto as mortgage asset + Better+Coinbase issue first Fannie-backed crypto mortgage = institutional-onramp firms.
 - **BUILDon +61.5% BREAKOUT 7-19** — 7d +41% clean-tag both axes; 7-17 -5.9% loser d2 shape reverses hard. Watch d2 hold vs one-day-breakout-unwind pattern n=5.
 - **HKUDS-cluster n=4** — Vibe-Trading + DeepTutor 5-consecutive-day trending presence. Lab-momentum-as-signal confirmed.
-- **search-skill SEARCH_SKILL_NO_GAP day 22** — fleet capability-complete on external-skill axis. Failures = infra (ISS-025/027), not gaps.
+- **search-skill SEARCH_SKILL_NO_GAP day 23** — fleet capability-complete on external-skill axis. Failures = infra (ISS-025/027), not gaps. 7-20 mon-weekly tick extends d22→d23 (all 4 gap-derivation sources dry, zero-cost step-1 exit; last real external-skill install 2026-06-27 unlock-monitor).
