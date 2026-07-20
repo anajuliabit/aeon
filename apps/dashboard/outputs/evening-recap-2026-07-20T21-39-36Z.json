@@ -1,0 +1,487 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-20",
+        "description": "2 self-improve PRs merged same-day and cost-report ended its 21d drought — heaviest ship cadence in 3 weeks, PR #164 the only residual."
+      },
+      "children": [
+        "headlines",
+        "sep1",
+        "notable",
+        "sep2",
+        "decisions",
+        "sep3",
+        "footer"
+      ]
+    },
+    "headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-title",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5"
+      ]
+    },
+    "h-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      }
+    },
+    "h1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-badge",
+        "h1-link"
+      ]
+    },
+    "h1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MERGED",
+        "variant": "default"
+      }
+    },
+    "h1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #162: fix(daily-routine): tighten XAI fallback",
+        "href": "https://github.com/anajuliabit/aeon/pull/162"
+      }
+    },
+    "h2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-badge",
+        "h2-link"
+      ]
+    },
+    "h2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MERGED",
+        "variant": "default"
+      }
+    },
+    "h2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #163: fix(skill-security-scan): self-improve batch",
+        "href": "https://github.com/anajuliabit/aeon/pull/163"
+      }
+    },
+    "h3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-header",
+        "h3-stats",
+        "h3-link"
+      ]
+    },
+    "h3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-badge",
+        "h3-text"
+      ]
+    },
+    "h3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RECOVERED",
+        "variant": "secondary"
+      }
+    },
+    "h3-text": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report: 19:08Z after 21d gap"
+      }
+    },
+    "h3-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "h3-stat1",
+        "h3-stat2",
+        "h3-stat3"
+      ]
+    },
+    "h3-stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Cost",
+        "value": "$453.06"
+      }
+    },
+    "h3-stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "77"
+      }
+    },
+    "h3-stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "WoW",
+        "value": "+24.3%",
+        "trend": "up"
+      }
+    },
+    "h3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report: cost-report-2026-07-20",
+        "href": "articles/cost-report-2026-07-20.md"
+      }
+    },
+    "h4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-header",
+        "h4-link"
+      ]
+    },
+    "h4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-badge",
+        "h4-text"
+      ]
+    },
+    "h4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SHIPLOG_OK",
+        "variant": "default"
+      }
+    },
+    "h4-text": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog: 3-consec Mon-miss test lands negative"
+      }
+    },
+    "h4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report: weekly-shiplog-2026-07-20",
+        "href": "articles/weekly-shiplog-2026-07-20.md"
+      }
+    },
+    "h5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-title",
+        "h5-stats",
+        "h5-link"
+      ]
+    },
+    "h5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "weekly-review",
+        "level": "h4"
+      }
+    },
+    "h5-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "h5-stat1",
+        "h5-stat2",
+        "h5-stat3"
+      ]
+    },
+    "h5-stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "305"
+      }
+    },
+    "h5-stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Success",
+        "value": "96.97%"
+      }
+    },
+    "h5-stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs Merged",
+        "value": "2"
+      }
+    },
+    "h5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report: weekly-review-2026-07-20",
+        "href": "articles/weekly-review-2026-07-20.md"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "n-title",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ]
+    },
+    "n-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "n1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n1-title",
+        "n1-text"
+      ]
+    },
+    "n1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "reflect",
+        "level": "h4"
+      }
+    },
+    "n1-text": {
+      "type": "Text",
+      "props": {
+        "text": "17 patterns codified — MEMORY.md + fleet.md + crypto.md rewritten"
+      }
+    },
+    "n2": {
+      "type": "Alert",
+      "props": {
+        "title": "unlock-monitor DEGRADED",
+        "message": "H jul 25 CRISIS 5.1× vol — investor cliff / 30d +72.6% fade-pump · 2 sources fail (defillama 403 + dropstab masked)",
+        "type": "warning"
+      }
+    },
+    "n3": {
+      "type": "Alert",
+      "props": {
+        "title": "security-digest",
+        "message": "3 PATCH TODAY — @vite-js scope typosquats + react-icons-svgo · KEV d4 zero-cadence + 48h GH reviewed silence both new",
+        "type": "warning"
+      }
+    },
+    "n4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4-title",
+        "n4-content"
+      ]
+    },
+    "n4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "deal-flow",
+        "level": "h4"
+      }
+    },
+    "n4-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4-stat",
+        "n4-deal"
+      ]
+    },
+    "n4-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Deals",
+        "value": "8"
+      }
+    },
+    "n4-deal": {
+      "type": "Text",
+      "props": {
+        "text": "Fireworks AI $1.505B Series D @ $17.5B — top pick"
+      }
+    },
+    "n5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n5-alert",
+        "n5-link"
+      ]
+    },
+    "n5-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "skill-security-scan NOCHANGE",
+        "message": "4 HIGH persistent: aeon.yml L86/L94/L96/L812",
+        "type": "warning"
+      }
+    },
+    "n5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report: security-scan-2026-07-20",
+        "href": "articles/security-scan-2026-07-20.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d-title",
+        "d1",
+        "d2"
+      ]
+    },
+    "d-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      }
+    },
+    "d1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1-link",
+        "d1-context"
+      ]
+    },
+    "d1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #164: fix investment-advisor",
+        "href": "https://github.com/anajuliabit/aeon/pull/164"
+      }
+    },
+    "d1-context": {
+      "type": "Text",
+      "props": {
+        "text": "Merge or close — d5 stalled CONFLICTING, only open self-improve PR",
+        "variant": "caption"
+      }
+    },
+    "d2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2-title",
+        "d2-context"
+      ]
+    },
+    "d2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-025: capture-step patch",
+        "level": "h4"
+      }
+    },
+    "d2-context": {
+      "type": "Text",
+      "props": {
+        "text": "Operator direct-authors patch at aeon.yml:479-495 (cost-report sr=0.11 chronic, mon-weekly pattern needs a real fix)",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "+13 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
