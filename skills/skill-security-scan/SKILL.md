@@ -74,9 +74,13 @@ Seed `suppressions` at bootstrap with the self-documenting matches that we alrea
 
 3. **Resolve scope** per the `${var}` rules above. Log the chosen scope.
 
-4. **Preflight scanner.** Verify `skills/skill-security-scan/scan.sh` is present and executable. If missing (sandbox edge case), fall back to inline Grep using the same HIGH/MEDIUM/LOW pattern library defined in `scan.sh` — never silently skip.
+4. **Preflight scanner.** Verify `skills/skill-security-scan/scan.sh` is present and executable, then attempt to invoke it. **Two known failure modes trigger the inline Grep fallback:**
+   - `missing` — file absent or non-executable (rare edge case).
+   - `sandbox-blocked` — `scan.sh` execution denied at the sandbox approval gate. This is the **dominant** failure mode: every weekly run since 2026-05-25 has taken this path (7+ consecutive runs as of 2026-07-13). Treat sandbox denial as expected, not exceptional.
 
-5. **Run scanner in JSON mode** — invoke `scan.sh --json` (or `--all --json` for the full corpus) and capture the structured output: `[{skill, status, file, high, medium, low}, ...]`. Do not parse stderr into findings.
+   In either case, fall back to inline Grep over the same HIGH/MEDIUM/LOW pattern library defined in `scan.sh`, plus the manual `${{ }}`→`run:` interpolation audit and obfuscation sweep — never silently skip. Record which trigger fired (`missing` or `sandbox-blocked`) on the log's `Scanner mode:` line so future reflect cycles can distinguish a real scanner regression from expected sandbox denial.
+
+5. **Run scanner in JSON mode** — invoke `scan.sh --json` (or `--all --json` for the full corpus) and capture the structured output: `[{skill, status, file, high, medium, low}, ...]`. Do not parse stderr into findings. If invocation returns a sandbox denial rather than JSON, route back to step 4's `sandbox-blocked` fallback path — do not retry, do not surface the denial as a scan failure.
 
 6. **Trusted-source filter.** Load `skills/security/trusted-sources.txt`. For each scanned file, check if the skill directory has an `origin:` field in its frontmatter, or fall back to the repo's git remote. If the source is trusted (owner or owner/repo match), downgrade to format-only validation: verify frontmatter has `name`, `description`, `tags`, and a `var` key — emit no HIGH/MEDIUM/LOW findings for trusted sources, only format errors.
 
@@ -163,4 +167,4 @@ Emit exactly one to stdout (on its own line) before normal output:
 
 ## Sandbox note
 
-This skill reads local files and shells out to `scan.sh`; no network calls required. If `scan.sh` is unavailable, perform the scan inline using Grep with the same pattern library — never silently skip. The `./notify` call is covered by the standard post-processor (see `CLAUDE.md` Sandbox section).
+This skill reads local files and shells out to `scan.sh`; no network calls required. `scan.sh` execution is denied at the sandbox approval gate on every scheduled Actions run — that is expected, not a scanner outage. When denied (or if the file is missing), perform the scan inline using Grep with the same pattern library per step 4 — never silently skip. The `./notify` call is covered by the standard post-processor (see `CLAUDE.md` Sandbox section).

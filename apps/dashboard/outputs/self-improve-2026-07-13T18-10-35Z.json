@@ -1,0 +1,114 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_main",
+        "text_finding",
+        "separator1",
+        "text_evidence_label",
+        "stack_stats",
+        "separator2",
+        "stack_related"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "skill-security-scan SKILL.md Update",
+        "level": "h2"
+      }
+    },
+    "text_finding": {
+      "type": "Text",
+      "props": {
+        "text": "Step 4 now names sandbox-blocked as the dominant scanner-fallback trigger",
+        "variant": "lead"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_evidence_label": {
+      "type": "Text",
+      "props": {
+        "text": "Evidence",
+        "variant": "caption"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_runs",
+        "stat_date"
+      ]
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive runs",
+        "value": "7"
+      }
+    },
+    "stat_date": {
+      "type": "Stat",
+      "props": {
+        "label": "Since",
+        "value": "2026-05-25"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_related": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_pattern",
+        "link_pr"
+      ]
+    },
+    "text_pattern": {
+      "type": "Text",
+      "props": {
+        "text": "Same prompt-tightening pattern as PR #162"
+      }
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #163",
+        "href": "https://github.com/anajuliabit/aeon/pull/163",
+        "source": "GitHub"
+      }
+    }
+  }
+}
