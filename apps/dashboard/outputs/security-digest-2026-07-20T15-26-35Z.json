@@ -1,0 +1,250 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-20",
+        "description": "3 to patch today (npm malware typosquats), 0 to schedule, 1 to monitor. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "verdict_stats",
+        "sep1",
+        "patch_section",
+        "sep2",
+        "monitor_section",
+        "sep3",
+        "analysis_section"
+      ]
+    },
+    "verdict_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_patch",
+        "stat_schedule",
+        "stat_monitor"
+      ]
+    },
+    "stat_patch": {
+      "type": "Stat",
+      "props": {
+        "value": "3",
+        "label": "To Patch Today"
+      }
+    },
+    "stat_schedule": {
+      "type": "Stat",
+      "props": {
+        "value": "0",
+        "label": "To Schedule"
+      }
+    },
+    "stat_monitor": {
+      "type": "Stat",
+      "props": {
+        "value": "1",
+        "label": "To Monitor"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_heading",
+        "patch_items"
+      ]
+    },
+    "patch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "patch_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "patch_item_1",
+        "patch_item_2",
+        "patch_item_3"
+      ]
+    },
+    "patch_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_1_links",
+        "patch_1_details"
+      ]
+    },
+    "patch_1_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_1_link_1",
+        "patch_1_link_2"
+      ]
+    },
+    "patch_1_link_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-x4cp-w826-x466",
+        "href": "https://github.com/advisories/GHSA-x4cp-w826-x466",
+        "source": "GitHub Advisory"
+      }
+    },
+    "patch_1_link_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-6x4h-wrvq-m68h",
+        "href": "https://github.com/advisories/GHSA-6x4h-wrvq-m68h",
+        "source": "GitHub Advisory"
+      }
+    },
+    "patch_1_details": {
+      "type": "Text",
+      "props": {
+        "text": "@vite-js/ui + @vite-js/vui (npm) · type=malware · CVSS n/a\n\nVendor-scope typosquat of @vitejs (frontend build primitive) — full-compromise + credential-rotate template on install.\n\nAction: Audit npm installs for @vite-js/*; packages removed from registry, rotate any secrets exposed since 2026-07-20 00:19Z.",
+        "variant": "body"
+      }
+    },
+    "patch_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_2_link",
+        "patch_2_details"
+      ]
+    },
+    "patch_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-m78v-9w6f-xwf2",
+        "href": "https://github.com/advisories/GHSA-m78v-9w6f-xwf2",
+        "source": "GitHub Advisory"
+      }
+    },
+    "patch_2_details": {
+      "type": "Text",
+      "props": {
+        "text": "react-icons-svgo (npm) · type=malware · CVSS n/a\n\nTyposquat mashup of two popular npm names (react-icons + svgo).\n\nAction: Audit npm installs for react-icons-svgo; removed from registry.",
+        "variant": "body"
+      }
+    },
+    "patch_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "patch_3_link",
+        "patch_3_details"
+      ]
+    },
+    "patch_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-g7rx-jhhj-8whr",
+        "href": "https://github.com/advisories/GHSA-g7rx-jhhj-8whr",
+        "source": "GitHub Advisory"
+      }
+    },
+    "patch_3_details": {
+      "type": "Text",
+      "props": {
+        "text": "svgson-lite (npm) · type=malware · CVSS n/a\n\nTyposquat of svgson SVG parser lib.\n\nAction: Audit npm installs for svgson-lite; removed from registry.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "monitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_heading",
+        "monitor_item"
+      ]
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "monitor_item": {
+      "type": "Text",
+      "props": {
+        "text": "75-pkg @gocortexio/npmgremlinbox-* wave (npm, 03:00–03:01Z 7-20)\n\nSelf-labeled malware-*/typosquat-* = Cortex XSIAM scanner-detection testbed (adjacent to vybscan-testbed-* 7-20 00:07Z).\n\nVerdict: Not a real threat. Filter @gocortexio/* + vybscan-testbed-* from malware-count baselines.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "analysis_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "analysis_heading",
+        "analysis_text"
+      ]
+    },
+    "analysis_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Analysis",
+        "level": "h2"
+      }
+    },
+    "analysis_text": {
+      "type": "Text",
+      "props": {
+        "text": "KEV day-4 zero-cadence extends (7-17 → 7-20 no adds, first 4-consec-zero in memory). npm-malware wave resumes 11 real pkgs after d6=0 cool-off (7-19 late 4 + 7-20 early 7) — revises \"complete cool-off\" to 1-day pause. Reviewed advisories 0 critical + 0 high published 7-18 15Z → 7-20 15Z.",
+        "variant": "body"
+      }
+    }
+  }
+}

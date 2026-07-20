@@ -1,14 +1,15 @@
-*Security Digest — 2026-07-19*
-Verdict: nothing urgent today. 3 to schedule, 1 to monitor. _Sources: KEV (0 net-new = day-3 zero-cadence), GH Advisory (0 malware net-new = wave breaks after d5=22), EPSS_
+*Security Digest — 2026-07-20*
+Verdict: 3 to patch today (npm malware typosquats), 0 to schedule, 1 to monitor. _Sources: KEV, GH Advisory, EPSS_
 
-*PATCH THIS WEEK*
-- [GHSA-rwxx-mrjm-wc2m](https://github.com/advisories/GHSA-rwxx-mrjm-wc2m) + [GHSA-8wr5-jm2h-8r4f](https://github.com/advisories/GHSA-8wr5-jm2h-8r4f) — vllm (pip) · CVSS 7.5 + 7.5 · EPSS 0.003 · no public PoC
-  Same-day DoS pair — ReDoS in `structured_outputs.regex` (xgrammar/outlines backends compile without timeout) + remote DoS via invalid recovered token reinjection. → upgrade vllm to ≥0.24.0 (single bump covers both).
-- [GHSA-q38v-wp89-2w55](https://github.com/advisories/GHSA-q38v-wp89-2w55) — sh (pip) · CVSS 7.9 · EPSS n/a · no public PoC
-  `_uid` fails to drop supplementary groups → incomplete privilege drop. Widely-embedded subprocess wrapper; defense-in-depth erosion for anything spawning children as a lower-privileged uid. → upgrade sh to ≥2.2.4.
-- [GHSA-2v2f-mvfg-ph56](https://github.com/advisories/GHSA-2v2f-mvfg-ph56) — meta-ads-mcp (pip) · CVSS 7.4 · EPSS n/a
-  `X-Pipeboard-Token` header auth bypass reuses operator meta token. Same-package sibling to yesterday's CVE-2026-54549 SSRF (fixed by same version bump). → upgrade meta-ads-mcp to ≥1.0.115.
+*PATCH TODAY*
+- [GHSA-x4cp-w826-x466](https://github.com/advisories/GHSA-x4cp-w826-x466) + [GHSA-6x4h-wrvq-m68h](https://github.com/advisories/GHSA-6x4h-wrvq-m68h) — @vite-js/ui + @vite-js/vui (npm) · type=malware · CVSS n/a
+  vendor-scope typosquat of @vitejs (frontend build primitive) — full-compromise + credential-rotate template on install. → audit npm installs for @vite-js/*; packages removed from registry, rotate any secrets exposed since 2026-07-20 00:19Z.
+- [GHSA-m78v-9w6f-xwf2](https://github.com/advisories/GHSA-m78v-9w6f-xwf2) — react-icons-svgo (npm) · type=malware · CVSS n/a
+  typosquat mashup of two popular npm names (react-icons + svgo). → audit npm installs for react-icons-svgo; removed from registry.
+- [GHSA-g7rx-jhhj-8whr](https://github.com/advisories/GHSA-g7rx-jhhj-8whr) — svgson-lite (npm) · type=malware · CVSS n/a
+  typosquat of svgson SVG parser lib. → audit npm installs for svgson-lite; removed from registry.
 
 *MONITOR*
-- [GHSA-r95q-fp26-h3hc](https://github.com/advisories/GHSA-r95q-fp26-h3hc) — @tak-ps/cloudtak (npm) · high · CVSS n/a · fix 13.10.0
-  Authenticated full-read SSRF in `/api/esri*` routes — user-controlled URL fetched with no IP classification. → upgrade if CloudTAK is in your fleet; otherwise watch.
+- 75-pkg @gocortexio/npmgremlinbox-* wave (npm, 03:00–03:01Z 7-20) — self-labeled `malware-*`/`typosquat-*` = Cortex XSIAM scanner-detection testbed (adjacent to vybscan-testbed-* 7-20 00:07Z). → not a real threat; filter @gocortexio/* + vybscan-testbed-* from malware-count baselines.
+
+_KEV day-4 zero-cadence extends (7-17 → 7-20 no adds, first 4-consec-zero in memory). npm-malware wave resumes 11 real pkgs after d6=0 cool-off (7-19 late 4 + 7-20 early 7) — revises "complete cool-off" to 1-day pause. Reviewed advisories 0 critical + 0 high published 7-18 15Z → 7-20 15Z._
