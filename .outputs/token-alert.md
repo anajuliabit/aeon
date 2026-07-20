@@ -1,22 +1,23 @@
+0/12 checks fire — no notification per skill spec. Result logged.
+
 ## Summary
 
-Ran token-alert per `skills/token-alert/SKILL.md` (var="", full sweep of 4 tracked tokens WELL/MAMO/REPPO/GITLAWB). Single unauth CoinGecko `simple/price` fetch returned 200 clean — no WebFetch fallback needed (27th-consec clean CG day). Fired at 12:41Z, ~41min late per catch-up band (batch-dark d22, per-skill blockage classification holds).
+Ran `token-alert` skill (scheduled 12:00Z slot, fired ~60min late per catch-up band — batch-dark **day-23** rollover; band widens vs 7-19's 41min on mon-load-day). Parsed 4 tracked tokens from `memory/MEMORY.md` (WELL/MAMO/REPPO/GITLAWB); no `${var}` override; no Floor/Ceiling columns → threshold-cross skipped for all 4. Single unauth CoinGecko `simple/price` curl returned 200 clean — **28th consecutive clean CG day** post-ISS-023 recovery.
 
-**Result: 0/12 checks fire → `TOKEN_ALERT_OK`, no notification sent.** Extends 7-18's zero-alerts to **2-consec zero-alerts day**.
+**Prices (12:57Z):**
+- WELL $0.00349747 · -0.15% 24h · vol $66K (**0.14× baseline**)
+- MAMO $0.00953722 · +0.97% 24h · vol $901K (**0.97× baseline**)
+- REPPO $0.02137660 · -0.73% 24h · vol $58K (**0.30× baseline**)
+- GITLAWB $0.00002674 · **-10.59%** 24h · vol $243K (**0.88× baseline**)
 
-Current prints (all under threshold, all vol under 3× spike gate):
-- WELL: $0.00349787 · +0.71% · vol $53K = 0.10× baseline (new window-low d2)
-- MAMO: $0.00942187 · -0.14% · vol $879K = 0.94× (d9 baseline-hold)
-- REPPO: $0.02164428 · -0.27% · vol $142K = 0.78× (d5 mean-reversion completes)
-- GITLAWB: $0.00002988 · +5.61% · vol $176K = 0.57× (d6 thin-bid bounce)
+**Result: 0/12 checks fire = `TOKEN_ALERT_OK`, no notify sent** (extends 7-18 → 7-19 → 7-20 to **3-consec zero-alerts day, watchlist compression regime durable d2**).
 
-Threshold-cross skipped 4/4 (no Floor/Ceiling in MEMORY.md).
+**Notable signals** (all sub-threshold, log-only):
+- **GITLAWB thin-bid-rebound-then-fade-back-cliff n=1 confirms** — yesterday's +5.61% bounce reverses -10.51% within 24h on **rising** volume (1.38× yesterday) = 7-19's "watch d7 for follow-through vs fade-back" call resolves as volume-confirmed distribution. Closest miss by 4.4pt vs 15% threshold.
+- **MAMO pause-at-mean day-10** signature holds (5th-consec near-baseline vol 0.97×); +1.22% l2l breaks 4-consec sub-1% price streak.
+- **REPPO exhaustion-drought d6** — vol cliff-drops 0.78× → 0.30× as 5-day mean-reversion cascade terminates.
+- **WELL distribution-drought d3** — vol lifts fractionally off d2 window-low but stays 0.14× baseline.
 
-Cross-token pattern: 2/4 thin-bid mechanical-rebound (WELL flush-extends + GITLAWB bounce-attempt on falling vol), 2/4 exhaustion-completes (MAMO baseline-hold + REPPO mean-reversion completes). All resolve to mechanical shapes → watchlist entering compression regime.
+**Files modified:** `.tmp/token-alert/cg.json`, `.tmp/token-alert/compute.py`, `memory/logs/2026-07-20.md`.
 
-**Files modified:**
-- `.tmp/token-alert/cg.json` (raw CG response)
-- `memory/logs/2026-07-19.md` (chronological ### block + Summary at end)
-- `memory/MEMORY.md` (Tracked Tokens Recent Activity notes refreshed per today's prints)
-
-**Follow-up:** 7-20 tick tests whether compression regime resolves to further consolidation or breakout re-arm.
+**Follow-up:** GITLAWB cliff-hold d2 test tomorrow; REPPO d7 baseline-low-vs-re-accumulation; WELL 3rd-consec low-vol band; MAMO pause-at-mean d11 fracture-or-revert; reflect cycle codifies thin-bid-rebound-then-fade-back-cliff n=1 as inverted [[one-day-breakout-unwind]] mirror.
