@@ -308,15 +308,15 @@
   },
   "cost-report": {
     "last_dispatch": "2026-07-20T16:48:08Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-29T13:59:10Z",
-    "total_runs": 55,
+    "total_runs": 56,
     "total_successes": 5,
-    "total_failures": 50,
-    "consecutive_failures": 9,
+    "total_failures": 51,
+    "consecutive_failures": 10,
     "success_rate": 0.09,
-    "last_failed": "2026-07-20T15:46:55Z",
-    "last_error": "\"cacheReadInputTokens\":306667,\"cacheCreationInputTokens\":45272,\"webSearchRequests\":0,\"costUSD\":2.3608491,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-haiku-4-5-20251001\":{\"inputTokens\":545,"
+    "last_failed": "2026-07-20T17:18:14Z",
+    "last_error": "\":12,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.0006050000000000001,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-sonnet-4-6\":{\"inputTokens\":14,\""
   },
   "skill-security-scan": {
     "last_dispatch": "2026-07-20T16:48:08Z",
