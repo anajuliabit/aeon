@@ -308,15 +308,15 @@
   },
   "cost-report": {
     "last_dispatch": "2026-07-20T10:47:35Z",
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-06-29T13:59:10Z",
-    "total_runs": 52,
+    "total_runs": 53,
     "total_successes": 5,
-    "total_failures": 47,
-    "consecutive_failures": 6,
-    "success_rate": 0.1,
-    "last_failed": "2026-07-20T08:23:27Z",
-    "last_error": "heReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.0006050000000000001,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-sonnet-4-6\":{\"inputTokens\":15,\"outputTok"
+    "total_failures": 48,
+    "consecutive_failures": 7,
+    "success_rate": 0.09,
+    "last_failed": "2026-07-20T11:12:48Z",
+    "last_error": "2,\"cacheReadInputTokens\":0,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.0006050000000000001,\"contextWindow\":200000,\"maxOutputTokens\":32000},\"claude-sonnet-4-6\":{\"inputTokens\":22764,\""
   },
   "skill-security-scan": {
     "last_dispatch": "2026-07-13T16:08:40Z",
