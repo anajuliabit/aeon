@@ -1,0 +1,509 @@
+{
+  "root": "card_dealflow",
+  "state": {},
+  "elements": {
+    "card_dealflow": {
+      "type": "Card",
+      "props": {
+        "title": "Deal Flow",
+        "description": "2026-07-20"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_intro",
+        "sep_1",
+        "grid_deals",
+        "sep_2",
+        "text_sources"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Capital clustered at the AI-agent stack's lower layers — inference (Fireworks), training (Prime Intellect), identity (Oak) — while strategic corporates kept displacing pure-VC leads on the megarounds. Fireworks' 4.375× re-price sets the inference-tier reference ceiling; USV's Pascal check re-opens prediction-market picks-and-shovels against the $37B Kalshi/Polymarket duopoly.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "grid_deals": {
+      "type": "Grid",
+      "props": {
+        "columns": 1,
+        "gap": "lg"
+      },
+      "children": [
+        "deal_1",
+        "deal_2",
+        "deal_3",
+        "deal_4",
+        "deal_5",
+        "deal_6",
+        "deal_7",
+        "deal_8"
+      ]
+    },
+    "deal_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d1_name",
+        "d1_desc",
+        "d1_round",
+        "d1_leads",
+        "d1_why"
+      ]
+    },
+    "d1_name": {
+      "type": "Heading",
+      "props": {
+        "text": "Fireworks AI",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "d1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Inference platform for open-source LLMs",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "d1_round": {
+      "type": "Badge",
+      "props": {
+        "text": "Series D: $1.505B @ $17.5B post (↑ 4.375× vs $4B Series C Oct 2025)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "d1_leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Atreides, Index, TCV",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "d1_why": {
+      "type": "Text",
+      "props": {
+        "text": "4.375× in 9 months on $1B ARR sets the inference-tier reference price ahead of any Groq/Together follow-on.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "deal_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d2_name",
+        "d2_desc",
+        "d2_round",
+        "d2_leads",
+        "d2_why"
+      ]
+    },
+    "d2_name": {
+      "type": "Heading",
+      "props": {
+        "text": "Oak",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "d2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Identity + access control purpose-built for AI agents",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "d2_round": {
+      "type": "Badge",
+      "props": {
+        "text": "Seed: $60M (n/d post)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "d2_leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Accel, CRV, Greylock",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "d2_why": {
+      "type": "Text",
+      "props": {
+        "text": "First-of-kind agent-native IAM primitive; three top-tier funds on one seed is category-formation, not exploration.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "deal_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d3_name",
+        "d3_desc",
+        "d3_round",
+        "d3_leads",
+        "d3_why"
+      ]
+    },
+    "d3_name": {
+      "type": "Heading",
+      "props": {
+        "text": "Prime Intellect",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "d3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Decentralized AI training + RL compute stack",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "d3_round": {
+      "type": "Badge",
+      "props": {
+        "text": "Series A: $130M @ $1B post (n/d prior)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "d3_leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Radical Ventures (+ NVIDIA, Intel, Dell)",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "d3_why": {
+      "type": "Text",
+      "props": {
+        "text": "Unicorn Series A with NVIDIA/Intel/Dell on cap table = compute incumbents hedging the open-stack contra-Anthropic thesis.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "deal_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d4_name",
+        "d4_desc",
+        "d4_round",
+        "d4_leads",
+        "d4_why"
+      ]
+    },
+    "d4_name": {
+      "type": "Heading",
+      "props": {
+        "text": "Chai Discovery",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "d4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Foundation-model drug discovery",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "d4_round": {
+      "type": "Badge",
+      "props": {
+        "text": "Series C: $400M @ $3.8B post (↑ ~4× vs ~$1B Nov 2024)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "d4_leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Index, Sequoia, Kleiner Perkins, Dimension",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "d4_why": {
+      "type": "Text",
+      "props": {
+        "text": "Sequoia+Index+KP triple-lead on one round marks biotech-AI consolidation into a single winner-take-most bet.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "deal_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d5_name",
+        "d5_desc",
+        "d5_round",
+        "d5_leads",
+        "d5_why"
+      ]
+    },
+    "d5_name": {
+      "type": "Heading",
+      "props": {
+        "text": "Walden Robotics",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "d5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "General-purpose humanoid robots for manufacturing/logistics",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "d5_round": {
+      "type": "Badge",
+      "props": {
+        "text": "Series A: $300M @ $1.1B post (↑ vs stealth)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "d5_leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Toyota, Deviation Capital",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "d5_why": {
+      "type": "Text",
+      "props": {
+        "text": "Toyota-strategic-as-lead on a Series A unicorn out of stealth extends the corporate-displaces-VC pattern (Aramco/Together, National Grid/Joulent, Salesforce/8090).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "deal_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d6_name",
+        "d6_desc",
+        "d6_round",
+        "d6_leads",
+        "d6_why"
+      ]
+    },
+    "d6_name": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto.com",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "d6_desc": {
+      "type": "Text",
+      "props": {
+        "text": "CEX moving into tokenized securities + derivatives",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "d6_round": {
+      "type": "Badge",
+      "props": {
+        "text": "Strategic: $400M @ $20B post (n/d prior)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "d6_leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Citadel Securities",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "d6_why": {
+      "type": "Text",
+      "props": {
+        "text": "First institutional round in company history; Citadel's first crypto-native equity check picks a horse for the tokenized-derivatives regulatory opening.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "deal_7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d7_name",
+        "d7_desc",
+        "d7_round",
+        "d7_leads",
+        "d7_why"
+      ]
+    },
+    "d7_name": {
+      "type": "Heading",
+      "props": {
+        "text": "PixVerse",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "d7_desc": {
+      "type": "Text",
+      "props": {
+        "text": "AI video generation",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "d7_round": {
+      "type": "Badge",
+      "props": {
+        "text": "Series C extension: $439M @ >$2B post (↑ vs prior C)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "d7_leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: Alibaba",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "d7_why": {
+      "type": "Text",
+      "props": {
+        "text": "Alibaba anchoring an extension larger than the primary Series C is a China-strategic play for the video-gen tier where Runway/Pika are stalling in the West.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "deal_8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "d8_name",
+        "d8_desc",
+        "d8_round",
+        "d8_leads",
+        "d8_why"
+      ]
+    },
+    "d8_name": {
+      "type": "Heading",
+      "props": {
+        "text": "Pascal",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "d8_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Perpetual-style event contracts for pro traders",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "d8_round": {
+      "type": "Badge",
+      "props": {
+        "text": "Series A: $9M (n/d post)",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "d8_leads": {
+      "type": "Text",
+      "props": {
+        "text": "Lead: USV (+ Wintermute Ventures, DBA existing)",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "d8_why": {
+      "type": "Text",
+      "props": {
+        "text": "USV's first prediction-market check; ex-dYdX CEO attacking the $37B Kalshi/Polymarket duopoly with perp-futures mechanics — Tier-3 signal for on-chain markets.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: crunchbase=ok, techcrunch=ok, cryptorank=fail(paywall), crypto-fundraising=ok, techstartups=ok, aift=skipped | candidates=~32 → kept=8",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,37 +1,37 @@
-*Deal Flow — 2026-07-06*
+*Deal Flow — 2026-07-20*
 
-*Read:* strategics led the megarounds — Aramco into Together AI at 2.5× val, National Grid Ventures anchoring $1.75B into AI-compute energy, Blackstone + Airbus into European drone autonomy. meanwhile crypto VCs priced Venice AI as a $1B private-inference unicorn on its first external raise, and THEA anchored a Solana coordination layer for behavioral-AI risk markets.
+**Read:** Capital clustered at the AI-agent stack's lower layers — inference (Fireworks), training (Prime Intellect), identity (Oak) — while strategic corporates kept displacing pure-VC leads on the megarounds. Fireworks' 4.375× re-price sets the inference-tier reference ceiling; USV's Pascal check re-opens prediction-market picks-and-shovels against the $37B Kalshi/Polymarket duopoly.
 
-1. **Venice AI** — private, surveillance-free access to 200+ AI models
-   $65M Series A @ $1B post (UP, first external raise) | Lead: Dragonfly (Coinbase Ventures, North Island co)
-   *Why it matters:* dragonfly + coinbase ventures pricing a private-inference unicorn on first external raise; $70M ARR, 3.5M users — crypto VCs underwriting inference sovereignty, not integration.
+1. **Fireworks AI** — inference platform for open-source LLMs
+   $1.505B Series D @ $17.5B post (UP 4.375× vs $4B Series C Oct 2025) | Lead: Atreides, Index, TCV
+   *Why it matters:* 4.375× in 9 months on $1B ARR sets the inference-tier reference price ahead of any Groq/Together follow-on.
 
-2. **Together AI** — cloud for training and running open-source AI models
-   $800M Series C @ $8.3B post (UP 2.5× vs $3.3B Feb 2025) | Lead: Aramco Ventures (Vista Equity, General Catalyst co)
-   *Why it matters:* saudi sovereign wealth fronting a US neocloud at 2.5× val in 17 months — open-source AI infra is now oil-money capex, not the vc syndicate that led feb 2025.
+2. **Oak** — identity + access control purpose-built for AI agents
+   $60M Seed (n/d post) | Lead: Accel, CRV, Greylock
+   *Why it matters:* First-of-kind agent-native IAM primitive; three top-tier funds on one seed is category-formation, not exploration.
 
-3. **Quantum Systems** — German defense drones for surveillance and autonomous ops
-   $1.2B Series D @ ~$8B post (n/d vs prior) | Lead: Blackstone, Airbus, Advent, Noteus
-   *Why it matters:* PE + strategic, not VC — Europe pricing defense autonomy as sovereign infra, second euro-defense mega-round of Q3 in the drone stack.
+3. **Prime Intellect** — decentralized AI training + RL compute stack
+   $130M Series A @ $1B post (n/d prior) | Lead: Radical Ventures (+ NVIDIA, Intel, Dell)
+   *Why it matters:* Unicorn Series A with NVIDIA/Intel/Dell on cap table = compute incumbents hedging the open-stack contra-Anthropic thesis.
 
-4. **Dominion Dynamics** — Arctic surveillance drones + command-and-control software
-   $100M Series A @ $400M post (n/d vs prior) | Lead: Georgian, Valor, Lakestar, Bessemer
-   *Why it matters:* first North American peer-sovereignty defense Series A at 4× post/raise — Bessemer + Lakestar underwriting the Arctic autonomy stack under peer pressure to euro drone rounds.
+4. **Chai Discovery** — foundation-model drug discovery
+   $400M Series C @ $3.8B post (UP ~4× vs ~$1B Nov 2024) | Lead: Index, Sequoia, Kleiner Perkins, Dimension
+   *Why it matters:* Sequoia+Index+KP triple-lead on one round marks biotech-AI consolidation into a single winner-take-most bet.
 
-5. **Twelve Labs** — video-understanding AI that indexes and searches archive footage
-   $100M Series B @ >$1B post (n/d) | Lead: NEA, Naver Ventures (Amazon strategic co)
-   *Why it matters:* amazon in as strategic, not integration — hyperscaler multimodal race widens from text to video-search stakes, alongside veo/sora.
+5. **Walden Robotics** — general-purpose humanoid robots for manufacturing/logistics
+   $300M Series A @ $1.1B post (UP vs stealth) | Lead: Toyota, Deviation Capital
+   *Why it matters:* Toyota-strategic-as-lead on a Series A unicorn out of stealth extends the corporate-displaces-VC pattern (Aramco/Together, National Grid/Joulent, Salesforce/8090).
 
-6. **THEA** — behavioral-AI settlement layer on Solana for real-time risk markets
-   $8M strategic (n/d val) | Lead: Maven 11, Spartan Group, Manifold, Hack VC, Fischer8
-   *Why it matters:* first coordination-layer AI raise on Solana at crypto-tier-1s — SOL adds a settlement rail for risk-market AI to answer Base's x402 agentic-payment beachhead.
+6. **Crypto.com** — CEX moving into tokenized securities + derivatives
+   $400M strategic @ $20B post (n/d prior) | Lead: Citadel Securities
+   *Why it matters:* First institutional round in company history; Citadel's first crypto-native equity check picks a horse for the tokenized-derivatives regulatory opening.
 
-7. **8090 Solutions** — enterprise software built with coordinated AI agents
-   $135M growth (n/d val) | Lead: Salesforce Ventures
-   *Why it matters:* salesforce ventures fronting a coordination-agents play that could compete its own einstein layer — Chamath as founder-CEO, operator-side not investor-side.
+7. **PixVerse** — AI video generation
+   $439M Series C extension @ >$2B post (UP vs prior C) | Lead: Alibaba
+   *Why it matters:* Alibaba anchoring an extension larger than the primary Series C is a China-strategic play for the video-gen tier where Runway/Pika are stalling in the West.
 
-8. **Joulent** — energy infra for AI and compute-intensive industries
-   $1.75B strategic (n/d val) | Lead: National Grid Ventures
-   *Why it matters:* utility capital entering the AI stack directly — energy priced as a stack component, not a supplier, at mega-round scale.
+8. **Pascal** — perpetual-style event contracts for pro traders
+   $9M Series A (n/d post) | Lead: USV (+ Wintermute Ventures, DBA existing)
+   *Why it matters:* USV's first prediction-market check; ex-dYdX CEO attacking the $37B Kalshi/Polymarket duopoly with perp-futures mechanics — Tier-3 signal for on-chain markets.
 
-*Sources:* crunchbase=ok, techcrunch=ok, techstartups=ok, crypto-fundraising=ok, cryptorank=partial(paywall), aift=fail(june-only) | candidates=~32 → kept=8
+*Sources:* crunchbase=ok, techcrunch=ok, cryptorank=fail(paywall), crypto-fundraising=ok, techstartups=ok, aift=skipped | candidates=~32 → kept=8
