@@ -1,24 +1,20 @@
-*Agent Buzz — 2026-07-19*
-_mcp moved from debate to substrate today — two architecture takes, three vertical products (identity/payments/forensics) shipping over it._
+*Agent Buzz — 2026-07-20*
+_Quiet builder day — MCP tooling matures (framework, typed output, external enforcement) while multi-agent coordination scaffolds surface. No benchmarks, no drama._
 
-**agent architecture primitives**
-• @0xCodila — the think→act→observe→reflect→retry loop from a phd student is the blueprint every modern agent still recycles
-  https://x.com/0xCodila/status/2078626859424592212
-• @DataScienceDojo — production-agent stack is three layers: tools (do), mcp (connect), skills (reuse); resists collapsing them
-  https://x.com/DataScienceDojo/status/2078571778897489954
+**MCP tooling matures**
+• @DanKornas — mcp-agent (Python) turns MCP orchestration + recovery into a library layer instead of per-agent boilerplate.
+  https://x.com/DanKornas/status/2078960808340709492
+• @sander_scode — MCP tools now return structured content with output schemas + a replayable benchmark, so agents branch on typed fields not string parsing.
+  https://x.com/sander_scode/status/2078968010874802606
+• @policylayer_dan — Stripe/GitHub/Postgres MCP servers you can't modify push enforcement outside the server as a policy sidecar, not an in-server hook.
+  https://x.com/policylayer_dan/status/2078990488447934769
 
-**substrate arguments**
-• @0xCristal — apis were designed for humans; mcp retrofits them for llm tool-chaining without rewriting every endpoint
-  https://x.com/0xCristal/status/2078504169695031727
-• @MamJayDev — vercel-labs agent-skills (SKILL.md) run the same repeatable task across 70+ frameworks; spec-shaped, not framework-code
-  https://x.com/MamJayDev/status/2078627103843795057
+**Multi-agent coordination scaffolds**
+• @superdoccimo — bothread uses local MCP as a coordination room (file claims, handoff, approval gates) so multiple coding agents don't collide on the same file.
+  https://x.com/superdoccimo/status/2078988589862363505
+• @BeauJohnson89 — beckon runs workspace-scoped voice-controlled agents via MCP + vision with an open knowledge format across unlimited workspaces.
+  https://x.com/BeauJohnson89/status/2078991189307695303
+• @yuhasbeentaken — Graph Org (Flow) pitches multi-agent workflow with confidence/control affordances aimed at non-technical operators.
+  https://x.com/yuhasbeentaken/status/2078990332642124194
 
-**mcp-native verticals**
-• @GetYourHood — uhood exposes mcp tools for agent-owned feed/profile/thread/search; on-chain identity as an agent primitive
-  https://x.com/GetYourHood/status/2078630738811834401
-• @trycustos — mcp makes any page/api payable in stablecoins at the edge; missing half is treasury rules for safe agent spend
-  https://x.com/trycustos/status/2078629957291688099
-• @H1DR4_agent — h1dr4 1.2 adds on-chain crime registry tracing + disposable workers over mcp/websocket; forensics as agent surface
-  https://x.com/H1DR4_agent/status/2078613115202068625
-
-<!-- _src: xai-cache · candidates: 12 → kept: 7 -->
+<!-- _src: xai · candidates: 7 → kept: 6_ -->

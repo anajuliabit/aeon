@@ -1,0 +1,120 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-20",
+        "description": "Quiet builder day — MCP tooling matures (framework, typed output, external enforcement) while multi-agent coordination scaffolds surface. No benchmarks, no drama."
+      },
+      "children": [
+        "section1",
+        "sep1",
+        "section2",
+        "note"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "story1",
+        "story2",
+        "story3"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP tooling matures",
+        "level": "h2"
+      }
+    },
+    "story1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mcp-agent (Python) turns MCP orchestration + recovery into a library layer instead of per-agent boilerplate.",
+        "href": "https://x.com/DanKornas/status/2078960808340709492",
+        "source": "@DanKornas"
+      }
+    },
+    "story2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MCP tools now return structured content with output schemas + a replayable benchmark, so agents branch on typed fields not string parsing.",
+        "href": "https://x.com/sander_scode/status/2078968010874802606",
+        "source": "@sander_scode"
+      }
+    },
+    "story3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Stripe/GitHub/Postgres MCP servers you can't modify push enforcement outside the server as a policy sidecar, not an in-server hook.",
+        "href": "https://x.com/policylayer_dan/status/2078990488447934769",
+        "source": "@policylayer_dan"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading2",
+        "story4",
+        "story5",
+        "story6"
+      ]
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Multi-agent coordination scaffolds",
+        "level": "h2"
+      }
+    },
+    "story4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "bothread uses local MCP as a coordination room (file claims, handoff, approval gates) so multiple coding agents don't collide on the same file.",
+        "href": "https://x.com/superdoccimo/status/2078988589862363505",
+        "source": "@superdoccimo"
+      }
+    },
+    "story5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "beckon runs workspace-scoped voice-controlled agents via MCP + vision with an open knowledge format across unlimited workspaces.",
+        "href": "https://x.com/BeauJohnson89/status/2078991189307695303",
+        "source": "@BeauJohnson89"
+      }
+    },
+    "story6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Graph Org (Flow) pitches multi-agent workflow with confidence/control affordances aimed at non-technical operators.",
+        "href": "https://x.com/yuhasbeentaken/status/2078990332642124194",
+        "source": "@yuhasbeentaken"
+      }
+    },
+    "note": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai · candidates: 7 → kept: 6_",
+        "variant": "caption"
+      }
+    }
+  }
+}
