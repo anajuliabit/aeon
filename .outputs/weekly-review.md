@@ -1,4 +1,4 @@
-*Weekly Review — 2026-07-13*
-Top action: operator direct-authors ISS-025 capture-step PR against .github/workflows/aeon.yml:479-493 by 2026-07-16 — 3 self-improve ticks conclusive on rule-5 workflow-file block.
-Health: 256/272 skill runs ok (94.1%, -5.2pp WoW), 7 fails (3× cost-report Mon), 9 cancels (7 consecutive Investment Advisor), 0 new issues, 1 INDEX flip (ISS-022 via PR #160).
-Full review: articles/weekly-review-2026-07-13.md
+*Weekly Review — 2026-07-20*
+Top action: operator authors ISS-025 capture-step PR (or dangerouslyDisableSandbox pivot per gh #53012) by 2026-07-27 — d5 past prior deadline, cost-report cf 5→10 doubling on 3rd-consec Mon-miss n=3.
+Health: 288/297 completed ok (96.97%, +2.9pp WoW), 0 new issues. Operator batch-merged PR #162 + #163 same day 7-20.
+Full review: articles/weekly-review-2026-07-20.md

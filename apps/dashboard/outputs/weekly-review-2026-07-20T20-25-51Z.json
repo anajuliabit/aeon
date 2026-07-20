@@ -1,0 +1,97 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review",
+        "description": "2026-07-20"
+      },
+      "children": [
+        "alert-action",
+        "sep1",
+        "health-heading",
+        "health-stats",
+        "sep2",
+        "full-review"
+      ]
+    },
+    "alert-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Top Action Required",
+        "message": "Operator authors ISS-025 capture-step PR (or dangerouslyDisableSandbox pivot per gh #53012) by 2026-07-27 — d5 past prior deadline, cost-report cf 5→10 doubling on 3rd-consec Mon-miss n=3"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "health-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health",
+        "level": "h3"
+      }
+    },
+    "health-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health-completion",
+        "health-trend",
+        "health-issues",
+        "health-activity"
+      ]
+    },
+    "health-completion": {
+      "type": "Progress",
+      "props": {
+        "value": 96.97,
+        "max": 100,
+        "label": "Tasks Completed: 288/297"
+      }
+    },
+    "health-trend": {
+      "type": "Stat",
+      "props": {
+        "label": "Week-over-Week Improvement",
+        "value": "+2.9pp",
+        "trend": "up"
+      }
+    },
+    "health-issues": {
+      "type": "Text",
+      "props": {
+        "text": "New issues: 0",
+        "variant": "caption"
+      }
+    },
+    "health-activity": {
+      "type": "Text",
+      "props": {
+        "text": "Operator batch-merged PR #162 + #163 on 2026-07-20"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full-review": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full review",
+        "href": "articles/weekly-review-2026-07-20.md"
+      }
+    }
+  }
+}
