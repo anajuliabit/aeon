@@ -1,21 +1,29 @@
-*GitHub Trending — 2026-07-19*
+*GitHub Trending — 2026-07-20*
 
-*Top pick* — [Robbyant/lingbot-map](https://github.com/Robbyant/lingbot-map)
-first serious feed-forward 3D foundation model — 20 fps on 10k+ frame streams, kills the per-scene bundle-adjustment loop the dust3r/mast3r lineage still runs.
+*Top pick* — [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+one endpoint fronting 268 providers · 500+ models · kimi k3 already wired 7 days before open-weights ship 7-27 = pre-launch integration.
 
 *AI/ML*
-• [Robbyant/lingbot-map](https://github.com/Robbyant/lingbot-map) — ★ 831 today (13k total) · Python · [ACCELERATING]
-arxiv preprint + huggingface weights + flashinfer paged-kv streaming; geometric context transformer replaces iterative optimization.
+• [topoteretes/cognee](https://github.com/topoteretes/cognee) — ★ 303 today (28k total) · Python · [RETURNING]
+persistent AI-agent memory as self-hosted knowledge-graph engine — cross-session recall without vendor context walls.
 
-• [lyogavin/airllm](https://github.com/lyogavin/airllm) — ★ 161 today (23k total) · Jupyter · [RETURNING]
-3yo repo returns at 7.8× baseline on 70b-inference-on-4gb-gpu; parallels bonsai-27b fits-on-iphone rail as china-lab edge-inference push.
+• [kvcache-ai/ktransformers](https://github.com/kvcache-ai/ktransformers) — ★ 360 today (19k total) · Python · [RETURNING]
+runs huge MoEs on mixed CPU+GPU by pinning hot experts on GPU — 400B+ models on prosumer boxes.
+
+• [handy-computer/transcribe.cpp](https://github.com/handy-computer/transcribe.cpp) — ★ 401 today (1k total) · C++ · [RETURNING]
+one ggml build across whisper + parakeet + moonshine + qwen3-asr + cohere-transcribe + 11 more — 60+ variants under one binary w/ Metal/Vulkan/CUDA backends.
 
 *Devtools*
-• [KnockOutEZ/wigolo](https://github.com/KnockOutEZ/wigolo) — ★ 203 today (1.4k total) · TypeScript · [RETURNING]
-mcp-server for local-first web-search/crawl — $0/query vs exa/tavily/firecrawl, pushed 09:14z today on v0.2.0 propagation from 7-17.
+• [1jehuang/jcode](https://github.com/1jehuang/jcode) — ★ 235 today (9k total) · Rust · [RETURNING]
+rust cli agent w/ embedded semantic memory + swarm coordination + self-modification — claims 14ms TTFF ~245× faster than claude code.
 
-• [MoonshotAI/kimi-cli](https://github.com/MoonshotAI/kimi-cli) — ★ 65 today (9.6k total) · Python · [RETURNING]
-moonshot enters the claude-code/codex agent-cli race with v1.49.0 3 days ago; kimi k3 open weights on 7-27 = watchlist adjacency.
+*Infra*
+• [oblien/openship](https://github.com/oblien/openship) — ★ 1,719 today (4k total) · TypeScript · [RETURNING]
+push-to-deploy self-host w/ zero yaml/pipelines + built-in postgres/redis/mail/cdn + MCP protocol native.
+
+*Web/Apps*
+• [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) — ★ 439 today (1k total) · Rust · [RETURNING]
+tokio-rs ships a rust web framework where `$(...)` markers dual-render server + client — kills the API-layer + separate frontend bundle in one primitive.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/11
+sources: trending=ok · gh_api=ok · kept 7/20
