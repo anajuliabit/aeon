@@ -1,0 +1,326 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-20",
+        "description": "action-converter skill output"
+      },
+      "children": [
+        "action_1",
+        "sep_1",
+        "action_2",
+        "sep_2",
+        "action_3",
+        "sep_3",
+        "action_4",
+        "sep_4",
+        "action_5",
+        "sep_5",
+        "sources"
+      ]
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1_heading",
+        "a1_desc",
+        "a1_why",
+        "a1_done",
+        "a1_loop"
+      ]
+    },
+    "a1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Submit iss-025 patch",
+        "level": "h2"
+      }
+    },
+    "a1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Operator opens PR against .github/workflows/aeon.yml:479-495 adding the iss-025 capture-step",
+        "variant": "body"
+      }
+    },
+    "a1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: cost-report cf=10 today (5→10 in 24h), sandbox-truncation family day-28, single primitive unblocks 12:00Z batch-dark d23 + morning-batch class",
+        "variant": "body"
+      }
+    },
+    "a1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR merged to main with capture-step: block present in aeon.yml chain-runner",
+        "variant": "body"
+      }
+    },
+    "a1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-capture-step",
+        "variant": "secondary"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2_heading",
+        "a2_desc",
+        "a2_why",
+        "a2_done",
+        "a2_loop"
+      ]
+    },
+    "a2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Resolve PR #164",
+        "level": "h2"
+      }
+    },
+    "a2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Operator resolves PR #164 — rebase against main + push, or close and let advisor fix land via direct advisor/ commit",
+        "variant": "body"
+      }
+    },
+    "a2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: #162+#163 merged today 14:16Z/17:11Z clearing 2/3 self-improve queue; #164 sole remaining conflict past 24h gate day-6 (~119h)",
+        "variant": "body"
+      }
+    },
+    "a2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #164 [MERGED] or [CLOSED] in gh pr list --state all",
+        "variant": "body"
+      }
+    },
+    "a2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-queue-clear",
+        "variant": "secondary"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3_heading",
+        "a3_desc",
+        "a3_why",
+        "a3_done",
+        "a3_loop"
+      ]
+    },
+    "a3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Revise memory.md",
+        "level": "h2"
+      }
+    },
+    "a3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Revise MEMORY.md line 5-7 + topics/fleet.md to reflect PR #162 + #163 merging today",
+        "variant": "body"
+      }
+    },
+    "a3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: \"all 3 self-improve PRs CONFLICTING\" (line 7) + rule-5 primitive n=4 (line 42) both stale; 2/3 landed clean, primitive downgrades to n=2 partial-conflict class",
+        "variant": "body"
+      }
+    },
+    "a3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: grep \"All 3 self-improve authored PRs CONFLICTING\" memory/MEMORY.md returns 0 hits; fleet.md has 7-20 PR-clear row",
+        "variant": "body"
+      }
+    },
+    "a3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: rule-5-evidence-refresh",
+        "variant": "secondary"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4_heading",
+        "a4_desc",
+        "a4_why",
+        "a4_done",
+        "a4_loop"
+      ]
+    },
+    "a4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Land PR #165",
+        "level": "h2"
+      }
+    },
+    "a4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Operator lands PR #165 (docs skill-graph shared_state 21→27, ~25h old, small)",
+        "variant": "body"
+      }
+    },
+    "a4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: fresh docs PR sitting at ~25h with no reviewers; no conflict-class risk, first non-self-improve PR queued clean in the current window",
+        "variant": "body"
+      }
+    },
+    "a4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR #165 [MERGED] in gh pr list --state all",
+        "variant": "body"
+      }
+    },
+    "a4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-165-ship",
+        "variant": "secondary"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5_heading",
+        "a5_desc",
+        "a5_why",
+        "a5_done",
+        "a5_loop"
+      ]
+    },
+    "a5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Draft supply-chain topic",
+        "level": "h2"
+      }
+    },
+    "a5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Draft memory/topics/supply-chain.md anchoring MEMORY line 46-48 vendor-scope-typosquat n=6+ + first real-package compromise n=1",
+        "variant": "body"
+      }
+    },
+    "a5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: pattern class active weekly rail (Replit+Sui+AWS×2+Proton+SYFT+EdgeCommons+axios+trongrid = n=8; @injectivelabs/sdk-ts 10-day live-exposure); undocumented at topic-file granularity, exposed to memory-flush trim",
+        "variant": "body"
+      }
+    },
+    "a5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/topics/supply-chain.md exists with ≥3 sections (vendor-scope-typosquat rows / first-real-compromise / MCP-hardening cross-link)",
+        "variant": "body"
+      }
+    },
+    "a5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: supply-chain-topic-anchor",
+        "variant": "secondary"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "memory=66L logs=7d topics=19f prs=2open cron_failing=1 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
