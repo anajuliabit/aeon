@@ -1,0 +1,289 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reg Monitor — 2026-07-15"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_subtitle",
+        "sep1",
+        "heading_act",
+        "stack_act",
+        "sep2",
+        "heading_watch",
+        "stack_watch",
+        "sep3",
+        "heading_context",
+        "stack_context",
+        "sep4",
+        "stack_footer"
+      ]
+    },
+    "heading_subtitle": {
+      "type": "Heading",
+      "props": {
+        "text": "Kalshi's federal-preemption defense takes 2 hits in 8 days",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "heading_act": {
+      "type": "Heading",
+      "props": {
+        "text": "ACT",
+        "level": "h3"
+      }
+    },
+    "stack_act": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "act_item1_stack",
+        "act_item2_stack"
+      ]
+    },
+    "act_item1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act1_link",
+        "act1_desc",
+        "act1_effective",
+        "act1_risk"
+      ]
+    },
+    "act1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC emergency-stays KalshiEX rule change, orders michigan trades fulfilled",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9267-26",
+        "source": "us federal · enforcement"
+      }
+    },
+    "act1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "CFTC used emergency authority to block Kalshi from cancelling open trades held by michigan residents after a michigan state court ordered the trades voided. Chair Selig: \"a state cannot force a DCM to violate its obligations.\" Federal-preemption posture reaffirmed; 8 more state suits still live."
+      }
+    },
+    "act1_effective": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ effective 2026-07-14 (immediate)",
+        "variant": "caption"
+      }
+    },
+    "act1_risk": {
+      "type": "Text",
+      "props": {
+        "text": "📊 kalshi/polymarket open-position risk in AZ/CT/IL/NM/MN/NY/RI/WI unresolved",
+        "variant": "caption"
+      }
+    },
+    "act_item2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act2_link",
+        "act2_desc",
+        "act2_timeline",
+        "act2_impact"
+      ]
+    },
+    "act2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SDNY judge Torres denies Kalshi's preliminary injunction against NY gambling law",
+        "href": "https://www.banklesstimes.com/articles/2026/07/08/kalshi-suffers-sdny-defeat-as-judge-torres-denies-injunction/",
+        "source": "s.d.n.y. · court ruling"
+      }
+    },
+    "act2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "In KalshiEX v. Williams: CEA doesn't preempt NY gambling law under express, field, or conflict preemption. Torres reads the CEA's \"Special Rule\" as expressly preserving state gambling authority. Kalshi appealed to 2d Cir. same day."
+      }
+    },
+    "act2_timeline": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ 2d Cir. briefing scheduled next",
+        "variant": "caption"
+      }
+    },
+    "act2_impact": {
+      "type": "Text",
+      "props": {
+        "text": "📊 Direct blow to the preemption defense across all 9 CFTC state suits; 2d Cir. now the pivot",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "heading_watch": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h3"
+      }
+    },
+    "stack_watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "watch_item1_stack",
+        "watch_item2_stack"
+      ]
+    },
+    "watch_item1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch1_link",
+        "watch1_desc"
+      ]
+    },
+    "watch1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Federal Reserve NPRM: AML/CFT programs for supervised banks",
+        "href": "https://www.federalregister.gov/documents/2026/07/09/2026-13919/anti-money-laundering-and-countering-the-financing-of-terrorism-programs",
+        "source": "us federal · proposed rule"
+      }
+    },
+    "watch1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fed aligns with parallel FDIC/OCC/NCUA/FinCEN AML proposals; explicitly threads GENIUS Act payment-stablecoin issuer AML requirements. Comment period open. On-thesis for stablecoin issuers, off-thesis for prediction markets."
+      }
+    },
+    "watch_item2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch2_link",
+        "watch2_desc"
+      ]
+    },
+    "watch2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Polymarket files FCM/margin-trading license while under active CFTC investigation",
+        "href": "https://www.techtimes.com/articles/320118/20260710/polymarket-applies-margin-trading-license-while-under-active-cftc-investigation.htm",
+        "source": "us federal · agency review"
+      }
+    },
+    "watch2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Polymarket wants formal DCM status. CFTC now has to evaluate the FCM app, approve margined-contract rulebook changes, and prosecute the WSJ-surfaced marketing-conduct investigation in parallel."
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "heading_context": {
+      "type": "Heading",
+      "props": {
+        "text": "CONTEXT",
+        "level": "h3"
+      }
+    },
+    "stack_context": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "context_item1_stack"
+      ]
+    },
+    "context_item1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context1_link",
+        "context1_desc"
+      ]
+    },
+    "context1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC stays self-certified 24/7 crude oil futures contract",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9265-26"
+      }
+    },
+    "context1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "CFTC intervenes again on 24/7 self-certification; adjacent to the RFC 26-12784 thread on standard-futures 24/7 extension."
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "stack_footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_sources",
+        "footer_count"
+      ]
+    },
+    "footer_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: federal-register=ok · sec=ok · cftc=ok · websearch=ok · congress=skip",
+        "variant": "caption"
+      }
+    },
+    "footer_count": {
+      "type": "Text",
+      "props": {
+        "text": "7 developments scored, 2 act / 2 watch / 1 context",
+        "variant": "caption"
+      }
+    }
+  }
+}

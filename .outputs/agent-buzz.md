@@ -1,22 +1,24 @@
-*Agent Buzz — 2026-07-12*
-_mcp production-hardening dominated — contract gates, oauth loops — with two research drops (swe-agent interface, 35b moe) and a systems-layer roll-up._
+*Agent Buzz — 2026-07-19*
+_mcp moved from debate to substrate today — two architecture takes, three vertical products (identity/payments/forensics) shipping over it._
 
-**mcp production hardening**
-• @elliot1one — tool contracts drift underneath the agent; argues contract gates before model-level fixes.
-  https://x.com/elliot1one/status/2075867693610414248
-• @gautham_city_ — cloud agents can't reach mcp servers behind oauth; long-running daily-monitoring loops break there.
-  https://x.com/gautham_city_/status/2076091893277221222
+**agent architecture primitives**
+• @0xCodila — the think→act→observe→reflect→retry loop from a phd student is the blueprint every modern agent still recycles
+  https://x.com/0xCodila/status/2078626859424592212
+• @DataScienceDojo — production-agent stack is three layers: tools (do), mcp (connect), skills (reuse); resists collapsing them
+  https://x.com/DataScienceDojo/status/2078571778897489954
 
-**agent research drops**
-• @h100envy — swe-agent's 12.5% swe-bench floor: bounded edits + linter feedback set the ceiling, not the model.
-  https://x.com/h100envy/status/2076024822295851424
-• @DerekColley_ — shanghai ai lab's 35b agents-a1 moe matches 1t-scale on long-task training; routing beating dense at agentic scale.
-  https://x.com/DerekColley_/status/2075862414742933782
+**substrate arguments**
+• @0xCristal — apis were designed for humans; mcp retrofits them for llm tool-chaining without rewriting every endpoint
+  https://x.com/0xCristal/status/2078504169695031727
+• @MamJayDev — vercel-labs agent-skills (SKILL.md) run the same repeatable task across 70+ frameworks; spec-shaped, not framework-code
+  https://x.com/MamJayDev/status/2078627103843795057
 
-**systems-layer literature**
-• @KirkDBorne — 574-page "agentic architectural patterns" book: function calling, mcp, a2a, multi-agent coordination as enterprise pattern language.
-  https://x.com/KirkDBorne/status/2076063115993600085
-• @shenli3514 — awesome-agent-infra list: runtimes, sandboxes, mcp, workspace state, security, observability, evals — systems layer, not model layer.
-  https://x.com/shenli3514/status/2075820600640336352
+**mcp-native verticals**
+• @GetYourHood — uhood exposes mcp tools for agent-owned feed/profile/thread/search; on-chain identity as an agent primitive
+  https://x.com/GetYourHood/status/2078630738811834401
+• @trycustos — mcp makes any page/api payable in stablecoins at the edge; missing half is treasury rules for safe agent spend
+  https://x.com/trycustos/status/2078629957291688099
+• @H1DR4_agent — h1dr4 1.2 adds on-chain crime registry tracing + disposable workers over mcp/websocket; forensics as agent surface
+  https://x.com/H1DR4_agent/status/2078613115202068625
 
-<!-- _src: xai · candidates: 10 → kept: 6_ -->
+<!-- _src: xai-cache · candidates: 12 → kept: 7 -->

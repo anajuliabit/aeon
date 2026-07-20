@@ -1,0 +1,770 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-16",
+        "description": "Verdict: 3 to patch today, 5 to schedule, 0 monitor • Sources: kev, gh advisory, epss"
+      },
+      "children": [
+        "verdict-stack"
+      ]
+    },
+    "verdict-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "patch-today-section",
+        "separator-1",
+        "patch-week-section",
+        "separator-2",
+        "state-section"
+      ]
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "patch-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-today-heading",
+        "npm-malware-item",
+        "cve-2008-item",
+        "cve-46817-item"
+      ]
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "npm-malware-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm-wave-title",
+        "npm-wave-desc",
+        "npm-packages-stack",
+        "npm-wave-action"
+      ]
+    },
+    "npm-wave-title": {
+      "type": "Text",
+      "props": {
+        "text": "npm-malware wave d3 · 16 pkgs (7-15 14z → 7-16 08z, count fades 30→16)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "npm-wave-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Wave carries into d3. Includes claude-token-tracker-mcp (Claude API token typosquat, fleet-adjacent scope), n8n-nodes-rce-poc (n8n RCE, adjacent to 7-15's n8n-mcp CVE-2026-54052), and 08:13z 4-pkg p2p batch.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "npm-packages-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm-packages-list"
+      ]
+    },
+    "npm-packages-list": {
+      "type": "Text",
+      "props": {
+        "text": "Packages: claude-token-tracker-mcp, n8n-nodes-rce-poc, websight-p2p, websight2-p2p, ai-p2p, loader1, fflask (pip flask typosquat), rhynpm (multi-version), npm-rce-poc, datefmt-helper",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "npm-wave-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action Required",
+        "message": "Audit installs since 7-15 14z; rotate any Anthropic API keys touched by claude-token-tracker-mcp"
+      },
+      "children": []
+    },
+    "cve-2008-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-2008-link",
+        "cve-2008-meta",
+        "cve-2008-desc",
+        "cve-2008-action"
+      ]
+    },
+    "cve-2008-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2008-4128 — Cisco iOS 12.4",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2008-4128"
+      },
+      "children": []
+    },
+    "cve-2008-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-2008-epss",
+        "cve-2008-pct",
+        "cve-2008-kev",
+        "cve-2008-bod"
+      ]
+    },
+    "cve-2008-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.239"
+      },
+      "children": []
+    },
+    "cve-2008-pct": {
+      "type": "Stat",
+      "props": {
+        "label": "PCT",
+        "value": "0.976"
+      },
+      "children": []
+    },
+    "cve-2008-kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV added 7-13",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "cve-2008-bod": {
+      "type": "Badge",
+      "props": {
+        "text": "BOD 26-04 DUE TODAY",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "cve-2008-desc": {
+      "type": "Text",
+      "props": {
+        "text": "CSRF on EOL platform; 17-year-old CVE confirmed exploited. Yesterday t-2, today t-0.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "cve-2008-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Action Required",
+        "message": "Retire EOL iOS 12.4 or apply Cisco mitigations; BOD clock hits"
+      },
+      "children": []
+    },
+    "cve-46817-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-46817-link",
+        "cve-46817-meta",
+        "cve-46817-desc",
+        "cve-46817-action"
+      ]
+    },
+    "cve-46817-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-46817 — Oracle E-Business Suite",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-46817"
+      },
+      "children": []
+    },
+    "cve-46817-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-46817-cvss",
+        "cve-46817-epss",
+        "cve-46817-pct",
+        "cve-46817-kev",
+        "cve-46817-bod"
+      ]
+    },
+    "cve-46817-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.1",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "cve-46817-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.010"
+      },
+      "children": []
+    },
+    "cve-46817-pct": {
+      "type": "Stat",
+      "props": {
+        "label": "PCT",
+        "value": "0.603"
+      },
+      "children": []
+    },
+    "cve-46817-kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV fresh 7-15",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "cve-46817-bod": {
+      "type": "Badge",
+      "props": {
+        "text": "BOD due 7-18 t-2",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "cve-46817-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Improper privilege management, exploited per CISA. EBS = enterprise-crown-jewel scope.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "cve-46817-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Action Required",
+        "message": "Patch per Oracle CPU bulletin today"
+      },
+      "children": []
+    },
+    "patch-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-week-heading",
+        "cve-sharepoint-item",
+        "mcp-rce-cluster",
+        "dd-trace-cluster",
+        "websocket-driver-item",
+        "knx-item"
+      ]
+    },
+    "patch-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "cve-sharepoint-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sharepoint-title",
+        "sharepoint-kev",
+        "sharepoint-cve-link",
+        "sonicwall-cves",
+        "sharepoint-desc",
+        "sharepoint-action"
+      ]
+    },
+    "sharepoint-title": {
+      "type": "Text",
+      "props": {
+        "text": "SharePoint + SonicWall SMA1000 pair",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sharepoint-kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV BOD due t-1 TOMORROW",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "sharepoint-cve-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-56164 — SharePoint",
+        "href": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56164",
+        "source": "EPSS 0.056 • PCT 0.920 (decays from 0.070/0.935)"
+      },
+      "children": []
+    },
+    "sonicwall-cves": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sonicwall-15409",
+        "sonicwall-15410"
+      ]
+    },
+    "sonicwall-15409": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-15409 — SonicWall SMA1000",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-15409",
+        "source": "EPSS 0.013"
+      },
+      "children": []
+    },
+    "sonicwall-15410": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-15410 — SonicWall SMA1000",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-15410",
+        "source": "EPSS 0.015"
+      },
+      "children": []
+    },
+    "sharepoint-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Microsoft-infra 7-14 batch surfaced yesterday, deadline-imminent today.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sharepoint-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action Required",
+        "message": "Apply MSRC mitigations or discontinue; SonicWall single-release fix per SNWLID-2026-0008"
+      },
+      "children": []
+    },
+    "mcp-rce-cluster": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mcp-title",
+        "mcp-cvss-badge",
+        "mcp-items",
+        "mcp-action"
+      ]
+    },
+    "mcp-title": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-Server RCE cluster (n=3, 48h shape)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "mcp-cvss-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "All CVSS 8.8",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "mcp-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mcp-langbot",
+        "mcp-documentation-server",
+        "mcp-n8n"
+      ]
+    },
+    "mcp-langbot": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-3pvh — langbot (pip)",
+        "href": "https://github.com/advisories/GHSA-3pvh-63gf-j9mw",
+        "source": "Auth RCE via MCP config (≤4.10.5, no fix)"
+      },
+      "children": []
+    },
+    "mcp-documentation-server": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-6f5r — @andrea9293/mcp-documentation-server (npm)",
+        "href": "https://github.com/advisories/GHSA-6f5r-5672-72j7",
+        "source": "Web UI binds all interfaces, no auth (=1.13.0)"
+      },
+      "children": []
+    },
+    "mcp-n8n": {
+      "type": "Text",
+      "props": {
+        "text": "n8n-mcp (npm) CVE-2026-54052 from 7-15",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "mcp-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action Required",
+        "message": "Audit MCP servers for open bind + auth; hold langbot + pin off mcp-documentation-server 1.13.0"
+      },
+      "children": []
+    },
+    "dd-trace-cluster": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dd-trace-title",
+        "dd-trace-meta",
+        "dd-trace-cves",
+        "dd-trace-action"
+      ]
+    },
+    "dd-trace-title": {
+      "type": "Text",
+      "props": {
+        "text": "DD-Trace polyglot cluster (n=6, same-day w3c baggage DoS)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "dd-trace-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "dd-trace-eco",
+        "dd-trace-cvss"
+      ]
+    },
+    "dd-trace-eco": {
+      "type": "Badge",
+      "props": {
+        "text": "pip/npm/go/rubygems/nuget/maven",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "dd-trace-cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "All CVSS 7.5",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "dd-trace-cves": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dd-trace-50271",
+        "dd-trace-50272",
+        "dd-trace-50274"
+      ]
+    },
+    "dd-trace-50271": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-50271 — ddtrace (pip)",
+        "href": "https://github.com/advisories/GHSA-mw54-j2v2-42hr",
+        "source": "<4.8.2"
+      },
+      "children": []
+    },
+    "dd-trace-50272": {
+      "type": "Text",
+      "props": {
+        "text": "CVE-2026-50272 — dd-trace (npm) <5.100.0",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "dd-trace-50274": {
+      "type": "Text",
+      "props": {
+        "text": "CVE-2026-50274 — dd-trace-go v2 <2.8.1 (+ dd-trace-rb/dotnet/java kin)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "dd-trace-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action Required",
+        "message": "Upgrade every dd-trace client. First cross-ecosystem single-vendor cluster in memory."
+      },
+      "children": []
+    },
+    "websocket-driver-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "websocket-link",
+        "websocket-badge",
+        "websocket-desc",
+        "websocket-action"
+      ]
+    },
+    "websocket-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-xv26 — websocket-driver (npm)",
+        "href": "https://github.com/advisories/GHSA-xv26-6w52-cph6",
+        "source": "CVE-2026-54466"
+      },
+      "children": []
+    },
+    "websocket-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Critical",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "websocket-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Protocol-length-header abuse corrupts messages. Patched 0.7.5. Widely-embedded ws lib (faye deps, socket.io ancestor).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "websocket-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action Required",
+        "message": "Upgrade websocket-driver to ≥0.7.5"
+      },
+      "children": []
+    },
+    "knx-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "knx-link",
+        "knx-meta",
+        "knx-desc",
+        "knx-action"
+      ]
+    },
+    "knx-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2023-4346 — KNX Protocol",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2023-4346"
+      },
+      "children": []
+    },
+    "knx-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "knx-epss",
+        "knx-pct",
+        "knx-kev",
+        "knx-bod"
+      ]
+    },
+    "knx-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.009"
+      },
+      "children": []
+    },
+    "knx-pct": {
+      "type": "Stat",
+      "props": {
+        "label": "PCT",
+        "value": "0.542"
+      },
+      "children": []
+    },
+    "knx-kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV fresh 7-15",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "knx-bod": {
+      "type": "Badge",
+      "props": {
+        "text": "BOD due 7-29",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "knx-desc": {
+      "type": "Text",
+      "props": {
+        "text": "3-year-old CVE into KEV. Pairs with 7-13 Cisco iOS 12.4 (2008-old) = old-cve-fresh-kev n=2 codifies. IoT/building-automation scope.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "knx-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action Required",
+        "message": "Apply KNX mitigations or air-gap admin plane"
+      },
+      "children": []
+    },
+    "state-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "state-heading",
+        "state-items"
+      ]
+    },
+    "state-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Status & Trends",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "state-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "state-npm",
+        "state-kev",
+        "state-sharepoint",
+        "state-mcp"
+      ]
+    },
+    "state-npm": {
+      "type": "Text",
+      "props": {
+        "text": "d3 npm-malware carries with 30→16 fade",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "state-kev": {
+      "type": "Text",
+      "props": {
+        "text": "2 fresh KEV on 7-15 breaks 1-day quiet post-7-14 batch",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "state-sharepoint": {
+      "type": "Text",
+      "props": {
+        "text": "SharePoint PCT decays 0.935→0.920",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "state-mcp": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-server RCE cluster reaches n=3",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

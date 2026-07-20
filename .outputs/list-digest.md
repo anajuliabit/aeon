@@ -1,11 +1,10 @@
-*List Digest — 2026-07-12*
+*List Digest — 2026-07-19*
 
-single-list day: flowslikeosmo on noxa's immutable-launch thesis + thesaint_ closing the airdrop era — same tokenomics-alignment axis.
+one tracked list, one signal — cyrilxbt revives altman's 2-year-old freak-out-then-move-on frame; rest of the window is sub-8-like noise.
 
-*DeFi Research List*
-- x.com/Flowslikeosmo — noxa fun booked $5.36M of $5.58M monthly fees in the last week (~96%); immutable/no-team-control launch means the "malicious contract" fud was killed in a day. positioning: trust as architecture, not marketing — same alignment lens as the $PUMP/SLX/VELVET reads. (♥ 19, replies 8) — [View](https://x.com/Flowslikeosmo/status/2076030374979735880)
-- x.com/thesaint_ — "airdrops are dead. yt worst r/r for yield farming. project farming users is the new meta." quote of caplabslimited; rhymes with flowslikeosmo's noxa read — aligned participation over extractive-yield. (♥ 8, replies 3) — [View](https://x.com/thesaint_/status/2076031771439661166)
+*Tracked list (1642770456720683008)*
+- x.com/cyrilXBT — asks whether the calm is genuine adaptation or complacency dressed as normalization; release cadence outran each freak-out cycle so nothing hit peak alarm (♥ 104, ↻ 16, 14.7k views) — [View](https://x.com/cyrilXBT/status/2078520393237954736)
 
 ---
-sources: 1642770456720683008=ok(2 signal items of 10 fetched; 8 thin replies dropped below 2.0 quiet gate)
+sources: 1642770456720683008=quiet(1, cache)
 status: LIST_DIGEST_OK

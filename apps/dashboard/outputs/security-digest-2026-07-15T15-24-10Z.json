@@ -1,0 +1,584 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-15",
+        "description": "3 KEV items in fresh 7-14 batch (SharePoint + SonicWall pair + AD FS), npm-malware wave d2 (30 pkgs), 5 to schedule"
+      },
+      "children": [
+        "verdict_text",
+        "sep1",
+        "patch_today_section",
+        "sep2",
+        "patch_week_section",
+        "sep3",
+        "monitor_section"
+      ]
+    },
+    "verdict_text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch_today_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_today_heading",
+        "cve_56164_item",
+        "sonicwall_item",
+        "npm_malware_item"
+      ]
+    },
+    "patch_today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve_56164_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_56164_link",
+        "cve_56164_meta",
+        "cve_56164_desc",
+        "cve_56164_action"
+      ]
+    },
+    "cve_56164_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-56164 — Microsoft SharePoint",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-56164",
+        "source": "KEV added 2026-07-14"
+      }
+    },
+    "cve_56164_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_56164_epss",
+        "badge_56164_bod"
+      ]
+    },
+    "badge_56164_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.070 (p 0.935)",
+        "variant": "destructive"
+      }
+    },
+    "badge_56164_bod": {
+      "type": "Badge",
+      "props": {
+        "text": "BOD due 2026-07-17 (T-2)",
+        "variant": "destructive"
+      }
+    },
+    "cve_56164_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Missing auth allows unauth priv esc over network."
+      }
+    },
+    "cve_56164_action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Apply MSRC mitigations today or discontinue."
+      }
+    },
+    "sonicwall_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sonicwall_link",
+        "sonicwall_meta",
+        "sonicwall_desc",
+        "sonicwall_action"
+      ]
+    },
+    "sonicwall_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SNWLID-2026-0008 — SonicWall SMA1000 (CVE-2026-15409 SSRF + CVE-2026-15410 code inj)",
+        "href": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008",
+        "source": "KEV added 2026-07-14"
+      }
+    },
+    "sonicwall_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_sonicwall_epss",
+        "badge_sonicwall_bod"
+      ]
+    },
+    "badge_sonicwall_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.014 / 0.016",
+        "variant": "destructive"
+      }
+    },
+    "badge_sonicwall_bod": {
+      "type": "Badge",
+      "props": {
+        "text": "BOD due 2026-07-17 (T-2)",
+        "variant": "destructive"
+      }
+    },
+    "sonicwall_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth SSRF + authenticated admin OS-command injection pair."
+      }
+    },
+    "sonicwall_action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Patch SMA1000 per SNWLID-2026-0008 today."
+      }
+    },
+    "npm_malware_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm_malware_title",
+        "npm_malware_meta",
+        "npm_malware_pkgs",
+        "npm_malware_desc",
+        "npm_malware_action"
+      ]
+    },
+    "npm_malware_title": {
+      "type": "Heading",
+      "props": {
+        "text": "npm-malware wave d2 — 30 fresh pkgs 02:53–10:03Z",
+        "level": "h4"
+      }
+    },
+    "npm_malware_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_npm_malware",
+        "badge_npm_wave"
+      ]
+    },
+    "badge_npm_malware": {
+      "type": "Badge",
+      "props": {
+        "text": "Confirmed malicious (GH type=malware)",
+        "variant": "destructive"
+      }
+    },
+    "badge_npm_wave": {
+      "type": "Badge",
+      "props": {
+        "text": "Same-day-multi-batch continues from 7-14",
+        "variant": "secondary"
+      }
+    },
+    "npm_malware_pkgs": {
+      "type": "Text",
+      "props": {
+        "text": "baileys typosquats @fhkry / @sauruslord / @bcs-mi-ui, gulp-jscrambler, jscrambler-metro-plugin, fastify-addon, webpack-cache scope, @achuthvp/postinstall-poc"
+      }
+    },
+    "npm_malware_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Confirmed malicious per GH type=malware; same-day-multi-batch shape continues from 7-14."
+      }
+    },
+    "npm_malware_action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Audit installs since 7-13 + rotate any creds exposed."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch_week_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_week_heading",
+        "cve_54052_item",
+        "cve_50006_item",
+        "cve_50131_item",
+        "cve_61699_item",
+        "cve_56155_item"
+      ]
+    },
+    "patch_week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "cve_54052_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_54052_link",
+        "badge_54052",
+        "cve_54052_desc",
+        "cve_54052_action"
+      ]
+    },
+    "cve_54052_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-54052 — n8n-mcp (npm)",
+        "href": "https://github.com/advisories/GHSA-j6r7-6fhx-77wx"
+      }
+    },
+    "badge_54052": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.9",
+        "variant": "destructive"
+      }
+    },
+    "cve_54052_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Cross-tenant workflow backup access in multi-tenant HTTP mode; snapshots leak credential refs."
+      }
+    },
+    "cve_54052_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade n8n-mcp to ≥2.56.1"
+      }
+    },
+    "cve_50006_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_50006_link",
+        "badge_50006",
+        "cve_50006_desc",
+        "cve_50006_action"
+      ]
+    },
+    "cve_50006_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-50006 — anyquery (Go)",
+        "href": "https://github.com/advisories/GHSA-xrcf-6jh3-ggvx"
+      }
+    },
+    "badge_50006": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.1",
+        "variant": "destructive"
+      }
+    },
+    "cve_50006_desc": {
+      "type": "Text",
+      "props": {
+        "text": "AFW → RCE via unrestricted SQLite virtual tables in server mode; SSRF 8.6 + LFR 7.5 fixed same release."
+      }
+    },
+    "cve_50006_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade anyquery to ≥0.4.5"
+      }
+    },
+    "cve_50131_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_50131_link",
+        "badge_50131",
+        "cve_50131_desc",
+        "cve_50131_action"
+      ]
+    },
+    "cve_50131_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-50131 — @fedify/fedify (npm)",
+        "href": "https://github.com/advisories/GHSA-xw9q-2mv6-9fr8"
+      }
+    },
+    "badge_50131": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.6, EPSS 0.003",
+        "variant": "secondary"
+      }
+    },
+    "cve_50131_desc": {
+      "type": "Text",
+      "props": {
+        "text": "SSRF incomplete mitigation after GHSA-p9cg-vqcc-grcx."
+      }
+    },
+    "cve_50131_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade per branch: 1.9.12 / 1.10.11 / 2.0.19 / 2.1.15 / 2.2.4"
+      }
+    },
+    "cve_61699_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_61699_link",
+        "badge_61699",
+        "cve_61699_desc",
+        "cve_61699_action"
+      ]
+    },
+    "cve_61699_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-61699 — nebula-mesh (Go)",
+        "href": "https://github.com/advisories/GHSA-cm26-5974-52h8"
+      }
+    },
+    "badge_61699": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.1",
+        "variant": "secondary"
+      }
+    },
+    "cve_61699_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Certificate revocation never enforced at mesh; 4-advisory cluster fixed same release."
+      }
+    },
+    "cve_61699_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade nebula-mesh to ≥0.7.1"
+      }
+    },
+    "cve_56155_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_56155_link",
+        "cve_56155_meta",
+        "cve_56155_desc",
+        "cve_56155_action"
+      ]
+    },
+    "cve_56155_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-56155 — Microsoft AD FS",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-56155",
+        "source": "KEV added 2026-07-14"
+      }
+    },
+    "cve_56155_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_56155_epss",
+        "badge_56155_bod"
+      ]
+    },
+    "badge_56155_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.004",
+        "variant": "secondary"
+      }
+    },
+    "badge_56155_bod": {
+      "type": "Badge",
+      "props": {
+        "text": "BOD due 2026-07-28",
+        "variant": "secondary"
+      }
+    },
+    "cve_56155_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Local priv esc from authorized attacker."
+      }
+    },
+    "cve_56155_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Apply MSRC mitigations or decommission per AD FS decommission guide"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "monitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_heading",
+        "ghsa_9hc2_item",
+        "ghsa_pqg7_item"
+      ]
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "ghsa_9hc2_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa_9hc2_link",
+        "badge_9hc2",
+        "ghsa_9hc2_desc",
+        "ghsa_9hc2_status"
+      ]
+    },
+    "ghsa_9hc2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-9hc2-hjx8-q6pv — tidgi (npm)",
+        "href": "https://github.com/advisories/GHSA-9hc2-hjx8-q6pv"
+      }
+    },
+    "badge_9hc2": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.6 · no fix yet",
+        "variant": "outline"
+      }
+    },
+    "ghsa_9hc2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "RCE via malicious TiddlyWiki repo import."
+      }
+    },
+    "ghsa_9hc2_status": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Avoid importing untrusted repos in TidGi Desktop"
+      }
+    },
+    "ghsa_pqg7_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa_pqg7_link",
+        "badge_pqg7",
+        "ghsa_pqg7_desc",
+        "ghsa_pqg7_status"
+      ]
+    },
+    "ghsa_pqg7_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-pqg7-v6wh-3pfp — tsdproxy (Go)",
+        "href": "https://github.com/advisories/GHSA-pqg7-v6wh-3pfp"
+      }
+    },
+    "badge_pqg7": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.5 · alpha-only fix",
+        "variant": "outline"
+      }
+    },
+    "ghsa_pqg7_desc": {
+      "type": "Text",
+      "props": {
+        "text": "XFF header injection → IP spoofing to backend services."
+      }
+    },
+    "ghsa_pqg7_status": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Hold on 3.0.0-alpha.3 or wait for stable"
+      }
+    }
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-13"
+      },
+      "children": [
+        "summary-section",
+        "blocked-section",
+        "on-track-section",
+        "sources-section"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-heading",
+        "summary-stats"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-risk",
+        "stat-attention",
+        "stat-track",
+        "stat-blocked",
+        "stat-done",
+        "stat-overall"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "8"
+      }
+    },
+    "stat-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "4"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "4"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "stat-overall": {
+      "type": "Stat",
+      "props": {
+        "label": "Overall",
+        "value": "flat"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "sep1",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3",
+        "blocked-item-4"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-1-title",
+        "blocked-1-desc",
+        "blocked-1-action"
+      ]
+    },
+    "blocked-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-truncation systemic (day 19/20)",
+        "variant": "lead"
+      }
+    },
+    "blocked-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator direct-author of `.github/workflows/aeon.yml` chain-runner capture-step. Rule-5 workflow-file class block CODIFIED 7-11. 476 activity/14d, 0d idle (→ flat).",
+        "variant": "body"
+      }
+    },
+    "blocked-1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator direct-authors capture-step PR against aeon.yml — self-improve blocked at primitive.",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-2-title",
+        "blocked-2-desc",
+        "blocked-2-action"
+      ]
+    },
+    "blocked-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch DARK (day 14/15)",
+        "variant": "lead"
+      }
+    },
+    "blocked-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "8-skill 6-28 cluster ~15d stale per cron-state; ISS-027 scheduler-side never-run. Same rule-5 primitive as ISS-025. 370 activity/14d, 0d idle (→ flat).",
+        "variant": "body"
+      }
+    },
+    "blocked-2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: bundle scheduler fix into same operator aeon.yml lift as capture-step.",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-3-title",
+        "blocked-3-desc",
+        "blocked-3-action"
+      ]
+    },
+    "blocked-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota recovery (day 27/28)",
+        "variant": "lead"
+      }
+    },
+    "blocked-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Team 3a8b4c1e monthly credit exhausted 2026-06-16. WebSearch fallback + `.xai-cache/` prefetch cover all skills on-tape. 210 activity/14d, 0d idle (→ flat).",
+        "variant": "body"
+      }
+    },
+    "blocked-3-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: ping operator on team-credit top-up (only quota-side unblock).",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-4-title",
+        "blocked-4-desc",
+        "blocked-4-action"
+      ]
+    },
+    "blocked-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config (day 34/35)",
+        "variant": "lead"
+      }
+    },
+    "blocked-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "`memory/on-chain-watches.yml` still 5×type:wallet only, zero pool/position. ALCHEMY_API_KEY len=0, ETHERSCAN_API_KEY null. 127 activity/14d, 1d idle (→ flat).",
+        "variant": "body"
+      }
+    },
+    "blocked-4-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator adds `type: pool` + `type: position` entries and API keys.",
+        "variant": "muted"
+      }
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "sep2",
+        "on-track-item-1",
+        "on-track-item-2",
+        "on-track-item-3",
+        "on-track-item-4"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on-track-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-1-title",
+        "on-track-1-desc"
+      ]
+    },
+    "on-track-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly-review deadline T-0 (Mon 2026-07-13)",
+        "variant": "lead"
+      }
+    },
+    "on-track-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "deadline is TODAY. Twin gate: SLX d19 recut + ISS-025 capture-step operator direct-author. Both paths converge on 19:00 UTC weekly-review tick. 190 activity/14d, 0d idle (new).",
+        "variant": "body"
+      }
+    },
+    "on-track-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-2-title",
+        "on-track-2-desc"
+      ]
+    },
+    "on-track-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "SLX open pick DAY-19 CATASTROPHIC",
+        "variant": "lead"
+      }
+    },
+    "on-track-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "mechanical ON_TRACK (heavy log volume, 0d idle) but outcome BROKEN: -63% vs $0.4753 entry, no fresh CG print 8d, recut UNSHIPPED. Weekly-review T-0 = last window. 219 activity/14d, 0d idle (→ flat).",
+        "variant": "body"
+      }
+    },
+    "on-track-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-3-title",
+        "on-track-3-desc"
+      ]
+    },
+    "on-track-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $63.5k reclaim arc",
+        "variant": "lead"
+      }
+    },
+    "on-track-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "7-12 daily close $63,746 confirmed day-3 candle; 7-13 04:46Z spot $62,685 slipped BELOW gate overnight (-$1,484 in ~8h), day-4 extension voided. `reclaim63500Alerted=true` holds (re-arm only sub-$60,500; spot ~$2.2k above floor). $65,900 full-reclaim gap widened $1,770 → $3,215. 798 activity/14d, 0d idle (→ flat).",
+        "variant": "body"
+      }
+    },
+    "on-track-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-4-title",
+        "on-track-4-desc"
+      ]
+    },
+    "on-track-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "PUMP unlock day-0 fired 2026-07-12",
+        "variant": "lead"
+      }
+    },
+    "on-track-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "82.5B tokens / 22.2% mcap / ~$135M hit float. Pre-derisking on-time (-2.4%/24h -7.9%/7d at $0.00140 per 7-12 09:08Z). Post-event dynamics on today's daily-routine surface. 154 activity/14d, 0d idle (new).",
+        "variant": "body"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sep3",
+        "sources-text"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

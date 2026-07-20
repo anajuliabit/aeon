@@ -1,0 +1,379 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-15",
+        "description": "7 goals tracked — 0 at risk, 0 needs attention, 1 on track, 6 blocked, 0 done (overall → flat)"
+      },
+      "children": [
+        "summary_stats",
+        "sep1",
+        "blocked_section",
+        "sep2",
+        "ontrack_section",
+        "sep3",
+        "sources_section"
+      ]
+    },
+    "summary_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_ontrack",
+        "stat_blocked",
+        "stat_trend"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "7"
+      }
+    },
+    "stat_ontrack": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "1"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "6"
+      }
+    },
+    "stat_trend": {
+      "type": "Stat",
+      "props": {
+        "label": "Trend",
+        "value": "flat",
+        "trend": "neutral"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "blocked_heading",
+        "blocked_goal_1",
+        "blocked_goal_2",
+        "blocked_goal_3",
+        "blocked_goal_4",
+        "blocked_goal_5",
+        "blocked_goal_6"
+      ]
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked",
+        "level": "h2"
+      }
+    },
+    "blocked_goal_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b1_title",
+        "b1_detail",
+        "b1_action"
+      ]
+    },
+    "b1_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #162 operator decision",
+        "href": "https://github.com/aeon/aeon/pull/162"
+      }
+    },
+    "b1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "T-0 TODAY — 0d idle, 92 activity/14d (new); ~86h+ stall CONFLICTING, T-0 (7-14) missed → T+1 rollover",
+        "variant": "caption"
+      }
+    },
+    "b1_action": {
+      "type": "Alert",
+      "props": {
+        "message": "operator rebase PR #162 to resolve CONFLICTING branch — sole path per rule-5 skill block",
+        "type": "warning"
+      }
+    },
+    "blocked_goal_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b2_title",
+        "b2_detail",
+        "b2_action"
+      ]
+    },
+    "b2_title": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ISS-025 capture-step PR day-22 unshipped",
+        "href": "https://github.com/aeon/aeon/issues/025"
+      }
+    },
+    "b2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 299 activity/14d (new); operator T-1 tomorrow (7-16)",
+        "variant": "caption"
+      }
+    },
+    "b2_action": {
+      "type": "Alert",
+      "props": {
+        "message": "operator author capture-step PR against `.github/workflows/aeon.yml:479-495` chain-runner by 7-16",
+        "type": "warning"
+      }
+    },
+    "blocked_goal_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b3_title",
+        "b3_detail",
+        "b3_action"
+      ]
+    },
+    "b3_title": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report STUCK d2",
+        "variant": "lead"
+      }
+    },
+    "b3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 170 activity/14d (new); ~35h+ dispatched-never-completed, upstream = ISS-025",
+        "variant": "caption"
+      }
+    },
+    "b3_action": {
+      "type": "Alert",
+      "props": {
+        "message": "ship ISS-025 capture-step PR — unblocks cost-report sandbox-truncation tail",
+        "type": "warning"
+      }
+    },
+    "blocked_goal_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b4_title",
+        "b4_detail",
+        "b4_action"
+      ]
+    },
+    "b4_title": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch DARK day-17",
+        "variant": "lead"
+      }
+    },
+    "b4_detail": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 311 activity/14d (→ flat, was BLOCKED 390); day-18 today, 17d stale",
+        "variant": "caption"
+      }
+    },
+    "b4_action": {
+      "type": "Alert",
+      "props": {
+        "message": "operator direct-author aeon.yml scheduler fix — same rule-5 class as ISS-025",
+        "type": "warning"
+      }
+    },
+    "blocked_goal_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b5_title",
+        "b5_detail",
+        "b5_action"
+      ]
+    },
+    "b5_title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config day-37",
+        "variant": "lead"
+      }
+    },
+    "b5_detail": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 155 activity/14d (↑ improving, was BLOCKED 69); day-38 today",
+        "variant": "caption"
+      }
+    },
+    "b5_action": {
+      "type": "Alert",
+      "props": {
+        "message": "operator add pool/position entries to memory/on-chain-watches.yml + set ALCHEMY + ETHERSCAN keys",
+        "type": "warning"
+      }
+    },
+    "blocked_goal_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b6_title",
+        "b6_detail",
+        "b6_action"
+      ]
+    },
+    "b6_title": {
+      "type": "Text",
+      "props": {
+        "text": "XAI quota recovery day-29",
+        "variant": "lead"
+      }
+    },
+    "b6_detail": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 122 activity/14d (→ flat, was BLOCKED 216); day-30 today, retirement candidate",
+        "variant": "caption"
+      }
+    },
+    "b6_action": {
+      "type": "Alert",
+      "props": {
+        "message": "operator top up xAI team 3a8b4c1e credit or retire goal at next MEMORY consolidation",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ontrack_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "ontrack_heading",
+        "ontrack_goal_1"
+      ]
+    },
+    "ontrack_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On Track",
+        "level": "h2"
+      }
+    },
+    "ontrack_goal_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ot1_title",
+        "ot1_detail",
+        "ot1_badge"
+      ]
+    },
+    "ot1_title": {
+      "type": "Text",
+      "props": {
+        "text": "Investment Advisor 7-day cancellation NEW pattern day-8",
+        "variant": "lead"
+      }
+    },
+    "ot1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 69 activity/14d (new); day-9 today, self-improve odd-day tick 18:00Z investigates per weekly-review action #4",
+        "variant": "caption"
+      }
+    },
+    "ot1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "On Track",
+        "variant": "default"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_detail"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_detail": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,18 +1,14 @@
-*Security Digest — 2026-06-30*
-Verdict: 1 actively exploited (KEV new), 2 supply-chain campaigns to scrub, 1 to monitor. _Sources: KEV ok, GH Advisory ok, EPSS ok_
+*Security Digest — 2026-07-19*
+Verdict: nothing urgent today. 3 to schedule, 1 to monitor. _Sources: KEV (0 net-new = day-3 zero-cadence), GH Advisory (0 malware net-new = wave breaks after d5=22), EPSS_
 
-*PATCH TODAY*
-- [CVE-2026-48558](https://github.com/advisories/GHSA-m93h-gjv2-fmq2) — SimpleHelp · KEV added 2026-06-29 · CVSS 10.0 · EPSS 0.01 · PoC + IOCs published (horizon3.ai)
-  OIDC auth bypass — identity tokens accepted without signature verification. Unauth attacker forges a token, gets a full technician session, can also bypass MFA. CISA BOD 26-04 due 2026-07-02.
-  → upgrade SimpleHelp to ≥5.5.16 (or 6.0 GA) today; if exposed, hunt for TaskWeaver/Djinn intrusion IOCs.
-- [GHSA-m9j7-x8ww-5jwr](https://github.com/advisories/GHSA-m9j7-x8ww-5jwr) — ai-sdk-ollama@0.13.1 (npm) · malware brandjack of Vercel `ai-sdk` + Ollama · CVSS n/a
-  Hot-target SDK squat — Vercel ai-sdk family + Ollama runtime are core agent-infra primitives. Narrative-aligned target (agent infra is one of the structural longs).
-  → remove ai-sdk-ollama; rotate any creds reachable from machines that installed it. Pin to `@ai-sdk/openai` / `@ai-sdk/anthropic` verified namespaces only.
-- [autotel-* npm cluster](https://github.com/advisories/GHSA-3wmg-66hp-xhv9) — 18 pkgs (autotel-mcp/cli/web/vitest/backends/cloudflare/devtools/tanstack/mongoose/pact/plugins/playwright/sentry/subscribers/drizzle/hono/eventcatalog/mcp-instrumentation) · single-author campaign 6-29 16:51Z → 6-30 03:21Z (10.5h)
-  Largest single-namespace coordinated brandjack of the 48h window — OpenTelemetry-adjacent observability naming + MCP riff. Brandjacking-as-default-vector pattern persisting day 2.
-  → audit npm installs for any `autotel-*` package; remove + rotate creds if present. None of these are legit.
+*PATCH THIS WEEK*
+- [GHSA-rwxx-mrjm-wc2m](https://github.com/advisories/GHSA-rwxx-mrjm-wc2m) + [GHSA-8wr5-jm2h-8r4f](https://github.com/advisories/GHSA-8wr5-jm2h-8r4f) — vllm (pip) · CVSS 7.5 + 7.5 · EPSS 0.003 · no public PoC
+  Same-day DoS pair — ReDoS in `structured_outputs.regex` (xgrammar/outlines backends compile without timeout) + remote DoS via invalid recovered token reinjection. → upgrade vllm to ≥0.24.0 (single bump covers both).
+- [GHSA-q38v-wp89-2w55](https://github.com/advisories/GHSA-q38v-wp89-2w55) — sh (pip) · CVSS 7.9 · EPSS n/a · no public PoC
+  `_uid` fails to drop supplementary groups → incomplete privilege drop. Widely-embedded subprocess wrapper; defense-in-depth erosion for anything spawning children as a lower-privileged uid. → upgrade sh to ≥2.2.4.
+- [GHSA-2v2f-mvfg-ph56](https://github.com/advisories/GHSA-2v2f-mvfg-ph56) — meta-ads-mcp (pip) · CVSS 7.4 · EPSS n/a
+  `X-Pipeboard-Token` header auth bypass reuses operator meta token. Same-package sibling to yesterday's CVE-2026-54549 SSRF (fixed by same version bump). → upgrade meta-ads-mcp to ≥1.0.115.
 
 *MONITOR*
-- [GHSA-q2m9-6jp9-c6mc / CVE-2026-44840](https://github.com/advisories/GHSA-q2m9-6jp9-c6mc) — dgraph-io/dgraph (Go) · CVSS 7.5 · EPSS unset · no fix yet · affects ≤25.3.3
-  DQL injection in `checkUserPassword` GraphQL query — password interpolated via `fmt.Sprintf` into a `checkpwd()` DQL string without escaping; double-quote breaks out and appends arbitrary DQL. Auth required (login-time).
-  → track GHSA-q2m9-6jp9-c6mc; no patched release yet, keep GraphQL admin off public ingress.
+- [GHSA-r95q-fp26-h3hc](https://github.com/advisories/GHSA-r95q-fp26-h3hc) — @tak-ps/cloudtak (npm) · high · CVSS n/a · fix 13.10.0
+  Authenticated full-read SSRF in `/api/esri*` routes — user-controlled URL fetched with no IP classification. → upgrade if CloudTAK is in your fleet; otherwise watch.

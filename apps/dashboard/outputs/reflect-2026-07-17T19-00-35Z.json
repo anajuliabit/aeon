@@ -1,0 +1,217 @@
+{
+  "root": "card_reflect",
+  "state": {},
+  "elements": {
+    "card_reflect": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidated",
+        "description": "2026-07-17 consolidation snapshot"
+      },
+      "children": [
+        "heading_date",
+        "separator_1",
+        "section_memory",
+        "separator_2",
+        "section_fleet",
+        "separator_3",
+        "section_crypto"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-07-17",
+        "level": "h2"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "title_memory",
+        "line_memory_reduction"
+      ]
+    },
+    "title_memory": {
+      "type": "Heading",
+      "props": {
+        "text": "MEMORY.md",
+        "level": "h3"
+      }
+    },
+    "line_memory_reduction": {
+      "type": "Text",
+      "props": {
+        "text": "59L → 54L, ruthless prune of tracked-tokens prose + durable-patterns list"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "title_fleet",
+        "subtitle_fleet_snapshot",
+        "item_fleet_sandbox",
+        "item_fleet_cost_report",
+        "item_fleet_morning_batch",
+        "item_fleet_aixbt",
+        "item_fleet_self_improve"
+      ]
+    },
+    "title_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "topics/fleet.md",
+        "level": "h3"
+      }
+    },
+    "subtitle_fleet_snapshot": {
+      "type": "Text",
+      "props": {
+        "text": "Snapshot 7-16 → 7-17:",
+        "variant": "muted"
+      }
+    },
+    "item_fleet_sandbox": {
+      "type": "Text",
+      "props": {
+        "text": "sandbox-truncation d25"
+      }
+    },
+    "item_fleet_cost_report": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report STUCK d4 ~89h"
+      }
+    },
+    "item_fleet_morning_batch": {
+      "type": "Text",
+      "props": {
+        "text": "07:00Z morning-batch dead-slot d2 forms"
+      }
+    },
+    "item_fleet_aixbt": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse d20 15th consecutive miss"
+      }
+    },
+    "item_fleet_self_improve": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_fleet_pr_intro",
+        "badge_pr_162",
+        "badge_pr_163",
+        "badge_pr_164",
+        "text_fleet_pr_note"
+      ]
+    },
+    "text_fleet_pr_intro": {
+      "type": "Text",
+      "props": {
+        "text": "All 3 self-improve PRs:"
+      }
+    },
+    "badge_pr_162": {
+      "type": "Badge",
+      "props": {
+        "text": "#162",
+        "variant": "outline"
+      }
+    },
+    "badge_pr_163": {
+      "type": "Badge",
+      "props": {
+        "text": "#163",
+        "variant": "outline"
+      }
+    },
+    "badge_pr_164": {
+      "type": "Badge",
+      "props": {
+        "text": "#164",
+        "variant": "outline"
+      }
+    },
+    "text_fleet_pr_note": {
+      "type": "Text",
+      "props": {
+        "text": "CONFLICTING past stall gates per rule-5 extension n=4"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_crypto": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "title_crypto",
+        "item_crypto_gitlawb",
+        "item_crypto_well",
+        "item_crypto_reppo",
+        "item_crypto_mamo"
+      ]
+    },
+    "title_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "topics/crypto.md",
+        "level": "h3"
+      }
+    },
+    "item_crypto_gitlawb": {
+      "type": "Text",
+      "props": {
+        "text": "GITLAWB round-trip → whipsaw-then-continuation CODIFIES on -18.89% day-4 rail-breach, WELL"
+      }
+    },
+    "item_crypto_well": {
+      "type": "Text",
+      "props": {
+        "text": "9-day participation-vanish BREAKS → distribution-with-return"
+      }
+    },
+    "item_crypto_reppo": {
+      "type": "Text",
+      "props": {
+        "text": "REPPO fade continuation d3"
+      }
+    },
+    "item_crypto_mamo": {
+      "type": "Text",
+      "props": {
+        "text": "MAMO d7 pause-at-mean holds"
+      }
+    }
+  }
+}

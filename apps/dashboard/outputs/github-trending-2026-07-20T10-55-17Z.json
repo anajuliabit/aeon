@@ -1,0 +1,319 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-20"
+      },
+      "children": [
+        "top-pick-section",
+        "sep1",
+        "aiml-section",
+        "sep2",
+        "devtools-section",
+        "sep3",
+        "infra-section",
+        "sep4",
+        "web-apps-section",
+        "sep5",
+        "sources-text"
+      ]
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-pick-label",
+        "omni-repo"
+      ]
+    },
+    "top-pick-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "omni-repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "omni-link",
+        "omni-desc"
+      ]
+    },
+    "omni-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "diegosouzapw/OmniRoute",
+        "href": "https://github.com/diegosouzapw/OmniRoute"
+      }
+    },
+    "omni-desc": {
+      "type": "Text",
+      "props": {
+        "text": "one endpoint fronting 268 providers · 500+ models · kimi k3 already wired 7 days before open-weights ship 7-27 = pre-launch integration."
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "aiml-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aiml-label",
+        "cognee-repo",
+        "ktransformers-repo",
+        "transcribe-repo"
+      ]
+    },
+    "aiml-label": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "cognee-repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cognee-link",
+        "cognee-desc"
+      ]
+    },
+    "cognee-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "topoteretes/cognee",
+        "href": "https://github.com/topoteretes/cognee",
+        "source": "Python · [RETURNING]",
+        "score": "★ 303 today (28k total)"
+      }
+    },
+    "cognee-desc": {
+      "type": "Text",
+      "props": {
+        "text": "persistent AI-agent memory as self-hosted knowledge-graph engine — cross-session recall without vendor context walls."
+      }
+    },
+    "ktransformers-repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ktransformers-link",
+        "ktransformers-desc"
+      ]
+    },
+    "ktransformers-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "kvcache-ai/ktransformers",
+        "href": "https://github.com/kvcache-ai/ktransformers",
+        "source": "Python · [RETURNING]",
+        "score": "★ 360 today (19k total)"
+      }
+    },
+    "ktransformers-desc": {
+      "type": "Text",
+      "props": {
+        "text": "runs huge MoEs on mixed CPU+GPU by pinning hot experts on GPU — 400B+ models on prosumer boxes."
+      }
+    },
+    "transcribe-repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "transcribe-link",
+        "transcribe-desc"
+      ]
+    },
+    "transcribe-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "handy-computer/transcribe.cpp",
+        "href": "https://github.com/handy-computer/transcribe.cpp",
+        "source": "C++ · [RETURNING]",
+        "score": "★ 401 today (1k total)"
+      }
+    },
+    "transcribe-desc": {
+      "type": "Text",
+      "props": {
+        "text": "one ggml build across whisper + parakeet + moonshine + qwen3-asr + cohere-transcribe + 11 more — 60+ variants under one binary w/ Metal/Vulkan/CUDA backends."
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "devtools-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools-label",
+        "jcode-repo"
+      ]
+    },
+    "devtools-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "jcode-repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "jcode-link",
+        "jcode-desc"
+      ]
+    },
+    "jcode-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "1jehuang/jcode",
+        "href": "https://github.com/1jehuang/jcode",
+        "source": "Rust · [RETURNING]",
+        "score": "★ 235 today (9k total)"
+      }
+    },
+    "jcode-desc": {
+      "type": "Text",
+      "props": {
+        "text": "rust cli agent w/ embedded semantic memory + swarm coordination + self-modification — claims 14ms TTFF ~245× faster than claude code."
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "infra-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "infra-label",
+        "openship-repo"
+      ]
+    },
+    "infra-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "openship-repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "openship-link",
+        "openship-desc"
+      ]
+    },
+    "openship-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "oblien/openship",
+        "href": "https://github.com/oblien/openship",
+        "source": "TypeScript · [RETURNING]",
+        "score": "★ 1,719 today (4k total)"
+      }
+    },
+    "openship-desc": {
+      "type": "Text",
+      "props": {
+        "text": "push-to-deploy self-host w/ zero yaml/pipelines + built-in postgres/redis/mail/cdn + MCP protocol native."
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "web-apps-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "web-apps-label",
+        "topcoat-repo"
+      ]
+    },
+    "web-apps-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      }
+    },
+    "topcoat-repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "topcoat-link",
+        "topcoat-desc"
+      ]
+    },
+    "topcoat-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "tokio-rs/topcoat",
+        "href": "https://github.com/tokio-rs/topcoat",
+        "source": "Rust · [RETURNING]",
+        "score": "★ 439 today (1k total)"
+      }
+    },
+    "topcoat-desc": {
+      "type": "Text",
+      "props": {
+        "text": "tokio-rs ships a rust web framework where `$(...)` markers dual-render server + client — kills the API-layer + separate frontend bundle in one primitive."
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 7/20",
+        "variant": "caption"
+      }
+    }
+  }
+}

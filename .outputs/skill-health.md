@@ -1,18 +1,19 @@
-*skill health · 2026-07-12*
-HEALTH: DEGRADED(21) — systemic output_tokens=0 truncation, 21 skills share signature (ISS-019/020/021/025 cluster day-20)
+*Skill Health — 2026-07-19*
+HEALTH: CRITICAL(1) · systemic: output_tokens=0 sandbox-truncation day-27 — 18 skills
 
-🟡 DEGRADED (21, top 5 by staleness):
-- defi-monitor — 53% (n=38), 14d stale — WAIT-API (sandbox-truncation) → ISS-019 cluster
-- market-context-refresh — 32% (n=93), 14d stale — WAIT-API → ISS-019 cluster
-- narrative-tracker — 33% (n=60), 14d stale — WAIT-API → ISS-019 cluster
-- aixbt-pulse — 47% (n=92), 14d stale — WAIT-API → ISS-019 cluster
-- cost-report — 11% (n=46), 13d stale — WAIT-API → ISS-025
-+16 more sr<0.6 tail — see memory/issues/INDEX.md
+🔴 CRITICAL
+- cost-report — cf=5, ~20d down — INVESTIGATE (sandbox-truncation) → ISS-025
 
-⚫ WARNING (10): sr<0.8 tail — btc-levels, daily-routine, defi-overview, fork-skill-digest, heartbeat, morning-brief, on-chain-monitor, skill-freshness, token-movers, token-pick
+🟡 DEGRADED (17)
+- aixbt-pulse — 47%, 21d cold — see systemic
+- defi-monitor — 53%, 21d cold — see systemic
+- market-context-refresh — 32%, 21d cold — see systemic
+- narrative-tracker — 33%, 21d cold — see systemic
+- search-skill — 37%, 10d cold — see systemic → ISS-021
++12 more (action-converter · evening-recap · goal-tracker · list-digest · reflect · reg-monitor · security-digest · self-improve · skill-analytics · skill-evals · skill-health · vuln-scanner) — see memory/issues/INDEX.md
 
-⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL
-🟢 HEALTHY: 9 (+1 vs 7-11: token-alert 78%→80% promoted)
+⚪ NO DATA (3): autoresearch · fork-skill-gap · operator-scorecard — DISPATCH-SKILL
+🟢 HEALTHY: 9
 
 Open issues: 11 · Filed: 0 · Resolved: 0
-Classification byte-identical to 7-11 (11-day streak); hash flips daily by design so 24h cadence reminder still fires.
+Classification byte-identical to prev 7-18 18:14Z (3rd-consec no-delta). Notify fires per 24h cadence (~47.6h since last).

@@ -1,0 +1,124 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog — 2026-07-20"
+      },
+      "children": [
+        "text-intro",
+        "sep-1",
+        "heading-themes",
+        "stack-themes",
+        "sep-2",
+        "stack-stats",
+        "sep-3",
+        "link-article"
+      ]
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "mcp integrations moved from prototype to production this week: oauth stopped breaking on rotating-token providers, three new mcp skills swapped in for the retired ctrl skill, and the aeon developer kit landed for outside builders."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-themes": {
+      "type": "Heading",
+      "props": {
+        "text": "Themes:",
+        "level": "h3"
+      }
+    },
+    "stack-themes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme-1",
+        "theme-2",
+        "theme-3"
+      ]
+    },
+    "theme-1": {
+      "type": "Text",
+      "props": {
+        "text": "OAuth for MCP servers becomes durable"
+      }
+    },
+    "theme-2": {
+      "type": "Text",
+      "props": {
+        "text": "Three new MCP skills, CTRL retires"
+      }
+    },
+    "theme-3": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon Developer Kit lands"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-commits",
+        "stat-prs",
+        "stat-churn"
+      ]
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits",
+        "value": "29"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs",
+        "value": "26"
+      }
+    },
+    "stat-churn": {
+      "type": "Stat",
+      "props": {
+        "label": "Changes",
+        "value": "+1,692 / −355"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full article",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-07-20.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

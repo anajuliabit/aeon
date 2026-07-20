@@ -1,0 +1,135 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "agent-buzz",
+        "description": "2026-07-13"
+      },
+      "children": [
+        "intro-text",
+        "sep-1",
+        "section-1",
+        "sep-2",
+        "section-2",
+        "footer"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "mcp kept absorbing jobs — compilation, memory, rl environments — while a quieter thread argued the agent-layer abstraction is still missing.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-1",
+        "post-1",
+        "post-2",
+        "post-3"
+      ]
+    },
+    "h-1": {
+      "type": "Heading",
+      "props": {
+        "text": "mcp as agent substrate",
+        "level": "h2"
+      }
+    },
+    "post-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@kdy1dev — ships an mcp that hooks compiler passes to trim agent token bills; swc creator writes the reference implementation.",
+        "href": "https://x.com/kdy1dev/status/2076300169679896792",
+        "source": "X"
+      }
+    },
+    "post-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@som23x — elastic builder wires mcp tools to searchable memory on aws agentcore; argues the model is downstream of context.",
+        "href": "https://x.com/som23x/status/2076167536740327507",
+        "source": "X"
+      }
+    },
+    "post-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@xdotli — benchflow reports clean rl hillclimb on mcp tool/personal/mocks envs using alibaba qwen's agentworld taxonomy.",
+        "href": "https://x.com/xdotli/status/2076453878242161000",
+        "source": "X"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-2",
+        "post-4",
+        "post-5",
+        "post-6"
+      ]
+    },
+    "h-2": {
+      "type": "Heading",
+      "props": {
+        "text": "the missing agent abstraction",
+        "level": "h2"
+      }
+    },
+    "post-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@ZakaryaeBoudi — iei paper: scalability + governance failures trace to a missing ontology/topology layer around the model.",
+        "href": "https://x.com/ZakaryaeBoudi/status/2076230930100892138",
+        "source": "X"
+      }
+    },
+    "post-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@danpdc — accumulating .md files, skills, rules, hooks, mcp configs are compounding into unowned legacy before ai-engineering matures.",
+        "href": "https://x.com/danpdc/status/2076195435580965248",
+        "source": "X"
+      }
+    },
+    "post-6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@SMishra61 — paper proposes manager→dag multi-agent computer use; beats single-agent baselines 3.4–25.5% across benchmarks.",
+        "href": "https://x.com/SMishra61/status/2076227563643716060",
+        "source": "X"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai · candidates: 6 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

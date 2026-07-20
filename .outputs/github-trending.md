@@ -1,22 +1,29 @@
-*GitHub Trending — 2026-07-12*
+*GitHub Trending — 2026-07-20*
 
-*Top pick* — [malisper/pgrust](https://github.com/malisper/pgrust)
-Rust rewrite of Postgres from an 83d-old project passing 46k+ real pg regression tests — the "rewrite it in Rust" meme now has receipts.
-
-*Infra*
-• [malisper/pgrust](https://github.com/malisper/pgrust) — ★ 774t today (2.2k total) · Rust · [ACCELERATING]
-Postgres rewrite in Rust, thread-per-connection instead of process-per-connection, WIP branch runs 300× faster than pg on analytical workloads.
-
-*Devtools*
-• [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) — ★ 909t today (7.8k total) · TS · [HOLDOVER]
-Claude terminal + fs-search + diff-edit via MCP; 909 today vs 328 yesterday = 70× historical baseline, MCP-as-infra thesis day-3.
+*Top pick* — [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+one endpoint fronting 268 providers · 500+ models · kimi k3 already wired 7 days before open-weights ship 7-27 = pre-launch integration.
 
 *AI/ML*
-• [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) — ★ 340t today (7.2k total) · TS · [HOLDOVER]
-Google Labs library speaking the Skills open standard, cross-lab targets Antigravity/Gemini CLI/Claude Code/Cursor; 3× yesterday's daily rate.
+• [topoteretes/cognee](https://github.com/topoteretes/cognee) — ★ 303 today (28k total) · Python · [RETURNING]
+persistent AI-agent memory as self-hosted knowledge-graph engine — cross-session recall without vendor context walls.
 
-• [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) — ★ 219t today (48k total) · Jupyter · [RETURNING]
-Anthropic-official recipes; recent adds cover managed-agent patterns, agentic-search benchmark reproduction, big-plan/small-execute cost cookbook.
+• [kvcache-ai/ktransformers](https://github.com/kvcache-ai/ktransformers) — ★ 360 today (19k total) · Python · [RETURNING]
+runs huge MoEs on mixed CPU+GPU by pinning hot experts on GPU — 400B+ models on prosumer boxes.
+
+• [handy-computer/transcribe.cpp](https://github.com/handy-computer/transcribe.cpp) — ★ 401 today (1k total) · C++ · [RETURNING]
+one ggml build across whisper + parakeet + moonshine + qwen3-asr + cohere-transcribe + 11 more — 60+ variants under one binary w/ Metal/Vulkan/CUDA backends.
+
+*Devtools*
+• [1jehuang/jcode](https://github.com/1jehuang/jcode) — ★ 235 today (9k total) · Rust · [RETURNING]
+rust cli agent w/ embedded semantic memory + swarm coordination + self-modification — claims 14ms TTFF ~245× faster than claude code.
+
+*Infra*
+• [oblien/openship](https://github.com/oblien/openship) — ★ 1,719 today (4k total) · TypeScript · [RETURNING]
+push-to-deploy self-host w/ zero yaml/pipelines + built-in postgres/redis/mail/cdn + MCP protocol native.
+
+*Web/Apps*
+• [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) — ★ 439 today (1k total) · Rust · [RETURNING]
+tokio-rs ships a rust web framework where `$(...)` markers dual-render server + client — kills the API-layer + separate frontend bundle in one primitive.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/24
+sources: trending=ok · gh_api=ok · kept 7/20

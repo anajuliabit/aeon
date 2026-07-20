@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-12*
-Shape: submit capture-step PR, mark SLX closed, snapshot PUMP T-0, open ISS-027, append DEXE watchlist
+*5 Actions — 2026-07-19*
+Shape: stage iss-025 patch, abandon 3-PR queue, paste rule-5, backport #164 diff, write supply-chain topic
 
-1. submit a PR against `.github/workflows/aeon.yml:479-493` chain-runner capture step — emit the fenced reppo-plan block from the LLM's Write-tool file, not the final assistant text (ISS-009 root cause).
-why: weekly-review 7-13 T-1 tomorrow, sole path to clear the 18-skill sr<0.5 chronic tail after self-improve rule-5 codified adjacent-target routing on 7-11 (PR #162).
-done: PR opened touching `.github/workflows/aeon.yml`; `memory/issues/ISS-025.md` gains `fix_pr:` frontmatter.
+1. stage `fix/iss-025-capture-step` branch with capture-step insert against `.github/workflows/aeon.yml:479-495`, open PR
+why: single primitive resolves sandbox-truncation family d27 + cost-report d6 + 12:00Z batch d21 + morning-batch — top-leverage today
+done: `gh pr view <n> --json mergeable` returns MERGEABLE
 loop: iss-025-capture-step
 
-2. mark SLX pick CLOSED in `memory/topics/crypto.md` with day-18 -63% verdict (entry $0.4753 → 7-10 trending $0.174), and add a one-line footnote to `memory/topics/capital-2x-program.md`.
-why: weekly-review 7-13 T-1 is the last full day; the `Authored by: operator × 1` slot targets SLX recut; capital-book hygiene overdue day-18.
-done: SLX row moved under `## Closed picks` in `memory/topics/crypto.md`; verdict line committed.
-loop: slx-recut
+2. abandon PR queue — `gh pr close 162 163 164 --comment "rebase-unsafe past stall gate; reopen with fresh cherry-pick"`
+why: 3 CONFLICTING self-improve PRs exit-gate 18:00Z self-improve tick tonight — pre-empts 2-consec skip pattern
+done: `gh pr list --state open` shows 0 self-improve-authored PRs
+loop: pr-queue-clear
 
-3. snapshot PUMP spot + 24h volume + 22.2% mcap unlock read at T-0 today into `memory/topics/crypto.md` before the Sat 7-12 daily close.
-why: 82.5B tokens ($135M) hit float today, pre-derisked -2.4%/24h -7.9%/7d, 42% supply already buyback-burned — tomorrow's daily-routine needs a T-0 anchor to score the event.
-done: `## PUMP unlock T-0 anchor` block in `memory/topics/crypto.md` with spot/vol/shares-outstanding.
-loop: pump-unlock-day0
+3. paste rule-5 section into `CLAUDE.md` with PR #160/#162/#163/#164 evidence rows for auto-committed state drift n=4
+why: T+2 SLIPPED codification unblocks self-improve for future cycles and closes weekly-review 7-13 action #3
+done: `grep -c "Rule 5" CLAUDE.md` returns ≥1 and evidence table lists 4 PR rows
+loop: claude-md-rule5-codify
 
-4. open `memory/issues/ISS-027.md` for the 12:00 UTC 8-skill batch scheduler-never-run pattern (day-15 stale, last_dispatch 2026-06-28 across token-pick/defi-overview/token-movers/on-chain-monitor/defi-monitor/market-context-refresh/narrative-tracker/aixbt-pulse), `category: config`.
-why: 7-07/7-08/7-09 action-converters all claimed filing; grep confirms file still absent; blocks root-cause diagnosis for the dark cluster.
-done: `memory/issues/ISS-027.md` exists with YAML frontmatter; `memory/issues/INDEX.md` open-table row appended.
-loop: iss-027-file
+4. backport PR #164 committee fail-fast retry diff to `scripts/advisor/run.sh` on main, verify `bash scripts/advisor/selftest.sh`
+why: only touches advisor/, side-steps rule-5 CONFLICTING while landing the 20-min committee timeout fix cleanly
+done: `bash scripts/advisor/selftest.sh` exits 0 with `COMMITTEE_LLM_ATTEMPTS` honoured
+loop: advisor-fix-port
 
-5. append DEXE row to the `## Tracked Tokens` table in `memory/MEMORY.md` — CoinGecko id `dexe`, 15% 24h threshold, "fresh BREAKOUT rank #42, +75% 7d, 7-12" activity note.
-why: first sub-#50 sustained BREAKOUT in a week (governance/DEX-aggregator, mid-cap $1.95B credible, vol $76M) surfaced in today's daily-routine 08:57Z pulse; token-alert next tick starts monitoring.
-done: DEXE row present in `## Tracked Tokens` table in `memory/MEMORY.md`.
-loop: dexe-watchlist
+5. write `memory/topics/supply-chain.md` with vendor-scope-typosquat n=6+ / real-package n=1 (@injectivelabs/sdk-ts) / first-party-incumbent n=1 (copilot-sdk) subsections
+why: MEMORY.md line 46-48 patterns need a durable topic file surviving future consolidation trims, cross-links from crypto.md
+done: file exists with ≥3 named subsections + linked from MEMORY.md Active Topics
+loop: supply-chain-topic-anchor
 
-sources: memory=67 logs=14 topics=11 prs=1 cron_failing=0 mode=OK
+sources: memory=60 logs=7 topics=11 prs=4 cron_failing=1 mode=OK

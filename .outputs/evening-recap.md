@@ -1,21 +1,24 @@
-*Evening Recap — 2026-07-12*
-_TL;DR: heavy fleet day — fork-cohort article shipped, 2 goals fell to BLOCKED, GITLAWB rang the 15% rail; PR #162 stall and weekly-review T-0 both land tomorrow._
+*Evening Recap — 2026-07-19*
+_TL;DR: full-deck fire day — reflect codified 11 patterns, self-improve queue-lock n=2 established; all 6 goals remain frozen pending operator_
 
 *Headlines:*
-- fork-cohort — LEVELED_UP: 17 forks crossed POWER threshold · articles/fork-cohort-2026-07-12.md
-- heartbeat — PR #162 crosses 24h stall gate (~26h old, open, no CI/review) · https://github.com/anajuliabit/aeon/pull/162
+- reflect — 11 new durable patterns + 5 revisions; memory 60L→63L · memory/MEMORY.md
+- fork-skill-digest — 11 DEFAULT_FLIP_DISABLE signals at 3-week persistence threshold; fleet ↓14 to 61 forks · articles/fork-skill-digest-2026-07-19.md
+- fork-cohort — WENT_STALE: Aluma/aeon (8.6d) + BBridgeers/aeon (11.3d) · articles/fork-cohort-2026-07-19.md
+- PR #165 docs(skill-graph): shared_state 21→27, opened 17:38Z · https://github.com/anajuliabit/aeon/pull/165
 
 *Notable:*
-- goal-tracker — 2 goals ON_TRACK→BLOCKED (sandbox-truncation-systemic d20 + 12-00-utc-batch d15); rule-5 block codified, operator direct-author sole path
-- token-alert — GITLAWB -19.49% 24h fires 15% rail; compound 2-day -28% reverses 7-10 +34% reclaim
-- security-digest — VERDICT-FLIP: first "nothing urgent today" in 5 runs; SiYuan 5-CVE + TSDProxy 9.0 + safeinstall-cli 8.8 to patch this week
-- skill-health — DEGRADED(21) NOTIFY d20; token-alert 78%→80% promoted to HEALTHY
-- reflect ×2 — MEMORY 67L→65L; market-context/crypto/fleet topic files appended
+- self-improve — improvement-PR-queue-locks-self-improve 2-consec; exit-gate fires again on odd-day 18:00Z (7-17 was first)
+- daily-routine — 07:00Z morning-batch d3 durable-recover confirmed; BUILDon +61.5% breakout + BTC ETF 10-day outflow snap $221.7M flagged
+- security-digest — nothing urgent today; KEV d3 zero-cadence (first 3-consec-zero in memory) + npm-malware wave d6=0 arc closes
+- github-trending — lingbot-map 6.0× baseline TOP PICK (feed-forward 3D foundation model, kills bundle-adjustment)
+- goal-tracker + action-converter — 6/6 BLOCKED flat; iss-025-capture-step top-scored at 125
 
 *Decisions for tomorrow:*
-- decide PR #162: merge or close — ~26h stale, no CI, no review; T-0 Mon 7-13 · https://github.com/anajuliabit/aeon/pull/162
-- author .github/workflows/aeon.yml capture-step for ISS-025 d20 (operator-sole-path; self-improve rule-5 blocked)
-- SLX recut or mark closed — day-18 CATASTROPHIC -63% vs $0.4753 entry, T-0 deadline Mon 7-13
-- operator-scorecard 10:30Z Mon — 9th consecutive miss risk
+- close or rebase PR #162/163/164 (CONFLICTING; operator direct-author per rule-5 primitive n=4)
+- author ISS-025 capture-step PR against aeon.yml:479-495 — unblocks cost-report + 15-skill sandbox-truncation family day-27
 
-_+17 routine runs collapsed · sources: log=ok cron-state=ok_
+*Blockers:*
+- cost-report — stuck dispatched d6 ~143h · ISS-025 (cf=5, sr=0.10)
+
+_+13 routine runs collapsed · sources: log=ok cron-state=ok_

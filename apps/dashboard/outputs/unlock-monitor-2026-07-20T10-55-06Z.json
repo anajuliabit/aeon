@@ -1,0 +1,763 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Unlock Monitor — week of 2026-07-20"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "intro_text",
+        "sep_1",
+        "crisis_section",
+        "sep_2",
+        "strain_section",
+        "sep_3",
+        "digestible_section",
+        "sep_4",
+        "forced_section",
+        "sep_5",
+        "supply_read_section",
+        "sources_text"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "this week's most leveraged: $H unlocks fri jul 25 at $15.9M (5.1× daily vol) into a 30d +72.6% ramp. textbook fade-pump shape — market bought the ramp, cliff hasn't hit yet.",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "crisis_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "crisis_heading",
+        "crisis_stack"
+      ]
+    },
+    "crisis_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CRISIS (>2.4× daily vol)",
+        "level": "h2"
+      }
+    },
+    "crisis_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_token",
+        "zro_token",
+        "gt_token"
+      ]
+    },
+    "h_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_title",
+        "h_meta",
+        "h_tags",
+        "h_metrics",
+        "h_analysis"
+      ]
+    },
+    "h_title": {
+      "type": "Heading",
+      "props": {
+        "text": "$H (Humanity)",
+        "level": "h3"
+      }
+    },
+    "h_meta": {
+      "type": "Text",
+      "props": {
+        "text": "fri jul 25 — 266M tokens (9.2% supply, $15.9M)",
+        "variant": "body"
+      }
+    },
+    "h_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "h_badge_cliff",
+        "h_badge_contrib",
+        "h_badge_vol",
+        "h_badge_30d",
+        "h_badge_fade"
+      ]
+    },
+    "h_badge_cliff": {
+      "type": "Badge",
+      "props": {
+        "text": "cliff",
+        "variant": "destructive"
+      }
+    },
+    "h_badge_contrib": {
+      "type": "Badge",
+      "props": {
+        "text": "early contributors"
+      }
+    },
+    "h_badge_vol": {
+      "type": "Badge",
+      "props": {
+        "text": "5.1× vol"
+      }
+    },
+    "h_badge_30d": {
+      "type": "Badge",
+      "props": {
+        "text": "30d +72.6%",
+        "variant": "secondary"
+      }
+    },
+    "h_badge_fade": {
+      "type": "Badge",
+      "props": {
+        "text": "fade pump"
+      }
+    },
+    "h_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "h_stat_vol",
+        "h_stat_30d"
+      ]
+    },
+    "h_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "5.1×",
+        "label": "daily vol"
+      }
+    },
+    "h_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "value": "+72.6%",
+        "label": "30d",
+        "delta": "+72.6%",
+        "trend": "up"
+      }
+    },
+    "h_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "team cliff into a vertical. cliff pattern in play — expect weakness running into the date, vol peak on the print, recovery 10–14d later.",
+        "variant": "body"
+      }
+    },
+    "zro_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "zro_title",
+        "zro_meta",
+        "zro_tags",
+        "zro_metrics",
+        "zro_analysis"
+      ]
+    },
+    "zro_title": {
+      "type": "Heading",
+      "props": {
+        "text": "$ZRO (LayerZero)",
+        "level": "h3"
+      }
+    },
+    "zro_meta": {
+      "type": "Text",
+      "props": {
+        "text": "mon jul 20 (today, 00:00Z) — 25.7M tokens (7.0% supply, $19.8M)",
+        "variant": "body"
+      }
+    },
+    "zro_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "zro_badge_cliff",
+        "zro_badge_inv",
+        "zro_badge_vol",
+        "zro_badge_30d",
+        "zro_badge_crisis"
+      ]
+    },
+    "zro_badge_cliff": {
+      "type": "Badge",
+      "props": {
+        "text": "cliff",
+        "variant": "destructive"
+      }
+    },
+    "zro_badge_inv": {
+      "type": "Badge",
+      "props": {
+        "text": "investor+team"
+      }
+    },
+    "zro_badge_vol": {
+      "type": "Badge",
+      "props": {
+        "text": "1.4× vol"
+      }
+    },
+    "zro_badge_30d": {
+      "type": "Badge",
+      "props": {
+        "text": "30d +15.6%",
+        "variant": "secondary"
+      }
+    },
+    "zro_badge_crisis": {
+      "type": "Badge",
+      "props": {
+        "text": "investor-bump → CRISIS"
+      }
+    },
+    "zro_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "zro_stat_vol",
+        "zro_stat_30d",
+        "zro_stat_today"
+      ]
+    },
+    "zro_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "1.4×",
+        "label": "daily vol"
+      }
+    },
+    "zro_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "value": "+15.6%",
+        "label": "30d",
+        "delta": "+15.6%",
+        "trend": "up"
+      }
+    },
+    "zro_stat_today": {
+      "type": "Stat",
+      "props": {
+        "value": "-4.2%",
+        "label": "today",
+        "delta": "-4.2%",
+        "trend": "down"
+      }
+    },
+    "zro_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "already -4.2% today ahead of the print. investor cliff at cost-basis-zero hits the bid.",
+        "variant": "body"
+      }
+    },
+    "gt_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "gt_title",
+        "gt_meta",
+        "gt_tags",
+        "gt_metrics",
+        "gt_analysis"
+      ]
+    },
+    "gt_title": {
+      "type": "Heading",
+      "props": {
+        "text": "$GT (GateToken)",
+        "level": "h3"
+      }
+    },
+    "gt_meta": {
+      "type": "Text",
+      "props": {
+        "text": "sun jul 26 — $44.6M / 6.3% supply",
+        "variant": "body"
+      }
+    },
+    "gt_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "gt_badge_vol",
+        "gt_badge_30d",
+        "gt_badge_exchange",
+        "gt_badge_trap"
+      ]
+    },
+    "gt_badge_vol": {
+      "type": "Badge",
+      "props": {
+        "text": "21× cg-daily-vol"
+      }
+    },
+    "gt_badge_30d": {
+      "type": "Badge",
+      "props": {
+        "text": "30d +0.1% flat",
+        "variant": "secondary"
+      }
+    },
+    "gt_badge_exchange": {
+      "type": "Badge",
+      "props": {
+        "text": "exchange-token"
+      }
+    },
+    "gt_badge_trap": {
+      "type": "Badge",
+      "props": {
+        "text": "low-liquidity trap",
+        "variant": "outline"
+      }
+    },
+    "gt_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "gt_stat_vol",
+        "gt_stat_30d"
+      ]
+    },
+    "gt_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "21×",
+        "label": "CG daily vol"
+      }
+    },
+    "gt_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "value": "+0.1%",
+        "label": "30d",
+        "delta": "+0.1%",
+        "trend": "neutral"
+      }
+    },
+    "gt_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "absorption metric degenerates for exchange tokens (most flow off-cg). not comparable to H/ZRO — file under \"watch for on-exchange wick\".",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "strain_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "strain_heading",
+        "strain_stack"
+      ]
+    },
+    "strain_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "STRAIN (1.0–2.4×)",
+        "level": "h2"
+      }
+    },
+    "strain_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soso_token"
+      ]
+    },
+    "soso_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soso_title",
+        "soso_meta",
+        "soso_tags",
+        "soso_metrics",
+        "soso_analysis"
+      ]
+    },
+    "soso_title": {
+      "type": "Heading",
+      "props": {
+        "text": "$SOSO (SoSoValue)",
+        "level": "h3"
+      }
+    },
+    "soso_meta": {
+      "type": "Text",
+      "props": {
+        "text": "thu jul 24 — $7.5M (7.6% supply)",
+        "variant": "body"
+      }
+    },
+    "soso_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "soso_badge_vol",
+        "soso_badge_30d",
+        "soso_badge_asleep"
+      ]
+    },
+    "soso_badge_vol": {
+      "type": "Badge",
+      "props": {
+        "text": "1.5× vol"
+      }
+    },
+    "soso_badge_30d": {
+      "type": "Badge",
+      "props": {
+        "text": "30d +4.9% flat",
+        "variant": "secondary"
+      }
+    },
+    "soso_badge_asleep": {
+      "type": "Badge",
+      "props": {
+        "text": "market asleep"
+      }
+    },
+    "soso_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "soso_stat_vol",
+        "soso_stat_30d"
+      ]
+    },
+    "soso_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "1.5×",
+        "label": "daily vol"
+      }
+    },
+    "soso_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "value": "+4.9%",
+        "label": "30d",
+        "delta": "+4.9%",
+        "trend": "up"
+      }
+    },
+    "soso_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "mid-tier absorption into a flat tape = asymmetric downside if nobody's hedged.",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "digestible_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "digestible_heading",
+        "digestible_stack"
+      ]
+    },
+    "digestible_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DIGESTIBLE (0.3–1.0×) — recipient-bumped",
+        "level": "h2"
+      }
+    },
+    "digestible_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "kaito_token"
+      ]
+    },
+    "kaito_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kaito_title",
+        "kaito_meta",
+        "kaito_tags",
+        "kaito_metrics",
+        "kaito_analysis"
+      ]
+    },
+    "kaito_title": {
+      "type": "Heading",
+      "props": {
+        "text": "$KAITO",
+        "level": "h3"
+      }
+    },
+    "kaito_meta": {
+      "type": "Text",
+      "props": {
+        "text": "mon jul 20 (today) — $16.9M / 7.3% supply — core contributors (team)",
+        "variant": "body"
+      }
+    },
+    "kaito_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "kaito_badge_cliff",
+        "kaito_badge_vol",
+        "kaito_badge_bumped"
+      ]
+    },
+    "kaito_badge_cliff": {
+      "type": "Badge",
+      "props": {
+        "text": "cliff",
+        "variant": "destructive"
+      }
+    },
+    "kaito_badge_vol": {
+      "type": "Badge",
+      "props": {
+        "text": "0.26× vol"
+      }
+    },
+    "kaito_badge_bumped": {
+      "type": "Badge",
+      "props": {
+        "text": "bumped DIGESTIBLE via team"
+      }
+    },
+    "kaito_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "kaito_stat_vol",
+        "kaito_stat_30d"
+      ]
+    },
+    "kaito_stat_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "0.26×",
+        "label": "daily vol"
+      }
+    },
+    "kaito_stat_30d": {
+      "type": "Stat",
+      "props": {
+        "value": "+98.8%",
+        "label": "30d",
+        "delta": "+98.8%",
+        "trend": "up"
+      }
+    },
+    "kaito_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "the number says absorbable, the shape says careful — 30d +98.8% into a team cliff. team at ~zero cost-basis with tape at $0.98 = free hit. absorbable pointwise, sellable pattern-wise.",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forced_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forced_heading",
+        "forced_stack"
+      ]
+    },
+    "forced_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "FORCED (next-week heads-up)",
+        "level": "h2"
+      }
+    },
+    "forced_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ftx_title",
+        "ftx_meta",
+        "ftx_stat",
+        "ftx_analysis"
+      ]
+    },
+    "ftx_title": {
+      "type": "Heading",
+      "props": {
+        "text": "FTX fifth distribution",
+        "level": "h3"
+      }
+    },
+    "ftx_meta": {
+      "type": "Text",
+      "props": {
+        "text": "fri jul 31 — court-ordered creditor payout · record date jun 16 passed",
+        "variant": "body"
+      }
+    },
+    "ftx_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$900M",
+        "label": "payout"
+      }
+    },
+    "ftx_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "largest single supply event of the quarter. next-week's problem; belongs in the 7-27 tick, flagged now so it's not fresh news on monday.",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "supply_read_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "supply_read_heading",
+        "supply_read_text"
+      ]
+    },
+    "supply_read_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Supply read",
+        "level": "h3"
+      }
+    },
+    "supply_read_text": {
+      "type": "Text",
+      "props": {
+        "text": "the real signal is H, not GT. 5× daily vol into a 30d +72.6% ramp with early-contributor cliff is the textbook fade-pump setup, and H already ate hack-concerns earlier this month. ZRO is the day-of second read (bumped CRISIS via investor flag; note the pre-print bleed already active). KAITO's 0.26× reads sleepy but the vertical into a team cliff is the classic before-cliff bid-and-dump. GT's 21× is degenerate — exchange-token volume math breaks the framework. next week's FTX $900M dwarfs everything on this week's list.",
+        "variant": "body"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: tokenomist=ok, cryptorank=partial, defillama=fail(403), dropstab=fail(masked-dates), coingecko=ok, bitcoinsistemi=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

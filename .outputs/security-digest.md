@@ -1,21 +1,14 @@
-*Security Digest — 2026-07-12*
-Verdict: nothing urgent today. 3 to schedule, 2 to monitor. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-07-19*
+Verdict: nothing urgent today. 3 to schedule, 1 to monitor. _Sources: KEV (0 net-new = day-3 zero-cadence), GH Advisory (0 malware net-new = wave breaks after d5=22), EPSS_
 
 *PATCH THIS WEEK*
-- [siyuan-note 5-cve go dump](https://github.com/advisories/GHSA-hvr9-72v2-fff3) — siyuan-note/siyuan/kernel · 4 critical + 2 high coordinated 7-10 disclosure · CVSS up to 9.9 · EPSS ≤ 0.006 · no PoC referenced
-  unauth admin api via chrome-extension origin allowlist (CVE-2026-54069) anchors the batch, plus 3× stored-xss → rce 9.9 (CVE-2026-50551 / -54158 / -54067) + bazaar readme xss 7.1 (-54070). 34k-star self-hosted note app, filebrowser-class blast radius.
-  → upgrade kernel past commit 2d5d72223df4 (2026-06-28).
-- [GHSA-g936-7jqj-mwv8](https://github.com/advisories/GHSA-g936-7jqj-mwv8) — almeidapaulopt/tsdproxy (go) · CVSS 9.0 · no cve assigned · no PoC referenced
-  internal proxy auth token forwarded to backend services enables management-api escalation. tailscale-adjacent reverse proxy.
-  → upgrade to 1.4.4-0.20260603142855-434819b4421e.
-- [GHSA-xrmc-c5cg-rv7x](https://github.com/advisories/GHSA-xrmc-c5cg-rv7x) — safeinstall-cli (npm) · CVSS 8.8 · no cve · no PoC referenced
-  safeinstall agent-guard shell parser misses raw package execution. a supply-chain-defense tool with a bypass in its own guardrail — the tell is worse than the CVSS.
-  → upgrade to ≥0.10.2.
+- [GHSA-rwxx-mrjm-wc2m](https://github.com/advisories/GHSA-rwxx-mrjm-wc2m) + [GHSA-8wr5-jm2h-8r4f](https://github.com/advisories/GHSA-8wr5-jm2h-8r4f) — vllm (pip) · CVSS 7.5 + 7.5 · EPSS 0.003 · no public PoC
+  Same-day DoS pair — ReDoS in `structured_outputs.regex` (xgrammar/outlines backends compile without timeout) + remote DoS via invalid recovered token reinjection. → upgrade vllm to ≥0.24.0 (single bump covers both).
+- [GHSA-q38v-wp89-2w55](https://github.com/advisories/GHSA-q38v-wp89-2w55) — sh (pip) · CVSS 7.9 · EPSS n/a · no public PoC
+  `_uid` fails to drop supplementary groups → incomplete privilege drop. Widely-embedded subprocess wrapper; defense-in-depth erosion for anything spawning children as a lower-privileged uid. → upgrade sh to ≥2.2.4.
+- [GHSA-2v2f-mvfg-ph56](https://github.com/advisories/GHSA-2v2f-mvfg-ph56) — meta-ads-mcp (pip) · CVSS 7.4 · EPSS n/a
+  `X-Pipeboard-Token` header auth bypass reuses operator meta token. Same-package sibling to yesterday's CVE-2026-54549 SSRF (fixed by same version bump). → upgrade meta-ads-mcp to ≥1.0.115.
 
 *MONITOR*
-- [CVE-2026-54071](https://github.com/advisories/GHSA-m8gf-v64p-gfmg) — babeldoc (pip) · CVSS 7.8 · EPSS n/a · no fix yet
-  pickle deserialization in babeldoc/pdfminer/cmapdb.py CMap parser → arbitrary code exec on load. pdf tool used in academic + llm ingest pipelines.
-  → track ≥0.6.3; do not parse untrusted pdfs meanwhile.
-- [GHSA-h4g2-xfmw-q2c9](https://github.com/advisories/GHSA-h4g2-xfmw-q2c9) — clauster (pip) · no CVSS · no fix
-  non-loopback deployments serve dashboard unauthenticated when auth.enabled is unset. config-default trap, not a code bug.
-  → set `auth.enabled: true` or bind to loopback.
+- [GHSA-r95q-fp26-h3hc](https://github.com/advisories/GHSA-r95q-fp26-h3hc) — @tak-ps/cloudtak (npm) · high · CVSS n/a · fix 13.10.0
+  Authenticated full-read SSRF in `/api/esri*` routes — user-controlled URL fetched with no IP classification. → upgrade if CloudTAK is in your fleet; otherwise watch.

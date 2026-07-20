@@ -1,0 +1,413 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-17"
+      },
+      "children": [
+        "section_top_pick",
+        "sep1",
+        "section_aiml",
+        "sep2",
+        "section_web",
+        "sep3",
+        "section_devtools",
+        "sep4",
+        "footer"
+      ]
+    },
+    "section_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_pick",
+        "storylink_bonsai_top",
+        "text_bonsai_desc1"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "storylink_bonsai_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PrismML-Eng/Bonsai-demo",
+        "href": "https://github.com/PrismML-Eng/Bonsai-demo"
+      },
+      "children": []
+    },
+    "text_bonsai_desc1": {
+      "type": "Text",
+      "props": {
+        "text": "1-bit / ternary quantized 27b that fits on a modern iphone with no memory offload. if the numbers hold, first serious bitnet-scale drop with a public demo.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_aiml",
+        "item_bonsai_aiml",
+        "item_deeptutor"
+      ]
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item_bonsai_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bonsai_meta",
+        "bonsai_desc2"
+      ]
+    },
+    "bonsai_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "storylink_bonsai_aiml",
+        "stat_bonsai_stars",
+        "badge_shell",
+        "badge_returning1"
+      ]
+    },
+    "storylink_bonsai_aiml": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PrismML-Eng/Bonsai-demo",
+        "href": "https://github.com/PrismML-Eng/Bonsai-demo"
+      },
+      "children": []
+    },
+    "stat_bonsai_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "196",
+        "delta": "(1.6k total)"
+      },
+      "children": []
+    },
+    "badge_shell": {
+      "type": "Badge",
+      "props": {
+        "text": "Shell",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_returning1": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "bonsai_desc2": {
+      "type": "Text",
+      "props": {
+        "text": "bonsai-27b packs to ~1.125 bits/weight; runs across llama.cpp, mlx, cuda, metal, vulkan with vision + tool-calling.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item_deeptutor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "deeptutor_meta",
+        "deeptutor_desc"
+      ]
+    },
+    "deeptutor_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "storylink_deeptutor",
+        "stat_deeptutor_stars",
+        "badge_python",
+        "badge_accelerating"
+      ]
+    },
+    "storylink_deeptutor": {
+      "type": "StoryLink",
+      "props": {
+        "title": "HKUDS/DeepTutor",
+        "href": "https://github.com/HKUDS/DeepTutor"
+      },
+      "children": []
+    },
+    "stat_deeptutor_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "656",
+        "delta": "(27k total)"
+      },
+      "children": []
+    },
+    "badge_python": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_accelerating": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "deeptutor_desc": {
+      "type": "Text",
+      "props": {
+        "text": "crossed from 1.3× baseline yesterday to 4.9× today — lifelong-tutoring multi-agent+rag stack, same lab as vibe-trading.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_web": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_web",
+        "item_opencut"
+      ]
+    },
+    "heading_web": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item_opencut": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opencut_meta",
+        "opencut_desc"
+      ]
+    },
+    "opencut_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "storylink_opencut",
+        "stat_opencut_stars",
+        "badge_typescript1",
+        "badge_returning2"
+      ]
+    },
+    "storylink_opencut": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OpenCut-app/OpenCut",
+        "href": "https://github.com/OpenCut-app/OpenCut"
+      },
+      "children": []
+    },
+    "stat_opencut_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "3.5k",
+        "delta": "(74k total)"
+      },
+      "children": []
+    },
+    "badge_typescript1": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_returning2": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "opencut_desc": {
+      "type": "Text",
+      "props": {
+        "text": "invalidates yesterday's peak-then-fade verdict: 7-14 1.2k → 7-15 4.3k → 7-16 1.6k → 7-17 3.5k = day-4 bounce-back, not decay.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_devtools",
+        "item_uiskills"
+      ]
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item_uiskills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "uiskills_meta",
+        "uiskills_desc"
+      ]
+    },
+    "uiskills_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "storylink_uiskills",
+        "stat_uiskills_stars",
+        "badge_typescript2",
+        "badge_returning3"
+      ]
+    },
+    "storylink_uiskills": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ibelick/ui-skills",
+        "href": "https://github.com/ibelick/ui-skills"
+      },
+      "children": []
+    },
+    "stat_uiskills_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "178",
+        "delta": "(4.5k total)"
+      },
+      "children": []
+    },
+    "badge_typescript2": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_returning3": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "uiskills_desc": {
+      "type": "Text",
+      "props": {
+        "text": "skills-primitive rail extends to n=5 — design-engineering variant, same executable-directory shape as mattpocock/skills.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/17",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
