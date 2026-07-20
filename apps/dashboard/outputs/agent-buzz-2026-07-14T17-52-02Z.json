@@ -1,0 +1,207 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-14"
+      },
+      "children": [
+        "text-subtitle",
+        "sep-1",
+        "h3-skills",
+        "stack-section1",
+        "sep-2",
+        "h3-mcp",
+        "stack-section2",
+        "sep-3",
+        "h3-multiagent",
+        "stack-section3",
+        "text-footer"
+      ]
+    },
+    "text-subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "three threads today: skills as the composition primitive, MCP as the connector layer, multi-agent chains applied to inbox and browser.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h3-skills": {
+      "type": "Heading",
+      "props": {
+        "text": "skills as the primitive",
+        "level": "h3"
+      }
+    },
+    "stack-section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-rohit",
+        "link-rohit",
+        "tweet-dhasandev",
+        "link-dhasandev"
+      ]
+    },
+    "tweet-rohit": {
+      "type": "TweetCard",
+      "props": {
+        "author": "rohit4verse",
+        "handle": "@rohit4verse",
+        "text": "meta L8 workflow: harnesses + dual memory + skills + worktrees + parallel agents. the crew is the upgrade, not the prompt."
+      }
+    },
+    "link-rohit": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/rohit4verse/status/2076715289769845049",
+        "href": "https://x.com/rohit4verse/status/2076715289769845049"
+      }
+    },
+    "tweet-dhasandev": {
+      "type": "TweetCard",
+      "props": {
+        "author": "dhasandev",
+        "handle": "@dhasandev",
+        "text": "scaling 5 → 1000s of agents starts with packaging work as skills and composing skills into behavior."
+      }
+    },
+    "link-dhasandev": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/dhasandev/status/2076810036127346987",
+        "href": "https://x.com/dhasandev/status/2076810036127346987"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h3-mcp": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP as plumbing",
+        "level": "h3"
+      }
+    },
+    "stack-section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-comfyui",
+        "link-comfyui",
+        "tweet-vartekxx",
+        "link-vartekxx"
+      ]
+    },
+    "tweet-comfyui": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ComfyUI",
+        "handle": "@ComfyUI",
+        "text": "comfy MCP lets claude / cursor / amp drive real cloud image workflows. MCP now spans non-LLM tools, not just retrieval."
+      }
+    },
+    "link-comfyui": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/ComfyUI/status/2076816614755119403",
+        "href": "https://x.com/ComfyUI/status/2076816614755119403"
+      }
+    },
+    "tweet-vartekxx": {
+      "type": "TweetCard",
+      "props": {
+        "author": "vartekxx",
+        "handle": "@vartekxx",
+        "text": "anthropic 1h claude code workshop covers agentic loop, CLAUDE.md + plan mode, overnight fable autonomy, MCP framed as USB for tools."
+      }
+    },
+    "link-vartekxx": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/vartekxx/status/2076814615187730723",
+        "href": "https://x.com/vartekxx/status/2076814615187730723"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h3-multiagent": {
+      "type": "Heading",
+      "props": {
+        "text": "multi-agent applied to real work",
+        "level": "h3"
+      }
+    },
+    "stack-section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-apollo",
+        "link-apollo",
+        "tweet-mchihess",
+        "link-mchihess"
+      ]
+    },
+    "tweet-apollo": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ApolloHermesX",
+        "handle": "@ApolloHermesX",
+        "text": "browser-native workspace where per-agent memory sharpens across runs. pitched for fleet-drivers, not single-assistant users."
+      }
+    },
+    "link-apollo": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/ApolloHermesX/status/2076816240471953626",
+        "href": "https://x.com/ApolloHermesX/status/2076816240471953626"
+      }
+    },
+    "tweet-mchihess": {
+      "type": "TweetCard",
+      "props": {
+        "author": "mchlhess",
+        "handle": "@mchlhess",
+        "text": "founder audit finds 20% of workday on inbox → 4-agent chain: read, summarize, draft, flag for human review."
+      }
+    },
+    "link-mchihess": {
+      "type": "Link",
+      "props": {
+        "label": "https://x.com/mchlhess/status/2076734402638585957",
+        "href": "https://x.com/mchlhess/status/2076734402638585957"
+      }
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai-cache · candidates: 9 → kept: 6_",
+        "variant": "caption"
+      }
+    }
+  }
+}

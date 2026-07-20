@@ -1,0 +1,634 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "daily-routine — 2026-07-14"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tape-heading",
+        "tape-stack",
+        "sep1",
+        "winners-heading",
+        "winners-table",
+        "sep2",
+        "losers-heading",
+        "losers-table",
+        "sep3",
+        "signals-heading",
+        "signals-stack",
+        "sep4",
+        "tweets-heading",
+        "tweets-stack",
+        "sep5",
+        "paper-heading",
+        "paper-stack",
+        "sep6",
+        "github-heading",
+        "github-text",
+        "sep7",
+        "hn-heading",
+        "hn-stack"
+      ]
+    },
+    "tape-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tape",
+        "level": "h2"
+      }
+    },
+    "tape-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tape-summary",
+        "tape-detail",
+        "btc-stack",
+        "eth-stack",
+        "sol-stack",
+        "hype-stack",
+        "ada-stack"
+      ]
+    },
+    "tape-summary": {
+      "type": "Stat",
+      "props": {
+        "label": "Top-100 Green",
+        "value": "34/100",
+        "delta": "median top-50 -0.60%"
+      }
+    },
+    "tape-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Flat shape from 7-13, deeper 7d bleed.",
+        "variant": "caption"
+      }
+    },
+    "btc-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-stat",
+        "btc-detail"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62,602",
+        "delta": "-0.6% (7d: -1.09%)",
+        "trend": "down"
+      }
+    },
+    "btc-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Arc closed: 7-13 daily close $62,242 failed $63.5k gate. d4 breakdown holds.",
+        "variant": "caption"
+      }
+    },
+    "eth-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "eth-stat"
+      ]
+    },
+    "eth-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,785",
+        "delta": "flat",
+        "trend": "neutral"
+      }
+    },
+    "sol-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sol-stat"
+      ]
+    },
+    "sol-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$75.19",
+        "delta": "-1.58% (7d: -7.71%)",
+        "trend": "down"
+      }
+    },
+    "hype-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hype-stat",
+        "hype-detail"
+      ]
+    },
+    "hype-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$63.71",
+        "delta": "-2.78% (7d: -10.11%)",
+        "trend": "down"
+      }
+    },
+    "hype-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Rotation-out d3 deepens.",
+        "variant": "caption"
+      }
+    },
+    "ada-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ada-detail"
+      ]
+    },
+    "ada-detail": {
+      "type": "Text",
+      "props": {
+        "text": "ADA 7d -11.62% new deep-weakness.",
+        "variant": "caption"
+      }
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "24h",
+          "7d",
+          "Volume",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "DRV",
+            "+51%",
+            "+62%",
+            "$14M",
+            "derive protocol governance, options DEX, 25% fees→buybacks"
+          ],
+          [
+            "BILL",
+            "+16.6%",
+            "+30.6%",
+            "$46M",
+            "repeats"
+          ],
+          [
+            "BDX",
+            "+12.8%",
+            "—",
+            "$783M mcap",
+            ""
+          ],
+          [
+            "RIF",
+            "+9.0%",
+            "—",
+            "—",
+            "reverses 7-13 loser"
+          ],
+          [
+            "CVX",
+            "+8.4%",
+            "—",
+            "$57M",
+            "curve pair sync"
+          ],
+          [
+            "CRV",
+            "+8.0%",
+            "—",
+            "$57M",
+            "curve pair sync"
+          ],
+          [
+            "B",
+            "+8%",
+            "-35%",
+            "—",
+            "second dead-cat leg (7-11 +16 → 7-12 -27 → 7-14 +8)"
+          ],
+          [
+            "ENA",
+            "+5.8%",
+            "+8.5%",
+            "$104M",
+            "trending"
+          ],
+          [
+            "INJ",
+            "+5.4%",
+            "+5.1%",
+            "$69M",
+            "trending"
+          ],
+          [
+            "EDGE",
+            "+5.1%",
+            "—",
+            "—",
+            ""
+          ],
+          [
+            "VVV",
+            "+4.9%",
+            "—",
+            "—",
+            ""
+          ]
+        ]
+      }
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "24h",
+          "7d",
+          "Volume",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "DCR",
+            "-24.02%",
+            "+9.1%",
+            "—",
+            "mega reversal from 7-13 #2 winner +35.1%"
+          ],
+          [
+            "PI",
+            "-14.5%",
+            "-34.5%",
+            "$34M",
+            "cascade"
+          ],
+          [
+            "KITE",
+            "-12.8%",
+            "—",
+            "—",
+            "dead-cat from 7-13 +19.5%"
+          ],
+          [
+            "XEC",
+            "-11.66%",
+            "+12%",
+            "—",
+            "privacy pair reverses w/ DCR d2"
+          ],
+          [
+            "GRASS",
+            "-10%",
+            "-33%",
+            "—",
+            ""
+          ],
+          [
+            "DEXE",
+            "-7.5%",
+            "+51.6%",
+            "$90M",
+            "first breakout red print after ATH d3"
+          ],
+          [
+            "SPX",
+            "-7.1%",
+            "—",
+            "—",
+            ""
+          ],
+          [
+            "H",
+            "-6.9%",
+            "—",
+            "—",
+            ""
+          ],
+          [
+            "APE",
+            "-5.5%",
+            "—",
+            "—",
+            ""
+          ],
+          [
+            "ETHFI",
+            "-5.3%",
+            "—",
+            "—",
+            ""
+          ],
+          [
+            "BAT",
+            "-5.2%",
+            "—",
+            "—",
+            ""
+          ],
+          [
+            "TAO",
+            "-4.5%",
+            "—",
+            "—",
+            ""
+          ]
+        ]
+      }
+    },
+    "signals-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending Signals",
+        "level": "h2"
+      }
+    },
+    "signals-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "signal1",
+        "signal2",
+        "signal3",
+        "signal4",
+        "macro"
+      ]
+    },
+    "signal1": {
+      "type": "Alert",
+      "props": {
+        "title": "LAB #286 -24.18% cascade d7",
+        "message": "Extends -95% zero-arc reference case, cumulative ~99.4%. -59%/day sellers-exhaust heuristic 0/7",
+        "type": "warning"
+      }
+    },
+    "signal2": {
+      "type": "Alert",
+      "props": {
+        "title": "XEC+DCR privacy top-2 d2 FAILS",
+        "message": "First-time-dual-privacy-winner pattern reverses hard. 7d still green for both. One-day-narrative-flip.",
+        "type": "warning"
+      }
+    },
+    "signal3": {
+      "type": "Text",
+      "props": {
+        "text": "DEXE d3 first red print — 2-day ATH bounce cools -7.5%, 7d +51.6% intact. Watchlist-add flag holds.",
+        "variant": "body"
+      }
+    },
+    "signal4": {
+      "type": "Text",
+      "props": {
+        "text": "PUMP -3.29% / 7d -12.4% — post-unlock bounce d2 fails, no durable rescue. Buyback-vs-supply-shock verdict tilts supply-shock.",
+        "variant": "body"
+      }
+    },
+    "macro": {
+      "type": "Alert",
+      "props": {
+        "title": "Macro overlay (CoinDesk 7-14)",
+        "message": "Traders lift July Fed rate hike bets ahead of inflation report + Warsh testimony; 2y treasury highest since early last year; oil upswing + US-Iran tensions. Explains today's -2% majors.",
+        "type": "info"
+      }
+    },
+    "tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup (WebSearch, XAI d29)",
+        "level": "h2"
+      }
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-crypto",
+        "tweet-ai",
+        "tweet-dev"
+      ]
+    },
+    "tweet-crypto": {
+      "type": "Text",
+      "props": {
+        "text": "Crypto: Fed-hike-bets front-run CPI + Warsh testimony = 2y yield ripping, oil bid on Iran tensions, majors -2%. Decred technicians call multi-month downtrend break (before today's -24% reversal — tape doesn't care about the chartists). PUMP unlock d2 post-event verdict: bounce didn't hold.",
+        "variant": "body"
+      }
+    },
+    "tweet-ai": {
+      "type": "Text",
+      "props": {
+        "text": "AI: Anthropic Claude Reflect dashboard in beta on Free/Pro/Max (web + desktop) — usage-analytics visualizing topics/peak-hour/work-habits. Claude for Government beta starts July. Claude CoWork Cloud + mobile continues (Max beta thru Aug 5). Fable 5 + Mythos 5 export controls lifted 7-1.",
+        "variant": "body"
+      }
+    },
+    "tweet-dev": {
+      "type": "Text",
+      "props": {
+        "text": "Dev: Clawk (HN 191pts) — disposable Linux VM for coding agents = direct Aeon-adjacent primitive. \"Building/shipping Mac apps without ever opening Xcode\" HN top slot (454pts) — dev productivity thread.",
+        "variant": "body"
+      }
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper1",
+        "paper2"
+      ]
+    },
+    "paper1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory",
+        "href": "https://arxiv.org/abs/2607.10350",
+        "source": "arxiv 2607.10350, HF ↑61",
+        "score": "Direct Aeon-axis alignment: agent-OS + lifelong-multi-modal-memory maps to Aeon's memory/skills/logs primitive."
+      }
+    },
+    "paper2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
+        "href": "https://arxiv.org/abs/2607.05394",
+        "source": "arxiv 2607.05394, ↑40",
+        "score": "Anthropic-adjacent alignment research. Runner-up."
+      }
+    },
+    "github-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "github-text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues in tracked repos (chronic 10-item pool unchanged)",
+        "variant": "muted"
+      }
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest (Top 3)",
+        "level": "h2"
+      }
+    },
+    "hn-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn1",
+        "hn2",
+        "hn3"
+      ]
+    },
+    "hn1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Building/shipping Mac and iOS apps without opening Xcode",
+        "href": "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/",
+        "source": "HN",
+        "score": "454 pts / 196 comments"
+      }
+    },
+    "hn2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Show HN: Clawk – disposable linux vm for coding agents",
+        "href": "https://github.com/clawkwork/clawk",
+        "source": "HN",
+        "score": "191 pts / 150 comments — Direct Aeon-adjacent"
+      }
+    },
+    "hn3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Japan recovers up to 90% of lithium from EV batteries",
+        "href": "https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/",
+        "source": "HN",
+        "score": "411 pts / 99 comments"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    }
+  }
+}

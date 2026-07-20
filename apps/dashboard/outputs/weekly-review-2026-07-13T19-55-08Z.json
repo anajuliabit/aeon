@@ -1,0 +1,128 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review",
+        "description": "2026-07-13"
+      },
+      "children": [
+        "top_action",
+        "sep1",
+        "health_stack",
+        "sep2",
+        "full_review"
+      ]
+    },
+    "top_action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Top Action: ISS-025",
+        "message": "Operator direct-authors ISS-025 capture-step PR against .github/workflows/aeon.yml:479-493 by 2026-07-16 — 3 self-improve ticks conclusive on rule-5 workflow-file block."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "health_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health_heading",
+        "health_stats"
+      ]
+    },
+    "health_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health",
+        "level": "h3"
+      }
+    },
+    "health_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_runs",
+        "progress_success",
+        "stat_fails",
+        "stat_cancels",
+        "stat_new_issues",
+        "stat_index_flips"
+      ]
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Skill Runs OK",
+        "value": "256 / 272",
+        "delta": "-5.2pp WoW",
+        "trend": "down"
+      }
+    },
+    "progress_success": {
+      "type": "Progress",
+      "props": {
+        "value": 94.1,
+        "max": 100,
+        "label": "Success Rate"
+      }
+    },
+    "stat_fails": {
+      "type": "Stat",
+      "props": {
+        "label": "Fails",
+        "value": "7",
+        "delta": "3× cost-report Mon"
+      }
+    },
+    "stat_cancels": {
+      "type": "Stat",
+      "props": {
+        "label": "Cancels",
+        "value": "9",
+        "delta": "7 consecutive Investment Advisor"
+      }
+    },
+    "stat_new_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "New Issues",
+        "value": "0"
+      }
+    },
+    "stat_index_flips": {
+      "type": "Stat",
+      "props": {
+        "label": "INDEX Flips",
+        "value": "1",
+        "delta": "ISS-022 via PR #160"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full_review": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full review",
+        "href": "articles/weekly-review-2026-07-13.md"
+      }
+    }
+  }
+}

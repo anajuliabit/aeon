@@ -1,0 +1,378 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-14"
+      },
+      "children": [
+        "section_toppick",
+        "sep1",
+        "section_devtools",
+        "sep2",
+        "section_aiml",
+        "sep3",
+        "section_webapps",
+        "sep4",
+        "sources"
+      ]
+    },
+    "section_toppick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_toppick",
+        "toppick_link",
+        "toppick_desc"
+      ]
+    },
+    "heading_toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h3"
+      }
+    },
+    "toppick_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Dicklesworthstone/destructive_command_guard",
+        "href": "https://github.com/Dicklesworthstone/destructive_command_guard"
+      }
+    },
+    "toppick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "The primitive most agent runtimes are still shipping without — a rust hook that refuses rm -rf, force-push, hard-reset before the agent invokes them. v0.6.6 landed today with a critical guard-bypass fix and path-scoped allowlist enforcement.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_devtools",
+        "devtools_item1",
+        "devtools_item2"
+      ]
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools_1_link",
+        "devtools_1_meta",
+        "devtools_1_desc"
+      ]
+    },
+    "devtools_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Dicklesworthstone/destructive_command_guard",
+        "href": "https://github.com/Dicklesworthstone/destructive_command_guard"
+      }
+    },
+    "devtools_1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_devtools_1",
+        "badge_devtools_1_lang",
+        "badge_devtools_1_status"
+      ]
+    },
+    "stat_devtools_1": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "1,295",
+        "delta": "4k total"
+      }
+    },
+    "badge_devtools_1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust"
+      }
+    },
+    "badge_devtools_1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "devtools_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Rust hooks that block destructive git/shell before an agent runs them; v0.6.6 shipped today with a critical guard-bypass fix.",
+        "variant": "body"
+      }
+    },
+    "devtools_item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools_2_link",
+        "devtools_2_meta",
+        "devtools_2_desc"
+      ]
+    },
+    "devtools_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Nutlope/hallmark",
+        "href": "https://github.com/Nutlope/hallmark"
+      }
+    },
+    "devtools_2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_devtools_2",
+        "badge_devtools_2_lang",
+        "badge_devtools_2_status"
+      ]
+    },
+    "stat_devtools_2": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "794",
+        "delta": "5.6k total"
+      }
+    },
+    "badge_devtools_2_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "CSS"
+      }
+    },
+    "badge_devtools_2_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "devtools_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Design guardrails packaged as a claude-code/cursor/codex skill — refuses default gradients + neon; 11× baseline on organic signal, 40d since last commit.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_aiml",
+        "aiml_item1"
+      ]
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "aiml_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aiml_1_link",
+        "aiml_1_meta",
+        "aiml_1_desc"
+      ]
+    },
+    "aiml_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "HKUDS/Vibe-Trading",
+        "href": "https://github.com/HKUDS/Vibe-Trading"
+      }
+    },
+    "aiml_1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_aiml_1",
+        "badge_aiml_1_lang",
+        "badge_aiml_1_status"
+      ]
+    },
+    "stat_aiml_1": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "1,153",
+        "delta": "22k total"
+      }
+    },
+    "badge_aiml_1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python"
+      }
+    },
+    "badge_aiml_1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "aiml_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "HKU data-science lab's LLM trading-agent stack — MCP + multi-agent + backtesting; today's PR #534 added a longbridge data loader.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_webapps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_webapps",
+        "webapps_item1"
+      ]
+    },
+    "heading_webapps": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      }
+    },
+    "webapps_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "webapps_1_link",
+        "webapps_1_meta",
+        "webapps_1_desc"
+      ]
+    },
+    "webapps_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OpenCut-app/OpenCut",
+        "href": "https://github.com/OpenCut-app/OpenCut"
+      }
+    },
+    "webapps_1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_webapps_1",
+        "badge_webapps_1_lang",
+        "badge_webapps_1_status"
+      ]
+    },
+    "stat_webapps_1": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "1,229",
+        "delta": "68k total"
+      }
+    },
+    "badge_webapps_1_lang": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript"
+      }
+    },
+    "badge_webapps_1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "webapps_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Open-source CapCut alternative, no cloud upload, no watermark — 6.9× baseline with no fresh release = social-signal wave, not a shipping catalyst.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/11",
+        "variant": "caption"
+      }
+    }
+  }
+}

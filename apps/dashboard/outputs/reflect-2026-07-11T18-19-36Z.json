@@ -1,0 +1,40 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text",
+        "badge"
+      ]
+    },
+    "text": {
+      "type": "Text",
+      "props": {
+        "text": "Memory consolidated",
+        "variant": "body"
+      }
+    },
+    "badge": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-07-11",
+        "variant": "secondary"
+      }
+    }
+  }
+}

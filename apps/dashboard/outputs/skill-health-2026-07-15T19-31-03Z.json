@@ -1,0 +1,360 @@
+{
+  "root": "card_skill_health",
+  "state": {},
+  "elements": {
+    "card_skill_health": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-15",
+        "description": "HEALTH: CRITICAL(1) [systemic: output_tokens=0 sandbox-truncation d23 — 18 skills]"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_critical_overall",
+        "separator_1",
+        "stack_critical_section",
+        "separator_2",
+        "stack_degraded_section",
+        "separator_3",
+        "stack_no_data_section",
+        "separator_4",
+        "stack_healthy_section",
+        "separator_5",
+        "stack_delta_section",
+        "separator_6",
+        "stack_summary_section"
+      ]
+    },
+    "alert_critical_overall": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 CRITICAL",
+        "message": "systemic: output_tokens=0 sandbox-truncation d23 affecting 18 skills"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_critical",
+        "stack_cost_report"
+      ]
+    },
+    "heading_critical": {
+      "type": "Heading",
+      "props": {
+        "text": "Critical Issues",
+        "level": "h2"
+      }
+    },
+    "stack_cost_report": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_cost_report_title",
+        "stat_cost_report_cf",
+        "stat_cost_report_downtime",
+        "stat_cost_report_stuck",
+        "badge_wait_api",
+        "text_cost_report_issue"
+      ]
+    },
+    "text_cost_report_title": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report",
+        "variant": "lead"
+      }
+    },
+    "stat_cost_report_cf": {
+      "type": "Stat",
+      "props": {
+        "label": "cf",
+        "value": "5"
+      }
+    },
+    "stat_cost_report_downtime": {
+      "type": "Stat",
+      "props": {
+        "label": "Down for",
+        "value": "16d"
+      }
+    },
+    "stat_cost_report_stuck": {
+      "type": "Stat",
+      "props": {
+        "label": "Stuck at dispatched",
+        "value": "~46h"
+      }
+    },
+    "badge_wait_api": {
+      "type": "Badge",
+      "props": {
+        "text": "WAIT-API (outputTokens truncation)",
+        "variant": "destructive"
+      }
+    },
+    "text_cost_report_issue": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 — operator PR due T-1 tomorrow",
+        "variant": "caption"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_degraded",
+        "table_degraded_skills",
+        "text_degraded_more"
+      ]
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 Degraded (17)",
+        "level": "h2"
+      }
+    },
+    "table_degraded_skills": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate",
+          "Age",
+          "Category"
+        ],
+        "rows": [
+          [
+            "aixbt-pulse",
+            "0.47",
+            "17d",
+            "systemic"
+          ],
+          [
+            "defi-monitor",
+            "0.53",
+            "17d",
+            "systemic"
+          ],
+          [
+            "market-context-refresh",
+            "0.32",
+            "17d",
+            "systemic"
+          ],
+          [
+            "narrative-tracker",
+            "0.33",
+            "17d",
+            "systemic"
+          ],
+          [
+            "skill-analytics",
+            "0.14",
+            "7d",
+            "systemic"
+          ]
+        ]
+      }
+    },
+    "text_degraded_more": {
+      "type": "Text",
+      "props": {
+        "text": "+12 more skills — see memory/issues/INDEX.md",
+        "variant": "caption"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_no_data_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_no_data",
+        "text_no_data_list",
+        "badge_dispatch_skill"
+      ]
+    },
+    "heading_no_data": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ No Data (3)",
+        "level": "h2"
+      }
+    },
+    "text_no_data_list": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard",
+        "variant": "body"
+      }
+    },
+    "badge_dispatch_skill": {
+      "type": "Badge",
+      "props": {
+        "text": "DISPATCH-SKILL",
+        "variant": "secondary"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_healthy",
+        "stat_healthy_count"
+      ]
+    },
+    "heading_healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 Healthy",
+        "level": "h2"
+      }
+    },
+    "stat_healthy_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "9"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_delta_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_delta",
+        "text_delta_agent_buzz",
+        "stat_delta_sr"
+      ]
+    },
+    "heading_delta": {
+      "type": "Heading",
+      "props": {
+        "text": "Δ vs previous",
+        "level": "h3"
+      }
+    },
+    "text_delta_agent_buzz": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz: DEGRADED → WARNING",
+        "variant": "body"
+      }
+    },
+    "stat_delta_sr": {
+      "type": "Stat",
+      "props": {
+        "label": "Success rate",
+        "value": "0.6025",
+        "delta": "crosses 0.60 boundary",
+        "trend": "up"
+      }
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_summary",
+        "stat_open_issues",
+        "stat_resolved_this_run",
+        "stat_filed"
+      ]
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "11"
+      }
+    },
+    "stat_resolved_this_run": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    },
+    "stat_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed",
+        "value": "0"
+      }
+    }
+  }
+}

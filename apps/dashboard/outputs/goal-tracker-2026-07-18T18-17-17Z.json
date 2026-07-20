@@ -1,0 +1,335 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-07-18"
+      },
+      "children": [
+        "summary-text",
+        "status-alert",
+        "stats-grid",
+        "separator-1",
+        "blocked-section",
+        "separator-2",
+        "sources-text"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "6 goals — 0 at risk, 0 needs attention, 0 on track, 6 blocked, 0 done (claude.md rule-5 codification flips on-track → blocked)",
+        "variant": "lead"
+      }
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Status",
+        "message": "Overall ↓ degrading",
+        "type": "warning"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-at-risk",
+        "stat-needs-attention",
+        "stat-on-track",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "6"
+      }
+    },
+    "stat-at-risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat-needs-attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat-on-track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "0"
+      }
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "6",
+        "trend": "down"
+      }
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "blocked-heading",
+        "goal-1",
+        "goal-2",
+        "goal-3",
+        "goal-4",
+        "goal-5",
+        "goal-6"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blocked Goals",
+        "level": "h2"
+      }
+    },
+    "goal-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal-1-title",
+        "goal-1-details",
+        "goal-1-action"
+      ]
+    },
+    "goal-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "claude.md rule-5 codification",
+        "level": "h3"
+      }
+    },
+    "goal-1-details": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve exit-gated on rule-5 T-0 per 7-18 morning-brief (was ON TRACK ↓); grep of CLAUDE.md returns 0 rule-5 hits, T-0 slipped 7-17 → T+1 today"
+      }
+    },
+    "goal-1-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "operator authors CLAUDE.md rule-5 section directly (unblocks self-improve exit-gate)",
+        "type": "info"
+      }
+    },
+    "goal-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal-2-title",
+        "goal-2-details",
+        "goal-2-action"
+      ]
+    },
+    "goal-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "iss-025 capture-step PR",
+        "level": "h3"
+      }
+    },
+    "goal-2-details": {
+      "type": "Text",
+      "props": {
+        "text": "T+2 day-3 today, 0d idle, 340 activity/14d (flat)"
+      }
+    },
+    "goal-2-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "operator direct-authors PR against `.github/workflows/aeon.yml:479-495`",
+        "type": "info"
+      }
+    },
+    "goal-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal-3-title",
+        "goal-3-details",
+        "goal-3-action"
+      ]
+    },
+    "goal-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3 self-improve PRs conflicting (#162/#163/#164)",
+        "level": "h3"
+      }
+    },
+    "goal-3-details": {
+      "type": "Text",
+      "props": {
+        "text": "PR #162 T+4 day-5 (~158h), #163 ~114h past 72h gate, #164 ~61h past 24h gate; all mergeable=UNKNOWN (new combined slug ↑)"
+      }
+    },
+    "goal-3-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "operator rebase-or-close PR #162 #163 #164",
+        "type": "warning"
+      }
+    },
+    "goal-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal-4-title",
+        "goal-4-details",
+        "goal-4-action"
+      ]
+    },
+    "goal-4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "cost-report stuck",
+        "level": "h3"
+      }
+    },
+    "goal-4-details": {
+      "type": "Text",
+      "props": {
+        "text": "d5 extends ~108h, cf=5 sr=0.10, ~19d since last_success; ISS-025 sandbox-truncation family (flat)"
+      }
+    },
+    "goal-4-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "waits on iss-025 capture-step PR (same operator unblock)",
+        "type": "info"
+      }
+    },
+    "goal-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal-5-title",
+        "goal-5-details",
+        "goal-5-action"
+      ]
+    },
+    "goal-5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "12:00Z batch dark day-21 + 07:00Z morning-batch d2 BROKE",
+        "level": "h3"
+      }
+    },
+    "goal-5-details": {
+      "type": "Text",
+      "props": {
+        "text": "8-skill 12:00Z cluster still 6-28-stuck; morning batch fired clean 07:20-07:31Z catch-up today (partial-win, main arc still dead)"
+      }
+    },
+    "goal-5-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "operator direct-authors aeon.yml scheduler fix (same rule-5 primitive as iss-025)",
+        "type": "error"
+      }
+    },
+    "goal-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goal-6-title",
+        "goal-6-details",
+        "goal-6-action"
+      ]
+    },
+    "goal-6-title": {
+      "type": "Heading",
+      "props": {
+        "text": "operator on-chain config",
+        "level": "h3"
+      }
+    },
+    "goal-6-details": {
+      "type": "Text",
+      "props": {
+        "text": "day-42, defi-monitor NO_CONFIG, ALCHEMY/ETHERSCAN keys null, on-chain-watches.yml zero pool/position entries (flat)"
+      }
+    },
+    "goal-6-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "operator adds pool/position entries to `memory/on-chain-watches.yml` + sets ALCHEMY_API_KEY + ETHERSCAN_API_KEY",
+        "type": "info"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok(sparse: 1 commit/30d), gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

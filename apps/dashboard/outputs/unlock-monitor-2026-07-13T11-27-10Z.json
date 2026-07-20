@@ -1,0 +1,614 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Unlock Monitor — week of 2026-07-13",
+        "description": "31 projects unlock ~$68M total vs $200M last week"
+      },
+      "children": [
+        "stack_summary",
+        "separator_1",
+        "stack_top_pick",
+        "separator_2",
+        "stack_crisis",
+        "separator_3",
+        "stack_digestible",
+        "separator_4",
+        "stack_trivial",
+        "separator_5",
+        "stack_forced",
+        "separator_6",
+        "stack_supply_read",
+        "separator_7",
+        "stack_sources"
+      ]
+    },
+    "stack_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_summary_1",
+        "text_summary_2"
+      ]
+    },
+    "text_summary_1": {
+      "type": "Text",
+      "props": {
+        "text": "31 projects unlock ~$68M total vs $200M last week",
+        "variant": "lead"
+      }
+    },
+    "text_summary_2": {
+      "type": "Text",
+      "props": {
+        "text": "Two events break out of the noise for opposite reasons: DBR's investor cliff at 5.5× daily vol, and CONX at 456× vol on a mcap that can't absorb it.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_pick",
+        "stack_dbr_top"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "This week's most leveraged",
+        "level": "h3"
+      }
+    },
+    "stack_dbr_top": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_dbr_top_ticker",
+        "text_dbr_top_details",
+        "badge_most_leveraged"
+      ]
+    },
+    "text_dbr_top_ticker": {
+      "type": "Text",
+      "props": {
+        "text": "$DBR — fri jul 17, $10.1M into a $1.83M/day book",
+        "variant": "lead"
+      }
+    },
+    "text_dbr_top_details": {
+      "type": "Text",
+      "props": {
+        "text": "flat 30d tape into a real cliff = market asleep",
+        "variant": "body"
+      }
+    },
+    "badge_most_leveraged": {
+      "type": "Badge",
+      "props": {
+        "text": "MOST LEVERAGED",
+        "variant": "destructive"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_crisis": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_crisis",
+        "stack_crisis_content"
+      ]
+    },
+    "heading_crisis": {
+      "type": "Heading",
+      "props": {
+        "text": "CRISIS (> 2.4× daily vol)",
+        "level": "h3"
+      }
+    },
+    "stack_crisis_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stack_dbr_crisis",
+        "stack_conx"
+      ]
+    },
+    "stack_dbr_crisis": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_dbr_header",
+        "grid_dbr_stats",
+        "text_dbr_details"
+      ]
+    },
+    "text_dbr_header": {
+      "type": "Text",
+      "props": {
+        "text": "$DBR — fri jul 17 — deBridge",
+        "variant": "lead"
+      }
+    },
+    "grid_dbr_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_dbr_amount",
+        "stat_dbr_vol",
+        "stat_dbr_mcap",
+        "stat_dbr_30d"
+      ]
+    },
+    "stat_dbr_amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Unlock Amount",
+        "value": "$10.13M"
+      }
+    },
+    "stat_dbr_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Vol Multiple",
+        "value": "5.53×",
+        "trend": "up"
+      }
+    },
+    "stat_dbr_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$86.5M"
+      }
+    },
+    "stat_dbr_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Change",
+        "value": "+4.1%",
+        "trend": "up"
+      }
+    },
+    "text_dbr_details": {
+      "type": "Text",
+      "props": {
+        "text": "cliff · likely investor/team recipient · market asleep — flat tape, unlock isn't priced in",
+        "variant": "body"
+      }
+    },
+    "stack_conx": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_conx_header",
+        "grid_conx_stats",
+        "text_conx_details"
+      ]
+    },
+    "text_conx_header": {
+      "type": "Text",
+      "props": {
+        "text": "$CONX — this week",
+        "variant": "lead"
+      }
+    },
+    "grid_conx_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_conx_amount",
+        "stat_conx_vol",
+        "stat_conx_mcap",
+        "stat_conx_30d"
+      ]
+    },
+    "stat_conx_amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Unlock Amount",
+        "value": "$28.67M"
+      }
+    },
+    "stat_conx_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Vol Multiple",
+        "value": "456×",
+        "trend": "up"
+      }
+    },
+    "stat_conx_mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$5.0M"
+      }
+    },
+    "stat_conx_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Change",
+        "value": "+26.9%",
+        "trend": "up"
+      }
+    },
+    "text_conx_details": {
+      "type": "Text",
+      "props": {
+        "text": "late-stage vesting so distribution is spread, but the ratio is degenerate: unlock is 5.7× mcap, $63K/day book cannot absorb any real supply. low-liquidity trap — call it CRISIS and don't touch it either side",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_digestible": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_digestible",
+        "stack_digestible_content"
+      ]
+    },
+    "heading_digestible": {
+      "type": "Heading",
+      "props": {
+        "text": "DIGESTIBLE (0.3×–1.0×)",
+        "level": "h3"
+      }
+    },
+    "stack_digestible_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stack_strk",
+        "stack_solv"
+      ]
+    },
+    "stack_strk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_strk_header",
+        "grid_strk_stats",
+        "text_strk_details"
+      ]
+    },
+    "text_strk_header": {
+      "type": "Text",
+      "props": {
+        "text": "$STRK — tue jul 15",
+        "variant": "lead"
+      }
+    },
+    "grid_strk_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_strk_amount",
+        "stat_strk_vol",
+        "stat_strk_30d"
+      ]
+    },
+    "stat_strk_amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Unlock Amount",
+        "value": "$3.90M"
+      }
+    },
+    "stat_strk_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Vol Multiple",
+        "value": "0.41×"
+      }
+    },
+    "stat_strk_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Change",
+        "value": "+13.2%",
+        "trend": "up"
+      }
+    },
+    "text_strk_details": {
+      "type": "Text",
+      "props": {
+        "text": "mixed recipients (starkware/foundation/investors) · monthly linear cadence — 127M tokens on the 15th every month through mar 2027 · absorbable — the market has 15 prior data points on this pattern",
+        "variant": "body"
+      }
+    },
+    "stack_solv": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_solv_header",
+        "grid_solv_stats",
+        "text_solv_details"
+      ]
+    },
+    "text_solv_header": {
+      "type": "Text",
+      "props": {
+        "text": "$SOLV — this week",
+        "variant": "lead"
+      }
+    },
+    "grid_solv_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_solv_amount",
+        "stat_solv_vol",
+        "stat_solv_30d",
+        "stat_solv_mc"
+      ]
+    },
+    "stat_solv_amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Unlock Amount",
+        "value": "$1.10M"
+      }
+    },
+    "stat_solv_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Vol Multiple",
+        "value": "0.32×"
+      }
+    },
+    "stat_solv_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Change",
+        "value": "+21.3%",
+        "trend": "up"
+      }
+    },
+    "stat_solv_mc": {
+      "type": "Stat",
+      "props": {
+        "label": "MC:FDV",
+        "value": "0.18 (mcap $3.9M / FDV $22.2M)"
+      }
+    },
+    "text_solv_details": {
+      "type": "Text",
+      "props": {
+        "text": "82% of supply still ahead · absorbable now, watch the schedule",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_trivial": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_trivial",
+        "text_trivial_content",
+        "text_trivial_note"
+      ]
+    },
+    "heading_trivial": {
+      "type": "Heading",
+      "props": {
+        "text": "TRIVIAL (skipped)",
+        "level": "h3"
+      }
+    },
+    "text_trivial_content": {
+      "type": "Text",
+      "props": {
+        "text": "$ARB 0.12× / $SEI 0.14× / $ZK 0.26× / $XCN 0.20× / $CYBER 0.07×",
+        "variant": "body"
+      }
+    },
+    "text_trivial_note": {
+      "type": "Text",
+      "props": {
+        "text": "ARB's $8.5M jul 16 is the biggest by absolute size but 42.78% goes to the DAO treasury — recipient de-elevates, market absorbs.",
+        "variant": "caption"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_forced": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_forced",
+        "stack_ftx"
+      ]
+    },
+    "heading_forced": {
+      "type": "Heading",
+      "props": {
+        "text": "FORCED (heads-up, not this week)",
+        "level": "h3"
+      }
+    },
+    "stack_ftx": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_ftx_header",
+        "text_ftx_details"
+      ]
+    },
+    "text_ftx_header": {
+      "type": "Text",
+      "props": {
+        "text": "$FTX creditor distribution — target jul 31",
+        "variant": "lead"
+      }
+    },
+    "text_ftx_details": {
+      "type": "Text",
+      "props": {
+        "text": "record date jun 16 already passed · not in this week's supply, but the mid-8-figure USD tranche is next week's problem",
+        "variant": "body"
+      }
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_supply_read": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_supply_read",
+        "text_supply_read_1",
+        "text_supply_read_2",
+        "text_supply_read_3"
+      ]
+    },
+    "heading_supply_read": {
+      "type": "Heading",
+      "props": {
+        "text": "Supply Read",
+        "level": "h3"
+      }
+    },
+    "text_supply_read_1": {
+      "type": "Text",
+      "props": {
+        "text": "A genuinely quiet week — no team-cliff megaevents like PUMP last saturday.",
+        "variant": "body"
+      }
+    },
+    "text_supply_read_2": {
+      "type": "Text",
+      "props": {
+        "text": "Real signal is DBR: a 5.5× cliff into a flat 30d tape is the exact \"market asleep\" setup — flat price + real supply = asymmetric downside.",
+        "variant": "body"
+      }
+    },
+    "text_supply_read_3": {
+      "type": "Text",
+      "props": {
+        "text": "CONX is unactionable (illiquid trap). STRK's monthly pattern is priced-in noise. Everything else is background. FTX jul 31 is next week's supply overhang, worth queuing.",
+        "variant": "body"
+      }
+    },
+    "separator_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_sources",
+        "text_sources"
+      ]
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "tokenomist=partial, cryptorank=ok, defillama=fail, dropstab=fail, coingecko=ok, cryip=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

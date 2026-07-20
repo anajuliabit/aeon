@@ -1,20 +1,27 @@
-*Reg Monitor — 2026-07-08*
-quiet week on primary sources. 1 fresh cftc action (crypto-tangential), clarity act enters decision week, sec regulation crypto safe harbor expected to drop this month.
+*Reg Monitor — 2026-07-15*
+kalshi's federal-preemption defense takes 2 hits in 8 days — CFTC emergency-shields michigan, SDNY denies the same shield in new york.
 
 *ACT*
-• [CFTC v. Vernon / Argent Capital (release 9264-26)](https://www.cftc.gov/PressRoom/PressReleases/9264-26) — us federal · complaint filed 2026-07-07
-  cftc alleges $14m commodity pool fraud spanning equity index futures, options, and crypto assets over march 2022 → feb 2026; false sworn testimony charged. seeks restitution, disgorgement, trading + registration bans. e.d.n.c.
-  ⏰ litigation, no comment deadline
+• [CFTC emergency-stays KalshiEX rule change, orders michigan trades fulfilled](https://www.cftc.gov/PressRoom/PressReleases/9267-26) — us federal · enforcement
+  CFTC used emergency authority to block Kalshi from cancelling open trades held by michigan residents after a michigan state court ordered the trades voided. chair selig: "a state cannot force a DCM to violate its obligations." federal-preemption posture reaffirmed; 8 more state suits still live.
+  ⏰ effective 2026-07-14 (immediate)
+  📊 kalshi/polymarket open-position risk in AZ/CT/IL/NM/MN/NY/RI/WI unresolved
+
+• [SDNY judge Torres denies Kalshi's preliminary injunction against NY gambling law](https://www.banklesstimes.com/articles/2026/07/08/kalshi-suffers-sdny-defeat-as-judge-torres-denies-injunction/) — s.d.n.y. · court ruling
+  in KalshiEX v. Williams: CEA doesn't preempt NY gambling law under express, field, or conflict preemption. torres reads the CEA's "Special Rule" as expressly preserving state gambling authority. kalshi appealed to 2d cir. same day.
+  ⏰ 2d cir. briefing scheduled next
+  📊 direct blow to the preemption defense across all 9 CFTC state suits; 2d cir. now the pivot
 
 *WATCH*
-• [CLARITY Act (H.R. 3633) — senate stall](https://www.coindesk.com/policy/2026/07/05/clarity-and-congress-s-summer-break-state-of-crypto) — us federal · passed house / stuck at 60-vote cloture
-  missed the white house's july 4 signing target. three unresolved fights: crypto ethics + insider-trading disclosure, section 604 law-enforcement carveout, stablecoin yield. senate returns 2026-07-13; ~3 weeks to august recess.
-  ⏰ decision window closes ~2026-08-01 (august recess)
-  📊 prediction market angle: passage draws the cftc-vs-sec line that kalshi/polymarket sit inside — indirect but load-bearing.
+• [Federal Reserve NPRM: AML/CFT programs for supervised banks](https://www.federalregister.gov/documents/2026/07/09/2026-13919/anti-money-laundering-and-countering-the-financing-of-terrorism-programs) — us federal · proposed rule
+  fed aligns with parallel FDIC/OCC/NCUA/FinCEN AML proposals; explicitly threads GENIUS Act payment-stablecoin issuer AML requirements. comment period open. on-thesis for stablecoin issuers, off-thesis for prediction markets.
+
+• [Polymarket files FCM/margin-trading license while under active CFTC investigation](https://www.techtimes.com/articles/320118/20260710/polymarket-applies-margin-trading-license-while-under-active-cftc-investigation.htm) — us federal · agency review
+  polymarket wants formal DCM status. CFTC now has to evaluate the FCM app, approve margined-contract rulebook changes, and prosecute the WSJ-surfaced marketing-conduct investigation in parallel.
 
 *CONTEXT*
-• [SEC "Regulation Crypto" safe harbor (RIN 3235-AN38)](https://decrypt.co/372980/sec-crypto-safe-harbor-introduced-soon-this-month) — expected proposed rule this month; covers tokenized securities + defi with exemptions for sub-\$5m startups, sub-\$75m raises, and tokens past active managerial control.
+• [CFTC stays self-certified 24/7 crude oil futures contract](https://www.cftc.gov/PressRoom/PressReleases/9265-26) — CFTC intervenes again on 24/7 self-certification; adjacent to the RFC 26-12784 thread on standard-futures 24/7 extension.
 
 —
 sources: federal-register=ok · sec=ok · cftc=ok · websearch=ok · congress=skip
-3 developments included, 1 act / 1 watch / 1 context
+7 developments scored, 2 act / 2 watch / 1 context

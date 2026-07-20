@@ -1,0 +1,459 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-14"
+      },
+      "children": [
+        "verdict_alert",
+        "sep1",
+        "patch_today_section",
+        "sep2",
+        "patch_week_section"
+      ]
+    },
+    "verdict_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "npm-malware wave resurfaces after 5-day quiet (30 pkgs same-day), 2 KEV items live, DIRAC pip 4-CVE RCE cluster to schedule. Sources: KEV, GH Advisory, EPSS"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "patch_today_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "today_heading",
+        "npm_item",
+        "cve_2008_item",
+        "cve_2026_item"
+      ]
+    },
+    "today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "npm_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm_title",
+        "npm_meta",
+        "npm_desc",
+        "npm_advisories_group1",
+        "npm_typosquats",
+        "npm_advisories_group2",
+        "npm_safer_buffer",
+        "npm_action"
+      ]
+    },
+    "npm_title": {
+      "type": "Heading",
+      "props": {
+        "text": "npm-malware wave RESURFACES d1",
+        "level": "h3"
+      }
+    },
+    "npm_meta": {
+      "type": "Badge",
+      "props": {
+        "text": "30 packages • 05:09–14:20Z today",
+        "variant": "destructive"
+      }
+    },
+    "npm_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Coordinated batches across typosquats and targeted clusters. Breaks 5-day quiet streak clean."
+      }
+    },
+    "npm_advisories_group1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm_group1_label",
+        "npm_link_sqlite_panel",
+        "npm_link_sqlite_group",
+        "npm_link_sqlite_clone"
+      ]
+    },
+    "npm_group1_label": {
+      "type": "Text",
+      "props": {
+        "text": "fake-sqlite cluster:",
+        "variant": "muted"
+      }
+    },
+    "npm_link_sqlite_panel": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@sqlite-panel",
+        "href": "https://github.com/advisories/GHSA-mq68-3vc3-ch3q",
+        "source": "GH Advisory"
+      }
+    },
+    "npm_link_sqlite_group": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@sqlite-group",
+        "href": "https://github.com/advisories/GHSA-cf6c-6x68-cf8r",
+        "source": "GH Advisory"
+      }
+    },
+    "npm_link_sqlite_clone": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@sqlite-clone",
+        "href": "https://github.com/advisories/GHSA-x8m3-m829-mhc4",
+        "source": "GH Advisory"
+      }
+    },
+    "npm_typosquats": {
+      "type": "Text",
+      "props": {
+        "text": "nodemon-plint, nodemon-delog, motion-pull (nodemon typosquats); humanize-kit, string-morph, temp-cloak, clipboard-drop, dom-weave (utility cluster)"
+      }
+    },
+    "npm_advisories_group2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm_group2_label",
+        "npm_link_tonsdk",
+        "npm_link_resolvx"
+      ]
+    },
+    "npm_group2_label": {
+      "type": "Text",
+      "props": {
+        "text": "crypto-scope cluster:",
+        "variant": "muted"
+      }
+    },
+    "npm_link_tonsdk": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@tonsdk/core",
+        "href": "https://github.com/advisories/GHSA-hw5x-gw43-m4mx",
+        "source": "GH Advisory"
+      }
+    },
+    "npm_link_resolvx": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@resolvx/core",
+        "href": "https://github.com/advisories/GHSA-5fvj-272r-496w",
+        "source": "GH Advisory"
+      }
+    },
+    "npm_safer_buffer": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@oliviamcdaniel12/safer-buffer",
+        "href": "https://github.com/advisories/GHSA-88h2-qq8c-r5pv",
+        "source": "safer-buffer typosquat"
+      }
+    },
+    "npm_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Audit npm deps for these + typosquat lookalikes; rotate any creds exposed to postinstall on affected versions."
+      }
+    },
+    "cve_2008_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_2008_link",
+        "cve_2008_meta",
+        "cve_2008_desc",
+        "cve_2008_action"
+      ]
+    },
+    "cve_2008_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2008-4128",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2008-4128",
+        "source": "Cisco IOS 12.4 CSRF"
+      }
+    },
+    "cve_2008_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_2008_kev",
+        "cve_2008_epss",
+        "cve_2008_due"
+      ]
+    },
+    "cve_2008_kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV 2026-07-13",
+        "variant": "secondary"
+      }
+    },
+    "cve_2008_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.24",
+        "variant": "secondary"
+      }
+    },
+    "cve_2008_due": {
+      "type": "Badge",
+      "props": {
+        "text": "BOD due 2026-07-16",
+        "variant": "destructive"
+      }
+    },
+    "cve_2008_desc": {
+      "type": "Text",
+      "props": {
+        "text": "17-year-old CVE fresh into KEV; IOS 12.4 mainline is EOL/obsolete per Cisco."
+      }
+    },
+    "cve_2008_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Retire IOS 12.4 devices today, or apply Cisco mitigations before 7-16."
+      }
+    },
+    "cve_2026_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_2026_link",
+        "cve_2026_meta",
+        "cve_2026_desc",
+        "cve_2026_action"
+      ]
+    },
+    "cve_2026_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48282",
+        "href": "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
+        "source": "Adobe ColdFusion path traversal → RCE"
+      }
+    },
+    "cve_2026_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_2026_kev",
+        "cve_2026_epss",
+        "cve_2026_due"
+      ]
+    },
+    "cve_2026_kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV 2026-07-07",
+        "variant": "secondary"
+      }
+    },
+    "cve_2026_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.29",
+        "variant": "secondary"
+      }
+    },
+    "cve_2026_due": {
+      "type": "Badge",
+      "props": {
+        "text": "Due 7-10 (passed)",
+        "variant": "destructive"
+      }
+    },
+    "cve_2026_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Recurring KEV-week carry; federal due date already blown."
+      }
+    },
+    "cve_2026_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Patch to APSB26-68 today."
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "patch_week_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "week_heading",
+        "dirac_item",
+        "json_repair_item"
+      ]
+    },
+    "week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "dirac_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dirac_title",
+        "dirac_desc",
+        "dirac_cve1",
+        "dirac_cve2",
+        "dirac_cve3",
+        "dirac_cve4",
+        "dirac_note",
+        "dirac_action"
+      ]
+    },
+    "dirac_title": {
+      "type": "Heading",
+      "props": {
+        "text": "DIRAC (pip) 4-CVE cluster",
+        "level": "h3"
+      }
+    },
+    "dirac_desc": {
+      "type": "Text",
+      "props": {
+        "text": "LHCb Grid computing package; one upgrade fixes the cluster. EPSS n/a on all 4 (too fresh)."
+      }
+    },
+    "dirac_cve1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-m4m7: CVE-2026-61667 (CVSS 9.9 SQL+eval RCE FileCatalog)",
+        "href": "https://github.com/advisories/GHSA-m4m7-4cw8-62j6",
+        "source": "GH Advisory"
+      }
+    },
+    "dirac_cve2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-9jpv: CVE-2026-45579 (CVSS 9.9 eval RCE RequestManager)",
+        "href": "https://github.com/advisories/GHSA-9jpv-c7p4-997x",
+        "source": "GH Advisory"
+      }
+    },
+    "dirac_cve3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-7xw9: CVSS 8.5 PilotManager SQLi + missing auth",
+        "href": "https://github.com/advisories/GHSA-7xw9-549r-8jrc",
+        "source": "GH Advisory"
+      }
+    },
+    "dirac_cve4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-vg99: CVE-2026-61668 (CVSS 8.1 pilot code over unverified HTTPS)",
+        "href": "https://github.com/advisories/GHSA-vg99-gr89-qhw9",
+        "source": "GH Advisory"
+      }
+    },
+    "dirac_note": {
+      "type": "Text",
+      "props": {
+        "text": "All 4 from single root cause; upgrade path is unified.",
+        "variant": "muted"
+      }
+    },
+    "dirac_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade DIRAC to ≥8.0.79 / 9.0.22 / 9.1.10 (whichever branch)."
+      }
+    },
+    "json_repair_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "json_repair_link",
+        "json_repair_meta",
+        "json_repair_desc",
+        "json_repair_action"
+      ]
+    },
+    "json_repair_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-xf7x-x43h-rpqh",
+        "href": "https://github.com/advisories/GHSA-xf7x-x43h-rpqh",
+        "source": "json-repair (pip)"
+      }
+    },
+    "json_repair_meta": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5 • no CVE assigned",
+        "variant": "secondary"
+      }
+    },
+    "json_repair_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Circular JSON Schema $ref → unbounded CPU DoS on untrusted input."
+      }
+    },
+    "json_repair_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade json-repair to ≥0.60.1."
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "thought-review"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_metadata",
+        "text_status",
+        "separator1",
+        "alert_file"
+      ]
+    },
+    "text_metadata": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h · 0 captures",
+        "variant": "muted"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "body"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_file": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md",
+        "message": "Last reviewed 38 days ago — worth a refresh",
+        "type": "info"
+      }
+    }
+  }
+}

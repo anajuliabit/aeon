@@ -1,0 +1,381 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-19"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1",
+        "sep-1",
+        "action-2",
+        "sep-2",
+        "action-3",
+        "sep-3",
+        "action-4",
+        "sep-4",
+        "action-5",
+        "sep-5",
+        "sources-section"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-heading",
+        "a1-desc",
+        "a1-why",
+        "a1-done",
+        "a1-loop"
+      ]
+    },
+    "a1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. stage fix/iss-025-capture-step branch",
+        "level": "h3"
+      }
+    },
+    "a1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "capture-step insert against .github/workflows/aeon.yml:479-495, open PR",
+        "variant": "body"
+      }
+    },
+    "a1-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: single primitive resolves sandbox-truncation family d27 + cost-report d6 + 12:00Z batch d21 + morning-batch — top-leverage today",
+        "variant": "body"
+      }
+    },
+    "a1-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: gh pr view <n> --json mergeable returns MERGEABLE",
+        "variant": "body"
+      }
+    },
+    "a1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-capture-step"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-heading",
+        "a2-desc",
+        "a2-why",
+        "a2-done",
+        "a2-loop"
+      ]
+    },
+    "a2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. abandon PR queue",
+        "level": "h3"
+      }
+    },
+    "a2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "gh pr close 162 163 164 --comment \"rebase-unsafe past stall gate; reopen with fresh cherry-pick\"",
+        "variant": "body"
+      }
+    },
+    "a2-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 3 CONFLICTING self-improve PRs exit-gate 18:00Z self-improve tick tonight — pre-empts 2-consec skip pattern",
+        "variant": "body"
+      }
+    },
+    "a2-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: gh pr list --state open shows 0 self-improve-authored PRs",
+        "variant": "body"
+      }
+    },
+    "a2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pr-queue-clear"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-heading",
+        "a3-desc",
+        "a3-why",
+        "a3-done",
+        "a3-loop"
+      ]
+    },
+    "a3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. paste rule-5 section into CLAUDE.md",
+        "level": "h3"
+      }
+    },
+    "a3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "with PR #160/#162/#163/#164 evidence rows for auto-committed state drift (n=4)",
+        "variant": "body"
+      }
+    },
+    "a3-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: T+2 SLIPPED codification unblocks self-improve for future cycles and closes weekly-review 7-13 action #3",
+        "variant": "body"
+      }
+    },
+    "a3-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: grep -c \"Rule 5\" CLAUDE.md returns ≥1 and evidence table lists 4 PR rows",
+        "variant": "body"
+      }
+    },
+    "a3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: claude-md-rule5-codify"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-heading",
+        "a4-desc",
+        "a4-why",
+        "a4-done",
+        "a4-loop"
+      ]
+    },
+    "a4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. backport PR #164 committee fail-fast retry diff",
+        "level": "h3"
+      }
+    },
+    "a4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "to scripts/advisor/run.sh on main, verify bash scripts/advisor/selftest.sh",
+        "variant": "body"
+      }
+    },
+    "a4-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: only touches advisor/, side-steps rule-5 CONFLICTING while landing the 20-min committee timeout fix cleanly",
+        "variant": "body"
+      }
+    },
+    "a4-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: bash scripts/advisor/selftest.sh exits 0 with COMMITTEE_LLM_ATTEMPTS honoured",
+        "variant": "body"
+      }
+    },
+    "a4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: advisor-fix-port"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-heading",
+        "a5-desc",
+        "a5-why",
+        "a5-done",
+        "a5-loop"
+      ]
+    },
+    "a5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. write memory/topics/supply-chain.md",
+        "level": "h3"
+      }
+    },
+    "a5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "with vendor-scope-typosquat (n=6+), real-package (n=1: @injectivelabs/sdk-ts), first-party-incumbent (n=1: copilot-sdk) subsections",
+        "variant": "body"
+      }
+    },
+    "a5-why": {
+      "type": "Text",
+      "props": {
+        "text": "why: MEMORY.md line 46-48 patterns need a durable topic file surviving future consolidation trims, cross-links from crypto.md",
+        "variant": "body"
+      }
+    },
+    "a5-done": {
+      "type": "Text",
+      "props": {
+        "text": "done: file exists with ≥3 named subsections + linked from MEMORY.md Active Topics",
+        "variant": "body"
+      }
+    },
+    "a5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: supply-chain-topic-anchor"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-grid"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-memory",
+        "stat-logs",
+        "stat-topics",
+        "stat-prs",
+        "stat-cron",
+        "badge-mode"
+      ]
+    },
+    "stat-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "memory",
+        "value": "60"
+      }
+    },
+    "stat-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "logs",
+        "value": "7"
+      }
+    },
+    "stat-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "topics",
+        "value": "11"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "prs",
+        "value": "4"
+      }
+    },
+    "stat-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "cron failing",
+        "value": "1"
+      }
+    },
+    "badge-mode": {
+      "type": "Badge",
+      "props": {
+        "text": "mode: OK",
+        "variant": "default"
+      }
+    }
+  }
+}

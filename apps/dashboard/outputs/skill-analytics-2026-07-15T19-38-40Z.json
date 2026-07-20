@@ -1,0 +1,243 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Analytics — 2026-07-15",
+        "description": "7-day skill execution report & anomaly summary"
+      },
+      "children": [
+        "metrics_section",
+        "issue_summary",
+        "separator_1",
+        "critical_section",
+        "separator_2",
+        "degraded_section",
+        "separator_3",
+        "top_performers",
+        "separator_4",
+        "full_article"
+      ]
+    },
+    "metrics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_runs",
+        "stat_skills",
+        "stat_success",
+        "stat_anomalies",
+        "stat_missed"
+      ]
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Runs (7d)",
+        "value": "172"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "30"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "98.1%"
+      }
+    },
+    "stat_anomalies": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies",
+        "value": "11"
+      }
+    },
+    "stat_missed": {
+      "type": "Stat",
+      "props": {
+        "label": "Missed Runs",
+        "value": "10"
+      }
+    },
+    "issue_summary": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-027: Scheduler Block",
+        "message": "Persists at day-17 — 10 scheduled skills didn't run this window",
+        "type": "warning"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "critical_heading",
+        "critical_aixbt",
+        "critical_cluster",
+        "critical_shiplog",
+        "critical_dealflow"
+      ]
+    },
+    "critical_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 Critical Issues",
+        "level": "h3"
+      }
+    },
+    "critical_aixbt": {
+      "type": "Alert",
+      "props": {
+        "title": "aixbt-pulse",
+        "message": "SILENT: 0 runs since 2026-06-28 (day-17 dark)",
+        "type": "error"
+      }
+    },
+    "critical_cluster": {
+      "type": "Alert",
+      "props": {
+        "title": "12:00Z Cluster",
+        "message": "SILENT: token-pick / defi-overview / token-movers / on-chain-monitor / defi-monitor / market-context-refresh / narrative-tracker all dark since 2026-06-28",
+        "type": "error"
+      }
+    },
+    "critical_shiplog": {
+      "type": "Alert",
+      "props": {
+        "title": "weekly-shiplog",
+        "message": "SILENT: missed 7-13 Monday slot (last 2026-06-29)",
+        "type": "error"
+      }
+    },
+    "critical_dealflow": {
+      "type": "Alert",
+      "props": {
+        "title": "deal-flow",
+        "message": "SILENT: missed 7-13 Monday slot (last 2026-07-06)",
+        "type": "error"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "degraded_costreport"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 Degraded",
+        "level": "h3"
+      }
+    },
+    "degraded_costreport": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "5-run failure streak (cf=5, last_success 2026-06-29); 3 failures + 3 cancels this window",
+        "type": "warning"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top_performers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top_heading",
+        "top_stats"
+      ]
+    },
+    "top_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top by Runs",
+        "level": "h3"
+      }
+    },
+    "top_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "top_btc",
+        "top_heartbeat",
+        "top_thought"
+      ]
+    },
+    "top_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "btc-levels",
+        "value": "32"
+      }
+    },
+    "top_heartbeat": {
+      "type": "Stat",
+      "props": {
+        "label": "heartbeat",
+        "value": "19"
+      }
+    },
+    "top_thought": {
+      "type": "Stat",
+      "props": {
+        "label": "thought-review",
+        "value": "14"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Analytics Report",
+        "href": "articles/skill-analytics-2026-07-15.md"
+      }
+    }
+  }
+}

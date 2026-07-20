@@ -1,8 +1,17 @@
-*Fork Cohort — 2026-07-05 — aaronjmars/aeon*
-DROPPED_FROM_POWER x15 — default-config forks fell below threshold; 4 new forks debuted active.
+*Fork Cohort — 2026-07-19 — aaronjmars/aeon*
+WENT_STALE: 2 active forks went quiet
 
-Of 201 forks, 36 ran in the last 7 days (45% of scanned 80). POWER 12 (-15) · ACTIVE 24 (+18) · STALE 8 · COLD 36.
+Of 209 forks, 35 ran in the last 7 days (43.8% of 80 scanned). POWER 27 · ACTIVE 8 · STALE 10 · COLD 35.
 
-15 forks lost POWER status — all ran this week but show only 4 enabled skills now vs 5-6 prior. Pattern is uniform across default-config forks; custom-skill forks (enzoonchain 7, taekwonv89 16, tomscaria 56) held. penguinxbt debuted straight to POWER (7 skills). Damoncrypto fell off the top-80 push list.
+Went stale (worth a check-in):
+- @Aluma — last run 8.6d ago (was POWER, 22 skills)
+- @BBridgeers — last run 11.3d ago (was POWER, 6 skills)
 
-Full report: articles/fork-cohort-2026-07-05.md
+Dropped from POWER:
+- @aeonbookai — aeonTemplate (enabled skills 5→4, still ACTIVE, runs today)
+
+New running forks: @maredek-bot (was cold, 4 skills, runs today)
+
+Fleet: VibeSan7/aeon deleted (was POWER). skopos-aeon → svectors-lab (Svector-anu, POWER 15 skills).
+
+Full report: articles/fork-cohort-2026-07-19.md

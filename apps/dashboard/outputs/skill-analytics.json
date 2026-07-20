@@ -1,55 +1,33 @@
 {
   "version": "1",
-  "generated_at": "2026-07-08T18:30:00Z",
+  "generated_at": "2026-07-15T19:30:00Z",
   "skill": "skill-analytics",
-  "title": "Skill Analytics — 2026-07-08",
+  "title": "Skill Analytics — 2026-07-15",
   "spec": {
     "type": "Stack",
     "props": {"direction": "vertical", "gap": "md"},
     "children": [
-      {"type": "Alert", "props": {"variant": "destructive", "children": "11 anomaly flag(s) raised — 12:00 UTC batch cluster (8 skills, 10 days silent) + Monday scheduler gaps (3 skills)"}},
-      {"type": "Heading", "props": {"level": 2, "children": "Skill Analytics — 2026-07-08"}},
-      {"type": "Text", "props": {"variant": "muted", "children": "11 scheduled skill(s) didn't run this window — 12:00 UTC batch cluster dark for 10 days (8 skills, ISS-027), Monday scheduler gaps (3 skills)"}},
+      {"type": "Alert", "props": {"variant": "destructive", "children": "11 anomaly flag(s) raised — 10 SILENT scheduled skills + 1 consecutive-failure streak"}},
+      {"type": "Heading", "props": {"level": 2, "children": "Skill Analytics — 2026-07-15"}},
+      {"type": "Text", "props": {"variant": "muted", "children": "10 scheduled skill(s) didn't run this window — aixbt-pulse (day-17 dark streak, ISS-027 scheduler block)"}},
       {"type": "Grid", "props": {"columns": 4, "gap": "sm"}, "children": [
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Total runs"}},
-          {"type": "Heading", "props": {"level": 3, "children": "236"}}
+          {"type": "Heading", "props": {"level": 3, "children": "172"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Active skills"}},
           {"type": "Heading", "props": {"level": 3, "children": "30"}}
         ]}},
         {"type": "Card", "props": {"children": [
-          {"type": "Text", "props": {"variant": "muted", "children": "GH success rate"}},
-          {"type": "Heading", "props": {"level": 3, "children": "100%"}}
+          {"type": "Text", "props": {"variant": "muted", "children": "Success rate"}},
+          {"type": "Heading", "props": {"level": 3, "children": "98.1%"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Anomalies"}},
           {"type": "Heading", "props": {"level": 3, "children": "11"}}
         ]}}
       ]},
-      {"type": "Heading", "props": {"level": 3, "children": "Silent scheduled skills (11)"}},
-      {"type": "Table", "props": {
-        "columns": [
-          {"key": "flag", "header": "Flag"},
-          {"key": "skill", "header": "Skill"},
-          {"key": "schedule", "header": "Schedule"},
-          {"key": "detail", "header": "Detail"}
-        ],
-        "rows": [
-          {"flag": "🔴 SILENT", "skill": "token-movers", "schedule": "10 12 * * *", "detail": "10 days dark — ISS-027 batch cluster"},
-          {"flag": "🔴 SILENT", "skill": "on-chain-monitor", "schedule": "20 12 * * *", "detail": "10 days dark — ISS-027 batch cluster"},
-          {"flag": "🔴 SILENT", "skill": "defi-monitor", "schedule": "40 12 * * *", "detail": "10 days dark — ISS-027 batch cluster"},
-          {"flag": "🔴 SILENT", "skill": "defi-overview", "schedule": "0 12 * * *", "detail": "10 days dark — ISS-027 batch cluster"},
-          {"flag": "🔴 SILENT", "skill": "token-pick", "schedule": "0 12 * * *", "detail": "10 days dark — ISS-027 batch cluster"},
-          {"flag": "🔴 SILENT", "skill": "market-context-refresh", "schedule": "0 13 * * *", "detail": "10 days dark — ISS-027 batch cluster"},
-          {"flag": "🔴 SILENT", "skill": "narrative-tracker", "schedule": "30 13 * * *", "detail": "10 days dark — ISS-027 batch cluster"},
-          {"flag": "🔴 SILENT", "skill": "aixbt-pulse", "schedule": "0 9,21 * * *", "detail": "10 days dark — dead-slot + XAI quota blocked"},
-          {"flag": "🔴 SILENT", "skill": "operator-scorecard", "schedule": "30 10 * * 1", "detail": "Never run — chronic 8+ week Monday miss"},
-          {"flag": "🔴 SILENT", "skill": "weekly-shiplog", "schedule": "0 9 * * 1", "detail": "Missed July 7 — scheduler gap"},
-          {"flag": "🔴 SILENT", "skill": "cost-report", "schedule": "0 7 * * 1", "detail": "Missed July 7 — scheduler gap"}
-        ]
-      }},
       {"type": "Heading", "props": {"level": 3, "children": "Top runners"}},
       {"type": "Table", "props": {
         "columns": [
@@ -60,21 +38,42 @@
           {"key": "exit", "header": "Dominant exit"}
         ],
         "rows": [
-          {"rank": "1", "skill": "btc-levels", "runs": "50", "success": "100%", "exit": "uncategorized"},
-          {"rank": "2", "skill": "heartbeat", "runs": "26", "success": "100%", "exit": "ok"},
-          {"rank": "3", "skill": "thought-review", "runs": "16", "success": "100%", "exit": "uncategorized"},
-          {"rank": "4", "skill": "action-converter", "runs": "10", "success": "100%", "exit": "ok"},
-          {"rank": "5", "skill": "goal-tracker", "runs": "10", "success": "100%", "exit": "ok"},
-          {"rank": "6", "skill": "list-digest", "runs": "10", "success": "100%", "exit": "ok"},
-          {"rank": "7", "skill": "reflect", "runs": "10", "success": "100%", "exit": "ok"},
-          {"rank": "8", "skill": "skill-health", "runs": "10", "success": "100%", "exit": "ok"},
-          {"rank": "9", "skill": "agent-buzz", "runs": "9", "success": "100%", "exit": "ok"},
-          {"rank": "10", "skill": "evening-recap", "runs": "9", "success": "100%", "exit": "uncategorized"},
-          {"rank": "11", "skill": "search-skill", "runs": "9", "success": "100%", "exit": "quiet"},
-          {"rank": "12", "skill": "security-digest", "runs": "9", "success": "100%", "exit": "quiet"},
-          {"rank": "13", "skill": "token-alert", "runs": "8", "success": "100%", "exit": "ok"},
-          {"rank": "14", "skill": "skill-freshness", "runs": "8", "success": "100%", "exit": "ok"},
-          {"rank": "15", "skill": "morning-brief", "runs": "7", "success": "100%", "exit": "ok"}
+          {"rank": "1", "skill": "btc-levels", "runs": "32", "success": "100%", "exit": "quiet"},
+          {"rank": "2", "skill": "heartbeat", "runs": "19", "success": "100%", "exit": "ok"},
+          {"rank": "3", "skill": "thought-review", "runs": "14", "success": "100%", "exit": "ok"},
+          {"rank": "4", "skill": "morning-brief", "runs": "7", "success": "100%", "exit": "ok"},
+          {"rank": "5", "skill": "daily-routine", "runs": "7", "success": "100%", "exit": "ok"},
+          {"rank": "6", "skill": "evening-recap", "runs": "7", "success": "100%", "exit": "ok"},
+          {"rank": "7", "skill": "list-digest", "runs": "7", "success": "100%", "exit": "ok"},
+          {"rank": "8", "skill": "agent-buzz", "runs": "7", "success": "100%", "exit": "ok"},
+          {"rank": "9", "skill": "action-converter", "runs": "7", "success": "86%", "exit": "ok"},
+          {"rank": "10", "skill": "reflect", "runs": "7", "success": "86%", "exit": "ok"},
+          {"rank": "11", "skill": "skill-health", "runs": "7", "success": "86%", "exit": "ok"},
+          {"rank": "12", "skill": "goal-tracker", "runs": "7", "success": "86%", "exit": "ok"},
+          {"rank": "13", "skill": "security-digest", "runs": "6", "success": "100%", "exit": "ok"},
+          {"rank": "14", "skill": "skill-freshness", "runs": "6", "success": "100%", "exit": "ok"},
+          {"rank": "15", "skill": "cost-report", "runs": "6", "success": "0%", "exit": "error"}
+        ]
+      }},
+      {"type": "Heading", "props": {"level": 3, "children": "Silent scheduled skills (10)"}},
+      {"type": "Table", "props": {
+        "columns": [
+          {"key": "skill", "header": "Skill"},
+          {"key": "schedule", "header": "Schedule"},
+          {"key": "last_success", "header": "Last success"},
+          {"key": "days_dark", "header": "Days dark"}
+        ],
+        "rows": [
+          {"skill": "aixbt-pulse", "schedule": "0 9,21 * * *", "last_success": "2026-06-28", "days_dark": "17"},
+          {"skill": "token-pick", "schedule": "daily ~12:00Z", "last_success": "2026-06-28", "days_dark": "17"},
+          {"skill": "defi-overview", "schedule": "daily ~12:00Z", "last_success": "2026-06-28", "days_dark": "17"},
+          {"skill": "token-movers", "schedule": "daily ~12:00Z", "last_success": "2026-06-28", "days_dark": "17"},
+          {"skill": "on-chain-monitor", "schedule": "daily ~12:00Z", "last_success": "2026-06-28", "days_dark": "17"},
+          {"skill": "defi-monitor", "schedule": "daily ~12:00Z", "last_success": "2026-06-28", "days_dark": "17"},
+          {"skill": "market-context-refresh", "schedule": "daily ~12:00Z", "last_success": "2026-06-28", "days_dark": "17"},
+          {"skill": "narrative-tracker", "schedule": "daily ~12:00Z", "last_success": "2026-06-28", "days_dark": "17"},
+          {"skill": "weekly-shiplog", "schedule": "0 9 * * 1", "last_success": "2026-06-29", "days_dark": "16"},
+          {"skill": "deal-flow", "schedule": "0 14 * * 1", "last_success": "2026-07-06", "days_dark": "9"}
         ]
       }}
     ]

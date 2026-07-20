@@ -1,0 +1,56 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Thought Review"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-captures",
+        "text-status",
+        "text-priorities",
+        "alert-refresh"
+      ]
+    },
+    "stat-captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures (last 24h)",
+        "value": "0"
+      }
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing to surface.",
+        "variant": "body"
+      }
+    },
+    "text-priorities": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md last reviewed 38d ago",
+        "variant": "muted"
+      }
+    },
+    "alert-refresh": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "worth a refresh"
+      }
+    }
+  }
+}

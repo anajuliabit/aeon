@@ -31,3 +31,8 @@ https://www.federalregister.gov/documents/2026/06/25/2026-12794/definition-of-hu
 https://www.cftc.gov/PressRoom/PressReleases/9264-26
 https://www.coindesk.com/policy/2026/07/05/clarity-and-congress-s-summer-break-state-of-crypto
 https://decrypt.co/372980/sec-crypto-safe-harbor-introduced-soon-this-month
+https://www.cftc.gov/PressRoom/PressReleases/9267-26
+https://www.banklesstimes.com/articles/2026/07/08/kalshi-suffers-sdny-defeat-as-judge-torres-denies-injunction/
+https://www.federalregister.gov/documents/2026/07/09/2026-13919/anti-money-laundering-and-countering-the-financing-of-terrorism-programs
+https://www.techtimes.com/articles/320118/20260710/polymarket-applies-margin-trading-license-while-under-active-cftc-investigation.htm
+https://www.cftc.gov/PressRoom/PressReleases/9265-26

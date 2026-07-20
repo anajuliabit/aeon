@@ -1,0 +1,23 @@
+{
+  "root": "card-heartbeat",
+  "state": {},
+  "elements": {
+    "card-heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert-stalled"
+      ]
+    },
+    "alert-stalled": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🟡 STALLED: PR #162 (fix(daily-routine): tighten XAI fallback)",
+        "message": "Open ~26h — crosses 24h P1 gate. weekly-review Mon 7-13 T-1 is the decision window; still un-reviewed, no CI checks."
+      }
+    }
+  }
+}

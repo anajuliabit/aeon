@@ -1,0 +1,121 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-17",
+        "description": "single list, slow day — two threads worth reading: western open-weights closing the china gap, and tokenized private credit distribution shifting off maple/stokr."
+      },
+      "children": [
+        "badge_category",
+        "separator_1",
+        "stack_tweet_1",
+        "stack_tweet_2",
+        "separator_2",
+        "status_section"
+      ]
+    },
+    "badge_category": {
+      "type": "Badge",
+      "props": {
+        "text": "DeFi/crypto research list",
+        "variant": "default"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_tweet_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "link_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "DeFiMinty",
+        "text": "meta's tinker + inkling is the \"no-infra RL\" primitive the west needed; china had been lapping open-weights for a year",
+        "likes": 19,
+        "retweets": 1
+      }
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/DeFiMinty/status/2077875842475008128"
+      }
+    },
+    "stack_tweet_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "link_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "axil credit vault enters tokenized credit at 14% APY on pharos; maple/stokr still ~40% of the tokenized book but the $3T tradfi private-credit market is <1% onchain, so new-chain entrants get first crack at share",
+        "likes": 12,
+        "retweets": 1
+      }
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/Flowslikeosmo/status/2077878570702274629"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_sources",
+        "text_status"
+      ]
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(2)",
+        "variant": "caption"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

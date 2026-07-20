@@ -1,0 +1,323 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-19",
+        "description": "Full-deck fire day — reflect codified 11 patterns, self-improve queue-lock n=2 established; all 6 goals remain frozen pending operator"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-tldr",
+        "sep-1",
+        "heading-headlines",
+        "stack-headlines",
+        "sep-2",
+        "heading-notable",
+        "stack-notable",
+        "sep-3",
+        "heading-decisions",
+        "stack-decisions",
+        "sep-4",
+        "heading-blockers",
+        "alert-blockers",
+        "sep-5",
+        "text-footer"
+      ]
+    },
+    "alert-tldr": {
+      "type": "Alert",
+      "props": {
+        "title": "TL;DR",
+        "message": "Full-deck fire day — reflect codified 11 patterns, self-improve queue-lock n=2 established; all 6 goals remain frozen pending operator",
+        "type": "info"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "stack-headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story-h1",
+        "story-h2",
+        "story-h3",
+        "story-h4"
+      ]
+    },
+    "story-h1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "reflect — 11 new durable patterns + 5 revisions; memory 60L→63L",
+        "href": "memory/MEMORY.md",
+        "source": "reflect"
+      }
+    },
+    "story-h2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fork-skill-digest — 11 DEFAULT_FLIP_DISABLE signals at 3-week persistence threshold; fleet ↓14 to 61 forks",
+        "href": "articles/fork-skill-digest-2026-07-19.md",
+        "source": "fork-skill-digest"
+      }
+    },
+    "story-h3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fork-cohort — WENT_STALE: Aluma/aeon (8.6d) + BBridgeers/aeon (11.3d)",
+        "href": "articles/fork-cohort-2026-07-19.md",
+        "source": "fork-cohort"
+      }
+    },
+    "story-h4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #165 docs(skill-graph): shared_state 21→27, opened 17:38Z",
+        "href": "https://github.com/anajuliabit/aeon/pull/165",
+        "source": "PR #165"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-n1",
+        "notable-n2",
+        "notable-n3",
+        "notable-n4",
+        "notable-n5"
+      ]
+    },
+    "notable-n1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-n1",
+        "text-n1"
+      ]
+    },
+    "badge-n1": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve",
+        "variant": "secondary"
+      }
+    },
+    "text-n1": {
+      "type": "Text",
+      "props": {
+        "text": "improvement-PR-queue-locks-self-improve 2-consec; exit-gate fires again on odd-day 18:00Z (7-17 was first)"
+      }
+    },
+    "notable-n2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-n2",
+        "text-n2"
+      ]
+    },
+    "badge-n2": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "secondary"
+      }
+    },
+    "text-n2": {
+      "type": "Text",
+      "props": {
+        "text": "07:00Z morning-batch d3 durable-recover confirmed; BUILDon +61.5% breakout + BTC ETF 10-day outflow snap $221.7M flagged"
+      }
+    },
+    "notable-n3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-n3",
+        "text-n3"
+      ]
+    },
+    "badge-n3": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "secondary"
+      }
+    },
+    "text-n3": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing urgent today; KEV d3 zero-cadence (first 3-consec-zero in memory) + npm-malware wave d6=0 arc closes"
+      }
+    },
+    "notable-n4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-n4",
+        "text-n4"
+      ]
+    },
+    "badge-n4": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending",
+        "variant": "secondary"
+      }
+    },
+    "text-n4": {
+      "type": "Text",
+      "props": {
+        "text": "lingbot-map 6.0× baseline TOP PICK (feed-forward 3D foundation model, kills bundle-adjustment)"
+      }
+    },
+    "notable-n5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-n5",
+        "text-n5"
+      ]
+    },
+    "badge-n5": {
+      "type": "Badge",
+      "props": {
+        "text": "goal-tracker + action-converter",
+        "variant": "secondary"
+      }
+    },
+    "text-n5": {
+      "type": "Text",
+      "props": {
+        "text": "6/6 BLOCKED flat; iss-025-capture-step top-scored at 125"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      }
+    },
+    "stack-decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-d1",
+        "text-d2"
+      ]
+    },
+    "text-d1": {
+      "type": "Text",
+      "props": {
+        "text": "Close or rebase PR #162/163/164 (CONFLICTING; operator direct-author per rule-5 primitive n=4)"
+      }
+    },
+    "text-d2": {
+      "type": "Text",
+      "props": {
+        "text": "Author ISS-025 capture-step PR against aeon.yml:479-495 — unblocks cost-report + 15-skill sandbox-truncation family day-27"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "alert-blockers": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "Stuck dispatched d6 ~143h · ISS-025 (cf=5, sr=0.10)",
+        "type": "warning"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "+13 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

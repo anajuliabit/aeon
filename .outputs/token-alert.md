@@ -1,16 +1,23 @@
-Log written. Skill complete.
+0/12 checks fire — no notification per skill spec. Result logged.
 
 ## Summary
-Ran token-alert skill (var=""). Fetched CoinGecko prices for the 4 tracked tokens (WELL/MAMO/REPPO/GITLAWB) — clean 200, no fallback needed. **Status: TOKEN_ALERT_OK** — 0 alerts fire.
 
-Current prices:
-- WELL $0.00354464 -0.44% 24h · vol $357K (0.26× baseline)
-- MAMO $0.00934448 +3.94% 24h · vol $969K (1.06× baseline, day-2 bounce continues)
-- REPPO $0.02901739 **-9.99% 24h** · vol $726K (2.69× baseline — closest to 3× rail, 10% short; give-back of 7-10 dual-rail breakout)
-- GITLAWB $0.00005179 **-9.18% 24h** · vol $461K (0.78× baseline; give-back of 7-10 +34% reclaim)
+Ran `token-alert` skill (scheduled 12:00Z slot, fired ~60min late per catch-up band — batch-dark **day-23** rollover; band widens vs 7-19's 41min on mon-load-day). Parsed 4 tracked tokens from `memory/MEMORY.md` (WELL/MAMO/REPPO/GITLAWB); no `${var}` override; no Floor/Ceiling columns → threshold-cross skipped for all 4. Single unauth CoinGecko `simple/price` curl returned 200 clean — **28th consecutive clean CG day** post-ISS-023 recovery.
 
-All 4 tokens under 24h threshold (10%/15%/15%/15%). Volume spike check ran with n=5 (baseline: 7-04/05/07/08/10) — no spikes. Threshold-cross skipped for all 4 (no Floor/Ceiling in MEMORY). Notification skipped per skill gate.
+**Prices (12:57Z):**
+- WELL $0.00349747 · -0.15% 24h · vol $66K (**0.14× baseline**)
+- MAMO $0.00953722 · +0.97% 24h · vol $901K (**0.97× baseline**)
+- REPPO $0.02137660 · -0.73% 24h · vol $58K (**0.30× baseline**)
+- GITLAWB $0.00002674 · **-10.59%** 24h · vol $243K (**0.88× baseline**)
 
-Body pattern: 7-10 dual-rail winners REPPO+GITLAWB give back ~1/3 of gains on shallow volume (post-breakout profit-take, not distribution) — consistent with 08:14Z daily-routine pulse fade (72%/+1.1% → 69.6%/+0.02%). REPPO and GITLAWB now sit 5-6pp below their 15% down-threshold; tomorrow's tick will test whether give-back deepens.
+**Result: 0/12 checks fire = `TOKEN_ALERT_OK`, no notify sent** (extends 7-18 → 7-19 → 7-20 to **3-consec zero-alerts day, watchlist compression regime durable d2**).
 
-Files modified: `.tmp/token-alert/cg.json`, `memory/logs/2026-07-11.md`. No follow-up actions.
+**Notable signals** (all sub-threshold, log-only):
+- **GITLAWB thin-bid-rebound-then-fade-back-cliff n=1 confirms** — yesterday's +5.61% bounce reverses -10.51% within 24h on **rising** volume (1.38× yesterday) = 7-19's "watch d7 for follow-through vs fade-back" call resolves as volume-confirmed distribution. Closest miss by 4.4pt vs 15% threshold.
+- **MAMO pause-at-mean day-10** signature holds (5th-consec near-baseline vol 0.97×); +1.22% l2l breaks 4-consec sub-1% price streak.
+- **REPPO exhaustion-drought d6** — vol cliff-drops 0.78× → 0.30× as 5-day mean-reversion cascade terminates.
+- **WELL distribution-drought d3** — vol lifts fractionally off d2 window-low but stays 0.14× baseline.
+
+**Files modified:** `.tmp/token-alert/cg.json`, `.tmp/token-alert/compute.py`, `memory/logs/2026-07-20.md`.
+
+**Follow-up:** GITLAWB cliff-hold d2 test tomorrow; REPPO d7 baseline-low-vs-re-accumulation; WELL 3rd-consec low-vol band; MAMO pause-at-mean d11 fracture-or-revert; reflect cycle codifies thin-bid-rebound-then-fade-back-cliff n=1 as inverted [[one-day-breakout-unwind]] mirror.

@@ -1,16 +1,1 @@
-*Fork Skill Digest — 2026-07-05*
-77 forks disable action-converter (upstream defaults on) — fleet is voting it as noise
-
-Scanned 79 active forks; 78 are configured.
-
-Flip disable (upstream on → fleet off):
-- action-converter — 77 forks (99%)
-- search-skill — 77 forks (99%)
-- security-digest — 77 forks (99%)
-
-Model consensus:
-- smithery-manifest → claude-sonnet-4-6 (34 forks)
-
-Heaviest customizer: SahilParikh03/aeon (176 overrides, meta)
-
-Full report: https://github.com/aaronjmars/aeon/blob/main/articles/fork-skill-digest-2026-07-05.md
+fork-skill-digest 2026-07-19 · fleet 75→61 active forks (-14, largest single-week drop in tracking history) · 11 DEFAULT_FLIP_DISABLE signals STABLE: action-converter 98% · search-skill 97% · security-digest 93% · github-trending 90% · goal-tracker 86% · narrative-tracker/defi-overview 83% · token-pick 81% · reflect 79% · skill-health/self-improve 76% · all 11 held ≥50% for 3+ consecutive weeks — persistent fleet preference · 9 new fork-only skills across 5 forks (vs 3 last week): peng-scout/peng-pulse, lawb-pool-monitor, mine-bean, github-upstream-tracker, money-radar/lead-finder, vch-program/vch-plan-review · heaviest customizer: Aluma/aeon (~22 overrides, dev/security dominant) · FORK_SKILL_DIGEST_OK

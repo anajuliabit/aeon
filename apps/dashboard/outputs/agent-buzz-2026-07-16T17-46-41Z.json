@@ -1,0 +1,140 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-16"
+      },
+      "children": [
+        "subtitle",
+        "section1-heading",
+        "item1",
+        "item2",
+        "sep1",
+        "section2-heading",
+        "item3",
+        "item4",
+        "item5",
+        "sep2",
+        "section3-heading",
+        "item6",
+        "item7",
+        "item8",
+        "footer"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "heavy MCP-wiring day with an agent-economy sub-thread (phone numbers, onchain persistence, x402 settlement) and three research drops on the side.",
+        "variant": "lead"
+      }
+    },
+    "section1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP capability wiring",
+        "level": "h2"
+      }
+    },
+    "item1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Obsidian shipped a headless client so agents get vault access without owning the whole desktop.",
+        "href": "https://x.com/0xMoysei/status/2077541171467862095",
+        "source": "@0xMoysei"
+      }
+    },
+    "item2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Agent Opus exposes bulk video generation, voice cloning, and asset saving through one MCP surface.",
+        "href": "https://x.com/YChahahahaAI/status/2077541850303615322",
+        "source": "@YChahahahaAI"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-native economy plumbing",
+        "level": "h2"
+      }
+    },
+    "item3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "on Ritual, autonomous agents persist onchain and manage their own execution loop without a human minder.",
+        "href": "https://x.com/0xjugger/status/2077540697423720477",
+        "source": "@0xjugger"
+      }
+    },
+    "item4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Delphic wants to give AI agents their own phone numbers, positioning as a carrier for machine subscribers.",
+        "href": "https://x.com/delphic_arena/status/2077543560270975330",
+        "source": "@delphic_arena"
+      }
+    },
+    "item5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "x402 query-by-query settlement lets agent-to-agent commerce meter per call instead of subscription-tier.",
+        "href": "https://x.com/bankrbot/status/2077283894106489320",
+        "source": "@bankrbot"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "agent-safety + verification research",
+        "level": "h2"
+      }
+    },
+    "item6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SocialRL trains agents to actually defend user interests; \"polite\" behavior gets treated as a liability, not a virtue.",
+        "href": "https://x.com/real_asli/status/2077543220893118512",
+        "source": "@real_asli"
+      }
+    },
+    "item7": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AgentCheck (arXiv): a reproduce-intervene-mitigate workbench for stress-testing LLM agents over MCP.",
+        "href": "https://x.com/ComputerPapers/status/2077358027649307024",
+        "source": "@ComputerPapers"
+      }
+    },
+    "item8": {
+      "type": "StoryLink",
+      "props": {
+        "title": "5-year chip-verification model: agents on commercial simulator do 31% more validation work; open-source gets eaten by speculative tries.",
+        "href": "https://x.com/bondanr/status/2077542340068327840",
+        "source": "@bondanr"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "candidates: 17 → kept: 8",
+        "variant": "caption"
+      }
+    }
+  }
+}

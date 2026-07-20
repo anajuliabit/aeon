@@ -1,0 +1,176 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-13",
+        "description": "one list, one substantive read — Louround on hyperliquid's moat; hooeem drifts off-topic; Flowslikeosmo goes quiet."
+      },
+      "children": [
+        "heading_list",
+        "stack_tweets",
+        "separator_1",
+        "heading_status",
+        "stack_status"
+      ]
+    },
+    "heading_list": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto/DeFi list",
+        "level": "h2"
+      }
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item_louround",
+        "item_hooeem",
+        "item_flowslikeosmo"
+      ]
+    },
+    "item_louround": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_louround",
+        "link_louround"
+      ]
+    },
+    "tweet_louround": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround",
+        "handle": "Louround_",
+        "text": "Lighter framed as revenue-not-mindshare challenger to Hyperliquid, Robinhood integration flagged as the wedge cracking the perp-DEX moat",
+        "likes": 64,
+        "retweets": 6
+      }
+    },
+    "link_louround": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Louround_/status/2076408365547471248"
+      }
+    },
+    "item_hooeem": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_hooeem",
+        "context_hooeem",
+        "link_hooeem"
+      ]
+    },
+    "tweet_hooeem": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "5-tweet side-hustle thread (Substack, upcycled furniture, YouTube adsense)",
+        "likes": 59,
+        "retweets": 2
+      }
+    },
+    "context_hooeem": {
+      "type": "Text",
+      "props": {
+        "text": "off-topic for a crypto list — feed-drift not conviction",
+        "variant": "caption"
+      }
+    },
+    "link_hooeem": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2076427679549493339"
+      }
+    },
+    "item_flowslikeosmo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_flowslikeosmo",
+        "context_flowslikeosmo",
+        "link_flowslikeosmo"
+      ]
+    },
+    "tweet_flowslikeosmo": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "'this is what early feels like' image drop, no context",
+        "likes": 10
+      }
+    },
+    "context_flowslikeosmo": {
+      "type": "Text",
+      "props": {
+        "text": "sparse day after last week's SLX/PUMP/immutable-launch runs",
+        "variant": "caption"
+      }
+    },
+    "link_flowslikeosmo": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2076434896411562115"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      }
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_sources",
+        "text_status"
+      ]
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(7)",
+        "variant": "caption"
+      }
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

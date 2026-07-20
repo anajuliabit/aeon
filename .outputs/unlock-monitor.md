@@ -1,28 +1,31 @@
-*Unlock Monitor — week of 2026-07-06*
+*Unlock Monitor — week of 2026-07-20*
 
-this week's real event: **$PUMP** — 12-month cliff expires. ~$135M / 1.8× daily vol, team+investor slice at zero cost basis. tape up 14% into it. fade the pump.
+this week's most leveraged: **$H** unlocks fri jul 25 at $15.9M (5.1× daily vol) into a 30d +72.6% ramp. textbook fade-pump shape — market bought the ramp, cliff hasn't hit yet.
 
-CRISIS (>2.4× vol after recipient override)
-- **$PUMP** — cliff expiry this week · ~82.5B tokens hit at once
-  cliff · team+investor · 1.8× base vol → CRISIS after override · 21.35% supply expansion · 30d +14.4% · 24h vol $74.9M
-  cliff pattern: weakness usually starts ~30d prior, peak vol on the date, recovery 10–14d after. market isn't respecting it on tape yet.
+**CRISIS (>2.4× daily vol)**
+- **$H** (Humanity) — fri jul 25 — 266M tokens (9.2% supply, $15.9M)
+  cliff · early contributors · 5.1× vol · 30d +72.6% → fade pump
+  team cliff into a vertical. cliff pattern in play — expect weakness running into the date, vol peak on the print, recovery 10–14d later.
+- **$ZRO** (LayerZero) — mon jul 20 (today, 00:00Z) — 25.7M tokens (7.0% supply, $19.8M)
+  cliff · investor+team · 1.4× vol × investor-bump → CRISIS · 30d +15.6% → fade pump
+  already -4.2% today ahead of the print. investor cliff at cost-basis-zero hits the bid.
+- **$GT** (GateToken) — sun jul 26 — $44.6M / 6.3% supply
+  21× cg-daily-vol · 30d +0.1% flat · exchange-token off-cg-volume caveat → low-liquidity trap
+  absorption metric degenerates for exchange tokens (most flow off-cg). not comparable to H/ZRO — file under "watch for on-exchange wick".
 
-STRAIN (1.0×–2.4×)
-- **$RED** — mon jul 6 · 40.85M tokens ($4.05M)
-  0.96× vol (borderline) · small cap $44M · 30d +5.3% · recipient mixed → market asleep. thin book + neutral tape.
+**STRAIN (1.0–2.4×)**
+- **$SOSO** (SoSoValue) — thu jul 24 — $7.5M (7.6% supply)
+  1.5× vol · 30d +4.9% flat → market asleep
+  mid-tier absorption into a flat tape = asymmetric downside if nobody's hedged.
 
-DIGESTIBLE (0.3×–1.0×)
-- **$LINEA** — $2.68M · 4.47% supply expansion (pointwise chunky) · 0.29× vol · linear · 30d +0.5% → market asleep on the supply %. linear cadence dampens the single-day.
-- **$APT** — sat jul 12 · 11.31M tokens (~$7M) · monthly · foundation/investor/community/core · 0.23× vol · 30d +5.5% → absorbable. investor slice runs.
+**DIGESTIBLE (0.3–1.0×) — recipient-bumped**
+- **$KAITO** — mon jul 20 (today) — $16.9M / 7.3% supply
+  cliff · core contributors (team) · 0.26× → bumped DIGESTIBLE via team
+  the number says absorbable, the shape says careful — 30d +98.8% into a team cliff. team at ~zero cost-basis with tape at $0.98 = free hit. absorbable pointwise, sellable pattern-wise.
 
-TRIVIAL (flagged for pattern only)
-- **$IO** — jul 11 · 13.29M tokens ($2.34M) · 0.23× vol · 30d +31% → absorbable, but +31% run into a scheduled unlock is textbook. one to watch, not one to short.
-- **$HYPE** — $32.4M scheduled · <0.5% mkt cap · linear · absorbable at top-10 liquidity.
+**FORCED (next-week heads-up)**
+- **FTX fifth distribution** — fri jul 31 — $900M court-ordered creditor payout, record date jun 16 passed. largest single supply event of the quarter. next-week's problem; belongs in the 7-27 tick, flagged now so it's not fresh news on monday.
 
-FORCED
-- **FTX** — next tranche record date jun 16, distributions commence jul 31 (outside this week). reserve cut from $2.4B → $1.8B. next issue's problem.
-- **mt. gox** — deadline extended to oct 31. kicked again. not this week.
+*supply read:* the real signal is H, not GT. 5× daily vol into a 30d +72.6% ramp with early-contributor cliff is the textbook fade-pump setup, and H already ate hack-concerns earlier this month. ZRO is the day-of second read (bumped CRISIS via investor flag; note the pre-print bleed already active). KAITO's 0.26× reads sleepy but the vertical into a team cliff is the classic before-cliff bid-and-dump. GT's 21× is degenerate — exchange-token volume math breaks the framework. next week's FTX $900M dwarfs everything on this week's list.
 
-*supply read:* the week is one event: pump's 12-month cliff unwind. 1.8× vol on the base metric, team+investor recipient, tape running up into it — the fade-pump setup written in the textbook. everything else absorbs. red is the only small-cap where the ratio flirts with strain, and even there the tape is flat enough that "asleep" beats "priced-in." court-ordered supply lands next issue.
-
-sources: tokenomist=partial, defillama=fail(403), cryptorank=partial, coingecko=ok, cryip=ok
+sources: tokenomist=ok, cryptorank=partial, defillama=fail(403), dropstab=fail(masked-dates), coingecko=ok, bitcoinsistemi=ok

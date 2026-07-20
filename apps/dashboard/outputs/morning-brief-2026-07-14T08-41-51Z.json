@@ -1,0 +1,211 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-14"
+      },
+      "children": [
+        "focus_heading",
+        "focus_items",
+        "sep1",
+        "since_heading",
+        "since_items",
+        "sep2",
+        "watch_heading",
+        "watch_item",
+        "sep3",
+        "running_heading",
+        "running_items"
+      ]
+    },
+    "focus_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus Today",
+        "level": "h2"
+      }
+    },
+    "focus_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus_1",
+        "focus_2",
+        "focus_3"
+      ]
+    },
+    "focus_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. pr #162 decision — deadline today per weekly-review, ~66h stalled CONFLICTING, no reviewDecision"
+      }
+    },
+    "focus_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. investment advisor 7-day cancellation — weekly-review's new durable pattern, self-improve investigates 7-15"
+      }
+    },
+    "focus_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. btc arc closed on 7-13 $62,242 close — today's close vs $60,500 breakdown floor is next gate"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since Yesterday",
+        "level": "h2"
+      }
+    },
+    "since_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since_1",
+        "since_2",
+        "since_3",
+        "since_4",
+        "since_5"
+      ]
+    },
+    "since_1": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review 19:56Z shipped 4 SMART actions + articles/weekly-review-2026-07-13.md; closed-loop audit 0/4 shipped on target"
+      }
+    },
+    "since_2": {
+      "type": "Text",
+      "props": {
+        "text": "btc daily close $62,242 confirmed below $63,500 gate (arc closes; spot $62,478 = ~$1,978 above $60,500 breakdown floor)"
+      }
+    },
+    "since_3": {
+      "type": "Alert",
+      "props": {
+        "title": "Cost Report Escalated",
+        "message": "DEGRADED→CRITICAL (cf 0→5 same day; ISS-025 signature; skill-health hash flip 87f9fc6b → 1e03913e)",
+        "type": "error"
+      }
+    },
+    "since_4": {
+      "type": "Text",
+      "props": {
+        "text": "PR #163 authored by 7-13 self-improve (skill-security-scan sandbox-block docs; SKILL.md-editable, rule-5-clean)"
+      }
+    },
+    "since_5": {
+      "type": "Text",
+      "props": {
+        "text": "investment advisor 7-consec-day cancellation surfaced by weekly-review — undocumented in MEMORY, invisible to skill-health"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch_item": {
+      "type": "Text",
+      "props": {
+        "text": "btc 7d forecast $58,115–$65,631 (coindcx) — under $60,500 today triggers breakdown alert for focus #3"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running Today",
+        "level": "h2"
+      }
+    },
+    "running_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running_1",
+        "running_2",
+        "running_3",
+        "running_4",
+        "running_5",
+        "running_6",
+        "running_7"
+      ]
+    },
+    "running_1": {
+      "type": "Text",
+      "props": {
+        "text": "morning batch (this) 07:00 UTC · skill-freshness 08:00 · heartbeat 08/14/20 UTC"
+      }
+    },
+    "running_2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending 09:00 · btc-levels 05:15/09:15/13:15/17:15/21:15 UTC"
+      }
+    },
+    "running_3": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert 12:00 (batch-dark d17 slot verify)"
+      }
+    },
+    "running_4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest 14:00 (npm-malware d7 quiet-vs-resurface test)"
+      }
+    },
+    "running_5": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest 17:00 · agent-buzz 17:30"
+      }
+    },
+    "running_6": {
+      "type": "Text",
+      "props": {
+        "text": "evening batch 18:00 (goal-tracker / skill-health / reflect / action-converter — NO self-improve, even-day cron skips)"
+      }
+    },
+    "running_7": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap 21:00 · thought-review 21:00 · aixbt-pulse 21:00 (d16 dead-slot break-vs-continue)"
+      }
+    }
+  }
+}

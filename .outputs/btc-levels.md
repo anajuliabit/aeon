@@ -1,11 +1,8 @@
 ## Summary
 
-Quiet run. BTC spot $64,176 — no levels triggered.
+**btc-levels run — 2026-07-20T12:59Z**
 
-- Spot $64,175.66, July 10 daily close $64,082.04
-- Leverage-review band (≤$45k): clear
-- Breakdown signal (<$60,500 close): clear, close well above floor
-- $63,500 reclaim: already alerted (`reclaim63500Alerted=true`), no re-arm (spot never dipped below $60,500)
-- $65,900 full-reclaim: ~$1,724 away, not yet reached
-
-No notification sent. State updated and committed (`c24944c`).
+- **Spot:** $64,579.92 | **July 19 close:** $64,679.77
+- **Level checks:** all clear — spot well above $45k leverage band and $60.5k breakdown threshold; `reclaim63500Alerted` already true; spot $64,579 below $65,900 reclaim threshold
+- **Alerts fired:** none → no notification sent
+- **Files committed:** `memory/btc-levels-state.json` + `memory/logs/2026-07-20.md`

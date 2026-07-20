@@ -1,0 +1,893 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-13",
+        "description": "Market snapshot, signals, winners/losers, and analysis"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_intro",
+        "sep_1",
+        "stack_prices",
+        "sep_2",
+        "stack_arc",
+        "sep_3",
+        "stack_winners",
+        "sep_4",
+        "stack_losers",
+        "sep_5",
+        "stack_trending",
+        "sep_6",
+        "stack_signals",
+        "sep_7",
+        "stack_tweets",
+        "sep_8",
+        "stack_paper",
+        "sep_9",
+        "stack_github",
+        "sep_10",
+        "stack_hn"
+      ]
+    },
+    "stack_intro": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_tape_fades",
+        "grid_market_overview"
+      ]
+    },
+    "text_tape_fades": {
+      "type": "Text",
+      "props": {
+        "text": "Tape fades deeper",
+        "variant": "lead"
+      }
+    },
+    "grid_market_overview": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_top100_green",
+        "stat_median_top50",
+        "stat_filter_count"
+      ]
+    },
+    "stat_top100_green": {
+      "type": "Stat",
+      "props": {
+        "label": "Top-100 Green",
+        "value": "27/100",
+        "delta": "vs 7-12: 34%, vs 7-11: 69.6%"
+      }
+    },
+    "stat_median_top50": {
+      "type": "Stat",
+      "props": {
+        "label": "Median Top-50",
+        "value": "-0.60%",
+        "trend": "down"
+      }
+    },
+    "stat_filter_count": {
+      "type": "Stat",
+      "props": {
+        "label": "Filter Coverage",
+        "value": "191/250"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "head_prices",
+        "grid_prices",
+        "text_rotation_note"
+      ]
+    },
+    "head_prices": {
+      "type": "Heading",
+      "props": {
+        "text": "Asset Prices",
+        "level": "h3"
+      }
+    },
+    "grid_prices": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth",
+        "stat_sol",
+        "stat_hype"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$62,985",
+        "delta": "-1.35%",
+        "trend": "down"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,786",
+        "delta": "-0.64%",
+        "trend": "down"
+      }
+    },
+    "stat_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$76.36",
+        "delta": "-0.10% (7d: -4.84%)",
+        "trend": "down"
+      }
+    },
+    "stat_hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$65.28",
+        "delta": "-2.41% (7d: -8.11%)",
+        "trend": "down"
+      }
+    },
+    "text_rotation_note": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE: rotation-out re-deepens",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_arc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "head_arc",
+        "alert_arc",
+        "text_arc_detail",
+        "text_arc_status"
+      ]
+    },
+    "head_arc": {
+      "type": "Heading",
+      "props": {
+        "text": "BTC Arc Analysis",
+        "level": "h3"
+      }
+    },
+    "alert_arc": {
+      "type": "Alert",
+      "props": {
+        "title": "BTC Arc BROKEN",
+        "message": "Spot below $63.5k gate — first time since 7-10 reclaim",
+        "type": "warning"
+      }
+    },
+    "text_arc_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Still above $60.5k floor so reclaim63500Alerted=true holds (re-arm sub-$60,500).",
+        "variant": "body"
+      }
+    },
+    "text_arc_status": {
+      "type": "Text",
+      "props": {
+        "text": "Arc day-3 confirmation candle fails unless today's daily close reclaims.",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_winners": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "head_winners",
+        "table_winners"
+      ]
+    },
+    "head_winners": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "table_winners": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol & Rank",
+          "24h",
+          "7d",
+          "Details"
+        ],
+        "rows": [
+          [
+            "1",
+            "XEC (eCash)",
+            "+35.9%",
+            "+32%",
+            "#210 • $56M mcap $140M [MAJOR privacy]"
+          ],
+          [
+            "2",
+            "DCR (Decred)",
+            "+35.1%",
+            "+35%",
+            "#140 • $15M mcap $260M [MAJOR privacy]"
+          ],
+          [
+            "3",
+            "VELVET",
+            "+31.65%",
+            "+9.2%",
+            "#147 — reverses 7-11 dead-cat invalidation"
+          ],
+          [
+            "4",
+            "KITE",
+            "+19.5%",
+            "—",
+            "#129 • $69M — rescues from 7-12 losers"
+          ],
+          [
+            "5",
+            "BEAT",
+            "+16.4%",
+            "—",
+            "#76 — third leg up-down-up"
+          ],
+          [
+            "6",
+            "DEXE",
+            "+15.3%",
+            "+85%",
+            "#39 $46.69 • $148M mcap $2.18B [BREAKOUT d2 sustains, fresh ATH]"
+          ],
+          [
+            "7",
+            "JTO",
+            "+11.4%",
+            "—",
+            "#128 — bounces from 7-12 SOL-eco losers"
+          ],
+          [
+            "8",
+            "BILL",
+            "+9.3%",
+            "—",
+            "#234"
+          ],
+          [
+            "9",
+            "PUMP",
+            "+8.35%",
+            "-9%",
+            "#91 — post-unlock bounce, event=local-low validates"
+          ],
+          [
+            "10",
+            "ADI",
+            "+8.0%",
+            "+21%",
+            "#72 — 7-9 $40M unlock still ridden"
+          ]
+        ]
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_losers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "head_losers",
+        "table_losers",
+        "text_cashcat_note"
+      ]
+    },
+    "head_losers": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 10 Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "table_losers": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol & Rank",
+          "24h",
+          "7d",
+          "Details"
+        ],
+        "rows": [
+          [
+            "1",
+            "LAB",
+            "-21.21%",
+            "-97.91%",
+            "#239 — d6 cascade, ~99% cumulative"
+          ],
+          [
+            "2",
+            "GWEI",
+            "-14.55%",
+            "-63%",
+            "#250"
+          ],
+          [
+            "3",
+            "TIBBIR",
+            "-12.5%",
+            "—",
+            "#242 — d2 unwind"
+          ],
+          [
+            "4",
+            "PI",
+            "-11.8%",
+            "-24%",
+            "#69"
+          ],
+          [
+            "5",
+            "RIF",
+            "-9.0%",
+            "—",
+            "#229"
+          ],
+          [
+            "6",
+            "LIT",
+            "-8.94%",
+            "—",
+            "#94 — Flowslikeosmo axis breaks"
+          ],
+          [
+            "7",
+            "BP",
+            "-7.29%",
+            "—",
+            "#216"
+          ],
+          [
+            "8",
+            "ARB",
+            "-6.1%",
+            "+17.15%",
+            "#95 — 7-12 near-BREAKOUT stalls"
+          ],
+          [
+            "9",
+            "STX",
+            "-5.93%",
+            "—",
+            "#133"
+          ],
+          [
+            "10",
+            "VIRTUAL",
+            "-5.18%",
+            "—",
+            "#119"
+          ]
+        ]
+      }
+    },
+    "text_cashcat_note": {
+      "type": "Text",
+      "props": {
+        "text": "CASHCAT -13% dropped; 7d +108815% = CG aggregator artifact",
+        "variant": "caption"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_trending": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "head_trending",
+        "badge_trending_list",
+        "text_slx_alert"
+      ]
+    },
+    "head_trending": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h3"
+      }
+    },
+    "badge_trending_list": {
+      "type": "Text",
+      "props": {
+        "text": "CASHDOG #557 (+4432% aggregator glitch), CASHCAT/DEXE/ADI/UNI/LAB/ANSEM/LIT/BILL/SLX/NEAR/GRAM/PI/PENGU",
+        "variant": "body"
+      }
+    },
+    "text_slx_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "SLX Critical Alert",
+        "message": "SLX #571 $0.1425 -9.6% = -70% vs 6-24 entry $0.4753 (worse than 7-12 $0.174) — weekly-review T-0 today catches this",
+        "type": "warning"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_signals": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "head_signals",
+        "signal_lab",
+        "signal_beat",
+        "signal_hype",
+        "signal_dexe",
+        "signal_pump",
+        "signal_xec"
+      ]
+    },
+    "head_signals": {
+      "type": "Heading",
+      "props": {
+        "text": "Signals vs MEMORY",
+        "level": "h3"
+      }
+    },
+    "signal_lab": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "badge_signal_lab",
+        "text_signal_lab"
+      ]
+    },
+    "badge_signal_lab": {
+      "type": "Badge",
+      "props": {
+        "text": "LAB d6",
+        "variant": "destructive"
+      }
+    },
+    "text_signal_lab": {
+      "type": "Text",
+      "props": {
+        "text": "7d -97.91% / cumulative ~99%. -95% zero-arc extends.",
+        "variant": "body"
+      }
+    },
+    "signal_beat": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "badge_signal_beat",
+        "text_signal_beat"
+      ]
+    },
+    "badge_signal_beat": {
+      "type": "Badge",
+      "props": {
+        "text": "BEAT third leg",
+        "variant": "secondary"
+      }
+    },
+    "text_signal_beat": {
+      "type": "Text",
+      "props": {
+        "text": "(7-11 +32 → 7-12 -21 → 7-13 +16) invalidates own one-day-unwind slot (n=5→n=4); pattern still holds on EIGEN/NEX/MORPHO/TIBBIR.",
+        "variant": "body"
+      }
+    },
+    "signal_hype": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "badge_signal_hype",
+        "text_signal_hype"
+      ]
+    },
+    "badge_signal_hype": {
+      "type": "Badge",
+      "props": {
+        "text": "HYPE rotation-out re-deepens",
+        "variant": "outline"
+      }
+    },
+    "text_signal_hype": {
+      "type": "Text",
+      "props": {
+        "text": "7-12 head-fake reversed. SOL 7d -4.84% continuation.",
+        "variant": "body"
+      }
+    },
+    "signal_dexe": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "badge_signal_dexe",
+        "text_signal_dexe"
+      ]
+    },
+    "badge_signal_dexe": {
+      "type": "Badge",
+      "props": {
+        "text": "DEXE d2 BREAKOUT fresh ATH",
+        "variant": "default"
+      }
+    },
+    "text_signal_dexe": {
+      "type": "Text",
+      "props": {
+        "text": "73% weekly on-chain-driven, 18x/5mo; watchlist-add confirmed.",
+        "variant": "body"
+      }
+    },
+    "signal_pump": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "badge_signal_pump",
+        "text_signal_pump"
+      ]
+    },
+    "badge_signal_pump": {
+      "type": "Badge",
+      "props": {
+        "text": "PUMP post-unlock bounce",
+        "variant": "default"
+      }
+    },
+    "text_signal_pump": {
+      "type": "Text",
+      "props": {
+        "text": "+8.35% — event=local-low holds; $400M buybacks / 41.8% burned intraday-1 win.",
+        "variant": "body"
+      }
+    },
+    "signal_xec": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "badge_signal_xec",
+        "text_signal_xec"
+      ]
+    },
+    "badge_signal_xec": {
+      "type": "Badge",
+      "props": {
+        "text": "XEC + DCR privacy top-2",
+        "variant": "default"
+      }
+    },
+    "text_signal_xec": {
+      "type": "Text",
+      "props": {
+        "text": "Connects to Bitcoin 'eCash' fork proposal 2026-08-21 activation (XEC is eCash impl); first-time-privacy-narrative top-2.",
+        "variant": "body"
+      }
+    },
+    "sep_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "head_tweets",
+        "text_tweet_meta",
+        "head_tweet_crypto",
+        "text_tweet_crypto",
+        "head_tweet_ai",
+        "text_tweet_ai",
+        "head_tweet_dev",
+        "text_tweet_dev"
+      ]
+    },
+    "head_tweets": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "text_tweet_meta": {
+      "type": "Text",
+      "props": {
+        "text": "WebSearch fallback, XAI d28",
+        "variant": "muted"
+      }
+    },
+    "head_tweet_crypto": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "text_tweet_crypto": {
+      "type": "Text",
+      "props": {
+        "text": "DEXE 73% weekly fresh ATH; PUMP event=local-low validates ($400M buybacks / 41.8% burned); BTC 'eCash' hard-fork 2026-08-21 = chain-split risk (XEC #1 today aligns); Kendrick BTC $64k 'screaming buy' on Strategy STRC thesis.",
+        "variant": "body"
+      }
+    },
+    "head_tweet_ai": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "text_tweet_ai": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic Cowork mobile+web (Max beta thru Aug 5); Claude in MS Foundry GA; Sonnet 5 default $2/$10 per 1M w/ 1M ctx; $47B ARR May-26. Grok Build CLI uploads entire repo + .env to xAI GCS by default. GPT-5.6 migration 2.2x faster 27% cheaper.",
+        "variant": "body"
+      }
+    },
+    "head_tweet_dev": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "text_tweet_dev": {
+      "type": "Text",
+      "props": {
+        "text": "Claude Code 33k baseline vs OpenCode 7k (HN 563pts) — 4.7x but batches multi-step wins on total. GhostLock stack-UAF in all Linux distros 15y (HN 246pts).",
+        "variant": "body"
+      }
+    },
+    "sep_8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_paper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "head_paper",
+        "story_paper_main",
+        "text_paper_description",
+        "text_runner_up_label",
+        "story_paper_runner"
+      ]
+    },
+    "head_paper": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "story_paper_main": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading",
+        "href": "https://arxiv.org/abs/2607.08964",
+        "source": "arxiv 2607.08964",
+        "score": "HF ↑28"
+      }
+    },
+    "text_paper_description": {
+      "type": "Text",
+      "props": {
+        "text": "Direct Aeon-adjacent, agent-runtime benchmark w/ dense-reward grading.",
+        "variant": "body"
+      }
+    },
+    "text_runner_up_label": {
+      "type": "Text",
+      "props": {
+        "text": "Runner-up:",
+        "variant": "caption"
+      }
+    },
+    "story_paper_runner": {
+      "type": "StoryLink",
+      "props": {
+        "title": "UniClawBench",
+        "href": "#",
+        "source": "day-4 in top-10",
+        "score": "↑30 (up from ↑26)"
+      }
+    },
+    "sep_9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_github": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "head_github",
+        "text_github"
+      ]
+    },
+    "head_github": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "text_github": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (chronic 10-item pool unchanged — advisor + memoclaw).",
+        "variant": "body"
+      }
+    },
+    "sep_10": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_hn": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "head_hn",
+        "hn_item_1",
+        "hn_item_2",
+        "hn_item_3"
+      ]
+    },
+    "head_hn": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest (top 3)",
+        "level": "h3"
+      }
+    },
+    "hn_item_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Claude Code sends 33k tokens vs OpenCode 7k",
+        "href": "#",
+        "source": "Hacker News",
+        "score": "563pts/315c"
+      }
+    },
+    "hn_item_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Grok CLI wire analysis — uploads entire repo + .env to xAI GCS by default",
+        "href": "#",
+        "source": "Hacker News",
+        "score": "466pts"
+      }
+    },
+    "hn_item_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GhostLock stack-UAF in all Linux distros 15y old",
+        "href": "#",
+        "source": "Hacker News",
+        "score": "246pts"
+      }
+    }
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "skill health",
+        "description": "2026-07-12"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "overview_stack",
+        "sep2",
+        "degraded_section",
+        "sep3",
+        "warning_section",
+        "sep4",
+        "nodata_section",
+        "sep5",
+        "healthy_section",
+        "sep6",
+        "stats_footer"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "HEALTH: DEGRADED",
+        "message": "21 skills affected by systemic output_tokens=0 truncation (ISS-019/020/021/025 cluster day-20)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "overview_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_degraded",
+        "stat_warning",
+        "stat_nodata",
+        "stat_healthy"
+      ]
+    },
+    "stat_degraded": {
+      "type": "Stat",
+      "props": {
+        "label": "DEGRADED",
+        "value": "21",
+        "trend": "down"
+      }
+    },
+    "stat_warning": {
+      "type": "Stat",
+      "props": {
+        "label": "WARNING",
+        "value": "10"
+      }
+    },
+    "stat_nodata": {
+      "type": "Stat",
+      "props": {
+        "label": "NO DATA",
+        "value": "3"
+      }
+    },
+    "stat_healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "HEALTHY",
+        "value": "9",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "degraded_note",
+        "degraded_table"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (Top 5 by staleness)",
+        "level": "h3"
+      }
+    },
+    "degraded_note": {
+      "type": "Text",
+      "props": {
+        "text": "+16 more skills in tail (sr<0.6) — see memory/issues/INDEX.md",
+        "variant": "caption"
+      }
+    },
+    "degraded_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Success Rate",
+          "Samples",
+          "Staleness",
+          "Issue"
+        ],
+        "rows": [
+          [
+            "defi-monitor",
+            "53%",
+            "n=38",
+            "14d stale",
+            "WAIT-API (sandbox-truncation) → ISS-019"
+          ],
+          [
+            "market-context-refresh",
+            "32%",
+            "n=93",
+            "14d stale",
+            "WAIT-API → ISS-019"
+          ],
+          [
+            "narrative-tracker",
+            "33%",
+            "n=60",
+            "14d stale",
+            "WAIT-API → ISS-019"
+          ],
+          [
+            "aixbt-pulse",
+            "47%",
+            "n=92",
+            "14d stale",
+            "WAIT-API → ISS-019"
+          ],
+          [
+            "cost-report",
+            "11%",
+            "n=46",
+            "13d stale",
+            "WAIT-API → ISS-025"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "warning_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "warning_heading",
+        "warning_list"
+      ]
+    },
+    "warning_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚫ WARNING (sr<0.8, 10 skills)",
+        "level": "h3"
+      }
+    },
+    "warning_list": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels, daily-routine, defi-overview, fork-skill-digest, heartbeat, morning-brief, on-chain-monitor, skill-freshness, token-movers, token-pick",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "nodata_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata_heading",
+        "nodata_list"
+      ]
+    },
+    "nodata_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3 skills)",
+        "level": "h3"
+      }
+    },
+    "nodata_list": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy_heading",
+        "healthy_note"
+      ]
+    },
+    "healthy_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "healthy_note": {
+      "type": "Text",
+      "props": {
+        "text": "9 skills healthy (+1 vs 7-11: token-alert 78%→80% promoted)",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "footer_heading",
+        "footer_stats",
+        "footer_note"
+      ]
+    },
+    "footer_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Tracking",
+        "level": "h3"
+      }
+    },
+    "footer_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "footer_open",
+        "footer_filed",
+        "footer_resolved"
+      ]
+    },
+    "footer_open": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "11"
+      }
+    },
+    "footer_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed",
+        "value": "0"
+      }
+    },
+    "footer_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved",
+        "value": "0"
+      }
+    },
+    "footer_note": {
+      "type": "Text",
+      "props": {
+        "text": "Classification byte-identical to 7-11 (11-day streak); hash flips daily by design so 24h cadence reminder still fires.",
+        "variant": "caption"
+      }
+    }
+  }
+}

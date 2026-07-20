@@ -1,0 +1,356 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-12"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_toppick",
+        "link_pgrust_toppick",
+        "text_pgrust_toppick_desc",
+        "sep1",
+        "heading_infra",
+        "stack_pgrust_infra",
+        "sep2",
+        "heading_devtools",
+        "stack_desktopcommander",
+        "sep3",
+        "heading_aiml",
+        "stack_stitch_skills",
+        "stack_claude_cookbooks",
+        "sep4",
+        "text_sources"
+      ]
+    },
+    "heading_toppick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "link_pgrust_toppick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "malisper/pgrust",
+        "href": "https://github.com/malisper/pgrust"
+      }
+    },
+    "text_pgrust_toppick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Rust rewrite of Postgres from an 83d-old project passing 46k+ real pg regression tests — the \"rewrite it in Rust\" meme now has receipts.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "stack_pgrust_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "line_pgrust_meta",
+        "text_pgrust_infra_desc"
+      ]
+    },
+    "line_pgrust_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_pgrust_infra",
+        "badge_rust",
+        "badge_accel",
+        "stat_pgrust_stars"
+      ]
+    },
+    "link_pgrust_infra": {
+      "type": "StoryLink",
+      "props": {
+        "title": "malisper/pgrust",
+        "href": "https://github.com/malisper/pgrust"
+      }
+    },
+    "badge_rust": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "secondary"
+      }
+    },
+    "badge_accel": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "stat_pgrust_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "2.2k",
+        "delta": "+774 today",
+        "trend": "up"
+      }
+    },
+    "text_pgrust_infra_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Postgres rewrite in Rust, thread-per-connection instead of process-per-connection, WIP branch runs 300× faster than pg on analytical workloads.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "stack_desktopcommander": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "line_desktop_meta",
+        "text_desktop_desc"
+      ]
+    },
+    "line_desktop_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_desktop",
+        "badge_ts",
+        "badge_holdover",
+        "stat_desktop_stars"
+      ]
+    },
+    "link_desktop": {
+      "type": "StoryLink",
+      "props": {
+        "title": "wonderwhy-er/DesktopCommanderMCP",
+        "href": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
+      }
+    },
+    "badge_ts": {
+      "type": "Badge",
+      "props": {
+        "text": "TS",
+        "variant": "secondary"
+      }
+    },
+    "badge_holdover": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "secondary"
+      }
+    },
+    "stat_desktop_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "7.8k",
+        "delta": "+909 today",
+        "trend": "neutral"
+      }
+    },
+    "text_desktop_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Claude terminal + fs-search + diff-edit via MCP; 909 today vs 328 yesterday = 70× historical baseline, MCP-as-infra thesis day-3.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "stack_stitch_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "line_stitch_meta",
+        "text_stitch_desc"
+      ]
+    },
+    "line_stitch_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_stitch",
+        "badge_ts_stitch",
+        "badge_holdover_stitch",
+        "stat_stitch_stars"
+      ]
+    },
+    "link_stitch": {
+      "type": "StoryLink",
+      "props": {
+        "title": "google-labs-code/stitch-skills",
+        "href": "https://github.com/google-labs-code/stitch-skills"
+      }
+    },
+    "badge_ts_stitch": {
+      "type": "Badge",
+      "props": {
+        "text": "TS",
+        "variant": "secondary"
+      }
+    },
+    "badge_holdover_stitch": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "secondary"
+      }
+    },
+    "stat_stitch_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "7.2k",
+        "delta": "+340 today",
+        "trend": "neutral"
+      }
+    },
+    "text_stitch_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Google Labs library speaking the Skills open standard, cross-lab targets Antigravity/Gemini CLI/Claude Code/Cursor; 3× yesterday's daily rate.",
+        "variant": "body"
+      }
+    },
+    "stack_claude_cookbooks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "line_cookbook_meta",
+        "text_cookbook_desc"
+      ]
+    },
+    "line_cookbook_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_cookbook",
+        "badge_jupyter",
+        "badge_returning",
+        "stat_cookbook_stars"
+      ]
+    },
+    "link_cookbook": {
+      "type": "StoryLink",
+      "props": {
+        "title": "anthropics/claude-cookbooks",
+        "href": "https://github.com/anthropics/claude-cookbooks"
+      }
+    },
+    "badge_jupyter": {
+      "type": "Badge",
+      "props": {
+        "text": "Jupyter",
+        "variant": "secondary"
+      }
+    },
+    "badge_returning": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "stat_cookbook_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "48k",
+        "delta": "+219 today",
+        "trend": "up"
+      }
+    },
+    "text_cookbook_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic-official recipes; recent adds cover managed-agent patterns, agentic-search benchmark reproduction, big-plan/small-execute cost cookbook.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/24",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-text",
+        "date-text"
+      ]
+    },
+    "heading-text": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory consolidated",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-07-12",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

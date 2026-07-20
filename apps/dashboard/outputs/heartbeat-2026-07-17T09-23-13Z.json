@@ -1,0 +1,302 @@
+{
+  "root": "heartbeat-card",
+  "state": {},
+  "elements": {
+    "heartbeat-card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "System status report"
+      },
+      "children": [
+        "main-alert",
+        "sep1",
+        "affected-skills-stack",
+        "sep2",
+        "issues-stack",
+        "sep3",
+        "prs-stack"
+      ]
+    },
+    "main-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 07:00Z morning batch missed 2nd consecutive day",
+        "message": "Critical scheduling failure"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "affected-skills-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skills-heading",
+        "skills-list",
+        "classification-text"
+      ]
+    },
+    "skills-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Affected Skills",
+        "level": "h3"
+      }
+    },
+    "skills-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-row-1",
+        "skill-row-2",
+        "skill-row-3"
+      ]
+    },
+    "skill-row-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-morning-brief",
+        "text-dates-1"
+      ]
+    },
+    "badge-morning-brief": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief",
+        "variant": "destructive"
+      }
+    },
+    "text-dates-1": {
+      "type": "Text",
+      "props": {
+        "text": "skipped 7-16 + 7-17",
+        "variant": "muted"
+      }
+    },
+    "skill-row-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-daily-routine",
+        "text-dates-2"
+      ]
+    },
+    "badge-daily-routine": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "destructive"
+      }
+    },
+    "text-dates-2": {
+      "type": "Text",
+      "props": {
+        "text": "skipped 7-16 + 7-17",
+        "variant": "muted"
+      }
+    },
+    "skill-row-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-thought-review",
+        "text-dates-3"
+      ]
+    },
+    "badge-thought-review": {
+      "type": "Badge",
+      "props": {
+        "text": "thought-review-07",
+        "variant": "destructive"
+      }
+    },
+    "text-dates-3": {
+      "type": "Text",
+      "props": {
+        "text": "skipped 7-16 + 7-17",
+        "variant": "muted"
+      }
+    },
+    "classification-text": {
+      "type": "Text",
+      "props": {
+        "text": "Dead-slot class forms (was fresh classification yesterday, now pattern-establishing)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issues-heading",
+        "iss-025-block",
+        "cost-report-block",
+        "authoring-alert"
+      ]
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues & Blockers",
+        "level": "h3"
+      }
+    },
+    "iss-025-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iss-025-link",
+        "iss-025-detail"
+      ]
+    },
+    "iss-025-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "iss-025 capture-step PR",
+        "href": "#iss-025",
+        "source": "Issue"
+      }
+    },
+    "iss-025-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Slipped t-0 → t+1 day-2",
+        "variant": "muted"
+      }
+    },
+    "cost-report-block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cost-report-label",
+        "cost-report-stat"
+      ]
+    },
+    "cost-report-label": {
+      "type": "Text",
+      "props": {
+        "text": "Cost Report",
+        "variant": "lead"
+      }
+    },
+    "cost-report-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stuck since day 4",
+        "value": "~84h",
+        "trend": "down"
+      }
+    },
+    "authoring-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "No operator authoring surfaced 7-16"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prs-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "prs-heading",
+        "pr-items",
+        "conflict-note"
+      ]
+    },
+    "prs-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Self-Improve PRs Past Stall Gates",
+        "level": "h3"
+      }
+    },
+    "pr-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-162-link",
+        "pr-163-link",
+        "pr-164-link"
+      ]
+    },
+    "pr-162-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #162",
+        "href": "#162",
+        "source": "GitHub"
+      }
+    },
+    "pr-163-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #163",
+        "href": "#163",
+        "source": "GitHub"
+      }
+    },
+    "pr-164-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #164",
+        "href": "#164",
+        "source": "GitHub"
+      }
+    },
+    "conflict-note": {
+      "type": "Text",
+      "props": {
+        "text": "All 3 conflict — mechanical rollovers, dedup required",
+        "variant": "muted"
+      }
+    }
+  }
+}

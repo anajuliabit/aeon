@@ -1,24 +1,27 @@
-*Morning Brief — 2026-07-11*
+*morning brief — 2026-07-20*
 
-*Focus today*
-1. iss-025 capture-step pr day-19 — why now: weekly-review t-2, self-improve 18:00z routing test tonight
-2. slx recut day-17 (-63%) — why now: weekly-review 7-13 t-2 recut deadline
-3. pump unlock t-1 sat 7-12 — why now: 82.5b tokens ~$135m hits float, 2× recent daily volume
+*focus today*
+1. iss-025 capture-step pr — cost-report mon-weekly tick fires 07z today = 3rd-consec miss test (sandbox-truncation d28)
+2. kill or rebase pr #162/#163/#164 — self-improve 2-consec queue-lock codified 7-19, operator direct-author sole path
+3. weekly-shiplog 09z + weekly-review 19z — 3-consec mon-miss risk lands today (last_success 6-29 for shiplog)
 
-*Since yesterday*
-- btc arc re-armed: 7-10 held above $63.5k gate all day; 7-11 spot $64.0k–$64.2k tracking above
-- watchlist reclaim day-2: reppo +30% + vol 4.73× dual-rail, gitlawb +34% (12:00z catch-up 13:31z, 3 alerts)
-- reflect: memory 64l→66l; skill-health notify 17→18 (9-day byte-identical streak); action-converter 5 loops
-- npm brand-jack day-3 escalated: 51 fresh pkgs, @redhat-cloud-services enterprise-namespace shift
-- security-digest 14:20z msg prepared-not-delivered (interactive-session sandbox gate; action-converter loop 3)
+*since yesterday*
+- self-improve 18:32z codified `improvement-PR-queue-locks-self-improve 2-consec` — rule-5 T+2 lands via skill exit-gate, revises 7-19 focus #3
+- fork-skill-digest 18:52z: fleet -14 (largest single-week drop tracked), 11 default_flip_disable signals stable at 3-week persistence threshold
+- fork-cohort 20:04z: went_stale 2 (aluma + bbridgeers), vibesan7 deleted (was power 9 skills)
+- reflect 18:42z: 11 patterns + 5 revisions (kimi k3 open-weights d7 out to 7-27 ship, china-lab edge-inference n=2, feed-forward-replaces-iterative n=1)
+- btc $64,563 (04:52z) · close $64,679 (7-19) — reclaim63500 holds, no crossings
 
-*Watch*
-- pump detail sharpens focus #3: insiders "deeply underwater" from $0.004 ico, sell-to-cut-losses risk high
+*watch*
+- claude-code sandbox.excludedCommands does not exempt listed commands from network enforcement (iss #53012 upstream) — cost-report curl-blocked is upstream not local config; iss-025 pr may need `dangerouslyDisableSandbox` route → focus #1
+- gh actions cron drift >4h continuously worsening (community #156282 + #196910) — today's 07z cost-report or 09z weekly-shiplog no-show may be cron drift, not sandbox; external scheduler fixes whole mon cluster in one move → focus #3
 
-*Running today* (sat)
-- morning batch @ 07:00z, skill-freshness + heartbeat @ 08:00z
-- github-trending @ 09:00z (d3 verify), token-alert @ 12:00z (batch-dark d14 verify), btc-levels every 4h at :15
-- heartbeat + security-digest @ 14:00z, vuln-scanner @ 16:00z (sat-only)
-- list-digest @ 17:00z, agent-buzz @ 17:30z
-- evening batch @ 18:00z (goal-tracker + skill-health + reflect + action-converter + self-improve odd-day)
-- heartbeat @ 20:00z, evening-recap + thought-review @ 21:00z
+*running today (mon)*
+- 07z cost-report (mon-weekly test) · morning-brief · daily-routine · thought-review
+- 08z skill-freshness · 08/14/20z heartbeat
+- 09z weekly-shiplog (mon-weekly test) · github-trending
+- 10z unlock-monitor (mon-weekly) · 12z token-alert
+- 14z security-digest · search-skill · deal-flow (mon-weekly cluster)
+- 16z skill-security-scan (mon-weekly) · 17z list-digest · 17:30z agent-buzz
+- 18z goal-tracker · skill-health · reflect · action-converter (self-improve skips, even day)
+- 19z weekly-review (mon-weekly test) · 21z evening-recap · thought-review

@@ -1,0 +1,480 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-15"
+      },
+      "children": [
+        "focus-section",
+        "sep1",
+        "since-section",
+        "sep2",
+        "running-section",
+        "sep3",
+        "heartbeat-section"
+      ]
+    },
+    "focus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-heading",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "focus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-title",
+        "focus-1-desc"
+      ]
+    },
+    "focus-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "1. self-improve 18:00Z — Investment Advisor 7-day cancellation investigation",
+        "variant": "lead"
+      }
+    },
+    "focus-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "why now: last odd-day fire before weekly-review 7-16 deadline",
+        "variant": "caption"
+      }
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-title",
+        "focus-2-desc"
+      ]
+    },
+    "focus-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "2. PR #162 deadline blown d1",
+        "variant": "lead"
+      }
+    },
+    "focus-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "why now: T-0 slipped yesterday, ~85h stale, operator-direct-author only",
+        "variant": "caption"
+      }
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-desc"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "3. ISS-025 capture-step PR T-1",
+        "variant": "lead"
+      }
+    },
+    "focus-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 7-16 deadline, workflow-file class blocks skill authoring",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "since-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-heading",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5"
+      ]
+    },
+    "since-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Alert",
+      "props": {
+        "title": "weekly-review action #2 slipped",
+        "message": "PR #162 T-0 unmet, mergeable UNKNOWN, no update since 7-11 18:18Z (~85h)",
+        "type": "warning"
+      }
+    },
+    "since-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-2-stat",
+        "since-2-detail"
+      ]
+    },
+    "since-2-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC 7-14 daily close",
+        "value": "$64,977"
+      }
+    },
+    "since-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "$63.5k reclaim confirmed; spot $64,747 at 05:57Z; $65,900 full-reclaim ~$1,153 above spot",
+        "variant": "caption"
+      }
+    },
+    "since-item-3": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report STUCK",
+        "message": "extends ~42h → ~57h dispatched-never-completed; same ISS-025 sandbox-truncation family",
+        "type": "error"
+      }
+    },
+    "since-item-4": {
+      "type": "Alert",
+      "props": {
+        "title": "PR #163 stall ~44h",
+        "message": "SKILL.md-editable class (rule-5-clean), no external gating — approaches 48h gate",
+        "type": "warning"
+      }
+    },
+    "since-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-5-title",
+        "since-5-detail"
+      ]
+    },
+    "since-5-title": {
+      "type": "Text",
+      "props": {
+        "text": "x402 Foundation formal Linux Foundation launch",
+        "variant": "lead"
+      }
+    },
+    "since-5-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Visa+Mastercard+Ripple backing, 75M tx / $24M / 30d — MCP-becomes-infra thesis reinforcement, not focus-changing",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "running-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-heading",
+        "running-item-1",
+        "running-item-2",
+        "running-item-3",
+        "running-item-4",
+        "running-item-5",
+        "running-item-6",
+        "running-item-7",
+        "running-item-8"
+      ]
+    },
+    "running-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "running-1-time",
+        "running-1-text"
+      ]
+    },
+    "running-1-time": {
+      "type": "Badge",
+      "props": {
+        "text": "07:00Z",
+        "variant": "secondary"
+      }
+    },
+    "running-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "morning batch: this brief + daily-routine + thought-review",
+        "variant": "body"
+      }
+    },
+    "running-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "running-2-time",
+        "running-2-text"
+      ]
+    },
+    "running-2-time": {
+      "type": "Badge",
+      "props": {
+        "text": "09:00Z",
+        "variant": "secondary"
+      }
+    },
+    "running-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending / btc-levels @ :15 (09:15/13:15/17:15/21:15)",
+        "variant": "body"
+      }
+    },
+    "running-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "running-3-time",
+        "running-3-text"
+      ]
+    },
+    "running-3-time": {
+      "type": "Badge",
+      "props": {
+        "text": "12:00Z",
+        "variant": "secondary"
+      }
+    },
+    "running-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert",
+        "variant": "body"
+      }
+    },
+    "running-item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "running-4-time",
+        "running-4-text"
+      ]
+    },
+    "running-4-time": {
+      "type": "Badge",
+      "props": {
+        "text": "14:00Z",
+        "variant": "secondary"
+      }
+    },
+    "running-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest + reg-monitor (Wed cadence)",
+        "variant": "body"
+      }
+    },
+    "running-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "running-5-time",
+        "running-5-text"
+      ]
+    },
+    "running-5-time": {
+      "type": "Badge",
+      "props": {
+        "text": "17:00Z",
+        "variant": "secondary"
+      }
+    },
+    "running-5-text": {
+      "type": "Text",
+      "props": {
+        "text": "list-digest / 17:30Z agent-buzz",
+        "variant": "body"
+      }
+    },
+    "running-item-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "running-6-time",
+        "running-6-text"
+      ]
+    },
+    "running-6-time": {
+      "type": "Badge",
+      "props": {
+        "text": "18:00Z",
+        "variant": "secondary"
+      }
+    },
+    "running-6-text": {
+      "type": "Text",
+      "props": {
+        "text": "goal-tracker + skill-health + reflect + action-converter + self-improve (odd-day fires)",
+        "variant": "body"
+      }
+    },
+    "running-item-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "running-7-time",
+        "running-7-text"
+      ]
+    },
+    "running-7-time": {
+      "type": "Badge",
+      "props": {
+        "text": "18:30Z",
+        "variant": "secondary"
+      }
+    },
+    "running-7-text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics (Wed)",
+        "variant": "body"
+      }
+    },
+    "running-item-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "running-8-time",
+        "running-8-text"
+      ]
+    },
+    "running-8-time": {
+      "type": "Badge",
+      "props": {
+        "text": "21:00Z",
+        "variant": "secondary"
+      }
+    },
+    "running-8-text": {
+      "type": "Text",
+      "props": {
+        "text": "evening-recap + thought-review",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heartbeat-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heartbeat-heading",
+        "heartbeat-text"
+      ]
+    },
+    "heartbeat-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Heartbeat",
+        "level": "h3"
+      }
+    },
+    "heartbeat-text": {
+      "type": "Text",
+      "props": {
+        "text": "@ 08:00 / 14:00 / 20:00Z",
+        "variant": "body"
+      }
+    }
+  }
+}

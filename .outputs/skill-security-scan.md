@@ -2,15 +2,13 @@
 
 ## Summary
 
-- **Scope:** full corpus (`${var}` empty) — 231 files: 191 SKILL.md + 9 workflows + 30 repo scripts + 1 companion script
-- **Scanner mode:** `inline_grep_fallback` — `scan.sh --all --json` blocked by sandbox approval gate (6th consecutive run on this path). Grep swept full HIGH/MEDIUM/LOW pattern library + manual `${{ }}`-in-`run:` audit; never silently skipped.
-- **Counts:** 4 HIGH · 15 MEDIUM · 4 LOW after filtering — byte-identical to 2026-06-29 snapshot
-- **Delta:** 0 NEW · 0 RESOLVED · 4 PERSISTENT HIGH (canonical `aeon.yml` workflow_dispatch chain at L86/L94/L96/L812; `:812` held for 3rd consecutive scan)
-- **Obfuscation sweep:** clean across all 5 axes
-- **Report written:** `articles/security-scan-2026-07-06.md`
-- **State updated:** `memory/state/security-scan.json` (7-06 timestamp + skill-count adjustment 192→191)
-- **Log appended:** `memory/logs/2026-07-06.md` — `### skill-security-scan` section
-- **Issues:** none filed (no NEW HIGH), none closed (no RESOLVED HIGH)
-- **Notification:** skipped per spec §14 (silence is correct when nothing has changed)
+Ran skill-security-scan (var=""). Byte-for-byte identical to 2026-07-06 → exit status `SECURITY_SCAN_NOCHANGE`.
 
-**Carry** — the env-indirection remediation for the 4 aeon.yml sites has not been shipped in 5 consecutive scans; still an accepted anti-pattern (workflow_dispatch/workflow_call gated → repo write access required → low real risk), not a regression.
+- **Scanner:** `scan.sh --all --json` blocked by sandbox approval gate (7th consecutive weekly run). Fell back to inline Grep + manual `${{ }}`→`run:` audit + obfuscation sweep per SKILL.md step 4.
+- **Coverage:** 232 files scanned (191 SKILL.md + 9 workflows + 30 scripts + 2 companion scripts).
+- **HIGH:** 4 persistent, all `aeon.yml` (`:86`/`:94`/`:96`/`:812`). `:812` held with no line drift for 4th consecutive scan.
+- **Structural block:** `.github/workflows/aeon.yml` fix (env: indirection, same as ISS-017 + 2026-04-11 messages.yml) gated by self-improve rule 5 → operator direct-author only.
+- **Obfuscation sweep:** clean (zero-width / bidi / fromCharCode / base64-to-shell / SSRF-webhook hosts).
+- **Notification:** skipped per step 14 (no NEW HIGH, no RESOLVED HIGH).
+- **Files:** `articles/security-scan-2026-07-13.md`, `memory/state/security-scan.json`, `memory/logs/2026-07-13.md`.
+- **Follow-up:** 4th consecutive `aeon.yml` HIGH carrying — operator direct-author remains sole path.

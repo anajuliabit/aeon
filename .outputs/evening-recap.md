@@ -1,26 +1,24 @@
-*Evening Recap — 2026-07-10*
-_TL;DR: triple-alert watchlist day — REPPO dual-rail and GITLAWB reclaim both fired, but security-digest notify never left the sandbox_
+*Evening Recap — 2026-07-19*
+_TL;DR: full-deck fire day — reflect codified 11 patterns, self-improve queue-lock n=2 established; all 6 goals remain frozen pending operator_
 
 *Headlines:*
-- token-alert — 3 triggers: REPPO +30% / vol 4.73× (dual-rail, first since 7-01) + GITLAWB +34% reclaim of 7-08 cap · `.tmp/token-alert/msg.md`
-- security-digest — npm brand-jack day-3: 51 fresh pkgs, @redhat-cloud-services 14 cred-stealers; notify BLOCKED sandbox gate · `.tmp/security-digest/msg.md` (hash 8793aa39)
-- daily-routine — 72/100 green; DEXE MAJOR BREAKOUT rank #47; CASHCAT PUMP-RISK 5th trending day; NEX -37% unwind validates tag · `.outputs/daily-routine.md`
-- reflect — MEMORY 64L→66L; BTC arc BROKEN→RE-ARMED; market-context.md What-Changed 19 bullets · `memory/MEMORY.md`
+- reflect — 11 new durable patterns + 5 revisions; memory 60L→63L · memory/MEMORY.md
+- fork-skill-digest — 11 DEFAULT_FLIP_DISABLE signals at 3-week persistence threshold; fleet ↓14 to 61 forks · articles/fork-skill-digest-2026-07-19.md
+- fork-cohort — WENT_STALE: Aluma/aeon (8.6d) + BBridgeers/aeon (11.3d) · articles/fork-cohort-2026-07-19.md
+- PR #165 docs(skill-graph): shared_state 21→27, opened 17:38Z · https://github.com/anajuliabit/aeon/pull/165
 
 *Notable:*
-- btc-levels ×6 — spot ranged $62.9k→$64.1k; all levels clear; reclaim63500Alerted=true holds; $65.9k next
-- morning-brief — 3 focus items: ISS-025 PR T-3, SLX day-16 -63%, BTC gate re-cross
-- list-digest — PUMP Sat 7-12 unlock cliff: 22.2% mcap ($142.7M) single-day float
-- agent-buzz — MCP-becomes-infra: WebMCP-in-Chrome + Axon terminal + 10MB solana shell 31-tools
-- skill-health — day-18; classification 9-day streak unchanged; NOTIFY fired; 11 open issues
+- self-improve — improvement-PR-queue-locks-self-improve 2-consec; exit-gate fires again on odd-day 18:00Z (7-17 was first)
+- daily-routine — 07:00Z morning-batch d3 durable-recover confirmed; BUILDon +61.5% breakout + BTC ETF 10-day outflow snap $221.7M flagged
+- security-digest — nothing urgent today; KEV d3 zero-cadence (first 3-consec-zero in memory) + npm-malware wave d6=0 arc closes
+- github-trending — lingbot-map 6.0× baseline TOP PICK (feed-forward 3D foundation model, kills bundle-adjustment)
+- goal-tracker + action-converter — 6/6 BLOCKED flat; iss-025-capture-step top-scored at 125
 
 *Decisions for tomorrow:*
-- send security-digest: `./notify -f .tmp/security-digest/msg.md` (hash 8793aa39)
-- ISS-025 capture-step PR: self-improve 7-11 18:00Z next routing test; weekly-review 7-13 T-3
-- SLX recut: day-16 CATASTROPHIC -63% vs $0.4753 entry; operator call due by 7-13
+- close or rebase PR #162/163/164 (CONFLICTING; operator direct-author per rule-5 primitive n=4)
+- author ISS-025 capture-step PR against aeon.yml:479-495 — unblocks cost-report + 15-skill sandbox-truncation family day-27
 
 *Blockers:*
-- github-trending — 09:00Z slot d2 dark; 7-11 is d3 verify · last_dispatch 2026-07-08T09:02Z
-- 12:00Z batch (8 skills) — dark day-13; last_success 2026-06-28 (ISS-027)
+- cost-report — stuck dispatched d6 ~143h · ISS-025 (cf=5, sr=0.10)
 
-_+7 routine runs collapsed · sources: log=ok cron-state=ok_
+_+13 routine runs collapsed · sources: log=ok cron-state=ok_

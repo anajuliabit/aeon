@@ -1,0 +1,1043 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-18",
+        "description": "60/100 top coins green, top-50 median +0.36% — mixed tape, alt rotation into ADA/CRO majors while low-caps do the heavy lifting."
+      },
+      "children": [
+        "winners_section",
+        "sep1",
+        "losers_section",
+        "sep2",
+        "trending_section",
+        "sep3",
+        "tweets_section",
+        "sep4",
+        "paper_section",
+        "sep5",
+        "github_section",
+        "sep6",
+        "hn_section"
+      ]
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "w1",
+        "w2",
+        "w3",
+        "w4",
+        "w5",
+        "w6",
+        "w7",
+        "w8"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "w1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w1_header",
+        "w1_detail"
+      ]
+    },
+    "w1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w1_stat",
+        "w1_badge"
+      ]
+    },
+    "w1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "XEC (eCash)",
+        "value": "$0.00000841",
+        "delta": "+23.8%",
+        "trend": "up"
+      }
+    },
+    "w1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "BREAKOUT",
+        "variant": "destructive"
+      }
+    },
+    "w1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +63.0% • $101M / #185",
+        "variant": "muted"
+      }
+    },
+    "w2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w2_header",
+        "w2_detail"
+      ]
+    },
+    "w2_header": {
+      "type": "Stat",
+      "props": {
+        "label": "VVV (Venice Token)",
+        "value": "$11.51",
+        "delta": "+14.0%",
+        "trend": "up"
+      }
+    },
+    "w2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +7.5% • $33M / #99",
+        "variant": "muted"
+      }
+    },
+    "w3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w3_header",
+        "w3_detail"
+      ]
+    },
+    "w3_header": {
+      "type": "Stat",
+      "props": {
+        "label": "EDGE (edgeX)",
+        "value": "$0.4433",
+        "delta": "+12.4%",
+        "trend": "up"
+      }
+    },
+    "w3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +18.0% • $7.7M / #196",
+        "variant": "muted"
+      }
+    },
+    "w4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w4_header",
+        "w4_detail"
+      ]
+    },
+    "w4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w4_stat",
+        "w4_badge"
+      ]
+    },
+    "w4_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTW (Bitway)",
+        "value": "$0.06509",
+        "delta": "+10.6%",
+        "trend": "up"
+      }
+    },
+    "w4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MICROCAP",
+        "variant": "outline"
+      }
+    },
+    "w4_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +2.4% • $10M / #211",
+        "variant": "muted"
+      }
+    },
+    "w5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w5_header",
+        "w5_detail"
+      ]
+    },
+    "w5_header": {
+      "type": "Stat",
+      "props": {
+        "label": "UB (Unibase)",
+        "value": "$0.08842",
+        "delta": "+7.6%",
+        "trend": "up"
+      }
+    },
+    "w5_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +19.0% • $11M / #153",
+        "variant": "muted"
+      }
+    },
+    "w6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w6_header",
+        "w6_detail"
+      ]
+    },
+    "w6_header": {
+      "type": "Stat",
+      "props": {
+        "label": "TRUMP",
+        "value": "$1.62",
+        "delta": "+5.2%",
+        "trend": "up"
+      }
+    },
+    "w6_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +0.9% • $109M / #117",
+        "variant": "muted"
+      }
+    },
+    "w7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w7_header",
+        "w7_detail"
+      ]
+    },
+    "w7_header": {
+      "type": "Stat",
+      "props": {
+        "label": "CRO (Cronos)",
+        "value": "$0.0607",
+        "delta": "+4.9%",
+        "trend": "up"
+      }
+    },
+    "w7_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +8.9% • $22M / #33",
+        "variant": "muted"
+      }
+    },
+    "w8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "w8_header",
+        "w8_detail"
+      ]
+    },
+    "w8_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "w8_stat",
+        "w8_badge"
+      ]
+    },
+    "w8_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ADA (Cardano)",
+        "value": "$0.166",
+        "delta": "+4.5%",
+        "trend": "up"
+      }
+    },
+    "w8_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MAJOR",
+        "variant": "secondary"
+      }
+    },
+    "w8_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d -0.6% • $393M / #18",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "l1",
+        "l2",
+        "l3",
+        "l4",
+        "l5",
+        "l6",
+        "l7",
+        "l8"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "l1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l1_header",
+        "l1_detail"
+      ]
+    },
+    "l1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l1_stat",
+        "l1_badge"
+      ]
+    },
+    "l1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "KITE",
+        "value": "$0.1084",
+        "delta": "-10.6%",
+        "trend": "down"
+      }
+    },
+    "l1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CAPITULATION",
+        "variant": "destructive"
+      }
+    },
+    "l1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d -10.5% • $85M / #142",
+        "variant": "muted"
+      }
+    },
+    "l2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l2_header",
+        "l2_detail"
+      ]
+    },
+    "l2_header": {
+      "type": "Stat",
+      "props": {
+        "label": "STABLE",
+        "value": "$0.0354",
+        "delta": "-10.4%",
+        "trend": "down"
+      }
+    },
+    "l2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d -0.4% • $16M / #71",
+        "variant": "muted"
+      }
+    },
+    "l3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l3_header",
+        "l3_detail"
+      ]
+    },
+    "l3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l3_stat",
+        "l3_badge"
+      ]
+    },
+    "l3_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BONK",
+        "value": "$0.00000299",
+        "delta": "-9.4%",
+        "trend": "down"
+      }
+    },
+    "l3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CAPITULATION",
+        "variant": "destructive"
+      }
+    },
+    "l3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d -26.8% • $57M / #140",
+        "variant": "muted"
+      }
+    },
+    "l4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l4_header",
+        "l4_detail"
+      ]
+    },
+    "l4_header": {
+      "type": "Stat",
+      "props": {
+        "label": "TRAC (OriginTrail)",
+        "value": "$0.259",
+        "delta": "-8.8%",
+        "trend": "down"
+      }
+    },
+    "l4_detail": {
+      "type": "Text",
+      "props": {
+        "text": "$9.4M / #234",
+        "variant": "muted"
+      }
+    },
+    "l5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l5_header",
+        "l5_detail"
+      ]
+    },
+    "l5_header": {
+      "type": "Stat",
+      "props": {
+        "label": "BEAT (Audiera)",
+        "value": "$2.34",
+        "delta": "-7.4%",
+        "trend": "down"
+      }
+    },
+    "l5_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d -15.6% • $6.2M / #84",
+        "variant": "muted"
+      }
+    },
+    "l6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l6_header",
+        "l6_detail"
+      ]
+    },
+    "l6_header": {
+      "type": "Stat",
+      "props": {
+        "label": "ADI",
+        "value": "$6.54",
+        "delta": "-7.2%",
+        "trend": "down"
+      }
+    },
+    "l6_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +3.9% • $6.3M / #75",
+        "variant": "muted"
+      }
+    },
+    "l7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l7_header",
+        "l7_detail"
+      ]
+    },
+    "l7_header": {
+      "type": "Stat",
+      "props": {
+        "label": "DCR (Decred)",
+        "value": "$12.39",
+        "delta": "-6.1%",
+        "trend": "down"
+      }
+    },
+    "l7_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +10.8% • $1.8M / #155",
+        "variant": "muted"
+      }
+    },
+    "l8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "l8_header",
+        "l8_detail"
+      ]
+    },
+    "l8_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "l8_stat",
+        "l8_badge"
+      ]
+    },
+    "l8_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "KAITO",
+        "value": "$0.826",
+        "delta": "-5.7%",
+        "trend": "down"
+      }
+    },
+    "l8_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FADE",
+        "variant": "outline"
+      }
+    },
+    "l8_detail": {
+      "type": "Text",
+      "props": {
+        "text": "7d +35.0% • $52M / #170",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending_heading",
+        "trending_text"
+      ]
+    },
+    "trending_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending_text": {
+      "type": "Text",
+      "props": {
+        "text": "ADI, PENGU, HYPE, CASHCAT, ANSEM, ONDO, TOSHI (+12% only trending-up)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_heading",
+        "tweets_crypto_section",
+        "tweets_ai_section",
+        "tweets_dev_section"
+      ]
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweets_crypto_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets_crypto_h",
+        "tweets_crypto_text"
+      ]
+    },
+    "tweets_crypto_h": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "tweets_crypto_text": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $63.9k / ETH $1,866 — 6th day of Iran airstrikes dulls risk. DeFiTuna Solana pool hit for $580k. Visa VSP enterprise stablecoin rails (USDC/USDG, 15k banks). Ondo + SBI tokenize Japanese stocks via JPYSC."
+      }
+    },
+    "tweets_ai_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets_ai_h",
+        "tweets_ai_text"
+      ]
+    },
+    "tweets_ai_h": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "tweets_ai_text": {
+      "type": "Text",
+      "props": {
+        "text": "OpenAI ships GPT-5.6 (Sol/Terra/Luna) + ChatGPT Work agent. Meta Muse Spark 1.1 tightens tool-use. Kimi K3 lands 57.1 AA, 2.8T params, 1M ctx, open weights due 7-27. First ARC-AGI-3 Milestone winners announced."
+      }
+    },
+    "tweets_dev_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweets_dev_h",
+        "tweets_dev_text"
+      ]
+    },
+    "tweets_dev_h": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "tweets_dev_text": {
+      "type": "Text",
+      "props": {
+        "text": "Anaconda acquires Kilo (model-independent AI coding assistant, stays open source). Linus vs kernel-devs on Sashiko agentic review. Pocket ID + Tinyauth go OpenID-compatible."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_story",
+        "paper_author_text",
+        "paper_desc",
+        "paper_links"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper_story": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "paper_title",
+        "paper_badge"
+      ]
+    },
+    "paper_title": {
+      "type": "Text",
+      "props": {
+        "text": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+        "variant": "lead"
+      }
+    },
+    "paper_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑105",
+        "variant": "default"
+      }
+    },
+    "paper_author_text": {
+      "type": "Text",
+      "props": {
+        "text": "Zhou et al",
+        "variant": "muted"
+      }
+    },
+    "paper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Closes the gap between million-token inference and 256k RL post-training — matters for any agent whose trajectory accumulates tool outputs, docs, and prior decisions."
+      }
+    },
+    "paper_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "paper_link_arxiv",
+        "paper_link_pdf"
+      ]
+    },
+    "paper_link_arxiv": {
+      "type": "Link",
+      "props": {
+        "label": "Read",
+        "href": "https://arxiv.org/abs/2607.14952"
+      }
+    },
+    "paper_link_pdf": {
+      "type": "Link",
+      "props": {
+        "label": "PDF",
+        "href": "https://arxiv.org/pdf/2607.14952"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "github_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github_heading",
+        "github_text"
+      ]
+    },
+    "github_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "github_text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues in 24h across owner scope."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_heading",
+        "hn_intro",
+        "hn1",
+        "hn2",
+        "hn3",
+        "hn4"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet AI-tooling day — Kimi K3 pelican teardown leads, enterprise-AI harm and an exoplanet round it out.",
+        "variant": "muted"
+      }
+    },
+    "hn1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn1_story",
+        "hn1_desc",
+        "hn1_link"
+      ]
+    },
+    "hn1_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kimi K3 and the pelican benchmark",
+        "href": "https://simonwillison.net/2026/Jul/16/kimi-k3/",
+        "source": "AI",
+        "score": "319 pts · 168 comments"
+      }
+    },
+    "hn1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "simonw benchmarks K3 vs Opus/Sonnet/Fable via SVG-pelican-on-bicycle; 85-token hidden system prompt inferred from token counts."
+      }
+    },
+    "hn1_link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48947717"
+      }
+    },
+    "hn2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn2_story",
+        "hn2_desc",
+        "hn2_link"
+      ]
+    },
+    "hn2_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kaiser nurses say AI + surveillance make care worse",
+        "href": "https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/",
+        "source": "AI-harm",
+        "score": "481 pts · 307 comments"
+      }
+    },
+    "hn2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Nurses fear long-call performance reviews; Kaiser denies AHT is a metric — semantic dodge flagged in comments."
+      }
+    },
+    "hn2_link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48952880"
+      }
+    },
+    "hn3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn3_story",
+        "hn3_desc",
+        "hn3_link"
+      ]
+    },
+    "hn3_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "First atmosphere on Earth-like planet in habitable zone",
+        "href": "https://www.bbc.com/news/articles/cy4kdd1e0ejo",
+        "source": "Science",
+        "score": "435 pts · 256 comments"
+      }
+    },
+    "hn3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "48 light years, plausible near-term probe target; NASA exoplanet catalog live."
+      }
+    },
+    "hn3_link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48947560"
+      }
+    },
+    "hn4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn4_story",
+        "hn4_desc",
+        "hn4_link"
+      ]
+    },
+    "hn4_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "TP-Link Kasa cams leaked home GPS via unauth UDP for 6 years",
+        "href": "https://github.com/BadChemical/IoT-Vulnerability-Research-Public/blob/main/TP-Link_Kasa_EC71/Kasa_EC71.md",
+        "source": "Security",
+        "score": "95 pts · 21 comments"
+      }
+    },
+    "hn4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "2 CVEs, vendor beta patch bricked test device, factory reset doesn't clear prior-owner data."
+      }
+    },
+    "hn4_link": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=48952565"
+      }
+    }
+  }
+}

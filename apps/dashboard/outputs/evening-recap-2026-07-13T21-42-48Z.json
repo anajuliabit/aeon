@@ -1,0 +1,242 @@
+{
+  "root": "card-recap",
+  "state": {},
+  "elements": {
+    "card-recap": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-13"
+      },
+      "children": [
+        "tldr-text",
+        "sep-1",
+        "h-headlines",
+        "stack-headlines",
+        "sep-2",
+        "h-notable",
+        "stack-notable",
+        "sep-3",
+        "h-decisions",
+        "stack-decisions",
+        "sep-4",
+        "h-blockers",
+        "stack-blockers",
+        "sep-5",
+        "footer-text"
+      ]
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: heavy production day — weekly-review article + 2 PRs shipped, cost-report hit CRITICAL; 3 operator calls due by 7-14.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h-headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "stack-headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-1",
+        "headline-2",
+        "headline-3"
+      ]
+    },
+    "headline-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "[self-improve] PR #163 opened: skill-security-scan sandbox-blocked documented as expected failure mode",
+        "href": "https://github.com/anajuliabit/aeon/pull/163",
+        "source": "GitHub"
+      }
+    },
+    "headline-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "[weekly-review] article filed; Investment Advisor 7-day cancellation surfaced as new durable pattern; 4 SMART actions handed off",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/weekly-review-2026-07-13.md",
+        "source": "GitHub"
+      }
+    },
+    "headline-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "[skill-security-scan] SECURITY_SCAN_NOCHANGE d7; scan report written",
+        "href": "https://github.com/anajuliabit/aeon/blob/main/articles/security-scan-2026-07-13.md",
+        "source": "GitHub"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4",
+        "notable-5"
+      ]
+    },
+    "notable-1": {
+      "type": "Alert",
+      "props": {
+        "title": "[skill-health] CRITICAL(1) NOTIFY",
+        "message": "cost-report DEGRADED→CRITICAL same day (cf=5, 14d down, ISS-025)",
+        "type": "error"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "[daily-routine] BTC sub-$63.5k gate (arc broken intraday), tape 27% green, XEC/DCR privacy top-2 first-time, DEXE d2 ATH sustained"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "[reflect] MEMORY.md 71L→60L; 7 pattern updates (BEAT n=5→n=4, DEXE confirmed, XEC/DCR new, LAB d6 reference-case)"
+      }
+    },
+    "notable-4": {
+      "type": "Text",
+      "props": {
+        "text": "[action-converter] 5 actions avg 4.4/5: ISS-025 spec · SLX settle · PR #162 rebase · ISS-027 file · DEXE insert"
+      }
+    },
+    "notable-5": {
+      "type": "Text",
+      "props": {
+        "text": "[agent-buzz] 2 clusters (MCP-as-substrate / missing-agent-abstraction); MCP-becomes-infra d4"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h-decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "stack-decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decision-1",
+        "decision-2",
+        "decision-3"
+      ]
+    },
+    "decision-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "merge or close PR #162 (CONFLICTING, 50h stalled) — operator deadline 2026-07-14",
+        "href": "https://github.com/anajuliabit/aeon/pull/162",
+        "source": "GitHub"
+      }
+    },
+    "decision-2": {
+      "type": "Text",
+      "props": {
+        "text": "author ISS-025 capture-step PR against aeon.yml:479-493 — operator by 2026-07-16, priority 20"
+      }
+    },
+    "decision-3": {
+      "type": "Text",
+      "props": {
+        "text": "investigate Investment Advisor 7-consecutive-day cancellations (7-07→7-13) — assign self-improve by 2026-07-16"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h-blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "stack-blockers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocker-1",
+        "blocker-2"
+      ]
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "cf=5, 14d down; Mon retry failed 20:15Z (ISS-025 sandbox-truncation)",
+        "type": "error"
+      }
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "title": "12:00 UTC 8-skill batch dark d16",
+        "message": "ISS-027 unfiled; rule-5 scheduler block",
+        "type": "warning"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+7 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-16"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_summary",
+        "badge_overall",
+        "alert_degrading",
+        "separator1",
+        "heading_blocked",
+        "stack_goals_blocked",
+        "separator2",
+        "heading_on_track",
+        "stack_goal_on_track",
+        "separator3",
+        "heading_sources",
+        "text_sources"
+      ]
+    },
+    "stack_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_7goals",
+        "stat_0risk",
+        "stat_0attention",
+        "stat_1track",
+        "stat_6blocked",
+        "stat_0done"
+      ]
+    },
+    "stat_7goals": {
+      "type": "Stat",
+      "props": {
+        "label": "Goals",
+        "value": "7"
+      }
+    },
+    "stat_0risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At risk",
+        "value": "0"
+      }
+    },
+    "stat_0attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs attention",
+        "value": "0"
+      }
+    },
+    "stat_1track": {
+      "type": "Stat",
+      "props": {
+        "label": "On track",
+        "value": "1"
+      }
+    },
+    "stat_6blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "6"
+      }
+    },
+    "stat_0done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "badge_overall": {
+      "type": "Badge",
+      "props": {
+        "text": "Overall: flat",
+        "variant": "outline"
+      }
+    },
+    "alert_degrading": {
+      "type": "Alert",
+      "props": {
+        "title": "1 degrading flip",
+        "message": "investment-advisor ON_TRACK → BLOCKED on PR #164 CONFLICTING",
+        "type": "warning"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_blocked": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "stack_goals_blocked": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "goal_iss025",
+        "goal_pr162",
+        "goal_inv_advisor",
+        "goal_cost_report",
+        "goal_batch_dark",
+        "goal_onchain_config"
+      ]
+    },
+    "goal_iss025": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_iss025",
+        "text_iss025_details",
+        "text_iss025_action"
+      ]
+    },
+    "heading_iss025": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-025 capture-step PR",
+        "level": "h3"
+      }
+    },
+    "text_iss025_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator direct-author against `.github/workflows/aeon.yml:479-495` chain-runner (T-0 firm today 7-16, rule-5 workflow-file class conclusive)",
+        "variant": "body"
+      }
+    },
+    "text_iss025_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator authors capture-step PR against aeon.yml:479-495 today",
+        "variant": "muted"
+      }
+    },
+    "goal_pr162": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_pr162",
+        "text_pr162_details",
+        "text_pr162_action"
+      ]
+    },
+    "heading_pr162": {
+      "type": "Heading",
+      "props": {
+        "text": "PR #162 fix(daily-routine)",
+        "level": "h3"
+      }
+    },
+    "text_pr162_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator rebase, CONFLICTING ~116h36m since 2026-07-11 (T+2 day-3 rollover)",
+        "variant": "body"
+      }
+    },
+    "text_pr162_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: rebase PR #162 to resolve CONFLICTING, request operator review",
+        "variant": "muted"
+      }
+    },
+    "goal_inv_advisor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_inv_advisor",
+        "text_inv_advisor_details",
+        "text_inv_advisor_action"
+      ]
+    },
+    "heading_inv_advisor": {
+      "type": "Heading",
+      "props": {
+        "text": "Investment Advisor 7-consec-cancellation",
+        "level": "h3"
+      }
+    },
+    "text_inv_advisor_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on PR #164 rebase, flipped UNKNOWN → CONFLICTING between 09:05Z and 14:52Z 7-16 (script-file class = rule-5 primitive extends past workflow-file class)",
+        "variant": "body"
+      }
+    },
+    "text_inv_advisor_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: rebase PR #164 before 24h stall gate at 19:31Z 7-16",
+        "variant": "muted"
+      }
+    },
+    "goal_cost_report": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_cost_report",
+        "text_cost_report_details",
+        "text_cost_report_action"
+      ]
+    },
+    "heading_cost_report": {
+      "type": "Heading",
+      "props": {
+        "text": "cost-report STUCK",
+        "level": "h3"
+      }
+    },
+    "text_cost_report_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on ISS-025 capture-step PR upstream, dispatched 2026-07-13T20:44Z, ~66h07m stuck",
+        "variant": "body"
+      }
+    },
+    "text_cost_report_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: unblocks when ISS-025 operator PR ships today T-0",
+        "variant": "muted"
+      }
+    },
+    "goal_batch_dark": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_batch_dark",
+        "text_batch_dark_details",
+        "text_batch_dark_action"
+      ]
+    },
+    "heading_batch_dark": {
+      "type": "Heading",
+      "props": {
+        "text": "12:00 UTC batch DARK",
+        "level": "h3"
+      }
+    },
+    "text_batch_dark_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on ISS-025/027 scheduler fix in aeon.yml, d19 live-slot verified MISS today (12:00Z + 13:00Z + 07:00Z morning batch extension)",
+        "variant": "body"
+      }
+    },
+    "text_batch_dark_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: bundle scheduler fix into ISS-025 operator PR against aeon.yml",
+        "variant": "muted"
+      }
+    },
+    "goal_onchain_config": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_onchain_config",
+        "text_onchain_config_details",
+        "text_onchain_config_action"
+      ]
+    },
+    "heading_onchain_config": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator on-chain config",
+        "level": "h3"
+      }
+    },
+    "text_onchain_config_details": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator to add pool/position entries to `memory/on-chain-watches.yml` + set ALCHEMY_API_KEY + ETHERSCAN_API_KEY, d40",
+        "variant": "body"
+      }
+    },
+    "text_onchain_config_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator populates on-chain-watches.yml + configures ALCHEMY/ETHERSCAN keys",
+        "variant": "muted"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_on_track": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h2"
+      }
+    },
+    "stack_goal_on_track": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_claude_codif",
+        "text_claude_codif"
+      ]
+    },
+    "heading_claude_codif": {
+      "type": "Heading",
+      "props": {
+        "text": "CLAUDE.md rule-5 codification",
+        "level": "h3"
+      }
+    },
+    "text_claude_codif": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 129 activity/14d (new goal, deadline T-1 tomorrow 2026-07-17, self-improve tick fires tomorrow = deadline day; PR #164 flip today implies rule-5 primitive needs re-scope past workflow-file class before codification)",
+        "variant": "body"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-18"
+      },
+      "children": [
+        "stack_focus",
+        "sep1",
+        "stack_since",
+        "sep2",
+        "stack_running"
+      ]
+    },
+    "stack_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_focus",
+        "item_focus_1",
+        "item_focus_2",
+        "item_focus_3"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus Today",
+        "level": "h2"
+      }
+    },
+    "item_focus_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. iss-025 capture-step pr — cost-report stuck d5 ~120h, sandbox-truncation tail extends daily",
+        "variant": "body"
+      }
+    },
+    "item_focus_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. kill 3 stalled prs #162/#163/#164 — locks self-improve, blocked rule-5 codification yesterday",
+        "variant": "body"
+      }
+    },
+    "item_focus_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. claude.md rule-5 section — T+1 slip, codifies auto-commit-drift n=4 (operator-authored path)",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_since",
+        "item_since_1",
+        "item_since_2",
+        "item_since_3",
+        "item_since_4",
+        "item_since_5"
+      ]
+    },
+    "heading_since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since Yesterday",
+        "level": "h2"
+      }
+    },
+    "item_since_1": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve exit-gate on rule-5 T-0 = first-ever skip on a codification deadline day (3+ open prs threshold hit)",
+        "variant": "body"
+      }
+    },
+    "item_since_2": {
+      "type": "Text",
+      "props": {
+        "text": "18:00Z evening batch fired cleanly full-cluster 5-skill (goal-tracker + skill-health + reflect + action-converter + self-improve exit-gate skip)",
+        "variant": "body"
+      }
+    },
+    "item_since_3": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest logged fortinet fortisandbox pair CVE-2026-39808/-25089 EPSS 0.842 = first ≥0.5 in memory; BOD due today",
+        "variant": "body"
+      }
+    },
+    "item_since_4": {
+      "type": "Text",
+      "props": {
+        "text": "reflect rewrote memory.md 59L → 54L; gitlawb whipsaw-then-continuation codifies (4-session shape, day-4 rail-breach -18.89%); WELL distribution-with-return on 3.29× vol spike",
+        "variant": "body"
+      }
+    },
+    "item_since_5": {
+      "type": "Text",
+      "props": {
+        "text": "btc arc softens through the day 63,946 → 62,859 → 63,485 → 64,133; reclaim63500 armed, re-arm sub-60,500",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_running",
+        "item_running_1",
+        "item_running_2",
+        "item_running_3",
+        "item_running_4",
+        "item_running_5"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running Today",
+        "level": "h2"
+      }
+    },
+    "item_running_1": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat @ 08:00Z — tests morning-batch dead-slot d3 vs today's fire",
+        "variant": "body"
+      }
+    },
+    "item_running_2": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert @ 12:00Z — gitlawb d5 continuation/exhaustion, WELL distribution-with-return d2, reppo d4",
+        "variant": "body"
+      }
+    },
+    "item_running_3": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest @ 14:00Z — npm-malware wave d5 (breaks single-digits or 10+ new-baseline), anthropic-scope typosquat n=3 test",
+        "variant": "body"
+      }
+    },
+    "item_running_4": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner @ 16:00Z (sat-weekly)",
+        "variant": "body"
+      }
+    },
+    "item_running_5": {
+      "type": "Text",
+      "props": {
+        "text": "18:00Z evening batch — self-improve skips (even-day cadence), next fire 7-19",
+        "variant": "body"
+      }
+    }
+  }
+}

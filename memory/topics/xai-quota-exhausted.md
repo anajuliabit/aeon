@@ -1,11 +1,13 @@
 ---
 name: xai-quota-exhausted
-description: X.AI monthly credit limit hit, blocking 10+ XAI-dependent skills (day 18 of outage as of 2026-07-03)
+description: X.AI monthly credit limit hit, blocking 10+ XAI-dependent skills (day 30 as of 2026-07-15; retirement candidate — 4 weeks no change vector)
 metadata:
   type: project
 ---
 
-Team 3a8b4c1e monthly credit limit reached 2026-06-16 (day 18 as of 2026-07-03), blocking:
+**Retirement candidate 2026-07-15** — day 30 of outage, 4 weeks with no change vector. Weekly-review 7-13 flagged this goal to retire on next MEMORY consolidation. Fallback paths cover the surface; the only durable-relevant tracking piece is that reflect + morning-brief keep advancing the day counter with no operator top-up signal.
+
+Team 3a8b4c1e monthly credit limit reached 2026-06-16 (day 30 as of 2026-07-15), blocking:
 - token-pick
 - agent-buzz
 - list-digest

@@ -1,11 +1,11 @@
-*Weekly Shiplog — 2026-06-29*
+*Weekly Shiplog — 2026-07-20*
 
-Aeon stopped trusting its own filesystem this week: cron state and health priorities now live in GitHub Issues, and a new pre-install security verdict has to clear before any external skill reaches the agent.
+mcp integrations moved from prototype to production this week: oauth stopped breaking on rotating-token providers, three new mcp skills swapped in for the retired ctrl skill, and the aeon developer kit landed for outside builders.
 
 Themes:
-- Cron state and votable health move into GitHub Issues
-- Phylax becomes the pre-install verdict for external skills
-- The dashboard stops surfacing Dependabot
+- OAuth for MCP servers becomes durable
+- Three new MCP skills, CTRL retires
+- Aeon Developer Kit lands
 
-23 commits · 23 PRs · +3,176 / −442
-https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-06-29.md
+29 commits · 26 PRs · +1,692 / −355
+https://github.com/anajuliabit/aeon/blob/main/articles/weekly-shiplog-2026-07-20.md

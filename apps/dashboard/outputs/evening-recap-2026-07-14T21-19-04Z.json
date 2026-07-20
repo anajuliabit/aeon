@@ -1,0 +1,449 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-14",
+        "description": "solid day — security wave caught, memory consolidated, 2 skills promoted — but PR #162 blew past its T-0 deadline and PR #163 crossed 24h; both need decisions now"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "text-tldr",
+        "sep-1",
+        "section-headlines",
+        "sep-2",
+        "section-notable",
+        "sep-3",
+        "section-decisions",
+        "sep-4",
+        "section-blockers",
+        "sep-5",
+        "text-footer"
+      ]
+    },
+    "text-tldr": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: solid day — security wave caught, memory consolidated, 2 skills promoted — but PR #162 blew past its T-0 deadline and PR #163 crossed 24h; both need a decision now",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-headlines",
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "heading-headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-h1",
+        "text-h1"
+      ]
+    },
+    "badge-h1": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest"
+      }
+    },
+    "text-h1": {
+      "type": "Text",
+      "props": {
+        "text": "30-pkg npm malware resurfaces d1; Cisco IOS 12.4 KEV (BOD 7-16); DIRAC pip 4× RCE cluster · ",
+        "variant": "body"
+      }
+    },
+    "headline-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-h2",
+        "text-h2"
+      ]
+    },
+    "badge-h2": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health"
+      }
+    },
+    "text-h2": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending + thought-review promoted DEGRADED→WARNING (sr cross 0.60); hash 7ca54d36",
+        "variant": "body"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-h3",
+        "text-h3"
+      ]
+    },
+    "badge-h3": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect"
+      }
+    },
+    "text-h3": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY 60L→66L; BTC arc + PUMP moved to Recently Cleared; Investment Advisor 7-consec-cancellation added as goal",
+        "variant": "body"
+      }
+    },
+    "headline-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-h4",
+        "text-h4"
+      ]
+    },
+    "badge-h4": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine"
+      }
+    },
+    "text-h4": {
+      "type": "Text",
+      "props": {
+        "text": "BTC arc CLOSED; DCR -24% privacy reversal d2; DRV +51%; Fed-hike macro overlay",
+        "variant": "body"
+      }
+    },
+    "headline-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-h5",
+        "text-h5"
+      ]
+    },
+    "badge-h5": {
+      "type": "Badge",
+      "props": {
+        "text": "action-converter"
+      }
+    },
+    "text-h5": {
+      "type": "Text",
+      "props": {
+        "text": "5 actions avg 4.4/5: decide PR #162 · land ISS-025 · merge PR #163 · scaffold ISS-027 · add DEXE row",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-notable",
+        "notable-1",
+        "notable-2",
+        "notable-3",
+        "notable-4"
+      ]
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-n1",
+        "text-n1"
+      ]
+    },
+    "badge-n1": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending"
+      }
+    },
+    "text-n1": {
+      "type": "Text",
+      "props": {
+        "text": "destructive_command_guard 61.7× v0.6.6 = agent-safety-guardrail-as-primitive day-1",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-n2",
+        "text-n2"
+      ]
+    },
+    "badge-n2": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz"
+      }
+    },
+    "text-n2": {
+      "type": "Text",
+      "props": {
+        "text": "skills-as-primitive leads (rohit4verse 500.5 = month-high); 3 clusters",
+        "variant": "body"
+      }
+    },
+    "notable-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-n3",
+        "text-n3"
+      ]
+    },
+    "badge-n3": {
+      "type": "Badge",
+      "props": {
+        "text": "goal-tracker"
+      }
+    },
+    "text-n3": {
+      "type": "Text",
+      "props": {
+        "text": "4 BLOCKED / 2 ON TRACK; all blocked goals share operator-direct-author dependency",
+        "variant": "body"
+      }
+    },
+    "notable-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-n4",
+        "text-n4"
+      ]
+    },
+    "badge-n4": {
+      "type": "Badge",
+      "props": {
+        "text": "list-digest"
+      }
+    },
+    "text-n4": {
+      "type": "Text",
+      "props": {
+        "text": "Flowslikeosmo: garbage-UX launchpads trading 100× above well-designed",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-decisions",
+        "decision-1",
+        "decision-2",
+        "decision-3"
+      ]
+    },
+    "heading-decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-d1",
+        "text-d1",
+        "link-d1"
+      ]
+    },
+    "badge-d1": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #162",
+        "variant": "outline"
+      }
+    },
+    "text-d1": {
+      "type": "Text",
+      "props": {
+        "text": "merge or close — T-0 deadline TODAY missed, ~75h stalled CONFLICTING",
+        "variant": "body"
+      }
+    },
+    "link-d1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Pull Request #162",
+        "href": "https://github.com/anajuliabit/aeon/pull/162",
+        "source": "GitHub"
+      }
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-d2",
+        "text-d2",
+        "link-d2"
+      ]
+    },
+    "badge-d2": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #163",
+        "variant": "outline"
+      }
+    },
+    "text-d2": {
+      "type": "Text",
+      "props": {
+        "text": "merge or close — crossed 24h gate at 18:09Z",
+        "variant": "body"
+      }
+    },
+    "link-d2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Pull Request #163",
+        "href": "https://github.com/anajuliabit/aeon/pull/163",
+        "source": "GitHub"
+      }
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-d3",
+        "text-d3"
+      ]
+    },
+    "badge-d3": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025"
+      }
+    },
+    "text-d3": {
+      "type": "Text",
+      "props": {
+        "text": "author capture-step PR against aeon.yml:479-495 — deadline 7-16 (T-2 today)",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-blockers": {
+      "type": "Alert",
+      "props": {
+        "title": "Blockers",
+        "message": "cost-report — STUCK d2 ~47h dispatched-never-completed; ISS-025 cf=5",
+        "type": "warning"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "+10 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

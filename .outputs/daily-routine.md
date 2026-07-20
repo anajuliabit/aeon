@@ -1,45 +1,52 @@
-*Daily Routine — 2026-07-11*
+*Daily Routine — 2026-07-20*
 
-_pulse mixed — 128/184 green (69.6%), median top-50 +0.02%; btc $64.1k +0.2% (7d +2.7%), eth $1.80k +1.4%; sol -1.1%, hype -2.5%. LAB day-4 cascade re-arms -32% (was -6% floor yesterday), VELVET dead-cat FAILS -20% (was +22% yesterday), MORPHO one-day breakout unwinds -8%._
+_tilted red — 26/100 top-100 green (down from 51 yesterday = clean risk-off shift), top-50 median flat. BTC $64,190 (-0.8%), ETH $1,862 (-0.3%), SOL $76.00 (-0.2%), BNB $566 (-0.5%), HYPE $60.72 flat. Filter kept 183/250._
 
-*Top 10 Winners (24h)*
-1. CASHCAT $0.201 (+36%) — day-6 trending, PUMP-RISK+MAJOR-VOL, mcap $199M
-2. BEAT $2.86 (+32%) — audiera rank #71, 7d -2.4% whipsaw high
-3. TIBBIR $0.145 (+20%) — ribbita by virtuals, 7d +34%
-4. B $0.187 (+16%) — BUILDon rank #177, 7d -15% dead-cat
-5. VIRTUAL $0.61 (+14%) — 7d +7%, vol $202M rank #113
-6. GRASS $0.415 (+14%) — reversal from FADE thesis d1-d2, 7d still -26%
-7. ZANO $9.66 (+13%) — 7d +6%
-8. UB $0.076 (+9%) — unibase
-9. BP $0.60 (+7.5%) — backpack token
-10. M $1.29 (+7.5%) — memecore rank #44, 7d -19%
+*Top Winners (24h)*
+1. B (BUILDon) $0.230 +24.4% / 7d +118% [BREAKOUT d2 HOLD, breaks one-day-unwind pattern n=5]
+2. PUMP $0.00201 +22.3% / 7d +33% • $148M vol / #76 [TRENDING]
+3. PI $0.0986 +14.4% / 7d +13% • $41M / #64
+4. ADI $6.91 +10.0% / 7d -2%
+5. JTO $0.599 +9.9% / 7d -7%
+6. TAG (TAGGER) $0.00120 +4.6% / 7d +28% [MICROCAP]
+7. KAITO $0.955 +3.7% / 7d +44% [FADE-tag reversal d2, 7d extends +37→+44%]
+8. SNX $0.228 +2.9%
+9. PYTH $0.0499 +2.8%
+10. JUP $0.196 +2.7% / 7d -3%
 
-*Top 10 Losers (24h)*
-1. LAB $0.77 (-32%) — capitulation d4, -91% 7d, vol $113M rank #145; MEMORY "floor at -6%" invalidated
-2. GWEI $0.060 (-21%) — ETHGas continues, -58% 7d
-3. VELVET $0.43 (-20%) — dead-cat fails, 7d flips +22% → -22% overnight
-4. MORPHO $2.08 (-8%) — one-day breakout unwind (7-09 +11% winner → today -8%)
-5. KAITO $0.61 (-8%) — 7d -2%
-6. EDGE $0.39 (-8%) — edgeX still 7d +50%
-7. BDX $0.090 (-7%) — beldex
-8. VVV $10.62 (-6%) — venice token continues weak, 7d -16%
-9. PUMP $0.00143 (-5%) — pre-unlock (22.2% mcap hits float Sat 7-12)
-10. APE $0.157 (-4%)
+*Top Losers (24h)*
+1. TRAC (OriginTrail) $0.314 -10.0% / 7d +19% [unwind reversal from yesterday's +14.7%]
+2. AKT $0.509 -6.0% / 7d -13%
+3. BinanceLife $0.652 -5.8%
+4. TIBBIR (Ribbita) $0.108 -5.7%
+5. XEC (eCash) $0.00000791 -5.7% / 7d +12% [d2 breakout unwinds, pattern n=6]
+6. WLD $0.358 -5.0% / 7d -15%
+7. ZEC $531.56 -4.9% [MAJOR #14]
+8. FIL $0.709 -4.7%
+9. TRUMP $1.56 -4.5%
+10. KAIA $0.0314 -4.4%
+
+*Trending*
+BANK (Lorenzo Protocol) +110% #269, PI, PUMP, PENGU, CASHCAT +26% #344, ADI, ACE +116% #964 microcap, ANSEM, LIT, TLM.
+
+*Notable*
+• BUILDon +24.4% d2 hold = one-day-breakout-unwind pattern n=5 breaks; 7d +118% clean continuation. KAITO FADE-tag 24h-misfire (7-18) fully reverses: 7d +37% → +44%. TRAC +14.7% → -10.0% and XEC +4.1% → -5.7% both add to unwind class. BONK +2.6% dead-cat after 3d capitulation.
 
 *Tweet Roundup*
-*Crypto:* market cap $2.28T (+$0.03T), fear/greed 23→26 easing; SK Hynix tokenized shares live on Telegram Wallet/Backpack/Ondo; ESMA warns crypto firms of MiCA-phishing wave; regulation overtakes geopolitics as narrative driver.
-*AI:* GPT-5.6 Sol Ultra publishes proof of the Cycle Double Cover Conjecture (HN 439pts); OpenAI ChatGPT Work + Sites feature ships (prompt → spreadsheet/deck/web app); Anthropic Claude task helper leaves desktop → mobile handoff + scheduled jobs beta (Max first).
-*Dev:* GLM-5.2 running on slow hardware hits HN #2 (849pts) — open-weight local runtime sovereignty; NVIDIA Build hosts GLM-5.2 endpoint; Z.ai launches ZCode to challenge Cursor/Claude Code/Copilot; Kimi K2.7 Code now in Copilot picker.
+*Crypto:* Kimi K3 2.8T open-MoE release triggers BTC/ETH slide (DeepSeek-shock echo) — open weights ship 7-27 d7 out. BTC ETFs $273M net over 2 weeks breaks 8-week $8B+ outflow streak, but scale still "peanuts" (Coindesk). BlackRock IBIT led $132.3M 7-17 net-inflow day; ETH ETFs $36.7M same day.
+*AI:* Qwen 3.8 launches 2.4T MoE multimodal claiming "second only to Fable 5" — **china-lab edge-inference cluster n=3** (airllm + kimi-cli + Qwen 3.8). Claude Fable 5 counterexample to Jacobian Conjecture (Alpöge) — LLM-solves-open-math n=2 with yesterday's GPT-5.6 convex-opt 30-yr gap, but Fable claim under active technical challenge (properness condition). Apple Intelligence registered in mainland China with Qwen backing (CAC 7-15).
+*Dev:* Claude Code v2.1.181 runs on Bun's Rust port (10% faster startup) — Bun being rewritten Zig→Rust using dozens of parallel Claude Code sessions = meta-aeon signal. Code Review multi-agent pipeline lands with 5 review levels (Low → Ultra). Agent View fleet dashboard + /goal command + Opus 4.8 default + plugin ecosystem all shipped.
 
 *Paper of the Day*
-"Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents" (Wu et al., 2607.08716) — separate memory agent runs alongside unmodified action agent, injects reminders on demand. +8.3pp Terminal-Bench, +6.8pp τ²-Bench. Directly relevant to Aeon's chronic memory/log pattern. https://huggingface.co/papers/2607.08716
+"xHC: Expanded Hyper-Connections" (33↑, 2607.14530) — expands Transformer residual stream into N parallel streams; Manifold-Constrained HC stabilizes training. Architecture-primitive extending memory scaling past width/depth. Runner-ups: Xiaomi-Robotics-1 100K-hr VLA (32↑, HN #12 cross-signal), Cura 1T agentic healthcare (31↑), Loopie looped-MoE 20B/2B-active (24↑, small-MoE-frontier rail-adjacent).
 
 *GitHub Issues*
-- No new issues in operator repos since 6-25 (5 open advisor tickets #141-#145 chronic).
+No new issues since 07:14Z yesterday.
 
 *HN Digest*
-1. [Apple sues OpenAI, accuses ex-employees of trade-secret theft](https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/) (975pts, 490c)
-2. [Show HN: GLM-5.2 running on my slow computer](https://github.com/JustVugg/colibri) (849pts, 210c) — open-weight local runtime
-3. [QuadRF can spot drones and see WiFi through my wall](https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/) (549pts)
-4. [GPT-5.6 Sol Ultra: proof of the Cycle Double Cover Conjecture](https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf) (439pts, 357c) — AI-does-math frontier
-5. [Good Tools Are Invisible](https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/) (409pts) — gingerbill/odin
+1. [Show HN: $120k bowling center → $1,600 in ESP32s](https://news.ycombinator.com/item?id=48968606) (2143pts) — hardware-hack porn
+2. [Qwen 3.8](https://news.ycombinator.com/item?id=48966120) (864pts, 588 cmts) — Alibaba 2.4T MoE
+3. [Claude Code uses Bun written in Rust now](https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/) (496pts) — meta-aeon runtime shift
+4. [Claude Fable produced a counterexample to the Jacobian Conjecture](https://news.ycombinator.com/item?id=48973869) (330pts) — LLM-open-math n=2
+
+_source-status: cg_markets=ok, cg_trending=ok, hf_papers=ok, hn_algolia=ok, xai=blocked(sandbox), websearch=ok, gh_search=ok(0 issues)_

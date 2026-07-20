@@ -1,0 +1,289 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "morning brief — 2026-07-20"
+      },
+      "children": [
+        "section-focus",
+        "sep1",
+        "section-since",
+        "sep2",
+        "section-watch",
+        "sep3",
+        "section-running"
+      ]
+    },
+    "section-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025 capture-step pr — cost-report mon-weekly tick fires 07z today = 3rd-consec miss test (sandbox-truncation d28)",
+        "variant": "body"
+      }
+    },
+    "focus-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "kill or rebase pr #162/#163/#164 — self-improve 2-consec queue-lock codified 7-19, operator direct-author sole path",
+        "variant": "body"
+      }
+    },
+    "focus-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog 09z + weekly-review 19z — 3-consec mon-miss risk lands today (last_success 6-29 for shiplog)",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-since",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4",
+        "since-item-5",
+        "since-item-6"
+      ]
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve 18:32z codified `improvement-PR-queue-locks-self-improve 2-consec` — rule-5 T+2 lands via skill exit-gate, revises 7-19 focus #3",
+        "variant": "body"
+      }
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "fork-skill-digest 18:52z: fleet -14 (largest single-week drop tracked), 11 default_flip_disable signals stable at 3-week persistence threshold",
+        "variant": "body"
+      }
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort 20:04z: went_stale 2 (aluma + bbridgeers), vibesan7 deleted (was power 9 skills)",
+        "variant": "body"
+      }
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "reflect 18:42z: 11 patterns + 5 revisions (kimi k3 open-weights d7 out to 7-27 ship, china-lab edge-inference n=2, feed-forward-replaces-iterative n=1)",
+        "variant": "body"
+      }
+    },
+    "since-item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-btc-current",
+        "stat-btc-close"
+      ]
+    },
+    "stat-btc-current": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC (04:52z)",
+        "value": "$64,563"
+      }
+    },
+    "stat-btc-close": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC close (7-19)",
+        "value": "$64,679"
+      }
+    },
+    "since-item-6": {
+      "type": "Text",
+      "props": {
+        "text": "reclaim63500 holds, no crossings",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-watch",
+        "watch-item-1",
+        "watch-item-2"
+      ]
+    },
+    "heading-watch": {
+      "type": "Heading",
+      "props": {
+        "text": "watch",
+        "level": "h2"
+      }
+    },
+    "watch-item-1": {
+      "type": "Alert",
+      "props": {
+        "title": "claude-code sandbox limitation",
+        "message": "sandbox.excludedCommands does not exempt listed commands from network enforcement (iss #53012 upstream) — cost-report curl-blocked is upstream not local config; iss-025 pr may need `dangerouslyDisableSandbox` route → focus #1",
+        "type": "warning"
+      }
+    },
+    "watch-item-2": {
+      "type": "Alert",
+      "props": {
+        "title": "gh actions cron drift",
+        "message": "cron drift >4h continuously worsening (community #156282 + #196910) — today's 07z cost-report or 09z weekly-shiplog no-show may be cron drift, not sandbox; external scheduler fixes whole mon cluster in one move → focus #3",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-running",
+        "running-list"
+      ]
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "running today (mon)",
+        "level": "h2"
+      }
+    },
+    "running-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "running-1",
+        "running-2",
+        "running-3",
+        "running-4",
+        "running-5",
+        "running-6",
+        "running-7",
+        "running-8"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "07z cost-report (mon-weekly test) · morning-brief · daily-routine · thought-review",
+        "variant": "caption"
+      }
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "08z skill-freshness · 08/14/20z heartbeat",
+        "variant": "caption"
+      }
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "09z weekly-shiplog (mon-weekly test) · github-trending",
+        "variant": "caption"
+      }
+    },
+    "running-4": {
+      "type": "Text",
+      "props": {
+        "text": "10z unlock-monitor (mon-weekly) · 12z token-alert",
+        "variant": "caption"
+      }
+    },
+    "running-5": {
+      "type": "Text",
+      "props": {
+        "text": "14z security-digest · search-skill · deal-flow (mon-weekly cluster)",
+        "variant": "caption"
+      }
+    },
+    "running-6": {
+      "type": "Text",
+      "props": {
+        "text": "16z skill-security-scan (mon-weekly) · 17z list-digest · 17:30z agent-buzz",
+        "variant": "caption"
+      }
+    },
+    "running-7": {
+      "type": "Text",
+      "props": {
+        "text": "18z goal-tracker · skill-health · reflect · action-converter (self-improve skips, even day)",
+        "variant": "caption"
+      }
+    },
+    "running-8": {
+      "type": "Text",
+      "props": {
+        "text": "19z weekly-review (mon-weekly test) · 21z evening-recap · thought-review",
+        "variant": "caption"
+      }
+    }
+  }
+}

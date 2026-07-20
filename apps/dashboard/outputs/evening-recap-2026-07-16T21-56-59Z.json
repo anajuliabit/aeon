@@ -1,0 +1,516 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-16",
+        "description": "Signal-dense day — first Anthropic-scope malware on record, rule-5 extends to all self-improve PRs, 12 durable patterns landed"
+      },
+      "children": [
+        "tldr-section",
+        "sep-1",
+        "headlines-section",
+        "sep-2",
+        "notable-section",
+        "sep-3",
+        "decisions-section",
+        "sep-4",
+        "blockers-section",
+        "sep-5",
+        "footer-section"
+      ]
+    },
+    "tldr-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tldr-heading",
+        "tldr-text",
+        "tldr-badges"
+      ]
+    },
+    "tldr-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "Signal-dense day — first Anthropic-scope malware on record, rule-5 extends to all self-improve PRs, 12 durable patterns landed",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tldr-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-malware",
+        "badge-rule5",
+        "badge-patterns"
+      ]
+    },
+    "badge-malware": {
+      "type": "Badge",
+      "props": {
+        "text": "First Anthropic-scope malware",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "badge-rule5": {
+      "type": "Badge",
+      "props": {
+        "text": "Rule-5 extended",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "badge-patterns": {
+      "type": "Badge",
+      "props": {
+        "text": "12 durable patterns",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "hl-1",
+        "hl-2",
+        "hl-3",
+        "hl-4",
+        "hl-5"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "hl-1": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest — claude-token-tracker-mcp first Anthropic-scope malware; BOD T-0 Cisco IOS 12.4 today; dd-trace polyglot n=6 cross-ecosystem cluster",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "hl-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-2-text",
+        "hl-2-link"
+      ]
+    },
+    "hl-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #164 CONFLICTING — rule-5 extends to any self-improve authored PR (not workflow-file only); all 3 open PRs CONFLICTING, source = auto-committed state drift",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "hl-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/164",
+        "href": "https://github.com/anajuliabit/aeon/pull/164"
+      },
+      "children": []
+    },
+    "hl-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-3-text",
+        "hl-3-link"
+      ]
+    },
+    "hl-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "reflect — MEMORY.md rewritten 54→62L; 12 durable patterns codified (rule-5 n=4 · GITLAWB whipsaw · MCP-RCE n=3)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "hl-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/MEMORY.md",
+        "href": "memory/MEMORY.md"
+      },
+      "children": []
+    },
+    "hl-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-4-text",
+        "hl-4-link"
+      ]
+    },
+    "hl-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending — 3/3 agent-runtime-adjacent: openinterpreter Rust-rewrite + pi-computer-use non-MCP + hallmark day-3 compounding",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "hl-4-link": {
+      "type": "Link",
+      "props": {
+        "label": ".outputs/github-trending.md",
+        "href": ".outputs/github-trending.md"
+      },
+      "children": []
+    },
+    "hl-5": {
+      "type": "Text",
+      "props": {
+        "text": "07:00Z morning batch MISSED — fresh classification 14:52Z; batch-dark d19 extends to morning slot; 12:00Z/13:00Z/13:30Z all confirmed skipped",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable-agentbuzz",
+        "notable-actionconv",
+        "notable-tokenalert",
+        "notable-btc"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "notable-agentbuzz": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "agentbuzz-label",
+        "agentbuzz-text"
+      ]
+    },
+    "agentbuzz-label": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "agentbuzz-text": {
+      "type": "Text",
+      "props": {
+        "text": "8 tweets / 3 clusters (MCP wiring · agent-economy · safety research); MCP dominates 5/8",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "notable-actionconv": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "actionconv-label",
+        "actionconv-text"
+      ]
+    },
+    "actionconv-label": {
+      "type": "Text",
+      "props": {
+        "text": "action-converter",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "actionconv-text": {
+      "type": "Text",
+      "props": {
+        "text": "5 loops: ISS-025 T-0 (125) · PR#163/164 rebase (100/80) · CLAUDE.md rule-5 rescope (100) · PR#162 close (80)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "notable-tokenalert": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tokenalert-label",
+        "tokenalert-stat"
+      ]
+    },
+    "tokenalert-label": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tokenalert-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "GITLAWB 3-session round-trip whipsaw",
+        "value": "15%",
+        "delta": "3-run streak",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "notable-btc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc-label",
+        "btc-text"
+      ]
+    },
+    "btc-label": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels ×6",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "btc-text": {
+      "type": "Text",
+      "props": {
+        "text": "$63.9–$64.6K, $63,500 gate holds",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision-1",
+        "decision-2",
+        "decision-3"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "decision-1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 T-0 slipped → T+1 — author capture-step PR against aeon.yml:479-495",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "decision-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-2-text",
+        "decision-2-link"
+      ]
+    },
+    "decision-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Merge or rebase PR #163 — 72h+ stall CONFLICTING",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "decision-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/163",
+        "href": "https://github.com/anajuliabit/aeon/pull/163"
+      },
+      "children": []
+    },
+    "decision-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision-3-text",
+        "decision-3-link"
+      ]
+    },
+    "decision-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "Decide PR #162 close + PR #164 rebase",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "decision-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit/aeon/pull/162",
+        "href": "https://github.com/anajuliabit/aeon/pull/162"
+      },
+      "children": []
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "blockers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blockers-heading",
+        "blocker-1",
+        "blocker-2"
+      ]
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "blocker-1": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "STUCK d3 ~72h+ (dispatched 7-13 20:44Z, cf=5, sr=0.10, ISS-025)",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "blocker-2": {
+      "type": "Alert",
+      "props": {
+        "title": "Security vulnerabilities",
+        "message": "SharePoint CVE-2026-56164 + SonicWall pair — BOD T-0 tomorrow 7-17",
+        "type": "error"
+      },
+      "children": []
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-text"
+      ]
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+4 routine collapsed (skill-freshness · skill-health · list-digest · goal-tracker) · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

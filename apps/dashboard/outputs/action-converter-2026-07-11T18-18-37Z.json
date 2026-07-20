@@ -1,0 +1,304 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-11",
+        "description": "Shape: Author ISS-025 fix, postmortem SLX, flag PUMP unlock, patch pattern-invalidations, bisect batch scheduler."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_1_group",
+        "sep_1",
+        "action_2_group",
+        "sep_2",
+        "action_3_group",
+        "sep_3",
+        "action_4_group",
+        "sep_4",
+        "action_5_group",
+        "sep_5",
+        "sources_text"
+      ]
+    },
+    "action_1_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_1_heading",
+        "action_1_why_text",
+        "action_1_done_text",
+        "action_1_loop_badge"
+      ]
+    },
+    "action_1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Commit chain-runner capture-step fix (`.github/workflows/aeon.yml:479-493`) to a branch and open PR — preserve orchestrator's Write-tool output over CLI `.result` cp per ISS-009 root-cause.",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action_1_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "why: day-19 sandbox-truncation systemic tail, weekly-review 2026-07-13 T-2, self-improve rule-5 blocks self-authoring — operator-direct-author only path left.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "done: PR open with aeon.yml:479-493 diff preserving Write-tool output; ISS-025 fix_pr link populated.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_1_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-025-capture-step",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action_2_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_2_heading",
+        "action_2_why_text",
+        "action_2_done_text",
+        "action_2_loop_badge"
+      ]
+    },
+    "action_2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Draft SLX recut postmortem to `memory/topics/crypto.md`: entry $0.4753 → daily-routine $0.174 (-63.4%), 7 consecutive trending-endpoint surfaces, past every recut trigger, closed-pick decision anchor.",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action_2_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "why: day-17 CATASTROPHIC, weekly-review T-2 last hygiene gate before position rolls week-4, HIGH 9/10 6-24 pick review-slot owner.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "done: `memory/topics/crypto.md` diff appends \"SLX postmortem\" section with entry/exit/pct/date/decision bullets.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_2_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: slx-recut",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action_3_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_3_heading",
+        "action_3_why_text",
+        "action_3_done_text",
+        "action_3_loop_badge"
+      ]
+    },
+    "action_3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Stage PUMP unlock cliff catalyst to `memory/topics/market-context.md` — 22.2% mcap (~$143M) hits float Sat 7-12, insiders vested from $0.004 ICO ($0.0015 today = -60%+), 2× recent daily volume, pre-derisking already firing (PUMP -5% today).",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action_3_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "why: T-1 date-anchored supply event, Flowslikeosmo tokenomics lens, list-digest 7-10 top catalyst, carry-loop from 7-10 action-converter.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_3_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "done: `memory/topics/market-context.md` diff appends \"PUMP 7-12 unlock\" section with mcap/date/insider-basis bullets.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_3_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: pump-unlock-cliff-t-1",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action_4_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_4_heading",
+        "action_4_why_text",
+        "action_4_done_text",
+        "action_4_loop_badge"
+      ]
+    },
+    "action_4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Amend `memory/topics/crypto.md` with 4 pattern-invalidations from today's daily-routine — LAB floor thesis (d4 -32% re-arms cascade, 7d -91%), VELVET dead-cat (7d +22% → -22% overnight), CASHCAT PUMP-RISK 24-48h decay (d6 sustained +36%), GRASS FADE (d3 meme rescue +14%).",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action_4_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "why: 4 same-day durable-pattern breaks; unpatched they carry stale predictions into narrative-tracker + list-digest cycles all week.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_4_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "done: `memory/topics/crypto.md` diff includes ≥4 bullets naming each token + invalidation + 7-11 date.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_4_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: lab-velvet-cashcat-grass-invalidations",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action_5_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_5_heading",
+        "action_5_why_text",
+        "action_5_done_text",
+        "action_5_loop_badge"
+      ]
+    },
+    "action_5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Bisect `.github/workflows/aeon.yml` scheduler for ISS-027 — diff cron-block YAML for 8 dark-batch skills (token-pick / defi-overview / token-movers / on-chain-monitor / defi-monitor / market-context-refresh / narrative-tracker / aixbt-pulse) vs firing token-alert/btc-levels; write differentiator to `memory/topics/fleet.md`.",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action_5_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "why: batch-dark day-14, 7-10 12:00Z catch-up doesn't fix scheduler root; 8-skill last_success 2026-06-28 = ~13d stale.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_5_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "done: `memory/topics/fleet.md` gets ISS-027 diagnostic section naming YAML differentiator (chain-config / cron slot / matcher).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action_5_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop: iss-027-batch-diagnostic",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=73 logs=14 topics=11 prs=0 cron_failing=0 mode=OK",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

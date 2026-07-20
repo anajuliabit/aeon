@@ -1,0 +1,488 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-17",
+        "description": "Operational summary: 13 skills ran, security-digest flagged high EPSS, 3 stalled PRs blocking self-improve"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tldr-text",
+        "sep-1",
+        "headlines-heading",
+        "headlines-stack",
+        "sep-2",
+        "notable-heading",
+        "notable-stack",
+        "sep-3",
+        "decisions-heading",
+        "decisions-stack",
+        "sep-4",
+        "blockers-heading",
+        "blockers-alert",
+        "sep-5",
+        "footer-text"
+      ]
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: operational day — 13 skills ran, security-digest logged first ≥0.5 EPSS in memory (Fortinet 0.842), but self-improve hit exit-gate on rule-5 deadline; 3 stalled PRs are the fleet bottleneck.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headlines-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-1",
+        "headline-2",
+        "headline-3",
+        "headline-4",
+        "headline-5"
+      ]
+    },
+    "headline-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-1-header",
+        "headline-1-detail"
+      ]
+    },
+    "headline-1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-1-name",
+        "headline-1-badge"
+      ]
+    },
+    "headline-1-name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-freshness",
+        "variant": "body"
+      }
+    },
+    "headline-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "FRESHNESS_OK",
+        "variant": "default"
+      }
+    },
+    "headline-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "43 consumers / 0 flagged · articles/skill-freshness-2026-07-17.md",
+        "variant": "caption"
+      }
+    },
+    "headline-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-2-header",
+        "headline-2-detail"
+      ]
+    },
+    "headline-2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-2-name",
+        "headline-2-badge"
+      ]
+    },
+    "headline-2-name": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest",
+        "variant": "body"
+      }
+    },
+    "headline-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CRITICAL",
+        "variant": "destructive"
+      }
+    },
+    "headline-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "3 patch-today (Fortinet EPSS 0.842 + SharePoint KEV + npm-malware wave d4), 5 patch-week · .tmp/security-digest/msg.md",
+        "variant": "caption"
+      }
+    },
+    "headline-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-3-header",
+        "headline-3-detail"
+      ]
+    },
+    "headline-3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-3-name",
+        "headline-3-badge"
+      ]
+    },
+    "headline-3-name": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert",
+        "variant": "body"
+      }
+    },
+    "headline-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "2/12 alerts",
+        "variant": "outline"
+      }
+    },
+    "headline-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "GITLAWB -18.89% rail-breach + WELL 3.29× vol spike · .tmp/token-alert/msg.md",
+        "variant": "caption"
+      }
+    },
+    "headline-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-4-header",
+        "headline-4-detail"
+      ]
+    },
+    "headline-4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-4-name",
+        "headline-4-badge"
+      ]
+    },
+    "headline-4-name": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve",
+        "variant": "body"
+      }
+    },
+    "headline-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "EXIT-GATE",
+        "variant": "destructive"
+      }
+    },
+    "headline-4-detail": {
+      "type": "Text",
+      "props": {
+        "text": "exit-gate at step 1: 3+ CONFLICTING PRs blocked rule-5 T-0 authoring (first-ever deadline skip)",
+        "variant": "caption"
+      }
+    },
+    "headline-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-5-header",
+        "headline-5-detail"
+      ]
+    },
+    "headline-5-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "headline-5-name",
+        "headline-5-badge"
+      ]
+    },
+    "headline-5-name": {
+      "type": "Text",
+      "props": {
+        "text": "reflect",
+        "variant": "body"
+      }
+    },
+    "headline-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "COMPLETE",
+        "variant": "default"
+      }
+    },
+    "headline-5-detail": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md 59L → 54L; fleet.md + crypto.md updated · memory/MEMORY.md",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3"
+      ]
+    },
+    "notable-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-1-title",
+        "notable-1-detail"
+      ]
+    },
+    "notable-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "github-trending",
+        "variant": "body"
+      }
+    },
+    "notable-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Bonsai-27B TOP PICK (1-bit, fits on iPhone, 13.7× baseline); skills-primitive convergence n=5",
+        "variant": "caption"
+      }
+    },
+    "notable-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-2-title",
+        "notable-2-detail"
+      ]
+    },
+    "notable-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat ×3",
+        "variant": "body"
+      }
+    },
+    "notable-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "fresh classification: 07:00Z morning-batch dead-slot d2 = new dead-slot class forms",
+        "variant": "caption"
+      }
+    },
+    "notable-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-3-title",
+        "notable-3-detail"
+      ]
+    },
+    "notable-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health",
+        "variant": "body"
+      }
+    },
+    "notable-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "1 CRITICAL / 17 DEGRADED / 9 HEALTHY; 48h-flat, NOTIFY per 24h cadence",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decision-1",
+        "decision-2",
+        "decision-3",
+        "decision-4",
+        "decision-5"
+      ]
+    },
+    "decision-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "close or rebase PR #164 (~49h, CONFLICTING)",
+        "href": "https://github.com/anajuliabit/aeon/pull/164",
+        "source": "GitHub"
+      }
+    },
+    "decision-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "close or rebase PR #163 (~103h, CONFLICTING)",
+        "href": "https://github.com/anajuliabit/aeon/pull/163",
+        "source": "GitHub"
+      }
+    },
+    "decision-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "close or rebase PR #162 (~147h, CONFLICTING)",
+        "href": "https://github.com/anajuliabit/aeon/pull/162",
+        "source": "GitHub"
+      }
+    },
+    "decision-4": {
+      "type": "Text",
+      "props": {
+        "text": "direct-author ISS-025 capture-step in .github/workflows/aeon.yml:479-495 — T+2 day-3 slipped",
+        "variant": "body"
+      }
+    },
+    "decision-5": {
+      "type": "Text",
+      "props": {
+        "text": "direct-author CLAUDE.md rule-5 section — self-improve blocked until PR queue clears",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blockers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "blockers-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report stuck",
+        "message": "stuck d4 ~96h, cf=5, dispatched 2026-07-13T20:44Z; ISS-025",
+        "type": "error"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+11 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

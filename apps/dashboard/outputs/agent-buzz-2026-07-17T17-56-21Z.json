@@ -1,0 +1,320 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "Quiet paper-and-framework day: Microsoft agent stack shipping, two academic eval-infra drops, no drama."
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-eval-infra",
+        "sep-1",
+        "section-microsoft",
+        "sep-2",
+        "section-runtimes"
+      ]
+    },
+    "section-eval-infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-eval-infra",
+        "item-eval-1",
+        "item-eval-2"
+      ]
+    },
+    "heading-eval-infra": {
+      "type": "Heading",
+      "props": {
+        "text": "agent eval infra",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item-eval-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-eval-1",
+        "text-eval-1",
+        "link-eval-1"
+      ]
+    },
+    "badge-eval-1": {
+      "type": "Badge",
+      "props": {
+        "text": "@AINativeF",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-eval-1": {
+      "type": "Text",
+      "props": {
+        "text": "AgentCompass unifies 20+ benchmarks in one harness: fault-tolerant async runtime, trajectory analysis, reproducible eval.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link-eval-1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/AINativeF/status/2077904916333691082"
+      },
+      "children": []
+    },
+    "item-eval-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-eval-2",
+        "text-eval-2",
+        "link-eval-2"
+      ]
+    },
+    "badge-eval-2": {
+      "type": "Badge",
+      "props": {
+        "text": "@AINativeF",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-eval-2": {
+      "type": "Text",
+      "props": {
+        "text": "OAT attributes agent failures 200–5000× faster than prompting, +20/+7% F1 via NCDE on successful trajectories.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link-eval-2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/AINativeF/status/2077905162388246634"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-microsoft": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-microsoft",
+        "item-ms-1",
+        "item-ms-2"
+      ]
+    },
+    "heading-microsoft": {
+      "type": "Heading",
+      "props": {
+        "text": "microsoft agent stack matures",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item-ms-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ms-1",
+        "text-ms-1",
+        "link-ms-1"
+      ]
+    },
+    "badge-ms-1": {
+      "type": "Badge",
+      "props": {
+        "text": "@AITrailblazerQ",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-ms-1": {
+      "type": "Text",
+      "props": {
+        "text": "Azure AI Foundry decouples agent release from client release: immutable versions, stable endpoints, cross-product governance.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link-ms-1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/AITrailblazerQ/status/2077905895770431743"
+      },
+      "children": []
+    },
+    "item-ms-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-ms-2",
+        "text-ms-2",
+        "link-ms-2"
+      ]
+    },
+    "badge-ms-2": {
+      "type": "Badge",
+      "props": {
+        "text": "@tomonari_q",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-ms-2": {
+      "type": "Text",
+      "props": {
+        "text": "MS Agent Framework ships DevUI Inspector, Agent Channel, episodic memory, CodeAct + Hyperlight, tracing SDK (.NET/Python).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link-ms-2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/tomonari_q/status/2077901384092176842"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-runtimes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-runtimes",
+        "item-rt-1",
+        "item-rt-2"
+      ]
+    },
+    "heading-runtimes": {
+      "type": "Heading",
+      "props": {
+        "text": "new agent runtimes",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "item-rt-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-rt-1",
+        "text-rt-1",
+        "link-rt-1"
+      ]
+    },
+    "badge-rt-1": {
+      "type": "Badge",
+      "props": {
+        "text": "@chenzeling4",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-rt-1": {
+      "type": "Text",
+      "props": {
+        "text": "Deep Agents ships as production harness (not template): sub-agents, filesystem, LangGraph persistence, LangSmith eval.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link-rt-1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/chenzeling4/status/2077905877273805162"
+      },
+      "children": []
+    },
+    "item-rt-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-rt-2",
+        "text-rt-2",
+        "link-rt-2"
+      ]
+    },
+    "badge-rt-2": {
+      "type": "Badge",
+      "props": {
+        "text": "@AINativeF",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text-rt-2": {
+      "type": "Text",
+      "props": {
+        "text": "PalmClaw on-device mobile agent framework: explicit arg/result boundaries → +11.5% task success, -94.9% completion time.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link-rt-2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/AINativeF/status/2077905194218865142"
+      },
+      "children": []
+    }
+  }
+}

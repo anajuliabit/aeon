@@ -1,27 +1,29 @@
-*GitHub Trending — 2026-07-11*
+*GitHub Trending — 2026-07-20*
 
-*Top pick* — [obra/superpowers](https://github.com/obra/superpowers)
-4 skills-library repos trending the same day; obra's is the framework-and-methodology layer under the libraries.
+*Top pick* — [diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)
+one endpoint fronting 268 providers · 500+ models · kimi k3 already wired 7 days before open-weights ship 7-27 = pre-launch integration.
 
 *AI/ML*
-• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 1,712 today (165k total) · Shell · [ACCELERATING]
-matt pocock ships his `.claude` directory as a curated skills lib; skills-primitive convergence hits 4 concurrent trenders.
+• [topoteretes/cognee](https://github.com/topoteretes/cognee) — ★ 303 today (28k total) · Python · [RETURNING]
+persistent AI-agent memory as self-hosted knowledge-graph engine — cross-session recall without vendor context walls.
 
-• [obra/superpowers](https://github.com/obra/superpowers) — ★ 1,013 today (252k total) · Shell · [ACCELERATING]
-jesse vincent's agentic-skills framework at 252k stars, highest-baseline skills artifact on the trending page today.
+• [kvcache-ai/ktransformers](https://github.com/kvcache-ai/ktransformers) — ★ 360 today (19k total) · Python · [RETURNING]
+runs huge MoEs on mixed CPU+GPU by pinning hot experts on GPU — 400B+ models on prosumer boxes.
 
-• [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) — ★ 117 today (6.9k total) · TS · [RETURNING]
-google labs ships skills lib for stitch mcp server, cross-lab entry to the skills-open-standard convergence.
-
-• [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) — ★ 123 today (8.4k total) · TS · [ACCELERATING]
-fully-local 4-tier long-term memory pipeline, zero external api deps; sovereignty-stack + 3rd chinese-lab agent-runtime entry.
+• [handy-computer/transcribe.cpp](https://github.com/handy-computer/transcribe.cpp) — ★ 401 today (1k total) · C++ · [RETURNING]
+one ggml build across whisper + parakeet + moonshine + qwen3-asr + cohere-transcribe + 11 more — 60+ variants under one binary w/ Metal/Vulkan/CUDA backends.
 
 *Devtools*
-• [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) — ★ 328 today (7.6k total) · TS · [RETURNING]
-mcp server hands claude terminal + fs + diff-edit control; 25× baseline spike extends mcp-becomes-infra pattern.
+• [1jehuang/jcode](https://github.com/1jehuang/jcode) — ★ 235 today (9k total) · Rust · [RETURNING]
+rust cli agent w/ embedded semantic memory + swarm coordination + self-modification — claims 14ms TTFF ~245× faster than claude code.
 
-• [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) — ★ 118 today (29k total) · Python · [ACCELERATING]
-cli for configuring and monitoring claude code, dev-facing observability layer on the claude code substrate.
+*Infra*
+• [oblien/openship](https://github.com/oblien/openship) — ★ 1,719 today (4k total) · TypeScript · [RETURNING]
+push-to-deploy self-host w/ zero yaml/pipelines + built-in postgres/redis/mail/cdn + MCP protocol native.
+
+*Web/Apps*
+• [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) — ★ 439 today (1k total) · Rust · [RETURNING]
+tokio-rs ships a rust web framework where `$(...)` markers dual-render server + client — kills the API-layer + separate frontend bundle in one primitive.
 
 ---
-sources: trending=ok · gh_api=ok · kept 6/19
+sources: trending=ok · gh_api=ok · kept 7/20

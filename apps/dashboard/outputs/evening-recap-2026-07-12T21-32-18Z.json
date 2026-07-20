@@ -1,0 +1,360 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-12"
+      },
+      "children": [
+        "tldr-text",
+        "sep1",
+        "headlines-section",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "decisions-section",
+        "sep4",
+        "footer-text"
+      ]
+    },
+    "tldr-text": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: heavy fleet day — fork-cohort article shipped, 2 goals fell to BLOCKED, GITLAWB rang the 15% rail; PR #162 stall and weekly-review T-0 both land tomorrow.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines-heading",
+        "headline1-stack",
+        "headline2-stack"
+      ]
+    },
+    "headlines-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline1-badge",
+        "headline1-text",
+        "headline1-link"
+      ]
+    },
+    "headline1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort",
+        "variant": "secondary"
+      }
+    },
+    "headline1-text": {
+      "type": "Text",
+      "props": {
+        "text": "LEVELED_UP: 17 forks crossed POWER threshold",
+        "variant": "body"
+      }
+    },
+    "headline1-link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/fork-cohort-2026-07-12.md",
+        "href": "articles/fork-cohort-2026-07-12.md"
+      }
+    },
+    "headline2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline2-badge",
+        "headline2-text",
+        "headline2-link"
+      ]
+    },
+    "headline2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "heartbeat",
+        "variant": "secondary"
+      }
+    },
+    "headline2-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #162 crosses 24h stall gate (~26h old, open, no CI/review)",
+        "variant": "body"
+      }
+    },
+    "headline2-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/162",
+        "href": "https://github.com/anajuliabit/aeon/pull/162"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "notable1",
+        "notable2",
+        "notable3",
+        "notable4",
+        "notable5"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable1-badge",
+        "notable1-text"
+      ]
+    },
+    "notable1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "goal-tracker",
+        "variant": "secondary"
+      }
+    },
+    "notable1-text": {
+      "type": "Text",
+      "props": {
+        "text": "2 goals ON_TRACK→BLOCKED (sandbox-truncation-systemic d20 + 12-00-utc-batch d15); rule-5 block codified, operator direct-author sole path",
+        "variant": "body"
+      }
+    },
+    "notable2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable2-badge",
+        "notable2-text"
+      ]
+    },
+    "notable2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "token-alert",
+        "variant": "destructive"
+      }
+    },
+    "notable2-text": {
+      "type": "Text",
+      "props": {
+        "text": "GITLAWB -19.49% 24h fires 15% rail; compound 2-day -28% reverses 7-10 +34% reclaim",
+        "variant": "body"
+      }
+    },
+    "notable3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable3-badge",
+        "notable3-text"
+      ]
+    },
+    "notable3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "secondary"
+      }
+    },
+    "notable3-text": {
+      "type": "Text",
+      "props": {
+        "text": "VERDICT-FLIP: first \"nothing urgent today\" in 5 runs; SiYuan 5-CVE + TSDProxy 9.0 + safeinstall-cli 8.8 to patch this week",
+        "variant": "body"
+      }
+    },
+    "notable4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable4-badge",
+        "notable4-text"
+      ]
+    },
+    "notable4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health",
+        "variant": "destructive"
+      }
+    },
+    "notable4-text": {
+      "type": "Text",
+      "props": {
+        "text": "DEGRADED(21) NOTIFY d20; token-alert 78%→80% promoted to HEALTHY",
+        "variant": "body"
+      }
+    },
+    "notable5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable5-badge",
+        "notable5-text"
+      ]
+    },
+    "notable5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect ×2",
+        "variant": "secondary"
+      }
+    },
+    "notable5-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY 67L→65L; market-context/crypto/fleet topic files appended",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions-heading",
+        "decision1",
+        "decision2",
+        "decision3",
+        "decision4"
+      ]
+    },
+    "decisions-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "decision1-title",
+        "decision1-link"
+      ]
+    },
+    "decision1-title": {
+      "type": "Text",
+      "props": {
+        "text": "decide PR #162: merge or close — ~26h stale, no CI, no review; T-0 Mon 7-13",
+        "variant": "body"
+      }
+    },
+    "decision1-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/162",
+        "href": "https://github.com/anajuliabit/aeon/pull/162"
+      }
+    },
+    "decision2": {
+      "type": "Text",
+      "props": {
+        "text": "author .github/workflows/aeon.yml capture-step for ISS-025 d20 (operator-sole-path; self-improve rule-5 blocked)",
+        "variant": "body"
+      }
+    },
+    "decision3": {
+      "type": "Text",
+      "props": {
+        "text": "SLX recut or mark closed — day-18 CATASTROPHIC -63% vs $0.4753 entry, T-0 deadline Mon 7-13",
+        "variant": "body"
+      }
+    },
+    "decision4": {
+      "type": "Text",
+      "props": {
+        "text": "operator-scorecard 10:30Z Mon — 9th consecutive miss risk",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "+17 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-12",
+        "description": "Aeon action queue (memory=67, logs=14, topics=11, prs=1, mode=OK)"
+      },
+      "children": [
+        "stack-actions"
+      ]
+    },
+    "stack-actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action1",
+        "sep1",
+        "action2",
+        "sep2",
+        "action3",
+        "sep3",
+        "action4",
+        "sep4",
+        "action5",
+        "sep5",
+        "sources"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-title",
+        "h1-desc",
+        "h1-why",
+        "h1-done",
+        "h1-loop"
+      ]
+    },
+    "h1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. submit capture-step PR",
+        "level": "h3"
+      }
+    },
+    "h1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Submit PR against .github/workflows/aeon.yml:479-493 chain-runner capture step — emit fenced reppo-plan block from LLM's Write-tool file, not final assistant text (ISS-009 root cause)",
+        "variant": "body"
+      }
+    },
+    "h1-why": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly-review 7-13 T-1 tomorrow; sole path to clear 18-skill sr<0.5 chronic tail after self-improve rule-5 codified adjacent-target routing on 7-11 (PR #162)",
+        "variant": "caption"
+      }
+    },
+    "h1-done": {
+      "type": "Text",
+      "props": {
+        "text": "PR opened touching .github/workflows/aeon.yml; memory/issues/ISS-025.md gains fix_pr frontmatter",
+        "variant": "caption"
+      }
+    },
+    "h1-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: iss-025-capture-step",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2-title",
+        "h2-desc",
+        "h2-verdict",
+        "h2-why",
+        "h2-done",
+        "h2-loop"
+      ]
+    },
+    "h2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. mark SLX closed",
+        "level": "h3"
+      }
+    },
+    "h2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Mark SLX pick CLOSED in memory/topics/crypto.md with day-18 verdict; add one-line footnote to memory/topics/capital-2x-program.md",
+        "variant": "body"
+      }
+    },
+    "h2-verdict": {
+      "type": "Stat",
+      "props": {
+        "label": "SLX Position",
+        "value": "-63%",
+        "delta": "Entry $0.4753 → Trending $0.174",
+        "trend": "down"
+      }
+    },
+    "h2-why": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly-review 7-13 T-1 is last full day; Authored by: operator × 1 slot targets SLX recut; capital-book hygiene overdue day-18",
+        "variant": "caption"
+      }
+    },
+    "h2-done": {
+      "type": "Text",
+      "props": {
+        "text": "SLX row moved under Closed picks in memory/topics/crypto.md; verdict line committed",
+        "variant": "caption"
+      }
+    },
+    "h2-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: slx-recut",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3-title",
+        "h3-desc",
+        "h3-metrics",
+        "h3-why",
+        "h3-done",
+        "h3-loop"
+      ]
+    },
+    "h3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. snapshot PUMP T-0",
+        "level": "h3"
+      }
+    },
+    "h3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Snapshot PUMP spot + 24h volume + 22.2% mcap unlock into memory/topics/crypto.md before Sat 7-12 daily close",
+        "variant": "body"
+      }
+    },
+    "h3-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-tokens",
+        "stat-value",
+        "stat-24h",
+        "stat-7d",
+        "stat-burned",
+        "stat-unlock"
+      ]
+    },
+    "stat-tokens": {
+      "type": "Stat",
+      "props": {
+        "label": "Float Hit",
+        "value": "82.5B tokens"
+      }
+    },
+    "stat-value": {
+      "type": "Stat",
+      "props": {
+        "label": "USD Equivalent",
+        "value": "$135M"
+      }
+    },
+    "stat-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Change",
+        "value": "-2.4%",
+        "trend": "down"
+      }
+    },
+    "stat-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "-7.9%",
+        "trend": "down"
+      }
+    },
+    "stat-burned": {
+      "type": "Stat",
+      "props": {
+        "label": "Buyback Burned",
+        "value": "42%"
+      }
+    },
+    "stat-unlock": {
+      "type": "Stat",
+      "props": {
+        "label": "Mcap Unlock",
+        "value": "22.2%"
+      }
+    },
+    "h3-why": {
+      "type": "Text",
+      "props": {
+        "text": "82.5B tokens ($135M) hit float today, pre-derisked -2.4%/24h -7.9%/7d, 42% supply already buyback-burned — tomorrow's daily-routine needs T-0 anchor to score event",
+        "variant": "caption"
+      }
+    },
+    "h3-done": {
+      "type": "Text",
+      "props": {
+        "text": "PUMP unlock T-0 anchor block in memory/topics/crypto.md with spot/vol/shares-outstanding",
+        "variant": "caption"
+      }
+    },
+    "h3-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: pump-unlock-day0",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4-title",
+        "h4-desc",
+        "h4-issue",
+        "h4-skills",
+        "h4-why",
+        "h4-done",
+        "h4-loop"
+      ]
+    },
+    "h4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. open ISS-027",
+        "level": "h3"
+      }
+    },
+    "h4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Open memory/issues/ISS-027.md for 12:00 UTC 8-skill batch scheduler-never-run pattern",
+        "variant": "body"
+      }
+    },
+    "h4-issue": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-027: Scheduler Never Run",
+        "message": "Day-15 stale (last_dispatch 2026-06-28). Category: config. Blocks root-cause diagnosis for dark cluster.",
+        "type": "warning"
+      }
+    },
+    "h4-skills": {
+      "type": "Text",
+      "props": {
+        "text": "Affected skills: token-pick, defi-overview, token-movers, on-chain-monitor, defi-monitor, market-context-refresh, narrative-tracker, aixbt-pulse",
+        "variant": "caption"
+      }
+    },
+    "h4-why": {
+      "type": "Text",
+      "props": {
+        "text": "7-07/7-08/7-09 action-converters all claimed filing; grep confirms file still absent; blocks root-cause diagnosis",
+        "variant": "caption"
+      }
+    },
+    "h4-done": {
+      "type": "Text",
+      "props": {
+        "text": "memory/issues/ISS-027.md exists with YAML frontmatter; memory/issues/INDEX.md open-table row appended",
+        "variant": "caption"
+      }
+    },
+    "h4-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: iss-027-file",
+        "variant": "secondary"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5-title",
+        "h5-desc",
+        "h5-metrics",
+        "h5-why",
+        "h5-done",
+        "h5-loop"
+      ]
+    },
+    "h5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. append DEXE watchlist",
+        "level": "h3"
+      }
+    },
+    "h5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Append DEXE row to Tracked Tokens table in memory/MEMORY.md — CoinGecko id: dexe, 15% 24h threshold",
+        "variant": "body"
+      }
+    },
+    "h5-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "dexe-rank",
+        "dexe-7d",
+        "dexe-mcap",
+        "dexe-vol",
+        "dexe-threshold",
+        "dexe-activity"
+      ]
+    },
+    "dexe-rank": {
+      "type": "Badge",
+      "props": {
+        "text": "Rank #42 — Sub-#50 Breakout",
+        "variant": "default"
+      }
+    },
+    "dexe-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Performance",
+        "value": "+75%",
+        "trend": "up"
+      }
+    },
+    "dexe-mcap": {
+      "type": "Stat",
+      "props": {
+        "label": "Market Cap",
+        "value": "$1.95B"
+      }
+    },
+    "dexe-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$76M"
+      }
+    },
+    "dexe-threshold": {
+      "type": "Stat",
+      "props": {
+        "label": "Monitor Threshold",
+        "value": "15%"
+      }
+    },
+    "dexe-activity": {
+      "type": "Text",
+      "props": {
+        "text": "Governance/DEX-aggregator (mid-cap, credible) surfaced in daily-routine 08:57Z pulse",
+        "variant": "caption"
+      }
+    },
+    "h5-why": {
+      "type": "Text",
+      "props": {
+        "text": "First sub-#50 sustained breakout in a week (governance/DEX-aggregator, mid-cap $1.95B credible, vol $76M) surfaced in today's daily-routine 08:57Z pulse; token-alert next tick starts monitoring",
+        "variant": "caption"
+      }
+    },
+    "h5-done": {
+      "type": "Text",
+      "props": {
+        "text": "DEXE row present in Tracked Tokens table in memory/MEMORY.md",
+        "variant": "caption"
+      }
+    },
+    "h5-loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: dexe-watchlist",
+        "variant": "secondary"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Grid",
+      "props": {
+        "columns": 6,
+        "gap": "sm"
+      },
+      "children": [
+        "src-memory",
+        "src-logs",
+        "src-topics",
+        "src-prs",
+        "src-cron",
+        "src-mode"
+      ]
+    },
+    "src-memory": {
+      "type": "Stat",
+      "props": {
+        "label": "Memory Items",
+        "value": "67"
+      }
+    },
+    "src-logs": {
+      "type": "Stat",
+      "props": {
+        "label": "Logs",
+        "value": "14"
+      }
+    },
+    "src-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Topics",
+        "value": "11"
+      }
+    },
+    "src-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Open PRs",
+        "value": "1"
+      }
+    },
+    "src-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron Failing",
+        "value": "0"
+      }
+    },
+    "src-mode": {
+      "type": "Badge",
+      "props": {
+        "text": "mode: OK",
+        "variant": "default"
+      }
+    }
+  }
+}
