@@ -1,49 +1,52 @@
-*Daily Routine — 2026-07-19*
+*Daily Routine — 2026-07-20*
 
-_Pulse: 51/100 top-100 green, top-50 median +0.06% — flat/mixed tape, big-cap fatigue. BTC $64,657 (brief $65k break faded), ETH $1,867, SOL $76.03, BNB $568.76, HYPE $60.80. Kept 121/250._
+_tilted red — 26/100 top-100 green (down from 51 yesterday = clean risk-off shift), top-50 median flat. BTC $64,190 (-0.8%), ETH $1,862 (-0.3%), SOL $76.00 (-0.2%), BNB $566 (-0.5%), HYPE $60.72 flat. Filter kept 183/250._
 
 *Top Winners (24h)*
-1. B (BUILDon) — $0.1836 +61.5% / 7d +41% • $50M / #176 [BREAKOUT]
-2. TAG (TAGGER) — $0.00118 +23.6% / 7d +24% • $5M / #225 [BREAKOUT MICROCAP]
-3. TRAC (OriginTrail) — $0.298 +14.7% / 7d +12% • $7M / #222
-4. KAITO — $0.921 +12.5% / 7d +37% • $34M / #155
-5. ALLO (Allora) — $0.463 +12.1% / 7d +34% • $46M / #247
-6. BTW (Bitway) — $0.0662 +5.8% / 7d +10% • $10M / #209
-7. NEO — $2.04 +5.4% / 7d +4.5% • $36M / #211
-8. PI (Pi Network) — $0.0861 +4.8% / 7d -12% • $12M / #68
-9. ZEC (Zcash) — $559 +4.4% / 7d +8.9% • $224M / #14 [MAJOR]
-10. XEC (eCash) — $0.0000087 +4.1% / 7d +69% • $100M / #183
+1. B (BUILDon) $0.230 +24.4% / 7d +118% [BREAKOUT d2 HOLD, breaks one-day-unwind pattern n=5]
+2. PUMP $0.00201 +22.3% / 7d +33% • $148M vol / #76 [TRENDING]
+3. PI $0.0986 +14.4% / 7d +13% • $41M / #64
+4. ADI $6.91 +10.0% / 7d -2%
+5. JTO $0.599 +9.9% / 7d -7%
+6. TAG (TAGGER) $0.00120 +4.6% / 7d +28% [MICROCAP]
+7. KAITO $0.955 +3.7% / 7d +44% [FADE-tag reversal d2, 7d extends +37→+44%]
+8. SNX $0.228 +2.9%
+9. PYTH $0.0499 +2.8%
+10. JUP $0.196 +2.7% / 7d -3%
 
 *Top Losers (24h)*
-1. BONK — $0.0000028 -6.2% / 7d -30% • $61M / #143
-2. ONDO — $0.350 -5.8% / 7d +7.5% • $162M / #44
-3. LDO (Lido) — $0.356 -4.1% / 7d +16% • $25M / #130
-4. BDX (Beldex) — $0.0821 -3.9% / 7d -5.6% • $14M / #90
-5. ADI — $6.29 -3.8% / 7d -3.7% • $5M / #76
-6. AERO — $0.453 -3.6% / 7d -12% • $27M / #110
-7. XPL (Plasma) — $0.0818 -3.1% / 7d -10% • $29M / #160
-8. DEXE — $34.50 -3.0% / 7d -13% • $55M / #49
-9. MANA (Decentraland) — $0.0696 -2.9% / 7d -4.5% • $9M / #216
-10. ZBCN (Zebec) — $0.00195 -3.0% / 7d -10% • $11M / #173
+1. TRAC (OriginTrail) $0.314 -10.0% / 7d +19% [unwind reversal from yesterday's +14.7%]
+2. AKT $0.509 -6.0% / 7d -13%
+3. BinanceLife $0.652 -5.8%
+4. TIBBIR (Ribbita) $0.108 -5.7%
+5. XEC (eCash) $0.00000791 -5.7% / 7d +12% [d2 breakout unwinds, pattern n=6]
+6. WLD $0.358 -5.0% / 7d -15%
+7. ZEC $531.56 -4.9% [MAJOR #14]
+8. FIL $0.709 -4.7%
+9. TRUMP $1.56 -4.5%
+10. KAIA $0.0314 -4.4%
 
-*Trending:* LAB (#394, -6.6% — the -95% zero-arc case flickers), PENGU, CASHCAT, LTC, GRAM (ex-Toncoin), VIRTUAL, CRED (+24.8%).
+*Trending*
+BANK (Lorenzo Protocol) +110% #269, PI, PUMP, PENGU, CASHCAT +26% #344, ADI, ACE +116% #964 microcap, ANSEM, LIT, TLM.
 
 *Notable*
-• BUILDon +61.5% AND +41% 7d = clean BREAKOUT. XEC extends d2 hold on +69% 7d (sustained-shape, not one-day-unwind). KAITO reverses 7-18 FADE (-5.7% → +12.5%). BONK CAPITULATION d3, 7d -30%. Losing side compressed — all under 7% = flat-with-outlier-winners tape.
+• BUILDon +24.4% d2 hold = one-day-breakout-unwind pattern n=5 breaks; 7d +118% clean continuation. KAITO FADE-tag 24h-misfire (7-18) fully reverses: 7d +37% → +44%. TRAC +14.7% → -10.0% and XEC +4.1% → -5.7% both add to unwind class. BONK +2.6% dead-cat after 3d capitulation.
 
 *Tweet Roundup*
-*Crypto:* BTC's brief $65k hold faded on 6th day of Iran airstrikes; ETH +7% weekly leads BTC's +2%. US spot BTC ETFs snap 10-day outflow streak with $221.7M in — biggest daily haul in 2 months. FHFA orders Fannie/Freddie to count crypto as mortgage asset; Better+Coinbase issue first Fannie-backed crypto mortgage.
-*AI:* Moonshot Kimi K3 lands — 2.8T params open MoE, 1M ctx, Kimi Delta Attention, beats Fable 5 + GPT-5.6 Sol on Arena front-end coding, edges Opus 4.8 in text ranking at 40% lower cost. Open weights ship 7-27. Anthropic accuses Chinese labs of industrial-scale distillation from US frontier models.
-*Dev:* Anaconda-Kilo acquisition holds (7-18 signal, model-independent AI coding, stays OSS). VS Code 1.110 agent plugins live (skills + tools + hooks bundle installable from Extensions). OpenTofu 10M downloads, Valkey 700+ contributors.
+*Crypto:* Kimi K3 2.8T open-MoE release triggers BTC/ETH slide (DeepSeek-shock echo) — open weights ship 7-27 d7 out. BTC ETFs $273M net over 2 weeks breaks 8-week $8B+ outflow streak, but scale still "peanuts" (Coindesk). BlackRock IBIT led $132.3M 7-17 net-inflow day; ETH ETFs $36.7M same day.
+*AI:* Qwen 3.8 launches 2.4T MoE multimodal claiming "second only to Fable 5" — **china-lab edge-inference cluster n=3** (airllm + kimi-cli + Qwen 3.8). Claude Fable 5 counterexample to Jacobian Conjecture (Alpöge) — LLM-solves-open-math n=2 with yesterday's GPT-5.6 convex-opt 30-yr gap, but Fable claim under active technical challenge (properness condition). Apple Intelligence registered in mainland China with Qwen backing (CAC 7-15).
+*Dev:* Claude Code v2.1.181 runs on Bun's Rust port (10% faster startup) — Bun being rewritten Zig→Rust using dozens of parallel Claude Code sessions = meta-aeon signal. Code Review multi-agent pipeline lands with 5 review levels (Low → Ultra). Agent View fleet dashboard + /goal command + Opus 4.8 default + plugin ecosystem all shipped.
 
 *Paper of the Day*
-"Rethinking the Evaluation of Harness Evolution for Agents" (2607.12227, 5↑) — argues harness-search benchmarks over-report gains because they don't hold matched feedback + inference budgets against task-level search baselines. Directly aeon-thesis: same rebuke applies to self-improve loops that grade themselves on the same benchmark they optimize. Runner-up: LongStraw compounds d2 (105↑ → 174↑ overnight, +65% surge) — 2M-ctx RL under fixed GPU budget continues to dominate the week's leaderboard.
+"xHC: Expanded Hyper-Connections" (33↑, 2607.14530) — expands Transformer residual stream into N parallel streams; Manifold-Constrained HC stabilizes training. Architecture-primitive extending memory scaling past width/depth. Runner-ups: Xiaomi-Robotics-1 100K-hr VLA (32↑, HN #12 cross-signal), Cura 1T agentic healthcare (31↑), Loopie looped-MoE 20B/2B-active (24↑, small-MoE-frontier rail-adjacent).
 
 *GitHub Issues*
-No new issues (anajuliabit scope, since 7-18 07:25Z).
+No new issues since 07:14Z yesterday.
 
 *HN Digest*
-1. [LG monitors silently install software via Windows Update](videocardz.com) (1094 pts, 560 comments) — trust-breaker
-2. [GPT-5.6 closes 30-year gap in convex optimization](reddit.com/r/math) (546 pts, 349 comments) — AI hits research-math
-3. [Setting up your spare Mac for Claude Code to control](github.io) (216 pts, 147 comments) — aeon-adjacent runbook
-4. [Speech Recognition + TTS under 500kb](moonshine/micro) (402 pts, 46 comments) — moonshine-ai edge-compute artifact
+1. [Show HN: $120k bowling center → $1,600 in ESP32s](https://news.ycombinator.com/item?id=48968606) (2143pts) — hardware-hack porn
+2. [Qwen 3.8](https://news.ycombinator.com/item?id=48966120) (864pts, 588 cmts) — Alibaba 2.4T MoE
+3. [Claude Code uses Bun written in Rust now](https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/) (496pts) — meta-aeon runtime shift
+4. [Claude Fable produced a counterexample to the Jacobian Conjecture](https://news.ycombinator.com/item?id=48973869) (330pts) — LLM-open-math n=2
+
+_source-status: cg_markets=ok, cg_trending=ok, hf_papers=ok, hn_algolia=ok, xai=blocked(sandbox), websearch=ok, gh_search=ok(0 issues)_
