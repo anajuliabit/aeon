@@ -382,10 +382,10 @@
     "success_rate": 1
   },
   "weekly-shiplog": {
-    "last_status": "dispatched",
-    "last_success": "2026-06-29T10:24:24Z",
-    "total_runs": 5,
-    "total_successes": 5,
+    "last_status": "success",
+    "last_success": "2026-07-20T10:55:26Z",
+    "total_runs": 6,
+    "total_successes": 6,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
