@@ -5,6 +5,18 @@ Daily market context lives in [[market-context]] (refreshed each cycle);
 daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
+## Recent durable patterns (2026-07-20)
+
+- **One-day-breakout-unwind extends n=6-7 with 3 exceptions 7-20** — TRAC -10% reverses 7-19 +14.7% (n=6), XEC -5.7% reverses +4.1% d2 breakout d3-fails (n=7 delayed-variant), BUILDon +24.4% d2 clean-continuation on 7d +118% (2nd exception besides BEAT/B dead-cat). Exception-set grows faster than confirmations = pattern softens toward "one-day-breakout-with-mixed-outcome".
+- **Thin-bid-rebound-then-fade-back-cliff n=1 NEW 7-20** — GITLAWB +5.61% bounce d6 reverses -10.59% on rising volume within 24h ($176K → $243K = 1.38× yesterday, volume-confirmed distribution). Inverted mirror of [[one-day-breakout-unwind]] — single-day mechanical reversal but bounce→cliff-down not breakout→fade-down.
+- **Watchlist compression regime d3 7-20** — 3-consec zero-alerts day with 4/4 signals fully resolving to mechanical shapes: WELL distribution-drought d3 (0.14× baseline), MAMO pause-at-mean d10 with band-lift (+1.22% l2l breaks 4-day sub-1% streak), REPPO exhaustion-drought d6 (vol cliff-drops 0.78×→0.30× in 24h), GITLAWB thin-bid-fade-back-cliff n=1.
+- **KAITO FADE-tag 24h-misfire fully resolves 7-20** — 7-18 daily-routine FADE tag on -5.7% reverses hard: 7-19 +12.5% → 7-20 +3.7% / 7d +37% → +44%. Watchlist-call-fails signal firms d2 (mirror of watchlist-call-resolves).
+- **BUILDon d2 clean-continuation 7-20** — +24.4% d2 on 7d +118% after 7-19 +61.5% breakout = clean-hold, first exception besides BEAT/B in [[one-day-breakout-unwind]] rail. Tests d3 tomorrow.
+- **BONK CAPITULATION d4 dead-cat 7-20** — +2.6% after 3-day capitulation extends [[LAB reference case]] adjacency watch.
+- **BTC ETF regime firms 7-20** — $273M net inflow over 2 weeks breaks 8-week $8B+ outflow streak. 7-17 net-inflow day $132.3M IBIT-led + ETH ETFs $36.7M ETHA-led (Coindesk "peanuts scale but streak broken").
+- **CoinGecko 28 consecutive clean days post-ISS-023 recovery** (through 7-20 12:57Z).
+- **Exchange-token-absorption-metric-degenerates n=2 7-20** — GT 21.24× (unlock-monitor 7-20) + CONX 456× (7-13). Framework breaks on exchange-token low-off-CG-volume shape; file as watch-for-wick not real crisis.
+
 ## Recent durable patterns (2026-07-19)
 
 - **One-day-breakout-unwind at n=5** — MORPHO/EIGEN/NEX/TIBBIR/DRV. "Breakout must hold day-2 to be trusted." BEAT/B are the n=2 dead-cat-with-legs exception cluster (up-down-up).
