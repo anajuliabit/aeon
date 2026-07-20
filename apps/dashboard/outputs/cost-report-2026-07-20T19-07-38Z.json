@@ -1,0 +1,294 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Cost Report — 2026-07-20 (last 7 days)",
+        "description": "5 anomalies flagged • monthly burn ~$1,941.69"
+      },
+      "children": [
+        "key-metrics",
+        "runs-count",
+        "separator-1",
+        "top-3-heading",
+        "top-3-table",
+        "separator-2",
+        "optimization",
+        "cost-structure-heading",
+        "cost-structure-bars",
+        "separator-3",
+        "anomalies-heading",
+        "anomalies-stack",
+        "separator-4",
+        "projection",
+        "full-report"
+      ]
+    },
+    "key-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-spent",
+        "stat-growth"
+      ]
+    },
+    "stat-spent": {
+      "type": "Stat",
+      "props": {
+        "label": "Spent",
+        "value": "$453.06",
+        "delta": "24.3%",
+        "trend": "up"
+      }
+    },
+    "stat-growth": {
+      "type": "Stat",
+      "props": {
+        "label": "vs Last Week",
+        "value": "$364.39"
+      }
+    },
+    "runs-count": {
+      "type": "Text",
+      "props": {
+        "text": "77 runs across the week"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 3 by Cost",
+        "level": "h3"
+      }
+    },
+    "top-3-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Cost",
+          "Runs"
+        ],
+        "rows": [
+          [
+            "security-digest",
+            "$80.47",
+            "7"
+          ],
+          [
+            "daily-routine",
+            "$61.74",
+            "5"
+          ],
+          [
+            "heartbeat",
+            "$58.28",
+            "7"
+          ]
+        ]
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "optimization": {
+      "type": "Text",
+      "props": {
+        "text": "No optimization levers this week — standard downgrade/cache/mismatch/waste filters all clear. Cost structure is architecture-level."
+      }
+    },
+    "cost-structure-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Cost Structure Breakdown",
+        "level": "h3"
+      }
+    },
+    "cost-structure-bars": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cache-read-row",
+        "output-row",
+        "cache-write-row"
+      ]
+    },
+    "cache-read-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cache-read-label",
+        "cache-read-progress"
+      ]
+    },
+    "cache-read-label": {
+      "type": "Text",
+      "props": {
+        "text": "Cache Read: 55%"
+      }
+    },
+    "cache-read-progress": {
+      "type": "Progress",
+      "props": {
+        "value": 55,
+        "max": 100
+      }
+    },
+    "output-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "output-label",
+        "output-progress"
+      ]
+    },
+    "output-label": {
+      "type": "Text",
+      "props": {
+        "text": "Output: 23%"
+      }
+    },
+    "output-progress": {
+      "type": "Progress",
+      "props": {
+        "value": 23,
+        "max": 100
+      }
+    },
+    "cache-write-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "cache-write-label",
+        "cache-write-progress"
+      ]
+    },
+    "cache-write-label": {
+      "type": "Text",
+      "props": {
+        "text": "Cache Write: 22%"
+      }
+    },
+    "cache-write-progress": {
+      "type": "Progress",
+      "props": {
+        "value": 22,
+        "max": 100
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "anomalies-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5 Anomalies Flagged",
+        "level": "h3"
+      }
+    },
+    "anomalies-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "anomaly-1",
+        "anomaly-2",
+        "anomaly-3",
+        "anomaly-4",
+        "anomaly-5"
+      ]
+    },
+    "anomaly-1": {
+      "type": "Alert",
+      "props": {
+        "title": "btc-levels 7/15",
+        "message": "$0.459 vs µ $0.287 (+2.2σ)",
+        "type": "warning"
+      }
+    },
+    "anomaly-2": {
+      "type": "Alert",
+      "props": {
+        "title": "heartbeat 7/16",
+        "message": "$13.08 vs µ $8.33 (+2.3σ)",
+        "type": "warning"
+      }
+    },
+    "anomaly-3": {
+      "type": "Alert",
+      "props": {
+        "title": "reflect WoW",
+        "message": "2.05× increase ($24→$50, extra 2 runs)",
+        "type": "warning"
+      }
+    },
+    "anomaly-4": {
+      "type": "Alert",
+      "props": {
+        "title": "skill-freshness WoW",
+        "message": "3.74× increase ($2→$8, extra 3 runs)",
+        "type": "warning"
+      }
+    },
+    "anomaly-5": {
+      "type": "Alert",
+      "props": {
+        "title": "fork-cohort WoW",
+        "message": "2.28× increase (context doubled)",
+        "type": "warning"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "projection": {
+      "type": "Stat",
+      "props": {
+        "label": "30-day Projection",
+        "value": "$1,941.69"
+      }
+    },
+    "full-report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Cost Report",
+        "href": "articles/cost-report-2026-07-20.md",
+        "source": "cost-report"
+      }
+    }
+  }
+}

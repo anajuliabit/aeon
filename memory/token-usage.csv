@@ -804,4 +804,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-20,token-alert,claude-opus-4-7,25,19828,1292305,74254
 2026-07-20,security-digest,claude-opus-4-7,44,28727,3245408,97121
 2026-07-20,skill-security-scan,claude-opus-4-7,31,28537,1756635,102316
-2026-07-20,goal-tracker,claude-opus-4-7,39,24497,3247284,99665
+2026-07-20,cost-report,claude-sonnet-4-6,22,102894,1358688,89951

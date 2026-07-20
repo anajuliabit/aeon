@@ -1,20 +1,20 @@
-*Cost Report — 2026-06-29 (last 7 days)*
+*Cost Report — 2026-07-20 (last 7 days)*
 
-Spent $595.75 across 113 runs (↑199.5% WoW — prior week suppressed by sandbox failures); 14 anomalies, projected monthly burn ~$2,553 ⚠
+spent $453.06 across 77 runs (↑24.3% WoW vs $364.39). 5 anomalies flagged. monthly burn ~$1,941.69 ⚠
 
-Top 3 by cost:
-1. daily-routine — $104.53 (8 runs)
-2. on-chain-monitor — $54.75 (4 runs)
-3. security-digest — $48.93 (4 runs)
+top 3 by cost:
+1. security-digest — $80.47 (7 runs)
+2. daily-routine — $61.74 (5 runs)
+3. heartbeat — $58.28 (7 runs)
 
-Actions this week:
-• on-chain-monitor → rename `usepod_model` → `model:` in aeon.yml to activate Haiku (~$51.83/wk savings)
-• token-pick → same usepod_model drift fix (~$33.16/wk)
-• token-movers → same usepod_model drift fix (~$21.94/wk)
-Combined: ~$107/wk ($456/mo) from a 3-line aeon.yml edit
+no optimization levers this week — standard downgrade/cache/mismatch/waste filters all clear. cost structure is architecture-level (55% cache_read, 23% output, 22% cache_write).
 
-⚠ 13 WoW spikes flagged — 10 are ISS-019/020/021/025 sandbox artifacts (prior output=0), not real growth
-1 per-run anomaly: aixbt-pulse 2026-06-24 output spike (+2.4σ)
+⚠ 5 anomalies flagged — see report:
+• btc-levels 7/15: $0.459 vs µ $0.287 (+2.2σ)
+• heartbeat 7/16: $13.08 vs µ $8.33 (+2.3σ)
+• reflect WoW 2.05× ($24→$50, extra 2 runs)
+• skill-freshness WoW 3.74× ($2→$8, extra 3 runs)
+• fork-cohort WoW 2.28× (context doubled)
 
-30-day projection: $2,553.20 (dominated by cache-heavy Opus skills)
-Full: articles/cost-report-2026-06-29.md
+30-day projection: $1,941.69
+full: articles/cost-report-2026-07-20.md
