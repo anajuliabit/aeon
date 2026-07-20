@@ -167,8 +167,8 @@
     "last_error": "nputTokens\":54400,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.15796499999999997,\"contextWindow\":200000,\"maxOutputTokens\":32000}},\"permission_denials\":[{\"tool_name\":\"Bash\",\"tool_use_"
   },
   "github-trending": {
-    "last_dispatch": "2026-07-19T09:16:34Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-20T10:47:35Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-19T09:26:59Z",
     "total_runs": 75,
     "total_successes": 47,
@@ -307,8 +307,8 @@
     "success_rate": 1
   },
   "cost-report": {
-    "last_dispatch": "2026-07-20T07:52:57Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-07-20T10:47:35Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-29T13:59:10Z",
     "total_runs": 52,
     "total_successes": 5,
@@ -382,14 +382,14 @@
     "success_rate": 1
   },
   "weekly-shiplog": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-06-29T10:24:24Z",
     "total_runs": 5,
     "total_successes": 5,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-06-29T10:19:16Z"
+    "last_dispatch": "2026-07-20T10:47:35Z"
   },
   "market-context-refresh": {
     "last_status": "success",
@@ -605,8 +605,8 @@
     "success_rate": 1
   },
   "unlock-monitor": {
-    "last_dispatch": "2026-07-13T11:21:56Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-20T10:47:35Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-13T11:29:00Z",
     "total_runs": 5,
     "total_successes": 5,
