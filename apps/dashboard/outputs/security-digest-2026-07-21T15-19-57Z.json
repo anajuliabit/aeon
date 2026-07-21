@@ -1,0 +1,804 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest",
+        "description": "2026-07-21"
+      },
+      "children": [
+        "stack_verdict",
+        "text_sources",
+        "sep1",
+        "heading_patch_today",
+        "alert_patch_today",
+        "item_cve_2026_0770",
+        "item_cve_2026_60137",
+        "item_malware_wave",
+        "sep2",
+        "heading_patch_week",
+        "item_ghsa_f4vv",
+        "item_ghsa_23hp",
+        "item_ghsa_c6w9",
+        "item_ghsa_vj59",
+        "item_pillow",
+        "sep3",
+        "heading_monitor",
+        "item_ghsa_395f",
+        "item_ghsa_3jxr",
+        "item_ghsa_jhmp"
+      ]
+    },
+    "stack_verdict": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_exploited",
+        "stat_to_schedule",
+        "stat_to_monitor"
+      ]
+    },
+    "stat_exploited": {
+      "type": "Stat",
+      "props": {
+        "label": "Actively exploited today",
+        "value": "3",
+        "trend": "up"
+      }
+    },
+    "stat_to_schedule": {
+      "type": "Stat",
+      "props": {
+        "label": "To schedule this week",
+        "value": "5"
+      }
+    },
+    "stat_to_monitor": {
+      "type": "Stat",
+      "props": {
+        "label": "To monitor",
+        "value": "3"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GitHub Advisory, EPSS",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_patch_today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "alert_patch_today": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Actively exploited vulnerabilities requiring immediate patches"
+      }
+    },
+    "item_cve_2026_0770": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_cve_2026_0770",
+        "badge_langflow",
+        "badge_cve_2026_0770_cvss",
+        "text_cve_2026_0770_desc",
+        "text_cve_2026_0770_action"
+      ]
+    },
+    "storylink_cve_2026_0770": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-0770",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-0770",
+        "source": "CISA KEV (added 2026-07-21)"
+      }
+    },
+    "badge_langflow": {
+      "type": "Badge",
+      "props": {
+        "text": "langflow (pip)",
+        "variant": "secondary"
+      }
+    },
+    "badge_cve_2026_0770_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS: n/a",
+        "variant": "outline"
+      }
+    },
+    "text_cve_2026_0770_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Untrusted-control-sphere → unauth RCE. Exploited per CISA."
+      }
+    },
+    "text_cve_2026_0770_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade langflow to ≥1.9.0 today.",
+        "variant": "lead"
+      }
+    },
+    "item_cve_2026_60137": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stack_cves_wordpress",
+        "badge_wordpress",
+        "text_cve_2026_60137_desc",
+        "text_cve_2026_60137_action"
+      ]
+    },
+    "stack_cves_wordpress": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "storylink_cve_2026_60137",
+        "storylink_cve_2026_63030"
+      ]
+    },
+    "storylink_cve_2026_60137": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-60137",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-60137",
+        "source": "CISA KEV"
+      }
+    },
+    "storylink_cve_2026_63030": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-63030",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-63030",
+        "source": "CISA KEV"
+      }
+    },
+    "badge_wordpress": {
+      "type": "Badge",
+      "props": {
+        "text": "wordpress core",
+        "variant": "secondary"
+      }
+    },
+    "text_cve_2026_60137_desc": {
+      "type": "Text",
+      "props": {
+        "text": "SQLi chained with interpretation-conflict → unauth RCE on default installs."
+      }
+    },
+    "text_cve_2026_60137_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade WordPress to ≥7.0.2 today.",
+        "variant": "lead"
+      }
+    },
+    "item_malware_wave": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_malware",
+        "text_malware_scope",
+        "text_malware_list",
+        "text_malware_action"
+      ]
+    },
+    "heading_malware": {
+      "type": "Heading",
+      "props": {
+        "text": "Supply-chain malware wave",
+        "level": "h3"
+      }
+    },
+    "text_malware_scope": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub advisory type=malware. ~95 PyPI + 5 npm in 48h"
+      }
+    },
+    "text_malware_list": {
+      "type": "Text",
+      "props": {
+        "text": "Typosquats of absl-py (abseil-py), adafruit_imageload/display_text, chai-as-promised (chai-leaf, chai-as-reddit), plus lambda-cloudwatch-cdk."
+      }
+    },
+    "text_malware_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Audit PyPI/npm installs against advisory list; rotate creds if any bad version installed.",
+        "variant": "lead"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_patch_week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "item_ghsa_f4vv": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_ghsa_f4vv",
+        "badge_lightrag",
+        "stack_ghsa_f4vv_scores",
+        "text_ghsa_f4vv_desc",
+        "text_ghsa_f4vv_action"
+      ]
+    },
+    "storylink_ghsa_f4vv": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-f4vv-55c2-5789",
+        "href": "https://github.com/advisories/GHSA-f4vv-55c2-5789"
+      }
+    },
+    "badge_lightrag": {
+      "type": "Badge",
+      "props": {
+        "text": "lightrag-hku (pip)",
+        "variant": "secondary"
+      }
+    },
+    "stack_ghsa_f4vv_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_ghsa_f4vv_cvss",
+        "stat_ghsa_f4vv_epss",
+        "badge_ghsa_f4vv_poc"
+      ]
+    },
+    "stat_ghsa_f4vv_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "9.3"
+      }
+    },
+    "stat_ghsa_f4vv_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.38%"
+      }
+    },
+    "badge_ghsa_f4vv_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "Public PoC",
+        "variant": "destructive"
+      }
+    },
+    "text_ghsa_f4vv_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Hardcoded JWT secret + /auth-status mints guest tokens → offline auth bypass on api-key mode."
+      }
+    },
+    "text_ghsa_f4vv_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade lightrag-hku to ≥1.5.4.",
+        "variant": "lead"
+      }
+    },
+    "item_ghsa_23hp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_ghsa_23hp",
+        "badge_tar",
+        "stack_ghsa_23hp_scores",
+        "text_ghsa_23hp_desc",
+        "text_ghsa_23hp_action"
+      ]
+    },
+    "storylink_ghsa_23hp": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-23hp-3jrh-7fpw",
+        "href": "https://github.com/advisories/GHSA-23hp-3jrh-7fpw"
+      }
+    },
+    "badge_tar": {
+      "type": "Badge",
+      "props": {
+        "text": "tar (npm, node-tar)",
+        "variant": "secondary"
+      }
+    },
+    "stack_ghsa_23hp_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_ghsa_23hp_cvss",
+        "stat_ghsa_23hp_epss",
+        "badge_ghsa_23hp_poc"
+      ]
+    },
+    "stat_ghsa_23hp_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "9.2"
+      }
+    },
+    "stat_ghsa_23hp_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.36%"
+      }
+    },
+    "badge_ghsa_23hp_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "Public PoC",
+        "variant": "destructive"
+      }
+    },
+    "text_ghsa_23hp_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Gzip-bomb decompression + negative-size infinite loop → disk exhaustion DoS."
+      }
+    },
+    "text_ghsa_23hp_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade tar to ≥7.5.19.",
+        "variant": "lead"
+      }
+    },
+    "item_ghsa_c6w9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_ghsa_c6w9",
+        "badge_directus",
+        "stack_ghsa_c6w9_scores",
+        "text_ghsa_c6w9_desc",
+        "text_ghsa_c6w9_action"
+      ]
+    },
+    "storylink_ghsa_c6w9": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-c6w9-5g5j-jh2p",
+        "href": "https://github.com/advisories/GHSA-c6w9-5g5j-jh2p"
+      }
+    },
+    "badge_directus": {
+      "type": "Badge",
+      "props": {
+        "text": "directus (npm)",
+        "variant": "secondary"
+      }
+    },
+    "stack_ghsa_c6w9_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_ghsa_c6w9_cvss",
+        "stat_ghsa_c6w9_epss"
+      ]
+    },
+    "stat_ghsa_c6w9_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.6"
+      }
+    },
+    "stat_ghsa_c6w9_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.28%"
+      }
+    },
+    "text_ghsa_c6w9_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Cache key ignores auth context → cross-user response leak."
+      }
+    },
+    "text_ghsa_c6w9_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade directus to ≥12.0.0.",
+        "variant": "lead"
+      }
+    },
+    "item_ghsa_vj59": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_ghsa_vj59",
+        "badge_astro",
+        "stack_ghsa_vj59_scores",
+        "text_ghsa_vj59_desc",
+        "text_ghsa_vj59_action"
+      ]
+    },
+    "storylink_ghsa_vj59": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-vj59-8hwv-xxmv",
+        "href": "https://github.com/advisories/GHSA-vj59-8hwv-xxmv"
+      }
+    },
+    "badge_astro": {
+      "type": "Badge",
+      "props": {
+        "text": "astro (npm)",
+        "variant": "secondary"
+      }
+    },
+    "stack_ghsa_vj59_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_ghsa_vj59_cvss",
+        "stat_ghsa_vj59_epss"
+      ]
+    },
+    "stat_ghsa_vj59_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.2"
+      }
+    },
+    "stat_ghsa_vj59_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.27%"
+      }
+    },
+    "text_ghsa_vj59_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Decode-iteration + rewrite-canonicalization mismatch → auth bypass."
+      }
+    },
+    "text_ghsa_vj59_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade astro to ≥6.4.8.",
+        "variant": "lead"
+      }
+    },
+    "item_pillow": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_pillow",
+        "badge_pillow",
+        "stack_pillow_scores",
+        "text_pillow_desc",
+        "text_pillow_action"
+      ]
+    },
+    "heading_pillow": {
+      "type": "Heading",
+      "props": {
+        "text": "pillow 10-CVE bundle",
+        "level": "h3"
+      }
+    },
+    "badge_pillow": {
+      "type": "Badge",
+      "props": {
+        "text": "pillow (pip)",
+        "variant": "secondary"
+      }
+    },
+    "stack_pillow_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_pillow_cvss",
+        "text_pillow_epss"
+      ]
+    },
+    "text_pillow_cvss": {
+      "type": "Text",
+      "props": {
+        "text": "CVSS 7.5–8.7"
+      }
+    },
+    "text_pillow_epss": {
+      "type": "Text",
+      "props": {
+        "text": "EPSS ~0.35–0.39%"
+      }
+    },
+    "text_pillow_desc": {
+      "type": "Text",
+      "props": {
+        "text": "4x heap-oob-write (ImageCmsTransform, paste/crop, RankFilter) + 6x DoS (JPEG2000, PDF decomp-bomb, etc). All fixed in 12.3.0."
+      }
+    },
+    "text_pillow_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Upgrade pillow to ≥12.3.0.",
+        "variant": "lead"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "item_ghsa_395f": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_ghsa_395f",
+        "badge_shell_quote",
+        "stack_ghsa_395f_scores",
+        "text_ghsa_395f_desc",
+        "text_ghsa_395f_action"
+      ]
+    },
+    "storylink_ghsa_395f": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-395f-4hp3-45gv",
+        "href": "https://github.com/advisories/GHSA-395f-4hp3-45gv"
+      }
+    },
+    "badge_shell_quote": {
+      "type": "Badge",
+      "props": {
+        "text": "shell-quote (npm)",
+        "variant": "outline"
+      }
+    },
+    "stack_ghsa_395f_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_ghsa_395f_cvss",
+        "text_ghsa_395f_fix"
+      ]
+    },
+    "stat_ghsa_395f_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "8.7"
+      }
+    },
+    "text_ghsa_395f_fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fix: 1.9.0",
+        "variant": "caption"
+      }
+    },
+    "text_ghsa_395f_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Quadratic DoS in parse()."
+      }
+    },
+    "text_ghsa_395f_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Schedule bump; low active-exploit signal."
+      }
+    },
+    "item_ghsa_3jxr": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_ghsa_3jxr",
+        "badge_brace_expansion",
+        "stack_ghsa_3jxr_scores",
+        "text_ghsa_3jxr_action"
+      ]
+    },
+    "storylink_ghsa_3jxr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-3jxr-9vmj-r5cp",
+        "href": "https://github.com/advisories/GHSA-3jxr-9vmj-r5cp"
+      }
+    },
+    "badge_brace_expansion": {
+      "type": "Badge",
+      "props": {
+        "text": "brace-expansion (npm)",
+        "variant": "outline"
+      }
+    },
+    "stack_ghsa_3jxr_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_ghsa_3jxr_cvss",
+        "text_ghsa_3jxr_fix",
+        "badge_ghsa_3jxr_transitive"
+      ]
+    },
+    "stat_ghsa_3jxr_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS v4",
+        "value": "7.7"
+      }
+    },
+    "text_ghsa_3jxr_fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fix: 5.0.7",
+        "variant": "caption"
+      }
+    },
+    "badge_ghsa_3jxr_transitive": {
+      "type": "Badge",
+      "props": {
+        "text": "Transitive dep in many stacks",
+        "variant": "outline"
+      }
+    },
+    "text_ghsa_3jxr_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Schedule bump."
+      }
+    },
+    "item_ghsa_jhmp": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_ghsa_jhmp",
+        "badge_tornado",
+        "stack_ghsa_jhmp_scores",
+        "text_ghsa_jhmp_desc",
+        "text_ghsa_jhmp_action"
+      ]
+    },
+    "storylink_ghsa_jhmp": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-jhmp-mqwm-3gq8",
+        "href": "https://github.com/advisories/GHSA-jhmp-mqwm-3gq8"
+      }
+    },
+    "badge_tornado": {
+      "type": "Badge",
+      "props": {
+        "text": "tornado (pip)",
+        "variant": "outline"
+      }
+    },
+    "stack_ghsa_jhmp_scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_ghsa_jhmp_cvss",
+        "text_ghsa_jhmp_fix"
+      ]
+    },
+    "stat_ghsa_jhmp_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.5"
+      }
+    },
+    "text_ghsa_jhmp_fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fix: 6.5.3",
+        "variant": "caption"
+      }
+    },
+    "text_ghsa_jhmp_desc": {
+      "type": "Text",
+      "props": {
+        "text": "CVE-2025-67725/6 pair."
+      }
+    },
+    "text_ghsa_jhmp_action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Schedule bump."
+      }
+    }
+  }
+}
