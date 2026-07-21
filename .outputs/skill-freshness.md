@@ -1,13 +1,23 @@
 ## Summary
 
-Skill-freshness audit complete for 2026-07-19.
+**skill-freshness — 2026-07-21 — FRESHNESS_OK**
 
-**Verdict: ✅ FRESHNESS_OK**
+Audited 43 enabled skills across `aeon.yml`. No active chains (`chains: {}`), so zero explicit chain edges. Found 11 implicit cross-skill file dependencies via SKILL.md grep; 3 skipped (disabled producers: `push-recap`, `repo-actions`, `heartbeat` articles). **8 dependencies checked — all OK:**
 
-- 43 enabled skills audited, `chains: {}` → 0 explicit edges
-- 11 implicit dependencies found across 7 consumers — all within freshness thresholds (git checkout sets all mtimes to ~0h, well under every class threshold)
-- 0 dependencies flagged
-- Fingerprint unchanged from 2026-07-18 (sha1=da39a3ee, 0 flagged rows) → no notification sent (OK verdict is always silent)
-- Observer notes: `cost-report` and `weekly-shiplog` articles are now ~480h (20d) stale by filename date — +24h deeper than yesterday — but neither is consumed by any enabled skill, so no flag fires
+| Consumer | Dependency | Age | Threshold | Result |
+|---|---|---|---|---|
+| token-pick | `memory/topics/market-context.md` | ~0h | 168h | ✅ OK |
+| token-pick | `memory/topics/aixbt-grounding.md` | ~0h | 168h | ✅ OK |
+| operator-scorecard | `articles/skill-analytics-2026-07-15.md` | 144h | 192h | ✅ OK |
+| vuln-scanner | `.outputs/github-trending.md` | ~0h | 4h | ✅ OK |
+| fork-skill-gap | `memory/topics/fork-cohort-state.json` | ~0h | 168h | ✅ OK |
+| reflect | `articles/` (newest: 2026-07-20) | ~21h | 28h | ✅ OK |
+| action-converter | `articles/` (newest: 2026-07-20) | ~21h | 28h | ✅ OK |
+| action-converter | `memory/topics/*.md` | ~0h | 168h | ✅ OK |
 
-Files written: `articles/skill-freshness-2026-07-19.md`, `memory/topics/skill-freshness-state.json` (timestamp updated), `memory/logs/2026-07-19.md` (log entry appended).
+**Fleet verdict: FRESHNESS_OK.** No notification sent (silence = good news). Files written:
+- `articles/skill-freshness-2026-07-21.md` — report
+- `memory/topics/skill-freshness-state.json` — updated `last_run_at` to `2026-07-21T09:44:01Z`
+- `memory/logs/2026-07-21.md` — log entry appended
+
+Caveat noted in article: git-checkout mtime masking affects `.outputs/` and `memory/topics/` freshness readings — article-class deps used filename-date parsing as the more reliable signal in this environment.
