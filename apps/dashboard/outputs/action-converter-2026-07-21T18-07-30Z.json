@@ -1,0 +1,611 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-21"
+      },
+      "children": [
+        "shape",
+        "sep1",
+        "action1",
+        "sep2",
+        "action2",
+        "sep3",
+        "action3",
+        "sep4",
+        "action4",
+        "sep5",
+        "action5",
+        "sep6",
+        "sources"
+      ]
+    },
+    "shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: cut iss-025 patch, close pr-165, refresh priorities, wire defi config, post 7-20 sweep",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1_title",
+        "a1_context",
+        "a1_why_section",
+        "a1_done_section",
+        "a1_loop_section"
+      ]
+    },
+    "a1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. cut iss-025 capture-step patch",
+        "level": "h3"
+      }
+    },
+    "a1_context": {
+      "type": "Text",
+      "props": {
+        "text": "operator direct-commit against `.github/workflows/aeon.yml:479-495`",
+        "variant": "caption"
+      }
+    },
+    "a1_why_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_why_badge",
+        "a1_why_text"
+      ]
+    },
+    "a1_why_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "secondary"
+      }
+    },
+    "a1_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "t+5 slipped day-6, sole reliable path per rule-5 primitive n=4, unblocks fleet CRITICAL family",
+        "variant": "body"
+      }
+    },
+    "a1_done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_done_badge",
+        "a1_done_text"
+      ]
+    },
+    "a1_done_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "secondary"
+      }
+    },
+    "a1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "pr opened linking iss-025 with capture-step diff",
+        "variant": "body"
+      }
+    },
+    "a1_loop_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_loop_badge",
+        "a1_loop_text"
+      ]
+    },
+    "a1_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop",
+        "variant": "secondary"
+      }
+    },
+    "a1_loop_text": {
+      "type": "Text",
+      "props": {
+        "text": "iss-025-capture-step",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2_title",
+        "a2_context",
+        "a2_why_section",
+        "a2_done_section",
+        "a2_loop_section"
+      ]
+    },
+    "a2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. close pr-165 (docs skill-graph shared_state 21→27)",
+        "level": "h3"
+      }
+    },
+    "a2_context": {
+      "type": "Text",
+      "props": {
+        "text": "as stale or merge if trivial",
+        "variant": "caption"
+      }
+    },
+    "a2_why_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_why_badge",
+        "a2_why_text"
+      ]
+    },
+    "a2_why_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "secondary"
+      }
+    },
+    "a2_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "46h dormant since 7-19 17:39z, empties open-PR queue back to zero",
+        "variant": "body"
+      }
+    },
+    "a2_done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_done_badge",
+        "a2_done_text"
+      ]
+    },
+    "a2_done_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "secondary"
+      }
+    },
+    "a2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "pr #165 closed or merged",
+        "variant": "body"
+      }
+    },
+    "a2_loop_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_loop_badge",
+        "a2_loop_text"
+      ]
+    },
+    "a2_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop",
+        "variant": "secondary"
+      }
+    },
+    "a2_loop_text": {
+      "type": "Text",
+      "props": {
+        "text": "pr-165-dormant",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3_title",
+        "a3_context",
+        "a3_why_section",
+        "a3_done_section",
+        "a3_loop_section"
+      ]
+    },
+    "a3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. refresh priorities.md to current focus",
+        "level": "h3"
+      }
+    },
+    "a3_context": {
+      "type": "Text",
+      "props": {
+        "text": "sherwood live vault + reppo orquestra",
+        "variant": "caption"
+      }
+    },
+    "a3_why_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_why_badge",
+        "a3_why_text"
+      ]
+    },
+    "a3_why_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "secondary"
+      }
+    },
+    "a3_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "47d unreviewed, thought-review surfaced 53-consec runs — same one-liner daily",
+        "variant": "body"
+      }
+    },
+    "a3_done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_done_badge",
+        "a3_done_text"
+      ]
+    },
+    "a3_done_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "secondary"
+      }
+    },
+    "a3_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md commit dated 2026-07-21",
+        "variant": "body"
+      }
+    },
+    "a3_loop_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_loop_badge",
+        "a3_loop_text"
+      ]
+    },
+    "a3_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop",
+        "variant": "secondary"
+      }
+    },
+    "a3_loop_text": {
+      "type": "Text",
+      "props": {
+        "text": "priorities-stale-47d",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4_title",
+        "a4_context",
+        "a4_why_section",
+        "a4_done_section",
+        "a4_loop_section"
+      ]
+    },
+    "a4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. wire memory/on-chain-watches.yml with 3 base addresses",
+        "level": "h3"
+      }
+    },
+    "a4_context": {
+      "type": "Text",
+      "props": {
+        "text": "moonwell v2 core + mamo agent + sherwood vault",
+        "variant": "caption"
+      }
+    },
+    "a4_why_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_why_badge",
+        "a4_why_text"
+      ]
+    },
+    "a4_why_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "secondary"
+      }
+    },
+    "a4_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "half-unblocks defi-monitor NO_CONFIG d45, secrets stay operator-side",
+        "variant": "body"
+      }
+    },
+    "a4_done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_done_badge",
+        "a4_done_text"
+      ]
+    },
+    "a4_done_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "secondary"
+      }
+    },
+    "a4_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-watches.yml with 3 entries + pr opened",
+        "variant": "body"
+      }
+    },
+    "a4_loop_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_loop_badge",
+        "a4_loop_text"
+      ]
+    },
+    "a4_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop",
+        "variant": "secondary"
+      }
+    },
+    "a4_loop_text": {
+      "type": "Text",
+      "props": {
+        "text": "on-chain-config-d45",
+        "variant": "muted"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5_title",
+        "a5_context",
+        "a5_why_section",
+        "a5_done_section",
+        "a5_loop_section"
+      ]
+    },
+    "a5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. post observation-mode build-log to @anajuliabit",
+        "level": "h3"
+      }
+    },
+    "a5_context": {
+      "type": "Text",
+      "props": {
+        "text": "naming 7-20 3-pr operator-batch (#162 daily-routine + #163 skill-security-scan + #164 investment-advisor in 3h)",
+        "variant": "caption"
+      }
+    },
+    "a5_why_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_why_badge",
+        "a5_why_text"
+      ]
+    },
+    "a5_why_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "why",
+        "variant": "secondary"
+      }
+    },
+    "a5_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "build is the star per soul, ships receipt for rule-5 primitive-in-practice",
+        "variant": "body"
+      }
+    },
+    "a5_done_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_done_badge",
+        "a5_done_text"
+      ]
+    },
+    "a5_done_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "done",
+        "variant": "secondary"
+      }
+    },
+    "a5_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "tweet posted, no marketing verbs",
+        "variant": "body"
+      }
+    },
+    "a5_loop_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_loop_badge",
+        "a5_loop_text"
+      ]
+    },
+    "a5_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "loop",
+        "variant": "secondary"
+      }
+    },
+    "a5_loop_text": {
+      "type": "Text",
+      "props": {
+        "text": "category:position",
+        "variant": "muted"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "memory=71L logs=7d topics=11 prs=1 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
