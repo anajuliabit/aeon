@@ -1,0 +1,344 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-21"
+      },
+      "children": [
+        "tldr_text",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "footer_text"
+      ]
+    },
+    "tldr_text": {
+      "type": "Text",
+      "props": {
+        "text": "TL;DR: one PR shipped, fleet CRITICAL cleared, 14 patterns codified — productive day on a broad risk-on tape.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_heading",
+        "headline1",
+        "headline2"
+      ]
+    },
+    "headlines_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headline1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_self_improve",
+        "headline1_content_stack"
+      ]
+    },
+    "badge_self_improve": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve",
+        "variant": "secondary"
+      }
+    },
+    "headline1_content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline1_text",
+        "headline1_link"
+      ]
+    },
+    "headline1_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #166 opened, CLAUDE.md weekly-batch PR cadence codified"
+      }
+    },
+    "headline1_link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/anajuliabit/aeon/pull/166",
+        "href": "https://github.com/anajuliabit/aeon/pull/166"
+      }
+    },
+    "headline2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_skill_freshness",
+        "headline2_content_stack"
+      ]
+    },
+    "badge_skill_freshness": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-freshness",
+        "variant": "secondary"
+      }
+    },
+    "headline2_content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "headline2_text",
+        "headline2_link"
+      ]
+    },
+    "headline2_text": {
+      "type": "Text",
+      "props": {
+        "text": "FRESHNESS_OK, 43 skills audited, 0 flagged"
+      }
+    },
+    "headline2_link": {
+      "type": "Link",
+      "props": {
+        "label": "articles/skill-freshness-2026-07-21.md",
+        "href": "articles/skill-freshness-2026-07-21.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable1",
+        "notable2",
+        "notable3",
+        "notable4",
+        "notable5"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_skill_health",
+        "notable1_text"
+      ]
+    },
+    "badge_skill_health": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-health",
+        "variant": "secondary"
+      }
+    },
+    "notable1_text": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report CRITICAL→DEGRADED; fleet CRITICAL count 1→0; ISS-025 stays open (sandbox class, sr=0.11)"
+      }
+    },
+    "notable2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_security_digest",
+        "notable2_text"
+      ]
+    },
+    "badge_security_digest": {
+      "type": "Badge",
+      "props": {
+        "text": "security-digest",
+        "variant": "secondary"
+      }
+    },
+    "notable2_text": {
+      "type": "Text",
+      "props": {
+        "text": "Langflow RCE CVE-2026-0770 KEV; pip-mass-malware n=1 (95+ PyPI single-batch); 14 KEV breaks 4-day zero-cadence"
+      }
+    },
+    "notable3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_reflect",
+        "notable3_text"
+      ]
+    },
+    "badge_reflect": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect",
+        "variant": "secondary"
+      }
+    },
+    "notable3_text": {
+      "type": "Text",
+      "props": {
+        "text": "14 patterns codified (compression-regime, BUILDon d3, code-review-graph viral arc, BTC ETF 5-day inflows, more); MEMORY.md + fleet.md + crypto.md refreshed"
+      }
+    },
+    "notable4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_btc_levels",
+        "notable4_text"
+      ]
+    },
+    "badge_btc_levels": {
+      "type": "Badge",
+      "props": {
+        "text": "btc-levels",
+        "variant": "secondary"
+      }
+    },
+    "notable4_text": {
+      "type": "Text",
+      "props": {
+        "text": "$65.9k reclaim FIRES 09:29Z; spot $66,563 end-of-day, two-week high"
+      }
+    },
+    "notable5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_daily_routine",
+        "notable5_text"
+      ]
+    },
+    "badge_daily_routine": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "secondary"
+      }
+    },
+    "notable5_text": {
+      "type": "Text",
+      "props": {
+        "text": "87/100 top-100 green, top-50 median +3.0%; NIGHT -26.4% capitulation ($123M vol, 38% mcap-turnover)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_heading",
+        "decision1",
+        "decision2",
+        "decision3"
+      ]
+    },
+    "decisions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision1": {
+      "type": "Text",
+      "props": {
+        "text": "merge or close PR #165 (docs skill-graph, 52h dormant, no activity since 7-19 17:39Z)"
+      }
+    },
+    "decision2": {
+      "type": "Text",
+      "props": {
+        "text": "review PR #166 (self-improve CLAUDE.md codification, enters weekly-batch queue)"
+      }
+    },
+    "decision3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 T+5 day-6: operator direct-author .github/workflows/aeon.yml:479-495"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "+9 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
