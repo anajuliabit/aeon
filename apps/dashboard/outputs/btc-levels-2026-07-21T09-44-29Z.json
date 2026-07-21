@@ -1,0 +1,94 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "₿ BTC Levels"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_spot",
+        "badge_status",
+        "sep1",
+        "text_signal",
+        "stat_daily",
+        "text_support",
+        "sep2",
+        "text_leverage",
+        "alert_disclaimer"
+      ]
+    },
+    "stat_spot": {
+      "type": "Stat",
+      "props": {
+        "label": "Spot Price",
+        "value": "$66.2k"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "Stabilization Confirmed",
+        "variant": "default"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_signal": {
+      "type": "Text",
+      "props": {
+        "text": "Spot reclaims $65,900 per 2026-06-09 advisor levels (second signal after $63,500 cleared earlier).",
+        "variant": "body"
+      }
+    },
+    "stat_daily": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Close (2026-07-20)",
+        "value": "$65.2k"
+      }
+    },
+    "text_support": {
+      "type": "Text",
+      "props": {
+        "text": "Holds well above key support at $60,500.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_leverage": {
+      "type": "Text",
+      "props": {
+        "text": "Leverage-review trigger at ≤$45k not approached.",
+        "variant": "muted"
+      }
+    },
+    "alert_disclaimer": {
+      "type": "Alert",
+      "props": {
+        "message": "Not financial advice.",
+        "type": "info"
+      }
+    }
+  }
+}
