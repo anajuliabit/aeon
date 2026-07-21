@@ -1,0 +1,95 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest"
+      },
+      "children": [
+        "heading_title",
+        "text_intro",
+        "sep1",
+        "heading_tracked",
+        "tweet_hooeem",
+        "text_replies",
+        "text_analysis",
+        "link_post",
+        "sep2",
+        "text_sources"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "List Digest — 2026-07-21",
+        "level": "h1"
+      }
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "single tracked list, single signal — hooeem's \"unserious if not into ai in 2026\" is the only post above ambient noise this window.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_tracked": {
+      "type": "Heading",
+      "props": {
+        "text": "Tracked List (1642770456720683008)",
+        "level": "h2"
+      }
+    },
+    "tweet_hooeem": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "unserious if not into ai in 2026",
+        "likes": 51,
+        "retweets": 2
+      }
+    },
+    "text_replies": {
+      "type": "Text",
+      "props": {
+        "text": "💬 17 replies",
+        "variant": "caption"
+      }
+    },
+    "text_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "contested-framing ratio, not consensus. the \"unserious\" gate provokes pushback more than agreement.",
+        "variant": "body"
+      }
+    },
+    "link_post": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2079331014220861812"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=quiet(1, cache)\nstatus: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
