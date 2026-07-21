@@ -1,14 +1,15 @@
 `HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
 ## Summary
-Ran heartbeat (20:00Z slot, ~15min late). All P0/P1/P2/P3 findings are dedup vs 48h logs or positive-delta resolutions — silent NOOP, no `./notify` call.
+Ran heartbeat (var=""). All P0/P1/P2/P3 findings full-dedup vs 48h logs — 6-consec NOOP durable, no `./notify` call.
 
-**Major state delta since 15:19Z hb:** cost-report RECOVERED — `last_status: failed → success` at 19:08:46Z, cf 8→0 (retry after 13:24Z failure landed clean per git HEAD `d6ca7e2 chore(cron): cost-report success` + article `cost-report-2026-07-20.md`). Breaks the 3rd-consec-Mon-weekly-miss n=3 acute-failure arc via intra-day retry (last_success jumps 6-29 → 7-20, ~21d gap crossed same-day). MEMORY.md line 5 now stale on "STUCK→FAILED d7" — memory-refresh candidate for reflect.
+- **P0:** 0 failed, 0 stuck, 0 cf≥3; 15-skill chronic sub-0.5 sr tail (cost-report 0.11, skill-analytics 0.16, reg-monitor 0.16, vuln-scanner 0.18, and 11 others) already surfaced in 7-20 20:15Z heartbeat + 7-21 morning-brief. Self-check ok (~13h24m since last success).
+- **P1:** PR #165 dormant docs full-dedup; 0 urgent issues.
+- **P2:** MEMORY.md staleness deferred to 18z reflect (dedup).
+- **P3:** aixbt-pulse dead-slot d24 + 12:00Z batch-dark d24 + fork-skill-gap/operator-scorecard NO_DATA — all dedup.
+- **Overall:** 🔴 DEGRADED (identical shape to 7-20 20:15Z tick, flat regime).
 
-**Files modified:**
-- `docs/status.md` — fully regenerated at 20:15Z, cost-report row moves from ❌ 13:24Z leader to ✅ 19:08Z leader
-- `memory/logs/2026-07-20.md` — appended heartbeat 20:15Z log entry
+Regenerated `docs/status.md` — verdict unchanged, timestamp advanced to 2026-07-21 09:43 UTC, next scheduled run = token-alert 12:00 UTC, top rows refreshed with today's 07z morning batch + 04:30Z btc-levels. Token pulse section omitted (no `articles/token-report-*.md` file per SKILL.md rule). Rollovers advanced: sandbox-truncation d29, batch-dark d24, priorities.md 47d, zero-captures d53, ISS-025 T+5 day-6.
 
-**Status page verdict:** 🔴 DEGRADED (14-skill chronic sr<0.5 tail keeps flag firing despite cost-report clearing acute-failure branch; 11 open issues unchanged). Next scheduled: evening-recap 21:00Z.
-
-**Follow-up:** (i) reflect refreshes MEMORY.md line 5; (ii) 21:00Z aixbt-pulse tick tests dead-slot d23 rollover; (iii) tomorrow's morning-brief should demote cost-report from focus #1.
+**Files modified:** `docs/status.md`, `memory/logs/2026-07-21.md`.
+**Follow-up:** 12:00Z batch fire (token-alert / defi-overview / token-pick / token-movers), 14:00Z heartbeat 7-consec-NOOP test, 18z self-improve / skill-health / reflect ticks.
