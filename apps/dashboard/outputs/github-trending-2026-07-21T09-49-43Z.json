@@ -1,0 +1,292 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-21"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_top_pick",
+        "stack_top_pick_content",
+        "sep1",
+        "heading_aiml",
+        "stack_aiml_content",
+        "sep2",
+        "heading_devtools",
+        "stack_devtools_content",
+        "sep3",
+        "text_footer"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "stack_top_pick_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "storylink_toppick",
+        "text_toppick_desc"
+      ]
+    },
+    "storylink_toppick": {
+      "type": "StoryLink",
+      "props": {
+        "title": "bojieli/ai-agent-book",
+        "href": "https://github.com/bojieli/ai-agent-book",
+        "source": "Chinese-language agent engineering book",
+        "score": "109× baseline today"
+      }
+    },
+    "text_toppick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "book text + PDF + per-chapter runnable code — blowing up at 109× baseline today (#1 on trending). the \"how do you actually ship an agent\" gap gets a structured treatment.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "stack_aiml_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_repo_aiml1",
+        "stack_repo_aiml2"
+      ]
+    },
+    "stack_repo_aiml1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_aiml1",
+        "stack_aiml1_meta",
+        "text_aiml1_desc"
+      ]
+    },
+    "storylink_aiml1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "bojieli/ai-agent-book",
+        "href": "https://github.com/bojieli/ai-agent-book",
+        "score": "★ 4.4k today (13k total)"
+      }
+    },
+    "stack_aiml1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_py1",
+        "badge_returning1"
+      ]
+    },
+    "badge_py1": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge_returning1": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      }
+    },
+    "text_aiml1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "book text + compiled PDF + per-chapter code, engineering-practice framing not another awesome-agents curation; 109× its 40.6/d star baseline.",
+        "variant": "body"
+      }
+    },
+    "stack_repo_aiml2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_aiml2",
+        "stack_aiml2_meta",
+        "text_aiml2_desc"
+      ]
+    },
+    "storylink_aiml2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AstrBotDevs/AstrBot",
+        "href": "https://github.com/AstrBotDevs/AstrBot",
+        "score": "★ 317 today (37k total)"
+      }
+    },
+    "stack_aiml2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_py2",
+        "badge_returning2"
+      ]
+    },
+    "badge_py2": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge_returning2": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "outline"
+      }
+    },
+    "text_aiml2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "3.6yo agent framework returning at 11× baseline; wires LLMs + plugins + IM platforms into one self-hostable stack.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "stack_devtools_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_repo_devtools1"
+      ]
+    },
+    "stack_repo_devtools1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_devtools1",
+        "stack_devtools1_meta",
+        "text_devtools1_desc",
+        "text_devtools1_arc"
+      ]
+    },
+    "storylink_devtools1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "tirth8205/code-review-graph",
+        "href": "https://github.com/tirth8205/code-review-graph",
+        "score": "★ 1.8k today (24k total)"
+      }
+    },
+    "stack_devtools1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_py3",
+        "badge_accelerating1"
+      ]
+    },
+    "badge_py3": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "badge_accelerating1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "outline"
+      }
+    },
+    "text_devtools1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "d4 viral arc — local-first MCP graph that shrinks what a coding agent has to read on large repos; benchmarked context reductions on reviews.",
+        "variant": "body"
+      }
+    },
+    "text_devtools1_arc": {
+      "type": "Text",
+      "props": {
+        "text": "Star progression: 74 → 355 → 663 → 1,833",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 3/21",
+        "variant": "muted"
+      }
+    }
+  }
+}
