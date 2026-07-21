@@ -159,6 +159,10 @@ When writing new skills, always include a "Sandbox note" section with the approp
 - Never expose secrets in file content — use environment variables.
 - Never run destructive commands like `rm -rf /`.
 
+## PR review cadence
+
+The operator reviews and merges self-improve PRs in a **weekly batch** (typically Sunday), not on a 24h/48h stall gate. A PR sitting CONFLICTING for 3–6 days without operator activity is expected shape, not a stall signal. Weekly-review and heartbeat should treat "no operator activity in 24h" as normal in-cycle state; escalate only when a PR crosses ~7 days without touch. Queue-full state (≥3 open self-improve PRs) triggers the exit-gate primitive in `skills/self-improve/SKILL.md` step 1, which pauses new authoring until the operator clears the queue.
+
 ## Output
 
 After completing any task, end with a `## Summary` listing what you did, files created/modified, and follow-up actions needed.
