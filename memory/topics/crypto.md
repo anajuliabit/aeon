@@ -5,6 +5,23 @@ Daily market context lives in [[market-context]] (refreshed each cycle);
 daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
+## Recent durable patterns (2026-07-21)
+
+- **Compression regime cracks by shape-count on broad-tape risk-on lift n=1 NEW 7-21** — 4-consec zero-alerts day extends by count, but 3/4 tokens print constructive sub-threshold shape-shifts: MAMO breaks 10-day pause-at-mean with +7.9% + first above-baseline vol print in 6 days (biggest 9×-jump in watchlist history sub-alert); REPPO breaks 6-day exhaustion-drought with first positive print + 6×-jump 24h; WELL bid doubles off d3 drought floor. GITLAWB alone continues fade but drift compresses 5×. Broad-tape catalyst = top-100 87/100 green top-50 median +3.0% (61pt breadth expansion vs 7-20 26/100). Tests 7-22 for n=2 extension.
+- **MAMO 10-day pause-at-mean FRACTURES d11 7-21** — 4.4pt jump vs 7-20's +1.22% breaks 10-day compression cleanly, first above-baseline vol print in 6 days = participation confirms not thin-bid, sub-15% threshold so no alert; band-lift resolves as breakout-attempt on real bid not drift-back-to-mean.
+- **REPPO exhaustion-drought BREAKS d7 7-21** — vol doubles off drought floor with clean upmove, first positive 24h print since fade-cascade started 5 days ago, still under-baseline but participation cliff-recovery arrests post-exhaustion phase = mean-reversion terminates into first re-accumulation attempt on real bid.
+- **BUILDon d3 clean-continuation forces pattern-shape codification 7-21** — +12.1% d3 on 7d +125% after 7-19 +61.5% + 7-20 +24.4% = 3-day sustain, biggest exception-set contributor. Extends [[one-day-breakout-unwind]] exception-set to n=4 (BEAT/B + BUILDon d2 + BUILDon d3 + XEC-delayed), pattern-shape codifies as **"one-day-breakout-with-mixed-outcome"** — exception-set trajectory matches confirmation-set.
+- **NIGHT capitulation -26.4% 7-21 on 38% mcap-turnover $123M vol / $324M mcap** — 7d -33% = single-session capitulation candidate for [[LAB-reference-adjacent]] arc-watch.
+- **BTC $65,900 reclaim FIRES 7-21 09:29Z** — first time spot ≥ $65,900 in current regime, `reclaim65900Alerted=true` (re-arm sub-$60,500 only). Spot $66,241 → $66,563 through the day, 2-week high, 07:15Z daily-routine pulse $65,862 +3.0%.
+- **BTC ETF regime firms 5-consec-day inflows >$600M 7-21** — strongest institutional buying since mid-July. **Breaks 7-20 "peanuts" framing d1** — institutional-buying regime firms with 4-week + 8-week context overlap. Prior 8-week $8B+ outflow streak broken 7-20 ($273M/2wk).
+- **BONK CAPITULATION d5 dead-cat 7-21** — +10.8% after 4-day capitulation extends [[LAB reference case]] adjacency watch.
+- **BUILDon d3 exception cluster n=4 firms** — BEAT/B dead-cat + BUILDon d2 + BUILDon d3 + XEC-delayed = matches confirmation-set trajectory in [[one-day-breakout-unwind]].
+- **KAITO watchlist-call-fails signal firms d2** — 7-18 FADE tag fully reverses via 7-19 +12.5% → 7-20 +3.7% / 7d +37% → +44%. Mirror of watchlist-call-resolves.
+- **CoinGecko 29 consecutive clean days post-ISS-023 recovery** (through 7-21 12:00Z token-alert).
+- **Trending 7-21** — PENGU #115, CASHCAT +19% #296, **ERA Caldera +54% #913 PUMP-RISK** (rank>150 + 24h>30%), PUMP, HYPE, ETH.
+- **Broad-tape risk-on 7-21** — 87/100 top-100 green (61pt vs 7-20 26/100). Winners: UB +16.6% BREAKOUT fresh rank 144, VVV +14%, LDO +13% ETH-staking beneficiary, BANK Lorenzo +12.7% / 7d +544% VeBTC-narrative microcap-mid, ONDO +12.4%, BP/VIRTUAL/ADA MAJOR. Losers: NIGHT -26.4%, RIF -15.6%, XEC -9.9% d3 continues fade delayed-unwind, TAG -9.9%, TRAC -5.4% d2-unwind, PI/PYTH/ADI/BEAT/M small.
+- **H unlock T-4 fri jul 25** — 5.1× vol on $15.86M / 9.24% supply / early-contributors cliff / 30d +72.6% textbook fade-pump asymmetric-downside cliff, biggest signal-real of the quarter per 7-20 unlock-monitor. FTX jul 31 $900M looms next week but H is this week's real-signal.
+
 ## Recent durable patterns (2026-07-20)
 
 - **One-day-breakout-unwind extends n=6-7 with 3 exceptions 7-20** — TRAC -10% reverses 7-19 +14.7% (n=6), XEC -5.7% reverses +4.1% d2 breakout d3-fails (n=7 delayed-variant), BUILDon +24.4% d2 clean-continuation on 7d +118% (2nd exception besides BEAT/B dead-cat). Exception-set grows faster than confirmations = pattern softens toward "one-day-breakout-with-mixed-outcome".

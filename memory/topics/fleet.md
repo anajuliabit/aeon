@@ -5,7 +5,36 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
-## Current health snapshot (2026-07-20)
+## Current health snapshot (2026-07-21)
+
+- **skill-health hash 467ce959** (7-20 18:47Z NOTIFY, classification byte-identical to 7-19 18:32Z NOOP report). 1 CRITICAL (cost-report — lifts pending 18Z 7-21 tick) · 17 DEGRADED · 13 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues (ISS-005/007/009/010/011/016/018/019/020/021/025). Sandbox-truncation family **day-29** (00:00Z 7-20→7-21 rollover).
+- **cost-report late-success 7-20 19:08Z** — d7 acute-failure branch resolved via late-dispatch (18:45Z ~12h post-scheduled 07Z). Fleet CRITICAL flag lifts pending 18Z 7-21 skill-health formal read. **3rd-consec-Mon-weekly-miss test lands NEGATIVE at n=2** not n=3 (last_success 6-29 → missed 7-6/7-13 → succeeded 7-20). ISS-025 sandbox-truncation family scoping tightens per-skill.
+- **Chronic sr<0.5 tail (15 skills at 15:11Z 7-21 hb, identical to 09:43Z tick)** — cost-report 0.11 (57, ISS-025), skill-analytics 0.16, reg-monitor 0.16, vuln-scanner 0.18 (ISS-018), market-context-refresh 0.32, narrative-tracker 0.33, security-digest 0.37, search-skill 0.38 (ISS-021), fleet-control 0.40, skill-health 0.45, goal-tracker 0.47, action-converter 0.47, aixbt-pulse 0.47, self-improve 0.47, reflect 0.49. Full 15-skill tail unchanged across 7-21 heartbeats + morning-brief coverage.
+- **7-consec heartbeat NOOP through 7-21 15:11Z** — flat regime durable across full UTC-day + mid-day pivot: 7-19 09:17Z + 14:13Z + 20:34Z + 7-20 15:19Z + 20:15Z + 7-21 09:43Z + 15:11Z. Zero new surprise-shape flags; only counter-advance on ISS-025-family sandbox-truncation cluster + UTC-day rollover.
+- **12:00 UTC batch DARK day-24** — 8-skill 6-28 cluster (defi-overview / token-pick / token-movers / narrative-tracker / market-context-refresh / fleet-control / on-chain-monitor / defi-monitor) still frozen. Per-skill blockage n=25 confirmed via clean same-slot fires (token-alert 12:00Z + btc-levels 12:15Z + security-digest 14:00Z fire clean while 8-skill cluster stays frozen = ISS-027 signature durable).
+- **07:00Z morning-batch catch-up-band narrows on tue 7-21** — morning-brief on-time 07:00Z + daily-routine on-time 07:15Z + thought-review on-time 07:15Z + heartbeat 09:43Z (~1h43m from 08:00Z slot per catch-up band). Contrasts 7-20 mon-load-day widened shape (~54-79min lateness). Load-dependent not degradation.
+- **aixbt-pulse dead-slot d24** — twice-daily 9,21 UTC, last 2026-06-28T21:21Z. UTC-day rollover from 7-20 d23.
+- **Self-improve queue EMPTY of CONFLICTING 7-20** — PR #162 MERGED 7-20 14:16Z + PR #163 MERGED 7-20 17:11Z + PR #164 MERGED 7-20 21:50Z = **triple-queue clears in single day, first 3-PR same-day sweep in fleet history**. Rule-5 primitive n=4 downgrades to n=2 partial-conflict class (3/4 auto-committed-drift PRs land clean via operator batch-merge). Only PR #165 (docs skill-graph) 2d old under stall gate.
+- **CLAUDE.md rule-5 codification SHIPPED 7-19 18:32Z via skill exit-gate** — `improvement-PR-queue-locks-self-improve 2-consec` codified. Self-improve exits when 3+ open PRs. Skill-side exit-gate remains fully-load-bearing after 7-20 sweep (evidence for original rule-5 primitive fades but exit-gate primitive holds independent).
+- **Weekly-review 2026-07-13 actions status (7-21):**
+  - #1 Operator direct-author ISS-025 capture-step PR by 2026-07-16 — **SLIPPED T+5 day-6**. Cost-report late-success partly-resolves acute-branch; sandbox-truncation family scoping tightens per-skill.
+  - #2 Operator decide PR #162 by 2026-07-14 — **SHIPPED via MERGE 7-20 14:16Z** (T+6 late).
+  - #3 Self-improve codifies rule-5 in CLAUDE.md by 2026-07-17 — **SHIPPED via exit-gate primitive 7-19 18:32Z** (T+2 late, skill-side gate not CLAUDE.md-edit).
+  - #4 Self-improve investigates Investment Advisor cancellation by 2026-07-16 — **SHIPPED via PR #164 MERGED 7-20 21:50Z** (T+4 late, MERGE not just investigation).
+
+## Positive events 7-20 → 7-21
+
+- **Triple-PR queue clears in single day 7-20** — PR #162 daily-routine XAI fallback tighten (14:16Z) + PR #163 skill-security-scan sandbox-block docs (17:11Z) + PR #164 investment-advisor fail-fast committee retries (21:50Z) all MERGED. First 3-PR same-day sweep in fleet history; empties CONFLICTING queue completely.
+- **cost-report late-success 7-20 19:08Z** — clears d7 acute-failure branch; 3rd-consec-Mon-miss test lands NEGATIVE at n=2. Sandbox-truncation family scoping tightens per-skill (defi-overview/token-pick/search-skill still sub-0.5 sr).
+- **BTC $65,900 reclaim FIRES 7-21 09:29Z** — first time spot ≥ $65,900 in current regime, reclaim65900Alerted set true. Spot $66,241 → $66,563 through the day, 2-week high, no re-arm until sub-$60,500.
+- **KEV 4-day zero-cadence CLOSES 7-21** — 4 fresh adds today (Langflow RCE + WordPress ×2 + others across 14 total). [[kev-4-day-zero-cadence]] artifact-not-durable confirmed.
+- **GH advisory feed 72h silent CLOSES with post-silence burst 7-21** — 3 critical + 38 high in 48h window; Pillow 10-CVE mass-dump 7-20 23:09-23:19Z + LightRAG 2-CVE pair + node-tar 2-CVE pair + Directus + Astro. Hypothesis "first-post-silence burst on 7-21" confirmed.
+- **Broad-tape risk-on lift 7-21** — daily-routine 87/100 top-100 green top-50 median +3.0% = 61pt breadth expansion vs 7-20 26/100 risk-off. BTC $65,862 +3.0%, ETH $1,934 +4.4%, SOL $78.57 +3.8%, HYPE $63.20 +4.8%.
+- **CoinGecko 29 consecutive clean days post-ISS-023 recovery** (through 7-21 12:00Z token-alert).
+- **security-digest fires clean 14Z tue-tick** — 3 today / 5 this-week / 3 monitor across supply-chain wave + Langflow KEV + LightRAG pair + node-tar pair + Pillow 10-bundle.
+- **github-trending 3-pick slate 7-21** — bojieli/ai-agent-book #1 (109× baseline book-as-code-primitive) + AstrBot (11× baseline mature-returning) + tirth8205/code-review-graph d4 re-feature (25× day-1 pace under viral-moment clause).
+
+
 
 - **skill-health hash b4d66e6c** (7-18 18:14Z NOOP, unchanged as of 4-consec heartbeat NOOP through 7-20 15:19Z). 1 CRITICAL (cost-report) · 17 DEGRADED · 13 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues (ISS-005/007/009/010/011/016/018/019/020/021/025). Sandbox-truncation family **day-28** (00:00Z 7-19→7-20 rollover).
 - **cost-report STUCK→FAILED d7 state-change 7-20 13:24Z** — `last_status: failed`, cf 5→8 (+3 in 24h), sr 0.09. Mon-weekly 07:00Z tick DID NOT fire; scheduler picked up in 12:57Z batch alongside token-alert + btc-levels (shared last_dispatch stamp = batch behavior). **3rd-consec-Mon-weekly-miss n=3 pattern-durable** (last_success 6-29, missed 7-6 + 7-13 + 7-20). ISS-025 signature. Operator direct-author against `.github/workflows/aeon.yml:479-495` sole unblock path.
