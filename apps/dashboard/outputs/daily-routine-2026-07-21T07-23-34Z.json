@@ -1,0 +1,827 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-21"
+      },
+      "children": [
+        "market_overview",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "trending_section",
+        "sep4",
+        "notable_section",
+        "sep5",
+        "tweets_section",
+        "sep6",
+        "paper_section",
+        "sep7",
+        "github_section",
+        "sep8",
+        "hn_section"
+      ]
+    },
+    "market_overview": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "market_sentiment",
+        "market_prices"
+      ]
+    },
+    "market_sentiment": {
+      "type": "Text",
+      "props": {
+        "text": "Broad risk-on — 87/100 top-100 green, top-50 median +3.0%. Filter kept 179/250.",
+        "variant": "lead"
+      }
+    },
+    "market_prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth",
+        "stat_sol",
+        "stat_bnb",
+        "stat_hype"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$65,862",
+        "delta": "+3.0%",
+        "trend": "up"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,934",
+        "delta": "+4.4%",
+        "trend": "up"
+      }
+    },
+    "stat_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$78.57",
+        "delta": "+3.8%",
+        "trend": "up"
+      }
+    },
+    "stat_bnb": {
+      "type": "Stat",
+      "props": {
+        "label": "BNB",
+        "value": "$575",
+        "delta": "+1.9%",
+        "trend": "up"
+      }
+    },
+    "stat_hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$63.20",
+        "delta": "+4.8%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol/$M",
+          "Rank",
+          "Status"
+        ],
+        "rows": [
+          [
+            "UB",
+            "$0.103",
+            "+16.6%",
+            "+36%",
+            "+2.1%",
+            "$14M",
+            "#144",
+            "BREAKOUT"
+          ],
+          [
+            "VVV",
+            "$13.03",
+            "+14.0%",
+            "+20%",
+            "+4.3%",
+            "$26M",
+            "#92",
+            ""
+          ],
+          [
+            "LDO",
+            "$0.400",
+            "+13.0%",
+            "+22%",
+            "−0.3%",
+            "$49M",
+            "#124",
+            ""
+          ],
+          [
+            "BANK",
+            "$0.275",
+            "+12.7%",
+            "+544%",
+            "+11.9%",
+            "$148M",
+            "#238",
+            ""
+          ],
+          [
+            "ONDO",
+            "$0.383",
+            "+12.4%",
+            "+24%",
+            "+5.4%",
+            "$124M",
+            "#42",
+            ""
+          ],
+          [
+            "B",
+            "$0.250",
+            "+12.1%",
+            "+125%",
+            "−0.6%",
+            "$30M",
+            "#147",
+            ""
+          ],
+          [
+            "BONK",
+            "$0.00000308",
+            "+10.8%",
+            "−17%",
+            "−1.3%",
+            "$115M",
+            "#139",
+            ""
+          ],
+          [
+            "BP",
+            "$0.464",
+            "+10.8%",
+            "−13%",
+            "−0.4%",
+            "$1.9M",
+            "#233",
+            ""
+          ],
+          [
+            "VIRTUAL",
+            "$0.657",
+            "+9.4%",
+            "+20%",
+            "flat",
+            "$99M",
+            "#109",
+            ""
+          ],
+          [
+            "ADA",
+            "$0.176",
+            "+8.9%",
+            "+11%",
+            "+0.1%",
+            "$419M",
+            "#17",
+            "MAJOR"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Symbol",
+          "Price",
+          "24h",
+          "7d",
+          "1h",
+          "Vol/$M",
+          "Rank",
+          "Status"
+        ],
+        "rows": [
+          [
+            "NIGHT",
+            "$0.0195",
+            "−26.4%",
+            "−33%",
+            "+0.6%",
+            "$123M",
+            "#126",
+            "CAPITULATION"
+          ],
+          [
+            "RIF",
+            "$0.109",
+            "−15.6%",
+            "−15%",
+            "−3.4%",
+            "$8.3M",
+            "#249",
+            ""
+          ],
+          [
+            "XEC",
+            "$0.00000711",
+            "−9.9%",
+            "+19%",
+            "−0.1%",
+            "$9.1M",
+            "#211",
+            ""
+          ],
+          [
+            "TAG",
+            "$0.00109",
+            "−9.9%",
+            "+26%",
+            "+2.3%",
+            "$4.2M",
+            "#230",
+            ""
+          ],
+          [
+            "TRAC",
+            "$0.297",
+            "−5.4%",
+            "+16%",
+            "−5.1%",
+            "$26M",
+            "#219",
+            ""
+          ],
+          [
+            "PI",
+            "$0.0901",
+            "−4.7%",
+            "+24%",
+            "−0.7%",
+            "$23M",
+            "#67",
+            ""
+          ],
+          [
+            "PYTH",
+            "$0.0478",
+            "−4.5%",
+            "+3%",
+            "+0.3%",
+            "$21M",
+            "#117",
+            ""
+          ],
+          [
+            "ADI",
+            "$6.73",
+            "−3.8%",
+            "−4%",
+            "−0.1%",
+            "$6.7M",
+            "#74",
+            ""
+          ],
+          [
+            "BEAT",
+            "$2.32",
+            "−2.9%",
+            "−12%",
+            "−1.5%",
+            "$6.6M",
+            "#86",
+            ""
+          ],
+          [
+            "M",
+            "$1.19",
+            "−2.8%",
+            "−4%",
+            "−1.0%",
+            "$15M",
+            "#50",
+            ""
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "trending_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending_heading",
+        "trending_items"
+      ]
+    },
+    "trending_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h3"
+      }
+    },
+    "trending_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trend_1",
+        "trend_2",
+        "trend_3",
+        "trend_4",
+        "trend_5",
+        "trend_6"
+      ]
+    },
+    "trend_1": {
+      "type": "Text",
+      "props": {
+        "text": "PENGU #115 +5.4%"
+      }
+    },
+    "trend_2": {
+      "type": "Text",
+      "props": {
+        "text": "CASHCAT #296 +19%"
+      }
+    },
+    "trend_3": {
+      "type": "Badge",
+      "props": {
+        "text": "ERA #913 +54% PUMP-RISK",
+        "variant": "destructive"
+      }
+    },
+    "trend_4": {
+      "type": "Text",
+      "props": {
+        "text": "PUMP #77 +3.7%"
+      }
+    },
+    "trend_5": {
+      "type": "Badge",
+      "props": {
+        "text": "HYPE #10 +4.8% MAJOR",
+        "variant": "secondary"
+      }
+    },
+    "trend_6": {
+      "type": "Text",
+      "props": {
+        "text": "ETH #2 +4.6%"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_heading",
+        "notable_items"
+      ]
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "notable_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4",
+        "notable_5"
+      ]
+    },
+    "notable_1": {
+      "type": "Text",
+      "props": {
+        "text": "UB fresh BREAKOUT rank 144 on $14M vol"
+      }
+    },
+    "notable_2": {
+      "type": "Text",
+      "props": {
+        "text": "BANK Lorenzo 7d +544% microcap-mid, VeBTC narrative"
+      }
+    },
+    "notable_3": {
+      "type": "Text",
+      "props": {
+        "text": "B BUILDon +12% / 7d +125% = d3 clean-continuation extends [[one-day-breakout-unwind]] exception n=3"
+      }
+    },
+    "notable_4": {
+      "type": "Text",
+      "props": {
+        "text": "NIGHT CAPITULATION on 38% mcap-turnover; TRAC d2 -5.4% after 7-20 -10% unwind-into-fade"
+      }
+    },
+    "notable_5": {
+      "type": "Alert",
+      "props": {
+        "title": "ERA #913",
+        "message": "+54% PUMP-RISK",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweets_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweets_heading",
+        "crypto_tweets",
+        "ai_tweets",
+        "dev_tweets"
+      ]
+    },
+    "tweets_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup (WebSearch, XAI blocked)",
+        "level": "h3"
+      }
+    },
+    "crypto_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto_subheading",
+        "crypto_item_1",
+        "crypto_item_2",
+        "crypto_item_3"
+      ]
+    },
+    "crypto_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "crypto_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "BTC two-week high $65.5k chip-trade tailwind; 5-straight-day US spot BTC ETF inflows >$600M = strongest since mid-july, breaks 7-20 \"peanuts\" framing d1."
+      }
+    },
+    "crypto_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "Trump accepts CLARITY Act ethics → senate vote early-aug."
+      }
+    },
+    "crypto_item_3": {
+      "type": "Alert",
+      "props": {
+        "title": "Polymarket",
+        "message": "$200M insider trading flagged",
+        "type": "warning"
+      }
+    },
+    "ai_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_subheading",
+        "ai_item_1",
+        "ai_item_2",
+        "ai_item_3"
+      ]
+    },
+    "ai_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "ai_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "Moonshot PAUSES new Kimi subs — K3 demand near capacity 48h ([[small-MoE-frontier-close]] n=4 overshoots infra 6d pre-ship)."
+      }
+    },
+    "ai_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "Opus 4.8 tops AI Intelligence Index 61.4 (SWE-bench Pro 69.2%)."
+      }
+    },
+    "ai_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "Raschka full-local coding-agent stack via Qwen3.6 + Cohere North Mini on Ollama."
+      }
+    },
+    "dev_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev_subheading",
+        "dev_item_1",
+        "dev_item_2"
+      ]
+    },
+    "dev_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "dev_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "Cursor \"agent swarms + model economics\" (HN 176pts) = swarm-cost primitive."
+      }
+    },
+    "dev_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "OpenCode 160K+ stars / 7.5M MAU = most-adopted OSS coding agent."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_item",
+        "paper_details",
+        "paper_links"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper_item": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+        "source": "Wang et al",
+        "score": "↑27",
+        "href": "https://arxiv.org/abs/2607.18213"
+      }
+    },
+    "paper_details": {
+      "type": "Text",
+      "props": {
+        "text": "Prunes agent tool-output context using the agent's own internal representations (no classifier) = direct win for coding-agent context-management."
+      }
+    },
+    "paper_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link_pdf"
+      ]
+    },
+    "link_pdf": {
+      "type": "Link",
+      "props": {
+        "label": "PDF",
+        "href": "https://arxiv.org/pdf/2607.18213"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "github_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github_heading",
+        "github_item"
+      ]
+    },
+    "github_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "github_item": {
+      "type": "Text",
+      "props": {
+        "text": "None (user:anajuliabit clean d3)"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {}
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_heading",
+        "hn_items"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h3"
+      }
+    },
+    "hn_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn_1",
+        "hn_2",
+        "hn_3",
+        "hn_4",
+        "hn_5"
+      ]
+    },
+    "hn_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "China's open-weights strategy is winning",
+        "source": "werd.io",
+        "score": "1066",
+        "href": "https://werd.io"
+      }
+    },
+    "hn_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kimi Work launches 6d pre-K3 open-weights",
+        "source": "kimi.com",
+        "score": "501",
+        "href": "https://kimi.com"
+      }
+    },
+    "hn_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Cursor: agent swarms + model economics",
+        "source": "cursor.com",
+        "score": "176",
+        "href": "https://cursor.com"
+      }
+    },
+    "hn_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Hacker wipes Romania land-registry",
+        "source": "risky.biz",
+        "score": "627",
+        "href": "https://risky.biz"
+      }
+    },
+    "hn_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Nativ: frontier open models local on Mac",
+        "source": "blaizzy.github.io",
+        "score": "251",
+        "href": "https://blaizzy.github.io"
+      }
+    }
+  }
+}
