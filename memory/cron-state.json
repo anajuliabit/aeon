@@ -32,8 +32,8 @@
     "success_rate": 1
   },
   "heartbeat": {
-    "last_dispatch": "2026-07-20T20:14:02Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-21T09:42:21Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-20T20:19:28Z",
     "total_runs": 239,
     "total_successes": 159,
@@ -155,8 +155,8 @@
     "success_rate": 1
   },
   "skill-freshness": {
-    "last_dispatch": "2026-07-19T09:16:34Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-21T09:42:21Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-19T09:30:05Z",
     "total_runs": 77,
     "total_successes": 51,
@@ -167,8 +167,8 @@
     "last_error": "nputTokens\":54400,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.15796499999999997,\"contextWindow\":200000,\"maxOutputTokens\":32000}},\"permission_denials\":[{\"tool_name\":\"Bash\",\"tool_use_"
   },
   "github-trending": {
-    "last_dispatch": "2026-07-20T10:47:35Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-21T09:42:21Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-20T10:56:26Z",
     "total_runs": 76,
     "total_successes": 48,
@@ -619,8 +619,8 @@
     "last_failed": "2026-06-08T17:04:46Z"
   },
   "btc-levels": {
-    "last_dispatch": "2026-07-21T04:28:43Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-21T09:42:21Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-21T04:30:35Z",
     "total_runs": 275,
     "total_successes": 215,
