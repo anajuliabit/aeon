@@ -1,0 +1,463 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker",
+        "description": "2026-07-21"
+      },
+      "children": [
+        "summary-stats",
+        "summary-note",
+        "sep1",
+        "done-section",
+        "sep2",
+        "blocked-section",
+        "sep3",
+        "sources-section"
+      ]
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "total-goals",
+        "done-count",
+        "blocked-count"
+      ]
+    },
+    "total-goals": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "4"
+      }
+    },
+    "done-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "1",
+        "trend": "up"
+      }
+    },
+    "blocked-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "3"
+      }
+    },
+    "summary-note": {
+      "type": "Alert",
+      "props": {
+        "title": "Improvement",
+        "message": "self-improve queue cleared 7-20 with #162 + #163 + #164 all merged same day",
+        "type": "success"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "done-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "done-heading",
+        "done-item-group"
+      ]
+    },
+    "done-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "✓ DONE",
+        "level": "h3"
+      }
+    },
+    "done-item-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "done-item-title",
+        "done-prs-row",
+        "done-merge-status"
+      ]
+    },
+    "done-item-title": {
+      "type": "Text",
+      "props": {
+        "text": "2 self-improve PRs CONFLICTING past stall gates",
+        "variant": "body"
+      }
+    },
+    "done-prs-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-162",
+        "pr-163",
+        "pr-164"
+      ]
+    },
+    "pr-162": {
+      "type": "Badge",
+      "props": {
+        "text": "#162 daily-routine 14:16Z",
+        "variant": "outline"
+      }
+    },
+    "pr-163": {
+      "type": "Badge",
+      "props": {
+        "text": "#163 skill-security-scan 17:11Z",
+        "variant": "outline"
+      }
+    },
+    "pr-164": {
+      "type": "Badge",
+      "props": {
+        "text": "#164 investment-advisor 21:50Z",
+        "variant": "outline"
+      }
+    },
+    "done-merge-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "completed-date",
+        "merged-badge"
+      ]
+    },
+    "completed-date": {
+      "type": "Text",
+      "props": {
+        "text": "completed 2026-07-20",
+        "variant": "caption"
+      }
+    },
+    "merged-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MERGED",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item-1",
+        "blocked-item-2",
+        "blocked-item-3"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚠ BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bi1-title",
+        "bi1-metadata",
+        "bi1-wait-reason",
+        "bi1-context",
+        "bi1-action"
+      ]
+    },
+    "bi1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-025 capture-step PR",
+        "level": "h4"
+      }
+    },
+    "bi1-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "bi1-timeline",
+        "bi1-dag"
+      ]
+    },
+    "bi1-timeline": {
+      "type": "Badge",
+      "props": {
+        "text": "T+5 day-6",
+        "variant": "outline"
+      }
+    },
+    "bi1-dag": {
+      "type": "Badge",
+      "props": {
+        "text": "since 2026-07-16",
+        "variant": "outline"
+      }
+    },
+    "bi1-wait-reason": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on operator direct-author against .github/workflows/aeon.yml:479-495",
+        "variant": "body"
+      }
+    },
+    "bi1-context": {
+      "type": "Alert",
+      "props": {
+        "title": "Context",
+        "message": "cost-report acute-failure branch resolved 7-20 19:08Z but capture-step itself unshipped. upstream sandbox iss #53012 confirms env-var expansion + excludedCommands both broken",
+        "type": "warning"
+      }
+    },
+    "bi1-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: pivot capture-step to dangerouslyDisableSandbox per upstream iss #53012 pivot",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bi2-title",
+        "bi2-metadata",
+        "bi2-wait-reason",
+        "bi2-context",
+        "bi2-action"
+      ]
+    },
+    "bi2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "12:00 UTC batch DARK",
+        "level": "h4"
+      }
+    },
+    "bi2-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "bi2-timeline",
+        "bi2-dag"
+      ]
+    },
+    "bi2-timeline": {
+      "type": "Badge",
+      "props": {
+        "text": "day-24",
+        "variant": "outline"
+      }
+    },
+    "bi2-dag": {
+      "type": "Badge",
+      "props": {
+        "text": "since 2026-06-28",
+        "variant": "outline"
+      }
+    },
+    "bi2-wait-reason": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on scheduler-side per-skill blockage (n=24)",
+        "variant": "body"
+      }
+    },
+    "bi2-context": {
+      "type": "Alert",
+      "props": {
+        "title": "Issue",
+        "message": "token-alert + btc-levels + cost-report fire clean on same 12:00Z anchor while 8-skill cluster stays frozen",
+        "type": "warning"
+      }
+    },
+    "bi2-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: workflow_dispatch defi-overview + token-pick to force scheduler unfreeze",
+        "variant": "muted"
+      }
+    },
+    "blocked-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bi3-title",
+        "bi3-metadata",
+        "bi3-wait-reason",
+        "bi3-requirements",
+        "bi3-action"
+      ]
+    },
+    "bi3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator on-chain config",
+        "level": "h4"
+      }
+    },
+    "bi3-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "bi3-timeline",
+        "bi3-dag"
+      ]
+    },
+    "bi3-timeline": {
+      "type": "Badge",
+      "props": {
+        "text": "day-45",
+        "variant": "outline"
+      }
+    },
+    "bi3-dag": {
+      "type": "Badge",
+      "props": {
+        "text": "since 2026-06-07",
+        "variant": "outline"
+      }
+    },
+    "bi3-wait-reason": {
+      "type": "Text",
+      "props": {
+        "text": "waiting on secrets + memory/on-chain-watches.yml",
+        "variant": "body"
+      }
+    },
+    "bi3-requirements": {
+      "type": "Alert",
+      "props": {
+        "title": "Requirements",
+        "message": "ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets required. memory/on-chain-watches.yml must include pool/position type entries.",
+        "type": "warning"
+      }
+    },
+    "bi3-action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: add both secrets and write on-chain-watches.yml with type:pool + type:position",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-heading",
+        "sources-badges"
+      ]
+    },
+    "sources-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "src-logs",
+        "src-git",
+        "src-gh-pr",
+        "src-gh-issue",
+        "src-cron"
+      ]
+    },
+    "src-logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs ✓",
+        "variant": "secondary"
+      }
+    },
+    "src-git": {
+      "type": "Badge",
+      "props": {
+        "text": "git ✓ (1 commit 30d)",
+        "variant": "secondary"
+      }
+    },
+    "src-gh-pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr ✓",
+        "variant": "secondary"
+      }
+    },
+    "src-gh-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue ✓",
+        "variant": "secondary"
+      }
+    },
+    "src-cron": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state ✓",
+        "variant": "secondary"
+      }
+    }
+  }
+}

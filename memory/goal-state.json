@@ -1,41 +1,30 @@
 {
-  "run_at": "2026-07-20T17:20:00Z",
+  "run_at": "2026-07-21T15:20:00Z",
   "goals": {
-    "claude-md-rule-5-codification": {
-      "status": "BLOCKED",
-      "activity_count_14d": 283,
-      "last_activity_date": "2026-07-20",
-      "note": "T+2 → T+3 (mechanical UTC-day rollover from 7-19). Skill exit-gate codification for improvement-PR-queue-locks-self-improve landed 7-19 18:32Z via self-improve (per morning-brief today 07:54Z + heartbeat 15:19Z), but CLAUDE.md text still pending operator direct-author — codification location differs from goal statement ('CLAUDE.md rule-5' not 'skill exit-gate'). CLAUDE.md grep for rule-5 content unchanged. Activity 283 vs prior 333 = -15% within ±25% flat. Trend: flat (partial substrate progress via skill, but goal literal condition unmet)."
-    },
     "iss-025-capture-step-pr": {
       "status": "BLOCKED",
-      "activity_count_14d": 413,
-      "last_activity_date": "2026-07-20",
-      "note": "T+3 day-4 → T+4 day-5 rollover per morning-brief 07:54Z. Still waiting on operator PR against `.github/workflows/aeon.yml:479-495` chain-runner capture-step. cost-report state transitioned stuck→FAILED today with cf 5→10 = current-shape manifest worsens. Watch #1 morning-brief today: gh #53012 confirms sandbox.excludedCommands does not exempt from network enforcement (upstream bug), may pivot fix to `dangerouslyDisableSandbox`. Activity 413 vs prior 373 = +11% within ±25% flat. Status BLOCKED, trend: flat."
+      "activity_count_14d": 430,
+      "last_activity_date": "2026-07-21",
+      "note": "T+4 day-5 → T+5 day-6 rollover per morning-brief 07:00Z. Capture-step PR against .github/workflows/aeon.yml:479-495 still awaiting operator direct-author. cost-report acute-failure branch resolved 7-20 19:08Z (last_success = late-dispatch success, breaks 3-consec-Mon-weekly-miss test at n=2 not n=3) but capture-step primitive itself unshipped. Upstream sandbox iss #53012 confirms env-var expansion + excludedCommands both broken → remediation pivots to dangerouslyDisableSandbox path per morning-brief 07:00Z watch #1. Activity 430 vs prior 413 = +4% within ±25% flat. Status BLOCKED, trend: flat (substrate partially resolved via cost-report late-success, capture-step literal condition unmet)."
     },
     "three-self-improve-prs-conflicting": {
-      "status": "BLOCKED",
-      "activity_count_14d": 529,
+      "status": "DONE",
+      "activity_count_14d": 570,
       "last_activity_date": "2026-07-20",
-      "note": "**Major positive delta 7-20**: PR #162 fix(daily-routine) MERGED 14:16Z (was T+5 day-6 ~188h CONFLICTING) + PR #163 fix(skill-security-scan) MERGED 17:11Z (was past 72h gate ~140h CONFLICTING) = 2/3 resolved same day. PR #164 fix(investment-advisor) SOLE RESIDUAL, still OPEN updated 17:14Z past 24h gate d5 (was ~91h prior, now ~166h). PR #165 docs(skill-graph) opened 7-19, under stall gate. Activity 529 vs prior 283 = +87% > 50% = improving. Status BLOCKED (residual PR #164 keeps blocker_signal), trend: improving (ladder-adjacent partial-resolution)."
-    },
-    "cost-report-stuck": {
-      "status": "BLOCKED",
-      "activity_count_14d": 324,
-      "last_activity_date": "2026-07-20",
-      "note": "State transition stuck→FAILED d6→d7 today per heartbeat 15:19Z: `last_status: failed`, `last_dispatch: 2026-07-20T16:48Z`, `last_failed: 2026-07-20T17:18Z`, cf **5→10** (+5 in 24h, doubling), sr 0.09. **3rd-consec-Mon-weekly-miss confirmed** (last_success 2026-06-29T13:59Z, missed 7-6 + 7-13 + now 7-20 = pattern-durable n=3). Sandbox-truncation family day-28 (was d27). ISS-025 upstream block. Activity 324 vs prior 287 = +13% within ±25% flat but substrate degraded (cf doubling + Mon-weekly n=3). Status BLOCKED, trend: degrading (substrate worsens without ladder move)."
+      "completed_at": "2026-07-20",
+      "note": "**Goal completed 2026-07-20**: full triple-PR queue cleared in a single day — PR #162 fix(daily-routine) MERGED 14:16Z + PR #163 fix(skill-security-scan) MERGED 17:11Z + PR #164 fix(investment-advisor) MERGED 21:50Z. Goal literal condition ('2 self-improve PRs CONFLICTING past stall gates') resolves via #163 + #164 both merging. PR #165 (docs skill-graph) remains open but is docs-scope not self-improve. Moved to Recently Cleared. Rule-5 exit-gate primitive holds under full-sweep test."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
-      "activity_count_14d": 335,
-      "last_activity_date": "2026-07-20",
-      "note": "Day 22 → day 23 rollover per UTC-day advance (aixbt-pulse d22→d23 also). 8-skill 12:00Z cluster (defi-overview/token-pick/narrative-tracker/market-context-refresh/token-movers/on-chain-monitor/defi-monitor/aixbt-pulse) last_success 2026-06-28 = ~22d stale. **Per-skill blockage n=23 confirmed** — heartbeat 15:19Z: token-alert 12:57Z + btc-levels 12:57Z + cost-report 12:57Z all fired clean same slot while cluster stays 6-28 frozen (shared last_dispatch stamp confirms scheduler-side batch). 07:00Z morning-batch d3 durable-recover CONFIRMED 7-19 holds today with morning-brief 07:54Z + daily-routine ~08:00Z + thought-review 07:53Z all firing in mon-load-day catch-up band. Activity 335 vs prior 353 = -5% within ±25% flat. Status BLOCKED (12:00Z main arc still dark), trend: flat."
+      "activity_count_14d": 340,
+      "last_activity_date": "2026-07-21",
+      "note": "Day 23 → day 24 rollover per UTC-day advance. 8-skill 12:00Z cluster (defi-overview/token-pick/narrative-tracker/market-context-refresh/token-movers/on-chain-monitor/defi-monitor/aixbt-pulse) last_success 2026-06-28 = ~23d stale. **Per-skill blockage n=24 confirmed** — heartbeat 09:43Z + 15:11Z: token-alert 13:02Z + btc-levels 13:01Z fire clean same 12:00Z slot while cluster stays frozen. Activity 340 vs prior 335 = +1% within ±25% flat. Status BLOCKED (main arc dark), trend: flat."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 87,
-      "last_activity_date": "2026-07-20",
-      "note": "Day 43 → day 44 rollover per UTC-day advance. defi-monitor NO_CONFIG carries. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing. cron-state defi-monitor last_success 2026-06-28T12:52Z (parallel to 12:00Z arc freeze). Activity 87 vs prior 145 = -40% within ±50% flat (regex tightened this run vs prior — measurement-normalized delta, not signal change). Status BLOCKED (operator-side config gap), trend: flat."
+      "activity_count_14d": 90,
+      "last_activity_date": "2026-07-21",
+      "note": "Day 44 → day 45 rollover per UTC-day advance. defi-monitor NO_CONFIG carries. memory/on-chain-watches.yml still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY + ETHERSCAN_API_KEY still missing. cron-state defi-monitor last_success 2026-06-28T12:52Z (parallel to 12:00Z arc freeze). Activity 90 vs prior 87 = +3% within ±25% flat. Status BLOCKED (operator-side config gap), trend: flat."
     }
   }
 }

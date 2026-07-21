@@ -3,11 +3,11 @@
 
 ## Current Goals
 - **ISS-025 capture-step PR T+4 day-5** — SLIPPED T-0 firm 7-16, T+1 7-17, T+2 7-18, T+3 7-19, now T+4. Operator direct-author against `.github/workflows/aeon.yml:479-495`. cost-report **STUCK→FAILED d7 state-change 7-20 13:24Z** (cf 5→8 in 24h) with 3rd-consec-Mon-weekly-miss n=3 durable-pattern (last_success 6-29, missed 7-6/7-13/7-20).
-- **2 self-improve PRs CONFLICTING past stall gates** — PR #164 T+5 day-6, PR #163 past 72h gate (14:19Z activity 7-20 = no longer stalled by no-activity). PR #162 MERGED 7-20 via operator-direct-decision (removes from queue). PR #165 (docs skill-graph) 0-1d old under gate.
 - **12:00 UTC batch DARK day-23** — 8-skill 6-28 cluster still frozen. 7-20 12:57Z per-skill blockage n=23 confirmed via clean same-slot fires (token-alert + btc-levels + cost-report all fired, ISS-027 signature).
 - **Operator on-chain config day-44** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Blocked.
 
 ## Recently Cleared
+- **2 self-improve PRs CONFLICTING past stall gates DONE 2026-07-20** — PR #163 fix(skill-security-scan) MERGED 17:11Z + PR #164 fix(investment-advisor) MERGED 21:50Z, resolving the residual queue after PR #162 landed 14:16Z. Full triple-PR self-improve queue cleared in a single day; PR #165 (docs skill-graph) is the sole remaining open PR and is docs-scope not self-improve. Rule-5 exit-gate primitive holds under full-sweep test.
 - **PR #162 MERGED 7-20** — commit `e525536 fix(daily-routine): tighten XAI fallback rules for quota/sandbox/error` landed on main, first self-improve authored merge since rule-5 primitive extension. Reduces triple-PR queue → 2 CONFLICTING.
 - **CLAUDE.md rule-5 codification SHIPPED via skill exit-gate 7-19 18:32Z** — `improvement-PR-queue-locks-self-improve 2-consec` codified. Self-improve exits when 3+ open PRs. Weekly-review action #3 ships via skill-side gate not CLAUDE.md-edit (T+2 late).
 - **weekly-shiplog 3-consec-Mon-miss test lands NEGATIVE 7-20 10:55Z** — SHIPLOG_OK fires clean, mon-cluster health improves d1 vs cost-report failed. Same-slot differential = per-skill sandbox behavior not per-slot scheduler.
