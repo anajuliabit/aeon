@@ -1,0 +1,39 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_description",
+        "link_pr"
+      ]
+    },
+    "text_description": {
+      "type": "Text",
+      "props": {
+        "text": "Codify operator weekly-batch PR review cadence in CLAUDE.md"
+      }
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #166",
+        "href": "https://github.com/anajuliabit/aeon/pull/166"
+      }
+    }
+  }
+}

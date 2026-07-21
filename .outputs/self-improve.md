@@ -1,1 +1,1 @@
-self-improve 18:00Z 7-19 — 3+ open improvement PRs (#164 T+4 day-5 · #163 past 72h gate · #162 past 24h gate ~day-9), gate-skipped per SKILL step 1. improvement-PR-queue-locks-self-improve dynamic 2-consec pattern (7-17 first-ever codification skip → 7-19 confirms). all 3 CONFLICTING past stall gates per rule-5 extension; operator direct-author sole path.
+self-improve: codify operator weekly-batch PR review cadence in CLAUDE.md — PR #166 https://github.com/anajuliabit/aeon/pull/166
