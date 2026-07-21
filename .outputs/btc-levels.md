@@ -1,12 +1,9 @@
-Run complete.
-
 ## Summary
 
-- **Spot**: $65,368.91 | **Previous daily close (2026-07-19)**: $64,679.77
-- **Alerts fired**: none
-  - Leverage-review ($45k): clear
-  - Breakdown ($60.5k daily close): clear — close $14k above threshold
-  - Reclaim $63,500: already alerted (flag=true, no re-arm while spot above $60,500)
-  - Reclaim $65,900: spot $531 short — not yet triggered
-- **State update**: `lastDailyCloseDate` corrected from "2026-07-18" → "2026-07-19" (the 00:00 UTC snapshot at `1784505600000` is 2026-07-20, making the close date 2026-07-19)
-- **Files committed**: `memory/btc-levels-state.json`, `memory/logs/2026-07-20.md`
+- **Spot:** $65,480 | **Daily close (2026-07-20):** $65,199
+- All levels clear — no notifications sent:
+  - Leverage review ($45k) — not triggered
+  - Breakdown signal ($60.5k close) — not triggered
+  - $63,500 reclaim — already flagged from prior run; re-arm threshold ($60.5k) not hit
+  - $65,900 reclaim — spot at $65,480, still ~$420 short; watching
+- State and log committed to `main` (b8e380b).
