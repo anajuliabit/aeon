@@ -1,0 +1,267 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-21"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_focus",
+        "sep1",
+        "section_yesterday",
+        "sep2",
+        "section_running"
+      ]
+    },
+    "section_focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_focus",
+        "focus_item_1",
+        "focus_item_2",
+        "focus_item_3"
+      ]
+    },
+    "heading_focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus Today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "focus_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_1_title",
+        "focus_1_reason"
+      ]
+    },
+    "focus_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "1. self-improve 18z first-tick post-queue-clear",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "focus_1_reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 3-pr sweep 7-20 tests rule-5 codification T+3",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "focus_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_2_title",
+        "focus_2_reason"
+      ]
+    },
+    "focus_2_title": {
+      "type": "Text",
+      "props": {
+        "text": "2. skill-health 18z cost-report critical→degraded confirm",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "focus_2_reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 7-20 tick late 18:45z, mon-miss streak breaks n=2",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "focus_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus_3_title",
+        "focus_3_reason"
+      ]
+    },
+    "focus_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "3. H unlock T-4 fri jul 25",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "focus_3_reason": {
+      "type": "Text",
+      "props": {
+        "text": "why now: 5.1× vol / 30d +72.6% / early-contributor cliff = asymmetric downside",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_yesterday": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_yesterday",
+        "yest_item_1",
+        "yest_item_2",
+        "yest_item_3",
+        "yest_item_4",
+        "yest_item_5"
+      ]
+    },
+    "heading_yesterday": {
+      "type": "Heading",
+      "props": {
+        "text": "Since Yesterday",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "yest_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "3 self-improve prs merged 7-20 (#162 daily-routine + #163 skill-security-scan + #164 investment-advisor) — triple queue clears same-day, only #165 docs remains",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "yest_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report weekly tick fired ~12h late (18:45z, not scheduled 07z) but succeeded — 3-consec-mon-miss test breaks at n=2, fleet critical lifts pending 18z skill-health confirm",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "yest_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog + weekly-review both clean 7-20 → full mon-cluster healthy",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "yest_item_4": {
+      "type": "Text",
+      "props": {
+        "text": "btc $65,199 close 7-20 (+$520 on day), 04:29z spot $65,489, $65.9k reclaim $411 away",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "yest_item_5": {
+      "type": "Text",
+      "props": {
+        "text": "12:00z batch-dark d24 stuck (aixbt-pulse frozen 6-28), pr #165 docs 2d no activity",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_running",
+        "running_table"
+      ]
+    },
+    "heading_running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running Today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "running_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Time",
+          "Tasks"
+        ],
+        "rows": [
+          [
+            "07z",
+            "morning-brief · daily-routine · thought-review"
+          ],
+          [
+            "09z",
+            "github-trending"
+          ],
+          [
+            "12z",
+            "token-alert"
+          ],
+          [
+            "14z",
+            "security-digest"
+          ],
+          [
+            "17z",
+            "list-digest · 17:30z agent-buzz"
+          ],
+          [
+            "18z",
+            "goal-tracker · skill-health · reflect · action-converter · self-improve (odd-day tick)"
+          ],
+          [
+            "21z",
+            "evening-recap · thought-review"
+          ]
+        ]
+      },
+      "children": []
+    }
+  }
+}
