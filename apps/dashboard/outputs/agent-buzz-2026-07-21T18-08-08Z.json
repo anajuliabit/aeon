@@ -1,0 +1,162 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz",
+        "description": "2026-07-21 — MCP as the agent-integration bus dominated three product ships; sidebar arguments on on-chain compute rails and a 95-line counter to framework bloat."
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section1-heading",
+        "section1-stack",
+        "separator1",
+        "section2-heading",
+        "section2-stack",
+        "separator2",
+        "section3-heading",
+        "section3-stack",
+        "separator3",
+        "metadata-text"
+      ]
+    },
+    "section1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP as agent-integration bus",
+        "level": "h2"
+      }
+    },
+    "section1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "nickvasiles",
+        "handle": "@nickvasiles",
+        "text": "Apify + Hermes + Orgo, three MCPs cover data, execution, compute; no bespoke agent framework needed. https://x.com/nickvasiles/status/2079347484917452845"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xQiYan",
+        "handle": "@0xQiYan",
+        "text": "AlphaPilot: MCP multi-agent stock research with CIO-grade recs, pitched as production not demo. https://x.com/0xQiYan/status/2079351274869588282"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RobinMCP_RH",
+        "handle": "@RobinMCP_RH",
+        "text": "RobinMCP exposes live quotes and one-call orders as MCP tools — brokerage as an agent primitive. https://x.com/RobinMCP_RH/status/2079353158812225894"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On-chain compute rails",
+        "level": "h2"
+      }
+    },
+    "section2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "tweet5"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "shinjiihhh",
+        "handle": "@shinjiihhh",
+        "text": "Ritual embeds AI compute and agents as chain precompiles verified by TEE. no external oracles. https://x.com/shinjiihhh/status/2079355177283596588"
+      }
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "GpuClusterHood",
+        "handle": "@GpuClusterHood",
+        "text": "Robinhood Chain adds native GPU; agents pay per inference on-chain with verified receipts, no cloud accounts. https://x.com/GpuClusterHood/status/2079346112461201828"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Minimal stacks over frameworks",
+        "level": "h2"
+      }
+    },
+    "section3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet6"
+      ]
+    },
+    "tweet6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Granite0x",
+        "handle": "@Granite0x",
+        "text": "Sean Chen's waku-agent: loop, memory, eval in ~95 lines of Python. argument that frameworks are already bloated. https://x.com/Granite0x/status/2079348591810785450"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metadata-text": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai · candidates: 10 → kept: 6_",
+        "variant": "caption"
+      }
+    }
+  }
+}
