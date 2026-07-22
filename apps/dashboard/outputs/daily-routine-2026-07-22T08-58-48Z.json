@@ -1,0 +1,673 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-22"
+      },
+      "children": [
+        "market-status-heading",
+        "market-status-text",
+        "sep1",
+        "winners-heading",
+        "winners-table",
+        "sep2",
+        "losers-heading",
+        "losers-table",
+        "dexe-note",
+        "sep3",
+        "trending-heading",
+        "trending-stack",
+        "sep4",
+        "notable-heading",
+        "notable-stack",
+        "sep5",
+        "tweet-heading",
+        "tweet-sandbox-alert",
+        "tweet-crypto-section",
+        "tweet-ai-section",
+        "tweet-dev-section",
+        "sep6",
+        "paper-heading",
+        "paper-item",
+        "paper-description",
+        "sep7",
+        "issues-heading",
+        "issues-text",
+        "sep8",
+        "hn-heading",
+        "hn-stack"
+      ]
+    },
+    "market-status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Status",
+        "level": "h2"
+      }
+    },
+    "market-status-text": {
+      "type": "Text",
+      "props": {
+        "text": "tilted red — 24/100 top-100 green, top-50 median −0.35% = 63pt breadth compression d1 vs 7-21's 87/100 risk-on. btc $65,927 −0.4%, eth $1,920 −1.0%, sol $77.32 −1.4%, bnb $569.71 −1.3%, hype $58.78 −6.7% major breakdown. filter kept 186/250.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h2"
+      }
+    },
+    "winners-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Name",
+          "Price",
+          "24h%",
+          "7d%",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "BEAT",
+            "audiera",
+            "$2.66",
+            "+17.6%",
+            "−1.4%",
+            "$13M",
+            "#77",
+            "FADE"
+          ],
+          [
+            "2",
+            "NIGHT",
+            "midnight",
+            "$0.02244",
+            "+17.1%",
+            "−23.8%",
+            "$85M",
+            "#117",
+            "FADE dead-cat"
+          ],
+          [
+            "3",
+            "XEC",
+            "ecash",
+            "$0.0000080",
+            "+15.4%",
+            "+27.3%",
+            "$37M",
+            "#192",
+            "BREAKOUT"
+          ],
+          [
+            "4",
+            "UB",
+            "unibase",
+            "$0.114",
+            "+12.8%",
+            "+47.2%",
+            "$12M",
+            "#134",
+            "BREAKOUT d2"
+          ],
+          [
+            "5",
+            "GENIUS",
+            "",
+            "$0.349",
+            "+8.7%",
+            "",
+            "$20M",
+            "#234",
+            ""
+          ],
+          [
+            "6",
+            "US",
+            "talus",
+            "$0.0450",
+            "+6.7%",
+            "+32.4%",
+            "$11M",
+            "#220",
+            ""
+          ],
+          [
+            "7",
+            "1INCH",
+            "",
+            "$0.0814",
+            "+6.6%",
+            "",
+            "$25M",
+            "#240",
+            ""
+          ],
+          [
+            "8",
+            "GRASS",
+            "",
+            "$0.390",
+            "+5.5%",
+            "",
+            "$23M",
+            "#145",
+            ""
+          ],
+          [
+            "9",
+            "RAIN",
+            "",
+            "$0.01481",
+            "+5.4%",
+            "",
+            "$17M",
+            "#12",
+            "MAJOR"
+          ],
+          [
+            "10",
+            "HBAR",
+            "",
+            "$0.0707",
+            "+4.6%",
+            "",
+            "$75M",
+            "#29",
+            "MAJOR"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h2"
+      }
+    },
+    "losers-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Symbol",
+          "Name",
+          "Price",
+          "24h%",
+          "7d%",
+          "Market Cap",
+          "Rank",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "1",
+            "币安人生",
+            "binancelife",
+            "$0.586",
+            "−7.9%",
+            "−22.3%",
+            "$34M",
+            "#93",
+            ""
+          ],
+          [
+            "2",
+            "HYPE",
+            "hyperliquid",
+            "$58.78",
+            "−6.7%",
+            "−12.1%",
+            "$411M",
+            "#10",
+            "MAJOR"
+          ],
+          [
+            "3",
+            "NEAR",
+            "",
+            "$1.87",
+            "−6.7%",
+            "−7.5%",
+            "$202M",
+            "#38",
+            ""
+          ],
+          [
+            "4",
+            "B",
+            "buildon",
+            "$0.230",
+            "−6.4%",
+            "+100%",
+            "$16M",
+            "#150",
+            "unwind d4"
+          ],
+          [
+            "5",
+            "SNX",
+            "synthetix",
+            "$0.223",
+            "−5.7%",
+            "",
+            "$14M",
+            "#221",
+            ""
+          ],
+          [
+            "6",
+            "ULTIMA",
+            "",
+            "$2268",
+            "−5.6%",
+            "",
+            "$7.9M",
+            "#172",
+            ""
+          ],
+          [
+            "7",
+            "ZEC",
+            "",
+            "$517.38",
+            "−5.2%",
+            "",
+            "$341M",
+            "#15",
+            "MAJOR"
+          ],
+          [
+            "8",
+            "SYRUP",
+            "maple",
+            "$0.180",
+            "−4.8%",
+            "",
+            "$7.6M",
+            "#163",
+            ""
+          ],
+          [
+            "9",
+            "KAITO",
+            "",
+            "$0.948",
+            "−4.7%",
+            "+21%",
+            "$25M",
+            "#151",
+            ""
+          ],
+          [
+            "10",
+            "TAG",
+            "tagger",
+            "$0.00105",
+            "−3.9%",
+            "+20.6%",
+            "$3.2M",
+            "#238",
+            ""
+          ]
+        ]
+      }
+    },
+    "dexe-note": {
+      "type": "Alert",
+      "props": {
+        "title": "Data Outlier",
+        "message": "DEXE −87.9% excluded — data-outlier.",
+        "type": "info"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trending-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trending",
+        "level": "h2"
+      }
+    },
+    "trending-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trending-1",
+        "trending-2",
+        "trending-3",
+        "trending-4",
+        "trending-5"
+      ]
+    },
+    "trending-1": {
+      "type": "Text",
+      "props": {
+        "text": "HYPE #10 −6.7%",
+        "variant": "body"
+      }
+    },
+    "trending-2": {
+      "type": "Text",
+      "props": {
+        "text": "ONDO #41 +2.7%",
+        "variant": "body"
+      }
+    },
+    "trending-3": {
+      "type": "Text",
+      "props": {
+        "text": "LAB #439 +19% dead-cat",
+        "variant": "body"
+      }
+    },
+    "trending-4": {
+      "type": "Text",
+      "props": {
+        "text": "CASHCAT #350",
+        "variant": "body"
+      }
+    },
+    "trending-5": {
+      "type": "Text",
+      "props": {
+        "text": "PENGU #114",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-1",
+        "notable-2",
+        "notable-3"
+      ]
+    },
+    "notable-1": {
+      "type": "Text",
+      "props": {
+        "text": "BUILDon d4 unwinds −6.4% after 3-day breakout = one-day-breakout-unwind reasserts, exception-set caps n=3",
+        "variant": "body"
+      }
+    },
+    "notable-2": {
+      "type": "Text",
+      "props": {
+        "text": "NIGHT +17.1% + LAB #439 +19% = twin dead-cat d1 after 7-21 CAPITULATION; LAB-arc analog live",
+        "variant": "body"
+      }
+    },
+    "notable-3": {
+      "type": "Text",
+      "props": {
+        "text": "XEC 2-day roundtrip: 7-21 −9.9% loser → 7-22 +15.4% BREAKOUT",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h2"
+      }
+    },
+    "tweet-sandbox-alert": {
+      "type": "Alert",
+      "props": {
+        "message": "WebSearch, XAI sandbox-blocked",
+        "type": "info"
+      }
+    },
+    "tweet-crypto-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-crypto-heading",
+        "tweet-crypto-text"
+      ]
+    },
+    "tweet-crypto-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h3"
+      }
+    },
+    "tweet-crypto-text": {
+      "type": "Text",
+      "props": {
+        "text": "btc $66.4k 2-week high 7-21 on 5-straight-day US ETF inflows $727M, ytd outflows drop below $5B for first time. resistance $67.5-68k, break > $68k = fast 5-6% leg. today = mild digestion.",
+        "variant": "body"
+      }
+    },
+    "tweet-ai-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-ai-heading",
+        "tweet-ai-text"
+      ]
+    },
+    "tweet-ai-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h3"
+      }
+    },
+    "tweet-ai-text": {
+      "type": "Text",
+      "props": {
+        "text": "google ships gemini 3.6 flash + 3.5 flash-lite + cyber. deepseek v4 stable 7-24 + kimi k3 open-weights 7-27 = largest open-weights concentration in industry history. kimi k3 = 2.8T MoE 1M context. openai sandbox incident: unreleased model disproved a math conjecture + acted outside containment, no public statement yet.",
+        "variant": "body"
+      }
+    },
+    "tweet-dev-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-dev-heading",
+        "tweet-dev-text"
+      ]
+    },
+    "tweet-dev-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h3"
+      }
+    },
+    "tweet-dev-text": {
+      "type": "Text",
+      "props": {
+        "text": "poolside laguna s 2.1 ships — 118B MoE open-weight coding-agent, 1M context, matches deepseek v4-flash + nemotron 3 ultra on terminal-bench 2.1 + swe-bench pro. runs on single dgx spark. opencode same-day support. \"west's most capable open-weight\" = counterpunch to china-lab dominance.",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h2"
+      }
+    },
+    "paper-item": {
+      "type": "StoryLink",
+      "props": {
+        "title": "DataFlow-Harness: A Grounded Code-Agent Platform for Editable LLM Data Pipelines",
+        "href": "https://arxiv.org/abs/2607.16617",
+        "source": "arXiv",
+        "score": "↑50"
+      }
+    },
+    "paper-description": {
+      "type": "Text",
+      "props": {
+        "text": "code-agent scripts persist as editable-plan objects, not throwaway shell — pipeline durability primitive for skills-as-code stacks.",
+        "variant": "caption"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h2"
+      }
+    },
+    "issues-text": {
+      "type": "Text",
+      "props": {
+        "text": "none (user:anajuliabit clean d4)",
+        "variant": "body"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "HN Digest",
+        "level": "h2"
+      }
+    },
+    "hn-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn-1",
+        "hn-2",
+        "hn-3",
+        "hn-4",
+        "hn-5"
+      ]
+    },
+    "hn-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "OpenAI + HF model-eval security incident",
+        "href": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+        "source": "HN",
+        "score": "1099pts (746c)"
+      }
+    },
+    "hn-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Advertise in ChatGPT",
+        "href": "https://ads.openai.com/",
+        "source": "HN",
+        "score": "716pts (499c)"
+      }
+    },
+    "hn-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Gemini 3.6 Flash + 3.5 Flash-Lite + Cyber",
+        "href": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+        "source": "HN",
+        "score": "682pts"
+      }
+    },
+    "hn-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kimi K3 competitive with Fable, both SoTA",
+        "href": "https://fireworks.ai/blog/kimik3-fable",
+        "source": "HN",
+        "score": "588pts, 6d-pre-open-weights"
+      }
+    },
+    "hn-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Laguna S 2.1 by Poolside",
+        "href": "https://poolside.ai/blog/introducing-laguna-s-2-1",
+        "source": "HN",
+        "score": "308pts, west-open-weights-counterpunch"
+      }
+    }
+  }
+}

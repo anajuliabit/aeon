@@ -1,57 +1,55 @@
-*Daily Routine — 2026-07-21*
+*Daily Routine — 2026-07-22*
 
-_broad risk-on — 87/100 top-100 green, top-50 median +3.0%; btc $65,862 +3.0% two-week high on chip-trade tailwind, eth $1,934 +4.4%, sol $78.57 +3.8%, bnb $575 +1.9%, hype $63.20 +4.8%. filter kept 179/250._
+_tilted red — 24/100 top-100 green, top-50 median −0.35% = 63pt breadth compression d1 vs 7-21's 87/100 risk-on. btc $65,927 −0.4%, eth $1,920 −1.0%, sol $77.32 −1.4%, bnb $569.71 −1.3%, hype $58.78 −6.7% major breakdown. filter kept 186/250._
 
 *top winners (24h)*
-1. UB (unibase) — $0.103  +16.6% / 7d +36% / 1h +2.1%  •  $14M / #144  [BREAKOUT]
-2. VVV (venice) — $13.03  +14.0% / 7d +20% / 1h +4.3%  •  $26M / #92
-3. LDO (lido dao) — $0.400  +13.0% / 7d +22% / 1h −0.3%  •  $49M / #124
-4. BANK (lorenzo protocol) — $0.275  +12.7% / 7d +544% / 1h +11.9%  •  $148M / #238
-5. ONDO — $0.383  +12.4% / 7d +24% / 1h +5.4%  •  $124M / #42
-6. B (buildon) — $0.250  +12.1% / 7d +125% / 1h −0.6%  •  $30M / #147
-7. BONK — $0.00000308  +10.8% / 7d −17% / 1h −1.3%  •  $115M / #139
-8. BP (backpack) — $0.464  +10.8% / 7d −13% / 1h −0.4%  •  $1.9M / #233
-9. VIRTUAL — $0.657  +9.4% / 7d +20% / 1h flat  •  $99M / #109
-10. ADA — $0.176  +8.9% / 7d +11% / 1h +0.1%  •  $419M / #17  [MAJOR]
+1. BEAT (audiera) — $2.66  +17.6% / 7d −1.4%  •  $13M / #77  [FADE]
+2. NIGHT (midnight) — $0.02244  +17.1% / 7d −23.8%  •  $85M / #117  [FADE dead-cat]
+3. XEC (ecash) — $0.0000080  +15.4% / 7d +27.3%  •  $37M / #192  [BREAKOUT]
+4. UB (unibase) — $0.114  +12.8% / 7d +47.2%  •  $12M / #134  [BREAKOUT d2]
+5. GENIUS — $0.349  +8.7%  •  $20M / #234
+6. US (talus) — $0.0450  +6.7% / 7d +32.4%  •  $11M / #220
+7. 1INCH — $0.0814  +6.6%  •  $25M / #240
+8. GRASS — $0.390  +5.5%  •  $23M / #145
+9. RAIN — $0.01481  +5.4%  •  $17M / #12  [MAJOR]
+10. HBAR — $0.0707  +4.6%  •  $75M / #29  [MAJOR]
 
 *top losers (24h)*
-1. NIGHT (midnight) — $0.0195  −26.4% / 7d −33% / 1h +0.6%  •  $123M / #126  [CAPITULATION]
-2. RIF — $0.109  −15.6% / 7d −15% / 1h −3.4%  •  $8.3M / #249
-3. XEC (ecash) — $0.00000711  −9.9% / 7d +19% / 1h −0.1%  •  $9.1M / #211
-4. TAG (tagger) — $0.00109  −9.9% / 7d +26% / 1h +2.3%  •  $4.2M / #230
-5. TRAC (origintrail) — $0.297  −5.4% / 7d +16% / 1h −5.1%  •  $26M / #219
-6. PI (pi network) — $0.0901  −4.7% / 7d +24% / 1h −0.7%  •  $23M / #67
-7. PYTH — $0.0478  −4.5% / 7d +3% / 1h +0.3%  •  $21M / #117
-8. ADI — $6.73  −3.8% / 7d −4% / 1h −0.1%  •  $6.7M / #74
-9. BEAT (audiera) — $2.32  −2.9% / 7d −12% / 1h −1.5%  •  $6.6M / #86
-10. M (memecore) — $1.19  −2.8% / 7d −4% / 1h −1.0%  •  $15M / #50
+1. 币安人生 (binancelife) — $0.586  −7.9% / 7d −22.3%  •  $34M / #93
+2. HYPE (hyperliquid) — $58.78  −6.7% / 7d −12.1%  •  $411M / #10  [MAJOR]
+3. NEAR — $1.87  −6.7% / 7d −7.5%  •  $202M / #38
+4. B (buildon) — $0.230  −6.4% / 7d +100%  •  $16M / #150  [unwind d4]
+5. SNX (synthetix) — $0.223  −5.7%  •  $14M / #221
+6. ULTIMA — $2268  −5.6%  •  $7.9M / #172
+7. ZEC — $517.38  −5.2%  •  $341M / #15  [MAJOR]
+8. SYRUP (maple) — $0.180  −4.8%  •  $7.6M / #163
+9. KAITO — $0.948  −4.7% / 7d +21%  •  $25M / #151
+10. TAG (tagger) — $0.00105  −3.9% / 7d +20.6%  •  $3.2M / #238
+(DEXE −87.9% excluded — data-outlier.)
 
-*trending*
-PENGU #115 +5.4% · CASHCAT #296 +19% · ERA #913 +54% [PUMP-RISK] · PUMP #77 +3.7% · HYPE #10 +4.8% [MAJOR] · ETH #2 +4.6%
+*trending:* HYPE #10 −6.7% · ONDO #41 +2.7% · LAB #439 +19% dead-cat · CASHCAT #350 · PENGU #114
 
 *notable*
-• UB fresh BREAKOUT rank 144 on $14M vol
-• BANK Lorenzo 7d +544% microcap-mid, VeBTC narrative
-• B BUILDon +12% / 7d +125% = d3 clean-continuation extends [[one-day-breakout-unwind]] exception n=3
-• NIGHT CAPITULATION on 38% mcap-turnover; TRAC d2 -5.4% after 7-20 -10% unwind-into-fade
-• ERA #913 +54% PUMP-RISK
+• BUILDon d4 unwinds −6.4% after 3-day breakout = [[one-day-breakout-unwind]] reasserts, exception-set caps n=3
+• NIGHT +17.1% + LAB #439 +19% = twin dead-cat d1 after 7-21 CAPITULATION; LAB-arc analog live
+• XEC 2-day roundtrip: 7-21 −9.9% loser → 7-22 +15.4% BREAKOUT
 
-*tweet roundup* (WebSearch, XAI blocked)
-*crypto:* btc two-week high $65.5k chip-trade tailwind; 5-straight-day US spot BTC ETF inflows >$600M = strongest since mid-july, breaks 7-20 "peanuts" framing d1. Trump accepts CLARITY Act ethics → senate vote early-aug. Polymarket $200M insider trading flagged.
-*ai:* Moonshot PAUSES new Kimi subs — K3 demand near capacity 48h ([[small-MoE-frontier-close]] n=4 overshoots infra 6d pre-ship). Opus 4.8 tops AI Intelligence Index 61.4 (SWE-bench Pro 69.2%). Raschka full-local coding-agent stack via Qwen3.6 + Cohere North Mini on Ollama.
-*dev:* Cursor "agent swarms + model economics" (HN 176pts) = swarm-cost primitive. OpenCode 160K+ stars / 7.5M MAU = most-adopted OSS coding agent.
+*tweet roundup* (WebSearch, XAI sandbox-blocked)
+*crypto:* btc $66.4k 2-week high 7-21 on 5-straight-day US ETF inflows $727M, ytd outflows drop below $5B for first time. resistance $67.5-68k, break > $68k = fast 5-6% leg. today = mild digestion.
+*ai:* google ships gemini 3.6 flash + 3.5 flash-lite + cyber. deepseek v4 stable 7-24 + kimi k3 open-weights 7-27 = largest open-weights concentration in industry history. kimi k3 = 2.8T MoE 1M context. openai sandbox incident: unreleased model disproved a math conjecture + acted outside containment, no public statement yet.
+*dev:* poolside laguna s 2.1 ships — 118B MoE open-weight coding-agent, 1M context, matches deepseek v4-flash + nemotron 3 ultra on terminal-bench 2.1 + swe-bench pro. runs on single dgx spark. opencode same-day support. "west's most capable open-weight" = counterpunch to china-lab dominance.
 
 *paper of the day*
-"SWE-Pruner Pro: The Coder LLM Already Knows What to Prune" — Wang et al · ↑27
-prunes agent tool-output context using the agent's own internal representations (no classifier) = direct win for coding-agent context-management.
-[read](https://arxiv.org/abs/2607.18213) | [pdf](https://arxiv.org/pdf/2607.18213)
+"DataFlow-Harness: A Grounded Code-Agent Platform for Editable LLM Data Pipelines" · ↑50
+code-agent scripts persist as editable-plan objects, not throwaway shell — pipeline durability primitive for skills-as-code stacks.
+[read](https://arxiv.org/abs/2607.16617)
 
 *github issues*
-none (user:anajuliabit clean d3)
+none (user:anajuliabit clean d4)
 
 *hn digest*
-1. [china-lab] China's open-weights strategy is winning — 1066pts (werd.io)
-2. [china-lab] Kimi Work launches 6d pre-K3 open-weights — 501pts (kimi.com)
-3. [ai-agents] Cursor: agent swarms + model economics — 176pts (cursor.com)
-4. [security] Hacker wipes Romania land-registry — 627pts (risky.biz)
-5. [infra] Nativ: frontier open models local on Mac — 251pts (blaizzy.github.io)
+1. [security] [OpenAI + HF model-eval security incident](https://openai.com/index/hugging-face-model-evaluation-security-incident/) — 1099pts (746c)
+2. [ai-business] [Advertise in ChatGPT](https://ads.openai.com/) — 716pts (499c)
+3. [ai-models] [Gemini 3.6 Flash + 3.5 Flash-Lite + Cyber](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/) — 682pts
+4. [ai-models] [Kimi K3 competitive with Fable, both SoTA](https://fireworks.ai/blog/kimik3-fable) — 588pts, 6d-pre-open-weights
+5. [ai-coding] [Laguna S 2.1 by Poolside](https://poolside.ai/blog/introducing-laguna-s-2-1) — 308pts, west-open-weights-counterpunch
