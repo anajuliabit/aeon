@@ -1,27 +1,22 @@
-*Reg Monitor — 2026-07-15*
-kalshi's federal-preemption defense takes 2 hits in 8 days — CFTC emergency-shields michigan, SDNY denies the same shield in new york.
+*Reg Monitor — 2026-07-22*
+1 act, 2 watch, 2 context — GENIUS Act 1-yr statutory deadline missed 7-18 (no agency finalized). Cboe binary-options amendment approval opens SEC's event-contract lane alongside CFTC's.
 
 *ACT*
-• [CFTC emergency-stays KalshiEX rule change, orders michigan trades fulfilled](https://www.cftc.gov/PressRoom/PressReleases/9267-26) — us federal · enforcement
-  CFTC used emergency authority to block Kalshi from cancelling open trades held by michigan residents after a michigan state court ordered the trades voided. chair selig: "a state cannot force a DCM to violate its obligations." federal-preemption posture reaffirmed; 8 more state suits still live.
-  ⏰ effective 2026-07-14 (immediate)
-  📊 kalshi/polymarket open-position risk in AZ/CT/IL/NM/MN/NY/RI/WI unresolved
-
-• [SDNY judge Torres denies Kalshi's preliminary injunction against NY gambling law](https://www.banklesstimes.com/articles/2026/07/08/kalshi-suffers-sdny-defeat-as-judge-torres-denies-injunction/) — s.d.n.y. · court ruling
-  in KalshiEX v. Williams: CEA doesn't preempt NY gambling law under express, field, or conflict preemption. torres reads the CEA's "Special Rule" as expressly preserving state gambling authority. kalshi appealed to 2d cir. same day.
-  ⏰ 2d cir. briefing scheduled next
-  📊 direct blow to the preemption defense across all 9 CFTC state suits; 2d cir. now the pivot
+• [Cboe binary options — Amendment No. 1 SEC accelerated approval](https://www.federalregister.gov/documents/2026/07/22/2026-14743) — US federal · final order
+  SEC approved Cboe's amendment to existing binary-options rules (position limits, notional-value calc). Effective on publication 2026-07-22. Release 34-105936.
+  ⏰ effective 2026-07-22
+  📊 SEC-lane binary options now moves in parallel with CFTC's event-contract lane — two-regulator race for prediction-market listings widens post-Kalshi SDNY loss.
 
 *WATCH*
-• [Federal Reserve NPRM: AML/CFT programs for supervised banks](https://www.federalregister.gov/documents/2026/07/09/2026-13919/anti-money-laundering-and-countering-the-financing-of-terrorism-programs) — us federal · proposed rule
-  fed aligns with parallel FDIC/OCC/NCUA/FinCEN AML proposals; explicitly threads GENIUS Act payment-stablecoin issuer AML requirements. comment period open. on-thesis for stablecoin issuers, off-thesis for prediction markets.
-
-• [Polymarket files FCM/margin-trading license while under active CFTC investigation](https://www.techtimes.com/articles/320118/20260710/polymarket-applies-margin-trading-license-while-under-active-cftc-investigation.htm) — us federal · agency review
-  polymarket wants formal DCM status. CFTC now has to evaluate the FCM app, approve margined-contract rulebook changes, and prosecute the WSJ-surfaced marketing-conduct investigation in parallel.
+• [Cboe binary KPI options — SR-CBOE-2026-061](https://www.federalregister.gov/documents/2026/07/15/2026-14201) — US federal · proposed
+  Cboe proposes listing binary options overlying issuer-reported KPIs. Would open a new SEC-side event-contract category tied directly to public-company metrics.
+• [FDIC stablecoin reporting forms — GENIUS Act implementation](https://www.federalregister.gov/documents/2026/07/20/2026-14589) — US federal · comment request
+  Weekly + quarterly reporting forms for permitted payment stablecoin issuers, OMB 3064-0225. Comment deadline 2026-09-18.
 
 *CONTEXT*
-• [CFTC stays self-certified 24/7 crude oil futures contract](https://www.cftc.gov/PressRoom/PressReleases/9265-26) — CFTC intervenes again on 24/7 self-certification; adjacent to the RFC 26-12784 thread on standard-futures 24/7 extension.
+• [CFTC margin requirements — uncleared swaps final rule](https://www.federalregister.gov/documents/2026/07/17/2026-14509) — seeded-funds 3-yr exemption + money-market-fund collateral now eligible; effective 2026-08-17.
+• [CFTC sunsets large-trader reporting — physical commodity swaps](https://www.federalregister.gov/documents/2026/07/21/2026-14710) — 15-yr part-20 rule eliminated as duplicative with Parts 43/45/49; effective on publication.
 
 —
 sources: federal-register=ok · sec=ok · cftc=ok · websearch=ok · congress=skip
-7 developments scored, 2 act / 2 watch / 1 context
+5 developments scored, 1 act / 2 watch / 2 context

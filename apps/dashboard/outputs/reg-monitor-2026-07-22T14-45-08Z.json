@@ -1,0 +1,173 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Reg Monitor — 2026-07-22"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-summary",
+        "sep-1",
+        "heading-act",
+        "storylink-cboe-binary",
+        "text-cboe-desc",
+        "text-cboe-context",
+        "sep-2",
+        "heading-watch",
+        "storylink-kpi",
+        "text-kpi-desc",
+        "storylink-fdic",
+        "text-fdic-desc",
+        "sep-3",
+        "heading-context",
+        "storylink-margin",
+        "text-margin-desc",
+        "storylink-ltr",
+        "text-ltr-desc",
+        "sep-4",
+        "text-sources"
+      ]
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "1 act, 2 watch, 2 context — GENIUS Act 1-yr statutory deadline missed 7-18 (no agency finalized). Cboe binary-options amendment approval opens SEC's event-contract lane alongside CFTC's.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "heading-act": {
+      "type": "Heading",
+      "props": {
+        "text": "ACT",
+        "level": "h3"
+      }
+    },
+    "storylink-cboe-binary": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Cboe binary options — Amendment No. 1 SEC accelerated approval",
+        "href": "https://www.federalregister.gov/documents/2026/07/22/2026-14743",
+        "source": "final order"
+      }
+    },
+    "text-cboe-desc": {
+      "type": "Text",
+      "props": {
+        "text": "SEC approved Cboe's amendment to existing binary-options rules (position limits, notional-value calc). Effective on publication 2026-07-22. Release 34-105936.",
+        "variant": "body"
+      }
+    },
+    "text-cboe-context": {
+      "type": "Text",
+      "props": {
+        "text": "SEC-lane binary options now moves in parallel with CFTC's event-contract lane — two-regulator race for prediction-market listings widens post-Kalshi SDNY loss.",
+        "variant": "muted"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "heading-watch": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h3"
+      }
+    },
+    "storylink-kpi": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Cboe binary KPI options — SR-CBOE-2026-061",
+        "href": "https://www.federalregister.gov/documents/2026/07/15/2026-14201",
+        "source": "proposed"
+      }
+    },
+    "text-kpi-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Cboe proposes listing binary options overlying issuer-reported KPIs. Would open a new SEC-side event-contract category tied directly to public-company metrics.",
+        "variant": "body"
+      }
+    },
+    "storylink-fdic": {
+      "type": "StoryLink",
+      "props": {
+        "title": "FDIC stablecoin reporting forms — GENIUS Act implementation",
+        "href": "https://www.federalregister.gov/documents/2026/07/20/2026-14589",
+        "source": "comment request"
+      }
+    },
+    "text-fdic-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly + quarterly reporting forms for permitted payment stablecoin issuers, OMB 3064-0225. Comment deadline 2026-09-18.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "heading-context": {
+      "type": "Heading",
+      "props": {
+        "text": "CONTEXT",
+        "level": "h3"
+      }
+    },
+    "storylink-margin": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC margin requirements — uncleared swaps final rule",
+        "href": "https://www.federalregister.gov/documents/2026/07/17/2026-14509",
+        "source": "final rule"
+      }
+    },
+    "text-margin-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Seeded-funds 3-yr exemption + money-market-fund collateral now eligible; effective 2026-08-17.",
+        "variant": "body"
+      }
+    },
+    "storylink-ltr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CFTC sunsets large-trader reporting — physical commodity swaps",
+        "href": "https://www.federalregister.gov/documents/2026/07/21/2026-14710",
+        "source": "rule elimination"
+      }
+    },
+    "text-ltr-desc": {
+      "type": "Text",
+      "props": {
+        "text": "15-yr part-20 rule eliminated as duplicative with Parts 43/45/49; effective on publication.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: federal-register=ok · sec=ok · cftc=ok · websearch=ok · congress=skip | 5 developments scored, 1 act / 2 watch / 2 context",
+        "variant": "caption"
+      }
+    }
+  }
+}

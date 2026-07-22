@@ -36,3 +36,8 @@ https://www.banklesstimes.com/articles/2026/07/08/kalshi-suffers-sdny-defeat-as-
 https://www.federalregister.gov/documents/2026/07/09/2026-13919/anti-money-laundering-and-countering-the-financing-of-terrorism-programs
 https://www.techtimes.com/articles/320118/20260710/polymarket-applies-margin-trading-license-while-under-active-cftc-investigation.htm
 https://www.cftc.gov/PressRoom/PressReleases/9265-26
+https://www.federalregister.gov/documents/2026/07/22/2026-14743
+https://www.federalregister.gov/documents/2026/07/15/2026-14201
+https://www.federalregister.gov/documents/2026/07/20/2026-14589
+https://www.federalregister.gov/documents/2026/07/17/2026-14509
+https://www.federalregister.gov/documents/2026/07/21/2026-14710
