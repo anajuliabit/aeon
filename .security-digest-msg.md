@@ -1,38 +1,35 @@
-*security digest — 2026-07-21*
-verdict: 3 actively exploited today (kev 4-day zero broke), 5 to schedule, 3 to monitor. _sources: kev, gh advisory, epss_
+*security digest — 2026-07-22*
+verdict: 3 actively exploited (2 no-patch-yet), 3 to schedule, 3 to monitor. _sources: kev, gh advisory, epss_
 
 *PATCH TODAY*
-- [CVE-2026-0770](https://nvd.nist.gov/vuln/detail/CVE-2026-0770) — langflow (pip) · kev added 2026-07-21 · cvss n/a
-  untrusted-control-sphere → unauth rce. exploited per cisa.
-  → upgrade langflow to ≥1.9.0 today.
-- [CVE-2026-60137](https://nvd.nist.gov/vuln/detail/CVE-2026-60137) + [CVE-2026-63030](https://nvd.nist.gov/vuln/detail/CVE-2026-63030) — wordpress core · kev added 2026-07-21
-  sqli chained with interpretation-conflict → unauth rce on default installs.
-  → upgrade wordpress to ≥7.0.2 today.
-- supply-chain malware wave · gh advisory type=malware · ~95 pypi + 5 npm in 48h
-  typosquats of absl-py (`abseil-py`), adafruit_imageload/display_text, chai-as-promised (`chai-leaf`, `chai-as-reddit`), plus `lambda-cloudwatch-cdk`.
-  → audit pypi/npm installs against advisory list; rotate creds if any bad ver installed.
+- [CVE-2026-39808](https://nvd.nist.gov/vuln/detail/CVE-2026-39808) — fortinet fortisandbox · kev 7-16 · epss 0.84 · cvss 9.8
+  unauth os command injection via crafted http. highest epss in feed, public poc, no vendor patch yet.
+  → isolate mgmt interface + follow FG-IR-26-100 mitigations today.
+- [CVE-2026-25089](https://nvd.nist.gov/vuln/detail/CVE-2026-25089) — fortinet fortisandbox · kev 7-16 · epss 0.36 · cvss 9.8
+  second unauth cmd injection in same line (4.2 / 4.4.0-4.4.8 / 5.0.0-5.0.5). no vendor patch.
+  → isolate + follow FG-IR-26-141 mitigations today.
+- [CVE-2021-27137](https://nvd.nist.gov/vuln/detail/CVE-2021-27137) — dd-wrt firmware · kev 7-21 · epss 0.11 · cvss 9.8
+  4-year-old upnp m-search stack overflow re-flagged after in-the-wild use. poc public.
+  → upgrade dd-wrt to build 45724+ or disable upnp.
 
 *PATCH THIS WEEK*
-- [GHSA-f4vv-55c2-5789](https://github.com/advisories/GHSA-f4vv-55c2-5789) — lightrag-hku (pip) · cvss v4 9.3 · epss 0.38% · public poc
-  hardcoded jwt secret + `/auth-status` mints guest tokens → offline auth bypass on api-key mode.
-  → upgrade lightrag-hku to ≥1.5.4.
-- [GHSA-23hp-3jrh-7fpw](https://github.com/advisories/GHSA-23hp-3jrh-7fpw) — tar (npm, node-tar) · cvss v4 9.2 · epss 0.36% · public poc
-  gzip-bomb decompression + negative-size infinite loop → disk exhaustion dos.
-  → upgrade tar to ≥7.5.19.
-- [GHSA-c6w9-5g5j-jh2p](https://github.com/advisories/GHSA-c6w9-5g5j-jh2p) — directus (npm) · cvss 8.6 · epss 0.28%
-  cache key ignores auth ctx → cross-user response leak.
-  → upgrade directus to ≥12.0.0.
-- [GHSA-vj59-8hwv-xxmv](https://github.com/advisories/GHSA-vj59-8hwv-xxmv) — astro (npm) · cvss 8.2 · epss 0.27%
-  decode-iteration + rewrite-canonicalization mismatch → auth bypass.
-  → upgrade astro to ≥6.4.8.
-- pillow 10-cve bundle (pip) · cvss 7.5–8.7 · epss ~0.35–0.39% · all fixed in 12.3.0
-  4x heap-oob-write (`ImageCmsTransform`, `paste`/`crop`, `RankFilter`) + 6x dos (jpeg2000, pdf decomp-bomb, etc).
-  → upgrade pillow to ≥12.3.0.
+- [GHSA-pf56-329r-95rw](https://github.com/advisories/GHSA-pf56-329r-95rw) — @sigstore/oci (npm) · cvss 9.6 · epss 0.32%
+  substring credential match leaks docker config creds to attacker-controlled registry.
+  → upgrade @sigstore/oci to ≥0.7.1.
+- [GHSA-p63j-vcc4-9vmv](https://github.com/advisories/GHSA-p63j-vcc4-9vmv) — @vitest/browser (npm) · cvss 9.4 · no cve
+  browser mode bypasses allowwrite gate; arbitrary local fs read/write/delete during tests.
+  → upgrade to ≥4.1.10 (v4) / ≥3.2.7 (v3) / ≥5.0.0-beta.6 (v5).
+- gitea (go) · 8-cve mass-disclosure 7-21 · cvss 8.1–9.8
+  X-WEBAUTH-USER any-ip impersonation, ssrf filter bypass, actions artifact hmac ambiguity, pr permission bypasses.
+  → self-hosted: upgrade gitea to ≥1.27.0.
 
 *MONITOR*
-- [GHSA-395f-4hp3-45gv](https://github.com/advisories/GHSA-395f-4hp3-45gv) — shell-quote (npm) · cvss v4 8.7 · fix 1.9.0
-  quadratic dos in parse(). → schedule bump; low active-exploit signal.
-- [GHSA-3jxr-9vmj-r5cp](https://github.com/advisories/GHSA-3jxr-9vmj-r5cp) — brace-expansion (npm) · cvss v4 7.7 · fix 5.0.7
-  → schedule bump; transitive dep in many stacks.
-- [GHSA-jhmp-mqwm-3gq8](https://github.com/advisories/GHSA-jhmp-mqwm-3gq8) — tornado (pip) · cvss 7.5 · fix 6.5.3
-  cve-2025-67725/6 pair. → schedule bump.
+- [GHSA-2f96-g7mh-g2hx](https://github.com/advisories/GHSA-2f96-g7mh-g2hx) — gitpython (pip) · 3 ghsas 7-21 · cvss 8.4–8.8 · no fix ≤3.1.50
+  cmd injection via git long-option prefix, unguarded ls_remote/archive, joined-short-option bypass.
+  → avoid untrusted-input remote urls in git ops; wait for patched release.
+- [GHSA-fmm7-x4gx-8jhr](https://github.com/advisories/GHSA-fmm7-x4gx-8jhr) — file browser (go) · cve-2026-55667 · cvss 8.2 · no fix ≤2.63.15
+  out-of-scope file delete via symlink-following removeall in create-only scope.
+  → restrict create-only scopes; watch for patched release.
+- pip supply-chain: 100+ typosquat malware batch 7-21 17:24z (extends 14:14z wave)
+  yfinance clone-cluster (yfnance / yfiance / yfinace / yfiannce / yfinaance / yfinannce / yfinancee) + xolof-* + yc-* stubs, same-second alphabet-sort = scanner retro-ingest.
+  → tighten pinning; verify yfinance install path is authentic.

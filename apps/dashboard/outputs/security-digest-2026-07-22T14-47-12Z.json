@@ -1,0 +1,681 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "security-digest",
+        "description": "2026-07-22 — verdict: 3 actively exploited (2 no-patch-yet), 3 to schedule, 3 to monitor. sources: kev, gh advisory, epss"
+      },
+      "children": [
+        "patch-today-section",
+        "patch-week-section",
+        "monitor-section"
+      ]
+    },
+    "patch-today-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-today-heading",
+        "cve-39808",
+        "sep1",
+        "cve-25089",
+        "sep2",
+        "cve-21137"
+      ]
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve-39808": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-39808-title",
+        "cve-39808-meta",
+        "cve-39808-desc",
+        "cve-39808-action"
+      ]
+    },
+    "cve-39808-title": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-39808 — Fortinet FortiSandbox",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-39808"
+      }
+    },
+    "cve-39808-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-39808-badge",
+        "cve-39808-epss",
+        "cve-39808-cvss"
+      ]
+    },
+    "cve-39808-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "kev 7-16",
+        "variant": "destructive"
+      }
+    },
+    "cve-39808-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.84"
+      }
+    },
+    "cve-39808-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.8"
+      }
+    },
+    "cve-39808-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth OS command injection via crafted HTTP. Highest EPSS in feed, public POC, no vendor patch yet.",
+        "variant": "body"
+      }
+    },
+    "cve-39808-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ isolate mgmt interface + follow FG-IR-26-100 mitigations today.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cve-25089": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-25089-title",
+        "cve-25089-meta",
+        "cve-25089-desc",
+        "cve-25089-action"
+      ]
+    },
+    "cve-25089-title": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-25089 — Fortinet FortiSandbox",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-25089"
+      }
+    },
+    "cve-25089-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-25089-badge",
+        "cve-25089-epss",
+        "cve-25089-cvss"
+      ]
+    },
+    "cve-25089-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "kev 7-16",
+        "variant": "destructive"
+      }
+    },
+    "cve-25089-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.36"
+      }
+    },
+    "cve-25089-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.8"
+      }
+    },
+    "cve-25089-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Second unauth cmd injection in same line (4.2 / 4.4.0-4.4.8 / 5.0.0-5.0.5). No vendor patch.",
+        "variant": "body"
+      }
+    },
+    "cve-25089-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ isolate + follow FG-IR-26-141 mitigations today.",
+        "variant": "lead"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "cve-21137": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-21137-title",
+        "cve-21137-meta",
+        "cve-21137-desc",
+        "cve-21137-action"
+      ]
+    },
+    "cve-21137-title": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2021-27137 — DD-WRT Firmware",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2021-27137"
+      }
+    },
+    "cve-21137-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "cve-21137-badge",
+        "cve-21137-epss",
+        "cve-21137-cvss"
+      ]
+    },
+    "cve-21137-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "kev 7-21",
+        "variant": "destructive"
+      }
+    },
+    "cve-21137-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.11"
+      }
+    },
+    "cve-21137-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.8"
+      }
+    },
+    "cve-21137-desc": {
+      "type": "Text",
+      "props": {
+        "text": "4-year-old UPnP M-SEARCH stack overflow re-flagged after in-the-wild use. POC public.",
+        "variant": "body"
+      }
+    },
+    "cve-21137-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade DD-WRT to build 45724+ or disable UPnP.",
+        "variant": "lead"
+      }
+    },
+    "patch-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch-week-heading",
+        "ghsa-pf56",
+        "sep3",
+        "ghsa-p63j",
+        "sep4",
+        "gitea"
+      ]
+    },
+    "patch-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "ghsa-pf56": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa-pf56-title",
+        "ghsa-pf56-meta",
+        "ghsa-pf56-desc",
+        "ghsa-pf56-action"
+      ]
+    },
+    "ghsa-pf56-title": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-pf56-329r-95rw — @sigstore/oci (npm)",
+        "href": "https://github.com/advisories/GHSA-pf56-329r-95rw"
+      }
+    },
+    "ghsa-pf56-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ghsa-pf56-cvss",
+        "ghsa-pf56-epss"
+      ]
+    },
+    "ghsa-pf56-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.6"
+      }
+    },
+    "ghsa-pf56-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.32%"
+      }
+    },
+    "ghsa-pf56-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Substring credential match leaks docker config creds to attacker-controlled registry.",
+        "variant": "body"
+      }
+    },
+    "ghsa-pf56-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade @sigstore/oci to ≥0.7.1.",
+        "variant": "lead"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ghsa-p63j": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa-p63j-title",
+        "ghsa-p63j-meta",
+        "ghsa-p63j-desc",
+        "ghsa-p63j-action"
+      ]
+    },
+    "ghsa-p63j-title": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-p63j-vcc4-9vmv — @vitest/browser (npm)",
+        "href": "https://github.com/advisories/GHSA-p63j-vcc4-9vmv"
+      }
+    },
+    "ghsa-p63j-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ghsa-p63j-cvss",
+        "ghsa-p63j-nocve"
+      ]
+    },
+    "ghsa-p63j-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.4"
+      }
+    },
+    "ghsa-p63j-nocve": {
+      "type": "Badge",
+      "props": {
+        "text": "no CVE",
+        "variant": "outline"
+      }
+    },
+    "ghsa-p63j-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Browser mode bypasses allowwrite gate; arbitrary local fs read/write/delete during tests.",
+        "variant": "body"
+      }
+    },
+    "ghsa-p63j-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade to ≥4.1.10 (v4) / ≥3.2.7 (v3) / ≥5.0.0-beta.6 (v5).",
+        "variant": "lead"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "gitea": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "gitea-title",
+        "gitea-meta",
+        "gitea-desc",
+        "gitea-action"
+      ]
+    },
+    "gitea-title": {
+      "type": "Heading",
+      "props": {
+        "text": "gitea (Go)",
+        "level": "h4"
+      }
+    },
+    "gitea-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "gitea-badge",
+        "gitea-date"
+      ]
+    },
+    "gitea-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "8-CVE mass-disclosure",
+        "variant": "secondary"
+      }
+    },
+    "gitea-date": {
+      "type": "Badge",
+      "props": {
+        "text": "7-21",
+        "variant": "outline"
+      }
+    },
+    "gitea-desc": {
+      "type": "Text",
+      "props": {
+        "text": "X-WEBAUTH-USER any-ip impersonation, SSRF filter bypass, actions artifact HMAC ambiguity, PR permission bypasses. CVSS 8.1–9.8",
+        "variant": "body"
+      }
+    },
+    "gitea-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ self-hosted: upgrade gitea to ≥1.27.0.",
+        "variant": "lead"
+      }
+    },
+    "monitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor-heading",
+        "ghsa-2f96",
+        "sep5",
+        "ghsa-fmm7",
+        "sep6",
+        "pip-supply"
+      ]
+    },
+    "monitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "ghsa-2f96": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa-2f96-title",
+        "ghsa-2f96-meta",
+        "ghsa-2f96-desc",
+        "ghsa-2f96-action"
+      ]
+    },
+    "ghsa-2f96-title": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-2f96-g7mh-g2hx — gitpython (pip)",
+        "href": "https://github.com/advisories/GHSA-2f96-g7mh-g2hx"
+      }
+    },
+    "ghsa-2f96-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ghsa-2f96-count",
+        "ghsa-2f96-date",
+        "ghsa-2f96-cvss",
+        "ghsa-2f96-nofix"
+      ]
+    },
+    "ghsa-2f96-count": {
+      "type": "Badge",
+      "props": {
+        "text": "3 GHSAs",
+        "variant": "secondary"
+      }
+    },
+    "ghsa-2f96-date": {
+      "type": "Badge",
+      "props": {
+        "text": "7-21",
+        "variant": "outline"
+      }
+    },
+    "ghsa-2f96-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.4–8.8"
+      }
+    },
+    "ghsa-2f96-nofix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix ≤3.1.50",
+        "variant": "destructive"
+      }
+    },
+    "ghsa-2f96-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Cmd injection via git long-option prefix, unguarded ls_remote/archive, joined-short-option bypass.",
+        "variant": "body"
+      }
+    },
+    "ghsa-2f96-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ avoid untrusted-input remote URLs in git ops; wait for patched release.",
+        "variant": "lead"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ghsa-fmm7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa-fmm7-title",
+        "ghsa-fmm7-meta",
+        "ghsa-fmm7-desc",
+        "ghsa-fmm7-action"
+      ]
+    },
+    "ghsa-fmm7-title": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-fmm7-x4gx-8jhr — file browser (Go)",
+        "href": "https://github.com/advisories/GHSA-fmm7-x4gx-8jhr"
+      }
+    },
+    "ghsa-fmm7-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ghsa-fmm7-cve",
+        "ghsa-fmm7-cvss",
+        "ghsa-fmm7-nofix"
+      ]
+    },
+    "ghsa-fmm7-cve": {
+      "type": "Badge",
+      "props": {
+        "text": "CVE-2026-55667",
+        "variant": "secondary"
+      }
+    },
+    "ghsa-fmm7-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.2"
+      }
+    },
+    "ghsa-fmm7-nofix": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix ≤2.63.15",
+        "variant": "destructive"
+      }
+    },
+    "ghsa-fmm7-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Out-of-scope file delete via symlink-following removeAll in create-only scope.",
+        "variant": "body"
+      }
+    },
+    "ghsa-fmm7-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ restrict create-only scopes; watch for patched release.",
+        "variant": "lead"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pip-supply": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pip-supply-title",
+        "pip-supply-badge",
+        "pip-supply-desc",
+        "pip-supply-action"
+      ]
+    },
+    "pip-supply-title": {
+      "type": "Heading",
+      "props": {
+        "text": "pip supply-chain",
+        "level": "h4"
+      }
+    },
+    "pip-supply-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "100+ typosquat malware batch 7-21 17:24z",
+        "variant": "destructive"
+      }
+    },
+    "pip-supply-desc": {
+      "type": "Text",
+      "props": {
+        "text": "yfinance clone-cluster (yfnance / yfiance / yfinace / yfiannce / yfinaance / yfinannce / yfinancee) + xolof-* + yc-* stubs, same-second alphabet-sort = scanner retro-ingest. Extends 14:14z wave.",
+        "variant": "body"
+      }
+    },
+    "pip-supply-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ tighten pinning; verify yfinance install path is authentic.",
+        "variant": "lead"
+      }
+    }
+  }
+}
