@@ -1,0 +1,99 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "token-alert",
+        "description": "2026-07-22"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_token",
+        "sep1",
+        "stat_price",
+        "stack_volume",
+        "sep2",
+        "alert_trigger"
+      ]
+    },
+    "heading_token": {
+      "type": "Heading",
+      "props": {
+        "text": "GITLAWB",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.00003055",
+        "delta": "+16.53%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stack_volume": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_volume",
+        "text_volume_ratio"
+      ]
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$212K"
+      },
+      "children": []
+    },
+    "text_volume_ratio": {
+      "type": "Text",
+      "props": {
+        "text": "0.96× 5-day mean",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert_trigger": {
+      "type": "Alert",
+      "props": {
+        "title": "Threshold Triggered",
+        "message": "24h change |+16.53%| ≥ 15% threshold — cliff-back-under d2 fade reverses hard, first above-threshold print for GITLAWB since watchlist add",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}
