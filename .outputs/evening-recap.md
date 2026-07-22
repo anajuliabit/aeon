@@ -1,20 +1,25 @@
-*Evening Recap — 2026-07-21*
-_TL;DR: one PR shipped, fleet CRITICAL cleared, 14 patterns codified — productive day on a broad risk-on tape._
+*Evening Recap — 2026-07-22*
+_TL;DR: heavy cron day — reflect ships 20 patterns, GITLAWB breaks 4-day silence, but ISS-025 hits 1-week slip and Bash `>` redirect regression lands n=3 same UTC-day_
 
 *Headlines:*
-- [self-improve] — PR #166 opened, CLAUDE.md weekly-batch PR cadence codified · https://github.com/anajuliabit/aeon/pull/166
-- [skill-freshness] — FRESHNESS_OK, 43 skills audited, 0 flagged · articles/skill-freshness-2026-07-21.md
+- github-trending — 5 picks kept; ayghri/i-have-adhd 17.3× first coding-agent-skill-as-package; code-review-graph d5 plateau codified · `.outputs/github-trending.md`
+- reflect — 20 new patterns codified (breadth-swing, twin dead-cat, LLM containment); MEMORY.md + fleet.md refreshed · `memory/topics/fleet.md`
+- daily-routine — 63pt breadth compression d1 (87→24/100 top-100 green); HYPE −6.7% MAJOR breakdown; BTC ETF YTD first below $5B · SENT
+- token-alert — GITLAWB +16.53% fires 1/12; breaks 4-consec zero-alerts streak; counter-tape shape vs 7-21 broad-tape · SENT
+- security-digest — FortiSandbox no-vendor-patch KEV pair + DD-WRT 4yr-old CVE re-emerge + pip-mass-malware extends n=2 · `.security-digest-msg.md`
 
 *Notable:*
-- [skill-health] — cost-report CRITICAL→DEGRADED; fleet CRITICAL count 1→0; ISS-025 stays open (sandbox class, sr=0.11)
-- [security-digest] — Langflow RCE CVE-2026-0770 KEV; pip-mass-malware n=1 (95+ PyPI single-batch); 14 KEV breaks 4-day zero-cadence
-- [reflect] — 14 patterns codified (compression-regime, BUILDon d3, code-review-graph viral arc, BTC ETF 5-day inflows, more); MEMORY.md + fleet.md + crypto.md refreshed
-- [btc-levels] — $65.9k reclaim FIRES 09:29Z; spot $66,563 end-of-day, two-week high
-- [daily-routine] — 87/100 top-100 green, top-50 median +3.0%; NIGHT -26.4% capitulation ($123M vol, 38% mcap-turnover)
+- reg-monitor — Cboe binary-options Amendment 34-105936 effective 7-22; 1 act, 2 watch · operator-invoked Tue (off-Wed cadence)
+- skill-health — SKILL_HEALTH_PARTIAL: skill-runs sandbox-blocked; Bash `>` n=3 regressions UTC-day-22; hash 467ce959 stable
+- goal-tracker — ISS-025 T+6 day-7 (1-week slip milestone) tracked; 0 status transitions across 3 goals
+- action-converter — 5 loops filed: ISS-025 day-7 + H unlock T-3 + priorities 48d + on-chain config d46 + security-digest curl
+- morning-brief — SENT; 3 focus items: ISS-025, H unlock T-3, compression-crack test
 
 *Decisions for tomorrow:*
-- merge or close PR #165 (docs skill-graph, 52h dormant, no activity since 7-19 17:39Z)
-- review PR #166 (self-improve CLAUDE.md codification, enters weekly-batch queue)
-- ISS-025 T+5 day-6: operator direct-author .github/workflows/aeon.yml:479-495
+- ISS-025: operator direct-author `dangerouslyDisableSandbox` into `aeon.yml:479-495` — action-converter pivot live from 7-21, T+6 day-7 milestone crossed
+- ISS-027 unfiled: 12:00Z batch DARK d25 confirmed n=26 today — file in INDEX.md or assign wontfix
 
-_+9 routine runs collapsed · sources: log=ok cron-state=ok_
+*Blockers:*
+- 12:00Z batch DARK d25 — 8-skill cluster frozen since 6-28; ISS-027 not formally filed in INDEX.md
+
+_+11 routine runs collapsed · sources: log=ok cron-state=ok_

@@ -1,0 +1,517 @@
+{
+  "root": "card-recap",
+  "state": {},
+  "elements": {
+    "card-recap": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-22",
+        "description": "TL;DR: heavy cron day — reflect ships 20 patterns, GITLAWB breaks 4-day silence, but ISS-025 hits 1-week slip and Bash `>` redirect regression lands n=3 same UTC-day"
+      },
+      "children": [
+        "sep-1",
+        "heading-headlines",
+        "stack-headlines",
+        "sep-2",
+        "heading-notable",
+        "stack-notable",
+        "sep-3",
+        "heading-decisions",
+        "stack-decisions",
+        "sep-4",
+        "heading-blockers",
+        "alert-blockers",
+        "sep-5",
+        "footer-stats"
+      ]
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "heading-headlines": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "stack-headlines": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "hl-github-trending",
+        "hl-reflect",
+        "hl-daily-routine",
+        "hl-token-alert",
+        "hl-security-digest"
+      ]
+    },
+    "hl-github-trending": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-gt-title",
+        "hl-gt-text",
+        "hl-gt-link"
+      ]
+    },
+    "hl-gt-title": {
+      "type": "Heading",
+      "props": {
+        "text": "github-trending",
+        "level": "h3"
+      }
+    },
+    "hl-gt-text": {
+      "type": "Text",
+      "props": {
+        "text": "5 picks kept; ayghri/i-have-adhd 17.3× first coding-agent-skill-as-package; code-review-graph d5 plateau codified"
+      }
+    },
+    "hl-gt-link": {
+      "type": "Link",
+      "props": {
+        "label": ".outputs/github-trending.md",
+        "href": ".outputs/github-trending.md"
+      }
+    },
+    "hl-reflect": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-reflect-title",
+        "hl-reflect-stat",
+        "hl-reflect-patterns",
+        "hl-reflect-text",
+        "hl-reflect-link"
+      ]
+    },
+    "hl-reflect-title": {
+      "type": "Heading",
+      "props": {
+        "text": "reflect",
+        "level": "h3"
+      }
+    },
+    "hl-reflect-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "20",
+        "label": "new patterns codified"
+      }
+    },
+    "hl-reflect-patterns": {
+      "type": "Text",
+      "props": {
+        "text": "breadth-swing, twin dead-cat, LLM containment"
+      }
+    },
+    "hl-reflect-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md + fleet.md refreshed"
+      }
+    },
+    "hl-reflect-link": {
+      "type": "Link",
+      "props": {
+        "label": "memory/topics/fleet.md",
+        "href": "memory/topics/fleet.md"
+      }
+    },
+    "hl-daily-routine": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-dr-title",
+        "hl-dr-compression",
+        "hl-dr-hype",
+        "hl-dr-btc",
+        "hl-dr-status"
+      ]
+    },
+    "hl-dr-title": {
+      "type": "Heading",
+      "props": {
+        "text": "daily-routine",
+        "level": "h3"
+      }
+    },
+    "hl-dr-compression": {
+      "type": "Text",
+      "props": {
+        "text": "63pt breadth compression d1 (87→24/100 top-100 green)"
+      }
+    },
+    "hl-dr-hype": {
+      "type": "Stat",
+      "props": {
+        "value": "−6.7%",
+        "label": "HYPE breakdown"
+      }
+    },
+    "hl-dr-btc": {
+      "type": "Text",
+      "props": {
+        "text": "BTC ETF YTD first below $5B"
+      }
+    },
+    "hl-dr-status": {
+      "type": "Badge",
+      "props": {
+        "text": "SENT",
+        "variant": "secondary"
+      }
+    },
+    "hl-token-alert": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-ta-title",
+        "hl-ta-gitlawb",
+        "hl-ta-streak",
+        "hl-ta-shape",
+        "hl-ta-status"
+      ]
+    },
+    "hl-ta-title": {
+      "type": "Heading",
+      "props": {
+        "text": "token-alert",
+        "level": "h3"
+      }
+    },
+    "hl-ta-gitlawb": {
+      "type": "Stat",
+      "props": {
+        "value": "+16.53%",
+        "label": "GITLAWB"
+      }
+    },
+    "hl-ta-streak": {
+      "type": "Text",
+      "props": {
+        "text": "breaks 4-consecutive zero-alerts streak"
+      }
+    },
+    "hl-ta-shape": {
+      "type": "Text",
+      "props": {
+        "text": "counter-tape shape vs 7-21 broad-tape"
+      }
+    },
+    "hl-ta-status": {
+      "type": "Badge",
+      "props": {
+        "text": "SENT",
+        "variant": "secondary"
+      }
+    },
+    "hl-security-digest": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hl-sd-title",
+        "hl-sd-items",
+        "hl-sd-link"
+      ]
+    },
+    "hl-sd-title": {
+      "type": "Heading",
+      "props": {
+        "text": "security-digest",
+        "level": "h3"
+      }
+    },
+    "hl-sd-items": {
+      "type": "Text",
+      "props": {
+        "text": "FortiSandbox no-vendor-patch KEV pair + DD-WRT 4yr-old CVE re-emerge + pip-mass-malware extends n=2"
+      }
+    },
+    "hl-sd-link": {
+      "type": "Link",
+      "props": {
+        "label": ".security-digest-msg.md",
+        "href": ".security-digest-msg.md"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "stack-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "not-reg-monitor",
+        "not-skill-health",
+        "not-goal-tracker",
+        "not-action-converter",
+        "not-morning-brief"
+      ]
+    },
+    "not-reg-monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not-rm-title",
+        "not-rm-text"
+      ]
+    },
+    "not-rm-title": {
+      "type": "Heading",
+      "props": {
+        "text": "reg-monitor",
+        "level": "h3"
+      }
+    },
+    "not-rm-text": {
+      "type": "Text",
+      "props": {
+        "text": "Cboe binary-options Amendment 34-105936 effective 7-22; 1 act, 2 watch · operator-invoked Tue (off-Wed cadence)"
+      }
+    },
+    "not-skill-health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not-sh-title",
+        "not-sh-text"
+      ]
+    },
+    "not-sh-title": {
+      "type": "Heading",
+      "props": {
+        "text": "skill-health",
+        "level": "h3"
+      }
+    },
+    "not-sh-text": {
+      "type": "Text",
+      "props": {
+        "text": "SKILL_HEALTH_PARTIAL: skill-runs sandbox-blocked; Bash `>` n=3 regressions UTC-day-22; hash 467ce959 stable"
+      }
+    },
+    "not-goal-tracker": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not-gt-title",
+        "not-gt-text"
+      ]
+    },
+    "not-gt-title": {
+      "type": "Heading",
+      "props": {
+        "text": "goal-tracker",
+        "level": "h3"
+      }
+    },
+    "not-gt-text": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 T+6 day-7 (1-week slip milestone) tracked; 0 status transitions across 3 goals"
+      }
+    },
+    "not-action-converter": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not-ac-title",
+        "not-ac-text"
+      ]
+    },
+    "not-ac-title": {
+      "type": "Heading",
+      "props": {
+        "text": "action-converter",
+        "level": "h3"
+      }
+    },
+    "not-ac-text": {
+      "type": "Text",
+      "props": {
+        "text": "5 loops filed: ISS-025 day-7 + H unlock T-3 + priorities 48d + on-chain config d46 + security-digest curl"
+      }
+    },
+    "not-morning-brief": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "not-mb-title",
+        "not-mb-text"
+      ]
+    },
+    "not-mb-title": {
+      "type": "Heading",
+      "props": {
+        "text": "morning-brief",
+        "level": "h3"
+      }
+    },
+    "not-mb-text": {
+      "type": "Text",
+      "props": {
+        "text": "SENT; 3 focus items: ISS-025, H unlock T-3, compression-crack test"
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "heading-decisions": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "stack-decisions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "dec-iss025",
+        "dec-iss027"
+      ]
+    },
+    "dec-iss025": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dec-iss025-title",
+        "dec-iss025-text"
+      ]
+    },
+    "dec-iss025-title": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-025",
+        "level": "h3"
+      }
+    },
+    "dec-iss025-text": {
+      "type": "Text",
+      "props": {
+        "text": "operator direct-author `dangerouslyDisableSandbox` into `aeon.yml:479-495` — action-converter pivot live from 7-21, T+6 day-7 milestone crossed"
+      }
+    },
+    "dec-iss027": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dec-iss027-title",
+        "dec-iss027-text"
+      ]
+    },
+    "dec-iss027-title": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-027 unfiled",
+        "level": "h3"
+      }
+    },
+    "dec-iss027-text": {
+      "type": "Text",
+      "props": {
+        "text": "12:00Z batch DARK d25 confirmed n=26 today — file in INDEX.md or assign wontfix"
+      }
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "heading-blockers": {
+      "type": "Heading",
+      "props": {
+        "text": "Blockers",
+        "level": "h2"
+      }
+    },
+    "alert-blockers": {
+      "type": "Alert",
+      "props": {
+        "title": "12:00Z batch DARK d25",
+        "message": "8-skill cluster frozen since 6-28; ISS-027 not formally filed in INDEX.md",
+        "type": "warning"
+      }
+    },
+    "sep-5": {
+      "type": "Separator"
+    },
+    "footer-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-collapsed",
+        "footer-sources"
+      ]
+    },
+    "footer-collapsed": {
+      "type": "Text",
+      "props": {
+        "text": "+11 routine runs collapsed",
+        "variant": "caption"
+      }
+    },
+    "footer-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: log=ok cron-state=ok",
+        "variant": "caption"
+      }
+    }
+  }
+}
