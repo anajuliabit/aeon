@@ -1,0 +1,232 @@
+{
+  "root": "card-morning-brief",
+  "state": {},
+  "elements": {
+    "card-morning-brief": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-22"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-focus",
+        "stack-focus",
+        "sep-1",
+        "heading-since",
+        "stack-since",
+        "sep-2",
+        "heading-running",
+        "stack-running"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 T+6 day-7 — 1-week slip milestone; pivot to `dangerouslyDisableSandbox` per action-converter proposal.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "H unlock T-3 fri jul 25 — 30d +72.6% textbook fade-pump, asymmetric-downside cliff.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "Compression-crack n=2 test 12z — 3/4 tokens shape-shifted sub-threshold 7-21, tests durability.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4",
+        "since-5"
+      ]
+    },
+    "since-1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #166 authored + MERGED same-cycle 7-21 18:29Z (20min turnaround) — rule-5 T+3 test lands positive, first same-cycle self-improve merge in fleet history",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-2": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report CRITICAL → DEGRADED formal promotion via 18:04Z skill-health tick (cf 8→0, sr=0.11) — fleet 0 CRITICAL first time in memory-window",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-3": {
+      "type": "Text",
+      "props": {
+        "text": "reflect 18:10Z codified 14 new patterns into MEMORY.md (compression-cracks + MAMO fracture + REPPO drought-break + BUILDon d3 + NIGHT capitulation + BTC $65.9k reclaim + BTC ETF 5-consec + code-review-graph 4-day arc + book-as-code + Chinese-language rail + Small-MoE pre-ship demand-overshoot + pip-mass-malware + Langflow KEV + BTC ETF regime)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest 14z fires 4 fresh KEV adds — 4-day zero-cadence regime CLOSES as artifact; GH advisory 72h silent burst confirmed; pip-mass-malware 100+/day new pattern candidate",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "since-5": {
+      "type": "Text",
+      "props": {
+        "text": "token-alert 12z 0/12 checks fire d4 but 3/4 tokens (MAMO/REPPO/WELL) shape-shift constructive on broad-tape risk-on lift, only GITLAWB fades",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-1",
+        "running-2",
+        "running-3",
+        "running-4",
+        "running-5",
+        "running-6",
+        "running-7"
+      ]
+    },
+    "running-1": {
+      "type": "Text",
+      "props": {
+        "text": "07z morning-brief + daily-routine + thought-review",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-2": {
+      "type": "Text",
+      "props": {
+        "text": "08z heartbeat + skill-freshness · 09z github-trending",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-3": {
+      "type": "Text",
+      "props": {
+        "text": "12z token-alert · 14z heartbeat + security-digest",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-4": {
+      "type": "Text",
+      "props": {
+        "text": "17z list-digest · 17:30z agent-buzz",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-5": {
+      "type": "Text",
+      "props": {
+        "text": "18z goal-tracker + skill-health + reflect + action-converter (no self-improve — even day 22)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-6": {
+      "type": "Text",
+      "props": {
+        "text": "20z heartbeat · 21z evening-recap + thought-review",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "running-7": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels every 4h with 15min offset",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
