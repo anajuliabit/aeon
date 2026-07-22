@@ -1,15 +1,16 @@
-Skill-health complete. Per SKILL.md step 5 gate: hash unchanged (CRITICAL+FLAPPING+DEGRADED union identical to prev) AND delta < 24h → **NOOP, no `./notify` call**.
+*Skill Health — 2026-07-22*
+HEALTH: DEGRADED(18) [systemic: output_tokens=0 sandbox-truncation day-30 — 18 skills share signature, 0 CRITICAL]
 
-## Summary
+🟡 DEGRADED (top 5 by sr)
+- cost-report — sr 0.11, 51 fails, weekly Mon-only, last_success 7-20 late-catchup — INVESTIGATE → ISS-025
+- skill-analytics — sr 0.16, 42 fails — INVESTIGATE
+- reg-monitor — sr 0.17, 38 fails — INVESTIGATE
+- vuln-scanner — sr 0.18, 27 fails — INVESTIGATE → ISS-018
+- market-context-refresh — sr 0.32, 63 fails — INVESTIGATE
++13 more — see memory/issues/INDEX.md
 
-Ran `skills/skill-health/SKILL.md` (var=""). Loaded `memory/cron-state.json` (44 entries), `memory/skill-health/*.json`, `aeon.yml`, `memory/issues/INDEX.md`. `./scripts/skill-runs` sandbox-blocked → **SKILL_HEALTH_PARTIAL**, proceeded on cron-state + skill-health JSON only.
+⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL
+🟢 HEALTHY: 9
 
-**Classification (43 enabled):** 0 CRITICAL · **18 DEGRADED** · 0 FLAPPING · 13 WARNING · 9 HEALTHY · 3 NO_DATA.
-
-**Key transition:** cost-report CRITICAL → DEGRADED (cf 8→0 via 2026-07-20T19:08:46Z late-success; sr=0.11 keeps it DEGRADED). Ships yesterday's morning-brief focus #2 on-target.
-
-**Hash gate:** `current_hash == prev_hash = 467ce959…` (union identical — cost-report moved severity INSIDE the CRITICAL+FLAPPING+DEGRADED union of 18 skills) AND delta 23h17m < 24h → **NOOP**. No notification sent.
-
-**Reconcile:** INDEX.md exists (precondition ok). Zero CRITICAL/FLAPPING to file. 5 skills in open-issue affected_skills (vuln-scanner, defi-overview, token-pick, search-skill, cost-report) — none reach HEALTHY sr>=0.8 → zero resolutions. Open issues stays at 11.
-
-**Files modified:** `memory/skill-health/last-report.json` (last_run_at advanced to 2026-07-21T18:04:47Z, hash + last_notified_at unchanged, classification updated) + `memory/logs/2026-07-21.md` (SKILL_HEALTH_NOOP entry). **Status:** `SKILL_HEALTH_NOOP · CLASS_UNCHANGED · COST_REPORT_PROMOTED_CRIT_TO_DEGRADED`.
+Open issues: 11 · Resolved this run: 0 · Filed this run: 0
+Hash 467ce959 stable 3-consec-tick (7-19 + 7-20 + 7-22 formal ticks); notify fires on 24h daily-reminder cadence after 48h gap.

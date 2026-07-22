@@ -1,0 +1,239 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-22"
+      },
+      "children": [
+        "alert_status",
+        "sep_1",
+        "section_degraded",
+        "sep_2",
+        "section_no_data",
+        "sep_3",
+        "section_healthy",
+        "sep_4",
+        "section_stats",
+        "sep_5",
+        "section_hash"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: DEGRADED (18 skills)",
+        "message": "Systemic issue: output_tokens=0 sandbox-truncation day-30 — 18 skills share signature, 0 CRITICAL",
+        "type": "warning"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_degraded": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_degraded",
+        "stack_degraded_list",
+        "text_degraded_more"
+      ]
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED (top 5 by sr)",
+        "level": "h3"
+      }
+    },
+    "stack_degraded_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "degraded_cost_report",
+        "degraded_skill_analytics",
+        "degraded_reg_monitor",
+        "degraded_vuln_scanner",
+        "degraded_market_context"
+      ]
+    },
+    "degraded_cost_report": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report — sr 0.11, 51 fails, weekly Mon-only, last_success 7-20 late-catchup — INVESTIGATE → ISS-025"
+      }
+    },
+    "degraded_skill_analytics": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics — sr 0.16, 42 fails — INVESTIGATE"
+      }
+    },
+    "degraded_reg_monitor": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor — sr 0.17, 38 fails — INVESTIGATE"
+      }
+    },
+    "degraded_vuln_scanner": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner — sr 0.18, 27 fails — INVESTIGATE → ISS-018"
+      }
+    },
+    "degraded_market_context": {
+      "type": "Text",
+      "props": {
+        "text": "market-context-refresh — sr 0.32, 63 fails — INVESTIGATE"
+      }
+    },
+    "text_degraded_more": {
+      "type": "Text",
+      "props": {
+        "text": "+13 more — see memory/issues/INDEX.md",
+        "variant": "muted"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_no_data": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_no_data",
+        "text_no_data_list"
+      ]
+    },
+    "heading_no_data": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (3)",
+        "level": "h3"
+      }
+    },
+    "text_no_data_list": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_healthy": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_healthy",
+        "stat_healthy_count"
+      ]
+    },
+    "heading_healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY",
+        "level": "h3"
+      }
+    },
+    "stat_healthy_count": {
+      "type": "Stat",
+      "props": {
+        "value": "9"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stats",
+        "grid_stats"
+      ]
+    },
+    "heading_stats": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "grid_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_open_issues",
+        "stat_resolved",
+        "stat_filed"
+      ]
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "11"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    },
+    "stat_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed this run",
+        "value": "0"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_hash": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_hash"
+      ]
+    },
+    "text_hash": {
+      "type": "Text",
+      "props": {
+        "text": "Hash 467ce959 stable 3-consec-tick (7-19 + 7-20 + 7-22 formal ticks); notify fires on 24h daily-reminder cadence after 48h gap.",
+        "variant": "caption"
+      }
+    }
+  }
+}
