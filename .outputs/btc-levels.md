@@ -1,13 +1,17 @@
+Clean run. No alerts fired.
+
 ## Summary
 
-**Run complete — quiet (no alerts).**
+**BTC data fetched (CoinGecko, 2026-07-22 12:26Z):**
+- Spot: $65,816
+- Last completed daily close (2026-07-21): $66,507
 
-- **Spot:** $65,927.79 (↓$460 from last run's $66,388)
-- **2026-07-21 daily close:** $66,506.89
+**Level evaluations:**
+| Level | Check | Result |
+|---|---|---|
+| Spot ≤ $45,000 (leverage review) | $65,816 >> $45,000 | No alert |
+| Daily close < $60,500 (breakdown) | $66,507 >> $60,500 | No alert |
+| Spot ≥ $63,500 reclaim | Flag already armed (true) | No alert |
+| Spot ≥ $65,900 reclaim | $65,816 < $65,900 (just under) | No alert |
 
-All four hard levels clear:
-- Leverage-review: spot $65,927 well above $45,000 trigger
-- Breakdown: 2026-07-21 close $66,507 well above $60,500 threshold
-- Reclaim $63,500 / $65,900: both already alerted (flags armed, re-arm only sub-$60,500)
-
-No notification sent. State and today's log committed (`37dfb3a`).
+No notification sent — quiet run. State file updated with new spot, log entry appended, both committed (`96adf53`).
