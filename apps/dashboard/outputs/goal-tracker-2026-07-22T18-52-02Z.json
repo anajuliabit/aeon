@@ -1,0 +1,313 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-22",
+        "description": "3 goals — 0 at risk, 0 needs attention, 0 on track, 3 blocked, 0 done"
+      },
+      "children": [
+        "summary-stats",
+        "separator-1",
+        "blocked-heading",
+        "blocked-stack",
+        "separator-2",
+        "sources-section"
+      ]
+    },
+    "summary-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-total",
+        "stat-blocked",
+        "stat-done"
+      ]
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "3"
+      },
+      "children": []
+    },
+    "stat-blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "3"
+      },
+      "children": []
+    },
+    "stat-done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      },
+      "children": []
+    },
+    "summary-note": {
+      "type": "Text",
+      "props": {
+        "text": "Overall → flat, no status shifts, 2/3 log-mention volumes up ≥50% without underlying resolution",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "blocked-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "blocked-1",
+        "blocked-2",
+        "blocked-3"
+      ]
+    },
+    "blocked-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b1-title",
+        "b1-details",
+        "b1-activity",
+        "b1-action"
+      ]
+    },
+    "b1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "ISS-025 capture-step PR T+6 day-7",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "b1-details": {
+      "type": "Text",
+      "props": {
+        "text": "First 1-week slip milestone since SLIPPED T-0 firm 7-16. Blocked on upstream sandbox iss #53012 (env-var expansion + excludedCommands both broken). cost-report acute-failure branch cleared 7-20 19:08Z but capture-step primitive itself unshipped.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "b1-activity": {
+      "type": "Stat",
+      "props": {
+        "label": "Activity (14d)",
+        "value": "555",
+        "delta": "+125 vs 430"
+      },
+      "children": []
+    },
+    "b1-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Operator direct-authors `.github/workflows/aeon.yml:479-495` with `dangerouslyDisableSandbox` per action-converter 7-21 15:20Z pivot.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "blocked-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b2-title",
+        "b2-details",
+        "b2-activity",
+        "b2-action"
+      ]
+    },
+    "b2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "12:00 UTC batch DARK day-25",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "b2-details": {
+      "type": "Text",
+      "props": {
+        "text": "8-skill cluster (defi-overview / token-pick / narrative-tracker / market-context-refresh / token-movers / on-chain-monitor / defi-monitor / aixbt-pulse) frozen since 6-28. Per-skill blockage n=26 confirmed today 12:00Z via token-alert 12:29Z + btc-levels 12:27Z clean same-slot fires (ISS-027 signature durable).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "b2-activity": {
+      "type": "Stat",
+      "props": {
+        "label": "Activity (14d)",
+        "value": "550",
+        "delta": "+210 (+62%)"
+      },
+      "children": []
+    },
+    "b2-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Same ISS-025 dangerouslyDisableSandbox fix cascades to the family — resolve substrate, ISS-027 unblocks.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "blocked-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "b3-title",
+        "b3-details",
+        "b3-activity",
+        "b3-action"
+      ]
+    },
+    "b3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator on-chain config day-46",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "b3-details": {
+      "type": "Text",
+      "props": {
+        "text": "defi-monitor NO_CONFIG persists. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY + ETHERSCAN_API_KEY still missing from Actions secrets.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "b3-activity": {
+      "type": "Stat",
+      "props": {
+        "label": "Activity (14d)",
+        "value": "138",
+        "delta": "+48 (+53%)"
+      },
+      "children": []
+    },
+    "b3-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Operator adds ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets + populates `memory/on-chain-watches.yml` with pool/position entries.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-label",
+        "sources-badges"
+      ]
+    },
+    "sources-label": {
+      "type": "Text",
+      "props": {
+        "text": "Sources",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sources-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-logs",
+        "badge-git",
+        "badge-pr",
+        "badge-issue",
+        "badge-cron"
+      ]
+    },
+    "badge-logs": {
+      "type": "Badge",
+      "props": {
+        "text": "logs=ok",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-git": {
+      "type": "Badge",
+      "props": {
+        "text": "git=ok",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-pr": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_pr=ok",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-issue": {
+      "type": "Badge",
+      "props": {
+        "text": "gh_issue=ok",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-cron": {
+      "type": "Badge",
+      "props": {
+        "text": "cron-state=ok",
+        "variant": "default"
+      },
+      "children": []
+    }
+  }
+}
