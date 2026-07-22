@@ -1,0 +1,464 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-22"
+      },
+      "children": [
+        "top-pick-section",
+        "sep1",
+        "ai-ml-section",
+        "sep2",
+        "devtools-section",
+        "sep3",
+        "data-section",
+        "sep4",
+        "sources"
+      ]
+    },
+    "top-pick-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-pick-heading",
+        "top-pick-item"
+      ]
+    },
+    "top-pick-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "top-pick-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top-pick-link",
+        "top-pick-desc"
+      ]
+    },
+    "top-pick-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ayghri/i-have-adhd",
+        "href": "https://github.com/ayghri/i-have-adhd",
+        "source": "GitHub"
+      }
+    },
+    "top-pick-desc": {
+      "type": "Text",
+      "props": {
+        "text": "first coding-agent skill to trend as an installable package — output-shape ships as a dependency, not a system-prompt tweak.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ai-ml-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ai-ml-heading",
+        "ai-ml-item"
+      ]
+    },
+    "ai-ml-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "ai-ml-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai-ml-link",
+        "ai-ml-meta",
+        "ai-ml-desc"
+      ]
+    },
+    "ai-ml-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ayghri/i-have-adhd",
+        "href": "https://github.com/ayghri/i-have-adhd",
+        "source": "GitHub"
+      }
+    },
+    "ai-ml-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "ai-ml-stars",
+        "ai-ml-lang",
+        "ai-ml-trend"
+      ]
+    },
+    "ai-ml-stars": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1.9k today (7.5k total)",
+        "variant": "caption"
+      }
+    },
+    "ai-ml-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Python",
+        "variant": "secondary"
+      }
+    },
+    "ai-ml-trend": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "ai-ml-desc": {
+      "type": "Text",
+      "props": {
+        "text": "\"stop burying the answer\" packaged as an agent skill, not a prompt patch — output-shape as installable dep.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "devtools-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools-heading",
+        "devtools-items"
+      ]
+    },
+    "devtools-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "devtools-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "devtools-item1",
+        "devtools-item2",
+        "devtools-item3"
+      ]
+    },
+    "devtools-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-link1",
+        "devtools-meta1",
+        "devtools-desc1"
+      ]
+    },
+    "devtools-link1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "earthtojake/text-to-cad",
+        "href": "https://github.com/earthtojake/text-to-cad",
+        "source": "GitHub"
+      }
+    },
+    "devtools-meta1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-stars1",
+        "devtools-lang1",
+        "devtools-trend1"
+      ]
+    },
+    "devtools-stars1": {
+      "type": "Text",
+      "props": {
+        "text": "★ 291 today (9.5k total)",
+        "variant": "caption"
+      }
+    },
+    "devtools-lang1": {
+      "type": "Badge",
+      "props": {
+        "text": "JavaScript",
+        "variant": "secondary"
+      }
+    },
+    "devtools-trend1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "devtools-desc1": {
+      "type": "Text",
+      "props": {
+        "text": "first physical-world skill pack on trending — pulls agent skills from code-only into CAD, robotics, hardware.",
+        "variant": "body"
+      }
+    },
+    "devtools-item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-link2",
+        "devtools-meta2",
+        "devtools-desc2"
+      ]
+    },
+    "devtools-link2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "agegr/pi-web",
+        "href": "https://github.com/agegr/pi-web",
+        "source": "GitHub"
+      }
+    },
+    "devtools-meta2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-stars2",
+        "devtools-lang2",
+        "devtools-trend2"
+      ]
+    },
+    "devtools-stars2": {
+      "type": "Text",
+      "props": {
+        "text": "★ 298 today (1.9k total)",
+        "variant": "caption"
+      }
+    },
+    "devtools-lang2": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "devtools-trend2": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      }
+    },
+    "devtools-desc2": {
+      "type": "Text",
+      "props": {
+        "text": "browser UI for the pi coding-agent CLI — makes an agent run inspectable live, not replayable-only.",
+        "variant": "body"
+      }
+    },
+    "devtools-item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-link3",
+        "devtools-meta3",
+        "devtools-desc3"
+      ]
+    },
+    "devtools-link3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "tradesdontlie/tradingview-mcp",
+        "href": "https://github.com/tradesdontlie/tradingview-mcp",
+        "source": "GitHub"
+      }
+    },
+    "devtools-meta3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "devtools-stars3",
+        "devtools-lang3",
+        "devtools-trend3"
+      ]
+    },
+    "devtools-stars3": {
+      "type": "Text",
+      "props": {
+        "text": "★ 114 today (5.0k total)",
+        "variant": "caption"
+      }
+    },
+    "devtools-lang3": {
+      "type": "Badge",
+      "props": {
+        "text": "JavaScript",
+        "variant": "secondary"
+      }
+    },
+    "devtools-trend3": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "default"
+      }
+    },
+    "devtools-desc3": {
+      "type": "Text",
+      "props": {
+        "text": "wires Claude Code to TradingView Desktop over MCP — chart analysis becomes an agent-callable action.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "data-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "data-heading",
+        "data-item1"
+      ]
+    },
+    "data-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Data",
+        "level": "h3"
+      }
+    },
+    "data-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "data-link1",
+        "data-meta1",
+        "data-desc1"
+      ]
+    },
+    "data-link1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "koala73/worldmonitor",
+        "href": "https://github.com/koala73/worldmonitor",
+        "source": "GitHub"
+      }
+    },
+    "data-meta1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "data-stars1",
+        "data-lang1",
+        "data-trend1"
+      ]
+    },
+    "data-stars1": {
+      "type": "Text",
+      "props": {
+        "text": "★ 1.3k today (67k total)",
+        "variant": "caption"
+      }
+    },
+    "data-lang1": {
+      "type": "Badge",
+      "props": {
+        "text": "TypeScript",
+        "variant": "secondary"
+      }
+    },
+    "data-trend1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "default"
+      }
+    },
+    "data-desc1": {
+      "type": "Text",
+      "props": {
+        "text": "real-time geopolitical + infrastructure feed built AI-consumable from the start — world-state as an operator input.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 5/21",
+        "variant": "muted"
+      }
+    }
+  }
+}

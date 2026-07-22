@@ -1,18 +1,25 @@
-*GitHub Trending — 2026-07-21*
+*GitHub Trending — 2026-07-22*
 
-*Top pick* — [bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book)
-Chinese-language agent engineering book — book text + PDF + per-chapter runnable code — blowing up at 109× baseline today (#1 on trending). the "how do you actually ship an agent" gap gets a structured treatment.
+*Top pick* — [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)
+first coding-agent skill to trend as an installable package — output-shape ships as a dependency, not a system-prompt tweak.
 
 *AI/ML*
-• [bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book) — ★ 4.4k today (13k total) · Python · [RETURNING]
-book text + compiled PDF + per-chapter code, engineering-practice framing not another awesome-agents curation; 109× its 40.6/d star baseline.
-
-• [AstrBotDevs/AstrBot](https://github.com/AstrBotDevs/AstrBot) — ★ 317 today (37k total) · Python · [RETURNING]
-3.6yo agent framework returning at 11× baseline; wires LLMs + plugins + IM platforms into one self-hostable stack.
+• [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) — ★ 1.9k today (7.5k total) · Python · [ACCELERATING]
+"stop burying the answer" packaged as an agent skill, not a prompt patch — output-shape as installable dep.
 
 *Devtools*
-• [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) — ★ 1.8k today (24k total) · Python · [ACCELERATING]
-d4 viral arc (74→355→663→1,833) — local-first MCP graph that shrinks what a coding agent has to read on large repos; benchmarked context reductions on reviews.
+• [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) — ★ 291 today (9.5k total) · JavaScript · [ACCELERATING]
+first physical-world skill pack on trending — pulls agent skills from code-only into CAD, robotics, hardware.
+
+• [agegr/pi-web](https://github.com/agegr/pi-web) — ★ 298 today (1.9k total) · TypeScript · [RETURNING]
+browser UI for the pi coding-agent CLI — makes an agent run inspectable live, not replayable-only.
+
+• [tradesdontlie/tradingview-mcp](https://github.com/tradesdontlie/tradingview-mcp) — ★ 114 today (5.0k total) · JavaScript · [RETURNING]
+wires Claude Code to TradingView Desktop over MCP — chart analysis becomes an agent-callable action.
+
+*Data*
+• [koala73/worldmonitor](https://github.com/koala73/worldmonitor) — ★ 1.3k today (67k total) · TypeScript · [ACCELERATING]
+real-time geopolitical + infrastructure feed built AI-consumable from the start — world-state as an operator input.
 
 ---
-sources: trending=ok · gh_api=ok · kept 3/21
+sources: trending=ok · gh_api=ok · kept 5/21
