@@ -1,0 +1,147 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest",
+        "description": "2026-07-22"
+      },
+      "children": [
+        "intro_text",
+        "sep1",
+        "heading_list",
+        "tweet1_wrapper",
+        "tweet2_wrapper",
+        "tweet3_wrapper",
+        "sep2",
+        "sources_text",
+        "status_text"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet list day, 7-21 UTC window (grok found no 7-22 posts yet). two signals worth pulling: rl compounds on strong pretraining but can't rescue weak bases, and robinhood chain wallets rebuilding toward the 7-13 ath.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_list": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto/DeFi research list",
+        "level": "h2"
+      }
+    },
+    "tweet1_wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1_card",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DeFiMinty",
+        "handle": "@DeFiMinty",
+        "text": "chess-puzzle rl study, 5m→1b params: strong-base models keep gaining under identical rl compute, weak-base ones plateau. reads as anti-scale-the-rl-budget note for small-lab teams",
+        "likes": 96,
+        "retweets": 10
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DeFiMinty/status/2079715564432359708"
+      }
+    },
+    "tweet2_wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2_card",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "robinhood chain 273k active wallets today (90k new + 182k returning), closing on the 347k 7-13 ath; retail habit re-forming, not a launch-week peak",
+        "likes": 39,
+        "retweets": 4
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2079664969449411027"
+      }
+    },
+    "tweet3_wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3_card",
+        "tweet3_link"
+      ]
+    },
+    "tweet3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "nostalgia read on rh chain: 2021 tendies/fds/pepe cadence returning to the same wallet base",
+        "likes": 13
+      }
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2079680388125863944"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(10, cache, 7-21 window)",
+        "variant": "caption"
+      }
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
