@@ -1,0 +1,270 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-22"
+      },
+      "children": [
+        "shape_line",
+        "stack_actions",
+        "separator_footer",
+        "text_sources"
+      ]
+    },
+    "shape_line": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: iss-025 day-7 sandbox pivot, add H pre-unlock, rewrite priorities, seed defi config, patch security-digest curl",
+        "variant": "lead"
+      }
+    },
+    "stack_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_1",
+        "sep_1",
+        "action_2",
+        "sep_2",
+        "action_3",
+        "sep_3",
+        "action_4",
+        "sep_4",
+        "action_5"
+      ]
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_title",
+        "a1_why",
+        "a1_done",
+        "a1_loop"
+      ]
+    },
+    "a1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Apply dangerouslyDisableSandbox: true to .github/workflows/aeon.yml:479-495 and open PR",
+        "level": "h4"
+      }
+    },
+    "a1_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: iss-025 T+6 day-7 first 1-week slip milestone; sandbox-truncation family day-30 across cost-report + defi-overview + token-pick + search-skill. The ISS-025 pivot proposed 7-21 15:20Z per upstream sandbox iss #53012."
+      }
+    },
+    "a1_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: PR opened against aeon.yml:479-495 with the flag swap replacing the excludedCommands approach."
+      }
+    },
+    "a1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: iss-025-day-7-milestone"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_title",
+        "a2_why",
+        "a2_done",
+        "a2_loop"
+      ]
+    },
+    "a2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Add H to memory/MEMORY.md Tracked Tokens with 15% threshold (CG id per operator lookup) — 7-25 unlock cliff T-3 today (investor+early-contributors, 9.24% supply, 30d +72.6% pre-cliff).",
+        "level": "h4"
+      }
+    },
+    "a2_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: asymmetric-downside signal-real of the quarter per 7-20 unlock-monitor; next 12z token-alert reads the row."
+      }
+    },
+    "a2_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: Tracked Tokens row appended with CG id + 15% + 7-25 note; token-alert reads it on 7-23 12:00Z."
+      }
+    },
+    "a2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: h-unlock-t-3-cliff"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_title",
+        "a3_why",
+        "a3_done",
+        "a3_loop"
+      ]
+    },
+    "a3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Rewrite priorities.md current-focus with post-7-22 state — file is 48d stale (last edit 2026-06-04), 55-consec zero-captures thought-review surfaces it daily.",
+        "level": "h4"
+      }
+    },
+    "a3_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: PR #166 primitive shipped 7-21 + Sherwood + ISS-025 T+6 all belong in current-focus; chronic operator-owned surface worth touching."
+      }
+    },
+    "a3_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: priorities.md current-focus section updated with 3–5 dated lines naming ISS-025 + PR #166 + Sherwood + on-chain config d46."
+      }
+    },
+    "a3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: priorities-48d-stale"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_title",
+        "a4_why",
+        "a4_done",
+        "a4_loop"
+      ]
+    },
+    "a4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Scaffold memory/on-chain-watches.yml with 3 addresses (Sherwood vault + Moonwell v2 core + Mamo agent) — defi-monitor stays NO_CONFIG at d46 without the file.",
+        "level": "h4"
+      }
+    },
+    "a4_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: config half is authorable now; secrets ALCHEMY_API_KEY + ETHERSCAN_API_KEY are operator-side, separate step."
+      }
+    },
+    "a4_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: memory/on-chain-watches.yml committed with ≥3 named addresses + chain ids; defi-monitor reads it on next fire."
+      }
+    },
+    "a4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: on-chain-config-d46"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_title",
+        "a5_why",
+        "a5_done",
+        "a5_loop"
+      ]
+    },
+    "a5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Patch skills/security-digest/SKILL.md step 2 curl to ?published=%3E${SINCE48} — the ${SINCE48}..${NOW} range format returned HTTP 422 at today's 14z fire.",
+        "level": "h4"
+      }
+    },
+    "a5_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: GH advisory API rejects date..date range; today's run corrected inline, next 7-23 14z fire hits the same wall without the SKILL edit."
+      }
+    },
+    "a5_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: PR opened swapping the range param to URL-encoded ?>${SINCE48} in skills/security-digest/SKILL.md step 2."
+      }
+    },
+    "a5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "Loop: security-digest-curl-range"
+      }
+    },
+    "separator_footer": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=86 logs=8 topics=11 prs=1 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
