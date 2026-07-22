@@ -1,0 +1,119 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-22",
+        "description": "quiet builder day: sub-40-like signal across the board, but real claims in agent commerce and small-model coordination."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section1",
+        "sep1",
+        "section2",
+        "sep2",
+        "footer"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "story1",
+        "story2"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "agents as economic actors",
+        "level": "h3"
+      }
+    },
+    "story1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "agentic commerce = users delegate intent under hard limits, not the agent holding cards.",
+        "href": "https://x.com/FetchrBotBase/status/2079717487965512116",
+        "source": "@FetchrBotBase"
+      }
+    },
+    "story2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "the coming phase: benchmark gains slow, agent economics improve faster.",
+        "href": "https://x.com/_varunkalra/status/2079716038783164420",
+        "source": "@_varunkalra"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading2",
+        "story3",
+        "story4"
+      ]
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "small-model coordination + memory research",
+        "level": "h3"
+      }
+    },
+    "story3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "as agents route across many small models, routing and verification become the value layer (Cortensor).",
+        "href": "https://x.com/CryptoRyuma/status/2079716651088654760",
+        "source": "@CryptoRyuma"
+      }
+    },
+    "story4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "paper: training-free Memory–Skill Co-Evolution for long-horizon agents, evidence-grounded governance.",
+        "href": "https://x.com/MuzafferKal_/status/2079711806634025357",
+        "source": "@MuzafferKal_"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "_src: xai-cache · candidates: 13 → kept: 4",
+        "variant": "caption"
+      }
+    }
+  }
+}
