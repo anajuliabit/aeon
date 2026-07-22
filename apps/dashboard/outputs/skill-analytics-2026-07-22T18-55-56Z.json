@@ -1,0 +1,193 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Analytics — 2026-07-22"
+      },
+      "children": [
+        "text_summary",
+        "stats_section",
+        "sep1",
+        "critical_section",
+        "sep2",
+        "degraded_section",
+        "sep3",
+        "top_runs_section",
+        "sep4",
+        "full_article"
+      ]
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "8 scheduled skill(s) didn't run this window — ISS-027 batch-dark cluster + aixbt-pulse dead-slot",
+        "variant": "lead"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_runs",
+        "stat_skills",
+        "stat_success",
+        "stat_anomalies"
+      ]
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs (7d)",
+        "value": "200"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "32"
+      }
+    },
+    "stat_success": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "98%"
+      }
+    },
+    "stat_anomalies": {
+      "type": "Stat",
+      "props": {
+        "label": "Anomalies",
+        "value": "9"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "critical_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_critical",
+        "alert_token_movers",
+        "alert_defi_monitor",
+        "alert_defi_overview",
+        "text_additional_critical"
+      ]
+    },
+    "heading_critical": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 Critical",
+        "level": "h3"
+      }
+    },
+    "alert_token_movers": {
+      "type": "Alert",
+      "props": {
+        "title": "token-movers",
+        "message": "SILENT: `10 12 * * *`, zero runs (ISS-027)",
+        "type": "error"
+      }
+    },
+    "alert_defi_monitor": {
+      "type": "Alert",
+      "props": {
+        "title": "defi-monitor",
+        "message": "SILENT: `40 12 * * *`, zero runs (ISS-027)",
+        "type": "error"
+      }
+    },
+    "alert_defi_overview": {
+      "type": "Alert",
+      "props": {
+        "title": "defi-overview",
+        "message": "SILENT: `0 12 * * *`, zero runs (ISS-027)",
+        "type": "error"
+      }
+    },
+    "text_additional_critical": {
+      "type": "Text",
+      "props": {
+        "text": "(+ on-chain-monitor / token-pick / market-context-refresh / narrative-tracker / aixbt-pulse — all same ISS-027 batch-dark cluster, silent since 2026-06-28)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_degraded",
+        "alert_cost_report"
+      ]
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟠 Degraded",
+        "level": "h3"
+      }
+    },
+    "alert_cost_report": {
+      "type": "Alert",
+      "props": {
+        "title": "cost-report",
+        "message": "LOW_SUCCESS: 17% over 6 runs (1 ok / 4 failed / 1 cancelled) — ISS-025",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "top_runs_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_runs",
+        "text_top_runs"
+      ]
+    },
+    "heading_top_runs": {
+      "type": "Heading",
+      "props": {
+        "text": "Top by runs",
+        "level": "h3"
+      }
+    },
+    "text_top_runs": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels (41), heartbeat (22), thought-review (13)"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "full_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full analytics report",
+        "href": "articles/skill-analytics-2026-07-22.md"
+      }
+    }
+  }
+}
