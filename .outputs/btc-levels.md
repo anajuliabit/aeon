@@ -1,19 +1,16 @@
+Done.
+
 ## Summary
 
-Ran `btc-levels` skill for the 17:40Z tick.
+**BTC Levels — 2026-07-22 ~20:15Z**
 
-**Fetched:** CoinGecko market chart (2-day, daily interval)
-- Spot: **$66,089** (prices[-1])
-- Previous daily close: **$66,507** on 2026-07-21 (prices[-2], timestamp = 2026-07-22 00:00 UTC → close date = 2026-07-21)
+- **Spot**: $65,894 (down ~$196 from the 17:40Z run at $66,089)
+- **2026-07-21 daily close**: $66,507 (unchanged)
+- **Alerts fired**: none
 
-**Level evaluation:**
-| Check | Result |
-|---|---|
-| Spot ≤ $45,000 (leverage-review) | No — no alert |
-| Daily close < $60,500 (breakdown) | No ($66,507 >> $60,500) |
-| Spot ≥ $63,500, reclaim flag false | Already alerted — no alert |
-| Spot ≥ $65,900, reclaim flag false | Already alerted — no alert |
+All levels clear:
+- Spot $65,894 >> $45,000 → no leverage-review trigger
+- Close $66,507 ≥ $60,500 → no breakdown alert
+- Both reclaim flags (`reclaim63500Alerted`, `reclaim65900Alerted`) already `true` — spot briefly dipped just under the $65,900 re-arm threshold ($65,894) but since the flag is already armed there's nothing to do; re-arm only triggers when spot drops below $60,500
 
-No alerts fired → no notification sent (quiet run, as expected).
-
-**Files committed:** `memory/btc-levels-state.json` (spot updated to $66,089), `memory/logs/2026-07-22.md` (17:40Z entry appended).
+No notification sent. State and log committed.
