@@ -1,0 +1,64 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "🧭 thought review"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-period",
+        "stat-captures",
+        "text-status",
+        "separator-1",
+        "alert-priorities"
+      ]
+    },
+    "text-period": {
+      "type": "Text",
+      "props": {
+        "text": "last 24h",
+        "variant": "muted"
+      }
+    },
+    "stat-captures": {
+      "type": "Stat",
+      "props": {
+        "label": "captures",
+        "value": "0"
+      }
+    },
+    "text-status": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-priorities": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md",
+        "message": "last reviewed 48d ago — worth a refresh",
+        "type": "info"
+      }
+    }
+  }
+}
