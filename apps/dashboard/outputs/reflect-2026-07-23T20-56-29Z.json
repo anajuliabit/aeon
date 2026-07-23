@@ -1,0 +1,145 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Memory Consolidation — 2026-07-23"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_patterns",
+        "stack_patterns",
+        "sep1",
+        "heading_status",
+        "stack_status"
+      ]
+    },
+    "heading_patterns": {
+      "type": "Heading",
+      "props": {
+        "text": "8 Patterns Codified",
+        "level": "h2"
+      }
+    },
+    "stack_patterns": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_p1",
+        "badge_p2",
+        "badge_p3",
+        "badge_p4",
+        "badge_p5",
+        "badge_p6",
+        "badge_p7",
+        "badge_p8"
+      ]
+    },
+    "badge_p1": {
+      "type": "Badge",
+      "props": {
+        "text": "code-review-graph 6d arc"
+      }
+    },
+    "badge_p2": {
+      "type": "Badge",
+      "props": {
+        "text": "RuView sensing-primitive"
+      }
+    },
+    "badge_p3": {
+      "type": "Badge",
+      "props": {
+        "text": "Kronos financial-FM"
+      }
+    },
+    "badge_p4": {
+      "type": "Badge",
+      "props": {
+        "text": "alert-class-3-regime"
+      }
+    },
+    "badge_p5": {
+      "type": "Badge",
+      "props": {
+        "text": "vol-spike-validated"
+      }
+    },
+    "badge_p6": {
+      "type": "Badge",
+      "props": {
+        "text": "compression-2-shape"
+      }
+    },
+    "badge_p7": {
+      "type": "Badge",
+      "props": {
+        "text": "worldmonitor HOLDOVER"
+      }
+    },
+    "badge_p8": {
+      "type": "Badge",
+      "props": {
+        "text": "d31 rollover ISS-025 T+7"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Updates",
+        "level": "h2"
+      }
+    },
+    "stack_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_status_1",
+        "stat_bash",
+        "text_status_3"
+      ]
+    },
+    "text_status_1": {
+      "type": "Text",
+      "props": {
+        "text": "H unlock T-2 fri"
+      }
+    },
+    "stat_bash": {
+      "type": "Stat",
+      "props": {
+        "label": "Bash `>` regressions documented",
+        "value": "3"
+      }
+    },
+    "text_status_3": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat 12-consec NOOP durable 96h+"
+      }
+    }
+  }
+}

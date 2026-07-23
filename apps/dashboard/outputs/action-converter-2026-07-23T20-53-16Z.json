@@ -1,0 +1,283 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-23"
+      },
+      "children": [
+        "text_shape",
+        "sep_1",
+        "stack_action_1",
+        "sep_2",
+        "stack_action_2",
+        "sep_3",
+        "stack_action_3",
+        "sep_4",
+        "stack_action_4",
+        "sep_5",
+        "stack_action_5",
+        "sep_6",
+        "text_sources"
+      ]
+    },
+    "text_shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: Operator pivot on ISS-025, two calendar locks, two diagnostics.",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_a1",
+        "text_a1_why",
+        "text_a1_done",
+        "text_a1_loop"
+      ]
+    },
+    "heading_a1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Review dangerouslyDisableSandbox pivot for ISS-025 capture-step PR",
+        "level": "h3"
+      }
+    },
+    "text_a1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: T+8 day-8 1-week slip. Upstream iss #53012 exempt-flag blocks 4-skill critical tail. Operator decision needed.",
+        "variant": "body"
+      }
+    },
+    "text_a1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Comment posted on PR #165 or decision documented in MEMORY.md Current Goals.",
+        "variant": "body"
+      }
+    },
+    "text_a1_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: ISS-025 sandbox-truncation family d31",
+        "variant": "muted"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_a2",
+        "text_a2_why",
+        "text_a2_done",
+        "text_a2_loop"
+      ]
+    },
+    "heading_a2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Lock H unlock asymmetric-downside monitoring for 2026-07-25 00:00Z",
+        "level": "h3"
+      }
+    },
+    "text_a2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 5.1× vol on $15.86M / 9.24% supply. Fade-pump 30d +72.6%. T-2 tightens event window.",
+        "variant": "body"
+      }
+    },
+    "text_a2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Reminder set, alert watchlist locked to H token positions.",
+        "variant": "body"
+      }
+    },
+    "text_a2_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: H unlock T-2 calendar event",
+        "variant": "muted"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_a3",
+        "text_a3_why",
+        "text_a3_done",
+        "text_a3_loop"
+      ]
+    },
+    "heading_a3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Trace bash `>` redirect sandbox regression root cause",
+        "level": "h3"
+      }
+    },
+    "text_a3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: n=3 hits same-day 7-23 (daily-routine + github-trending workarounds). Skill-wide tool blocker.",
+        "variant": "body"
+      }
+    },
+    "text_a3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Root-cause identified in SKILL.md or ISS filed with workaround codification.",
+        "variant": "body"
+      }
+    },
+    "text_a3_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: bash-redirect regression n=3",
+        "variant": "muted"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_a4",
+        "text_a4_why",
+        "text_a4_done",
+        "text_a4_loop"
+      ]
+    },
+    "heading_a4": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Investigate 12:00Z batch-dark d26 8-skill blockage signature",
+        "level": "h3"
+      }
+    },
+    "text_a4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: ISS-027 repeats daily (token-alert + btc-levels fire clean, 8-skill cluster frozen since 6-28). Pattern-validation critical.",
+        "variant": "body"
+      }
+    },
+    "text_a4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: Hypothesis documented in log, next test scheduled (per-skill blockage n=28 read 7-24 12z).",
+        "variant": "body"
+      }
+    },
+    "text_a4_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: 12:00Z batch-dark d26 ISS-027",
+        "variant": "muted"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_a5",
+        "text_a5_why",
+        "text_a5_done",
+        "text_a5_loop"
+      ]
+    },
+    "heading_a5": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Read Kimi K3 open-weights announcement T-4 competitive roadmap",
+        "level": "h3"
+      }
+    },
+    "text_a5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 2.8T MoE 1M-ctx text/image/video. Ships 2026-07-27 per small-MoE frontier-close rail. Benchmark-parity-with-Fable pre-ship.",
+        "variant": "body"
+      }
+    },
+    "text_a5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: 5-bullet competitive summary + benchmark vs Claude/DeepSeek/Llama posted to memory/topics/market-context.md.",
+        "variant": "body"
+      }
+    },
+    "text_a5_loop": {
+      "type": "Text",
+      "props": {
+        "text": "loop: Kimi K3 ship T-4 frontier-cluster watch",
+        "variant": "muted"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=95 logs=7 topics=20 prs=1 cron_failing=14 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}

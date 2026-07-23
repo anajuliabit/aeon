@@ -1,0 +1,110 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-23"
+      },
+      "children": [
+        "activity_text",
+        "separator1",
+        "section_heading",
+        "tweet1_container",
+        "tweet2_container",
+        "separator2",
+        "footer_text"
+      ]
+    },
+    "activity_text": {
+      "type": "Text",
+      "props": {
+        "text": "Low activity continues on the DeFi research list; signal is weak on sentiment-only posts.",
+        "variant": "body"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Research & Analysis",
+        "level": "h3"
+      }
+    },
+    "tweet1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet1_link"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "Social-system critique as meta-signal on network exhaustion and creator opportunity.",
+        "likes": 51,
+        "retweets": 0
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2080040755402363227"
+      }
+    },
+    "tweet2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "tweet2_link"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "Yield-layer narrative primed for -70% dip entry; founder conviction on infrastructure timing.",
+        "likes": 33,
+        "retweets": 8
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2080073511943520471"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list=quiet | status: LIST_DIGEST_PARTIAL",
+        "variant": "caption"
+      }
+    }
+  }
+}
