@@ -1,25 +1,23 @@
-*GitHub Trending — 2026-07-22*
+*GitHub Trending — 2026-07-23*
 
-*Top pick* — [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)
-first coding-agent skill to trend as an installable package — output-shape ships as a dependency, not a system-prompt tweak.
+*Top pick* — [ruvnet/RuView](https://github.com/ruvnet/RuView)
+first "commodity WiFi as a sensor" runtime to trend — a whole new input modality (presence, breathing, motion) with no camera and no dedicated hardware.
 
 *AI/ML*
-• [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) — ★ 1.9k today (7.5k total) · Python · [ACCELERATING]
-"stop burying the answer" packaged as an agent skill, not a prompt patch — output-shape as installable dep.
+• [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — ★ 137 today (33k total) · Python · [RETURNING]
+first open foundation model for financial candlesticks — trained on K-lines from 45 exchanges, AAAI 2026 accepted.
+
+*Infra*
+• [ruvnet/RuView](https://github.com/ruvnet/RuView) — ★ 741 today (84k total) · Rust · [ACCELERATING]
+turns off-the-shelf WiFi CSI into presence, vital signs, room-scale motion — a sensor stack with no sensors.
 
 *Devtools*
-• [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) — ★ 291 today (9.5k total) · JavaScript · [ACCELERATING]
-first physical-world skill pack on trending — pulls agent skills from code-only into CAD, robotics, hardware.
-
-• [agegr/pi-web](https://github.com/agegr/pi-web) — ★ 298 today (1.9k total) · TypeScript · [RETURNING]
-browser UI for the pi coding-agent CLI — makes an agent run inspectable live, not replayable-only.
-
-• [tradesdontlie/tradingview-mcp](https://github.com/tradesdontlie/tradingview-mcp) — ★ 114 today (5.0k total) · JavaScript · [RETURNING]
-wires Claude Code to TradingView Desktop over MCP — chart analysis becomes an agent-callable action.
+• [likec4/likec4](https://github.com/likec4/likec4) — ★ 80 today (4.5k total) · TypeScript · [RETURNING]
+architecture diagrams that stay live with the code — text spec compiles to C4 views, no drift between docs and repo.
 
 *Data*
-• [koala73/worldmonitor](https://github.com/koala73/worldmonitor) — ★ 1.3k today (67k total) · TypeScript · [ACCELERATING]
-real-time geopolitical + infrastructure feed built AI-consumable from the start — world-state as an operator input.
+• [koala73/worldmonitor](https://github.com/koala73/worldmonitor) — ★ 4.1k today (70k total) · TypeScript · [HOLDOVER]
+re-featured: 1.3k → 4.1k stars today = 3.2× d2 acceleration against yesterday's fade-prediction, viral-moment threshold cleared.
 
 ---
-sources: trending=ok · gh_api=ok · kept 5/21
+sources: trending=ok · gh_api=ok · kept 4/19

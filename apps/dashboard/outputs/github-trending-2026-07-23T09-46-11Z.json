@@ -1,0 +1,445 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-23"
+      },
+      "children": [
+        "section-top-pick",
+        "sep-1",
+        "section-aiml",
+        "sep-2",
+        "section-infra",
+        "sep-3",
+        "section-devtools",
+        "sep-4",
+        "section-data",
+        "sep-5",
+        "text-sources"
+      ]
+    },
+    "section-top-pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-top-pick",
+        "repo-ruview-top"
+      ]
+    },
+    "heading-top-pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "repo-ruview-top": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-ruview-top",
+        "text-ruview-top-desc"
+      ]
+    },
+    "link-ruview-top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ruvnet/RuView",
+        "href": "https://github.com/ruvnet/RuView"
+      }
+    },
+    "text-ruview-top-desc": {
+      "type": "Text",
+      "props": {
+        "text": "first \"commodity WiFi as a sensor\" runtime to trend — a whole new input modality (presence, breathing, motion) with no camera and no dedicated hardware.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-aiml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-aiml",
+        "repo-kronos"
+      ]
+    },
+    "heading-aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "repo-kronos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-kronos",
+        "text-kronos-desc",
+        "stack-kronos-meta"
+      ]
+    },
+    "link-kronos": {
+      "type": "StoryLink",
+      "props": {
+        "title": "shiyu-coder/Kronos",
+        "href": "https://github.com/shiyu-coder/Kronos"
+      }
+    },
+    "text-kronos-desc": {
+      "type": "Text",
+      "props": {
+        "text": "first open foundation model for financial candlesticks — trained on K-lines from 45 exchanges, AAAI 2026 accepted.",
+        "variant": "body"
+      }
+    },
+    "stack-kronos-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-kronos",
+        "stat-kronos-today",
+        "stat-kronos-total",
+        "text-kronos-lang"
+      ]
+    },
+    "badge-kronos": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "stat-kronos-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "137"
+      }
+    },
+    "stat-kronos-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "33k"
+      }
+    },
+    "text-kronos-lang": {
+      "type": "Text",
+      "props": {
+        "text": "Python",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-infra",
+        "repo-ruview-infra"
+      ]
+    },
+    "heading-infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "repo-ruview-infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-ruview-infra",
+        "text-ruview-infra-desc",
+        "stack-ruview-meta"
+      ]
+    },
+    "link-ruview-infra": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ruvnet/RuView",
+        "href": "https://github.com/ruvnet/RuView"
+      }
+    },
+    "text-ruview-infra-desc": {
+      "type": "Text",
+      "props": {
+        "text": "turns off-the-shelf WiFi CSI into presence, vital signs, room-scale motion — a sensor stack with no sensors.",
+        "variant": "body"
+      }
+    },
+    "stack-ruview-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-ruview",
+        "stat-ruview-today",
+        "stat-ruview-total",
+        "text-ruview-lang"
+      ]
+    },
+    "badge-ruview": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "stat-ruview-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "741"
+      }
+    },
+    "stat-ruview-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "84k"
+      }
+    },
+    "text-ruview-lang": {
+      "type": "Text",
+      "props": {
+        "text": "Rust",
+        "variant": "caption"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-devtools",
+        "repo-likec4"
+      ]
+    },
+    "heading-devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "repo-likec4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-likec4",
+        "text-likec4-desc",
+        "stack-likec4-meta"
+      ]
+    },
+    "link-likec4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "likec4/likec4",
+        "href": "https://github.com/likec4/likec4"
+      }
+    },
+    "text-likec4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "architecture diagrams that stay live with the code — text spec compiles to C4 views, no drift between docs and repo.",
+        "variant": "body"
+      }
+    },
+    "stack-likec4-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-likec4",
+        "stat-likec4-today",
+        "stat-likec4-total",
+        "text-likec4-lang"
+      ]
+    },
+    "badge-likec4": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "stat-likec4-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "80"
+      }
+    },
+    "stat-likec4-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "4.5k"
+      }
+    },
+    "text-likec4-lang": {
+      "type": "Text",
+      "props": {
+        "text": "TypeScript",
+        "variant": "caption"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-data": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-data",
+        "repo-worldmonitor"
+      ]
+    },
+    "heading-data": {
+      "type": "Heading",
+      "props": {
+        "text": "Data",
+        "level": "h3"
+      }
+    },
+    "repo-worldmonitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-worldmonitor",
+        "text-worldmonitor-desc",
+        "stack-worldmonitor-meta"
+      ]
+    },
+    "link-worldmonitor": {
+      "type": "StoryLink",
+      "props": {
+        "title": "koala73/worldmonitor",
+        "href": "https://github.com/koala73/worldmonitor"
+      }
+    },
+    "text-worldmonitor-desc": {
+      "type": "Text",
+      "props": {
+        "text": "re-featured: 1.3k → 4.1k stars today = 3.2× d2 acceleration against yesterday's fade-prediction, viral-moment threshold cleared.",
+        "variant": "body"
+      }
+    },
+    "stack-worldmonitor-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-worldmonitor",
+        "stat-worldmonitor-today",
+        "stat-worldmonitor-total",
+        "text-worldmonitor-lang"
+      ]
+    },
+    "badge-worldmonitor": {
+      "type": "Badge",
+      "props": {
+        "text": "HOLDOVER",
+        "variant": "secondary"
+      }
+    },
+    "stat-worldmonitor-today": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars today",
+        "value": "4.1k"
+      }
+    },
+    "stat-worldmonitor-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "70k"
+      }
+    },
+    "text-worldmonitor-lang": {
+      "type": "Text",
+      "props": {
+        "text": "TypeScript",
+        "variant": "caption"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/19",
+        "variant": "caption"
+      }
+    }
+  }
+}
