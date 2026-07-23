@@ -21,34 +21,35 @@ CVSS measures theoretical severity. Most critical CVEs are never exploited. A se
    ```bash
    SINCE=$(date -u -d '7 days ago' '+%Y-%m-%d' 2>/dev/null || date -u -v-7d '+%Y-%m-%d')
    curl -sf --max-time 20 "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" \
-     > kev.json || echo "KEV curl failed, falling back to WebFetch"
-   jq --arg s "$SINCE" '[.vulnerabilities[] | select(.dateAdded >= $s)]' kev.json > kev_recent.json 2>/dev/null || echo "[]" > kev_recent.json
+     -o kev.json || echo "KEV curl failed, falling back to WebFetch"
+   jq --arg s "$SINCE" '[.vulnerabilities[] | select(.dateAdded >= $s)]' kev.json | jq -c . || echo "[]"
    ```
+   (Use `curl -o` instead of `>` to avoid sandbox issues with shell redirects. Pipe jq output directly instead of redirecting to file.)
    If curl fails, **WebFetch** `https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json` and extract vulnerabilities with `dateAdded` within the last 7 days. KEV entries are the top priority — confirmed exploitation in the wild.
 
 2. **Fetch GitHub Advisory Database (last 48h, critical + high + malware).**
    ```bash
    SINCE48=$(date -u -d '2 days ago' '+%Y-%m-%dT%H:%M:%SZ' 2>/dev/null || date -u -v-2d '+%Y-%m-%dT%H:%M:%SZ')
-   for SEV in critical high; do
-     curl -sf --max-time 20 "https://api.github.com/advisories?type=reviewed&severity=${SEV}&published=${SINCE48}.." \
-       -H "Accept: application/vnd.github+json" \
-       ${GITHUB_TOKEN:+-H "Authorization: Bearer $GITHUB_TOKEN"}
-   done > advisories.json
-   curl -sf --max-time 20 "https://api.github.com/advisories?type=malware&published=${SINCE48}.." \
-     -H "Accept: application/vnd.github+json" \
-     ${GITHUB_TOKEN:+-H "Authorization: Bearer $GITHUB_TOKEN"} \
-     > advisories_malware.json || echo "[]" > advisories_malware.json
+   gh api "/advisories?type=reviewed&severity=critical&published=${SINCE48}.." --json ghsa_id,cve_id,summary,severity,cvss,type,vulnerabilities | jq -c .
+   gh api "/advisories?type=reviewed&severity=high&published=${SINCE48}.." --json ghsa_id,cve_id,summary,severity,cvss,type,vulnerabilities | jq -c .
+   gh api "/advisories?type=malware&published=${SINCE48}.." --json ghsa_id,cve_id,summary,severity,cvss,type,vulnerabilities | jq -c . || echo "[]"
    ```
-   If curl fails or rate-limits, use `gh api "/advisories?type=reviewed&severity=critical&published=${SINCE48}.."` and `gh api "/advisories?type=malware&published=${SINCE48}.."` instead (gh handles auth internally). Extract: `ghsa_id`, `cve_id`, `summary`, `severity`, `cvss.score`, `type` (`reviewed` vs `malware`), `vulnerabilities[].package.{ecosystem,name}`, `vulnerabilities[].patched_versions`, `vulnerabilities[].vulnerable_version_range`, `html_url`, `published_at`. `type=malware` advisories are GitHub's classification of confirmed-malicious published packages (credential stealers, backdoors, supply-chain compromises) — they are real-world exploitation, not theoretical severity.
+   (Use `gh api` directly with `--json` flag to avoid shell redirects. Pipe output for processing instead of writing to files.)
+   If API calls fail or rate-limit, the fallback is to use curl with appropriate headers. Extract: `ghsa_id`, `cve_id`, `summary`, `severity`, `cvss.score`, `type` (`reviewed` vs `malware`), `vulnerabilities[].package.{ecosystem,name}`, `vulnerabilities[].patched_versions`, `vulnerabilities[].vulnerable_version_range`, `html_url`, `published_at`. `type=malware` advisories are GitHub's classification of confirmed-malicious published packages (credential stealers, backdoors, supply-chain compromises) — they are real-world exploitation, not theoretical severity.
 
 3. **Filter GH advisories to the tracked stack.** Parse `${var}` (or the tracked-ecosystems default from memory). Keep only advisories whose `vulnerabilities[].package.ecosystem` is in the tracked set — **except** advisories whose CVE is in KEV OR whose `type` is `malware`, which always pass through (real-world exploitation overrides stack filter; a malicious package in an untracked ecosystem still matters as a signal).
 
 4. **Enrich every candidate with EPSS** (FIRST.org's 30-day exploitation probability):
    ```bash
-   CVES=$(jq -r '[.. | .cveID? // .cve_id? | select(.!=null)] | unique | join(",")' kev_recent.json advisories.json)
-   [ -n "$CVES" ] && curl -sf --max-time 20 "https://api.first.org/data/v1/epss?cve=${CVES}" > epss.json \
-     || echo '{"data":[]}' > epss.json
+   # Parse CVE IDs from gh api output (pipe directly, no redirects)
+   gh api "/advisories?type=reviewed&severity=critical&published=${SINCE48}.." --json cve_id | jq -r '.[] | select(.cve_id != null) | .cve_id' > /tmp/cves.txt
+   gh api "/advisories?type=reviewed&severity=high&published=${SINCE48}.." --json cve_id | jq -r '.[] | select(.cve_id != null) | .cve_id' >> /tmp/cves.txt
+   gh api "/advisories?type=malware&published=${SINCE48}.." --json cve_id | jq -r '.[] | select(.cve_id != null) | .cve_id' >> /tmp/cves.txt
+   CVES=$(sort /tmp/cves.txt | uniq | tr '\n' ',' | sed 's/,$//')
+   [ -n "$CVES" ] && curl -sf --max-time 20 "https://api.first.org/data/v1/epss?cve=${CVES}" | jq -c . \
+     || echo '{"data":[]}'
    ```
+   (If file redirects are problematic, use stdout piping with `tr` and `sed` instead. Alternatively, use Claude's Write tool to create temporary files.)
    Join by CVE ID. Missing EPSS → treat as 0.
 
 5. **Dedupe and rank into three action tiers.** Drop anything whose GHSA or CVE ID appears in the last 2 days of `memory/logs/`.
