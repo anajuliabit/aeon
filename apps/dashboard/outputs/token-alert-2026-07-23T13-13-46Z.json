@@ -1,0 +1,119 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Alert",
+        "description": "2026-07-23"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "well-section",
+        "sep1",
+        "other-section"
+      ]
+    },
+    "well-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-trigger",
+        "stat-price",
+        "stat-volume"
+      ]
+    },
+    "alert-trigger": {
+      "type": "Alert",
+      "props": {
+        "title": "WELL: Volume Spike Alert",
+        "message": "Volume spike — $1.34M vs 5d mean $85.8K. First vol-spike fire in watchlist history. Price only -3.31% but participation 16x yesterday's $83K = distribution or accumulation, not drift.",
+        "type": "warning"
+      }
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "WELL Price",
+        "value": "$0.00330965",
+        "delta": "-3.31%",
+        "trend": "down"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$1,344,826",
+        "delta": "15.68x average",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "other-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-other",
+        "table-tokens"
+      ]
+    },
+    "heading-other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other Watchlist Tokens",
+        "level": "h3"
+      }
+    },
+    "table-tokens": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "24h Change",
+          "Volume",
+          "Status"
+        ],
+        "rows": [
+          [
+            "MAMO",
+            "-2.46%",
+            "0.995x baseline",
+            "Sub-threshold"
+          ],
+          [
+            "REPPO",
+            "-4.93%",
+            "0.62x",
+            "Sub-threshold"
+          ],
+          [
+            "GITLAWB",
+            "-5.23% (gives back +16.53% from yesterday)",
+            "0.79x",
+            "Sub-threshold"
+          ]
+        ]
+      }
+    }
+  }
+}
