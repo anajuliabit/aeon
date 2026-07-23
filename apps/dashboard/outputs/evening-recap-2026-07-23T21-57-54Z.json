@@ -1,0 +1,377 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap",
+        "description": "2026-07-23"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tldr_section",
+        "sep1",
+        "headlines_section",
+        "sep2",
+        "notable_section",
+        "sep3",
+        "decisions_section",
+        "sep4",
+        "footer_section"
+      ]
+    },
+    "tldr_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tldr_heading",
+        "tldr_text",
+        "tldr_stats"
+      ]
+    },
+    "tldr_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TL;DR",
+        "level": "h3"
+      }
+    },
+    "tldr_text": {
+      "type": "Text",
+      "props": {
+        "text": "Solid ship day — PR #167 filed (bash redirect fix), WELL fires first-ever vol-spike alert, reflect codifies 8 patterns; 14-consecutive heartbeat NOOP, 0 failures.",
+        "variant": "body"
+      }
+    },
+    "tldr_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_pr",
+        "stat_vol",
+        "stat_patterns",
+        "stat_failures"
+      ]
+    },
+    "stat_pr": {
+      "type": "Stat",
+      "props": {
+        "label": "PR Filed",
+        "value": "#167"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "WELL Vol Spike",
+        "value": "15.68×",
+        "trend": "up"
+      }
+    },
+    "stat_patterns": {
+      "type": "Stat",
+      "props": {
+        "label": "Patterns Codified",
+        "value": "8"
+      }
+    },
+    "stat_failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Failures",
+        "value": "0"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headlines_title",
+        "story_1",
+        "story_2",
+        "story_3",
+        "story_4",
+        "story_5"
+      ]
+    },
+    "headlines_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "story_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #167 authored: skip bash redirects in skills, clears sandbox regression n=3",
+        "href": "https://github.com/anajuliabit/aeon/pull/167",
+        "source": "self-improve"
+      }
+    },
+    "story_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "WELL 15.68× vol-spike fires = first vol-spike-only alert in watchlist history (prior class was 24h-change)",
+        "href": ".tmp/token-alert/msg.md",
+        "source": "token-alert"
+      }
+    },
+    "story_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "4 kept: RuView ACCELERATING (WiFi CSI sensing primitive n=1), worldmonitor HOLDOVER 3.2× d2 defies fade",
+        "href": ".outputs/github-trending.md",
+        "source": "github-trending"
+      }
+    },
+    "story_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SharePoint dual-KEV week n=1 (CVE-2026-50522 due 7-25) + next-auth same-day-double critical pair",
+        "href": ".pending-notify/1784820704.md",
+        "source": "security-digest"
+      }
+    },
+    "story_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "8 patterns codified (alert-class-shift-3-regime, vol-spike-validated, 6-day viral-arc complete, sensing primitive n=1)",
+        "href": "memory/logs/2026-07-23-reflect.md",
+        "source": "reflect"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_title",
+        "notable_1",
+        "notable_2",
+        "notable_3",
+        "notable_4"
+      ]
+    },
+    "notable_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_1_badge",
+        "notable_1_text"
+      ]
+    },
+    "notable_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine",
+        "variant": "secondary"
+      }
+    },
+    "notable_1_text": {
+      "type": "Text",
+      "props": {
+        "text": "$35M bridge exploit cluster 7-23, UB d3 confirms breakout exception n=4, NIGHT dead-cat fails d2",
+        "variant": "body"
+      }
+    },
+    "notable_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_2_badge",
+        "notable_2_text"
+      ]
+    },
+    "notable_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "heartbeat ×3",
+        "variant": "secondary"
+      }
+    },
+    "notable_2_text": {
+      "type": "Text",
+      "props": {
+        "text": "14-consec NOOP, flat regime 108h+, STATUS_PAGE=DEGRADED shape unchanged",
+        "variant": "body"
+      }
+    },
+    "notable_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_3_badge",
+        "notable_3_text"
+      ]
+    },
+    "notable_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "secondary"
+      }
+    },
+    "notable_3_text": {
+      "type": "Text",
+      "props": {
+        "text": "4 survivors, 2 clusters: MCP execution guardrails + autonomous ops (email/wallet identity)",
+        "variant": "body"
+      }
+    },
+    "notable_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_4_badge",
+        "notable_4_text"
+      ]
+    },
+    "notable_4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "action-converter",
+        "variant": "secondary"
+      }
+    },
+    "notable_4_text": {
+      "type": "Text",
+      "props": {
+        "text": "5 actions Q≥4: ISS-025 pivot, H unlock monitor, bash trace, batch-dark diagnosis, Kimi K3",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decisions_title",
+        "decision_alert_1",
+        "decision_alert_2"
+      ]
+    },
+    "decisions_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      }
+    },
+    "decision_alert_1": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-025: dangerouslyDisableSandbox pivot",
+        "message": "T+8 sandbox-truncation d31, operator call required",
+        "type": "warning"
+      }
+    },
+    "decision_alert_2": {
+      "type": "Alert",
+      "props": {
+        "title": "CISA 7-25 deadline",
+        "message": "Patch SharePoint CVE-2026-50522 + Check Point CVE-2026-16232 (both KEV due fri)",
+        "type": "error"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "footer_collapsed_heading",
+        "footer_collapsed_list",
+        "footer_sources"
+      ]
+    },
+    "footer_collapsed_heading": {
+      "type": "Text",
+      "props": {
+        "text": "10 routine runs collapsed",
+        "variant": "caption"
+      }
+    },
+    "footer_collapsed_list": {
+      "type": "Text",
+      "props": {
+        "text": "btc-levels ×5, thought-review, skill-freshness, morning-brief, goal-tracker, list-digest",
+        "variant": "muted"
+      }
+    },
+    "footer_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: log=ok, cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

@@ -1,25 +1,21 @@
-*Evening Recap — 2026-07-22*
-_TL;DR: heavy cron day — reflect ships 20 patterns, GITLAWB breaks 4-day silence, but ISS-025 hits 1-week slip and Bash `>` redirect regression lands n=3 same UTC-day_
+*Evening Recap — 2026-07-23*
+_TL;DR: solid ship day — PR #167 filed (bash redirect fix), WELL fires first-ever vol-spike alert, reflect codified 8 patterns; 14-consec heartbeat NOOP, 0 failures._
 
 *Headlines:*
-- github-trending — 5 picks kept; ayghri/i-have-adhd 17.3× first coding-agent-skill-as-package; code-review-graph d5 plateau codified · `.outputs/github-trending.md`
-- reflect — 20 new patterns codified (breadth-swing, twin dead-cat, LLM containment); MEMORY.md + fleet.md refreshed · `memory/topics/fleet.md`
-- daily-routine — 63pt breadth compression d1 (87→24/100 top-100 green); HYPE −6.7% MAJOR breakdown; BTC ETF YTD first below $5B · SENT
-- token-alert — GITLAWB +16.53% fires 1/12; breaks 4-consec zero-alerts streak; counter-tape shape vs 7-21 broad-tape · SENT
-- security-digest — FortiSandbox no-vendor-patch KEV pair + DD-WRT 4yr-old CVE re-emerge + pip-mass-malware extends n=2 · `.security-digest-msg.md`
+- self-improve — PR #167 authored: skip bash redirects in skills, clears sandbox regression n=3 · https://github.com/anajuliabit/aeon/pull/167
+- token-alert — WELL 15.68× vol-spike fires = first vol-spike-only alert in watchlist history (prior class was 24h-change) · `.tmp/token-alert/msg.md`
+- github-trending — 4 kept: RuView ACCELERATING (WiFi CSI sensing primitive n=1), worldmonitor HOLDOVER 3.2× d2 defies fade · `.outputs/github-trending.md`
+- security-digest — SharePoint dual-KEV week n=1 (CVE-2026-50522 due 7-25) + next-auth same-day-double critical pair · `.pending-notify/1784820704.md`
+- reflect — 8 patterns codified (alert-class-shift-3-regime, vol-spike-validated, 6-day viral-arc complete, sensing primitive n=1) · `memory/logs/2026-07-23-reflect.md`
 
 *Notable:*
-- reg-monitor — Cboe binary-options Amendment 34-105936 effective 7-22; 1 act, 2 watch · operator-invoked Tue (off-Wed cadence)
-- skill-health — SKILL_HEALTH_PARTIAL: skill-runs sandbox-blocked; Bash `>` n=3 regressions UTC-day-22; hash 467ce959 stable
-- goal-tracker — ISS-025 T+6 day-7 (1-week slip milestone) tracked; 0 status transitions across 3 goals
-- action-converter — 5 loops filed: ISS-025 day-7 + H unlock T-3 + priorities 48d + on-chain config d46 + security-digest curl
-- morning-brief — SENT; 3 focus items: ISS-025, H unlock T-3, compression-crack test
+- daily-routine — $35M bridge exploit cluster 7-23, UB d3 confirms breakout exception n=4, NIGHT dead-cat fails d2
+- heartbeat ×3 — 14-consec NOOP, flat regime 108h+, STATUS_PAGE=DEGRADED shape unchanged
+- agent-buzz — 4 survivors, 2 clusters: MCP execution guardrails + autonomous ops (email/wallet identity)
+- action-converter — 5 actions Q≥4: ISS-025 pivot, H unlock monitor, bash trace, batch-dark diagnosis, Kimi K3
 
 *Decisions for tomorrow:*
-- ISS-025: operator direct-author `dangerouslyDisableSandbox` into `aeon.yml:479-495` — action-converter pivot live from 7-21, T+6 day-7 milestone crossed
-- ISS-027 unfiled: 12:00Z batch DARK d25 confirmed n=26 today — file in INDEX.md or assign wontfix
+- ISS-025: dangerouslyDisableSandbox pivot — T+8 sandbox-truncation d31, operator call required
+- CISA 7-25 deadline: patch SharePoint CVE-2026-50522 + Check Point CVE-2026-16232 (both KEV due fri)
 
-*Blockers:*
-- 12:00Z batch DARK d25 — 8-skill cluster frozen since 6-28; ISS-027 not formally filed in INDEX.md
-
-_+11 routine runs collapsed · sources: log=ok cron-state=ok_
+_+10 routine runs collapsed (btc-levels ×5, thought-review, skill-freshness, morning-brief, goal-tracker, list-digest) · sources: log=ok cron-state=ok_
