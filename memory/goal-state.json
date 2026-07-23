@@ -1,30 +1,36 @@
 {
-  "run_at": "2026-07-22T18:50:00Z",
+  "run_at": "2026-07-23T18:00:00Z",
   "goals": {
     "iss-025-capture-step-pr": {
       "status": "BLOCKED",
-      "activity_count_14d": 555,
-      "last_activity_date": "2026-07-22",
-      "note": "T+5 day-6 → T+6 day-7 rollover per morning-brief 07:00Z + heartbeat 08:48Z + 14:35Z ticks. First 1-week slip milestone since SLIPPED T-0 firm 7-16. Blocker durable: upstream sandbox iss #53012 confirms env-var expansion + excludedCommands both broken; remediation pivots to `dangerouslyDisableSandbox` path (action-converter 7-21 15:20Z watch #1 proposal, still open). Cost-report acute-failure branch cleared 7-20 19:08Z via late-dispatch success — d7 hazard-branch dead but capture-step primitive itself unshipped so literal ISS-025 remains open. Activity 555/14d vs prior 430 = +29% (falls in 25–50% gap between flat and improving per skill step 4 rule — treated as flat since not enough to trip the improving gate). Status BLOCKED (operator direct-author against `.github/workflows/aeon.yml:479-495` sole reliable path), trend: flat."
+      "activity_count_14d": 562,
+      "last_activity_date": "2026-07-23",
+      "note": "T+7 day-8 (2nd day past 1-week slip milestone). Operator direct-author against `.github/workflows/aeon.yml:479-495` sole reliable path. Action-converter 7-21 15:20Z proposed pivot to `dangerouslyDisableSandbox` per upstream sandbox iss #53012 (excludedCommands does not exempt from network enforcement; allowedDomains ignored). Cost-report acute-failure branch cleared 7-20 19:08Z via late-dispatch success — d7 hazard-branch dead but capture-step primitive itself unshipped so literal ISS-025 remains open. Activity 562/14d = high-volume mentioning, trend flat."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
-      "activity_count_14d": 550,
-      "last_activity_date": "2026-07-22",
-      "note": "Day 24 → day 25 rollover per UTC-day advance. 8-skill 12:00Z cluster (defi-overview/token-pick/narrative-tracker/market-context-refresh/token-movers/on-chain-monitor/defi-monitor/aixbt-pulse) last_success 2026-06-28 = 25d stale. **Per-skill blockage n=26 CONFIRMED at 12:00Z today** — token-alert 12:29Z + btc-levels 12:27Z fire clean same-slot while 8-skill cluster stays frozen (ISS-027 signature durable). Activity 550/14d vs prior 340 = +62% = trend `improving` by mechanical rule (activity count ≥50% up) but zero real resolution — growth is log-mention volume from heartbeat/skill-health dedup surfacing, not progress. Status BLOCKED (main arc dark), trend: improving-by-count-only (flag: mechanical rule fires on log-mention volume, no substrate change)."
+      "activity_count_14d": 563,
+      "last_activity_date": "2026-07-23",
+      "note": "Day 26 frozen since 2026-06-28 21:00Z = 25d+ stale. 8-skill cluster (defi-overview/token-pick/narrative-tracker/market-context-refresh/token-movers/on-chain-monitor/defi-monitor/aixbt-pulse) stays frozen. Per-skill blockage n=27 CONFIRMED 7-23 12:00Z via token-alert + btc-levels firing clean while 8-skill cluster stays frozen (ISS-027 signature durable). Activity high-volume from logging, trend flat."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 138,
-      "last_activity_date": "2026-07-22",
-      "note": "Day 45 → day 46 rollover per UTC-day advance. defi-monitor NO_CONFIG blocker unchanged since goal-open. `memory/on-chain-watches.yml` still 5 type:wallet entries only, zero type:pool / type:position. ALCHEMY_API_KEY + ETHERSCAN_API_KEY still missing from GitHub Actions secrets. cron-state defi-monitor last_success 2026-06-28T12:52Z (parallel to 12:00Z arc freeze — this goal + [[12-utc-batch-dark]] share substrate on defi-monitor). Activity 138/14d vs prior 90 = +53% = trend `improving` by mechanical rule (activity count ≥50% up) but zero real resolution — growth is log-mention volume from heartbeat/skill-health dedup surfacing not progress. Status BLOCKED (operator-side config gap), trend: improving-by-count-only (same flag as 12-utc-batch-dark)."
+      "activity_count_14d": 141,
+      "last_activity_date": "2026-07-23",
+      "note": "Day 47 blocked. defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required for both secrets + config file."
+    },
+    "h-unlock-t-minus-2": {
+      "status": "ON_TRACK",
+      "activity_count_14d": 8,
+      "last_activity_date": "2026-07-23",
+      "note": "T-2 fri jul 25 (fixed calendar watchlist event). 5.1× vol on $15.86M / 9.24% supply / investor+early-contributors cliff / 30d +72.6% textbook fade-pump asymmetric-downside cliff, biggest signal-real of the quarter. Passive watch, completion T-0 fri 7-25."
     }
   },
   "recently_cleared": {
     "three-self-improve-prs-conflicting": {
       "status": "DONE",
       "completed_at": "2026-07-20",
-      "note": "Full triple-PR queue cleared in single day 7-20 — PR #162/#163/#164 all MERGED. Goal literal condition ('2 self-improve PRs CONFLICTING past stall gates') resolves. Preserved in state file for trend continuity, but omitted from active-goal report."
+      "note": "Triple-PR queue cleared 7-20 — #162/#163/#164 merged. PR #166 (CLAUDE.md rule-5 codification) authored+merged same-cycle 7-21 18:29Z (20min turnaround, first in fleet history). Rule-5 T+3 test under empty queue lands positive."
     }
   }
 }
