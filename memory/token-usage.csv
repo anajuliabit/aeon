@@ -826,3 +826,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-22,action-converter,claude-opus-4-7,20,33304,1640182,125815
 2026-07-22,heartbeat,claude-opus-4-7,51,25612,3765821,112694
 2026-07-22,evening-recap,claude-sonnet-4-6,14,13517,968352,75607
+2026-07-23,btc-levels,claude-sonnet-4-6,14,4427,439404,29264
