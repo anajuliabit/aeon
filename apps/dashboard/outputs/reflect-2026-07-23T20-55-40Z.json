@@ -1,0 +1,169 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "heading_main",
+        "sep1",
+        "stack_content"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "💾 Memory consolidated — 2026-07-23",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_patterns",
+        "sep2",
+        "section_updates"
+      ]
+    },
+    "section_patterns": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_patterns_header",
+        "grid_patterns"
+      ]
+    },
+    "text_patterns_header": {
+      "type": "Text",
+      "props": {
+        "text": "8 patterns codified",
+        "variant": "lead"
+      }
+    },
+    "grid_patterns": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "sm"
+      },
+      "children": [
+        "badge_p1",
+        "badge_p2",
+        "badge_p3",
+        "badge_p4",
+        "badge_p5",
+        "badge_p6",
+        "badge_p7",
+        "badge_p8"
+      ]
+    },
+    "badge_p1": {
+      "type": "Badge",
+      "props": {
+        "text": "code-review-graph (6d arc)",
+        "variant": "default"
+      }
+    },
+    "badge_p2": {
+      "type": "Badge",
+      "props": {
+        "text": "RuView (sensing-primitive)",
+        "variant": "default"
+      }
+    },
+    "badge_p3": {
+      "type": "Badge",
+      "props": {
+        "text": "Kronos (financial-FM)",
+        "variant": "default"
+      }
+    },
+    "badge_p4": {
+      "type": "Badge",
+      "props": {
+        "text": "alert-class-3-regime",
+        "variant": "default"
+      }
+    },
+    "badge_p5": {
+      "type": "Badge",
+      "props": {
+        "text": "vol-spike-validated",
+        "variant": "default"
+      }
+    },
+    "badge_p6": {
+      "type": "Badge",
+      "props": {
+        "text": "compression-2-shape",
+        "variant": "default"
+      }
+    },
+    "badge_p7": {
+      "type": "Badge",
+      "props": {
+        "text": "worldmonitor (HOLDOVER)",
+        "variant": "default"
+      }
+    },
+    "badge_p8": {
+      "type": "Badge",
+      "props": {
+        "text": "d31 rollover (ISS-025 T+7)",
+        "variant": "default"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_updates": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_h_unlock",
+        "text_bash",
+        "text_heartbeat"
+      ]
+    },
+    "text_h_unlock": {
+      "type": "Text",
+      "props": {
+        "text": "H unlock: T-2 fri"
+      }
+    },
+    "text_bash": {
+      "type": "Text",
+      "props": {
+        "text": "Bash `>` regression: n=3 documented"
+      }
+    },
+    "text_heartbeat": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat: 12-consec NOOP durable 96h+"
+      }
+    }
+  }
+}

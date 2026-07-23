@@ -1,0 +1,683 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "action-converter",
+        "description": "5 Actions — 2026-07-23"
+      },
+      "children": [
+        "shape_info",
+        "sep_1",
+        "action_1",
+        "sep_2",
+        "action_2",
+        "sep_3",
+        "action_3",
+        "sep_4",
+        "action_4",
+        "sep_5",
+        "action_5",
+        "sep_6",
+        "sources_section"
+      ]
+    },
+    "shape_info": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: Operator pivot on ISS-025, two calendar locks, two diagnostics.",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1_num",
+        "a1_title",
+        "a1_why_block",
+        "a1_done_block",
+        "a1_loop_block"
+      ]
+    },
+    "a1_num": {
+      "type": "Badge",
+      "props": {
+        "text": "1",
+        "variant": "default"
+      }
+    },
+    "a1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Review dangerouslyDisableSandbox pivot for ISS-025 capture-step PR",
+        "level": "h3"
+      }
+    },
+    "a1_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_why_label",
+        "a1_why_text"
+      ]
+    },
+    "a1_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a1_why_text": {
+      "type": "Text",
+      "props": {
+        "text": "T+8 day-8 1-week slip. Upstream iss #53012 exempt-flag blocks 4-skill critical tail. Operator decision needed."
+      }
+    },
+    "a1_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_done_label",
+        "a1_done_text"
+      ]
+    },
+    "a1_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a1_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "Comment posted on PR #165 or decision documented in MEMORY.md Current Goals"
+      }
+    },
+    "a1_loop_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1_loop_label",
+        "a1_loop_badge"
+      ]
+    },
+    "a1_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "loop:",
+        "variant": "muted"
+      }
+    },
+    "a1_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025 sandbox-truncation family d31",
+        "variant": "secondary"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2_num",
+        "a2_title",
+        "a2_why_block",
+        "a2_done_block",
+        "a2_loop_block"
+      ]
+    },
+    "a2_num": {
+      "type": "Badge",
+      "props": {
+        "text": "2",
+        "variant": "default"
+      }
+    },
+    "a2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Lock H unlock asymmetric-downside monitoring for 2026-07-25 00:00Z",
+        "level": "h3"
+      }
+    },
+    "a2_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_why_label",
+        "a2_why_items"
+      ]
+    },
+    "a2_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a2_why_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a2_why_1",
+        "a2_why_2",
+        "a2_why_3"
+      ]
+    },
+    "a2_why_1": {
+      "type": "Text",
+      "props": {
+        "text": "5.1× vol on $15.86M / 9.24% supply."
+      }
+    },
+    "a2_why_2": {
+      "type": "Text",
+      "props": {
+        "text": "Fade-pump 30d +72.6%."
+      }
+    },
+    "a2_why_3": {
+      "type": "Text",
+      "props": {
+        "text": "T-2 tightens event window."
+      }
+    },
+    "a2_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_done_label",
+        "a2_done_text"
+      ]
+    },
+    "a2_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a2_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "Reminder set, alert watchlist locked to H token positions."
+      }
+    },
+    "a2_loop_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2_loop_label",
+        "a2_loop_badge"
+      ]
+    },
+    "a2_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "loop:",
+        "variant": "muted"
+      }
+    },
+    "a2_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "H unlock T-2 calendar event",
+        "variant": "secondary"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3_num",
+        "a3_title",
+        "a3_why_block",
+        "a3_done_block",
+        "a3_loop_block"
+      ]
+    },
+    "a3_num": {
+      "type": "Badge",
+      "props": {
+        "text": "3",
+        "variant": "default"
+      }
+    },
+    "a3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Trace bash `>` redirect sandbox regression root cause",
+        "level": "h3"
+      }
+    },
+    "a3_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_why_label",
+        "a3_why_items"
+      ]
+    },
+    "a3_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a3_why_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a3_why_1",
+        "a3_why_2"
+      ]
+    },
+    "a3_why_1": {
+      "type": "Text",
+      "props": {
+        "text": "n=3 hits same-day 7-23 (daily-routine + github-trending workarounds)."
+      }
+    },
+    "a3_why_2": {
+      "type": "Text",
+      "props": {
+        "text": "Skill-wide tool blocker."
+      }
+    },
+    "a3_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_done_label",
+        "a3_done_text"
+      ]
+    },
+    "a3_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a3_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "Root-cause identified in SKILL.md or ISS filed with workaround codification."
+      }
+    },
+    "a3_loop_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3_loop_label",
+        "a3_loop_badge"
+      ]
+    },
+    "a3_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "loop:",
+        "variant": "muted"
+      }
+    },
+    "a3_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "bash-redirect regression n=3",
+        "variant": "secondary"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4_num",
+        "a4_title",
+        "a4_why_block",
+        "a4_done_block",
+        "a4_loop_block"
+      ]
+    },
+    "a4_num": {
+      "type": "Badge",
+      "props": {
+        "text": "4",
+        "variant": "default"
+      }
+    },
+    "a4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Investigate 12:00Z batch-dark d26 8-skill blockage signature",
+        "level": "h3"
+      }
+    },
+    "a4_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_why_label",
+        "a4_why_items"
+      ]
+    },
+    "a4_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a4_why_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a4_why_1",
+        "a4_why_2"
+      ]
+    },
+    "a4_why_1": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027 repeats daily (token-alert + btc-levels fire clean, 8-skill cluster frozen since 6-28)."
+      }
+    },
+    "a4_why_2": {
+      "type": "Text",
+      "props": {
+        "text": "Pattern-validation critical."
+      }
+    },
+    "a4_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_done_label",
+        "a4_done_text"
+      ]
+    },
+    "a4_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a4_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "Hypothesis documented in log, next test scheduled (per-skill blockage n=28 read 7-24 12z)."
+      }
+    },
+    "a4_loop_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4_loop_label",
+        "a4_loop_badge"
+      ]
+    },
+    "a4_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "loop:",
+        "variant": "muted"
+      }
+    },
+    "a4_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "12:00Z batch-dark d26 ISS-027",
+        "variant": "secondary"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5_num",
+        "a5_title",
+        "a5_why_block",
+        "a5_done_block",
+        "a5_loop_block"
+      ]
+    },
+    "a5_num": {
+      "type": "Badge",
+      "props": {
+        "text": "5",
+        "variant": "default"
+      }
+    },
+    "a5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Read Kimi K3 open-weights announcement T-4 competitive roadmap",
+        "level": "h3"
+      }
+    },
+    "a5_why_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_why_label",
+        "a5_why_items"
+      ]
+    },
+    "a5_why_label": {
+      "type": "Text",
+      "props": {
+        "text": "why:",
+        "variant": "muted"
+      }
+    },
+    "a5_why_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "a5_why_1",
+        "a5_why_2",
+        "a5_why_3"
+      ]
+    },
+    "a5_why_1": {
+      "type": "Text",
+      "props": {
+        "text": "2.8T MoE 1M-ctx text/image/video."
+      }
+    },
+    "a5_why_2": {
+      "type": "Text",
+      "props": {
+        "text": "Ships 2026-07-27 per small-MoE frontier-close rail."
+      }
+    },
+    "a5_why_3": {
+      "type": "Text",
+      "props": {
+        "text": "Benchmark-parity-with-Fable pre-ship."
+      }
+    },
+    "a5_done_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_done_label",
+        "a5_done_text"
+      ]
+    },
+    "a5_done_label": {
+      "type": "Text",
+      "props": {
+        "text": "done:",
+        "variant": "muted"
+      }
+    },
+    "a5_done_text": {
+      "type": "Text",
+      "props": {
+        "text": "5-bullet competitive summary + benchmark vs Claude/DeepSeek/Llama posted to memory/topics/market-context.md."
+      }
+    },
+    "a5_loop_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5_loop_label",
+        "a5_loop_badge"
+      ]
+    },
+    "a5_loop_label": {
+      "type": "Text",
+      "props": {
+        "text": "loop:",
+        "variant": "muted"
+      }
+    },
+    "a5_loop_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Kimi K3 ship T-4 frontier-cluster watch",
+        "variant": "secondary"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "memory=95 logs=7 topics=20 prs=1 cron_failing=14 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}
