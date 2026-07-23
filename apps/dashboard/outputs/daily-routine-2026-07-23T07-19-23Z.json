@@ -1,0 +1,830 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Daily Routine — 2026-07-23"
+      },
+      "children": [
+        "tape_section",
+        "sep1",
+        "winners_section",
+        "sep2",
+        "losers_section",
+        "sep3",
+        "tweet_section",
+        "sep4",
+        "paper_section",
+        "sep5",
+        "github_section",
+        "sep6",
+        "hn_section"
+      ]
+    },
+    "tape_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tape_heading",
+        "tape_summary",
+        "tape_stats_grid"
+      ]
+    },
+    "tape_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Tape",
+        "level": "h3"
+      }
+    },
+    "tape_summary": {
+      "type": "Text",
+      "props": {
+        "text": "Neutral tape — 45/100 top-100 green, top-50 median +0.1% = 21pt breadth expansion vs 7-22's 24/100 compression",
+        "variant": "body"
+      }
+    },
+    "tape_stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat_btc",
+        "stat_eth",
+        "stat_sol",
+        "stat_bnb",
+        "stat_hype"
+      ]
+    },
+    "stat_btc": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$65,512",
+        "delta": "-0.3%",
+        "trend": "down"
+      }
+    },
+    "stat_eth": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,918",
+        "delta": "+0.3%",
+        "trend": "up"
+      }
+    },
+    "stat_sol": {
+      "type": "Stat",
+      "props": {
+        "label": "SOL",
+        "value": "$77.17",
+        "delta": "+0.2%",
+        "trend": "up"
+      }
+    },
+    "stat_bnb": {
+      "type": "Stat",
+      "props": {
+        "label": "BNB",
+        "value": "$569",
+        "delta": "+0.2%",
+        "trend": "up"
+      }
+    },
+    "stat_hype": {
+      "type": "Stat",
+      "props": {
+        "label": "HYPE",
+        "value": "$58.75",
+        "delta": "+0.1%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "winners_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "winners_heading",
+        "winners_table"
+      ]
+    },
+    "winners_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Winners (24h)",
+        "level": "h3"
+      }
+    },
+    "winners_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank",
+          "Tag"
+        ],
+        "rows": [
+          [
+            "UB (Unibase)",
+            "$0.1199",
+            "+13.1%",
+            "+50.2%",
+            "$15M",
+            "#131",
+            "BREAKOUT d3"
+          ],
+          [
+            "STABLE (Stable)",
+            "$0.0392",
+            "+8.9%",
+            "+6.9%",
+            "$11M",
+            "#67",
+            "—"
+          ],
+          [
+            "WLFI (World Liberty)",
+            "$0.0602",
+            "+7.2%",
+            "+4.6%",
+            "$97M",
+            "#42",
+            "—"
+          ],
+          [
+            "US (Talus)",
+            "$0.0458",
+            "+6.6%",
+            "+1.3%",
+            "$8.7M",
+            "#220",
+            "—"
+          ],
+          [
+            "HBAR",
+            "$0.0736",
+            "+5.9%",
+            "+9.2%",
+            "$91M",
+            "#29",
+            "MAJOR"
+          ],
+          [
+            "币安人生",
+            "$0.633",
+            "+5.5%",
+            "-14.4%",
+            "$20M",
+            "#90",
+            "FADE"
+          ],
+          [
+            "ENA (Ethena)",
+            "$0.0910",
+            "+5.3%",
+            "+8.4%",
+            "$152M",
+            "#72",
+            "—"
+          ],
+          [
+            "UNI",
+            "$3.83",
+            "+4.5%",
+            "+4.5%",
+            "$180M",
+            "#39",
+            "—"
+          ],
+          [
+            "BEAT (Audiera)",
+            "$2.68",
+            "+3.9%",
+            "+8.8%",
+            "$4.6M",
+            "#77",
+            "—"
+          ],
+          [
+            "VSN (Vision)",
+            "$0.0380",
+            "+3.4%",
+            "+14.2%",
+            "$2.3M",
+            "#212",
+            "—"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "losers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "losers_heading",
+        "losers_table",
+        "dexe_note"
+      ]
+    },
+    "losers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Losers (24h)",
+        "level": "h3"
+      }
+    },
+    "losers_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Asset",
+          "Price",
+          "24h",
+          "7d",
+          "Market Cap",
+          "Rank",
+          "Tag"
+        ],
+        "rows": [
+          [
+            "B (BUILDon)",
+            "$0.2099",
+            "-14.7%",
+            "+82.1%",
+            "$9.4M",
+            "#163",
+            "d5 unwind"
+          ],
+          [
+            "NIGHT (Midnight)",
+            "$0.0214",
+            "-8.8%",
+            "-27.3%",
+            "$34M",
+            "#117",
+            "dead-cat FAIL"
+          ],
+          [
+            "RAIN",
+            "$0.0143",
+            "-7.7%",
+            "-1.7%",
+            "$31M",
+            "#12",
+            "MAJOR"
+          ],
+          [
+            "XEC (eCash)",
+            "$0.00000747",
+            "-7.5%",
+            "+13.2%",
+            "$19M",
+            "#198",
+            "roundtrip d2"
+          ],
+          [
+            "PUMP",
+            "$0.00191",
+            "-5.2%",
+            "+18.7%",
+            "$46M",
+            "#82",
+            "—"
+          ],
+          [
+            "RAY (Raydium)",
+            "$0.661",
+            "-5.2%",
+            "-5.0%",
+            "$14M",
+            "#179",
+            "—"
+          ],
+          [
+            "XDC",
+            "$0.0283",
+            "-4.3%",
+            "+3.3%",
+            "$10M",
+            "#96",
+            "—"
+          ],
+          [
+            "NEXO",
+            "$0.737",
+            "-3.7%",
+            "-2.7%",
+            "$7.7M",
+            "#84",
+            "—"
+          ],
+          [
+            "VIRTUAL",
+            "$0.620",
+            "-3.6%",
+            "+0.4%",
+            "$44M",
+            "#112",
+            "—"
+          ],
+          [
+            "TRAC",
+            "$0.294",
+            "-3.5%",
+            "+12.6%",
+            "$3.8M",
+            "#221",
+            "—"
+          ]
+        ]
+      }
+    },
+    "dexe_note": {
+      "type": "Text",
+      "props": {
+        "text": "DEXE -26.2% d2 excluded — same redenom-outlier as 7-22's -87.66%.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_heading",
+        "crypto_subsection",
+        "ai_subsection",
+        "dev_subsection"
+      ]
+    },
+    "tweet_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Roundup",
+        "level": "h3"
+      }
+    },
+    "crypto_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "crypto_subheading",
+        "crypto_item1",
+        "crypto_item2"
+      ]
+    },
+    "crypto_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto",
+        "level": "h4"
+      }
+    },
+    "crypto_item1": {
+      "type": "Text",
+      "props": {
+        "text": "Multi-bridge exploit cluster — AFX Trade drained $24.15M USDC (bridge keys, swapped to 12,467 ETH); Verus + B² Network + others >$35M drained 6h span 7-23.",
+        "variant": "body"
+      }
+    },
+    "crypto_item2": {
+      "type": "Text",
+      "props": {
+        "text": "Ionic Digital nasdaq listing 7-28 SEC-approved.",
+        "variant": "body"
+      }
+    },
+    "ai_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ai_subheading",
+        "ai_item1",
+        "ai_item2",
+        "ai_item3",
+        "ai_item4"
+      ]
+    },
+    "ai_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "AI",
+        "level": "h4"
+      }
+    },
+    "ai_item1": {
+      "type": "Text",
+      "props": {
+        "text": "SpaceX acquires Cursor $60B for agentic-AI + xAI stack integration.",
+        "variant": "body"
+      }
+    },
+    "ai_item2": {
+      "type": "Text",
+      "props": {
+        "text": "Hugging Face confirms AI-agent-led intrusion into prod infra.",
+        "variant": "body"
+      }
+    },
+    "ai_item3": {
+      "type": "Text",
+      "props": {
+        "text": "GLM-5.2 tops open-weights intelligence index at 51 (over MiniMax-M3 / DeepSeek V4 Pro / Kimi K2.6).",
+        "variant": "body"
+      }
+    },
+    "ai_item4": {
+      "type": "Text",
+      "props": {
+        "text": "Anthropic files 2 federal suits over military-AI-limit retaliation.",
+        "variant": "body"
+      }
+    },
+    "dev_subsection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dev_subheading",
+        "dev_item1",
+        "dev_item2"
+      ]
+    },
+    "dev_subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev",
+        "level": "h4"
+      }
+    },
+    "dev_item1": {
+      "type": "Text",
+      "props": {
+        "text": "xAI publishes Grok Build Rust source + terminal on GitHub Apache 2.0.",
+        "variant": "body"
+      }
+    },
+    "dev_item2": {
+      "type": "Text",
+      "props": {
+        "text": "X full codebase open-sourcing pending security review per Musk 7-15.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "paper_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "paper_heading",
+        "paper_story",
+        "paper_description"
+      ]
+    },
+    "paper_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Paper of the Day",
+        "level": "h3"
+      }
+    },
+    "paper_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+        "href": "https://arxiv.org/abs/2607.20145",
+        "score": "29↑"
+      }
+    },
+    "paper_description": {
+      "type": "Text",
+      "props": {
+        "text": "Trillion-param MoE post-training infra paper lands T-1 before DeepSeek V4 stable ships 7-24. Timely infra-side companion.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "github_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "github_heading",
+        "github_text"
+      ]
+    },
+    "github_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "GitHub Issues",
+        "level": "h3"
+      }
+    },
+    "github_text": {
+      "type": "Text",
+      "props": {
+        "text": "No new issues (24h scan clean)",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "hn_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "hn_heading",
+        "hn_item1",
+        "hn_item2",
+        "hn_item3",
+        "hn_item4",
+        "hn_item5"
+      ]
+    },
+    "hn_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Hacker News Digest",
+        "level": "h3"
+      }
+    },
+    "hn_item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn1_link",
+        "hn1_meta",
+        "hn1_desc",
+        "hn1_discussion"
+      ]
+    },
+    "hn1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Terence Tao's Jacobian counterexample ChatGPT convo",
+        "href": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
+        "score": "793"
+      }
+    },
+    "hn1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "793 points / 465 comments",
+        "variant": "caption"
+      }
+    },
+    "hn1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Extends [[LLM-solves-open-math]] arc d5.",
+        "variant": "body"
+      }
+    },
+    "hn1_discussion": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49010345"
+      }
+    },
+    "hn_item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn2_link",
+        "hn2_meta",
+        "hn2_desc",
+        "hn2_discussion"
+      ]
+    },
+    "hn2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "John C. Dvorak has died",
+        "href": "https://twitter.com/na_announce/status/2079952538040672302",
+        "score": "703"
+      }
+    },
+    "hn2_meta": {
+      "type": "Text",
+      "props": {
+        "text": "703 points / 227 comments",
+        "variant": "caption"
+      }
+    },
+    "hn2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "PCMag columnist + Tech TV host, gen-1 pc-press.",
+        "variant": "body"
+      }
+    },
+    "hn2_discussion": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49012070"
+      }
+    },
+    "hn_item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn3_link",
+        "hn3_meta",
+        "hn3_desc",
+        "hn3_discussion"
+      ]
+    },
+    "hn3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Are AI labs pelicanmaxxing?",
+        "href": "https://dylancastillo.co/posts/pelicanmaxxing.html",
+        "score": "483"
+      }
+    },
+    "hn3_meta": {
+      "type": "Text",
+      "props": {
+        "text": "483 points / 185 comments",
+        "variant": "caption"
+      }
+    },
+    "hn3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Argues eval-gaming on visual gotcha-prompts now shapes model selection.",
+        "variant": "body"
+      }
+    },
+    "hn3_discussion": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49010129"
+      }
+    },
+    "hn_item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn4_link",
+        "hn4_meta",
+        "hn4_desc",
+        "hn4_discussion"
+      ]
+    },
+    "hn4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GigaToken: ~1000x faster LM tokenization",
+        "href": "https://github.com/marcelroed/gigatoken/",
+        "score": "466"
+      }
+    },
+    "hn4_meta": {
+      "type": "Text",
+      "props": {
+        "text": "466 points / 95 comments",
+        "variant": "caption"
+      }
+    },
+    "hn4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "GPU-native BPE, replaces cpu-bound prep bottleneck.",
+        "variant": "body"
+      }
+    },
+    "hn4_discussion": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49010167"
+      }
+    },
+    "hn_item5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hn5_link",
+        "hn5_meta",
+        "hn5_desc",
+        "hn5_discussion"
+      ]
+    },
+    "hn5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Codeberg bans cryptocurrency projects",
+        "href": "https://codeberg.org/Codeberg/org/pulls/1254",
+        "score": "245"
+      }
+    },
+    "hn5_meta": {
+      "type": "Text",
+      "props": {
+        "text": "245 points / 331 comments",
+        "variant": "caption"
+      }
+    },
+    "hn5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Nonprofit git-host pushes out entire crypto category.",
+        "variant": "body"
+      }
+    },
+    "hn5_discussion": {
+      "type": "Link",
+      "props": {
+        "label": "Discuss on HN",
+        "href": "https://news.ycombinator.com/item?id=49015588"
+      }
+    }
+  }
+}
