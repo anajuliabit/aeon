@@ -1,17 +1,27 @@
-All three files written. No notification sent (FRESHNESS_OK rule: silence is the signal).
+Done. Here's what happened:
 
 ## Summary
 
-**Status: ✅ FRESHNESS_OK** — all 8 tracked dependencies are within their freshness windows.
+**Skill**: `skill-freshness` | **Status**: `FRESHNESS_NO_CHANGE` | **No notification sent**
 
-**What was audited:** 43 enabled skills, 14 implicit file references discovered, 6 skipped (files that never existed — disabled producers or skills that don't write to `articles/`), 8 dependencies checked, 0 flagged.
+**Execution:**
+- Parsed `aeon.yml`: 43 enabled skills (of ~115 total)
+- `chains: {}` → 0 explicit consume edges
+- Grepped enabled SKILL.md files for extractable file references (specific paths matching the 4 regex classes)
+- Found 8 implicit dependencies across 4 consumers
 
-**Key dependency states:**
-- `operator-scorecard → skill-analytics-2026-07-15.md` — 158h old vs 192h threshold (82%). **Watch:** skill-analytics fires today at 18:30 UTC and will refresh this. If it fails, the article crosses WARN tomorrow morning.
-- `reflect` / `action-converter → articles/` newest — `skill-freshness-2026-07-21.md` is the most recent article at ~23h (threshold 28h). Tight but OK.
-- All `memory/topics/` and `.outputs/` deps read as ~0h (git checkout mtime), functionally fresh.
+**Dependency audit (all OK):**
+| Consumer | File | Class | Age | Verdict |
+|---|---|---|---|---|
+| skill-security-scan | `memory/state/security-scan.json` | state | ~10m | ✅ OK |
+| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | articles/weekly | ~10m | ✅ OK |
+| skill-security-scan | `articles/security-scan-2026-07-20.md` | articles/weekly | ~10m | ✅ OK |
+| vuln-scanner | `.outputs/github-trending.md` | outputs | ~10m | ✅ OK |
+| aixbt-pulse | `memory/topics/aixbt-grounding.md` | topics | ~10m | ✅ OK |
+| aixbt-pulse | `memory/topics/aixbt-clusters.md` | topics | ~10m | ✅ OK |
+| aixbt-pulse | `memory/topics/aixbt-chains.md` | topics | ~10m | ✅ OK |
+| market-context-refresh | `memory/topics/market-context.md` | topics | ~10m | ✅ OK |
 
-**Files written:**
-- `articles/skill-freshness-2026-07-22.md`
-- `memory/topics/skill-freshness-state.json` (updated `last_run_at` to 2026-07-22T08:56:01Z)
-- `memory/logs/2026-07-22.md` (created with today's first log entry)
+**Dedup**: fingerprint `da39a3ee` (sha1 of empty flagged set) matches yesterday's run (2026-07-22T08:56:01Z, within 7-day window) → `FRESHNESS_NO_CHANGE`, notification suppressed.
+
+**Files written**: `articles/skill-freshness-2026-07-23.md`, `memory/topics/skill-freshness-state.json`, `memory/logs/2026-07-23.md` (log entry prepended).
