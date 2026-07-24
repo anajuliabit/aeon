@@ -5,6 +5,40 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-07-24)
+
+- **skill-health hash 467ce959** (stable through 7-24, byte-identical since 7-20 18:47Z NOTIFY): **0 CRITICAL** · 18 DEGRADED · 13 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues (ISS-005/007/009/010/011/016/018/019/020/021/025). Sandbox-truncation family **day-32** (T+8 milestone). cost-report DEGRADED (sr=0.11).
+- **15-consec heartbeat NOOP through 7-24 14:13Z** — flat regime durable across ~100h+ span since 7-19 09:17Z regime-onset. Sequence: 7-19 3× + 7-20 2× + 7-21 3× + 7-22 3× + 7-23 3× + 7-24 2×. Third UTC-day rollover intact.
+- **Chronic sr<0.5 tail (13 skills at 14:13Z 7-24 hb, zero delta since 7-22 20:03Z)** — cost-report 0.11 (57, ISS-025) · reg-monitor 0.17 · skill-analytics 0.18 · vuln-scanner 0.18 (ISS-018) · market-context-refresh 0.32 · narrative-tracker 0.33 · search-skill 0.38 (ISS-021) · security-digest 0.39 · fleet-control 0.40 · skill-health 0.46 · aixbt-pulse 0.47 · goal-tracker 0.49 · action-converter 0.49 · self-improve 0.48. All ISS-019/020/021/025 sandbox-truncation family day-32.
+- **12:00 UTC batch DARK day-27** — 8-skill 6-28 cluster still frozen. Per-skill blockage n=27 CONFIRMED via 7-24 clean same-slot fires (token-alert 12:14Z + btc-levels 12:15Z fire clean while cluster stays frozen = ISS-027 signature durable).
+- **07:00Z morning-batch catch-up-band widens fri 7-24** — daily-routine 08:50Z (~1h50m late), morning-brief 08:44Z (~1h44m late), thought-review 08:45Z (~1h45m late), heartbeat 08:46Z (~46min late), btc-levels 08:46Z. Fri regresses vs thu 7-23 (13min tight); wed 7-22 was 1h52m — 7-24 near-matches wed shape after thu tightening.
+- **Bash-tool `>` redirect sandbox regression n=5+ same-family** across 3 UTC-day span — 7-22 security-digest + 7-22 agent-buzz + 7-23 daily-routine + 7-23 security-digest + 7-24 daily-routine + 7-24 github-trending + 7-24 security-digest. Workarounds validated across all fires: `curl -o` (curl to file), Write tool (fs write), Read+Edit append (log append). **ISS-file threshold now firmly crossed** — action-converter follow-up ISS-file candidate ready.
+- **GH API field rename** — `gh search issues` `comments` → `commentsCount` field renamed. `skills/github-issues/SKILL.md` step 2 patch pending.
+- **aixbt-pulse dead-slot d27** — twice-daily 9,21 UTC, last 2026-06-28T21:21Z. 54 consecutive missed cycles.
+- **Self-improve queue at 2 open PRs 7-24** — #165 (docs skill-graph) d5+ dormant + #167 (bash-redirect workaround) fresh ~20h. Both under 7d weekly-batch cadence gate + under 3-PR queue-lock gate.
+- **PR #167 authored 7-23 18:21Z self-improve tick** — bash-`>`-redirect workaround for n=3 same-week regression (security-digest 7-22 + agent-buzz 7-22 + daily-routine 7-23). **Rule-5 primitive n=2 same-cycle test lands positive under 1-open-PR queue** (queue held under gate; self-improve authored successfully). Second same-cycle authoring after PR #166 (7-21 18:29Z merge).
+- **PR #166 same-cycle authored+MERGED 7-21 18:29Z (20min turnaround)** — first same-cycle self-improve authored+merged in fleet history; codified weekly-batch PR review cadence in CLAUDE.md.
+- **Weekly-review 2026-07-13 actions status (7-24):**
+  - #1 Operator direct-author ISS-025 capture-step PR by 2026-07-16 — **SLIPPED T+8 day-9 (3 days past 1-week slip)**.
+  - #2 Operator decide PR #162 by 2026-07-14 — **SHIPPED via MERGE 7-20 14:16Z** (T+6 late).
+  - #3 Self-improve codifies rule-5 in CLAUDE.md by 2026-07-17 — **SHIPPED via exit-gate primitive 7-19 18:32Z + weekly-batch cadence PR #166 7-21 18:29Z**.
+  - #4 Self-improve investigates Investment Advisor cancellation by 2026-07-16 — **SHIPPED via PR #164 MERGED 7-20 21:50Z**.
+
+## Positive events 7-23 → 7-24
+
+- **UB d4 unwind FIRES on 7-23 prediction 7-24 daily-routine** — extends [[one-day-breakout-unwind]] rule at "3-day-sustain-max-before-d4-unwind" shape, cap holds firmly at n=4. BUILDon d6 -12.1% extends compound-unwind to -32% off peak (3-day compound not 1-2 day tail).
+- **WELL vol-spike d2 fires 7-24 12:00Z** — 6.11× ($2,053.6K vs $336.2K baseline post-7-23-entering). **First-ever back-to-back vol-spike-fires in watchlist history**; accumulation-look strengthening d2 shape distinct from distribution.
+- **3-day alert-fire streak** — GITLAWB counter-tape 7-22 + WELL vol-spike-only 7-23 + WELL vol-spike-continuation 7-24 firms [[alert-class-shift-3-regime]] taxonomy.
+- **PR #167 authored 7-23 18:21Z** — rule-5 primitive n=2 same-cycle test lands positive under 1-open-PR queue.
+- **github-trending 4-pick slate 7-24 1-per-bucket even split first-in-memory-window** — block/buzz (agent-as-equal-member workspace via Nostr) + mattpocock/skills (practitioner-side .agents-as-plugin) + Automattic/harper (offline-privacy Grammarly-alternative) + citrolabs/ego-lite (agent-shared browser via isolated Spaces). Rare cross-domain balance. 8-consec-day agent-thesis rail continues (liberal 4/4 or strict 3/4).
+- **Skills-primitive rail resurfaces d1** after 7-23 dark with 6-shape taxonomy: practitioner + workspace-orchestration + coding-single-purpose + physical-world + vendor-catalog + first-party.
+- **worldmonitor HOLDOVER re-feature primitive full-cycle validation 7-24** — 1,295 → 4,139 (d1 re-feature) → 3,175 (d2 -23% fade). Clears d1 threshold but d2 fades = peak not sustain shape validated.
+- **First Rust-majority github-trending slate in memory-window 7-24** — 3/4 Rust picks.
+- **security-digest 14:14Z 7-24** — 3 today / 5 this-week / 3 monitor. npm-malware 45-batch d1 NEW (largest single-day npm-malware in memory-window), [[AI-framework-attack-surface]] extends n=2 via LiteLLM MCP-auth-bypass CVE-2026-59822, [[single-project-mass-disclose]] n=3 via n8n 24-CVE, KEV zero-cadence d3 (quiet-2day regime), 6-day dedup-heavy digest d1 (still surfaces 11 fresh items).
+- **list-digest 7-24** — Grok cache-lag n=2 same-list (7-22 returned 7-21 tweets, 7-24 returned 7-23 tweets); 2 signal-clearing single-digit tweets kept.
+- **CoinGecko 32 consecutive clean days post-ISS-023 recovery** (through 7-24 12:14Z token-alert).
+- **DeepSeek legacy API deprecation 7-24 15:59Z** — `deepseek-chat`/`deepseek-reasoner` route to `deepseek-v4-flash`.
+
 ## Current health snapshot (2026-07-22)
 
 - **skill-health hash 467ce959** (7-21 18:04Z NOOP formal read, byte-identical to 7-20 18:47Z NOTIFY): **0 CRITICAL** · 18 DEGRADED · 13 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues (ISS-005/007/009/010/011/016/018/019/020/021/025). Sandbox-truncation family **day-30** (00:00Z 7-21→7-22 rollover, 30-day milestone). cost-report CRITICAL→DEGRADED formal promotion 7-21 (sr=0.11 keeps DEGRADED per sr<0.6 rule).
