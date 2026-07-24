@@ -1,21 +1,20 @@
-*Evening Recap — 2026-07-23*
-_TL;DR: solid ship day — PR #167 filed (bash redirect fix), WELL fires first-ever vol-spike alert, reflect codified 8 patterns; 14-consec heartbeat NOOP, 0 failures._
+*Evening Recap — 2026-07-24*
+_TL;DR: heavy cron day — reflect codifies 10+ patterns + action-converter shapes 2 ISS filings, but bash-redirect regression hits n=6+ and ISS-027 filing carry stalls at d16 with no files created._
 
 *Headlines:*
-- self-improve — PR #167 authored: skip bash redirects in skills, clears sandbox regression n=3 · https://github.com/anajuliabit/aeon/pull/167
-- token-alert — WELL 15.68× vol-spike fires = first vol-spike-only alert in watchlist history (prior class was 24h-change) · `.tmp/token-alert/msg.md`
-- github-trending — 4 kept: RuView ACCELERATING (WiFi CSI sensing primitive n=1), worldmonitor HOLDOVER 3.2× d2 defies fade · `.outputs/github-trending.md`
-- security-digest — SharePoint dual-KEV week n=1 (CVE-2026-50522 due 7-25) + next-auth same-day-double critical pair · `.pending-notify/1784820704.md`
-- reflect — 8 patterns codified (alert-class-shift-3-regime, vol-spike-validated, 6-day viral-arc complete, sensing primitive n=1) · `memory/logs/2026-07-23-reflect.md`
-
-*Notable:*
-- daily-routine — $35M bridge exploit cluster 7-23, UB d3 confirms breakout exception n=4, NIGHT dead-cat fails d2
-- heartbeat ×3 — 14-consec NOOP, flat regime 108h+, STATUS_PAGE=DEGRADED shape unchanged
-- agent-buzz — 4 survivors, 2 clusters: MCP execution guardrails + autonomous ops (email/wallet identity)
-- action-converter — 5 actions Q≥4: ISS-025 pivot, H unlock monitor, bash trace, batch-dark diagnosis, Kimi K3
+- token-alert — WELL vol-spike d2 fires 6.11× ($2.054M, first-ever back-to-back); fade shallows -1.33% on +53% participation = accumulation-look d2 · `.tmp/token-alert/msg.md`
+- reflect — MEMORY.md rewritten: Kimi K3 date corrected (7-16 not 7-27), 10+ patterns codified (UB d4 fires, BUILDon -32%, BEAT accelerating-sustain, agent-as-equal-member Nostr workspace NEW) · `memory/MEMORY.md`
+- security-digest — npm-malware 45-batch d1 (fs-extra-core ~30M DL typosquat highest-blast-radius); LiteLLM CVE-2026-59822 MCP auth-bypass (AI-framework-attack-surface n=2); n8n 24-CVE mass-disclose n=3 · `.tmp/secdigest/msg.md`
+- action-converter — ISS-027 (batch-dark d16 carry) + ISS-028 (bash-redirect n=6+) proposed; Kimi drift + LiteLLM CVE verify + github-issues field-rename shaped · `.tmp/action-converter/msg.md`
+- github-trending — 4 kept: block/buzz ACCELERATING (agent-as-equal-member) + mattpocock/skills ACCELERATING + harper RETURNING + ego-lite RETURNING · `.outputs/github-trending.md`
 
 *Decisions for tomorrow:*
-- ISS-025: dangerouslyDisableSandbox pivot — T+8 sandbox-truncation d31, operator call required
-- CISA 7-25 deadline: patch SharePoint CVE-2026-50522 + Check Point CVE-2026-16232 (both KEV due fri)
+- H unlock T-0 (7-25): cliff day 9.24% supply investor+early-contributors — ticker-resolution watch (HYPE vs H, verify unlock-monitor 7-27)
+- file ISS-027 (batch-dark d27) + ISS-028 (bash-redirect n=6+): action-converter shaped both today, neither file exists yet
+- merge PR #167 or carry: bash-redirect workaround fix (~27h old), supports ISS-028 filing · https://github.com/anajuliabit/aeon/pull/167
 
-_+10 routine runs collapsed (btc-levels ×5, thought-review, skill-freshness, morning-brief, goal-tracker, list-digest) · sources: log=ok cron-state=ok_
+*Blockers:*
+- ISS-025 — cost-report CRITICAL, sandbox-truncation T+8 day-9, dangerouslyDisableSandbox pivot operator-side pending · 3 days past 1-week slip
+- ISS-027 filing carry d16 — MEMORY.md line 6 references ISS-027 as existing but file never created
+
+_+6 routine runs collapsed · sources: log=ok cron-state=ok_
