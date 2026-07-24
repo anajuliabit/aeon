@@ -840,4 +840,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-24,github-trending,claude-opus-4-7,37,41224,3052754,127659
 2026-07-24,token-alert,claude-opus-4-7,26,11318,1134315,73279
 2026-07-24,security-digest,claude-opus-4-7,40,26754,2921267,120703
-2026-07-24,btc-levels,claude-sonnet-4-6,1983,8644,610338,75817
+2026-07-24,list-digest,claude-opus-4-7,23,12153,1152035,95015
