@@ -1,23 +1,23 @@
-*GitHub Trending — 2026-07-23*
+*GitHub Trending — 2026-07-24*
 
-*Top pick* — [ruvnet/RuView](https://github.com/ruvnet/RuView)
-first "commodity WiFi as a sensor" runtime to trend — a whole new input modality (presence, breathing, motion) with no camera and no dedicated hardware.
-
-*AI/ML*
-• [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — ★ 137 today (33k total) · Python · [RETURNING]
-first open foundation model for financial candlesticks — trained on K-lines from 45 exchanges, AAAI 2026 accepted.
+*Top pick* — [block/buzz](https://github.com/block/buzz)
+first workspace to trend where agents are cryptographically-signed equal members alongside humans — block puts the agent-as-actor thesis at team coordination itself.
 
 *Infra*
-• [ruvnet/RuView](https://github.com/ruvnet/RuView) — ★ 741 today (84k total) · Rust · [ACCELERATING]
-turns off-the-shelf WiFi CSI into presence, vital signs, room-scale motion — a sensor stack with no sensors.
+• [block/buzz](https://github.com/block/buzz) — ★ 2,162 today · 8k total · Rust · [ACCELERATING]
+team-coordination on nostr relays — signed events, immutable audit log, no traditional permission system.
+
+*AI/ML*
+• [mattpocock/skills](https://github.com/mattpocock/skills) — ★ 2,224 today · 186k total · Shell · [ACCELERATING]
+matt pocock ships his personal .agents directory as an installable claude code plugin — practitioner-side skill-pack primitive.
 
 *Devtools*
-• [likec4/likec4](https://github.com/likec4/likec4) — ★ 80 today (4.5k total) · TypeScript · [RETURNING]
-architecture diagrams that stay live with the code — text spec compiles to C4 views, no drift between docs and repo.
+• [Automattic/harper](https://github.com/Automattic/harper) — ★ 624 today · 13k total · Rust · [RETURNING]
+grammarly alternative running offline in rust — no cloud round-trip, drops into editors via lsp/extensions.
 
-*Data*
-• [koala73/worldmonitor](https://github.com/koala73/worldmonitor) — ★ 4.1k today (70k total) · TypeScript · [HOLDOVER]
-re-featured: 1.3k → 4.1k stars today = 3.2× d2 acceleration against yesterday's fade-prediction, viral-moment threshold cleared.
+*Web/Apps*
+• [citrolabs/ego-lite](https://github.com/citrolabs/ego-lite) — ★ 247 today · 2k total · JavaScript · [RETURNING]
+browser where agents drive isolated tabs while you keep yours — inherits chrome auth, 2.5× faster than browser-use.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/19
+sources: trending=ok · gh_api=ok · kept 4/16

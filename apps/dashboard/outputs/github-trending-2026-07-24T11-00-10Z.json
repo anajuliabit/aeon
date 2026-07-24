@@ -1,0 +1,423 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-24"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_top_pick",
+        "sep_1",
+        "section_infra",
+        "sep_2",
+        "section_ml",
+        "sep_3",
+        "section_devtools",
+        "sep_4",
+        "section_web",
+        "sep_5",
+        "text_sources"
+      ]
+    },
+    "section_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top_pick",
+        "item_buzz_top"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h3"
+      }
+    },
+    "item_buzz_top": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_buzz_top",
+        "text_buzz_desc_top"
+      ]
+    },
+    "storylink_buzz_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "block/buzz",
+        "href": "https://github.com/block/buzz"
+      }
+    },
+    "text_buzz_desc_top": {
+      "type": "Text",
+      "props": {
+        "text": "first workspace to trend where agents are cryptographically-signed equal members alongside humans — block puts the agent-as-actor thesis at team coordination itself.",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_infra",
+        "item_buzz_infra"
+      ]
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "Infra",
+        "level": "h3"
+      }
+    },
+    "item_buzz_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "row_buzz_header",
+        "text_buzz_stats",
+        "text_buzz_desc_infra"
+      ]
+    },
+    "row_buzz_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_buzz_infra",
+        "badge_rust_1",
+        "badge_accelerating"
+      ]
+    },
+    "storylink_buzz_infra": {
+      "type": "StoryLink",
+      "props": {
+        "title": "block/buzz",
+        "href": "https://github.com/block/buzz"
+      }
+    },
+    "badge_rust_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "outline"
+      }
+    },
+    "badge_accelerating": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "text_buzz_stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 2,162 today · 8k total",
+        "variant": "muted"
+      }
+    },
+    "text_buzz_desc_infra": {
+      "type": "Text",
+      "props": {
+        "text": "team-coordination on nostr relays — signed events, immutable audit log, no traditional permission system.",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_ml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_ml",
+        "item_skills_ml"
+      ]
+    },
+    "heading_ml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h3"
+      }
+    },
+    "item_skills_ml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "row_skills_header",
+        "text_skills_stats",
+        "text_skills_desc"
+      ]
+    },
+    "row_skills_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_skills",
+        "badge_shell",
+        "badge_accelerating_2"
+      ]
+    },
+    "storylink_skills": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mattpocock/skills",
+        "href": "https://github.com/mattpocock/skills"
+      }
+    },
+    "badge_shell": {
+      "type": "Badge",
+      "props": {
+        "text": "Shell",
+        "variant": "outline"
+      }
+    },
+    "badge_accelerating_2": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "text_skills_stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 2,224 today · 186k total",
+        "variant": "muted"
+      }
+    },
+    "text_skills_desc": {
+      "type": "Text",
+      "props": {
+        "text": "matt pocock ships his personal .agents directory as an installable claude code plugin — practitioner-side skill-pack primitive.",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_devtools",
+        "item_harper_devtools"
+      ]
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h3"
+      }
+    },
+    "item_harper_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "row_harper_header",
+        "text_harper_stats",
+        "text_harper_desc"
+      ]
+    },
+    "row_harper_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_harper",
+        "badge_rust_2",
+        "badge_returning"
+      ]
+    },
+    "storylink_harper": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Automattic/harper",
+        "href": "https://github.com/Automattic/harper"
+      }
+    },
+    "badge_rust_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Rust",
+        "variant": "outline"
+      }
+    },
+    "badge_returning": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "text_harper_stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 624 today · 13k total",
+        "variant": "muted"
+      }
+    },
+    "text_harper_desc": {
+      "type": "Text",
+      "props": {
+        "text": "grammarly alternative running offline in rust — no cloud round-trip, drops into editors via lsp/extensions.",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_web": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_web",
+        "item_eglite_web"
+      ]
+    },
+    "heading_web": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h3"
+      }
+    },
+    "item_eglite_web": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "row_eglite_header",
+        "text_eglite_stats",
+        "text_eglite_desc"
+      ]
+    },
+    "row_eglite_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_eglite",
+        "badge_js",
+        "badge_returning_2"
+      ]
+    },
+    "storylink_eglite": {
+      "type": "StoryLink",
+      "props": {
+        "title": "citrolabs/ego-lite",
+        "href": "https://github.com/citrolabs/ego-lite"
+      }
+    },
+    "badge_js": {
+      "type": "Badge",
+      "props": {
+        "text": "JavaScript",
+        "variant": "outline"
+      }
+    },
+    "badge_returning_2": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "text_eglite_stats": {
+      "type": "Text",
+      "props": {
+        "text": "★ 247 today · 2k total",
+        "variant": "muted"
+      }
+    },
+    "text_eglite_desc": {
+      "type": "Text",
+      "props": {
+        "text": "browser where agents drive isolated tabs while you keep yours — inherits chrome auth, 2.5× faster than browser-use.",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/16",
+        "variant": "caption"
+      }
+    }
+  }
+}
