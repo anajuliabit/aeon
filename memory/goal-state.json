@@ -1,36 +1,36 @@
 {
-  "run_at": "2026-07-23T18:00:00Z",
+  "run_at": "2026-07-24T18:00:00Z",
   "goals": {
     "iss-025-capture-step-pr": {
       "status": "BLOCKED",
-      "activity_count_14d": 562,
-      "last_activity_date": "2026-07-23",
-      "note": "T+7 day-8 (2nd day past 1-week slip milestone). Operator direct-author against `.github/workflows/aeon.yml:479-495` sole reliable path. Action-converter 7-21 15:20Z proposed pivot to `dangerouslyDisableSandbox` per upstream sandbox iss #53012 (excludedCommands does not exempt from network enforcement; allowedDomains ignored). Cost-report acute-failure branch cleared 7-20 19:08Z via late-dispatch success — d7 hazard-branch dead but capture-step primitive itself unshipped so literal ISS-025 remains open. Activity 562/14d = high-volume mentioning, trend flat."
+      "activity_count_14d": 432,
+      "last_activity_date": "2026-07-24",
+      "note": "T+8 day-9 (3rd day past 1-week slip milestone). Operator direct-author against `.github/workflows/aeon.yml:479-495` sole reliable path. Action-converter 7-21 15:20Z proposed pivot to `dangerouslyDisableSandbox` per upstream sandbox iss #53012; still operator-side pending decision. PR #167 (7-23 18:21Z) is bash-redirect workaround, different regression family — capture-step primitive itself unshipped so literal ISS-025 remains open. Activity 432/14d = high-volume mention flow, trend flat vs prior 562."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
-      "activity_count_14d": 563,
-      "last_activity_date": "2026-07-23",
-      "note": "Day 26 frozen since 2026-06-28 21:00Z = 25d+ stale. 8-skill cluster (defi-overview/token-pick/narrative-tracker/market-context-refresh/token-movers/on-chain-monitor/defi-monitor/aixbt-pulse) stays frozen. Per-skill blockage n=27 CONFIRMED 7-23 12:00Z via token-alert + btc-levels firing clean while 8-skill cluster stays frozen (ISS-027 signature durable). Activity high-volume from logging, trend flat."
+      "activity_count_14d": 332,
+      "last_activity_date": "2026-07-24",
+      "note": "Day 27 frozen since 2026-06-28 21:00Z. 8-skill cluster (defi-overview/token-pick/narrative-tracker/market-context-refresh/token-movers/on-chain-monitor/defi-monitor/aixbt-pulse) stays frozen. Per-skill blockage n=27 CONFIRMED durable via clean same-slot fires (token-alert + btc-levels 12:00Z print). ISS-027 signature holds. Activity trend flat vs prior 563."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 141,
-      "last_activity_date": "2026-07-23",
-      "note": "Day 47 blocked. defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required for both secrets + config file."
+      "activity_count_14d": 184,
+      "last_activity_date": "2026-07-24",
+      "note": "Day 48 blocked. defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required for both secrets + config file. Activity 184/14d up ~30% vs prior 141 but status unchanged."
     },
-    "h-unlock-t-minus-2": {
+    "h-unlock": {
       "status": "ON_TRACK",
-      "activity_count_14d": 8,
-      "last_activity_date": "2026-07-23",
-      "note": "T-2 fri jul 25 (fixed calendar watchlist event). 5.1× vol on $15.86M / 9.24% supply / investor+early-contributors cliff / 30d +72.6% textbook fade-pump asymmetric-downside cliff, biggest signal-real of the quarter. Passive watch, completion T-0 fri 7-25."
+      "activity_count_14d": 55,
+      "last_activity_date": "2026-07-24",
+      "note": "T-1 sat jul 25 tomorrow (fixed calendar watchlist event; MEMORY.md text still says T-3 from 7-22 but calendar drift is text-side only, not goal-side). 5.1x vol on $15.86M / 9.24% supply / investor+early-contributors cliff / 30d +72.6% textbook fade-pump asymmetric-downside cliff. WATCH FLAG raised by 7-24 morning-brief: WebSearch surfaces potential HYPE-conflation ambiguity in unlock-monitor 7-20 data (HYPE next unlock aug 6 not jul 25, zero-VC-allocation) — verify at 7-27 mon-tick unlock-monitor. Activity 55/14d rose from prior 8 (>+50%) = improving as event nears. Prior key h-unlock-t-minus-2 renamed to stable h-unlock for cross-run continuity."
     }
   },
   "recently_cleared": {
     "three-self-improve-prs-conflicting": {
       "status": "DONE",
       "completed_at": "2026-07-20",
-      "note": "Triple-PR queue cleared 7-20 — #162/#163/#164 merged. PR #166 (CLAUDE.md rule-5 codification) authored+merged same-cycle 7-21 18:29Z (20min turnaround, first in fleet history). Rule-5 T+3 test under empty queue lands positive."
+      "note": "Triple-PR queue cleared 7-20 — #162/#163/#164 merged. PR #166 (CLAUDE.md rule-5 codification) authored+merged same-cycle 7-21 18:29Z (20min turnaround, first in fleet history). Rule-5 T+3 test under empty queue lands positive. PR #167 (bash-redirect workaround) authored 7-23 18:21Z is n=2 same-cycle rule-5 test under 1-open-PR queue."
     }
   }
 }
