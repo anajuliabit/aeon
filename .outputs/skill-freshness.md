@@ -1,27 +1,28 @@
-Done. Here's what happened:
+All three writes are done. Here's the summary:
 
 ## Summary
 
-**Skill**: `skill-freshness` | **Status**: `FRESHNESS_NO_CHANGE` | **No notification sent**
+**Skill:** skill-freshness | **Date:** 2026-07-24 | **Status:** FRESHNESS_NO_CHANGE
 
-**Execution:**
-- Parsed `aeon.yml`: 43 enabled skills (of ~115 total)
-- `chains: {}` → 0 explicit consume edges
-- Grepped enabled SKILL.md files for extractable file references (specific paths matching the 4 regex classes)
-- Found 8 implicit dependencies across 4 consumers
+**Audited:** 43 enabled skills · 8 implicit file dependencies · 0 flagged
 
-**Dependency audit (all OK):**
-| Consumer | File | Class | Age | Verdict |
-|---|---|---|---|---|
-| skill-security-scan | `memory/state/security-scan.json` | state | ~10m | ✅ OK |
-| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | articles/weekly | ~10m | ✅ OK |
-| skill-security-scan | `articles/security-scan-2026-07-20.md` | articles/weekly | ~10m | ✅ OK |
-| vuln-scanner | `.outputs/github-trending.md` | outputs | ~10m | ✅ OK |
-| aixbt-pulse | `memory/topics/aixbt-grounding.md` | topics | ~10m | ✅ OK |
-| aixbt-pulse | `memory/topics/aixbt-clusters.md` | topics | ~10m | ✅ OK |
-| aixbt-pulse | `memory/topics/aixbt-chains.md` | topics | ~10m | ✅ OK |
-| market-context-refresh | `memory/topics/market-context.md` | topics | ~10m | ✅ OK |
+**Dependencies checked (all OK):**
+| Consumer | Dependency | Class | Age |
+|---|---|---|---|
+| skill-security-scan | `memory/state/security-scan.json` | state | ~5m |
+| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | articles/weekly | ~5m |
+| skill-security-scan | `articles/security-scan-2026-07-20.md` | articles/weekly | ~5m |
+| vuln-scanner | `.outputs/github-trending.md` | outputs | ~5m |
+| aixbt-pulse | `memory/topics/aixbt-grounding.md` | topics | ~5m |
+| aixbt-pulse | `memory/topics/aixbt-clusters.md` | topics | ~5m |
+| aixbt-pulse | `memory/topics/aixbt-chains.md` | topics | ~5m |
+| market-context-refresh | `memory/topics/market-context.md` | topics | ~5m |
 
-**Dedup**: fingerprint `da39a3ee` (sha1 of empty flagged set) matches yesterday's run (2026-07-22T08:56:01Z, within 7-day window) → `FRESHNESS_NO_CHANGE`, notification suppressed.
+All mtimes reflect the git checkout at 08:44:59 UTC — files appear ~5 min old. No threshold exceeded.
 
-**Files written**: `articles/skill-freshness-2026-07-23.md`, `memory/topics/skill-freshness-state.json`, `memory/logs/2026-07-23.md` (log entry prepended).
+**Dedup:** fingerprint `da39a3ee` unchanged from yesterday's run (23h ago, within 7d window) → notification suppressed.
+
+**Files written:**
+- `articles/skill-freshness-2026-07-24.md` — report
+- `memory/topics/skill-freshness-state.json` — `last_run_at` updated to 2026-07-24T08:50:09Z
+- `memory/logs/2026-07-24.md` — log entry created
