@@ -1,17 +1,40 @@
-## Summary
+*Security Digest — 2026-07-24*
+Verdict: 3 npm-malware to check-and-purge, 5 to schedule this week, 3 to monitor. _Sources: KEV, GH Advisory, EPSS_
 
-Ran the security-digest skill for 2026-07-23. Pulled CISA KEV (9 entries added in the 7-day window), GH Advisory Database (9 critical / 98 high / 100+ malware in 48h), and EPSS enrichment. Deduplicated against last 2 days of logs (13 CVEs + 25 GHSAs already covered).
+*PATCH TODAY* — npm-malware wave (45 typosquats/attack-packages published in 24h — largest single-day batch this quarter)
+- [GHSA-f246-8cf4-26v7](https://github.com/advisories/GHSA-f246-8cf4-26v7) — fs-extra-core (npm) · type=malware · typosquat of `fs-extra` (~30M weekly downloads)
+  Highest-blast-radius typosquat in wave.
+  → purge fs-extra-core from lockfiles today; rotate creds for any env that installed it.
+- [GHSA-p53q-mf26-4h26](https://github.com/advisories/GHSA-p53q-mf26-4h26) — vue-demi-fix (npm) · type=malware · typosquat of `vue-demi`
+  Vue ecosystem targeted.
+  → purge vue-demi-fix from lockfiles; audit Vue projects.
+- [GHSA-f99h-9jhg-jrxw](https://github.com/advisories/GHSA-f99h-9jhg-jrxw) — fastify-bundler (npm) · type=malware · Fastify-adjacent typosquat
+  → purge fastify-bundler; audit Fastify projects.
 
-**Ranked 3/5/3 tiers:**
+*PATCH THIS WEEK*
+- [CVE-2026-59822](https://github.com/advisories/GHSA-7488-6r32-c95q) — litellm (pip) · CVSS v4 8.8 · EPSS 0.002
+  MCP auth bypass via OAuth2 passthrough fallback. AI-framework attack-surface signal n=2 — extends Langflow RCE KEV (7-21) rail.
+  → upgrade litellm to ≥1.84.0.
+- [CVE-2026-64645](https://github.com/advisories/GHSA-p9j2-gv94-2wf4) — next (npm) · CVSS v4 8.3
+  SSRF in rewrites via attacker-controlled destination hostname.
+  → upgrade next to ≥15.5.21 or ≥16.2.11.
+- [CVE-2026-55685](https://github.com/advisories/GHSA-chx6-hx7r-mcp5) — react-router (npm) · CVSS v4 8.7
+  Unauthenticated DoS via inefficient route matching.
+  → upgrade react-router to ≥7.18.0.
+- [CVE-2026-64649](https://github.com/advisories/GHSA-89xv-2m56-2m9x) — next (npm) · CVSS v4 8.3
+  SSRF in Server Actions on custom servers.
+  → upgrade next to ≥15.5.21 or ≥16.2.11.
+- [CVE-2026-54673](https://github.com/advisories/GHSA-p2f4-r6v6-j797) — builder-util-runtime / electron-updater (npm) · CVSS v4 8.2
+  Cross-origin redirect leaks `PRIVATE-TOKEN` + mixed-case `Authorization` headers.
+  → upgrade builder-util-runtime to ≥9.7.0.
 
-- **PATCH TODAY** — 2 fresh KEV adds (SharePoint deserialization RCE CVE-2026-50522 EPSS 0.21 + Check Point SmartConsole auth bypass CVE-2026-16232, both CISA-due 2026-07-25) + npm `ethers-wallet-package` malware trio (wallet-stealer typosquat, all 3 published today 01:01Z).
-- **PATCH THIS WEEK** — 2 fresh next-auth criticals published today (fail-open + homoglyph @ bypass, 15min apart), postcss arbitrary file read (fix 8.5.12), svgo removeScripts XSS 8.2, JupyterLab XSS pair.
-- **MONITOR** — pyasn1 3-CVE DoS cluster (fix 0.6.4, transitive under `cryptography`), immutable.js List trie DoS, malware feed volume (100+/48h, 61 pip + 38 npm + 1 composer).
-
-**Notable pattern surface:** SharePoint dual-KEV week (CVE-2026-50522 6 days after CVE-2026-58644, same product), npm-auth-primitive same-day-double (2 next-auth crits within 15min), ethers-wallet trio extends `[[wallet-credential-stealer-supply-chain]]` rail from n=1 (injective 6-27) to n=4.
-
-**Delivery:** Digest is 3120 chars (under 4000 cap), queued at `.pending-notify/1784820704.md` for post-run delivery — bash `>` redirect regression continued today (n=3 same-week), `./notify` script exec blocked, so wrote the pending file directly and let the post-run step ship it.
-
-**Files:** `.pending-notify/1784820704.md` (digest), `memory/logs/2026-07-23.md` (log entry appended with tier counts, IDs, source status, notable patterns, and full skill summary). Log line: `SECURITY_DIGEST_OK`.
-
-**Follow-up:** SharePoint dual-KEV suggests ongoing ToolShell-class exploit chain worth naming; next-auth `[[same-day-double-critical]]` is a fresh pattern candidate; T-2 Friday 7-25 = both KEV due dates + H unlock cliff = triple-signal day.
+*MONITOR*
+- [n8n 24-CVE mass-disclose](https://github.com/advisories?query=n8n) — npm · [[single-project-mass-disclose]] extends n=2 → n=3 (post-Pillow 7-20 / Gitea 7-21)
+  Auth bypass, prototype pollution, credential leak, sandbox escape, Git-node RCE across 24 advisories in ~2h window.
+  → if running n8n, upgrade to ≥1.123.67 / ≥2.32.1 / ≥2.31.5.
+- [GHSA-4w2j-m93h-cj5j](https://github.com/advisories/GHSA-4w2j-m93h-cj5j) — quinn-proto (rust/crates.io) · CVSS 7.5
+  Remote memory exhaustion via unbounded out-of-order stream reassembly.
+  → upgrade quinn-proto to ≥0.11.15.
+- [CVE-2026-59935 + CVE-2026-59936](https://github.com/advisories/GHSA-g867-7843-wf8q) — pypdf (pip) · CVSS v4 8.7
+  Infinite loop on malformed inline images (ASCII85/ASCIIHex).
+  → upgrade pypdf to ≥6.14.2 if processing untrusted PDFs.
