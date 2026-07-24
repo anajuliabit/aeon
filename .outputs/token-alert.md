@@ -1,7 +1,7 @@
-*Token Alert — 2026-07-23*
+*token alert — 2026-07-24*
 
-WELL: $0.00330965 (down 3.31% 24h)
-Volume: $1,344,826 (15.68x average)
-Trigger: volume spike — $1.34M vs 5d mean $85.8K, first vol-spike fire in watchlist history. Price only -3.31% but participation 16x yesterday's $83K = distribution or accumulation, not drift.
+WELL: $0.00330780 (-1.33% 24h)
+vol: $2,053,628 (6.11× baseline $336.2K)
+trigger: vol-spike d2 continuation — participation doubles off yesterday's $1.35M print, price fade shallows from -3.31% to -1.33%. 7-window baseline lifts to $336K on 7-23 outlier entering, gate still cleared. two-day vol-spike arc = accumulation-look strengthening.
 
-quiet on the other 3: MAMO -2.46% vol 0.995x baseline, REPPO -4.93% vol 0.62x, GITLAWB -5.23% (gives back +16.53% from yesterday) vol 0.79x. all sub-threshold.
+others clean: MAMO -0.42% / 0.88× · REPPO -4.54% / 0.84× · GITLAWB -7.06% / 1.69× — all sub-gate on both checks.

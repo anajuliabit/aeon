@@ -1,0 +1,137 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "token alert — 2026-07-24"
+      },
+      "children": [
+        "well_section",
+        "separator_1",
+        "trigger_section",
+        "separator_2",
+        "others_section"
+      ]
+    },
+    "well_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "well_heading",
+        "well_price",
+        "well_volume"
+      ]
+    },
+    "well_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "WELL",
+        "level": "h2"
+      }
+    },
+    "well_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00330780",
+        "delta": "-1.33%",
+        "trend": "down"
+      }
+    },
+    "well_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$2,053,628",
+        "delta": "6.11× baseline ($336.2K)"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trigger_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trigger_heading",
+        "trigger_details"
+      ]
+    },
+    "trigger_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trigger: vol-spike d2 continuation",
+        "level": "h3"
+      }
+    },
+    "trigger_details": {
+      "type": "Text",
+      "props": {
+        "text": "Participation doubles off yesterday's $1.35M print, price fade shallows from -3.31% to -1.33%. 7-window baseline lifts to $336K on 7-23 outlier entering, gate still cleared. Two-day vol-spike arc = accumulation-look strengthening.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "others_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "others_heading",
+        "others_table"
+      ]
+    },
+    "others_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Others (all sub-gate)",
+        "level": "h3"
+      }
+    },
+    "others_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Token",
+          "24h Change",
+          "Volume Ratio"
+        ],
+        "rows": [
+          [
+            "MAMO",
+            "-0.42%",
+            "0.88×"
+          ],
+          [
+            "REPPO",
+            "-4.54%",
+            "0.84×"
+          ],
+          [
+            "GITLAWB",
+            "-7.06%",
+            "1.69×"
+          ]
+        ]
+      }
+    }
+  }
+}
