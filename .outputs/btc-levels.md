@@ -1,17 +1,14 @@
 ## Summary
 
-Ran btc-levels skill for the 16:15 UTC slot (fired 17:16Z).
+**btc-levels 21:21Z run — no alerts.**
 
-**Data fetched:**
-- Spot: **$63,886** (down ~$1,506 from 08:46Z's $65,392)
-- July 23 daily close: **$65,052** (from the 2026-07-24 00:00 UTC snapshot)
+- **Spot:** $64,111.55 (up ~$225 from 17:16Z's $63,886)
+- **Daily close (2026-07-23):** $65,052.47
 
-**Level evaluation — all clear:**
-| Level | Check | Result |
-|---|---|---|
-| Spot ≤ $45,000 (leverage-review) | $63,886 >> $45k | NO |
-| Daily close < $60,500 (breakdown) | $65,052 ≥ $60.5k | NO |
-| Reclaim $63,500 | flag already set, no re-arm (spot > $60.5k) | NO |
-| Reclaim $65,900 | flag already set, spot below level | NO |
+Level checks:
+- Leverage-review (≤$45k): clear — spot $64k well above
+- Breakdown close (<$60,500): clear — close $65,052 above trigger
+- Reclaim $63,500: already alerted (`true`), re-arm gate ($60,500) not hit
+- Reclaim $65,900: already alerted (`true`), spot below $65,900 but re-arm gate not hit
 
-No notification sent (quiet run). State and log committed to main.
+No notification sent (quiet run). State file and log committed (`aae7870`).

@@ -843,3 +843,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-24,list-digest,claude-opus-4-7,23,12153,1152035,95015
 2026-07-24,action-converter,claude-opus-4-7,83,37919,2630471,135927
 2026-07-24,heartbeat,claude-opus-4-7,17,14346,1084287,97552
+2026-07-24,btc-levels,claude-sonnet-4-6,12,5932,522472,49795
