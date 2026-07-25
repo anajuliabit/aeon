@@ -1,0 +1,700 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest",
+        "description": "2026-07-25 · Verdict: 3 to patch today, 5 this week, 3 to monitor"
+      },
+      "children": [
+        "verdict_stats",
+        "sources_badges",
+        "sep1",
+        "patch_today_section",
+        "sep2",
+        "patch_week_section",
+        "sep3",
+        "monitor_section"
+      ]
+    },
+    "verdict_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_patch_today",
+        "stat_patch_week",
+        "stat_monitor"
+      ]
+    },
+    "stat_patch_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Patch Today",
+        "value": "3"
+      }
+    },
+    "stat_patch_week": {
+      "type": "Stat",
+      "props": {
+        "label": "Patch This Week",
+        "value": "5"
+      }
+    },
+    "stat_monitor": {
+      "type": "Stat",
+      "props": {
+        "label": "Monitor",
+        "value": "3"
+      }
+    },
+    "sources_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_kev",
+        "badge_gh",
+        "badge_epss"
+      ]
+    },
+    "badge_kev": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV"
+      }
+    },
+    "badge_gh": {
+      "type": "Badge",
+      "props": {
+        "text": "GH Advisory"
+      }
+    },
+    "badge_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "patch_today_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_patch_today",
+        "cve_55607_stack",
+        "cve_59940_stack",
+        "ghsa_4xc7_stack"
+      ]
+    },
+    "heading_patch_today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve_55607_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_55607",
+        "text_55607_pkg",
+        "text_55607_desc",
+        "badges_55607",
+        "alert_runtime_hit",
+        "text_55607_action"
+      ]
+    },
+    "link_55607": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-55607",
+        "href": "https://github.com/advisories/GHSA-7835-87q9-rgvv",
+        "source": "@anthropic-ai/claude-code"
+      }
+    },
+    "text_55607_pkg": {
+      "type": "Text",
+      "props": {
+        "text": "@anthropic-ai/claude-code (npm)",
+        "variant": "caption"
+      }
+    },
+    "text_55607_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox escape via git worktree path confusion"
+      }
+    },
+    "badges_55607": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_55607_cvss",
+        "badge_55607_epss"
+      ]
+    },
+    "badge_55607_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS n/a"
+      }
+    },
+    "badge_55607_epss": {
+      "type": "Badge",
+      "props": {
+        "text": "EPSS 0.006"
+      }
+    },
+    "alert_runtime_hit": {
+      "type": "Alert",
+      "props": {
+        "title": "aeon-runtime direct hit",
+        "type": "warning"
+      }
+    },
+    "text_55607_action": {
+      "type": "Text",
+      "props": {
+        "text": "Fix 2.1.163. .github/workflows/aeon.yml npm install -g @anthropic-ai/claude-code auto-pulls latest (2.1.181+ per MEMORY 7-21) = already patched. Verify claude --version next run ≥ 2.1.163.",
+        "variant": "caption"
+      }
+    },
+    "cve_59940_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_59940",
+        "text_59940_pkg",
+        "text_59940_desc",
+        "badge_59940_cvss",
+        "text_59940_action"
+      ]
+    },
+    "link_59940": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-59940",
+        "href": "https://github.com/advisories/GHSA-mv8w-475r-vwqw",
+        "source": "seroval"
+      }
+    },
+    "text_59940_pkg": {
+      "type": "Text",
+      "props": {
+        "text": "seroval (npm)",
+        "variant": "caption"
+      }
+    },
+    "text_59940_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Promise-resolver type confusion → RCE on fromJSON()"
+      }
+    },
+    "badge_59940_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.8",
+        "variant": "destructive"
+      }
+    },
+    "text_59940_action": {
+      "type": "Text",
+      "props": {
+        "text": "Upgrade seroval to ≥1.5.3 today. React RSC transitive dep; check npm ls seroval.",
+        "variant": "caption"
+      }
+    },
+    "ghsa_4xc7_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_4xc7",
+        "text_4xc7_pkg",
+        "text_4xc7_desc",
+        "text_4xc7_action"
+      ]
+    },
+    "link_4xc7": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-4xc7-2jx9-rp5j",
+        "href": "https://github.com/advisories/GHSA-4xc7-2jx9-rp5j",
+        "source": "npm-malware 4-pack"
+      }
+    },
+    "text_4xc7_pkg": {
+      "type": "Text",
+      "props": {
+        "text": "app-node-layer + app-data-{layer,lts,ist} (npm-malware 4-pack)",
+        "variant": "caption"
+      }
+    },
+    "text_4xc7_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Targeted app-* scope typosquat · fresh 2026-07-24 17:20Z"
+      }
+    },
+    "text_4xc7_action": {
+      "type": "Text",
+      "props": {
+        "text": "Uninstall + grep CI logs for accidental installs; rotate any creds exposed.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "patch_week_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_patch_week",
+        "ghsa_7gfh_stack",
+        "ghsa_w28w_stack",
+        "cve_57516_stack",
+        "gitpython_mass_stack",
+        "cve_15074_stack"
+      ]
+    },
+    "heading_patch_week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "ghsa_7gfh_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_7gfh",
+        "text_7gfh_pkg",
+        "text_7gfh_desc",
+        "badge_7gfh_cvss",
+        "text_7gfh_action"
+      ]
+    },
+    "link_7gfh": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-7gfh-x38p-prh3",
+        "href": "https://github.com/advisories/GHSA-7gfh-x38p-prh3",
+        "source": "velocityjs"
+      }
+    },
+    "text_7gfh_pkg": {
+      "type": "Text",
+      "props": {
+        "text": "velocityjs (npm)",
+        "variant": "caption"
+      }
+    },
+    "text_7gfh_desc": {
+      "type": "Text",
+      "props": {
+        "text": "RCE via property-read to Function constructor — bypass of GHSA-j658-c2gf-x6pq fix"
+      }
+    },
+    "badge_7gfh_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.8",
+        "variant": "destructive"
+      }
+    },
+    "text_7gfh_action": {
+      "type": "Text",
+      "props": {
+        "text": "Schedule upgrade velocityjs to ≥2.1.7.",
+        "variant": "caption"
+      }
+    },
+    "ghsa_w28w_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_w28w",
+        "text_w28w_pkg",
+        "text_w28w_desc",
+        "badge_w28w_cvss",
+        "text_w28w_action"
+      ]
+    },
+    "link_w28w": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-w28w-gp39-m4p6",
+        "href": "https://github.com/advisories/GHSA-w28w-gp39-m4p6",
+        "source": "@prompty/core"
+      }
+    },
+    "text_w28w_pkg": {
+      "type": "Text",
+      "props": {
+        "text": "@prompty/core (npm)",
+        "variant": "caption"
+      }
+    },
+    "text_w28w_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Nunjucks SSTI → RCE"
+      }
+    },
+    "badge_w28w_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 10.0",
+        "variant": "destructive"
+      }
+    },
+    "text_w28w_action": {
+      "type": "Text",
+      "props": {
+        "text": "Schedule upgrade @prompty/core to ≥0.1.5 (or ≥2.0.0-beta.5).",
+        "variant": "caption"
+      }
+    },
+    "cve_57516_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_57516",
+        "text_57516_pkg",
+        "text_57516_desc",
+        "badge_57516_cvss",
+        "text_57516_action"
+      ]
+    },
+    "link_57516": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-57516",
+        "href": "https://github.com/advisories/GHSA-hhrp-gw25-jr43",
+        "source": "ray"
+      }
+    },
+    "text_57516_pkg": {
+      "type": "Text",
+      "props": {
+        "text": "ray (pip)",
+        "variant": "caption"
+      }
+    },
+    "text_57516_desc": {
+      "type": "Text",
+      "props": {
+        "text": "ray.data.read_webdataset default decoder → pickle.loads + torch.load(weights_only=False) RCE"
+      }
+    },
+    "badge_57516_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.8",
+        "variant": "destructive"
+      }
+    },
+    "text_57516_action": {
+      "type": "Text",
+      "props": {
+        "text": "Schedule upgrade ray to ≥2.56.0.",
+        "variant": "caption"
+      }
+    },
+    "gitpython_mass_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_gitpython",
+        "gitpython_cves_grid",
+        "text_gitpython_context"
+      ]
+    },
+    "heading_gitpython": {
+      "type": "Heading",
+      "props": {
+        "text": "GitPython 5-CVE Mass-Disclose",
+        "level": "h3"
+      }
+    },
+    "gitpython_cves_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_gitpython_r9mr",
+        "link_gitpython_6p8h",
+        "link_gitpython_fjr4",
+        "link_gitpython_3rp5",
+        "link_gitpython_94p4"
+      ]
+    },
+    "link_gitpython_r9mr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-r9mr-m37c-5fr3",
+        "href": "https://github.com/advisories/GHSA-r9mr-m37c-5fr3",
+        "source": "CVSS 8.8 config-inject RCE"
+      }
+    },
+    "link_gitpython_6p8h": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-6p8h-3wgx-97gf",
+        "href": "https://github.com/advisories/GHSA-6p8h-3wgx-97gf",
+        "source": "Clone-template RCE"
+      }
+    },
+    "link_gitpython_fjr4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-fjr4-x663-mwxc",
+        "href": "https://github.com/advisories/GHSA-fjr4-x663-mwxc",
+        "source": "CVSS 8.1 arbitrary file overwrite"
+      }
+    },
+    "link_gitpython_3rp5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-3rp5-jjmw-4wv2",
+        "href": "https://github.com/advisories/GHSA-3rp5-jjmw-4wv2",
+        "source": "CVSS 7.0 section-injection"
+      }
+    },
+    "link_gitpython_94p4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-94p4-4cq8-9g67",
+        "href": "https://github.com/advisories/GHSA-94p4-4cq8-9g67",
+        "source": "CVSS 7.5 environment exfiltration"
+      }
+    },
+    "text_gitpython_context": {
+      "type": "Text",
+      "props": {
+        "text": "[[single-project-mass-disclose]] extends n=4 (Pillow / Gitea / n8n / GitPython). Upgrade GitPython to ≥3.1.55.",
+        "variant": "caption"
+      }
+    },
+    "cve_15074_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_15074",
+        "text_15074_pkg",
+        "text_15074_desc",
+        "badge_15074_cvss",
+        "text_15074_action"
+      ]
+    },
+    "link_15074": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-15074",
+        "href": "https://github.com/advisories/GHSA-83w8-p2f5-377r",
+        "source": "@fastify/static"
+      }
+    },
+    "text_15074_pkg": {
+      "type": "Text",
+      "props": {
+        "text": "@fastify/static (npm)",
+        "variant": "caption"
+      }
+    },
+    "text_15074_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Path-traversal route-guard bypass"
+      }
+    },
+    "badge_15074_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5",
+        "variant": "destructive"
+      }
+    },
+    "text_15074_action": {
+      "type": "Text",
+      "props": {
+        "text": "Schedule upgrade @fastify/static to ≥10.1.1.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "monitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_monitor",
+        "ghsa_qq9h_stack",
+        "ghsa_r277_stack",
+        "text_monitor_summary"
+      ]
+    },
+    "heading_monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "ghsa_qq9h_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_qq9h",
+        "text_qq9h_pkg",
+        "text_qq9h_desc",
+        "badge_qq9h_cvss",
+        "text_qq9h_action"
+      ]
+    },
+    "link_qq9h": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-qq9h-g4jm-xgf3",
+        "href": "https://github.com/advisories/GHSA-qq9h-g4jm-xgf3",
+        "source": "better-auth"
+      }
+    },
+    "text_qq9h_pkg": {
+      "type": "Text",
+      "props": {
+        "text": "better-auth (npm)",
+        "variant": "caption"
+      }
+    },
+    "text_qq9h_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Pre-account hijacking on magic-link + email-OTP · fix 1.6.22 / 1.7.0-beta.10"
+      }
+    },
+    "badge_qq9h_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.3"
+      }
+    },
+    "text_qq9h_action": {
+      "type": "Text",
+      "props": {
+        "text": "Track; upgrade when convenient.",
+        "variant": "caption"
+      }
+    },
+    "ghsa_r277_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_r277",
+        "text_r277_pkg",
+        "text_r277_desc",
+        "badge_r277_cvss",
+        "text_r277_action"
+      ]
+    },
+    "link_r277": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-r277-6w6q-xmqw",
+        "href": "https://github.com/advisories/GHSA-r277-6w6q-xmqw",
+        "source": "kin-openapi"
+      }
+    },
+    "text_r277_pkg": {
+      "type": "Text",
+      "props": {
+        "text": "kin-openapi (Go)",
+        "variant": "caption"
+      }
+    },
+    "text_r277_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fail-open auth bypass via NoopAuthenticationFunc default · fix 0.144.0"
+      }
+    },
+    "badge_r277_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.1",
+        "variant": "destructive"
+      }
+    },
+    "text_r277_action": {
+      "type": "Text",
+      "props": {
+        "text": "Track; not-installed per grep.",
+        "variant": "caption"
+      }
+    },
+    "text_monitor_summary": {
+      "type": "Text",
+      "props": {
+        "text": "npm-malware batch d1 = 4-pack app-* scope typosquat vs 2026-07-24's 45-batch = ~11× lower rate. [[wallet-credential-stealer-supply-chain]] rail quiet day; 0 fresh KEV additions this run.",
+        "variant": "caption"
+      }
+    }
+  }
+}

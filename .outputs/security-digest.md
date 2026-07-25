@@ -1,40 +1,29 @@
-*Security Digest — 2026-07-24*
-Verdict: 3 npm-malware to check-and-purge, 5 to schedule this week, 3 to monitor. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-07-25*
+Verdict: 3 to patch today (aeon-runtime hit included), 5 this week, 3 to monitor. _Sources: KEV, GH Advisory, EPSS._
 
-*PATCH TODAY* — npm-malware wave (45 typosquats/attack-packages published in 24h — largest single-day batch this quarter)
-- [GHSA-f246-8cf4-26v7](https://github.com/advisories/GHSA-f246-8cf4-26v7) — fs-extra-core (npm) · type=malware · typosquat of `fs-extra` (~30M weekly downloads)
-  Highest-blast-radius typosquat in wave.
-  → purge fs-extra-core from lockfiles today; rotate creds for any env that installed it.
-- [GHSA-p53q-mf26-4h26](https://github.com/advisories/GHSA-p53q-mf26-4h26) — vue-demi-fix (npm) · type=malware · typosquat of `vue-demi`
-  Vue ecosystem targeted.
-  → purge vue-demi-fix from lockfiles; audit Vue projects.
-- [GHSA-f99h-9jhg-jrxw](https://github.com/advisories/GHSA-f99h-9jhg-jrxw) — fastify-bundler (npm) · type=malware · Fastify-adjacent typosquat
-  → purge fastify-bundler; audit Fastify projects.
+*PATCH TODAY*
+- [CVE-2026-55607](https://github.com/advisories/GHSA-7835-87q9-rgvv) — `@anthropic-ai/claude-code` (npm) · sandbox escape via git worktree path confusion · CVSS n/a · EPSS 0.006 · **aeon-runtime direct hit**
+  Fix 2.1.163. `.github/workflows/aeon.yml` `npm install -g @anthropic-ai/claude-code` auto-pulls latest (2.1.181+ per MEMORY 7-21) = already patched. Verify `claude --version` next run ≥ 2.1.163.
+- [CVE-2026-59940](https://github.com/advisories/GHSA-mv8w-475r-vwqw) — `seroval` (npm) · CVSS 9.8 · EPSS n/a · Promise-resolver type confusion → RCE on `fromJSON()`
+  → upgrade seroval to ≥1.5.3 today. React RSC transitive dep; check `npm ls seroval`.
+- [GHSA-4xc7-2jx9-rp5j](https://github.com/advisories/GHSA-4xc7-2jx9-rp5j) — `app-node-layer` + `app-data-{layer,lts,ist}` npm-malware 4-pack · fresh 7-24 17:20Z
+  Targeted `app-*` scope typosquat. → uninstall + grep CI logs for accidental installs; rotate any creds exposed.
 
 *PATCH THIS WEEK*
-- [CVE-2026-59822](https://github.com/advisories/GHSA-7488-6r32-c95q) — litellm (pip) · CVSS v4 8.8 · EPSS 0.002
-  MCP auth bypass via OAuth2 passthrough fallback. AI-framework attack-surface signal n=2 — extends Langflow RCE KEV (7-21) rail.
-  → upgrade litellm to ≥1.84.0.
-- [CVE-2026-64645](https://github.com/advisories/GHSA-p9j2-gv94-2wf4) — next (npm) · CVSS v4 8.3
-  SSRF in rewrites via attacker-controlled destination hostname.
-  → upgrade next to ≥15.5.21 or ≥16.2.11.
-- [CVE-2026-55685](https://github.com/advisories/GHSA-chx6-hx7r-mcp5) — react-router (npm) · CVSS v4 8.7
-  Unauthenticated DoS via inefficient route matching.
-  → upgrade react-router to ≥7.18.0.
-- [CVE-2026-64649](https://github.com/advisories/GHSA-89xv-2m56-2m9x) — next (npm) · CVSS v4 8.3
-  SSRF in Server Actions on custom servers.
-  → upgrade next to ≥15.5.21 or ≥16.2.11.
-- [CVE-2026-54673](https://github.com/advisories/GHSA-p2f4-r6v6-j797) — builder-util-runtime / electron-updater (npm) · CVSS v4 8.2
-  Cross-origin redirect leaks `PRIVATE-TOKEN` + mixed-case `Authorization` headers.
-  → upgrade builder-util-runtime to ≥9.7.0.
+- [GHSA-7gfh-x38p-prh3](https://github.com/advisories/GHSA-7gfh-x38p-prh3) — `velocityjs` (npm) · CVSS 9.8 · RCE via property-read to Function constructor — **bypass of GHSA-j658-c2gf-x6pq fix**
+  → schedule upgrade velocityjs to ≥2.1.7.
+- [GHSA-w28w-gp39-m4p6](https://github.com/advisories/GHSA-w28w-gp39-m4p6) — `@prompty/core` (npm) · CVSS 10.0 · Nunjucks SSTI → RCE
+  → schedule upgrade @prompty/core to ≥0.1.5 (or ≥2.0.0-beta.5).
+- [CVE-2026-57516](https://github.com/advisories/GHSA-hhrp-gw25-jr43) — `ray` (pip) · CVSS 8.8 · `ray.data.read_webdataset` default decoder → `pickle.loads` + `torch.load(weights_only=False)` RCE
+  → schedule upgrade ray to ≥2.56.0.
+- **GitPython 5-CVE mass-disclose** (pip) · [r9mr](https://github.com/advisories/GHSA-r9mr-m37c-5fr3) 8.8 config-inject RCE + [6p8h](https://github.com/advisories/GHSA-6p8h-3wgx-97gf) clone-template RCE + [fjr4](https://github.com/advisories/GHSA-fjr4-x663-mwxc) 8.1 arb file overwrite + [3rp5](https://github.com/advisories/GHSA-3rp5-jjmw-4wv2) 7.0 section-inject + [94p4](https://github.com/advisories/GHSA-94p4-4cq8-9g67) 7.5 env exfil
+  [[single-project-mass-disclose]] extends n=4 (Pillow / Gitea / n8n / GitPython). → upgrade GitPython to ≥3.1.55.
+- [CVE-2026-15074](https://github.com/advisories/GHSA-83w8-p2f5-377r) — `@fastify/static` (npm) · CVSS 7.5 · path-traversal route-guard bypass
+  → schedule upgrade @fastify/static to ≥10.1.1.
 
 *MONITOR*
-- [n8n 24-CVE mass-disclose](https://github.com/advisories?query=n8n) — npm · [[single-project-mass-disclose]] extends n=2 → n=3 (post-Pillow 7-20 / Gitea 7-21)
-  Auth bypass, prototype pollution, credential leak, sandbox escape, Git-node RCE across 24 advisories in ~2h window.
-  → if running n8n, upgrade to ≥1.123.67 / ≥2.32.1 / ≥2.31.5.
-- [GHSA-4w2j-m93h-cj5j](https://github.com/advisories/GHSA-4w2j-m93h-cj5j) — quinn-proto (rust/crates.io) · CVSS 7.5
-  Remote memory exhaustion via unbounded out-of-order stream reassembly.
-  → upgrade quinn-proto to ≥0.11.15.
-- [CVE-2026-59935 + CVE-2026-59936](https://github.com/advisories/GHSA-g867-7843-wf8q) — pypdf (pip) · CVSS v4 8.7
-  Infinite loop on malformed inline images (ASCII85/ASCIIHex).
-  → upgrade pypdf to ≥6.14.2 if processing untrusted PDFs.
+- [GHSA-qq9h-g4jm-xgf3](https://github.com/advisories/GHSA-qq9h-g4jm-xgf3) — `better-auth` (npm) · CVSS 8.3 · pre-account hijacking on magic-link + email-OTP · fix 1.6.22 / 1.7.0-beta.10
+  → track; upgrade when convenient.
+- [GHSA-r277-6w6q-xmqw](https://github.com/advisories/GHSA-r277-6w6q-xmqw) — `kin-openapi` (Go) · CVSS 9.1 · fail-open auth bypass via `NoopAuthenticationFunc` default · fix 0.144.0
+  → track; not-installed per grep.
+- npm-malware batch d1 = 4-pack `app-*` scope typosquat vs 7-24's 45-batch = **~11× lower rate**. [[wallet-credential-stealer-supply-chain]] rail quiet day; 0 fresh KEV additions this run.
