@@ -852,4 +852,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-25,security-digest,claude-opus-4-7,54,37802,3732510,116532
 2026-07-25,vuln-scanner,claude-opus-4-7,143,74538,21287382,225587
 2026-07-25,agent-buzz,claude-opus-4-7,36,16799,1922080,77187
-2026-07-25,skill-health,claude-opus-4-7,47,18406,3676581,97595
+2026-07-25,goal-tracker,claude-opus-4-7,33,26023,1912536,91501

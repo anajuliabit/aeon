@@ -1,0 +1,207 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-25"
+      },
+      "children": [
+        "summary_stack",
+        "trend_line",
+        "separator1",
+        "on_track_section",
+        "separator2",
+        "blocked_section",
+        "separator3",
+        "sources_line"
+      ]
+    },
+    "summary_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_at_risk",
+        "stat_attention",
+        "stat_on_track",
+        "stat_blocked",
+        "stat_done"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Goals",
+        "value": "5"
+      }
+    },
+    "stat_at_risk": {
+      "type": "Stat",
+      "props": {
+        "label": "At Risk",
+        "value": "0"
+      }
+    },
+    "stat_attention": {
+      "type": "Stat",
+      "props": {
+        "label": "Needs Attention",
+        "value": "0"
+      }
+    },
+    "stat_on_track": {
+      "type": "Stat",
+      "props": {
+        "label": "On Track",
+        "value": "1"
+      }
+    },
+    "stat_blocked": {
+      "type": "Stat",
+      "props": {
+        "label": "Blocked",
+        "value": "4"
+      }
+    },
+    "stat_done": {
+      "type": "Stat",
+      "props": {
+        "label": "Done",
+        "value": "0"
+      }
+    },
+    "trend_line": {
+      "type": "Text",
+      "props": {
+        "text": "Overall: flat | h-unlock ↑ improving | on-chain ↓ degrading",
+        "variant": "caption"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "on_track_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on_track_heading",
+        "on_track_item"
+      ]
+    },
+    "on_track_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on_track_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on_track_title",
+        "on_track_details"
+      ]
+    },
+    "on_track_title": {
+      "type": "Text",
+      "props": {
+        "text": "H unlock T-1 fri jul 25 tomorrow",
+        "variant": "lead"
+      }
+    },
+    "on_track_details": {
+      "type": "Text",
+      "props": {
+        "text": "0d idle, 148 activity/14d (↑ improving; T-0 today, morning-brief WebSearch confirmed **SPURIOUS/false-positive** — daily-routine 12z print H +5.8% zero cliff-signature; MEMORY line 5 correction pending unlock-monitor 7-27 re-verify)",
+        "variant": "body"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "blocked_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_heading",
+        "blocked_item_1",
+        "blocked_item_2",
+        "blocked_item_3",
+        "blocked_item_4"
+      ]
+    },
+    "blocked_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked_item_1": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-025 capture-step PR T+8 day-9",
+        "message": "Waiting on operator direct-author of sandbox pivot since 2026-07-16 (T+9 day-10, 4 days past 1-week slip; verb-pool exhausted → weekly-review hand-off)\n\nAction: operator direct-authors `dangerouslyDisableSandbox` pivot in `.github/workflows/aeon.yml:479-495` per upstream iss #53012",
+        "type": "warning"
+      }
+    },
+    "blocked_item_2": {
+      "type": "Alert",
+      "props": {
+        "title": "12:00 UTC batch DARK day-27",
+        "message": "Waiting on ISS-027 per-skill blockage investigation since 2026-06-28 (d28 frozen; aixbt-pulse 56+ consec 12h-cadence misses)\n\nAction: operator manually re-dispatches 8-skill cluster or downgrades sandbox constraint per ISS-027",
+        "type": "warning"
+      }
+    },
+    "blocked_item_3": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator on-chain config day-48",
+        "message": "Waiting on ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets + `memory/on-chain-watches.yml` extension (d49; activity ↓ degrading -52% vs prior)\n\nAction: operator adds both secrets + adds type:pool/type:position entries to `memory/on-chain-watches.yml`",
+        "type": "warning"
+      }
+    },
+    "blocked_item_4": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md 50d stale",
+        "message": "Round-number threshold cross 7-24 — waiting on operator refresh since 2026-06-04 (d51 today, new goal this run)\n\nAction: operator reviews/refreshes `priorities.md` current-focus lines (Reppo orquestra + Aeon personal-stack lines 51d stale)",
+        "type": "warning"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_line": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=fail(shallow-checkout, 1 commit visible), gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

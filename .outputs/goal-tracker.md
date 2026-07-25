@@ -1,16 +1,18 @@
-*Goal Tracker — 2026-07-24*
+*Goal Tracker — 2026-07-25*
 
-Summary: 4 goals — 0 at risk · 0 needs attention · 1 on track · 3 blocked · 0 done (overall → flat)
+Summary: 5 goals — 0 at risk, 0 needs attention, 1 on track, 4 blocked, 0 done (overall → flat; h-unlock ↑ improving, on-chain ↓ degrading)
 
-*BLOCKED*
-• *ISS-025 capture-step PR T+8 day-9* — 3rd day past 1-week slip; blocker = sandbox network enforcement (excludedCommands doesn't exempt per upstream #53012). PR #167 is different regression family.
-  → Action: operator authors `dangerouslyDisableSandbox` patch on `.github/workflows/aeon.yml:479-495` capture-step
-• *12:00 UTC batch DARK day-27* — 8-skill cluster frozen since 6-28; ISS-027 per-skill blockage n=27 confirmed via clean same-slot fires (token-alert / btc-levels).
-  → Action: root-cause ISS-027 per-skill freeze on 12z-batch cluster; workflow-level trigger diverges from single-skill trigger
-• *Operator on-chain config day-48* — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` (currently 5 wallets, 0 pools/positions) + `ALCHEMY_API_KEY` + `ETHERSCAN_API_KEY`.
-  → Action: operator adds 2 GH Actions secrets + populates on-chain-watches.yml with pool/position entries
+ON TRACK
+• H unlock T-1 fri jul 25 tomorrow — 0d idle, 148 activity/14d (↑ improving; T-0 today, morning-brief WebSearch confirmed **SPURIOUS/false-positive** — daily-routine 12z print H +5.8% zero cliff-signature; MEMORY line 5 correction pending unlock-monitor 7-27 re-verify)
 
-*ON TRACK*
-• *H unlock T-1 sat jul 25* — 0d idle, 55 activity/14d (↑ improving from 8 prior). Cliff tomorrow. Watch flag: WebSearch surfaces HYPE-conflation ambiguity — verify at 7-27 unlock-monitor mon-tick.
+BLOCKED
+• ISS-025 capture-step PR T+8 day-9 — waiting on operator direct-author of sandbox pivot since 2026-07-16 (T+9 day-10, 4 days past 1-week slip; verb-pool exhausted → weekly-review hand-off)
+  → Action: operator direct-authors `dangerouslyDisableSandbox` pivot in `.github/workflows/aeon.yml:479-495` per upstream iss #53012
+• 12:00 UTC batch DARK day-27 — waiting on ISS-027 per-skill blockage investigation since 2026-06-28 (d28 frozen; aixbt-pulse 56+ consec 12h-cadence misses)
+  → Action: operator manually re-dispatches 8-skill cluster or downgrades sandbox constraint per ISS-027
+• Operator on-chain config day-48 — waiting on ALCHEMY_API_KEY + ETHERSCAN_API_KEY secrets + `memory/on-chain-watches.yml` extension (d49; activity ↓ degrading -52% vs prior)
+  → Action: operator adds both secrets + adds type:pool/type:position entries to `memory/on-chain-watches.yml`
+• priorities.md 50d stale — round-number threshold cross 7-24 — waiting on operator refresh since 2026-06-04 (d51 today, new goal this run)
+  → Action: operator reviews/refreshes `priorities.md` current-focus lines (Reppo orquestra + Aeon personal-stack lines 51d stale)
 
-Sources: logs=ok, git=partial(1-commit-branch), gh_pr=ok, gh_issue=ok, cron-state=ok
+Sources: logs=ok, git=fail(shallow-checkout, 1 commit visible), gh_pr=ok, gh_issue=ok, cron-state=ok
