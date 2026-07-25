@@ -1,0 +1,317 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-25"
+      },
+      "children": [
+        "shape_line",
+        "sep1",
+        "action1",
+        "sep2",
+        "action2",
+        "sep3",
+        "action3",
+        "sep4",
+        "action4",
+        "sep5",
+        "action5",
+        "sep6",
+        "sources"
+      ]
+    },
+    "shape_line": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: aeon-runtime CVE verify · ISS-027 d18 file · patch-week deps grep · ISS-028 file · github-issues SKILL patch",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a1_heading",
+        "a1_task",
+        "a1_why",
+        "a1_done",
+        "a1_loop"
+      ]
+    },
+    "a1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. CVE-2026-55607 Claude Version Verification",
+        "level": "h3"
+      }
+    },
+    "a1_task": {
+      "type": "Text",
+      "props": {
+        "text": "Verify `claude --version` is ≥ 2.1.163 on any 2026-07-25 CI run log — CVE-2026-55607 `@anthropic-ai/claude-code` sandbox-escape hits aeon-runtime directly"
+      }
+    },
+    "a1_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: RCE via git-worktree path confusion on the fleet's own CLI; auto-patched via unpinned `npm install -g` per aeon.yml but unconfirmed",
+        "variant": "muted"
+      }
+    },
+    "a1_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: grep any today's actions-run job log for \"claude --version\" line ≥ 2.1.163 (or `.github/workflows/aeon.yml` install step output)",
+        "variant": "muted"
+      }
+    },
+    "a1_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: ai-framework-attack-surface-aeon-runtime-cve-2026-55607",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a2_heading",
+        "a2_task",
+        "a2_why",
+        "a2_done",
+        "a2_loop"
+      ]
+    },
+    "a2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. File ISS-027 Memory Issue",
+        "level": "h3"
+      }
+    },
+    "a2_task": {
+      "type": "Text",
+      "props": {
+        "text": "File `memory/issues/ISS-027.md` for 12:00 UTC batch-DARK per-skill blockage n=28 durable since 2026-06-28"
+      }
+    },
+    "a2_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: MEMORY.md line 6 references ISS-027 as if it exists = load-bearing doc-gap d18, blocks any resolve/wontfix reasoning",
+        "variant": "muted"
+      }
+    },
+    "a2_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `memory/issues/ISS-027.md` exists with YAML frontmatter (id/title/status=open/severity=high/category=sandbox-limitation/affected_skills=[defi-overview,token-pick,token-movers,narrative-tracker,market-context-refresh,fleet-control,on-chain-monitor,defi-monitor,aixbt-pulse]) + row appended to `memory/issues/INDEX.md` open table",
+        "variant": "muted"
+      }
+    },
+    "a2_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: iss-027-batch-dark-file-carry-d18",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a3_heading",
+        "a3_task",
+        "a3_why",
+        "a3_done",
+        "a3_loop"
+      ]
+    },
+    "a3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Grep for Vulnerable Dependencies",
+        "level": "h3"
+      }
+    },
+    "a3_task": {
+      "type": "Text",
+      "props": {
+        "text": "Grep `scripts/ apps/ package.json .github/workflows/` for `velocityjs|@prompty/core|^ray$|GitPython|@fastify/static` — verify none of today's PATCH-THIS-WEEK deps reach aeon-runtime"
+      }
+    },
+    "a3_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: security-digest 14Z surfaced 5 fresh RCEs (velocityjs 9.8 · @prompty/core 10.0 · ray 8.8 pickle · GitPython 5-CVE · @fastify/static 7.5) across npm+pip",
+        "variant": "muted"
+      }
+    },
+    "a3_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `grep -rEn 'velocityjs|@prompty/core|ray|GitPython|@fastify/static' scripts/ apps/ package.json .github/` output empty (expected) or triaged",
+        "variant": "muted"
+      }
+    },
+    "a3_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: security-digest-patch-this-week-grep-verify",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a4_heading",
+        "a4_task",
+        "a4_why",
+        "a4_done",
+        "a4_loop"
+      ]
+    },
+    "a4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. File ISS-028 Memory Issue",
+        "level": "h3"
+      }
+    },
+    "a4_task": {
+      "type": "Text",
+      "props": {
+        "text": "File `memory/issues/ISS-028.md` for bash-`>`-redirect sandbox regression n=7+ same-family across 3 UTC-day span"
+      }
+    },
+    "a4_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: workaround chain (curl `-o` / Write / Read+Edit) durable but reflect itself hit it 7-24 mid-run = ISS-file threshold firmly crossed",
+        "variant": "muted"
+      }
+    },
+    "a4_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `memory/issues/ISS-028.md` exists with root-cause + validated-workaround chain + affected_skills [security-digest, agent-buzz, daily-routine, github-trending, reflect] + row in INDEX",
+        "variant": "muted"
+      }
+    },
+    "a4_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: bash-redirect-regression-iss-028-file-carry-d2",
+        "variant": "caption"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "a5_heading",
+        "a5_task",
+        "a5_why",
+        "a5_done",
+        "a5_loop"
+      ]
+    },
+    "a5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Update GitHub Issues Field Name",
+        "level": "h3"
+      }
+    },
+    "a5_task": {
+      "type": "Text",
+      "props": {
+        "text": "Apply `comments` → `commentsCount` field rename in `skills/github-issues/SKILL.md` step 2 `gh search issues` query"
+      }
+    },
+    "a5_why": {
+      "type": "Text",
+      "props": {
+        "text": "Why: gh API field renamed; d3 carry from morning-brief 7-23 flag surfaced in daily-routine issue-fetch stubs",
+        "variant": "muted"
+      }
+    },
+    "a5_done": {
+      "type": "Text",
+      "props": {
+        "text": "Done: `skills/github-issues/SKILL.md` step 2 uses `--json ...,commentsCount,...` (git diff shows single-line rename)",
+        "variant": "muted"
+      }
+    },
+    "a5_loop": {
+      "type": "Text",
+      "props": {
+        "text": "Loop: github-issues-skill-md-field-rename-carry-d3",
+        "variant": "caption"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=67 logs=7 topics=8 prs=2 cron_failing=0 mode=OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

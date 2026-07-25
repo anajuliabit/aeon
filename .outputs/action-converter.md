@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-24*
-Shape: close 7-08 ISS-027/028 filing carry, fix MEMORY Kimi drift, verify LiteLLM, patch skill
+*5 Actions — 2026-07-25*
+Shape: aeon-runtime CVE verify · ISS-027 d18 file · patch-week deps grep · ISS-028 file · github-issues SKILL patch
 
-1. create memory/issues/ISS-027.md for 12:00 UTC batch-dark 8-skill cluster (d27) with YAML frontmatter + append INDEX.md row
-why: MEMORY.md line 6 references ISS-027 as if it exists; 7-08 action-converter filing claim uncompleted d16
-done: file exists with severity=critical + category=sandbox-limitation + 8 named affected_skills + INDEX.md row appended
-loop: iss-027-batch-dark-file-carry-d16
+1. verify `claude --version` is ≥ 2.1.163 on any 2026-07-25 CI run log — CVE-2026-55607 `@anthropic-ai/claude-code` sandbox-escape hits aeon-runtime directly
+why: RCE via git-worktree path confusion on the fleet's own CLI; auto-patched via unpinned `npm install -g` per aeon.yml but unconfirmed
+done: grep any today's actions-run job log for "claude --version" line ≥ 2.1.163 (or `.github/workflows/aeon.yml` install step output)
+loop: ai-framework-attack-surface-aeon-runtime-cve-2026-55607
 
-2. author memory/issues/ISS-028.md for bash-`>`/`>>` redirect sandbox regression (n=6 across 5 skills, 3 UTC-day span)
-why: security-digest 14:14Z says "beyond noise-floor"; n=6 durable across secdigest/agent-buzz/daily-routine/github-trending
-done: file exists with severity=medium + category=sandbox-limitation + 6 named fires + PR #167 workaround referenced
-loop: bash-redirect-regression-iss-028-file-carry
+2. file `memory/issues/ISS-027.md` for 12:00 UTC batch-DARK per-skill blockage n=28 durable since 2026-06-28
+why: MEMORY.md line 6 references ISS-027 as if it exists = load-bearing doc-gap d18, blocks any resolve/wontfix reasoning
+done: `memory/issues/ISS-027.md` exists with YAML frontmatter (id/title/status=open/severity=high/category=sandbox-limitation/affected_skills=[defi-overview,token-pick,token-movers,narrative-tracker,market-context-refresh,fleet-control,on-chain-monitor,defi-monitor,aixbt-pulse]) + row appended to `memory/issues/INDEX.md` open table
+loop: iss-027-batch-dark-file-carry-d18
 
-3. correct memory/MEMORY.md line 48 Kimi K3 drift — K3 shipped 7-16 per morning-brief 08:52Z WebSearch, not pending 7-27
-why: 3 skills today (morning-brief/daily-routine/heartbeat) all flagged same drift; calendar decisions read off stale line
-done: line 48 edited to drop "Kimi K3 open-weights 7-27" T-3 framing; DeepSeek V4 stable 7-24 stands standalone
-loop: memory-line-48-kimi-drift
+3. grep `scripts/ apps/ package.json .github/workflows/` for `velocityjs|@prompty/core|^ray$|GitPython|@fastify/static` — verify none of today's PATCH-THIS-WEEK deps reach aeon-runtime
+why: security-digest 14Z surfaced 5 fresh RCEs (velocityjs 9.8 · @prompty/core 10.0 · ray 8.8 pickle · GitPython 5-CVE · @fastify/static 7.5) across npm+pip
+done: `grep -rEn 'velocityjs|@prompty/core|ray|GitPython|@fastify/static' scripts/ apps/ package.json .github/` output empty (expected) or triaged
+loop: security-digest-patch-this-week-grep-verify
 
-4. verify LiteLLM not installed via `grep -rEn 'litellm|LiteLLM' scripts/ apps/ package.json`
-why: CVE-2026-59822 LiteLLM MCP auth-bypass patched today lands adjacent to Aeon's Virtuals/Claude OAuth orchestration
-done: grep count + result stamped in today's log Action Converter follow-up
-loop: litellm-install-verify-cve-2026-59822
+4. file `memory/issues/ISS-028.md` for bash-`>`-redirect sandbox regression n=7+ same-family across 3 UTC-day span
+why: workaround chain (curl `-o` / Write / Read+Edit) durable but reflect itself hit it 7-24 mid-run = ISS-file threshold firmly crossed
+done: `memory/issues/ISS-028.md` exists with root-cause + validated-workaround chain + affected_skills [security-digest, agent-buzz, daily-routine, github-trending, reflect] + row in INDEX
+loop: bash-redirect-regression-iss-028-file-carry-d2
 
-5. patch skills/github-issues/SKILL.md step 2 `comments`→`commentsCount` field rename
-why: GH API field renamed per MEMORY.md fleet-health line 19 + 7-23 log context; 2-day carry accumulating
-done: SKILL.md diff shows commentsCount replacing comments in step 2 gh api snippet
-loop: github-issues-skill-md-field-rename-carry-d2
+5. apply `comments` → `commentsCount` field rename in `skills/github-issues/SKILL.md` step 2 `gh search issues` query
+why: gh API field renamed; d3 carry from morning-brief 7-23 flag surfaced in daily-routine issue-fetch stubs
+done: `skills/github-issues/SKILL.md` step 2 uses `--json ...,commentsCount,...` (git diff shows single-line rename)
+loop: github-issues-skill-md-field-rename-carry-d3
 
-sources: memory=101 logs=15 topics=10 prs=2 cron_failing=0 mode=OK
+sources: memory=67 logs=7 topics=8 prs=2 cron_failing=0 mode=OK
