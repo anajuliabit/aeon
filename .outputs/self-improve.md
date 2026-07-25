@@ -1,1 +1,1 @@
-self-improve: codify operator weekly-batch PR review cadence in CLAUDE.md — PR #166 https://github.com/anajuliabit/aeon/pull/166
+self-improve: fix(github-issues) json field `comments` → `commentsCount` — gh CLI dropped the field, current SKILL.md would fail the JSON fetch and silently fall back. PR: https://github.com/anajuliabit/aeon/pull/168
