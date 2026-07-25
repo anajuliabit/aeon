@@ -1,20 +1,22 @@
-*Evening Recap — 2026-07-24*
-_TL;DR: heavy cron day — reflect codifies 10+ patterns + action-converter shapes 2 ISS filings, but bash-redirect regression hits n=6+ and ISS-027 filing carry stalls at d16 with no files created._
+*Evening Recap — 2026-07-25*
+_TL;DR: 3 artifacts shipped (PR #168 + 2 articles), MEMORY rewritten with 25+ patterns — clean op day; ISS-027/028 d18 file-carry the only open gap._
 
 *Headlines:*
-- token-alert — WELL vol-spike d2 fires 6.11× ($2.054M, first-ever back-to-back); fade shallows -1.33% on +53% participation = accumulation-look d2 · `.tmp/token-alert/msg.md`
-- reflect — MEMORY.md rewritten: Kimi K3 date corrected (7-16 not 7-27), 10+ patterns codified (UB d4 fires, BUILDon -32%, BEAT accelerating-sustain, agent-as-equal-member Nostr workspace NEW) · `memory/MEMORY.md`
-- security-digest — npm-malware 45-batch d1 (fs-extra-core ~30M DL typosquat highest-blast-radius); LiteLLM CVE-2026-59822 MCP auth-bypass (AI-framework-attack-surface n=2); n8n 24-CVE mass-disclose n=3 · `.tmp/secdigest/msg.md`
-- action-converter — ISS-027 (batch-dark d16 carry) + ISS-028 (bash-redirect n=6+) proposed; Kimi drift + LiteLLM CVE verify + github-issues field-rename shaped · `.tmp/action-converter/msg.md`
-- github-trending — 4 kept: block/buzz ACCELERATING (agent-as-equal-member) + mattpocock/skills ACCELERATING + harper RETURNING + ego-lite RETURNING · `.outputs/github-trending.md`
+- [self-improve] — PR #168 opened: `comments→commentsCount` fix in github-issues SKILL.md · https://github.com/anajuliabit/aeon/pull/168
+- [vuln-scanner] — block/buzz clean-audit-partial-scan, 0 confirmed (3 triaged-to-drop) · articles/vuln-scan-2026-07-25.md
+- [skill-freshness] — FRESHNESS_STALE first detection (7 flags, fingerprint changed da39a3ee→1ab8c658) · articles/skill-freshness-2026-07-25.md
+- [reflect] — MEMORY.md rewritten 18:30Z, 25+ patterns codified, H unlock false-positive cleared · memory/logs/2026-07-25-reflect.md
+
+*Notable:*
+- [security-digest] — CVE-2026-55607 `@anthropic-ai/claude-code` sandbox escape, aeon-runtime direct hit (auto-patched 2.1.163); AI-framework-attack-surface n=3; GitPython 5-CVE mass-disclose n=4
+- [morning-brief] — H unlock T-0 SPURIOUS confirmed (WebSearch: next HYPE aug 6 not today; H +5.8% on 1.4× vol = zero cliff-signature)
+- [daily-routine] — tilted-red d2: 17/100 breadth / -1.3% median; Claude Opus 5 ships ($5 input, effort-toggle — aeon cost-lever candidate)
+- [github-trending] — 100% recycled board first-in-memory (slow-week signal); block/buzz d2 +51% release-catalyst compound
+- [agent-buzz] — MCP-as-delivery + tier-routing clusters, 3 kept (quiet-day honest ship)
 
 *Decisions for tomorrow:*
-- H unlock T-0 (7-25): cliff day 9.24% supply investor+early-contributors — ticker-resolution watch (HYPE vs H, verify unlock-monitor 7-27)
-- file ISS-027 (batch-dark d27) + ISS-028 (bash-redirect n=6+): action-converter shaped both today, neither file exists yet
-- merge PR #167 or carry: bash-redirect workaround fix (~27h old), supports ISS-028 filing · https://github.com/anajuliabit/aeon/pull/167
+- merge PR #165 or flag deferred (crosses 7d weekly-batch gate ~00:39Z 7-26)
+- file ISS-027 + ISS-028 (d18 carry; action-converter shaped create-actions at score 100/80 — operator or direct-author)
+- queue at 3 PRs (#165 + #167 + #168) — self-improve exits early until one merges
 
-*Blockers:*
-- ISS-025 — cost-report CRITICAL, sandbox-truncation T+8 day-9, dangerouslyDisableSandbox pivot operator-side pending · 3 days past 1-week slip
-- ISS-027 filing carry d16 — MEMORY.md line 6 references ISS-027 as existing but file never created
-
-_+6 routine runs collapsed · sources: log=ok cron-state=ok_
+_+11 routine runs collapsed · sources: log=ok cron-state=ok_

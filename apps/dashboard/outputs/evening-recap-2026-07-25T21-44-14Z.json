@@ -1,0 +1,340 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-25",
+        "description": "TL;DR: 3 artifacts shipped (PR #168 + 2 articles), MEMORY rewritten with 25+ patterns — clean op day; ISS-027/028 d18 file-carry the only open gap."
+      },
+      "children": [
+        "headlines_section",
+        "sep1",
+        "notable_section",
+        "sep2",
+        "decisions_section",
+        "sep3",
+        "closing_stats"
+      ]
+    },
+    "headlines_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_title",
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ]
+    },
+    "h_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "h1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1_badge",
+        "h1_story"
+      ]
+    },
+    "h1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve"
+      }
+    },
+    "h1_story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #168 opened: comments→commentsCount fix in github-issues SKILL.md",
+        "href": "https://github.com/anajuliabit/aeon/pull/168",
+        "source": "GitHub"
+      }
+    },
+    "h2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2_badge",
+        "h2_text",
+        "h2_link"
+      ]
+    },
+    "h2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "vuln-scanner"
+      }
+    },
+    "h2_text": {
+      "type": "Text",
+      "props": {
+        "text": "block/buzz clean-audit-partial-scan, 0 confirmed (3 triaged-to-drop)"
+      }
+    },
+    "h2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "articles/vuln-scan-2026-07-25.md",
+        "href": "articles/vuln-scan-2026-07-25.md"
+      }
+    },
+    "h3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3_badge",
+        "h3_text",
+        "h3_link"
+      ]
+    },
+    "h3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-freshness"
+      }
+    },
+    "h3_text": {
+      "type": "Text",
+      "props": {
+        "text": "FRESHNESS_STALE first detection (7 flags, fingerprint changed da39a3ee→1ab8c658)"
+      }
+    },
+    "h3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "articles/skill-freshness-2026-07-25.md",
+        "href": "articles/skill-freshness-2026-07-25.md"
+      }
+    },
+    "h4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4_badge",
+        "h4_text",
+        "h4_link"
+      ]
+    },
+    "h4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "reflect"
+      }
+    },
+    "h4_text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md rewritten 18:30Z, 25+ patterns codified, H unlock false-positive cleared"
+      }
+    },
+    "h4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "memory/logs/2026-07-25-reflect.md",
+        "href": "memory/logs/2026-07-25-reflect.md"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "n_title",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5"
+      ]
+    },
+    "n_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "n1": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "security-digest",
+        "message": "CVE-2026-55607 @anthropic-ai/claude-code sandbox escape, aeon-runtime direct hit (auto-patched 2.1.163); AI-framework-attack-surface n=3; GitPython 5-CVE mass-disclose n=4"
+      }
+    },
+    "n2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n2_badge",
+        "n2_text"
+      ]
+    },
+    "n2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "morning-brief"
+      }
+    },
+    "n2_text": {
+      "type": "Text",
+      "props": {
+        "text": "H unlock T-0 SPURIOUS confirmed (WebSearch: next HYPE aug 6 not today; H +5.8% on 1.4× vol = zero cliff-signature)"
+      }
+    },
+    "n3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n3_badge",
+        "n3_text"
+      ]
+    },
+    "n3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "daily-routine"
+      }
+    },
+    "n3_text": {
+      "type": "Text",
+      "props": {
+        "text": "tilted-red d2: 17/100 breadth / -1.3% median; Claude Opus 5 ships ($5 input, effort-toggle — aeon cost-lever candidate)"
+      }
+    },
+    "n4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n4_badge",
+        "n4_text"
+      ]
+    },
+    "n4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "github-trending"
+      }
+    },
+    "n4_text": {
+      "type": "Text",
+      "props": {
+        "text": "100% recycled board first-in-memory (slow-week signal); block/buzz d2 +51% release-catalyst compound"
+      }
+    },
+    "n5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "n5_badge",
+        "n5_text"
+      ]
+    },
+    "n5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-buzz"
+      }
+    },
+    "n5_text": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-as-delivery + tier-routing clusters, 3 kept (quiet-day honest ship)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "d_title",
+        "d1",
+        "d2",
+        "d3"
+      ]
+    },
+    "d_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for tomorrow",
+        "level": "h2"
+      }
+    },
+    "d1": {
+      "type": "Text",
+      "props": {
+        "text": "merge PR #165 or flag deferred (crosses 7d weekly-batch gate ~00:39Z 7-26)"
+      }
+    },
+    "d2": {
+      "type": "Text",
+      "props": {
+        "text": "file ISS-027 + ISS-028 (d18 carry; action-converter shaped create-actions at score 100/80 — operator or direct-author)"
+      }
+    },
+    "d3": {
+      "type": "Text",
+      "props": {
+        "text": "queue at 3 PRs (#165 + #167 + #168) — self-improve exits early until one merges"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "closing_stats": {
+      "type": "Text",
+      "props": {
+        "text": "+11 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
