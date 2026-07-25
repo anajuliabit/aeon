@@ -1,29 +1,24 @@
-*Morning Brief — 2026-07-24*
+*Morning Brief — 2026-07-25 (sat)*
 
 *Focus today*
-1. H unlock T-1 (jul 25) — why now: cliff hits in 24h per 7-20 unlock-monitor
-2. WELL vol-spike d1 — why now: 12z print resolves distribution vs accumulation
-3. iss-025 sandbox-truncation T+8 day-9 — why now: 8d past 1-week slip, pivot still operator-side
+1. h unlock T-0 = SPURIOUS — websearch confirms next HYPE unlock aug 6 not today; yesterday's ticker-flag lands
+2. WELL vol-spike d3 12z test — unprecedented n=3 back-to-back streak in watchlist history
+3. iss-027/028 filing carry d17 — action-converter shaped 2 file-creates yesterday; tests op response
 
 *Since yesterday*
-- PR #167 authored 18:21z by self-improve — bash `>` redirect workaround for n=3 same-week regression. rule-5 primitive n=2 same-cycle test lands positive under 1-open-PR queue.
-- WELL fires first-ever vol-spike-only alert 15.68× on $85.8K baseline (7-17 $2,008K outlier exit = enabler). alert-class-shift 3-regime firms: zero → 24h-change → vol-spike-only.
-- reflect 18:30z codified 8 patterns — code-review-graph 6-day plateau-fade shape completes 3-class viral taxonomy; RuView first commodity-WiFi-as-sensor breaks 6-consec agent-thesis rail at d7.
-- security-digest 15:33z — SharePoint dual-KEV week n=1 NEW + next-auth same-day-double crit pair n=1 NEW + ethers-wallet-package typosquat trio extends `[[wallet-credential-stealer-supply-chain]]` rail to n=4.
-- 14-consec heartbeat NOOP durable — 3-tick UTC-day 7-23 completes without break (108h+ span since 7-19 regime-onset).
+- reflect rewrote MEMORY 101L→80L, codified 10+ patterns (breadth 4-shape, UB d4 fires on 7-23 prediction cap n=4, BEAT accelerating-3-day, WELL back-to-back, agent-as-equal-member Nostr, agent-shared browser)
+- action-converter shaped 5 actions incl. 2 iss-file closes (iss-025 verb-pool exhausted → weekly-review hand-off)
+- bash-`>` regression hit reflect itself mid-run = n=7+ across 3 UTC-day span, workaround durability confirmed live
+- 16-consec heartbeat NOOP durable at 106h+ span (7-19 09:17z regime-onset, third full 3-tick UTC-day cycle intact)
+- self-improve SKIPPED yesterday even-day-24 per `0 18 1/2 * *`, FIRES today odd-day-25
 
-*Watch*
-- H ticker-resolution flag — external check returns HYPE zero-VC-allocation + next Hyperliquid unlock aug 6, undermines focus #1 memory line if `H` = HYPE conflation. verify next unlock-monitor 7-27.
-- DeepSeek legacy API endpoints retire today 15:59z — V4 shipped 4-24 already, this is deprecation cutover not fresh ship. reframes yesterday's daily-routine `V4 T-0` framing.
+*Running today (sat 2026-07-25, ODD day 25)*
+- 07z morning-brief (this) + daily-routine + thought-review + skill-freshness
+- 08z heartbeat · 09z github-trending · 12z token-alert (batch-dark d28 expected)
+- 14z heartbeat + security-digest · 17z list-digest + 17:30z agent-buzz
+- 18z goal-tracker + skill-health + reflect + action-converter + **self-improve (odd-day-25 fires)**
+- 20z heartbeat · 20:30z skill-analytics · 21z evening-recap + thought-review + aixbt-pulse (dead d28)
+- btc-levels every 4h at :15
 
-*Running today* (fri, even day 24 — self-improve skipped per `0 18 1/2 * *`)
-- 07z morning-brief (this) · daily-routine · thought-review · skill-freshness
-- 08z heartbeat
-- 09z github-trending
-- 12z token-alert (8-skill batch-dark expected d27)
-- 14z heartbeat · security-digest
-- 17z list-digest · 17:30z agent-buzz
-- 18z goal-tracker · skill-health · reflect · action-converter
-- 20z heartbeat
-- 21z evening-recap · thought-review (aixbt-pulse dead d27)
-- btc-levels @ 00:15 / 04:15 / 08:15 / 12:15 / 16:15 / 20:15
+*UTC-day rollovers*
+sandbox-truncation d32→**d33** · batch-dark d27→**d28** · aixbt-pulse dead d27→**d28** · on-chain d48→**d49** · priorities.md 50d→**51d** · zero-captures d60→**d61** · iss-025 T+9 day-**10** · CoinGecko clean d32→**d33** · search-skill NO_GAP d27→**d28** (T-2 to mon reset) · heartbeat NOOP tests **17-consec**
