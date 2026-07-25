@@ -1,16 +1,22 @@
-*Skill Health — 2026-07-24*
-HEALTH: DEGRADED(18)  [systemic: output_tokens=0 sandbox-truncation day-32 — 18 skills]
+## Summary
 
-🟡 DEGRADED (top 5, 18 total)
-- narrative-tracker — 26d down, sr 33% — WAIT-API
-- market-context-refresh — 26d down, sr 32% — WAIT-API
-- aixbt-pulse — 26d down, sr 47% — WAIT-API
-- defi-monitor — 26d down, sr 53% — WAIT-API
-- vuln-scanner — 6d down, sr 18% — WAIT-API → ISS-018
-+13 more — see memory/issues/INDEX.md
+Ran **skill-health** skill per `skills/skill-health/SKILL.md` at 2026-07-25T18:39:02Z (var="" → all enabled skills).
 
-⚪ NO DATA (3): autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL
-🟢 HEALTHY: 9
+**Verdict: `SKILL_HEALTH_NOOP`** — state unchanged since prev notify.
 
-hash 467ce959 unchanged (4-consec, 96h+ hold) · 12z batch DARK d27 · aixbt-pulse dead-slot d27 · bash `>` redirect regression n=5 across 3 UTC-days
-Open issues: 11 · Resolved this run: 0
+**Classification** (byte-identical to prev report hash `467ce959`):
+- 0 CRITICAL / 18 DEGRADED / 0 FLAPPING / 13 WARNING / 9 HEALTHY / 3 NO_DATA
+- Same 18-skill DEGRADED union, same 3 NO_DATA (autoresearch/fork-skill-gap/operator-scorecard)
+- 5-consec formal-tick hash stability across ~120h span (7-19→7-25 sandbox-truncation regime)
+
+**Gate decision**: NOOP — current_hash matches prev AND delta since prev_notify = 23h44m56s (2026-07-24T18:54:06Z → now) < 24h daily-reminder gate. Barely under (55min buffer) — tomorrow's 18Z tick will cross 24h → NOTIFY guaranteed.
+
+**INDEX.md reconciliation**: 0 filings, 0 resolutions. 5 open-issue affected_skills (vuln-scanner ISS-018, defi-overview ISS-019, token-pick ISS-020, search-skill ISS-021, cost-report ISS-025) all still below sr>=0.8 HEALTHY gate. 11 open issues unchanged.
+
+**`skill-runs` wrapper sandbox-blocked** → `SKILL_HEALTH_PARTIAL` per spec fallback (cron-state + skill-health JSON only).
+
+**Files modified**:
+- `memory/skill-health/last-report.json` — last_run_at advanced to 18:39Z, last_notified_at preserved at 7-24T18:54:06Z, hash preserved, systemic text refreshed for day-33/d28/5-consec-tick context
+- `memory/logs/2026-07-25.md` — appended `### skill-health — 18:39 UTC` bullet block + `## Summary (skill-health 18:39Z)` per CLAUDE.md contract
+
+**No `./notify` call** per NOOP gate.
