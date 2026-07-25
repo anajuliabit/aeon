@@ -851,4 +851,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-25,token-alert,claude-opus-4-7,26,17290,1247866,62512
 2026-07-25,security-digest,claude-opus-4-7,54,37802,3732510,116532
 2026-07-25,vuln-scanner,claude-opus-4-7,143,74538,21287382,225587
-2026-07-25,list-digest,claude-opus-4-7,19,12306,1338002,101154
+2026-07-25,agent-buzz,claude-opus-4-7,36,16799,1922080,77187
