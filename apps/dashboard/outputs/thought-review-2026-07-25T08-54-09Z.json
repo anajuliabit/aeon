@@ -1,0 +1,51 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "thought review",
+        "description": "last 24h"
+      },
+      "children": [
+        "stat_captures",
+        "text_status",
+        "separator_1",
+        "alert_priorities"
+      ]
+    },
+    "stat_captures": {
+      "type": "Stat",
+      "props": {
+        "label": "Captures",
+        "value": "0"
+      },
+      "children": []
+    },
+    "text_status": {
+      "type": "Text",
+      "props": {
+        "text": "nothing to surface",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert_priorities": {
+      "type": "Alert",
+      "props": {
+        "title": "priorities.md",
+        "message": "last reviewed 51 days ago — worth a refresh",
+        "type": "info"
+      },
+      "children": []
+    }
+  }
+}
