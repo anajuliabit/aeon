@@ -1,28 +1,14 @@
-All three writes are done. Here's the summary:
+*skill freshness — 2026-07-25*
+🔴 FRESHNESS_STALE — 7 of 11 deps flagged across 5 of 43 enabled consumers
 
-## Summary
+worst:
+- skill-security-scan ← articles/workflow-security-audit-2026-04-11.md (105d, articles/weekly, STALE — disabled producer)
+- aixbt-pulse ← memory/topics/aixbt-grounding.md (636h, topics, STALE — dark d27)
+- vuln-scanner ← .outputs/github-trending.md (24h, outputs, STALE — self-resolves after github-trending 09:00)
 
-**Skill:** skill-freshness | **Date:** 2026-07-24 | **Status:** FRESHNESS_NO_CHANGE
+also flagged:
+- aixbt-pulse ← aixbt-clusters.md + aixbt-chains.md (same 636h, STALE)
+- market-context-refresh + token-pick ← market-context.md (9d/216h, WARN — 12:00 cluster dark)
 
-**Audited:** 43 enabled skills · 8 implicit file dependencies · 0 flagged
-
-**Dependencies checked (all OK):**
-| Consumer | Dependency | Class | Age |
-|---|---|---|---|
-| skill-security-scan | `memory/state/security-scan.json` | state | ~5m |
-| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | articles/weekly | ~5m |
-| skill-security-scan | `articles/security-scan-2026-07-20.md` | articles/weekly | ~5m |
-| vuln-scanner | `.outputs/github-trending.md` | outputs | ~5m |
-| aixbt-pulse | `memory/topics/aixbt-grounding.md` | topics | ~5m |
-| aixbt-pulse | `memory/topics/aixbt-clusters.md` | topics | ~5m |
-| aixbt-pulse | `memory/topics/aixbt-chains.md` | topics | ~5m |
-| market-context-refresh | `memory/topics/market-context.md` | topics | ~5m |
-
-All mtimes reflect the git checkout at 08:44:59 UTC — files appear ~5 min old. No threshold exceeded.
-
-**Dedup:** fingerprint `da39a3ee` unchanged from yesterday's run (23h ago, within 7d window) → notification suppressed.
-
-**Files written:**
-- `articles/skill-freshness-2026-07-24.md` — report
-- `memory/topics/skill-freshness-state.json` — `last_run_at` updated to 2026-07-24T08:50:09Z
-- `memory/logs/2026-07-24.md` — log entry created
+action: aixbt-pulse dead-slot d27 — check ISS files. security-scan ref is static doc, add ignore marker to SKILL.md:19+132. market-context clears on next cluster recovery.
+full: articles/skill-freshness-2026-07-25.md
