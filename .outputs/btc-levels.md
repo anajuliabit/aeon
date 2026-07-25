@@ -1,11 +1,11 @@
+Skill complete. Quiet run.
+
 ## Summary
 
-**BTC levels run — 16:31Z, 2026-07-25. Quiet.**
-
-- Spot: **$64,088** | Daily close (2026-07-24): **$64,093**
-- No alerts fired:
-  - Leverage-review trigger (≤$45k): not breached
-  - Breakdown signal (<$60,500 close): not breached
-  - Reclaim $63,500: already armed, no re-arm needed (spot still above, not below $60,500 re-arm gate)
-  - Reclaim $65,900: not triggered (spot below level); flags unchanged
-- State updated (`memory/btc-levels-state.json`), log appended (`memory/logs/2026-07-25.md`), committed.
+- **Spot**: $64,276 | **Daily close (2026-07-24)**: $64,093
+- All 4 levels evaluated — no alerts fired:
+  - Leverage-review (≤ $45k): not triggered
+  - Breakdown (close < $60,500): not triggered (close well above)
+  - Reclaim $63,500: already armed
+  - Reclaim $65,900: already armed; re-arm requires spot < $60,500 (not met)
+- State updated and committed: `memory/btc-levels-state.json`, `memory/logs/2026-07-25.md`
