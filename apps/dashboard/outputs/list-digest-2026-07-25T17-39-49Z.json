@@ -1,0 +1,141 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-25",
+        "description": "quiet defi-research list — grok cache-lag repeats 7-24 → 7-25 for the 3rd fire, 3 signal-clearing tweets all dated 7-24 UTC."
+      },
+      "children": [
+        "heading-defi",
+        "tweets-stack",
+        "separator-1",
+        "sources-info",
+        "status-badge"
+      ]
+    },
+    "heading-defi": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFi Research",
+        "level": "h2"
+      }
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1-container",
+        "tweet-2-container",
+        "tweet-3-container"
+      ]
+    },
+    "tweet-1-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-1-link"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "long.xyz took feedback from the community pre-launch; early-stage founder receptivity is the tell, not the token drop (💬 9)",
+        "likes": 29
+      }
+    },
+    "tweet-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2080774092932681839"
+      }
+    },
+    "tweet-2-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "tweet-2-link"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround_",
+        "handle": "Louround_",
+        "text": "SPCX q2 earnings aug 4 + insider unlock aug 6 = double-catalyst window on stock already -50% ATH; starlink/xai print vs supply overhang (image)",
+        "likes": 10,
+        "retweets": 1
+      }
+    },
+    "tweet-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Louround_/status/2080750775899472296"
+      }
+    },
+    "tweet-3-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "tweet-3-link"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DefiIgnas",
+        "handle": "DefiIgnas",
+        "text": "founder-arrogance as post-success trust-breaker (sbf/do kwon/hoskinson); the pattern is the receipt, the armani bet is the disclaimer (💬 2)",
+        "likes": 12
+      }
+    },
+    "tweet-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/DefiIgnas/status/2080744491896443051"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources-info": {
+      "type": "Text",
+      "props": {
+        "text": "sources: 1642770456720683008=ok(10 raw, 3 signal-clearing, 7 quiet-noise, all 7-24 UTC — grok: no 7-25 posts in window)",
+        "variant": "caption"
+      }
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LIST_DIGEST_OK",
+        "variant": "default"
+      }
+    }
+  }
+}

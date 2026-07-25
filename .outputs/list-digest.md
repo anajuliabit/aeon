@@ -1,11 +1,12 @@
-*List Digest — 2026-07-24*
+*List Digest — 2026-07-25*
 
-day-old cache-lag repeats 7-22 → 7-24 — no 7-24 posts on tracked list; 10 items returned, only 2 above single-digit engagement.
+quiet defi-research list — grok cache-lag repeats 7-24 → 7-25 for the 3rd fire, 3 signal-clearing tweets all dated 7-24 UTC.
 
-*AI / Grok-4.5 list*
-- x.com/cyrilXBT — link-only post to an X-native article, no preview text — engagement asymmetric (148 likes, 15 rt) vs the rest of the list scraping 0-1; article content the only unknown (♥ 148, ↻ 15) — [View](https://x.com/cyrilXBT/status/2080397292339704294)
-- x.com/hooeem — "grok 4.5 as your co-founder in 4 images" — reframes grok from tool to org-chart line, pitches on price+speed+SWE-bench vs opus 4.8 / fable 5; distinct from anthropic's assistant framing (♥ 43, ↻ 1) — [View](https://x.com/hooeem/status/2080420417609568278)
+*DeFi Research*
+- x.com/Flowslikeosmo — long.xyz took feedback from the community pre-launch; early-stage founder receptivity is the tell, not the token drop (♥ 29, 💬 9) — [View](https://x.com/Flowslikeosmo/status/2080774092932681839)
+- x.com/Louround_ — SPCX q2 earnings aug 4 + insider unlock aug 6 = double-catalyst window on stock already -50% ATH; starlink/xai print vs supply overhang (♥ 10, ↻ 1, image) — [View](https://x.com/Louround_/status/2080750775899472296)
+- x.com/DefiIgnas — founder-arrogance as post-success trust-breaker (sbf/do kwon/hoskinson); the pattern is the receipt, the armani bet is the disclaimer (♥ 12, 💬 2) — [View](https://x.com/DefiIgnas/status/2080744491896443051)
 
 ---
-sources: 1642770456720683008=ok(10, 2-signal, 7-23 UTC only)
+sources: 1642770456720683008=ok(10 raw, 3 signal-clearing, 7 quiet-noise, all 7-24 UTC — grok: no 7-25 posts in window)
 status: LIST_DIGEST_OK
