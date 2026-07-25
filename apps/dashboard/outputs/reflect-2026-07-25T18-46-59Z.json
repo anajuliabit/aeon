@@ -1,0 +1,206 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Reflect",
+        "description": "Memory consolidation snapshot"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_date",
+        "sep_1",
+        "section_h_unlock",
+        "sep_2",
+        "section_vol_spike",
+        "sep_3",
+        "section_heartbeat",
+        "sep_4",
+        "section_bash",
+        "sep_5",
+        "section_claude",
+        "sep_6",
+        "section_cve",
+        "sep_7",
+        "section_patterns"
+      ]
+    },
+    "section_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-07-25",
+        "level": "h4"
+      }
+    },
+    "sep_1": {
+      "type": "Separator"
+    },
+    "section_h_unlock": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_h_unlock",
+        "stat_upside",
+        "badge_hype"
+      ]
+    },
+    "text_h_unlock": {
+      "type": "Text",
+      "props": {
+        "text": "h unlock t-0 spurious",
+        "variant": "body"
+      }
+    },
+    "stat_upside": {
+      "type": "Stat",
+      "props": {
+        "value": "+5.8%",
+        "trend": "up"
+      }
+    },
+    "badge_hype": {
+      "type": "Badge",
+      "props": {
+        "text": "Next hype: Aug 6",
+        "variant": "secondary"
+      }
+    },
+    "sep_2": {
+      "type": "Separator"
+    },
+    "section_vol_spike": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_vol_spike",
+        "stat_vol_cap"
+      ]
+    },
+    "text_vol_spike": {
+      "type": "Text",
+      "props": {
+        "text": "Vol-spike streak",
+        "variant": "body"
+      }
+    },
+    "stat_vol_cap": {
+      "type": "Badge",
+      "props": {
+        "text": "Caps at n=2",
+        "variant": "default"
+      }
+    },
+    "sep_3": {
+      "type": "Separator"
+    },
+    "section_heartbeat": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_consec_noop",
+        "badge_duration"
+      ]
+    },
+    "stat_consec_noop": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive heartbeat noop",
+        "value": "18"
+      }
+    },
+    "badge_duration": {
+      "type": "Badge",
+      "props": {
+        "text": "~125h",
+        "variant": "default"
+      }
+    },
+    "sep_4": {
+      "type": "Separator"
+    },
+    "section_bash": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_bash_regression",
+        "stat_issue_count",
+        "badge_threshold"
+      ]
+    },
+    "text_bash_regression": {
+      "type": "Text",
+      "props": {
+        "text": "Bash → regression",
+        "variant": "body"
+      }
+    },
+    "stat_issue_count": {
+      "type": "Badge",
+      "props": {
+        "text": "n=7+",
+        "variant": "destructive"
+      }
+    },
+    "badge_threshold": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-file threshold firmly crossed",
+        "variant": "destructive"
+      }
+    },
+    "sep_5": {
+      "type": "Separator"
+    },
+    "section_claude": {
+      "type": "Badge",
+      "props": {
+        "text": "Claude Opus 5 ships (aeon meta-signal)",
+        "variant": "outline"
+      }
+    },
+    "sep_6": {
+      "type": "Separator"
+    },
+    "section_cve": {
+      "type": "Alert",
+      "props": {
+        "title": "CVE-2026-55607",
+        "message": "aeon-runtime direct-hit auto-patched",
+        "type": "success"
+      }
+    },
+    "sep_7": {
+      "type": "Separator"
+    },
+    "section_patterns": {
+      "type": "Stat",
+      "props": {
+        "label": "New patterns codified",
+        "value": "25+"
+      }
+    }
+  }
+}

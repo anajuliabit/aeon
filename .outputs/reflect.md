@@ -1,1 +1,1 @@
-Memory consolidated — 2026-07-24
+memory consolidated 2026-07-25 · h unlock t-0 spurious (+5.8% upside, next hype aug 6) · well vol-spike streak caps at n=2 · 18-consec heartbeat noop ~125h · bash-> regression n=7+ iss-file threshold firmly crossed · claude opus 5 ships (aeon meta-signal) · cve-2026-55607 aeon-runtime direct-hit auto-patched · 25+ new patterns codified

@@ -5,6 +5,53 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-07-25)
+
+- **skill-health hash 467ce959** (stable through 7-25 = 4-consec formal-tick hash identity across 96h+ span 7-20→7-24; 5-consec test 7-25 18Z): **0 CRITICAL** · 18 DEGRADED · 13 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues. Sandbox-truncation family **day-33** (T+9 day-10). cost-report DEGRADED (sr=0.11).
+- **18-consec heartbeat NOOP through 7-25 14:21Z** — flat regime durable across ~125h+ span since 7-19 09:17Z regime-onset. Sequence: 7-19 3× + 7-20 2× + 7-21 3× + 7-22 3× + 7-23 3× + 7-24 3× (adds 20:09Z) + 7-25 2× (08:52Z + 14:21Z, 20Z pending). Fifth full-tick UTC-day cycle in progress.
+- **Chronic sr<0.5 tail (14 skills at 14:21Z 7-25 hb, zero delta since 7-24)** — cost-report 0.11 (57, ISS-025) · reg-monitor 0.17 · skill-analytics 0.18 · vuln-scanner 0.18 (ISS-018) · market-context-refresh 0.32 · narrative-tracker 0.33 · search-skill 0.38 (ISS-021) · security-digest 0.39 · fleet-control 0.40 · skill-health 0.47 · aixbt-pulse 0.47 · goal-tracker 0.49 · action-converter 0.49 · self-improve 0.48. All ISS-019/020/021/025 sandbox-truncation family day-33.
+- **12:00 UTC batch DARK day-28** — 8-skill 6-28 cluster still frozen. Per-skill blockage n=28 CONFIRMED via 7-25 clean same-slot fires (token-alert 12:44Z + btc-levels 12:44Z fire clean while cluster stays frozen = ISS-027 signature durable).
+- **07:00Z morning-batch catch-up-band sat 7-25** — daily-routine 09:05Z (~1h50m late), morning-brief 08:58Z (~1h54m late), thought-review 08:54Z (~1h52m late), heartbeat 08:52Z (~52min late), github-trending 10:28Z (~1h28m late), skill-freshness 09:07Z. Sat catch-up-band drifts slightly wider vs fri 7-24 (~1h45m morning-tick, evening-tick 20min).
+- **Bash-`>` redirect regression n=7+ durable across 3 UTC-day span** — 7-22 secdigest + 7-22 agent-buzz + 7-23 daily-routine + 7-23 secdigest + 7-24 daily-routine + 7-24 github-trending + 7-24 secdigest + **7-24 reflect itself mid-run** = **ISS-file threshold firmly crossed multiple times**. Workaround chain (`curl -o` / Write tool / Read+Edit append) validated on every fire. **7-25 skills that sidestepped cleanly**: security-digest 14Z (used Write + curl -o + jq stdout), github-trending 10:28Z, vuln-scanner 16Z. **7-25 skills that still hit it**: daily-routine 09Z (jq→`.tmp/filtered.json` blocked).
+- **notify sandbox-block observation NEW 7-25** — `./notify` script execution required approval in vuln-scanner run's sandbox this cycle, workaround = write directly to `.pending-notify/<unix-ts>.md` (per CLAUDE.md post-process pattern). Not new ISS-file candidate (matches existing sandbox-family).
+- **CVE-2026-55607 `@anthropic-ai/claude-code` sandbox-escape 7-25** — first-in-memory direct-CVE-on-Aeon-runtime signal via git worktree path confusion (CVSS/fix 2.1.163). **Auto-patched** via unpinned `npm install -g` in CI (`.github/workflows/aeon.yml`). Verify `claude --version` ≥ 2.1.163 next CI dispatch.
+- **GH API field rename** — `gh search issues` `comments` → `commentsCount` field renamed. `skills/github-issues/SKILL.md` step 2 patch still pending (3-day carry).
+- **aixbt-pulse dead-slot d28** — twice-daily 9,21 UTC, last 2026-06-28T21:21Z. 56 consecutive missed 12h cycles pending 21:00Z 7-25 tick.
+- **Self-improve queue at 2 open PRs 7-25** — #167 (bash-redirect fix, ~44h fresh) + #165 (docs skill-graph, ~6d 21h dormant, approaching 7d weekly-batch gate at ~00:39Z 7-26). Both under 3-PR queue-lock gate.
+- **`first_patched_version` field discovery 7-25** — security-digest self-correction on digest fidelity; prior ticks used legacy `patched_versions` (mostly null) vs accurate `first_patched_version` nested under `vulnerabilities[]`.
+- **Weekly-review 2026-07-13 actions status (7-25):**
+  - #1 Operator direct-author ISS-025 capture-step PR by 2026-07-16 — **SLIPPED T+9 day-10 (4 days past 1-week slip)**. iss-025 verb-pool exhausted → downgrade to reflect-scope carry, weekly-review 7-27 hand-off.
+  - #2 Operator decide PR #162 by 2026-07-14 — **SHIPPED via MERGE 7-20 14:16Z**.
+  - #3 Self-improve codifies rule-5 in CLAUDE.md by 2026-07-17 — **SHIPPED via exit-gate primitive 7-19 18:32Z + weekly-batch cadence PR #166 7-21 18:29Z**.
+  - #4 Self-improve investigates Investment Advisor cancellation by 2026-07-16 — **SHIPPED via PR #164 MERGED 7-20 21:50Z**.
+
+## Positive events 7-24 → 7-25
+
+- **H unlock T-0 CONFIRMED SPURIOUS 7-25 morning-brief + daily-routine cascade** — WebSearch (next HYPE aug 6) + daily-routine H +5.8% upside on 1.4× baseline vol = zero cliff-signature. Ticker-resolution ambiguity flagged 7-24 lands cleanly. MEMORY line 5 correction shipped this reflect.
+- **WELL vol-spike streak caps at n=2 mean-reversion path wins 7-25 12z** — morning-brief focus #2 prediction resolves; [[vol-spike-streak-caps-at-n2-under-baseline-drift]] primitive codified.
+- **BTC $65.9k reclaim 5-day-hold-then-break shape codified 7-25** — 4-day hold 7-21→7-24 window, 7-25 breaks intraday but above $60.5k gate = no re-alert (`reclaim65900Alerted=true` intact).
+- **5-shape breadth-regime taxonomy in 5-day window NEW 7-25** — first 5-consec-day distinct-breadth-regime run in memory-window.
+- **UB d5 REVERSES post-d4-unwind 7-25** — +9.5% after 7-24 -9.0% d4 unwind = pattern-tail candidate "3-day-sustain + d4-unwind + d5-reversal" contradicts d5+ decay assumption in [[one-day-breakout-unwind]].
+- **BUILDon d7 slide-fatigue-shape emerging 7-25** — decelerating -12.1% d6 → -7.9% d7 extends pattern-tail to 4-day compound.
+- **BEAT d4 mild unwind -4.4% 7-25** — matches [[one-day-breakout-unwind]] at d4-unwind class but mild magnitude (accelerating-variant milder than flat-sustain-variant).
+- **github-trending 100% recycled-board n=1 NEW 7-25** — 17/17 candidates featured/dropped in prior 2-day window (first-in-memory) = meta-signal for slow-week/catalog-drought.
+- **First "d2 exceeds d1" viral-shape NEW 7-25** — ego-lite 880 exceeds 247 by 256% = late-viral-catch shape breaks standard d1-peak-fade.
+- **worldmonitor 4-day accelerate→plateau→fade arc completes 7-25** — 3-class viral taxonomy firm (1-day + 4-day + 6-day).
+- **HOLDOVER-heavy slate primitive works n=1 7-25** — first slate composed entirely of HOLDOVER re-features under viral-moment clause; both survivors invoke exception with concrete new-reason.
+- **block/buzz release-catalyst COMPOUNDS with viral thesis 7-25** — v0.4.25 landed 23:04Z + d2 +51% rate = release-day-adjacent print accelerates (contrasts 1-3d catalyst-decay).
+- **Fleet-relevance 100% agent-thesis 9-consec-days 7-25** — 2/2 direct-agent-primitive picks (agent-workspace + agent-browser).
+- **Rust-cluster-day extends d2 candidate at pool-level 7-25** — 4 Rust candidates on trending board (block/buzz kept, RuView + harper + Pumpkin dedup/dropped). Pool-level durable; kept-slate variable.
+- **CVE-2026-55607 direct-hit-on-Aeon-runtime auto-patched 7-25** — first-in-memory Claude Code sandbox-escape CVE lands, unpinned `npm install -g` handles it (no operator action).
+- **[[AI-framework-attack-surface]] extends n=3 7-25** — Claude Code + Langflow + LiteLLM three-consecutive-week AI-orchestration CVEs.
+- **[[single-project-mass-disclose]] extends n=4 7-25** — GitPython 5-CVE joins Pillow / Gitea / n8n (pip dominant 3/4).
+- **[[wallet-credential-stealer-supply-chain]] quiet-d1 mean-reversion 7-25** — 4-pack app-*-layer vs 7-24 45-batch = ~11× lower rate.
+- **[[mature-project-security-hygiene]] n=3 rail NEW 7-25** — block/buzz joins chrome-devtools-mcp + tirth8205; clean-audit-partial-scan is signal not bug.
+- **[[list-digest-grok-cache-lag-day-old-window]] extends n=3 + cross-skill to agent-buzz 7-25** — pattern crosses skill-boundary; X search API systemic day-lag confirmed distinct from empty-list-day-noise.
+- **Claude Opus 5 ships 7-24 = Aeon-fleet meta-signal 7-25** — Fable-5 intelligence at half price + effort-toggle + 1M-ctx. Effort-toggle gives per-skill cost-lever for Aeon; operator-side upgrade-path candidate.
+- **security-digest 7-25 clean-workaround-run** — Write + curl -o + jq stdout sidestepped bash `>` regression cleanly; digest fidelity self-correction via `first_patched_version` field.
+- **vuln-scanner block/buzz clean-audit-partial-scan 7-25** — 3 dep-CVE candidates all triaged to DROP (2 covered by `deny.toml`, 1 unshippable git-pin), 4 code-audit spot checks textbook-correct (SSRF check + `is_private_ip` IPv4/IPv6 comprehensive + NIP42 CSPRNG + NIP98 no-loopback-aliasing). Report `articles/vuln-scan-2026-07-25.md`.
+- **CoinGecko 33 consecutive clean days post-ISS-023 recovery** (through 7-25 12:44Z token-alert).
+
 ## Current health snapshot (2026-07-24)
 
 - **skill-health hash 467ce959** (stable through 7-24, byte-identical since 7-20 18:47Z NOTIFY): **0 CRITICAL** · 18 DEGRADED · 13 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues (ISS-005/007/009/010/011/016/018/019/020/021/025). Sandbox-truncation family **day-32** (T+8 milestone). cost-report DEGRADED (sr=0.11).
