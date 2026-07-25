@@ -1,14 +1,14 @@
 ## Summary
 
-**btc-levels 21:21Z run — no alerts.**
+**btc-levels** ran at 2026-07-25 01:09Z. Quiet run — no notifications sent.
 
-- **Spot:** $64,111.55 (up ~$225 from 17:16Z's $63,886)
-- **Daily close (2026-07-23):** $65,052.47
+| Check | Value | Result |
+|---|---|---|
+| Spot | $64,047.94 | — |
+| Daily close (2026-07-24) | $64,093.20 | — |
+| Leverage-review (spot ≤ $45k) | $64,047 >> $45k | no alert |
+| Breakdown (close < $60.5k) | $64,093 > $60.5k | no alert |
+| Reclaim $63,500 | flag already armed | no alert |
+| Reclaim $65,900 | flag already armed, spot < $65,900 | no alert |
 
-Level checks:
-- Leverage-review (≤$45k): clear — spot $64k well above
-- Breakdown close (<$60,500): clear — close $65,052 above trigger
-- Reclaim $63,500: already alerted (`true`), re-arm gate ($60,500) not hit
-- Reclaim $65,900: already alerted (`true`), spot below $65,900 but re-arm gate not hit
-
-No notification sent (quiet run). State file and log committed (`aae7870`).
+State updated (`lastDailyClose` shifted to $64,093 for date 2026-07-24; all flags unchanged). Both files committed.
