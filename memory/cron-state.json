@@ -74,10 +74,10 @@
     "success_rate": 1
   },
   "agent-buzz": {
-    "last_status": "dispatched",
-    "last_success": "2026-07-25T17:42:21Z",
-    "total_runs": 88,
-    "total_successes": 57,
+    "last_status": "success",
+    "last_success": "2026-07-26T18:39:44Z",
+    "total_runs": 89,
+    "total_successes": 58,
     "total_failures": 31,
     "consecutive_failures": 0,
     "success_rate": 0.65,
