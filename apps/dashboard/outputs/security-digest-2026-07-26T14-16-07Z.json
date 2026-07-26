@@ -1,0 +1,575 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-26",
+        "description": "Verdict: 1 supply-chain compromise TODAY (52 real @antv npm packages), 4 to schedule, 1 to monitor. Sources: KEV, GH Advisory, EPSS"
+      },
+      "children": [
+        "patch_today_section",
+        "patch_week_section",
+        "monitor_section"
+      ]
+    },
+    "patch_today_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_today_heading",
+        "patch_today_item"
+      ]
+    },
+    "patch_today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "patch_today_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "antv_link",
+        "antv_meta",
+        "antv_description",
+        "antv_action"
+      ]
+    },
+    "antv_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Mini Shai-Hulud @antv/* 52-pack",
+        "href": "https://github.com/advisories/GHSA-9wwp-32v6-mhm5",
+        "source": "npm"
+      }
+    },
+    "antv_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_malware",
+        "badge_time"
+      ]
+    },
+    "badge_malware": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "badge_time": {
+      "type": "Badge",
+      "props": {
+        "text": "published 12:25Z today",
+        "variant": "default"
+      }
+    },
+    "antv_description": {
+      "type": "Text",
+      "props": {
+        "text": "atool maintainer account takeover pushed 631 malicious versions across 314 packages in a 22-minute burst. Preinstall hook runs a 498KB obfuscated Bun script that steals AWS/GH-PAT/npm/GCP/Azure/K8s/SSH/Docker/DB/Stripe/Slack creds, exfils via GH API to Dune-themed attacker repos (harkonnen-melange-*), and injects CI/CD workflow persistence. Malicious versions: 2.1.46 and 2.2.46 on every @antv/* pkg (g-plugin-*, data-wizard, dw-util, f2-*, dipper-*, calendar-heatmap, chart-linter, awards, and 44 more).",
+        "variant": "body"
+      }
+    },
+    "antv_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "Grep every lockfile for @antv/ at 2.1.46 or 2.2.46; if hit, rotate every cred that touched CI or a dev shell, pin to the prior version, rebuild the lockfile.",
+        "type": "error"
+      }
+    },
+    "patch_week_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_week_heading",
+        "patch_week_items"
+      ]
+    },
+    "patch_week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "patch_week_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "better_auth_item",
+        "budibase_item",
+        "sm_crypto_item",
+        "shescape_item",
+        "etcd_item"
+      ]
+    },
+    "better_auth_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "better_auth_link",
+        "better_auth_meta",
+        "better_auth_description",
+        "better_auth_action"
+      ]
+    },
+    "better_auth_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-rjg6-39jm-rgg4",
+        "href": "https://github.com/advisories/GHSA-rjg6-39jm-rgg4",
+        "source": "@better-auth/scim (npm)"
+      }
+    },
+    "better_auth_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "better_auth_cvss",
+        "better_auth_poc"
+      ]
+    },
+    "better_auth_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.9",
+        "variant": "destructive"
+      }
+    },
+    "better_auth_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "no public PoC",
+        "variant": "default"
+      }
+    },
+    "better_auth_description": {
+      "type": "Text",
+      "props": {
+        "text": "SCIM provider-id collision on magic-link / email-OTP sign-in → account takeover + stale access.",
+        "variant": "body"
+      }
+    },
+    "better_auth_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Upgrade @better-auth/scim to ≥1.6.22 (or ≥1.7.0-beta.10).",
+        "type": "warning"
+      }
+    },
+    "budibase_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "budibase_link",
+        "budibase_meta",
+        "budibase_description",
+        "budibase_action"
+      ]
+    },
+    "budibase_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Budibase 15-CVE mass-disclose",
+        "href": "https://github.com/advisories/GHSA-q6x4-v3qx-85qw",
+        "source": "@budibase/server (npm)"
+      }
+    },
+    "budibase_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "budibase_severity",
+        "budibase_version"
+      ]
+    },
+    "budibase_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "3 crit + 12 high",
+        "variant": "destructive"
+      }
+    },
+    "budibase_version": {
+      "type": "Badge",
+      "props": {
+        "text": "fix 3.40.0",
+        "variant": "default"
+      }
+    },
+    "budibase_description": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth REST-datasource cred theft (GHSA-mqhr) + OIDC SSO account takeover (GHSA-hp6v) + MySQL SQLi (CVSS 9.6) + SSRF/NoSQLi/IDOR pack. Extends single-project-mass-disclose to n=5 (Pillow / Gitea / n8n / GitPython / Budibase).",
+        "variant": "body"
+      }
+    },
+    "budibase_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Upgrade @budibase/server to ≥3.40.0.",
+        "type": "warning"
+      }
+    },
+    "sm_crypto_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sm_crypto_link",
+        "sm_crypto_meta",
+        "sm_crypto_description",
+        "sm_crypto_action"
+      ]
+    },
+    "sm_crypto_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-vh45-f885-3848",
+        "href": "https://github.com/advisories/GHSA-vh45-f885-3848",
+        "source": "sm-crypto (npm)"
+      }
+    },
+    "sm_crypto_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "sm_crypto_cvss",
+        "sm_crypto_poc"
+      ]
+    },
+    "sm_crypto_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.1",
+        "variant": "destructive"
+      }
+    },
+    "sm_crypto_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "no public PoC",
+        "variant": "default"
+      }
+    },
+    "sm_crypto_description": {
+      "type": "Text",
+      "props": {
+        "text": "Default RNG uses Math.random + wall clock for SM2 key generation. Any key generated with sm-crypto on Node is guessable — treat as burned.",
+        "variant": "body"
+      }
+    },
+    "sm_crypto_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Upgrade sm-crypto to ≥0.5.0 and re-issue affected keys.",
+        "type": "warning"
+      }
+    },
+    "shescape_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "shescape_link",
+        "shescape_meta",
+        "shescape_description",
+        "shescape_action"
+      ]
+    },
+    "shescape_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-w4hw-qcx7-56pr",
+        "href": "https://github.com/advisories/GHSA-w4hw-qcx7-56pr",
+        "source": "shescape (npm)"
+      }
+    },
+    "shescape_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "shescape_severity",
+        "shescape_note"
+      ]
+    },
+    "shescape_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "critical",
+        "variant": "destructive"
+      }
+    },
+    "shescape_note": {
+      "type": "Badge",
+      "props": {
+        "text": "no CVE",
+        "variant": "default"
+      }
+    },
+    "shescape_description": {
+      "type": "Text",
+      "props": {
+        "text": "Shell injection via unescaped parentheses on Windows CMD (bypass of the prior fix).",
+        "variant": "body"
+      }
+    },
+    "shescape_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Upgrade shescape to ≥2.1.14 (v2 line) or ≥3.0.1 (v3 line).",
+        "type": "warning"
+      }
+    },
+    "etcd_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "etcd_link",
+        "etcd_meta",
+        "etcd_description",
+        "etcd_action"
+      ]
+    },
+    "etcd_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-xg4h-6gfc-h4m8",
+        "href": "https://github.com/advisories/GHSA-xg4h-6gfc-h4m8",
+        "source": "etcd (Go)"
+      }
+    },
+    "etcd_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "etcd_type",
+        "etcd_cvss"
+      ]
+    },
+    "etcd_type": {
+      "type": "Badge",
+      "props": {
+        "text": "authz bypass",
+        "variant": "destructive"
+      }
+    },
+    "etcd_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "no CVSS printed",
+        "variant": "default"
+      }
+    },
+    "etcd_description": {
+      "type": "Text",
+      "props": {
+        "text": "Watch API open-ended range requests bypass authorization; sibling GHSA-6vch also patches an unbounded-goroutine TLS handshake DoS. Kubernetes-adjacent blast.",
+        "variant": "body"
+      }
+    },
+    "etcd_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Upgrade etcd to ≥3.7.1 / ≥3.6.14 / ≥3.5.33.",
+        "type": "warning"
+      }
+    },
+    "monitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_heading",
+        "monitor_items"
+      ]
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "monitor_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "libp2p_item",
+        "autopublish_item",
+        "kev_item"
+      ]
+    },
+    "libp2p_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "libp2p_link",
+        "libp2p_meta",
+        "libp2p_description",
+        "libp2p_action"
+      ]
+    },
+    "libp2p_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-hmj8-5xmh-5573",
+        "href": "https://github.com/advisories/GHSA-hmj8-5xmh-5573",
+        "source": "libp2p (pip)"
+      }
+    },
+    "libp2p_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "libp2p_cvss",
+        "libp2p_status"
+      ]
+    },
+    "libp2p_cvss": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 7.5",
+        "variant": "destructive"
+      }
+    },
+    "libp2p_status": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "destructive"
+      }
+    },
+    "libp2p_description": {
+      "type": "Text",
+      "props": {
+        "text": "yamux connection DoS via oversized data frame.",
+        "variant": "body"
+      }
+    },
+    "libp2p_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action",
+        "message": "Rate-limit inbound peer streams; watch for release.",
+        "type": "info"
+      }
+    },
+    "autopublish_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "autopublish_title",
+        "autopublish_description"
+      ]
+    },
+    "autopublish_title": {
+      "type": "Text",
+      "props": {
+        "text": "@akunsansan0/* npm autopublish flood",
+        "variant": "lead"
+      }
+    },
+    "autopublish_description": {
+      "type": "Text",
+      "props": {
+        "text": "184 tea.xyz reward-farming pkgs published today (11× yesterday's 20/day rate). Noise-signal, not action; autopublish-flood rail extends.",
+        "variant": "body"
+      }
+    },
+    "kev_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kev_title",
+        "kev_description"
+      ]
+    },
+    "kev_title": {
+      "type": "Text",
+      "props": {
+        "text": "KEV: 0 fresh this week",
+        "variant": "lead"
+      }
+    },
+    "kev_description": {
+      "type": "Text",
+      "props": {
+        "text": "All 6 additions (CheckPoint / SharePoint / WordPress×2 / Langflow / DD-WRT) already surfaced 7-22/7-23; kev-quiet-cadence d4.",
+        "variant": "body"
+      }
+    }
+  }
+}
