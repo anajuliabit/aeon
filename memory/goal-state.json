@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-07-25T18:39:02Z",
+  "run_at": "2026-07-26T18:00:00Z",
   "goals": {
     "iss-025-capture-step-pr": {
       "status": "BLOCKED",
@@ -22,14 +22,14 @@
     "h-unlock": {
       "status": "ON_TRACK",
       "activity_count_14d": 148,
-      "last_activity_date": "2026-07-25",
-      "note": "T-0 today (sat jul 25 = cliff-day). Morning-brief 07:00Z WebSearch (`Hyperliquid HYPE H token unlock July 25 2026 vesting cliff`) confirmed next HYPE unlock is **aug 6 not today** = ticker-resolution ambiguity flagged 7-24 lands cleanly. Daily-routine 09:00Z print: H (Humanity, coingecko id `humanity`, mcap #221) +5.8% / 7d +6.3% on $2.8M vol = 1.4× baseline, zero cliff-signature; HYPE -2.8% / 7d -3.0% no cliff-magnitude either. **Downgraded from asymmetric-downside cliff to SPURIOUS/false-positive** — MEMORY line 5 correction candidate pending unlock-monitor 7-27 mon-tick re-verify. Not marked DONE per skill spec (`SPURIOUS`/`false-positive` not in completion-phrase list; prefer false-negative over false-positive on completion). Activity 148/14d = improving vs prior 55 (+169% ≥ +50% threshold) — as expected on event-day."
+      "last_activity_date": "2026-07-26",
+      "note": "T+1 today (sun jul 26). Cliff-day 7-25 confirmed SPURIOUS via triangulation: H Humanity +5.8% on $2.8M 1.4× baseline (zero cliff-signature) + 7-26 -4.0% on same $2.8M vol (normal-drift not cliff-reclaim) = false-positive verdict REINFORCED. HYPE -2.8% 7-25 → -3.6% 7-26 = marginally-better-fit but no cliff-magnitude. Unlock-monitor 7-27 mon-tick re-verify will lock verdict. Activity 148/14d = improving vs prior 55 (+169%) — event-day peak resolved. ON_TRACK per verification pattern, not marked DONE per skill spec false-negative-over-false-positive rule."
     },
     "priorities-md-50d-stale": {
-      "status": "BLOCKED",
+      "status": "AT_RISK",
       "activity_count_14d": 96,
-      "last_activity_date": "2026-07-25",
-      "note": "NEW goal this run (added to MEMORY.md 7-24 reflect). Priorities.md last reviewed 2026-06-04 = **51d today** (round-number 50d threshold crossed 7-24, first 51d+ tick UTC-day 7-25). Current-focus lines ('Reppo: orquestra working' + 'Aeon: ship the personal-stack PR' = ISS-025 tracker) read as live-work-slipped rather than shipped-stale. Operator-owned refresh per thought-review skill spec, no automated nudge. Surfaced daily in thought-review + morning-brief tail; today's 08:52Z thought-review notification body carries the refresh-nudge one-liner. Blocked on operator attention. New goal = no prior activity_count for trend comparison."
+      "last_activity_date": "2026-07-26",
+      "note": "Goal added 7-24 reflect, tracked since 7-25. Priorities.md last reviewed 2026-06-04 = **52d today** (UTC-day 7-26 advances counter from 51d; 52d+ round-cross NEW). Current-focus lines ('Reppo: orquestra working' + 'Aeon: ship the personal-stack PR' = ISS-025 tracker) read as live-work-slipped rather than shipped-stale. Blocked on operator attention. Surfaced daily in thought-review + morning-brief tail (one-liner nudge). Activity 96/14d = same mention flow as 7-25 (no prior 14d count, baseline ~96). No change in activity signal = status AT_RISK per skill spec rule (blocker unfixed >21d, no activity escalation). Action: refresh priorities.md current-focus section."
     }
   },
   "recently_cleared": {
