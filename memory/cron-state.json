@@ -597,10 +597,10 @@
   },
   "fork-cohort": {
     "last_dispatch": "2026-07-26T19:50:43Z",
-    "last_status": "dispatched",
-    "last_success": "2026-07-19T20:04:54Z",
-    "total_runs": 5,
-    "total_successes": 5,
+    "last_status": "success",
+    "last_success": "2026-07-26T19:55:26Z",
+    "total_runs": 6,
+    "total_successes": 6,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
