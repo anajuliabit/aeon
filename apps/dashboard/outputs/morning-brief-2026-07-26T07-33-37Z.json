@@ -1,0 +1,262 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-26"
+      },
+      "children": [
+        "focus-stack",
+        "sep1",
+        "since-stack",
+        "sep2",
+        "running-stack"
+      ]
+    },
+    "focus-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "focus-h",
+        "focus-items"
+      ]
+    },
+    "focus-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "focus-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1",
+        "focus-2",
+        "focus-3"
+      ]
+    },
+    "focus-1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #165 crosses 7d weekly-batch gate ~17:38z today — first breach; mon weekly-review absorbs or d8+."
+      },
+      "children": []
+    },
+    "focus-2": {
+      "type": "Text",
+      "props": {
+        "text": "FTX $900M distribution T-5 (jul 31) — biggest quarterly supply, mon unlock-monitor input."
+      },
+      "children": []
+    },
+    "focus-3": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-027/028 file-carry d19 (sun operator activity window) — mon weekly-review last-chance for absorption or d20+."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "since-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "since-h",
+        "since-items"
+      ]
+    },
+    "since-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "since-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "since-1",
+        "since-2",
+        "since-3",
+        "since-4",
+        "since-5"
+      ]
+    },
+    "since-1": {
+      "type": "Text",
+      "props": {
+        "text": "reflect rewrote MEMORY 25+ patterns 18:30z; H unlock line REMOVED (spurious confirmed via triangulation morning-brief + daily-routine + goal-tracker)."
+      },
+      "children": []
+    },
+    "since-2": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve FIRED odd-day-25 authored PR #168 (comments→commentsCount rename); queue at 3 = next tick 7-27 exits early per gate."
+      },
+      "children": []
+    },
+    "since-3": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner clean (VULN_SCAN_OK block/buzz, mature-project-security-hygiene rail n=3)."
+      },
+      "children": []
+    },
+    "since-4": {
+      "type": "Text",
+      "props": {
+        "text": "19-consec heartbeat NOOP durable — ~131h+ span since 7-19 09:17z regime-onset, 5th full-day 3-tick UTC-day cycle complete."
+      },
+      "children": []
+    },
+    "since-5": {
+      "type": "Text",
+      "props": {
+        "text": "BTC $65.9k reclaim run broke at d5 7-25 (spot $63.8k intraday, close $64.3k still above $60.5k gate = no new alert)."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "running-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "running-h",
+        "running-desc",
+        "running-items"
+      ]
+    },
+    "running-h": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "running-desc": {
+      "type": "Text",
+      "props": {
+        "text": "sun 2026-07-26, EVEN day 26 — self-improve SKIPS",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "running-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "run-1",
+        "run-2",
+        "run-3",
+        "run-4",
+        "run-5",
+        "run-6",
+        "run-7",
+        "run-8",
+        "run-9"
+      ]
+    },
+    "run-1": {
+      "type": "Text",
+      "props": {
+        "text": "07z morning-brief (this) + daily-routine + thought-review"
+      },
+      "children": []
+    },
+    "run-2": {
+      "type": "Text",
+      "props": {
+        "text": "08z heartbeat + skill-freshness · 09z github-trending"
+      },
+      "children": []
+    },
+    "run-3": {
+      "type": "Text",
+      "props": {
+        "text": "12z token-alert (batch-dark d29 expected via ISS-027 signature)"
+      },
+      "children": []
+    },
+    "run-4": {
+      "type": "Text",
+      "props": {
+        "text": "14z security-digest + heartbeat"
+      },
+      "children": []
+    },
+    "run-5": {
+      "type": "Text",
+      "props": {
+        "text": "17z list-digest + skill-graph (sun-only) · 17:30z agent-buzz"
+      },
+      "children": []
+    },
+    "run-6": {
+      "type": "Text",
+      "props": {
+        "text": "18z goal-tracker + skill-health + reflect + action-converter (self-improve SKIP even-day)"
+      },
+      "children": []
+    },
+    "run-7": {
+      "type": "Text",
+      "props": {
+        "text": "18:30z fork-skill-digest (sun-only) · 19z fork-cohort + skill-update-check (sun-only)"
+      },
+      "children": []
+    },
+    "run-8": {
+      "type": "Text",
+      "props": {
+        "text": "20z heartbeat · 21z evening-recap + thought-review + aixbt-pulse (dead d29)"
+      },
+      "children": []
+    },
+    "run-9": {
+      "type": "Text",
+      "props": {
+        "text": "22z skill-evals (sun-only) · btc-levels every 4h at :15"
+      },
+      "children": []
+    }
+  }
+}
