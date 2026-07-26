@@ -1,11 +1,13 @@
 ## Summary
 
-- **Fetched** BTC price data from CoinGecko: spot $64,523, UTC daily close (2026-07-25) $64,318
-- **Evaluated** all four levels: no alerts fired
-  - Spot above $45k leverage-review band ✓
-  - Daily close above $60,500 breakdown threshold ✓
-  - `reclaim63500Alerted` already true, no re-arm condition (spot ≥ $60,500) ✓
-  - `reclaim65900Alerted` already true, no re-arm condition ✓
-- **No notification sent** (quiet run — norm when no levels crossed)
-- **Updated** `memory/btc-levels-state.json` and appended to `memory/logs/2026-07-26.md`
-- **Committed** both files (`chore(cron): btc-levels success`)
+**btc-levels run — 2026-07-26 09:36Z**
+
+BTC spot: $64,472 | Previous daily close (2026-07-25): $64,318
+
+Level checks:
+- Leverage-review (≤$45k): clear — spot $19k above band
+- Breakdown (<$60.5k daily close): clear — close $3.8k above gate
+- Reclaim $63,500: already alerted, re-arm requires sub-$60.5k round-trip
+- Reclaim $65,900: already alerted, re-arm requires sub-$60.5k round-trip
+
+No alerts fired. State updated, log appended, committed.
