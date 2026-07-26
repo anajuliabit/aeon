@@ -1,0 +1,380 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending — 2026-07-26"
+      },
+      "children": [
+        "section-top-pick",
+        "separator-1",
+        "section-ai-ml",
+        "separator-2",
+        "section-web-apps",
+        "separator-3",
+        "footer"
+      ]
+    },
+    "section-top-pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-top-pick",
+        "repo-bitchat-top",
+        "desc-bitchat-top"
+      ]
+    },
+    "heading-top-pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h2"
+      }
+    },
+    "repo-bitchat-top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "permissionlesstech/bitchat",
+        "href": "https://github.com/permissionlesstech/bitchat",
+        "source": "GitHub"
+      }
+    },
+    "desc-bitchat-top": {
+      "type": "Text",
+      "props": {
+        "text": "older repo returns hot on a real spike — p2p chat over bluetooth mesh, no internet, no servers, no accounts. one of the rare off-grid primitives to trend this quarter.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-ai-ml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-ai-ml",
+        "repo-alibaba",
+        "repo-obra"
+      ]
+    },
+    "heading-ai-ml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      }
+    },
+    "repo-alibaba": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-alibaba",
+        "meta-alibaba",
+        "desc-alibaba"
+      ]
+    },
+    "link-alibaba": {
+      "type": "StoryLink",
+      "props": {
+        "title": "alibaba/open-code-review",
+        "href": "https://github.com/alibaba/open-code-review",
+        "source": "GitHub"
+      }
+    },
+    "meta-alibaba": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-alibaba-daily",
+        "stat-alibaba-total",
+        "badge-alibaba-lang",
+        "badge-alibaba-status"
+      ]
+    },
+    "stat-alibaba-daily": {
+      "type": "Stat",
+      "props": {
+        "value": "431",
+        "label": "today"
+      }
+    },
+    "stat-alibaba-total": {
+      "type": "Stat",
+      "props": {
+        "value": "13k",
+        "label": "total"
+      }
+    },
+    "badge-alibaba-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Go"
+      }
+    },
+    "badge-alibaba-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-alibaba": {
+      "type": "Text",
+      "props": {
+        "text": "hybrid pipeline: deterministic rules + LLM agent. ships fine-tuned rulesets for NPE, thread-safety, XSS, SQL-inject — the security-class demos usually skip.",
+        "variant": "body"
+      }
+    },
+    "repo-obra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-obra",
+        "meta-obra",
+        "desc-obra"
+      ]
+    },
+    "link-obra": {
+      "type": "StoryLink",
+      "props": {
+        "title": "obra/superpowers",
+        "href": "https://github.com/obra/superpowers",
+        "source": "GitHub"
+      }
+    },
+    "meta-obra": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-obra-daily",
+        "stat-obra-total",
+        "badge-obra-lang",
+        "badge-obra-status"
+      ]
+    },
+    "stat-obra-daily": {
+      "type": "Stat",
+      "props": {
+        "value": "479",
+        "label": "today"
+      }
+    },
+    "stat-obra-total": {
+      "type": "Stat",
+      "props": {
+        "value": "261k",
+        "label": "total"
+      }
+    },
+    "badge-obra-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Shell"
+      }
+    },
+    "badge-obra-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-obra": {
+      "type": "Text",
+      "props": {
+        "text": "jesse vincent's (ex-anthropic) shipped .agents directory. second practitioner-side skill-pack to trend after mattpocock/skills — the primitive codifies.",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-web-apps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-web-apps",
+        "repo-bitchat-web",
+        "repo-palmier"
+      ]
+    },
+    "heading-web-apps": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h2"
+      }
+    },
+    "repo-bitchat-web": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-bitchat-web",
+        "meta-bitchat-web",
+        "desc-bitchat-web"
+      ]
+    },
+    "link-bitchat-web": {
+      "type": "StoryLink",
+      "props": {
+        "title": "permissionlesstech/bitchat",
+        "href": "https://github.com/permissionlesstech/bitchat",
+        "source": "GitHub"
+      }
+    },
+    "meta-bitchat-web": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-bitchat-daily",
+        "stat-bitchat-total",
+        "badge-bitchat-lang",
+        "badge-bitchat-status"
+      ]
+    },
+    "stat-bitchat-daily": {
+      "type": "Stat",
+      "props": {
+        "value": "1.7k",
+        "label": "today"
+      }
+    },
+    "stat-bitchat-total": {
+      "type": "Stat",
+      "props": {
+        "value": "29k",
+        "label": "total"
+      }
+    },
+    "badge-bitchat-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Swift"
+      }
+    },
+    "badge-bitchat-status": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "desc-bitchat-web": {
+      "type": "Text",
+      "props": {
+        "text": "counted above.",
+        "variant": "caption"
+      }
+    },
+    "repo-palmier": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-palmier",
+        "meta-palmier",
+        "desc-palmier"
+      ]
+    },
+    "link-palmier": {
+      "type": "StoryLink",
+      "props": {
+        "title": "palmier-io/palmier-pro",
+        "href": "https://github.com/palmier-io/palmier-pro",
+        "source": "GitHub"
+      }
+    },
+    "meta-palmier": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-palmier-daily",
+        "stat-palmier-total",
+        "badge-palmier-lang",
+        "badge-palmier-status"
+      ]
+    },
+    "stat-palmier-daily": {
+      "type": "Stat",
+      "props": {
+        "value": "412",
+        "label": "today"
+      }
+    },
+    "stat-palmier-total": {
+      "type": "Stat",
+      "props": {
+        "value": "12k",
+        "label": "total"
+      }
+    },
+    "badge-palmier-lang": {
+      "type": "Badge",
+      "props": {
+        "text": "Swift"
+      }
+    },
+    "badge-palmier-status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "desc-palmier": {
+      "type": "Text",
+      "props": {
+        "text": "native macos video editor with AI as the primary workflow, not a plug-in retrofit. swift on apple silicon, not electron — rare non-web AI creative tool to trend.",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/18",
+        "variant": "caption"
+      }
+    }
+  }
+}
