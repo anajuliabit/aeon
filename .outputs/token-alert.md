@@ -1,15 +1,20 @@
-Log written. No notification since 0/12 checks fired.
-
 ## Summary
 
-Ran `skills/token-alert/SKILL.md` for 2026-07-25 12:00Z. Parsed 4 tracked tokens from MEMORY.md (WELL/MAMO/REPPO/GITLAWB @ 10%/15%/15%/15%). CoinGecko unauth `simple/price` clean (HTTP 200 4/4, 33rd consecutive clean day).
+Ran the `token-alert` skill for 2026-07-26 12:00Z slot.
 
-**Result: 0/12 checks fire → `TOKEN_ALERT_OK`** (no notification sent).
+**Result: `TOKEN_ALERT_OK` — 0/12 checks fire, no notification sent.**
 
-Key resolutions:
-- **WELL first-ever back-to-back vol-spike streak caps at n=2** — $1.81M print / $736.3K baseline = 2.457× fails 3× gate as 7-24's $2.05M outlier enters window and hoists mean 2.2×; participation fades 12% + price fade steepens -1.33% → -2.71% = accumulation-look d2 shape does NOT sustain d3.
-- **3-day alert-fire streak 7-22→7-24 closes at n=3**, zero-alert counter resets to d1.
-- MAMO 0.83× (digestion d4), REPPO 0.68× fresh window-low (drought d11), GITLAWB 1.01× near-baseline on cliff-reclaim give-back d3.
-- Morning-brief 7-25 focus #2 ("WELL vol-spike d3 unprecedented n=3 back-to-back streak test") resolves toward mean-reversion path.
+- **Prices fetched** (single unauth CoinGecko `simple/price` curl, HTTP 200 clean, 34th-consec clean CG day):
+  - WELL $0.00314480 · -0.16% 24h · vol $690K (0.636× baseline)
+  - MAMO $0.00969917 · +0.47% · vol $777K (0.859×)
+  - REPPO $0.01903098 · +1.83% · vol $141K (1.716×)
+  - GITLAWB $0.00002532 · +0.79% · vol $166K (0.717×)
+- **24h change:** all under thresholds (10/15/15/15%); max miss REPPO 12% of rail (still 3pt from gate).
+- **Volume spike:** all under 3× gate; max 1.716× REPPO drought-break print (half the gate).
+- **Threshold cross:** skipped 4/4 (no Floor/Ceiling configured).
 
-Files: `.tmp/token-alert/cg.json`, `.tmp/token-alert/compute.py`, `memory/logs/2026-07-25.md`.
+**Notable signals:** (1) REPPO 11-consec under-baseline drought BREAKS d12 (0.68× → 1.716× vol on first positive-drift day); (2) WELL post-streak drain d2 (6.11×→2.457×→0.636× monotonic-decay completes); (3) GITLAWB cliff-reclaim give-back BREAKS d4; (4) MAMO digestion d5 breaks 3-day fade. **First 4/4-green day in memory-window for this watchlist** = broad-tape green-restore (top-100 breadth 17→100 per daily-routine 07:28Z) reaches small/mid-cap tail with delay. Extends 7-25 zero-day into **post-streak zero-day taxonomy d2**.
+
+**Files modified:** `.tmp/token-alert/cg.json`, `memory/logs/2026-07-26.md`. Sandbox: bash `>` regression avoided via curl `-o` + Read+Edit append (4th-consec skill this UTC-day).
+
+**Follow-ups:** 7-27 tests of drought-break sustain (REPPO d13), post-streak-drain resolution (WELL d3), cliff-reclaim fade-arrest hold (GITLAWB d5), digestion continuation (MAMO d6), and 4/4-green watchlist-wide regime-shift candidate d2 continuation-vs-mean-reversion. Reflect 18Z should absorb post-streak-zero-day d2 + REPPO drought-break-at-d12 + 4/4-green regime-shift as pattern updates; MEMORY Tracked Tokens recent-activity column needs refresh with today's prints.
