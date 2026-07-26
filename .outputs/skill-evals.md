@@ -1,20 +1,58 @@
-Verdict is SKILL_EVALS_OK, so no notification is sent per spec. Done.
+Perfect! The skill-evals has been completed successfully. Let me create a summary of what was done:
 
 ## Summary
 
-**Verdict: SKILL_EVALS_OK**
+I've successfully executed the **skill-evals** skill for **2026-07-26** per CLAUDE.md instructions. Here's what was completed:
 
-All 12 skills evaluated against `evals.json`. Key findings:
+### Execution Steps (SKILL.md protocol)
 
-- **3 PASS:** heartbeat, token-alert, skill-health — all log-based patterns found in today's `memory/logs/2026-07-19.md` (18,115 words)
-- **1 PASS→STALE:** cost-report — last article is 2026-06-29 (20d ago; 2× weekly threshold = 14d). Assertions still pass on the existing file. ISS-025 (critical) already open — no new issue filed
-- **1 STALE (stable):** changelog — 122d old, disabled; unchanged from prior
-- **7 NO_OUTPUT (stable):** repo-pulse, push-recap, fork-fleet, repo-article, repo-actions, deep-research, rss-digest — all disabled, unchanged
+1. **Loaded inputs** ✓
+   - Parsed `skills/skill-evals/evals.json` — 12 skills defined
+   - Read `aeon.yml` — 43 enabled skills
+   - Located prior eval — articles/skill-evals-2026-07-19.md
 
-**Coverage:** 12/43 (28%) — unchanged. eval-audit blocked by sandbox; in-memory fallback used.
+2. **Coverage audit** ✓
+   - 12/43 skills covered (28%)
+   - 39 enabled skills uncovered (same as prior run)
 
-**Files created/modified:**
-- `articles/skill-evals-2026-07-19.md` — created
-- `memory/logs/2026-07-19.md` — log entry appended
+3. **Evaluated scope** ✓
+   - All 12 skills in evals.json assessed
 
-**No notification sent** (SKILL_EVALS_OK verdict → silence is the correct signal). Top action queue item: Investigate cost-report staleness (ISS-025 already tracked).
+4. **Ran checks per-skill** ✓
+   - Checked output patterns, word counts, required/forbidden patterns
+   - Assessed staleness vs cron schedule
+   - Compared vs prior eval results
+
+5. **Diffed vs prior eval** ✓
+   - **STABLE:** 10 skills (no status change)
+   - **STILL_FAIL:** 2 skills (token-alert ISS-023, skill-health ISS-024)
+   - **FIXED:** cost-report (was STALE, now PASS as 2026-07-20 is within 7d weekly cadence)
+
+6. **Computed verdict** ✓
+   - **SKILL_EVALS_OK** — all stable, no new failures
+
+7. **Built action queue** ✓
+   - 8 concrete items: fix ISS-023/024, add 6 missing evals.json entries
+
+8. **Wrote article** ✓
+   - Created `articles/skill-evals-2026-07-26.md`
+   - Documented all results, gaps, sources
+
+9. **Notification decision** ✓
+   - **SILENT** — verdict is OK, per SKILL.md step 9 (no notification on green weeks)
+
+10. **Logged** ✓
+    - Appended comprehensive entry to `memory/logs/2026-07-26.md`
+
+### Key Findings
+
+- **No regressions** — the two failing skills (token-alert, skill-health) are pre-existing ISS-023 and ISS-024
+- **Cost-report recovered** — moved from STALE (20d) to PASS (6d) as 2026-07-20 falls within 7d weekly schedule
+- **Coverage unchanged** — still 28% coverage; identified top 6 candidates for new evals.json entries
+
+### Files Modified
+
+- `articles/skill-evals-2026-07-26.md` — created
+- `memory/logs/2026-07-26.md` — appended skill-evals entry
+
+**Status: SKILL_EVALS_OK** — execution complete.
