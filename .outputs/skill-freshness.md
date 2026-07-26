@@ -1,14 +1,23 @@
-*skill freshness — 2026-07-25*
-🔴 FRESHNESS_STALE — 7 of 11 deps flagged across 5 of 43 enabled consumers
+All three outputs written. Here's the summary.
 
-worst:
-- skill-security-scan ← articles/workflow-security-audit-2026-04-11.md (105d, articles/weekly, STALE — disabled producer)
-- aixbt-pulse ← memory/topics/aixbt-grounding.md (636h, topics, STALE — dark d27)
-- vuln-scanner ← .outputs/github-trending.md (24h, outputs, STALE — self-resolves after github-trending 09:00)
+## Summary
 
-also flagged:
-- aixbt-pulse ← aixbt-clusters.md + aixbt-chains.md (same 636h, STALE)
-- market-context-refresh + token-pick ← market-context.md (9d/216h, WARN — 12:00 cluster dark)
+**Status:** `FRESHNESS_NO_CHANGE` — no notification sent.
 
-action: aixbt-pulse dead-slot d27 — check ISS files. security-scan ref is static doc, add ignore marker to SKILL.md:19+132. market-context clears on next cluster recovery.
-full: articles/skill-freshness-2026-07-25.md
+**What ran:** Audited 43 enabled skills, 11 tracked dependencies (0 explicit chain edges, 11 implicit grep-discovered), 7 flagged.
+
+**Flagged set (unchanged from 2026-07-25):**
+
+| Consumer | Dependency | Age | Severity |
+|---|---|---|---|
+| skill-security-scan | `articles/workflow-security-audit-2026-04-11.md` | 106d | 🔴 STALE |
+| aixbt-pulse | `memory/topics/aixbt-{grounding,clusters,chains}.md` | 28d | 🔴 STALE |
+| vuln-scanner | `.outputs/github-trending.md` | ~24.6h | 🔴 STALE |
+| market-context-refresh | `memory/topics/market-context.md` | 10d | 🟡 WARN |
+| token-pick | `memory/topics/market-context.md` | 10d | 🟡 WARN |
+
+**Dedup:** Fingerprint `1ab8c658b960f260ad98797bf06b841d9b1410ef` matches yesterday's run exactly. Last run was 1 day ago (< 7-day re-emit window) → notification suppressed.
+
+**Escalation watch:** `market-context.md` at 10d/240h graduates from WARN → STALE when it hits 336h, which is **2026-07-30 ~16:00 UTC**. If the ISS-027 cluster remains frozen through then, the fingerprint changes and the next run re-emits a notification.
+
+**Files written:** `articles/skill-freshness-2026-07-26.md`, `memory/topics/skill-freshness-state.json` (updated `last_run_at`), `memory/logs/2026-07-26.md` (log appended).
