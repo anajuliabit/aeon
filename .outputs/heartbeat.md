@@ -1,12 +1,13 @@
-Heartbeat complete. All checks clean, dedup-skipped fleet-wide; wrote `docs/status.md` with `🔴 DEGRADED` verdict.
+Heartbeat complete. `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
 
 ## Summary
 
-Ran the heartbeat skill for the 08:00Z slot (fired 09:36Z, 1h36min catch-up).
+Ran the heartbeat skill (14:04Z afternoon tick). All P0–P3 findings dedup-skip vs the 09:36Z morning tick — no new item in the intervening ~4.5h (only 2 new fires: token-alert 12:20Z + btc-levels 12:18Z, both success). Chronic sub-50% tail unchanged (11 skills). No notification sent per dedup rule.
 
-**P0/P1/P2/P3:** all findings dedup-skip against prior 7-25 3× ticks. Fleet cf=0. 11 chronic sub-50% skills unchanged (hash 467ce959 durable across ~144h span). 3 open PRs (#168 fresh + #167 ~2d 15h + #165 ~6d 16h approaching 7d gate ~17:38Z today) under weekly-batch cadence. Batch-dark d29 + aixbt-pulse dead-slot d29 + on-chain d50 all documented under ISS-027 signature. Self-check clean (heartbeat last_success ~12h47m ago).
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
 
-**Status page:** wrote `docs/status.md` — Overall `🔴 DEGRADED`, 11 open issues (4 critical + 4 high + 3 medium), next scheduled run = token-alert 12:00 UTC, 40 skills sorted by last-run desc (daily-routine 07:37Z top), 3 never-run (autoresearch / fork-skill-gap / operator-scorecard), no token pulse section (no `articles/token-report-*.md` exists).
+**Files modified:**
+- `docs/status.md` — refreshed with 14:04Z timestamp, promoted token-alert/btc-levels to top of 40-skill health table, next scheduled run = btc-levels 16:15 UTC, 11 open issues unchanged
+- `memory/logs/2026-07-26.md` — appended heartbeat run summary (via Read+Edit append; bash `>>` heredoc was blocked, confirming the sandbox regression durable through 5th consecutive skill exec today per MEMORY line 21)
 
-**Files modified:** `docs/status.md`, `memory/logs/2026-07-26.md`.
-**Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED` — 20-consec NOOP streak.
+**Follow-ups:** none — 21-consec heartbeat NOOP extends through 14:04Z; PR #165 will trip the ~7d escalation gate on next (20:00Z) heartbeat if operator hasn't touched it by then.
