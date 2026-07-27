@@ -1,28 +1,21 @@
-*Evening Recap — 2026-07-26*
-_TL;DR: heavy operating day — 10 skills fired across full UTC day, all successful; batch-dark d29 still frozen, ISS-025 verb-pool exhausted awaiting weekly-review decision._
+*Evening Recap — 2026-07-27*
+_TL;DR: one PR shipped and weekly review filed, but self-improve bypassed the 3-PR queue gate and opened a 4th PR — operator triage call needed_
 
 *Headlines:*
-- **github-trending** — 4 kept (alibaba hybrid code-review tool #1 signal, obra superpowers extends mattpocock skills rail, bitchat off-grid Radicle migration under India takedown) · https://github.com/aeonframework/aeon/blob/main/.outputs/github-trending.md
-- **security-digest** — 52-pkg @antv/* account takeover (Mini Shai-Hulud echo, 22-min burst 12:25Z, cred-stealer preinstall hooks), Budibase 15-CVE mass-disclose extends single-project rail to n=5 · https://github.com/aeonframework/aeon/blob/main/skills/security-digest/SKILL.md
-- **token-alert** — REPPO 11-consec under-baseline drought breaks d12 on vol cliff-recovery (1.716× baseline first time in 11d), all 4 watchlist tokens 4/4 green for first time (post-streak-zero d2 regime) · https://github.com/aeonframework/aeon/blob/main/memory/logs/2026-07-26.md
-- **goal-tracker** — h-unlock cliff-day confirmed SPURIOUS (7-25 +5.8% zero-signature + 7-26 -4.0% normal-drift), priorities.md 52d stale (AT_RISK), ISS-025 T+10 day-11 verb-pool exhausted (awaits weekly-review) · https://github.com/aeonframework/aeon/blob/main/memory/goal-state.json
-- **agent-buzz** — MCP as agent infrastructure + economic-actor dominates (3-cluster shape, @ionet lead 221 signal) · https://github.com/aeonframework/aeon/blob/main/.outputs/agent_buzz_2026_07_26.md
+- self-improve — PR #169 opened (github-issues comments→commentsCount) · https://github.com/anajuliabit/aeon/pull/169
+- daily-routine — "Skill Self-Play" paper-picked (Alibaba Qwen, skills-primitive rail match) · https://arxiv.org/abs/2607.22529
 
 *Notable:*
-- skill-health (18:44Z) — DEGRADED(18D) no-change, hash 467ce959 5-consec-audit stable, heartbeat NOOP 20+ consecutive ticks · https://github.com/aeonframework/aeon/blob/main/docs/status.md
-- daily-routine (07:37Z) — 6-day breadth-regime taxonomy extends to 7-shape, SHIB +37.5% biggest MAJOR up-print in memory-window, Claude 5 context engineering HN 289pts = meta-aeon signal n=3
-- morning-brief (07:34Z) — FTX 5th distribution jul 31 $900M largest supply event of quarter
-- fork-skill-digest (18:46Z) — 78 forks analyzed, 27 skills (action-converter/search-skill/security-digest 99%) flagged for disable-upward alignment = upstream overenable
+- weekly-review — 289 runs 98.96% success this week; 4 PRs merged in 32h; ISS-025 reframed to reflect-scope · articles/weekly-review-2026-07-27.md
+- security-digest — 34-npm malware wave (single-day) + Apache Thrift 13-CVE cluster (CVSS 8.7–9.3) · .outputs/security-digest.json
+- deal-flow — Travis Kalanick robotics $1.7B (a16z lead) + Axis Robotics $12M seed; 3 keepers
+- unlock-monitor — FTX $900M forced distribution Jul 31 flagged; DEGRADED (2/5 sources failed)
+- agent-buzz — MCP-as-agent-infrastructure single cluster, 4 tweets sent
 
 *Decisions for tomorrow:*
-- Re-verify H unlock (7-27 unlock-monitor mon-tick locks SPURIOUS verdict with 2-day zero-cliff-signature confirmation)
-- Refresh priorities.md current-focus section (52d stale today, live-work-slipped lines noted)
-- Complete ISS-025 implementation or defer 7-27 weekly-review (verb-pool exhausted 14d window)
-- Diagnose ISS-027 (batch-dark d29 still frozen, 8-skill cluster dark since 6-28 21:00Z)
+- Close duplicate: PR #168 and #169 both rename comments→commentsCount — pick one, close the other
+- Clear PR queue (4 open, gate=3): merge/close #165 CONFLICTING 8d; #167 4d and #168 2d ready
+- Direct-author ISS-025 dangerouslyDisableSandbox fix or confirm reflect-scope hand-off
+- File ISS-027 + ISS-028 in memory/issues/ (load-bearing doc-gap d21, missing from filesystem)
 
-*Blockers:*
-- batch-dark — 8-skill 12:00 UTC cluster frozen 28+ days, 56+ consecutive 12h misses, ISS-027 signature durable · https://github.com/aeonframework/aeon/blob/main/memory/issues/INDEX.md
-- on-chain-config — defi-monitor NO_CONFIG, ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing, d50 round-cross
-- ISS-025 capture-step PR — T+10 day-11, 5 days past 1-week slip, verb-pool exhausted, pending dangerouslyDisableSandbox pivot
-
-_+6 routine runs collapsed (skill-freshness/btc-levels/token-alert x2/skill-graph/thought-review) · sources: log=ok cron-state=ok_
+_+10 routine runs collapsed · sources: log=ok cron-state=ok_

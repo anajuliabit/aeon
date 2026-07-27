@@ -1,0 +1,355 @@
+{
+  "root": "root_card",
+  "state": {},
+  "elements": {
+    "root_card": {
+      "type": "Card",
+      "props": {
+        "title": "Evening Recap — 2026-07-27"
+      },
+      "children": [
+        "tldr_alert",
+        "sep1",
+        "headlines_heading",
+        "headlines_stack",
+        "sep2",
+        "notable_heading",
+        "notable_stack",
+        "sep3",
+        "decisions_heading",
+        "decisions_stack",
+        "sep4",
+        "footer_text"
+      ]
+    },
+    "tldr_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "TL;DR",
+        "message": "one PR shipped and weekly review filed, but self-improve bypassed the 3-PR queue gate and opened a 4th PR — operator triage call needed"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "headlines_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Headlines",
+        "level": "h2"
+      }
+    },
+    "headlines_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline_1",
+        "headline_2"
+      ]
+    },
+    "headline_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "self-improve: PR #169 — github-issues comments→commentsCount",
+        "href": "https://github.com/anajuliabit/aeon/pull/169",
+        "source": "self-improve"
+      }
+    },
+    "headline_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "daily-routine: Skill Self-Play (Alibaba Qwen, skills-primitive rail match)",
+        "href": "https://arxiv.org/abs/2607.22529",
+        "source": "daily-routine"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h2"
+      }
+    },
+    "notable_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable_1_container",
+        "notable_2_container",
+        "notable_3_container",
+        "notable_4_container",
+        "notable_5_container"
+      ]
+    },
+    "notable_1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_1_title",
+        "notable_1_stats",
+        "notable_1_note",
+        "notable_1_link"
+      ]
+    },
+    "notable_1_title": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review",
+        "variant": "lead"
+      }
+    },
+    "notable_1_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "notable_1_stat1",
+        "notable_1_stat2",
+        "notable_1_stat3"
+      ]
+    },
+    "notable_1_stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Runs",
+        "value": "289"
+      }
+    },
+    "notable_1_stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Success Rate",
+        "value": "98.96%"
+      }
+    },
+    "notable_1_stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs Merged",
+        "value": "4",
+        "delta": "in 32h"
+      }
+    },
+    "notable_1_note": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 reframed to reflect-scope",
+        "variant": "caption"
+      }
+    },
+    "notable_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Weekly Review Report",
+        "href": "articles/weekly-review-2026-07-27.md"
+      }
+    },
+    "notable_2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_2_alert",
+        "notable_2_link"
+      ]
+    },
+    "notable_2_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "security-digest",
+        "message": "34-npm malware wave (single-day) + Apache Thrift 13-CVE cluster (CVSS 8.7–9.3)"
+      }
+    },
+    "notable_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View report",
+        "href": ".outputs/security-digest.json"
+      }
+    },
+    "notable_3_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_3_title",
+        "notable_3_stat1",
+        "notable_3_stat2",
+        "notable_3_note"
+      ]
+    },
+    "notable_3_title": {
+      "type": "Text",
+      "props": {
+        "text": "deal-flow",
+        "variant": "lead"
+      }
+    },
+    "notable_3_stat1": {
+      "type": "Text",
+      "props": {
+        "text": "Travis Kalanick robotics $1.7B (a16z lead)"
+      }
+    },
+    "notable_3_stat2": {
+      "type": "Text",
+      "props": {
+        "text": "Axis Robotics $12M seed"
+      }
+    },
+    "notable_3_note": {
+      "type": "Text",
+      "props": {
+        "text": "3 keepers",
+        "variant": "caption"
+      }
+    },
+    "notable_4_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_4_header",
+        "notable_4_content"
+      ]
+    },
+    "notable_4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_4_title",
+        "notable_4_badge"
+      ]
+    },
+    "notable_4_title": {
+      "type": "Text",
+      "props": {
+        "text": "unlock-monitor",
+        "variant": "lead"
+      }
+    },
+    "notable_4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "notable_4_content": {
+      "type": "Text",
+      "props": {
+        "text": "FTX $900M forced distribution Jul 31 flagged; 2/5 sources failed"
+      }
+    },
+    "notable_5_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable_5_title",
+        "notable_5_content"
+      ]
+    },
+    "notable_5_title": {
+      "type": "Text",
+      "props": {
+        "text": "agent-buzz",
+        "variant": "lead"
+      }
+    },
+    "notable_5_content": {
+      "type": "Text",
+      "props": {
+        "text": "MCP-as-agent-infrastructure single cluster, 4 tweets sent"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "decisions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decisions for Tomorrow",
+        "level": "h2"
+      }
+    },
+    "decisions_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "decision_1",
+        "decision_2",
+        "decision_3",
+        "decision_4"
+      ]
+    },
+    "decision_1": {
+      "type": "Text",
+      "props": {
+        "text": "Close duplicate: PR #168 and #169 both rename comments→commentsCount — pick one, close the other"
+      }
+    },
+    "decision_2": {
+      "type": "Text",
+      "props": {
+        "text": "Clear PR queue (4 open, gate=3): merge/close #165 CONFLICTING 8d; #167 4d and #168 2d ready"
+      }
+    },
+    "decision_3": {
+      "type": "Text",
+      "props": {
+        "text": "Direct-author ISS-025 dangerouslyDisableSandbox fix or confirm reflect-scope hand-off"
+      }
+    },
+    "decision_4": {
+      "type": "Text",
+      "props": {
+        "text": "File ISS-027 + ISS-028 in memory/issues/ (load-bearing doc-gap d21, missing from filesystem)"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer_text": {
+      "type": "Text",
+      "props": {
+        "text": "+10 routine runs collapsed · sources: log=ok cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

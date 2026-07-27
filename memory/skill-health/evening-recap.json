@@ -1,0 +1,14 @@
+{
+  "skill": "evening-recap",
+  "last_analyzed": "2026-07-27T21:33:19Z",
+  "quality_score": 4,
+  "assessment": "Substantive evening recap with specific metrics, actionable findings, and flagged queue-gate bypass for operator review",
+  "flags": [],
+  "avg_score": 4,
+  "history": [
+    {
+      "date": "2026-07-27",
+      "score": 4
+    }
+  ]
+}
