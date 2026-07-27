@@ -1,13 +1,29 @@
-Perfect. The skill execution is complete.
-
 ## Summary
 
-**BTC Levels Monitor** ran successfully. Current BTC spot: **$65,122.80** | Previous UTC daily close: **$64,316.36** (2026-07-25).
+Executed the **btc-levels** skill (BTC Levels Monitor) per SKILL.md. This advisory-only monitoring system watches BTC price against hard levels set by the 2026-06-09 investment-advisor report for the leveraged cbBTC position.
+
+### Execution Results
+
+**Current readings (2026-07-27 17:01:43Z):**
+- **Spot price:** $64,828.80
+- **Previous daily close:** $65,329.54 (date: 2026-07-26)
 
 **Level evaluation:**
-- ✓ Leverage-review trigger ($45k): no alert (spot well above)
-- ✓ Breakdown (<$60.5k): no alert (close above level)
-- ✓ Reclaim $63.5k: already alerted, no new alert
-- ✓ Reclaim $65.9k: not yet triggered (spot $123 below)
+| Level | Status | Alert? |
+|---|---|---|
+| Leverage-review (≤$45k) | ✅ OK (spot > $45k) | None |
+| Breakdown (close < $60,500) | ✅ OK (close $65,329) | None |
+| Reclaim $63,500 | ℹ️ Already flagged; re-arms if spot < $60,500 | None |
+| Reclaim $65,900 | ℹ️ Not yet reached (spot $64,829) | None |
 
-**No alerts fired.** State updated and logged. Committed: `d98f35d`.
+**Alerts fired:** None (quiet run)
+
+### Files Modified
+- **`memory/btc-levels-state.json`** — Updated state (spot, close, alert flags)
+- **`memory/logs/2026-07-27.md`** — Appended run 4 entry
+
+### Commit
+- **Commit:** `fed1f70` — "chore: btc-levels monitor update (spot $64,829, close $65,329)"
+- **No notification sent** (per SKILL.md step 3: "No alert fired → no notification")
+
+The system remains in stable state with no crossing events or position-risk conditions. Next monitor run scheduled per advisor's 4-hour cadence.
