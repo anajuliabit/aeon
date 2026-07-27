@@ -1,0 +1,256 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Deal Flow — 2026-07-27"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-intro",
+        "sep-intro",
+        "stack-deal-1",
+        "stack-deal-2",
+        "stack-deal-3",
+        "sep-sources",
+        "stack-sources"
+      ]
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Capital diverging into robotics-as-infrastructure (physical-AI layer) at megaround scale — a16z $1.7B robotics, Enigma $70M UI-layer robotics validating lower-stack thesis. Crypto funding quiet on Tier 1 aggregator visibility (sources 404ing) but crypto-specific trackers pick up Axis Robotics $12M seed (hybrid AI/crypto infrastructure), Coinhako $300M Series B. Mid-summer indexing gap across traditional aggregators suggests deal flow continuing but reporting lag extends through late July.",
+        "variant": "body"
+      }
+    },
+    "sep-intro": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-deal-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-deal-1",
+        "text-desc-1",
+        "text-funding-1",
+        "text-matters-1"
+      ]
+    },
+    "heading-deal-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Travis Kalanick's Robotics Company",
+        "level": "h3"
+      }
+    },
+    "text-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "Humanoid robots for logistics/manufacturing",
+        "variant": "body"
+      }
+    },
+    "text-funding-1": {
+      "type": "Text",
+      "props": {
+        "text": "$1.7B strategic round @ n/d post | Lead: Andreessen Horowitz (a16z)",
+        "variant": "caption"
+      }
+    },
+    "text-matters-1": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: a16z capital at $1.7B validates physical-AI stack clustering (inference/training/identity layers); megaround scale confirms corporate-displaces-VC pattern extending into 2026.",
+        "variant": "body"
+      }
+    },
+    "stack-deal-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-deal-2",
+        "text-desc-2",
+        "text-funding-2",
+        "text-matters-2"
+      ]
+    },
+    "heading-deal-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Enigma",
+        "level": "h3"
+      }
+    },
+    "text-desc-2": {
+      "type": "Text",
+      "props": {
+        "text": "Robot control interface (ease-of-use primitives)",
+        "variant": "body"
+      }
+    },
+    "text-funding-2": {
+      "type": "Text",
+      "props": {
+        "text": "$70M series @ n/d post | Lead: n/d",
+        "variant": "caption"
+      }
+    },
+    "text-matters-2": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: Secondary-layer robotics ($70M vs $1.7B primary) extends physical-AI thesis downward; UI/UX-for-robots as standalone category distinct from compute incumbents.",
+        "variant": "body"
+      }
+    },
+    "stack-deal-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-deal-3",
+        "text-desc-3",
+        "text-funding-3",
+        "text-matters-3"
+      ]
+    },
+    "heading-deal-3": {
+      "type": "Heading",
+      "props": {
+        "text": "Axis Robotics",
+        "level": "h3"
+      }
+    },
+    "text-desc-3": {
+      "type": "Text",
+      "props": {
+        "text": "AI + decentralized infrastructure (crypto-native)",
+        "variant": "body"
+      }
+    },
+    "text-funding-3": {
+      "type": "Text",
+      "props": {
+        "text": "$12M seed @ n/d post | Lead: Hack VC · Co-leads: Nomad Capital, Pi Network, 10K Ventures",
+        "variant": "caption"
+      }
+    },
+    "text-matters-3": {
+      "type": "Text",
+      "props": {
+        "text": "Why it matters: First crypto-native robotics infrastructure play observed (hybrid AI-crypto); seed with distributed investor pool signals category confidence on-chain.",
+        "variant": "body"
+      }
+    },
+    "sep-sources": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-sources": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-sources",
+        "grid-sources"
+      ]
+    },
+    "heading-sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h4"
+      }
+    },
+    "grid-sources": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "sm"
+      },
+      "children": [
+        "badge-techcrunch",
+        "badge-crunchbase",
+        "badge-cryptorank",
+        "badge-crypto-fundraising",
+        "badge-websearch",
+        "badge-aifunding",
+        "badge-candidates"
+      ]
+    },
+    "badge-techcrunch": {
+      "type": "Badge",
+      "props": {
+        "text": "techcrunch: ok",
+        "variant": "secondary"
+      }
+    },
+    "badge-crunchbase": {
+      "type": "Badge",
+      "props": {
+        "text": "crunchbase: fail (404)",
+        "variant": "destructive"
+      }
+    },
+    "badge-cryptorank": {
+      "type": "Badge",
+      "props": {
+        "text": "cryptorank: ok",
+        "variant": "secondary"
+      }
+    },
+    "badge-crypto-fundraising": {
+      "type": "Badge",
+      "props": {
+        "text": "crypto-fundraising: ok",
+        "variant": "secondary"
+      }
+    },
+    "badge-websearch": {
+      "type": "Badge",
+      "props": {
+        "text": "websearch: fail (empty)",
+        "variant": "destructive"
+      }
+    },
+    "badge-aifunding": {
+      "type": "Badge",
+      "props": {
+        "text": "aifundingtracker: fail (June-only)",
+        "variant": "destructive"
+      }
+    },
+    "badge-candidates": {
+      "type": "Badge",
+      "props": {
+        "text": "candidates: 22 → kept: 3",
+        "variant": "secondary"
+      }
+    }
+  }
+}

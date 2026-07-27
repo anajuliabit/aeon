@@ -1,0 +1,542 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-27",
+        "description": "3 supply-chain compromises urgent, 5 enterprise framework vulnerabilities to schedule, 3 additional malware to monitor"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict-alert",
+        "heading-patch-today",
+        "stack-patch-today",
+        "sep1",
+        "heading-patch-week",
+        "stack-patch-week",
+        "sep2",
+        "heading-monitor",
+        "stack-monitor"
+      ]
+    },
+    "verdict-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Sources: KEV, GH Advisory, EPSS"
+      }
+    },
+    "heading-patch-today": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h3"
+      }
+    },
+    "stack-patch-today": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "patch-today-1",
+        "patch-today-2",
+        "patch-today-3"
+      ]
+    },
+    "patch-today-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pt1",
+        "text-pt1-desc",
+        "text-pt1-remediation"
+      ]
+    },
+    "link-pt1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-qhxp-5mv2-773f — @array-util/nodepull (npm)",
+        "href": "https://github.com/advisories/GHSA-qhxp-5mv2-773f",
+        "source": "supply-chain compromise"
+      }
+    },
+    "text-pt1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Credential stealer malware injected via package account takeover.",
+        "variant": "caption"
+      }
+    },
+    "text-pt1-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ remove @array-util/nodepull from package.json and all lockfiles today; rotate any npm publish tokens exposed.",
+        "variant": "body"
+      }
+    },
+    "patch-today-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pt2",
+        "text-pt2-desc",
+        "text-pt2-remediation"
+      ]
+    },
+    "link-pt2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-5xpc-8g9w-cwr8 — @array-util/subsearch (npm)",
+        "href": "https://github.com/advisories/GHSA-5xpc-8g9w-cwr8",
+        "source": "supply-chain compromise"
+      }
+    },
+    "text-pt2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Obfuscated exfiltration code targeting environment variables and credentials.",
+        "variant": "caption"
+      }
+    },
+    "text-pt2-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ remove @array-util/subsearch immediately; audit CI/CD logs for exposure.",
+        "variant": "body"
+      }
+    },
+    "patch-today-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pt3",
+        "text-pt3-desc",
+        "text-pt3-remediation"
+      ]
+    },
+    "link-pt3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-x8f8-q6m3-g4pq — font-huge (npm)",
+        "href": "https://github.com/advisories/GHSA-x8f8-q6m3-g4pq",
+        "source": "supply-chain compromise"
+      }
+    },
+    "text-pt3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Malicious preinstall hook with credential exfiltration payload.",
+        "variant": "caption"
+      }
+    },
+    "text-pt3-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ remove font-huge and redeploy; check recent CI runs for leaked credentials.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-patch-week": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h3"
+      }
+    },
+    "stack-patch-week": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "patch-week-1",
+        "patch-week-2",
+        "patch-week-3",
+        "patch-week-4",
+        "patch-week-5"
+      ]
+    },
+    "patch-week-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pw1",
+        "badge-pw1",
+        "text-pw1-desc",
+        "text-pw1-remediation"
+      ]
+    },
+    "link-pw1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-55971 — Apache Thrift (Go)",
+        "href": "https://github.com/advisories/GHSA-gwj4-q93m-wwqc"
+      }
+    },
+    "badge-pw1": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.3",
+        "variant": "destructive"
+      }
+    },
+    "text-pw1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Heap-based buffer overflow in C++ bindings enables memory corruption.",
+        "variant": "caption"
+      }
+    },
+    "text-pw1-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade Apache Thrift to ≥0.24.0 and rebuild Go services.",
+        "variant": "body"
+      }
+    },
+    "patch-week-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pw2",
+        "badge-pw2",
+        "text-pw2-desc",
+        "text-pw2-remediation"
+      ]
+    },
+    "link-pw2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-48144 — Apache Thrift (Go)",
+        "href": "https://github.com/advisories/GHSA-367h-9jj5-w29f"
+      }
+    },
+    "badge-pw2": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 9.1",
+        "variant": "destructive"
+      }
+    },
+    "text-pw2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Improper certificate validation in c_glib bindings allows MITM attacks.",
+        "variant": "caption"
+      }
+    },
+    "text-pw2-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade Apache Thrift to ≥0.24.0; rebuild and redeploy before trusted endpoints.",
+        "variant": "body"
+      }
+    },
+    "patch-week-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pw3",
+        "badge-pw3",
+        "text-pw3-desc",
+        "text-pw3-remediation"
+      ]
+    },
+    "link-pw3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-58389 — Apache Thrift (Rust)",
+        "href": "https://github.com/advisories/GHSA-jx7g-767m-86hp"
+      }
+    },
+    "badge-pw3": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.7",
+        "variant": "destructive"
+      }
+    },
+    "text-pw3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Resource allocation without limits in Rust transport layer enables DoS.",
+        "variant": "caption"
+      }
+    },
+    "text-pw3-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade thrift crate to ≥0.24.0 in Cargo.toml; redeploy after testing.",
+        "variant": "body"
+      }
+    },
+    "patch-week-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pw4",
+        "badge-pw4",
+        "text-pw4-desc",
+        "text-pw4-remediation"
+      ]
+    },
+    "link-pw4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-58662 — Apache Thrift (Go)",
+        "href": "https://github.com/advisories/GHSA-x4w6-p6f8-24qw"
+      }
+    },
+    "badge-pw4": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.7",
+        "variant": "destructive"
+      }
+    },
+    "text-pw4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Out-of-bounds read in protocol encoding allows memory disclosure.",
+        "variant": "caption"
+      }
+    },
+    "text-pw4-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade Apache Thrift to ≥0.24.0; treat as data-exposure risk.",
+        "variant": "body"
+      }
+    },
+    "patch-week-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-pw5",
+        "badge-pw5",
+        "text-pw5-desc",
+        "text-pw5-remediation"
+      ]
+    },
+    "link-pw5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2026-55969 — Apache Thrift",
+        "href": "https://github.com/advisories/GHSA-x8jh-qfcv-fp29"
+      }
+    },
+    "badge-pw5": {
+      "type": "Badge",
+      "props": {
+        "text": "CVSS 8.7",
+        "variant": "destructive"
+      }
+    },
+    "text-pw5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Integer overflow across multiple language bindings enables boundary bypass.",
+        "variant": "caption"
+      }
+    },
+    "text-pw5-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ upgrade all Apache Thrift language bindings to 0.24.0; coordinate multi-service rebuild.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-monitor": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h3"
+      }
+    },
+    "stack-monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "monitor-1",
+        "monitor-2",
+        "monitor-3"
+      ]
+    },
+    "monitor-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-m1",
+        "badge-m1",
+        "text-m1-desc",
+        "text-m1-remediation"
+      ]
+    },
+    "link-m1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-8mrq-4593-6x5p — route-processor (npm)",
+        "href": "https://github.com/advisories/GHSA-8mrq-4593-6x5p"
+      }
+    },
+    "badge-m1": {
+      "type": "Badge",
+      "props": {
+        "text": "malware, no fix available",
+        "variant": "secondary"
+      }
+    },
+    "text-m1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Credential exfiltration on install.",
+        "variant": "caption"
+      }
+    },
+    "text-m1-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ remove from dependencies if present; watch for patched release.",
+        "variant": "body"
+      }
+    },
+    "monitor-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-m2",
+        "badge-m2",
+        "text-m2-desc",
+        "text-m2-remediation"
+      ]
+    },
+    "link-m2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-hh4c-9fqx-2vc5 — gamified-trading-system (npm)",
+        "href": "https://github.com/advisories/GHSA-hh4c-9fqx-2vc5"
+      }
+    },
+    "badge-m2": {
+      "type": "Badge",
+      "props": {
+        "text": "malware, no fix available",
+        "variant": "secondary"
+      }
+    },
+    "text-m2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Supply-chain payload in transitive dependency.",
+        "variant": "caption"
+      }
+    },
+    "text-m2-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ audit for usage; flag for removal if found.",
+        "variant": "body"
+      }
+    },
+    "monitor-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-m3",
+        "badge-m3",
+        "text-m3-desc",
+        "text-m3-remediation"
+      ]
+    },
+    "link-m3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-wrm7-92jw-pqm9 — tailwind-motionkit (npm)",
+        "href": "https://github.com/advisories/GHSA-wrm7-92jw-pqm9"
+      }
+    },
+    "badge-m3": {
+      "type": "Badge",
+      "props": {
+        "text": "malware, no fix available",
+        "variant": "secondary"
+      }
+    },
+    "text-m3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Malicious code in build-time dependencies.",
+        "variant": "caption"
+      }
+    },
+    "text-m3-remediation": {
+      "type": "Text",
+      "props": {
+        "text": "→ remove if installed; monitor npm advisory updates for remediation.",
+        "variant": "body"
+      }
+    }
+  }
+}

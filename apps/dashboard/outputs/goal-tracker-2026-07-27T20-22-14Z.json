@@ -1,0 +1,315 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Goal Tracker — 2026-07-27"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-heading",
+        "summary-text",
+        "sep1",
+        "blocked-section",
+        "sep2",
+        "on-track-section",
+        "sep3",
+        "at-risk-section",
+        "sep4",
+        "sources-text"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "5 goals — 1 at risk, 0 needs attention, 1 on track, 3 blocked (overall → flat)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "blocked-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked-heading",
+        "blocked-item1",
+        "blocked-item2",
+        "blocked-item3"
+      ]
+    },
+    "blocked-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h3"
+      }
+    },
+    "blocked-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-item1-title",
+        "blocked-item1-meta",
+        "blocked-item1-issue",
+        "blocked-item1-action"
+      ]
+    },
+    "blocked-item1-title": {
+      "type": "Text",
+      "props": {
+        "text": "ISS-025 capture-step PR",
+        "variant": "lead"
+      }
+    },
+    "blocked-item1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "T+10 day-11 (5d past slip), 370 activity/14d",
+        "variant": "caption"
+      }
+    },
+    "blocked-item1-issue": {
+      "type": "Text",
+      "props": {
+        "text": "Verb-pool exhausted (12+ named verbs); downgraded actionable→reflect-scope, weekly-review hand-off."
+      }
+    },
+    "blocked-item1-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Operator direct-author dangerouslyDisableSandbox pivot in .github/workflows/aeon.yml:479-495"
+      }
+    },
+    "blocked-item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-item2-title",
+        "blocked-item2-meta",
+        "blocked-item2-issue",
+        "blocked-item2-action"
+      ]
+    },
+    "blocked-item2-title": {
+      "type": "Text",
+      "props": {
+        "text": "12:00 UTC batch DARK",
+        "variant": "lead"
+      }
+    },
+    "blocked-item2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "d29 frozen (2026-06-28 21:00Z), 212 activity/14d",
+        "variant": "caption"
+      }
+    },
+    "blocked-item2-issue": {
+      "type": "Text",
+      "props": {
+        "text": "8-skill cluster locked by ISS-027; same-slot clean fires confirm pattern-independent."
+      }
+    },
+    "blocked-item2-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Diagnose ISS-027 root cause or escalate"
+      }
+    },
+    "blocked-item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked-item3-title",
+        "blocked-item3-meta",
+        "blocked-item3-issue",
+        "blocked-item3-action"
+      ]
+    },
+    "blocked-item3-title": {
+      "type": "Text",
+      "props": {
+        "text": "Operator on-chain config",
+        "variant": "lead"
+      }
+    },
+    "blocked-item3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "d50 blocked, 88 activity/14d, trend -52%",
+        "variant": "caption"
+      }
+    },
+    "blocked-item3-issue": {
+      "type": "Text",
+      "props": {
+        "text": "ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets."
+      }
+    },
+    "blocked-item3-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Add both secrets, optionally expand on-chain-watches.yml pool"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "on-track-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "on-track-heading",
+        "on-track-item1"
+      ]
+    },
+    "on-track-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ON TRACK",
+        "level": "h3"
+      }
+    },
+    "on-track-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "on-track-item1-title",
+        "on-track-item1-meta",
+        "on-track-item1-issue"
+      ]
+    },
+    "on-track-item1-title": {
+      "type": "Text",
+      "props": {
+        "text": "H unlock monitor",
+        "variant": "lead"
+      }
+    },
+    "on-track-item1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "1d idle, 148 activity/14d (↑ improving +169%)",
+        "variant": "caption"
+      }
+    },
+    "on-track-item1-issue": {
+      "type": "Text",
+      "props": {
+        "text": "Cliff-day 7-25 spurious verdict locked (H +5.8% no-signature 7-25, -4.0% drift 7-26)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "at-risk-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "at-risk-heading",
+        "at-risk-item1"
+      ]
+    },
+    "at-risk-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h3"
+      }
+    },
+    "at-risk-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "at-risk-item1-title",
+        "at-risk-item1-meta",
+        "at-risk-item1-issue",
+        "at-risk-item1-action"
+      ]
+    },
+    "at-risk-item1-title": {
+      "type": "Text",
+      "props": {
+        "text": "priorities.md 52d stale",
+        "variant": "lead"
+      }
+    },
+    "at-risk-item1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "96 activity/14d, first 52d+ round-cross",
+        "variant": "caption"
+      }
+    },
+    "at-risk-item1-issue": {
+      "type": "Text",
+      "props": {
+        "text": "Last reviewed 2026-06-04; current-focus lines read as live-work-slipped."
+      }
+    },
+    "at-risk-item1-action": {
+      "type": "Text",
+      "props": {
+        "text": "→ Refresh priorities.md to shipped vs active work"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: logs=ok, git=ok, gh_pr=ok, gh_issue=ok, cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}

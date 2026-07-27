@@ -1,0 +1,297 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-27"
+      },
+      "children": [
+        "status-health",
+        "alert-systemic",
+        "separator-1",
+        "section-degraded",
+        "separator-2",
+        "section-warnings",
+        "separator-3",
+        "section-stats"
+      ]
+    },
+    "status-health": {
+      "type": "Text",
+      "props": {
+        "text": "HEALTH: DEGRADED(18D)",
+        "variant": "lead"
+      }
+    },
+    "alert-systemic": {
+      "type": "Alert",
+      "props": {
+        "title": "SYSTEMIC",
+        "message": "18 skills failing on output_tokens=0 sandbox-truncation (day 34)",
+        "type": "error"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-degraded": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-degraded",
+        "text-degraded-note",
+        "stack-degraded-items"
+      ]
+    },
+    "heading-degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "DEGRADED",
+        "level": "h3"
+      }
+    },
+    "text-degraded-note": {
+      "type": "Text",
+      "props": {
+        "text": "5 of 18, +13 more — see memory/issues/"
+      }
+    },
+    "stack-degraded-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-cost-report",
+        "item-reg-monitor",
+        "item-skill-analytics",
+        "item-vuln-scanner",
+        "item-search-skill"
+      ]
+    },
+    "item-cost-report": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text-cost-report",
+        "badge-cost-report",
+        "link-iss-025"
+      ]
+    },
+    "text-cost-report": {
+      "type": "Text",
+      "props": {
+        "text": "cost-report"
+      }
+    },
+    "badge-cost-report": {
+      "type": "Badge",
+      "props": {
+        "text": "12% success",
+        "variant": "destructive"
+      }
+    },
+    "link-iss-025": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-025",
+        "href": "#ISS-025"
+      }
+    },
+    "item-reg-monitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text-reg-monitor",
+        "badge-reg-monitor"
+      ]
+    },
+    "text-reg-monitor": {
+      "type": "Text",
+      "props": {
+        "text": "reg-monitor"
+      }
+    },
+    "badge-reg-monitor": {
+      "type": "Badge",
+      "props": {
+        "text": "17% success",
+        "variant": "destructive"
+      }
+    },
+    "item-skill-analytics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text-skill-analytics",
+        "badge-skill-analytics"
+      ]
+    },
+    "text-skill-analytics": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics"
+      }
+    },
+    "badge-skill-analytics": {
+      "type": "Badge",
+      "props": {
+        "text": "18% success",
+        "variant": "destructive"
+      }
+    },
+    "item-vuln-scanner": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text-vuln-scanner",
+        "badge-vuln-scanner",
+        "link-iss-018"
+      ]
+    },
+    "text-vuln-scanner": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner"
+      }
+    },
+    "badge-vuln-scanner": {
+      "type": "Badge",
+      "props": {
+        "text": "21% success",
+        "variant": "destructive"
+      }
+    },
+    "link-iss-018": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-018",
+        "href": "#ISS-018"
+      }
+    },
+    "item-search-skill": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text-search-skill",
+        "badge-search-skill",
+        "link-iss-021"
+      ]
+    },
+    "text-search-skill": {
+      "type": "Text",
+      "props": {
+        "text": "search-skill"
+      }
+    },
+    "badge-search-skill": {
+      "type": "Badge",
+      "props": {
+        "text": "38% success",
+        "variant": "destructive"
+      }
+    },
+    "link-iss-021": {
+      "type": "Link",
+      "props": {
+        "label": "ISS-021",
+        "href": "#ISS-021"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-warnings": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-warnings",
+        "text-warnings"
+      ]
+    },
+    "heading-warnings": {
+      "type": "Heading",
+      "props": {
+        "text": "WARNING",
+        "level": "h3"
+      }
+    },
+    "text-warnings": {
+      "type": "Text",
+      "props": {
+        "text": "13 skills (success rate 0.6–0.8)"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-healthy",
+        "stat-no-data",
+        "stat-open-issues",
+        "stat-resolved"
+      ]
+    },
+    "stat-healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "HEALTHY",
+        "value": "18"
+      }
+    },
+    "stat-no-data": {
+      "type": "Stat",
+      "props": {
+        "label": "NO_DATA",
+        "value": "3"
+      }
+    },
+    "stat-open-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "11"
+      }
+    },
+    "stat-resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}

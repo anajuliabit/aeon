@@ -1,0 +1,135 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Review — 2026-07-27"
+      },
+      "children": [
+        "action_section",
+        "sep_1",
+        "health_section",
+        "sep_2",
+        "review_section"
+      ]
+    },
+    "action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_heading",
+        "action_content"
+      ]
+    },
+    "action_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Action",
+        "level": "h2"
+      }
+    },
+    "action_content": {
+      "type": "Text",
+      "props": {
+        "text": "Reframe iss-025 out of the weekly action-cycle into reflect-scope escalation (4-consec-slip, verb-pool exhausted 2026-07-24) by 2026-07-30."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "health_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health_heading",
+        "stats_grid",
+        "advisor_note"
+      ]
+    },
+    "health_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Health",
+        "level": "h2"
+      }
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "skill_runs_stat",
+        "cancels_stat",
+        "issues_stat",
+        "advisor_stat"
+      ]
+    },
+    "skill_runs_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skill runs OK",
+        "value": "286/289"
+      }
+    },
+    "cancels_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Cancels",
+        "value": "0"
+      }
+    },
+    "issues_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "New issues",
+        "value": "0"
+      }
+    },
+    "advisor_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "investment-advisor clean",
+        "value": "7/7"
+      }
+    },
+    "advisor_note": {
+      "type": "Text",
+      "props": {
+        "text": "After PR #164 (-5 cancels vs prior week)",
+        "variant": "caption"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "review_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "review_link"
+      ]
+    },
+    "review_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full review",
+        "href": "articles/weekly-review-2026-07-27.md"
+      }
+    }
+  }
+}
