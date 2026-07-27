@@ -1,0 +1,48 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-task",
+        "text-change",
+        "story-pr"
+      ]
+    },
+    "heading-task": {
+      "type": "Heading",
+      "props": {
+        "text": "github-issues GH API field rename",
+        "level": "h3"
+      }
+    },
+    "text-change": {
+      "type": "Text",
+      "props": {
+        "text": "comments → commentsCount",
+        "variant": "body"
+      }
+    },
+    "story-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #169",
+        "href": "https://github.com/aeon/aeon/pull/169"
+      }
+    }
+  }
+}

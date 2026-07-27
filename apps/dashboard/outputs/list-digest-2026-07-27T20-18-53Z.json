@@ -1,0 +1,153 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-26",
+        "description": "Opus 5 dominates this list's top discussion; three other voices thin on engagement."
+      },
+      "children": [
+        "section-heading",
+        "tweets-stack",
+        "separator",
+        "status-section"
+      ]
+    },
+    "section-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Crypto/DeFi Research List",
+        "level": "h3"
+      }
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1-group",
+        "tweet-2-group",
+        "tweet-3-group"
+      ]
+    },
+    "tweet-1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cyrilXBT",
+        "handle": "@cyrilXBT",
+        "text": "Opus 5's benchmark leap (43.3% Frontier-Bench vs 18.7% Opus 4.8) hits the exact same $5/$25 price tier—token-efficiency play, not a smarter-model flex. Token-per-dollar math compounds in ways single benchmarks miss.",
+        "likes": 76,
+        "retweets": 16
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/cyrilXBT/status/2081054944505790720"
+      }
+    },
+    "tweet-2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "@Flowslikeosmo",
+        "text": "RH trenches shifting from easy mode to PvP align with an uptick in retail trading apps—structural shift in retail behavior or noise?",
+        "likes": 18,
+        "retweets": 1
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2081137435082453362"
+      }
+    },
+    "tweet-3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Louround_",
+        "handle": "@Louround_",
+        "text": "Health stack recommendation (creatine, B1, fish oil, coffee, sport) pitched as foundational—off-topic but anchors list's broader wellness signal.",
+        "likes": 22,
+        "retweets": 0
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Louround_/status/2081095795592540665"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-text",
+        "status-text"
+      ]
+    },
+    "sources-text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list=ok(3 substantive + 1 reply)",
+        "variant": "caption"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

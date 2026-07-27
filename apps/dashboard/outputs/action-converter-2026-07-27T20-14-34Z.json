@@ -1,0 +1,59 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "📋 5 actions for 2026-07-26"
+      },
+      "children": [
+        "stack_actions"
+      ]
+    },
+    "stack_actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_1",
+        "action_2",
+        "action_3",
+        "action_4",
+        "action_5"
+      ]
+    },
+    "action_1": {
+      "type": "Text",
+      "props": {
+        "text": "1. File ISS-027/028 docs"
+      }
+    },
+    "action_2": {
+      "type": "Text",
+      "props": {
+        "text": "2. merge-or-hold PR#165 before 17:38z gate"
+      }
+    },
+    "action_3": {
+      "type": "Text",
+      "props": {
+        "text": "3. hand-off ISS-025 to weekly-review"
+      }
+    },
+    "action_4": {
+      "type": "Text",
+      "props": {
+        "text": "4. patch github-issues SKILL.md commentsCount field"
+      }
+    },
+    "action_5": {
+      "type": "Text",
+      "props": {
+        "text": "5. re-run unlock-monitor Mon to confirm H false-positive"
+      }
+    }
+  }
+}

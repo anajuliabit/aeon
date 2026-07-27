@@ -1,29 +1,17 @@
-Perfect. Now let me verify the findings one more time and determine if we should send a notification. Based on the dedup check in the skill:
+Heartbeat complete.
 
-Looking at recent logs, the P0/P1 findings have already been flagged. The only NEW item is PR #165 crossing the 7d gate, which is a marker event but not a "notification-worthy" item since:
-1. It's expected behavior (weekly-batch gate)
-2. Already documented in MEMORY.md
-3. Within the 48h dedup window but previously documented
+## Summary
 
-Per the SKILL.md, we should skip duplicate notifications. However, since PR #165 is NOW officially crossing the gate, this IS a new status marker. Let me check if we should notify:
+Ran the heartbeat skill (var=""). Checked all P0-P3 signals; only real delta since the 14:56Z tick was PR #169 opening (already logged in self-improve 18:30Z). Refreshed `docs/status.md` with current fleet state.
 
-The SKILL.md says: "Before sending any notification, grep memory/logs/ for the same item. If it appears in the last 48h of logs, skip it."
+**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
 
-MEMORY.md says "PR #165 crosses 7d weekly-batch gate ~17:38z **today 7-26**" but that was written on 7-26 anticipating the crossing. The actual crossing time is 7-27 ~17:38Z UTC (6 hours from now). This is a NEW event marker.
+**Key state:**
+- **P0 chronic failures fire → 🔴 DEGRADED** — 11 enabled skills sub-50% (cost-report 12%, reg-monitor 17%, skill-analytics 18%, vuln-scanner 21%, market-context-refresh 32%, narrative-tracker 33%, search-skill 38%, security-digest 41%, aixbt-pulse 47%, skill-health 48%, plus disabled fleet-control 40%). Durable regime, hash 467ce959 stable across 7 consecutive skill-health ticks. Corrected upward from morning tick's 🟡 WATCH per strict SKILL.md rule.
+- **P1**: 4 open PRs, #165 crossed 7d weekly-batch gate ~26h ago (CONFLICTING). #169 fresh from self-improve.
+- **P2**: 6 MEMORY items advance one UTC-day — batch-dark d30, on-chain-config d51, priorities.md d53 stale, ISS-025 T+10 day-12, ISS-027/028 doc-gap d21.
+- **P3**: 8-skill 12:00 UTC batch still frozen at 6-28 (30 days silent), documented under ISS-027.
 
-However, per MEMORY line 8: "First PR to cross weekly-batch cadence gate in current cycle. Sun operator activity window = mon 7-27 weekly-review is natural absorption point" — it will be absorbed tomorrow in weekly-review, not flagged as an alert.
+**Notification:** DEDUP SKIP — every finding already logged in today's 14:56Z heartbeat entry, evening cluster tick trail, and prior-day audits.
 
-**Decision:** No notification (dedup applies; expected gate cross; weekly-review will handle tomorrow). Output status per SKILL.md step 2.
-
-Let me output the final summary:
-
-HEARTBEAT_OK · STATUS_PAGE=WATCH — wrote docs/status.md
-
-Summary of findings:
-- 🟡 **WATCH** status (downgraded from DEGRADED due to chronic-failures tail documented + no new critical flags)
-- **P0:** 11 skills with chronic failures (success_rate < 0.5), no consecutive_failures >= 3, heartbeat OK
-- **P1:** PR #165 approaches 7d gate cross tonight (~17:38Z), absorbed by weekly-review tomorrow
-- **P2:** ISS-025/027/028 flagged items documented, awaiting weekly-review
-- **Status page:** Updated with current fleet health, 42 skills tracked, 11 open issues
-
-No notification sent (all findings dedup-skip; expected cadence events).
+**Files modified:** `docs/status.md`, `memory/logs/2026-07-27.md`.
