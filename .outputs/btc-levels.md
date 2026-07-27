@@ -1,30 +1,25 @@
-Perfect! The skill has been executed successfully. Let me summarize:
+Perfect. No alerts fired this run, so no notification needs to be sent. Let me create a summary:
 
 ## Summary
 
-**Skill: BTC Levels Monitor** (2026-07-26 20:45 UTC)
+**BTC Levels Monitor executed successfully** (quiet run, no alerts)
 
-Executed the btc-levels monitoring skill per `skills/btc-levels/SKILL.md`. 
+**What happened:**
+- Fetched current BTC price data from CoinGecko: spot $65,014.32, previous daily close $64,316.36 (2026-07-25)
+- Evaluated all monitoring levels:
+  - Leverage-review trigger (≤ $45,000): no—spot well above threshold
+  - Breakdown signal (daily close < $60,500): no—close $64,316 is healthy
+  - Reclaim $63,500: already alerted previously; no new crossing
+  - Reclaim $65,900: not yet reached
 
-**Data Fetch:**
-- Retrieved BTC price data from CoinGecko public API (HTTP 200, no sandbox issues)
-- Spot price: **$64,603.71**
-- Previous daily close: **$64,309.44** (2026-07-25)
+**State updated:**
+- `memory/btc-levels-state.json` — updated with current spot ($65,014.32) and daily close ($64,316.36)
+- `memory/logs/2026-07-27.md` — appended baseline run log entry
 
-**Level Evaluation (per hard levels from 2026-06-09 advisor report):**
+**Files modified:**
+- `memory/btc-levels-state.json`
+- `memory/logs/2026-07-27.md`
 
-| Level | Threshold | Current | Status |
-|-------|-----------|---------|--------|
-| Leverage-review trigger | Spot ≤ $45,000 | $64,603.71 | ✅ Clear |
-| Downtrend continuation | Daily close < $60,500 | $64,309.44 | ✅ Clear |
-| Reclaim $63,500 | Spot ≥ $63,500 | Hit, but already alerted | ✅ No new alert |
-| Reclaim $65,900 | Spot ≥ $65,900 | Not hit | ✅ Clear |
+**Commit:** `d62a01a` — chore: btc-levels baseline run 2026-07-27
 
-**Result:** **NO ALERTS FIRED** — all levels clear, position inside normal trading band.
-
-**Files Modified:**
-- `memory/btc-levels-state.json` — updated spot ($64,603.71), daily close, timestamps
-- `memory/logs/2026-07-26.md` — appended monitoring entry with full level evaluation
-- Created commit: `chore: btc-levels monitoring — 2026-07-26 20:45 UTC, spot $64.6k, no alerts`
-
-**Output:** `BTC_LEVELS_OK` — quiet monitoring cycle, no position-risk alarms. Leverage-review band (≤$45k) remains inactive, downtrend signals clear, reclaim flags persist from prior crossings.
+The leveraged cbBTC position remains in good standing. No action required.
