@@ -1,25 +1,25 @@
-Perfect. No alerts fired this run, so no notification needs to be sent. Let me create a summary:
-
 ## Summary
 
-**BTC Levels Monitor executed successfully** (quiet run, no alerts)
+Executed the **BTC Levels Monitor** skill (`skills/btc-levels/SKILL.md`) successfully. Here's what happened:
 
-**What happened:**
-- Fetched current BTC price data from CoinGecko: spot $65,014.32, previous daily close $64,316.36 (2026-07-25)
-- Evaluated all monitoring levels:
-  - Leverage-review trigger (≤ $45,000): no—spot well above threshold
-  - Breakdown signal (daily close < $60,500): no—close $64,316 is healthy
-  - Reclaim $63,500: already alerted previously; no new crossing
-  - Reclaim $65,900: not yet reached
+### Steps Completed
 
-**State updated:**
-- `memory/btc-levels-state.json` — updated with current spot ($65,014.32) and daily close ($64,316.36)
-- `memory/logs/2026-07-27.md` — appended baseline run log entry
+1. **Fetched BTC price data** from CoinGecko public API
+   - Current spot: **$65,236.69**
+   - Previous daily close: **$64,316.36** (2026-07-25)
 
-**Files modified:**
-- `memory/btc-levels-state.json`
-- `memory/logs/2026-07-27.md`
+2. **Evaluated against monitoring levels:**
+   - ✓ Leverage-review trigger (≤$45k): Not triggered (spot well above)
+   - ✓ Downtrend breakdown (<$60.5k daily close): Not triggered
+   - ✓ $63.5k reclaim: Already alerted in prior run, no new alert
+   - ✓ $65.9k reclaim: Not yet reached (current spot $65.2k)
 
-**Commit:** `d62a01a` — chore: btc-levels baseline run 2026-07-27
+3. **Result: No alerts fired** — quiet run (the norm)
 
-The leveraged cbBTC position remains in good standing. No action required.
+### Files Modified
+
+- **`memory/btc-levels-state.json`** — Updated with current spot/close data and flags
+- **`memory/logs/2026-07-27.md`** — Appended run log entry
+- **Git commit** `f635821`: State persisted (chore commit)
+
+The leveraged cbBTC position remains healthy with BTC above all trigger levels. The system will continue monitoring at the 4-hour cadence.
