@@ -606,8 +606,8 @@
     "success_rate": 1
   },
   "unlock-monitor": {
-    "last_dispatch": "2026-07-20T10:47:35Z",
-    "last_status": "success",
+    "last_dispatch": "2026-07-27T11:59:13Z",
+    "last_status": "dispatched",
     "last_success": "2026-07-20T10:57:38Z",
     "total_runs": 6,
     "total_successes": 6,
