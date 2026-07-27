@@ -1,0 +1,166 @@
+{
+  "timestamp": "2026-07-27T14:56:45Z",
+  "query_window": "2026-07-25T14:56:45Z to 2026-07-27T14:56:45Z",
+  "kev_fresh": 0,
+  "kev_total_week": 6,
+  "gh_critical": 6,
+  "gh_high": 21,
+  "gh_malware": 34,
+  "deduped_count": 5,
+  "patch_today": [
+    {
+      "id": "GHSA-qhxp-5mv2-773f",
+      "type": "malware",
+      "summary": "Malware in @array-util/nodepull npm package - supply-chain compromise",
+      "ecosystem": "npm",
+      "package": "@array-util/nodepull",
+      "patched_version": "N/A (remove)",
+      "epss": 0.0,
+      "cvss": 0.0,
+      "url": "https://github.com/advisories/GHSA-qhxp-5mv2-773f"
+    },
+    {
+      "id": "GHSA-5xpc-8g9w-cwr8",
+      "type": "malware",
+      "summary": "Malware in @array-util/subsearch npm package - supply-chain compromise",
+      "ecosystem": "npm",
+      "package": "@array-util/subsearch",
+      "patched_version": "N/A (remove)",
+      "epss": 0.0,
+      "cvss": 0.0,
+      "url": "https://github.com/advisories/GHSA-5xpc-8g9w-cwr8"
+    },
+    {
+      "id": "GHSA-x8f8-q6m3-g4pq",
+      "type": "malware",
+      "summary": "Malware in font-huge npm package - supply-chain compromise",
+      "ecosystem": "npm",
+      "package": "font-huge",
+      "patched_version": "N/A (remove)",
+      "epss": 0.0,
+      "cvss": 0.0,
+      "url": "https://github.com/advisories/GHSA-x8f8-q6m3-g4pq"
+    }
+  ],
+  "patch_this_week": [
+    {
+      "id": "CVE-2026-55971",
+      "ghsa": "GHSA-gwj4-q93m-wwqc",
+      "type": "high-cvss",
+      "summary": "Heap-based Buffer Overflow vulnerability in Apache Thrift C++ bindings",
+      "ecosystem": "go",
+      "package": "Apache Thrift",
+      "patched_version": "0.24.0",
+      "epss": 0.0,
+      "cvss": 9.3,
+      "url": "https://github.com/advisories/GHSA-gwj4-q93m-wwqc"
+    },
+    {
+      "id": "CVE-2026-48144",
+      "ghsa": "GHSA-367h-9jj5-w29f",
+      "type": "high-cvss",
+      "summary": "Improper Validation of Certificate with Host Mismatch in Apache Thrift c_glib",
+      "ecosystem": "go",
+      "package": "Apache Thrift",
+      "patched_version": "0.24.0",
+      "epss": 0.0,
+      "cvss": 9.1,
+      "url": "https://github.com/advisories/GHSA-367h-9jj5-w29f"
+    },
+    {
+      "id": "CVE-2026-58389",
+      "ghsa": "GHSA-jx7g-767m-86hp",
+      "type": "high-cvss",
+      "summary": "Allocation of Resources Without Limits or Throttling in Apache Thrift Rust",
+      "ecosystem": "crates.io",
+      "package": "Apache Thrift",
+      "patched_version": "0.24.0",
+      "epss": 0.0,
+      "cvss": 8.7,
+      "url": "https://github.com/advisories/GHSA-jx7g-767m-86hp"
+    },
+    {
+      "id": "CVE-2026-58662",
+      "ghsa": "GHSA-x4w6-p6f8-24qw",
+      "type": "high-cvss",
+      "summary": "Out-of-bounds Read in Apache Thrift C++",
+      "ecosystem": "go",
+      "package": "Apache Thrift",
+      "patched_version": "0.24.0",
+      "epss": 0.0,
+      "cvss": 8.7,
+      "url": "https://github.com/advisories/GHSA-x4w6-p6f8-24qw"
+    },
+    {
+      "id": "CVE-2026-55969",
+      "ghsa": "GHSA-x8jh-qfcv-fp29",
+      "type": "high-cvss",
+      "summary": "Integer Overflow in Apache Thrift (C++, c_glib, Go, netstd, Delphi, Haxe)",
+      "ecosystem": "go",
+      "package": "Apache Thrift",
+      "patched_version": "0.24.0",
+      "epss": 0.0,
+      "cvss": 8.7,
+      "url": "https://github.com/advisories/GHSA-x8jh-qfcv-fp29"
+    }
+  ],
+  "monitor": [
+    {
+      "id": "GHSA-8mrq-4593-6x5p",
+      "type": "malware",
+      "summary": "Malware in route-processor npm package",
+      "ecosystem": "npm",
+      "package": "route-processor",
+      "patched_version": "N/A (remove)",
+      "epss": 0.0,
+      "cvss": 0.0,
+      "url": "https://github.com/advisories/GHSA-8mrq-4593-6x5p"
+    },
+    {
+      "id": "GHSA-hh4c-9fqx-2vc5",
+      "type": "malware",
+      "summary": "Malware in gamified-trading-system npm package",
+      "ecosystem": "npm",
+      "package": "gamified-trading-system",
+      "patched_version": "N/A (remove)",
+      "epss": 0.0,
+      "cvss": 0.0,
+      "url": "https://github.com/advisories/GHSA-hh4c-9fqx-2vc5"
+    },
+    {
+      "id": "GHSA-wrm7-92jw-pqm9",
+      "type": "malware",
+      "summary": "Malware in tailwind-motionkit npm package",
+      "ecosystem": "npm",
+      "package": "tailwind-motionkit",
+      "patched_version": "N/A (remove)",
+      "epss": 0.0,
+      "cvss": 0.0,
+      "url": "https://github.com/advisories/GHSA-wrm7-92jw-pqm9"
+    }
+  ],
+  "summary": {
+    "kev_fresh": 0,
+    "kev_total_week": 6,
+    "gh_critical": 6,
+    "gh_high": 21,
+    "gh_malware": 34,
+    "deduped_count": 5,
+    "total_advisories_fetched": 61,
+    "tracked_ecosystem_filtered": 25,
+    "tier_breakdown": {
+      "patch_today": 3,
+      "patch_this_week": 5,
+      "monitor": 3
+    }
+  },
+  "notable": "CRITICAL: 34 supply-chain malware packages published to npm on 2026-07-27. Apache Thrift 0.24.0 release addresses 13 distinct CVEs across all language bindings (critical + high severity, CVSS 8.7-9.3). KEV list has zero FRESH items this reporting window - all 6 known-exploited vulns from prior 2 days already in dedup list. Shescape GHSA-w4hw-qcx7-56pr (Windows CMD shell injection, reviewed=true) appears in prior dedup list. Linux kernel, device firmware, non-tracked-ecosystem advisories excluded per ecosystem filter.",
+  "filters_applied": [
+    "Tracked ecosystems: npm, pip, Go, crates.io, GitHub Actions",
+    "Malware type overrides ecosystem filter",
+    "KEV entries always included",
+    "Dedup against prior 2 days: 5 items dropped",
+    "CVSS threshold for PATCH THIS WEEK: >= 8.0",
+    "CVSS threshold for PATCH TODAY: >= 9.8 or type=malware or EPSS >= 0.5"
+  ]
+}
