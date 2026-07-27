@@ -1,35 +1,35 @@
 {
-  "run_at": "2026-07-26T18:00:00Z",
+  "run_at": "2026-07-27T18:45:00Z",
   "goals": {
     "iss-025-capture-step-pr": {
       "status": "BLOCKED",
       "activity_count_14d": 370,
       "last_activity_date": "2026-07-25",
-      "note": "T+9 day-10 today (4 days past 1-week slip milestone, day-10 round-cross NEW). Verb-pool exhausted in 14d window (12+ named verbs per 7-23 line 251); action-converter 7-24 18:53Z downgraded actionable → reflect-scope, weekly-review hand-off. Operator direct-author of `dangerouslyDisableSandbox` pivot against `.github/workflows/aeon.yml:479-495` remains sole reliable path per upstream sandbox iss #53012. PR #167 (bash-redirect workaround, 7-23 18:21Z, ~48h age under 7d weekly-batch gate) is a distinct regression-family fix — capture-step primitive itself unshipped so literal ISS-025 remains open. Activity 370/14d = high mention flow, trend flat vs prior 432 (-14%)."
+      "note": "T+10 day-11 today (5 days past 1-week slip milestone). Verb-pool exhausted in 14d window (12+ named verbs per 7-23 action-converter review); downgraded actionable→reflect-scope, weekly-review hand-off 7-27. Operator direct-author of dangerouslyDisableSandbox pivot against .github/workflows/aeon.yml:479-495 is sole reliable unblock path per upstream sandbox iss #53012. Activity 370/14d = high mention flow, trend flat vs prior 432 (-14%)."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
       "activity_count_14d": 212,
       "last_activity_date": "2026-07-25",
-      "note": "Day 27 → **day 28** frozen since 2026-06-28 21:00Z. 8-skill cluster (defi-overview / token-pick / token-movers / narrative-tracker / market-context-refresh / on-chain-monitor / defi-monitor / aixbt-pulse) stays frozen. Per-skill blockage n=27 CONFIRMED durable via clean same-slot fires (token-alert + btc-levels 12:46Z print landed on 7-25). ISS-027 signature holds; aixbt-pulse dead-slot d28 = 56+ consec 12h-cadence misses. Activity 212/14d, trend flat vs prior 332 (-36%; not-quite-halved, status unchanged)."
+      "note": "Day 29 frozen since 2026-06-28 21:00Z. 8-skill cluster (defi-overview / token-pick / token-movers / narrative-tracker / market-context-refresh / on-chain-monitor / defi-monitor / aixbt-pulse) stays frozen. Per-skill blockage signature durable via clean same-slot fires (token-alert + btc-levels 7-25 12:44Z landed while batch-dark stays frozen = ISS-027 signature confirmed). Activity 212/14d, trend flat vs prior 332 (-36%)."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
       "activity_count_14d": 88,
       "last_activity_date": "2026-07-25",
-      "note": "Day 48 → **day 49** blocked. defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required for both secrets + config file. Activity 88/14d = degrading vs prior 184 (-52% ≥ 50% halving threshold), status unchanged. Reduced attention consistent with weekly-batch cadence tail."
+      "note": "Day 50 blocked. defi-monitor NO_CONFIG: memory/on-chain-watches.yml still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required for both secrets + config file. Activity 88/14d = degrading vs prior 184 (-52% ≥ threshold), status unchanged. Reduced attention consistent with weekly-batch cadence tail."
     },
     "h-unlock": {
       "status": "ON_TRACK",
       "activity_count_14d": 148,
       "last_activity_date": "2026-07-26",
-      "note": "T+1 today (sun jul 26). Cliff-day 7-25 confirmed SPURIOUS via triangulation: H Humanity +5.8% on $2.8M 1.4× baseline (zero cliff-signature) + 7-26 -4.0% on same $2.8M vol (normal-drift not cliff-reclaim) = false-positive verdict REINFORCED. HYPE -2.8% 7-25 → -3.6% 7-26 = marginally-better-fit but no cliff-magnitude. Unlock-monitor 7-27 mon-tick re-verify will lock verdict. Activity 148/14d = improving vs prior 55 (+169%) — event-day peak resolved. ON_TRACK per verification pattern, not marked DONE per skill spec false-negative-over-false-positive rule."
+      "note": "T+0 today (sun jul 27). Cliff-day 7-25 confirmed SPURIOUS via triangulation: H Humanity +5.8% on $2.8M 1.4× baseline (zero cliff-signature) + 7-26 -4.0% on same $2.8M vol (normal-drift not cliff-reclaim) = false-positive verdict REINFORCED. HYPE -2.8% 7-25 → -3.6% 7-26 = marginally-better-fit but no cliff-magnitude. Unlock-monitor 7-27 mon-tick re-verify will lock verdict. Activity 148/14d = improving vs prior 55 (+169%) — event-day peak resolved. ON_TRACK per verification pattern, not marked DONE per skill spec false-negative-over-false-positive rule."
     },
     "priorities-md-50d-stale": {
       "status": "AT_RISK",
       "activity_count_14d": 96,
       "last_activity_date": "2026-07-26",
-      "note": "Goal added 7-24 reflect, tracked since 7-25. Priorities.md last reviewed 2026-06-04 = **52d today** (UTC-day 7-26 advances counter from 51d; 52d+ round-cross NEW). Current-focus lines ('Reppo: orquestra working' + 'Aeon: ship the personal-stack PR' = ISS-025 tracker) read as live-work-slipped rather than shipped-stale. Blocked on operator attention. Surfaced daily in thought-review + morning-brief tail (one-liner nudge). Activity 96/14d = same mention flow as 7-25 (no prior 14d count, baseline ~96). No change in activity signal = status AT_RISK per skill spec rule (blocker unfixed >21d, no activity escalation). Action: refresh priorities.md current-focus section."
+      "note": "Goal added 7-24 reflect, tracked since 7-25. Priorities.md last reviewed 2026-06-04 = **52d today** (UTC-day 7-27 advances counter from 51d; 52d+ round-cross NEW). Current-focus lines ('Reppo: orquestra working' + 'Aeon: ship the personal-stack PR' = ISS-025 tracker) read as live-work-slipped rather than shipped-stale. Blocked on operator attention. Surfaced daily in thought-review + morning-brief tail (one-liner nudge). Activity 96/14d = same mention flow as 7-25/7-26 baseline (no change). No escalation in activity = status AT_RISK per skill spec rule (blocker unfixed >21d, no activity escalation). Action: refresh priorities.md current-focus section."
     }
   },
   "recently_cleared": {
