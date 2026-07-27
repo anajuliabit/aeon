@@ -33,7 +33,7 @@ Read the last 2 days of `memory/logs/` and extract any GitHub issue URLs already
 2. Fetch every new open issue in scope with one advanced-search call (much cheaper than per-repo looping):
    ```bash
    gh search issues --limit 100 \
-     --json number,title,url,createdAt,author,labels,repository,comments \
+     --json number,title,url,createdAt,author,labels,repository,commentsCount \
      -- "$SCOPE is:issue is:open created:>$YESTERDAY sort:created-desc" \
      > /tmp/gh-issues.json
    ```
