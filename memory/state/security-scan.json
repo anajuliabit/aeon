@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-20",
+  "generated_at": "2026-07-27",
   "scope": "full corpus",
   "scanner_mode": "inline_grep_fallback",
-  "scanner_mode_reason": "scan.sh execution blocked by sandbox approval gate (8th consecutive scan: 2026-05-25, 06-01, 06-15, 06-22, 06-29, 07-06, 07-13, 07-20); inline Grep over scan.sh's HIGH/MEDIUM/LOW pattern library + manual GitHub Actions script-injection audit of every ${{ }} expression in run: blocks + obfuscation sweep, per SKILL.md step 4 sandbox fallback. Never silently skipped.",
+  "scanner_mode_reason": "scan.sh execution blocked by sandbox approval gate (9th consecutive scan: 2026-05-25, 06-01, 06-15, 06-22, 06-29, 07-06, 07-13, 07-20, 07-27); inline Grep over scan.sh's HIGH/MEDIUM/LOW pattern library + manual GitHub Actions script-injection audit of every ${{ }} expression in run: blocks + obfuscation sweep, per SKILL.md step 4 sandbox fallback. Never silently skipped.",
   "exit_status": "SECURITY_SCAN_NOCHANGE",
   "delta_summary": {
     "new_high": 0,
@@ -10,13 +10,14 @@
     "persistent_high": 4,
     "new_medium": 0,
     "new_low": 0,
-    "delta_note": "Byte-for-byte identical finding set to 2026-07-13. Canonical-4 aeon.yml workflow_dispatch-chain HIGH findings persist at L86/L94/L96/L812 (:812 held across 5 consecutive scans — no line drift). chain-runner.yml ISS-017 env: indirection fix held (L41 + L368). messages.yml 2026-04-11 incident-class fix held across every site (L612-616, L684-685, L838-863). Obfuscation sweep clean. Skill count 191 → 191 (unchanged), workflows 9 → 9 (unchanged), scripts 30 → 30 (unchanged), companion scripts 2 → 2 (unchanged). No new attack surface introduced this week."
+    "delta_note": "Byte-for-byte identical finding set to 2026-07-20. Canonical-4 aeon.yml workflow_dispatch-chain HIGH findings persist at L86/L94/L96/L812 (:812 held across 6 consecutive scans — no line drift). chain-runner.yml ISS-017 env: indirection fix held (L41 + L368). messages.yml 2026-04-11 incident-class fix held across every site (L612-616, L684-685, L838-863). Obfuscation sweep clean. Skill count 191 → 191 (unchanged), workflows 9 → 9 (unchanged), repo scripts 21 (unchanged; total scripts 31 = 21 repo + 10 advisor). No new attack surface introduced this week."
   },
   "counts": {
     "files_scanned": 232,
     "skill_md_scanned": 191,
     "workflows_scanned": 9,
-    "repo_scripts_scanned": 30,
+    "repo_scripts_scanned": 21,
+    "advisor_scripts_scanned": 10,
     "companion_scripts_scanned": 2,
     "high_post_filter": 4,
     "medium_post_filter": 15,
@@ -58,7 +59,7 @@
       "severity": "high",
       "fingerprint": "aeon.yml:812:steps.work.outputs.label",
       "delta": "PERSISTENT",
-      "note": "Held at :812 for 5th consecutive scan (2026-06-22, 06-29, 07-06, 07-13, 07-20 all at :812; was :849 at 2026-06-15, :725 at 06-01, :718 at baseline). No line drift this run. Same anti-pattern, derived from steps.skill.outputs.name -> inputs.skill."
+      "note": "Held at :812 for 6th consecutive scan (2026-06-22, 06-29, 07-06, 07-13, 07-20, 07-27 all at :812; was :849 at 2026-06-15, :725 at 06-01, :718 at baseline). No line drift this run. Same anti-pattern, derived from steps.skill.outputs.name -> inputs.skill."
     }
   ],
   "downstream_same_chain_sites_informational": [
@@ -99,7 +100,7 @@
     "base64_decode_to_shell": "clean (aeon.yml:343 chunks a jq-built JSON Telegram payload back into text; scripts/fork-cohort-run.sh:92 + scripts/sync-upstream.sh:49 + .fork-runs-check.sh:49 decode gh api /contents responses; none pipe to a shell)",
     "ssrf_webhook_hosts": "clean (only mentions are in skill-security-scan/SKILL.md pattern definition + prior security-scan articles; no active code uses any flagged host)"
   },
-  "medium_low_persistent_note": "All base64 -d matches decode GitHub API contents responses (API returns base64) or chunk a Telegram message into a jq-built JSON payload. None pipe to a shell -> no decode-then-execute. Path-traversal/force-push MEDIUM matches are documentation or internally-computed non-user-controllable step outputs. Unchanged from 2026-07-13. ~80 SKILL.md curl-with-secret MEDIUM matches all inside fenced code blocks (documentation, not execution path). git push --force-with-lease at aeon.yml:819 and messages.yml:876 is the safe force-push variant (uses --force-with-lease, not --force) — MEDIUM pattern `git push --force` regex matches the substring but --force-with-lease is the intended, safe form.",
+  "medium_low_persistent_note": "All base64 -d matches decode GitHub API contents responses (API returns base64) or chunk a Telegram message into a jq-built JSON payload. None pipe to a shell -> no decode-then-execute. Path-traversal/force-push MEDIUM matches are documentation or internally-computed non-user-controllable step outputs. Unchanged from 2026-07-20. ~80 SKILL.md curl-with-secret MEDIUM matches all inside fenced code blocks (documentation, not execution path). git push --force-with-lease at aeon.yml:819 and messages.yml:876 is the safe force-push variant (uses --force-with-lease, not --force) — MEDIUM pattern `git push --force` regex matches the substring but --force-with-lease is the intended, safe form.",
   "findings": [
     {"file": ".github/workflows/aeon.yml", "line": 86, "pattern": "inputs.skill interpolated into run: block", "severity": "high", "fingerprint": "aeon.yml:86:inputs.skill"},
     {"file": ".github/workflows/aeon.yml", "line": 94, "pattern": "steps.skill.outputs.name interpolated into run: block", "severity": "high", "fingerprint": "aeon.yml:94:steps.skill.outputs.name"},
