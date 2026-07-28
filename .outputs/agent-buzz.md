@@ -1,14 +1,24 @@
-*Agent Buzz — 2026-07-27*
-_Single strong MCP theme — agent infrastructure layer focus, protocol-as-enabler narrative, no competing sub-topics._
+Agent Buzz — 2026-07-28
+_MCP spec maturation (stateless drop, tailored-server debate) plus two on-chain agent launches; Stanford framing pushed back on long-context-as-panacea._
 
-**MCP as Agent Infrastructure**
-• @0xCortexl — MCP as request-response layer for agent tool access — first protocol for model-tool symmetry
-  https://x.com/0xCortexl/status/2081304370512036216
-• @nazarr_0x — Ocean Protocol MCP enables agents to contract for compute directly — infrastructure-as-service primitive
-  https://x.com/nazarr_0x/status/2081390280360489402
-• @aivahai — Permission scoping through MCP prevents unintended agent actions — authorization layer distinct from capability
-  https://x.com/aivahai/status/2081325026037629101
-• @AgoristAlchemy — MCP replaces glue code between agents and tools — protocol transforms tool integration from bespoke to compositional
-  https://x.com/AgoristAlchemy/status/2081522541685031025
+MCP protocol maturation
+• @MikelEcheve — MCP July 28 spec drops session state; parallel handshakes and faster reconnects follow from stateless core
+  https://x.com/MikelEcheve/status/2081772712091861221
+• @AgenticAIFdn — FastMCP surfaces query results without stuffing raw payload into LLM context — retrieval-shaped tool response
+  https://x.com/AgenticAIFdn/status/2081726447232712814
+• @Jordy_vD_ — APIs built for humans degrade agent behavior; MCP servers designed for agents beat auto-converted adapters
+  https://x.com/Jordy_vD_/status/2081819236758925637
 
-<!-- _src: xai-cache · candidates: 8 → kept: 4_ -->
+On-chain autonomous agents
+• @SkaleNetwork — Autonomous commerce needs privacy-preserving on-chain infra; public-by-default breaks agent payments handling sensitive data
+  https://x.com/SkaleNetwork/status/2081864759511531943
+• @MrYacineweb3 — Ritualnet ships Solidity precompiles + RitualWallet so agents run as protocol primitives, not app-layer scripts
+  https://x.com/MrYacineweb3/status/2081881905721397723
+
+Agent stack composition
+• @javaeeeee1 — 2026 stack thesis: MCP servers, CLI tools, and agent skills solve different integration pieces — not competitors
+  https://x.com/javaeeeee1/status/2081681961685315769
+• @kepochnik — Stanford CS230 argues 1M-token windows don't eliminate retrieval, memory, tools, evals — long context is not the ceiling
+  https://x.com/kepochnik/status/2081687685635228010
+
+<!-- _src: xai · candidates: 25 → kept: 7 -->
