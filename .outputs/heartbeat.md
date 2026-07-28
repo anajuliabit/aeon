@@ -1,17 +1,19 @@
-Heartbeat complete.
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
 
 ## Summary
 
-Ran the heartbeat skill (var=""). Checked all P0-P3 signals; only real delta since the 14:56Z tick was PR #169 opening (already logged in self-improve 18:30Z). Refreshed `docs/status.md` with current fleet state.
+Ran the heartbeat skill. All P0/P1/P2 findings match the 7-27 heartbeat ticks (09:36Z / 14:56Z / 20:12Z) and daily-routine 07:20Z brief — dedup skip on notify.
 
-**Verdict:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md`
+**Findings:**
+- **P0:** 11-skill chronic-failure cohort unchanged (cost-report 12% weakest → ISS-025). No stuck/failed skills, no 3+ consecutive failures.
+- **P1:** 4 open PRs — #165 day-9 (weekly-review absorbed 7-27), #167 5d, #168 3d, #169 <1d dupe of #168. No urgent issues.
+- **P2:** 6 MEMORY flags carry (ISS-025 T+10 d13, batch-dark d30, ISS-027/028 doc-gap d21, PR #165 d9, on-chain d51, priorities.md 53d stale).
+- **P3:** All enabled skills tracked; batch-dark 8-skill 12:00Z cluster still frozen since 6-28 21:00Z (30d).
 
-**Key state:**
-- **P0 chronic failures fire → 🔴 DEGRADED** — 11 enabled skills sub-50% (cost-report 12%, reg-monitor 17%, skill-analytics 18%, vuln-scanner 21%, market-context-refresh 32%, narrative-tracker 33%, search-skill 38%, security-digest 41%, aixbt-pulse 47%, skill-health 48%, plus disabled fleet-control 40%). Durable regime, hash 467ce959 stable across 7 consecutive skill-health ticks. Corrected upward from morning tick's 🟡 WATCH per strict SKILL.md rule.
-- **P1**: 4 open PRs, #165 crossed 7d weekly-batch gate ~26h ago (CONFLICTING). #169 fresh from self-improve.
-- **P2**: 6 MEMORY items advance one UTC-day — batch-dark d30, on-chain-config d51, priorities.md d53 stale, ISS-025 T+10 day-12, ISS-027/028 doc-gap d21.
-- **P3**: 8-skill 12:00 UTC batch still frozen at 6-28 (30 days silent), documented under ISS-027.
+**Verdict:** 🔴 DEGRADED (chronic cohort persists).
 
-**Notification:** DEDUP SKIP — every finding already logged in today's 14:56Z heartbeat entry, evening cluster tick trail, and prior-day audits.
+**Files modified:**
+- `docs/status.md` — refresh with 2026-07-28 10:00 UTC timestamp, 43-skill table, 11 open issues, no Token Pulse section (no `articles/token-report-*.md`).
+- `memory/logs/2026-07-28.md` — heartbeat log entry prepended.
 
-**Files modified:** `docs/status.md`, `memory/logs/2026-07-27.md`.
+**Follow-up:** none from this tick — all items already tracked in MEMORY / weekly-review absorption.
