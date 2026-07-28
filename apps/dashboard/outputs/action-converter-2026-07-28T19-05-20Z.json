@@ -1,0 +1,275 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "5 Actions — 2026-07-28",
+        "description": "Shape: close 21d iss-027/028 doc-gap, cut dupe pr-168, absorb today's supply-chain + watchlist deltas"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sep_header",
+        "action_1_stack",
+        "sep_1",
+        "action_2_stack",
+        "sep_2",
+        "action_3_stack",
+        "sep_3",
+        "action_4_stack",
+        "sep_4",
+        "action_5_stack",
+        "sep_footer",
+        "sources_text"
+      ]
+    },
+    "sep_header": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_1_heading",
+        "action_1_why",
+        "action_1_done",
+        "action_1_loop"
+      ]
+    },
+    "action_1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Author memory/issues/ISS-027.md documenting 12:00 UTC batch-dark 8-skill cluster (frozen 6-28, day-30) with YAML frontmatter",
+        "level": "h3"
+      }
+    },
+    "action_1_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: MEMORY.md line 6 refs ISS-027 authoritatively but no file exists — load-bearing gap on every read for 21d"
+      }
+    },
+    "action_1_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/issues/ISS-027.md exists with id/title/status/severity fields + INDEX.md row added"
+      }
+    },
+    "action_1_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-027-file",
+        "variant": "secondary"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_2_heading",
+        "action_2_why",
+        "action_2_done",
+        "action_2_loop"
+      ]
+    },
+    "action_2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Draft memory/issues/ISS-028.md documenting bash > redirect regression n=8+ across 7-22 → 7-28 (5-UTC-day span)",
+        "level": "h3"
+      }
+    },
+    "action_2_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 8th fire in security-digest 14:42Z today, MEMORY.md line 28 tracks but no file — mirrors iss-027 gap"
+      }
+    },
+    "action_2_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: memory/issues/ISS-028.md exists with affected_skills list + INDEX.md row added"
+      }
+    },
+    "action_2_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-028-file",
+        "variant": "secondary"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_3_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_3_heading",
+        "action_3_why",
+        "action_3_done",
+        "action_3_loop"
+      ]
+    },
+    "action_3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Supersede PR #168 by closing it with a comment linking to PR #169 (both fix comments → commentsCount, #169 authored 7-27)",
+        "level": "h3"
+      }
+    },
+    "action_3_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 4-PR queue breaches 3-PR self-improve exit-gate, dupe surfaced by 7-28 morning-brief 07:20Z"
+      }
+    },
+    "action_3_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: gh pr close 168 --comment \"superseded by #169\"; open-PR queue drops to 3"
+      }
+    },
+    "action_3_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "pr-168-close-dupe",
+        "variant": "secondary"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_4_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_4_heading",
+        "action_4_why",
+        "action_4_done",
+        "action_4_loop"
+      ]
+    },
+    "action_4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Extend memory/MEMORY.md lines 63-64 with AI-agent-tooling-supply-chain-typosquat sub-class covering claude-code-base-action + mcp-server-* 15-pack + anthropic-internal-*",
+        "level": "h3"
+      }
+    },
+    "action_4_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: security-digest 14:42Z fires this cluster fresh today, extends [[mass-parallel-real-package-account-takeover]] rail to AI-tooling"
+      }
+    },
+    "action_4_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: MEMORY.md diff includes sub-class label, 3 package clusters named, fleet-clean note added"
+      }
+    },
+    "action_4_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-md-supply-chain-rail-update",
+        "variant": "secondary"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_5_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_5_heading",
+        "action_5_why",
+        "action_5_done",
+        "action_5_loop"
+      ]
+    },
+    "action_5_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Refresh memory/MEMORY.md Tracked Tokens table with 7-28 prints (REPPO -20.10% alert-fire, WELL post-drain d3, MAMO digestion d7 tightens, GITLAWB cliff-give-back-resumes)",
+        "level": "h3"
+      }
+    },
+    "action_5_why": {
+      "type": "Text",
+      "props": {
+        "text": "why: 4/4-red day post-4/4-green + first REPPO alert since 7-25 = table shows 7-26 stale prints"
+      }
+    },
+    "action_5_done": {
+      "type": "Text",
+      "props": {
+        "text": "done: 4 rows in Tracked Tokens table updated with today's %/vol/pattern text"
+      }
+    },
+    "action_5_loop": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-tracked-tokens-refresh",
+        "variant": "secondary"
+      }
+    },
+    "sep_footer": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: memory=69 logs=7 topics=4 prs=4 cron_failing=0 mode=OK",
+        "variant": "muted"
+      }
+    }
+  }
+}
