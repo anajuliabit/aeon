@@ -1,21 +1,24 @@
-*Evening Recap — 2026-07-27*
-_TL;DR: one PR shipped and weekly review filed, but self-improve bypassed the 3-PR queue gate and opened a 4th PR — operator triage call needed_
+*Evening Recap — 2026-07-28*
+_TL;DR: full ship day — skill-health hash breaks its 7-day lock, REPPO fires, KEV drought ends; dupe PR gate breach and ISS-027/028 doc-gap need calls tomorrow._
 
 *Headlines:*
-- self-improve — PR #169 opened (github-issues comments→commentsCount) · https://github.com/anajuliabit/aeon/pull/169
-- daily-routine — "Skill Self-Play" paper-picked (Alibaba Qwen, skills-primitive rail match) · https://arxiv.org/abs/2607.22529
+- [skill-health] — hash 467ce959→7bf88238 first break in 168h+; btc-levels graduates HEALTHY · `docs/status.md`
+- [security-digest] — Fortinet+Arista KEV (4-day drought breaks); claude-code-base-action typosquat = new AI-tooling supply-chain sub-class · `.tmp/security-digest.md`
+- [token-alert] — REPPO -20.10% ALERT (drought-break head-fake d2 unwind); 35-consec clean CG day · `.pending-notify/token-alert.md`
+- [github-trending] — amnezia-vpn tops (anti-censorship primitive n=2 in 3d); skill-pack rail n=4; 5 picks · `.outputs/github-trending.md`
+- [reflect] — MEMORY 69L→60L, 17 patterns absorbed, self-improve gate-breach goal added · `memory/logs/2026-07-28-reflect.md`
 
 *Notable:*
-- weekly-review — 289 runs 98.96% success this week; 4 PRs merged in 32h; ISS-025 reframed to reflect-scope · articles/weekly-review-2026-07-27.md
-- security-digest — 34-npm malware wave (single-day) + Apache Thrift 13-CVE cluster (CVSS 8.7–9.3) · .outputs/security-digest.json
-- deal-flow — Travis Kalanick robotics $1.7B (a16z lead) + Axis Robotics $12M seed; 3 keepers
-- unlock-monitor — FTX $900M forced distribution Jul 31 flagged; DEGRADED (2/5 sources failed)
-- agent-buzz — MCP-as-agent-infrastructure single cluster, 4 tweets sent
+- [daily-routine] — Kimi K3 frontier-open-weights-cluster n=1; breadth 92pt flip in 2d (biggest in memory-window); 8/100 top-100 green
+- [skill-freshness] — FRESHNESS_NO_CHANGE; fingerprint unchanged 7-25→7-28, notify suppressed · `articles/skill-freshness-2026-07-28.md`
+- [action-converter] — iss-027-file + iss-028-file both max-score 125; 5 loops — pending author
+- [agent-buzz] — 3 clusters (MCP maturation / on-chain agents / stack composition); 7 tweets kept
+- [goal-tracker] — 6 goals: 1 at risk (ISS-025 T-2d to 7-30), 5 blocked; h-unlock cleared
 
 *Decisions for tomorrow:*
-- Close duplicate: PR #168 and #169 both rename comments→commentsCount — pick one, close the other
-- Clear PR queue (4 open, gate=3): merge/close #165 CONFLICTING 8d; #167 4d and #168 2d ready
-- Direct-author ISS-025 dangerouslyDisableSandbox fix or confirm reflect-scope hand-off
-- File ISS-027 + ISS-028 in memory/issues/ (load-bearing doc-gap d21, missing from filesystem)
+- close PR #169 https://github.com/anajuliabit/aeon/pull/169 — dupe of #168, clears gate breach
+- file ISS-027 + ISS-028 — d22 past last-chance; action-converter max-scored both, nothing authored
+- triage PR #165 d9 CONFLICTING https://github.com/anajuliabit/aeon/pull/165 — operator batch call
+- reframe ISS-025 by 2026-07-30 per weekly-review action #1
 
-_+10 routine runs collapsed · sources: log=ok cron-state=ok_
+_+8 routine runs collapsed (btc-levels ×5, heartbeat ×3) · sources: log=ok cron-state=ok_
