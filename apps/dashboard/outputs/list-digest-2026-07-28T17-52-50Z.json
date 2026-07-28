@@ -1,0 +1,182 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "List Digest — 2026-07-28"
+      },
+      "children": [
+        "intro_text",
+        "separator_1",
+        "heading_tracked",
+        "tweets_container",
+        "separator_2",
+        "sources_text",
+        "status_text"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "quiet day on the tracked list — @hooeem's step-maxxing gag outdraws @Flowslikeosmo's actual defi alpha 2:1",
+        "variant": "lead"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_tracked": {
+      "type": "Heading",
+      "props": {
+        "text": "Tracked list",
+        "level": "h3"
+      }
+    },
+    "tweets_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1_group",
+        "tweet_2_group",
+        "tweet_3_group",
+        "tweet_4_group"
+      ]
+    },
+    "tweet_1_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_1_link"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "airpods + gpt voice + local KB as \"2nd brain\" = full walkable workday, video hit 13k views",
+        "likes": 85,
+        "retweets": 6
+      }
+    },
+    "tweet_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2081848676800979335"
+      }
+    },
+    "tweet_2_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "tweet_2_link"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "6 stablecoin vaults ≥$20M TVL screened. best risk-adj: @onrefinance 11.7% reinsurance-collat on Solana. Uniswap V3 Base LP hits 39.5% but active mgmt required",
+        "likes": 42,
+        "retweets": 2
+      }
+    },
+    "tweet_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2081816912967897350"
+      }
+    },
+    "tweet_3_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3",
+        "tweet_3_link"
+      ]
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Flowslikeosmo",
+        "handle": "Flowslikeosmo",
+        "text": "$PUMP at 0.89x P/F: $79.8M 30d fees vs $851M mcap. 57B unlock jul-25 landed without moving price = float already absorbed",
+        "likes": 35,
+        "retweets": 3
+      }
+    },
+    "tweet_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/Flowslikeosmo/status/2081861689478463570"
+      }
+    },
+    "tweet_4_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_4",
+        "tweet_4_link"
+      ]
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "hooeem",
+        "handle": "hooeem",
+        "text": "follow-up to step-maxxing thread: frames \"walk in sunshine while boring work runs\" as deliberate not shitpost",
+        "likes": 7,
+        "retweets": 0
+      }
+    },
+    "tweet_4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View",
+        "href": "https://x.com/hooeem/status/2081848995668689152"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "sources: list1=ok(10)",
+        "variant": "caption"
+      }
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "status: LIST_DIGEST_OK",
+        "variant": "caption"
+      }
+    }
+  }
+}

@@ -1,14 +1,13 @@
+*List Digest — 2026-07-28*
 
-*List Digest — 2026-07-26*
+quiet day on the tracked list — @hooeem's step-maxxing gag outdraws @Flowslikeosmo's actual defi alpha 2:1
 
-Opus 5 dominates this list's top discussion; three other voices thin on engagement.
-
-*Crypto/DeFi Research List*
-- x.com/cyrilXBT — Opus 5's benchmark leap (43.3% Frontier-Bench vs 18.7% Opus 4.8) hits the exact same $5/$25 price tier—token-efficiency play, not a smarter-model flex. Token-per-dollar math compounds in ways single benchmarks miss. (♥ 76, ↻ 16) — [View](https://x.com/cyrilXBT/status/2081054944505790720)
-- x.com/Flowslikeosmo — RH trenches shifting from easy mode to PvP align with an uptick in retail trading apps—structural shift in retail behavior or noise? (♥ 18, ↻ 1) — [View](https://x.com/Flowslikeosmo/status/2081137435082453362)
-- x.com/Louround_ — Health stack recommendation (creatine, B1, fish oil, coffee, sport) pitched as foundational—off-topic but anchors list's broader wellness signal. (♥ 22, ↻ 0) — [View](https://x.com/Louround_/status/2081095795592540665)
+*Tracked list*
+- x.com/hooeem — airpods + gpt voice + local KB as "2nd brain" = full walkable workday, video hit 13k views (♥ 85, ↻ 6) — [View](https://x.com/hooeem/status/2081848676800979335)
+- x.com/Flowslikeosmo — 6 stablecoin vaults ≥$20M TVL screened. best risk-adj: @onrefinance 11.7% reinsurance-collat on Solana. Uniswap V3 Base LP hits 39.5% but active mgmt required (♥ 42, ↻ 2) — [View](https://x.com/Flowslikeosmo/status/2081816912967897350)
+- x.com/Flowslikeosmo — \$PUMP at 0.89x P/F: \$79.8M 30d fees vs \$851M mcap. 57B unlock jul-25 landed without moving price = float already absorbed (♥ 35, ↻ 3) — [View](https://x.com/Flowslikeosmo/status/2081861689478463570)
+- x.com/hooeem — follow-up to step-maxxing thread: frames "walk in sunshine while boring work runs" as deliberate not shitpost (♥ 7, ↻ 0) — [View](https://x.com/hooeem/status/2081848995668689152)
 
 ---
-sources: list=ok(3 substantive + 1 reply)
+sources: list1=ok(10)
 status: LIST_DIGEST_OK
-
