@@ -1,16 +1,16 @@
 {
-  "hash": "467ce959a6a8dce670a2174dee2c3587cf782486c8eb272118b4db7563cd8ff5",
-  "last_notified_at": "2026-07-27T18:43:00Z",
-  "last_run_at": "2026-07-27T18:43:00Z",
+  "hash": "7bf8823896fb596cd0d86b5060fb3574f0fa14e3d8f91399bf1ea8a1f947f8db",
+  "last_notified_at": "2026-07-28T19:02:33Z",
+  "last_run_at": "2026-07-28T19:02:33Z",
   "classification": {
     "critical": [],
-    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-overview", "fleet-control", "goal-tracker", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "token-pick", "vuln-scanner"],
+    "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner"],
     "flapping": [],
-    "warning": ["agent-buzz", "btc-levels", "daily-routine", "evening-recap", "fork-skill-digest", "github-trending", "heartbeat", "list-digest", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers"],
-    "healthy_count": 18,
+    "warning": ["agent-buzz", "btc-levels", "daily-routine", "defi-overview", "fork-skill-digest", "github-trending", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
+    "healthy_count": 10,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "output_tokens=0 sandbox-truncation day-34 — 18 skills share signature (all DEGRADED, 0 CRITICAL, 0 FLAPPING). Hash 467ce959 stable 7-consecutive formal ticks (2026-07-21 to 2026-07-27, 168h+ identity). Notify gate: send (24h 43m since last notify 2026-07-26 18:00Z, >24h daily-reminder cadence). Open issues unchanged at 11. Zero filings (no new CRITICAL/FLAPPING candidates). Zero resolutions (5 skills in open-issue affected_skills remain non-HEALTHY: vuln-scanner/defi-overview/token-pick/search-skill/cost-report, all ISS-019/020/021/025 cluster).",
+  "systemic": "output_tokens=0 sandbox-truncation day-35 — 18 DEGRADED / 13 WARNING / 10 HEALTHY / 3 NO_DATA / 0 CRITICAL / 0 FLAPPING. Hash flip from 467ce959 (7-consec stable through 7-27) to 7bf88238 = first hash break in 168h+ span. Composition delta: defi-overview + token-pick moved DEGRADED→WARNING (SR 0.69/0.64 now above strict <0.6 gate); defi-monitor + evening-recap + list-digest crossed WARNING→DEGRADED (SR 0.53/0.59/0.56, below gate); fleet-control dropped (disabled per aeon.yml line 320); btc-levels crossed WARNING→HEALTHY (SR 0.81 clears 0.8 gate + avg_score 3 satisfies quality gate). Notify gate: SEND (elapsed 24h19m > 24h daily-reminder cadence AND hash changed). Open issues unchanged at 11. Zero filings (no CRITICAL/FLAPPING candidates). Zero resolutions (5 skills in open-issue affected_skills — vuln-scanner/defi-overview/token-pick/search-skill/cost-report — remain non-HEALTHY; ISS-019/020 skills now WARNING not HEALTHY, don't qualify for resolution per Step 4).",
   "open_issues": 11,
   "resolved_this_run": 0,
   "filed_this_run": 0
