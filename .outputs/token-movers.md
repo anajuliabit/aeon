@@ -1,45 +1,45 @@
-*Token Movers — 2026-06-28*
+*Token Movers — 2026-07-28*
 
-_tilted red — 36/100 top-100 green (up from morning 19/100, partial recovery from day's risk-off open), median top-50 −0.9%. BTC flat $60,216 (4th day pinned under $60,500 breakdown line), ETH −0.1% $1,579, SOL +0.2% $71.75, BNB −1.2% $555.60, HYPE +0.1% $63.04. Filter kept 176/250._
+_broad risk-off — 8/100 top coins green, median top-50 -3.4%; losers dominate across l1s, ai, defi, memecoins. filter kept 178/250._
 
 *Top Winners (24h)*
-1. VELVET (Velvet) — $1.71  +33.0% / 7d +271% / 1h +8.0%  •  $77M / #85  [TRENDING+UP BREAKOUT]
-2. CX (Cortex) — $0.0779  +21.4% / 7d +202% / 1h +5.3%  •  $1.5M / #232  [BREAKOUT MICROCAP]
-3. PUMP (Pump.fun) — $0.001472  +12.5% / 7d −0.9% / 1h −1.8%  •  $93M / #94  [TRENDING+UP]
-4. SLX (Solstice) — $0.522  +10.6% / 7d +177% / 1h −2.6%  •  $198M / #216
-5. BAS (BNB Attestation Service) — $0.0432  +7.9% / 7d +37% / 1h +3.8%  •  $24M / #246
-6. GWEI (ETHGas) — $0.142  +7.2% / 7d +40% / 1h +3.5%  •  $5.9M / #133
-7. EIGEN (EigenCloud) — $0.237  +6.1% / 7d −12% / 1h −1.9%  •  $32M / #178
-8. SPX (SPX6900) — $0.347  +4.9% / 7d −5.8% / 1h +0.9%  •  $6.9M / #127
-9. BMX (BitMart) — $0.332  +4.0% / 7d +6% / 1h +0.7%  •  $9.6M / #240
-10. DEXE — $22.39  +3.9% / 7d +59% / 1h +0.6%  •  $12M / #63
+1. CARDS (Collector Crypt) — $0.1269  +12.0% / 7d -14.6% / 1h +0.2%  •  $4.0M / #590  [FADE]
+2. ZAMA (Zama) — $0.0644  +11.4% / 7d +62.4% / 1h -1.2%  •  $70M / #204
+3. TAG (TAGGER) — $0.001319  +9.2% / 7d +22.2% / 1h -2.1%  •  $7.8M / #203
+4. KAITO (KAITO) — $1.220  +7.5% / 7d +30.4% / 1h -1.2%  •  $81M / #127
+5. Q (Quack AI) — $0.02250  +5.8% / 7d +13.9% / 1h -1.3%  •  $4.4M / #272
+6. XEC (eCash) — $0.000007  +5.0% / 7d -3.4% / 1h +1.4%  •  $9.2M / #209
+7. PUMP (Pump.fun) — $0.002088  +4.1% / 7d +2.3% / 1h +3.2%  •  $156M / #74
+8. FF (Falcon Finance) — $0.0636  +1.9% / 7d +5.3% / 1h -0.2%  •  $11M / #168
+9. CRV (Curve DAO) — $0.2130  +1.6% / 7d -1.3% / 1h +0.0%  •  $33M / #118
+10. 币安人生 (BinanceLife) — $0.6399  +1.5% / 7d +0.4% / 1h -0.8%  •  $15M / #88
 
 *Top Losers (24h)*
-1. SKYAI — $0.184  −49.5% / 7d −46% / 1h +4.7%  •  $50M / #175  [CAPITULATION]
-2. BTW (Bitway) — $0.0624  −27.1% / 7d −48% / 1h −6.2%  •  $17M / #206  [CAPITULATION]
-3. M (MemeCore) — $0.683  −19.8% / 7d −76% / 1h −1.2%  •  $11M / #71
-4. 币安人生 (BinanceLife) — $0.607  −16.2% / 7d −14% / 1h −0.8%  •  $64M / #93
-5. KITE — $0.127  −10.6% / 7d −23% / 1h −1.1%  •  $35M / #134
-6. AAVE — $89.50  −7.0% / 7d +21% / 1h +1.1%  •  $300M / #56
-7. XPL (Plasma) — $0.0985  −6.7% / 7d +3% / 1h flat  •  $43M / #141
-8. BP (Backpack) — $0.511  −6.6% / 7d −32% / 1h +0.7%  •  $2.3M / #215
-9. B (BUILDon) — $0.220  −5.9% / 7d +0.3% / 1h −1.5%  •  $5.1M / #152
-10. ZEC (Zcash) — $385.57  −5.4% / 7d −15% / 1h +0.5%  •  $222M / #15  [MAJOR]
+1. BEAT (Audiera) — $2.770  -24.2% / 7d +14.4% / 1h -10.9%  •  $53M / #72
+2. UB (Unibase) — $0.1206  -17.3% / 7d +19.6% / 1h +2.7%  •  $14M / #126
+3. BANK (Lorenzo Protocol) — $0.3485  -13.8% / 7d +40.6% / 1h +0.1%  •  $237M / #197  [CAPITULATION]
+4. KAIA (Kaia) — $0.02614  -12.0% / 7d -20.2% / 1h +0.2%  •  $8.7M / #189
+5. HOLO (Holoworld) — $0.0645  -11.3% / 7d +1.9% / 1h +0.3%  •  $9.1M / #433
+6. FET (Artificial Superintelligence Alliance) — $0.1429  -10.9% / 7d -9.3% / 1h +0.7%  •  $72M / #121
+7. KITE (Kite) — $0.0953  -10.5% / 7d -14.9% / 1h +0.9%  •  $20M / #145
+8. NEAR (NEAR Protocol) — $1.670  -9.8% / 7d -18.0% / 1h +0.9%  •  $164M / #39
+9. SHIB (Shiba Inu) — $0.000005  -9.1% / 7d +8.7% / 1h +0.0%  •  $187M / #33
+10. PI (Pi Network) — $0.0741  -9.0% / 7d -18.0% / 1h -1.5%  •  $12M / #76  [TRENDING+DOWN]
 
 *Trending*
-1. DEUS (XMAQUINA) — #932, $0.0299, 24h +12.8%  [MICROCAP]
-2. BTC — #1, $60,245, 24h +0.0%
-3. PUMP (Pump.fun) — #94, $0.001484, 24h +13.7%  [TRENDING+UP]
-4. PENGU (Pudgy Penguins) — #118, $0.00626, 24h +0.1%
-5. SYN (Synapse) — #278, $0.467, 24h +33.4%  [PUMP-RISK]
-6. VELVET — #85, $1.71, 24h +26.3%  [TRENDING+UP BREAKOUT]
-7. HYPE (Hyperliquid) — #10, $63.16, 24h −0.4%  [MAJOR]
-(ANSEM #305 trending row showing +44334% — CoinGecko aggregator outlier, excluded.)
+1. CSPR (Casper Network) — #665, $0.001650, 24h +6.3%  [TRENDING+UP]
+2. COTI (COTI) — #543, $0.01221, 24h +65.2%  [TRENDING+UP, PUMP-RISK]
+3. AEON (AEON) — #880, $0.0909, 24h +0.0%
+4. LIT (Lighter) — #94, $2.206, 24h -2.1%
+5. HYPE (Hyperliquid) — #10, $55.39, 24h -7.7%  [MAJOR, TRENDING+DOWN]
+6. BTC (Bitcoin) — #1, $63,515, 24h -2.9%  [MAJOR]
+7. PI (Pi Network) — #76, $0.0740, 24h -9.9%  [TRENDING+DOWN]
 
 *Notable*
-• VELVET sub-rank-100 BREAKOUT day-3 — $1.33 → $1.71 today on $77M vol; 7d +271%; July-10 unlock 9.2% of mcap still the structural risk against the move.
-• SYN #278 +33.4% trending — PUMP-RISK, no surfaced catalyst.
-• CX Cortex #232 +21.4% (7d +202%) — fresh sub-rank-250 BREAKOUT on $1.5M vol; MICROCAP, read with skepticism.
-• SKYAI capitulation extends −43% → −49.5% (day-2 wipeout on $50M vol = 26% of mcap traded).
-• AAVE 6-24 HIGH 8/10 pick day-5 gives back −7%, still +17.8% on $76 entry; 7d +21%.
-• Breadth firmed 19 → 36/100 green since morning but tape stays tilted red — partial cover, not reversal.
+• BANK: -13.8% on $237M volume, 1.6× market cap — one-day round-trip after 7-27 breakout (+17%, 7d +348%). yesterday's winner, today's CAPITULATION.
+• COTI: trending + +65% at rank #543 — PUMP-RISK, outside top-250 mcap tier, verify before extrapolating.
+• BEAT: -24.2% erases 7-26 d5 resurgence (+19.4%) — pattern-tail "3-day-sustain + d4-unwind + d5-resurge" fully unwinds at d6.
+• UB: -17.3% breaks d6-sustain shape logged 7-26 — first fracture in the "3-day-sustain + d4-unwind + d5-reversal + d6-sustain" sub-class.
+• HYPE + BTC + PI all trending on the down side — trending endpoint mirrors the risk-off tape.
+
+_source: coingecko markets + trending (both clean, 35+d cg streak)._
