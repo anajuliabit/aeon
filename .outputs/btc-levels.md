@@ -1,10 +1,15 @@
 ## Summary
 
-Quiet run. BTC spot at **$63,790** — no levels triggered:
+Ran btc-levels skill at 20:22Z UTC on 2026-07-28.
 
-- Leverage-review (≤$45k): clear
-- Breakdown (daily close < $60,500): clear — close $63,701 (2026-07-27)  
-- Reclaim $63,500: spot qualifies but flag already set from prior cycle; re-arms below $60,500
-- Reclaim $65,900: not reached
+**Data fetched (CoinGecko, clean):**
+- Spot: $63,924.13
+- Previous UTC daily close: $63,701.35 (date: 2026-07-27)
 
-State updated (`lastSpot` $63,343 → $63,790), log appended, committed. No notification sent.
+**Level evaluation — no alerts fired:**
+- Leverage-review (≤$45k): spot $63.9k — clear
+- Breakdown (<$60,500 close): close $63,701 — clear
+- Reclaim $63,500: flag already set from prior run; re-arm requires dip <$60,500 — not triggered
+- Reclaim $65,900: spot $63,924 still below target
+
+No notification sent (quiet run). State file and log updated and committed.
