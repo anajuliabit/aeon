@@ -1,46 +1,24 @@
-*Security Digest — 2026-07-27*
-Verdict: 3 supply-chain compromises urgent, 5 enterprise framework vulnerabilities to schedule, 3 additional malware to monitor. _Sources: KEV, GH Advisory, EPSS_
+*Security Digest — 2026-07-28*
+verdict: 3 to patch today (2 fresh KEV + 1 malware digest), 2 to schedule, monitor empty. _sources: CISA KEV, GH Advisory, EPSS_
 
 *PATCH TODAY*
-- [GHSA-qhxp-5mv2-773f](https://github.com/advisories/GHSA-qhxp-5mv2-773f) — @array-util/nodepull (npm) · supply-chain compromise
-  Credential stealer malware injected via package account takeover.
-  → remove @array-util/nodepull from package.json and all lockfiles today; rotate any npm publish tokens exposed.
-
-- [GHSA-5xpc-8g9w-cwr8](https://github.com/advisories/GHSA-5xpc-8g9w-cwr8) — @array-util/subsearch (npm) · supply-chain compromise
-  Obfuscated exfiltration code targeting environment variables and credentials.
-  → remove @array-util/subsearch immediately; audit CI/CD logs for exposure.
-
-- [GHSA-x8f8-q6m3-g4pq](https://github.com/advisories/GHSA-x8f8-q6m3-g4pq) — font-huge (npm) · supply-chain compromise
-  Malicious preinstall hook with credential exfiltration payload.
-  → remove font-huge and redeploy; check recent CI runs for leaked credentials.
+- [CVE-2025-68686](https://nvd.nist.gov/vuln/detail/CVE-2025-68686) — Fortinet FortiOS · KEV added 2026-07-27 · EPSS 0.013 · CWE-200 · due 2026-08-10
+  post-exploit symlink-persistency bypass, unauth remote via crafted HTTP after prior filesystem foothold. CISA lists as exploited.
+  → apply Fortinet FG-IR-25-934 mitigations today; if no vendor patch available, discontinue per BOD 26-04.
+- [CVE-2026-16812](https://nvd.nist.gov/vuln/detail/CVE-2026-16812) — Arista VeloCloud Orchestrator On-Prem · KEV added 2026-07-27 · EPSS 0.010 · CWE-78 · due 2026-07-30
+  unauth OS-command injection reaching VCO host. two-day CISA deadline.
+  → apply Arista SA-0144 patch today.
+- *npm supply-chain digest* — 3 fresh campaigns + Mini Shai-Hulud d2 tail (all `type=malware`)
+  - **Mini Shai-Hulud d2** — 61 fresh @antv/* GHSA IDs since 7-27 (e.g. [GHSA-hgqm-cwrq-xx84](https://github.com/advisories/GHSA-hgqm-cwrq-xx84) @antv/matrix-util). same atool-account-takeover cred-stealer chain as 7-27, more pkg/versions flagged.
+  - **claude-code-base-action typosquat** — [GHSA-3x98-842h-2764](https://github.com/advisories/GHSA-3x98-842h-2764) (npm v2.0.0 + v2.2.2). masquerades as the anthropics/claude-code-base-action GitHub Action; ossf flagged for c2-domain traffic. aeon uses `@anthropic-ai/claude-code` cli — not this pkg — clean.
+  - **@wagni_bot/* 25-pack** — GHSA-vr92-xmj8-jr8v @wagni_bot/eth + 24 siblings across metamask/opensea/polymarket/hyperliquid/bsc scopes. web3-bot scope-typosquat class.
+  - **polymarket-* 23-pack + mcp-server/anthropic-internal 15-pack** — polymarket-trading-cli / polymarket-terminal / mcp-server-{sentry,supabase,redis,git,notion,fetch,postgres,figma,github} + fake `anthropic-internal-tools` / `claude-internal-utils` — dependency-confusion class targeting AI-tooling CI.
+  → uninstall + rotate creds if any @antv/@wagni_bot/polymarket-*/mcp-server-*/claude-code-base-action pkg is in a lockfile touched in last 7d. block scopes at registry proxy.
 
 *PATCH THIS WEEK*
-- [CVE-2026-55971](https://github.com/advisories/GHSA-gwj4-q93m-wwqc) — Apache Thrift (Go) · CVSS 9.3
-  Heap-based buffer overflow in C++ bindings enables memory corruption.
-  → upgrade Apache Thrift to ≥0.24.0 and rebuild Go services.
-
-- [CVE-2026-48144](https://github.com/advisories/GHSA-367h-9jj5-w29f) — Apache Thrift (Go) · CVSS 9.1
-  Improper certificate validation in c_glib bindings allows MITM attacks.
-  → upgrade Apache Thrift to ≥0.24.0; rebuild and redeploy before trusted endpoints.
-
-- [CVE-2026-58389](https://github.com/advisories/GHSA-jx7g-767m-86hp) — Apache Thrift (Rust) · CVSS 8.7
-  Resource allocation without limits in Rust transport layer enables DoS.
-  → upgrade thrift crate to ≥0.24.0 in Cargo.toml; redeploy after testing.
-
-- [CVE-2026-58662](https://github.com/advisories/GHSA-x4w6-p6f8-24qw) — Apache Thrift (Go) · CVSS 8.7
-  Out-of-bounds read in protocol encoding allows memory disclosure.
-  → upgrade Apache Thrift to ≥0.24.0; treat as data-exposure risk.
-
-- [CVE-2026-55969](https://github.com/advisories/GHSA-x8jh-qfcv-fp29) — Apache Thrift · CVSS 8.7
-  Integer overflow across multiple language bindings enables boundary bypass.
-  → upgrade all Apache Thrift language bindings to 0.24.0; coordinate multi-service rebuild.
-
-*MONITOR*
-- [GHSA-8mrq-4593-6x5p](https://github.com/advisories/GHSA-8mrq-4593-6x5p) — route-processor (npm) · malware, no fix available
-  Credential exfiltration on install. → remove from dependencies if present; watch for patched release.
-
-- [GHSA-hh4c-9fqx-2vc5](https://github.com/advisories/GHSA-hh4c-9fqx-2vc5) — gamified-trading-system (npm) · malware, no fix available
-  Supply-chain payload in transitive dependency. → audit for usage; flag for removal if found.
-
-- [GHSA-wrm7-92jw-pqm9](https://github.com/advisories/GHSA-wrm7-92jw-pqm9) — tailwind-motionkit (npm) · malware, no fix available
-  Malicious code in build-time dependencies. → remove if installed; monitor npm advisory updates for remediation.
+- [GHSA-4pj9-g833-qx53](https://github.com/advisories/GHSA-4pj9-g833-qx53) — lettre (crates.io) · CVE-2026-46428 · CVSS v4 9.1 · EPSS 0.002 · PoC in advisory
+  inverted boolean disables TLS hostname verification when built with `boring-tls`. any chain-valid cert intercepts SMTP + credentials. affects v0.10.1 through v0.11.21.
+  → upgrade lettre to ≥0.11.22.
+- [GHSA-w6p7-2fxx-4f44](https://github.com/advisories/GHSA-w6p7-2fxx-4f44) — Pocket ID (Go) · CVE-2026-43983 · CVSS v4 8.5 · EPSS 0.002
+  OIDC refresh-token flow bypasses authorization revocation, account disabling, and group restrictions. long-lived tokens survive admin actions.
+  → upgrade Pocket ID to commit ≥978ac87 (pseudo-version 20260419162744).

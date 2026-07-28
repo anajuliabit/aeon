@@ -1,0 +1,406 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-28",
+        "description": "Vulnerability assessment and patching schedule"
+      },
+      "children": [
+        "verdict-alert",
+        "sep1",
+        "patch-today-heading",
+        "patch-today-stack",
+        "sep2",
+        "patch-week-heading",
+        "patch-week-stack"
+      ]
+    },
+    "verdict-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "title": "Patching Status",
+        "message": "3 to patch today (2 fresh KEV + 1 malware digest), 2 to schedule, monitor empty. Sources: CISA KEV, GH Advisory, EPSS"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "patch-today-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "cve-2025-68686",
+        "cve-2026-16812",
+        "npm-digest"
+      ]
+    },
+    "cve-2025-68686": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-2025-68686-link",
+        "cve-2025-68686-meta",
+        "cve-2025-68686-desc",
+        "cve-2025-68686-action"
+      ]
+    },
+    "cve-2025-68686-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2025-68686",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2025-68686"
+      }
+    },
+    "cve-2025-68686-meta": {
+      "type": "Text",
+      "props": {
+        "text": "Fortinet FortiOS · KEV added 2026-07-27 · EPSS 0.013 · CWE-200 · due 2026-08-10",
+        "variant": "caption"
+      }
+    },
+    "cve-2025-68686-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Post-exploit symlink-persistency bypass, unauth remote via crafted HTTP after prior filesystem foothold. CISA lists as exploited.",
+        "variant": "body"
+      }
+    },
+    "cve-2025-68686-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Apply Fortinet FG-IR-25-934 mitigations today; if no vendor patch available, discontinue per BOD 26-04."
+      }
+    },
+    "cve-2026-16812": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve-2026-16812-link",
+        "cve-2026-16812-meta",
+        "cve-2026-16812-desc",
+        "cve-2026-16812-action"
+      ]
+    },
+    "cve-2026-16812-link": {
+      "type": "Link",
+      "props": {
+        "label": "CVE-2026-16812",
+        "href": "https://nvd.nist.gov/vuln/detail/CVE-2026-16812"
+      }
+    },
+    "cve-2026-16812-meta": {
+      "type": "Text",
+      "props": {
+        "text": "Arista VeloCloud Orchestrator On-Prem · KEV added 2026-07-27 · EPSS 0.010 · CWE-78 · due 2026-07-30",
+        "variant": "caption"
+      }
+    },
+    "cve-2026-16812-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Unauth OS-command injection reaching VCO host. Two-day CISA deadline.",
+        "variant": "body"
+      }
+    },
+    "cve-2026-16812-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Apply Arista SA-0144 patch today."
+      }
+    },
+    "npm-digest": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "npm-digest-header",
+        "npm-mini-shai",
+        "npm-claude-code",
+        "npm-wagni",
+        "npm-polymarket",
+        "npm-digest-action"
+      ]
+    },
+    "npm-digest-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm-digest-heading",
+        "npm-digest-content"
+      ]
+    },
+    "npm-digest-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "npm supply-chain digest",
+        "level": "h3"
+      }
+    },
+    "npm-digest-content": {
+      "type": "Text",
+      "props": {
+        "text": "3 fresh campaigns + Mini Shai-Hulud d2 tail (all type=malware)",
+        "variant": "body"
+      }
+    },
+    "npm-mini-shai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm-mini-shai-title",
+        "npm-mini-shai-desc",
+        "npm-mini-shai-link"
+      ]
+    },
+    "npm-mini-shai-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Mini Shai-Hulud d2",
+        "level": "h4"
+      }
+    },
+    "npm-mini-shai-desc": {
+      "type": "Text",
+      "props": {
+        "text": "61 fresh @antv/* GHSA IDs since 7-27. Same atool-account-takeover cred-stealer chain as 7-27, more pkg/versions flagged.",
+        "variant": "body"
+      }
+    },
+    "npm-mini-shai-link": {
+      "type": "Link",
+      "props": {
+        "label": "Example: GHSA-hgqm-cwrq-xx84 (@antv/matrix-util)",
+        "href": "https://github.com/advisories/GHSA-hgqm-cwrq-xx84"
+      }
+    },
+    "npm-claude-code": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm-claude-code-title",
+        "npm-claude-code-link",
+        "npm-claude-code-desc"
+      ]
+    },
+    "npm-claude-code-title": {
+      "type": "Heading",
+      "props": {
+        "text": "claude-code-base-action typosquat",
+        "level": "h4"
+      }
+    },
+    "npm-claude-code-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-3x98-842h-2764",
+        "href": "https://github.com/advisories/GHSA-3x98-842h-2764"
+      }
+    },
+    "npm-claude-code-desc": {
+      "type": "Text",
+      "props": {
+        "text": "npm v2.0.0 + v2.2.2. Masquerades as anthropic/claude-code-base-action GitHub Action; ossf flagged for c2-domain traffic. Aeon uses @anthropic-ai/claude-code cli — not this pkg — clean.",
+        "variant": "body"
+      }
+    },
+    "npm-wagni": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm-wagni-title",
+        "npm-wagni-desc"
+      ]
+    },
+    "npm-wagni-title": {
+      "type": "Heading",
+      "props": {
+        "text": "@wagni_bot/* 25-pack",
+        "level": "h4"
+      }
+    },
+    "npm-wagni-desc": {
+      "type": "Text",
+      "props": {
+        "text": "GHSA-vr92-xmj8-jr8v @wagni_bot/eth + 24 siblings across metamask/opensea/polymarket/hyperliquid/bsc scopes. Web3-bot scope-typosquat class.",
+        "variant": "body"
+      }
+    },
+    "npm-polymarket": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "npm-polymarket-title",
+        "npm-polymarket-desc"
+      ]
+    },
+    "npm-polymarket-title": {
+      "type": "Heading",
+      "props": {
+        "text": "polymarket-* 23-pack + mcp-server/anthropic-internal 15-pack",
+        "level": "h4"
+      }
+    },
+    "npm-polymarket-desc": {
+      "type": "Text",
+      "props": {
+        "text": "polymarket-trading-cli / polymarket-terminal / mcp-server-{sentry,supabase,redis,git,notion,fetch,postgres,figma,github} + fake anthropic-internal-tools / claude-internal-utils — dependency-confusion class targeting AI-tooling CI.",
+        "variant": "body"
+      }
+    },
+    "npm-digest-action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Uninstall + rotate creds if any @antv/@wagni_bot/polymarket-*/mcp-server-*/claude-code-base-action pkg is in a lockfile touched in last 7d. Block scopes at registry proxy."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "patch-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "patch-week-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ghsa-4pj9",
+        "ghsa-w6p7"
+      ]
+    },
+    "ghsa-4pj9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa-4pj9-link",
+        "ghsa-4pj9-meta",
+        "ghsa-4pj9-desc",
+        "ghsa-4pj9-action"
+      ]
+    },
+    "ghsa-4pj9-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-4pj9-g833-qx53",
+        "href": "https://github.com/advisories/GHSA-4pj9-g833-qx53"
+      }
+    },
+    "ghsa-4pj9-meta": {
+      "type": "Text",
+      "props": {
+        "text": "lettre (crates.io) · CVE-2026-46428 · CVSS v4 9.1 · EPSS 0.002 · PoC in advisory",
+        "variant": "caption"
+      }
+    },
+    "ghsa-4pj9-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Inverted boolean disables TLS hostname verification when built with boring-tls. Any chain-valid cert intercepts SMTP + credentials. Affects v0.10.1 through v0.11.21.",
+        "variant": "body"
+      }
+    },
+    "ghsa-4pj9-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade lettre to ≥0.11.22."
+      }
+    },
+    "ghsa-w6p7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ghsa-w6p7-link",
+        "ghsa-w6p7-meta",
+        "ghsa-w6p7-desc",
+        "ghsa-w6p7-action"
+      ]
+    },
+    "ghsa-w6p7-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-w6p7-2fxx-4f44",
+        "href": "https://github.com/advisories/GHSA-w6p7-2fxx-4f44"
+      }
+    },
+    "ghsa-w6p7-meta": {
+      "type": "Text",
+      "props": {
+        "text": "Pocket ID (Go) · CVE-2026-43983 · CVSS v4 8.5 · EPSS 0.002",
+        "variant": "caption"
+      }
+    },
+    "ghsa-w6p7-desc": {
+      "type": "Text",
+      "props": {
+        "text": "OIDC refresh-token flow bypasses authorization revocation, account disabling, and group restrictions. Long-lived tokens survive admin actions.",
+        "variant": "body"
+      }
+    },
+    "ghsa-w6p7-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Upgrade Pocket ID to commit ≥978ac87 (pseudo-version 20260419162744)."
+      }
+    }
+  }
+}
