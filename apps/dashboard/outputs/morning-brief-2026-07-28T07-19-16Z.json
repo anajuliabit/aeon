@@ -1,0 +1,371 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Morning Brief — 2026-07-28"
+      },
+      "children": [
+        "section-focus",
+        "separator-1",
+        "section-since",
+        "separator-2",
+        "section-watch",
+        "separator-3",
+        "section-running"
+      ]
+    },
+    "section-focus": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-focus",
+        "focus-item-1",
+        "focus-item-2",
+        "focus-item-3"
+      ]
+    },
+    "heading-focus": {
+      "type": "Heading",
+      "props": {
+        "text": "Focus today",
+        "level": "h2"
+      }
+    },
+    "focus-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-1-title",
+        "focus-1-desc"
+      ]
+    },
+    "focus-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "1. dupe PR triage — #168 and #169 fix same field rename; queue at 4, breached 3-PR gate",
+        "variant": "lead"
+      }
+    },
+    "focus-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "why now: operator triage flagged in 7-27 evening-recap",
+        "variant": "caption"
+      }
+    },
+    "focus-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-2-title",
+        "focus-2-desc"
+      ]
+    },
+    "focus-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "2. iss-025 reframe by 2026-07-30 — weekly-review target",
+        "variant": "lead"
+      }
+    },
+    "focus-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "why now: retires 4-consec-weekly slip, T-2 days",
+        "variant": "caption"
+      }
+    },
+    "focus-item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "focus-3-title",
+        "focus-3-desc"
+      ]
+    },
+    "focus-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "3. pr #165 d9 CONFLICTING — no operator touch since 7-19",
+        "variant": "lead"
+      }
+    },
+    "focus-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "why now: broadest stall in the queue",
+        "variant": "caption"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-since": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-since",
+        "since-item-1",
+        "since-item-2",
+        "since-item-3",
+        "since-item-4"
+      ]
+    },
+    "heading-since": {
+      "type": "Heading",
+      "props": {
+        "text": "Since yesterday",
+        "level": "h2"
+      }
+    },
+    "since-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve opened dupe #169; 4 open PRs breaches 3-PR gate",
+        "variant": "body"
+      }
+    },
+    "since-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-review 19:00Z: reframe iss-025 into reflect-scope by 7-30",
+        "variant": "body"
+      }
+    },
+    "since-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "batch-dark cluster rolls d30 (same 8-skill 12:00Z group)",
+        "variant": "body"
+      }
+    },
+    "since-item-4": {
+      "type": "Text",
+      "props": {
+        "text": "security-digest: 34-npm malware wave 7-27 + apache thrift 13-CVE cluster",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-watch",
+        "watch-item-1",
+        "watch-item-2"
+      ]
+    },
+    "heading-watch": {
+      "type": "Heading",
+      "props": {
+        "text": "Watch",
+        "level": "h2"
+      }
+    },
+    "watch-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch-1-main",
+        "watch-1-stats",
+        "watch-1-impact"
+      ]
+    },
+    "watch-1-main": {
+      "type": "Text",
+      "props": {
+        "text": "FOMC decision jul 28–29",
+        "variant": "lead"
+      }
+    },
+    "watch-1-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "watch-1-btc-stat",
+        "watch-1-fear-stat"
+      ]
+    },
+    "watch-1-btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$63,173",
+        "delta": "-2.82%",
+        "trend": "down"
+      }
+    },
+    "watch-1-fear-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear Index",
+        "value": "29"
+      }
+    },
+    "watch-1-impact": {
+      "type": "Text",
+      "props": {
+        "text": "batch-dark 12:00Z narrative + btc-levels 63.5k reclaim band both in-play today",
+        "variant": "caption"
+      }
+    },
+    "watch-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch-2-main",
+        "watch-2-context"
+      ]
+    },
+    "watch-2-main": {
+      "type": "Text",
+      "props": {
+        "text": "GPT-5.6 (Luna/Terra/Sol, 1M ctx) + Claude Fable 5 back",
+        "variant": "lead"
+      }
+    },
+    "watch-2-context": {
+      "type": "Text",
+      "props": {
+        "text": "model-per-skill lever revisit signal",
+        "variant": "caption"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-running": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-running",
+        "running-schedule"
+      ]
+    },
+    "heading-running": {
+      "type": "Heading",
+      "props": {
+        "text": "Running today",
+        "level": "h2"
+      }
+    },
+    "running-schedule": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "schedule-1",
+        "schedule-2",
+        "schedule-3",
+        "schedule-4",
+        "schedule-5",
+        "schedule-6",
+        "schedule-7",
+        "schedule-8"
+      ]
+    },
+    "schedule-1": {
+      "type": "Text",
+      "props": {
+        "text": "07:00: morning-brief, daily-routine, thought-review",
+        "variant": "body"
+      }
+    },
+    "schedule-2": {
+      "type": "Text",
+      "props": {
+        "text": "08/14/20: heartbeat · 08:00: skill-freshness · 09/21: aixbt-pulse",
+        "variant": "body"
+      }
+    },
+    "schedule-3": {
+      "type": "Text",
+      "props": {
+        "text": "09:00: github-trending",
+        "variant": "body"
+      }
+    },
+    "schedule-4": {
+      "type": "Text",
+      "props": {
+        "text": "12:00–12:40: batch-dark 8-skill cluster (d30)",
+        "variant": "body"
+      }
+    },
+    "schedule-5": {
+      "type": "Text",
+      "props": {
+        "text": "13:00: market-context-refresh · 13:30: narrative-tracker · 14:00: security-digest",
+        "variant": "body"
+      }
+    },
+    "schedule-6": {
+      "type": "Text",
+      "props": {
+        "text": "15:15: btc-levels · 17:00: list-digest · 17:30: agent-buzz",
+        "variant": "body"
+      }
+    },
+    "schedule-7": {
+      "type": "Text",
+      "props": {
+        "text": "18:00: goal-tracker, skill-health, reflect, action-converter",
+        "variant": "body"
+      }
+    },
+    "schedule-8": {
+      "type": "Text",
+      "props": {
+        "text": "21:00: evening-recap",
+        "variant": "body"
+      }
+    }
+  }
+}
