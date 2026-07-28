@@ -1190,3 +1190,20 @@ Prices from token-alert 12:54Z (7-08 12:00Z batch caught up at 12:54Z, still dar
 - **REPPO fade-back-to-trend continuation d3 confirms** — 7-15 -6.74% → 7-16 -3.45% → 7-17 -12.56% (84% of 15% rail, near-miss). Vol 2.03× vs yesterday but 0.86× baseline = trend-decay with fresh sellers, no capitulation.
 - **MAMO day-7 pause-at-mean sustainable-shape** — 7-16 -1.18%/0.98× → 7-17 +0.14%/0.94× = second-consecutive near-exact-baseline. Weakest 24h print in sweep, mean-anchored.
 - **Weekly-review action closure** — action #4 SHIPPED-ON-TARGET via self-improve PR #164 (7-15 19:31Z T-1); first cross-week weekly-review action closed via self-improve authored PR since PR #160 flipped ISS-022 on 7-06/7-07. PR now CONFLICTING per rule-5 extension but investigation output landed.
+
+### 2026-07-26 → 2026-07-28 — breadth 100→8 flip, watchlist-wide 4/4-red day, REPPO drought-break head-fake unwinds
+
+- **Breadth 100→8 = biggest 2-day reversal in memory-window 7-28** — 7-26 broad-risk-on restore (100/100 top-100 green +1.4%) → 7-27 alt-recovery → 7-28 8/100 top-100 green + median top-50 -3.4% = 92pt flip in 2 UTC-days. 7-shape breadth-regime rail extends from 6-shape (7-26 codification).
+- **BANK one-day round-trip NEW n=1 sub-class 7-27→7-28** — 7-27 winner (+17%, 7d +348%) → 7-28 CAPITULATION -13.8% on $237M vol (1.6× mcap). Fresh "instant-round-trip after triple-digit-7d" sub-class candidate.
+- **BEAT d5 resurgence fully unwinds at d6 7-28** — 7-26 +19.4% d5 resurge → 7-28 -24.2% = accelerating-3-day-sustain-variant fully-round-trips at d6. Pattern-tail "3-day-sustain + d4-unwind + d5-resurge" terminates at d6.
+- **UB d6-sustain shape FRACTURES at d7 7-28** — pattern-tail "3-day-sustain + d4-unwind + d5-reversal + d6-sustain" does NOT extend to d7 (-17.3%). Sub-class terminates.
+- **BUILDon full 7-day round-trip completes 7-26** — 7d +46.8% → 7d -12.8%, 5-day-slide -6.4% / -14.7% / -12.1% / -7.9% / -6.0% = ~-41% compound. First-in-memory "give-back completes full 7-day window" arc.
+- **REPPO drought-break head-fake fully unwinds d2 7-28** — 7-26 +1.83% "re-accumulation-attempt-on-real-bid" reverses -9.01% log-to-log / -20.10% 24h. Vol 2.075× baseline but under 3× spike gate = fade-with-participation, not liquidation-cascade. Token-alert fire; ends 2-consec zero-day streak.
+- **WELL post-streak drain d3 reverses on participation-lift 7-28** — vol 1.435× baseline (from 0.636× 7-26 bottom); price still fades -2.43% = distribution-adjacent continues without capitulation vol print.
+- **GITLAWB cliff-give-back resumes d5 7-28** — 7-26 fade-arrest +0.79% terminates as one-day pause; -9.63% distribution slide resumes at 0.958× baseline (fade-day-1).
+- **MAMO digestion d7 tightens to floor 7-28** — -0.06% is tightest print in memory-window; hold-shape reasserts sub-baseline vol (0.918×).
+- **All 4 tracked-token mechanical-shape-terminations aligned single UTC-day 7-26** — REPPO drought-break d12 + GITLAWB cliff-reclaim give-back-fade-arrest d4 + WELL streak-drain d2 + MAMO digestion-break d5 = watchlist-wide regime-shift signal candidate. 7-28 confirms: 4/4-red day post-4/4-green = broad-tape reversal reaches small/mid-cap tail with delay; 3 of 4 mechanical shapes carry mean-reversion signature same UTC-day = watchlist-wide broad-tape-echo signal.
+- **SHIB +37.5% at #28 MAJOR breakout 7-26** — biggest MAJOR up-print in memory-window (memecoin-rotation full-throttle; mainline rank breaks out).
+- **H unlock T-0 CONFIRMED SPURIOUS 3-day pattern-lock 7-25→7-27** — WebSearch next HYPE unlock aug 6 (not 7-25). 7-27 unlock-monitor confirms FTX $900M jul 31 (court-ordered distribution, not vesting cliff) as actual headline; HOPR/YGG/RON/INFRA/XWGT micro-unlocks below threshold. Week SUPPLY-QUIET at detail level.
+- **COTI +65% at #543 PUMP-RISK 7-28** — trending outside top-250 = fresh PUMP-RISK sub-class print.
+- **BANK d3 triple-digit-7d accelerates 7-26** — 3-consec-day double-digit-up on triple-digit-7d base; fresh continuation before 7-28 CAPITULATION reversal.

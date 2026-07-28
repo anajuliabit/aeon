@@ -1,0 +1,303 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-consolidation",
+        "sep-1",
+        "stack-consolidation",
+        "sep-2",
+        "heading-metrics",
+        "stack-metrics",
+        "sep-3",
+        "heading-items",
+        "stack-items",
+        "sep-4",
+        "heading-alerts",
+        "stack-alerts"
+      ]
+    },
+    "heading-consolidation": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory Consolidated — 2026-07-28",
+        "level": "h2"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-consolidation": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-memory-pruned",
+        "text-patterns-absorbed"
+      ]
+    },
+    "text-memory-pruned": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY.md 69L → 60L pruned"
+      }
+    },
+    "text-patterns-absorbed": {
+      "type": "Text",
+      "props": {
+        "text": "17 patterns absorbed (7-27 → 7-28)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Weekly Review Performance",
+        "level": "h3"
+      }
+    },
+    "stack-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-runs",
+        "progress-success",
+        "stat-breadth"
+      ]
+    },
+    "stat-runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Weekly-Review Runs",
+        "value": "289"
+      }
+    },
+    "progress-success": {
+      "type": "Progress",
+      "props": {
+        "label": "Success Rate",
+        "value": 98.96,
+        "max": 100
+      }
+    },
+    "stat-breadth": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth Reduction",
+        "value": "100 → 8",
+        "delta": "Biggest 2-day flip in memory-window"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-items": {
+      "type": "Heading",
+      "props": {
+        "text": "Tracked Items",
+        "level": "h3"
+      }
+    },
+    "stack-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-bank",
+        "item-kimi",
+        "item-amnezia",
+        "item-skillpack",
+        "item-anomaly"
+      ]
+    },
+    "item-bank": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-bank",
+        "badge-bank"
+      ]
+    },
+    "text-bank": {
+      "type": "Text",
+      "props": {
+        "text": "BANK one-day round-trip"
+      }
+    },
+    "badge-bank": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW n=1"
+      }
+    },
+    "item-kimi": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-kimi",
+        "badge-kimi"
+      ]
+    },
+    "text-kimi": {
+      "type": "Text",
+      "props": {
+        "text": "kimi K3 frontier-lab-open-weights"
+      }
+    },
+    "badge-kimi": {
+      "type": "Badge",
+      "props": {
+        "text": "n=1"
+      }
+    },
+    "item-amnezia": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-amnezia",
+        "badge-amnezia"
+      ]
+    },
+    "text-amnezia": {
+      "type": "Text",
+      "props": {
+        "text": "amnezia extends censorship-resistance"
+      }
+    },
+    "badge-amnezia": {
+      "type": "Badge",
+      "props": {
+        "text": "n=2"
+      }
+    },
+    "item-skillpack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-skillpack",
+        "badge-skillpack"
+      ]
+    },
+    "text-skillpack": {
+      "type": "Text",
+      "props": {
+        "text": "skill-pack rail"
+      }
+    },
+    "badge-skillpack": {
+      "type": "Badge",
+      "props": {
+        "text": "n=4"
+      }
+    },
+    "item-anomaly": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-anomaly",
+        "badge-anomaly"
+      ]
+    },
+    "text-anomaly": {
+      "type": "Text",
+      "props": {
+        "text": "star-anomaly"
+      }
+    },
+    "badge-anomaly": {
+      "type": "Badge",
+      "props": {
+        "text": "n=4"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-alerts": {
+      "type": "Heading",
+      "props": {
+        "text": "Critical Issues",
+        "level": "h3"
+      }
+    },
+    "stack-alerts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-queue-gate",
+        "alert-escalation",
+        "alert-handoff"
+      ]
+    },
+    "alert-queue-gate": {
+      "type": "Alert",
+      "props": {
+        "title": "Self-improve Queue-Exit Gate BREACHED",
+        "message": "Gate breached 7-27 (first in memory-window)",
+        "type": "error"
+      }
+    },
+    "alert-escalation": {
+      "type": "Alert",
+      "props": {
+        "title": "ISS-027/028 Escalation",
+        "message": "d22 past escalation. weekly-review last-chance passed without filing.",
+        "type": "warning"
+      }
+    },
+    "alert-handoff": {
+      "type": "Alert",
+      "props": {
+        "title": "Iss-025 Hand-off Due",
+        "message": "Hand-off due 7-30",
+        "type": "info"
+      }
+    }
+  }
+}
