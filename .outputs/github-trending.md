@@ -1,21 +1,25 @@
-*GitHub Trending — 2026-07-26*
+*GitHub Trending — 2026-07-28*
 
-*Top pick* — [permissionlesstech/bitchat](https://github.com/permissionlesstech/bitchat)
-older repo returns hot on a real spike — p2p chat over bluetooth mesh, no internet, no servers, no accounts. one of the rare off-grid primitives to trend this quarter.
+*Top pick* — [amnezia-vpn/amnezia-client](https://github.com/amnezia-vpn/amnezia-client)
+second consecutive week of censorship-resistance primitives at the top — bitchat 7-26 was code-hosting, today's amnezia is VPN circumvention.
 
 *AI/ML*
-• [alibaba/open-code-review](https://github.com/alibaba/open-code-review) — ★ 431 today (13k total) · Go · [ACCELERATING]
-hybrid pipeline: deterministic rules + LLM agent. ships fine-tuned rulesets for NPE, thread-safety, XSS, SQL-inject — the security-class demos usually skip.
+• [pbakaus/impeccable](https://github.com/pbakaus/impeccable) — ★ 847 today (52k total) · JavaScript · [ACCELERATING]
+design language teaching AI coding harnesses to ship non-generic UI; 205/d velocity, 52k in 8 months.
 
-• [obra/superpowers](https://github.com/obra/superpowers) — ★ 479 today (261k total) · Shell · [ACCELERATING]
-jesse vincent's (ex-anthropic) shipped .agents directory. second practitioner-side skill-pack to trend after mattpocock/skills — the primitive codifies.
+• [moeru-ai/airi](https://github.com/moeru-ai/airi) — ★ 572 today (44k total) · TypeScript · [ACCELERATING]
+self-hosted "grok companion" with realtime voice + minecraft/factorio bots — full agent embodiment, not another chat frontend.
 
-*Web/Apps*
-• [permissionlesstech/bitchat](https://github.com/permissionlesstech/bitchat) — ★ 1.7k today (29k total) · Swift · [RETURNING]
-counted above.
+*Devtools*
+• [bradautomates/claude-video](https://github.com/bradautomates/claude-video) — ★ 434 today (12k total) · Python · [ACCELERATING]
+/watch slash-command downloads, extracts frames, transcribes any video into claude — vision-first claude code skill primitive.
 
-• [palmier-io/palmier-pro](https://github.com/palmier-io/palmier-pro) — ★ 412 today (12k total) · Swift · [ACCELERATING]
-native macos video editor with AI as the primary workflow, not a plug-in retrofit. swift on apple silicon, not electron — rare non-web AI creative tool to trend.
+• [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) — ★ 240 today (54k total) · Python · [ACCELERATING]
+claude skill researching any topic across reddit/x/youtube/hn/polymarket then synthesizing grounded summary; extends skill-pack rail n=4.
+
+*Infra*
+• [amnezia-vpn/amnezia-client](https://github.com/amnezia-vpn/amnezia-client) — ★ 515 today (14k total) · C++ · [RETURNING]
+5-year-old anti-censorship VPN client mid 5.x release cycle (5.0.0.5 shipped 7-26); circumvention rail extends bitchat 7-26.
 
 ---
-sources: trending=ok · gh_api=ok · kept 4/18
+sources: trending=ok · gh_api=ok · kept 5/15
