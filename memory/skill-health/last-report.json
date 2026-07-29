@@ -1,16 +1,16 @@
 {
   "hash": "7bf8823896fb596cd0d86b5060fb3574f0fa14e3d8f91399bf1ea8a1f947f8db",
   "last_notified_at": "2026-07-28T19:02:33Z",
-  "last_run_at": "2026-07-28T19:02:33Z",
+  "last_run_at": "2026-07-29T18:43:25Z",
   "classification": {
     "critical": [],
     "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner"],
     "flapping": [],
-    "warning": ["agent-buzz", "btc-levels", "daily-routine", "defi-overview", "fork-skill-digest", "github-trending", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
+    "warning": ["agent-buzz", "daily-routine", "defi-overview", "fork-skill-digest", "github-trending", "heartbeat", "morning-brief", "on-chain-monitor", "skill-freshness", "thought-review", "token-movers", "token-pick"],
     "healthy_count": 10,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "output_tokens=0 sandbox-truncation day-35 — 18 DEGRADED / 13 WARNING / 10 HEALTHY / 3 NO_DATA / 0 CRITICAL / 0 FLAPPING. Hash flip from 467ce959 (7-consec stable through 7-27) to 7bf88238 = first hash break in 168h+ span. Composition delta: defi-overview + token-pick moved DEGRADED→WARNING (SR 0.69/0.64 now above strict <0.6 gate); defi-monitor + evening-recap + list-digest crossed WARNING→DEGRADED (SR 0.53/0.59/0.56, below gate); fleet-control dropped (disabled per aeon.yml line 320); btc-levels crossed WARNING→HEALTHY (SR 0.81 clears 0.8 gate + avg_score 3 satisfies quality gate). Notify gate: SEND (elapsed 24h19m > 24h daily-reminder cadence AND hash changed). Open issues unchanged at 11. Zero filings (no CRITICAL/FLAPPING candidates). Zero resolutions (5 skills in open-issue affected_skills — vuln-scanner/defi-overview/token-pick/search-skill/cost-report — remain non-HEALTHY; ISS-019/020 skills now WARNING not HEALTHY, don't qualify for resolution per Step 4).",
+  "systemic": "NOOP — same DEGRADED composition as 7-28 19:02Z (18 skills, sandbox-truncation family output_tokens=0 day-36). CRITICAL/FLAPPING both empty. Composition delta since prev: btc-levels crossed WARNING→HEALTHY (SR 0.81 clears 0.8 gate, avg_score=3 satisfies quality gate — matches prev systemic note's asserted graduation). WARNING count 13→12 (btc-levels moved out). HEALTHY count 10→10 stable (btc-levels in, no others changed). Hash 7bf88238 stable 2nd-consec formal tick (same-composition span 24h). Notify gate: SKIP (hash unchanged AND elapsed 23h40m < 24h daily-reminder cadence). Open issues unchanged at 11 (ISS-018/019/020/021/025 skills all still non-HEALTHY per affected-skills reconciliation — no resolutions this run; 0 CRITICAL/FLAPPING candidates → 0 filings). skill-runs 168h fallback source unavailable this run (permission-blocked in sandbox) — logged as SKILL_HEALTH_PARTIAL, classification proceeded on cron-state + skill-health/*.json alone; no missing-skill risk as all 43 enabled skills have cron-state entries except the 3 dispatch-gated NO_DATA (autoresearch/fork-skill-gap/operator-scorecard, all expected).",
   "open_issues": 11,
   "resolved_this_run": 0,
   "filed_this_run": 0
