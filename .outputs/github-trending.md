@@ -1,25 +1,23 @@
-*GitHub Trending — 2026-07-28*
+*GitHub Trending — 2026-07-29*
 
-*Top pick* — [amnezia-vpn/amnezia-client](https://github.com/amnezia-vpn/amnezia-client)
-second consecutive week of censorship-resistance primitives at the top — bitchat 7-26 was code-hosting, today's amnezia is VPN circumvention.
+*Top pick* — [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill)
+skill-pack primitive rail extends to n=5 in 5 UTC-days. tightest utility angle yet: PDF → Claude Code /skill in one shot.
 
 *AI/ML*
-• [pbakaus/impeccable](https://github.com/pbakaus/impeccable) — ★ 847 today (52k total) · JavaScript · [ACCELERATING]
-design language teaching AI coding harnesses to ship non-generic UI; 205/d velocity, 52k in 8 months.
-
-• [moeru-ai/airi](https://github.com/moeru-ai/airi) — ★ 572 today (44k total) · TypeScript · [ACCELERATING]
-self-hosted "grok companion" with realtime voice + minecraft/factorio bots — full agent embodiment, not another chat frontend.
+• [huggingface/speech-to-speech](https://github.com/huggingface/speech-to-speech) — ★ 227 today (7.6k total) · Python · [RETURNING]
+fresh push today, 21× velocity spike on a 721d repo. open-weights local voice agents pair with airi 7-28 = embodied-agent stack forming.
 
 *Devtools*
-• [bradautomates/claude-video](https://github.com/bradautomates/claude-video) — ★ 434 today (12k total) · Python · [ACCELERATING]
-/watch slash-command downloads, extracts frames, transcribes any video into claude — vision-first claude code skill primitive.
+• [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) — ★ 423 today (12k total) · Python · [ACCELERATING]
+top pick; counted above. extends mattpocock/skills → obra/superpowers → claude-video → last30days-skill → this.
 
-• [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) — ★ 240 today (54k total) · Python · [ACCELERATING]
-claude skill researching any topic across reddit/x/youtube/hn/polymarket then synthesizing grounded summary; extends skill-pack rail n=4.
+*Web/Apps*
+• [pascalorg/editor](https://github.com/pascalorg/editor) — ★ 341 today (19k total) · TypeScript · [ACCELERATING]
+browser-native 3D architectural editor. rare open-source CAD-in-browser at production scale — sketchup alt without the desktop install.
 
-*Infra*
-• [amnezia-vpn/amnezia-client](https://github.com/amnezia-vpn/amnezia-client) — ★ 515 today (14k total) · C++ · [RETURNING]
-5-year-old anti-censorship VPN client mid 5.x release cycle (5.0.0.5 shipped 7-26); circumvention rail extends bitchat 7-26.
+*Data*
+• [opengeos/GeoLibre](https://github.com/opengeos/GeoLibre) — ★ 607 today (3.6k total) · TypeScript · [ACCELERATING]
+one GIS runtime across browser + desktop + mobile + Jupyter. no Leaflet/QGIS silo split for geospatial code.
 
 ---
-sources: trending=ok · gh_api=ok · kept 5/15
+sources: trending=ok · gh_api=ok · kept 4/12

@@ -1,0 +1,263 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "GitHub Trending",
+        "description": "2026-07-29"
+      },
+      "children": [
+        "heading_top_pick",
+        "stack_top_pick",
+        "separator_1",
+        "heading_aiml",
+        "stack_speech2speech",
+        "separator_2",
+        "heading_devtools",
+        "stack_book_to_skill_devtools",
+        "separator_3",
+        "heading_webapp",
+        "stack_editor",
+        "separator_4",
+        "heading_data",
+        "stack_geolibr",
+        "separator_5",
+        "text_sources"
+      ]
+    },
+    "heading_top_pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top pick",
+        "level": "h2"
+      }
+    },
+    "stack_top_pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_book_to_skill_top",
+        "text_top_pick_desc"
+      ]
+    },
+    "storylink_book_to_skill_top": {
+      "type": "StoryLink",
+      "props": {
+        "title": "virgiliojr94/book-to-skill",
+        "href": "https://github.com/virgiliojr94/book-to-skill"
+      }
+    },
+    "text_top_pick_desc": {
+      "type": "Text",
+      "props": {
+        "text": "skill-pack primitive rail extends to n=5 in 5 UTC-days. tightest utility angle yet: PDF → Claude Code /skill in one shot."
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_aiml": {
+      "type": "Heading",
+      "props": {
+        "text": "AI/ML",
+        "level": "h2"
+      }
+    },
+    "stack_speech2speech": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_speech2speech",
+        "badge_returning",
+        "text_speech2speech_desc"
+      ]
+    },
+    "storylink_speech2speech": {
+      "type": "StoryLink",
+      "props": {
+        "title": "huggingface/speech-to-speech",
+        "href": "https://github.com/huggingface/speech-to-speech",
+        "source": "Python",
+        "score": "★ 227 today (7.6k total)"
+      }
+    },
+    "badge_returning": {
+      "type": "Badge",
+      "props": {
+        "text": "RETURNING",
+        "variant": "secondary"
+      }
+    },
+    "text_speech2speech_desc": {
+      "type": "Text",
+      "props": {
+        "text": "fresh push today, 21× velocity spike on a 721d repo. open-weights local voice agents pair with airi 7-28 = embodied-agent stack forming."
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_devtools": {
+      "type": "Heading",
+      "props": {
+        "text": "Devtools",
+        "level": "h2"
+      }
+    },
+    "stack_book_to_skill_devtools": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_book_to_skill_devtools",
+        "badge_accelerating_1",
+        "text_book_to_skill_devtools_desc"
+      ]
+    },
+    "storylink_book_to_skill_devtools": {
+      "type": "StoryLink",
+      "props": {
+        "title": "virgiliojr94/book-to-skill",
+        "href": "https://github.com/virgiliojr94/book-to-skill",
+        "source": "Python",
+        "score": "★ 423 today (12k total)"
+      }
+    },
+    "badge_accelerating_1": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "text_book_to_skill_devtools_desc": {
+      "type": "Text",
+      "props": {
+        "text": "top pick; counted above. extends mattpocock/skills → obra/superpowers → claude-video → last30days-skill → this."
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_webapp": {
+      "type": "Heading",
+      "props": {
+        "text": "Web/Apps",
+        "level": "h2"
+      }
+    },
+    "stack_editor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_editor",
+        "badge_accelerating_2",
+        "text_editor_desc"
+      ]
+    },
+    "storylink_editor": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pascalorg/editor",
+        "href": "https://github.com/pascalorg/editor",
+        "source": "TypeScript",
+        "score": "★ 341 today (19k total)"
+      }
+    },
+    "badge_accelerating_2": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "text_editor_desc": {
+      "type": "Text",
+      "props": {
+        "text": "browser-native 3D architectural editor. rare open-source CAD-in-browser at production scale — sketchup alt without the desktop install."
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_data": {
+      "type": "Heading",
+      "props": {
+        "text": "Data",
+        "level": "h2"
+      }
+    },
+    "stack_geolibr": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "storylink_geolibr",
+        "badge_accelerating_3",
+        "text_geolibr_desc"
+      ]
+    },
+    "storylink_geolibr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "opengeos/GeoLibre",
+        "href": "https://github.com/opengeos/GeoLibre",
+        "source": "TypeScript",
+        "score": "★ 607 today (3.6k total)"
+      }
+    },
+    "badge_accelerating_3": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCELERATING",
+        "variant": "secondary"
+      }
+    },
+    "text_geolibr_desc": {
+      "type": "Text",
+      "props": {
+        "text": "one GIS runtime across browser + desktop + mobile + Jupyter. no Leaflet/QGIS silo split for geospatial code."
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: trending=ok · gh_api=ok · kept 4/12",
+        "variant": "caption"
+      }
+    }
+  }
+}
