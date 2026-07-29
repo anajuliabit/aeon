@@ -895,4 +895,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-29,token-alert,claude-opus-4-7,20,12930,933662,56432
 2026-07-29,security-digest,claude-opus-4-7,59,28458,5071682,113565
 2026-07-29,list-digest,claude-opus-4-7,28,14612,1460681,54836
-2026-07-29,reflect,claude-opus-4-7,1036,28046,1211406,97346
+2026-07-29,goal-tracker,claude-opus-4-7,30,29467,1754958,92282

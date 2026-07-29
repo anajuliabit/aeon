@@ -20,6 +20,29 @@
 - **KEV quiet-cadence restarts d1 7-29** — zero-fresh in 24h window since 7-27 Fortinet+Arista, mirrors 7-23→7-26 4-day drought post 7-22 Check Point+SharePoint.
 - **Malware campaign consolidation ends 7-29** — 3-day mass-cluster rail (@antv/* 52-pack 7-27 + wagni_bot/polymarket/mcp-server 63-pack 7-28) does NOT extend d3; today's 61 fresh malware entries are diverse-1-off publishes.
 - **7-28 tag-ambiguity drop reversal 7-29 via opengeos/GeoLibre** — 7-28 dropped for 48/d velocity just under 50 gate; today crosses at 58.1/d as cumulative stars catch up. First "one-day-below-gate-then-above" reversal in memory-window.
+- **ISS-025 capture-step PR T+10 day-13 (7 days past 1-week slip milestone)** — operator direct-author against `.github/workflows/aeon.yml:479-495`. Weekly-review 7-27 reframed as reflect-scope carry (verb-pool exhausted 14d+); iss-025-hand-off due 2026-07-30 per weekly-review action #1. Cost-report weakest at 12% (7/58) durable.
+- **12:00 UTC batch DARK day-31** — 8-skill 6-28 cluster (defi-overview / token-pick / token-movers / narrative-tracker / market-context-refresh / fleet-control / on-chain-monitor / defi-monitor) frozen since 6-28 21:00Z. ISS-027 signature confirmed durable through 7-28 via 12:00Z token-alert clean same-slot fire under signature.
+- **ISS-027/028 doc-gap d22 — weekly-review 7-27 last-chance window PASSED WITHOUT FILING** — MEMORY line 4 references ISS-027 authoritatively; no file exists in `memory/issues/`. ISS-028 (bash-redirect n=8+) also absent. Load-bearing gap; escalation-threshold now +2d past. Action-converter 7-24 shaped 2 file-create actions (score 125 + 80) — still pending.
+- **PR #165 d9 past-gate CONFLICTING** — created 7-19 17:38Z, weekly-review 7-27 absorbed 7d gate cross; still CONFLICTING through 7-28 = 9d open. Operator batch-merge cadence window.
+- **Operator on-chain config day-52** — defi-monitor NO_CONFIG; needs `memory/on-chain-watches.yml` + ALCHEMY_API_KEY + ETHERSCAN_API_KEY. Operator-gated.
+- **priorities.md 54d stale** — last reviewed 2026-06-04. Thought-review 7-28 07:16Z flagged in notify. Operator-owned refresh candidate.
+
+## Recently Cleared
+- **Self-improve queue-exit gate BREACHED 7-27 — CLEARED 2026-07-28** — dupe pair #168 (comments→commentsCount) + #169 both merged 22:36Z 7-28, PR queue shrinks 4→2, gate-breach resolved (per goal-tracker 2026-07-29 completion signal + morning-brief 7-29 "moved" line + heartbeat 14:36Z delta line).
+- **Weekly-review 7-27 SHIPPED** — 289 skill runs / 3 failures / 98.96% success = tightest failure envelope in memory-window. 4 PRs merged in 7-20/7-21 batch (#162/#163/#164/#166). Closed-loop: 2 shipped-on-target + 1 slipped-4th-week (iss-025) + 1 self-healed. Article at `articles/weekly-review-2026-07-27.md`.
+- **H unlock T-0 CONFIRMED SPURIOUS 7-25→7-27 3-day pattern-lock** — WebSearch next HYPE unlock aug 6 not 7-25. Unlock-monitor 7-27: FTX $900M jul 31 = actual headline; HOPR/YGG/RON/INFRA/XWGT micro-unlocks below threshold. Ticker-resolution watch-flag closed.
+- **Breadth 100→8 = biggest 2-day breadth reversal in memory-window 7-28** — 7-26 broad-risk-on restore (100/100) → 7-27 alt-recovery → 7-28 8/100 top-100 green + median top-50 -3.4% = 92pt flip in 2 UTC-days. 7-shape breadth-regime rail extends.
+- **BANK one-day round-trip NEW n=1 sub-class 7-27→7-28** — 7-27 winner (+17%, 7d +348%) → 7-28 CAPITULATION -13.8% on $237M vol (1.6× mcap) = fresh "instant-round-trip after triple-digit-7d" sub-class.
+- **BEAT d5 resurgence fully unwinds at d6 7-28** — 7-26 +19.4% d5 resurge → 7-28 -24.2% = accelerating-3-day-sustain-variant fully-round-trips at d6.
+- **UB d6-sustain shape FRACTURES at d7 7-28** — pattern-tail "3-day-sustain + d4-unwind + d5-reversal + d6-sustain" does NOT extend to d7 (-17.3%). Sub-class terminates.
+- **REPPO drought-break head-fake fully unwinds d2 7-28** — 7-26 +1.83% "re-accumulation-attempt-on-real-bid" reverses -20.10% 24h. Vol 2.075× baseline but under 3× spike gate = fade-with-participation. Token-alert fire ends 2-consec zero-day streak.
+- **First 4/4-red day post-4/4-green in watchlist 7-28** — broad-tape reversal reaches small/mid-cap tail with delay; 3 of 4 mechanical shapes carry mean-reversion signature same UTC-day = watchlist-wide broad-tape-echo signal.
+- **Kimi K3 top-HN + top-paper same-day concurrence 7-28** — 2.8T MoE / 104B active / 1M ctx / delta attention + RL. HN 1334pts + arxiv ↑130 (>>next-highest 16). Frontier-lab-open-weights-cluster n=1 opens.
+- **amnezia-vpn top github-trending 7-28 = censorship-resistance top-pick n=2** — extends 7-26 bitchat (India takedown). 2/2 top-picks in 3-day trending window = anti-censorship-primitive-cluster candidate.
+- **Star-anomaly rail extends n=4 7-28** — pbakaus/impeccable 52k in 8mo (205/d) adds to obra/superpowers 261k + mattpocock/skills 188k + affaan-m/ECC 233k.
+- **Skill-pack primitive rail extends n=4 7-28** — bradautomates/claude-video + mvanhorn/last30days-skill both Claude Code skills trending simultaneously.
+- **SHIB +37.5% MAJOR breakout 7-26** — biggest MAJOR up-print in memory-window (memecoin-rotation full-throttle).
+- **KEV quiet-cadence d4 BREAKS 7-27** — Fortinet FortiOS + Arista VeloCloud fresh 7-27 = first fresh KEV adds since 7-22.
 
 ## Fleet Health
 See [[fleet]] for full snapshot. skill-health hash **7bf88238** (fresh 7-28 19:02Z NOTIFY, 168h+ 467ce959 identity broken): 0 CRITICAL / 18 DEGRADED / 13 WARNING / 10 HEALTHY / 3 NO_DATA. 11 open issues. **22+ consec heartbeat NOOP** through 7-29 14:36Z (~220h+ span since 7-19 09:17Z regime-onset). Sandbox-truncation family **day-37** (T+12 day-14). aixbt-pulse dead-slot **d32** (63+ consec 12h cycles missed). **Bash `>` redirect regression n=10+ durable 7-UTC-day span** (7-22 → 7-29 security-digest 14:42Z + agent-buzz 17:37Z + reg-monitor + list-digest 17:36Z all hit + workaround chain held on every fire).

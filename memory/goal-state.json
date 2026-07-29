@@ -1,44 +1,49 @@
 {
-  "run_at": "2026-07-28T18:50:00Z",
+  "run_at": "2026-07-29T18:50:00Z",
   "goals": {
     "iss-025-capture-step-pr": {
       "status": "BLOCKED",
-      "activity_count_14d": 338,
-      "last_activity_date": "2026-07-28",
-      "note": "T+10 day-13 today (6d past 1-week slip; heartbeat 10:00Z + 14:32Z both flag). Verb-pool exhausted per action-converter 7-24 (12+ named verbs in 14d window) — downgraded actionable→reflect-scope. Weekly-review 7-27 hand-off completed (article `articles/weekly-review-2026-07-27.md` — 'reframe iss-025 out of weekly action-cycle into reflect-scope escalation by 2026-07-30' = top action). Operator direct-author of `dangerouslyDisableSandbox` pivot against `.github/workflows/aeon.yml:479-495` is sole reliable unblock path per upstream sandbox iss #53012. Activity 338/14d = still high mention flow, trend flat vs prior 370 (-9%, within ±25% band). Reframe milestone T-2 days."
+      "activity_count_14d": 387,
+      "last_activity_date": "2026-07-29",
+      "note": "T+10 day-13 rolls to day-14 tomorrow — hand-off T-1 today per weekly-review 7-27 action #1 (due 2026-07-30). Verb-pool exhausted per action-converter 7-24 (12+ named verbs in 14d window) — reflect-scope carry. Operator direct-author of `dangerouslyDisableSandbox` pivot against `.github/workflows/aeon.yml:479-495` is sole reliable unblock path per upstream sandbox iss #53012. Activity 387/14d = still high mention flow, trend flat vs prior 338 (+14%, within ±25% band). Morning-brief 07:00Z line 11 flagged 'iss-025 hand-off due tomorrow 2026-07-30 — T-1 on 15d slip per weekly-review 7-27 action #1'. Heartbeat 14:36Z flagged 'iss-025 T+10 day-13 (hand-off due 2026-07-30, T-1 day per weekly-review 7-27 action #1)'."
     },
     "12-utc-batch-dark": {
       "status": "BLOCKED",
-      "activity_count_14d": 292,
-      "last_activity_date": "2026-07-28",
-      "note": "Day 30 today, frozen since 2026-06-28 21:00Z. 8-skill cluster (defi-overview / token-pick / token-movers / narrative-tracker / market-context-refresh / on-chain-monitor / defi-monitor / aixbt-pulse) stays frozen. Same-slot clean fires (token-alert 12:00Z 7-28 REPPO alert = 35th consec clean CG day) confirm ISS-027 signature is per-skill blockage, not scheduler-wide. Activity 292/14d = trend flat vs prior 212 (+38%, under 50% improving threshold). d30 round-cross today advances counter from d29 = milestone tick logged in heartbeat + token-alert 12:00Z entry."
+      "activity_count_14d": 381,
+      "last_activity_date": "2026-07-29",
+      "note": "Day 31 today, frozen since 2026-06-28 21:00Z. 8-skill cluster (defi-overview / token-pick / token-movers / narrative-tracker / market-context-refresh / on-chain-monitor / defi-monitor / aixbt-pulse) stays frozen. Same-slot clean fires (token-alert 12:00Z 7-29 clean 0/4 fires = 36th consec clean CG day) confirm ISS-027 signature is per-skill blockage, not scheduler-wide. Activity 381/14d = trend flat vs prior 292 (+30%, within ±25% band under 50% improving threshold). d31 round-cross today advances counter from d30 = milestone tick logged in heartbeat 14:36Z + token-alert 12:00Z entry."
     },
     "iss-027-028-doc-gap": {
       "status": "BLOCKED",
-      "activity_count_14d": 162,
-      "last_activity_date": "2026-07-28",
-      "note": "NEW GOAL surfaced by weekly-review 7-27 (MEMORY.md line 7). Load-bearing doc-gap: MEMORY.md references ISS-027 (batch-dark 12:00Z cluster) + ISS-028 (bash `>` redirect regression n=8+ durable across 5 UTC-day span, workaround chain curl `-o`/Write/Edit) authoritatively but neither file exists in `memory/issues/` (verified 7-28: dir contains ISS-001 through ISS-026 only). d21 escalation threshold met today (weekly-review Mon 7-27 last-chance window passed without file creation). Action-converter 7-27 ranked as #1 top-score (125). Blocker: no owner has authored the diagnosis docs; every read of MEMORY.md hits the gap. Activity 162/14d = fresh goal, count reflects two weeks of accumulated inline references. Trend: new."
+      "activity_count_14d": 235,
+      "last_activity_date": "2026-07-29",
+      "note": "d22→d23 rolls today (morning-brief 07:00Z: 'iss-027/028 doc-gap d23 — action-converter 7-28 max-scored 2 file-create loops (125 each), +3d past last-chance window'). MEMORY.md references ISS-027 (batch-dark 12:00Z cluster) + ISS-028 (bash `>` redirect regression n=10+ durable across 6 UTC-day span 7-22→7-29, workaround chain curl `-o`/Write/Edit) authoritatively but neither file exists in `memory/issues/`. Weekly-review 7-27 last-chance window PASSED WITHOUT FILING. Reg-monitor 14:29Z + security-digest 14:42Z + agent-buzz 17:37Z + list-digest 17:36Z all hit ISS-028 signature this UTC-day = 4-skill same-day fire (bash-redirect workaround chain durable each fire). Activity 235/14d = trend flat vs prior 162 (+45%, still under 50% improving threshold). Blocker: no owner has authored the diagnosis docs; every read of MEMORY.md hits the gap."
     },
     "pr-165-crossed-7d-gate": {
       "status": "BLOCKED",
-      "activity_count_14d": 138,
-      "last_activity_date": "2026-07-28",
-      "note": "NEW GOAL. PR #165 (docs(skill-graph): shared_state 21→27) crossed 7d weekly-batch gate 2026-07-26 17:38Z = first PR to cross gate in current cycle. Weekly-review 7-27 absorbed queue-full state (currently 4 open PRs breaches 3-PR gate: #169 fresh + #168 3d + #167 5d + #165 d9). Heartbeat 14:32Z today confirms #165 stays CONFLICTING at d9, no operator touch through weekly-review absorption. Per CLAUDE.md cadence gate, escalation trigger only at ~7 days without touch — d9 is at threshold. Operator decides (merge/rebase/close). Activity 138/14d = fresh goal, tracks flag surface in daily heartbeat + morning-brief. Trend: new."
+      "activity_count_14d": 178,
+      "last_activity_date": "2026-07-29",
+      "note": "PR #165 (docs(skill-graph): shared_state 21→27) rolls d9→d10 today. Weekly-review 7-27 absorbed 7d gate cross. Per CLAUDE.md cadence gate, escalation trigger only at ~7 days without touch — d10 is past threshold but batch cadence Sunday-weekly window is normal shape per operator. Queue-full state cleared 7-28 22:36Z via #168/#169 dupe-pair merge (queue shrinks 4→2: #165 d10 + #167 d6 remain). Activity 138→178 = +29% trend flat within ±25% band. Heartbeat 14:36Z 'PR #165 stays CONFLICTING at d10, no operator touch through weekly-review absorption'. Follow-up (iii) 7-29 heartbeat: 'monitor whether PR #165 d10 + PR #167 d6 clear in operator batch window (Sunday-weekly cadence per CLAUDE.md)'."
     },
     "operator-on-chain-config": {
       "status": "BLOCKED",
-      "activity_count_14d": 88,
-      "last_activity_date": "2026-07-28",
-      "note": "Day 51 blocked (d50→d51 advance since prior tick). defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required for both secrets + config file. Activity flat vs prior 88/14d (no change). Reduced attention consistent with weekly-batch cadence tail. Surfaced in heartbeat 10:00Z + 14:32Z + morning-brief 07:20Z."
+      "activity_count_14d": 93,
+      "last_activity_date": "2026-07-29",
+      "note": "Day 52 blocked (d51→d52 advance since prior tick; morning-brief 07:00Z 'operator on-chain config d53' — heartbeat cross-references d52 also). defi-monitor NO_CONFIG: `memory/on-chain-watches.yml` still 5 type:wallet entries only (zero type:pool/type:position). ALCHEMY_API_KEY + ETHERSCAN_API_KEY missing from GitHub Actions secrets. Operator action required for both secrets + config file. Activity 88→93 = +6% trend flat (near-static consistent with weekly-batch cadence tail). Surfaced in heartbeat 14:36Z + morning-brief 07:00Z 'stuck' line."
     },
     "priorities-md-stale": {
       "status": "AT_RISK",
-      "activity_count_14d": 114,
-      "last_activity_date": "2026-07-28",
-      "note": "Priorities.md last reviewed 2026-06-04 = **54d today** (53d→54d roll on UTC-day 7-28, per thought-review 07:16Z one-liner nudge). Current-focus lines ('Reppo: orquestra working' + 'Aeon: ship the personal-stack PR' = ISS-025 tracker) read as live-work-slipped rather than shipped-stale. Operator-owned refresh (no automated write path per thought-review skill spec). Activity 114/14d = trend flat vs prior 96 (+19%, within ±25% band). Surfaced daily in thought-review + morning-brief tail. Judgment override AT_RISK despite high mention count: activity is meta-flag-nudges not actual refresh work (blocker unfixed >21d + no remedial signal). Action: refresh priorities.md current-focus section."
+      "activity_count_14d": 126,
+      "last_activity_date": "2026-07-29",
+      "note": "Priorities.md last reviewed 2026-06-04 = **55d today** (54d→55d roll on UTC-day 7-29, per thought-review 07:26Z one-liner nudge: 'priorities.md last reviewed 55d ago — worth a refresh'). Current-focus lines ('Reppo: orquestra working' + 'Aeon: ship the personal-stack PR' = ISS-025 tracker) read as live-work-slipped rather than shipped-stale. Operator-owned refresh (no automated write path per thought-review skill spec). Activity 114→126 = +11% trend flat within ±25% band. Surfaced daily in thought-review 07:26Z + morning-brief tail. Judgment override AT_RISK despite high mention count: activity is meta-flag-nudges not actual refresh work (blocker unfixed >21d + no remedial signal). Action: refresh priorities.md current-focus section."
     }
   },
   "recently_cleared": {
+    "self-improve-queue-exit-gate": {
+      "status": "DONE",
+      "completed_at": "2026-07-28",
+      "note": "3-PR gate crossed 7-27 at 4 open PRs (#169 dupe of #168 comments→commentsCount, both authored 7-27). Resolved 7-28 22:36Z when operator merged dupe pair #168 + #169 simultaneously — PR queue shrinks 4→2 (only #165 d10 + #167 d6 remain). Completion signal confirmed in morning-brief 7-29 line 15 ('moved: #168 + #169 both merged 22:36Z — self-improve queue-exit gate breach 7-27 resolved') + heartbeat 14:36Z delta line ('PR queue shrinks from 4→2 — dupe pair #168/#169 both merged 22:36Z 7-28 clears queue-exit gate breach'). Trend: new-goal-and-done same-cycle (added to Current Goals 7-28 reflect, moved to Recently Cleared 7-29 goal-tracker). First gate-breach-and-resolution round-trip in memory-window."
+    },
     "h-unlock": {
       "status": "DONE",
       "completed_at": "2026-07-26",
