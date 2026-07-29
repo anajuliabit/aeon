@@ -1,53 +1,33 @@
 {
   "version": "1",
-  "generated_at": "2026-07-22T18:47:00Z",
+  "generated_at": "2026-07-29T18:45:00Z",
   "skill": "skill-analytics",
-  "title": "Skill Analytics — 2026-07-22",
+  "title": "Skill Analytics — 2026-07-29",
   "spec": {
     "type": "Stack",
     "props": {"direction": "vertical", "gap": "md"},
     "children": [
-      {"type": "Alert", "props": {"variant": "destructive", "children": "9 anomaly flag(s) raised — 8 SILENT + 1 LOW_SUCCESS"}},
-      {"type": "Heading", "props": {"level": 2, "children": "Skill Analytics — 2026-07-22"}},
-      {"type": "Text", "props": {"variant": "muted", "children": "8 scheduled skill(s) didn't run this window — token-movers + 7 others (ISS-027 batch-dark cluster + aixbt-pulse dead-slot)"}},
+      {"type": "Alert", "props": {"variant": "destructive", "children": "11 anomaly flag(s) raised — see Anomalies section"}},
+      {"type": "Heading", "props": {"level": 2, "children": "Skill Analytics — 2026-07-29"}},
+      {"type": "Text", "props": {"variant": "muted", "children": "11 scheduled skill(s) didn't run this window — defi-overview (batch-dark ISS-027 d31+ cluster)"}},
       {"type": "Grid", "props": {"columns": 4, "gap": "sm"}, "children": [
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Total runs"}},
-          {"type": "Heading", "props": {"level": 3, "children": "200"}}
+          {"type": "Heading", "props": {"level": 3, "children": "196"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Active skills"}},
-          {"type": "Heading", "props": {"level": 3, "children": "32"}}
+          {"type": "Heading", "props": {"level": 3, "children": "31"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Success rate"}},
-          {"type": "Heading", "props": {"level": 3, "children": "98%"}}
+          {"type": "Heading", "props": {"level": 3, "children": "100%"}}
         ]}},
         {"type": "Card", "props": {"children": [
           {"type": "Text", "props": {"variant": "muted", "children": "Anomalies"}},
-          {"type": "Heading", "props": {"level": 3, "children": "9"}}
+          {"type": "Heading", "props": {"level": 3, "children": "11"}}
         ]}}
       ]},
-      {"type": "Heading", "props": {"level": 3, "children": "Anomalies"}},
-      {"type": "Table", "props": {
-        "columns": [
-          {"key": "flag", "header": "Flag"},
-          {"key": "skill", "header": "Skill"},
-          {"key": "detail", "header": "Detail"},
-          {"key": "action", "header": "Action"}
-        ],
-        "rows": [
-          {"flag": "🔴 SILENT", "skill": "token-movers", "detail": "scheduled 10 12 * * * — zero runs", "action": "ISS-027"},
-          {"flag": "🔴 SILENT", "skill": "defi-monitor", "detail": "scheduled 40 12 * * * — zero runs", "action": "ISS-027"},
-          {"flag": "🔴 SILENT", "skill": "defi-overview", "detail": "scheduled 0 12 * * * — zero runs", "action": "ISS-027"},
-          {"flag": "🔴 SILENT", "skill": "market-context-refresh", "detail": "scheduled 0 13 * * * — zero runs", "action": "ISS-027"},
-          {"flag": "🔴 SILENT", "skill": "narrative-tracker", "detail": "scheduled 30 13 * * * — zero runs", "action": "ISS-027"},
-          {"flag": "🔴 SILENT", "skill": "on-chain-monitor", "detail": "scheduled 20 12 * * * — zero runs", "action": "ISS-027"},
-          {"flag": "🔴 SILENT", "skill": "token-pick", "detail": "scheduled 0 12 * * * — zero runs", "action": "ISS-027"},
-          {"flag": "🔴 SILENT", "skill": "aixbt-pulse", "detail": "scheduled 0 9,21 * * * — zero runs", "action": "dead-slot d24"},
-          {"flag": "🟠 LOW_SUCCESS", "skill": "cost-report", "detail": "17% over 6 runs (1 ok / 4 fail / 1 cancel)", "action": "ISS-025"}
-        ]
-      }},
       {"type": "Heading", "props": {"level": 3, "children": "Top runners"}},
       {"type": "Table", "props": {
         "columns": [
@@ -58,21 +38,43 @@
           {"key": "exit", "header": "Dominant exit"}
         ],
         "rows": [
-          {"rank": "1", "skill": "btc-levels", "runs": "41", "success": "100%", "exit": "quiet"},
+          {"rank": "1", "skill": "btc-levels", "runs": "39", "success": "100%", "exit": "uncategorized"},
           {"rank": "2", "skill": "heartbeat", "runs": "22", "success": "100%", "exit": "ok"},
-          {"rank": "3", "skill": "thought-review (24)", "runs": "13", "success": "100%", "exit": "ok"},
-          {"rank": "4", "skill": "action-converter", "runs": "8", "success": "88%", "exit": "ok"},
-          {"rank": "5", "skill": "agent-buzz", "runs": "8", "success": "100%", "exit": "ok"},
-          {"rank": "6", "skill": "github-trending", "runs": "8", "success": "100%", "exit": "ok"},
-          {"rank": "7", "skill": "goal-tracker", "runs": "8", "success": "88%", "exit": "ok"},
-          {"rank": "8", "skill": "list-digest", "runs": "8", "success": "100%", "exit": "ok"},
-          {"rank": "9", "skill": "reflect", "runs": "8", "success": "88%", "exit": "ok"},
-          {"rank": "10", "skill": "security-digest", "runs": "8", "success": "100%", "exit": "ok"},
-          {"rank": "11", "skill": "skill-health", "runs": "8", "success": "88%", "exit": "quiet"},
-          {"rank": "12", "skill": "token-alert", "runs": "8", "success": "100%", "exit": "quiet"},
-          {"rank": "13", "skill": "evening-recap", "runs": "7", "success": "100%", "exit": "ok"},
-          {"rank": "14", "skill": "skill-freshness", "runs": "7", "success": "100%", "exit": "quiet"},
-          {"rank": "15", "skill": "cost-report", "runs": "6", "success": "17%", "exit": "error"}
+          {"rank": "3", "skill": "thought-review", "runs": "15", "success": "100%", "exit": "ok"},
+          {"rank": "4", "skill": "agent-buzz", "runs": "8", "success": "100%", "exit": "ok"},
+          {"rank": "5", "skill": "list-digest", "runs": "8", "success": "100%", "exit": "uncategorized"},
+          {"rank": "6", "skill": "action-converter", "runs": "8", "success": "100%*", "exit": "ok"},
+          {"rank": "7", "skill": "reflect", "runs": "8", "success": "100%*", "exit": "uncategorized"},
+          {"rank": "8", "skill": "skill-health", "runs": "8", "success": "100%*", "exit": "ok"},
+          {"rank": "9", "skill": "goal-tracker", "runs": "8", "success": "100%*", "exit": "uncategorized"},
+          {"rank": "10", "skill": "morning-brief", "runs": "8", "success": "100%", "exit": "ok"},
+          {"rank": "11", "skill": "daily-routine", "runs": "8", "success": "100%", "exit": "ok"},
+          {"rank": "12", "skill": "security-digest", "runs": "8", "success": "100%", "exit": "uncategorized"},
+          {"rank": "13", "skill": "evening-recap", "runs": "7", "success": "100%", "exit": "uncategorized"},
+          {"rank": "14", "skill": "github-trending", "runs": "7", "success": "100%", "exit": "ok"},
+          {"rank": "15", "skill": "token-alert", "runs": "7", "success": "100%", "exit": "ok"}
+        ]
+      }},
+      {"type": "Heading", "props": {"level": 3, "children": "Silent scheduled skills (11)"}},
+      {"type": "Table", "props": {
+        "columns": [
+          {"key": "skill", "header": "Skill"},
+          {"key": "schedule", "header": "Schedule"},
+          {"key": "last_success", "header": "Last success"},
+          {"key": "note", "header": "Note"}
+        ],
+        "rows": [
+          {"skill": "defi-overview", "schedule": "0 12 * * *", "last_success": "2026-06-28", "note": "batch-dark ISS-027 d31"},
+          {"skill": "token-pick", "schedule": "0 12 * * *", "last_success": "2026-06-28", "note": "batch-dark ISS-027 d31"},
+          {"skill": "token-movers", "schedule": "10 12 * * *", "last_success": "2026-06-28", "note": "batch-dark ISS-027 d31"},
+          {"skill": "narrative-tracker", "schedule": "30 13 * * *", "last_success": "2026-06-28", "note": "batch-dark ISS-027 d31"},
+          {"skill": "market-context-refresh", "schedule": "0 13 * * *", "last_success": "2026-06-28", "note": "batch-dark ISS-027 d31"},
+          {"skill": "on-chain-monitor", "schedule": "20 12 * * *", "last_success": "2026-06-28", "note": "batch-dark ISS-027 d31"},
+          {"skill": "defi-monitor", "schedule": "40 12 * * *", "last_success": "2026-06-28", "note": "batch-dark ISS-027 d31"},
+          {"skill": "aixbt-pulse", "schedule": "0 9,21 * * *", "last_success": "2026-06-28", "note": "dead slot d31"},
+          {"skill": "weekly-shiplog", "schedule": "0 9 * * 1", "last_success": "2026-07-20", "note": "missed Mon 7-27 — investigate"},
+          {"skill": "fork-skill-gap", "schedule": "0 21 * * 0", "last_success": "never", "note": "dispatch-gated"},
+          {"skill": "operator-scorecard", "schedule": "30 10 * * 1", "last_success": "never", "note": "dispatch-gated"}
         ]
       }}
     ]
