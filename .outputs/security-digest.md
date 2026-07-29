@@ -1,24 +1,27 @@
-*Security Digest — 2026-07-28*
-verdict: 3 to patch today (2 fresh KEV + 1 malware digest), 2 to schedule, monitor empty. _sources: CISA KEV, GH Advisory, EPSS_
+*Security Digest — 2026-07-29*
+Verdict: 2 to patch today, 5 to schedule. no fresh KEV since 7-27 fortinet+arista (d1 quiet again). _Sources: KEV, GH Advisory, EPSS_
 
 *PATCH TODAY*
-- [CVE-2025-68686](https://nvd.nist.gov/vuln/detail/CVE-2025-68686) — Fortinet FortiOS · KEV added 2026-07-27 · EPSS 0.013 · CWE-200 · due 2026-08-10
-  post-exploit symlink-persistency bypass, unauth remote via crafted HTTP after prior filesystem foothold. CISA lists as exploited.
-  → apply Fortinet FG-IR-25-934 mitigations today; if no vendor patch available, discontinue per BOD 26-04.
-- [CVE-2026-16812](https://nvd.nist.gov/vuln/detail/CVE-2026-16812) — Arista VeloCloud Orchestrator On-Prem · KEV added 2026-07-27 · EPSS 0.010 · CWE-78 · due 2026-07-30
-  unauth OS-command injection reaching VCO host. two-day CISA deadline.
-  → apply Arista SA-0144 patch today.
-- *npm supply-chain digest* — 3 fresh campaigns + Mini Shai-Hulud d2 tail (all `type=malware`)
-  - **Mini Shai-Hulud d2** — 61 fresh @antv/* GHSA IDs since 7-27 (e.g. [GHSA-hgqm-cwrq-xx84](https://github.com/advisories/GHSA-hgqm-cwrq-xx84) @antv/matrix-util). same atool-account-takeover cred-stealer chain as 7-27, more pkg/versions flagged.
-  - **claude-code-base-action typosquat** — [GHSA-3x98-842h-2764](https://github.com/advisories/GHSA-3x98-842h-2764) (npm v2.0.0 + v2.2.2). masquerades as the anthropics/claude-code-base-action GitHub Action; ossf flagged for c2-domain traffic. aeon uses `@anthropic-ai/claude-code` cli — not this pkg — clean.
-  - **@wagni_bot/* 25-pack** — GHSA-vr92-xmj8-jr8v @wagni_bot/eth + 24 siblings across metamask/opensea/polymarket/hyperliquid/bsc scopes. web3-bot scope-typosquat class.
-  - **polymarket-* 23-pack + mcp-server/anthropic-internal 15-pack** — polymarket-trading-cli / polymarket-terminal / mcp-server-{sentry,supabase,redis,git,notion,fetch,postgres,figma,github} + fake `anthropic-internal-tools` / `claude-internal-utils` — dependency-confusion class targeting AI-tooling CI.
-  → uninstall + rotate creds if any @antv/@wagni_bot/polymarket-*/mcp-server-*/claude-code-base-action pkg is in a lockfile touched in last 7d. block scopes at registry proxy.
+- karpatkey + karpatkit ([GHSA-v497-gp55-jwxm](https://github.com/advisories/GHSA-v497-gp55-jwxm), [GHSA-7qg7-6pg7-g63q](https://github.com/advisories/GHSA-7qg7-6pg7-g63q)) — pip · malware · impersonates real defi treasury firm
+  on `import karpatkey` daemon-thread walks and exfils SSH keys + AWS/GCP creds + K8s tokens + ETH keystores + gnupg + .npmrc + .pypirc + shell histories + .env under Desktop/Projects/repos over plain HTTP. karpatkey 2.1.1 + karpatkit 2.1.0/2.1.1. first legit-defi-org typosquat in memory-window.
+  → purge karpatkey + karpatkit from all pip envs today; rotate SSH/AWS/GCP/ETH keys if either ever imported.
+- [CVE-2026-54658](https://github.com/advisories/GHSA-6wcc-39rp-hh9p) — @hypequery/clickhouse (npm) · CVSS 9.8 · EPSS 0.004
+  SQL injection in `escapeValue()` param substitution — trailing-backslash escapes closing quote, arbitrary SQL execution. exploit technique disclosed in advisory.
+  → upgrade @hypequery/clickhouse to ≥2.0.2 today.
 
 *PATCH THIS WEEK*
-- [GHSA-4pj9-g833-qx53](https://github.com/advisories/GHSA-4pj9-g833-qx53) — lettre (crates.io) · CVE-2026-46428 · CVSS v4 9.1 · EPSS 0.002 · PoC in advisory
-  inverted boolean disables TLS hostname verification when built with `boring-tls`. any chain-valid cert intercepts SMTP + credentials. affects v0.10.1 through v0.11.21.
-  → upgrade lettre to ≥0.11.22.
-- [GHSA-w6p7-2fxx-4f44](https://github.com/advisories/GHSA-w6p7-2fxx-4f44) — Pocket ID (Go) · CVE-2026-43983 · CVSS v4 8.5 · EPSS 0.002
-  OIDC refresh-token flow bypasses authorization revocation, account disabling, and group restrictions. long-lived tokens survive admin actions.
-  → upgrade Pocket ID to commit ≥978ac87 (pseudo-version 20260419162744).
+- goshs 3-CVE cluster ([GHSA-hq33-8jgp-8qq3](https://github.com/advisories/GHSA-hq33-8jgp-8qq3), [GHSA-rjrw-mjq6-hpmm](https://github.com/advisories/GHSA-rjrw-mjq6-hpmm), [GHSA-rmxw-pq4x-3fvh](https://github.com/advisories/GHSA-rmxw-pq4x-3fvh)) — Go · CVSS 9.1 / 9.1 / 7.5 · EPSS 0.003
+  WebDAV `MOVE` bypasses `--no-delete` + SFTP empty-password auth bypass + `?bulk` zip-download ACL bypass. three residuals of prior fixes stacked in one webdav server.
+  → schedule upgrade: goshs → ≥v2.1.4 (v1 branch unmaintained).
+- datamodel-code-generator 12-CVE mass-disclose ([GHSA-386q-5hp3-95m9](https://github.com/advisories/GHSA-386q-5hp3-95m9) + 11 more) — pip · CVSS 7.5-8.8 · EPSS 0.001-0.004
+  code injection via default_factory / x-python-type / x-python-import / --extra-template-data + arbitrary file read via $ref + SSRF via --url + DNS-rebinding bypass. extends single-project-mass-disclose rail n=5→n=6 (Thrift/Pillow/Gitea/n8n/GitPython).
+  → schedule upgrade: datamodel-code-generator → ≥0.60.2.
+- swagger-typescript-api 5-CVE mass-disclose ([GHSA-hqj5-cw9f-rx67](https://github.com/advisories/GHSA-hqj5-cw9f-rx67) + 4 more) — npm · CVSS 7.4-8.3 · EPSS 0.001
+  code injection via unescaped OpenAPI path / enum / `servers[0].url` in fetch + axios templates + token exfil via spec `$ref`. openapi-generator-shape supply chain.
+  → schedule upgrade: swagger-typescript-api → ≥13.12.2.
+- [CVE-2026-54639](https://github.com/advisories/GHSA-vj5c-m527-mpff) — style-dictionary (npm) · CVSS 8.8 · EPSS 0.001
+  prototype pollution in `convertTokenData` utility.
+  → schedule upgrade: style-dictionary → ≥5.4.4.
+- fission 2-CVE ([GHSA-qf5v-m7p4-95rp](https://github.com/advisories/GHSA-qf5v-m7p4-95rp), [GHSA-q6vm-xqc9-v3ff](https://github.com/advisories/GHSA-q6vm-xqc9-v3ff)) — Go · CVSS 8.5 / 7.7 · EPSS 0.003
+  cross-tenant CAP_SYS_TIME wall-clock corruption via podspec denylist gap + Zip Slip in `pkg/utils/zip.go`.
+  → schedule upgrade: fission → ≥1.25.0.

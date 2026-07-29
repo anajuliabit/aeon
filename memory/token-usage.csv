@@ -893,4 +893,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-29,daily-routine,claude-opus-4-7,2867,28108,3894401,87813
 2026-07-29,github-trending,claude-opus-4-7,39,20517,2132350,70345
 2026-07-29,token-alert,claude-opus-4-7,20,12930,933662,56432
-2026-07-29,reg-monitor,claude-opus-4-7,2280,18842,1440967,155962
+2026-07-29,security-digest,claude-opus-4-7,59,28458,5071682,113565

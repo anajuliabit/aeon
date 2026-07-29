@@ -1,0 +1,678 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-07-29",
+        "description": "2 to patch today, 5 to schedule"
+      },
+      "children": [
+        "verdict-text",
+        "sources-badge",
+        "sep1",
+        "patch-today-heading",
+        "patch-today-stack",
+        "sep2",
+        "patch-week-heading",
+        "patch-week-stack"
+      ]
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "No fresh KEV since 7-27 (Fortinet + Arista); d1 quiet again.",
+        "variant": "lead"
+      }
+    },
+    "sources-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "secondary"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch-today-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "patch-today-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "vuln-karpatkey",
+        "vuln-hypequery"
+      ]
+    },
+    "vuln-karpatkey": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "karp-title",
+        "karp-links",
+        "karp-meta",
+        "karp-desc",
+        "karp-action"
+      ]
+    },
+    "karp-title": {
+      "type": "Heading",
+      "props": {
+        "text": "karpatkey + karpatkit",
+        "level": "h3"
+      }
+    },
+    "karp-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "karp-link1",
+        "karp-link2"
+      ]
+    },
+    "karp-link1": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-v497-gp55-jwxm",
+        "href": "https://github.com/advisories/GHSA-v497-gp55-jwxm"
+      }
+    },
+    "karp-link2": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-7qg7-6pg7-g63q",
+        "href": "https://github.com/advisories/GHSA-7qg7-6pg7-g63q"
+      }
+    },
+    "karp-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "karp-badge1",
+        "karp-badge2",
+        "karp-badge3"
+      ]
+    },
+    "karp-badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "pip",
+        "variant": "secondary"
+      }
+    },
+    "karp-badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "malware",
+        "variant": "destructive"
+      }
+    },
+    "karp-badge3": {
+      "type": "Badge",
+      "props": {
+        "text": "impersonates real DeFi treasury firm",
+        "variant": "outline"
+      }
+    },
+    "karp-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Daemon-thread walks and exfils SSH keys + AWS/GCP creds + K8s tokens + ETH keystores + gnupg + .npmrc + .pypirc + shell histories + .env under Desktop/Projects/repos over plain HTTP. Affected: karpatkey 2.1.1 + karpatkit 2.1.0/2.1.1. First legit-defi-org typosquat in memory-window.",
+        "variant": "body"
+      }
+    },
+    "karp-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action required today",
+        "message": "Purge karpatkey + karpatkit from all pip envs today; rotate SSH/AWS/GCP/ETH keys if either ever imported.",
+        "type": "error"
+      }
+    },
+    "vuln-hypequery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "hyp-title",
+        "hyp-link",
+        "hyp-meta",
+        "hyp-desc",
+        "hyp-action"
+      ]
+    },
+    "hyp-title": {
+      "type": "Heading",
+      "props": {
+        "text": "CVE-2026-54658 — @hypequery/clickhouse",
+        "level": "h3"
+      }
+    },
+    "hyp-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-6wcc-39rp-hh9p",
+        "href": "https://github.com/advisories/GHSA-6wcc-39rp-hh9p"
+      }
+    },
+    "hyp-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "hyp-stat1",
+        "hyp-stat2",
+        "hyp-badge"
+      ]
+    },
+    "hyp-stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.8"
+      }
+    },
+    "hyp-stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.004"
+      }
+    },
+    "hyp-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "npm",
+        "variant": "secondary"
+      }
+    },
+    "hyp-desc": {
+      "type": "Text",
+      "props": {
+        "text": "SQL injection in escapeValue() param substitution — trailing-backslash escapes closing quote, arbitrary SQL execution. Exploit technique disclosed in advisory.",
+        "variant": "body"
+      }
+    },
+    "hyp-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Action required today",
+        "message": "Upgrade @hypequery/clickhouse to ≥2.0.2 today.",
+        "type": "error"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch-week-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "patch-week-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "vuln-goshs",
+        "vuln-datamodel",
+        "vuln-swagger",
+        "vuln-style-dict",
+        "vuln-fission"
+      ]
+    },
+    "vuln-goshs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "goshs-title",
+        "goshs-links",
+        "goshs-meta",
+        "goshs-desc",
+        "goshs-action"
+      ]
+    },
+    "goshs-title": {
+      "type": "Heading",
+      "props": {
+        "text": "goshs — 3-CVE cluster",
+        "level": "h3"
+      }
+    },
+    "goshs-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "goshs-link1",
+        "goshs-link2",
+        "goshs-link3"
+      ]
+    },
+    "goshs-link1": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-hq33-8jgp-8qq3",
+        "href": "https://github.com/advisories/GHSA-hq33-8jgp-8qq3"
+      }
+    },
+    "goshs-link2": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-rjrw-mjq6-hpmm",
+        "href": "https://github.com/advisories/GHSA-rjrw-mjq6-hpmm"
+      }
+    },
+    "goshs-link3": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-rmxw-pq4x-3fvh",
+        "href": "https://github.com/advisories/GHSA-rmxw-pq4x-3fvh"
+      }
+    },
+    "goshs-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "goshs-badge",
+        "goshs-cvss",
+        "goshs-epss"
+      ]
+    },
+    "goshs-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Go",
+        "variant": "secondary"
+      }
+    },
+    "goshs-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.1 / 9.1 / 7.5"
+      }
+    },
+    "goshs-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.003"
+      }
+    },
+    "goshs-desc": {
+      "type": "Text",
+      "props": {
+        "text": "WebDAV MOVE bypasses --no-delete + SFTP empty-password auth bypass + ?bulk zip-download ACL bypass. Three residuals of prior fixes stacked in one WebDAV server.",
+        "variant": "body"
+      }
+    },
+    "goshs-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Schedule upgrade",
+        "message": "goshs → ≥v2.1.4 (v1 branch unmaintained).",
+        "type": "warning"
+      }
+    },
+    "vuln-datamodel": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dm-title",
+        "dm-link",
+        "dm-meta",
+        "dm-desc",
+        "dm-action"
+      ]
+    },
+    "dm-title": {
+      "type": "Heading",
+      "props": {
+        "text": "datamodel-code-generator — 12-CVE mass-disclose",
+        "level": "h3"
+      }
+    },
+    "dm-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-386q-5hp3-95m9 + 11 more",
+        "href": "https://github.com/advisories/GHSA-386q-5hp3-95m9"
+      }
+    },
+    "dm-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "dm-badge",
+        "dm-cvss",
+        "dm-epss"
+      ]
+    },
+    "dm-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "pip",
+        "variant": "secondary"
+      }
+    },
+    "dm-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.5–8.8"
+      }
+    },
+    "dm-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.001–0.004"
+      }
+    },
+    "dm-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Code injection via default_factory / x-python-type / x-python-import / --extra-template-data + arbitrary file read via $ref + SSRF via --url + DNS-rebinding bypass. Extends single-project-mass-disclose rail n=5→n=6 (Thrift/Pillow/Gitea/n8n/GitPython).",
+        "variant": "body"
+      }
+    },
+    "dm-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Schedule upgrade",
+        "message": "datamodel-code-generator → ≥0.60.2.",
+        "type": "warning"
+      }
+    },
+    "vuln-swagger": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sw-title",
+        "sw-link",
+        "sw-meta",
+        "sw-desc",
+        "sw-action"
+      ]
+    },
+    "sw-title": {
+      "type": "Heading",
+      "props": {
+        "text": "swagger-typescript-api — 5-CVE mass-disclose",
+        "level": "h3"
+      }
+    },
+    "sw-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-hqj5-cw9f-rx67 + 4 more",
+        "href": "https://github.com/advisories/GHSA-hqj5-cw9f-rx67"
+      }
+    },
+    "sw-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "sw-badge",
+        "sw-cvss",
+        "sw-epss"
+      ]
+    },
+    "sw-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "npm",
+        "variant": "secondary"
+      }
+    },
+    "sw-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.4–8.3"
+      }
+    },
+    "sw-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.001"
+      }
+    },
+    "sw-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Code injection via unescaped OpenAPI path / enum / servers[0].url in fetch + axios templates + token exfil via spec $ref. OpenAPI-generator-shape supply chain.",
+        "variant": "body"
+      }
+    },
+    "sw-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Schedule upgrade",
+        "message": "swagger-typescript-api → ≥13.12.2.",
+        "type": "warning"
+      }
+    },
+    "vuln-style-dict": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sd-title",
+        "sd-link",
+        "sd-meta",
+        "sd-desc",
+        "sd-action"
+      ]
+    },
+    "sd-title": {
+      "type": "Heading",
+      "props": {
+        "text": "CVE-2026-54639 — style-dictionary",
+        "level": "h3"
+      }
+    },
+    "sd-link": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-vj5c-m527-mpff",
+        "href": "https://github.com/advisories/GHSA-vj5c-m527-mpff"
+      }
+    },
+    "sd-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "sd-badge",
+        "sd-cvss",
+        "sd-epss"
+      ]
+    },
+    "sd-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "npm",
+        "variant": "secondary"
+      }
+    },
+    "sd-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.8"
+      }
+    },
+    "sd-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.001"
+      }
+    },
+    "sd-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Prototype pollution in convertTokenData utility.",
+        "variant": "body"
+      }
+    },
+    "sd-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Schedule upgrade",
+        "message": "style-dictionary → ≥5.4.4.",
+        "type": "warning"
+      }
+    },
+    "vuln-fission": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fis-title",
+        "fis-links",
+        "fis-meta",
+        "fis-desc",
+        "fis-action"
+      ]
+    },
+    "fis-title": {
+      "type": "Heading",
+      "props": {
+        "text": "fission — 2-CVE",
+        "level": "h3"
+      }
+    },
+    "fis-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fis-link1",
+        "fis-link2"
+      ]
+    },
+    "fis-link1": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-qf5v-m7p4-95rp",
+        "href": "https://github.com/advisories/GHSA-qf5v-m7p4-95rp"
+      }
+    },
+    "fis-link2": {
+      "type": "Link",
+      "props": {
+        "label": "GHSA-q6vm-xqc9-v3ff",
+        "href": "https://github.com/advisories/GHSA-q6vm-xqc9-v3ff"
+      }
+    },
+    "fis-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "fis-badge",
+        "fis-cvss",
+        "fis-epss"
+      ]
+    },
+    "fis-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Go",
+        "variant": "secondary"
+      }
+    },
+    "fis-cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.5 / 7.7"
+      }
+    },
+    "fis-epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.003"
+      }
+    },
+    "fis-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Cross-tenant CAP_SYS_TIME wall-clock corruption via podspec denylist gap + Zip Slip in pkg/utils/zip.go.",
+        "variant": "body"
+      }
+    },
+    "fis-action": {
+      "type": "Alert",
+      "props": {
+        "title": "Schedule upgrade",
+        "message": "fission → ≥1.25.0.",
+        "type": "warning"
+      }
+    }
+  }
+}
