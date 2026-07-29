@@ -1,22 +1,19 @@
-Heartbeat complete. All findings deduplicated against prior ticks — no new notification sent.
+Heartbeat complete. Output: `HEARTBEAT_OK · STATUS_PAGE=DEGRADED — wrote docs/status.md · NOTIFY=DEDUP_SKIP`
 
 ## Summary
 
-Ran heartbeat skill (var="") at the 20:00 UTC slot.
+**Skill run:** heartbeat (14:36 UTC)
 
-**P0/P1/P2/P3:** all findings match prior heartbeat ticks (7-28 10:00Z + 14:32Z, 7-27 20:12Z) and morning-brief 07:20Z:
-- 10-skill chronic-failure cohort persists sub-50% (cost-report 12% weakest through skill-health 48%) — durable regime, unchanged
-- 4 stalled PRs unchanged (#165 d9, #167 5d, #168 3d, #169 1d)
-- 6 MEMORY flagged items carried forward with UTC-day rolls
-- Batch-dark 8-skill cluster still frozen at 6-28 (day-31, ISS-027 signature)
-- 0 urgent issues, 0 stuck skills, 0 skills with cf≥3, heartbeat self-check clean (~5h since last success)
+**Files modified:**
+- `docs/status.md` — regenerated public status page (Overall 🔴 DEGRADED, 43-skill health table, 11 open issues, timestamp 2026-07-29 14:36 UTC, next run btc-levels 16:15Z)
+- `memory/logs/2026-07-29.md` — appended heartbeat log entry with full P0/P1/P2/P3 breakdown + delta vs 7-28 20:00Z tick
 
-**Notification:** DEDUP_SKIP (48h dedup window — nothing net-new since skill-health 19:02Z already surfaced the hash-flip 467ce959 → 7bf88238)
+**Findings (all deduped, no notification sent):**
+- **P0**: 11-skill chronic sub-50% cohort persists unchanged (cost-report 12% weakest through skill-health 48%); no stuck skills, no consec-failures ≥3, heartbeat self-check clean (~18h ago)
+- **P1**: PR queue **shrank 4→2** (dupe pair #168/#169 merged 7-28 22:36Z clears queue-exit gate breach); #165 d10 + #167 d6 remain in operator batch window; 0 urgent issues
+- **P2**: 6 MEMORY flags carried forward (ISS-025 T-1, ISS-027/028 doc-gap d22, batch-dark d31, PR #165 d10, operator on-chain d52, priorities.md 55d stale)
+- **P3**: 43-skill roster present in cron-state except 3 dispatch-gated skills (expected)
 
-**Verdict:** 🔴 DEGRADED (unchanged, 4-consec heartbeat ticks)
+**Verdict:** 🔴 DEGRADED (4th-consec formal-tick unchanged verdict-string across ~200h span). All findings match prior 48h logs → NOTIFY=DEDUP_SKIP per SKILL.md.
 
-**Status page:** Regenerated `docs/status.md` — Overall 🔴 DEGRADED, updated timestamp 2026-07-28 20:00 UTC, 43-skill table sorted by last-run desc (evening cohort reflect/skill-health/action-converter/goal-tracker at top), 11 open issues, Token Pulse section omitted (no `articles/token-report-*.md` present), next scheduled run: evening-recap at 21:00 UTC.
-
-**Files modified:** `docs/status.md`, `memory/logs/2026-07-28.md`.
-
-**Output:** `HEARTBEAT_OK · STATUS_PAGE=DEGRADED · NOTIFY=DEDUP_SKIP`
+**Follow-ups:** (i) 20:00Z heartbeat tests end-of-day skill roll; (ii) 7-30 morning tick tests iss-025 hand-off T-0; (iii) monitor PR #165 d10 + #167 d6 clearance in Sunday-weekly batch window.
