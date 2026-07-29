@@ -1,15 +1,14 @@
 ## Summary
 
-Ran btc-levels skill at 20:22Z UTC on 2026-07-28.
+**btc-levels** run complete — 2026-07-29 01:10Z.
 
-**Data fetched (CoinGecko, clean):**
-- Spot: $63,924.13
-- Previous UTC daily close: $63,701.35 (date: 2026-07-27)
+| | |
+|---|---|
+| Spot | $63,861.34 |
+| Daily close (2026-07-28) | $63,881.94 |
+| Leverage-review trigger (≤$45k) | clear |
+| Breakdown signal (<$60,500 close) | clear |
+| Reclaim $63,500 | already alerted (flagged true) |
+| Reclaim $65,900 | not reached |
 
-**Level evaluation — no alerts fired:**
-- Leverage-review (≤$45k): spot $63.9k — clear
-- Breakdown (<$60,500 close): close $63,701 — clear
-- Reclaim $63,500: flag already set from prior run; re-arm requires dip <$60,500 — not triggered
-- Reclaim $65,900: spot $63,924 still below target
-
-No notification sent (quiet run). State file and log updated and committed.
+No alerts fired. Quiet run. State committed (`memory/btc-levels-state.json`) and log opened for today (`memory/logs/2026-07-29.md`).
