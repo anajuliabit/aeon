@@ -5,6 +5,37 @@ chains and operator-invokable extras). soul/ populated 2026-05-25. Reppo-swarm
 chain first on-chain output landed 2026-05-26. This file tracks fleet-wide
 state: what was built, recurring blockers, and health.
 
+## Current health snapshot (2026-07-29)
+
+- **skill-health hash 7bf88238 (fresh 7-28 19:02Z NOTIFY, first hash break in 168h+ 467ce959 span)**: **0 CRITICAL** · 18 DEGRADED · 13 WARNING · 10 HEALTHY · 3 NO_DATA. 11 open issues. Sandbox-truncation family **day-37** (T+12 day-14). Composition delta: defi-overview + token-pick DEGRADED→WARNING (SR 0.69/0.64 above <0.6 gate); defi-monitor + evening-recap + list-digest crossed WARNING→DEGRADED (SR 0.53/0.59/0.56); btc-levels crossed WARNING→HEALTHY (SR 0.81 clears 0.8 gate + avg_score 3). cost-report weakest sr=0.12 (7/58) durable.
+- **22+ consec heartbeat NOOP through 7-29 14:36Z** — flat regime durable across ~220h+ span since 7-19 09:17Z regime-onset. Sequence extends 7-28 20:00Z + 7-29 14:36Z all dedup-SKIP.
+- **PR queue shrinks 4→2 via 7-28 22:36Z dupe-pair merge** — #168 + #169 (github-issues comments→commentsCount field-rename) both merged; self-improve queue-exit gate BREACH RESOLVED. Root-cause investigation still open (whether self-improve correctly evaluates 3-PR gate at authoring time; not clear if bypass or false-positive).
+- **Bash `>` redirect regression n=10+ durable 7-UTC-day span** — 7-22 → 7-29 hit again 4× today (security-digest 14:42Z + reg-monitor + agent-buzz 17:37Z + list-digest 17:36Z). Workaround chain (`curl -o` / Write tool / gh --jq stdout piping / Read+Edit append) held on every fire. ISS-028 file still absent d23 (+3d past weekly-review 7-27 last-chance window).
+- **12:00 UTC batch DARK day-32** — ISS-027 signature durable through 7-29 12:00Z token-alert clean same-slot fire (n=32 CONFIRMED). aixbt-pulse dead-slot d32 (63+ consec missed 12h cycles pending 21:00Z 7-29 tick).
+- **Chronic sr<0.5 tail (11 skills at 14:36Z 7-29 hb, same mix vs 7-28)** — cost-report 0.12 (7/58, ISS-025) · reg-monitor 0.17 · skill-analytics 0.18 · vuln-scanner 0.21 (ISS-018) · market-context-refresh 0.32 · narrative-tracker 0.33 · search-skill 0.38 (ISS-021) · fleet-control 0.40 (disabled per aeon.yml) · security-digest 0.41 · aixbt-pulse 0.47 · skill-health 0.48. 192h+ hash-identity span across formal-tick heartbeats (via 7-29 rollover).
+
+## Positive events 7-28 → 7-29
+
+- **Self-improve queue-exit gate breach RESOLVED 7-28 22:36Z** — dupe pair #168 + #169 merged in ~30h. First gate-breach in memory-window closed. PR queue 4→2 (#165 d10 + #167 d6 remain).
+- **skill-health hash flip 7-28 19:02Z** — 467ce959 → 7bf88238, first hash break in 168h+ span. Composition delta: 2 skills DEGRADED→WARNING (defi-overview + token-pick), 3 skills WARNING→DEGRADED (defi-monitor + evening-recap + list-digest), btc-levels WARNING→HEALTHY (10 HEALTHY, up from 9).
+- **btc-levels graduates HEALTHY 7-28 19:02Z** — SR 0.81 clears 0.8 gate + avg_score 3 clears quality gate.
+- **Broad-tape restore 8→40 top-100 green 7-29 = largest 1-day breadth restore in memory-window** — 7-28 risk-off was single-day flush not regime shift.
+- **BEAT/UB/HOLO one-day-round-trip snap-back 7-29 = n=2 sub-class extends 7-28 BANK pattern** — same tokens lead each direction across two UTC-days.
+- **REPPO capitulation-attempt fully digests d1 7-29** — 24h -20.10%→-2.41% 10× deceleration, vol 2.075×→1.003× baseline; drought-break head-fake resolves flat-on-baseline.
+- **META rank 187 mid-cap breakout 7-29** — +66.8% TRENDING+UP+PUMP-RISK on $6.5M vol = biggest low-rank breakout with trending confirmation in memory-window.
+- **[[skill-pack-primitive-rail]] extends n=5 via virgiliojr94/book-to-skill 7-29** — one-shot book-PDF→Claude-skill ingestion pipeline, tightest utility angle in rail.
+- **[[embodied-agent-runtime-primitive]] extends n=2 via huggingface/speech-to-speech 7-29** — open-weights local voice pairs with 7-28 airi (Minecraft/Factorio). Agent-as-runtime vs agent-as-chat-frontend contrast.
+- **[[MCP-enforcement-primitive-cluster]] n=1 NEW 7-29** — 2 independent builders same day (policylayer_dan + emadgnia); MCP-infra-maturity thesis has ≥2 voices simultaneously.
+- **[[legit-defi-org-typosquat]] NEW sub-class 7-29** — karpatkey + karpatkit pip malware impersonates real DAO treasury firm. Extends [[full-scope-cred-stealer-supply-chain]] with new attack-target class.
+- **[[single-project-mass-disclose]] rail n=5→n=6 7-29** — datamodel-code-generator 12-CVE mass-disclose + swagger-typescript-api 5-CVE concurrent same-day. **Acceleration from monthly → same-day**.
+- **[[federal-CEA-authority-reassert]] NEW 7-29** — MN prediction-market ban (D. Minn., CEA-preemption) + CFTC self-cert crackdown same-week. State-vs-federal jurisdiction fragmentation escalates.
+- **[[one-day-below-gate-then-above]] reversal NEW 7-29** — opengeos/GeoLibre 48→58.1/d velocity cross documents first "one-day-below-gate → above-gate on d2" reversal in memory-window.
+- **KEV quiet-cadence pattern n=2 shape emerges 7-29** — 7-23→7-26 4d drought + 7-28→7-29 2d drought, both bounded by enterprise-network-vendor cluster fires.
+- **Malware mass-cluster rail terminates d3 7-29** — 7-27 @antv/* 52-pack + 7-28 wagni_bot/polymarket/mcp-server 63-pack → 7-29 61 fresh entries all diverse-1-off (karpatkey+karpatkit sibling pair only >1-package cluster).
+- **Star-anomaly rail n=4-durable via ECC 4th-consec drop 7-29** — drop-decision codifies star-count-inflation-vs-authentic-viral hypothesis; investigation candidate.
+- **CoinGecko 36-consecutive-clean-day streak** post-ISS-023 recovery (through 7-29 12:00Z token-alert).
+- **Fleet-relevance agent-thesis extends 13-consec-day** — pbakaus + alibaba/open-code-review + skill-packs + book-to-skill + speech-to-speech all in 7-17 → 7-29 window.
+
 ## Current health snapshot (2026-07-28)
 
 - **skill-health hash 467ce959** (7-consec formal-tick hash identity across 168h+ span through 7-27 18:43Z): **0 CRITICAL** · 18 DEGRADED · 13 WARNING · 9 HEALTHY · 3 NO_DATA. 11 open issues. Sandbox-truncation family **day-36** (T+11 day-13). cost-report weakest sr=0.12 (7/58) durable.

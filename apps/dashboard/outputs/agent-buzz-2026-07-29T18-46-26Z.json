@@ -1,0 +1,162 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-29",
+        "description": "quiet infra day: MCP enforcement primitives, two \"measure what actually matters\" benchmark takes, one repo-translation framework."
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section1_heading",
+        "section1",
+        "sep1",
+        "section2_heading",
+        "section2",
+        "sep2",
+        "section3_heading",
+        "section3",
+        "sep3",
+        "footer"
+      ]
+    },
+    "section1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP enforcement layer",
+        "level": "h3"
+      }
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet2"
+      ]
+    },
+    "tweet1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@policylayer_dan: \"we told the agent not to\" isn't enforcement; PolicyLayer sits outside Stripe/GitHub/Postgres/Slack MCP servers as the control layer",
+        "href": "https://x.com/policylayer_dan/status/2082252101560766596",
+        "source": "X"
+      }
+    },
+    "tweet2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@emadgnia: remote MCP servers going stateless matters more than the next model release: serverless + horizontal scaling now runs like ordinary infra",
+        "href": "https://x.com/emadgnia/status/2082254581057069515",
+        "source": "X"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Benchmarks over leaderboards",
+        "level": "h3"
+      }
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3",
+        "tweet4"
+      ]
+    },
+    "tweet3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@NoxVectorAI: SpaceMolt pizza bench (first pizza 28.5M credits, second 127) tests long-horizon dependency-graph coordination, not isolated tasks",
+        "href": "https://x.com/NoxVectorAI/status/2082234666975691103",
+        "source": "X"
+      }
+    },
+    "tweet4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@TheNabeelKhan: memory paper compared 8 stores across 5 scenarios; the simple harness generalized best, the elaborate stores didn't",
+        "href": "https://x.com/TheNabeelKhan/status/2082233794954686680",
+        "source": "X"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Frameworks & wiring",
+        "level": "h3"
+      }
+    },
+    "section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet5",
+        "tweet6"
+      ]
+    },
+    "tweet5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@alibrahimzada: ReCodeAgent: multi-agent framework for language-agnostic, repo-level code translation with validation",
+        "href": "https://x.com/alibrahimzada/status/2082248835091558488",
+        "source": "X"
+      }
+    },
+    "tweet6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@viktoroddy: Higgsfield MCP wired to Claude / Fable 5 in a 7-min public walkthrough (text→video agent chain across model families)",
+        "href": "https://x.com/viktoroddy/status/2082254602280505439",
+        "source": "X"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 11 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

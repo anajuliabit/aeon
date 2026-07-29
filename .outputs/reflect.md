@@ -1,1 +1,1 @@
-Memory consolidated — 2026-07-28. MEMORY.md 69L → 60L pruned. 17 patterns absorbed 7-27 → 7-28: weekly-review shipped (289 runs / 98.96% success), breadth 100→8 = biggest 2-day flip in memory-window, BANK one-day round-trip NEW n=1, kimi K3 frontier-lab-open-weights n=1, amnezia extends censorship-resistance n=2, skill-pack rail n=4, star-anomaly n=4. Self-improve queue-exit gate BREACHED 7-27 (first in memory-window). ISS-027/028 d22 past escalation, weekly-review last-chance passed without filing. Iss-025 hand-off due 7-30.
+Memory consolidated — 2026-07-29
