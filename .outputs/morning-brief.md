@@ -1,26 +1,28 @@
-*Morning Brief — 2026-07-28*
+*Morning Brief — 2026-07-29*
 
 *Focus today*
-1. dupe PR triage — #168 and #169 fix same field rename; queue at 4, breached 3-PR gate. why now: operator triage flagged in 7-27 evening-recap
-2. iss-025 reframe by 2026-07-30 — weekly-review target. why now: retires 4-consec-weekly slip, T-2 days
-3. pr #165 d9 CONFLICTING — no operator touch since 7-19. why now: broadest stall in the queue
+1. iss-025 hand-off due tomorrow 2026-07-30 — why now: T-1 on the 15d slip, weekly-review action #1
+2. iss-027/028 doc-gap d23 — why now: action-converter 7-28 max-scored 2 file-create loops, +3d past last-chance
+3. PR #165 d10 + PR #167 d6 — why now: dupe pair merged 22:36Z clears the queue-gate, batch window is open
 
 *Since yesterday*
-- self-improve opened dupe #169; 4 open PRs breaches 3-PR gate
-- weekly-review 19:00Z: reframe iss-025 into reflect-scope by 7-30
-- batch-dark cluster rolls d30 (same 8-skill 12:00Z group)
-- security-digest: 34-npm malware wave 7-27 + apache thrift 13-CVE cluster
+- moved: #168 + #169 both merged 22:36Z — queue-exit-gate breach resolved
+- moved: skill-health hash 467ce959 → 7bf88238 (first break in 168h+ span); btc-levels graduates HEALTHY
+- moved: REPPO fires -20.10% at 12:00Z — first alert-fire since 7-25, ends 2-day zero-streak
+- moved: KEV drought d4 breaks — Fortinet FortiOS + Arista VeloCloud fresh 7-27
+- stuck: batch-dark 12:00Z 8-skill cluster d32 (ISS-027, aeon-side); operator on-chain config d53
 
 *Watch*
-- FOMC decision jul 28–29, BTC $63,173 (-2.82%, fear 29) — batch-dark 12:00Z narrative + btc-levels 63.5k reclaim band both in-play today
-- GPT-5.6 (Luna/Terra/Sol, 1M ctx) + Claude Fable 5 back — model-per-skill lever revisit signal
+- FOMC decision 18:00Z + Warsh presser 18:30Z, hold-at-3.5-3.75 base case 72-73%, 27% hike odds priced — btc-levels reclaim band $63.5k armed, token-alert 12:00Z fires pre-decision
 
 *Running today*
-- 07:00: morning-brief, daily-routine, thought-review
-- 08/14/20: heartbeat · 08:00: skill-freshness · 09/21: aixbt-pulse
-- 09:00: github-trending
-- 12:00–12:40: batch-dark 8-skill cluster (d30)
-- 13:00: market-context-refresh · 13:30: narrative-tracker · 14:00: security-digest
-- 15:15: btc-levels · 17:00: list-digest · 17:30: agent-buzz
-- 18:00: goal-tracker, skill-health, reflect, action-converter
-- 21:00: evening-recap
+- morning-brief · daily-routine 07:00Z
+- thought-review 07:00Z + 21:00Z
+- skill-freshness 08:00Z
+- heartbeat 08:00 / 14:00 / 20:00Z
+- github-trending 09:00Z
+- token-alert 12:00Z
+- list-digest 17:00Z · agent-buzz 17:30Z
+- goal-tracker · skill-health · reflect · action-converter · self-improve 18:00Z
+- skill-analytics 18:30Z (Wed)
+- evening-recap 21:00Z
