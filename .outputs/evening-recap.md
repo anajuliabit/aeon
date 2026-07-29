@@ -1,24 +1,21 @@
-*Evening Recap — 2026-07-28*
-_TL;DR: full ship day — skill-health hash breaks its 7-day lock, REPPO fires, KEV drought ends; dupe PR gate breach and ISS-027/028 doc-gap need calls tomorrow._
+*Evening Recap — 2026-07-29*
+_TL;DR: steady ship day — PR #170 filed, skill-analytics fires first weekly slot, reflect absorbs 14 patterns; 3 operator calls open for tomorrow_
 
 *Headlines:*
-- [skill-health] — hash 467ce959→7bf88238 first break in 168h+; btc-levels graduates HEALTHY · `docs/status.md`
-- [security-digest] — Fortinet+Arista KEV (4-day drought breaks); claude-code-base-action typosquat = new AI-tooling supply-chain sub-class · `.tmp/security-digest.md`
-- [token-alert] — REPPO -20.10% ALERT (drought-break head-fake d2 unwind); 35-consec clean CG day · `.pending-notify/token-alert.md`
-- [github-trending] — amnezia-vpn tops (anti-censorship primitive n=2 in 3d); skill-pack rail n=4; 5 picks · `.outputs/github-trending.md`
-- [reflect] — MEMORY 69L→60L, 17 patterns absorbed, self-improve gate-breach goal added · `memory/logs/2026-07-28-reflect.md`
+- self-improve — hn-digest path fix (skills/hn-digest → skills/hacker-news-digest, 1-line diff) · https://github.com/anajuliabit/aeon/pull/170
+- skill-analytics — first Wed 18:30 slot fire in window; 196 runs / 100% SR / 11 anomalies (all batch-dark ISS-027 cluster) · articles/skill-analytics-2026-07-29.md
+- reflect — 14 new/extended patterns absorbed, 17 d-counters advanced, 16 stale entries pruned · memory/logs/2026-07-29-reflect.md
 
 *Notable:*
-- [daily-routine] — Kimi K3 frontier-open-weights-cluster n=1; breadth 92pt flip in 2d (biggest in memory-window); 8/100 top-100 green
-- [skill-freshness] — FRESHNESS_NO_CHANGE; fingerprint unchanged 7-25→7-28, notify suppressed · `articles/skill-freshness-2026-07-28.md`
-- [action-converter] — iss-027-file + iss-028-file both max-score 125; 5 loops — pending author
-- [agent-buzz] — 3 clusters (MCP maturation / on-chain agents / stack composition); 7 tweets kept
-- [goal-tracker] — 6 goals: 1 at risk (ISS-025 T-2d to 7-30), 5 blocked; h-unlock cleared
+- daily-routine — token-movers + paper-pick + hn-digest + tweet-roundup + github-issues, notify sent
+- github-trending — 4-pick slate; skill-pack primitive rail n=4→n=5 (book-to-skill top pick)
+- security-digest — 2 today / 5 this-week; legit-defi-org-typosquat new sub-class (karpatkey pip)
+- reg-monitor — 8 items shipped; MN prediction-market ban enjoined (federal-CEA-authority-reassert NEW)
+- agent-buzz + list-digest — MCP-enforcement-primitive-cluster NEW + training-curriculum-as-a-service NEW
 
 *Decisions for tomorrow:*
-- close PR #169 https://github.com/anajuliabit/aeon/pull/169 — dupe of #168, clears gate breach
-- file ISS-027 + ISS-028 — d22 past last-chance; action-converter max-scored both, nothing authored
-- triage PR #165 d9 CONFLICTING https://github.com/anajuliabit/aeon/pull/165 — operator batch call
-- reframe ISS-025 by 2026-07-30 per weekly-review action #1
+- ISS-025 hand-off T-0 (2026-07-30) — operator direct-author aeon.yml:479-495
+- file ISS-027.md + ISS-028.md — action-converter max-scored 125 each, d23 still unfiled (4th consec shaping)
+- merge PR #165 d10 (CONFLICTING) + PR #167 d6 — batch-merge cadence window
 
-_+8 routine runs collapsed (btc-levels ×5, heartbeat ×3) · sources: log=ok cron-state=ok_
+_+12 routine runs collapsed (btc-levels ×4, heartbeat ×2, token-alert, thought-review, skill-health, morning-brief, goal-tracker, action-converter) · sources: log=ok cron-state=ok_
