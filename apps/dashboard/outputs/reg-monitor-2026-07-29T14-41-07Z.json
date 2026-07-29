@@ -1,0 +1,562 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Reg Monitor — 2026-07-29"
+      },
+      "children": [
+        "alert",
+        "intro",
+        "act_section",
+        "sep1",
+        "watch_section",
+        "sep2",
+        "footer"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "⚠️ partial — cftc rss 404 (recovered via press-release page)"
+      }
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "3 items need a decision this week — mn preemption ruling, cftc event-contract self-cert crackdown, memx crypto options live.",
+        "variant": "lead"
+      }
+    },
+    "act_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "act_heading",
+        "act_item_1",
+        "act_item_2",
+        "act_item_3"
+      ]
+    },
+    "act_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ACT",
+        "level": "h2"
+      }
+    },
+    "act_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act1_title",
+        "act1_meta",
+        "act1_detail",
+        "act1_timeline",
+        "act1_impact"
+      ]
+    },
+    "act1_title": {
+      "type": "Link",
+      "props": {
+        "label": "MN prediction-market ban enjoined",
+        "href": "https://www.coindesk.com/policy/2026/07/27/kalshi-polymarket-win-pause-against-minnesota-s-prediction-market-ban"
+      }
+    },
+    "act1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "act1_jdx",
+        "act1_type"
+      ]
+    },
+    "act1_jdx": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal (D. Minn.)",
+        "variant": "secondary"
+      }
+    },
+    "act1_type": {
+      "type": "Badge",
+      "props": {
+        "text": "prelim injunction",
+        "variant": "outline"
+      }
+    },
+    "act1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Judge Menendez ruled MN SF4760 is expressly preempted by the CEA — event contracts qualify as swaps, so the state can't ban CFTC-licensed contracts. Plaintiffs: Kalshi + Polymarket + CFTC.",
+        "variant": "body"
+      }
+    },
+    "act1_timeline": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ effective immediately; final-merits trial next.",
+        "variant": "caption"
+      }
+    },
+    "act1_impact": {
+      "type": "Text",
+      "props": {
+        "text": "📊 all state-level prediction-market bans (KY, NJ, NV, OH) now on much weaker ground; templates the CFTC's parallel suits against 9 states.",
+        "variant": "caption"
+      }
+    },
+    "act_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act2_title",
+        "act2_meta",
+        "act2_detail",
+        "act2_timeline",
+        "act2_impact"
+      ]
+    },
+    "act2_title": {
+      "type": "Link",
+      "props": {
+        "label": "CFTC event-contract self-cert advisory",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9273-26"
+      }
+    },
+    "act2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "act2_jdx",
+        "act2_type"
+      ]
+    },
+    "act2_jdx": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal",
+        "variant": "secondary"
+      }
+    },
+    "act2_type": {
+      "type": "Badge",
+      "props": {
+        "text": "staff advisory (Letter 26-22)",
+        "variant": "outline"
+      }
+    },
+    "act2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Div of Market Oversight told DCMs to stop filing template omnibus self-certs — each event-contract variation needs its own settlement methodology, data source, compliance detail.",
+        "variant": "body"
+      }
+    },
+    "act2_timeline": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ issued 2026-07-24, effective on issuance.",
+        "variant": "caption"
+      }
+    },
+    "act2_impact": {
+      "type": "Text",
+      "props": {
+        "text": "📊 slows Kalshi + Polymarket menu-expansion cadence — every new sports/politics contract now a separate CFTC review lane.",
+        "variant": "caption"
+      }
+    },
+    "act_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "act3_title",
+        "act3_meta",
+        "act3_detail",
+        "act3_timeline"
+      ]
+    },
+    "act3_title": {
+      "type": "Link",
+      "props": {
+        "label": "SEC approves MEMX crypto-trust options",
+        "href": "https://www.federalregister.gov/documents/2026/07/24/2026-14977"
+      }
+    },
+    "act3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "act3_jdx",
+        "act3_type"
+      ]
+    },
+    "act3_jdx": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal",
+        "variant": "secondary"
+      }
+    },
+    "act3_type": {
+      "type": "Badge",
+      "props": {
+        "text": "order granting rule change",
+        "variant": "outline"
+      }
+    },
+    "act3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "MEMX gets listing + withdrawal standards for options on commodity-based trusts holding multiple cryptocurrencies. First multi-crypto-basket options venue on a national stock exchange.",
+        "variant": "body"
+      }
+    },
+    "act3_timeline": {
+      "type": "Text",
+      "props": {
+        "text": "⏰ effective immediately.",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_heading",
+        "watch_item_1",
+        "watch_item_2",
+        "watch_item_3",
+        "watch_item_4",
+        "watch_item_5"
+      ]
+    },
+    "watch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h2"
+      }
+    },
+    "watch_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch1_title",
+        "watch1_meta",
+        "watch1_detail"
+      ]
+    },
+    "watch1_title": {
+      "type": "Link",
+      "props": {
+        "label": "CFTC no-action for Kraken Derivatives DCM dormancy",
+        "href": "https://www.cftc.gov/PressRoom/PressReleases/9272-26"
+      }
+    },
+    "watch1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "watch1_jdx",
+        "watch1_type"
+      ]
+    },
+    "watch1_jdx": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal",
+        "variant": "secondary"
+      }
+    },
+    "watch1_type": {
+      "type": "Badge",
+      "props": {
+        "text": "staff letter 26-21",
+        "variant": "outline"
+      }
+    },
+    "watch1_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Extension of Letter 25-46. Time-limited relief for the former Small Exchange under new Kraken ownership. Signals CFTC willingness to keep dormant DCM slots alive during ownership transitions.",
+        "variant": "body"
+      }
+    },
+    "watch_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch2_title",
+        "watch2_meta",
+        "watch2_detail"
+      ]
+    },
+    "watch2_title": {
+      "type": "Link",
+      "props": {
+        "label": "ESMA MiCA Q&A + guidelines compliance table",
+        "href": "https://en.cryptonomist.ch/2026/07/29/mica-crypto-regulations-esma/"
+      }
+    },
+    "watch2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "watch2_jdx",
+        "watch2_type"
+      ]
+    },
+    "watch2_jdx": {
+      "type": "Badge",
+      "props": {
+        "text": "EU",
+        "variant": "secondary"
+      }
+    },
+    "watch2_type": {
+      "type": "Badge",
+      "props": {
+        "text": "guidance",
+        "variant": "outline"
+      }
+    },
+    "watch2_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Post-1 July transition-expiry clarifications on ESG ratings, MiFIR overlap, CASP obligations. Fines up to €5M / 3% turnover now live for unlicensed EU crypto service.",
+        "variant": "body"
+      }
+    },
+    "watch_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch3_title",
+        "watch3_meta",
+        "watch3_detail"
+      ]
+    },
+    "watch3_title": {
+      "type": "Link",
+      "props": {
+        "label": "CFTC 24/7 futures + perpetual contracts RFC — comment window extended",
+        "href": "https://www.federalregister.gov/documents/2026/07/28/2026-15216"
+      }
+    },
+    "watch3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "watch3_jdx",
+        "watch3_type"
+      ]
+    },
+    "watch3_jdx": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal",
+        "variant": "secondary"
+      }
+    },
+    "watch3_type": {
+      "type": "Badge",
+      "props": {
+        "text": "proposed rule",
+        "variant": "outline"
+      }
+    },
+    "watch3_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Comments now close 2026-08-26. CFTC also asking about CME's self-cert'd oil contract; the perpetual framework is what any US-domiciled perp venue would slot into.",
+        "variant": "body"
+      }
+    },
+    "watch_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch4_title",
+        "watch4_meta",
+        "watch4_detail"
+      ]
+    },
+    "watch4_title": {
+      "type": "Link",
+      "props": {
+        "label": "OCC GENIUS Act stablecoin-issuer license PRA notice",
+        "href": "https://www.federalregister.gov/documents/2026/07/27/2026-15088"
+      }
+    },
+    "watch4_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "watch4_jdx",
+        "watch4_type"
+      ]
+    },
+    "watch4_jdx": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal",
+        "variant": "secondary"
+      }
+    },
+    "watch4_type": {
+      "type": "Badge",
+      "props": {
+        "text": "info-collection notice",
+        "variant": "outline"
+      }
+    },
+    "watch4_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Precursor to actual license apps opening under the GENIUS Act. Sub-$10B issuers still route to state charters.",
+        "variant": "body"
+      }
+    },
+    "watch_item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch5_title",
+        "watch5_meta",
+        "watch5_detail"
+      ]
+    },
+    "watch5_title": {
+      "type": "Link",
+      "props": {
+        "label": "Cboe Clear US temp-registration for digital-asset-index derivatives",
+        "href": "https://www.federalregister.gov/documents/2026/07/24/2026-14979"
+      }
+    },
+    "watch5_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "watch5_jdx",
+        "watch5_type"
+      ]
+    },
+    "watch5_jdx": {
+      "type": "Badge",
+      "props": {
+        "text": "US federal",
+        "variant": "secondary"
+      }
+    },
+    "watch5_type": {
+      "type": "Badge",
+      "props": {
+        "text": "SEC notice",
+        "variant": "outline"
+      }
+    },
+    "watch5_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Cboe wants a clearing agency covering digital-asset index derivatives — the plumbing layer for spot-index products.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_sources",
+        "footer_summary"
+      ]
+    },
+    "footer_sources": {
+      "type": "Text",
+      "props": {
+        "text": "sources: federal-register=ok · sec=ok · cftc=fail(rss)+recovered · websearch=ok · congress=skip",
+        "variant": "caption"
+      }
+    },
+    "footer_summary": {
+      "type": "Text",
+      "props": {
+        "text": "15 developments scored, 3 act / 5 watch / 0 context",
+        "variant": "caption"
+      }
+    }
+  }
+}
