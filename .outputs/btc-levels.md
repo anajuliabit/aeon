@@ -1,18 +1,16 @@
 ## Summary
 
-Ran **btc-levels** at 17:37Z.
+**BTC Levels run — 2026-07-29 21:09Z**
 
-**Data fetched:** CoinGecko `market_chart?days=2&interval=daily` succeeded via curl.
-
-| | Value |
-|---|---|
-| Spot | $63,811.69 |
-| Daily close (2026-07-28) | $63,881.94 |
+- **Spot:** $63,321.52
+- **Previous UTC daily close (2026-07-28):** $63,881.94
 
 **Level evaluation:**
-- Leverage-review (≤$45k): no — spot $63.8k well above trigger
-- Breakdown (close <$60,500): no — close $63,882 above threshold
-- Reclaim $63,500: no alert — already flagged true from prior run
-- Reclaim $65,900: no — spot below level; re-arm condition (spot <$60,500) not met
+| Level | Result |
+|---|---|
+| Spot ≤ $45k (leverage review) | No — $63,321 >> $45k |
+| Close < $60,500 (breakdown) | No — $63,881 > $60,500 |
+| Reclaim $63,500 | Not triggered — spot $63,321 < $63,500; flag stays armed (no re-arm needed, spot > $60,500) |
+| Reclaim $65,900 | Not triggered — spot $63,321 < $65,900 |
 
-**No alerts fired. No notification sent.** State updated, log entry appended, committed.
+No alerts fired. No notification sent. State and log updated and committed.
