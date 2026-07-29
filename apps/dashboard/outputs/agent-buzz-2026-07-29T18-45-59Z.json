@@ -1,0 +1,122 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Buzz — 2026-07-29",
+        "description": "quiet infra day: MCP enforcement primitives, two \"measure what actually matters\" benchmark takes, one repo-translation framework."
+      },
+      "children": [
+        "heading_mcp",
+        "storylink_mcp_1",
+        "storylink_mcp_2",
+        "sep_1",
+        "heading_bench",
+        "storylink_bench_1",
+        "storylink_bench_2",
+        "sep_2",
+        "heading_fw",
+        "storylink_fw_1",
+        "storylink_fw_2",
+        "sep_3",
+        "text_footer"
+      ]
+    },
+    "heading_mcp": {
+      "type": "Heading",
+      "props": {
+        "text": "MCP enforcement layer",
+        "level": "h2"
+      }
+    },
+    "storylink_mcp_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@policylayer_dan — \"we told the agent not to\" isn't enforcement; PolicyLayer sits outside Stripe/GitHub/Postgres/Slack MCP servers as the control layer",
+        "href": "https://x.com/policylayer_dan/status/2082252101560766596",
+        "source": "X"
+      }
+    },
+    "storylink_mcp_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@emadgnia — remote MCP servers going stateless matters more than the next model release: serverless + horizontal scaling now runs like ordinary infra",
+        "href": "https://x.com/emadgnia/status/2082254581057069515",
+        "source": "X"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_bench": {
+      "type": "Heading",
+      "props": {
+        "text": "Benchmarks over leaderboards",
+        "level": "h2"
+      }
+    },
+    "storylink_bench_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@NoxVectorAI — SpaceMolt pizza bench (first pizza 28.5M credits, second 127) tests long-horizon dependency-graph coordination, not isolated tasks",
+        "href": "https://x.com/NoxVectorAI/status/2082234666975691103",
+        "source": "X"
+      }
+    },
+    "storylink_bench_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@TheNabeelKhan — memory paper compared 8 stores across 5 scenarios; the simple harness generalized best, the elaborate stores didn't",
+        "href": "https://x.com/TheNabeelKhan/status/2082233794954686680",
+        "source": "X"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_fw": {
+      "type": "Heading",
+      "props": {
+        "text": "Frameworks & wiring",
+        "level": "h2"
+      }
+    },
+    "storylink_fw_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@alibrahimzada — ReCodeAgent: multi-agent framework for language-agnostic, repo-level code translation with validation",
+        "href": "https://x.com/alibrahimzada/status/2082248835091558488",
+        "source": "X"
+      }
+    },
+    "storylink_fw_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@viktoroddy — Higgsfield MCP wired to Claude / Fable 5 in a 7-min public walkthrough (text→video agent chain across model families)",
+        "href": "https://x.com/viktoroddy/status/2082254602280505439",
+        "source": "X"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_footer": {
+      "type": "Text",
+      "props": {
+        "text": "src: xai · candidates: 11 → kept: 6",
+        "variant": "caption"
+      }
+    }
+  }
+}

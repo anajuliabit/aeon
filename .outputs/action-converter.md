@@ -1,29 +1,29 @@
-*5 Actions — 2026-07-28*
-Shape: close 21d iss-027/028 doc-gap, cut dupe pr-168, absorb today's supply-chain + watchlist deltas
+*5 Actions — 2026-07-29*
+Shape: ship iss-025 handoff T-1, stub ISS-027/028 d23, triage PR#167 6d, refresh market-context pre-cascade
 
-1. Author `memory/issues/ISS-027.md` documenting 12:00 UTC batch-dark 8-skill cluster (frozen 6-28, day-30) with YAML frontmatter
-why: MEMORY.md line 6 refs ISS-027 authoritatively but no file exists — load-bearing gap on every read for 21d
-done: `memory/issues/ISS-027.md` exists with id/title/status/severity fields + INDEX.md row added
-loop: iss-027-file
+1. draft articles/iss-025-handoff.md summarizing cost-report 12% (7/58) + capture-step target (.github/workflows/aeon.yml:479-495), send via ./notify
+why: weekly-review 7-27 action #1 due 2026-07-30 T-1; retires 4-consec-weekly slip; verb-pool exhausted per MEMORY line 5
+done: file exists + ./notify exit 0 + hand-off flag in memory/logs/2026-07-30.md
+loop: iss-025-hand-off-t-1
 
-2. Draft `memory/issues/ISS-028.md` documenting bash `>` redirect regression n=8+ across 7-22 → 7-28 (5-UTC-day span)
-why: 8th fire in security-digest 14:42Z today, MEMORY.md line 28 tracks but no file — mirrors iss-027 gap
-done: `memory/issues/ISS-028.md` exists with affected_skills list + INDEX.md row added
-loop: iss-028-file
+2. populate memory/issues/ISS-027.md with batch-dark 12:00Z 8-skill d31 signature (defi-overview/token-pick/token-movers/narrative-tracker/market-context-refresh/fleet-control/on-chain-monitor/defi-monitor), sibling to ISS-025 template
+why: d23 doc-gap load-bearing per MEMORY line 7; 3-consec action-converter runs shaped this max-score (125); +3d past weekly-review 7-27 last-chance
+done: memory/issues/ISS-027.md exists with YAML frontmatter + INDEX.md open table updated
+loop: iss-027-file-doc-gap-d23
 
-3. Supersede PR #168 by closing it with a comment linking to PR #169 (both fix `comments` → `commentsCount`, #169 authored 7-27)
-why: 4-PR queue breaches 3-PR self-improve exit-gate, dupe surfaced by 7-28 morning-brief 07:20Z
-done: `gh pr close 168 --comment "superseded by #169"`; open-PR queue drops to 3
-loop: pr-168-close-dupe
+3. populate memory/issues/ISS-028.md capturing bash-`>` redirect regression n=10+ across 8-UTC-day span, workaround chain (Edit tool + curl -o + gh --jq stdout)
+why: paired doc-gap with ISS-027; security-digest + reg-monitor + agent-buzz + list-digest all fired signature this UTC-day; d23 gap
+done: memory/issues/ISS-028.md exists with YAML frontmatter + INDEX.md open table updated
+loop: iss-028-file-doc-gap-d23
 
-4. Extend `memory/MEMORY.md` lines 63-64 with `AI-agent-tooling-supply-chain-typosquat` sub-class covering claude-code-base-action + mcp-server-* 15-pack + anthropic-internal-*
-why: security-digest 14:42Z fires this cluster fresh today, extends [[mass-parallel-real-package-account-takeover]] rail to AI-tooling
-done: MEMORY.md diff includes sub-class label, 3 package clusters named, fleet-clean note added
-loop: memory-md-supply-chain-rail-update
+4. triage PR #167 with gh pr review comment on bash-redirect fix scope, decide rebase-vs-merge
+why: 6d stalled since 7-23; direct root-cause fix that would eliminate the ISS-028 workaround chain firing every skill run
+done: gh pr review --comment posted or gh pr merge --squash executed
+loop: pr-167-decide-6d
 
-5. Refresh `memory/MEMORY.md` Tracked Tokens table with 7-28 prints (REPPO -20.10% alert-fire, WELL post-drain d3, MAMO digestion d7 tightens, GITLAWB cliff-give-back-resumes)
-why: 4/4-red day post-4/4-green + first REPPO alert since 7-25 = table shows 7-26 stale prints
-done: 4 rows in Tracked Tokens table updated with today's %/vol/pattern text
-loop: memory-tracked-tokens-refresh
+5. refresh memory/topics/market-context.md with 7-29 tape snapshot (BTC $63.8k range, breadth 40/82 restore from 7-28's 8/82 flip, REPPO d2 post-capitulation)
+why: skill-freshness 7-28 flagged 12d/296h WARN→STALE cascade ~16:00Z 2026-07-30 T-1; skill sits at 32% SR so manual save prevents auto-cascade
+done: file mtime updated + baseline section reflects 7-29 top-100 breadth + tracked-token deltas
+loop: market-context-stale-t-1
 
-sources: memory=69 logs=7 topics=4 prs=4 cron_failing=0 mode=OK
+sources: memory=72 logs=7 topics=20 prs=2 cron_failing=10 mode=OK
