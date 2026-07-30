@@ -1,21 +1,25 @@
-*Evening Recap — 2026-07-29*
-_TL;DR: steady ship day — PR #170 filed, skill-analytics fires first weekly slot, reflect absorbs 14 patterns; 3 operator calls open for tomorrow_
+*Evening Recap — 2026-07-30*
+_TL;DR: productive-but-incomplete — reflect closed a 24d doc-gap (ISS-027/028 filed), security pushed 3 criticals, and ISS-025 hand-off slipped its T-0 deadline to d15._
 
 *Headlines:*
-- self-improve — hn-digest path fix (skills/hn-digest → skills/hacker-news-digest, 1-line diff) · https://github.com/anajuliabit/aeon/pull/170
-- skill-analytics — first Wed 18:30 slot fire in window; 196 runs / 100% SR / 11 anomalies (all batch-dark ISS-027 cluster) · articles/skill-analytics-2026-07-29.md
-- reflect — 14 new/extended patterns absorbed, 17 d-counters advanced, 16 stale entries pruned · memory/logs/2026-07-29-reflect.md
+- reflect — ISS-027.md + ISS-028.md filed, MEMORY.md rebuilt · memory/issues/ISS-027.md
+- security-digest — Cisco FMC KEV + kube-logging RCE + flyto-core 6-CVE; 3 patch-today / 5 this-week · .tmp/security-digest.md
+- heartbeat 15:16Z — 07:00Z slot MISS confirmed (morning-brief + daily-routine + thought-review all dropped) · docs/status.md
+- github-trending — jcode top pick (Rust efficiency-first n=1) + VibeVoice (open-voice rail n=2); 4 picks shipped · .outputs/github-trending.md
+- agent-buzz — Ruflo MCP CVE-2026-59726 (first-in-wild) + stateless spec + Copilot GA same-day · .tmp/agent-buzz.md
 
 *Notable:*
-- daily-routine — token-movers + paper-pick + hn-digest + tweet-roundup + github-issues, notify sent
-- github-trending — 4-pick slate; skill-pack primitive rail n=4→n=5 (book-to-skill top pick)
-- security-digest — 2 today / 5 this-week; legit-defi-org-typosquat new sub-class (karpatkey pip)
-- reg-monitor — 8 items shipped; MN prediction-market ban enjoined (federal-CEA-authority-reassert NEW)
-- agent-buzz + list-digest — MCP-enforcement-primitive-cluster NEW + training-curriculum-as-a-service NEW
+- btc-levels ×5 — spot $64,218–$64,845, all levels clear
+- token-alert — 0/4 alerts, 37th clean CG day; REPPO 1.386× leads vol-intensity
+- skill-freshness — FRESHNESS_NO_CHANGE, fingerprint `1ab8c658` stable 5d
+- skill-health — DEGRADED(18) stable-hash 3rd-consec tick; daily-cadence notify sent
+- list-digest — buyback rail: ETHFI 3.04× P/F + AERO merger mechanics; 1 list / 3 tweets
 
 *Decisions for tomorrow:*
-- ISS-025 hand-off T-0 (2026-07-30) — operator direct-author aeon.yml:479-495
-- file ISS-027.md + ISS-028.md — action-converter max-scored 125 each, d23 still unfiled (4th consec shaping)
-- merge PR #165 d10 (CONFLICTING) + PR #167 d6 — batch-merge cadence window
+- merge PR #167 (bash-redirect fix, d7 past weekly-batch gate) · https://github.com/anajuliabit/aeon/pull/167
+- merge PR #165 (CONFLICTING, d11) · https://github.com/anajuliabit/aeon/pull/165
+- ISS-025 hand-off slipped T-0: operator direct-author against aeon.yml:479-495 (now d15)
+- if 07:00Z slot misses 7-31, file new ISS (1-instance today — not yet ISS-worthy)
+- PR #170 just crossed 24h · https://github.com/anajuliabit/aeon/pull/170
 
-_+12 routine runs collapsed (btc-levels ×4, heartbeat ×2, token-alert, thought-review, skill-health, morning-brief, goal-tracker, action-converter) · sources: log=ok cron-state=ok_
+_+1 collapsed (heartbeat 09:04Z dedup-skip) · sources: log=ok cron-state=ok_
