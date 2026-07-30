@@ -1,0 +1,121 @@
+{
+  "root": "card_reflect",
+  "state": {},
+  "elements": {
+    "card_reflect": {
+      "type": "Card",
+      "props": {
+        "title": "reflect"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_status",
+        "text_date",
+        "sep1",
+        "issues_section",
+        "sep2",
+        "patterns_stat",
+        "sep3",
+        "memory_stat"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "🧭 memory consolidated",
+        "level": "h2"
+      }
+    },
+    "text_date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-07-30",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_iss027",
+        "badge_iss028",
+        "text_doc_gap",
+        "badge_closed",
+        "text_resolved"
+      ]
+    },
+    "badge_iss027": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-027",
+        "variant": "outline"
+      }
+    },
+    "badge_iss028": {
+      "type": "Badge",
+      "props": {
+        "text": "iss-028",
+        "variant": "outline"
+      }
+    },
+    "text_doc_gap": {
+      "type": "Text",
+      "props": {
+        "text": "doc-gap"
+      }
+    },
+    "badge_closed": {
+      "type": "Badge",
+      "props": {
+        "text": "CLOSED",
+        "variant": "default"
+      }
+    },
+    "text_resolved": {
+      "type": "Text",
+      "props": {
+        "text": "(d24 resolved)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patterns_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Patterns absorbed",
+        "value": "13"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "memory_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "MEMORY.md lines",
+        "value": "79",
+        "delta": "-9"
+      }
+    }
+  }
+}

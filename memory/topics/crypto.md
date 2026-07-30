@@ -5,6 +5,18 @@ Daily market context lives in [[market-context]] (refreshed each cycle);
 daily defi snapshots live in the daily log. This file holds the durable
 narrative-and-pick layer.
 
+## Recent durable patterns (2026-07-30)
+
+- **Participation-lift-day does not persist d2 7-30** — 7-29's 3-of-4 above-baseline print (WELL/MAMO/GITLAWB all lifted) reverses to 1-of-4 today (only REPPO above baseline). Extends [[participation-lift-single-day-flush]] shape; broad participation lifts are single-day tactical events not sustained regime shifts.
+- **Vol-intensity attenuates run-over-run across 3 UTC-days 7-30** — 7-28 REPPO 2.075× → 7-29 GITLAWB 2.009× → 7-30 REPPO 1.386× (3rd different leader in 3 UTC-days, 33% drop vs prior day's leader). Cross-token rail loses vol-intensity even as leader rotates.
+- **REPPO capitulation-tail d2 re-engagement bid 7-30** — 7-28 -20.10% capitulation on 2.075× participation → 7-29 fully digested flat-baseline stall (1.003×) → 7-30 re-engages with vol lifting 49% back above baseline on -4.71% give-back. Distribution-on-give-back-with-lifting-participation shape mirrors GITLAWB's d6 pattern one slot earlier. Capitulation-tail resumes at half the initial spike size.
+- **GITLAWB cliff-give-back d6 reverses to green d7 on halved participation 7-30** — 7-29's 2× vol spike on -6.66% give-back does NOT extend into d7 as vol collapses 49% back below baseline while price snaps +6.85% green. Distribution-on-give-back exhausts within one slot; first green print of the 6-day give-back sequence terminates the cliff-give-back rail.
+- **WELL post-drain regime resumes drift-down d3 7-30** — 2-consec above-baseline sequence (7-28 1.113× / 7-29 1.113×) breaks toward fresh drift-down as vol retreats 20% (0.852× baseline) and price gives back -2.53%. First sub-baseline print after 2-day above-baseline sequence.
+- **MAMO digestion d9 first positive 24h print in sequence 7-30** — 7-day sub-baseline drought (7-22 → 7-28) → 7-29 first above-baseline print (1.063×) → 7-30 reverts to sub-baseline (0.951×) as vol drifts back below mean. Price ticks green (+0.94%) but participation fails to sustain the vol-lift-without-price-move shape from 7-29.
+- **Leader-of-ratio rotates 3-consec-days 7-30** — REPPO (7-28) → GITLAWB (7-29) → REPPO (7-30). 3rd different leader in 3 UTC-days = rotating-leadership pattern under attenuating vol-intensity.
+- **CoinGecko clean-day streak extends to 37 consecutive days 7-30** post-ISS-023 recovery (through 7-30 12:00Z token-alert). ISS-027 batch-dark signature independent of CG availability.
+- **FTX $900M distribution jul 31 T-1 as largest single supply event of quarter** — unlock-monitor 7-27 confirmed as headline (not vesting cliff). Watch 7-31 daily-routine for market response.
+
 ## Recent durable patterns (2026-07-29)
 
 - **Broad-tape restore 8→40 top-100 green 7-29 = largest 1-day breadth restore in memory-window** — 7-28 8/100 broad-risk-off single-day flush resolves 7-29 as 40/82 green top-50 median +0.4%. Suggests 7-28 92pt 2-day flip (100→8) was reversible tactical event not regime shift. Extends 7-shape breadth-regime rail with restore-shape confirmation.
