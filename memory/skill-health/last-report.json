@@ -1,7 +1,7 @@
 {
   "hash": "7bf8823896fb596cd0d86b5060fb3574f0fa14e3d8f91399bf1ea8a1f947f8db",
-  "last_notified_at": "2026-07-28T19:02:33Z",
-  "last_run_at": "2026-07-29T18:43:25Z",
+  "last_notified_at": "2026-07-30T18:15:11Z",
+  "last_run_at": "2026-07-30T18:15:11Z",
   "classification": {
     "critical": [],
     "degraded": ["action-converter", "aixbt-pulse", "cost-report", "defi-monitor", "evening-recap", "goal-tracker", "list-digest", "market-context-refresh", "narrative-tracker", "reflect", "reg-monitor", "search-skill", "security-digest", "self-improve", "skill-analytics", "skill-evals", "skill-health", "vuln-scanner"],
@@ -10,7 +10,7 @@
     "healthy_count": 10,
     "no_data": ["autoresearch", "fork-skill-gap", "operator-scorecard"]
   },
-  "systemic": "NOOP — same DEGRADED composition as 7-28 19:02Z (18 skills, sandbox-truncation family output_tokens=0 day-36). CRITICAL/FLAPPING both empty. Composition delta since prev: btc-levels crossed WARNING→HEALTHY (SR 0.81 clears 0.8 gate, avg_score=3 satisfies quality gate — matches prev systemic note's asserted graduation). WARNING count 13→12 (btc-levels moved out). HEALTHY count 10→10 stable (btc-levels in, no others changed). Hash 7bf88238 stable 2nd-consec formal tick (same-composition span 24h). Notify gate: SKIP (hash unchanged AND elapsed 23h40m < 24h daily-reminder cadence). Open issues unchanged at 11 (ISS-018/019/020/021/025 skills all still non-HEALTHY per affected-skills reconciliation — no resolutions this run; 0 CRITICAL/FLAPPING candidates → 0 filings). skill-runs 168h fallback source unavailable this run (permission-blocked in sandbox) — logged as SKILL_HEALTH_PARTIAL, classification proceeded on cron-state + skill-health/*.json alone; no missing-skill risk as all 43 enabled skills have cron-state entries except the 3 dispatch-gated NO_DATA (autoresearch/fork-skill-gap/operator-scorecard, all expected).",
+  "systemic": "NOTIFY (daily-cadence tick) — hash 7bf88238 unchanged 3rd-consec formal tick since 7-28 19:02Z (composition identical: 18 DEGRADED / 12 WARNING / 10 HEALTHY / 3 NO_DATA). Elapsed 47h13m > 24h daily-reminder gate → notify fired. No new CRITICAL/FLAPPING → 0 filings; no HEALTHY graduation for any open-issue affected skill (ISS-018 vuln-scanner still DEGRADED sr=0.21, ISS-019 defi-overview WARNING sr=0.69 not HEALTHY, ISS-020 token-pick WARNING sr=0.64, ISS-021 search-skill DEGRADED sr=0.38, ISS-025 cost-report DEGRADED sr=0.12) → 0 resolutions. Open issues stable at 11. Systemic signature output_tokens=0 sandbox-truncation family holds day-37 across 18 DEGRADED skills — signature identity with previous fire. skill-runs 168h fallback source unavailable in sandbox (permission-blocked, logged as SKILL_HEALTH_PARTIAL) — classification proceeded on cron-state + skill-health/*.json alone, no missing-skill risk (all 43 enabled skills have cron-state entries except the 3 dispatch-gated NO_DATA which are expected).",
   "open_issues": 11,
   "resolved_this_run": 0,
   "filed_this_run": 0

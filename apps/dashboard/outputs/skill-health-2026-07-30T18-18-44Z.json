@@ -1,0 +1,268 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health — 2026-07-30"
+      },
+      "children": [
+        "header_stack",
+        "sep1",
+        "degraded_section",
+        "sep2",
+        "nodata_section",
+        "sep3",
+        "healthy_section",
+        "sep4",
+        "issues_section"
+      ]
+    },
+    "header_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_health_status",
+        "text_systemic",
+        "text_composition"
+      ]
+    },
+    "text_health_status": {
+      "type": "Heading",
+      "props": {
+        "text": "HEALTH: DEGRADED (18)",
+        "level": "h2"
+      }
+    },
+    "text_systemic": {
+      "type": "Text",
+      "props": {
+        "text": "Systemic issue: output_tokens=0 sandbox-truncation affecting 18 skills on day 37",
+        "variant": "body"
+      }
+    },
+    "text_composition": {
+      "type": "Text",
+      "props": {
+        "text": "Daily-cadence reminder tick — composition stable since 7-28 19:02Z (hash 7bf88238, 3rd consecutive run, ~47 hours since last notify)",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_degraded",
+        "table_degraded",
+        "text_more_degraded_stack"
+      ]
+    },
+    "heading_degraded": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 Degraded (top 5 by DSLs)",
+        "level": "h3"
+      }
+    },
+    "table_degraded": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "SR",
+          "Days",
+          "Status"
+        ],
+        "rows": [
+          [
+            "aixbt-pulse",
+            "0.47",
+            "32d dark",
+            "WAIT-API"
+          ],
+          [
+            "defi-monitor",
+            "0.53",
+            "32d dark",
+            "WAIT-API"
+          ],
+          [
+            "market-context-refresh",
+            "0.32",
+            "32d dark",
+            "WAIT-API"
+          ],
+          [
+            "narrative-tracker",
+            "0.33",
+            "32d dark",
+            "WAIT-API"
+          ],
+          [
+            "vuln-scanner",
+            "0.21",
+            "5d",
+            "INVESTIGATE → ISS-018"
+          ]
+        ]
+      }
+    },
+    "text_more_degraded_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_more_degraded_text",
+        "link_issues_index"
+      ]
+    },
+    "text_more_degraded_text": {
+      "type": "Text",
+      "props": {
+        "text": "+13 more —",
+        "variant": "caption"
+      }
+    },
+    "link_issues_index": {
+      "type": "Link",
+      "props": {
+        "label": "see memory/issues/INDEX.md",
+        "href": "memory/issues/INDEX.md"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "nodata_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_nodata",
+        "text_nodata"
+      ]
+    },
+    "heading_nodata": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ No Data (3)",
+        "level": "h3"
+      }
+    },
+    "text_nodata": {
+      "type": "Text",
+      "props": {
+        "text": "autoresearch, fork-skill-gap, operator-scorecard — DISPATCH-SKILL",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_healthy",
+        "stat_healthy"
+      ]
+    },
+    "heading_healthy": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 Healthy",
+        "level": "h3"
+      }
+    },
+    "stat_healthy": {
+      "type": "Stat",
+      "props": {
+        "label": "Healthy Skills",
+        "value": "10"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_issues",
+        "stats_row"
+      ]
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue Summary",
+        "level": "h3"
+      }
+    },
+    "stats_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_open_issues",
+        "stat_resolved",
+        "stat_filed"
+      ]
+    },
+    "stat_open_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "11"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved This Run",
+        "value": "0"
+      }
+    },
+    "stat_filed": {
+      "type": "Stat",
+      "props": {
+        "label": "Filed This Run",
+        "value": "0"
+      }
+    }
+  }
+}
