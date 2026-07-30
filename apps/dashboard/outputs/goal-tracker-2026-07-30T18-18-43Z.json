@@ -1,0 +1,341 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "goal-tracker — 2026-07-30"
+      },
+      "children": [
+        "heading_summary",
+        "stat_summary",
+        "sep1",
+        "heading_at_risk",
+        "stack_at_risk",
+        "sep2",
+        "heading_blocked",
+        "stack_blocked",
+        "sep3",
+        "heading_sources",
+        "text_sources"
+      ]
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      }
+    },
+    "stat_summary": {
+      "type": "Stat",
+      "props": {
+        "value": "7 goals",
+        "label": "1 at risk, 0 needs attention, 0 on track, 6 blocked, 0 done (overall → flat)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_at_risk": {
+      "type": "Heading",
+      "props": {
+        "text": "AT RISK",
+        "level": "h2"
+      }
+    },
+    "stack_at_risk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "risk_item_1"
+      ]
+    },
+    "risk_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "risk_label_1",
+        "risk_details_1",
+        "risk_action_1"
+      ]
+    },
+    "risk_label_1": {
+      "type": "Badge",
+      "props": {
+        "text": "priorities.md",
+        "variant": "outline"
+      }
+    },
+    "risk_details_1": {
+      "type": "Text",
+      "props": {
+        "text": "56d stale — 0d idle, 145 activity/14d (→ flat, was AT_RISK)",
+        "variant": "body"
+      }
+    },
+    "risk_action_1": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator refresh priorities.md current-focus section (thought-review 07:26Z one-liner nudge, 55d→56d roll)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_blocked": {
+      "type": "Heading",
+      "props": {
+        "text": "BLOCKED",
+        "level": "h2"
+      }
+    },
+    "stack_blocked": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "blocked_1",
+        "blocked_2",
+        "blocked_3",
+        "blocked_4",
+        "blocked_5",
+        "blocked_6"
+      ]
+    },
+    "blocked_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_1_title",
+        "blocked_1_details",
+        "blocked_1_action"
+      ]
+    },
+    "blocked_1_title": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-025 capture-step PR",
+        "variant": "destructive"
+      }
+    },
+    "blocked_1_details": {
+      "type": "Text",
+      "props": {
+        "text": "T+11 day-14 — waiting on operator direct-author since 7-07 (8d past 1-week slip milestone; iss-025-hand-off T-0 today)",
+        "variant": "body"
+      }
+    },
+    "blocked_1_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator direct-author dangerouslyDisableSandbox pivot against .github/workflows/aeon.yml:479-495",
+        "variant": "caption"
+      }
+    },
+    "blocked_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_2_title",
+        "blocked_2_details",
+        "blocked_2_action"
+      ]
+    },
+    "blocked_2_title": {
+      "type": "Badge",
+      "props": {
+        "text": "12:00 UTC batch DARK",
+        "variant": "destructive"
+      }
+    },
+    "blocked_2_details": {
+      "type": "Text",
+      "props": {
+        "text": "day-32 — frozen since 2026-06-28 21:00Z, waiting on ISS-027 diagnosis",
+        "variant": "body"
+      }
+    },
+    "blocked_2_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: author memory/issues/ISS-027.md + operator restart 8-skill 12:00Z cluster in aeon.yml",
+        "variant": "caption"
+      }
+    },
+    "blocked_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_3_title",
+        "blocked_3_details",
+        "blocked_3_action"
+      ]
+    },
+    "blocked_3_title": {
+      "type": "Badge",
+      "props": {
+        "text": "ISS-027/028 doc-gap",
+        "variant": "destructive"
+      }
+    },
+    "blocked_3_details": {
+      "type": "Text",
+      "props": {
+        "text": "d24 — no file authored, +4d past weekly-review 7-27 last-chance window",
+        "variant": "body"
+      }
+    },
+    "blocked_3_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: create memory/issues/ISS-027.md + memory/issues/ISS-028.md (action-converter scored 125 + 80)",
+        "variant": "caption"
+      }
+    },
+    "blocked_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_4_title",
+        "blocked_4_details",
+        "blocked_4_action"
+      ]
+    },
+    "blocked_4_title": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #165",
+        "variant": "destructive"
+      }
+    },
+    "blocked_4_details": {
+      "type": "Text",
+      "props": {
+        "text": "d11 CONFLICTING — created 7-19 17:38Z, waiting operator Sunday batch cadence",
+        "variant": "body"
+      }
+    },
+    "blocked_4_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator resolve conflicts + batch-merge in next Sunday review window",
+        "variant": "caption"
+      }
+    },
+    "blocked_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_5_title",
+        "blocked_5_details",
+        "blocked_5_action"
+      ]
+    },
+    "blocked_5_title": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #167",
+        "variant": "destructive"
+      }
+    },
+    "blocked_5_details": {
+      "type": "Text",
+      "props": {
+        "text": "d7 — created 7-23 18:22Z bash-redirect fix, crosses 7d weekly-batch gate today (new)",
+        "variant": "body"
+      }
+    },
+    "blocked_5_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator batch-merge in next Sunday review window",
+        "variant": "caption"
+      }
+    },
+    "blocked_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "blocked_6_title",
+        "blocked_6_details",
+        "blocked_6_action"
+      ]
+    },
+    "blocked_6_title": {
+      "type": "Badge",
+      "props": {
+        "text": "Operator on-chain config",
+        "variant": "destructive"
+      }
+    },
+    "blocked_6_details": {
+      "type": "Text",
+      "props": {
+        "text": "day-53 — defi-monitor NO_CONFIG, missing ALCHEMY_API_KEY + ETHERSCAN_API_KEY",
+        "variant": "body"
+      }
+    },
+    "blocked_6_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: operator add both secrets + populate memory/on-chain-watches.yml with type:pool/type:position entries",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_sources": {
+      "type": "Heading",
+      "props": {
+        "text": "Sources",
+        "level": "h3"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "logs=ok (14d window 07-16→07-30, 22 files), git=partial(shallow clone, 1 commit), gh_pr=ok (16 PRs since 6-30, PR #170 fresh 7-29 hn-digest path fix unrelated), gh_issue=ok(empty), cron-state=ok",
+        "variant": "muted"
+      }
+    }
+  }
+}
