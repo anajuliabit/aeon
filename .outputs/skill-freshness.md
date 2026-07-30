@@ -1,24 +1,21 @@
-All three outputs written. Here's the summary:
-
 ## Summary
 
-**skill-freshness ran 2026-07-28 · FRESHNESS_NO_CHANGE**
+Skill-freshness executed for 2026-07-30. Results:
 
-**What was audited:** 43 enabled skills, 11 tracked dependencies, 7 flagged (5 STALE, 2 WARN) across 5 consumers — identical to the 2026-07-25 and 2026-07-26 runs.
+**Verdict:** 🔴 FRESHNESS_STALE — no change, no notification.
 
-**Flagged (unchanged from prior runs):**
-- `skill-security-scan` ← `articles/workflow-security-audit-2026-04-11.md` (108d, STALE — producer disabled)
-- `aixbt-pulse` ← `memory/topics/aixbt-*.md` (3 files, ~30d, STALE — frozen since 2026-06-28 per ISS-027)
-- `vuln-scanner` ← `.outputs/github-trending.md` (~47h, STALE — structural: skill-freshness fires at 08:00 UTC before github-trending's 09:00 UTC slot)
-- `market-context-refresh` + `token-pick` ← `memory/topics/market-context.md` (12d / 296h, WARN — approaches STALE threshold of 336h on **2026-07-30**)
+43 enabled skills audited, 11 tracked dependencies, 7 flagged:
 
-**Fingerprint:** `1ab8c658...` — unchanged for 3rd consecutive day (first set 7-25). Notification suppressed per 7d re-emit window.
+| Consumer | Dependency | Severity | Age |
+|---|---|---|---|
+| aixbt-pulse | `aixbt-grounding/clusters/chains.md` | STALE | ~32d (frozen Jun 28) |
+| skill-security-scan | `workflow-security-audit-2026-04-11.md` | STALE | 110d (disabled producer) |
+| vuln-scanner | `.outputs/github-trending.md` | STALE | ~23h (structural: github-trending fires after this skill) |
+| market-context-refresh | `market-context.md` | WARN | ~14d / 332h |
+| token-pick | `market-context.md` | WARN | ~14d / 332h |
 
-**Notable since 7-26:** skill-security-scan ran Monday 7-27 (fresh article + state); github-trending appears to have skipped 7-27.
+**Fingerprint unchanged** (`1ab8c658b960f260ad98797bf06b841d9b1410ef`) since 2026-07-25 — 5th consecutive match → `FRESHNESS_NO_CHANGE`, notification suppressed.
 
-**Escalation watch:** market-context.md will cross the 336h STALE threshold on 2026-07-30 ~16:00 UTC — the fingerprint will change and trigger the first notification re-emit since 2026-07-24.
+**Key escalation:** `market-context.md` crosses the STALE threshold (~336h) around 13:00 UTC today. Tomorrow's run will see two new STALE items, changing the fingerprint and triggering the first notification since July 24.
 
-**Files created/modified:**
-- `articles/skill-freshness-2026-07-28.md` — created
-- `memory/topics/skill-freshness-state.json` — updated (`last_run_at` → 2026-07-28T08:00:00Z)
-- `memory/logs/2026-07-28.md` — log entry appended
+Files written: `articles/skill-freshness-2026-07-30.md`, `memory/topics/skill-freshness-state.json` (updated `last_run_at`), `memory/logs/2026-07-30.md`.
