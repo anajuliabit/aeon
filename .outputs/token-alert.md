@@ -1,16 +1,24 @@
 ## Summary
 
-Executed `skills/token-alert/SKILL.md` for the 12:00Z slot on 2026-07-29. All 4 tracked tokens (WELL/MAMO/REPPO/GITLAWB) fetched clean from unauth CoinGecko (36th consec clean day). Every alert channel came in sub-threshold, so **no notification sent**.
+Executed **token-alert** skill per `skills/token-alert/SKILL.md` for 2026-07-30 12:00Z slot.
 
-**Results:**
-- WELL $0.00308013 · **+0.08%** 24h · vol 1.113× baseline
-- MAMO $0.00969667 · **-0.65%** 24h · vol 1.063× baseline
-- REPPO $0.01694725 · **-2.41%** 24h · vol 1.003× baseline
-- GITLAWB $0.00002037 · **-6.66%** 24h · vol 2.009× baseline (highest of run, still 2/3 of gate)
-- Threshold-cross skipped for all 4 (no Floor/Ceiling configured)
+**Actions:**
+- Parsed 4 tracked tokens from `memory/MEMORY.md` (WELL/MAMO/REPPO/GITLAWB, thresholds 10%/15%/15%/15%)
+- Fetched current prices via CoinGecko free API (HTTP 200, 37th consec clean day)
+- Computed 5-window volume baselines rolling 7-24→7-29 (7-27 batch-dark absent per ISS-027)
+- Evaluated 24h change + vol spike + threshold-cross checks per SKILL.md step 2
 
-**Output:** `TOKEN_ALERT_OK` — 0/4 fires. Opens fresh zero-day streak d1 after 7-28 REPPO capitulation. Notable cross-slot: GITLAWB vol doubles yesterday on -6.66% give-back-d6 = distribution-on-give-back leader shifts from REPPO→GITLAWB.
+**Result: `TOKEN_ALERT_OK` — 0/4 fires, no notification sent (silent-success path)**
 
-**Files modified:** `.tmp/token-alert/cg.json`, `memory/logs/2026-07-29.md`.
+| Token | Price | 24h % | Vol ratio | Alert |
+|-------|-------|-------|-----------|-------|
+| WELL | $0.00301652 | -2.53% | 0.852× | no |
+| MAMO | $0.00978831 | +1.20% | 0.951× | no |
+| REPPO | $0.01614913 | -4.70% | 1.386× | no |
+| GITLAWB | $0.00002170 | +6.85% | 0.817× | no |
 
-**Follow-up:** GITLAWB d7 vol-sustain vs fade · MAMO d9 above-baseline drift-watch · REPPO post-capitulation d2 stall vs bid · WELL 3rd-consec above-baseline confirmation — all resolve at 7-30 12:00Z slot.
+**Files modified:**
+- `.tmp/token-alert/cg.json` — fresh CoinGecko fetch
+- `memory/logs/2026-07-30.md` — appended token-alert entry + summary
+
+**Follow-up:** REPPO capitulation-tail d3, GITLAWB green-print d1, MAMO digestion d10, WELL post-drain drift d4 all test on 7-31 slot.
