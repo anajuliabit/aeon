@@ -34,10 +34,9 @@ Read the last 2 days of `memory/logs/` and extract any GitHub issue URLs already
    ```bash
    gh search issues --limit 100 \
      --json number,title,url,createdAt,author,labels,repository,commentsCount \
-     -- "$SCOPE is:issue is:open created:>$YESTERDAY sort:created-desc" \
-     > /tmp/gh-issues.json
+     -- "$SCOPE is:issue is:open created:>$YESTERDAY sort:created-desc"
    ```
-   If the call fails (422 / rate-limit / transient), fall back to looping `gh issue list -R <repo>` over `gh repo list "$ME" --limit 100 --json nameWithOwner,hasIssuesEnabled --jq '.[] | select(.hasIssuesEnabled) | .nameWithOwner'`, applying the same `createdAt > $YESTERDAY` filter via `--jq`.
+   Capture the JSON output directly (do not use shell redirects like `> /tmp/gh-issues.json` — the sandbox may block them; instead pipe to `jq` or save via Claude's Write tool if needed). If the call fails (422 / rate-limit / transient), fall back to looping `gh issue list -R <repo>` over `gh repo list "$ME" --limit 100 --json nameWithOwner,hasIssuesEnabled --jq '.[] | select(.hasIssuesEnabled) | .nameWithOwner'`, applying the same `createdAt > $YESTERDAY` filter via `--jq`.
 
 3. Drop URLs already alerted in the previous 2 days of logs.
 
