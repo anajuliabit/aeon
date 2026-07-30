@@ -215,13 +215,13 @@
   },
   "goal-tracker": {
     "last_dispatch": "2026-07-30T18:12:01Z",
-    "last_status": "dispatched",
-    "last_success": "2026-07-29T18:48:26Z",
-    "total_runs": 125,
-    "total_successes": 64,
+    "last_status": "success",
+    "last_success": "2026-07-30T18:19:32Z",
+    "total_runs": 126,
+    "total_successes": 65,
     "total_failures": 61,
     "consecutive_failures": 0,
-    "success_rate": 0.51,
+    "success_rate": 0.52,
     "last_failed": "2026-06-21T13:33:39Z",
     "last_error": "3d5a0c3\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
