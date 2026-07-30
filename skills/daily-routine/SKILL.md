@@ -12,7 +12,7 @@ If running standalone (no chain context provided), fall back to reading each sub
 - Read `skills/token-movers/SKILL.md` and execute its steps
 - Read `skills/paper-pick/SKILL.md` and execute its steps
 - Read `skills/github-issues/SKILL.md` and execute its steps
-- Read `skills/hn-digest/SKILL.md` and execute its steps
+- Read `skills/hacker-news-digest/SKILL.md` and execute its steps
 
 Read memory/MEMORY.md for context.
 Read the last 2 days of memory/logs/ to avoid repeating items.
